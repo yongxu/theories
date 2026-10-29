@@ -77,6 +77,7 @@ Active inference (Friston, FitzGerald, Rigoli, Schwartenbeck, O'Doherty and Pezz
 - related, not a proved adapter: [what-pooled-coupling-reaches](what-pooled-coupling-reaches.md). What a pool separates; choosers sharing their folds are such a pool.
 - related, not a proved adapter: [identical-cells-under-a-descent-treating-them-alike](identical-cells-under-a-descent-treating-them-alike.md). A third part of the free-energy principle's containment: a statement of its literature, read as a guarantee, that a landed law forbids on a model in its terms.
 - related, not a proved adapter: [risk-minimization-on-a-shared-renewal](risk-minimization-on-a-shared-renewal.md). A third part of the free-energy principle's containment: a statement of its literature, read as a guarantee, that a landed law forbids on a model in its terms.
+- related, not a proved adapter: [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md). Variational free energy bounds surprisal: the free-energy principle's central quantity, its bound and its minimizer stated in the periphery and joined to the core's conditioning.
 
 **Used by:** [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md)
 
@@ -104,6 +105,7 @@ Aliases: `A chooser reading what couples in, its rule read from the count of its
 
 - 25 October 2026: added (UE1), the free-energy principle's first containment, a restatement with its third part open; study section 406.
 - 29 October 2026, board item UE16 (study section 449): the containment now has third parts (identical-cells-under-a-descent-treating-them-alike, risk-minimization-on-a-shared-renewal): the correspondence's last sentence and the next step brought to them, each related here; no statement or declaration changed.
+- 29 October 2026, board item UE17 (study section 450): related to free-energy-bounds-surprisal; no statement, next step or declaration changed.
 
 </details>
 

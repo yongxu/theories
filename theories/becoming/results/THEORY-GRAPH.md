@@ -2,13 +2,13 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3074 nodes, 5695 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3076 nodes, 5700 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
 | The root: relation, condition, class, continuation, core | 31 | 83 | 69 | 0 |
 | The map: generation, keeping, degeneration, orders | 5 | 91 | 74 | 0 |
-| Knowing and testing | 0 | 91 | 74 | 0 |
+| Knowing and testing | 0 | 92 | 74 | 0 |
 | Life and evolution | 0 | 42 | 17 | 0 |
 | Collectives and selection | 0 | 62 | 18 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
@@ -241,7 +241,7 @@ Modules (74, 11 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attr
 
 ## Knowing and testing
 
-Results (91):
+Results (92):
 
 - [A family of readings within what it reads](records/readings-within-what-they-read.md) (recorded-checked)
 - [A formation's own course](records/a-formations-own-course.md) (recorded-checked)
@@ -318,6 +318,7 @@ Results (91):
 - [Transition grouping recovers encoded word sequences](records/transition-grouping-word-partition.md) (recorded-checked)
 - [Typicality by counting](records/typicality-by-counting.md) (recorded-checked)
 - [Unanchored incidence questions lose real continuation distinctions](records/unanchored-incidence-collapse.md) (recorded-checked)
+- [Variational free energy bounds surprisal](records/free-energy-bounds-surprisal.md) (recorded-checked)
 - [What a center can come to know of its region, step by step](records/what-a-center-can-know-by-a-step.md) (recorded-checked)
 - [What a finite history refutes](records/what-a-finite-history-refutes.md) (recorded-checked)
 - [What a finite stretch verifies, and what none can refute](records/what-a-finite-stretch-verifies.md) (recorded-checked)

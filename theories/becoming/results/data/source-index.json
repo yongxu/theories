@@ -270,6 +270,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReflectiveIdentity.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/WisdomFallibleJudgment.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/LawThroughChangingCoupling.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/LawThroughCoupling.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/AcquiredBinding.lean",
@@ -666,6 +667,9 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue16-what-fe-does-not-guarantee/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue16-what-fe-does-not-guarantee/RECHECK-UE16.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue16-what-fe-does-not-guarantee/REVIEW-UE16.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/RECHECK-UE17.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/REVIEW-UE17.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1b-set-points/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1b-set-points/REVIEW-UE1b.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/NOTE.md",
@@ -1728,15 +1732,71 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/DRAFT-NOTES.md": {
+      "title": "UE17 draft: variational free energy and its bound (periphery)",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/ue2-conditional-weights/periphery/ConditionalWeightsReals.lean",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue-unified-explanation/FEP-INTEGRATION.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/REVIEW-UE17.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/warm_closure.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/check_free_energy_reals.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261029T134610.999747Z",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-verification.json"
+      ]
+    },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/NOTE.md": {
+      "title": "UE17: variational free energy and its bound, joined to the core's conditioning",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue-unified-explanation/FEP-INTEGRATION.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/DRAFT-NOTES.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/RECHECK-UE17.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/REVIEW-UE17.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/warm_closure.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
+        "theories/becoming/chapters/03-KNOWING.md"
+      ]
+    },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/RECHECK-UE17.md": {
+      "title": "Re-check of UE17 after the fold",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/DRAFT-NOTES.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/REVIEW-UE17.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/warm_closure.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/check_free_energy_reals.py"
+      ]
+    },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/REVIEW-UE17.md": {
+      "title": "Review of UE17: variational free energy and its bound",
+      "local_links": [
+        "AGENTS.md",
+        "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/ue2-conditional-weights/periphery/ConditionalWeightsReals.lean",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue-unified-explanation/FEP-INTEGRATION.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/DRAFT-NOTES.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/kit/make_records_ue17.py",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/warm_closure.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/check_free_energy_reals.py",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261029T134610.999747Z",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-verification.json",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/regime/check_regime_reals.py"
+      ]
+    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/REVIEW-UE2.md": {
       "title": "UE2 review: conditional weights and surprisal on the counting layer (25 October 2026)",
       "local_links": [
         "AGENTS.md",
+        "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/ue2-conditional-weights/periphery/ConditionalWeightsReals.lean",
+        "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/ue2-conditional-weights/periphery/periphery.log",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue-unified-explanation/PLAN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/NOTE.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/periphery/ConditionalWeightsReals.lean",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/periphery/periphery.log",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/tree/Becoming/ConditionalWeights.lean",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/tree/Becoming/Typicality.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
@@ -4697,6 +4757,33 @@
         "theories/becoming/chapters/07-SIGNIFICANCE.md",
         "theories/becoming/chapters/08-METHOD.md",
         "theories/meta-attractor/README.md"
+      ]
+    },
+    "theories/becoming/chapters/03-KNOWING.md": {
+      "title": "Knowing, learning and testing",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/COMPOSITIONAL-FORMATION-INTEGRATION.md",
+        "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVIDENCE-QUALIFIED-CORRECTION-INTEGRATION.md",
+        "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVOLUTION-CALIBRATION-RENEWAL.md",
+        "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/KNOWLEDGE-PHILOSOPHY-COMPLETION.md",
+        "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/TEMPORAL-INSPECTION-INTEGRATION.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONDITIONS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/review-checks/HM.lean",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/NOTE.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/calibration-renewal-verification.json",
+        "theories/becoming/chapters/01-ROOT.md",
+        "theories/becoming/chapters/02-MAP.md",
+        "theories/becoming/chapters/04-LIFE.md",
+        "theories/becoming/chapters/05-COLLECTIVES.md",
+        "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+        "theories/becoming/chapters/07-SIGNIFICANCE.md",
+        "theories/becoming/chapters/08-METHOD.md",
+        "theories/becoming/history/GENERATED-LOGIC.md",
+        "theories/becoming/history/RELATIONS-ACROSS-SCALES.md",
+        "theories/becoming/history/SCIENTIFIC-PHILOSOPHY.md"
       ]
     },
     "theories/becoming/chapters/05-COLLECTIVES.md": {

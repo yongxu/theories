@@ -19,24 +19,24 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2100,
-    "distinct_byte_contents": 1652,
+    "lean_paths": 2101,
+    "distinct_byte_contents": 1653,
     "byte_identical_duplicate_groups": 183,
     "roles": {
       "audit-driver": 13,
       "development-attempt": 1141,
       "historical-draft": 3,
       "imported-archive": 23,
-      "working-source": 920
+      "working-source": 921
     },
-    "working_named_theorem_lemma_occurrences": 28344,
-    "working_explicit_named_declaration_occurrences": 41597,
+    "working_named_theorem_lemma_occurrences": 28386,
+    "working_explicit_named_declaration_occurrences": 41644,
     "working_groups": {
       "abstraction": 45,
       "becoming-core": 333,
       "becoming-ring": 13,
       "concern": 15,
-      "core": 140,
+      "core": 141,
       "ethics": 139,
       "inquiry": 71,
       "learning": 51,
@@ -3633,6 +3633,22 @@
       "proof_status": "not_assessed_by_catalogue"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/ue2-conditional-weights/periphery/ConditionalWeightsReals.lean",
+      "sha256": "31532e34157d077998d8a31d921c61e5aefef01278c9a9f2244b3862524477b0",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/history/INDEX.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/DRAFT-NOTES.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/REVIEW-UE17.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/LANDING.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/REVIEW-UE2.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
       "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/v-collective-continuation/v1/Becoming/Withholding.lean",
       "sha256": "b56112df45782fd28def6d31b6e6a6d52ec64d665e4f2163f2e1e7da61a01b99",
       "role": "development-attempt",
@@ -6630,19 +6646,6 @@
       "proof_status": "not_assessed_by_catalogue"
     },
     {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/periphery/ConditionalWeightsReals.lean",
-      "sha256": "31532e34157d077998d8a31d921c61e5aefef01278c9a9f2244b3862524477b0",
-      "role": "development-attempt",
-      "group": "other",
-      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
-      "direct_documentation_links_from": [
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/LANDING.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/NOTE.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/REVIEW-UE2.md"
-      ],
-      "proof_status": "not_assessed_by_catalogue"
-    },
-    {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/tree/Becoming/ConditionalWeights.lean",
       "sha256": "479c8401487664728e63fd6d247dcfb89b2fd578185097251bcf2055cac0361f",
       "role": "development-attempt",
@@ -8142,6 +8145,8 @@
       "direct_documentation_links_from": [
         "RESULTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/SECOND-OPINION-LITERATURE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/DRAFT-NOTES.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/REVIEW-UE17.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
       ],
@@ -14669,6 +14674,22 @@
       "direct_documentation_links_from": [
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md",
         "theories/becoming/history/ARGUMENTS-M-Z-2026-10-08.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
+      "sha256": "2cc970c8b974f707a4f191793fd5fa1f8982e46cdfe8e9a30eff4bb785105f7d",
+      "role": "working-source",
+      "group": "core",
+      "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
+      "direct_documentation_links_from": [
+        "RESULTS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/DRAFT-NOTES.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/RECHECK-UE17.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/REVIEW-UE17.md",
+        "theories/becoming/chapters/03-KNOWING.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -117068,6 +117089,311 @@
         "def": 1,
         "structure": 1,
         "theorem": 10
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "2cc970c8b974f707a4f191793fd5fa1f8982e46cdfe8e9a30eff4bb785105f7d": {
+      "byte_size": 43468,
+      "line_count": 717,
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.Algebra.BigOperators.Field",
+        "Becoming.ConditionalWeights"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "freeEnergy",
+          "qualified_name_hint": "Becoming.FreeEnergy.freeEnergy",
+          "line": 109
+        },
+        {
+          "kind": "def",
+          "name": "divergence",
+          "qualified_name_hint": "Becoming.FreeEnergy.divergence",
+          "line": 114
+        },
+        {
+          "kind": "theorem",
+          "name": "freeEnergy_eq_divergence",
+          "qualified_name_hint": "Becoming.FreeEnergy.freeEnergy_eq_divergence",
+          "line": 119
+        },
+        {
+          "kind": "def",
+          "name": "surprisal",
+          "qualified_name_hint": "Becoming.FreeEnergy.surprisal",
+          "line": 124
+        },
+        {
+          "kind": "def",
+          "name": "posterior",
+          "qualified_name_hint": "Becoming.FreeEnergy.posterior",
+          "line": 127
+        },
+        {
+          "kind": "theorem",
+          "name": "term_le",
+          "qualified_name_hint": "Becoming.FreeEnergy.term_le",
+          "line": 131
+        },
+        {
+          "kind": "theorem",
+          "name": "term_eq_iff_of_pos",
+          "qualified_name_hint": "Becoming.FreeEnergy.term_eq_iff_of_pos",
+          "line": 148
+        },
+        {
+          "kind": "theorem",
+          "name": "term_eq_iff",
+          "qualified_name_hint": "Becoming.FreeEnergy.term_eq_iff",
+          "line": 179
+        },
+        {
+          "kind": "theorem",
+          "name": "freeEnergy_congr",
+          "qualified_name_hint": "Becoming.FreeEnergy.freeEnergy_congr",
+          "line": 188
+        },
+        {
+          "kind": "theorem",
+          "name": "sum_terms",
+          "qualified_name_hint": "Becoming.FreeEnergy.sum_terms",
+          "line": 193
+        },
+        {
+          "kind": "theorem",
+          "name": "sum_normalized_sub",
+          "qualified_name_hint": "Becoming.FreeEnergy.sum_normalized_sub",
+          "line": 203
+        },
+        {
+          "kind": "theorem",
+          "name": "total_pos",
+          "qualified_name_hint": "Becoming.FreeEnergy.total_pos",
+          "line": 210
+        },
+        {
+          "kind": "theorem",
+          "name": "surprisal_le_freeEnergy",
+          "qualified_name_hint": "Becoming.FreeEnergy.surprisal_le_freeEnergy",
+          "line": 219
+        },
+        {
+          "kind": "theorem",
+          "name": "freeEnergy_eq_surprisal_iff",
+          "qualified_name_hint": "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff",
+          "line": 233
+        },
+        {
+          "kind": "theorem",
+          "name": "freeEnergy_eq_surprisal_iff_of_pos",
+          "qualified_name_hint": "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_pos",
+          "line": 251
+        },
+        {
+          "kind": "theorem",
+          "name": "posterior_nonneg",
+          "qualified_name_hint": "Becoming.FreeEnergy.posterior_nonneg",
+          "line": 258
+        },
+        {
+          "kind": "theorem",
+          "name": "posterior_eq_zero",
+          "qualified_name_hint": "Becoming.FreeEnergy.posterior_eq_zero",
+          "line": 263
+        },
+        {
+          "kind": "theorem",
+          "name": "sum_posterior",
+          "qualified_name_hint": "Becoming.FreeEnergy.sum_posterior",
+          "line": 268
+        },
+        {
+          "kind": "theorem",
+          "name": "freeEnergy_posterior",
+          "qualified_name_hint": "Becoming.FreeEnergy.freeEnergy_posterior",
+          "line": 274
+        },
+        {
+          "kind": "theorem",
+          "name": "minimizes_iff_posterior",
+          "qualified_name_hint": "Becoming.FreeEnergy.minimizes_iff_posterior",
+          "line": 284
+        },
+        {
+          "kind": "theorem",
+          "name": "freeEnergy_eq_divergence_add_surprisal",
+          "qualified_name_hint": "Becoming.FreeEnergy.freeEnergy_eq_divergence_add_surprisal",
+          "line": 305
+        },
+        {
+          "kind": "theorem",
+          "name": "divergence_nonneg",
+          "qualified_name_hint": "Becoming.FreeEnergy.divergence_nonneg",
+          "line": 323
+        },
+        {
+          "kind": "theorem",
+          "name": "divergence_eq_zero_iff",
+          "qualified_name_hint": "Becoming.FreeEnergy.divergence_eq_zero_iff",
+          "line": 332
+        },
+        {
+          "kind": "theorem",
+          "name": "divergence_posterior_nonneg",
+          "qualified_name_hint": "Becoming.FreeEnergy.divergence_posterior_nonneg",
+          "line": 341
+        },
+        {
+          "kind": "theorem",
+          "name": "divergence_posterior_eq_zero_iff",
+          "qualified_name_hint": "Becoming.FreeEnergy.divergence_posterior_eq_zero_iff",
+          "line": 352
+        },
+        {
+          "kind": "theorem",
+          "name": "freeEnergy_eq_complexity_sub_accuracy",
+          "qualified_name_hint": "Becoming.FreeEnergy.freeEnergy_eq_complexity_sub_accuracy",
+          "line": 366
+        },
+        {
+          "kind": "theorem",
+          "name": "freeEnergy_eq_energy_sub_entropy",
+          "qualified_name_hint": "Becoming.FreeEnergy.freeEnergy_eq_energy_sub_entropy",
+          "line": 381
+        },
+        {
+          "kind": "theorem",
+          "name": "bound_fails_off_support",
+          "qualified_name_hint": "Becoming.FreeEnergy.Witness.bound_fails_off_support",
+          "line": 395
+        },
+        {
+          "kind": "def",
+          "name": "_root_.Becoming.ConditionalWeights.Share.toReal",
+          "qualified_name_hint": "Becoming.ConditionalWeights.Share.toReal",
+          "line": 416
+        },
+        {
+          "kind": "theorem",
+          "name": "_root_.Becoming.ConditionalWeights.Share.toReal_nonneg",
+          "qualified_name_hint": "Becoming.ConditionalWeights.Share.toReal_nonneg",
+          "line": 420
+        },
+        {
+          "kind": "theorem",
+          "name": "share_toReal_pos",
+          "qualified_name_hint": "Becoming.FreeEnergy.share_toReal_pos",
+          "line": 424
+        },
+        {
+          "kind": "theorem",
+          "name": "_root_.Becoming.ConditionalWeights.Share.toReal_mul",
+          "qualified_name_hint": "Becoming.ConditionalWeights.Share.toReal_mul",
+          "line": 430
+        },
+        {
+          "kind": "theorem",
+          "name": "surprisal_eq_log_reciprocal",
+          "qualified_name_hint": "Becoming.FreeEnergy.surprisal_eq_log_reciprocal",
+          "line": 437
+        },
+        {
+          "kind": "theorem",
+          "name": "cast_mass_eq_sum",
+          "qualified_name_hint": "Becoming.FreeEnergy.cast_mass_eq_sum",
+          "line": 444
+        },
+        {
+          "kind": "theorem",
+          "name": "jointShare_part",
+          "qualified_name_hint": "Becoming.FreeEnergy.jointShare_part",
+          "line": 457
+        },
+        {
+          "kind": "theorem",
+          "name": "jointShare_toReal",
+          "qualified_name_hint": "Becoming.FreeEnergy.jointShare_toReal",
+          "line": 467
+        },
+        {
+          "kind": "theorem",
+          "name": "recordShare_toReal",
+          "qualified_name_hint": "Becoming.FreeEnergy.recordShare_toReal",
+          "line": 479
+        },
+        {
+          "kind": "theorem",
+          "name": "sum_jointShare",
+          "qualified_name_hint": "Becoming.FreeEnergy.sum_jointShare",
+          "line": 491
+        },
+        {
+          "kind": "theorem",
+          "name": "givenShare_toReal",
+          "qualified_name_hint": "Becoming.FreeEnergy.givenShare_toReal",
+          "line": 506
+        },
+        {
+          "kind": "theorem",
+          "name": "givenShare_eq_posterior",
+          "qualified_name_hint": "Becoming.FreeEnergy.givenShare_eq_posterior",
+          "line": 519
+        },
+        {
+          "kind": "theorem",
+          "name": "weight_zero_of_jointShare_zero",
+          "qualified_name_hint": "Becoming.FreeEnergy.weight_zero_of_jointShare_zero",
+          "line": 544
+        },
+        {
+          "kind": "theorem",
+          "name": "record_pos_of_belief",
+          "qualified_name_hint": "Becoming.FreeEnergy.record_pos_of_belief",
+          "line": 564
+        },
+        {
+          "kind": "theorem",
+          "name": "record_surprisal_le_freeEnergy",
+          "qualified_name_hint": "Becoming.FreeEnergy.record_surprisal_le_freeEnergy",
+          "line": 587
+        },
+        {
+          "kind": "theorem",
+          "name": "freeEnergy_eq_record_surprisal_iff",
+          "qualified_name_hint": "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff",
+          "line": 604
+        },
+        {
+          "kind": "theorem",
+          "name": "freeEnergy_givenShare",
+          "qualified_name_hint": "Becoming.FreeEnergy.freeEnergy_givenShare",
+          "line": 631
+        },
+        {
+          "kind": "theorem",
+          "name": "minimizes_iff_givenShare",
+          "qualified_name_hint": "Becoming.FreeEnergy.minimizes_iff_givenShare",
+          "line": 660
+        },
+        {
+          "kind": "theorem",
+          "name": "surprisal_product",
+          "qualified_name_hint": "Becoming.FreeEnergy.surprisal_product",
+          "line": 703
+        }
+      ],
+      "declaration_counts": {
+        "def": 5,
+        "theorem": 42
       },
       "textual_markers": {
         "sorry": [],

@@ -261,6 +261,13 @@
         "en": "A third part of the free-energy principle's containment: a statement of its literature, read as a guarantee, that a landed law forbids on a model in its terms.",
         "zh": "自由能原理之包含之第三部分：其文献中作保证读之一陈述，已落地之律于其语汇之模型上禁之。"
       }
+    },
+    {
+      "id": "free-energy-bounds-surprisal",
+      "detail": {
+        "en": "Variational free energy bounds surprisal: the free-energy principle's central quantity, its bound and its minimizer stated in the periphery and joined to the core's conditioning.",
+        "zh": "变分自由能为惊异之界：自由能原理之核心之量、其界与其最小者述于外围，并与核心之以限制为条件相接。"
+      }
     }
   ],
   "references": [
@@ -364,7 +371,7 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "e32058d4451d985739a1c2a73c50d5a6a9a536f22343f5caedbe9e7900efe1a5"
+      "sha256": "ca32809355d9e8dca6d73177547cd8713319de3c2ec0cdeec2bc37ee734e33db"
     }
   ],
   "proof_bindings": [
@@ -384,6 +391,10 @@
     {
       "en": "29 October 2026, board item UE16 (study section 449): the containment now has third parts (identical-cells-under-a-descent-treating-them-alike, risk-minimization-on-a-shared-renewal): the correspondence's last sentence and the next step brought to them, each related here; no statement or declaration changed.",
       "zh": "2026年10月29日，工作板条目 UE16（研究第 449 节）：包含今有第三部分（identical-cells-under-a-descent-treating-them-alike、risk-minimization-on-a-shared-renewal）：对应之末句与下一步随之更新，二者于此相关联；无一陈述或声明改变。"
+    },
+    {
+      "en": "29 October 2026, board item UE17 (study section 450): related to free-energy-bounds-surprisal; no statement, next step or declaration changed.",
+      "zh": "2026年10月29日，工作板条目 UE17（研究第 450 节）：与 free-energy-bounds-surprisal 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

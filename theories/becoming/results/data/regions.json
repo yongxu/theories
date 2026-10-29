@@ -821,6 +821,11 @@
    "base": "old-base",
    "note": "part widens, narrows, keeps, mixed"
   },
+  "free-energy-bounds-surprisal": {
+   "region": "knowing",
+   "base": "periphery",
+   "note": "FreeEnergyReals UE17: variational free energy over the reals, its bound by surprisal with equality exactly at the posterior, the decompositions, and the minimizer the core's share given the record (periphery)"
+  },
   "fulfillment-chance-floor": {
    "region": "significance",
    "base": "general",

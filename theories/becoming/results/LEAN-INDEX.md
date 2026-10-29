@@ -19,7 +19,7 @@ Warrant of ethical premises, valid inference, recognition, motivation and implem
 <a id="覆盖范围--coverage"></a>
 ## Coverage
 
-The inventory contains **2,100 `.lean` paths and 1,652 distinct byte contents**, including 183 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
+The inventory contains **2,101 `.lean` paths and 1,653 distinct byte contents**, including 183 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
 
 | File role | Paths |
 |---|---:|
@@ -27,9 +27,9 @@ The inventory contains **2,100 `.lean` paths and 1,652 distinct byte contents**,
 | Development attempt | 1,141 |
 | Historical draft | 3 |
 | Imported archive | 23 |
-| Working source | 920 |
+| Working source | 921 |
 
-The working-source and audit entries contain **28,344 explicit theorem/lemma occurrences** and 41,597 explicit named declarations. These are source-location counts, **not counts of distinct propositions, passed proofs or research contributions**.
+The working-source and audit entries contain **28,386 explicit theorem/lemma occurrences** and 41,644 explicit named declarations. These are source-location counts, **not counts of distinct propositions, passed proofs or research contributions**.
 
 Hidden, ignored and untracked files are included; `.git`, `.lake`, `.build`, `node_modules`, `.venv`, `venv`, `__pycache__` and other sessions' worktrees (`.claude/worktrees`) are excluded, and directory symlinks are not followed. Archives and attempts remain in the JSON inventory without repeating them in the main table; saved copies in run, check, snapshot and history folders are neither read nor listed, each being bound by its own run's receipt, so a checker run leaves this catalogue unchanged. Working-source is a documentary role, not acceptance or verification status.
 
@@ -50,7 +50,7 @@ The scan lists explicit theorem, lemma, def, abbrev, structure, inductive, opaqu
 | [Abstraction, applicability and constitution](#group-abstraction) | 45 |
 | [Concern and shared activity](#group-concern) | 15 |
 | [Organizational formation through revisable evaluation](#group-shared) | 66 |
-| [Generative core and relational structure](#group-core) | 140 |
+| [Generative core and relational structure](#group-core) | 141 |
 | [Other formal studies](#group-other) | 29 |
 
 <a id="group-becoming-core"></a>
@@ -1072,6 +1072,7 @@ Conceptual entry: [GENERATIVE-CORE-LEAN](../history/GENERATIVE-CORE-LEAN.md) (ea
 | [VariationWarrant](../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/VariationWarrant.lean) · [Names](lean-declarations/core.md#module-ae18a32ad6d2) | 19 | 2 | [Theory](../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md) |
 | [WisdomFallibleJudgment](../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/WisdomFallibleJudgment.lean) · [Names](lean-declarations/core.md#module-782abba8ef08) | 5 | 4 | [Theory](../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md) |
 | [WisdomResponseStructure](../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/WisdomResponseStructure.lean) · [Names](lean-declarations/core.md#module-25c8adeade56) | 9 | 11 | [Theory](../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md) |
+| [FreeEnergyReals](../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean) · [Names](lean-declarations/core.md#module-00dcabf3b882) | 42 | 5 | [Theory](../chapters/03-KNOWING.md) · [Study](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/DRAFT-NOTES.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md) |
 | [ActualRecovery](../../../experiments/integrated-correction/general-framework/generative-basis/lean/naturalism/ActualRecovery.lean) · [Names](lean-declarations/core.md#module-6b8e6a0d66ac) | 21 | 13 | [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/naturalism/README.md) · No direct module-documentation link found |
 | [EmbeddedEvaluation](../../../experiments/integrated-correction/general-framework/generative-basis/lean/naturalism/EmbeddedEvaluation.lean) · [Names](lean-declarations/core.md#module-ce2fc7445eba) | 5 | 3 | [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/naturalism/README.md) · No direct module-documentation link found |
 | [EnactedOrientation](../../../experiments/integrated-correction/general-framework/generative-basis/lean/naturalism/EnactedOrientation.lean) · [Names](lean-declarations/core.md#module-7587315c346a) | 27 | 9 | [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/naturalism/README.md) · No direct module-documentation link found |

@@ -56,9 +56,9 @@
   ]
  },
  "counts": {
-  "laws": 3713,
+  "laws": 3721,
   "no_declarations": 9,
-  "outside": 342,
+  "outside": 350,
   "grammar": 737,
   "balance, represented": 645,
   "anchor, not reached": 134,
@@ -16442,6 +16442,158 @@
     ],
     "grammar": false,
     "dependence": "balance, represented"
+   }
+  ],
+  "free-energy-bounds-surprisal": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.FreeEnergy.freeEnergy",
+     "Becoming.FreeEnergy.divergence",
+     "Becoming.FreeEnergy.surprisal",
+     "Becoming.FreeEnergy.posterior",
+     "Becoming.FreeEnergy.freeEnergy_congr",
+     "Becoming.FreeEnergy.freeEnergy_eq_divergence",
+     "Becoming.FreeEnergy.freeEnergy_eq_energy_sub_entropy"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.freeEnergy",
+     "Becoming.FreeEnergy.divergence",
+     "Becoming.FreeEnergy.surprisal",
+     "Becoming.FreeEnergy.posterior",
+     "Becoming.FreeEnergy.freeEnergy_congr",
+     "Becoming.FreeEnergy.freeEnergy_eq_divergence",
+     "Becoming.FreeEnergy.freeEnergy_eq_energy_sub_entropy"
+    ]
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.FreeEnergy.surprisal_le_freeEnergy",
+     "Becoming.FreeEnergy.total_pos",
+     "Becoming.FreeEnergy.term_le",
+     "Becoming.FreeEnergy.sum_terms",
+     "Becoming.FreeEnergy.sum_normalized_sub"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.surprisal_le_freeEnergy",
+     "Becoming.FreeEnergy.total_pos",
+     "Becoming.FreeEnergy.term_le",
+     "Becoming.FreeEnergy.sum_terms",
+     "Becoming.FreeEnergy.sum_normalized_sub"
+    ]
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff",
+     "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_pos",
+     "Becoming.FreeEnergy.term_eq_iff",
+     "Becoming.FreeEnergy.term_eq_iff_of_pos",
+     "Becoming.FreeEnergy.posterior_nonneg",
+     "Becoming.FreeEnergy.posterior_eq_zero",
+     "Becoming.FreeEnergy.sum_posterior",
+     "Becoming.FreeEnergy.freeEnergy_posterior",
+     "Becoming.FreeEnergy.minimizes_iff_posterior",
+     "Becoming.FreeEnergy.Witness.bound_fails_off_support"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff",
+     "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_pos",
+     "Becoming.FreeEnergy.term_eq_iff",
+     "Becoming.FreeEnergy.term_eq_iff_of_pos",
+     "Becoming.FreeEnergy.posterior_nonneg",
+     "Becoming.FreeEnergy.posterior_eq_zero",
+     "Becoming.FreeEnergy.sum_posterior",
+     "Becoming.FreeEnergy.freeEnergy_posterior",
+     "Becoming.FreeEnergy.minimizes_iff_posterior",
+     "Becoming.FreeEnergy.Witness.bound_fails_off_support"
+    ]
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.FreeEnergy.freeEnergy_eq_divergence_add_surprisal",
+     "Becoming.FreeEnergy.divergence_nonneg",
+     "Becoming.FreeEnergy.divergence_eq_zero_iff",
+     "Becoming.FreeEnergy.divergence_posterior_nonneg",
+     "Becoming.FreeEnergy.divergence_posterior_eq_zero_iff"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.freeEnergy_eq_divergence_add_surprisal",
+     "Becoming.FreeEnergy.divergence_nonneg",
+     "Becoming.FreeEnergy.divergence_eq_zero_iff",
+     "Becoming.FreeEnergy.divergence_posterior_nonneg",
+     "Becoming.FreeEnergy.divergence_posterior_eq_zero_iff"
+    ]
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.FreeEnergy.freeEnergy_eq_complexity_sub_accuracy"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.freeEnergy_eq_complexity_sub_accuracy"
+    ]
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.ConditionalWeights.Share.toReal",
+     "Becoming.ConditionalWeights.Share.toReal_nonneg",
+     "Becoming.FreeEnergy.share_toReal_pos",
+     "Becoming.ConditionalWeights.Share.toReal_mul",
+     "Becoming.FreeEnergy.cast_mass_eq_sum",
+     "Becoming.FreeEnergy.jointShare_part",
+     "Becoming.FreeEnergy.jointShare_toReal",
+     "Becoming.FreeEnergy.recordShare_toReal",
+     "Becoming.FreeEnergy.sum_jointShare",
+     "Becoming.FreeEnergy.givenShare_toReal",
+     "Becoming.FreeEnergy.givenShare_eq_posterior",
+     "Becoming.FreeEnergy.weight_zero_of_jointShare_zero"
+    ],
+    "outside": [
+     "Becoming.ConditionalWeights.Share.toReal",
+     "Becoming.ConditionalWeights.Share.toReal_nonneg",
+     "Becoming.FreeEnergy.share_toReal_pos",
+     "Becoming.ConditionalWeights.Share.toReal_mul",
+     "Becoming.FreeEnergy.cast_mass_eq_sum",
+     "Becoming.FreeEnergy.jointShare_part",
+     "Becoming.FreeEnergy.jointShare_toReal",
+     "Becoming.FreeEnergy.recordShare_toReal",
+     "Becoming.FreeEnergy.sum_jointShare",
+     "Becoming.FreeEnergy.givenShare_toReal",
+     "Becoming.FreeEnergy.givenShare_eq_posterior",
+     "Becoming.FreeEnergy.weight_zero_of_jointShare_zero"
+    ]
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.FreeEnergy.record_pos_of_belief",
+     "Becoming.FreeEnergy.record_surprisal_le_freeEnergy",
+     "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff",
+     "Becoming.FreeEnergy.freeEnergy_givenShare",
+     "Becoming.FreeEnergy.minimizes_iff_givenShare"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.record_pos_of_belief",
+     "Becoming.FreeEnergy.record_surprisal_le_freeEnergy",
+     "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff",
+     "Becoming.FreeEnergy.freeEnergy_givenShare",
+     "Becoming.FreeEnergy.minimizes_iff_givenShare"
+    ]
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.FreeEnergy.surprisal_product",
+     "Becoming.FreeEnergy.surprisal_eq_log_reciprocal"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.surprisal_product",
+     "Becoming.FreeEnergy.surprisal_eq_log_reciprocal"
+    ]
    }
   ],
   "fulfillment-chance-floor": [

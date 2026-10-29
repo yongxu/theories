@@ -153,8 +153,8 @@
       "kind": "correspondence"
     },
     {
-      "en": "Surprisal, entropy or free energy as numbers: the reciprocal share orders as pointwise surprisal does and multiplies where it adds, but averages of logarithms have no reciprocal-share form.",
-      "zh": "作为数之惊异、熵或自由能：倒数份额之序同于逐点之惊异，惊异相加处其相乘，而对数之平均无倒数份额之形式。",
+      "en": "Surprisal, entropy or free energy as numbers: the reciprocal share orders as pointwise surprisal does and multiplies where it adds, but an average of logarithms is not the logarithm of one reciprocal share.",
+      "zh": "作为数之惊异、熵或自由能：倒数份额之序同于逐点之惊异，惊异相加处其相乘，而对数之平均非一倒数份额之对数。",
       "kind": "correspondence"
     },
     {
@@ -214,12 +214,12 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T163242.561061Z）：Becoming.ConditionalWeights，110 项声明，公理报告皆空；本记录引其 78 项，exit-from-a-margin 引其余 32 项。于一会话中构建；另一 AI 代理作独立只读审查并重建 Lean，其所见皆采，修订经复查，见研究第 412 节；未经人审。"
   },
   "next_delta": {
-    "en": "Restriction stated once for every weighting, with possibility's support commuting with it; graded records on a general domain; the join to the periphery's variational bound once it has a receipt; review by a person.",
-    "zh": "对每种权重陈述一次限制，可能性之支撑与之交换；一般域上之分级记录；外围变分界有回执后与之相接；人之审查。"
+    "en": "Restriction stated once for every weighting, with possibility's support commuting with it; graded records on a general domain; review by a person.",
+    "zh": "对每种权重陈述一次限制，可能性之支撑与之交换；一般域上之分级记录；人之审查。"
   },
   "correspondence": {
-    "en": "Read a share as a probability, a number of situations of a kind (weights-count-situations): restriction is conditioning, restrict_two_ways is Bayes's theorem P(h | o) P(o) = P(o | h) P(h) (Bayes 1763; Laplace 1774), the share of evidence in the whole is a generative model's marginal likelihood and posterior_single its posterior, these readings of the prior and the likelihood holding where every listed hypothesis's likelihood weights have one total (prior_share). The reciprocal share is a counting form of pointwise surprisal, log (1 / P): it reverses the order of shares and its products are surprisal's sums. Entropy and free energy, averages of logarithms, have no such form; free energy and its bound are drafted for the periphery with no receipt. The readings are the AI's, stated in development/ue2-conditional-weights/NOTE.md, with the review in REVIEW-UE2.md.",
-    "zh": "份额读作概率，即同类情境之数（weights-count-situations）：限制即条件化，restrict_two_ways 即贝叶斯定理 P(h | o) P(o) = P(o | h) P(h)（Bayes 1763；Laplace 1774），evidence 于整体之份额为生成模型之边缘似然，posterior_single 为其后验；先验与似然之此读法，于诸假设似然权重之总相同时成立（prior_share）。倒数份额为逐点惊异 log (1 / P) 之计数形式：反份额之序，其积为惊异之和。熵与自由能为对数之平均，无此形式；自由能及其界拟于外围，无回执。读法皆 AI 之读，载于 development/ue2-conditional-weights/NOTE.md，审查见 REVIEW-UE2.md。"
+    "en": "Read a share as a probability, a number of situations of a kind (weights-count-situations): restriction is conditioning, restrict_two_ways is Bayes's theorem P(h | o) P(o) = P(o | h) P(h) (Bayes 1763; Laplace 1774), the share of evidence in the whole is a generative model's marginal likelihood and posterior_single its posterior, these readings of the prior and the likelihood holding where every listed hypothesis's likelihood weights have one total (prior_share). The reciprocal share is a counting form of pointwise surprisal, log (1 / P): it reverses the order of shares and its products are surprisal's sums. Entropy and free energy, averages of logarithms, are not the logarithm of one reciprocal share; free energy and its bound are stated in the periphery and joined to posterior_single there (free-energy-bounds-surprisal). The readings are the AI's, stated in development/ue2-conditional-weights/NOTE.md, with the review in REVIEW-UE2.md.",
+    "zh": "份额读作概率，即同类情境之数（weights-count-situations）：限制即条件化，restrict_two_ways 即贝叶斯定理 P(h | o) P(o) = P(o | h) P(h)（Bayes 1763；Laplace 1774），evidence 于整体之份额为生成模型之边缘似然，posterior_single 为其后验；先验与似然之此读法，于诸假设似然权重之总相同时成立（prior_share）。倒数份额为逐点惊异 log (1 / P) 之计数形式：反份额之序，其积为惊异之和。熵与自由能为对数之平均，非一倒数份额之对数；自由能及其界述于外围，并于彼处与 posterior_single 相接（free-energy-bounds-surprisal）。读法皆 AI 之读，载于 development/ue2-conditional-weights/NOTE.md，审查见 REVIEW-UE2.md。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
   "aliases": [
@@ -254,6 +254,13 @@
       "detail": {
         "en": "Shares read as numbers of situations of a kind, a reading.",
         "zh": "份额读作同类情境之数，为一读法。"
+      }
+    },
+    {
+      "id": "free-energy-bounds-surprisal",
+      "detail": {
+        "en": "Variational free energy bounds surprisal: over the reals, in the periphery, exact minimization of free energy over beliefs with no weight on a hypothesis the prior or the record rules out gives the share given the record.",
+        "zh": "变分自由能为惊异之界：于外围之实数上，于先验或记录所排除之假设处无权重之信念上精确最小化自由能，即得记录下之份额。"
       }
     }
   ],
@@ -361,12 +368,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/NOTE.md",
       "role": "integration",
-      "sha256": "c7b3c3d8c82a96d9c61e5074f8be5f3b8bdb566c9fe1491a47938dc8b0b3e380"
+      "sha256": "b0e90896b73bb4289a84079fef7b0c72c5c8d21422de4eaecb149cd07a53e991"
     },
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "e32058d4451d985739a1c2a73c50d5a6a9a536f22343f5caedbe9e7900efe1a5"
+      "sha256": "ca32809355d9e8dca6d73177547cd8713319de3c2ec0cdeec2bc37ee734e33db"
     }
   ],
   "proof_bindings": [
@@ -382,6 +389,10 @@
     {
       "en": "26 October 2026: added (UE2), conditioning on the counting layer, identities of counting; study section 412.",
       "zh": "2026年10月26日：新增（UE2），计数层上之条件化，计数之恒等；研究第 412 节。"
+    },
+    {
+      "en": "29 October 2026, board item UE17 (study section 450): related to free-energy-bounds-surprisal; the next step drops the join to the periphery's bound, now done, and the correspondence and the third item of what it does not show say that free energy, an average of logarithms, is not the logarithm of one reciprocal share and is stated in the periphery; no statement or declaration changed.",
+      "zh": "2026年10月29日，工作板条目 UE17（研究第 450 节）：与 free-energy-bounds-surprisal 相关联；下一步删去与外围之界相接（已成），对应与所不示之第三项改称自由能为对数之平均，非一倒数份额之对数，述于外围；无一陈述或声明改变。"
     }
   ]
 }
