@@ -63,4 +63,9 @@ All commands run from the landing worktree's root (`.claude/worktrees/wrp2`, bra
 
 ## What the run showed
 
-(Written at landing.)
+**The rehearsal.** The checker ran outside the repository first (`BECOMING_OUT` in the scratchpad, `BECOMING_JOBS=4`), on the branch at `29c3e4206` with the integration applied, so the landing run reuses its steps. It passed in 4 minutes 41 seconds:
+- 342 modules in the closure; the core compiles from the prelude alone; the sources were unchanged during the check;
+- GrammarLaws 136 theorems in 160 declarations, GrammarTransport 54 in 58, ProcessRepresentation 52 in 70, every axiom report empty, and no spine module with an axiom;
+- 16,713 theorems, 22,797 declarations audited, and 231 generated `injEq` lemmas on `propext`.
+
+(The landing run is written here at landing.)
