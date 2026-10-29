@@ -5,8 +5,9 @@ oc-own-class/deferred_grammarpath.py, run first; item 4 has nothing to move).
   (2) GrammarLaws' module doc on the lineage laws: the step-indexed sentence gains them, and the
       "What is not shown" clause naming them goes;
   (3) kept_onward moves from Becoming.KeptOnward to beside «线则所闭» in GrammarLaws; the leaf is
-      retired (its file, the six modules' imports, the checker's core list and scope sentence, the
-      root module's import and bullet, the README rows), and GrammarLaws' closure texts name it;
+      retired (the six modules' imports, the checker's core list and scope sentence, the root module's
+      import and bullet, the README rows; its file goes to the Lean history folder by
+      he_history_move.py), and GrammarLaws' closure texts name it;
   (5) total_eq_of_supports moves from KeepingWidening to beside total_le_of_support in Dissipation;
   (6) «保之像» moves from GrammarTransport to beside «像» in GrammarLaws, and Mechanism's
       factors_image and Image.least are proved as its cases (U2's design §6), every text following.
@@ -207,5 +208,5 @@ edit(CHECKER, """    "occurrence itself or reached, and a region of the steps of
 
 for path, new in pending.items():
     path.write_text(new, encoding='utf-8')
-(B / 'KeptOnward.lean').unlink()
-print('HE: items 2, 3, 5 and 6 applied in', len(pending), 'files; Becoming/KeptOnward.lean removed')
+print('HE: items 2, 3, 5 and 6 applied in', len(pending), 'files; Becoming/KeptOnward.lean goes to the Lean history '
+      'folder next (he_history_move.py)')

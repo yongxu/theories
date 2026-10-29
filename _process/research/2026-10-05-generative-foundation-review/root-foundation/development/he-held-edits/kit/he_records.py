@@ -56,6 +56,9 @@ def ref(r, path):
     return found[0]
 
 
+writes = {}
+
+
 def history(r, en, zh):
     r['history'].append({'en': f'29 October 2026 (HE, study section {N}): ' + en,
                          'zh': f'2026年10月29日（HE，研究第 {N} 节）：' + zh})
@@ -64,11 +67,15 @@ def history(r, en, zh):
 # master-laws-on-the-grammar
 p = RECS / 'master-laws-on-the-grammar.json'
 r = json.loads(p.read_text(encoding='utf-8'))
-ko = ref(r, lean('KeptOnward'))
-assert ko['declarations'] == ['Becoming.kept_onward'], ko['declarations']
-r['references'].remove(ko)
+# The history move (he_history_move.py) has re-pointed KeptOnward's reference and binding to the history copy;
+# kept_onward's proof is now GrammarLaws', so both go, the move's manifest keeping the file's provenance.
+HIST = 'experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/KeptOnward.lean'
+kos = [x for x in r['references'] if x['path'] in (HIST, lean('KeptOnward')) and x['role'] == 'proof']
+assert len(kos) == 1, kos
+assert kos[0]['declarations'] == ['Becoming.kept_onward'], kos[0]['declarations']
+r['references'].remove(kos[0])
 before = len(r['proof_bindings'])
-r['proof_bindings'] = [b for b in r['proof_bindings'] if b['source'] != lean('KeptOnward')]
+r['proof_bindings'] = [b for b in r['proof_bindings'] if b['source'] not in (HIST, lean('KeptOnward'))]
 assert len(r['proof_bindings']) == before - 1
 g = ref(r, lean('GrammarLaws'))
 g['declarations'] = g['declarations'] + [d for d in ('Becoming.kept_onward', 'Becoming.«保之像»')
@@ -110,23 +117,23 @@ history(r, "kept_onward moved from Becoming.KeptOnward, now retired, to its home
         "kept_onward 自已退役之 Becoming.KeptOnward 移至其所居，GrammarLaws 中「线则所闭」之旁；「保之像」自 GrammarTransport "
         "移至 GrammarLaws 中「像」之旁，Mechanism 之 factors_image 与 Image.least 证为其例，陈述与名不变；GrammarLaws 之模块说明言"
         "谱系诸律由计步之律证出。")
-p.write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+writes[p] = r
 
 # processes-represented-both-ways
 p = RECS / 'processes-represented-both-ways.json'
 r = json.loads(p.read_text(encoding='utf-8'))
 gt, g = ref(r, lean('GrammarTransport')), ref(r, lean('GrammarLaws'))
-assert 'Becoming.«保之像»' in gt['declarations'] and 'Becoming.«保之像»' not in g['declarations']
+assert 'Becoming.«保之像»' in gt['declarations'] and 'Becoming.«保之像»' not in g.get('declarations', [])
 gt['declarations'] = [d for d in gt['declarations'] if d != 'Becoming.«保之像»']
 gt['sha256'] = sha(lean('GrammarTransport'))
-g['declarations'] = g['declarations'] + ['Becoming.«保之像»']
+g['declarations'] = g.get('declarations', []) + ['Becoming.«保之像»']
 g['sha256'] = sha(lean('GrammarLaws'))
 assert not any(b['source'] == lean('GrammarLaws') for b in r['proof_bindings'])
 r['proof_bindings'].append(binding(lean('GrammarLaws'), 'GrammarLaws'))
 history(r, "«保之像» moved from GrammarTransport to beside «像» in GrammarLaws, statement and name unchanged; its "
            "reference and binding follow.",
         "「保之像」自 GrammarTransport 移至 GrammarLaws 中「像」之旁，陈述与名不变；其引用与绑定随之。")
-p.write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+writes[p] = r
 
 # what-keeping-widening-needs
 p = RECS / 'what-keeping-widening-needs.json'
@@ -143,5 +150,7 @@ r['proof_bindings'].append(binding(lean('Dissipation'), 'Dissipation'))
 history(r, 'total_eq_of_supports moved from KeepingWidening to beside total_le_of_support in Dissipation, statement and '
            'name unchanged; its reference and binding follow.',
         'total_eq_of_supports 自 KeepingWidening 移至 Dissipation 中 total_le_of_support 之旁，陈述与名不变；其引用与绑定随之。')
-p.write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-print('records: master-laws-on-the-grammar, processes-represented-both-ways, what-keeping-widening-needs')
+writes[p] = r
+for path, record in writes.items():
+    path.write_text(json.dumps(record, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+print('records:', ', '.join(path.stem for path in writes))

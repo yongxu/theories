@@ -49,11 +49,12 @@ An edit held for a rebuild is added to this list, not left to memory.
 
 `kit/` applies the edits to a checkout, in order, and every script checks its edits before it writes:
 1. `oc-own-class/deferred_grammarpath.py`, the owner's script, as written (item 1).
-2. `he_lean.py`, items 2, 3, 5 and 6. It edits 15 files: GrammarLaws, GrammarTransport, Mechanism, KeepingWidening, Dissipation, the six modules that imported KeptOnward, the root module, the checker, and the two READMEs. It also removes `Becoming/KeptOnward.lean`.
+2. `he_lean.py`, items 2, 3, 5 and 6. It edits 15 files: GrammarLaws, GrammarTransport, Mechanism, KeepingWidening, Dissipation, the six modules that imported KeptOnward, the root module, the checker, and the two READMEs. It does not delete `Becoming/KeptOnward.lean`.
    - `kept_onward` and «保之像» are pasted unchanged beside «线则所闭» and «像».
    - `total_eq_of_supports` goes after `total_le_of_support` in Dissipation's `section Totals`. It takes that section's `{α : Type}`, so its printed statement is unchanged.
    - Mechanism's two lemmas use U2's scratch proofs, with `moveRel P a` written out as `fun s t => P.step s a t`, since Mechanism does not import GrammarRegularity. The two are equal by definition, and Mechanism's `image_step_iff` already writes it so.
-3. After the checker:
+3. `he_history_move.py`, before the checker: `Becoming/KeptOnward.lean` goes to the Lean history folder (`lean/history/becoming/Becoming/`) with its bytes as on main, by `research.py move` (plan `he-history.tsv`, batch HE-history), as R32 and R33 did, at the coordinating session's word. The pin on the package's Lean files is lifted for the move only and restored byte for byte. The move writes its manifest and receipt. It re-points master-laws-on-the-grammar's KeptOnward reference and binding to the history copy, and `he_records.py` then drops both, since `kept_onward`'s proof is GrammarLaws'. A dry run on main: one file moved, two references re-pointed in one live file, six generated pages to re-render, no conflict.
+4. After the checker:
    - `he_signatures.py`, the signature audit. Every statement of the twelve changed modules is unchanged, three declarations move module, and KeptOnward is gone from the run.
    - `he_records.py`, the three records the moves touch.
    - `he_texts.py`: 01 §7's lumping bullet, 08's counts and the study section (`he_study.txt`).
