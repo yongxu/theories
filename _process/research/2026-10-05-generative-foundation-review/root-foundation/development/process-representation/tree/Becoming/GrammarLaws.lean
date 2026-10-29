@@ -104,9 +104,12 @@ their consumers' stay arithmetic, since each needs only the count.
   (`«历之逆»`); where no letter's relation merges, it merges nothing (`«历之定前»`), and where each
   goes alike under `E`, it keeps `E`-alike occurrences alike (`«同行之历»`). Six laws of `«迭»` are
   these laws' cases for one relation (`«迭之接»`, `«迭之分»`, `«迭之末步»`, `«迭之逆»`, `«迭之定前»`
-  and `«同行之迭»`). The others keep their own proofs: they read one relation's closure or its
-  successors along a line, count steps up to `n` or iterate a loop, which a word of relations does
-  not, or follow in one line from a law above. Three of the models' step-indexed laws are proved
+  and `«同行之迭»`). The others keep their proofs, each for its reason: `«迭则及»`, `«及即迭»`,
+  `«迭则同一或及»` and `«迭之定于»` read one relation's closure, and `«或有后则或迭»` and `«不穷则迭»`
+  its successors along one line; `«迭之周»` repeats a loop; `«迭内即静或缘之迭»` relates steps of
+  different lengths and `«承之迭»` a course of regions round by round, which no law of `«历»` states;
+  and `«迭内之接»`, `«存承之迭»`, `«迭之定»` and `«同行于迭»` follow from laws above with no induction
+  of their own. Three of the models' step-indexed laws are proved
   from the laws of steps counted: `Withholding`'s closed forms from the laws of taking on, a course carrying
   its bounds (`WithinMoves.after_course`) from `«迭内之接»`, and an unending line reaching every later
   step (`Web.reaches_onward`) from `«不穷则迭»`.
@@ -251,7 +254,7 @@ end Closure
 
 Lemmas on numbers and lists, not statements of the grammar: pigeonhole (`revisits_within`), the
 list surgery that pairings need, and the words that `«迭»` reads as cases of `«历»` (copies joined,
-`replicate_add_right`; a word read backward, `reverse_cons_right`, proved here by induction because
+`replicate_add_append`; a word read backward, `reverse_cons_append`, proved here by induction because
 the core's `List.reverse_cons` reports `propext`). `le_dest`, `ListTests.length_append`,
 `ListTests.append_assoc` and `Naturals.add_congr` are the prelude's (`Becoming.Prelude`), used here,
 not restated. -/
@@ -379,31 +382,31 @@ def prepend (x : α) (h : Nat → α) : Nat → α
   | i + 1 => h i
 
 /-- `b + a` copies are `a` copies and then `b`. -/
-theorem replicate_add_right (c : α) : ∀ (a b : Nat),
+theorem replicate_add_append (c : α) : ∀ (a b : Nat),
     List.replicate (b + a) c = List.replicate a c ++ List.replicate b c
   | 0, _ => rfl
-  | a + 1, b => congrArg (c :: ·) (replicate_add_right c a b)
+  | a + 1, b => congrArg (c :: ·) (replicate_add_append c a b)
 
 /-- `n + 1` copies are `n` copies and then one. -/
-theorem replicate_succ_right (c : α) : ∀ n, List.replicate (n + 1) c = List.replicate n c ++ [c]
+theorem replicate_succ_append (c : α) : ∀ n, List.replicate (n + 1) c = List.replicate n c ++ [c]
   | 0 => rfl
-  | n + 1 => congrArg (c :: ·) (replicate_succ_right c n)
+  | n + 1 => congrArg (c :: ·) (replicate_succ_append c n)
 
 /-- Reading a list backward onto a joined list joins the second part after. -/
-theorem reverseAux_append_right : ∀ (as r s : List α),
+theorem reverseAux_append : ∀ (as r s : List α),
     List.reverseAux as (r ++ s) = List.reverseAux as r ++ s
   | [], _, _ => rfl
-  | b :: as, r, s => reverseAux_append_right as (b :: r) s
+  | b :: as, r, s => reverseAux_append as (b :: r) s
 
 /-- `a :: as` read backward is `as` read backward and then `a`. -/
-theorem reverse_cons_right (a : α) (as : List α) : (a :: as).reverse = as.reverse ++ [a] :=
-  reverseAux_append_right as [] [a]
+theorem reverse_cons_append (a : α) (as : List α) : (a :: as).reverse = as.reverse ++ [a] :=
+  reverseAux_append as [] [a]
 
 /-- Copies read backward are the same copies. -/
 theorem reverse_replicate (c : α) : ∀ n, (List.replicate n c).reverse = List.replicate n c
   | 0 => rfl
-  | n + 1 => (reverse_cons_right c (List.replicate n c)).trans
-      ((congrArg (· ++ [c]) (reverse_replicate c n)).trans (replicate_succ_right c n).symm)
+  | n + 1 => (reverse_cons_append c (List.replicate n c)).trans
+      ((congrArg (· ++ [c]) (reverse_replicate c n)).trans (replicate_succ_append c n).symm)
 
 end GrammarLaws
 
@@ -725,7 +728,7 @@ theorem «历之逆» {A : Type v} (F : A → «际» α) : ∀ (as : List A) {x
   | [], _, _ => ⟨Eq.symm, Eq.symm⟩
   | a :: as, x, y =>
     (Iff.of_eq (congrArg (fun l => «历» (fun a => «逆» (F a)) l x y)
-        (GrammarLaws.reverse_cons_right a as))).trans
+        (GrammarLaws.reverse_cons_append a as))).trans
       ((«历之末步» _ as.reverse a).trans
         ⟨fun ⟨m, first, r⟩ => ⟨m, r, («历之逆» F as).mp first⟩,
          fun ⟨m, r, rest⟩ => ⟨m, («历之逆» F as).mpr rest, r⟩⟩)
@@ -771,7 +774,7 @@ theorem «迭之接» {R : «际» α} : ∀ (a b : Nat) {x y z : α}, «迭» R
   | a, b, x, y, z, first, second =>
     («迭即历» R (b + a) x z).mp
       (Eq.subst (motive := fun l => «历» (fun (_ : Unit) => R) l x z)
-        (GrammarLaws.replicate_add_right () a b).symm
+        (GrammarLaws.replicate_add_append () a b).symm
         ((«历之接» (fun (_ : Unit) => R) (List.replicate a ()) (List.replicate b ())).mpr
           ⟨y, («迭即历» R a x y).mpr first, («迭即历» R b y z).mpr second⟩))
 
@@ -786,7 +789,7 @@ this reads its last step last, as `«相续之末步»` reads the last step of a
 theorem «迭之末步» {R : «际» α} : ∀ (n : Nat) {x z : α}, «迭» R (n + 1) x z ↔ ∃ y, «迭» R n x y ∧ R y z
   | n, x, z => («迭即历» R (n + 1) x z).symm.trans
       ((Iff.of_eq (congrArg (fun l => «历» (fun (_ : Unit) => R) l x z)
-          (GrammarLaws.replicate_succ_right () n))).trans
+          (GrammarLaws.replicate_succ_append () n))).trans
         ((«历之末步» (fun (_ : Unit) => R) (List.replicate n ()) ()).trans
           ⟨fun ⟨y, steps, r⟩ => ⟨y, («迭即历» R n x y).mp steps, r⟩,
            fun ⟨y, steps, r⟩ => ⟨y, («迭即历» R n x y).mpr steps, r⟩⟩))
@@ -853,13 +856,13 @@ theorem «存承之迭» {R : «际» α} {S : Nat → α → Prop}
      fun all b steps => all b ((«迭内即静或缘之迭» n).mpr steps)⟩
 
 /-- **Steps split as they compose (迭之分).** `b + a` steps are `a` steps and then `b`: the converse of
-`«迭之接»`, read in its order, with no arithmetic; the case of `«历之接»` for one relation. -/
+`«迭之接»`, read in its order; the case of `«历之接»` for one relation. -/
 theorem «迭之分» {R : «际» α} : ∀ (a : Nat) {b : Nat} {x z : α},
     «迭» R (b + a) x z → ∃ y, «迭» R a x y ∧ «迭» R b y z
   | a, b, x, z, steps =>
     match («历之接» (fun (_ : Unit) => R) (List.replicate a ()) (List.replicate b ())).mp
         (Eq.subst (motive := fun l => «历» (fun (_ : Unit) => R) l x z)
-          (GrammarLaws.replicate_add_right () a b) ((«迭即历» R (b + a) x z).mpr steps)) with
+          (GrammarLaws.replicate_add_append () a b) ((«迭即历» R (b + a) x z).mpr steps)) with
     | ⟨y, first, second⟩ => ⟨y, («迭即历» R a x y).mp first, («迭即历» R b y z).mp second⟩
 
 /-- **Steps read backward are steps of the converse (迭之逆)**, the case of `«历之逆»` for one

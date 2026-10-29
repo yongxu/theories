@@ -74,7 +74,7 @@ else:
 for m, new in added.items():
     assert set(new) <= names[m], (m, sorted(set(new) - names[m]))
 OWN = names['Becoming.ProcessRepresentation'] | set(added['Becoming.GrammarTransport'])
-assert len(names['Becoming.ProcessRepresentation']) == 54 and len(added['Becoming.GrammarTransport']) == 13 \
+assert len(names['Becoming.ProcessRepresentation']) == 70 and len(added['Becoming.GrammarTransport']) == 14 \
     and len(added['Becoming.GrammarLaws']) == 12, 'declaration counts'
 
 
@@ -90,50 +90,58 @@ def P(*short):
 
 
 groups = [
-    ("A process is exactly its relations, one per move: the family read back is the process, and the process read as "
-     "its family is itself, by definition; its steps are their union. Every relation is the steps of the one-move "
-     "process of its edges, a process with its moves forgotten has the same steps, a determined law's steps are its "
-     "step relation, and enabledness is «能» at a move's relation.",
-     "过程恰为其诸关系，每一着一关系：回读之族即其过程，过程读为其族即其自身，皆依定义；其步为诸关系之并。每一关系为其边之一着过程之步，"
-     "忘其着之过程同其步，定律之步为其步之关系，可行即一着之关系上之 «能»。",
-     P('moveRel_mk', 'mk_moveRel', 'steps_iff_moveRel', 'steps_edgeProcess', 'steps_unlabelled', 'steps_lawProcess',
-       'enabled_iff_neng')),
-    ("A law's truth is carried: a property of a carrier and a relation that relations alike pointwise share holds of "
-     "every process's steps exactly where it holds of every relation, and a property of families holds of every "
-     "process's moves' relations exactly where it holds of every family. The statement is not carried: a statement "
-     "naming a process notion is in the grammar's terms only through that notion's bridge.",
-     "律之真为所携：逐点相同之关系所共之载体与关系之性质，于每一过程之步成立恰当于每一关系成立；族之性质于每一过程诸着之关系成立恰当于每一族成立。"
-     "陈述不为所携：言过程概念之陈述，唯经其概念之桥方入文法之项。",
+    ("A process is exactly its relations, one per move: they are read back from it and make it, by definition, and "
+     "its steps are their union. A process with one move steps by its one "
+     "relation, so every relation is the steps of the one-move process of its edges, a process with its moves "
+     "forgotten has the same steps, and a determined law's steps are its step relation; enabledness is «能» at a "
+     "move's relation.",
+     "过程恰为其诸关系，每一着一关系：其所由成之诸关系自之回读，且由其自身之关系成之，皆依定义；其步为诸关系之并。一着之过程以其唯一之关系而行，"
+     "故每一关系为其边之一着过程之步，忘其着之过程同其步，定律之步为其步之关系；可行即一着之关系上之 «能»。",
+     P('moveRel_mk', 'mk_moveRel', 'steps_iff_moveRel', 'steps_one_move', 'steps_edgeProcess', 'steps_unlabelled',
+       'steps_lawProcess', 'enabled_iff_neng')),
+    ("A law's truth is carried: a property of relations shared by relations alike pointwise (a hypothesis from the "
+     "core's logic, not the property's content) holds of every process's steps exactly where of every relation, and "
+     "one of relations indexed by moves of every process's exactly where of all such. A statement naming a process "
+     "notion is in the grammar's terms only through its bridge.",
+     "律之真为所携：逐点相同之关系所共之载体与关系之性质（此共出于纯核之逻辑，非性质之内容），于每一过程之步成立恰当于每一关系成立；以着为指标之关系之性质，"
+     "于每一过程者成立恰当于一切如此者成立。陈述不为所携：言过程概念之陈述，唯经其桥方入文法之项。",
      P('forall_steps_iff', 'forall_moveRel_iff')),
     ("The converse: every class is the class of a frame's claims, likeness to depth zero. The model with the move inside "
      "recovers the process on its fixed carrier, and its image is exactly the relations leaving the next move open, so "
-     "a relation reading the next move is no process's model; on it the classes of the same move and of the same "
-     "configuration are read.",
-     "逆向：每一类为某框架断言之类，即零深之相似。着在其内之模型于其定载体上复得其过程，其像恰为留下一着未定之关系，故读下一着之关系非任何过程之模型；"
-     "于其上读同着之类与同构形之类。",
-     P('class_is_claims', 'sameMove', 'sameConfiguration', 'step_iff_withMove', 'withMove_image_iff',
-       'reading_next_move_not_withMove')),
-    ("Faithful up to correspondence with both classes: a renaming of configurations and moves is a correspondence of "
-     "the models with the move inside carrying the steps and both classes; from a configuration and a move, every such "
-     "correspondence is the product of renamings of configurations and moves relating the processes. With no move a "
-     "point is needed: the empty models correspond, yet one configuration is not two.",
-     "携二类则于对应下忠实：构形与着之重名即携步与二类之着在其内之模型之一一对应，即其积；自一构形与一着起，每一如此之对应即构形之重名与着之重名之积，"
-     "且关联二过程。无着则需一点：空模型相对应，而一构形非二。",
-     P('renamed_withMove', 'configurationRenaming', 'moveRenaming', 'withMove_renamed', 'NoMoves.P', "NoMoves.P'",
-       'NoMoves.e', 'NoMoves.needs_a_point')),
+     "the relation 'the next move is true' is no process's model.",
+     "逆向：每一类为某框架断言之类，即零深之相似。着在其内之模型于其定载体上复得其过程，其像恰为留下一着未定之关系，故「下一着为真」之关系非任何过程之模型。",
+     P('class_is_claims', 'step_iff_withMove', 'withMove_image_iff', 'reading_next_move_not_withMove')),
+    ("Faithful up to correspondence with both classes, the sameness of each coordinate: a renaming relating two "
+     "processes is a correspondence of their models with the move inside carrying the steps and both classes, and from "
+     "a configuration and a move every such correspondence is the product of a renaming relating them. With no move, "
+     "or no configuration, the point is needed: the empty models correspond, yet one is not two.",
+     "携二类（各坐标之同）则于对应下忠实：关联二过程之重名即携步与二类之着在其内之模型之一一对应；自一构形与一着起，每一如此之对应即关联二者之重名之积。"
+     "无着或无构形则需一点：空模型相对应，而一非二。",
+     P('withMove_of_renaming', 'configurationRenaming', 'moveRenaming', 'renaming_of_withMove', 'NoMoves.P',
+       "NoMoves.P'", 'NoMoves.e', 'NoMoves.models_correspond', 'NoMoves.not_renamed', 'NoConfigurations.P',
+       "NoConfigurations.P'", 'NoConfigurations.e', 'NoConfigurations.models_correspond',
+       'NoConfigurations.not_renamed')),
     ("Neither class alone: the twist flips the configuration where the move is true and keeps the class of the same "
      "move, the flip flips the move where the configuration is true and keeps the class of the same configuration, and "
      "each carries the model of one process to that of another which no renaming of configurations and moves relates "
      "to it.",
      "单一类不足：扭于着为真处翻其构形而保同着之类，翻于构形为真处翻其着而保同构形之类；各携一过程之模型至另一过程者，而构形与着之重名无一关联二者。",
-     P('Twist.P₁', 'Twist.P₂', 'Twist.twist', 'Twist.twist_twist', 'Twist.e', 'Twist.twist_steps',
-       'Twist.models_correspond', 'Twist.P₂_not_both', 'Twist.P₂_key', 'Twist.not_renamed', 'Flip.P₃', 'Flip.P₄',
-       'Flip.flip', 'Flip.flip_flip', 'Flip.e', 'Flip.flip_steps', 'Flip.models_correspond', 'Flip.P₄_apart',
-       'Flip.not_renamed')),
+     P('Twist.P₁', 'Twist.P₂', 'Twist.flipConfiguration', 'Twist.flipConfiguration_twice', 'Twist.e',
+       'Twist.steps_carried', 'Twist.models_correspond', 'Twist.P₂_not_both', 'Twist.P₂_loops_by_one_move',
+       'Twist.not_renamed', 'Flip.P₃', 'Flip.P₄', 'Flip.flipMove', 'Flip.flipMove_twice', 'Flip.e',
+       'Flip.steps_carried', 'Flip.models_correspond', 'Flip.P₄_apart', 'Flip.not_renamed')),
+    ("A renaming relating two processes carries each move's relation and the steps, so through the bridges and the "
+     "grammar's terms kept by correspondence it keeps traces, the word renamed letter by letter, n steps and within n "
+     "steps, reach, returning and invariants, determination and merging nothing, going alike under a description read "
+     "back, and going on along some branch.",
+     "关联二过程之重名携每一着之关系与其步，故经诸桥与为对应所保之文法诸项，保迹（字逐字母重名）、n 步与 n 步以内、及、返与不变者、定与不并、"
+     "回读之描述下之同行，及沿某支而延。",
+     P('renaming_moveRel', 'renaming_steps', 'renaming_trace', 'renaming_iterate', 'renaming_reach', 'renaming_returns',
+       'renaming_invariant', 'renaming_determined', 'renaming_lossless', 'renaming_goAlike', 'renaming_yan')),
     ("Forward: a trace is passing through the moves' relations along its word («历»), and a word is feasible exactly "
-     "where that leads somewhere. A process factors through a map exactly where, at each move, the image of its "
-     "relation lies within the other's; a run's configurations carry the line of steps into the steps, and with the "
-     "move inside a run is exactly a sequence along which that image lies within the steps.",
+     "where that leads somewhere. A process factors through a map exactly where each move's image lies within the "
+     "other's (Mechanism's image, move by move); a run's configurations carry the line of steps into the steps, and "
+     "with the move inside a run is exactly a sequence along which that image lies within.",
      "前向：迹即沿其字依次历诸着之关系（«历»），字可行恰当如此有所至。过程经一映射分解，恰当每一着其关系之像在他者之内；运行之构形携步之线入其步，"
      "着在其内则运行恰为如此之像在步内之序列。",
      P('trace_iff_li', 'feasible_iff_li', 'factorsThrough_iff_image', 'run_image', 'run_iff_image')),
@@ -152,14 +160,14 @@ groups = [
      "(«延之拉回»).",
      "沿任一映射：其保一关系恰当该关系沿之之像在他者之内（«保之像»）；沿某支而延沿任一提升续之映射回射，无需逆（«延之拉回»）。",
      P('«保之像»', '«延之拉回»')),
-    ("Correspondences compose side by side («一一对应».prod), and the terms the processes' representation reads are kept "
-     "by a correspondence carrying what they read: steps and passing through a word, carried and kept; within n steps; "
-     "a closed region where membership is carried; a fixed successor and predecessor; going alike; and going on along "
-     "some branch, two cases of its pulling back.",
-     "一一对应可并置（«一一对应».prod），过程之表示所读诸项为携其所读之一一对应所保：迭与历，被携且保；n 步以内；成员被携之闭区；定后与定前；同行；"
-     "沿某支而延，即其拉回之二例。",
-     P('«一一对应».prod', '«迭之像»', '«迭之对应»', '«历之像»', '«历之对应»', '«迭内之对应»', '«闭之对应»',
-       '«定后之对应»', '«定前之对应»', '«同行之对应»', '«延之对应»')),
+    ("Correspondences compose side by side («一一对应».prod), and the terms the renamings read are kept by a "
+     "correspondence carrying what they read: passing through a word with its letters renamed, n steps its case; within "
+     "n steps; a closed region where membership is carried; a fixed successor and predecessor; going alike; and going "
+     "on along some branch, two cases of its pulling back.",
+     "一一对应可并置（«一一对应».prod），重名所读诸项为携其所读之一一对应所保：历一字而字母重名，n 步为其例；n 步以内；成员被携之闭区；定后与定前；"
+     "同行；沿某支而延，即其拉回之二例。",
+     P('«一一对应».prod', 'GrammarTransport.map_replicate', '«历之像»', '«历之对应»', '«迭之像»', '«迭之对应»',
+       '«迭内之对应»', '«闭之对应»', '«定后之对应»', '«定前之对应»', '«同行之对应»', '«延之对应»')),
 ]
 cited = [d for _, _, ds in groups for d in ds]
 assert len(cited) == len(set(cited)), 'a declaration cited twice'
@@ -169,10 +177,10 @@ laws = [capped('laws', {'en': en, 'zh': zh, 'declarations': ds}, item=True) for 
 
 title = capped('title', {'en': 'Processes represented in the grammar both ways', 'zh': '过程于文法中两向得表示'})
 statement = capped('statement', {
-    'en': "A process is exactly its relations, one per move, so a law over processes holds of every family of "
-          "relations; every relation is a process's steps and every class a frame's claims. With the move inside, a "
-          "correspondence carrying the steps and both classes is a renaming; one class alone is not enough.",
-    'zh': '过程恰为其诸关系，每一着一关系，故过程上之律于每一关系之族成立；每一关系为某过程之步，每一类为某框架之断言。着在其内，携步与二类之一一对应即重名；单一类不足。'})
+    'en': "A process is exactly its relations, one per move, so a law over processes holds of all relations indexed "
+          "by moves; every relation is a process's steps. With the move inside, a correspondence carrying the steps and "
+          "both classes is a renaming, which keeps the bridged notions; one class is not enough.",
+    'zh': '过程恰为其诸关系，每一着一关系，故过程上之律于一切以着为指标之关系成立；每一关系为某过程之步。着在其内，携步与二类之一一对应即重名，重名保诸已桥之概念；单一类不足。'})
 hypotheses = [capped('hypotheses', x, item=True) for x in (
     {'en': "The process model's commitments: configurations and moves as types, Prop-valued steps, discrete runs indexed "
            "by the natural numbers; a process is read only through its steps, so what a statement reads beyond them is "
@@ -207,7 +215,10 @@ does_not_show = [capped('does_not_show', x, item=True) for x in (
      'zh': '不读旧基之域而关乎过程以外之结构之定理（最优、权重、制度边际等），此读不及之。', 'kind': 'scope'},
     {'en': "A forward theorem: no statement says every process notion is a grammar term; correspondence lemmas for the "
            "grammar's terms not listed in GrammarTransport.",
-     'zh': '前向之定理：无陈述言每一过程概念皆为文法之项；GrammarTransport 未列之文法诸项之对应引理。', 'kind': 'non-implication'})]
+     'zh': '前向之定理：无陈述言每一过程概念皆为文法之项；GrammarTransport 未列之文法诸项之对应引理。', 'kind': 'non-implication'},
+    {'en': "Morphisms of models beyond correspondences, the functor question 55 of the logic dossier asks for; and the "
+           "design's counting remarks (fewer relations than processes on a finite carrier), which are not in Lean.",
+     'zh': '对应之外之模型之态射，即逻辑档案第 55 问所求之函子；及设计之计数之言（有限载体上关系少于过程），未入 Lean。', 'kind': 'scope'})]
 validation = capped('validation_scope', {
     'en': "Pure core, every axiom report empty: ProcessRepresentation imports EdgeClosure, GrammarTransport, Labelled, "
           "Onward, GrammarRegularity and GrammarCandidates, and with GrammarLaws and GrammarTransport extended the whole "
@@ -241,8 +252,9 @@ counterexamples = [
            "renaming relates them (Flip.models_correspond, Flip.not_renamed).",
      'zh': '翻：P₃ 处处以真而行，P₄ 于真以假、于假以真而行；于构形为真处翻其着，携一模型至另一，保同构形之类，而无重名关联二者（Flip.models_correspond、Flip.not_renamed）。'},
     {'en': "With no move, the models of a process on one configuration and of one on two are both empty and correspond, "
-           "and no correspondence of the configurations exists (NoMoves.needs_a_point).",
-     'zh': '无着时，一构形之过程与二构形之过程之模型皆空而相对应，而构形之间无一一对应（NoMoves.needs_a_point）。'},
+           "and no renaming relates them (NoMoves.models_correspond, NoMoves.not_renamed); with no configuration, "
+           "likewise for one move and two (NoConfigurations.not_renamed).",
+     'zh': '无着时，一构形之过程与二构形之过程之模型皆空而相对应，而无重名关联二者（NoMoves.models_correspond、NoMoves.not_renamed）；无构形时，一着与二着亦然（NoConfigurations.not_renamed）。'},
     {'en': "On one configuration, stepping only by true and only by false give the same steps, and only the first is "
            "enabled by true (Forgotten.moves_forgotten); a relation reading the next move is no process's model "
            "(reading_next_move_not_withMove).",
@@ -258,8 +270,8 @@ master_law = capped('laws', {
     'zh': '«历»，依次历一字之诸关系，«迭» 为其常族（«迭即历»）：沿相接之字可接，末字母末历，逆字以逆关系倒历，无字母并则不并，各同行则保同行，并其所用之列表引理。'
           '«迭» 之六律为其例，陈述不改：«迭之接»、«迭之分»、«迭之末步»、«迭之逆»、«迭之定前»、«同行之迭»。',
     'declarations': C(set(added['Becoming.GrammarLaws']), '«历»', '«迭即历»', '«历之接»', '«历之末步»', '«历之逆»',
-                      '«历之定前»', '«同行之历»', 'GrammarLaws.replicate_add_right', 'GrammarLaws.replicate_succ_right',
-                      'GrammarLaws.reverseAux_append_right', 'GrammarLaws.reverse_cons_right',
+                      '«历之定前»', '«同行之历»', 'GrammarLaws.replicate_add_append', 'GrammarLaws.replicate_succ_append',
+                      'GrammarLaws.reverseAux_append', 'GrammarLaws.reverse_cons_append',
                       'GrammarLaws.reverse_replicate')}, item=True)
 assert sorted(master_law['declarations']) == sorted(added['Becoming.GrammarLaws']), 'GrammarLaws additions'
 world_item = capped('does_not_show', {
@@ -339,7 +351,7 @@ record = {
     'correspondence': correspondence,
     'canonical_source': LEAN['ProcessRepresentation'],
     'aliases': ["The processes' representation theorem", '过程之表示定理', 'the model with the move inside', '着在其内之模型',
-                'Becoming.withMove_renamed', 'Becoming.forall_steps_iff', 'Becoming.trace_iff_li',
+                'Becoming.renaming_of_withMove', 'Becoming.forall_steps_iff', 'Becoming.trace_iff_li',
                 'Becoming.yan_line_iff_dependentChoice'],
     'dependencies': [
         dep(RIDM, "«历» and its laws, «迭», «像», «闭», «定后», «定前» and «同行».", '«历» 及其律，«迭»、«像»、«闭»、«定后»、«定前» 与 «同行»。'),
@@ -370,12 +382,13 @@ record = {
     'proof_bindings': binding,
     'history': [{
         'en': f'{DATE_EN}: added (WRP2), processes represented in the grammar both ways: a process exactly its relations, '
-              f'one per move, a law\'s truth carried to every family of relations; the converse, with the model with the '
-              f'move inside faithful up to correspondence carrying both classes and neither alone; the forward bridges '
+              f'one per move, a law\'s truth carried to all relations indexed by moves; the converse, with the model with '
+              f'the move inside faithful up to correspondence carrying both classes and neither alone, a renaming keeping '
+              f'the bridged notions; the forward bridges '
               f'and the calibration read on the grammar; after the design\'s review and re-read, a review of the Lean; '
               f'study section {N}.',
-        'zh': f'{DATE_ZH}：新增（WRP2），过程于文法中两向得表示：过程恰为其诸关系，每一着一关系，律之真携至每一关系之族；逆向，着在其内之模型携二类则于对应下忠实，'
-              f'单一类不足；前向之桥与于文法上读之校准；经设计之审及其复读、Lean 之审；研究第 {N} 节。'}],
+        'zh': f'{DATE_ZH}：新增（WRP2），过程于文法中两向得表示：过程恰为其诸关系，每一着一关系，律之真携至一切以着为指标之关系；逆向，着在其内之模型携二类则于对应下忠实，'
+              f'单一类不足，重名保诸已桥之概念；前向之桥与于文法上读之校准；经设计之审及其复读、Lean 之审；研究第 {N} 节。'}],
 }
 
 for rid in [x['id'] for x in record['dependencies']]:

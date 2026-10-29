@@ -27,11 +27,12 @@ NAMES = set()
 for m in ('GrammarLaws', 'GrammarTransport', 'ProcessRepresentation'):
     audit = HERE.parent / f'tree/.build/Becoming{m}AxiomAudit.lean'
     NAMES |= set(re.findall(r'^#print axioms Becoming\.(\S+)$', audit.read_text(encoding='utf-8'), re.M))
-OURS = ('moveRel_mk', 'mk_moveRel', 'steps_iff_moveRel', 'steps_edgeProcess', 'enabled_iff_neng', 'forall_steps_iff',
-        'forall_moveRel_iff', 'class_is_claims', 'step_iff_withMove', 'withMove_image_iff', 'renamed_withMove',
-        'withMove_renamed', 'reading_next_move_not_withMove', 'trace_iff_li', 'factorsThrough_iff_image',
-        'run_iff_image', 'yan_iff_keepsMoving', 'yan_line_iff_dependentChoice', 'yan_line_of_list', 'Twist.',
-        'Flip.', 'NoMoves.', 'Forgotten.', '«历', '«迭即历»', '«同行之历»')
+OURS = ('moveRel_mk', 'mk_moveRel', 'steps_iff_moveRel', 'steps_one_move', 'steps_edgeProcess', 'enabled_iff_neng',
+        'forall_steps_iff', 'forall_moveRel_iff', 'class_is_claims', 'step_iff_withMove', 'withMove_image_iff',
+        'withMove_of_renaming', 'renaming_', 'reading_next_move_not_withMove', 'trace_iff_li',
+        'factorsThrough_iff_image', 'run_iff_image', 'yan_iff_keepsMoving', 'yan_line_iff_dependentChoice',
+        'yan_line_of_list', 'Twist.', 'Flip.', 'NoMoves.', 'NoConfigurations.', 'Forgotten.', '«历', '«迭即历»',
+        '«同行之历»')
 
 
 def cited(text):
@@ -65,18 +66,18 @@ edit(ONE, """formations and conditions are two roles of one relatum.
 
 A process is exactly its relations, one per move (`moveRel_mk`, `mk_moveRel`), and its steps are their union (`steps_iff_moveRel`).
 
-**Forward.** A property of relations that relations alike pointwise share holds of every process's steps exactly where it holds of every relation (`forall_steps_iff`), and a property of families holds of every process's moves' relations exactly where it holds of every family (`forall_moveRel_iff`). So a law's truth is carried; its statement is in the grammar's terms only through a bridge for each notion it names. The bridges added here:
+**Forward.** A property of relations that relations alike pointwise share holds of every process's steps exactly where it holds of every relation (`forall_steps_iff`), and a property of relations indexed by moves holds of every process's exactly where it holds of all such (`forall_moveRel_iff`). So a law's truth is carried; its statement is in the grammar's terms only through a bridge for each notion it names. The bridges added here:
 - enabledness is «能» at a move's relation (`enabled_iff_neng`);
 - a trace is passing through the moves' relations along its word (`trace_iff_li`, on `«历»` of [§7](#r-master-laws-on-the-grammar));
-- a process factors through a map exactly where the image of each move's relation lies within the other's (`factorsThrough_iff_image`);
+- a process factors through a map exactly where the image of each move's relation lies within the other's (`factorsThrough_iff_image`, the image process of `Becoming.Mechanism` read move by move);
 - with the move inside, a run is exactly a sequence along which the image of the line of steps lies within the steps (`run_iff_image`);
 - going on along some branch (`«延»`) is lying in a family that keeps moving (`yan_iff_keepsMoving`).
 
-**Converse.** Every relation is a process's steps (`steps_edgeProcess`), and every class a frame's class of claims (`class_is_claims`). The model with the move inside (`withMove`) recovers the process on its fixed carrier (`step_iff_withMove`), and its image is exactly the relations leaving the next move open (`withMove_image_iff`). A renaming of configurations and moves is a correspondence of these models carrying the steps, the class of the same move and that of the same configuration (`renamed_withMove`); from a configuration and a move, every such correspondence is a renaming (`withMove_renamed`).
+**Converse.** Every relation is a process's steps (`steps_edgeProcess`), and every class a frame's class of claims (`class_is_claims`). The model with the move inside (`withMove`) recovers the process on its fixed carrier (`step_iff_withMove`), and its image is exactly the relations leaving the next move open (`withMove_image_iff`). A renaming relating two processes is a correspondence of these models carrying the steps, the class of the same move and that of the same configuration (`withMove_of_renaming`); from a configuration and a move, every such correspondence is a renaming relating them (`renaming_of_withMove`). A renaming keeps the bridged notions: traces, the word renamed letter by letter (`renaming_trace`); `n` steps and within `n` steps (`renaming_iterate`); reach, returning and invariants (`renaming_reach`, `renaming_returns`, `renaming_invariant`); determination and merging nothing (`renaming_determined`, `renaming_lossless`); going alike (`renaming_goAlike`); and going on along some branch (`renaming_yan`).
 
 **Where it stops.**
 - *The steps forget the moves* (`Forgotten.moves_forgotten`).
-- *Neither class alone* makes the model with the move inside faithful up to correspondence: the twist keeps the class of the same move and the flip that of the same configuration, and each relates two processes that no renaming relates (`Twist.not_renamed`, `Flip.not_renamed`). With no move a point is needed (`NoMoves.needs_a_point`), and a relation reading the next move is no process's model (`reading_next_move_not_withMove`).
+- *Neither class alone* makes the model with the move inside faithful up to correspondence: the twist keeps the class of the same move and the flip that of the same configuration, and each relates two processes that no renaming relates (`Twist.not_renamed`, `Flip.not_renamed`). With no move, or no configuration, a point is needed (`NoMoves.not_renamed`, `NoConfigurations.not_renamed`): the empty models forget the configurations, or the moves. The relation "the next move is true" is no process's model (`reading_next_move_not_withMove`).
 - *A line from going on is a choice.* On relations on a type of the first universe, going on along some branch gives a line exactly under dependent choice (`yan_line_iff_dependentChoice`); within finitely many configurations it gives one with nothing chosen (`yan_line_of_list`).
 
 ([record]({REC}))
@@ -85,7 +86,8 @@ A process is exactly its relations, one per move (`moveRel_mk`, `mk_moveRel`), a
 - that a statement naming an unbridged process notion is in the grammar's terms;
 - that every functional total relation is a determined law's step, which is unique choice on one carrier;
 - a product and its factors as one construction, which needs a pairing the grammar does not form;
-- the theorems that read no field of the old base and are about other structures.
+- the theorems that read no field of the old base and are about other structures;
+- morphisms of models beyond correspondences.
 
 <a id="r-place-transition-nets-on-the-spine"></a>""")
 
@@ -224,8 +226,9 @@ reg = json.loads(REGIONS.read_text(encoding='utf-8'))
 assert RID not in reg['records'] and 'Becoming.ProcessRepresentation' not in reg['modules']
 reg['records'][RID] = {'region': 'root', 'base': 'grammar',
                        'note': 'ProcessRepresentation WRP2: processes represented both ways by their moves\' relations; '
-                               'a law\'s truth carried to every family; the model with the move inside faithful up to '
-                               'correspondence with both classes; the forward bridges; GrammarTransport its lemmas'}
+                               'a law\'s truth carried to all relations indexed by moves; the model with the move inside '
+                               'faithful up to correspondence with both classes, a renaming keeping the bridged notions; '
+                               'the forward bridges; GrammarTransport its lemmas'}
 reg['records'] = dict(sorted(reg['records'].items()))
 reg['modules']['Becoming.ProcessRepresentation'] = {'region': 'root', 'base': 'grammar',
                                                     'note': 'WRP2 processes as models of the grammar, both ways (01 §8.1)'}

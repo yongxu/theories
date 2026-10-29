@@ -8,14 +8,19 @@ Result(s): processes-represented-both-ways (new, home 01 §8.1), with GrammarTra
 Delta:
   - A process is exactly its relations, one per move (moveRel_mk, mk_moveRel), its steps their union; a property of
     relations shared by relations alike pointwise holds of every process's steps exactly where it holds of every
-    relation (forall_steps_iff), and a property of families of every process's moves' relations exactly where of
-    every family (forall_moveRel_iff): a law's truth is carried, its statement only through a bridge per notion.
+    relation (forall_steps_iff), and a property of relations indexed by moves of every process's exactly where of
+    all such (forall_moveRel_iff): a law's truth is carried, its statement only through a bridge per notion.
   - Converse: every relation is a process's steps (steps_edgeProcess), every class a frame's class of claims
     (class_is_claims); the model with the move inside has as image exactly the relations leaving the next move
-    open (withMove_image_iff). A renaming is a correspondence of these models carrying the steps and the classes of
-    the same move and the same configuration (renamed_withMove), and from a configuration and a move every such
-    correspondence is a renaming (withMove_renamed), which settles the design's proposed faithfulness; neither class
-    alone suffices (the twist and the flip), and with no move a point is needed (NoMoves.needs_a_point).
+    open (withMove_image_iff). A renaming relating two processes is a correspondence of these models carrying the
+    steps and the classes of the same move and the same configuration (withMove_of_renaming), and from a
+    configuration and a move every such correspondence is a renaming relating them (renaming_of_withMove), which
+    settles the design's proposed faithfulness; neither class alone suffices (the twist and the flip), and with no
+    move or no configuration a point is needed (NoMoves.not_renamed, NoConfigurations.not_renamed).
+  - A renaming keeps the bridged notions, through the bridges and the terms GrammarTransport keeps: traces with the
+    word renamed letter by letter (renaming_trace), n steps and within n steps, reach, returning, invariants,
+    determination, merging nothing, going alike and going on along some branch (renaming_iterate, renaming_reach,
+    renaming_returns, renaming_invariant, renaming_determined, renaming_lossless, renaming_goAlike, renaming_yan).
   - Forward bridges where none was landed: enabledness as «能»; a trace as passing through the moves' relations along
     its word (trace_iff_li); factoring through a map, runs, and going on along some branch as images lying within
     and families that keep moving; Onward's calibration read on the grammar (yan_line_iff_dependentChoice,
@@ -25,8 +30,9 @@ Delta:
     every landed statement and body unchanged, only additions). The core's List.reverse_cons reports propext, so the
     list lemmas are proved by induction.
   - GrammarTransport: preserving as an image lying within («保之像»); going on along some branch pulled back along
-    lifting («延之拉回»); steps, words, within n steps, closed regions, a fixed successor and predecessor, going alike
-    and going on kept by correspondence; correspondences side by side («一一对应».prod).
+    lifting («延之拉回»); passing through a word with its letters renamed, n steps its case, within n steps, closed
+    regions, a fixed successor and predecessor, going alike and going on kept by correspondence; correspondences side
+    by side («一一对应».prod).
 Supplied premises / correspondence: none added; the process model's commitments (types of configurations and moves,
        Prop-valued steps, runs indexed by Nat); dependent choice only where the calibration names it.
 Evidence: core receipt `{RECEIPT}`; Becoming.GrammarLaws (GL), Becoming.GrammarTransport (GT) and

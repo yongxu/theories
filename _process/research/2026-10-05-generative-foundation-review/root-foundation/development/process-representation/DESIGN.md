@@ -1,6 +1,6 @@
 # WRP: processes represented in the grammar both ways, designed
 
-**Status: reviewed once and re-read; every finding of both is taken ([REVIEW-WRP](REVIEW-WRP.md)). Part 1 then follows GrammarLaws' owner's decision on the composite along a word (§4).**
+**Status: reviewed once and re-read; every finding of both is taken ([REVIEW-WRP](REVIEW-WRP.md)). Part 1 then follows GrammarLaws' owner's decision on the composite along a word (§4). WRP2 implemented it ([LANDING](LANDING.md)); its Lean was reviewed once, every finding taken ([REVIEW-WRP2](REVIEW-WRP2.md)), and §8 maps the design's names to the implemented ones and says what WRP2 settled that is proposed here.**
 
 AI-written study, 29 October 2026. Board item WRP, asked by the session coordinating the unification in its note of 29 October ([WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md)). That note calls the theorems that read no field of the old base "the largest remaining question of the lifting: whether their statements can be put in the grammar's terms", and proposes to take them whole, through a representation of processes. This is a design; it lands no Lean.
 
@@ -41,7 +41,7 @@ What it answers:
   - *The steps.* On the configurations alone, the one relation is the steps, and it forgets the moves (F1). On a finite carrier with two or more moves, no relation on the configurations is faithful at all: there are fewer relations than processes.
   - *The move inside.* The landed `withMove` puts the move in the carrier. On that fixed carrier it recovers the process (checked).
     - Up to correspondence, neither class alone is enough. The twist keeps "the same move", and the flip keeps "the same configuration"; each relates the models of two processes that no renaming relates (both checked).
-    - That the two classes together suffice is proposed.
+    - That the two classes together suffice is proved in WRP2, from a configuration and a move (§8).
     - Its image is exactly the relations leaving the next move open (checked; F3).
   - *One relation per move.* The moves need not be in the carrier: the relations of the moves on the configurations are the process itself.
 - **Forward and converse.**
@@ -89,7 +89,7 @@ What the models carry besides:
   - the flip keeps the same-configuration class;
   - each relates the models of two processes that no renaming relates (checked).
 
-  That a correspondence keeping both classes is a product of renamings is proposed, not checked.
+  That a correspondence keeping both classes is a product of renamings is proved in WRP2, from a configuration and a move (§8).
 - **Its image.** On `n ≥ 1` configurations and `k` moves, the relations on `S × A` leaving the next move open are `2^(n²k)`, as many as the processes. That is out of `2^(n²k²)` relations on `S × A`.
 - **With one relation per move,** the moves' relations on `S` are the process.
 
@@ -124,7 +124,7 @@ The World's image is graded and conserving. A process adds nothing to the gramma
 
 **Question 55, for processes.**
 - The moves' relations are a bijection, by definition, between processes and families of relations.
-- Morphisms are not defined here. Question 55's functor form would take as morphisms the maps under which each move's relation factors (`FactorsThrough`, by `factorsThrough_iff_image`). It would also need correspondence lemmas for the terms WRP2 reads (`«延»`, `«迭»`, `«迭内»`, `«闭»`, `«定后»`, `«定前»`, `«同行»`), which `Becoming.GrammarTransport` does not yet list (proposed in WRP2).
+- Morphisms are not defined here. Question 55's functor form would take as morphisms the maps under which each move's relation factors (`FactorsThrough`, by `factorsThrough_iff_image`). It would also need correspondence lemmas for the terms WRP2 reads (`«延»`, `«迭»`, `«迭内»`, `«闭»`, `«定后»`, `«定前»`, `«同行»`), which `Becoming.GrammarTransport` lists since WRP2, each read where a renaming keeps the notion bridged through it (§8).
 - Audit and representation make the laws over processes grammar laws in content, since the converse is total. They do not put a statement in the grammar's vocabulary: that is §2.3's per-notion work.
 
 ## 2. Audit: what exists, what is missing, what it covers
@@ -280,7 +280,7 @@ All checked.
   - `P₃` steps by `true` everywhere.
   - `P₄` steps by `false` at `true`, and by `true` at `false`.
   - `flip` flips the move where the configuration is `true`.
-- **In both, no renaming relates the two processes.** So up to correspondence, neither class alone makes the model faithful. That the two together do is proposed for WRP2.
+- **In both, no renaming relates the two processes.** So up to correspondence, neither class alone makes the model faithful. That the two together do, from a configuration and a move, is proved in WRP2 (§8).
 
 ### F4. Composition across carriers
 
@@ -315,7 +315,7 @@ The item is WRP2. Every statement is core, fixed before its proof, and no landed
 
 **In `Becoming.GrammarTransport`** (this session's module, so these are additions there):
 - **Transport along maps.** `preserves_iff_image` and `yan_pullback`. They take Chinese names in the module's style; the second sits beside «尽之拉回».
-- **Correspondence lemmas** for `«延»`, `«迭»`, `«迭内»`, `«闭»`, `«定后»`, `«定前»` and `«同行»`, on the module's pattern. *Proposed, not checked.*
+- **Correspondence lemmas** for `«延»`, `«迭»`, `«迭内»`, `«闭»`, `«定后»`, `«定前»` and `«同行»`, on the module's pattern. *Checked in WRP2, with a consumer: a renaming keeps the bridged notions (§8).*
 
 **In `Becoming.GrammarLaws`: the composite along a word.** GrammarLaws' owner chose this placement (option (a)): one law of composition along a word, with iteration as its case for a constant family, in place of a second law beside it (board rule 9). It holds a trace's word, which is what makes a process faithful (F3), where `«迭»` reads a trace only with its word forgotten.
 
@@ -343,10 +343,11 @@ The item is WRP2. Every statement is core, fixed before its proof, and no landed
 - **The laws that stay, with their reasons.**
   - `«迭则及»`, `«及即迭»` and `«迭则同一或及»` read one relation's closure (`«及»`). A family's counterpart would be the closure of its union, a different law.
   - `«迭之周»` iterates `«迭之接»` over multiples of a loop. Its composite form needs powers of a word, a detour.
-  - `«迭内»`, `«迭内之接»` and `«迭内即静或缘之迭»` count at most `n` steps of one relation. A word fixes each step's relation, so "at most `n`" has no composite form.
+  - `«迭内之接»` follows from `«迭之接»` with no induction of its own. `«迭内即静或缘之迭»` relates `n` steps of staying or stepping to at most `n` steps, which no law of the composite states. With `«迭即历»` it writes `«迭内»` as the composite of the constant `«静或缘»`, so the composite form exists, and there is no induction left to replace. (The review of WRP2's Lean corrected this line, which said "at most `n`" had no composite form.)
   - `«迭之定于»` reads a fixed successor along the relation's own closure from `x`, which the composite does not read.
   - `«迭之定»` is a one-line corollary of `«迭之定于»`, and `«同行于迭»` a one-line corollary of `«同行之迭»`. Rerouting either would only move a count.
   - `«或有后则或迭»` and `«不穷则迭»` read successors along one relation's line.
+  - `«承之迭»` reads a course of regions round by round. A word form would be a new law that nothing reads, so it keeps its induction, and `«存承之迭»` is its corollary under staying or a step. (Added after the review of WRP2's Lean.)
 - **The name: «历», adopted by GrammarLaws' owner.**
   - `«历» F w` relates `x` to `y` exactly when `y` is reached by passing through the word's relations in turn. `«迭»` is «历» of a constant family.
   - Its docstring states the operation, not the etymology: "passing through a word's relations in turn (历); «迭» is its constant family".
@@ -362,7 +363,7 @@ Its contents, with the checked statements:
 - **The model:** `moveRel_mk`, `mk_moveRel`, `steps_iff_moveRel`, `steps_edgeProcess`, `steps_unlabelled`, `steps_lawProcess` and `enabled_iff_neng`.
 - **The truth of a law, carried:** `forall_steps_iff` and `forall_moveRel_iff`.
 - **The converse:** `class_is_claims`, `step_iff_withMove`, `withMove_image_iff` and `reading_next_move_not_withMove`.
-- **The two witnesses on classes:** `Twist.models_correspond`, `Twist.not_renamed`, `Flip.models_correspond` and `Flip.not_renamed`. Proposed alongside: that the two classes together make every correspondence a renaming.
+- **The two witnesses on classes:** `Twist.models_correspond`, `Twist.not_renamed`, `Flip.models_correspond` and `Flip.not_renamed`. Proved alongside in WRP2: from a configuration and a move, the two classes together make every correspondence a renaming (§8).
 - **Forward:**
   - `trace_iff_wordRel` and `feasible_iff_wordRel`, on the composite in GrammarLaws;
   - `run_image` and `run_iff_image`;
@@ -390,7 +391,7 @@ Its boundaries:
 - the statements of the 1,112 binding theorems whose notions are not bridged, notion by notion;
 - the 6,903 theorems of the no-field layer about other structures;
 - the counting remarks, not in Lean;
-- the product of renamings and the correspondence lemmas, proposed;
+- morphisms beyond correspondences (the product of renamings and the correspondence lemmas, proposed here, are proved in WRP2, §8);
 - the composite's further laws, if a consumer needs them.
 
 **Text at landing.**
@@ -449,6 +450,42 @@ All of both are taken; [REVIEW-WRP](REVIEW-WRP.md) gives each with what was done
 - **A model with extra coordinates in its carrier is faithful up to correspondence only if its classes fix those coordinates.** The twist and the flip show that neither class alone does.
 - **A count must not depend on iteration order.** The first count's memoized search for what reaches a field decided some constants before their dependencies, so its results moved between runs. Search along the reversed dependencies instead, and rerun under two hash seeds.
 - **Say what share a representation reaches before what it shows.** Most of the no-field layer was not on processes at all.
+
+## 8. What WRP2 implemented
+
+WRP2 implemented §4 ([LANDING](LANDING.md)). One review of its Lean found twelve points, every one taken ([REVIEW-WRP2](REVIEW-WRP2.md)).
+
+**Names as implemented.** Where the design's names were scratch names, these are the landed ones.
+
+| design | landed |
+|---|---|
+| `wordRel` | `«历»`, adopted by GrammarLaws' owner |
+| `wordRel_replicate` (an equality of relations) | `«迭即历»`, pointwise (`«谓»`), since GrammarLaws states no equality of relations |
+| `wordRel_append`, `wordRel_snoc`, `wordRel_reverse`, `wordRel_fixedBefore`, `wordRel_alike` | `«历之接»`, `«历之末步»`, `«历之逆»`, `«历之定前»`, `«同行之历»` |
+| `replicate_add_right`, `replicate_succ_right`, `reverseAux_append_right`, `reverse_cons_right` | `GrammarLaws.replicate_add_append`, `replicate_succ_append`, `reverseAux_append`, `reverse_cons_append` |
+| `steps_compose_case` and the other five cases | the proofs of `«迭之接»`, `«迭之分»`, `«迭之末步»`, `«迭之逆»`, `«迭之定前»`, `«同行之迭»`, their statements unchanged |
+| `trace_iff_wordRel`, `feasible_iff_wordRel` | `trace_iff_li`, `feasible_iff_li` |
+| `preserves_iff_image` | `«保之像»`, with the image on the left as in `«对应之像»` |
+| `yan_pullback` | `«延之拉回»`, for any continuation `«续» R L` |
+| the classes `sameMove`, `sameConfiguration` | `sameValue Prod.snd`, `sameValue Prod.fst` (GrammarCourse), the landed class |
+| `Twist.twist`, `Flip.flip` | `Twist.flipConfiguration`, `Flip.flipMove` |
+
+**What WRP2 settled that is proposed here.**
+- *Faithfulness up to correspondence with both classes.* A renaming relating two processes is a correspondence of their models with the move inside carrying the steps and both classes (`withMove_of_renaming`). Conversely, from a configuration and a move, such a correspondence is a renaming relating them, the product of a renaming of configurations and one of moves (`renaming_of_withMove`). With no move, or no configuration, the point is needed (`NoMoves.not_renamed`, `NoConfigurations.not_renamed`).
+- *The correspondence lemmas, with a consumer.* A renaming relating two processes keeps every bridged notion: traces, with the word renamed letter by letter (`renaming_trace`, through `«历之对应»`); `n` steps and within `n` steps; reach, returning and invariants; determination and merging nothing; going alike under a description read back; and going on along some branch (`renaming_iterate`, `renaming_reach`, `renaming_returns`, `renaming_invariant`, `renaming_determined`, `renaming_lossless`, `renaming_goAlike`, `renaming_yan`). That is what faithfulness up to correspondence gives the notions §2.1 bridges.
+- *Passing through a word, carried with its letters renamed* (`«历之像»`); `«迭之像»` is its case for one relation.
+
+**What the review of the Lean changed.**
+- The correspondence lemmas had no consumer. They now have one: the renaming theorems above.
+- Duplicates were replaced by what is landed:
+  - `sameValue` for the two classes;
+  - `factorsThrough_iff_image` proved from Mechanism's `factors_image` and `Image.least`.
+- `«迭之像»` is derived from `«历之像»`.
+- The laws of `«迭»` that keep their proofs each state their reason, `«承之迭»` included (§4, Part 1).
+- "Family" is kept for its glossary sense: a process's relations are "indexed by moves".
+- The witnesses are named in parallel, with the case of no configuration added.
+- One lemma states the steps of a one-move process (`steps_one_move`).
+
 
 [WRT record]: ../../../../../../theories/becoming/results/records/the-world-represented-both-ways.md
 [LOGIC]: ../../../../../../theories/becoming/review/LOGIC.md

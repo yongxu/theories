@@ -33,7 +33,8 @@ def latest_receipt():
 def cited(text):
     """Every backticked name of the three modules the texts cite is one of their declarations."""
     found = set(re.findall(r'`([A-Za-z_.]*«[^»]+»[A-Za-z_.]*|[A-Za-z_]+(?:\.[A-Za-z_]+)*)`', text))
-    ours = {n for n in found if '历' in n or n in NEW_ENGLISH or n.startswith(('Twist.', 'Flip.', 'NoMoves.', 'Forgotten.'))
+    ours = {n for n in found if '历' in n or n in NEW_ENGLISH or n.startswith(('Twist.', 'Flip.', 'NoMoves.',
+                                                                               'NoConfigurations.', 'Forgotten.'))
             or n in ('«保之像»', '«延之拉回»', '«延之对应»', '«迭之对应»', '«迭之像»', '«迭内之对应»', '«闭之对应»',
                      '«定后之对应»', '«定前之对应»', '«同行之对应»', '«一一对应».prod')}
     missing = sorted(n for n in ours if n not in NAMES)
@@ -41,11 +42,13 @@ def cited(text):
     return text
 
 
-NEW_ENGLISH = {'moveRel_mk', 'mk_moveRel', 'steps_iff_moveRel', 'steps_edgeProcess', 'steps_unlabelled',
-               'steps_lawProcess', 'enabled_iff_neng', 'forall_steps_iff', 'forall_moveRel_iff', 'class_is_claims',
-               'sameMove', 'sameConfiguration', 'step_iff_withMove', 'withMove_image_iff',
-               'reading_next_move_not_withMove', 'renamed_withMove', 'configurationRenaming', 'moveRenaming',
-               'withMove_renamed', 'trace_iff_li', 'feasible_iff_li', 'factorsThrough_iff_image', 'run_image',
+NEW_ENGLISH = {'moveRel_mk', 'mk_moveRel', 'steps_iff_moveRel', 'steps_one_move', 'steps_edgeProcess',
+               'steps_unlabelled', 'steps_lawProcess', 'enabled_iff_neng', 'forall_steps_iff', 'forall_moveRel_iff',
+               'class_is_claims', 'step_iff_withMove', 'withMove_image_iff', 'reading_next_move_not_withMove',
+               'withMove_of_renaming', 'configurationRenaming', 'moveRenaming', 'renaming_of_withMove',
+               'renaming_moveRel', 'renaming_steps', 'renaming_trace', 'renaming_iterate', 'renaming_reach',
+               'renaming_returns', 'renaming_invariant', 'renaming_determined', 'renaming_lossless', 'renaming_goAlike',
+               'renaming_yan', 'trace_iff_li', 'feasible_iff_li', 'factorsThrough_iff_image', 'run_image',
                'run_iff_image', 'yan_iff_keepsMoving', 'run_yan', 'yan_line_iff_dependentChoice', 'yan_line_of_list'}
 
 
@@ -90,9 +93,11 @@ edit(checker, """    "Identity: re-identifying formations one to one at each ste
     "by definition, and its steps their union; so a property of relations shared by relations alike pointwise holds "
     "of every process's steps exactly where it holds of every relation. Every relation is a process's steps and every "
     "class a frame's class of claims. The model with the move inside recovers the process on its fixed carrier, its "
-    "image exactly the relations leaving the next move open; a renaming is a correspondence of these models carrying "
-    "the steps and the classes of the same move and the same configuration, and from a configuration and a move every "
-    "such correspondence is a renaming, while neither class alone suffices and with no move a point is needed. A trace "
+    "image exactly the relations leaving the next move open; a renaming relating two processes is a correspondence of "
+    "these models carrying the steps and the classes of the same move and the same configuration, and from a "
+    "configuration and a move every such correspondence is a renaming relating them, while neither class alone "
+    "suffices and with no move or no configuration a point is needed; a renaming keeps traces with the word renamed, n "
+    "steps, reach, returning, invariants, determination, merging nothing, going alike and going on. A trace "
     "is passing through the moves' relations along its word; factoring through a map is the image of each move's "
     "relation lying within; a run's configurations carry the line of steps into the steps, exactly so with the move "
     "inside; going on along some branch is lying in a family that keeps moving, a line from it exactly dependent "
@@ -126,11 +131,15 @@ edit(root, '* `Becoming.Persistence` (L1):', """* `Becoming.ProcessRepresentatio
   every process's steps exactly where it holds of every relation (`forall_steps_iff`). Every
   relation is a process's steps (`steps_edgeProcess`) and every class a frame's class of claims
   (`class_is_claims`). The model with the move inside (`withMove`) has as image exactly the
-  relations leaving the next move open (`withMove_image_iff`); a renaming is a correspondence of
-  these models carrying the steps and the classes of the same move and the same configuration
-  (`renamed_withMove`), and from a configuration and a move every such correspondence is a renaming
-  (`withMove_renamed`), while neither class alone suffices (`Twist.not_renamed`, `Flip.not_renamed`)
-  and with no move a point is needed (`NoMoves.needs_a_point`). A trace is passing through the
+  relations leaving the next move open (`withMove_image_iff`); a renaming relating two processes is
+  a correspondence of these models carrying the steps and the classes of the same move and the same
+  configuration (`withMove_of_renaming`), and from a configuration and a move every such
+  correspondence is a renaming relating them (`renaming_of_withMove`), while neither class alone
+  suffices (`Twist.not_renamed`, `Flip.not_renamed`) and with no move or no configuration a point is
+  needed (`NoMoves.not_renamed`, `NoConfigurations.not_renamed`). A renaming keeps traces with the
+  word renamed (`renaming_trace`), `n` steps, reach, returning, invariants, determination, merging
+  nothing, going alike and going on (`renaming_iterate`, `renaming_reach`, `renaming_determined`,
+  `renaming_goAlike`, `renaming_yan` and the others). A trace is passing through the
   moves' relations along its word (`trace_iff_li`); factoring through a map is the image of each
   move's relation lying within (`factorsThrough_iff_image`); a run's configurations carry the line of
   steps into the steps, exactly so with the move inside (`run_iff_image`); going on along some
@@ -157,8 +166,9 @@ PR_EN = ('| L1 | [`Becoming.ProcessRepresentation`](Becoming/ProcessRepresentati
          'of every relation (`forall_steps_iff`); every relation a process\'s steps, every class a frame\'s class of '
          'claims (`class_is_claims`); the model with the move inside, its image the relations leaving the next move '
          'open (`withMove_image_iff`), a correspondence carrying its steps and the classes of the same move and the '
-         'same configuration a renaming from a point (`withMove_renamed`), neither class alone enough '
-         '(`Twist.not_renamed`, `Flip.not_renamed`); a trace passing through the moves\' relations along its word '
+         'same configuration a renaming from a point (`renaming_of_withMove`), neither class alone enough '
+         '(`Twist.not_renamed`, `Flip.not_renamed`), a renaming keeping the bridged notions (`renaming_trace`, '
+         '`renaming_determined` and the others); a trace passing through the moves\' relations along its word '
          '(`trace_iff_li`), runs and factoring as images lying within (`run_iff_image`, `factorsThrough_iff_image`), '
          'going on along some branch a family keeping moving (`yan_iff_keepsMoving`), a line from it dependent '
          'choice (`yan_line_iff_dependentChoice`); the steps forgetting the moves (`Forgotten.moves_forgotten`); '
@@ -166,8 +176,8 @@ PR_EN = ('| L1 | [`Becoming.ProcessRepresentation`](Becoming/ProcessRepresentati
 PR_ZH = ('| L1 | [`Becoming.ProcessRepresentation`](Becoming/ProcessRepresentation.lean) | 过程于文法中两向（无伦理谓词）：'
          '过程恰为其诸关系，每一着一关系，依定义（`moveRel_mk`）；逐点相同之关系所共之性质，于每一过程之步成立恰当于每一关系成立'
          '（`forall_steps_iff`）；每一关系为某过程之步，每一类为某框架之断言之类（`class_is_claims`）；着在其内之模型，其像恰为'
-         '留下一着未定之关系（`withMove_image_iff`），携其步与同着、同构形二类之一一对应，自一点起为重名（`withMove_renamed`），'
-         '任一类单独不足（`Twist.not_renamed`、`Flip.not_renamed`）；迹为沿其字依次历诸着之关系（`trace_iff_li`），运行与分解为'
+         '留下一着未定之关系（`withMove_image_iff`），携其步与同着、同构形二类之一一对应，自一点起为重名（`renaming_of_withMove`），'
+         '任一类单独不足（`Twist.not_renamed`、`Flip.not_renamed`），重名保诸已桥之概念（`renaming_trace`、`renaming_determined` 等）；迹为沿其字依次历诸着之关系（`trace_iff_li`），运行与分解为'
          '像之所含（`run_iff_image`、`factorsThrough_iff_image`），沿某支而延为一族之常动（`yan_iff_keepsMoving`），自之得线恰为'
          '依赖选择（`yan_line_iff_dependentChoice`）；步忘其着（`Forgotten.moves_forgotten`）；近乎定义、引理与例 |')
 row(PKG / 'README.md', '| L1 | [`Becoming.WorldRepresentation`]', PR_EN, '[`Becoming.ProcessRepresentation`]')
