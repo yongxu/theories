@@ -1,0 +1,46 @@
+Becoming/GrammarTransport.lean:159:27: warning: unused variable `y`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+Becoming/WorldRepresentation.lean:296:3: error: Application type mismatch: The argument
+  Reidentify.partialIdentity_carried σ fun t x => Reidentify.mem_map σ t
+has type
+  «谓» («像» σ.onOccurrences.to (Web.partialIdentity fun x => x.snd ∈ List.map (σ.new x.fst) ?m.270))
+    (Web.partialIdentity fun x => x.snd ∈ ?m.270)
+but is expected to have type
+  «谓» («像» σ.onOccurrences.to (Web.partialIdentity fun x => x.snd ∈ (w.reidentify σ).flow.present x.fst))
+    (Web.partialIdentity fun x => x.snd ∈ w.flow.present x.fst)
+in the application
+  And.intro (Reidentify.partialIdentity_carried σ fun t x => Reidentify.mem_map σ t)
+Becoming/WorldRepresentation.lean:295:3: error: Application type mismatch: The argument
+  Reidentify.partialIdentity_carried σ fun x x_1 => Iff.rfl
+has type
+  «谓» («像» σ.onOccurrences.to (Web.partialIdentity fun x => ?m.250 x.fst (σ.old x.fst x.snd)))
+    (Web.partialIdentity fun x => ?m.250 x.fst x.snd)
+but is expected to have type
+  «谓» («像» σ.onOccurrences.to (Web.partialIdentity fun x => 0 < (w.reidentify σ).web.level x.fst x.snd))
+    (Web.partialIdentity fun x => 0 < w.web.level x.fst x.snd)
+in the application
+  And.intro (Reidentify.partialIdentity_carried σ fun x x_1 => Iff.rfl)
+Becoming/WorldRepresentation.lean:346:53: error(lean.unknownIdentifier): Unknown identifier `r`
+Becoming/WorldRepresentation.lean:347:56: error(lean.unknownIdentifier): Unknown identifier `r`
+Becoming/WorldRepresentation.lean:390:2: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Decidable (w.Conserves t g f)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/world-representation/tree",
+  "modules": 42,
+  "ran": [
+    "Becoming.GrammarTransport",
+    "Becoming.WorldRepresentation",
+    "BecomingGrammarTransportAxiomAudit"
+  ],
+  "reused": 40,
+  "unclean": [
+    "Becoming.GrammarTransport"
+  ],
+  "audits": {},
+  "failed": "Becoming.WorldRepresentation"
+}

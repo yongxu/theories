@@ -69,11 +69,11 @@ import check as audit_support  # noqa: E402
 FOUNDATION = ["GenerativeCore", "InquirySufficiency", "RelationalRenewal"]
 # The package: the base (`Becoming.World`, the one unfolding's records, a world being a run of the
 # frame; prelude only), the four core layers and their root. Compile order comes from the imports.
-CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "Becoming.GrammarTesting", "Becoming.GrammarCandidates", "Becoming.MapInstances", "Becoming.Prelude", "Becoming.GrammarLaws", "Becoming.World", "Becoming.Witnesses", "Becoming.Frame", "Becoming.Laws", "Becoming.Labelled", "Becoming.Inquiry", "Becoming.Derivation", "Becoming.ClassifiedBeliefProcesses", "Becoming.MoveOutcomeProcesses", "Becoming.Recurrence", "Becoming.Diagonal", "Becoming.Context", "Becoming.ContextArrivalTraces", "Becoming.Quantum", "Becoming.Renewal", "Becoming.Dependence",
+CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "Becoming.GrammarTesting", "Becoming.GrammarCandidates", "Becoming.MapInstances", "Becoming.Prelude", "Becoming.GrammarLaws", "Becoming.GrammarTransport", "Becoming.World", "Becoming.Witnesses", "Becoming.Frame", "Becoming.Laws", "Becoming.Labelled", "Becoming.Inquiry", "Becoming.Derivation", "Becoming.ClassifiedBeliefProcesses", "Becoming.MoveOutcomeProcesses", "Becoming.Recurrence", "Becoming.Diagonal", "Becoming.Context", "Becoming.ContextArrivalTraces", "Becoming.Quantum", "Becoming.Renewal", "Becoming.Dependence",
         "Becoming.Restoration", "Becoming.Horizon", "Becoming.Joint", "Becoming.Experiment", "Becoming.Mechanism", "Becoming.Unfolding", "Becoming.Irreversibility", "Becoming.LawAlongRun", "Becoming.Histories", "Becoming.Branching", "Becoming.Listing", "Becoming.Stuttering", "Becoming.Reordering", "Becoming.IdleRemoval", "Becoming.OrderNormal", "Becoming.OneStep", "Becoming.Weighted", "Becoming.Transmission", "Becoming.Succession", "Becoming.Attraction",
         "Becoming.Substitution",
         "Becoming.Arising", "Becoming.Flow", "Becoming.Stock", "Becoming.Change", "Becoming.Population",
-        "Becoming.Identity", "Becoming.Persistence", "Becoming.ContinuedClasses", "Becoming.Wholes", "Becoming.Dissipation", "Becoming.Locality",
+        "Becoming.Identity", "Becoming.Persistence", "Becoming.ContinuedClasses", "Becoming.WorldRepresentation", "Becoming.Wholes", "Becoming.Dissipation", "Becoming.Locality",
         "Becoming.Seeking", "Becoming.Roles", "Becoming.LabelledRoles",
         "Becoming.Reserve", "Becoming.Evolution", "Becoming.Capture", "Becoming.SelectionTerm", "Becoming.Reproduction", "Becoming.SelectionLevels", "Becoming.GroupEnding", "Becoming.Founding", "Becoming.Drift", "Becoming.Space",
         "Becoming.Premises", "Becoming.Sampling", "Becoming.Tower",
@@ -205,6 +205,10 @@ SCOPE = (
     "irreflexive where the first is. Frame's "
     "closure is the grammar's, and the models' laws of closure, finite runs, lumping and order are proved from these; "
     "balance is represented both ways in Flow and not derived. "
+    "GrammarTransport: the grammar's listed terms are kept by a one-to-one correspondence of models carrying the "
+    "relations they read, carrying being read through the grammar's image and kept by its operations, a predicate "
+    "carried as its partial identity; ending on every branch reflects along any map carrying continuation from a "
+    "closed region. "
     "GrammarPath: a line under a class that must pass through a set holds a member of it alike to its start; "
     "under a constant class, and up to the net's end, everything downstream of anything alike to a member whose "
     "effects the class holds is alike to it and on its line, and given the regularity that is equivalent to holding "
@@ -749,6 +753,14 @@ SCOPE = (
     "continuation is widening as named where each formation continues itself, is unchanged by every "
     "re-identification carrying it, and is harder to exceed with more links, so in Bud a stretch that "
     "widens by name adds nothing along a bud. "
+    "WorldRepresentation: the World as a model of the grammar both ways, and where amounts fail. Every "
+    "re-identification is a one-to-one correspondence of the occurrence model's name-free part (the same-step class, "
+    "conservation's step, activity, standing and presence as partial identities, five relations within a step), so "
+    "each listed term read there is fixed; recurrence is a statement at the model through the names; the relational "
+    "part ranges over everything, conservation is exactly a relation of its form, labelled by standings, and what "
+    "amounts induce is decided; the model does not determine standings, balance is not determined by the web and the "
+    "signs of exchange, conservation is never identity on the predicates of Nat, and a line of falls ends, a "
+    "condition of the World's image and not a law of the grammar. "
     "Identity: re-identifying formations one to one at each step leaves every step's levels, "
     "activity, dependences and drawing unchanged; a renaming preserves the readings that follow "
     "a formation, and every re-identification preserves support, keeping and breaking, the class "

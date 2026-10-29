@@ -3162,11 +3162,6 @@
    "category": "general-structure",
    "reason": "a candidate theorem of the corpus (its unit in the OU2c outcomes) proved for every relation on any carrier; the base supplies no reading of its terms"
   },
-  "Becoming.«尽则非不穷»": {
-   "module": "Becoming.GrammarMap",
-   "category": "general-structure",
-   "reason": "a law of every relation read at a fine and a coarse class on any carrier; the base supplies no reading of the two grains yet"
-  },
   "Becoming.«平等无异»": {
    "module": "Becoming.GrammarCandidates",
    "category": "general-structure",
@@ -4631,6 +4626,101 @@
    "module": "Becoming.Presence",
    "category": "support",
    "reason": "what a natural labelling has born by a stage is a stem: an unpacking of the definitions of a stem and of a natural labelling (born_closed); its course reading, every stem with decided membership born first, is stem_born_first_course, on the base"
+  },
+  "Becoming.Steps.along_endless": {
+   "module": "Becoming.WorldRepresentation",
+   "category": "model-witness",
+   "reason": "a line of steps under the class of a predicate holding everywhere goes on without end: the grammar model where every occurrence falls, the counter-model by which a line of falls ending is a condition of the World's image and no law of the grammar (WRT2)"
+  },
+  "Becoming.Web.sameStep_class": {
+   "module": "Becoming.WorldRepresentation",
+   "category": "support",
+   "reason": "being at the same step is a class: a one-line unpacking of Web.sameStep (WRT2)"
+  },
+  "Becoming.«一之像»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«一之像»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«住之对应»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«住之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«全守之对应»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«全守之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«全生成之对应»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«全生成之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«及之像»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«及之像»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«反对应之像»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«反对应之像»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«合成之像»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«合成之像»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«同族之对应»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«同族之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«复生之对应»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«复生之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«尽之对应»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«尽之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«异之对应»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«异之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«所闭之对应»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«所闭之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«无环之对应»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«无环之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«有终之对应»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«有终之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«核之对应»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«核之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«类之对应»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«类之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«静之像»": {
+   "module": "Becoming.GrammarTransport",
+   "category": "general-structure",
+   "reason": "«静之像»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
   }
  },
  "instances": {

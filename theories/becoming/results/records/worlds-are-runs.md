@@ -80,7 +80,7 @@ Ren, 12 October 2026: “let's go back to main track, yes, i do agree with your 
 - related, not a proved adapter: [where-a-run-goes-on](where-a-run-goes-on.md). That result says where a run goes on; this one reads every base as a run.
 - related, not a proved adapter: [unity-of-readings](unity-of-readings.md). Readings in context along a run are one world (Contextual.world), cited; the reading that every world balances with the rest counted is stated there.
 
-**Used by:** [the-world-an-interleaving-builds](the-world-an-interleaving-builds.md) · [two-act-worlds-carry-the-difference](two-act-worlds-carry-the-difference.md)
+**Used by:** [the-world-an-interleaving-builds](the-world-an-interleaving-builds.md) · [the-world-represented-both-ways](the-world-represented-both-ways.md) · [two-act-worlds-carry-the-difference](two-act-worlds-carry-the-difference.md)
 
 <a id="sources--来源"></a>
 ### Sources

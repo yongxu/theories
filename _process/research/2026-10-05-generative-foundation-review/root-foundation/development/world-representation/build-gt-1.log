@@ -1,0 +1,39 @@
+Becoming/GrammarTransport.lean:87:9: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/GrammarTransport.lean:319:57: error: Application type mismatch: The argument
+  Eq.symm (e.back_to ?m.149)
+has type
+  ?m.149 = e.back (e.to ?m.149)
+but is expected to have type
+  e.back x✝ = e.back x✝
+in the application
+  Eq.subst (Eq.symm (e.back_to ?m.149))
+Becoming/GrammarTransport.lean:399:29: error: Application type mismatch: The argument
+  none
+has type
+  Option ?m.32
+of sort `Type ?u.5029.51` but is expected to have type
+  ∀ (z w : α), «所及» R L y z → ¬«传» R L E z w
+of sort `Prop` in the application
+  ⟨reached, none⟩
+Becoming/GrammarTransport.lean:407:30: error: Application type mismatch: The argument
+  none
+has type
+  Option ?m.36
+of sort `Type ?u.5029.374` but is expected to have type
+  ∀ (z w : β), «所及» R' L' y' z → ¬«传» R' L' E' z w
+of sort `Prop` in the application
+  ⟨reached, none⟩
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/world-representation/tree",
+  "modules": 5,
+  "ran": [
+    "Becoming.GrammarTransport"
+  ],
+  "reused": 4,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.GrammarTransport"
+}

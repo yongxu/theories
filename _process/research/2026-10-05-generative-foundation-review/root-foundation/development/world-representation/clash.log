@@ -1,0 +1,17 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/b7c6b747-6b9c-4356-8b68-e395f26999fa/scratchpad/wrt2-clash",
+  "modules": 341,
+  "ran": [
+    "Becoming.WRT2Clash",
+    "BecomingWRT2ClashAxiomAudit"
+  ],
+  "reused": 340,
+  "unclean": [],
+  "audits": {
+    "Becoming.WRT2Clash": {
+      "theorems": 0,
+      "declarations": 0,
+      "with_axioms": {}
+    }
+  }
+}

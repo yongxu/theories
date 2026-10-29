@@ -5,6 +5,7 @@ import Becoming.GrammarTesting
 import Becoming.GrammarCandidates
 import Becoming.MapInstances
 import Becoming.GrammarLaws
+import Becoming.GrammarTransport
 import Becoming.World
 import Becoming.Witnesses
 import Becoming.Frame
@@ -50,6 +51,7 @@ import Becoming.Population
 import Becoming.Identity
 import Becoming.Persistence
 import Becoming.ContinuedClasses
+import Becoming.WorldRepresentation
 import Becoming.Wholes
 import Becoming.Dissipation
 import Becoming.Locality
@@ -636,6 +638,24 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   along a continuation, the reading of earlier formations in later ones (`Web.WidensAcross`): as
   named where each formation continues itself, unchanged by re-identification, harder to exceed
   with more links, so that a bud adds nothing (`Bud.readings`).
+* `Becoming.WorldRepresentation` (L1): the World as a model of the grammar, both ways, and where
+  amounts fail. The occurrence model's name-free part: the same-step class (`Web.sameStep`),
+  conservation's step (`World.conservationStep`), activity, standing and presence as partial
+  identities (`Web.partialIdentity`), and five relations within a step (`World.withinStep`). Every
+  re-identification is a one-to-one correspondence carrying all ten (`Reidentify.onOccurrences`,
+  `World.reidentify_carries`), so each listed term of `Becoming.GrammarTransport` read there is fixed
+  (`World.sheng_conservation_reidentify`); recurrence is a statement at the model through the names'
+  step (`World.arisingRecurs_iff`, `World.ceasingRecurs_iff`). The converse: the relational part ranges
+  over everything (`World.ofRelations`, `World.ofModel_model`); conservation is exactly the relations of
+  its form (`World.conserves_form`, `World.ofConservationForm_conserves`), labelled by standings
+  (`World.conserves_iff_same_level`); what amounts induce is decided (`World.amounts_decided`), and that
+  every world decides activity is exactly excluded middle (`World.decides_activity_iff_em`). The
+  failure on amounts: the model does not determine standings (`World.standingAt_alike`); balance is not
+  determined by the web and the signs of exchange (`World.balance_needs_conservation`); conservation is
+  never identity on the predicates of `Nat` (`World.not_conserves_identity`, through
+  `Diagonal.no_injection_of_predicates`); a line of falls ends (`World.falls_exhaust`, from
+  `Amounts.falls_end`), a condition of the World's image and no law of the grammar
+  (`Steps.along_endless`). A leaf (board item WRT2).
 * `Becoming.Persistence` (L1): continuity across dormancy and identity read from relations
   (P87). Keeping the names of what holds fixes the class of a formation holding throughout,
   strictly beyond activity and tenure continuity; where nothing holds it leaves the join open.
@@ -2812,6 +2832,14 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   and `Becoming.ReachableRanges` by `strictJoin_trans` (board item OU3c). Balance is represented both ways in `Becoming.Flow`
   (`Flow.balances_iff_units`) and not derived: its consumers need only the count, so their proofs
   stay arithmetic (board item OU3b).
+* `Becoming.GrammarTransport` (L1): the grammar kept by one-to-one correspondence of models, for
+  the terms the World's instance theorems and `Becoming.WorldRepresentation` read. A correspondence
+  (`«一一对应»`) carrying the relations a listed term reads carries the term (`«生之对应»`,
+  `«相续之对应»`, `«不穷之对应»`, `«核之对应»`, `«全生成之对应»` and the others); carrying is read
+  through the grammar's image (`«对应之像»`) and kept by its operations (`«合之像»`, `«而之像»`,
+  `«及之像»`), and a predicate is carried as its partial identity (`«部分恒等之像»`). Ending on every
+  branch is pulled back along any map carrying continuation from a closed region (`«尽之拉回»`).
+  Lemmas of the World's representation, with no record of their own (board item WRT2).
 * `Becoming.Ideals` (L1): a history read off its finite stretches, as an ideal of their order
   (no premise; it imports nothing). A refutable reading holds, up to double negation, where a
   point adheres, and what adheres is closed. A class of ideals is closed exactly where it is the

@@ -18,6 +18,7 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
 | gate (on moves) | a decided mark on a process's moves; it locates where change can enter a line. Not the gate of a renewal | [01](theories/becoming/chapters/01-ROOT.md#r-every-origin-passes-the-gate) |
 | reach (及) | the transitive closure of a relation | [01 §1](theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol) |
 | model; the World model | a carrier, a relation read as condition and the classes used; the World is the model with flows, webs, natural-number amounts and discrete steps | [01 §8](theories/becoming/chapters/01-ROOT.md#models) |
+| occurrence model | the grammar model a World determines: its occurrences, a relatum at a step, with the class of being at the same step, conservation's step, activity, standing and presence as partial identities, and five relations within a step, beside the names' step | [01 §8.6](theories/becoming/chapters/01-ROOT.md#r-the-world-represented-both-ways) |
 | view | process, frame and world are views of one unfolding | [01 §9](theories/becoming/chapters/01-ROOT.md#laws-on-every-model) |
 
 ## The map

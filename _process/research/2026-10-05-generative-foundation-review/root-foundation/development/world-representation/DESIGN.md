@@ -441,3 +441,29 @@ The second pass's verdict was that no third full review is needed. **A last read
 |---|---|
 | 1: "no relation of the model holds … the step order" is false | "of the name-free part"; with the names, the step order is a grammar term (`later_iff`). |
 | 2–5 | "For instance" in place of "would need one of". Standing is carried directly by `World.reidentify`'s definition, not by `withinStep_carried`. «息» and «生生» move to the rest of the terms. `law_iff_positions` decides every position along the steps. |
+
+## 7. Names as implemented (WRT2)
+
+WRT2 implements §4 with the review of its Lean ([REVIEW-WRT2.md](REVIEW-WRT2.md)), every finding taken. These design names became:
+
+| design (§1–§4) | implemented |
+|---|---|
+| `World.sameStep`, `World.identityOn` | `Web.sameStep`, `Web.partialIdentity` (on any carrier) |
+| `along_iff_itself`, `World.later_iff`, the `«所闭»` form | `Steps.along_iff_itself`, `Steps.later_iff`, `Steps.sameOrLater_iff` |
+| `World.reidentifyAt`, `World.reidentifyOcc` | `Reidentify.atStep`, `Reidentify.onOccurrences` |
+| `withinStep_carried`, `present_carried` | `Reidentify.withinStep_carried`, `Reidentify.partialIdentity_carried` |
+| the debit–credit form, `World.ofExchange`, `ofExchange_conserves` | the conservation form "the standing after the step with `b` is `a`": `World.conserves_form` (by definition), `World.ofConservationForm`, `World.ofConservationForm_conserves` |
+| `World.StepRelations`, `World.balance_needs_conservation` | `World.ExchangeSigns` and `.Agree`: Φ reads the whole web and the signs of exchange |
+| `everywhere_endless` | `Steps.along_endless`, with `World.not_falls_everywhere` |
+| `World.no_injection_of_predicates` | `Diagonal.no_injection_of_predicates` |
+| `jin_pullback`, `carries_iff_image` | `«尽之拉回»` (its region written with `«闭»`), `«对应之像»` |
+| `«对应»` with `«携»` | `«一一对应»`; carrying written `«谓» («像» e.to R) R'` |
+
+Added by the review:
+- `«静之像»`, `«一之像»` and `«部分恒等之像»`;
+- `«谓之自反»`;
+- `World.ofModel` and `World.ofModel_model`, the converse at the model;
+- `World.decides_activity_iff_em`;
+- `World.not_falls_everywhere`.
+
+Decidedness is stated with `Decided`. WorldRepresentation imports ContinuedClasses, which reaches `Web.itself`, Decidedness, Diagonal and GrammarTransport.
