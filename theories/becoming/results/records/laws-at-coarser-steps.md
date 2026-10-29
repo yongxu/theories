@@ -39,7 +39,7 @@
 14. Balance and dissipation at a coarse step need not hold at the fine steps inside, in two witnesses read at the even steps: a gift across the first fine step and a taking across the second cancel, the coarse step balancing while neither fine step does; and a fine step giving back all it takes is outweighed by the next step's taking, the coarse step dissipating while that fine step does not. (`Becoming.Cancelling.coarse_not_fine`, `Becoming.Averaging.coarse_not_fine`)
     - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 15. With equality of relata decided, strictly increasing times and each relatum listed once at every step, a world read at coarser steps keeps activity needing support, balance, dissipation, embodiment and a census; read so, that a finite world whose flow balances and dissipates and whose relata are embodied rests from some coarse step on cannot be refuted, with activity not decided. (`Becoming.Flow.sample_balances`, `Becoming.Flow.sample_dissipative`, `Becoming.World.sample_survives`, `Becoming.World.sample_rests_unrefuted`)
-    - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
+    - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

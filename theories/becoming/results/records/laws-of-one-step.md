@@ -39,7 +39,7 @@
 14. With no decision, where a list covers step N and nothing comes to be after it, ceasing does not recur. (`Becoming.Covers.ceasing_not_recurring`, `Becoming.Covers.not_not_coming_from`)
     - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 15. Corollaries: a premise chosen for every step makes each condition hold everywhere, so the results for each choice follow, their statements unchanged and their proofs through these laws: the openness module's rest theorems, the premises supplying the condition, ceasing needing arising for worlds and standing censuses, the active giver of an embodied relatum, and the enclosure and binding laws of counting and standing. (`Becoming.Flow.change_stops_unrefuted_around`, `Becoming.Flow.exchange_not_recurring_around`, `Becoming.Flow.standing_never_rises`, `Becoming.Flow.change_lowers`, `Becoming.Flow.AroundStanding.runsDownClosed`, `Becoming.World.arising_of_ceasing`, `Becoming.Web.StandingCensus.coming_of_ceasing`, `Becoming.Web.Embodied.arises_given`, `Becoming.World.enclosure_bounds_change`, `Becoming.World.taking_binds_counting`, `Becoming.World.enclosed_binds_counting`, `Becoming.World.enclosure_bounds_standing`, `Becoming.World.enclosed_binds_standing`)
-    - *Master laws, by Lean dependency:* balance; its declarations reach the grammar.
+    - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

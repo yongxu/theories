@@ -13,7 +13,7 @@
 1. Carried, decaying and unsupported across the n steps from S, a reserve has fallen by n or been spent; with a reserve at most n, the formation is inactive at S + n with its reserve spent. The from-S laws are their cases. (`Becoming.Web.decays_by_on`, `Becoming.Web.ends_within_on`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Where from U on a formation inactive with its reserve spent neither arises nor regains reserve, one inactive and spent at U is inactive at every later step; so support returning after the reserve is spent finds no dependent. (`Becoming.Web.ended_for_good`, `Becoming.Web.late_return_finds_none`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 3. Unsupported at the first three steps with a reserve of three, a formation is active at every step: the reserve bridges the gap. (`Becoming.Bridged.standing`, `Becoming.Bridged.reserve`, `Becoming.Bridged.web`, `Becoming.Bridged.bridged`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 

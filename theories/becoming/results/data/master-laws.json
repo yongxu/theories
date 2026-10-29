@@ -4,12 +4,12 @@
  "core_sources_sha256": "d4b2fcefb4e7c85503eaa784eb87aba7d0b38e3c3f0ff66574bdf056b51c9072",
  "from_dump": false,
  "inputs_sha256": {
-  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "4952228938aef973e6cf0a17b3873636b34c75955f7bf53be72310cacbb59203",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/measure.py": "00db800294bdab201e680cf7a9b11d341359a3a5cf0710e20ce2215be6670e7a",
   "theories/becoming/results/completion/COVERAGE.json": "022ae0fc28b40f798c02823be35d7463afac2a92a0ada74bfbd3789e160d9749",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "c8e349f57adecd7bd8d25bd0fde850c9f813919cdbf0e4a3734005c43340043a",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
-  "tools/research/master_laws.py": "91ce148e44683ef9862af60e4458b6e3baf1f4a14a546be73f5e2118107cf41b"
+  "tools/research/master_laws.py": "02c404983046d8e75d18cd7abcbcefe8758be3d0c0c687d579e874332e3aec0e"
  },
  "names": {
   "closure": "closure",
@@ -20,27 +20,39 @@
  },
  "anchors": {
   "closure": [
-   "Becoming.WithinClosure"
+   "Becoming.WithinClosure",
+   "Becoming.«所闭当且仅当同一或及»",
+   "Becoming.«所闭»"
   ],
   "balance": [
    "Becoming.Flow.Balances",
    "Becoming.Flow.BalancesOn",
    "Becoming.Flow.BalancesBetween",
-   "Becoming.balance_over_stretch_on"
+   "Becoming.balance_over_stretch_on",
+   "Becoming.«守数当且仅当可对»",
+   "Becoming.«程守数当且仅当可对»"
   ],
   "return": [
    "Becoming.Branching.Returns",
    "Becoming.Branching.Lossless",
    "Becoming.revisits_within",
    "Becoming.Amounts.rests",
-   "Becoming.Amounts.FallsStop"
+   "Becoming.Amounts.FallsStop",
+   "Becoming.«入当且仅当有不返»",
+   "Becoming.«有限遍后定后则定前当且仅当皆返»",
+   "Becoming.«尽则不或屡»"
   ],
   "lumping": [
-   "Becoming.GoAlikeUnder"
+   "Becoming.GoAlikeUnder",
+   "Becoming.«像定后当且仅当同行»",
+   "Becoming.«同行»"
   ],
   "order": [
    "Becoming.Web.Widens",
-   "Becoming.Weighting.WidensOn"
+   "Becoming.Weighting.WidensOn",
+   "Becoming.«广不可逆»",
+   "Becoming.«广之传递»",
+   "Becoming.«广»"
   ]
  },
  "counts": {
@@ -52,11 +64,11 @@
   "anchor, not reached": 134,
   "no master law": 1825,
   "vocabulary_only": 49,
-  "closure": 286,
-  "balance": 800,
-  "return": 236,
-  "lumping": 79,
-  "order": 77
+  "closure": 471,
+  "balance": 802,
+  "return": 248,
+  "lumping": 80,
+  "order": 78
  },
  "records": {
   "a-code-formed-between-formations": [
@@ -1185,7 +1197,9 @@
      "Becoming.Web.Present",
      "Becoming.Web.begins_within"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -1199,7 +1213,9 @@
      "Becoming.Web.ByPassing.passes_within",
      "Becoming.PatternRelay.shifts"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -1212,7 +1228,9 @@
      "Becoming.PatternRelay.relay",
      "Becoming.PatternRelay.stopped_relay"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -1247,7 +1265,9 @@
      "Becoming.PatternRelay.shifted_fire",
      "Becoming.PatternRelay.fire_shape"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    }
@@ -2738,6 +2758,7 @@
      "Becoming.Law.Drawn.not_returns"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -2750,6 +2771,7 @@
      "Becoming.Law.drawnInto_ahead"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -2760,6 +2782,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "return"
       ]
      }
@@ -2793,6 +2816,7 @@
      "Becoming.Law.none_drawn_lossless"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -2808,6 +2832,7 @@
      "Becoming.Law.lossless_iff_none_drawn"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -2822,6 +2847,7 @@
      "Becoming.Law.drawnInto_returning"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -2835,6 +2861,7 @@
      "Becoming.Law.pred_orbit_zero"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -2884,6 +2911,7 @@
      "Becoming.Ratchet.true_not_drawn"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -3203,6 +3231,7 @@
      "Becoming.Law.basin_one_cycle"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -3478,6 +3507,7 @@
      "Becoming.falls_not_recurring"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -3490,6 +3520,7 @@
      "Becoming.no_execution_of_depletion"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -3501,6 +3532,7 @@
      "Becoming.Run.renewal_recurs"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -5338,6 +5370,7 @@
      "Becoming.World.takingUnsupported_not_readOff"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -6308,6 +6341,7 @@
      "Becoming.falls_not_recurring"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -9255,7 +9289,9 @@
      "Becoming.Flow.change_stops_unrefuted_around"
     ],
     "master_laws": [
-     "balance"
+     "closure",
+     "balance",
+     "return"
     ],
     "grammar": true,
     "dependence": "grammar"
@@ -9266,7 +9302,9 @@
      "Becoming.World.arising_stops_unrefuted"
     ],
     "master_laws": [
-     "balance"
+     "closure",
+     "balance",
+     "return"
     ],
     "grammar": true,
     "dependence": "grammar"
@@ -9277,7 +9315,9 @@
      "Becoming.World.comes_to_rest_unrefuted"
     ],
     "master_laws": [
-     "balance"
+     "closure",
+     "balance",
+     "return"
     ],
     "grammar": true,
     "dependence": "grammar",
@@ -9287,7 +9327,9 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
-       "balance"
+       "closure",
+       "balance",
+       "return"
       ]
      }
     ]
@@ -9299,7 +9341,9 @@
      "Becoming.Flow.change_stops_unrefuted"
     ],
     "master_laws": [
-     "balance"
+     "closure",
+     "balance",
+     "return"
     ],
     "grammar": true,
     "dependence": "grammar"
@@ -9311,7 +9355,9 @@
      "Becoming.World.comes_to_rest_unrefuted_from"
     ],
     "master_laws": [
-     "balance"
+     "closure",
+     "balance",
+     "return"
     ],
     "grammar": true,
     "dependence": "grammar"
@@ -9336,6 +9382,7 @@
      "Becoming.World.rest_needs_standing"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -9349,7 +9396,9 @@
      "Becoming.Listed.few_of_stop_unrefuted"
     ],
     "master_laws": [
-     "balance"
+     "closure",
+     "balance",
+     "return"
     ],
     "grammar": true,
     "dependence": "grammar"
@@ -9385,6 +9434,7 @@
      "Becoming.World.exposed"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -9400,6 +9450,7 @@
      "Becoming.World.throughput"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -9413,6 +9464,7 @@
      "Becoming.World.rests_unrefuted"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -9427,6 +9479,7 @@
      "Becoming.World.rests_unrefuted_enclosed"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -9439,6 +9492,7 @@
      "Becoming.World.arising_opens"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -9483,6 +9537,7 @@
      "Becoming.World.hatch_rests_unrefuted"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -9495,6 +9550,7 @@
      "Becoming.World.binding_contingent"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -9554,6 +9610,7 @@
      "Becoming.Flow.rising_fed_from_beyond"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -9567,6 +9624,7 @@
      "Becoming.Web.embodiedArising_fed_from_beyond"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -9582,6 +9640,7 @@
      "Becoming.Flow.rising_fed_from_beyond_from"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -9836,6 +9895,7 @@
      "Becoming.Flow.region_not_a_cut"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -11173,6 +11233,7 @@
      "Becoming.RegimeMargin.Coupled.stays_from"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -11229,7 +11290,9 @@
      "Becoming.RegimeMargin.Coupled.MutualActivation.band",
      "Becoming.RegimeMargin.Coupled.MutualActivation.saves"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -11243,7 +11306,9 @@
      "Becoming.RegimeMargin.Coupled.MutualInhibition.band",
      "Becoming.RegimeMargin.Coupled.MutualInhibition.breaks_order"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -11252,7 +11317,9 @@
     "declarations": [
      "Becoming.RegimeMargin.Coupled.alternation_never_rests"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -12003,7 +12070,9 @@
      "Becoming.Web.ended_for_good",
      "Becoming.Web.late_return_finds_none"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -16808,6 +16877,7 @@
      "Becoming.Map.renewal_undecided"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -16867,6 +16937,7 @@
      "Becoming.Web.embodiedArising_not_recurring_on"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -16879,6 +16950,7 @@
      "Becoming.Web.embodiedArising_opens"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -16892,6 +16964,7 @@
      "Becoming.SprayShuttle.opens_anyway"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -16905,6 +16978,7 @@
      "Becoming.Web.embodiedArising_not_recurring"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -16917,6 +16991,7 @@
      "Becoming.Web.dissipation_arising_not_recurring"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -16944,6 +17019,7 @@
      "Becoming.Throughput.draws_in"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -16987,6 +17063,7 @@
      "Becoming.Flow.standing_not_recurring_on"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -17005,6 +17082,7 @@
      "Becoming.Flow.standing_not_recurring"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -17061,6 +17139,7 @@
      "Becoming.Web.embodiedArising_draws_in_from"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -18221,6 +18300,7 @@
      "Becoming.Hexagram.nuclear_loses"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -18275,6 +18355,7 @@
      "Becoming.Hexagram.entry_counts"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -18293,7 +18374,9 @@
      "Becoming.Hexagram.cycle_basin",
      "Becoming.Hexagram.basin_counts"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -18398,6 +18481,7 @@
      "Becoming.Hexagram.MarkedLines.process_returns_iff"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -18615,6 +18699,7 @@
      "Becoming.Hexagram.fourth_step"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -18635,6 +18720,7 @@
      "Becoming.Hexagram.every_returns_iff"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -19302,6 +19388,7 @@
      "Becoming.Pace.byRule_reabsorbed"
     ],
     "master_laws": [
+     "closure",
      "return",
      "lumping"
     ],
@@ -19347,6 +19434,7 @@
      "Becoming.Pace.pace_law"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -19359,6 +19447,7 @@
      "Becoming.Pace.whole_fixed_exact"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -20010,6 +20099,7 @@
      "Becoming.Law.orbit"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -20027,6 +20117,7 @@
      "Becoming.Law.decideAlike"
     ],
     "master_laws": [
+     "closure",
      "return",
      "lumping"
     ],
@@ -20350,6 +20441,7 @@
      "Becoming.Web.Depletes"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -20360,6 +20452,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "return"
       ]
      }
@@ -20547,7 +20640,9 @@
      "Becoming.Web.renewingIn_held",
      "Becoming.Web.consumingIn_held"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -20559,7 +20654,9 @@
      "Becoming.Dormancy.held_both",
      "Becoming.Seed.held_readings"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -22092,6 +22189,7 @@
      "Becoming.World.sample_rests_unrefuted"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -22612,7 +22710,9 @@
      "Becoming.World.enclosed_binds_standing"
     ],
     "master_laws": [
-     "balance"
+     "closure",
+     "balance",
+     "return"
     ],
     "grammar": true,
     "dependence": "grammar"
@@ -22695,6 +22795,7 @@
      "Becoming.Learnable.predicts_through"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -22709,6 +22810,7 @@
      "Becoming.Learnable.firstFit_congr"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -22719,6 +22821,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "return"
       ]
      }
@@ -22732,6 +22835,7 @@
      "Becoming.Learnable.still_learnable_iff_lumped"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -22747,6 +22851,7 @@
      "Becoming.Learnable.Pair.whole_predicts"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -22770,6 +22875,7 @@
      "Becoming.LearnableRuns.still_learnable_iff_lumped"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -23054,6 +23160,7 @@
      "Becoming.Learning.lasso_realized"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -23100,6 +23207,7 @@
      "Becoming.Learning.held_rest_unrefuted"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -23180,6 +23288,7 @@
      "Becoming.LearnableRuns.learnable_iff_tracks"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -23190,6 +23299,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "return"
       ]
      }
@@ -23202,6 +23312,7 @@
      "Becoming.LearnableRuns.learnable_iff_identifies"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -23472,6 +23583,7 @@
      "Becoming.Amounts.rests"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -23485,6 +23597,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "return"
       ]
      }
@@ -23497,6 +23610,7 @@
      "Becoming.Amounts.rests_of_archimedean"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -23515,6 +23629,7 @@
      "Becoming.Amounts.whole_losing_steps"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -23529,6 +23644,7 @@
      "Becoming.Amounts.family_rests_of_archimedean"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -23546,6 +23662,7 @@
      "Becoming.Halving.takes_halve"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -23568,6 +23685,7 @@
      "Becoming.World.rests_unrefuted_enclosed"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -23610,6 +23728,7 @@
      "Becoming.Halving.approaches_without_reaching"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -23650,6 +23769,7 @@
      "Becoming.Branching.loss_needs_merge"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -24268,6 +24388,7 @@
      "Becoming.Flow.Dissipative.finite_taking_not_recurring_listing"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -24280,6 +24401,7 @@
      "Becoming.Flow.taking_draws_in_listing"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -24293,6 +24415,7 @@
      "Becoming.Flow.taking_not_recurring_listing"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -24309,6 +24432,7 @@
      "Becoming.World.Enumerated.not_recurring"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -24384,6 +24508,7 @@
      "Becoming.Flow.taking_needs_refinement_listing"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -24404,6 +24529,7 @@
      "Becoming.Flow.cut_of_same"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -25249,6 +25375,7 @@
      "Becoming.World.premised_rests_unrefuted"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -26117,9 +26244,15 @@
      "Becoming.«及当且仅当一步而所闭»",
      "Becoming.kept_onward"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
-    "dependence": "grammar"
+    "dependence": "grammar",
+    "defines": [
+     "Becoming.«所闭»",
+     "Becoming.«所闭当且仅当同一或及»"
+    ]
    },
    {
     "law": 2,
@@ -26170,9 +26303,14 @@
      "Becoming.«守数当且仅当可对»",
      "Becoming.«等长而不对之例»"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "balance"
+    ],
     "grammar": true,
-    "dependence": "grammar"
+    "dependence": "grammar",
+    "defines": [
+     "Becoming.«守数当且仅当可对»"
+    ]
    },
    {
     "law": 5,
@@ -26189,9 +26327,15 @@
      "Becoming.«聚之长»",
      "Becoming.«程守数当且仅当可对»"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure",
+     "balance"
+    ],
     "grammar": true,
-    "dependence": "grammar"
+    "dependence": "grammar",
+    "defines": [
+     "Becoming.«程守数当且仅当可对»"
+    ]
    },
    {
     "law": 6,
@@ -26228,7 +26372,9 @@
      "Becoming.«迭之定»",
      "Becoming.«迭之定前»"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -26269,9 +26415,15 @@
      "Becoming.«入而返之例»",
      "Becoming.«非定后返而不入之例»"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure",
+     "return"
+    ],
     "grammar": true,
-    "dependence": "grammar"
+    "dependence": "grammar",
+    "defines": [
+     "Becoming.«入当且仅当有不返»"
+    ]
    },
    {
     "law": 10,
@@ -26292,9 +26444,15 @@
      "Becoming.«皆返定后则定前»",
      "Becoming.«有限遍后定后则定前当且仅当皆返»"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure",
+     "return"
+    ],
     "grammar": true,
-    "dependence": "grammar"
+    "dependence": "grammar",
+    "defines": [
+     "Becoming.«有限遍后定后则定前当且仅当皆返»"
+    ]
    },
    {
     "law": 11,
@@ -26332,9 +26490,15 @@
      "Becoming.«止而不入之例»",
      "Becoming.«入而屡之例»"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure",
+     "return"
+    ],
     "grammar": true,
-    "dependence": "grammar"
+    "dependence": "grammar",
+    "defines": [
+     "Becoming.«尽则不或屡»"
+    ]
    },
    {
     "law": 13,
@@ -26344,6 +26508,7 @@
      "Becoming.Amounts.fallsStop_of_ends"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -26367,9 +26532,15 @@
      "Becoming.«像»",
      "Becoming.«像定后当且仅当同行»"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "lumping"
+    ],
     "grammar": true,
-    "dependence": "grammar"
+    "dependence": "grammar",
+    "defines": [
+     "Becoming.«同行»",
+     "Becoming.«像定后当且仅当同行»"
+    ]
    },
    {
     "law": 15,
@@ -26407,9 +26578,16 @@
      "Becoming.«齐则非杂»",
      "Becoming.«齐即谓»"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "order"
+    ],
     "grammar": true,
-    "dependence": "grammar"
+    "dependence": "grammar",
+    "defines": [
+     "Becoming.«广»",
+     "Becoming.«广不可逆»",
+     "Becoming.«广之传递»"
+    ]
    },
    {
     "law": 17,
@@ -26526,6 +26704,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "return"
       ]
      },
@@ -26534,6 +26713,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "return"
       ]
      },
@@ -27010,6 +27190,7 @@
      "Becoming.Halving.takes_halve"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -27021,6 +27202,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "balance",
        "return"
       ]
@@ -27038,6 +27220,7 @@
      "Becoming.Pulse.pulsed"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -27070,6 +27253,7 @@
      "Becoming.Inactive.more_without_arising"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -27096,6 +27280,7 @@
      "Becoming.Oscillation.not_more"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -27107,6 +27292,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "balance",
        "return"
       ]
@@ -27123,6 +27309,7 @@
      "Becoming.Flow.More.renewers_unbounded_from"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -27504,6 +27691,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "return"
       ]
      }
@@ -27597,6 +27785,7 @@
      "Becoming.Captured.rule_perturbation_drawn"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -27719,6 +27908,7 @@
      "Becoming.falls_not_recurring"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -27733,6 +27923,7 @@
      "Becoming.Flow.Dissipative.finite_taking_not_recurring"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -27744,6 +27935,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "balance",
        "return"
       ]
@@ -27763,6 +27955,7 @@
      "Becoming.Lone.frontier"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -27779,6 +27972,7 @@
      "Becoming.Flow.taking_draws_in"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -27813,6 +28007,7 @@
      "Becoming.Flow.taking_draws_in_from"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -27833,6 +28028,7 @@
      "Becoming.Frontier.draws_in"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -27848,6 +28044,7 @@
      "Becoming.Rooted.arises_taking"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -27861,6 +28058,7 @@
      "Becoming.witnesses_not_dissipative"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -30488,6 +30686,7 @@
      "Becoming.Net.marking_stops_unrefuted"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -30506,6 +30705,7 @@
      "Becoming.Net.rests_unrefuted"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -33122,6 +33322,7 @@
      "Becoming.Law.Returns.undo"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -33137,6 +33338,7 @@
      "Becoming.Law.keeps_iff"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -33147,6 +33349,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "return"
       ]
      }
@@ -33161,6 +33364,7 @@
      "Becoming.Law.Merges.loses"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -33430,6 +33634,7 @@
      "Becoming.ContinuingRevision.no_run_without_return"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -33585,7 +33790,9 @@
      "Becoming.RegimeMargin.Drawn.rest_iff",
      "Becoming.RegimeMargin.Drawn.still_iff"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -33684,7 +33891,9 @@
      "Becoming.RegimeMargin.Adjusted.Between.restsAtDraw",
      "Becoming.RegimeMargin.Adjusted.Between.rests_iff"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -33749,6 +33958,7 @@
      "Becoming.RegimeMargin.Crossing.frozen_stays"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -34946,6 +35156,7 @@
      "Becoming.Web.Carries.lasts_within"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -34956,6 +35167,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "return"
       ]
      }
@@ -34984,6 +35196,7 @@
      "Becoming.Web.Carries.ends_within"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -35006,6 +35219,7 @@
      "Becoming.Web.Carries.chain_ends_of_em"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -35083,6 +35297,7 @@
      "Becoming.Flow.carriesAcross_of_held"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -35496,6 +35711,7 @@
      "Becoming.Asymptote.not_balanced"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -35518,6 +35734,7 @@
      "Becoming.Emission.not_balanced"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -35531,6 +35748,7 @@
      "Becoming.Alternation.not_balanced"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -35624,6 +35842,7 @@
      "Becoming.RegimeMargin.Coupled.Indexed.rests_by"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -35681,6 +35900,7 @@
      "Becoming.World.InAmounts.rests_unrefuted_enclosed_of_noEndlessFall"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -35693,6 +35913,7 @@
      "Becoming.World.rests_unrefuted_enclosed"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -35730,6 +35951,7 @@
      "Becoming.Layered.worlds_need_not_rest"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -35982,6 +36204,7 @@
      "Becoming.World.not_recurring_of_rests_unrefuted"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -35994,6 +36217,7 @@
      "Becoming.World.arising_opens_refinement_counted"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -36009,6 +36233,7 @@
      "Becoming.World.not_recurring_of_rests_unrefuted"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -36021,6 +36246,7 @@
      "Becoming.World.arising_needs_refinement"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -36051,6 +36277,7 @@
      "Becoming.refinement_feeds_witnesses"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -40063,6 +40290,7 @@
      "Becoming.World.contingent"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -40141,6 +40369,7 @@
      "Becoming.World.rests_unrefuted_iff"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -40155,6 +40384,7 @@
      "Becoming.World.leaking_world"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -40168,6 +40398,7 @@
      "Becoming.World.flicker_world"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -40194,7 +40425,10 @@
      "Becoming.stop_unrefuted_iff",
      "Becoming.amount_still_unrefuted"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure",
+     "return"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -40204,7 +40438,9 @@
      "Becoming.Web.embodiedArising_stops_unrefuted"
     ],
     "master_laws": [
-     "balance"
+     "closure",
+     "balance",
+     "return"
     ],
     "grammar": true,
     "dependence": "grammar"
@@ -40218,6 +40454,7 @@
      "Becoming.World.rests_unrefuted"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -40231,6 +40468,7 @@
      "Becoming.World.rests_unrefuted_covering"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -42127,6 +42365,7 @@
      "Becoming.Law.sameTests_iff_below_across"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -43108,6 +43347,7 @@
      "Becoming.Flow.Balances.keeps_of_not_arising"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -43415,6 +43655,7 @@
      "Becoming.Law.coarsest_class"
     ],
     "master_laws": [
+     "closure",
      "return",
      "lumping"
     ],
@@ -43837,7 +44078,9 @@
      "Becoming.«复生之对应»",
      "Becoming.«不穷之对应»"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -43899,7 +44142,9 @@
      "Becoming.World.arisingRecurs_iff",
      "Becoming.World.ceasingRecurs_iff"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -44004,7 +44249,9 @@
      "Becoming.World.not_falls_everywhere",
      "Becoming.Steps.along_endless"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    }
@@ -44097,7 +44344,9 @@
      "Becoming.RegimeMargin.Notch.ends_four",
      "Becoming.RegimeMargin.Notch.no_threshold"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -45664,6 +45913,7 @@
      "Becoming.Web.depletion_not_recurring"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -45678,6 +45928,7 @@
      "Becoming.Web.Unceasing.activeRenewer_recurs"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -45688,6 +45939,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "return"
       ]
      },
@@ -45696,6 +45948,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "return"
       ]
      }
@@ -45714,6 +45967,7 @@
      "Becoming.Steady.steady"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -45728,6 +45982,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "balance",
        "return"
       ]
@@ -45742,6 +45997,7 @@
      "Becoming.Relay.defers"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -45756,6 +46012,7 @@
      "Becoming.Recycle.closed_unceasing"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -45780,6 +46037,7 @@
      "Becoming.Relay.defers"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -45794,6 +46052,7 @@
      "Becoming.Oscillation.readings"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -45807,6 +46066,7 @@
      "Becoming.Flow.renewing_recurs_from"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -46449,6 +46709,7 @@
      "Becoming.statesBelow_iff_core"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -46462,6 +46723,7 @@
      "Becoming.core_within_core_iff"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -48560,6 +48822,7 @@
      "Becoming.LearnableRuns.ahead_fixes"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -48574,6 +48837,7 @@
      "Becoming.Learnable.reading_predicts_from"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -48592,6 +48856,7 @@
      "Becoming.LearnableRuns.learnable_iff_reading"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -48604,6 +48869,7 @@
      "Becoming.LearnableRuns.given_nothing_not_every"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -49556,6 +49822,7 @@
      "Becoming.LearnableRuns.learnable_iff_table"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -49581,6 +49848,7 @@
      "Becoming.LearnableRuns.ahead_with_labels"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -49630,6 +49898,7 @@
      "Becoming.Web.KeepsWidening.renewers_unbounded"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -49758,6 +50027,7 @@
      "Becoming.Ladder.balance_needed"
     ],
     "master_laws": [
+     "closure",
      "balance",
      "return"
     ],
@@ -50251,6 +50521,7 @@
      "Becoming.Flow.alongside_not_all"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -50306,6 +50577,7 @@
      "Becoming.Excluding.three_courses"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -51167,6 +51439,7 @@
      "Becoming.Run.withLasso_part"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,
@@ -51260,6 +51533,7 @@
      "Becoming.Flow.seeking_ends"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -51298,6 +51572,7 @@
      "Becoming.Alone.takes_all"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -51420,6 +51695,7 @@
      "Becoming.LastChange.still_within"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -51502,7 +51778,9 @@
      "Becoming.RegimeMargin.Crossing.rises_without_rest",
      "Becoming.RegimeMargin.Adjusted.rests_short"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    }
@@ -52349,7 +52627,9 @@
      "Becoming.Web.Listed.end_without_arising",
      "Becoming.Web.Whole.ends_without_arising"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -52360,6 +52640,7 @@
      "Becoming.Web.Whole.joint_excess_ends"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -52370,6 +52651,7 @@
       "category": "master law",
       "dependence": "grammar",
       "master_laws": [
+       "closure",
        "balance"
       ]
      }
@@ -52396,6 +52678,7 @@
      "Becoming.WholeExceeding.drawn"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -52901,7 +53184,9 @@
     "declarations": [
      "Becoming.Web.Covered.arises_within"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -52911,7 +53196,9 @@
      "Becoming.Web.Covered.needs_arising",
      "Becoming.Web.Covered.needs_new"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -52923,7 +53210,9 @@
      "Becoming.Web.Whole.needs_arising",
      "Becoming.Web.Whole.needs_new"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -52941,7 +53230,9 @@
     "declarations": [
      "Becoming.Countless.countless"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -52980,7 +53271,9 @@
      "Becoming.Layered.within",
      "Becoming.Layered.arise_again"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    }
@@ -53253,6 +53546,7 @@
      "Becoming.Learning.diagonal_open"
     ],
     "master_laws": [
+     "closure",
      "return"
     ],
     "grammar": true,

@@ -21,7 +21,7 @@
 5. Where giving rises with what is left, falls short of the draw below y, meets it from y up to the band's top, gives nothing from nothing and the step keeps a band up to hi reaching the point, the threshold is the point of no return H + y at every recent giving up to hi. (`Becoming.RegimeMargin.threshold_regime`)
    - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 6. Witness: giving that is two from one and nothing from any other level keeps every state up to four within four under a draw of two, yet the run from four rests at nothing and the run from three at three, so no least level separates the runs resting below the draw from the rest. (`Becoming.RegimeMargin.Notch.giving`, `Becoming.RegimeMargin.Notch.keeps`, `Becoming.RegimeMargin.Notch.stays_three`, `Becoming.RegimeMargin.Notch.ends_four`, `Becoming.RegimeMargin.Notch.no_threshold`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 7. One law of exact thresholds: where a fate is down-closed in the level and read off an exact check, the least level up to a bound from which the check fails is exact, and no lower where one fate implies another; every threshold of the regime and its webs is derived from it. (`Becoming.RegimeMargin.leading_exact`, `Becoming.RegimeMargin.leading_falls`, `Becoming.RegimeMargin.leading_eq`, `Becoming.RegimeMargin.leading_congr`, `Becoming.RegimeMargin.Adjusted.rests_iff_falling`)
    - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 

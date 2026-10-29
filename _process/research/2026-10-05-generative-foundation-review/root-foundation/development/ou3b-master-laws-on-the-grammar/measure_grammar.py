@@ -7,7 +7,8 @@ Uses EC's measure (../ec-elegant-completion/measure.py) to restore the spine's c
 checker cache (nothing is compiled), then, for every declaration COVERAGE.json lists as central,
 reports whether its type or proof reaches a grammar constant (a declaration of a module named
 Becoming.Grammar*, recognised by its «» name or by the grammar's instance names listed below),
-and, for each master law, whether the law's anchors themselves reach the grammar. A measurement of
+and, for each master law, whether the law's anchors themselves reach the grammar. A law's anchors are
+EC's (ec.LAWS) and its statement on the grammar (08 §7; `GRAMMAR_FORMS`, joined in `ANCHORS`). A measurement of
 Lean dependency only: reaching the grammar says a grammar law is among the declaration's reasons.
 
 Each central declaration also gets one category (OU3c, 28 October 2026): `grammar` where it reaches the
@@ -36,6 +37,20 @@ HERE = Path(__file__).resolve().parent
 spec = importlib.util.spec_from_file_location('ec', HERE.parent / 'ec-elegant-completion/measure.py')
 ec = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(ec)
+
+# Each master law's statement on the grammar (08 §7, column "On the grammar"; 29 October 2026) is among
+# its anchors: a declaration resting on it rests on the law, stated at the lowest layer (board rule 9).
+# Where 08 §7 says an anchor is a grammar term by definition («所闭», «同行», «广»), that term is an anchor
+# too. Balance's forms are listed although the grammar represents balance and does not derive it: a
+# declaration resting on them rests on balance's grammar form, and reaches the grammar.
+GRAMMAR_FORMS = {
+    'closure': ['Becoming.«所闭当且仅当同一或及»', 'Becoming.«所闭»'],
+    'balance': ['Becoming.«守数当且仅当可对»', 'Becoming.«程守数当且仅当可对»'],
+    'return': ['Becoming.«入当且仅当有不返»', 'Becoming.«有限遍后定后则定前当且仅当皆返»', 'Becoming.«尽则不或屡»'],
+    'order': ['Becoming.«广不可逆»', 'Becoming.«广之传递»', 'Becoming.«广»'],
+    'lumping': ['Becoming.«像定后当且仅当同行»', 'Becoming.«同行»'],
+}
+ANCHORS = {law: ec.LAWS[law] + GRAMMAR_FORMS.get(law, []) for law in ec.LAWS}
 
 
 # Why each central declaration resting on an anchor does not reach the grammar, where it is no case of a
@@ -136,7 +151,7 @@ def main():
                     seen.add(b)
                     stack.append(b)
         return seen
-    laws = {k: [a for a in v if a in C] for k, v in ec.LAWS.items()}
+    laws = {k: [a for a in v if a in C] for k, v in ANCHORS.items()}
     anchor_reach = {k: {a: any(is_grammar(b) for b in above(a)) for a in v} for k, v in laws.items()}
     total, reach, by_law = 0, [], {k: [0, 0] for k in laws}
     rows = []
