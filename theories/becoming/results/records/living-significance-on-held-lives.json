@@ -100,6 +100,27 @@
         "Becoming.Web.selfValuation_feeding_own",
         "Becoming.Web.selfValuation_of_unrestricted"
       ]
+    },
+    {
+      "en": "On the claims, with regions as partial identities: where every living claim lies within some position's own region, living lies within every position's significance exactly where each position's own living lies within its significance (S0) and what is living and significant from one position lies within every other's (N_std).",
+      "zh": "在主张上，域以部分恒等持之：当每一活主张皆含于某一位置之自有域，活者含于每一位置之意义，恰当每一位置自有之活者含于其意义（S0），且自一位置为活且有意义者含于每一其他位置之意义（N_std）。",
+      "declarations": [
+        "Becoming.ModelStatements.significant_iff_held_reading",
+        "Becoming.ModelStatements.significant_iff_reading",
+        "Becoming.ModelStatements.selfSignificance_iff_reading",
+        "Becoming.ModelStatements.shares_iff_reading",
+        "Becoming.ModelStatements.held_iff_reading"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.ModelStatements.significant_iff_held_reading",
+          "of": "Becoming.Valuation.significant_iff_held",
+          "models": [
+            "own"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+        }
+      ]
     }
   ],
   "hypotheses": [
@@ -348,7 +369,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093"
+      "sha256": "c71e9f32b0fc7e1a8528142f309eb700da852facef0fbcf0757f04e01c9b81e0"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/CONTINUATION-GROUNDING-PLAN.md",
@@ -430,6 +451,33 @@
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ModelStatements.held_iff_reading",
+        "Becoming.ModelStatements.selfSignificance_iff_reading",
+        "Becoming.ModelStatements.shares_iff_reading",
+        "Becoming.ModelStatements.significant_iff_held_reading",
+        "Becoming.ModelStatements.significant_iff_reading"
+      ],
+      "sha256": "86aec5d02e4b3ddff4d0f2687fa6a9ee7ce1d120d06aa7e6c954bc8ac87f82b8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "role": "review",
+      "sha256": "2237e3b55420880977acbc68a35800d8f3984d0eae6c40924c6eecfd329bbbe1"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md",
+      "role": "integration",
+      "sha256": "4a6de8c3a7735db3ace316dd45b88b0fe5ab7e91b1e340daf2e9521a854aa2af"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "role": "receipt",
+      "sha256": "e16b5ece7b28c05f2b3349d3f8d51ff4aef68bdedbe6e3b16942c0b9e28acda1"
     }
   ],
   "proof_bindings": [
@@ -458,6 +506,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Boundaries.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Boundaries",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ModelStatements",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -520,6 +575,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): premises in the current vocabulary: living significance for G0, self-significance, standpoint neutrality and relational neutrality for S0, N_std and N_rel, the condition the theory states for the retired account of G0 folded as an axiom of Part I, and, for its clause that the restatement's readings were decided on Ren's delegation, what the continuation condition yields there on a reading where a claim's significance is a formation's continuation; the holding reading labelled as an AI reading (D11) without naming whose delegation adopted it; a former record id updated; the same labels in the correspondence, the validation scope, a dependency detail, a dependency's interface and a related detail, and 'the axiom' and 'the one axiom' in the correspondence, read as the current terms (the continuation condition for the axiom), Ren's quoted words kept verbatim; the laws are unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：前提用现行词汇：G0 改为生生之意义，S0、N_std、N_rel 改为自身意义、立场中立、关系中立，以理论所陈述的条件取代已退役的“G0 作为第一部分之公理被折叠”之说，并以延续条件在主张之意义即某形成之延续之意义的读法上所推出者取代“重述的读法依 Ren 的交托决定”一句；持有之读法标为 AI 的读法（D11），不再写依谁的交托采用；更新一个旧记录编号；对应、验证范围、一条依存说明、一条依存的接口及一条相关说明中的同样标签，以及对应中的“那条公理”“唯一公理”，改为现行术语（公理改为延续条件），Ren 的引语原样保留；定律不变。"
+    },
+    {
+      "en": "30 October 2026 (U2, study section 461): a law on its own carrier added, stating `Becoming.Valuation.significant_iff_held` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
+      "zh": "2026年10月30日（U2，研究第 461 节）：增于其自身之载体上之律，于其项为文法之处陈述 `Becoming.Valuation.significant_iff_held`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
     }
   ],
   "text_versions": [

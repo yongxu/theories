@@ -185,7 +185,9 @@ With that, **plan §八 step 4 (剥前提) is complete** in all four of its part
 3. **The theorems that read `active` together with other fields.** These are the dependency audit's next groups. Each group is a lift, or a reason, on OU3f's pattern: an audit first, then derivations. Each audit looks for closure cases first (seven of OU3f's fifteen (a) rows were), and reuses OU3f's kit: the classification table, `reach.py`, and the dependency check with a control run on main. The groups are taken in the order the central declarations use them, since full unification (§十三 item 13) asks only that central declarations reach the root.
 4. **The layer that reads no field** (WRP's, for example `Reidentify.old_still` and `Linked.mono`). These are taken whole through WRP as statements at a represented model, which 全一 counts. Under §十三 item 13 they enter the root through U2 or U3 only where a central declaration uses them, or the place where they do not enter is written down. No sweep is planned.
 
-**Next, in order**, as the queue stands: UE21's leaf, then U2's Lean (the leaf `Becoming.ModelStatements` and the readings in their rows' records, filling F5's field), then U3's documents and its Lean items 1 and 2. GW1 and GW2 stay on GW's line. After these comes plan §八 step 5.
+**U2 landed** (`08ed13d33`, study §461). `Becoming.ModelStatements` is a core leaf, 78 theorems in 121 declarations, every axiom report empty. 20 of U2's 24 rows are read at the World's or a process's model, as laws at the model in their rows' own 16 records, and MV's F5 verifies each pair and counts it apart. Of the 118 distinct central declarations, 44 reach the grammar, 16 are stated at a represented model, 4 on their own carrier only, and 54 are the rest. 3 rows resist, since their terms are amounts computed over a family, and 1 waits for U3. So 全五 now tells derivation from representation.
+
+**Next, in order:** U3's documents, then its Lean items 1 and 2 (全四). GW1 and GW2 stay on GW's line. The root generalization behind item 2 above rides the next planned full rebuild. After these comes plan §八 step 5.
 
 ## What this note does not do
 

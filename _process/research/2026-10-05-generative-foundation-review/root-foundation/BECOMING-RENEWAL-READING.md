@@ -21405,3 +21405,93 @@ Output → input: Persistence; 08's counts; the board, where OU3f's row closes; 
 - the board builds the closing state from the row's own cell;
 - the scanner keeps strings and «» names, reads raw strings and `/--/` as Lean does, and stops on anything left open;
 - counts and usage lines.
+
+## 460. The free-energy bound in counting form, in the pure core (UE21)
+
+UE17 stated variational free energy and its bound in the periphery, over Mathlib's reals; its record named a core form of the bound as the next step, and the principle's page listed it among what the theory cannot yet state. UE21 states it in the pure core, with its case of equality, as item 6 of the plan for the principle as an integral part of the theory ([plan](development/ue-unified-explanation/FEP-INTEGRATION.md); [note](development/ue21-free-energy-in-counts/NOTE.md)).
+
+```text
+Result(s): new record free-energy-bound-in-counts (home 03 §6, after free-energy-bounds-surprisal), one module, each
+       declaration cited by it; free-energy-bounds-surprisal and conditioning-by-restriction related to it.
+Delta: (1) the arithmetic–geometric mean inequality in counts: rearrangement (rearrange), a Bernoulli-type inequality
+       (bernoulli), one more term joining a mean (mean_step), two values (mean_two) and two parts (two_parts), each
+       strict away from equality (bernoulli_strict, mean_step_strict, mean_two_strict, two_parts_strict), two parts
+       reached only in proportion (proportional_of_two_parts_eq).
+       (2) the bound: for natural counts n and weights a over any listed hypotheses, over the core's total,
+       N^N·∏ a^n ≤ A^N·∏ n^n (bound), with no support condition (Witness.off_support).
+       (3) equality exactly in proportion, n h * A = a h * N at every listed hypothesis (bound_eq_iff), strict
+       elsewhere (bound_lt_of_not_proportional); the degenerate cases (zero_weights_reach, no_counts_reach); at one
+       total possibly unreached (Witness.total_two_unreached).
+       (4) the join: in a core generative model the total is the record's weight (record_total), the count beliefs at
+       the bound are exactly those in proportion to the joint weights (given_record_eq_iff), and, with the
+       hypotheses listed once, those at the shares given the record (given_record_eq_iff_share;
+       Witness.duplicate_share without); where the record weighs nothing every count belief is at the bound
+       (nothing_record_reach_all).
+Premises: no axiom; natural counts and weights; listed hypotheses, listed once for the join to the shares;
+       0 ^ 0 = 1; the belief read as the shares n / N.
+Evidence: core receipt 20261029T210603.495422Z; Becoming.FreeEnergyCounting (55 theorems in 65 declarations), every declaration with an empty axiom report, a
+       leaf at L1 importing Becoming.ConditionalWeights; an independent review (REVIEW-UE21) and a re-check
+       (RECHECK-UE21); no landed statement or proof changed.
+Boundary: a theorem joining it to FreeEnergyReals' bound (off the support the two laws differ); a minimization at one
+       fixed total; conditioning where the record weighs nothing; irrational shares and densities; complexity and
+       accuracy from the core's own shares; any process that lowers free energy. Classical in counts (Cauchy 1821;
+       the method of types); near-definitional in its join; new in the pure core.
+Output→input: conditioning-by-restriction, free-energy-bounds-surprisal → free-energy-bound-in-counts → 03 §6, 08 §8,
+       the principle's page, UE, FEP-INTEGRATION.
+```
+
+**Its standing.** In counts the bound is Cauchy's arithmetic–geometric mean inequality (1821) for `N` terms, each weight over its count taken that many times, a count being a repetition, with its case of equality; equivalently Gibbs' inequality and the nonnegativity of the divergence for rational distributions. Read with the weights as a model and the counts as observed, it says the observed frequencies maximize the multinomial likelihood (the method of types). Both readings are classical, and the counting form and its join are near-definitional. New is that the principle's central bound and its case of equality hold in the pure core with an empty axiom report, joined to the core's generative model.
+
+**The review and the fix round.** An independent read-only review by another AI agent ([REVIEW-UE21](development/ue21-free-energy-in-counts/REVIEW-UE21.md)) rebuilt the module against main with a probe of 32 theorems and compared the counting law with UE17's real form on 4,368 small cases. It found the Lean sound and `bound_eq_iff` exact, and the free-energy reading saying more than the Lean: it dropped a positive total, a record that weighs something and the possibility of no count belief reaching the bound at one total, and stated the join to the shares given the record without the hypotheses listed once. Its eight findings are all taken ([note §6](development/ue21-free-energy-in-counts/NOTE.md#6-review)): the conditions stated with their witnesses, the join to the shares a theorem (`given_record_eq_iff_share`), strictness a theorem (`bound_lt_of_not_proportional`), ten helpers re-proving axiom-free laws dropped, the bound stated over the core's `total` with `powerProduct` for the product so no core name is shadowed, the difference off the support and the normalization stated, the stale texts listed, and the standing given both classical readings. The module went from 58 theorems in 65 declarations to 56 in 66. The reviewer then re-checked the fold ([RECHECK-UE21](development/ue21-free-energy-in-counts/RECHECK-UE21.md)): sound, no sentence contradicting the Lean, with six findings, every one taken: the record weighing nothing a general theorem (`nothing_record_reach_all`); "with the hypotheses listed once" in every reading; "the same law" replaced by agreement on the support; two more duplicates dropped for the core's `total_zero` and the prelude's `Nat.mul_eq_zero`; 08 §8's standing brought to Cauchy's inequality in counts; and wording. The module is 55 theorems in 65 declarations.
+
+**Decisions at landing.** One record, homed in 03 §6 after free energy's bound, since it is that bound in counts. The texts that called the counting form absent or pending are brought to it: 03 §6's reading on conditioning and free energy's paragraph, 08 §8's bullet, and the principle's page. `FreeEnergyReals`' and `ConditionalWeights`' docstrings are to point to this module at those modules' next change, with no run for a docstring alone.
+
+**Readings** [AI reading, D45]. For a belief in counts with a positive total, on the support, where the record weighs something, with the hypotheses listed once, minimizing free energy is conditioning in the core itself: over count beliefs of every total the least free energy is the record's surprisal, reached exactly at the shares given the record. For count beliefs with a positive total on the support, the periphery's real form is this bound read through the logarithm (by hand); the real form also covers real shares, off the support the two differ, and at one fixed total the bound may not be reached.
+
+## 461. The rows on no master law stated where their terms are the grammar's (U2)
+
+Board item U2 ([design](development/u2-rows-on-the-root/DESIGN.md), reviewed in [REVIEW-U2](development/u2-rows-on-the-root/REVIEW-U2.md); the leaf as it lands re-checked item by item against the rows in [RECHECK-U2](development/u2-rows-on-the-root/RECHECK-U2.md)). It takes up full unification's 全二 for the measure's central rows on no master law (OU plan §十三 item 13, D25; FU's U2). Each is stated where its terms are the grammar's: a representation, not a derivation (change 1), with the premises it takes as grammar statements at the model (F2). The placement is OU's owner's decision; the field that carries each pair, `statements_at_model`, is MV's (§458). The work is the AI's.
+
+```text
+Result(s): no new record. Twenty laws at the model, each in its row's own record (sixteen records), carrying F5's
+       statements_at_model items (twenty-one, row 24 having two), every item reviewed in RECHECK-U2; the core leaf
+       Becoming.ModelStatements.
+Delta:
+  - Twenty of the twenty-four central rows on no master law are stated at a World's occurrence model, at a process's
+    model of its moves' relations, or on the row's own carrier, and each is proved through its row. Every term of a
+    statement is a relation or region of the model, a named comparison of its given amounts, a supplied parameter, or
+    in a definitional reading the row's own notion on the left.
+  - Support and dependence are inclusions in the needs met (supported_iff, dependent_iff); renewal at a step, over a
+    region and along the web is an inclusion in the kept relation (renewingAt_iff, renewingOver_iff,
+    renewingIn_iff); undermining is drawing into an undermined dependence (underminingAt_iff); transmission at a
+    descent is two inclusions (inheritsAt_iff, needsWithinAt_iff).
+  - Relational neutrality is a closure (neutral_transmits_iff, read from Valuation.transmits_iff_closed), read on
+    the occurrences for sustenance and descent (sustenance_neutral_iff, descent_neutral_iff).
+  - On a process's model: withholding all parts is passing through their withholdings in turn (withholdAll_iff_li);
+    what a word of hearings reaches is passing through its moves in turn (reached_iff), and an origin what passes in
+    along the copying relations (origin_iff_li); a record fixes an outcome exactly where every family of relations
+    indexed by moves, each fixing its successor and holding the run's steps, does (fixes_iff); a finite reading's
+    statement of closure (renewing_not_closed).
+  - On the rows' own carriers: reading through a coupling is an inclusion (through_iff_inclusion); verification is
+    what every condition held at membership (interiorBy_iff); a selection through the data is a closure and a free
+    class an inclusion (through_of_closed, free_iff); an optimum's drive to the least level, on outcomes
+    (optimum_broken_reading).
+  - Three rows resist with written reasons, their terms amounts computed over a family: responses_le_missBound,
+    Drift.falls_back, RelativePosition.rise_needs_fall. unrestricted_iff_livingSignificance is U3's.
+  - F5's report (central_reach), over the 118 distinct central declarations: 44 reach the grammar, 16 are
+    stated at a represented model, 4 are stated on their own carrier only, and 54 are the rest.
+Supplied premises / correspondence: none added. The relations read across a step read names and amounts, and are not
+       shown carried by re-identification; comparisons of needs with levels, the order of outcomes and the need
+       within δ are relations of the model read from amounts, outside U1's interface; one decidability premise
+       (row 12) and two premises of logic are kept.
+Evidence: core receipt `20261029T213154.508889Z`; Becoming.ModelStatements (78 theorems in 121 declarations), every
+       axiom report empty; F5's verification of the twenty-one items from the checker cache (master-laws.json, none
+       unverified); the dependency check (development/u2-rows-on-the-root/check/deps.log).
+Standing: representations at the models, not derivations. A definitional row's reading is its definition at the
+       model; a model law keeps the row's proof.
+Boundary:
+  - The three resisting rows; the nine rows resting on a premise of the account, which keep U1's verdict; U3's row.
+  - Re-identification is shown to carry only the World's ten relations.
+Output → input: the sixteen records' laws and their home-section bullets (02, 03, 04, 05 and 07); F5's report (MV);
+       08 §7's account of the rows on no master law; 08's counts; the leaf's region.
+```

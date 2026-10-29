@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 336 | 16,319 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 338 | 16,452 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 14 | 772 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -377,6 +377,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Founding.lean](lean-declarations/becoming-core.md#module-e7f9a14d0de5) | Becoming pure core |
 | [Fragments.lean](lean-declarations/becoming-core.md#module-a5c04e9c349b) | Becoming pure core |
 | [Frame.lean](lean-declarations/becoming-core.md#module-4aeb3fe7fb22) | Becoming pure core |
+| [FreeEnergyCounting.lean](lean-declarations/becoming-core.md#module-c51c7dba8102) | Becoming pure core |
 | [FreeEnergyGuarantees.lean](lean-declarations/becoming-core.md#module-e34947eb31a2) | Becoming pure core |
 | [FreeEnergyReals.lean](lean-declarations/core.md#module-00dcabf3b882) | Generative core and relational structure |
 | [Frequency.lean](lean-declarations/becoming-core.md#module-c700e68ef3a2) | Becoming pure core |
@@ -566,6 +567,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Metaethics.lean](lean-declarations/becoming-core.md#module-f7356ff23b30) | Becoming pure core |
 | [ModelRevision.lean](lean-declarations/inquiry.md#module-a4bb88f1170d) | Attainable inquiry, contact and process laws |
 | [ModelRevisionCases.lean](lean-declarations/inquiry.md#module-f1251e5ef2f2) | Attainable inquiry, contact and process laws |
+| [ModelStatements.lean](lean-declarations/becoming-core.md#module-3a2867fad40b) | Becoming pure core |
 | [MoveFormation.lean](lean-declarations/becoming-core.md#module-28e8b4c3f5e5) | Becoming pure core |
 | [MoveOutcomeProcesses.lean](lean-declarations/becoming-core.md#module-bf4b488e61c2) | Becoming pure core |
 | [MutualDependence.lean](lean-declarations/becoming-core.md#module-dc8123cb2cc1) | Becoming pure core |

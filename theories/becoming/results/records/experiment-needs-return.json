@@ -106,6 +106,26 @@
         "Becoming.Confound.varied",
         "Becoming.Confound.varied_refutes"
       ]
+    },
+    {
+      "en": "At a process's model, with runs as its lines: where each move's relation fixes its successor and two configurations differ, a move the run's line has not passed through at the configuration before t is related by no record to one outcome, a record fixing one exactly where every family of relations indexed by moves, each fixing its successor and holding the run's steps before t, does.",
+      "zh": "在过程之模型上，以历程为其线：当每一着之关系定其后继且有二构型相异，历程之线于 t 前未于该构型经过之着，不为任何记录关联于单一结果；记录定一结果，恰当每一以着为指标、各定其后继且保有历程于 t 前诸步之关系族皆定之。",
+      "declarations": [
+        "Becoming.ModelStatements.not_fixes_reading",
+        "Becoming.ModelStatements.fixes_iff",
+        "Becoming.ModelStatements.takes_iff",
+        "Becoming.ModelStatements.before_iff_lt"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.ModelStatements.not_fixes_reading",
+          "of": "Becoming.Run.not_fixes_of_untaken",
+          "models": [
+            "process"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+        }
+      ]
     }
   ],
   "hypotheses": [
@@ -407,7 +427,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "sha256": "c71e9f32b0fc7e1a8528142f309eb700da852facef0fbcf0757f04e01c9b81e0",
       "declarations": []
     },
     {
@@ -541,6 +561,32 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ModelStatements.before_iff_lt",
+        "Becoming.ModelStatements.fixes_iff",
+        "Becoming.ModelStatements.not_fixes_reading",
+        "Becoming.ModelStatements.takes_iff"
+      ],
+      "sha256": "86aec5d02e4b3ddff4d0f2687fa6a9ee7ce1d120d06aa7e6c954bc8ac87f82b8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "role": "review",
+      "sha256": "2237e3b55420880977acbc68a35800d8f3984d0eae6c40924c6eecfd329bbbe1"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md",
+      "role": "integration",
+      "sha256": "4a6de8c3a7735db3ace316dd45b88b0fe5ab7e91b1e340daf2e9521a854aa2af"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "role": "receipt",
+      "sha256": "e16b5ece7b28c05f2b3349d3f8d51ff4aef68bdedbe6e3b16942c0b9e28acda1"
     }
   ],
   "proof_bindings": [
@@ -583,6 +629,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Laws",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ModelStatements",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -681,6 +734,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the correspondence names the record by its current id, testing-within-couplings, for its former id; nothing else changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应以现行编号 testing-within-couplings 称该记录，取代其旧编号；别无改变。"
+    },
+    {
+      "en": "30 October 2026 (U2, study section 461): a law at the model added, stating `Becoming.Run.not_fixes_of_untaken` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
+      "zh": "2026年10月30日（U2，研究第 461 节）：增模型上之律，于其项为文法之处陈述 `Becoming.Run.not_fixes_of_untaken`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
     }
   ],
   "text_versions": [

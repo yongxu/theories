@@ -192,6 +192,25 @@
         "Becoming.Sequences.recurs_dense",
         "Becoming.Sequences.recurs_not_verifiable"
       ]
+    },
+    {
+      "en": "On one carrier of points and stretches, a reading is verifiable exactly where every point it holds bears membership to a stretch every bearer of which the reading holds (what every condition held, «承»).",
+      "zh": "在点与段同一载体上，一读法可验证，恰当其所持之每一点皆属于某段，而该段之每一所属者皆为该读法所持（凡其条件皆持者，«承»）。",
+      "declarations": [
+        "Becoming.ModelStatements.verifiableBy_reading",
+        "Becoming.ModelStatements.interiorBy_iff",
+        "Becoming.ModelStatements.member"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.ModelStatements.verifiableBy_reading",
+          "of": "Becoming.Ideals.verifiableBy_iff_interior",
+          "models": [
+            "own"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+        }
+      ]
     }
   ],
   "hypotheses": [
@@ -459,7 +478,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093"
+      "sha256": "c71e9f32b0fc7e1a8528142f309eb700da852facef0fbcf0757f04e01c9b81e0"
     },
     {
       "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
@@ -482,6 +501,31 @@
       "role": "receipt",
       "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ModelStatements.interiorBy_iff",
+        "Becoming.ModelStatements.member",
+        "Becoming.ModelStatements.verifiableBy_reading"
+      ],
+      "sha256": "86aec5d02e4b3ddff4d0f2687fa6a9ee7ce1d120d06aa7e6c954bc8ac87f82b8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "role": "review",
+      "sha256": "2237e3b55420880977acbc68a35800d8f3984d0eae6c40924c6eecfd329bbbe1"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md",
+      "role": "integration",
+      "sha256": "4a6de8c3a7735db3ace316dd45b88b0fe5ab7e91b1e340daf2e9521a854aa2af"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "role": "receipt",
+      "sha256": "e16b5ece7b28c05f2b3349d3f8d51ff4aef68bdedbe6e3b16942c0b9e28acda1"
     }
   ],
   "proof_bindings": [
@@ -489,6 +533,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Verification.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Verification",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ModelStatements",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -513,6 +564,10 @@
     {
       "en": "2026-10-20: 13 bookkeeping notes condensed from 19 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/5e34eceb73b331bb/what-a-finite-stretch-verifies.json and in git.",
       "zh": "2026-10-20：13 条记账性说明合并（19 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/5e34eceb73b331bb/what-a-finite-stretch-verifies.json 和 git 中。"
+    },
+    {
+      "en": "30 October 2026 (U2, study section 461): a law on its own carrier added, stating `Becoming.Ideals.verifiableBy_iff_interior` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
+      "zh": "2026年10月30日（U2，研究第 461 节）：增于其自身之载体上之律，于其项为文法之处陈述 `Becoming.Ideals.verifiableBy_iff_interior`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
     }
   ],
   "text_versions": [

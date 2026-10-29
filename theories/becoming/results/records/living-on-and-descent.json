@@ -94,6 +94,47 @@
       "declarations": [
         "Becoming.Mutualism.relabel_sustenance"
       ]
+    },
+    {
+      "en": "At the occurrence model, relational neutrality for the sustenance valuation is significance closed under the formed relation into living occurrences («闭»), the relation interacting or living on either way. The row is one step of that closure along living on, read as drawing with a dependence at a positive need.",
+      "zh": "在出现模型上，维生价值之关系中立，即意义于所形成之关系入于活出现之下封闭（«闭»），该关系为互动或任一方向之依其而生。本行为此闭包沿依其而生之一步，读为汲取并以正需依存。",
+      "declarations": [
+        "Becoming.ModelStatements.living_on_reaches_reading",
+        "Becoming.ModelStatements.sustenance_neutral_iff",
+        "Becoming.ModelStatements.neutral_transmits_iff",
+        "Becoming.ModelStatements.livesOn_iff",
+        "Becoming.ModelStatements.interacts_iff"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.ModelStatements.living_on_reaches_reading",
+          "of": "Becoming.Web.living_on_reaches",
+          "models": [
+            "occurrence"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+        }
+      ]
+    },
+    {
+      "en": "The same along descent: the descent valuation's relation read on occurrences as interacting or descent either way, descent being the giver present and giving within the step and the receiver coming to stand across it, between relata at any steps.",
+      "zh": "沿传承亦同：传承价值之关系于出现上读为互动或任一方向之传承；传承即给予者在场且于步内给予、接受者跨步而立，于任意步之关系项之间。",
+      "declarations": [
+        "Becoming.ModelStatements.descent_reaches_reading",
+        "Becoming.ModelStatements.descent_neutral_iff",
+        "Becoming.ModelStatements.descends_iff",
+        "Becoming.ModelStatements.descentStep"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.ModelStatements.descent_reaches_reading",
+          "of": "Becoming.Flow.descent_reaches",
+          "models": [
+            "occurrence"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+        }
+      ]
     }
   ],
   "hypotheses": [
@@ -480,7 +521,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093"
+      "sha256": "c71e9f32b0fc7e1a8528142f309eb700da852facef0fbcf0757f04e01c9b81e0"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md",
@@ -572,6 +613,37 @@
       "role": "receipt",
       "sha256": "bc6716274f678eb3aa4648d8dd72508777d74fdc3c02d1fc93caecc54e82c2bf",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ModelStatements.descends_iff",
+        "Becoming.ModelStatements.descentStep",
+        "Becoming.ModelStatements.descent_neutral_iff",
+        "Becoming.ModelStatements.descent_reaches_reading",
+        "Becoming.ModelStatements.interacts_iff",
+        "Becoming.ModelStatements.livesOn_iff",
+        "Becoming.ModelStatements.living_on_reaches_reading",
+        "Becoming.ModelStatements.neutral_transmits_iff",
+        "Becoming.ModelStatements.sustenance_neutral_iff"
+      ],
+      "sha256": "86aec5d02e4b3ddff4d0f2687fa6a9ee7ce1d120d06aa7e6c954bc8ac87f82b8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "role": "review",
+      "sha256": "2237e3b55420880977acbc68a35800d8f3984d0eae6c40924c6eecfd329bbbe1"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md",
+      "role": "integration",
+      "sha256": "4a6de8c3a7735db3ace316dd45b88b0fe5ab7e91b1e340daf2e9521a854aa2af"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "role": "receipt",
+      "sha256": "e16b5ece7b28c05f2b3349d3f8d51ff4aef68bdedbe6e3b16942c0b9e28acda1"
     }
   ],
   "proof_bindings": [
@@ -600,6 +672,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Roles",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ModelStatements",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -662,6 +741,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired labels N_rel and G0 in a premise, a dependency and a related note replaced by relational neutrality and living significance (the Lean name transmits kept), and in the correspondence the author's reading is labelled as the AI's (\"the author reads\" now \"the AI reads\"); the laws are unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：前提、一项依赖与一条相关说明中已退役的标签 N_rel 与 G0 改为关系中立与生生之意义（Lean 名称 transmits 保留）；对应中“作者”的读法标为 AI 的（“作者把世系读作”改为“AI 把世系读作”）；规律不变。"
+    },
+    {
+      "en": "30 October 2026 (U2, study section 461): 2 laws at the model added, stating `Becoming.Web.living_on_reaches`, `Becoming.Flow.descent_reaches` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
+      "zh": "2026年10月30日（U2，研究第 461 节）：增模型上之律 2 条，于其项为文法之处陈述 `Becoming.Web.living_on_reaches`, `Becoming.Flow.descent_reaches`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
     }
   ],
   "text_versions": [

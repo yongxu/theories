@@ -301,8 +301,8 @@
     "zh": "纯核，公理报告皆空：GrammarTransport 引 GrammarLaws，WorldRepresentation 引 ContinuedClasses、Decidedness、Diagonal 与 GrammarTransport；二者与全包同编译，无名冲突。建模之选为世界自身者；诸例皆单一小世界；皆逐点，不用函数外延性。"
   },
   "next_delta": {
-    "en": "The amount part's joint image; a representation through the order of joined exchanges; the laws that read only activity at the occurrence model (OU3f); review by a person.",
-    "zh": "数量部分之共像；经相接交换之序之表示；于出现模型上唯读活动之诸律（OU3f）；人之审查。"
+    "en": "The amount part's joint image; a representation through the order of joined exchanges; review by a person.",
+    "zh": "数量部分之共像；经相接交换之序之表示；人之审查。"
   },
   "correspondence": {
     "en": "That definable properties are kept by isomorphisms of structures is standard model theory; here it is shown term by term, since the grammar is embedded with no syntax of terms. Difunctional relations are Riguet's (1948). The no-injection lemma is the constructive form of Cantor's theorem for a powerset, through the package's diagonal lemma (Lawvere 1969 states the general form). That conservation is labelled by standings is the cancellation of a whole-number equation. The representation is an interpretation of the World into grammar models, faithful on re-identifications and not injective on amounts. Graded in WRT's DESIGN.md.",
@@ -653,6 +653,10 @@
     {
       "en": "29 October 2026 (WRP2, study section 447): its item and next step on processes brought to the landed theorem, processes-represented-both-ways, as a related record; no statement, law or declaration changed.",
       "zh": "2026年10月29日（WRP2，研究第 447 节）：其言过程之项与下一步归于已成之定理 processes-represented-both-ways，列为相关；陈述、律与声明皆不改。"
+    },
+    {
+      "en": "30 October 2026 (U2, study section 461): the next step's item on the laws reading only activity at the occurrence model dropped: OU3f landed them at the web's carrier, which its audit (part (a)) shows needs no occurrence model; no statement, law or declaration changed.",
+      "zh": "2026年10月30日（U2，研究第 461 节）：下一步中于出现模型上唯读活动之诸律一项删去：OU3f 已于网之载体上证之，其审计（(a) 部分）示其无需出现模型；陈述、律与声明皆不改。"
     }
   ]
 }

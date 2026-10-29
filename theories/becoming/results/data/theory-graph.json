@@ -2372,6 +2372,18 @@
    "page": "theories/becoming/results/records/four-cases-of-a-part.md"
   },
   {
+   "id": "record:free-energy-bound-in-counts",
+   "type": "result",
+   "record": "free-energy-bound-in-counts",
+   "title": "The free-energy bound in counts",
+   "title_zh": "计数之自由能界",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/free-energy-bound-in-counts.md"
+  },
+  {
    "id": "record:free-energy-bounds-surprisal",
    "type": "result",
    "record": "free-energy-bounds-surprisal",
@@ -7493,6 +7505,28 @@
    "region": "knowing",
    "base": "general",
    "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.FreeEnergyCounting",
+   "type": "module",
+   "name": "Becoming.FreeEnergyCounting",
+   "level": "L1",
+   "theorems": 55,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ModelStatements",
+   "type": "module",
+   "name": "Becoming.ModelStatements",
+   "level": "L1",
+   "theorems": 78,
+   "region": "root",
+   "base": "grammar",
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -28626,6 +28660,12 @@
    "anchor": "r-free-energy-bounds-surprisal"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-free-energy-bound-in-counts",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-free-energy-bound-in-counts"
+  },
+  {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-expected-free-energy-and-its-terms",
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
@@ -31366,6 +31406,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.FreeEnergyCounting",
+   "to": "module:Becoming.ConditionalWeights",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.FreeEnergyGuarantees",
    "to": "module:Becoming.Commuting",
    "type": "imports"
@@ -32398,6 +32443,101 @@
   {
    "from": "module:Becoming.Metaethics",
    "to": "module:Becoming.Dependence",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Descent",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Experiment",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Joint",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.JointKeeping",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.LabelledRoles",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Learning",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.LimitVerification",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Optimum",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.PoolResponse",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.ProcessRepresentation",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Regions",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Roles",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.SharedCodes",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Significance",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Standpoints",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Transmission",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.ValuationFrames",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Verification",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.WorldRepresentation",
    "type": "imports"
   },
   {
@@ -34027,6 +34167,11 @@
   },
   {
    "from": "record:a-code-formed-between-formations",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-code-formed-between-formations",
    "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
@@ -35508,6 +35653,11 @@
   {
    "from": "record:becoming-finite-horizon",
    "to": "module:Becoming.LabelledRoles",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:becoming-finite-horizon",
+   "to": "module:Becoming.ModelStatements",
    "type": "proved-in"
   },
   {
@@ -37742,6 +37892,11 @@
   },
   {
    "from": "record:conditioning-by-restriction",
+   "to": "record:free-energy-bound-in-counts",
+   "type": "related"
+  },
+  {
+   "from": "record:conditioning-by-restriction",
    "to": "record:free-energy-bounds-surprisal",
    "type": "related"
   },
@@ -37778,6 +37933,11 @@
   {
    "from": "record:conditions-kept-together",
    "to": "module:Becoming.Labelled",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:conditions-kept-together",
+   "to": "module:Becoming.ModelStatements",
    "type": "proved-in"
   },
   {
@@ -38198,6 +38358,11 @@
   {
    "from": "record:continuation-condition-yields-living-significance",
    "to": "module:Becoming.Metaethics",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:continuation-condition-yields-living-significance",
+   "to": "module:Becoming.ModelStatements",
    "type": "proved-in"
   },
   {
@@ -40237,6 +40402,11 @@
   },
   {
    "from": "record:experiment-needs-return",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:experiment-needs-return",
    "to": "module:Becoming.Recurrence",
    "type": "proved-in"
   },
@@ -40906,6 +41076,31 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:free-energy-bound-in-counts",
+   "to": "module:Becoming.ConditionalWeights",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:free-energy-bound-in-counts",
+   "to": "module:Becoming.FreeEnergyCounting",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:free-energy-bound-in-counts",
+   "to": "module:Becoming.Prelude",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:free-energy-bound-in-counts",
+   "to": "record:conditioning-by-restriction",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:free-energy-bound-in-counts",
+   "to": "record:free-energy-bounds-surprisal",
+   "type": "related"
+  },
+  {
    "from": "record:free-energy-bounds-surprisal",
    "to": "module:Becoming.ConditionalWeights",
    "type": "proved-in"
@@ -40918,6 +41113,11 @@
   {
    "from": "record:free-energy-bounds-surprisal",
    "to": "record:expected-free-energy-and-its-terms",
+   "type": "related"
+  },
+  {
+   "from": "record:free-energy-bounds-surprisal",
+   "to": "record:free-energy-bound-in-counts",
    "type": "related"
   },
   {
@@ -41013,6 +41213,11 @@
   {
    "from": "record:generalization-through-lumping",
    "to": "module:Becoming.Mechanism",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:generalization-through-lumping",
+   "to": "module:Becoming.ModelStatements",
    "type": "proved-in"
   },
   {
@@ -42937,6 +43142,11 @@
   },
   {
    "from": "record:joint-difference-making",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:joint-difference-making",
    "to": "module:Becoming.Restoration",
    "type": "proved-in"
   },
@@ -43547,6 +43757,11 @@
   },
   {
    "from": "record:learning-through-a-map-is-tracking-in-the-limit",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:learning-through-a-map-is-tracking-in-the-limit",
    "to": "record:learnable-through-a-map",
    "type": "formal-reuse"
   },
@@ -43877,6 +44092,11 @@
   },
   {
    "from": "record:life-as-condition-of-life",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:life-as-condition-of-life",
    "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
@@ -44077,6 +44297,11 @@
   },
   {
    "from": "record:living-on-and-descent",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:living-on-and-descent",
    "to": "module:Becoming.Reserve",
    "type": "proved-in"
   },
@@ -44128,6 +44353,11 @@
   {
    "from": "record:living-significance-on-held-lives",
    "to": "module:Becoming.Metaethics",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:living-significance-on-held-lives",
+   "to": "module:Becoming.ModelStatements",
    "type": "proved-in"
   },
   {
@@ -48542,6 +48772,11 @@
   },
   {
    "from": "record:represented-boundary-against-dependence",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:represented-boundary-against-dependence",
    "to": "module:Becoming.Regions",
    "type": "proved-in"
   },
@@ -52417,6 +52652,11 @@
   },
   {
    "from": "record:transmission-is-inheritance-and-need",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:transmission-is-inheritance-and-need",
    "to": "module:Becoming.Transmission",
    "type": "proved-in"
   },
@@ -53662,6 +53902,11 @@
   },
   {
    "from": "record:what-a-finite-stretch-verifies",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-finite-stretch-verifies",
    "to": "module:Becoming.Verification",
    "type": "proved-in"
   },
@@ -53848,6 +54093,11 @@
   {
    "from": "record:what-a-pools-acts-respond-to",
    "to": "module:Becoming.Frame",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-pools-acts-respond-to",
+   "to": "module:Becoming.ModelStatements",
    "type": "proved-in"
   },
   {
@@ -54128,6 +54378,11 @@
   {
    "from": "record:what-an-optimum-does-beyond-what-couples-in",
    "to": "module:Becoming.Frontier",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-an-optimum-does-beyond-what-couples-in",
+   "to": "module:Becoming.ModelStatements",
    "type": "proved-in"
   },
   {
@@ -57603,6 +57858,11 @@
   {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-formed-goal-revision-continuation",
    "to": "record:formed-goal-revision-continuation",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-free-energy-bound-in-counts",
+   "to": "record:free-energy-bound-in-counts",
    "type": "states"
   },
   {

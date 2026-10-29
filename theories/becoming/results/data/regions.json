@@ -846,6 +846,11 @@
    "base": "old-base",
    "note": "part widens, narrows, keeps, mixed"
   },
+  "free-energy-bound-in-counts": {
+   "region": "knowing",
+   "base": "general",
+   "note": "FreeEnergyCounting UE21: the free-energy bound in counts, N^N·∏ a^n ≤ A^N·∏ n^n, equal exactly in proportion; in a generative model, hypotheses listed once, the count beliefs at the bound are those at the shares given the record"
+  },
   "free-energy-bounds-surprisal": {
    "region": "knowing",
    "base": "periphery",
@@ -2978,6 +2983,11 @@
    "base": "frame",
    "note": "L0 frame: process, runs, one closure (the grammar's «所闭»), reach, invariants; frames as models"
   },
+  "Becoming.FreeEnergyCounting": {
+   "region": "knowing",
+   "base": "general",
+   "note": "UE21 the free-energy bound in counting form (03 §6)"
+  },
   "Becoming.FreeEnergyGuarantees": {
    "region": "collective",
    "base": "old-base",
@@ -3467,6 +3477,11 @@
    "region": "significance",
    "base": "old-base",
    "note": "L2 premise card, living significance, universal reason, C and L"
+  },
+  "Becoming.ModelStatements": {
+   "region": "root",
+   "base": "grammar",
+   "note": "U2 rows stated at the grammar's models: occurrence, process, own carrier (each record's law at the model)"
   },
   "Becoming.MoveFormation": {
    "region": "root",

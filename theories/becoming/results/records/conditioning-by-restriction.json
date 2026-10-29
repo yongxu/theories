@@ -218,8 +218,8 @@
     "zh": "对每种权重陈述一次限制，可能性之支撑与之交换；一般域上之分级记录；人之审查。"
   },
   "correspondence": {
-    "en": "Read a share as a probability, a number of situations of a kind (weights-count-situations): restriction is conditioning, restrict_two_ways is Bayes's theorem P(h | o) P(o) = P(o | h) P(h) (Bayes 1763; Laplace 1774), the share of evidence in the whole is a generative model's marginal likelihood and posterior_single its posterior, these readings of the prior and the likelihood holding where every listed hypothesis's likelihood weights have one total (prior_share). The reciprocal share is a counting form of pointwise surprisal, log (1 / P): it reverses the order of shares and its products are surprisal's sums. Entropy and free energy, averages of logarithms, are not the logarithm of one reciprocal share; free energy and its bound are stated in the periphery and joined to posterior_single there (free-energy-bounds-surprisal). The readings are the AI's, stated in development/ue2-conditional-weights/NOTE.md, with the review in REVIEW-UE2.md.",
-    "zh": "份额读作概率，即同类情境之数（weights-count-situations）：限制即条件化，restrict_two_ways 即贝叶斯定理 P(h | o) P(o) = P(o | h) P(h)（Bayes 1763；Laplace 1774），evidence 于整体之份额为生成模型之边缘似然，posterior_single 为其后验；先验与似然之此读法，于诸假设似然权重之总相同时成立（prior_share）。倒数份额为逐点惊异 log (1 / P) 之计数形式：反份额之序，其积为惊异之和。熵与自由能为对数之平均，非一倒数份额之对数；自由能及其界述于外围，并于彼处与 posterior_single 相接（free-energy-bounds-surprisal）。读法皆 AI 之读，载于 development/ue2-conditional-weights/NOTE.md，审查见 REVIEW-UE2.md。"
+    "en": "Read a share as a probability, a number of situations of a kind (weights-count-situations): restriction is conditioning, restrict_two_ways is Bayes's theorem P(h | o) P(o) = P(o | h) P(h) (Bayes 1763; Laplace 1774), the share of evidence in the whole is a generative model's marginal likelihood and posterior_single its posterior, these readings of the prior and the likelihood holding where every listed hypothesis's likelihood weights have one total (prior_share). The reciprocal share is a counting form of pointwise surprisal, log (1 / P): it reverses the order of shares and its products are surprisal's sums. Entropy and free energy, averages of logarithms, are not the logarithm of one reciprocal share; free energy and its bound are stated in the periphery and joined to posterior_single there (free-energy-bounds-surprisal), and the bound in counts in the core (free-energy-bound-in-counts). The readings are the AI's, stated in development/ue2-conditional-weights/NOTE.md, with the review in REVIEW-UE2.md.",
+    "zh": "份额读作概率，即同类情境之数（weights-count-situations）：限制即条件化，restrict_two_ways 即贝叶斯定理 P(h | o) P(o) = P(o | h) P(h)（Bayes 1763；Laplace 1774），evidence 于整体之份额为生成模型之边缘似然，posterior_single 为其后验；先验与似然之此读法，于诸假设似然权重之总相同时成立（prior_share）。倒数份额为逐点惊异 log (1 / P) 之计数形式：反份额之序，其积为惊异之和。熵与自由能为对数之平均，非一倒数份额之对数；自由能及其界述于外围，并于彼处与 posterior_single 相接（free-energy-bounds-surprisal），计数之界述于核心（free-energy-bound-in-counts）。读法皆 AI 之读，载于 development/ue2-conditional-weights/NOTE.md，审查见 REVIEW-UE2.md。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
   "aliases": [
@@ -275,6 +275,13 @@
       "detail": {
         "en": "What seeking cannot separate: a tied pair keeps its prior order given every record, a corollary of posterior_single and posterior_le_iff, and over every course of seeking.",
         "zh": "探求所不能分者：受并之二假设于每一记录下保其先验之序，为 posterior_single 与 posterior_le_iff 之推论，于每一探求历程亦然。"
+      }
+    },
+    {
+      "id": "free-energy-bound-in-counts",
+      "detail": {
+        "en": "The free-energy bound in counts: conditioning reached by the bound in counts, through posterior_single, with the hypotheses listed once.",
+        "zh": "计数之自由能界：经 posterior_single，假设列而不重时，计数之界所达者即条件化。"
       }
     }
   ],
@@ -387,7 +394,7 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "62025a2b610fb1726559d2a6dd34536225d2a5ea66012ef29fd3865b1055ebb5"
+      "sha256": "fb52f044256608a41faf11728a17d5a5c971ead1b8dafffbc675122e452321a6"
     }
   ],
   "proof_bindings": [
@@ -415,6 +422,10 @@
     {
       "en": "29 October 2026, board item UE19 (study section 453): related to what-seeking-cannot-separate; no statement, next step or declaration changed.",
       "zh": "2026年10月29日，工作板条目 UE19（研究第 453 节）：与 what-seeking-cannot-separate 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "30 October 2026, board item UE21 (study section 460): related to free-energy-bound-in-counts; the correspondence names the bound in counts in the core; no statement, next step or declaration changed.",
+      "zh": "2026年10月30日，工作板条目 UE21（研究第 460 节）：与 free-energy-bound-in-counts 相关联；对应指明核心中计数之界；无一陈述、下一步或声明改变。"
     }
   ]
 }

@@ -94,6 +94,29 @@
         "Becoming.Optimum.Drain.keeping_room",
         "Becoming.Optimum.Drain.kept_takes_slack"
       ]
+    },
+    {
+      "en": "On outcomes and the occurrence model: where the order contains exceeding on the family, with room beyond, the levels after the step eligible and unbeaten, and each condition beyond required and met by the formation named on it, a dependence beyond is broken across the step exactly where some eligible outcome stands below its need. Exceeding and standing lower compare given levels.",
+      "zh": "在结果与出现模型上：当序含族上之超出、彼外有余地、步后之水平合格而不被胜、彼外每一条件皆为其上所名之形成所需且满足，彼外之一依存跨步被破，恰当某合格结果低于其需。超出与较低皆比较给定之水平。",
+      "declarations": [
+        "Becoming.ModelStatements.optimum_broken_reading",
+        "Becoming.ModelStatements.rising_iff",
+        "Becoming.ModelStatements.room_iff",
+        "Becoming.ModelStatements.frontier_iff",
+        "Becoming.ModelStatements.metOn_iff",
+        "Becoming.ModelStatements.broken_iff"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.ModelStatements.optimum_broken_reading",
+          "of": "Becoming.Web.optimum_broken_iff",
+          "models": [
+            "own",
+            "occurrence"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+        }
+      ]
     }
   ],
   "hypotheses": [
@@ -326,7 +349,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929"
+      "sha256": "c71e9f32b0fc7e1a8528142f309eb700da852facef0fbcf0757f04e01c9b81e0"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
@@ -487,6 +510,34 @@
       "role": "receipt",
       "sha256": "8aec0bc8a1531907a80ec2d51c849088cdd1ffaf368e16f4d95a8513d56494a5",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ModelStatements.broken_iff",
+        "Becoming.ModelStatements.frontier_iff",
+        "Becoming.ModelStatements.metOn_iff",
+        "Becoming.ModelStatements.optimum_broken_reading",
+        "Becoming.ModelStatements.rising_iff",
+        "Becoming.ModelStatements.room_iff"
+      ],
+      "sha256": "86aec5d02e4b3ddff4d0f2687fa6a9ee7ce1d120d06aa7e6c954bc8ac87f82b8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "role": "review",
+      "sha256": "2237e3b55420880977acbc68a35800d8f3984d0eae6c40924c6eecfd329bbbe1"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md",
+      "role": "integration",
+      "sha256": "4a6de8c3a7735db3ace316dd45b88b0fe5ab7e91b1e340daf2e9521a854aa2af"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "role": "receipt",
+      "sha256": "e16b5ece7b28c05f2b3349d3f8d51ff4aef68bdedbe6e3b16942c0b9e28acda1"
     }
   ],
   "proof_bindings": [
@@ -510,6 +561,13 @@
       "sha256_pointer": "/source_sha256/Becoming.Frontier",
       "success_pointer": "/status",
       "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ModelStatements",
+      "success_pointer": "/status",
+      "success_value": "passed"
     }
   ],
   "history": [
@@ -524,6 +582,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): a boundary cites the conditional direction by its record instead of a retired chapter section, and the record is linked as related; the related detail on raising what couples in says what the Lean gives, with room the least level any eligible outcome reaches beyond, instead of 'where that leaves room'. No law changed. The statement no longer says the optima are least exactly where there is room: least_iff's condition is that no eligible outcome above another beyond is unbeaten on the family (a double negation), which room implies and does not equal.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条界限以记录引用有条件之方向，不再引用退役章节，并把该记录列为相关；关于升高耦合入者的相关说明只说 Lean 所给：有余地时，之外压到任一合格结果所及之最低水平，不再写“在留有余地时”。规律未变。陈述不再说最优恰在有余地时最低：least_iff 的条件是没有一个于之外高于另一者的合格结果在族上不被超过（双重否定），有余地蕴含它而不等于它。"
+    },
+    {
+      "en": "30 October 2026 (U2, study section 461): a law at the model added, stating `Becoming.Web.optimum_broken_iff` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
+      "zh": "2026年10月30日（U2，研究第 461 节）：增模型上之律，于其项为文法之处陈述 `Becoming.Web.optimum_broken_iff`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
     }
   ]
 }
