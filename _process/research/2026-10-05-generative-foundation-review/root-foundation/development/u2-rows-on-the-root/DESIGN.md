@@ -2,9 +2,9 @@
 
 AI-written design, 29 October 2026, on main at `5956c2cff`, branch `u2`. No Lean in the package.
 
-U2 is an item of full unification (OU plan §十三 item 13, 全二, decision D25; [WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md), FU's U2 in [the proposal](../fu-full-unification/PROPOSAL.md)). OU's owner posted it, proposed with its gate open, on its branch `ou-after-wrp2` (`00b5fe590`). That board row is not yet on main. OU's owner gave the item to WRT's and WRP's designer, this session. The shape is a design first, with scratch checks, then one independent review; no Lean is claimed before that.
+U2 is an item of full unification (OU plan §十三 item 13, 全二, decision D25; [WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md), FU's U2 in [the proposal](../fu-full-unification/PROPOSAL.md)). OU's owner posted it on the board, proposed with its gate open (on main at `a15457b2e`). This session claims it as this design lands. OU's owner gave the item to WRT's and WRP's designer, this session. The shape is a design first, with scratch checks, then one independent review; no Lean is claimed before that.
 
-**Status: reviewed once; every finding is taken ([REVIEW-U2](REVIEW-U2.md)). Placement decided by OU's owner on 29 October 2026, as §6 and §7 propose. The decisions are recorded on U2's row and in WHAT-REMAINS, on its branch `ou-after-wrp2` (`3bb704f54`).**
+**Status: reviewed once; every finding is taken ([REVIEW-U2](REVIEW-U2.md)). Placement decided by OU's owner on 29 October 2026, as §6 and §7 propose. The decisions are recorded on U2's row and in WHAT-REMAINS (on main at `a15457b2e`).**
 
 **Scratch.**
 - [check/tree/Becoming/U2Check.lean](check/tree/Becoming/U2Check.lean): 77 theorems in 120 declarations, every axiom report empty, built with `scratch_build.py` against main `5956c2cff` ([log](check/scratch-5.log)). Its namespace, `Becoming.ModelStatements`, is the one proposed for the leaf.
@@ -188,12 +188,12 @@ The scratch proves both from `«保之像»` where it now is ([U2Preserving](che
 - So this edit belongs on HE's list, as a sixth edit, not a second rebuild.
 
 **Owners.**
-- **GrammarLaws:** the move is in OU's plan, WHAT-REMAINS on OU's owner's branch (`ou-after-wrp2`, the second of the next items). It comes from GrammarLaws' owner's decision during WRP2, which reached this session by message and is recorded nowhere else. REVIEW-WRP2 had left it "proposed to the owner". The plan's text names only Mechanism's owner or rule 3's fallback as still needed.
+- **GrammarLaws:** the move is in OU's plan (WHAT-REMAINS, "After WRP2", the second of the next items). It comes from GrammarLaws' owner's decision during WRP2, which reached this session by message and is recorded nowhere else. REVIEW-WRP2 had left it "proposed to the owner". The plan's text names only Mechanism's owner or rule 3's fallback as still needed.
 - **The move's size:** GrammarLaws has 322 dependents of the package's 342 modules.
 - **GrammarTransport:** its owner is WRT's designer, this session, which agrees to the removal.
 - **Mechanism:** no owner is named. OU's owner approved the change to its proofs under rule 3's fallback.
 
-**Decided.** OU's owner sent the edit to HE's owner (fork 1) as HE's sixth edit. If HE rebuilds before the edit is added, it becomes its own small item at a quiet point, rehearsed outside the repository.
+**Decided.** OU's owner sent the edit to HE's owner (fork 1), and HE's row lists it as its sixth held edit (main `d9a6615e6`). If HE rebuilds before the edit is added, it becomes its own small item at a quiet point, rehearsed outside the repository.
 
 ## 7. Placement (decided) and the Lean item (not yet claimed)
 
