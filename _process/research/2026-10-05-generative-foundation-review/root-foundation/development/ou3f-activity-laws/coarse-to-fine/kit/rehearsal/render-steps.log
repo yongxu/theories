@@ -1,0 +1,5 @@
+mv exit 0
+render exit 0
+strict exit 0
+links exit 0
+test exit 0

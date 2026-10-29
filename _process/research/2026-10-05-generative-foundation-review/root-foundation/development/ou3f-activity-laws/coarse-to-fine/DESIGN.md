@@ -54,7 +54,7 @@ Persistence was last changed by HE (§455), which dropped its KeptOnward import,
 
 ## Landing
 
-Behind any earlier clause, with no rehearsal needed for fourteen modules beyond a run outside the repository first.
+Behind any earlier clause, with no rehearsal needed for fourteen modules beyond a run outside the repository first. The steps run from [kit/land_ctf.sh](kit/land_ctf.sh) stage by stage (`run`, `texts`, `records`, `board`), each stopping at its first failure, their outputs kept in `kit/landing/`.
 - **Signatures.** Every statement of Persistence prints unchanged, and nothing is gone or added.
 - **Records.** None changes. The records pinning Persistence are re-pointed, each read first.
 - **Texts.** The study section and 08's counts.
@@ -63,6 +63,15 @@ Behind any earlier clause, with no rehearsal needed for fourteen modules beyond 
   - Persistence's header gains *By closure* (`steady_held`), which no longer stands under *Not connected*.
   - The queue gets its landed clause.
 - **The measure** is rerun, and MV's generator after the receipt.
+
+## The rehearsal
+
+On main at `8a4eddb9a`, with the receipt written outside the repository (`20261029T202455.829613Z`, passed, every axiom report empty; 61 steps ran and 1,335 were reused):
+- the signature audit: all 86 statements of Persistence unchanged, nothing added, gone, moved or rewritten;
+- the connectivity check is clean, with no apart root unclassified;
+- the measure is unchanged: 45 of 127 central rows reach the grammar, and of the 118 distinct declarations 44, 31, 7 and 36, with no gap;
+- the texts render, and the records check finds drift in exactly the four records pinning Persistence (`continuation-relative-to-a-class`, `identity-across-steps`, `master-laws-on-the-grammar`, `the-world-represented-both-ways`), each read: none names the two theorems, and `steady_held`, which two of them name, keeps its statement and proof. The re-point clears the drift;
+- MV's generator, the render, the strict check, the links and the tests then run as at landing.
 
 ## The review, and what was taken
 
