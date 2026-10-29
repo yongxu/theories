@@ -62,7 +62,7 @@ In the account's terms, the theory explains reality as one unfolding where four 
   - the contrast with counting the posterior at the time of choosing concerns a rule active inference does not use: it counts the end-of-trial posterior, close to the executed policy;
   - the pooling result is a reading of the pool law under its hypotheses.
 
-  What the kit adds is exactness for a simplified model and the edges of that exactness (a moved count, a stale rule, a change of score read late). A real third part needs a statement in the principle's literature that the theory forbids. The first candidate, a claim that belief sharing lets a collective respond to what no member couples to, was searched for and not found ([search](../ue1-fep-bridge/THIRD-PART-SEARCH.md): 16 claims from 15 papers). Seven claims are forbidden under a natural reading by other laws of the theory: symmetry (01's commuting law, 05 §9's shared codes) and joint excess. Each is a known result, and each forbids a verbal generalization, not a paper's simulation ([corrections](../ue1-fep-bridge/NOTE-CORRECTIONS.md) §3).
+  What the kit adds is exactness for a simplified model and the edges of that exactness (a moved count, a stale rule, a change of score read late). A real third part needs a statement in the principle's literature that the theory forbids. The first candidate, a claim that belief sharing lets a collective respond to what no member couples to, was searched for and not found ([search](../ue1-fep-bridge/THIRD-PART-SEARCH.md): 16 claims from 15 papers). Seven claims are forbidden under a natural reading by other laws of the theory: symmetry (01's commuting law, 05 §9's shared codes) and joint excess. Each is a known result, and each forbids a verbal generalization, not a paper's simulation ([corrections](../ue1-fep-bridge/NOTE-CORRECTIONS.md) §3). UE16 (29 October) states three of them as theorems on models in the principle's terms, so the containment has third parts: identical cells under a descent that treats them alike stay alike ([record](../../../../../../theories/becoming/results/records/identical-cells-under-a-descent-treating-them-alike.md)), and neither alike preferences for one's own nor risk minimization keeps a renewal the joint draw outruns ([record](../../../../../../theories/becoming/results/records/risk-minimization-on-a-shared-renewal.md)).
 
 - **What the audit found (UE0, [audit](../ue0-third-parts/AUDIT.md)).** Of the 21 rows of 08 §8 and §9, four have a third part, three of them distinct:
   - gated joint excess (row 7);
@@ -80,7 +80,7 @@ In the account's terms, the theory explains reality as one unfolding where four 
 
 Ordered by what each containment would show. Each item is claimed on the board before work, reviewed independently before landing, and lands through the queue.
 
-1. **UE1, the free-energy principle** (landed 25 October; a restatement, its third part open; UE1b, landed the same day, corrected its reading of choosers held at set points: [record](../../../../../../theories/becoming/results/records/what-a-set-point-optimum-does-beyond.md)). The most developed rival unification of self-organization and cognition, and the one offered as the basis of collective human and AI intelligence.
+1. **UE1, the free-energy principle** (landed 25 October; a restatement, its third parts landed with UE16 on 29 October, when its integration into the whole theory was planned as UE16 to UE20, [FEP-INTEGRATION](FEP-INTEGRATION.md); UE1b, landed the same day, corrected its reading of choosers held at set points: [record](../../../../../../theories/becoming/results/records/what-a-set-point-optimum-does-beyond.md)). The most developed rival unification of self-organization and cognition, and the one offered as the basis of collective human and AI intelligence.
 2. **UE0, the audit of the third parts** (done: [audit](../ue0-third-parts/AUDIT.md)). For each restated framework in 08 §8, does the theory forbid something the source field leaves open? Where it does, state it as a thesis with its refutation. Where it does not, record the restatement. This tells the theory where it reaches farther and where it does not, before it claims more.
 3. **UE2, conditional weights and surprisal** on the counting layer the core already has (`Becoming.Weighted`: the sum over histories exact, every weighting a premise; `Becoming.Typicality`: Chebyshev, Chernoff and the counting law of large numbers):
    - Bayes's rule as the weight of the courses agreeing with a record;
@@ -119,7 +119,7 @@ The overview's open list names what a full explanation must face ([§10](../../.
 
 ## 8. Owners
 
-- UE (coordination) is held by the session that wrote this plan, which also drafted and landed UE0, UE1, UE2, UE1b, UE4, UE5, UE7, UE9, UE10, UE11, UE12, UE13, UE14 and UE15, and holds UE8.
+- UE (coordination) is held by the session that wrote this plan, which also drafted and landed UE0, UE1, UE2, UE1b, UE4, UE5, UE7, UE9, UE10, UE11, UE12, UE13, UE14, UE15, UE16 and UE17, and holds UE8.
 - UE6, the search for results no neighbouring field states, is held by another session (Unification and coherence progress); UE7 is kept disjoint from it.
 - Item 8 is unclaimed; claim it on the board. UE3 is not planned (§4, item 4).
 

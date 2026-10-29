@@ -1,0 +1,327 @@
+{
+  "schema_version": 2,
+  "id": "free-energy-bounds-surprisal",
+  "title": {
+    "en": "Variational free energy bounds surprisal",
+    "zh": "变分自由能为惊异之界"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-29T16:00:32+00:00",
+  "statement": {
+    "en": "Over finitely many causes, a belief zero where the joint weight is has variational free energy at least the record's surprisal, equal exactly at the posterior; in a core generative model that is the share given the record, so minimizing free energy over such beliefs is conditioning.",
+    "zh": "于有限诸因之上，于联合权重为零处为零之信念，其变分自由能至少为记录之惊异，恰于后验取等；于核心之生成模型，此即记录下之份额，故于此等信念上最小化自由能即条件化。"
+  },
+  "laws": [
+    {
+      "en": "The quantities over a finite set of causes: variational free energy, the q-average of log q less log p, which is the divergence from the joint weights and the energy less the entropy; surprisal, the negative logarithm; the posterior, p over its total; the free energy reads a belief only at the causes (freeEnergy and six more).",
+      "zh": "有限诸因上之量：变分自由能，即 q 加权之 log q 减 log p，亦即对联合权重之散度、能量减熵；惊异，即负对数；后验，即 p 除以其总和；自由能只读信念于诸因（freeEnergy 等七项）。",
+      "declarations": [
+        "Becoming.FreeEnergy.freeEnergy",
+        "Becoming.FreeEnergy.divergence",
+        "Becoming.FreeEnergy.surprisal",
+        "Becoming.FreeEnergy.posterior",
+        "Becoming.FreeEnergy.freeEnergy_congr",
+        "Becoming.FreeEnergy.freeEnergy_eq_divergence",
+        "Becoming.FreeEnergy.freeEnergy_eq_energy_sub_entropy"
+      ]
+    },
+    {
+      "en": "The bound, Gibbs' inequality: where q is nonnegative with total one, p nonnegative and q zero wherever p is, the surprisal of the total of p is at most the free energy, the total then positive; term by term from log x ≤ x − 1 (surprisal_le_freeEnergy, total_pos, term_le and two sums).",
+      "zh": "界，即 Gibbs 不等式：q 非负且总和为一，p 非负，且 p 为零处 q 亦为零，则 p 之总和之惊异至多为自由能，其时总和为正；逐项由 log x ≤ x − 1（surprisal_le_freeEnergy、total_pos、term_le 及二和式）。",
+      "declarations": [
+        "Becoming.FreeEnergy.surprisal_le_freeEnergy",
+        "Becoming.FreeEnergy.total_pos",
+        "Becoming.FreeEnergy.term_le",
+        "Becoming.FreeEnergy.sum_terms",
+        "Becoming.FreeEnergy.sum_normalized_sub"
+      ]
+    },
+    {
+      "en": "Equality exactly at the posterior: the bound is met exactly where q is the posterior, at which the free energy is the surprisal, and the posterior alone has the least free energy among beliefs zero wherever p is, where it is finite; off that support the bound fails under the convention log 0 = 0 (freeEnergy_eq_surprisal_iff and nine more).",
+      "zh": "等号恰于后验：界恰于 q 为后验处取等，其时自由能即惊异，且于 p 为零处为零之诸信念中唯后验自由能最小；出此支撑，依 log 0 = 0 之约定界不成立（freeEnergy_eq_surprisal_iff 等十项）。",
+      "declarations": [
+        "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff",
+        "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_pos",
+        "Becoming.FreeEnergy.term_eq_iff",
+        "Becoming.FreeEnergy.term_eq_iff_of_pos",
+        "Becoming.FreeEnergy.posterior_nonneg",
+        "Becoming.FreeEnergy.posterior_eq_zero",
+        "Becoming.FreeEnergy.sum_posterior",
+        "Becoming.FreeEnergy.freeEnergy_posterior",
+        "Becoming.FreeEnergy.minimizes_iff_posterior",
+        "Becoming.FreeEnergy.Witness.bound_fails_off_support"
+      ]
+    },
+    {
+      "en": "Divergence from the posterior plus surprisal: with no sign hypothesis the free energy is the divergence of the belief from the posterior plus the surprisal, the divergence nonnegative and zero exactly at the posterior, and between any two distributions likewise (freeEnergy_eq_divergence_add_surprisal and four more).",
+      "zh": "对后验之散度加惊异：无符号假设，自由能即信念对后验之散度加惊异；散度非负，恰于后验为零；任二分布之间亦然（freeEnergy_eq_divergence_add_surprisal 等五项）。",
+      "declarations": [
+        "Becoming.FreeEnergy.freeEnergy_eq_divergence_add_surprisal",
+        "Becoming.FreeEnergy.divergence_nonneg",
+        "Becoming.FreeEnergy.divergence_eq_zero_iff",
+        "Becoming.FreeEnergy.divergence_posterior_nonneg",
+        "Becoming.FreeEnergy.divergence_posterior_eq_zero_iff"
+      ]
+    },
+    {
+      "en": "Complexity less accuracy: where p is a prior times a likelihood and q is zero wherever p is, the free energy is the divergence from the prior less the expected log-likelihood (freeEnergy_eq_complexity_sub_accuracy).",
+      "zh": "复杂度减准确度：p 为先验乘似然，且 p 为零处 q 亦为零，则自由能即对先验之散度减期望对数似然（freeEnergy_eq_complexity_sub_accuracy）。",
+      "declarations": [
+        "Becoming.FreeEnergy.freeEnergy_eq_complexity_sub_accuracy"
+      ]
+    },
+    {
+      "en": "The join to the core: a share read as part over whole; in a core generative model the joint weight of a hypothesis is the share of its courses whose record agrees, the joint weights sum to the record's share, and their posterior is the core's share given the record (givenShare_eq_posterior and eleven more).",
+      "zh": "与核心相接：份额读作部分除以整体；于核心之生成模型，一假设之联合权重即其记录相符之诸历程之份额，诸联合权重之和即记录之份额，其后验即核心于记录下之份额（givenShare_eq_posterior 等十二项）。",
+      "declarations": [
+        "Becoming.ConditionalWeights.Share.toReal",
+        "Becoming.ConditionalWeights.Share.toReal_nonneg",
+        "Becoming.FreeEnergy.share_toReal_pos",
+        "Becoming.ConditionalWeights.Share.toReal_mul",
+        "Becoming.FreeEnergy.cast_mass_eq_sum",
+        "Becoming.FreeEnergy.jointShare_part",
+        "Becoming.FreeEnergy.jointShare_toReal",
+        "Becoming.FreeEnergy.recordShare_toReal",
+        "Becoming.FreeEnergy.sum_jointShare",
+        "Becoming.FreeEnergy.givenShare_toReal",
+        "Becoming.FreeEnergy.givenShare_eq_posterior",
+        "Becoming.FreeEnergy.weight_zero_of_jointShare_zero"
+      ]
+    },
+    {
+      "en": "In the core's terms, for beliefs zero where the prior or the record rules a hypothesis out, which exist only where the record weighs something: the record's surprisal is at most a belief's free energy, equal exactly at the core's share given the record, which alone has the least free energy (minimizes_iff_givenShare and four more).",
+      "zh": "以核心之语，就先验或记录所排除之假设处为零之信念（唯记录有权重时有之）：记录之惊异至多为一信念之自由能，恰于核心之记录下份额取等，唯该份额自由能最小（minimizes_iff_givenShare 等五项）。",
+      "declarations": [
+        "Becoming.FreeEnergy.record_pos_of_belief",
+        "Becoming.FreeEnergy.record_surprisal_le_freeEnergy",
+        "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff",
+        "Becoming.FreeEnergy.freeEnergy_givenShare",
+        "Becoming.FreeEnergy.minimizes_iff_givenShare"
+      ]
+    },
+    {
+      "en": "Surprisal adds over independent parts, read from the core's product of shares, and the surprisal of a share is the logarithm of its reciprocal (surprisal_product, surprisal_eq_log_reciprocal).",
+      "zh": "独立之部分上惊异相加，读自核心之份额之积；一份额之惊异即其倒数之对数（surprisal_product、surprisal_eq_log_reciprocal）。",
+      "declarations": [
+        "Becoming.FreeEnergy.surprisal_product",
+        "Becoming.FreeEnergy.surprisal_eq_log_reciprocal"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "In the periphery, on Mathlib's reals: each declaration depends on Lean's three standard axioms at most, reported by the module's checker, Share.toReal and its two lemmas among them, periphery definitions in the core's namespace; the core laws it reads have empty axiom reports.",
+      "zh": "于外围，基于 Mathlib 之实数：每一声明至多依赖 Lean 之三条标准公理，由本模块之检查器报告，Share.toReal 及其二引理亦然，为置于核心命名空间之外围定义；其所读之核心之律公理报告皆空。"
+    },
+    {
+      "en": "The belief is nonnegative with total one and zero wherever the joint weight is, where its free energy is finite as usually defined; equality and the posterior's value need the joint weights' total not zero; such a belief over the core's hypotheses exists only where the record weighs something (record_pos_of_belief).",
+      "zh": "信念非负且总和为一，于联合权重为零处为零，其处自由能依通常定义为有限；等号与后验之值需联合权重之总和不为零；于核心之假设上，如此之信念唯记录有权重时有之（record_pos_of_belief）。"
+    },
+    {
+      "en": "Modelling choices: a finite set of causes; real beliefs and joint weights; in the core, natural weights and Boolean records, hypotheses listed without repetition; Mathlib's conventions log 0 = 0 and x / 0 = 0.",
+      "zh": "建模之选：有限诸因；实数之信念与联合权重；于核心，自然数权重与布尔记录，假设列而不重；Mathlib 之约定 log 0 = 0 与 x / 0 = 0。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Densities, continuous causes or continuous time.",
+      "zh": "密度、连续之因或连续时间。",
+      "kind": "scope"
+    },
+    {
+      "en": "Expected free energy, or any process by which a system lowers its free energy, such as a gradient descent or message passing.",
+      "zh": "期望自由能，或系统降低其自由能之任何过程，如梯度下降或消息传递。",
+      "kind": "scope"
+    },
+    {
+      "en": "That any system minimizes free energy.",
+      "zh": "任一系统使自由能最小。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The bound's counting form for beliefs with natural counts, N^N·∏ a^n ≤ A^N·∏ n^n, or complexity and accuracy read from the core's own prior and likelihood shares.",
+      "zh": "自然数计数之信念之界之计数形式 N^N·∏ a^n ≤ A^N·∏ n^n，或由核心自身之先验与似然份额读出之复杂度与准确度。",
+      "kind": "scope"
+    },
+    {
+      "en": "Beliefs confined to a family (mean-field, the Laplace approximation's Gaussian), whose least free energy exceeds the surprisal by the family's divergence from the posterior.",
+      "zh": "限于一族之信念（平均场、拉普拉斯近似之高斯），其最小自由能超出惊异之量为该族对后验之散度。",
+      "kind": "scope"
+    },
+    {
+      "en": "Free energy as a bound on the long-run average of surprisal, the entropy of sensory states, or free energy over parameters and models, as in learning and model comparison.",
+      "zh": "自由能作为长期平均惊异（感官状态之熵）之界，或参数与模型上之自由能，如学习与模型比较。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
+      "detail": {
+        "en": "With a belief putting weight on a cause of joint weight zero, the bound fails under Mathlib's log 0 = 0: the free energy as usually defined is then infinite (Witness.bound_fails_off_support).",
+        "zh": "信念置权于联合权重为零之因时，依 Mathlib 之 log 0 = 0 界不成立：其时通常定义之自由能为无穷（Witness.bound_fails_off_support）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the periphery checker check_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261029T155901.350188Z): all 47 declarations of FreeEnergyReals, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. An independent review by another AI agent (REVIEW-UE17) and a re-check, study section 450; not reviewed by a person.",
+    "zh": "外围检查器 check_free_energy_reals.py 以 Lean 4.30.0-rc2 与固定之 Mathlib 实查（回执 20261029T155901.350188Z）：FreeEnergyReals 之全部 47 项声明，皆只依 Lean 之标准公理，其闭包之每一核心模块皆合于已通过之核心回执。另一 AI 代理作独立审查（REVIEW-UE17）并复查，见研究第 450 节；未经人审。"
+  },
+  "next_delta": {
+    "en": "Expected free energy and its epistemic term within a lumping (UE19); a core form of the bound, N^N·∏ a^n ≤ A^N·∏ n^n for beliefs with natural counts, equal, where the record weighs something, exactly at the share given the record; complexity and accuracy from the core's own shares; review by a person.",
+    "zh": "期望自由能及其于一合并中之认知项（UE19）；界之核心形式：自然数计数之信念 N^N·∏ a^n ≤ A^N·∏ n^n，记录有权重时恰于记录下之份额取等；由核心自身份额读出之复杂度与准确度；人之审查。"
+  },
+  "correspondence": {
+    "en": "Gibbs' inequality (Gibbs 1902) and the divergence of Kullback and Leibler (1951); the variational bound on the log evidence of variational Bayes (Hinton and van Camp 1993; Neal and Hinton 1998; the Helmholtz machine of Dayan, Hinton, Neal and Zemel 1995), the free-energy principle's variational free energy (Friston 2005, 2010), with the decompositions into divergence plus surprisal and into complexity less accuracy. Gibbs' inequality and its equality case are classical; the decompositions and the join are near-definitional. New is the join: the core states the posterior by counting, the periphery characterizes it as the one minimizer of free energy among the beliefs where it is finite. Graded in UE17's NOTE.",
+    "zh": "Gibbs 不等式（Gibbs 1902）与 Kullback、Leibler 之散度（1951）；变分贝叶斯之对数证据之变分界（Hinton、van Camp 1993；Neal、Hinton 1998；Dayan、Hinton、Neal、Zemel 之 Helmholtz 机 1995），即自由能原理之变分自由能（Friston 2005、2010），及散度加惊异、复杂度减准确度二分解。Gibbs 不等式及其取等之情形为经典；二分解与相接近乎定义。新者为相接：核心以计数述后验，外围刻画其为自由能唯一之最小者。分级见 UE17 之 NOTE。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
+  "aliases": [
+    "Variational free energy bounds surprisal",
+    "变分自由能为惊异之界",
+    "variational free energy",
+    "the free-energy bound",
+    "Gibbs inequality",
+    "perception as conditioning",
+    "Becoming.FreeEnergy.surprisal_le_freeEnergy",
+    "Becoming.FreeEnergy.minimizes_iff_givenShare"
+  ],
+  "dependencies": [
+    {
+      "id": "conditioning-by-restriction",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Share, share, restrict, pairWeight, evidence, posterior_single, share_product and Share.reciprocal: conditioning by restriction and a generative model's share given a record.",
+        "zh": "Share、share、restrict、pairWeight、evidence、posterior_single、share_product 与 Share.reciprocal：以限制为条件，及生成模型于记录下之份额。"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ConditionalWeights.Share.toReal",
+        "Becoming.ConditionalWeights.Share.toReal_mul",
+        "Becoming.ConditionalWeights.Share.toReal_nonneg",
+        "Becoming.FreeEnergy.Witness.bound_fails_off_support",
+        "Becoming.FreeEnergy.cast_mass_eq_sum",
+        "Becoming.FreeEnergy.divergence",
+        "Becoming.FreeEnergy.divergence_eq_zero_iff",
+        "Becoming.FreeEnergy.divergence_nonneg",
+        "Becoming.FreeEnergy.divergence_posterior_eq_zero_iff",
+        "Becoming.FreeEnergy.divergence_posterior_nonneg",
+        "Becoming.FreeEnergy.freeEnergy",
+        "Becoming.FreeEnergy.freeEnergy_congr",
+        "Becoming.FreeEnergy.freeEnergy_eq_complexity_sub_accuracy",
+        "Becoming.FreeEnergy.freeEnergy_eq_divergence",
+        "Becoming.FreeEnergy.freeEnergy_eq_divergence_add_surprisal",
+        "Becoming.FreeEnergy.freeEnergy_eq_energy_sub_entropy",
+        "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff",
+        "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff",
+        "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_pos",
+        "Becoming.FreeEnergy.freeEnergy_givenShare",
+        "Becoming.FreeEnergy.freeEnergy_posterior",
+        "Becoming.FreeEnergy.givenShare_eq_posterior",
+        "Becoming.FreeEnergy.givenShare_toReal",
+        "Becoming.FreeEnergy.jointShare_part",
+        "Becoming.FreeEnergy.jointShare_toReal",
+        "Becoming.FreeEnergy.minimizes_iff_givenShare",
+        "Becoming.FreeEnergy.minimizes_iff_posterior",
+        "Becoming.FreeEnergy.posterior",
+        "Becoming.FreeEnergy.posterior_eq_zero",
+        "Becoming.FreeEnergy.posterior_nonneg",
+        "Becoming.FreeEnergy.recordShare_toReal",
+        "Becoming.FreeEnergy.record_pos_of_belief",
+        "Becoming.FreeEnergy.record_surprisal_le_freeEnergy",
+        "Becoming.FreeEnergy.share_toReal_pos",
+        "Becoming.FreeEnergy.sum_jointShare",
+        "Becoming.FreeEnergy.sum_normalized_sub",
+        "Becoming.FreeEnergy.sum_posterior",
+        "Becoming.FreeEnergy.sum_terms",
+        "Becoming.FreeEnergy.surprisal",
+        "Becoming.FreeEnergy.surprisal_eq_log_reciprocal",
+        "Becoming.FreeEnergy.surprisal_le_freeEnergy",
+        "Becoming.FreeEnergy.surprisal_product",
+        "Becoming.FreeEnergy.term_eq_iff",
+        "Becoming.FreeEnergy.term_eq_iff_of_pos",
+        "Becoming.FreeEnergy.term_le",
+        "Becoming.FreeEnergy.total_pos",
+        "Becoming.FreeEnergy.weight_zero_of_jointShare_zero"
+      ],
+      "sha256": "2cc970c8b974f707a4f191793fd5fa1f8982e46cdfe8e9a30eff4bb785105f7d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+      "role": "proof",
+      "sha256": "479c8401487664728e63fd6d247dcfb89b2fd578185097251bcf2055cac0361f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
+      "role": "receipt",
+      "sha256": "8dcfa9b39752ec857d28027a8483e7502fb4fa0e1c79b8454e7006ce122cb897"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T153820.435638Z/verification.json",
+      "role": "receipt",
+      "sha256": "38d138368556dfbb9761afa63aa915b43bb9250c636d0be095eefb260a2f1b29"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/check_free_energy_reals.py",
+      "role": "integration",
+      "sha256": "390bcb0f8a8c7396bfedb99f69ac0c3bc25413ae1498902a88acf598531f693d"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "5991da2f53ddd47eebac45ffa9873a439537fb43a95fd7f612c3326b0b9d5aed"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/NOTE.md",
+      "role": "integration",
+      "sha256": "6fa5e3dfe2b44465c8562e857c3940f45f8fa73da3d26e5f98e0747ea14b95fe"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/REVIEW-UE17.md",
+      "role": "integration",
+      "sha256": "7633486434fadfaba5d919340026e5e194c4986a651cf4c6c3721fb208814580"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "ca32809355d9e8dca6d73177547cd8713319de3c2ec0cdeec2bc37ee734e33db"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T153820.435638Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ConditionalWeights",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
+      "sha256_pointer": "/source_sha256/FreeEnergyReals",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "29 October 2026: added (UE17), variational free energy and its bound in the periphery: Gibbs' inequality, equality exactly at the posterior, the three decompositions, and the join, the minimizer the core's share given the record; after a review and a re-check; study section 450.",
+      "zh": "2026年10月29日：新增（UE17），外围之变分自由能及其界：Gibbs 不等式，恰于后验取等，三分解，及相接：其最小者即核心之记录下份额；经审查与复查；研究第 450 节。"
+    }
+  ]
+}

@@ -62,8 +62,9 @@ Pivotality at a threshold (Palfrey and Rosenthal 1984) read on the rest: a membe
   - Input: The same, read as a part of two outrunning the renewal.
   - Preserved conditions: The two apart and taking part. [Exclusion.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean)
 - related, not a proved adapter: [the-gap-for-ones-own-act](the-gap-for-ones-own-act.md). The gap read on the rest: the member's act differs only where its reading no longer looks once the rest has ended the condition, so no selection through that reading tells its acts apart.
+- related, not a proved adapter: [risk-minimization-on-a-shared-renewal](risk-minimization-on-a-shared-renewal.md). Risk minimization on a shared renewal: the outrun law read on a chooser of least risk, against risk minimization ensuring needs.
 
-**Used by:** [regulation-from-one-side-and-locally](regulation-from-one-side-and-locally.md) · [what-training-installs](what-training-installs.md)
+**Used by:** [regulation-from-one-side-and-locally](regulation-from-one-side-and-locally.md) · [risk-minimization-on-a-shared-renewal](risk-minimization-on-a-shared-renewal.md) · [what-training-installs](what-training-installs.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -89,6 +90,7 @@ Aliases: `the rest outruns the renewal`, `其余者超出更新`, `restraint inv
 
 - 20 October 2026: added (CG2), the condition on the rest that CG1's D2b failure turned on, after a literature check (significance review, "restraint as an equilibrium on a gated renewal"), and tested on learners with predictions frozen before any run; study section 250.
 - 22 October 2026: EM1's verdicts added to the correspondence and Next; study section 359.
+- 29 October 2026, board item UE16 (study section 449): related to risk-minimization-on-a-shared-renewal; no statement, next step or declaration changed.
 
 </details>
 

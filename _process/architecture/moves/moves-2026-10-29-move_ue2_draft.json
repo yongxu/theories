@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "batch": "moves-2026-10-29-move_ue2_draft",
+  "date": "2026-10-29T16:00:17+00:00",
+  "base_commit": "0471d334357b940da10e1b8b94305dd48ee25ca7",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/periphery/ConditionalWeightsReals.lean",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/ue2-conditional-weights/periphery/ConditionalWeightsReals.lean",
+      "sha256": "31532e34157d077998d8a31d921c61e5aefef01278c9a9f2244b3862524477b0",
+      "blob": "302e4015ed266d629b5915427e36b2769a1a786e",
+      "reason": "superseded by UE17's FreeEnergyReals in lean/free-energy, which states the variational bound with its checker and record",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/periphery/ConditionalWeightsReals.lean"
+    },
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/periphery/periphery.log",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/ue2-conditional-weights/periphery/periphery.log",
+      "sha256": "b738d7a4bfe37557b54bc53ba559ce04b844430d345bbfca8aa20359da7f2a1d",
+      "blob": "1b8d4a29f7df2ef969a3c48ccda49fe6bb4e18b0",
+      "reason": "the build log of the superseded draft, kept with it",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/periphery/periphery.log"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/DRAFT-NOTES.md",
+      "old_sha256": "914054fe0d29546875b05dc05ed509184395f8637ef671683667f2dc22390c97",
+      "new_sha256": "256d942fc8c0e4be8bc42dc868513c29513a0ebb6b1c2f58211114b4041b2515",
+      "references": 1
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/REVIEW-UE17.md",
+      "old_sha256": "5f22c43d8554a29e12c85e73995bd6b6b23f239420c27cc6100d9be180f887e8",
+      "new_sha256": "7633486434fadfaba5d919340026e5e194c4986a651cf4c6c3721fb208814580",
+      "references": 1
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/LANDING.md",
+      "old_sha256": "69c6a12ff80630fc4476257ada202f5a6faf443c070a5e21ad7a0a48f8790d13",
+      "new_sha256": "f5a0b3a62f033f06cb843aa9850f292264361f99c2b147600bee31143c8519e4",
+      "references": 2
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/NOTE.md",
+      "old_sha256": "c7b3c3d8c82a96d9c61e5074f8be5f3b8bdb566c9fe1491a47938dc8b0b3e380",
+      "new_sha256": "b0e90896b73bb4289a84079fef7b0c72c5c8d21422de4eaecb149cd07a53e991",
+      "references": 4
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/REVIEW-UE2.md",
+      "old_sha256": "ff5a7154ea730a3c6c51b09737a1e4fed189cbf3c837fb04962d47c100dbd430",
+      "new_sha256": "171988a742cab0ff9650fedc6e499e9c3f098def84fa45a18496740de272f4df",
+      "references": 2
+    }
+  ],
+  "history_roots": [
+    "_process/research/2026-10-05-generative-foundation-review/history"
+  ],
+  "generated_pages_to_rerender": [
+    "theories/becoming/results/data/lean-index.json",
+    "theories/becoming/results/data/source-index.json"
+  ],
+  "verification_errors": []
+}

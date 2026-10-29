@@ -1,0 +1,289 @@
+{
+  "schema_version": 2,
+  "id": "identical-cells-under-a-descent-treating-them-alike",
+  "title": {
+    "en": "Identical cells under a descent that treats them alike",
+    "zh": "同等相待之下降中之同一细胞"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-29T15:42:56+00:00",
+  "statement": {
+    "en": "Under a descent moving every cell by one rule from its own state and a field read off the states alone, cells alike at the start stay alike; with the field exchangeable, among configurations of one size the minima of a symmetric free energy come in exchanged pairs, a unique one with its cells alike.",
+    "zh": "于以一规则依细胞自身状态与只读诸状态之场移动每一细胞之下降，起点相同之细胞保持相同；场可交换时，同一细胞数中对称自由能之极小成交换之对，故唯一者其细胞相同。"
+  },
+  "laws": [
+    {
+      "en": "Exchanging cells k and k + 1 of a configuration, the list of the cells' states, keeps their number, leaves a total over the cells unchanged and commutes with mapping every cell (exchangeAt and three more).",
+      "zh": "交换构型（诸细胞状态之列）之第 k 与 k + 1 细胞，保持其数，不改诸细胞之总量，且与逐细胞映射可交换（exchangeAt 等四项）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.total_exchangeAt",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.map_exchangeAt",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.length_exchangeAt"
+      ]
+    },
+    {
+      "en": "Under a descent moving every cell by one rule from its own state and a field reading no cell's number, two neighbouring cells alike at the start are alike at every step, and all cells alike stay all alike: equal states get equal successors (two_alike_stay_alike, all_alike_stay_alike, nth_map, nth_replicate).",
+      "zh": "于以一规则依细胞自身状态与不读细胞编号之场移动每一细胞之下降，起点相同之二相邻细胞每步皆相同，诸细胞皆同则保持皆同：相同之状态得相同之后继（two_alike_stay_alike、all_alike_stay_alike、nth_map、nth_replicate）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.two_alike_stay_alike",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.all_alike_stay_alike",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.nth_map",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.nth_replicate"
+      ]
+    },
+    {
+      "en": "Where no exchange of cells changes the field, as the summed field of the other cells does not, the descent commutes with exchanging two neighbouring cells (descent, Exchangeable, othersField, othersField_exchangeable, descent_commutes).",
+      "zh": "场不为任何细胞交换所改（如他细胞之场之和），则下降与交换二相邻细胞可交换（descent、Exchangeable、othersField、othersField_exchangeable、descent_commutes）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.descent",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.Exchangeable",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.othersField",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.othersField_exchangeable",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.descent_commutes"
+      ]
+    },
+    {
+      "en": "The commuting law applied: a start the exchange fixes stays fixed along the run (keeps_exchange_fixed, by Law.Commutes.keeps_fixed); the run from the exchanged start is the exchanged run, and rests come in exchanged pairs (exchanged_run, by Law.Commutes.iterate; rests_exchanged); a configuration is exchange-fixed exactly where the two cells are alike (alike_of_fixed, fixed_of_alike).",
+      "zh": "可交换律之应用：交换所固定之起点保持固定（keeps_exchange_fixed）；自交换之起点之运行即交换后之运行，静止成对（exchanged_run，依 Law.Commutes.iterate；rests_exchanged）；构型为交换所固定恰当二细胞相同（alike_of_fixed、fixed_of_alike）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.keeps_exchange_fixed",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.exchanged_run",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.rests_exchanged",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.alike_of_fixed",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.fixed_of_alike"
+      ]
+    },
+    {
+      "en": "Among configurations of one number of cells, the minima of a free energy symmetric in the cells, as one summed from each cell's own at an exchangeable field is, come in exchanged pairs, and a unique minimum has its cells alike; across numbers of cells a summed free energy is uniquely least only at no cells (Symmetric and six more).",
+      "zh": "于同一细胞数之诸构型中，于诸细胞对称之自由能（如于可交换之场逐细胞自由能之和）之极小成交换之对，唯一之极小其细胞相同；跨细胞数，求和之自由能唯于无细胞处唯一最小（Symmetric 等七项）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.Symmetric",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy_symmetric",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.minimum_exchanged",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.unique_minimum_alike",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.apart_not_unique",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.unique_across_sizes_empty"
+      ]
+    },
+    {
+      "en": "In TwoCells each of two cells moves one unit away from the other's expectation, staying at a tie, and the step commutes with the exchange; from [1, 1] the cells rest, and from any two alike cells the free energy is six at every step, above the nothing of [0, 3] (give and ten more).",
+      "zh": "TwoCells 中二细胞各离他者之期望一单位，相同则不动，其步与交换可交换；自 [1, 1] 起诸细胞静止，自任二相同细胞起每步自由能皆为六，高于 [0, 3] 之零（give 等十一项）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.give",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.field",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.away",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.step",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.energy",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.step_commutes",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_rests",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_energy",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.pair_of_alike",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_never_least",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.run_length"
+      ]
+    },
+    {
+      "en": "From [1, 2] the cells are at [0, 3] from step one on, from [2, 1] at [3, 0]; both have free energy nothing, the least, so no two-cell configuration is the unique minimum among two-cell configurations; other configurations reach nothing too (parts, exchanged_parts, minima, other_minima).",
+      "zh": "自 [1, 2] 起，诸细胞自第一步起在 [0, 3]，自 [2, 1] 起在 [3, 0]；二者自由能皆为零，最小，故无二细胞构型为二细胞构型中唯一之极小；他构型亦可达零（parts、exchanged_parts、minima、other_minima）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.parts",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.exchanged_parts",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.minima",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.other_minima"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. A configuration is the list of the cells' states, of any type; the descent is any rule from a cell's own state and the field it senses; the field reads the configuration, never a cell's number, and is exchangeable where a law says so.",
+      "zh": "不加公理。构型为诸细胞状态之列，状态可为任何类型；下降为依细胞自身状态与其所感之场之任一规则；场读构型而不读细胞之编号，律需之处场可交换。"
+    },
+    {
+      "en": "Modelling choices: discrete synchronous steps; exchanges of neighbouring cells only; minima compared among configurations of one number of cells, since a summed free energy is least at no cells; natural-number free energies; the witness's states from nothing to three; pointwise, with no function extensionality.",
+      "zh": "建模之选：离散同步之步；仅交换相邻细胞；极小于同一细胞数之构型中比较，因求和之自由能于无细胞处最小；自由能为自然数；例之状态为零至三；皆逐点，不用函数外延性。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the 2015 paper's simulations fail: they break the symmetry by random initial expectations.",
+      "zh": "2015 年论文之模拟失败：其以随机之初始期望破对称。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Anything of densities, variational free energy, noise or continuous time: independent fluctuations break the symmetry almost surely, and the law then does not apply.",
+      "zh": "关于密度、变分自由能、噪声或连续时间之任何事：独立之涨落几乎必然破对称，此律遂不适用。",
+      "kind": "scope"
+    },
+    {
+      "en": "Exchanges of other than neighbouring cells, or which asymmetry differentiates actual cells.",
+      "zh": "非相邻细胞之交换，或何种不对称分化实际之细胞。",
+      "kind": "scope"
+    },
+    {
+      "en": "Which configuration, differentiated or not, is better.",
+      "zh": "何构型（分化与否）更好。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
+      "detail": {
+        "en": "In TwoCells two cells at [1, 1] rest where they started (TwoCells.alike_rests), and from any two alike cells the free energy stays at six, above the nothing of [0, 3] (TwoCells.alike_never_least), while a start differing by one unit parts them to either end (TwoCells.parts).",
+        "zh": "TwoCells 中 [1, 1] 之二细胞静止于起点（TwoCells.alike_rests），自任二相同细胞起自由能恒为六，高于 [0, 3] 之零（TwoCells.alike_never_least）；而相差一单位之起点使其分至两端（TwoCells.parts）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T153820.435638Z): 40 of the 98 declarations of Becoming.FreeEnergyGuarantees, the rest cited by its sibling record, each with an empty axiom report. Drafted by an AI agent and read in the session; an independent read-only review by another AI agent (REVIEW-UE16) and a re-check, study section 449; not reviewed by a person. The laws apply landed theorems.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T153820.435638Z）：Becoming.FreeEnergyGuarantees 之 98 项声明中之 40 项，余者由其姊妹记录引用，公理报告皆空。由一 AI 代理起草，会话中审读；另一 AI 代理作独立只读审查（REVIEW-UE16）并复查，见研究第 449 节；未经人审。诸律应用已落地之定理。"
+  },
+  "next_delta": {
+    "en": "A frozen run of the 2015 scheme from exactly identical expectations with no noise; exchanges of any two cells; review by a person.",
+    "zh": "2015 年方案自完全相同之期望、无噪声之冻结运行；任二细胞之交换；人之审查。"
+  },
+  "correspondence": {
+    "en": "Symmetry breaking needs an asymmetric cause (Curie 1894, Journal de Physique 3); morphogenesis from a homogeneous state needs disturbances an instability amplifies (Turing 1952, Philosophical Transactions B 237). Against Friston, Levin, Sengupta and Pezzulo (2015, Journal of the Royal Society Interface 12, 20141383), whose identical cells minimizing free energy from one location are said to be guaranteed unique places; their simulations start from random expectations, so the law forbids the guarantee read for a deterministic descent from a symmetric start, not the simulations (UE1's search, candidate 1, graded b). Never parting needs only a descent reading no cell's number; the commuting law (what-a-commuting-law-keeps-apart) gives the exchanged run and the paired minima, beside the obstruction for codes and roles in 05 §9; uniqueness is symmetric choice (Angluin 1980; Relabel.EquivariantChoice.withholds_of_full_tie). Graded in UE16's NOTE.",
+    "zh": "破对称需不对称之因（Curie 1894，Journal de Physique 3）；自均匀态之形态发生需不稳定性放大之扰动（Turing 1952，Philosophical Transactions B 237）。针对 Friston、Levin、Sengupta、Pezzulo（2015，Journal of the Royal Society Interface 12，20141383）：其称自一处最小化自由能之同一细胞必得唯一之位；其模拟始于随机之期望，故此律所禁者为自对称起点之确定性下降之保证，非其模拟（UE1 之搜索，候选 1，b 级）。不分离只需下降不读细胞编号；可交换律给出交换之运行与成对之极小，与 05 §9 之码与角色之阻碍并列；唯一性即对称之选择（Angluin 1980；Relabel.EquivariantChoice.withholds_of_full_tie）。分级见 UE16 之 NOTE。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
+  "aliases": [
+    "Identical cells under a descent that treats them alike",
+    "同等相待之下降中之同一细胞",
+    "identical cells stay alike",
+    "guaranteed differentiation",
+    "symmetric free energy",
+    "TwoCells",
+    "Becoming.FreeEnergyGuarantees.IdenticalCells.all_alike_stay_alike",
+    "Becoming.FreeEnergyGuarantees.IdenticalCells.unique_minimum_alike"
+  ],
+  "dependencies": [
+    {
+      "id": "what-a-commuting-law-keeps-apart",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Law.Commutes, Law.Commutes.keeps_fixed, Law.Commutes.iterate and Law.run: the commuting law and the run of a law.",
+        "zh": "Law.Commutes、Law.Commutes.keeps_fixed、Law.Commutes.iterate 与 Law.run：可交换律与律之运行。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "risk-minimization-on-a-shared-renewal",
+      "detail": {
+        "en": "The other third part of the free-energy principle stated in the same module.",
+        "zh": "同一模块所陈自由能原理之另一第三部分。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.Exchangeable",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.Symmetric",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_energy",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_never_least",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_rests",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.away",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.energy",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.exchanged_parts",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.field",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.give",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.minima",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.other_minima",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.pair_of_alike",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.parts",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.step",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.step_commutes",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.alike_of_fixed",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.all_alike_stay_alike",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.apart_not_unique",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.descent",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.descent_commutes",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.exchanged_run",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.fixed_of_alike",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy_symmetric",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.keeps_exchange_fixed",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.length_exchangeAt",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.map_exchangeAt",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.minimum_exchanged",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.nth_map",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.nth_replicate",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.othersField",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.othersField_exchangeable",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.rests_exchanged",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.run_length",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.total_exchangeAt",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.two_alike_stay_alike",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.unique_across_sizes_empty",
+        "Becoming.FreeEnergyGuarantees.IdenticalCells.unique_minimum_alike"
+      ],
+      "sha256": "6a4890e5c985b4e2f20738d82dd829ab643f4c8a14a604ed2133463b0ba3eff5"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Commuting.lean",
+      "role": "proof",
+      "sha256": "e0bc05ed9f0bf8c8cda52bb608afc4dedf7593c785c082efc46ec5657c58df65"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T153820.435638Z/verification.json",
+      "role": "receipt",
+      "sha256": "38d138368556dfbb9761afa63aa915b43bb9250c636d0be095eefb260a2f1b29"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e61b588a0f2462676b0072aa957703d65e759e3fe904eb30a89a190ec2aae333"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue16-what-fe-does-not-guarantee/NOTE.md",
+      "role": "integration",
+      "sha256": "5a80be71b74ba850209e7b76bce89423171a4246f9582474712cf38fea498c62"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue16-what-fe-does-not-guarantee/REVIEW-UE16.md",
+      "role": "integration",
+      "sha256": "32b7e9e764b6dbefe0a2351ddc6d6760decc56e8f0935a4372442feec514a0e8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/THIRD-PART-SEARCH.md",
+      "role": "integration",
+      "sha256": "e459bac59373f9b756f8730447b330dab1bceb790f1b7b55d70f95877a16e5e8"
+    },
+    {
+      "path": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "role": "statement",
+      "sha256": "ba6bbed00fa6d28aae3a2e2e97faba4d5ad6c903a3197eebb3446b9027d249ce"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T153820.435638Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.FreeEnergyGuarantees",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "29 October 2026: added (UE16), identical cells under a descent that treats them alike: under any descent reading no cell's number alike cells stay alike; with an exchangeable field the descent commutes with exchanging neighbouring cells, and among configurations of one size a symmetric free energy has its minima in exchanged pairs; the witness TwoCells; against guaranteed differentiation (Friston and others 2015, candidate 1); after a review and a re-check; study section 449.",
+      "zh": "2026年10月29日：新增（UE16），同等相待之下降中之同一细胞：于不读细胞编号之任一下降，相同之细胞保持相同；场可交换时下降与交换相邻细胞可交换，同一细胞数中对称之自由能其极小成交换之对；例 TwoCells；针对必得分化之说（Friston 等 2015，候选 1）；经审查与复查；研究第 449 节。"
+    }
+  ]
+}

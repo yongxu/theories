@@ -20786,3 +20786,123 @@ Output → input: 07 §2 (the home of what-keeping-widening-needs and where-the-
        Reading, D1 and D65 (a paragraph each, no change of reading), the glossary's 生成 row; AJ5's page needs no
        change.
 ```
+
+## 449. What free-energy minimization does not guarantee (UE16)
+
+UE1 contained the free-energy principle as a restatement: its premises on the premise card, its habit read as a lock, and no third part, nothing the theory forbids that the principle leaves open ([§406](#406-the-free-energy-principle-as-a-case-a-chooser-reading-what-couples-in-its-rule-read-from-the-count-of-its-choices-ue1)). A search of the principle's literature found three claims that landed laws forbid under a natural reading, each a verbal generalization of a simulation ([search](development/ue1-fep-bridge/THIRD-PART-SEARCH.md), candidates 1 to 3). UE16 states each on an explicit model in the principle's terms, by applying the landed law, as item 1 of the plan for the principle as an integral part of the theory that explains more than it ([plan](development/ue-unified-explanation/FEP-INTEGRATION.md); [note](development/ue16-what-fe-does-not-guarantee/NOTE.md)).
+
+```text
+Result(s): new records identical-cells-under-a-descent-treating-them-alike (home 05 §9) and
+       risk-minimization-on-a-shared-renewal (home 05 §1), one module, each declaration cited by one of them;
+       what-a-commuting-law-keeps-apart, the-rest-outruns-the-renewal and own-count-misses-joint-excess related to
+       them; capture-by-counted-choices (UE1) brought to a containment with third parts.
+Delta: (1) identical cells. Under a descent moving every cell by one rule from its own state and a field
+       read from the configuration, never from a cell's number (descent), two neighbouring cells alike at the
+       start are alike at every step and all alike stay all alike (two_alike_stay_alike, all_alike_stay_alike,
+       through nth_map and nth_replicate). Where no exchange of cells changes the field (Exchangeable,
+       othersField_exchangeable) the descent commutes with exchanging neighbouring cells (descent_commutes); so, by
+       Law.Commutes.keeps_fixed and Law.Commutes.iterate, an exchange-fixed start stays fixed and the run from the
+       exchanged start is the exchanged run (keeps_exchange_fixed, exchanged_run, rests_exchanged). Among
+       configurations of one number of cells (length_exchangeAt), the minima of a symmetric free energy come in
+       exchanged pairs and a unique minimum has its cells alike (minimum_exchanged, unique_minimum_alike,
+       apart_not_unique); across sizes a summed free energy is uniquely least only at no cells
+       (unique_across_sizes_empty). TwoCells: from [1, 1] the cells rest, alike cells stay at free energy six, above the
+       nothing of [0, 3], and a start one unit apart parts to either end; no two-cell configuration is the unique
+       minimum among two-cell configurations.
+       (2) shared models and preferences. On the landed held pair of a set point, each holder's take, at the two
+       steps they take part, is one model's choice of least risk at its own store, a condition, at no risk,
+       predicting its next level (holder, heldPair_choices), each store at its set point at every step: each goal
+       met while the two end the pool's renewal, unseen
+       (held_not_one, by Optimum.HeldPair.held_end). Exceeding's foragers at a stipulated store end with the pair
+       and continue alone (alike_not_one). OneGoal: two regulators of the shared level, each counting only its own
+       take, continue; three end at the first step (three_end).
+       (3) risk and needs. A chooser with a generative model, a preferred level and the first amount of least
+       risk by gap (Chooser, risk, chosen); restraint one chooser. Where the rest outruns a gated renewal, the need
+       of a member outside it ends whatever chooser gives its takes (need_ends, by Flow.outrun_below and
+       Flow.outrun_ends); with need one no score reading the condition only after tells the choice from restraint
+       (restraint_unread), and at the last outrun step, from a level of at most one, such a member takes nothing
+       (outside_takes_nothing); from the rest's end on an expectation at no risk at or above the need is above
+       the level reached (expectation_not_course); a witness at need three (Outrun.ends_either_way).
+Premises: no axiom; discrete synchronous steps; configurations as lists, exchanges of neighbouring cells, the field
+       reading no cell's number, minima within one number of cells; natural-number states, amounts, risks and free
+       energies; a chooser of one step with a point prediction and the first least-risk amount; for the ending, the
+       World premises (balance, activity needing support, only active giving), the gate, the rest listed without
+       repetition and a member outside it; the held pair's premises as landed; the foragers' stores stipulated
+       readings; pointwise, with no function extensionality.
+Evidence: core receipt 20261029T153820.435638Z; Becoming.FreeEnergyGuarantees (67 theorems in 98 declarations), every declaration with an empty axiom
+       report; a leaf at L1 importing Becoming.Commuting, Becoming.Exclusion and Becoming.SetPointOptimum; imported
+       with the whole package, no name clash; an independent review (REVIEW-UE16) and a re-check (RECHECK-UE16); no
+       landed statement or proof changed.
+Boundary: the papers' simulations, which break the symmetry by random starts and have no shared draw, are not
+       refuted; nothing of densities, variational free energy (UE17), ambiguity and the epistemic term (UE19),
+       precision, softmax, multi-step policies, learning, the blanket (UE18), continuous time or noise; exchanges of
+       neighbouring cells only; that a goal over the shared level keeps a collective going (two continue, three
+       end); the authors' gloss of candidate 2, of which only the wording "ensures" is forbidden; which course is
+       better is not addressed; each law is near-definitional, an application of a landed law or a witness.
+Output→input: what-a-commuting-law-keeps-apart, the-rest-outruns-the-renewal, own-count-misses-joint-excess,
+       what-a-set-point-optimum-does-beyond, support-from-the-supported → identical-cells-under-a-descent-treating-them-alike,
+       risk-minimization-on-a-shared-renewal → 05 §1, §9, 08 §8 (the third parts), capture-by-counted-choices, UE,
+       FEP-INTEGRATION.
+```
+
+**Its standing.** Every law is near-definitional, an application of a landed law or a witness. That a symmetric cause has symmetric effects is Curie's principle (1894), Turing's remark that morphogenesis from a homogeneous state needs disturbances an instability amplifies (1952) is the same point for pattern formation, and identical processors cannot single one out (Angluin 1980); that alike draws on a shared renewal can end it whatever each draws alone is the commons (Lloyd 1833; Hardin 1968), and, where the rest alone outruns the renewal, no member outside it is pivotal (Palfrey and Rosenthal 1984). Claim 3's forbidding was already landed as the held pair of a set point (UE1b); UE16 reads the holders' takes as a generative model's least-risk choices. What is new is stating them in the free-energy principle's terms, on a descent of free energy and a chooser of least risk, as instances of the theory's commuting law, outrun law and joint excess. So the principle's containment has third parts in the plan's sense, each known in a neighbouring field: the theory reaches farther than the principle here, not farther than the sciences together.
+
+**The review and the fix round.** An independent read-only review by another AI agent ([REVIEW-UE16](development/ue16-what-fe-does-not-guarantee/REVIEW-UE16.md), with a probe of 13 theorems in 18 declarations, every axiom report empty) found the Lean sound and pure core, each part forbidding its claim under a natural reading and the grading right, having checked the 2015 paper and Da Costa and others at the source. It found several statements saying more or less than their words, in 12 findings (1 error, 7 over- or understatements, 3 improvements, 1 on style), and every one is taken ([note §7](development/ue16-what-fe-does-not-guarantee/NOTE.md#7-review)). The minima laws compared configurations of every length, where a summed free energy is uniquely least only at no cells, and now compare within one size; never parting needs no exchangeable field; Part C moved onto the landed held pair, whose stores are conditions, each take a generative model's least-risk choice; `OneGoal` no longer infers one goal, three regulators ending at once; with need one the outrun pins the course; the member is outside the rest; Part B has a witness and is graded weak; the landed `Becoming.Parting` forced the witness's rename to `TwoCells`. The module went from 51 theorems in 74 declarations to 67 in 98. The reviewer then re-checked the fold ([RECHECK-UE16](development/ue16-what-fe-does-not-guarantee/RECHECK-UE16.md)): every finding folded soundly in the Lean, with nine findings left in the texts and one statement, every one taken: the holders' takes, which the review's own probe had stated at every step, are stated at the two steps they take part, the stores at their set point at every step; the need-one law is stated at the last outrun step; pivotality is glossed as the outrun reads it; never parting is credited to a descent reading no cell's number; and the identical-cells record is `identical-cells-under-a-descent-treating-them-alike`.
+
+**Decisions at landing.** One module, two records, since the claims are distinct: the cells beside the obstruction for codes and roles in 05 §9, and the agents beside the outrun law in 05 §1, as the plan's placement asks. The module is a leaf at L1: its imports, Commuting, Exclusion and SetPointOptimum, are L1 and it names no ethical predicate. UE1's record keeps its statement and declarations; its correspondence and next step say that the containment now has third parts, and the two records are related to it. 08 §8 says so in its bullet on the count of choices, in its known results beyond the table and in its third parts.
+
+**Readings** [AI reading, D45]. The free-energy principle explains a system's persistence by its gathering evidence for its own model. What the three forbiddings show, in its own terms, is where that explanation stops: minimizing free energy cannot break a symmetry its law keeps, cannot read a drain it does not couple to, and cannot turn alike preferences for one's own into a preference over the joint outcome, while a preference over the joint outcome, each counting only its own take, guarantees nothing either. The principle has no law of symmetry, no conservation of what passes between a thing and its world and no renewal law, so it cannot state where its explanation of persistence stops; the theory can, and these are the cases. Each claim, as its authors gloss it, is an expectation under a model or a description of a simulation, and as such is not forbidden; read as a guarantee, as its sentences are worded, each fails exactly where the theory's law says.
+
+## 450. Variational free energy and its bound, joined to the core's conditioning (UE17)
+
+The free-energy principle's central quantity is variational free energy, which bounds a record's surprisal with equality exactly at the posterior. The theory stated belief as conditioning by restriction and surprisal as the reciprocal of a share, in counting form ([§412](#412-conditional-weights-shares-and-the-exit-from-a-margin-on-the-counting-layer-ue2)); the pure core takes no logarithm and states no average of logarithms. UE17 states free energy in the periphery, over the reals, and joins its minimizer to the core's conditioning, as item 2 of the plan for the principle as an integral part of the theory ([plan](development/ue-unified-explanation/FEP-INTEGRATION.md); [note](development/ue17-free-energy/NOTE.md)).
+
+```text
+Result(s): new record free-energy-bounds-surprisal (home 03 §6, after conditioning by restriction), one periphery
+       module with its checker, each declaration cited by it; conditioning-by-restriction and
+       capture-by-counted-choices related to it.
+Delta: (1) the quantities over a finite set of causes: freeEnergy, divergence, surprisal and posterior, under
+       Mathlib's conventions log 0 = 0 and x / 0 = 0; the free energy is the divergence from the joint weights
+       (freeEnergy_eq_divergence) and the energy less the entropy (freeEnergy_eq_energy_sub_entropy), and reads a
+       belief only at the causes.
+       (2) the bound: for q nonnegative with total one, p nonnegative and q zero wherever p is, the surprisal of p's
+       total is at most the free energy (surprisal_le_freeEnergy, term by term from log x ≤ x − 1); equality exactly
+       at the posterior (freeEnergy_eq_surprisal_iff, freeEnergy_posterior), which alone has the least free energy
+       among the beliefs where it is finite (minimizes_iff_posterior); off the support the bound fails under
+       Mathlib's convention (Witness.bound_fails_off_support).
+       (3) the decompositions: divergence from the posterior plus surprisal, with no sign hypothesis
+       (freeEnergy_eq_divergence_add_surprisal), the divergence nonnegative and zero exactly at the posterior; and
+       complexity less accuracy where p is a prior times a likelihood (freeEnergy_eq_complexity_sub_accuracy).
+       (4) the join: a share read as part over whole (Share.toReal); in a core generative model the joint weight of
+       a hypothesis is the share of the courses with it whose record agrees, the joint weights sum to the record's
+       share, and their posterior is the core's share given the record (jointShare_part, sum_jointShare,
+       givenShare_eq_posterior); so, for beliefs zero where a hypothesis's prior weight times the record's weight
+       under it is zero, which exist only where the record weighs something (record_pos_of_belief), the bound and
+       its equality hold in the core's terms, the free energy of the share given the record is the record's
+       surprisal, and that share alone is least (record_surprisal_le_freeEnergy, freeEnergy_givenShare,
+       minimizes_iff_givenShare).
+       (5) surprisal adds over independent parts, from the core's share_product (surprisal_product).
+Premises: Lean's three standard axioms through Mathlib, each declaration's reported; a finite set of causes; real
+       beliefs and joint weights; Boolean records and natural weights in the core; Mathlib's conventions at zero.
+Evidence: periphery receipt 20261029T155901.350188Z; FreeEnergyReals (42 theorems in 47 declarations), each depending only on Lean's standard axioms, every
+       core module of the closure matching a passed core receipt; check_free_energy_reals.py, the regime checker's
+       pattern with its target changed; an independent review (REVIEW-UE17) and a re-check (RECHECK-UE17); no core
+       file changed.
+Boundary: densities, continuous causes and continuous time; expected free energy (UE19); any process that lowers
+       free energy (gradient descent, message passing, the Laplace approximation); that any system minimizes free
+       energy (UE18); beliefs confined to a family; free energy as a bound on the long-run average of surprisal, or
+       over parameters and models; the bound's counting form for beliefs with natural counts,
+       N^N·∏ a^n ≤ A^N·∏ n^n (checked by the review on small cases, not proved); complexity and accuracy read from
+       the core's own prior and likelihood shares. Gibbs' inequality classical; the decompositions and the join
+       near-definitional; new is the join.
+Output→input: conditioning-by-restriction (ConditionalWeights) → free-energy-bounds-surprisal → 03 §6, 08 §8,
+       capture-by-counted-choices, UE, FEP-INTEGRATION; UE18 and UE19 read it.
+```
+
+**Its standing.** Gibbs' inequality and its equality case are classical (Gibbs 1902), the divergence is Kullback and Leibler's (1951), and the bound is the evidence bound of variational Bayes: free energy as a bound on the log evidence appears in Hinton and van Camp (1993), Neal and Hinton (1998) and the Helmholtz machine (Dayan, Hinton, Neal and Zemel 1995), and as the principle's quantity in Friston (2005, 2010). The decompositions and the join are near-definitional. New is the join: the core states the posterior by counting, and the periphery characterizes it as the one minimizer of free energy over the beliefs where it is finite, from natural weights.
+
+**The review and the fix round.** An independent read-only review by another AI agent ([REVIEW-UE17](development/ue17-free-energy/REVIEW-UE17.md)) built the module and a probe of four theorems against the warmed core and the pinned Mathlib, with no error or warning, each on the three standard axioms, and checked the counting form of the bound on 15,968 small cases. It found the Lean sound and the join real, the printed statements naming the core's definitions, and the faults in the prose: summaries dropped the support condition, without which the claim is false for this free energy (the belief one half on each of two causes, one of joint weight zero, scores below the posterior); "no counting form" said too much, since for beliefs with natural counts the bound reads N^N·∏ a^n ≤ A^N·∏ n^n; and "one law in two forms" misdescribed a variational characterization. It found the kit's axiom check vacuous, one hypothesis redundant and three fields of conditioning-by-restriction stale. Of its 12 findings every one is taken but the last, a change of its own to both periphery checkers ([note §7](development/ue17-free-energy/NOTE.md#7-review)): the module went from 39 theorems in 44 declarations to 42 in 47, adding `record_pos_of_belief`, `freeEnergy_eq_energy_sub_entropy` and `freeEnergy_eq_divergence`. The reviewer then re-checked the fold ([RECHECK-UE17](development/ue17-free-energy/RECHECK-UE17.md)): sound, the Lean saying what the folded texts claim, with eight findings (two overstatements, the record's statement dropping the support condition and the study repeating "no counting form", and six on style), every one taken.
+
+**Decisions at landing.** In the periphery beside `regime/RegimeReals`: the real form needs Mathlib's logarithm, which the pure core does not have; for beliefs with natural counts the bound has a counting form, not yet stated, so the record says the law is in the periphery until a core form lands. The module imports the core's `Becoming.ConditionalWeights` and the core does not import it; `Share.toReal` sits in the core's namespace for dot notation, as `RegimeReals` does, with no core file changed. The record is homed in 03 §6 under a new anchor after conditioning's reading, so conditioning's own text is unchanged. The checker reran fresh on the merged head at landing, after UE16. UE2's periphery draft, superseded, moved to history. `ConditionalWeights`'s docstring on averages of logarithms is brought to UE17 at that module's next change, with no core run for a docstring alone.
+
+**Readings** [AI reading, D45]. The principle reads perception as the minimization of variational free energy over beliefs, and the bound's equality says the minimizer is the posterior, which in the theory is conditioning by restriction: the weighting kept on the courses agreeing with a record. So the principle's perception, read exactly, adds no law to the theory's conditioning; it gives conditioning a variational form, whose use is approximation within a family, measured by the divergence term. Its use in the principle rests on reading a system's internal states as parameterizing a belief and its dynamics as descent on free energy; that reading is the principle's, and the theory's laws on what a selector can read and what it reaches bear on it (UE18, UE19).

@@ -4836,6 +4836,66 @@
    "module": "Becoming.Unread",
    "category": "model-witness",
    "reason": "Learning.determines_iff_not_not: a fact about one constructed model, one occasion with a constant lumping and two act values, read where a proposition holds (RF)"
+  },
+  "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.minima": {
+   "module": "Becoming.FreeEnergyGuarantees",
+   "category": "model-witness",
+   "reason": "IdenticalCells.TwoCells.minima: a fact about one constructed model, two cells whose ends have free energy nothing, so no two-cell configuration is the unique minimum (UE16)"
+  },
+  "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.other_minima": {
+   "module": "Becoming.FreeEnergyGuarantees",
+   "category": "model-witness",
+   "reason": "IdenticalCells.TwoCells.other_minima: a fact about one constructed model, other configurations of free energy nothing (UE16)"
+  },
+  "Becoming.FreeEnergyGuarantees.IdenticalCells.alike_of_fixed": {
+   "module": "Becoming.FreeEnergyGuarantees",
+   "category": "support",
+   "reason": "IdenticalCells.alike_of_fixed: a list lemma, a configuration fixed by exchanging two neighbouring cells has them alike (UE16)"
+  },
+  "Becoming.FreeEnergyGuarantees.IdenticalCells.fixed_of_alike": {
+   "module": "Becoming.FreeEnergyGuarantees",
+   "category": "support",
+   "reason": "IdenticalCells.fixed_of_alike: a list lemma, two alike neighbouring cells leave the configuration fixed by their exchange (UE16)"
+  },
+  "Becoming.FreeEnergyGuarantees.IdenticalCells.apart_not_unique": {
+   "module": "Becoming.FreeEnergyGuarantees",
+   "category": "general-structure",
+   "reason": "IdenticalCells.apart_not_unique: a law of every free energy on configurations symmetric in the cells; it waits for a free energy read on the base (UE16)"
+  },
+  "Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy_symmetric": {
+   "module": "Becoming.FreeEnergyGuarantees",
+   "category": "general-structure",
+   "reason": "IdenticalCells.freeEnergy_symmetric: a law of every free energy summed over cells at an exchangeable field; it waits for a free energy read on the base (UE16)"
+  },
+  "Becoming.FreeEnergyGuarantees.IdenticalCells.minimum_exchanged": {
+   "module": "Becoming.FreeEnergyGuarantees",
+   "category": "general-structure",
+   "reason": "IdenticalCells.minimum_exchanged: a law of every free energy on configurations symmetric in the cells; it waits for a free energy read on the base (UE16)"
+  },
+  "Becoming.FreeEnergyGuarantees.IdenticalCells.unique_across_sizes_empty": {
+   "module": "Becoming.FreeEnergyGuarantees",
+   "category": "general-structure",
+   "reason": "IdenticalCells.unique_across_sizes_empty: a law of every summed free energy on lists, why minima are compared within one size; it waits for a free energy read on the base (UE16)"
+  },
+  "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen_mem": {
+   "module": "Becoming.FreeEnergyGuarantees",
+   "category": "support",
+   "reason": "RiskAndNeeds.Chooser.chosen_mem: a one-line unpacking of the chooser's own definition (UE16)"
+  },
+  "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen_minimizes": {
+   "module": "Becoming.FreeEnergyGuarantees",
+   "category": "support",
+   "reason": "RiskAndNeeds.Chooser.chosen_minimizes: a one-line unpacking of the chooser's own definition, by firstMin_le (UE16)"
+  },
+  "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.restraint_chosen": {
+   "module": "Becoming.FreeEnergyGuarantees",
+   "category": "support",
+   "reason": "RiskAndNeeds.Chooser.restraint_chosen: a one-line unpacking of restraint's definition (UE16)"
+  },
+  "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator_choice": {
+   "module": "Becoming.FreeEnergyGuarantees",
+   "category": "model-witness",
+   "reason": "SharedModels.OneGoal.regulator_choice: a fact about one constructed model, the regulator's choices at four and at two (UE16)"
   }
  },
  "instances": {

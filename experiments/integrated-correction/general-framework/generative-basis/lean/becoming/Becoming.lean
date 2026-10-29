@@ -104,6 +104,7 @@ import Becoming.Tasks
 import Becoming.CausalGrowth
 import Becoming.Presence
 import Becoming.ReorderingGrowth
+import Becoming.FreeEnergyGuarantees
 import Becoming.Growth
 import Becoming.Retaining
 import Becoming.OwnWidening
@@ -1567,6 +1568,25 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `ReorderingGrowth.MovedBack.persists_not_present`); the vee as a world
   (`ReorderingGrowth.VeeWorld.presence_varies`). Each law is near-definitional, a composition, a
   lemma or a witness. A leaf (board item UE15).
+* `Becoming.FreeEnergyGuarantees` (L1): what free-energy minimization does not guarantee, the
+  free-energy principle's third parts on explicit models in its terms. Under a descent moving every
+  cell by one rule from its own state and a field reading no cell's number, two cells alike at the
+  start stay alike (`FreeEnergyGuarantees.IdenticalCells.two_alike_stay_alike`); with the field
+  exchangeable the descent commutes with exchanging neighbouring cells
+  (`FreeEnergyGuarantees.IdenticalCells.descent_commutes`), the exchanged run is the run of the
+  exchanged start, and among configurations of one number of cells a unique minimum of a free energy
+  symmetric in the cells has its cells alike
+  (`FreeEnergyGuarantees.IdenticalCells.unique_minimum_alike`). A member outside the rest choosing,
+  under its model, the amount whose predicted level lies nearest its preferred level has its need
+  end whatever its model where the rest outruns a gated renewal
+  (`FreeEnergyGuarantees.RiskAndNeeds.need_ends`, by the outrun law). Holders of one model, each
+  taking, at the two steps they take part, its choice of least risk at its own store, a condition,
+  each store at its set point at every step, end the shared renewal
+  (`FreeEnergyGuarantees.SharedModels.held_not_one`, by
+  `Optimum.HeldPair.held_end`), and three regulators of the shared level end it at the first step
+  (`FreeEnergyGuarantees.SharedModels.OneGoal.three_end`). Each law applies a landed law in the
+  principle's terms or is a witness. A leaf importing `Becoming.Commuting`, `Becoming.Exclusion`
+  and `Becoming.SetPointOptimum` (board item UE16).
 * `Becoming.Growth` (L1): widening along a reading of one web's formations in another's
   (`Web.WidensAlong`), which along the identity is widening (`Web.widensAlong_id_iff`), and widening
   over a grown world: a growth adds formations and conditions without changing the old formations'

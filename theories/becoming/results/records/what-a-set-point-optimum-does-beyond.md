@@ -117,6 +117,9 @@ Active inference (Friston, FitzGerald, Rigoli, Schwartenbeck, O'Doherty and Pezz
 - **formal-reuse**: [two-sided-regulation-and-late-reading](two-sided-regulation-and-late-reading.md). Regulation.Between, regulation's no overshoot, with gap_of_le and gap_of_ge: nearer is read by betweenness.
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). Several rising optimizers read off an exchange; several nearing optimizers here have their eligible outcomes supplied.
 - related, not a proved adapter: [capture-by-counted-choices](capture-by-counted-choices.md). UE1's chooser reading what couples in; its note's reading 3, that a chooser with set points escapes the optimizer's drain, is tested here and holds in part.
+- related, not a proved adapter: [risk-minimization-on-a-shared-renewal](risk-minimization-on-a-shared-renewal.md). Risk minimization on a shared renewal: the held pair's takes are one generative model's choices of least risk at each holder's own store, against shared preferences making a group goal.
+
+**Used by:** [risk-minimization-on-a-shared-renewal](risk-minimization-on-a-shared-renewal.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -142,6 +145,7 @@ Aliases: `What a set-point optimum does beyond what couples in`, `设定点最�
 ### History
 
 - 25 October 2026: added (UE1b), what an order with a set point does beyond what couples in: the drain below the set point, the draw at it, and joint excess for holders with no choice in that law; the three general laws of the exchange moved into Becoming.Optimum (board rule 9); reviewed independently and re-checked; study section 415.
+- 29 October 2026, board item UE16 (study section 449): related to risk-minimization-on-a-shared-renewal; no statement, next step or declaration changed.
 
 </details>
 

@@ -1,0 +1,15 @@
+Becoming/FreeEnergyGuarantees.lean:706:30: error: Missing cases:
+_
+Becoming/FreeEnergyGuarantees.lean:718:47: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue16/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue16-what-fe-does-not-guarantee/tree",
+  "modules": 91,
+  "ran": [
+    "Becoming.FreeEnergyGuarantees"
+  ],
+  "reused": 90,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.FreeEnergyGuarantees"
+}
