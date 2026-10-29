@@ -29,17 +29,22 @@ Delta: (1) the law. kept_onward: a region of the steps of time that every step k
        laws of their models. The audit's closure paragraph and rows say kept_onward, not a run.
        (6) texts. 01 §7's closure bullet; PatternPassing's header (a bullet By closure, and Not connected keeping
        begins_within and present_back); each derived theorem's docstring names the region kept; the root module's
-       bullet, the checker's core list and scope, the README rows (EN, ZH); 08's counts.
+       bullet, the checker's core list and scope, the README rows (EN, ZH); 08's counts; the connectivity register
+       drops «闭含所闭», which kept_onward uses.
+       (7) the measure moved. Web.Whole.family_excess_ends rests on balance; its proof uses active_back, now a case
+       of closure, so it reaches the grammar too. Of the 127 rows, 45 reach the grammar (16 of the 55 on balance);
+       of the 118 distinct central declarations, 44 reach it, 31 rest on balance, represented, 7 on another anchor
+       and 36 on no master law, each with its reason. Evolution's 18 rows and significance's 5 still reach it in
+       none. 08 §7 and the four front pages give the new counts.
 Supplied premises / correspondence: none.
 Evidence: core receipt {RECEIPT}, every axiom report empty; the signature audit (signatures_closure.py) shows every
        statement of the six modules printing as before, nothing gone, and kept_onward new.
 Boundary: Reidentify.old_still (Persistence) keeps a region the same way but reads no activity; it belongs to the
        layer that reads no field, which the coordinating note takes whole through the representation of processes.
-       The restricted bridge with the lineage laws, and the coarse-to-fine pair, are not derived. The measure of the
-       central declarations is unchanged.
+       The restricted bridge with the lineage laws, and the coarse-to-fine pair, are not derived.
 Output → input: the record; 01 §7; Becoming.KeptOnward and the six modules; the root module, the checker and the
-       README rows; the audit and its table; 08's counts; OU3f's next part, the lineage laws through the restricted
-       bridge.
+       README rows; the audit and its table; the measure, 08 §7 and the front pages; 08's counts; the master-law view;
+       OU3f's next part, the lineage laws through the restricted bridge.
 ```
 
 **The review, and what was taken.** One independent read-only review by a separate AI agent, with a second pass ([REVIEW-CLOSURE](development/ou3f-activity-laws/closure/review/REVIEW-CLOSURE.md)); every finding was taken. It found the derivations right and every statement printing as on main (507 declarations compared, `trace` and `line_back` included), but two of the coordinating session's conditions unmet.
