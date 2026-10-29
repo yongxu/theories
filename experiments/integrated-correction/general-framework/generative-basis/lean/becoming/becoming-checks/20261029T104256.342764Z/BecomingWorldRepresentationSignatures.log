@@ -1,0 +1,156 @@
+@Becoming.Web.sameStep_class : ∀ {R : Type}, Becoming.«类» Becoming.Web.sameStep
+@Becoming.Steps.along_iff_itself : ∀ {F : Type} {x y : Nat × F},
+  Becoming.Steps.along x y ↔ Becoming.Web.continuationStep Becoming.Web.itself x y
+@Becoming.Steps.later_iff : ∀ {R : Type} {x y : Nat × R},
+  x.fst < y.fst ↔ Becoming.«而» (Becoming.«及» Becoming.Steps.along) Becoming.Web.sameStep x y
+@Becoming.Steps.sameOrLater_iff : ∀ {R : Type} {x y : Nat × R},
+  x.fst ≤ y.fst ↔ Becoming.«而» (Becoming.«所闭» Becoming.Steps.along) Becoming.Web.sameStep x y
+Becoming.World.arisingRecurs_iff : ∀ (w : Becoming.World),
+  w.ArisingRecurs ↔
+    (∃ x, True) ∧
+      ∀ (x : Nat × w.Relatum),
+        ∃ y,
+          Becoming.«而» (Becoming.«及» Becoming.Steps.along) Becoming.Web.sameStep x y ∧
+            w.web.active y.fst y.snd ∧ Becoming.«生» Becoming.Steps.along w.web.activityClass y
+Becoming.World.ceasingRecurs_iff : ∀ (w : Becoming.World),
+  w.CeasingRecurs ↔
+    (∃ x, True) ∧
+      ∀ (x : Nat × w.Relatum),
+        ∃ y,
+          Becoming.«而» (Becoming.«所闭» Becoming.Steps.along) Becoming.Web.sameStep x y ∧
+            w.web.active y.fst y.snd ∧ Becoming.«亡» Becoming.Steps.along w.web.activityClass y
+@Becoming.Reidentify.sameStep_carried : ∀ {R R' : Type} (σ : Becoming.Reidentify R R'),
+  Becoming.«谓» (Becoming.«像» σ.onOccurrences.to Becoming.Web.sameStep) Becoming.Web.sameStep
+@Becoming.Reidentify.withinStep_carried : ∀ {R R' : Type} (σ : Becoming.Reidentify R R') {r : Nat → R → R → Prop}
+  {r' : Nat → R' → R' → Prop},
+  (∀ (t : Nat) (x y : R'), r' t x y ↔ r t (σ.old t x) (σ.old t y)) →
+    Becoming.«谓» (Becoming.«像» σ.onOccurrences.to (Becoming.World.withinStep r')) (Becoming.World.withinStep r)
+@Becoming.Reidentify.partialIdentity_carried : ∀ {R R' : Type} (σ : Becoming.Reidentify R R') {p : Nat → R → Prop}
+  {p' : Nat → R' → Prop},
+  (∀ (t : Nat) (x : R'), p' t x ↔ p t (σ.old t x)) →
+    Becoming.«谓» (Becoming.«像» σ.onOccurrences.to (Becoming.Web.partialIdentity fun x => p' x.fst x.snd))
+      (Becoming.Web.partialIdentity fun x => p x.fst x.snd)
+@Becoming.World.conserves_reidentify : ∀ {w : Becoming.World} {R' : Type} (σ : Becoming.Reidentify w.Relatum R')
+  (t : Nat) (x y : R'), (w.reidentify σ).Conserves t x y ↔ σ.carry w.Conserves t x y
+@Becoming.World.conservationStep_reidentify : ∀ {w : Becoming.World} {R' : Type} (σ : Becoming.Reidentify w.Relatum R'),
+  Becoming.«谓» (Becoming.«像» σ.onOccurrences.to (w.reidentify σ).conservationStep) w.conservationStep
+@Becoming.World.activityClass_reidentify : ∀ {w : Becoming.World} {R' : Type} (σ : Becoming.Reidentify w.Relatum R'),
+  Becoming.«谓» (Becoming.«像» σ.onOccurrences.to (w.reidentify σ).web.activityClass) w.web.activityClass
+@Becoming.World.reidentify_carries : ∀ {w : Becoming.World} {R' : Type} (σ : Becoming.Reidentify w.Relatum R'),
+  Becoming.«谓» (Becoming.«像» σ.onOccurrences.to Becoming.Web.sameStep) Becoming.Web.sameStep ∧
+    Becoming.«谓» (Becoming.«像» σ.onOccurrences.to (w.reidentify σ).conservationStep) w.conservationStep ∧
+      Becoming.«谓»
+          (Becoming.«像» σ.onOccurrences.to
+            (Becoming.Web.partialIdentity fun x => (w.reidentify σ).web.active x.fst x.snd))
+          (Becoming.Web.partialIdentity fun x => w.web.active x.fst x.snd) ∧
+        Becoming.«谓»
+            (Becoming.«像» σ.onOccurrences.to
+              (Becoming.Web.partialIdentity fun x => 0 < (w.reidentify σ).web.level x.fst x.snd))
+            (Becoming.Web.partialIdentity fun x => 0 < w.web.level x.fst x.snd) ∧
+          Becoming.«谓»
+              (Becoming.«像» σ.onOccurrences.to
+                (Becoming.Web.partialIdentity fun x => x.snd ∈ (w.reidentify σ).flow.present x.fst))
+              (Becoming.Web.partialIdentity fun x => x.snd ∈ w.flow.present x.fst) ∧
+            Becoming.«谓» (Becoming.«像» σ.onOccurrences.to (Becoming.World.withinStep (w.reidentify σ).web.requires))
+                (Becoming.World.withinStep w.web.requires) ∧
+              Becoming.«谓» (Becoming.«像» σ.onOccurrences.to (Becoming.World.withinStep (w.reidentify σ).web.draws))
+                  (Becoming.World.withinStep w.web.draws) ∧
+                Becoming.«谓»
+                    (Becoming.«像» σ.onOccurrences.to
+                      (Becoming.World.withinStep fun t f c =>
+                        (w.reidentify σ).web.need t f c ≤ (w.reidentify σ).web.level t c))
+                    (Becoming.World.withinStep fun t f c => w.web.need t f c ≤ w.web.level t c) ∧
+                  Becoming.«谓»
+                      (Becoming.«像» σ.onOccurrences.to
+                        (Becoming.World.withinStep fun t f c => 0 < (w.reidentify σ).flow.give t f c))
+                      (Becoming.World.withinStep fun t f c => 0 < w.flow.give t f c) ∧
+                    Becoming.«谓»
+                      (Becoming.«像» σ.onOccurrences.to
+                        (Becoming.World.withinStep fun t f c => 0 < (w.reidentify σ).flow.take t f c))
+                      (Becoming.World.withinStep fun t f c => 0 < w.flow.take t f c)
+@Becoming.World.sheng_conservation_reidentify : ∀ {w : Becoming.World} {R' : Type}
+  (σ : Becoming.Reidentify w.Relatum R') (x : Nat × R'),
+  Becoming.«生» (w.reidentify σ).conservationStep (w.reidentify σ).web.activityClass x ↔
+    Becoming.«生» w.conservationStep w.web.activityClass (σ.onOccurrences.to x)
+Becoming.World.ofRelations_relations : ∀ (F : Type) (active : Nat → F → Prop) (requires draws : Nat → F → F → Prop)
+  (present : Nat → List F) (t : Nat),
+  (∀ (x : (Becoming.World.ofRelations F active requires draws present).Relatum),
+      (Becoming.World.ofRelations F active requires draws present).web.active t x ↔ active t x) ∧
+    (∀ (x y : (Becoming.World.ofRelations F active requires draws present).Relatum),
+        (Becoming.World.ofRelations F active requires draws present).web.requires t x y ↔ requires t x y) ∧
+      (∀ (x y : (Becoming.World.ofRelations F active requires draws present).Relatum),
+          (Becoming.World.ofRelations F active requires draws present).web.draws t x y ↔ draws t x y) ∧
+        ∀ (x : (Becoming.World.ofRelations F active requires draws present).Relatum),
+          x ∈ (Becoming.World.ofRelations F active requires draws present).flow.present t ↔ x ∈ present t
+Becoming.World.ofModel_model : ∀ (F : Type) (a : Nat × F → Prop) {q d : Becoming.«际» (Nat × F)},
+  Becoming.«则» q Becoming.Web.sameStep →
+    Becoming.«则» d Becoming.Web.sameStep →
+      ∀ (present : Nat → List F),
+        Becoming.«谓»
+            (Becoming.Web.partialIdentity fun x => (Becoming.World.ofModel F a q d present).web.active x.fst x.snd)
+            (Becoming.Web.partialIdentity a) ∧
+          Becoming.«谓» (Becoming.World.withinStep (Becoming.World.ofModel F a q d present).web.requires) q ∧
+            Becoming.«谓» (Becoming.World.withinStep (Becoming.World.ofModel F a q d present).web.draws) d ∧
+              ∀ (x : Nat × F),
+                x.snd ∈ (Becoming.World.ofModel F a q d present).flow.present x.fst ↔ x.snd ∈ present x.fst
+@Becoming.World.conserves_form : ∀ {w : Becoming.World} {t : Nat} {g f : w.Relatum},
+  w.Conserves t g f ↔ w.web.level (t + 1) f + w.flow.taken t g = w.web.level t g + w.flow.given t g
+@Becoming.World.ofConservationForm_conserves : ∀ {R : Type} (r₀ : R) (level a b : Nat → R → Nat) (t : Nat) (g f : R),
+  (Becoming.World.ofConservationForm r₀ level a b).Conserves t g f ↔ level (t + 1) f + b t g = a t g
+@Becoming.World.conserves_iff_same_level : ∀ {w : Becoming.World} {t : Nat} {g f : w.Relatum},
+  w.Conserves t g f → ∀ (f' : w.Relatum), w.Conserves t g f' ↔ w.web.level (t + 1) f' = w.web.level (t + 1) f
+@Becoming.World.conserves_difunctional : ∀ {w : Becoming.World} {t : Nat} {g g' f f' : w.Relatum},
+  w.Conserves t g f → w.Conserves t g' f → w.Conserves t g' f' → w.Conserves t g f'
+Becoming.World.conserves_decided : ∀ (w : Becoming.World) (t : Nat) (g f : w.Relatum),
+  Becoming.Decided (w.Conserves t g f)
+Becoming.World.amounts_decided : ∀ (w : Becoming.World) (t : Nat) (f c : w.Relatum),
+  Becoming.Decided (w.web.need t f c ≤ w.web.level t c) ∧
+    Becoming.Decided (0 < w.flow.give t f c) ∧
+      Becoming.Decided (0 < w.flow.take t f c) ∧
+        Becoming.Decided (0 < w.web.level t f) ∧ Becoming.Decided (w.web.Falls t f)
+Becoming.World.conservation_iff_decided : ∀ (Q : Prop),
+  (∃ L W, ∀ (t : Nat), (Becoming.World.of Unit L W).Conserves t () () ↔ Q) ↔ Becoming.Decided Q
+Becoming.World.decides_activity_iff_em : (∀ (w : Becoming.World) (t : Nat) (x : w.Relatum),
+    Becoming.Decided (w.web.active t x)) ↔
+  ∀ (Q : Prop), Becoming.Decided Q
+@Becoming.World.standingAt_alike : ∀ {k k' : Nat},
+  0 < k →
+    0 < k' →
+      ∀ (t : Nat),
+        ((Becoming.World.standingAt k).web.active t () ↔ (Becoming.World.standingAt k').web.active t ()) ∧
+          (0 < (Becoming.World.standingAt k).web.level t () ↔ 0 < (Becoming.World.standingAt k').web.level t ()) ∧
+            ((Becoming.World.standingAt k).web.requires t () () ↔ (Becoming.World.standingAt k').web.requires t () ()) ∧
+              ((Becoming.World.standingAt k).web.draws t () () ↔ (Becoming.World.standingAt k').web.draws t () ()) ∧
+                (() ∈ (Becoming.World.standingAt k).flow.present t ↔
+                    () ∈ (Becoming.World.standingAt k').flow.present t) ∧
+                  ((Becoming.World.standingAt k).web.need t () () ≤ (Becoming.World.standingAt k).web.level t () ↔
+                      (Becoming.World.standingAt k').web.need t () () ≤ (Becoming.World.standingAt k').web.level t ()) ∧
+                    (0 < (Becoming.World.standingAt k).flow.give t () () ↔
+                        0 < (Becoming.World.standingAt k').flow.give t () ()) ∧
+                      (0 < (Becoming.World.standingAt k).flow.take t () () ↔
+                          0 < (Becoming.World.standingAt k').flow.take t () ()) ∧
+                        ((Becoming.World.standingAt k).Conserves t () () ↔
+                            (Becoming.World.standingAt k').Conserves t () ()) ∧
+                          ((Becoming.World.standingAt k).web.Falls t () ↔
+                              (Becoming.World.standingAt k').web.Falls t ()) ∧
+                            (Becoming.World.standingAt k).web.level t () = k
+Becoming.World.idleTwice_unbalanced : ¬Becoming.World.idleTwice.Balanced
+Becoming.World.balance_needs_conservation : ¬∃ Φ,
+    (∀ (R : Type) (W : Becoming.Web R R) (a b : Becoming.World.ExchangeSigns R), a.Agree b → (Φ R W a ↔ Φ R W b)) ∧
+      ∀ (w : Becoming.World), w.Balanced ↔ Φ w.Relatum w.web w.exchangeSigns
+@Becoming.World.conserves_identity_injective : ∀ {w : Becoming.World} {t : Nat},
+  (∀ (g f : w.Relatum), w.Conserves t g f ↔ g = f) →
+    ∀ (f f' : w.Relatum), w.web.level (t + 1) f = w.web.level (t + 1) f' → f = f'
+Becoming.Diagonal.no_injection_of_predicates : ∀ (i : (Nat → Prop) → Nat), ¬∀ (A B : Nat → Prop), i A = i B → A = B
+Becoming.World.not_conserves_identity : ∀ (L : Becoming.Flow (Nat → Prop) (Nat → Prop))
+  (W : Becoming.Web (Nat → Prop) (Nat → Prop)) (t : Nat),
+  ¬∀ (g f : (Becoming.World.of (Nat → Prop) L W).Relatum), (Becoming.World.of (Nat → Prop) L W).Conserves t g f ↔ g = f
+Becoming.World.falls_exhaust : ∀ (w : Becoming.World) (x : Nat × w.Relatum),
+  w.web.Falls x.fst x.snd → Becoming.«尽» Becoming.Steps.along (Becoming.Web.alikeBy fun y => w.web.Falls y.fst y.snd) x
+Becoming.World.falls_not_endless : ∀ (w : Becoming.World) (x : Nat × w.Relatum),
+  w.web.Falls x.fst x.snd →
+    ¬Becoming.«不穷» Becoming.Steps.along (Becoming.Web.alikeBy fun y => w.web.Falls y.fst y.snd) x
+Becoming.World.not_falls_everywhere : ∀ (w : Becoming.World) (x : Nat × w.Relatum),
+  ¬∀ (y : Nat × w.Relatum), w.web.Falls y.fst y.snd
+@Becoming.Steps.along_endless : ∀ {F : Type} (x : Nat × F),
+  Becoming.«不穷» Becoming.Steps.along (Becoming.Web.alikeBy fun x => True) x

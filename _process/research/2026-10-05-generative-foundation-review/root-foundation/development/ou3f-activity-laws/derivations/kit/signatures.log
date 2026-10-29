@@ -1,0 +1,18 @@
+{
+ "old_receipt": "20261029T084618.786422Z",
+ "new_receipt": "20261029T104256.342764Z",
+ "declarations_old": 108,
+ "declarations_new": 105,
+ "changed": [],
+ "gone": [
+  "Becoming.Web.ByPassing.begins_passed_by_grammar",
+  "Becoming.Web.ByPassing.passes_within_by_line",
+  "Becoming.Web.Continuing.mono_by_reach"
+ ],
+ "added": [],
+ "definitions_rewritten": [],
+ "definitions_gone": [],
+ "definitions_added": []
+}
+every remaining statement of ContinuedClasses and PatternPassing unchanged; gone: ['Becoming.Web.ByPassing.begins_passed_by_grammar', 'Becoming.Web.ByPassing.passes_within_by_line', 'Becoming.Web.Continuing.mono_by_reach'] ; new: [] ; new definitions: []
+OK

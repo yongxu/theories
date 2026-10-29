@@ -1,0 +1,77 @@
+{
+ "records": 9,
+ "apply": false,
+ "by_record": {
+  "a-pattern-lasts-through-passing": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T104256.342764Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean"
+   ]
+  },
+  "classes-along-a-continuation": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T104256.342764Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean"
+   ]
+  },
+  "comparing-two-courses-on-what-they-admit": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean"
+   ],
+   "rebound": []
+  },
+  "continuation-relative-to-a-class": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T104256.342764Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean"
+   ]
+  },
+  "eventual-widening": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean"
+   ],
+   "rebound": []
+  },
+  "identity-across-steps": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T104256.342764Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean"
+   ]
+  },
+  "the-world-represented-both-ways": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean"
+   ],
+   "rebound": []
+  },
+  "what-keeping-widening-needs": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean"
+   ],
+   "rebound": []
+  },
+  "widening-along-a-reading": {
+   "paths": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T104256.342764Z/verification.json"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean"
+   ]
+  }
+ }
+}

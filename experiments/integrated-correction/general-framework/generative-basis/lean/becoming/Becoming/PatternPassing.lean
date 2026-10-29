@@ -121,14 +121,6 @@ theorem begins_within {d T : Nat} (present : ∀ t, T ≤ t → V.Present t)
 
 /-! ## Under the passing premise -/
 
-/-- **Under the passing premise every beginning is a passing.** A formation that begins to carry
-the pattern across a step was given it there by a formation carrying it. -/
-theorem ByPassing.begins_passed (by_passing : V.ByPassing passes) {t : Nat} {a : F}
-    (begins : V.Arises t a) : ∃ b, V.active t b ∧ passes t b a :=
-  match by_passing t a begins.2 with
-  | .inl before => absurd before begins.1
-  | .inr given => given
-
 /-- **Tracing a carrier back.** Under the passing premise, a formation carrying the pattern `k`
 steps after `S` carried it at `S`, or some carrier passed it across one of the `k` steps from
 `S`. -/
@@ -141,17 +133,6 @@ theorem ByPassing.trace (by_passing : V.ByPassing passes) {S : Nat} :
       | .inl start => .inl start
       | .inr ⟨j, below, passing⟩ => .inr ⟨j, Nat.lt_succ_of_lt below, passing⟩
     | .inr ⟨b, carrier, given⟩ => .inr ⟨k, Nat.lt_succ_self k, b, a, carrier, given, active⟩
-
-/-- **Under the passing premise, the pattern lasts only through passing.** A pattern present at
-every step from `T` on, no carrier carrying it at two steps `d` apart, is passed by some carrier
-across one of every `d` consecutive steps from `T` on. -/
-theorem ByPassing.passes_within (by_passing : V.ByPassing passes) {d T : Nat}
-    (present : ∀ t, T ≤ t → V.Present t) (brief : ∀ a, V.Brief d a) {S : Nat}
-    (after : T ≤ S) : ∃ j, j < d ∧ V.PassesAt passes (S + j) :=
-  match present (S + d) (Nat.le_trans after (Nat.le_add_right S d)) with
-  | ⟨a, active⟩ => match by_passing.trace active with
-    | .inl start => absurd active (brief a S start)
-    | .inr found => found
 
 /-- **Presence goes back one step.** Under the passing premise, a pattern present at `t + 1` was
 present at `t`. -/
@@ -180,22 +161,6 @@ carries the pattern is followed by no step at which any does. -/
 theorem ByPassing.empty_stays (by_passing : V.ByPassing passes) {t : Nat}
     (empty : ¬ V.Present t) {t' : Nat} (later : t ≤ t') : ¬ V.Present t' :=
   fun present => empty (by_passing.present_of_le later present)
-
-/-- **If passing stops, the pattern ends within one span.** Under the passing premise, no carrier
-carrying it at two steps `d` apart, and no carrier passing it across any step from `T` on, no
-formation carries it at any step from `T + d` on. -/
-theorem ByPassing.ends_within (by_passing : V.ByPassing passes) {d T : Nat}
-    (brief : ∀ a, V.Brief d a) (stopped : ∀ t, T ≤ t → ¬ V.PassesAt passes t) {t : Nat}
-    (later : T + d ≤ t) : ¬ V.Present t :=
-  fun ⟨a, active⟩ => match le_dest later with
-  | ⟨m, same⟩ =>
-    have carried : V.active (T + m + d) a :=
-      Eq.subst (motive := fun s => V.active s a) (same.trans (Nat.add_right_comm T d m)) active
-    match by_passing.trace carried with
-    | .inl start => brief a (T + m) start carried
-    | .inr ⟨j, _, passing⟩ =>
-      stopped (T + m + j) (Nat.le_trans (Nat.le_add_right T m) (Nat.le_add_right (T + m) j))
-        passing
 
 end Web
 
@@ -261,19 +226,6 @@ theorem stopped_brief (T n : Nat) : (stopped T).Brief 2 n :=
 /-- No carrier of the stopped relay passes the pattern across any step from `T` on. -/
 theorem stopped_quiet (T : Nat) : ∀ t, T ≤ t → ¬ (stopped T).PassesAt (passesUntil T) t :=
   fun _ after ⟨_, _, _, ⟨before, _⟩, _⟩ => Nat.lt_irrefl T (Nat.lt_of_le_of_lt after before)
-
-/-- **With passing stopped from step `T` on, the pattern ends exactly one span later.** The relay
-stopped at `T` meets every premise of `Web.ByPassing.ends_within` with `d = 2`; the pattern is
-present at every step up to `T + 1` and at none from `T + 2` on. So the bound `T + d` is
-attained. -/
-theorem stopped_relay (T : Nat) : (stopped T).ByPassing (passesUntil T) ∧
-    (∀ n, (stopped T).Brief 2 n) ∧
-    (∀ t, T ≤ t → ¬ (stopped T).PassesAt (passesUntil T) t) ∧
-    (∀ t, t ≤ T + 1 → (stopped T).Present t) ∧
-    ∀ t, T + 2 ≤ t → ¬ (stopped T).Present t :=
-  ⟨stopped_by_passing T, stopped_brief T, stopped_quiet T,
-   fun _ within => (stopped_by_passing T).present_of_le within ⟨T, Nat.le_refl T, .inr rfl⟩,
-   fun _ later => (stopped_by_passing T).ends_within (stopped_brief T) (stopped_quiet T) later⟩
 
 /-- Half of the step after an odd one is one more than half of it. -/
 theorem half_odd : ∀ t, odd t = true → Pulse.half (t + 1) = Pulse.half t + 1
@@ -344,20 +296,22 @@ formation). Nothing else is supplied.
   (相续) under the pattern's class from a carrying occurrence at every earlier step
   (`Web.ByPassing.line_back`).
 * **Derived from grammar laws.** `Web.ByPassing.passes_within` (the pattern lasts only through
-  passing) follows from a relational law stated here for every carrier and relation
-  (`«两端分则中有标»`: a line whose ends a class tells apart, every step of which keeps the
-  class or carries a mark, has a marked step on it) applied to the carrier class
-  (`Web.ByPassing.passes_within_by_line`). `Web.ByPassing.begins_passed` follows from
-  `«生于细而续于粗则异»` (a beginning under a finer class, continued under a coarser one, is an
-  alteration) (`Web.ByPassing.begins_passed_by_grammar`). An occurrence with no continuation under
-  the pattern's class ends under the carrier class, by `«亡于粗则亡于细»`: its carrier ceases
-  (`Web.ceases_of_pattern_ends`).
+  passing) and `Web.ByPassing.ends_within` (if passing stops, it ends within one span) are proved
+  from a relational law of the grammar, for every carrier and relation (`«两端分则中有标»`: a
+  line whose ends a class tells apart, every step of which keeps the class or carries a mark, has
+  a marked step on it), applied to the carrier class along the pattern's line, with activity alike
+  along it (`«线内同类»`). `Web.ByPassing.begins_passed` is proved from `«生于细而续于粗则异»` (a
+  beginning under a finer class, continued under a coarser one, is an alteration). An occurrence
+  with no continuation under the pattern's class ends under the carrier class, by
+  `«亡于粗则亡于细»`: its carrier ceases (`Web.ceases_of_pattern_ends`).
 
 Not connected: `Web.begins_within` is an instance of `Web.Covered.arises_within` and reads no
-continuation; `Web.ByPassing.ends_within`, `present_back` and `empty_stays` are read about
-presence at a step, which is not a grammar term (a step is not an occurrence). `PassesAt` counts a
-formation passing the pattern to itself, which is no alteration; so an alteration gives a passing,
-not conversely.
+continuation. `Web.ByPassing.present_back` is one application of the passing premise to presence
+at a step, with no line to read, and `Web.ByPassing.trace`'s disjunction would need deciding
+whether the carriers at its two ends are one formation; `present_earlier`, and through it
+`present_of_le` and `empty_stays`, go back by an induction over steps that is a case of closure,
+not yet derived. `PassesAt` counts a formation passing the pattern to itself, which is no
+alteration; so an alteration gives a passing, not conversely.
 -/
 
 namespace Web
@@ -487,12 +441,14 @@ theorem ByPassing.line_back (byPassing : V.ByPassing passes) {S : Nat} :
       | ⟨b, start, line⟩ => ⟨b, start, «及之传递» line
           (.one ⟨⟨rfl, .inr given⟩, ⟨fun _ => after, fun _ => carrier⟩⟩)⟩
 
-/-- **The pattern lasts only through passing, derived from the grammar.** The statement of
-`Web.ByPassing.passes_within`, proved through `ByPassing.line_back` and `«两端分则中有标»`:
-the pattern's line from step `S` to step `S + d` has ends the carrier class tells apart (no
-carrier carries at two steps `d` apart), and every step of continuation keeps the carrier class or
-is a passing, so a passing lies on it, between `S` and `S + d`. -/
-theorem ByPassing.passes_within_by_line (byPassing : V.ByPassing passes) {d T : Nat}
+/-- **Under the passing premise, the pattern lasts only through passing.** A pattern present at
+every step from `T` on, no carrier carrying it at two steps `d` apart, is passed by some carrier
+across one of every `d` consecutive steps from `T` on. From the grammar, through
+`ByPassing.line_back`, `«两端分则中有标»` and `«线内同类»`: the pattern's line from step `S` to
+step `S + d` has ends the carrier class tells apart (no carrier carries at two steps `d` apart),
+and every step of continuation keeps the carrier class or is a passing, so a passing lies on it,
+between `S` and `S + d`. -/
+theorem ByPassing.passes_within (by_passing : V.ByPassing passes) {d T : Nat}
     (present : ∀ t, T ≤ t → V.Present t) (brief : ∀ a, V.Brief d a) {S : Nat}
     (after : T ≤ S) : ∃ j, j < d ∧ V.PassesAt passes (S + j) :=
   match d, present, brief with
@@ -500,7 +456,7 @@ theorem ByPassing.passes_within_by_line (byPassing : V.ByPassing passes) {d T : 
     | ⟨a, carrying⟩ => absurd carrying (brief a S carrying)
   | k + 1, present, brief =>
     match present (S + (k + 1)) (Nat.le_trans after (Nat.le_add_right S (k + 1))) with
-    | ⟨a, carried⟩ => match byPassing.line_back carried with
+    | ⟨a, carried⟩ => match by_passing.line_back carried with
       | ⟨b, start, line⟩ =>
         have apart : ¬ V.carrierClass (S, b) (S + (k + 1), a) := fun ⟨_, same⟩ =>
           brief a S (Eq.subst (motive := fun f => V.active S f) same start) carried
@@ -530,13 +486,52 @@ theorem ByPassing.passes_within_by_line (byPassing : V.ByPassing passes) {d T : 
                ⟨u.2, v.2, carrying, given,
                 Eq.subst (motive := fun s => V.active s v.2) next (alike.mp carrying)⟩⟩
 
-/-- **Every beginning is a passing, derived from the grammar.** The statement of
-`Web.ByPassing.begins_passed`, proved through `«生于细而续于粗则异»`: a carrier's beginning is a
-beginning (生) under the carrier class, the passing premise gives it a predecessor under the
-pattern's class, so the step is an alteration (异), which is a passing. -/
-theorem ByPassing.begins_passed_by_grammar (byPassing : V.ByPassing passes) {t : Nat} {a : F}
+/-- **If passing stops, the pattern ends within one span.** Under the passing premise, no carrier
+carrying it at two steps `d` apart, and no carrier passing it across any step from `T` on, no
+formation carries it at any step from `T + d` on. From the grammar, as `ByPassing.passes_within`
+is, through `ByPassing.line_back`, `«两端分则中有标»` and `«线内同类»`: a carrier at a step from
+`T + d` on has the pattern's line back `d` steps, whose ends the carrier class tells apart, so a
+passing lies on it, from `T` on, where none is. -/
+theorem ByPassing.ends_within (by_passing : V.ByPassing passes) {d T : Nat}
+    (brief : ∀ a, V.Brief d a) (stopped : ∀ t, T ≤ t → ¬ V.PassesAt passes t) {t : Nat}
+    (later : T + d ≤ t) : ¬ V.Present t :=
+  fun ⟨a, active⟩ => match le_dest later with
+  | ⟨m, same⟩ =>
+    have carried : V.active (T + m + d) a :=
+      Eq.subst (motive := fun s => V.active s a) (same.trans (Nat.add_right_comm T d m)) active
+    match d, brief, carried with
+    | 0, brief, carried => brief a (T + m) carried carried
+    | k + 1, brief, carried =>
+      match by_passing.line_back carried with
+      | ⟨b, start, line⟩ =>
+        have apart : ¬ V.carrierClass (T + m, b) (T + m + (k + 1), a) := fun ⟨_, one⟩ =>
+          brief a (T + m) (Eq.subst (motive := fun f => V.active (T + m) f) one start) carried
+        have split : ∀ x y, «续» (continuationStep (passingContinuation passes)) V.activityClass
+            x y → V.carrierClass x y ∨ passes x.1 x.2 y.2 := fun _ _ ⟨⟨_, kind⟩, alike⟩ =>
+          match kind with
+          | .inl one => .inl ⟨alike, one⟩
+          | .inr given => .inr given
+        match «两端分则中有标» (carrierClass_class V) split line apart with
+        | ⟨u, v, ⟨⟨next, _⟩, alike⟩, given, from_, _⟩ =>
+          have reached : V.activityClass (T + m, b) u := match from_ with
+            | .inl one => Eq.subst (motive := fun w => V.activityClass (T + m, b) w) one Iff.rfl
+            | .inr line' => «线内同类» (activityClass_class V) line'
+          have carrying : V.active u.1 u.2 := reached.mp start
+          have onward : T + m ≤ u.1 := match from_ with
+            | .inl one => Nat.le_of_eq (congrArg Prod.fst one)
+            | .inr line' => Nat.le_of_lt (line_advances line')
+          stopped u.1 (Nat.le_trans (Nat.le_add_right T m) onward)
+            ⟨u.2, v.2, carrying, given,
+             Eq.subst (motive := fun s => V.active s v.2) next (alike.mp carrying)⟩
+
+/-- **Under the passing premise every beginning is a passing.** A formation that begins to carry
+the pattern across a step was given it there by a formation carrying it. From the grammar,
+through `«生于细而续于粗则异»`: a carrier's beginning is a beginning (生) under the carrier class,
+the passing premise gives it a predecessor under the pattern's class, so the step is an
+alteration (异), which is a passing. -/
+theorem ByPassing.begins_passed (by_passing : V.ByPassing passes) {t : Nat} {a : F}
     (begins : V.Arises t a) : ∃ b, V.active t b ∧ passes t b a :=
-  match byPassing_iff_hasPred.mp byPassing t a begins.2 with
+  match byPassing_iff_hasPred.mp by_passing t a begins.2 with
   | ⟨x, continues⟩ =>
     match «生于细而续于粗则异» (arises_iff_sheng_carrier (passes := passes).mp begins).2 continues with
     | ⟨⟨⟨next, kind⟩, alike⟩, apart⟩ =>
@@ -574,6 +569,19 @@ theorem fire_shape :
     ¬ «亡» (Web.continuationStep (Web.passingContinuation passesOdd)) shifted.activityClass
       (1, 0) :=
   ⟨Web.carrierClass_finer shifted, (shifted_fire 1 rfl).1, (shifted_fire 1 rfl).2.1⟩
+
+/-- **With passing stopped from step `T` on, the pattern ends exactly one span later.** The relay
+stopped at `T` meets every premise of `Web.ByPassing.ends_within` with `d = 2`; the pattern is
+present at every step up to `T + 1` and at none from `T + 2` on. So the bound `T + d` is
+attained. -/
+theorem stopped_relay (T : Nat) : (stopped T).ByPassing (passesUntil T) ∧
+    (∀ n, (stopped T).Brief 2 n) ∧
+    (∀ t, T ≤ t → ¬ (stopped T).PassesAt (passesUntil T) t) ∧
+    (∀ t, t ≤ T + 1 → (stopped T).Present t) ∧
+    ∀ t, T + 2 ≤ t → ¬ (stopped T).Present t :=
+  ⟨stopped_by_passing T, stopped_brief T, stopped_quiet T,
+   fun _ within => (stopped_by_passing T).present_of_le within ⟨T, Nat.le_refl T, .inr rfl⟩,
+   fun _ later => (stopped_by_passing T).ends_within (stopped_brief T) (stopped_quiet T) later⟩
 
 end PatternRelay
 

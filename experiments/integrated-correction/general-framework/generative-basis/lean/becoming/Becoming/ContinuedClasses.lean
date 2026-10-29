@@ -38,7 +38,9 @@ them.
   undermining as named (`metAboveAlong_itself_iff`, `underminingAlong_itself_iff`); both are
   unchanged by every re-identification carrying the continuation (`metAboveAlong_reidentify`,
   `underminingAlong_reidentify`); and more links never remove undermining or consuming, nor fewer
-  renewing (`underminingAlong_mono`, `consumingAlong_mono`, `renewingAlong_mono`).
+  renewing (`underminingAlong_mono`, `consumingAlong_mono`, `renewingAlong_mono`), the last two
+  through more links making more continuing (`Continuing.mono`), which the last section proves
+  from the grammar's monotonicity of reach.
 * **Identity where standings coincide.** In a balanced world, where `d` stands after a step as `c`
   does, a balanced naming continues `c` as `d` (`World.continues_as_alike`); every record at each
   step is kept by any re-identification, so no record of the world decides between the two, and
@@ -355,12 +357,6 @@ theorem Linked.mono {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f 
   | _, _, _, _, .here t g => .here t g
   | _, _, _, _, .next step rest => .next (within _ _ _ step) (Linked.mono within rest)
 
-theorem Continuing.mono {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f → S t g f) :
-    ∀ {t : Nat} {g : F} {u : Nat} {h : F}, W.Continuing R t g u h → W.Continuing S t g u h
-  | _, _, _, _, .here t g => .here t g
-  | _, _, _, _, .next before step after rest =>
-    .next before (within _ _ _ step) after (Continuing.mono within rest)
-
 /-- **More links never remove undermining.** Where every step `R` relates `S` relates, what
 undermines along `R` undermines along `S`. -/
 theorem underminingAlong_mono {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f → S t g f)
@@ -369,16 +365,6 @@ theorem underminingAlong_mono {S : Nat → F → F → Prop} (within : ∀ t g f
     ⟨c, drawn, g, depends,
      ⟨s, h, Linked.mono (fun _ _ _ ⟨step, before, after⟩ => ⟨within _ _ _ step, before, after⟩) linked,
       held, met, above⟩, below⟩
-
-/-- More links never remove consuming. -/
-theorem consumingAlong_mono {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f → S t g f)
-    {t : Nat} {g : F} : W.ConsumingAlong R t g → W.ConsumingAlong S t g
-  | ⟨u, h, c, continuing, drawn, consumed⟩ => ⟨u, h, c, Continuing.mono within continuing, drawn, consumed⟩
-
-/-- Fewer links never remove renewing. -/
-theorem renewingAlong_mono {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f → S t g f)
-    {t : Nat} {g : F} (renewing : W.RenewingAlong S t g) : W.RenewingAlong R t g :=
-  fun u h continuing => renewing u h (Continuing.mono within continuing)
 
 /-! ### The name case -/
 
@@ -657,7 +643,8 @@ continuation `R`, `Web.continuationStep R`), the notions of this module are the 
   (`continuing_iff_line`). So renewing along a continuation is renewing at every occurrence of the
   line, and consuming along it is drawing on a consumed condition at some occurrence of it
   (`renewingAlong_iff_line`, `consumingAlong_iff_line`). That more links make more continuing is
-  the monotonicity of reach (`Continuing.mono_by_reach`, from `«及之单调»`).
+  the monotonicity of reach (`Continuing.mono`, from `«及之单调»`); through it more links never
+  remove consuming, nor fewer renewing (`consumingAlong_mono`, `renewingAlong_mono`).
 * **Links are lines under the one.** `Linked R`, with nothing asked of activity, is a line under
   the one class (`«一»`) (`linked_iff_line`), where continuation is 缘 itself (`«一之续»`).
 * **Tenure is a line under the dependence's class.** Links across which a dependence on `c` holds,
@@ -719,16 +706,27 @@ theorem continuing_iff_line {t : Nat} {g : F} {u : Nat} {h : F} :
     | .inl same => Eq.subst (motive := fun y => W.Continuing R t g y.1 y.2) same (.here t g)
     | .inr ⟨before, line⟩ => line_continuing line before⟩
 
-/-- **More links, more continuing**, derived from the monotonicity of reach (`«及之单调»`). -/
-theorem Continuing.mono_by_reach {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f → S t g f)
-    {t : Nat} {g : F} {u : Nat} {h : F} (continuing : W.Continuing R t g u h) :
-    W.Continuing S t g u h :=
-  match continuing_iff_line.mp continuing with
+/-- **More links, more continuing**, from the monotonicity of reach (`«及之单调»`): a continuing
+is the occurrence itself or a line under activity (`continuing_iff_line`), and a line along the
+steps `R` relates is a line along the steps of any `S` relating what `R` relates. -/
+theorem Continuing.mono {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f → S t g f) :
+    ∀ {t : Nat} {g : F} {u : Nat} {h : F}, W.Continuing R t g u h → W.Continuing S t g u h :=
+  fun continuing => match continuing_iff_line.mp continuing with
   | .inl same => continuing_iff_line.mpr (.inl same)
   | .inr ⟨before, line⟩ => continuing_iff_line.mpr (.inr ⟨before,
       «及之单调» (R := «续» (continuationStep R) W.activityClass)
         (S := «续» (continuationStep S) W.activityClass)
         (fun _ _ k => ⟨⟨k.1.1, within _ _ _ k.1.2⟩, k.2⟩) _ _ line⟩)
+
+/-- More links never remove consuming. -/
+theorem consumingAlong_mono {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f → S t g f)
+    {t : Nat} {g : F} : W.ConsumingAlong R t g → W.ConsumingAlong S t g
+  | ⟨u, h, c, continuing, drawn, consumed⟩ => ⟨u, h, c, Continuing.mono within continuing, drawn, consumed⟩
+
+/-- Fewer links never remove renewing. -/
+theorem renewingAlong_mono {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f → S t g f)
+    {t : Nat} {g : F} (renewing : W.RenewingAlong S t g) : W.RenewingAlong R t g :=
+  fun u h continuing => renewing u h (Continuing.mono within continuing)
 
 /-- **Renewing along a continuation is renewing along its line**: every relation taken part in
 at the occurrence or at any occurrence of its line under activity is renewed. -/

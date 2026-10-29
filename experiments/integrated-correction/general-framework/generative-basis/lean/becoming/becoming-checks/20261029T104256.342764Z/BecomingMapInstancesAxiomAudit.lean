@@ -1,0 +1,27 @@
+import Becoming.MapInstances
+#print axioms Becoming.Map.outside_of_not_endless
+#print axioms Becoming.Web.reached_later
+#print axioms Becoming.Web.active_along_line
+#print axioms Becoming.Web.steps_advance
+#print axioms Becoming.Web.reaches_onward
+#print axioms Becoming.Web.ends_or_reaches
+#print axioms Becoming.Web.carries_iff
+#print axioms Becoming.Web.passing_carries_iff
+#print axioms Becoming.Web.generation_renews_late
+#print axioms Becoming.Web.generation_arises_late
+#print axioms Becoming.Web.keeping_of_carried_on
+#print axioms Becoming.Web.itself_carries_nothing
+#print axioms Becoming.Web.itself_not_generation
+#print axioms Becoming.Web.itself_keeps
+#print axioms Becoming.Web.always_keeps
+#print axioms Becoming.Web.not_endless_of_gone
+#print axioms Becoming.Web.degenerates_of_gone
+#print axioms Becoming.Web.consumed_held_not_endless
+#print axioms Becoming.Web.family_excess_not_endless
+#print axioms Becoming.Web.stopped_not_endless
+#print axioms Becoming.Map.shifted_carry
+#print axioms Becoming.Map.shifted_pass
+#print axioms Becoming.Map.shifted_generates
+#print axioms Becoming.Map.relay_after_two
+#print axioms Becoming.Map.relay_renews_and_ends
+#print axioms Becoming.Map.renewal_undecided

@@ -1,0 +1,24 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/ou3f-laws/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/derivations/tree",
+  "modules": 39,
+  "ran": [
+    "Becoming.ContinuedClasses",
+    "Becoming.PatternPassing",
+    "BecomingContinuedClassesAxiomAudit",
+    "BecomingPatternPassingAxiomAudit"
+  ],
+  "reused": 37,
+  "unclean": [],
+  "audits": {
+    "Becoming.ContinuedClasses": {
+      "theorems": 73,
+      "declarations": 98,
+      "with_axioms": {}
+    },
+    "Becoming.PatternPassing": {
+      "theorems": 32,
+      "declarations": 45,
+      "with_axioms": {}
+    }
+  }
+}
