@@ -1,0 +1,16 @@
+Becoming.Web.Lineage.unique | induction marks: [Nat.brecOn, Nat.below] | reaches NOT ['Becoming.«迭之定»']
+Becoming.Web.Lineage.origin | induction marks: [Nat.brecOn, Nat.below] | reaches NOT ['Becoming.«迭之定前»']
+Becoming.Web.Lineage.split | induction marks: [Nat.brecOn, Nat.below] | reaches NOT ['Becoming.«迭之分»']
+Becoming.Web.Lineage.through | induction marks: [Nat.brecOn, Nat.below] | reaches NOT ['Becoming.«迭之分»', 'Becoming.Web.Lineage.split']
+Becoming.Web.Lineage.onward | induction marks: [Nat.brecOn, Nat.below] | reaches NOT ['Becoming.«或有后则或迭»']
+Becoming.Web.Lineage.back | induction marks: [Nat.brecOn, Nat.below] | reaches NOT ['Becoming.«或有后则或迭»', 'Becoming.«迭之逆»']
+Becoming.Web.Lineage.line | induction marks: [Nat.brecOn, Nat.below] | reaches NOT ['Becoming.«迭则及»', 'Becoming.«及之单调»']
+Becoming.Web.line_lineage | induction marks: [Becoming.«及».rec] | reaches NOT ['Becoming.«闭之及»', 'Becoming.«及即迭»']
+Becoming.Web.Lineage.ends | induction marks: [] | reaches NOT ['Becoming.«迭之定»', 'Becoming.«迭之分»']
+Becoming.Web.lineages_apart | induction marks: [] | reaches NOT ['Becoming.«迭之定前»', 'Becoming.«迭之分»']
+Becoming.Web.lineage_iff_line | induction marks: [] | reaches NOT ['Becoming.«迭则及»', 'Becoming.«闭之及»']
+Becoming.Web.steps_iff_lineage | induction marks (kept): MISSING
+Becoming.Web.lineage_of_steps | induction marks (kept): MISSING
+Becoming.Web.steps_advance | induction marks (kept): MISSING
+Becoming.Web.steps_start_active | induction marks (kept): MISSING
+UNEXPECTED: ['Becoming.Web.Lineage.unique', 'Becoming.Web.Lineage.origin', 'Becoming.Web.Lineage.split', 'Becoming.Web.Lineage.through', 'Becoming.Web.Lineage.onward', 'Becoming.Web.Lineage.back', 'Becoming.Web.Lineage.line', 'Becoming.Web.line_lineage', 'Becoming.Web.Lineage.ends', 'Becoming.Web.lineages_apart', 'Becoming.Web.lineage_iff_line']

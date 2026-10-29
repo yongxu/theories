@@ -1,0 +1,5 @@
+Becoming.Web.not_not_arisingFrom_covered reaches [Becoming.Web.Lineage.ends, Becoming.Web.steps_advance, Becoming.Web.activityFrom, Becoming.Web.Lineage.split, Becoming.Web.Lineage.unique, Becoming.Web.Lineage, Becoming.Web.Lineage.through, Becoming.Web.Lineage.back, Becoming.Web.steps_iff_lineage, Becoming.Web.steps_start_active]
+Becoming.Web.ceasingFrom_not_stopping_covered reaches [Becoming.Web.activityFrom, Becoming.Web.Lineage.origin, Becoming.Web.Lineage.split, Becoming.Web.lineages_apart, Becoming.Web.Lineage.onward, Becoming.Web.Lineage, Becoming.Web.steps_iff_lineage]
+Becoming.Web.generation_arises_late reaches [Becoming.Web.steps_advance]
+Becoming.Web.Lineage.ends reaches [Becoming.Web.Lineage.ends, Becoming.Web.activityFrom, Becoming.Web.Lineage.split, Becoming.Web.Lineage.unique, Becoming.Web.Lineage, Becoming.Web.Lineage.through, Becoming.Web.steps_iff_lineage]
+checked 217 constants (the first four are controls, not in COVERAGE); not constants: []

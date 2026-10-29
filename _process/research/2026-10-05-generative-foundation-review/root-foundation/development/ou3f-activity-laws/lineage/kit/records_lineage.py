@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """OU3f, lineage laws: extend master-laws-on-the-grammar. The last group (the models' laws proved from the master laws)
-gains the six lineage laws of Becoming.Identity, read through the grammar's steps of the continuation within activity;
-a proof reference and binding for Identity (the bridge, steps_advance moved there, and the six); MapInstances' reference
+gains the six lineage laws of Becoming.Identity and the two readings of a lineage as a line, read through the grammar's steps
+of the continuation within activity; a proof reference and binding for Identity (the bridge, steps_advance moved there,
+and the eight); MapInstances' reference
 drops steps_advance; the does-not-show item on the lineage laws goes; the design, the review and the receipt; the
 validation scope within its cap; a history note. Anchors are found by their text, not their index, and each is asserted.
 usage (from the checkout root, after the checker): python3 -B <kit>/records_lineage.py RECEIPT N"""
@@ -17,8 +18,9 @@ DEV = '_process/research/2026-10-05-generative-foundation-review/root-foundation
 RECEIPT = f'{PKG}/becoming-checks/{RECEIPT_ID}/verification.json'
 P = ROOT / 'theories/becoming/results/records/master-laws-on-the-grammar.json'
 W = 'Becoming.Web.'
-DERIVED = [W + 'Lineage.' + n for n in ('unique', 'origin', 'split', 'through', 'onward', 'back')]
-BRIDGE = [W + 'activityFrom', W + 'steps_advance', W + 'steps_iff_lineage', W + 'steps_start_active']
+DERIVED = [W + 'Lineage.' + n for n in ('unique', 'origin', 'split', 'through', 'onward', 'back', 'line')] + [W + 'line_lineage']
+BRIDGE = [W + 'activityOnward', W + 'steps_advance', W + 'lineage_of_steps', W + 'steps_iff_lineage',
+          W + 'steps_start_active']
 IDENTITY = f'{PKG}/Becoming/Identity.lean'
 MAPS = f'{PKG}/Becoming/MapInstances.lean'
 
@@ -46,11 +48,12 @@ last = lasts[0]
 END_EN, END_ZH = "and a carrier and the pattern's line traced back.", '以及载者与样式之线之回溯。'
 assert last['en'].endswith(END_EN) and last['zh'].endswith(END_ZH), 'the last group has changed; re-read it'
 last['en'] = last['en'][:-1] + ('; and the lineage laws under a continuation, a lineage read as the grammar\'s steps of the '
-                                'continuation within activity: reaching one formation at each step without splits and '
-                                'coming from one without merges, splitting as its steps split, and going on where nothing '
-                                'ceases and back where nothing arises, as far as can be refuted.')
-last['zh'] = last['zh'][:-1] + ('；又续之下之谱系诸律，谱系读为活跃之内续之文法之步：无分则每步所及唯一，无合则所出唯一，'
-                                '随其步之分而分，无止则或续往，无生则或回溯。')
+                                'continuation within activity: reaching at most one formation at each step without splits '
+                                'and starting from one without merges, splitting as its steps split, going on where nothing '
+                                'ceases and back where nothing arises, as far as can be refuted, and a lineage being a line '
+                                'under activity and a line from an active occurrence a lineage.')
+last['zh'] = last['zh'][:-1] + ('；又续之下之谱系诸律，谱系读为活跃之内续之文法之步：无分则每步所及至多一者，无合则所出唯一，'
+                                '随其步之分而分，无止则或续往，无生则或回溯；谱系即活跃之下之线，自活跃者出之线即谱系。')
 assert W + 'steps_advance' in last['declarations']
 last['declarations'] = sorted(set(last['declarations']) | set(DERIVED))
 
@@ -88,12 +91,14 @@ assert len(vs['en']) <= 600, len(vs['en'])
 r['history'].append({
     'en': f"29 October 2026 (OU3f, study section {N}): the lineage laws of Becoming.Identity proved from the laws of steps "
           f"(Web.Lineage.unique from «迭之定», origin from «迭之定前», split and through from «迭之分», onward and back from "
-          f"«或有后则或迭», back through «迭之逆»), a lineage read as the grammar's steps of the continuation within activity "
-          f"(Web.steps_iff_lineage), statements unchanged; Web.steps_advance moved from MapInstances to Identity, unchanged; "
-          f"the does-not-show item on the lineage laws dropped.",
+          f"«或有后则或迭», back through «迭之逆»), and Web.Lineage.line and Web.line_lineage from «迭则及» and from «闭之及» "
+          f"with «及即迭», a lineage read as the grammar's steps of the continuation within activity "
+          f"(Web.steps_iff_lineage), statements unchanged; Web.Lineage.cons retired; Web.steps_advance moved from "
+          f"MapInstances to Identity, unchanged; the does-not-show item on the lineage laws dropped.",
     'zh': f"2026年10月29日（OU3f，研究第 {N} 节）：Becoming.Identity 之谱系诸律由计步之律证出（Web.Lineage.unique 出自「迭之定」，"
           f"origin 出自「迭之定前」，split 与 through 出自「迭之分」，onward 与 back 出自「或有后则或迭」，back 经「迭之逆」），"
-          f"谱系读为活跃之内续之文法之步（Web.steps_iff_lineage），陈述不变；Web.steps_advance 自 MapInstances 移至 Identity，不变；"
+          f"及 Web.Lineage.line 与 Web.line_lineage 出自「迭则及」及「闭之及」与「及即迭」，谱系读为活跃之内续之文法之步"
+          f"（Web.steps_iff_lineage），陈述不变；Web.Lineage.cons 退役；Web.steps_advance 自 MapInstances 移至 Identity，不变；"
           f"关于谱系诸律之「未示」一条删去。"})
 P.write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print('record extended; validation scope', len(vs['en']), 'chars')

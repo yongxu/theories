@@ -16,7 +16,9 @@ AI-written working notes for board item HE, claimed 29 October 2026 at the coord
      - the record what-a-line-holds-and-a-regularity-takes-in, 8: its two law lines, and a history line dated by the day the script runs
    - The glossary is not edited. Finding 18 only cites its term "alike occurrence".
    - If an edit stops, it goes to the script's owner (session "Project progress and significance") before anything is changed.
-2. **GrammarLaws' "What is not shown" sentence.** It names the lineage laws as OU3f's next part. Once the lineage part lands, the sentence says they are proved from the laws of steps in `Becoming.Identity`.
+2. **GrammarLaws' module doc on the lineage laws, two places.**
+   - Its *What is not shown* clause names the lineage laws as OU3f's next part, and goes.
+   - Its sentence "Three of the models' step-indexed laws are proved from the laws of steps counted: …" (the *Finite runs: steps counted* bullet) gains the lineage laws of `Becoming.Identity`: `Web.Lineage.unique`, `origin`, `split`, `through`, `onward` and `back`, from «迭之定», «迭之定前», «迭之分» and «或有后则或迭» with «迭之逆», read through the steps of the continuation within activity (`Web.steps_iff_lineage`). The lineage review asked for this. Until HE lands, OU3f's board row says GrammarLaws' doc lags.
 3. **`kept_onward` moves into GrammarLaws.** It goes from `Becoming.KeptOnward` to its home beside `«线则所闭»` (OU3f's closure design, condition 3), and the leaf is retired. That retirement touches several places:
    - the six modules' imports;
    - the checker's core list and scope;

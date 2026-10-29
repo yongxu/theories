@@ -40,6 +40,7 @@ edit(root, """  ceasing recurring needs arising recurring; without merges, under
 edit(root, """  and `Web.reaches_onward` in `Becoming.MapInstances`, an unending line's index advancing with its
   steps (board items OU3d, OU3e, OU3f).""", """  and `Web.reaches_onward` in `Becoming.MapInstances`, an unending line's index advancing with its
   steps; and the lineage laws in `Becoming.Identity`, a lineage read as steps of the continuation
-  within activity (`Web.Lineage.unique`, `origin`, `split`, `through`, `onward`, `back`; board
-  items OU3d, OU3e, OU3f).""")
+  within activity (`Web.Lineage.unique`, `origin`, `split`, `through`, `onward`, `back`, and a
+  lineage as a line both ways, `Web.Lineage.line`, `Web.line_lineage`; board items OU3d, OU3e,
+  OU3f).""")
 print('integrated: Identity and MapInstances copied; the root module\'s Identity and GrammarLaws bullets')

@@ -52,6 +52,16 @@ elif sys.argv[1] == 'land':
     assert len(cells) == 5, len(cells)
     cells[2] = state_text
     board[rows[0]] = ' | '.join(cells)
+    # HE's item 2 widened, as the lineage review asked: both places in GrammarLaws' module doc.
+    he = [i for i, line in enumerate(board) if line.startswith('| **HE: ')]
+    assert len(he) == 1, he
+    old2 = ('(2) GrammarLaws\' "What is not shown" sentence naming the lineage laws as OU3f\'s next part, corrected '
+            'once OU3f\'s lineage part lands;')
+    new2 = ('(2) GrammarLaws\' module doc on the lineage laws, landed by OU3f\'s lineage part: its "What is not shown" '
+            'clause naming them as OU3f\'s next part goes, and its sentence on the models\' step-indexed laws proved from '
+            'the laws of steps counted gains them (the lineage review);')
+    assert board[he[0]].count(old2) == 1, 'HE\'s item 2 has changed; re-read it'
+    board[he[0]] = board[he[0]].replace(old2, new2)
 else:
     raise SystemExit(__doc__)
 BOARD.write_text('\n'.join(board), encoding='utf-8')

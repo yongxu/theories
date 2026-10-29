@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """OU3f, lineage laws: compare the printed statements (`#check @name`, the checker's signature audit) of every declaration
 of Identity and MapInstances between main's receipt (the one HEAD holds) and the landing's (or a rehearsal's) receipt.
-Expected: every old declaration prints its old statement and no definition is rewritten or gone; Web.steps_advance moves
-from MapInstances to Identity printing the same statement; Identity adds the theorems Web.steps_iff_lineage and
-Web.steps_start_active and the definition Web.activityFrom; nothing else is added or gone.
+Expected: every remaining declaration prints its old statement and no definition is rewritten or gone; Web.steps_advance
+moves from MapInstances to Identity printing the same statement; Identity adds the theorems Web.lineage_of_steps,
+Web.steps_iff_lineage and Web.steps_start_active and the definition Web.activityOnward; Web.Lineage.cons is gone (the
+bridge read at one more first step, its one consumer re-proved); nothing else is added or gone.
 OU3b's signatures_ou3b.py supplies the log reading.
 usage (from the checkout root, after the checker): python3 -B <kit>/signatures_lineage.py [RECEIPT_ID | --dir RUN_DIR]
 (--dir reads a rehearsal's receipt, RUN_DIR/<id>/verification.json, from outside the repository.)"""
@@ -20,8 +21,9 @@ spec.loader.exec_module(s3b)
 PKG = s3b.PKG
 CHANGED = ('Identity', 'MapInstances')
 MOVED = {'Becoming.Web.steps_advance': ('MapInstances', 'Identity')}
-ADDED = {'Becoming.Web.steps_iff_lineage', 'Becoming.Web.steps_start_active'}
-ADDED_DEFS = {'Becoming.Web.activityFrom'}
+ADDED = {'Becoming.Web.lineage_of_steps', 'Becoming.Web.steps_iff_lineage', 'Becoming.Web.steps_start_active'}
+ADDED_DEFS = {'Becoming.Web.activityOnward'}
+GONE = {'Becoming.Web.Lineage.cons'}
 
 if len(sys.argv) > 2 and sys.argv[1] == '--dir':
     runs = sorted(p for p in Path(sys.argv[2]).iterdir() if (p / 'verification.json').exists())
@@ -54,14 +56,14 @@ report = {'old_receipt': old_r['utc'], 'new_receipt': new_r['utc'], 'declaration
 print(json.dumps(report, indent=1, ensure_ascii=False))
 for n in added:
     print('+++', new[n][:300])
-bad = (changed or gone or set(added) ^ ADDED or rewritten or report['definitions_gone']
+bad = (changed or set(gone) ^ GONE or set(added) ^ ADDED or rewritten or report['definitions_gone']
        or set(report['definitions_added']) ^ ADDED_DEFS
        or {n: tuple(v) for n, v in report['moved'].items()} != MOVED)
 for m in new_r['modules']:
     if m['module'] in ('Becoming.' + c for c in CHANGED):
         assert not any(m['axiom_dependencies'].values()), (m['module'], m['axiom_dependencies'])
         print(m['module'], m['theorems'], 'theorems in', len(m['declarations']), 'declarations, axiom report empty')
-print('every statement of Identity and MapInstances unchanged; moved:', report['moved'], '; new:', added,
+print('every remaining statement of Identity and MapInstances unchanged; moved:', report['moved'], '; gone:', gone, '; new:', added,
       '; new definitions:', report['definitions_added'])
 print('OK' if not bad else f'UNEXPECTED: {bad}')
 sys.exit(1 if bad else 0)
