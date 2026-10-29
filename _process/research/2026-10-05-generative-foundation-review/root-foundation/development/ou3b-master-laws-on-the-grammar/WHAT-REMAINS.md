@@ -166,7 +166,7 @@ The condition and C stay named premises, and the free predicate stays the genera
 **Next, in order:**
 
 1. **U2** (gate open since WRP landed): the 13 definitional or representational rows and the 11 laws of their models and single applications. Each is stated as the grammar reading it is, or at the World's or a process's grammar model through the transport, and counted as a representation (change 1). It goes module by module with each module's owner. A design comes first, with one independent review. Offered to WRT's and WRP's designer.
-2. **«保之像» beside «像» in GrammarLaws** (rule 9; WRP2's review). Preserving along a map is the image lying within. Mechanism's `factors_image` and `Image.least` become its cases, and that changes Mechanism's proofs, which needs Mechanism's owner or rule 3's fallback. Until then it stays in GrammarTransport, where WRP2 put it, with nothing duplicated.
+2. **«保之像» beside «像» in GrammarLaws** (rule 9; WRP2's review; U2's design, §6). Preserving along a map is the image lying within. Mechanism's `factors_image` and `Image.least` become its cases, statements and names unchanged; U2's scratch proves both from «保之像». Mechanism names no owner, so by rule 3's fallback OU's owner decides: yes. GrammarTransport's owner agrees to the removal. GrammarLaws has 322 dependents among the package's 342 modules, so the move goes on HE's list as its sixth edit rather than costing a second near-full rebuild; HE's owner adds it to the list. Until HE lands, «保之像» stays in GrammarTransport, where WRP2 put it, with nothing duplicated.
 3. **OU3f's lineage laws** (fork 1).
 4. **U3's Lean items 1 and 2**, once its documents land; **GW1–GW5** on GW's line.
 
