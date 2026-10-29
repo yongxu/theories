@@ -15,11 +15,11 @@
 2. Under balance, no formation takes part and takes more than is given to the condition at each of level + 1 steps from any step. (`Becoming.Flow.beyond_given_bounded`)
    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. Under balance, a formation that, while active, takes part with a take more than now, from a condition given at most B at each step, is not active at each of B + 1 + (level + 1) steps, the level read B + 1 steps on; it does not stay active, and where its activity does not resume once it stops it is inactive from then on. No need or dependence is supplied. (`Becoming.Flow.seeking_bounded`, `Becoming.Flow.seeking_not_continues`, `Becoming.Flow.seeking_ends`)
-   - *Master laws, by Lean dependency:* balance; its declarations reach the grammar.
+   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 4. Where renewal depends on what it renews and the seeker stays active while the condition is at least m, some step of that window finds the level below m, and from then on every formation depending on the condition at a need of at least m is inactive, the renewers included. (`Becoming.all_or_below`, `Becoming.Flow.seeking_exhausts`)
    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Of a renewer giving two units across each step and a taker whose take rises by one at each step: the taker takes all that is given from step one and is inactive from step four, which the law also gives, while the renewer is active at every step; in Alone the taker takes all that is given at every step without its take rising and is active at every step. (`Becoming.Seeker.level`, `Becoming.Seeker.present`, `Becoming.Seeker.flow`, `Becoming.Seeker.web`, `Becoming.Seeker.balances`, `Becoming.Seeker.bounded`, `Becoming.Seeker.level_pos`, `Becoming.Seeker.dependent`, `Becoming.Seeker.present_first`, `Becoming.Seeker.seeks`, `Becoming.Seeker.lasting`, `Becoming.Seeker.takes_all`, `Becoming.Seeker.ends`, `Becoming.Seeker.ends_by_law`, `Becoming.Seeker.course`, `Becoming.Alone.takes_all`)
-   - *Master laws, by Lean dependency:* balance; its declarations reach the grammar.
+   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

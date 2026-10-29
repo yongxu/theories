@@ -1,0 +1,26 @@
+Becoming/ShownOrder.lean:97:8: warning: unused variable `y`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/ShownOrder.lean:275:46: warning: unused variable `a`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/tree",
+  "modules": 2,
+  "ran": [
+    "Becoming.ShownOrder",
+    "BecomingShownOrderAxiomAudit"
+  ],
+  "reused": 1,
+  "unclean": [
+    "Becoming.ShownOrder"
+  ],
+  "audits": {
+    "Becoming.ShownOrder": {
+      "theorems": 20,
+      "declarations": 27,
+      "with_axioms": {}
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@Becoming.Learning.free_lumped : ∀ {I : Type u_1} {V : Type u_2} {K : Type u_3} {π : I → K} {D : I → Prop} {x : I}
+  [inLump : (i : I) → Decidable (π i = π x)],
+  (∀ (d : I), D d → π d ≠ π x) → Becoming.Learning.Free (Becoming.Learning.Lumped π) D x
+@Becoming.Learning.twin_selected : ∀ {I : Type u_1} {V : Type u_2} {K : Type u_3} {π : I → K} {R : I → Prop} {x : I}
+  [(i : I) → Decidable (π i = π x)],
+  (∀ (d : I), R d → π d ≠ π x) →
+    ∀ {select : (I → V) → Prop},
+      Becoming.Learning.Training.Through (Becoming.Learning.Training.AgreeOn R) select →
+        ∀ {g : I → V},
+          Becoming.Learning.Lumped π g →
+            select g →
+              ∀ (v : V),
+                ∃ h, Becoming.Learning.Lumped π h ∧ select h ∧ Becoming.Learning.Training.AgreeOn R h g ∧ h x = v
+@Becoming.Learning.determines_iff_not_not : ∀ {P : Prop},
+  Becoming.Learning.Determines (Becoming.Learning.Lumped fun x => ()) (fun x => P) () ↔ ¬¬P
+@Becoming.Learning.state_apart_of_acts_apart : ∀ {I : Type u_1} {K : Type u_3} {M V : Type u_2} {π : I → K}
+  {state : K → M} {act : M → V} {i j : I}, act (state (π i)) ≠ act (state (π j)) → state (π i) ≠ state (π j)
+@Becoming.Learning.coupling_apart_of_state_apart : ∀ {I : Type u_1} {K : Type u_3} {M : Type u_2} {π : I → K}
+  {state : K → M} {i j : I}, state (π i) ≠ state (π j) → π i ≠ π j
+@Becoming.Learning.Cue.seen_twin : ∀ {select : (Becoming.Learning.Cue.Occasion → Bool) → Prop},
+  Becoming.Learning.Training.Through (Becoming.Learning.Training.AgreeOn Becoming.Learning.Cue.read) select →
+    select Becoming.Learning.Cue.contentAct →
+      ∃ h,
+        Becoming.Learning.Lumped (fun i => i) h ∧
+          select h ∧
+            Becoming.Learning.Training.AgreeOn Becoming.Learning.Cue.read h Becoming.Learning.Cue.contentAct ∧
+              h (false, true) = false
+Becoming.Learning.Cue.unseen_fixed : Becoming.Learning.Determines (Becoming.Learning.Lumped fun i => i.snd)
+  Becoming.Learning.Cue.read (false, true)
+Becoming.Learning.Cue.apart_with_content_alike : (true, true) ≠ (false, true) ∧
+  Becoming.Learning.Cue.contentAct (true, true) = Becoming.Learning.Cue.contentAct (false, true)

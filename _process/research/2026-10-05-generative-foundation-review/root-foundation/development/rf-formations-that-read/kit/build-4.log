@@ -1,0 +1,66 @@
+Becoming/ShownOrder.lean:214:8: error: Application type mismatch: The argument
+  none
+has type
+  Option ?m.62
+of sort `Type ?u.1393.162` but is expected to have type
+  «无环» R
+of sort `Prop` in the application
+  And.intro none
+Becoming/ShownOrder.lean:357:4: error: expected '{' or indented tactic sequence
+Becoming/ShownOrder.lean:356:16: error: unsolved goals
+h : aboveFirst Alt.first Alt.first = true
+a : ?m.85 h
+b : ?m.86 h a
+c : ?m.87 h a b
+⊢ ?m.88 h a b c
+Becoming/ShownOrder.lean:356:16: error: unsolved goals
+h : aboveFirst Alt.second Alt.second = true
+a : ?m.85 h
+b : ?m.86 h a
+c : ?m.87 h a b
+⊢ ?m.88 h a b c
+Becoming/ShownOrder.lean:356:16: error: unsolved goals
+h : aboveFirst Alt.third Alt.third = true
+a : ?m.85 h
+b : ?m.86 h a
+c : ?m.87 h a b
+⊢ ?m.88 h a b c
+Becoming/ShownOrder.lean:368:4: error: expected '{' or indented tactic sequence
+Becoming/ShownOrder.lean:367:16: error: unsolved goals
+h : aboveThird Alt.first Alt.first = true
+a : ?m.85 h
+b : ?m.86 h a
+c : ?m.87 h a b
+⊢ ?m.88 h a b c
+Becoming/ShownOrder.lean:367:16: error: unsolved goals
+h : aboveThird Alt.second Alt.second = true
+a : ?m.85 h
+b : ?m.86 h a
+c : ?m.87 h a b
+⊢ ?m.88 h a b c
+Becoming/ShownOrder.lean:367:16: error: unsolved goals
+h : aboveThird Alt.third Alt.third = true
+a : ?m.85 h
+b : ?m.86 h a
+c : ?m.87 h a b
+⊢ ?m.88 h a b c
+Becoming/ShownOrder.lean:378:2: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ShownOrder.lean:384:6: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.first` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `Lean.Parser.Tactic.first`
+  [apply] `Alt.first`
+  [apply] `Lean.Parser.Tactic.Conv.first`
+  [apply] `Lean.Parser.Tactic.Grind.first`
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/tree",
+  "modules": 2,
+  "ran": [
+    "Becoming.ShownOrder"
+  ],
+  "reused": 1,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.ShownOrder"
+}

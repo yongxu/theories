@@ -1,0 +1,154 @@
+python3 -B tools/research/research.py links
+{
+  "files_checked": 1759,
+  "links_checked": 84735,
+  "broken": 19,
+  "broken_by_kind": {
+    "missing-path": 19
+  },
+  "broken_by_role": {
+    "live": 19
+  },
+  "by_directory": {
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence": 19
+  },
+  "list": [
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 9,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean:85",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 49,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean:830",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 83,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean:152",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 83,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean:320",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 83,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCourse.lean:129",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 111,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WitnessRefinementRuns.lean:265",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 117,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean:337",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 117,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Diagonal.lean:76",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 133,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean:191",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 134,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean:515",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 136,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean:128",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 139,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean:80",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 140,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Training.lean:349",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 146,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean:353",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 160,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean:202",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 179,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean:135",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 191,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean:590",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 193,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean:537",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+      "line": 206,
+      "target": "../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean:681",
+      "kind": "missing-path",
+      "role": "live"
+    }
+  ],
+  "not_in_repository": [],
+  "scope": "Relative links and #anchors in live and generated Markdown (paths.py roles); history, evidence, sources and scratch are frozen and not checked. Paths must match tracked or untracked files exactly. Targets inside a submodule or excluded by .gitignore are listed under not_in_repository, not counted."
+}
+make: *** [research-links] Error 1
+links exit 2

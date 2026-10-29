@@ -41,13 +41,13 @@
 16. Counting transfers needs only a least loss at each size; counting what relata gain, and bounding the amount exchanged, needs more. (`Becoming.growth_needs_proportion`, `Becoming.throughput_needs_proportion`)
     - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 17. Without any one of these premises change can continue without end; the witnesses are each balanced at a unit splitting without end and dissipative. Asymptote, losing all it takes and so dissipative in every proportion, is taken from without end exactly where the unit splits without end, and does not balance at the fixed unit. (`Becoming.rest_needs_quantum`, `Becoming.Asymptote.exchange_recurs_iff`, `Becoming.Asymptote.not_balanced`)
-    - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
+    - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 18. Circulation exchanges one whole unit of step 0 at every step, every step enclosed around what stands, losing one unit of the step after, and is dissipative in no proportion. (`Becoming.exchange_needs_quantum`)
     - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 19. Emission, with a census, embodied relata, every step enclosed and half of what is taken lost, has a new relatum arise at every step, standing at one unit of the step after, and does not balance at the fixed unit. (`Becoming.arising_needs_quantum`, `Becoming.Emission.not_balanced`)
-    - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
+    - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 20. Alternation, with a census, embodied relata and every step enclosed, has two sides hold and arise with one whole unit of step 0 in turn, is dissipative in no proportion, and does not balance at the fixed unit. (`Becoming.arising_needs_proportion`, `Becoming.Alternation.not_balanced`)
-    - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
+    - *Master laws, by Lean dependency:* closure, balance and finite runs; its declarations reach the grammar.
 21. In Dwindle, at a unit halving at each step, a formation never supported is active at every step, its reserve falling in the finer unit at each and tending to one unit of step 0, with no fall of the reserve by 1/p of the unit at each active step for any p. (`Becoming.reserve_needs_quantum`)
     - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 22. In Trickle, at a unit quartering at each step, a whole unit of step 0 passes between two sides in ever more, ever smaller transfers, each losing two units of the step after, so every size has a least loss and transfers of each fixed size stop, yet a whole unit arises at arbitrarily late steps, with no proportion lost. (`Becoming.growth_needs_proportion`)

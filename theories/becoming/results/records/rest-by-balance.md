@@ -19,7 +19,7 @@
 4. Its cases among courses: a course drawn above its renewal falls below every positive need within its starting excess over it, its step balancing with what it takes; and a course gaining the most at each step could draw, weighted, at least what any open course could. (`Becoming.Optimum.ends_within`, `Becoming.Optimum.drawnAt`, `Becoming.Optimum.Next.drawable_le_of_gains`, `Becoming.Optimum.Next.drawable_step`)
    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Its cases among runs and regimes: a law's run with a bounded mark comes to rest within the bound; below a regime's point of no return the level falls by at least one a step until nothing is left; and a coupled web within a band under mutual support comes to rest. (`Becoming.LastChange.still_within`, `Becoming.LastChange.room_balance`, `Becoming.LastChange.still_of_fixed_at`, `Becoming.RegimeMargin.Adjusted.orbit_bound`, `Becoming.RegimeMargin.Adjusted.step_balances`, `Becoming.RegimeMargin.Adjusted.orbit_inside`, `Becoming.RegimeMargin.Coupled.Indexed.rests_by`)
-   - *Master laws, by Lean dependency:* balance; its declarations reach the grammar.
+   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -1,0 +1,24 @@
+Becoming/Unread.lean:116:24: error: Missing cases:
+Eq.refl
+Becoming/Unread.lean:117:4: error: Application type mismatch: The argument
+  through
+has type
+  Training.Through (Training.AgreeOn read) select
+but is expected to have type
+  Training.Through (Training.AgreeOn fun x => ((fun i => i) x).fst = ((fun i => i) (false, true)).fst) ?m.72
+in the application
+  @twin_selected Occasion ?m.16 Occasion ?m.18 (fun i => i)
+    (fun x => ((fun i => i) x).fst = ((fun i => i) (false, true)).fst) (false, true)
+    (fun x at_d same => nomatch Eq.trans (Eq.symm (congrArg Prod.fst same)) at_d) ?m.72 through
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/tree",
+  "modules": 37,
+  "ran": [
+    "Becoming.Unread"
+  ],
+  "reused": 36,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.Unread"
+}

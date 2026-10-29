@@ -1,0 +1,244 @@
+Becoming/ShownOrder.lean:361:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveFirst Alt.first Alt.first = true
+Becoming/ShownOrder.lean:361:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveFirst Alt.first Alt.first = true
+Becoming/ShownOrder.lean:361:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveFirst Alt.first Alt.first = true
+Becoming/ShownOrder.lean:361:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveFirst Alt.second Alt.first = true
+Becoming/ShownOrder.lean:361:89: error: Application type mismatch: The argument
+  h
+has type
+  aboveFirst Alt.first Alt.second = true
+but is expected to have type
+  false = true
+in the application
+  noTrue h
+Becoming/ShownOrder.lean:361:89: error: Application type mismatch: The argument
+  h
+has type
+  aboveFirst Alt.first Alt.third = true
+but is expected to have type
+  false = true
+in the application
+  noTrue h
+Becoming/ShownOrder.lean:361:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveFirst Alt.second Alt.first = true
+Becoming/ShownOrder.lean:361:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveFirst Alt.second Alt.second = true
+Becoming/ShownOrder.lean:361:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveFirst Alt.second Alt.third = true
+Becoming/ShownOrder.lean:361:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveFirst Alt.second Alt.first = true
+Becoming/ShownOrder.lean:361:89: error: Application type mismatch: The argument
+  h
+has type
+  aboveFirst Alt.third Alt.second = true
+but is expected to have type
+  false = true
+in the application
+  noTrue h
+Becoming/ShownOrder.lean:361:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveFirst Alt.second Alt.third = true
+Becoming/ShownOrder.lean:361:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveFirst Alt.third Alt.first = true
+Becoming/ShownOrder.lean:361:89: error: Application type mismatch: The argument
+  h
+has type
+  aboveFirst Alt.first Alt.third = true
+but is expected to have type
+  false = true
+in the application
+  noTrue h
+Becoming/ShownOrder.lean:361:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveFirst Alt.third Alt.first = true
+Becoming/ShownOrder.lean:361:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveFirst Alt.third Alt.third = true
+Becoming/ShownOrder.lean:361:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveFirst Alt.third Alt.first = true
+Becoming/ShownOrder.lean:361:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveFirst Alt.third Alt.third = true
+Becoming/ShownOrder.lean:369:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveThird Alt.first Alt.first = true
+Becoming/ShownOrder.lean:369:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveThird Alt.first Alt.third = true
+Becoming/ShownOrder.lean:369:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveThird Alt.first Alt.first = true
+Becoming/ShownOrder.lean:369:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveThird Alt.first Alt.third = true
+Becoming/ShownOrder.lean:369:89: error: Application type mismatch: The argument
+  h
+has type
+  aboveThird Alt.third Alt.first = true
+but is expected to have type
+  false = true
+in the application
+  noTrue h
+Becoming/ShownOrder.lean:369:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveThird Alt.first Alt.third = true
+Becoming/ShownOrder.lean:369:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveThird Alt.second Alt.first = true
+Becoming/ShownOrder.lean:369:89: error: Application type mismatch: The argument
+  h
+has type
+  aboveThird Alt.first Alt.second = true
+but is expected to have type
+  false = true
+in the application
+  noTrue h
+Becoming/ShownOrder.lean:369:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveThird Alt.second Alt.third = true
+Becoming/ShownOrder.lean:369:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveThird Alt.second Alt.first = true
+Becoming/ShownOrder.lean:369:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveThird Alt.second Alt.second = true
+Becoming/ShownOrder.lean:369:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveThird Alt.second Alt.third = true
+Becoming/ShownOrder.lean:369:89: error: Application type mismatch: The argument
+  h
+has type
+  aboveThird Alt.third Alt.first = true
+but is expected to have type
+  false = true
+in the application
+  noTrue h
+Becoming/ShownOrder.lean:369:89: error: Application type mismatch: The argument
+  h
+has type
+  aboveThird Alt.third Alt.second = true
+but is expected to have type
+  false = true
+in the application
+  noTrue h
+Becoming/ShownOrder.lean:369:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveThird Alt.second Alt.third = true
+Becoming/ShownOrder.lean:369:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveThird Alt.third Alt.third = true
+Becoming/ShownOrder.lean:369:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveThird Alt.third Alt.third = true
+Becoming/ShownOrder.lean:369:82: error: Type mismatch
+  noTrue h
+has type
+  False
+but is expected to have type
+  aboveThird Alt.third Alt.third = true
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/tree",
+  "modules": 2,
+  "ran": [
+    "Becoming.ShownOrder"
+  ],
+  "reused": 1,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.ShownOrder"
+}
