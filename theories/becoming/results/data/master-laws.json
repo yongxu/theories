@@ -9,7 +9,7 @@
   "theories/becoming/results/completion/COVERAGE.json": "022ae0fc28b40f798c02823be35d7463afac2a92a0ada74bfbd3789e160d9749",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "c8e349f57adecd7bd8d25bd0fde850c9f813919cdbf0e4a3734005c43340043a",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
-  "tools/research/master_laws.py": "02c404983046d8e75d18cd7abcbcefe8758be3d0c0c687d579e874332e3aec0e"
+  "tools/research/master_laws.py": "e5e0e97b13b039cd59dba0a6ee689373a6fbbb9293c4c8aa9ed7e436a58e3cea"
  },
  "names": {
   "closure": "closure",
@@ -69,6 +69,53 @@
   "return": 252,
   "lumping": 83,
   "order": 78
+ },
+ "counts_at_model": {
+  "laws": 0,
+  "no_declarations": 0,
+  "outside": 0,
+  "grammar": 0,
+  "balance, represented": 0,
+  "anchor, not reached": 0,
+  "no master law": 0,
+  "vocabulary_only": 0,
+  "closure": 0,
+  "balance": 0,
+  "return": 0,
+  "lumping": 0,
+  "order": 0
+ },
+ "model_relations": {
+  "occurrence": [
+   "Becoming.Steps.along",
+   "Becoming.Web.roles",
+   "Becoming.World.withinStep"
+  ],
+  "process": [
+   "Becoming.Steps",
+   "Becoming.Steps.next",
+   "Becoming.moveRel"
+  ],
+  "structure": [
+   "Becoming.Steps",
+   "Becoming.Steps.along",
+   "Becoming.Steps.next",
+   "Becoming.Web.admitted",
+   "Becoming.Web.partialIdentity",
+   "Becoming.Web.roles",
+   "Becoming.World.withinStep",
+   "Becoming.moveRel",
+   "Becoming.sameValue"
+  ]
+ },
+ "central_reach": {
+  "counts": {
+   "reaching the grammar": 44,
+   "stated at a represented model": 0,
+   "stated on its own carrier only": 0,
+   "the rest": 74
+  },
+  "rows": {}
  },
  "records": {
   "a-code-formed-between-formations": [

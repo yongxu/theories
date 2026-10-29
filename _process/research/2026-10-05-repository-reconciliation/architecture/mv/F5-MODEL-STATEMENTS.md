@@ -2,7 +2,7 @@
 
 AI-written, 30 October 2026, by MV's owner, on main at `24397d633`. It answers U2's request ([U2's design §7](../../../2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md#7-placement-decided-and-the-lean-item-not-yet-claimed)): which record field carries the pairs of a central row and its statement at a model, which F5 reads. F5 is item 全五 of full unification ([FU](../../../2026-10-05-generative-foundation-review/root-foundation/development/fu-full-unification/PROPOSAL.md), change 1): the measure reports derivation, representation at a model, and a named premise on the grammar apart.
 
-**Status:** final shape, given to U2. Draft 1 was reviewed by two independent readers, one on F5 and the measure and one on the schema and the record rules. They raised 20 findings ([reports/f5-field-review.json](reports/f5-field-review.json)), and §7 maps them. A re-check of draft 2 ([reports/f5-field-recheck.json](reports/f5-field-recheck.json)) found seven of them taken wrongly or in part and three new problems. It also applied the rules to U2's 21 drafted items. Everything it raised is taken (§7).
+**Status:** final shape, given to U2; MV's part built on branch `f5a`. Draft 1 was reviewed by two independent readers, one on F5 and the measure and one on the schema and the record rules. They raised 20 findings ([reports/f5-field-review.json](reports/f5-field-review.json)), and §7 maps them. A re-check of draft 2 ([reports/f5-field-recheck.json](reports/f5-field-recheck.json)) found seven of them taken wrongly or in part and three new problems. It also applied the rules to U2's 21 drafted items. Everything it raised is taken (§7).
 
 ## 1. The field
 
@@ -43,8 +43,8 @@ Only the pair, its models and its review are declared. That `declaration` states
 
 **An item is verified where all of these hold:**
 - **In the spine run:** both names are among the constants of the core receipt's run.
-- **Proved through the row:** the proof of `declaration` reaches `of` through values, along a path that passes through no declaration of another item, except an item on the same law with the same `of`. This stops a pair from naming the wrong row: a reading whose proof uses another row's reading reaches that row too. Take `significance_undetermined_reading` paired with `Web.roles_alive`. Its proof reaches that row only through `roles_alive_reading`, which is on another law, so the pair fails. A path through another statement of the same row on the same law is allowed, as `renewing_not_closed`'s path through `finite_reading_not_exact`.
-- **On the grammar:** the grammar terms are the «» names other than «际». At least one occurs among the statement's constants, or in the bodies of the `Becoming.ModelStatements` definitions it names, and transitively in the bodies of the `Becoming.ModelStatements` definitions those name. Grammar constants are not expanded. This reads more than U2Deps does, which counts only the statement's own constants. It is not the measure's grammar test either, which also counts «际». The depth matters: rows 21 and 22 reach WRT2's occurrence relations only at the second or third level, through `livingOcc` → `drawing` → `World.withinStep` and `descendsRel` → `descentStep` → `giving`.
+- **Proved through the row:** the walk from `declaration` through the constants each declaration uses, in its statement and its proof or body, reaches `of`. Grammar constants are not expanded, as U2Deps walks. The walk enters no declaration of another item, except an item on the same law with the same `of`. This stops a pair from naming the wrong row: a reading whose proof uses another row's reading reaches that row too. Take `significance_undetermined_reading` paired with `Web.roles_alive`. Its proof reaches that row only through `roles_alive_reading`, which is on another law, so the pair fails. A path through another statement of the same row on the same law is allowed, as `renewing_not_closed`'s path through `finite_reading_not_exact`.
+- **On the grammar:** the grammar terms are the «» names other than «际». At least one occurs among the statement's constants, or in the bodies of the definitions of its own module that it names, and transitively in the bodies of the definitions of that module those name. For U2 that module is `Becoming.ModelStatements`. Grammar constants are not expanded. This reads more than U2Deps does, which counts only the statement's own constants. It is not the measure's grammar test either, which also counts «际». The depth matters: rows 21 and 22 reach WRT2's occurrence relations only at the second or third level, through `livingOcc` → `drawing` → `World.withinStep` and `descendsRel` → `descentStep` → `giving`.
 - **At the declared models:** the statement names, in the same sense, a relation of each declared model, and `own` is not checked. The two lists split U2Deps' `modelRelations`:
   - `occurrence`: WRT2's `World.withinStep`, `Web.roles` and `Steps.along`;
   - `process`: WRP2's `moveRel`, `Steps` and `Steps.next`.
@@ -54,7 +54,7 @@ Only the pair, its models and its review are declared. That `declaration` states
 
 **Computed and shown for each item:**
 - the grammar terms its statement names;
-- what it keeps in other terms, as U2Deps computes them: the statement's own constants, not expanded, that are not grammar terms, not in `Becoming.ModelStatements`, not in U2Deps' `modelRelations` (the two lists, `Web.partialIdentity`, `sameValue`, `Web.admitted` and «际») and not in `Init`. The model's structure types, such as `Web`, `Flow` and `Run`, are shown as they are computed;
+- what it keeps in other terms, as U2Deps computes them: the statement's own constants, not expanded, that are not grammar terms, not in the theorem's own module, not in U2Deps' `modelRelations` (the two lists, `Web.partialIdentity`, `sameValue`, `Web.admitted` and «际») and not in `Init`. The model's structure types, such as `Web`, `Flow` and `Run`, are shown as they are computed;
 - the row's own dependence, as the measure gives it.
 
 **What MV never does with an item.**
@@ -69,7 +69,7 @@ Only the pair, its models and its review are declared. That `declaration` states
 
 ## 4. F5's report
 
-**Per row.** For each central declaration with verified items, MV's `central` entry lists them, each with its record, law and models.
+**Per row.** For each central declaration with verified items, `central_reach.rows` in MV's data lists them, each with its record, law and models. Under every law whose declarations include a verified item's row, the law's entry names the item (`stated_at_model`). A law carrying items keeps its items as verified (`statements_at_model`) and is counted in `counts_at_model`.
 
 **Headline.** Over the distinct central declarations, the data gives four counts:
 - those reaching the grammar (the measure's);
