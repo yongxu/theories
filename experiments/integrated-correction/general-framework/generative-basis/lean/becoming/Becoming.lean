@@ -628,7 +628,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   exact: more forces arising under a continuation exactly when no formation continues as
   two. The census balance holds under a continuation in two halves: without splits,
   ceasing recurring needs arising recurring; without merges, under a bounded census,
-  arising recurring needs ceasing recurring.
+  arising recurring needs ceasing recurring. A lineage under a continuation is the grammar's
+  steps of the continuation within activity from its start (`Web.steps_iff_lineage`), so the
+  lineage laws the covering forms of these halves rest on are cases of the grammar's laws of
+  steps (board item OU3f).
 * `Becoming.ContinuedClasses` (L1): formation classes read along a continuation rather than a
   name (`Web.Continuing`, `Web.RenewingAlong`, `Web.ConsumingAlong`): renewing passes into every
   branch of a split and consuming back into every formation merged (`Web.renewingAlong_iff`,
@@ -2887,7 +2890,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `Becoming.Withholding`'s closed forms are proved from them, its chains of waits read as the
   grammar's steps; so is `WithinMoves.after_course` in `Becoming.Labelled`, a trace read as them,
   and `Web.reaches_onward` in `Becoming.MapInstances`, an unending line's index advancing with its
-  steps (board items OU3d, OU3e, OU3f).
+  steps; and the lineage laws in `Becoming.Identity`, a lineage read as steps of the continuation
+  within activity (`Web.Lineage.unique`, `origin`, `split`, `through`, `onward`, `back`, and a
+  lineage as a line both ways, `Web.Lineage.line`, `Web.line_lineage`; board items OU3d, OU3e,
+  OU3f).
   Lumping: with the successor fixed where `E`
   leads, constancy is going alike with a successor available (`«局定后则有常当且仅当同行可续»`), and a
   map's image has a fixed successor exactly where sameness under the map goes alike

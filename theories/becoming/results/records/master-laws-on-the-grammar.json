@@ -324,8 +324,8 @@
       ]
     },
     {
-      "en": "The models' laws of closure, return, being drawn, rest at amounts, lumping and order are proved from these in their own modules, each keeping its name and statement: board rule 9, the general law below proving the special one, with no second proof left beside it. The list lemmas the models held, pigeonhole among them, are now names of the grammar's one proof. Among them: structure and change are one lumping, the image law on a determined law's one move; the case split of the step back of a returning configuration, the grammar's decomposition of reach, by which every loss passes a juncture; the repetition of the lasso of a world a list holds, a loop then d steps leading where d steps lead under a fixed successor, its bound pigeonhole; and the lagged orders of courses and of what can be reached, from the relation laws. And the models' step-indexed laws: giving that waits on giving, with memory and without, from the laws of taking on, a chain of waits read as the grammar's steps; and a course carrying every bound on realizing a bundle together, from the composition of within, a trace read as the grammar's steps; and an unending line reaching an occurrence at every later step, from its steps of every length, k steps advancing the index by k; and the inductions over steps that keep a region, from a region every step keeps holding from where it holds on: never arising from an inactive start being never active, activity and presence kept back, an ending kept, a name kept over a held stretch, and a carrier and the pattern's line traced back.",
-      "zh": "模型上闭包、返、入、量上之止、归并与序之律，皆在其本模块中由此诸律证出，各保其名与陈述：即板规九，下层之通律证其特例，旁无第二证明。模型原有之列表引理（鸽笼在内）今为文法唯一证明之别名。其中：结构与变化同为一种归并，即像之律施于定律之一步；返者之退一步之分情，即文法对所及之分解，由之每一失皆经一岔口；列表所持之世之套索之重复：定后之下，一环之后 d 步至于 d 步所至，其界则为鸽笼；进程与所可及者之滞后之序，出自关系之律。又诸模型计步之律：待施之施，有记忆与无记忆，出自承之律，待之链读为文法之步；进程携同时实现一束之每一界，出自以内之接，迹读为文法之步；不穷之线于其后每一步皆有所及，出自其任意长之步，k 步则指标增 k；又守一域之逐步归纳，出自每步皆守之域自其所守处以后皆守：自不活跃之始而永不生则永不活跃、活跃与在场之回溯、终之所守、持守之段上之一名，以及载者与样式之线之回溯。",
+      "en": "The models' laws of closure, return, being drawn, rest at amounts, lumping and order are proved from these in their own modules, each keeping its name and statement: board rule 9, the general law below proving the special one, with no second proof left beside it. The list lemmas the models held, pigeonhole among them, are now names of the grammar's one proof. Among them: structure and change are one lumping, the image law on a determined law's one move; the case split of the step back of a returning configuration, the grammar's decomposition of reach, by which every loss passes a juncture; the repetition of the lasso of a world a list holds, a loop then d steps leading where d steps lead under a fixed successor, its bound pigeonhole; and the lagged orders of courses and of what can be reached, from the relation laws. And the models' step-indexed laws: giving that waits on giving, with memory and without, from the laws of taking on, a chain of waits read as the grammar's steps; and a course carrying every bound on realizing a bundle together, from the composition of within, a trace read as the grammar's steps; and an unending line reaching an occurrence at every later step, from its steps of every length, k steps advancing the index by k; and the inductions over steps that keep a region, from a region every step keeps holding from where it holds on: never arising from an inactive start being never active, activity and presence kept back, an ending kept, a name kept over a held stretch, and a carrier and the pattern's line traced back; and the lineage laws under a continuation, a lineage read as the grammar's steps of the continuation within activity: reaching at most one formation at each step without splits and starting from one without merges, splitting as its steps split, going on where nothing ceases and back where nothing arises, as far as can be refuted, and a lineage being a line under activity and a line from an active occurrence a lineage.",
+      "zh": "模型上闭包、返、入、量上之止、归并与序之律，皆在其本模块中由此诸律证出，各保其名与陈述：即板规九，下层之通律证其特例，旁无第二证明。模型原有之列表引理（鸽笼在内）今为文法唯一证明之别名。其中：结构与变化同为一种归并，即像之律施于定律之一步；返者之退一步之分情，即文法对所及之分解，由之每一失皆经一岔口；列表所持之世之套索之重复：定后之下，一环之后 d 步至于 d 步所至，其界则为鸽笼；进程与所可及者之滞后之序，出自关系之律。又诸模型计步之律：待施之施，有记忆与无记忆，出自承之律，待之链读为文法之步；进程携同时实现一束之每一界，出自以内之接，迹读为文法之步；不穷之线于其后每一步皆有所及，出自其任意长之步，k 步则指标增 k；又守一域之逐步归纳，出自每步皆守之域自其所守处以后皆守：自不活跃之始而永不生则永不活跃、活跃与在场之回溯、终之所守、持守之段上之一名，以及载者与样式之线之回溯；又续之下之谱系诸律，谱系读为活跃之内续之文法之步：无分则每步所及至多一者，无合则所出唯一，随其步之分而分，无止则或续往，无生则或回溯；谱系即活跃之下之线，自活跃者出之线即谱系。",
       "declarations": [
         "Becoming.Amounts.rests_unrefuted",
         "Becoming.Branching.Lossless.cancel",
@@ -354,6 +354,13 @@
         "Becoming.Web.Includes.trans",
         "Becoming.Web.Keeps.not_mixed",
         "Becoming.Web.Keeps.symm",
+        "Becoming.Web.Lineage.back",
+        "Becoming.Web.Lineage.line",
+        "Becoming.Web.Lineage.onward",
+        "Becoming.Web.Lineage.origin",
+        "Becoming.Web.Lineage.split",
+        "Becoming.Web.Lineage.through",
+        "Becoming.Web.Lineage.unique",
         "Becoming.Web.Mixed.symm",
         "Becoming.Web.Widens.not_keeps",
         "Becoming.Web.Widens.not_mixed",
@@ -363,6 +370,7 @@
         "Becoming.Web.active_before",
         "Becoming.Web.ended_for_good",
         "Becoming.Web.inactive_of_not_arising",
+        "Becoming.Web.line_lineage",
         "Becoming.Web.reaches_onward",
         "Becoming.Web.steady_held",
         "Becoming.Web.steps_advance",
@@ -468,11 +476,6 @@
       "en": "That a part whose law is determined, forming its own move, carries a law of its own by a law of the grammar (PartForms.goAlike): its content is the model's premise, the part's law determined at a move the part alone forms. The image law only reads the conclusion as carrying a law of its own (carries_law_iff); a proof through it applies the law and undoes it, and constancy with a fixed successor would need the rest to step and be determined (OU3d's review).",
       "zh": "定律之部分，自成其动者，依文法之律自有其律（PartForms.goAlike）：其内容为模型之前提，即此部分之律于唯此部分所成之动定后。像之律只将结论读为自有其律（carries_law_iff）；经之之证，施此律而复撤之；有常与定后则须他部亦动且定（OU3d 之审查）。",
       "kind": "non-implication"
-    },
-    {
-      "en": "That the models' lineage laws are proved from these laws of steps (Web.Lineage.split, through, onward, back, unique and origin): their bridge, from a lineage to the grammar's steps of a continuation restricted to active occurrences from a bound on, is OU3f's next part, with the derivations of the activity laws module by module.",
-      "zh": "Web.Lineage 诸律（split、through、onward、back、unique 与 origin）由此诸步之律证出：其桥接，自一 Lineage 至限于某界以后之活跃者之续之文法之步，为 OU3f 之下一部分，与诸只读活跃之律之推导逐模块同为。",
-      "kind": "non-implication"
     }
   ],
   "counterexamples": [
@@ -505,8 +508,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the Lean 4.29.1 checker (receipt 20261029T125805.763052Z): Becoming.GrammarLaws, 125 theorems in 148 declarations, and Becoming.KeptOnward, 40 representation and bridge declarations in fourteen model modules, and the derivations of OU3c, OU3e and OU3f in thirteen more, every axiom report empty, all cited; every changed module's statements print as before, but for the two relation laws moved into the grammar at any universe. Read-only AI reviews, every finding taken: three of OU3b, one each of OU3c to OU3e, two of OU3f, two with a second pass; not reviewed by a person.",
-    "zh": "Lean 4.29.1 检查器实查（回执 20261029T125805.763052Z）：Becoming.GrammarLaws，148 项声明中 125 条定理，及 Becoming.KeptOnward，十四个模型模块中 40 项表示与桥接声明，及另十三模块中 OU3c、OU3e、OU3f 之推导，公理报告皆空，本记录全引；诸改动模块之陈述所印如前，唯移入文法之二关系律推广至任一宇宙。只读 AI 审查，所见皆采：OU3b 三次，OU3c 至 OU3e 各一次，OU3f 两次，其中两次复审一遍；未经人审。"
+    "en": "Machine-checked by the Lean 4.29.1 checker (receipt 20261029T162632.074811Z): Becoming.GrammarLaws, 136 theorems in 160 declarations, and Becoming.KeptOnward, 40 representation and bridge declarations in fourteen model modules, and the derivations of OU3c, OU3e and OU3f in fourteen more, every axiom report empty, all cited; every changed module's statements print as before, but for the two relation laws moved into the grammar at any universe. Read-only AI reviews, every finding taken: three of OU3b, one each of OU3c to OU3e, three of OU3f, three with a second pass; not reviewed by a person.",
+    "zh": "Lean 4.29.1 检查器实查（回执 20261029T162632.074811Z）：Becoming.GrammarLaws，160 项声明中 136 条定理，及 Becoming.KeptOnward，十四个模型模块中 40 项表示与桥接声明，及另十四模块中 OU3c、OU3e、OU3f 之推导，公理报告皆空，本记录全引；诸改动模块之陈述所印如前，唯移入文法之二关系律推广至任一宇宙。只读 AI 审查，所见皆采：OU3b 三次，OU3c 至 OU3e 各一次，OU3f 三次，其中三次复审一遍；未经人审。"
   },
   "next_delta": {
     "en": "A derivation of balance where a model's balance is read under a relation other than the one, pairings composing along a supplied conditioning; the models' other central laws restated on the grammar; a converse of the law of rest with the step relations it compares and its logic stated; review by a person.",
@@ -1072,10 +1075,9 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
       "role": "proof",
       "declarations": [
-        "Becoming.Web.reaches_onward",
-        "Becoming.Web.steps_advance"
+        "Becoming.Web.reaches_onward"
       ],
-      "sha256": "96aed83c502f2e37ee56e1d0e0f3483ec2bf96f67a2b8657349829238d42bc42"
+      "sha256": "681f22400eb90cb11f90f37b09a9e2c51a4d5793292a9428ddf203855c5364e5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeptOnward.lean",
@@ -1136,6 +1138,26 @@
       "sha256": "1c570bdf4f061b73c8b53ecc571f534733e8e0b9fdb1a7c4b30c1a8f874f907c"
     },
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Web.activityOnward",
+        "Becoming.Web.steps_advance",
+        "Becoming.Web.lineage_of_steps",
+        "Becoming.Web.steps_iff_lineage",
+        "Becoming.Web.steps_start_active",
+        "Becoming.Web.Lineage.unique",
+        "Becoming.Web.Lineage.origin",
+        "Becoming.Web.Lineage.split",
+        "Becoming.Web.Lineage.through",
+        "Becoming.Web.Lineage.onward",
+        "Becoming.Web.Lineage.back",
+        "Becoming.Web.Lineage.line",
+        "Becoming.Web.line_lineage"
+      ],
+      "sha256": "9733fcf3858f3cd9b52cc1bd9e147cefc11dd6b6ea3ebcefb2f95f26d4212de4"
+    },
+    {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d"
@@ -1143,7 +1165,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "db08a5d5d785732c137c8d42e974cbc70c13ec276c201600d84be2d453840e7c"
+      "sha256": "c7721f13fff50e7d63872b6db18a078d3da797fc314ee6df0363f4730d59ccd2"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/OU3b2-NOTES.md",
@@ -1173,7 +1195,7 @@
     {
       "path": "theories/becoming/chapters/01-ROOT.md",
       "role": "statement",
-      "sha256": "1658f64102f186e8e1c1c2790592da8c0a19c8a903e7923d17affee554f82587"
+      "sha256": "8264bbf7251b6fd400a1e8e60d3ba459552b506db129d86d432aadb2ffd1cfa5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
@@ -1279,6 +1301,21 @@
       "role": "receipt",
       "sha256": "37fac3ac77d5da100226856dc159c11993194e280ab357231903e01a5d4b69ce",
       "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/lineage/DESIGN.md",
+      "role": "integration",
+      "sha256": "d5ba0a94fb0dca5841ac93ece63543fc4f8f508c45ce9192df8dfeda2548af8a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/lineage/review/REVIEW-LINEAGE.md",
+      "role": "review",
+      "sha256": "797ee574927ffb8b4b9bb9ad29616d3321fb6a0cd06fab8788f507edc72ac311"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T162632.074811Z/verification.json",
+      "role": "receipt",
+      "sha256": "a0ece8d77ed72993b2adde3076d3815f0276be957b2d49c541d54d7288c46fed"
     }
   ],
   "proof_bindings": [
@@ -1431,7 +1468,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T145758.555114Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T162632.074811Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.MapInstances",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1484,6 +1521,13 @@
       "sha256_pointer": "/source_sha256/Becoming.Persistence",
       "success_pointer": "/status",
       "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T162632.074811Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Identity",
+      "success_pointer": "/status",
+      "success_value": "passed"
     }
   ],
   "history": [
@@ -1514,6 +1558,10 @@
     {
       "en": "29 October 2026 (WRP2, study section 447): passing through a word's relations in turn («历»), n steps its case for one relation, stated beside n steps; six laws of n steps proved as cases of its laws with their statements and names unchanged (GrammarLaws' owner's decision (a)), and the list lemmas it uses proved by induction, the core's List.reverse_cons reporting propext.",
       "zh": "2026年10月29日（WRP2，研究第 447 节）：依次历一字之诸关系（«历»），n 步为其一关系之例，置于 n 步之旁；n 步之六律证为其律之例，陈述与名不改（GrammarLaws 主之决定 (a)）；其所用之列表引理以归纳证之，因核之 List.reverse_cons 报 propext。"
+    },
+    {
+      "en": "29 October 2026 (OU3f, study section 451): the lineage laws of Becoming.Identity proved from the laws of steps (Web.Lineage.unique from «迭之定», origin from «迭之定前», split and through from «迭之分», onward and back from «或有后则或迭», back through «迭之逆»), and Web.Lineage.line and Web.line_lineage from «迭则及» and from «闭之及» with «及即迭», a lineage read as the grammar's steps of the continuation within activity (Web.steps_iff_lineage), statements unchanged; Web.Lineage.cons retired; Web.steps_advance moved from MapInstances to Identity, unchanged; the does-not-show item on the lineage laws dropped.",
+      "zh": "2026年10月29日（OU3f，研究第 451 节）：Becoming.Identity 之谱系诸律由计步之律证出（Web.Lineage.unique 出自「迭之定」，origin 出自「迭之定前」，split 与 through 出自「迭之分」，onward 与 back 出自「或有后则或迭」，back 经「迭之逆」），及 Web.Lineage.line 与 Web.line_lineage 出自「迭则及」及「闭之及」与「及即迭」，谱系读为活跃之内续之文法之步（Web.steps_iff_lineage），陈述不变；Web.Lineage.cons 退役；Web.steps_advance 自 MapInstances 移至 Identity，不变；关于谱系诸律之「未示」一条删去。"
     }
   ]
 }

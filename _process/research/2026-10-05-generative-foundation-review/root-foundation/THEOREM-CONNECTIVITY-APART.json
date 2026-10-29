@@ -4312,11 +4312,6 @@
    "category": "general-structure",
    "reason": "where inclusion or exceeding is decided both ways, two relations widen, keep or are mixed: the four cases on the grammar, a law of every relation on any carrier (OU3b); the base states its own four cases (four-cases-of-a-part)"
   },
-  "Becoming.«定前之逐点»": {
-   "module": "Becoming.GrammarLaws",
-   "category": "support",
-   "reason": "a one-line unpacking of the grammar's own definitions (OU3b)"
-  },
   "Becoming.«定前即逆之定后»": {
    "module": "Becoming.GrammarLaws",
    "category": "support",
@@ -4706,21 +4701,6 @@
    "module": "Becoming.GrammarTransport",
    "category": "general-structure",
    "reason": "«类之对应»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
-  },
-  "Becoming.«或有后则或迭»": {
-   "module": "Becoming.GrammarLaws",
-   "category": "general-structure",
-   "reason": "where whatever is reached in fewer than n steps has a successor as far as can be refuted, n steps exist as far as can be refuted, a law of every relation on any carrier, stated before the models' lineage laws (Identity) use it (OU3f's next part)"
-  },
-  "Becoming.«迭之分»": {
-   "module": "Becoming.GrammarLaws",
-   "category": "general-structure",
-   "reason": "steps split as they compose, the converse of «迭之接», a law of every relation on any carrier, stated before the models' lineage laws (Identity) use it (OU3f's next part)"
-  },
-  "Becoming.«迭之逆»": {
-   "module": "Becoming.GrammarLaws",
-   "category": "general-structure",
-   "reason": "steps read backward are steps of the converse, a law of every relation on any carrier, stated before the models' lineage laws (Identity) use it (OU3f's next part)"
   },
   "Becoming.ChoiceOccasions.Untried.aboveFirst_strict": {
    "module": "Becoming.ShownOrder",
