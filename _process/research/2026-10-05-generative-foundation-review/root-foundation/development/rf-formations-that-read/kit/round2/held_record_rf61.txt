@@ -11,9 +11,10 @@ rE = build(
       "where each reading has one such act.",
       "于一形态可更正：经其时所行之读，有一致之策略，其于每一读之行于给此读之每一情形皆可受，且于此形态可行；于诸读有择，则恰当每一读有一此行。",
       C(OC, 'OpenedCorrection.Correctable', 'OpenedCorrection.correctable_iff')),
-     ("A revision opens a correction from x to x' where a trace of the process leads from x to x', no fitting uniform "
-      "policy exists at x and one exists at x', with one acceptability throughout.",
-      "修订开一更正自 x 至 x'，当过程之一迹自 x 至 x'，于 x 无合之一致策略而于 x' 有之，可受者始终同一。",
+     ("A course opens a correction from x to x' where a trace of the process leads from x to x', no fitting uniform "
+      "policy exists at x and one exists at x', with one acceptability throughout; the gain may come from the reading, "
+      "from executability, or both.",
+      "一历程开一更正自 x 至 x'，当过程之一迹自 x 至 x'，于 x 无合之一致策略而于 x' 有之，可受者始终同一；所得或来自读，或来自可行，或二者皆是。",
       C(OC, 'OpenedCorrection.OpensAlong')),
      ("A revision to a reading the old one is read off, losing no executability, closes nothing; one to a reading read "
       "off the old, gaining no executability, opens nothing.",
@@ -35,7 +36,11 @@ rE = build(
       "configuration is correctable already.",
       "自二储重建其联，一步而开更正；自一储则否，重建耗尽最后之储，然重建而后补储则开之；凡行皆计为可受，则联断之形态已可更正。",
       C(OC, 'OpenedCorrection.Linked.opens', 'OpenedCorrection.Linked.rebuilt_starved',
-        'OpenedCorrection.Linked.opens_after_replenishing', 'OpenedCorrection.Linked.widened_unlinked'))],
+        'OpenedCorrection.Linked.opens_after_replenishing', 'OpenedCorrection.Linked.widened_unlinked')),
+     ("Replenishing alone opens the correction where the link is on and the stock is not: the reading unchanged, the "
+      "gain is in what can be executed.",
+      "联通而无储处，唯补储即开更正：读未变，所得在可行者。",
+      C(OC, 'OpenedCorrection.Linked.opens_by_support'))],
     [{'en': "Any types of configurations, revision acts, situations, acts and readings; one type of readings in force at "
             "every configuration; acceptability on situations and acts, fixed; executability read at the configuration; "
             "choice over the readings only for the iff.",
@@ -68,11 +73,12 @@ rE = build(
            "for. Revising an observation map is one formal mechanism that may take part in organizational learning; its "
            "relation to double-loop learning (Argyris and Schön 1978) depends on whether inquiry changes a governing "
            "norm or assumption, and here the acceptability is fixed and the law concerns uniform-policy existence along "
-           "a course. Replacing a finer reading by a coarser one, losing no executability, opens no correction. With "
+           "a course. Replacing a reading by one read off it through a supplied map, gaining no executability and with the "
+           "acceptability fixed, opens no correction. With "
            "selection-under-registration-revision, where discrimination, support and enactment come apart, this states "
            "in policy form the correction they open. These are readings, not containments.",
      'zh': 'AI 解读：于一制度，联即其读成员所报之规（依何线而非几何），储为此读所耗者，更正为报告所求之修。修订一观察之映射为可参与组织之学之一形式机制；其与双环之学'
-           '（Argyris 与 Schön 1978）之关系，视探究是否改所循之规或所设；此处可受者守定，律所关者为沿一历程之一致策略之存在。以较粗之读代较细之读而不失可行者，'
+           '（Argyris 与 Schön 1978）之关系，视探究是否改所循之规或所设；此处可受者守定，律所关者为沿一历程之一致策略之存在。以经所予之映射由之读出之读代之，而不增可行者且可受者守定，'
            '无所开。与「注册修订下之选」并：彼处辨、支与施各异，此以策略之形陈其所开之更正。皆为读，非包含。'},
     ['opening a correction', '开更正', 'a correctable configuration', '可更正之形态',
      'Becoming.OpenedCorrection.OpensAlong', 'Becoming.OpenedCorrection.Linked.opens'],

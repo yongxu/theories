@@ -14,11 +14,14 @@ as acceptable, which is held fixed.
 
 * **Correctable at a configuration** (`Correctable`). Through the reading in force at a
   configuration, a uniform policy exists whose act at each reading is acceptable at every situation
-  giving it and executable at the configuration; given choice over the readings, exactly where each
-  reading has one such act (`correctable_iff`, from `GuardHorizon.uniform_policy_iff_fiber_feasible`).
-* **Opening along a course** (`OpensAlong`). A revision opens a correction from `x` to `x'` where a
+  giving it and executable at the configuration; given choice over the readings, exactly where for
+  every reading there is an act acceptable and executable at the configuration for every situation
+  giving that reading, a reading no situation gives asking nothing (`correctable_iff`, from
+  `GuardHorizon.uniform_policy_iff_fiber_feasible`).
+* **Opening along a course** (`OpensAlong`). A course opens a correction from `x` to `x'` where a
   trace of the process leads from `x` to `x'`, no fitting uniform policy exists at `x` and one exists
-  at `x'`, with one acceptability throughout. A revision to a reading the old one is read off, losing
+  at `x'`, with one acceptability throughout; the gain may come from the reading, from executability,
+  or both. A revision to a reading the old one is read off, losing
   no executability, closes nothing (`finer_keeps`); one to a reading read off the old, gaining no
   executability, opens nothing (`coarser_opens_nothing`). With every act counted acceptable, a
   configuration with an executable act is correctable already (`widened_correctable`), so an opening
@@ -29,17 +32,20 @@ as acceptable, which is held fixed.
   enabling. With the link off no configuration is correctable (`Linked.unlinked_uncorrectable`); with
   it on and a unit of stock, every configuration is (`Linked.linked_correctable`); with it on and no
   stock, none is (`Linked.starved_uncorrectable`). So rebuilding the link from two units opens the
-  correction in one step (`Linked.opens`); rebuilding it from one does not (`Linked.rebuilt_starved`),
-  though replenishing after it does (`Linked.opens_after_replenishing`); and with every act counted
-  acceptable, the unlinked configuration is correctable already (`Linked.widened_unlinked`).
+  correction in one step, the reading revised (`Linked.opens`); rebuilding it from one does not
+  (`Linked.rebuilt_starved`), though replenishing after it does (`Linked.opens_after_replenishing`);
+  replenishing alone opens it where the link is on and the stock is not, the reading unchanged
+  (`Linked.opens_by_support`); and with every act counted acceptable, the unlinked configuration is
+  correctable already (`Linked.widened_unlinked`).
 
 **Readings** [AI reading]. Read for an institution, the link is its rule of reading what its
 members report, by which line rather than by how many, the stock what that reading draws on, and the
 correction the repair a report calls for. Revising an observation map is one formal mechanism that
 may take part in organizational learning; its relation to double-loop learning (Argyris and Schön
 1978) depends on whether inquiry changes a governing norm or assumption, and here the acceptability is
-held fixed and the theorem concerns uniform-policy existence along a course only. Replacing a finer
-reading by a coarser one, as by a summary measure, losing no executability, opens no correction.
+held fixed and the theorem concerns uniform-policy existence along a course only. Replacing a reading
+by one read off it through a supplied map, as by a summary measure, gaining no executability and with
+the acceptability fixed, opens no correction.
 These are readings, not containments.
 
 **Modelling choices.** Readings in force at a configuration as maps of one type of readings;
@@ -74,8 +80,9 @@ theorem correctable_iff (choice : Viability.ChoiceOver O A) (reading : X → S �
       ∀ o, ∃ a, ∀ s, reading x s = o → acceptable s a ∧ executable x a :=
   GuardHorizon.uniform_policy_iff_fiber_feasible choice (reading x) _
 
-/-- **A revision opens a correction along a course of the process**: a trace leads from `x` to `x'`,
-no fitting uniform policy exists at `x`, and one exists at `x'`, with one acceptability. -/
+/-- **A course of the process opens a correction**: a trace leads from `x` to `x'`, no fitting
+uniform policy exists at `x`, and one exists at `x'`, with one acceptability. The gain may come from
+the reading, from executability, or both. -/
 def OpensAlong (P : Process X B) (reading : X → S → O) (acceptable : S → A → Prop)
     (executable : X → A → Prop) (x x' : X) : Prop :=
   (∃ w, Trace P x w x') ∧ ¬ Correctable reading acceptable executable x ∧
@@ -173,6 +180,12 @@ theorem opens_after_replenishing (v : Bool) :
     OpensAlong P read acceptable executable (1, false, v) (1, true, v) :=
   ⟨⟨[.rebuild true, .replenish], .cons ⟨0, rfl, rfl⟩ (.cons rfl (.nil _))⟩,
    unlinked_uncorrectable 1 v, linked_correctable 0 v⟩
+
+/-- **Replenishing alone opens the correction where the link is on and the stock is not**: the
+reading unchanged, the gain is in what can be executed. -/
+theorem opens_by_support (v : Bool) :
+    OpensAlong P read acceptable executable (0, true, v) (1, true, v) :=
+  ⟨⟨[.replenish], .cons rfl (.nil _)⟩, starved_uncorrectable v, linked_correctable 0 v⟩
 
 /-- **With every act counted acceptable, the unlinked configuration is correctable already**, by
 replenishing. -/

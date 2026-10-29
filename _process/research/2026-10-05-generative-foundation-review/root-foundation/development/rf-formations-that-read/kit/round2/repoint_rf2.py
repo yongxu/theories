@@ -29,7 +29,8 @@ OTHER = [f'{PKG}/Becoming.lean', f'{PKG}/README.md', f'{PKG}/README.zh.md', f'{P
          'theories/becoming/THE-THEORY-OF-BECOMING.md',
          'theories/becoming/review/ALIGNMENT.md',
          f'{RF}/BECOMING-RENEWAL-READING.md', f'{RF}/THEOREM-CONNECTIVITY.json',
-         f'{RF}/THEOREM-CONNECTIVITY-APART.json']
+         f'{RF}/THEOREM-CONNECTIVITY-APART.json',
+         f'{RF}/development/rf-formations-that-read/PLAN.md']
 MINE = set(LEAN) | set(OTHER)
 # the sections RF's texts change, as research.py check names them (a heading, or the anchor a record cites),
 # compared without their leading #s
@@ -44,6 +45,11 @@ EXPECTED = {
                                                 'pure-core-and-periphery', '8. Known results', '8-known-results',
                                                 'known-results'},
     'theories/becoming/THE-THEORY-OF-BECOMING.md': {'3. Knowing, learning and testing', '3-knowing-learning-and-testing'},
+    f'{RF}/development/rf-formations-that-read/PLAN.md': {'4. The new laws', '4-the-new-laws',
+                                                          '12. Order, owners and what it serves',
+                                                          '12-order-owners-and-what-it-serves',
+                                                          '13. The review and what was taken',
+                                                          '13-the-review-and-what-was-taken', 'Evidence', 'evidence'},
 }
 REASON = ("RF round 2's first landing: Becoming.ReadingLoop and Becoming.ReflexivePrediction joined to the core as leaves "
           "(the root module's imports and doc, the checker's core list and scope, the package README rows EN and ZH), no "
@@ -51,7 +57,8 @@ REASON = ("RF round 2's first landing: Becoming.ReadingLoop and Becoming.Reflexi
           "what-a-course-chosen-through-its-model-does-not-test, acts-alike-from-a-model-or-from-an-order and "
           "a-prediction-read-by-what-it-predicts with their readings), 03's bases sentence and Open; 08's counts and §8's "
           "known results; the overview's §3; AJ5's scope box in the alignment dossier; the study; regions.json; the "
-          "connectivity; read before re-pointing")
+          "connectivity; RF's plan (§4's opening and §4.6 on what round 2's design became, §12's order, §13's review "
+          "and the evidence list), which round 1's records cite; read before re-pointing")
 
 
 def run_repoint(args):

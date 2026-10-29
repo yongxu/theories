@@ -1,0 +1,326 @@
+{
+  "schema_version": 2,
+  "id": "what-a-course-chosen-through-its-model-does-not-test",
+  "title": {
+    "en": "What a course chosen through its model does not test",
+    "zh": "依其模型而择之历程所不验者"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-29T19:32:28+00:00",
+  "statement": {
+    "en": "For one blanketed law from one start, two worlds give the formation one sensed course exactly as long as they answer alike what it does; where only answers breaking a task tell them apart, keeping it is sensing alike in both; candidates are kept where they fit the course's answers.",
+    "zh": "于同一毯化之律自同一起点，二世予形成同一所感之历程，恰当其于所行之答相同；唯毁务之答能分之处，守务即于二世所感皆同；守候选律之形成所守者为所列且合其历程之答者。"
+  },
+  "laws": [
+    {
+      "en": "For every blanketed law, from one internal, sensory and active start, two worlds give the formation one sensed course through step n exactly as long as, at each step before n, they answer alike the act it takes at the value it senses.",
+      "zh": "于每一毯化之律，自同一内部、感官与主动之起点，二世予形成同一所感之历程至第 n 步，恰当于 n 前每一步，其于形成于所感之值所取之行答之相同。",
+      "declarations": [
+        "Becoming.ReadingLoop.sensed_alike_iff"
+      ]
+    },
+    {
+      "en": "Equality of values sensed decided: where, at each step before N, an answer of the second world to the first course's act and value differing from the first's breaks a task K, a formation keeping K at steps one through N in the second senses alike in both through N, and at every step where so at every step.",
+      "zh": "所感之值之相等可判定：于 N 前每一步，第二世对第一历程之行与值之答若异于第一世之答则毁务 K，则于第二世第一至第 N 步守 K 之形成于二世所感皆同至 N；每步皆然则每步皆同。",
+      "declarations": [
+        "Becoming.ReadingLoop.alike_within",
+        "Becoming.ReadingLoop.alike_of_kept"
+      ]
+    },
+    {
+      "en": "A formation keeping candidate laws: each predicts the value sensed next from the value sensed and the act; the formation drops those the latest answer refutes and chooses its act from those kept; the loop is a blanketed law whose internal part holds the candidates kept and the last value sensed with its act.",
+      "zh": "守候选律之形成：每一候选由所感之值与行预言其后所感之值；形成弃最近之答所驳者，而由所守者择其行；此环为一毯化之律，其内部部分持所守之候选与最近所感之值及其行。",
+      "declarations": [
+        "Becoming.ReadingLoop.Loop",
+        "Becoming.ReadingLoop.Loop.keep",
+        "Becoming.ReadingLoop.Loop.law",
+        "Becoming.ReadingLoop.Loop.start",
+        "Becoming.ReadingLoop.filter_all"
+      ]
+    },
+    {
+      "en": "At configuration n + 1 the candidates kept are exactly those listed that fit the answers to the acts of the steps before n, the answer sensed at n + 1 taken in at the next step; candidates of one listing predicting alike on those steps are kept alike.",
+      "zh": "于第 n + 1 形态，所守之候选恰为所列且合 n 前诸步之行之答者，第 n + 1 所感之答于下一步方纳之；同列之候选于此诸步预言相同者，同守或同弃。",
+      "declarations": [
+        "Becoming.ReadingLoop.Loop.kept_iff",
+        "Becoming.ReadingLoop.Loop.kept_alike"
+      ]
+    },
+    {
+      "en": "A listed candidate predicting as the world answers wherever the world is in a region its moves keep is never dropped from a start in that region; the region where it is kept, agrees with the answer pending and the world is in that region is closed under the loop's step.",
+      "zh": "所列之候选，若世在其移所守之域处皆如世之答而预言，则自此域之起点永不被弃；其被守、合待纳之答且世在此域之形态之域，于环之步下为闭。",
+      "declarations": [
+        "Becoming.ReadingLoop.Loop.faithful_kept",
+        "Becoming.ReadingLoop.Loop.Fitting",
+        "Becoming.ReadingLoop.Loop.fitting_closed"
+      ]
+    },
+    {
+      "en": "Where the world answers the act chosen with the value sensed and stays, the formation chooses that act from the candidates listed, and every candidate listed predicts that answer, the formation rests at once, the same candidates, act and value at every step: a model its course never refutes.",
+      "zh": "世以所感之值答所择之行且不移，形成由所列之候选择此行，且每一所列之候选皆预言此答，则形成即止，每步之候选、行与值皆同：其历程永不驳之模型。",
+      "declarations": [
+        "Becoming.ReadingLoop.Loop.rests_of_unrefuted"
+      ]
+    },
+    {
+      "en": "Witness: values low, middle and high; a known act answering the middle value in both worlds, an untried act answering high in one and low in the other; candidates the two worlds; choice by the worst case, the least rank the candidates kept predict, the untried act exactly where its worst ranks strictly above the known act's.",
+      "zh": "例：值有低、中、高；已知之行于二世皆答中值，未试之行于一世答高、于另一世答低；候选为二世；依最坏而择，即所守候选所预言之最低之等，未试之行恰当其最坏严高于已知之行之最坏。",
+      "declarations": [
+        "Becoming.ReadingLoop.Untested.Value",
+        "Becoming.ReadingLoop.Untested.Act",
+        "Becoming.ReadingLoop.Untested.World",
+        "Becoming.ReadingLoop.Untested.reply",
+        "Becoming.ReadingLoop.Untested.rank",
+        "Becoming.ReadingLoop.Untested.lower",
+        "Becoming.ReadingLoop.Untested.lower_le_left",
+        "Becoming.ReadingLoop.Untested.lower_le_right",
+        "Becoming.ReadingLoop.Untested.lower_cases",
+        "Becoming.ReadingLoop.Untested.worst",
+        "Becoming.ReadingLoop.Untested.worst_le",
+        "Becoming.ReadingLoop.Untested.worst_attained",
+        "Becoming.ReadingLoop.Untested.byWorst",
+        "Becoming.ReadingLoop.Untested.byWorst_iff",
+        "Becoming.ReadingLoop.Untested.loop"
+      ]
+    },
+    {
+      "en": "Started with both candidates listed, no answer pending, the middle value and the known act, the formation rests at once on the known act and the middle value in either world, alike in both, never sensing the high value of the first; the true candidate is kept in its own world from every listing holding it.",
+      "zh": "以列二候选、无待纳之答、中值与已知之行为起点，形成于任一世即止于已知之行与中值，二世所感所行皆同，终不感第一世之高值；真候选于其己世自含之之每一列皆被守。",
+      "declarations": [
+        "Becoming.ReadingLoop.Untested.rest",
+        "Becoming.ReadingLoop.Untested.rests",
+        "Becoming.ReadingLoop.Untested.true_kept",
+        "Becoming.ReadingLoop.Untested.alike_in_both",
+        "Becoming.ReadingLoop.Untested.never_high"
+      ]
+    },
+    {
+      "en": "Started the same way but with the untried act, the formation separates the worlds: in the first it rests from step four on the true candidate, the untried act and high; in the second from step three on the true candidate and the known act, sensing the low value at step one and at no other step.",
+      "zh": "以同一起点而初取未试之行，则形成分二世：于第一世，自第四步止于真候选、未试之行与高；于第二世，自第三步止于真候选与已知之行，唯于第一步感低值，余步皆不。",
+      "declarations": [
+        "Becoming.ReadingLoop.Untested.upRest",
+        "Becoming.ReadingLoop.Untested.downRest",
+        "Becoming.ReadingLoop.Untested.explorer_up",
+        "Becoming.ReadingLoop.Untested.explorer_down",
+        "Becoming.ReadingLoop.Untested.explorer_low_once"
+      ]
+    },
+    {
+      "en": "Every blanketed law with the witness's answer and stationary worlds, whatever its internal part, update and choice of act, from one internal, sensory and active start in both worlds, that never senses the low value in the second senses alike in both and takes the known act at every step there; where the shared start does not sense high, it never senses high in the first.",
+      "zh": "于感官之答为例之 reply 且世不移之每一毯化之律，无论其内部部分、更新与择行如何，自二世中相同之内部、感官与主动之起点，若于第二世终不感低值，则二世所感皆同，且于彼处每步皆取已知之行；共同起点不感高处，于第一世终不感高。",
+      "declarations": [
+        "Becoming.ReadingLoop.Untested.floor_forgoes",
+        "Becoming.ReadingLoop.Untested.floor_never_high"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Any types for the general laws, discrete synchronous steps of a blanketed law; equality of the values sensed decided for the law of a task's breaking and for the loop's candidates; candidates predicting the next value from the value sensed and the act, kept by elimination.",
+      "zh": "通律于任一型，毯化之律之离散同步之步；毁务之律与环之候选需所感之值之相等可判定；候选由所感之值与行预言其后之值，以排除而守之。"
+    },
+    {
+      "en": "The law of a task's breaking asks the breaking only of the second world's answer to the first course's own act and value at each step, through the horizon.",
+      "zh": "毁务之律唯求每步第二世对第一历程己之行与值之答之毁，至其界。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Self-confirming equilibrium, optimal experimentation or maxmin representation: the witness's choice is a specified one-step worst-case criterion, and none of those theorems is reproduced.",
+      "zh": "自证之均衡、最优之试或极大极小之表征：例之择为所定之一步最坏准则，彼诸定理皆未重现。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That actual learners keep candidates by elimination, or choose by the worst case.",
+      "zh": "实际之学者以排除守候选，或依最坏而择。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Probabilities, the value of information, or how candidates are proposed.",
+      "zh": "概率、信息之值，或候选如何被提出。",
+      "kind": "scope"
+    },
+    {
+      "en": "An intervention moving the world: in the witness the world stays and the acts change only what is sensed.",
+      "zh": "移世之干预：例中世不移，行唯变所感者。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+      "detail": {
+        "en": "A model never refuted: the formation keeping both candidates and choosing by the worst case senses the middle value at every step in both worlds (ReadingLoop.Untested.rests, ReadingLoop.Untested.alike_in_both).",
+        "zh": "永不被驳之模型：守二候选而依最坏择之形成，于二世每步皆感中值（ReadingLoop.Untested.rests、ReadingLoop.Untested.alike_in_both）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+      "detail": {
+        "en": "Keeping the floor is not telling the worlds apart: with the witness's answer and stationary worlds, every formation from one start in both that never senses low in the second senses alike in both (ReadingLoop.Untested.floor_forgoes).",
+        "zh": "守底即不分二世：感官之答为例之 reply 且世不移，自二世相同之起点于第二世终不感低之每一形成，二世所感皆同（ReadingLoop.Untested.floor_forgoes）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty: the loop is a Blanket.Blanketed law, Blanket's agent_through_sensory used throughout; candidate lists filtered with Narrowing.mem_filter; the witness evaluates by rfl, and its law over every formation is a case of alike_of_kept.",
+    "zh": "纯核，公理报告皆空：此环为一 Blanket.Blanketed 之律，通用 Blanket 之 agent_through_sensory；候选之列以 Narrowing.mem_filter 筛之；例以 rfl 计算，其于每一形成之律为 alike_of_kept 之一例。"
+  },
+  "next_delta": {
+    "en": "Probabilistic candidates and the value of information in the periphery; an intervention moving the world; a frozen test predicting when a learner stops trying what its model ranks low; review by a person.",
+    "zh": "外围之概率候选与信息之值；移世之干预；预测学者何时止试其模型所低估者之冻结检验；人之审查。"
+  },
+  "correspondence": {
+    "en": "A deterministic case of a model right along the course its own choices take and wrong off it, never refuted there, related to self-confirming equilibrium (Fudenberg and Levine 1993) and incomplete learning (Rothschild 1974); the choice is a specified one-step worst case, the special case of maxmin over candidates (Gilboa and Schmeidler 1989). Beside what-seeking-cannot-separate, where no experiment the formation can choose separates two hypotheses, here one does, and a formation choosing through its model need not choose it. AI reading: where every separating answer breaks a task, no formation keeping the task learns which world holds, a deterministic two-run obstruction beside safe-exploration methods that guarantee exploration under regularity and reachability assumptions (Sui, Gotovos, Burdick and Krause 2015; Turchetta, Berkenkamp and Krause 2016). These are readings, not containments.",
+    "zh": "己择之历程上为是、其外为非、于其上永不被驳之模型之定例，近于自证之均衡（Fudenberg 与 Levine 1993）与未尽之学（Rothschild 1974）；其择为所定之一步最坏，即于候选之极大极小之特例（Gilboa 与 Schmeidler 1989）。与「探求所不能分者」并：彼处形成可选之实验无一分二假设，此处有之，而依其模型而择之形成未必择之。AI 解读：凡分之答皆毁务之处，守务之形成无一知何世成立，为一确定之二程之阻，与于正则与可达之设下保其探索之安全探索之法并（Sui、Gotovos、Burdick 与 Krause 2015；Turchetta、Berkenkamp 与 Krause 2016）。皆为读，非包含。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+  "aliases": [
+    "a model its course never refutes",
+    "其历程永不驳之模型",
+    "self-confirmation",
+    "自证",
+    "keeping the floor",
+    "守底",
+    "Becoming.ReadingLoop.alike_of_kept",
+    "Becoming.ReadingLoop.Loop.rests_of_unrefuted",
+    "Becoming.ReadingLoop.Untested.floor_forgoes"
+  ],
+  "dependencies": [
+    {
+      "id": "the-markov-blanket-as-a-coupling-structure",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Blanket.Blanketed, its step and course, and Blanketed.agent_through_sensory.",
+        "zh": "Blanket.Blanketed 及其步与历程，与 Blanketed.agent_through_sensory。"
+      }
+    },
+    {
+      "id": "learning-a-rule-by-narrowing",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Narrowing.mem_filter and Narrowing.filter_cons_true for the candidates kept.",
+        "zh": "所守之候选用 Narrowing.mem_filter 与 Narrowing.filter_cons_true。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "what-seeking-cannot-separate",
+      "detail": {
+        "en": "Seeking corrects only where some experiment it can choose separates; here an experiment separates, and a course chosen through the model need not take it.",
+        "zh": "探求唯于其可选之某实验能分之处纠正；此处有分之实验，而依模型而择之历程未必取之。"
+      }
+    },
+    {
+      "id": "a-reading-kept-by-its-update",
+      "detail": {
+        "en": "The kept reading on one carrier of world and state; here the reading that a candidate is kept, on the loop.",
+        "zh": "于世与态之一载体之所守之读；此处为环上「某候选被守」之读。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ReadingLoop.Loop",
+        "Becoming.ReadingLoop.Loop.Fitting",
+        "Becoming.ReadingLoop.Loop.faithful_kept",
+        "Becoming.ReadingLoop.Loop.fitting_closed",
+        "Becoming.ReadingLoop.Loop.keep",
+        "Becoming.ReadingLoop.Loop.kept_alike",
+        "Becoming.ReadingLoop.Loop.kept_iff",
+        "Becoming.ReadingLoop.Loop.law",
+        "Becoming.ReadingLoop.Loop.rests_of_unrefuted",
+        "Becoming.ReadingLoop.Loop.start",
+        "Becoming.ReadingLoop.Untested.Act",
+        "Becoming.ReadingLoop.Untested.Value",
+        "Becoming.ReadingLoop.Untested.World",
+        "Becoming.ReadingLoop.Untested.alike_in_both",
+        "Becoming.ReadingLoop.Untested.byWorst",
+        "Becoming.ReadingLoop.Untested.byWorst_iff",
+        "Becoming.ReadingLoop.Untested.downRest",
+        "Becoming.ReadingLoop.Untested.explorer_down",
+        "Becoming.ReadingLoop.Untested.explorer_low_once",
+        "Becoming.ReadingLoop.Untested.explorer_up",
+        "Becoming.ReadingLoop.Untested.floor_forgoes",
+        "Becoming.ReadingLoop.Untested.floor_never_high",
+        "Becoming.ReadingLoop.Untested.loop",
+        "Becoming.ReadingLoop.Untested.lower",
+        "Becoming.ReadingLoop.Untested.lower_cases",
+        "Becoming.ReadingLoop.Untested.lower_le_left",
+        "Becoming.ReadingLoop.Untested.lower_le_right",
+        "Becoming.ReadingLoop.Untested.never_high",
+        "Becoming.ReadingLoop.Untested.rank",
+        "Becoming.ReadingLoop.Untested.reply",
+        "Becoming.ReadingLoop.Untested.rest",
+        "Becoming.ReadingLoop.Untested.rests",
+        "Becoming.ReadingLoop.Untested.true_kept",
+        "Becoming.ReadingLoop.Untested.upRest",
+        "Becoming.ReadingLoop.Untested.worst",
+        "Becoming.ReadingLoop.Untested.worst_attained",
+        "Becoming.ReadingLoop.Untested.worst_le",
+        "Becoming.ReadingLoop.alike_of_kept",
+        "Becoming.ReadingLoop.alike_within",
+        "Becoming.ReadingLoop.filter_all",
+        "Becoming.ReadingLoop.sensed_alike_iff"
+      ],
+      "sha256": "5ca0f323c689c19d56edeb317a3eb371d715bd74533d5edad32429433db71812"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
+      "role": "proof",
+      "sha256": "517d21ed20f59fce954e4f007eee54a9342bb1908a487ce9bd1b2d307d390677"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T191748.070149Z/verification.json",
+      "role": "receipt",
+      "sha256": "442db94f6d0719ec28958e4fcca9f2017d4425bc63e7f28379dbf292b15e2e12"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "1d54324cb0e5a8ed7cb553a67433994ca4c58c53c8a6901928c6ca7952c12e65"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
+      "role": "integration",
+      "sha256": "dce0afaa22e8fd2d9220c8691484f3b35d847aa360e08efd3069e2f1b4765562"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md",
+      "role": "integration",
+      "sha256": "6425b8f20cf4b6eeb67dc24fd81eddec5988550a2d3d79793920c226a8af9b93"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "62025a2b610fb1726559d2a6dd34536225d2a5ea66012ef29fd3865b1055ebb5"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T191748.070149Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReadingLoop",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "30 October 2026: added (RF round 2), what a course chosen through its model does not test: two worlds and one formation, a formation keeping candidate laws, keeping a task as not telling worlds apart; after a cross-model review of the Lean with a re-check, every finding taken; study section 456.",
+      "zh": "2026年10月30日：新增（RF 第二轮），依其模型而择之历程所不验者：二世一形成、守候选律之形成、守务即不分二世；经 Lean 之跨模型审查与复查，凡所见皆取；研究第 456 节。"
+    }
+  ]
+}

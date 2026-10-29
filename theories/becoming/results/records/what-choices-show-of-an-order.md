@@ -78,6 +78,8 @@ Rationalizing strict choices by a strict partial order, through the least transi
 - related, not a proved adapter: [what-readings-fix-of-the-unread](what-readings-fix-of-the-unread.md). What readings fix of the unread: the same question for acts at occasions not read.
 - related, not a proved adapter: [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md). The linear-extension form on finite causal sets with precedence decided: what every course keeps is precedence, unrelated elements born either way; here strict partial orders on any carrier, with nothing decided.
 
+**Used by:** [acts-alike-from-a-model-or-from-an-order](acts-alike-from-a-model-or-from-an-order.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

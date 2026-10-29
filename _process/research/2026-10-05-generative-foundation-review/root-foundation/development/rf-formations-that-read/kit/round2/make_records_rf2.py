@@ -553,8 +553,8 @@ rD = build(
          "the one-step form.", '自读之缺；否其自预言之形成为其一步之形。'),
      rel('learning-by-refutation', "The diagonal course, on which every value an extrapolation proposes misses: the "
          "course form of a prediction negated by what it predicts.", '对角之历程，其上外推所提之每一值皆失：为其所预言者所否之预言之历程之形。')],
-    [{'path': LEAN['Diagonal'], 'role': 'context', 'sha256': sha(LEAN['Diagonal'])},
-     {'path': LEAN['Learning'], 'role': 'context', 'sha256': sha(LEAN['Learning'])}],
+    [{'path': LEAN['Diagonal'], 'role': 'integration', 'sha256': sha(LEAN['Diagonal'])},
+     {'path': LEAN['Learning'], 'role': 'integration', 'sha256': sha(LEAN['Learning'])}],
     CH3, done('a-prediction-read-by-what-it-predicts', 'a prediction read by what it predicts: right where the response '
               'leaves it, none where it moves every value, the least right one reached on a chain', '为其所预言者所读之预言：应不移处为是，应移每一值处无是者，链上达最小之是者'))
 

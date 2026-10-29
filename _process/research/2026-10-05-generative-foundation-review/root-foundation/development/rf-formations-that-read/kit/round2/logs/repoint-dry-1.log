@@ -1,0 +1,157 @@
+re-pointing 21 pairs in 21 records:
+   access-yet-to-form theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   adaptive-closure-cannot-resolve theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   capture-by-counted-choices theories/becoming/chapters/03-KNOWING.md ['## Open', '(before the first heading)']
+   certificates-sound-and-available theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   composition-route theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   conditioning-by-restriction theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   correction-is-not-calibration theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   evidence-through-change theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   exit-from-a-margin theories/becoming/chapters/03-KNOWING.md ['## Open', '(before the first heading)']
+   expected-free-energy-and-its-terms theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   free-energy-bounds-surprisal theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   learning-a-rule-by-narrowing theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   one-move-covering theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   readings-a-response-needs theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   the-markov-blanket-as-a-coupling-structure theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   what-a-total-keeps theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   what-choices-show-of-an-order theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   what-readings-fix-of-the-unread theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   what-seeking-cannot-separate theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   what-the-existence-claim-forbids theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   when-to-inquire-and-when-to-respond theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+left to their owners: [('readers-reading-readers', '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md'), ('what-choices-show-of-an-order', '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md'), ('what-readings-fix-of-the-unread', '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md')]
+{
+ "records": 21,
+ "apply": false,
+ "by_record": {
+  "access-yet-to-form": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "adaptive-closure-cannot-resolve": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "capture-by-counted-choices": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "certificates-sound-and-available": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "composition-route": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "conditioning-by-restriction": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "correction-is-not-calibration": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "evidence-through-change": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "exit-from-a-margin": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "expected-free-energy-and-its-terms": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "free-energy-bounds-surprisal": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "learning-a-rule-by-narrowing": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "one-move-covering": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "readings-a-response-needs": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "the-markov-blanket-as-a-coupling-structure": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "what-a-total-keeps": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "what-choices-show-of-an-order": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "what-readings-fix-of-the-unread": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "what-seeking-cannot-separate": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "what-the-existence-claim-forbids": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "when-to-inquire-and-when-to-respond": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  }
+ }
+}
+ 
+repoint (texts): 21 records (dry run)
