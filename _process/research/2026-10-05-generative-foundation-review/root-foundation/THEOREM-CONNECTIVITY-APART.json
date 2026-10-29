@@ -12,6 +12,11 @@
   "calibration": "the exact logical principle (excluded middle, LPO, WLPO, choice) a stated criterion needs, for a notion the base does not assert; a lemma of the item that needs it"
  },
  "roots": {
+  "Becoming.KindRelay.Fed.not_listed": {
+   "module": "Becoming.KeepingWidening",
+   "category": "model-witness",
+   "reason": "No list holds every condition of the fed kind relay: the fuel of every step is a condition. A fact about one constructed model, used by no other theorem; with Fed.requirements_not_dissipated it says why the laws for dissipated requirements and for a listed world do not reach the fed relay (GW)"
+  },
   "Becoming.RegimeMargin.beyond_draw_iff": {
    "module": "Becoming.RegimeMargin",
    "category": "support",
