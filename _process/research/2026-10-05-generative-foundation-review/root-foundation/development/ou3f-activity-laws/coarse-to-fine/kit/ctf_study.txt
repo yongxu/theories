@@ -1,0 +1,27 @@
+## {N}. The coarse-to-fine pair, and OU3f done (OU3f)
+
+After the lineage laws ([§451](#451-the-lineage-laws-cases-of-the-grammars-laws-of-steps-ou3f)) and the held edits ([§455](#455-the-held-edits-in-one-near-full-rebuild-he)), OU3f's last derivations are the two coarse-to-fine laws of `Becoming.Persistence` that [the audit](development/ou3f-activity-laws/AUDIT.md) found ([design](development/ou3f-activity-laws/coarse-to-fine/DESIGN.md)).
+
+```text
+Result(s): no record changes; the records pinning Persistence re-pointed.
+Delta: (1) the pair. Where activity changes across a step, the occurrence before it ends under the state class
+       (Web.wang_state_of_change) and the one after it begins there (Web.sheng_state_of_change). Each is now read from
+       ending or beginning under activity, which the state class is finer than: «亡于粗则亡于细» and «生于粗则生于细»
+       replace the old proofs' projection of the state class's pair to its activity half, as for their siblings
+       ceases_of_persisting_ceases and arises_of_persisting_arises. Statements and names are unchanged. Each derivation
+       is small: genuine by OU3d's second review's test, but each replaces one step. Persistence {PT} theorems in {PD}
+       declarations.
+       (2) OU3f is done. All fifteen (a) rows and the four (b) rows of the audit are derived, and the rows that follow
+       reach the grammar unchanged; the 398 laws of their models keep their proofs with their reasons written down.
+       The row moves to the history file.
+       (3) the signature scanner. OU3b's helper (signatures_ou3b.py) read lines of docstrings as definitions. It now
+       blanks comments, docstrings and string contents before matching, as the catalogue's parser does: on the whole
+       package it drops 26 such lines, none a real declaration, and adds none.
+Supplied premises / correspondence: none.
+Evidence: core receipt {RECEIPT}, every axiom report empty; the signature audit (signatures_ctf.py) shows every
+       statement of Persistence printing as before, nothing added or gone.
+Boundary: none.
+Output → input: Persistence; 08's counts; the board, where OU3f's row closes; the master-law view.
+```
+
+**The review, and what was taken.** (to be written from the review)
