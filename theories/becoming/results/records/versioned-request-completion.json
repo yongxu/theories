@@ -10,8 +10,8 @@
   "family": "F03",
   "reviewed_at_utc": "2026-10-28T11:55:10+00:00",
   "statement": {
-    "en": "A partial law doing one unit of a pending task's work a tick, and finishing when none is left, finishes it in exactly that work plus one tick, shorter runs leaving it pending; with fuel, exactly when the fuel covers them. Under the bank and queue invariant the versioned queue's head is such a task.",
-    "zh": "一个部分律在任务待办时每个时刻做一个单位的工作、无剩余时完成，它恰在该工作加一个时刻时完成任务，更短的运行使任务仍待办；计入燃料时，恰当燃料覆盖这些时刻。在库与队列不变式下，版本化队列之首就是这样的任务。"
+    "en": "A partial law doing one unit of a pending task's work a tick, and finishing when none is left, finishes it in that work plus one tick, shorter runs leaving it pending; with fuel, exactly when the fuel covers them. Under the bank and queue invariant the versioned queue's head is such a task.",
+    "zh": "一个部分律在任务待办时每个时刻做一个单位的工作、无剩余时完成，它在该工作加一个时刻时完成任务，更短的运行使任务仍待办；计入燃料时，恰当燃料覆盖这些时刻。在库与队列不变式下，版本化队列之首就是这样的任务。"
   },
   "laws": [
     {
@@ -74,7 +74,7 @@
   ],
   "hypotheses": [
     {
-      "zh": "使用既有有限二元转译路线、正确积累摘要、捕获后保留的银行、有效头请求与连续 tick 调度。",
+      "zh": "使用既有有限二元转译路线、正确积累摘要、捕获后保留的库、有效头请求与连续 tick 调度。",
       "en": "Finite binary translation, sound accumulated summaries, captured retained banks, a valid head and consecutive ticks are supplied."
     }
   ],
@@ -89,8 +89,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionVersioned.lean",
       "detail": {
-        "en": "A queue at capacity leaves the installation unchanged, admitting no new request; and a request followed only by pauses stays pending, since the invariant supplies no scheduler fairness or deadline.",
-        "zh": "队列满时安装不变，不接纳新请求；请求之后只有暂停时它仍待办，因为不变式不提供调度公平或期限。"
+        "en": "Beginning a request on a queue at capacity leaves the installation unchanged, admitting none; and in a witness a request followed by two pauses is still the one packet in the queue, the invariant supplying no scheduler fairness or deadline.",
+        "zh": "队列满时开始请求使安装不变，不接纳新请求；见证中，请求之后两次暂停，它仍是队列中唯一的包，不变式不提供调度公平或期限。"
       }
     }
   ],
@@ -352,8 +352,8 @@
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，取自主张：每个时刻做一单位工作的一般规律及其计入燃料的形式，以库与队列不变式下的版本化队列之首为外围实例。规律未变。"
     },
     {
-      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): the statement kept; the claim split into six laws, each read against its declarations in Becoming.Countdown, Becoming.Courses, VersionedTaskInstances and CorrectionVersioned (the invariant's three parts written out, and the shorter drains stated with their bound); the limitation, which the counterexample repeated, split: the appropriateness of the request to one does-not-show item, and the capacity and scheduling cases to the counterexample, now stated as the two witnesses CorrectionVersioned proves (full_request_capacity_blocks_admission, pause_is_not_a_progress_guarantee), with a law; the standard boundaries no-ethical-premise-core-axiom-free and formal-not-empirical; the hypothesis and correspondence kept; seven declarations added to their files' references; the next step stated as a scheduling law; no premise, status or source hash changed. Every earlier sentence is mapped in [versioned-request-completion.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/versioned-request-completion.md); the exact earlier record is the first text_versions entry.",
-      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留；主张拆为六条规律，各条对照其在 Becoming.Countdown、Becoming.Courses、VersionedTaskInstances 与 CorrectionVersioned 中的声明核读（写出不变式的三部分，更短的排空连同其界一并写出）；与反例重复的限制分开：请求是否适当归入一条“未表明”，容量与调度的情形归入反例，反例现写为 CorrectionVersioned 所证的两个见证（full_request_capacity_blocks_admission、pause_is_not_a_progress_guarantee），并有一条规律；通用边界 no-ethical-premise-core-axiom-free、formal-not-empirical；前提与对应保留；七个声明加入其文件的引用；下一步写为一条调度规律；前提、状态与来源哈希均未改变。每句旧文本的去向见 [versioned-request-completion.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/versioned-request-completion.md)；迁移前的完整记录为 text_versions 首项。"
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): the statement kept; the claim split into six laws, each read against its declarations in Becoming.Countdown, Becoming.Courses, VersionedTaskInstances and CorrectionVersioned (the invariant's three parts written out, and the shorter drains stated with their bound); the limitation, which the counterexample repeated, split: the appropriateness of the request to one does-not-show item, and the capacity and scheduling cases to the counterexample, now stated as the two witnesses CorrectionVersioned proves (full_request_capacity_blocks_admission, pause_is_not_a_progress_guarantee), with a law; the standard boundaries no-ethical-premise-core-axiom-free and formal-not-empirical; the hypothesis and correspondence kept; seven declarations added to their files' references; the next step stated as a scheduling law; no premise, status or source hash changed. Every earlier sentence is mapped in [versioned-request-completion.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/versioned-request-completion.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the counterexamples, hypotheses, the statement, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留；主张拆为六条规律，各条对照其在 Becoming.Countdown、Becoming.Courses、VersionedTaskInstances 与 CorrectionVersioned 中的声明核读（写出不变式的三部分，更短的排空连同其界一并写出）；与反例重复的限制分开：请求是否适当归入一条“未表明”，容量与调度的情形归入反例，反例现写为 CorrectionVersioned 所证的两个见证（full_request_capacity_blocks_admission、pause_is_not_a_progress_guarantee），并有一条规律；通用边界 no-ethical-premise-core-axiom-free、formal-not-empirical；前提与对应保留；七个声明加入其文件的引用；下一步写为一条调度规律；前提、状态与来源哈希均未改变。每句旧文本的去向见 [versioned-request-completion.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/versioned-request-completion.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及反例、前提、陈述，各条对照所引 Lean 核读。"
     }
   ],
   "text_versions": [

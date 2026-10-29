@@ -53,8 +53,8 @@
       ]
     },
     {
-      "en": "Two relata of a world are indiscernible where at every step they are alike in activity and level, in what each takes from and gives to every relatum, and in what every relatum takes from and gives to each; indiscernibility is a likeness.",
-      "zh": "一个世界的两个关系项不可分辨，是指在每一步它们在活动与层级上相同，在各自从每个关系项取用与给予上相同，在每个关系项从它们取用与给予上也相同；不可分辨是一种相似。",
+      "en": "Two relata of a world are indiscernible where at every step they are alike in activity, level and taking part in the step, and alike either way round in every relation to every relatum: requiring, drawing, need, taking and giving; indiscernibility is a likeness.",
+      "zh": "一个世界的两个关系项不可分辨，是指在每一步它们在活动、层级与参与该步上相同，并在对每个关系项的每个关系上（两个方向）相同：要求、汲取、需要、取用与给予；不可分辨是一种相似。",
       "declarations": [
         "Becoming.World.Indiscernible",
         "Becoming.World.indiscernible_equivalence"
@@ -108,8 +108,8 @@
       ]
     },
     {
-      "en": "With a decision procedure for identity on the relata's type and strictly increasing sampling times, balance on a family across each fine step inside a coarse step gives balance on it across the coarse step for every flow read by occurrence, with no listing once asked of the flow.",
-      "zh": "关系项类型上有同一的判定程序、采样时刻严格递增时，在一个粗步内每个细步上对一个家族的平衡，给出按出现读的每个流跨该粗步对它的平衡，不要求原流列出一次。",
+      "en": "With a decision procedure for identity on the relata's type and strictly increasing sampling times, balance on a family across each fine step inside a coarse step gives balance on it across the coarse step for any flow listing what takes part in each fine step once, and so for every flow read by occurrence, with no listing once asked of the flow.",
+      "zh": "关系项类型上有同一的判定程序、采样时刻严格递增时，在一个粗步内每个细步上对一个家族的平衡，对每个细步把参与者列出一次的流给出跨该粗步对它的平衡，因而对按出现读的每个流都如此，不要求原流列出一次。",
       "declarations": [
         "Becoming.Flow.BalancesOn.sample_byOccurrence",
         "Becoming.Flow.BalancesOn.sample"
@@ -231,8 +231,8 @@
     {
       "id": "space-and-its-parts",
       "detail": {
-        "zh": "P58 的 World.law_iff_em：对每个世界问可判定性恰在排中律下；这里对经关系的计数同样。",
-        "en": "P58's World.law_iff_em: decidedness asked of every world holds exactly under excluded middle; here likewise for counting through relations."
+        "zh": "World.law_iff_em：对每个世界问可判定性恰在排中律下；这里对经关系的计数同样。",
+        "en": "World.law_iff_em: decidedness asked of every world holds exactly under excluded middle; here likewise for counting through relations."
       }
     },
     {
@@ -578,8 +578,8 @@
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：以现在陈述它的名称取代（陈述相同或为其一般形式）或改名（development/r37-lens-b/RENAME-TABLE.json）：DistinctBy（现为 DistinctUnder）；DistinctBy.decided（现为 DistinctUnder.decided）；DistinctBy.distinct（现为 DistinctUnder.distinct）；DistinctBy.eq_of（现为 DistinctUnder.eq_of）。证明绑定（Labelled.lean、Listing.lean、Sampling.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Labelled.lean、Listing.lean、Sampling.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变。论断不变。"
     },
     {
-      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): title kept; the statement restated as the Lean proves it (that every list of every world has a number up to indiscernibility is exactly excluded middle, names can count two where relations count one), the reading that names give one decided identity more left in the correspondence; the claim split into eleven laws, each read against its declarations in Listing.lean, Prelude.lean and Sampling.lean, the coarse-step law narrowed to the decision procedure for identity and the strictly increasing sampling it takes; the limitations became three does-not-show items and the standard boundaries no-ethical-premise, no-evaluation and names-provisional, with one hypothesis added on the coarse-step law; the correspondence drops its round labels and the sentence on the connection to likeness, which a does-not-show item carries; no premise, status, reference, proof binding or source hash changed. Every earlier sentence is mapped in [relata-counted-up-to-indiscernibility.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/relata-counted-up-to-indiscernibility.md); the exact earlier record is the first text_versions entry.",
-      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：标题保留；陈述按 Lean 所证重述（每个世界的每个列表都有按不可分辨计的数，恰是排中律；名字可以计二而关系计一），“名字多给一份已定的同一”这一读法留在对应说明中；主张拆为十一条规律，各条对照 Listing.lean、Prelude.lean 与 Sampling.lean 中的声明核读，粗步之律按其所取的同一判定程序与严格递增采样收窄；限制改为三条“未表明”与通用边界 no-ethical-premise、no-evaluation 与 names-provisional，并加一条关于粗步之律的前提；对应说明删去轮次标签与关于与相似之联系的一句，由一条“未表明”承载；前提、状态、引用、证明绑定与来源哈希均未改变。每句旧文本的去向见 [relata-counted-up-to-indiscernibility.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/relata-counted-up-to-indiscernibility.md)；迁移前的完整记录为 text_versions 首项。"
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): title kept; the statement restated as the Lean proves it (that every list of every world has a number up to indiscernibility is exactly excluded middle, names can count two where relations count one), the reading that names give one decided identity more left in the correspondence; the claim split into eleven laws, each read against its declarations in Listing.lean, Prelude.lean and Sampling.lean, the coarse-step law narrowed to the decision procedure for identity and the strictly increasing sampling it takes; the limitations became three does-not-show items and the standard boundaries no-ethical-premise, no-evaluation and names-provisional, with one hypothesis added on the coarse-step law; the correspondence drops its round labels and the sentence on the connection to likeness, which a does-not-show item carries; no premise, status, reference, proof binding or source hash changed. Every earlier sentence is mapped in [relata-counted-up-to-indiscernibility.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/relata-counted-up-to-indiscernibility.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, related entries, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：标题保留；陈述按 Lean 所证重述（每个世界的每个列表都有按不可分辨计的数，恰是排中律；名字可以计二而关系计一），“名字多给一份已定的同一”这一读法留在对应说明中；主张拆为十一条规律，各条对照 Listing.lean、Prelude.lean 与 Sampling.lean 中的声明核读，粗步之律按其所取的同一判定程序与严格递增采样收窄；限制改为三条“未表明”与通用边界 no-ethical-premise、no-evaluation 与 names-provisional，并加一条关于粗步之律的前提；对应说明删去轮次标签与关于与相似之联系的一句，由一条“未表明”承载；前提、状态、引用、证明绑定与来源哈希均未改变。每句旧文本的去向见 [relata-counted-up-to-indiscernibility.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/relata-counted-up-to-indiscernibility.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、相关条目，各条对照所引 Lean 核读。"
     }
   ],
   "text_versions": [

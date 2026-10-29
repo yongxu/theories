@@ -206,5 +206,85 @@
   "old": "ordered access, adjacency costs, release, occurrence order",
   "new": "ordered access, adjacency draws, release, occurrence order",
   "by": "reviewer"
+ },
+ {
+  "unit": "M",
+  "record": "becoming-spine-instances",
+  "file": "theories/becoming/chapters/08-METHOD.md",
+  "old": "The identifications are definitional and add no normative premise.",
+  "new": "The identifications add no normative premise; several hold by definition, the others by short proofs.",
+  "by": "reviewer"
+ },
+ {
+  "unit": "B",
+  "record": "consequence-revised-reference-plan",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "a rule not reading failures leaves one unanswered at every plan once addresses are unbounded",
+  "new": "a rule not reading failures leaves one unanswered at every plan where no list holds every address",
+  "by": "reviewer"
+ },
+ {
+  "unit": "B",
+  "record": "fallible-witness-diagnosability",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "**Theorem** (any type; roster, fault envelopes and complete reports supplied).",
+  "new": "**Theorem** (any type of witnesses compared decidedly; roster, fault envelopes and complete reports supplied).",
+  "by": "reviewer"
+ },
+ {
+  "unit": "B",
+  "record": "unanchored-incidence-collapse",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "a coarse account exact for them can make a spent history's impossible self-join possible",
+  "new": "one code exact for them can make a traced passage's impossible self-join possible",
+  "by": "reviewer"
+ },
+ {
+  "unit": "B",
+  "record": "risk-certificate-outcome-distinction",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "**Theorem** (any process; a supplied three-route process; the application theorems use propext).",
+  "new": "**Theorem** (any process; a supplied three-route process; the application theorems use propext, their reading on the core law propext and Quot.sound).",
+  "by": "reviewer"
+ },
+ {
+  "unit": "B",
+  "record": "acquired-revision-of-pending-task",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "**Conditional** (J, with correspondence, authority and responsiveness, explicit in the protocol).",
+  "new": "**Conditional** (the practical commitments, with correspondence, authority and responsiveness, explicit in the protocol).",
+  "by": "reviewer"
+ },
+ {
+  "unit": "C",
+  "record": "timely-response-necessity",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "each under the deadline premises above, timely reach decided). Committed weight is at most the paired error plus the weight within timely reach (`FallibleInquiry.coverage_le_errors_add_timed_reach`), and equals the paired error where nothing arrives in time",
+  "new": "each under the deadline premises above). With timely reach decided, committed weight is at most the paired error plus the weight within timely reach (`FallibleInquiry.coverage_le_errors_add_timed_reach`), and, with no decision, it equals the paired error where nothing arrives in time",
+  "by": "reviewer"
+ },
+ {
+  "unit": "C",
+  "record": "finite-fallible-inquiry-necessity",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "and answers through everything that couples in, coverage is at most the two errors plus the weight within responsive reach, and entirely beyond reach equals them;",
+  "new": "and answers through everything that couples in up to the answer time, coverage is at most the two errors plus the weight within responsive reach, reach decided, and entirely beyond reach equals them with no decision;",
+  "by": "reviewer"
+ },
+ {
+  "unit": "C",
+  "record": "causal-models-as-processes",
+  "file": "theories/becoming/chapters/03-KNOWING.md",
+  "old": "An intervention is a move not taken, unfixed by the record and fixed by the model;",
+  "new": "An intervention is a move not taken, fixed by the model and, where there are two different configurations, not by the record;",
+  "by": "reviewer"
+ },
+ {
+  "unit": "J",
+  "record": "versioned-request-completion",
+  "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "old": "finishes it in exactly that work plus one tick, every shorter run leaving it pending",
+  "new": "finishes it in that work plus one tick, every shorter run leaving it pending",
+  "by": "reviewer"
  }
 ]

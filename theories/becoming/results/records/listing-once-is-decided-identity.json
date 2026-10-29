@@ -175,8 +175,8 @@
       "zh": "Decided 即计数中的已定（命题成立或不成立），在规律写明处给定；不使用排中律。"
     },
     {
-      "en": "The refutation corollaries take their own laws' premises (balance, dissipation, embodied arising, closure, enclosure, a unit fixed from some step on), with the family listed in any way.",
-      "zh": "否证推论取其各自规律的前提（平衡、耗散、生起体现、封闭、围绕封闭、从某步起固定的单位），家族可任意列出。"
+      "en": "The refutation corollaries take their own laws' premises (balance and dissipation, everywhere or from some step on; embodied arising; closure or enclosure around the family; a unit fixed at one, or a stock left unrefined, from some step on; the recurrence each refutes against), with the family listed in any way.",
+      "zh": "否证推论取其各自规律的前提（平衡与耗散，处处或从某步起；生起体现；封闭或围绕家族的封闭；从某步起单位固定为一或存量未细分；各自所对的复现），家族可任意列出。"
     }
   ],
   "does_not_show": [
@@ -255,8 +255,8 @@
       "id": "counts-exist-where-decided",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "复用 P58 的 Decided 与普查：普查决定其所列者之间的同一，带同一判定的列出给出普查。",
-        "en": "Reuses P58's Decided and censuses: a census decides identity among what it lists, and a listing with identity decided gives a census."
+        "zh": "复用计数记录的 Decided 与普查：普查决定其所列者之间的同一，所列者之间同一由程序判定时，列出给出普查。",
+        "en": "Reuses the Decided and censuses of the record of counts: a census decides identity among what it lists, and a listing gives a census where a procedure decides identity among the listed."
       },
       "interface": {
         "output": {
@@ -770,8 +770,8 @@
       "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.rests_unrefuted, World.Finite to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
     },
     {
-      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): title kept; the statement's last clause narrowed to what the Lean proves (a law refuting something wherever a list is listed once refutes it with no premise), the local uses becoming laws; the claim split into fourteen laws, each read against its declarations in Listing.lean, ListingRefutations.lean, Prelude.lean and InAmounts.lean, the twenty-two refutation corollaries named in two laws; the limitations became three does-not-show items, the standard boundaries no-ethical-premise, no-evaluation and names-provisional and a sentence of the correspondence; the hypothesis on unchanged modules moved to the correspondence and one on the corollaries' premises added; the inventory, which no declaration witnesses, left the counterexamples and stays a provenance reference; twelve refutation corollaries added to ListingRefutations.lean's reference; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [listing-once-is-decided-identity.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/listing-once-is-decided-identity.md); the exact earlier record is the first text_versions entry.",
-      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：标题保留；陈述末一分句按 Lean 收窄（处处列出一次时否证某事的律不加前提地否证它），局部用法改为规律；主张拆为十四条规律，各条对照 Listing.lean、ListingRefutations.lean、Prelude.lean 与 InAmounts.lean 中的声明核读，二十二条否证推论分在两条规律中；限制改为三条“未表明”、通用边界 no-ethical-premise、no-evaluation 与 names-provisional 及对应说明中的一句；关于模块未变的前提移入对应说明，并加一条关于推论前提的前提；清点不由任何声明见证，移出反例，仍为来源引用；十二条否证推论加入 ListingRefutations.lean 的引用；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [listing-once-is-decided-identity.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/listing-once-is-decided-identity.md)；迁移前的完整记录为 text_versions 首项。"
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): title kept; the statement's last clause narrowed to what the Lean proves (a law refuting something wherever a list is listed once refutes it with no premise), the local uses becoming laws; the claim split into fourteen laws, each read against its declarations in Listing.lean, ListingRefutations.lean, Prelude.lean and InAmounts.lean, the twenty-two refutation corollaries named in two laws; the limitations became one does-not-show item, the standard boundaries no-evaluation and names-provisional and the correspondence's breakdown of the thirty uses; two does-not-show items added (non-recurrence is not settling; decided identity at each step is not shown to give a census, the census law narrowed to the decision procedure it takes); the claim's \"No premise\" read as no-ethical-premise; the hypothesis on unchanged modules moved to the correspondence and one on the corollaries' premises added; the inventory, which no declaration witnesses, left the counterexamples and stays a provenance reference; twelve refutation corollaries added to ListingRefutations.lean's reference; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [listing-once-is-decided-identity.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/listing-once-is-decided-identity.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in a dependency, hypotheses, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：标题保留；陈述末一分句按 Lean 收窄（处处列出一次时否证某事的律不加前提地否证它），局部用法改为规律；主张拆为十四条规律，各条对照 Listing.lean、ListingRefutations.lean、Prelude.lean 与 InAmounts.lean 中的声明核读，二十二条否证推论分在两条规律中；限制改为一条“未表明”、通用边界 no-evaluation 与 names-provisional 及对应说明中三十个用处的分解；另加两条“未表明”（不复现不是安定；未表明每步已定的同一给出普查，普查之律按其所取的判定程序收窄）；主张中的“不加前提”读作 no-ethical-premise；关于模块未变的前提移入对应说明，并加一条关于推论前提的前提；清点不由任何声明见证，移出反例，仍为来源引用；十二条否证推论加入 ListingRefutations.lean 的引用；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [listing-once-is-decided-identity.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/listing-once-is-decided-identity.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及依赖、前提，各条对照所引 Lean 核读。"
     }
   ],
   "text_versions": [

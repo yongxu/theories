@@ -10,13 +10,13 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-28T12:12:53+00:00",
   "statement": {
-    "en": "Through a contact plan, changing plan keeps every old selection exactly where every old contact is kept; a revision rule answers every failure exactly where it puts the failed address into the next plan, and a rule blind to failures leaves one unanswered at every plan once addresses are unbounded.",
-    "zh": "经接触计划，换计划保留每个旧选择，恰当它保留每个旧接触；修订规则回应每次失败，恰当它把失败地址放入下一计划；不读失败的规则在地址无界时每个计划都漏掉一次失败。"
+    "en": "Through a contact plan, changing plan keeps every old selection exactly where every old contact is kept; a revision rule answers every failure exactly where it puts the failed address into the next plan, and a rule blind to failures misses one at every plan where no list holds every address.",
+    "zh": "经接触计划，换计划保留每个旧选择，恰当它保留每个旧接触；修订规则回应每次失败，恰当它把失败地址放入下一计划；不读失败的规则在没有列表含所有地址时每个计划都漏掉一次失败。"
   },
   "laws": [
     {
-      "en": "For addresses compared decidedly, a contact plan is a finite list of addresses, two signals being alike through it where they agree at every contact. A change of plan keeps the old plan's distinctions, and with them every selection through the old plan, exactly where the new plan retains every old contact; a retired contact's value is selected through the old plan and not through the new.",
-      "zh": "对可判定相等的地址：接触计划是地址的有限列表，两个信号经它相同，是指在每个接触处一致。换计划保留旧计划的区分、并随之保留经旧计划的每个选择，恰当新计划保留每个旧接触；退出的接触之值经旧计划被选择，经新计划不被选择。",
+      "en": "For addresses compared decidedly, a contact plan is a finite list of addresses, two two-valued signals being alike through it where they agree at every contact. A change of plan keeps the old plan's distinctions, and with them every selection through the old plan, exactly where the new plan retains every old contact; a retired contact's value is selected through the old plan and not through the new.",
+      "zh": "对可判定相等的地址：接触计划是地址的有限列表，两个二值信号经它相同，是指在每个接触处一致。换计划保留旧计划的区分、并随之保留经旧计划的每个选择，恰当新计划保留每个旧接触；退出的接触之值经旧计划被选择，经新计划不被选择。",
       "declarations": [
         "Becoming.Contacts.AgreeOn",
         "Becoming.Contacts.keeps_iff_retains",
@@ -85,8 +85,8 @@
       ]
     },
     {
-      "en": "Its revision puts the address of the acquired mismatch at the head of the retained method and makes it the next contact sequence, leaving the installed contacts until a checked install; the rule answers every failure, the failed address's value being selected through the next plan. A probe acquires both references at the next address; an install with nothing pending and every pair separated installs the fresh pairs.",
-      "zh": "其修订把取得的失配地址放在保留方法之首并作为下一接触序列，已安装接触留到检查后的安装；该规则回应每次失败，失败地址之值经下一计划被选择。探测在下一地址取得两个参考；无待做且每对分离时，安装把新取得的对装上。",
+      "en": "In the reference-plan process, revision puts the acquired mismatch's address at the head of the retained method as the next contact sequence, the installed contacts kept until a checked install, so the rule answers every failure. While building, a probe acquires both references at the next address; an install with nothing pending and every pair separated installs the fresh pairs.",
+      "zh": "在参考计划过程中，修订把取得的失配地址放在保留方法之首并作为下一接触序列，已安装接触留到检查后的安装，所以该规则回应每次失败。构建中，探测在下一地址取得两个参考；无待做且每对分离时，安装把新取得的对装上。",
       "declarations": [
         "Becoming.ReferencePlan.propose",
         "Becoming.ReferencePlan.propose_from_mismatch",
@@ -100,8 +100,8 @@
       ]
     },
     {
-      "en": "In the process, a probed pair drives a channel to both targets exactly when its two responses differ, and after a drift that inverts the channel a checked key fails at every target. The frozen operation re-runs the retained method whatever the mismatch, so it does not read failures and at every retained method leaves some failed address unselected by the next plan.",
-      "zh": "在该过程中，探测所得的一对把通道驱动到两个目标，恰当其两个回应不同；漂移反转通道后，已检查的键在每个目标处失败。冻结操作不论失配都重跑保留的方法，所以不读失败，在每个保留方法都留下某个失败地址不被下一计划选择。",
+      "en": "In the reference-plan process, a probed pair drives a channel to both targets exactly when its two responses differ, and after a drift that inverts the channel a checked key fails at every target. The frozen operation re-runs the retained method whatever the mismatch, so it does not read failures and at every retained method leaves some failed address unselected by the next plan.",
+      "zh": "在参考计划过程中，探测所得的一对把通道驱动到两个目标，恰当其两个回应不同；漂移反转通道后，已检查的键在每个目标处失败。冻结操作不论失配都重跑保留的方法，所以不读失败，在每个保留方法都留下某个失败地址不被下一计划选择。",
       "declarations": [
         "Becoming.ReferencePlan.flip",
         "Becoming.ReferencePlan.flip_is_pick",
@@ -115,8 +115,8 @@
       ]
     },
     {
-      "en": "In the witness from 30 units of fuel and an inverting channel, one twelve-step trace of the process acquires a mismatch at address 0, revises the method to [0], probes and installs, uses it, acquires a second mismatch at address 1, revises to [1, 0], probes twice and installs, and uses both, ending with 15 units of fuel left and 15 used, with no reset.",
-      "zh": "在从 30 单位燃料与反转通道出发的见证中，过程的一条十二步迹：在地址 0 取得失配，把方法修订为 [0]，探测并安装，使用之；在地址 1 取得第二次失配，修订为 [1, 0]，探测两次并安装，两者都使用；终于余 15 单位燃料、已用 15，无重置。",
+      "en": "In the witness from 30 units of fuel and an inverting channel, one twelve-step trace of the reference-plan process acquires a mismatch at address 0, revises the method to [0], probes and installs, uses it, acquires a second mismatch at address 1, revises to [1, 0], probes twice and installs, and uses both, each repair run by one policy, ending with 15 units of fuel left and 15 used, with no reset.",
+      "zh": "在从 30 单位燃料与反转通道出发的见证中，参考计划过程的一条十二步迹：在地址 0 取得失配，把方法修订为 [0]，探测并安装，使用之；在地址 1 取得第二次失配，修订为 [1, 0]，探测两次并安装，两者都使用，每次修复都由同一策略执行；终于余 15 单位燃料、已用 15，无重置。",
       "declarations": [
         "Becoming.ReferencePlan.initial",
         "Becoming.ReferencePlan.failedFirst",
@@ -141,8 +141,8 @@
       ]
     },
     {
-      "en": "Along that history each new contact gains a selection the earlier plan lacked, adding an address keeps every earlier selection, the lumping through installed contacts selects the second address only after the second install, and the installed responses are right at both addresses.",
-      "zh": "沿该历史，每个新接触获得早先计划没有的选择，增加地址保留每个早先选择，经已安装接触的归并只在第二次安装后才选择第二个地址，已安装的回应在两个地址处都正确。",
+      "en": "Along the twelve-step witness history of the reference-plan process each new contact gains a selection the earlier plan lacked, adding an address keeps every earlier selection, the lumping through installed contacts selects the second address only after the second install, and the installed responses are right at both addresses.",
+      "zh": "沿参考计划过程的十二步见证历史，每个新接触获得早先计划没有的选择，增加地址保留每个早先选择，经已安装接触的归并只在第二次安装后才选择第二个地址，已安装的回应在两个地址处都正确。",
       "declarations": [
         "Becoming.ReferencePlan.AgreeOn",
         "Becoming.ReferencePlan.added_keeps",
@@ -163,14 +163,20 @@
       ]
     },
     {
-      "en": "The controls fail: the frozen method, with the first repair and more fuel, misses the second mismatch; an erased mismatch cannot start a revision; with too little fuel the references use it and the build is blocked; no action runs without fuel; a constant channel is rejected at the check after its contacts use fuel; and a drift after the check is an admitted step of one trace after which use fails.",
-      "zh": "对照失败：冻结的方法保留第一次修复且燃料更多，仍漏掉第二次失配；被擦除的失配不能启动修订；燃料太少时参考用去燃料、构建受阻；无燃料则不能行动；常值通道的接触用去燃料后在检查处被拒；检查后的漂移是同一迹中被接纳的一步，此后使用失败。",
+      "en": "In the reference-plan witnesses the frozen method fails: re-run at the first mismatch it installs nothing and the use fails again, and with the first repair and more fuel it misses the second mismatch; an erased mismatch starts no revision.",
+      "zh": "在参考计划过程的见证中，冻结的方法失败：在第一次失配处重跑，它什么也不安装，使用再次失败；保留第一次修复且燃料更多时，它漏掉第二次失配；被擦除的失配不启动修订。",
       "declarations": [
         "Becoming.ReferencePlan.frozenEnd",
         "Becoming.ReferencePlan.frozen_method_still_fails",
         "Becoming.ReferencePlan.frozenSecondEnd",
         "Becoming.ReferencePlan.frozen_second_method_still_fails",
-        "Becoming.ReferencePlan.erased_mismatch_cannot_activate",
+        "Becoming.ReferencePlan.erased_mismatch_cannot_activate"
+      ]
+    },
+    {
+      "en": "In the reference-plan witnesses, from three units of fuel the revision and the probe use it all and the build is blocked; a use at zero fuel does not run; a constant channel is rejected at the check after its contacts use fuel; and a drift after the check is an admitted step of one trace after which use fails.",
+      "zh": "在参考计划过程的见证中，从三单位燃料出发，修订与探测用尽燃料，构建受阻；燃料为零时使用不执行；常值通道的接触用去燃料后在检查处被拒；检查后的漂移是同一迹中被接纳的一步，此后使用失败。",
+      "declarations": [
         "Becoming.ReferencePlan.support_too_small_to_build",
         "Becoming.ReferencePlan.references_use_fuel_before_exhaustion",
         "Becoming.ReferencePlan.no_action_after_exhaustion",
@@ -660,8 +666,8 @@
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：验证范围中已退役的登记词汇改写（“参考登记范围”改为“已安装接触上归并的范围”，与 Lean 把 ReferencePlan.registered 改名为 alikeOnInstalled 一致）；Lean 名称 revise_registers_failure 与记录编号 selection-under-registration-revision 保留；主张不变。"
     },
     {
-      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement written from the claim and the home section; the claim split into eleven laws, each read against its declarations in Contacts.lean, Stock.lean and ReferencePlan.lean (what a plan lumps, revision that reads failures, blind rules, reference pairs, stock, the process, its revision, its pairs and frozen rule, the twelve-step history, its selections, the controls); the limitations became four does-not-show items, the last sentence of the second hypothesis joining the first of them, and the fourth hypothesis, over the length limit, split in two at its sentences; the counterexample, which declarations witness, kept; selections_survive_iff, Unlisted, nat_unlisted, finite_blind_answers, AgreeOn and References.pick (Contacts.lean) and Covered (Stock.lean) added to their files' references; in the correspondence the round label of the instance replaced by what it is and \"credited\" by \"reused\"; in a dependency's conditions \"support account\" read as the support stock it names; the shared boundary no-ethical-premise cited; no premise, status or source hash changed. Every earlier sentence is mapped in [consequence-revised-reference-plan.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/consequence-revised-reference-plan.md); the exact earlier record is the first text_versions entry.",
-      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主张与所在章节写出陈述；主张拆为十一条规律，各条对照 Contacts.lean、Stock.lean 与 ReferencePlan.lean 中的声明核读（计划所归并者、读失败的修订、不读失败的规则、参考对、存量、该过程、其修订、其参考对与冻结规则、十二步历史、其选择、对照）；限制改为四条“未表明”，第二条前提的末句并入其中第一条，超出长度限制的第四条前提按句分为两条；反例有声明见证，保留；selections_survive_iff、Unlisted、nat_unlisted、finite_blind_answers、AgreeOn 与 References.pick（Contacts.lean）及 Covered（Stock.lean）加入其文件的引用；对应说明中实例的轮次标签改为其所是，“被信用”改为“被沿用”；一项依赖条件中的“支持账”读作其所指的支持存量；引用通用边界 no-ethical-premise；前提、状态与来源哈希均未改变。每句旧文本的去向见 [consequence-revised-reference-plan.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/consequence-revised-reference-plan.md)；迁移前的完整记录为 text_versions 首项。"
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement written from the claim and the home section; the claim split into twelve laws, each read against its declarations in Contacts.lean, Stock.lean and ReferencePlan.lean (what a plan lumps, revision that reads failures, blind rules, reference pairs, stock, the process, its revision, its pairs and frozen rule, the twelve-step history, its selections, the controls); the limitations became four does-not-show items, the last sentence of the second hypothesis joining the first of them, and the fourth hypothesis, over the length limit, split in two at its sentences; the counterexample, which declarations witness, kept; selections_survive_iff, Unlisted, nat_unlisted, finite_blind_answers, AgreeOn and References.pick (Contacts.lean) and Covered (Stock.lean) added to their files' references; in the correspondence the round label of the instance replaced by what it is and \"credited\" by \"reused\"; in a dependency's conditions \"support account\" read as the support stock it names; the shared boundary no-ethical-premise cited; no premise, status or source hash changed. Every earlier sentence is mapped in [consequence-revised-reference-plan.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/consequence-revised-reference-plan.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主张与所在章节写出陈述；主张拆为十二条规律，各条对照 Contacts.lean、Stock.lean 与 ReferencePlan.lean 中的声明核读（计划所归并者、读失败的修订、不读失败的规则、参考对、存量、该过程、其修订、其参考对与冻结规则、十二步历史、其选择、对照）；限制改为四条“未表明”，第二条前提的末句并入其中第一条，超出长度限制的第四条前提按句分为两条；反例有声明见证，保留；selections_survive_iff、Unlisted、nat_unlisted、finite_blind_answers、AgreeOn 与 References.pick（Contacts.lean）及 Covered（Stock.lean）加入其文件的引用；对应说明中实例的轮次标签改为其所是，“被信用”改为“被沿用”；一项依赖条件中的“支持账”读作其所指的支持存量；引用通用边界 no-ethical-premise；前提、状态与来源哈希均未改变。每句旧文本的去向见 [consequence-revised-reference-plan.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/consequence-revised-reference-plan.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、规律，各条对照所引 Lean 核读。"
     }
   ],
   "text_versions": [

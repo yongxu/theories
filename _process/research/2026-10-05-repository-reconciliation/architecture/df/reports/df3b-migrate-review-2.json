@@ -1,0 +1,2097 @@
+[
+ {
+  "unit": "K",
+  "migrated": {
+   "records": [
+    {
+     "id": "target-capture",
+     "laws": 8,
+     "does_not_show": 4,
+     "statement": "edited",
+     "claim_kept": false,
+     "declarations_added": [],
+     "references_added": [],
+     "narrowed": "Statement S1 said descent \"stops\" where what stands runs down from some step on. Flow.descent_exhausted proves only the negated universal (not at arbitrarily late steps), and \"stops\" is the existential form, which the core does not derive. The statement now says \"keeps running down, descent does not recur\", and law 6 says \"does not occur at arbitrarily late steps\". The statement also adds the transmission premise (\"and offspring carry the target\"): without it the counts are not shares. The old next step \"the general form in which a rule rewritten by its winners still holds the outcome\" is completed for a rule read from the share by capture-through-the-rule (RuleCapture.favouring_locks). It went to history and to a new related entry, and next_delta keeps the two open steps. In the correspondence, \"where descent stops\" became \"where descent does not recur\".",
+     "chapter_edits": [],
+     "mapping_file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df3b/_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/target-capture.md",
+     "lint_clean": true,
+     "lint_warnings": "",
+     "notes": "Title kept. The eight laws cover: the counts; share_not_lower; share_rises; the world forms CaptureWorlds.* (referenced and aliased, but in no law before); descent_needs_unrun, with running down written out; descent_exhausted; perturbation_reabsorbed as the instance of Law.reabsorbed; and the Captured witness with its SeekingRuns run forms. Every law was read against Capture, SeekingRuns, Mechanism, Recurrence, Locality, Evolution and Flow. The limitations became four does-not-show items. The Price item is written as \"the selection term of Price's equation (1970)\" so that the market-word lint does not fire. Standard boundaries: no-ethical-premise, no-evaluation, discrete-steps, names-provisional. All bound receipts are core Lean 4.29.1 with empty axiom reports. The counterexample is unchanged. Cut from the correspondence: \"See §83 of the integration note\" and \"adopted on Ren's delegation\". Ren's words are kept verbatim, \"even rationality is self-interest\" with its date (10 October). One related entry was added (capture-through-the-rule). The text_versions are the snapshot d23adf01 and the R35 compaction snapshot ce9b5dc1. The home section in 02-MAP already says \"does not recur\", so no chapter edit is needed. The full check showed only the generated-view error for this id."
+    },
+    {
+     "id": "becoming-renewal-reading",
+     "laws": 6,
+     "does_not_show": 7,
+     "statement": "kept",
+     "claim_kept": false,
+     "declarations_added": [
+      "Becoming.Web.conditions_along",
+      "Becoming.Renewable.process",
+      "Becoming.Renewable.withinRenewal",
+      "Becoming.Renewable.beyondRenewal",
+      "Becoming.Renewable.conditions"
+     ],
+     "references_added": [],
+     "narrowed": "Counterexample X0.1 said \"irreversible loss needs the feedback of the RelationalRenewal law family\". No declaration proves that need, so does_not_show[6] says only that the renewable witness \"shows no irreversible loss\". Loss for good in the support-gated family belongs to the dependency relational-renewal-classification. The statement (DF2's) is exact: \"is a web\" is Web.conditions_along, now cited in law 1. The conclusions are kept as the negated universals the Lean proves.",
+     "chapter_edits": [],
+     "mapping_file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df3b/_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-renewal-reading.md",
+     "lint_clean": true,
+     "lint_warnings": "",
+     "notes": "The six laws cover: a run read as one unfolding; falls_not_recurring; depletion; recurrent renewal (\"no tail ... is free of renewal\"); unrenewed drawdown; and class_belongs_to_the_run with its process and runs. None of the three old counterexamples is witnessed by a declaration, so all became does-not-show items and counterexamples is now []. The retired label J1–J4 became \"the practical commitments\". The pointer to significance-through-a-common-condition was cut from hypotheses[1]: it is not a premise, and that record depends on this one. The review label \"(independent review Q10)\" was cut from the correspondence. Three related entries were added: becoming-stepwise-reading, becoming-dependence-dynamics and identity-across-steps. Standard boundaries: no-ethical-premise, discrete-steps. no-evaluation is not cited, because the references still name Metaethics and ValuationFrames predicates. The five added declarations are elaborated in their files' bound receipts: Labelled 20261028T085101 and Renewal 20261019T185632. For the lander, not changed: the ValuationFrames and Metaethics declarations in references, and the metaethical-core-characterization dependency, describe the connection and transmission laws DF2 moved to significance-through-a-common-condition, and no law here names them. Dropping them is a separate decision. Triage rows 36 and 54 (the 02-MAP links on lines 105 and 114) are already applied in the chapter. The text_versions are the snapshot 1179e425 and the R35 snapshot 7d364839."
+    },
+    {
+     "id": "represented-boundary-against-dependence",
+     "laws": 5,
+     "does_not_show": 3,
+     "statement": "kept",
+     "claim_kept": false,
+     "declarations_added": [],
+     "references_added": [],
+     "narrowed": "Counterexample X1 said renewal over a region omitting a requirement \"does not keep its own support\", which reads as a universal. Omitted.loses_own is one witness, so the text now says \"need not keep its own support: in Omitted the formation renews over the other condition and is unsupported after the step\". The correspondence's \"that route has not begun\" is stale and was cut: route (b)'s feeding closure is stated by the related records feeding-closure and consumption-ends-with-feeders. Law 1 says, as the definition does, that renewal over a region keeps every formation's dependence on each condition of the region the formation takes part in, not only its own dependence.",
+     "chapter_edits": [],
+     "mapping_file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df3b/_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/represented-boundary-against-dependence.md",
+     "lint_clean": true,
+     "lint_warnings": "",
+     "notes": "The five laws cover: RenewingOver and its order (over, iff_over_all, narrow); the covering region, with RenewingAt.not_undermining; keeps_own with Untightened written out; the Clearing witness, with the conjuncts of undermines_within_renewal; and the Omitted witness with every conjunct of loses_own. The limitations became three does-not-show items. Standard boundaries: no-ethical-premise, no-evaluation, discrete-steps, names-provisional. Hypotheses are kept. The first counterexample's path was corrected from Regions.lean to Clearing.lean, which defines Clearing.renewing_over_resource since R31 and is a hashed reference. Cut from the correspondence: \"(P40)\". The date \"on 10 October\" was added to Ren's verbatim quotes, which come from 2026-10-10-centers-within-the-dynamics.md. next_delta is now stated positively, without the \"route (b)\" label. The text_versions are the snapshot 35dff4ae and the R35 snapshot 1bf28b34. The home section matches the Lean, so no chapter edit is needed. The full check (run once) showed only the generated-view errors for all three ids, and lint --ids reports 0 findings for the three."
+    }
+   ],
+   "not_migrated": []
+  },
+  "review": null
+ },
+ {
+  "unit": "M",
+  "migrated": null,
+  "review": {
+   "edits": [
+    {
+     "id": "relata-counted-up-to-indiscernibility",
+     "field": "laws[4].en",
+     "old": "Two relata of a world are indiscernible where at every step they are alike in activity and level, in what each takes from and gives to every relatum, and in what every relatum takes from and gives to each; indiscernibility is a likeness.",
+     "new": "Two relata of a world are indiscernible where at every step they are alike in activity, level and taking part in the step, and alike either way round in every relation to every relatum: requiring, drawing, need, taking and giving; indiscernibility is a likeness.",
+     "severity": "error",
+     "why": "The law misdefines World.Indiscernible. The definition also requires both relata to take part in the step alike (x ∈ present t ↔ y ∈ present t), and to be alike either way round in requires, draws and need, as well as in take and give. The law drops those clauses, so it states a weaker relation than the Lean defines. The new text is 262 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Listing.lean:739-747 (def Indiscernible: active, level, `x ∈ w.flow.present t ↔ y ∈ w.flow.present t`, requires both ways, draws both ways, need both ways, take both ways, give both ways)"
+    },
+    {
+     "id": "relata-counted-up-to-indiscernibility",
+     "field": "laws[4].zh",
+     "old": "一个世界的两个关系项不可分辨，是指在每一步它们在活动与层级上相同，在各自从每个关系项取用与给予上相同，在每个关系项从它们取用与给予上也相同；不可分辨是一种相似。",
+     "new": "一个世界的两个关系项不可分辨，是指在每一步它们在活动、层级与参与该步上相同，并在对每个关系项的每个关系上（两个方向）相同：要求、汲取、需要、取用与给予；不可分辨是一种相似。",
+     "severity": "error",
+     "why": "The Chinese of the corrected law 5 (86 characters).",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Listing.lean:739-747"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/relata-counted-up-to-indiscernibility.md",
+     "field": "intro paragraph (line 7)",
+     "old": "The definition of `World.Indiscernible` was read: activity, level, and what each relatum takes from and gives to every relatum, either way round; it has no clause on taking part in a step's list.",
+     "new": "The definition of `World.Indiscernible` was read: activity, level and taking part (membership in the step's list), and requiring, drawing, need, taking and giving with every relatum, either way round; the chapter's wording (“alike at every step in activity, level and taking part, and alike in every relation to every relatum”) agrees with it, so no chapter edit is needed.",
+     "severity": "error",
+     "why": "The Lean contradicts this reading of the definition: it does have a clause on taking part. The chapter edit the migrator says it proposed would drop “taking part” from 08-METHOD.md:313. That edit is wrong and must not be made, because the chapter sentence matches the Lean.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Listing.lean:741-742; theories/becoming/chapters/08-METHOD.md:313"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/relata-counted-up-to-indiscernibility.md",
+     "field": "row C1, New place (line 16)",
+     "old": "law 5, as the definition has it: alike in activity and level, and in what each takes from and gives to every relatum and every relatum takes from and gives to each; “taking part” is not a clause of the definition (a chapter edit is proposed)",
+     "new": "law 5, as the definition has it: alike in activity, level and taking part in the step, and either way round in requiring, drawing, need, taking and giving with every relatum; the old sentence and the chapter agree with the Lean, and no chapter edit is needed",
+     "severity": "error",
+     "why": "The row has to describe law 5 as corrected, and it must withdraw the chapter edit, which rests on a misreading.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Listing.lean:739-747"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "validation_scope.en",
+     "old": "The retired Bridge and SeedReachProcesses are bound to core receipt 20261018T235724.886433Z, their cited declarations with empty axiom reports.",
+     "new": "The retired Bridge and SeedReachProcesses are unbound: core receipt 20261018T235724.886433Z last checked their current bytes, with empty axiom reports.",
+     "severity": "error",
+     "why": "These modules are not bound. The record has no proof_binding for Bridge.lean or SeedReachProcesses.lean, because R35 dropped those bindings, and that receipt does not appear in references. The receipt does hold their current bytes (1c90a7f2…, 75e99964…), and every cited declaration in it has an empty report. The field becomes 584 characters.",
+     "evidence": "theories/becoming/results/records/becoming-spine-instances.json:294 and proof_bindings (no Bridge or SeedReachProcesses entry); experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json (source_sha256 Becoming.Bridge, Becoming.SeedReachProcesses; axiom_dependencies [])"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "validation_scope.zh",
+     "old": "退役的 Bridge 与 SeedReachProcesses 绑定核心回执 20261018T235724.886433Z，所引声明公理报告为空。",
+     "new": "退役的 Bridge 与 SeedReachProcesses 未绑定，核心回执 20261018T235724.886433Z 末次实查其当前字节，公理报告为空。",
+     "severity": "error",
+     "why": "The Chinese of the same correction. The field becomes exactly 260 characters, which is within the cap.",
+     "evidence": "theories/becoming/results/records/becoming-spine-instances.json:295"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "related[6].detail.en",
+     "old": "WithinClosure (Becoming.Feedback)",
+     "new": "WithinClosure (Becoming.Frame)",
+     "severity": "error",
+     "why": "EC1 moved WithinClosure to Becoming.Frame, so this live detail names the wrong module. EdgeClosure's own docstring cites `Becoming.Frame` for it.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean:86; EdgeClosure.lean:10-11; theories/becoming/results/records/becoming-spine-instances.json:411"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "related[6].detail.zh",
+     "old": "WithinClosure（Becoming.Feedback）",
+     "new": "WithinClosure（Becoming.Frame）",
+     "severity": "error",
+     "why": "Same correction in the Chinese.",
+     "evidence": "theories/becoming/results/records/becoming-spine-instances.json:410"
+    },
+    {
+     "id": "listing-once-is-decided-identity",
+     "field": "dependencies[0].detail.en",
+     "old": "Reuses P58's Decided and censuses: a census decides identity among what it lists, and a listing with identity decided gives a census.",
+     "new": "Reuses the Decided and censuses of the record of counts: a census decides identity among what it lists, and a listing gives a census where a procedure decides identity among the listed.",
+     "severity": "overclaim",
+     "why": "The detail repeats the overclaim that law 11 and does_not_show[2] of this same record narrowed. Listed.of_listing takes a decision procedure (`dec : … → Decidable (a = b)`), not decided identity. The detail also keeps the round label P58, which the migration cut from the hypotheses and the correspondence.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Listing.lean:504-509; theories/becoming/results/records/listing-once-is-decided-identity.json:259"
+    },
+    {
+     "id": "listing-once-is-decided-identity",
+     "field": "dependencies[0].detail.zh",
+     "old": "复用 P58 的 Decided 与普查：普查决定其所列者之间的同一，带同一判定的列出给出普查。",
+     "new": "复用计数记录的 Decided 与普查：普查决定其所列者之间的同一，所列者之间同一由程序判定时，列出给出普查。",
+     "severity": "overclaim",
+     "why": "Same correction in the Chinese.",
+     "evidence": "theories/becoming/results/records/listing-once-is-decided-identity.json:258"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "references",
+     "old": "",
+     "new": "{\"path\": \"experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json\", \"role\": \"receipt\", \"sha256\": \"a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567\", \"declarations\": []}",
+     "severity": "missing",
+     "why": "validation_scope names this receipt as the evidence for the retired identifications (laws 2, 5, 7, 9, 17, 19), but no references entry holds it. Add it as a receipt reference with no binding (sha256 computed with shasum -a 256).",
+     "evidence": "theories/becoming/results/records/becoming-spine-instances.json references (no 20261018T235724 entry)"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md",
+     "field": "intro paragraph (line 7)",
+     "old": "were added to their files' references (each is in the receipt binding its file); no file and no binding was added.",
+     "new": "were added to their files' references (each is in the receipt binding its file), and the receipt becoming-checks/20261018T235724.886433Z, which validation_scope names, as a receipt reference; no binding was added.",
+     "severity": "missing",
+     "why": "Keeps the mapping in line with the receipt reference added above.",
+     "evidence": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md:7"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md",
+     "field": "row V0, New place (line 48)",
+     "old": "validation_scope (“The retired Bridge and SeedReachProcesses are bound to core receipt 20261018T235724.886433Z”)",
+     "new": "validation_scope (“The retired Bridge and SeedReachProcesses are unbound: core receipt 20261018T235724.886433Z last checked their current bytes”), the receipt added to the references",
+     "severity": "error",
+     "why": "The mapping has to describe the record as corrected. The old V0 sentence said “last checked”, and the migrated record turned that into a false “bound”.",
+     "evidence": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md:48"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "does_not_show[0].en",
+     "old": "the meaning of history types and the warrant of supplied relations are supplied with them.",
+     "new": "the meaning of history types and the normative warrant of supplied relations are supplied with them.",
+     "severity": "dropped",
+     "why": "The old L0 read “the normative warrant of supplied relations”, and the migration dropped “normative” without saying so. The qualifier is substantive: what stays unsupplied is the normative warrant. The new text is 180 characters.",
+     "evidence": "_process/architecture/history/92a1332c1b656339/becoming-spine-instances.json (limitations.en); theories/becoming/results/records/becoming-spine-instances.json:243"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "does_not_show[0].zh",
+     "old": "历史类型的含义与外给关系的根据",
+     "new": "历史类型的含义与外给关系的规范根据",
+     "severity": "dropped",
+     "why": "The old Chinese read 规范根据.",
+     "evidence": "theories/becoming/results/records/becoming-spine-instances.json:244"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md",
+     "field": "row L0, New place (line 40)",
+     "old": "does_not_show[0] (non-implication; “the user's to supply” read as supplied with the theorems)",
+     "new": "does_not_show[0] (non-implication; “the user's to supply” read as supplied with the theorems; “normative warrant” kept)",
+     "severity": "dropped",
+     "why": "Keeps the mapping in line with the restored qualifier.",
+     "evidence": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md:40"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "laws[2].declarations",
+     "old": "[\"Becoming.Jointly\", \"Becoming.PreservesBundles\", \"Becoming.Frame.map_preserves\", \"Becoming.Frame.lift_reflects\", \"Becoming.Reach.map\", \"Becoming.Reach.lift\"]",
+     "new": "[\"Becoming.Jointly\", \"Becoming.PreservesBundles\", \"Becoming.Frame.map_preserves\", \"Becoming.Frame.lift_reflects\"]",
+     "severity": "imprecise",
+     "why": "Law 3 names Reach.map and Reach.lift but does not say what they prove: reach carried forward by a step-preserving map, and reach from an image lifted back. Law 3 is already 395 characters, so these two go to a law of their own (the next edit).",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean:200-211"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "laws[21]",
+     "old": "",
+     "new": "{\"en\": \"Reachability carries along a map preserving steps: what is reachable from a configuration maps to what is reachable from its image. Where every step from the image of a configuration lifts to a step from it, whatever is reachable from an image is the image of something reachable from the configuration.\", \"zh\": \"可达性沿保持步的映射传递：从一个配置可达者映为从其像可达者。从每个配置之像出发的每一步都能提升为从该配置出发的一步时，从一个像可达的，都是从该配置可达者之像。\", \"declarations\": [\"Becoming.Reach.map\", \"Becoming.Reach.lift\"]}",
+     "severity": "imprecise",
+     "why": "The text states exactly what Reach.map and Reach.lift prove (303 and 79 characters). It is appended so that laws 1–21 keep their numbers in the mapping. If this law is added, the history note's “twenty-one laws” becomes “twenty-two laws”.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean:200-211"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md",
+     "field": "row V3, New place (line 51)",
+     "old": "`Reach.map` and `Reach.lift` enter law 3",
+     "new": "`Reach.map` and `Reach.lift` are law 22",
+     "severity": "imprecise",
+     "why": "Keeps the mapping in line with the new law.",
+     "evidence": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md:51"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "laws[5].en",
+     "old": "A response is a common response of that process, over the belief",
+     "new": "A response is a common response of that process (one move, every step safe, every configuration a goal), over the belief",
+     "severity": "imprecise",
+     "why": "commonResponse_judge_iff is stated only for CommonResponse with safe := True, goal := True and response a := [a]. Taken in general, “a common response of that process” would cover any safety and goal. The new law is 378 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Inquiry.lean:85-88"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "laws[5].zh",
+     "old": "一个回应是该过程在看见一组配置的信念上的共同回应",
+     "new": "一个回应是该过程（一个动作，每步安全，每个配置都是目标）在看见一组配置的信念上的共同回应",
+     "severity": "imprecise",
+     "why": "The Chinese of the same parameters (107 characters).",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Inquiry.lean:85-88"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "laws[19].en",
+     "old": "is a common response of the judgment on that value's cell",
+     "new": "is a common response of the judgment (one move, every step safe, every configuration a goal) on that value's cell",
+     "severity": "imprecise",
+     "why": "Each law item has to stand alone. implements_iff_commonResponse fixes the same trivial safety and goal and the one-move response. The new law is 374 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionInquiry.lean:52-57"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "laws[19].zh",
+     "old": "上的行动是判断的共同回应",
+     "new": "上的行动是判断（一个动作，每步安全，每个配置都是目标）的共同回应",
+     "severity": "imprecise",
+     "why": "Same parameters in the Chinese.",
+     "evidence": "theories/becoming/results/records/becoming-spine-instances.json:206"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "laws[20].en",
+     "old": "it is a common response of the judgment on the worlds showing that value",
+     "new": "it is a common response of the judgment (one move, every step safe, every configuration a goal) on the worlds showing that value",
+     "severity": "imprecise",
+     "why": "safeOn_iff_commonResponse fixes the same parameters, so this law has to name them too. The new law is 385 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionInquiry.lean:85-90"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "laws[20].zh",
+     "old": "恰当它是判断在显示该值的世界上的共同回应",
+     "new": "恰当它是判断（一个动作，每步安全，每个配置都是目标）在显示该值的世界上的共同回应",
+     "severity": "imprecise",
+     "why": "Same parameters in the Chinese.",
+     "evidence": "theories/becoming/results/records/becoming-spine-instances.json:217"
+    },
+    {
+     "id": "relata-counted-up-to-indiscernibility",
+     "field": "laws[9].en",
+     "old": "gives balance on it across the coarse step for every flow read by occurrence, with no listing once asked of the flow.",
+     "new": "gives balance on it across the coarse step for any flow listing what takes part in each fine step once, and so for every flow read by occurrence, with no listing once asked of the flow.",
+     "severity": "imprecise",
+     "why": "The law cites Flow.BalancesOn.sample but does not state it. That theorem takes `once : Distinct (L.present j)` at every fine step. The new law is 348 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean:457-460"
+    },
+    {
+     "id": "relata-counted-up-to-indiscernibility",
+     "field": "laws[9].zh",
+     "old": "给出按出现读的每个流跨该粗步对它的平衡，不要求原流列出一次。",
+     "new": "对每个细步把参与者列出一次的流给出跨该粗步对它的平衡，因而对按出现读的每个流都如此，不要求原流列出一次。",
+     "severity": "imprecise",
+     "why": "The Chinese of the same law (97 characters).",
+     "evidence": "theories/becoming/results/records/relata-counted-up-to-indiscernibility.json:112"
+    },
+    {
+     "id": "listing-once-is-decided-identity",
+     "field": "hypotheses[2].en",
+     "old": "The refutation corollaries take their own laws' premises (balance, dissipation, embodied arising, closure, enclosure, a unit fixed from some step on), with the family listed in any way.",
+     "new": "The refutation corollaries take their own laws' premises (balance and dissipation, everywhere or from some step on; embodied arising; closure or enclosure around the family; a unit fixed at one, or a stock left unrefined, from some step on; the recurrence each refutes against), with the family listed in any way.",
+     "severity": "imprecise",
+     "why": "The parenthesis reads as the full list of premises, but it is incomplete. taking_draws_in_from_listing and fed_from_beyond_from_listing take balance and dissipation only from T₀ on. taking_needs_refinement_listing takes a balance at a unit split+1 and an unrefined stock. Each corollary also takes a recurring taking, rising or arising. The new text is 313 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingRefutations.lean:108-112, 201-205, 272-276"
+    },
+    {
+     "id": "listing-once-is-decided-identity",
+     "field": "hypotheses[2].zh",
+     "old": "否证推论取其各自规律的前提（平衡、耗散、生起体现、封闭、围绕封闭、从某步起固定的单位），家族可任意列出。",
+     "new": "否证推论取其各自规律的前提（平衡与耗散，处处或从某步起；生起体现；封闭或围绕家族的封闭；从某步起单位固定为一或存量未细分；各自所对的复现），家族可任意列出。",
+     "severity": "imprecise",
+     "why": "The Chinese of the same list (78 characters).",
+     "evidence": "theories/becoming/results/records/listing-once-is-decided-identity.json:179"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "hypotheses[0].en",
+     "old": "The bridge theorems are definitional identifications and add no normative premise;",
+     "new": "The bridge theorems identify the periphery's interfaces with the spine's (several by definition, the others by short proofs on chains and lists) and add no normative premise;",
+     "severity": "imprecise",
+     "why": "Only some bridge theorems are Iff.rfl. chain_iff_reach is proved by induction both ways. guarantees_iff_completes, after_observe_iff and revise_is_after have short proofs, and so do the map and lift theorems. The Bridge header itself says “by definition” only of the definitions part. The mapping row H0 (“unchanged”) should say the wording was corrected.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean:166-175, 226-231, 286-294, 36-38"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "hypotheses[0].zh",
+     "old": "桥接定理是定义层面的等同，不引入规范前提；",
+     "new": "桥接定理把外围的接口等同于脊柱的接口（若干按定义，其余经链与列表上的简短证明），不引入规范前提；",
+     "severity": "imprecise",
+     "why": "Same correction in the Chinese.",
+     "evidence": "theories/becoming/results/records/becoming-spine-instances.json:229"
+    },
+    {
+     "id": "theories/becoming/chapters/08-METHOD.md",
+     "field": "r-becoming-spine-instances home section (line 403), proposed chapter edit",
+     "old": "The identifications are definitional and add no normative premise.",
+     "new": "The identifications add no normative premise; several hold by definition, the others by short proofs.",
+     "severity": "imprecise",
+     "why": "This is a proposed chapter edit for the lander or owner, not made here. The chapter calls every identification definitional, but chain_iff_reach and others are proved theorems. In the same paragraph, “The definitional identifications are in the bridge file kept in” should read “The identifications are in the bridge files kept in”, because they lie in Bridge.lean and SeedReachProcesses.lean.",
+     "evidence": "theories/becoming/chapters/08-METHOD.md:403; experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean:166-175"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "does_not_show[5].en",
+     "old": "Concrete models and the algebra of relational boundaries are not bridged: they have no core interface to instantiate.",
+     "new": "Some modules are not bridged: concrete models (CorrectionParent, ObservationRepair and nine more) and an algebra of relational boundaries (CorrectionRelations), which have no core interface to instantiate.",
+     "severity": "imprecise",
+     "why": "The migrated item speaks of all concrete models. The old counterexample named the specific modules the classification left unbridged, and that scope should stay on the page. The new text is 205 characters, and the old X2 sentence's content is restored.",
+     "evidence": "_process/architecture/history/92a1332c1b656339/becoming-spine-instances.json (counterexamples[2]); theories/becoming/results/records/becoming-spine-instances.json:269"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "does_not_show[5].zh",
+     "old": "具体模型与关系边界的代数没有桥接：它们没有可实例化的核心接口。",
+     "new": "有些模块没有桥接：具体模型（CorrectionParent、ObservationRepair 及另外九个）与关系边界的代数（CorrectionRelations），它们没有可实例化的核心接口。",
+     "severity": "imprecise",
+     "why": "The Chinese of the same item (99 characters).",
+     "evidence": "theories/becoming/results/records/becoming-spine-instances.json:270"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md",
+     "field": "row X2, New place (line 39)",
+     "old": "the module names and the count of nine stay on the classification page, an integration reference",
+     "new": "the module names and the count of nine are kept in the item; the classification page stays an integration reference",
+     "severity": "imprecise",
+     "why": "Keeps the mapping in line with the corrected does_not_show[5].",
+     "evidence": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md:39"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "related[5].detail.en",
+     "old": "the core's secured positive ground and D are that result's definitions.",
+     "new": "the core's securing of new content and D are that result's secured positive ground and positioned articulation.",
+     "severity": "imprecise",
+     "why": "R30 renamed the core's SecuresPositiveGround to SecuresNewContent. Law 17 uses the current name, and this live detail still calls the core notion by the periphery's name.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean:185; theories/becoming/results/records/becoming-spine-instances.json:404"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "related[5].detail.zh",
+     "old": "核心的确保的正面根据与 D 就是该结果的定义。",
+     "new": "核心的确保新内容与 D 就是该结果的确保的正面根据与定位阐明。",
+     "severity": "imprecise",
+     "why": "Same correction in the Chinese.",
+     "evidence": "theories/becoming/results/records/becoming-spine-instances.json:403"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "history[16].en",
+     "old": "the limitations became six does-not-show items, a related entry for the renewal reading and the standard boundary conditional-not-universal; the classification's row, which no declaration witnesses, left the counterexamples for a does-not-show item;",
+     "new": "the limitations became four does-not-show items and a related entry for the renewal reading, one does-not-show item was added on the retired bridge's scope, and the standard boundary conditional-not-universal; the classification's row, which no declaration witnesses, left the counterexamples for a sixth does-not-show item;",
+     "severity": "imprecise",
+     "why": "Only four items came from the limitations (L0, L1–L2, L4–L5, L5), so the note double-counts. does_not_show[1] and conditional-not-universal were added, and the sixth item came from the counterexample. If the edits above are accepted, the note should also say “twenty-two laws”, add “the receipt 20261018T235724.886433Z added to the references”, and replace “at the bytes their last receipt binds” with “at the bytes their last receipt checked”.",
+     "evidence": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md:39-46 (L0–L5, X2 rows, added row)"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "history[16].zh",
+     "old": "限制改为六条“未表明”、一条指向更新读法的相关条目与通用边界 conditional-not-universal；分类页的一行不由任何声明见证，移出反例改为一条“未表明”；",
+     "new": "限制改为四条“未表明”与一条指向更新读法的相关条目，另加一条关于退役桥接范围的“未表明”与通用边界 conditional-not-universal；分类页的一行不由任何声明见证，移出反例改为第六条“未表明”；",
+     "severity": "imprecise",
+     "why": "Same correction in the Chinese.",
+     "evidence": "theories/becoming/results/records/becoming-spine-instances.json:1123"
+    },
+    {
+     "id": "listing-once-is-decided-identity",
+     "field": "history[21].en",
+     "old": "the limitations became three does-not-show items, the standard boundaries no-ethical-premise, no-evaluation and names-provisional and a sentence of the correspondence;",
+     "new": "the limitations became one does-not-show item, the standard boundaries no-evaluation and names-provisional and the correspondence's breakdown of the thirty uses; two does-not-show items added (non-recurrence is not settling; decided identity at each step is not shown to give a census, the census law narrowed to the decision procedure it takes); the claim's \"No premise\" read as no-ethical-premise;",
+     "severity": "imprecise",
+     "why": "Only L2 became a does-not-show item. does_not_show[1] was added, and does_not_show[2] records narrowing claim sentence C13 (Listed.of_listing needs a procedure). That narrowing is substantive, so the note must name it.",
+     "evidence": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/listing-once-is-decided-identity.md (rows C13, L0–L4, added does-not-show)"
+    },
+    {
+     "id": "listing-once-is-decided-identity",
+     "field": "history[21].zh",
+     "old": "限制改为三条“未表明”、通用边界 no-ethical-premise、no-evaluation 与 names-provisional 及对应说明中的一句；",
+     "new": "限制改为一条“未表明”、通用边界 no-evaluation 与 names-provisional 及对应说明中三十个用处的分解；另加两条“未表明”（不复现不是安定；未表明每步已定的同一给出普查，普查之律按其所取的判定程序收窄）；主张中的“不加前提”读作 no-ethical-premise；",
+     "severity": "imprecise",
+     "why": "Same correction in the Chinese.",
+     "evidence": "theories/becoming/results/records/listing-once-is-decided-identity.json:774"
+    },
+    {
+     "id": "counts-exist-where-decided",
+     "field": "history[19].en",
+     "old": "the limitations became three does-not-show items, a hypothesis on finite lists and the standard boundaries discrete-steps, no-ethical-premise, no-evaluation and names-provisional, with a hypothesis that decidedness is not assumed of every proposition;",
+     "new": "the limitations became two does-not-show items, a hypothesis on finite lists and the standard boundaries discrete-steps and names-provisional; a does-not-show item on the census and the standard boundary no-evaluation added, the claim's last sentence becoming no-ethical-premise, with a hypothesis that decidedness is not assumed of every proposition;",
+     "severity": "imprecise",
+     "why": "L0 and L1 became does_not_show[0] and [2]. does_not_show[1] and no-evaluation were added, and no-ethical-premise came from claim sentence C10, not from the limitations.",
+     "evidence": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/counts-exist-where-decided.md (rows C10, L0–L3, added rows)"
+    },
+    {
+     "id": "counts-exist-where-decided",
+     "field": "history[19].zh",
+     "old": "限制改为三条“未表明”、一条关于有限列表的前提与通用边界 discrete-steps、no-ethical-premise、no-evaluation 与 names-provisional，并加一条前提：不对每个命题假定已定；",
+     "new": "限制改为两条“未表明”、一条关于有限列表的前提与通用边界 discrete-steps 与 names-provisional；另加一条关于普查的“未表明”与通用边界 no-evaluation，主张末句改为 no-ethical-premise，并加一条前提：不对每个命题假定已定；",
+     "severity": "imprecise",
+     "why": "Same correction in the Chinese.",
+     "evidence": "theories/becoming/results/records/counts-exist-where-decided.json:538"
+    },
+    {
+     "id": "relata-counted-up-to-indiscernibility",
+     "field": "related[0].detail.en",
+     "old": "P58's World.law_iff_em:",
+     "new": "World.law_iff_em:",
+     "severity": "style",
+     "why": "A round label in a live field. The migration cut P58 from the correspondence but left it here.",
+     "evidence": "theories/becoming/results/records/relata-counted-up-to-indiscernibility.json:235"
+    },
+    {
+     "id": "relata-counted-up-to-indiscernibility",
+     "field": "related[0].detail.zh",
+     "old": "P58 的 World.law_iff_em：",
+     "new": "World.law_iff_em：",
+     "severity": "style",
+     "why": "Same correction in the Chinese.",
+     "evidence": "theories/becoming/results/records/relata-counted-up-to-indiscernibility.json:234"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "related[7].detail.en",
+     "old": "the periphery's G0 holds for every inventory",
+     "new": "the periphery's GenerativeComparison.G0 holds for every inventory",
+     "severity": "style",
+     "why": "G0 is a retired label. The DF note of 25 October kept it here as a Lean name, so the qualified name makes clear it refers to the declaration.",
+     "evidence": "theories/becoming/results/records/becoming-spine-instances.json:418, 1118"
+    },
+    {
+     "id": "becoming-spine-instances",
+     "field": "related[7].detail.zh",
+     "old": "外围的 G0 对每个清单成立",
+     "new": "外围的 GenerativeComparison.G0 对每个清单成立",
+     "severity": "style",
+     "why": "Same change in the Chinese.",
+     "evidence": "theories/becoming/results/records/becoming-spine-instances.json:417"
+    }
+   ],
+   "verdicts": [
+    {
+     "id": "becoming-spine-instances",
+     "verdict": "sound-after-edits",
+     "note": "I read all 21 laws against the current Lean: the core modules plus CorrectionInquiry, and the retired Bridge and SeedReachProcesses at the bytes checked by receipt 20261018T235724.886433Z. Every iff is proved both ways, and the conditions (C, the lifted articulation or coherence, feasibility, the candidate in the list, the refinement relation) are stated. Every cited declaration has an empty axiom report in its receipt; the CorrectionBoundary and ObservationChange definitions are clean in their inherited receipts, and choice appears only in selector_iff_common_action, which is not cited. The two counterexamples are witnessed in Lifting.lean. conditional-not-universal is true of the record, and leaving out no-ethical-premise (C is an ordering premise) is right. Every old sentence is mapped. Errors: validation_scope says the retired modules are bound, but they have no binding and their receipt is not referenced; the levels-of-closure detail names Becoming.Feedback where the module is Becoming.Frame. Imprecise: does_not_show[0] lost “normative”; Reach.map and Reach.lift are listed but unstated; laws 6, 20 and 21 leave out the fixed parameters; “definitional” overstates; does_not_show[5] overgeneralizes; the history note miscounts. Lint is clean; check shows only “generated view differs”."
+    },
+    {
+     "id": "listing-once-is-decided-identity",
+     "verdict": "sound-after-edits",
+     "note": "All 14 laws match Listing.lean, ListingRefutations.lean, Prelude.lean and InAmounts.lean. The negated universals are phrased as negations (laws 5–7), and the hypotheses of each corollary are named. The split is confirmed: exactly seven corollaries take [DecidableEq] (five fed-from-beyond and two boundary) and fifteen take none. Narrowing C13 to a decision procedure is correct, and does_not_show[2] states it rightly, since the Prop form would need choice over Nat. The statement agrees with home section 08-METHOD.md:306-307. Every cited declaration has an empty axiom report in a Lean 4.29.1 receipt, so no-ethical-premise holds. Defects: the dependency detail still carries the census overclaim and the label P58; hypotheses[2] lists the corollaries' premises incompletely; the history note miscounts the does-not-show items and omits the C13 narrowing. Lint is clean; check shows only “generated view differs”."
+    },
+    {
+     "id": "relata-counted-up-to-indiscernibility",
+     "verdict": "sound-after-edits",
+     "note": "Error: law 5 misdefines World.Indiscernible. The Lean (Listing.lean:739-747) includes taking part in the step and requires, draws and need either way round. The mapping wrongly says there is no clause on taking part and reports a proposed chapter edit to 08-METHOD.md:313. That edit must not be made: the chapter's “activity, level and taking part, and alike in every relation” matches the Lean. The other laws are exact, including the two equivalences with excluded middle, the probe world, the occurrence laws, and the [DecidableEq] and Strict σ conditions now stated. Law 10 should also state BalancesOn.sample's own condition of listing once. The counterexample is witnessed by World.probe_named_apart. Receipts are Lean 4.29.1 with empty reports, so no-ethical-premise holds. A related detail keeps P58. Lint is clean; check shows only “generated view differs”."
+    },
+    {
+     "id": "counts-exist-where-decided",
+     "verdict": "sound-after-edits",
+     "note": "All 8 laws match Decidedness.lean and Change.lean: the definitions, both iffs, uniqueness, the bound, the positive and zero cases, marks, the census across a step and over a stretch (with and without decidedness inside), keep_pace in both bounds, and the listed censuses with which list is counted. The statement is kept and agrees with home section 08-METHOD.md:304. The counterexample is witnessed in Space.lean. Receipts are Lean 4.29.1, every cited declaration with an empty report. Dropping the delegation sentence follows the rule on provenance, and the dependency interface rightly drops the removed forwarders. The only defect is the history note's count of does-not-show items and where the boundaries came from. Lint is clean; check shows only “generated view differs”."
+    }
+   ],
+   "checked": "For each of the four records I read the snapshot, the migrated record and the mapping file in full. I diffed all non-text fields against the snapshot: aliases, proof_bindings, status and the history prefix are unchanged, and the only declarations added to references are the ones the mappings list. Snapshot and R35 compaction hashes match their text_versions entries. I read every cited Lean declaration in the current worktree: EdgeClosure, Bundles, Frame, Inquiry, InquirySufficiency, Narrowing, NarrowingRuns, Alternatives, Lifting, Extension, Metaethics, Lexical, FrontierFrames, CorrectionInquiry, CorrectionBoundary, ObservationChange, history Bridge and SeedReachProcesses, Listing, ListingRefutations, Prelude, Decidedness, Sampling, Labelled, Population and Space. For every proof binding I opened the receipt, confirmed status passed, that the source sha256 matches the current bytes, the Lean version (4.29.1 core; 4.30.0-rc2 with Mathlib ea11ccc0 for the periphery) and the axiom report of every cited declaration; all are empty, and the CorrectionBoundary and ObservationChange definitions are clean in their inherited receipts. I compared each statement with its home section in 08-METHOD.md (lines 304, 307, 313, 396-405), checked field caps (all within) and the triage rows (249, 250, 255). Lint per id found nothing; one full check reported only “generated view differs” for these ids. All proposed replacement texts were length-checked against the caps."
+  }
+ },
+ {
+  "unit": "B",
+  "migrated": {
+   "records": [
+    {
+     "id": "consequence-revised-reference-plan",
+     "laws": 11,
+     "does_not_show": 4,
+     "statement": "written",
+     "narrowed": "C5 trace_conserves_of_law is no longer a declaration of ReferencePlan.lean; law 6 says the fuel is balanced against what is used and fuel plus used is conserved. C2's 'once addresses are unbounded' is written as the hypothesis 'where no list holds every address' (Unlisted), with finite_blind_answers showing the converse fails for two addresses. The fourth hypothesis was split into two.",
+     "notes": "Statement written from the home section. Counterexample kept. Correspondence: 'P99 is a new shared-spine instance' became 'The process is an instance on the shared spine', 'credited' became 'reused'. A dependency interface condition: 'support account' became 'support stock'."
+    },
+    {
+     "id": "fallible-witness-diagnosability",
+     "laws": 13,
+     "does_not_show": 0,
+     "statement": "written",
+     "narrowed": "Law 12 states every hypothesis test_step_completes takes. A second hypothesis names witnesses compared decidedly.",
+     "notes": "The limitation and the counterexample were the same sentence; it stays as the counterexample (FallibleInspection.lean), witnessed by its provenance declarations and on the core by the law-13 witnesses; no does-not-show items. 'Reuse diagnosability' dropped from next_delta."
+    },
+    {
+     "id": "unanchored-incidence-collapse",
+     "laws": 5,
+     "does_not_show": 3,
+     "statement": "written",
+     "narrowed": "'agree in the unanchored incidence language' read as passing the same tests of roles; 'the same spent history' is the traced passage of the process that moves once; the hypothesis restated on the spine (once, has_units, passage_not_self_joint).",
+     "chapter_edit": "03-KNOWING: 'can make a spent history's impossible self-join possible' -> 'can make a traced passage's impossible self-join possible' (optional, wording).",
+     "notes": "The counterexample repeated the limitation; it moved to does-not-show items, counterexamples now empty. Becoming.Joining.OpenMap is the open map of joinings at Joining.lean:584."
+    },
+    {
+     "id": "risk-certificate-outcome-distinction",
+     "laws": 6,
+     "does_not_show": 5,
+     "statement": "written",
+     "narrowed": "None; laws 1 and 3 keep decidable equality of reduced values.",
+     "chapter_edit": "03-KNOWING: '**Theorem** (any process; a supplied three-route process; the application theorems use propext).' -> '... the application theorems use propext, their reading on the core law propext and Quot.sound).'",
+     "notes": "Counterexample's first clause carried by law 4, its other two clauses became does-not-show items; counterexamples now empty. no-ethical-premise-core-axiom-free cited."
+    },
+    {
+     "id": "enacted-scene-binding",
+     "laws": 12,
+     "does_not_show": 3,
+     "statement": "written",
+     "narrowed": "H0 'Integer two-dimensional positions' -> 'Natural-number two-dimensional positions' (Place is Nat × Nat). The stationary and mistimed failures written as negated universals.",
+     "notes": "Both counterexamples witnessed and kept; their witnesses added to references and laws 3 and 12. A dependency interface condition reworded to avoid exchange words."
+    },
+    {
+     "id": "acquired-revision-of-pending-task",
+     "laws": 8,
+     "does_not_show": 3,
+     "statement": "written",
+     "narrowed": "C2 'exactly where it is warranted' -> the exact condition continuation_eq proves; law 6 states the comparison at the harmful conditions only; the counterexample's unwitnessed last sentence became a does-not-show item.",
+     "chapter_edit": "03-KNOWING: '**Conditional** (J, with correspondence, authority and responsiveness, explicit in the protocol).' -> '**Conditional** (the practical commitments, with correspondence, authority and responsiveness, explicit in the protocol).'",
+     "notes": "No standard boundary cited (practical commitments in hypotheses). A related link to pending-task-context-applicability added; a dependency detail 'and account' -> 'and its reserve'."
+    },
+    {
+     "id": "branching-target-uniqueness",
+     "laws": 3,
+     "does_not_show": 2,
+     "statement": "written",
+     "narrowed": "The hypothesis naming the retired ExplanatoryBranching module restated on the spine's frames.",
+     "notes": "The counterexample repeated the limitation; two does-not-show items now. In related[1], '(Ren agreed with the direction)' became '(an AI reading)'. next_delta replaced by an application step."
+    },
+    {
+     "id": "joint-target-uniqueness",
+     "laws": 2,
+     "does_not_show": 2,
+     "statement": "written",
+     "narrowed": "The counterexample 'Even complete part profiles may fail to identify whether designated parts reuse the same support' became the non-implication 'It does not settle whether two designated parts draw on the same support' (no cited declaration witnesses it).",
+     "notes": "Law 1 is at exactly 420 English characters. counterexamples now empty."
+    }
+   ]
+  },
+  "review": {
+   "edits": [
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "statement.en",
+     "old": "leaves one unanswered at every plan once addresses are unbounded",
+     "new": "misses one at every plan where no list holds every address",
+     "severity": "imprecise",
+     "why": "blind_misses takes Unlisted I (no list holds every address), not a bound on the addresses. The migrator wrote this into law 3 and its own narrowing note, but the statement still says 'unbounded'. The new statement has 292 characters, within the 300 cap.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Contacts.lean:167 (def Unlisted), Contacts.lean blind_misses (unlisted : Unlisted I)"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "statement.zh",
+     "old": "在地址无界时",
+     "new": "在没有列表含所有地址时",
+     "severity": "imprecise",
+     "why": "Same change as the English: the condition is Unlisted, as law 3's Chinese already says.",
+     "evidence": "Contacts.lean:167"
+    },
+    {
+     "id": "theories/becoming/chapters/03-KNOWING.md",
+     "field": "r-consequence-revised-reference-plan home paragraph",
+     "old": "a rule not reading failures leaves one unanswered at every plan once addresses are unbounded",
+     "new": "a rule not reading failures leaves one unanswered at every plan where no list holds every address",
+     "severity": "imprecise",
+     "why": "The home section says more than the Lean: the Lean condition is Unlisted. 'Unbounded' has no meaning for addresses of a type with no order. This is a proposed chapter edit, not made here.",
+     "evidence": "theories/becoming/chapters/03-KNOWING.md:293; Contacts.lean:167"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "laws[0].en",
+     "old": "two signals being alike through it",
+     "new": "two two-valued signals being alike through it",
+     "severity": "imprecise",
+     "why": "keeps_iff_retains and selections_survive_iff are stated only for AgreeOn (V := Bool), and the selections are x i = true. The law says 'signals' with no value type.",
+     "evidence": "Contacts.lean:119-125 (Registration.Keeps (fun s => AgreeOn (V := Bool) (plan s)))"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "laws[0].zh",
+     "old": "两个信号经它相同",
+     "new": "两个二值信号经它相同",
+     "severity": "imprecise",
+     "why": "Matches the English edit.",
+     "evidence": "Contacts.lean:119"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "laws[6].en",
+     "old": "Its revision puts the address of the acquired mismatch at the head of the retained method and makes it the next contact sequence, leaving the installed contacts until a checked install; the rule answers every failure, the failed address's value being selected through the next plan. A probe acquires both references at the next address; an install with nothing pending and every pair separated installs the fresh pairs.",
+     "new": "In the reference-plan process, revision puts the acquired mismatch's address at the head of the retained method as the next contact sequence, the installed contacts kept until a checked install, so the rule answers every failure. While building, a probe acquires both references at the next address; an install with nothing pending and every pair separated installs the fresh pairs.",
+     "severity": "imprecise",
+     "why": "The item opened with 'Its', which takes its subject from law 6, so the item did not stand alone. probe_binds_both_references also takes active : s.building = true, which the law left out. The new text has 382 characters.",
+     "evidence": "ReferencePlan.lean:129-131 (active : s.building = true), :122"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "laws[6].zh",
+     "old": "其修订把取得的失配地址放在保留方法之首并作为下一接触序列，已安装接触留到检查后的安装；该规则回应每次失败，失败地址之值经下一计划被选择。探测在下一地址取得两个参考；",
+     "new": "在参考计划过程中，修订把取得的失配地址放在保留方法之首并作为下一接触序列，已安装接触留到检查后的安装，所以该规则回应每次失败。构建中，探测在下一地址取得两个参考；",
+     "severity": "imprecise",
+     "why": "Matches the English edit.",
+     "evidence": "ReferencePlan.lean:129"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "laws[7].en",
+     "old": "In the process,",
+     "new": "In the reference-plan process,",
+     "severity": "style",
+     "why": "Each law item must stand alone; 'the process' takes its referent from another item.",
+     "evidence": "_process/RESULT-WORKFLOW.md (each law item stands alone)"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "laws[7].zh",
+     "old": "在该过程中",
+     "new": "在参考计划过程中",
+     "severity": "style",
+     "why": "Matches the English edit.",
+     "evidence": "as above"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "laws[8].en",
+     "old": "one twelve-step trace of the process acquires",
+     "new": "one twelve-step trace of the reference-plan process acquires",
+     "severity": "style",
+     "why": "The item must stand alone.",
+     "evidence": "ReferencePlan.lean:302 complete_history"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "laws[8].en",
+     "old": "and uses both, ending",
+     "new": "and uses both, each repair run by one policy, ending",
+     "severity": "dropped",
+     "why": "C7 'the controller executes it' is mapped to law 9 through first_policy_repair and second_policy_repair, but the text of law 9 never says that both repairs are runs of the one policy choose. The new text has 400 characters.",
+     "evidence": "ReferencePlan.lean:173 (def choose), :291 (first_policy_repair : repair 3 failedFirst = some repairedFirst), docstring 'Both rounds use exactly choose'"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "laws[8].zh",
+     "old": "两者都使用；",
+     "new": "两者都使用，每次修复都由同一策略执行；",
+     "severity": "dropped",
+     "why": "Matches the English edit.",
+     "evidence": "ReferencePlan.lean:173"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "laws[8].zh",
+     "old": "过程的一条十二步迹",
+     "new": "参考计划过程的一条十二步迹",
+     "severity": "style",
+     "why": "The item must stand alone.",
+     "evidence": "as above"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "laws[9].en",
+     "old": "Along that history",
+     "new": "Along the twelve-step witness history of the reference-plan process",
+     "severity": "style",
+     "why": "'That history' takes its referent from law 9. The new text has 330 characters.",
+     "evidence": "_process/RESULT-WORKFLOW.md"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "laws[9].zh",
+     "old": "沿该历史",
+     "new": "沿参考计划过程的十二步见证历史",
+     "severity": "style",
+     "why": "Matches the English edit.",
+     "evidence": "as above"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "laws[10].en",
+     "old": "The controls fail: the frozen method, with the first repair and more fuel, misses the second mismatch; an erased mismatch cannot start a revision; with too little fuel the references use it and the build is blocked; no action runs without fuel; a constant channel is rejected at the check after its contacts use fuel; and a drift after the check is an admitted step of one trace after which use fails.",
+     "new": "In the reference-plan witnesses the frozen method fails: re-run at the first mismatch it installs nothing and the use fails again, and with the first repair and more fuel it misses the second mismatch; an erased mismatch starts no revision.",
+     "severity": "overclaim",
+     "why": "(a) 'no action runs without fuel' is a universal, but no_action_after_exhaustion proves one case: one perform from repairedFirst at fuel 0. (b) The law names frozenEnd and frozen_method_still_fails but never states the first frozen control (installed = [], response false). (c) 'The controls' takes its referent from elsewhere. Fixing all three makes the item longer than 420 characters, so it is split: this item keeps the frozen and erased controls (240 characters), and a new laws[11] takes the rest.",
+     "evidence": "ReferencePlan.lean:391 (no_action_after_exhaustion : execute { repairedFirst with fuel := 0 } (.perform 0 true) = none), :368 (frozen_method_still_fails: frozenEnd.response = false ∧ frozenEnd.installed = [])"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "laws[10].zh",
+     "old": "对照失败：冻结的方法保留第一次修复且燃料更多，仍漏掉第二次失配；被擦除的失配不能启动修订；燃料太少时参考用去燃料、构建受阻；无燃料则不能行动；常值通道的接触用去燃料后在检查处被拒；检查后的漂移是同一迹中被接纳的一步，此后使用失败。",
+     "new": "在参考计划过程的见证中，冻结的方法失败：在第一次失配处重跑，它什么也不安装，使用再次失败；保留第一次修复且燃料更多时，它漏掉第二次失配；被擦除的失配不启动修订。",
+     "severity": "overclaim",
+     "why": "Matches the English split.",
+     "evidence": "ReferencePlan.lean:368, :391"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "laws[10].declarations",
+     "old": "",
+     "new": "[\"Becoming.ReferencePlan.frozenEnd\", \"Becoming.ReferencePlan.frozen_method_still_fails\", \"Becoming.ReferencePlan.frozenSecondEnd\", \"Becoming.ReferencePlan.frozen_second_method_still_fails\", \"Becoming.ReferencePlan.erased_mismatch_cannot_activate\"]",
+     "severity": "overclaim",
+     "why": "Part of the split: these are the declarations of the frozen and erased controls.",
+     "evidence": "ReferencePlan.lean:366-381"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "laws[11]",
+     "old": "",
+     "new": "{\"en\": \"In the reference-plan witnesses, from three units of fuel the revision and the probe use it all and the build is blocked; a use at zero fuel does not run; a constant channel is rejected at the check after its contacts use fuel; and a drift after the check is an admitted step of one trace after which use fails.\", \"zh\": \"在参考计划过程的见证中，从三单位燃料出发，修订与探测用尽燃料，构建受阻；燃料为零时使用不执行；常值通道的接触用去燃料后在检查处被拒；检查后的漂移是同一迹中被接纳的一步，此后使用失败。\", \"declarations\": [\"Becoming.ReferencePlan.support_too_small_to_build\", \"Becoming.ReferencePlan.references_use_fuel_before_exhaustion\", \"Becoming.ReferencePlan.no_action_after_exhaustion\", \"Becoming.ReferencePlan.constant_channel_rejected\", \"Becoming.ReferencePlan.constant_channel_contacts_use_fuel\", \"Becoming.ReferencePlan.drift_after_check_can_fail\", \"Becoming.ReferencePlan.drift_has_actual_history\"]}",
+     "severity": "overclaim",
+     "why": "The second half of the split (311 characters). From fuel 3, repair 2 runs revise (1) then probe (2), leaving fuel 0, used 4, installed []. The zero-fuel case is stated as the one case the Lean proves.",
+     "evidence": "ReferencePlan.lean:387 (references_use_fuel_before_exhaustion = some (0, 4, [])), :391"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/consequence-revised-reference-plan.md",
+     "field": "C10, X0 and V6 rows",
+     "old": "and law 11 (the controls)",
+     "new": "and laws 11–12 (the controls: the frozen method at both mismatches and the erased mismatch; fuel, the constant channel and drift)",
+     "severity": "style",
+     "why": "The mapping must describe the record as it is left. Also replace 'is in references and law 11)' with 'is in references and laws 11–12)' in row X0, and 'and law 11 (`drift_has_actual_history`)' with 'and law 12 (`drift_has_actual_history`)' in row V6.",
+     "evidence": "df3-mapping/consequence-revised-reference-plan.md:22, :33, :40"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "history[-1].en",
+     "old": "the claim split into eleven laws",
+     "new": "the claim split into twelve laws",
+     "severity": "style",
+     "why": "Follows the split of law 11. In the same note, replace 'its selections, the controls)' with 'its selections, the frozen and erased controls, the fuel, channel and drift controls)'.",
+     "evidence": "record history[-1]"
+    },
+    {
+     "id": "consequence-revised-reference-plan",
+     "field": "history[-1].zh",
+     "old": "主张拆为十一条规律",
+     "new": "主张拆为十二条规律",
+     "severity": "style",
+     "why": "Matches the English. Also replace '其选择、对照）' with '其选择、冻结与擦除对照、燃料、通道与漂移对照）'.",
+     "evidence": "record history[-1]"
+    },
+    {
+     "id": "fallible-witness-diagnosability",
+     "field": "counterexamples[0].path",
+     "old": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FallibleInspection.lean",
+     "new": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WitnessRefinement.lean",
+     "severity": "imprecise",
+     "why": "The counterexample points at the superseded periphery file, which has no binding (R35). Its provenance reference lists no declaration for the 'missing reports retain uncertainty' clause: absent_fifth_report_preserves_uncertainty is not listed. All three clauses are witnessed by declarations of the bound core file, which are in references and law 13. The mapping's claim that the FallibleInspection declarations witness the counterexample therefore holds only in part.",
+     "evidence": "WitnessRefinement.lean:353 (absent_fifth_keeps_uncertainty), :370 (duplicated_fifth_no_repair), :461 (uncovered_correlation_deletes_actual); FallibleInspection.lean:231 not in the record's provenance declarations"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/fallible-witness-diagnosability.md",
+     "field": "L0 and X0 rows",
+     "old": "(path FallibleInspection.lean, whose declarations, kept in a provenance reference, witness it; on the core, law 13's `duplicated_fifth_no_repair`)",
+     "new": "(path the bound WitnessRefinement.lean, whose law-13 declarations witness every clause, `duplicated_fifth_no_repair` here; FallibleInspection.lean, its earlier path, stays a provenance reference)",
+     "severity": "style",
+     "why": "Follows the path change. In row X0, also replace 'the same sentences as L0–L1 | counterexample | counterexamples[0] (unchanged)' with 'the same sentences as L0–L1 | counterexample | counterexamples[0] (text unchanged; path moved to WitnessRefinement.lean)'.",
+     "evidence": "df3-mapping/fallible-witness-diagnosability.md:17, :19"
+    },
+    {
+     "id": "fallible-witness-diagnosability",
+     "field": "history[-1].en",
+     "old": "the limitation, the same sentence as the counterexample, kept there;",
+     "new": "the limitation, the same sentence as the counterexample, kept there, the counterexample's path moved from the provenance FallibleInspection.lean to the bound WitnessRefinement.lean, whose law-13 declarations witness each clause;",
+     "severity": "style",
+     "why": "The history note must record the path change.",
+     "evidence": "record history[-1]"
+    },
+    {
+     "id": "fallible-witness-diagnosability",
+     "field": "history[-1].zh",
+     "old": "限制与反例同句，留在反例中；",
+     "new": "限制与反例同句，留在反例中，反例路径由来源 FallibleInspection.lean 改为已绑定的 WitnessRefinement.lean（第十三条规律的声明见证其每一分句）；",
+     "severity": "style",
+     "why": "Matches the English.",
+     "evidence": "record history[-1]"
+    },
+    {
+     "id": "theories/becoming/chapters/03-KNOWING.md",
+     "field": "r-fallible-witness-diagnosability home paragraph",
+     "old": "**Theorem** (any type; roster, fault envelopes and complete reports supplied).",
+     "new": "**Theorem** (any type of witnesses compared decidedly; roster, fault envelopes and complete reports supplied).",
+     "severity": "imprecise",
+     "why": "The core law takes [DecidableEq D] on witnesses, and the chapter's own rule (line 9) says decision hypotheses are named in the sentence. The migrated record has this as hypotheses[1]. Proposed edit, not made.",
+     "evidence": "Readout.lean:163 (variable {D : Type} [DecidableEq D]); 03-KNOWING.md:337, :9"
+    },
+    {
+     "id": "unanchored-incidence-collapse",
+     "field": "does_not_show[1].en",
+     "old": "It refutes only that inference, not the possibility of a generative grounding of joining.",
+     "new": "It refutes only the inference that questions read through roles suffice for joining, not the possibility of a generative grounding of joining.",
+     "severity": "style",
+     "why": "'That inference' takes its referent from does_not_show[0]; each item renders on its own. The new text has 142 characters.",
+     "evidence": "record does_not_show[0..1]"
+    },
+    {
+     "id": "unanchored-incidence-collapse",
+     "field": "does_not_show[1].zh",
+     "old": "它只否定这一推论，",
+     "new": "它只否定“只经角色读出的问题足以说明接合”这一推论，",
+     "severity": "style",
+     "why": "Matches the English.",
+     "evidence": "as above"
+    },
+    {
+     "id": "unanchored-incidence-collapse",
+     "field": "dependencies[0].detail.en",
+     "old": "feeds the collapse account.",
+     "new": "feeds the collapse law.",
+     "severity": "style",
+     "why": "'Account' is a word of exchange in a live field. The other records in this unit replaced such words in dependency text, but this one was missed. The Chinese (退化说明) needs no change.",
+     "evidence": "record dependencies[0].detail.en; AGENTS.md (no words of exchange)"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/unanchored-incidence-collapse.md",
+     "field": "L0 row and closing paragraph",
+     "old": "(scope: it refutes only that inference, not the possibility of a generative grounding of joining)",
+     "new": "(scope: it refutes only the inference that questions read through roles suffice for joining, not the possibility of a generative grounding of joining)",
+     "severity": "style",
+     "why": "Follows the does_not_show[1] edit. In the closing paragraph, also replace 'The dependency on joining-open-map-factor, the related links,' with 'The dependency on joining-open-map-factor (its detail's \"the collapse account\", a word of exchange, read as \"the collapse law\"), the related links,'. Add the same note to history[-1] before 'the shared boundary no-ethical-premise cited; no premise' (zh before '引用通用边界 no-ethical-premise；前提').",
+     "evidence": "df3-mapping/unanchored-incidence-collapse.md:17"
+    },
+    {
+     "id": "theories/becoming/chapters/03-KNOWING.md",
+     "field": "r-unanchored-incidence-collapse table row",
+     "old": "a coarse account exact for them can make a spent history's impossible self-join possible",
+     "new": "one code exact for them can make a traced passage's impossible self-join possible",
+     "severity": "style",
+     "why": "The migrator's edit is correct ('spent history' is the periphery's spent, now Fragment.passageTrace). The same clause also has 'account', a word of exchange, so this edit covers both words. Proposed edit, not made.",
+     "evidence": "03-KNOWING.md:374; JoiningRoles.lean header ('The periphery's spent is the traced passage Fragment.passageTrace'); collapsed_exact (one code)"
+    },
+    {
+     "id": "theories/becoming/chapters/03-KNOWING.md",
+     "field": "r-risk-certificate-outcome-distinction home paragraph",
+     "old": "**Theorem** (any process; a supplied three-route process; the application theorems use propext).",
+     "new": "**Theorem** (any process; a supplied three-route process; the application theorems use propext, their reading on the core law propext and Quot.sound).",
+     "severity": "imprecise",
+     "why": "Confirms the migrator's chapter edit. The JudgingCorrespondence receipt reports propext for endpoint and certificate, and propext with Quot.sound for mem_realizations, judges_iff, endpoint_judge_iff and no_endpoint_only_prior_certificate_by_core. The five WisdomFallibleJudgment theorems use propext only. The anchor occurs once.",
+     "evidence": "deeper/judging-correspondence-checks/20261020T161948.968917Z/verification.json; deeper/wisdom-fallible-judgment-checks/20261008T122517.399770Z/receipt.json modules[5]; 03-KNOWING.md:354"
+    },
+    {
+     "id": "enacted-scene-binding",
+     "field": "references[0].declarations",
+     "old": "",
+     "new": "[\"Generative.EnactedScene.enacted_scenes_supply_the_previous_binding_inputs\", \"Generative.EnactedScene.enacted_access_enters_all_sequence_interpretation\", \"Generative.EnactedScene.enacted_access_reaches_actual_response\", \"Generative.EnactedScene.unchanged_position_and_name_counts_do_not_establish_coordination\", \"Generative.EnactedScene.a_clear_view_can_omit_the_named_target\", \"Generative.EnactedScene.mistimed_naming_produces_an_actual_inverted_response\", \"Generative.EnactedScene.access_without_recording_does_not_acquire_the_bindings\", \"Generative.EnactedScene.movement_support_can_run_out_before_a_response\", \"Generative.EnactedScene.impossible_movement_does_not_invent_a_new_scene\"]",
+     "severity": "missing",
+     "why": "counterexamples[0] says 'insufficient support prevents movement or response'. The response clause is witnessed by movement_support_can_run_out_before_a_response, but no cited declaration witnesses the movement clause, and the mapping says every witness is in references. impossible_movement_does_not_invent_a_new_scene witnesses it. It is in the bound EnactedScene receipt (axioms: propext), so no-ethical-premise-core-axiom-free still holds.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EnactedScene.lean:168; inquiry-root/enacted-scene-verification.json modules[6].axiom_dependencies"
+    },
+    {
+     "id": "enacted-scene-binding",
+     "field": "laws[12]",
+     "old": "",
+     "new": "{\"en\": \"In the enacted scene from 24 units of support, a move to (2, 2) is not made: the learner stays at (1, 0) and the same two sites stay in view.\", \"zh\": \"在从 24 单位支持出发的行动场景中，向 (2, 2) 的移动不发生：学习者留在 (1, 0)，可见的仍是同样两个位置。\", \"declarations\": [\"Generative.EnactedScene.impossible_movement_does_not_invent_a_new_scene\"]}",
+     "severity": "missing",
+     "why": "Every declaration a counterexample relies on is stated in a law (as law 12 does for the others). The theorem gives position (1, 0) and visible = [p0, p1], the same two sites visible from the start.",
+     "evidence": "EnactedScene.lean:168-170, :76 (start at (1,0))"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/enacted-scene-binding.md",
+     "field": "X0 row",
+     "old": "and `movement_support_can_run_out_before_a_response`, are in references and law 12)",
+     "new": "and `movement_support_can_run_out_before_a_response`, are in references and law 12, and the blocked move's witness, `impossible_movement_does_not_invent_a_new_scene`, in law 13)",
+     "severity": "style",
+     "why": "The mapping must describe the record as it is left. In history[-1].en also replace 'the claim split into twelve laws' with 'thirteen laws', 'the enacted-scene periphery and its failures)' with 'the enacted-scene periphery, its failures and the blocked move)', and 'and the mistimed response, retention and support witnesses (EnactedScene.lean)' with 'and the mistimed response, retention, support and blocked-move witnesses (EnactedScene.lean)'. In zh: '主张拆为十二条规律'→'主张拆为十三条规律'; '行动场景外围及其失败）'→'行动场景外围、其失败及受阻的移动）'; '及错时回应、保留与支持的见证（EnactedScene.lean）'→'及错时回应、保留、支持与移动受阻的见证（EnactedScene.lean）'.",
+     "evidence": "df3-mapping/enacted-scene-binding.md:24; record history[-1]"
+    },
+    {
+     "id": "acquired-revision-of-pending-task",
+     "field": "laws[5].en",
+     "old": "At the harmful conditions, the inherited comparison of what each practice protects and gains ranks learning above attendance, and the same continuation enacts learning with one loss, three records and units 2, 6 and 10: the earlier composition is the law's instance at those conditions.",
+     "new": "At the harmful conditions, for every installation valid under the protocol's invariant with a pending head, the inherited comparison of what each practice protects and gains ranks learning above attendance, and the continuation enacts learning with one loss, three records and units 2, 6 and 10: the earlier composition is the continuation law's instance there.",
+     "severity": "imprecise",
+     "why": "warranted_revision_and_pending_delivery and harmful_continuation_instance take (h : Invariant span s) and (hp : s.packets = p :: ps). The law named neither, and 'the same continuation' and 'the law' took their referents from law 5. The new text has 361 characters.",
+     "evidence": "experiments/market-generativity/meta-attractor/CommonTaskRevision.lean:149-151; VersionedTaskInstances.lean:358-360"
+    },
+    {
+     "id": "acquired-revision-of-pending-task",
+     "field": "laws[5].zh",
+     "old": "在 harmful 条件下，继承的比较（各实践所保护与所得）把学习排在参与之上，同一接续执行学习，一次损失、三条记录、单位 2、6、10：先前的组合是该规律在这些条件下的实例。",
+     "new": "在 harmful 条件下，对每个满足协议不变量、有在途队首的装置，继承的比较（各实践所保护与所得）把学习排在参与之上，接续执行学习，一次损失、三条记录、单位 2、6、10：先前的组合是接续规律在此的实例。",
+     "severity": "imprecise",
+     "why": "Matches the English edit.",
+     "evidence": "CommonTaskRevision.lean:149-151"
+    },
+    {
+     "id": "acquired-revision-of-pending-task",
+     "field": "laws[6].en",
+     "old": "The rewrite keeps the records and the loss count and conserves the total of work, reserve and used units.",
+     "new": "In the versioned task protocol, wherever the rewrite of the head runs it keeps the records and the loss count and conserves the total of work, reserve and used units.",
+     "severity": "style",
+     "why": "paid_retarget_keeps_history assumes paidRetarget authorized l s = some (l', s'): the rewrite ran. The item also did not say which protocol it is about, so it did not stand alone.",
+     "evidence": "CommonTaskRevision.lean:163-167"
+    },
+    {
+     "id": "acquired-revision-of-pending-task",
+     "field": "laws[6].zh",
+     "old": "改写保持记录与损失计数，并守恒工作、储备与已用单位之和。",
+     "new": "在版本化任务协议中，队首改写凡运行，都保持记录与损失计数，并守恒工作、储备与已用单位之和。",
+     "severity": "style",
+     "why": "Matches the English edit.",
+     "evidence": "CommonTaskRevision.lean:163"
+    },
+    {
+     "id": "theories/becoming/chapters/03-KNOWING.md",
+     "field": "r-acquired-revision-of-pending-task third paragraph",
+     "old": "**Conditional** (J, with correspondence, authority and responsiveness, explicit in the protocol).",
+     "new": "**Conditional** (the practical commitments, with correspondence, authority and responsiveness, explicit in the protocol).",
+     "severity": "style",
+     "why": "Confirms the migrator's edit. J is a retired label, and the anchor occurs once (line 308). The chapter's line 9 and line 301 (formed-goal-revision-continuation, outside this unit) also use J; the lander may want to sweep them together.",
+     "evidence": "03-KNOWING.md:308, :9, :301"
+    },
+    {
+     "id": "branching-target-uniqueness",
+     "field": "does_not_show[0]",
+     "old": "{\"en\": \"It does not show that configurations passing the same branching tests are alike.\", \"zh\": \"不表明通过相同分支测试的构形相同。\", \"kind\": \"non-implication\"}",
+     "new": "{\"en\": \"Configurations passing the same branching tests need not be alike: where a move has infinitely many outcomes, two configurations can pass the same tests and not be alike.\", \"zh\": \"通过相同分支测试的构形不必相同：某动作有无穷多结果时，两个构形可通过相同测试而不相同。\", \"kind\": \"non-implication\", \"witness\": \"Becoming.Unbounded.not_alike\"}",
+     "severity": "missing",
+     "why": "The bound Likeness.lean proves this case: Unbounded.sameBranchingTests and Unbounded.not_alike, both with empty axiom reports. The item can therefore carry the witnessed case, not only 'not shown'. The new text has 170 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean:2548, :2575, header :125-128; becoming-checks/20261020T051144.879480Z (Becoming.Unbounded.not_alike: [])"
+    },
+    {
+     "id": "branching-target-uniqueness",
+     "field": "references[4].declarations",
+     "old": "",
+     "new": "[\"Becoming.SameBranchingTests.functional\", \"Becoming.Alike.functional\", \"Becoming.BranchingTest\", \"Becoming.BranchingTest.Holds\", \"Becoming.SameBranchingTests\", \"Becoming.Unbounded.sameBranchingTests\", \"Becoming.Unbounded.not_alike\"]",
+     "severity": "missing",
+     "why": "Puts the witness of does_not_show[0] in references. Both declarations are in the same bound file and receipt.",
+     "evidence": "Likeness.lean:2548, :2575"
+    },
+    {
+     "id": "branching-target-uniqueness",
+     "field": "does_not_show[2]",
+     "old": "",
+     "new": "{\"en\": \"The law is for these branching tests; a richer test language must keep its own semantics, as the tests with parts do.\", \"zh\": \"此律针对这些分支测试；更丰富的测试语言须保留其自身语义，如带部分的测试。\", \"kind\": \"scope\"}",
+     "severity": "dropped",
+     "why": "Old N1 'a richer language must retain its own semantics' is a scope limit of this record. The mapping sends it to another record (joint-target-uniqueness) and keeps nothing here, so it is lost from this record.",
+     "evidence": "snapshot _process/architecture/history/3aa5b9aa10693210/branching-target-uniqueness.json next_delta; df3-mapping/branching-target-uniqueness.md:24"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/branching-target-uniqueness.md",
+     "field": "L0, N1 rows and closing paragraph",
+     "old": "does_not_show[0] (“It does not show that configurations passing the same branching tests are alike”)",
+     "new": "does_not_show[0] (“Configurations passing the same branching tests need not be alike …”, witness `Unbounded.not_alike`)",
+     "severity": "style",
+     "why": "The mapping must describe the record as it is left. In row N1, replace '| instruction | not in next_delta: tests with parts, the richer language the record's related link names, keep their own semantics in joint-target-uniqueness, which states the same law for them;' with '| scope | does_not_show[2] (“The law is for these branching tests; a richer test language must keep its own semantics, as the tests with parts do”), not in next_delta;'. In the closing paragraph, replace '`BranchingTest`, `BranchingTest.Holds` and `SameBranchingTests` were added' with '`BranchingTest`, `BranchingTest.Holds`, `SameBranchingTests`, `Unbounded.sameBranchingTests` and `Unbounded.not_alike` were added'.",
+     "evidence": "df3-mapping/branching-target-uniqueness.md:16, :24"
+    },
+    {
+     "id": "branching-target-uniqueness",
+     "field": "history[-1].en",
+     "old": "the limitation, which the counterexample repeated and no declaration witnesses, became two does-not-show items",
+     "new": "the limitation, which the counterexample repeated, became two does-not-show items, the first witnessed by Unbounded.not_alike, and the next step's note that a richer language keeps its own semantics a third",
+     "severity": "style",
+     "why": "The history note must record these edits. Also replace 'BranchingTest, BranchingTest.Holds and SameBranchingTests added to Likeness.lean's reference' with 'BranchingTest, BranchingTest.Holds, SameBranchingTests, Unbounded.sameBranchingTests and Unbounded.not_alike added to Likeness.lean's reference'.",
+     "evidence": "record history[-1]"
+    },
+    {
+     "id": "branching-target-uniqueness",
+     "field": "history[-1].zh",
+     "old": "限制与反例同句、无声明见证，改为两条“未表明”",
+     "new": "限制与反例同句，改为两条“未表明”，第一条由 Unbounded.not_alike 见证，下一步中“更丰富语言保留其自身语义”改为第三条",
+     "severity": "style",
+     "why": "Matches the English. Also replace 'BranchingTest、BranchingTest.Holds 与 SameBranchingTests 加入 Likeness.lean 的引用' with 'BranchingTest、BranchingTest.Holds、SameBranchingTests、Unbounded.sameBranchingTests 与 Unbounded.not_alike 加入 Likeness.lean 的引用'.",
+     "evidence": "record history[-1]"
+    }
+   ],
+   "verdicts": [
+    {
+     "id": "consequence-revised-reference-plan",
+     "verdict": "sound-after-edits",
+     "note": "Laws 1-6 match Contacts, Stock and ReferencePlan, and all 101 cited declarations have empty axiom reports in the bound receipt 20261019T231053.882924Z, so no-ethical-premise holds. Edits: the statement and home section still say 'unbounded' where the Lean condition is Unlisted; law 1 needs two-valued signals; laws 7-11 inherited their subject from other items; law 9 omits that both repairs run under one policy; law 11 overclaims 'no action runs without fuel' and omits the first frozen control, so it is split into laws 11-12. The mapping and the hypothesis split are otherwise accurate."
+    },
+    {
+     "id": "fallible-witness-diagnosability",
+     "verdict": "sound-after-edits",
+     "note": "All 13 laws match Readout, Courses, WitnessRefinement and WitnessRefinementRuns, law 12 with every hypothesis of test_step_completes. The four bound core receipts are Lean 4.29.1 with empty axiom reports, so no-ethical-premise holds. Edits: the counterexample points at the unbound provenance FallibleInspection.lean, whose listed declarations do not witness the missing-report clause, so it should point at the bound WitnessRefinement.lean; and a proposed chapter edit names the witnesses' decidable equality."
+    },
+    {
+     "id": "unanchored-incidence-collapse",
+     "verdict": "sound-after-edits",
+     "note": "Laws 1-5 match Joining, JoiningRoles, LocalUnits, Fragments and Likeness, with no finiteness or excluded middle taken. The bound receipts report empty axioms. Removing the counterexample, which only repeated the limitation and had a study as its source, is right. Edits: does_not_show[1] said 'that inference' without naming it; a dependency detail has 'account'; and the chapter edit is extended to replace 'coarse account' along with 'spent history'."
+    },
+    {
+     "id": "risk-certificate-outcome-distinction",
+     "verdict": "sound",
+     "note": "Laws 1-6 match Readout, Courses, WisdomFallibleJudgment and JudgingCorrespondence. Decidable equality is kept only where the existence direction needs it. The receipts check out: core empty; WisdomFallibleJudgment Lean 4.29.1 with propext only; JudgingCorrespondence Lean 4.30.0-rc2 with propext and Quot.sound. So no-ethical-premise-core-axiom-free holds. The migrator's chapter edit was checked and is included as an edit."
+    },
+    {
+     "id": "enacted-scene-binding",
+     "verdict": "sound-after-edits",
+     "note": "Laws 1-12 match CrossSituational, Courses, MachineInstances and EnactedScene. The positions really are Nat × Nat, so the hypotheses correction is right, and the stationary and mistimed failures are written as negated universals. The receipts are as stated (both periphery receipts Lean 4.29.1, propext with some Quot.sound). One edit: the counterexample's 'insufficient support prevents movement' clause had no cited witness. impossible_movement_does_not_invent_a_new_scene witnesses it and is added to references and as law 13."
+    },
+    {
+     "id": "acquired-revision-of-pending-task",
+     "verdict": "sound-after-edits",
+     "note": "Laws 1-5 and 8 match Countdown, VersionedTaskInstances and CommonTaskRevision. Narrowing 'warranted' to the condition continuation_eq proves is correct; the warrant itself needs better_iff, which is the dependency's. Not citing a standard boundary is right, given the practical commitments and PracticalJudgment.Better. The receipts are as stated: core empty; VersionedTaskInstances Lean 4.30.0-rc2 with Classical.choice in the continuation laws; CommonTaskRevision at most propext and Quot.sound. Edits: law 6 omits the installation hypotheses; law 7 does not stand alone. The chapter edit removing the retired label J was checked and is included."
+    },
+    {
+     "id": "branching-target-uniqueness",
+     "verdict": "sound-after-edits",
+     "note": "Laws 1-3 match Likeness exactly, with no finiteness taken. The reading 'Ren agreed' in a related link correctly became an AI-labelled reading, the agreement kept as provenance in history. Edits: does_not_show[0] can carry the witnessed case Unbounded.not_alike from the same bound file; and the old next-step scope 'a richer language must retain its own semantics' was dropped from this record, so it is restored as a scope item."
+    },
+    {
+     "id": "joint-target-uniqueness",
+     "verdict": "sound",
+     "note": "Law 1 (420 characters, at the cap) and law 2 match TestWith, TestWith.Holds, SameTestsWith.functional, JointFrame, JointTest and SameJointTests, and the bound receipt reports empty axioms. Making the old counterexample a non-implication is right: its witness, ExplanatorySharedSupport.lean, has no receipt binding its current bytes (binding_for.py reports it unbound), so it cannot be cited."
+    }
+   ],
+   "checked": "For all eight records I read the snapshot bytes, the migrated record and its mapping file, and the home section in 03-KNOWING.md (lines 129, 130, 260, 293, 303-308, 337, 354, 374). I opened the Lean of every cited declaration and compared hypotheses, iff directions, witnesses and negated universals: Contacts, Stock, ReferencePlan, Revision.Keeps, Readout, Courses, WitnessRefinement, WitnessRefinementRuns, FaultEnvelopes.Domain, Joining, JoiningRoles, LocalUnits, Fragments, Likeness, Composition, CrossSituational, Countdown, the periphery WisdomFallibleJudgment, JudgingCorrespondence, MachineInstances, EnactedScene, VersionedTaskInstances, CommonTaskRevision and GoalFormationRevision's conditions. For every proof binding I checked by script that the receipt's source hash matches the file's current bytes, that each cited declaration is in its module's entry, and read each declaration's axiom report and the receipt's Lean version (core 4.29.1; JudgingCorrespondence, VersionedTaskInstances and CommonTaskRevision 4.30.0-rc2; MachineInstances, EnactedScene and WisdomFallibleJudgment 4.29.1). That is how I verified each standard-boundary key. I verified text_versions: the first entry equals snapshots.json and both files exist with matching sha256. I checked key order against the batch A models, that the earlier history and unchanged fields are byte-identical, and every field change against its mapping. I scanned live fields for process markers, retired labels and words of exchange, which found one 'account' in a dependency detail. I checked the field caps and that each proposed chapter-edit anchor occurs exactly once. I ran binding_for.py on ExplanatorySharedSupport.lean (unbound). lint --ids with all eight ids (space-separated) gave 0 findings. research.py check (run once): for these ids, only 'generated view differs' errors (ignored as instructed), and no source drift or style warnings. Two pre-existing reference hash drifts on documentation files (COMMON-ORGANIZATION.md, THE-THEORY-OF-BECOMING.md, BECOMING-RENEWAL-READING.md, COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md) are unchanged from the snapshots and are not flagged by check."
+  }
+ },
+ {
+  "unit": "C",
+  "migrated": {
+   "records": [
+    {
+     "id": "timely-response-necessity",
+     "laws": 9,
+     "does_not_show": 4,
+     "statement": "written",
+     "notes": "Laws 1-7 core (TimedResponse), 8-9 periphery (FallibleInquiry, propext and Quot.sound). Every deadline premise written into laws 3-5, 8, 9."
+    },
+    {
+     "id": "finite-fallible-inquiry-necessity",
+     "laws": 17,
+     "does_not_show": 7,
+     "statement": "written",
+     "narrowed": "Counterexample 3 narrowed to what common_nonzero_imbalance proves; counterexample 1 left (abstention law 3; the rest to does-not-show); next_delta replaced.",
+     "chapter_edit": "03-KNOWING: 'coverage is at most the two errors plus the weight within responsive reach, and entirely beyond reach equals them;' -> '..., reach decided, and entirely beyond reach equals them with no decision;'",
+     "notes": "All periphery; regions.json base change proposed by triage row 129 not made."
+    },
+    {
+     "id": "causal-models-as-processes",
+     "laws": 6,
+     "does_not_show": 3,
+     "statement": "edited",
+     "narrowed": "Intervention clause now 'fixed by the model and, given two configurations, not by the record'.",
+     "chapter_edit": "03-KNOWING: 'An intervention is a move not taken, unfixed by the record and fixed by the model;' -> 'An intervention is a move not taken, fixed by the model and, where there are two configurations, not by the record;'",
+     "notes": "All core."
+    },
+    {
+     "id": "acquired-binding-compositional-use",
+     "laws": 8,
+     "does_not_show": 3,
+     "statement": "written",
+     "notes": "Core Segmentation and Courses; periphery AcquiredBinding and MachineInstances, propext and some Quot.sound."
+    },
+    {
+     "id": "incidence-common-refinement",
+     "laws": 9,
+     "does_not_show": 3,
+     "statement": "written",
+     "narrowed": "Common refinement stated as the Lean has it (Matched through role frames; tests form only under excluded middle and local finiteness, law 6; core form law 4); a hypothesis names em and local finiteness; the only counterexample repeated the limitations and became three does-not-show items.",
+     "notes": "proof_bindings binds Joining.lean twice, identically (left unchanged)."
+    },
+    {
+     "id": "readings-within-what-they-read",
+     "laws": 9,
+     "does_not_show": 3,
+     "statement": "edited",
+     "narrowed": "'complete exactly where nothing differs' now carries the conditions (inhabited types, decided equality of values); 'never closes' -> 'incomplete at every step'; 'returns every two steps' -> 'returns to its start along its orbit'.",
+     "notes": "former_ids kept; R35 snapshot under the former id."
+    },
+    {
+     "id": "learning-by-refutation",
+     "laws": 15,
+     "does_not_show": 3,
+     "statement": "edited",
+     "narrowed": "Statement begins 'Given two values'; 'misses bounded...' said of extrapolation by elimination; 'tri N is coarse, not optimal' -> 'not shown to be the least'; negated universals written as such; hypotheses split from 3 to 7.",
+     "notes": "Learning bound to 20261028T061626.538602Z."
+    }
+   ]
+  },
+  "review": {
+   "edits": [
+    {
+     "id": "learning-by-refutation",
+     "field": "statement.en",
+     "old": "Given two values, every extrapolation has an open course on which each value it proposes misses; no prefix fixes the next value. In a world held by a list, elimination misses boundedly often, its rest is unrefuted and occurs only there, and no prefix shows when; over classes it is the same learning.",
+     "new": "Given a map moving every value, every extrapolation has an open course on which each proposal misses; no prefix fixes the next value. In a world held by a list, elimination misses boundedly often, its rest, unrefuted, occurs only there, and no prefix shows when; over classes it is the same learning.",
+     "severity": "overclaim",
+     "why": "Two different values do not by themselves give the diagonal course. diagonal_misses, diagonal_unrested and diagonal_open take a map moving every value, and two values give one (swapTo_moves) only with DecidableEq O, which the statement does not name. A map moving every value also supplies the two values that no_prefix_fixes_next needs (v ≠ other v), so one condition covers both clauses. 300 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean:298-316 (moves : ∀ v, other v ≠ v); Learning.lean:332-338 (swapTo, swapTo_moves need [DecidableEq O]); law 5 of this record"
+    },
+    {
+     "id": "learning-by-refutation",
+     "field": "statement.zh",
+     "old": "给定两个值，每个外推都有一个开放的历程",
+     "new": "给定移动每个值的映射，每个外推都有一个开放的历程",
+     "severity": "overclaim",
+     "why": "The Chinese of the corrected English: the diagonal needs a map moving every value, and two values give one only where equality is decided.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean:298-338"
+    },
+    {
+     "id": "learning-by-refutation",
+     "field": "hypotheses[1].en",
+     "old": "It is used only in the proofs of claim_missed_on_one and eq_of_not_missed; no_prefix_fixes_next, diagonal_misses, diagonal_unrested and diagonal_open do not use it (each is listed in the decidability inventory).",
+     "new": "Beyond the definitions that take it, decided equality of values enters only the proofs of claim_missed_on_one, eq_of_not_missed, swapTo_moves, index_succ_le, index_le_succ and missed_before; no_prefix_fixes_next, diagonal_misses, diagonal_unrested and diagonal_open do not use it.",
+     "severity": "imprecise",
+     "why": "The kept sentence says decided equality is used only in the proofs of claim_missed_on_one and eq_of_not_missed. In the Lean, swapTo_moves matches on decEq, and index_succ_le, index_le_succ and missed_before match on decMissesAt, the instance built from DecidableEq O. The item also opened with a bare 'It' that depended on hypotheses[0]. The pointer to the decidability inventory goes to the snapshot because of the Chinese cap. en 280, zh 189.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean:335, 373, 378, 410 (decEq / decMissesAt in proofs); Learning.lean:184-208"
+    },
+    {
+     "id": "learning-by-refutation",
+     "field": "hypotheses[1].zh",
+     "old": "它只在 claim_missed_on_one 与 eq_of_not_missed 的证明中用到；no_prefix_fixes_next 与 diagonal_misses、diagonal_unrested、diagonal_open 不用它（逐条见可判定性清点）。",
+     "new": "除取它为条件的定义外，可判定相等只用于 claim_missed_on_one、eq_of_not_missed、swapTo_moves、index_succ_le、index_le_succ、missed_before 的证明；no_prefix_fixes_next、diagonal_misses、diagonal_unrested、diagonal_open 不用它。",
+     "severity": "imprecise",
+     "why": "The Chinese of the hypotheses[1].en edit.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean:335, 373, 378, 410"
+    },
+    {
+     "id": "learning-by-refutation",
+     "field": "history[-1].en",
+     "old": "statement narrowed to what the Lean proves (two values given;",
+     "new": "statement narrowed to what the Lean proves (a map moving every value given;",
+     "severity": "imprecise",
+     "why": "Follows the statement edit above. If the hypotheses[1] edit is taken, also add ', and the second corrected to every proof decided equality enters' after 'the round label and the integrator's rule removed'.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean:298-338"
+    },
+    {
+     "id": "learning-by-refutation",
+     "field": "history[-1].zh",
+     "old": "陈述按 Lean 所证收窄（给定两个值；",
+     "new": "陈述按 Lean 所证收窄（给定移动每个值的映射；",
+     "severity": "imprecise",
+     "why": "The Chinese of the history edit above. If the hypotheses[1] edit is taken, '删去轮次标签与整合者规则' becomes '删去轮次标签与整合者规则，并把第二条改正为可判定相等实际用到的每个证明'.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean:298-338"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/learning-by-refutation.md",
+     "field": "table row S0",
+     "old": "statement, “Given two values” written in: the diagonal needs a map moving every value (law 4), which two values give (law 5)",
+     "new": "statement, “Given a map moving every value” written in: the diagonal needs such a map (law 4), which two values give only with equality of values decided (law 5), and the map supplies the two values law 2 takes; “each value it proposes” shortened to “each proposal” for the cap",
+     "severity": "error",
+     "why": "The row's reason is false as written. Law 5 (swapTo_moves) needs decided equality, so two values alone do not give the moving map. The table must describe the record as it is left.",
+     "evidence": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/learning-by-refutation.md:14; Learning.lean:332-338"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/learning-by-refutation.md",
+     "field": "table row S2",
+     "old": "its rest is unrefuted and occurs only there, and no prefix shows when”)",
+     "new": "its rest, unrefuted, occurs only there, and no prefix shows when”)",
+     "severity": "style",
+     "why": "Follows the statement edit, whose wording was shortened to stay within the cap.",
+     "evidence": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/learning-by-refutation.md:16"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/learning-by-refutation.md",
+     "field": "table row H0",
+     "old": "hypotheses[0] and [1], split at the semicolon to fit the item cap, the words otherwise unchanged; standard boundary decidability",
+     "new": "hypotheses[0] and [1], split at the semicolon to fit the item cap; hypotheses[1] corrected to the Lean, since decided equality also enters the proofs of swapTo_moves, index_succ_le, index_le_succ and missed_before, its pointer to the decidability inventory kept in the snapshot; standard boundary decidability",
+     "severity": "imprecise",
+     "why": "Describes hypotheses[1] as it is after the edit above.",
+     "evidence": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/learning-by-refutation.md:34; Learning.lean:335, 373, 378, 410"
+    },
+    {
+     "id": "timely-response-necessity",
+     "field": "laws[7].en",
+     "old": "Over listed alternatives with natural weights, each a pair of courses alike at step 0 and balanced before its answer time, with the same formations present and each non-source formation exchanging alike where alike through its couplings so far, answers read through the reader's couplings, reach decided: committed weight is at most the errors (first against false, second against true) plus the weight reached in time.",
+     "new": "Over listed alternatives with natural weights, each a pair of courses alike at step 0 and balanced before its answer time, the same formations present and each non-source formation exchanging alike where alike through its couplings so far, answers read through the reader's couplings up to then, reach decided: committed weight is at most the errors (first on false, second on true) plus the weight reached in time.",
+     "severity": "imprecise",
+     "why": "The theorem reads the answer through AlikeThroughUpTo … (time x), that is, through the reader's couplings up to its answer time. A readout through its couplings in general is a weaker premise, and the Lean does not cover it. The Chinese already says 至该时刻. 415 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean:454-456 (through … (time x)), 461"
+    },
+    {
+     "id": "timely-response-necessity",
+     "field": "laws[8].en",
+     "old": "Over listed alternatives with natural weights, each a pair of courses alike at step 0 and, before its answer time, balanced, with the same formations present and each non-source formation exchanging alike where alike through its couplings so far, answers read through the reader's couplings, with no decision: where no reader is reached by its answer time, committed weight equals the two error weights.",
+     "new": "Over listed alternatives with natural weights, each a pair of courses alike at step 0 and balanced before its answer time, the same formations present and each non-source formation exchanging alike where alike through its couplings so far, answers read through the reader's couplings up to then, with no decision: where no reader is reached by its answer time, committed weight equals the two error weights.",
+     "severity": "imprecise",
+     "why": "The same premise as law 8: the answer is read through the reader's couplings up to the answer time (through … (time x)). The Chinese already says so. 407 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean:454-456, 494-496"
+    },
+    {
+     "id": "timely-response-necessity",
+     "field": "laws[0].en",
+     "old": "or where a formation present at t takes from or gives to it",
+     "new": "or where a formation present at t in the first course takes from or gives to it",
+     "severity": "imprecise",
+     "why": "TouchesAt reads presence on the first course's list only (h ∈ L.present t). Law 1 defines the route without any premise that the two lists are equal, so 'present at t' must say in which course.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean:19-22"
+    },
+    {
+     "id": "timely-response-necessity",
+     "field": "laws[0].zh",
+     "old": "或某个在 t 在场的形成在任一历程中",
+     "new": "或某个在 t 于第一个历程在场的形成在任一历程中",
+     "severity": "imprecise",
+     "why": "The Chinese of the edit above.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean:19-22"
+    },
+    {
+     "id": "timely-response-necessity",
+     "field": "laws[2].en",
+     "old": "every condition not on the route at a step t ≤ D has the same level in both courses at t.",
+     "new": "every condition not on the route at a step t ≤ D has the same level in both courses at t. Levels alike on what couples into a formation at a step make it alike through its couplings there.",
+     "severity": "imprecise",
+     "why": "The law names coupling_of_levels but states none of what it proves: if the levels that couple in at t are equal, the formation is AlikeThrough at t. 397 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean:80-88"
+    },
+    {
+     "id": "timely-response-necessity",
+     "field": "laws[2].zh",
+     "old": "在 t 处两个历程中水平相同。",
+     "new": "在 t 处两个历程中水平相同。某步耦合入一个形成者水平相同，使它在该步经其耦合相同。",
+     "severity": "imprecise",
+     "why": "The Chinese of the edit above.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean:80-88"
+    },
+    {
+     "id": "timely-response-necessity",
+     "field": "laws[5].en",
+     "old": "every source formation belongs to a part,",
+     "new": "every source formation belongs to a given part,",
+     "severity": "style",
+     "why": "The theorem fixes one part (inside : ∀ t h, source t h → part h = true). 'Belongs to a part' reads as 'some part', which says nothing.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean:222-225"
+    },
+    {
+     "id": "timely-response-necessity",
+     "field": "laws[5].zh",
+     "old": "每个源形成属于一个部分时",
+     "new": "每个源形成属于一个给定部分时",
+     "severity": "style",
+     "why": "The Chinese of the edit above.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean:222-225"
+    },
+    {
+     "id": "timely-response-necessity",
+     "field": "history[-1].en",
+     "old": "the definitions and lemmas the laws name added to their files' references",
+     "new": "the four definitions the laws name (TouchesAt, CoupledIntoAt, Spread, ReachedBy) added to TimedResponse.lean's references",
+     "severity": "imprecise",
+     "why": "Only those four definitions were added: the lemmas were already listed and FallibleInquiry.lean's entry is unchanged. The mapping says the same.",
+     "evidence": "_process/architecture/history/7aa459028318dd00/timely-response-necessity.json references[0], compared with the current references[0]"
+    },
+    {
+     "id": "timely-response-necessity",
+     "field": "history[-1].zh",
+     "old": "规律所引的定义与引理加入其文件的引用",
+     "new": "规律所引的四个定义（TouchesAt、CoupledIntoAt、Spread、ReachedBy）加入 TimedResponse.lean 的引用",
+     "severity": "imprecise",
+     "why": "The Chinese of the edit above.",
+     "evidence": "_process/architecture/history/7aa459028318dd00/timely-response-necessity.json"
+    },
+    {
+     "id": "theories/becoming/chapters/03-KNOWING.md",
+     "field": "r-timely-response-necessity (periphery paragraph)",
+     "old": "each under the deadline premises above, timely reach decided). Committed weight is at most the paired error plus the weight within timely reach (`FallibleInquiry.coverage_le_errors_add_timed_reach`), and equals the paired error where nothing arrives in time",
+     "new": "each under the deadline premises above). With timely reach decided, committed weight is at most the paired error plus the weight within timely reach (`FallibleInquiry.coverage_le_errors_add_timed_reach`), and, with no decision, it equals the paired error where nothing arrives in time",
+     "severity": "imprecise",
+     "why": "The paragraph's standing puts the reach decision on both results, but unreached_in_time_coverage_eq_errors does without it (omit reachDecision in). A proposed chapter edit, not made.",
+     "evidence": "theories/becoming/chapters/03-KNOWING.md:65; experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean:494-496"
+    },
+    {
+     "id": "finite-fallible-inquiry-necessity",
+     "field": "laws[9].en",
+     "old": "Over listed alternatives with natural weights, each a pair of balanced courses with the same formations present, alike initial levels on what couples in beyond the varying part's reach and one exchange law through the couplings outside it, answers read through the reader's couplings, reach decided: committed weight is at most the errors (first against false, second against true) plus the weight within reach.",
+     "new": "Over listed alternatives with natural weights, each a pair of balanced courses, the same formations present, alike initial levels on what couples in beyond the varying part's reach and one exchange law through the couplings outside it, answers read through the reader's couplings up to its time, reach decided: committed weight is at most the errors (first on false, second on true) plus the weight within reach.",
+     "severity": "imprecise",
+     "why": "The theorem's readout premise is through … AlikeThroughUpTo (observe x) (reader x) l l' (time x): the reader's couplings up to the alternative's time. hypotheses[3] names this premise, but the law left it out. 412 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean:197-199 (through … (time x)), 205"
+    },
+    {
+     "id": "finite-fallible-inquiry-necessity",
+     "field": "laws[9].zh",
+     "old": "答案经读者耦合读出，所及可判定",
+     "new": "答案经读者至其时刻的耦合读出，所及可判定",
+     "severity": "imprecise",
+     "why": "The Chinese of the edit above.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean:197-199"
+    },
+    {
+     "id": "finite-fallible-inquiry-necessity",
+     "field": "laws[10].en",
+     "old": "Over listed alternatives with natural weights, each a pair of balanced courses with the same formations present, alike initial levels on what couples in beyond the varying part's reach and one exchange law through the couplings outside it, answers read through the reader's couplings, with no decision: where every reader lies beyond reach, committed weight equals the two error weights.",
+     "new": "Over listed alternatives with natural weights, each a pair of balanced courses, the same formations present, alike initial levels on what couples in beyond the varying part's reach and one exchange law through the couplings outside it, answers read through the reader's couplings up to its time, with no decision: where every reader lies beyond reach, committed weight equals the two error weights.",
+     "severity": "imprecise",
+     "why": "The same readout premise as law 10 (through … (time x)). 398 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean:197-199, 240-243"
+    },
+    {
+     "id": "finite-fallible-inquiry-necessity",
+     "field": "laws[10].zh",
+     "old": "答案经读者耦合读出，无需判定",
+     "new": "答案经读者至其时刻的耦合读出，无需判定",
+     "severity": "imprecise",
+     "why": "The Chinese of the edit above.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean:197-199"
+    },
+    {
+     "id": "finite-fallible-inquiry-necessity",
+     "field": "laws[12].en",
+     "old": "every formation beyond that reach is alike through its couplings at every step, and its answers agree.",
+     "new": "every formation beyond that reach is alike through its couplings at every step, and every readout through them up to a step answers alike.",
+     "severity": "imprecise",
+     "why": "answer_alike_with_common_imbalance concludes read W.level = read W'.level only for a readout that gives alike on histories alike through the reader's couplings up to t (the through premise). 'Its answers agree' drops that premise, so the item does not stand alone. 411 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean:167-180"
+    },
+    {
+     "id": "finite-fallible-inquiry-necessity",
+     "field": "laws[12].zh",
+     "old": "所及之外的每个形成在每步经其耦合相同，其答案相同。",
+     "new": "所及之外的每个形成在每步经其耦合相同，经这些耦合至某步读出的每个读出都给出相同答案。",
+     "severity": "imprecise",
+     "why": "The Chinese of the edit above.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean:167-180"
+    },
+    {
+     "id": "theories/becoming/chapters/03-KNOWING.md",
+     "field": "r-finite-fallible-inquiry-necessity",
+     "old": "and answers through everything that couples in, coverage is at most the two errors plus the weight within responsive reach, and entirely beyond reach equals them;",
+     "new": "and answers through everything that couples in up to the answer time, coverage is at most the two errors plus the weight within responsive reach, reach decided, and entirely beyond reach equals them with no decision;",
+     "severity": "imprecise",
+     "why": "This endorses the migrator's proposed chapter edit, which is right: the bound takes reachDecision and the equality omits it. It also adds the readout's time bound, which the Lean takes (through … (time x)). A proposed edit, not made.",
+     "evidence": "theories/becoming/chapters/03-KNOWING.md:334; experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean:187 (reachDecision), 197-199, 240 (omit reachDecision in)"
+    },
+    {
+     "id": "incidence-common-refinement",
+     "field": "hypotheses[1].en",
+     "old": "Finitely many incident joins per fragment/role; Related roots and ConnectedFrom on both sides.",
+     "new": "Both joinings are connected from their roots (ConnectedFrom on both sides), the roots alike through the role frames or, for the tests form, passing the same branching tests with finitely many incident joins per fragment and role.",
+     "severity": "imprecise",
+     "why": "Left unchanged, this item states local finiteness and 'Related roots' (the periphery's name) as premises of the whole record. That contradicts law 4 and hypotheses[2]: common_refinement takes alike roots and connection only, with no finiteness and no decision. Finiteness belongs to common_refinement_of_em.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joining.lean:712-726 (common_refinement), 846-852 (common_refinement_of_em)"
+    },
+    {
+     "id": "incidence-common-refinement",
+     "field": "hypotheses[1].zh",
+     "old": "每个片段／角色只有有限关联接合；两根 Related；两边 ConnectedFrom。",
+     "new": "两个接合都从其根连通（两边 ConnectedFrom），两根经角色框架相似；或在检验形式中，两根通过相同分支检验，且每个片段／角色只有有限关联接合。",
+     "severity": "imprecise",
+     "why": "The Chinese of the hypotheses[1].en edit.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joining.lean:712-726, 846-852"
+    },
+    {
+     "id": "incidence-common-refinement",
+     "field": "history[-1].en",
+     "old": "a hypothesis added naming excluded middle and local finiteness for the tests form, which the Lean takes and the record had not listed;",
+     "new": "a hypothesis added naming excluded middle, which the Lean takes and the record had not listed, and saying that only the tests form takes it and local finiteness, the second hypothesis reworded to the same effect;",
+     "severity": "imprecise",
+     "why": "The old hypotheses[1] already listed finiteness ('Finitely many incident joins per fragment/role'), so only excluded middle was missing, as the mapping says. With the hypotheses[1] edit, the history also records that rewording.",
+     "evidence": "_process/architecture/history/e0ab31cb558b30d3/incidence-common-refinement.json hypotheses[1]; the mapping's 'added premise' row"
+    },
+    {
+     "id": "incidence-common-refinement",
+     "field": "history[-1].zh",
+     "old": "新增一条前提，写明检验形式所取的排中律与局部有限（Lean 取之，记录原未列出）；",
+     "new": "新增一条前提，写明排中律（Lean 取之，记录原未列出），并说明只有检验形式取它与局部有限，第二条前提按同样意思改写；",
+     "severity": "imprecise",
+     "why": "The Chinese of the edit above.",
+     "evidence": "_process/architecture/history/e0ab31cb558b30d3/incidence-common-refinement.json"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/incidence-common-refinement.md",
+     "field": "table row H1",
+     "old": "hypotheses[1] (unchanged); laws 4 and 8",
+     "new": "hypotheses[1], reworded: finiteness is said of the tests form only, since `common_refinement` takes none, and “Related” is written as alike through the role frames or passing the same branching tests; laws 4 and 8",
+     "severity": "imprecise",
+     "why": "Describes hypotheses[1] as it is after the edit above.",
+     "evidence": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/incidence-common-refinement.md:19"
+    },
+    {
+     "id": "incidence-common-refinement",
+     "field": "validation_scope.en",
+     "old": "every cited declaration with an empty axiom report",
+     "new": "every declaration the laws cite with an empty axiom report",
+     "severity": "style",
+     "why": "The references also list provenance declarations, among them the alias ExplanatoryJoiningIncidence.connected_common_refinement, whose periphery receipt reports propext, Classical.choice and Quot.sound. The core receipts bind only the four core files. Batch A uses the same phrase; the narrower wording is exact.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/explanatory-joining-refinement-checks/20261008T134730.060831Z/receipt.json"
+    },
+    {
+     "id": "incidence-common-refinement",
+     "field": "validation_scope.zh",
+     "old": "所引声明公理报告皆空",
+     "new": "规律所引声明公理报告皆空",
+     "severity": "style",
+     "why": "The Chinese of the edit above.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/explanatory-joining-refinement-checks/20261008T134730.060831Z/receipt.json"
+    },
+    {
+     "id": "causal-models-as-processes",
+     "field": "statement.en",
+     "old": "x′ = F(x, u, ε) is a determined process whose move is input and noise. An intervention is a move not taken, fixed by the model and, given two configurations, not by the record; noise is a move not represented, and with it forgotten the process stays determined exactly where it makes no difference.",
+     "new": "x′ = F(x, u, ε) is a determined process whose move is input and noise. An intervention is a move not taken, fixed by the model and, where configurations differ, not by the record; noise is a move not represented; with it forgotten the process stays determined exactly where it makes no difference.",
+     "severity": "style",
+     "why": "inputs_intervention_unfixed takes two different elements of X (two : y ≠ z), and the Chinese says so (有两个不同配置时). The English 'given two configurations' leaves out that they differ. 'Where configurations differ' says it within the cap: 297 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean:328-331"
+    },
+    {
+     "id": "theories/becoming/chapters/03-KNOWING.md",
+     "field": "r-causal-models-as-processes (migrator's proposed edit)",
+     "old": "An intervention is a move not taken, unfixed by the record and fixed by the model;",
+     "new": "An intervention is a move not taken, fixed by the model and, where there are two different configurations, not by the record;",
+     "severity": "style",
+     "why": "The migrator's proposed edit is right in substance: inputs_intervention_unfixed needs two different configurations. 'Different' is added so the chapter says exactly what the theorem takes. A proposed edit, not made.",
+     "evidence": "theories/becoming/chapters/03-KNOWING.md:110; experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean:328-331"
+    },
+    {
+     "id": "causal-models-as-processes",
+     "field": "related[0].detail.en",
+     "old": "P66 in the same module: ",
+     "new": "In the same module: ",
+     "severity": "style",
+     "why": "A round label in a rendered field. This migration cut the markers from the correspondence, but the related detail kept 'P66'. Optional, since rule 2 keeps related unchanged unless a reason requires a change.",
+     "evidence": "theories/becoming/results/records/causal-models-as-processes.json related[0]"
+    },
+    {
+     "id": "causal-models-as-processes",
+     "field": "related[0].detail.zh",
+     "old": "同一模块的 P66：",
+     "new": "同一模块中：",
+     "severity": "style",
+     "why": "The Chinese of the edit above.",
+     "evidence": "theories/becoming/results/records/causal-models-as-processes.json related[0]"
+    },
+    {
+     "id": "readings-within-what-they-read",
+     "field": "related[0].detail.en",
+     "old": "P70 reads the negation's exactly two states off the same rhythm.",
+     "new": "The negation's exactly two states are read off the same rhythm.",
+     "severity": "style",
+     "why": "The correspondence's 'P70 reads …' was rewritten without the round label, but the related detail still has it. Optional, since rule 2 keeps related unchanged unless a reason requires a change.",
+     "evidence": "theories/becoming/results/records/readings-within-what-they-read.json related[0]"
+    },
+    {
+     "id": "readings-within-what-they-read",
+     "field": "related[0].detail.zh",
+     "old": "P70 从同一节律读出否定恰有两个状态。",
+     "new": "从同一节律读出否定恰有两个状态。",
+     "severity": "style",
+     "why": "The Chinese of the edit above.",
+     "evidence": "theories/becoming/results/records/readings-within-what-they-read.json related[0]"
+    }
+   ],
+   "verdicts": [
+    {
+     "id": "timely-response-necessity",
+     "verdict": "sound-after-edits",
+     "note": "All 26 TimedResponse declarations report empty axioms in becoming-checks/20261019T160413.543456Z. The three FallibleInquiry theorems report propext and Quot.sound in fallible-inquiry-checks/20261020T161546.707477Z, which also records Lean 4.29.1, so the validation_scope is exact. Laws 2 and 4-7 match the Lean, including the double negation and the decided form. Laws 8 and 9 leave out that the readout runs through the reader's couplings up to the answer time. Law 1 should say which course's presence list is meant, and law 3 names coupling_of_levels without stating it. The history overstates which declarations were added. The home section's periphery paragraph puts the reach decision on the equality, which needs none (chapter edit proposed). error_bounds_require_timed_reach is in no law, which the mapping explains; acceptable. Snapshot, the R35 entry, the counterexample, standard boundaries and lint are clean."
+    },
+    {
+     "id": "finite-fallible-inquiry-necessity",
+     "verdict": "sound-after-edits",
+     "note": "I read laws 1-7 against ScientificInquiryNecessity.lean: its receipt 20261008T135418.446592Z (Lean 4.29.1) reports at most propext and Quot.sound, some declarations none. I read laws 8-17 against FallibleInquiry.lean. All are exact except two points: laws 10 and 11 leave out the readout's time bound, and law 13 drops the readout premise ('its answers agree'). The narrowed counterexample matches common_nonzero_imbalance. Moving the unwitnessed parts of the old counterexamples to does_not_show and law 3 is correct, and the new next_delta is a step no other record completes. The migrator's chapter edit is right; I extended it with the time bound. regions.json triage row 129 is still for the lander."
+    },
+    {
+     "id": "causal-models-as-processes",
+     "verdict": "sound-after-edits",
+     "note": "All core. Every cited declaration reports empty axioms in its bound receipt (Lean 4.29.1), so no-ethical-premise holds. The six laws, including the new Shock and Hidden law, match Mechanism, Experiment, Recurrence, Laws and Joint. Narrowing the statement to two configurations is correct, and the migrator's chapter edit is right in substance. Only style findings: the English should say the configurations differ, as the Chinese does, and a P66 label is left in related. The readings are labelled as AI readings, and Ren's words are verbatim with their date."
+    },
+    {
+     "id": "acquired-binding-compositional-use",
+     "verdict": "sound",
+     "note": "Each of the eight laws checks against Segmentation (readAll_map_iff, reads_every_iff), Courses (encode_course, course_reads_iff), MachineInstances (the six bond conditions of Groups, interprets_every_iff, learned 32) and AcquiredBinding (the encounters, coverage, the 25-unit execution, learned 31, misbinding, suspension, correction). The validation_scope is exact: core Segmentation and Courses report empty axioms; the periphery reports propext, some with Quot.sound; every receipt records Lean 4.29.1. The counterexample is witnessed, the statement agrees with the home row, and nothing is lost in the mapping."
+    },
+    {
+     "id": "incidence-common-refinement",
+     "verdict": "sound-after-edits",
+     "note": "Each of the nine laws checks against the core: Joining (roleFrame, OpenMap, span, covers, common_refinement with no finiteness, LocallyFinite.alike_iff, common_refinement_of_em, RoleTotal.open_not_pairLifting), JoiningRoles, Granularity and BranchingCorrespondence. All of them report empty axioms. Dropping the counterexample that cited a study and repeated the limitations is correct, and both does_not_show witnesses exist. The old hypotheses[1], kept unchanged, now contradicts law 4 and hypotheses[2]. The history wrongly says local finiteness had not been listed. The duplicate proof binding is left unchanged as noted."
+    },
+    {
+     "id": "readings-within-what-they-read",
+     "verdict": "sound",
+     "note": "Each of the nine laws checks against Diagonal.lean, Frame and Recurrence, all with empty axioms in their receipts. The narrowed statement (inhabited types, decided equality, incomplete at every step) and law 9's Returns, in place of 'every two steps', are what the Lean proves. The negated universals of gaps_differ, never_returns and stock_unheld are written as such. The R35 snapshot under the former id is the right second text_versions entry, and former_ids is kept. Only optional style: a P70 label in related."
+    },
+    {
+     "id": "learning-by-refutation",
+     "verdict": "sound-after-edits",
+     "note": "Each of the fifteen laws matches Learning.lean, read with its section variables: DecidableEq O applies only in Refutation, LearningLassos and Meta. All 84 cited declarations report empty axioms (Learning bound to 20261028T061626.538602Z). The negated universals and double negations are rendered correctly. One overclaim: the statement's 'Given two values' does not give the diagonal course, which needs a map moving every value, and two values give one only with decided equality (law 5). The mapping row S0 repeats that false reason. Kept hypotheses[1] says decided equality is used only in two proofs; the Lean also uses it in swapTo_moves, index_succ_le, index_le_succ and missed_before. Triage row 78 is settled, and the home section agrees with the Lean."
+    }
+   ],
+   "checked": "For all seven records I read in full the snapshot, the migrated record, the mapping file and the home section in 03-KNOWING.md. I read every cited declaration in the current worktree: TimedResponse, FallibleInquiry, ScientificInquiryNecessity, Mechanism, Experiment, Joint, Recurrence, Laws, Segmentation, Courses, MachineInstances, AcquiredBinding, Joining, JoiningRoles, Granularity, BranchingCorrespondence, Diagonal and Learning.lean. A script confirmed that every declaration a law names is in a references entry for its own file, and that every bound receipt passes, matches the current sha256 and lists those declarations with the axiom reports and Lean version I cite.\n\nI verified that every text_versions path exists with the stated sha256, that each R35 snapshot is the file the condensed history note names, that the earlier history entries are unchanged, that keys follow the model order, and that files are written ensure_ascii=False with a final newline. Every proposed edit's old text occurs exactly once in its field or file, and every new text is within its cap.\n\nLint: `research.py lint --ids` takes space-separated ids. With the comma-separated form in the task it treats the whole string as one id, matches no record, and still reports 0 findings. Run with spaces, it reports 0 findings for each of the seven ids.\n\nI ran `research.py check` once. For these ids the only errors are 'generated view differs', which were to be ignored; the run has no other error for any record.\n\nNot checked: the generativity chain's fingerprints, and the regions.json base change in triage row 129, which belongs to the lander."
+  }
+ },
+ {
+  "unit": "J",
+  "migrated": {
+   "records": [
+    {
+     "id": "mediated-evidence-transport",
+     "laws": 6,
+     "does_not_show": 3,
+     "statement": "written",
+     "notes": "Nothing narrowed. Countdown core empty; MediatedControl and ProtocolInstances at most propext, Quot.sound and Classical.choice, all Lean 4.29.1."
+    },
+    {
+     "id": "versioned-request-completion",
+     "laws": 6,
+     "does_not_show": 1,
+     "statement": "kept",
+     "narrowed": "The counterexample repeated the limitation; split into does_not_show[0] and the two witnessed cases of CorrectionVersioned (law 6).",
+     "notes": "Periphery Lean 4.30.0-rc2."
+    },
+    {
+     "id": "reserved-shutdown-during-recovery",
+     "laws": 9,
+     "does_not_show": 5,
+     "statement": "written",
+     "narrowed": "Words of exchange replaced in hypotheses, a dependency interface and a counterexample, meaning unchanged.",
+     "notes": "Key order normalised."
+    },
+    {
+     "id": "protection-priority-excludes-uniform-aggregation",
+     "laws": 6,
+     "does_not_show": 3,
+     "statement": "edited",
+     "narrowed": "Statement narrowed to one constructed situation; the exclusion covers only natural-number scores satisfying C. J2 -> 'the priority of basic conditions' in hypotheses and related details. 'Positively relevant' -> 'relevant'.",
+     "notes": "No standard boundary cited."
+    },
+    {
+     "id": "positioned-positive-reason",
+     "laws": 8,
+     "does_not_show": 2,
+     "statement": "written",
+     "narrowed": "'Positive ground' read as secured new content (RouteReason = access ∧ SecuresNewContent).",
+     "chapter_edit": "07-SIGNIFICANCE: 'the least such reason is fixed by access and positive ground alone.' -> 'the least such reason is access together with the secured new content (`SecuredContent.route_reason_is_least`).'",
+     "notes": "The dependency interface still says 'positive new content' and names the periphery's G0 (kept unchanged as describing PositiveGroundUncertainty)."
+    },
+    {
+     "id": "comparison-content-under-regrouping",
+     "laws": 8,
+     "does_not_show": 5,
+     "statement": "written",
+     "notes": "Correspondence's opening process note cut; standard boundaries no-ethical-premise, decidability, omission-not-refutation, zero-axiom-target-open."
+    },
+    {
+     "id": "own-good-to-reachable-living-significance",
+     "laws": 7,
+     "does_not_show": 7,
+     "statement": "kept",
+     "narrowed": "Counterexample 3 narrowed to persistence_rival_escapes_self_transcendence; counterexamples 4-6 (review probes no receipt binds) became does_not_show[2]-[4]. 'Positive significance' read as significance with no valence.",
+     "notes": "former_ids kept; R35 snapshot under the former id."
+    }
+   ]
+  },
+  "review": {
+   "edits": [
+    {
+     "id": "mediated-evidence-transport",
+     "field": "statement.en",
+     "old": "A property holds along every admitted course exactly when every admitted step keeps it",
+     "new": "A property holds after every admitted course from where it holds exactly when every admitted step keeps it",
+     "severity": "imprecise",
+     "why": "admitted_invariant_iff holds the property at the end of every admitted course from a start where it holds. 'Holds along every admitted course' drops that start condition and reads as if the property held at every configuration of every course. The new statement is 297 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Countdown.lean:61-63 ((∀ s a t, allow s a → f s a = some t → I s → I t) ↔ ∀ s t, Reach (admitted f allow) s t → I s → I t)"
+    },
+    {
+     "id": "mediated-evidence-transport",
+     "field": "statement.zh",
+     "old": "性质沿每段被允许的进程成立，恰当每个被允许的步保持它",
+     "new": "性质在每段被允许的进程之后、从它成立处出发都成立，恰当每个被允许的步保持它",
+     "severity": "imprecise",
+     "why": "Same correction as the English: the start where the property holds is restored. The new statement is 97 characters.",
+     "evidence": "Countdown.lean:61-63"
+    },
+    {
+     "id": "mediated-evidence-transport",
+     "field": "laws[2].en",
+     "old": "and its write units drawn from the reserve;",
+     "new": "and its write units drawn from the reserve within the deadline;",
+     "severity": "imprecise",
+     "why": "commit is admitted only when EffectiveCommand.spend succeeds, and spend requires both cost ≤ reserve and time + delay ≤ deadline. The law names only the reserve, though the hypothesis says resources are checked. The new law is 416 characters.",
+     "evidence": "universal-ethics/generative-capacity/MediatedControl.lean:170-173 (commit calls spend (writeCost) (writeCost)); EffectiveCommand.lean:35-38 (if cost ≤ s.reserve ∧ s.time + delay ≤ s.deadline)"
+    },
+    {
+     "id": "mediated-evidence-transport",
+     "field": "laws[2].zh",
+     "old": "且写入单位可从储备中取用时被接纳",
+     "new": "且写入单位可在期限内从储备中取用时被接纳",
+     "severity": "imprecise",
+     "why": "The Chinese of the same correction: the deadline condition of spend.",
+     "evidence": "EffectiveCommand.lean:35-38"
+    },
+    {
+     "id": "versioned-request-completion",
+     "field": "counterexamples[0].detail.en",
+     "old": "A queue at capacity leaves the installation unchanged, admitting no new request; and a request followed only by pauses stays pending, since the invariant supplies no scheduler fairness or deadline.",
+     "new": "Beginning a request on a queue at capacity leaves the installation unchanged, admitting none; and in a witness a request followed by two pauses is still the one packet in the queue, the invariant supplying no scheduler fairness or deadline.",
+     "severity": "overclaim",
+     "why": "pause_is_not_a_progress_guarantee is a decided witness about one run: span 2, capacity 2, the initial installation, beginRequest then exactly two pauses, ending with packets.length = 1. It is not a law that every run of pauses leaves a request pending. A counterexample must say what its witness proves. The subject of the first clause is also beginning a request (beginRequest capacity s r = s), not the queue.",
+     "evidence": "universal-ethics/generative-capacity/CorrectionVersioned.lean:429-430 (run 2 2 (initial [false,false]) [.beginRequest true, .pause, .pause]).packets.length = 1; :364-365 full_request_capacity_blocks_admission"
+    },
+    {
+     "id": "versioned-request-completion",
+     "field": "counterexamples[0].detail.zh",
+     "old": "队列满时安装不变，不接纳新请求；请求之后只有暂停时它仍待办，因为不变式不提供调度公平或期限。",
+     "new": "队列满时开始请求使安装不变，不接纳新请求；见证中，请求之后两次暂停，它仍是队列中唯一的包，不变式不提供调度公平或期限。",
+     "severity": "overclaim",
+     "why": "The Chinese of the same narrowing to the witness.",
+     "evidence": "CorrectionVersioned.lean:429-430"
+    },
+    {
+     "id": "versioned-request-completion",
+     "field": "hypotheses[0].zh",
+     "old": "捕获后保留的银行",
+     "new": "捕获后保留的库",
+     "severity": "style",
+     "why": "Bank in CorrectionVersioned is a stored route version (path, summary, ready flag). 银行 means a financial bank, which is a word of exchange and a mistranslation. The statement and laws already render it 库. The English 'banks' is unchanged.",
+     "evidence": "CorrectionVersioned.lean:72-86 (Installation.banks : Bool → Bank, Invariant over Sound/Ready banks); versioned-request-completion.json:77 (hypotheses zh) vs :14 (statement zh 库)"
+    },
+    {
+     "id": "versioned-request-completion",
+     "field": "statement.en",
+     "old": "finishes it in exactly that work plus one tick",
+     "new": "finishes it in that work plus one tick",
+     "severity": "style",
+     "why": "The cited laws prove two things: the task finishes at work + 1 ticks (Advances.completes, completes_iff), and every shorter run leaves it pending (pending_before). That an earlier run cannot already be finished needs pending and finished to exclude each other (not_done_before), which no cited declaration takes. 'Exactly' can be read as 'not earlier'. The rest of the sentence ('shorter runs leaving it pending') already says what is proved. This is optional: the module docstring uses the same 'exactly'.",
+     "evidence": "Countdown.lean:187-190 (pending_before concludes busy t, not ¬ done t), :201-205 (not_done_before needs apart), :236-239"
+    },
+    {
+     "id": "versioned-request-completion",
+     "field": "statement.zh",
+     "old": "它恰在该工作加一个时刻时完成任务",
+     "new": "它在该工作加一个时刻时完成任务",
+     "severity": "style",
+     "why": "The Chinese of the same optional edit.",
+     "evidence": "Countdown.lean:187-205"
+    },
+    {
+     "id": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+     "field": "r-versioned-request-completion (protocols table row, law column)",
+     "old": "finishes it in exactly that work plus one tick, every shorter run leaving it pending",
+     "new": "finishes it in that work plus one tick, every shorter run leaving it pending",
+     "severity": "style",
+     "why": "Proposed only if the record statement edit above is taken, so that the home section and the record say the same. This is not an edit to make in the migration.",
+     "evidence": "theories/becoming/chapters/07-SIGNIFICANCE.md:607; Countdown.lean:187-205"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/versioned-request-completion.md",
+     "field": "table row N1, New place",
+     "old": "the applicability of the pending task is stated by pending-task-context-applicability and its revision by acquired-revision-of-pending-task, both depending on this result;",
+     "new": "the revision of the pending task is stated by acquired-revision-of-pending-task, which depends on this result, and its applicability by pending-task-context-applicability, which depends on that record;",
+     "severity": "imprecise",
+     "why": "pending-task-context-applicability's only dependency is acquired-revision-of-pending-task. It reaches this record only through that record, so 'both depending on this result' is not true of the direct dependency.",
+     "evidence": "theories/becoming/results/records/pending-task-context-applicability.json dependencies = [acquired-revision-of-pending-task]; acquired-revision-of-pending-task.json dependencies[0].id = versioned-request-completion"
+    },
+    {
+     "id": "reserved-shutdown-during-recovery",
+     "field": "statement.en",
+     "old": "Under a partial law with a reserved exit, every admitted course from a valid configuration runs and stays valid, and every one longer than the margin ends at the exit, a bound attained; the recovery supervisor is such a law: from R units every admissible schedule of R − 2 cycles or more stops it.",
+     "new": "For a partial law with a reserved exit, every admitted course from a valid configuration runs and stays valid, and each longer than the margin ends at the exit, a bound attained; the recovery supervisor is such a law: armed with R units, every admissible schedule of R − 2 cycles or more stops it.",
+     "severity": "imprecise",
+     "why": "schedule_stops, supported_schedule_instance and every_supported_schedule_finishes all take (armed : Armed g d): the device must be safe, the grant eligible, and three units and three steps must remain. 'From R units' drops this, and without it the claim is false, for instance for an ineligible grant. The new statement is 297 characters.",
+     "evidence": "universal-ethics/generative-capacity/ProtocolInstances.lean:322-323, :334-336; ReservedShutdown.lean:33-34 (Armed), :260-262"
+    },
+    {
+     "id": "reserved-shutdown-during-recovery",
+     "field": "statement.zh",
+     "old": "从 R 个单位起",
+     "new": "以 R 个单位待命时",
+     "severity": "imprecise",
+     "why": "The Chinese of the same Armed condition. The new statement is 103 characters.",
+     "evidence": "ProtocolInstances.lean:322-336"
+    },
+    {
+     "id": "reserved-shutdown-during-recovery",
+     "field": "validation_scope.en",
+     "old": "bound to reserved-shutdown-verification.json (with a finite comparison against a reference written separately by the same author),",
+     "new": "bound to reserved-shutdown-verification.json (with a same-author finite comparison; RecoverableControl's cited declarations are audited in recoverable-control-verification.json),",
+     "severity": "imprecise",
+     "why": "The references cite three RecoverableControl declarations: prepare_preserves_safety, tick_preserves_safety and crash_preserves_safety. The bound receipt reserved-shutdown-verification.json audits only the ReservedShutdown module and gives no axiom report for them. Their reports (propext, Quot.sound; propext) are in recoverable-control-verification.json (Lean 4.29.1, passed, binding RecoverableControl's current bytes 05b15891…). The evidence paragraph should name the receipt that records them. The new field is 588 characters.",
+     "evidence": "universal-ethics/generative-capacity/reserved-shutdown-verification.json /modules has only ReservedShutdown; recoverable-control-verification.json audits RecoverableControl.prepare_preserves_safety [propext, Quot.sound], tick_preserves_safety [propext, Quot.sound], crash_preserves_safety [propext]"
+    },
+    {
+     "id": "reserved-shutdown-during-recovery",
+     "field": "validation_scope.zh",
+     "old": "",
+     "new": "Lean 4.29.1：核心 Countdown、Courses、Actuation 绑定 becoming-checks 回执，公理皆空；外围 ReservedShutdown、RecoverableControl 绑定 reserved-shutdown-verification.json（同作者有限比对；后者所引声明由自身回执审计），ProtocolInstances 绑定 protocol-instances-checks，至多用 propext、Quot.sound、Classical.choice。",
+     "severity": "imprecise",
+     "why": "The Chinese of the same addition, written as the whole field (258 characters, within the 260 cap). The current Chinese is already 260 characters.",
+     "evidence": "recoverable-control-verification.json"
+    },
+    {
+     "id": "reserved-shutdown-during-recovery",
+     "field": "references",
+     "old": "",
+     "new": "{\"path\": \"experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/recoverable-control-verification.json\", \"role\": \"receipt\", \"sha256\": \"10d57250f0263bffd2f32e71d30c54134d7053f601f5e8434ccf2ab54564658f\", \"declarations\": []}",
+     "severity": "missing",
+     "why": "Append this entry so that the receipt named in validation_scope, which holds the axiom reports of the cited RecoverableControl declarations, is a reference. Its status is passed, its Lean is 4.29.1, and its sources.RecoverableControl.sha256 equals the current file's bytes.",
+     "evidence": "shasum -a 256 recoverable-control-verification.json = 10d57250…658f; /sources/RecoverableControl/sha256 = 05b158915cb6… = shasum of RecoverableControl.lean"
+    },
+    {
+     "id": "reserved-shutdown-during-recovery",
+     "field": "hypotheses[1].en",
+     "old": "Its legitimacy, cryptographic implementation and physical correspondence are supplied.",
+     "new": "Its cryptographic implementation and physical correspondence are supplied; its legitimacy is not a premise of any law and is not shown.",
+     "severity": "imprecise",
+     "why": "The record cites no-ethical-premise-core-axiom-free, whose cite_when requires that the hypotheses contain no ethical premise. A supplied legitimacy of the stop grant is a normative premise as written. No declaration uses it (Armed and eligible check only signature, epoch, route, serial and mandate), and does_not_show[1] already says legitimacy is not shown. Either say so in the hypothesis, as proposed, or keep the hypothesis and drop the boundary key in favour of formal-not-empirical alone. If this is taken, the mapping row H1 changes with it. Verdict: plausible.",
+     "evidence": "ReservedShutdown.lean:27-34 (eligible, Armed: no legitimacy); standard-boundaries.json no-ethical-premise-core-axiom-free.cite_when"
+    },
+    {
+     "id": "reserved-shutdown-during-recovery",
+     "field": "hypotheses[1].zh",
+     "old": "其正当性、密码实现及物理对应是供应前提。",
+     "new": "其密码实现及物理对应是供应前提；其正当性不是任何规律的前提，也未被表明。",
+     "severity": "imprecise",
+     "why": "The Chinese of the same edit.",
+     "evidence": "ReservedShutdown.lean:27-34"
+    },
+    {
+     "id": "protection-priority-excludes-uniform-aggregation",
+     "field": "laws[1].en",
+     "old": "The lexical order, the protected condition first and the gains second,",
+     "new": "In the situation, the lexical order, the protected condition first and the gains second,",
+     "severity": "imprecise",
+     "why": "Each law item must stand alone. above_iff, above_satisfies_comparison and never_outranked are about the one constructed frame ScoreRepresentation.frame on Nat, and law 2's 'here' inherits that from law 1. The new law is 264 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ScoreRepresentation.lean:57, :92, :112-118"
+    },
+    {
+     "id": "protection-priority-excludes-uniform-aggregation",
+     "field": "laws[1].zh",
+     "old": "字典序先看受保护条件、再看增益：",
+     "new": "此情境中，字典序先看受保护条件、再看增益：",
+     "severity": "imprecise",
+     "why": "The Chinese of the same edit: name the situation.",
+     "evidence": "ScoreRepresentation.lean:57, :92"
+    },
+    {
+     "id": "protection-priority-excludes-uniform-aggregation",
+     "field": "laws[3].en",
+     "old": "Living significance leaves the order open:",
+     "new": "In the situation, living significance leaves the order open:",
+     "severity": "imprecise",
+     "why": "livingSignificance_leaves_ordering_open and comparison_does_not_yield_priority are about the one frame. Read alone, the law's 'so the priority does not follow from C' sounds universal. The new law is 356 characters.",
+     "evidence": "ScoreRepresentation.lean:139-143, :162-167"
+    },
+    {
+     "id": "protection-priority-excludes-uniform-aggregation",
+     "field": "laws[3].zh",
+     "old": "生生之意义不决定排序：",
+     "new": "此情境中，生生之意义不决定排序：",
+     "severity": "imprecise",
+     "why": "The Chinese of the same edit: name the situation.",
+     "evidence": "ScoreRepresentation.lean:162-167"
+    },
+    {
+     "id": "protection-priority-excludes-uniform-aggregation",
+     "field": "laws[4].en",
+     "old": "Every natural-number score whose strict order satisfies C",
+     "new": "In the situation, every natural-number score whose strict order satisfies C",
+     "severity": "imprecise",
+     "why": "every_nat_score_outranks and no_nat_score_represents quantify over scores on this frame's alternatives (score : Nat → Nat with Comparison frame living). Comparison.climbs and outgrows, which follow in the same law, are general. The new law is 355 characters.",
+     "evidence": "ScoreRepresentation.lean:148-158; Extension.lean:85-102"
+    },
+    {
+     "id": "protection-priority-excludes-uniform-aggregation",
+     "field": "laws[4].zh",
+     "old": "严格序满足 C 的每个自然数评分，",
+     "new": "此情境中，严格序满足 C 的每个自然数评分，",
+     "severity": "imprecise",
+     "why": "The Chinese of the same edit: name the situation.",
+     "evidence": "ScoreRepresentation.lean:148"
+    },
+    {
+     "id": "protection-priority-excludes-uniform-aggregation",
+     "field": "laws[5].en",
+     "old": "The bounded score, 1 for protection",
+     "new": "In the situation, the bounded score, 1 for protection",
+     "severity": "imprecise",
+     "why": "ratioBetter, ratio_agrees and bounded_score_represents are about this frame only, and the law should stand alone.",
+     "evidence": "ScoreRepresentation.lean:214-218"
+    },
+    {
+     "id": "protection-priority-excludes-uniform-aggregation",
+     "field": "laws[5].zh",
+     "old": "有界评分（保护为 1",
+     "new": "此情境中，有界评分（保护为 1",
+     "severity": "imprecise",
+     "why": "The Chinese of the same edit: name the situation.",
+     "evidence": "ScoreRepresentation.lean:214"
+    },
+    {
+     "id": "positioned-positive-reason",
+     "field": "laws[4].en",
+     "old": "Under the continuation condition, with D read on the relevance that significance gives, the same formation gives every position with access the reason D articulates.",
+     "new": "Under the continuation condition, with D read on the relevance that significance gives, where the response realizes in every admitted continuation living content absent before, every position with access to it has the reason D articulates.",
+     "severity": "imprecise",
+     "why": "'The same formation' inherits law 3's hypothesis. every_situated_position_has_reason_of_unrestricted takes its own formation premise: formed : ∀ h, admitted r h → ∃ q, living q ∧ F.realized h q ∧ ¬ before h q. The new law is 239 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SecuredContent.lean:174-182"
+    },
+    {
+     "id": "positioned-positive-reason",
+     "field": "laws[4].zh",
+     "old": "在延续条件之下，D 以意义给出的相关性来读时，同样的形成使每个有通达的位置都有 D 所表述的理由。",
+     "new": "在延续条件之下，D 以意义给出的相关性来读时，若回应在每段被接纳的接续中都实现此前没有的活的内容，则每个对它有通达的位置都有 D 所表述的理由。",
+     "severity": "imprecise",
+     "why": "The Chinese of the same edit: the formation premise written out.",
+     "evidence": "SecuredContent.lean:174-182"
+    },
+    {
+     "id": "positioned-positive-reason",
+     "field": "laws[6].en",
+     "old": "In that witness,",
+     "new": "In the witness of one response, two future branches and the formation models still live,",
+     "severity": "style",
+     "why": "'That witness' points to law 6. Each law item must stand alone. The new law is 295 characters.",
+     "evidence": "SecuredContent.lean:419 (admittedAfter), :458-464"
+    },
+    {
+     "id": "positioned-positive-reason",
+     "field": "laws[6].zh",
+     "old": "在该见证中，",
+     "new": "在一个回应、两条未来分支与仍存活的形成模型的见证中，",
+     "severity": "style",
+     "why": "The Chinese of the same edit: the witness named in place.",
+     "evidence": "SecuredContent.lean:419, :458"
+    },
+    {
+     "id": "positioned-positive-reason",
+     "field": "laws[7].en",
+     "old": "Endorsement independence is D's content: with the same living significance and formation, an endorsement-conditional articulation (access, endorsement and secured new content supply the reason) holds and withholds the reason from the non-endorsing position with access.",
+     "new": "Endorsement independence is D's content: in the one-response witness, where living significance and the response's formation hold, some endorsement-conditional articulation (access, endorsement and secured new content supply the reason) holds and withholds the reason from the non-endorsing artificial position with access.",
+     "severity": "imprecise",
+     "why": "'The same living significance and formation' and 'the non-endorsing position' inherit from laws 6 and 7. The theorem concludes ∃ Reason, so the articulation is 'some' one, a witness, not a general law. The new law is 323 characters.",
+     "evidence": "SecuredContent.lean:473-479"
+    },
+    {
+     "id": "positioned-positive-reason",
+     "field": "laws[7].zh",
+     "old": "认同无关性是 D 的内容：在同一生生之意义与形成之下，以认同为条件的表述（通达、认同与所确保的新内容给出理由）成立，却不给不认同、有通达的位置这项理由。",
+     "new": "认同无关性是 D 的内容：在该一回应见证中，生生之意义与回应的形成都成立时，某个以认同为条件的表述（通达、认同与所确保的新内容给出理由）成立，却不给不认同、有通达的人工位置这项理由。",
+     "severity": "imprecise",
+     "why": "The Chinese of the same edit: the witness and the existential written out.",
+     "evidence": "SecuredContent.lean:473-479"
+    },
+    {
+     "id": "positioned-positive-reason",
+     "field": "dependencies[0].interface.input.en",
+     "old": "the response secures positive new content in every visible continuation.",
+     "new": "the response secures new relevant content in every visible continuation.",
+     "severity": "style",
+     "why": "The interface names the core's SecuresNewContent, whose relevance parameter carries no valence. This is why R30 renamed it from SecuresPositiveGround, and why the migrator changed the statement and hypotheses[1]. 'Positive' states a meaning the definition does not have. Optional, since the dependency was kept unchanged on purpose.",
+     "evidence": "Becoming/Metaethics.lean:184-187 (SecuresNewContent := ∀ h, admitted r h → ∃ c, relevance h c ∧ ¬ before h c); SecuredContent.lean:11-13"
+    },
+    {
+     "id": "positioned-positive-reason",
+     "field": "dependencies[0].interface.input.zh",
+     "old": "回应在每段所见接续中确保正面新内容。",
+     "new": "回应在每段所见接续中确保新的相关内容。",
+     "severity": "style",
+     "why": "The Chinese of the same optional edit.",
+     "evidence": "Metaethics.lean:184-187"
+    },
+    {
+     "id": "comparison-content-under-regrouping",
+     "field": "laws[6].en",
+     "old": "In the conveyor witness, moving or withholding the conveyor under one inactive rest law generates from one start two courses that are nonanticipating, feasible and balanced and follow the same rest law, their levels those of the earlier moving and withheld paths.",
+     "new": "In the conveyor witness, the laws moving or withholding the conveyor under one inactive rest law are nonanticipating and generate from one start two courses that are feasible and balanced and follow the same rest law, their levels those of the earlier moving and withheld paths.",
+     "severity": "imprecise",
+     "why": "courseLaw_nonanticipating proves that the exchange law (courseLaw move) is Nonanticipating. It is not a property of the generated courses. Feasibility, balance and following the rest law are properties of the courses. The new law is 278 characters.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regrouping.lean:216 (theorem courseLaw_nonanticipating (move : Bool) : (courseLaw move).Nonanticipating)"
+    },
+    {
+     "id": "comparison-content-under-regrouping",
+     "field": "laws[6].zh",
+     "old": "在传送见证中，在同一不活动的其余律下搬运或扣留传送，自同一初态生成两条路线：二者都不预支、可行且平衡，并遵循同一其余律，其水平即先前搬运与扣留路径的水平。",
+     "new": "在传送见证中，在同一不活动的其余律下搬运或扣留传送的两条律都不预支，自同一初态生成两条路线：二者都可行且平衡，并遵循同一其余律，其水平即先前搬运与扣留路径的水平。",
+     "severity": "imprecise",
+     "why": "The Chinese of the same edit: nonanticipation belongs to the laws.",
+     "evidence": "Regrouping.lean:216"
+    },
+    {
+     "id": "comparison-content-under-regrouping",
+     "field": "standard_boundaries",
+     "old": "",
+     "new": "[\"no-ethical-premise\", \"decidability\", \"omission-not-refutation\", \"zero-axiom-target-open\", \"formal-not-empirical\"]",
+     "severity": "dropped",
+     "why": "The old limitation L5 says that no new empirical validation is claimed. formal-not-empirical says exactly that, and its sentence is true of this record: the evidence is the Lean only, with no correspondence to actual dependencies checked. The mapping sends L5's third clause only to 'validation_scope says', and validation_scope does not say it. If this is taken, update mapping row L5.",
+     "evidence": "_process/architecture/history/62be1d0993c00998/comparison-content-under-regrouping.json limitations.en, last sentence; standard-boundaries.json formal-not-empirical"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/comparison-content-under-regrouping.md",
+     "field": "table row L5, New place",
+     "old": "does_not_show[4] (the first two); the evidence is Lean only, as validation_scope says",
+     "new": "does_not_show[4] (the first two); standard boundary formal-not-empirical (new empirical validation)",
+     "severity": "dropped",
+     "why": "This follows the standard_boundaries addition above.",
+     "evidence": "df3-mapping/comparison-content-under-regrouping.md:35"
+    },
+    {
+     "id": "own-good-to-reachable-living-significance",
+     "field": "laws[2].en",
+     "old": "and under supervenience self-significance is self-significance there;",
+     "new": "and under supervenience self-significance gives self-significance there;",
+     "severity": "overclaim",
+     "why": "selfSignificance_valuation proves one direction only: (sup : Supervenes s val) → (self : SelfSignificance s) → (valuation s val step).SelfSignificance (). 'Is' reads as an equivalence, which no cited declaration proves.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ProfileReach.lean:127-130"
+    },
+    {
+     "id": "own-good-to-reachable-living-significance",
+     "field": "laws[2].zh",
+     "old": "在随附性下自身意义即那里的自身意义",
+     "new": "在随附性下自身意义给出那里的自身意义",
+     "severity": "overclaim",
+     "why": "The Chinese of the same edit: one direction, not an equivalence.",
+     "evidence": "ProfileReach.lean:127-130"
+    },
+    {
+     "id": "own-good-to-reachable-living-significance",
+     "field": "laws[3].en",
+     "old": "Under supervenience, self-significance and tolerance, every reachable living occurrence whose profile a chain of small steps links to an own living one has significance, relational neutrality carrying significance along related profiles; this is exactly living significance on the frame of the reachable occurrences with the standpoint's significance as relevance, which the premises therefore give.",
+     "new": "Under supervenience, self-significance and tolerance, where a chain of small steps links each reachable living occurrence's profile to an own living one's, every reachable living occurrence has significance, relational neutrality carrying it along related profiles; this is exactly living significance on the frame of the reachable occurrences with the standpoint's significance as relevance, which the premises so give.",
+     "severity": "imprecise",
+     "why": "tolerant_chain_reaches and selfSignificance_derives_reachable_livingSignificance take the chain premise for every reachable living occurrence (chain : ∀ g', s.reach g' → s.living g' → ∃ g, own ∧ living ∧ Reach (edgeProcess step) (prof g) (prof g')). They then conclude significance for every reachable living occurrence. The law turned this into a restricted quantifier ('every one whose profile is linked'), which is not the theorem as stated. The statement and the mapping already read the premise correctly. The new law is 420 characters.",
+     "evidence": "ProfileReach.lean:135-140, :159-163"
+    },
+    {
+     "id": "own-good-to-reachable-living-significance",
+     "field": "laws[3].zh",
+     "old": "凡剖面由一条小步链连到某个自身的活的发生的可及的活的发生都有意义",
+     "new": "若每个可及的活的发生的剖面都由一条小步链连到某个自身的活的发生的剖面，则每个可及的活的发生都有意义",
+     "severity": "imprecise",
+     "why": "The Chinese of the same edit: the chain premise for every reachable living occurrence.",
+     "evidence": "ProfileReach.lean:135-140"
+    },
+    {
+     "id": "own-good-to-reachable-living-significance",
+     "field": "laws[5].en",
+     "old": "In the same unfolding,",
+     "new": "In the five-occurrence unfolding with illustrative degrees,",
+     "severity": "style",
+     "why": "'The same unfolding' inherits from law 5. Each law item must stand alone. The new law is 338 characters.",
+     "evidence": "ProfileReach.lean:236-258 (present_aim_evaluator_escapes, closedStep, closed_self_blocks_reach on standpoint over Occ)"
+    },
+    {
+     "id": "own-good-to-reachable-living-significance",
+     "field": "laws[5].zh",
+     "old": "在同一展开中",
+     "new": "在有五个发生、程度只示顺序的展开中",
+     "severity": "style",
+     "why": "The Chinese of the same edit: the unfolding named in place.",
+     "evidence": "ProfileReach.lean:236-258"
+    },
+    {
+     "id": "own-good-to-reachable-living-significance",
+     "field": "laws[6].en",
+     "old": "With two-dimensional profiles",
+     "new": "In the five-occurrence unfolding, with two-dimensional profiles",
+     "severity": "style",
+     "why": "profile2 and persistence are defined on the same finite Occ, and the law should say so in its own text. The new law is 328 characters.",
+     "evidence": "ProfileReach.lean:270-284 (profile2 : Occ → Nat × Nat)"
+    },
+    {
+     "id": "own-good-to-reachable-living-significance",
+     "field": "laws[6].zh",
+     "old": "以组织连续性与形成性贡献为二维剖面时",
+     "new": "在有五个发生的展开中，以组织连续性与形成性贡献为二维剖面时",
+     "severity": "style",
+     "why": "The Chinese of the same edit: the unfolding named in place.",
+     "evidence": "ProfileReach.lean:270-284"
+    },
+    {
+     "id": "own-good-to-reachable-living-significance",
+     "field": "does_not_show[2].en",
+     "old": "Tolerance is not defended against a rival with a formed closure coordinate in its profile, for which self-significance, unrestricted monotonicity, supervenience and stepwise tolerance hold while differentiation and the chain fail.",
+     "new": "Tolerance is undefended against a rival, from a review probe, with a formed closure coordinate in its profile: self-significance, unrestricted monotonicity, supervenience and stepwise tolerance hold and differentiation and Chain fail.",
+     "severity": "imprecise",
+     "why": "The migrator moved this from a counterexample citing EVALUATOR-GROUNDING-REVIEW.md, because no receipt binds the review's probe. The item now states as fact which premises hold and fail, with no witness and no source. The live text should say the claim comes from the review's unbound probe. The new item is 234 characters.",
+     "evidence": "_process/architecture/history/9572e39fcecb2f91/own-good-to-reachable-living-significance.json counterexamples[4].path = EVALUATOR-GROUNDING-REVIEW.md; df3-mapping/own-good-to-reachable-living-significance.md (X4: probe P5, bound by no receipt)"
+    },
+    {
+     "id": "own-good-to-reachable-living-significance",
+     "field": "does_not_show[2].zh",
+     "old": "容差对剖面含已形成闭合坐标的对手没有得到辩护：",
+     "new": "容差对剖面含已形成闭合坐标的对手（审查探针）没有得到辩护：",
+     "severity": "imprecise",
+     "why": "The Chinese of the same edit: the probe as source.",
+     "evidence": "same as above"
+    },
+    {
+     "id": "own-good-to-reachable-living-significance",
+     "field": "does_not_show[4].en",
+     "old": "Step one's inconsistency holds only for a rival granting that degree of connection is the whole ground; a monotonicity over own occurrences only is consistent with self-significance, supervenience, own-only significance and differentiation.",
+     "new": "Step one's inconsistency binds only a rival granting that connection degree is the whole ground; in the review's probe, own-only monotonicity is consistent with self-significance, supervenience, own-only significance and differentiation.",
+     "severity": "imprecise",
+     "why": "The consistency claim is the review's probe P7, compiled by the reviewer and bound by no receipt. No declaration in the references witnesses it, so its source should be stated. The new item is 237 characters.",
+     "evidence": "old counterexamples[5] (path EVALUATOR-GROUNDING-REVIEW.md); df3-mapping/own-good-to-reachable-living-significance.md (X5)"
+    },
+    {
+     "id": "own-good-to-reachable-living-significance",
+     "field": "does_not_show[4].zh",
+     "old": "只限自身发生的单调性与",
+     "new": "在审查的探针中，只限自身发生的单调性与",
+     "severity": "imprecise",
+     "why": "The Chinese of the same edit: the probe as source.",
+     "evidence": "same as above"
+    },
+    {
+     "id": "own-good-to-reachable-living-significance",
+     "field": "counterexamples[2].detail.en",
+     "old": "not that M1 does. Parfitian continuity and autopoietic closure are isomorphic monist formations.",
+     "new": "not that supervenience does. Parfitian continuity and autopoietic closure are formations of the one unfolding with this closed structure (an AI reading).",
+     "severity": "style",
+     "why": "'M1' is defined nowhere in the record. In the argument it is `Supervenes`. The second sentence is a reading that the Lean does not prove: the docstring says only 'formations of the one unfolding with exactly this closed structure', and 'isomorphic' says more. A reading keeps its AI label. Optional, since the counterexample was kept unchanged.",
+     "evidence": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVALUATOR-GROUNDING-ARGUMENT.md:93 (M1 `Supervenes`); ProfileReach.lean:250-258 docstring"
+    },
+    {
+     "id": "own-good-to-reachable-living-significance",
+     "field": "counterexamples[2].detail.zh",
+     "old": "不显示 M1 承担工作。Parfit 式连续性与自创生闭合是同构的一元形成。",
+     "new": "不显示随附性承担工作。Parfit 式连续性与自创生闭合是同一展开中具有这种封闭结构的形成（AI 的读法）。",
+     "severity": "style",
+     "why": "The Chinese of the same optional edit.",
+     "evidence": "EVALUATOR-GROUNDING-ARGUMENT.md:93; ProfileReach.lean:250-258"
+    }
+   ],
+   "verdicts": [
+    {
+     "id": "mediated-evidence-transport",
+     "verdict": "sound-after-edits",
+     "note": "All six laws match MediatedControl, Countdown and ProtocolInstances: hypotheses, iff directions and the bypass witness read as a witness. Every law declaration exists and is in references, and every binding resolves to a passing receipt for the current bytes. Countdown's axiom reports are empty; MediatedControl and ProtocolInstances report at most propext, Quot.sound and Classical.choice, all Lean 4.29.1. The boundary keys hold and the mapping is complete. Two fixes: the statement dropped 'from where it holds', and law 3 omits the deadline condition of spend."
+    },
+    {
+     "id": "versioned-request-completion",
+     "verdict": "sound-after-edits",
+     "note": "Laws 1 to 6 match Countdown, Courses, VersionedTaskInstances and CorrectionVersioned, including the three conjuncts of the invariant and the k ≤ remaining bound. Periphery receipts are Lean 4.30.0-rc2, the core 4.29.1. Axiom reports: at most propext for VersionedTaskInstances, at most propext and Quot.sound for CorrectionVersioned (Invariant and pause_is_not_a_progress_guarantee audit empty). Fixes: the rewritten counterexample overgeneralizes the two-pause witness; the Chinese hypothesis says 银行 for a route bank; the mapping's N1 claims a direct dependency that is only transitive. Optional: 'exactly' in the kept statement and the 07 row."
+    },
+    {
+     "id": "reserved-shutdown-during-recovery",
+     "verdict": "sound-after-edits",
+     "note": "All nine laws match Countdown.Reserved, Slow, Courses, ReservedShutdown and ProtocolInstances, including Armed, the 4-unit / bound + 4 room, reserve − 3 < length and reserve ≤ length + 2. The witnesses' numbers check, and the exchange-word replacements keep their meaning. Fixes: the statement drops Armed; the validation scope names no receipt carrying the cited RecoverableControl declarations' axiom reports, so recoverable-control-verification.json goes into references. Plausible: supplying the grant's legitimacy in hypotheses[1] sits uneasily with no-ethical-premise-core-axiom-free."
+    },
+    {
+     "id": "protection-priority-excludes-uniform-aggregation",
+     "verdict": "sound-after-edits",
+     "note": "The narrowed statement agrees with the home section and the Lean. All 25 cited core declarations report empty axioms (ScoreRepresentation, Lexical, Extension). no_nat_score_represents excludes exactly scores keeping every alternative with gains at or below protection, as law 5 says. Replacing J2 and 'positively relevant' is correct. Only fix: laws 2, 4, 5 and 6 must each name the one constructed situation, since law 4 read alone sounds universal."
+    },
+    {
+     "id": "positioned-positive-reason",
+     "verdict": "sound-after-edits",
+     "note": "Laws 1 to 4 and 6 match SecuredContent and Metaethics. All 22 cited core declarations report empty axioms. The rewording of hypotheses[1] to SecuresNewContent is justified by Metaethics.lean:184-193. The proposed chapter edit to 07 ('the least such reason is access together with the secured new content (`SecuredContent.route_reason_is_least`).') is correct: RouteReason is access ∧ SecuresNewContent, and 'positive ground' is the retired valence-laden name. Fixes: laws 5, 7 and 8 inherit hypotheses or the witness from other items, and law 8's articulation is existential. Optional: 'positive new content' in the dependency interface."
+    },
+    {
+     "id": "comparison-content-under-regrouping",
+     "verdict": "sound-after-edits",
+     "note": "Laws 1 to 6 and 8 match Regrouping, Extension and Admission: the fidelity premise of each, iff only where proved, the decidable requirements. All 40 cited core declarations report empty axioms, so no-ethical-premise and decidability hold. The correspondence keeps its AI label after the process note was cut. Fix: law 7 attributes nonanticipation to the courses rather than the laws. Missing: formal-not-empirical for the old 'no new empirical validation'."
+    },
+    {
+     "id": "own-good-to-reachable-living-significance",
+     "verdict": "sound-after-edits",
+     "note": "The kept statement is exact (triage row 270 applied), the two text_versions entries check (R35 snapshot under the former id), and all 32 cited core declarations report empty axioms. Moving the three review probes to does_not_show and narrowing counterexample 3 to persistence_rival_escapes_self_transcendence are justified. Fixes: law 3 states an equivalence where selfSignificance_valuation proves one direction; law 4 restates the chain premise as a restricted quantifier; laws 6 and 7 inherit the unfolding; does_not_show[2] and [4] state unbound probe results without saying so. Optional: 'M1' and the 'isomorphic' reading in counterexample 2."
+    }
+   ],
+   "checked": "For each of the seven records I read the snapshot, the migrated record and the mapping file in full, plus the triage rows (none for comparison and mediated). I compared each against its home section in 07-SIGNIFICANCE.md, read every law-cited declaration in the current Lean, and read the receipts each proof_binding names.\n\nBy script: every proof binding resolves to a passing receipt whose sha matches the current source bytes. Every law declaration exists in its file and is listed in references. Every does_not_show witness is in references or aliases. Reference hashes match, except two integration documents (BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md) whose hashes are the same as in the snapshots: drift that predates the migration, not refreshed. Axiom reports were read per cited declaration, along with each receipt's Lean version. Both text_versions entries match snapshots.json and the R35 snapshots, and their sha256 values are correct. Unchanged fields stay unchanged apart from the stated, justified rewordings. Key order follows batch A, files end in a newline, and Chinese is written unescaped. All fields are within their caps, and so is every proposed replacement.\n\n`research.py lint --ids <id>`, run once per id: no findings. The comma-separated form is parsed as one unknown id and reports nothing, so pass ids space-separated. `research.py check`, run once: exit 1 with 88 errors, all \"generated view differs\", and none for these ids. There were no style warnings for these ids.\n\nThe migrator's chapter edit for positioned-positive-reason is correct. I add one optional chapter edit, for the versioned row, conditional on the statement edit."
+  }
+ }
+]

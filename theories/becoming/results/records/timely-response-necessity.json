@@ -15,8 +15,8 @@
   },
   "laws": [
     {
-      "en": "A potential route from a time-indexed source between two courses holds nothing at step 0; a condition is on it at t + 1 where it was at t, or where a formation present at t takes from or gives to it at t in either course and either is a source at t or has coupled into it, at some s ≤ t, a condition on the route at s, by requirement at s or by level.",
-      "zh": "两个历程之间自时变源出发的潜在路线在第 0 步不含任何条件；条件在 t + 1 在路线上，是指它在 t 已在其上，或某个在 t 在场的形成在任一历程中于 t 从它取或给它，且该形成在 t 是源，或路线上某个 s ≤ t 处的条件在 s 经当时的要求或经水平耦合入该形成。",
+      "en": "A potential route from a time-indexed source between two courses holds nothing at step 0; a condition is on it at t + 1 where it was at t, or where a formation present at t in the first course takes from or gives to it at t in either course and either is a source at t or has coupled into it, at some s ≤ t, a condition on the route at s, by requirement at s or by level.",
+      "zh": "两个历程之间自时变源出发的潜在路线在第 0 步不含任何条件；条件在 t + 1 在路线上，是指它在 t 已在其上，或某个在 t 于第一个历程在场的形成在任一历程中于 t 从它取或给它，且该形成在 t 是源，或路线上某个 s ≤ t 处的条件在 s 经当时的要求或经水平耦合入该形成。",
       "declarations": [
         "Becoming.TimedResponse.TouchesAt",
         "Becoming.TimedResponse.CoupledIntoAt",
@@ -35,8 +35,8 @@
       ]
     },
     {
-      "en": "For two courses alike at step 0 and, before a deadline D, balanced, with the same formations present and each formation outside a time-indexed source exchanging alike where alike through its couplings so far: every condition not on the route at a step t ≤ D has the same level in both courses at t.",
-      "zh": "对两个历程第 0 步水平相同，且在截止 D 前平衡、在场形成相同、时变源外的每个形成在经其耦合至此相同处交换相同：凡在某步 t ≤ D 不在路线上的条件，在 t 处两个历程中水平相同。",
+      "en": "For two courses alike at step 0 and, before a deadline D, balanced, with the same formations present and each formation outside a time-indexed source exchanging alike where alike through its couplings so far: every condition not on the route at a step t ≤ D has the same level in both courses at t. Levels alike on what couples into a formation at a step make it alike through its couplings there.",
+      "zh": "对两个历程第 0 步水平相同，且在截止 D 前平衡、在场形成相同、时变源外的每个形成在经其耦合至此相同处交换相同：凡在某步 t ≤ D 不在路线上的条件，在 t 处两个历程中水平相同。某步耦合入一个形成者水平相同，使它在该步经其耦合相同。",
       "declarations": [
         "Becoming.TimedResponse.levels_alike_before",
         "Becoming.TimedResponse.coupling_of_levels"
@@ -59,8 +59,8 @@
       ]
     },
     {
-      "en": "Where the two courses have the same formations present at every step and every source formation belongs to a part, a reader reached by some step lies within that part's responsive reach between the courses: the timed route refines the structural reach.",
-      "zh": "两个历程每步在场形成相同、每个源形成属于一个部分时，到某步被所及的读者位于两历程间该部分的回应所及之内：及时路线细化结构所及。",
+      "en": "Where the two courses have the same formations present at every step and every source formation belongs to a given part, a reader reached by some step lies within that part's responsive reach between the courses: the timed route refines the structural reach.",
+      "zh": "两个历程每步在场形成相同、每个源形成属于一个给定部分时，到某步被所及的读者位于两历程间该部分的回应所及之内：及时路线细化结构所及。",
       "declarations": [
         "Becoming.TimedResponse.reachedBy_within_response",
         "Becoming.TimedResponse.Spread.within_response",
@@ -83,14 +83,14 @@
       ]
     },
     {
-      "en": "Over listed alternatives with natural weights, each a pair of courses alike at step 0 and balanced before its answer time, with the same formations present and each non-source formation exchanging alike where alike through its couplings so far, answers read through the reader's couplings, reach decided: committed weight is at most the errors (first against false, second against true) plus the weight reached in time.",
+      "en": "Over listed alternatives with natural weights, each a pair of courses alike at step 0 and balanced before its answer time, the same formations present and each non-source formation exchanging alike where alike through its couplings so far, answers read through the reader's couplings up to then, reach decided: committed weight is at most the errors (first on false, second on true) plus the weight reached in time.",
       "zh": "有限列表的备选，权重为自然数，每个是一对历程第 0 步水平相同，且在其作答时刻前平衡、在场形成相同、时变源外的每个形成在经其耦合至此相同处交换相同，答案经读者至该时刻的耦合读出，是否及时被所及可判定：作答权重至多为前者对“假”的错误、后者对“真”的错误与及时所及权重之和。",
       "declarations": [
         "Becoming.FallibleInquiry.coverage_le_errors_add_timed_reach"
       ]
     },
     {
-      "en": "Over listed alternatives with natural weights, each a pair of courses alike at step 0 and, before its answer time, balanced, with the same formations present and each non-source formation exchanging alike where alike through its couplings so far, answers read through the reader's couplings, with no decision: where no reader is reached by its answer time, committed weight equals the two error weights.",
+      "en": "Over listed alternatives with natural weights, each a pair of courses alike at step 0 and balanced before its answer time, the same formations present and each non-source formation exchanging alike where alike through its couplings so far, answers read through the reader's couplings up to then, with no decision: where no reader is reached by its answer time, committed weight equals the two error weights.",
       "zh": "有限列表的备选，权重为自然数，每个是一对历程第 0 步水平相同，且在其作答时刻前平衡、在场形成相同、时变源外的每个形成在经其耦合至此相同处交换相同，答案经读者至该时刻的耦合读出，无需判定：凡没有读者在其作答时刻前被所及，作答权重恰等于两项错误权重之和。",
       "declarations": [
         "Becoming.FallibleInquiry.unreached_in_time_coverage_eq_errors"
@@ -411,8 +411,8 @@
       "zh": "2026-10-20：5 条记账性说明合并（2026-10-13 至 19 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/7bdd251d9f5fc567/timely-response-necessity.json 和 git 中。"
     },
     {
-      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement written from the home section; the claim split into nine laws, each read against its declarations in TimedResponse.lean and FallibleInquiry.lean (two of the route and reach, the levels, the answer, the double-negated necessity and its decided form, the refinement of structural reach, the Delayed witness, the weighted bound and its blind equality); the limitations to four does-not-show items and the standard boundaries discrete-steps, decidability, no-ethical-premise-core-axiom-free and formal-not-empirical; the definitions and lemmas the laws name added to their files' references; no premise, status or source hash changed. Every earlier sentence is mapped in [timely-response-necessity.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/timely-response-necessity.md); the exact earlier record is the first text_versions entry.",
-      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依本节写出陈述；主张拆为九条规律，各条对照 TimedResponse.lean 与 FallibleInquiry.lean 中的声明核读（路线与所及两条、水平、答案、双重否定的必要性及其可判定形式、对结构所及的细化、Delayed 见证、加权界及其全盲等式）；限制改为四条“未表明”与通用边界 discrete-steps、decidability、no-ethical-premise-core-axiom-free、formal-not-empirical；规律所引的定义与引理加入其文件的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [timely-response-necessity.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/timely-response-necessity.md)；迁移前的完整记录为 text_versions 首项。"
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement written from the home section; the claim split into nine laws, each read against its declarations in TimedResponse.lean and FallibleInquiry.lean (two of the route and reach, the levels, the answer, the double-negated necessity and its decided form, the refinement of structural reach, the Delayed witness, the weighted bound and its blind equality); the limitations to four does-not-show items and the standard boundaries discrete-steps, decidability, no-ethical-premise-core-axiom-free and formal-not-empirical; the four definitions the laws name (TouchesAt, CoupledIntoAt, Spread, ReachedBy) added to TimedResponse.lean's references; no premise, status or source hash changed. Every earlier sentence is mapped in [timely-response-necessity.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/timely-response-necessity.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依本节写出陈述；主张拆为九条规律，各条对照 TimedResponse.lean 与 FallibleInquiry.lean 中的声明核读（路线与所及两条、水平、答案、双重否定的必要性及其可判定形式、对结构所及的细化、Delayed 见证、加权界及其全盲等式）；限制改为四条“未表明”与通用边界 discrete-steps、decidability、no-ethical-premise-core-axiom-free、formal-not-empirical；规律所引的四个定义（TouchesAt、CoupledIntoAt、Spread、ReachedBy）加入 TimedResponse.lean 的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [timely-response-necessity.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/timely-response-necessity.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
     }
   ],
   "text_versions": [

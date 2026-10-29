@@ -10,8 +10,8 @@
   "family": "F11",
   "reviewed_at_utc": "2026-10-28T12:06:59+00:00",
   "statement": {
-    "en": "Given two values, every extrapolation has an open course on which each value it proposes misses; no prefix fixes the next value. In a world held by a list, elimination misses boundedly often, its rest is unrefuted and occurs only there, and no prefix shows when; over classes it is the same learning.",
-    "zh": "给定两个值，每个外推都有一个开放的历程，使它提出的每个值都不合；无前段固定下一个值。被列表所持的世界中，逐除外推的不合次数有界，其停息不能被否证且只在那里发生，也无前段显出何时；对类的学习是同一学习。"
+    "en": "Given a map moving every value, every extrapolation has an open course on which each proposal misses; no prefix fixes the next value. In a world held by a list, elimination misses boundedly often, its rest, unrefuted, occurs only there, and no prefix shows when; over classes it is the same learning.",
+    "zh": "给定移动每个值的映射，每个外推都有一个开放的历程，使它提出的每个值都不合；无前段固定下一个值。被列表所持的世界中，逐除外推的不合次数有界，其停息不能被否证且只在那里发生，也无前段显出何时；对类的学习是同一学习。"
   },
   "laws": [
     {
@@ -162,8 +162,8 @@
       "zh": "不加公理。值可判定相等（DecidableEq O）只作为外推（逐除外推、套索外推、合并外推与 diagonal_not_lasso）与 swapTo（另一个值）的条件出现。"
     },
     {
-      "en": "It is used only in the proofs of claim_missed_on_one and eq_of_not_missed; no_prefix_fixes_next, diagonal_misses, diagonal_unrested and diagonal_open do not use it (each is listed in the decidability inventory).",
-      "zh": "它只在 claim_missed_on_one 与 eq_of_not_missed 的证明中用到；no_prefix_fixes_next 与 diagonal_misses、diagonal_unrested、diagonal_open 不用它（逐条见可判定性清点）。"
+      "en": "Beyond the definitions that take it, decided equality of values enters only the proofs of claim_missed_on_one, eq_of_not_missed, swapTo_moves, index_succ_le, index_le_succ and missed_before; no_prefix_fixes_next, diagonal_misses, diagonal_unrested and diagonal_open do not use it.",
+      "zh": "除取它为条件的定义外，可判定相等只用于 claim_missed_on_one、eq_of_not_missed、swapTo_moves、index_succ_le、index_le_succ、missed_before 的证明；no_prefix_fixes_next、diagonal_misses、diagonal_unrested、diagonal_open 不用它。"
     },
     {
       "en": "Each theorem's conditions are written into it: two different values (no_prefix_fixes_next); other moving every value (the diagonal); some candidate according (index_le_of_accords, misses_not_recurring); the course being a lasso or the orbit held by a list (lasso_byElimination_bounded, held_byElimination_bounded).",
@@ -674,8 +674,8 @@
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：下一步以现行编号 learnable-through-a-map 与 readings-within-what-they-read 称这些记录，取代其旧编号；别无改变。"
     },
     {
-      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement narrowed to what the Lean proves (two values given; the bounded misses, rest and its unshown step said of extrapolation by elimination); the claim split into fifteen laws, each read against its declarations in Learning.lean (courses and misses, no prefix fixing the next value and its finite form, the diagonal, a moving map, elimination and its two lemmas, lassos of held worlds, the lasso candidates, the lasso bound, rest only on lassos, the held-world bound, stable counts, merged classes and Alternate); the limitations to three does-not-show items, the literature sentence to the correspondence and the standard boundaries decidability, no-ethical-premise, no-evaluation and names-provisional; the hypotheses split into seven items within their caps, the round label and the integrator's rule removed; the correspondence's readings labelled AI readings; no declaration added (every one named was in the references); no premise, status or source hash changed. Every earlier sentence is mapped in [learning-by-refutation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/learning-by-refutation.md); the exact earlier record is the first text_versions entry.",
-      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述按 Lean 所证收窄（给定两个值；有界不合、停息及其不显之步都说的是逐除外推）；主张拆为十五条规律，各条对照 Learning.lean 中的声明核读（历程与不合、无前段固定下一个值及其有限形式、对角、移动映射、逐除及其两条引理、被持世界的套索、套索候选、套索界、只在套索上停息、被持世界之界、稳定计数、合并的类与 Alternate）；限制改为三条“未表明”，文献一句移入对应说明，并引用通用边界 decidability、no-ethical-premise、no-evaluation、names-provisional；前提拆为七条以合于上限，删去轮次标签与整合者规则；对应说明中的读法标为 AI 的读法；未新增声明（所引的都已在引用中）；前提、状态与来源哈希均未改变。每句旧文本的去向见 [learning-by-refutation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/learning-by-refutation.md)；迁移前的完整记录为 text_versions 首项。"
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement narrowed to what the Lean proves (a map moving every value given; the bounded misses, rest and its unshown step said of extrapolation by elimination); the claim split into fifteen laws, each read against its declarations in Learning.lean (courses and misses, no prefix fixing the next value and its finite form, the diagonal, a moving map, elimination and its two lemmas, lassos of held worlds, the lasso candidates, the lasso bound, rest only on lassos, the held-world bound, stable counts, merged classes and Alternate); the limitations to three does-not-show items, the literature sentence to the correspondence and the standard boundaries decidability, no-ethical-premise, no-evaluation and names-provisional; the hypotheses split into seven items within their caps, the round label and the integrator's rule removed; the correspondence's readings labelled AI readings; no declaration added (every one named was in the references); no premise, status or source hash changed. Every earlier sentence is mapped in [learning-by-refutation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/learning-by-refutation.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, hypotheses, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述按 Lean 所证收窄（给定移动每个值的映射；有界不合、停息及其不显之步都说的是逐除外推）；主张拆为十五条规律，各条对照 Learning.lean 中的声明核读（历程与不合、无前段固定下一个值及其有限形式、对角、移动映射、逐除及其两条引理、被持世界的套索、套索候选、套索界、只在套索上停息、被持世界之界、稳定计数、合并的类与 Alternate）；限制改为三条“未表明”，文献一句移入对应说明，并引用通用边界 decidability、no-ethical-premise、no-evaluation、names-provisional；前提拆为七条以合于上限，删去轮次标签与整合者规则；对应说明中的读法标为 AI 的读法；未新增声明（所引的都已在引用中）；前提、状态与来源哈希均未改变。每句旧文本的去向见 [learning-by-refutation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/learning-by-refutation.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、前提，各条对照所引 Lean 核读。"
     }
   ],
   "text_versions": [

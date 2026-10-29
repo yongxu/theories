@@ -10,8 +10,8 @@
   "family": "F05",
   "reviewed_at_utc": "2026-10-28T11:47:30+00:00",
   "statement": {
-    "en": "A property holds along every admitted course exactly when every admitted step keeps it; the mediated machine's histories are those courses, so every finite history of lawful reads and committed bounded overwrite programs keeps the actual state among the retained possibilities.",
-    "zh": "性质沿每段被允许的进程成立，恰当每个被允许的步保持它；中介机器的历史正是这样的进程，所以由合法读取与已提交的有界覆写程序组成的每段有限历史，都使实际状态留在保留的可能之中。"
+    "en": "A property holds after every admitted course from where it holds exactly when every admitted step keeps it; the mediated machine's histories are those courses, so every finite history of lawful reads and committed bounded overwrite programs keeps the actual state among the retained possibilities.",
+    "zh": "性质在每段被允许的进程之后、从它成立处出发都成立，恰当每个被允许的步保持它；中介机器的历史正是这样的进程，所以由合法读取与已提交的有界覆写程序组成的每段有限历史，都使实际状态留在保留的可能之中。"
   },
   "laws": [
     {
@@ -34,8 +34,8 @@
       ]
     },
     {
-      "en": "A commit is admitted only at the current generation, with every write permitted by the current rights, change allowed and its write units drawn from the reserve; it applies the program to the actual state and to the retained possibilities by the same writes, so from actual coverage (the actual state among the retained possibilities, each of them represented) every commit keeps actual coverage.",
-      "zh": "提交只在当前代次、每项写入为当前权限所允许、允许改变且写入单位可从储备中取用时被接纳；它以同一写入作用于实际状态与保留的可能，所以自实际覆盖（实际状态在保留的可能之中，且每个都被表示）起，每次提交都保持实际覆盖。",
+      "en": "A commit is admitted only at the current generation, with every write permitted by the current rights, change allowed and its write units drawn from the reserve within the deadline; it applies the program to the actual state and to the retained possibilities by the same writes, so from actual coverage (the actual state among the retained possibilities, each of them represented) every commit keeps actual coverage.",
+      "zh": "提交只在当前代次、每项写入为当前权限所允许、允许改变且写入单位可在期限内从储备中取用时被接纳；它以同一写入作用于实际状态与保留的可能，所以自实际覆盖（实际状态在保留的可能之中，且每个都被表示）起，每次提交都保持实际覆盖。",
       "declarations": [
         "MediatedControl.commit",
         "MediatedControl.committed_shape",
@@ -307,8 +307,8 @@
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条关联说明中的退役标签 G0/J 改为条件对齐路线；主张不变。"
     },
     {
-      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): a statement written from the claim and the home section; the claim split into six laws, each read against its declarations in Becoming.Countdown, MediatedControl and ProtocolInstances (the extra writer's witness stated as a law beside its counterexample); the limitations to three does-not-show items and the standard boundaries no-ethical-premise-core-axiom-free and formal-not-empirical; the hypothesis, correspondence and counterexample kept; twelve declarations of MediatedControl and one of ProtocolInstances added to their files' references; the next step stated as the evidence the protocol still needs, the instruction to reuse it and the pointer to recoverable-mediated-change (which depends on this record) left in the snapshot; no premise, status or source hash changed. Every earlier sentence is mapped in [mediated-evidence-transport.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/mediated-evidence-transport.md); the exact earlier record is the first text_versions entry.",
-      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主张与主章写出陈述；主张拆为六条规律，各条对照其在 Becoming.Countdown、MediatedControl 与 ProtocolInstances 中的声明核读（额外写入者的见证在其反例之外另写为一条规律）；限制分入三条“未表明”与通用边界 no-ethical-premise-core-axiom-free、formal-not-empirical；前提、对应与反例保留；MediatedControl 的十二个声明与 ProtocolInstances 的一个声明加入其文件的引用；下一步写为该协议仍需的证据，复用的指示与指向 recoverable-mediated-change（它依赖本记录）的一句留在快照中；前提、状态与来源哈希均未改变。每句旧文本的去向见 [mediated-evidence-transport.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/mediated-evidence-transport.md)；迁移前的完整记录为 text_versions 首项。"
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): a statement written from the claim and the home section; the claim split into six laws, each read against its declarations in Becoming.Countdown, MediatedControl and ProtocolInstances (the extra writer's witness stated as a law beside its counterexample); the limitations to three does-not-show items and the standard boundaries no-ethical-premise-core-axiom-free and formal-not-empirical; the hypothesis, correspondence and counterexample kept; twelve declarations of MediatedControl and one of ProtocolInstances added to their files' references; the next step stated as the evidence the protocol still needs, the instruction to reuse it and the pointer to recoverable-mediated-change (which depends on this record) left in the snapshot; no premise, status or source hash changed. Every earlier sentence is mapped in [mediated-evidence-transport.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/mediated-evidence-transport.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主张与主章写出陈述；主张拆为六条规律，各条对照其在 Becoming.Countdown、MediatedControl 与 ProtocolInstances 中的声明核读（额外写入者的见证在其反例之外另写为一条规律）；限制分入三条“未表明”与通用边界 no-ethical-premise-core-axiom-free、formal-not-empirical；前提、对应与反例保留；MediatedControl 的十二个声明与 ProtocolInstances 的一个声明加入其文件的引用；下一步写为该协议仍需的证据，复用的指示与指向 recoverable-mediated-change（它依赖本记录）的一句留在快照中；前提、状态与来源哈希均未改变。每句旧文本的去向见 [mediated-evidence-transport.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/mediated-evidence-transport.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、规律，各条对照所引 Lean 核读。"
     }
   ],
   "text_versions": [

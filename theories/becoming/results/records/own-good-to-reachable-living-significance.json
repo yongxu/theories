@@ -34,8 +34,8 @@
       ]
     },
     {
-      "en": "A standpoint's profiles form a valuation, related by small steps, its own profiles those of its own living occurrences: tolerance is exactly relational neutrality there, reach along related profiles is exactly reach along small steps, and under supervenience self-significance is self-significance there; tolerance carries a valued profile along every chain of small steps.",
-      "zh": "立场的剖面构成一个估值，以小步相关，其自身剖面即其自身的活的发生的剖面：容差恰是那里的关系中立，沿相关剖面的可达恰是沿小步的可达，在随附性下自身意义即那里的自身意义；容差使有值的剖面沿每条小步链保持有值。",
+      "en": "A standpoint's profiles form a valuation, related by small steps, its own profiles those of its own living occurrences: tolerance is exactly relational neutrality there, reach along related profiles is exactly reach along small steps, and under supervenience self-significance gives self-significance there; tolerance carries a valued profile along every chain of small steps.",
+      "zh": "立场的剖面构成一个估值，以小步相关，其自身剖面即其自身的活的发生的剖面：容差恰是那里的关系中立，沿相关剖面的可达恰是沿小步的可达，在随附性下自身意义给出那里的自身意义；容差使有值的剖面沿每条小步链保持有值。",
       "declarations": [
         "Becoming.ProfileReach.valuation",
         "Becoming.Neutral",
@@ -48,8 +48,8 @@
       ]
     },
     {
-      "en": "Under supervenience, self-significance and tolerance, every reachable living occurrence whose profile a chain of small steps links to an own living one has significance, relational neutrality carrying significance along related profiles; this is exactly living significance on the frame of the reachable occurrences with the standpoint's significance as relevance, which the premises therefore give.",
-      "zh": "在随附性、自身意义与容差下，凡剖面由一条小步链连到某个自身的活的发生的可及的活的发生都有意义，由关系中立沿相关剖面传递意义；这恰是可及发生之框架上、以此立场之意义为相关性的生生之意义，所以这些前提给出它。",
+      "en": "Under supervenience, self-significance and tolerance, where a chain of small steps links each reachable living occurrence's profile to an own living one's, every reachable living occurrence has significance, relational neutrality carrying it along related profiles; this is exactly living significance on the frame of the reachable occurrences with the standpoint's significance as relevance, which the premises so give.",
+      "zh": "在随附性、自身意义与容差下，若每个可及的活的发生的剖面都由一条小步链连到某个自身的活的发生的剖面，则每个可及的活的发生都有意义，由关系中立沿相关剖面传递意义；这恰是可及发生之框架上、以此立场之意义为相关性的生生之意义，所以这些前提给出它。",
       "declarations": [
         "Becoming.ProfileReach.tolerant_chain_reaches",
         "Becoming.Valuation.reaches",
@@ -70,8 +70,8 @@
       ]
     },
     {
-      "en": "In the same unfolding, a present-aim evaluator without self-significance is monotone, supervenient and tolerant and gives the formed other no significance; and with small steps that never leave the own positive region, the self-significant threshold standpoint is tolerant and gives the stranger none.",
-      "zh": "在同一展开中，无自身意义的现时目的评价者单调、随附且满足容差，却不给形成的他者以意义；小步从不离开自身正区域时，有自身意义的门槛立场满足容差，却不给陌生人以意义。",
+      "en": "In the five-occurrence unfolding with illustrative degrees, a present-aim evaluator without self-significance is monotone, supervenient and tolerant and gives the formed other no significance; and with small steps that never leave the own positive region, the self-significant threshold standpoint is tolerant and gives the stranger none.",
+      "zh": "在有五个发生、程度只示顺序的展开中，无自身意义的现时目的评价者单调、随附且满足容差，却不给形成的他者以意义；小步从不离开自身正区域时，有自身意义的门槛立场满足容差，却不给陌生人以意义。",
       "declarations": [
         "Becoming.ProfileReach.present_aim_evaluator_escapes",
         "Becoming.ProfileReach.closedStep",
@@ -79,8 +79,8 @@
       ]
     },
     {
-      "en": "With two-dimensional profiles of organizational continuity and formative contribution, a self-significance grounded in continuity is monotone under the product order, which does not place the formed other at least as connected as the changed self, and it gives the formed other no significance.",
-      "zh": "以组织连续性与形成性贡献为二维剖面时，以连续性为根据的自身意义在积序下单调；积序不使形成的他者至少与改变后的自身同样相连，它也不给形成的他者以意义。",
+      "en": "In the five-occurrence unfolding, with two-dimensional profiles of organizational continuity and formative contribution, a self-significance grounded in continuity is monotone under the product order, which does not place the formed other at least as connected as the changed self, and it gives the formed other no significance.",
+      "zh": "在有五个发生的展开中，以组织连续性与形成性贡献为二维剖面时，以连续性为根据的自身意义在积序下单调；积序不使形成的他者至少与改变后的自身同样相连，它也不给形成的他者以意义。",
       "declarations": [
         "Becoming.ProfileReach.profile2",
         "Becoming.ProfileReach.productLe",
@@ -120,8 +120,8 @@
       "witness": "Becoming.ProfileReach.present_aim_evaluator_escapes"
     },
     {
-      "en": "Tolerance is not defended against a rival with a formed closure coordinate in its profile, for which self-significance, unrestricted monotonicity, supervenience and stepwise tolerance hold while differentiation and the chain fail.",
-      "zh": "容差对剖面含已形成闭合坐标的对手没有得到辩护：对它，自身意义、不受限单调性、随附性与逐步容差都成立，而分化与 Chain 都不成立。",
+      "en": "Tolerance is undefended against a rival, from a review probe, with a formed closure coordinate in its profile: self-significance, unrestricted monotonicity, supervenience and stepwise tolerance hold and differentiation and Chain fail.",
+      "zh": "容差对剖面含已形成闭合坐标的对手（审查探针）没有得到辩护：对它，自身意义、不受限单调性、随附性与逐步容差都成立，而分化与 Chain 都不成立。",
       "kind": "non-implication"
     },
     {
@@ -130,8 +130,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "Step one's inconsistency holds only for a rival granting that degree of connection is the whole ground; a monotonicity over own occurrences only is consistent with self-significance, supervenience, own-only significance and differentiation.",
-      "zh": "第一步的不一致只对承认连接程度即完整根据的对手成立；只限自身发生的单调性与自身意义、随附性、只给自身意义及分化都一致。",
+      "en": "Step one's inconsistency binds only a rival granting that connection degree is the whole ground; in the review's probe, own-only monotonicity is consistent with self-significance, supervenience, own-only significance and differentiation.",
+      "zh": "第一步的不一致只对承认连接程度即完整根据的对手成立；在审查的探针中，只限自身发生的单调性与自身意义、随附性、只给自身意义及分化都一致。",
       "kind": "scope"
     },
     {
@@ -163,8 +163,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/EvaluatorGrounding.lean",
       "detail": {
-        "zh": "封闭自我：即把步关系限于自身正区域的门槛对手；显示 Chain 对那一步关系承担工作，不显示 M1 承担工作。Parfit 式连续性与自创生闭合是同构的一元形成。",
-        "en": "Closed self: the threshold rival with its step relation restricted to its own positive region; it shows Chain carries weight for that step relation, not that M1 does. Parfitian continuity and autopoietic closure are isomorphic monist formations."
+        "zh": "封闭自我：即把步关系限于自身正区域的门槛对手；显示 Chain 对那一步关系承担工作，不显示随附性承担工作。Parfit 式连续性与自创生闭合是同一展开中具有这种封闭结构的形成（AI 的读法）。",
+        "en": "Closed self: the threshold rival with its step relation restricted to its own positive region; it shows Chain carries weight for that step relation, not that supervenience does. Parfitian continuity and autopoietic closure are formations of the one unfolding with this closed structure (an AI reading)."
       }
     },
     {
@@ -564,8 +564,8 @@
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述原说用到不受限单调性；Lean 所取为随附于剖面（其形式部分）、容差，以及每个可及的活的发生连到自身之一的小步之链，陈述今恰列这些；第四条前提中的 G0 改为生生之意义；随后已退役的标签 S0、N_rel、N_std、J1–J4、普遍元伦理核心与 G0（非外围名称处）在前提、依赖、相关说明与局限中改为自身意义、关系中立与立场中立、实践承诺、意义、比较与实践判断的说明及生生之意义，英文局限的句子相应收紧以保持其长度；Lean 名称（GenerativeComparison.G0、reach_is_g0）保留。"
     },
     {
-      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): the statement kept; the claim split into seven laws, each read against its declarations in Becoming.ProfileReach, Becoming.Metaethics, Becoming.ValuationFrames and Becoming.Extension; the limitations and the claim's closing sentence to seven does-not-show items and the standard boundary significance-related-not-asserted, \"positive significance\" read as significance with no valence, as ProfileReach states sig; the three counterexamples taken from the review's probes, which no declaration in the references witnesses, moved to does-not-show items; the fourth counterexample narrowed to what persistence_rival_escapes_self_transcendence proves, its claims about every standpoint and the weighted order kept in the correspondence, which states them; the hypotheses, correspondence and other counterexamples kept; twelve declarations added to their files' references; no premise, status or source hash changed. Every earlier sentence is mapped in [own-good-to-reachable-living-significance.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/own-good-to-reachable-living-significance.md); the exact earlier record is the first text_versions entry.",
-      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留；主张拆为七条规律，各条对照其在 Becoming.ProfileReach、Becoming.Metaethics、Becoming.ValuationFrames 与 Becoming.Extension 中的声明核读；限制与主张的末句分入七条“未表明”与通用边界 significance-related-not-asserted，“正面意义”读作不带价值方向的意义，与 ProfileReach 对 sig 的说明一致；取自审查探针、引用中无声明见证的三条反例改为“未表明”；第四条反例收窄到 persistence_rival_escapes_self_transcendence 所证，其中关于每个立场与加权序的说法保留在已写明它们的对应中；前提、对应与其余反例保留；十二个声明加入其文件的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [own-good-to-reachable-living-significance.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/own-good-to-reachable-living-significance.md)；迁移前的完整记录为 text_versions 首项。"
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): the statement kept; the claim split into seven laws, each read against its declarations in Becoming.ProfileReach, Becoming.Metaethics, Becoming.ValuationFrames and Becoming.Extension; the limitations and the claim's closing sentence to seven does-not-show items and the standard boundary significance-related-not-asserted, \"positive significance\" read as significance with no valence, as ProfileReach states sig; the three counterexamples taken from the review's probes, which no declaration in the references witnesses, moved to does-not-show items; the fourth counterexample narrowed to what persistence_rival_escapes_self_transcendence proves, its claims about every standpoint and the weighted order kept in the correspondence, which states them; the hypotheses, correspondence and other counterexamples kept; twelve declarations added to their files' references; no premise, status or source hash changed. Every earlier sentence is mapped in [own-good-to-reachable-living-significance.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/own-good-to-reachable-living-significance.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, does-not-show items, the counterexamples, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留；主张拆为七条规律，各条对照其在 Becoming.ProfileReach、Becoming.Metaethics、Becoming.ValuationFrames 与 Becoming.Extension 中的声明核读；限制与主张的末句分入七条“未表明”与通用边界 significance-related-not-asserted，“正面意义”读作不带价值方向的意义，与 ProfileReach 对 sig 的说明一致；取自审查探针、引用中无声明见证的三条反例改为“未表明”；第四条反例收窄到 persistence_rival_escapes_self_transcendence 所证，其中关于每个立场与加权序的说法保留在已写明它们的对应中；前提、对应与其余反例保留；十二个声明加入其文件的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [own-good-to-reachable-living-significance.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/own-good-to-reachable-living-significance.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、“未表明”各项、反例，各条对照所引 Lean 核读。"
     }
   ],
   "text_versions": [

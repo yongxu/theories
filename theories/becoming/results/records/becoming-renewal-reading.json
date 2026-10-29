@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "becoming-renewal-reading",
   "title": {
     "zh": "运行上的更新与生生的关系读法",
@@ -8,28 +8,130 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-13T09:54:07+00:00",
+  "reviewed_at_utc": "2026-10-28T17:02:42+00:00",
   "statement": {
     "zh": "更新与消耗为运行分类：任一过程的每次运行，经条件的可观测量读出，都是这些类所适用之网；自某步起不再上升的自然数可观测量，不在任意晚的步下降；自同一配置，一次运行可以更新，另一次可以消耗。",
     "en": "Renewal and consumption classify runs: each run of any process, read through observables of conditions, is a web to which the classes apply; a natural-number observable never rising from some step on does not fall at arbitrarily late steps; from one configuration one run can renew, another consume."
   },
-  "claim": {
-    "zh": "任一过程的任一运行，经条件的可观测量读出，都是一个关系展开，更新／消耗分类适用于它。从某步起不再上升的自然数可观测量不在任意晚的步下降，耗竭、自然数秩的复现更新与无更新汲取都是这一原则的情形。分类属于运行：同一过程、同一初始配置下，焦点形成每步都活跃，一次运行更新，另一次消耗。",
-    "en": "Every run of every process, read through observables of conditions, is one relational unfolding to which the renewing/consuming classification applies. A natural-number observable that never rises from some step on does not fall at arbitrarily late steps; depletion, recurrent renewal under a natural rank and unrenewed drawdown are its cases. The class belongs to the run: in one process from one configuration, with the focal formation active at every step, one run renews and another consumes."
-  },
+  "laws": [
+    {
+      "en": "Read through observables of conditions (levels and activity at each configuration; requirements, needs and draws fixed), a run of any process is one relational unfolding whose levels and activity are those of its configurations step by step; its static web is the run read through the same dependences, and the classes of renewing and consuming formation are defined on it.",
+      "zh": "经条件的可观测量（每个配置上的水平与活跃；所需、需要量与汲取固定）读出，任一过程的一次运行是一个关系展开，其水平与活跃逐步即其配置的水平与活跃；其静态网即经同一依存读出的该运行，更新与消耗之形成的类在其上定义。",
+      "declarations": [
+        "Becoming.Conditions",
+        "Becoming.Conditions.along",
+        "Becoming.Web.conditions_along",
+        "RelationalRenewal.Unfolding",
+        "RelationalRenewal.RenewingIn",
+        "RelationalRenewal.ConsumingIn"
+      ]
+    },
+    {
+      "en": "A natural-number observable that does not rise across any step from step T on does not fall at arbitrarily late steps.",
+      "zh": "从第 T 步起跨任一步都不上升的自然数可观测量，不在任意晚的步下降。",
+      "declarations": [
+        "Becoming.falls_not_recurring"
+      ]
+    },
+    {
+      "en": "Depletion, a case of that principle: where every admissible step of a process lowers a natural-number reserve of the configuration, the process has no run, and no sequence of configurations and moves takes an admissible step at every index.",
+      "zh": "耗竭是该原则的情形：过程的每个可容许步都降低配置的一项自然数储备时，该过程没有运行，也没有在每个下标都走一个可容许步的配置与动作序列。",
+      "declarations": [
+        "Becoming.Run.not_of_depletion",
+        "Becoming.no_execution_of_depletion"
+      ]
+    },
+    {
+      "en": "Recurrent renewal, a case of that principle: along a run of any process where every step that is not a renewal lowers a natural-number rank of the configuration, no tail of the run, from whatever step, is free of renewal.",
+      "zh": "复现的更新是该原则的情形：沿任一过程的一次运行，凡不是更新的步都降低配置的一项自然数秩时，该运行从任何一步起的尾段都不是没有更新的。",
+      "declarations": [
+        "Becoming.Run.renewal_recurs"
+      ]
+    },
+    {
+      "en": "Unrenewed drawdown, a case of that principle: along a run of any process, where from step T on a condition's level never rises across a step and falls across every step at which a formation is active, the formation is not active at arbitrarily late steps.",
+      "zh": "无更新的汲取是该原则的情形：沿任一过程的一次运行，从第 T 步起某条件的水平跨任一步都不上升、且在某形成活跃的每一步都下降时，该形成不在任意晚的步活跃。",
+      "declarations": [
+        "Becoming.Conditions.drawdown_not_recurring",
+        "RelationalRenewal.unrenewed_drawdown_finite"
+      ]
+    },
+    {
+      "en": "In a process where a condition gains one unit a step and the move is the amount drawn, the runs drawing one unit and two units a step start at one configuration, with the focal formation active at every step of both: drawing one, it renews; drawing two, it consumes the condition, and in that run the sustaining formation, which depends on it at need one, is inactive at every step from one on.",
+      "zh": "在条件每步增一单位、动作即汲取量的过程中，每步汲取一单位与两单位的两次运行始于同一配置，焦点形成在两者的每一步都活跃：汲取一单位时它更新；汲取两单位时它消耗该条件，该运行中以需要量一依存于该条件的维持形成从第一步起每步都不活跃。",
+      "declarations": [
+        "Becoming.Renewable.class_belongs_to_the_run",
+        "Becoming.Renewable.process",
+        "Becoming.Renewable.withinRenewal",
+        "Becoming.Renewable.beyondRenewal",
+        "Becoming.Renewable.conditions"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "条件水平、活跃、依存（及其水平）与汲取是配置上的可观测量；依存与汲取不随配置变化。",
       "en": "Levels of conditions, activity, dependence (with its level) and drawing are observables of configurations; dependence and drawing do not vary with the configuration."
     },
     {
-      "zh": "living 取整段运行上的关系读法（活跃且不消耗），是公开的读法选择，不是被证明的对应；经共同条件的关系属 significance-through-a-common-condition。",
-      "en": "`living` is the whole-run relational reading (active and not consuming), a disclosed reading choice, not a proved correspondence; relation through a common condition is significance-through-a-common-condition's."
+      "zh": "living 取整段运行上的关系读法（活跃且不消耗），是公开的读法选择，不是被证明的对应。",
+      "en": "`living` is the whole-run relational reading (active and not consuming), a disclosed reading choice, not a proved correspondence."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "It proves none of self-significance, both neutralities, A, C, L or the practical commitments, and binds no position that rejects them.",
+      "zh": "不证明自身意义、两种中立、A、C、L 或实践承诺，不约束拒绝它们的立场。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The three bounds are cases of one principle, an organization of known bounds rather than new mathematics.",
+      "zh": "三条界是同一原则的情形，这是已知之界的组织，不是新数学。",
+      "kind": "scope"
+    },
+    {
+      "en": "The principle is not shown to give the well-founded form of recurrent renewal, more general than a natural-number rank.",
+      "zh": "未表明该原则给出复现更新的良基形式，该形式比自然数秩更一般。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Neither the philosophical warrant for the whole-run relational reading nor that it is the right reading of 生生 is shown.",
+      "zh": "整段运行上的关系读法的哲学根据，以及它是否为生生的正确读法，都未表明。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The reading is of the whole run, relative to that run, with dependence and drawing fixed and no component of further generation; no correspondence discipline for conditions is stated for it.",
+      "zh": "读法是整段运行上的，相对于该运行，依存与汲取固定，不含继续生成的成分；没有为它陈述条件的对应纪律。",
+      "kind": "scope"
+    },
+    {
+      "en": "A formation's class depends on its identity across steps; a condition's class does not.",
+      "zh": "形成的类依赖于跨步的同一，条件的类不依赖。",
+      "kind": "scope"
+    },
+    {
+      "en": "The renewable witness has no feedback: its loss beyond renewal lasts only while drawing exceeds renewal, so it shows no irreversible loss.",
+      "zh": "可更新条件的见证没有反馈：超出更新的损失只在汲取超出更新时持续，所以它不表明不可逆的损失。",
+      "kind": "scope",
+      "witness": "Becoming.Renewable.beyondRenewal"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of the core modules Becoming.Renewal, Labelled, Frame, Ranking, Metaethics and ValuationFrames and of the foundation module RelationalRenewal are bound to passing receipts under becoming-checks, each reporting an empty axiom list for every cited declaration; the checker verifies that the core compiles from Lean's prelude alone. Bridge and RenewalComparison are provenance. Author counterreview in the integration note; four independent reviews read it, and their corrections were taken.",
+    "zh": "Lean 4.29.1 合并检查器实查：核心模块 Becoming.Renewal、Labelled、Frame、Ranking、Metaethics、ValuationFrames 与基础模块 RelationalRenewal 的当前字节绑定 becoming-checks 下通过的回执，所引声明的公理报告皆空；检查器并核对核心只用 Lean 前导即可编译。Bridge 与 RenewalComparison 是来源。作者反审见整合文档；四次独立审查读过它，其更正已采纳。"
+  },
+  "next_delta": {
+    "en": "Extend the correspondence discipline for conditions to the whole-run reading; give a reading independent of the run, connected to the universal reason; establish the empirical correspondence of common conditions.",
+    "zh": "把条件的对应纪律推广到整段读法；给出不依赖运行、并与普遍理由接通的读法；确立共同条件的经验对应。"
+  },
   "correspondence": {
-    "zh": "形成与条件是同一展开中的分析角色，不是独立实体或价值所有者。什么算条件、什么算参与决定连通，由 significance-through-a-common-condition 陈述，并附其关于惰性条件之限；过粗的共同条件使 living 变空（独立审查 Q10），condition-correspondence-discipline 不解决此点。读法相对于一次运行。可观测量与实际历史的对应、共同条件（如生物圈、气候）是否真被所有活的形成参与，以及关系读法是否为生生的正确读法，都是应用或哲学上的对应义务。",
-    "en": "Formations and conditions are analytic roles in one unfolding, not independent entities or owners of value. What counts as a condition and as participation decides connection, which significance-through-a-common-condition states with its caveat on idle conditions; a too coarse common condition empties living (independent review Q10), which condition-correspondence-discipline does not resolve. The reading is relative to a run. The correspondence of observables to an actual history, whether a common condition (such as the biosphere or climate) is in fact participated in by every living formation, and whether the relational reading is the right reading of 生生 are application or philosophical duties."
+    "en": "Formations and conditions are analytic roles in one unfolding, not independent entities or owners of value. What counts as a condition and as participation decides connection, which significance-through-a-common-condition states with its caveat on idle conditions; a too coarse common condition empties living, which condition-correspondence-discipline does not resolve. The reading is relative to a run. The correspondence of observables to an actual history, whether a common condition (such as the biosphere or climate) is in fact participated in by every living formation, and whether the relational reading is the right reading of 生生 are application or philosophical duties.",
+    "zh": "形成与条件是同一展开中的分析角色，不是独立实体或价值所有者。什么算条件、什么算参与决定连通，由 significance-through-a-common-condition 陈述，并附其关于惰性条件之限；过粗的共同条件使 living 变空，condition-correspondence-discipline 不解决此点。读法相对于一次运行。可观测量与实际历史的对应、共同条件（如生物圈、气候）是否真被所有活的形成参与，以及关系读法是否为生生的正确读法，都是应用或哲学上的对应义务。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean",
   "aliases": [
@@ -141,39 +243,29 @@
         "zh": "该结果给出一条条件的对应纪律：只有交互才经由条件相关；惰性条件不再免费连通，在声明的类中连通仍成立。",
         "en": "That result states a correspondence discipline for conditions: only interaction relates through a condition; idle conditions no longer connect for free, and connection holds for a declared class."
       }
-    }
-  ],
-  "counterexamples": [
+    },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean",
+      "id": "becoming-stepwise-reading",
       "detail": {
-        "zh": "可更新条件的模型没有反馈：超出更新的运行的损失只因汲取持续超出更新而持续；不可逆损失需要 RelationalRenewal 定律族的反馈。",
-        "en": "The renewable model has no feedback: the loss in the run beyond renewal persists only because drawing keeps exceeding renewal; irreversible loss needs the feedback of the RelationalRenewal law family."
+        "en": "Reads step by step what this record reads over the whole run: living as active and not undermining.",
+        "zh": "逐步读出本记录在整段运行上所读者：living 读作活跃且不侵蚀。"
       }
     },
     {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "id": "becoming-dependence-dynamics",
       "detail": {
-        "zh": "依存是静态的，读法是整段运行上的而非逐步的；两者都继承自既有模块。本结果在此范围内成立；放宽两者的是 becoming-dependence-dynamics 与 becoming-stepwise-reading（整合文档 §6）。",
-        "en": "Dependence is static and the reading is whole-run rather than stepwise; both are inherited from existing modules. This result holds at that scope; becoming-dependence-dynamics and becoming-stepwise-reading relax both (integration note §6)."
+        "en": "Lets dependence vary with the configuration, which the reading here takes as fixed.",
+        "zh": "让依存随配置变化，这里的读法则取依存为固定。"
       }
     },
     {
-      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-RENEWAL-READING-REVIEW.md",
+      "id": "identity-across-steps",
       "detail": {
-        "zh": "独立审查：关系读法的哲学根据尚未确立；“消耗本身是一种已形成的关系”已撤回，改为共同参与；“连通由展开给出”改为在对应纪律下由共同条件给出。",
-        "en": "Independent review: the philosophical warrant for the relational reading is not established; “consumption is itself a formed relation” is withdrawn in favour of co-participation, and “connection is given by the unfolding” becomes “given by a common condition under a correspondence discipline”."
+        "en": "There following a formation across steps depends on who continues whom; a formation's class here rests on that identity, a condition's does not.",
+        "zh": "那里跨步追随一个形成取决于谁延续谁；这里形成的类依赖于这种同一，条件的类不依赖。"
       }
     }
   ],
-  "limitations": {
-    "zh": "不证明自身意义、关系与立场中立、A、C、L 或 J1–J4，不约束拒绝它们的立场。界的统一是组织性的，不是新数学；ContinuationRenewal 的良基形式不由该原则导出。关系读法是公开的读法选择；它是否为生生的正确读法，不在本结果内。条件的对应纪律只对逐步读法陈述（condition-correspondence-discipline）；读法相对于一次运行，不含继续生成的成分。形成的类（RenewingIn、ConsumingIn）依赖跨步的同一，条件的类不依赖（identity-across-steps）。",
-    "en": "Proves none of self-significance, both neutralities, A, C, L or J1–J4; binds none rejecting them. The unification of bounds is organizational, not new mathematics; ContinuationRenewal's well-founded form is not derived from the principle. The relational reading is a disclosed reading choice; whether it is the right reading of 生生 lies outside this result. The correspondence discipline for conditions is stated for the stepwise reading only (condition-correspondence-discipline); the reading is relative to a run and includes no component of further generation. A formation's class (RenewingIn, ConsumingIn) depends on identity across steps, while a condition's class does not (identity-across-steps)."
-  },
-  "validation_scope": {
-    "zh": "2026-10-14：Becoming.Bridge 的当前字节由合并检查器回执 20261013T204910.042715Z 绑定（通过：包 85 个模块，4861 项定理、6856 项声明审计，源声明公理报告全空；核心闭包 86 个模块从内置前导编译）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Renewal 6 项定理与 Becoming.Metaethics 读法一节 6 项定理及桥接层的 living_iff_relational 全部空依赖。控制例“有共同条件的运行在关系读法下连通”不计为新定理；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致。作者反审见整合文档 §4、§6；另一 agent（Claude Opus 5.5，未参与撰写）作了独立审查（BECOMING-RENEWAL-READING-REVIEW.md），其更正在整合文档 §7 处理；第四次独立审查（BECOMING-P9B-P10-P11-REVIEW.md）更正对应中的一句，见 §15；第五次独立审查（BECOMING-P11B-P12-REVIEW.md）要求注明形成的类对跨步同一的依赖，见 §19；第六次独立审查（BECOMING-P13-P14-P12B-REVIEW.md）接受这一注明，见 §22。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。 P89（2026-10-13）：Bridge 的旧声明保持，四项新增适配已实查且公理报告为空；本记录的 Bridge 绑定转到本次冻结回执，其余既有证明保留各自原回执，不将适配另计为独立成果。",
-    "en": "14 October 2026: the current bytes of Becoming.Bridge are bound to consolidated receipt 20261013T204910.042715Z (passed: 85 package modules, 4861 theorems, 6856 declaration audits, every source declaration with an empty axiom report; the 86-module core closure compiles from the prelude). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): Becoming.Renewal's 6 theorems and the 6 theorems of Becoming.Metaethics' reading section with the bridge's living_iff_relational all have empty axiom reports. The control that a run with a common condition is connected under the relational reading is not counted; the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts. The author's counterreview is in §§4 and 6 of the integration note; a separate agent (Claude Opus 5.5, not an author) reviewed it independently (BECOMING-RENEWAL-READING-REVIEW.md), and its corrections are handled in §7; a fourth independent review (BECOMING-P9B-P10-P11-REVIEW.md) corrected one sentence of the correspondence, see §15; a fifth (BECOMING-P11B-P12-REVIEW.md) asked that the dependence of formation classes on identity across steps be noted, see §19; a sixth (BECOMING-P13-P14-P12B-REVIEW.md) accepted that note, see §22. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). P89 (13 October 2026): prior Bridge declarations remain; four added adapters are checked with empty axiom reports. This record binds Bridge to the new frozen receipt while other proofs retain their original receipts; adapters are not independent results."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Renewal.lean",
@@ -181,7 +273,8 @@
       "sha256": "23efa4c2ed7a38091b2d26cf42aee5a0c6a4c140ed4f67595f5389e8ed6e3382",
       "declarations": [
         "Becoming.Conditions",
-        "Becoming.falls_not_recurring"
+        "Becoming.falls_not_recurring",
+        "Becoming.Renewable.conditions"
       ]
     },
     {
@@ -194,7 +287,11 @@
         "Becoming.no_execution_of_depletion",
         "Becoming.Run.renewal_recurs",
         "Becoming.Conditions.drawdown_not_recurring",
-        "Becoming.Renewable.class_belongs_to_the_run"
+        "Becoming.Renewable.class_belongs_to_the_run",
+        "Becoming.Web.conditions_along",
+        "Becoming.Renewable.process",
+        "Becoming.Renewable.withinRenewal",
+        "Becoming.Renewable.beyondRenewal"
       ]
     },
     {
@@ -490,10 +587,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "把条件的对应纪律推广到整段读法；不依赖运行的读法及其与 universal_reason 的接通；共同条件的经验对应。",
-    "en": "Extend the correspondence discipline for conditions to the whole-run reading; a run-independent reading connected to universal_reason; empirical correspondence of common conditions."
-  },
   "history": [
     {
       "zh": "2026-10-09：应 Ren“你自己全改了吧……先更新好计划，然后再一步步完整完成，保持代码和整体结构优雅”新增，作为整合计划 P3b，并完成 metaethical-core-characterization 的下一步（living 与 related 的动力学来源）。",
@@ -576,6 +669,28 @@
     {
       "en": "27 October 2026, board item DF2 (study section 426): the statement says what the record keeps, the run-class laws (every run a web the classes apply to, a falling natural observable does not recur, and from one configuration one run can renew and another consume); connection through a common condition and transmission along co-participation, with their hypothesis, counterexample and five aliases, moved to significance-through-a-common-condition, at home in 07 §3.1. The run-class laws are unchanged.",
       "zh": "2026年10月27日，工作板条目 DF2（研究第 426 节）：陈述改为本记录所保留的运行类律（每次运行都是这些类所适用之网，下降的自然数可观测量不再复现，自同一配置一次运行可以更新、另一次可以消耗）；经共同条件的连通与沿共同参与的传递，连同其假设、反例与五个别名，移至 significance-through-a-common-condition，其家在 07 §3.1。运行类律不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): title and statement kept; the claim split into six laws, each read against its declarations in Renewal.lean, Labelled.lean and RelationalRenewal.lean (a run read as one unfolding, the principle, depletion, recurrent renewal, unrenewed drawdown, the class belonging to the run), the negated universals kept as the Lean has them; the limitations and the three counterexamples, none of which a declaration witnesses, to seven does-not-show items, the standard boundaries no-ethical-premise and discrete-steps and three related entries (becoming-stepwise-reading, becoming-dependence-dynamics, identity-across-steps); the retired label J1–J4 replaced by the practical commitments; the second hypothesis's pointer to significance-through-a-common-condition cut, that record depending on this one; a review-item label cut from the correspondence; Web.conditions_along, Renewable.process, Renewable.withinRenewal and Renewable.beyondRenewal added to Labelled.lean's references and Renewable.conditions to Renewal.lean's; no premise, status, source hash or proof binding changed. Every earlier sentence is mapped in [becoming-renewal-reading.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-renewal-reading.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：标题与陈述保留；主张拆为六条规律，各条对照 Renewal.lean、Labelled.lean 与 RelationalRenewal.lean 中的声明核读（运行读作一个展开、原则、耗竭、复现的更新、无更新的汲取、类属于运行），否定全称按 Lean 保留；限制与三条反例（无一由声明见证）改为七条“未表明”、通用边界 no-ethical-premise、discrete-steps 与三条相关条目（becoming-stepwise-reading、becoming-dependence-dynamics、identity-across-steps）；退役标签 J1–J4 改为实践承诺；第二条前提中指向 significance-through-a-common-condition 的一句删去（该记录依赖于本记录）；对应中删去一处审查条目编号；Web.conditions_along、Renewable.process、Renewable.withinRenewal 与 Renewable.beyondRenewal 加入 Labelled.lean 的引用，Renewable.conditions 加入 Renewal.lean 的引用；前提、状态、来源哈希与证明绑定均未改变。每句旧文本的去向见 [becoming-renewal-reading.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-renewal-reading.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/1179e425742b01e1/becoming-renewal-reading.json",
+      "sha256": "1179e425742b01e1f7fce557ddfdb975a8a3b2f4c63ec1f4d3fbb6dc85e50c14",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/7d3648397024ff15/becoming-renewal-reading.json",
+      "sha256": "7d3648397024ff151ce56f3e45d392dc84d040c0fcd346974f69d6e133553b94",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

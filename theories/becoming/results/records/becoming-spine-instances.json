@@ -42,9 +42,7 @@
         "Becoming.Jointly",
         "Becoming.PreservesBundles",
         "Becoming.Frame.map_preserves",
-        "Becoming.Frame.lift_reflects",
-        "Becoming.Reach.map",
-        "Becoming.Reach.lift"
+        "Becoming.Frame.lift_reflects"
       ]
     },
     {
@@ -65,8 +63,8 @@
       ]
     },
     {
-      "en": "Judging is a one-step process: at a configuration under judgment, an admissible response closes the judgment. A response is a common response of that process, over the belief that sees a set of configurations, exactly where it is admissible at every configuration of the set; a common response stays one as belief narrows.",
-      "zh": "判断是一步过程：在受判断的配置处，一个可容许的回应结束判断。一个回应是该过程在看见一组配置的信念上的共同回应，恰当它在这组的每个配置处可容许；信念收窄时共同回应仍是共同回应。",
+      "en": "Judging is a one-step process: at a configuration under judgment, an admissible response closes the judgment. A response is a common response of that process (one move, every step safe, every configuration a goal), over the belief that sees a set of configurations, exactly where it is admissible at every configuration of the set; a common response stays one as belief narrows.",
+      "zh": "判断是一步过程：在受判断的配置处，一个可容许的回应结束判断。一个回应是该过程（一个动作，每步安全，每个配置都是目标）在看见一组配置的信念上的共同回应，恰当它在这组的每个配置处可容许；信念收窄时共同回应仍是共同回应。",
       "declarations": [
         "Becoming.judgeProcess",
         "Becoming.sees",
@@ -202,8 +200,8 @@
       ]
     },
     {
-      "en": "In the periphery, with Mathlib: a policy on observations implements correction over admitted histories exactly where its action on each observation value is a common response of the judgment on that value's cell, the admitted histories showing it; a common action exists exactly where every cell has a common response.",
-      "zh": "在外围（用 Mathlib）：观察上的策略在被容许的历史上实施纠正，恰当它在每个观察值的格（显示该值的被容许历史）上的行动是判断的共同回应；共同行动存在，恰当每个格都有共同回应。",
+      "en": "In the periphery, with Mathlib: a policy on observations implements correction over admitted histories exactly where its action on each observation value is a common response of the judgment (one move, every step safe, every configuration a goal) on that value's cell, the admitted histories showing it; a common action exists exactly where every cell has a common response.",
+      "zh": "在外围（用 Mathlib）：观察上的策略在被容许的历史上实施纠正，恰当它在每个观察值的格（显示该值的被容许历史）上的行动是判断（一个动作，每步安全，每个配置都是目标）的共同回应；共同行动存在，恰当每个格都有共同回应。",
       "declarations": [
         "Becoming.cell",
         "Becoming.implements_iff_commonResponse",
@@ -213,8 +211,8 @@
       ]
     },
     {
-      "en": "In the periphery, with Mathlib: a choice is safe at an observation value exactly where it is a common response of the judgment on the worlds showing that value; where a finer observation determines a coarser one, implementing correction and a safe choice carry from the coarser to the finer, by the narrowing of common responses.",
-      "zh": "在外围（用 Mathlib）：一个选择在一个观察值处安全，恰当它是判断在显示该值的世界上的共同回应；较细的观察决定较粗的观察时，实施纠正与安全选择经共同回应的收窄从较粗传到较细。",
+      "en": "In the periphery, with Mathlib: a choice is safe at an observation value exactly where it is a common response of the judgment (one move, every step safe, every configuration a goal) on the worlds showing that value; where a finer observation determines a coarser one, implementing correction and a safe choice carry from the coarser to the finer, by the narrowing of common responses.",
+      "zh": "在外围（用 Mathlib）：一个选择在一个观察值处安全，恰当它是判断（一个动作，每步安全，每个配置都是目标）在显示该值的世界上的共同回应；较细的观察决定较粗的观察时，实施纠正与安全选择经共同回应的收窄从较粗传到较细。",
       "declarations": [
         "Becoming.safeOn_iff_commonResponse",
         "ObservationChange.SafeOn",
@@ -222,12 +220,20 @@
         "Becoming.safeOn_refine",
         "Becoming.commonResponse_antitone"
       ]
+    },
+    {
+      "en": "Reachability carries along a map preserving steps: what is reachable from a configuration maps to what is reachable from its image. Where every step from the image of a configuration lifts to a step from it, whatever is reachable from an image is the image of something reachable from the configuration.",
+      "zh": "可达性沿保持步的映射传递：从一个配置可达者映为从其像可达者。从每个配置之像出发的每一步都能提升为从该配置出发的一步时，从一个像可达的，都是从该配置可达者之像。",
+      "declarations": [
+        "Becoming.Reach.map",
+        "Becoming.Reach.lift"
+      ]
     }
   ],
   "hypotheses": [
     {
-      "zh": "桥接定理是定义层面的等同，不引入规范前提；它们只搬运定理，原定理需要的外给前提照旧需要。",
-      "en": "The bridge theorems are definitional identifications and add no normative premise; they transport theorems, and the supplied premises the original theorems need are still needed."
+      "zh": "桥接定理把外围的接口等同于脊柱的接口（若干按定义，其余经链与列表上的简短证明），不引入规范前提；它们只搬运定理，原定理需要的外给前提照旧需要。",
+      "en": "The bridge theorems identify the periphery's interfaces with the spine's (several by definition, the others by short proofs on chains and lists) and add no normative premise; they transport theorems, and the supplied premises the original theorems need are still needed."
     },
     {
       "zh": "提升后的结果以比较原则 C、提升后的实践表述或选择协调为外给前提；L 取保守规则“每个结果都优于每个结果”，作为默认，更强规则是可选承诺。",
@@ -240,8 +246,8 @@
   ],
   "does_not_show": [
     {
-      "en": "The identifications prove none of the premises of the theorems they carry over: the meaning of history types and the warrant of supplied relations are supplied with them.",
-      "zh": "这些等同不证明所搬运定理的任何前提：历史类型的含义与外给关系的根据随它们一起由外部给出。",
+      "en": "The identifications prove none of the premises of the theorems they carry over: the meaning of history types and the normative warrant of supplied relations are supplied with them.",
+      "zh": "这些等同不证明所搬运定理的任何前提：历史类型的含义与外给关系的规范根据随它们一起由外部给出。",
       "kind": "non-implication"
     },
     {
@@ -266,8 +272,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "Concrete models and the algebra of relational boundaries are not bridged: they have no core interface to instantiate.",
-      "zh": "具体模型与关系边界的代数没有桥接：它们没有可实例化的核心接口。",
+      "en": "Some modules are not bridged: concrete models (CorrectionParent, ObservationRepair and nine more) and an algebra of relational boundaries (CorrectionRelations), which have no core interface to instantiate.",
+      "zh": "有些模块没有桥接：具体模型（CorrectionParent、ObservationRepair 及另外九个）与关系边界的代数（CorrectionRelations），它们没有可实例化的核心接口。",
       "kind": "scope"
     }
   ],
@@ -291,8 +297,8 @@
     "conditional-not-universal"
   ],
   "validation_scope": {
-    "en": "Machine-checked: the cited core modules and InquirySufficiency are bound to core receipts under becoming-checks (Lean 4.29.1), every cited core declaration with an empty axiom report; CorrectionInquiry, CorrectionBoundary and ObservationChange to periphery receipt correction-inquiry-checks/20261020T161757.201244Z (Lean 4.30.0-rc2, Mathlib ea11ccc0), CorrectionInquiry's declarations with empty axiom reports. The retired Bridge and SeedReachProcesses are bound to core receipt 20261018T235724.886433Z, their cited declarations with empty axiom reports. Author's review only.",
-    "zh": "实查：所引核心模块绑定 becoming-checks 下的核心回执（Lean 4.29.1），所引核心声明公理报告全空；CorrectionInquiry 及其所读的两个模块绑定外围回执 20261020T161757.201244Z（Lean 4.30.0-rc2，Mathlib），CorrectionInquiry 的声明公理报告为空。退役的 Bridge 与 SeedReachProcesses 绑定核心回执 20261018T235724.886433Z，所引声明公理报告为空。仅作者自审。"
+    "en": "Machine-checked: the cited core modules and InquirySufficiency are bound to core receipts under becoming-checks (Lean 4.29.1), every cited core declaration with an empty axiom report; CorrectionInquiry, CorrectionBoundary and ObservationChange to periphery receipt correction-inquiry-checks/20261020T161757.201244Z (Lean 4.30.0-rc2, Mathlib ea11ccc0), CorrectionInquiry's declarations with empty axiom reports. The retired Bridge and SeedReachProcesses are unbound: core receipt 20261018T235724.886433Z last checked their current bytes, with empty axiom reports. Author's review only.",
+    "zh": "实查：所引核心模块绑定 becoming-checks 下的核心回执（Lean 4.29.1），所引核心声明公理报告全空；CorrectionInquiry 及其所读的两个模块绑定外围回执 20261020T161757.201244Z（Lean 4.30.0-rc2，Mathlib），CorrectionInquiry 的声明公理报告为空。退役的 Bridge 与 SeedReachProcesses 未绑定，核心回执 20261018T235724.886433Z 末次实查其当前字节，公理报告为空。仅作者自审。"
   },
   "next_delta": {
     "en": "Compare lifting rules stronger than the conservative one (some outcome better, expectation, risk): which of the lifted laws of comparison, reason and survival each keeps, and what each commits to.",
@@ -400,22 +406,22 @@
     {
       "id": "positioned-positive-reason",
       "detail": {
-        "zh": "securesPositiveGround_iff 与 positionedArticulation_iff 表明核心的确保的正面根据与 D 就是该结果的定义。",
-        "en": "securesPositiveGround_iff and positionedArticulation_iff show that the core's secured positive ground and D are that result's definitions."
+        "zh": "securesPositiveGround_iff 与 positionedArticulation_iff 表明核心的确保新内容与 D 就是该结果的确保的正面根据与定位阐明。",
+        "en": "securesPositiveGround_iff and positionedArticulation_iff show that the core's securing of new content and D are that result's secured positive ground and positioned articulation."
       }
     },
     {
       "id": "levels-of-closure",
       "detail": {
-        "zh": "核心的闭包 WithinClosure（Becoming.Feedback）恰是这里从一个种子出发的种子—边闭包（withinClosure_iff_closure，Becoming.EdgeClosure）。",
-        "en": "The core's closure WithinClosure (Becoming.Feedback) is exactly the seed–edge closure here from one seed (withinClosure_iff_closure, Becoming.EdgeClosure)."
+        "zh": "核心的闭包 WithinClosure（Becoming.Frame）恰是这里从一个种子出发的种子—边闭包（withinClosure_iff_closure，Becoming.EdgeClosure）。",
+        "en": "The core's closure WithinClosure (Becoming.Frame) is exactly the seed–edge closure here from one seed (withinClosure_iff_closure, Becoming.EdgeClosure)."
       }
     },
     {
       "id": "continuation-condition-yields-living-significance",
       "detail": {
-        "zh": "桥接的 Discharge 一节在那里：延续条件之下外围的 G0 对每个清单成立，外围的三项定理由延续条件推出。",
-        "en": "The bridge's Discharge section belongs there: under the continuation condition the periphery's G0 holds for every inventory, and three of the periphery's theorems follow from the continuation condition."
+        "zh": "桥接的 Discharge 一节在那里：延续条件之下外围的 GenerativeComparison.G0 对每个清单成立，外围的三项定理由延续条件推出。",
+        "en": "The bridge's Discharge section belongs there: under the continuation condition the periphery's GenerativeComparison.G0 holds for every inventory, and three of the periphery's theorems follow from the continuation condition."
       }
     },
     {
@@ -433,506 +439,12 @@
       }
     }
   ],
-  "references": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean",
-      "role": "provenance",
-      "sha256": "1c90a7f2788e21264c20a65e979ead06c0b3c5b4ce1d0b2831fe452f060eab36",
-      "declarations": [
-        "Becoming.chain_iff_reach",
-        "Becoming.Frame.continuations",
-        "Becoming.Frame.map_preserves_bundles",
-        "Becoming.Frame.lift_reflects_bundles",
-        "Becoming.commonResponse_is_robust",
-        "Becoming.robust_iff_commonResponse",
-        "Becoming.guarantees_iff_completes",
-        "Becoming.liveStep_iff_enabled",
-        "Becoming.after_observe_iff",
-        "Becoming.revise_is_after",
-        "Becoming.situation_enabled_iff",
-        "Becoming.situation_lift_iff",
-        "Becoming.articulation_iff_lifted",
-        "Becoming.Frame.inventory",
-        "Becoming.g0_iff",
-        "Becoming.extension_iff",
-        "Becoming.comparison_iff",
-        "Becoming.securesPositiveGround_iff",
-        "Becoming.positionedArticulation_iff",
-        "Becoming.BetterAt"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean",
-      "role": "proof",
-      "sha256": "b76af036932ea87c820263922caab79b14852fcda6498d431ac7e6c5ad0bd18e",
-      "declarations": [
-        "Becoming.LiftExtension",
-        "Becoming.comparison_lifts",
-        "Becoming.LiftedArticulation",
-        "Becoming.lifted_comparison_supplies_reason",
-        "Becoming.LiftSurvives",
-        "Becoming.LiftCoherence",
-        "Becoming.lift_coherent_selection_survives",
-        "Becoming.lift_continual_improvement_has_no_survivor",
-        "Becoming.LiftModel.some_outcome_does_not_lift",
-        "Becoming.LiftModel.lift_needs_live_middle"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/SeedReachProcesses.lean",
-      "role": "provenance",
-      "sha256": "75e9996459fe809bb91f98106fc527e85951fd20e9a71e068592fde68d63f48c",
-      "declarations": [
-        "Becoming.reached_iff_closure",
-        "Becoming.cutReach_iff_closure"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EdgeClosure.lean",
-      "role": "proof",
-      "sha256": "bc67b6ed7e70a6c3cec89ed790d20fb6d29a1a305ef16c3f5a845fadffb65f3b",
-      "declarations": [
-        "Becoming.edgeProcess",
-        "Becoming.Closure",
-        "Becoming.Closure.base",
-        "Becoming.Closure.step",
-        "Becoming.Closure.induction",
-        "Becoming.withinClosure_iff_closure"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
-      "role": "proof",
-      "sha256": "ba694373b40b71a95dad4e8b2b3200841047ccd228f731edd5315b8642c4fcf8",
-      "declarations": [
-        "Becoming.Reach.map",
-        "Becoming.Reach.lift",
-        "Becoming.Invariant.reach",
-        "Becoming.Frame"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
-      "role": "proof",
-      "sha256": "659164aee82f74c802700e5e7e4118721400cf4b09233a743c2f9250b3d83584",
-      "declarations": [
-        "Becoming.SecuresNewContent",
-        "Becoming.PositionedArticulation"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
-      "role": "proof",
-      "sha256": "3bd4a208c5c0da12a3e24093fe3c67738185a97e979dd0fc09142c714fa1299c",
-      "declarations": [
-        "Becoming.universal_reason"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Extension.lean",
-      "role": "proof",
-      "sha256": "4d3afe46d3d4b297acc6a1e6b126ad2e0f2d08dfa9205fdcf2aa32bb7b5bcbf1",
-      "declarations": [
-        "Becoming.Extension",
-        "Becoming.Comparison",
-        "Becoming.LiftBetter",
-        "Becoming.LivingSignificance"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/WholeGroundCoverage.lean",
-      "role": "provenance",
-      "sha256": "8ddf51311583755908ba843986f262f7a0b4071764031a6fa1a1bf2c0dbd512a",
-      "declarations": [
-        "WholeGroundCoverage.Reached"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/CutCoverageAudit.lean",
-      "role": "provenance",
-      "sha256": "4e6649999c96112c1f746d377fbfdacabe10e6ed2d12a7368f480b3986e38669",
-      "declarations": [
-        "UniversalEthics.CutCoverageAudit.Reach"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/EvaluatorGrounding.lean",
-      "role": "provenance",
-      "sha256": "a002d04a7c7334830a30f22d6c16f2ce6d7d918bc077b132281208b847b80b2b",
-      "declarations": [
-        "EvaluatorGrounding.Chain"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/JointContinuationClassification.lean",
-      "role": "provenance",
-      "sha256": "e508683cc80832744a28f44c69f9c2561701cd099219448b75cfdb474c0786ee",
-      "declarations": [
-        "JointContinuationClassification.Continuations",
-        "JointContinuationClassification.faithful_history_transport_preserves_joint_bundles"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalJudgment.lean",
-      "role": "provenance",
-      "sha256": "e3e5d866aa755650414eb85f8d3e8a1ba7166914dfc16d2e907f9fa9e0c451af",
-      "declarations": [
-        "PracticalJudgment.Robust",
-        "PracticalJudgment.Better"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalReach.lean",
-      "role": "provenance",
-      "sha256": "1b13fcc34fed86de83e6f09dae82b321422195f31fb97d37024d7143183d0e7b",
-      "declarations": [
-        "PracticalReach.Guarantees"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/StandardsBridge.lean",
-      "role": "provenance",
-      "sha256": "f061dbc44da5cdf11ac5ff79b3f89558c7e177b23b9f121c1048c16ed353a42a",
-      "declarations": [
-        "Generative.StandardsBridge.revise"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionInfrastructure.lean",
-      "role": "provenance",
-      "sha256": "132fc3763fea09962c00f28bcdaafedc046244827e26b6215772eb0a48e91835",
-      "declarations": [
-        "CorrectionInfrastructure.LiveStep"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GenerativeComparison.lean",
-      "role": "provenance",
-      "sha256": "948d36b4cddc0b2289219604464bd38eb6e607183b157cee1075d50fb9797a03",
-      "declarations": [
-        "GenerativeComparison.Situation",
-        "GenerativeComparison.PracticalArticulation",
-        "GenerativeComparison.GenerativeExtension",
-        "GenerativeComparison.Inventory",
-        "GenerativeComparison.G0",
-        "GenerativeComparison.ComparisonPrinciple"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositionedPositiveReason.lean",
-      "role": "provenance",
-      "sha256": "95cf5800f6827d1896cac186113cccf9561768693c6d6e867a3626cd04fc8408",
-      "declarations": [
-        "PositionedPositiveReason.SecuresPositiveGround",
-        "PositionedPositiveReason.PositionedArticulation"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/sufficiency/InquirySufficiency.lean",
-      "role": "proof",
-      "sha256": "d4a95ca842f46ffa9c23eea92d04cdb45027dc6842148d3d0bdc17cd65ad18f2",
-      "declarations": [
-        "Generative.InquirySufficiency.CommonResponse",
-        "Generative.InquirySufficiency.After"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Inquiry.lean",
-      "role": "proof",
-      "sha256": "bb00f7eb64a4303964415450dc10611359416c2fb14baceab89f8f73d1bed604",
-      "declarations": [
-        "Becoming.judgeProcess",
-        "Becoming.sees",
-        "Becoming.commonResponse_judge_iff",
-        "Becoming.commonResponse_antitone"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionInquiry.lean",
-      "role": "proof",
-      "sha256": "cbb3c3a9fcf49f8ca4b15494479fe17d5213234c007608f544fb2b1d2798b6fe",
-      "declarations": [
-        "Becoming.cell",
-        "Becoming.implements_iff_commonResponse",
-        "Becoming.commonAction_iff_commonResponse",
-        "Becoming.implements_refine",
-        "Becoming.safeOn_iff_commonResponse",
-        "Becoming.safeOn_refine"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionBoundary.lean",
-      "role": "proof",
-      "sha256": "1d86d53e01c6780860ff1f6793e5654c161a5a3316cc43d545e1dd2c3c2955ac",
-      "declarations": [
-        "CorrectionBoundary.Implements",
-        "CorrectionBoundary.CommonAction",
-        "CorrectionBoundary.refine_observation"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationChange.lean",
-      "role": "proof",
-      "sha256": "47edeb32ffa0975c65d9264856b83cdbfd934c3acb39bf694da2f66ddcce22cd",
-      "declarations": [
-        "ObservationChange.SafeOn",
-        "ObservationChange.refinement_preserves_safe_choice"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
-      "role": "receipt",
-      "sha256": "48fd7efd02436ec3e2dfd904771bdf1a44f18edaeb55fcc23256e24523a59d19",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T095049.338744Z/verification.json",
-      "role": "receipt",
-      "sha256": "80ec34ce2cb0d9d8a4eecc15a665bad394ec6548982e396ec5105e1a3d99ad02",
-      "declarations": []
-    },
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-INSTANCE-CLASSIFICATION.md",
-      "role": "integration",
-      "sha256": "151be160b97e831c4e09cd74f1ea4e9d1fce7443d08c28d9fa8bd20ad558fb6b",
-      "declarations": []
-    },
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-INSTANCE-CHECKS.json",
-      "role": "integration",
-      "sha256": "0852698a0ec853492d8f9cd5dd8cf268b9cab744409bae9c345af5a1220db20c",
-      "declarations": []
-    },
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md",
-      "role": "statement",
-      "sha256": "39481677948c2c7701b1fd6b9c942dabc0003e06f66fc83b9f85912566f87593",
-      "declarations": []
-    },
-    {
-      "path": "sources/15-codex-theory-conversations/2026-10-09-one-theory-unification.md",
-      "role": "provenance",
-      "sha256": "054c09c4d17c281d401795a90330f5a7c353827b12ec06f73820dd9055c52b41",
-      "declarations": []
-    },
-    {
-      "path": "sources/15-codex-theory-conversations/2026-10-09-pure-core.md",
-      "role": "provenance",
-      "sha256": "f7d31d6df74b8d8a5a44d6b9bafcf0d50cadbe56c43c25b1f6667f6b2f40f4ea",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
-      "role": "receipt",
-      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T163210.426211Z/verification.json",
-      "role": "receipt",
-      "sha256": "20a27676496da965792e40912a2754e4954496525e5641cb7d0708095235734b",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
-      "role": "receipt",
-      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T134446.673561Z/verification.json",
-      "role": "receipt",
-      "sha256": "1182d296bfd637111591eb33277de93d008f28c1436b469969810422b5f7a991",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json",
-      "role": "receipt",
-      "sha256": "c5e118f377ae815cdb1d8afb02bbc5e3fb7ee519d45ab85f12a834fc467e8f0a",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T191422.542444Z/verification.json",
-      "role": "receipt",
-      "sha256": "d87f0ffbdb0bafc510a5b95de2dd83714570dfc1ed7f1a6261578f8cb9125a79",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Bundles.lean",
-      "role": "proof",
-      "sha256": "4055d193bbc130905a315a149089f831af9bf49cd5d9b57a8196be531b98634c",
-      "declarations": [
-        "Becoming.Jointly",
-        "Becoming.CarriesProfiles",
-        "Becoming.Frame.map_preserves",
-        "Becoming.Frame.lift_reflects",
-        "Becoming.preserves_of_transport",
-        "Becoming.PreservesBundles"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Narrowing.lean",
-      "role": "proof",
-      "sha256": "d5c203f58f6d6a7dad66dac076558b00437917bc6bb8deefe3f9cb4dc676355b",
-      "declarations": [
-        "Becoming.Narrowing.after_observe_iff",
-        "Becoming.Narrowing.revise_is_after",
-        "Becoming.Narrowing.revise",
-        "Becoming.Narrowing.observe"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Alternatives.lean",
-      "role": "proof",
-      "sha256": "9eadb20600d8c26388141ea7ef7d0f38131828bffe49907e9241180a72b29e5c",
-      "declarations": [
-        "Becoming.Alternatives.enabled_iff",
-        "Becoming.Alternatives.lift_iff",
-        "Becoming.Alternatives.articulation_iff_lifted",
-        "Becoming.Alternatives",
-        "Becoming.Alternatives.Articulation",
-        "Becoming.Alternatives.process"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lexical.lean",
-      "role": "proof",
-      "sha256": "1c326a77df4cea25bf95130c834195d8d5faa9e809e2f340bf6ceae95634c6db",
-      "declarations": [
-        "Becoming.Lexical.Above",
-        "Becoming.Lexical.BasicPriority"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
-      "role": "proof",
-      "sha256": "4489746718a276ff4c11dad22b815b702c543d5427f2b153cf6a14b7e70e36d0",
-      "declarations": [
-        "Becoming.Lexical.Frame.Above"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T201753.515165Z/verification.json",
-      "role": "receipt",
-      "sha256": "3c40ea48ba97e221d435520ce8abbb1577b04d871cb49bfe7a7e9efd78fe9665",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T090457.012800Z/verification.json",
-      "role": "receipt",
-      "sha256": "73da26fa45a43969d573d4f0f79afeaf50f1b40ecd31082bc842b017a49920b4",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/NarrowingRuns.lean",
-      "role": "proof",
-      "sha256": "07eaa1fcd796e8c23e75cd1fd2b4df5c4c7cccde9fe8c94380c4099534049147",
-      "declarations": [
-        "Becoming.NarrowingRuns.SafeFor",
-        "Becoming.NarrowingRuns.GreatestFor",
-        "Becoming.NarrowingRuns.settles_iff_answer",
-        "Becoming.NarrowingRuns.narrowed_answer_greatest",
-        "Becoming.NarrowingRuns.narrowed_answer_unique",
-        "Becoming.NarrowingRuns.narrowed_answer_unique_of_ext",
-        "Becoming.NarrowingRuns.run_constant",
-        "Becoming.NarrowingRuns.record",
-        "Becoming.NarrowingRuns.run_kept",
-        "Becoming.NarrowingRuns.run_answer_correct",
-        "Becoming.NarrowingRuns.run_answer_greatest",
-        "Becoming.NarrowingRuns.transport_settles_iff"
-      ]
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T133615.720595Z/verification.json",
-      "role": "receipt",
-      "sha256": "b66b9f4f542992d9b2d6b9dbb2c42b7b0085f38c3b61ec79a4bb992650a96906",
-      "declarations": []
-    },
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
-      "role": "integration",
-      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
-      "role": "receipt",
-      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
-      "role": "receipt",
-      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
-      "role": "receipt",
-      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
-      "role": "receipt",
-      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
-      "role": "receipt",
-      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json",
-      "role": "receipt",
-      "sha256": "dead8cbc141ae38108fddc4ff56228e537fb1aacb27e96ef14d50647140a2be0",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
-      "role": "receipt",
-      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261020T161757.201244Z/verification.json",
-      "role": "receipt",
-      "sha256": "65d71fe7e4ebae4f60eb099472875b8d9eb19ed5173d1da729982602d00ded3c",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
-      "role": "receipt",
-      "sha256": "9596c1a0b53bd9a26d9975f2cf00180c6d63402a1459924d1016b3ddbc2edcb6",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
-      "role": "receipt",
-      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
-      "role": "receipt",
-      "sha256": "bc6716274f678eb3aa4648d8dd72508777d74fdc3c02d1fc93caecc54e82c2bf",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
-      "role": "receipt",
-      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
-      "declarations": []
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
-      "role": "receipt",
-      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
-      "declarations": []
-    }
-  ],
+  "references": {
+    "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+    "role": "receipt",
+    "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+    "declarations": []
+  },
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
@@ -1119,8 +631,8 @@
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：验证范围改为：桥接模块自末次实查后已移入历史，当前只查核心重述，不再说其当前字节被绑定，删去本记录绑定桥接一句，并以现行 id 称生生之意义的记录；别名在核心重述桥接规律处改指核心名称（Bundles、Alternatives、Narrowing），只属桥接的名称标为退役；一条相关说明中的“公理”改为“延续条件”；一条依存说明中的标签 G0 改为生生之意义（Lean 名 g0_iff 与外围的 G0 保留）；一条相关说明中的 J（作为 PracticalJudgment 的 J1–J4 之标签）改为实践承诺。主张不变。"
     },
     {
-      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): the title shortened, a statement written from the claim and the home section; the claim split into twenty-one laws, each read against its declarations: the core restatements (EdgeClosure, Bundles, Frame, Inquiry, Narrowing, NarrowingRuns, Alternatives, Lifting, Extension, Metaethics, Lexical, FrontierFrames), the periphery bridge CorrectionInquiry, and, as identifications in the retired bridge, Bridge and SeedReachProcesses at the bytes their last receipt binds; the open-form adapters left to the related result that owns them; the limitations became six does-not-show items, a related entry for the renewal reading and the standard boundary conditional-not-universal; the classification's row, which no declaration witnesses, left the counterexamples for a does-not-show item; the plan section and the label P3b cut from a hypothesis and the correspondence; the next step replaced by the study of stronger lifting rules; withinClosure_iff_closure, Closure.base, Closure.step, Closure.induction, PreservesBundles, commonResponse_antitone, Narrowing.observe and Alternatives.process added to their files' references; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [becoming-spine-instances.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md); the exact earlier record is the first text_versions entry.",
-      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：标题缩短，依主张与归属节写出陈述；主张拆为二十一条规律，各条对照其声明核读：核心重述（EdgeClosure、Bundles、Frame、Inquiry、Narrowing、NarrowingRuns、Alternatives、Lifting、Extension、Metaethics、Lexical、FrontierFrames）、外围桥接 CorrectionInquiry，以及作为退役桥接中等同的 Bridge 与 SeedReachProcesses（按其末次回执绑定的字节）；开放形态适配留给拥有它们的相关结果；限制改为六条“未表明”、一条指向更新读法的相关条目与通用边界 conditional-not-universal；分类页的一行不由任何声明见证，移出反例改为一条“未表明”；前提与对应说明中删去计划节号与标签 P3b；下一步改为研究更强的提升规则；withinClosure_iff_closure、Closure.base、Closure.step、Closure.induction、PreservesBundles、commonResponse_antitone、Narrowing.observe 与 Alternatives.process 加入其文件的引用；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [becoming-spine-instances.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md)；迁移前的完整记录为 text_versions 首项。"
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): the title shortened, a statement written from the claim and the home section; the claim split into twenty-one laws, each read against its declarations: the core restatements (EdgeClosure, Bundles, Frame, Inquiry, Narrowing, NarrowingRuns, Alternatives, Lifting, Extension, Metaethics, Lexical, FrontierFrames), the periphery bridge CorrectionInquiry, and, as identifications in the retired bridge, Bridge and SeedReachProcesses at the bytes their last receipt binds; the open-form adapters left to the related result that owns them; the limitations became four does-not-show items and a related entry for the renewal reading, one does-not-show item was added on the retired bridge's scope, and the standard boundary conditional-not-universal; the classification's row, which no declaration witnesses, left the counterexamples for a sixth does-not-show item; the plan section and the label P3b cut from a hypothesis and the correspondence; the next step replaced by the study of stronger lifting rules; withinClosure_iff_closure, Closure.base, Closure.step, Closure.induction, PreservesBundles, commonResponse_antitone, Narrowing.observe and Alternatives.process added to their files' references; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [becoming-spine-instances.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the evidence paragraph, related entries, the references, does-not-show items, laws, hypotheses, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：标题缩短，依主张与归属节写出陈述；主张拆为二十一条规律，各条对照其声明核读：核心重述（EdgeClosure、Bundles、Frame、Inquiry、Narrowing、NarrowingRuns、Alternatives、Lifting、Extension、Metaethics、Lexical、FrontierFrames）、外围桥接 CorrectionInquiry，以及作为退役桥接中等同的 Bridge 与 SeedReachProcesses（按其末次回执绑定的字节）；开放形态适配留给拥有它们的相关结果；限制改为四条“未表明”与一条指向更新读法的相关条目，另加一条关于退役桥接范围的“未表明”与通用边界 conditional-not-universal；分类页的一行不由任何声明见证，移出反例改为第六条“未表明”；前提与对应说明中删去计划节号与标签 P3b；下一步改为研究更强的提升规则；withinClosure_iff_closure、Closure.base、Closure.step、Closure.induction、PreservesBundles、commonResponse_antitone、Narrowing.observe 与 Alternatives.process 加入其文件的引用；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [becoming-spine-instances.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及证据段、相关条目、引用、“未表明”各项、规律、前提，各条对照所引 Lean 核读。"
     }
   ],
   "text_versions": [
