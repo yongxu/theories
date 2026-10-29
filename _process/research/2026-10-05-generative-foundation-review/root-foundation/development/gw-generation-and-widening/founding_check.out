@@ -1,0 +1,11 @@
+R_Q (within kind): (True, True)
+by name: (False, True)
+all passings: (True, False)
+order 0, along R_Q at (activity, carrier): (True, 31)
+order 0, along passings at (kind, carrier): (True, 31)
+order 1, along passings at (activity, kind): (True, 89)
+order 1 from a b-point: (True, 83)
+cont along R_Q under activity == cont along passings under kind, from supported points: ok
+foundings to step 12: [(0, 'a0', 'c'), (0, 'b0', 'e'), (2, 'a0', 'c2'), (2, 'b0', 'e2'), (4, 'a0', 'c'), (4, 'b0', 'e'), (6, 'a0', 'c2'), (6, 'b0', 'e2'), (8, 'a0', 'c'), (8, 'b0', 'e'), (10, 'a0', 'c2'), (10, 'b0', 'e2')]
+by kind name: (True, False)
+生生 along passings at the kind class, family of a0 and b0 hubs: True
