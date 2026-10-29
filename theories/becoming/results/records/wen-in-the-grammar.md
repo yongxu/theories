@@ -19,9 +19,9 @@
 4. Two moments of a 文 are one state exactly where they lie in one class of the core of its value class along the steps, the steps being the successor law's; a state goes on as itself by the core's constancy; along a law's course the core on moments is the core on configurations; a 文 with a new value at every moment has no continuation under its core. (`Becoming.SameAhead.is_core`, `Becoming.SameAhead.next_by_root`, `Becoming.SameAhead.no_continuation`, `Becoming.Steps.next_is_step`, `Becoming.course_core_iff`)
    - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 5. With at most N states the core of a 文 is read off N + N - 1 steps, and at most N states is at most N classes of the core, each met before N; for a law on a listed world the core is read off N + N - 1 steps, N the list's length. Two 文 read as one net on the sum of their moments have two moments in one class of the core exactly where the courses agree from there; with at most N and N' states, exactly where they agree before N + N' - 1, a length that is exact. (`Becoming.Law.core_iff_below`, `Becoming.TwoCourses.core_exact`, `Becoming.TwoCourses.core_iff`, `Becoming.TwoCourses.core_iff_bounded`, `Becoming.TwoCourses.next`, `Becoming.TwoCourses.orbit_inl`, `Becoming.TwoCourses.orbit_inr`, `Becoming.TwoCourses.value`, `Becoming.core_iff_below`, `Becoming.statesBelow_iff_core`)
-   - *Master laws, by Lean dependency:* finite runs; its declarations reach the grammar.
+   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 6. In a world a list holds, a feature is learnable through a map exactly where configurations in one class of the core of the map's value class have features that agree from some step on; a feature whose class contains that core is learnable, and a core lies in another class's core exactly where it lies in that class. (`Becoming.Law.learnable_iff_core`, `Becoming.Law.learnable_of_core_within`, `Becoming.core_within_core_iff`)
-   - *Master laws, by Lean dependency:* finite runs; its declarations reach the grammar.
+   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

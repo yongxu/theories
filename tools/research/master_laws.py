@@ -32,8 +32,8 @@ This is a measurement of Lean dependency only, as the measure's is. A master law
 anchors occurs, directly or through other constants, in what the declarations state, define or use in a
 proof. That does not make it the reason they hold, nor say they state nothing else. Reaching no anchor says
 none occurs there, not that the law is no case of a master law: Continuity.Balancing states a balance of its
-own and reaches none. A master law's statement on the grammar (08 §7) does not count; only its anchors do, so
-the grammar's own master-law laws show none. The record pages show the result under each law. The check
+own and reaches none. A master law's statement on the grammar (08 §7) is among its anchors. The record
+pages show the result under each law. The check
 reports how many laws the file no longer matches, and whether the core sources, the measure, COVERAGE.json, the
 dump or this tool changed since it was written.
 """
