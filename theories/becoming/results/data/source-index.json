@@ -539,6 +539,8 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/derivations/review/REVIEW-TWINS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/laws/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/laws/REVIEW-LAWS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/lineage/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/lineage/review/REVIEW-LINEAGE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou6-corrections",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou6-corrections/CHANGES.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/PHILOSOPHY-ROUND-1.md",
@@ -1658,6 +1660,25 @@
         "theories/becoming/history/RELATIONS-ACROSS-SCALES.md",
         "theories/becoming/history/UNIFIED-ETHICAL-GROUNDING.md",
         "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md"
+      ]
+    },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/lineage/review/REVIEW-LINEAGE.md": {
+      "title": "Review: OU3f's lineage part (the bridge and the six lineage laws)",
+      "local_links": [
+        "_process/BECOMING-WORKBOARD.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/AUDIT.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/TABLE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/closure/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/laws/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/lineage/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/lineage/review/checks",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/lineage/review/checks/round1-old-base",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/lineage/review/checks/second",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/lineage/scratch-4.log",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/lineage/tree/Becoming",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/lineage/tree/Becoming/Identity.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean"
       ]
     },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md": {
@@ -4967,7 +4988,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Settling.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tail.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T153820.435638Z/verification.json",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T162632.074811Z/verification.json",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedContraction.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean",

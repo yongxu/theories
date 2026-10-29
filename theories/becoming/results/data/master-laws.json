@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261029T153820.435638Z",
- "core_sources_sha256": "d1baf1af14ec7c916a12f2a9b6e9298564be81c0c9da0beae81aa2b5c9beaa8a",
+ "core_receipt": "20261029T162632.074811Z",
+ "core_sources_sha256": "075fad12fcacffbc88724b1c15da15d3b04eb4337383e556114df13647f8c7f1",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -59,12 +59,12 @@
   "laws": 3721,
   "no_declarations": 9,
   "outside": 350,
-  "grammar": 737,
+  "grammar": 739,
   "balance, represented": 645,
   "anchor, not reached": 134,
-  "no master law": 1846,
+  "no master law": 1844,
   "vocabulary_only": 59,
-  "closure": 474,
+  "closure": 476,
   "balance": 815,
   "return": 252,
   "lumping": 83,
@@ -5038,9 +5038,11 @@
      "Becoming.Web.not_not_arisingFrom_covered",
      "Becoming.Web.arisingFrom_not_stopping_covered"
     ],
-    "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 11,
@@ -5048,8 +5050,8 @@
      "Becoming.Web.ceasingFrom_not_stopping_covered"
     ],
     "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "census-balance": [
@@ -9236,7 +9238,9 @@
      "Becoming.Web.ConsumingAlong.merged_candles",
      "Becoming.Web.line_reidentify"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -26917,6 +26921,13 @@
      "Becoming.Web.Includes.trans",
      "Becoming.Web.Keeps.not_mixed",
      "Becoming.Web.Keeps.symm",
+     "Becoming.Web.Lineage.back",
+     "Becoming.Web.Lineage.line",
+     "Becoming.Web.Lineage.onward",
+     "Becoming.Web.Lineage.origin",
+     "Becoming.Web.Lineage.split",
+     "Becoming.Web.Lineage.through",
+     "Becoming.Web.Lineage.unique",
      "Becoming.Web.Mixed.symm",
      "Becoming.Web.Widens.not_keeps",
      "Becoming.Web.Widens.not_mixed",
@@ -26926,6 +26937,7 @@
      "Becoming.Web.active_before",
      "Becoming.Web.ended_for_good",
      "Becoming.Web.inactive_of_not_arising",
+     "Becoming.Web.line_lineage",
      "Becoming.Web.reaches_onward",
      "Becoming.Web.steady_held",
      "Becoming.Web.steps_advance",
