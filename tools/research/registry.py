@@ -345,7 +345,15 @@ def snapshot_directory(settings=None):
 LAW_KEYS = ('en', 'zh', 'declarations', 'statements_at_model')
 AT_MODEL_KEYS = ('declaration', 'of', 'models', 'review')
 # F5's field (architecture/mv/F5-MODEL-STATEMENTS.md): where a law states a row, in the order and words the page uses.
-MODELS = {'occurrence': "a World's occurrence model", 'process': "a process's moves' relations", 'own': 'its own carrier'}
+MODELS = {'occurrence': "a World's occurrence model", 'process': "a process's model", 'own': "the row's own carrier"}
+
+
+def _review_text(path):
+    p = path_in_repo(path)
+    try:
+        return p.read_text() if p is not None and p.is_file() else None
+    except (OSError, UnicodeDecodeError):
+        return None
 
 
 def statements_at_model_errors(r):
@@ -386,6 +394,8 @@ def statements_at_model_errors(r):
                 errors.append(f'law {i}: the row {of} is among the declarations of no other law of the record')
             if review not in reviews:
                 errors.append(f'law {i}: {review} is not a reference of role review in the record')
+            elif (text := _review_text(review)) is not None and not re.search(r'(?<!\w)' + re.escape(d.rsplit('.', 1)[-1]) + r'(?!\w)', text):
+                errors.append(f'law {i}: its review {review} does not name {d}')
     rows = {item['of'] for _, item in items}
     for i, _ in carrying:
         held = sorted(rows & set(names[i]))
@@ -621,33 +631,33 @@ def declared_items(law):
     return [{k: x.get(k) for k in AT_MODEL_KEYS} for x in block if isinstance(x, dict)] if isinstance(block, list) else []
 
 
-def _short(name):
-    return name[len('Becoming.'):] if name.startswith('Becoming.') else name
-
-
 def at_model_notes(r, i, law, result_link, base):
     """F5's lines under law i: its own statements at a model, as the data verified them, and the statements at a model
     of its rows, wherever they are carried. Each appears only while the carrying record declares exactly the items the
-    data read; an item the data did not verify shows nothing."""
+    data read; an item the data did not verify shows nothing. Both mark what is declared and name its review, and an
+    item only on its row's own carrier is not labelled as at a model."""
     m = r.get('_master_laws')
     e = m['laws'].get(i) if m else None
     if not e or e.get('declarations') != law.get('declarations', []):
         return []
+    def label(x):
+        kind = 'At a model' if set(x['models']) & {'occurrence', 'process'} else 'On its own carrier'
+        return f'*{kind} (declared; reviewed in {link(x["review"], base)}):*'
     lines = []
     shown = set(m.get('matched_at_model', []))
     if f'{r.get("id")}:{i}' in shown:
         for x in e['statements_at_model']:
             if x.get('verified'):
-                kept = _listed(['`' + _short(n) + '`' for n in x.get('other_terms', [])]) or 'nothing'
-                lines.append(f'*At a model (declared; reviewed in {link(x["review"], base)}):* `{_short(x["declaration"])}` states '
-                             f'`{_short(x["of"])}` at {_listed([MODELS.get(k, k) for k in x["models"]])}. Computed: its proof reaches '
-                             f'the row, its statement names {_listed([_short(n) for n in x["grammar_terms"]])}, and it keeps {kept} '
-                             'in other terms.')
+                kept = _listed(['`' + n + '`' for n in x.get('other_terms', [])]) or 'nothing'
+                alone = ALONE.get(x.get('row_dependence'), x.get('row_dependence'))
+                lines.append(f'{label(x)} `{x["declaration"]}` states `{x["of"]}` at {_listed([MODELS.get(k, k) for k in x["models"]])}. '
+                             f'Computed: its proof reaches the row; its statement names, directly or through its module\'s definitions, '
+                             f'{_listed(x["grammar_terms"])}; it keeps {kept} in other terms. The row taken alone: {alone}.')
     for x in e.get('stated_at_model', []):
         if f'{x["record"]}:{x["law"]}' in shown:
             where = f'law {x["law"]} of this record' if x['record'] == r.get('id') else f'{result_link(x["record"])}, law {x["law"]}'
-            lines.append(f'*At a model:* `{_short(x["of"])}` is stated at {_listed([MODELS.get(k, k) for k in x["models"]])} by '
-                         f'`{_short(x["declaration"])}` ({where}).')
+            lines.append(f'{label(x)} `{x["of"]}` is stated at {_listed([MODELS.get(k, k) for k in x["models"]])} by '
+                         f'`{x["declaration"]}` ({where}).')
     return lines
 
 

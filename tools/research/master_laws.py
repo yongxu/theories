@@ -48,7 +48,7 @@ statement is a reader's judgment; this tool verifies what the Lean can show and 
 - its statement names a grammar term other than «际», among its own constants or, transitively, in the bodies of
   the definitions of its own module that it names;
 - in that same reach, a relation of each declared model: OCCURRENCE for a World's occurrence model, PROCESS for a
-  process's moves' relations, nothing for the row's own carrier;
+  process's model, nothing for the row's own carrier;
 - the law carrying it holds no central declaration of COVERAGE.json.
 
 It also lists the grammar terms the statement names and what it keeps in other terms (U2Deps' report), and the
@@ -57,7 +57,8 @@ A law carrying items is measured as any law is, and counted in counts_at_model i
 at a model raises no count of the others. Under every law whose declarations include a verified item's row, the
 file names the item (stated_at_model). central_reach counts the distinct central declarations: reaching the
 grammar, by the measure; not reaching it but stated at a represented model (a World's occurrence model or a
-process's moves' relations); not reaching it and stated only on their own carrier; and the rest.
+process's model); not reaching it and stated only on their own carrier; and the rest. An item that breaks the
+check's rules is written unverified too, so the data never counts it.
 """
 import hashlib, importlib.util, json, os, pickle, sys, tempfile
 from pathlib import Path
@@ -91,7 +92,7 @@ def stated(C, d):
     """What the statement of d names: its own constants, and transitively the bodies of the definitions of its own
     module that they name. Grammar constants are not expanded."""
     module, seen = C[d]['m'], set(C[d]['t'])
-    stack = [n for n in seen if n in C and C[n]['m'] == module and C[n]['k'] == 'def']
+    stack = [n for n in seen if n in C and C[n]['m'] == module and C[n]['k'] == 'def' and '«' not in n]
     while stack:
         for b in C[stack.pop()]['v']:
             if b not in seen:
@@ -115,6 +116,30 @@ def reaches(C, d, row, blocked):
                     seen.add(b)
                     stack.append(b)
     return False
+
+
+MODELS = ('occurrence', 'process', 'own')
+
+
+def shape_failures(r, i, item):
+    """What the check would refuse in an item, so the generator writes it unverified rather than stop or miscount."""
+    d, of, models, review = (item.get(k) for k in AT_MODEL_KEYS)
+    if not all(isinstance(x, str) and x for x in (d, of, review)) or not isinstance(models, list) or not models \
+            or any(not isinstance(m, str) or m not in MODELS for m in models) or len(set(models)) != len(models):
+        return ['not in the shape the check requires']
+    laws = r.get('laws', [])
+    names = [law.get('declarations', []) if isinstance(law, dict) and isinstance(law.get('declarations'), list) else [] for law in laws]
+    if r.get('status') in {'superseded', 'withdrawn'} or d not in names[i - 1] \
+            or not any(of in n for j, n in enumerate(names, 1) if j != i):
+        return ["its record breaks the check's rules"]
+    return []
+
+
+def blocked(declared, rid, i, item):
+    """The theorems of the other items, which the walk from item's theorem may not enter: all but those on the same
+    law stating the same row."""
+    return {y['declaration'] for r2, j, y in declared if y is not item and isinstance(y.get('declaration'), str)
+            and not (r2 == rid and j == i and y.get('of') == item.get('of'))}
 
 
 def verify(C, item, law_names, central, others):
@@ -236,19 +261,24 @@ def main():
     counts_at_model = dict.fromkeys(counts, 0)  # laws carrying statements at a model, counted apart (F5)
     loaded = [json.loads(path.read_text()) for path in sorted((ROOT / 'theories/becoming/results/records').glob('*.json'))]
     by_id = {r['id']: r for r in loaded}
-    declared = [(r['id'], i, x) for r in loaded for i, law in enumerate(r.get('laws', []), 1)
-                for x in (law.get('statements_at_model') or []) if isinstance(x, dict) and set(x) == set(AT_MODEL_KEYS)]
+    declared = [(r['id'], i, x) for r in loaded for i, law in enumerate(r.get('laws', []), 1) if isinstance(law, dict)
+                for x in (law.get('statements_at_model') if isinstance(law.get('statements_at_model'), list) else [])
+                if isinstance(x, dict) and set(x) == set(AT_MODEL_KEYS)]
     checked, at_model = {}, {}  # (record, law) -> its items as verified; row -> its verified statements at a model
     for rid, i, x in declared:
-        others = {y['declaration'] for r2, j, y in declared if y is not x and not (r2 == rid and j == i and y['of'] == x['of'])}
-        failed, terms, kept = verify(C, x, by_id[rid]['laws'][i - 1].get('declarations', []), set(central), others)
-        g, _, hit = above(x['of'])
+        failed = shape_failures(by_id[rid], i, x)
+        terms, kept, row = [], [], 'not measured'
+        if not failed:
+            failed, terms, kept = verify(C, x, by_id[rid]['laws'][i - 1].get('declarations', []), set(central),
+                                         blocked(declared, rid, i, x))
+            g, _, hit = above(x['of'])
+            row = dependence(g, hit) if x['of'] in C else 'not measured'
         checked.setdefault((rid, i), []).append({**{k: x[k] for k in AT_MODEL_KEYS}, 'verified': not failed,
                                                  **({'failed': failed} if failed else {}), 'grammar_terms': terms,
-                                                 'other_terms': kept, 'row_dependence': dependence(g, hit)})
+                                                 'other_terms': kept, 'row_dependence': row})
         if not failed:
             at_model.setdefault(x['of'], []).append({'of': x['of'], 'record': rid, 'law': i, 'declaration': x['declaration'],
-                                                     'models': x['models']})
+                                                     'models': x['models'], 'review': x['review']})
     for r in loaded:
         entries = []
         for i, law in enumerate(r.get('laws', []), 1):
