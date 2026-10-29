@@ -6175,7 +6175,7 @@
    "type": "module",
    "name": "Becoming.MapInstances",
    "level": "L1",
-   "theorems": 25,
+   "theorems": 26,
    "region": "map",
    "base": "old-base",
    "on_grammar": true,
@@ -6186,7 +6186,7 @@
    "type": "module",
    "name": "Becoming.GrammarLaws",
    "level": "L0",
-   "theorems": 120,
+   "theorems": 125,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -44070,6 +44070,11 @@
   {
    "from": "record:master-laws-on-the-grammar",
    "to": "module:Becoming.LearningRuns",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.MapInstances",
    "type": "proved-in"
   },
   {
