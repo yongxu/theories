@@ -417,6 +417,15 @@
       "plan_entry": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointPlanFrames.lean"
     },
     {
+      "old_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeptOnward.lean",
+      "new_path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/KeptOnward.lean",
+      "sha256": "03c8a10d52b81a091be8473c3afd26ffd1b66ac31306817db94dfb8ca215d4eb",
+      "blob": "4696882307f3c176ad1736556c81f52c8781d5f6",
+      "batch": "HE-history",
+      "reason": "HE (30 October 2026): its one declaration, kept_onward, moved to its home beside «线则所闭» in Becoming.GrammarLaws under its name, so the leaf is retired; bytes as on main",
+      "plan_entry": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeptOnward.lean"
+    },
+    {
       "old_path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LawThroughChangingCoupling.lean",
       "new_path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/LawThroughChangingCoupling.lean",
       "sha256": "d722292ed358d15e483b87382395eecd243ee5c8f5ab52c7c4bb47e0e6bd7f6b",

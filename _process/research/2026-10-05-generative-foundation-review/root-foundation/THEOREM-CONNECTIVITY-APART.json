@@ -3945,7 +3945,7 @@
   "Becoming.«出类随行»": {
    "module": "Becoming.GrammarPath",
    "category": "general-structure",
-   "reason": "what leaves the class follows each alike step, under constancy up to the net's end: PF2's form, kept as the corollary of «本类出类随行» (rule 9): a law of every relation and class on any carrier"
+   "reason": "what leaves the class follows each alike occurrence, under constancy up to the net's end: PF2's form, kept as the corollary of «本类出类随行» (rule 9): a law of every relation and class on any carrier"
   },
   "Becoming.«本类之常至二分»": {
    "module": "Becoming.GrammarPath",
@@ -4981,6 +4981,211 @@
    "module": "Becoming.LumpedSeeking",
    "category": "model-witness",
    "reason": "Agree.seeking_turns_tails: with the experiment reading both tosses chosen, seeking turns that order; a fact about one constructed model, three coins under a model reading only whether two tosses agree and one reading both tosses (UE19)"
+  },
+  "Becoming.ReadingLoop.Loop.fitting_closed": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.Loop.fitting_closed: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReadingLoop.Loop.kept_alike": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.Loop.kept_alike: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReadingLoop.PairwiseShared.none_for_all": {
+   "module": "Becoming.ReadingLoop",
+   "category": "model-witness",
+   "reason": "ReadingLoop.PairwiseShared.none_for_all: a fact about one constructed model, three worlds and three acts, each good where it is not the act its world names (RF)"
+  },
+  "Becoming.ReadingLoop.PairwiseShared.two_share": {
+   "module": "Becoming.ReadingLoop",
+   "category": "model-witness",
+   "reason": "ReadingLoop.PairwiseShared.two_share: a fact about one constructed model, three worlds and three acts, each good where it is not the act its world names (RF)"
+  },
+  "Becoming.ReadingLoop.Untested.alike_in_both": {
+   "module": "Becoming.ReadingLoop",
+   "category": "model-witness",
+   "reason": "ReadingLoop.Untested.alike_in_both: a fact about one constructed model, two worlds alike on a known act and apart on an untried one, with candidates the two worlds (RF)"
+  },
+  "Becoming.ReadingLoop.Untested.apart_beyond": {
+   "module": "Becoming.ReadingLoop",
+   "category": "model-witness",
+   "reason": "ReadingLoop.Untested.apart_beyond: a fact about one constructed model, two worlds alike on a known act and apart on an untried one, with candidates the two worlds (RF)"
+  },
+  "Becoming.ReadingLoop.Untested.both_accord": {
+   "module": "Becoming.ReadingLoop",
+   "category": "model-witness",
+   "reason": "ReadingLoop.Untested.both_accord: a fact about one constructed model, two worlds alike on a known act and apart on an untried one, with candidates the two worlds (RF)"
+  },
+  "Becoming.ReadingLoop.Untested.byWorst_iff": {
+   "module": "Becoming.ReadingLoop",
+   "category": "model-witness",
+   "reason": "ReadingLoop.Untested.byWorst_iff: a fact about one constructed model, two worlds alike on a known act and apart on an untried one, with candidates the two worlds (RF)"
+  },
+  "Becoming.ReadingLoop.Untested.explorer_low_once": {
+   "module": "Becoming.ReadingLoop",
+   "category": "model-witness",
+   "reason": "ReadingLoop.Untested.explorer_low_once: a fact about one constructed model, two worlds alike on a known act and apart on an untried one, with candidates the two worlds (RF)"
+  },
+  "Becoming.ReadingLoop.Untested.explorer_up": {
+   "module": "Becoming.ReadingLoop",
+   "category": "model-witness",
+   "reason": "ReadingLoop.Untested.explorer_up: a fact about one constructed model, two worlds alike on a known act and apart on an untried one, with candidates the two worlds (RF)"
+  },
+  "Becoming.ReadingLoop.Untested.floor_never_high": {
+   "module": "Becoming.ReadingLoop",
+   "category": "model-witness",
+   "reason": "ReadingLoop.Untested.floor_never_high: a fact about one constructed model, two worlds alike on a known act and apart on an untried one, with candidates the two worlds (RF)"
+  },
+  "Becoming.ReadingLoop.Untested.informed_turns": {
+   "module": "Becoming.ReadingLoop",
+   "category": "model-witness",
+   "reason": "ReadingLoop.Untested.informed_turns: a fact about one constructed model, two worlds alike on a known act and apart on an untried one, with candidates the two worlds (RF)"
+  },
+  "Becoming.ReadingLoop.Untested.model_or_order": {
+   "module": "Becoming.ReadingLoop",
+   "category": "model-witness",
+   "reason": "ReadingLoop.Untested.model_or_order: a fact about one constructed model, two worlds alike on a known act and apart on an untried one, with candidates the two worlds (RF)"
+  },
+  "Becoming.ReadingLoop.Untested.never_high": {
+   "module": "Becoming.ReadingLoop",
+   "category": "model-witness",
+   "reason": "ReadingLoop.Untested.never_high: a fact about one constructed model, two worlds alike on a known act and apart on an untried one, with candidates the two worlds (RF)"
+  },
+  "Becoming.ReadingLoop.Untested.order_rests": {
+   "module": "Becoming.ReadingLoop",
+   "category": "model-witness",
+   "reason": "ReadingLoop.Untested.order_rests: a fact about one constructed model, two worlds alike on a known act and apart on an untried one, with candidates the two worlds (RF)"
+  },
+  "Becoming.ReadingLoop.Untested.true_kept": {
+   "module": "Becoming.ReadingLoop",
+   "category": "model-witness",
+   "reason": "ReadingLoop.Untested.true_kept: a fact about one constructed model, two worlds alike on a known act and apart on an untried one, with candidates the two worlds (RF)"
+  },
+  "Becoming.ReadingLoop.Untested.worst_attained": {
+   "module": "Becoming.ReadingLoop",
+   "category": "model-witness",
+   "reason": "ReadingLoop.Untested.worst_attained: a fact about one constructed model, two worlds alike on a known act and apart on an untried one, with candidates the two worlds (RF)"
+  },
+  "Becoming.ReadingLoop.Untested.worst_le": {
+   "module": "Becoming.ReadingLoop",
+   "category": "model-witness",
+   "reason": "ReadingLoop.Untested.worst_le: a fact about one constructed model, two worlds alike on a known act and apart on an untried one, with candidates the two worlds (RF)"
+  },
+  "Becoming.ReadingLoop.everything_good_iff": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.everything_good_iff: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReadingLoop.everything_kept": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.everything_kept: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReadingLoop.history_continues_iff": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.history_continues_iff: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReadingLoop.history_keeps_iff": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.history_keeps_iff: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReadingLoop.keeping_policy_iff": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.keeping_policy_iff: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReadingLoop.keeps_iff_good": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.keeps_iff_good: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReadingLoop.kept_iff_closed": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.kept_iff_closed: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReadingLoop.nothing_good": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.nothing_good: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReadingLoop.nothing_kept": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.nothing_kept: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReadingLoop.nothing_sound": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.nothing_sound: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReadingLoop.possible_kept": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.possible_kept: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReadingLoop.possible_least": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.possible_least: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReadingLoop.sensed_alike_iff": {
+   "module": "Becoming.ReadingLoop",
+   "category": "general-structure",
+   "reason": "ReadingLoop.sensed_alike_iff: a law of any types (the reading loop: a joint carrier of world and state, blanketed laws, a loop keeping candidate laws); it waits for a formation of the World read as the internal part of a blanketed law (RF)"
+  },
+  "Becoming.ReflexivePrediction.Negating.alternates": {
+   "module": "Becoming.ReflexivePrediction",
+   "category": "model-witness",
+   "reason": "ReflexivePrediction.Negating.alternates: a fact about one constructed model, Boolean negation, leaving no value fixed (RF)"
+  },
+  "Becoming.ReflexivePrediction.Reflecting.middle_right": {
+   "module": "Becoming.ReflexivePrediction",
+   "category": "model-witness",
+   "reason": "ReflexivePrediction.Reflecting.middle_right: a fact about one constructed model, the reflection 2 - v on 0, 1, 2, reversing the order and leaving 1 fixed (RF)"
+  },
+  "Becoming.ReflexivePrediction.Reflecting.reverses": {
+   "module": "Becoming.ReflexivePrediction",
+   "category": "model-witness",
+   "reason": "ReflexivePrediction.Reflecting.reverses: a fact about one constructed model, the reflection 2 - v on 0, 1, 2, reversing the order and leaving 1 fixed (RF)"
+  },
+  "Becoming.ReflexivePrediction.ThresholdResponse.keeps": {
+   "module": "Becoming.ReflexivePrediction",
+   "category": "model-witness",
+   "reason": "ReflexivePrediction.ThresholdResponse.keeps: a fact about one constructed model, a threshold response on 0, 1, 2 with two right predictions (RF)"
+  },
+  "Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start": {
+   "module": "Becoming.ReflexivePrediction",
+   "category": "model-witness",
+   "reason": "ReflexivePrediction.ThresholdResponse.reached_by_start: a fact about one constructed model, a threshold response on 0, 1, 2 with two right predictions (RF)"
+  },
+  "Becoming.ReflexivePrediction.ThresholdResponse.within": {
+   "module": "Becoming.ReflexivePrediction",
+   "category": "model-witness",
+   "reason": "ReflexivePrediction.ThresholdResponse.within: a fact about one constructed model, a threshold response on 0, 1, 2 with two right predictions (RF)"
+  },
+  "Becoming.ReflexivePrediction.bottom_rests": {
+   "module": "Becoming.ReflexivePrediction",
+   "category": "general-structure",
+   "reason": "ReflexivePrediction.bottom_rests: a law of any type of values (a prediction read by what it predicts); it waits for a public prediction read by a pool on the base (RF)"
+  },
+  "Becoming.ReflexivePrediction.no_predictor_right": {
+   "module": "Becoming.ReflexivePrediction",
+   "category": "general-structure",
+   "reason": "ReflexivePrediction.no_predictor_right: a law of any type of values (a prediction read by what it predicts); it waits for a public prediction read by a pool on the base (RF)"
+  },
+  "Becoming.ReflexivePrediction.predictor_iff": {
+   "module": "Becoming.ReflexivePrediction",
+   "category": "general-structure",
+   "reason": "ReflexivePrediction.predictor_iff: a law of any type of values (a prediction read by what it predicts); it waits for a public prediction read by a pool on the base (RF)"
+  },
+  "Becoming.ReflexivePrediction.rests_iff_right": {
+   "module": "Becoming.ReflexivePrediction",
+   "category": "general-structure",
+   "reason": "ReflexivePrediction.rests_iff_right: a law of any type of values (a prediction read by what it predicts); it waits for a public prediction read by a pool on the base (RF)"
   }
  },
  "instances": {

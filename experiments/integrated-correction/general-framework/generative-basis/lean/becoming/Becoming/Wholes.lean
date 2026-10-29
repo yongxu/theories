@@ -1,7 +1,6 @@
 import Becoming.Identity
 import Becoming.Continuation
 import Becoming.Decidedness
-import Becoming.KeptOnward
 
 /-!
 # Wholes: a persisting whole of brief parts, or of ending listed parts, needs their generation;

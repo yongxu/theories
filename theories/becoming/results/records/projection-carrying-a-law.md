@@ -11,7 +11,7 @@
 ## Laws
 
 1. Let P be a process on configurations with moves, and π a projection (description) of the configuration. P read through π, its image, has a step by a move from k to κ exactly where some step of P by that move goes from a configuration projecting to k to one projecting to κ; P's step factors through π into its image, and the image is the least process the step factors through. (`Becoming.Image`, `Becoming.factors_image`, `Becoming.Image.least`, `Becoming.FactorsThrough`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 2. Configurations alike under π go alike when any two configurations alike under π go by the same move to configurations alike under π. The image is determined, and some determined process on the description admits every step of P read through π, exactly where configurations alike go alike. (`Becoming.GoAlike`, `Becoming.image_determined_iff`, `Becoming.carries_law_iff`, `Becoming.Determined`)
    - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar.
 3. Through the identity, going alike is determinacy; the description that distinguishes nothing always goes alike; a description of the image goes alike exactly where the composite description does. (`Becoming.goAlike_id_iff`, `Becoming.goAlike_const`, `Becoming.goAlike_image_iff`)
@@ -132,6 +132,7 @@ On 12 October 2026 Ren asked “hows cause–effect system comparing to our theo
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
 
 Aliases: `Becoming.Image`, `Becoming.Image.least`, `Becoming.GoAlike`, `Becoming.carries_law_iff`, `Becoming.image_determined_iff`, `Becoming.goAlike_id_iff`, `Becoming.goAlike_const`, `Becoming.goAlike_image_iff`, `Becoming.GoAlike.runs_agree`, `Becoming.DependsOnlyOn`, `Becoming.DependsOnlyOn.reabsorbed`, `Becoming.Law.reabsorbed`, `Becoming.adaptive`, `Becoming.adaptive_state_law_iff`, `Becoming.adaptive_state_carries_iff`, `Becoming.ruleLaw`, `Becoming.Run.steps_by_rule`, `Becoming.Run.TakesThrough`, `Becoming.Run.not_fixesThrough_of_untaken`, `Becoming.Run.not_fixesThrough_of_goAlike`, `Becoming.Coarse.carries`, `Becoming.Switching.no_state_law`, `mechanism`, `机制`, `emergence`, `涌现`, `carries a law`, `承载规律`, `相同者同去`, `adaptive system`, `改变自身规则的系统`
 

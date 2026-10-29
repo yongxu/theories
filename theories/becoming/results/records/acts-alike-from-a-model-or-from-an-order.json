@@ -1,0 +1,194 @@
+{
+  "schema_version": 2,
+  "id": "acts-alike-from-a-model-or-from-an-order",
+  "title": {
+    "en": "Acts alike from a model or from an order",
+    "zh": "出于模型或出于序之同行"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-29T19:32:28+00:00",
+  "statement": {
+    "en": "From related starts, formations whose steps keep a relation under which the values sensed and the acts are one sense and act alike; in a witness an unresolved model and a reversed ranking so act alike, and starting the first with the true candidate alone changes its course.",
+    "zh": "自相联之起点，诸步守一关系、其下所感之值与行皆同之形成，所感所行皆同；于一例，未决之模型与相反之排序如此同行，而以真候选独起前者则变其历程。"
+  },
+  "laws": [
+    {
+      "en": "For two blanketed laws reading one kind of value and act, a relation between their configurations that their steps keep, under which the values sensed and the acts are one, gives from related starts the same values sensed and acts at every step, so no selection through those tells the two apart.",
+      "zh": "于读同类之值与行之二毯化之律，其形态间之关系为其诸步所守，且其下所感之值与行皆同，则自相联之起点每步所感之值与行皆同，故经此而选者皆不能分二者。",
+      "declarations": [
+        "Becoming.ReadingLoop.observed_alike"
+      ]
+    },
+    {
+      "en": "Witness, on the worlds of the untried act: a second ranking, the middle above high above low; a training occasion with the middle and the low value open and the middle chosen; both rankings, read as orders, accord with it, and they rank high and the middle oppositely.",
+      "zh": "例，于未试之行之二世：第二排序，中高于高、高高于低；一训练之时，中值与低值开而择中；二排序读为序皆与之合，而于高与中相反排之。",
+      "declarations": [
+        "Becoming.ReadingLoop.Untested.rank'",
+        "Becoming.ReadingLoop.Untested.training",
+        "Becoming.ReadingLoop.Untested.above",
+        "Becoming.ReadingLoop.Untested.both_accord",
+        "Becoming.ReadingLoop.Untested.apart_beyond"
+      ]
+    },
+    {
+      "en": "In the first world, each started with no answer pending, the middle value and the known act, the formation keeping both candidates with the first ranking and the one keeping the true candidate with the second have the same acts and values sensed at every step, the second resting at once on the known act.",
+      "zh": "于第一世，各以无待纳之答、中值与已知之行为起点，守二候选而用第一排序之形成，与守真候选而用第二排序之形成，每步所行与所感之值皆同，后者即止于已知之行。",
+      "declarations": [
+        "Becoming.ReadingLoop.Untested.orderRest",
+        "Becoming.ReadingLoop.Untested.order_rests",
+        "Becoming.ReadingLoop.Untested.model_or_order"
+      ]
+    },
+    {
+      "en": "Started the same way with the true candidate alone, the first ranking turns: from step three on the formation takes the untried act and senses high; the second, already so started, keeps the known act.",
+      "zh": "以同一起点而唯以真候选，第一排序即转：自第三步起，形成取未试之行而感高；第二排序原已如此起，守已知之行。",
+      "declarations": [
+        "Becoming.ReadingLoop.Untested.informed_turns"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Any types for the general law; the relation is supplied and must be kept by both steps; the witness fixes the two candidate lists, the two rankings, the start and the world.",
+      "zh": "通律于任一型；关系为所予，须为二步所守；例定其二候选之列、二排序、起点与世。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a model and an order are never identifiable from acts: one specified pair has one observed course in one world.",
+      "zh": "模型与序永不可由行辨识：所陈者为一指定之对于一世有同一所观之历程。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A general assistance theorem: informing is represented by its outcome, a start with the true candidate alone, not by a helper's act within the law.",
+      "zh": "通协助之定理：告之以其果表之，即以真候选独起，非以律内助者之行。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Which explanation holds of an actual formation's acts.",
+      "zh": "何种解释成立于实际形成之行。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+      "detail": {
+        "en": "One course, two explanations: an unresolved model with the first ranking and a resolved one with the second act and sense alike in the first world (ReadingLoop.Untested.model_or_order).",
+        "zh": "一历程，二解释：未决之模型用第一排序与已决之模型用第二排序，于第一世所行所感皆同（ReadingLoop.Untested.model_or_order）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty: model_or_order is a case of observed_alike, the relation holding the starts and the rests; the rests are cases of Loop.rests_of_unrefuted.",
+    "zh": "纯核，公理报告皆空：model_or_order 为 observed_alike 之一例，其关系持起点与止处；诸止为 Loop.rests_of_unrefuted 之例。"
+  },
+  "next_delta": {
+    "en": "A helper's act within the law that informs, and a principal's order as state the helper's acts can move (RF round 2's later items); a frozen test separating a model that does not separate from an order that ranks otherwise by informing; review by a person.",
+    "zh": "律内能告之助者之行，与助者之行可移之受助者之序为态（RF 第二轮之后项）；以告分未分之模型与排序相异之序之冻结检验；人之审查。"
+  },
+  "correspondence": {
+    "en": "One observed course can leave an unresolved model and a reversed ranking indistinguishable: an illustration of the ambiguity between beliefs and preferences in inferring what a formation values from what it does (Armstrong and Mindermann 2018, for planner and reward; Reddy, Dragan and Levine 2018, for beliefs about dynamics). AI reading: a training, an overseer or a helper reading the acts cannot tell a formation held by what its model does not separate from one held by how it ranks; starting the first with the true candidate changes its course and leaves the second's, so whether informing helps depends on which holds, a reason for assistance to read more than acts. With what-choices-show-of-an-order: both rankings accord with the occasion, and the comparison beyond the shown reach is free. These are readings, not containments.",
+    "zh": "一所观之历程可使未决之模型与相反之排序无可分别：此例示由形成之所行推其所重时信与偏好之含混（Armstrong 与 Mindermann 2018，关于择者与报酬；Reddy、Dragan 与 Levine 2018，关于对动力之信）。AI 解读：读其行之训练、督察或助者，不能分为其模型所未分者所持之形成与为其排序所持者；以真候选起前者则变其历程而不变后者，故告之是否有益视何者成立，此为协助读行以外者之由。与「所择所示之序」并：二排序皆与此时合，所示之及外之比较为自由。皆为读，非包含。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+  "aliases": [
+    "not knowing or not wanting",
+    "不知或不欲",
+    "a model or an order",
+    "模型或序",
+    "Becoming.ReadingLoop.observed_alike",
+    "Becoming.ReadingLoop.Untested.model_or_order"
+  ],
+  "dependencies": [
+    {
+      "id": "what-choices-show-of-an-order",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "ChoiceOccasions and ChoiceOccasions.Accords, for the training occasion.",
+        "zh": "ChoiceOccasions 与 ChoiceOccasions.Accords，用于训练之时。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "what-a-course-chosen-through-its-model-does-not-test",
+      "detail": {
+        "en": "The loop and the worlds of the untried act on which the two formations are stated.",
+        "zh": "二形成所陈于其上之环与未试之行之二世。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ReadingLoop.Untested.above",
+        "Becoming.ReadingLoop.Untested.apart_beyond",
+        "Becoming.ReadingLoop.Untested.both_accord",
+        "Becoming.ReadingLoop.Untested.informed_turns",
+        "Becoming.ReadingLoop.Untested.model_or_order",
+        "Becoming.ReadingLoop.Untested.orderRest",
+        "Becoming.ReadingLoop.Untested.order_rests",
+        "Becoming.ReadingLoop.Untested.rank'",
+        "Becoming.ReadingLoop.Untested.training",
+        "Becoming.ReadingLoop.observed_alike"
+      ],
+      "sha256": "5ca0f323c689c19d56edeb317a3eb371d715bd74533d5edad32429433db71812"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
+      "role": "proof",
+      "sha256": "517d21ed20f59fce954e4f007eee54a9342bb1908a487ce9bd1b2d307d390677"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T191748.070149Z/verification.json",
+      "role": "receipt",
+      "sha256": "442db94f6d0719ec28958e4fcca9f2017d4425bc63e7f28379dbf292b15e2e12"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "1d54324cb0e5a8ed7cb553a67433994ca4c58c53c8a6901928c6ca7952c12e65"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
+      "role": "integration",
+      "sha256": "dce0afaa22e8fd2d9220c8691484f3b35d847aa360e08efd3069e2f1b4765562"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md",
+      "role": "integration",
+      "sha256": "6425b8f20cf4b6eeb67dc24fd81eddec5988550a2d3d79793920c226a8af9b93"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "62025a2b610fb1726559d2a6dd34536225d2a5ea66012ef29fd3865b1055ebb5"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T191748.070149Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReadingLoop",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "30 October 2026: added (RF round 2), acts alike from a model or from an order: formations related by a relation their steps keep, an unresolved model and a reversed ranking, informing turning the first; after a cross-model review of the Lean with a re-check, every finding taken; study section 456.",
+      "zh": "2026年10月30日：新增（RF 第二轮），出于模型或出于序之同行：诸步所守之关系所联之形成、未决之模型与相反之排序、告之转其前者；经 Lean 之跨模型审查与复查，凡所见皆取；研究第 456 节。"
+    }
+  ]
+}

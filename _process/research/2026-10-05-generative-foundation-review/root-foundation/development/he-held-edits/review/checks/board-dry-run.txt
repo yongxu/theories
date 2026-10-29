@@ -1,0 +1,23 @@
+# he_board.py dry runs on copies of the board (cwd = a folder holding only _process/BECOMING-WORKBOARD.md)
+## board of main a15457b2e
+board head HE
+board land HE
+lines changed: 4
+queue line starts: - **Queue:** HE landed (§999, core receipt 20261030T000000.000000Z, TEST); OU's coordination note after WRP2 landed (doc
+other head claims left on the queue line: ['UE19 at the head of the queue (landing now with UE18, by the', 'UE18 at the head of the queue (landing now: Becoming.Blanket']
+latest-receipt sentence: the latest core receipt is HE's `20261030T000000.000000Z` (29 October 2026). This page was rewritten on 17 Oct
+HE rows still in the open-claims table after land: 1 | state cell: landed 2026-10-30 at core receipt TEST
+OU3f row still says '`Becoming.KeptOnward` holds `kept_onward`': True
+OU3f row lag clause replaced: True
+'The way now' still says the PF wording is held in deferred_grammarpath.py for the next rebuild: True
+## board of main 24397d633
+board head HE
+board land HE
+lines changed: 4
+queue line starts: - **Queue:** HE landed (§999, core receipt 20261030T000000.000000Z, TEST); UE20 at the head of the queue (landing now, b
+other head claims left on the queue line: ['UE20 at the head of the queue (landing now, by the coordinat']
+latest-receipt sentence: the latest core receipt is HE's `20261030T000000.000000Z` (29 October 2026). This page was rewritten on 17 Oct
+HE rows still in the open-claims table after land: 1 | state cell: landed 2026-10-30 at core receipt TEST
+OU3f row still says '`Becoming.KeptOnward` holds `kept_onward`': True
+OU3f row lag clause replaced: True
+'The way now' still says the PF wording is held in deferred_grammarpath.py for the next rebuild: True

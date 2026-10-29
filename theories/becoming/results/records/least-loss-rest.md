@@ -131,6 +131,7 @@ The outside review of 19 October 2026 (R20) and an outside reader named the rest
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
 
 Aliases: `least loss`, `最小损失`, `approach to rest`, `趋近停息`, `exponential relaxation`, `指数弛豫`, `rest over dense amounts`, `可稠密的量上的停息`, `geometric loss never rests`, `几何损失不停息`, `Becoming.Amounts.rests`, `Becoming.Amounts.rests_unrefuted`, `Becoming.Amounts.family_rests`, `Becoming.Halving.never_rests`, `Becoming.Layered.never_rests`, `Becoming.Amounts.approaches_rest`, `Becoming.Law.loss_needs_merge`
 

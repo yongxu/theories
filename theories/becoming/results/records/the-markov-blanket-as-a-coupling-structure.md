@@ -72,6 +72,8 @@ The free-energy principle's partition (Friston 2013; Kirchhoff, Parr, Palacios, 
 - **formal-reuse**: [generalization-through-lumping](generalization-through-lumping.md). Learning.Lumped: a map read only through another.
 - related, not a proved adapter: [what-the-existence-claim-forbids](what-the-existence-claim-forbids.md). The free-energy principle's blanket and existence claim, stated in the same module.
 
+**Used by:** [what-a-course-chosen-through-its-model-does-not-test](what-a-course-chosen-through-its-model-does-not-test.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

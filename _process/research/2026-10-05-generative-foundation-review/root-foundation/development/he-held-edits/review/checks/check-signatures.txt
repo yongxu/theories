@@ -1,0 +1,31 @@
+# #check @ of every source declaration of the 13 modules (gen_checks.py), both builds
+declarations checked:     1366 (theorems and definitions; union of both registries)
+entries printed: old 1366, new 1366; errors: old 0, new 0
+222db5e6ef0a67030cfac7a0e97cda5a914dee4db50e0082bc65a8edd45f0bcf  checks-old.out
+222db5e6ef0a67030cfac7a0e97cda5a914dee4db50e0082bc65a8edd45f0bcf  checks-new.out
+c9fe98da97ab71c0125e93a8ebbda50839720ac552eb3a82a2224ace4ce7820f  check-names.txt
+RESULT: the two outputs are byte-identical
+
+# the five declarations HE moves or re-proves, as printed (new build):
+@Becoming.factors_image.{u_1, u_2,
+    u_3} : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} (P : Generative.Process.{u_1, u_2} S A) (π : S → K),
+  Becoming.FactorsThrough.{u_1, u_2, u_3} P π (Becoming.Image.{u_1, u_2, u_3} P π)
+@Becoming.Image.least.{u_1, u_2,
+    u_3} : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process.{u_1, u_2} S A} {π : S → K}
+  {Q : Generative.Process.{u_3, u_2} K A},
+  Becoming.FactorsThrough.{u_1, u_2, u_3} P π Q →
+--
+@Becoming.kept_onward : ∀ {I : Nat → Prop},
+  (∀ (n : Nat), I n → I (HAdd.hAdd.{0, 0, 0} n 1)) → ∀ {a b : Nat}, I a → LE.le.{0} a b → I b
+@Becoming.Web.Carries : {F C : Type} → Becoming.Web F C → (Nat → F → Nat) → Prop
+@Becoming.Web.Decays : {F C : Type} → Becoming.Web F C → (Nat → F → Nat) → Prop
+--
+@Becoming.«保之像».{u_1,
+    u_2} : ∀ {α : Type u_1} {κ : Type u_2} (φ : α → κ) (R : Becoming.«际».{u_1} α) (R' : Becoming.«际».{u_2} κ),
+  Iff (Becoming.«则».{u_2} (Becoming.«像».{u_1, u_2} φ R) R') (∀ (x y : α), R x y → R' (φ x) (φ y))
+@Becoming.«谓之自反».{u_1} : ∀ {α : Type u_1} (R : Becoming.«际».{u_1} α), Becoming.«谓».{u_1} R R
+--
+@Becoming.total_eq_of_supports : ∀ {α : Type} {q : α → Nat} {l m : List.{0} α},
+  Becoming.Distinct.{0} l →
+    Becoming.Distinct.{0} m →
+      (∀ (a : α), LT.lt.{0} 0 (q a) → Membership.mem.{0, 0} m a) →

@@ -174,3 +174,66 @@ What changed, to check against the Lean (the three modules, and Becoming/Learnin
 9. The study section template: the same kit folder's study_rf.txt ({N} and {RECEIPT} are filled at landing).
 
 Return: a verdict line; for each of your fourteen findings, one line, taken correctly, partly, or not, with what is missing; then any new problem the changed texts introduce, each with severity, location, quote, the problem against the Lean, and a replacement. Report only what you can point to.
+
+## Round 2
+
+### The Lean review (piped to `cx -m astra -e high --sandboxed --fresh`)
+
+```text
+Read-only review, in /Users/ren/theories/.claude/worktrees/rf-landing (do not edit, create, commit, render, run make or build Lean; reading files and running read-only shell commands is fine).
+
+Context. This repository develops one theory (the Theory of Becoming) with a pure Lean core (Lean's Init only, every declaration with an empty axiom report). Board item RF ("formations that read") asks for an exact understanding of how a formation that senses, predicts, chooses, acts and revises itself behaves: inner alignment, deception, assistance games, and how minds, institutions and networks learn and update. Round 1 landed three modules (Becoming/ShownOrder.lean, Becoming/Unread.lean, Becoming/Cascade.lean). Round 2 is designed in the plan, _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md, §4.4 (RF3: a formation's reading kept by its own update, with the good-regulator composition) and §4.5 (RF-M: one joint finite mechanism of prediction, selection, revision and intervention). Its first module is now written and builds with every axiom report empty (32 theorems, 59 declarations):
+
+  _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/tree/Becoming/ReadingLoop.lean
+
+It builds on the package at experiments/integrated-correction/general-framework/generative-basis/lean/becoming/: Becoming/Blanket.lean (the blanketed law: internal, sensory, active and external parts of one determined law; agent_through_sensory), Becoming/Narrowing.lean (mem_filter), Becoming/Keeping.lean (Viability.ChoiceOver), Becoming/ShownOrder.lean (ChoiceOccasions, Accords), Becoming/GuardHorizon.lean (UniformPolicy, FiberFeasible, uniform_policy_iff_fiber_feasible: the good regulator's adequacy for one reading), Becoming/GrammarLaws.lean («闭», «闭之及») and Becoming/Grammar.lean («及»). Becoming/LumpedSeeking.lean (what seeking cannot separate: hypotheses every experiment ties) is the nearest neighbour of the self-confirming part.
+
+What to do, as an adversarial reviewer of the module (not of the rest of the repository):
+
+1. Soundness and exactness. For each theorem, check that its statement is what its docstring and the module header say, with every hypothesis the header's prose needs, and nothing more claimed. Name each place where the prose says more than the Lean (a dropped hypothesis, "every formation" where the Lean fixes the world pair, "never" where the Lean bounds a course, a reading inside a law without its label, and the like).
+2. Substance. Say which theorems are near-definitional wrappers and which carry content, and whether the module meets what PLAN §4.4–4.5 asked of RF3 and of RF-M's core. In particular: is `alike_of_kept` stated at the right generality and is `Untested.floor_forgoes` a fair instance of it; does `Untested.model_or_order` support the reading that acts do not separate a model that does not separate the worlds from an order that ranks otherwise, or does it need a general form; is RF3's existence condition (`keeping_policy_iff`) the right one, given the plan's note that the first draft's "model between the coupling class and the core" was false.
+3. The readings and the literature. Check each attribution in the header's Readings paragraph (Fudenberg and Levine 1993; Rothschild 1974; Gilboa and Schmeidler 1989; Armstrong and Mindermann 2018; Reddy, Dragan and Levine 2018) and say where the deterministic, elimination-based statements here coincide with, restate, or fall short of what those works establish. Say also what the module should cite and does not (for instance on safe exploration, or on the good regulator: Conant and Ashby 1970; Virgo, Biehl, Baltieri and Capucci 2025).
+4. Names. The repository's names are structural and exact (formal, scientific and systems words; not dualist, social or financial ones). Flag any name or phrase that states a wrong meaning.
+5. What is missing for the objective, in priority order: laws that would turn the witnesses into general statements, and anything the loop as built cannot represent that the plan's later items (RF6.1 revision opening a correction, RF6.3 reflexive prediction, RF7 disclosure or concealment, RF-M's assistance and preference-change cases) will need from it.
+
+Return: a verdict line; then numbered findings, each with severity (high, medium, low), location (file:line), the quoted text, the problem against the Lean, and a proposed replacement (Lean statement or prose). Report only what you can point to.
+```
+
+### The re-check, with two further modules (the same session continued, `cx -r`)
+
+```text
+Re-check after the fixes, read-only, in the same worktree (/Users/ren/theories/.claude/worktrees/rf-landing; do not edit, create, commit, render, run make or build Lean). Every one of your seventeen findings on kit/round2/tree/Becoming/ReadingLoop.lean was taken; the module was rewritten and now builds with 51 theorems in 84 declarations, every axiom report empty (scratch build, not yet a receipt). Main changes: GoodEnabled, Continues, keeps_continues_iff and keeping_policy_iff with enabledness; the reading a formation's own history carries (record, Possible, possible_kept, possible_least, Generated, generated_closed, possible_of_reached, reached_of_possible, history_keeps_iff, history_continues_iff); alike_within with synchronized hypotheses and a horizon, alike_of_kept its corollary; observed_alike; Loop.faithful_kept and Loop.fitting_closed relative to a region the world's moves keep; Loop.rests_of_unrefuted, of which Untested.rests and Untested.order_rests are cases; Untested.true_kept; worst as the least over nonempty lists with an explicit empty convention, worst_le, worst_attained, byWorst_iff; explorer_low_once now an iff; model_or_order a case of observed_alike; the header's prose, standing and readings rewritten after your findings.
+
+Also review, as an adversarial reviewer in the same way as before, two further round 2 modules in the same folder, each building with every axiom report empty: kit/round2/tree/Becoming/ReflexivePrediction.lean (RF6.3, a prediction read by what it predicts; PLAN §4.4) and kit/round2/tree/Becoming/OpenedCorrection.lean (RF6.1, a revision of a reading that opens a correction; PLAN §4.4; it builds on Becoming/GuardHorizon.lean and Becoming/Revision.lean in the package).
+
+Return: a verdict line; for each of your seventeen findings, one line: taken correctly, partly, or not, with what is missing; any new problem the rewrite introduces; then numbered findings on the two further modules, each with severity, location (file:line), the quoted text, the problem against the Lean, and a replacement. Report only what you can point to.
+```
+
+### The cold read of the texts (piped to `cx -m astra -e high --sandboxed --fresh`)
+
+```text
+Cold read, read-only, in <a scratch copy of the repository with the texts integrated> (a scratch copy of the repository with round 2's texts integrated; do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine).
+
+Context. This repository develops one theory (the Theory of Becoming) with a pure Lean core. Board item RF, round 2's first landing, adds two Lean modules, already reviewed on the code: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean and .../Becoming/ReflexivePrediction.lean (both build with every axiom report empty). You are reading the texts written about them, cold, against the Lean: each text must say exactly what the Lean proves, with every hypothesis the Lean needs, and every reading must be labelled as a reading.
+
+The texts:
+1. theories/becoming/chapters/03-KNOWING.md: the new section 12 (anchor the-reading-loop, four theorem paragraphs and their readings), the bases sentence near the top ("a region kept along every reach"), and the Open bullet "Formations that read, beyond".
+2. theories/becoming/chapters/08-METHOD.md: the known-results bullet "The reading loop" in section 8.
+3. theories/becoming/THE-THEORY-OF-BECOMING.md: the paragraph "A formation that senses, predicts, chooses, acts and revises is one law" in section 3.
+4. theories/becoming/review/ALIGNMENT.md: the scope box's assistance bullet and the sentence "Round 2's first landing".
+5. The package's README.md and README.zh.md rows for the two modules, Becoming.lean's two L1 bullets, and check_becoming.py's two scope sentences ("ReadingLoop: ...", "ReflexivePrediction: ...").
+6. The four records as they will be written: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf2.py (the build(...) calls; English and Chinese).
+7. The study section template: the same folder's study_rf2.txt ({N} and {RECEIPT} are filled at landing).
+
+Check especially: dropped hypotheses (decidability, the shared start, the horizon, the listing, the region the world's moves keep, choice over the states, the chain and its order); "every formation" or "never" where the Lean fixes the world pair or a start; general claims made of witnesses; the Chinese saying the same as the English; citations said to be contained where they are only related.
+
+Return: a verdict line; then numbered findings, each with severity (high, medium, low), location (file:line), the quoted text, the problem against the Lean, and a replacement in the text's language. Report only what you can point to.
+```
+
+### The re-check of the rebuilt RF6.1 module (the review's session continued, `cx -r`)
+
+```text
+Re-check, read-only, in /Users/ren/theories/.claude/worktrees/rf-landing (do not edit, create, commit, render, run make or build Lean). Your findings 19 to 23 on kit/round2/tree/Becoming/OpenedCorrection.lean were taken by rebuilding the module (it now builds with 11 theorems in 15 declarations, every axiom report empty). It now states, for any process: Correctable (a fitting uniform policy exists through the reading in force at a configuration, with the act acceptable at every situation giving each reading and executable at that configuration) and correctable_iff under choice; OpensAlong (a trace of the process from x to x', not correctable at x, correctable at x', one acceptability); finer_keeps and coarser_opens_nothing (one type of readings, readings related by a supplied map, executability compared); widened_correctable. Then, on Revising's stock-and-link process of Becoming/Revision.lean (in the package), Linked: with the link off no configuration is correctable, with it on and a unit of stock every one is, with it on and none none is; rebuilding from two units opens the correction in one step, from one it does not, and rebuilding then replenishing from one does; with every act counted acceptable the unlinked configuration is correctable already. The header's prose and readings were rewritten after findings 20 and 23.
+
+Return: a verdict line; for each of findings 19 to 23, one line: taken correctly, partly, or not, with what is missing; then any new problem, each with severity, location (file:line), the quoted text, the problem against the Lean, and a replacement. Report only what you can point to.
+```

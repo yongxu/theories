@@ -1974,14 +1974,6 @@ end Source
 
 /-! ### The kind relay: 全生成 at two orders and keeping widening, together -/
 
-/-- Over lists without repetition holding where a quantity is positive, its totals agree. -/
-theorem total_eq_of_supports {α : Type} {q : α → Nat} {l m : List α} (dl : Distinct l)
-    (dm : Distinct m) (lm : ∀ a, 0 < q a → a ∈ m) (ml : ∀ a, 0 < q a → a ∈ l) :
-    total l q = total m q :=
-  Nat.le_antisymm (total_le_of_support dl fun a _ pos => lm a pos)
-    (total_le_of_support dm fun a _ pos => ml a pos)
-
-
 namespace KindRelay
 
 open ClosedCycle (parity)
