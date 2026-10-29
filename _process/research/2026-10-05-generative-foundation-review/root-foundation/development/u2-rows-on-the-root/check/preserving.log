@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/u2/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/check/tree",
+  "modules": 103,
+  "ran": [
+    "Becoming.U2Preserving",
+    "BecomingU2PreservingAxiomAudit"
+  ],
+  "reused": 102,
+  "unclean": [],
+  "audits": {
+    "Becoming.U2Preserving": {
+      "theorems": 2,
+      "declarations": 2,
+      "with_axioms": {}
+    }
+  }
+}
