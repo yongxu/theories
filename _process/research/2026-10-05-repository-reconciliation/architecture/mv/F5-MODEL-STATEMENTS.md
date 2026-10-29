@@ -25,13 +25,13 @@ A law of a record may carry `statements_at_model`, a list of items:
 - `declaration` is the theorem that states the row at a model. It is one of this law's own `declarations`; the law's other declarations are its lemmas.
 - `of` is the row whose statement it is.
 - `review` is the path of a reference of role `review` in the same record: the review that checked this item, as it now stands, against its row. That `declaration` states what `of` states is a reader's judgment, which Lean does not show.
-- `models` lists where the statement is stated: `occurrence`, a World's occurrence model (WRT2); `process`, a process's model, its moves' relations (WRP2); `own`, the row's own carrier. U2 §2's Model column gives them. Row 6's step index is `process`, since its statement names `Steps.next`. A row with two models, such as rows 10, 16, 20 and 24, lists both.
+- `models` lists where the statement is stated: `occurrence`, a World's occurrence model (WRT2); `process`, a process's model (WRP2: its moves' relations, its steps and the step index); `own`, the row's own carrier. U2 §2's Model column gives them. Row 6's step index is `process`, since its statement names `Steps.next`. A row with two models, such as rows 10, 16, 20 and 24, lists both.
 
 A law may hold several items. Row 24 has two with one `of`: `finite_reading_not_exact`, and `renewing_not_closed`, the closure form proved through it. `finite_reading_iff` relates the two forms without the row, so it stays a lemma.
 
 **The rules the check enforces (`registry.py`, schema 2).**
 - A law item's keys lie among `en`, `zh`, `declarations` and `statements_at_model`. As today, an item needs nonempty English or Chinese, since 13 current law items have English only. This closes a set that is open today, so a misspelled key fails.
-- Each item has exactly the four keys. `declaration`, `of` and `review` are strings; `review` is the path of a `review` reference of the record, and where that file is readable it names the item's theorem (its last component, as a word), so the line "reviewed in" points to a review that read it. `models` is a nonempty list of distinct values among the three.
+- Each item has exactly the four keys. `declaration`, `of` and `review` are strings; `review` is the path of a `review` reference of the record, and where that file is readable it names the item's theorem (its last component, in code, qualified or not). This guards against citing a review that never mentions the item; that the review read the item as it stands is the landing's to ensure (§6). `models` is a nonempty list of distinct values among the three.
 - `declaration` is among this law's declarations.
 - `of` is among the declarations of another law of the same record, the row's own law. No declaration of a law carrying items is the `of` of any item in the record. This keeps one row's statement at a model off another row's law, as in joint-difference-making, where rows 11 and 14 have laws 6 and 7.
 - Across all records, a theorem is the `declaration` of at most one item.
@@ -58,7 +58,7 @@ Only the pair, its models and its review are declared. That `declaration` states
 - the row's own dependence, as the measure gives it.
 
 **What MV never does with an item.**
-- It never refuses to run on one. An item that fails is written as unverified, with the tests it fails. So is an item the check would refuse: a malformed one, or one breaking its record's rules. Its page shows nothing for it, and the check's `master_laws` status lists it. U2's landing requires none unverified.
+- It never refuses to run on one. An item that fails is written as unverified, with the tests it fails. So is an item the check would refuse, except one whose review does not name it: only the check reads the review. Its page shows nothing for it, and the check's `master_laws` status lists it. U2's landing requires none unverified.
 - It never shows a line for items the data has not read. The lines appear only while the current items of the record carrying them equal the data's; otherwise the carrying law counts in `laws_not_matched`. That holds for the line under a law of another record too, so the registry reads every record's items for it.
 
 ## 3. How MV counts it
@@ -93,7 +93,7 @@ Rows 7, 9, 12 and 23 are wholly on their own carriers, so they fall in the third
 
 The item has its own line, apart from the Lean-dependency line, and it marks what is declared:
 
-- Under the law at the model: *At a model (declared; reviewed in [its review]):* `Becoming.ModelStatements.roles_supported_reading` states `Becoming.Web.roles_supported` at a World's occurrence model. Computed: its proof reaches the row; its statement names, directly or through its module's definitions, «则» and «而»; it keeps `Becoming.Web` and `Becoming.Web.Supported` in other terms. The row taken alone: on no master law's anchor.
+- Under the law at the model: *At a model (declared; reviewed in [its review]):* `Becoming.ModelStatements.roles_supported_reading` states `Becoming.Web.roles_supported` at a World's occurrence model. Computed: its proof reaches the row; its statement names, directly or through its module's definitions, `Becoming.«则»` and `Becoming.«而»`; it keeps `Becoming.Web` and `Becoming.Web.Supported` in other terms. The row taken alone: on no master law's anchor.
 - Under every law, in any record, whose declarations include `of`: *At a model (declared; reviewed in [its review]):* `of` is stated at a World's occurrence model by `declaration` ([record], law N).
 - An item only on its row's own carrier is labelled *On its own carrier (declared; …)*, not as at a model.
 - Names are given in full, as in the law's declarations and the master-law line.
@@ -138,4 +138,5 @@ Four rows are declarations of laws in more than one record (`Web.transmits_at_if
 | Code review: a malformed item crashed or miscounted the generator | §2, written unverified |
 | Code review: the walk's block stated loosely; `stated()` expanded a «» definition at the top | RESULT-WORKFLOW; the code |
 | Code review: RESULT-WORKFLOW's counts and not-matched sentences; the block untested | RESULT-WORKFLOW; `blocked()` and its test |
+| Re-check of the fixes: the generator verified items the check refuses; "changes none of the counts"; the guard's wording and its match; `process` in RESULT-WORKFLOW; grammar terms not in code | §1, §2, §5; RESULT-WORKFLOW; the code |
 | Code review on U2's records: the row's line unmarked; own carriers labelled at a model; the row's dependence not shown; a review that never read the item; "a process's moves' relations" for row 6; "its statement names"; short names | §1, §5 |

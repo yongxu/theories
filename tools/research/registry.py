@@ -394,7 +394,7 @@ def statements_at_model_errors(r):
                 errors.append(f'law {i}: the row {of} is among the declarations of no other law of the record')
             if review not in reviews:
                 errors.append(f'law {i}: {review} is not a reference of role review in the record')
-            elif (text := _review_text(review)) is not None and not re.search(r'(?<!\w)' + re.escape(d.rsplit('.', 1)[-1]) + r'(?!\w)', text):
+            elif (text := _review_text(review)) is not None and not re.search(r'`(?:[^`\s]*\.)?' + re.escape(d.rsplit('.', 1)[-1]) + '`', text):
                 errors.append(f'law {i}: its review {review} does not name {d}')
     rows = {item['of'] for _, item in items}
     for i, _ in carrying:
@@ -652,7 +652,7 @@ def at_model_notes(r, i, law, result_link, base):
                 alone = ALONE.get(x.get('row_dependence'), x.get('row_dependence'))
                 lines.append(f'{label(x)} `{x["declaration"]}` states `{x["of"]}` at {_listed([MODELS.get(k, k) for k in x["models"]])}. '
                              f'Computed: its proof reaches the row; its statement names, directly or through its module\'s definitions, '
-                             f'{_listed(x["grammar_terms"])}; it keeps {kept} in other terms. The row taken alone: {alone}.')
+                             f'{_listed(["`" + n + "`" for n in x["grammar_terms"]])}; it keeps {kept} in other terms. The row taken alone: {alone}.')
     for x in e.get('stated_at_model', []):
         if f'{x["record"]}:{x["law"]}' in shown:
             where = f'law {x["law"]} of this record' if x['record'] == r.get('id') else f'{result_link(x["record"])}, law {x["law"]}'

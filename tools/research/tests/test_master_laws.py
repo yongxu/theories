@@ -202,10 +202,12 @@ class StatementsAtModelRules(unittest.TestCase):
         r = carrying_record(at_model('M.reading', 'X.row'))
         with patch.object(registry, '_review_text', return_value='We read `M.lemma` only.'):
             self.assertEqual(self.errors(r), [f'law 2: its review {REVIEW} does not name M.reading'])
-        with patch.object(registry, '_review_text', return_value='Row 1: `reading` states it at the model.'):
-            self.assertEqual(self.errors(r), [])
-        with patch.object(registry, '_review_text', return_value='The readings, `reading_iff` among them.'):
-            self.assertTrue(self.errors(r))  # a longer name containing it is not the name
+        for named in ('Row 1: `reading` states it at the model.', 'Row 1: `M.reading` states it.'):
+            with patch.object(registry, '_review_text', return_value=named):
+                self.assertEqual(self.errors(r), [])
+        for unnamed in ('The readings, `reading_iff` among them.', 'the reading of it'):
+            with patch.object(registry, '_review_text', return_value=unnamed):
+                self.assertTrue(self.errors(r), unnamed)  # a longer name, or the word outside code, is not the name
 
     def test_a_theorem_in_two_records(self):
         a, b = carrying_record(at_model('M.reading', 'X.row')), {**carrying_record(at_model('M.reading', 'X.row')), 'id': 'b'}
@@ -265,14 +267,22 @@ class StatementsAtModelVerified(unittest.TestCase):
         self.assertEqual(master_laws.blocked(declared, 'a', 2, x1), {'M.t3', 'M.t4'})  # x2: the same law and the same row
 
     def test_an_item_the_check_refuses_is_unverified_not_a_crash(self):
-        r = carrying_record()
-        for bad in ({**at_model('M.reading', 'X.row'), 'models': 'occurrence'}, {**at_model('M.reading', 'X.row'), 'models': ['world']},
-                    {**at_model('M.reading', 'X.row'), 'declaration': ['M.reading']}):
-            self.assertEqual(master_laws.shape_failures(r, 2, bad), ['not in the shape the check requires'])
-        self.assertEqual(master_laws.shape_failures(r, 2, at_model('M.reading', 'X.row')), [])
-        self.assertEqual(master_laws.shape_failures(r, 2, at_model('M.reading', 'X.elsewhere')), ["its record breaks the check's rules"])
-        self.assertEqual(master_laws.shape_failures({**r, 'status': 'withdrawn'}, 2, at_model('M.reading', 'X.row')),
-                         ["its record breaks the check's rules"])
+        def failures(item, r=None, more=()):
+            r = r or carrying_record(item)
+            return master_laws.shape_failures(r, 2, item, [(r['id'], 2, item), *more])
+        shape, rules = ['not in the shape the check requires'], ["its record breaks the check's rules"]
+        good = at_model('M.reading', 'X.row')
+        for bad in ({**good, 'models': 'occurrence'}, {**good, 'models': ['world']}, {**good, 'declaration': ['M.reading']},
+                    {**good, 'extra': 1}):
+            self.assertEqual(failures(bad), shape)
+        self.assertEqual(failures(good), [])
+        self.assertEqual(failures(at_model('M.reading', 'X.elsewhere')), rules)  # the row on no other law
+        self.assertEqual(failures(good, carrying_record(good, status='withdrawn')), rules)
+        self.assertEqual(failures(at_model('M.reading', 'X.row', review='_process/other.md')), rules)  # not a review reference
+        self.assertEqual(failures(good, more=[('b', 4, dict(good))]), rules)  # the theorem of two items
+        r = carrying_record(good)
+        r['laws'][1]['declarations'].append('X.other')
+        self.assertEqual(failures(good, r, more=[('a', 1, at_model('X.row', 'X.other'))]), rules)  # a carrying law holds a row
 
     def test_the_path_through_another_item(self):
         # closure reaches the row only through reading: refused where reading is another row's item, allowed where it is
@@ -310,7 +320,7 @@ class StatementsAtModelLines(unittest.TestCase):
                            'review': REVIEW}])
         self.assertIn("   - *At a model (declared; reviewed in [review.md](", page)
         self.assertIn("):* `M.reading` states `X.row` at a World's occurrence model. Computed: its proof reaches the row; its "
-                      "statement names, directly or through its module's definitions, Becoming.«则» and Becoming.«而»; it keeps "
+                      "statement names, directly or through its module's definitions, `Becoming.«则»` and `Becoming.«而»`; it keeps "
                       "`Becoming.Web` in other terms. The row taken alone: on no master law's anchor.", page)
         self.assertIn("):* `X.row` is stated at a World's occurrence model by `M.reading` (law 2 of this record).", page)
         self.assertIn("):* `X.row` is stated at the row's own carrier and a process's model by `N.reading` ([b](", page)

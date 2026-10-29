@@ -53,12 +53,12 @@ statement is a reader's judgment; this tool verifies what the Lean can show and 
 
 It also lists the grammar terms the statement names and what it keeps in other terms (U2Deps' report), and the
 row's own dependence. An item that fails is written unverified, with what it fails; the tool does not stop for it.
+So is an item the check would refuse, except one whose review does not name it: only the check reads the review.
 A law carrying items is measured as any law is, and counted in counts_at_model instead of counts, so a statement
 at a model raises no count of the others. Under every law whose declarations include a verified item's row, the
 file names the item (stated_at_model). central_reach counts the distinct central declarations: reaching the
 grammar, by the measure; not reaching it but stated at a represented model (a World's occurrence model or a
-process's model); not reaching it and stated only on their own carrier; and the rest. An item that breaks the
-check's rules is written unverified too, so the data never counts it.
+process's model); not reaching it and stated only on their own carrier; and the rest.
 """
 import hashlib, importlib.util, json, os, pickle, sys, tempfile
 from pathlib import Path
@@ -121,16 +121,24 @@ def reaches(C, d, row, blocked):
 MODELS = ('occurrence', 'process', 'own')
 
 
-def shape_failures(r, i, item):
-    """What the check would refuse in an item, so the generator writes it unverified rather than stop or miscount."""
+def shape_failures(r, i, item, declared):
+    """What the check would refuse in an item, so the generator writes it unverified rather than stop or miscount:
+    every rule of the check but one. Whether the review names the theorem is read by the check alone, since the
+    review's text is not among this tool's inputs."""
     d, of, models, review = (item.get(k) for k in AT_MODEL_KEYS)
-    if not all(isinstance(x, str) and x for x in (d, of, review)) or not isinstance(models, list) or not models \
-            or any(not isinstance(m, str) or m not in MODELS for m in models) or len(set(models)) != len(models):
+    if set(item) != set(AT_MODEL_KEYS) or not all(isinstance(x, str) and x for x in (d, of, review)) \
+            or not isinstance(models, list) or not models or any(not isinstance(m, str) or m not in MODELS for m in models) \
+            or len(set(models)) != len(models):
         return ['not in the shape the check requires']
-    laws = r.get('laws', [])
-    names = [law.get('declarations', []) if isinstance(law, dict) and isinstance(law.get('declarations'), list) else [] for law in laws]
+    laws = [law if isinstance(law, dict) else {} for law in r.get('laws', [])]
+    names = [[n for n in law.get('declarations', []) if isinstance(n, str)] if isinstance(law.get('declarations'), list) else []
+             for law in laws]
+    rows = {y.get('of') for r2, _, y in declared if r2 == r['id'] and isinstance(y.get('of'), str)}
+    reviews = {x.get('path') for x in r.get('references', []) if isinstance(x, dict) and x.get('role') == 'review'}
     if r.get('status') in {'superseded', 'withdrawn'} or d not in names[i - 1] \
-            or not any(of in n for j, n in enumerate(names, 1) if j != i):
+            or not any(of in n for j, n in enumerate(names, 1) if j != i) or review not in reviews \
+            or any(rows & set(names[j - 1]) for j, law in enumerate(laws, 1) if 'statements_at_model' in law) \
+            or sum(1 for _, _, y in declared if y.get('declaration') == d) > 1:
         return ["its record breaks the check's rules"]
     return []
 
@@ -263,17 +271,17 @@ def main():
     by_id = {r['id']: r for r in loaded}
     declared = [(r['id'], i, x) for r in loaded for i, law in enumerate(r.get('laws', []), 1) if isinstance(law, dict)
                 for x in (law.get('statements_at_model') if isinstance(law.get('statements_at_model'), list) else [])
-                if isinstance(x, dict) and set(x) == set(AT_MODEL_KEYS)]
+                if isinstance(x, dict)]
     checked, at_model = {}, {}  # (record, law) -> its items as verified; row -> its verified statements at a model
     for rid, i, x in declared:
-        failed = shape_failures(by_id[rid], i, x)
+        failed = shape_failures(by_id[rid], i, x, declared)
         terms, kept, row = [], [], 'not measured'
         if not failed:
             failed, terms, kept = verify(C, x, by_id[rid]['laws'][i - 1].get('declarations', []), set(central),
                                          blocked(declared, rid, i, x))
             g, _, hit = above(x['of'])
             row = dependence(g, hit) if x['of'] in C else 'not measured'
-        checked.setdefault((rid, i), []).append({**{k: x[k] for k in AT_MODEL_KEYS}, 'verified': not failed,
+        checked.setdefault((rid, i), []).append({**{k: x.get(k) for k in AT_MODEL_KEYS}, 'verified': not failed,
                                                  **({'failed': failed} if failed else {}), 'grammar_terms': terms,
                                                  'other_terms': kept, 'row_dependence': row})
         if not failed:
