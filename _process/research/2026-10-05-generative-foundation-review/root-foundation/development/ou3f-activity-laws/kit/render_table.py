@@ -13,8 +13,9 @@ A = json.loads((D / 'active-only.json').read_text(encoding='utf-8'))
 R = json.loads((D / 'reach.json').read_text(encoding='utf-8'))
 rows = [l.rstrip('\n').split('\t') for l in (D / 'classification.tsv').read_text(encoding='utf-8').split('\n')
         if l.strip() and not l.startswith('#')]
-CAT = {'a': '(a)', 'a-done': '(a), done', 'b': '(b)', 'c-model': '(c) model', 'c-witness': '(c) witness',
-       'c-rep': '(c) representation', 'c-below': '(c) field-free law below', 'c-calibration': '(c) calibration'}
+CAT = {'a': '(a)', 'a-follows': '(a), follows', 'a-done': '(a), done', 'b': '(b)', 'b-follows': '(b), follows',
+       'b-np': '(b), not proposed', 'c-balance': '(c) balance, represented', 'c-below': '(c) field-free law below',
+       'c-rep': '(c) representation', 'c-calibration': '(c) calibration', 'c-witness': '(c) witness', 'c-model': '(c) model'}
 by = collections.defaultdict(list)
 for n, cat, law, note in rows:
     by[A['Becoming.' + n]['module'].replace('Becoming.', '')].append((n, cat, law, note))
