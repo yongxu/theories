@@ -197,6 +197,31 @@ for record, laws in laws_of.items():
     if not CAPS_ONLY:
         chapter.write_text('\n'.join(lines), encoding='utf-8')
 
+# WRT2's record, this session's: its next step's item on the laws reading only activity at the occurrence model
+# dropped, since OU3f landed them at the web's carrier (main d4b8f925c, study §459), which its audit (part (a)) shows
+# needs no occurrence model; asked by OU3f's owner. No statement, law or declaration changes.
+WORLD = RECORDS / 'the-world-represented-both-ways.json'
+w = json.loads(WORLD.read_text(encoding='utf-8'))
+old_next = {'en': "The amount part's joint image; a representation through the order of joined exchanges; the laws that "
+                  "read only activity at the occurrence model (OU3f); review by a person.",
+            'zh': '数量部分之共像；经相接交换之序之表示；于出现模型上唯读活动之诸律（OU3f）；人之审查。'}
+assert w['next_delta'] == old_next, w['next_delta']
+before_w = json.dumps({k: v for k, v in w.items() if k not in ('next_delta', 'history')}, ensure_ascii=False)
+w['next_delta'] = {'en': "The amount part's joint image; a representation through the order of joined exchanges; review by "
+                         "a person.",
+                   'zh': '数量部分之共像；经相接交换之序之表示；人之审查。'}
+w['history'].append({
+    'en': f"{DATE_EN} (U2, study section {N}): the next step's item on the laws reading only activity at the occurrence "
+          f"model dropped: OU3f landed them at the web's carrier, which its audit (part (a)) shows needs no occurrence "
+          f"model; no statement, law or declaration changed.",
+    'zh': f"{DATE_ZH}（U2，研究第 {N} 节）：下一步中于出现模型上唯读活动之诸律一项删去：OU3f 已于网之载体上证之，其审计（(a) 部分）示其无需出现模型；"
+          f"陈述、律与声明皆不改。"})
+assert json.dumps({k: v for k, v in w.items() if k not in ('next_delta', 'history')}, ensure_ascii=False) == before_w
+errors = [f for f in style.lint(w) if f['severity'] == 'error']
+assert not errors, errors
+if not CAPS_ONLY:
+    WORLD.write_text(json.dumps(w, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
 # the leaf's region
 regions_path = ROOT / 'theories/becoming/results/data/regions.json'
 regions = json.loads(regions_path.read_text(encoding='utf-8'))
