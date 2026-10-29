@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """OU3f's coarse-to-fine pair: 08's receipt and counts; the study section (ctf_study.txt, its placeholders filled from
 the receipt).
-usage (from the checkout root of the landing worktree, after the checker): python3 -B <kit>/he_texts.py RECEIPT N"""
+usage (from the checkout root of the landing worktree, after the checker): python3 -B <kit>/texts_ctf.py RECEIPT N"""
 import json
 import re
 import sys
@@ -58,6 +58,7 @@ fill = {'{N}': str(N), '{RECEIPT}': RECEIPT, '{PT}': str(mods['Becoming.Persiste
 for key, value in fill.items():
     section = section.replace(key, value)
 assert not re.search(r'\{[A-Z]+\}', section), 'unfilled placeholder'
+assert '(to be written' not in section, 'a paragraph is still to be written'
 t = STUDY.read_text(encoding='utf-8')
 assert f'\n## {N}. ' not in t
 assert max(int(x) for x in re.findall(r'^## (\d+)\. ', t, re.M)) == N - 1, 'N must be the last section plus one'

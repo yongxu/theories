@@ -1,0 +1,37 @@
+ok   nested block: got 'a b' 
+ok   docstring then def: got 'def real := 1' 
+ok   module doc: got 'x' 
+ok   docstring nesting /- inside: got 'd' 
+ok   line comment after code: got 'def x := 1 y' 
+ok   line comment holding -/: got 'a c' 
+ok   -- inside a string: got 'f "a -- b" c' 
+ok   /- inside a string: got 'f "a /- b" c' 
+ok   escaped quote in string: got 'f "a\\"b -- c" d' 
+ok   escaped backslash ends string: got 'f "a\\\\" d' 
+ok   string gap (backslash newline): got 'f "a\\ b" c' 
+ok   quote in a comment: got 'a b' 
+ok   char literal '"': got 'f \'"\' d' 
+ok   char literal '\'': got "f '\\'' g" 
+ok   char literal '\\': got "f '\\\\' d" 
+ok   char literal '-': got "f '-' g" 
+ok   char literal '«': got "f '«' d" 
+ok   hex char literal '\x22' (a quote): got "f '\\x22' g" 
+ok   primed identifiers h' h'' a'b': got "fun h' h'' a'b' => h' d" 
+ok   prime then quote: h'"x": got 'f h\' "s -- t" u' 
+ok   «» name, plain: got 'theorem «亡于粗则亡于细» := x' 
+ok   «» name holding --: got 'theorem «a--b» := x y' 
+ok   «» name holding /-: got 'theorem «a/-b» := x y' 
+ok   «» name holding ": got 'theorem «a"b» := x y' 
+ok   raw string r"a\": got 'f r"a\\" d' 
+ok   raw string r#"a"b"#: got 'f r#"a"b"# d' 
+ok   identifier ending in r, then a string: got 'f xr"a -- b" c' 
+ok   /--/ (doc opener, body starting with /): got 'y' 
+ok   /---/ (doc opener, then the closer): got 'y' 
+ok   /--/ inside a comment opens and closes: got 'c' 
+ok   open at the end, string: stopped
+ok   open at the end, comment: stopped
+ok   open at the end, nested comment: stopped
+ok   open at the end, «» name: stopped
+ok   open at the end, raw string: stopped
+ok   open at the end, -/ in a string inside a comment (Lean closes at the first -/, then a string opens): stopped
+failures: 0

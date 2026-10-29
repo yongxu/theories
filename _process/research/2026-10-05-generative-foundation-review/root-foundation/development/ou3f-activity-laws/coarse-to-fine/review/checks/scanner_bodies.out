@@ -1,0 +1,8 @@
+Becoming.Dependence Becoming.Crossing.Move 6->6 lines; first diff: ['-  /-- The first condition falls to zero while the formation takes the given mode. -/', '+                                                                                    ']
+Becoming.Joint Becoming.Shock.Move 5->5 lines; first diff: ['-  /-- Renew one unit, take the current amount, and set the next amount. -/', '+                                                                          ']
+Becoming.ShownOrder Becoming.ChoiceOccasions 5->5 lines; first diff: ['-  /-- What is open at the occasion. -/', '+                                      ']
+Becoming.FreeEnergyGuarantees Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser 10->10 lines; first diff: ['-  /-- The first of what it may take, chosen on a tie. -/', '+                                                        ']
+Becoming.Blanket Becoming.Blanket.Blanketed 9->9 lines; first diff: ["-  /-- The internal part's next state. -/", '+                                        ']
+Becoming.Blanket Becoming.Blanket.Parts 9->9 lines; first diff: ['-  /-- The internal part. -/', '+                           ']
+Becoming.Cascade Becoming.Turns 5->5 lines; first diff: ['-  /-- What couples into member `n` of the world. -/', '+                                                   ']
+Becoming.Hexagrams Becoming.Hexagram.order 66->66 lines; first diff: ['-    ⟨true, true, true, true, true, true⟩,  -- 1 乾: 乾下乾上', '-    ⟨false, false, false, false, false, false⟩,  -- 2 坤: 坤下坤上']

@@ -3,7 +3,7 @@
 of Persistence between main's receipt (the one HEAD holds) and the landing's (or a rehearsal's) receipt. Expected: every
 declaration prints its old statement, no definition is rewritten, nothing is added, gone or moved.
 OU3b's signatures_ou3b.py supplies the log reading.
-usage (from the checkout root, after the checker): python3 -B <kit>/signatures_lineage.py [RECEIPT_ID | --dir RUN_DIR]
+usage (from the checkout root, after the checker): python3 -B <kit>/signatures_ctf.py [RECEIPT_ID | --dir RUN_DIR]
 (--dir reads a rehearsal's receipt, RUN_DIR/<id>/verification.json, from outside the repository.)"""
 import importlib.util
 import json
@@ -38,8 +38,8 @@ for m in CHANGED:
     new.update(n)
     where_old.update({k: m for k in o})
     where_new.update({k: m for k in n})
-    defs_old.update(s3b.definitions(s3b.source_at_head(m)))
-    defs_new.update(s3b.definitions((ROOT / PKG / f'Becoming/{m}.lean').read_text(encoding='utf-8')))
+    defs_old.update(s3b.definitions(s3b.source_at_head(m), f'HEAD:{m}'))
+    defs_new.update(s3b.definitions((ROOT / PKG / f'Becoming/{m}.lean').read_text(encoding='utf-8'), m))
 changed = sorted(n for n in old if n in new and old[n] != new[n])
 gone = sorted(n for n in old if n not in new)
 added = sorted(n for n in new if n not in old)

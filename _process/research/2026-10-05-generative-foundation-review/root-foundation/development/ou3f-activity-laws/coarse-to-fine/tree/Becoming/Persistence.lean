@@ -1173,6 +1173,8 @@ and ceasing read through it are beginning (生) and ending (亡) under that clas
   its dual `«生于粗则生于细»` (`Web.ceases_of_persisting_ceases`, `Web.arises_of_persisting_arises`).
   So do ending and beginning under the state class where activity changes, read from ending and
   beginning under activity (`Web.wang_state_of_change`, `Web.sheng_state_of_change`).
+* **By closure.** A name kept over a held stretch (`Web.steady_held`) keeps a region along the
+  steps, so it is a case of the grammar's closure at the successor (`kept_onward`).
 * **Holding at every step is a line without end (不穷)** under holding (`Web.unending_of_holds`).
   Which `h` holds is a choice of class (`Seed.held_classes`): the spent seed's line never ends
   under holding by dependence and ends at the fourth step under holding by its reserve.
@@ -1181,8 +1183,8 @@ and ceasing read through it are beginning (生) and ending (亡) under that clas
   conservation induces, in the class of activity (`World.arises_fixed_iff_sheng`), and ceases so
   exactly where it ends there (`World.ceases_fixed_iff_wang`).
 
-Not connected: the laws of re-identification (`Web.steady_held`, `Web.renewingIn_held` and the
-classes fixed under conservation) concern namings of the carrier, which the grammar takes as a
+Not connected: the other laws of re-identification (`Web.renewingIn_held` and the classes fixed
+under conservation) concern namings of the carrier, which the grammar takes as a
 model commitment (equality on the carrier); the census laws (`Web.persisting_census`) count lists,
 which the grammar does not state.
 -/

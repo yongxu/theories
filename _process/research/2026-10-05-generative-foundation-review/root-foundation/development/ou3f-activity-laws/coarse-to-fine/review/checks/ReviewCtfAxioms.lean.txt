@@ -1,0 +1,19 @@
+import Lean
+import Becoming.Persistence
+
+open Lean Elab Command
+
+/-! Every constant Lean put in `Becoming.Persistence`, generated ones included, with its axioms. -/
+#eval show CommandElabM Unit from do
+  let env ← getEnv
+  let some idx := env.getModuleIdx? `Becoming.Persistence | throwError "no module"
+  let mut count := 0
+  let mut with_axioms := 0
+  for (n, _) in env.constants.map₁.toList do
+    if env.getModuleIdxFor? n == some idx then
+      count := count + 1
+      let axioms ← liftCoreM <| Lean.collectAxioms n
+      if axioms.size > 0 then
+        with_axioms := with_axioms + 1
+        logInfo m!"AXIOMS {n} {axioms.toList}"
+  logInfo m!"CONSTANTS {count} WITH_AXIOMS {with_axioms}"

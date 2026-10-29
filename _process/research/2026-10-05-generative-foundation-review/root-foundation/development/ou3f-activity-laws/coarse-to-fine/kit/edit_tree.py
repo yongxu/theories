@@ -27,7 +27,12 @@ def replace(old, new):
 replace("""  its dual `«生于粗则生于细»` (`Web.ceases_of_persisting_ceases`, `Web.arises_of_persisting_arises`).""",
         """  its dual `«生于粗则生于细»` (`Web.ceases_of_persisting_ceases`, `Web.arises_of_persisting_arises`).
   So do ending and beginning under the state class where activity changes, read from ending and
-  beginning under activity (`Web.wang_state_of_change`, `Web.sheng_state_of_change`).""")
+  beginning under activity (`Web.wang_state_of_change`, `Web.sheng_state_of_change`).
+* **By closure.** A name kept over a held stretch (`Web.steady_held`) keeps a region along the
+  steps, so it is a case of the grammar's closure at the successor (`kept_onward`).""")
+replace("""Not connected: the laws of re-identification (`Web.steady_held`, `Web.renewingIn_held` and the
+classes fixed under conservation) concern namings""", """Not connected: the other laws of re-identification (`Web.renewingIn_held` and the classes fixed
+under conservation) concern namings""")
 replace("""/-- Where activity changes across the step from `t`, the occurrence before it ends (亡) under the
 state class. -/
 theorem wang_state_of_change {t : Nat} {f : F} (change : ¬ (W.active t f ↔ W.active (t + 1) f)) :

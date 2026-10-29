@@ -1,0 +1,106 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/ou3f-laws/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/coarse-to-fine/review/checks/tree-new",
+  "modules": 124,
+  "ran": [
+    "Becoming.ContinuedClasses",
+    "Becoming.EventualWidening",
+    "Becoming.ReachableRanges",
+    "Becoming.HeldPossible",
+    "Becoming.CausalGrowth",
+    "Becoming.EventualWideningInstances",
+    "Becoming.ComparingCourses",
+    "Becoming.MapInstances",
+    "Becoming.KeepingWidening",
+    "Becoming.Presence",
+    "Becoming.ReorderingGrowth",
+    "Becoming.Tasks",
+    "Becoming.WorldRepresentation",
+    "BecomingCausalGrowthAxiomAudit",
+    "BecomingComparingCoursesAxiomAudit",
+    "BecomingContinuedClassesAxiomAudit",
+    "BecomingEventualWideningAxiomAudit",
+    "BecomingEventualWideningInstancesAxiomAudit",
+    "BecomingHeldPossibleAxiomAudit",
+    "BecomingKeepingWideningAxiomAudit",
+    "BecomingMapInstancesAxiomAudit",
+    "BecomingPresenceAxiomAudit",
+    "BecomingReachableRangesAxiomAudit",
+    "BecomingReorderingGrowthAxiomAudit",
+    "BecomingTasksAxiomAudit",
+    "BecomingWorldRepresentationAxiomAudit"
+  ],
+  "reused": 112,
+  "unclean": [],
+  "audits": {
+    "Becoming.Persistence": {
+      "theorems": 86,
+      "declarations": 106,
+      "with_axioms": {}
+    },
+    "Becoming.CausalGrowth": {
+      "theorems": 161,
+      "declarations": 212,
+      "with_axioms": {}
+    },
+    "Becoming.ComparingCourses": {
+      "theorems": 189,
+      "declarations": 242,
+      "with_axioms": {}
+    },
+    "Becoming.ContinuedClasses": {
+      "theorems": 73,
+      "declarations": 98,
+      "with_axioms": {}
+    },
+    "Becoming.EventualWidening": {
+      "theorems": 24,
+      "declarations": 36,
+      "with_axioms": {}
+    },
+    "Becoming.EventualWideningInstances": {
+      "theorems": 82,
+      "declarations": 106,
+      "with_axioms": {}
+    },
+    "Becoming.HeldPossible": {
+      "theorems": 89,
+      "declarations": 118,
+      "with_axioms": {}
+    },
+    "Becoming.KeepingWidening": {
+      "theorems": 248,
+      "declarations": 306,
+      "with_axioms": {}
+    },
+    "Becoming.MapInstances": {
+      "theorems": 27,
+      "declarations": 27,
+      "with_axioms": {}
+    },
+    "Becoming.Presence": {
+      "theorems": 164,
+      "declarations": 190,
+      "with_axioms": {}
+    },
+    "Becoming.ReachableRanges": {
+      "theorems": 135,
+      "declarations": 196,
+      "with_axioms": {}
+    },
+    "Becoming.ReorderingGrowth": {
+      "theorems": 62,
+      "declarations": 76,
+      "with_axioms": {}
+    },
+    "Becoming.Tasks": {
+      "theorems": 128,
+      "declarations": 167,
+      "with_axioms": {}
+    },
+    "Becoming.WorldRepresentation": {
+      "theorems": 34,
+      "declarations": 48,
+      "with_axioms": {}
+    }
+  }
+}

@@ -1,0 +1,40 @@
+ROW Becoming.Web.inactive_of_not_arising | Becoming.kept_onward: direct; Becoming.«线则所闭»: transitive
+ROW Becoming.Web.active_back | Becoming.kept_onward: direct; Becoming.«线则所闭»: transitive
+ROW Becoming.Web.active_before | Becoming.kept_onward: direct; Becoming.«线则所闭»: transitive
+ROW Becoming.Web.ended_for_good | Becoming.kept_onward: direct; Becoming.«线则所闭»: transitive
+ROW Becoming.Web.ByPassing.present_earlier | Becoming.kept_onward: direct; Becoming.«线则所闭»: transitive
+ROW Becoming.Web.ByPassing.trace | Becoming.kept_onward: direct; Becoming.«线则所闭»: transitive
+ROW Becoming.Web.steady_held | Becoming.kept_onward: direct; Becoming.«线则所闭»: transitive
+ROW Becoming.Web.Continuing.mono | Becoming.«及之单调»: direct
+ROW Becoming.Web.ByPassing.passes_within | Becoming.«两端分则中有标»: direct; Becoming.«线内同类»: direct
+ROW Becoming.Web.ByPassing.begins_passed | Becoming.«生于细而续于粗则异»: direct
+ROW Becoming.Web.ByPassing.ends_within | Becoming.«两端分则中有标»: direct; Becoming.«线内同类»: direct
+ROW Becoming.Web.Lineage.unique | Becoming.«迭之定»: direct
+ROW Becoming.Web.Lineage.origin | Becoming.«迭之定前»: direct
+ROW Becoming.Web.wang_state_of_change | Becoming.«亡于粗则亡于细»: NO
+ROW Becoming.Web.sheng_state_of_change | Becoming.«生于粗则生于细»: NO
+ROW Becoming.Web.Lineage.split | Becoming.«迭之分»: direct
+ROW Becoming.Web.Lineage.through | Becoming.«迭之分»: transitive
+ROW Becoming.Web.Lineage.onward | Becoming.«不穷则迭»: NO; Becoming.«或有后则或迭»: direct
+ROW Becoming.Web.Lineage.back | Becoming.«或有后则或迭»: direct; Becoming.«迭之逆»: direct
+ROW Becoming.Web.ByPassing.present_of_le | Becoming.kept_onward: transitive
+ROW Becoming.Web.ByPassing.empty_stays | Becoming.kept_onward: transitive
+ROW Becoming.Web.Lineage.ends | Becoming.«迭之分»: transitive; Becoming.«迭之定»: transitive
+ROW Becoming.Web.lineages_apart | Becoming.«迭之分»: transitive; Becoming.«迭之定前»: transitive
+ROW Becoming.Web.reaches_onward | Becoming.«不穷则迭»: direct
+ROW Becoming.Web.not_endless_of_gone | Becoming.«不穷则迭»: transitive
+ROW Becoming.Web.stopped_not_endless | Becoming.«不穷则迭»: transitive
+ROW Becoming.Web.generation_arises_late | Becoming.«不穷则迭»: transitive
+ROW Becoming.Web.generation_renews_late | Becoming.«不穷则迭»: transitive
+ROW Becoming.Web.keeping_of_carried_on | Becoming.«不穷则迭»: transitive
+ROW Becoming.Web.arises_of_persisting_arises | Becoming.«生于粗则生于细»: direct
+ROW Becoming.Web.ceases_of_persisting_ceases | Becoming.«亡于粗则亡于细»: direct
+ROW Becoming.Web.ceasesFrom_of_unconditioned | Becoming.«亡于粗则亡于细»: direct
+ROW Becoming.Web.ceases_of_pattern_ends | Becoming.«亡于粗则亡于细»: direct
+ROW Becoming.Web.merge_candles | Becoming.«蜡烛之合»: direct
+ROW Becoming.Web.active_along_line | Becoming.«线内同类»: direct
+ROW Becoming.Web.dissipation_arising_not_recurring | Becoming.«尽则不或屡»: transitive
+RETIRED? Becoming.Web.Continuing.mono_by_reach gone
+RETIRED? Becoming.Web.ByPassing.passes_within_by_line gone
+RETIRED? Becoming.Web.ByPassing.begins_passed_by_grammar gone
+RETIRED? Becoming.Web.Lineage.cons gone
