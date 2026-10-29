@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "id": "transmission-independent-where-it-binds",
+  "title": {
+    "zh": "传递在其起约束之处的独立性",
+    "en": "Independence of transmission where it binds"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-13T12:27:01.789893+00:00",
+  "statement": {
+    "zh": "传递在其起约束之处，去掉给予者的一条依存，其余每个前提与有限不变而传递失效；所以去掉依存时保持的规律都推不出它，交换的读法加上“取用即依存”推出它，二者都需要。",
+    "en": "Wherever transmission binds, dropping one dependence of the giver keeps every other premise and finiteness and breaks it; so no law kept by dropping a dependence derives it, and a reading of the exchange with drawing being depending derives it, each needed."
+  },
+  "claim": {
+    "zh": "去掉 g 在步 t 对 c 的依存（Web.drop、World.drop）不改变任何水平、活动、取用、所需与流，保持活动需要支持（Web.drop_dependent）、其余七个前提与有限（World.drop_holds、World.drop_finite），并在后代依存 c 的每次世系上使传递对每个 δ 都失效（Flow.drop_untransmitted、World.drop_untransmitting）。所以满足其余七个前提、传递在其中起约束的每个世界都有一个邻居，去掉一条依存，满足除传递外的全部（World.drop_but）；有限的孵化与它的邻居就是这样一对（World.finiteHatch_pair）。一般的界限：在去掉依存时保持、且推出传递的关于世界的条件，推出传递不起约束（World.vacuous_of_drop_invariant）。交换的读法是这样的条件：关系项在第一个立足之步只依存每个给予它者在给予之步所取用的（Flow.DependsOnDrawn），或跨该步所取的（Flow.DependsOnFed；只有活跃者取用且只从所取用者取时它给出前者，Flow.dependsOnDrawn_of_fed）；两者在去掉依存时都保持（Flow.DependsOnDrawn.drop、Flow.DependsOnFed.drop），所以有限、其余七个前提与取用的读法推不出传递（World.drawn_not_enough）。加上一条要求依存的规律，在给予者处取用 c 即依存 c（Web.DrawingDepends），读法给出承继（Flow.inherits_of_drawn、Flow.inherits_of_fed）。有限、平衡、耗散的世界中每个水平至多是第一步所立者的总量（World.Finite.level_le）；活动需要支持且每个关系项体现时，所需之界在水平的界之内成立（Flow.needsWithin_of_embodied），所以在满足平衡、耗散、体现与活动需要支持的有限世界中，传递恰是承继（World.transmitting_iff_inherits，有水平之界时 World.transmitting_iff_inherits_bounded），读法加上链接给出传递（World.transmitting_of_drawn、World.transmitting_of_fed），不是空的：亲代也依存自身的有限孵化中这些都成立且传递起约束（World.bearingHatch_derived）。二者都需要（World.drawn_and_link_needed）：从有限孵化去掉亲代对食物的依存，读法成立而链接不成立（World.drawn_without_link）；在 novel 中链接对亲代成立，没有东西取用亲代，而读法不成立（World.link_without_drawn）。不用公理。",
+    "en": "Dropping g's dependence on c at step t (Web.drop, World.drop) changes no level, activity, drawing, need or flow, keeps activity needing support (Web.drop_dependent), the seven other premises and finiteness (World.drop_holds, World.drop_finite), and breaks transmission for every δ at any descent whose descendant depends on c (Flow.drop_untransmitted, World.drop_untransmitting). So every world meeting the seven other premises in which transmission binds has a neighbour, one dependence dropped, meeting all but transmission (World.drop_but); the finite hatch and its neighbour are such a pair (World.finiteHatch_pair). The general boundary: a condition on worlds kept by dropping a dependence and implying transmission implies that transmission does not bind (World.vacuous_of_drop_invariant). A reading of the exchange is such a condition: a relatum depends at its first standing step only on what each relatum giving to it drew on at the giving step (Flow.DependsOnDrawn), or took from across it (Flow.DependsOnFed, which gives the first where only active relata take and only from what they draw on, Flow.dependsOnDrawn_of_fed); both are kept by dropping a dependence (Flow.DependsOnDrawn.drop, Flow.DependsOnFed.drop), so finiteness, the seven other premises and the reading of drawing do not give transmission (World.drawn_not_enough). With one law requiring dependence, at the giver, that drawing on c is depending on it (Web.DrawingDepends), the reading gives inheritance (Flow.inherits_of_drawn, Flow.inherits_of_fed). A finite, balanced, dissipative world bounds every level by the total standing at the first step (World.Finite.level_le); with activity needing support and every relatum embodied the need half holds within a bound on levels (Flow.needsWithin_of_embodied), so in a finite world meeting balance, dissipation, embodiment and activity needing support transmission is exactly inheritance (World.transmitting_iff_inherits; with a bound on levels, World.transmitting_iff_inherits_bounded), and the reading with the link gives transmission (World.transmitting_of_drawn, World.transmitting_of_fed), not vacuously: in the finite hatch whose parent also depends on itself all of these hold and transmission binds (World.bearingHatch_derived). Each is needed (World.drawn_and_link_needed): with the parent's dependence on the food dropped from the finite hatch, the reading holds and the link fails (World.drawn_without_link); in novel the link holds of the parent, on which nothing draws, and the reading fails (World.link_without_drawn). No axiom."
+  },
+  "hypotheses": [
+    {
+      "zh": "独立与界限对每个世界陈述；推出需要有限、平衡、耗散、体现、活动需要支持、取用的读法与链接，各自公开。",
+      "en": "Independence and the boundary are stated for every world; the derivation needs finiteness, balance, dissipation, embodiment, activity needing support, the reading of drawing and the link, each supplied openly."
+    },
+    {
+      "zh": "链接（取用即依存）是充分而非必要的：在有限孵化中亲代取用自身而不依存自身，传递仍成立。",
+      "en": "The link (drawing is depending) is sufficient, not necessary: in the finite hatch the parent draws on itself without depending on itself, and transmission holds there."
+    }
+  ],
+  "correspondence": {
+    "zh": "P84（工作板），按 Ren 2026-10-12 的“move towards 100%”。读法（AI 的，依 Ren 的交托采用）：其余七个前提只限制依存，从不要求某个依存；传递要求给予者的依存，所以它不能从它们推出，任何推出都要一条要求依存存在的规律。取用即依存是这样一条规律的候选；依 Ren 的交托，它不采用为形成的规律（D31）。见整合文档 §105。",
+    "en": "P84 (work board), following Ren's ‘move towards 100%’ of 12 October 2026. Reading (the AI's, adopted on Ren's delegation): the seven other premises only limit dependence and never require one; transmission requires the giver's, so it cannot follow from them, and any derivation needs a law requiring some dependence to exist. Drawing being depending is a candidate for such a law; on Ren's delegation it is not adopted as a law of forming (D31). See the integration document §105."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
+  "aliases": [
+    "Becoming.Web.drop",
+    "Becoming.World.drop",
+    "Becoming.Web.drop_dependent",
+    "Becoming.World.drop_holds",
+    "Becoming.World.drop_finite",
+    "Becoming.Flow.drop_untransmitted",
+    "Becoming.World.drop_untransmitting",
+    "Becoming.World.drop_but",
+    "Becoming.World.finiteHatch_pair",
+    "Becoming.World.vacuous_of_drop_invariant",
+    "Becoming.Flow.DependsOnDrawn",
+    "Becoming.Flow.DependsOnFed",
+    "Becoming.Web.DrawingDepends",
+    "Becoming.World.drawn_not_enough",
+    "Becoming.Flow.inherits_of_drawn",
+    "Becoming.Flow.inherits_of_fed",
+    "Becoming.World.Finite.level_le",
+    "Becoming.World.transmitting_iff_inherits",
+    "Becoming.World.transmitting_of_drawn",
+    "Becoming.World.transmitting_of_fed",
+    "Becoming.World.bearingHatch_derived",
+    "Becoming.World.drawn_and_link_needed",
+    "Becoming.World.drawn_without_link",
+    "Becoming.World.link_without_drawn",
+    "transmission independent",
+    "传递的独立"
+  ],
+  "dependencies": [
+    {
+      "id": "map-of-premises",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用 Premise、MeetsAllBut、finiteHatch、novel 与 novel_but；把 novel 的单个见证推广到传递起约束的每个世界。",
+        "en": "Reuses Premise, MeetsAllBut, finiteHatch, novel and novel_but; generalizes the single witness novel to every world in which transmission binds."
+      },
+      "interface": {
+        "output": {
+          "zh": "八个前提、见证世界与传递的独立（一个见证）。",
+          "en": "The eight premises, the witness worlds and the independence of transmission (one witness)."
+        },
+        "input": {
+          "zh": "在传递起约束的每个世界旁都有一个邻居。",
+          "en": "A neighbour beside every world in which transmission binds."
+        },
+        "conditions": {
+          "zh": "其余七个前提；传递起约束。",
+          "en": "The seven other premises; transmission binding."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean"
+      }
+    },
+    {
+      "id": "transmission-is-inheritance-and-need",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用传递的分解（transmitsWithin_iff）与所需之界的推出。",
+        "en": "Reuses the split of transmission (transmitsWithin_iff) and the derivation of the need half."
+      },
+      "interface": {
+        "output": {
+          "zh": "传递恰是承继加所需之界。",
+          "en": "Transmission is exactly inheritance with the need within a bound."
+        },
+        "input": {
+          "zh": "有限世界中传递恰是承继。",
+          "en": "In finite worlds transmission is exactly inheritance."
+        },
+        "conditions": {
+          "zh": "有限、平衡、耗散、体现、活动需要支持。",
+          "en": "Finiteness, balance, dissipation, embodiment, activity needing support."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "evolution-on-descent",
+      "detail": {
+        "zh": "回答其 next_delta：传递能否由给予与依存的形成推出。",
+        "en": "Answers its next_delta: whether transmission can be derived from how giving and dependence form."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
+      "detail": {
+        "zh": "drawn_without_link 与 link_without_drawn：读法与链接各自都不给出承继。",
+        "en": "drawn_without_link and link_without_drawn: neither the reading nor the link gives inheritance alone."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "只对离散步、自然数的量陈述；独立在传递起约束的世界上陈述；链接是充分而非必要的；推出不是对每个世界的，需要有限与所列前提；所需之界是对水平的粗界；取用即依存依 Ren 的交托不采用为形成的规律；名称是 AI 的表述，按 Ren 的命名规则采用（drop、DependsOnDrawn、DrawingDepends 等）。",
+    "en": "Stated for discrete steps and natural-number amounts; independence is stated on worlds in which transmission binds; the link is sufficient, not necessary; the derivation is not for every world, needing finiteness and the listed premises; the need bound is a coarse bound on levels; drawing is depending is declined as a law of forming, on Ren's delegation; the names are the AI's wording, adopted under Ren's naming rule (drop, DependsOnDrawn, DrawingDepends and others)."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Transmission 的 64 项定理全部空依赖，其中含 Web.drop、World.drop、Web.drop_dependent、World.drop_holds、World.drop_finite、Flow.drop_untransmitted、World.drop_untransmitting、World.drop_but、World.finiteHatch_pair、World.vacuous_of_drop_invariant、Flow.DependsOnDrawn、Flow.DependsOnFed、Web.DrawingDepends、World.drawn_not_enough、Flow.inherits_of_drawn、Flow.inherits_of_fed、World.Finite.level_le、World.transmitting_iff_inherits、World.transmitting_of_drawn、World.transmitting_of_fed、World.bearingHatch_derived、World.drawn_and_link_needed、World.drawn_without_link与 World.link_without_drawn；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §105；尚无独立审查。",
+    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 64 theorems of Becoming.Transmission all have empty axiom reports, among them Web.drop, World.drop, Web.drop_dependent, World.drop_holds, World.drop_finite, Flow.drop_untransmitted, World.drop_untransmitting, World.drop_but, World.finiteHatch_pair, World.vacuous_of_drop_invariant, Flow.DependsOnDrawn, Flow.DependsOnFed, Web.DrawingDepends, World.drawn_not_enough, Flow.inherits_of_drawn, Flow.inherits_of_fed, World.Finite.level_le, World.transmitting_iff_inherits, World.transmitting_of_drawn, World.transmitting_of_fed, World.bearingHatch_derived, World.drawn_and_link_needed, World.drawn_without_link and World.link_without_drawn. The same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §105 of the integration note; there is no independent review yet."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "role": "proof",
+      "sha256": "cb019033b8e58f42661a7584a552d646034cbe007e9c7a70545087f37cdea9cb",
+      "declarations": [
+        "Becoming.World.Finite"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
+      "role": "proof",
+      "sha256": "c663ea54de803b3ebac7de4a110df1119f94473f962e762fa5b4332c3cb23591",
+      "declarations": [
+        "Becoming.Web.InheritsAt",
+        "Becoming.Web.NeedsWithinAt",
+        "Becoming.Web.DrawingDepends",
+        "Becoming.Web.drop",
+        "Becoming.Web.transmits_at_iff",
+        "Becoming.Web.drop_supported",
+        "Becoming.Web.drop_dependent",
+        "Becoming.Web.drop_keeps_next",
+        "Becoming.Web.drop_not_inherits",
+        "Becoming.split_of_em",
+        "Becoming.Split.web",
+        "Becoming.Split.toDescendant",
+        "Becoming.Split.flow",
+        "Becoming.Split.descends",
+        "Becoming.split_iff_em",
+        "Becoming.Flow.Inherits",
+        "Becoming.Flow.NeedsWithin",
+        "Becoming.Flow.TransmitsFromSome",
+        "Becoming.Flow.DependsOnDrawn",
+        "Becoming.Flow.DependsOnFed",
+        "Becoming.Flow.transmitsWithin_iff",
+        "Becoming.Flow.transmitsWithin_iff_forming",
+        "Becoming.Flow.transmitsWithin_iff_split",
+        "Becoming.Flow.drop_untransmitted",
+        "Becoming.Flow.inherits_of_drawn",
+        "Becoming.Flow.dependsOnDrawn_of_fed",
+        "Becoming.Flow.inherits_of_fed",
+        "Becoming.Flow.DependsOnDrawn.drop",
+        "Becoming.Flow.DependsOnFed.drop",
+        "Becoming.World.drop",
+        "Becoming.World.drop_holds",
+        "Becoming.World.drop_finite",
+        "Becoming.World.drop_untransmitting",
+        "Becoming.World.drop_but",
+        "Becoming.World.vacuous_of_drop_invariant",
+        "Becoming.World.stock_le_start",
+        "Becoming.World.Finite.level_le",
+        "Becoming.World.transmitting_iff_inherits_bounded",
+        "Becoming.World.transmitting_iff_inherits",
+        "Becoming.World.transmitting_of_drawn",
+        "Becoming.World.transmitting_of_fed",
+        "Becoming.World.droppedHatch",
+        "Becoming.World.finiteHatch_descends",
+        "Becoming.World.finiteHatch_drawn",
+        "Becoming.World.finiteHatch_pair",
+        "Becoming.World.drawn_without_link",
+        "Becoming.World.link_without_drawn",
+        "Becoming.World.drawn_and_link_needed",
+        "Becoming.World.drawn_not_enough",
+        "Becoming.World.bearingHatch",
+        "Becoming.World.bearingHatch_derived"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean",
+      "role": "proof",
+      "sha256": "52d6f776af632644641e01b34bc1e35a64f4c6e37cdf3415fe1d086751ae1728",
+      "declarations": [
+        "Becoming.World.Premise.Holds",
+        "Becoming.World.Transmitting"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
+      "role": "proof",
+      "sha256": "37ea240db6a087b659d81b65e3264935c6f666025ede8c8bf633ff1c3fb6be35",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "role": "receipt",
+      "sha256": "48fd7efd02436ec3e2dfd904771bdf1a44f18edaeb55fcc23256e24523a59d19",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-12-move-towards-100.md",
+      "role": "provenance",
+      "sha256": "f3e5885ed960640cf3773813e7e02f6869ca2884b3730a2ea683c0686c03a8f3",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json",
+      "role": "receipt",
+      "sha256": "c5e118f377ae815cdb1d8afb02bbc5e3fb7ee519d45ab85f12a834fc467e8f0a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "role": "receipt",
+      "sha256": "276674770ba470537ab6d2f4ea06c15418b4f22b325b4a634ac7cdc8fd9b95d1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T070506.681048Z/verification.json",
+      "role": "receipt",
+      "sha256": "8dd27dea627cc21868bafb80daf055d19cfe3a948ba4ad1e336bbe2e1cd0821e",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "role": "receipt",
+      "sha256": "3f5c0cd3499ddfca02340834abc705087799101afdb234d23398d5cb44470b0a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "role": "receipt",
+      "sha256": "e308626a3bfd5618e8279b5167ad81be01de5b97e4981a617ac1acd31fa7686b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Transmission",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Premises",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Space",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.InAmounts",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "一条必要且充分的形成规律（链接只是充分的）；水平无界时的推出（有界时已给出：World.transmitting_iff_inherits_bounded）。",
+    "en": "A law of forming that is necessary as well as sufficient (the link is only sufficient); the derivation where levels are unbounded (with a bound it is given: World.transmitting_iff_inherits_bounded)."
+  },
+  "history": [
+    {
+      "zh": "2026-10-13：接续并整合 P84 的现存证明包；见整合文档 §105。",
+      "en": "2026-10-13: resumed and integrated the existing P84 proof package; see §105 of the integration note."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13 P93：核读主干新增的登记修订段落及形式模块行；删除这两处新增后此前全文字节一致，本条既有主张和冻结证据未改变。",
+      "en": "13 October 2026, P93: reviewed the added registration-revision paragraph and formal-module row; removing only those additions restores every earlier byte. This record’s claim and frozen evidence are unchanged."
+    },
+    {
+      "zh": "P103 共享章对应复核：核对 P104/P105 已检模块的两行导航及 P93/P99/P103 接续说明；旧章除这些可定位增量外逐字保留，本成果证明和主张未改。",
+      "en": "P103 shared-chapter review: two navigation rows for checked P104/P105 modules and the P93/P99/P103 continuation notes are reconciled; all other prior chapter bytes, this result’s proof and claim remain unchanged."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“传递在其起约束之处独立：去掉给予者的一条依存，其余每个前提与有限不变而传递失效，所以去掉依存时保持的规律都推不出它；交换的读法加上“取用即依存”推出它，二者都需要”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “Transmission is independent wherever it binds: dropping one dependence of the giver keeps every other premise and finiteness and breaks it, so no law kept by dropping a dependence derives it; a reading of the exchange with drawing being depending derives it, each needed”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): the study only adds section 112 (general laws and renames) and its paragraph in the English summary; chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026-10-16 P110（依 Ren 2026-10-15 的交托决定的读法，研究 §147，DELEGATED-CHOICES D31, D36）：此前留给 Ren 的读法与名称按所列决定改为采用或不采用，要求 Ren 判断这些读法的下一步已删去。陈述、证明与绑定不变；Ren 可改其中任何一项决定。",
+      "en": "16 October 2026, P110 (readings decided on Ren's delegation of 15 October 2026, study section 147, DELEGATED-CHOICES D31, D36): readings and names formerly left to Ren are adopted or declined as those decisions say, and next steps asking for Ren's judgment on them are removed. Statements, proofs and bindings unchanged; Ren can reverse any of the decisions."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Premises.lean, Space.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Premises.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Space.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Premises.lean、Space.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Premises.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Space.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Space.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Space.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：证明绑定（Space.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 223 节；Space.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；THE-THEORY-OF-BECOMING.md，§9（回执、计数、不再计入重述的连通性度量）随 R32。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 36 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/33ef1b54d252b32d/transmission-independent-where-it-binds.json and in git.",
+      "zh": "2026-10-20：36 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/33ef1b54d252b32d/transmission-independent-where-it-binds.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, EV2 (what bounds offspring numbers): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by EV2's additions: in 2.4 a bullet for Becoming.Reproduction, the fitness sentence and the record list; a row of the record table; 8.1 item 9; and section 9's receipt and counts. Read before re-pointing. The claim is unchanged.",
+      "zh": "2026年10月20日，EV2（什么约束后代数）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只因 EV2 的增补而改动：2.4 的 Becoming.Reproduction 一条、适应度一句与记录列表；记录表的一行；8.1 第 9 项；以及第 9 节的回执与计数。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "20 October 2026, EV4 and EV5 (selection within and among groups; among groups by ending): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by EV4's and EV5's additions: in 2.4 a bullet for each of Becoming.SelectionLevels and Becoming.GroupEnding and the record list; two rows of the record table; 8.1 item 9; and section 9's receipt and counts. Read before re-pointing. The claim is unchanged.",
+      "zh": "2026年10月20日，EV4 与 EV5（组内与组间选择；经由终止的组间选择）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只因 EV4 与 EV5 的增补而改动：2.4 的 Becoming.SelectionLevels 与 Becoming.GroupEnding 各一条与记录列表；记录表的两行；8.1 第 9 项；以及第 9 节的回执与计数。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Finite to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
+      "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.Finite to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
+    }
+  ]
+}

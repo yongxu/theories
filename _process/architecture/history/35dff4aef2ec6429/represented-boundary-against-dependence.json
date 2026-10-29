@@ -1,0 +1,517 @@
+{
+  "schema_version": 1,
+  "id": "represented-boundary-against-dependence",
+  "title": {
+    "zh": "所表示的边界与实际依存",
+    "en": "A represented boundary and actual dependence"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
+  "statement": {
+    "zh": "在条件区域上的更新，只在区域覆盖其参与时是该步的更新。覆盖其所需且要求不收紧时保住自身支持，仍可侵蚀他者；遗漏其所需时，可以经自身的汲取失去自身支持。",
+    "en": "Renewal over a region of conditions is renewal at the step where the region covers what the formation takes part in. Covering what it requires, with requirements not tightening, it keeps its own support yet can undermine another; omitting what it requires, its own draw can lose its own support."
+  },
+  "claim": {
+    "zh": "一个形成在 t 的事件在条件区域上更新（Web.RenewingOver），是指它活跃，并且该步保住它在区域中参与的每个条件上的每项依存。该步的更新就是在每个区域上的更新（Web.RenewingAt.over、Web.renewingAt_iff_over_all），在一个区域上的更新也是在它之内每个区域上的更新（Web.RenewingOver.narrow）。与形成的实际关系相比：区域覆盖它参与的每个条件时，在区域上的更新就是该步的更新（Web.RenewingOver.at）；区域覆盖它所需的每个条件、它的要求在该步不收紧时，在区域上更新的形成在该步之后被支持（Web.RenewingOver.keeps_own），但仍可侵蚀他者——Clearing 中清除者每步都在其资源（它唯一所需的条件）上更新，在第一步侵蚀，不在该步的更新之内（Clearing.renewing_over_resource）；区域遗漏它所需的一个条件时，它自身的汲取可以侵蚀它自身的依存——Omitted 中一个形成需要两个条件，在第零步在 false 上更新、要求不收紧，它也需要区域遗漏的 true，它对 true 的汲取侵蚀，在该步之后它不被支持（Omitted.loses_own；平衡、Acting、Taking 与 Dependent 都成立）。不用伦理前提，也不用 Lean 公理。",
+    "en": "A formation's event at t is within renewal over a region of conditions (Web.RenewingOver) when it is active and the step keeps every dependence on every condition of the region it takes part in. Renewal at the step is renewal over every region (Web.RenewingAt.over, Web.renewingAt_iff_over_all), and renewal over a region is renewal over every region inside it (Web.RenewingOver.narrow). Compared with the formation's actual relations: over a region covering every condition it takes part in, renewal over the region is renewal at the step (Web.RenewingOver.at); over a region covering every condition it requires, where its requirements do not tighten across the step, a formation renewing over the region is supported after the step (Web.RenewingOver.keeps_own), yet it can still undermine another: in Clearing the clearer renews over its resource, the one condition it requires, at every step, undermines at step one and is not within renewal there (Clearing.renewing_over_resource); over a region omitting a condition it requires, its own draw can undermine its own dependence: in Omitted a formation requires two conditions, renews over false at step zero with requirements not tightening, also requires true, which the region omits, and its draw on true undermines, so after the step it is not supported (Omitted.loses_own; balance, Acting, Taking and Dependent all hold). No ethical premise and no Lean axiom is used."
+  },
+  "hypotheses": [
+    {
+      "zh": "条件区域是陈述的参数；这里不模型一个中心怎样表示它。",
+      "en": "A region of conditions is a parameter of the statement; nothing here models how a center comes to represent it."
+    },
+    {
+      "zh": "keeps_own 需要区域覆盖形成在 t 所需的每个条件，并且其要求在该步不收紧。",
+      "en": "keeps_own needs the region to cover every condition the formation requires at t and its requirements not to tighten across the step."
+    },
+    {
+      "zh": "比较只在一步上；多步的依存范围（供给其所需者的来源）不在比较之内。",
+      "en": "The comparison is at one step; dependence over several steps (the sources feeding what is required) is not compared."
+    },
+    {
+      "zh": "离散的步（从第零步计）；自然数的水平、所需与数量。",
+      "en": "Discrete steps, counted from step zero; natural-number levels, needs and amounts."
+    }
+  ],
+  "correspondence": {
+    "zh": "Ren 写道：“recognizing the formation of the center is also with in the system, and the \"boundary\" is also with in the same cognitive system”，又写道自我的“imagined boundary”“it is also cognitive construct that's materialistic”。读法（AI 的）：一个条件区域读作一个中心所表示的边界，形成实际参与与所需的条件读作它的实际依存。一个中心的边界可以覆盖其所需而不覆盖其参与，于是保住自身而侵蚀他者；也可以遗漏其所需，于是经自身的汲取失去自身支持；只有覆盖其参与的边界给出该步的更新。这里没有模型中心怎样形成或表示边界，区域在展开之外没有地位。这为路线 (b)（P40）准备了比较：“应当”是中心在其所表示的边界与其实际依存一致时所做的；那条路线尚未开始。读法与名称是 AI 的。",
+    "en": "Ren wrote that “recognizing the formation of the center is also with in the system, and the \"boundary\" is also with in the same cognitive system”, and of the self's “imagined boundary” that “it is also cognitive construct that's materialistic”. A reading (the AI's): a region of conditions reads as the boundary a center represents, and the conditions a formation actually takes part in and requires as its actual dependence. A center's boundary can cover what it requires and not what it takes part in, so it keeps itself and undermines another; or it can omit what it requires, so its own draw loses its own support; only a boundary covering what it takes part in gives renewal at the step. Nothing here models how a center forms or represents a boundary, and the region has no status outside the unfolding. This prepares a comparison for route (b) (P40), on which “should” is what a center does once its represented boundary matches what it actually depends on; that route has not begun. The reading and the names are the AI's."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
+  "aliases": [
+    "Becoming.Web.RenewingOver",
+    "Becoming.Web.RenewingAt.over",
+    "Becoming.Web.RenewingOver.at",
+    "Becoming.Web.renewingAt_iff_over_all",
+    "Becoming.Web.RenewingOver.narrow",
+    "Becoming.Web.RenewingOver.keeps_own",
+    "Becoming.Clearing.renewing_over_resource",
+    "Becoming.Omitted.loses_own"
+  ],
+  "dependencies": [
+    {
+      "id": "becoming-stepwise-reading",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用逐步的读法：Web.RenewingAt、Web.UnderminingAt、Web.RenewingAt.not_undermining 与 Web.MetAbove.now。",
+        "en": "Reuses the stepwise reading: Web.RenewingAt, Web.UnderminingAt, Web.RenewingAt.not_undermining and Web.MetAbove.now."
+      },
+      "interface": {
+        "output": {
+          "zh": "在更新之内的事件不侵蚀（Web.RenewingAt.not_undermining）。",
+          "en": "An event within renewal is not undermining (Web.RenewingAt.not_undermining)."
+        },
+        "input": {
+          "zh": "在区域上的更新与该步的更新比较；区域遗漏所需或所汲取的条件时的侵蚀。",
+          "en": "Renewal over a region compared with renewal at the step; undermining where the region omits a required or drawn condition."
+        },
+        "conditions": {
+          "zh": "逐步读法的定义；不用任何评价。",
+          "en": "The stepwise reading's definitions; no valuation is used."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean"
+      }
+    },
+    {
+      "id": "derived-extent-limits",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用 Clearing.undermines_within_renewal：清除者只依存于其资源，资源被更新，它在第一步的事件侵蚀栖居者。",
+        "en": "Reuses Clearing.undermines_within_renewal: the clearer depends only on its resource, which is renewed, and its event at step one undermines the dweller."
+      },
+      "interface": {
+        "output": {
+          "zh": "清除者只依存于其资源，资源的每项依存每步都被保住；它在第一步侵蚀。",
+          "en": "The clearer depends only on its resource, every dependence on which is kept at every step; it undermines at step one."
+        },
+        "input": {
+          "zh": "清除者每步在其资源上更新，第一步不在该步的更新之内。",
+          "en": "The clearer renews over its resource at every step and is not within renewal at step one."
+        },
+        "conditions": {
+          "zh": "如 Clearing.undermines_within_renewal。",
+          "en": "As in Clearing.undermines_within_renewal."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean"
+      }
+    },
+    {
+      "id": "support-from-the-supported",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用 Web.Untightened：要求在一步上不收紧。",
+        "en": "Reuses Web.Untightened: requirements that do not tighten across a step."
+      },
+      "interface": {
+        "output": {
+          "zh": "要求在一步上不收紧。",
+          "en": "Requirements that do not tighten across a step."
+        },
+        "input": {
+          "zh": "在覆盖所需的区域上更新时保住自身支持。",
+          "en": "Keeping its own support while renewing over a region covering what it requires."
+        },
+        "conditions": {
+          "zh": "除表示外没有前提。",
+          "en": "None beyond the representation."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "loss-beyond-a-region",
+      "detail": {
+        "zh": "那里是形成的区域，这里是条件的区域；两者都是陈述的参数。",
+        "en": "Regions of formations there, regions of conditions here; both are parameters of the statement."
+      }
+    },
+    {
+      "id": "conveyance-crosses-the-boundary",
+      "detail": {
+        "zh": "那里一个延续的家族的区域不是关系中的割；这里一个形成在其上更新的区域可以遗漏其所需。",
+        "en": "There a continuing family's region is no cut in the relations; here a region a formation renews over can omit what it requires."
+      }
+    },
+    {
+      "id": "feeding-closure",
+      "detail": {
+        "zh": "供给闭包给出多步的依存范围（供给其所需者的来源）。",
+        "en": "The feeding closure gives dependence over several steps (the sources feeding what is required)."
+      }
+    },
+    {
+      "id": "consumption-ends-with-feeders",
+      "detail": {
+        "zh": "Overshoot 中在所需条件上更新、保住自身支持的形成，仍经其供给者终结。",
+        "en": "In Overshoot a formation renewing over the condition it requires and keeping its own support still ends through its feeder."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
+      "detail": {
+        "zh": "覆盖所需不阻止侵蚀他者：清除者每步在其资源上更新，在第一步侵蚀（Clearing.renewing_over_resource）。",
+        "en": "Covering what is required does not prevent undermining another: the clearer renews over its resource at every step and undermines at step one (Clearing.renewing_over_resource)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
+      "detail": {
+        "zh": "遗漏所需的区域上的更新不保住自身支持（Omitted.loses_own）。",
+        "en": "Renewal over a region omitting a requirement does not keep its own support (Omitted.loses_own)."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "条件区域是陈述的参数，这里不模型中心怎样形成或表示它；比较只在一步上（多步的依存范围由 P40 的供给闭包给出，并在 Overshoot 中与所表示的边界比较，见 feeding-closure 与 consumption-ends-with-feeders）；Omitted 与 Clearing 是最小的见证，其活动与要求由规定给出，见证表明它们与平衡、支持与依存相容；不含伦理谓词，不说哪个边界应当被表示，也不说中心应当做什么；把条件区域读作所表示的边界，是 AI 的读法，依 Ren 的交托采用；名称（RenewingOver、Omitted 等）是 AI 的表述，按 Ren 的命名规则采用。",
+    "en": "A region of conditions is a parameter of the statement, and nothing here models how a center forms or represents it; the comparison is at one step (dependence over several steps is given by P40's feeding closure and compared with a represented boundary in Overshoot; see feeding-closure and consumption-ends-with-feeders); Omitted and Clearing are minimal witnesses, their activity and requirements stipulated and shown consistent with balance, support and dependence; contains no ethical predicate, and says neither which boundary should be represented nor what a center should do; reading a region of conditions as a represented boundary is the AI's reading, adopted on Ren's delegation; the names (RenewingOver, Omitted and others) are the AI's wording, adopted under Ren's naming rule."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T221720.428753Z）：Becoming.Admission 的 46 项定理与 Becoming.Regions 的 26 项定理全部空依赖；同一回执覆盖包内 91 个模块（含只作导入的根模块与四个桥接模块），共 4983 项定理／7020 项声明审计，39 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 90 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §51；尚未经独立审查。",
+    "en": "Successful Lean 4.29.1 consolidated check (20261013T221720.428753Z): the 46 theorems of Becoming.Admission and the 26 of Becoming.Regions all have empty axiom reports; the same receipt covers the package's 91 modules (including the import-only root and the four bridge modules) with 4983 theorems/7020 declaration audits, and 39 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 90 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §51 of the integration note; not yet independently reviewed."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
+      "role": "proof",
+      "sha256": "42022bafd4ad708f38914393017450031c1ab300bf4d9745bb190d4429b7ad01",
+      "declarations": [
+        "Becoming.Web.RenewingOver",
+        "Becoming.Web.RenewingAt.over",
+        "Becoming.Web.RenewingOver.at",
+        "Becoming.Web.renewingAt_iff_over_all",
+        "Becoming.Web.RenewingOver.narrow",
+        "Becoming.Web.RenewingOver.keeps_own",
+        "Becoming.Omitted.flow",
+        "Becoming.Omitted.web",
+        "Becoming.Omitted.loses_own"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Clearing.lean",
+      "role": "proof",
+      "sha256": "9f0cf4d878594390bdfa25dd337094d3767faba8cd2ad23782e513a451ede8f1",
+      "declarations": [
+        "Becoming.Clearing.renewing_over_resource",
+        "Becoming.Clearing.web",
+        "Becoming.Clearing.undermines_within_renewal"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "role": "proof",
+      "sha256": "8353141c372581724c3370927c5cd9ddfed892120cc2a8874053ca83f81f3115",
+      "declarations": [
+        "Becoming.Web.Untightened",
+        "Becoming.unitDrop"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+      "role": "proof",
+      "sha256": "1c85d21fa7ec00debcac668785b51fdd7cdc3a97a66d50c6700047956cdaf5df",
+      "declarations": [
+        "Becoming.Web.Supported",
+        "Becoming.Web.Dependent",
+        "Becoming.Web.Kept",
+        "Becoming.Web.Participates",
+        "Becoming.Web.RenewingAt",
+        "Becoming.Web.UnderminingAt",
+        "Becoming.Web.RenewingAt.not_undermining",
+        "Becoming.Web.MetAbove.now"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "role": "proof",
+      "sha256": "92c981ec6c3733f771b30b5a24469d873605383e69675114e1c55055867a31e8",
+      "declarations": [
+        "Becoming.Flow.Balances",
+        "Becoming.Flow.Acting",
+        "Becoming.Flow.Taking"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "role": "proof",
+      "sha256": "3100cfdb5668db77d208d34986472af7511b880439132be7a45e56e42e7ba439",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "role": "receipt",
+      "sha256": "48fd7efd02436ec3e2dfd904771bdf1a44f18edaeb55fcc23256e24523a59d19"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093"
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-10-centers-within-the-dynamics.md",
+      "role": "provenance",
+      "sha256": "0fdb18d63c6ad5f6be6f0f65ecd461d1d66494749a29a4e213876f955ecd4c06"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-10-axiom-route-levels-and-possibilities.md",
+      "role": "provenance",
+      "sha256": "06edbaf87b47a1ff51b1cc5d06c4c8fc53f16d8b7880e6f9e24203c9c55c62a5"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T141427.442103Z/verification.json",
+      "role": "receipt",
+      "sha256": "eb3ccaec5f33b5a6ff7fc20e10ef491a130fbdc013a03bd0c5b3f399a7eaad7f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T091930.724493Z/verification.json",
+      "role": "receipt",
+      "sha256": "c1e7a979931c19f4cf3649ffd24ae4315c531e5c678b16f9dc452fa4d00ceafb",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T134446.673561Z/verification.json",
+      "role": "receipt",
+      "sha256": "1182d296bfd637111591eb33277de93d008f28c1436b469969810422b5f7a991",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json",
+      "role": "receipt",
+      "sha256": "c5e118f377ae815cdb1d8afb02bbc5e3fb7ee519d45ab85f12a834fc467e8f0a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json",
+      "role": "receipt",
+      "sha256": "dead8cbc141ae38108fddc4ff56228e537fb1aacb27e96ef14d50647140a2be0",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T073902.295130Z/verification.json",
+      "role": "receipt",
+      "sha256": "790a8973dbabe58f9bc5f4c27d39589c8827b6fab3fe08a8d342f6ef02bca4a8",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json",
+      "role": "receipt",
+      "sha256": "114b5ba1b619d4e81c138d098005583ee56aa8bd6d2295d9fb279cd92c2c3f9a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "role": "receipt",
+      "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
+      "role": "receipt",
+      "sha256": "8b11e45b29cfac1a9fa1e3200d813f47496e8bd52ed083910badb97ed6985a9f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "role": "receipt",
+      "sha256": "279a65322c97aa66fd10c042003597aaab1bbed545b4ec2f13ebfb803cd2041f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "role": "receipt",
+      "sha256": "8aec0bc8a1531907a80ec2d51c849088cdd1ffaf368e16f4d95a8513d56494a5",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Regions",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Admission",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Dependence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Flow",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Continuation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Clearing.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Clearing",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "中心怎样形成并表示其边界的模型；按步、按时间先后的依存范围（路线 (b) 的供给闭包是形成层面的）。",
+    "en": "A model of how a center forms and represents its boundary; dependence step by step and in temporal order (the feeding closure of route (b) is at the level of formations)."
+  },
+  "history": [
+    {
+      "zh": "2026-10-10 P37：新增，按 Ren“yes to both readings, go ahead with Part I.”与“let's aim for a first, then try to archive b”；统一计划 P37（第一部分：可能性、三种区域、相界、层级、搭便车者的见证与所表示的边界），分工经另一会话同意；见整合文档 §51。",
+      "en": "2026-10-10 P37: added, following Ren's ‘yes to both readings, go ahead with Part I.’ and ‘let's aim for a first, then try to archive b’; unification plan P37 (Part I: possibilities, the three regimes, the phase boundary, levels, the free-rider witness and represented boundaries), the division of work agreed with the other session; see §51 of the integration note."
+    },
+    {
+      "zh": "2026-10-13 接手核对：当前合并回执 20261013T094743.528770Z 实含 22 个继承模块；当前验证摘要中沿用的 15 改为 22。历史回执及其当时计数不变；断言、前提与证明不变。",
+      "en": "2026-10-13 takeover reconciliation: current consolidated receipt 20261013T094743.528770Z contains 22 inherited modules; the carried-over count of 15 in the current validation summary is corrected to 22. Historical receipts and their original counts remain unchanged, as do the claim, premises and proofs."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13 P93：核读主干新增的登记修订段落及形式模块行；删除这两处新增后此前全文字节一致，本条既有主张和冻结证据未改变。",
+      "en": "13 October 2026, P93: reviewed the added registration-revision paragraph and formal-module row; removing only those additions restores every earlier byte. This record’s claim and frozen evidence are unchanged."
+    },
+    {
+      "zh": "P103 共享章对应复核：核对 P104/P105 已检模块的两行导航及 P93/P99/P103 接续说明；旧章除这些可定位增量外逐字保留，本成果证明和主张未改。",
+      "en": "P103 shared-chapter review: two navigation rows for checked P104/P105 modules and the P93/P99/P103 continuation notes are reconciled; all other prior chapter bytes, this result’s proof and claim remain unchanged."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“所表示的边界与实际依存：在条件区域上的更新，只在区域覆盖其参与时是该步的更新；覆盖其所需且要求不收紧时保住自身支持，仍可侵蚀他者；遗漏其所需时，可以经自身的汲取失去自身支持”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “A represented boundary against actual dependence: renewal over a region of conditions is renewal at the step where the region covers what the formation takes part in; covering what it requires, with requirements not tightening, it keeps its own support and can still undermine another; omitting what it requires, its own draw can lose its own support”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): the study only adds section 112 (general laws and renames) and its paragraph in the English summary; chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026-10-16 P110（依 Ren 2026-10-15 的交托决定的读法，研究 §147，DELEGATED-CHOICES D18, D20, D36）：此前留给 Ren 的读法与名称按所列决定改为采用或不采用，要求 Ren 判断这些读法的下一步已删去。陈述、证明与绑定不变；Ren 可改其中任何一项决定。",
+      "en": "16 October 2026, P110 (readings decided on Ren's delegation of 15 October 2026, study section 147, DELEGATED-CHOICES D18, D20, D36): readings and names formerly left to Ren are adopted or declined as those decisions say, and next steps asking for Ren's judgment on them are removed. Statements, proofs and bindings unchanged; Ren can reverse any of the decisions."
+    },
+    {
+      "en": "17 October 2026, wording: P-numbers removed from public fields, following Ren's 17 October directive that his earlier words are provenance, not authority; the claim is unchanged."
+    },
+    {
+      "en": "17 October 2026, source reconciliation after relabelling (Ren's 17 October directive: earlier words are provenance, not authority): THE-THEORY-OF-BECOMING.md now uses the current vocabulary (living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I, section 6 retitled), with delegation and process markers removed and every earlier anchor kept. The integrator compared the change and found relabelling only; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Continuation.lean, Flow.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Continuation.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Flow.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Continuation.lean、Flow.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Continuation.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Flow.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Dependence.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Dependence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：证明绑定（Dependence.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 223 节；Dependence.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；THE-THEORY-OF-BECOMING.md，§9（回执、计数、不再计入重述的连通性度量）随 R32。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 67 bookkeeping notes condensed from 2026-10-10 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/1bf28b34a00c74f7/represented-boundary-against-dependence.json and in git.",
+      "zh": "2026-10-20：67 条记账性说明合并（2026-10-10 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/1bf28b34a00c74f7/represented-boundary-against-dependence.json 和 git 中。"
+    },
+    {
+      "en": "22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.",
+      "zh": "2026年10月22日，PL1 落地（与 CK1、CR1、EM1）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只因第 5、7.4、7.5、7.7 节、8.1 第 3 项与 8.7 的增补而变（沿历程的合池、中心逐步能知者、已部署流程、跨状态推广的学习者）。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): in the correspondence 'the author's reading (an AI argument, adopted on Ren's delegation)' reads 'a reading (the AI's)', Ren's quoted words kept verbatim; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的“作者的读法（AI 论证，依 Ren 的交托采用）”改为“读法（AI 的）”，Ren 的引语原样保留；主张不变。"
+    }
+  ]
+}

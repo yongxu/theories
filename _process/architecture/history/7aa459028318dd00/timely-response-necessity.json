@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "id": "timely-response-necessity",
+  "title": {
+    "zh": "及时回应的必要关系",
+    "en": "Necessary relations for a timely response"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F11",
+  "reviewed_at_utc": "2026-10-13T13:04:43.135431+00:00",
+  "claim": {
+    "zh": "原生流／网的两个历程，在共同初始水平、截止前平衡与在场相同、源之外经此前耦合入者回应及共同完整读数下，未按交换顺序及时耦合入的区别不能改变截止时答案。有限加权作答覆盖不超过两侧错误与及时潜在可达权重之和；全不可及时到达时覆盖恰等于两侧错误。",
+    "en": "For two native flow/web courses with common initial levels, prefix balance and presence, response through what coupled in before, outside a source, and a common complete readout, a distinction outside ordered propagation cannot change the answer by its deadline. Finite weighted commitment is at most paired error plus timely potential-reach weight; total nonarrival gives equality with paired error."
+  },
+  "hypotheses": [
+    {
+      "zh": "全部初始水平相同；每步 t<D 平衡及在场形成相同；时变源之外的交换经此前耦合入者决定。",
+      "en": "All initial levels agree; balance and present formations agree for t<D; outside the time-indexed source exchange responds through what coupled in before."
+    },
+    {
+      "zh": "共同读数经同一 W 界面截至 D 耦合入的全部；CoupledIntoAt 使用当步需要与经水平的耦合。离散步不自带物理时长。",
+      "en": "Common readout through everything that couples in through the same W up to D; CoupledIntoAt uses current requirements or coupling by level. Discrete steps have no inherent physical duration."
+    },
+    {
+      "zh": "统计接续给出有限列表、自然权重、相反目标与及时可达判定；全盲等式不用该判定。",
+      "en": "Statistical composition supplies a finite list, natural weights, opposite targets and a timely-reach decision; total blindness needs no such decision."
+    }
+  ],
+  "correspondence": {
+    "zh": "命令形成、交换、耦合与回应是同一展开中的分化关系。定理不从相关记录识别源、认证共同初态或测得延迟；真实实验配对、送达／执行及概率需要独立根据。",
+    "en": "Command formation, exchange, coupling and response differentiate within one unfolding. The theorem does not identify sources from correlated records, certify matched initial states or measure delay; actual pairing, delivery/execution and probabilities need warrant."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean",
+  "aliases": [
+    "Becoming.TimedResponse.levels_alike_before",
+    "Becoming.TimedResponse.answer_alike_before",
+    "Becoming.TimedResponse.different_answers_require_reached",
+    "Becoming.TimedResponse.reachedBy_within_response",
+    "Becoming.FallibleInquiry.coverage_le_errors_add_timed_reach",
+    "Becoming.FallibleInquiry.error_bounds_require_timed_reach",
+    "Becoming.FallibleInquiry.unreached_in_time_coverage_eq_errors"
+  ],
+  "dependencies": [
+    {
+      "id": "comparison-where-the-rest-responds",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "及时所及接回原回应闭包。",
+        "en": "Timed reach reconnects to the original responsive closure."
+      },
+      "interface": {
+        "output": {
+          "zh": "原生回应闭包及耦合的影响边。",
+          "en": "Native responsive closure and coupled-exchange edges."
+        },
+        "input": {
+          "zh": "reachedBy_within_response。",
+          "en": "reachedBy_within_response."
+        },
+        "conditions": {
+          "zh": "源属于原部分且在场相同，不主张逆向。",
+          "en": "Sources belong to the old part and presence agrees; no converse."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean"
+      }
+    },
+    {
+      "id": "testing-within-couplings",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用此前耦合入的全部。",
+        "en": "Reuses everything that coupled in before."
+      },
+      "interface": {
+        "output": {
+          "zh": "支持与经水平耦合构成的 AlikeThroughUpTo。",
+          "en": "AlikeThroughUpTo from support and coupling by level."
+        },
+        "input": {
+          "zh": "coupling_alike_before 和 answer_alike_before。",
+          "en": "coupling_alike_before and answer_alike_before."
+        },
+        "conditions": {
+          "zh": "共同界面及回应条件明示，当步支持不等于未来需要。",
+          "en": "Common interface and response supplied; current support differs from future requirements."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean"
+      }
+    },
+    {
+      "id": "finite-fallible-inquiry-necessity",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用原统计界，不重证统计不等式。",
+        "en": "Reuses the original statistical inequality."
+      },
+      "interface": {
+        "output": {
+          "zh": "fallible_inquiry_bound 的覆盖、错误及区别界。",
+          "en": "Coverage/error/distinction bound of fallible_inquiry_bound."
+        },
+        "input": {
+          "zh": "coverage_le_errors_add_timed_reach 以截止前同答约束区别。",
+          "en": "coverage_le_errors_add_timed_reach bounds distinctions by deadline blindness."
+        },
+        "conditions": {
+          "zh": "有限权重、相反目标、共同读数与及时可达判定。",
+          "en": "Finite weights, opposite targets, common readout and timely-reach decision."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean"
+      }
+    }
+  ],
+  "related": [],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean",
+      "detail": {
+        "zh": "Delayed 结构上连通而一步时未达，两步后可区分；常量读数仍忽略已达信号。",
+        "en": "Delayed is structurally connected but unreached at one step, then distinguishes at two; a constant readout still ignores the arrived signal."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "只给必要界，非充分控制、完整知识或科学普遍基础。未覆盖不同初始证据、时变读数接口、连续物理时长或共同非零余项。一般建设性必要性为双重否定；有判定才给出正成员。路线存在不保证实际影响，空公理报告不认证经验前提。",
+    "en": "Necessary bound, not sufficient control, complete knowledge or a universal scientific foundation. Does not cover different initial evidence, changing readout interfaces, continuous physical duration or common nonzero residuals. Constructive necessity is double-negated; positive membership uses a decision. A route need not cause an effect; empty axiom reports do not certify empirical premises."
+  },
+  "validation_scope": {
+    "zh": "2026-10-14：Becoming.TimedResponse 的当前字节由合并检查器回执 20261013T204910.042715Z 绑定（通过：包 85 个模块，4861 项定理、6856 项声明审计，源声明公理报告全空；核心闭包 86 个模块从内置前导编译）；Becoming.FallibleInquiry 的当前字节由回执 20261013T205526.452771Z 绑定（通过，31 项定理、37 项声明审计）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 P104新增22核心定理／30空公理源审计，前导编译通过；3项外围接续仅 propext、Quot.sound。外围现31定理／37声明，20空、17标准依赖。当前相关依赖与最终冻结回执匹配；49基础设施测试通过。无新增经验实验或独立评审。",
+    "en": "14 October 2026: the current bytes of Becoming.TimedResponse are bound to consolidated receipt 20261013T204910.042715Z (passed: 85 package modules, 4861 theorems, 6856 declaration audits, every source declaration with an empty axiom report; the 86-module core closure compiles from the prelude); the current bytes of Becoming.FallibleInquiry are bound to receipt 20261013T205526.452771Z (passed, 31 theorems, 37 declaration audits). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. P104 adds 22 core theorems / 30 axiom-free source audits, with prelude compilation passed; three peripheral adapters use only propext and Quot.sound. Periphery now 31 theorems / 37 declarations, 20 empty and 17 standard dependencies. Relevant current dependencies match final retained receipts; 49 infrastructure tests pass. No new empirical experiment or independent review."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean",
+      "role": "proof",
+      "sha256": "247d0910222d42c9d23862f7828f1b966613e47e1552e40d419dfc9329008a1f",
+      "declarations": [
+        "Becoming.TimedResponse.coupledIntoAt_coupledInto",
+        "Becoming.TimedResponse.not_spread_zero",
+        "Becoming.TimedResponse.Spread.has_earlier_source",
+        "Becoming.TimedResponse.not_reached_before_source",
+        "Becoming.TimedResponse.reachedBy_mono",
+        "Becoming.TimedResponse.coupling_of_levels",
+        "Becoming.TimedResponse.levels_alike_before",
+        "Becoming.TimedResponse.coupling_alike_before",
+        "Becoming.TimedResponse.answer_alike_before",
+        "Becoming.TimedResponse.different_answers_not_unreached",
+        "Becoming.TimedResponse.different_answers_require_reached",
+        "Becoming.TimedResponse.touches_coupled_edge",
+        "Becoming.TimedResponse.Spread.within_response",
+        "Becoming.TimedResponse.reachedBy_within_response",
+        "Becoming.TimedResponse.Delayed.balanced",
+        "Becoming.TimedResponse.Delayed.responds",
+        "Becoming.TimedResponse.Delayed.read_through",
+        "Becoming.TimedResponse.Delayed.structurally_connected",
+        "Becoming.TimedResponse.Delayed.not_reached_at_one",
+        "Becoming.TimedResponse.Delayed.reached_at_two",
+        "Becoming.TimedResponse.Delayed.answers_before_and_after",
+        "Becoming.TimedResponse.Delayed.constant_read_ignores"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
+      "role": "proof",
+      "sha256": "84ea8ff9ff91703d1b5e3f9d7cb064dc93481b0a9b732c35b0ede02ddfdbf5b9",
+      "declarations": [
+        "Becoming.FallibleInquiry.coverage_le_errors_add_timed_reach",
+        "Becoming.FallibleInquiry.error_bounds_require_timed_reach",
+        "Becoming.FallibleInquiry.unreached_in_time_coverage_eq_errors"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T125224.520783Z/verification.json",
+      "role": "receipt",
+      "sha256": "0205856745327282355991c56a883268ff603f0c980fb7f83a03ee3d0883faf4",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T125313.109762Z/verification.json",
+      "role": "receipt",
+      "sha256": "27cf7417826cc785919b437d7e2708bd32672cd7ff84d57bf3cf477c0b8ce55e",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONDITIONS.md",
+      "role": "integration",
+      "sha256": "dc3a549bc748c5830c07fb370506dbd20f060b982a010fee238420f45e76b0ef",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-EVIDENCE.md",
+      "role": "review",
+      "sha256": "b24072f6b633e544a9d9bbfa9ee2064588b37fc86f418d6a50d7f5c5d97a3f61",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/SCIENTIFIC-PHILOSOPHY.md",
+      "role": "statement",
+      "sha256": "1803ea46cff814c21f30143c4a2784534a35428d8437a61f663a863127056f1c",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-TIMING-REVIEW.json",
+      "role": "review",
+      "sha256": "4457c68612dde3ce70da9a19790b3478aede5681ab02c7dbd017bc6aecefb505",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T204910.042715Z/verification.json",
+      "role": "receipt",
+      "sha256": "de452d3198d581ac4310c6a92a766e30b2c9bb6b740f970f5fed373b448e6121",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T205526.452771Z/verification.json",
+      "role": "receipt",
+      "sha256": "26ec20ad76d9c1acd39de927f3400875132b4f3a9a3dbcd1c1c10ffee251afd8",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T062828.251326Z/verification.json",
+      "role": "receipt",
+      "sha256": "0dec8292b9c1b7a85364070084bf7c053486e60608e228f7d1dc0da391e9f6d1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261018T063731.167536Z/verification.json",
+      "role": "receipt",
+      "sha256": "211c5aab48e7f1eb987c8180fe2dc979e1b8ffac24ba8777e06b081ecfbd39d7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261019T000109.055377Z/verification.json",
+      "role": "receipt",
+      "sha256": "1e507f72ebb35344b2d1d4e72cee99ad82d3ae46826a4dee5ef2fc023ffabc5d",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
+      "role": "receipt",
+      "sha256": "ff450f699fb07509588b2dd412a1e15ba46daa9d807e57864eee833c61243b75",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.TimedResponse",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.FallibleInquiry",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "固定实际任务的初始证据、命令分配与送达／执行条件，检验配对是否有根据；消费本界，不再重建传播或统计结果。",
+    "en": "Fix an actual task’s initial evidence, command assignment and delivery/execution conditions; test warranted pairing and consume this bound without rebuilding propagation or statistics."
+  },
+  "history": [
+    {
+      "zh": "2026-10-13 P104：新增逐时必要性范围，按当步需要修正最终登记；前稿与原结构／余项回执保留。",
+      "en": "2026-10-13 P104: adds temporal necessity, with final registration based on actual-step requirements; draft and earlier structural/residual receipts retained."
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：按 BECOMING-UNIFICATION-PLAN §10 改名，本记录中 `FallibleInquiry.error_budgets_require_timed_reach` → `FallibleInquiry.error_bounds_require_timed_reach`、`FallibleInquiry.unreached_by_deadline_coverage_eq_errors` → `FallibleInquiry.unreached_in_time_coverage_eq_errors`；陈述、证明与定理数不变；Lean 源：TimedResponse、FallibleInquiry 只改名（及相应的文档字符串），绑定改为新回执（见检查范围）。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): renames per BECOMING-UNIFICATION-PLAN §10, in this record `FallibleInquiry.error_budgets_require_timed_reach` → `FallibleInquiry.error_bounds_require_timed_reach`, `FallibleInquiry.unreached_by_deadline_coverage_eq_errors` → `FallibleInquiry.unreached_in_time_coverage_eq_errors`; statements, proofs and theorem counts unchanged; Lean sources: TimedResponse, FallibleInquiry only renamed (with the matching docstrings); bindings move to the new receipts (see validation scope). This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "en": "17 October 2026, source reconciliation after relabelling (Ren's 17 October directive: earlier words are provenance, not authority): SCIENTIFIC-PHILOSOPHY.md now uses the current vocabulary (living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I, section 6 retitled), with delegation and process markers removed and every earlier anchor kept. The integrator compared the change and found relabelling only; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: FallibleInquiry.lean, TimedResponse.lean. Rebound to core receipt 20261018T062828.251326Z; FallibleInquiry.lean rebound to its own checker's receipt 20261018T063731.167536Z, after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. This record's live fields are read in the adopted words; its id is unchanged. Changed by the pass, in docstrings or prose only: FallibleInquiry.lean, TimedResponse.lean. Rebound to receipt 20261018T235724.886433Z, 20261019T000109.055377Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "2026-10-20: 5 bookkeeping notes condensed from 2026-10-13 to 19 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/7bdd251d9f5fc567/timely-response-necessity.json and in git.",
+      "zh": "2026-10-20：5 条记账性说明合并（2026-10-13 至 19 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/7bdd251d9f5fc567/timely-response-necessity.json 和 git 中。"
+    }
+  ]
+}

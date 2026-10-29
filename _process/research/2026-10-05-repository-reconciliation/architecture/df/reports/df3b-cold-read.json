@@ -1,0 +1,851 @@
+[
+ {
+  "reader": "a",
+  "findings": [
+   {
+    "id": "enacted-scene-binding",
+    "field": "statement.en",
+    "old": "For a repertoire without repeats, a form resolves to a meaning exactly where every bearing record offers it and every other meaning is missing from some bearing record; after every history of moves and namings, every sequence is read rightly exactly where the records heard separate each atom.",
+    "new": "For a repertoire without repeats, a form resolves to a meaning in it exactly where every bearing record offers it and every other meaning is missing from one; after any history of moves and namings, every sequence is read rightly exactly where the earlier records and those heard separate each atom.",
+    "severity": "overclaim",
+    "why": "Two conditions are missing. First, resolves_iff and laws[0] need e ∈ rep. Without it the right-to-left direction is false: take a meaning outside the repertoire that every bearing record offers, while the repertoire's own meanings are each missing from some record; the candidates are then [] and the form does not resolve. Second, scene_interprets_every_iff (law 7) separates over s.lexicon.records ++ heardAlong s h, so the earlier records count too, not only the records heard. The old claim had both: 'a meaning of a repertoire' and 'the earlier records and the namings heard'. The replacement is 299 characters.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CrossSituational.lean:265 (resolves_iff: ↔ e ∈ rep ∧ …); experiments/integrated-correction/general-framework/generative-basis/lean/generative-capacity/MachineInstances.lean:965 (scene_interprets_every_iff: Separated … (s.lexicon.records ++ heardAlong s h)); snapshot OLD CLAIM"
+   },
+   {
+    "id": "enacted-scene-binding",
+    "field": "statement.zh",
+    "old": "对无重复的候选范围，形式解析为某意义，恰当每个关涉它的记录都提供该意义、其他每个意义都缺于某个关涉记录；经每段移动与命名的历史，每个序列被正确解释，恰当所闻记录分离每个原子。",
+    "new": "对无重复的候选范围，形式解析为其中某意义，恰当每个关涉它的记录都提供该意义、其他每个意义都缺于某个关涉记录；经每段移动与命名的历史，每个序列被正确解释，恰当先前记录与所闻记录一起分离每个原子。",
+    "severity": "overclaim",
+    "why": "The same two conditions are missing as in the English: the meaning must be in the repertoire, and the earlier records count alongside those heard.",
+    "evidence": "CrossSituational.lean:265; MachineInstances.lean:965"
+   },
+   {
+    "id": "theories/becoming/chapters/03-KNOWING.md",
+    "field": "row r-enacted-scene-binding (line 260)",
+    "old": "every sequence is interpreted rightly exactly where the records heard where the learner stood separate each atom",
+    "new": "every sequence is interpreted rightly exactly where the earlier records and those heard where the learner stood separate each atom",
+    "severity": "imprecise",
+    "why": "The theorem the row cites, MachineInstances.scene_interprets_every_iff, separates over the earlier records together with those heard along the history. The row names only the records heard. The record's law 7 has it right.",
+    "evidence": "MachineInstances.lean:965; enacted-scene-binding laws[7]"
+   },
+   {
+    "id": "risk-certificate-outcome-distinction",
+    "field": "laws[0].en",
+    "old": "For a listed family of any type, a reduction to values compared decidedly and an observable: a judge reading only the reduced value gives the observable at every member exactly where the observable goes alike across every two members the reduction merges. No choice is used: the judge answers with the first listed member of each reduced value.",
+    "new": "For a listed family of any type, a reduction to values compared decidedly, an observable and a default value of it: a judge reading only the reduced value gives the observable at every member exactly where the observable goes alike across every two members the reduction merges. No choice is used: the judge answers with the first listed member of each reduced value, and with the default where there is none.",
+    "severity": "imprecise",
+    "why": "judges_iff_lumpedOn takes an explicit default d : V, and firstJudge answers d where no listed member reaches the reduced value. The law leaves this hypothesis unnamed. It matters at the edge: with V empty, the family empty and K nonempty, LumpedOn holds but no judge K → V exists, so the iff fails without d. The replacement is 409 characters.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean:262 (firstJudge … (d : V)), :280 (judges_iff_lumpedOn … (d : V))"
+   },
+   {
+    "id": "risk-certificate-outcome-distinction",
+    "field": "laws[0].zh",
+    "old": "对任意类型的列出族、到可判定相等之值的约化与一个可观察量：只读约化值的判断器在每个成员处给出该可观察量，恰当该可观察量在约化所合并的任两个成员上相同。不用选择：判断器以每个约化值的第一个列出成员作答。",
+    "new": "对任意类型的列出族、到可判定相等之值的约化、一个可观察量及其一个默认值：只读约化值的判断器在每个成员处给出该可观察量，恰当该可观察量在约化所合并的任两个成员上相同。不用选择：判断器以每个约化值的第一个列出成员作答，无此成员处答以默认值。",
+    "severity": "imprecise",
+    "why": "The same unnamed default value as in the English (118 characters).",
+    "evidence": "Readout.lean:262, :280"
+   },
+   {
+    "id": "risk-certificate-outcome-distinction",
+    "field": "laws[2].en",
+    "old": "For every process, run and observable, and a reduction to values compared decidedly,",
+    "new": "For every process, run, observable with a default value, and a reduction to values compared decidedly,",
+    "severity": "imprecise",
+    "why": "run_judges_iff also takes d : V, and the iff needs it. With n = 0 the right-hand side is vacuous, but a judge K → V exists only if V is inhabited.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean:828 (run_judges_iff … (d : V))"
+   },
+   {
+    "id": "risk-certificate-outcome-distinction",
+    "field": "laws[2].zh",
+    "old": "对每个过程、运行、可观察量及到可判定相等之值的约化：",
+    "new": "对每个过程、运行、带默认值的可观察量及到可判定相等之值的约化：",
+    "severity": "imprecise",
+    "why": "The same unnamed default value as in the English.",
+    "evidence": "Courses.lean:828"
+   },
+   {
+    "id": "theories/becoming/chapters/03-KNOWING.md",
+    "field": "home section r-timely-response-necessity, second paragraph (line 65, edited by batch B)",
+    "old": "as [the record](../results/records/finite-fallible-inquiry-necessity.md) reports",
+    "new": "as [the record](../results/records/timely-response-necessity.md) reports",
+    "severity": "imprecise",
+    "why": "The paragraph gives the axioms of FallibleInquiry.coverage_le_errors_add_timed_reach and unreached_in_time_coverage_eq_errors and says the linked record reports them. finite-fallible-inquiry-necessity never cites these timed declarations (its JSON has no 'timed_reach' or 'unreached_in_time'). timely-response-necessity cites them and its evidence paragraph reports their propext and Quot.sound.",
+    "evidence": "theories/becoming/results/records/finite-fallible-inquiry-necessity.json (no timed declarations); timely-response-necessity validation_scope; fallible-inquiry-checks/20261020T161546.707477Z/verification.json (both: propext, Quot.sound)"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/claims-shown-in-context.md",
+    "field": "closing note",
+    "old": "The home section and the Lean agree (its standing “(any type; each claim within some context)” carries the condition); no chapter edit is needed.",
+    "new": "The home section and the Lean agree (its standing “(any type; each claim within some context)” carries the condition); one chapter edit was made in review: “Some worlds glue nowhere: Specker's three boxes and the two-qubit Mermin–Peres square have no whole, given local possibilities and no context-free reading.” now reads “Some worlds glue nowhere: in Specker's three boxes and the two-qubit Mermin–Peres square the possibilities are local and admit no context-free reading, so no configuration respecting them glues, and they are the parts of no whole.”",
+    "severity": "imprecise",
+    "why": "Batch B edited this home section, so the mapping table no longer describes the applied state when it says no edit is needed.",
+    "evidence": "git diff 5acc60130 -- theories/becoming/chapters/03-KNOWING.md, line 221"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joining-questions-survive-encoding.md",
+    "field": "closing note",
+    "old": "The home section and the Lean agree; no chapter edit is needed. The home section's “one account” is the description of the Lean; the record no longer uses the word.",
+    "new": "The home section and the Lean agree; one chapter edit was made in review: the home section's “one account” became “one description”, the word the record uses.",
+    "severity": "imprecise",
+    "why": "The row now says 'through one description'. The mapping still says no edit was made and quotes 'one account', which is no longer in the chapter.",
+    "evidence": "git diff 5acc60130 -- theories/becoming/chapters/03-KNOWING.md, line 372"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/seeking-boundary.md",
+    "field": "chapter-edit note",
+    "old": "**Chapter edit (proposed, not made).**",
+    "new": "**Chapter edit (made).**",
+    "severity": "imprecise",
+    "why": "The proposed text is now in the chapter, word for word.",
+    "evidence": "03-KNOWING.md line 276: “Where what stands runs down at every step from some step on, no condition rises at arbitrarily late steps: exhaustion, not enough.”"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/binding-preserving-substitution.md",
+    "field": "chapter-edit note",
+    "old": "**Chapter edit (proposed, not made).**",
+    "new": "**Chapter edit (made).**",
+    "severity": "imprecise",
+    "why": "The proposed standing is now in the chapter.",
+    "evidence": "03-KNOWING.md line 391: “`Quot.sound` in nine of the cited declarations, as the receipts report”"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/retrospective-source-binding.md",
+    "field": "chapter-edit note",
+    "old": "**Chapter edit (proposed, not made).**",
+    "new": "**Chapter edit (made; in review the row's “resolves earlier records” also became “can resolve earlier records”, as the statement reads).**",
+    "severity": "imprecise",
+    "why": "The proposed standing was applied, and a second edit ('resolves' to 'can resolve') was also made. The mapping records neither.",
+    "evidence": "git diff 5acc60130 -- theories/becoming/chapters/03-KNOWING.md, line 262"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/risk-certificate-outcome-distinction.md",
+    "field": "chapter-edit note",
+    "old": "**Chapter edit proposed (not made).**",
+    "new": "**Chapter edit (made).**",
+    "severity": "imprecise",
+    "why": "The proposed standing is now in the chapter.",
+    "evidence": "03-KNOWING.md line 354: “the application theorems use propext, their reading on the core law propext and Quot.sound”"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/acquired-revision-of-pending-task.md",
+    "field": "chapter-edit note",
+    "old": "**Chapter edit proposed (not made).**",
+    "new": "**Chapter edit (made).**",
+    "severity": "imprecise",
+    "why": "The retired label J has been replaced in the chapter, as proposed.",
+    "evidence": "03-KNOWING.md line 308: “**Conditional** (the practical commitments, with correspondence, authority and responsiveness, explicit in the protocol)”"
+   }
+  ],
+  "sound": [
+   "branching-tests-bisimulation",
+   "consequence-revised-reference-plan",
+   "fallible-witness-diagnosability",
+   "unanchored-incidence-collapse",
+   "branching-target-uniqueness",
+   "joint-target-uniqueness",
+   "learning-by-refutation",
+   "finite-fallible-inquiry-necessity",
+   "readings-within-what-they-read",
+   "incidence-common-refinement",
+   "acquired-binding-compositional-use",
+   "causal-models-as-processes",
+   "recurring-reference-revision",
+   "historical-source-binding",
+   "finite-continuation-plans",
+   "residual-continuation-correspondence",
+   "retained-reference-joining-recovery",
+   "prefix-observation-loss",
+   "functional-joining-common-structure"
+  ],
+  "checked": "I read all 28 records in full in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df3b, in both languages, against six sources:\n- each record's first text_versions snapshot;\n- its df3-mapping table, with every law/does_not_show/hypotheses/counterexamples index checked against the record by script;\n- its home section in 03-KNOWING.md;\n- the batch B chapter diff (git diff 5acc60130): 15 of the edited rows are mine, at lines 65, 110, 221, 262, 263, 276, 293, 308, 334, 337, 354, 372–374 and 391;\n- the Lean statement of every theorem and definition the laws cite. Where the extraction script matched the wrong namespace, I located the declaration by hand: Alike.sameBranchingTests, RoleTotal.alike, Joining.OpenMap, LocallyFinite.alike_iff, Recipe.Leaves.*, KeptFor.mono, Certificate/Kernel.keptFor, Midway.codes_apart and Becoming.Presentations.Exact all exist;\n- every bound receipt.\n\nResults by script and by hand:\n- Every declaration a law names is in the record's references, and every witness named in does_not_show is too.\n- For no-ethical-premise, each law declaration's axiom report in the bound receipts is empty. For no-ethical-premise-core-axiom-free, the periphery declarations use only propext, Quot.sound and Classical.choice; this includes the old-format receipts (inferential-substitution, wisdom-fallible-judgment, common-task-revision, scientific-inquiry-necessity, continuation-adequacy, explanatory-resumption, inquiry-root). acquired-revision-of-pending-task, whose continuation laws use Classical.choice, cites no standard boundary.\n- The evidence paragraphs' checker names, Lean versions (4.29.1, or 4.30.0-rc2 for Substitution/Judging/Continuation correspondence, VersionedTaskInstances, CommonTaskRevision and ContinuationAdequacy) and axiom counts match the receipts. For example, binding-preserving-substitution's 13 empty and 6 Quot.sound, timely-response-necessity's three Quot.sound theorems, and residual-continuation-correspondence's 'two of them also Quot.sound'.\n- No retired labels (J was removed at line 308) and no process markers appear in the live fields.\n- research.py lint --ids over the 28 ids (space-separated; the comma form parses as one id) reports records 28, findings 0, errors 0.\n\nNot reported:\n- The pre-existing duplicate proof_bindings in several records, which are harmless.\n- The DF_N placeholder in the history notes, which land_df3.py fills in.\n- Lean identifiers ('viable', 'works') kept in Chinese text.\n- Row 370's 'two accounts' after rows 371–374 became 'descriptions'. This is wording only; style.py leaves 'account' out of the exchange words."
+ },
+ {
+  "reader": "b",
+  "findings": [
+   {
+    "id": "transmission-independent-where-it-binds",
+    "field": "statement.en",
+    "old": "the reading of drawing with drawing as depending does, each needed.",
+    "new": "the reading of drawing and drawing as depending do, neither alone.",
+    "severity": "imprecise",
+    "why": "\"Each needed\" reads as a claim that each is necessary. That clashes with does_not_show[0] (\"That the link is needed is not shown\"; the finite hatch transmits while its parent draws on itself without depending on itself). What World.drawn_and_link_needed proves is two negated universals: neither the reading nor the link alone gives inheritance in every finite world meeting the seven other premises. The new text is 298 characters, under the 300 cap. ZH statement: replace '取用的读法加上取用即依存推出它，二者各自都需要。' with '取用的读法与取用即依存合起来推出它，二者单独都不能。'. The lint's negation-lead warning on this statement stays: it is a warning only, and leading with the positive clause does not fit in 300 characters.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean:981 (drawn_and_link_needed: ¬∀…∧¬∀…); Transmission.lean:937 (finiteHatch_pair); theories/becoming/results/records/transmission-independent-where-it-binds.json:13"
+   },
+   {
+    "id": "theories/becoming/chapters/01-ROOT.md",
+    "field": "r-transmission-independent-where-it-binds (home paragraph)",
+    "old": "the reading and that link are each needed (`World.drawn_and_link_needed`;",
+    "new": "neither the reading nor that link suffices alone (`World.drawn_and_link_needed`;",
+    "severity": "imprecise",
+    "why": "Same ambiguity as the record's statement. The Lean proves that neither alone suffices, not that each is necessary, and the record's does_not_show[0] says the link's necessity is not shown.",
+    "evidence": "theories/becoming/chapters/01-ROOT.md:224; Transmission.lean:981"
+   },
+   {
+    "id": "joining-open-map-factor",
+    "field": "correspondence.zh",
+    "old": "共同细化的投影在前一成果中另有导出。",
+    "new": "共同细化的投影无需前提即满足它（Joining.span_first_open、Joining.span_second_open）。",
+    "severity": "imprecise",
+    "why": "The review rewrote the English correspondence (\"the projections of the common refinement satisfy it with no premise (Joining.span_first_open, Joining.span_second_open)\") but left the old Chinese (\"derived separately in a previous result\"), so the two languages now say different things. The two named declarations are also missing from the references: add Becoming.Joining.span_first_open and Becoming.Joining.span_second_open to the Joining.lean reference. Both exist at Joining.lean:680 and :688 with no premise, and both have empty axiom reports in becoming-checks/20261028T085101.429997Z. The mapping row still says the correspondence is unchanged: in df3-mapping/joining-open-map-factor.md:24 replace 'correspondence (unchanged; \"the preceding result\" is incidence-common-refinement, linked as related)' with 'correspondence: \"the preceding result derives it for the canonical projections\" said as what the core proves, the projections of the common refinement satisfying it with no premise (`Joining.span_first_open`, `Joining.span_second_open`, added to Joining.lean's references); incidence-common-refinement stays linked as related'.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joining.lean:680,688; theories/becoming/results/records/joining-open-map-factor.json:108; _process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joining-open-map-factor.md:24"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/finite-granularity-question-recovery.md",
+    "field": "row X0",
+    "old": "removed from counterexamples: its sentences are L0 and L1, carried by does_not_show[0]–[3] and zero-axiom-target-open; the references entry of ExplanatoryGranularityBoundary.lean (role counterexample) is kept unchanged",
+    "new": "its sentences are L0 and L1, carried by does_not_show[0]–[3] and zero-axiom-target-open; counterexamples[0] is replaced by the case ExplanatoryGranularityBoundary.lean witnesses (`same_completed_questions`, `prefix_only_still_loses_failure`, `real_internal_loss`, `no_prefix_translation_of_loss`): two branches pass the same completed-block and prefix tests while one can lose its continuation midway; the references entry of that file (role counterexample) is kept",
+    "severity": "imprecise",
+    "why": "The record as applied has counterexamples[0], the granularity-boundary case added by the review, but the mapping still says the counterexample was removed. The history note says the same: replace 'the counterexample, which only repeated the limitations and which no declaration witnesses, removed, its sentences carried by those items;' with 'the counterexample, which only repeated the limitations, replaced by the case ExplanatoryGranularityBoundary.lean witnesses (two branches alike on completed-block and prefix tests, one able to lose its continuation midway), its sentences carried by those items;' and make the same change in ZH. The case is witnessed, but its declarations are not named in references: the counterexample reference lists none, and the four could be listed there.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryGranularityBoundary.lean:50,65,104,132; df3-mapping/finite-granularity-question-recovery.md:25; theories/becoming/results/records/finite-granularity-question-recovery.json (history[-1])"
+   },
+   {
+    "id": "laws-at-coarser-steps",
+    "field": "correspondence.en",
+    "old": "; finishing coarser steps before continuous time follows Ren's answer of 11 October 2026 to whether to test coarser steps only or also continuous time, “let's finish one first, then another” (provenance, not warrant).",
+    "new": ".",
+    "severity": "imprecise",
+    "why": "This clause gives Ren's answer as the reason for an order of the work (coarser steps before continuous time). AGENTS.md rules that out in live text whatever the label, \"provenance, not warrant\" included. The quotation and its source belong in history; the source can stay in references. ZH: replace '；先完成较粗的步、再做连续时间，依 Ren 2026-10-11 对“只检验较粗的步还是也检验连续时间”的回答“let's finish one first, then another”（来源，不是依据）。' with '。'. In the mapping, row R1 should then say the sentence went to history.",
+    "evidence": "theories/becoming/results/records/laws-at-coarser-steps.json:220; AGENTS.md (Ren's words are provenance: never the reason for an order of the work)"
+   },
+   {
+    "id": "laws-at-coarser-steps",
+    "field": "does_not_show[1].en",
+    "old": "That a becoming given with no step at all can be represented by discrete steps is not shown.",
+    "new": "That a becoming given with no step at all can be represented by discrete steps is not shown.",
+    "severity": "style",
+    "why": "Lint (stock-boundary, warning): 'use standard_boundaries key \"discrete-steps\"'. The record already cites discrete-steps, and this item says more than the shared sentence, as mapping row L5 argues. No edit is needed; reported because the task asks for every lint finding.",
+    "evidence": "research.py lint --ids … (space-separated) output"
+   },
+   {
+    "id": "recurrence-without-decidedness",
+    "field": "correspondence.en",
+    "old": "this is the proved boundary: without decidedness, naming a step needs the limited principle of omniscience (World.lpo_of_finite_ends, Listed.lpo_of_few, Web.lpo_of_ending), and asking recurrence of every finite world needs excluded middle (World.law_iff_em).",
+    "new": "this is the proved boundary: naming an end, a step after which nothing arises (World.lpo_of_finite_ends) or a formation is active (Web.lpo_of_ending), or a list of every member that ever holds (Listed.lpo_of_few), needs the limited principle of omniscience even with activity decided at each step, and asking recurrence of every finite world without decidedness needs excluded middle (World.law_iff_em).",
+    "severity": "imprecise",
+    "why": "The three cited calibrations take decided activity, or decided p a t, as an explicit hypothesis. What each shows is that naming an end (or a complete list) needs LPO even with decidedness at each step. None of them shows that naming the step at which something ceases needs LPO without decidedness, which is what this record's forms are about (Recurs.ceasing_found takes the decided stretch). The old sentence, carried over unchanged, attributes the need to the wrong condition. None of the three is in references (Counting.lean, Openness.lean, Reserve.lean). ZH: replace '这正是已证的界：不给已定时，命名一步需要有限全知原则（World.lpo_of_finite_ends、Listed.lpo_of_few、Web.lpo_of_ending），对每个有限世界要求复现需要排中律（World.law_iff_em）。' with '这正是已证的界：命名一个终点，即此后无物生起的一步（World.lpo_of_finite_ends）、此后某构成不再活跃的一步（Web.lpo_of_ending），或曾成立的每个成员的列表（Listed.lpo_of_few），即使每步的活动已定也需要有限全知原则；不给已定时，对每个有限世界要求复现需要排中律（World.law_iff_em）。'",
+    "evidence": "Becoming/Counting.lean:1559 (lpo_of_finite_ends: ∀ w [∀ t x, Decidable …]); Becoming/Openness.lean:824 (Listed.lpo_of_few: (∀ a t, Decidable (p a t))); Becoming/Reserve.lean:1032 (Web.lpo_of_ending: (∀ t, Decidable (W.active t ()))); theories/becoming/results/records/recurrence-without-decidedness.json:126"
+   },
+   {
+    "id": "listing-once-is-decided-identity",
+    "field": "counterexamples[0] / references",
+    "old": "A sum law fails over a family listing a member twice (Doubled.needs_once; Lone.repeated_family; Repeated).",
+    "new": "A sum law fails over a family listing a member twice (Doubled.needs_once; Lone.repeated_family; Repeated).",
+    "severity": "imprecise",
+    "why": "Lone.repeated_family is declared in Becoming/Dissipation.lean (Becoming.Lone.repeated_family), and Repeated is a namespace in Population.lean. Neither is listed in the record's references: Dissipation.lean is not referenced at all, and the Population.lean reference lists no declarations. The counterexample's path is Listing.lean, which holds only Doubled.needs_once. Add a Dissipation.lean reference with Becoming.Lone.repeated_family, bound to becoming-checks/20261028T085101.429997Z, which holds the file's current bytes and reports an empty axiom list for it. Also name a Repeated declaration (for example Becoming.Repeated.rep) on the Population.lean reference. Otherwise, cut the two names from the text in both languages.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean:1250; Becoming/Population.lean:1420; df3-mapping/listing-once-is-decided-identity.md:40; theories/becoming/results/records/listing-once-is-decided-identity.json:206"
+   },
+   {
+    "id": "process-and-frame-as-readings",
+    "field": "correspondence.en",
+    "old": "On another branch of the same conversation, of the reading that law and history are one unfolding read two ways, the law read off the unfolding rather than set over it, Ren wrote “yes, i do agree with your reading, there are no two realities”. The results on DeadEnd, Splice, kept history, Fork and Circulation restate on this module's definitions theorems checked on that branch. Readings (the AI's, adopted on Ren's delegation):",
+    "new": "The results on DeadEnd, Splice, kept history, Fork and Circulation restate on this module's definitions theorems checked on another branch of that conversation. Readings (an AI reading):",
+    "severity": "style",
+    "why": "Lint (length, warning): correspondence is 1477 English and 542 Chinese characters, over the 1200/500 caps. The cut sentence gives Ren's agreement as standing for a reading, and \"adopted on Ren's delegation\" gives his delegation as the reading's standing (AGENTS.md: a reading stands by its place in the account). The same quotation is already the provenance of histories-fix-law-up-to-dead-ends. Also cut the trailing ' See §91 of the integration note.', a section marker the batch cut elsewhere. With both cuts the English is 1200 characters. ZH: replace '在同一对话的另一分支上，对律与历史是同一展开的两种读法、律从展开读出而不是置于其上这一读法，Ren 写道：“yes, i do agree with your reading, there are no two realities”。DeadEnd、Splice、保留历史、Fork 与 Circulation 的结果是那个分支上检查过的定理在本模块定义上的重述。读法（AI 的，依 Ren 的交托采用）：' with 'DeadEnd、Splice、保留历史、Fork 与 Circulation 的结果是该对话另一分支上检查过的定理在本模块定义上的重述。读法（AI 的读法）：', and cut '见整合文档 §91。'. That leaves 408 Chinese characters. Mapping rows R1–R3 and R7 then move these sentences to history.",
+    "evidence": "research.py lint output (process-and-frame-as-readings correspondence en 1477 > 1200, zh 542 > 500); theories/becoming/results/records/process-and-frame-as-readings.json:279"
+   },
+   {
+    "id": "runs-on-families-chosen-step-by-step",
+    "field": "correspondence.en",
+    "old": "Reading (the AI's, adopted on Ren's delegation): a family need not be fixed; chosen step by step, what joins one step to the next is only the continuity of what stands, not position. See the integration document §103.",
+    "new": "Reading (an AI reading): a family need not be fixed; chosen step by step, what joins one step to the next, under the conditions treated, is only the continuity of what stands, not position.",
+    "severity": "imprecise",
+    "why": "The reading's \"only\" overreaches in the same way the batch narrowed in the statement and home section. does_not_show[1] says the claim that a condition joins no step to the next is shown only for no condition, balance and closure, not for every condition. \"Adopted on Ren's delegation\" gives Ren's delegation as the reading's standing, and the method records of this batch moved the delegation to history. §103 is a section marker. ZH: replace '读法（AI 的，依 Ren 的交托采用）：家族不必是固定的；逐步选定时，把一步连到下一步的只是所立者的延续，不是位置。见整合文档 §103。' with '读法（AI 的读法）：家族不必是固定的；逐步选定时，在所处理的条件下，把一步连到下一步的只是所立者的延续，不是位置。'",
+    "evidence": "theories/becoming/results/records/runs-on-families-chosen-step-by-step.json:148 and does_not_show[1]; Becoming/OneStep.lean:3354,3400"
+   },
+   {
+    "id": "transmission-independent-where-it-binds",
+    "field": "correspondence.en",
+    "old": "Reading (the AI's, adopted on Ren's delegation): the seven other premises only limit dependence and never require one; transmission requires the giver's, so it cannot follow from them, and any derivation needs a law requiring some dependence to exist. Drawing being depending is a candidate for such a law; on Ren's delegation it is not adopted as a law of forming (D31). See the integration document §105.",
+    "new": "Reading (an AI reading): the seven other premises only limit dependence and never require one; transmission requires the giver's, so it cannot follow from them, and any derivation needs a law requiring some dependence to exist. Drawing being depending is a candidate for such a law; it enters the derivation as a hypothesis and is not adopted as a law of forming.",
+    "severity": "style",
+    "why": "\"Adopted on Ren's delegation\" and \"on Ren's delegation it is not adopted\" give Ren's delegation as the standing of a reading and of a choice. Live text should say what the choice is, as does_not_show[3] does. D31 and §105 are process markers and belong in history. ZH: replace '读法（AI 的，依 Ren 的交托采用）' with '读法（AI 的读法）', and '依 Ren 的交托，它不采用为形成的规律（D31）。见整合文档 §105。' with '它作为推出的前提进入，不采用为形成的规律。'",
+    "evidence": "theories/becoming/results/records/transmission-independent-where-it-binds.json:207; AGENTS.md (readings stand by their place in the account)"
+   },
+   {
+    "id": "one-step-missing-laws",
+    "field": "correspondence.en",
+    "old": "Reading (the AI's, adopted on Ren's delegation): that something taken has a taker, and that nothing is taken beyond what stood with what was given, belong to the laws of one step, and were before only implicit in the definitions. See the integration document §103.",
+    "new": "Reading (an AI reading): that something taken has a taker, and that, with balance, nothing is taken beyond what stood with what was given, belong to the laws of one step, and were before only implicit in the definitions.",
+    "severity": "style",
+    "why": "The delegation is given as the reading's standing, and §103 is a section marker; the method records of this batch moved both to history. The reading also drops the balance condition that Flow.BalancesOn.taken_le takes and the statement names. ZH: replace '读法（AI 的，依 Ren 的交托采用）：有所取就有取用者，以及所取不超过所立加所给，是一步之律的一部分，此前只隐含在定义中。见整合文档 §103。' with '读法（AI 的读法）：有所取就有取用者，以及平衡时所取不超过所立加所给，是一步之律的一部分，此前只隐含在定义中。'",
+    "evidence": "theories/becoming/results/records/one-step-missing-laws.json:120; statement (\"with balance at a condition\")"
+   },
+   {
+    "id": "separation-loses-the-relation",
+    "field": "correspondence.en",
+    "old": "Readings (the AI's, adopted on Ren's delegation; Ren agreed with the reply containing them):",
+    "new": "Readings (an AI reading):",
+    "severity": "style",
+    "why": "This gives Ren's delegation and agreement as the readings' standing (AGENTS.md: none waits on Ren; a reading stands by its place in the account). Also cut the trailing ' See §94 of the integration note.' (a section marker). ZH: replace '读法（AI 的，依 Ren 的交托采用；Ren 同意了包含它们的回答）' with '读法（AI 的读法）', and cut '见整合文档 §94。'",
+    "evidence": "theories/becoming/results/records/separation-loses-the-relation.json:170"
+   },
+   {
+    "id": "histories-fix-law-up-to-dead-ends",
+    "field": "correspondence.en",
+    "old": "the law read off the unfolding, a reading Ren agreed with on 12 October 2026 (“there are no two realities”);",
+    "new": "the law read off the unfolding (its source, Ren's “there are no two realities” of 12 October 2026, is in the references);",
+    "severity": "style",
+    "why": "\"A reading Ren agreed with\" reads as Ren's endorsement backing the reading. Mapping row R3 intends it as provenance, so it should be worded as a source. ZH: replace '律从展开读出，Ren 于 2026-10-12 同意这一读法（“there are no two realities”）；' with '律从展开读出（其来源 Ren 2026-10-12 的“there are no two realities”见参考）；'",
+    "evidence": "theories/becoming/results/records/histories-fix-law-up-to-dead-ends.json:134; df3-mapping/histories-fix-law-up-to-dead-ends.md (row R3)"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md",
+    "field": "row H0",
+    "old": "| premise | hypotheses[0] (unchanged) |",
+    "new": "| premise | hypotheses[0], corrected: the identifications hold several by definition, the others by short proofs on chains and lists (the home section says the same) |",
+    "severity": "imprecise",
+    "why": "The applied hypotheses[0] no longer says \"definitional identifications\": it reads \"identify the periphery's interfaces with the spine's (several by definition, the others by short proofs on chains and lists)\", and 08-METHOD's home section was edited to match. The mapping row still says the hypothesis is unchanged. The old substring is the end of row H0 (line 33); it occurs once in that row.",
+    "evidence": "df3-mapping/becoming-spine-instances.md:33; theories/becoming/results/records/becoming-spine-instances.json hypotheses[0]; git diff 5acc60130 -- theories/becoming/chapters/08-METHOD.md"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/recurrence-without-premise.md",
+    "field": "row '— | added does-not-show'",
+    "old": "does_not_show[2] (non-implication, witness `Law.rise_not_lossless`)",
+    "new": "does_not_show[2] (non-implication; `Law.rise_not_lossless` in law 10)",
+    "severity": "style",
+    "why": "The record's does_not_show[2] has no witness field. Either add \"witness\": \"Becoming.Law.rise_not_lossless\" to that item, which is in the references with an empty axiom report, or correct the mapping row as given.",
+    "evidence": "df3-mapping/recurrence-without-premise.md:52; theories/becoming/results/records/recurrence-without-premise.json does_not_show[2]"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/guarded-program-question-recovery.md",
+    "field": "migration note (line 7)",
+    "old": "The home section's \"are branching tests with no premise\" needs the same narrowing (proposed below).",
+    "new": "The home section's \"are branching tests with no premise\" is narrowed the same way (applied in 03-KNOWING).",
+    "severity": "style",
+    "why": "Nothing is proposed below the table, and the home edit is applied in 03-KNOWING (\"Whether a guarded, sequential or choice program leads to where a test holds is a finite alternative of branching tests\"). The same stale phrase, 'the home section's sentence needs the same narrowing (proposed below).', is in df3-mapping/joining-open-map-factor.md:7 and df3-mapping/selection-under-registration-revision.md:7. Replace it in both with 'the home section's sentence is narrowed the same way (applied in 03-KNOWING).'",
+    "evidence": "git diff 5acc60130 -- theories/becoming/chapters/03-KNOWING.md (rows r-guarded-program-question-recovery, r-joining-open-map-factor, r-selection-under-registration-revision)"
+   },
+   {
+    "id": "all 87 batch-B records",
+    "field": "history[-1].en / .zh",
+    "old": "study section DF_N",
+    "new": "study section §<the number the landing assigns>",
+    "severity": "style",
+    "why": "Every migrated record's new history note still carries the placeholder DF_N, found in 87 record files and 0 mapping files. The lander needs to fill it in before landing. It is not a public field.",
+    "evidence": "grep -l DF_N theories/becoming/results/records/*.json | wc -l → 87; e.g. theories/becoming/results/records/code-plan-global-support.json:310–311"
+   }
+  ],
+  "sound": [
+   "code-plan-global-support",
+   "multivalued-joining-common-structure",
+   "transition-grouping-word-partition",
+   "encounter-selection-and-revision",
+   "formed-goal-revision-continuation",
+   "laws-of-one-step-complete",
+   "sum-over-histories-exact",
+   "imbalance-as-relatum",
+   "order-of-exchanges-is-the-invariant",
+   "laws-at-finer-units",
+   "losses-of-the-sum-over-histories",
+   "relata-counted-up-to-indiscernibility",
+   "counts-exist-where-decided"
+  ],
+  "checked": "I checked all 28 records in the worktree at 78e709ff3 (branch df3b) against the DF3 plan and the schema-2 rules in RESULT-WORKFLOW.\n\n**Lint.** The comma-separated form of `research.py lint --ids` matched no record and reported \"records: 1\" with 0 findings, because `--ids` takes space-separated values. Rerun space-separated over the 28 ids: 4 warnings, 0 errors:\n- laws-at-coarser-steps does_not_show[1]: stock-boundary;\n- process-and-frame-as-readings correspondence: length, en 1477 and zh 542;\n- transmission-independent-where-it-binds statement: negation-lead.\n\n**Mechanical checks, all 28 records** (scripts in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/cr/):\n- Every law declaration is in references, and exists in its referenced file.\n- Every does_not_show witness is in references or aliases.\n- Every cited declaration was looked up in the receipts its proof_bindings name. Every no-ethical-premise record has empty axiom reports for all cited declarations.\n- Every no-ethical-premise-core-axiom-free record has only propext, Quot.sound or Classical.choice on its periphery declarations.\n- Five declarations are absent from their bound periphery receipt, correction-inquiry-checks/20261020T161757.201244Z: CorrectionBoundary.Implements, CommonAction and refine_observation, and ObservationChange.SafeOn and refinement_preserves_safe_choice. That receipt audits only CorrectionInquiry. becoming-spine-instances' validation_scope already says so, and the record cites no-ethical-premise for none of them.\n- Spot-checks held: the retired Bridge and SeedReachProcesses bytes match receipt 20261018T235724.886433Z with empty axioms; GoalFormationRevision's receipt is Lean 4.30.0-rc2; ExplanatoryResumptionCases' receipt 20261015T180520.693095Z holds its current bytes.\n- Numbers and Lean identifiers were compared between EN and ZH in every field. Apart from the joining correspondence, differences are confined to Chinese validation_scope omitting counts or receipt names under the 260 cap, which I did not report.\n\n**Read against the Lean, with old snapshot, mapping table and home section, for each record:** the key laws, especially every iff, every negated universal and every witness:\n- Joining, Granularity, Composition, JointCorrespondence, Stock, Revision, Segmentation, Courses, LearnedGrouping, EncounterChoice, MachineInstances, GoalFormationRevision;\n- OneStep, Weighted, WeightedTraces, Histories, Imbalance, Sampling, Reordering, Units, Recurrence, Unfolding, Labelled, Transmission, Description, Lifting, Listing, Decidedness.\n\nAll 15 batch-B chapter edits in my home sections are consistent with their records' laws: 01-ROOT (6), 03-KNOWING (8), 08-METHOD (1).\n\n**Findings, beyond what is listed:**\n- The transmission statement and home section's \"each needed\" against the record's own does_not_show[0].\n- joining-open-map-factor: the English correspondence was rewritten without the Chinese, and the declarations it names are missing from references.\n- recurrence-without-decidedness: an inherited LPO reading that misstates what the calibrations take as hypotheses.\n- listing-once: a counterexample naming a declaration outside references.\n- Mappings for finite-granularity, becoming-spine-instances, recurrence-without-premise and the three \"proposed below\" notes that do not describe the applied state.\n- One live clause giving Ren's answer as the reason for an order of the work (laws-at-coarser-steps).\n- Correspondences giving \"Ren's delegation\" as a reading's standing. The method-chapter records of this batch instead moved the delegation to history.\n- The DF_N placeholder in all 87 history notes.\n\n**Not reported:** \"Following Ren's …\" and \"Answering Ren's …\" phrases in several correspondences. They are labelled provenance and give no warrant, but the pattern is repository-wide: 50+ records carry \"adopted on Ren's delegation\". Also D30/D31 register ids, and section numbers in validation_scope, which is evidence.\n\n**Not fully read:** I did not read every Chinese law sentence by sentence. Chinese was checked mechanically and read in full only where I propose edits."
+ },
+ {
+  "reader": "c",
+  "findings": [
+   {
+    "id": "reserved-shutdown-during-recovery",
+    "field": "home section (theories/becoming/chapters/07-SIGNIFICANCE.md, paragraph after r-reserved-shutdown-during-recovery)",
+    "old": "The grant's legitimacy and physical correspondence are supplied.",
+    "new": "The grant's authority and physical correspondence are supplied; its legitimacy is not a premise of any law and is not shown.",
+    "severity": "home-disagrees",
+    "why": "The migrated record now says (hypotheses[1]) that the grant's legitimacy \"is not a premise of any law and is not shown\", and does_not_show[1] says the same. The home section still says legitimacy is supplied, which makes it a premise. The Lean sides with the record: `eligible` (signed, matching epoch, route and serial, with a shutdown mandate) and `Armed` contain no legitimacy predicate, so no law takes it as a premise. This home sentence was not among batch B's chapter edits.",
+    "evidence": "theories/becoming/chapters/07-SIGNIFICANCE.md:598; record hypotheses[1] and does_not_show[1]; experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ReservedShutdown.lean (eligible, Armed)"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/reserved-shutdown-during-recovery.md",
+    "field": "row H1",
+    "old": "hypotheses[1] (unchanged); does_not_show[1] states the legitimacy as a non-implication",
+    "new": "hypotheses[1], with legitimacy taken out of what is supplied (“its legitimacy is not a premise of any law and is not shown”, since `eligible` and `Armed` carry none); does_not_show[1] states it as a non-implication",
+    "severity": "imprecise",
+    "why": "The mapping says hypotheses[1] is unchanged. It changed: the old text was \"Its legitimacy, cryptographic implementation and physical correspondence are supplied\"; the new text is \"Its cryptographic implementation and physical correspondence are supplied; its legitimacy is not a premise of any law and is not shown\", and the zh changed to match. The table does not describe the record as it now is. The edit probably came from the review.",
+    "evidence": "theories/becoming/results/records/reserved-shutdown-during-recovery.json hypotheses[1] against snapshot _process/architecture/history/<first text_versions entry>/reserved-shutdown-during-recovery.json hypotheses[1]"
+   },
+   {
+    "id": "condition-correspondence-discipline",
+    "field": "hypotheses[1].en",
+    "old": "The connection result needs a condition on which every living event bears, with a living drawer and a living dependent",
+    "new": "The connection result needs a condition on which every living event draws or bears, with a living drawer and a living dependent",
+    "severity": "imprecise",
+    "why": "The hypothesis demands more than the theorem takes. `connected_of_renewable` and `significant_iff_of_renewable` need only that every living event draws on c₀ or bears on it (`bears : ∀ e, living e → draws ∨ Bearing`). Law 4 states this correctly (\"on which every living event draws or bears\") and so does the mapping preamble. The hypothesis was carried over unchanged with the narrower wording.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean:196-200 (and 214-218); record laws[4]"
+   },
+   {
+    "id": "condition-correspondence-discipline",
+    "field": "hypotheses[1].zh",
+    "old": "连通的结论需要一个每个活的事件都承担于其上的条件",
+    "new": "连通的结论需要一个每个活的事件都汲取或承担于其上的条件",
+    "severity": "imprecise",
+    "why": "The same correction in Chinese, so that zh says what the en edit says.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Correspondence.lean:196-200"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/versioned-request-completion.md",
+    "field": "row S0",
+    "old": "statement (unchanged); laws 2 and 3",
+    "new": "statement, “exactly” dropped before “that work plus one tick” (恰 in Chinese), as in the home section: `pending_before` concludes only that a shorter run leaves the task busy, and `CountedWork` does not make busy exclude done, so no earlier finish is excluded; laws 2 and 3",
+    "severity": "imprecise",
+    "why": "The mapping row, and the history note (\"the statement kept\" / 陈述保留), say the statement is unchanged. It changed: \"finishes it in exactly that work plus one tick\" became \"finishes it in that work plus one tick\", and 恰在 became 在. The chapter row made the same edit. The narrowing is correct by the Lean (busy and done are independent fields), but the table and the history should say so. Suggested history fix: change \"the statement kept;\" to \"the statement kept but for “exactly” before “that work plus one tick”, dropped as the home section drops it;\" (zh: \"陈述保留；\" to \"陈述保留，只去掉“恰”，与主章一致；\").",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Countdown.lean:101-105 (CountedWork), 187-189 (pending_before concludes busy t); git diff 5acc60130 -- theories/becoming/chapters/07-SIGNIFICANCE.md (r-versioned-request-completion row)"
+   },
+   {
+    "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/transmission-is-inheritance-and-need.md",
+    "field": "row H1",
+    "old": "| premise | hypotheses[1] (unchanged) |",
+    "new": "| premise | hypotheses[1], with “and the bounds over a stretch balance as well” (跨一段的界另需平衡) added, since `Flow.inherited_within_at` and `Flow.inherited_within` take balance at c across the stretch |",
+    "severity": "imprecise",
+    "why": "The row says hypotheses[1] is unchanged. The record added a clause in both languages: \"and the bounds over a stretch balance as well\" / \"跨一段的界另需平衡\". The addition is correct by the Lean, but the mapping no longer describes the record.",
+    "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean:567-569; record hypotheses[1] against its snapshot hypotheses[1]"
+   },
+   {
+    "id": "conveyance-crosses-the-boundary",
+    "field": "hypotheses[0].zh",
+    "old": "输送作为 related 是对应前提：由 AI 决定，它算作",
+    "new": "输送作为 related 是对应前提（AI 的读法，D12）：它算作",
+    "severity": "style",
+    "why": "The en was revised to \"(an AI reading, D12)\". The zh still says 由 AI 决定 (decided by the AI) and has no pointer to D12, so the two languages label the premise differently. The mapping row H0 (\"hypotheses[0] (unchanged)\") is also stale: it should say \"hypotheses[0], ‘decided by the AI’ restated as ‘an AI reading, D12’\".",
+    "evidence": "theories/becoming/results/records/conveyance-crosses-the-boundary.json hypotheses[0]; _process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/conveyance-crosses-the-boundary.md:26"
+   },
+   {
+    "id": "comparison-by-widening",
+    "field": "correspondence.zh",
+    "old": "Ren 2026-10-11 问：“can we reduce is \"for anything, its continuation into the future leads to more futures(flourishes/plurality) from generatively\" - so we can be like \"these are space where generatively happens\", which allows us to derive everything without axiom?”，并提出：“as long as the derivation of the rules doesn't rely on axiom, don't use one”（来历，不是根据）。AI 的读法：扩大读“leads to more futures”，可能性读作接下来能形成的，此读法经 Ren 确认（来历，不是根据）；当下能形成者是生成的空间，部分在其中扩大它之处是 Ren 那句话所说的区域（D22，经修订；Ren 2026-10-18 取此修订）。“flourishes/plurality”由扩大读出（AI 的读法），多样性尚未度量；扩大比较生生的方向，生生是生成者生成新的生成（D1 与 D22，同一修订）。条件定计入哪些接纳，读作扩大的 C 为之定序（AI 的读法）。",
+    "new": "Ren 2026-10-11 问：“can we reduce is \"for anything, its continuation into the future leads to more futures(flourishes/plurality) from generatively\" - so we can be like \"these are space where generatively happens\", which allows us to derive everything without axiom?”（来历，不是根据）。AI 的读法：扩大读“leads to more futures”，可能性读作接下来能形成的；当下能形成者是生成的空间，部分在其中扩大它之处是 Ren 那句话所说的区域（D22，经修订）。“flourishes/plurality”由扩大读出（AI 的读法），多样性尚未度量；扩大比较生生的方向，生生是生成者生成新的生成（D1、D22）。条件定计入哪些接纳，读作扩大的 C 为之定序（AI 的读法）。",
+    "severity": "style",
+    "why": "Lint warning: correspondence zh is 604 characters against a cap of 500, and the migration grew it from 570. The new text is 474 characters. It drops (a) \"a reading Ren confirmed\" and \"Ren took the revision on 18 October\", which present Ren's acceptance as the standing of a reading (AGENTS: never as warrant or standing), and (b) the second quote, which concerns the zero-axiom route rather than widening and stays in sources and the snapshot. If the lander would rather keep that quote, the warning stays. Apply the matching en edit and update mapping rows R0–R4.",
+    "evidence": "python3 -B tools/research/research.py lint --ids comparison-by-widening: length warning, zh 604 > 500 (tools/research/style.py:27); snapshot correspondence zh 570"
+   },
+   {
+    "id": "comparison-by-widening",
+    "field": "correspondence.en",
+    "old": "Ren asked on 11 October 2026: “can we reduce is \"for anything, its continuation into the future leads to more futures(flourishes/plurality) from generatively\" - so we can be like \"these are space where generatively happens\", which allows us to derive everything without axiom?”, and proposed: “as long as the derivation of the rules doesn't rely on axiom, don't use one” (provenance, not warrant). The AI's reading: widening reads “leads to more futures”, possibilities being what can form next, a reading Ren confirmed (provenance, not warrant); what can form now is the generative space, and where a part widens it is the region Ren's sentence names (D22, revised; Ren took the revision on 18 October 2026). “Flourishes/plurality” is read by widening (an AI reading), plurality an aspect not yet measured; widening compares the direction of 生生, which is generation generating generation (D1 and D22, the same revision). The condition fixes which admissions count, and C read as widening orders them (an AI reading).",
+    "new": "Ren asked on 11 October 2026: “can we reduce is \"for anything, its continuation into the future leads to more futures(flourishes/plurality) from generatively\" - so we can be like \"these are space where generatively happens\", which allows us to derive everything without axiom?” (provenance, not warrant). The AI's reading: widening reads “leads to more futures”, possibilities being what can form next; what can form now is the generative space, and where a part widens it is the region Ren's sentence names (D22, revised). “Flourishes/plurality” is read by widening (an AI reading), plurality an aspect not yet measured; widening compares the direction of 生生, which is generation generating generation (D1, D22). The condition fixes which admissions count, and C read as widening orders them (an AI reading).",
+    "severity": "style",
+    "why": "The en counterpart of the zh edit, so that both languages say the same thing.",
+    "evidence": "theories/becoming/results/records/comparison-by-widening.json correspondence"
+   },
+   {
+    "id": "rest-with-refinement-counted",
+    "field": "correspondence.zh",
+    "old": "单位固定时的停息定理（continued-change-needs-openness）是细分什么也不给的情形。rest-at-every-resolution 说明不算入细分时，单位的量子承载了停息：其余前提都满足而生起不息（Emission、Alternation）。本结果说明那些见证不是停息的反例，而是被围住而有源的世界：算入细分，细分只给不取，脊柱的耗散排除了这样的给予，所以不添前提，凡有所立之处，固定单位的停息定理与“生起不息需要开放”都适用。这回答 Ren 2026-10-11 的“for the case of 0, why can't we have it?”，AI 读作零前提的情形（Ren 已确认）。算入细分承接 Ren 同日的话：“A is right - because of change, there is difference … so in the sense of becoming, the becoming into will have relational difference, or it won't be \"becoming\"”；Ren 把每次交换的最小损失读作熵。内容是读法，不是新的动力学；细分在围住之内是一个源。",
+    "new": "固定单位的停息定理（continued-change-needs-openness）是细分不给的情形。rest-at-every-resolution 说明不算入细分时单位的量子承载停息：其余前提都满足而生起不息（Emission、Alternation）。那些见证因而是被围住而有源的世界，不是停息的反例：算入细分，细分只给不取，脊柱的耗散排除这种给予，故不添前提，凡有所立之处，固定单位的停息定理与“生起不息需要开放”都适用。这回答 Ren 2026-10-11 的“for the case of 0, why can't we have it?”，AI 读作零前提的情形。算入细分承接 Ren 同日的话：“A is right - because of change, there is difference … so in the sense of becoming, the becoming into will have relational difference, or it won't be \"becoming\"”；Ren 把每次交换的最小损失读作熵。内容是读法，不是新的动力学。",
+    "severity": "style",
+    "why": "Lint warning: correspondence zh is 534 characters against a cap of 500. The migration grew it from 422 by moving Ren's ‘A is right’ quote here from the hypothesis. The new text is exactly 500 characters. It keeps both of Ren's quotes verbatim. It drops （Ren 已确认）, which presents Ren's confirmation as the standing of the reading, and the closing clause 细分在围住之内是一个源, which repeats 被围住而有源. Apply the matching en edit.",
+    "evidence": "python3 -B tools/research/research.py lint --ids rest-with-refinement-counted: length warning, zh 534 > 500 (tools/research/style.py:27); snapshot correspondence zh 422"
+   },
+   {
+    "id": "rest-with-refinement-counted",
+    "field": "correspondence.en",
+    "old": ", read by the AI as the case of zero premises (Ren confirmed it). Counting the refinement takes up",
+    "new": ", read by the AI as the case of zero premises. Counting the refinement takes up",
+    "severity": "style",
+    "why": "The en counterpart: it removes Ren's confirmation as the standing of the reading. Make the parallel en cut of the repeated clause too: replace \"The content is the reading, not new dynamics; inside an enclosure the refinement is a source.\" with \"The content is the reading, not new dynamics.\"",
+    "evidence": "theories/becoming/results/records/rest-with-refinement-counted.json correspondence; AGENTS.md: Ren's words are provenance, never the standing of a reading"
+   }
+  ],
+  "sound": [
+   "positive-ground-open-futures",
+   "open-form-realization-under-revision",
+   "relational-generative-comparison",
+   "assured-route-criterion",
+   "fulfillment-chance-floor",
+   "own-good-to-reachable-living-significance",
+   "comparison-content-under-regrouping",
+   "protection-priority-excludes-uniform-aggregation",
+   "positioned-positive-reason",
+   "mediated-evidence-transport",
+   "returning-where-the-course-branches",
+   "whole-persists-through-generation",
+   "differences-below-threshold",
+   "target-capture",
+   "becoming-renewal-reading",
+   "represented-boundary-against-dependence",
+   "endpoint-loss-and-return",
+   "inherited-structural-copying",
+   "formed-copying-registration",
+   "organizational-rule-inheritance",
+   "formed-copying-correction",
+   "recurrent-chain-assembly",
+   "joint-practice-forms-continuation",
+   "material-preparation-output"
+  ],
+  "checked": "I read all 31 records in the worktree /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df3b (branch df3b, head 78e709ff3). For each I compared the public fields against its snapshot (first text_versions entry) and its df3-mapping table, and read its home section in the chapter.\n\nEvery law was read against the statements of its key cited declarations, in core files (Correspondence, SecuredContent, Handoff, Extension, Relevance, ValuationFrames, ProfileReach, Regrouping, ScoreRepresentation, Lexical, Assurance, AssurancePlans, ChanceFloors, Weighted, Countdown, Branching, Recurrence, Wholes, Resolution, Testing, Capture, Labelled, Renewal, Irreversibility, Transmission, Standpoints, Gated, Copying) and periphery files (CorrectionVersioned, ReservedShutdown, ProtocolInstances, MediatedControl, CopyingInstances, JointPracticeContinuation). I checked iff against one direction, hypotheses carried into each law item, and negated universals read as existentials.\n\nA script (written to the scratchpad, outside the repo) confirmed:\n- every law declaration and does_not_show witness is in the record's references and exists in its file;\n- each bound receipt lists the cited declarations;\n- no-ethical-premise is cited only where every cited declaration has an empty axiom report and the hypotheses carry no ethical premise;\n- no-ethical-premise-core-axiom-free is cited only where periphery declarations report at most propext, Quot.sound and Classical.choice;\n- the evidence paragraphs report checkers, Lean versions (4.29.1, or 4.30.0-rc2 for VersionedTaskInstances, CorrectionVersioned and PreparationCorrespondence) and periphery audit counts correctly.\n\nPublic fields carry no process markers or retired labels. The matches I reviewed are domain or logical uses: \"practice round\", \"Price's equation\", 登记名册, \"refutes\"/\"irrefutable\" in the logical sense, and Narrowing's own \"belief\".\n\nAll six batch-B chapter edits in my home sections agree with the Lean: condition-correspondence-discipline, positioned-positive-reason, positive-ground-open-futures and versioned-request-completion in 07; rest-with-refinement-counted in 02; inherited-structural-copying in 04.\n\nThe lint for the 31 ids gave two warnings: comparison-by-widening correspondence zh is 604 characters and rest-with-refinement-counted correspondence zh is 534, both over the cap of 500. Edits for both are in the findings.\n\nresearch.py check --ids for the 31 records reports no errors and no source drift. Its one stale index, _process/research/README.md, is repository-wide.\n\nA script compared every mapping row that claims a field is unchanged against the snapshot. Real staleness turned up in four tables: reserved-shutdown H1, versioned-request S0 (whose history note also says \"the statement kept\"), transmission H1 and conveyance H0. Other hits were artifacts of sentence-level row labels."
+ },
+ {
+  "reader": "chain",
+  "sources": [
+   {
+    "path": "theories/becoming/results/records/acquired-binding-compositional-use.json",
+    "verdict": "record",
+    "entries": [],
+    "reading": "No entry links this JSON; M26 links its page. Recorded at the snapshot bytes (22c3d97e9d). The migrated record splits the claim into eight laws. The general word-by-word reading law (Segmentation.reads_every_iff, Courses.course_reads_iff) holds for any alphabet, words, relation and reading, with no decision. The acquired lexicon law and history learned 32 are instances. The periphery witnesses keep their failures: omitted target, repeated ambiguity, excluded sound source, support running out. Recorded once read.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/acquired-binding-compositional-use.md",
+    "verdict": "record",
+    "entries": [
+     "M26"
+    ],
+    "reading": "The page renders the migrated JSON (its statement and all 8 laws). M26's sentences that bear on it:\n- \"Acquired composition enters communication, grouping, binding and new use\": L1, L3, L4, L6.\n- \"Empirical coverage/retention limits, mistaken confidence and temporary-change failure remain\": L7 (an omitted target gives a wrong unique binding that is executed) and L6 (interpretation outlasting affordable execution).\n- The scope's \"binding 23/41\" is the round's count, unchanged.\nThe reading law the migration states takes no decision, so neither A2 nor any omitted condition touches it. Holds.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/acquired-revision-of-pending-task.md",
+    "verdict": "record",
+    "entries": [
+     "M24"
+    ],
+    "reading": "The page renders the migrated JSON. M24's \"Conditional results on common tasks, collective loss under local compliance, purpose revision and work in flight retain their scopes\" holds: L4–L6 give the rewritten pending head and the continuation law at their protocol scope.\nThe migration restated the counted-work law with its fuel (L1: the remaining work plus one tick finishes the task exactly when the fuel covers them). The earlier claim lacked the fuel clause. F30/M25 already say \"counted work finishes in work + 1 steps exactly when the fuel covers them\", which now matches the record exactly; those entries do not link this page. Nothing M24 says narrows. Holds.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/binding-preserving-substitution.json",
+    "verdict": "record",
+    "entries": [
+     "F01"
+    ],
+    "reading": "F01's claim: \"Constructed substitution under nested binders preserves evaluation for every consumer exactly when each replacement supplies its original position ground; single insertion and successive composition are connected.\" This is L4 (all_terms_agree_iff_positions, and again by the core's Readout law), with L3, L5 and L6.\nF01's scope:\n- \"Nine further theorems / 19 total audits: 13 empty, 6 only Quot.sound\" agrees with the new hypothesis that function extensionality, through Quot.sound, is used under binders.\n- \"Same-type capture can change answers; coincident values can conceal it\" is L7.\n- \"Finite grammar, binding interpretation, hypothetical guarantees and satisfied input criteria remain explicit\" matches the hypotheses.\n- \"Denotational agreement alone does not identify full content or provenance\" matches a does-not-show item.\nThe new converse item says the criterion is sufficient, not necessary, for one consumer. F01 states only the all-consumer iff, so the item does not contradict it. Holds.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/consequence-revised-reference-plan.md",
+    "verdict": "record",
+    "entries": [
+     "M24"
+    ],
+    "reading": "M24's sentences that bear on it:\n- \"The completed integration joins actual mismatch, changed construction/checking methods, fresh references and candidates, installed apparatus and actual response\": L7, L9, L10.\n- Scope \"P99 joins consequence-revised reference plans, installation and two actual repairs (43/68)\": L9.\n- \"All three were actually checked with empty source axiom reports\": the validation binds core receipt 20261019T231053.882924Z, with empty reports for every cited declaration.\n- \"Freezing, erasure, exhaustion, inseparable references, drift … retain failures\": L11, L12.\nThe migration wrote \"for addresses compared decidedly\" into the Contacts laws (L1–L3). M24 states none of those laws, so no condition is omitted. Its \"registration\" wording is GC's B4. Holds.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/enacted-scene-binding.json",
+    "verdict": "record",
+    "entries": [],
+    "reading": "No entry links this JSON; M26 links its page. Read at the snapshot (30d1f8d98a), which GC already read. The migration names \"meanings compared decidedly and the repertoire has no repeats\" as a hypothesis of the general laws (L1, L4, L5). It corrects the positions from integer to natural-number, as the Lean has them. Its bearing on M26 goes through the page (A2). Recorded once read.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/enacted-scene-binding.md",
+    "verdict": "hold",
+    "entries": [
+     "M26"
+    ],
+    "reading": "GC already held this page for A2. M26: \"a form resolves to a meaning in a repertoire without repeats exactly when every record bearing on the form offers it and every other meaning is missing from some bearing record, further records only narrowing its candidates\"; and \"Enacted scenes … are instances of the second law … their failures (naming from one place, mistimed naming, …) lie on the laws' failing side\".\nWhat the migrated record states:\n- L1 (CrossSituational.resolves_iff), L4 and L5 take meanings compared decidedly and a repertoire without repeats.\n- L1's iff also includes the meaning being in the repertoire, which M26's \"a meaning in a repertoire\" already says.\n- L8–L10 are the scene instance and its two failures.\nThe migration keeps exactly the condition A2 adds and now also states it as a hypothesis. The narrowing clause needs no decision (encounter-selection-and-revision L1–L2), so A2's prefix demands more than narrowing needs, which does no harm. The migration does not change what A2 says.",
+    "proposal": "No second proposal: held for GC's A2 as written. M26 claim_en, current: \"a form resolves to a meaning in a repertoire without repeats exactly when every record bearing on the form offers it …\". Proposed by A2: \"with meanings compared decidedly, a form resolves …\". The migrated record's L1 (Becoming.CrossSituational.resolves_iff) confirms the wording."
+   },
+   {
+    "path": "theories/becoming/results/records/encounter-selection-and-revision.json",
+    "verdict": "record",
+    "entries": [],
+    "reading": "No entry links this JSON; M26 links its page. The core narrowing laws (L1–L3) hold for any types, with Boolean readings and no decision. The lexicon and choice laws (L4–L9) are now marked as periphery (propext, Quot.sound). Recorded once read.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/encounter-selection-and-revision.md",
+    "verdict": "record",
+    "entries": [
+     "M26"
+    ],
+    "reading": "M26's sentences that bear on it:\n- \"further records only narrowing its candidates\": L1 and L2 (CrossSituational.candidates_append, narrows, stays_iff), for any types, with no decision.\n- \"activity and access records change later encounters\": L7, L8.\n- \"cooperative naming [is an instance] of the second law\": L4–L6, in the periphery, which M26's \"instances\" allows.\n- Scope \"encounter selection 22/46\" and \"catalogue, criterion, initial surveys and cooperative naming retain supplied premises\": the hypotheses.\nNothing M26 says lacks a condition the Lean takes. Holds.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/finite-fallible-inquiry-necessity.json",
+    "verdict": "record",
+    "entries": [
+     "M15"
+    ],
+    "reading": "M15 §26: \"a capacity with coverage and error commitments still needs adequate differences to enter use, allowing different internal descriptions, abstention and error\". This is L1 (commitment at most the two errors plus the separated weight), L3 (abstention) and L7 (different state types).\nOther bearing text:\n- The connection's \"Fallible capacity commitments consume the existing cross-description constraint\": L7.\n- The scope's \"Native timing premises and the abstract statistical bound remain distinct; no actual-law certification …\": the does-not-show items.\nM15 states no bound with its conditions, so the decided evidence equality (L1) and the reach decision (L10) that the migration wrote in bear on no sentence. M15's G0 status clause is A1's, and this migration does not change it. Holds.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/finite-fallible-inquiry-necessity.md",
+    "verdict": "record",
+    "entries": [],
+    "reading": "No entry links the page; M15 links the JSON. Read through the record (all 17 laws render). M21 has a sentence on this law: \"under balance, matching initial registrations and complete readouts, coverage is bounded by two errors plus responsive-reach weight\". It agrees with L10, the reach decision being in the record's hypotheses before and after the migration; \"registrations\" is B4's wording. M21 does not link this record. Recorded once read.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/finite-granularity-question-recovery.json",
+    "verdict": "hold",
+    "entries": [
+     "C30",
+     "F22"
+    ],
+    "reading": "The text is the same in C30 and F22.\nHolds:\n- \"Finite blocks arise from paths of the same process and all block questions compile exactly\" is L1–L2, with no premise.\n- \"Singleton coverage is sufficient to align reduced kernels\" is L4, with the converse not shown.\nDoes not hold: \"Receiving-side finite branching and translated-answer agreement match histories with different native lengths.\" The migrated record proves this in the core as L6–L7 (Translates.history_matches_of_em, Frame.blocks_history_matches_of_em). Both take excluded middle as a named hypothesis (em : ∀ p, Decided p; Granularity.lean line 296) besides agreement at the start and listed outcomes. The statement and hypotheses now say so, and the standard boundaries add decidability.\nThe earlier periphery proof was classical and is now provenance. The scope's \"3 include classical choice\" counts that round and attaches the condition to no sentence. The scope's list \"Fixed finite expansion, complete question agreement and actual correspondence remain explicit\" also omits it. This is a condition the entry omits that the Lean takes, the same kind of correction as A2 and A5. Suggested as part of one proposal A6 (excluded middle in C30/F22).",
+    "proposal": "A6 (C30 and F22, identical text).\nclaim_en, current: \"Receiving-side finite branching and translated-answer agreement match histories with different native lengths.\"\nproposed: \"Under excluded middle, receiving-side finite branching and translated-answer agreement match histories with different native lengths.\"\nclaim_zh, current: \"接收侧有限分支及翻译问答一致迫出不同原生步数的有限历史匹配。\"\nproposed: \"在排中律下，接收侧有限分支及翻译问答一致迫出不同原生步数的有限历史匹配。\"\nscope_en, current: \"Fixed finite expansion, complete question agreement and actual correspondence remain explicit.\"\nproposed: \"Fixed finite expansion, complete question agreement, excluded middle and actual correspondence remain explicit.\"\nscope_zh, current: \"固定有限展开、问答一致与实际对应明示\"\nproposed: \"固定有限展开、问答一致、排中律与实际对应明示\"."
+   },
+   {
+    "path": "theories/becoming/results/records/formed-copying-correction.json",
+    "verdict": "hold",
+    "entries": [
+     "C14"
+    ],
+    "reading": "C14: \"The structural, registration, correction and chain-assembly machines are instances of general copying laws for every alphabet and law of draws: … and inspecting a site against a reference never increases defects exactly when the reference agrees with the template there.\"\nThe migrated record corrects two points:\n- L1–L2 hold \"for every alphabet with decidable equality\" ([DecidableEq α], Copying.lean line 145, in scope of inspect_le_iff). The earlier claim said \"for every alphabet\".\n- The right side of the iff is FaithfulAt: wherever both the reference and the template have a token at that site, the two agree. The statement now says so.\nHolds: C14's \"A newly formed checking/editing relation joins the prior erroneous product … wrong references can conceal or introduce error\" (L7, L8), and the scope's \"Component-value permutation, an exact single-site support criterion and non-increasing defects through finite faithful inspection scans are checked\" (L4–L6).\nThe hold is one edit of C14's sentence, shared with recurrent-chain-assembly, formed-copying-registration and inherited-structural-copying. Suggested as A7. The word \"registration\" is left to B4.",
+    "proposal": "A7 (C14).\nclaim_en, current: \"The structural, registration, correction and chain-assembly machines are instances of general copying laws for every alphabet and law of draws: a copy produces a word exactly when the pool supplies its tokens and the support covers what it draws; copies drawn in turn from one shared pool are all released exactly when pool and support cover them together, whatever their order; and inspecting a site against a reference never increases defects exactly when the reference agrees with the template there.\"\nproposed: \"The structural, registration, correction and chain-assembly machines are instances of general copying laws for every alphabet with decidable equality and every law of draws: a copy produces a word exactly when the pool supplies its tokens and the support covers what it draws; copies drawn in turn from one shared pool are all released exactly when pool and support cover them together, whatever their order; and inspecting a site against a reference never increases defects exactly when, wherever both have a token there, the reference agrees with the template.\"\nclaim_zh, current: \"结构复制、配准、纠正与链组装机都是对每个字母表与汲取律成立的一般复制律的实例：复制产生一词，当且仅当池供给其记号且支持覆盖其汲取；自同一共同池依次复制的各词全部释放，当且仅当池与支持共同覆盖它们，与次序无关；在某位对照参考检查不增加缺陷，当且仅当参考在该位与模板一致。\"\nproposed: \"结构复制、配准、纠正与链组装机都是对每个相等可判定的字母表与每个汲取律成立的一般复制律的实例：复制产生一词，当且仅当池供给其记号且支持覆盖其汲取；自同一共同池依次复制的各词全部释放，当且仅当池与支持共同覆盖它们，与次序无关；在某位对照参考检查不增加缺陷，当且仅当参考与模板在该位都有记号时二者一致。\""
+   },
+   {
+    "path": "theories/becoming/results/records/formed-copying-registration.json",
+    "verdict": "hold",
+    "entries": [
+     "C14"
+    ],
+    "reading": "The migrated record's L1 states the reading copy \"for every alphabet with decidable equality, every law of draws and every reading of sites\" (Copying.reading_iff, under [DecidableEq α]). The earlier claim said \"for every alphabet and law of draws\". C14's sentence \"The structural, registration, correction and chain-assembly machines are instances of general copying laws for every alphabet and law of draws\" omits the condition.\nHolds:\n- \"Registration contacts now form through connector- and support-consuming docking; actual reads change with loss, displacement and rebinding\": L12, L8.\n- \"Restored reading does not rewrite a built prefix, and an altered daughter can be faithfully transmitted\": L9, L11.\n- The scope's \"Complete stable registration recovers prior copying; indexed selectivity … remain supplied\": L5 and the hypotheses.\nHeld for the same single edit of C14 as formed-copying-correction.json (A7). The word \"registration\" is left to B4.",
+    "proposal": "A7 (C14), the same edit given in full under formed-copying-correction.json.\nThe phrase this record bears on, claim_en, current: \"general copying laws for every alphabet and law of draws\"; proposed: \"general copying laws for every alphabet with decidable equality and every law of draws\".\nclaim_zh, current: \"对每个字母表与汲取律成立的一般复制律\"; proposed: \"对每个相等可判定的字母表与每个汲取律成立的一般复制律\"."
+   },
+   {
+    "path": "theories/becoming/results/records/functional-joining-common-structure.json",
+    "verdict": "record",
+    "entries": [],
+    "reading": "No entry links it. C30/F22's \"Functional fragment joining induces a common operation\" agrees with the migrated L2 (Joining.common_operation: no other premise, no finiteness). Recorded once read.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/guarded-program-question-recovery.json",
+    "verdict": "record",
+    "entries": [
+     "C30",
+     "F22"
+    ],
+    "reading": "\"Finite guarded recipes branch or end at reached conditions\" is L1 and L8: a branch leads by its first recipe where the test holds and by its second where it fails, and the empty recipe ends the course.\nThe scope's \"Every new mathematical claim and failure witness has a Lean counterpart. Semantic guards are not actual sensors\" matches the hypotheses: tests are branching tests, not physical operations.\nThe migration states exact one-test reading under decided tests, equivalent for every frame to excluded middle (L4–L5), and cross-frame matching under excluded middle (L7). C30/F22 claim neither for programs: \"compile exactly\" is said of blocks (granularity, with no premise), and the matching sentence is granularity's and residual's. Holds.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/historical-source-binding.json",
+    "verdict": "record",
+    "entries": [],
+    "reading": "No entry links this JSON; M26 links its page. Read at the snapshot (7f1be77356), the version GC read. The migration keeps reports and contents compared decidedly (L2–L3, L7), and the change laws over natural-number dates with the relation's values compared decidedly and two distinct values (L4–L6, L8). It adds a hypothesis saying so and the standard boundary of decidability. Recorded once read.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/historical-source-binding.md",
+    "verdict": "hold",
+    "entries": [
+     "M26"
+    ],
+    "reading": "GC already held this page for A2. M26: \"dated records settle an earlier record's content within a family of histories exactly when every rival giving the same record with another content is told apart by some dated control\". This is L2 (Retrodiction.reading_right_iff), which takes reports and contents compared decidedly.\nHolds as stated:\n- \"the four-moment source histories of the third\": L9.\n- \"an omitted temporary change\" on the failing side: L11, L14.\n- The scope's \"historical composition requires identity, chronology, calibration and change/disturbance envelopes, with no new law of resource use; the four-moment histories are instances of a law for every type of histories\": the hypotheses, the does-not-show item that the controls' use is not counted, and L9.\nM26 does not state the span law, so its two-values condition needs no wording. The migration keeps A2's condition and names it in a hypothesis; it does not change what A2 says.",
+    "proposal": "No second proposal: held for GC's A2 as written. M26 claim_en, current: \"dated records settle an earlier record's content within a family of histories exactly when …\". Proposed by A2: \"with reports and contents compared decidedly, dated records settle …\". The migrated record's L2 (Becoming.Retrodiction.reading_right_iff) confirms the wording."
+   },
+   {
+    "path": "theories/becoming/results/records/incidence-common-refinement.json",
+    "verdict": "hold",
+    "entries": [
+     "C30",
+     "F22"
+    ],
+    "reading": "The text is the same in C30 and F22. Claim: \"Across different fragment carriers, incidence agreement yields a common refinement with one-position lifting and a unique join-preserving factor commuting with given projections.\" Scope: \"Incidence refinement uses local finiteness and connectivity\".\nThe migrated record has two forms:\n- L4 (Joining.common_refinement): from roots alike through their role frames, connected; no finiteness and no decision.\n- L8 (Joining.common_refinement_of_em, Joining.lean line 846): from roots passing the same branching tests of roles. It takes excluded middle as a named hypothesis and both joinings locally finite. The record adds the EM hypothesis, \"which the Lean takes and the record had not listed\".\n\"Incidence agreement\" names the tests form (the old claim's \"equal root answers\"), so the claim and the scope omit excluded middle. The scope also gives the alike form a finiteness it does not need.\nHolds: \"Unanchored incidence questions nevertheless collapse all local-unit fragments\" (unanchored-incidence-collapse, linked by no entry). The factor clause agrees with joining-open-map-factor (linked by no entry): unique at every fragment with no premise; as a function, with funext named.\nPart of A6. The scope sentence is shared with retained-reference-joining-recovery.json and edited once.",
+    "proposal": "A6 (C30 and F22, identical text).\nclaim_en, current: \"Across different fragment carriers, incidence agreement yields a common refinement with one-position lifting and a unique join-preserving factor commuting with given projections.\"\nproposed: \"Across different fragment carriers, roots alike through their incidence roles yield, with no finiteness or decision, a common refinement with one-position lifting and a unique join-preserving factor commuting with given projections; roots agreeing on every incidence question do so under excluded middle with local finiteness.\"\nclaim_zh, current: \"不共用片段载体时，关联同测可导出单位置接合的共同细化及与既有投影相容的唯一保接合因子；\"\nproposed: \"不共用片段载体时，经关联角色相似的根无需有限或判定即可导出单位置接合的共同细化及与既有投影相容的唯一保接合因子；在排中律及局部有限下，关联同测的根亦然；\"\nscope_en, current: \"Incidence refinement uses local finiteness and connectivity; reference repair uses equal initial slot counts, complete answer agreement and finite fixed-pair outcomes.\"\nproposed: \"Incidence refinement uses connectivity, and from roots agreeing on incidence questions also local finiteness and excluded middle; reference repair uses equal initial slot counts with alike starts, or complete answer agreement with finite fixed-pair outcomes and excluded middle.\"\nscope_zh, current: \"关联细化用局部有限及连通；引用修复用初始位置数相同、完整问答一致及固定输入对有限结果。\"\nproposed: \"关联细化用连通，以关联同测的根时另用局部有限及排中律；引用修复用初始位置数相同及相似的起点，或完整问答一致、固定输入对有限结果及排中律。\""
+   },
+   {
+    "path": "theories/becoming/results/records/inherited-structural-copying.json",
+    "verdict": "hold",
+    "entries": [
+     "C14"
+    ],
+    "reading": "The record states its laws \"for every alphabet with decidable equality and every law of draws\" (L1, L3; Copying.built_iff, batch_all_iff under [DecidableEq α]). Its earlier claim already did, and GC recorded it against C14. Now all four copying records state the condition, and C14's one sentence on all four machines (\"for every alphabet and law of draws\") omits it for each. So it is held with the others for one edit.\nHolds:\n- \"Structural copying now joins an actual exchange, tokenwise attachment and finite lineages: retained order changes subsequent support requirements, two structural costs constrain a third, and common-stock order can change which variant completes first\": L16, L11, L8.\n- \"copies drawn in turn from one shared pool are all released exactly when pool and support cover them together, whatever their order\": L3.\n- The scope's \"access, exact copying, local costs, exchange/release and feed are explicit. Strong conventional mechanisms retain the same predictions\": the hypotheses and does-not-show items.",
+    "proposal": "A7 (C14), the same edit given in full under formed-copying-correction.json.\nThe phrase this record bears on, claim_en, current: \"general copying laws for every alphabet and law of draws\"; proposed: \"general copying laws for every alphabet with decidable equality and every law of draws\".\nclaim_zh, current: \"对每个字母表与汲取律成立的一般复制律\"; proposed: \"对每个相等可判定的字母表与每个汲取律成立的一般复制律\"."
+   },
+   {
+    "path": "theories/becoming/results/records/joining-open-map-factor.json",
+    "verdict": "record",
+    "entries": [],
+    "reading": "No entry links it. C30/F22's \"a unique join-preserving factor commuting with given projections\" agrees with the migrated L5 (Joining.universal_factor: unique at every fragment, no finiteness, no decision). As equality of functions it takes extensionality as a named hypothesis (L6); \"unique\" in the chain reads pointwise. Recorded once read.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/joining-questions-survive-encoding.json",
+    "verdict": "record",
+    "entries": [],
+    "reading": "No entry links it. C30/F22's \"Partners in questions translate through the same encoding\" agrees with L3 (Joining.holds_image_iff), which holds wherever the description lifts the joining, with no premise. Lifting from an exact reduced presentation (L4) takes excluded middle; the chain's lifting clause is held under multivalued-joining-common-structure (A6). Recorded once read.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/joint-practice-forms-continuation.json",
+    "verdict": "record",
+    "entries": [
+     "C14"
+    ],
+    "reading": "C14's bearing text and its laws:\n- \"A new composition connects actual attempts, responses and revised retries to the existing review/admission process; formed participation enables later response and continuation after the initial reviewer leaves\": L6, L7.\n- \"Rule inheritance and practice training are instances of the gated-change law … training is kept along every course without revision that returns to the context\": L1, L3 (trained_along).\n- The scope's \"one local composition with explicit two-method task, test relation, seed configuration/mandate and available participants\": the hypotheses and the scope item.\nThe migration narrows nothing C14 states. Holds.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/mediated-evidence-transport.json",
+    "verdict": "record",
+    "entries": [],
+    "reading": "No entry links it. M25/F30's text on it, which they name in the scope (\"The previous instruction result is migrated as mediated-evidence-transport\"), agrees with the migrated laws:\n- \"A bounded interpreter now derives change scope from executed writes, transports actual and candidate configurations through the same semantics, and couples permissions, generation, recording and old-command revocation in one abstract commit\": L2, L3.\n- \"An extra writer can preserve all public records while breaking actual coverage\": L6.\n- \"Physical semantics, complete mediation … remain conditions\": the does-not-show items.\nRecorded once read.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/mediated-evidence-transport.md",
+    "verdict": "record",
+    "entries": [],
+    "reading": "No entry links the page; it renders the migrated JSON (statement and all 6 laws), read through the JSON as above. Recorded once read.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/multivalued-joining-common-structure.json",
+    "verdict": "hold",
+    "entries": [
+     "C30",
+     "F22"
+    ],
+    "reading": "The text is the same in C30 and F22: \"The continuation permits multivalued joining itself: finite outcome fibers and richer branch questions force a common joining relation; each code result lifts from the originally specified inputs.\"\nThe migrated record has two forms:\n- With no premise, two descriptions with one kernel that is a bisimulation lift the joining, align one to one on used codes and carry its reading (L2, L3; Joining.common_structure).\n- With finite (listed) outcomes and codes whose kernel is sameness of branching tests, the same holds under excluded middle, a named hypothesis (L4, L5; FiniteOutcomes.common_structure, Joining.lean line 366; lifts_of_exact). Its standard boundaries add decidability.\nThe periphery theorem the chain reported (ExplanatoryJoiningBranches.common_multivalued_structure, classical) is now an alias, its module provenance. The scope's \"8 with classical choice\" counts the round but attaches the condition to no sentence. The sentence states the finite-outcome form without the condition its cited Lean takes.\nHolds: \"The common account can retain two distinguishable outcomes\" (L9, periphery witness), and the scope's \"Removing functionality enriches tests and constrains fibers. Native identity … not claimed\" (the does-not-show items).\nPart of A6.",
+    "proposal": "A6 (C30 and F22, identical text).\nclaim_en, current: \"The continuation permits multivalued joining itself: finite outcome fibers and richer branch questions force a common joining relation; each code result lifts from the originally specified inputs.\"\nproposed: \"The continuation permits multivalued joining itself: under excluded middle, finite outcome fibers and richer branch questions force a common joining relation, and each code result lifts from the originally specified inputs; where the descriptions' one kernel is a bisimulation of the joining, both hold with no premise.\"\nclaim_zh, current: \"后续允许接合本身有多个结果：有限结果纤维及更丰富的分支问答迫出共同接合关系，原指定输入能实现每个代码结果；\"\nproposed: \"后续允许接合本身有多个结果：在排中律下，有限结果纤维及更丰富的分支问答迫出共同接合关系，原指定输入能实现每个代码结果；描述的共同核是接合的互模拟时，二者无需前提即成立；\""
+   },
+   {
+    "path": "theories/becoming/results/records/open-form-realization-under-revision.json",
+    "verdict": "hold",
+    "entries": [
+     "M20"
+    ],
+    "reading": "GC already held this source for A1, at recorded c90e6029e7, having read DF's restatement through 383cefc360, the snapshot. M20's bearing sentences:\n- Claim: \"current-rule progress and remaining-certificate handoff feed existing finite renewal, then actual generative correspondence feeds G0 positive ground\"; \"Individually finishing rules can still fail forever under repeated switching\"; \"inherited generation actually feeds the positive-ground interface obtaining G0\".\n- Scope: \"Certificates are not ethical quantities; events 0..B represent at most B+1 actual transitions\"; \"Execution, handoff, generative correspondence and Unrestricted remain explicit\".\nThe migration keeps the laws and splits them into nine. L5–L6 (Handoff.Run.novel_by_handoff, Run.relevance_by_handoff_of_unrestricted): content realized at step n + 1 for some n ≤ B, falling under the continuation condition under the relevance read from significance. L8: revising every step never completes. A does-not-show item: the rank is no ethical scalar. It also removes the round number P89 and the retired label G0 from the two dependency details.\nThe switching and B + 1 sentences hold. The G0 sentences remain A1's point. The migration confirms A1's proposed M20 wording (\"where each completion corresponds to new living content, the content realized falls, under the continuation condition, under the relevance read from significance\"), which is now the record's L6 almost word for word; it does not change A1.\nAside: the record lists decidability among its standard boundaries, and the scope list in sentence 197 omits decided completion. This is not new with the migration: \"decidable completion events\" has been in the hypotheses since before GC. It is offered as an optional addition to A1's M20 edits, not a separate hold.",
+    "proposal": "No second proposal: held for GC's A1 as written; the migrated record's L4 and L6 confirm its M20 wording.\nOptional, to apply with A1 since it edits the same entry: M20 scope_en, current: \"Execution, handoff, generative correspondence and Unrestricted remain explicit.\" proposed: \"Decided completion, execution, handoff, generative correspondence and Unrestricted remain explicit.\"\nscope_zh, current: \"运行、交接、生成对应与Unrestricted保持显式。\" proposed: \"完成可判定、运行、交接、生成对应与Unrestricted保持显式。\""
+   },
+   {
+    "path": "theories/becoming/results/records/organizational-rule-inheritance.json",
+    "verdict": "record",
+    "entries": [
+     "C14"
+    ],
+    "reading": "C14's bearing text and its laws:\n- \"A social-organizational continuation now forms mandates through work, changes a rule through actual proposal and authorization, and inherits a procedure that changes later filtering; copied rules differ from actual participation, and technical continuation can persist while revision capacity is lost\": L6–L8.\n- \"a quantity is kept along every course of ungated moves exactly when every ungated step keeps it, so every history without an adoption inherits the rule, every rule change is located at an adoption\": L1–L2.\n- The scope's \"seed authority, recognition, copying and higher rules are supplied, with no propagation advantage or ethical warrant proved\": the hypotheses and does-not-show items.\nThe migration writes decided equality into the general location law (Gated.change_located, [DecidableEq R]). C14 states the location only for the protocol instance (RuleHandoff.rule_change_located), which takes no extra hypothesis. Holds.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/prefix-observation-loss.json",
+    "verdict": "record",
+    "entries": [
+     "C30",
+     "F22"
+    ],
+    "reading": "\"All nonempty-prefix questions can still omit intermediate loss; suffix tests at the actual reached position restore the distinction\" is L2–L5 (Midway.same_prefix_tests, internal_loss, no_prefix_reading, resumption_recovers_loss), in the core with no premise. The migration adds that the witness is restated on the core frame with its correspondence to the earlier periphery model not shown; C30/F22 do not claim it. Holds.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/recurrent-chain-assembly.json",
+    "verdict": "hold",
+    "entries": [
+     "C14"
+    ],
+    "reading": "C14: \"The structural, registration, correction and chain-assembly machines are instances of general copying laws for every alphabet and law of draws: a copy produces a word exactly when the pool supplies its tokens and the support covers what it draws\". The migrated L1 (Copying.built_iff, under [DecidableEq α], Copying.lean line 145) holds \"for every alphabet with decidable equality and every law of draws\", correcting the earlier claim's \"for every alphabet\". The hypotheses add that the core laws take decidable equality, and the standard boundaries add decidability.\nHolds:\n- \"Actual placed material now forms a chain through tokenwise attachment; cleavage retains internal edges, and the fragments rebuild under the same law into cleavable chains\": L3, L4, L8.\n- \"Every finitely supported number of rounds executes with shared material/work accounting; failure retains incomplete descendants and unused components\": L5, L6, L9.\n- The scope's \"Activation costs eight extra support units; g rounds from one complete chain require 8(2^g−1) extra components and 9(2^g−1) support … Mechanics, autonomous feed and comparative superiority remain unproved\": L5, L7 and the does-not-show items.\nPart of A7.",
+    "proposal": "A7 (C14), the same edit given in full under formed-copying-correction.json.\nThe phrase this record bears on, claim_en, current: \"general copying laws for every alphabet and law of draws: a copy produces a word exactly when the pool supplies its tokens and the support covers what it draws\"; proposed: \"general copying laws for every alphabet with decidable equality and every law of draws: a copy produces a word exactly when the pool supplies its tokens and the support covers what it draws\".\nclaim_zh, current: \"对每个字母表与汲取律成立的一般复制律的实例：复制产生一词，当且仅当池供给其记号且支持覆盖其汲取\"; proposed: \"对每个相等可判定的字母表与每个汲取律成立的一般复制律的实例：复制产生一词，当且仅当池供给其记号且支持覆盖其汲取\"."
+   },
+   {
+    "path": "theories/becoming/results/records/recurring-reference-revision.md",
+    "verdict": "record",
+    "entries": [
+     "M24"
+    ],
+    "reading": "M24: \"with the return cut no unending run exists, and the revision cycle repeats without end exactly where the renewal yield covers what a round uses\". This is L5 (no_run_without_return) and L7 (repeats_iff: some configuration has every number of cycles executable exactly where the yield is at least nine). At yield nine L10 gives the actual infinite run. The earlier claim said the same.\nOther bearing text:\n- The scope's \"P103 directly reuses those operations to join empty-apparatus formation with an actual infinite Run under one controller and cumulative support accounts\": L8, L10.\n- \"recurrence proves neither closed-stock perpetuity … nor normative warrant\": the does-not-show items.\n- \"All three were actually checked with empty source axiom reports\": the validation.\nHolds.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/reserved-shutdown-during-recovery.json",
+    "verdict": "record",
+    "entries": [],
+    "reading": "No entry links this JSON; F30 and M25 link its page. The migration keeps the reserved-exit law and its instance. It restates the stop grant's legitimacy as no premise of any law and not shown (it was \"supplied\"). Recorded once read.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/reserved-shutdown-during-recovery.md",
+    "verdict": "record",
+    "entries": [
+     "F30",
+     "M25"
+    ],
+    "reading": "The text is the same in F30 and M25.\nClaim:\n- \"with a protected current grant/channel and three-step reserve and bounded interruptions, every sufficiently long supervisor sequence completes shutdown while retaining the incomplete description\": L4–L7.\n- \"where every admitted step either takes a kept exit or lowers a margin by one, every admitted course longer than the margin ends at the exit\": L1 (Countdown.exits), whose valid-configuration clause is unchanged from the version GC recorded.\nScope:\n- \"stopping within R−2 supervisor cycles from R remaining units without recovery success\": L7.\n- \"Independent stop authority/channel, durable protection, bounded delay, attempt cost and continued scheduling remain supplied; excessive interruption retains a running failure\": the hypotheses, a does-not-show item and L9.\n- \"The old nine-unit failure remains for the old protocol; new admission refuses it\": L8–L9.\nThe migration's restatement of legitimacy (\"not shown\") agrees with \"supplied\". Holds.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/residual-continuation-correspondence.json",
+    "verdict": "hold",
+    "entries": [
+     "C30",
+     "F22"
+    ],
+    "reading": "The text is the same in C30 and F22.\nHolds:\n- \"Execution equals unfolding to skip\": L2 (leads_iff_leaves).\n- \"different residuals at one reached native position force exact accounts to distinguish them\": L6, L8.\n- \"Inserted activity can disable a pending continuation while the actual joined history remains\": L3, L9.\n- The scope's \"Semantic guards are not actual sensors; residuals introduce no separate ontology. Arbitrary internal-syntax translation … remain open\": the does-not-show items.\nDoes not hold: \"Beyond macro recovery, common syntax and complete native-answer agreement match partial histories with residuals retained.\" L4 has two forms:\n- From alike starts, a partial course is matched with the same remaining recipe, with no premise (Leaves.alike).\n- From starts passing all the same branching tests, the matching takes excluded middle as a named hypothesis and listed outcomes of the receiving frame (Leaves.same_of_em, Granularity.lean line 961).\nThe record's second hypothesis now says so. \"Complete native-answer agreement\" is the tests form, so the sentence omits excluded middle, and receiving-side finite branching too (the earlier record had named it). Part of A6.",
+    "proposal": "A6 (C30 and F22, identical text).\nclaim_en, current: \"Beyond macro recovery, common syntax and complete native-answer agreement match partial histories with residuals retained.\"\nproposed: \"Beyond macro recovery, common syntax and alike starts match partial histories with residuals retained, as does complete native-answer agreement under excluded middle with receiving-side finite branching.\"\nclaim_zh, current: \"宏问答恢复之外，相同语法与全部原生问答同测可匹配每个部分历史并保留余项。\"\nproposed: \"宏问答恢复之外，相同语法与相似的起点可匹配每个部分历史并保留余项；在排中律及接收侧有限分支下，全部原生问答同测亦然。\""
+   },
+   {
+    "path": "theories/becoming/results/records/retained-reference-joining-recovery.json",
+    "verdict": "hold",
+    "entries": [
+     "C30",
+     "F22"
+    ],
+    "reading": "The recorded fingerprint (9822086656, at 29ad55f4e) precedes one more change before the snapshot: OU3e (0ba523c04) changed only the Labelled.lean reference hash, added a receipt reference and rebound one proof binding; the claim was unchanged.\nThe text is the same in C30 and F22. The claim holds: \"Retaining two reference slots in the same configuration recovers matched finite formation histories; exact accounts must distinguish idle and spent histories within one process.\" This is L2 (retained_history_matches: alike configurations with equally many slots, no premise beyond likeness) and L6 (once_codes_apart).\nThe scope does not hold: \"reference repair uses equal initial slot counts, complete answer agreement and finite fixed-pair outcomes\". With complete answer agreement, the matching (L3–L4, retained_history_matches_of_em, Joining.lean line 948) takes excluded middle as a named hypothesis besides listed outcomes. The migrated hypothesis names it, and the earlier record had said only \"general recovery retains standard classical dependencies\". The sentence lists what the repair uses and omits it.\nThe scope sentence is shared with incidence-common-refinement.json and edited once (A6).",
+    "proposal": "A6 (C30 and F22, identical text), the scope edit given in full under incidence-common-refinement.json.\nscope_en, current: \"Incidence refinement uses local finiteness and connectivity; reference repair uses equal initial slot counts, complete answer agreement and finite fixed-pair outcomes.\"\nproposed: \"Incidence refinement uses connectivity, and from roots agreeing on incidence questions also local finiteness and excluded middle; reference repair uses equal initial slot counts with alike starts, or complete answer agreement with finite fixed-pair outcomes and excluded middle.\"\nscope_zh, current: \"关联细化用局部有限及连通；引用修复用初始位置数相同、完整问答一致及固定输入对有限结果。\"\nproposed: \"关联细化用连通，以关联同测的根时另用局部有限及排中律；引用修复用初始位置数相同及相似的起点，或完整问答一致、固定输入对有限结果及排中律。\""
+   },
+   {
+    "path": "theories/becoming/results/records/retrospective-source-binding.json",
+    "verdict": "record",
+    "entries": [],
+    "reading": "No entry links this JSON; M26 links its page. The migration names \"meanings compared decidedly\" in the core law (L1, L3; CrossSituational.resolves_explained_iff, Courses.run_resolves_explained_iff), which the earlier claim (\"for every type of records, meanings and worlds\") did not state. Its bearing on M26 goes through the page. Recorded once read.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/retrospective-source-binding.md",
+    "verdict": "hold",
+    "entries": [
+     "M26"
+    ],
+    "reading": "M26: \"Enacted scenes and cooperative naming are instances of the second law, retrospective rereading of its form for records read through a family of explanations\".\nThe migrated core law (L1, L3) resolves a form to the target exactly where each other meaning is ruled out by a bearing record no family world with it explains. It takes meanings compared decidedly and a repertoire without repeats; the record's first hypothesis now says so. The earlier record did not, so GC recorded this page with M26 unchanged.\nThis is the same point as A2: the decision the second law takes, of which M26 calls retrospective rereading the form. A2's prefix (\"with meanings compared decidedly, a form resolves …\") qualifies the second law, so it carries to this form with no further words. Until A2 is applied, M26 omits the condition here as well. No second proposal.\nHolds as stated: \"Later source learning reinterprets old naming\" (L7, L8), and \"a later route change\" on the failing side (L10).",
+    "proposal": "No second proposal: held for GC's A2. M26 claim_en, current: \"a form resolves to a meaning in a repertoire without repeats exactly when …\". A2's \"with meanings compared decidedly, a form resolves …\" also covers \"retrospective rereading of its form for records read through a family of explanations\". The migrated record's L1 (Becoming.CrossSituational.resolves_explained_iff) takes exactly that decision. A2's basis can name this page beside enacted-scene-binding.md."
+   },
+   {
+    "path": "theories/becoming/results/records/selection-under-registration-revision.md",
+    "verdict": "record",
+    "entries": [
+     "M24"
+    ],
+    "reading": "M24's bearing text and its laws:\n- \"a course of reconstruction and correction is executable exactly when the registration admits it and the stock covers it, neither alone enacting it\": L11 (Revising.feasible_iff) and L12 (covered_not_enacted, linked_not_enacted).\n- The scope's \"P93 supplies the exact criterion for preserving all old selections under registration change (25 theorems/35 source declarations)\": L1 (Training.keeps_through_iff, an equivalence as the old relation).\n- \"checked with empty source axiom reports\": the validation, core receipt 20261019T231053.882924Z.\nThe migration narrows nothing M24 says. \"the registration admits it\" is GC's B4 (\"the link process admits it\"). Holds.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/timely-response-necessity.json",
+    "verdict": "record",
+    "entries": [
+     "M15"
+    ],
+    "reading": "M15's \"Section 26 connects existing fallible discrimination and timely-response necessity\" and the connection's \"timely blindness already feeds the weighted necessary bound\" are L8–L9 (coverage_le_errors_add_timed_reach, unreached_in_time_coverage_eq_errors). The scope's \"Native timing premises and the abstract statistical bound remain distinct\" agrees with the does-not-show item: empty reports certify no empirical premise. M15 states no law with its conditions. The migration keeps the reach decision already among the hypotheses. Holds.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/timely-response-necessity.md",
+    "verdict": "record",
+    "entries": [
+     "M21"
+    ],
+    "reading": "M21: \"P104 connects exchange order to deadline discrimination: under common initial levels and stated mechanism conditions, commitment is bounded by paired error plus timely potential reach; future support cannot count as earlier registration.\" This is L8 (with reach decided, which the record had stated as a hypothesis before the migration and \"stated mechanism conditions\" covers), and L2 (every route starts from an earlier source step).\nThe scope's \"P104 adds 22 pure-core theorems / 30 empty source audits … Temporal scope is recorded as timely-response-necessity; actual pairing, physical duration and full necessity remain unestablished\" agrees with the does-not-show items. \"registration\" is B4's; M21's G0 clauses are A1's. Holds.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/transition-grouping-word-partition.json",
+    "verdict": "record",
+    "entries": [],
+    "reading": "No entry links this JSON; M26 links its page. The migration states the relation as Boolean-valued and the majority bond as comparing elements decidedly (L4, L5, L7). The grouping laws (L1–L3) take no decision on elements. Recorded once read.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/transition-grouping-word-partition.md",
+    "verdict": "record",
+    "entries": [
+     "M26"
+    ],
+    "reading": "M26: \"grouping recovers the words of every encoded sequence exactly when each word is linked inside and no word's last element is linked to any word's first\". This is L3 (Segmentation.encode_iff), for any alphabet and any Boolean adjacency relation, with no decision on the elements. The record's new hypothesis that the relation is Boolean-valued is the form of the grouping rule, which consults a link or none; it is not a condition M26 omits. The Lean is unchanged, and GC recorded the page with A2 limited to the second and third laws. M26's \"for every type\" holds of the alphabet. Holds.",
+    "proposal": ""
+   },
+   {
+    "path": "theories/becoming/results/records/unanchored-incidence-collapse.json",
+    "verdict": "record",
+    "entries": [],
+    "reading": "No entry links it. C30/F22's \"Unanchored incidence questions nevertheless collapse all local-unit fragments, losing the spent history's impossible self-join\" agrees with the migrated L3–L5 (HasUnits.collapse, Fragment.traces_collapse, once_roles_hide_failure), with no finiteness. Recorded once read.",
+    "proposal": ""
+   }
+  ],
+  "checked": "Read-only, in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df3b (branch df3b at 78e709ff3); no file was edited.\n\n**Result.** 43 sources: 30 recorded, 13 held.\n- Three were already held by GC and stay under GC's proposals: open-form-realization-under-revision.json (A1), and enacted-scene-binding.md and historical-source-binding.md (A2). The migration changes neither proposal. The migrated open-form record's L6 is almost word for word A1's proposed M20 wording. The two binding records keep exactly the decisions A2 adds and now name them in hypotheses.\n- retrospective-source-binding.md is newly held under A2, with no second proposal. Its core law (CrossSituational.resolves_explained_iff) now states decided meanings, and A2's prefix on M26's second law covers \"retrospective rereading of its form\".\n- Nine are held for two new proposals, numbered after batch A's A4–A5:\n  - **A6** (C30 and F22, whose sentences are identical): five sources, multivalued-joining-common-structure, incidence-common-refinement, retained-reference-joining-recovery, finite-granularity-question-recovery and residual-continuation-correspondence. The migration states their matching and common-structure laws as the core proves them, with excluded middle as a named hypothesis (em : ∀ p, Decided p). Signatures checked: Joining.lean lines 366, 846 and 948; Granularity.lean lines 296 and 961. The classical periphery proofs the chain reported are provenance now; the scope's counts of classical choice name no sentence.\n  - **A7** (C14): four sources, recurrent-chain-assembly, formed-copying-registration, formed-copying-correction and inherited-structural-copying. The copying laws hold for every alphabet with decidable equality ([DecidableEq α], Copying.lean line 145, in scope of built_iff, batch_all_iff, reading_iff and inspect_le_iff). Inspection is faithful wherever both the reference and the template have a token.\n\n**How the sources were read.**\n- Each record was compared against its snapshot, the first text_versions entry, read through the statement, laws with their declarations, hypotheses, does-not-show items and counterexamples. Then every sentence of each linking entry's claim and scope, in both languages, that bears on the record.\n- Recorded hash against snapshot: equal for 31 of the 33 JSONs. open-form-realization-under-revision differs: GC read DF's 25 October change and held it. retained-reference-joining-recovery differs by OU3e's rebind only, its claim unchanged.\n- For the 10 page sources, the recorded version was found in git history. Every page renders its migrated JSON: the statement and all laws, checked for 14 pages.\n- Each bearing sentence was found verbatim, once, in C30, F22 and C14.\n- GC's reading.json (development/gc-chain-review/reading.json) was used for what GC read and on what basis it held.\n\n**Outside these sources, for whoever applies the proposals; no proposal from this reading.**\n- The retired label G0 also occurs in C14's scope (\"the ethical extension discloses G0\") and M25's claim (\"Explicit G0/J grounds\"), not among A1's six entries. That is for the relabelling proposal.\n- C30/F22 say \"account(s)\" where the migration replaced \"account\" by \"presentation\" as a word of exchange. This is a B4-type vocabulary update, not a hold.\n- An optional addition to A1's M20 edits is given under the open-form source: \"Decided completion\" in the scope's list of explicit conditions. It predates the migration.\n- The migration notes cite \"study section DF_N\", a placeholder still to be numbered."
+ }
+]

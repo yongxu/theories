@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "protection-priority-excludes-uniform-aggregation",
   "title": {
     "zh": "基本条件优先",
@@ -8,25 +8,129 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-10-28T12:12:20+00:00",
   "statement": {
-    "zh": "基本条件优先独立于 C，排除每个自然数评分，但可由有界评分表示。",
-    "en": "Basic-condition priority is independent of C, excludes every natural-number score, and is representable by a bounded score."
+    "en": "In one constructed situation, the priority of basic conditions holds with C and living significance, which hold as well beside an order ranking gains above protection; every natural-number score satisfying C ranks some gains above protection, and a bounded score represents the priority.",
+    "zh": "在一个构造的情境中，基本条件优先与 C 及生生之意义同时成立，而 C 与生生之意义也与一个把增益排在保护之上的排序并存；每个满足 C 的自然数评分都把某些增益排在保护之上，而一个有界评分表示该优先。"
   },
-  "claim": {
-    "zh": "在一个构造的保护对增益情境中，生生之意义、无损生成比较 C 与基本保护优先的排序可同时成立，基本保护优先从不以任何数量的次级增益交换受保护的基本条件。生生之意义只约束正面相关性，不约束排序，它同样与一个满足 C、会交换的排序并存，因此基本保护优先不由 C 推出。每一个满足 C 的自然数评分都会在 score 0 + 2 项增益处交换，因而没有这样的评分能表示基本保护优先。一个有界有理评分（保护为 1，k 项增益为 k/(k+1)）在每一对选项上与基本保护优先一致。所以此情境只把基本保护优先与单位步长的聚合分开。",
-    "en": "In one constructed protection-versus-gains situation, living significance, the no-loss generative comparison C and the ordering by basic-condition priority hold together, and basic-condition priority never trades the protected basic condition for any number of secondary gains. Living significance constrains positive relevance, not ordering: it holds equally alongside a trading ordering satisfying C, so basic-condition priority does not follow from C. Every natural-number score satisfying C trades at score 0 + 2 gains, so no such score represents basic-condition priority. A bounded rational score (1 for protection, k/(k+1) for k gains) agrees with basic-condition priority on every pair of options. The situation therefore separates basic-condition priority from unit-step aggregation only."
-  },
+  "laws": [
+    {
+      "en": "In the situation, alternative 0 keeps a protected basic condition with no gain and alternative k > 0 loses it with k gains, the configurations of a frame with no moves whose living claims are the gains. A generative extension starts past alternative 0 and adds gains, and past it one more gain always extends.",
+      "zh": "此情境中，选项 0 保住受保护的基本条件而无增益，选项 k > 0 失去它而有 k 项增益；它们是一个无动作框架的构型，其活的主张是各项增益。生成扩展始于选项 0 之后并增加增益；在 0 之后，多一项增益总是扩展。",
+      "declarations": [
+        "Becoming.ScoreRepresentation.frame",
+        "Becoming.ScoreRepresentation.extension_shape",
+        "Becoming.ScoreRepresentation.successor_extends"
+      ]
+    },
+    {
+      "en": "In the situation, the lexical order, the protected condition first and the gains second, ranks protection above every alternative with gains and, among those, more gains above fewer; it satisfies C here and never ranks any number of gains above the protected condition.",
+      "zh": "此情境中，字典序先看受保护条件、再看增益：保护高于每个有增益的选项，在这些选项之间增益多者高于少者；它在此满足 C，并且从不把任何数量的增益排在受保护条件之上。",
+      "declarations": [
+        "Becoming.Lexical.Above",
+        "Becoming.ScoreRepresentation.above_iff",
+        "Becoming.ScoreRepresentation.above_satisfies_comparison",
+        "Becoming.ScoreRepresentation.never_outranked"
+      ]
+    },
+    {
+      "en": "A comparison meets the priority of basic conditions where it agrees with the lexical order on every pair; such a comparison, like the lexical order itself, never ranks an alternative lacking a basic condition above one that holds it.",
+      "zh": "一个比较在每一对选项上都与字典序一致时，就满足基本条件优先；这样的比较与字典序本身一样，从不把缺少某基本条件的选项排在持有它的选项之上。",
+      "declarations": [
+        "Becoming.Lexical.BasicPriority",
+        "Becoming.Lexical.BasicPriority.no_trade",
+        "Becoming.Lexical.Above.no_trade"
+      ]
+    },
+    {
+      "en": "In the situation, living significance leaves the order open: with every realized gain relevant, it holds beside the lexical order and beside a scalar order (protection weighing zero, k gains weighing k) that satisfies C and ranks one gain above protection, so the priority does not follow from C; under every relevance it makes each realized gain relevant.",
+      "zh": "此情境中，生生之意义不决定排序：在每项已实现增益都相关时，它既与字典序并存，也与一个满足 C、把一项增益排在保护之上的标量序（保护权重为零，k 项增益为 k）并存，所以优先不由 C 推出；对任一相关性，它使每项已实现的增益相关。",
+      "declarations": [
+        "Becoming.LivingSignificance",
+        "Becoming.Comparison",
+        "Becoming.ScoreRepresentation.weighted",
+        "Becoming.ScoreRepresentation.weighted_satisfies_comparison",
+        "Becoming.ScoreRepresentation.livingSignificance_leaves_ordering_open",
+        "Becoming.ScoreRepresentation.comparison_does_not_yield_priority",
+        "Becoming.ScoreRepresentation.livingSignificance_recognizes_gains"
+      ]
+    },
+    {
+      "en": "In the situation, every natural-number score whose strict order satisfies C ranks the alternative with score(0) + 2 gains above protection, so no natural-number score satisfying C keeps every alternative with gains at or below protection; along every endless chain of extensions such a score rises by at least one a link and so outgrows any configuration.",
+      "zh": "此情境中，严格序满足 C 的每个自然数评分，都把有 score(0) + 2 项增益的选项排在保护之上，所以没有满足 C 的自然数评分能使每个有增益的选项都不高于保护；沿每条无尽的扩展链，这样的评分每一环至少升一，因而超过任何构型。",
+      "declarations": [
+        "Becoming.ScoreRepresentation.every_nat_score_outranks",
+        "Becoming.ScoreRepresentation.no_nat_score_represents",
+        "Becoming.Comparison.climbs",
+        "Becoming.Comparison.outgrows"
+      ]
+    },
+    {
+      "en": "In the situation, the bounded score, 1 for protection and k/(k+1) for k gains, compared by cross-multiplication, agrees with the lexical order on every pair of alternatives, satisfies C and never ranks gains above protection.",
+      "zh": "此情境中，有界评分（保护为 1，k 项增益为 k/(k+1)，以交叉相乘比较）在每一对选项上与字典序一致，满足 C，且从不把增益排在保护之上。",
+      "declarations": [
+        "Becoming.ScoreRepresentation.ratioBetter",
+        "Becoming.ScoreRepresentation.ratio_agrees",
+        "Becoming.ScoreRepresentation.bounded_score_represents"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "单一情境：选项 0 保住基本条件、无增益；选项 k>0 失去它并实现 k 项生成增益。基本条件不算作新的生成内容。",
       "en": "A single situation: option 0 retains the basic condition with no gain; option k>0 loses it and realizes k generative gains. The basic condition is not counted as new generative content."
     },
     {
-      "zh": "C 取自 GenerativeComparison.ComparisonPrinciple；J2 取自 PracticalJudgment.Better；生生之意义（GenerativeComparison.G0）只用于承认增益的正面意义。“J2 不由 C 推出”是 C 对取舍不置可否这一既有结果（tradeoff_has_opposite_strict_appraisals、loss_sensitivity_alone_supplies_no_cutoff）在此情境的实例。",
-      "en": "C is GenerativeComparison.ComparisonPrinciple; J2 is PracticalJudgment.Better; living significance (GenerativeComparison.G0) is used only to recognize gains as positively relevant. That J2 does not follow from C instances the existing result that C is silent on trade-offs (tradeoff_has_opposite_strict_appraisals, loss_sensitivity_alone_supplies_no_cutoff)."
+      "en": "C is Comparison (GenerativeComparison.ComparisonPrinciple in the periphery); the priority of basic conditions is the lexical order Lexical.Above, which a comparison meets under Lexical.BasicPriority (PracticalJudgment.Better in the periphery); living significance (LivingSignificance) is used only to recognize gains as relevant.",
+      "zh": "C 即 Comparison（外围为 GenerativeComparison.ComparisonPrinciple）；基本条件优先即字典序 Lexical.Above，比较在 Lexical.BasicPriority 下满足它（外围为 PracticalJudgment.Better）；生生之意义（LivingSignificance）只用于承认增益相关。"
+    },
+    {
+      "en": "That the priority does not follow from C instances the result that C is silent on trade-offs (tradeoff_has_opposite_strict_appraisals, loss_sensitivity_alone_supplies_no_cutoff).",
+      "zh": "优先不由 C 推出，是 C 对取舍不置可否这一结果（tradeoff_has_opposite_strict_appraisals、loss_sensitivity_alone_supplies_no_cutoff）在此情境的实例。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "It is shown in one constructed situation only; several basic conditions or varying stakes are not treated.",
+      "zh": "只在一个构造的情境中表明；不处理多项基本条件或不同利害。",
+      "kind": "scope"
+    },
+    {
+      "en": "What is excluded is natural-number scores with their unit step (the id's \"uniform aggregation\"), not aggregation in general: a bounded score agrees with the priority on every pair here, so the two are not told apart.",
+      "zh": "所排除的是带单位步长的自然数评分（记录 ID 中的“uniform aggregation”），不是一般的聚合：有界评分在此与该优先在每一对上一致，二者无法区分。",
+      "kind": "non-implication",
+      "witness": "Becoming.ScoreRepresentation.bounded_score_represents"
+    },
+    {
+      "en": "It does not show that the priority of basic conditions is right elsewhere, or that the protected condition is basic.",
+      "zh": "不表明基本条件优先在其他情境中正确，也不表明受保护条件确属基本。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtectionPriorityRival.lean",
+      "detail": {
+        "zh": "weighted 0 满足 C，却以一项增益交换基本条件：C 不推出基本保护优先。",
+        "en": "weighted 0 satisfies C yet trades the basic condition for one gain: C does not yield basic-condition priority."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtectionPriorityRival.lean",
+      "detail": {
+        "zh": "有界有理评分 k/(k+1) 在此情境中与基本保护优先在每一对选项上一致（ratio_agrees_with_priority）：有界敏感性对手未被排除，仍是实质对手。",
+        "en": "The bounded rational score k/(k+1) agrees with basic-condition priority on every pair in this situation (ratio_agrees_with_priority): bounded-sensitivity rivals are not excluded and remain substantive."
+      }
+    }
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the core modules Becoming.ScoreRepresentation, Becoming.Lexical, Becoming.Extension and Becoming.ValuationFrames are bound to passing receipts in becoming-checks, with an empty axiom report for every cited declaration. The periphery module it was ported from, ProtectionPriorityRival, keeps its receipt generative-discrimination-verification.json as provenance. An independent review accepted that module's first version with corrections; the corrected and ported version has not been re-reviewed.",
+    "zh": "由合并的 Lean 4.29.1 检查器实查：核心模块 Becoming.ScoreRepresentation、Lexical、Extension 与 ValuationFrames 绑定到 becoming-checks 中通过的回执，所引声明公理报告皆空。其所移植自的外围模块 ProtectionPriorityRival 保留其回执 generative-discrimination-verification.json 作为来源。独立审查附更正接受了该模块的首版；更正并移植后的版本未经复审。"
+  },
+  "next_delta": {
+    "zh": "构造能把基本保护优先与有界敏感性评分分开的情境（多项基本条件、不同利害），或说明为何不能；把对手判别推广到多情境。",
+    "en": "Construct situations (several basic conditions, varying stakes) that separate basic-condition priority from bounded-sensitivity scores, or show why none can; extend rival discrimination across situations."
+  },
   "correspondence": {
     "zh": "受保护条件确属基本、各项增益确为同一历史中实现的生成内容，须由对应条件 E 及分类论证支持；选项是同一历史的不同接续，不是独立所有者的持有。",
     "en": "That the protected condition is basic and each gain is generative content realized in the same history requires correspondence E and a classification argument; options are continuations of one history, not holdings of independent owners."
@@ -50,15 +154,15 @@
     {
       "id": "practical-judgment-under-living-significance",
       "detail": {
-        "zh": "复用其 Better 与 no_protection_trade_by_count；补上 J2 相对 C 的独立性、被排除的自然数评分类，以及与 J2 一致的有界评分。未修改其证明。",
-        "en": "Reuses its Better and no_protection_trade_by_count, adding J2's independence from C, the excluded natural-number score class and a bounded score agreeing with J2. Its proof is unchanged."
+        "en": "Reuses its Better and no_protection_trade_by_count, adding the priority's independence from C, the excluded natural-number score class and a bounded score agreeing with the priority. Its proof is unchanged.",
+        "zh": "复用其 Better 与 no_protection_trade_by_count；补上基本条件优先相对 C 的独立性、被排除的自然数评分类，以及与该优先一致的有界评分。未修改其证明。"
       }
     },
     {
       "id": "alignment-direction-under-widening",
       "detail": {
-        "zh": "把对齐方向 §3 中 J2 不由生生之意义推出、代价是拒绝某些聚合补偿之说变为检查过的命题。",
-        "en": "Turns the alignment direction's §3 statement that J2 is not implied by living significance and rejects some aggregate compensation into a checked claim."
+        "en": "Turns the alignment direction's §3 statement that the priority of basic conditions is not implied by living significance and rejects some aggregate compensation into a checked claim.",
+        "zh": "把对齐方向 §3 中基本条件优先不由生生之意义推出、并拒绝某些聚合补偿之说变为检查过的命题。"
       }
     },
     {
@@ -69,30 +173,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtectionPriorityRival.lean",
-      "detail": {
-        "zh": "weighted 0 满足 C，却以一项增益交换基本条件：C 不推出基本保护优先。",
-        "en": "weighted 0 satisfies C yet trades the basic condition for one gain: C does not yield basic-condition priority."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtectionPriorityRival.lean",
-      "detail": {
-        "zh": "有界有理评分 k/(k+1) 在此情境中与基本保护优先在每一对选项上一致（ratio_agrees_with_priority）：有界敏感性对手未被排除，仍是实质对手。",
-        "en": "The bounded rational score k/(k+1) agrees with basic-condition priority on every pair in this situation (ratio_agrees_with_priority): bounded-sensitivity rivals are not excluded and remain substantive."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "只检查一个构造情境；排除的是自然数值（单位步长）评分，不是一般的聚合。不证明 J2 在其他情境中正确、受保护条件确属基本，或有界敏感性对手不成立；在此情境中二者无法区分。记录 ID 中的“uniform aggregation”指单位步长聚合。",
-    "en": "Checks one constructed situation; what it excludes is natural-number (unit-step) scores, not aggregation in general. It does not show that J2 is right elsewhere, that the protected condition is basic, or that bounded-sensitivity rivals fail; in this situation the two cannot be told apart. The record ID's \"uniform aggregation\" means unit-step aggregation."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 检查通过（运行 20261008T192627.406862Z）：ProtectionPriorityRival 15项定理／25项声明审计（11项无依赖；1项 propext；5项 propext 与 Quot.sound；8项另含 Classical.choice）；无自定义公理、sorry 或 native_decide；与 RenewingFormation 同一回执及控制例。2026-10-09 独立审查附更正后接受了首版（10项定理）；更名、新增 livingSignificance_leaves_ordering_open 与有界评分定理均经 Lean 检查，审查者未复审更正版；见 GENERATIVE-DISCRIMINATION-REVIEW。",
-    "en": "Successful Lean 4.29.1 check (run 20261008T192627.406862Z): ProtectionPriorityRival 15 theorems/25 declaration audits (11 with no dependency, 1 propext, 5 propext and Quot.sound, 8 also Classical.choice); no custom axiom, sorry or native_decide; same receipt and controls as RenewingFormation. An independent review on 9 October accepted the first version (10 theorems) with corrections; the renames, livingSignificance_leaves_ordering_open and the bounded-score theorems are Lean-checked, but the reviewer did not re-review the corrected version; see GENERATIVE-DISCRIMINATION-REVIEW."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtectionPriorityRival.lean",
@@ -232,7 +312,12 @@
         "Becoming.ScoreRepresentation.ratio_agrees",
         "Becoming.ScoreRepresentation.bounded_score_represents",
         "Becoming.ScoreRepresentation.livingSignificance_recognizes_gains",
-        "Becoming.ScoreRepresentation.successor_extends"
+        "Becoming.ScoreRepresentation.successor_extends",
+        "Becoming.ScoreRepresentation.frame",
+        "Becoming.ScoreRepresentation.extension_shape",
+        "Becoming.ScoreRepresentation.weighted",
+        "Becoming.ScoreRepresentation.weighted_satisfies_comparison",
+        "Becoming.ScoreRepresentation.ratioBetter"
       ]
     },
     {
@@ -331,10 +416,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "构造能把基本保护优先与有界敏感性评分分开的情境（多项基本条件、不同利害），或说明为何不能；把对手判别推广到多情境。",
-    "en": "Construct situations (several basic conditions, varying stakes) that separate basic-condition priority from bounded-sensitivity scores, or show why none can; extend rival discrimination across situations."
-  },
   "history": [
     {
       "zh": "2026-10-09：依 Ren“请把修改做完，Lean 承担有实质内容”新建，说明 J2 相对 G0/C 承担的实质内容。",
@@ -381,6 +462,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired label G0 replaced by living significance in the premises and a related note (its Chinese, a paraphrase of §3, no longer in quotation marks), the periphery name GenerativeComparison.G0 kept where it names the Lean; the claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：前提与一条关联说明中已退役的标签 G0 改为生生之意义（该说明的中文转述 §3，不再加引号），在指 Lean 处保留外围名 GenerativeComparison.G0；主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the statement rewritten, narrowed to what the Lean proves (in one constructed situation; natural-number scores satisfying C; the bounded score represents the priority there), the earlier one stating the three facts without their situation; the claim split into six laws, each read against its declarations in Becoming.ScoreRepresentation, Becoming.Lexical and Becoming.Extension; the limitations to three does-not-show items, the id's note on \"uniform aggregation\" kept in the second; the first premise kept, the second restated on the core's names and split in two (Comparison, Lexical.Above and BasicPriority, LivingSignificance, the periphery names kept beside them), with the retired label J2 replaced by the priority of basic conditions and \"positively relevant\" by \"relevant\", since the relevance parameter carries no valence; J2 likewise replaced in two related details (and 代价是 by 并 in the Chinese of the second); the counterexamples and correspondence kept; five declarations of ScoreRepresentation added to its references; no premise's content, status or source hash changed. Every earlier sentence is mapped in [protection-priority-excludes-uniform-aggregation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/protection-priority-excludes-uniform-aggregation.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述重写，收窄到 Lean 所证（在一个构造的情境中；满足 C 的自然数评分；有界评分在那里表示该优先），原陈述写出三项事实而未写其情境；主张拆为六条规律，各条对照其在 Becoming.ScoreRepresentation、Becoming.Lexical 与 Becoming.Extension 中的声明核读；限制分入三条“未表明”，记录 ID 中“uniform aggregation”的说明保留在第二条；第一条前提保留，第二条按核心的名称重述并分为两条（Comparison、Lexical.Above 与 BasicPriority、LivingSignificance，外围名称并列保留），退役标签 J2 改为基本条件优先，“正面意义”改为“相关”，因相关性参数不带价值方向；两条关联说明中的 J2 同样替换（第二条中文的“代价是”改为“并”）；反例与对应保留；ScoreRepresentation 的五个声明加入其引用；前提内容、状态与来源哈希均未改变。每句旧文本的去向见 [protection-priority-excludes-uniform-aggregation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/protection-priority-excludes-uniform-aggregation.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/4a540f41e3f610e3/protection-priority-excludes-uniform-aggregation.json",
+      "sha256": "4a540f41e3f610e3c18058b1be48a80595a469e65d7484325a993405eede0b08",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/f12c8fe25390d9b1/protection-priority-excludes-uniform-aggregation.json",
+      "sha256": "f12c8fe25390d9b145ca7e94cc7804ff9eb32fb7a52d88a492f8c0745a6b5c67",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

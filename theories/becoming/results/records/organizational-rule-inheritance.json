@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "organizational-rule-inheritance",
   "title": {
     "zh": "社会组织中规则差异的形成与继承",
@@ -8,11 +8,95 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F10",
-  "reviewed_at_utc": "2026-10-14T05:50:00+00:00",
-  "claim": {
-    "zh": "对每个过程、动作上的门与构型的量：量沿每段非门控进程保持，当且仅当每个非门控步保持它；改变它的进程经过门，且在一个本身改变它的门控步上。组织程序中只有采纳对规则是门控的：其余每个事件保持规则，所以每段不采纳的历史继承规则，每次规则改变都位于一次采纳。共同工作与认可形成参与资格，实际提案经既有授权程序改变后续筛选规则；分化或交接携带该规则，实际继续参与决定其执行，继承的差异改变后续可进入的决策。",
-    "en": "For every process, gate on moves and quantity of configurations: the quantity is kept along every course of ungated moves exactly when every ungated step keeps it; a course that changes it passes the gate, at a gated step that itself changes it. In the organizational protocol only adoption is gated for the rule: every other event keeps it, so every nonadopting history inherits the rule and every rule change is located at an adoption. Reviewed work and recognition form mandates; an actual proposal changes the later filtering rule through the existing authorization procedure. Branching or handoff carries that rule, continuing participation determines execution, and inherited differences change subsequent admitted decisions."
+  "reviewed_at_utc": "2026-10-28T12:40:11+00:00",
+  "statement": {
+    "en": "For every process and gate on moves, a quantity is kept along every ungated course exactly when every ungated step keeps it, and then a course that changes it passes the gate; in a declared rule protocol only adoption is gated, so every history without adoption inherits the rule.",
+    "zh": "对每个过程与动作上的门：一个量沿每段非门控进程保持，恰当每个非门控步都保持它，此时改变它的进程经过门；在一个声明的规则程序中只有采纳是门控的，所以每段不含采纳的历史都继承规则。"
   },
+  "laws": [
+    {
+      "en": "For every process, gate on moves and quantity of configurations, the quantity is kept along every course of ungated moves exactly when every ungated step keeps it. Where every ungated step keeps it, a course that changes it contains a gated move, and, with equality of its values decided, splits into a prefix keeping it, a gated step that itself changes it, and the rest.",
+      "zh": "对每个过程、动作上的门与构型的量：该量沿每段非门控动作的进程保持，恰当每个非门控步都保持它。每个非门控步都保持它时，改变它的进程含一个门控动作；其值的相等可判定时，该进程分为保持它的前段、本身改变它的一个门控步与其余。",
+      "declarations": [
+        "Becoming.Gated.KeptBy",
+        "Becoming.Gated.kept_along",
+        "Becoming.Gated.kept_along_iff",
+        "Becoming.Gated.change_passes_gate",
+        "Becoming.Gated.change_located"
+      ]
+    },
+    {
+      "en": "The rule protocol is a process of partial steps (review, entry to the recorded roster, proposal, adoption of a rule, integration and handoff) whose traces are exactly its completed runs. Every move but adoption keeps the rule, so every course or completed run without adoption keeps it, and every change of rule is located at an adoption step that changes it.",
+      "zh": "规则程序是由部分步骤（审查、进入登记名册、提案、采纳规则、整合与交接）组成的有限过程，其轨迹恰是其完成的运行。除采纳外的每个动作都保持规则，所以每段不含采纳的进程或完成的运行都保持它，规则的每次改变都位于一个改变它的采纳步。",
+      "declarations": [
+        "Becoming.RuleHandoff.process",
+        "Becoming.RuleHandoff.run",
+        "Becoming.RuleHandoff.trace_iff_run",
+        "Becoming.RuleHandoff.adopts",
+        "Becoming.RuleHandoff.rule_kept",
+        "Becoming.RuleHandoff.rule_inherited",
+        "Becoming.RuleHandoff.nonadopting_history_inherits",
+        "Becoming.RuleHandoff.rule_change_located"
+      ]
+    },
+    {
+      "en": "A step that changes the rule is an adoption with a recorded proposal and a ballot passing the rule of governance, the new rule being that proposal; an adoption makes the recorded proposal the rule and adds it to the adoptions. Entry to the roster needs a recorded review of the entrant and a ballot passing governance.",
+      "zh": "改变规则的一步是一次采纳：有记录的提案、通过治理规则的选票，新规则即该提案；采纳使记录的提案成为规则并加入采纳记录。进入名册需要对进入者的一条审查记录和一张通过治理的选票。",
+      "declarations": [
+        "Becoming.RuleHandoff.changed_rule_requires_adoption",
+        "Becoming.RuleHandoff.adoption_uses_recorded_proposal",
+        "Becoming.RuleHandoff.admitted_requires_review"
+      ]
+    },
+    {
+      "en": "Handoff keeps the rule, the roster and the adoptions, and anyone present after it was present before and is among the continuing; repeated handoffs keep the same three. A fork keeps its source as one branch and hands off the other, and a position can be present on both.",
+      "zh": "交接保持规则、名册与采纳记录，交接后在场者此前在场且在继续者之中；重复交接保持这三者。分叉以其来源为一支、交接出另一支，一个位置可在两支上都在场。",
+      "declarations": [
+        "Becoming.RuleHandoff.handoff_preserves_record",
+        "Becoming.RuleHandoff.handoff_does_not_invent_participation",
+        "Becoming.RuleHandoff.repeated_handoff_inherits",
+        "Becoming.RuleHandoff.fork_retains_source",
+        "Becoming.RuleHandoff.boundary_is_not_exclusive_membership"
+      ]
+    },
+    {
+      "en": "A technical decision is read off the enacted relations: two states with the same roster, presence and rule give every ballot the same decision; with nobody present no ballot passes; and no function of the counts of roster, presence and reviews gives the decision in two histories of the protocol.",
+      "zh": "技术决定从已形成的关系中读出：名册、在场与规则相同的两个状态对每张选票给出相同决定；无人在场时没有选票通过；名册、在场与审查的计数的任何函数都给不出该程序两段历史中的决定。",
+      "declarations": [
+        "Becoming.RuleHandoff.same_enacted_relations_same_decision",
+        "Becoming.RuleHandoff.no_participation_no_integration",
+        "Becoming.RuleHandoff.no_count_only_decision"
+      ]
+    },
+    {
+      "en": "In one declared history of six positions, review and entry form the roster through work; a proposal adopted by four votes changes the rule to the timed two-participant rule, while adoption with two votes fails; and after handoffs to two continuing participants two integrations are accepted.",
+      "zh": "在一段声明的六位置历史中，审查与进入经由工作形成名册；四票采纳的提案把规则改为定时两人规则，两票采纳则失败；交接给两名继续者后，两次整合被接受。",
+      "declarations": [
+        "Becoming.RuleHandoff.relations_form_through_work",
+        "Becoming.RuleHandoff.authorized_revision_is_actual",
+        "Becoming.RuleHandoff.low_support_cannot_revise",
+        "Becoming.RuleHandoff.inherited_revision_continues"
+      ]
+    },
+    {
+      "en": "In the declared history, once the rule is revised: with two continuing participants a technical integration is enabled while revising the governance fails; the revised rule handed off to nobody is kept, yet cannot integrate; and duplicate votes, a wait of thirteen days or an objection each fail where two votes over fourteen days pass.",
+      "zh": "在这段历史中，两名继续者时技术整合可行而治理修订失败；交接给无人时修订规则仍保留，却不能整合；重复投票、十三天的等待或一项反对各自失败，而十四天的两票通过。",
+      "declarations": [
+        "Becoming.RuleHandoff.enabling_one_operation_need_not_enable_revision",
+        "Becoming.RuleHandoff.copied_rule_without_participation_fails",
+        "Becoming.RuleHandoff.duplicate_votes_do_not_create_mandates",
+        "Becoming.RuleHandoff.wait_and_objection_matter"
+      ]
+    },
+    {
+      "en": "The inherited rule changes access, in the declared history: after handoff to two participants, two votes integrate under the revised rule and not under the first; and a successor carrying the revised rule, handed off to four, revises it again with four votes.",
+      "zh": "继承的规则改变可及：交接给两人后，两票在修订规则下整合、在最初规则下不能；携带修订规则的后继交接给四人后，以四票再次修订它。",
+      "declarations": [
+        "Becoming.RuleHandoff.inherited_rules_change_access",
+        "Becoming.RuleHandoff.successor_can_revise_inherited_rule"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "种子授权、认可及复制能力、提案内容、参与和遵守程序给定；更高层修订程序固定。",
@@ -23,10 +107,56 @@
       "en": "Majority uses the full recorded roster; the two-support fallback has a fourteen-day input and no-opposition condition. No real clock, consensus process or software execution is simulated."
     },
     {
-      "zh": "实际工作的执行、能力变化及持续参与的形成未闭合；被接受的决策数量不是工作后果。",
-      "en": "Work execution, capability change and the production of continued participation are not closed; admitted-decision counts are not work consequences."
+      "en": "The gate laws hold for every process, the location of a change needing decided equality of the quantity's values; the protocol's positions are natural numbers, its ballots finite lists and its thresholds comparisons of natural numbers.",
+      "zh": "门控之律对每个过程成立，定位改变需要该量的值的相等可判定；程序的位置是自然数，选票是有限列表，门槛是自然数的比较。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "The connection is conditional, within one declared finite protocol.",
+      "zh": "这一连接是条件性的，限于一个声明的有限程序。",
+      "kind": "scope"
+    },
+    {
+      "en": "The forming of proposals, the origin of the highest authority, actual compliance with procedure, an advantage in propagation across a population and an ethical warrant do not follow from the protocol.",
+      "zh": "由该程序推不出提案的形成、最高授权的起源、对程序的实际遵守、在群体中扩散的优势或伦理正当性。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The protocol does not close work execution, change of capability or the forming of continued participation, nor connect their feedback or the differentiation of subsystems.",
+      "zh": "该程序不闭合工作的执行、能力的变化或持续参与的形成，也不接通其反馈或子系统的分化。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Counts of admitted decisions are not consequences of the work, and completing the procedure is not completing the whole organization's dynamics.",
+      "zh": "被接受的决定的计数不是工作的后果；完成程序不是完成整个组织的动力学。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/OrganizationalRuleInheritance.lean",
+      "detail": {
+        "zh": "复制规则而无人继续参与无法运作；仅两人时技术决策可执行而治理修订失败；重复投票、未到期限及反对保留失败。",
+        "en": "A copied rule without continuing participation cannot operate. Two participants may permit technical decisions while governance revision fails. Duplicate votes, inadequate time and opposition retain failure."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "decidability",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: Becoming.Gated is bound to core receipt becoming-checks/20261016T121942.514802Z and Becoming.RuleHandoff to becoming-checks/20261019T231053.882924Z; every cited declaration has an empty axiom report. The periphery OrganizationalRuleInheritance (its own check, organizational-rule-inheritance-verification/: 29 new theorems, 53 declaration audits, 81 in the import closure) and the bridge Instances are kept as provenance. Reading the primary records and the formal check are separate; no independent review.",
+    "zh": "4.29.1 合并检查器实查：Gated 绑定 becoming-checks/20261016T121942.514802Z，RuleHandoff 绑定 becoming-checks/20261019T231053.882924Z；所引声明公理报告皆空。外围 OrganizationalRuleInheritance（其检查：新定理29、审计53、闭包81）与桥接 Instances 作为来源保留。原始记录审读与形式检查分开；无独立审查。"
+  },
+  "next_delta": {
+    "en": "Explain how tasks, test relations and the means of participation themselves change within the history the protocol reads.",
+    "zh": "说明任务、检验关系与参与方式本身怎样在程序所读的历史中改变。"
+  },
   "correspondence": {
     "zh": "社会接续从共同工作、资格和规则记录中分化；分支可共享参与者，记录继承不独自生成实际参与。Valkey及TDF原始材料提供有限机制对应，不是模型全程的实证复现。 整体与子系统是同一活动中的分化；该程序只表示其中一段关系，未形式化完整的相互反馈及边界变化。 解释以活动结果进入后续辨认与修订的具体关系、时序和参与变化为准；修复与学习可在同一活动中形成，不能由正式培训减少直接推出能力下降。",
     "en": "Social continuations differentiate through work, mandates and retained rule histories. Branches can share participants, and inherited records do not create participation. Primary Valkey/TDF records support bounded mechanism correspondence, not empirical reproduction of the whole model. Whole and subsystems differentiate within the same activity; this protocol represents one connection, not formalized complete reciprocal feedback or changing boundaries. Exposition identifies how activity results enter later interpretation and revision, with changing order and participation. Repair and learning may form in one activity; fewer formal training sessions do not directly imply reduced capability."
@@ -68,23 +198,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/OrganizationalRuleInheritance.lean",
-      "detail": {
-        "zh": "复制规则而无人继续参与无法运作；仅两人时技术决策可执行而治理修订失败；重复投票、未到期限及反对保留失败。",
-        "en": "A copied rule without continuing participation cannot operate. Two participants may permit technical decisions while governance revision fails. Duplicate votes, inadequate time and opposition retain failure."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "只证明条件性社会程序连接；未推出提案创造、最高授权起源、实际合法遵守、规则群体扩散优势或伦理正当性。 工作／能力／参与的反馈及子系统分化尚未接通；不能以程序链完成替代整体组织动力学完成。",
-    "en": "Only a conditional institutional connection is proved; proposal creativity, origin of highest authority, actual procedural compliance, population propagation advantage and ethical warrant remain unproved. Work/capability/participation feedback and subsystem differentiation remain unconnected; procedural completion is not completion of whole organizational dynamics."
-  },
-  "validation_scope": {
-    "zh": "29项新定理／53项声明审计，81项实际导入闭包审计；原始记录审读与形式实查分开，无独立 agent 验收。",
-    "en": "29 new theorems / 53 declaration audits, 81 audits in the actual import closure. Primary-record reading and formal checking remain separate; no independent-agent acceptance."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/OrganizationalRuleInheritance.lean",
@@ -199,7 +312,24 @@
         "Becoming.RuleHandoff.trace_iff_run",
         "Becoming.RuleHandoff.rule_kept",
         "Becoming.RuleHandoff.rule_inherited",
-        "Becoming.RuleHandoff.rule_change_located"
+        "Becoming.RuleHandoff.rule_change_located",
+        "Becoming.RuleHandoff.admitted_requires_review",
+        "Becoming.RuleHandoff.adoption_uses_recorded_proposal",
+        "Becoming.RuleHandoff.handoff_preserves_record",
+        "Becoming.RuleHandoff.handoff_does_not_invent_participation",
+        "Becoming.RuleHandoff.repeated_handoff_inherits",
+        "Becoming.RuleHandoff.fork_retains_source",
+        "Becoming.RuleHandoff.boundary_is_not_exclusive_membership",
+        "Becoming.RuleHandoff.no_participation_no_integration",
+        "Becoming.RuleHandoff.no_count_only_decision",
+        "Becoming.RuleHandoff.relations_form_through_work",
+        "Becoming.RuleHandoff.authorized_revision_is_actual",
+        "Becoming.RuleHandoff.low_support_cannot_revise",
+        "Becoming.RuleHandoff.copied_rule_without_participation_fails",
+        "Becoming.RuleHandoff.duplicate_votes_do_not_create_mandates",
+        "Becoming.RuleHandoff.wait_and_objection_matter",
+        "Becoming.RuleHandoff.inherited_rules_change_access",
+        "Becoming.RuleHandoff.successor_can_revise_inherited_rule"
       ]
     },
     {
@@ -237,10 +367,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用 joint-practice-forms-continuation 已接通的实际实践与后续参与；继续解释任务、检验关系及参与方式的变化，不重开原条件继承。",
-    "en": "Reuse the enacted-practice/further-participation connection in joint-practice-forms-continuation; investigate changing tasks, test relations and means of participation without reopening original conditional inheritance."
-  },
   "history": [
     {
       "zh": "2026年10月8日：按Ren指令转向社会组织；新增条件机制，保留原程序合规证据缺口及强常规比较。",
@@ -280,6 +406,28 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Instances and OrganizationalRuleInheritance) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Gated and Becoming.RuleHandoff). The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Instances and OrganizationalRuleInheritance）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Gated and Becoming.RuleHandoff）。主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): a statement written from the home section; the claim split into 8 laws, each read against its declarations in the core modules Becoming.Gated and Becoming.RuleHandoff (the current proof; the periphery and bridge stay provenance), with the conditions the Lean takes written in (every ungated step keeping the quantity, decided equality for the location); seventeen RuleHandoff declarations stating the claim's mandates, proposal, handoff, integration and failures added to its references (its bound receipt reports empty axioms for each); the limitations and the third hypothesis, a non-implication rather than a premise, became four does-not-show items, with the standard boundaries no-ethical-premise, no-evaluation, discrete-steps, decidability and formal-not-empirical and one added hypothesis on the gate laws and the protocol's natural-number positions; the next step's instruction to reuse another record dropped, its open step kept; no premise's content, status, proof binding or source hash changed. Every earlier sentence is mapped in [organizational-rule-inheritance.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/organizational-rule-inheritance.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依主章写出陈述；主张拆为 8 条规律，各条对照核心模块 Becoming.Gated 与 Becoming.RuleHandoff（现行证明；外围与桥接作为来源保留）中的声明核读，Lean 所取的条件都写入（每个非门控步都保持该量、定位需要相等可判定）；陈述主张中资格、提案、交接、整合与失败的十七个 RuleHandoff 声明加入其引用（所绑回执对各条报告空公理）；限制与第三条前提（这是一条“未表明”而非前提）改为四条“未表明”，并引用通用边界 no-ethical-premise、no-evaluation、discrete-steps、decidability、formal-not-empirical，加一条关于门控之律与程序自然数位置的前提；下一步中复用另一记录的指示去掉，保留其未竟步骤；前提内容、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [organizational-rule-inheritance.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/organizational-rule-inheritance.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、规律，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/cbf50b9b273d5b79/organizational-rule-inheritance.json",
+      "sha256": "cbf50b9b273d5b7939666e2b2dd0305ea75ab3314717f888731e7c277dae2fcd",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/5c0074b5d0091439/organizational-rule-inheritance.json",
+      "sha256": "5c0074b5d009143987c6e3a0a954e02a82722a0f374f4baa4d52843a796ec565",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

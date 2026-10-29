@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F22",
+  "reviewed_at_utc": "2026-10-08T18:40:39.196607+00:00",
+  "next_delta": {
+    "zh": "复用有限条件程序与真实余项恢复；继续建立内部语法不同的说明之间余项、判断与实际形成关系的有据翻译，区分语义可判定与实际取得。",
+    "en": "Reuse finite guarded programs and coherent residual recovery; establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition."
+  },
+  "history": [
+    {
+      "zh": "2026-10-09：沿既有接合研究推进；全部新增数学主张、反例与修复条件进入实际 Lean 检查。",
+      "en": "2026-10-09: continued the existing joining study; all new mathematical claims, counterexamples and repair conditions actually checked in Lean."
+    },
+    {
+      "zh": "2026-10-15，整合 I3b（Ren：“a lot proofs are probably not integrated”）：在脊柱上陈述（Becoming.Granularity 的“余项”）。部分执行配方，在路径所在处留下余下的配方（Recipe.Leaves），这一记账是其自身的展开，不加动作（Recipe.Leaves.trace）；续行余项完成配方，执行到底恰是不留余项的部分路径（Recipe.Leaves.resume、Recipe.leads_iff_leaves）。自相同配置出发的部分路径相匹配并保留余项，不加前提（Recipe.Leaves.alike）；自同测配置出发，需列出结果与 em（Recipe.Leaves.same_of_em）。插入的动作与部分路径及续行接成一条路径，而不是配方的一部分（Recipe.Leaves.inserted）。见证 Midway：在到达处检验与在开头检验结果不同；同一起点在同一配置留下不同余项，任何对续行精确的描述都区分它们；插入的一步可使余项失效（Midway.testing_before_formation_changes_results、Midway.remainder_codes_apart、Midway.inserted_can_disable_resumption）。外围的 ExplanatoryGranularityBoundary.unfolding 以带重叠通配分支的匹配定义，编译后用 propext，故 ExplanatoryResumptionCases 的见证在核心的 Midway 框架上重述（同样六个配置、三个动作与六步）。桥接：外围的推进与核心的一一对应（Recipe.advance_ofProgram、Recipe.Advance.toProgram），截断即留下同一程序的部分路径（cut_iff_leaves）；cut_resume、execution_iff_completed_cut、resumption_after_inserted_history 逐字成立，partial_history_matches 以 em 为假设；same_preserves_resumption 不加前提（外围以经典推理把每个续行问题读作单一检验，核心读作有限多个）。公理报告为空（草稿构建；回执随落地）。外围证明及其回执保持原范围。",
+      "en": "15 October 2026, integration I3b (Ren: “a lot proofs are probably not integrated”): stated on the spine (what remains, in Becoming.Granularity). Carrying out a recipe part of the way leaves a recipe remaining where the course stands (Recipe.Leaves), and this bookkeeping is an unfolding of its own that adds no move (Recipe.Leaves.trace); resuming what remains completes the recipe, and carrying it out to the end is a partial course leaving nothing (Recipe.Leaves.resume, Recipe.leads_iff_leaves). Partial courses from alike configurations match, keeping what remains, with no premise (Recipe.Leaves.alike); from configurations passing the same tests they need listed outcomes and em (Recipe.Leaves.same_of_em). Inserted moves join a partial course and its resumption into one course without being part of the recipe (Recipe.Leaves.inserted). The witness Midway: testing where the course has arrived and testing at the start give different results; one start leaves different remainders at one configuration, which every description exact for resumption keeps apart; an inserted move can disable what remains (Midway.testing_before_formation_changes_results, Midway.remainder_codes_apart, Midway.inserted_can_disable_resumption). The periphery’s ExplanatoryGranularityBoundary.unfolding is defined by a match with an overlapping wildcard case and compiles through propext, so the witnesses of ExplanatoryResumptionCases are restated on the core’s Midway frame (the same six configurations, three moves and six steps). In the bridge, the periphery’s advances and the core’s correspond one to one (Recipe.advance_ofProgram, Recipe.Advance.toProgram), and a cut is a partial course leaving the same program (cut_iff_leaves); cut_resume, execution_iff_completed_cut and resumption_after_inserted_history hold as stated, partial_history_matches with em; same_preserves_resumption needs no premise (the periphery reads each continuation question as one test, classically; the core as finitely many). Empty axiom reports (scratch build; the receipt comes with the landing). The periphery proofs and their receipts keep their scope."
+    },
+    {
+      "en": "18 October 2026, F1, the bridge fold, step 3 (Ren: \"please do all\"): the restatement audit of step 0 (development/bridge-fold/RESTATEMENT-AUDIT.md) found ExplanatoryResiduals fully restated by Becoming.Granularity, and its importer ExplanatoryResumptionCases an earlier version whose witnesses Becoming.Midway restates. The canonical source is now the core module; both periphery files keep their path and bytes and stay cited as the earlier statement. The claim is unchanged.",
+      "zh": "2026年10月18日，F1 桥接折叠第 3 步（Ren：“please do all”）：第 0 步的重述审计（development/bridge-fold/RESTATEMENT-AUDIT.md）查明 ExplanatoryResiduals 已由 Becoming.Granularity 完整重述，导入它的 ExplanatoryResumptionCases 是较早版本，其见证由 Becoming.Midway 重述。规范来源改为核心模块；两个外围文件保留路径与字节，仍作为较早的陈述被引用。论断不变。"
+    },
+    {
+      "en": "18 October 2026, F3, the periphery port's sweep (Ren: \"work with other sessions, totally resolve these extra/ugly bridges, and move toward to the direction of unification\"): ExplanatoryResiduals is registered as superseded and leaves the Becoming run; the eight readings of it in GranularityBridge (Recipe.advance_ofProgram, Recipe.Advance.toProgram, cut_iff_leaves and five restatements) left with it, so the reference to GranularityBridge is dropped and the alias same_preserves_resumption_by_core is replaced by the core law it read, SameBranchingTests.leads_iff. Both periphery files keep their path and bytes, and their receipts stay bound. The claim is unchanged.",
+      "zh": "2026年10月18日，F3 外围移植的清扫：ExplanatoryResiduals 登记为已被取代，离开 Becoming 运行；GranularityBridge 中对它的八条读法随之移除，因此删去对 GranularityBridge 的引用，别名 same_preserves_resumption_by_core 换成它所读的核心定律 SameBranchingTests.leads_iff。两个外围文件保留路径与字节，其收据仍然绑定。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 7 bookkeeping notes condensed from 16 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/94a535e9f1fdc4ed/residual-continuation-correspondence.json and in git.",
+      "zh": "2026-10-20：7 条记账性说明合并（16 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/94a535e9f1fdc4ed/residual-continuation-correspondence.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryResiduals) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Granularity and ExplanatoryResumptionCases). The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryResiduals）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Granularity and ExplanatoryResumptionCases）。主张不变。"
+    }
+  ],
+  "validation_scope": {
+    "zh": "Lean 4.29.1：35项新声明／314项闭包审计，279继承另列；新12空、23标准依赖，9含经典选择。新模块autoImplicit false，冻结源码／日志／检查器哈希绑定；作者反审，非独立agent验收。",
+    "en": "Lean 4.29.1: 35 new declarations / 314 closure audits, 279 inherited separate; new 12 empty and 23 standard, 9 with classical choice. New modules use autoImplicit false; frozen sources/logs/checker hashes are bound. Author counterreview, no independent-agent acceptance."
+  },
+  "id": "residual-continuation-correspondence",
+  "title": {
+    "zh": "保留余项的部分展开与真实位置接续",
+    "en": "Partial unfolding with residuals and resumption at reached positions"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Granularity.lean",
+  "aliases": [
+    "Generative.ExplanatoryResiduals.partial_history_matches",
+    "Generative.ExplanatoryResiduals.execution_iff_completed_cut",
+    "Generative.ExplanatoryResumptionCases.exact_paused_accounts_retain_remaining_program",
+    "Becoming.Recipe.leads_iff_leaves",
+    "Becoming.SameBranchingTests.leads_iff",
+    "Becoming.Midway.remainder_codes_apart"
+  ],
+  "claim": {
+    "zh": "剩余程序与到达条件的共同展开有精确完成／接续对应及原生路径投影。共同语法、原生完整同测与接收侧有限分支恢复每个部分历史的余项和到达答案。插入活动后可接实际后段为一条历史，但插入可使原待用接续失效；同一起点产生的余项差异可迫使任何精确说明区分。",
+    "en": "Joint unfolding of residual programs and reached conditions has exact completion/resumption correspondence and native trace projection. Common syntax, complete native-answer agreement and receiving-side finite branching recover residuals and answers along every partial history. Inserted activity and a current-position suffix join into one trace, but insertion can disable a pending continuation; residual differences reached from one start can force distinctions in every exact account."
+  },
+  "hypotheses": [
+    {
+      "zh": "给定有限Program与Advance展开语义；Cut是该展开的有限路径。guard为语义判断，非已证明的物理操作。",
+      "en": "Supplied finite Program/Advance semantics; Cut is a finite operational path. Guards are semantic tests, not proven physical operations."
+    },
+    {
+      "zh": "部分匹配要求同一程序语法和全部原生问题一致，比宏边界问答一致更强；插入后的执行从实际改变后的状态开始。",
+      "en": "Partial matching requires common recipe syntax and all native answers, stronger than macro-boundary agreement; post-insertion execution starts at the actually changed state."
+    }
+  ],
+  "correspondence": {
+    "zh": "程序余项和原生条件是同一语义展开的分析坐标；不声明独立本体或相同完整物理状态产生不同未来。实际物理组织若已含余项，可不另设坐标。",
+    "en": "Residual recipe and native conditions are analytical coordinates of one semantic unfolding, not independent ontologies or identical complete physical states with different futures. A whole physical representation may already include residual organization."
+  },
+  "dependencies": [
+    {
+      "id": "guarded-program-question-recovery",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "接用guard语义、执行路径及diamond问题等价。",
+        "en": "Consume guarded execution semantics, native paths and diamond question equivalence."
+      },
+      "interface": {
+        "output": {
+          "zh": "execution_has_native_trace 和 diamond_correct。",
+          "en": "execution_has_native_trace and diamond_correct."
+        },
+        "input": {
+          "zh": "resumption_after_inserted_history 保存实际后段；same_preserves_resumption 保持有限余项问题。",
+          "en": "resumption_after_inserted_history retains the actual suffix; same_preserves_resumption preserves finite residual questions."
+        },
+        "conditions": {
+          "zh": "实际到达条件及给定残余程序；后者另需完整原生Same。",
+          "en": "Actual reached conditions and supplied remaining recipe; the latter additionally needs complete native Same."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryResiduals.lean"
+      }
+    },
+    {
+      "id": "branching-tests-bisimulation",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用有限后继恢复到每次部分展开。",
+        "en": "Reuse finite successor recovery at each partial advance."
+      },
+      "interface": {
+        "output": {
+          "zh": "同测位置有相应后继。",
+          "en": "Equally answering positions have matching successors."
+        },
+        "input": {
+          "zh": "advance_matches 与 partial_history_matches 保持相同余项语法。",
+          "en": "advance_matches and partial_history_matches retain common residual syntax."
+        },
+        "conditions": {
+          "zh": "原生完整问答及接收侧有限后继。",
+          "en": "Complete native answers and receiving-side finite successors."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryResiduals.lean"
+      }
+    },
+    {
+      "id": "finite-trace-transport",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用trace_map提升顺序上下文。",
+        "en": "Reuse trace_map to lift sequential context."
+      },
+      "interface": {
+        "output": {
+          "zh": "保持每步关系的映射保持有限路径。",
+          "en": "Step-preserving maps preserve finite traces."
+        },
+        "input": {
+          "zh": "cut_sequence 将同一后续程序接到每个余项。",
+          "en": "cut_sequence appends the same continuation to every residual."
+        },
+        "conditions": {
+          "zh": "Advance.seq 给出点态保持；行政路径与物理事件分开说明。",
+          "en": "Advance.seq supplies pointwise preservation; administrative paths and physical events are distinguished."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryResiduals.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "prefix-observation-loss",
+      "detail": {
+        "zh": "具体见证沿用其同一连通过程；不重复宣称完成结果遗漏失败为新发现。",
+        "en": "Concrete cases reuse its single connected process; hiding failures behind completion is not recounted as a new general discovery."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "任意不同内部程序语法、真实记忆／传感形成、无界迭代、并发授权及普遍唯一性未证。相同原生坐标可能遗漏程序组织，不能据此断言完整现实有额外独立变量。",
+    "en": "Arbitrary different internal syntax, actual memory/sensing formation, unbounded iteration, concurrency authorization and universal uniqueness remain unproved. Equal native coordinates can omit program organization without implying an extra independent variable in complete reality."
+  },
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryResumptionCases.lean",
+      "detail": {
+        "zh": "同起点同原生到达位置留下不同余项；同一finish插入活动也能禁用待执行finish，而此前历史仍成立。",
+        "en": "One start and native reached position admit different residuals; the same inserted finish activity can disable a pending finish while preserving the preceding history."
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryResiduals.lean",
+      "role": "provenance",
+      "sha256": "56ee4da9d685171d035f4b8c86bc4042360025ccc58f6ef9e263390b48bd77bd",
+      "declarations": [
+        "Generative.ExplanatoryResiduals.cut_resume",
+        "Generative.ExplanatoryResiduals.execution_iff_completed_cut",
+        "Generative.ExplanatoryResiduals.partial_history_matches",
+        "Generative.ExplanatoryResiduals.resumption_after_inserted_history",
+        "Generative.ExplanatoryResiduals.same_preserves_resumption"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryResumptionCases.lean",
+      "role": "proof",
+      "sha256": "139eb664804cabc291d9c961a6a421c5307b2be6206d35d4200fae4ef15cda38",
+      "declarations": [
+        "Generative.ExplanatoryResumptionCases.same_start_reaches_distinct_residuals",
+        "Generative.ExplanatoryResumptionCases.exact_paused_accounts_retain_remaining_program",
+        "Generative.ExplanatoryResumptionCases.inserted_activity_can_disable_resumption",
+        "Generative.ExplanatoryResumptionCases.testing_before_formation_changes_results"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/explanatory-resumption-checks/20261008T183544.703004Z/receipt.json",
+      "role": "receipt",
+      "sha256": "48274e139ebf513fc435b9dc3433c04fc31aa9b032f5df951cb5d6e5881bc2cf",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/EXPLANATORY-JOINING-CONTEXTS-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "a78b40420146e1035b468b39f60faf9ac2a768db1df8f63adcdf4b13a3dee56f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Granularity.lean",
+      "role": "proof",
+      "sha256": "e249c3d2d6c14426148b24bd19ab2a2b7f2ecc52e2008a1ebd533ec73b6d3945",
+      "declarations": [
+        "Becoming.Recipe.Advance",
+        "Becoming.Recipe.unfolding",
+        "Becoming.Recipe.Leaves",
+        "Becoming.Recipe.Leaves.resume",
+        "Becoming.Recipe.leads_iff_leaves",
+        "Becoming.Recipe.Leaves.trace",
+        "Becoming.Recipe.Leaves.inserted",
+        "Becoming.Recipe.Leaves.alike",
+        "Becoming.Recipe.Leaves.same_of_em",
+        "Becoming.SameBranchingTests.leads_iff",
+        "Becoming.Recipe.Resumes.codes_apart",
+        "Becoming.Midway.testing_before_formation_changes_results",
+        "Becoming.Midway.same_start_distinct_remainders",
+        "Becoming.Midway.remainder_changes_continuation",
+        "Becoming.Midway.remainder_codes_apart",
+        "Becoming.Midway.inserted_can_disable_resumption",
+        "Becoming.Midway.inserted_changes_tests"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/explanatory-resumption-checks/20261015T180520.693095Z/receipt.json",
+      "role": "receipt",
+      "sha256": "df15fdd0d0495745206cdfd0381f2691187c9e13ad21bc5815c7ad9e118e82ba",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T222948.779875Z/verification.json",
+      "role": "receipt",
+      "sha256": "0a2bacf2db996d0f2da49b75bda0b985f74a5b6849be2b50ab6471033917d914",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryResumptionCases.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/explanatory-resumption-checks/20261015T180520.693095Z/receipt.json",
+      "sha256_pointer": "/modules/21/sha256",
+      "success_pointer": "/passed",
+      "success_value": true
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Granularity.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Granularity",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ]
+}

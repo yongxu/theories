@@ -1,0 +1,518 @@
+{
+  "schema_version": 1,
+  "id": "rest-with-refinement-counted",
+  "title": {
+    "en": "Refinement counted as a giving",
+    "zh": "细分算作给予"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "statement": {
+    "zh": "把单位的细分算作只给不取的形成，凡有所立之处，耗散与被围住就排除细分的给予，于是停息由固定单位的定理得出，同样不能被否证；生起不息需要开放，不算入细分的见证都由细分供给。",
+    "en": "Counted as a formation that only gives, the splitting of the unit is excluded by dissipation and enclosure wherever anything stands, so rest follows from the fixed-unit theorem, unrefutable as there; arising without end needs openness, and the witnesses that leave it uncounted are fed by it."
+  },
+  "claim": {
+    "zh": "让单位跨过第 t 步分为 split t + 1 个更细的单位：以更细的单位计，每个条件比此前多立 split t 乘其水平。把细分算作又一个形成（Flow.withRefinement、Web.withRefinement：它从不活跃，不要求、不汲取任何东西），它给每个条件 split t 乘其水平，什么也不取。于是在细分的单位下平衡（Flow.BalancesAt (split + 1)）恰是算入细分的流在脊柱意义下平衡（Flow.balancesAt_iff_withRefinement）。细分只给不取：算入它的流在一个家族上耗散，恰当流自身的形成在其上耗散并且细分什么也不给该家族（Flow.withRefinement_dissipatesOn_iff）；算入它而一步被围住并被耗散时，细分在那一步什么也不给任何条件（Flow.refinement_gives_nothing）。所以，在有普查、关系项都体现、在细分的单位下平衡的世界中，算入细分后耗散并且从 T 起每步被围住时，世界从某步起停息不能被否证，所以生起与止息都不复现（World.rests_unrefuted_refinement_counted）；生起不息时，算入细分后没有一步开始每步被围住的一段（World.arising_opens_refinement_counted）。前提就是脊柱的前提，只是读入了细分：不添任何前提。不算入细分，同样的结论在细分什么也不给之处成立：耗散、从 T 起每步被围住而细分从 T 起不给任何关系项时，世界从某步起停息不能被否证，所以生起与止息都不复现（World.rests_unrefuted_without_refinement，经 World.after 把世界从 T 起读，用脊柱的 World.rests_unrefuted_enclosed），生起不息需要开放或细分的给予（World.arising_needs_refinement）；从 T 起封闭、细分从 T 起不给该家族时取用不复现（Flow.taking_needs_refinement）；储备在细分的单位下只下降而细分不给它时，就是脊柱的储备，不被支持的形成活跃的步不多于其储备（Web.CarriesIn.lasts_unrefined）。见证：Emission、Alternation 与 Circulation 中，以及单位在任意晚的步细分时 Asymptote 中，细分在任意晚的步有所给予；Dwindle 中细分每步给予储备（refinement_feeds_witnesses）。它们的流在每个封闭家族上耗散，所以它们的生起、交换、取用与储备的延续都由细分供给。",
+    "en": "Let the unit split into split t + 1 finer units across the step from t: counted in the finer unit, each condition stands at split t times its level more than before. Count the refinement as one more formation (Flow.withRefinement, Web.withRefinement: never active, requiring and drawing on nothing), which gives each condition split t times its level and takes nothing. Then balance at the refining unit (Flow.BalancesAt (split + 1)) is exactly the spine's balance of the flow with the refinement counted (Flow.balancesAt_iff_withRefinement). The refinement gives without taking: with it counted, the flow dissipates on a family exactly where its own formations do and the refinement gives the family nothing (Flow.withRefinement_dissipatesOn_iff); across a step enclosed and dissipated on with it counted, the refinement gives no condition anything (Flow.refinement_gives_nothing). So in a world with a census and embodied relata, balanced at the refining unit and, with the refinement counted, dissipative and enclosed at every step from T on, that the world rests from some step on cannot be refuted, so neither arising nor ceasing recurs (World.rests_unrefuted_refinement_counted); where arising recurs, no step begins a stretch in which every step is enclosed with the refinement counted (World.arising_opens_refinement_counted). The premises are the spine's, read with the refinement counted: none is added. Without counting it, the same holds wherever the refinement gives nothing: dissipative and enclosed at every step from T on, with the refinement giving no relatum anything from T on, that the world rests from some step on cannot be refuted, so neither arising nor ceasing recurs (World.rests_unrefuted_without_refinement, reading the world from T on by World.after and using the spine's World.rests_unrefuted_enclosed), and arising without end needs openness or the refinement's giving (World.arising_needs_refinement); taking from a family closed from T on does not recur where the refinement gives it nothing from T on (Flow.taking_needs_refinement); a reserve that only falls in the refining unit, where the refinement gives it nothing, is the spine's reserve, an unsupported formation being active at most its reserve times (Web.CarriesIn.lasts_unrefined). The witnesses: in Emission, Alternation and Circulation, and in Asymptote where the unit splits at arbitrarily late steps, the refinement gives at arbitrarily late steps, and in Dwindle it gives the reserve at every step (refinement_feeds_witnesses). Their flows dissipate on every closed family, so what keeps them arising, exchanging, taking or lasting is what the refinement gives."
+  },
+  "hypotheses": [
+    {
+      "zh": "分辨率：单位跨过每一步分为 split t + 1 个更细的单位，只细分不变粗；每一步的量仍是该步单位的自然数。这是定理的假设，不是公理。",
+      "en": "Resolution: the unit splits into split t + 1 finer units across each step, refining and never coarsening; amounts at each step stay natural numbers of that step's unit. This is a hypothesis of the theorems, not an axiom."
+    },
+    {
+      "zh": "算入细分：把细分读作一个给予的形成，是一种读法，不是定理。依据 Ren 2026-10-11：“A is right - because of change, there is difference, therefore there are difference in its possibility in its becoming … so in the sense of becoming, the becoming into will have relational difference, or it won't be \"becoming\"”。读法（AI 的，依 Ren 的交托采用）：一个量是一个被做出的差异，更细的区分本身是一个生成，须有所给予。定理本身对两种读法都成立：Flow.balancesAt_iff_withRefinement 是恒等，不算入细分的规律也一并陈述。",
+      "en": "Counting the refinement: reading the refinement as a formation that gives is a reading, not a theorem. It follows Ren, 11 October 2026: ‘A is right - because of change, there is difference, therefore there are difference in its possibility in its becoming … so in the sense of becoming, the becoming into will have relational difference, or it won't be \"becoming\"’. A reading (the AI's, adopted on Ren's delegation): an amount is a difference made, so a finer distinction is itself a becoming that something must give. The theorems hold under either reading: Flow.balancesAt_iff_withRefinement is an identity, and the laws without counting the refinement are stated too."
+    },
+    {
+      "zh": "世界的前提：活动的普查、每个关系项都体现，与停息定理（continued-change-needs-openness）相同；算入细分后的耗散与被围住是脊柱的耗散与被围住，作用于算入细分的流。",
+      "en": "The world premises: a census of activity and every relatum embodied, as in the rest theorem (continued-change-needs-openness); dissipation and enclosure with the refinement counted are the spine's dissipation and enclosure, applied to the flow with the refinement counted."
+    }
+  ],
+  "correspondence": {
+    "zh": "单位固定时的停息定理（continued-change-needs-openness，World.rests_unrefuted_enclosed、World.arising_opens）是细分什么也不给的情形。rest-at-every-resolution 说明不算入细分时，单位的量子承载了停息：其余前提都满足而生起不息（Emission、Alternation）。本结果说明那些见证不是停息的反例，而是被围住而有源的世界：算入细分，细分只给不取，脊柱的耗散排除了这样的给予，所以不添前提，凡有所立之处，固定单位的停息定理与“生起不息需要开放”都适用。这回答 Ren 2026-10-11 的“for the case of 0, why can't we have it?”，AI 读作零前提的情形（Ren 已确认）。内容是读法，不是新的动力学：被围住的世界中，凡有所立之处，算入细分的耗散与被围住排除细分本身；细分在围住之内是一个源。",
+    "en": "The rest theorem at a fixed unit (continued-change-needs-openness, World.rests_unrefuted_enclosed, World.arising_opens) is the case where the refinement gives nothing. rest-at-every-resolution shows that, without counting the refinement, the unit's quantum carries rest: every other premise holds while arising never ceases (Emission, Alternation). This result shows those witnesses are not counterexamples to rest but enclosed worlds with a source: counted, the refinement gives without taking, which the spine's dissipation excludes, so, with no premise added, the fixed-unit rest theorem and ‘arising without end needs openness’ apply wherever anything stands. This answers Ren's ‘for the case of 0, why can't we have it?’ of 11 October 2026, read by the AI as the case of zero premises (Ren confirmed it). The content is the reading, not new dynamics: in an enclosed world, wherever something stands, dissipation and enclosure with the refinement counted exclude the refinement itself; inside an enclosure the refinement is a source."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean",
+  "aliases": [
+    "Becoming.Flow.withRefinement",
+    "Becoming.Web.withRefinement",
+    "Becoming.Flow.balancesAt_iff_withRefinement",
+    "Becoming.Flow.withRefinement_dissipatesOn_iff",
+    "Becoming.Flow.refinement_gives_nothing",
+    "Becoming.Flow.taking_needs_refinement",
+    "Becoming.World.after",
+    "Becoming.World.rests_unrefuted_without_refinement",
+    "Becoming.World.rests_unrefuted_refinement_counted",
+    "Becoming.World.arising_opens_refinement_counted",
+    "Becoming.World.arising_needs_refinement",
+    "Becoming.Web.CarriesIn.lasts_unrefined",
+    "Becoming.refinement_feeds_witnesses"
+  ],
+  "dependencies": [
+    {
+      "id": "continued-change-needs-openness",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "World.rests_unrefuted_without_refinement 与 World.rests_unrefuted_refinement_counted 把世界从 T 起读（World.after），对它应用脊柱的停息定理 World.rests_unrefuted_enclosed；World.arising_opens 是细分什么也不给时的情形。",
+        "en": "World.rests_unrefuted_without_refinement and World.rests_unrefuted_refinement_counted read the world from T on (World.after) and apply the spine's rest theorem World.rests_unrefuted_enclosed to it; World.arising_opens is the case where the refinement gives nothing."
+      },
+      "interface": {
+        "output": {
+          "zh": "有普查、关系项都体现、平衡、耗散且从某步起每步被围住的世界中，生起与止息都不复现。",
+          "en": "In a world with a census, embodied relata, balanced, dissipative and enclosed at every step from some step on, neither arising nor ceasing recurs."
+        },
+        "input": {
+          "zh": "细分从 T 起不给任何关系项时，从 T 起读的世界平衡（World.after_balanced）、耗散、被围住，并有普查与体现。",
+          "en": "Where the refinement gives no relatum anything from T on, the world read from T on is balanced (World.after_balanced), dissipative and enclosed, with a census and embodiment."
+        },
+        "conditions": {
+          "zh": "活动的普查；关系项都体现；在细分的单位下平衡；从 T 起耗散并被围住；细分从 T 起什么也不给。",
+          "en": "A census of activity; embodied relata; balance at the refining unit; dissipative and enclosed from T on; the refinement giving nothing from T on."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean"
+      }
+    },
+    {
+      "id": "rest-at-every-resolution",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用细分单位下的平衡（Flow.BalancesAt、Flow.BalancesAt.lowers）、量子的计数（losses_bound、bounded_not_recurring）、乘法的重组（add_mul_split）与见证（Emission、Alternation、Circulation、Asymptote、Dwindle 及其平衡、耗散、封闭与复现的定理）。",
+        "en": "Reuses balance at a refining unit (Flow.BalancesAt, Flow.BalancesAt.lowers), the counting of quanta (losses_bound, bounded_not_recurring), the regrouping of products (add_mul_split) and the witnesses (Emission, Alternation, Circulation, Asymptote, Dwindle and their theorems of balance, dissipation, closure and recurrence)."
+      },
+      "interface": {
+        "output": {
+          "zh": "在细分的单位下平衡且被耗散时，家族的存量连同取用者不多于 r t 乘此前的存量；每步 q 乘余下的连同 k 个量子不多于 q 乘此前时，量子之和有界；见证在其单位下平衡、耗散，生起、交换或取用复现。",
+          "en": "Balanced at a refining unit and dissipated on, the family's stock with its takers is within r t times the stock before; where each step q times what remains with k quanta is within q times what was there, the quanta are bounded; the witnesses balance at their units, dissipate, and arise, exchange or take at arbitrarily late steps."
+        },
+        "input": {
+          "zh": "细分什么也不给时，r t 乘存量就是存量，每个取用的步失去一个单位。",
+          "en": "Where the refinement gives nothing, r t times the stock is the stock, and every taking step loses one unit."
+        },
+        "conditions": {
+          "zh": "在 split + 1 的单位下平衡；耗散；封闭的不重复家族。",
+          "en": "Balance at the unit split + 1; dissipation; a closed family without repetition."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "theory-of-becoming-foundation",
+      "detail": {
+        "zh": "统一计划 R4：表示的范围之一，量的单位，按 Ren 2026-10-11 的选择以零前提的形式陈述；这不是无公理的整体演绎。",
+        "en": "Unification plan R4: one dimension of the representation's scope, the unit of amounts, stated in its zero-premise form following Ren's choice of 11 October 2026; this is not the deduction of the whole without axioms."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean",
+      "detail": {
+        "zh": "不算入细分时的边界：Emission 与 Alternation 有普查、关系项都体现、在减半的单位下平衡、耗散、每步被围住，生起不息（rest-at-every-resolution）；由本结果，细分在任意晚的步给予它们（refinement_feeds_witnesses），所以没有零前提的停息定理的反例。算入细分时它们在被围住之处不耗散：细分是一个源。",
+        "en": "The boundary without counting the refinement: Emission and Alternation have a census, embodied relata, balance at a halving unit, dissipation and every step enclosed, and arise without end (rest-at-every-resolution); by this result the refinement gives to them at arbitrarily late steps (refinement_feeds_witnesses), so neither is a counterexample to rest with the refinement counted. Counted, they do not dissipate where enclosed: the refinement is a source."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean",
+      "detail": {
+        "zh": "Asymptote 与 Circulation：封闭的池在任意晚的步被取用，细分在任意晚的步给予这个池（Flow.taking_needs_refinement、refinement_feeds_witnesses）；Dwindle：储备在更细单位下每步下降而永不到零，细分每步给予它（Web.CarriesIn.lasts_unrefined、refinement_feeds_witnesses）。",
+        "en": "Asymptote and Circulation: the closed pool is taken from at arbitrarily late steps, and the refinement gives to it at arbitrarily late steps (Flow.taking_needs_refinement, refinement_feeds_witnesses); Dwindle: the reserve falls in the finer unit at each step without reaching zero, and the refinement gives to it at every step (Web.CarriesIn.lasts_unrefined, refinement_feeds_witnesses)."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "离散步；单位只细分不变粗，量是细分后的有理数，不含实数量与连续时间；算入细分是一种读法（Ren 的方向，AI 的展开依 Ren 的交托采用），不是推出的；算入细分的流以 Option 为形成，不是同一种关系项的世界，所以停息经从 T 起读的世界由脊柱的定理得出，而不是对算入细分的世界直接应用；“不复现”是复现的否定，不是某步之后不再发生；“the case of 0”指零前提，Ren 已确认；不添前提指不在脊柱的前提上添加，脊柱的耗散（Ren 读作熵的每次交换的最小损失）仍是脊柱的前提；不含伦理谓词；尚无独立审查。",
+    "en": "Discrete steps; the unit refines and never coarsens, amounts being rationals by refinement, with neither real amounts nor continuous time; counting the refinement is a reading (Ren's direction, the AI's elaboration adopted on Ren's delegation), not derived; the flow with the refinement counted has Option formations and is not a world of one kind of relatum, so rest follows from the spine's theorem through the world read from T on, not by applying it to a counted world directly; ‘does not recur’ is a negated recurrence, not a step after which nothing happens; ‘the case of 0’ means zero premises, as Ren confirmed; no premise added means none added to the spine's, whose dissipation (the least loss per exchange, which Ren reads as entropy) stays its premise; no ethical predicate; not yet independently reviewed."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Resolution 的 261 项声明全部空依赖，其中本结果的 29 项（先在暂存树中以已提交的核心源从前导编译，逐条 #print axioms）；同一回执覆盖包内 75 个模块，核心闭包 77 个模块，全部源声明的公理报告为空，并核对核心只用 Lean 内置前导即可编译，外围回执 20261013T095049.338744Z 通过。尚无独立审查；作者反审见整合文档 §59.4。",
+    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 261 declarations of Becoming.Resolution all have empty axiom reports, 29 of them this result's (first compiled from the prelude in a scratch tree against the committed core sources, each checked with #print axioms); the same receipt covers the package's 75 modules over a core closure of 77, every source declaration with an empty axiom report, and checks that the core compiles from Lean's prelude alone; periphery receipt 20261013T095049.338744Z passed. Not yet independently reviewed; the author's counterreview is in section 59.4 of the integration note."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "role": "proof",
+      "sha256": "cb019033b8e58f42661a7584a552d646034cbe007e9c7a70545087f37cdea9cb",
+      "declarations": [
+        "Becoming.World.Embodied",
+        "Becoming.World.Balanced",
+        "Becoming.World.Dissipative",
+        "Becoming.World.Counted",
+        "Becoming.World.rests_unrefuted_enclosed"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean",
+      "role": "proof",
+      "sha256": "61a9fbb7c3624f887afd09df8c43b59a5ec08209811b3e1b9f20e7efa1e20fbb",
+      "declarations": [
+        "Becoming.total_map_some",
+        "Becoming.mem_map_some",
+        "Becoming.of_mem_map_some",
+        "Becoming.refine_eq",
+        "Becoming.Flow.withRefinement",
+        "Becoming.Web.withRefinement",
+        "Becoming.Flow.withRefinement_taken",
+        "Becoming.Flow.withRefinement_given",
+        "Becoming.Flow.balancesAt_iff_withRefinement",
+        "Becoming.Flow.withRefinement_dissipatesOn_iff",
+        "Becoming.Flow.ClosedAt.of_withRefinement",
+        "Becoming.Flow.ClosedAt.withRefinement",
+        "Becoming.Flow.Enclosed.of_withRefinement",
+        "Becoming.Flow.refinement_gives_nothing",
+        "Becoming.Flow.taking_needs_refinement",
+        "Becoming.World.after",
+        "Becoming.World.after_counted",
+        "Becoming.World.after_embodied",
+        "Becoming.World.after_balanced",
+        "Becoming.World.after_dissipative",
+        "Becoming.World.after_enclosed",
+        "Becoming.World.after_recurs",
+        "Becoming.World.rests_unrefuted_of_after",
+        "Becoming.World.restsFrom_of_after",
+        "Becoming.World.rests_unrefuted_without_refinement",
+        "Becoming.World.rests_unrefuted_refinement_counted",
+        "Becoming.World.arising_opens_refinement_counted",
+        "Becoming.World.arising_needs_refinement",
+        "Becoming.Web.CarriesIn.lasts_unrefined",
+        "Becoming.refinement_feeds_witnesses"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Openness.lean",
+      "role": "proof",
+      "sha256": "efd4fd7b52df1fff29f8c723d29a7b559722c42483c470e03a11b819c11311b8",
+      "declarations": [
+        "Becoming.World.arising_opens"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "role": "proof",
+      "sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79",
+      "declarations": [
+        "Becoming.Flow.DissipatesOn",
+        "Becoming.Flow.Dissipative",
+        "Becoming.Flow.ClosedAt",
+        "Becoming.Flow.Enclosed"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "role": "proof",
+      "sha256": "92c981ec6c3733f771b30b5a24469d873605383e69675114e1c55055867a31e8",
+      "declarations": [
+        "Becoming.Flow.Balances",
+        "Becoming.Flow.taken",
+        "Becoming.Flow.given",
+        "Becoming.total_mul",
+        "Becoming.le_total_of_mem",
+        "Becoming.eq_zero_of_not_pos"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean",
+      "role": "proof",
+      "sha256": "52d6f776af632644641e01b34bc1e35a64f4c6e37cdf3415fe1d086751ae1728",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
+      "role": "proof",
+      "sha256": "37ea240db6a087b659d81b65e3264935c6f666025ede8c8bf633ff1c3fb6be35",
+      "declarations": [
+        "Becoming.World.ArisingRecurs",
+        "Becoming.World.CeasingRecurs"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean",
+      "role": "proof",
+      "sha256": "9d05b714c28d3497235330e5d5fb4221415ea3ae25ec32d730425299b5479428",
+      "declarations": [
+        "Becoming.World"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "role": "receipt",
+      "sha256": "48fd7efd02436ec3e2dfd904771bdf1a44f18edaeb55fcc23256e24523a59d19",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md",
+      "role": "integration",
+      "sha256": "39481677948c2c7701b1fd6b9c942dabc0003e06f66fc83b9f85912566f87593",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-11-difference-in-becoming.md",
+      "role": "provenance",
+      "sha256": "efaac8a8ad4deb0ee327f28decda8cf886b66afaeb399bb323b766d1497c5c56",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json",
+      "role": "receipt",
+      "sha256": "c5e118f377ae815cdb1d8afb02bbc5e3fb7ee519d45ab85f12a834fc467e8f0a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T073902.295130Z/verification.json",
+      "role": "receipt",
+      "sha256": "790a8973dbabe58f9bc5f4c27d39589c8827b6fab3fe08a8d342f6ef02bca4a8",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "role": "receipt",
+      "sha256": "276674770ba470537ab6d2f4ea06c15418b4f22b325b4a634ac7cdc8fd9b95d1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "role": "receipt",
+      "sha256": "e308626a3bfd5618e8279b5167ad81be01de5b97e4981a617ac1acd31fa7686b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "role": "receipt",
+      "sha256": "8aec0bc8a1531907a80ec2d51c849088cdd1ffaf368e16f4d95a8513d56494a5",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Resolution",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Openness.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Openness",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Dissipation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Flow",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Premises",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Space",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.World",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.InAmounts",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "每次交换的最小损失（熵）能否推出而不作前提（entropy-history-and-record 把它分解为第一律加守恒量中的记录）；把细分作为普查中的关系项，使算入细分的流本身是一个世界；储备与细分作为同一流的读法；连续时间与实数量（外围）；独立审查。",
+    "en": "Whether the least loss per exchange (entropy) can be derived rather than supplied (entropy-history-and-record decomposes it as the first law plus a record in the conserved amount); the refinement as a relatum in the census, so that the counted flow is itself a world; the reserve and the refinement read as one flow; continuous time and real amounts (periphery); an independent review."
+  },
+  "history": [
+    {
+      "zh": "2026-10-11：作为统一计划 R4 新增，按 Ren“A is right … But for the case of 0, why can't we have it? … I feel there should be some elegant ways to solve it”（sources/15-codex-theory-conversations/2026-10-11-difference-in-becoming.md）；见整合文档 §59.4。",
+      "en": "2026-10-11: added as R4 of the unification plan, following Ren's ‘A is right … But for the case of 0, why can't we have it? … I feel there should be some elegant ways to solve it’ (sources/15-codex-theory-conversations/2026-10-11-difference-in-becoming.md); see section 59.4 of the integration note."
+    },
+    {
+      "zh": "2026-10-11：Ren 确认“the case of 0”指零前提（“pure thermodynamics, at atomic level, each exchange between objects holds the conservation of energy, but entropy still rise. zero premises. but for if \"lossless exist\", can we find a path, to figure out, and prove along the way? i think another session is working on this already”，sources/15-codex-theory-conversations/2026-10-11-difference-in-becoming.md）；边界与下一步相应更新，定理与证明不变；见整合文档 §59.4。",
+      "en": "2026-10-11: Ren confirmed that ‘the case of 0’ means zero premises (‘pure thermodynamics, at atomic level, each exchange between objects holds the conservation of energy, but entropy still rise. zero premises. but for if \"lossless exist\", can we find a path, to figure out, and prove along the way? i think another session is working on this already’, sources/15-codex-theory-conversations/2026-10-11-difference-in-becoming.md); the boundary and next step updated accordingly, the theorems and proofs unchanged; see section 59.4 of the integration note."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13 P93：核读主干新增的登记修订段落及形式模块行；删除这两处新增后此前全文字节一致，本条既有主张和冻结证据未改变。",
+      "en": "13 October 2026, P93: reviewed the added registration-revision paragraph and formal-module row; removing only those additions restores every earlier byte. This record’s claim and frozen evidence are unchanged."
+    },
+    {
+      "zh": "P103 共享章对应复核：核对 P104/P105 已检模块的两行导航及 P93/P99/P103 接续说明；旧章除这些可定位增量外逐字保留，本成果证明和主张未改。",
+      "en": "P103 shared-chapter review: two navigation rows for checked P104/P105 modules and the P93/P99/P103 continuation notes are reconciled; all other prior chapter bytes, this result’s proof and claim remain unchanged."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“细分是一种给予：把单位的细分算作只给不取的形成，脊柱的前提不添任何前提就带来每一分辨率下的静止，生起不息需要开放；不算入细分的见证都由它供给”整合者随后把短标题由“细分作为给予”改为“细分算作给予”，使其更准确地指称该成果。",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “Refinement gives: with the splitting of the unit counted as a formation that gives without taking, the spine's premises bring rest at every resolution with no premise added, and arising without end needs openness; the witnesses that leave it uncounted are fed by it” The integrator then adjusted the short title from “Refinement as a giving” to “Refinement counted as a giving” to name the result more exactly."
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；统一计划只在 §10 的 P36 对照表后加入 2026-10-14 的对照表；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): the study only adds section 112 (general laws and renames) and its paragraph in the English summary; the unification plan only adds the 14 October 2026 rename table after the P36 table in section 10; chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026-10-16 P110（依 Ren 2026-10-15 的交托决定的读法，研究 §147，DELEGATED-CHOICES D38）：此前留给 Ren 的读法与名称按所列决定改为采用或不采用，要求 Ren 判断这些读法的下一步已删去。陈述、证明与绑定不变；Ren 可改其中任何一项决定。",
+      "en": "16 October 2026, P110 (readings decided on Ren's delegation of 15 October 2026, study section 147, DELEGATED-CHOICES D38): readings and names formerly left to Ren are adopted or declined as those decisions say, and next steps asking for Ren's judgment on them are removed. Statements, proofs and bindings unchanged; Ren can reverse any of the decisions."
+    },
+    {
+      "en": "17 October 2026, source reconciliation after relabelling (Ren's 17 October directive: earlier words are provenance, not authority): THE-THEORY-OF-BECOMING.md now uses the current vocabulary (living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I, section 6 retitled), with delegation and process markers removed and every earlier anchor kept. The integrator compared the change and found relabelling only; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "19 October 2026, A4 (Ren 19 October: \"integrate all, the theory is a whole, not stitched pieces, go ahead\"): The rest family's Chinese term in the live Chinese fields is now 停息 (11 uses), as in the chapter (DELEGATED-CHOICES D45 (4)); the English is unchanged. The claim is unchanged.",
+      "zh": "2026年10月19日，A4（Ren 10月19日的回答：“integrate all, the theory is a whole, not stitched pieces, go ahead”）：中文字段中停息家族的用语由“静止”改为“停息”（11 处），与理论章一致（DELEGATED-CHOICES D45 (4)）；英文不变。论断不变。"
+    },
+    {
+      "en": "19 October 2026, R22 (the names of the nineteenth review): BECOMING-UNIFICATION-PLAN.md re-pointed. Since the reviewed hash, the cited files changed only where R22 renamed: BECOMING-UNIFICATION-PLAN.md, names only (nineteenth review N1, N2; table in development/r22-names/RENAME-TABLE.json). Read before re-pointing. The claim is unchanged.",
+      "zh": "2026年10月19日，R22（第十九次审查的名称）：BECOMING-UNIFICATION-PLAN.md 重新指向。自所审哈希以来，所引文件只在 R22 改名之处改动：BECOMING-UNIFICATION-PLAN.md，只改名称（第十九次审查 N1、N2；对照表见 development/r22-names/RENAME-TABLE.json）。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Dissipation.lean, Flow.lean, Premises.lean, Space.lean, World.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Dissipation.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Flow.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Premises.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Space.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; World.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Dissipation.lean、Flow.lean、Premises.lean、Space.lean、World.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Dissipation.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Flow.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Premises.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Space.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；World.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Openness.lean, Resolution.lean, Space.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Openness.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Resolution.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Space.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：证明绑定（Openness.lean、Resolution.lean、Space.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 223 节；Openness.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；Resolution.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；Space.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；THE-THEORY-OF-BECOMING.md，§9（回执、计数、不再计入重述的连通性度量）随 R32。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 67 bookkeeping notes condensed from 2026-10-11 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/2c4e25c65938732a/rest-with-refinement-counted.json and in git.",
+      "zh": "2026-10-20：67 条记账性说明合并（2026-10-11 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/2c4e25c65938732a/rest-with-refinement-counted.json 和 git 中。"
+    },
+    {
+      "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Embodied, World.Balanced, World.Dissipative to Becoming.InAmounts; World.Counted to Becoming.InAmounts; World.rests_unrefuted_enclosed to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
+      "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.Embodied, World.Balanced, World.Dissipative to Becoming.InAmounts；World.Counted to Becoming.InAmounts；World.rests_unrefuted_enclosed to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): 'the author's reading', 'read by the author' and 'the author's elaboration', the author being the AI, now say so (a reading, the AI's; read by the AI; the AI's elaboration); the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：“作者的读法”“作者读作”“作者的展开”中的作者是 AI，今明写（读法，AI 的；AI 读作；AI 的展开）；主张不变。"
+    }
+  ]
+}

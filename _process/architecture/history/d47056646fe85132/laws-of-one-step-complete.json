@@ -1,0 +1,661 @@
+{
+  "schema_version": 1,
+  "id": "laws-of-one-step-complete",
+  "title": {
+    "zh": "一步规律的完备性",
+    "en": "Completeness of the laws of one step"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "statement": {
+    "zh": "一步的规律就是一步的全部规律：在家族上的每个假设之下（无、被平衡、耗减、封闭或二者）与跨运行，一个模式（含给予者）恰在服从该假设的规律时由某个世界显示；容量添一条规律，活动不添。",
+    "en": "The laws of one step are all the laws of one step: under each hypothesis on the family (none, balanced on, running down, closed, or both) and across runs, a pattern, its givers included, is shown by some world exactly where it obeys that hypothesis's law; capacity adds one law and activity none."
+  },
+  "claim": {
+    "zh": "一步在一个条件处所显示的是它的通过（Passage、Flow.passage）：步前与步后的层级，以及参与者从它取用与给它的总量。一步在一个家族上显示一个模式（Flow.Realizes），即其成员的通过依次排列、取用者的个数（Flow.takers）以及是否有参与者交换（Flow.ExchangesAt）。每一步都服从每步之律（Flow.Realizes.every）：凡有所取，取用者至少一个且至多所取之量，凡有所取或所给，就有交换。一个模式恰在服从每步之律时，由某个世界跨某步在某个家族上显示，每个参与者列出一次（OneStep.every_iff）；在被平衡的家族上，恰在每个通过还各自平衡时（OneStep.balance_iff）；在耗减的家族上，恰在总量下降至少取用者之数时（OneStep.runsDown_iff）；在跨此步封闭的家族上，恰在除非对家族有取或给否则无交换时（OneStep.closed_iff）；两个假设都有时，恰在两条律都成立时（OneStep.runsDownClosed_iff）。不论取用者之数，一个家族的通过恰在平衡且凡有所取总量至少降一时能够耗减（OneStep.runsDown_passages_iff）。所以模式的一个性质在假设成立的每一步成立，恰在它对服从该假设之律的每个模式成立时（OneStep.laws），这是 counting_laws 的对应。跨一个家族的每一步，只多一条律：通过前后相接，每步之后所立就是下一步之前所立（OneStep.Chained）；一串模式恰在通过相接且每步服从该假设之律时由某个世界显示（OneStep.run_every_iff、OneStep.run_balance_iff、OneStep.run_runsDown_iff、OneStep.run_closed_iff、OneStep.run_runsDownClosed_iff；OneStep.run_laws），这是 tally_iff_counted 的对应。一个见证世界服务每个模式（OneStep.Witness，经 World.ofRoles 读成脊柱的世界）。把给予者加入模式：给予家族的东西有给予它的关系项，有所给之处给予者至少一个，至多为所给之数（Flow.sign_replenishment_le_renewers、Flow.renewers_le_replenishment、OneStep.Givers）；在无假设、平衡与封闭之下这就是全部新规律，耗减恰再加每个给予者都取，给予者不多于取用者（Flow.DissipatesOn.renewers_le_takers；OneStep.every_givers_iff、OneStep.balance_givers_iff、OneStep.closed_givers_iff、OneStep.runsDown_givers_iff、OneStep.runsDownClosed_givers_iff、OneStep.laws_givers）。该步的容量恰添所给不超过容量乘给予者数（Flow.CapacityAt.replenishment_le；OneStep.every_capacity_iff 及其四个同伴）；该步只有活跃者给予、只从所汲取者取，不添一步所显示的规律（OneStep.every_active_iff 及其四个同伴）。带给予者的一个家族上的运行：经过彼此相接，每步遵守带给予者的规律（OneStep.run_every_givers_iff 及其四个同伴）。不加前提。",
+    "en": "What the step from t shows of a condition is its passage (Passage, Flow.passage): its level before and after, and what the relata taking part take from it and give to it. A step shows a pattern on a family (Flow.Realizes): the passages of its members in order, how many relata take from it (Flow.takers), and whether something taking part exchanges (Flow.ExchangesAt). Every step obeys the law of every step (Flow.Realizes.every): where anything is taken from a family, the relata taking are at least one and at most what is taken, and where anything is taken or given something exchanges. A pattern is shown by some world across some step on some family, listing each relatum taking part once, exactly when it obeys the law of every step (OneStep.every_iff); on a family balanced on, exactly when each passage also balances (OneStep.balance_iff); on a family running down, exactly when moreover the total falls by at least the relata taking (OneStep.runsDown_iff); on a family closed across the step, exactly when moreover nothing exchanges unless something is taken from or given to the family (OneStep.closed_iff); with both hypotheses, with both laws (OneStep.runsDownClosed_iff). Whatever the count, a family's passages can run down exactly when they balance and the total falls by one wherever anything is taken (OneStep.runsDown_passages_iff). So a property of patterns holds of every step where a hypothesis holds exactly when it holds of every pattern obeying that hypothesis's law (OneStep.laws), the counterpart of counting_laws. Across every step of one family there is one more law: the passages follow one another, what stands after each step being what stands before the next (OneStep.Chained); a run of patterns is shown by some world exactly when its passages follow one another and each step obeys the hypothesis's law (OneStep.run_every_iff, OneStep.run_balance_iff, OneStep.run_runsDown_iff, OneStep.run_closed_iff, OneStep.run_runsDownClosed_iff; OneStep.run_laws), the counterpart of tally_iff_counted. One witness world serves every pattern (OneStep.Witness, read as a world of the spine through World.ofRoles). With the givers in the pattern: something given to a family has a relatum giving it, the givers numbering at least one wherever anything is given and at most what is given (Flow.sign_replenishment_le_renewers, Flow.renewers_le_replenishment, OneStep.Givers); that is the whole new law under no hypothesis, balance and closure, and running down adds exactly that every giver takes, the givers at most the takers (Flow.DissipatesOn.renewers_le_takers; OneStep.every_givers_iff, OneStep.balance_givers_iff, OneStep.closed_givers_iff, OneStep.runsDown_givers_iff, OneStep.runsDownClosed_givers_iff, OneStep.laws_givers). Capacity at the step adds exactly that what is given is at most capacity times the givers (Flow.CapacityAt.replenishment_le; OneStep.every_capacity_iff and its four companions); only active relata giving and taking only from what is drawn on, at the step, add no law that one step shows (OneStep.every_active_iff and its four companions). Runs on one family with givers: the passages follow one another and each step obeys its law with givers (OneStep.run_every_givers_iff and its four companions). No premise."
+  },
+  "hypotheses": [
+    {
+      "zh": "不加前提：每个刻画都是双向的，对每个模式成立；见证世界每个参与者列出一次。",
+      "en": "No premise: each characterization is two-way and holds for every pattern; the witness world lists each relatum taking part once."
+    },
+    {
+      "zh": "运行只在跨每一步固定的一个家族上刻画；逐步选择家族的情形（Locality 的 RunsDown 所允许的）没有刻画。",
+      "en": "Runs are characterized on one family fixed across every step; families chosen step by step, as Locality's RunsDown allows, are not characterized."
+    }
+  ],
+  "correspondence": {
+    "zh": "P79（工作板），按 Ren 2026-10-12 的“move towards 100%”：强意义上的完备，即一类规律是该类的全部规律，此前只对计数成立（tally_iff_counted，P34）；这里对 Locality（P48）的一步之律给出。读法（AI 的，依 Ren 的交托采用）：加上下面两条遗漏之律后，一步之律就是全部；跨运行唯一多出的律是所立的连续。见整合文档 §103。",
+    "en": "P79 (work board), following Ren's “move towards 100%” of 12 October 2026: completeness in the strong sense, the laws of a kind being all its laws, held before for counting only (tally_iff_counted, P34); here for Locality's (P48) laws of one step. Reading (the AI's, adopted on Ren's delegation): with the two missing laws below added, the laws of one step are all of them; across runs the only further law is the continuity of what stands. See the integration document §103."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
+  "aliases": [
+    "Becoming.Passage",
+    "Becoming.Flow.passage",
+    "Becoming.Flow.Realizes",
+    "Becoming.OneStep.every_iff",
+    "Becoming.OneStep.balance_iff",
+    "Becoming.OneStep.runsDown_iff",
+    "Becoming.OneStep.closed_iff",
+    "Becoming.OneStep.runsDown_passages_iff",
+    "Becoming.OneStep.laws",
+    "Becoming.OneStep.Chained",
+    "Becoming.OneStep.run_every_iff",
+    "OneStep.Witness",
+    "laws of one step complete",
+    "一步之律完备",
+    "passage",
+    "通过",
+    "Becoming.OneStep.Givers",
+    "Becoming.Flow.sign_replenishment_le_renewers",
+    "Becoming.Flow.renewers_le_replenishment",
+    "Becoming.Flow.DissipatesOn.renewers_le_takers",
+    "Becoming.Flow.CapacityAt",
+    "Becoming.Flow.ActingAt",
+    "Becoming.Flow.TakingAt",
+    "Becoming.OneStep.every_givers_iff",
+    "Becoming.OneStep.runsDown_givers_iff",
+    "Becoming.OneStep.every_capacity_iff",
+    "Becoming.OneStep.every_active_iff",
+    "Becoming.OneStep.laws_givers",
+    "Becoming.OneStep.run_every_givers_iff",
+    "givers",
+    "给予者"
+  ],
+  "dependencies": [
+    {
+      "id": "laws-of-one-step",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用 Locality 的 BalancesOn、RunsDownOn、ClosedAt 与所陈述的一步之律；这里证明它们（加两条）是全部。",
+        "en": "Reuses Locality's BalancesOn, RunsDownOn, ClosedAt and the stated laws of one step; here they are proved, with two more, to be all."
+      },
+      "interface": {
+        "output": {
+          "zh": "一步之律。",
+          "en": "The laws of one step."
+        },
+        "input": {
+          "zh": "一步之律的完备性。",
+          "en": "The completeness of the laws of one step."
+        },
+        "conditions": {
+          "zh": "无。",
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean"
+      }
+    },
+    {
+      "id": "whole-law-of-counting",
+      "relation": "interpretive",
+      "detail": {
+        "zh": "计数的全部规律（tally_iff_counted、counting_laws）的对应：同样以精确刻画与见证世界回答。",
+        "en": "The counterpart of the whole law of counting (tally_iff_counted, counting_laws): answered the same way, by an exact characterization and a witness world."
+      },
+      "interface": {
+        "output": {
+          "zh": "计数完备的方法。",
+          "en": "The method of completeness for counting."
+        },
+        "input": {
+          "zh": "一步之律的完备。",
+          "en": "Completeness of the laws of one step."
+        },
+        "conditions": {
+          "zh": "无。",
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "one-step-missing-laws",
+      "detail": {
+        "zh": "同一模块中所发现的两条遗漏之律。",
+        "en": "The two missing laws found in the same module."
+      }
+    },
+    {
+      "id": "runs-on-families-chosen-step-by-step",
+      "detail": {
+        "zh": "逐步选定家族的运行在另一记录中。",
+        "en": "Runs on families chosen step by step are in the other record."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
+      "detail": {
+        "zh": "所陈述的律允许而没有世界显示的模式（OneStep.stated_not_realized、OneStep.standing_bound_needed）。",
+        "en": "Patterns the stated laws allow and no world shows (OneStep.stated_not_realized, OneStep.standing_bound_needed)."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "计数活跃的关系项、或参与而不交换的关系项不在模式中（需要活动可判定）；容量与活动只在一步上陈述，不在运行上；读法是 AI 的，依 Ren 的交托采用；不含伦理谓词。",
+    "en": "Counting active relata, or relata taking part without exchanging, is not in the pattern (it would need activity decided); capacity and activity are stated at one step, not over runs; the readings are the AI's, adopted on Ren's delegation; no ethical predicate occurs."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.OneStep 的 311 项定理全部空依赖，其中含 Passage、Flow.passage、Flow.Realizes、OneStep.every_iff、OneStep.balance_iff、OneStep.runsDown_iff、OneStep.closed_iff、OneStep.runsDown_passages_iff、OneStep.laws、OneStep.Chained、OneStep.run_every_iff、OneStep.Givers、Flow.sign_replenishment_le_renewers、Flow.renewers_le_replenishment、Flow.DissipatesOn.renewers_le_takers、Flow.CapacityAt、Flow.ActingAt、Flow.TakingAt、OneStep.every_givers_iff、OneStep.runsDown_givers_iff、OneStep.every_capacity_iff、OneStep.every_active_iff、OneStep.laws_givers与 OneStep.run_every_givers_iff；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §103；尚无独立审查。",
+    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 311 theorems of Becoming.OneStep all have empty axiom reports, among them Passage, Flow.passage, Flow.Realizes, OneStep.every_iff, OneStep.balance_iff, OneStep.runsDown_iff, OneStep.closed_iff, OneStep.runsDown_passages_iff, OneStep.laws, OneStep.Chained, OneStep.run_every_iff, OneStep.Givers, Flow.sign_replenishment_le_renewers, Flow.renewers_le_replenishment, Flow.DissipatesOn.renewers_le_takers, Flow.CapacityAt, Flow.ActingAt, Flow.TakingAt, OneStep.every_givers_iff, OneStep.runsDown_givers_iff, OneStep.every_capacity_iff, OneStep.every_active_iff, OneStep.laws_givers and OneStep.run_every_givers_iff. The same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §103 of the integration note; there is no independent review yet."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
+      "role": "proof",
+      "sha256": "a3573dad850874daa486c38d69f7ae02201572aac6f019785653bfdc45a4f10a",
+      "declarations": [
+        "Becoming.steps_succ_map",
+        "Becoming.sign_eq_one",
+        "Becoming.sign_total_le",
+        "Becoming.pos_of_sign_le",
+        "Becoming.Passage",
+        "Becoming.Passage.idle",
+        "Becoming.Passage.held",
+        "Becoming.Passage.Balanced",
+        "Becoming.Passage.ext_of",
+        "Becoming.Passage.Balanced.given_pos",
+        "Becoming.Passage.Balanced.taken_pos",
+        "Becoming.Passage.balanced_total",
+        "Becoming.Flow.passage",
+        "Becoming.Flow.ExchangesAt",
+        "Becoming.Flow.Realizes",
+        "Becoming.Flow.sign_uptake_le_takers",
+        "Becoming.Flow.exchangesAt_of_uptake",
+        "Becoming.Flow.exchangesAt_of_replenishment",
+        "Becoming.Flow.BalancesOn.taken_le",
+        "Becoming.Flow.ExchangesAt.closed",
+        "Becoming.Flow.RunsDownOn.taken_iff",
+        "Becoming.Flow.Realizes.total_eq",
+        "Becoming.Flow.Realizes.uptake",
+        "Becoming.Flow.Realizes.replenishment",
+        "Becoming.Flow.Realizes.stock_before",
+        "Becoming.Flow.Realizes.stock_after",
+        "Becoming.Flow.Realizes.member",
+        "Becoming.OneStep.Every",
+        "Becoming.OneStep.Balance",
+        "Becoming.OneStep.RunsDown",
+        "Becoming.OneStep.Closed",
+        "Becoming.OneStep.RunsDownClosed",
+        "Becoming.OneStep.fall_iff_given",
+        "Becoming.Flow.Realizes.every",
+        "Becoming.Flow.Realizes.balance",
+        "Becoming.Flow.Realizes.runsDown",
+        "Becoming.Flow.Realizes.closed",
+        "Becoming.Flow.Realizes.runsDownClosed",
+        "Becoming.Flow.roles_passage",
+        "Becoming.Flow.roles_exchangesAt",
+        "Becoming.Flow.Realizes.roles",
+        "Becoming.Flow.BalancesOn.roles",
+        "Becoming.Flow.DissipatesOn.roles",
+        "Becoming.Flow.RunsDownOn.roles",
+        "Becoming.Flow.ClosedAt.roles",
+        "Becoming.OneStep.Chained",
+        "Becoming.OneStep.Chained.lengths",
+        "Becoming.OneStep.Witness.Place",
+        "Becoming.OneStep.Witness.Part",
+        "Becoming.OneStep.Witness.Part.up",
+        "Becoming.OneStep.Witness.pick",
+        "Becoming.OneStep.Witness.least",
+        "Becoming.OneStep.Witness.units",
+        "Becoming.OneStep.Witness.rest",
+        "Becoming.OneStep.Witness.unitList",
+        "Becoming.OneStep.Witness.hit",
+        "Becoming.OneStep.Witness.unitTake",
+        "Becoming.OneStep.Witness.flow",
+        "Becoming.OneStep.Witness.web",
+        "Becoming.OneStep.Witness.family",
+        "Becoming.OneStep.Witness.pick_steps",
+        "Becoming.OneStep.Witness.total_pick",
+        "Becoming.OneStep.Witness.pick_lt",
+        "Becoming.OneStep.Witness.pick_mem",
+        "Becoming.OneStep.Witness.pick_beyond",
+        "Becoming.OneStep.Witness.first",
+        "Becoming.OneStep.Witness.pick_map",
+        "Becoming.OneStep.Witness.least_excess",
+        "Becoming.OneStep.Witness.excess_zero",
+        "Becoming.OneStep.Witness.least_excess_other",
+        "Becoming.OneStep.Witness.excess_le_of",
+        "Becoming.OneStep.Witness.rest_units",
+        "Becoming.OneStep.Witness.total_rest_units",
+        "Becoming.OneStep.Witness.total_units",
+        "Becoming.OneStep.Witness.unitList_length",
+        "Becoming.OneStep.Witness.unitList_units",
+        "Becoming.OneStep.Witness.unitTake_up_zero",
+        "Becoming.OneStep.Witness.unitTake_up_succ",
+        "Becoming.OneStep.Witness.total_unitTake",
+        "Becoming.OneStep.Witness.hit_self",
+        "Becoming.OneStep.Witness.hit_pos",
+        "Becoming.OneStep.Witness.unit_injective",
+        "Becoming.OneStep.Witness.Part.index",
+        "Becoming.OneStep.Witness.Part.place",
+        "Becoming.OneStep.Witness.up_unit_injective",
+        "Becoming.OneStep.Witness.distinct_unitList",
+        "Becoming.OneStep.Witness.distinct_present",
+        "Becoming.OneStep.Witness.member_injective",
+        "Becoming.OneStep.Witness.distinct_family",
+        "Becoming.OneStep.Witness.total_family",
+        "Becoming.OneStep.Witness.member_mem",
+        "Becoming.OneStep.Witness.of_mem_family",
+        "Becoming.OneStep.Witness.whole_count",
+        "Becoming.OneStep.Witness.whole_total",
+        "Becoming.OneStep.Witness.whole_bound",
+        "Becoming.OneStep.Witness.take_units",
+        "Becoming.OneStep.Witness.give_units",
+        "Becoming.OneStep.Witness.taken_member",
+        "Becoming.OneStep.Witness.given_member",
+        "Becoming.OneStep.Witness.level_after",
+        "Becoming.OneStep.Witness.passage_member",
+        "Becoming.OneStep.Witness.passages",
+        "Becoming.OneStep.Witness.uptake_family",
+        "Becoming.OneStep.Witness.replenishment_family",
+        "Becoming.OneStep.Witness.takers_eq",
+        "Becoming.OneStep.Witness.takers_count",
+        "Becoming.OneStep.Witness.outer_mem",
+        "Becoming.OneStep.Witness.beyond_moves",
+        "Becoming.OneStep.Witness.exchangesAt_iff",
+        "Becoming.OneStep.Witness.balancesOn",
+        "Becoming.OneStep.Witness.stands_before",
+        "Becoming.OneStep.Witness.stands_after",
+        "Becoming.OneStep.Witness.dissipatesOn",
+        "Becoming.OneStep.Witness.runsDownOn",
+        "Becoming.OneStep.Witness.closedAt",
+        "Becoming.OneStep.Witness.world",
+        "Becoming.OneStep.Witness.shows",
+        "Becoming.OneStep.Witness.once",
+        "Becoming.OneStep.Witness.once_chain",
+        "Becoming.OneStep.Realized",
+        "Becoming.OneStep.exchange_open",
+        "Becoming.OneStep.exchange_closed",
+        "Becoming.OneStep.Witness.realizedOnce",
+        "Becoming.OneStep.every_iff",
+        "Becoming.OneStep.balance_iff",
+        "Becoming.OneStep.runsDown_iff",
+        "Becoming.OneStep.closed_iff",
+        "Becoming.OneStep.runsDownClosed_iff",
+        "Becoming.OneStep.runsDown_passages_iff",
+        "Becoming.OneStep.Respects",
+        "Becoming.OneStep.laws",
+        "Becoming.OneStep.RunRealized",
+        "Becoming.OneStep.RunRealized.chained",
+        "Becoming.OneStep.RunRealized.exchange",
+        "Becoming.OneStep.Witness.showsRun",
+        "Becoming.OneStep.run_every_iff",
+        "Becoming.OneStep.run_balance_iff",
+        "Becoming.OneStep.run_runsDown_iff",
+        "Becoming.OneStep.run_closed_iff",
+        "Becoming.OneStep.run_runsDownClosed_iff",
+        "Becoming.OneStep.RunRespects",
+        "Becoming.OneStep.run_laws",
+        "Becoming.Flow.sign_replenishment_le_renewers",
+        "Becoming.Flow.renewers_le_replenishment",
+        "Becoming.Flow.DissipatesOn.renewers_le_takers",
+        "Becoming.Flow.CapacityAt",
+        "Becoming.Flow.ActingAt",
+        "Becoming.Flow.TakingAt",
+        "Becoming.Flow.capacity_iff_at",
+        "Becoming.Flow.acting_iff_at",
+        "Becoming.Flow.taking_iff_at",
+        "Becoming.Flow.CapacityAt.replenishment_le",
+        "Becoming.Flow.RealizesGivers",
+        "Becoming.OneStep.Givers",
+        "Becoming.Flow.RealizesGivers.givers",
+        "Becoming.Flow.RealizesGivers.takers",
+        "Becoming.Flow.RealizesGivers.capacity",
+        "Becoming.Flow.RealizesGivers.exchange",
+        "Becoming.Flow.RealizesGivers.roles",
+        "Becoming.Flow.CapacityAt.roles",
+        "Becoming.Flow.ActingAt.roles",
+        "Becoming.Flow.TakingAt.roles",
+        "Becoming.OneStep.RealizedGivers",
+        "Becoming.OneStep.RealizedGivers.weaken",
+        "Becoming.OneStep.realized_iff_givers",
+        "Becoming.OneStep.Chain.realizedOnce",
+        "Becoming.OneStep.Chain.realizedOpen",
+        "Becoming.OneStep.Chain.realizedRunning",
+        "Becoming.OneStep.every_givers_iff",
+        "Becoming.OneStep.balance_givers_iff",
+        "Becoming.OneStep.runsDown_givers_iff",
+        "Becoming.OneStep.closed_givers_iff",
+        "Becoming.OneStep.runsDownClosed_givers_iff",
+        "Becoming.OneStep.every_capacity_iff",
+        "Becoming.OneStep.balance_capacity_iff",
+        "Becoming.OneStep.runsDown_capacity_iff",
+        "Becoming.OneStep.closed_capacity_iff",
+        "Becoming.OneStep.runsDownClosed_capacity_iff",
+        "Becoming.OneStep.every_active_iff",
+        "Becoming.OneStep.balance_active_iff",
+        "Becoming.OneStep.runsDown_active_iff",
+        "Becoming.OneStep.closed_active_iff",
+        "Becoming.OneStep.runsDownClosed_active_iff",
+        "Becoming.OneStep.RespectsGivers",
+        "Becoming.OneStep.laws_givers",
+        "Becoming.OneStep.RunRealizedGivers",
+        "Becoming.OneStep.StepRealized",
+        "Becoming.OneStep.RunRealizedGivers.run",
+        "Becoming.OneStep.RunRealizedGivers.steps",
+        "Becoming.OneStep.StepRealized.continues",
+        "Becoming.OneStep.Chain.showsAll",
+        "Becoming.OneStep.Chain.openTaken",
+        "Becoming.OneStep.Chain.openGiven",
+        "Becoming.OneStep.Chain.runningTaken",
+        "Becoming.OneStep.Chain.openTaken_spec",
+        "Becoming.OneStep.Chain.openGiven_spec",
+        "Becoming.OneStep.Chain.runningTaken_spec",
+        "Becoming.OneStep.Chain.realizedSteps",
+        "Becoming.OneStep.Chain.realizedRun",
+        "Becoming.OneStep.run_every_givers_iff",
+        "Becoming.OneStep.run_balance_givers_iff",
+        "Becoming.OneStep.run_runsDown_givers_iff",
+        "Becoming.OneStep.run_closed_givers_iff",
+        "Becoming.OneStep.run_runsDownClosed_givers_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92",
+      "declarations": [
+        "Becoming.mem_append_cases",
+        "Becoming.length_map",
+        "Becoming.map_comp_eq",
+        "Becoming.map_eq_of",
+        "Becoming.map_eq_singleton",
+        "Becoming.distinct_append",
+        "Becoming.total_steps_succ"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "role": "proof",
+      "sha256": "92c981ec6c3733f771b30b5a24469d873605383e69675114e1c55055867a31e8",
+      "declarations": [
+        "Becoming.Flow.takers",
+        "Becoming.Flow.BalancesOn"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "role": "proof",
+      "sha256": "b6dbed19c25ed2c0bb4f66ebfa97c40103fbdbc1892ef16be788350daa2d780e",
+      "declarations": [
+        "Becoming.counting_laws",
+        "Becoming.tally_iff_counted"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
+      "role": "proof",
+      "sha256": "37ea240db6a087b659d81b65e3264935c6f666025ede8c8bf633ff1c3fb6be35",
+      "declarations": [
+        "Becoming.World.ofRoles"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
+      "role": "proof",
+      "sha256": "236b6eb72050fd5c70c720cd5ccd82d732b7c90f423fe12b9f10849cdc4b2ea8",
+      "declarations": [
+        "Becoming.Flow.RunsDownOn"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
+      "role": "receipt",
+      "sha256": "48fd7efd02436ec3e2dfd904771bdf1a44f18edaeb55fcc23256e24523a59d19",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-12-move-towards-100.md",
+      "role": "provenance",
+      "sha256": "f3e5885ed960640cf3773813e7e02f6869ca2884b3730a2ea683c0686c03a8f3",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json",
+      "role": "receipt",
+      "sha256": "c5e118f377ae815cdb1d8afb02bbc5e3fb7ee519d45ab85f12a834fc467e8f0a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T073902.295130Z/verification.json",
+      "role": "receipt",
+      "sha256": "790a8973dbabe58f9bc5f4c27d39589c8827b6fab3fe08a8d342f6ef02bca4a8",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "role": "receipt",
+      "sha256": "276674770ba470537ab6d2f4ea06c15418b4f22b325b4a634ac7cdc8fd9b95d1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "role": "receipt",
+      "sha256": "e308626a3bfd5618e8279b5167ad81be01de5b97e4981a617ac1acd31fa7686b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "role": "receipt",
+      "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "role": "receipt",
+      "sha256": "279a65322c97aa66fd10c042003597aaab1bbed545b4ec2f13ebfb803cd2041f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "role": "receipt",
+      "sha256": "8aec0bc8a1531907a80ec2d51c849088cdd1ffaf368e16f4d95a8513d56494a5",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.OneStep",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Flow",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Population",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Space",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Locality",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "容量与活动在运行上的形式；活动可判定时计数活跃者。",
+    "en": "Capacity and activity over runs; counting active relata where activity is decided."
+  },
+  "history": [
+    {
+      "zh": "2026-10-13：接续并整合 P79 的现存证明包；见整合文档 §103。",
+      "en": "2026-10-13: resumed and integrated the existing P79 proof package; see §103 of the integration note."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13 P93：核读主干新增的登记修订段落及形式模块行；删除这两处新增后此前全文字节一致，本条既有主张和冻结证据未改变。",
+      "en": "13 October 2026, P93: reviewed the added registration-revision paragraph and formal-module row; removing only those additions restores every earlier byte. This record’s claim and frozen evidence are unchanged."
+    },
+    {
+      "zh": "P103 共享章对应复核：核对 P104/P105 已检模块的两行导航及 P93/P99/P103 接续说明；旧章除这些可定位增量外逐字保留，本成果证明和主张未改。",
+      "en": "P103 shared-chapter review: two navigation rows for checked P104/P105 modules and the P93/P99/P103 continuation notes are reconciled; all other prior chapter bytes, this result’s proof and claim remain unchanged."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“一步的规律就是一步的全部规律：在每个条件下与跨运行，一个模式（含给予者）恰在服从该条件的规律时由某个世界显示；容量添一条规律，活动不添”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “The laws of one step are all the laws of one step: under each condition and across runs, a pattern, its givers included, is shown by some world exactly where it obeys that condition's law; capacity adds one law and activity none”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): the study only adds section 112 (general laws and renames) and its paragraph in the English summary; chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026-10-16 P110（依 Ren 2026-10-15 的交托决定的读法，研究 §147，DELEGATED-CHOICES D30）：此前留给 Ren 的读法与名称按所列决定改为采用或不采用，要求 Ren 判断这些读法的下一步已删去。陈述、证明与绑定不变；Ren 可改其中任何一项决定。",
+      "en": "16 October 2026, P110 (readings decided on Ren's delegation of 15 October 2026, study section 147, DELEGATED-CHOICES D30): readings and names formerly left to Ren are adopted or declined as those decisions say, and next steps asking for Ren's judgment on them are removed. Statements, proofs and bindings unchanged; Ren can reverse any of the decisions."
+    },
+    {
+      "en": "17 October 2026, wording of the public fields: the P-number P79b removed, following Ren's 17 October directive that his earlier words are provenance, not authority; the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: THE-THEORY-OF-BECOMING.md. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Flow.lean, Population.lean, Space.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Flow.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Population.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Space.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Flow.lean、Population.lean、Space.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Flow.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Population.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；Space.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (OneStep.lean, Population.lean, Prelude.lean, Space.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; OneStep.lean, takes as its final section PassageWorlds, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; Population.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Prelude.lean, twelve statements stated in two or more modules each, stated here once under the name kept; Space.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：证明绑定（OneStep.lean、Population.lean、Prelude.lean、Space.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 223 节；OneStep.lean，以末节收入 PassageWorlds（读它的模块），声明、名称与陈述不变；其中的纯转发与副本删去；Population.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；Prelude.lean，十二条原先在两个或更多模块中各自陈述的命题，在此以保留的名称陈述一次；Space.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；THE-THEORY-OF-BECOMING.md，§9（回执、计数、不再计入重述的连通性度量）随 R32。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 37 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/4f86e552e23ba6b4/laws-of-one-step-complete.json and in git.",
+      "zh": "2026-10-20：37 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/4f86e552e23ba6b4/laws-of-one-step-complete.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from OneStep.lean to Prelude.lean, distinct_append, total_steps_succ. Proof bindings (Flow.lean, OneStep.lean, Population.lean, Prelude.lean, Space.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Flow.lean, OneStep.lean, Population.lean, Space.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged; Prelude.lean: the definitions and statements stated once (Distinct, total, steps, nonzero, Copying.nth, Law.memberAt, Settling.consAct, DistinctUnder, downFrom and their laws) moved here; other statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 OneStep.lean 到 Prelude.lean：distinct_append、total_steps_succ。证明绑定（Flow.lean、OneStep.lean、Population.lean、Prelude.lean、Space.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Flow.lean、OneStep.lean、Population.lean、Space.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变；Prelude.lean：只陈述一次的定义与陈述（Distinct、total、steps、nonzero、Copying.nth、Law.memberAt、Settling.consAct、DistinctUnder、downFrom 及其规律）移入；其他陈述不变。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement and claim say hypothesis where they meant the local premises on the family (none, balanced on, running down, closed, or both), condition keeping its one sense, a relatum's role; the laws and declarations are unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述与主张在指家族上的局部前提（无、被平衡、耗减、封闭或二者）处改称假设，条件保留其唯一含义（关系项的角色）；规律与声明不变。"
+    }
+  ]
+}

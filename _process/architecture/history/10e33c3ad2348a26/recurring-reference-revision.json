@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "id": "recurring-reference-revision",
+  "title": {
+    "zh": "活动形成并重现参考修订",
+    "en": "Activity forms reference revision and makes it recur"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-13T21:30:54.975650+00:00",
+  "claim": {
+    "zh": "存量的一般规律（Becoming.Stock）支配持续的修订：沿平衡过程的每个运行，任意晚的汲取需要任意晚的补充；循环无尽重复需要回补覆盖其汲取。ContinuingRevision 是其实例，延伸 ReferencePlan 的操作：燃料对每个动作的用量与更替的回补平衡（balanced）；断供时任何控制器都没有无尽运行（no_run_without_return）；沿每个产出下的每个运行，更替复现，更替只由下一地址上的成功启用，所以成功活动复现（renew_recurs、renew_needs_enabled、enabled_by_success、success_recurs）。燃料储备与产出成为参数后，存在一个起点使任意多轮循环都可行，恰当产出覆盖每轮用去的 9 单位（repeats_iff），对每个产出成立。产出为 9 的见证中，空方法及参考装置经实际失败、取得、安装和使用形成；每一后继位置的失配都修改方法、取得双参考、安装并成功使用；统一控制器中存在实际无限 Run，精确衔接形成历史，每轮累计用量与回补不清零（continuing、formed_and_continues）。冻结、断供、储备消耗和旧区分退役保留实际失败与损失。",
+    "en": "The general laws of stock (Becoming.Stock) govern continuing revision: along every run of a balanced process, drawing at arbitrarily late steps needs replenishment at arbitrarily late steps, and unending repetition of a cycle needs its return to cover its draw. ContinuingRevision is an instance, extending ReferencePlan’s operations. Its fuel is balanced against what each act uses and what renewal returns (balanced); with the return cut, no unending run exists under any controller (no_run_without_return); along every run at every yield renewal recurs, renewal is enabled only by a successful undertaking at the next address, and so successful activity recurs (renew_recurs, renew_needs_enabled, enabled_by_success, success_recurs). With the fuel held in reserve and the yield as parameters, the cycle repeats for every number of rounds from some configuration exactly where the yield covers the nine units a round uses (repeats_iff), at every yield. In the witnesses at yield nine, actual failure, acquisition, installation and use form a reference apparatus from empty retention; mismatch at every successor revises the method and yields newly acquired, installed and successfully used references; an actual infinite Run obeys one controller and connects exactly to the formation trace, with cumulative amounts used and returned (continuing, formed_and_continues). Frozen methods, cut return, reserve expenditure and retired distinctions retain failures and losses."
+  },
+  "hypotheses": [
+    {
+      "zh": "P99 的可寻址二值接触、可靠实际返回、参考绑定、稳定对应、修订律及检查安装操作继续给定。",
+      "en": "P99’s addressed Boolean contacts, faithful return, bound references, stable correspondence, revision and checked-installation operations remain supplied."
+    },
+    {
+      "zh": "共同活动按当前承载位置取得下一任务；下一地址上的实际成功使一次更替可行，用一次。更替用去 1 并取得产出（见证中为 9），保留已安装的后继参考并退役旧接触。",
+      "en": "The supplied policy addresses the next locus; an actual success at the next address enables one renewal, used once. Renewal uses one unit and returns the yield (nine in the witnesses), retains the installed successor reference and retires the old contact."
+    },
+    {
+      "zh": "计数装置对生产支承开放；接触与承载位置的物理对应、更替和储存能力均为局部条件，不声称封闭有限存量无限持续。",
+      "en": "The counted installation is open to productive support. Physical contact/succession correspondence, replacement and storage are local premises; a finite closed stock is not claimed to continue forever."
+    }
+  ],
+  "correspondence": {
+    "zh": "观察、方法、回应、生产与承载是同一关系展开的作用。承载索引伴随实际新地址、失败、参考及使用改变；编号本身不是物质重建证明。时钟只枚举逐步已证符合 choose 的行为，不新增支持或外部选择。",
+    "en": "Observation, method, response, production and carriers are roles in one unfolding. The carrier index accompanies new addressed activity, failure, reference construction and use; a counter alone does not prove material reconstruction. The clock enumerates actions already proved to follow choose, without external support or selection."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean",
+  "aliases": [
+    "Becoming.ContinuingRevision.continuing",
+    "Becoming.ContinuingRevision.formed_and_continues",
+    "Becoming.ContinuingRevision.new_available_choice",
+    "recurring reference revision",
+    "反复参考修订",
+    "Becoming.ContinuingRevision.repeats_iff",
+    "Becoming.ContinuingRevision.no_run_without_return"
+  ],
+  "dependencies": [
+    {
+      "id": "consequence-revised-reference-plan",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "execute 直接调用 ReferencePlan.execute；new_available_choice 与 retired_choice 调用原有接触选择定理。",
+        "en": "execute directly calls ReferencePlan.execute; new_available_choice and retired_choice invoke its contact-selection theorems."
+      },
+      "interface": {
+        "output": {
+          "zh": "已检查的参考操作、实际回应及选择定义",
+          "en": "Checked reference operations, actual response and selection definitions"
+        },
+        "input": {
+          "zh": "连续活动中的 native 操作、方法改变和后继使用",
+          "en": "Native operations, method change and successor use in continuing activity"
+        },
+        "conditions": {
+          "zh": "相同内部状态和费用，额外回返、更替及任务律公开",
+          "en": "Identical inner state and native costs, with additional return, succession and task laws disclosed"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean"
+      }
+    },
+    {
+      "id": "process-and-frame-as-readings",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "Trace 的实际中间配置拼接与 Run 逐步执行，非改名模型。",
+        "en": "Trace composition through actual boundary configurations and stepwise Run, not a renamed model."
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "selection-under-registration-revision",
+      "detail": {
+        "zh": "新增接触和退役同时说明选择保留条件为何不能由持续性代替。",
+        "en": "New contact and retirement show why continuing activity cannot substitute for the exact selection-preservation criterion."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean",
+      "detail": {
+        "zh": "cut_return/cut_stops_next 是 P 9 与 P 0 的配对回返干预；reserve_consumed 与 frozen_plan_no_return 是 P 9 内的真实替代执行；retired_choice 证明区分损失。 no_run_without_return 把断供写成规律：产出为 0 时任何控制器都没有无尽运行。",
+        "en": "cut_return/cut_stops_next compare the return relation in P 9 and P 0; reserve_consumed and frozen_plan_no_return are genuine alternatives within P 9; retired_choice proves a lost distinction. no_run_without_return states the cut as a law: at yield 0 no controller runs without end."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "证明指定开放生产律和任务政策下的形成与持续修订；不保证所有扰动、需求、物理实现或所有旧选择。不是任意装置原语的起源、普遍吸引盆地、整个旧材料模型的编译、规范根据或更强无实质前提目标。",
+    "en": "Proves formation and continuing revision under specified open production and task laws, not all disturbances, demands, physical realizations or preservation of every old selection. It does not derive arbitrary sensor primitives, universal basins, a compilation of all older material models, normative warrant or the stronger premise-free programme."
+  },
+  "validation_scope": {
+    "zh": "2026-10-14：Becoming.ContinuingRevision、Becoming.Stock 的当前字节由合并检查器回执 20261013T204910.042715Z 绑定（通过：包 85 个模块，4861 项定理、6856 项声明审计，源声明公理报告全空；核心闭包 86 个模块从内置前导编译）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 核心20261013T125907.288531Z实际通过：36定理／62源声明空公理报告，纯核心从前导编译；外围20261013T130233.156038Z通过。作者逐项反审和旧表述整合，无独立代理或经验验收。 本任务的独立提交内容再经核心 20261013T131556.258659Z、外围 20261013T131750.258973Z、完整成果检查及49项基础设施测试通过，未收入并行会话内容。",
+    "en": "14 October 2026: the current bytes of Becoming.ContinuingRevision, Becoming.Stock are bound to consolidated receipt 20261013T204910.042715Z (passed: 85 package modules, 4861 theorems, 6856 declaration audits, every source declaration with an empty axiom report; the 86-module core closure compiles from the prelude). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Core 20261013T125907.288531Z passed: 36 theorems/62 source declarations with empty axiom reports, pure prelude compilation; peripheral 20261013T130233.156038Z passed. Author counterreview and historical reconciliation, without independent-agent or empirical acceptance. The owned-only commit tree additionally passes core 20261013T131556.258659Z, peripheral 20261013T131750.258973Z, full registry checks and all 49 infrastructure tests, excluding concurrent active work."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean",
+      "role": "proof",
+      "sha256": "76859d099381090ca6d3767d948cca91ac6d053667c94af995363eaeaacecf5a",
+      "declarations": [
+        "Becoming.ContinuingRevision.State",
+        "Becoming.ContinuingRevision.Act",
+        "Becoming.ContinuingRevision.execute",
+        "Becoming.ContinuingRevision.P",
+        "Becoming.ContinuingRevision.use",
+        "Becoming.ContinuingRevision.returned",
+        "Becoming.ContinuingRevision.step_conserves",
+        "Becoming.ContinuingRevision.trace_conserves",
+        "Becoming.ContinuingRevision.choose",
+        "Becoming.ContinuingRevision.selected",
+        "Becoming.ContinuingRevision.forget_policy",
+        "Becoming.ContinuingRevision.sample",
+        "Becoming.ContinuingRevision.ready",
+        "Becoming.ContinuingRevision.failed",
+        "Becoming.ContinuingRevision.planned",
+        "Becoming.ContinuingRevision.contacted",
+        "Becoming.ContinuingRevision.acquired",
+        "Becoming.ContinuingRevision.installed",
+        "Becoming.ContinuingRevision.successful",
+        "Becoming.ContinuingRevision.absent_key",
+        "Becoming.ContinuingRevision.acquired_key",
+        "Becoming.ContinuingRevision.retained_sample",
+        "Becoming.ContinuingRevision.fail_step",
+        "Becoming.ContinuingRevision.plan_step",
+        "Becoming.ContinuingRevision.first_contact",
+        "Becoming.ContinuingRevision.second_contact",
+        "Becoming.ContinuingRevision.install_step",
+        "Becoming.ContinuingRevision.use_step",
+        "Becoming.ContinuingRevision.renew_step",
+        "Becoming.ContinuingRevision.word",
+        "Becoming.ContinuingRevision.one_cycle",
+        "Becoming.ContinuingRevision.history",
+        "Becoming.ContinuingRevision.all_cycles",
+        "Becoming.ContinuingRevision.all_cycles_amounts",
+        "Becoming.ContinuingRevision.method_changed",
+        "Becoming.ContinuingRevision.singleton_member",
+        "Becoming.ContinuingRevision.next_absent",
+        "Becoming.ContinuingRevision.new_available_choice",
+        "Becoming.ContinuingRevision.no_return_without_success",
+        "Becoming.ContinuingRevision.cut_return",
+        "Becoming.ContinuingRevision.cut_stops_next",
+        "Becoming.ContinuingRevision.seed",
+        "Becoming.ContinuingRevision.run",
+        "Becoming.ContinuingRevision.run_trace",
+        "Becoming.ContinuingRevision.formation",
+        "Becoming.ContinuingRevision.formation_enters",
+        "Becoming.ContinuingRevision.formed_and_continues",
+        "Becoming.ContinuingRevision.reserve_consumed",
+        "Becoming.ContinuingRevision.frozen_plan_no_return",
+        "Becoming.ContinuingRevision.retired_choice",
+        "Becoming.ContinuingRevision.Phase",
+        "Becoming.ContinuingRevision.clockNext",
+        "Becoming.ContinuingRevision.expose",
+        "Becoming.ContinuingRevision.action",
+        "Becoming.ContinuingRevision.clock_step",
+        "Becoming.ContinuingRevision.continuing",
+        "Becoming.ContinuingRevision.clock_cycles",
+        "Becoming.ContinuingRevision.run_at_cycle",
+        "Becoming.ContinuingRevision.run_installs",
+        "Becoming.ContinuingRevision.unbounded_succession",
+        "Becoming.ContinuingRevision.formation_to_run",
+        "Becoming.ContinuingRevision.readyAt",
+        "Becoming.ContinuingRevision.one_cycle_at",
+        "Becoming.ContinuingRevision.cycles_at",
+        "Becoming.ContinuingRevision.balanced",
+        "Becoming.ContinuingRevision.use_pos",
+        "Becoming.ContinuingRevision.no_return",
+        "Becoming.ContinuingRevision.no_run_without_return",
+        "Becoming.ContinuingRevision.renew_recurs",
+        "Becoming.ContinuingRevision.renew_needs_enabled",
+        "Becoming.ContinuingRevision.enabled_by_success",
+        "Becoming.ContinuingRevision.success_recurs",
+        "Becoming.ContinuingRevision.history_cycles",
+        "Becoming.ContinuingRevision.word_use",
+        "Becoming.ContinuingRevision.word_return",
+        "Becoming.ContinuingRevision.cycles_need_yield",
+        "Becoming.ContinuingRevision.repeats_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92",
+      "declarations": [
+        "Becoming.Naturals.succ_ne_self"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T161154.555289Z/verification.json",
+      "role": "receipt",
+      "sha256": "167317522f26c16d624f15528c625767b1d0cef1412be1b7fd70f45ee773ca63",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T130233.156038Z/verification.json",
+      "role": "receipt",
+      "sha256": "58e9bc38a1568c55f2a6c8ce3151ae60f8b0f645f85655cc942df1b51460f7c7",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/META-ATTRACTOR-RECONCILIATION.md",
+      "role": "review",
+      "sha256": "4d67672ab7df1ee71c3cf111d46fb4999bc0fd8ba7e331ad09b75418aa670f03",
+      "declarations": []
+    },
+    {
+      "path": "theories/meta-attractor/COMMON-ORGANIZATION.md",
+      "role": "statement",
+      "sha256": "a2c1f958d84bf7464623dfbdd0065be177556f7801e5055d7cdfc08e04c60f3b",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "integration",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-13-meta-attractor-completion-and-main.md",
+      "role": "provenance",
+      "sha256": "2d04cad3ece92a7974c7c479d2e8ff2a8793f56eacd8fc1411f5f9a52cd7d872",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T131556.258659Z/verification.json",
+      "role": "receipt",
+      "sha256": "2fcc5eb6da246749b076d5251708ece2e84d060d89bf2592fa9993b5f6e0649e",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T131750.258973Z/verification.json",
+      "role": "receipt",
+      "sha256": "de8e51c0eca26e33b10ba3f53586588ecc90de2e5e59747de6da7c000cc4afe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T204910.042715Z/verification.json",
+      "role": "receipt",
+      "sha256": "de452d3198d581ac4310c6a92a766e30b2c9bb6b740f970f5fed373b448e6121",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stock.lean",
+      "role": "proof",
+      "sha256": "e6ac9fce2643b3238a9832b235c0a3be6d2cb9cac9a108dfce0f748a04971d9f",
+      "declarations": [
+        "Becoming.Stock.Balanced",
+        "Becoming.Stock.cycles_need",
+        "Becoming.Stock.repeat_covered_iff",
+        "Becoming.Run.replenishes_of_draws",
+        "Becoming.Run.draws_iff_replenishes"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T062828.251326Z/verification.json",
+      "role": "receipt",
+      "sha256": "0dec8292b9c1b7a85364070084bf7c053486e60608e228f7d1dc0da391e9f6d1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json",
+      "role": "receipt",
+      "sha256": "c5e118f377ae815cdb1d8afb02bbc5e3fb7ee519d45ab85f12a834fc467e8f0a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ContinuingRevision",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stock.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Stock",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "所要求的形成—分化—方法及候选修订—使用—受支持接续的理论整合已完成。具体应用另须对应证据；对公开前提或交接的新反例会重开受影响结论。",
+    "en": "The requested formation–differentiation–method/candidate revision–use–supported continuation integration is complete. Applications need their own correspondence evidence; new counterexamples to premises or handoffs would reopen the affected claim."
+  },
+  "history": [
+    {
+      "zh": "P103 延续原研究并直接复用 P93/P99；不把重复回执或理论综述计为另一独立机制。",
+      "en": "P103 continues the original study with direct reuse of P93/P99; repeated receipts or the theoretical synthesis are not counted as another independent mechanism."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "提交隔离复核保持原证明源、理论范围及反例；前一完整共享检查作为历史证据保留。",
+      "en": "Commit-isolation checks preserve the proof source, scope and counterexamples; the earlier shared full check remains historical evidence."
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：按 BECOMING-UNIFICATION-PLAN §10 改名，本记录中 `ContinuingRevision.cost` → `ContinuingRevision.use`、`ContinuingRevision.step_account` → `ContinuingRevision.step_conserves`、`ContinuingRevision.trace_account` → `ContinuingRevision.trace_conserves`、`ContinuingRevision.all_cycles_account` → `ContinuingRevision.all_cycles_amounts`、`ContinuingRevision.no_unearned_return` → `ContinuingRevision.no_return_without_success`；陈述、证明与定理数不变；Lean 源：ContinuingRevision 另加入作为 Stock 实例的定理，循环的燃料与产出成为参数，绑定改为新回执（见检查范围）；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”；标题由「共同活动形成并再生产参考修订」改为「活动形成并重现参考修订」（中英文一致，去掉“再生产”）；主张改为先陈述存量的一般规律（Run.replenishes_of_draws、Stock.cycles_need），原 ContinuingRevision 例子作为实例；循环的燃料与产出成为参数，repeats_iff 对每个产出成立，产出 9 的见证与无限 Run 保留；第二条前提的“凭据”“花费”改为启用与用去；新增 Stock.lean 的证明绑定（回执 20261013T204910.042715Z）。状态不变；主张按一般规律重写，原例子的陈述与证明不变，不记作对原例子的重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): renames per BECOMING-UNIFICATION-PLAN §10, in this record `ContinuingRevision.cost` → `ContinuingRevision.use`, `ContinuingRevision.step_account` → `ContinuingRevision.step_conserves`, `ContinuingRevision.trace_account` → `ContinuingRevision.trace_conserves`, `ContinuingRevision.all_cycles_account` → `ContinuingRevision.all_cycles_amounts`, `ContinuingRevision.no_unearned_return` → `ContinuingRevision.no_return_without_success`; statements, proofs and theorem counts unchanged; Lean sources: ContinuingRevision with theorems added as instances of Stock, and fuel and yield of the cycle made parameters; bindings move to the new receipts (see validation scope); chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”; title changed from “Activity forms and reproduces reference revision” to “Activity forms reference revision and makes it recur” (zh and en now match, without 再生产); the claim now states the general laws of stock first (Run.replenishes_of_draws, Stock.cycles_need), with the ContinuingRevision example as their instance; fuel and yield of the cycle are parameters, repeats_iff holds at every yield, and the yield-nine witnesses with their infinite Run are kept; the second premise speaks of enabling and using instead of an earned claim and spending; a proof binding for Stock.lean is added (receipt 20261013T204910.042715Z). Status unchanged; the claim is rewritten law-first, and the examples keep their statements and proofs, with no reproof credited to them."
+    },
+    {
+      "en": "17 October 2026, wording: a session reference removed from public fields, following Ren's 17 October directive that his earlier words are provenance, not authority; the claim is unchanged."
+    },
+    {
+      "en": "17 October 2026, source reconciliation after relabelling (Ren's 17 October directive: earlier words are provenance, not authority): THE-THEORY-OF-BECOMING.md now uses the current vocabulary (living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I, section 6 retitled), with delegation and process markers removed and every earlier anchor kept. The integrator compared the change and found relabelling only; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: ContinuingRevision.lean, THE-THEORY-OF-BECOMING.md. Rebound to core receipt 20261018T062828.251326Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: Stock.lean, THE-THEORY-OF-BECOMING.md. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "19 October 2026, LL1 (the least loss as a premise of rest): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only where LL1 added text: LL1 added to the dissipation row and the natural-number amounts row where the least loss is a premise (Becoming.LeastLoss); LL1 restated the last sentence of \"Limits of the rest theorem\" as the least-loss law, the approach to rest and the join with recurrence; LL1 added to the entropy and recurrence row (its open item and the record least-loss-rest), a rerun sentence in the integration row, and sentences in sections 8.6 and 8.7; LL1 revised the receipt sentence and counts; LL1 extended the sentence of item 4 on the rest theorem's whole unit with the least-loss law, the approach to rest and the join with recurrence. Read before re-pointing. The claim is unchanged.",
+      "zh": "2026年10月19日，LL1（最小损失作为停息的前提）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只在 LL1 加文之处改动：第 0 节（LL1 在耗散行与自然数量行加入最小损失作为前提之处）；第 1 节（LL1 把“停息定理的界限”末句重述为最小损失律、趋近停息与复现的连接）；第 8 节（LL1 在熵与复现行加入开放项与记录 least-loss-rest，在整合行加入一句重跑，在第 8.6、8.7 节加句）；第 9 节（LL1 更新回执句与计数）；完整陈述（LL1 在第 4 条关于整数单位的一句后加入最小损失律、趋近停息与复现的连接）。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "19 October 2026, R22 (the names of the nineteenth review): THE-THEORY-OF-BECOMING.md re-pointed. Since the reviewed hash, the cited files changed only where R22 renamed: THE-THEORY-OF-BECOMING.md, names only (nineteenth review N1, N2; table in development/r22-names/RENAME-TABLE.json). Read before re-pointing. The claim is unchanged.",
+      "zh": "2026年10月19日，R22（第十九次审查的名称）：THE-THEORY-OF-BECOMING.md 重新指向。自所审哈希以来，所引文件只在 R22 改名之处改动：THE-THEORY-OF-BECOMING.md，只改名称（第十九次审查 N1、N2；对照表见 development/r22-names/RENAME-TABLE.json）。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：读过改动后重新指向：THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 121 bookkeeping notes condensed from 14 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/8f28faff67f7e325/recurring-reference-revision.json and in git.",
+      "zh": "2026-10-20：121 条记账性说明合并（14 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/8f28faff67f7e325/recurring-reference-revision.json 和 git 中。"
+    }
+  ]
+}

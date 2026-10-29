@@ -1,0 +1,417 @@
+{
+  "schema_version": 1,
+  "id": "open-form-realization-under-revision",
+  "title": {
+    "zh": "开放形态下的规则修订与实际生成",
+    "en": "Rule revision and actual generation with open forms"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
+  "statement": {
+    "zh": "凡完成可判定、每个未完成之步降低当前规则的证书、修订后的规则接过它而不升高、完成实现新的活的内容，初始证书至多为 B 时，运行至迟在第 B + 1 步实现这样的内容；每条规则保持时都会完成，每步都修订时却可以永不完成。",
+    "en": "Where completion is decided, each unfinished step lowers the current rule's certificate, handoffs do not raise it, and completions realize new living content, a run first certified within B realizes such content by step B + 1; rules each finishing if kept can, revised every step, never complete."
+  },
+  "claim": {
+    "zh": "沿一个框的运行，凡完成可判定、每个未完成之步降低当前规则的剩余步数证书、在所到阶段每次移交给修订后的规则不升高它、初始证书至多为 B、且每次完成对应新的活的内容，该运行在 B + 1 步之内实现此前没有的活的内容。在延续条件下，所实现的同一内容落在由意义读出的相关性之下；其形式既不预先固定，也不跨运行固定。见证：每条规则保持时两步之内完成，每个未完成之步降低其自身的剩余数，但每步都修订时运行永不完成，每次修订把剩余数从 1 重设为 2；修订可以改变所形成的结果而仍满足移交之界，所实现的形式不必固定。",
+    "en": "Along a run of a frame, where completion is decided, each unfinished step lowers the current rule's remaining-step certificate, each handoff to a revised rule at the stage reached does not raise it, the initial certificate is at most B, and each completion corresponds to new living content, the run realizes, within B + 1 steps, living content absent before. Under the continuation condition the same realized content falls under the relevance read from significance; its form is not fixed in advance or across runs. Witnesses: each rule kept finishes within two steps and each unfinished step lowers its own remaining count, yet revised at every step the run never completes, each revision resetting the remaining count from 1 to 2; a revision can change the formed outcome and still meet the handoff bound, and the realized form need not be fixed."
+  },
+  "hypotheses": [
+    {
+      "zh": "实际索引历史、步骤、自然数证书、可判定完成事件及初值上界明示供应；未完成时的局部下降与同一阶段的交接不增加分别给出。",
+      "en": "Actual indexed histories, steps, natural-number certificates, decidable completion events and an initial bound are supplied; unfinished local descent and non-increasing handoff at the same reached stage are separate hypotheses."
+    },
+    {
+      "zh": "完成事件对应同一历史中新形成的真实生成内容；不同历史允许不同内容。有条件的规律以延续条件（Unrestricted）为假设；意义条件不由进展证书推导。",
+      "en": "Completion corresponds to actual newly formed generative content in the same history, with different content allowed across histories. The conditional law takes the continuation condition (Unrestricted) as a hypothesis; significance is not derived from progress."
+    },
+    {
+      "zh": "从所见范围传递到实际需要实际覆盖及执行、支持对应。许可、真实损失与仍有效的特定承担沿已有实践原则另作判断。",
+      "en": "Transport from admitted scope to actuality requires actual coverage and execution/support correspondence. Permission, real losses and still-valid specific undertakings require judgment under existing practical principles."
+    }
+  ],
+  "correspondence": {
+    "zh": "阶段、组织路线和修订均是共同活动内的分化，不预设外在操控者或私有价值所有者。证书只证明指定的有限实现界限；若事件编号 n 表示第 n 到 n+1 次转变，0..B的事件范围为至多 B+1次转变。名字为 formed 的终止状态本身不认证现实中的善或履约。",
+    "en": "Stages, organizational rules and revisions differentiate within shared activity, without a primitive external controller or private value owners. Certificates support a specified finite realization bound; if event n denotes transition n to n+1, events 0..B comprise at most B+1 transitions. Terminal states named formed do not themselves certify actual goodness or fulfillment."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean",
+  "aliases": [
+    "OpenFutureRevision.handed_off_progress",
+    "OpenFutureRevision.generation_by_bound",
+    "OpenFutureRevision.positive_ground_by_bound",
+    "OpenFutureRevision.each_fixed_rule_finishes",
+    "OpenFutureRevision.each_rule_local_progress",
+    "OpenFutureRevision.revising_run_stays_unfinished",
+    "OpenFutureRevision.revised_rules_can_fail_forever",
+    "OpenFutureRevision.revision_resets_remaining",
+    "OpenFutureRevision.changed_form_with_valid_handoff",
+    "OpenFutureRevision.realized_form_need_not_be_fixed",
+    "Becoming.Handoff.Run.novel_by_handoff",
+    "Becoming.Handoff.Run.relevance_by_handoff_of_unrestricted",
+    "Becoming.Handoff.securesNewContent_by_bound_of_unrestricted",
+    "Becoming.Handoff.revised_newContent_by_bound_of_unrestricted"
+  ],
+  "dependencies": [
+    {
+      "id": "positive-ground-open-futures",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "securesNewContent_by_bound 直接调用 contingent_generation_has_positive_ground；冻结的 Controls.lean 实际把 newContent_by_bound 输出送入其形成前提。",
+        "en": "securesNewContent_by_bound directly calls contingent_generation_has_positive_ground; frozen Controls.lean passes newContent_by_bound output into its formation premise."
+      },
+      "interface": {
+        "output": {
+          "zh": "在生生之意义下，逐历史实际新生成给出逐历史某项新的正面根据，不要求统一形态。",
+          "en": "Under living significance, actual new generation in each history supplies some new positive ground per history without one fixed form."
+        },
+        "input": {
+          "zh": "新组合的最后一步需要把有限界限内的逐历史生成见证传递为正面根据；newContent_by_bound 已提供旧定理所需的 formed 输入。",
+          "en": "The final step consumes the inherited inference to turn per-history bounded-generation witnesses into positive ground; newContent_by_bound supplies its required formed input."
+        },
+        "conditions": {
+          "zh": "同一 admitted、before、boundedInventory 和显式生生之意义；实际执行、当前下降、交接与生成对应未被取消。",
+          "en": "The same admitted scope, before relation, boundedInventory and explicit living significance are retained, as are actual execution, local descent, handoff and generative correspondence."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OpenFutureRevision.lean"
+      }
+    },
+    {
+      "id": "continuation-condition-yields-living-significance",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "P89 调用 inventory_g0_of_unrestricted 与 livingSignificance_of_unrestricted，补齐旧正面根据的正式实例与共同运行上的形式。",
+        "en": "P89 calls inventory_g0_of_unrestricted and livingSignificance_of_unrestricted to complete the exact old positive-ground instance and its form on a shared run."
+      },
+      "interface": {
+        "output": {
+          "zh": "从意义读出的正面相关在 Unrestricted 条件下满足生生之意义（外围的 G0）。",
+          "en": "Relevance read from significance satisfies living significance (the periphery's G0) under Unrestricted."
+        },
+        "input": {
+          "zh": "原 securesNewContent_by_bound 所需的生生之意义，以及共同 Frame 中新实现取得 relevance 的条件。",
+          "en": "The living-significance premise of the original securesNewContent_by_bound and the premise giving relevance to novel realization in the shared Frame."
+        },
+        "conditions": {
+          "zh": "同一有界清单、同一新形成见证、原执行与交接条件；Unrestricted 保持显式。",
+          "en": "The same bounded inventory and novel witness, the inherited execution and handoff conditions, with Unrestricted explicit."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "practical-judgment-under-living-significance",
+      "detail": {
+        "zh": "解释关联：特定承担及损失仍须按既有原则评价；允许不同形成内容不授予任意替代权限。",
+        "en": "Interpretive connection: specific undertakings and losses remain governed by existing principles; different possible forms do not license arbitrary replacement."
+      }
+    },
+    {
+      "id": "alignment-direction-under-widening",
+      "detail": {
+        "zh": "解释关联：本结果为规则自身修订补充一个实现接口，复用已完成的对齐方向，不重证方向或普遍遵循。",
+        "en": "Interpretive connection: supplies a realization interface for revisable rules while reusing the completed alignment direction, without reproving that direction or universal compliance."
+      }
+    },
+    {
+      "id": "formed-goal-revision-continuation",
+      "detail": {
+        "zh": "已给出有比较根据的目的改变及实际接续，不再列为一般缺口。",
+        "en": "Already supplies comparatively warranted end revision and actual continuation; not a generic missing connection."
+      }
+    },
+    {
+      "id": "acquired-revision-of-pending-task",
+      "detail": {
+        "zh": "已有在途工作改写，原历史损失与支持成本保留。",
+        "en": "Existing pending-task rewriting retains historical loss and support costs."
+      }
+    },
+    {
+      "id": "pending-task-context-applicability",
+      "detail": {
+        "zh": "已有作用前复查；任务保留仍不等于需求满足，具体应用另审。",
+        "en": "Existing pre-action checking retains its scope; keeping a task is not satisfying the need, and concrete applications require review."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean",
+      "detail": {
+        "zh": "两条分别两步完成的路线可在每步确实推进当前路线的情况下永久切换而不完成；交接把剩余证书从1重置为2。",
+        "en": "Two individually two-step finishing rules can switch forever without completion despite progress under each current rule; handoff resets the remaining certificate from 1 to 2."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean",
+      "detail": {
+        "zh": "合法证书交接可以形成不同成果；逐分支存在内容不推出所有分支同一内容。终点标签没有伦理替代权。",
+        "en": "A valid certificate handoff can lead to different formed outcomes; per-branch existence does not imply one content common to all branches. Terminal labels confer no ethical substitution authority."
+      }
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/RISK-CONDITIONING-INTEGRATION.md",
+      "detail": {
+        "zh": "发现真实失败可能要求撤回原证书。照护、休息或准备可已有正面意义，不能由特定成果未形成推出毫无价值。",
+        "en": "Discovery of real failure may require certificate retraction. Care, rest or preparation may already have positive meaning; failure of a specified outcome does not establish worthlessness."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "一项有条件组合及实质反例，非普遍生产期限、必要的正当探索形式、伦理标量、最终许可或义务。未新证实际认识开放通道、物理可靠性、唯一风险比例或所有智能必然遵循。",
+    "en": "A conditional composition with substantive counterexamples, not a universal productive deadline, necessary form of justified exploration, ethical scalar, final permission or duty. It does not newly prove executed epistemic openness, physical reliability, unique risk shares or inevitable compliance by all intelligence."
+  },
+  "validation_scope": {
+    "zh": "2026-10-14：Becoming.Bridge 的当前字节由合并检查器回执 20261013T204910.042715Z 绑定（通过：包 85 个模块，4861 项定理、6856 项声明审计，源声明公理报告全空；核心闭包 86 个模块从内置前导编译）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 Lean 4.29.1 实查10项新定理／19项声明审计：14项空依赖、5项仅 propext；98项继承定理／185项审计分别重编。1个完整生产端到消费端控制应用不另计定理。作者七项反审与 Lamport 原典限定阅读；无独立验收或新经验实验。 P89（2026-10-13）：共享检查器核查四项适配、全部空公理依赖；Bridge 共48项定理／66项源声明审计，75个包模块共4522项定理／6374项审计，另列24个继承模块；77个纯净核心模块的字节及空公理范围保持，实际运行5个Lean步骤、复用348个。无新独立成果或独立验收。",
+    "en": "14 October 2026: the current bytes of Becoming.Bridge are bound to consolidated receipt 20261013T204910.042715Z (passed: 85 package modules, 4861 theorems, 6856 declaration audits, every source declaration with an empty axiom report; the 86-module core closure compiles from the prelude). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Lean 4.29.1 checked 10 new theorems/19 declaration audits: 14 empty and 5 propext only; 98 inherited theorems/185 audits separately rebuilt. One complete producer-consumer control application is not an additional theorem. Seven author counterreviews and scoped primary-source reading of Lamport; no independent acceptance or new empirical experiment. P89 (13 October 2026): the shared checker verifies four adapters, all axiom-free. Bridge has 48 theorems/66 source declaration audits; 75 package modules have 4522 theorems/6374 audits, with 24 inherited modules separate. The 77 pure core modules retain their bytes and empty-axiom scope; 5 Lean steps ran and 348 were reused. No new independent result or independent acceptance."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OpenFutureRevision.lean",
+      "role": "provenance",
+      "sha256": "8db85bc0b7e3f9a744754d96d05d6c392dbd65a6d62e576de4fa1e89e96a64b8",
+      "declarations": [
+        "OpenFutureRevision.handed_off_progress",
+        "OpenFutureRevision.generation_by_bound",
+        "OpenFutureRevision.positive_ground_by_bound",
+        "OpenFutureRevision.each_fixed_rule_finishes",
+        "OpenFutureRevision.each_rule_local_progress",
+        "OpenFutureRevision.revising_run_stays_unfinished",
+        "OpenFutureRevision.revised_rules_can_fail_forever",
+        "OpenFutureRevision.revision_resets_remaining",
+        "OpenFutureRevision.changed_form_with_valid_handoff",
+        "OpenFutureRevision.realized_form_need_not_be_fixed"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/ContinuationRenewal.lean",
+      "role": "provenance",
+      "sha256": "8b0754f2a63414a40aab814ac962effaaab47c1bc83e0e28a5f93b5f902d4f3c",
+      "declarations": [
+        "ContinuationRenewal.renewal_within_rank_bound"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositiveGroundUncertainty.lean",
+      "role": "provenance",
+      "sha256": "86ff096d42b7246b74242ba0e68ec90d3624392f14303b0dcd6e8a9c59e42fcd",
+      "declarations": [
+        "PositiveGroundUncertainty.contingent_generation_has_positive_ground"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/open-future-revision-verification.json",
+      "role": "receipt",
+      "sha256": "8e672ea784ac96083e56f04bfc2c565e1440e89371013e204b639819a5f12877",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/check_open_future_revision.py",
+      "role": "provenance",
+      "sha256": "bf5c04cd1325e6aac82ce31e863f1a1bc2963348b822a4142671fd2f75aaa35b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/open-future-revision-checks/20261008T131727.086965Z/Controls.lean",
+      "role": "proof",
+      "sha256": "710110a28a4e73e7bdae5d4ddf93c829a8e9bab860a25c928eebe58ad303a536",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/RISK-CONDITIONING-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "00dcf78a080f74a1c8513c038e8ba2e6a3e1a36e8b882f906e6232dc6ba79bb1",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/CHOICE-AND-GENERATIVE-CONTEXT.md",
+      "role": "statement",
+      "sha256": "60b20bfce9699bf4154369a41c4668747b9c55a68c8ea0d1950e10cebd15c9b0",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-08-positive-generative-direction.md",
+      "role": "provenance",
+      "sha256": "38387a947e328daf06fa7806f734928d825bd322f3a6967d69b46cfb7a1370cd",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean",
+      "role": "provenance",
+      "sha256": "1c90a7f2788e21264c20a65e979ead06c0b3c5b4ce1d0b2831fe452f060eab36",
+      "declarations": [
+        "Becoming.Run.novel_by_handoff",
+        "Becoming.Run.relevance_by_handoff_of_unrestricted",
+        "Becoming.positive_ground_by_bound_of_unrestricted",
+        "Becoming.revised_generation_by_bound_of_unrestricted"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T163210.426211Z/verification.json",
+      "role": "receipt",
+      "sha256": "20a27676496da965792e40912a2754e4954496525e5641cb7d0708095235734b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T204910.042715Z/verification.json",
+      "role": "receipt",
+      "sha256": "de452d3198d581ac4310c6a92a766e30b2c9bb6b740f970f5fed373b448e6121",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T134446.673561Z/verification.json",
+      "role": "receipt",
+      "sha256": "1182d296bfd637111591eb33277de93d008f28c1436b469969810422b5f7a991",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean",
+      "role": "proof",
+      "sha256": "b062315f1166b61ea22a0b6c5b1f832378dad9ae05810b98df271639c409afc8",
+      "declarations": [
+        "Becoming.Handoff.handed_off_progress",
+        "Becoming.Handoff.newContent_by_bound",
+        "Becoming.Handoff.securesNewContent_by_bound",
+        "Becoming.Handoff.each_fixed_rule_finishes",
+        "Becoming.Handoff.each_rule_local_progress",
+        "Becoming.Handoff.revising_run_stays_unfinished",
+        "Becoming.Handoff.revised_rules_can_fail_forever",
+        "Becoming.Handoff.revision_resets_remaining",
+        "Becoming.Handoff.changed_form_with_valid_handoff",
+        "Becoming.Handoff.realized_form_need_not_be_fixed",
+        "Becoming.Handoff.Run.novel_by_handoff",
+        "Becoming.Handoff.Run.relevance_by_handoff_of_unrestricted",
+        "Becoming.Handoff.securesNewContent_by_bound_of_unrestricted",
+        "Becoming.Handoff.revised_newContent_by_bound_of_unrestricted",
+        "Becoming.Handoff.fails_forever",
+        "Becoming.Handoff.resets_remaining"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RenewalBound.lean",
+      "role": "proof",
+      "sha256": "1a59d094330c2fde22a84bfe133ab6983de83ba78aee98200206fa515b339271",
+      "declarations": [
+        "Becoming.RenewalBound.renewal_within_rank_bound"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SecuredContent.lean",
+      "role": "proof",
+      "sha256": "1dbef098b4640337d092165e7b5477e5535baa634e4f8955428ce2148b0f62da",
+      "declarations": [
+        "Becoming.SecuredContent.contingent_newContent"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T210832.866808Z/verification.json",
+      "role": "receipt",
+      "sha256": "f1dbe8ef5d0cea652a1db7e6120da7bf931376f375f0167ba1ee2ee246b5f4d3",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T090457.012800Z/verification.json",
+      "role": "receipt",
+      "sha256": "73da26fa45a43969d573d4f0f79afeaf50f1b40ecd31082bc842b017a49920b4",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Handoff",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RenewalBound.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RenewalBound",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SecuredContent.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SecuredContent",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "本条的通用有限实现及正式脊柱连接已完成；直接复用既有目的修订、在途改写和复查成果。只有具名实际案例的新需求、有效承担与作用对应才另作应用研究。NP、混合得失排序及更强规范根据不被此结项宣布解决，归统一研究范围。",
+    "en": "The generic finite realization and formal spine connection are complete. Reuse acquired-goal revision, pending-task rewriting and applicability checks. Further application work must name a concrete need, undertaking or effect correspondence. NP, mixed-loss ordering and stronger normative warrant remain in the unified programme and are not settled by this closure."
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：在已完成正面开放成果与有限更新证明之间新增正式组合；保留固定规则都终止而反复修订不终止的反例。包装推论与继承证明不重复记为独立成果。",
+      "en": "2026-10-08: adds a checked composition between completed positive-openness and finite-renewal results, preserving a counterexample where fixed rules terminate but their perpetual revision does not. Wrappers and inherited proofs are not counted as independent results."
+    },
+    {
+      "zh": "2026-10-13 P89：四项共享桥接适配关闭此前仅有审计说明的连接；已完成的通用目的修订待做项撤出。沿用本成果身份，原定理、反例、历史回执及实际对应限制保留。",
+      "en": "13 October 2026, P89: four shared adapters close the previously audit-only connection; completed generic goal-revision work is removed from next steps. The result identity, original theorems, counterexamples, historical receipts and correspondence limits remain."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：Lean 源：Bridge 只改名（及相应的文档字符串），绑定改为新回执（见检查范围）。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): Lean sources: Bridge only renamed (with the matching docstrings); bindings move to the new receipts (see validation scope). This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "en": "17 October 2026, wording: outdated labels (G0) replaced by the current vocabulary (living significance); P-numbers removed from public fields, following Ren's 17 October directive that his earlier words are provenance, not authority; the claim is unchanged."
+    },
+    {
+      "en": "17 October 2026, source reconciliation after relabelling (Ren's 17 October directive: earlier words are provenance, not authority): CHOICE-AND-GENERATIVE-CONTEXT.md now uses the current vocabulary (living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I, section 6 retitled), with delegation and process markers removed and every earlier anchor kept. The integrator compared the change and found relabelling only; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, F3J, the port of the judgment and comparison family into the core (Ren: \"work with other sessions, totally resolve these extra/ugly bridges, and move toward to the direction of unification\"): the core counterparts of the cited periphery and bridge declarations are cited (14 in Becoming.Handoff; 1 in Becoming.PositiveGround; 1 in Becoming.RenewalBound), graded in development/bridge-fold/port-j.md; the periphery stays cited until the sweep retires it. Canonical source moved from OpenFutureRevision.lean to Handoff.lean. A port restates; the claim is unchanged.",
+      "zh": "2026年10月18日，F3J 将判断与比较族移入核心：引用其核心对应声明，规范来源随之移动。移植只是重述，论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: Handoff.generation_by_bound (now Handoff.newContent_by_bound); Handoff.positive_ground_by_bound (now Handoff.securesNewContent_by_bound); Handoff.positive_ground_by_bound_of_unrestricted (now Handoff.securesNewContent_by_bound_of_unrestricted); Handoff.revised_generation_by_bound_of_unrestricted (now Handoff.revised_newContent_by_bound_of_unrestricted); PositiveGround (now SecuredContent); PositiveGround.contingent_generation (now SecuredContent.contingent_newContent); PositiveGround.lean (now SecuredContent.lean); g0_of_unrestricted (now livingSignificance_of_unrestricted); generation_by_bound (now newContent_by_bound); positive_ground_by_bound (now securesNewContent_by_bound). Proof bindings (Handoff.lean, SecuredContent.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Handoff.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; SecuredContent.lean, the module and namespace PositiveGround renamed SecuredContent, contingent_generation* contingent_newContent*, the binder positive relevance; statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：改名：Handoff.generation_by_bound（现为 Handoff.newContent_by_bound）；Handoff.positive_ground_by_bound（现为 Handoff.securesNewContent_by_bound）；Handoff.positive_ground_by_bound_of_unrestricted（现为 Handoff.securesNewContent_by_bound_of_unrestricted）；Handoff.revised_generation_by_bound_of_unrestricted（现为 Handoff.revised_newContent_by_bound_of_unrestricted）；PositiveGround（现为 SecuredContent）；PositiveGround.contingent_generation（现为 SecuredContent.contingent_newContent）；PositiveGround.lean（现为 SecuredContent.lean）；g0_of_unrestricted（现为 livingSignificance_of_unrestricted）；generation_by_bound（现为 newContent_by_bound）；positive_ground_by_bound（现为 securesNewContent_by_bound）。证明绑定（Handoff.lean、SecuredContent.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Handoff.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；SecuredContent.lean，模块与命名空间 PositiveGround 改名为 SecuredContent，contingent_generation* 现为 contingent_newContent*，约束变量 positive 现为 relevance；陈述不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 13 bookkeeping notes condensed from 14 October 2026 to 19 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/11b8ff92007a86fb/open-form-realization-under-revision.json and in git.",
+      "zh": "2026-10-20：13 条记账性说明合并（14 October 2026 至 19 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/11b8ff92007a86fb/open-form-realization-under-revision.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge, ContinuationRenewal, OpenFutureRevision and PositiveGroundUncertainty) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Handoff, Becoming.RenewalBound, Becoming.SecuredContent and Controls). The retired modules' content is also stated in Becoming.PositiveGround, which this record does not cite with declarations. 4 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge, ContinuationRenewal, OpenFutureRevision and PositiveGroundUncertainty）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Handoff, Becoming.RenewalBound, Becoming.SecuredContent and Controls）。退役模块的内容也陈述于 Becoming.PositiveGround，本记录未以声明引用它们。4 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added, completion decided among its conditions, and the claim restated on the core laws (realization within B + 1 steps along a run with handed-off certificates; under the continuation condition, the relevance read from significance; the witnesses of revision failing for ever and of a form not fixed); the hypothesis on significance names the continuation condition instead of the retired G0 and round; the four retired Bridge aliases replaced by the core Handoff names; the two Lean counterexamples re-pointed from the periphery file to the core witnesses; then the retired label G0 in the two dependency interfaces replaced by living significance, the periphery's G0 named where the Lean predicate is meant (inventory_g0_of_unrestricted kept). No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述（完成可判定列为其条件之一），主张按核心规律重述（移交证书的运行在 B + 1 步之内实现；在延续条件下落在由意义读出的相关性之下；修订永不完成与形式不固定的见证）；关于意义的假设改称延续条件，不再用退役的 G0 与轮次；四个退役的 Bridge 别名改为核心 Handoff 名称；两个 Lean 反例由外围文件改指核心见证；随后两项依赖接口中已退役的标签 G0 改为生生之意义，指 Lean 谓词处写明外围的 G0（inventory_g0_of_unrestricted 保留）。规律未变。"
+    }
+  ]
+}

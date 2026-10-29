@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "finite-fallible-inquiry-necessity",
   "title": {
     "zh": "可错科学辨别的必要信息条件",
@@ -8,11 +8,160 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F11",
-  "reviewed_at_utc": "2026-10-13T13:04:43.138900+00:00",
-  "claim": {
-    "zh": "有限加权辨别的作答覆盖不超过两类错误与证据差异之和；保持相同读数的适应关系不能同时达到更强指标。接到原生同律平衡历程后，在所列起点和完整耦合条件下，覆盖不超过两类错误与回应关系可达权重之和；全部不可达时覆盖恰等于两类错误。对平衡前提的检验：相同未计入交换足以保持原生不可达处经耦合无别与作答相同，绝对平衡是特例；遗漏交换可保留正确读数，却使机制界失去前提，补记差额不自动恢复响应条件。",
-    "en": "Finite weighted discrimination has commitment coverage at most two error weights plus evidence separation; readout-preserving adaptive relations cannot meet stronger service claims. Composed with native balanced courses of one law, under the stated starting and complete-coupling conditions, coverage is at most two errors plus responsive-reach weight; entirely beyond reach, coverage equals the two errors. A test of balance: common residual exchange suffices for native beyond-reach likeness through the couplings and answer equality, with absolute balance as a special case; omitted exchange can preserve correct readouts while invalidating the mechanism bound, and counting the residual does not automatically restore response."
+  "reviewed_at_utc": "2026-10-28T11:46:32+00:00",
+  "statement": {
+    "en": "Over finitely many weighted alternatives with a binary target, committed coverage is at most the two error weights plus the weight the evidence separates; for balanced courses of one law, at most the two errors plus the weight within responsive reach, equal to them entirely beyond reach.",
+    "zh": "在有限多个加权备选与二元目标上，作答覆盖至多为两项错误权重加证据所区分的权重；接到同一律的平衡历程后，至多为两项错误加回应所及之内的权重，全部在所及之外时恰等于两项错误。"
   },
+  "laws": [
+    {
+      "en": "For listed alternatives with natural weights, each with two pieces of evidence of a type with decided equality and one answering rule giving true, false or abstention: the weight committed on the first evidence is at most the weight answered wrongly against false on it, plus that against true on the second, plus the weight of alternatives whose two pieces differ.",
+      "zh": "对权重为自然数的列出备选，各有两份等同可判定的证据与一条给出真、假或弃答的作答规则：在第一份证据上作答的权重，至多为其上对“假”答错的权重、第二份上对“真”答错的权重与两份证据不同的备选权重之和。",
+      "declarations": [
+        "Generative.ScientificInquiryNecessity.fallible_inquiry_bound",
+        "Generative.ScientificInquiryNecessity.tally",
+        "Generative.ScientificInquiryNecessity.committed",
+        "Generative.ScientificInquiryNecessity.wrong",
+        "Generative.ScientificInquiryNecessity.apart"
+      ]
+    },
+    {
+      "en": "In a table of five cases with unit weights, the first evidence false throughout and the second true on four cases, answering with the evidence commits five, errs on none against false and on one against true, with four cases apart: the bound holds with equality.",
+      "zh": "在五个单位权重的案例表中，第一份证据处处为假、第二份在四例为真，按证据作答作答五例，对“假”无错、对“真”错一例，四例证据不同：此界以等式成立。",
+      "declarations": [
+        "Generative.ScientificInquiryNecessity.sharp_fallible_witness"
+      ]
+    },
+    {
+      "en": "Abstaining on every case of a list with unit weights commits no weight and errs on none.",
+      "zh": "在单位权重的列表上处处弃答，作答权重为零，也无错误。",
+      "declarations": [
+        "Generative.ScientificInquiryNecessity.abstention_is_not_discrimination"
+      ]
+    },
+    {
+      "en": "From two weight tables p0 and p1 over listed evidence and one answering rule, with no pairing chosen: committed p0-weight is at most the p0-weight answered wrongly against false, plus the p1-weight answered wrongly against true, plus the summed excess of p0 over p1 in natural subtraction.",
+      "zh": "由列出证据上的两张权重表 p0、p1 与一条作答规则，不选配对：p0 下的作答权重至多为 p0 下对“假”答错的权重、p1 下对“真”答错的权重与 p0 超出 p1 之量（自然数减法）的和。",
+      "declarations": [
+        "Generative.ScientificInquiryNecessity.distributional_coverage_bound"
+      ]
+    },
+    {
+      "en": "For two weight tables p0 and p1 over listed evidence, answering true exactly where p0 ≤ p1 makes the two error weights sum to the overlap, the sum of min(p0, p1), and the overlap plus the excess of p0 over p1 is the total weight of p0.",
+      "zh": "对列出证据上的两张权重表 p0、p1，恰在 p0 ≤ p1 处答“真”，使两项错误权重之和等于重叠，即 min(p0, p1) 之和；重叠加 p0 超出 p1 之量等于 p0 的总权重。",
+      "declarations": [
+        "Generative.ScientificInquiryNecessity.likelihoodRead",
+        "Generative.ScientificInquiryNecessity.likelihood_attains_overlap",
+        "Generative.ScientificInquiryNecessity.overlap_plus_excess"
+      ]
+    },
+    {
+      "en": "For listed alternatives with natural weights and one map per alternative applied to both pieces of its evidence, equality decided on both types: the weight of alternatives whose processed evidence differs is at most the weight whose evidence differs.",
+      "zh": "对权重为自然数的列出备选，每个备选以同一映射处理其两份证据，两种类型的等同均可判定：处理后证据不同的备选权重，至多为原证据不同的备选权重。",
+      "declarations": [
+        "Generative.ScientificInquiryNecessity.common_processing_cannot_add_difference"
+      ]
+    },
+    {
+      "en": "For two step rules on possibly different state types and a relation every step preserves under a common input, related starts stay related along every input list; over listed weighted alternatives with related starts and related states read alike, committed weight equals the two error weights, so no coverage c is met within error bounds b0, b1 with b0 + b1 < c.",
+      "zh": "对可在不同状态类型上的两条步规则与一个在共同输入下每步保持的关系，相关的起点沿每个输入列表保持相关；在起点相关、相关状态读数相同的加权列出备选上，作答权重恰等于两项错误权重，故 b0 + b1 < c 时没有覆盖 c 能在错误界 b0、b1 内达到。",
+      "declarations": [
+        "Generative.ScientificInquiryNecessity.run_preserves_relation",
+        "Generative.ScientificInquiryNecessity.adaptive_blindness_bound",
+        "Generative.ScientificInquiryNecessity.adaptive_service_excludes_blindness"
+      ]
+    },
+    {
+      "en": "For two balanced courses with the same formations present at every step, alike initial levels on what couples into formations beyond the part's responsive reach, and the rest responding through its couplings: a reader beyond that reach answers alike under every readout giving alike on histories alike through its couplings up to some step; different answers make its being beyond reach impossible.",
+      "zh": "对两个平衡历程，每步在场形成相同，耦合入部分回应所及之外形成者的初始水平相同，其余部分经其耦合回应：所及之外的读者，在每个于经其耦合至某步相同的水平史上给出相同的读出下答案相同；不同答案使它在所及之外成为不可能。",
+      "declarations": [
+        "Becoming.FallibleInquiry.answer_alike_beyond_response",
+        "Becoming.FallibleInquiry.different_answers_not_beyond"
+      ]
+    },
+    {
+      "en": "For two balanced courses with the same formations present at every step, alike initial levels on what couples into formations beyond the part's responsive reach, and both following outside the part one exchange law that reads through the couplings: a reader beyond that reach answers alike under every readout giving alike on histories alike through its couplings up to some step.",
+      "zh": "对两个平衡历程，每步在场形成相同，耦合入部分回应所及之外形成者的初始水平相同，且部分之外两者遵从同一经耦合而读的交换律：所及之外的读者，在每个于经其耦合至某步相同的水平史上给出相同的读出下答案相同。",
+      "declarations": [
+        "Becoming.FallibleInquiry.answer_alike_beyond_law"
+      ]
+    },
+    {
+      "en": "Over listed alternatives with natural weights, each a pair of balanced courses, the same formations present, alike initial levels on what couples in beyond the varying part's reach and one exchange law through the couplings outside it, answers read through the reader's couplings up to its time, reach decided: committed weight is at most the errors (first on false, second on true) plus the weight within reach.",
+      "zh": "权重为自然数的列出备选，每个是一对平衡历程：在场形成相同，变化部分所及之外耦合入者初始水平相同，部分之外遵从同一经耦合的交换律；答案经读者至其时刻的耦合读出，所及可判定：作答权重至多为错误（前者对“假”、后者对“真”）加所及之内的权重。",
+      "declarations": [
+        "Becoming.FallibleInquiry.coverage_le_errors_add_reach",
+        "Becoming.FallibleInquiry.error_bounds_require_reach"
+      ]
+    },
+    {
+      "en": "Over listed alternatives with natural weights, each a pair of balanced courses, the same formations present, alike initial levels on what couples in beyond the varying part's reach and one exchange law through the couplings outside it, answers read through the reader's couplings up to its time, with no decision: where every reader lies beyond reach, committed weight equals the two error weights.",
+      "zh": "权重为自然数的列出备选，每个是一对平衡历程：在场形成相同，变化部分所及之外耦合入者初始水平相同，部分之外遵从同一经耦合的交换律；答案经读者至其时刻的耦合读出，无需判定：每个读者都在所及之外时，作答权重恰等于两项错误权重。",
+      "declarations": [
+        "Becoming.FallibleInquiry.beyond_reach_coverage_eq_errors"
+      ]
+    },
+    {
+      "en": "Counting each course's residual exchange as one more relatum into which nothing couples, every region closed under the original coupling, enlarged by the relatum, stays closed; for two balanced courses the two relata exchange alike at every step and condition.",
+      "zh": "把每个历程的余项交换计为一个无物耦合入的新增关系项，凡在原耦合下封闭的区域，并入该关系项后仍封闭；两个平衡历程的两个新增项在每步每条件上交换相同。",
+      "declarations": [
+        "Becoming.FallibleInquiry.observeWithResidual",
+        "Becoming.FallibleInquiry.regionWithResidual",
+        "Becoming.FallibleInquiry.residual_couples_nothing",
+        "Becoming.FallibleInquiry.closed_with_imbalance",
+        "Becoming.FallibleInquiry.common_imbalance_of_balanced"
+      ]
+    },
+    {
+      "en": "For two courses, not taken as balanced, with the same formations present at every step, alike initial levels on what couples in beyond the part's responsive reach, the rest responding through its couplings, and residual giving and taking alike at every step and condition: every formation beyond that reach is alike through its couplings at every step, and every readout through them up to a step answers alike.",
+      "zh": "对两个不设为平衡的历程，每步在场形成相同，部分回应所及之外耦合入者初始水平相同，其余部分经其耦合回应，且余项的给与取在每步每条件上相同：所及之外的每个形成在每步经其耦合相同，经这些耦合至某步读出的每个读出都给出相同答案。",
+      "declarations": [
+        "Becoming.FallibleInquiry.alike_with_common_imbalance",
+        "Becoming.FallibleInquiry.answer_alike_with_common_imbalance"
+      ]
+    },
+    {
+      "en": "In Witness a formation gives at every step, in one course only, to a condition coupled into a distinct reader: both courses balance and follow one exchange law reading through the couplings, the reader starts alike, lies within the giver's reach and answers false and true correctly at step one; a constant answer through the same couplings errs on the second course.",
+      "zh": "在 Witness 中，一个形成只在一个历程中每步给予一个耦合入另一读者的条件：两历程平衡并遵从同一经耦合而读的交换律，读者起点相同、在给予者所及之内，于第一步正确答出“假”与“真”；经同一耦合的常量答案在第二个历程上答错。",
+      "declarations": [
+        "Becoming.FallibleInquiry.Witness.balanced",
+        "Becoming.FallibleInquiry.Witness.law_through",
+        "Becoming.FallibleInquiry.Witness.follows",
+        "Becoming.FallibleInquiry.Witness.read_through",
+        "Becoming.FallibleInquiry.Witness.connected",
+        "Becoming.FallibleInquiry.Witness.correct_answers",
+        "Becoming.FallibleInquiry.Witness.ignored_signal"
+      ]
+    },
+    {
+      "en": "Describing both courses of Witness by the first course's exchanges leaves no exchange at all and puts the reader beyond reach, and fails balance on the second course's levels though the same law still holds there; the answers stay correct, and the coverage bound with zero reach weight fails.",
+      "zh": "用第一个历程的交换描述 Witness 的两个历程：没有任何交换，读者落在所及之外，对第二个历程的水平平衡不成立，但同一律在那里仍成立；答案仍然正确，而所及权重取零的覆盖界不成立。",
+      "declarations": [
+        "Becoming.FallibleInquiry.Witness.omitted_exchange_none",
+        "Becoming.FallibleInquiry.Witness.omitted_exchange_no_reach",
+        "Becoming.FallibleInquiry.Witness.omitted_exchange_unbalanced",
+        "Becoming.FallibleInquiry.Witness.omitted_exchange_follows",
+        "Becoming.FallibleInquiry.Witness.omitted_exchange_keeps_task"
+      ]
+    },
+    {
+      "en": "Counting the residual of Witness's omitted description as one more relatum balances both courses, its giving at step 0 being 0 in the first and 1 in the second; with the relatum outside the varying part, response through the couplings fails, and counted among the differences it reaches the reader.",
+      "zh": "把 Witness 遗漏描述的余项计为一个新增关系项，两个历程都平衡，其第 0 步的给予在第一个为 0、第二个为 1；该关系项在变化部分之外时，经耦合的回应不成立；算入差异时，它到达读者。",
+      "declarations": [
+        "Becoming.FallibleInquiry.Witness.counted_residual_balances",
+        "Becoming.FallibleInquiry.Witness.counted_residual_differs",
+        "Becoming.FallibleInquiry.Witness.counted_residual_not_response",
+        "Becoming.FallibleInquiry.Witness.counted_residual_reaches"
+      ]
+    },
+    {
+      "en": "The omitted description of Witness's second course is unbalanced, with residual giving 1 at step 0; paired with itself its residual is common, so a common residual can be nonzero where balance fails.",
+      "zh": "Witness 第二个历程的遗漏描述不平衡，其余项在第 0 步给予 1；与自身配对时余项共同，故平衡不成立处共同余项可以非零。",
+      "declarations": [
+        "Becoming.FallibleInquiry.Witness.common_nonzero_imbalance"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "二元目标意义、有限自然数权重表和完整实际可用输入；概率解释另需两侧同一正总量。",
@@ -35,13 +184,81 @@
       "en": "The reach-weight indicator uses an explicit reach decision; the qualitative beyond-reach conclusion and the exact identity entirely beyond reach need none. Actual target labels, paired weights and completeness of access retain correspondence obligations."
     },
     {
-      "zh": "P94定性推广不要求各原流平衡，改为两条历程的未计入给予和取得逐步逐条件相同；保留在场形成、相关初态、其余回应及完整读数条件。不把此充分条件称为最小必要条件。",
-      "en": "P94’s qualitative generalization replaces balance of each original flow with equality of their residual giving and taking at every step and condition; retains presence, relevant initial levels, response and complete readout conditions. This sufficient condition is not claimed minimal or necessary."
+      "zh": "定性推广不要求各原流平衡，改为两条历程的未计入给予和取得逐步逐条件相同；保留在场形成、相关初态、其余回应及完整读数条件。不把此充分条件称为最小必要条件。",
+      "en": "The qualitative generalization replaces balance of each original flow with equality of their residual giving and taking at every step and condition; retains presence, relevant initial levels, response and complete readout conditions. This sufficient condition is not claimed minimal or necessary."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Being within responsive reach does not make a difference arrive by the answer time: reach closes exchanges over whole courses, possibly later than the answer or out of order.",
+      "zh": "在回应所及之内不使区别在作答时刻前到达：所及是对整个历程交换的闭包，可能晚于作答或次序不合。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "No necessity of the whole core for every science follows from these bounds.",
+      "zh": "这些界不推出整个核心对一切科学的必要性。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The common-residual form gives answer equality beyond reach only: it gives no weighted bound under common residuals and no least sufficient condition.",
+      "zh": "共同余项形式只给出所及之外的答案相同：不给出共同余项下的加权界，也不给出最小充分条件。",
+      "kind": "scope"
+    },
+    {
+      "en": "Correct prediction from a description with an exchange omitted does not make that description a rival to the complete mechanism explanation.",
+      "zh": "遗漏一项交换的描述仍能正确预测，不使它成为完整机制说明的对手。",
+      "kind": "non-implication",
+      "witness": "Becoming.FallibleInquiry.Witness.omitted_exchange_keeps_task"
+    },
+    {
+      "en": "A lucky correct answer does not make the answering reliable on both alternatives.",
+      "zh": "偶然答对不使作答在两种备选上都可靠。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The bound takes the inputs as complete: an application that omits actual inputs falls outside it.",
+      "zh": "此界把输入取为完整：遗漏实际输入的应用不在其内。",
+      "kind": "scope"
+    },
+    {
+      "en": "Differently informative initial records violate the common start, and an application cannot silently exclude them.",
+      "zh": "不同信息量的初始记录违反共同起点，应用不能悄然排除它们。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
+      "detail": {
+        "zh": "原生例子中不同形成读取共享条件可以正确辨别；同一可达关系下忽略信号仍答错，故可达不充分。",
+        "en": "A distinct native reader can discriminate a shared condition; ignoring the same reachable signal still errs, so reach is not sufficient."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
+      "detail": {
+        "zh": "omitted_exchange_keeps_task 保留正确作答但遗漏交换使平衡和所计可达失效；补计差额后若新增项留在变化部分之外，其响应条件失败，若算入差异来源则可达恢复。common_nonzero_imbalance 给出不平衡处的非零余项，与自身配对时共同。",
+        "en": "omitted_exchange_keeps_task retains correct answers while omitted exchange invalidates balance and represented reach. After counting the residual, response fails if it remains outside the varying part; including it among the differences restores reach. common_nonzero_imbalance witnesses a nonzero residual where balance fails, common when the course is paired with itself."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "decidability",
+    "no-ethical-premise-core-axiom-free",
+    "omission-not-refutation",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked, periphery. The current bytes of ScientificInquiryNecessity are bound to receipt 20261008T135418.446592Z (check_scientific_inquiry_necessity.py), those of the bridge Becoming.FallibleInquiry to receipt 20261020T161546.707477Z (check_fallible_inquiry.py), both Lean 4.29.1. The cited declarations use at most propext and Quot.sound, some none; the pure core imports neither module. No empirical experiment or independent review.",
+    "zh": "机器检查，外围。ScientificInquiryNecessity 当前字节绑定回执 20261008T135418.446592Z（check_scientific_inquiry_necessity.py），桥接 Becoming.FallibleInquiry 绑定回执 20261020T161546.707477Z（check_fallible_inquiry.py），均为 Lean 4.29.1。所引声明至多用 propext 与 Quot.sound，部分不用；纯核心不导入二者。无经验实验或独立审查。"
+  },
+  "next_delta": {
+    "en": "Extend the weighted bound to courses whose residual exchange is common but nonzero, and find the least condition under which answers beyond responsive reach agree.",
+    "zh": "把加权界推广到余项交换共同而非零的历程，并找出回应所及之外答案相同的最小条件。"
+  },
   "correspondence": {
-    "zh": "从同一展开分化出变化部分、耦合和回应。新接续由共同脊柱的实际交换、耦合闭包和同律响应推出统计限制；科学任务先用覆盖与错误说明，不定义为接受本理论。结构可达是完整历程交换的闭包，不等于作答前逐时传递的因果路径。 P94固定同一原生任务，对比完整与遗漏交换的描述；缺失关系是解释缺口，不是整个现实缺少关系的证据。",
-    "en": "The varying part, coupling and response differentiate within one unfolding. The new composition derives the statistical restriction through the shared spine’s exchanges, coupling closure and common-law response. The scientific achievement is independently specified by coverage and error, not acceptance of this theory. Structural reach closes exchanges over whole courses, rather than identifying a time-ordered causal path by answer time. P94 fixes the same native task and compares complete versus omitted-exchange descriptions; the missing relation is an explanatory omission, not evidence of an unrelated reality."
+    "zh": "从同一展开分化出变化部分、耦合和回应。新接续由共同脊柱的实际交换、耦合闭包和同律响应推出统计限制；科学任务先用覆盖与错误说明，不定义为接受本理论。结构可达是完整历程交换的闭包，不等于作答前逐时传递的因果路径。遗漏见证固定同一原生任务，对比完整与遗漏交换的描述；缺失关系是解释缺口，不是整个现实缺少关系的证据。",
+    "en": "The varying part, coupling and response differentiate within one unfolding. The new composition derives the statistical restriction through the shared spine’s exchanges, coupling closure and common-law response. The scientific achievement is independently specified by coverage and error, not acceptance of this theory. Structural reach closes exchanges over whole courses, rather than identifying a time-ordered causal path by answer time. The omission witness fixes the same native task and compares complete versus omitted-exchange descriptions; the missing relation is an explanatory omission, not evidence of an unrelated reality."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/ScientificInquiryNecessity.lean",
   "aliases": [
@@ -129,37 +346,6 @@
     }
   ],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONDITIONS.md",
-      "detail": {
-        "zh": "不作答可无错误但无辨别覆盖；正确猜中不能保证两侧可靠，遗漏实际输入会使应用失效。",
-        "en": "Abstention can avoid errors without discrimination coverage; a lucky answer does not ensure two-case reliability, and omitted actual inputs invalidate an application."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
-      "detail": {
-        "zh": "原生例子中不同形成读取共享条件可以正确辨别；同一可达关系下忽略信号仍答错，故可达不充分。不同初始证据不满足共同起点，不能被排除后当反例。",
-        "en": "A distinct native reader can discriminate a shared condition; ignoring the same reachable signal still errs, so reach is not sufficient. Differently informative initial records violate common start and cannot be silently excluded from an application."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
-      "detail": {
-        "zh": "omitted_exchange_keeps_task 保留正确作答但遗漏交换使平衡和所计可达失效；补计差额后若新增项留在变化部分之外，其响应条件失败，若算入差异来源则可达恢复。common_nonzero_imbalance 证明共同余项可非零。",
-        "en": "omitted_exchange_keeps_task retains correct answers while omitted exchange invalidates balance and represented reach. After counting the residual, response fails if it remains outside the varying part; including it among the differences restores reach. common_nonzero_imbalance witnesses nonzero common residuals."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "保留有限自然权重、完整输入、共同规则及真实概率对应条件。原生接续另限于所列平衡、在场形成与初态条件；结构可达可能含未来或次序不合的边，不证明作答前逐时传递，亦不保证读懂或使用区别。未证明整个核心的科学普遍必要性。 P94只推广定性不可辨别，不声称已形式化对应加权界或得出最小条件。描述未写全仍预测成功，不构成完整机制说明的充分对手。",
-    "en": "Retains finite natural weights, complete inputs, a common rule and actual probability correspondence. The native adapter adds its balance, presence and initial-record conditions; structural reach may include future or wrongly ordered edges and does not prove time-ordered transmission by answer time or successful understanding/use. Science-wide necessity of the whole core is unproved. P94 generalizes qualitative blindness only; it claims neither a newly formalized weighted bound nor a least-condition result. Predictive success with an incomplete description is not an adequate rival to a complete mechanism explanation."
-  },
-  "validation_scope": {
-    "zh": "2026-10-16：Becoming.FallibleInquiry 的当前字节由回执 20261016T120403.241963Z 绑定（通过，31 项定理、37 项声明审计）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 原统计18／27及P92/P94冻结回执保持。P104仅追加3项逐时接续，另记 timely-response-necessity；原28项定理声明及证明逐字保留。当前外围31定理／37声明，20空、17仅 propext 与 Quot.sound，无 Classical.choice；43继承模块来源绑定。纯核心不导入外围，无经验或独立评审。",
-    "en": "16 October 2026: the current bytes of Becoming.FallibleInquiry are bound to receipt 20261016T120403.241963Z (passed, 31 theorems, 37 declaration audits). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Original statistical 18/27 and P92/P94 receipts retained. P104 appends three timed adapters registered as timely-response-necessity; all original 28 statements and proofs are byte-preserved. Current periphery: 31 theorems / 37 declarations, 20 empty and 17 using only propext and Quot.sound, no Classical.choice; 43 inherited modules source-bound. Pure core does not import it; no empirical or independent review."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/ScientificInquiryNecessity.lean",
@@ -174,7 +360,13 @@
         "Generative.ScientificInquiryNecessity.likelihood_attains_overlap",
         "Generative.ScientificInquiryNecessity.overlap_plus_excess",
         "Generative.ScientificInquiryNecessity.common_processing_cannot_add_difference",
-        "Generative.ScientificInquiryNecessity.sharp_fallible_witness"
+        "Generative.ScientificInquiryNecessity.sharp_fallible_witness",
+        "Generative.ScientificInquiryNecessity.tally",
+        "Generative.ScientificInquiryNecessity.committed",
+        "Generative.ScientificInquiryNecessity.wrong",
+        "Generative.ScientificInquiryNecessity.apart",
+        "Generative.ScientificInquiryNecessity.likelihoodRead",
+        "Generative.ScientificInquiryNecessity.abstention_is_not_discrimination"
       ]
     },
     {
@@ -321,10 +513,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "逐时连接现已另行完成；科学基础目标继续检验初始证据与实际命令执行的配对根据。原统计、结构及共同余项结论保持。",
-    "en": "The timed connection is now completed separately; the foundation target continues testing initial-evidence and actual command-execution pairing. Original statistical, structural and common-residual conclusions remain."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有 I1/I2 及不作答论证，并新增有限权重形式证据和适应接续；18项新形式定理不是18项独立发现。",
@@ -354,6 +542,28 @@
     {
       "en": "2026-10-20: 7 bookkeeping notes condensed from 2026-10-13 to 17 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/cdaaecc8fafcb0bd/finite-fallible-inquiry-necessity.json and in git.",
       "zh": "2026-10-20：7 条记账性说明合并（2026-10-13 至 17 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/cdaaecc8fafcb0bd/finite-fallible-inquiry-necessity.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement written from the home section; the claim split into seventeen laws, each read against its declarations in ScientificInquiryNecessity.lean and FallibleInquiry.lean (the finite bound and its sharp witness, abstention, the direct marginal bound and the likelihood overlap, common processing, adaptive blindness, the structural answer laws, the weighted bound and its blind equality, the residual relatum, the common-residual form, and the Witness, omission and counted-residual witnesses); the limitations to seven does-not-show items, the premises to hypotheses (the round number removed from the sixth) and the standard boundaries decidability, no-ethical-premise-core-axiom-free, omission-not-refutation and formal-not-empirical; the first counterexample, which no declaration witnesses, to a law (abstention) and two does-not-show items, the second's unwitnessed sentence to a does-not-show item, the third's last sentence narrowed to what common_nonzero_imbalance proves (the residual is common when the course is paired with itself); tally, committed, wrong, apart, likelihoodRead and abstention_is_not_discrimination added to ScientificInquiryNecessity.lean's references; the round number removed from the correspondence; next_delta replaced by the step the common-residual form leaves; no premise, status or source hash changed. Every earlier sentence is mapped in [finite-fallible-inquiry-necessity.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/finite-fallible-inquiry-necessity.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依本节写出陈述；主张拆为十七条规律，各条对照 ScientificInquiryNecessity.lean 与 FallibleInquiry.lean 中的声明核读（有限界及其精确见证、弃答、直接边缘界与似然重叠、共同处理、适应盲性、结构答案律、加权界及其全盲等式、余项关系项、共同余项形式，以及 Witness、遗漏与补记余项见证）；限制改为七条“未表明”，前提归入假设（删去第六条中的轮次编号），并引用通用边界 decidability、no-ethical-premise-core-axiom-free、omission-not-refutation、formal-not-empirical；第一个反例无声明见证，改为一条规律（弃答）与两条“未表明”，第二个反例中无见证的一句改为“未表明”，第三个反例末句按 common_nonzero_imbalance 所证收窄（历程与自身配对时余项共同）；tally、committed、wrong、apart、likelihoodRead 与 abstention_is_not_discrimination 加入 ScientificInquiryNecessity.lean 的引用；删去对应说明中的轮次编号；next_delta 换为共同余项形式留下的一步；前提、状态与来源哈希均未改变。每句旧文本的去向见 [finite-fallible-inquiry-necessity.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/finite-fallible-inquiry-necessity.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/40db62f3f536f60d/finite-fallible-inquiry-necessity.json",
+      "sha256": "40db62f3f536f60dd2a4ec62a6c77f88a224abb7535086d608c1657ab12a6418",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/cdaaecc8fafcb0bd/finite-fallible-inquiry-necessity.json",
+      "sha256": "cdaaecc8fafcb0bda2d7fa56a74b92b1d4e5abc355011359f522342b5f2a0551",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

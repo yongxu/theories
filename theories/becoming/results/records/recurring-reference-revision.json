@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "recurring-reference-revision",
   "title": {
     "zh": "活动形成并重现参考修订",
@@ -8,25 +8,188 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-13T21:30:54.975650+00:00",
-  "claim": {
-    "zh": "存量的一般规律（Becoming.Stock）支配持续的修订：沿平衡过程的每个运行，任意晚的汲取需要任意晚的补充；循环无尽重复需要回补覆盖其汲取。ContinuingRevision 是其实例，延伸 ReferencePlan 的操作：燃料对每个动作的用量与更替的回补平衡（balanced）；断供时任何控制器都没有无尽运行（no_run_without_return）；沿每个产出下的每个运行，更替复现，更替只由下一地址上的成功启用，所以成功活动复现（renew_recurs、renew_needs_enabled、enabled_by_success、success_recurs）。燃料储备与产出成为参数后，存在一个起点使任意多轮循环都可行，恰当产出覆盖每轮用去的 9 单位（repeats_iff），对每个产出成立。产出为 9 的见证中，空方法及参考装置经实际失败、取得、安装和使用形成；每一后继位置的失配都修改方法、取得双参考、安装并成功使用；统一控制器中存在实际无限 Run，精确衔接形成历史，每轮累计用量与回补不清零（continuing、formed_and_continues）。冻结、断供、储备消耗和旧区分退役保留实际失败与损失。",
-    "en": "The general laws of stock (Becoming.Stock) govern continuing revision: along every run of a balanced process, drawing at arbitrarily late steps needs replenishment at arbitrarily late steps, and unending repetition of a cycle needs its return to cover its draw. ContinuingRevision is an instance, extending ReferencePlan’s operations. Its fuel is balanced against what each act uses and what renewal returns (balanced); with the return cut, no unending run exists under any controller (no_run_without_return); along every run at every yield renewal recurs, renewal is enabled only by a successful undertaking at the next address, and so successful activity recurs (renew_recurs, renew_needs_enabled, enabled_by_success, success_recurs). With the fuel held in reserve and the yield as parameters, the cycle repeats for every number of rounds from some configuration exactly where the yield covers the nine units a round uses (repeats_iff), at every yield. In the witnesses at yield nine, actual failure, acquisition, installation and use form a reference apparatus from empty retention; mismatch at every successor revises the method and yields newly acquired, installed and successfully used references; an actual infinite Run obeys one controller and connects exactly to the formation trace, with cumulative amounts used and returned (continuing, formed_and_continues). Frozen methods, cut return, reserve expenditure and retired distinctions retain failures and losses."
+  "reviewed_at_utc": "2026-10-28T11:47:48+00:00",
+  "statement": {
+    "en": "Along every run of a balanced process, drawing at arbitrarily late steps needs replenishment at arbitrarily late steps, and a cycle repeatable any number of times returns at least what it draws. In a revision process the cycle so repeats exactly where its yield covers the nine units a round uses.",
+    "zh": "沿平衡过程的每个运行，任意晚的汲取需要任意晚的补充；可任意多次重复的循环，其回补覆盖其汲取。在修订过程中，循环可任意多次重复，恰当其产出覆盖每轮用去的 9 单位。"
   },
+  "laws": [
+    {
+      "en": "For any process, a natural-number stock σ with a draw and a replenishment for each move is balanced where across every step σ after it plus the move's draw equals σ before it plus its replenishment. Along every run of a balanced process, where positive draws occur at arbitrarily late steps, so do positive replenishments; where σ stays within a bound along the run, the two recur together.",
+      "zh": "对任一过程，每个动作带汲取与补充的自然数存量 σ 是平衡的，是指每一步之后的 σ 加该动作的汲取等于之前的 σ 加其补充。沿平衡过程的每个运行，正的汲取出现在任意晚的步时，正的补充亦然；σ 沿运行有界时，二者一同复现。",
+      "declarations": [
+        "Becoming.Stock.Balanced",
+        "Becoming.Run.replenishes_of_draws",
+        "Becoming.Run.draws_iff_replenishes"
+      ]
+    },
+    {
+      "en": "In a process with a balanced natural-number stock, where every cycle of a sequence of courses draws D and replenishes R in total, and every finite number of cycles is executable from one configuration, D ≤ R.",
+      "zh": "在带平衡自然数存量的过程中，若一列路径的每个循环总共汲取 D、补充 R，且从同一构型出发任意有限多个循环都可执行，则 D ≤ R。",
+      "declarations": [
+        "Becoming.Stock.cycles_need"
+      ]
+    },
+    {
+      "en": "In the stock process, where each move draws what it draws from what is held and then replenishes, one course can be repeated any number of times from stock n exactly where its first pass is covered from n (each draw within the stock then standing) and its total replenishment is at least its total draw.",
+      "zh": "在存量过程中（每个动作从所持中汲取，再补充），一条路径可从存量 n 任意多次重复，恰当其首次通过从 n 被覆盖（每次汲取不超过当时的存量）且其总补充不少于总汲取。",
+      "declarations": [
+        "Becoming.Stock.repeat_covered_iff"
+      ]
+    },
+    {
+      "en": "ContinuingRevision adds renewal at a yield to ReferencePlan's operations: a successful undertaking at the next address enables one renewal, which, taken only where enabled, outside installation and with fuel held, uses one unit of fuel, returns the yield, moves to the next carrier, keeps the reference installed for it and retires the old contact. At every yield the fuel is a balanced stock for these uses and returns.",
+      "zh": "ContinuingRevision 以更替扩展 ReferencePlan 的操作，产出为参数：下一地址上的一次成功启用一次更替；更替只在被启用、不在安装中且有燃料时进行，用去 1 单位燃料、回补产出、转到下一承载位置、保留为它安装的参考并退役旧接触。在每个产出下，对这些用量与回补，燃料都是平衡存量。",
+      "declarations": [
+        "Becoming.ContinuingRevision.execute",
+        "Becoming.ContinuingRevision.P",
+        "Becoming.ContinuingRevision.use",
+        "Becoming.ContinuingRevision.returned",
+        "Becoming.ContinuingRevision.step_conserves",
+        "Becoming.ContinuingRevision.balanced"
+      ]
+    },
+    {
+      "en": "Every act of ContinuingRevision uses at least one unit of fuel, so at yield 0, with the return cut, the process has no run at all, under any controller.",
+      "zh": "ContinuingRevision 的每个动作至少用去 1 单位燃料，所以产出为 0（回补被切断）时，该过程在任何控制器下都没有运行。",
+      "declarations": [
+        "Becoming.ContinuingRevision.use_pos",
+        "Becoming.ContinuingRevision.no_run_without_return"
+      ]
+    },
+    {
+      "en": "Along every run of ContinuingRevision at every yield, renewal occurs at arbitrarily late steps; a renewal step starts only where renewal is enabled, and a step leaves renewal enabled only where it performs an undertaking that responds successfully; so successful undertakings occur at arbitrarily late steps of every run.",
+      "zh": "沿 ContinuingRevision 在每个产出下的每个运行，更替出现在任意晚的步；更替只从已被启用处开始，一步只在执行一项回应成功的任务时使更替被启用；所以成功的任务出现在每个运行任意晚的步。",
+      "declarations": [
+        "Becoming.ContinuingRevision.renew_recurs",
+        "Becoming.ContinuingRevision.renew_needs_enabled",
+        "Becoming.ContinuingRevision.enabled_by_success",
+        "Becoming.ContinuingRevision.success_recurs"
+      ]
+    },
+    {
+      "en": "The revision cycle is seven operations: a failed undertaking at the next address, revision, two contacts, installation, a successful use and renewal; it uses nine units and returns the yield. At every yield, some configuration has every number of cycles executable from it exactly where the yield is at least nine; at a yield of e + 9 each cycle adds e to the reserve held.",
+      "zh": "修订循环是七个操作：下一地址上一次失败的任务、修订、两次接触、安装、一次成功使用与更替；它用去 9 单位并回补产出。在每个产出下，存在一个构型使任意多个循环都可执行，恰当产出至少为 9；产出为 e + 9 时，每个循环使所持储备增加 e。",
+      "declarations": [
+        "Becoming.ContinuingRevision.word",
+        "Becoming.ContinuingRevision.history",
+        "Becoming.ContinuingRevision.word_use",
+        "Becoming.ContinuingRevision.word_return",
+        "Becoming.ContinuingRevision.readyAt",
+        "Becoming.ContinuingRevision.one_cycle_at",
+        "Becoming.ContinuingRevision.cycles_at",
+        "Becoming.ContinuingRevision.cycles_need_yield",
+        "Becoming.ContinuingRevision.repeats_iff"
+      ]
+    },
+    {
+      "en": "At yield nine, from a seed with no retained method, no installed reference and fifteen units of fuel, five operations (an undertaking, revision, a contact, installation and a successful use) reach the ready configuration of carrier 0, and the selected controller then carries out every number of cycles; at carrier n nine units are held, 9n + 6 have been used and 9n received.",
+      "zh": "产出为 9 时，从没有保留方法、没有已安装参考、有 15 单位燃料的种子出发，五个操作（一项任务、修订、一次接触、安装与一次成功使用）到达承载位置 0 的就绪构型，所选控制器随后执行任意多个循环；在承载位置 n，所持为 9 单位，累计用去 9n + 6，收到 9n。",
+      "declarations": [
+        "Becoming.ContinuingRevision.seed",
+        "Becoming.ContinuingRevision.formation",
+        "Becoming.ContinuingRevision.formation_enters",
+        "Becoming.ContinuingRevision.all_cycles",
+        "Becoming.ContinuingRevision.formed_and_continues",
+        "Becoming.ContinuingRevision.all_cycles_amounts"
+      ]
+    },
+    {
+      "en": "At yield nine, at every carrier n the revised method contacts addresses n + 1 and n, while the ready method holds n alone; through the references installed, the selection at address n + 1 becomes available, which the ready configuration of carrier n lacks, and the selection at address n, available after installation, is lost at carrier n + 1.",
+      "zh": "产出为 9 时，在每个承载位置 n，修订后的方法接触地址 n + 1 与 n，就绪方法只含 n；经已安装的参考，地址 n + 1 上的选择成为可用，承载位置 n 的就绪构型没有它；安装后可用的地址 n 上的选择，到承载位置 n + 1 时丧失。",
+      "declarations": [
+        "Becoming.ContinuingRevision.method_changed",
+        "Becoming.ContinuingRevision.new_available_choice",
+        "Becoming.ContinuingRevision.retired_choice"
+      ]
+    },
+    {
+      "en": "At yield nine there is one infinite run of the selected controller, a clock enumerating the seven operations already checked: at step 7n it stands at the ready configuration of carrier n, at step 7n + 5 at the installed one, and it starts where the formation from the seed arrives.",
+      "zh": "产出为 9 时，所选控制器有一个无限运行，由一个时钟枚举已检查的七个操作：在第 7n 步它处于承载位置 n 的就绪构型，在第 7n + 5 步处于已安装构型，其起点是从种子出发的形成所到之处。",
+      "declarations": [
+        "Becoming.ContinuingRevision.continuing",
+        "Becoming.ContinuingRevision.clock_step",
+        "Becoming.ContinuingRevision.run_at_cycle",
+        "Becoming.ContinuingRevision.run_installs",
+        "Becoming.ContinuingRevision.unbounded_succession",
+        "Becoming.ContinuingRevision.formation_to_run"
+      ]
+    },
+    {
+      "en": "Controls: at yield nine renewal is refused at a ready configuration, where no success has enabled it; at yield 0 renewal after a success leaves no fuel, and the next undertaking cannot be taken; at carrier 0, one extra use of fuel before the cycle makes the tight reserve fail it, and after the failure, freezing the method, then contacting, installing, undertaking at address 1 and renewing fails.",
+      "zh": "对照：产出为 9 时，在没有成功启用的就绪构型上更替被拒绝；产出为 0 时，成功后的更替不留燃料，下一项任务不能进行；在承载位置 0，循环前多用一次燃料，紧的储备便使循环失败；失败后冻结方法，再接触、安装、在地址 1 执行任务并更替，这一序列失败。",
+      "declarations": [
+        "Becoming.ContinuingRevision.no_return_without_success",
+        "Becoming.ContinuingRevision.cut_return",
+        "Becoming.ContinuingRevision.cut_stops_next",
+        "Becoming.ContinuingRevision.reserve_consumed",
+        "Becoming.ContinuingRevision.frozen_plan_no_return"
+      ]
+    }
+  ],
   "hypotheses": [
     {
-      "zh": "P99 的可寻址二值接触、可靠实际返回、参考绑定、稳定对应、修订律及检查安装操作继续给定。",
-      "en": "P99’s addressed Boolean contacts, faithful return, bound references, stable correspondence, revision and checked-installation operations remain supplied."
+      "zh": "ReferencePlan 的可寻址二值接触、可靠实际返回、参考绑定、稳定对应、修订律及检查安装操作继续给定。",
+      "en": "ReferencePlan's addressed Boolean contacts, faithful return, bound references, stable correspondence, revision and checked-installation operations remain supplied."
     },
     {
       "zh": "共同活动按当前承载位置取得下一任务；下一地址上的实际成功使一次更替可行，用一次。更替用去 1 并取得产出（见证中为 9），保留已安装的后继参考并退役旧接触。",
       "en": "The supplied policy addresses the next locus; an actual success at the next address enables one renewal, used once. Renewal uses one unit and returns the yield (nine in the witnesses), retains the installed successor reference and retires the old contact."
     },
     {
-      "zh": "计数装置对生产支承开放；接触与承载位置的物理对应、更替和储存能力均为局部条件，不声称封闭有限存量无限持续。",
-      "en": "The counted installation is open to productive support. Physical contact/succession correspondence, replacement and storage are local premises; a finite closed stock is not claimed to continue forever."
+      "zh": "计数装置对生产支承开放：产出是给定的生产律；接触与承载位置的物理对应、更替和储存能力均为局部条件。",
+      "en": "The counted installation is open to productive support: the yield is a supplied production law, and physical contact/succession correspondence, replacement and storage are local premises."
+    },
+    {
+      "zh": "存量、汲取、补充与产出都是自然数。",
+      "en": "The stock, draws, replenishments and yields are natural numbers."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Formation and continuing revision are shown under the supplied production, renewal and task laws, not under every disturbance, demand or physical realization.",
+      "zh": "形成与持续修订是在给定的生产、更替与任务律下表明的，不是在每种扰动、需求或物理实现下。",
+      "kind": "scope"
+    },
+    {
+      "en": "A finite closed stock is not shown to continue without end: with the return cut no run exists, and the yield is supplied.",
+      "zh": "不表明有限封闭存量能无尽持续：回补被切断时没有运行，产出是给定的。",
+      "kind": "scope",
+      "witness": "Becoming.ContinuingRevision.no_run_without_return"
+    },
+    {
+      "en": "These laws give no arbitrary sensing primitives, no universal basins of attraction and no compilation of all older material models.",
+      "zh": "由这些规律不推出任意感知原语、普遍吸引盆地，也不推出全部较早材料模型的编译。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Continuing is not warrant: the laws give no normative warrant for the revision they describe.",
+      "zh": "持续不是根据：这些规律不为其所述修订给出规范根据。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean",
+      "detail": {
+        "zh": "cut_return/cut_stops_next 是 P 9 与 P 0 的配对回返干预；reserve_consumed 与 frozen_plan_no_return 是 P 9 内的真实替代执行；retired_choice 证明区分损失。 no_run_without_return 把断供写成规律：产出为 0 时任何控制器都没有无尽运行。",
+        "en": "cut_return/cut_stops_next compare the return relation in P 9 and P 0; reserve_consumed and frozen_plan_no_return are genuine alternatives within P 9; retired_choice proves a lost distinction. no_run_without_return states the cut as a law: at yield 0 no controller runs without end."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "discrete-steps",
+    "zero-axiom-target-open"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked with Lean 4.29.1 by the consolidated core checker (check_becoming.py): the current bytes of Becoming.ContinuingRevision, Becoming.Stock and Becoming.Prelude are bound to core receipts 20261019T213206.644158Z, 20261019T231053.882924Z and 20261021T133545.845568Z under becoming-checks/, and every cited declaration has an empty axiom report. Earlier core receipts (becoming-checks/) and periphery receipts (correction-inquiry-checks/) checked the same statements under former names. Author counterreview; no independent-agent or empirical acceptance.",
+    "zh": "Lean 4.29.1 合并核心检查器（check_becoming.py）实查，ContinuingRevision、Stock 与 Prelude 的当前字节绑定 becoming-checks/ 下核心回执 20261019T213206.644158Z、20261019T231053.882924Z 与 20261021T133545.845568Z，所引声明公理报告皆空。较早核心回执（同目录）与外围回执（correction-inquiry-checks/）以旧名查过同一陈述。作者反审；无独立或经验验收。"
+  },
+  "next_delta": {
+    "en": "Give an application's contacts, carriers and production relation with their correspondence evidence, and prove for which disturbances of contact and supply its revision cycle still repeats.",
+    "zh": "给出应用中的接触、承载位置与生产关系及其对应证据，并证明在哪些接触与供给扰动下其修订循环仍可重复。"
+  },
   "correspondence": {
     "zh": "观察、方法、回应、生产与承载是同一关系展开的作用。承载索引伴随实际新地址、失败、参考及使用改变；编号本身不是物质重建证明。时钟只枚举逐步已证符合 choose 的行为，不新增支持或外部选择。",
     "en": "Observation, method, response, production and carriers are roles in one unfolding. The carrier index accompanies new addressed activity, failure, reference construction and use; a counter alone does not prove material reconstruction. The clock enumerates actions already proved to follow choose, without external support or selection."
@@ -83,23 +246,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean",
-      "detail": {
-        "zh": "cut_return/cut_stops_next 是 P 9 与 P 0 的配对回返干预；reserve_consumed 与 frozen_plan_no_return 是 P 9 内的真实替代执行；retired_choice 证明区分损失。 no_run_without_return 把断供写成规律：产出为 0 时任何控制器都没有无尽运行。",
-        "en": "cut_return/cut_stops_next compare the return relation in P 9 and P 0; reserve_consumed and frozen_plan_no_return are genuine alternatives within P 9; retired_choice proves a lost distinction. no_run_without_return states the cut as a law: at yield 0 no controller runs without end."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "证明指定开放生产律和任务政策下的形成与持续修订；不保证所有扰动、需求、物理实现或所有旧选择。不是任意装置原语的起源、普遍吸引盆地、整个旧材料模型的编译、规范根据或更强无实质前提目标。",
-    "en": "Proves formation and continuing revision under specified open production and task laws, not all disturbances, demands, physical realizations or preservation of every old selection. It does not derive arbitrary sensor primitives, universal basins, a compilation of all older material models, normative warrant or the stronger premise-free programme."
-  },
-  "validation_scope": {
-    "zh": "2026-10-14：Becoming.ContinuingRevision、Becoming.Stock 的当前字节由合并检查器回执 20261013T204910.042715Z 绑定（通过：包 85 个模块，4861 项定理、6856 项声明审计，源声明公理报告全空；核心闭包 86 个模块从内置前导编译）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 核心20261013T125907.288531Z实际通过：36定理／62源声明空公理报告，纯核心从前导编译；外围20261013T130233.156038Z通过。作者逐项反审和旧表述整合，无独立代理或经验验收。 本任务的独立提交内容再经核心 20261013T131556.258659Z、外围 20261013T131750.258973Z、完整成果检查及49项基础设施测试通过，未收入并行会话内容。",
-    "en": "14 October 2026: the current bytes of Becoming.ContinuingRevision, Becoming.Stock are bound to consolidated receipt 20261013T204910.042715Z (passed: 85 package modules, 4861 theorems, 6856 declaration audits, every source declaration with an empty axiom report; the 86-module core closure compiles from the prelude). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Core 20261013T125907.288531Z passed: 36 theorems/62 source declarations with empty axiom reports, pure prelude compilation; peripheral 20261013T130233.156038Z passed. Author counterreview and historical reconciliation, without independent-agent or empirical acceptance. The owned-only commit tree additionally passes core 20261013T131556.258659Z, peripheral 20261013T131750.258973Z, full registry checks and all 49 infrastructure tests, excluding concurrent active work."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean",
@@ -325,10 +471,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "所要求的形成—分化—方法及候选修订—使用—受支持接续的理论整合已完成。具体应用另须对应证据；对公开前提或交接的新反例会重开受影响结论。",
-    "en": "The requested formation–differentiation–method/candidate revision–use–supported continuation integration is complete. Applications need their own correspondence evidence; new counterexamples to premises or handoffs would reopen the affected claim."
-  },
   "history": [
     {
       "zh": "P103 延续原研究并直接复用 P93/P99；不把重复回执或理论综述计为另一独立机制。",
@@ -373,6 +515,28 @@
     {
       "en": "2026-10-20: 121 bookkeeping notes condensed from 14 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/8f28faff67f7e325/recurring-reference-revision.json and in git.",
       "zh": "2026-10-20：121 条记账性说明合并（14 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/8f28faff67f7e325/recurring-reference-revision.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement written from the claim and the home section; the claim split into eleven laws, each read against its declarations in Stock.lean and ContinuingRevision.lean (the general laws of stock, the renewal process, its laws and the witnesses and controls at yield nine); the renewal enabled \"at the next address\" kept as the definition's content, the theorem saying only that a successful undertaking enables it; the limitations to three does-not-show items and the shared boundary zero-axiom-target-open (the premise-free programme), one clause carried by the counterexample, with no-ethical-premise and discrete-steps cited; the hypotheses name ReferencePlan in place of a round number, move the clause on a finite closed stock to a fourth does-not-show item and add that amounts are natural numbers; validation scope rewritten to the bound receipts, next step stated positively; no status, source hash or reference changed. Every earlier sentence is mapped in [recurring-reference-revision.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/recurring-reference-revision.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依主张与主章节写出陈述；主张拆为十一条规律，各条对照 Stock.lean 与 ContinuingRevision.lean 中的声明核读（存量的一般规律、更替过程、其规律，以及产出为 9 时的见证与对照）；更替由“下一地址上”的成功启用，作为定义的内容保留，定理只说成功的任务启用它；限制改为三条“未表明”与通用边界 zero-axiom-target-open（无前提纲领），其中一个分句由反例承载，并引用 no-ethical-premise 与 discrete-steps；前提以 ReferencePlan 代替轮次编号，把有限封闭存量一句移为第四条“未表明”，并加入数量为自然数；检查范围按所绑定的回执改写，下一步以正面陈述；状态、来源哈希与引用均未改变。每句旧文本的去向见 [recurring-reference-revision.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/recurring-reference-revision.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、规律，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/10e33c3ad2348a26/recurring-reference-revision.json",
+      "sha256": "10e33c3ad2348a2652662195ddc8ec5791a35692cd4b203c35261074785b44a2",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/8f28faff67f7e325/recurring-reference-revision.json",
+      "sha256": "8f28faff67f7e325b7b9ecdeb8393670ba4496036929035067ebfa2ff31f8419",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

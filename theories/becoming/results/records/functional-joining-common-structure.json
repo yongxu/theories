@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "functional-joining-common-structure",
   "title": {
     "zh": "单值接合的共同操作结构",
@@ -8,17 +8,80 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F22",
-  "reviewed_at_utc": "2026-10-08T13:52:31.763955+00:00",
-  "claim": {
-    "zh": "固定输入对的结果至多一个时，两份精确且约简的全情境说明具有相同的诱导部分操作，并在已用代码上有唯一的同片段对齐对应。",
-    "en": "When a fixed input pair has at most one result, two exact reduced accounts of all joining contexts carry the same induced partial operation, with a unique same-fragment-aligned correspondence on used codes."
+  "reviewed_at_utc": "2026-10-28T11:47:48+00:00",
+  "statement": {
+    "en": "Where a pair of fragments joins into at most one fragment, two descriptions whose codes identify exactly the fragments passing the same tests each read a functional joining of codes, aligned one to one on used codes, the alignment carrying one reading onto the other.",
+    "zh": "一对片段至多结合成一个片段时，编码恰好认同通过相同检验之片段的两个描述，各自读出编码上的函数性结合，在已用编码上一一对齐，对齐把一个读法带到另一个。"
   },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "Functional J；全部有限单孔接合情境；双方 Exact 与 Reduced。",
-      "en": "Functional J; all finite single-hole joining contexts; Exact and Reduced for both accounts."
+      "en": "A joining is functional where each pair joins into at most one fragment. Read through a description, codes a and b join into c where fragments with those codes join into one with code c; a code is used where some fragment has it, and codes of two descriptions are aligned where one fragment has both.",
+      "zh": "结合是函数性的，是指每对至多结合成一个片段。经描述读出，编码 a 与 b 结合成 c，是指具这些编码的片段结合成编码为 c 者；一编码被使用，是指某片段有它；两个描述的编码对齐，是指同一片段兼有二者。",
+      "declarations": [
+        "Becoming.Joining.Functional",
+        "Becoming.Joining.image",
+        "Becoming.Used",
+        "Becoming.Aligned"
+      ]
+    },
+    {
+      "en": "For a functional joining and two descriptions whose codes are equal exactly for fragments passing the same tests of the joining's frame (the same courses of joinings open from each): each reads a functional joining of codes, each used code of either is aligned with exactly one code of the other, and aligned codes join in one reading exactly where their aligned codes join in the other. No other premise, no finiteness.",
+      "zh": "对函数性结合，以及编码恰对通过结合框架相同检验（自各自出发开放相同的结合路径）的片段相等的两个描述：各自读出编码上的函数性结合，任一方的每个已用编码恰与另一方的一个编码对齐，对齐的编码在一个读法中结合，恰当其对齐编码在另一读法中结合。无其他前提，不需有限性。",
+      "declarations": [
+        "Becoming.Joining.common_operation"
+      ]
+    },
+    {
+      "en": "A context is a finite arrangement of partners joined on the left or right around a hole; it realizes what its course of joinings reaches from what fills the hole, and is possible for a fragment where it realizes something from it. Two fragments agree on contexts exactly where they pass the same tests of the joining's frame.",
+      "zh": "情境是在一个孔周围从左或右结合伙伴的有限排列；它实现其结合路径从填孔者所到达者，对一个片段可能，是指它从该片段实现某物。两个片段在情境上一致，恰当它们通过结合框架的相同检验。",
+      "declarations": [
+        "Becoming.Joining.Context",
+        "Becoming.Joining.Context.Realizes",
+        "Becoming.Joining.Context.Possible",
+        "Becoming.Joining.ContextSame",
+        "Becoming.Joining.ContextSame.iff_sameTests"
+      ]
+    },
+    {
+      "en": "A presentation is exact where each configuration's code reads its answers, and reduced where configurations answering alike get one code; an exact reduced presentation gives two configurations one code exactly where they answer alike.",
+      "zh": "表述是精确的，是指每个构型的编码读出其答案；是约简的，是指答案相同的构型得到同一编码；精确且约简的表述给两个构型同一编码，恰当它们答案相同。",
+      "declarations": [
+        "Becoming.Presentations.Exact",
+        "Becoming.Presentations.Reduced",
+        "Becoming.Presentations.reduced_exact_kernel"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "A functional joining; the questions are all finite single-hole joining contexts; both descriptions are exact and reduced for them, so that their codes are equal exactly for fragments agreeing on contexts.",
+      "zh": "函数性结合；问题是全部有限单孔结合情境；两个描述对它们都精确且约简，从而其编码恰对在情境上一致的片段相等。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The common operation does not recover the fragments' internal histories.",
+      "zh": "共同操作不恢复片段的内部历史。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "No uniqueness of whole worlds follows: the alignment is unique on used codes.",
+      "zh": "不推出整个世界的唯一性：对齐只在已用编码上唯一。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked with Lean 4.29.1 by the consolidated core checker (check_becoming.py): Becoming.Joining bound to becoming-checks/20261020T051144.879480Z, Becoming.Presentations to becoming-checks/20261019T231053.882924Z and Becoming.JoiningContexts to becoming-checks/20261019T213206.644158Z, every cited declaration with an empty axiom report. The superseded periphery ExplanatoryContextualStructure and JoiningBridge are provenance; the earlier receipt (explanatory-joining-contexts-checks/) keeps its scope.",
+    "zh": "Lean 4.29.1 合并核心检查器实查：Joining 绑定 becoming-checks/20261020T051144.879480Z，Presentations 绑定 20261019T231053.882924Z，JoiningContexts 绑定 20261019T213206.644158Z，所引声明公理报告皆空。已被取代的两个外围模块是来源；其较早回执（explanatory-joining-contexts-checks/）保持原范围。"
+  },
+  "next_delta": {
+    "en": "Translate what remains, tests and formation between descriptions with different internal syntax, telling semantic tests apart from tests a formation has actually acquired.",
+    "zh": "在内部语法不同的描述之间翻译余项、检验与形成，区分语义检验与形成实际取得的检验。"
+  },
   "correspondence": {
     "zh": "片段、接合及其检验解释同一活动内的关系；数学语义不等于所有问题已被实际取得。",
     "en": "Fragments, joining and its questions interpret relations within the same activity; mathematical semantics does not establish acquired access to every answer."
@@ -74,23 +137,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/EXPLANATORY-JOINING-CONTEXTS-INTEGRATION.md",
-      "detail": {
-        "zh": "不要求结果纤维的另加有限性；不恢复内部历史。多结果扩展改变检验范围，不能反写旧定理或宣称全部世界唯一。",
-        "en": "No separate finite-fiber premise; internal histories are not recovered. The multivalued extension changes the test scope and neither rewrites this theorem nor establishes uniqueness of whole worlds."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "不要求结果纤维的另加有限性；不恢复内部历史。多结果扩展改变检验范围，不能反写旧定理或宣称全部世界唯一。",
-    "en": "No separate finite-fiber premise; internal histories are not recovered. The multivalued extension changes the test scope and neither rewrites this theorem nor establishes uniqueness of whole worlds."
-  },
-  "validation_scope": {
-    "zh": "所列 Lean 源码与成功冻结回执逐字哈希绑定；本轮223项审计含26项新声明。旧功能性定理信用此前166项回执，未冒充新证明。",
-    "en": "Listed Lean sources bind by exact hash to successful frozen receipts. This round checks 223 declarations including 26 new ones. The older functional theorem credits its previous 166-audit receipt, not a new proof."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryContextualStructure.lean",
@@ -105,7 +151,11 @@
       "role": "proof",
       "sha256": "a813f8c3528874519a721d0704d20ebeef907c03ac1acce153695fdc0c99083c",
       "declarations": [
-        "Becoming.Joining.ContextSame.iff_sameTests"
+        "Becoming.Joining.ContextSame.iff_sameTests",
+        "Becoming.Joining.Context",
+        "Becoming.Joining.Context.Realizes",
+        "Becoming.Joining.Context.Possible",
+        "Becoming.Joining.ContextSame"
       ]
     },
     {
@@ -113,7 +163,9 @@
       "role": "proof",
       "sha256": "2f142d63b722ca50e4231f3b17e8a73b4636f72207a05ca4c58e9eb2ce79848f",
       "declarations": [
-        "Becoming.Presentations.reduced_exact_kernel"
+        "Becoming.Presentations.reduced_exact_kernel",
+        "Becoming.Presentations.Exact",
+        "Becoming.Presentations.Reduced"
       ]
     },
     {
@@ -133,7 +185,11 @@
       "role": "proof",
       "sha256": "21ba2468426712d6c8410ad2d7960675a6e561cfa07d43ab6782cf9ffc2b10a6",
       "declarations": [
-        "Becoming.Joining.common_operation"
+        "Becoming.Joining.common_operation",
+        "Becoming.Joining.Functional",
+        "Becoming.Joining.image",
+        "Becoming.Used",
+        "Becoming.Aligned"
       ]
     },
     {
@@ -211,10 +267,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用有限条件程序与真实余项恢复；继续建立内部语法不同的说明之间余项、判断与实际形成关系的有据翻译，区分语义可判定与实际取得。",
-    "en": "Reuse finite guarded programs and coherent residual recovery; establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition."
-  },
   "history": [
     {
       "zh": "2026-10-08：在既有接合情境研究中接续；已完成结果分别迁移，新连接与复用分列。",
@@ -243,6 +295,28 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryContextualStructure and JoiningBridge) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Joining, Becoming.JoiningContexts and Becoming.Presentations). The retired modules' content is also stated in Becoming.JoiningCodes, which this record does not cite with declarations. 2 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryContextualStructure and JoiningBridge）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Joining, Becoming.JoiningContexts and Becoming.Presentations）。退役模块的内容也陈述于 Becoming.JoiningCodes，本记录未以声明引用它们。2 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement written from the claim and the home section, in the form the core law has (descriptions whose codes identify exactly the fragments passing the same tests); the claim split into four laws, each read against its declarations in Joining.lean, JoiningContexts.lean and Presentations.lean (the definitions, the common operation, contexts agreeing exactly where tests agree, and the kernel of an exact reduced presentation), the old claim's exact reduced accounts of contexts being their composition; the limitations, repeated as the only counterexample, which no declaration witnesses, to two does-not-show items, the absence of a finite-fiber premise to the law and the multivalued extension to the related link it already has; Functional, image, Used, Aligned, Context, Context.Realizes, Context.Possible, ContextSame, Exact and Reduced added to their files' references; the shared boundary no-ethical-premise cited; no premise, status or source hash changed. Every earlier sentence is mapped in [functional-joining-common-structure.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/functional-joining-common-structure.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依主张与主章节写出陈述，取核心规律的形式（编码恰好认同通过相同检验之片段的描述）；主张拆为四条规律，各条对照 Joining.lean、JoiningContexts.lean 与 Presentations.lean 中的声明核读（定义、共同操作、情境一致恰是检验一致、精确约简表述的核），旧主张中对情境精确且约简的说明是这些规律的组合；限制（也重复为唯一的反例，无声明见证）改为两条“未表明”，不需结果纤维有限性一句归入规律，多结果扩展归入已有的相关链接；Functional、image、Used、Aligned、Context、Context.Realizes、Context.Possible、ContextSame、Exact 与 Reduced 加入其文件的引用；引用通用边界 no-ethical-premise；前提、状态与来源哈希均未改变。每句旧文本的去向见 [functional-joining-common-structure.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/functional-joining-common-structure.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/05205141b41359bc/functional-joining-common-structure.json",
+      "sha256": "05205141b41359bc2d16a28899d4d2b9c47104d960f60d67df2a597ede9c3dbe",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/b5472a159d77905d/functional-joining-common-structure.json",
+      "sha256": "b5472a159d77905dd4c8c9a822cba5108f06aeca48ec2a193033357cf84951bc",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

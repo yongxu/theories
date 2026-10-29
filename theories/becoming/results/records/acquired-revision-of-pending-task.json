@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "acquired-revision-of-pending-task",
   "title": {
     "zh": "取得的目的修订进入在途任务",
@@ -8,21 +8,125 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F03",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
-  "claim": {
-    "zh": "对每条带计数工作的部分律，待完成任务恰在剩余工作加一次中完成，更短的运行都使它仍待完成；待完成与已交付互斥，所以更短的运行都不交付。在既有版本化交付不变量下，改写队首包的剩余编码保持其已捕获路线、进度与其余工作，所以修订后的队首对新请求仍是这样的任务，剩余工作相同、完成次数相同。对每个条件与每个有队首待完成的有效装置，取得的修订恰在有根据处进入在途任务：取得、修订、改革、改写与交付恰在访问有损而转变维护保留时运行，这正是比较认可学习优于参与的条件；端点随后执行新做法，保留历史上的一次损失、不再增加，并使用实际工作支持，终于三条记录与工作、储备、已用单位 (2, 6, 10)。先前的组合是其在 harmful 条件下的实例；协议自身给出两条作用规律、目的编码与工作单位。",
-    "en": "For every partial law with counted work, a pending task finishes in exactly its remaining work plus one tick, every shorter run leaves it pending, and, pending and delivered being exclusive, no shorter run delivers it. Under the existing versioned-delivery invariant, rewriting the head packet's remaining encoding preserves its captured route, progress and other work, so the revised head is again such a task for the new request, with the same remaining work and the same number of ticks. For every condition and every valid installation with a pending head, acquired revision reaches the pending task exactly where it is warranted: acquisition, revision, reform, the rewrite and its delivery run exactly under access loss with kept transition maintenance, the condition under which the comparison warrants learning over attendance; the endpoint then enacts the new practice, retains the one historical loss, adds none and uses actual work support, ending with three records and the work, reserve and used units (2, 6, 10). The earlier composition is its instance at the harmful conditions; the protocol itself supplies the two outcome laws, the goal encoding and the work units."
+  "reviewed_at_utc": "2026-10-28T12:06:07+00:00",
+  "statement": {
+    "en": "A pending task with counted work finishes in its remaining work plus one tick exactly where its fuel covers them; in the versioned task protocol, rewriting a pending head keeps its route and progress, and acquired revision reaches it exactly under access loss with kept transition maintenance.",
+    "zh": "带计数工作的待完成任务在剩余工作加一次中完成，恰当燃料足够；在版本化任务协议中，改写在途队首保持其路线与进度，取得的修订恰在访问有损而转变维护保留时进入在途任务。"
   },
+  "laws": [
+    {
+      "en": "For any partial law with counted work (while a task is pending, a tick does one unit of remaining work for one unit of fuel, finishes it when no work remains and fuel is left, and stalls without fuel): from a pending configuration, the remaining work plus one ticks finish the task exactly when the fuel covers them, and every run of at most the remaining work leaves it pending, its work lowered by the ticks taken.",
+      "zh": "对任意带计数工作的部分律（任务待完成时，一次 tick 以一单位燃料做一单位剩余工作；无剩余工作且有燃料时完成；无燃料则停滞）：从待完成构形出发，剩余工作加一次 tick 完成任务，恰当燃料足够；至多剩余工作次数的每次运行都使它仍待完成，工作减去所走次数。",
+      "declarations": [
+        "Becoming.Countdown.CountedWork",
+        "Becoming.Countdown.completes_iff",
+        "Becoming.Countdown.pending_before"
+      ]
+    },
+    {
+      "en": "For counted work where pending and finished exclude each other, no run of at most the remaining work finishes the task; work advancing by one unit per tick, with no fuel, finishes after its remaining work plus one tick.",
+      "zh": "对待完成与已完成互斥的计数工作，至多剩余工作次数的运行都不完成任务；每次 tick 推进一单位、不计燃料的工作，在剩余工作加一次后完成。",
+      "declarations": [
+        "Becoming.Countdown.not_done_before",
+        "Becoming.Countdown.Advances",
+        "Becoming.Countdown.Advances.completes"
+      ]
+    },
+    {
+      "en": "In the versioned task protocol, the head of the queue is work advancing by one unit per tick: while it is pending (route and request kept, banks and active route unchanged, its remainder still delivering the request) a tick does one hop of its remaining path, and with none left it delivers the request and leaves the rest of the queue.",
+      "zh": "在版本化任务协议中，队首是每次 tick 推进一单位的工作：待完成时（路线与请求保持、银行与当前路线不变、其余部仍交付请求），一次 tick 走其剩余路径的一跳；无剩余时交付请求，并留下队列其余部分。",
+      "declarations": [
+        "Becoming.VersionedTaskInstances.head_advances"
+      ]
+    },
+    {
+      "en": "For an installation valid under the protocol's bank and queue invariant with a pending head, rewriting the head's encoding for a new request keeps its route, progress and the rest of the queue: the revised head is pending for the new request with the same remaining work, and after that work plus one tick it delivers the new request, the other work, banks and active route unchanged.",
+      "zh": "对满足协议银行与队列不变量、有在途队首的装置，为新请求改写队首编码保持其路线、进度与队列其余部分：修订后的队首对新请求仍待完成、剩余工作相同，经该工作加一次 tick 后交付新请求，其余工作、银行与当前路线不变。",
+      "declarations": [
+        "Becoming.VersionedTaskInstances.retarget_pending",
+        "Becoming.VersionedTaskInstances.revised_head_instance",
+        "CommonTaskRevision.revised_head_completes"
+      ]
+    },
+    {
+      "en": "For every condition and every installation valid under the invariant with a pending head, acquisition, revision, reform, the rewrite of the head, which uses one unit of work, and its delivery run exactly under access loss with kept transition maintenance; the endpoint then enacts the learning practice, keeps the one earlier loss and adds none, and ends with three records and work, reserve and used units 2, 6 and 10.",
+      "zh": "对每个条件与每个满足不变量、有在途队首的装置：取得、修订、改革、用一单位工作的队首改写及其交付，恰在访问有损而转变维护保留时运行；端点随后执行学习实践，保留先前一次损失、不再增加，终于三条记录与工作、储备、已用单位 2、6、10。",
+      "declarations": [
+        "Becoming.VersionedTaskInstances.continuation_of_completed",
+        "Becoming.VersionedTaskInstances.continuation_eq",
+        "Becoming.VersionedTaskInstances.continuation_isSome_iff"
+      ]
+    },
+    {
+      "en": "At the harmful conditions, for every installation valid under the protocol's invariant with a pending head, the inherited comparison of what each practice protects and gains ranks learning above attendance, and the continuation enacts learning with one loss, three records and units 2, 6 and 10: the earlier composition is the continuation law's instance there.",
+      "zh": "在 harmful 条件下，对每个满足协议不变量、有在途队首的装置，继承的比较（各实践所保护与所得）把学习排在参与之上，接续执行学习，一次损失、三条记录、单位 2、6、10：先前的组合是接续规律在此的实例。",
+      "declarations": [
+        "CommonTaskRevision.warranted_revision_and_pending_delivery",
+        "Becoming.VersionedTaskInstances.harmful_continuation_instance"
+      ]
+    },
+    {
+      "en": "In the versioned task protocol, wherever the rewrite of the head runs it keeps the records and the loss count and conserves the total of work, reserve and used units.",
+      "zh": "在版本化任务协议中，队首改写凡运行，都保持记录与损失计数，并守恒工作、储备与已用单位之和。",
+      "declarations": [
+        "CommonTaskRevision.paid_retarget_keeps_history"
+      ]
+    },
+    {
+      "en": "In the witnesses, without the rewrite the old route faithfully delivers the outdated request and the attendance practice adds a second loss; relabelling the request without rewriting the encoding, or writing the new value unencoded, does not deliver it; and conditions changed after acquisition, with transition maintenance lost, make the revised practice add a loss.",
+      "zh": "在见证中：不改写时旧路线忠实交付过时请求，参与实践增加第二次损失；只改请求标签而不改写编码，或直接写入未编码的新值，都不交付它；取得后处境改变、转变维护丧失时，修订后的实践增加一次损失。",
+      "declarations": [
+        "CommonTaskRevision.old_route_faithfully_executes_outdated_task",
+        "CommonTaskRevision.declaration_only_fails",
+        "CommonTaskRevision.unencoded_replacement_fails",
+        "CommonTaskRevision.stale_conditions_defeat_the_new_practice"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "二元可逆转译、有效队列与受保护的同步头请求改写，执行前无未建模的不可逆效果；连续 tick 提供完成。",
       "en": "Binary reversible translation, a valid queue and protected synchronous head rewrite; no unmodeled irreversible effects before endpoint enactment. Consecutive ticks provide completion."
     },
     {
-      "zh": "复用已取得的两实践证据、目的改变及选择改革；生生之意义与实践承诺、实际对应、权限与响应明示。新分支消耗一单位改写工作；传递维护成本没有建模。",
-      "en": "Reuse acquired two-practice evidence, changed purpose and selector reform; living significance and the practical commitments, correspondence, authority and responsiveness are explicit. The branch consumes one rewrite work unit; route-maintenance cost is not modeled."
+      "zh": "取得的两实践证据、目的改变与选择改革取自目的修订构造；生生之意义与实践承诺、实际对应、权限与响应明示。协议自身给出两条作用规律、目的编码与工作单位；改写用一单位工作。",
+      "en": "The acquired two-practice evidence, changed purpose and selector reform are those of the goal-revision construction; living significance and the practical commitments, correspondence, authority and responsiveness are explicit. The protocol itself supplies the two outcome laws, the goal encoding and the work units; the rewrite uses one unit of work."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "It shows no open formation of a joint purpose and no correction through unrestricted change.",
+      "zh": "不表明开放的共同目的形成，也不表明无限变化中的纠正。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "It derives no shared motivation, authority or task semantics beyond the two encoded practices.",
+      "zh": "不推出共同动机、权限或两种已编码实践之外的任务语义。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The work of maintaining the communication route is not modelled.",
+      "zh": "传递路线的维护工作没有建模。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/market-generativity/meta-attractor/CommonTaskRevision.lean",
+      "detail": {
+        "zh": "只改标签或直接写未编码值会失败；旧任务可被忠实执行而增加损失。取得根据后处境改变，也可使修订后的实践增加维护损失。",
+        "en": "Relabeling or writing an unencoded value can fail; the old task can be faithfully executed and add loss. Changed conditions after acquisition can also make the revised practice harm maintenance."
+      }
+    }
+  ],
+  "validation_scope": {
+    "en": "Core: the current bytes of Becoming.Countdown are bound to receipt becoming-checks/20261019T231053.882924Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for the cited declarations. Periphery: VersionedTaskInstances is bound to versioned-task-instances-checks/20261020T161926.448088Z (Lean 4.30.0-rc2; the head laws use propext, the continuation laws propext, Quot.sound and Classical.choice), CommonTaskRevision to common-task-revision-verification.json (Lean 4.30.0-rc2, import closure rebuilt; at most propext and Quot.sound).",
+    "zh": "核心：Countdown 绑定合并核心检查器回执 becoming-checks/20261019T231053.882924Z（Lean 4.29.1），公理报告皆空。外围（Lean 4.30.0-rc2）：VersionedTaskInstances 绑定 20261020T161926.448088Z，队首律用 propext，接续律另用 Quot.sound、Classical.choice；CommonTaskRevision 绑定其回执（导入闭包重建），至多 propext、Quot.sound。"
+  },
+  "next_delta": {
+    "en": "Acquire which conditions are relevant to a pending task, and continue to support the actual need when the old method no longer applies.",
+    "zh": "取得哪些处境与在途任务相关，并在旧做法不再适用时继续支持实际需要。"
+  },
   "correspondence": {
     "zh": "学习、指令与实际作用是同一活动中的关系分化；不是博弈双方。实际目标只编码为所声明的两种实践，相关处境须在应用时匹配。",
     "en": "Learning, instruction and effect are differentiated relations in one activity, not opposing players. The goal encoding covers only the two declared practices, with actual relevant conditions required to match."
@@ -64,7 +168,7 @@
       "relation": "formal-reuse",
       "detail": {
         "zh": "warranted_revision_and_pending_delivery 直接消费旧比较；continuation 消费 completed 的实际状态及储备。",
-        "en": "warranted_revision_and_pending_delivery consumes the inherited comparison; continuation consumes the actual completed state and account."
+        "en": "warranted_revision_and_pending_delivery consumes the inherited comparison; continuation consumes the actual completed state and its reserve."
       },
       "interface": {
         "output": {
@@ -83,24 +187,15 @@
       }
     }
   ],
-  "related": [],
-  "counterexamples": [
+  "related": [
     {
-      "path": "experiments/market-generativity/meta-attractor/CommonTaskRevision.lean",
+      "id": "pending-task-context-applicability",
       "detail": {
-        "zh": "只改标签或直接写未编码值会失败；旧任务可被忠实执行而增加损失。取得根据后处境改变，也可使修订后的实践增加维护损失；不证明开放共同目的形成或无限变化中的纠正。",
-        "en": "Relabeling or writing an unencoded value can fail; the old task can be faithfully executed and add loss. Changed conditions after acquisition can also make the revised practice harm maintenance. No open joint-purpose formation or correction through unrestricted change."
+        "en": "Pre-effect review that uses work, in the same versioned task protocol.",
+        "zh": "在同一版本化任务协议中、取用工作的作用前复查。"
       }
     }
   ],
-  "limitations": {
-    "zh": "只改标签或直接写未编码值会失败；旧任务可被忠实执行而增加损失。取得根据后处境改变，也可使修订后的实践增加维护损失；不证明开放共同目的形成或无限变化中的纠正。",
-    "en": "Relabeling or writing an unencoded value can fail; the old task can be faithfully executed and add loss. Changed conditions after acquisition can also make the revised practice harm maintenance. No open joint-purpose formation or correction through unrestricted change."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.30.0-rc2 实际重建导入闭包并审计；明确区分原成果和新增组合。元数据检查不替代数学证明。一般律已由检查器回执绑定。",
-    "en": "Lean 4.30.0-rc2 actually rebuilt the repository import closure and audited declarations; inherited claims and the new composition remain distinct. Metadata checks do not replace proofs. General laws: checker receipts bound."
-  },
   "references": [
     {
       "path": "experiments/market-generativity/meta-attractor/CommonTaskRevision.lean",
@@ -111,7 +206,9 @@
         "CommonTaskRevision.revised_head_completes",
         "CommonTaskRevision.stale_conditions_defeat_the_new_practice",
         "CommonTaskRevision.paid_retarget_keeps_history",
-        "CommonTaskRevision.old_route_faithfully_executes_outdated_task"
+        "CommonTaskRevision.old_route_faithfully_executes_outdated_task",
+        "CommonTaskRevision.declaration_only_fails",
+        "CommonTaskRevision.unencoded_replacement_fails"
       ]
     },
     {
@@ -146,7 +243,9 @@
         "Becoming.Countdown.Advances",
         "Becoming.Countdown.Advances.completes",
         "Becoming.Countdown.completes_iff",
-        "Becoming.Countdown.pending_before"
+        "Becoming.Countdown.pending_before",
+        "Becoming.Countdown.not_done_before",
+        "Becoming.Countdown.CountedWork"
       ]
     },
     {
@@ -229,10 +328,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "直接复用在途改写；pending-task-context-applicability 已接通取用工作的作用前复查。继续说明相关性取得和旧做法不适用时真实需求的有支持接续。",
-    "en": "Reuse pending rewriting directly; pending-task-context-applicability now connects pre-effect review that uses work. Continue acquisition of relevance and supported continuation of actual needs when the old method is inapplicable."
-  },
   "history": [
     {
       "zh": "2026-10-09：新增一项组合成果；17项定理声明／27项审计与188项继承定理／327项继承审计分别列出。作者反审已记录，未声称独立验收。",
@@ -264,6 +359,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired label G0/J in a hypothesis and a dependency's conditions named in current terms, living significance and the practical commitments. The claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：假设与一条依赖条件中的退役标签 G0/J 按现行术语称为生生之意义与实践承诺。主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement written from the claim and the home section; the claim split into eight laws, each read against its declarations in Countdown.lean, VersionedTaskInstances.lean and CommonTaskRevision.lean (counted work, its shorter runs, the head of the queue, the rewritten head, the continuation for every condition, its instance at the harmful conditions with the inherited comparison, the rewrite's kept history, the failing witnesses); the limitation, which the counterexample repeated, split: its witnessed sentences kept as the counterexample, its last sentence a does-not-show item; two more does-not-show items, one from the second hypothesis's note that route maintenance is not modelled, one from the protocol's own statement of what it does not derive; the second hypothesis restated without the instruction form, with the claim's note that the protocol supplies its outcome laws, goal encoding and work units; not_done_before and CountedWork (Countdown.lean) and declaration_only_fails and unencoded_replacement_fails (CommonTaskRevision.lean) added to their files' references; the next step's pointer to pending-task-context-applicability made a related link; in a dependency's detail \"account\" read as the reserve the Chinese names; no standard boundary cited, the hypotheses holding the practical commitments; no premise, status or source hash changed. Every earlier sentence is mapped in [acquired-revision-of-pending-task.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/acquired-revision-of-pending-task.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依主张与所在章节写出陈述；主张拆为八条规律，各条对照 Countdown.lean、VersionedTaskInstances.lean 与 CommonTaskRevision.lean 中的声明核读（计数工作、其较短运行、队首、改写后的队首、对每个条件的接续、harmful 条件下的实例及继承的比较、改写保持的历史、失败见证）；限制与反例同句，拆开：有见证的句子留作反例，末句改为一条“未表明”；另增两条“未表明”，一条来自第二条前提中“传递维护未建模”，一条来自协议自身写明的不推出者；第二条前提去掉指令形式重述，并写入主张中“协议自身给出作用规律、目的编码与工作单位”；not_done_before 与 CountedWork（Countdown.lean）及 declaration_only_fails 与 unencoded_replacement_fails（CommonTaskRevision.lean）加入其文件的引用；下一步中指向 pending-task-context-applicability 的说明改为相关链接；一项依赖说明中的 account 读作中文所写的储备；前提含实践承诺，不引用通用边界；前提、状态与来源哈希均未改变。每句旧文本的去向见 [acquired-revision-of-pending-task.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/acquired-revision-of-pending-task.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/f5c28b2eb10c8903/acquired-revision-of-pending-task.json",
+      "sha256": "f5c28b2eb10c89032c7a18204f11bdd44e591e60dd820adb8f7a31c70b7c3509",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/384523f1e5ec0477/acquired-revision-of-pending-task.json",
+      "sha256": "384523f1e5ec047714cf3ef4def0548d89debaab6cbec0cb14b255e488913f52",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

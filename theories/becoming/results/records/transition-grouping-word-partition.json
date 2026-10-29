@@ -1,19 +1,137 @@
 {
-  "schema_version": 1,
-  "kind": "theorem",
-  "status": "recorded-checked",
-  "family": "F09",
-  "reviewed_at_utc": "2026-10-14T05:50:00+00:00",
-  "related": [],
+  "schema_version": 2,
   "id": "transition-grouping-word-partition",
   "title": {
     "zh": "转移分节恢复编码词序列",
     "en": "Transition grouping recovers encoded word sequences"
   },
-  "claim": {
-    "zh": "对每个字母表与每个相邻关系 r：由右向左读，元素在 r 把它连到其后一组的首元素时并入该组，否则另起一组；分组返回一个划分，当且仅当各组非空、内部依 r 相连且不连到下一组，该划分唯一，分组不改变序列。对非空词的词汇，分组恢复每个编码序列的词，当且仅当每个词内部相连，且任何词的末元素都不连到任何词的首元素——两项都是相邻对的局部条件。以观察转移的严格多数学得的关系使每个元素至多连到一个后继。已有的分节算法与二词编码即这些定义：恢复每个二词序列恰当 a→b、c→d 相连而 b→a、b→c、d→a、d→c 不相连；idealBond 与接触史实际取得的关系是实例。",
-    "en": "For every alphabet and every adjacency relation r: reading from the right, an element joins the following group where r links it to that group's first element and opens a new group otherwise; grouping returns a partition exactly when every group is nonempty, linked by r inside and not linked to the next, that partition is unique, and grouping never changes the sequence. For a vocabulary of nonempty words, grouping recovers the words of every encoded sequence exactly when each word is linked inside and the last element of no word is linked to the first element of any word — both local conditions on adjacent pairs. A relation learned as the strict majority of observed transitions links each element to at most one successor. The existing grouping algorithm and two-word encoding are these definitions: every two-word sequence is recovered exactly when a→b and c→d are linked and b→a, b→c, d→a, d→c are not; idealBond and the relation an encounter history actually acquires are instances."
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F09",
+  "reviewed_at_utc": "2026-10-28T11:41:38+00:00",
+  "statement": {
+    "en": "Grouping by adjacency returns a partition exactly where every group is nonempty, linked inside and not linked to the next, uniquely; it recovers the words of every encoded sequence exactly where each word is linked inside and no word's end links to any word's start.",
+    "zh": "按相邻关系分组返回一个划分，恰当各组非空、内部相连且不连到下一组，该划分唯一；分组恢复每个编码序列的词，恰当每个词内部相连且没有词的末元素连到任何词的首元素。"
   },
+  "laws": [
+    {
+      "en": "For any alphabet and any Boolean adjacency relation r, grouping reads a sequence from the right: an element joins the following group where r links it to that group's first element, and opens a new group otherwise; grouping never changes the sequence, the groups joined giving it back.",
+      "zh": "对任一字母表与任一布尔相邻关系 r，分组由右向左读序列：元素在 r 把它连到其后一组的首元素时并入该组，否则另起一组；分组从不改变序列，各组连接起来就是原序列。",
+      "declarations": [
+        "Becoming.Segmentation.glue",
+        "Becoming.Segmentation.chunks",
+        "Becoming.Segmentation.join",
+        "Becoming.Segmentation.join_chunks"
+      ]
+    },
+    {
+      "en": "Grouping by r returns a list of groups L of the sequence L joins exactly where every group of L is nonempty, linked by r at each adjacent pair inside, and not linked from its last element to the next group's first; a list so grouped that joins to a sequence is the only grouping of it.",
+      "zh": "按 r 分组恰给出组列 L（就 L 连接成的序列而言），当且仅当 L 的各组非空、内部每对相邻元素依 r 相连，且组的末元素不连到下一组的首元素；如此分好、连接成某序列的组列，是该序列唯一的分组。",
+      "declarations": [
+        "Becoming.Segmentation.LinkedFrom",
+        "Becoming.Segmentation.Opens",
+        "Becoming.Segmentation.Grouped",
+        "Becoming.Segmentation.chunks_eq_iff",
+        "Becoming.Segmentation.chunks_unique"
+      ]
+    },
+    {
+      "en": "For words that are nonempty, each written as a first element followed by the rest, grouping by r recovers the words of every encoded sequence of words exactly where each word is linked by r inside and no word's last element is linked to any word's first: both are conditions on adjacent pairs.",
+      "zh": "词非空、各写成首元素加其余部分时，按 r 分组恢复每个由词编码的序列中的词，恰当每个词内部依 r 相连且没有词的末元素连到任何词的首元素：两者都是相邻对上的条件。",
+      "declarations": [
+        "Becoming.Segmentation.encode",
+        "Becoming.Segmentation.Spelled",
+        "Becoming.Segmentation.encode_iff"
+      ]
+    },
+    {
+      "en": "For elements compared decidedly, a record of observed slots, where a gap breaks adjacency, bonds x to y where more than half the transitions observed from x go to y; such a majority bond links each element to at most one successor.",
+      "zh": "元素可判定地比较时，观察槽的记录（空槽打断相邻）把 x 联结到 y，是指从 x 观察到的转移有过半到 y；这样的多数联结使每个元素至多连到一个后继。",
+      "declarations": [
+        "Becoming.Segmentation.edges",
+        "Becoming.Segmentation.departures",
+        "Becoming.Segmentation.transitions",
+        "Becoming.Segmentation.bond",
+        "Becoming.Segmentation.bond_unique"
+      ]
+    },
+    {
+      "en": "For nonempty words over decidedly compared elements and fixed elements x and y ≠ z (two words continuing x differently inside), where every record whose majority bonds link each word inside bonds x both to y and to z, no record's majority bonds group every encoded sequence into its words.",
+      "zh": "对可判定比较的元素上的非空词，以及固定的元素 x 与 y ≠ z（两个词在内部以不同方式接续 x）：凡多数联结使每个词内部相连的记录都把 x 既联结到 y 又联结到 z 时，没有记录的多数联结能把每个编码序列分成其词。",
+      "declarations": [
+        "Becoming.Segmentation.no_record_groups"
+      ]
+    },
+    {
+      "en": "For any process in which every nonempty word is a course from s back to s, every sequence of words written out is such a course, and grouping by r recovers the words of every course of words exactly where each word is linked inside and no word's last move is linked to any word's first; the moves of any course are grouped as L exactly where L is grouped and joins to them.",
+      "zh": "对任一过程，每个非空词都是从 s 回到 s 的历程时，每个写出的词序列也是这样的历程；按 r 分组恢复每个由词组成之历程的词，恰当每个词内部相连且没有词的末一步连到任何词的首一步；任一历程诸步分组为 L，恰当 L 已分好且连接成这些步。",
+      "declarations": [
+        "Becoming.Courses.encode_course",
+        "Becoming.Courses.course_words_iff",
+        "Becoming.Courses.course_chunks_iff"
+      ]
+    },
+    {
+      "en": "Where, in a process, every nonempty word over decidedly compared moves is a course from s back to s, and for fixed moves x and y ≠ z every record whose majority bonds link each word inside bonds x both to y and to z, then for the record of the first n moves of any run of any process, grouping by its majority bonds does not recover the words of all courses of words from s back to s.",
+      "zh": "过程中，可判定比较的步上的每个非空词都是从 s 回到 s 的历程，且对固定的步 x 与 y ≠ z，凡多数联结使每个词内部相连的记录都把 x 既联结到 y 又联结到 z 时：对任一过程任一运行前 n 步的记录，按其多数联结分组不能恢复所有从 s 回到 s 的词历程的词。",
+      "declarations": [
+        "Becoming.Courses.no_run_record_groups"
+      ]
+    },
+    {
+      "en": "With four sounds a, b, c, d and the two words a b and c d, grouping by any relation r recovers the words of every sequence of the two words exactly where r links a to b and c to d and links b to neither a nor c and d to neither a nor c.",
+      "zh": "取四个声音 a、b、c、d 与两个词 a b、c d：按任一关系 r 分组恢复两词组成的每个序列的词，恰当 r 把 a 连到 b、c 连到 d，而 b 不连到 a 或 c，d 也不连到 a 或 c。",
+      "declarations": [
+        "Becoming.LearnedGrouping.Sound",
+        "Becoming.LearnedGrouping.word",
+        "Becoming.LearnedGrouping.spelled",
+        "Becoming.LearnedGrouping.two_word_iff"
+      ]
+    },
+    {
+      "en": "With four sounds a, b, c, d and the words a b and c d, the ideal relation, linking exactly a to b and c to d, recovers every sequence of the two words; after a supplied formation of 28 units receives the context a b a b c d c d a b, the majority bonds of its record are the ideal relation, so every such sequence is grouped into its words.",
+      "zh": "取四个声音与词 a b、c d：理想关系恰把 a 连到 b、c 连到 d，恢复两词组成的每个序列；给定的 28 单位构成接收语境 a b a b c d c d a b 之后，其记录的多数联结就是理想关系，所以每个这样的序列都被分成其词。",
+      "declarations": [
+        "Becoming.LearnedGrouping.idealBond",
+        "Becoming.LearnedGrouping.ideal_two_word",
+        "Becoming.LearnedGrouping.context",
+        "Becoming.LearnedGrouping.experienced",
+        "Becoming.LearnedGrouping.context_forms_bond",
+        "Becoming.LearnedGrouping.context_groups_words"
+      ]
+    },
+    {
+      "en": "Identical frequencies can hide different transitions: the course a a a b b b c c d d holds every sound as often as the context a b a b c d c d a b, yet its record does not bond a to b where the context's does, and a supplied formation of 28 units that receives it does not parse the utterance c d a b c d.",
+      "zh": "相同频率可以掩盖不同的转移：历程 a a a b b b c c d d 中每个声音的次数与语境 a b a b c d c d a b 相同，但其记录不把 a 联结到 b，而语境的记录会；接收它的给定 28 单位构成不能解析话语 c d a b c d。",
+      "declarations": [
+        "Becoming.LearnedGrouping.reordered",
+        "Becoming.LearnedGrouping.counts_agree",
+        "Becoming.LearnedGrouping.order_changes_grouping",
+        "Becoming.LearnedGrouping.utterance"
+      ]
+    },
+    {
+      "en": "Repetition can join across the intended words: the majority bonds of the record a b a b group that sequence as one group, which is not read. A supplied formation of 21 units that receives a b a b and, failing to parse the utterance c d a b c d, receives further slots stops at the record a b a b c d c, which parses the utterance into its intended meaning with no response and does not parse c d c d.",
+      "zh": "重复可以跨过预定的词界相连：记录 a b a b 的多数联结把该序列分为一组，无法读取。给定的 21 单位构成接收 a b a b、解析话语 c d a b c d 失败后再接收，记录停在 a b a b c d c：它把话语解析为预定意义却无回应，且不能解析 c d c d。",
+      "declarations": [
+        "Becoming.LearnedGrouping.repetition_joins_words",
+        "Becoming.LearnedGrouping.broaden_one_form"
+      ]
+    },
+    {
+      "en": "In the periphery (propext, Quot.sound), for the sounds a, b, c, d and words a b, c d: the earlier peripheral bond is the core's majority bond, so each record bonds a sound to at most one successor; a record bonding a to b and c to d and neither b nor d to a or c groups every encoded sequence into its words; after the context a b a b c d c d a b the fixed decoder parses each encoded sequence as its atoms assembled.",
+      "zh": "外围（propext、Quot.sound），取声音 a、b、c、d 与词 a b、c d：原外围联结就是核心的多数联结，故每个记录把每个声音至多联结到一个后继；把 a 联到 b、c 联到 d 而 b、d 都不联到 a 或 c 的记录，把每个编码序列分成其词；语境 a b a b c d c d a b 之后，固定解码器把每个编码序列解析为其原子的组装。",
+      "declarations": [
+        "Becoming.MachineInstances.edges_all_eq",
+        "Becoming.MachineInstances.bond_eq",
+        "Becoming.MachineInstances.bond_functional",
+        "Becoming.MachineInstances.Groups",
+        "Becoming.MachineInstances.segments_of_groups",
+        "Becoming.MachineInstances.experienced_groups",
+        "Becoming.MachineInstances.experienced_parses_every"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "一般律对字母表与相邻关系不加条件；实例使用四个基本事件、二词编码及 idealBond。",
@@ -22,8 +140,63 @@
     {
       "zh": "实际取得见证使用既定接触序列、严格多数判准与足够记录支持。",
       "en": "The acquisition witness uses the stated encounter sequence, strict-majority criterion and adequate recording support."
+    },
+    {
+      "en": "The relation is Boolean-valued; the majority bond compares elements decidedly; words are nonempty, each written as its first element followed by the rest; sequences, records and courses are finite lists.",
+      "zh": "关系取布尔值；多数联结可判定地比较元素；词非空，各写成首元素加其余部分；序列、记录与历程都是有限列表。"
+    },
+    {
+      "en": "The sounds, the slots, the majority threshold, the decoder, the encounters and the prepared formation of the core instance are supplied.",
+      "zh": "核心实例中的声音、槽、多数阈值、解码器、接触与预备的构成都是给定的。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "The grouping rule, joining from the right by adjacency, is fixed; how a formation comes to group this way is not shown.",
+      "zh": "分组规则（由右向左依相邻并入）是固定的；构成如何形成这样的分组未表明。",
+      "kind": "scope"
+    },
+    {
+      "en": "Recovery at every length does not make reading or responding executable with the stock at hand.",
+      "zh": "在任意长度上的恢复不使读取或回应能以现有存量执行。",
+      "kind": "non-implication",
+      "witness": "Becoming.LearnedGrouping.broaden_one_form"
+    },
+    {
+      "en": "Natural language, sound categories and complete cognition do not follow from the grouping law.",
+      "zh": "自然语言、声音类别与完整认知都不由分组律得出。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/AcquiredSegmentation.lean",
+      "detail": {
+        "zh": "重复可合并预定词界；部分经历只支持一个表达而误分另一表达。",
+        "en": "Repetition can merge intended boundaries; partial experience can parse one expression while misgrouping another."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Segmentation.lean",
+      "detail": {
+        "zh": "严格多数学得的关系是函数式的：两个词若在内部以不同元素接续同一元素，任何转移记录都不能把每个编码序列都分成其词。",
+        "en": "A relation learned by strict majority is functional: where two words continue one element differently inside, no record of transitions groups every encoded sequence into its words."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "decidability",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked with Lean 4.29.1: the core modules Becoming.Segmentation, Becoming.Courses and Becoming.LearnedGrouping by the consolidated core checker (becoming-checks/20261013T221720.428753Z, 20261020T051144.879480Z and 20261018T204907.920360Z bind their current bytes), every cited declaration with an empty axiom report; the periphery MachineInstances by its instance checker (machine-instances-checks/20261020T161859.257200Z), reporting at most propext and Quot.sound. The earlier AcquiredSegmentation check (23 theorems, 51 audits) is provenance.",
+    "zh": "Lean 4.29.1 实查：核心 Segmentation、Courses、LearnedGrouping 由合并核心检查器检查（becoming-checks/ 下所列三份回执绑定其当前字节），所引声明公理报告皆空；外围 MachineInstances 由实例检查器检查（machine-instances-checks/20261020T161859.257200Z），报告至多 propext、Quot.sound。原 AcquiredSegmentation 检查（23 项定理、51 项审计）为来源。"
+  },
+  "next_delta": {
+    "en": "Form the grouping rule and its majority threshold within a formation's own history of encounters instead of supplying them.",
+    "zh": "在构成自身的接触史中形成分组规则及其多数阈值，而不是给定它们。"
+  },
   "correspondence": {
     "zh": "该关系是日志中已观察转移的分节判准；声音分类与语言对应没有由此推导。",
     "en": "The relation is a grouping criterion derived from observed transitions in a log; sound categories and linguistic correspondence are not derived."
@@ -49,30 +222,7 @@
     "Becoming.Courses.no_run_record_groups"
   ],
   "dependencies": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/AcquiredSegmentation.lean",
-      "detail": {
-        "zh": "重复可合并预定词界；部分经历只支持一个表达而误分另一表达。",
-        "en": "Repetition can merge intended boundaries; partial experience can parse one expression while misgrouping another."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Segmentation.lean",
-      "detail": {
-        "zh": "严格多数学得的关系是函数式的：两个词若在内部以不同元素接续同一元素，任何转移记录都不能把两者都分对。",
-        "en": "A relation learned by strict majority is functional: where two words continue one element differently inside, no record of transitions groups both."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "分组规则固定；任意长度形式对应不保证有限支持下实际执行，不建立自然语言或完整认知。",
-    "en": "The grouping rule is fixed; arbitrary-length correspondence does not guarantee affordable execution or establish natural language and complete cognition."
-  },
-  "validation_scope": {
-    "zh": "迁移既有23项定理／51项声明审计中的指定分节结果；不因登记新增成果或重跑证明。",
-    "en": "Migrates the specified grouping result from the existing 23-theorem/51-audit package; registration adds no theorem or proof rerun."
-  },
+  "related": [],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/AcquiredSegmentation.lean",
@@ -95,7 +245,17 @@
         "Becoming.LearnedGrouping.context_groups_words",
         "Becoming.LearnedGrouping.broaden_one_form",
         "Becoming.LearnedGrouping.spelled",
-        "Becoming.LearnedGrouping.two_word_iff"
+        "Becoming.LearnedGrouping.two_word_iff",
+        "Becoming.LearnedGrouping.Sound",
+        "Becoming.LearnedGrouping.word",
+        "Becoming.LearnedGrouping.idealBond",
+        "Becoming.LearnedGrouping.context",
+        "Becoming.LearnedGrouping.experienced",
+        "Becoming.LearnedGrouping.reordered",
+        "Becoming.LearnedGrouping.counts_agree",
+        "Becoming.LearnedGrouping.order_changes_grouping",
+        "Becoming.LearnedGrouping.utterance",
+        "Becoming.LearnedGrouping.repetition_joins_words"
       ]
     },
     {
@@ -294,10 +454,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "直接复用词划分，接到后续绑定或解释；不要把再次调用计作新分节成果。",
-    "en": "Reuse the partition for subsequent binding or interpretation; another invocation is not a new grouping result."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移已经实际检查的分节主张，保留原源码、回执和反例。",
@@ -336,6 +492,28 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (AcquiredSegmentation and Instances) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Courses, Becoming.LearnedGrouping, Becoming.Segmentation and MachineInstances). The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（AcquiredSegmentation and Instances）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Courses, Becoming.LearnedGrouping, Becoming.Segmentation and MachineInstances）。主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): title kept; a statement written from the claim and the home section; the claim split into 12 laws, each read against its declarations in Becoming.Segmentation, Becoming.Courses, Becoming.LearnedGrouping (core) and MachineInstances (periphery), with the conditions the Lean takes written in (a Boolean relation, nonempty words written as first plus rest, decidable comparison for the majority bond, the two words continuing one element differently for the negative laws, read as negated universals); the home section's sentence on identical frequencies, and the core witnesses of repetition and partial broadening, each enter a law; the limitations to three does-not-show items, with two added hypotheses (the logical and list conditions; the supplied parts of the core instance); the standard boundaries no-ethical-premise-core-axiom-free, decidability and discrete-steps; the evidence paragraph rewritten from the receipts, its retired word dropped; the next step, an instruction to reuse, replaced by the next substantive step; ten declarations of LearnedGrouping.lean added to its references; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [transition-grouping-word-partition.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/transition-grouping-word-partition.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the counterexamples, laws, the evidence paragraph, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：标题不变；依主张与主章写出陈述；主张拆为 12 条规律，各条对照 Becoming.Segmentation、Becoming.Courses、Becoming.LearnedGrouping（核心）与 MachineInstances（外围）中的声明核读，写入 Lean 所取的条件（布尔关系、非空词写成首元素加其余、多数联结的可判定比较、否定规律中两词以不同方式接续同一元素，按否定的全称陈述）；主章关于相同频率的一句、重复与部分扩展的核心见证各入一条规律；限制改为三条“未表明”，并加两条前提（逻辑与列表条件；核心实例的给定部分）；通用边界 no-ethical-premise-core-axiom-free、decidability、discrete-steps；证据段按回执重写，去掉退役用语；下一步原是复用的指示，改为下一个实质步骤；LearnedGrouping.lean 的十个声明加入其引用；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [transition-grouping-word-partition.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/transition-grouping-word-partition.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及反例、规律、证据段，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/604a1aeebfecef1e/transition-grouping-word-partition.json",
+      "sha256": "604a1aeebfecef1ee8bd6f4531a42b77b21a95971235ba544480f2d488f6a9d6",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/bd55ab4594c913a0/transition-grouping-word-partition.json",
+      "sha256": "bd55ab4594c913a0b201972a8968264097f08e2878850100a15696d7e089262d",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

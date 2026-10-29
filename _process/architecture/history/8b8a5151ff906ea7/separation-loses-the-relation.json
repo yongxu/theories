@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "id": "separation-loses-the-relation",
+  "title": {
+    "zh": "分离恰失去关系",
+    "en": "Separation loses exactly the relation"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "statement": {
+    "zh": "分别描述各部分恰在整体为矩形处给回整体；关系只由共同作用形成，在各自无损的律下持续，只由失去或共同作用结束；奇偶是诸对不给回的整体。",
+    "en": "Describing the parts separately gives back the whole exactly where it is rectangular; a relation forms only by joint action, lasts under separate laws that lose nothing, and ends only by loss or joint action; parity is a whole its pairs do not give back."
+  },
+  "claim": {
+    "zh": "设 whole 是 A × B 上的整体（哪些组合出现）。whole 是矩形的（Rectangular），指 whole (a, b) 与 whole (a′, b′) 推出 whole (a, b′)；分离的描述（Separated whole p）只说 p 的每个部分能出现。分离保留每个出现的组合（separated_of_whole），并且“分离的描述只含出现者”恰当 whole 是矩形的（separation_faithful_iff）；总是同去的两个部分分别描述时可以分开（separation_admits_extra）。三个部分可以作为整体相关而任意两个都自由：偶奇偶的三元组中，任意两个值都能补成偶的三元组，而 (true, false, false) 不是（whole_not_in_pairs）；放在 Specker 的三个盒子与三对上（Becoming.Context 的 restrict、Glued、PartsDetermine），每个读法都被每一对容许（evenBoxes_glued），诸对不给回整体（evenBoxes_not_determined）。律 next 从 whole 通到的配置记作 imageOf next whole。各自移动每个部分的律 (f × g) 保持矩形，不论有损与否（Rectangular.image_of_separate）；把第一部分复制进第二部分的律把全部组合变成两个部分相同，不是矩形的（copy_relates）。f 在出现的第一部分上不合并、g 在出现的第二部分上不合并时，(f × g) 的像是矩形的推出 whole 是矩形的（Rectangular.of_image_injective），所以不是矩形的整体在这样的律下保持不是矩形的（relation_persists）。把第一部分送到一个值的律，不论怎样移动第二部分，通到矩形的整体（forgetting_unrelates）。例：Bool × Bool 上的 couple (x, y) = (x, flipIf x y) 是对合（couple_couple）；它把“第二部分为假”（矩形）通到不是矩形的整体，再作用一次通回“第二部分为假”（coupling_relates_and_unrelates）。不用 Lean 公理。",
+    "en": "Let whole be a whole on A × B (which combinations occur). It is rectangular (Rectangular) when whole (a, b) and whole (a′, b′) give whole (a, b′); the separated description (Separated whole p) says only that each part of p occurs. Separation keeps every combination that occurs (separated_of_whole), and it contains only what occurs exactly when whole is rectangular (separation_faithful_iff); two parts that always go alike can go apart when described separately (separation_admits_extra). Three parts can be related as a whole while every two are free: in the even-parity triples any two values complete to an even triple, and (true, false, false) is not one (whole_not_in_pairs); on Specker's three boxes and three pairs (restrict, Glued and PartsDetermine of Becoming.Context) every reading is allowed by every pair (evenBoxes_glued) and the pairs do not give the whole back (evenBoxes_not_determined). Write imageOf next whole for the configurations a law next leads to from whole. A law moving each part by itself (f × g) keeps a whole rectangular, lossy or not (Rectangular.image_of_separate); the law copying the first part into the second turns the full whole into the parts being equal, which is not rectangular (copy_relates). Where f merges no two first parts that occur and g no two second parts, a rectangular image under f × g gives a rectangular whole (Rectangular.of_image_injective), so a whole that is not rectangular stays so under such a law (relation_persists). A law sending the first part to one value, however it moves the second, leads to a rectangular whole (forgetting_unrelates). For example, couple (x, y) = (x, flipIf x y) on Bool × Bool is an involution (couple_couple); it leads from “the second part is false” (rectangular) to a whole that is not rectangular, and acting again back to “the second part is false” (coupling_relates_and_unrelates). No Lean axiom is used."
+  },
+  "hypotheses": [
+    {
+      "zh": "不加前提：separation_faithful_iff 是双向的，对每个整体成立；Rectangular.image_of_separate 对任何 f、g 成立。",
+      "en": "No premise: separation_faithful_iff is two-way and holds for every whole; Rectangular.image_of_separate holds for any f and g."
+    },
+    {
+      "zh": "relation_persists 要 f 与 g 在出现者上不合并（局部条件，写在定理之中）。",
+      "en": "relation_persists needs f and g to merge nothing that occurs (a local condition, written into the theorem)."
+    },
+    {
+      "zh": "见证的结论：奇偶、复制与 couple 都在 Bool 上。",
+      "en": "For the witnesses: parity, copying and couple are on Bool."
+    }
+  ],
+  "correspondence": {
+    "zh": "P70 的第一部分（工作板），按 Ren 2026-10-12 的“push the frontier, as far as possible”，回答 Ren 的“the framing may lose something”与“what makes a pair, a pair?”：分别描述各部分扣除的恰是关系；关系的“能一起是什么”是“怎样一起继续”在一刻的记录。读法（AI 的，依 Ren 的交托采用；Ren 同意了包含它们的回答）：相关是一次相遇的记忆；三生万物读作三是整体能持有任何部分都不持有的关系的最小数目。部分失去整体的另一种方式（部分允许没有整体有的）是 claims-shown-in-context 的 no_whole，在同样的三对上。见整合文档 §94。",
+    "en": "The first part of P70 (work board), following Ren's “push the frontier, as far as possible” of 12 October 2026, answering Ren's “the framing may lose something” and “what makes a pair, a pair?”: what describing the parts separately deducts is exactly the relation; “what can go together” is the record at a moment of “how they go on”. Readings (the AI's, adopted on Ren's delegation; Ren agreed with the reply containing them): a correlation is the memory of a meeting; 三生万物 read as three being the least number at which a whole holds a relation no part holds. The other way parts fail a whole (parts allowing what no whole has) is no_whole of claims-shown-in-context, on the same three pairs. See §94 of the integration note."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Description.lean",
+  "aliases": [
+    "Becoming.Rectangular",
+    "Becoming.Separated",
+    "Becoming.separation_faithful_iff",
+    "Becoming.separation_admits_extra",
+    "Becoming.whole_not_in_pairs",
+    "Becoming.evenBoxes_not_determined",
+    "Becoming.imageOf",
+    "Becoming.Rectangular.image_of_separate",
+    "Becoming.copy_relates",
+    "Becoming.relation_persists",
+    "Becoming.forgetting_unrelates",
+    "Becoming.coupling_relates_and_unrelates",
+    "rectangular whole",
+    "矩形的整体",
+    "separation",
+    "分离",
+    "relation held by no part",
+    "不在任何部分中的关系",
+    "Becoming.Courses.relation_persists_courses",
+    "Becoming.Courses.courses_keep_unrelated",
+    "Becoming.Courses.copy_relates_course",
+    "Becoming.Courses.forgetting_unrelates_courses",
+    "Becoming.Courses.coupling_course"
+  ],
+  "dependencies": [
+    {
+      "id": "claims-shown-in-context",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用 restrict、Glued、PartsDetermine 与 Specker 的盒子和对：奇偶在同样的三对上是诸对不给回的整体。",
+        "en": "Reuses restrict, Glued, PartsDetermine and Specker's boxes and pairs: on the same three pairs parity is a whole its pairs do not give back."
+      },
+      "interface": {
+        "output": {
+          "zh": "整体在语境中允许什么、部分粘合成什么、部分是否给回整体；三个盒子与三对。",
+          "en": "What a whole allows within a context, what the parts glue to, whether the parts give the whole back; three boxes and three pairs."
+        },
+        "input": {
+          "zh": "奇偶作为部分失去整体的第一种方式的见证。",
+          "en": "Parity as the witness of the first way parts fail a whole."
+        },
+        "conditions": {
+          "zh": "无。",
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Context.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "the-split-that-makes-sense",
+      "detail": {
+        "zh": "同一模块：有意义的切分相对于映射；这里是任何描述把整体切成部分时失去什么。",
+        "en": "Same module: the split that makes sense, relative to the map; here, what any description cutting a whole into parts loses."
+      }
+    },
+    {
+      "id": "projection-carrying-a-law",
+      "detail": {
+        "zh": "投影承载规律恰当经它相同者同去；这里各自移动每个部分的律保持矩形，共同的律可以使部分相关或不再相关。",
+        "en": "A projection carries a law exactly where what it lumps goes alike; here laws moving each part by itself keep wholes rectangular, and joint laws can relate or unrelate the parts."
+      }
+    },
+    {
+      "id": "gluing-under-parity",
+      "detail": {
+        "zh": "部分失去整体的同一类情形的确切规律：奇偶约束下，不依语境的读法恰在没有一组语境矛盾处存在。",
+        "en": "The exact law for the same kind of case of parts failing a whole: for parity constraints, context-free readings exist exactly where no selection of contexts contradicts."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Description.lean",
+      "detail": {
+        "zh": "不是矩形的整体分别描述时多出组合（separation_admits_extra）；三个部分的偶奇偶不被任何一对持有（whole_not_in_pairs）；一个无损的耦合可以结束关系（coupling_relates_and_unrelates），所以“不失去什么”不足以保持关系，要加“各自移动每个部分”。",
+        "en": "A whole that is not rectangular gains combinations when described separately (separation_admits_extra); the even parity of three parts is held by no pair (whole_not_in_pairs); a lossless coupling can end a relation (coupling_relates_and_unrelates), so losing nothing does not keep a relation without “moving each part by itself”."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "关系只对两个部分的整体陈述（矩形即乘积的标准判据），三个部分以奇偶为见证；哪些共同的律保持矩形没有刻画；耦合的结束只有一个见证；PartsDetermine 与 separation_faithful_iff 不是实例关系（两个部分的类型不同）；读法是 AI 的；不含伦理谓词。",
+    "en": "Relation is stated for wholes of two parts (rectangularity is the standard product criterion), parity witnessing three; which joint laws keep wholes rectangular is not characterized; a coupling ending a relation has one witness; PartsDetermine and separation_faithful_iff are not related as instance and law (the two parts have different types); the readings are the AI's; contains no ethical predicate."
+  },
+  "validation_scope": {
+    "zh": "2026-10-14：Becoming.Description 的当前字节由合并检查器回执 20261013T204910.042715Z 绑定（通过：包 85 个模块，4861 项定理、6856 项声明审计，源声明公理报告全空；核心闭包 86 个模块从内置前导编译）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Description 的 53 项定理全部空依赖，其中含 separation_faithful_iff、separation_admits_extra、whole_not_in_pairs、evenBoxes_glued、evenBoxes_not_determined、Rectangular.image_of_separate、copy_relates、relation_persists、forgetting_unrelates与 coupling_relates_and_unrelates；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §94；独立审查的范围见同节。",
+    "en": "14 October 2026: the current bytes of Becoming.Description are bound to consolidated receipt 20261013T204910.042715Z (passed: 85 package modules, 4861 theorems, 6856 declaration audits, every source declaration with an empty axiom report; the 86-module core closure compiles from the prelude). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 53 theorems of Becoming.Description all have empty axiom reports, among them separation_faithful_iff, separation_admits_extra, whole_not_in_pairs, evenBoxes_glued, evenBoxes_not_determined, Rectangular.image_of_separate, copy_relates, relation_persists, forgetting_unrelates and coupling_relates_and_unrelates; the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §94 of the integration note, with the scope of the independent review."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Description.lean",
+      "role": "proof",
+      "sha256": "db97ebfaa43524665e6494e37e9a3fcac4ba6cf5c75126f823d11f0ea0f7f62b",
+      "declarations": [
+        "Becoming.Rectangular",
+        "Becoming.Separated",
+        "Becoming.separated_of_whole",
+        "Becoming.separation_faithful_iff",
+        "Becoming.separation_admits_extra",
+        "Becoming.flipIf",
+        "Becoming.EvenThree",
+        "Becoming.whole_not_in_pairs",
+        "Becoming.evenBoxes",
+        "Becoming.flipIf_self",
+        "Becoming.even_first",
+        "Becoming.even_third",
+        "Becoming.evenBoxes_glued",
+        "Becoming.evenBoxes_not_determined",
+        "Becoming.imageOf",
+        "Becoming.Rectangular.image_of_separate",
+        "Becoming.copy_relates",
+        "Becoming.Rectangular.of_image_injective",
+        "Becoming.relation_persists",
+        "Becoming.forgetting_unrelates",
+        "Becoming.couple",
+        "Becoming.couple_couple",
+        "Becoming.coupling_relates_and_unrelates"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Context.lean",
+      "role": "proof",
+      "sha256": "5c9abd8e7826e62410c02e25f3c2f329415875898d183373e8328d172db28758",
+      "declarations": [
+        "Becoming.restrict",
+        "Becoming.Glued",
+        "Becoming.PartsDetermine",
+        "Becoming.Specker.Box",
+        "Becoming.Specker.within"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T150956.178111Z/verification.json",
+      "role": "receipt",
+      "sha256": "795c0b40d7c58facc38f3f95d306c44f29617431e16828b65c1aecc9cd6f7d77",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-12-framing-and-pairs.md",
+      "role": "provenance",
+      "sha256": "93e89d2880eb068ac19822be3a1d95ea842d7e60fef9ba81b419f874e7e01799",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/becoming-framing-evidence/README.md",
+      "role": "provenance",
+      "sha256": "ef5699566c3ae5b7575ea1383d5cef26f279a43d4717f227d934b74fec88a501",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T204910.042715Z/verification.json",
+      "role": "receipt",
+      "sha256": "de452d3198d581ac4310c6a92a766e30b2c9bb6b740f970f5fed373b448e6121",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
+      "role": "proof",
+      "sha256": "72fd570fa32c3fc6bd0458f4b0793bb7ce9365f7b1276aaddf323ca05b2afc86",
+      "declarations": [
+        "Becoming.Courses.relation_persists_courses",
+        "Becoming.Courses.courses_keep_unrelated",
+        "Becoming.Courses.copy_relates_course",
+        "Becoming.Courses.forgetting_unrelates_courses",
+        "Becoming.Courses.coupling_course",
+        "Becoming.Courses.reachedFrom"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T172257.067968Z/verification.json",
+      "role": "receipt",
+      "sha256": "afe03d9e9c1b75fb054ac5d53cf575e2217e4af2ebc27ae4f901b612d758b71e",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T062828.251326Z/verification.json",
+      "role": "receipt",
+      "sha256": "0dec8292b9c1b7a85364070084bf7c053486e60608e228f7d1dc0da391e9f6d1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "review",
+      "sha256": "ba6ed198c6a413310463809542fb4a2ada2e062230a04a6eb95d48387fd1e062",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Description.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Description",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Context.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Context",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Courses",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "刻画保持矩形的共同的律；n 个部分的分离与“部分给回整体”的统一陈述。",
+    "en": "Characterizing the joint laws that keep wholes rectangular; one statement of separation and of parts giving back the whole for n parts."
+  },
+  "history": [
+    {
+      "zh": "2026-10-12 P70：新增，按 Ren“push the frontier, as far as possible”（对框架失去什么、什么使一对成为一对的回答之后），及其后“keep prove to the deepest, i agree with your last reply”；见整合文档 §94。",
+      "en": "2026-10-12 P70: added, following Ren's ‘push the frontier, as far as possible’ (after the answer on what the framing loses and what makes a pair a pair) and the later ‘keep prove to the deepest, i agree with your last reply’; see §94 of the integration note."
+    },
+    {
+      "zh": "2026-10-13 P89 来源维护：仅核对本轮追加桥接／完成说明的源文差异；未变证明所用的可变汇总回执固定到原有同字节冻结版本。除本记录明示的 P89 接入外，原科学范围与反例不变。",
+      "en": "13 October 2026, P89 source maintenance: reviewed only the appended bridge/closure source delta; mutable receipt references for unchanged proofs are pinned to their existing byte-identical frozen versions. Except for an explicitly stated P89 connection in this record, scientific scope and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P91 来源核对：保留原理论／研究文本，接入分组保真及实际混合损失的独立结果；正文脊柱目录和当前汇总数按新冻结回执核对。原声明、前提、反例及历史证明绑定保持。",
+      "en": "13 October 2026, P91 source reconciliation: prior theory/study text is retained while the distinct regrouping-fidelity and actual mixed-loss result is added; the spine catalogue and current totals are checked against the new frozen receipt. Original claims, premises, counterexamples and historical proof bindings remain."
+    },
+    {
+      "zh": "2026-10-13 P93：核读主干新增的登记修订段落及形式模块行；删除这两处新增后此前全文字节一致，本条既有主张和冻结证据未改变。",
+      "en": "13 October 2026, P93: reviewed the added registration-revision paragraph and formal-module row; removing only those additions restores every earlier byte. This record’s claim and frozen evidence are unchanged."
+    },
+    {
+      "zh": "P103 共享章对应复核：核对 P104/P105 已检模块的两行导航及 P93/P99/P103 接续说明；旧章除这些可定位增量外逐字保留，本成果证明和主张未改。",
+      "en": "P103 shared-chapter review: two navigation rows for checked P104/P105 modules and the P93/P99/P103 continuation notes are reconciled; all other prior chapter bytes, this result’s proof and claim remain unchanged."
+    },
+    {
+      "zh": "本次 main 提交的隔离内容复核：只加入本会话 P93/P99/P103 的主章段落和模块行；旧字节、证明和主张保留，指纹绑定这一确切提交范围。",
+      "en": "Review of this main commit’s isolated content: only this session’s P93/P99/P103 chapter notes and module rows are added; earlier bytes, proofs and claims remain. Fingerprints bind this exact commit scope."
+    },
+    {
+      "zh": "2026-10-14 合并：恢复上一条 a643f4fa 隔离提交的复核记录；同时进行的工作树未见该条，其指纹 35b63cdd 绑定的是那次提交的范围。",
+      "en": "14 October 2026 merge: restores the preceding review entry of the isolated commit a643f4fa, which the concurrent working tree had not seen; its fingerprint 35b63cdd bound that commit’s scope."
+    },
+    {
+      "zh": "2026-10-14 M4，按计划中为脊柱记录用短标题的建议（Ren 认可：“go with your recommendations”）：改用短标题，原标题的内容改作陈述。主张、证明与证据不变。原标题：“分离恰失去关系：分别描述各部分恰在整体为矩形处给回整体；关系只由共同作用形成，在各自无损的律下持续，只由失去或共同作用结束；奇偶是诸对不给回的整体”",
+      "en": "2026-10-14 M4, under the plan's recommendation of short titles for the spine records, which Ren approved (“go with your recommendations”): short title, with the former title's content now the statement. Claim, proof and evidence unchanged. Former title: “Separation loses exactly the relation: describing the parts separately gives back the whole exactly where it is rectangular; a relation forms only by joint action, lasts under separate laws that lose nothing, and ends only by loss or joint action; parity is a whole its pairs do not give back”"
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：按 BECOMING-UNIFICATION-PLAN §10 改名，本记录中 `separation_surplus` → `separation_admits_extra`；陈述、证明与定理数不变；Lean 源：Description 只改名（及相应的文档字符串），绑定改为新回执（见检查范围）；研究只新增 §112（一般规律与改名）及英文摘要中的对应一段；主章：§9 新增 Stock、LossMatching、Contacts 三行，改写 Capture、TimedResponse、Revision、ReferencePlan、ContinuingRevision、RepairComparison 六行并去掉 Identification 行的 P83 标记，合并检查器总数改为回执 20261013T204910.042715Z（4861 项定理、6856 项声明审计、86 个闭包模块），完整片段比较段改述该回执；正文与术语表中被改名的 Lean 名称改为新名，“知道界的学习者”改为“给定界的学习者”，“只改状态”改为“只扰动状态”。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): renames per BECOMING-UNIFICATION-PLAN §10, in this record `separation_surplus` → `separation_admits_extra`; statements, proofs and theorem counts unchanged; Lean sources: Description only renamed (with the matching docstrings); bindings move to the new receipts (see validation scope); the study only adds section 112 (general laws and renames) and its paragraph in the English summary; chapter: §9 gains rows for Stock, LossMatching and Contacts, rewrites six rows (Capture, TimedResponse, Revision, ReferencePlan, ContinuingRevision, RepairComparison) and drops the P83 label of the Identification row; the consolidated totals follow receipt 20261013T204910.042715Z (4861 theorems, 6856 declaration audits, 86 closure modules) and the complete-episode paragraph cites that receipt; renamed Lean names in the text and glossary take their new names, and the former wording becomes “the learner given the bound” and “perturbing the state alone”. This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "zh": "2026-10-16，P114 散立的模块在共同基底上陈述（研究 §138；Ren 2026-10-15：“so for our theories, they are proved in a dag order and can be all connected right?”）：主律在共同基底上陈述，不加前提：沿确定之律过程的历程，从整体出发 n 步所到达者（reachedFrom）：各部分各自移动时保持无关（矩形，courses_keep_unrelated）；两个移动都不合并时，关系沿每条历程持续（relation_persists_courses）；把第一部分复制入第二部分的一步使两部分相同，不是矩形（copy_relates_course）；遗忘一个部分使之无关（forgetting_unrelates_courses）；耦合一步关联，再作用一步解除（coupling_course）。Becoming.Courses 由核心运行编译与审计（回执 20261015T172257.067968Z），公理报告为空。论断、假设、Ren 的话、依赖与既有证明不变；只加引用、绑定、别名与本条。",
+      "en": "16 October 2026, P114, the apart modules read on the shared base (study section 138; Ren, 15 October: “so for our theories, they are proved in a dag order and can be all connected right?”): the main law stated on the shared base, no premise added: along the courses of a determined law's process, what n moves reach from a whole (reachedFrom): parts moved each by itself stay unrelated (rectangular, courses_keep_unrelated); where neither move merges, a relation persists along every course (relation_persists_courses); one move copying the first part into the second makes them go alike, which is not rectangular (copy_relates_course); forgetting a part unrelates it (forgetting_unrelates_courses); a coupling relates in one move and, acting again, unrelates (coupling_course). Becoming.Courses is compiled and audited by the core run (receipt 20261015T172257.067968Z), with empty axiom reports. Claims, hypotheses, Ren's words, dependencies and the earlier proofs are unchanged; only references, bindings, aliases and this entry are added."
+    },
+    {
+      "zh": "2026-10-16 P110（依 Ren 2026-10-15 的交托决定的读法，研究 §147，DELEGATED-CHOICES D33）：此前留给 Ren 的读法与名称按所列决定改为采用或不采用，要求 Ren 判断这些读法的下一步已删去。陈述、证明与绑定不变；Ren 可改其中任何一项决定。",
+      "en": "16 October 2026, P110 (readings decided on Ren's delegation of 15 October 2026, study section 147, DELEGATED-CHOICES D33): readings and names formerly left to Ren are adopted or declined as those decisions say, and next steps asking for Ren's judgment on them are removed. Statements, proofs and bindings unchanged; Ren can reverse any of the decisions."
+    },
+    {
+      "zh": "2026-10-16 P112（奇偶约束下语境中的读法何时粘合，研究 §149）：related 加 gluing-under-parity。陈述与证明不变。",
+      "en": "16 October 2026, P112 (when readings in context glue, for parity, study section 149): related adds gluing-under-parity. Statement and proofs unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: BECOMING-RENEWAL-READING.md, Description.lean, THE-THEORY-OF-BECOMING.md. Rebound to core receipt 20261018T062828.251326Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. This record's live fields are read in the adopted words; its id is unchanged. Changed by the pass, in docstrings or prose only: Context.lean, Courses.lean, Description.lean, THE-THEORY-OF-BECOMING.md. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R29 (compression under board rule 9: generalize below, not beside; one name per statement): Proof bindings (Courses.lean) rebound to core receipt 20261019T185632.962707Z. Re-pointed after reading the change: Courses.lean, a restatement of a statement proved under another name removed (one name per statement), or a use or docstring re-pointed to the kept name; kept statements unchanged; THE-THEORY-OF-BECOMING.md, the sentences citing the removed names cite the kept ones; §9 (layers, import tree, receipt, counts) follows R29. The claim is unchanged.",
+      "zh": "2026年10月20日，R29（按看板规则 9 压缩：在下面推广而非并列；每个陈述一个名称）：证明绑定（Courses.lean）改到核心回执 20261019T185632.962707Z。读过改动后重新指向：Courses.lean，删去以另一名称证明之陈述的重述（每个陈述一个名称），或用法与说明改指保留的名称；保留的陈述不变；THE-THEORY-OF-BECOMING.md，引用删去名称的句子改引保留者；§9（层、导入树、回执、计数）随 R29。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Courses.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Courses.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Courses.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Courses.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；THE-THEORY-OF-BECOMING.md，名称随 R30 改名表；10月20日退役的 Lean 名列入术语表；§9（回执）随 R30。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Courses.lean, Description.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Courses.lean, takes as its final sections RetrodictionRuns, CandidateRuns, ReducedRuns, the modules reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; Description.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：证明绑定（Courses.lean、Description.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 223 节；Courses.lean，以末节收入 RetrodictionRuns、CandidateRuns、ReducedRuns（读它的模块），声明、名称与陈述不变；其中的纯转发与副本删去；Description.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；THE-THEORY-OF-BECOMING.md，§9（回执、计数、不再计入重述的连通性度量）随 R32。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 50 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/b738d863b458b867/separation-loses-the-relation.json and in git.",
+      "zh": "2026-10-20：50 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/b738d863b458b867/separation-loses-the-relation.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, LK1 (study section 237): the closest prior result named against the significance review's verdicts (study SA1), so that the record is not led with as a new finding; one limitations clause rewritten within the growth ratchet (this record is not in SA1's table; the match is LK1's judgment). The claim and its premises are unchanged.",
+      "zh": "2026年10月20日，LK1（研究第237节）：按意义审查（研究 SA1）的裁定指名最接近的先前结果，使本记录不被当作新发现来领头；在增长限制之内改写 limitations 的一句（本记录不在 SA1 的表中；这一对应是 LK1 的判断）。主张与其前提不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the correspondence names the record by its current id, claims-shown-in-context, for its former id; nothing else changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应以现行编号 claims-shown-in-context 称该记录，取代其旧编号；别无改变。"
+    }
+  ]
+}

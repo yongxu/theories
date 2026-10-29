@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "id": "formed-goal-revision-continuation",
+  "title": {
+    "zh": "取得根据的目的修订与实际接续",
+    "en": "Acquired grounds, goal revision and actual continuation"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F03",
+  "reviewed_at_utc": "2026-10-25T14:45:06+00:00",
+  "claim": {
+    "zh": "在给定的二实践教育构造中，对每组工作、储备与已用单位、选择器与操作次数：一种实践从 ⟨w,q,z⟩ 运行 n 个周期，当且仅当 n = 0，或 2 ≤ w 且工作覆盖储备不支持的周期（受支持周期在选择器反馈该实践时为 q/2，否则为 0）；学习目的的每次操作消耗该目的、保持选择器、加上转变损失（若有）并追加一条记录。对构造的每个条件，比较恰在访问有损而转变维护保留时认可学习优于参与，修订恰在此处完成，即恰在有根据处；对每个这样的条件，修订与改革之后 n 次操作运行当且仅当 n ≤ 5（不改革选择器时 n ≤ 2），每次操作使用新目的，先前一次损失保留。比较的定义属该构造。harmful 的标题结论是实例：取得的原目标为参与计数，既有比较支持学习实践，五次实际操作使用新目的并保留先前一次损失。",
+    "en": "In the supplied two-practice educational construction, for all work, reserve and used units, selector and number of operations: a practice runs n cycles from ⟨w,q,z⟩ exactly when n = 0, or 2 ≤ w and the work covers the cycles the reserve does not support (q/2 supported cycles where the selector feeds the practice back, none otherwise); every operation of the learning goal consumes it, keeps the selector, adds the transition loss if any and appends one record. For every condition of the construction, the comparison warrants learning over attendance exactly under access loss with kept transition maintenance, and revision completes exactly there, that is exactly where it is warranted; for every such condition, after revision and reform n operations run exactly when n ≤ 5 (n ≤ 2 without reforming the selector), each consuming the new goal, and the earlier loss is retained. The comparison's definitions belong to the construction. The harmful headline is an instance: acquisition forms the attendance goal, the existing comparison supports learning, and five actual operations consume the new goal while retaining the earlier loss."
+  },
+  "hypotheses": [
+    {
+      "zh": "两实践、反馈与校准规律、生生之意义与实践承诺（J）下的解释、响应与权限、初始工作和储备以及给定执行顺序。",
+      "en": "Two practices, feedback/calibration laws, interpretation under living significance and the practical commitments (J), responsiveness and authority, initial work/reserve and the scheduled sequence."
+    }
+  ],
+  "correspondence": {
+    "zh": "明确区分目的形成、成就判准改变与行动；局部二选一不能冒充任意目的的开放发现。",
+    "en": "Distinguishes goal formation, changed attainment criteria and action; the two-practice local choice is not open discovery of arbitrary ends."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalFormationRevision.lean",
+  "aliases": [
+    "GoalFormationRevision.joined_revision_has_warrant_and_actual_continuation",
+    "Becoming.MachineInstances.cycles_iff",
+    "Becoming.MachineInstances.operateMany_learning",
+    "Becoming.MachineInstances.completed_isSome_iff",
+    "Becoming.MachineInstances.revision_continues",
+    "Becoming.MachineInstances.harmful_instance",
+    "Becoming.MachineInstances.harmful_bounds",
+    "Becoming.MachineInstances.better_iff"
+  ],
+  "dependencies": [],
+  "related": [],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalFormationRevision.lean",
+      "detail": {
+        "zh": "证据失真、根据过期、不响应、交叉损失和支持不足各有反例；不证明普遍动机形成或生物实现。",
+        "en": "False or stale grounds, nonresponse, crossed losses and insufficient support retain counterexamples; no universal motivation or biological realization."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "证据失真、根据过期、不响应、交叉损失和支持不足各有反例；不证明普遍动机形成或生物实现。",
+    "en": "False or stale grounds, nonresponse, crossed losses and insufficient support retain counterexamples; no universal motivation or biological realization."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.30.0-rc2 实际重建导入闭包并审计；明确区分原成果和新增组合。元数据检查不替代数学证明。",
+    "en": "Lean 4.30.0-rc2 actually rebuilt the repository import closure and audited declarations; inherited claims and the new composition remain distinct. Metadata checks do not replace proofs."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalFormationRevision.lean",
+      "role": "proof",
+      "sha256": "90c5903cf3d1382304fa91dc3336e7a8ae20c89695ea4c9baabd9b95bd068038",
+      "declarations": [
+        "GoalFormationRevision.joined_revision_has_warrant_and_actual_continuation"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+      "role": "proof",
+      "sha256": "83c01ea3684e6005ad7c112409dabf345000871524b321efd9f738b94b8c7925",
+      "declarations": [
+        "Becoming.MachineInstances.cycle_eq",
+        "Becoming.MachineInstances.cycles_iff",
+        "Becoming.MachineInstances.cycles_learning_iff",
+        "Becoming.MachineInstances.cycles_unselected_iff",
+        "Becoming.MachineInstances.lossPer",
+        "Becoming.MachineInstances.learning_loss",
+        "Becoming.MachineInstances.operateMany_learning",
+        "Becoming.MachineInstances.completed_isSome_iff",
+        "Becoming.MachineInstances.revised_class",
+        "Becoming.MachineInstances.revision_continues",
+        "Becoming.MachineInstances.harmful_instance",
+        "Becoming.MachineInstances.harmful_bounds",
+        "Becoming.MachineInstances.better_iff",
+        "Becoming.MachineInstances.completed_iff_better"
+      ]
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/common-task-revision-verification.json",
+      "role": "receipt",
+      "sha256": "597e54ba387e56033ea99111c3b888108332a93f08fd7dcbb5763b3e7b019aa0",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/GOAL-FORMATION-REVISION-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "f94ecf9d9403107cae99e5eed806efefa05df54f12014f75cb78836347d4d68b",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json",
+      "role": "receipt",
+      "sha256": "9529958e4e9e29d9acd9ebff1dbe6cc734739f80577a0c75b623f85840ea2e79",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json",
+      "role": "receipt",
+      "sha256": "6d30faffd5899d5180f3a2e230035c0f87ce266d959330b61aebed22411a173b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
+      "role": "receipt",
+      "sha256": "72cf0f96994a75c732cea93c92c4dbdf96cc4ba943d538de31ab2bcfd79cc9fb",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalFormationRevision.lean",
+      "receipt": "experiments/market-generativity/meta-attractor/common-task-revision-verification.json",
+      "sha256_pointer": "/modules/5/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
+      "sha256_pointer": "/source_sha256/MachineInstances",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "复用此相连历史；在途工作连接已由 acquired-revision-of-pending-task 推进，持续适用仍需说明。",
+    "en": "Reuse this joined history; acquired-revision-of-pending-task advances the in-flight connection, while continuing applicability remains to establish."
+  },
+  "history": [
+    {
+      "zh": "2026-10-09：迁移既有有界形成／修订定理；原稿与原回执保留，本轮仅把它重建为组合依赖。",
+      "en": "2026-10-09: migrated the existing bounded formation/revision theorem; original sources and receipt remain, rebuilt here as a composition dependency."
+    },
+    {
+      "zh": "2026-10-14，开放问题计划（研究第117节）：主张加入修订根据的律：外围 MachineInstances 的 better_iff 与 completed_iff_better——对构造的每个条件，比较恰在访问有损而转变维护保留时认可学习优于参与，修订恰在此处完成；比较的定义属构造。主张中“账户”改为“工作、储备与已用单位”，意义不变。scratch_build 实编，核心公理报告为空，外围只用标准公理；对 MachineInstances 的证明绑定仍指先前运行，落地时改指新运行。原定理与反例不变。",
+      "en": "14 October 2026, open-issues plan (study section 117): the claim now adds the law of the warrant for revision: better_iff and completed_iff_better in the periphery MachineInstances, for every condition of the construction the comparison warrants learning over attendance exactly under access loss with kept transition maintenance, and revision completes exactly there; the comparison's definitions belong to the construction. In the claim, “account” now reads “work, reserve and used units”, meaning unchanged. Built with scratch_build: core axiom reports empty, the periphery with standard axioms only; the proof binding to MachineInstances still names the earlier run and is repointed at landing. The original theorems and counterexamples are unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 21 bookkeeping notes condensed from 2026-10-14 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/018bef596f97ea93/formed-goal-revision-continuation.json and in git.",
+      "zh": "2026-10-20：21 条记账性说明合并（2026-10-14 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/018bef596f97ea93/formed-goal-revision-continuation.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label G0 in the premise replaced by the current term: the interpretation is under living significance and the practical commitments (J).",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：前提中已退休之标签 G0 改为现行之词：解释在生生之意义与实践承诺（J）之下。"
+    }
+  ]
+}

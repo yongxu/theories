@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "id": "unanchored-incidence-collapse",
+  "title": {
+    "zh": "无共同引用的关联问题丢失真实接续",
+    "en": "Unanchored incidence questions lose real continuation distinctions"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F22",
+  "reviewed_at_utc": "2026-10-08T13:52:31.763955+00:00",
+  "claim": {
+    "zh": "任意两个有局部左右单位的接合结构中，所有片段在无引用关联语言中同测。该粗说明对这套问题精确且最小，却可把同一已消耗历史的不可自接合误成可自接合。",
+    "en": "All fragments in any two joining structures with local left/right units agree in the unanchored incidence language. The coarse account is exact and reduced for that language yet can turn the same spent history’s impossible self-join into a possible one."
+  },
+  "hypotheses": [
+    {
+      "zh": "HasUnits 对一般退化定理；具体反例复用 budgetProcess 的 admitted histories、trace_has_units 和 spend_cannot_self_join。",
+      "en": "HasUnits for the general collapse; the concrete case reuses budgetProcess admitted histories, trace_has_units and spend_cannot_self_join."
+    }
+  ],
+  "correspondence": {
+    "zh": "反例在已有单次消耗过程中比较真实片段与其粗代码；遗漏的是固定输入关系，不是任意本体身份或自由切换的谓词。",
+    "en": "The example compares an actual fragment of the existing one-use process with its coarse code; the omission is fixed-input joining, not arbitrary ontological identity or a freely toggled predicate."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JoiningRoles.lean",
+  "aliases": [
+    "Generative.ExplanatoryJoiningAnchors.units_same_incidence_questions (retired module)",
+    "Becoming.Joining.units_alike_in_roles (retired module)",
+    "Becoming.Joining.RoleTotal.collapse",
+    "Becoming.Joining.open_map_does_not_force_pair_lifting_by_core (retired module)"
+  ],
+  "dependencies": [
+    {
+      "id": "joining-open-map-factor",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "单位置提升映射的问答保真接入退化说明。",
+        "en": "Question fidelity of one-position lifting maps feeds the collapse account."
+      },
+      "interface": {
+        "output": {
+          "zh": "open_map_preserves_questions。",
+          "en": "open_map_preserves_questions."
+        },
+        "input": {
+          "zh": "units_collapse_open 从单位给出到单片段结构的 OpenMap，再得到所有片段同测。",
+          "en": "units_collapse_open constructs an OpenMap to the singleton structure from local units, then yields agreement of all fragments."
+        },
+        "conditions": {
+          "zh": "保留局部左右单位及同一关联语言；不需要经典有限分支恢复。",
+          "en": "Retain local left/right units and the same incidence language; classical finite-branch recovery is not required."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJoiningAnchors.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "retained-reference-joining-recovery",
+      "detail": {
+        "zh": "保留同一配置的共同引用修复具体丢失。",
+        "en": "Shared reference within a retained configuration repairs the concrete loss."
+      }
+    },
+    {
+      "id": "finite-granularity-question-recovery",
+      "detail": {
+        "zh": "同一研究中的接续成果；具体正式复用另列，关联不自动构成已证转换。",
+        "en": "Continuation result in the same study; formal reuse is listed separately, and this relationship does not itself assert a checked adapter."
+      }
+    },
+    {
+      "id": "prefix-observation-loss",
+      "detail": {
+        "zh": "同一研究中的接续成果；具体正式复用另列，关联不自动构成已证转换。",
+        "en": "Continuation result in the same study; formal reuse is listed separately, and this relationship does not itself assert a checked adapter."
+      }
+    },
+    {
+      "id": "guarded-program-question-recovery",
+      "detail": {
+        "zh": "同一研究的新接续；具体形式复用另列，此关联不独自证明转换。",
+        "en": "New continuation in the same study; formal reuse is specified separately, without a proved adapter inferred from this relation."
+      }
+    },
+    {
+      "id": "residual-continuation-correspondence",
+      "detail": {
+        "zh": "同一研究的新接续；具体形式复用另列，此关联不独自证明转换。",
+        "en": "New continuation in the same study; formal reuse is specified separately, without a proved adapter inferred from this relation."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/EXPLANATORY-JOINING-CONTEXTS-INTEGRATION.md",
+      "detail": {
+        "zh": "否定的是无引用语言足以解释完整接合的候选推论；不是生成基础不可能。局部单位未被证明为普遍条件；退化定理不需有限性。",
+        "en": "Refutes the candidate inference that unanchored questions suffice for full joining, not the possibility of generative grounding. Local units are not proved universal; the collapse theorem needs no finiteness."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "否定的是无引用语言足以解释完整接合的候选推论；不是生成基础不可能。局部单位不由本轮证明为普遍条件；退化定理不需有限性。",
+    "en": "Refutes the candidate inference that unanchored questions suffice for full joining, not the possibility of generative grounding. Local units are not proved universal; the collapse theorem needs no finiteness."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 实查：本次43项新声明，213项继承审计，共256项；新9空依赖、34标准，7项含经典选择。冻结源码、日志与回执逐字绑定；非独立 agent 验收。",
+    "en": "Lean 4.29.1 checks 43 new declarations and 213 inherited audits, 256 total; new 9 empty and 34 standard dependency lists, 7 with classical choice. Frozen source/logs bind to the receipt; no independent-agent acceptance."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJoiningAnchors.lean",
+      "role": "provenance",
+      "sha256": "e6a989180b3e999647bb89c3a1b4a15bfc989b3d15d9de5f89abf88d892024d9",
+      "declarations": [
+        "Generative.ExplanatoryJoiningAnchors.units_same_incidence_questions",
+        "Generative.ExplanatoryJoiningAnchors.units_collapse_open",
+        "Generative.ExplanatoryJoiningAnchors.coarse_account_exact",
+        "Generative.ExplanatoryJoiningAnchors.coarse_account_reduced",
+        "Generative.ExplanatoryJoiningAnchors.open_map_does_not_force_pair_lifting",
+        "Generative.ExplanatoryJoiningAnchors.same_incidence_distinct_boundary_probes",
+        "Generative.ExplanatoryJoiningAnchors.retained_anchor_separates"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
+      "role": "proof",
+      "sha256": "c2ce8ed970473ced65a6addb9ef5ff6a0a994f33507d2d24316a7f79888858e1",
+      "declarations": [
+        "Becoming.Alike.sameBranchingTests"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JoiningRoles.lean",
+      "role": "proof",
+      "sha256": "721bbba16a2eed321383c4183954f41425ca91b92fc3f25ee8f4c6147b4bcb96",
+      "declarations": [
+        "Becoming.Joining.HasUnits.roleTotal",
+        "Becoming.Joining.HasUnits.collapse",
+        "Becoming.Joining.collapsed_exact",
+        "Becoming.Joining.collapsed_reduced",
+        "Becoming.Fragment.once_open_not_pairLifting",
+        "Becoming.Fragment.once_roles_hide_ends",
+        "Becoming.Fragment.once_self_apart"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/explanatory-joining-refinement-checks/20261008T134730.060831Z/receipt.json",
+      "role": "receipt",
+      "sha256": "09ad7cb70e631f5bdf581ab30c2af72387b0920b174fd033415f627726127770",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/EXPLANATORY-JOINING-CONTEXTS-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "a78b40420146e1035b468b39f60faf9ac2a768db1df8f63adcdf4b13a3dee56f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJoiningRefinement.lean",
+      "role": "provenance",
+      "sha256": "2e4b6c6dbde751551dc956c0322683853a41fbf828a53caaa19ef8cf39e788b2",
+      "declarations": [
+        "Generative.ExplanatoryJoiningRefinement.open_map_preserves_questions"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryLocalUnits.lean",
+      "role": "provenance",
+      "sha256": "a2167da3bd8c6364f0bcd7bfbc443edb153e3329c034fd015a42a844e3e4e0cf",
+      "declarations": [
+        "Generative.ExplanatoryLocalUnits.trace_has_units"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LocalUnits.lean",
+      "role": "proof",
+      "sha256": "1d1b6e7ac5ba7520bf9265716be266a3b663d9eb51f7d0d806eaca0d0d7870b4",
+      "declarations": [
+        "Becoming.Fragment.has_units"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJoining.lean",
+      "role": "provenance",
+      "sha256": "1149035f2cc534f133664e6e1377f96761a16d532fe01af8639063ab4503176d",
+      "declarations": [
+        "Generative.ExplanatoryJoining.spend_cannot_self_join"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Fragments.lean",
+      "role": "proof",
+      "sha256": "b8e3cae76f78686db5ec36794e4bc5797d8eebd584ebbd74626259c8e92e92fd",
+      "declarations": [
+        "Becoming.Fragment.passage_not_self_joint"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joining.lean",
+      "role": "proof",
+      "sha256": "21ba2468426712d6c8410ad2d7960675a6e561cfa07d43ab6782cf9ffc2b10a6",
+      "declarations": [
+        "Becoming.Joining.RoleTotal.alike",
+        "Becoming.Joining.RoleTotal.collapse",
+        "Becoming.Joining.RoleTotal.open_not_pairLifting",
+        "Becoming.Joining.OpenMap.sameBranchingTests"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/JoiningBridge.lean",
+      "role": "provenance",
+      "sha256": "07948aff461a1a8a72852689a35dbec9276179ac0eec265d39e8b44a1ecef0c9",
+      "declarations": [
+        "Becoming.Joining.roleTotal_of_hasUnits",
+        "Becoming.Joining.units_alike_in_roles",
+        "Becoming.Joining.single_step_roles_alike",
+        "Becoming.Joining.trace_has_units_by_core",
+        "Becoming.Joining.open_map_does_not_force_pair_lifting_by_core"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T222948.779875Z/verification.json",
+      "role": "receipt",
+      "sha256": "0a2bacf2db996d0f2da49b75bda0b985f74a5b6849be2b50ab6471033917d914",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joining.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Joining",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JoiningRoles.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.JoiningRoles",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joining.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Joining",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Likeness",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LocalUnits.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.LocalUnits",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Fragments.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Fragments",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "复用有限条件程序与真实余项恢复；继续建立内部语法不同的说明之间余项、判断与实际形成关系的有据翻译，区分语义可判定与实际取得。",
+    "en": "Reuse finite guarded programs and coherent residual recovery; establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition."
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：在既有接合情境研究中继续；共同细化、相容因子、真实信息丢失与保留引用修复各保留准确范围。",
+      "en": "2026-10-08: continued the existing joining-context study, with distinct scopes for common refinement, compatible factors, real information loss and retained-reference repair."
+    },
+    {
+      "zh": "2026-10-09：复用本成果接通固定有限操作粒度；旧主张、假设与证明绑定不变。新前缀遗漏及继续检验见同一研究第22—26节。",
+      "en": "2026-10-09: reuse this result in finite-granularity continuation; preserve its claim, hypotheses and proof bindings. New prefix omission and resumption testing appear in the same study §§22–26."
+    },
+    {
+      "zh": "2026-10-09接续：研究新增有限条件程序、余项恢复及35项实查声明；原成果的主张、假设和证明绑定保持，见原研究§27—32。",
+      "en": "2026-10-09 continuation: finite guarded programs, residual recovery and 35 checked declarations added in the same study §§27–32; this result retains its claim, assumptions and proof bindings."
+    },
+    {
+      "zh": "2026-10-14，整合 I3（Ren：“a lot proofs are probably not integrated”）：在脊柱上重述。新的核心模块 Becoming.Joining（只导入 Becoming.Likeness）把片段的结合经伙伴、角色与保留引用读作脊柱的框架；描述提升一结合，恰当同一编码是伙伴框架的互模拟，无前提（Joining.lifts_iff）；Becoming.JoiningBridge 把结合研究读作实例。每一片段取每一角色处，所有片段在角色中相同（Joining.RoleTotal.alike），映到自结合片段之结合的映射为开，而片段仍可不能与自身结合（RoleTotal.open_not_pairLifting、RoleTotal.collapse）；局部单位给每一片段每一角色（roleTotal_of_hasUnits），所以两带单位结构的片段在角色中相同（units_alike_in_roles）。外围的 trace_has_units 与 open_map_does_not_force_pair_lifting 以空公理报告逐字重述（trace_has_units_by_core、open_map_does_not_force_pair_lifting_by_core）。外围的关联步、答案相同与跨度经带重叠通配分支的匹配定义（登记研究的步经 xs[i]?），其编译后的定义用到 propext，凡提及它们的陈述公理报告都不为空；所以此主张在核心的角色框架（Joining.roleFrame）或保留框架（Joining.retainedFrame）上重述，不是逐字实例；桥接表明外围的开映射与局部有限即核心的（openMap_iff_incidence、locallyFinite_iff）。公理报告为空（草稿构建；回执随落地）。外围证明及其回执保持原范围。",
+      "en": "14 October 2026, integration I3 (Ren: “a lot proofs are probably not integrated”): restated on the spine. The new core module Becoming.Joining, importing only Becoming.Likeness, reads a joining of fragments as frames of the spine, through partners, roles and retained references; a description lifts a joining exactly where having one code is a bisimulation of the partner frame, with no premise (Joining.lifts_iff); Becoming.JoiningBridge reads the joining studies as instances. Where every fragment takes every role, all fragments are alike in their roles (Joining.RoleTotal.alike), the map onto the joining of one fragment with itself is open, and yet a fragment may be unable to join itself (RoleTotal.open_not_pairLifting, RoleTotal.collapse); local units give every fragment every role (roleTotal_of_hasUnits), so fragments of two structures with units are alike in their roles (units_alike_in_roles). The periphery's trace_has_units and open_map_does_not_force_pair_lifting are restated exactly with empty reports (trace_has_units_by_core, open_map_does_not_force_pair_lifting_by_core). The periphery's incidence step, sameness of answers and span are defined through a match with an overlapping wildcard case (the register study's step through xs[i]?), and their compiled definitions use propext, so no statement mentioning them has an empty axiom report; the claim is therefore restated on the core's role frame (Joining.roleFrame) or retained frame (Joining.retainedFrame), not as a literal instance, the bridge showing that the periphery's open maps and local finiteness are the core's (openMap_iff_incidence, locallyFinite_iff). Empty axiom reports (scratch build; the receipt comes with the landing). The periphery proof and its receipt keep their scope."
+    },
+    {
+      "en": "17 October 2026, wording: round narration removed from public fields, following Ren's 17 October directive that his earlier words are provenance, not authority; the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: Likeness.lean. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R29 (compression under board rule 9: generalize below, not beside; one name per statement): Proof bindings (Likeness.lean) rebound to core receipt 20261019T185632.962707Z. Re-pointed after reading the change: Likeness.lean, a restatement of a statement proved under another name removed (one name per statement), or a use or docstring re-pointed to the kept name; kept statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R29（按看板规则 9 压缩：在下面推广而非并列；每个陈述一个名称）：证明绑定（Likeness.lean）改到核心回执 20261019T185632.962707Z。读过改动后重新指向：Likeness.lean，删去以另一名称证明之陈述的重述（每个陈述一个名称），或用法与说明改指保留的名称；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Likeness.lean, LocalUnits.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Likeness.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; LocalUnits.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Likeness.lean、LocalUnits.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Likeness.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；LocalUnits.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Joining.lean, Likeness.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: Joining.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Likeness.lean, takes as its final section ListedOutcomeFrames, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：证明绑定（Joining.lean、Likeness.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：Joining.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变；Likeness.lean，以末节收入 ListedOutcomeFrames（读它的模块），声明、名称与陈述不变；其中的纯转发与副本删去。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 7 bookkeeping notes condensed from 16 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/7cb9ba681f097abf/unanchored-incidence-collapse.json and in git.",
+      "zh": "2026-10-20：7 条记账性说明合并（16 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/7cb9ba681f097abf/unanchored-incidence-collapse.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryJoining, ExplanatoryJoiningAnchors, ExplanatoryJoiningRefinement, ExplanatoryLocalUnits and JoiningBridge) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Fragments, Becoming.Joining, Becoming.JoiningRoles, Becoming.Likeness and Becoming.LocalUnits). 3 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryJoining, ExplanatoryJoiningAnchors, ExplanatoryJoiningRefinement, ExplanatoryLocalUnits and JoiningBridge）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Fragments, Becoming.Joining, Becoming.JoiningRoles, Becoming.Likeness and Becoming.LocalUnits）。3 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    }
+  ]
+}

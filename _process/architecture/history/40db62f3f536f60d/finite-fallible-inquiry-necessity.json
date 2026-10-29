@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "id": "finite-fallible-inquiry-necessity",
+  "title": {
+    "zh": "可错科学辨别的必要信息条件",
+    "en": "Necessary information conditions for fallible scientific discrimination"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F11",
+  "reviewed_at_utc": "2026-10-13T13:04:43.138900+00:00",
+  "claim": {
+    "zh": "有限加权辨别的作答覆盖不超过两类错误与证据差异之和；保持相同读数的适应关系不能同时达到更强指标。接到原生同律平衡历程后，在所列起点和完整耦合条件下，覆盖不超过两类错误与回应关系可达权重之和；全部不可达时覆盖恰等于两类错误。对平衡前提的检验：相同未计入交换足以保持原生不可达处经耦合无别与作答相同，绝对平衡是特例；遗漏交换可保留正确读数，却使机制界失去前提，补记差额不自动恢复响应条件。",
+    "en": "Finite weighted discrimination has commitment coverage at most two error weights plus evidence separation; readout-preserving adaptive relations cannot meet stronger service claims. Composed with native balanced courses of one law, under the stated starting and complete-coupling conditions, coverage is at most two errors plus responsive-reach weight; entirely beyond reach, coverage equals the two errors. A test of balance: common residual exchange suffices for native beyond-reach likeness through the couplings and answer equality, with absolute balance as a special case; omitted exchange can preserve correct readouts while invalidating the mechanism bound, and counting the residual does not automatically restore response."
+  },
+  "hypotheses": [
+    {
+      "zh": "二元目标意义、有限自然数权重表和完整实际可用输入；概率解释另需两侧同一正总量。",
+      "en": "Intended binary target, finite natural-weight tables and complete actually available inputs; probability interpretation additionally requires equal positive marginal totals."
+    },
+    {
+      "zh": "配对版本使用有效配对和共同读者；直接边缘版本不需指定配对。",
+      "en": "The paired version uses a valid pairing and common reader; the direct marginal version needs no chosen coupling."
+    },
+    {
+      "zh": "适应性结论使用初态关系、每步关系保持及关联状态的相同读数；不同状态类型获准。",
+      "en": "The adaptive conclusion uses initial relatedness, step preservation and identical readouts on related states; different state types are allowed."
+    },
+    {
+      "zh": "原生接续使用平衡历程、相同在场形成、回应所及之外耦合入的条件的初始水平相同；部分之外遵从同一经耦合而读的交换律，作答经由截至作答时刻耦合入的全部。",
+      "en": "The native composition uses balanced courses, the same formations present, and alike initial levels of the conditions coupled in beyond responsive reach; outside the part both follow one exchange law reading through the couplings, and answering factors through everything that couples in up to answer time."
+    },
+    {
+      "zh": "可达权重使用显式可达判定；定性不可达结论和全部不可达时的恒等式不需此判定。真实目标、成对权重及输入完整性另须对应。",
+      "en": "The reach-weight indicator uses an explicit reach decision; the qualitative beyond-reach conclusion and the exact identity entirely beyond reach need none. Actual target labels, paired weights and completeness of access retain correspondence obligations."
+    },
+    {
+      "zh": "P94定性推广不要求各原流平衡，改为两条历程的未计入给予和取得逐步逐条件相同；保留在场形成、相关初态、其余回应及完整读数条件。不把此充分条件称为最小必要条件。",
+      "en": "P94’s qualitative generalization replaces balance of each original flow with equality of their residual giving and taking at every step and condition; retains presence, relevant initial levels, response and complete readout conditions. This sufficient condition is not claimed minimal or necessary."
+    }
+  ],
+  "correspondence": {
+    "zh": "从同一展开分化出变化部分、耦合和回应。新接续由共同脊柱的实际交换、耦合闭包和同律响应推出统计限制；科学任务先用覆盖与错误说明，不定义为接受本理论。结构可达是完整历程交换的闭包，不等于作答前逐时传递的因果路径。 P94固定同一原生任务，对比完整与遗漏交换的描述；缺失关系是解释缺口，不是整个现实缺少关系的证据。",
+    "en": "The varying part, coupling and response differentiate within one unfolding. The new composition derives the statistical restriction through the shared spine’s exchanges, coupling closure and common-law response. The scientific achievement is independently specified by coverage and error, not acceptance of this theory. Structural reach closes exchanges over whole courses, rather than identifying a time-ordered causal path by answer time. P94 fixes the same native task and compares complete versus omitted-exchange descriptions; the missing relation is an explanatory omission, not evidence of an unrelated reality."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/ScientificInquiryNecessity.lean",
+  "aliases": [
+    "Generative.ScientificInquiryNecessity.fallible_inquiry_bound",
+    "Generative.ScientificInquiryNecessity.distributional_coverage_bound",
+    "Generative.ScientificInquiryNecessity.adaptive_service_excludes_blindness",
+    "Becoming.FallibleInquiry.answer_alike_beyond_response",
+    "Becoming.FallibleInquiry.different_answers_not_beyond",
+    "Becoming.FallibleInquiry.answer_alike_beyond_law",
+    "Becoming.FallibleInquiry.coverage_le_errors_add_reach",
+    "Becoming.FallibleInquiry.error_bounds_require_reach",
+    "Becoming.FallibleInquiry.beyond_reach_coverage_eq_errors",
+    "Becoming.FallibleInquiry.alike_with_common_imbalance",
+    "Becoming.FallibleInquiry.answer_alike_with_common_imbalance"
+  ],
+  "dependencies": [
+    {
+      "id": "comparison-where-the-rest-responds",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "alike_beyond_response 给出不可达处经耦合无别，answer_alike_beyond_response 接为相同作答；不重证闭包。",
+        "en": "alike_beyond_response produces likeness through the couplings beyond reach; answer_alike_beyond_response consumes it to obtain identical answers without reproving the closure."
+      },
+      "interface": {
+        "output": {
+          "zh": "回应所及之外逐时经耦合无别。",
+          "en": "Alike through the couplings at every time beyond responsive reach."
+        },
+        "input": {
+          "zh": "相同作答供给既有可错覆盖界。",
+          "en": "Identical answers supply the existing fallible coverage bound."
+        },
+        "conditions": {
+          "zh": "平衡、相同在场形成和相关初态、其余经耦合回应、完整作答接口。",
+          "en": "Balance, the same present formations and relevant initial levels, response through the couplings, and a complete answering interface."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean"
+      }
+    },
+    {
+      "id": "counterfactual-is-the-course",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "ExchangeLaw.Through.responds 从同一律推出回应前提，接入 answer_alike_beyond_law 与加权界。",
+        "en": "ExchangeLaw.Through.responds derives the response premise from one law for answer_alike_beyond_law and the weighted bound."
+      },
+      "interface": {
+        "output": {
+          "zh": "同一经耦合而读的律之两历程满足回应前提。",
+          "en": "Two courses of one law reading through the couplings satisfy the response premise."
+        },
+        "input": {
+          "zh": "不可达处经耦合无别与作答相同的前提。",
+          "en": "The response premise of beyond-reach likeness through the couplings and answer equality."
+        },
+        "conditions": {
+          "zh": "所给律经耦合而读；部分之外两历程遵从该律。",
+          "en": "The supplied law reads through the couplings; outside the part both courses follow it."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean"
+      }
+    },
+    {
+      "id": "imbalance-as-relatum",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "复用 Flow.withImbalance、withImbalance_balances 与 balances_iff_idle，检验表示平衡后回应条件是否保持，并把同余差额作为弱于绝对平衡的充分条件。",
+        "en": "Reuses Flow.withImbalance, withImbalance_balances and balances_iff_idle to test whether response survives balancing by representation, and to derive common residuals as a sufficient condition weaker than absolute balance."
+      },
+      "interface": {
+        "output": {
+          "zh": "补计差额后的流平衡，原平衡恰是新增项不给不取。",
+          "en": "Counting residuals balances the flow; original balance is exactly the added relatum neither giving nor taking."
+        },
+        "input": {
+          "zh": "闭合区域包含无物耦合入的新增项；两侧新增项交換相同可应用既有闭合区域不可辨别定理。",
+          "en": "The closed region includes an added relatum into which nothing couples; equal residual exchange on both sides permits the existing closed-region indistinguishability theorem."
+        },
+        "conditions": {
+          "zh": "共同在场形成、相关条件的初始水平、原区域封闭及原形成的回应条件；新增项的交换逐时逐条件相同。",
+          "en": "Common present formations, relevant initial levels, original closed region and response; the added relatum exchanges alike at every time and condition."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean"
+      }
+    }
+  ],
+  "related": [],
+  "counterexamples": [
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONDITIONS.md",
+      "detail": {
+        "zh": "不作答可无错误但无辨别覆盖；正确猜中不能保证两侧可靠，遗漏实际输入会使应用失效。",
+        "en": "Abstention can avoid errors without discrimination coverage; a lucky answer does not ensure two-case reliability, and omitted actual inputs invalidate an application."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
+      "detail": {
+        "zh": "原生例子中不同形成读取共享条件可以正确辨别；同一可达关系下忽略信号仍答错，故可达不充分。不同初始证据不满足共同起点，不能被排除后当反例。",
+        "en": "A distinct native reader can discriminate a shared condition; ignoring the same reachable signal still errs, so reach is not sufficient. Differently informative initial records violate common start and cannot be silently excluded from an application."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
+      "detail": {
+        "zh": "omitted_exchange_keeps_task 保留正确作答但遗漏交换使平衡和所计可达失效；补计差额后若新增项留在变化部分之外，其响应条件失败，若算入差异来源则可达恢复。common_nonzero_imbalance 证明共同余项可非零。",
+        "en": "omitted_exchange_keeps_task retains correct answers while omitted exchange invalidates balance and represented reach. After counting the residual, response fails if it remains outside the varying part; including it among the differences restores reach. common_nonzero_imbalance witnesses nonzero common residuals."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "保留有限自然权重、完整输入、共同规则及真实概率对应条件。原生接续另限于所列平衡、在场形成与初态条件；结构可达可能含未来或次序不合的边，不证明作答前逐时传递，亦不保证读懂或使用区别。未证明整个核心的科学普遍必要性。 P94只推广定性不可辨别，不声称已形式化对应加权界或得出最小条件。描述未写全仍预测成功，不构成完整机制说明的充分对手。",
+    "en": "Retains finite natural weights, complete inputs, a common rule and actual probability correspondence. The native adapter adds its balance, presence and initial-record conditions; structural reach may include future or wrongly ordered edges and does not prove time-ordered transmission by answer time or successful understanding/use. Science-wide necessity of the whole core is unproved. P94 generalizes qualitative blindness only; it claims neither a newly formalized weighted bound nor a least-condition result. Predictive success with an incomplete description is not an adequate rival to a complete mechanism explanation."
+  },
+  "validation_scope": {
+    "zh": "2026-10-16：Becoming.FallibleInquiry 的当前字节由回执 20261016T120403.241963Z 绑定（通过，31 项定理、37 项声明审计）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 原统计18／27及P92/P94冻结回执保持。P104仅追加3项逐时接续，另记 timely-response-necessity；原28项定理声明及证明逐字保留。当前外围31定理／37声明，20空、17仅 propext 与 Quot.sound，无 Classical.choice；43继承模块来源绑定。纯核心不导入外围，无经验或独立评审。",
+    "en": "16 October 2026: the current bytes of Becoming.FallibleInquiry are bound to receipt 20261016T120403.241963Z (passed, 31 theorems, 37 declaration audits). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Original statistical 18/27 and P92/P94 receipts retained. P104 appends three timed adapters registered as timely-response-necessity; all original 28 statements and proofs are byte-preserved. Current periphery: 31 theorems / 37 declarations, 20 empty and 17 using only propext and Quot.sound, no Classical.choice; 43 inherited modules source-bound. Pure core does not import it; no empirical or independent review."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/ScientificInquiryNecessity.lean",
+      "role": "proof",
+      "sha256": "d46f15d2e512aca17541c493f224860ab4489f6da5ed8c1fd21bcd1b379e3c14",
+      "declarations": [
+        "Generative.ScientificInquiryNecessity.fallible_inquiry_bound",
+        "Generative.ScientificInquiryNecessity.distributional_coverage_bound",
+        "Generative.ScientificInquiryNecessity.adaptive_service_excludes_blindness",
+        "Generative.ScientificInquiryNecessity.run_preserves_relation",
+        "Generative.ScientificInquiryNecessity.adaptive_blindness_bound",
+        "Generative.ScientificInquiryNecessity.likelihood_attains_overlap",
+        "Generative.ScientificInquiryNecessity.overlap_plus_excess",
+        "Generative.ScientificInquiryNecessity.common_processing_cannot_add_difference",
+        "Generative.ScientificInquiryNecessity.sharp_fallible_witness"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/scientific-inquiry-necessity-checks/20261008T135418.446592Z/verification.json",
+      "role": "receipt",
+      "sha256": "bae0ba96edb44ba75ee958d8a296a4b87897fa3da54765daebde6c1d95baa04e",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONDITIONS.md",
+      "role": "integration",
+      "sha256": "dc3a549bc748c5830c07fb370506dbd20f060b982a010fee238420f45e76b0ef",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/SCIENTIFIC-PHILOSOPHY-SOURCES.md",
+      "role": "review",
+      "sha256": "85adae0cbe0da4364d73eedb00ea07c78d86924fdc07cc53863b42ff4e62ebf1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/check_scientific_inquiry_necessity.py",
+      "role": "review",
+      "sha256": "9c56041847cd19af88a4f86de698e10fc7313dca078866f2cb99e00b7b9d1024",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-08-knowledge-content-continuation.md",
+      "role": "provenance",
+      "sha256": "b45a269fc679cfe24c4dcb142f4e39e73d403502be62a7c11c3ca5fa3317f2d9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
+      "role": "proof",
+      "sha256": "84ea8ff9ff91703d1b5e3f9d7cb064dc93481b0a9b732c35b0ede02ddfdbf5b9",
+      "declarations": [
+        "Becoming.FallibleInquiry.answer_alike_beyond_response",
+        "Becoming.FallibleInquiry.different_answers_not_beyond",
+        "Becoming.FallibleInquiry.answer_alike_beyond_law",
+        "Becoming.FallibleInquiry.coverage_le_errors_add_reach",
+        "Becoming.FallibleInquiry.error_bounds_require_reach",
+        "Becoming.FallibleInquiry.beyond_reach_coverage_eq_errors",
+        "Becoming.FallibleInquiry.Witness.balanced",
+        "Becoming.FallibleInquiry.Witness.law_through",
+        "Becoming.FallibleInquiry.Witness.follows",
+        "Becoming.FallibleInquiry.Witness.read_through",
+        "Becoming.FallibleInquiry.Witness.connected",
+        "Becoming.FallibleInquiry.Witness.correct_answers",
+        "Becoming.FallibleInquiry.Witness.ignored_signal",
+        "Becoming.FallibleInquiry.observeWithResidual",
+        "Becoming.FallibleInquiry.regionWithResidual",
+        "Becoming.FallibleInquiry.residual_couples_nothing",
+        "Becoming.FallibleInquiry.closed_with_imbalance",
+        "Becoming.FallibleInquiry.common_imbalance_of_balanced",
+        "Becoming.FallibleInquiry.alike_with_common_imbalance",
+        "Becoming.FallibleInquiry.answer_alike_with_common_imbalance",
+        "Becoming.FallibleInquiry.Witness.omitted_exchange_none",
+        "Becoming.FallibleInquiry.Witness.omitted_exchange_no_reach",
+        "Becoming.FallibleInquiry.Witness.omitted_exchange_unbalanced",
+        "Becoming.FallibleInquiry.Witness.omitted_exchange_follows",
+        "Becoming.FallibleInquiry.Witness.omitted_exchange_keeps_task",
+        "Becoming.FallibleInquiry.Witness.counted_residual_balances",
+        "Becoming.FallibleInquiry.Witness.counted_residual_differs",
+        "Becoming.FallibleInquiry.Witness.counted_residual_not_response",
+        "Becoming.FallibleInquiry.Witness.counted_residual_reaches",
+        "Becoming.FallibleInquiry.Witness.common_nonzero_imbalance"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T110231.056199Z/verification.json",
+      "role": "receipt",
+      "sha256": "66492a0e15e19fe0e2e02614a9097af23a201ab3a39b497777440a9faeddb3d6",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_fallible_inquiry.py",
+      "role": "review",
+      "sha256": "0aa6cdbe96eeca37dc7e0c607702bd503e1143b9a804bad3a19b5abaf86a3d57",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T113924.930862Z/verification.json",
+      "role": "receipt",
+      "sha256": "c9bdc73b20cd5ffb3b08f0b354dd5107205cb3ed2de8399ee91a7671cb9892e0",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-13-scientific-foundation-as-testable-hypothesis.md",
+      "role": "provenance",
+      "sha256": "979077ca6c1b833c99ffe2bbc984a686ceb8be1970ecf754dee9c3f437c3a534",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T125313.109762Z/verification.json",
+      "role": "receipt",
+      "sha256": "27cf7417826cc785919b437d7e2708bd32672cd7ff84d57bf3cf477c0b8ce55e",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T205526.452771Z/verification.json",
+      "role": "receipt",
+      "sha256": "26ec20ad76d9c1acd39de927f3400875132b4f3a9a3dbcd1c1c10ffee251afd8",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261016T120403.241963Z/verification.json",
+      "role": "receipt",
+      "sha256": "ee0a3be1c346e06588497429893a9d932418e13bc910a10121f942e6770481e5",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261018T063731.167536Z/verification.json",
+      "role": "receipt",
+      "sha256": "211c5aab48e7f1eb987c8180fe2dc979e1b8ffac24ba8777e06b081ecfbd39d7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261019T000109.055377Z/verification.json",
+      "role": "receipt",
+      "sha256": "1e507f72ebb35344b2d1d4e72cee99ad82d3ae46826a4dee5ef2fc023ffabc5d",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
+      "role": "receipt",
+      "sha256": "ff450f699fb07509588b2dd412a1e15ba46daa9d807e57864eee833c61243b75",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/ScientificInquiryNecessity.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/scientific-inquiry-necessity-checks/20261008T135418.446592Z/verification.json",
+      "sha256_pointer": "/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.FallibleInquiry",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "逐时连接现已另行完成；科学基础目标继续检验初始证据与实际命令执行的配对根据。原统计、结构及共同余项结论保持。",
+    "en": "The timed connection is now completed separately; the foundation target continues testing initial-evidence and actual command-execution pairing. Original statistical, structural and common-residual conclusions remain."
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：迁移既有 I1/I2 及不作答论证，并新增有限权重形式证据和适应接续；18项新形式定理不是18项独立发现。",
+      "en": "2026-10-08: migrated existing I1/I2 and abstention reasoning with new finite-weight formal evidence and adaptive composition; 18 new formal theorems are not 18 independent discoveries."
+    },
+    {
+      "zh": "2026-10-13：核读研究新增§11；原§§1–10及其定理、前提、历史回执原样保留，只协调解释性接续后的研究来源哈希；本成果的科学内容和原审阅时间不变。",
+      "en": "2026-10-13: reviewed new study §11; original §§1–10, theorem, hypotheses and historical receipt remain unchanged. Reconciled only the study-source hash after interpretive continuation; this result’s scientific content and original review time are unchanged."
+    },
+    {
+      "zh": "2026-10-13 P94：按 Ren 的结论开放方向检验P92的平衡前提，保留原定量界，增加共同非零余项下的定性推广与遗漏／补记见证；依旧只扩展同一成果。",
+      "en": "2026-10-13 P94: under Ren’s open-verdict direction, tested P92’s balance premise, retained its quantitative bound, and added qualitative generalization under common nonzero residuals with omission/accounting witnesses; extends the same result only."
+    },
+    {
+      "zh": "2026-10-14 一般规律与改名（统一计划 §10，研究 §112）：按 BECOMING-UNIFICATION-PLAN §10 改名，本记录中 `FallibleInquiry.error_budgets_require_reach` → `FallibleInquiry.error_bounds_require_reach`；陈述、证明与定理数不变；Lean 源：FallibleInquiry 只改名（及相应的文档字符串），绑定改为新回执（见检查范围）。本记录的主张、前提与状态不变，不记作重新证明。",
+      "en": "14 October 2026, general laws and renames (plan section 10, study section 112): renames per BECOMING-UNIFICATION-PLAN §10, in this record `FallibleInquiry.error_budgets_require_reach` → `FallibleInquiry.error_bounds_require_reach`; statements, proofs and theorem counts unchanged; Lean sources: FallibleInquiry only renamed (with the matching docstrings); bindings move to the new receipts (see validation scope). This record's claim, premises and status are unchanged; no reproof is credited."
+    },
+    {
+      "en": "17 October 2026, wording of the public fields: the P-number P94 removed, following Ren's 17 October directive that his earlier words are provenance, not authority; the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"; adopted vocabulary of the naming study, section 7): declarations renamed as in development/n1-migration/RENAME-TABLE.json, the statements and proofs otherwise unchanged. Changed by the renaming: FallibleInquiry.lean. Rebound to the FallibleInquiry checker's receipt 20261018T063731.167536Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. This record's live fields are read in the adopted words; its id is unchanged. Changed by the pass, in docstrings or prose only: FallibleInquiry.lean. Rebound to receipt 20261019T000109.055377Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "2026-10-20: 7 bookkeeping notes condensed from 2026-10-13 to 17 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/cdaaecc8fafcb0bd/finite-fallible-inquiry-necessity.json and in git.",
+      "zh": "2026-10-20：7 条记账性说明合并（2026-10-13 至 17 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/cdaaecc8fafcb0bd/finite-fallible-inquiry-necessity.json 和 git 中。"
+    }
+  ]
+}

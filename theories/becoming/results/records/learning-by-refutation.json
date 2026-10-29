@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "learning-by-refutation",
   "title": {
     "zh": "逐除外推",
@@ -8,32 +8,227 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F11",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-10-28T12:06:59+00:00",
   "statement": {
-    "zh": "每个外推都有一个开放的历程，使它提出的每个值都不合；无前段固定下一个值。被列表所持的世界中不合有界、停息不能被否证且只在那里停息，何时停息不显出；对类的学习是同一学习。",
-    "en": "Every extrapolation has an open course on which each value it proposes misses; no prefix fixes the next value. In a world held by a list the misses are bounded, coming to rest is unrefuted and happens only there, and when does not show; learning over classes is the same learning."
+    "en": "Given a map moving every value, every extrapolation has an open course on which each proposal misses; no prefix fixes the next value. In a world held by a list, elimination misses boundedly often, its rest, unrefuted, occurs only there, and no prefix shows when; over classes it is the same learning.",
+    "zh": "给定移动每个值的映射，每个外推都有一个开放的历程，使它提出的每个值都不合；无前段固定下一个值。被列表所持的世界中，逐除外推的不合次数有界，其停息不能被否证且只在那里发生，也无前段显出何时；对类的学习是同一学习。"
   },
-  "claim": {
-    "zh": "历程 o : Nat → O 是值的序列（例如确定律之轨道经映射所读）；第 t 步之前的前段 prefixOf o t（最新在前）；外推是任意从前段到所提出之值或默的映射 pred : List O → Option O；所提出的值不合（Misses）指它提出了一个值而来到的值不同；候选在历程上相合（Accords）指它在任何一步都不不合。不加前提：对每个历程与每步 t，给出两个不同的值，有两个历程与它在 t 之前前段相同、在 t 分别取这两个值，从该前段提出的值不在两者上都对（no_prefix_fixes_next），值可判定时在其中之一不合（claim_missed_on_one）；两者都是被列表所持之世界的历程（holdFrom_lasso、no_prefix_fixes_next_finite）。对每个外推与移动每个值的 other，对角序列 diagonal pred other x 使它提出的每个值都不合（diagonal_misses），所以在它上面外推不从任何一步起都提出且正确（diagonal_unrested）；它是保留全部前段之律的历程，没有列表持有该律的配置（prefix_diagonal、diagonal_open）。逐除外推（indexOn、byElimination：候选 H 依次排列，恰在所持者不合时移向下一个；值可判定）从不越过相合的候选：H j 相合时指标至多为 j（index_le_of_accords），外推不在任意晚处不合（misses_not_recurring）；越过的每个候选都在前段中某一步不合（missed_before）；相同的前段给出相同的候选与所提出的值（byElimination_through_prefix）。套索（Lasso o i q：从第 i 步起以周期 q + 1 重复）：确定律的轨道被列表 l 所持时，其经每个映射的历程都是套索且 i + q + 1 ≤ l.length（lasso_of_held）；每个套索都是被列表所持之世界经映射的历程（lasso_realized）。套索候选按对角次序排列（lassos、pairAt、pairAt_place）时：在套索历程上外推至多不合 tri (i + q) + q 次、从第 i + q + 1 步起每步提出、不在任意晚处不合（lasso_byElimination_bounded），它从某步起每步提出且正确这一点不能被否证（rest_unrefuted，双重否定）；它从某步起每步提出且正确时，历程是套索（lasso_of_rest）；轨道被列表 l 所持时，不合少于 tri l.length 次、从第 l.length 步起每步提出、不在任意晚处不合（held_byElimination_bounded），停息不能被否证（held_rest_unrefuted）；它的对角序列不是套索（diagonal_not_lasso）；有界不降的计数从某步起不变这一点不能被否证（stable_unrefuted）。类 G c 沿对合并（merged）时，G c j 相合则合并枚举上的外推指标至多为 tri (c + j) + j（merged_bound），而每种合并的外推在其对角序列上不停息（merged_unrested）。见证：Alternate（false, true, false, …）上外推不合两次，从第三步起每步正确（Alternate.index_three、Alternate.rests）。",
-    "en": "A course o : Nat → O is a sequence of values (such as a determined law's orbit read through a map); prefixOf o t is its prefix before step t, latest first; an extrapolation is any map pred : List O → Option O from a prefix to a proposed value or silence; a proposed value misses (Misses) when a value is proposed and the value that comes differs; a candidate accords with a course (Accords) when it misses at no step. With no premise: for every course and step t, given two values, two courses share its prefix before t and take the one and the other value at t, and a value proposed from that prefix is not right on both (no_prefix_fixes_next), and with values decided misses on one of them (claim_missed_on_one); both are courses of worlds held by a list (holdFrom_lasso, no_prefix_fixes_next_finite). For every extrapolation and every other moving each value, the diagonal course diagonal pred other x makes each value it proposes miss (diagonal_misses), so on it the extrapolation does not, from any step on, propose at every step and be right (diagonal_unrested); it is the course of a law keeping its whole prefix, whose configurations no list holds (prefix_diagonal, diagonal_open). Extrapolation by elimination (indexOn, byElimination: candidates H in order, moving on exactly where the one held misses; values decided) never passes a candidate that accords: where H j accords the index is at most j (index_le_of_accords) and the extrapolation does not miss at arbitrarily late steps (misses_not_recurring); every candidate passed missed within the prefix at some step (missed_before); one prefix gives one candidate and one proposed value (byElimination_through_prefix). Lassos (Lasso o i q: repeating from step i with period q + 1): where a determined law's orbit is held by a list l, its course through every map is a lasso with i + q + 1 ≤ l.length (lasso_of_held); every lasso is the course through a map of a world held by a list (lasso_realized). With the lasso candidates in diagonal order (lassos, pairAt, pairAt_place): on a lasso course the extrapolation misses at most tri (i + q) + q times, proposes at every step from step i + q + 1 on and does not miss at arbitrarily late steps (lasso_byElimination_bounded), and that from some step on it proposes at every step and is right is unrefuted (rest_unrefuted, a double negation); where from some step on it proposes at every step and is right, the course is a lasso (lasso_of_rest); where the orbit is held by a list l it misses fewer than tri l.length times, proposes at every step from step l.length on and does not miss at arbitrarily late steps (held_byElimination_bounded), its coming to rest unrefuted (held_rest_unrefuted); its diagonal course is no lasso (diagonal_not_lasso); that a bounded count that never falls is constant from some step on is unrefuted (stable_unrefuted). With classes G c merged along the pairs (merged), where G c j accords the extrapolation over the merged enumeration has index at most tri (c + j) + j (merged_bound), and the extrapolation over every merging is unrested on its diagonal course (merged_unrested). Witness: on Alternate (false, true, false, …) the extrapolation misses twice and is right at every step from the third (Alternate.index_three, Alternate.rests)."
-  },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "不加公理。值可判定相等（DecidableEq O）只作为外推（逐除外推、套索外推、合并外推与 diagonal_not_lasso）与 swapTo（另一个值）的条件出现，并只在 claim_missed_on_one 与 eq_of_not_missed 的证明中用到；no_prefix_fixes_next 与 diagonal_misses、diagonal_unrested、diagonal_open 不用它（逐条见可判定性清点）。",
-      "en": "No axiom. Decidable equality of values (DecidableEq O) appears only as a condition of the extrapolation (extrapolation by elimination, the lasso extrapolation, the merged extrapolation and diagonal_not_lasso) and of swapTo (another value), and is used only in the proofs of claim_missed_on_one and eq_of_not_missed; no_prefix_fixes_next and diagonal_misses, diagonal_unrested and diagonal_open do not use it (each is listed in the decidability inventory)."
+      "en": "A course is a sequence of values; its prefix before step t lists its t values before t, latest first, and depends only on them. An extrapolation is any map from a prefix to a proposed value or silence; a proposal misses a value where a value is proposed and the value that comes differs; an extrapolation accords with a course where it misses at no step.",
+      "zh": "历程是值的序列；第 t 步之前的前段列出 t 之前的 t 个值，最新在前，只依赖于它们。外推是任意从前段到所提出之值或默的映射；提议不合一个值，是指提出了一个值而来到的值不同；外推在历程上相合，是指它在任何一步都不不合。",
+      "declarations": [
+        "Becoming.Learning.prefixOf",
+        "Becoming.Learning.prefix_length",
+        "Becoming.Learning.prefix_congr",
+        "Becoming.Learning.Misses",
+        "Becoming.Learning.MissesAt",
+        "Becoming.Learning.Accords"
+      ]
     },
     {
-      "zh": "每条定理的条件写在其中：两个不同的值（no_prefix_fixes_next）；other 移动每个值（对角）；某个候选相合（index_le_of_accords、misses_not_recurring）；历程是套索或轨道被列表所持（lasso_byElimination_bounded、held_byElimination_bounded）。候选的列表 H 与类 G 由学习之外给出。",
-      "en": "Each theorem's conditions are written into it: two different values (no_prefix_fixes_next); other moving every value (the diagonal); some candidate according (index_le_of_accords, misses_not_recurring); the course being a lasso or the orbit held by a list (lasso_byElimination_bounded, held_byElimination_bounded). The candidates H and the classes G are supplied from outside the learning."
+      "en": "For every extrapolation, course and step t, and two different values: the courses that keep the course before t and hold one value or the other from t on share its prefix before t, and a value proposed from that prefix is not right on both; with equality of values decided, it misses on one of them.",
+      "zh": "对每个外推、历程与第 t 步，及两个不同的值：保留该历程 t 之前部分、自 t 起分别保持其中一个值的两个历程，与它有相同的 t 前前段；从该前段提出的值不在两者上都对；值的相等可判定时，它在其中之一不合。",
+      "declarations": [
+        "Becoming.Learning.holdFrom",
+        "Becoming.Learning.no_prefix_fixes_next",
+        "Becoming.Learning.claim_missed_on_one"
+      ]
     },
     {
-      "zh": "停息只以双重否定陈述（rest_unrefuted、held_rest_unrefuted、stable_unrefuted），名称依整合者的规则带“unrefuted”：此处不给出停息之步（并未证明不能给出；P83 给出它：轨道被长 N 的列表所持时，外推从第 N + (2N − 1)·tri N 步起每步提出且正确，Identification.held_byElimination_rests，这一步由界给出，外推的前段不表明它）；“不在任意晚处不合”是“不合复现”的否定，不是“从某步起不不合”。",
-      "en": "Coming to rest is stated only as a double negation (rest_unrefuted, held_rest_unrefuted, stable_unrefuted), the names carrying “unrefuted” under the integrator's rule: the step of rest is not stated here (not shown impossible; P83 states it: where the orbit is held by a list of length N, the extrapolation proposes and is right at every step from N + (2N − 1)·tri N on, Identification.held_byElimination_rests, a step the bound gives and the extrapolation's prefix does not show); “not missing at arbitrarily late steps” is the negation of misses recurring, not “no miss from some step on”."
+      "en": "A course repeats from step i with period q + 1 where its values at u + q + 1 and at u agree for every u ≥ i. For every extrapolation, course, step t and two different values, the two courses held at one value or the other from t on repeat from t with period 1, share the prefix before t, and a value proposed from it is not right on both.",
+      "zh": "历程自第 i 步起以周期 q + 1 重复，是指对每个 u ≥ i，其在 u + q + 1 与 u 的值相同。对每个外推、历程、第 t 步与两个不同的值，自 t 起分别保持其中一个值的两个历程自 t 起以周期 1 重复，共享 t 前前段，从它提出的值不在两者上都对。",
+      "declarations": [
+        "Becoming.Learning.Lasso",
+        "Becoming.Learning.holdFrom_lasso",
+        "Becoming.Learning.no_prefix_fixes_next_finite"
+      ]
+    },
+    {
+      "en": "For every extrapolation and every map moving each value, the diagonal course, the latest value of the orbit of the law that adds to the prefix the value set against each proposal, makes each value proposed miss at its step, so there is no step from which on the extrapolation proposes the coming value at every step; whatever the map, no list holds that law's configurations.",
+      "zh": "对每个外推与每个移动每个值的映射，对角历程（把与每个提议相对的值加入前段之律的轨道的最新值）使每个所提出的值在其步不合，故没有一步使外推从此每步提出将来之值；无论映射如何，没有列表持有该律的配置。",
+      "declarations": [
+        "Becoming.Learning.answerTo",
+        "Becoming.Learning.answerStep",
+        "Becoming.Learning.diagonal",
+        "Becoming.Learning.prefix_diagonal",
+        "Becoming.Learning.diagonal_misses",
+        "Becoming.Learning.diagonal_unrested",
+        "Becoming.Learning.diagonal_open"
+      ]
+    },
+    {
+      "en": "With two different values x and y and equality of values decided, the map sending x to y and every other value to x moves every value.",
+      "zh": "有两个不同的值 x、y 且值的相等可判定时，把 x 送到 y、其他每个值送到 x 的映射移动每个值。",
+      "declarations": [
+        "Becoming.Learning.swapTo",
+        "Becoming.Learning.swapTo_moves"
+      ]
+    },
+    {
+      "en": "With equality of values decided, extrapolation by elimination over candidates H takes them in order, moving to the next exactly where the current one misses, and proposes the current one's value. Where candidate j accords with a course, the current candidate never passes j, so it misses at most j times, and it is not the case that it misses at arbitrarily late steps.",
+      "zh": "值的相等可判定时，候选 H 上的逐除外推依次取候选，恰在当前候选不合时移向下一个，并提出当前候选的值。候选 j 在历程上相合时，当前候选从不越过 j，故至多不合 j 次，且并非在任意晚处都不合。",
+      "declarations": [
+        "Becoming.Learning.indexOn",
+        "Becoming.Learning.byElimination",
+        "Becoming.Learning.index",
+        "Becoming.Learning.index_le_of_accords",
+        "Becoming.Learning.misses_not_recurring"
+      ]
+    },
+    {
+      "en": "With equality of values decided, under elimination over any candidates on any course, every candidate passed before step t missed, while current, at some earlier step; two courses with the same prefix before t give the same current candidate and the same proposed value at t.",
+      "zh": "值的相等可判定时，在任意候选、任意历程上的逐除中，第 t 步前越过的每个候选都在更早某步作为当前候选不合；t 前前段相同的两个历程在 t 给出相同的当前候选与相同的所提出之值。",
+      "declarations": [
+        "Becoming.Learning.missed_before",
+        "Becoming.Learning.byElimination_through_prefix"
+      ]
+    },
+    {
+      "en": "Under a determined law whose orbit is held by a list l, the orbit read through any map repeats from some step i with some period q + 1, i + q + 1 at most the length of l; every course repeating from i with period q + 1 is the course, read through it, of the law on positions 0 to i + q stepping each to the next and the last to i, held by the list of its positions.",
+      "zh": "确定律的轨道被列表 l 所持时，经任意映射读出的轨道自某步 i 起以某周期 q + 1 重复，i + q + 1 不超过 l 的长度；每个自 i 起以周期 q + 1 重复的历程，都是位置 0 到 i + q 上之律（每个到下一个，最后一个回到 i）经它读出的历程，该律被其位置列表所持。",
+      "declarations": [
+        "Becoming.Learning.lasso_of_held",
+        "Becoming.Learning.lassoNext",
+        "Becoming.Learning.lasso_realized"
+      ]
+    },
+    {
+      "en": "The lasso candidate (i, q) proposes, from step i + q + 1 on, the value q + 1 steps back, and is silent before; it accords with every course repeating from i with period q + 1. In the diagonal order of pairs, (i, q) stands at place tri (i + q) + q, tri being the triangular numbers.",
+      "zh": "套索候选 (i, q) 自第 i + q + 1 步起提出 q + 1 步前的值，此前默；它与每个自 i 起以周期 q + 1 重复的历程相合。按对的对角次序，(i, q) 位于第 tri (i + q) + q 位，tri 是三角数。",
+      "declarations": [
+        "Becoming.Learning.lasso",
+        "Becoming.Learning.lasso_accords",
+        "Becoming.Learning.pairAt",
+        "Becoming.Learning.tri",
+        "Becoming.Learning.pairAt_place",
+        "Becoming.Learning.lassos"
+      ]
+    },
+    {
+      "en": "With equality of values decided, on a course repeating from i with period q + 1, elimination over the lasso candidates in diagonal order, given neither i nor q, misses at most tri (i + q) + q times, proposes at every step from i + q + 1 on, and it is not the case that it misses at arbitrarily late steps; that from some step on it proposes and is right is not refuted.",
+      "zh": "值的相等可判定时，在自 i 起以周期 q + 1 重复的历程上，按对角次序的套索候选上的逐除（不给出 i 与 q）至多不合 tri (i + q) + q 次，自 i + q + 1 步起每步提出，且并非在任意晚处都不合；它从某步起每步提出且正确，这一点不能被否证。",
+      "declarations": [
+        "Becoming.Learning.lasso_byElimination_bounded",
+        "Becoming.Learning.rest_unrefuted"
+      ]
+    },
+    {
+      "en": "With equality of values decided, where elimination over the lasso candidates proposes the coming value at every step from some step on, the course repeats from some step with some period; for any map moving each value, its own diagonal course repeats from no step with any period.",
+      "zh": "值的相等可判定时，凡套索候选上的逐除从某步起每步提出将来之值，历程自某步起以某周期重复；对任意移动每个值的映射，它自己的对角历程不自任何一步以任何周期重复。",
+      "declarations": [
+        "Becoming.Learning.lasso_of_rest",
+        "Becoming.Learning.diagonal_not_lasso"
+      ]
+    },
+    {
+      "en": "With equality of values decided, under a determined law whose orbit is held by a list l, read through any map: elimination over the lasso candidates misses fewer than tri (length of l) times, proposes at every step from the length of l on, and it is not the case that it misses at arbitrarily late steps; that it comes to rest is not refuted.",
+      "zh": "值的相等可判定时，确定律的轨道被列表 l 所持、经任意映射读出：套索候选上的逐除不合少于 tri（l 的长度）次，自 l 的长度那一步起每步提出，且并非在任意晚处都不合；它停息这一点不能被否证。",
+      "declarations": [
+        "Becoming.Learning.held_byElimination_bounded",
+        "Becoming.Learning.held_rest_unrefuted"
+      ]
+    },
+    {
+      "en": "A sequence of natural numbers that never falls and stays within a bound K is not refuted to be constant from some step on.",
+      "zh": "从不下降、且不超过界 K 的自然数序列，从某步起不变这一点不能被否证。",
+      "declarations": [
+        "Becoming.Learning.stable_unrefuted"
+      ]
+    },
+    {
+      "en": "With equality of values decided, for classes of candidates G c merged along the pairs into one enumeration: where candidate j of class c accords with a course, elimination over the merged enumeration never passes place tri (c + j) + j; for any map moving each value, on its own diagonal course there is no step from which on it proposes the coming value at every step.",
+      "zh": "值的相等可判定时，对沿对合并为一个枚举的候选类 G c：类 c 的候选 j 在历程上相合时，合并枚举上的逐除从不越过第 tri (c + j) + j 位；对任意移动每个值的映射，在它自己的对角历程上，没有一步使它从此每步提出将来之值。",
+      "declarations": [
+        "Becoming.Learning.merged",
+        "Becoming.Learning.merged_bound",
+        "Becoming.Learning.merged_unrested"
+      ]
+    },
+    {
+      "en": "On the alternating course false, true, false, …, which repeats from step 0 with period 2, elimination over the lasso candidates has missed twice by step 3 and from step 3 on proposes the coming value at every step.",
+      "zh": "在交替历程 false, true, false, … 上（自第 0 步起以周期 2 重复），套索候选上的逐除到第 3 步已不合两次，自第 3 步起每步提出将来之值。",
+      "declarations": [
+        "Becoming.Learning.Alternate.course",
+        "Becoming.Learning.Alternate.repeats",
+        "Becoming.Learning.Alternate.index_three",
+        "Becoming.Learning.Alternate.rests"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Decidable equality of values (DecidableEq O) appears only as a condition of the extrapolation (by elimination, over the lasso candidates, over merged classes, and diagonal_not_lasso) and of swapTo (another value).",
+      "zh": "不加公理。值可判定相等（DecidableEq O）只作为外推（逐除外推、套索外推、合并外推与 diagonal_not_lasso）与 swapTo（另一个值）的条件出现。"
+    },
+    {
+      "en": "Beyond the definitions that take it, decided equality of values enters only the proofs of claim_missed_on_one, eq_of_not_missed, swapTo_moves, index_succ_le, index_le_succ and missed_before; no_prefix_fixes_next, diagonal_misses, diagonal_unrested and diagonal_open do not use it.",
+      "zh": "除取它为条件的定义外，可判定相等只用于 claim_missed_on_one、eq_of_not_missed、swapTo_moves、index_succ_le、index_le_succ、missed_before 的证明；no_prefix_fixes_next、diagonal_misses、diagonal_unrested、diagonal_open 不用它。"
+    },
+    {
+      "en": "Each theorem's conditions are written into it: two different values (no_prefix_fixes_next); other moving every value (the diagonal); some candidate according (index_le_of_accords, misses_not_recurring); the course being a lasso or the orbit held by a list (lasso_byElimination_bounded, held_byElimination_bounded).",
+      "zh": "每条定理的条件写在其中：两个不同的值（no_prefix_fixes_next）；other 移动每个值（对角）；某个候选相合（index_le_of_accords、misses_not_recurring）；历程是套索或轨道被列表所持（lasso_byElimination_bounded、held_byElimination_bounded）。"
+    },
+    {
+      "en": "The candidates H and the classes G are supplied from outside the learning.",
+      "zh": "候选的列表 H 与类 G 由学习之外给出。"
+    },
+    {
+      "en": "Coming to rest is stated only as a double negation (rest_unrefuted, held_rest_unrefuted, stable_unrefuted), the names carrying “unrefuted”: the step of rest is not stated here, and is not shown impossible.",
+      "zh": "停息只以双重否定陈述（rest_unrefuted、held_rest_unrefuted、stable_unrefuted），名称带“unrefuted”：此处不给出停息之步，也并未证明不能给出。"
+    },
+    {
+      "en": "Becoming.Identification states that step: where the orbit is held by a list of length N, the extrapolation proposes and is right at every step from N + (2N − 1)·tri N on (Identification.held_byElimination_rests), a step the bound gives and the extrapolation's prefix does not show.",
+      "zh": "Becoming.Identification 给出这一步：轨道被长 N 的列表所持时，外推从第 N + (2N − 1)·tri N 步起每步提出且正确（Identification.held_byElimination_rests），这一步由界给出，外推的前段不表明它。"
+    },
+    {
+      "en": "“Not missing at arbitrarily late steps” is the negation of misses recurring, not “no miss from some step on”.",
+      "zh": "“不在任意晚处不合”是“不合复现”的否定，不是“从某步起不不合”。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Which candidates or classes an actual formation holds, whether its values through a map are decided and whether its world is held by a list do not follow.",
+      "zh": "一个实际形成持有哪些候选或类、它经映射的值是否可判定、它的世界是否被列表所持，都不由此推出。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "The bound tri N is not shown to be the least: it is a coarse bound.",
+      "zh": "界 tri N 未被证明是最小的：它是粗的界。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Only determined, value-by-value learning is stated: probabilistic or approximate learning (PAC), the general theory of countable classes and computational complexity lie outside it.",
+      "zh": "只陈述确定的、逐值的学习：概率的或近似的学习（PAC）、可数类的一般学习理论与计算复杂性都在其外。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
+      "detail": {
+        "zh": "没有外推在每个历程上停息：对角序列使它提出的每个值都不合（diagonal_unrested），套索外推的对角序列不是套索（diagonal_not_lasso）。",
+        "en": "No extrapolation rests on every course: the diagonal course makes each value it proposes miss (diagonal_unrested), and the lasso extrapolation's diagonal course is no lasso (diagonal_not_lasso)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "decidability",
+    "no-ethical-premise",
+    "no-evaluation",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked: core receipts under becoming-checks (check_becoming.py, Lean 4.29.1 in each) bind the current bytes of Becoming.Learning (20261028T061626.538602Z), Becoming.Recurrence, Becoming.Testing and Becoming.Prelude, as the proof bindings name them; every cited declaration has an empty axiom report, and the core compiles from Lean's prelude alone. The author's counterreview is in the integration note; no independent review.",
+    "zh": "机器检查：becoming-checks 下的核心回执（check_becoming.py，各记 Lean 4.29.1）绑定 Becoming.Learning（20261028T061626.538602Z）、Becoming.Recurrence、Becoming.Testing 与 Becoming.Prelude 的当前字节，见证明绑定；所引声明公理报告皆空，核心只用 Lean 前导可编译。作者反审见整合文档；无独立审查。"
+  },
+  "next_delta": {
+    "en": "State learning where the values through the map are themselves not decided, give its probabilistic reading, and prove the instance theorem joining the diagonal course to the gap of a family of readings within what it reads.",
+    "zh": "陈述经映射的值本身不可判定时的学习，给出其概率读法，并证明把对角历程接到“在所读之中的读法族”之缺口的实例定理。"
+  },
   "correspondence": {
-    "zh": "Ren 2026-10-12 问对元层次、人工神经网络、认知与关于学习的智慧解释得多完整；对 AI 的回答（四者都未完成，归纳问题未消解）答：“please, fully complete, 我觉得理更像是对结构和变化的规律的建模 finish wisdom root, and resolve the undissolved”。AI 读作：完成所提三步，并消解归纳问题。读法（AI 的，依 Ren 的交托采用）：归纳被消解为规律而不是被保证；休谟的问题在 no_prefix_fixes_next；逐除外推是 Gold 意义上的极限识别，停息不显出；元层次是再学习，没有顶层（merged_unrested 的读法）；智慧不是一个完成的外推。",
-    "en": "On 12 October 2026 Ren asked how completely the meta level, artificial neural networks, cognition and the wisdom about learning are explained; to the AI's answer (none complete, induction undissolved) Ren replied “please, fully complete, 我觉得理更像是对结构和变化的规律的建模 finish wisdom root, and resolve the undissolved”. The AI reads it as completing the three proposed steps and resolving the problem of induction. Readings (the AI's, adopted on Ren's delegation): induction is resolved into laws rather than certified; Hume's problem sits at no_prefix_fixes_next; extrapolation by elimination is identification in the limit in Gold's sense, its rest not showing; the meta level is learning again, with no top (the reading of merged_unrested); wisdom is never a completed extrapolation."
+    "zh": "Ren 2026-10-12 问对元层次、人工神经网络、认知与关于学习的智慧解释得多完整；对 AI 的回答（四者都未完成，归纳问题未消解）答：“please, fully complete, 我觉得理更像是对结构和变化的规律的建模 finish wisdom root, and resolve the undissolved”。AI 读作：完成所提三步，并消解归纳问题。读法（AI 的读法）：归纳被消解为规律而不是被保证；休谟的问题在 no_prefix_fixes_next；逐除外推是 Gold 意义上的极限识别，停息不显出；元层次是再学习，没有顶层（merged_unrested 的读法）；智慧不是一个完成的外推。主要定理是学习理论中已知结果在脊柱上的形式：Putnam 的对角（1963）、Gold（1967）与 Putnam（1965）之后的极限识别、Gold 的枚举法，以及 Kelly（1996）之后把归纳读为无确定性的收敛；脊柱自己的部分是它们与耦合、实验、机制和选择接为一体。",
+    "en": "On 12 October 2026 Ren asked how completely the meta level, artificial neural networks, cognition and the wisdom about learning are explained; to the AI's answer (none complete, induction undissolved) Ren replied “please, fully complete, 我觉得理更像是对结构和变化的规律的建模 finish wisdom root, and resolve the undissolved”. The AI reads it as completing the three proposed steps and resolving the problem of induction. Readings (AI readings): induction is resolved into laws rather than certified; Hume's problem sits at no_prefix_fixes_next; extrapolation by elimination is identification in the limit in Gold's sense, its rest not showing; the meta level is learning again, with no top (the reading of merged_unrested); wisdom is never a completed extrapolation. The main theorems are known results of learning theory in the spine's form: Putnam's diagonal (1963), identification in the limit after Gold (1967) and Putnam (1965), Gold's enumeration method, and the reading of induction as convergence without certainty after Kelly (1996); the spine's own part is their integration with coupling, experiment, mechanism and selection."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
   "aliases": [
@@ -119,23 +314,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
-      "detail": {
-        "zh": "没有外推在每个历程上停息：对角序列使它提出的每个值都不合（diagonal_unrested），套索外推的对角序列不是套索（diagonal_not_lasso）。",
-        "en": "No extrapolation rests on every course: the diagonal course makes each value it proposes miss (diagonal_unrested), and the lasso extrapolation's diagonal course is no lasso (diagonal_not_lasso)."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "一个实际形成持有哪些候选或类、它经映射的值能否被分辨、它的世界是否被列表所持，不推出；界 tri N 粗，不是最优；只陈述确定的、逐值的学习，概率的或近似的学习（PAC）、可数类的一般学习理论、计算的复杂性没有陈述；主要定理是学习理论中已知结果（Putnam 1963 的对角、Gold 1967 与 Putnam 1965 的极限识别、Gold 的枚举法、Kelly 1996）在脊柱上的形式，增量是与耦合、实验、机制与选择接为一体；读法除理之外是 AI 的，依 Ren 的交托采用；不含伦理谓词。",
-    "en": "Which candidates or classes an actual formation holds, whether its values through a map can be told apart and whether its world is held by a list are not derived; the bound tri N is coarse, not optimal; only determined, value-by-value learning is stated, and probabilistic or approximate learning (PAC), the general theory of countable classes and computational complexity are not; the main theorems are known results of learning theory (Putnam's 1963 diagonal, identification in the limit after Gold 1967 and Putnam 1965, Gold's enumeration method, Kelly 1996) in the spine's form, the delta being their integration with coupling, experiment, mechanism and selection; the readings other than 理 are the AI's, adopted on Ren's delegation; contains no ethical predicate."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Learning 的 75 项定理全部空依赖，其中含 no_prefix_fixes_next、claim_missed_on_one、diagonal_misses、diagonal_open、index_le_of_accords、misses_not_recurring、held_byElimination_bounded、held_rest_unrefuted与 merged_unrested；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §92；尚无独立审查。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 75 theorems of Becoming.Learning all have empty axiom reports, among them no_prefix_fixes_next, claim_missed_on_one, diagonal_misses, diagonal_open, index_le_of_accords, misses_not_recurring, held_byElimination_bounded, held_rest_unrefuted and merged_unrested; the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §92 of the integration note; there is no independent review yet."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
@@ -417,10 +595,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "经映射的值本身不被分辨时的学习（映射不分辨配置时的可学性见 learnable-through-a-map）；概率的读法；与 readings-within-what-they-read（在所读之中的读法族在每一步不完备）的连接。",
-    "en": "Learning where the values through the map themselves are not told apart (learnability where the map does not tell configurations apart is in learnable-through-a-map); a probabilistic reading; the connection with readings-within-what-they-read (a family of readings within what it reads, incomplete at every step)."
-  },
   "history": [
     {
       "zh": "2026-10-12 P73、P74：新增，按 Ren“please, fully complete, 我觉得理更像是对结构和变化的规律的建模 finish wisdom root, and resolve the undissolved”；来自 AI 对元层次、神经网络、认知与学习之完整性的回答与三步提议（工作板 P73、P74）；见整合文档 §92。",
@@ -498,6 +672,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the next step names the records by their current ids, learnable-through-a-map and readings-within-what-they-read, for their former ids; nothing else changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：下一步以现行编号 learnable-through-a-map 与 readings-within-what-they-read 称这些记录，取代其旧编号；别无改变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement narrowed to what the Lean proves (a map moving every value given; the bounded misses, rest and its unshown step said of extrapolation by elimination); the claim split into fifteen laws, each read against its declarations in Learning.lean (courses and misses, no prefix fixing the next value and its finite form, the diagonal, a moving map, elimination and its two lemmas, lassos of held worlds, the lasso candidates, the lasso bound, rest only on lassos, the held-world bound, stable counts, merged classes and Alternate); the limitations to three does-not-show items, the literature sentence to the correspondence and the standard boundaries decidability, no-ethical-premise, no-evaluation and names-provisional; the hypotheses split into seven items within their caps, the round label and the integrator's rule removed; the correspondence's readings labelled AI readings; no declaration added (every one named was in the references); no premise, status or source hash changed. Every earlier sentence is mapped in [learning-by-refutation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/learning-by-refutation.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, hypotheses, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述按 Lean 所证收窄（给定移动每个值的映射；有界不合、停息及其不显之步都说的是逐除外推）；主张拆为十五条规律，各条对照 Learning.lean 中的声明核读（历程与不合、无前段固定下一个值及其有限形式、对角、移动映射、逐除及其两条引理、被持世界的套索、套索候选、套索界、只在套索上停息、被持世界之界、稳定计数、合并的类与 Alternate）；限制改为三条“未表明”，文献一句移入对应说明，并引用通用边界 decidability、no-ethical-premise、no-evaluation、names-provisional；前提拆为七条以合于上限，删去轮次标签与整合者规则；对应说明中的读法标为 AI 的读法；未新增声明（所引的都已在引用中）；前提、状态与来源哈希均未改变。每句旧文本的去向见 [learning-by-refutation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/learning-by-refutation.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、前提，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/e4f2db8a3f6a72e7/learning-by-refutation.json",
+      "sha256": "e4f2db8a3f6a72e73cfcd641a63eca339e519c5b6585e1842a742468f514001c",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/f9be09fc94f10525/learning-by-refutation.json",
+      "sha256": "f9be09fc94f10525aa0b9ae2ddcd985b820642beada7a9b3b8013e1b130822b9",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "encounter-selection-and-revision",
   "title": {
     "zh": "取得的访问模型选择学习经历",
@@ -8,25 +8,153 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F09",
-  "reviewed_at_utc": "2026-10-14T09:00:00+00:00",
-  "claim": {
-    "zh": "记录只缩小候选：对每类记录与意义，后来记录之后一个形式的候选，是先前候选中在这些记录上成立者。合作命名：对每个转移记录对二词编码成组的词库，命名来源被接纳且支持够每个可及意义命名一次时，命名每个可及原子（每条记录提供可及的候选）之后，可及原子之词的候选恰是其先前候选中可及者，其他词的候选不变；一次访问的局部命名即此律。选择经历后的词库（acquired 51）是分离律的实例：其记录分离两个原子，故每个有限编码序列的解释是其原子的组合。指定初次巡查取得的访问记录和当前绑定歧义选择后续实际接触，产生已有解释接口的输入；旧访问记录的重看修订改变下一选择，实际响应与失败另有见证。",
-    "en": "Records only narrow: for every type of records and meanings, the candidates of a form after further records are the earlier candidates that stand on those records. Cooperative naming: for every lexicon whose transition record groups the two-word encoding, with the naming source admitted and support for one naming per accessible meaning, after naming every accessible atom, each record offering the accessible alternatives, the candidates of the word of an accessible atom are exactly its earlier candidates that are accessible, and those of every other word are unchanged; a visit’s local naming is this law. The lexicon after selected encounters (acquired 51) is an instance of the separation law: its records separate both atoms, so every finite encoded sequence is interpreted as the assembly of its atoms. Access records acquired through the specified preliminary surveys and current binding ambiguity select subsequent actual encounters, producing the prior interpretation inputs. Reobserving stale access revises the next choice; actual response and failures have separate witnesses."
+  "reviewed_at_utc": "2026-10-28T12:00:06+00:00",
+  "statement": {
+    "en": "Further records only narrow a form's candidates, to the earlier ones that stand on them; in a supplied instance, visits chosen from retained access reports and current ambiguity give a lexicon that interprets every encoded sequence, and a wrong unique binding can still meet the stopping rule.",
+    "zh": "后来的记录只缩小一个形式的候选，留下先前候选中在这些记录上成立者；在给定实例中，依保留的访问报告与当前歧义选出的访问，给出解释每个编码序列的词库，而错误的唯一绑定仍可满足停止规则。"
   },
+  "laws": [
+    {
+      "en": "For any types of records and meanings and any Boolean readings of which records bear on a form and what each offers, a meaning stands where every bearing record offers it, and the candidates are the repertoire's meanings that stand; after further records the candidates are exactly the earlier candidates that stand on those records.",
+      "zh": "对任意类型的记录与意义，以及哪些记录关乎某形式、每条记录提供什么的任意布尔读法：意义成立，是指每条相关记录都提供它；候选是词表中成立的意义；有了后来的记录，候选恰是先前候选中在这些记录上成立者。",
+      "declarations": [
+        "Becoming.CrossSituational.stands",
+        "Becoming.CrossSituational.candidates",
+        "Becoming.CrossSituational.candidates_append"
+      ]
+    },
+    {
+      "en": "For any types of records and meanings and any Boolean readings of bearing and offering, a meaning ruled out by some records stays ruled out after further records, and a candidate stays one exactly while every later bearing record offers it.",
+      "zh": "对任意类型的记录与意义及任意布尔的“相关”与“提供”读法：被某些记录排除的意义，有了后来的记录仍被排除；候选保持为候选，恰当其后每条相关记录都提供它。",
+      "declarations": [
+        "Becoming.CrossSituational.narrows",
+        "Becoming.CrossSituational.stays_iff"
+      ]
+    },
+    {
+      "en": "For any process and any run, read as records the moves of its first n + k steps leave as candidates exactly the candidates of its first n steps that stand on the next k moves; a meaning ruled out at a step stays ruled out at every later step, and a candidate stays one exactly while every later bearing move offers it.",
+      "zh": "对任一过程的任一运行：把诸步读作记录，前 n + k 步留下的候选恰是前 n 步的候选中在其后 k 步上成立者；在某步被排除的意义此后每步都被排除；候选保持为候选，恰当其后每个相关的步都提供它。",
+      "declarations": [
+        "Becoming.Courses.window_append",
+        "Becoming.Courses.run_candidates_append",
+        "Becoming.Courses.run_narrows",
+        "Becoming.Courses.run_stays_iff"
+      ]
+    },
+    {
+      "en": "In the periphery (propext, Quot.sound): for every lexicon whose record groups the two-word encoding, with the naming source admitted and support for one naming per accessible meaning, naming every accessible atom, each record offering the accessible meanings, leaves an accessible atom's word with exactly its earlier accessible candidates and every other word's candidates unchanged; a visit's naming is this law.",
+      "zh": "外围（propext、Quot.sound）：对转移记录能为二词编码分组的每个词库，命名来源被接纳且支持够每个可及意义命名一次时，命名每个可及原子（每条记录提供可及的候选）之后，可及原子之词的候选恰是其先前候选中可及者，其他词的候选不变；一次访问的命名即此律。",
+      "declarations": [
+        "Becoming.MachineInstances.speak_records",
+        "Becoming.MachineInstances.naming_narrows",
+        "Becoming.MachineInstances.local_naming_narrows"
+      ]
+    },
+    {
+      "en": "In the periphery (propext, Quot.sound): for every lexicon whose repertoire has no repeats, a word resolves to its atom exactly where its admitted records separate the atom; where its transition record also groups the two-word encoding, every encoded sequence is interpreted as the assembly of its atoms exactly where each word's admitted records separate its atom.",
+      "zh": "外围（propext、Quot.sound）：对词表无重复的每个词库，一个词解析为其原子，恰当其被接纳的记录分离该原子；若其转移记录也能为二词编码分组，每个编码序列被解释为其原子的组装，恰当每个词被接纳的记录分离其原子。",
+      "declarations": [
+        "Becoming.MachineInstances.Separated",
+        "Becoming.MachineInstances.resolve_iff",
+        "Becoming.MachineInstances.interprets_every_iff_separated"
+      ]
+    },
+    {
+      "en": "In the periphery (propext, Quot.sound): the lexicon after the encounters selected from 51 units groups the two-word encoding and its records separate both atoms, so every finite encoded sequence is interpreted as the assembly of its atoms.",
+      "zh": "外围（propext、Quot.sound）：从 51 单位出发选出经历之后的词库能为二词编码分组，其记录分离两个原子，所以每个有限编码序列都被解释为其原子的组装。",
+      "declarations": [
+        "Becoming.MachineInstances.acquired_groups",
+        "Becoming.MachineInstances.acquired_resolves",
+        "Becoming.MachineInstances.acquired_separated",
+        "Becoming.MachineInstances.acquired_interprets_every",
+        "Becoming.MachineInstances.acquired_from_separation"
+      ]
+    },
+    {
+      "en": "In the periphery (propext, Quot.sound): after preliminary surveys of a supplied catalogue, a supplied first-match rule reading retained access reports and current binding ambiguity chooses each next visit, the choice changing as the bindings change; the selected history supplies the same interpretation inputs as the earlier enacted-scene history and so interprets every encoded sequence.",
+      "zh": "外围（propext、Quot.sound）：对给定目录作初次巡查后，给定的首个匹配规则读取保留的访问报告与当前绑定歧义来选择下一次访问，选择随绑定改变；所选历史提供与原行动场景历史相同的解释输入，因而解释每个编码序列。",
+      "declarations": [
+        "Generative.EncounterChoice.binding_changes_which_scene_is_chosen",
+        "Generative.EncounterChoice.selected_encounters_supply_previous_interpretation_inputs",
+        "Generative.EncounterChoice.selected_encounters_transfer_to_all_sequences"
+      ]
+    },
+    {
+      "en": "In the periphery (propext, Quot.sound): after a supplied rearrangement, an access report accurate when made can be stale and change the next choice; surveying the place again revises the recalled report, keeping the earlier reports, and the next choice with it.",
+      "zh": "外围（propext、Quot.sound）：在给定的重新布置之后，当时准确的访问报告可能过时并改变下一次选择；重新巡查该处修订所回忆的报告（保留较早的报告），下一次选择随之改变。",
+      "declarations": [
+        "Generative.EncounterChoice.changed_arrangement_can_leave_an_accurate_old_record_stale",
+        "Generative.EncounterChoice.stale_prediction_changes_choice_before_reobservation",
+        "Generative.EncounterChoice.reobservation_revises_the_access_model_and_next_choice"
+      ]
+    },
+    {
+      "en": "In the periphery (propext, Quot.sound), witnesses: a catalogue of one place leaves the lexicon unresolved with no further choice; with 50 units the acquired lexicon interprets the utterance as intended and executes no response; where naming is mistimed, the stopping rule stops on a lexicon resolving both words that answers the utterance false, true, false, where the selected history answers true, false, true.",
+      "zh": "外围（propext、Quot.sound）见证：只含一处的目录使词库未能解析而无进一步选择；以 50 单位，取得的词库按预定解释话语却不执行回应；命名时机错误时，停止规则停在两词都已解析的词库上，它对话语答 false、true、false，而所选历史答 true、false、true。",
+      "declarations": [
+        "Generative.EncounterChoice.poor_catalogue_leaves_ambiguity",
+        "Generative.EncounterChoice.acquired_binding_can_exhaust_response_support",
+        "Generative.EncounterChoice.removing_coverage_can_make_the_stopping_rule_wrong",
+        "Generative.EncounterChoice.selected_history_reaches_actual_response"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "给定空间规律、类别、位置目录、首次巡查和以候选缩减为准的首个匹配选择；合作命名只针对实际可取得的原子操作。",
       "en": "Spatial law, categories, location catalogue, preliminary itinerary and first-match candidate-reduction choice are supplied; cooperative naming concerns actually accessible atomic operations."
     },
     {
-      "zh": "复用已有取得／构造／分节／绑定历史；成功实例从51单位支持开始，解释计算及记忆维护未分别计价。",
-      "en": "Reuse the existing acquisition/formation/grouping/binding history. The successful witness starts with 51 support units; interpretation computation and memory maintenance have no separate charges."
+      "en": "The periphery instance builds on the existing acquisition, formation, grouping and binding history; the successful witness starts with 51 support units, and interpretation and memory maintenance draw no separate support.",
+      "zh": "外围实例建立在既有取得／构造／分组／绑定历史之上；成功见证从 51 单位支持开始，解释计算与记忆维护不另耗支持。"
     },
     {
-      "zh": "重看干预及场景迁移事件给定；没有推导完整自主校准、选择准则起源或迁移物理代价。",
-      "en": "Reobservation and rearrangement are supplied interventions; full autonomous calibration, the origin of the choice criterion and physical relocation cost are not derived."
+      "en": "Reobservation and rearrangement are supplied interventions.",
+      "zh": "重看干预及场景迁移事件是给定的。"
+    },
+    {
+      "en": "The core laws hold for any types of records and meanings, with bearing and offering read as Boolean relations; the periphery lexicon laws take a repertoire without repeats.",
+      "zh": "核心规律对任意类型的记录与意义成立，“相关”与“提供”读作布尔关系；外围词库规律取无重复的词表。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "An optimum of information gained against support drawn does not follow, nor complete attention, communicative intention, affect, consciousness or evolutionary psychology.",
+      "zh": "推不出信息所得相对所耗支持的最优，也推不出完整注意、沟通意图、情感、意识或演化心理。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Full autonomous calibration, the origin of the choice criterion and the physical demands of relocation do not follow.",
+      "zh": "完整的自主校准、选择准则的起源以及迁移的物理要求都不由此得出。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The primary developmental evidence constrains automatic transfer without identifying a unique mechanism or evolutionary history.",
+      "zh": "发育方面的原典证据约束自动迁移，但未识别唯一机制或演化史。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EncounterChoice.lean",
+      "detail": {
+        "zh": "目录不足留下歧义；支持不足阻断动作或输出；错误唯一绑定仍使停止规则停止；原本正确的访问记录可随实际安排改变而过时。",
+        "en": "An inadequate catalogue leaves ambiguity; limited support blocks action or output; wrong unique bindings still trigger stopping; an originally correct access record can become stale as the arrangement changes."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked with Lean 4.29.1: the core modules Becoming.CrossSituational and Becoming.Courses by the consolidated core checker (becoming-checks/20261020T051144.879480Z), every cited core declaration with an empty axiom report; the periphery MachineInstances by its instance checker (machine-instances-checks/20261020T161859.257200Z) and EncounterChoice by its check (encounter-choice-verification.json: 22 new theorems, 46 declaration audits), reporting at most propext and Quot.sound. Author counterreview and two primary developmental comparisons; no new experiment or independent review.",
+    "zh": "Lean 4.29.1：核心 CrossSituational、Courses 经合并检查器（becoming-checks/20261020T051144.879480Z），无公理；外围MachineInstances（machine-instances-checks/20261020T161859.257200Z）、EncounterChoice（encounter-choice-verification.json）至多报 propext、Quot.sound；作者反审，两项发育原典比较；无新实验或独立审查。"
+  },
+  "next_delta": {
+    "en": "Identify, in a matched developmental procedure, how formed access and retained source and order information guide actual use, telling present reliance apart from endorsement of old content.",
+    "zh": "在匹配的发育程序中识别已形成的访问及所保留的来源与次序信息如何引导实际使用，并区分当前依赖与对旧内容的认可。"
+  },
   "correspondence": {
     "zh": "选择只读保留访问、绑定和已尝试位置，不读实际场景真值；命名与移动仍在同一安排中发生。它说明局部探究接续，未识别具体儿童算法或完整互惠沟通。",
     "en": "Choice reads retained access, bindings and attempted locations rather than actual scene truth; naming and movement occur in the same arrangement. This explains a local inquiry continuation, without identifying a particular child algorithm or complete reciprocal communication."
@@ -59,31 +187,14 @@
           "en": "selected_encounters_supply_previous_interpretation_inputs establishes matching log, repertoire, binding and exclusion inputs in the new history."
         },
         "conditions": {
-          "zh": "接口相同不要求支出或完整状态相同；初次巡查及新访问读取成本保留。",
-          "en": "Input equality does not identify expenditure or whole states; preliminary survey and fresh-reading costs remain."
+          "zh": "接口相同不要求所耗或完整状态相同；初次巡查及新访问读取所耗的支持保留。",
+          "en": "Input equality does not identify what was drawn or whole states; the support drawn by preliminary surveys and fresh readings remains."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EncounterChoice.lean"
       }
     }
   ],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EncounterChoice.lean",
-      "detail": {
-        "zh": "目录不足留下歧义；支持不足阻断动作或输出；错误唯一绑定仍使停止规则停止；原本正确的访问记录可随实际安排改变而过时。",
-        "en": "An inadequate catalogue leaves ambiguity; limited support blocks action or output; wrong unique bindings still trigger stopping; an originally correct access record can become stale as the arrangement changes."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "选择准则、初次巡查、重看及合作覆盖仍有给定前提。未证明最优信息／成本、所有注意、沟通意图、情感、意识或演化心理。",
-    "en": "Choice criterion, preliminary surveys, reobservation and cooperative coverage remain supplied. No information/cost optimum or complete attention, communicative intention, affect, consciousness or evolutionary psychology is proved."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1：22项新定理／46项声明审计，317项继承审计分列；作者反审及两项发展原典比较，无新实验或独立验收。",
-    "en": "Lean 4.29.1: 22 new theorems / 46 declaration audits, with 317 inherited audits separately rebuilt; author counterreview and two primary developmental comparisons, without a new experiment or independent acceptance."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EncounterChoice.lean",
@@ -93,7 +204,13 @@
         "Generative.EncounterChoice.selected_encounters_supply_previous_interpretation_inputs",
         "Generative.EncounterChoice.selected_encounters_transfer_to_all_sequences",
         "Generative.EncounterChoice.reobservation_revises_the_access_model_and_next_choice",
-        "Generative.EncounterChoice.removing_coverage_can_make_the_stopping_rule_wrong"
+        "Generative.EncounterChoice.removing_coverage_can_make_the_stopping_rule_wrong",
+        "Generative.EncounterChoice.binding_changes_which_scene_is_chosen",
+        "Generative.EncounterChoice.changed_arrangement_can_leave_an_accurate_old_record_stale",
+        "Generative.EncounterChoice.stale_prediction_changes_choice_before_reobservation",
+        "Generative.EncounterChoice.poor_catalogue_leaves_ambiguity",
+        "Generative.EncounterChoice.acquired_binding_can_exhaust_response_support",
+        "Generative.EncounterChoice.selected_history_reaches_actual_response"
       ]
     },
     {
@@ -110,7 +227,8 @@
         "Becoming.MachineInstances.naming_narrows",
         "Becoming.MachineInstances.local_naming_narrows",
         "Becoming.MachineInstances.acquired_separated",
-        "Becoming.MachineInstances.acquired_from_separation"
+        "Becoming.MachineInstances.acquired_from_separation",
+        "Becoming.MachineInstances.Separated"
       ]
     },
     {
@@ -121,7 +239,9 @@
         "Becoming.CrossSituational.candidates_append",
         "Becoming.CrossSituational.narrows",
         "Becoming.CrossSituational.stays_iff",
-        "Becoming.CrossSituational.resolves_iff"
+        "Becoming.CrossSituational.resolves_iff",
+        "Becoming.CrossSituational.stands",
+        "Becoming.CrossSituational.candidates"
       ]
     },
     {
@@ -268,10 +388,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "既有条件连接保留；下一重点是在匹配发育程序中识别已取得访问及所保留来源／次序如何进入实际使用，分别观察当前依赖与旧内容认可。原典已约束自动迁移，但未识别唯一机制或演化史。",
-    "en": "Preserve the completed conditional connections. Next identify how formed access and retained source/order information guide actual use in a matched developmental procedure, distinguishing present reliance from old-content endorsement. Primary evidence constrains automatic transfer without identifying a unique mechanism or evolutionary history."
-  },
   "history": [
     {
       "zh": "2026-10-08：由取得的访问和当前歧义选出实际接触，重看修订访问预测；正式接通旧解释，保留错误停止、缺乏机会和支持失败。",
@@ -326,6 +442,28 @@
     {
       "en": "2026-10-20: 22 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/250debf51545ca67/encounter-selection-and-revision.json and in git.",
       "zh": "2026-10-20：22 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/250debf51545ca67/encounter-selection-and-revision.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): title kept; a statement written from the home section and the claim; the claim split into 9 laws, each read against its declarations in Becoming.CrossSituational, Becoming.Courses (core), MachineInstances and EncounterChoice (periphery), with the conditions the Lean takes written in (Boolean bearing and offering, the admitted naming source, support for one naming per accessible meaning, a repertoire without repeats); the counterexample's witnesses also enter a law; the hypotheses kept, the second's word of exchange replaced, the third's non-implication moved to a does-not-show item, a fourth added on the types and readings the laws take; the limitations to does-not-show items, the supplied premises they repeated left to the hypotheses, and the standard boundaries no-ethical-premise-core-axiom-free and discrete-steps; the evidence paragraph rewritten from the receipts; the next step's completed part dropped and its evidence sentence moved to a does-not-show item; in the dependency's conditions, words of exchange replaced; 9 declarations added to the references of their files; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [encounter-selection-and-revision.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/encounter-selection-and-revision.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, the evidence paragraph, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：标题不变；依主章与主张写出陈述；主张拆为 9 条规律，各条对照 Becoming.CrossSituational、Becoming.Courses（核心）与 MachineInstances、EncounterChoice（外围）中的声明核读，写入 Lean 所取的条件（布尔的“相关”与“提供”、命名来源被接纳、支持够每个可及意义命名一次、词表无重复）；反例的见证也入一条规律；前提保留，第二条的交换用语已替换，第三条中的非蕴含移入“未表明”，另加第四条说明规律所取的类型与读法；限制改为“未表明”各条，其中重复的给定前提留在前提中，通用边界 no-ethical-premise-core-axiom-free、discrete-steps；证据段按回执重写；下一步中已完成的部分删去，其证据一句移入“未表明”；依存条件中的交换用语已替换；9 个声明加入其文件的引用；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [encounter-selection-and-revision.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/encounter-selection-and-revision.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、证据段，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/a80e17bac7b4e7ab/encounter-selection-and-revision.json",
+      "sha256": "a80e17bac7b4e7abeedbc302d3c72ebbdf2a6afd84ba00897b4455a32988c000",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/250debf51545ca67/encounter-selection-and-revision.json",
+      "sha256": "250debf51545ca673465ded11ce1c96ebfb3915a23eeba93776371f2b1cf0c1a",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

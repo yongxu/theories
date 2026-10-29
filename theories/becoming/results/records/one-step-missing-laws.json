@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "one-step-missing-laws",
   "title": {
     "zh": "所陈述的一步之律所遗漏的",
@@ -8,24 +8,116 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-28T12:03:15+00:00",
   "statement": {
-    "zh": "所陈述的一步之律遗漏两条：有所取就有取用者；所取不超过所立加所给。",
-    "en": "The stated laws of one step miss two laws: something taken has a taker, and nothing is taken beyond what stood with what was given."
+    "en": "Two laws of one step join those stated: something taken from a family has a relatum taking it, and, with balance at a condition, nothing is taken from it beyond what stood there with what was given to it.",
+    "zh": "一步之律中另有两条加入所陈述者：从家族中有所取，就有关系项取用它；在某条件处平衡时，从它所取的不超过它所立的加上给它的。"
   },
-  "claim": {
-    "zh": "从一个家族所取的有取用它的关系项：取用量的符号至多是取用者之数（Flow.sign_uptake_le_takers）。在家族耗减的一步，恰在家族的总量下降时有所取（Flow.RunsDownOn.taken_iff）。在一个跨此步被平衡的条件处，所取不超过步前所立加所给（Flow.BalancesOn.taken_le）。对跨此步耗减并封闭的家族，Locality 中所陈述的律（每个成员平衡、按取用者下降、恰在总量下降时有立的变化与交换）加上“有所取就有取用者”就是全部规律（OneStep.runsDownClosed_iff_stated）；没有后者，它们允许一个条件被取用与被给予相等、无人取用而通过，而没有世界显示它（OneStep.stated_not_realized）。在一个被平衡的条件处，步前层级、所取与所给以及是否来到或停止立，恰在所取不超过所立加所给、来到与停止如 Flow.BalancesOn.comesToStand_iff 与 Flow.BalancesOn.ceasesToStand_iff 所定时一同显示（OneStep.standing_iff）；单凭这些读法允许所取多于所有（OneStep.standing_bound_needed）。不加前提。",
-    "en": "Something taken from a family has a relatum taking it: the sign of the uptake is at most the count of takers (Flow.sign_uptake_le_takers). Across a step at which a family runs down, something is taken from it exactly when its total falls (Flow.RunsDownOn.taken_iff). At a condition balanced across a step, nothing is taken beyond what stood before with what was given (Flow.BalancesOn.taken_le). For a family running down closed across the step, the laws as stated in Locality (balance at each member, the fall by the takers, some standing changing and something exchanging exactly when the total falls) with the law that something taken has a taker are the whole law (OneStep.runsDownClosed_iff_stated); without it they allow a condition taken from and given to alike, passed through with nothing taking from it, which no world shows (OneStep.stated_not_realized). At one balanced condition, its level before, what is taken and given, and whether it comes or ceases to stand are shown together exactly where nothing is taken beyond what stood with what was given and coming and ceasing are as Flow.BalancesOn.comesToStand_iff and Flow.BalancesOn.ceasesToStand_iff fix them (OneStep.standing_iff); the readings alone allow more taken than there was (OneStep.standing_bound_needed). No premise."
-  },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "不加前提。",
-      "en": "No premise."
+      "en": "For every flow, family of conditions and step, where anything is taken from the family across the step, at least one relatum taking part takes from it: the sign of what is taken is at most the number of relata taking. Something taken from or given to a family is something taking part exchanging.",
+      "zh": "对每个流、条件家族与步：跨这一步从家族中有所取之处，至少有一个参与的关系项从它取用：所取之量的符号不超过取用者的数目。从家族中有所取或有所给，就是有参与者在交换。",
+      "declarations": [
+        "Becoming.Flow.sign_uptake_le_takers",
+        "Becoming.Flow.exchangesAt_of_uptake",
+        "Becoming.Flow.exchangesAt_of_replenishment"
+      ]
+    },
+    {
+      "en": "Across a step at which a family is closed, nothing taking part taking from or giving to a condition outside it, something taking part exchanges only where something is taken from or given to the family.",
+      "zh": "在家族封闭的一步（参与者不从家族之外的条件取用，也不给予它们），只有从家族中有所取或有所给之处，才有参与者在交换。",
+      "declarations": [
+        "Becoming.Flow.ExchangesAt.closed"
+      ]
+    },
+    {
+      "en": "Across a step at which a family runs down (listed without repetition, holding whatever stands before or after the step, the flow balancing and dissipating on it), something is taken from some member exactly when the family's total falls.",
+      "zh": "在家族耗减的一步（无重复地列出、含步前或步后所立的一切、流在其上平衡且耗散），从某个成员有所取，恰当家族的总量下降。",
+      "declarations": [
+        "Becoming.Flow.RunsDownOn.taken_iff"
+      ]
+    },
+    {
+      "en": "With balance on a family across a step, what is taken from each member is at most what it stood at before the step with what was given to it.",
+      "zh": "家族跨一步平衡时，从每个成员所取的，不超过它在步前所立的加上给它的。",
+      "declarations": [
+        "Becoming.Flow.BalancesOn.taken_le"
+      ]
+    },
+    {
+      "en": "Read on a pattern of one step (each member's level before and after, what is taken and given, the number of relata taking, whether something exchanges), the law of running down closed holds exactly where the stated laws hold (each passage balanced, the total after with the takers at most the total before, some level changing and something exchanging each exactly when the total falls) and something taken has a taker.",
+      "zh": "在一步的模式上读（每个成员步前步后的水平、所取与所给、取用者的数目、是否有交换），耗减且封闭之律成立，恰当所陈述的规律成立（每个通过平衡，步后总量加取用者不超过步前总量，有水平改变与有交换各自恰当总量下降），且有所取就有取用者。",
+      "declarations": [
+        "Becoming.OneStep.Stated",
+        "Becoming.OneStep.runsDownClosed_iff_stated"
+      ]
+    },
+    {
+      "en": "One condition at level one before and after the step, taken from by one and given one, with no relatum taking and nothing exchanging, obeys every stated law for a family running down closed, and no world shows this pattern across any step on any family, each relatum taking part listed once.",
+      "zh": "一个条件步前步后都在水平一，被取一、被给一，没有取用者，也没有交换：它满足耗减且封闭家族的每条所陈述规律，而没有世界在任何一步、任何家族上显示这个模式（每个参与的关系项列出一次）。",
+      "declarations": [
+        "Becoming.OneStep.stated_not_realized"
+      ]
+    },
+    {
+      "en": "For any level a, amounts x taken and y given, and propositions for coming and ceasing to stand, some world balanced at one condition across some step shows it at level a, taken x, given y, coming and ceasing to stand as those propositions say, exactly where x ≤ a + y, coming to stand is a = 0 with x < y and ceasing to stand is 0 < a with x = a + y, the last two as balance fixes them.",
+      "zh": "对任一水平 a、所取 x、所给 y 及表示开始立与不再立的命题：有世界在某步于一个条件处平衡，显示它在水平 a、被取 x、被给 y，开始立与不再立恰如这两个命题，恰当 x ≤ a + y、开始立当且仅当 a = 0 且 x < y、不再立当且仅当 0 < a 且 x = a + y；后两条即平衡所定者。",
+      "declarations": [
+        "Becoming.OneStep.standing_iff",
+        "Becoming.Flow.BalancesOn.comesToStand_iff",
+        "Becoming.Flow.BalancesOn.ceasesToStand_iff"
+      ]
+    },
+    {
+      "en": "A condition at level zero, taken from by one, given nothing, neither coming nor ceasing to stand, satisfies the laws of coming and ceasing to stand under balance, and no world balanced at the condition shows it, since more is taken than stood with what was given.",
+      "zh": "一个条件水平为零、被取一、未被给、既不开始立也不不再立：它满足平衡下开始立与不再立之律，而没有在该条件处平衡的世界显示它，因为所取多于所立加所给。",
+      "declarations": [
+        "Becoming.OneStep.standing_bound_needed"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "No premise: each law's condition (balance on a family, running down, closure) is written into it.",
+      "zh": "不加前提：每条规律的条件（家族上的平衡、耗减、封闭）写在其中。"
+    },
+    {
+      "en": "Discrete steps and natural-number amounts; where a world shows a pattern, each relatum taking part is listed once.",
+      "zh": "离散的步与自然数的量；世界显示模式时，每个参与的关系项列出一次。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the stated laws with the taker law are the whole law is shown only for a family running down closed, and that the bound with coming and ceasing to stand is the whole law of standing only at one condition balanced across a step.",
+      "zh": "所陈述的规律加上取用者之律是全部规律，只对耗减且封闭的家族证明；所取之界加上开始立与不再立是立的全部规律，只在跨一步平衡的单个条件处证明。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
+      "detail": {
+        "zh": "模式 [⟨1,1,1,1⟩]、零个取用者、无交换满足所陈述的每条律而没有世界显示它（OneStep.stated_not_realized）。",
+        "en": "The pattern [⟨1,1,1,1⟩] with no taker and nothing exchanging satisfies every stated law and is shown by no world (OneStep.stated_not_realized)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of Becoming.OneStep are bound to core receipt becoming-checks/20261020T051144.879480Z and those of Becoming.Locality to becoming-checks/20261016T121942.514802Z; every cited declaration has an empty axiom report. The author's counterreview is in the integration note; there is no independent review.",
+    "zh": "Lean 4.29.1 合并检查器实查：Becoming.OneStep 的当前字节绑定核心回执 becoming-checks/20261020T051144.879480Z，Becoming.Locality 绑定 becoming-checks/20261016T121942.514802Z；所引声明的公理报告均为空。作者反审见整合文档；无独立审查。"
+  },
+  "next_delta": {
+    "en": "Show, for a family balanced on, running down without closure, or closed without running down, which of the laws stated in Locality, with the two laws here, are the whole law of one step.",
+    "zh": "对平衡、耗减而不封闭、封闭而不耗减的家族，证明 Locality 所陈述的规律加上这里的两条中，哪些是一步的全部规律。"
+  },
   "correspondence": {
-    "zh": "P79（工作板），同上：完备性的证明发现所陈述的一步之律缺两条。读法（AI 的，依 Ren 的交托采用）：有所取就有取用者，以及所取不超过所立加所给，是一步之律的一部分，此前只隐含在定义中。见整合文档 §103。",
-    "en": "P79 (work board), as above: the proof of completeness found two laws missing from those stated of one step. Reading (the AI's, adopted on Ren's delegation): that something taken has a taker, and that nothing is taken beyond what stood with what was given, belong to the laws of one step, and were before only implicit in the definitions. See the integration document §103."
+    "zh": "完备性的证明发现所陈述的一步之律缺两条。读法（AI 的读法）：有所取就有取用者，以及平衡时所取不超过所立加所给，是一步之律的一部分，此前只隐含在定义中。",
+    "en": "The proof of completeness found two laws missing from those stated of one step. Reading (an AI reading): that something taken has a taker, and that, with balance, nothing is taken beyond what stood with what was given, belong to the laws of one step, and were before only implicit in the definitions."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
   "aliases": [
@@ -73,23 +165,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
-      "detail": {
-        "zh": "模式 [⟨1,1,1,1⟩]、零个取用者、无交换满足所陈述的每条律而没有世界显示它（OneStep.stated_not_realized）。",
-        "en": "The pattern [⟨1,1,1,1⟩] with no taker and nothing exchanging satisfies every stated law and is shown by no world (OneStep.stated_not_realized)."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "读法是 AI 的，依 Ren 的交托采用；不含伦理谓词。",
-    "en": "The readings are the AI's, adopted on Ren's delegation; no ethical predicate occurs."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.OneStep 的 311 项定理全部空依赖，其中含 Flow.sign_uptake_le_takers、Flow.RunsDownOn.taken_iff、Flow.BalancesOn.taken_le、OneStep.runsDownClosed_iff_stated、OneStep.stated_not_realized、OneStep.standing_iff与 OneStep.standing_bound_needed；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §103；尚无独立审查。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 311 theorems of Becoming.OneStep all have empty axiom reports, among them Flow.sign_uptake_le_takers, Flow.RunsDownOn.taken_iff, Flow.BalancesOn.taken_le, OneStep.runsDownClosed_iff_stated, OneStep.stated_not_realized, OneStep.standing_iff and OneStep.standing_bound_needed. The same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §103 of the integration note; there is no independent review yet."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
@@ -183,10 +258,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "把这两条律并入 Locality 所陈述的一步规律，使一个清单陈述一步的全部规律。",
-    "en": "Join the two laws to Locality's stated laws of one step, so that one list states every law of one step."
-  },
   "history": [
     {
       "zh": "2026-10-13：接续并整合 P79 的现存证明包；见整合文档 §103。",
@@ -245,6 +316,28 @@
     {
       "en": "2026-10-20: 35 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/a04c6766ca79c103/one-step-missing-laws.json and in git.",
       "zh": "2026-10-20：35 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/a04c6766ca79c103/one-step-missing-laws.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the statement narrowed to the condition the Lean takes for the second law, balance at the condition (Flow.BalancesOn.taken_le), as the home section has it; the claim split into eight laws, each read against its declarations in OneStep.lean and Locality.lean, laws 1 and 2 also stating referenced declarations the claim did not name (taking and giving are exchange; exchange across a closed step); the limitations to the shared boundaries no-evaluation, no-ethical-premise and discrete-steps, the reading's label kept in the correspondence; one does-not-show item on the scope of the two completeness laws; the hypothesis written out with the conditions and representation; the next step replaced by one no other record completes; the correspondence's process marker (the work-board item) cut; no premise, status, reference or source hash changed. Every earlier sentence is mapped in [one-step-missing-laws.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/one-step-missing-laws.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, each read against the Lean it cites. A cold read of the applied record was taken in the correspondence.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述按 Lean 为第二条规律所取的条件，即该条件处的平衡（Flow.BalancesOn.taken_le），收窄，与归属节一致；主张拆为八条规律，各条对照 OneStep.lean 与 Locality.lean 中的声明核读，第一、二条还陈述了主张未提而已引用的声明（取与给即交换；封闭一步上的交换）；限制改为通用边界 no-evaluation、no-ethical-premise 与 discrete-steps，读法的标注留在对应说明中；新增一条“未表明”，说明两条完备性规律的范围；前提写出各条件与表示；下一步换为其他记录未完成的一步；对应说明中的过程标记（工作板条目）删去；前提、状态、引用与来源哈希均未改变。每句旧文本的去向见 [one-step-missing-laws.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/one-step-missing-laws.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及“未表明”各项，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及对应。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/fb822a2bea71a3a8/one-step-missing-laws.json",
+      "sha256": "fb822a2bea71a3a886df00cdc275bdfadd0ef25f3ef19b1ada456910511d5fbb",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/a04c6766ca79c103/one-step-missing-laws.json",
+      "sha256": "a04c6766ca79c103358c3a62c7e168c2b06750cfb013875fbfdb7a33c92db356",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

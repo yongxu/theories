@@ -887,8 +887,8 @@
    "id": "record:becoming-spine-instances",
    "type": "result",
    "record": "becoming-spine-instances",
-   "title": "Existing interfaces are instances of the Becoming spine; comparison extends to every frame under the lifting rule",
-   "title_zh": "既有接口是 Becoming 脊柱的实例；比较经提升规则推广到每个框架",
+   "title": "Earlier interfaces as instances of the spine, and comparison lifted to every frame",
+   "title_zh": "既有接口是脊柱的实例；比较经提升规则推广到每个框架",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "method",
@@ -34409,6 +34409,11 @@
   },
   {
    "from": "record:acquired-revision-of-pending-task",
+   "to": "record:pending-task-context-applicability",
+   "type": "related"
+  },
+  {
+   "from": "record:acquired-revision-of-pending-task",
    "to": "record:versioned-request-completion",
    "type": "formal-reuse"
   },
@@ -34974,12 +34979,27 @@
   },
   {
    "from": "record:becoming-renewal-reading",
+   "to": "record:becoming-dependence-dynamics",
+   "type": "related"
+  },
+  {
+   "from": "record:becoming-renewal-reading",
    "to": "record:becoming-spine-instances",
    "type": "related"
   },
   {
    "from": "record:becoming-renewal-reading",
+   "to": "record:becoming-stepwise-reading",
+   "type": "related"
+  },
+  {
+   "from": "record:becoming-renewal-reading",
    "to": "record:condition-correspondence-discipline",
+   "type": "related"
+  },
+  {
+   "from": "record:becoming-renewal-reading",
+   "to": "record:identity-across-steps",
    "type": "related"
   },
   {
@@ -35116,6 +35136,11 @@
    "from": "record:becoming-spine-instances",
    "to": "module:Becoming.ValuationFrames",
    "type": "proved-in"
+  },
+  {
+   "from": "record:becoming-spine-instances",
+   "to": "record:becoming-renewal-reading",
+   "type": "related"
   },
   {
    "from": "record:becoming-spine-instances",
@@ -36520,6 +36545,11 @@
   {
    "from": "record:code-plan-global-support",
    "to": "module:Becoming.JointCorrespondence",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:code-plan-global-support",
+   "to": "module:Becoming.JointPlans",
    "type": "proved-in"
   },
   {
@@ -40119,8 +40149,23 @@
   },
   {
    "from": "record:formed-copying-registration",
+   "to": "module:Becoming.Gated",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:formed-copying-registration",
+   "to": "record:formed-copying-correction",
+   "type": "related"
+  },
+  {
+   "from": "record:formed-copying-registration",
    "to": "record:inherited-structural-copying",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:formed-goal-revision-continuation",
+   "to": "record:acquired-revision-of-pending-task",
+   "type": "related"
   },
   {
    "from": "record:formed-software-continuation",
@@ -42019,6 +42064,16 @@
   },
   {
    "from": "record:inherited-structural-copying",
+   "to": "record:formed-copying-correction",
+   "type": "related"
+  },
+  {
+   "from": "record:inherited-structural-copying",
+   "to": "record:formed-copying-registration",
+   "type": "related"
+  },
+  {
+   "from": "record:inherited-structural-copying",
    "to": "record:recurrent-chain-assembly",
    "type": "formal-reuse"
   },
@@ -43229,6 +43284,11 @@
   },
   {
    "from": "record:listing-once-is-decided-identity",
+   "to": "module:Becoming.Dissipation",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:listing-once-is-decided-identity",
    "to": "module:Becoming.InAmounts",
    "type": "proved-in"
   },
@@ -44135,6 +44195,11 @@
   {
    "from": "record:material-preparation-output",
    "to": "record:inherited-structural-copying",
+   "type": "related"
+  },
+  {
+   "from": "record:material-preparation-output",
+   "to": "record:recurrent-chain-assembly",
    "type": "related"
   },
   {
@@ -47014,8 +47079,18 @@
   },
   {
    "from": "record:recurrent-chain-assembly",
+   "to": "record:formed-copying-registration",
+   "type": "related"
+  },
+  {
+   "from": "record:recurrent-chain-assembly",
    "to": "record:growth-constrained-fragmentation",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:recurrent-chain-assembly",
+   "to": "record:inherited-structural-copying",
+   "type": "related"
   },
   {
    "from": "record:recurrent-chain-assembly",
@@ -48159,6 +48234,11 @@
   },
   {
    "from": "record:rest-with-refinement-counted",
+   "to": "record:entropy-history-and-record",
+   "type": "related"
+  },
+  {
+   "from": "record:rest-with-refinement-counted",
    "to": "record:rest-at-every-resolution",
    "type": "formal-reuse"
   },
@@ -48874,7 +48954,17 @@
   },
   {
    "from": "record:seeking-boundary",
+   "to": "record:target-capture",
+   "type": "related"
+  },
+  {
+   "from": "record:seeking-boundary",
    "to": "record:testing-within-couplings",
+   "type": "related"
+  },
+  {
+   "from": "record:seeking-boundary",
+   "to": "record:the-boundary-of-enough-under-undetermined-laws",
    "type": "related"
   },
   {
@@ -49110,6 +49200,11 @@
   {
    "from": "record:selection-under-registration-revision",
    "to": "record:consequence-revised-reference-plan",
+   "type": "related"
+  },
+  {
+   "from": "record:selection-under-registration-revision",
+   "to": "record:correction-is-not-calibration",
    "type": "related"
   },
   {
@@ -50141,6 +50236,11 @@
    "from": "record:target-capture",
    "to": "module:Becoming.SeekingRuns",
    "type": "proved-in"
+  },
+  {
+   "from": "record:target-capture",
+   "to": "record:capture-through-the-rule",
+   "type": "related"
   },
   {
    "from": "record:target-capture",
@@ -51264,6 +51364,11 @@
   },
   {
    "from": "record:transmission-independent-where-it-binds",
+   "to": "record:forming-anew-necessary-and-sufficient",
+   "type": "related"
+  },
+  {
+   "from": "record:transmission-independent-where-it-binds",
    "to": "record:map-of-premises",
    "type": "formal-reuse"
   },
@@ -51284,12 +51389,22 @@
   },
   {
    "from": "record:transmission-is-inheritance-and-need",
+   "to": "record:dependence-formed-from-drawing",
+   "type": "related"
+  },
+  {
+   "from": "record:transmission-is-inheritance-and-need",
    "to": "record:evolution-on-descent",
    "type": "formal-reuse"
   },
   {
    "from": "record:transmission-is-inheritance-and-need",
    "to": "record:map-of-premises",
+   "type": "related"
+  },
+  {
+   "from": "record:transmission-is-inheritance-and-need",
+   "to": "record:need-drift-along-a-lineage",
    "type": "related"
   },
   {

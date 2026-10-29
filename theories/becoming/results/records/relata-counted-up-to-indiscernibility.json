@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "relata-counted-up-to-indiscernibility",
   "title": {
     "zh": "经关系计数的关系项",
@@ -8,15 +8,121 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-13T12:27:01.789893+00:00",
+  "reviewed_at_utc": "2026-10-28T12:30:49+00:00",
   "statement": {
-    "zh": "在每个世界的每个列表上，经不可分辨所计的关系项数恰在排中律下固定；按名字计数多给一份已定的同一；按出现读，每个流都把参与者列出一次而数量不变。",
-    "en": "The number of relata each list of each world holds, read up to indiscernibility, is fixed exactly under excluded middle; counting by name gives one decided identity more; read by occurrence, every flow lists what takes part once with its amounts unchanged."
+    "zh": "每个世界的每个列表都有按不可分辨计的关系项数，恰是排中律；名字可以计二而关系计一；按出现读，每个流都把参与者列出一次而数量不变。",
+    "en": "That every list of every world has a number of relata up to indiscernibility is exactly excluded middle, and names can count two where relations count one; read by occurrence, every flow lists what takes part once with its amounts unchanged."
   },
-  "claim": {
-    "zh": "一个类型上的每个列表都能列出一次，恰在该类型上同一已定时（listsOnce_all_iff）。一个世界的两个关系项不可分辨（World.Indiscernible），指在每一步活动、层级与参与上相同，并在对每个关系项的每个关系上（两个方向）相同；这是一种相似（World.indiscernible_equivalence）。在一种相似之下，列表所含关系项的数目（NumbersBy）唯一（NumbersBy.unique），恰在成员间相似已定时存在（numbersBy_iff_decided）；按名字计数就是在名字相同之下计数（numbers_iff_numbersBy_eq）。对每个世界问：两个关系项是否不可分辨已定，以及每个列表的关系项数固定，都恰在排中律下成立（World.indiscernible_decided_iff_em、World.numbers_indiscernible_iff_em；探针世界 World.probe 中两个关系项恰在 Q 成立时不可分辨，World.probe_indiscernible）。名字计数关系分不开的：Q 成立时，两者的列表按名字有两个成员，经关系只含一个关系项（World.probe_named_apart）。按出现读（Flow.byOccurrence、Web.byOccurrence），一步列表中的每个位置被当作自身的关系项，在每个关系上与该处的关系项相似（Flow.byOccurrence_alike）；每个流如此读时不需已定的同一就把参与者列出一次（Flow.byOccurrence_once），并保持其数量、取用者、封闭、耗散、平衡与活动前提（Flow.byOccurrence_dissipative、Flow.byOccurrence_balances 等），所以平衡对每个按出现读的流在粗步上组合（Flow.BalancesOn.sample_byOccurrence）。出现不跨步追踪：凡有关系项活跃之处，没有列表含有它的全部活跃出现（Flow.byOccurrence_uncounted）。不加前提。",
-    "en": "Every list over a type can be listed once exactly where identity on the type is decided (listsOnce_all_iff). Two relata of a world are indiscernible (World.Indiscernible) where at every step they are alike in activity, level and taking part, and alike in every relation to every relatum, either way round; this is a likeness (World.indiscernible_equivalence). Up to a likeness the number of relata a list holds (NumbersBy) is one number (NumbersBy.unique) and exists exactly where likeness among its members is decided (numbersBy_iff_decided); counting by name is counting up to identity of names (numbers_iff_numbersBy_eq). Asked of every world, whether two relata are indiscernible is decided, and the number of relata each list holds is fixed, exactly under excluded middle (World.indiscernible_decided_iff_em, World.numbers_indiscernible_iff_em; in the probe world World.probe two relata are indiscernible exactly where Q holds, World.probe_indiscernible). Names count what relations do not tell apart: where Q holds, the list of both has two members by name and holds one relatum through relations (World.probe_named_apart). Read by occurrence (Flow.byOccurrence, Web.byOccurrence), each place in a step's list is taken as a relatum of its own, alike in every relation to the relatum there (Flow.byOccurrence_alike); every flow so read lists what takes part once with no decided identity (Flow.byOccurrence_once) and keeps its amounts, takers, closure, dissipation, balance and activity premises (Flow.byOccurrence_dissipative, Flow.byOccurrence_balances and others), so balance composes across a coarse step for every flow read by occurrence (Flow.BalancesOn.sample_byOccurrence). Occurrences are not followed across steps: wherever a relatum is active, no list holds all its active occurrences (Flow.byOccurrence_uncounted). No premise."
-  },
+  "laws": [
+    {
+      "en": "Every list over a type can be listed once exactly where identity on the type is decided. With repetition a list's length counts places, not relata: the list holding one relatum twice has the members of the list holding it once and is longer.",
+      "zh": "一个类型上的每个列表都能列出一次，恰在该类型上同一已定时。有重复时列表长度计的是位置，不是关系项：把一个关系项列两次的列表与列它一次的列表成员相同，而更长。",
+      "declarations": [
+        "Becoming.listsOnce_all_iff",
+        "Becoming.repeated_same"
+      ]
+    },
+    {
+      "en": "Up to a relation R, a list s lists a list l once where no member of s is related to a later one, each member of l is related to a member of s and each member of s to a member of l; the number of relata l holds up to R is the length of such an s.",
+      "zh": "在关系 R 之下，列表 s 把列表 l 列出一次，是指 s 中没有成员与其后的成员相关、l 的每个成员与 s 的某个成员相关、s 的每个成员与 l 的某个成员相关；l 在 R 之下所含关系项的数目就是这样一个 s 的长度。",
+      "declarations": [
+        "Becoming.DistinctUnder",
+        "Becoming.ListsOnceBy",
+        "Becoming.NumbersBy"
+      ]
+    },
+    {
+      "en": "For a likeness R, an equivalence relation: a list no two of whose members are alike decides likeness among them, two alike members of it are the same, and it is without repetition; the number of relata a list holds up to R is one number and exists exactly where R is decided among its members.",
+      "zh": "对一种相似 R（等价关系）：没有两个成员相似的列表决定其成员间的相似，其中相似的两个成员是同一个，且它不重复；列表在 R 之下所含关系项的数目是一个数，恰在 R 于其成员间已定时存在。",
+      "declarations": [
+        "Becoming.DistinctUnder.decided",
+        "Becoming.DistinctUnder.eq_of",
+        "Becoming.DistinctUnder.distinct",
+        "Becoming.ListsOnceBy.decided",
+        "Becoming.listsOnceBy_of_decided",
+        "Becoming.NumbersBy.unique",
+        "Becoming.numbersBy_iff_decided"
+      ]
+    },
+    {
+      "en": "Counted by name is counted up to identity of names: listing once up to equality is listing without repetition, and the number of relata by name is the number up to equality.",
+      "zh": "按名字计数就是在名字相同之下计数：在相等之下列出一次就是不重复地列出，按名字的关系项数就是在相等之下的数。",
+      "declarations": [
+        "Becoming.distinctBy_eq_iff",
+        "Becoming.numbers_iff_numbersBy_eq"
+      ]
+    },
+    {
+      "en": "Two relata of a world are indiscernible where at every step they are alike in activity, level and taking part in the step, and alike either way round in every relation to every relatum: requiring, drawing, need, taking and giving; indiscernibility is a likeness.",
+      "zh": "一个世界的两个关系项不可分辨，是指在每一步它们在活动、层级与参与该步上相同，并在对每个关系项的每个关系上（两个方向）相同：要求、汲取、需要、取用与给予；不可分辨是一种相似。",
+      "declarations": [
+        "Becoming.World.Indiscernible",
+        "Becoming.World.indiscernible_equivalence"
+      ]
+    },
+    {
+      "en": "The probe world at a proposition Q has two relata and no exchange, one active throughout and the other active exactly where Q holds; its two relata are indiscernible exactly where Q holds.",
+      "zh": "命题 Q 处的探针世界有两个关系项而无交换，一个始终活跃，另一个恰在 Q 成立时活跃；它的两个关系项恰在 Q 成立时不可分辨。",
+      "declarations": [
+        "Becoming.World.probeWeb",
+        "Becoming.World.probe",
+        "Becoming.World.probe_indiscernible"
+      ]
+    },
+    {
+      "en": "That indiscernibility between any two relata of every world is decided is equivalent to excluded middle, and so is that every list of every world has a number of relata up to indiscernibility.",
+      "zh": "每个世界任意两个关系项之间的不可分辨都已定，等价于排中律；每个世界的每个列表都有按不可分辨计的关系项数，也等价于排中律。",
+      "declarations": [
+        "Becoming.World.indiscernible_decided_iff_em",
+        "Becoming.World.numbers_indiscernible_iff_em"
+      ]
+    },
+    {
+      "en": "Read by occurrence, each place in a step's list is taken as its own relatum, a pair of place number and relatum, taking and giving, active, requiring, needing and drawing as the relatum there does; two occurrences of one relatum are alike in all of these, and every flow so read lists what takes part in each step once, with no decided identity.",
+      "zh": "按出现读，一步列表中的每个位置被当作自身的关系项（位置编号与关系项之对），像该处的关系项那样取用与给予、活跃、要求、需要与汲取；同一关系项的两个出现在这些方面都相似，如此读的每个流都把每步参与者列出一次，不需已定的同一。",
+      "declarations": [
+        "Becoming.Flow.byOccurrence",
+        "Becoming.Web.byOccurrence",
+        "Becoming.placed",
+        "Becoming.placed_distinct",
+        "Becoming.Flow.byOccurrence_alike",
+        "Becoming.Flow.byOccurrence_once"
+      ]
+    },
+    {
+      "en": "Read by occurrence, every flow keeps what each step takes from and gives to each condition and how many take from and give to a family, a relatum listed twice counting twice; it is closed across a step, dissipated on a family, dissipative, balanced against the web read by occurrence, acting, taking and more on a family exactly where the flow is.",
+      "zh": "按出现读，每个流保持每步从每个条件取用与给予的量，以及从一个家族取用与给予它的数目（列两次的关系项计两次）；它跨一步封闭、在一个家族上被耗散、耗散、对按出现读的网平衡、作用、取用与在一个家族上增多，恰当原流如此。",
+      "declarations": [
+        "Becoming.Flow.byOccurrence_taken",
+        "Becoming.Flow.byOccurrence_given",
+        "Becoming.Flow.byOccurrence_takers",
+        "Becoming.Flow.byOccurrence_renewers",
+        "Becoming.Flow.byOccurrence_closedAt",
+        "Becoming.Flow.byOccurrence_dissipatesOn",
+        "Becoming.Flow.byOccurrence_dissipative",
+        "Becoming.Flow.byOccurrence_balancesOn",
+        "Becoming.Flow.byOccurrence_balances",
+        "Becoming.Flow.byOccurrence_acting",
+        "Becoming.Flow.byOccurrence_taking",
+        "Becoming.Flow.byOccurrence_more"
+      ]
+    },
+    {
+      "en": "With a decision procedure for identity on the relata's type and strictly increasing sampling times, balance on a family across each fine step inside a coarse step gives balance on it across the coarse step for any flow listing what takes part in each fine step once, and so for every flow read by occurrence, with no listing once asked of the flow.",
+      "zh": "关系项类型上有同一的判定程序、采样时刻严格递增时，在一个粗步内每个细步上对一个家族的平衡，对每个细步把参与者列出一次的流给出跨该粗步对它的平衡，因而对按出现读的每个流都如此，不要求原流列出一次。",
+      "declarations": [
+        "Becoming.Flow.BalancesOn.sample_byOccurrence",
+        "Becoming.Flow.BalancesOn.sample"
+      ]
+    },
+    {
+      "en": "Read by occurrence, wherever a relatum is active at a step, no list holds every occurrence active at that step: occurrences are not followed across steps.",
+      "zh": "按出现读，凡一个关系项在一步活跃处，没有列表含有该步每个活跃的出现：出现不跨步追踪。",
+      "declarations": [
+        "Becoming.Flow.byOccurrence_uncounted"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "边界定理是双向的：左边对每个世界或每个类型陈述，右边是排中律或同一已定。",
@@ -25,11 +131,56 @@
     {
       "zh": "按出现读时，一个出现是（位置编号，关系项）对；活动按关系项读，所以每个活跃关系项有无穷多活跃出现——这是这一读法的选择，不是关于世界的发现。",
       "en": "Read by occurrence, an occurrence is a pair (place number, relatum); activity is read through the relatum, so each active relatum has infinitely many active occurrences, a choice of this reading and not a finding about worlds."
+    },
+    {
+      "en": "Balance across a coarse step read by occurrence takes a decision procedure for identity on the relata's type and strictly increasing sampling times.",
+      "zh": "按出现读的粗步平衡，取关系项类型上同一的判定程序与严格递增的采样时刻。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Reading by occurrence does not free the laws counting relata across steps of their census: where a relatum is active, no list holds the occurrences active at that step.",
+      "zh": "按出现读并不使跨步计数关系项的规律免于普查：凡有关系项活跃之处，没有列表含有该步活跃的出现。",
+      "kind": "non-implication",
+      "witness": "Becoming.Flow.byOccurrence_uncounted"
+    },
+    {
+      "en": "No excluded-middle boundary is given for identity of names (Lean's equality); the pure core uses no propositional extensionality, function extensionality or quotient, by which one would be built.",
+      "zh": "名字的同一（Lean 的相等）没有给出排中律边界；纯核心不用命题外延性、函数外延性或商，而这样的边界要借它们构造。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Indiscernibility of a world's relata is not related here to the likeness of configurations across frames.",
+      "zh": "这里没有把世界关系项的不可分辨与跨框架的配置相似联系起来。",
+      "kind": "scope",
+      "witness": "Becoming.Alike"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Listing.lean",
+      "detail": {
+        "zh": "探针世界：名字计为二，经关系计为一（World.probe_named_apart）。",
+        "en": "The probe world: two by name, one through relations (World.probe_named_apart)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of Becoming.Listing, Prelude, Decidedness, Sampling and Labelled are bound to core receipts under becoming-checks; every cited declaration has an empty axiom report, and the checker verifies core purity (the core's import closure compiles from Lean's prelude alone). The author's counterreview is in the integration note; there is no independent review yet.",
+    "zh": "Lean 4.29.1 合并检查器实查：Becoming.Listing、Prelude、Decidedness、Sampling 与 Labelled 的当前字节绑定 becoming-checks 下的核心回执；所引声明的公理报告均为空，检查器并核对核心纯净（核心的导入闭包只用 Lean 内置前导即可编译）。作者反审见整合文档；尚无独立审查。"
+  },
+  "next_delta": {
+    "en": "Relate the indiscernibility of a world's relata to the likeness of configurations across frames, so that relata and configurations are counted up to one likeness.",
+    "zh": "把世界关系项的不可分辨与跨框架的配置相似联系起来，使关系项与配置按同一种相似计数。"
+  },
   "correspondence": {
-    "zh": "P77（工作板），同上。读法（AI 的，依 Ren 的交托采用）：同一本身经关系只能读到不可分辨为止，核心的名字比关系多给一份已定的同一：对每个世界问，经关系的计数只在排中律下固定，正如 P58 的 law_iff_em。按出现读，列出一次固定的是“一次参与”是什么，对数量不限制任何东西。与 P69 的 Alike（跨框架的配置相似）的联系留给整合。见整合文档 §101。",
-    "en": "P77 (work board), as above. Reading (the AI's, adopted on Ren's delegation): identity itself is read off the relations only up to indiscernibility, and the core's names give one decided identity more than the relations do: asked of every world, the count through relations is fixed only under excluded middle, as in P58's law_iff_em. Read by occurrence, listing once fixes what one taking part is and restricts nothing for the amounts. The connection to P69's Alike (likeness of configurations across frames) is left to integration. See the integration document §101."
+    "zh": "缘起同列出一次之记录。读法（AI 的）：同一本身经关系只能读到不可分辨为止，核心的名字比关系多给一份已定的同一：对每个世界问，经关系的计数只在排中律下固定，正如计数之记录中的 law_iff_em。按出现读，列出一次固定的是“一次参与”是什么，对数量不限制任何东西。见整合文档。",
+    "en": "Provenance as for the record of listing once. Reading (the AI's): identity itself is read off the relations only up to indiscernibility, and the core's names give one decided identity more than the relations do: asked of every world, the count through relations is fixed only under excluded middle, as in the law_iff_em of the record of counts. Read by occurrence, listing once fixes what one taking part is and restricts nothing for the amounts. See the integration document."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Listing.lean",
   "aliases": [
@@ -80,8 +231,8 @@
     {
       "id": "space-and-its-parts",
       "detail": {
-        "zh": "P58 的 World.law_iff_em：对每个世界问可判定性恰在排中律下；这里对经关系的计数同样。",
-        "en": "P58's World.law_iff_em: decidedness asked of every world holds exactly under excluded middle; here likewise for counting through relations."
+        "zh": "World.law_iff_em：对每个世界问可判定性恰在排中律下；这里对经关系的计数同样。",
+        "en": "World.law_iff_em: decidedness asked of every world holds exactly under excluded middle; here likewise for counting through relations."
       }
     },
     {
@@ -92,23 +243,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Listing.lean",
-      "detail": {
-        "zh": "探针世界：名字计为二，经关系计为一（World.probe_named_apart）。",
-        "en": "The probe world: two by name, one through relations (World.probe_named_apart)."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "出现不跨步追踪，按关系项计数之律仍需普查；名字的同一（Lean 的 =）不能有排中律边界，因为纯核心不用 propext、funext 或商；与 P69 Alike 的连接未做；读法是 AI 的，依 Ren 的交托采用；不含伦理谓词。",
-    "en": "Occurrences are not followed across steps, so the laws counting relata keep their census; identity of names (Lean's =) admits no excluded-middle boundary, since the pure core uses no propext, funext or quotient; the connection to P69's Alike is not made; the readings are the AI's, adopted on Ren's delegation; no ethical predicate occurs."
-  },
-  "validation_scope": {
-    "zh": "2026-10-14：Becoming.Unfolding 的当前字节由合并检查器回执 20261013T204910.042715Z 绑定（通过：包 85 个模块，4861 项定理、6856 项声明审计，源声明公理报告全空；核心闭包 86 个模块从内置前导编译）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Listing 的 85 项定理全部空依赖，其中含 listsOnce_all_iff、World.Indiscernible、NumbersBy、numbersBy_iff_decided、World.indiscernible_decided_iff_em、World.numbers_indiscernible_iff_em、World.probe、World.probe_named_apart、Flow.byOccurrence、Flow.byOccurrence_once与 Flow.byOccurrence_uncounted；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §101；尚无独立审查。",
-    "en": "14 October 2026: the current bytes of Becoming.Unfolding are bound to consolidated receipt 20261013T204910.042715Z (passed: 85 package modules, 4861 theorems, 6856 declaration audits, every source declaration with an empty axiom report; the 86-module core closure compiles from the prelude). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 85 theorems of Becoming.Listing all have empty axiom reports, among them listsOnce_all_iff, World.Indiscernible, NumbersBy, numbersBy_iff_decided, World.indiscernible_decided_iff_em, World.numbers_indiscernible_iff_em, World.probe, World.probe_named_apart, Flow.byOccurrence, Flow.byOccurrence_once and Flow.byOccurrence_uncounted. The same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §101 of the integration note; there is no independent review yet."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Listing.lean",
@@ -370,10 +504,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "把 World.Indiscernible 与 Unfolding 的 Alike 连接。",
-    "en": "Connect World.Indiscernible with Unfolding's Alike."
-  },
   "history": [
     {
       "zh": "2026-10-13：接续并整合 P77 的现存证明包；见整合文档 §101。",
@@ -446,6 +576,28 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Replaced by the name stating it now, the same statement or its general form, or renamed (development/r37-lens-b/RENAME-TABLE.json): DistinctBy (now DistinctUnder); DistinctBy.decided (now DistinctUnder.decided); DistinctBy.distinct (now DistinctUnder.distinct); DistinctBy.eq_of (now DistinctUnder.eq_of). Proof bindings (Labelled.lean, Listing.lean, Sampling.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Labelled.lean, Listing.lean, Sampling.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：以现在陈述它的名称取代（陈述相同或为其一般形式）或改名（development/r37-lens-b/RENAME-TABLE.json）：DistinctBy（现为 DistinctUnder）；DistinctBy.decided（现为 DistinctUnder.decided）；DistinctBy.distinct（现为 DistinctUnder.distinct）；DistinctBy.eq_of（现为 DistinctUnder.eq_of）。证明绑定（Labelled.lean、Listing.lean、Sampling.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Labelled.lean、Listing.lean、Sampling.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): title kept; the statement restated as the Lean proves it (that every list of every world has a number up to indiscernibility is exactly excluded middle, names can count two where relations count one), the reading that names give one decided identity more left in the correspondence; the claim split into eleven laws, each read against its declarations in Listing.lean, Prelude.lean and Sampling.lean, the coarse-step law narrowed to the decision procedure for identity and the strictly increasing sampling it takes; the limitations became three does-not-show items and the standard boundaries no-ethical-premise, no-evaluation and names-provisional, with one hypothesis added on the coarse-step law; the correspondence drops its round labels and the sentence on the connection to likeness, which a does-not-show item carries; no premise, status, reference, proof binding or source hash changed. Every earlier sentence is mapped in [relata-counted-up-to-indiscernibility.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/relata-counted-up-to-indiscernibility.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, related entries, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：标题保留；陈述按 Lean 所证重述（每个世界的每个列表都有按不可分辨计的数，恰是排中律；名字可以计二而关系计一），“名字多给一份已定的同一”这一读法留在对应说明中；主张拆为十一条规律，各条对照 Listing.lean、Prelude.lean 与 Sampling.lean 中的声明核读，粗步之律按其所取的同一判定程序与严格递增采样收窄；限制改为三条“未表明”与通用边界 no-ethical-premise、no-evaluation 与 names-provisional，并加一条关于粗步之律的前提；对应说明删去轮次标签与关于与相似之联系的一句，由一条“未表明”承载；前提、状态、引用、证明绑定与来源哈希均未改变。每句旧文本的去向见 [relata-counted-up-to-indiscernibility.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/relata-counted-up-to-indiscernibility.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、相关条目，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/1f64153cfbae9962/relata-counted-up-to-indiscernibility.json",
+      "sha256": "1f64153cfbae9962a4dad6b6d0823e4a1d6532452254d11c428c0ef865bcfd90",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/71c487d4dfeb1a1c/relata-counted-up-to-indiscernibility.json",
+      "sha256": "71c487d4dfeb1a1cbf080fd1a6a5b8e07868eddd996a1093ea8838ae301decaf",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

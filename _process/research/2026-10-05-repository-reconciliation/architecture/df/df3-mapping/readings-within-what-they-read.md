@@ -1,0 +1,51 @@
+# Migration map: readings-within-what-they-read
+
+Old record sha256 `332f439c6bda428e75fd9e0ccc574cd6aed6ee29025c302050ffdc36dff881c5`; snapshot `_process/architecture/history/332f439c6bda428e/readings-within-what-they-read.json`.
+
+Labels number the old English sentences and clauses (split at full stops and semicolons outside parentheses): T title, S statement, C claim, L limitations, V validation_scope, R correspondence, N next_delta, H hypotheses, X counterexamples. The Chinese text of each field goes to the same place as its English counterpart; the old Chinese was read alongside, sentence by sentence.
+
+Each law was read against its declarations in `Becoming/Diagonal.lean` (every cited `Diagonal` declaration and `Frame.self_incomplete`) and `Becoming/Recurrence.lean` (`Law.orbit`, `Law.Returns`), with `Frame` of `Becoming/Frame.lean`. Every condition the Lean takes is written into each law that uses it: f moving every value (laws 1, 5–8); likeness transitive (law 2's congruence, law 6's gaps), symmetric and transitive (law 7); equality with one value decided, elements of A and B, or decidable equality with both inhabited (law 4, whose iff is proved in both directions). No declaration was added to the references: `Law.orbit` and `Law.Returns` were already in Recurrence.lean's entry. The bound core receipts report an empty axiom list for every cited declaration.
+
+| Old text | Type | New place |
+|---|---|---|
+| T0 “A family of readings within what it reads” | title | title (unchanged) |
+| S0 “A family of readings indexed by what it reads is complete exactly where nothing differs;” | statement (narrowed) | statement, with “over inhabited types with equality of values decided” written in: `complete_iff_alike` takes `DecidableEq B` and elements of A and B, and for claims only incompleteness is proved (does_not_show[1]) |
+| S1 “completing it is an unfolding that never closes, never returns and is held by no finite stock;” | statement | statement (“incomplete at every step that never returns and that no finite stock holds”: “never closes” said as `Unfolds.incomplete` has it) |
+| S2 “the liar is a rhythm with no still value.” | statement | statement (unchanged) |
+| C0 “Let ψ : A → A → B be a family of readings indexed by what it reads, and same the likeness of values. ψ says a reading g (…) when some a has ∀ x, same (ψ a x) (g x); the gap is gap f ψ x = f (ψ x x); f moves every value (…) when ∀ b, ¬ same b (f b).” | law (definitions) | law 1 |
+| C1 “Where f moves every value no member says the gap (Diagonal.gap_unsaid);” | law | law 1 |
+| C2 “a ψ saying every reading gives every f a value b with same b (f b) (Diagonal.fixed_of_complete).” | law | law 2 (with `Says.congr`, already cited) |
+| C3 “A claim is never alike with its negation (Diagonal.moves_not), so no family of claims ψ : A → A → Prop says every reading (…), and no frame realizes with its own configurations every pattern of claims about them (Frame.self_incomplete).” | law | law 3 |
+| C4 “For values compared by equality: with equality to one value decided, a complete ψ makes all values equal (…); where all values are equal some ψ is complete (…); with equality of values decidable, completeness is exactly all values being equal (Diagonal.complete_iff_alike).” | law | law 4, with the elements of A and B that `complete_of_alike` and `complete_iff_alike` take |
+| C5 “φ : ℕ → A → A → B unfolds (…) when it keeps what it says and next says the step's gap;” | law (definition) | law 5 |
+| C6 “where f moves every value it is incomplete at every step (…), the gap of step m + k is not said at step m (…),” | law | law 5 |
+| C7 “with same transitive no two gaps are alike (…), it never returns (…),” | law | law 6 (“not everything step n + 1 + k says is said at step n”, the negated universal `never_returns` states) |
+| C8 “and with same symmetric and transitive no finite stock holds its gaps (Diagonal.stock_unheld, Diagonal.Unfolds.unheld).” | law | law 7 |
+| C9 “Such an unfolding exists on Bool (Diagonal.unfolding, Diagonal.unfolding_unfolds, Diagonal.unfolding_open).” | law | law 8; counterexamples[0] |
+| C10 “Revising a value by an f moving every value, Law.orbit f b (n + 1) ≠ Law.orbit f b n (…); revising a claim by negation never rests up to Iff (…);” | law | law 9 |
+| C11 “the two-valued negation returns every two steps (Diagonal.negation_returns).” | law (narrowed) | law 9, “returns to its start along its orbit”: the theorem states `Law.Returns` (some positive period); the period two is its proof's witness, not its statement |
+| C12 “No Lean axiom is used.” | boundary | standard boundary no-ethical-premise |
+| H0–H2 | premise | hypotheses[0]–[2] (unchanged) |
+| R0 “P71 (work board), following Ren's “push the frontier, as far as possible” of 12 October 2026.” | correspondence | correspondence (“Following Ren's … of 12 October 2026”); the round and work-board markers are cut and stay in history entry 0 |
+| R1 “The periphery's RootCoverageBoundary (…) has the function and predicate forms of the same diagonal (…); here it is restated in the core with no axiom, with completeness exactly where nothing differs, the completing unfolding and the rhythm added.” | correspondence | correspondence (unchanged); next_delta (the instance theorem) |
+| R2 “It tests the “from within” half of Ren's speculation: any given truth can be said at the next step, not all from one situation, and the limit is the projection's.” | correspondence | correspondence (unchanged) |
+| R3 “P70 reads the negation's two states off revision_never_rests (Negation.two_states).” | correspondence | correspondence (“The negation's two states are read off …”), the round marker cut; related the-split-that-makes-sense (unchanged) |
+| R4 “Readings (the AI's, adopted on Ren's delegation; Ren agreed with the reply containing them): Zhuangzi's 一与言为二，二与一为三 has the regress form of Unfolds; a self-prediction announced into its loop has no still right value; the earlier reading of 道可道 as “说不尽” was the AI's, not Ren's.” | correspondence | correspondence, the label now “Readings (AI readings)”: a reading stands by its place in the account, not by a delegation or an agreement; the agreement is provenance, quoted in history entry 0 (“i agree with your last reply”); the readings unchanged; standard boundary names-provisional |
+| R5 “See §95 of the integration note.” | correspondence (process marker) | cut; history entry 0 keeps the section |
+| X0 “The unfolding on Bool (unfolding_open): incomplete at every step, never returning, its gaps held by no finite stock; revising the two-valued negation never rests (revision_never_rests, flip_moves).” | counterexample | counterexamples[0] (unchanged); laws 8 and 9 |
+| L0 “The readings are indexed by what they read;” | premise | hypotheses[2] (already there) |
+| L1 “Gödel's incompleteness and the halting problem are not stated;” | scope | does_not_show[0], with hypotheses[2]'s “arithmetic coding and provability are not stated” |
+| L2 “completeness exactly where nothing differs is for values compared by decidable equality, and for claims only incompleteness is stated;” | scope | does_not_show[1]; the statement now carries the condition |
+| L3 “the rhythm is periodic only for the two-valued negation;” | scope | does_not_show[2] |
+| L4 “the readings are the AI's;” | correspondence | correspondence (“AI readings”); standard boundary names-provisional |
+| L5 “contains no ethical predicate.” | boundary | standard boundary no-evaluation |
+| V0 “14 October 2026: the current bytes of Becoming.Diagonal are bound to consolidated receipt 20261013T204910.042715Z (passed: …);” | evidence | validation_scope names the receipts that now bind the three files (as proof_bindings has them) with their empty axiom reports and prelude compilation; the 14 October receipt stays in the references, its counts in the snapshot |
+| V1 “Earlier receipts below checked the same statements under the former names, tabulated in plan section 10.” | evidence (bookkeeping) | history (the 14 October renaming note) and snapshot |
+| V2 “Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 26 theorems of Becoming.Diagonal all have empty axiom reports, among them …;” | evidence (old receipt) | validation_scope (empty axiom reports in the current receipts); the 13 October receipt and its list in the snapshot |
+| V3 “the same receipt covers the package's 75 modules (…) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed.” | evidence (counts, old receipt) | snapshot |
+| V4 “The checker also verifies core purity: … and it compiles from Lean's prelude alone (…).” | evidence (core purity) | validation_scope (“the core compiles from Lean's prelude alone”); the closure list and the injEq detail in the receipts and the snapshot |
+| V5 “The author's counterreview is in §95 of the integration note, with the scope of the independent review.” | evidence | validation_scope (“in the integration note”), the section number cut; history entry 0 keeps it |
+| N0 “The instance theorem to the periphery's RootCoverageBoundary;” | next step | next_delta |
+| N1 “the instance theorem to Learning's diagonal (no extrapolation rests on every course).” | next step | next_delta; no such instance theorem exists in the Lean (no module outside Diagonal and Undecided uses `gap_unsaid`) |
+
+Standard boundaries: no-ethical-premise (no ethical premise; empty axiom reports for every cited declaration), no-evaluation (L5) and names-provisional (L4, R4). Unchanged: id, kind, status, family, title, hypotheses, canonical_source, aliases, dependencies, related, the counterexample, references, proof_bindings, former_ids and the earlier history entries. The R35 compaction snapshot `_process/architecture/history/13db97fd11a92274/registration-within-what-it-registers.json` (the record under its former id), named in the condensed history note, is the second text_versions entry. Two references (BECOMING-RENEWAL-READING.md, THE-THEORY-OF-BECOMING.md) differ from their reviewed hashes outside the sections the record cites; this migration refreshes no source hash.

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "histories-fix-law-up-to-dead-ends",
   "title": {
     "zh": "律与历史的完备对应",
@@ -8,19 +8,84 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-13T12:27:01.789893+00:00",
+  "reviewed_at_utc": "2026-10-28T11:54:51+00:00",
   "statement": {
     "zh": "一族历史恰在含有它的拼接时是某个律的历史族；历史把律固定到死路为止。",
     "en": "A family of histories is a law's exactly where it holds its splices, and histories fix a law up to its dead ends."
   },
-  "claim": {
-    "zh": "设 S 为配置类型，A 为动作类型，历史是一对序列 g : ℕ → S 与 m : ℕ → A。律 P 容许历史（Admits P g m），指历史的每一步都是 P 的一步；运行的历史为其律所容许（Run.step）。一族历史 H 所显示的律（ShownBy H）以 H 中历史所走的各步为步；它是容许 H 中每段历史的最小的律（ShownBy.admits、shownBy_le_iff）。一族历史含有它的拼接（SpliceClosed H），指每个由它自己的步组成的序列都在族中。律的历史族含有它的拼接（admits_spliceClosed）；一族历史恰在含有它的拼接时是某个律的历史族，它所显示的律就是这样一个律（family_iff）。一族历史一致（ConsistentFamily H），指其中任何两段历史从不以同一动作把同一配置带到两处；它所显示的律恰在这时确定（shownBy_determined_iff），一族历史恰在含有它的拼接且一致时是某个确定的律的历史族（determined_family_iff）。律的活的步（live P）是它的某段历史所走的步；律与它的活的步容许同样的历史（admits_live_iff），两个律恰在活的步相同时容许同样的历史（same_histories_iff），活的律没有死路（live_live），死路的那一步不是活的（DeadEnd.not_live）。所以不计死路的律与含有拼接的历史族一一对应：拼接与死路就是律与历史之间的全部规律。会停止的历史下没有死路：两个律恰在步相同时有同样的有限历史（same_finite_histories_iff）；一族有限历史恰在由它的步组成时，即空序列不移动、序列是第一步接其余时，是某个律的有限历史族（MadeOfSteps、finite_family_iff）。死路是不终止历史的事实。不加前提。",
-    "en": "Let S be a type of configurations and A one of moves; a history is a pair of sequences g : ℕ → S and m : ℕ → A. A law P admits a history (Admits P g m) where every step the history takes is a step of P; a run's history is admitted by its law (Run.step). The law a family of histories H shows (ShownBy H) has as steps the steps its histories take; it is the least law admitting each history of H (ShownBy.admits, shownBy_le_iff). A family holds its splices (SpliceClosed H) where every sequence made of its own steps is in it. The histories of a law hold their splices (admits_spliceClosed), and a family is the family of some law's histories exactly where it holds its splices, the law it shows being one such law (family_iff). A family is consistent (ConsistentFamily H) where no two of its histories take one move at one configuration to two outcomes; the law it shows is determined exactly then (shownBy_determined_iff), and a family is the family of a determined law's histories exactly where it holds its splices and is consistent (determined_family_iff). The live steps of a law (live P) are those some history of it takes; a law and its live steps admit the same histories (admits_live_iff), two laws admit the same histories exactly where they have the same live steps (same_histories_iff), the live law has no dead end (live_live), and the dead end's step is not live (DeadEnd.not_live). So laws up to their dead ends and families holding their splices correspond one to one: splicing and dead ends are the whole law of law and history. With histories that stop no dead end remains: two laws have the same finite histories exactly where they have the same steps (same_finite_histories_iff), and a family of finite histories is a law's exactly where it is made of its steps, the empty course going nowhere and a course being a first step followed by the rest (MadeOfSteps, finite_family_iff). The dead end is a fact of unending histories. No premise."
-  },
+  "laws": [
+    {
+      "en": "A history over configurations of any type and moves of any type is a pair of sequences indexed by the natural numbers; a law admits it where every step it takes is a step of the law, as each run of the law is. The law a family of histories shows has as steps those its histories take: it admits each of them, and it is contained in a law exactly where that law admits each of them.",
+      "zh": "任意类型的配置与任意类型的动作上，一段历史是一对以自然数为索引的序列；律容许它，是指它走的每一步都是律的一步，律的每个运行都如此。一族历史所显示的律以其历史所走的步为步：它容许其中每段历史，并且它含于一个律，恰在该律容许其中每段历史时。",
+      "declarations": [
+        "Becoming.Admits",
+        "Becoming.Run",
+        "Becoming.ShownBy",
+        "Becoming.ShownBy.admits",
+        "Becoming.shownBy_le_iff"
+      ]
+    },
+    {
+      "en": "A family of histories holds its splices where every sequence the law it shows admits is in it. The histories a law admits hold their splices, and a family is the family of histories some law admits exactly where it holds its splices, the law it shows then being one such law.",
+      "zh": "一族历史含有它的拼接，是指它所显示的律容许的每个序列都在族中。律所容许的历史含有它们的拼接；一族历史恰在含有它的拼接时，是某个律所容许的历史族，此时它所显示的律就是这样一个律。",
+      "declarations": [
+        "Becoming.SpliceClosed",
+        "Becoming.admits_spliceClosed",
+        "Becoming.family_iff"
+      ]
+    },
+    {
+      "en": "A family of histories is consistent where no two of its histories, nor one history at two times, take one move at one configuration to two outcomes. The law it shows is determined, each move at a configuration having at most one outcome, exactly where the family is consistent; a family is the family of histories some determined law admits exactly where it holds its splices and is consistent.",
+      "zh": "一族历史一致，是指其中任何两段历史、或一段历史的两个时刻，都不以同一动作把同一配置带到两处。它所显示的律确定（在一个配置处每个动作至多一个结果），恰在族一致时；一族历史恰在含有它的拼接且一致时，是某个确定的律所容许的历史族。",
+      "declarations": [
+        "Becoming.ConsistentFamily",
+        "Becoming.Determined",
+        "Becoming.shownBy_determined_iff",
+        "Becoming.determined_family_iff"
+      ]
+    },
+    {
+      "en": "The live steps of a law are those some history it admits takes. Each is a step of the law; a law and its live steps admit the same histories; two laws admit the same histories exactly where they have the same live steps; and the live steps of the live law are its own steps, so it has no dead end.",
+      "zh": "律的活的步是它所容许的某段历史所走的步。每个活的步都是律的步；律与它的活的步容许同样的历史；两个律恰在活的步相同时容许同样的历史；活的律的活的步就是它自己的步，所以它没有死路。",
+      "declarations": [
+        "Becoming.live",
+        "Becoming.live_le",
+        "Becoming.admits_live_iff",
+        "Becoming.same_histories_iff",
+        "Becoming.live_live"
+      ]
+    },
+    {
+      "en": "Sending each law to the family of histories it admits matches laws, taken up to their live steps, one to one with the families holding their splices: each image holds its splices, each such family is an image, and two laws have the same image, compared at every history, exactly where their live steps agree.",
+      "zh": "把每个律送到它所容许的历史族，使按活的步计的律与含有拼接的历史族一一对应：每个像都含有拼接，每个这样的族都是某个像，两个律恰在活的步相同时有同一个像（逐段历史比较）。",
+      "declarations": [
+        "Becoming.admits_spliceClosed",
+        "Becoming.family_iff",
+        "Becoming.same_histories_iff"
+      ]
+    },
+    {
+      "en": "With histories that stop, a law is fixed by them: two laws have the same finite courses, each from a configuration by a list of moves to a configuration, exactly where they have the same steps, so no dead end remains.",
+      "zh": "以会停止的历史，律由它们固定：两个律恰在步相同时有同样的有限历程（每段自一个配置经一列动作到一个配置），所以没有死路留下。",
+      "declarations": [
+        "Becoming.same_finite_histories_iff",
+        "Becoming.Trace.of_same",
+        "Generative.Trace"
+      ]
+    },
+    {
+      "en": "A family of finite courses, each from a configuration by a list of moves to a configuration, is made of its steps where the empty course goes from each configuration to it alone and a course is a first step followed by the rest; it is the family of some law's finite courses exactly where it is made of its steps, the law being its one-step part.",
+      "zh": "一族有限历程（每段自一个配置经一列动作到一个配置）由其步组成，是指空历程从每个配置只到它自己，且一段历程是第一步接其余；它恰在由其步组成时，是某个律的有限历程族，该律即其一步的部分。",
+      "declarations": [
+        "Becoming.MadeOfSteps",
+        "Becoming.finite_family_iff"
+      ]
+    }
+  ],
   "hypotheses": [
     {
-      "zh": "不加前提：family_iff、determined_family_iff、shownBy_determined_iff、same_histories_iff 与 admits_live_iff 是双向的，对每个律与每族历史成立。",
-      "en": "No premise: family_iff, determined_family_iff, shownBy_determined_iff, same_histories_iff and admits_live_iff are two-way and hold for every law and every family of histories."
+      "en": "Every law on configurations and moves of any types, and every family of histories: the laws take no hypothesis on either.",
+      "zh": "任意类型的配置与动作上的每个律与每族历史：这些规律对二者不加假设。"
     },
     {
       "zh": "历史有两种：不终止的序列（核心的运行）与有限的动作序列（Trace）；死路只在前者中出现。",
@@ -31,9 +96,43 @@
       "en": "A family is a predicate on pairs of sequences; families are compared by equivalence at every history, without function extensionality."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Whether an actual unfolding's histories stop is not settled here; the core's runs are unending, which is where dead ends come from.",
+      "zh": "实际展开的历史是否终止，这里没有判定；核心的运行不终止，死路正由此而来。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Which family of histories an actual unfolding is lies outside these laws.",
+      "zh": "实际展开是哪一族历史，在这些规律之外。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+      "detail": {
+        "zh": "死路：有一步而没有历史的律（DeadEnd.no_history），它的步不是活的（DeadEnd.not_live）；拼接：重访的历史所显示的律容许它没走过的历史（Splice.spliced）。",
+        "en": "Dead end: a law with a step and no history (DeadEnd.no_history), whose step is not live (DeadEnd.not_live); splice: the law a revisiting history shows admits a history it never took (Splice.spliced)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "discrete-steps",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (check_becoming.py): the current bytes of the core modules Becoming.Histories, Becoming.Labelled, Becoming.Unfolding, Becoming.Frame, Becoming.Laws and Becoming.Joint, and of the foundation module GenerativeCore, are bound to passing receipts in becoming-checks/, which report an empty axiom list for every cited declaration and verify that the core compiles from Lean's prelude alone. The author's counterreview is in the integration note; there is no independent review yet.",
+    "zh": "由 Lean 4.29.1 合并检查器（check_becoming.py）实查：核心模块 Becoming.Histories、Labelled、Unfolding、Frame、Laws、Joint 与基础模块 GenerativeCore 的当前字节绑定到 becoming-checks/ 中通过的回执，所引声明的公理报告皆为空，并核对核心只用 Lean 前导即可编译。作者反审见整合文档；尚无独立审查。"
+  },
+  "next_delta": {
+    "zh": "带权重的律与其历史之和的同一对应（见 sum-over-histories-exact）；连续时间。",
+    "en": "The same correspondence for weighted laws and their sums over histories (see sum-over-histories-exact); continuous time."
+  },
   "correspondence": {
-    "zh": "P76（工作板），按 Ren 2026-10-12 的“move towards 100%”：完备在强的意义上，即一类规律是该类的全部规律，此前只对计数成立（tally_iff_counted）。P69 证明历史固定它所显示的律，并指出对应不是同一之处：死路与拼接；这里证明这两者就是全部。读法（AI 的，依 Ren 的交托采用）：Ren 同意律与历史是同一展开的两种读法、律从展开读出（“there are no two realities”）；在本结果之下，从历史读出的律就是含有拼接的历史族，别无其他；置于展开之上的律所能多出的只是死路，没有历史显示它们；拼接是记忆的缺席：律从所在处作答，不从怎样来到此处作答。见整合文档 §98。",
-    "en": "P76 (work board), following Ren's “move towards 100%” of 12 October 2026: completeness in the strong sense, the laws of a kind being all its laws, held before for counting only (tally_iff_counted). P69 proved that a history fixes the law it shows and named where the correspondence is not an identity, dead ends and splices; this shows that these two are the whole of it. Reading (the AI's, adopted on Ren's delegation): Ren agreed that law and history are one unfolding read two ways, the law read off the unfolding (“there are no two realities”); with this result, a law read off histories is a family of histories holding its splices and nothing else; what a law set over the unfolding can add are dead ends, which no history shows; the splice is memory's absence: a law answers from where one is, not from how one came there. See the integration document §98."
+    "en": "Following Ren's “move towards 100%” of 12 October 2026: completeness in the strong sense, the laws of a kind being all its laws, held before for counting only (tally_iff_counted). The case of one history showed that a history fixes the law it shows and named where the correspondence is not an identity, dead ends and splices; this shows that these two are the whole of it. An AI reading: law and history are one unfolding read two ways, the law read off the unfolding (its source, Ren's “there are no two realities” of 12 October 2026, is in the references); with this result, a law read off histories is a family of histories holding its splices and nothing else; what a law set over the unfolding can add are dead ends, which no history shows; the splice is memory's absence: a law answers from where one is, not from how one came there.",
+    "zh": "按 Ren 2026-10-12 的“move towards 100%”：完备在强的意义上，即一类规律是该类的全部规律，此前只对计数成立（tally_iff_counted）。一段历史的情形证明历史固定它所显示的律，并指出对应不是同一之处：死路与拼接；这里证明这两者就是全部。AI 的读法：律与历史是同一展开的两种读法，律从展开读出（其来源 Ren 2026-10-12 的“there are no two realities”见参考）；在本结果之下，从历史读出的律就是含有拼接的历史族，别无其他；置于展开之上的律所能多出的只是死路，没有历史显示它们；拼接是记忆的缺席：律从所在处作答，不从怎样来到此处作答。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Histories.lean",
   "aliases": [
@@ -122,23 +221,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unfolding.lean",
-      "detail": {
-        "zh": "死路：有一步而没有历史的律（DeadEnd.no_history），它的步不是活的（DeadEnd.not_live）；拼接：重访的历史所显示的律容许它没走过的历史（Splice.spliced）。",
-        "en": "Dead end: a law with a step and no history (DeadEnd.no_history), whose step is not live (DeadEnd.not_live); splice: the law a revisiting history shows admits a history it never took (Splice.spliced)."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "实际展开的历史是否终止没有陈述；实际展开是哪一族历史没有陈述；读法是 AI 的，依 Ren 的交托采用；不含伦理谓词。",
-    "en": "Whether an actual unfolding's histories stop is not stated; which family an actual unfolding is is not stated; the readings are the AI's, adopted on Ren's delegation; no ethical predicate occurs."
-  },
-  "validation_scope": {
-    "zh": "2026-10-14：Becoming.Unfolding、Becoming.Joint 的当前字节由合并检查器回执 20261013T221720.428753Z 绑定（通过：包 91 个模块，4983 项定理、7020 项声明审计，源声明公理报告全空；核心闭包 90 个模块从内置前导编译）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Histories 的 27 项定理全部空依赖，其中含 shownBy_le_iff、family_iff、shownBy_determined_iff、determined_family_iff、admits_live_iff、same_histories_iff、DeadEnd.not_live、same_finite_histories_iff与 finite_family_iff；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §98；尚无独立审查。",
-    "en": "14 October 2026: the current bytes of Becoming.Unfolding, Becoming.Joint are bound to consolidated receipt 20261013T221720.428753Z (passed: 91 package modules, 4983 theorems, 7020 declaration audits, every source declaration with an empty axiom report; the 90-module core closure compiles from the prelude). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 27 theorems of Becoming.Histories all have empty axiom reports, among them shownBy_le_iff, family_iff, shownBy_determined_iff, determined_family_iff, admits_live_iff, same_histories_iff, DeadEnd.not_live, same_finite_histories_iff and finite_family_iff. The same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §98 of the integration note; there is no independent review yet."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Histories.lean",
@@ -241,6 +323,12 @@
       "path": "sources/15-codex-theory-conversations/2026-10-12-move-towards-100.md",
       "role": "provenance",
       "sha256": "f3e5885ed960640cf3773813e7e02f6869ca2884b3730a2ea683c0686c03a8f3",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-12-no-two-realities.md",
+      "role": "provenance",
+      "sha256": "115e7cee47046597ad0cedc3a5a96c77ce99f55bb3ecc940dc38c8fcf233551c",
       "declarations": []
     },
     {
@@ -403,10 +491,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "带权重的律与其历史之和的同一对应（见 sum-over-histories-exact）；连续时间。",
-    "en": "The same correspondence for weighted laws and their sums over histories (see sum-over-histories-exact); continuous time."
-  },
   "history": [
     {
       "zh": "2026-10-12 P76：新增，按 Ren“move towards 100%”；见整合文档 §98。",
@@ -465,6 +549,28 @@
     {
       "en": "2026-10-20: 42 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/68f6c4808a15ea8a/histories-fix-law-up-to-dead-ends.json and in git.",
       "zh": "2026-10-20：42 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/68f6c4808a15ea8a/histories-fix-law-up-to-dead-ends.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): title and statement kept; the claim split into seven laws, each read against its declarations in Histories.lean, Frame.lean, Laws.lean and GenerativeCore.lean, the one-to-one correspondence stated as what admits_spliceClosed, family_iff and same_histories_iff prove together; the limitations to two does-not-show items and the standard boundaries no-ethical-premise, discrete-steps and names-provisional; the first hypothesis, “no premise”, restated as the laws taking no hypothesis on laws or families, the others kept; the counterexample's source moved from Unfolding.lean to Labelled.lean, where DeadEnd.no_history and Splice.spliced are now stated, its text unchanged; process markers cut from the correspondence, its reading labelled an AI reading, and the source of Ren's “there are no two realities” added as a provenance reference; no premise's content, status, proof binding or source hash changed. Every earlier sentence is mapped in [histories-fix-law-up-to-dead-ends.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/histories-fix-law-up-to-dead-ends.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites. A cold read of the applied record was taken in the correspondence.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：标题与陈述保留；主张拆为七条规律，各条对照 Histories.lean、Frame.lean、Laws.lean 与 GenerativeCore.lean 中的声明核读，一一对应写成 admits_spliceClosed、family_iff 与 same_histories_iff 合起来所证明的；限制改为两条“未表明”与通用边界 no-ethical-premise、discrete-steps、names-provisional；第一条前提“不加前提”改写为这些规律对律与历史族不加假设，其余保留；反例的来源由 Unfolding.lean 改为现在陈述 DeadEnd.no_history 与 Splice.spliced 的 Labelled.lean，文字不变；对应说明去掉过程标记，读法标为 AI 的读法，并为 Ren 的“there are no two realities”加入来源引用；前提的内容、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [histories-fix-law-up-to-dead-ends.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/histories-fix-law-up-to-dead-ends.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及对应。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/0c384b758ea2b50f/histories-fix-law-up-to-dead-ends.json",
+      "sha256": "0c384b758ea2b50f145edb870b6a5f1b51a39d6ab363bd655fb8744d2b3d3890",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/68f6c4808a15ea8a/histories-fix-law-up-to-dead-ends.json",
+      "sha256": "68f6c4808a15ea8ad57b2465e524680b7208ed599a52439fed12a01ae135ca91",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

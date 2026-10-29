@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "process-and-frame-as-readings",
   "title": {
     "zh": "过程与框架作为一个展开的读法",
@@ -8,27 +8,191 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-13T12:27:01.789893+00:00",
+  "reviewed_at_utc": "2026-10-28T11:59:38+00:00",
   "statement": {
-    "zh": "动作读入配置，世界的动作是关系项的交换；历史是它所显示之律的运行，对应不是同一，差别是记忆；主张是关系项。",
-    "en": "The move is read within the configuration, a world's moves being its relata's exchanges; a history is a run of the law it shows, the correspondence not an identity, the gap being memory; a claim is a relatum."
+    "en": "Reading the move within the configuration keeps every run, and a world's moves are its relata's exchanges; a history is a run of the law it shows, the least it runs by, corresponding without being identical, and where it never revisits that law admits only it; a claim is a relatum of a world.",
+    "zh": "把动作读入配置不改变任何运行，世界的动作是其关系项的交换；历史是它所显示之律（它作为运行所属的最小之律）的运行，二者对应而不同一，历史从不重访时该律只容许它；主张是一个世界的关系项。"
   },
-  "claim": {
-    "zh": "设 P 是配置类型 S、动作类型 A 上的过程。把动作读入配置（withMove P，配置为 S × A，只有一个标签），P 的运行就是同一个运行的两种读法（Run.toWithMove、Run.ofWithMove、Run.ofWithMove_toWithMove、Run.toWithMove_ofWithMove）；这时律留开下一个动作（withMove_open），它确定，恰当 P 确定且 P 取一步之处只有一个动作（withMove_determined_iff）。动作由配置的一个策略形成时（closedBy P policy），每一步都是动作留开时的一步（closedBy_withMove）；P 确定则它仍确定（closedBy_determined），从同一配置出发的两个运行每一步都相同（closedBy_runs_agree，经 Becoming.Mechanism 的 GoAlike.runs_agree）。忘掉 GenerativeCore 的 productProcess 中联合一步的动作，留下各部分忘掉动作后的一步（unlabelled_product_le）；Fork 中两个按同一律分岔的部分，共享动作时不能同时走不同的路，各自先忘掉动作时能（Fork.label_couples）。世界 w 中，从第 t 步起的动作是其关系项的交换（Exchange、World.move）：在场的关系项取与给什么。交换之律（exchange R）说：每个关系项在一步之后的水平连同从它被取的，等于之前的水平连同给它的。w 平衡，恰当其水平以其交换为动作按这条律运行（World.balances_iff_exchange，按定义）；跨一步，恰当它在那里的每个家族上平衡（World.exchange_step_iff）；这时 w 是这条律的运行（World.exchangeRun）。律固定一步之后的每个水平（exchange_agrees）；动作相同、起点在每个关系项上相同的两个运行，每一步在每个关系项上都相同（exchange_runs_agree）；Circulation 中一次循环与没有交换留下同样的水平（Labelled.Circulation.standings_leave_exchange），动作相同而起点不同的运行每一步都不同（Labelled.Circulation.start_needed）。对任何配置序列 g 与动作序列 m，它所显示的律（Shown g m）恰有它的各步；序列是它的运行（Shown.run），它是序列为其运行的最小的律（shown_le_iff），也包含在每个以这些配置与动作为运行的律之中（Run.shown_le）。Shown g m 确定，恰当序列一致：从不以同一动作把同一配置带到两处（Consistent、shown_determined_iff）；恰在这时有确定的律容许这个序列（exists_law_iff，经 Becoming.Mechanism 的 carries_law_iff 与 goAlike_id_iff）；容许它的每个确定的律在它的各步上与它相同（Shown.agrees）。对应不是同一：DeadEnd 中一条律有一步而没有运行（DeadEnd.no_history）；Splice 中重访一个配置的历史所显示的律容许一个运行，它从任何一步起都不是这段历史（Splice.spliced）；序列从不重访时，它所显示的律从它的某个配置出发的每个运行，都是从那里起的这个序列（eq_of_new、Shown.runs_of_new），所以沿保留历史的运行（Becoming.Experiment 的 keepHistory），它所显示的律只容许它（Run.keepHistory_shown）。对框架 F 与运行 r，F.world r 是一个世界：关系项是 F 的主张，每个恰在实现处活跃，没有流，没有立着、依存或汲取（Frame.world、Frame.world_active）；主张的生起就是它开始被实现（Frame.arises_iff）；一步之后的配置记录此前实现了什么时，某种读法的主张在该步之后是新的，恰当有一个跨这一步生起（Frame.novel_iff_arises）；在每步都可判定的有限主张家族中，开始被实现复现恰当不再被实现复现（Frame.claims_recur_iff，由 Becoming.Change 的 coming_recurs_iff）。以配置为主张（Frame.configurations），两个运行的世界在活动上相同，它们每一步都相同（Frame.world_fixes_run）。不用 Lean 公理。",
-    "en": "Let P be a process on configurations S with moves A. Read with the move inside the configuration (withMove P, on S × A with one label), P's runs are one run read two ways (Run.toWithMove, Run.ofWithMove, Run.ofWithMove_toWithMove, Run.toWithMove_ofWithMove); the law then leaves the next move open (withMove_open), and it is determined exactly where P is determined and, wherever P takes a step, only one move exists (withMove_determined_iff). Where the move is formed by a policy of the configuration (closedBy P policy), each step is a step of the law with the move left open (closedBy_withMove); a determined P stays determined (closedBy_determined), and two runs from one configuration agree at every step (closedBy_runs_agree, through GoAlike.runs_agree of Becoming.Mechanism). Forgetting the move of a joint step of GenerativeCore's productProcess leaves a step of each part with its move forgotten (unlabelled_product_le); in Fork two parts forking by one law cannot go different ways at once with the move shared, and can with the move forgotten in each part first (Fork.label_couples). In a world w the move across the step from t is its relata's exchange (Exchange, World.move): what the relata present take and give. The law of exchange (exchange R) says that each relatum's standing after a step with what is taken from it equals its standing before with what is given to it. w balances exactly where its standings run by this law with its exchanges as moves (World.balances_iff_exchange, by definition), across one step exactly where it balances on every family there (World.exchange_step_iff), and is then a run of the law (World.exchangeRun). The law fixes each standing after a step (exchange_agrees); two runs with the same moves, starting alike at every relatum, agree at every relatum at every step (exchange_runs_agree); in Circulation a circulation and no exchange leave the same standings (Labelled.Circulation.standings_leave_exchange), and runs with the same moves from different starts differ at every step (Labelled.Circulation.start_needed). For any sequence of configurations g and moves m, the law it shows (Shown g m) has exactly its steps; the sequence is a run of it (Shown.run), it is the least law the sequence is a run of (shown_le_iff), and it lies within every law of which a run has these configurations and moves (Run.shown_le). Shown g m is determined exactly where the sequence is consistent, never taking one move at one configuration to two outcomes (Consistent, shown_determined_iff), and exactly then some determined law admits the sequence (exists_law_iff, through carries_law_iff and goAlike_id_iff of Becoming.Mechanism); every determined law admitting it agrees with it on its steps (Shown.agrees). The correspondence is not an identity: in DeadEnd a law has a step and no run (DeadEnd.no_history); in Splice a history that revisits a configuration shows a law admitting a run that is the history from no step on (Splice.spliced); where a sequence never revisits, every run of the law it shows from one of its configurations is the sequence from there on (eq_of_new, Shown.runs_of_new), so along a run keeping its history (keepHistory of Becoming.Experiment) the law it shows admits only it (Run.keepHistory_shown). For a frame F and a run r, F.world r is a world whose relata are F's claims, each active exactly where realized, with no flow and nothing standing, depending or drawing (Frame.world, Frame.world_active); a claim arises exactly where it comes to be realized (Frame.arises_iff); where the configuration after a step records what was realized before it, a claim of a reading is new after the step exactly where one arises across it (Frame.novel_iff_arises); in a finite family of claims decided at each step, coming to be realized recurs exactly where ceasing to be realized recurs (Frame.claims_recur_iff, by coming_recurs_iff of Becoming.Change). With the configurations as claims (Frame.configurations), two runs whose worlds agree in activity agree at every step (Frame.world_fixes_run). No Lean axiom is used."
-  },
+  "laws": [
+    {
+      "en": "For any process P on configurations S with moves A, the law with the move read within the configuration, on S × A with one label, relates (s, a) to (t, b) where P steps from s by a to t. Each run of P gives a run of it and each run of it a run of P, and reading a run inside and back gives the same configurations and moves at every step.",
+      "zh": "对配置 S、动作 A 上的任一过程 P，把动作读入配置的律在 S × A 上只有一个标签，在 P 以 a 从 s 走到 t 处把 (s, a) 关联到 (t, b)。P 的每个运行给出它的一个运行，反之亦然；把运行读入再读回，每一步的配置与动作都不变。",
+      "declarations": [
+        "Becoming.withMove",
+        "Becoming.Run.toWithMove",
+        "Becoming.Run.ofWithMove",
+        "Becoming.Run.ofWithMove_toWithMove",
+        "Becoming.Run.toWithMove_ofWithMove"
+      ]
+    },
+    {
+      "en": "For any process P, a step of the law with the move inside to (t, b) is a step to (t, b′) for every move b′: the law leaves the next move open. That law is determined exactly where P is determined and, wherever P takes any step, any two moves are equal.",
+      "zh": "对任一过程 P，动作读入后的律到 (t, b) 的一步，对每个动作 b′ 也是到 (t, b′) 的一步：律留开下一个动作。该律确定，恰当 P 确定且凡 P 取任何一步之处任意两个动作相等。",
+      "declarations": [
+        "Becoming.withMove_open",
+        "Becoming.withMove_determined_iff",
+        "Becoming.Determined"
+      ]
+    },
+    {
+      "en": "For any process P and policy from configurations to moves, the law with the move formed by the policy steps from (s, a) to (t, b) where P steps from s by a to t and b is the policy's move at t; each of its steps is a step of the law with the move open. Where P is determined, it is determined and any two of its runs from one configuration agree at every step.",
+      "zh": "对任一过程 P 与从配置到动作的策略，由策略形成动作的律在 P 以 a 从 s 走到 t、且 b 是策略在 t 给出的动作处，从 (s, a) 走到 (t, b)；它的每一步都是动作留开之律的一步。P 确定时，它确定，且它从同一配置出发的任意两个运行每一步都相同。",
+      "declarations": [
+        "Becoming.closedBy",
+        "Becoming.closedBy_withMove",
+        "Becoming.closedBy_determined",
+        "Becoming.closedBy_runs_agree"
+      ]
+    },
+    {
+      "en": "Forgetting the move of a joint step of two processes moving by one shared move leaves a step of each part with its move forgotten. In the fork, where from an origin one move leads left and the other right, no shared move takes two parts at the origin to left and right at once, while with each part's move forgotten first they go there together.",
+      "zh": "忘掉以同一共享动作运动的两个过程的联合一步之动作，留下各部分忘掉动作后的一步。在分岔中，从起点一个动作通向左、另一个通向右：没有共享动作把起点处的两个部分同时带到左与右；先各自忘掉动作，它们就一起到那里。",
+      "declarations": [
+        "Becoming.unlabelled",
+        "Becoming.unlabelled_product_le",
+        "Becoming.Fork.law",
+        "Becoming.Fork.label_couples"
+      ]
+    },
+    {
+      "en": "In a world, the move across the step from t is its relata's exchange: the relata present and what each takes from and gives to each. The law of exchange on relata R takes levels to levels by an exchange where each relatum's level after the step, with what is taken from it, equals its level before, with what is given to it.",
+      "zh": "在一个世界中，从第 t 步起的动作是其关系项的交换：在场的关系项，以及每个从每个取什么、给什么。关系项 R 上的交换之律以一个交换把水平带到水平，其处每个关系项一步之后的水平加上从它所取的，等于之前的水平加上给它的。",
+      "declarations": [
+        "Becoming.World",
+        "Becoming.Exchange",
+        "Becoming.Exchange.taken",
+        "Becoming.Exchange.given",
+        "Becoming.World.move",
+        "Becoming.exchange"
+      ]
+    },
+    {
+      "en": "A world balances exactly where its levels run by the law of exchange with its exchanges as moves, by definition; across the step from t its levels step by that law exactly where it balances on every family at t; and a balanced world is a run of the law of exchange, its moves its exchanges.",
+      "zh": "世界平衡，恰当其水平以其交换为动作按交换之律运行（按定义）；跨第 t 步，其水平按这条律走一步，恰当它在 t 处的每个家族上平衡；平衡的世界是交换之律的一个运行，动作是它的交换。",
+      "declarations": [
+        "Becoming.World.balances_iff_exchange",
+        "Becoming.World.exchange_step_iff",
+        "Becoming.World.exchangeRun",
+        "Becoming.Flow.Balances",
+        "Becoming.Flow.BalancesOn"
+      ]
+    },
+    {
+      "en": "Two steps of the law of exchange from one level by one exchange agree at every relatum. Two runs of it with the same moves at every step, starting alike at every relatum, agree at every relatum at every step.",
+      "zh": "交换之律从同一水平以同一交换走的两步在每个关系项上相同。动作每一步都相同、起点在每个关系项上相同的两个运行，每一步在每个关系项上都相同。",
+      "declarations": [
+        "Becoming.exchange_agrees",
+        "Becoming.exchange_runs_agree"
+      ]
+    },
+    {
+      "en": "Levels do not fix the exchange, and the exchange fixes levels only from a start: for one relatum at level one, taking one from itself and giving one to itself, and exchanging nothing, both step from one to one with different relata present; and some two runs of the law of exchange with the same moves differ at every step (nothing exchanged, at zero and at one throughout).",
+      "zh": "水平不固定交换，交换只从起点固定水平：一个关系项处于水平一，自取一并自给一，与什么都不交换，都从一走到一，在场的关系项不同；交换之律有两个动作相同的运行每一步都不同（都不交换，一个始终为零，一个始终为一）。",
+      "declarations": [
+        "Becoming.Labelled.Circulation.one",
+        "Becoming.Labelled.Circulation.round",
+        "Becoming.Labelled.Circulation.idle",
+        "Becoming.Labelled.Circulation.standings_leave_exchange",
+        "Becoming.Labelled.Circulation.start_needed"
+      ]
+    },
+    {
+      "en": "For any sequence of configurations g and of moves m, the law it shows takes exactly its steps, from g n by m n to g (n + 1); the sequence is a run of it; a process admits every step of the sequence exactly where it contains the law the sequence shows; and every run of a process shows a law the process contains.",
+      "zh": "对任一配置序列 g 与动作序列 m，它所显示的律恰取它的各步：从 g n 以 m n 到 g (n + 1)；序列是它的运行；一个过程容许序列的每一步，恰当它包含序列所显示的律；过程的每个运行所显示的律都包含在该过程之中。",
+      "declarations": [
+        "Becoming.Shown",
+        "Becoming.Shown.run",
+        "Becoming.shown_le_iff",
+        "Becoming.Run.shown_le"
+      ]
+    },
+    {
+      "en": "A sequence is consistent where it never takes one move at one configuration to two outcomes. The law a sequence shows is determined exactly where the sequence is consistent; some determined process admits every step of it exactly then; and a determined process admitting every step of it agrees with the law it shows wherever that law steps.",
+      "zh": "序列一致，是指它从不以同一动作把同一配置带到两个结果。序列所显示的律确定，恰当序列一致；恰在这时有确定的过程容许它的每一步；容许它每一步的确定过程，在该律走一步之处与它相同。",
+      "declarations": [
+        "Becoming.Consistent",
+        "Becoming.shown_determined_iff",
+        "Becoming.exists_law_iff",
+        "Becoming.Shown.agrees"
+      ]
+    },
+    {
+      "en": "Law and history correspond without being identical. A law can have a step and no run: one step from false to true, none from true, admits no run. Where a history revisits a configuration, the law it shows can admit a run that is the history from no step on: the history 0, 1, 0, then 2 for ever, shows a law admitting the run back and forth between 0 and 1.",
+      "zh": "律与历史对应而不同一。律可以有一步而没有运行：从 false 到 true 的一步、从 true 无步的律不容许任何运行。历史重访一个配置时，它所显示的律可以容许一个从任何一步起都不是这段历史的运行：历史 0、1、0、此后恒为 2 所显示的律容许在 0 与 1 之间往返的运行。",
+      "declarations": [
+        "Becoming.DeadEnd.law",
+        "Becoming.DeadEnd.no_history",
+        "Becoming.Splice.history",
+        "Becoming.Splice.loop",
+        "Becoming.Splice.loop_step",
+        "Becoming.Splice.spliced"
+      ]
+    },
+    {
+      "en": "Where a sequence never meets one configuration twice, every run of the law it shows from its configuration at step k is the sequence from k on. So, for any process, along a run keeping its history, every run of the law that run shows, from one of its configurations, is the run from there on.",
+      "zh": "序列从不两次遇到同一配置时，它所显示的律从它第 k 步的配置出发的每个运行，都是从 k 起的这个序列。所以对任一过程，沿保留其历史的运行，该运行所显示的律从它的某个配置出发的每个运行，都是从那里起的这个运行。",
+      "declarations": [
+        "Becoming.eq_of_new",
+        "Becoming.Shown.runs_of_new",
+        "Becoming.keepHistory",
+        "Becoming.keepHistory_new",
+        "Becoming.Run.keepHistory_shown"
+      ]
+    },
+    {
+      "en": "For a frame F, a process with claims realized at configurations, its claims in Type, and a run r, F read along r is a world whose relata are F's claims, each active at step t exactly where realized at r's configuration there, with nothing standing, exchanged, depended on or drawn on; a claim arises across the step from t exactly where it comes to be realized there.",
+      "zh": "对框架 F（在配置处实现主张的过程，主张的类型在 Type 中）与运行 r，沿 r 读的 F 是一个世界：关系项是 F 的主张，每个在第 t 步活跃恰当在 r 那时的配置处实现，没有立着、交换、依存或汲取；主张跨第 t 步生起，恰当它在那里开始被实现。",
+      "declarations": [
+        "Becoming.Frame.world",
+        "Becoming.Frame.world_active",
+        "Becoming.Frame.arises_iff",
+        "Becoming.Web.Arises",
+        "Becoming.ComesToBe"
+      ]
+    },
+    {
+      "en": "Where the configuration after the step from t records what was realized at t, a claim of a reading is new after the step exactly where some claim of the reading arises across it in the world the frame gives.",
+      "zh": "第 t 步之后的配置记录 t 时实现了什么时，某读法的主张在这一步之后是新的，恰当在框架所给的世界中有该读法的主张跨这一步生起。",
+      "declarations": [
+        "Becoming.Frame.novel_iff_arises",
+        "Becoming.Novel"
+      ]
+    },
+    {
+      "en": "In a finite list of claims, whether each is realized decided at each step of the run, coming to be realized recurs among them exactly where ceasing to be realized recurs.",
+      "zh": "在有限的主张列表中，每一步每个主张是否实现可判定时，开始被实现在其中复现，恰当不再被实现复现。",
+      "declarations": [
+        "Becoming.Frame.claims_recur_iff",
+        "Becoming.Recurs",
+        "Becoming.CeasesToBe",
+        "Becoming.coming_recurs_iff"
+      ]
+    },
+    {
+      "en": "With the configurations as claims, a configuration's claim realized exactly at itself, two runs of a process whose worlds agree in activity at every step and claim agree at every step: the world fixes the run.",
+      "zh": "以配置为主张（配置的主张恰在它自身处实现），一个过程的两个运行的世界在每一步、每个主张上活动相同时，它们每一步都相同：世界固定运行。",
+      "declarations": [
+        "Becoming.Frame.configurations",
+        "Becoming.Frame.world_fixes_run"
+      ]
+    }
+  ],
   "hypotheses": [
     {
-      "zh": "不加前提；每条定理所用的局部条件写在其中：exists_law_iff 与 shown_determined_iff 是双向的，对每个序列成立；closedBy_runs_agree 要 P 确定与相同的起点；exchange_runs_agree 要相同的动作与在每个关系项上相同的起点；Shown.runs_of_new 要序列从不重访；Frame.novel_iff_arises 要一步之后的配置记录此前的实现；Frame.claims_recur_iff 要有限的主张列表与每步的可判定性。",
-      "en": "No premise; each theorem's local conditions are written into it: exists_law_iff and shown_determined_iff are two-way and hold of every sequence; closedBy_runs_agree needs P determined and the same start; exchange_runs_agree needs the same moves and starts alike at every relatum; Shown.runs_of_new needs the sequence never to revisit; Frame.novel_iff_arises needs the configuration after a step to record what was realized before it; Frame.claims_recur_iff needs a finite list of claims decided at each step."
+      "en": "No premise; each theorem's local conditions are written into it: exists_law_iff and shown_determined_iff are two-way and hold of every sequence; closedBy_runs_agree needs P determined and the same start; exchange_runs_agree needs the same moves and starts alike at every relatum.",
+      "zh": "不加前提；每条定理所用的局部条件写在其中：exists_law_iff 与 shown_determined_iff 是双向的，对每个序列成立；closedBy_runs_agree 要 P 确定与相同的起点；exchange_runs_agree 要相同的动作与在每个关系项上相同的起点。"
+    },
+    {
+      "en": "Shown.runs_of_new needs the sequence never to revisit; Frame.novel_iff_arises needs the configuration after a step to record what was realized before it; Frame.claims_recur_iff needs a finite list of claims decided at each step.",
+      "zh": "Shown.runs_of_new 要序列从不重访；Frame.novel_iff_arises 要一步之后的配置记录此前的实现；Frame.claims_recur_iff 要有限的主张列表与每步的可判定性。"
     },
     {
       "zh": "把动作读入配置与形成动作的策略都是给出的读法，不推出动作在展开之内形成、由什么形成；交换之律把世界的流读作它的动作。",
       "en": "Reading the move within the configuration, and the policy forming the move, are readings supplied; that a move is formed within the unfolding, or by what, is not derived; the law of exchange reads a world's flow as its moves."
     },
     {
-      "zh": "律指确定的过程（Becoming.Joint 的 Determined）；运行是无穷的（Becoming.Frame 的 Run），所以律走进死路的一步不在任何运行上。",
-      "en": "A law is a determined process (Determined of Becoming.Joint); runs are infinite (Run of Becoming.Frame), so a law's step into a dead end lies on no run."
+      "zh": "律指确定的过程（Becoming.Laws 的 Determined）；运行是无穷的（Becoming.Frame 的 Run），所以律走进死路的一步不在任何运行上。",
+      "en": "A law is a determined process (Determined of Becoming.Laws); runs are infinite (Run of Becoming.Frame), so a law's step into a dead end lies on no run."
     },
     {
       "zh": "见证的结论：Fork、Splice、DeadEnd 与 Circulation 的过程、序列与运行。",
@@ -39,9 +203,80 @@
       "en": "Discrete steps, counted from step 0; natural-number amounts; a shared index of steps; in Frame.world the claims form a type in Type, as World's relata do."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "These laws take the shared index of steps as given and do not derive it from relations.",
+      "zh": "这些规律以共同的步序为给定，不由关系推出它。",
+      "kind": "scope"
+    },
+    {
+      "en": "They do not derive that a move is formed within the unfolding or by what, nor which law a formation takes its history to show: the policy forming a move is supplied.",
+      "zh": "它们不推出动作在展开之内形成、由什么形成，也不推出一个形成把它的历史读作显示哪条律：形成动作的策略是给出的。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A law here is a determined process; probabilistic laws are not treated.",
+      "zh": "这里的律是确定的过程；概率之律没有处理。",
+      "kind": "scope"
+    },
+    {
+      "en": "The labelled processes of the foundation are unchanged and still state processes with moves as labels; these laws give a reading of them and a bridge to worlds, not another foundation.",
+      "zh": "基础中的带标签过程不变，仍以动作为标签陈述过程；这些规律给出它们的读法与通往世界的桥，不是另一个基础。",
+      "kind": "scope"
+    },
+    {
+      "en": "In the world a frame gives along a run nothing stands, is exchanged, depended on or drawn on, so relations among claims are not stated.",
+      "zh": "框架沿运行所给的世界中没有立着、交换、依存或汲取，所以主张之间的关系没有陈述。",
+      "kind": "scope",
+      "witness": "Becoming.Frame.world"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+      "detail": {
+        "zh": "律到历史有所失：DeadEnd 中律有一步而没有任何运行（DeadEnd.no_history）。",
+        "en": "Law to histories loses: in DeadEnd a law has a step and no run at all (DeadEnd.no_history)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+      "detail": {
+        "zh": "历史到律有所得：Splice 中历史重访起点，它所显示的律容许在前两个配置之间往返的运行，它从任何一步起都不是这段历史（Splice.spliced）。",
+        "en": "History to law gains: in Splice the history revisits its start, and the law it shows admits a run going back and forth between the first two configurations, which is the history from no step on (Splice.spliced)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unfolding.lean",
+      "detail": {
+        "zh": "共享的动作是部分之间的关系：Fork 中先忘掉各自的动作，两个部分就能同时走不同的路（Fork.label_couples）。",
+        "en": "A shared move is a relation between parts: in Fork, with each part's move forgotten first, the two can go different ways at once (Fork.label_couples)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+      "detail": {
+        "zh": "水平不固定交换，交换只从一个起点固定水平：Circulation 中一次循环与没有交换留下同样的水平，动作相同而起点不同的运行处处不同（Labelled.Circulation.standings_leave_exchange、Labelled.Circulation.start_needed）。",
+        "en": "Levels do not fix the exchange, and the exchange fixes levels only from a start: in Circulation a circulation and no exchange leave the same levels, and runs with the same moves from different starts differ everywhere (Labelled.Circulation.standings_leave_exchange, Labelled.Circulation.start_needed)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker in core receipts under becoming-checks: Becoming.Labelled is bound to 20261028T085101.429997Z, Becoming.Unfolding to 20261019T194851.524223Z, Becoming.World to 20261020T051144.879480Z, and the other cited modules to the receipts named in the bindings; every cited declaration has an empty axiom report. Several laws hold by definition; what is proved beyond is both directions and where law and history are not identical. Author's counterreview only.",
+    "zh": "Lean 4.29.1 合并检查器实查，核心回执在 becoming-checks 下：Becoming.Labelled 绑定 20261028T085101.429997Z，Unfolding 绑定 20261019T194851.524223Z，World 绑定 20261020T051144.879480Z，其余所引模块绑定绑定项所列的回执；所引声明的公理报告均为空。数条规律按定义成立；所证的增量是两个方向，以及律与历史何处不同一。只有作者反审。"
+  },
+  "next_delta": {
+    "en": "Give the world a frame shows along a run a flow and web among its claims, so that which claim depends on or draws on which is stated and its laws proved.",
+    "zh": "为框架沿运行所给的世界加上主张之间的流与依存网，使哪个主张依存或汲取哪个得到陈述，其规律得到证明。"
+  },
   "correspondence": {
-    "zh": "Ren 2026-10-12 问核心的前两层“is this dualistic?”；对 AI 的回答（它们不设主体与客体，但其形式把四种分割当作给定：配置与另一字母表的动作、先于历史的律、从配置读出的主张、先于关系的配置；提议从 World 重述它们，GenerativeCore 不变）答：“yes, put it on the board and start”（工作板 P69）。在同一对话的另一分支上，对律与历史是同一展开的两种读法、律从展开读出而不是置于其上这一读法，Ren 写道：“yes, i do agree with your reading, there are no two realities”。DeadEnd、Splice、保留历史、Fork 与 Circulation 的结果是那个分支上检查过的定理在本模块定义上的重述。读法（AI 的，依 Ren 的交托采用）：World 是核心的起点，带标签的过程是把配置分为律所固定者与所留开者的读法，框架是经主张读的世界；行动不是展开之外的第二种原因，变动自己的行动就是变动配置之所是；律与历史之间的差别是记忆：律从所在之处回答，不从怎样来到那里回答；认识在展开之内，主张与任何东西一样在同样的规律下生起与止息。见整合文档 §91。",
-    "en": "On 12 October 2026 Ren asked of the core's first two layers “is this dualistic?”, and to the AI's answer (they posit no subject and object, but their form takes four splits as given: a configuration and a move from an alphabet of its own, a law prior to the history, claims read off a configuration, and configurations prior to their relation; the proposal was to restate them from World, leaving GenerativeCore unchanged) answered “yes, put it on the board and start” (work-board item P69). On another branch of the same conversation, of the reading that law and history are one unfolding read two ways, the law read off the unfolding rather than set over it, Ren wrote “yes, i do agree with your reading, there are no two realities”. The results on DeadEnd, Splice, kept history, Fork and Circulation restate on this module's definitions theorems checked on that branch. Readings (the AI's, adopted on Ren's delegation): World is where the core begins, a labelled process is the reading that splits the configuration into what the law fixes and what it leaves open, and a frame is a world read through its claims; an agent's choice is not a second kind of cause beside the unfolding, and varying one's own act is varying what the configuration is; the gap between a law and its histories is memory: a law answers from where one is, not from how one came there; knowing is within the unfolding, a claim coming to be and ceasing under the same laws as anything else. See §91 of the integration note."
+    "zh": "Ren 2026-10-12 问核心的前两层“is this dualistic?”；对 AI 的回答（它们不设主体与客体，但其形式把四种分割当作给定：配置与另一字母表的动作、先于历史的律、从配置读出的主张、先于关系的配置；提议从 World 重述它们，GenerativeCore 不变）答：“yes, put it on the board and start”。DeadEnd、Splice、保留历史、Fork 与 Circulation 的结果是该对话另一分支上检查过的定理在本模块定义上的重述。读法（AI 的读法）：World 是核心的起点，带标签的过程是把配置分为律所固定者与所留开者的读法，框架是经主张读的世界；行动不是展开之外的第二种原因，变动自己的行动就是变动配置之所是；律与历史之间的差别是记忆：律从所在之处回答，不从怎样来到那里回答；认识在展开之内，主张与任何东西一样在同样的规律下生起与止息。",
+    "en": "On 12 October 2026 Ren asked of the core's first two layers “is this dualistic?”, and to the AI's answer (they posit no subject and object, but their form takes four splits as given: a configuration and a move from an alphabet of its own, a law prior to the history, claims read off a configuration, and configurations prior to their relation; the proposal was to restate them from World, leaving GenerativeCore unchanged) answered “yes, put it on the board and start”. The results on DeadEnd, Splice, kept history, Fork and Circulation restate on this module's definitions theorems checked on another branch of that conversation. Readings (an AI reading): World is where the core begins, a labelled process is the reading that splits the configuration into what the law fixes and what it leaves open, and a frame is a world read through its claims; an agent's choice is not a second kind of cause beside the unfolding, and varying one's own act is varying what the configuration is; the gap between a law and its histories is memory: a law answers from where one is, not from how one came there; knowing is within the unfolding, a claim coming to be and ceasing under the same laws as anything else."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unfolding.lean",
   "aliases": [
@@ -177,7 +412,7 @@
           "zh": "无。",
           "en": "None."
         },
-        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joint.lean"
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean"
       }
     },
     {
@@ -209,14 +444,14 @@
       "id": "configurations-alike-by-relation",
       "detail": {
         "zh": "同一模块的第四项：配置由它怎样关系而定；交换之律下水平相同恰当在每个关系项上相等。",
-        "en": "The fourth item in the same module: a configuration is how it relates; under the law of exchange standings are alike exactly where they agree at every relatum."
+        "en": "The fourth item in the same module: a configuration is how it relates; under the law of exchange levels are alike exactly where they agree at every relatum."
       }
     },
     {
       "id": "recurrence-without-premise",
       "detail": {
-        "zh": "保留历史的代价：Law.withHistory_never_returns 与 withHistory_unlisted，保留的历史从不返回，没有列表持有它。律只容许保留的历史（Run.keepHistory_shown）与它从不返回是同一事实的两面。",
-        "en": "The price of keeping the history: Law.withHistory_never_returns and withHistory_unlisted, a kept history never returns and no list holds it. That the law admits only the kept history (Run.keepHistory_shown) and that it never returns are two sides of one fact."
+        "zh": "保留历史所带来的：Law.withHistory_never_returns 与 withHistory_unlisted，保留的历史从不返回，没有列表持有它。律只容许保留的历史（Run.keepHistory_shown）与它从不返回是同一事实的两面。",
+        "en": "What keeping the history entails: Law.withHistory_never_returns and withHistory_unlisted, a kept history never returns and no list holds it. That the law admits only the kept history (Run.keepHistory_shown) and that it never returns are two sides of one fact."
       }
     },
     {
@@ -250,15 +485,15 @@
     {
       "id": "counterfactual-is-the-course",
       "detail": {
-        "zh": "实例（P80b）：交换律的进程是一个世界，按交换之律而行恰当可行；确定的律在 Shown 之外的步恰在运行未取的动作（Run.beyond_shown_iff，关于 Shown 的一条律，暂放在 Counterfactual），所以进程历史之外的是反事实；部分的动作由律在配置上形成时，closedBy 的运行就是进程。",
-        "en": "Instances (P80b): the course of a law of exchange is a world, running by the law of exchange exactly where feasible; a determined law's steps beyond Shown are exactly at the moves the run never takes (Run.beyond_shown_iff, a law about Shown, kept in Counterfactual for now), so what lies beyond the course's history is its counterfactuals; with the part's move formed by a law on the configuration, a run of closedBy is the course."
+        "zh": "实例：交换律的进程是一个世界，按交换之律而行恰当可行；确定的律在 Shown 之外的步恰在运行未取的动作（Run.beyond_shown_iff，关于 Shown 的一条律，暂放在 Counterfactual），所以进程历史之外的是反事实；部分的动作由律在配置上形成时，closedBy 的运行就是进程。",
+        "en": "Instances: the course of a law of exchange is a world, running by the law of exchange exactly where feasible; a determined law's steps beyond Shown are exactly at the moves the run never takes (Run.beyond_shown_iff, a law about Shown, kept in Counterfactual for now), so what lies beyond the course's history is its counterfactuals; with the part's move formed by a law on the configuration, a run of closedBy is the course."
       }
     },
     {
       "id": "unity-of-readings",
       "detail": {
-        "zh": "读一个展开的都是语境中的读法，诸读法总是一个世界（Contextual.world，如 Frame.world）；World 是粘合的读法，算入其余时每个世界都是交换之律的一次运行（World.unity），World.exchangeRun 的平衡前提由此去掉。Ren 批准语境中的读法为一般情形、World 为粘合的情形，过程与框架同是一个展开的读法。",
-        "en": "Whatever reads an unfolding is a reading in context, and the readings are always one world (Contextual.world, as Frame.world); World is the glued reading, and with the rest counted every world is one run of the law of exchange (World.unity), which drops the balance premise of World.exchangeRun. Ren approved the readings in context as the general case and World as the glued case, the process and the frame being readings of one unfolding."
+        "zh": "读一个展开的都是语境中的读法，诸读法总是一个世界（Contextual.world，如 Frame.world）；World 是粘合的读法，算入其余时每个世界都是交换之律的一次运行（World.unity），World.exchangeRun 的平衡前提由此去掉。按 AI 的读法，语境中的读法是一般情形，World 是粘合的情形，过程与框架同是一个展开的读法。",
+        "en": "Whatever reads an unfolding is a reading in context, and the readings are always one world (Contextual.world, as Frame.world); World is the glued reading, and with the rest counted every world is one run of the law of exchange (World.unity), which drops the balance premise of World.exchangeRun. On an AI reading, the readings in context are the general case and World the glued case, the process and the frame being readings of one unfolding."
       }
     },
     {
@@ -269,44 +504,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unfolding.lean",
-      "detail": {
-        "zh": "律到历史有所失：DeadEnd 中律有一步而没有任何运行（DeadEnd.no_history）。",
-        "en": "Law to histories loses: in DeadEnd a law has a step and no run at all (DeadEnd.no_history)."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unfolding.lean",
-      "detail": {
-        "zh": "历史到律有所得：Splice 中历史重访起点，它所显示的律容许在前两个配置之间往返的运行，它从任何一步起都不是这段历史（Splice.spliced）。",
-        "en": "History to law gains: in Splice the history revisits its start, and the law it shows admits a run going back and forth between the first two configurations, which is the history from no step on (Splice.spliced)."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unfolding.lean",
-      "detail": {
-        "zh": "共享的动作是部分之间的关系：Fork 中先忘掉各自的动作，两个部分就能同时走不同的路（Fork.label_couples）。",
-        "en": "A shared move is a relation between parts: in Fork, with each part's move forgotten first, the two can go different ways at once (Fork.label_couples)."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unfolding.lean",
-      "detail": {
-        "zh": "水平不固定交换，交换只从一个起点固定水平：Circulation 中一次循环与没有交换留下同样的水平，动作相同而起点不同的运行处处不同（Labelled.Circulation.standings_leave_exchange、Labelled.Circulation.start_needed）。",
-        "en": "Standings do not fix the exchange, and the exchange fixes standings only from a beginning: in Circulation a circulation and no exchange leave the same standings, and runs with the same moves from different starts differ everywhere (Labelled.Circulation.standings_leave_exchange, Labelled.Circulation.start_needed)."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "共同的步序是表示的承诺，不由关系推出（见 Becoming.Sampling 与 Becoming.Tower）；动作在展开之内形成与否、由什么形成，一个形成把它的历史读作显示哪条律，都不推出；律只指确定的过程，概率没有陈述；GenerativeCore 不变，其中的过程仍以带标签的形式陈述，这里给出的是读法与桥接，不是另一个基础；Frame.world 不含流与依存，主张之间的关系没有陈述；主定理多近于定义，增量在于两个方向都证明、对应何处不是同一，以及代价；读法是 AI 的，Ren 确认了律与历史的读法并批准了语境中的读法；不含伦理谓词。",
-    "en": "The shared index of steps is a commitment of the representation and is not derived from relations (see Becoming.Sampling and Becoming.Tower); that a move is formed within the unfolding, or by what, and which law a formation takes its history to show, are not derived; a law means a determined process, and probabilities are not treated; GenerativeCore is unchanged and still states processes in labelled form, so what is given here is a reading and a bridge, not another foundation; Frame.world has no flow or web, and relations among claims are not stated; most main theorems are near-definitional, the delta being that both directions are proved, where the correspondence fails to be an identity, and its price; the readings are the AI's, Ren having confirmed the reading of law and history and approved readings in context; contains no ethical predicate."
-  },
-  "validation_scope": {
-    "zh": "2026-10-14：Becoming.Mechanism、Becoming.Unfolding、Becoming.Joint 的当前字节由合并检查器回执 20261013T221720.428753Z 绑定（通过：包 91 个模块，4983 项定理、7020 项声明审计，源声明公理报告全空；核心闭包 90 个模块从内置前导编译）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Unfolding 的 67 项定理全部空依赖，其中含 withMove_determined_iff、closedBy_runs_agree、Fork.label_couples、World.balances_iff_exchange、exchange_runs_agree、exists_law_iff、Shown.runs_of_new、Splice.spliced、DeadEnd.no_history、Frame.novel_iff_arises与 Frame.world_fixes_run；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261011T232716.311380Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §91；尚无独立审查。",
-    "en": "14 October 2026: the current bytes of Becoming.Mechanism, Becoming.Unfolding, Becoming.Joint are bound to consolidated receipt 20261013T221720.428753Z (passed: 91 package modules, 4983 theorems, 7020 declaration audits, every source declaration with an empty axiom report; the 90-module core closure compiles from the prelude). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 67 theorems of Becoming.Unfolding all have empty axiom reports, among them withMove_determined_iff, closedBy_runs_agree, Fork.label_couples, World.balances_iff_exchange, exchange_runs_agree, exists_law_iff, Shown.runs_of_new, Splice.spliced, DeadEnd.no_history, Frame.novel_iff_arises and Frame.world_fixes_run. The same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261011T232716.311380Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §91 of the integration note; there is no independent review yet."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unfolding.lean",
@@ -741,10 +938,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "从关系推出共同的步序，或说明它为何是表示的承诺；主张之间的关系作为 Frame.world 的流与依存。",
-    "en": "Deriving the shared index of steps from relations, or saying why it is a commitment of the representation; relations among claims as the flow and web of Frame.world."
-  },
   "history": [
     {
       "zh": "2026-10-12 P69：新增，按 Ren“yes, put it on the board and start”（对“is this dualistic?”的回答所附的提议）；律与历史的读法经 Ren 确认（“yes, i do agree with your reading, there are no two realities”）；见整合文档 §91。",
@@ -818,6 +1011,28 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from World.lean to Prelude.lean, total. Proof bindings (Arising.lean, Change.lean, Dependence.lean, Flow.lean, Labelled.lean, Prelude.lean, World.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Arising.lean, Change.lean, Dependence.lean, Flow.lean, Labelled.lean, World.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged; Prelude.lean: the definitions and statements stated once (Distinct, total, steps, nonzero, Copying.nth, Law.memberAt, Settling.consAct, DistinctUnder, downFrom and their laws) moved here; other statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 World.lean 到 Prelude.lean：total。证明绑定（Arising.lean、Change.lean、Dependence.lean、Flow.lean、Labelled.lean、Prelude.lean、World.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Arising.lean、Change.lean、Dependence.lean、Flow.lean、Labelled.lean、World.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变；Prelude.lean：只陈述一次的定义与陈述（Distinct、total、steps、nonzero、Copying.nth、Law.memberAt、Settling.consAct、DistinctUnder、downFrom 及其规律）移入；其他陈述不变。论断不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the statement rewritten from the home section, its reading “the gap being memory” left to the correspondence; the claim split into sixteen laws, each read against its declarations in Labelled.lean, Unfolding.lean, World.lean, Flow.lean, Arising.lean, Experiment.lean, Laws.lean, Change.lean and Frame.lean; the limitations to five does-not-show items and the shared boundaries no-evaluation, no-ethical-premise and discrete-steps, the readings' label kept in the correspondence and the near-definitional character of several laws moved to the evidence paragraph; the first hypothesis split in two to fit, the third corrected to name Becoming.Laws, where Determined is declared; three counterexamples' paths corrected to Labelled.lean, where DeadEnd, Splice and Labelled.Circulation are declared; the next step's first part, the shared index of steps, left out, the root's readings deriving it where every exchange touches a relatum (the-world-an-interleaving-builds), and its second part stated positively; the correspondence's work-board item cut; no premise, status, reference or source hash changed. Every earlier sentence is mapped in [process-and-frame-as-readings.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/process-and-frame-as-readings.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, laws, a dependency, the counterexamples, related entries, each read against the Lean it cites. A cold read of the applied record was taken in the correspondence.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述按归属节重写，其中的读法“差别是记忆”留在对应说明中；主张拆为十六条规律，各条对照 Labelled.lean、Unfolding.lean、World.lean、Flow.lean、Arising.lean、Experiment.lean、Laws.lean、Change.lean 与 Frame.lean 中的声明核读；限制改为五条“未表明”与通用边界 no-evaluation、no-ethical-premise、discrete-steps，读法的标注留在对应说明中，数条规律近于定义一点移入证据段；第一条前提为合长度拆为两条，第三条改正为 Determined 所在的 Becoming.Laws；三个反例的路径改正为 DeadEnd、Splice 与 Labelled.Circulation 所在的 Labelled.lean；下一步的前一半（共同的步序）去掉，根本章的读法已在每个交换都触及某关系项处推出它（the-world-an-interleaving-builds），后一半改为正面陈述；对应说明中的工作板条目删去；前提、状态、引用与来源哈希均未改变。每句旧文本的去向见 [process-and-frame-as-readings.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/process-and-frame-as-readings.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、规律、依赖、反例、相关条目，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及对应。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/c88d120db01e14c8/process-and-frame-as-readings.json",
+      "sha256": "c88d120db01e14c8c01144f793bc54ef8f5afc0d933cf5b1c0102cb0d1423ae8",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/c4277a671ca2bd9d/process-and-frame-as-readings.json",
+      "sha256": "c4277a671ca2bd9d7b043f3fa0108c7e3edaa50f8372c526f0e1e177f18ce619",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

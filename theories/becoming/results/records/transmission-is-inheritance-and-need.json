@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "transmission-is-inheritance-and-need",
   "title": {
     "zh": "传递作为承继加所需之界",
@@ -8,32 +8,219 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-13T12:27:01.789893+00:00",
+  "reviewed_at_utc": "2026-10-28T12:29:00+00:00",
   "statement": {
-    "zh": "传递是承继加所需之界，是开始作为条件而在之时依存怎样形成的规律。在平衡之下经世系不形成新的依存，演化的规律只在所用的那一次世系上需要它，且只需某个被支持的给予者。",
-    "en": "Transmission is inheritance with the need within a bound, a law of how dependence forms at coming to stand. Under balance descent forms no new dependence, and the evolution laws need it only at the descent they use, and there only from some supported giver."
+    "en": "Transmission is inheritance with the need within a bound, a law of how dependence forms at coming to stand. Under balance and inheritance descent forms no new dependence, and the evolution bounds need transmission only at the descent they use, and there only from some supported giver.",
+    "zh": "传递是承继加所需之界，是开始作为条件而在之时依存怎样形成的规律。在平衡与承继之下经世系不形成新的依存，演化的界只在所用的那一次世系上需要传递，且只需某个被支持的给予者。"
   },
-  "claim": {
-    "zh": "在一次世系上，传递恰是承继（后代在其第一个立足之步依存 c，则给予者在给予之步依存 c，Web.InheritsAt）加所需之界（两者都依存时，后代的所需至多多 δ，Web.NeedsWithinAt）（Web.transmits_at_iff）；对整个流，TransmitsWithin 恰是 Inherits 与 NeedsWithin（Flow.transmitsWithin_iff）。承继涵盖跨该步形成于后代的依存，与它不立足时一直持有的依存（Web.InheritsAt.split）；后代在给予之步不依存 c 时，承继恰是形成的规律：开始作为条件而在之时在它那里形成的依存，是给予者持有的（Web.inheritsAt_iff_forming），传递是这条规律加所需之界（Flow.transmitsWithin_iff_forming）。一般地，先前是否持有可判定之处，形成与持有两种情形构成承继（Web.inheritsAt_of_split、Flow.transmitsWithin_iff_split），不可判定时只构成不可反驳的承继（Web.inheritsAt_not_not）；对每次世系都要求这一点等价于排中律（split_iff_em）。在一个关系项处平衡时，开始作为条件而在者由参与该步的某者经世系而来（Flow.descends_of_comes）；在承继之下，它在该步之后的每项依存都由给予它的某者持有（Flow.inherited_from_giver、Flow.Inherits.from_giver、Flow.forms_from_giver），参与者都不依存 c 时，开始作为条件而在者在该步之后不依存 c（Flow.no_new_dependence）：传递让世系改变所需，不改变依存哪些条件。演化记录的两条界（transmitted_supported、transmitted_within）在一次世系上由那里的承继与所需之界得出（Flow.inherited_supported_at、Flow.inherited_within_at，流的形式 Flow.inherited_supported、Flow.inherited_within）；在开始作为条件而在的关系项处，只需某个被支持的给予者在 δ 之内持有该依存（Flow.TransmitsFromSome、Flow.fromSome_supported、Flow.fromSome_within），平衡之下传递给出它（Flow.TransmitsWithin.fromSome），而它严格较弱：两个给予者，一个依存池、一个不依存，给出的后代依存池；流平衡，只有活跃者给予，活动需要支持，规律成立而传递对每个 δ 都不成立（TwoGivers.twofold）。没有传递时，开始作为条件而在、在第一个立足之步被支持的后代，以自身界定自身的所需（Flow.descendant_supported_at、Flow.embodied_descendant）；传递把这一界带给开始作为条件而在时不被支持的后代，并把它移到给予之步（Drawdown.carried）。不用公理。",
-    "en": "At one descent, transmission is exactly inheritance, a dependence on c that the descendant holds at its first standing step held by the giver at the giving step (Web.InheritsAt), together with the need within δ where both hold (Web.NeedsWithinAt) (Web.transmits_at_iff); for the flow, TransmitsWithin is exactly Inherits with NeedsWithin (Flow.transmitsWithin_iff). Inheritance covers a dependence forming at the descendant across the step and one it held through the step while it stood at nothing (Web.InheritsAt.split); where the descendant held no dependence on c at the giving step, inheritance is exactly the law of forming, a dependence forming at a relatum as it comes to stand being one its giver held (Web.inheritsAt_iff_forming), and transmission is that law with the need within δ (Flow.transmitsWithin_iff_forming). In general forming and holding make inheritance where the earlier holding is decided (Web.inheritsAt_of_split, Flow.transmitsWithin_iff_split), and without that only irrefutably (Web.inheritsAt_not_not); asked of every descent, that they make it is excluded middle (split_iff_em). With balance at a relatum coming to stand, it descends from something taking part in the step (Flow.descends_of_comes); under inheritance each dependence it holds after the step was held by something giving to it (Flow.inherited_from_giver, Flow.Inherits.from_giver, Flow.forms_from_giver), and where nothing taking part depends on c, nothing coming to stand depends on c after the step (Flow.no_new_dependence): transmission lets descent vary a need, never which conditions are depended on. The two bounds of evolution-on-descent (transmitted_supported, transmitted_within) hold at one descent from inheritance and the need within δ there (Flow.inherited_supported_at, Flow.inherited_within_at; for the flow Flow.inherited_supported, Flow.inherited_within); at a relatum coming to stand they need only that some supported giver held the dependence within δ (Flow.TransmitsFromSome, Flow.fromSome_supported, Flow.fromSome_within), which transmission gives under balance (Flow.TransmitsWithin.fromSome) and which is strictly weaker: a child given its standing by two givers, one depending on the pool and one not, depends on the pool; the flow balances, only active relata give, activity needs support, the law holds and transmission fails for every δ (TwoGivers.twofold). Without transmission, a descendant supported at its first standing step bounds its own need (Flow.descendant_supported_at, Flow.embodied_descendant); transmission carries the bound to a descendant not supported as it comes to stand and moves it to the giving step (Drawdown.carried). No axiom."
-  },
+  "laws": [
+    {
+      "en": "At a descent across the step from t, a dependence on c is inherited where a dependence on c the descendant holds after the step was held by the giver at t, and the need is within δ where, both depending on c, the descendant needs it at most δ more than the giver did. At one descent, transmission within δ is exactly inheritance with the need within δ.",
+      "zh": "在自 t 起一步的世系上：后代在该步之后持有的对 c 的依存，给予者在 t 时已持有，即为承继；两者都依存 c 时，后代的所需至多比给予者多 δ，即所需在 δ 之内。在一次世系上，δ 之内的传递恰是承继加所需在 δ 之内。",
+      "declarations": [
+        "Becoming.Web.InheritsAt",
+        "Becoming.Web.NeedsWithinAt",
+        "Becoming.Web.transmits_at_iff"
+      ]
+    },
+    {
+      "en": "A flow transmits a dependence on c within δ where each relatum descending across a step and depending on c after it has every giver depending on c at the giving step, needing c at most δ more than that giver. This holds exactly when every descent of the flow inherits the dependence on c and has the need within δ.",
+      "zh": "流在 δ 之内传递对 c 的依存，是指每个跨一步经世系而来、在该步后依存 c 的关系项，其每个给予者在给予之步都依存 c，且所需至多多 δ。这恰当流的每次世系都承继对 c 的依存且所需在 δ 之内时成立。",
+      "declarations": [
+        "Becoming.Flow.TransmitsWithin",
+        "Becoming.Flow.Inherits",
+        "Becoming.Flow.NeedsWithin",
+        "Becoming.Flow.transmitsWithin_iff"
+      ]
+    },
+    {
+      "en": "Inheritance covers a dependence forming at the descendant across the step and one it held at the giving step and after it. Where the descendant did not depend on c at the giving step, inheritance is exactly the law of forming: a dependence on c forming at it was held by the giver. Where no descendant did, the flow transmits within δ exactly when that law and the need within δ hold at every descent.",
+      "zh": "承继涵盖后代跨该步形成的依存，以及它在给予之步及其后都持有的依存。后代在给予之步不依存 c 时，承继恰是形成的规律：在它那里形成的对 c 的依存是给予者持有的。没有后代在给予之步依存 c 时，流在 δ 之内传递，恰当每次世系上这条规律与所需在 δ 之内都成立。",
+      "declarations": [
+        "Becoming.Web.InheritsAt.split",
+        "Becoming.Web.inheritsAt_iff_forming",
+        "Becoming.Flow.transmitsWithin_iff_forming"
+      ]
+    },
+    {
+      "en": "Where it is decided whether the descendant depended on c at the giving step, the laws of forming and of holding (a dependence held at the giving step and after it was the giver's) make inheritance; decided at every step and relatum, the flow transmits within δ exactly when both laws and the need within δ hold at every descent.",
+      "zh": "后代在给予之步是否依存 c 可判定时，形成的规律与持有的规律（在给予之步及其后都持有的依存是给予者的）构成承继；在每一步、每个关系项处都可判定时，流在 δ 之内传递，恰当每次世系上两条规律与所需在 δ 之内都成立。",
+      "declarations": [
+        "Becoming.Web.inheritsAt_of_split",
+        "Becoming.Flow.transmitsWithin_iff_split"
+      ]
+    },
+    {
+      "en": "Without deciding whether the descendant depended on c at the giving step, the laws of forming and of holding make the giver's dependence only irrefutable, where the descendant depends on c after the step.",
+      "zh": "不判定后代在给予之步是否依存 c 时，在后代于该步后依存 c 处，形成与持有两条规律只使给予者的依存不可反驳。",
+      "declarations": [
+        "Becoming.Web.inheritsAt_not_not"
+      ]
+    },
+    {
+      "en": "With excluded middle as a hypothesis, the laws of forming and holding make inheritance in every web. That they make it at every descent of every flow on Boolean relata is equivalent to excluded middle, the converse shown on a two-relatum witness built from any proposition, its giver giving the descendant its standing across the first step.",
+      "zh": "以排中律为假设，形成与持有两条规律在每个网中构成承继。它们在布尔关系项上每个流的每次世系都构成承继，等价于排中律；逆向由一个以任一命题构造的两关系项见证给出，其给予者在第一步给予后代立足。",
+      "declarations": [
+        "Becoming.split_of_em",
+        "Becoming.split_iff_em",
+        "Becoming.Split.web",
+        "Becoming.Split.toDescendant",
+        "Becoming.Split.flow",
+        "Becoming.Split.descends"
+      ]
+    },
+    {
+      "en": "A relatum that comes to stand across a step, with balance at it across that step, descends from something taking part in the step. With that balance and inheritance of c at its descents, each dependence on c it holds after the step, a forming one included, was held by something giving to it; in a balanced flow inheriting c, this holds at every relatum coming to stand.",
+      "zh": "某关系项跨一步平衡时，开始作为条件而在的它由参与该步的某者经世系而来。在这一平衡与其各次世系上 c 的承继之下，它在该步之后对 c 的每项依存（形成的也在内）都由给予它的某者持有；在承继 c 的平衡流中，每个开始作为条件而在的关系项都如此。",
+      "declarations": [
+        "Becoming.Flow.descends_of_comes",
+        "Becoming.Flow.inherited_from_giver",
+        "Becoming.Flow.forms_from_giver",
+        "Becoming.Flow.Inherits.from_giver"
+      ]
+    },
+    {
+      "en": "Descent forms no new dependence: with balance at a relatum coming to stand across a step and inheritance of c at its descents, where nothing taking part in the step depends on c, the relatum does not depend on c after the step.",
+      "zh": "世系不形成新的依存：开始作为条件而在的关系项跨一步平衡、其各次世系承继 c 时，若参与该步者都不依存 c，它在该步之后不依存 c。",
+      "declarations": [
+        "Becoming.Flow.no_new_dependence"
+      ]
+    },
+    {
+      "en": "At one descent, with inheritance and the need within δ there and the giver supported at the giving step, a descendant depending on c after the step needs at most c's level at the giving step plus δ. With balance at c across each of the n steps from S and such a descent across the step from S + n, its need with all taken from c over those steps is at most c's level at S with all given to c over them, plus δ.",
+      "zh": "在一次世系上：有承继与所需在 δ 之内、给予者在给予之步被支持时，该步后依存 c 的后代所需至多为给予之步 c 的水平加 δ。c 在自 S 起的 n 步中每步都平衡、且这样的世系跨自 S+n 起的一步时，其所需加这 n 步中从 c 取走的全部，至多为 c 在 S 的水平加这 n 步中给予 c 的全部再加 δ。",
+      "declarations": [
+        "Becoming.Flow.inherited_supported_at",
+        "Becoming.Flow.inherited_within_at"
+      ]
+    },
+    {
+      "en": "For the flow, where only active relata give and activity needs support, inheritance of c and the need within δ bound a descendant's need by c's level at the giving step plus δ, and, the flow balanced, its need with c's uptake since an earlier step by c's level then with its replenishment since, plus δ: the two bounds that transmission within δ gives.",
+      "zh": "对整个流：只有活跃者给予且活动需要支持时，c 的承继与所需在 δ 之内把后代的所需限于给予之步 c 的水平加 δ；流平衡时，把其所需加此前某步以来 c 的取用，限于 c 在该步的水平加此后的补给再加 δ：即 δ 之内的传递所给的两条界。",
+      "declarations": [
+        "Becoming.Flow.inherited_supported",
+        "Becoming.Flow.inherited_within",
+        "Becoming.Flow.transmitted_supported",
+        "Becoming.Flow.transmitted_within"
+      ]
+    },
+    {
+      "en": "Transmission from some giver within δ: each dependence on c a relatum holds as it comes to stand was held by some relatum giving to it, which it needs at most δ more. Where only active relata give and activity needs support, it gives the same two bounds at every relatum coming to stand, the second in a balanced flow; in a balanced flow, transmission within δ gives it.",
+      "zh": "某个给予者之内的传递：关系项开始作为条件而在时持有的对 c 的每项依存，都由给予它的某个关系项持有，且所需至多多 δ。只有活跃者给予、活动需要支持时，它在每个开始作为条件而在的关系项处给出同样两条界，后一条在平衡流中；在平衡流中，δ 之内的传递给出它。",
+      "declarations": [
+        "Becoming.Flow.TransmitsFromSome",
+        "Becoming.Flow.fromSome_supported",
+        "Becoming.Flow.fromSome_within",
+        "Becoming.Flow.TransmitsWithin.fromSome"
+      ]
+    },
+    {
+      "en": "In a witness, transmission from some giver is strictly weaker: in a balanced flow where only active relata give and activity needs support, a child given its standing by two givers, the first depending on the pool and the second not, depends on the pool; transmission from some giver holds with δ = 0, bounding the child's need by the pool's level at the giving step, while transmission within δ fails for every δ.",
+      "zh": "在一个见证中，某个给予者之内的传递严格较弱：在平衡、只有活跃者给予且活动需要支持的流中，由两个给予者给予立足的孩子，第一个依存池而第二个不依存，孩子依存池；某个给予者之内的传递以 δ = 0 成立，把孩子的所需限于给予之步池的水平，而对每个 δ，δ 之内的传递都不成立。",
+      "declarations": [
+        "Becoming.TwoGivers.twofold",
+        "Becoming.TwoGivers.Relatum",
+        "Becoming.TwoGivers.web",
+        "Becoming.TwoGivers.toChild",
+        "Becoming.TwoGivers.flow",
+        "Becoming.TwoGivers.balances",
+        "Becoming.TwoGivers.acting",
+        "Becoming.TwoGivers.dependent",
+        "Becoming.TwoGivers.comes_child",
+        "Becoming.TwoGivers.descends_first",
+        "Becoming.TwoGivers.descends_second"
+      ]
+    },
+    {
+      "en": "Without transmission, a relatum supported at its first standing step, with balance at c across the giving step, needs, with what was taken from c across that step, at most c's level at that step with what was given to c; in a balanced flow where activity needs support, every embodied descendant meets this bound.",
+      "zh": "没有传递时：在第一个立足之步被支持、c 跨给予之步平衡的关系项，其所需加跨该步从 c 取走者，至多为该步 c 的水平加给予 c 者；在活动需要支持的平衡流中，每个被体现的后代都满足此界。",
+      "declarations": [
+        "Becoming.Flow.descendant_supported_at",
+        "Becoming.Flow.embodied_descendant"
+      ]
+    },
+    {
+      "en": "Where the descendant is supported at its first standing step and c stands there at no more than B, the need is within B at the descent: where both depend on c, the descendant needs c at most B more than the giver.",
+      "zh": "后代在第一个立足之步被支持、c 在那里的水平不超过 B 时，该世系上所需在 B 之内：两者都依存 c 时，后代所需至多比给予者多 B。",
+      "declarations": [
+        "Becoming.Web.needsWithinAt_of_supported"
+      ]
+    },
+    {
+      "en": "Transmission carries the bound to a descendant not supported as it comes to stand: in the drawdown witness, the descendant with the parent's need is not supported at its first standing step, its need exceeding the pool's level there, while the pool's level at the giving step bounds it.",
+      "zh": "传递把界带到开始而在时不被支持的后代：在 Drawdown 见证中，具有亲代所需的后代在其第一个立足之步不被支持，其所需超过那时池的水平，而给予之步池的水平限住它。",
+      "declarations": [
+        "Becoming.Drawdown.carried"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "承继与形成的等价需要后代在给予之步不依存 c（bare）；一般的分解需要该步的持有可判定，对每次世系要求它等价于排中律。",
       "en": "The equivalence of inheritance with forming needs that the descendant held no dependence on c at the giving step (bare); the general split needs that holding decided, and asked of every descent it is excluded middle."
     },
     {
-      "zh": "不形成新依存与经世系而来的定理需要在开始作为条件而在的关系项处平衡；演化的界需要活动只来自活跃者（Acting）与活动需要支持（Dependent），如 evolution-on-descent。",
-      "en": "No new dependence and descent from a participant need balance at the relatum coming to stand; the evolution bounds need only active relata giving (Acting) and activity needing support (Dependent), as in evolution-on-descent."
+      "zh": "不形成新依存与经世系而来的定理需要在开始作为条件而在的关系项处平衡；演化的界需要活动只来自活跃者（Acting）与活动需要支持（Dependent），跨一段的界另需平衡，如 evolution-on-descent。",
+      "en": "No new dependence and descent from a participant need balance at the relatum coming to stand; the evolution bounds need only active relata giving (Acting) and activity needing support (Dependent), and the bounds over a stretch balance as well, as in evolution-on-descent."
     },
     {
       "zh": "TwoGivers 与 Drawdown.carried 是见证，各在一个给定的小世界上陈述。",
       "en": "TwoGivers and Drawdown.carried are witnesses, each stated on one given small world."
+    },
+    {
+      "en": "Steps are discrete and indexed by natural numbers; levels, needs and the amounts given and taken are natural numbers.",
+      "zh": "步是离散的、以自然数为索引；水平、所需与给予和取走的量都是自然数。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Needs are free numbers and δ a coarse bound on levels; no reading ties them to the amounts taken and given.",
+      "zh": "所需是自由的数，δ 是关于水平的粗界；没有读法把它们与取走和给予的量联系起来。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "The law of forming is shown to be exactly inheritance only where the descendant held no dependence on c before; in the core's witnesses Drawdown, Slack and hatch the descendant's dependence is held before it stands.",
+      "zh": "形成的规律只在后代先前不依存 c 处被证明恰是承继；在核心的见证 Drawdown、Slack 与 hatch 中，后代的依存在它立足之前已持有。",
+      "kind": "scope"
+    },
+    {
+      "en": "No census law, on how many relata come to be and cease, is stated for transmission.",
+      "zh": "没有陈述关于传递的普查规律（多少关系项生起与消失）。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Dependences formed newly by descent, as young come to depend on their parents, lie outside transmission.",
+      "zh": "经世系新形成的依存（如幼者依存其亲代）在传递之外。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
+      "detail": {
+        "zh": "TwoGivers：某个给予者的形式成立而传递对每个 δ 都不成立。",
+        "en": "TwoGivers: the some-giver form holds while transmission fails for every δ."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "decidability",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of Becoming.Transmission are bound to core receipt becoming-checks/20261022T145016.701975Z and Becoming.Evolution to becoming-checks/20261022T064310.304329Z; every cited declaration has an empty axiom report, and the checker verifies that the core compiles from Lean's prelude alone. The author's counterreview is in the integration note; there is no independent review.",
+    "zh": "Lean 4.29.1 合并检查器实查：Becoming.Transmission 的当前字节绑定核心回执 becoming-checks/20261022T145016.701975Z，Becoming.Evolution 绑定 becoming-checks/20261022T064310.304329Z；所引声明的公理报告均为空，检查器并核对核心只用 Lean 前导即可编译。作者反审见整合文档；无独立审查。"
+  },
+  "next_delta": {
+    "en": "Tie needs to the amounts taken and given, so that the bound δ on how far a descendant's need exceeds its giver's is read off what the flow takes and gives rather than supplied.",
+    "zh": "把所需与取走和给予的量联系起来，使后代所需超出给予者的界 δ 从流所取与所给中读出，而不是给定。"
+  },
   "correspondence": {
-    "zh": "P84（工作板），按 Ren 2026-10-12 的“move towards 100%”，回答章 §8 的进一步证明“由依存的形成推出传递（TransmitsWithin 现为前提）”与 evolution-on-descent 的 next_delta。读法（AI 的，依 Ren 的交托采用）：传递不是关于整体的额外假设，而是一次世系上依存怎样形成的规律；它让世系改变所需而不新增所依存者，所以后代在世系中新形成对父母的依存（幼体依存亲代）不在它之内，是对应问题。世界的 Transmitting（每个给予者）依 Ren 的交托不放宽为 TransmitsFromSome（某个被支持的给予者），后者作为较弱的规律已陈述（D31）。见整合文档 §105。",
-    "en": "P84 (work board), following Ren's ‘move towards 100%’ of 12 October 2026, answering the chapter's §8 further proof ‘deriving transmission from how dependence forms (TransmitsWithin is now a premise)’ and the next_delta of evolution-on-descent. Reading (the AI's, adopted on Ren's delegation): transmission is not an extra assumption about the whole but a law of how dependence forms at one descent; it lets descent vary a need without adding what is depended on, so young coming to depend on their parents through descent is outside it, a matter of correspondence. On Ren's delegation the world's Transmitting (every giver) is not weakened to TransmitsFromSome (some supported giver), which is stated as the weaker law where it binds (D31). See the integration document §105."
+    "en": "Provenance: Ren's ‘move towards 100%’ of 12 October 2026 and the open step of deriving transmission, until then a premise, from how dependence forms. Reading (an AI reading, D31, adopted on Ren's delegation): transmission is not an extra assumption about the whole but a law of how dependence forms at one descent; it lets descent vary a need without adding what is depended on, so young coming to depend on their parents through descent is outside it, a matter of correspondence. The world's Transmitting (every giver) is kept rather than weakened to TransmitsFromSome (some supported giver), which is stated as the weaker law where it binds (D31, Ren's delegation the provenance). The names (InheritsAt, NeedsWithinAt, TransmitsFromSome and others) are an AI wording. See the integration document §105.",
+    "zh": "来源：Ren 于 2026 年 10 月 12 日的 ‘move towards 100%’，以及把此前作为前提的传递从依存如何形成中推出这一未竟步骤。读法（AI 的读法，D31，依 Ren 的授权采用）：传递不是关于整体的额外假定，而是依存在一次世系上怎样形成的规律；它让世系改变所需，不增加所依存者，所以幼者经世系而依存亲代在它之外，属于对应问题。世界的 Transmitting（每个给予者）保留，不弱化为 TransmitsFromSome（某个被支持的给予者），后者作为在其起约束处的较弱规律陈述（D31，以 Ren 的授权为来源）。名称（InheritsAt、NeedsWithinAt、TransmitsFromSome 等）是 AI 的表述。见整合文档第 105 节。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
   "aliases": [
@@ -103,25 +290,22 @@
         "zh": "传递是八个前提之一；TransmitsFromSome 是可能的放宽。",
         "en": "Transmission is one of the eight premises; TransmitsFromSome is a possible weakening."
       }
-    }
-  ],
-  "counterexamples": [
+    },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
+      "id": "dependence-formed-from-drawing",
       "detail": {
-        "zh": "TwoGivers：某个给予者的形式成立而传递对每个 δ 都不成立。",
-        "en": "TwoGivers: the some-giver form holds while transmission fails for every δ."
+        "en": "States where a dependence newly formed by descent comes from: a giver's drawing become its descendant's dependence.",
+        "zh": "陈述经世系新形成的依存从何而来：给予者的取用成为后代的依存。"
+      }
+    },
+    {
+      "id": "need-drift-along-a-lineage",
+      "detail": {
+        "en": "Accumulates the need within δ over many descents along a lineage.",
+        "zh": "沿一个世系把所需在 δ 之内的界累积到多次世系。"
       }
     }
   ],
-  "limitations": {
-    "zh": "只对离散步、自然数的量陈述；所需之界 δ 是对水平的粗界，所需是自由的数，没有读法把它们与所取所给的量联系起来；形成的规律只在后代先前不依存之处恰是承继，核心的见证（Drawdown、Slack、hatch）中后代的依存在立足前就已持有；不陈述普查的规律；世系中新形成的依存（幼体依存亲代）不在传递之内；名称是 AI 的表述，按 Ren 的命名规则采用（InheritsAt、NeedsWithinAt、TransmitsFromSome 等）。",
-    "en": "Stated for discrete steps and natural-number amounts; the need bound δ is a coarse bound on levels, needs are free numbers, and no reading ties them to the amounts taken and given; the law of forming is exactly inheritance only where the descendant held no dependence before, while in the core's witnesses (Drawdown, Slack, hatch) the descendant's dependence is held before it stands; no census law is stated; dependences formed newly by descent (young depending on their parents) are outside transmission; the names are the AI's wording, adopted under Ren's naming rule (InheritsAt, NeedsWithinAt, TransmitsFromSome and others)."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Transmission 的 64 项定理全部空依赖，其中含 Web.InheritsAt、Web.NeedsWithinAt、Web.transmits_at_iff、Web.InheritsAt.split、Web.inheritsAt_iff_forming、Web.inheritsAt_of_split、Web.inheritsAt_not_not、split_iff_em、Flow.Inherits、Flow.NeedsWithin、Flow.transmitsWithin_iff、Flow.transmitsWithin_iff_forming、Flow.transmitsWithin_iff_split、Flow.descends_of_comes、Flow.no_new_dependence、Flow.inherited_supported_at、Flow.inherited_within_at、Flow.TransmitsFromSome、Flow.fromSome_supported、Flow.TransmitsWithin.fromSome、TwoGivers.twofold与 Drawdown.carried；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §105；尚无独立审查。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 64 theorems of Becoming.Transmission all have empty axiom reports, among them Web.InheritsAt, Web.NeedsWithinAt, Web.transmits_at_iff, Web.InheritsAt.split, Web.inheritsAt_iff_forming, Web.inheritsAt_of_split, Web.inheritsAt_not_not, split_iff_em, Flow.Inherits, Flow.NeedsWithin, Flow.transmitsWithin_iff, Flow.transmitsWithin_iff_forming, Flow.transmitsWithin_iff_split, Flow.descends_of_comes, Flow.no_new_dependence, Flow.inherited_supported_at, Flow.inherited_within_at, Flow.TransmitsFromSome, Flow.fromSome_supported, Flow.TransmitsWithin.fromSome, TwoGivers.twofold and Drawdown.carried. The same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §105 of the integration note; there is no independent review yet."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
@@ -272,10 +456,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "所需与所取所给的量相联系的读法；世系中新形成依存的规律；多步的累积。",
-    "en": "A reading tying needs to the amounts taken and given; a law of dependences newly formed by descent; accumulation over many steps."
-  },
   "history": [
     {
       "zh": "2026-10-13：接续并整合 P84 的现存证明包；见整合文档 §105。",
@@ -338,6 +518,28 @@
     {
       "en": "20 October 2026, EV4 and EV5 (selection within and among groups; among groups by ending): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by EV4's and EV5's additions: in 2.4 a bullet for each of Becoming.SelectionLevels and Becoming.GroupEnding and the record list; two rows of the record table; 8.1 item 9; and section 9's receipt and counts. Read before re-pointing. The claim is unchanged.",
       "zh": "2026年10月20日，EV4 与 EV5（组内与组间选择；经由终止的组间选择）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只因 EV4 与 EV5 的增补而改动：2.4 的 Becoming.SelectionLevels 与 Becoming.GroupEnding 各一条与记录列表；记录表的两行；8.1 第 9 项；以及第 9 节的回执与计数。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement kept, \"under balance\" narrowed to \"under balance and inheritance\" as no_new_dependence takes both, and \"the evolution laws need it\" to \"the evolution bounds need transmission\"; the claim split into 15 laws, each read against its declarations in Becoming.Transmission and Becoming.Evolution, with the conditions the Lean takes written in (bare, the decision of holding, Boolean relata for split_iff_em, balance at the relatum, a supported giver, Acting and Dependent); needsWithinAt_of_supported states support at the first standing step only, as the Lean takes it (its docstring says \"active and supported\"); the witnesses TwoGivers and Drawdown.carried each a law; the limitations became four does-not-show items, the standard boundaries no-ethical-premise, no-evaluation, discrete-steps, decidability and names-provisional, and one added hypothesis (natural-number steps and amounts); the next step's parts that other records complete moved to two related entries (dependence-formed-from-drawing, need-drift-along-a-lineage); the correspondence lost its process markers; no premise's content, status, reference, proof binding or source hash changed. Every earlier sentence is mapped in [transmission-is-inheritance-and-need.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/transmission-is-inheritance-and-need.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, hypotheses, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述保留，“在平衡之下”收窄为“在平衡与承继之下”（no_new_dependence 两者都取），“演化的规律需要它”改为“演化的界需要传递”；主张拆为 15 条规律，各条对照 Becoming.Transmission 与 Becoming.Evolution 中的声明核读，Lean 所取的条件都写入（bare、持有的判定、split_iff_em 的布尔关系项、关系项处的平衡、被支持的给予者、Acting 与 Dependent）；needsWithinAt_of_supported 按 Lean 所取只写第一个立足之步的被支持（其文档字符串说“活跃且被支持”）；见证 TwoGivers 与 Drawdown.carried 各成一条规律；限制改为四条“未表明”、通用边界 no-ethical-premise、no-evaluation、discrete-steps、decidability、names-provisional，并加一条前提（自然数的步与量）；下一步中由其他记录完成的部分移入两个相关条目（dependence-formed-from-drawing、need-drift-along-a-lineage）；对应中去掉过程标记；前提、状态、引用、证明绑定与来源哈希均未改变。每句旧文本的去向见 [transmission-is-inheritance-and-need.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/transmission-is-inheritance-and-need.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、前提，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/1aba47584c21bd51/transmission-is-inheritance-and-need.json",
+      "sha256": "1aba47584c21bd51f5a837144eb84134edb294fdd8682c5f58ae9390aedf2b59",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/44a96bac858f7536/transmission-is-inheritance-and-need.json",
+      "sha256": "44a96bac858f75362851f37d1aed4839fb8ea1616d2d2e6b71199c5f06de5857",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

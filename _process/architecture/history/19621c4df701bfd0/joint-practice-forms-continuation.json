@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "id": "joint-practice-forms-continuation",
+  "title": {
+    "zh": "共同实践形成后续参与与接续",
+    "en": "Joint practice forms further participation and continuation"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F10",
+  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "statement": {
+    "en": "A practice round of attempt, response, revision and tested retry completes exactly when the worker is present and so is a rostered reviewer, not the worker, whose recorded method answers as the context does; it then only records the review, installs that method in the worker and completes the trial.",
+    "zh": "尝试、回应、修订与经检验之重试的一轮实践完成，恰当工作者在场、另一在场之在册审查者所记之做法应答当前处境；完成后记下审查、把该做法装入工作者、完成试验，别无改变。"
+  },
+  "claim": {
+    "zh": "实践机器是一条部分律：它的轨迹恰是其完成的运行。门控改变之律的实例：只有修订改变记录的做法，只有组织采纳改变规则，所以每段不含它们的进程保持两者。一轮实践，对每个状态：审查者与工作者的一轮（尝试、回应、修订、经检验的重试）完成，恰当工作者在场、审查者是在场的在册者且不是工作者、审查者所记的做法应答当前处境；完成后记下审查、把处境的做法装入工作者、完成试验，别无改变。所以工作者此后已受训，受训的审查者无需再检，受训沿每段不含修订、回到原处境的进程保持。完整历史的三轮是实例；步定义是该机器自身的，其间的接纳与交接在该历史上检查。在明示二方法任务中，实际尝试与回应形成做法修订；成功重试产生既有程序所需审查关系，授权接纳后的参与者可回应下一次实践，并在最初回应者离开后继续形成新的参与关系。",
+    "en": "The practice machine is a partial law: its traces are exactly its completed runs. Instances of the gated-change law: only revision changes the recorded methods and only an organizational adoption changes the rule, so every course without them keeps both. A practice round, for every state: the round of attempt, response, revision and tested retry by a reviewer and a worker completes exactly when the worker is present and the reviewer is a present roster member other than the worker whose recorded method answers as the current context does; it then records the review, installs the context’s method in the worker, completes the trial and changes nothing else. So the worker is then trained, a trained reviewer needs no further check, and training is kept along every course without revision that returns to the context. The three rounds of the complete history are instances; the step definitions are the machine’s own, and the enrollments and handoff between the rounds are checked on that history. Within the declared two-method task, actual attempts and responses form a revised procedure. A successful retry produces the review relation consumed by the existing admission process; admitted participation enables later response and formation of further participation after the initial reviewer leaves."
+  },
+  "hypotheses": [
+    {
+      "zh": "二方法任务、当前检验关系、推断操作、正确种子做法与一个资格给定。",
+      "en": "The two-method task, current test relation, inference operation, correct seed configuration and one mandate are supplied."
+    },
+    {
+      "zh": "记录、通信、执行、可用参与者、具体次序、遵守程序及固定较高授权条件给定；交接不自动删除登记席位。",
+      "en": "Records, communication, execution, available participants, event order, compliance and fixed higher authorization are supplied; handoff does not automatically delete recorded offices."
+    }
+  ],
+  "correspondence": {
+    "zh": "同一状态历史中的尝试、回应、修订、检验及认可关系分化；配置是局部可执行做法，不能当成人类理解的完整模型。原始群体学习与换人研究仅为有限经验根据，并非该历史的实证复现。 修订同时读取先前实际结果和回应，核对后保留或改变做法；二方法内的等价性已查。",
+    "en": "Attempt, response, revision, testing and recognition differentiate within one state history. Configuration is a local executable procedure, not a full model of human understanding. Primary group-learning and turnover studies provide bounded empirical motivation, not reproduction of this exact history. Revision reads the earlier actual result together with the response, retaining or changing the procedure after comparison; equivalence within the two-method family is checked."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+  "aliases": [
+    "JointPracticeContinuation.complete_history_is_one_trace",
+    "JointPracticeContinuation.retry_produces_existing_review",
+    "Becoming.MachineInstances.practice_trace_iff_run",
+    "Becoming.MachineInstances.methods_kept",
+    "Becoming.MachineInstances.methods_inherited",
+    "Becoming.MachineInstances.practice_rule_kept",
+    "Becoming.MachineInstances.practice_rule_inherited",
+    "Becoming.MachineInstances.complete_history_instance",
+    "Becoming.MachineInstances.round_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "organizational-rule-inheritance",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "retry_produces_existing_review 接入原 review 操作；enrollment_consumes_review 实际使用 admitted_requires_review，交接及规则修订直接使用原 step。",
+        "en": "retry_produces_existing_review supplies the exact prior review operation; enrollment_consumes_review uses admitted_requires_review, and handoff/rule revision directly use the original step."
+      },
+      "interface": {
+        "output": {
+          "zh": "实际成功重试产生的既有审查事件及原授权程序形成的资格。",
+          "en": "Existing review event produced by an actual successful retry, and the mandate formed by the original authorization process."
+        },
+        "input": {
+          "zh": "既有接纳程序所读的审查关系，以及后续回应所需资格与实际参与。",
+          "en": "Review relation read by the existing admission process, then mandate and actual participation needed by later response."
+        },
+        "conditions": {
+          "zh": "回应匹配当前检验关系、实际修订与重试、继续参与、原治理门槛；未把操作正确当作自动授权。",
+          "en": "Response matches the current test relation; actual revision and retry, continuing participation and the original governance threshold; correct execution does not automatically confer authority."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/JointPracticeContinuation.lean"
+      }
+    }
+  ],
+  "related": [],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/JointPracticeContinuation.lean",
+      "detail": {
+        "zh": "无回应、未修订、过早离开、处境改变和未检验便申请接纳均有失败；局部操作成功时，更高接纳条件仍可能失败。",
+        "en": "Missing response or revision, early departure, changed context and untested admission fail; local operation can succeed while higher admission conditions fail."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "仅闭合实际实践形成后续参与的一段连接；未推出人员到来、一般认知、任务及检验关系的形成、无限自维持或比较优越性。",
+    "en": "Closes one enacted-practice-to-further-participation connection, not arrival of people, general cognition, formation of tasks/test relations, indefinite self-maintenance or comparative superiority."
+  },
+  "validation_scope": {
+    "zh": "22项新定理声明／51项新声明审计；81项继承审计独立分列，实际三模块闭包共132项。作者反审与原始摘要阅读另列，无独立agent验收。",
+    "en": "22 new theorem declarations / 51 new declaration audits, separately from 81 inherited audits; 132 in the actual three-module closure. Author counterreview and primary-abstract readings are separate; no independent-agent acceptance."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/JointPracticeContinuation.lean",
+      "role": "proof",
+      "sha256": "839ebe73511b486c72b60926c4bab80ba4b6738d98d0cb141c06ac76c8b6df42",
+      "declarations": [
+        "JointPracticeContinuation.infer_recovers_method",
+        "JointPracticeContinuation.response_identifies_current_method",
+        "JointPracticeContinuation.revision_installs_inferred_method",
+        "JointPracticeContinuation.retry_produces_existing_review",
+        "JointPracticeContinuation.enrollment_consumes_review",
+        "JointPracticeContinuation.complete_history_is_one_trace",
+        "JointPracticeContinuation.operation_can_continue_while_admission_fails",
+        "JointPracticeContinuation.result_revision_eq_inference"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+      "role": "proof",
+      "sha256": "83c01ea3684e6005ad7c112409dabf345000871524b321efd9f738b94b8c7925",
+      "declarations": [
+        "Becoming.MachineInstances.revises",
+        "Becoming.MachineInstances.adoptsRule",
+        "Becoming.MachineInstances.practice_process_eq",
+        "Becoming.MachineInstances.practice_run_eq",
+        "Becoming.MachineInstances.practice_trace_iff_run",
+        "Becoming.MachineInstances.methods_kept",
+        "Becoming.MachineInstances.methods_inherited",
+        "Becoming.MachineInstances.practice_rule_kept",
+        "Becoming.MachineInstances.practice_rule_inherited",
+        "Becoming.MachineInstances.complete_history_instance",
+        "Becoming.MachineInstances.afterRound",
+        "Becoming.MachineInstances.round_iff",
+        "Becoming.MachineInstances.round_trains",
+        "Becoming.MachineInstances.trained_round_iff",
+        "Becoming.MachineInstances.trained_along",
+        "Becoming.MachineInstances.complete_history_rounds"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/joint-practice-continuation-verification/verification.json",
+      "role": "receipt",
+      "sha256": "149c00a5513071a855128e57f060536db50183d66985efb7561472a07951a299",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/joint-practice-continuation-verification/README.md",
+      "role": "provenance",
+      "sha256": "8d734b6dbab0a741edb51ebd57f8f46858605241ad7d06e7f5384c4ccb2c5788",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EVOLUTIONARY-ORGANIZATION-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "3c8038d56220f1d1e748bd988fd4e2839e99de9a3e53cae057dce9500340ff4d",
+      "declarations": []
+    },
+    {
+      "path": "sources/evolutionary-selection/organizational-inheritance/SYSTEMS-READING.md",
+      "role": "provenance",
+      "sha256": "693686b4ae18f564ffa6c760703dfa91ce6b406ada4d1d7662104788acdb52cd",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json",
+      "role": "receipt",
+      "sha256": "9529958e4e9e29d9acd9ebff1dbe6cc734739f80577a0c75b623f85840ea2e79",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json",
+      "role": "receipt",
+      "sha256": "6d30faffd5899d5180f3a2e230035c0f87ce266d959330b61aebed22411a173b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
+      "role": "receipt",
+      "sha256": "72cf0f96994a75c732cea93c92c4dbdf96cc4ba943d538de31ab2bcfd79cc9fb",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/JointPracticeContinuation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/joint-practice-continuation-verification/verification.json",
+      "sha256_pointer": "/source_sha256/JointPracticeContinuation.lean",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
+      "sha256_pointer": "/source_sha256/MachineInstances",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "解释共同活动怎样改变任务、当前检验关系或参与形成方式本身，并保留替代接续与真实失败。",
+    "en": "Explain how joint activity changes the task, current testing relation or means of forming participation themselves, preserving alternative continuations and real failure."
+  },
+  "history": [
+    {
+      "zh": "2026年10月9日：依照systems/subsystems与结构动态语言纠正，接通实际重试、既有认可程序、后续回应及接续；一个新组合成果，非定理数量对应的多个发现。",
+      "en": "9 October 2026: under the systems/subsystems and structural-language corrections, connects actual retry, the existing recognition procedure, later response and succession. One new composition result, not one discovery per theorem declaration."
+    },
+    {
+      "zh": "2026-10-14：按旧记录一般律审计，主张改为一般律先行：实践机器的轨迹恰是其运行（Becoming.Assurance 的部分律），只有修订改变做法、只有采纳改变规则（Becoming.Gated），作为外围 MachineInstances 的实例；完整历史是其一条轨迹。scratch_build 实编，声明只用标准公理；回执由落地运行与 check_machine_instances.py 绑定。原定理、回执与反例不变。",
+      "en": "2026-10-14: under the general-law audit of older records, the claim now states the law first: the practice machine's traces are exactly its runs (Becoming.Assurance's partial laws), and only revision changes the methods and only adoption the rule (Becoming.Gated), as instances in the periphery MachineInstances; the complete history is one of its traces. Built with scratch_build, standard axioms only; the landing run and check_machine_instances.py bind the receipt. The original theorems, receipt and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-14，开放问题计划（研究第117节）：主张加入一轮实践的律：外围 MachineInstances 的 round_iff 对每个状态成立，round_trains、trained_round_iff 与 trained_along 随之；完整历史的三轮是实例（complete_history_rounds）。步定义仍是该机器的，其间的接纳与交接仍在该历史上检查。scratch_build 实编，核心公理报告为空，外围只用标准公理；对 MachineInstances 的证明绑定仍指先前运行，落地时改指新运行。原定理与反例不变。",
+      "en": "14 October 2026, open-issues plan (study section 117): the claim now adds the law of a practice round: round_iff in the periphery MachineInstances holds for every state, with round_trains, trained_round_iff and trained_along; the three rounds of the complete history are instances (complete_history_rounds). The step definitions stay the machine’s, and the enrollments and handoff between the rounds are still checked on that history. Built with scratch_build: core axiom reports empty, the periphery with standard axioms only; the proof binding to MachineInstances still names the earlier run and is repointed at landing. The original theorems and counterexamples are unchanged."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 20 bookkeeping notes condensed from 14 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/11f32a1cb81d7291/joint-practice-forms-continuation.json and in git.",
+      "zh": "2026-10-20：20 条记账性说明合并（14 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/11f32a1cb81d7291/joint-practice-forms-continuation.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added (a practice round completes exactly where the worker is present and so is a rostered reviewer, not the worker, whose recorded method answers as the context does, and then changes only the review, the worker's method and the trial); the canonical source is the module holding the round law, the earlier module kept as a proof reference; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述（一轮实践恰在工作者在场、另一在场之在册审查者所记之做法应答当前处境时完成，此后只改变审查、工作者之做法与试验）；规范来源改为持有该轮实践律的模块，原模块保留为证明引用；主张不变。"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "runs-on-families-chosen-step-by-step",
   "title": {
     "zh": "逐步选定的家族",
@@ -8,24 +8,144 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-13T12:27:01.789893+00:00",
+  "reviewed_at_utc": "2026-10-28T12:02:59+00:00",
   "statement": {
-    "zh": "只有持有前后所立者的条件把一步连到下一步，以不计次序的延续代替逐位跟随。",
-    "en": "Only a condition holding what stands before and after joins one step to the next, and continuity up to order replaces following position by position."
+    "en": "On families chosen step by step, a run is shown under no condition, balance or closure exactly when each step obeys its law; running down, whose family holds what stands before and after its step, adds that what stands continues up to order, in place of following position by position.",
+    "zh": "在逐步选定的家族上，无条件、平衡或封闭之下，运行被显示，恰当每一步服从其律；耗减的家族持有一步前后所立者，它还要求所立者不计次序地延续，以代替逐位跟随。"
   },
-  "claim": {
-    "en": "Where the family may change at each step (OneStep.StepRealized, with givers; OneStep.StepRunRealized, without), a sequence of patterns is shown by some world under no condition, under balance and under closure exactly when each step obeys its law (OneStep.step_every_iff, OneStep.step_balance_iff, OneStep.step_closed_iff, OneStep.stepRun_balance_iff): these conditions join no step to the next. Running down holds in its family everything standing before and after its step, and there a sequence is shown exactly when each step obeys its law and the passages continue up to order: at each positive level, as many stand there after a step as before the next (OneStep.Continues; OneStep.step_runsDown_iff, OneStep.step_runsDownClosed_iff, OneStep.stepRun_runsDown_iff, OneStep.stepRun_runsDownClosed_iff; OneStep.StepRealized.continues). Following position by position on one family gives continuity (OneStep.Chained.continues) and not conversely: a sequence of two idle conditions in swapped order runs down on families chosen step by step and on no single family (OneStep.steps_not_run), and a sequence shown under balance on chosen families is not shown under running down, its passages not continuing (OneStep.vanishing_steps). No premise.",
-    "zh": "家族可以每步改变时（OneStep.StepRealized，带给予者；OneStep.StepRunRealized，不带），一串模式在无条件、平衡与封闭之下恰在每步遵守其规律时由某个世界显示（OneStep.step_every_iff、OneStep.step_balance_iff、OneStep.step_closed_iff、OneStep.stepRun_balance_iff）：这些条件不把一步连到下一步。耗减在其家族中持有该步之前与之后所立的一切，在那里一串模式恰在每步遵守其规律、且经过不计次序地延续时被显示：在每个正的水平上，一步之后立于那里的与下一步之前一样多（OneStep.Continues；OneStep.step_runsDown_iff、OneStep.step_runsDownClosed_iff、OneStep.stepRun_runsDown_iff、OneStep.stepRun_runsDownClosed_iff；OneStep.StepRealized.continues）。在一个家族上逐位跟随给出延续（OneStep.Chained.continues），反之不然：两个空闲条件次序交换的一串在逐步选定的家族上耗减，在任何单一家族上都不（OneStep.steps_not_run）；在选定家族上于平衡之下显示的一串在耗减之下不显示，其经过不延续（OneStep.vanishing_steps）。不加前提。"
-  },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "延续只对其家族持有一步前后所立者的条件推出（耗减）；只覆盖一侧的条件没有处理。",
-      "en": "Continuity is derived only for conditions whose family holds what stands before and after the step (running down); conditions covering one side only are not treated."
+      "en": "Under a condition on a world, a step and a list, a run of patterns is shown on families chosen step by step where some world and a list for each step show at every step that step's pattern, its takers and givers counted and whether something exchanges, the condition holding on that list and each relatum taking part listed once. Without the givers, a run is so shown exactly where it is shown with some count of givers.",
+      "zh": "在关于世界、步与列表的条件下，模式的运行在逐步选定的家族上被显示，是指某个世界与每步一个列表在每一步显示该步的模式（计取用者与给予者，及是否有交换），条件在该列表上成立，每个参与的关系项列出一次。不计给予者时，运行如此被显示，恰当它以某种给予者计数被显示。",
+      "declarations": [
+        "Becoming.OneStep.StepRealized",
+        "Becoming.OneStep.StepRunRealized",
+        "Becoming.OneStep.stepRun_iff_givers"
+      ]
+    },
+    {
+      "en": "What stands continues up to order where, at every positive level, as many members stand at it after each step as before the next. Passages that follow one another position by position, what stands after each step at each member being what stands before the next there, continue; and a run shown with its givers on one family is shown on families chosen step by step.",
+      "zh": "所立者不计次序地延续，是指在每个正的水平上，每步之后处于该水平的成员与下一步之前一样多。逐位跟随的通过（每个成员一步之后所立的就是下一步之前所立的）延续；在单一家族上连同给予者被显示的运行，也在逐步选定的家族上被显示。",
+      "declarations": [
+        "Becoming.OneStep.Continues",
+        "Becoming.OneStep.Chained",
+        "Becoming.OneStep.Chained.continues",
+        "Becoming.OneStep.RunRealizedGivers",
+        "Becoming.OneStep.RunRealizedGivers.steps"
+      ]
+    },
+    {
+      "en": "On families chosen step by step, a run with its givers is shown under no condition, under balance on each step's list, or under its closure, exactly where each step obeys the law of every step, of balance or of closure respectively, and the law of the givers (at least one giver where anything is given, at most what is given): these conditions join no step to the next.",
+      "zh": "在逐步选定的家族上，无条件、每步列表上平衡、或其封闭之下，连同给予者的运行被显示，恰当每一步分别服从每一步之律、平衡之律或封闭之律，以及给予者之律（有所给处至少一个给予者，至多为所给之量）：这些条件不把一步连到下一步。",
+      "declarations": [
+        "Becoming.OneStep.step_every_iff",
+        "Becoming.OneStep.step_balance_iff",
+        "Becoming.OneStep.step_closed_iff",
+        "Becoming.OneStep.Givers"
+      ]
+    },
+    {
+      "en": "Without the givers, under balance alone, a run is shown on families chosen step by step exactly where each step obeys the law of balance.",
+      "zh": "不计给予者，只在平衡之下，运行在逐步选定的家族上被显示，恰当每一步服从平衡之律。",
+      "declarations": [
+        "Becoming.OneStep.stepRun_balance_iff"
+      ]
+    },
+    {
+      "en": "Under any condition that makes each step's list run down (listed without repetition, holding whatever stands before or after the step, the flow balancing and dissipating on it), a run shown on families chosen step by step continues up to order.",
+      "zh": "在任何使每步列表耗减（无重复、含步前或步后所立的一切、流在其上平衡且耗散）的条件下，在逐步选定的家族上被显示的运行不计次序地延续。",
+      "declarations": [
+        "Becoming.OneStep.StepRealized.continues"
+      ]
+    },
+    {
+      "en": "On families chosen step by step each running down, a run with its givers is shown exactly where what stands continues up to order and each step obeys the law of running down and the law of the givers, with the givers at most the takers; with each list also closed, likewise with the law of running down closed.",
+      "zh": "在逐步选定、每个都耗减的家族上，连同给予者的运行被显示，恰当所立者不计次序地延续，且每一步服从耗减之律与给予者之律，给予者不多于取用者；每个列表又封闭时，同样，以耗减且封闭之律代之。",
+      "declarations": [
+        "Becoming.OneStep.step_runsDown_iff",
+        "Becoming.OneStep.step_runsDownClosed_iff"
+      ]
+    },
+    {
+      "en": "Without the givers, on families chosen step by step each running down, or running down and closed, a run is shown exactly where what stands continues up to order and each step obeys the law of running down, or of running down closed.",
+      "zh": "不计给予者，在逐步选定、每个都耗减（或耗减且封闭）的家族上，运行被显示，恰当所立者不计次序地延续，且每一步服从耗减之律（或耗减且封闭之律）。",
+      "declarations": [
+        "Becoming.OneStep.stepRun_runsDown_iff",
+        "Becoming.OneStep.stepRun_runsDownClosed_iff"
+      ]
+    },
+    {
+      "en": "Continuity up to order is weaker than following: two idle conditions at levels one and two, listed in one order before the first step and in the other after it, with no taker, giver or exchange, are shown on families chosen step by step each running down, and no world shows them with their givers on one family running down at every step.",
+      "zh": "不计次序的延续弱于逐位跟随：两个闲置条件在水平一与二，第一步前以一种次序、之后以另一种次序列出，没有取用者、给予者或交换：它们在逐步选定、每个都耗减的家族上被显示，而没有世界在每步都耗减的单一家族上连同给予者显示它们。",
+      "declarations": [
+        "Becoming.OneStep.swapped",
+        "Becoming.OneStep.swapped_continues",
+        "Becoming.OneStep.swapped_runsDown",
+        "Becoming.OneStep.steps_not_run"
+      ]
+    },
+    {
+      "en": "Continuity is needed where what stands is held: a condition at level one before and after the first step and absent from the list after it, with no taker, giver or exchange, does not continue, is shown under balance on families chosen step by step, and is shown by no world on families chosen step by step each running down.",
+      "zh": "所立者被持有处需要延续：一个条件在第一步前后都在水平一、此后不在列表中，没有取用者、给予者或交换：它不延续，在平衡之下于逐步选定的家族上被显示，而没有世界在逐步选定、每个都耗减的家族上显示它。",
+      "declarations": [
+        "Becoming.OneStep.vanishing",
+        "Becoming.OneStep.vanishing_not_continues",
+        "Becoming.OneStep.vanishing_steps"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "No premise: each law's condition on each step's list (none, balance, closure, running down, with or without closure) is written into it.",
+      "zh": "不加前提：每条规律对每步列表的条件（无、平衡、封闭、耗减，封闭与否）写在其中。"
+    },
+    {
+      "en": "Discrete steps and natural-number amounts; at each step each relatum taking part is listed once.",
+      "zh": "离散的步与自然数的量；每一步每个参与的关系项列出一次。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Continuity is derived only for conditions making each step's list run down, which holds what stands both before and after the step; conditions whose list holds one side only are not treated.",
+      "zh": "延续只对使每步列表耗减（列表持有一步前后所立者）的条件推出；列表只持有一侧的条件没有处理。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a condition joins no step to the next is shown for no condition, balance and closure, not for every condition that fails to hold what stands.",
+      "zh": "条件不把一步连到下一步，只对无条件、平衡与封闭证明，没有对每个不持有所立者的条件证明。",
+      "kind": "scope"
+    },
+    {
+      "en": "Capacity and activity are stated for one step, not over runs on families chosen step by step.",
+      "zh": "容量与活动只对一步陈述，没有对逐步选定家族上的运行陈述。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
+      "detail": {
+        "zh": "swapped：逐步选定时耗减而在单一家族上不；vanishing：平衡之下显示而耗减之下不。",
+        "en": "swapped: runs down on families chosen step by step and on no single family; vanishing: shown under balance and not under running down."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of Becoming.OneStep are bound to core receipt becoming-checks/20261020T051144.879480Z; every cited declaration has an empty axiom report. The author's counterreview is in the integration note; there is no independent review.",
+    "zh": "Lean 4.29.1 合并检查器实查：Becoming.OneStep 的当前字节绑定核心回执 becoming-checks/20261020T051144.879480Z；所引声明的公理报告均为空。作者反审见整合文档；无独立审查。"
+  },
+  "next_delta": {
+    "en": "State the laws of runs on families chosen step by step for conditions whose list holds what stands on one side of the step only, and for capacity and activity over runs.",
+    "zh": "对列表只持有一步一侧所立者的条件，以及运行上的容量与活动，陈述逐步选定家族上的运行之律。"
+  },
   "correspondence": {
-    "zh": "P79b（工作板，P79 的延伸），按 Ren 2026-10-12 的“move towards 100%”，回答 laws-of-one-step-complete 的 next_delta。读法（AI 的，依 Ren 的交托采用）：家族不必是固定的；逐步选定时，把一步连到下一步的只是所立者的延续，不是位置。见整合文档 §103。",
-    "en": "P79b (work board, extending P79), following Ren's ‘move towards 100%’ of 12 October 2026, answering the next_delta of laws-of-one-step-complete. Reading (the AI's, adopted on Ren's delegation): a family need not be fixed; chosen step by step, what joins one step to the next is only the continuity of what stands, not position. See the integration document §103."
+    "zh": "按 Ren 2026-10-12 的“move towards 100%”，回答 laws-of-one-step-complete 的 next_delta。读法（AI 的，依 Ren 的交托采用）：家族不必是固定的；逐步选定时，把一步连到下一步的只是所立者的延续，不是位置。见整合文档 §103。",
+    "en": "Following Ren's ‘move towards 100%’ of 12 October 2026, answering the next_delta of laws-of-one-step-complete. Reading (an AI reading): a family need not be fixed; chosen step by step, what joins one step to the next, under the conditions treated, is only the continuity of what stands, not position."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
   "aliases": [
@@ -81,23 +201,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
-      "detail": {
-        "zh": "swapped：逐步选定时耗减而在单一家族上不；vanishing：平衡之下显示而耗减之下不。",
-        "en": "swapped: runs down on families chosen step by step and on no single family; vanishing: shown under balance and not under running down."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "只覆盖一侧的条件没有处理；容量与活动在运行上没有陈述；读法是 AI 的，依 Ren 的交托采用；不含伦理谓词。",
-    "en": "Conditions covering one side only are not treated; capacity and activity over runs are not stated; the readings are the AI's, adopted on Ren's delegation; no ethical predicate occurs."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.OneStep 的 311 项定理全部空依赖，其中含 OneStep.StepRealized、OneStep.StepRunRealized、OneStep.Continues、OneStep.step_every_iff、OneStep.step_balance_iff、OneStep.step_closed_iff、OneStep.step_runsDown_iff、OneStep.step_runsDownClosed_iff、OneStep.stepRun_runsDown_iff、OneStep.stepRun_runsDownClosed_iff、OneStep.stepRun_balance_iff、OneStep.StepRealized.continues、OneStep.Chained.continues、OneStep.steps_not_run与 OneStep.vanishing_steps；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §103；尚无独立审查。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 311 theorems of Becoming.OneStep all have empty axiom reports, among them OneStep.StepRealized, OneStep.StepRunRealized, OneStep.Continues, OneStep.step_every_iff, OneStep.step_balance_iff, OneStep.step_closed_iff, OneStep.step_runsDown_iff, OneStep.step_runsDownClosed_iff, OneStep.stepRun_runsDown_iff, OneStep.stepRun_runsDownClosed_iff, OneStep.stepRun_balance_iff, OneStep.StepRealized.continues, OneStep.Chained.continues, OneStep.steps_not_run and OneStep.vanishing_steps. The same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §103 of the integration note; there is no independent review yet."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
@@ -147,7 +250,9 @@
         "Becoming.OneStep.steps_not_run",
         "Becoming.OneStep.vanishing",
         "Becoming.OneStep.vanishing_not_continues",
-        "Becoming.OneStep.vanishing_steps"
+        "Becoming.OneStep.vanishing_steps",
+        "Becoming.OneStep.Chained",
+        "Becoming.OneStep.Givers"
       ]
     },
     {
@@ -208,10 +313,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "只覆盖一侧的条件；容量与活动在运行上的形式。",
-    "en": "Conditions covering one side only; capacity and activity over runs."
-  },
   "history": [
     {
       "zh": "2026-10-13：接续并整合 P79 的现存证明包；见整合文档 §103。",
@@ -266,6 +367,28 @@
     {
       "en": "2026-10-20: 35 bookkeeping notes condensed from 2026-10-13 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/6cc1d57e2cb43191/runs-on-families-chosen-step-by-step.json and in git.",
       "zh": "2026-10-20：35 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/6cc1d57e2cb43191/runs-on-families-chosen-step-by-step.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the statement rewritten to what the Lean proves, the old “only a condition holding what stands joins one step to the next” narrowed to the conditions the Lean treats (no condition, balance, closure; running down with or without closure); the claim split into nine laws, each read against its declarations in OneStep.lean, the givers' law and the bound of givers by takers written in where the Lean has them; OneStep.Chained and OneStep.Givers added to the references of OneStep.lean; the limitations to three does-not-show items and the shared boundaries no-evaluation, no-ethical-premise and discrete-steps, the reading's label kept in the correspondence; the side the hypothesis left untreated moved to a does-not-show item, the hypotheses written out with the conditions and representation; the next step stated positively; the correspondence's work-board items cut; no premise, status or source hash changed. Every earlier sentence is mapped in [runs-on-families-chosen-step-by-step.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/runs-on-families-chosen-step-by-step.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, each read against the Lean it cites. A cold read of the applied record was taken in the correspondence.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述按 Lean 所证重写，旧的“只有持有所立者的条件把一步连到下一步”收窄到 Lean 所处理的条件（无条件、平衡、封闭；耗减，封闭与否）；主张拆为九条规律，各条对照 OneStep.lean 中的声明核读，Lean 带有之处写入给予者之律与给予者不多于取用者；OneStep.Chained 与 OneStep.Givers 加入 OneStep.lean 的引用；限制改为三条“未表明”与通用边界 no-evaluation、no-ethical-premise、discrete-steps，读法的标注留在对应说明中；前提未处理的一侧移为一条“未表明”，前提写出各条件与表示；下一步改为正面陈述；对应说明中的工作板条目删去；前提、状态与来源哈希均未改变。每句旧文本的去向见 [runs-on-families-chosen-step-by-step.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/runs-on-families-chosen-step-by-step.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及“未表明”各项，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及对应。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/9092646cebdd0b70/runs-on-families-chosen-step-by-step.json",
+      "sha256": "9092646cebdd0b7009caeafcd8dc0b4f2bd7b465467f40d227d421e18e3edc0b",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/6cc1d57e2cb43191/runs-on-families-chosen-step-by-step.json",
+      "sha256": "6cc1d57e2cb43191ce407893cc7392f97af7fb6753d0777a21d142995403437a",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

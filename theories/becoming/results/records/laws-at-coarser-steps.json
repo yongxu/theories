@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "laws-at-coarser-steps",
   "title": {
     "zh": "较粗的步上的一步规律",
@@ -8,28 +8,217 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-16T18:25:05+00:00",
+  "reviewed_at_utc": "2026-10-28T11:46:07+00:00",
   "statement": {
-    "zh": "一个家族上的平衡（每个关系项只列出一次时）、耗散与下降（只在粗步两端包含所立者）跨过粗步内的各细步合成，封闭恰好合成；所以一次交换的规律与开始、不再立着的确切条件在粗步上成立。反方向不合成；只有活跃者给予与取用依步而定。",
-    "en": "Balance (each relatum listed once), dissipation and running down (what stands held at both ends) compose over a coarse step, closure exactly, so one exchange's law and the exact conditions of coming and ceasing to stand hold there. Not conversely; only active giving and taking are step-relative."
+    "en": "Read at strictly increasing times, balance (each relatum listed once), dissipation and running down (what stands held at both ends) compose over a coarse step, closure exactly, so one exchange's law and the laws of coming and ceasing to stand hold there; giving and taking only while active need not.",
+    "zh": "在严格递增的时刻读出，一个家族上的平衡（每个关系项只列出一次时）、耗散与下降（只在粗步两端包含所立者）跨过粗步内的各细步合成，封闭恰好合成；所以一次交换的规律与开始、不再立着的确切条件在粗步上成立。只在活跃时给予与取用则不必合成。"
   },
-  "claim": {
-    "zh": "把一个世界在严格递增的时刻 σ 读出，每个粗步是从 σ s 到 σ (s + 1) 之前的一段细步（Strict、span）。各条件都在一个粗步上陈述，假设只在该粗步内的细步上。合成的：家族上的平衡在粗步内各细步每个关系项只列出一次时合成（Flow.BalancesOn.sample，经 balance_over_stretch_on、Flow.sample_taken_on、Flow.sample_given_on）；家族上的耗散无条件合成（Flow.DissipatesOn.sample）；家族跨过粗步封闭恰当它跨过其内每个细步封闭（Flow.sample_closedAt_iff）；下降在家族只在粗步两端包含所立者时合成（Flow.RunsDownOn.sample），每个细步都下降时粗步下降（Flow.RunsDownOn.sample_of_fine）。所以粗步上：有水平改变恰当家族末端的总水平低于始端（Flow.sample_changes_iff）；细步上平衡时，一个条件跨过粗步开始立着恰当此前立在零且细步给它的多于取走的，不再立着恰当此前立着且细步取走它所有的连同所给的（Flow.sample_comesToStand_iff、Flow.sample_ceasesToStand_iff）。网在时刻 σ 读出（Web.sample），活动需要支持、体现与普查在被读出的细步上陈述（Web.sample_dependent、sample_embodied、sample_census、sample_standingCensus）；活动判定时，跨过粗步的生起或不再活跃是跨过其内某细步的生起或不再活跃（Web.sample_arises、Web.sample_ceases）。全局读法是推论（Flow.sample_balances、Flow.sample_dissipative、World.sample_survives、World.sample_rests_unrefuted，后者不用判定程序）。",
-    "en": "Read a world at strictly increasing times σ, each coarse step being the fine steps from σ s to just before σ (s + 1) (Strict, span). Each condition is stated at one coarse step, with hypotheses on the fine steps inside it only. What composes: balance on a family composes where each relatum is listed once at the fine steps inside (Flow.BalancesOn.sample, through balance_over_stretch_on, Flow.sample_taken_on, Flow.sample_given_on); dissipation on a family composes unconditionally (Flow.DissipatesOn.sample); a family is closed across the coarse step exactly when it is closed across each fine step inside (Flow.sample_closedAt_iff); running down composes where the family holds what stands at the two coarse ends only (Flow.RunsDownOn.sample), and running down at every fine step gives it at the coarse step (Flow.RunsDownOn.sample_of_fine). So at the coarse step some standing changes exactly when the family's total at the end is below its total at the start (Flow.sample_changes_iff); with balance at the fine steps a condition comes to stand across the coarse step exactly when it stood at nothing and the fine steps gave it more than they took, and ceases to stand exactly when it stood and they took all it had with all they gave (Flow.sample_comesToStand_iff, Flow.sample_ceasesToStand_iff). The web read at the times σ (Web.sample) states activity needing support, embodiment and a census of the sampled fine step (Web.sample_dependent, sample_embodied, sample_census, sample_standingCensus); with activity decided, arising or ceasing across a coarse step is arising or ceasing across a fine step inside it (Web.sample_arises, Web.sample_ceases). The global readings are corollaries (Flow.sample_balances, Flow.sample_dissipative, World.sample_survives, and World.sample_rests_unrefuted, with no decision procedure)."
-  },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "无全局前提：每条的条件写在规律之内，只在该粗步内的细步上。",
-      "en": "No global premise: the condition of each law is stated inside it, on the fine steps inside the coarse step only."
+      "en": "Sampling times are strictly increasing step numbers σ, the coarse step s being the fine steps from σ s to just before σ (s + 1). Read at σ, a web shows at the coarse step s what it shows at the fine step σ s; with equality of relata decided, a flow read at σ lists once each relatum taking part in some fine step inside, with all it takes and gives across the fine steps it takes part in.",
+      "zh": "取样时刻是严格递增的步序号 σ，粗步 s 是从 σ s 到 σ (s + 1) 之前的各细步。在 σ 读出，网在粗步 s 显示它在细步 σ s 所显示的；关系项的相等可判定时，在 σ 读出的流把在粗步内某细步参与的每个关系项列出一次，连同它在所参与各细步上所取与所给的全部。",
+      "declarations": [
+        "Becoming.Strict",
+        "Becoming.span",
+        "Becoming.Web.sample",
+        "Becoming.Flow.sample",
+        "Becoming.Flow.sample_once"
+      ]
     },
     {
-      "zh": "读法：严格递增的时刻（Strict）；粗步之间的细步视为给定，不细分到细步以下。平衡的合成要求每个关系项在粗步内各细步只列出一次（粗步的计数把一个关系项算一次，细步的计数按列出的次数）。",
-      "en": "The reading: strictly increasing times (Strict); the fine steps between samples are taken as given, with no refinement below them. Balance composes where each relatum is listed once at the fine steps inside (the coarse tally counts a relatum once, the fine tallies as often as it is listed)."
+      "en": "With equality of relata decided, strictly increasing times and each relatum listed once at the fine steps inside a coarse step, what the coarse step takes from and gives to a condition is what those fine steps take and give, and a flow balancing on a family across each of them balances on it across the coarse step.",
+      "zh": "关系项的相等可判定、时刻严格递增、每个关系项在粗步内各细步只列出一次时，粗步从一个条件所取、给它的，就是这些细步所取所给的；在其中每一细步上平衡于一个家族的流，跨过粗步也平衡于它。",
+      "declarations": [
+        "Becoming.Flow.sample_taken_on",
+        "Becoming.Flow.sample_given_on",
+        "Becoming.Flow.BalancesOn.sample"
+      ]
+    },
+    {
+      "en": "With equality of relata decided, a flow dissipated on a family across each fine step inside a coarse step is dissipated on it across the coarse step, with no condition on listing; and a family is closed across a coarse step exactly when it is closed across each fine step inside.",
+      "zh": "关系项的相等可判定时，在粗步内每一细步上耗散于一个家族的流，跨过粗步也耗散于它，不对列出加条件；一个家族跨过粗步封闭，恰当它跨过其内每一细步封闭。",
+      "declarations": [
+        "Becoming.Flow.DissipatesOn.sample",
+        "Becoming.Flow.sample_closedAt_iff"
+      ]
+    },
+    {
+      "en": "With equality of relata decided, strictly increasing times and each relatum listed once at the fine steps inside a coarse step, a family without repetition holding what stands at the two coarse ends, balanced and dissipated on at each of those fine steps, runs down across the coarse step, what stands between not asked; running down at every fine step inside gives it across the coarse step.",
+      "zh": "关系项的相等可判定、时刻严格递增、每个关系项在粗步内各细步只列出一次时，一个不重复、在粗步两端包含所立者、在这些细步上都平衡并被耗散的家族，跨过粗步下降，不问其间所立者；在其内每一细步上都下降，则跨过粗步下降。",
+      "declarations": [
+        "Becoming.Flow.RunsDownOn.sample",
+        "Becoming.Flow.RunsDownOn.sample_of_fine"
+      ]
+    },
+    {
+      "en": "With equality of relata decided, strictly increasing times, each relatum listed once at the fine steps inside a coarse step, and a family without repetition holding what stands at both coarse ends, balanced and dissipated on at each of those fine steps: some condition's level rises or falls across the coarse step exactly when the family's total at its end is below its total at its start.",
+      "zh": "关系项的相等可判定、时刻严格递增、每个关系项在粗步内各细步只列出一次，且一个不重复的家族在粗步两端包含所立者、在这些细步上都平衡并被耗散时：有条件的水平跨过粗步上升或下降，恰当家族末端的总水平低于始端的总水平。",
+      "declarations": [
+        "Becoming.Flow.sample_changes_iff"
+      ]
+    },
+    {
+      "en": "With equality of relata decided, strictly increasing times, each relatum listed once at the fine steps inside a coarse step and a flow balancing on a family at each of them, a member comes to stand across the coarse step exactly when it stood at nothing and those fine steps gave it more than they took, and ceases to stand exactly when it stood and they took all it had with all they gave.",
+      "zh": "关系项的相等可判定、时刻严格递增、每个关系项在粗步内各细步只列出一次、流在这些细步上都平衡于一个家族时，成员跨过粗步开始立着，恰当此前立在零且这些细步给它的多于取走的；不再立着，恰当此前立着且它们取走它所有的连同所给的。",
+      "declarations": [
+        "Becoming.Flow.sample_comesToStand_iff",
+        "Becoming.Flow.sample_ceasesToStand_iff"
+      ]
+    },
+    {
+      "en": "A web read at any times keeps activity needing support, a relatum standing exactly while active, a census of the active relata and a census of what stands, each read at the sampled fine step.",
+      "zh": "在任意时刻读出的网，保持活动需要支持、一个关系项恰在活跃时立着、活跃关系项的普查与所立者的普查，各在被读出的细步上。",
+      "declarations": [
+        "Becoming.Web.sample_dependent",
+        "Becoming.Web.sample_embodied",
+        "Becoming.Web.sample_census",
+        "Becoming.Web.sample_standingCensus"
+      ]
+    },
+    {
+      "en": "With strictly increasing times and activity decided, a relatum arising or ceasing across a coarse step arises or ceases across some fine step inside it; so arising at arbitrarily late coarse steps gives arising at arbitrarily late fine steps, and ceasing likewise.",
+      "zh": "时刻严格递增且活动可判定时，跨过粗步生起或不再活跃的关系项，跨过其内某一细步生起或不再活跃；所以在任意晚的粗步上生起，给出在任意晚的细步上生起，不再活跃亦然。",
+      "declarations": [
+        "Becoming.Web.sample_arises",
+        "Becoming.Web.sample_ceases",
+        "Becoming.Web.sample_unceasing",
+        "Becoming.Web.sample_ceasing"
+      ]
+    },
+    {
+      "en": "Arising and ceasing at arbitrarily late fine steps need not show at the coarse steps, in a witness: a relatum switched on at the odd steps and read at the even ones arises and ceases at arbitrarily late fine steps, while at the coarse steps it is never active, so nothing arises or ceases there.",
+      "zh": "在任意晚的细步上生起与不再活跃，不必在粗步上显出，见证：一个在奇数步开启、在偶数步读出的关系项，在任意晚的细步上生起与不再活跃，而在粗步上从不活跃，所以那里没有生起或不再活跃。",
+      "declarations": [
+        "Becoming.Strobe.converse_fails",
+        "Becoming.Strobe.coarse_quiet"
+      ]
+    },
+    {
+      "en": "With equality of relata decided and strictly increasing times, a relatum giving only while active at the fine steps inside a coarse step, and active at its first fine step whenever it is active inside, gives across the coarse step only while active; taking only while active and from what it draws on composes likewise where its drawing inside also holds at the first fine step.",
+      "zh": "关系项的相等可判定、时刻严格递增时，一个在粗步内各细步只在活跃时给予、且凡在其内活跃时在第一个细步已活跃的关系项，跨过粗步只在活跃时给予；只在活跃时、只从所汲取者取用，在其内的汲取也在第一个细步成立时同样合成。",
+      "declarations": [
+        "Becoming.Flow.sample_acting_on",
+        "Becoming.Flow.sample_taking_on"
+      ]
+    },
+    {
+      "en": "Activity and drawing that hold inside a coarse step hold at its first fine step where each coarse step is one fine step, and activity does where it is constant on each interval; with equality of relata decided, strictly increasing times and activity (for taking, drawing too) so held, only active relata giving, or taking, at the fine steps gives the same at the coarse steps.",
+      "zh": "每个粗步只是一个细步时，在粗步内成立的活动与汲取在其第一个细步成立；活动在各区间上恒定时，活动亦然。关系项的相等可判定、时刻严格递增、活动（取用时连同汲取）如此保持时，细步上只有活跃者给予或取用，给出粗步上同样如此。",
+      "declarations": [
+        "Becoming.Web.Held",
+        "Becoming.Web.DrawingHeld",
+        "Becoming.Web.held_of_unit",
+        "Becoming.Web.held_of_constant",
+        "Becoming.Flow.sample_acting",
+        "Becoming.Flow.sample_taking"
+      ]
+    },
+    {
+      "en": "In a witness, one relatum, on at the odd steps and taking and giving a unit while on, read at the even steps: the fine world has activity needing support, balance, a census, and only active relata giving and taking, while across each coarse step the relatum gives and takes and is inactive at the sampling time, so neither holds there.",
+      "zh": "见证：一个关系项在奇数步开启，开启时取用并给予一个单位，在偶数步读出：细步上的世界有活动需要支持、平衡、普查，只有活跃者给予与取用；而跨过每个粗步，该关系项给予并取用，在取样时刻却不活跃，所以粗步上二者都不成立。",
+      "declarations": [
+        "Becoming.Strobe.fine",
+        "Becoming.Strobe.coarse_gives",
+        "Becoming.Strobe.acting_taking_step_relative"
+      ]
+    },
+    {
+      "en": "Bounded transmission of dependences is relative to the step, in a witness: where a gift inside a coarse step precedes the receiver's coming to stand, nothing descends at the fine steps, so transmission holds there, while read at the even steps the receiver descends from the giver across the first coarse step and transmission fails.",
+      "zh": "有界的依存传递依步而定，见证：粗步内的给予先于接受者开始立着时，细步上没有降生，所以那里传递成立；而在偶数步读出，接受者跨过第一个粗步从给予者降生，传递不成立。",
+      "declarations": [
+        "Becoming.Delay.no_descent",
+        "Becoming.Delay.fine_transmitting",
+        "Becoming.Delay.coarse_descends",
+        "Becoming.Delay.transmitting_step_relative"
+      ]
+    },
+    {
+      "en": "Balance and dissipation at a coarse step need not hold at the fine steps inside, in two witnesses read at the even steps: a gift across the first fine step and a taking across the second cancel, the coarse step balancing while neither fine step does; and a fine step giving back all it takes is outweighed by the next step's taking, the coarse step dissipating while that fine step does not.",
+      "zh": "粗步上的平衡与耗散不必在其内的细步上成立，两个在偶数步读出的见证：跨过第一个细步的给予与跨过第二个的取用相抵，粗步平衡而两个细步都不平衡；一个细步把所取的全部给回，被下一步的取用抵过，粗步耗散而该细步不耗散。",
+      "declarations": [
+        "Becoming.Cancelling.coarse_not_fine",
+        "Becoming.Averaging.coarse_not_fine"
+      ]
+    },
+    {
+      "en": "With equality of relata decided, strictly increasing times and each relatum listed once at every step, a world read at coarser steps keeps activity needing support, balance, dissipation, embodiment and a census; read so, that a finite world whose flow balances and dissipates and whose relata are embodied rests from some coarse step on cannot be refuted, with activity not decided.",
+      "zh": "关系项的相等可判定、时刻严格递增、每个关系项在每一步只列出一次时，在粗步上读出的世界保持活动需要支持、平衡、耗散、体现与普查；如此读出，一个流平衡并耗散、关系项被体现的有限世界从某粗步起停息，不能被否证，不要求活动可判定。",
+      "declarations": [
+        "Becoming.Flow.sample_balances",
+        "Becoming.Flow.sample_dissipative",
+        "Becoming.World.sample_survives",
+        "Becoming.World.sample_rests_unrefuted"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "No global premise, and none is derived: the condition of each law is stated inside it, on the fine steps inside the coarse step only.",
+      "zh": "无全局前提，也不推出前提：每条的条件写在规律之内，只在该粗步内的细步上。"
+    },
+    {
+      "en": "The reading: strictly increasing times (Strict); the fine steps between samples are taken as given, with no refinement below them. Balance composes where each relatum is listed once at the fine steps inside (the coarse tally counts a relatum once, the fine tallies as often as it is listed).",
+      "zh": "读法：严格递增的时刻（Strict）；粗步之间的细步视为给定，不细分到细步以下。平衡的合成要求每个关系项在粗步内各细步只列出一次（粗步的计数把一个关系项算一次，细步的计数按列出的次数）。"
+    },
+    {
+      "en": "A flow read at coarser steps lists each relatum once, which uses decided equality of relata; arising and ceasing across a coarse step are found at a fine step with activity decided.",
+      "zh": "在粗步上读出流时每个关系项只列出一次，这用到关系项的相等可判定；跨过粗步的生起与不再活跃在活动可判定时于某一细步找到。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Time read at real values is not treated: the sampling times are strictly increasing natural numbers.",
+      "zh": "不处理以实数读出的时间：取样时刻是严格递增的自然数。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a becoming given with no step at all can be represented by discrete steps is not shown.",
+      "zh": "不表明全无步的生成能由离散的步表示。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That balance composes over a coarse step without each relatum listed once at the fine steps inside is not shown.",
+      "zh": "不表明在粗步内各细步不只列出一次时平衡仍跨过粗步合成。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "This is a reading at coarser steps, not a refinement of the unit in which amounts are counted.",
+      "zh": "这是在较粗的步上的读法，不是量的计数单位的细分。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
+      "detail": {
+        "zh": "Cancelling 与 Averaging：粗步上平衡与耗散，并非每个细步上都如此（细步上的不平衡相互抵消；无损给予的细步被后来的细步抵过）。",
+        "en": "Cancelling and Averaging: balance and dissipation hold at the coarse step but not at every fine one (fine imbalances cancel; a fine step giving without loss is outweighed by a later one)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
+      "detail": {
+        "zh": "Strobe：一个关系项在每个粗步的第二个细步上活跃、给予与取用，在两个读出时刻都不活跃；粗步上只有活跃者给予与取用不成立，细步上的生起与不再活跃复现而粗步上安静。Delay：在接受者开始立着之前于粗步内所作的给予，被读为跨过粗步的降生。",
+        "en": "Strobe: a relatum active at the second fine step of each coarse step gives and takes there and is off at both sampling times; only active relata giving and taking fail at the coarse step, and arising and ceasing recur at the fine steps while the coarse steps are quiet. Delay: a gift made inside a coarse step before the receiver comes to stand is read as a descent across the coarse step."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "discrete-steps",
+    "decidability"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (check_becoming.py): the current bytes of the core modules Becoming.Sampling, Becoming.Locality, Becoming.Prelude, Becoming.Population, Becoming.Premises, Becoming.Change and Becoming.InAmounts are bound to core receipts under becoming-checks/ (Sampling to 20261020T051144.879480Z); every cited declaration has an empty axiom report, and the receipts record that the core compiles from Lean's prelude alone. Author counterreview (integration note, section 80); no independent review.",
+    "zh": "Lean 4.29.1 合并检查器（check_becoming.py）实查：核心模块 Becoming.Sampling、Locality、Prelude、Population、Premises、Change 与 InAmounts 的当前字节绑定 becoming-checks/ 下的核心回执（Sampling 绑定 20261020T051144.879480Z）；所引声明的公理报告均为空，回执记录核心只用 Lean 前导即可编译。作者反审（整合文档第 80 节）；无独立审查。"
+  },
+  "next_delta": {
+    "en": "Show whether balance composes over a coarse step without each relatum listed once at the fine steps inside; test a reading that coarsens the step and refines the unit at once; and read real-valued time beyond the tower of discrete readings.",
+    "zh": "表明在粗步内各细步不只列出一次时平衡能否跨过粗步合成；检验同时使步变粗、使单位变细的读法；在离散读法之塔之外读出实数时间。"
+  },
   "correspondence": {
-    "zh": "零前提计划把离散的步列为表示的一项承诺（Ren 的第 4 项：时间）；Ren 2026-10-11 定下先做较粗的步，再做连续时间。本结果是对这项承诺的检验，不是新的前提：问的是 Becoming.Locality 的局部条件在粗步上是否由粗步内各细步上的条件合成。规律本身对每个世界成立，所以对在粗步上读出的世界也成立；要证的只是条件是否合成。",
-    "en": "The zero-premise plan lists discrete steps as a commitment of the representation (Ren's item 4: time); Ren set on 11 October to do coarser steps first, then continuous time. This result tests that commitment and adds no premise: it asks whether the local conditions of Becoming.Locality at a coarse step compose from those at the fine steps inside it. The laws hold of every world, so of a world read at coarser steps; what has to be shown is whether their conditions compose."
+    "en": "The zero-premise plan lists discrete steps as a commitment of the representation (Ren's item 4: time). This result tests that commitment and adds no premise: it asks whether the local conditions of Becoming.Locality at a coarse step compose from those at the fine steps inside it. The laws hold of every world, so of a world read at coarser steps; what has to be shown is whether their conditions compose. The names (Strict, span, sample, Held and others) are an AI choice.",
+    "zh": "零前提计划把离散的步列为表示的一项承诺（Ren 的第 4 项：时间）。本结果是对这项承诺的检验，不加前提：问的是 Becoming.Locality 的局部条件在粗步上是否由粗步内各细步上的条件合成。规律本身对每个世界成立，所以对在粗步上读出的世界也成立；要证的只是条件是否合成。名称（Strict、span、sample、Held 等）是 AI 所选。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
   "aliases": [
@@ -137,30 +326,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
-      "detail": {
-        "zh": "Cancelling 与 Averaging：粗步上平衡与耗散，细步上不然（细步上的不平衡相互抵消；无损给予的细步被后来的细步抵过）。",
-        "en": "Cancelling and Averaging: balance and dissipation hold at the coarse step but not at the fine ones (fine imbalances cancel; a fine step giving without loss is outweighed by a later one)."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
-      "detail": {
-        "zh": "Strobe：一个关系项在每个粗步的第二个细步上活跃、给予与取用，在两个读出时刻都不活跃；粗步上只有活跃者给予与取用不成立，细步上的生起与不再活跃复现而粗步上安静。Delay：在接受者开始立着之前于粗步内所作的给予，被读为跨过粗步的降生。",
-        "en": "Strobe: a relatum active at the second fine step of each coarse step gives and takes there and is off at both sampling times; only active relata giving and taking fail at the coarse step, and arising and ceasing recur at the fine steps while the coarse steps are quiet. Delay: a gift made inside a coarse step before the receiver comes to stand is read as a descent across the coarse step."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "反方向不合成：粗步上的平衡与耗散不给出细步上的（Cancelling.coarse_not_fine、Averaging.coarse_not_fine）。只有活跃者给予、只有活跃者取用依步而定（Strobe.acting_taking_step_relative），只在活动于区间内保持时合成（Flow.sample_acting_on、sample_taking_on、Web.held_of_unit、Web.held_of_constant）；有界的依存传递也依步而定（Delay.transmitting_step_relative）。粗步上的复现是细步上的复现，反之不然（Strobe.converse_fails）。未证：实数时间（见时间之塔）；无步的生成能否由离散步表示；平衡的合成能否去掉“只列出一次”。这是粗步上的读法，不是量的单位的细分（Becoming.Resolution）。不推出任何前提。名称（Strict、span、sample、Held 等）是 AI 所选。",
-    "en": "The converse does not compose: balance and dissipation at the coarse step do not give them at the fine steps (Cancelling.coarse_not_fine, Averaging.coarse_not_fine). Only active relata giving and only active relata taking are step-relative (Strobe.acting_taking_step_relative), composing only where activity holds over the interval (Flow.sample_acting_on, sample_taking_on, Web.held_of_unit, Web.held_of_constant); bounded transmission of dependences is step-relative too (Delay.transmitting_step_relative). Recurring at the coarse steps is recurring at the fine ones, not conversely (Strobe.converse_fails). Not shown: real-valued time (beyond the tower of discrete readings); whether a becoming given with no step can be represented by discrete steps; whether listing once can be dropped for balance. This is a reading at a coarser step, not a refinement of the unit of amounts (Becoming.Resolution). No premise is derived. The names (Strict, span, sample, Held and others) are the AI's."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：新核心模块 Becoming.Sampling 的 90 项定理全部空依赖；同一回执覆盖包内 75 个模块，共 4518 项定理／6370 项声明审计；外围回执 20261013T095049.338744Z 通过。先在暂存树中从前导编译，无警告，逐条 #print axioms 全部为空。核心闭包 49 个模块，每条源声明的公理报告为空，只用 Lean 内置前导即可编译。尚无独立审查，作者反审见整合文档 §80。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 90 theorems of the new core module Becoming.Sampling all have empty axiom reports; the same receipt covers the package's 75 modules with 4518 theorems/6370 declaration audits; periphery receipt 20261013T095049.338744Z passed. It was first compiled from the prelude in a scratch tree, with no warnings and every #print axioms empty. The core closure is 49 modules, every source declaration in it with an empty axiom report, compiling from Lean's prelude alone. There is no independent review yet; the author's counterreview is in §80 of the integration note."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
@@ -484,10 +649,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "离散读法之塔（continuous-time-as-tower）之外的实数时间；平衡的合成能否去掉“只列出一次”；与分辨率一线合并为同时改变步与单位的检验。",
-    "en": "Real-valued time beyond the tower of discrete readings (continuous-time-as-tower); whether listing once can be dropped for balance to compose; a joint test with the resolution line changing both the step and the unit."
-  },
   "history": [
     {
       "zh": "2026-10-11 Sampling：新增，按 Ren 2026-10-11 的顺序“先做更粗的步，再做连续时间”与零前提计划；新核心模块 Becoming.Sampling（导入 Becoming.Locality、Becoming.Premises），由“0 axiom completeness”会话起草并验证，按工作板认领；是对表示承诺（时间）的检验，不是新的前提；见整合文档 §80。",
@@ -573,6 +734,28 @@
     {
       "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Counted to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.Counted to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the statement kept, with the strictly increasing times named and its last clause restated as the conditions that only active relata give and take, which need not compose (the earlier \"only active giving and taking are step-relative\" could be read as no other condition being so, while bounded transmission is too); the claim split into 15 laws, each read against its declarations in Sampling.lean, with the decided equality of relata that reading a flow at coarser steps takes written into each flow law; the limitations to four does-not-show items, the two counterexamples (unchanged) and a third hypothesis; the standard boundaries no-ethical-premise, discrete-steps and decidability cited; Web.Held and Web.DrawingHeld were already referenced; no premise, status, reference, proof binding or source hash changed. Every earlier sentence is mapped in [laws-at-coarser-steps.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/laws-at-coarser-steps.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, the counterexamples, the correspondence, each read against the Lean it cites. A cold read of the applied record was taken in the correspondence.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述保留，写出严格递增的时刻，末一分句改述为“只有活跃者给予、取用”这两条条件不必合成（原来的“只有活跃者给予与取用依步而定”可被读作别无他者依步而定，而有界传递也依步而定）；主张拆为 15 条规律，各条对照 Sampling.lean 中的声明核读，在粗步上读出流所需的关系项相等可判定写入每条关于流的规律；限制改为四条“未表明”、两条反例（不变）与第三条前提；引用通用边界 no-ethical-premise、discrete-steps 与 decidability；Web.Held 与 Web.DrawingHeld 原已在引用中；前提、状态、引用、证明绑定与来源哈希均未改变。每句旧文本的去向见 [laws-at-coarser-steps.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/laws-at-coarser-steps.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、反例、对应，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及对应。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/f2c27c27e59ded7a/laws-at-coarser-steps.json",
+      "sha256": "f2c27c27e59ded7abb1fd4498e703bfc93af8c14df83c8dbcd91fc60bd8b61d2",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/fec1222bf3f1930e/laws-at-coarser-steps.json",
+      "sha256": "fec1222bf3f1930e3b50e4967e789ccec65da6add5763b0a732ba819c4789659",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

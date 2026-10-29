@@ -185,7 +185,15 @@ class Schema2ValidationTests(unittest.TestCase):
 class Schema1StatementTests(unittest.TestCase):
     def test_statement_renders_first_and_leaves_other_pages_unchanged(self):
         records, _ = registry.load_records()
-        r = copy.deepcopy(next(r for r in records if r.get('schema_version') == 1 and 'statement' not in r))
+
+        def schema_1_without_statement():
+            # Since DF3 no live record is on schema 1; a migrated record's first text version is its schema-1 bytes.
+            for live in records:
+                for v in live.get('text_versions', [])[:1]:
+                    old = json.loads((registry.ROOT / v['path']).read_text())
+                    if old.get('schema_version') == 1 and 'statement' not in old and old.get('id') == live['id']:
+                        return {**{k: x for k, x in live.items() if k.startswith('_')}, **old}
+        r = copy.deepcopy(schema_1_without_statement())
         before = registry.render_record(r)
         r['statement'] = pair('Every exchange balances along the run.', '沿运行每次交换都平衡。')
         after = registry.render_record(r)

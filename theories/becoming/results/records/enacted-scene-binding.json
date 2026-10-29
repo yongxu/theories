@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "enacted-scene-binding",
   "title": {
     "zh": "行动形成可供绑定的场景",
@@ -8,21 +8,180 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F09",
-  "reviewed_at_utc": "2026-10-25T14:45:37+00:00",
-  "claim": {
-    "zh": "跨情境读出：对每类记录与每类相等可判定的意义，在不重复的候选范围中，形式解析为某意义，恰当每个关涉该形式的记录都提供它，且其他每个意义都缺于某个关涉的记录。对行动形成的场景：从每个转移记录对二词编码成组、候选范围不重复的处境出发，经每段移动与命名的历史，每个有限编码序列的解释是其原子的组合，恰当对每个词，先前记录与沿途所闻的命名（各提供学习者所在处可及者）分离其原子。协调的历史（coordinated 37）是实例；在一处命名（stationary 37）缺分离，从原子不可及处命名（mistimed 37）缺覆盖。指定空间关系与有支持的移动／命名史产生已有绑定构造的精确解释输入；另外有实际响应及访问、保留、时序失败见证。",
-    "en": "Cross-situational resolution: for every type of records and every type of meanings compared decidedly, a form resolves to a meaning of a repertoire without repeats exactly when every record bearing on the form offers it and every other meaning is missing from some bearing record. For enacted scenes: from every situation whose transition record groups the two-word encoding and whose repertoire has no repeats, after every history of moves and namings, every finite encoded sequence is interpreted as the assembly of its atoms exactly when, for each word, the earlier records and the namings heard along the history, each offering what was accessible where the learner stood, separate its atom. The coordinated history (coordinated 37) is an instance; naming from one place (stationary 37) fails separation, and naming a site from where its atom is not accessible (mistimed 37) fails coverage. The specified spatial arrangement and supported movement/naming history produce the previous binding construction’s exact interpretation inputs; separate witnesses cover actual response and access, retention and timing failures."
+  "reviewed_at_utc": "2026-10-28T12:12:15+00:00",
+  "statement": {
+    "en": "For a repertoire without repeats, a form resolves to a meaning in it exactly where every bearing record offers it and every other meaning is missing from one; after any history of moves and namings, every sequence is read rightly exactly where the earlier records and those heard separate each atom.",
+    "zh": "对无重复的候选范围，形式解析为其中某意义，恰当每个关涉它的记录都提供该意义、其他每个意义都缺于某个关涉记录；经每段移动与命名的历史，每个序列被正确解释，恰当先前记录与所闻记录一起分离每个原子。"
   },
+  "laws": [
+    {
+      "en": "For records and meanings of any types, meanings compared decidedly, and any Boolean reading of which records bear on a form and what each offers: for a repertoire without repeats, a form's candidates (the meanings every bearing record offers) are exactly e, and the form resolves to e, exactly when e is in the repertoire, every bearing record offers it and every other meaning is missing from some bearing record.",
+      "zh": "对任意类型的记录与意义（意义可判定相等）及哪些记录关涉形式、各提供什么的任意布尔读法：对无重复的范围，形式的候选（每个关涉记录都提供的意义）恰为 e、形式解析为 e，恰当 e 在范围中、每个关涉记录都提供它、其他每个意义都缺于某个关涉记录。",
+      "declarations": [
+        "Becoming.CrossSituational.candidates",
+        "Becoming.CrossSituational.unique",
+        "Becoming.CrossSituational.candidates_eq_iff",
+        "Becoming.CrossSituational.resolves_iff"
+      ]
+    },
+    {
+      "en": "Where the target is in the repertoire and every record bearing on the form offers it, any unique candidate is the target.",
+      "zh": "目标在范围中且每个关涉该形式的记录都提供它时，任何唯一候选都是目标。",
+      "declarations": [
+        "Becoming.CrossSituational.resolved_is_target"
+      ]
+    },
+    {
+      "en": "With a repeated meaning the separation conditions can hold while the candidates are that meaning twice, not once; one record omitting the target and offering only another meaning leaves that meaning as the only candidate.",
+      "zh": "意义重复时，分离条件可以成立而候选是该意义两次而非一次；一条遗漏目标、只提供另一意义的记录使该意义成为唯一候选。",
+      "declarations": [
+        "Becoming.CrossSituational.Repeated.separated",
+        "Becoming.CrossSituational.Repeated.not_resolved",
+        "Becoming.CrossSituational.Omitted.wrong_unique",
+        "Becoming.CrossSituational.Omitted.target_uncovered"
+      ]
+    },
+    {
+      "en": "For every process, meanings compared decidedly and a repertoire without repeats, a form resolves to e after the first n moves of a run exactly when e is in the repertoire, every bearing move among them offers it, and every other meaning is missing from some bearing move.",
+      "zh": "对每个过程、可判定相等的意义与无重复的范围：运行的前 n 步之后形式解析为 e，恰当 e 在范围中、其间每个关涉的步都提供它、其他每个意义都缺于某个关涉的步。",
+      "declarations": [
+        "Becoming.Courses.run_resolves_iff"
+      ]
+    },
+    {
+      "en": "For meanings compared decidedly and a repertoire without repeats, where every word is a course of a process from s back to s and grouping by adjacency recovers the words of every encoded sequence, reading each group by resolution gives the meanings of the words of every such course exactly when, for each word, its bearing records separate its meaning.",
+      "zh": "对可判定相等的意义与无重复的范围：凡每个词都是过程从 s 回到 s 的历程、按相邻分组恢复每个编码序列的词，以解析读每组给出每个这样历程中词的意义，恰当对每个词，关涉它的记录分离其意义。",
+      "declarations": [
+        "Becoming.Courses.course_resolves_every_iff"
+      ]
+    },
+    {
+      "en": "In the acquired-binding machines, for every lexicon whose repertoire has no repeats, the word of an atom resolves to it exactly when its admitted records separate it; where the lexicon's record of transitions also groups the two-word encoding, every encoded sequence is interpreted as the assembly of its atoms exactly when each word's records separate its atom.",
+      "zh": "在取得绑定的机器中，对范围无重复的每个词库，原子之词解析为该原子，恰当其被接纳记录分离它；词库的转移记录又把二词编码成组时，每个编码序列被解释为其原子的组合，恰当每个词的记录分离其原子。",
+      "declarations": [
+        "Becoming.MachineInstances.resolve_iff",
+        "Becoming.MachineInstances.interprets_every_iff_separated"
+      ]
+    },
+    {
+      "en": "In an enacted scene whose record of transitions groups the two-word encoding, every move adds exactly the record heard, naming the site of an atom recording its word with the alternatives accessible where the learner stands; along every history the records are the earlier ones and those heard.",
+      "zh": "在转移记录把二词编码成组的行动场景中，每步恰添加所闻记录：命名某原子之处，记下其词及学习者所在处可及的候选；沿每段历史，记录是先前的与所闻的。",
+      "declarations": [
+        "Becoming.MachineInstances.step_records",
+        "Becoming.MachineInstances.enact_records"
+      ]
+    },
+    {
+      "en": "From every situation whose record of transitions groups the two-word encoding and whose repertoire has no repeats, after every history of moves and namings, every encoded sequence is interpreted as the assembly of its atoms exactly when, for each word, the earlier records and the namings heard along the history separate its atom.",
+      "zh": "从转移记录把二词编码成组、范围无重复的每个处境出发，经每段移动与命名的历史，每个编码序列被解释为其原子的组合，恰当对每个词，先前记录与沿途所闻的命名分离其原子。",
+      "declarations": [
+        "Becoming.MachineInstances.scene_interprets_every_iff"
+      ]
+    },
+    {
+      "en": "The coordinated history, with 37 units of support, is an instance: its record groups the encoding, each word resolves to its atom, and every encoded sequence is interpreted as the assembly of its atoms.",
+      "zh": "有 37 单位支持的协调历史是实例：其记录把编码成组，每个词解析为其原子，每个编码序列被解释为其原子的组合。",
+      "declarations": [
+        "Becoming.MachineInstances.coordinated_groups",
+        "Becoming.MachineInstances.coordinated_resolves",
+        "Becoming.MachineInstances.coordinated_interprets_every",
+        "Becoming.MachineInstances.coordinated_from_history"
+      ]
+    },
+    {
+      "en": "Naming from one place fails separation, the other atom being accessible at every naming, and naming a site from where its atom is not accessible fails coverage: in both histories not every encoded sequence is interpreted as the assembly of its atoms.",
+      "zh": "在一处命名缺分离（另一原子在每次命名时都可及），从原子不可及处命名缺覆盖：两段历史中都不是每个编码序列都被解释为其原子的组合。",
+      "declarations": [
+        "Becoming.MachineInstances.stationary_fails",
+        "Becoming.MachineInstances.mistimed_fails"
+      ]
+    },
+    {
+      "en": "On natural-number positions with Manhattan range two, the coordinated history yields exactly the interpretation inputs of the earlier acquired-binding history (log, repertoire, records, exclusions), every encoded sequence is interpreted as its atoms, and the utterance runs to the response [true, false, true], leaving no support with 30 units used.",
+      "zh": "在自然数位置、Manhattan 范围 2 上，协调历史恰给出先前取得绑定历史的解释输入（日志、范围、记录、排除），每个编码序列被解释为其原子，话语执行为回应 [true, false, true]，支持余 0、已用 30 单位。",
+      "declarations": [
+        "Generative.EnactedScene.enacted_scenes_supply_the_previous_binding_inputs",
+        "Generative.EnactedScene.enacted_access_enters_all_sequence_interpretation",
+        "Generative.EnactedScene.enacted_access_reaches_actual_response"
+      ]
+    },
+    {
+      "en": "Mistimed naming ends at the position and support of the coordinated history and hears each word twice, yet binds each word to the other atom and gives the inverted response; naming after moving where only the extra site is in view binds the first word to it; access without retained records binds nothing; with 36 units of support the utterance is interpreted but not executed.",
+      "zh": "错时命名终于与协调历史相同的位置与支持、每个词都听到两次，却把每个词绑定到另一原子并给出反转回应；移到只见额外位置之处后命名，把第一个词绑定于它；有访问而不保留记录则不绑定；支持为 36 单位时话语被解释却不执行。",
+      "declarations": [
+        "Generative.EnactedScene.unchanged_position_and_name_counts_do_not_establish_coordination",
+        "Generative.EnactedScene.mistimed_naming_produces_an_actual_inverted_response",
+        "Generative.EnactedScene.a_clear_view_can_omit_the_named_target",
+        "Generative.EnactedScene.access_without_recording_does_not_acquire_the_bindings",
+        "Generative.EnactedScene.movement_support_can_run_out_before_a_response"
+      ]
+    },
+    {
+      "en": "In the enacted scene from 24 units of support, a move to (2, 2) is not made: the learner stays at (1, 0) and the same two sites stay in view.",
+      "zh": "在从 24 单位支持出发的行动场景中，向 (2, 2) 的移动不发生：学习者留在 (1, 0)，可见的仍是同样两个位置。",
+      "declarations": [
+        "Generative.EnactedScene.impossible_movement_does_not_invent_a_new_scene"
+      ]
+    }
+  ],
   "hypotheses": [
     {
-      "zh": "给定整数二维位置、Manhattan 距离与范围2、三个已识别操作位置、移动规律、命名约定和安排。",
-      "en": "Integer two-dimensional positions, Manhattan distance and range two, three identified operation sites, movement law, naming convention and schedule are supplied."
+      "zh": "给定自然数二维位置、Manhattan 距离与范围2、三个已识别操作位置、移动规律、命名约定和安排。",
+      "en": "Natural-number two-dimensional positions, Manhattan distance and range two, three identified operation sites, movement law, naming convention and schedule are supplied."
     },
     {
       "zh": "复用已取得分节与绑定架构；成功史有37单位声明支持，移动消耗5单位。",
       "en": "The acquired grouping/binding architecture is reused; the successful history has 37 declared support units, including five consumed by movement."
+    },
+    {
+      "zh": "一般规律中，意义可判定相等，候选范围无重复。",
+      "en": "For the general laws, meanings are compared decidedly and the repertoire has no repeats."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "It does not show how the schedule of moves and namings is formed.",
+      "zh": "不表明移动与命名的安排如何形成。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "It does not explain complete attention, perceptual categories, understanding of intentions or their evolutionary origins.",
+      "zh": "不说明完整注意、知觉类别、意图理解或其演化来源。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The primary evidence compared constrains automatic transfer but identifies no unique mechanism or evolutionary history.",
+      "zh": "所比较的原始证据约束自动迁移，但未识别唯一机制或演化史。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EnactedScene.lean",
+      "detail": {
+        "zh": "位置和名称次数相同可因时序产生相反绑定；清楚视野漏掉所指可误学；访问无保留不形成绑定，支持不足阻断移动或执行。",
+        "en": "Matching positions and name counts can yield inverted bindings through timing; a clear view omitting the target can mislead; access without retention does not bind, and insufficient support prevents movement or response."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CrossSituational.lean",
+      "detail": {
+        "zh": "意义有重复时解析不是分离（Repeated）；一条遗漏目标的记录可留下错误的唯一候选（Omitted）。",
+        "en": "With a repeated meaning, resolution is not separation (Repeated); one record omitting the target can leave a wrong unique candidate (Omitted)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free"
+  ],
+  "validation_scope": {
+    "en": "Core: the current bytes of Becoming.CrossSituational and Becoming.Courses are bound to receipt becoming-checks/20261020T051144.879480Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for every cited declaration. Periphery: MachineInstances is bound to machine-instances-checks/20261020T161859.257200Z and EnactedScene to enacted-scene-verification.json, both Lean 4.29.1, their cited declarations using propext and some Quot.sound. Author counterreview and a comparison with primary sources; no new experiment or independent acceptance.",
+    "zh": "核心：CrossSituational、Courses 绑定合并核心检查器回执 becoming-checks/20261020T051144.879480Z（Lean 4.29.1），公理报告皆空。外围（Lean 4.29.1）：MachineInstances 绑定 20261020T161859.257200Z，EnactedScene 绑定 enacted-scene-verification.json，所引声明用 propext，部分用 Quot.sound。作者反审并与原始文献比较；无新实验或独立验收。"
+  },
+  "next_delta": {
+    "en": "Identify, in a matched developmental procedure, how formed access and retained source and order guide actual use, telling present reliance apart from endorsement of old content.",
+    "zh": "在匹配的发育程序中识别已形成的访问及所保留的来源与次序如何引导实际使用，区分当前依赖与对旧内容的认可。"
+  },
   "correspondence": {
     "zh": "接收位置与被命名位置是同一局部安排的关系角色。范围表示可取得性，未独自解释完整视野、注意、身体或沟通意图。",
     "en": "Receiving and named positions are relational roles within one local arrangement. Range represents accessibility; it does not itself explain a full visual field, attention, bodies or communicative intention."
@@ -54,38 +213,14 @@
           "en": "The movement history has the same log, repertoire, binding records and exclusions."
         },
         "conditions": {
-          "zh": "解释输入相同，不要求整个状态或支出历史相同；额外移动成本保留。",
-          "en": "Interpretation inputs match; whole-state or expenditure-history identity is not assumed, and movement costs remain."
+          "zh": "解释输入相同，不要求整个状态或支持使用史相同；移动所用的支持保留。",
+          "en": "Interpretation inputs match; identity of whole states or of the history of support used is not assumed, and the support movement uses is kept."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EnactedScene.lean"
       }
     }
   ],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EnactedScene.lean",
-      "detail": {
-        "zh": "位置和名称次数相同可因时序产生相反绑定；清楚视野漏掉所指可误学；访问无保留不形成绑定，支持不足阻断移动或执行。",
-        "en": "Matching positions and name counts can yield inverted bindings through timing; a clear view omitting the target can mislead; access without retention does not bind, and insufficient support prevents movement or response."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CrossSituational.lean",
-      "detail": {
-        "zh": "意义有重复时解析不是分离（Repeated）；一条遗漏目标的记录可留下错误的唯一候选（Omitted）。",
-        "en": "With a repeated meaning, resolution is not separation (Repeated); one record omitting the target can leave a wrong unique candidate (Omitted)."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "是给定安排下的新输入接通，不是移动安排自发形成、完整注意、知觉分类、意向理解或演化心理证明。",
-    "en": "A new input composition under a supplied schedule, not a proof of schedule formation, complete attention, perceptual categories, intention understanding or evolutionary psychology."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 新查16项定理／29项声明审计，288项继承审计分列；作者反审和含未泛化结果的原始文献比较，无新实验或独立验收。",
-    "en": "Lean 4.29.1: 16 new theorems / 29 declaration audits, with 288 inherited audits separately rebuilt; author counterreview and primary comparison including failed generalization, without a new experiment or independent acceptance."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EnactedScene.lean",
@@ -96,7 +231,11 @@
         "Generative.EnactedScene.enacted_access_enters_all_sequence_interpretation",
         "Generative.EnactedScene.enacted_access_reaches_actual_response",
         "Generative.EnactedScene.unchanged_position_and_name_counts_do_not_establish_coordination",
-        "Generative.EnactedScene.a_clear_view_can_omit_the_named_target"
+        "Generative.EnactedScene.a_clear_view_can_omit_the_named_target",
+        "Generative.EnactedScene.mistimed_naming_produces_an_actual_inverted_response",
+        "Generative.EnactedScene.access_without_recording_does_not_acquire_the_bindings",
+        "Generative.EnactedScene.movement_support_can_run_out_before_a_response",
+        "Generative.EnactedScene.impossible_movement_does_not_invent_a_new_scene"
       ]
     },
     {
@@ -124,7 +263,13 @@
       "declarations": [
         "Becoming.CrossSituational.candidates_eq_iff",
         "Becoming.CrossSituational.resolves_iff",
-        "Becoming.CrossSituational.resolved_is_target"
+        "Becoming.CrossSituational.resolved_is_target",
+        "Becoming.CrossSituational.unique",
+        "Becoming.CrossSituational.Repeated.separated",
+        "Becoming.CrossSituational.Repeated.not_resolved",
+        "Becoming.CrossSituational.Omitted.wrong_unique",
+        "Becoming.CrossSituational.Omitted.target_uncovered",
+        "Becoming.CrossSituational.candidates"
       ]
     },
     {
@@ -269,10 +414,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "既有条件连接保留；下一重点是在匹配发育程序中识别已取得访问及所保留来源／次序如何进入实际使用，分别观察当前依赖与旧内容认可。原典已约束自动迁移，但未识别唯一机制或演化史。",
-    "en": "Preserve the completed conditional connections. Next identify how formed access and retained source/order information guide actual use in a matched developmental procedure, distinguishing present reliance from old-content endorsement. Primary evidence constrains automatic transfer without identifying a unique mechanism or evolutionary history."
-  },
   "history": [
     {
       "zh": "2026-10-08：由实际移动计算可取得候选，并正式接通已检查的绑定解释；动作选择与类别形成的前提保留。",
@@ -335,6 +476,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): claim made exact to the Lean: the cross-situational law takes meanings compared decidedly (decidable equality of meanings) besides a repertoire without repeats.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：主张依 Lean 改精确：跨情境之律除不重复的候选范围外，还取意义之相等可判定。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement written from the claim and the home section; the claim split into twelve laws, each read against its declarations in CrossSituational.lean, Courses.lean, MachineInstances.lean and EnactedScene.lean (resolution as separation, coverage, the repeated and omitted witnesses, resolution along a run and over courses of words, the machine law, the records heard, the scene law, the coordinated instance, the failing histories, the enacted-scene periphery and its failures); the first hypothesis made exact to the Lean, whose positions are pairs of natural numbers, not integers; a hypothesis added for the general laws' decided meanings and distinct repertoire; the limitation became two does-not-show items and the next step's note on primary evidence a third; the counterexamples, which declarations witness, kept; candidates, unique, Repeated.separated, Repeated.not_resolved, Omitted.wrong_unique and Omitted.target_uncovered (CrossSituational.lean) and the mistimed response, retention and support witnesses (EnactedScene.lean) added to their files' references; in a dependency's conditions the words of exchange replaced by the support they name; the shared boundary no-ethical-premise-core-axiom-free cited; no premise the Lean takes, no status and no source hash changed. Every earlier sentence is mapped in [enacted-scene-binding.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/enacted-scene-binding.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the references, laws, each read against the Lean it cites. A cold read of the applied record was taken in the statement.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依主张与所在章节写出陈述；主张拆为十二条规律，各条对照 CrossSituational.lean、Courses.lean、MachineInstances.lean 与 EnactedScene.lean 中的声明核读（解析即分离、覆盖、重复与遗漏见证、沿运行与在词历程上的解析、机器规律、所闻记录、场景规律、协调实例、失败历史、行动场景外围及其失败）；第一条前提按 Lean 改准：位置是自然数对而非整数；新增一条前提，写明一般规律所需的可判定意义与无重复范围；限制改为两条“未表明”，下一步中关于原始证据的说明改为第三条；反例有声明见证，保留；candidates、unique、Repeated.separated、Repeated.not_resolved、Omitted.wrong_unique 与 Omitted.target_uncovered（CrossSituational.lean）及错时回应、保留与支持的见证（EnactedScene.lean）加入其文件的引用；一项依赖条件中的交换词改为其所指的支持；引用通用边界 no-ethical-premise-core-axiom-free；Lean 所取的前提、状态与来源哈希均未改变。每句旧文本的去向见 [enacted-scene-binding.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/enacted-scene-binding.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及引用、规律，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及陈述。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/30d1f8d98ab57d92/enacted-scene-binding.json",
+      "sha256": "30d1f8d98ab57d9223f3ac7f4b6cdb5ae9a49d12bc6d4112e5ca7cd1a0db03d4",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/8c876dc8a2741c5b/enacted-scene-binding.json",
+      "sha256": "8c876dc8a2741c5b0a3c464007b95918d30a4ee047fe2f88428bf38662f4918a",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

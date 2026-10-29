@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "joining-open-map-factor",
   "title": {
     "zh": "开放接合映射的保真与唯一共同因子",
@@ -8,20 +8,104 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F22",
-  "reviewed_at_utc": "2026-10-08T13:52:31.763955+00:00",
-  "claim": {
-    "zh": "保留接合并提升固定单位置接合的映射保留全部关联问题；两个这样的共同细化投影有唯一通向同测片段对的函数，同时保留接合并与两个投影相容。",
-    "en": "A join-preserving map lifting joins at one fixed participant preserves all incidence questions; two such common-refinement projections have a unique join-preserving function to the equally answering pairs commuting with both projections."
+  "reviewed_at_utc": "2026-10-28T11:55:03+00:00",
+  "statement": {
+    "en": "A map of joinings that keeps the joining and lifts occurrences role by role is an open map of the role frames and keeps every branching test of roles; two such maps from one joining factor through the pairs alike in their roles, the factor keeping the joining and unique at every fragment.",
+    "zh": "保持接合并逐角色提升发生的接合映射，是角色框架的开映射，并保持每个角色分支检验；自同一接合出发的两个这样的映射，经角色上相似的片段对分解，分解保持接合，且在每个片段处唯一。"
   },
+  "laws": [
+    {
+      "en": "For any two frames, a map of configurations is open where its graph is a bisimulation; it is open exactly where it keeps the claims, carries every step to a step, and lifts every step from an image to a step onto it. Under an open map each configuration is alike to its image, and likeness is kept and reflected.",
+      "zh": "对任两个框架：构型映射的图是互模拟时，映射是开的；映射开，恰当它保持断言、把每一步带到一步，并把从像出发的每一步提升为到它的一步。在开映射下，每个构型都与其像相似，相似被保持并被反映。",
+      "declarations": [
+        "Becoming.OpenMap",
+        "Becoming.openMap_iff",
+        "Becoming.OpenMap.alike",
+        "Becoming.OpenMap.alike_iff"
+      ]
+    },
+    {
+      "en": "Read through roles, a joining's fragments and occurrences of joining are places: a fragment enters an occurrence by a role it holds there, and an occurrence is left by a role to the fragment holding it; nothing else is claimed.",
+      "zh": "经角色读取时，接合的片段与接合的发生都是位置：片段以它在某次发生中所持的角色进入该发生，发生以某角色离开到持该角色的片段；此外不作任何断言。",
+      "declarations": [
+        "Becoming.Joining.Occurrence",
+        "Becoming.Joining.Incident",
+        "Becoming.Joining.roleFrame"
+      ]
+    },
+    {
+      "en": "For any two joinings, a map keeps the joining where fragments joined into one map to fragments joined into its image, and is an open map of joinings where it also lifts every occurrence holding the image of x in a role to one holding x in that role, mapped onto it role by role; exactly these maps keep the joining and read through roles as open maps of frames.",
+      "zh": "对任两个接合：映射保持接合，是指结合成某片段的片段映到结合成其像的片段；它还把每个在某角色上持 x 之像的发生，提升为在该角色上持 x、逐角色映到它的发生时，是接合的开映射；恰是这些映射保持接合，且经角色读取是框架的开映射。",
+      "declarations": [
+        "Becoming.Joining.Keeps",
+        "Becoming.Joining.OpenMap",
+        "Becoming.Joining.placeMap",
+        "Becoming.Joining.openMap_iff"
+      ]
+    },
+    {
+      "en": "Under any open map of joinings, every fragment is alike in its roles to its image and passes the same branching tests of roles, with no premise.",
+      "zh": "在任一接合开映射下，每个片段在角色上与其像相似，并通过相同的角色分支检验，无需前提。",
+      "declarations": [
+        "Becoming.Joining.OpenMap.alike",
+        "Becoming.Joining.OpenMap.sameBranchingTests"
+      ]
+    },
+    {
+      "en": "For two open maps p and q from one joining L to joinings J and K, the map z ↦ (p z, q z) into the pairs of fragments alike in their roles, joined pair by pair, keeps L's joining and commutes with both maps, and every map into those pairs commuting with both agrees with it at every fragment; no finiteness and no decision is used.",
+      "zh": "对自同一接合 L 到接合 J、K 的两个开映射 p、q：映射 z ↦ (p z, q z) 映入角色上相似的片段对（逐对结合），保持 L 的接合并与两映射相容；每个映入这些对、与两者相容的映射都在每个片段处与它一致；不用有限性，也不用判定。",
+      "declarations": [
+        "Becoming.Joining.Matched",
+        "Becoming.Joining.span",
+        "Becoming.Joining.factor",
+        "Becoming.Joining.universal_factor"
+      ]
+    },
+    {
+      "en": "With extensionality of functions as a named hypothesis, for two open maps from one joining, every function into the pairs alike in their roles that commutes with both maps is their factor.",
+      "zh": "以函数外延性为明示前提时，对自同一接合出发的两个开映射，每个映入角色上相似之对、与两映射相容的函数都就是它们的分解。",
+      "declarations": [
+        "Becoming.Joining.factor_unique_of_ext"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "同一 L 的两映射 p:L→J、q:L→K 分别满足明示 OpenMap。",
       "en": "Two maps p:L→J and q:L→K from the same L satisfy the explicit OpenMap condition."
+    },
+    {
+      "en": "Uniqueness of the factor is stated at every fragment; as a function it takes extensionality of functions as a named hypothesis. No finiteness of the joinings is required.",
+      "zh": "分解的唯一性在每个片段处陈述；作为函数的唯一性取函数外延性为明示前提。不要求接合有限。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "The factor keeps the joining and commutes with both maps; that it is open or onto is not shown.",
+      "zh": "分解保持接合并与两映射相容；它是开映射或满射未被表明。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "No isomorphism of the whole and no unique provenance of a fragment follows from the factor.",
+      "zh": "由分解推不出整体的同构或片段的唯一来源。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked with Lean 4.29.1: the core modules Becoming.Joining and Becoming.JoiningRoles by the consolidated core checker, bound to becoming-checks/20261020T051144.879480Z for both files' current bytes, every cited declaration with an empty axiom report. The superseded periphery module ExplanatoryJoiningRefinement and the bridge JoiningBridge are provenance; their check (explanatory-joining-refinement-checks/20261008T134730.060831Z: 256 declaration audits, 43 new, 81 with standard axioms) keeps its scope. No independent review.",
+    "zh": "Lean 4.29.1 实查：核心 Joining 与 JoiningRoles 由合并核心检查器检查，绑定 becoming-checks/20261020T051144.879480Z，所引声明公理报告皆空。外围 ExplanatoryJoiningRefinement 与桥接 JoiningBridge 已被取代，为来源；其检查（explanatory-joining-refinement-checks/20261008T134730.060831Z：256 项审计，新 43 项）保持原范围。无独立审查。"
+  },
+  "next_delta": {
+    "en": "State when the factor of two open maps is itself open or onto, and derive the open-map condition for maps other than the projections of a common refinement.",
+    "zh": "说明两个开映射的分解何时本身是开映射或满射，并为共同细化投影以外的映射推出开映射条件。"
+  },
   "correspondence": {
-    "zh": "OpenMap 的强提升条件是给定解释条件；共同细化的投影在前一成果中另有导出。",
-    "en": "The strong OpenMap lifting condition is supplied for a given interpretation; the preceding result derives it for the canonical projections."
+    "zh": "OpenMap 的强提升条件是给定解释条件；共同细化的投影无需前提即满足它（Joining.span_first_open、Joining.span_second_open）。",
+    "en": "The strong OpenMap lifting condition is supplied for a given interpretation; the projections of the common refinement satisfy it with no premise (Joining.span_first_open, Joining.span_second_open)."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joining.lean",
   "aliases": [
@@ -67,23 +151,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/EXPLANATORY-JOINING-CONTEXTS-INTEGRATION.md",
-      "detail": {
-        "zh": "因子只保证保留接合和投影相容，不保证 OpenMap 或满射；无有限性要求，也没有全世界同构或唯一实际来源结论。",
-        "en": "The factor preserves joins and commutes with projections; it is not asserted open or onto. No finiteness is required, and no whole-world isomorphism or unique provenance follows."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "因子只保证保留接合和投影相容，不保证 OpenMap 或满射；无有限性要求，也没有全世界同构或唯一实际来源结论。",
-    "en": "The factor preserves joins and commutes with projections; it is not asserted open or onto. No finiteness is required, and no whole-world isomorphism or unique provenance follows."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 实查：本次43项新声明，213项继承审计，共256项；新9空依赖、34标准，7项含经典选择。冻结源码、日志与回执逐字绑定；非独立 agent 验收。",
-    "en": "Lean 4.29.1 checks 43 new declarations and 213 inherited audits, 256 total; new 9 empty and 34 standard dependency lists, 7 with classical choice. Frozen source/logs bind to the receipt; no independent-agent acceptance."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJoiningRefinement.lean",
@@ -125,7 +192,21 @@
         "Becoming.OpenMap.alike",
         "Becoming.Joining.OpenMap.sameBranchingTests",
         "Becoming.Joining.universal_factor",
-        "Becoming.Joining.openMap_iff"
+        "Becoming.Joining.openMap_iff",
+        "Becoming.openMap_iff",
+        "Becoming.OpenMap.alike_iff",
+        "Becoming.Joining.Occurrence",
+        "Becoming.Joining.Incident",
+        "Becoming.Joining.roleFrame",
+        "Becoming.Joining.Keeps",
+        "Becoming.Joining.OpenMap",
+        "Becoming.Joining.placeMap",
+        "Becoming.Joining.OpenMap.alike",
+        "Becoming.Joining.Matched",
+        "Becoming.Joining.span",
+        "Becoming.Joining.factor",
+        "Becoming.Joining.span_first_open",
+        "Becoming.Joining.span_second_open"
       ]
     },
     {
@@ -197,10 +278,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用有限条件程序与真实余项恢复；继续建立内部语法不同的说明之间余项、判断与实际形成关系的有据翻译，区分语义可判定与实际取得。",
-    "en": "Reuse finite guarded programs and coherent residual recovery; establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition."
-  },
   "history": [
     {
       "zh": "2026-10-08：在既有接合情境研究中继续；共同细化、相容因子、真实信息丢失与保留引用修复各保留准确范围。",
@@ -229,6 +306,28 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryJoiningRefinement and JoiningBridge) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Joining and Becoming.JoiningRoles). 2 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryJoiningRefinement and JoiningBridge）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Joining and Becoming.JoiningRoles）。2 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): title kept; a statement written from the home section and the claim, narrowed to what the Lean proves (the factor maps into the pairs alike in their roles, not pairs answering alike, and is unique at every fragment, as a function only with extensionality of functions); the claim split into 6 laws, each read against its declarations in Becoming.Joining and Becoming.JoiningRoles; a hypothesis added saying how uniqueness is stated and that no finiteness is required; the limitations to two does-not-show items and the standard boundary no-ethical-premise; the counterexample, which only repeated the limitations and cites a study page no declaration of which witnesses it, removed, its sentences carried by those items and the hypothesis; the evidence paragraph rewritten from the receipts; the next step's instruction to reuse dropped; 12 declarations added to the references of their files; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [joining-open-map-factor.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joining-open-map-factor.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, laws, the correspondence, each read against the Lean it cites. A cold read of the applied record was taken in the correspondence, the references.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：标题不变；依主章与主张写出陈述，按 Lean 所证收窄（分解映入角色上相似的片段对，而非回答相同的对；在每个片段处唯一，作为函数的唯一性需函数外延性）；主张拆为 6 条规律，各条对照 Becoming.Joining 与 Becoming.JoiningRoles 中的声明核读；加一条前提，说明唯一性如何陈述及不要求有限性；限制改为两条“未表明”与通用边界 no-ethical-premise；反例只重复限制、所引为研究页且无声明见证，已删去，其句由这些条目与该前提承载；证据段按回执重写；删去下一步中复用的指示；12 个声明加入其文件的引用；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [joining-open-map-factor.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joining-open-map-factor.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、规律、对应，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及对应、引用。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/832f4e6189f0e8f6/joining-open-map-factor.json",
+      "sha256": "832f4e6189f0e8f6427673392b06e222228fbd1b123a19fc8ecac7a46f460f2b",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/7e62f4de90b7a60d/joining-open-map-factor.json",
+      "sha256": "7e62f4de90b7a60dd44d9adaf0d3d056966e93e3ed1180809963cf494a8887b7",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

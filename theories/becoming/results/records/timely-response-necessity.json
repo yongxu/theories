@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "timely-response-necessity",
   "title": {
     "zh": "及时回应的必要关系",
@@ -8,11 +8,95 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F11",
-  "reviewed_at_utc": "2026-10-13T13:04:43.135431+00:00",
-  "claim": {
-    "zh": "原生流／网的两个历程，在共同初始水平、截止前平衡与在场相同、源之外经此前耦合入者回应及共同完整读数下，未按交换顺序及时耦合入的区别不能改变截止时答案。有限加权作答覆盖不超过两侧错误与及时潜在可达权重之和；全不可及时到达时覆盖恰等于两侧错误。",
-    "en": "For two native flow/web courses with common initial levels, prefix balance and presence, response through what coupled in before, outside a source, and a common complete readout, a distinction outside ordered propagation cannot change the answer by its deadline. Finite weighted commitment is at most paired error plus timely potential-reach weight; total nonarrival gives equality with paired error."
+  "reviewed_at_utc": "2026-10-28T11:40:45+00:00",
+  "statement": {
+    "en": "Between two courses with alike initial levels, balance, the same formations present and the rest responding through its couplings before a deadline, an answer read through the reader's couplings is the same in both wherever the reader is unreached by then from the source.",
+    "zh": "两个历程在截止前初始水平相同、平衡、在场形成相同、其余部分经其耦合回应时，凡读者到截止时未被源所及，经读者耦合读出的答案在两者中相同。"
   },
+  "laws": [
+    {
+      "en": "A potential route from a time-indexed source between two courses holds nothing at step 0; a condition is on it at t + 1 where it was at t, or where a formation present at t in the first course takes from or gives to it at t in either course and either is a source at t or has coupled into it, at some s ≤ t, a condition on the route at s, by requirement at s or by level.",
+      "zh": "两个历程之间自时变源出发的潜在路线在第 0 步不含任何条件；条件在 t + 1 在路线上，是指它在 t 已在其上，或某个在 t 于第一个历程在场的形成在任一历程中于 t 从它取或给它，且该形成在 t 是源，或路线上某个 s ≤ t 处的条件在 s 经当时的要求或经水平耦合入该形成。",
+      "declarations": [
+        "Becoming.TimedResponse.TouchesAt",
+        "Becoming.TimedResponse.CoupledIntoAt",
+        "Becoming.TimedResponse.Spread",
+        "Becoming.TimedResponse.not_spread_zero"
+      ]
+    },
+    {
+      "en": "A reader is reached by T where a condition on the route at some s ≤ T couples into it at s. Every route by step t starts from a source step before t, so no reader is reached by T where no formation is a source before T; a reader reached by T is reached by every later step.",
+      "zh": "读者到 T 被所及，是指路线上某个 s ≤ T 处的条件在 s 耦合入它。到第 t 步的每条路线都始于 t 之前的源步，所以 T 之前无源时没有读者到 T 被所及；到 T 被所及的读者到其后每步都被所及。",
+      "declarations": [
+        "Becoming.TimedResponse.ReachedBy",
+        "Becoming.TimedResponse.Spread.has_earlier_source",
+        "Becoming.TimedResponse.not_reached_before_source",
+        "Becoming.TimedResponse.reachedBy_mono"
+      ]
+    },
+    {
+      "en": "For two courses alike at step 0 and, before a deadline D, balanced, with the same formations present and each formation outside a time-indexed source exchanging alike where alike through its couplings so far: every condition not on the route at a step t ≤ D has the same level in both courses at t. Levels alike on what couples into a formation at a step make it alike through its couplings there.",
+      "zh": "对两个历程第 0 步水平相同，且在截止 D 前平衡、在场形成相同、时变源外的每个形成在经其耦合至此相同处交换相同：凡在某步 t ≤ D 不在路线上的条件，在 t 处两个历程中水平相同。某步耦合入一个形成者水平相同，使它在该步经其耦合相同。",
+      "declarations": [
+        "Becoming.TimedResponse.levels_alike_before",
+        "Becoming.TimedResponse.coupling_of_levels"
+      ]
+    },
+    {
+      "en": "For two courses alike at step 0 and, before a deadline D, balanced, with the same formations present and each formation outside a time-indexed source exchanging alike where alike through its couplings so far: where the reader is unreached by D, the levels are alike through its couplings up to D, and every readout of any type giving alike on histories so alike gives the same answer in both.",
+      "zh": "对两个历程第 0 步水平相同，且在截止 D 前平衡、在场形成相同、时变源外的每个形成在经其耦合至此相同处交换相同：读者到 D 未被所及时，两水平史经其耦合至 D 相同；凡在经这些耦合至 D 相同的水平史上给出相同的任意类型读出，在两者中答案相同。",
+      "declarations": [
+        "Becoming.TimedResponse.coupling_alike_before",
+        "Becoming.TimedResponse.answer_alike_before"
+      ]
+    },
+    {
+      "en": "For two courses alike at step 0 and, before a deadline D, balanced, with the same formations present and each formation outside a time-indexed source exchanging alike where alike through its couplings so far, and a readout giving alike on histories alike through the reader's couplings up to D: different answers make its being unreached by D impossible, and with reach by D decided, give it reached.",
+      "zh": "对两个历程第 0 步水平相同，且在截止 D 前平衡、在场形成相同、时变源外的每个形成在经其耦合至此相同处交换相同，及在经读者耦合至 D 相同的水平史上给出相同的读出：不同答案使读者到 D 未被所及成为不可能；到 D 是否被所及可判定时，它们给出读者被所及。",
+      "declarations": [
+        "Becoming.TimedResponse.different_answers_not_unreached",
+        "Becoming.TimedResponse.different_answers_require_reached"
+      ]
+    },
+    {
+      "en": "Where the two courses have the same formations present at every step and every source formation belongs to a given part, a reader reached by some step lies within that part's responsive reach between the courses: the timed route refines the structural reach.",
+      "zh": "两个历程每步在场形成相同、每个源形成属于一个给定部分时，到某步被所及的读者位于两历程间该部分的回应所及之内：及时路线细化结构所及。",
+      "declarations": [
+        "Becoming.TimedResponse.reachedBy_within_response",
+        "Becoming.TimedResponse.Spread.within_response",
+        "Becoming.TimedResponse.touches_coupled_edge",
+        "Becoming.TimedResponse.coupledIntoAt_coupledInto"
+      ]
+    },
+    {
+      "en": "In Delayed a source gives, at step 1 and in one course only, to a condition coupled into a distinct reader: both courses balance and the rest responds through its couplings; the reader lies within the source's responsive reach, is unreached by 1 and reached by 2; its answers agree at step 1 and differ at step 2, and a constant readout through the same couplings ignores the arrived signal.",
+      "zh": "在 Delayed 中，源只在一个历程中于第 1 步给予一个耦合入另一读者的条件：两历程平衡，其余部分经其耦合回应；读者在源的回应所及之内，到 1 未被所及、到 2 被所及；其答案在第 1 步相同、第 2 步不同；经同一耦合的常量读出忽略已达信号。",
+      "declarations": [
+        "Becoming.TimedResponse.Delayed.balanced",
+        "Becoming.TimedResponse.Delayed.responds",
+        "Becoming.TimedResponse.Delayed.read_through",
+        "Becoming.TimedResponse.Delayed.structurally_connected",
+        "Becoming.TimedResponse.Delayed.not_reached_at_one",
+        "Becoming.TimedResponse.Delayed.reached_at_two",
+        "Becoming.TimedResponse.Delayed.answers_before_and_after",
+        "Becoming.TimedResponse.Delayed.constant_read_ignores"
+      ]
+    },
+    {
+      "en": "Over listed alternatives with natural weights, each a pair of courses alike at step 0 and balanced before its answer time, the same formations present and each non-source formation exchanging alike where alike through its couplings so far, answers read through the reader's couplings up to then, reach decided: committed weight is at most the errors (first on false, second on true) plus the weight reached in time.",
+      "zh": "有限列表的备选，权重为自然数，每个是一对历程第 0 步水平相同，且在其作答时刻前平衡、在场形成相同、时变源外的每个形成在经其耦合至此相同处交换相同，答案经读者至该时刻的耦合读出，是否及时被所及可判定：作答权重至多为前者对“假”的错误、后者对“真”的错误与及时所及权重之和。",
+      "declarations": [
+        "Becoming.FallibleInquiry.coverage_le_errors_add_timed_reach"
+      ]
+    },
+    {
+      "en": "Over listed alternatives with natural weights, each a pair of courses alike at step 0 and balanced before its answer time, the same formations present and each non-source formation exchanging alike where alike through its couplings so far, answers read through the reader's couplings up to then, with no decision: where no reader is reached by its answer time, committed weight equals the two error weights.",
+      "zh": "有限列表的备选，权重为自然数，每个是一对历程第 0 步水平相同，且在其作答时刻前平衡、在场形成相同、时变源外的每个形成在经其耦合至此相同处交换相同，答案经读者至该时刻的耦合读出，无需判定：凡没有读者在其作答时刻前被所及，作答权重恰等于两项错误权重之和。",
+      "declarations": [
+        "Becoming.FallibleInquiry.unreached_in_time_coverage_eq_errors"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "全部初始水平相同；每步 t<D 平衡及在场形成相同；时变源之外的交换经此前耦合入者决定。",
@@ -27,6 +111,52 @@
       "en": "Statistical composition supplies a finite list, natural weights, opposite targets and a timely-reach decision; total blindness needs no such decision."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "The bound is necessary, not sufficient: it gives no control, complete knowledge or universal scientific foundation.",
+      "zh": "此界是必要的而非充分的：它不给出控制、完整知识或普遍的科学基础。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A route that reaches the reader in time need not change its answer: a readout through the same couplings can ignore the arrived signal.",
+      "zh": "及时到达读者的路线不必改变其答案：经同一耦合的读出可以忽略已达信号。",
+      "kind": "non-implication",
+      "witness": "Becoming.TimedResponse.Delayed.constant_read_ignores"
+    },
+    {
+      "en": "Different initial evidence, a readout interface that changes with the step, continuous physical duration and common nonzero residual exchange lie outside its premises.",
+      "zh": "不同的初始证据、随步改变的读出界面、连续的物理时长与共同的非零余项交换都在其前提之外。",
+      "kind": "scope"
+    },
+    {
+      "en": "The empty axiom reports certify no empirical premise: identifying sources, matching initial states and measuring delays are the application's.",
+      "zh": "空公理报告不认证任何经验前提：识别源、匹配初始状态与测量延迟属于应用。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean",
+      "detail": {
+        "zh": "Delayed 结构上连通而一步时未达，两步后可区分；常量读数仍忽略已达信号。",
+        "en": "Delayed is structurally connected but unreached at one step, then distinguishes at two; a constant readout still ignores the arrived signal."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "discrete-steps",
+    "decidability",
+    "no-ethical-premise-core-axiom-free",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked. The current bytes of the core module Becoming.TimedResponse are bound to the consolidated core checker's receipt becoming-checks/20261019T160413.543456Z (check_becoming.py, Lean 4.29.1), every cited declaration with an empty axiom report; those of the periphery bridge Becoming.FallibleInquiry to fallible-inquiry-checks/20261020T161546.707477Z (check_fallible_inquiry.py, Lean 4.29.1), where the three cited theorems use propext and Quot.sound. No empirical experiment or independent review.",
+    "zh": "核心 Becoming.TimedResponse 当前字节绑定 becoming-checks/20261019T160413.543456Z（check_becoming.py），所引声明不用公理；外围 Becoming.FallibleInquiry 绑定 fallible-inquiry-checks/20261020T161546.707477Z（check_fallible_inquiry.py），所引三条定理用 propext、Quot.sound；均为 Lean 4.29.1；无经验实验或独立审查。"
+  },
+  "next_delta": {
+    "en": "Fix an actual task's initial evidence, command assignment and delivery and execution conditions, and test whether pairing its courses is warranted, so that the deadline bound applies to it.",
+    "zh": "固定实际任务的初始证据、命令分配与送达、执行条件，检验其历程的配对是否有根据，使截止界适用于它。"
+  },
   "correspondence": {
     "zh": "命令形成、交换、耦合与回应是同一展开中的分化关系。定理不从相关记录识别源、认证共同初态或测得延迟；真实实验配对、送达／执行及概率需要独立根据。",
     "en": "Command formation, exchange, coupling and response differentiate within one unfolding. The theorem does not identify sources from correlated records, certify matched initial states or measure delay; actual pairing, delivery/execution and probabilities need warrant."
@@ -113,23 +243,6 @@
     }
   ],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean",
-      "detail": {
-        "zh": "Delayed 结构上连通而一步时未达，两步后可区分；常量读数仍忽略已达信号。",
-        "en": "Delayed is structurally connected but unreached at one step, then distinguishes at two; a constant readout still ignores the arrived signal."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "只给必要界，非充分控制、完整知识或科学普遍基础。未覆盖不同初始证据、时变读数接口、连续物理时长或共同非零余项。一般建设性必要性为双重否定；有判定才给出正成员。路线存在不保证实际影响，空公理报告不认证经验前提。",
-    "en": "Necessary bound, not sufficient control, complete knowledge or a universal scientific foundation. Does not cover different initial evidence, changing readout interfaces, continuous physical duration or common nonzero residuals. Constructive necessity is double-negated; positive membership uses a decision. A route need not cause an effect; empty axiom reports do not certify empirical premises."
-  },
-  "validation_scope": {
-    "zh": "2026-10-14：Becoming.TimedResponse 的当前字节由合并检查器回执 20261013T204910.042715Z 绑定（通过：包 85 个模块，4861 项定理、6856 项声明审计，源声明公理报告全空；核心闭包 86 个模块从内置前导编译）；Becoming.FallibleInquiry 的当前字节由回执 20261013T205526.452771Z 绑定（通过，31 项定理、37 项声明审计）；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 P104新增22核心定理／30空公理源审计，前导编译通过；3项外围接续仅 propext、Quot.sound。外围现31定理／37声明，20空、17标准依赖。当前相关依赖与最终冻结回执匹配；49基础设施测试通过。无新增经验实验或独立评审。",
-    "en": "14 October 2026: the current bytes of Becoming.TimedResponse are bound to consolidated receipt 20261013T204910.042715Z (passed: 85 package modules, 4861 theorems, 6856 declaration audits, every source declaration with an empty axiom report; the 86-module core closure compiles from the prelude); the current bytes of Becoming.FallibleInquiry are bound to receipt 20261013T205526.452771Z (passed, 31 theorems, 37 declaration audits). Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. P104 adds 22 core theorems / 30 axiom-free source audits, with prelude compilation passed; three peripheral adapters use only propext and Quot.sound. Periphery now 31 theorems / 37 declarations, 20 empty and 17 standard dependencies. Relevant current dependencies match final retained receipts; 49 infrastructure tests pass. No new empirical experiment or independent review."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean",
@@ -157,7 +270,11 @@
         "Becoming.TimedResponse.Delayed.not_reached_at_one",
         "Becoming.TimedResponse.Delayed.reached_at_two",
         "Becoming.TimedResponse.Delayed.answers_before_and_after",
-        "Becoming.TimedResponse.Delayed.constant_read_ignores"
+        "Becoming.TimedResponse.Delayed.constant_read_ignores",
+        "Becoming.TimedResponse.TouchesAt",
+        "Becoming.TimedResponse.CoupledIntoAt",
+        "Becoming.TimedResponse.Spread",
+        "Becoming.TimedResponse.ReachedBy"
       ]
     },
     {
@@ -271,10 +388,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "固定实际任务的初始证据、命令分配与送达／执行条件，检验配对是否有根据；消费本界，不再重建传播或统计结果。",
-    "en": "Fix an actual task’s initial evidence, command assignment and delivery/execution conditions; test warranted pairing and consume this bound without rebuilding propagation or statistics."
-  },
   "history": [
     {
       "zh": "2026-10-13 P104：新增逐时必要性范围，按当步需要修正最终登记；前稿与原结构／余项回执保留。",
@@ -296,6 +409,28 @@
     {
       "en": "2026-10-20: 5 bookkeeping notes condensed from 2026-10-13 to 19 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/7bdd251d9f5fc567/timely-response-necessity.json and in git.",
       "zh": "2026-10-20：5 条记账性说明合并（2026-10-13 至 19 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/7bdd251d9f5fc567/timely-response-necessity.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement written from the home section; the claim split into nine laws, each read against its declarations in TimedResponse.lean and FallibleInquiry.lean (two of the route and reach, the levels, the answer, the double-negated necessity and its decided form, the refinement of structural reach, the Delayed witness, the weighted bound and its blind equality); the limitations to four does-not-show items and the standard boundaries discrete-steps, decidability, no-ethical-premise-core-axiom-free and formal-not-empirical; the four definitions the laws name (TouchesAt, CoupledIntoAt, Spread, ReachedBy) added to TimedResponse.lean's references; no premise, status or source hash changed. Every earlier sentence is mapped in [timely-response-necessity.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/timely-response-necessity.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依本节写出陈述；主张拆为九条规律，各条对照 TimedResponse.lean 与 FallibleInquiry.lean 中的声明核读（路线与所及两条、水平、答案、双重否定的必要性及其可判定形式、对结构所及的细化、Delayed 见证、加权界及其全盲等式）；限制改为四条“未表明”与通用边界 discrete-steps、decidability、no-ethical-premise-core-axiom-free、formal-not-empirical；规律所引的四个定义（TouchesAt、CoupledIntoAt、Spread、ReachedBy）加入 TimedResponse.lean 的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [timely-response-necessity.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/timely-response-necessity.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/7aa459028318dd00/timely-response-necessity.json",
+      "sha256": "7aa459028318dd0014e8bfe014b90f669d6321e88eb4b309ef348d96aa30e248",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/7bdd251d9f5fc567/timely-response-necessity.json",
+      "sha256": "7bdd251d9f5fc56761505550db01329aaebcf26fedebc70edfbc74e6c079d456",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

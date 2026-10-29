@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "formed-copying-registration",
   "title": {
     "zh": "形成的接触改变复制保真度",
@@ -8,21 +8,178 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F10",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
-  "claim": {
-    "zh": "对每个字母表与汲取律：在每一位接合其接触所读之物的复制产生某词，当且仅当每一位读出该词的记号、池供给该词且支持覆盖其汲取，其产物只增长；对每个过程，每步延长输出当且仅当每段进程延长输出，每个非门控步保持的量沿每段非门控进程保持。接触机中，对每个状态，与词长相同数目的复制步把产物延长为该词，当且仅当每一位经实际连接读出其记号、池供给该词且支持覆盖其汲取；完整稳定的接触恢复既有复制是其实例；每段进程使产物的边为其记号上的路径，所以完整接触复制模板（含边）当且仅当模板的边是该路径。缺接、错位与重接通过改变各位所读而改变后继；只有复制步改变产物，故连接变化不改写产物，每个允许的有限历史保留已成前缀及连接件、材料与支持的总量。消耗连接件和支持而形成的接触接入材料复制。",
-    "en": "For every alphabet and law of draws: a copy attaching at each site what its contacts read there produces a word exactly when every site reads the word's token, the pool supplies the word and the support covers what it draws, and its product only grows; for every process an output is extended along every course exactly when every step extends it, and a quantity kept by every ungated step is kept along every ungated course. In the contact machine, for every state, as many copy moves as a word has tokens extend the product by that word exactly when each site reads its token through the actual contacts, the pool supplies it and the support covers what it draws; complete stable contacts recovering prior copying are the instance; every course keeps the product's bonds the path on its tokens, so complete contacts copy the template, bonds included, exactly when its bonds are that path. Loss, displacement and rebinding change the successor by changing what sites read; only copy moves change the product, so contact changes never rewrite it, and every admitted finite history keeps its built prefix and its totals of connectors, material and support. Contact formation consuming connectors and support enters material copying."
+  "reviewed_at_utc": "2026-10-28T12:38:10+00:00",
+  "statement": {
+    "en": "A copy attaching at each site what its contacts read makes a word exactly when every site reads its token, the pool supplies it and the support covers its draws; in the contact machine, loss, displacement and rebinding change the successor by changing what sites read, never by rewriting the product.",
+    "zh": "在每一位接上其接触所读之物的复制产生一个词，恰当每一位读到该词的记号、池供给该词且支持覆盖其所取；在接触机中，接触的丢失、错位与重接通过改变各位所读来改变后继，从不改写产物。"
   },
+  "laws": [
+    {
+      "en": "For every alphabet with decidable equality, every law of draws and every reading of sites: a copy that attaches at each site what the reading gives there, with as many tokens pending as the word has, makes its product what was built followed by the word exactly when every site from the product's end reads the word's token, the pool supplies the word and the support covers what it draws; its product only grows.",
+      "zh": "对每个有可判定相等的字母表、每条汲取律与每种位点读取：在每一位接上读取所给之物、待接记号与词一样多的复制，使产物成为已建者接上该词，恰当自产物末端起每一位读到该词的记号、池供给该词且支持覆盖其所取；其产物只增长。",
+      "declarations": [
+        "Becoming.Copying.Reads",
+        "Becoming.Copying.readSteps",
+        "Becoming.Copying.reading_iff",
+        "Becoming.Copying.readSteps_extends"
+      ]
+    },
+    {
+      "en": "A reading copy's moves go along its law's orbit, and a plan of k moves of a determined law completes exactly when the goal holds on its orbit at k. So, with as many tokens pending as the word has, the reading copy's plan of that many moves adds the word exactly when every site reads its token, the pool supplies it and the support covers its draws. Along every course of the plain copy's process its product only grows.",
+      "zh": "读作过程：读取复制的诸步沿其律的轨道进行；确定之律的 k 步计划完成，恰当目标在其轨道第 k 处成立。所以待接记号与词一样多时，读取复制步数等于词长的计划接上该词，恰当每一位读到该词的记号、池供给该词且支持覆盖其所取。沿不读取的复制过程的每段进程，其产物只增长。",
+      "declarations": [
+        "Becoming.Courses.readSteps_orbit",
+        "Becoming.Courses.completes_units_iff",
+        "Becoming.Courses.reading_completes_iff",
+        "Becoming.Courses.copy_grows",
+        "Becoming.Courses.tick_extends"
+      ]
+    },
+    {
+      "en": "For every process, an output is extended along every course exactly when every step extends it. For every gate on moves, a quantity is kept along every course of ungated moves exactly when every ungated step keeps it, and where every ungated step keeps it, a course that changes it contains a gated move.",
+      "zh": "对每个过程：输出沿每段进程被延伸，恰当每一步都延伸它。对动作上的每个门：一个量沿每段非门控动作的进程保持，恰当每个非门控步都保持它；每个非门控步都保持它时，改变它的进程含一个门控动作。",
+      "declarations": [
+        "Becoming.Copying.Extends",
+        "Becoming.Copying.extends_along_iff",
+        "Becoming.Gated.KeptBy",
+        "Becoming.Gated.kept_along_iff",
+        "Becoming.Gated.change_passes_gate"
+      ]
+    },
+    {
+      "en": "In the contact machine one copy move is one core move reading through the actual contacts. For every state with as many tokens pending as a word has, that many copy moves extend the product by the word exactly when each site reads its token through the actual contacts, the pool supplies it and the support covers its draws; where the product's bonds are the path on its tokens, it is then the strand, bonds included.",
+      "zh": "在接触机中，一次复制动作即经实际接触读取的核心复制的一步。对待接记号与词一样多的每个状态，那么多次复制动作把产物延伸该词，恰当每一位经实际接触读到该词的记号、池供给该词且支持覆盖其所取；产物的键是其记号上的路径时，产物于是即该链（含键）。",
+      "declarations": [
+        "Becoming.CopyingInstances.tick_work_view",
+        "Becoming.CopyingInstances.operate_view",
+        "Becoming.CopyingInstances.operate_copies_iff",
+        "Becoming.CopyingInstances.PathShaped",
+        "Becoming.CopyingInstances.operate_strand_iff"
+      ]
+    },
+    {
+      "en": "Every course of the contact machine keeps the product's bonds the path on its tokens. With complete contacts on a template, its tokens and any tail pooled and the free support covering its draws, the product is the template's tokens, and is the template, bonds included, exactly when the template's bonds are the path on its tokens; the earlier inheritance theorem is the instance, its nonempty premise dropped.",
+      "zh": "接触机的每段进程都保持产物的键为其记号上的路径。在模板上接触完整、池中有其记号加任意尾部、自由支持覆盖其所取时，复制的产物即模板的记号；它即模板（含键），恰当模板的键是其记号上的路径；此前的继承定理是其实例，不需非空前提。",
+      "declarations": [
+        "Becoming.CopyingInstances.path_shaped_along",
+        "Becoming.CopyingInstances.registered_copy_cells",
+        "Becoming.CopyingInstances.registered_copy_iff",
+        "Becoming.CopyingInstances.registered_inheritance_instance",
+        "CopyingRegistration.registered_inheritance"
+      ]
+    },
+    {
+      "en": "With contacts complete and the template equal to the product followed by what is pending, n copy moves of the contact machine are n steps of the earlier copying machine.",
+      "zh": "接触完整、模板等于产物接上待接者时，接触机的 n 次复制动作即此前复制机的 n 步。",
+      "declarations": [
+        "CopyingRegistration.registered_operation_refines"
+      ]
+    },
+    {
+      "en": "In the contact machine only copy moves change the product: docking, loss and slip keep it, a course of contact moves keeps it, and a course that changes it contains a copy move. Every course extends the product, and every admitted finite history keeps its built prefix and its totals of contacts with spare connectors, of tokens built with pooled, and of free with used support.",
+      "zh": "在接触机中只有复制动作改变产物：对接、丢失与错位保持它，接触动作的进程保持它，改变它的进程含一次复制动作。每段进程都延伸产物；每段被容许的有限历史都保持其已建前缀，以及接触与备用连接件之和、已建与池中记号之和、自由与已用支持之和。",
+      "declarations": [
+        "Becoming.CopyingInstances.product_gated",
+        "Becoming.CopyingInstances.contact_course_keeps_product",
+        "Becoming.CopyingInstances.product_change_passes_copy",
+        "Becoming.CopyingInstances.product_extends_along",
+        "Becoming.CopyingInstances.totals_along",
+        "CopyingRegistration.history_accounts",
+        "CopyingRegistration.history_retains_built_prefix"
+      ]
+    },
+    {
+      "en": "In witnesses on the alternating template with an unlike attachment drawing less: with no contacts four copy moves change nothing; losing a contact stalls the copy after one token with support still free; a slipped contact changes the copied word; slipping another contact to a site of the same token leaves its reading unchanged; and losing and rebinding the slipped contact before copying restores the faithful copy.",
+      "zh": "在交替模板、异类之后接合汲取较少的见证中：没有接触时四次复制动作什么也不改变；丢失一个接触使复制在一个记号后停滞，而支持仍有余；一个错位的接触改变所复制的词；把另一个接触错位到同一记号之位，其所读不变；复制前丢失并重接错位的接触，恢复忠实的复制。",
+      "declarations": [
+        "CopyingRegistration.no_contact_no_copy",
+        "CopyingRegistration.loss_stalls_with_stock_remaining",
+        "CopyingRegistration.slip_changes_actual_copy",
+        "CopyingRegistration.altered_contact_can_preserve_this_signal",
+        "CopyingRegistration.rebinding_restores_fidelity"
+      ]
+    },
+    {
+      "en": "Correcting a contact does not rewrite the past, in a witness: copying one token, slipping the next contact, copying, then losing and rebinding it and copying the rest leaves the wrong token in the product with the contacts complete, the support used up and the product unreleased.",
+      "zh": "纠正接触不改写过去，见于一个见证：复制一个记号、使下一个接触错位、再复制，然后丢失并重接它、复制其余，产物中留下错误记号，接触完整、支持用尽、产物未释放。",
+      "declarations": [
+        "CopyingRegistration.correcting_contact_does_not_rewrite_past"
+      ]
+    },
+    {
+      "en": "In a witness, two states with the same template, copy in progress, spare connectors and number of contacts differ in their contacts; with the same counts of contacts and spares, free and used support, pool and product, they copy different words, so no function of those totals gives what is copied.",
+      "zh": "两个状态模板、进行中的复制、备用连接件与接触数都相同，而接触不同；接触数与备用数、自由与已用支持、池与产物都相同时，它们复制出不同的词，所以这些总量的任何函数都给不出所复制者。",
+      "declarations": [
+        "CopyingRegistration.matched_difference_is_contact",
+        "CopyingRegistration.matched_totals_different_copy",
+        "CopyingRegistration.no_census_only_copy"
+      ]
+    },
+    {
+      "en": "An erroneous daughter is inherited faithfully, in a witness: the word copied through a slipped contact, released, is reproduced as it is by the earlier copying machine.",
+      "zh": "错误的子代被忠实继承，见于一个见证：经错位接触复制并释放的词，由此前的复制机按原样复制。",
+      "declarations": [
+        "CopyingRegistration.erroneous_daughter_can_be_faithfully_inherited"
+      ]
+    },
+    {
+      "en": "In a witness on the alternating template, docking a contact at each of its four sites takes the four spare connectors and four units of support and makes the contacts complete.",
+      "zh": "在交替模板的一个见证中：在其四个位各对接一个接触，用去四个备用连接件与四个单位支持，并使接触完整。",
+      "declarations": [
+        "CopyingRegistration.actual_contacts_are_formed",
+        "CopyingRegistration.formed_registration_is_complete"
+      ]
+    }
+  ],
   "hypotheses": [
     {
-      "zh": "索引位置与选择性对接、可靠取值、局部接合成本及事件发生给定；没有切除或替换已成产物的操作。",
-      "en": "Indexed sites, selective docking, reliable transduction, local attachment costs and event occurrence are supplied; there is no excision or replacement of built material."
+      "zh": "索引位置与选择性对接、可靠取值、局部接合汲取及事件发生给定；没有切除或替换已成产物的操作。",
+      "en": "Indexed sites, selective docking, reliable transduction, local attachment draws and event occurrence are supplied; there is no excision or replacement of built material."
     },
     {
       "zh": "一般继承组合要求每个值经完整接触读出、模板与前缀／剩余序列一致，且保留原定理的路径及材料／支持前提（非空前提不需要）。",
       "en": "The general inheritance composition requires every value read through complete contacts and template/prefix/suffix consistency, retaining the prior path and material/support premises (the nonempty premise is not needed)."
+    },
+    {
+      "en": "The core laws hold for every alphabet with decidable equality, every law of draws and every reading of sites; the machine's tokens are Boolean and its counts of connectors, tokens and support natural numbers.",
+      "zh": "核心规律对每个有可判定相等的字母表、每条汲取律与每种位点读取成立；该机的记号是布尔值，连接件、记号与支持的计数是自然数。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Indexed recognition and transduction, rates of damage, the start of repair, excision, an autonomous provision and selection in a population do not follow from these laws.",
+      "zh": "由这些规律推不出索引识别与取值、损伤率、纠错的启动、切除、自供或种群中的选择。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A strong rival keeping the same contact mechanism explains as much.",
+      "zh": "保留同一接触机制的强对手具有同样的解释能力。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/CopyingRegistration.lean",
+      "detail": {
+        "zh": "缺接可在有材料和支持时停滞；连接错位未必改值，重接不追改旧产物，连接数和全部复制状态相同仍可产出不同序列。",
+        "en": "Missing contacts stall despite stock/support; displacement need not change the value, rebinding does not rewrite old output, and matched contact counts/full copying state can produce different sequences."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "discrete-steps",
+    "decidability",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Core: Becoming.Copying, Courses and Gated (becoming-checks/20261022T054058.112616Z, 20261020T051144.879480Z, 20261028T085101.429997Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: CopyingRegistration by its folder's check (copying-registration-verification/, Lean 4.29.1: 33 new theorems, 54 new audits, 484 in the import closure) and CopyingInstances by its instance checker (copying-instances-checks/20261020T161910.956874Z, Lean 4.29.1), at most propext, Quot.sound and Classical.choice. The original paper is reread as the comparator, with no new empirical reanalysis.",
+    "zh": "核心 Copying、Courses、Gated：4.29.1 合并检查器（becoming-checks/），公理报告为空。外围 CopyingRegistration：目录检查（copying-registration-verification/，4.29.1，新定理33、审计54、闭包484）；CopyingInstances：实例检查（copying-instances-checks/，4.29.1）；至多 propext、Quot.sound、Classical.choice。原论文作比较重读，无新复算。"
+  },
+  "next_delta": {
+    "en": "Explain how a reference relation is acquired and renewed, how faults are localized, how support is renewed, and how shared provision is divided.",
+    "zh": "说明参考关系怎样取得与更新、故障怎样定位、支持怎样再生，以及共同供给怎样划分。"
+  },
   "correspondence": {
     "zh": "角色由共同活动中的对接、取值、移入与保留关系分化；经接触所读由实际位置对构成，并非成功标签。局部辨别规律仍在等索引对接条件中给定。",
     "en": "Roles differentiate through docking, reading, transfers and retention in common activity; reading through contacts consists of actual position pairs, not a success flag. Local discrimination remains supplied by the equal-index docking guard."
@@ -62,24 +219,15 @@
       }
     }
   ],
-  "related": [],
-  "counterexamples": [
+  "related": [
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/CopyingRegistration.lean",
+      "id": "formed-copying-correction",
       "detail": {
-        "zh": "缺接可在有材料和支持时停滞；连接错位未必改值，重接不追改旧产物，连接数和全部复制状态相同仍可产出不同序列。",
-        "en": "Missing contacts stall despite stock/support; displacement need not change the value, rebinding does not rewrite old output, and matched contact counts/full copying state can produce different sequences."
+        "en": "Edits an existing product of this copying against a reference and passes the edited successor on to inherited copying.",
+        "zh": "对照参考编辑此复制的既有产物，并把编辑后的后继交给继承的复制。"
       }
     }
   ],
-  "limitations": {
-    "zh": "未导出索引识别／取值规律、损伤率、纠错启动、切除机制、自供或种群选择；同等接触机制的强对手具有相同解释能力。",
-    "en": "Indexed recognition/transduction, damage rates, repair initiation, excision, autonomous provision and population selection are not derived; a strong rival retaining the same contact mechanism has the same explanatory capacity."
-  },
-  "validation_scope": {
-    "zh": "33项新定理声明／54项新审计，484项实际闭包审计中430项继承分列；原始论文作为既有比较重读，无新经验复算。一般律已由检查器回执绑定。",
-    "en": "33 new theorem declarations / 54 new audits, with 430 inherited declarations separate in 484 actual-closure audits. The original paper is reread as the existing comparator, without new empirical reanalysis. General laws: checker receipts bound."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/CopyingRegistration.lean",
@@ -92,7 +240,16 @@
         "CopyingRegistration.history_retains_built_prefix",
         "CopyingRegistration.correcting_contact_does_not_rewrite_past",
         "CopyingRegistration.no_census_only_copy",
-        "CopyingRegistration.erroneous_daughter_can_be_faithfully_inherited"
+        "CopyingRegistration.erroneous_daughter_can_be_faithfully_inherited",
+        "CopyingRegistration.no_contact_no_copy",
+        "CopyingRegistration.loss_stalls_with_stock_remaining",
+        "CopyingRegistration.slip_changes_actual_copy",
+        "CopyingRegistration.altered_contact_can_preserve_this_signal",
+        "CopyingRegistration.rebinding_restores_fidelity",
+        "CopyingRegistration.matched_difference_is_contact",
+        "CopyingRegistration.matched_totals_different_copy",
+        "CopyingRegistration.actual_contacts_are_formed",
+        "CopyingRegistration.formed_registration_is_complete"
       ]
     },
     {
@@ -242,6 +399,22 @@
       "role": "receipt",
       "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gated.lean",
+      "role": "proof",
+      "sha256": "8abe067b1109a8f1d163addd0deb0a45ec275d36d91d78a6cb0facc4a7ca04d2",
+      "declarations": [
+        "Becoming.Gated.KeptBy",
+        "Becoming.Gated.kept_along_iff",
+        "Becoming.Gated.change_passes_gate"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json",
+      "role": "receipt",
+      "sha256": "4d94c1b82af02e7869351aba40ea8ebaa61b5614423929afa25924281fdda97a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -272,12 +445,15 @@
       "sha256_pointer": "/source_sha256/Becoming.Courses",
       "success_pointer": "/status",
       "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gated.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Gated",
+      "success_pointer": "/status",
+      "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "formed-copying-correction 已接通已成产物的编辑与后继；继续参考关系的取得／更新、故障定位、支持再生及明确共同分配。",
-    "en": "formed-copying-correction now joins editing of an existing product and its successor; continue acquisition/renewal of the reference relation, fault localization, support renewal and explicit shared allocation."
-  },
   "history": [
     {
       "zh": "2026-10-09：在既有分割研究中新增一个形成—读取—继承组合；保留旧理想复制、材料记录及社会组织支线的范围。",
@@ -316,6 +492,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the Chinese title, claim, hypothesis, correspondence and dependency interface use 接触 (contact), as the English and the record's own limitations do, in place of the retired 配准 (registration); the id keeps the old word until it is renamed. The claim is unchanged. The Chinese of a dependency no longer uses the registration word (经接触的运行, as the English reads).",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：中文标题、主张、假设、对应与依赖接口改用“接触”，与英文及本记录的局限一致，不再用退役的“配准”；id 在改名之前仍保留旧词。主张不变。一条依存的中文不再用登记一词（改为“经接触的运行”，与英文一致）。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): a statement written from the home section; the claim split into 11 laws, each read against its declarations in Becoming.Copying, Becoming.Courses and Becoming.Gated (core) and CopyingRegistration and CopyingInstances (periphery), with the conditions the Lean takes written in (decidable equality, as many tokens pending as the word has, a path-shaped product, complete contacts and the template tracking the product); the claim's law of gated change had no reference, so Gated.lean is added with KeptBy, kept_along_iff and change_passes_gate, its newest core receipt and a binding; seven witnesses the counterexample describes (no_contact_no_copy, loss_stalls_with_stock_remaining, slip_changes_actual_copy, altered_contact_can_preserve_this_signal, rebinding_restores_fidelity, matched_difference_is_contact, matched_totals_different_copy) added to CopyingRegistration's references (its receipt binds them, with propext only); the limitations became two does-not-show items, with the standard boundaries no-ethical-premise-core-axiom-free, discrete-steps, decidability and formal-not-empirical and one added hypothesis; \"attachment costs\" became \"attachment draws\" in a hypothesis; the next step's completed part went to a related entry (formed-copying-correction); no premise's content, status, earlier binding or source hash changed. Every earlier sentence is mapped in [formed-copying-registration.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/formed-copying-registration.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, laws, the references, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依主章写出陈述；主张拆为 11 条规律，各条对照 Becoming.Copying、Becoming.Courses、Becoming.Gated（核心）与 CopyingRegistration、CopyingInstances（外围）中的声明核读，Lean 所取的条件都写入（可判定相等、待接记号与词一样多、产物为路径形、接触完整且模板与产物相符）；主张中的门控改变之律原无引用，故加入 Gated.lean（KeptBy、kept_along_iff、change_passes_gate）及其最新核心回执与绑定；反例所述的七个见证（no_contact_no_copy、loss_stalls_with_stock_remaining、slip_changes_actual_copy、altered_contact_can_preserve_this_signal、rebinding_restores_fidelity、matched_difference_is_contact、matched_totals_different_copy）加入 CopyingRegistration 的引用（其回执绑定它们，只用 propext）；限制改为两条“未表明”，并引用通用边界 no-ethical-premise-core-axiom-free、discrete-steps、decidability、formal-not-empirical，加一条前提；一条前提中“接合成本”改为“接合汲取”；下一步中已完成者移入相关条目（formed-copying-correction）；前提、状态、既有绑定与来源哈希均未改变。每句旧文本的去向见 [formed-copying-registration.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/formed-copying-registration.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、规律、引用，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/a8538b25ee29ee1f/formed-copying-registration.json",
+      "sha256": "a8538b25ee29ee1fa4e66eaf415b9aafe93d277fdc05c25eab411a40418870df",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/531ee55962abe394/formed-copying-registration.json",
+      "sha256": "531ee55962abe3946bf60e7f86576250868ce40c384abc10d45120155012740f",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

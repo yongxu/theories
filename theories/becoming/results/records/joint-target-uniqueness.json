@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "joint-target-uniqueness",
   "title": {
     "zh": "共同实现测试下的目标唯一性",
@@ -8,17 +8,62 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F02",
-  "reviewed_at_utc": "2026-10-08T12:31:53.854610+00:00",
-  "claim": {
-    "zh": "若目标由含 together 的测试分离，与同一源位置完全同测的两个目标位置相等。",
-    "en": "If the target is separated by tests including together, two target positions agreeing with one source position on all tests are equal."
+  "reviewed_at_utc": "2026-10-28T12:12:53+00:00",
+  "statement": {
+    "en": "Where tests that include holding two parts together tell apart the configurations of a target frame, a configuration of any source frame passes the same tests as at most one target configuration.",
+    "zh": "凡含“共同持有两部分”的测试区分目标框架的构形，任一源框架的构形至多与一个目标构形通过相同测试。"
   },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "使用 ExplanatoryJointness 本地 Model、Test、Same 和 Separated。",
-      "en": "Uses the namespace-local ExplanatoryJointness Model, Test, Same and Separated."
+      "en": "A test with parts is nothing, a claim, the failure of a test, two tests together, that some step by a move leads to where a test holds, or that the configuration holds together, under one relation of a family, two parts passing two tests. A joint frame is a frame with one such relation, a configuration realizing two configurations together as its parts; no associativity, order, unit or repetition of parts is assumed.",
+      "zh": "带部分的测试是：无、一个主张、一个测试的失败、两个测试同时、某步经某动作通往测试成立处，或该构形在一族关系之一下共同持有分别通过两个测试的两部分。共同框架是带一个这样关系的框架：一个构形共同实现两个构形作为其部分；不假设部分的结合律、次序、单位或重复。",
+      "declarations": [
+        "Becoming.TestWith",
+        "Becoming.TestWith.Holds",
+        "Becoming.JointFrame",
+        "Becoming.JointTest"
+      ]
+    },
+    {
+      "en": "For any two frames, each with a family of relations by which a configuration holds two parts together: where the tests with parts tell apart the configurations of the target (any two of them passing the same tests are equal), a configuration of the source passes the same tests with parts as at most one target configuration. Joint tests are the case of the one relation of a joint frame.",
+      "zh": "对任意两个框架，各带一族“一个构形共同持有两部分”的关系：凡带部分的测试区分目标的构形（通过相同测试的任两个相等），源的一个构形至多与一个目标构形通过相同的带部分测试。共同测试是共同框架那一个关系的情形。",
+      "declarations": [
+        "Becoming.SameTestsWith",
+        "Becoming.SameTestsWith.functional",
+        "Becoming.SameJointTests"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "Any two frames of the spine with the same moves and claims and with relations among configurations (for joint tests, the one relation of a joint frame); the target is separated: two of its configurations passing the same tests with parts are equal.",
+      "zh": "脊柱上任意两个有相同动作与主张、带构形间关系的框架（共同测试时为共同框架的那一个关系）；目标被分离：其通过相同带部分测试的两个构形相等。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Uniqueness of the matching target does not by itself recover joint plans or license substituting one designated part for another.",
+      "zh": "匹配目标的唯一性本身不恢复共同计划，也不允许以一个指定部分替换另一个。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "It does not settle whether two designated parts draw on the same support.",
+      "zh": "它不判定两个指定部分是否用同一支持。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated core checker (check_becoming.py), Lean 4.29.1 as its receipt records: the current bytes of Becoming.Likeness and Becoming.Composition are bound to core receipt becoming-checks/20261020T051144.879480Z, which reports an empty axiom list for every cited declaration. The periphery ExplanatoryJointness and the retired CompositionBridge are provenance; the receipt under explanatory-jointness-checks keeps its earlier scope.",
+    "zh": "合并核心检查器（check_becoming.py）实查，回执所记 Lean 4.29.1：Becoming.Likeness 与 Becoming.Composition 的当前字节绑定核心回执 becoming-checks/20261020T051144.879480Z，所引声明的公理报告皆为空。外围 ExplanatoryJointness 与退役的 CompositionBridge 是来源；explanatory-jointness-checks 下的回执保持原范围。"
+  },
+  "next_delta": {
+    "en": "Give the correspondence by which, in an application of the joint tests, designated parts can be substituted for one another or joint realization read as concurrency over time.",
+    "zh": "给出在共同测试的应用中可互换指定部分、或把共同实现读作随时间之并发所需的对应。"
+  },
   "correspondence": {
     "zh": "together 检验整体的成对共同实现；不把分别成立当成共同实现。",
     "en": "The together test concerns joint realization of a pair within a whole; separate truth is not joint realization."
@@ -39,23 +84,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/EXPLANATORY-JOINTNESS-INTEGRATION.md",
-      "detail": {
-        "zh": "完整部分测试轮廓可能不能识别指定部分是否重复使用同一支持。",
-        "en": "Even complete part profiles may fail to identify whether designated parts reuse the same support."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "唯一性小引理不独自证明共同计划恢复或任意指定部分可替换；相关反例保留在研究中。",
-    "en": "This uniqueness lemma alone proves neither joint-plan recovery nor arbitrary substitution of designated parts; the study retains the latter boundary."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJointness.lean",
@@ -88,7 +116,9 @@
       "role": "proof",
       "sha256": "08ae38e607c91b205c8b99bbcb49c0678e39f36d89b6cfb9af49bbc602ba4a49",
       "declarations": [
-        "Becoming.JointFrame"
+        "Becoming.JointFrame",
+        "Becoming.JointTest",
+        "Becoming.SameJointTests"
       ]
     },
     {
@@ -96,7 +126,10 @@
       "role": "proof",
       "sha256": "c2ce8ed970473ced65a6addb9ef5ff6a0a994f33507d2d24316a7f79888858e1",
       "declarations": [
-        "Becoming.SameTestsWith.functional"
+        "Becoming.SameTestsWith.functional",
+        "Becoming.TestWith",
+        "Becoming.TestWith.Holds",
+        "Becoming.SameTestsWith"
       ]
     },
     {
@@ -173,10 +206,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "使用共同语言时复用；具体部分替换或全局并发另需对应。",
-    "en": "Reuse for the joint language; designated-part substitution or global concurrency requires further correspondence."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -197,6 +226,28 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Replaced by the name stating it now, the same statement or its general form, or renamed (development/r37-lens-b/RENAME-TABLE.json): SameJointTests.functional (now SameTestsWith.functional). Proof bindings (Composition.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Composition.lean: the joint frame is the case of one relation: JointTest, JointAlike, JointBisimulation, SameJointTests abbreviations of the general ones, the parallel laws removed; kept statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：以现在陈述它的名称取代（陈述相同或为其一般形式）或改名（development/r37-lens-b/RENAME-TABLE.json）：SameJointTests.functional（现为 SameTestsWith.functional）。证明绑定（Composition.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Composition.lean：联合框架是一个关系的情形：JointTest、JointAlike、JointBisimulation、SameJointTests 为一般者的缩写，平行的规律删去；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement written from the claim and the home section; the claim split into two laws, each read against its declarations in Likeness.lean (TestWith, TestWith.Holds, SameTestsWith, SameTestsWith.functional) and Composition.lean (JointFrame, JointTest, SameJointTests): the tests with parts and the joint frame, and the uniqueness law, of which the joint case is the one relation of a joint frame; the hypothesis, which named the retired module's Model, Test, Same and Separated, restated on the spine's frames, where the cited proof lies; the limitation and the counterexample, which no cited declaration witnesses, became two does-not-show items; TestWith, TestWith.Holds, SameTestsWith, JointTest and SameJointTests added to their files' references; the shared boundary no-ethical-premise cited; no premise, status or source hash changed. Every earlier sentence is mapped in [joint-target-uniqueness.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joint-target-uniqueness.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依主张与所在章节写出陈述；主张拆为两条规律，各条对照 Likeness.lean（TestWith、TestWith.Holds、SameTestsWith、SameTestsWith.functional）与 Composition.lean（JointFrame、JointTest、SameJointTests）中的声明核读：带部分的测试与共同框架，以及唯一性之律（共同情形是共同框架那一个关系）；原前提指名退役模块的 Model、Test、Same 与 Separated，现按所引证明所在的脊柱框架重述；限制与反例无所引声明见证，改为两条“未表明”；TestWith、TestWith.Holds、SameTestsWith、JointTest 与 SameJointTests 加入其文件的引用；引用通用边界 no-ethical-premise；前提、状态与来源哈希均未改变。每句旧文本的去向见 [joint-target-uniqueness.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joint-target-uniqueness.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/7dcec0de92053c17/joint-target-uniqueness.json",
+      "sha256": "7dcec0de92053c1767a09b2dd1e8462c20653282b41ba32e1341c2b984ce5985",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/56743e345ab50bd3/joint-target-uniqueness.json",
+      "sha256": "56743e345ab50bd34acae7ba6321509b7fc522415a0ae0570a6767c63b0ac66f",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

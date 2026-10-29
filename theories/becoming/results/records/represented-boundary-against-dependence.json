@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "represented-boundary-against-dependence",
   "title": {
     "zh": "所表示的边界与实际依存",
@@ -8,15 +8,66 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
+  "reviewed_at_utc": "2026-10-28T17:04:11+00:00",
   "statement": {
     "zh": "在条件区域上的更新，只在区域覆盖其参与时是该步的更新。覆盖其所需且要求不收紧时保住自身支持，仍可侵蚀他者；遗漏其所需时，可以经自身的汲取失去自身支持。",
     "en": "Renewal over a region of conditions is renewal at the step where the region covers what the formation takes part in. Covering what it requires, with requirements not tightening, it keeps its own support yet can undermine another; omitting what it requires, its own draw can lose its own support."
   },
-  "claim": {
-    "zh": "一个形成在 t 的事件在条件区域上更新（Web.RenewingOver），是指它活跃，并且该步保住它在区域中参与的每个条件上的每项依存。该步的更新就是在每个区域上的更新（Web.RenewingAt.over、Web.renewingAt_iff_over_all），在一个区域上的更新也是在它之内每个区域上的更新（Web.RenewingOver.narrow）。与形成的实际关系相比：区域覆盖它参与的每个条件时，在区域上的更新就是该步的更新（Web.RenewingOver.at）；区域覆盖它所需的每个条件、它的要求在该步不收紧时，在区域上更新的形成在该步之后被支持（Web.RenewingOver.keeps_own），但仍可侵蚀他者——Clearing 中清除者每步都在其资源（它唯一所需的条件）上更新，在第一步侵蚀，不在该步的更新之内（Clearing.renewing_over_resource）；区域遗漏它所需的一个条件时，它自身的汲取可以侵蚀它自身的依存——Omitted 中一个形成需要两个条件，在第零步在 false 上更新、要求不收紧，它也需要区域遗漏的 true，它对 true 的汲取侵蚀，在该步之后它不被支持（Omitted.loses_own；平衡、Acting、Taking 与 Dependent 都成立）。不用伦理前提，也不用 Lean 公理。",
-    "en": "A formation's event at t is within renewal over a region of conditions (Web.RenewingOver) when it is active and the step keeps every dependence on every condition of the region it takes part in. Renewal at the step is renewal over every region (Web.RenewingAt.over, Web.renewingAt_iff_over_all), and renewal over a region is renewal over every region inside it (Web.RenewingOver.narrow). Compared with the formation's actual relations: over a region covering every condition it takes part in, renewal over the region is renewal at the step (Web.RenewingOver.at); over a region covering every condition it requires, where its requirements do not tighten across the step, a formation renewing over the region is supported after the step (Web.RenewingOver.keeps_own), yet it can still undermine another: in Clearing the clearer renews over its resource, the one condition it requires, at every step, undermines at step one and is not within renewal there (Clearing.renewing_over_resource); over a region omitting a condition it requires, its own draw can undermine its own dependence: in Omitted a formation requires two conditions, renews over false at step zero with requirements not tightening, also requires true, which the region omits, and its draw on true undermines, so after the step it is not supported (Omitted.loses_own; balance, Acting, Taking and Dependent all hold). No ethical premise and no Lean axiom is used."
-  },
+  "laws": [
+    {
+      "en": "A formation's event at a step is within renewal over a region of conditions where it is active and, for each condition of the region it takes part in, the step keeps every formation's dependence on that condition. Renewal at the step is exactly renewal over the region of every condition and gives renewal over every region; renewal over a region gives renewal over every region inside it.",
+      "zh": "一个形成在某步的事件在条件区域上更新，是指它活跃，且对该区域中它所参与的每个条件，该步保住每个形成对该条件的依存。该步的更新恰是在一切条件之区域上的更新，并给出在每个区域上的更新；在一个区域上的更新给出在它之内每个区域上的更新。",
+      "declarations": [
+        "Becoming.Web.RenewingOver",
+        "Becoming.Web.RenewingAt",
+        "Becoming.Web.Kept",
+        "Becoming.Web.Participates",
+        "Becoming.Web.RenewingAt.over",
+        "Becoming.Web.renewingAt_iff_over_all",
+        "Becoming.Web.RenewingOver.narrow"
+      ]
+    },
+    {
+      "en": "Over a region covering every condition a formation takes part in at a step, renewal over the region is renewal at the step; an event within renewal at a step is not undermining there.",
+      "zh": "在覆盖一个形成在某步所参与的每个条件的区域上，在区域上的更新就是该步的更新；在某步之更新内的事件在该步不侵蚀。",
+      "declarations": [
+        "Becoming.Web.RenewingOver.at",
+        "Becoming.Web.RenewingAt.not_undermining",
+        "Becoming.Web.UnderminingAt"
+      ]
+    },
+    {
+      "en": "Over a region covering every condition a formation requires at a step, where its requirements do not tighten across the step (each it has after the step it had before, at no greater need), a formation within renewal over the region is supported after the step.",
+      "zh": "在覆盖一个形成在某步所需的每个条件的区域上，其要求跨该步不收紧时（步后所有的每项要求步前已有，且需要量不更大），在该区域上更新的形成在该步之后被支持。",
+      "declarations": [
+        "Becoming.Web.RenewingOver.keeps_own",
+        "Becoming.Web.Untightened",
+        "Becoming.Web.Supported"
+      ]
+    },
+    {
+      "en": "In a balanced, dissipative witness where activity needs support, a source feeds a clearer's resource and the clearer draws down a dweller's habitat: the clearer requires only its resource and is within renewal over it at every step, yet its draw undermines at step one, where it is not within renewal, and the dweller is inactive from step two on.",
+      "zh": "在一个平衡、耗散、活动需要支持的见证中，来源供给清除者的资源，清除者汲取栖居者的栖地：清除者只需要其资源，并每步都在其上更新，但它的汲取在第一步侵蚀，该步它不在更新之内，栖居者从第二步起不活跃。",
+      "declarations": [
+        "Becoming.Clearing.renewing_over_resource",
+        "Becoming.Clearing.undermines_within_renewal",
+        "Becoming.Clearing.web"
+      ]
+    },
+    {
+      "en": "In a witness where one formation requires two conditions at need one and at step zero draws on one of them, with the flow balanced, only active formations giving or taking, taking only from what they draw on, and activity needing support: across step zero it is within renewal over the other condition, its requirements not tightening, yet its draw undermines and it is not supported after the step.",
+      "zh": "在一个见证中，一个形成以需要量一需要两个条件，并在第零步汲取其中之一；流平衡，只有活跃的形成给予或取用，只从其所汲取者取用，活动需要支持：跨第零步，它在另一个条件上更新，要求不收紧，但它的汲取侵蚀，该步之后它不被支持。",
+      "declarations": [
+        "Becoming.Omitted.loses_own",
+        "Becoming.Omitted.flow",
+        "Becoming.Omitted.web",
+        "Becoming.Flow.Balances",
+        "Becoming.Flow.Acting",
+        "Becoming.Flow.Taking",
+        "Becoming.Web.Dependent"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "条件区域是陈述的参数；这里不模型一个中心怎样表示它。",
@@ -35,9 +86,57 @@
       "en": "Discrete steps, counted from step zero; natural-number levels, needs and amounts."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "It does not model how a center forms its boundary or comes to represent a region; the region has no status outside the unfolding.",
+      "zh": "不模型中心怎样形成其边界或怎样表示一个区域；区域在展开之外没有地位。",
+      "kind": "scope"
+    },
+    {
+      "en": "Omitted and Clearing are minimal witnesses: their activity and requirements are stipulated, shown consistent with balance, support and dependence, and model no actual center.",
+      "zh": "Omitted 与 Clearing 是最小的见证：其活动与要求由规定给出，表明与平衡、支持和依存相容，不模型任何实际的中心。",
+      "kind": "correspondence",
+      "witness": "Becoming.Omitted.loses_own"
+    },
+    {
+      "en": "It says neither which boundary a center should represent nor what a center should do.",
+      "zh": "不说中心应当表示哪个边界，也不说中心应当做什么。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Clearing.lean",
+      "detail": {
+        "zh": "覆盖所需不阻止侵蚀他者：清除者每步在其资源上更新，在第一步侵蚀（Clearing.renewing_over_resource）。",
+        "en": "Covering what is required does not prevent undermining another: the clearer renews over its resource at every step and undermines at step one (Clearing.renewing_over_resource)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
+      "detail": {
+        "zh": "在遗漏所需的区域上更新，不必保住自身支持：Omitted 中的形成在另一个条件上更新，该步之后不被支持（Omitted.loses_own）。",
+        "en": "Renewal over a region omitting a requirement need not keep its own support: in Omitted the formation renews over the other condition and is unsupported after the step (Omitted.loses_own)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker: the current bytes of the core modules Becoming.Regions, Clearing, Admission, Dependence, Flow and Continuation are bound to passing receipts under becoming-checks, each reporting an empty axiom list for every cited declaration; the checker verifies that the core compiles from Lean's prelude alone. Author counterreview in the integration note; no independent review.",
+    "zh": "Lean 4.29.1 合并检查器实查：核心模块 Becoming.Regions、Clearing、Admission、Dependence、Flow 与 Continuation 的当前字节绑定 becoming-checks 下通过的回执，所引声明的公理报告皆空；检查器并核对核心只用 Lean 前导即可编译。作者反审见整合文档；尚无独立审查。"
+  },
+  "next_delta": {
+    "en": "Model how a center forms and represents its boundary; read dependence step by step and in temporal order, where the feeding closure reads it over formations.",
+    "zh": "模型中心怎样形成并表示其边界；按步、按时间先后读依存，而供给闭包是在形成层面上读它。"
+  },
   "correspondence": {
-    "zh": "Ren 写道：“recognizing the formation of the center is also with in the system, and the \"boundary\" is also with in the same cognitive system”，又写道自我的“imagined boundary”“it is also cognitive construct that's materialistic”。读法（AI 的）：一个条件区域读作一个中心所表示的边界，形成实际参与与所需的条件读作它的实际依存。一个中心的边界可以覆盖其所需而不覆盖其参与，于是保住自身而侵蚀他者；也可以遗漏其所需，于是经自身的汲取失去自身支持；只有覆盖其参与的边界给出该步的更新。这里没有模型中心怎样形成或表示边界，区域在展开之外没有地位。这为路线 (b)（P40）准备了比较：“应当”是中心在其所表示的边界与其实际依存一致时所做的；那条路线尚未开始。读法与名称是 AI 的。",
-    "en": "Ren wrote that “recognizing the formation of the center is also with in the system, and the \"boundary\" is also with in the same cognitive system”, and of the self's “imagined boundary” that “it is also cognitive construct that's materialistic”. A reading (the AI's): a region of conditions reads as the boundary a center represents, and the conditions a formation actually takes part in and requires as its actual dependence. A center's boundary can cover what it requires and not what it takes part in, so it keeps itself and undermines another; or it can omit what it requires, so its own draw loses its own support; only a boundary covering what it takes part in gives renewal at the step. Nothing here models how a center forms or represents a boundary, and the region has no status outside the unfolding. This prepares a comparison for route (b) (P40), on which “should” is what a center does once its represented boundary matches what it actually depends on; that route has not begun. The reading and the names are the AI's."
+    "zh": "Ren 10 月 10 日写道：“recognizing the formation of the center is also with in the system, and the \"boundary\" is also with in the same cognitive system”，又写道自我的“imagined boundary”“it is also cognitive construct that's materialistic”。读法（AI 的）：一个条件区域读作一个中心所表示的边界，形成实际参与与所需的条件读作它的实际依存。一个中心的边界可以覆盖其所需而不覆盖其参与，于是保住自身而侵蚀他者；也可以遗漏其所需，于是经自身的汲取失去自身支持；只有覆盖其参与的边界给出该步的更新。这里没有模型中心怎样形成或表示边界，区域在展开之外没有地位。这为路线 (b) 准备了比较：“应当”是中心在其所表示的边界与其实际依存一致时所做的。读法与名称是 AI 的。",
+    "en": "Ren wrote on 10 October that “recognizing the formation of the center is also with in the system, and the \"boundary\" is also with in the same cognitive system”, and of the self's “imagined boundary” that “it is also cognitive construct that's materialistic”. A reading (the AI's): a region of conditions reads as the boundary a center represents, and the conditions a formation actually takes part in and requires as its actual dependence. A center's boundary can cover what it requires and not what it takes part in, so it keeps itself and undermines another; or it can omit what it requires, so its own draw loses its own support; only a boundary covering what it takes part in gives renewal at the step. Nothing here models how a center forms or represents a boundary, and the region has no status outside the unfolding. This prepares a comparison for route (b), on which “should” is what a center does once its represented boundary matches what it actually depends on. The reading and the names are the AI's."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
   "aliases": [
@@ -151,30 +250,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
-      "detail": {
-        "zh": "覆盖所需不阻止侵蚀他者：清除者每步在其资源上更新，在第一步侵蚀（Clearing.renewing_over_resource）。",
-        "en": "Covering what is required does not prevent undermining another: the clearer renews over its resource at every step and undermines at step one (Clearing.renewing_over_resource)."
-      }
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
-      "detail": {
-        "zh": "遗漏所需的区域上的更新不保住自身支持（Omitted.loses_own）。",
-        "en": "Renewal over a region omitting a requirement does not keep its own support (Omitted.loses_own)."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "条件区域是陈述的参数，这里不模型中心怎样形成或表示它；比较只在一步上（多步的依存范围由 P40 的供给闭包给出，并在 Overshoot 中与所表示的边界比较，见 feeding-closure 与 consumption-ends-with-feeders）；Omitted 与 Clearing 是最小的见证，其活动与要求由规定给出，见证表明它们与平衡、支持与依存相容；不含伦理谓词，不说哪个边界应当被表示，也不说中心应当做什么；把条件区域读作所表示的边界，是 AI 的读法，依 Ren 的交托采用；名称（RenewingOver、Omitted 等）是 AI 的表述，按 Ren 的命名规则采用。",
-    "en": "A region of conditions is a parameter of the statement, and nothing here models how a center forms or represents it; the comparison is at one step (dependence over several steps is given by P40's feeding closure and compared with a represented boundary in Overshoot; see feeding-closure and consumption-ends-with-feeders); Omitted and Clearing are minimal witnesses, their activity and requirements stipulated and shown consistent with balance, support and dependence; contains no ethical predicate, and says neither which boundary should be represented nor what a center should do; reading a region of conditions as a represented boundary is the AI's reading, adopted on Ren's delegation; the names (RenewingOver, Omitted and others) are the AI's wording, adopted under Ren's naming rule."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T221720.428753Z）：Becoming.Admission 的 46 项定理与 Becoming.Regions 的 26 项定理全部空依赖；同一回执覆盖包内 91 个模块（含只作导入的根模块与四个桥接模块），共 4983 项定理／7020 项声明审计，39 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 90 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §51；尚未经独立审查。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T221720.428753Z): the 46 theorems of Becoming.Admission and the 26 of Becoming.Regions all have empty axiom reports; the same receipt covers the package's 91 modules (including the import-only root and the four bridge modules) with 4983 theorems/7020 declaration audits, and 39 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 90 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §51 of the integration note; not yet independently reviewed."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
@@ -432,10 +507,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "中心怎样形成并表示其边界的模型；按步、按时间先后的依存范围（路线 (b) 的供给闭包是形成层面的）。",
-    "en": "A model of how a center forms and represents its boundary; dependence step by step and in temporal order (the feeding closure of route (b) is at the level of formations)."
-  },
   "history": [
     {
       "zh": "2026-10-10 P37：新增，按 Ren“yes to both readings, go ahead with Part I.”与“let's aim for a first, then try to archive b”；统一计划 P37（第一部分：可能性、三种区域、相界、层级、搭便车者的见证与所表示的边界），分工经另一会话同意；见整合文档 §51。",
@@ -512,6 +583,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): in the correspondence 'the author's reading (an AI argument, adopted on Ren's delegation)' reads 'a reading (the AI's)', Ren's quoted words kept verbatim; the claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的“作者的读法（AI 论证，依 Ren 的交托采用）”改为“读法（AI 的）”，Ren 的引语原样保留；主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): title and statement kept; the claim split into five laws, each read against its declarations in Regions.lean, Clearing.lean, Admission.lean, Dependence.lean and Flow.lean (renewal over a region and its order, the covering region, keeping its own support, the Clearing and Omitted witnesses); the limitations to three does-not-show items, the hypotheses and the standard boundaries no-ethical-premise, no-evaluation, discrete-steps and names-provisional; the first counterexample's path corrected to Clearing.lean, which defines its witness since R31, and the second's text narrowed to the witness it is (“need not keep”); a round number and a stale clause on route (b), whose feeding closure the related records feeding-closure and consumption-ends-with-feeders state, cut from the correspondence, Ren's words kept verbatim with their date and the AI label kept; no premise, status, reference, source hash or proof binding changed. Every earlier sentence is mapped in [represented-boundary-against-dependence.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/represented-boundary-against-dependence.md); the exact earlier record is the first text_versions entry.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：标题与陈述保留；主张拆为五条规律，各条对照 Regions.lean、Clearing.lean、Admission.lean、Dependence.lean 与 Flow.lean 中的声明核读（区域上的更新及其次序、覆盖的区域、保住自身支持、Clearing 与 Omitted 见证）；限制改为三条“未表明”、前提与通用边界 no-ethical-premise、no-evaluation、discrete-steps、names-provisional；第一条反例的路径改为 Clearing.lean（R31 起其见证在此定义），第二条的文字按其见证收窄（“不必保住”）；对应中删去一处轮次编号与一句关于路线 (b) 的过时说法（其供给闭包由相关记录 feeding-closure 与 consumption-ends-with-feeders 陈述），Ren 的原话连同日期逐字保留，AI 标签保留；前提、状态、引用、来源哈希与证明绑定均未改变。每句旧文本的去向见 [represented-boundary-against-dependence.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/represented-boundary-against-dependence.md)；迁移前的完整记录为 text_versions 首项。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/35dff4aef2ec6429/represented-boundary-against-dependence.json",
+      "sha256": "35dff4aef2ec6429a797f515d3778f7ba3764665b307ec70813c94e62d1e7d7b",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/1bf28b34a00c74f7/represented-boundary-against-dependence.json",
+      "sha256": "1bf28b34a00c74f7fa628541a4169af4f04cd7d53bcd42beacf570fc6d5c3b6f",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

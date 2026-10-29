@@ -1,35 +1,163 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "seeking-boundary",
   "title": {
     "zh": "寻求在何处停息：“比现在更多”从不停息，“高于一切他者”不对两者停息",
     "en": "Where seeking rests: more than now never does, above all others never for two"
   },
-  "statement": {
-    "zh": "在确定的律之下，寻求恰在律所不变、满足其目标的状态停息：“比现在更多”需要开放的世界，“高于一切他者”不同时满足两个；所立者被列出时，不断上升需要不衰减的步，衰减不断则上升停止。",
-    "en": "Under a determined law, seeking rests exactly at a state the law leaves unchanged that meets its target: more than now needs an open world, and above all others never holds of two; where what stands is listed, rising without end needs steps that do not run down, and running down stops it."
-  },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-20T07:47:06+00:00",
-  "claim": {
-    "zh": "在确定的律 next 之下，从 s 出发的轨道从某步起带着满足的目标停息，恰当它到达一个 next 不变、满足目标的状态（Law.rests_iff）；在这样的状态满足的目标此后每步都满足（Law.fixed_rests）。“比现在更多”，即自身的一个量 q 跨过一步上升（MoreThanNow），只由变化满足（more_not_at_rest、Law.more_never_rests）；每步都满足时任意两个较晚的步之间 q 都上升（more_rises），所以每个配置都是新的（more_new），没有列表容纳它们（more_needs_open，unlisted_of_new 的实例）；往上数满足它（succ_more）。“高于一切他者”，即其他每个寻求者的量都低于自己的（AboveAll），在一个状态至多被一个寻求者满足（aboveAll_unique、aboveAll_not_two），所以在任何律之下，没有律所不变的状态对两个寻求者都满足它（Law.aboveAll_never_rests）。所立者每步被列出（Web.StandingCensus）时，在任意晚处上升的条件，需要在任意晚处有所立者不衰减的步（Flow.more_needs_unrun，由 Flow.change_recurs_iff）；所立者从某步起每步衰减时，没有条件在任意晚处上升（Flow.more_exhausted）。不用 Lean 公理。",
-    "en": "Under a determined law next, the orbit from s comes to rest with its target met from some step on exactly when it reaches a state next leaves unchanged that meets the target (Law.rests_iff); a target met at such a state is met at every later step (Law.fixed_rests). More than now, a quantity q of one's own rising across the step (MoreThanNow), is met only by change (more_not_at_rest, Law.more_never_rests); met at every step, q rises between any two later steps (more_rises), so every configuration is new (more_new) and no list holds them (more_needs_open, an instance of unlisted_of_new); counting on meets it (succ_more). Above all others, every other seeker's quantity below one's own (AboveAll), is met at a state by at most one seeker (aboveAll_unique, aboveAll_not_two), so under any law no state left unchanged meets it for two seekers (Law.aboveAll_never_rests). Where what stands is listed at each step (Web.StandingCensus), a condition rising at arbitrarily late steps needs, at arbitrarily late steps, steps across which what stands does not run down (Flow.more_needs_unrun, from Flow.change_recurs_iff); where what stands runs down at every step from some step on, no condition rises at arbitrarily late steps (Flow.more_exhausted). No Lean axiom is used."
+  "reviewed_at_utc": "2026-10-28T11:59:00+00:00",
+  "statement": {
+    "en": "Under a determined law, seeking rests exactly at a state the law leaves unchanged that meets its target; more than now needs an open world, above all others never holds of two; with what stands listed, rising without end needs steps that do not run down, and running down from a step on rules it out.",
+    "zh": "在确定的律之下，寻求恰在律所不变、满足其目标的状态停息：“比现在更多”需要开放的世界，“高于一切他者”不同时满足两个；所立者被列出时，不断上升需要不衰减的步，从某步起每步衰减则排除不断上升。"
   },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "目标是配置上的任一条件；目标怎样形成没有建模。rests_iff 设律确定；B2 设所立者每步被列出，这是写在定理中的局部条件。",
-      "en": "A target is any condition on the configuration; how a target forms is not modelled. rests_iff assumes a determined law; B2 assumes what stands is listed at each step, a local condition written into the theorems."
+      "en": "Along a sequence of configurations, more than now is met across the step from n where a natural-number quantity of one's own rises across it, and the sequence rests there where the configuration does not change; a seeker stands above all others at a state where every other seeker's quantity is below its own.",
+      "zh": "沿配置的一个序列，“比现在更多”在第 n 步跨过时满足，是指自身的一个自然数量跨过该步上升；序列在那里停息，是指配置不变；一个寻求者在某状态“高于一切他者”，是指其他每个寻求者的量都低于它的。",
+      "declarations": [
+        "Becoming.MoreThanNow",
+        "Becoming.RestsAt",
+        "Becoming.AboveAll"
+      ]
     },
     {
-      "zh": "离散的步（从第 0 步计）；自然数的量。",
-      "en": "Discrete steps, counted from step 0; natural-number quantities."
+      "en": "Where a law leaves a state unchanged and the state meets a target, the orbit from that state stays at it and meets the target at every step.",
+      "zh": "凡律使一个状态不变且该状态满足一个目标，从该状态出发的轨道每步都停在那里并满足目标。",
+      "declarations": [
+        "Becoming.Law.orbit",
+        "Becoming.Law.fixed_rests"
+      ]
+    },
+    {
+      "en": "Under a determined law, the orbit from a state comes to rest with its target met from some step on exactly where it reaches a state the law leaves unchanged that meets the target; so too for every run of a determined law, which is its orbit from where the run begins.",
+      "zh": "在确定的律之下，从一个状态出发的轨道从某步起带着满足的目标停息，恰当它到达一个律所不变、满足目标的状态；确定的律的每次运行亦然，运行就是从其起点出发的轨道。",
+      "declarations": [
+        "Becoming.Law.rests_iff",
+        "Becoming.SeekingRuns.rests_iff"
+      ]
+    },
+    {
+      "en": "More than now is met only by change: no step at which a sequence rests meets it; under any law, no step at which the orbit rests meets it; and on a run of a determined law, no step at which the run rests meets it.",
+      "zh": "“比现在更多”只由变化满足：序列停息的步不满足它；在任何律之下，轨道停息的步不满足它；在确定的律的运行中，运行停息的步不满足它。",
+      "declarations": [
+        "Becoming.more_not_at_rest",
+        "Becoming.Law.more_never_rests",
+        "Becoming.SeekingRuns.more_never_rests"
+      ]
+    },
+    {
+      "en": "Met at every step from some step N on, more than now raises the quantity between any two later steps; met at every step, it makes every configuration of the sequence new, so no list holds the configurations the sequence passes through; counting on meets it at every step.",
+      "zh": "从某步 N 起每步都满足时，“比现在更多”使量在任意两个较晚的步之间上升；每步都满足时，它使序列的每个配置都是新的，所以没有列表容纳序列经过的配置；往上数每步都满足它。",
+      "declarations": [
+        "Becoming.more_rises",
+        "Becoming.more_new",
+        "Becoming.unlisted_of_new",
+        "Becoming.more_needs_open",
+        "Becoming.succ_more"
+      ]
+    },
+    {
+      "en": "Above all others is met at a state by at most one seeker, so two different seekers never both meet it at a state, nor at a configuration of any run; under any law no state the law leaves unchanged meets it for every seeker of a family holding two, nor does any configuration of a determined law's run that the law leaves unchanged.",
+      "zh": "“高于一切他者”在一个状态至多被一个寻求者满足，所以两个不同的寻求者在一个状态、在任何运行的配置处都不同时满足它；在任何律之下，对含两个寻求者的家族，律所不变的状态都不对每个寻求者满足它，确定的律的运行中律所不变的配置也不。",
+      "declarations": [
+        "Becoming.aboveAll_unique",
+        "Becoming.aboveAll_not_two",
+        "Becoming.SeekingRuns.aboveAll_not_two",
+        "Becoming.Law.aboveAll_never_rests",
+        "Becoming.SeekingRuns.aboveAll_never_rests"
+      ]
+    },
+    {
+      "en": "Across a step, what stands runs down where some family without repetition holds whatever stands before or after it and the flow balances and dissipates on it; a census lists, each once, what stands at each step. Under a census, at arbitrarily late steps some condition's standing changes exactly where at arbitrarily late steps some condition's standing changes across a step at which what stands does not run down.",
+      "zh": "在一个世界的某步上，所立者衰减，是指某个无重复的家族持有该步前后所立的一切，且流在其上平衡并耗散；普查逐步列出所立者，各列一次。在普查之下，在任意晚处有条件的所立改变，恰当在任意晚处有条件的所立跨过所立者不衰减的步而改变。",
+      "declarations": [
+        "Becoming.Web.StandingCensus",
+        "Becoming.Flow.RunsDown",
+        "Becoming.Flow.change_recurs_iff"
+      ]
+    },
+    {
+      "en": "Where what stands is listed at each step, each once, a condition whose level rises at arbitrarily late steps needs, at arbitrarily late steps, steps across which what stands does not run down; where what stands runs down at every step from some step on, no condition rises at arbitrarily late steps.",
+      "zh": "凡所立者每步被列出、各列一次，一个在任意晚处上升的条件，需要在任意晚处有所立者不衰减的步；所立者从某步起每步衰减时，没有条件在任意晚处上升。",
+      "declarations": [
+        "Becoming.Flow.more_needs_unrun",
+        "Becoming.Flow.more_exhausted"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "A target is any condition on the configuration; how a target forms is not modelled. The boundary of enough assumes a determined law; the laws of rising and running down assume that what stands is listed at each step, a local condition written into the theorems.",
+      "zh": "目标是配置上的任一条件；目标怎样形成没有建模。够的边界设律确定；上升与衰减的规律设所立者每步被列出，这是写在定理中的局部条件。"
+    },
+    {
+      "en": "Steps are counted from step 0; quantities are natural numbers.",
+      "zh": "步从第 0 步计；量是自然数。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "It does not derive how a target forms or is revised, that a seeker pursues it, or which targets actual formations hold.",
+      "zh": "不推出目标怎样形成、怎样修正，寻求者追求其目标，或实际形成持有哪些目标。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Hijacking, how such targets form and pass on and how winning selects them, is not stated here.",
+      "zh": "劫持，即这类目标怎样形成与传递、赢怎样选择它们，这里不陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "The equivalence of rest with a fixed state meeting the target is stated for determined laws only.",
+      "zh": "停息与满足目标的不动状态之间的等价只对确定的律陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "Running down shows only that the rises do not recur at arbitrarily late steps, not that exhaustion ends the seekers themselves.",
+      "zh": "衰减只表明上升不在任意晚处复现，不表明耗尽终结寻求者自身。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The laws are elementary: a strict maximum holds of at most one, and the rises not recurring under running down is termination by a ranking function.",
+      "zh": "这些规律是初等的：严格最大者至多一个；衰减下上升不再复现是排序函数的终止。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Seeking.lean",
+      "detail": {
+        "zh": "边界：“比现在更多”可以每步都被满足，但只经变化、只在开放的世界中：数下去（`succ_more`）每步都满足它，却从不停息（`Law.more_never_rests`），也没有列表持有它经过的配置（`more_needs_open`）。",
+        "en": "Boundary: more than now can be met at every step, but only by change and only in an open world: counting on (`succ_more`) meets it at every step and never rests (`Law.more_never_rests`), and no list holds the configurations it passes through (`more_needs_open`)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Seeking.lean",
+      "detail": {
+        "zh": "边界：“高于一切他者”在一个状态至多被一个寻求者满足（`aboveAll_unique`、`aboveAll_not_two`），所以对含两个寻求者的家族，律所不变的状态都不同时满足它（`Law.aboveAll_never_rests`）。",
+        "en": "Boundary: above all others is met by at most one seeker at a state (`aboveAll_unique`, `aboveAll_not_two`), so for a family holding two seekers no state the law leaves unchanged meets it for both (`Law.aboveAll_never_rests`)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "discrete-steps",
+    "no-ethical-premise",
+    "no-evaluation",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated core checker check_becoming.py (Lean 4.29.1): Becoming.Seeking and Becoming.SeekingRuns are bound to becoming-checks/20261019T231053.882924Z, Becoming.Locality to 20261016T121942.514802Z, Becoming.Recurrence to 20261025T182341.971697Z and Becoming.Prelude to 20261021T133545.845568Z; each receipt reports an empty axiom list for every cited declaration and that the core compiles from Lean's prelude alone. The author's counter-review is in the integration note; it has had no independent review.",
+    "zh": "核心检查器 check_becoming.py（Lean 4.29.1）实查：Seeking、SeekingRuns、Locality、Recurrence 与 Prelude 的当前字节绑定 becoming-checks 下的回执，各回执报告所引声明公理为空，核心只用 Lean 前导即可编译。作者反审见整合文档；未作独立审查。"
+  },
+  "next_delta": {
+    "en": "How targets form and pass between formations, and how winning that brings more power to win selects targets that cannot be met at rest, joined to the results on the meta-attractor; exhaustion ending the seekers where the seeking is not a take of more than now from a bounded giving; an independent review.",
+    "zh": "目标怎样形成并在形成之间传递，赢得更多以赢者怎样选择不能在停息中满足的目标，接上元吸引子的结果；寻求不是对有界所给的多于此刻的取用之处，耗尽终结寻求者；独立审查。"
+  },
   "correspondence": {
-    "zh": "Ren 10 月 10 日：“the seeking system got locked in, what they are pursuing is illusion(in south asia and Buddhism)”，“find the boundary condition for 无明”；10 月 11 日：“yes let's do 无明”。无明边界计划的 B1（够）与 B2（扩张或耗尽）在这里陈述；B3（反馈）与 B4（明）是 P49、P53、P55 的定理读到寻求上，不重述；B5（劫持）没有陈述。读法（AI 的，依 Ren 的交托采用）：无明是使寻求锁定在不能于停息中满足之目标上的不见，其边界是 B1；明是使支持所不标记者也耦合入的耦合；知足、知止是边界之内的目标；支配本身不在所排除者之内。见整合文档 §83。",
-    "en": "Ren on 10 October: “the seeking system got locked in, what they are pursuing is illusion(in south asia and Buddhism)” and “find the boundary condition for 无明”; on 11 October: “yes let's do 无明”. B1 (enough) and B2 (expansion or exhaustion) of the 无明 boundary plan are stated here; B3 (feedback) and B4 (明) are the theorems of P49, P53 and P55 read for seeking, not restated; B5 (hijacking) is not stated. Readings (the AI's, adopted on Ren's delegation): 无明 is the not-seeing that keeps seeking locked onto a target that cannot be met at rest, and its boundary is B1; 明 is coupling that lets in what support does not mark; 知足 and 知止 are targets within the boundary; dominance as such is not the target ruled out. See §83 of the integration note."
+    "en": "Ren on 10 October 2026: “the seeking system got locked in, what they are pursuing is illusion(in south asia and Buddhism)” and “find the boundary condition for 无明”; on 11 October 2026: “yes let's do 无明” (sources/15-codex-theory-conversations, 2026-10-10-truth-exists-opening and 2026-10-11-wisdom-from-registration). B1 (enough) and B2 (expansion or exhaustion) of the 无明 boundary plan are stated here; B3 (feedback) and B4 (明) are theorems already on the spine, read for seeking, not restated; B5 (hijacking) is not stated here. AI readings: 无明 is the not-seeing that keeps seeking locked onto a target that cannot be met at rest, and its boundary is B1; 明 is coupling that lets in what support does not mark; 知足 and 知止 are targets within the boundary; dominance as such is not the target ruled out. See §83 of the integration note.",
+    "zh": "Ren 2026 年 10 月 10 日：“the seeking system got locked in, what they are pursuing is illusion(in south asia and Buddhism)”，“find the boundary condition for 无明”；10 月 11 日：“yes let's do 无明”（sources/15-codex-theory-conversations，2026-10-10-truth-exists-opening 与 2026-10-11-wisdom-from-registration）。无明边界计划的 B1（够）与 B2（扩张或耗尽）在这里陈述；B3（反馈）与 B4（明）是脊柱上已有的定理，读到寻求上，不重述；B5（劫持）不在这里陈述。AI 的读法：无明是使寻求锁定在不能于停息中满足之目标上的不见，其边界是 B1；明是使支持所不标记者也耦合入的耦合；知足、知止是边界之内的目标；支配本身不在所排除者之内。见整合文档 §83。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Seeking.lean",
   "aliases": [
@@ -131,35 +259,25 @@
     {
       "id": "where-a-rising-take-ends",
       "detail": {
-        "en": "There, where what stands runs down, the rises of more than now do not recur; here, read on what a seeker takes from a bounded giving, the seeker itself ends under balance alone.",
-        "zh": "那里所立者衰减之处，多于此刻的上升不再出现；这里读在寻求者从有界所给中所取上，寻求者本身仅在平衡下终结。"
-      }
-    }
-  ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Seeking.lean",
-      "detail": {
-        "zh": "边界：“比现在更多”可以每步都被满足，但只经变化、只在开放的世界中：数下去（`succ_more`）每步都满足它，却从不停息（`Law.more_never_rests`），也没有列表持有它经过的配置（`more_needs_open`）。",
-        "en": "Boundary: more than now can be met at every step, but only by change and only in an open world: counting on (`succ_more`) meets it at every step and never rests (`Law.more_never_rests`), and no list holds the configurations it passes through (`more_needs_open`)."
+        "en": "Here, where what stands runs down from a step on, the rises of more than now do not recur at arbitrarily late steps; there, read on what a seeker takes from a bounded giving, the seeker itself ends under balance alone.",
+        "zh": "这里所立者从某步起衰减之处，多于此刻的上升不在任意晚处复现；那里读在寻求者从有界所给中所取上，寻求者本身仅在平衡下终结。"
       }
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Seeking.lean",
+      "id": "target-capture",
       "detail": {
-        "zh": "边界：“高于一切他者”在一个状态至多被一个寻求者满足（`aboveAll_unique`、`aboveAll_not_two`），所以对含两个寻求者的家族，律所不变的状态都不同时满足它（`Law.aboveAll_never_rests`）。",
-        "en": "Boundary: above all others is met by at most one seeker at a state (`aboveAll_unique`, `aboveAll_not_two`), so for a family holding two seekers no state the law leaves unchanged meets it for both (`Law.aboveAll_never_rests`)."
+        "en": "Hijacking, the selection of targets by those who carry them, is stated there.",
+        "zh": "劫持，即携带目标者对目标的选择，在那里陈述。"
+      }
+    },
+    {
+      "id": "the-boundary-of-enough-under-undetermined-laws",
+      "detail": {
+        "en": "The boundary of enough under undetermined laws; under a determined law its two forms are this record's one.",
+        "zh": "不确定的律中够的边界；在确定的律之下，它的两种形式就是本记录的一种。"
       }
     }
   ],
-  "limitations": {
-    "zh": "目标怎样形成、怎样修正，寻求者追求其目标，实际形成持有哪些目标，都不推出；劫持（B5）另在 target-capture 中陈述；rests_iff 只对确定的律；B2 只说上升不再复现，耗尽终结寻求者自身没有陈述；B1 是初等的（严格最大者至多一个；衰减下的停息是排序函数的终止）；读法是 AI 的，依 Ren 的交托采用；不含伦理谓词。",
-    "en": "How a target forms or is revised, that a seeker pursues it, and which targets actual formations hold are not derived; hijacking (B5) is stated separately, in target-capture; rests_iff is for determined laws only; B2 says only that the rises stop recurring, not that exhaustion ends the seekers themselves; B1 is elementary (a strict maximum holds of one; rest under run-down is ranking-function termination); the readings are the AI's, adopted on Ren's delegation; contains no ethical predicate."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Seeking 的 13 项定理全部空依赖，其中含 Law.rests_iff、more_needs_open、aboveAll_unique、Flow.more_needs_unrun 与 Flow.more_exhausted；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致；外围回执 20261013T095049.338744Z 通过。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。作者反审见整合文档 §83；未作独立审查；需要如第十八次审查的审查（D45 (4)）。",
-    "en": "Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): the 13 theorems of Becoming.Seeking all have empty axiom reports, among them Law.rests_iff, more_needs_open, aboveAll_unique, Flow.more_needs_unrun and Flow.more_exhausted; the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts; periphery receipt 20261013T095049.338744Z passed. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The author's counterreview is in §83 of the integration note; not independently reviewed; it needs a review such as the eighteenth was (DELEGATED-CHOICES D45 (4))."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Seeking.lean",
@@ -393,10 +511,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "en": "B5, hijacking: how targets form and are transmitted, and how winning that buys more power to win selects targets that cannot rest, joined to the meta-attractor's results; exhaustion ending the seekers where the seeking is not a take more than now from a bounded giving; the boundary of enough under undetermined laws.",
-    "zh": "B5，劫持：目标怎样形成与传递，赢得更多以赢者怎样选择不能停息的目标，接上元吸引子的结果；寻求不是对有界所给的多于此刻的取用之处，耗尽终结寻求者；不确定的律中够的边界。"
-  },
   "history": [
     {
       "zh": "2026-10-11 P62：新增，按 Ren 10-10“find the boundary condition for 无明”与 10-11“yes let's do 无明”；统一计划 P62；无明边界计划的 B1、B2；见整合文档 §83。",
@@ -478,6 +592,28 @@
     {
       "en": "20 October 2026, LK1 (study section 237): the closest prior result named against the significance review's verdicts (study SA1), so that the record is not led with as a new finding; one limitations clause rewritten within the growth ratchet. The claim and its premises are unchanged.",
       "zh": "2026年10月20日，LK1（研究第237节）：按意义审查（研究 SA1）的裁定指名最接近的先前结果，使本记录不被当作新发现来领头；在增长限制之内改写 limitations 的一句。主张与其前提不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement kept, its last clause narrowed to running down at every step from a step on ruling out rising without end, as Flow.more_exhausted has it; the claim split into eight laws, each read against its declarations in Seeking.lean, SeekingRuns.lean, Locality.lean and Recurrence.lean (definitions, a fixed state at rest, the boundary of enough, more than now only by change, the open world, above all others, running down and the census, expansion or exhaustion), the run forms of SeekingRuns stated beside the orbit forms; the limitations to five does-not-show items and the standard boundaries no-evaluation and names-provisional, with no-ethical-premise and discrete-steps; the hypotheses kept without the plan's item labels; target-capture and the-boundary-of-enough-under-undetermined-laws added as related results, the first named by the old limitations, the second completing the old next step's last item, dropped from it, and \"buys\" there reworded; the correspondence keeps Ren's words with their sources and dates, its board item numbers and the delegation clause cut; no declaration, source hash, binding or status changed. Every earlier sentence is mapped in [seeking-boundary.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/seeking-boundary.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in related entries, laws, the correspondence, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述保留，末一分句按 Flow.more_exhausted 收窄为“从某步起每步衰减则排除不断上升”；主张拆为八条规律，各条对照 Seeking.lean、SeekingRuns.lean、Locality.lean 与 Recurrence.lean 中的声明核读（定义、不动状态的停息、够的边界、“比现在更多”只由变化满足、开放的世界、“高于一切他者”、衰减与普查、扩张或耗尽），SeekingRuns 的运行形式与轨道形式并列；限制分为五条“未表明”与通用边界 no-evaluation、names-provisional，并引 no-ethical-premise 与 discrete-steps；前提保留，去掉计划的条目标号；target-capture 与 the-boundary-of-enough-under-undetermined-laws 加为相关成果，前者为旧限制所指，后者完成旧下一步的末项，故从中删去，其中的“buys”改写；对应保留 Ren 的话及其来源与日期，删去看板条目编号与交托一句；声明、来源哈希、绑定与状态均未改变。每句旧文本的去向见 [seeking-boundary.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/seeking-boundary.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及相关条目、规律、对应，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/c9293645b3b02a7b/seeking-boundary.json",
+      "sha256": "c9293645b3b02a7b2c0829f82c7b1ccbbd9f512ad6ed942d46de5c094d54cf33",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/c3b164b26b78b169/seeking-boundary.json",
+      "sha256": "c3b164b26b78b169e1029c001ac0eade5d2edf1e81267f56147cd79c99d62848",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

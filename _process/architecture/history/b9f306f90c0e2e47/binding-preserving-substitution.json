@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "id": "binding-preserving-substitution",
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F11",
+  "reviewed_at_utc": "2026-10-08T18:44:38.578475+00:00",
+  "title": {
+    "zh": "保留绑定的代入及精确位置判据",
+    "en": "Binding-preserving substitution and its exact position criterion"
+  },
+  "claim": {
+    "zh": "给定有限类型项语言、代入与前后赋值，全部消费者在代入前后求值相同，当且仅当每个替换项给出其原位置的根据。构造的代入在嵌套假设下保留位置；单假设接入与先后代入满足相应语义等式。",
+    "en": "For the supplied finite typed-term language, substitution and context assignments, every consumer evaluates equally before and after replacement iff each replacement term supplies the ground at its original position. Constructed substitution retains positions under nested binders; single insertion and successive substitution satisfy the corresponding semantic equations."
+  },
+  "hypotheses": [
+    {
+      "zh": "使用既有 InferentialGrounds 的有限项、类型及求值；同一原子载体族与稳定的绑定位置给定。无可变状态、非终止或物理成本。",
+      "en": "Uses existing InferentialGrounds finite terms, types and evaluation, with the same atomic carrier family and stable binding positions; no mutable state, divergence or physical cost."
+    },
+    {
+      "zh": "全部消费者的范围包括每个位置的直接使用。判断保持另须假设保证及实际生产根据满足输入要求；这两个前提不被代入定理证明。",
+      "en": "The all-consumer scope includes direct use of every position. Assessment preservation additionally requires a hypothetical guarantee and an actual producer satisfying its input criterion; substitution does not prove either premise."
+    }
+  ],
+  "correspondence": {
+    "zh": "引入、位置、使用与代入是同一论证内部的分析角色；形式等式保留所选求值，实际指向、完整意义和来源历史的对应仍须说明。",
+    "en": "Introduction, position, use and substitution are analytical roles within one derivation. The equations preserve the selected denotation; actual reference, full content and source-history correspondence remain obligations."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialSubstitution.lean",
+  "aliases": [
+    "Generative.InferentialSubstitution.all_terms_agree_iff_positions",
+    "Becoming.Readout.agree_iff_parts",
+    "Becoming.Readout.supplied_agree_iff_parts"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "derivation-soundness",
+      "detail": {
+        "zh": "同属明确追踪前提的结果；该记录使用另一个 Derives 演算，本定理不调用它，也未提供跨演算适配。",
+        "en": "A related premise-tracking result in a different Derives calculus; this theorem neither invokes it nor provides a cross-calculus adapter."
+      }
+    },
+    {
+      "id": "constitutive-binding-assessment",
+      "detail": {
+        "zh": "局部构成性解释已完成评估；未证明完整元逻辑无前提根据。本定理的数学声明与实查保持原范围。",
+        "en": "The local constitutive explanation has been assessed; complete presuppositionless metalogic remains unproved. This theorem and its checks retain their scope."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialSubstitution.lean",
+      "detail": {
+        "zh": "同类型误接到内层位置可改变答案；两位置当前同值时又可掩盖误接。全体消费者条件不能当作忽略该位置的单一消费者之必要条件。",
+        "en": "A same-type capture of an inner position can change the answer; equal current values can conceal the capture. The all-consumer condition is not necessary for an individual consumer that ignores that position."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "形式语言与绑定解释仍给定，未完成元逻辑的无前提根据；求值相等不独自证明指向、意义或历史相同。未证明物理重复执行、成本保持或此演算对一切推理的唯一性。",
+    "en": "The language and interpretation of binding remain supplied; presuppositionless grounding of metalogic is unfinished. Denotational equality alone does not establish identity of reference, content or history. No physical double execution, cost preservation or uniqueness of this calculus for all reasoning is proved."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1实际编译9项新定理及10项继承声明审计，共19项：13空，6仅Quot.sound（函数外延性）；无自定义公理、证明空洞、警告或经典选择。作者反审和原典方法比较，无独立验收或新经验实验。",
+    "en": "Actual Lean 4.29.1 compilation: 9 new theorems plus 10 inherited declaration audits, 19 total: 13 empty and 6 only Quot.sound through function extensionality. No custom axioms, proof holes, warnings or classical choice. Author counterreview and primary-method comparison; no independent acceptance or new empirical experiment."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialSubstitution.lean",
+      "role": "proof",
+      "sha256": "ae06bdfe05171b55c56b935c56499ea7e6c572c360d21aa0970c77b382ad4a0b",
+      "declarations": [
+        "Generative.InferentialSubstitution.extract_rename",
+        "Generative.InferentialSubstitution.extract_substitute",
+        "Generative.InferentialSubstitution.all_terms_agree_iff_positions",
+        "Generative.InferentialSubstitution.discharge_matches_supply",
+        "Generative.InferentialSubstitution.discharge_preserves_assessment",
+        "Generative.InferentialSubstitution.successive_substitution",
+        "Generative.InferentialSubstitution.nested_substitution_retains_outer",
+        "Generative.InferentialSubstitution.typed_capture_changes_answer",
+        "Generative.InferentialSubstitution.matching_values_hide_capture"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialGrounds.lean",
+      "role": "proof",
+      "sha256": "04ade1d91de4fd7fba789a94728a5aee6792c551c41611fc195e6b30c20f0bcd",
+      "declarations": [
+        "Generative.InferentialGrounds.extract",
+        "Generative.InferentialGrounds.application_after_abstraction"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/inferential-substitution-checks/20261008T181823.552825Z/receipt.json",
+      "role": "receipt",
+      "sha256": "8b574d92284e38f21c192d0ce2258921ca0f5d42bee254af20db5d4525bb7811",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/RECOGNITIONAL-BINDING-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "7565fa3f6e3f74a2775c05afdc8bd47ce3c02ae1a1fcd53e0f3a6a2370d6f1a0",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/GENERATED-LOGIC.md",
+      "role": "statement",
+      "sha256": "e6a3e25355b2753a9da5d0c864bf4bc26de171f1b521d1b8bd5334bbef98cf03",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-08-generative-logic-investigation.md",
+      "role": "provenance",
+      "sha256": "1508261e4e9249b4e3c6b9c45f21f3c9a57522bebb1bb22f959507212cf120fc",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean",
+      "role": "proof",
+      "sha256": "c6a85943044e2fce083a947495cc825a42a381fa7f44e1c1f30c8a3ba33c3843",
+      "declarations": [
+        "Becoming.Readout.ThroughParts",
+        "Becoming.Readout.ReadsDirectly",
+        "Becoming.Readout.agree_iff_parts",
+        "Becoming.Readout.supplied_agree_iff_parts"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T161154.555289Z/verification.json",
+      "role": "receipt",
+      "sha256": "167317522f26c16d624f15528c625767b1d0cef1412be1b7fd70f45ee773ca63",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/SubstitutionCorrespondence.lean",
+      "role": "proof",
+      "sha256": "0226c956c66cc3931a9896861738d581271247a334910d70ac4455e10b55572d",
+      "declarations": [
+        "Becoming.SubstitutionCorrespondence.part",
+        "Becoming.SubstitutionCorrespondence.read",
+        "Becoming.SubstitutionCorrespondence.use",
+        "Becoming.SubstitutionCorrespondence.through",
+        "Becoming.SubstitutionCorrespondence.direct",
+        "Becoming.SubstitutionCorrespondence.supplied",
+        "Becoming.SubstitutionCorrespondence.supplies",
+        "Becoming.SubstitutionCorrespondence.all_terms_agree_iff_positions_by_core"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261015T161423.129149Z/verification.json",
+      "role": "receipt",
+      "sha256": "919e50cdc15afec795449e9b5988000965eca495876c70ad68f0a300f4ce5a89",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/check_substitution_correspondence.py",
+      "role": "provenance",
+      "sha256": "d49af9717c58004d5113616a25b75848974140a0bcf5c9cd36b27c1598b576df",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
+      "role": "proof",
+      "sha256": "72fd570fa32c3fc6bd0458f4b0793bb7ce9365f7b1276aaddf323ca05b2afc86",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T172257.067968Z/verification.json",
+      "role": "receipt",
+      "sha256": "afe03d9e9c1b75fb054ac5d53cf575e2217e4af2ebc27ae4f901b612d758b71e",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261020T161957.579185Z/verification.json",
+      "role": "receipt",
+      "sha256": "fabfd5675a46888acdc7db88e8230bd9e807e8654feaf90de383861b55a73d15",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialGrounds.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/inferential-substitution-checks/20261008T181823.552825Z/receipt.json",
+      "sha256_pointer": "/modules/0/sha256",
+      "success_pointer": "/passed",
+      "success_value": true
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialSubstitution.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/inferential-substitution-checks/20261008T181823.552825Z/receipt.json",
+      "sha256_pointer": "/modules/1/sha256",
+      "success_pointer": "/passed",
+      "success_value": true
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Readout",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/SubstitutionCorrespondence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261020T161957.579185Z/verification.json",
+      "sha256_pointer": "/source_sha256/SubstitutionCorrespondence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Courses",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "严格目标仍缺从局部引用构成到本论证所用元推理资源之充分根据的连接；须正面说明此连接，不能重复代入定理或把能够反对等同接受整套逻辑。",
+    "en": "The strict target still lacks the passage from local reference constitution to adequate warrant for the metainferential resources used here; repeating substitution or equating intelligible challenge with acceptance of the entire logic does not supply it."
+  },
+  "history": [
+    {
+      "zh": "2026-10-09：在既有绑定研究第9节接续；新增代入构造、精确位置判据与捕获边界。既有恒等、关系传递、根基替换与健全性成果保留原范围，不重复计为新结果。",
+      "en": "2026-10-09: continued the existing binding study in section 9 with constructed substitution, an exact position criterion and capture boundaries. Existing identity, relational transport, basis replacement and soundness retain their scopes and are not counted anew."
+    },
+    {
+      "zh": "2026-10-16，P114 散立的模块在共同基底上陈述（研究 §138；Ren 2026-10-15：“so for our theories, they are proved in a dag order and can be all connected right?”）：主律在共同基底上陈述，不加前提：网的两步在每个只经条件水平而读、且每个条件水平都被某个读法直接读出的读法下相同，恰当每个条件水平相同（steps_agree_iff_levels）；替代者在每个读法下与步 t 相同，恰当它所供给的步在每个条件上与 t 水平相同（supplied_agree_iff_levels）。Becoming.Courses 由核心运行编译与审计（回执 20261015T172257.067968Z），公理报告为空。论断、假设、Ren 的话、依赖与既有证明不变；只加引用、绑定、别名与本条。",
+      "en": "16 October 2026, P114, the apart modules read on the shared base (study section 138; Ren, 15 October: “so for our theories, they are proved in a dag order and can be all connected right?”): the main law stated on the shared base, no premise added: two steps of a web agree under every reading that reads a step only through its conditions' levels, each level read directly by some reading, exactly where every condition stands at the same level (steps_agree_iff_levels); a replacement agrees with step t under every reading exactly where the step it supplies stands at t's level at every condition (supplied_agree_iff_levels). Becoming.Courses is compiled and audited by the core run (receipt 20261015T172257.067968Z), with empty axiom reports. Claims, hypotheses, Ren's words, dependencies and the earlier proofs are unchanged; only references, bindings, aliases and this entry are added."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: Courses.lean. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R29 (compression under board rule 9: generalize below, not beside; one name per statement): Proof bindings (Courses.lean, Readout.lean) rebound to core receipt 20261019T185632.962707Z. Re-pointed after reading the change: Courses.lean, a restatement of a statement proved under another name removed (one name per statement), or a use or docstring re-pointed to the kept name; kept statements unchanged; Readout.lean, Readout.image removed for Image of Becoming.Mechanism. The claim is unchanged.",
+      "zh": "2026年10月20日，R29（按看板规则 9 压缩：在下面推广而非并列；每个陈述一个名称）：证明绑定（Courses.lean、Readout.lean）改到核心回执 20261019T185632.962707Z。读过改动后重新指向：Courses.lean，删去以另一名称证明之陈述的重述（每个陈述一个名称），或用法与说明改指保留的名称；保留的陈述不变；Readout.lean，删去 Readout.image，改用 Becoming.Mechanism 的 Image。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Courses.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Courses.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Courses.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Courses.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 9 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/aa3cdb27b14d323d/binding-preserving-substitution.json and in git.",
+      "zh": "2026-10-20：9 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/aa3cdb27b14d323d/binding-preserving-substitution.json 和 git 中。"
+    }
+  ]
+}

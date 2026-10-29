@@ -1,0 +1,46 @@
+# Migration map: conveyance-crosses-the-boundary
+
+Old record sha256 `54028d11f4e72d570848e54f6c848d97ebee95763fa33e3fab25338ed9696d84`; snapshot `_process/architecture/history/54028d11f4e72d57/conveyance-crosses-the-boundary.json`.
+
+Labels number the old English sentences and clauses (split at full stops and semicolons outside parentheses): T title, S statement, C claim, L limitations, V validation_scope, R correspondence, N next_delta, H hypotheses, X counterexamples. The Chinese text of each field goes to the same place as its English counterpart; the old Chinese was read alongside, sentence by sentence.
+
+Each law was read against its declarations in `Becoming/Standpoints.lean`, `Becoming/Continuation.lean`, `Becoming/Roles.lean`, `Becoming/Descent.lean` and `Becoming/Correspondence.lean` (all core). The conditions the Lean takes are kept: balance, dissipation, decided equality, a family without repetition, enclosure around from some step on and taking at arbitrarily late steps (`fed_from_beyond`, `boundary_crossed`, `region_not_a_cut`, law 2); relational neutrality for conveyance, the target's significance and the source's event living (`valuing_reaches_source`, law 3); and the embedding of a two-kind model, `Flow.roles` and `Web.roles`, for the conditions (law 4). `boundary_crossed` proves `¬ ∀ t ≥ N, ¬ ∃ …`, a negated universal, and the law keeps “from no step on left uncrossed”, not “crossed at some step”. Every declaration a law names was already in the record's references; the bound core receipts report an empty axiom list for each. The standard boundary significance-related-not-asserted replaces the claim's “no ethical axiom”: the record takes relational neutrality, a premise about significance, as a hypothesis of law 3, so no-ethical-premise is not cited, and the empty axiom reports are stated in validation_scope.
+
+| Old text | Type | New place |
+|---|---|---|
+| T0 “Conveyance crosses the boundary” | title | title (unchanged) |
+| S0 “Read with one kind of relatum, conveyance is a candidate reading of related.” | statement | statement (unchanged) |
+| S1 “A continuing family's boundary is from no step on left uncrossed, so its region is no cut in the relations;” | statement | statement (“no cut”, the same, “in the relations” dropped for length; law 2 defines the cut by formed relations) |
+| S2 “conveyance relates two conditions, which interaction, living on and descent never do.” | statement (narrowed) | statement: “in the embedding of a two-kind model”, where `roles_conditions_unrelated` is proved; the home section says the same, and in a general one-kind web a condition can also be active |
+| C0 “Read with one kind of relatum, with events read stepwise (living: active and not undermining), two events at a common step are related when something is conveyed between their relata (Flow.conveyance).” | law | law 1 (`Conveys` written out: a formation taking part takes from one and gives to the other) |
+| C1 “A relatum nothing is taken from or given to at a step is related to nothing at that step (Flow.conveyance_idle).” | law | law 1 |
+| C2 “A region's boundary is a cut in the relations when no formed relation leaves it (Flow.Cut).” | law (definition) | law 2 |
+| C3 “Under balance and dissipation, the boundary of a finite family without repetition, enclosed around from some step on, from which taking recurs, is from no step on left uncrossed (Flow.boundary_crossed), so its region is not a cut (Flow.region_not_a_cut);” | law | law 2 (with decided equality, and `fed_from_beyond`, the law it rests on) |
+| C4 “under relational neutrality, valuing a relatum's event reaches the living event at that step of what is conveyed into it (Flow.valuing_reaches_source).” | law | law 3 (the direction of conveyance, the significance of the target and the living source written in); hypotheses[3] |
+| C5 “What conveyance adds is a relation between two conditions, in the direction of inflow: read with one kind of relatum, something conveyed between two conditions relates their events (Flow.roles_conveyance), while interaction, living on and descent relate no two conditions at any steps (Flow.roles_conditions_unrelated);” | law | law 4 (in the embedding of a two-kind model, as `Flow.roles`, `Web.roles` and `inr_not_mem` construct it, with the three compared valuations named) |
+| C6 “so the clearer's resource is crossed at every step (Clearing.crossed, Clearing.resource_not_cut) and the step's fuel and the resource are related by conveyance alone (Clearing.conveyance_only).” | law (witness) | law 5 |
+| C7 “Under living on the resource's region, which the clearer lives on, is no cut either (Clearing.resource_not_cut_living_on), so a region being no cut is not itself new;” | law (witness) + reading | law 5 (`resource_not_cut_living_on`); the conclusion “not itself new” to correspondence, labelled an AI reading |
+| C8 “what is new is the relation between conditions, and region_not_a_cut is distinctive in direction.” | reading | correspondence (an AI reading, “in the direction of inflow”) |
+| C9 “No ethical axiom and no Lean axiom is used;” | evidence | validation_scope (empty axiom reports); standard_boundaries significance-related-not-asserted (the record asserts no significance) |
+| C10 “relational neutrality is a hypothesis.” | premise | hypotheses[3] (added) |
+| H0 “Conveyance as related is a correspondence premise: decided by the AI, …” | premise | hypotheses[0], ‘decided by the AI’ restated as ‘an AI reading, D12’ |
+| H1 “The one-kind reading: conditions and formations share an index, …(see life-as-condition-of-life).” | premise | hypotheses[1] (unchanged) |
+| H2 “The crossing theorems need balance, dissipation, no repetition, enclosure around, recurring taking and decided equality, as in continuing-self-fed-from-beyond.” | premise | hypotheses[2] (unchanged); standard_boundaries decidability |
+| X0 “The earlier readings relate no two conditions: … (Clearing.conveyance_only); under living on, though, the resource's region is no cut either (Clearing.resource_not_cut_living_on).” | counterexample | counterexamples[0] (unchanged); law 5 |
+| X1 “An idle relatum is related to nothing by conveyance (Flow.conveyance_idle): conveyance is not free connection.” | counterexample | counterexamples[1] (English unchanged; the Chinese 免费 (free of charge), a word of exchange in a live field, became 无需流动); law 1 |
+| L0 “Conveyance relates events at a common step only, orders no steps, and does not ask whether what is conveyed sustains the receiver;” | scope | does_not_show[0] |
+| L1 “it does not distinguish a living or held source from another;” | scope | does_not_show[1] (with what law 3 needs: the source's event living) |
+| L2 “it is the AI's decision;” | correspondence premise | hypotheses[0] (“decided by the AI”, unchanged) |
+| L3 “reaching under relational neutrality is the relational half of the continuation condition, not what the want requires;” | non-implication | does_not_show[2] (“what wanting one's own continuation requires”) |
+| L4 “stated for the stepwise reading only;” | scope | does_not_show[3]; standard_boundaries discrete-steps |
+| L5 “the names are the AI's wording, adopted under Ren's naming rule (conveyance, Cut and others).” | standard boundary + correspondence | standard_boundaries names-provisional; correspondence (“The names … are an AI wording”) |
+| V0 “Successful Lean 4.29.1 consolidated check (20261013T221720.428753Z): the 22 theorems of Becoming.Standpoints all have empty axiom reports;” | evidence | validation_scope (the five bound receipts named, empty axiom reports); the earlier receipt stays in references and its counts in the snapshot |
+| V1 “the same receipt covers the package's 91 modules … with 4983 theorems/7020 declaration audits, and 39 inherited modules …;” | evidence (superseded counts) | snapshot; those counts belong to a receipt that no longer binds these modules |
+| V2 “periphery receipt 20261013T095049.338744Z passed.” | evidence (superseded) | snapshot; the record cites no periphery declaration |
+| V3 “The author's counterreview is in §47 of the integration note;” | evidence | validation_scope (“in the integration note”) |
+| V4 “the independent review (CONTINUATION-GROUNDING-REVIEW.md) accepts its Lean, and its corrections are handled in §47.1–47.4 of the integration note.” | evidence | validation_scope (sections left to the integration note) |
+| V5 “The checker also verifies core purity: …” | evidence | snapshot; the bound receipts record the core's purity, and validation_scope says every cited declaration is core with an empty axiom report |
+| R0–R6 “Ren's proposal says that the whole is perspective-dependent: “how much does one consider something to be a part of its system dynamics”. … it does not make an unheld source held.” | correspondence | correspondence (unchanged; Ren's words verbatim, as in the source 2026-10-10-wanting-continuation-one-axiom.md) |
+| N0 “An ordered, effect-sensitive conveyance;” | next step | next_delta (“sensitive to whether what is conveyed sustains the receiver”) |
+| N1 “the same relation on the whole-run reading;” | next step | next_delta |
+| N2 “combining conveyance with living on.” | next step | next_delta |

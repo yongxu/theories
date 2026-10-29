@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "id": "enacted-scene-binding",
+  "title": {
+    "zh": "行动形成可供绑定的场景",
+    "en": "Action forms scenes available for binding"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F09",
+  "reviewed_at_utc": "2026-10-25T14:45:37+00:00",
+  "claim": {
+    "zh": "跨情境读出：对每类记录与每类相等可判定的意义，在不重复的候选范围中，形式解析为某意义，恰当每个关涉该形式的记录都提供它，且其他每个意义都缺于某个关涉的记录。对行动形成的场景：从每个转移记录对二词编码成组、候选范围不重复的处境出发，经每段移动与命名的历史，每个有限编码序列的解释是其原子的组合，恰当对每个词，先前记录与沿途所闻的命名（各提供学习者所在处可及者）分离其原子。协调的历史（coordinated 37）是实例；在一处命名（stationary 37）缺分离，从原子不可及处命名（mistimed 37）缺覆盖。指定空间关系与有支持的移动／命名史产生已有绑定构造的精确解释输入；另外有实际响应及访问、保留、时序失败见证。",
+    "en": "Cross-situational resolution: for every type of records and every type of meanings compared decidedly, a form resolves to a meaning of a repertoire without repeats exactly when every record bearing on the form offers it and every other meaning is missing from some bearing record. For enacted scenes: from every situation whose transition record groups the two-word encoding and whose repertoire has no repeats, after every history of moves and namings, every finite encoded sequence is interpreted as the assembly of its atoms exactly when, for each word, the earlier records and the namings heard along the history, each offering what was accessible where the learner stood, separate its atom. The coordinated history (coordinated 37) is an instance; naming from one place (stationary 37) fails separation, and naming a site from where its atom is not accessible (mistimed 37) fails coverage. The specified spatial arrangement and supported movement/naming history produce the previous binding construction’s exact interpretation inputs; separate witnesses cover actual response and access, retention and timing failures."
+  },
+  "hypotheses": [
+    {
+      "zh": "给定整数二维位置、Manhattan 距离与范围2、三个已识别操作位置、移动规律、命名约定和安排。",
+      "en": "Integer two-dimensional positions, Manhattan distance and range two, three identified operation sites, movement law, naming convention and schedule are supplied."
+    },
+    {
+      "zh": "复用已取得分节与绑定架构；成功史有37单位声明支持，移动消耗5单位。",
+      "en": "The acquired grouping/binding architecture is reused; the successful history has 37 declared support units, including five consumed by movement."
+    }
+  ],
+  "correspondence": {
+    "zh": "接收位置与被命名位置是同一局部安排的关系角色。范围表示可取得性，未独自解释完整视野、注意、身体或沟通意图。",
+    "en": "Receiving and named positions are relational roles within one local arrangement. Range represents accessibility; it does not itself explain a full visual field, attention, bodies or communicative intention."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EnactedScene.lean",
+  "aliases": [
+    "Generative.EnactedScene.enacted_access_enters_all_sequence_interpretation",
+    "Becoming.MachineInstances.coordinated_interprets_every",
+    "Becoming.CrossSituational.resolves_iff",
+    "Becoming.MachineInstances.scene_interprets_every_iff",
+    "Becoming.Courses.run_resolves_iff",
+    "Becoming.Courses.course_resolves_every_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "acquired-binding-compositional-use",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "空间接触史产生旧绑定构造的解释输入，直接调用其任意序列定理。",
+        "en": "The spatial history produces the prior construction’s interpretation inputs and directly invokes its all-sequence theorem."
+      },
+      "interface": {
+        "output": {
+          "zh": "给定取得绑定后，编码序列解释等于相应原子消息组合。",
+          "en": "After the stated acquired bindings, encoded-sequence interpretation equals the corresponding atomic message assembly."
+        },
+        "input": {
+          "zh": "新移动史保留相同日志、候选范围、绑定记录与排除记录。",
+          "en": "The movement history has the same log, repertoire, binding records and exclusions."
+        },
+        "conditions": {
+          "zh": "解释输入相同，不要求整个状态或支出历史相同；额外移动成本保留。",
+          "en": "Interpretation inputs match; whole-state or expenditure-history identity is not assumed, and movement costs remain."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EnactedScene.lean"
+      }
+    }
+  ],
+  "related": [],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EnactedScene.lean",
+      "detail": {
+        "zh": "位置和名称次数相同可因时序产生相反绑定；清楚视野漏掉所指可误学；访问无保留不形成绑定，支持不足阻断移动或执行。",
+        "en": "Matching positions and name counts can yield inverted bindings through timing; a clear view omitting the target can mislead; access without retention does not bind, and insufficient support prevents movement or response."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CrossSituational.lean",
+      "detail": {
+        "zh": "意义有重复时解析不是分离（Repeated）；一条遗漏目标的记录可留下错误的唯一候选（Omitted）。",
+        "en": "With a repeated meaning, resolution is not separation (Repeated); one record omitting the target can leave a wrong unique candidate (Omitted)."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "是给定安排下的新输入接通，不是移动安排自发形成、完整注意、知觉分类、意向理解或演化心理证明。",
+    "en": "A new input composition under a supplied schedule, not a proof of schedule formation, complete attention, perceptual categories, intention understanding or evolutionary psychology."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.29.1 新查16项定理／29项声明审计，288项继承审计分列；作者反审和含未泛化结果的原始文献比较，无新实验或独立验收。",
+    "en": "Lean 4.29.1: 16 new theorems / 29 declaration audits, with 288 inherited audits separately rebuilt; author counterreview and primary comparison including failed generalization, without a new experiment or independent acceptance."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EnactedScene.lean",
+      "role": "proof",
+      "sha256": "e801ec6a3187354d9ad0c211687ee6ac655b7845f984fd53e2fad23798715631",
+      "declarations": [
+        "Generative.EnactedScene.enacted_scenes_supply_the_previous_binding_inputs",
+        "Generative.EnactedScene.enacted_access_enters_all_sequence_interpretation",
+        "Generative.EnactedScene.enacted_access_reaches_actual_response",
+        "Generative.EnactedScene.unchanged_position_and_name_counts_do_not_establish_coordination",
+        "Generative.EnactedScene.a_clear_view_can_omit_the_named_target"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+      "role": "proof",
+      "sha256": "83c01ea3684e6005ad7c112409dabf345000871524b321efd9f738b94b8c7925",
+      "declarations": [
+        "Becoming.MachineInstances.coordinated_groups",
+        "Becoming.MachineInstances.coordinated_resolves",
+        "Becoming.MachineInstances.coordinated_interprets_every",
+        "Becoming.MachineInstances.resolve_iff",
+        "Becoming.MachineInstances.interprets_every_iff_separated",
+        "Becoming.MachineInstances.step_records",
+        "Becoming.MachineInstances.enact_records",
+        "Becoming.MachineInstances.scene_interprets_every_iff",
+        "Becoming.MachineInstances.coordinated_from_history",
+        "Becoming.MachineInstances.stationary_fails",
+        "Becoming.MachineInstances.mistimed_fails"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CrossSituational.lean",
+      "role": "proof",
+      "sha256": "402e2de8c945ee033006718beedc27b76eb7e266050f5b794c7bb51970551a79",
+      "declarations": [
+        "Becoming.CrossSituational.candidates_eq_iff",
+        "Becoming.CrossSituational.resolves_iff",
+        "Becoming.CrossSituational.resolved_is_target"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/enacted-scene-verification.json",
+      "role": "receipt",
+      "sha256": "8a9fc92ce6eda7cf26ae79941ce9de120e50c420730b5d9f6755e44c9652c431",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ACQUIRED-SEGMENTATION-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "af59ef64dfa54c9dad65edbbc5be3da2668f63d7b6154f42e151daca57033c15",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json",
+      "role": "receipt",
+      "sha256": "9529958e4e9e29d9acd9ebff1dbe6cc734739f80577a0c75b623f85840ea2e79",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T091930.724493Z/verification.json",
+      "role": "receipt",
+      "sha256": "c1e7a979931c19f4cf3649ffd24ae4315c531e5c678b16f9dc452fa4d00ceafb",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
+      "role": "proof",
+      "sha256": "72fd570fa32c3fc6bd0458f4b0793bb7ce9365f7b1276aaddf323ca05b2afc86",
+      "declarations": [
+        "Becoming.Courses.run_resolves_iff",
+        "Becoming.Courses.course_resolves_every_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T172257.067968Z/verification.json",
+      "role": "receipt",
+      "sha256": "afe03d9e9c1b75fb054ac5d53cf575e2217e4af2ebc27ae4f901b612d758b71e",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json",
+      "role": "receipt",
+      "sha256": "6d30faffd5899d5180f3a2e230035c0f87ce266d959330b61aebed22411a173b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
+      "role": "receipt",
+      "sha256": "72cf0f96994a75c732cea93c92c4dbdf96cc4ba943d538de31ab2bcfd79cc9fb",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EnactedScene.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/enacted-scene-verification.json",
+      "sha256_pointer": "/source_sha256/EnactedScene",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
+      "sha256_pointer": "/source_sha256/MachineInstances",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CrossSituational.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.CrossSituational",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Courses.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Courses",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "既有条件连接保留；下一重点是在匹配发育程序中识别已取得访问及所保留来源／次序如何进入实际使用，分别观察当前依赖与旧内容认可。原典已约束自动迁移，但未识别唯一机制或演化史。",
+    "en": "Preserve the completed conditional connections. Next identify how formed access and retained source/order information guide actual use in a matched developmental procedure, distinguishing present reliance from old-content endorsement. Primary evidence constrains automatic transfer without identifying a unique mechanism or evolutionary history."
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：由实际移动计算可取得候选，并正式接通已检查的绑定解释；动作选择与类别形成的前提保留。",
+      "en": "2026-10-08: computed accessible alternatives from actual movement and formally joined the checked binding interpretation; action-selection and category-formation premises remain."
+    },
+    {
+      "zh": "2026-10-08：核读原研究第14–16节；选择经历及访问预测修订的新连接已实查，原证明范围不变，未宣告完整心理解释。",
+      "en": "2026-10-08: reviewed study sections 14–16; encounter selection and access-prediction revision now have a checked connection. This proof’s original scope remains unchanged; no complete psychological explanation is claimed."
+    },
+    {
+      "zh": "2026-10-08：核读新增公开命名／注视分析；自动所指注视的经验对应受限，既有覆盖前提、形式结论及原实查范围不变。",
+      "en": "2026-10-08: reviewed the appended public naming/gaze analysis. Automatic target-gaze correspondence is limited; the existing coverage premises, formal conclusions and original verification scope are unchanged."
+    },
+    {
+      "zh": "2026-10-08：已读研究新增19–20节；后续保留测量加入经验约束，未改变本成果声明、证明或既有反例。下一对应具体化为经验可靠性改变后对新证据的使用。",
+      "en": "2026-10-08: reviewed added study sections 19–20. A later-retention measure adds an empirical constraint without changing this result’s claim, proof or existing failures. The next correspondence is evidence use after experienced reliability changes."
+    },
+    {
+      "zh": "2026-10-09：已读研究21–23节；取得的来源关系现以另一路径生成旧命名记录的绑定候选。原声明、证明、经验结果与反例不改写；历史适用范围的新反例具体化后续连接。",
+      "en": "2026-10-09: reviewed study sections 21–23. Acquired source relations now generate binding alternatives for old naming records through an additional route. Original claims, proofs, empirical results and failures remain; a historical-applicability counterexample sharpens the next connection."
+    },
+    {
+      "zh": "2026-10-09：核读同一研究新增历史适用范围组合与反审；本项既有主张、源码及实查不变，接续问题转向来源—时序保持和持续性假设的经验识别。",
+      "en": "2026-10-09: reviewed the same study’s historical-applicability composition and counterreview. This result’s prior claim, sources and scientific checks remain unchanged; the continuation now targets empirical identification of source–time retention and persistence assumptions."
+    },
+    {
+      "zh": "2026-10-14：按旧记录一般律审计，主张改为一般律的实例（取得词库的解释律见 acquired-binding-compositional-use；外围 MachineInstances）。scratch_build 实编；回执由落地运行绑定。原定理、回执与反例不变。",
+      "en": "2026-10-14: under the general-law audit of older records, the claim now states the result as an instance of the general law (the interpretation law for acquired lexicons, see acquired-binding-compositional-use; periphery, MachineInstances). Built with scratch_build; the landing run binds the receipt. The original theorems, receipt and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-14，开放问题计划（研究第117节）：主张改为律先行。新核心模块 Becoming.CrossSituational：候选范围不重复时，形式解析为某意义恰当关涉的记录分离它（resolves_iff）；外围 MachineInstances 对每段移动与命名的历史陈述场景律（scene_interprets_every_iff），coordinated 37 成为其实例（coordinated_from_history），stationary 37 与 mistimed 37 是失败一侧。scratch_build 实编，核心公理报告为空，外围只用标准公理；对 MachineInstances 的证明绑定仍指先前运行，落地时改指新运行。原定理与反例不变。",
+      "en": "14 October 2026, open-issues plan (study section 117): the claim now states the law first. New core module Becoming.CrossSituational: for a repertoire without repeats a form resolves to a meaning exactly when the bearing records separate it (resolves_iff); the periphery MachineInstances states the scene law for every history of moves and namings (scene_interprets_every_iff), with coordinated 37 as an instance (coordinated_from_history) and stationary 37 and mistimed 37 as the failing side. Built with scratch_build: core axiom reports empty, the periphery with standard axioms only; the proof binding to MachineInstances still names the earlier run and is repointed at landing. The original theorems and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-16，P114 散立的模块在共同基底上陈述（研究 §138；Ren 2026-10-15：“so for our theories, they are proved in a dag order and can be all connected right?”）：主律在共同基底上陈述，不加前提：对无重复的意义库，一个运行的前 n 步之后形式解析为 e，恰当 e 在库中、每个承载的步都提供它、且其余每个意义都在某个承载的步中缺席（run_resolves_iff）；每个词都是从 s 回到 s 的历程且分组恢复诸词时，按解析读每组给出每个由词组成之历程的意义，恰当每个词的记录分开其意义（course_resolves_every_iff）。Becoming.Courses 由核心运行编译与审计（回执 20261015T172257.067968Z），公理报告为空。论断、假设、Ren 的话、依赖与既有证明不变；只加引用、绑定、别名与本条。",
+      "en": "16 October 2026, P114, the apart modules read on the shared base (study section 138; Ren, 15 October: “so for our theories, they are proved in a dag order and can be all connected right?”): the main law stated on the shared base, no premise added: for a repertoire without repeats, the form resolves to e after the first n moves of a run exactly when e is in the repertoire, every bearing move offers it and every other meaning is missing from some bearing move (run_resolves_iff); where every word is a course from s back to s and grouping recovers the words, reading each group by resolution gives the meanings of every course of words exactly when each word's records separate its meaning (course_resolves_every_iff). Becoming.Courses is compiled and audited by the core run (receipt 20261015T172257.067968Z), with empty axiom reports. Claims, hypotheses, Ren's words, dependencies and the earlier proofs are unchanged; only references, bindings, aliases and this entry are added."
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: Courses.lean, CrossSituational.lean. Rebound to receipt 20261018T235724.886433Z after reading the change. The claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R29 (compression under board rule 9: generalize below, not beside; one name per statement): Proof bindings (Courses.lean) rebound to core receipt 20261019T185632.962707Z. Re-pointed after reading the change: Courses.lean, a restatement of a statement proved under another name removed (one name per statement), or a use or docstring re-pointed to the kept name; kept statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R29（按看板规则 9 压缩：在下面推广而非并列；每个陈述一个名称）：证明绑定（Courses.lean）改到核心回执 20261019T185632.962707Z。读过改动后重新指向：Courses.lean，删去以另一名称证明之陈述的重述（每个陈述一个名称），或用法与说明改指保留的名称；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Courses.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Courses.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Courses.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Courses.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Courses.lean, CrossSituational.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Courses.lean, takes as its final sections RetrodictionRuns, CandidateRuns, ReducedRuns, the modules reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; CrossSituational.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R32（转发、副本与读取模块：纯转发删去，命题只陈述一次，读取模块折入其所读模块）：证明绑定（Courses.lean、CrossSituational.lean）改到核心回执 20261019T231053.882924Z。读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 223 节；Courses.lean，以末节收入 RetrodictionRuns、CandidateRuns、ReducedRuns（读它的模块），声明、名称与陈述不变；其中的纯转发与副本删去；CrossSituational.lean，纯转发与副本删去（B10、B9），用法改指所重述之律；导入随折入；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 22 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/8c876dc8a2741c5b/enacted-scene-binding.json and in git.",
+      "zh": "2026-10-20：22 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/8c876dc8a2741c5b/enacted-scene-binding.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): claim made exact to the Lean: the cross-situational law takes meanings compared decidedly (decidable equality of meanings) besides a repertoire without repeats.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：主张依 Lean 改精确：跨情境之律除不重复的候选范围外，还取意义之相等可判定。"
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "id": "acquired-revision-of-pending-task",
+  "title": {
+    "zh": "取得的目的修订进入在途任务",
+    "en": "Acquired goal revision enters a pending task"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F03",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
+  "claim": {
+    "zh": "对每条带计数工作的部分律，待完成任务恰在剩余工作加一次中完成，更短的运行都使它仍待完成；待完成与已交付互斥，所以更短的运行都不交付。在既有版本化交付不变量下，改写队首包的剩余编码保持其已捕获路线、进度与其余工作，所以修订后的队首对新请求仍是这样的任务，剩余工作相同、完成次数相同。对每个条件与每个有队首待完成的有效装置，取得的修订恰在有根据处进入在途任务：取得、修订、改革、改写与交付恰在访问有损而转变维护保留时运行，这正是比较认可学习优于参与的条件；端点随后执行新做法，保留历史上的一次损失、不再增加，并使用实际工作支持，终于三条记录与工作、储备、已用单位 (2, 6, 10)。先前的组合是其在 harmful 条件下的实例；协议自身给出两条作用规律、目的编码与工作单位。",
+    "en": "For every partial law with counted work, a pending task finishes in exactly its remaining work plus one tick, every shorter run leaves it pending, and, pending and delivered being exclusive, no shorter run delivers it. Under the existing versioned-delivery invariant, rewriting the head packet's remaining encoding preserves its captured route, progress and other work, so the revised head is again such a task for the new request, with the same remaining work and the same number of ticks. For every condition and every valid installation with a pending head, acquired revision reaches the pending task exactly where it is warranted: acquisition, revision, reform, the rewrite and its delivery run exactly under access loss with kept transition maintenance, the condition under which the comparison warrants learning over attendance; the endpoint then enacts the new practice, retains the one historical loss, adds none and uses actual work support, ending with three records and the work, reserve and used units (2, 6, 10). The earlier composition is its instance at the harmful conditions; the protocol itself supplies the two outcome laws, the goal encoding and the work units."
+  },
+  "hypotheses": [
+    {
+      "zh": "二元可逆转译、有效队列与受保护的同步头请求改写，执行前无未建模的不可逆效果；连续 tick 提供完成。",
+      "en": "Binary reversible translation, a valid queue and protected synchronous head rewrite; no unmodeled irreversible effects before endpoint enactment. Consecutive ticks provide completion."
+    },
+    {
+      "zh": "复用已取得的两实践证据、目的改变及选择改革；生生之意义与实践承诺、实际对应、权限与响应明示。新分支消耗一单位改写工作；传递维护成本没有建模。",
+      "en": "Reuse acquired two-practice evidence, changed purpose and selector reform; living significance and the practical commitments, correspondence, authority and responsiveness are explicit. The branch consumes one rewrite work unit; route-maintenance cost is not modeled."
+    }
+  ],
+  "correspondence": {
+    "zh": "学习、指令与实际作用是同一活动中的关系分化；不是博弈双方。实际目标只编码为所声明的两种实践，相关处境须在应用时匹配。",
+    "en": "Learning, instruction and effect are differentiated relations in one activity, not opposing players. The goal encoding covers only the two declared practices, with actual relevant conditions required to match."
+  },
+  "canonical_source": "experiments/market-generativity/meta-attractor/CommonTaskRevision.lean",
+  "aliases": [
+    "CommonTaskRevision.warranted_revision_and_pending_delivery",
+    "CommonTaskRevision.revised_head_completes",
+    "Becoming.VersionedTaskInstances.retarget_pending",
+    "Becoming.VersionedTaskInstances.revised_head_instance",
+    "Becoming.VersionedTaskInstances.continuation_eq"
+  ],
+  "dependencies": [
+    {
+      "id": "versioned-request-completion",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "revised_head_completes 直接调用既有 valid_head_completes，传入经 retarget_head_invariant 建立的新不变量。",
+        "en": "revised_head_completes directly calls valid_head_completes with the new invariant established by retarget_head_invariant."
+      },
+      "interface": {
+        "output": {
+          "zh": "有效队列中的头请求沿保留路线完成并保留其余任务。",
+          "en": "A valid head completes along its retained route while preserving other work."
+        },
+        "input": {
+          "zh": "改写后的实际载荷需要被完成定理消费；retargeted_act_uses_delivered_revision 将输出再送入实际行动。",
+          "en": "The rewritten payload must satisfy the completion theorem; retargeted_act_uses_delivered_revision then supplies its output to enactment."
+        },
+        "conditions": {
+          "zh": "相同银行、剩余路径和调度；只改变头项编码与请求值。",
+          "en": "Same banks, remaining path and schedule; only the head encoding and request change."
+        },
+        "evidence": "experiments/market-generativity/meta-attractor/CommonTaskRevision.lean"
+      }
+    },
+    {
+      "id": "formed-goal-revision-continuation",
+      "relation": "formal-reuse",
+      "detail": {
+        "zh": "warranted_revision_and_pending_delivery 直接消费旧比较；continuation 消费 completed 的实际状态及储备。",
+        "en": "warranted_revision_and_pending_delivery consumes the inherited comparison; continuation consumes the actual completed state and account."
+      },
+      "interface": {
+        "output": {
+          "zh": "已取得、校准、修订且改革后的状态及其有根据比较。",
+          "en": "Acquired, calibrated, revised and reformed state with its warranted comparison."
+        },
+        "input": {
+          "zh": "paidRetarget 从该状态读目的并消耗一工作单位；实际送达值决定端点实践。",
+          "en": "paidRetarget reads that state’s goal and consumes one work unit; the delivered value determines endpoint practice."
+        },
+        "conditions": {
+          "zh": "保留同一 harmful 条件、实践解释、生生之意义与实践承诺、先前损失和有限资源，不推断任意共享动机。",
+          "en": "Retains the same harmful conditions, practice interpretation, living significance and the practical commitments, earlier losses and finite resources, without inferring arbitrary shared motivation."
+        },
+        "evidence": "experiments/market-generativity/meta-attractor/CommonTaskRevision.lean"
+      }
+    }
+  ],
+  "related": [],
+  "counterexamples": [
+    {
+      "path": "experiments/market-generativity/meta-attractor/CommonTaskRevision.lean",
+      "detail": {
+        "zh": "只改标签或直接写未编码值会失败；旧任务可被忠实执行而增加损失。取得根据后处境改变，也可使修订后的实践增加维护损失；不证明开放共同目的形成或无限变化中的纠正。",
+        "en": "Relabeling or writing an unencoded value can fail; the old task can be faithfully executed and add loss. Changed conditions after acquisition can also make the revised practice harm maintenance. No open joint-purpose formation or correction through unrestricted change."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "只改标签或直接写未编码值会失败；旧任务可被忠实执行而增加损失。取得根据后处境改变，也可使修订后的实践增加维护损失；不证明开放共同目的形成或无限变化中的纠正。",
+    "en": "Relabeling or writing an unencoded value can fail; the old task can be faithfully executed and add loss. Changed conditions after acquisition can also make the revised practice harm maintenance. No open joint-purpose formation or correction through unrestricted change."
+  },
+  "validation_scope": {
+    "zh": "Lean 4.30.0-rc2 实际重建导入闭包并审计；明确区分原成果和新增组合。元数据检查不替代数学证明。一般律已由检查器回执绑定。",
+    "en": "Lean 4.30.0-rc2 actually rebuilt the repository import closure and audited declarations; inherited claims and the new composition remain distinct. Metadata checks do not replace proofs. General laws: checker receipts bound."
+  },
+  "references": [
+    {
+      "path": "experiments/market-generativity/meta-attractor/CommonTaskRevision.lean",
+      "role": "proof",
+      "sha256": "7457eb257c09c31e2eba774c8d3a8be8654242f55d3e511bb6157fe4995bc398",
+      "declarations": [
+        "CommonTaskRevision.warranted_revision_and_pending_delivery",
+        "CommonTaskRevision.revised_head_completes",
+        "CommonTaskRevision.stale_conditions_defeat_the_new_practice",
+        "CommonTaskRevision.paid_retarget_keeps_history",
+        "CommonTaskRevision.old_route_faithfully_executes_outdated_task"
+      ]
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/common-task-revision-verification.json",
+      "role": "receipt",
+      "sha256": "597e54ba387e56033ea99111c3b888108332a93f08fd7dcbb5763b3e7b019aa0",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/COLLECTIVE-DESTRUCTION-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "ba42182ab3d2441a713ab3a5c228cd097e998300ad6457d35f6ce92f837783b0",
+      "declarations": []
+    },
+    {
+      "path": "theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md",
+      "role": "statement",
+      "sha256": "51defc725df0815360072a98b4094a9d6f50f38b17d4369a50c5ce9e4d96a6d7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/check_common_task_revision.py",
+      "role": "provenance",
+      "sha256": "dd886a3be7c5e60fe9adbb864df0663c74470bcda1ecdd86428912e52c89e297",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Countdown.lean",
+      "role": "proof",
+      "sha256": "7f6696ba8696a5fcaefe4e435dd5534d4f8f356d964741c1ed5400a26575134c",
+      "declarations": [
+        "Becoming.Countdown.Advances",
+        "Becoming.Countdown.Advances.completes",
+        "Becoming.Countdown.completes_iff",
+        "Becoming.Countdown.pending_before"
+      ]
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean",
+      "role": "proof",
+      "sha256": "19b2584015863898588e6c883ba5df716921c39a13de58311fa8189d1c31dc36",
+      "declarations": [
+        "Becoming.VersionedTaskInstances.head_advances",
+        "Becoming.VersionedTaskInstances.retarget_pending",
+        "Becoming.VersionedTaskInstances.revised_head_instance",
+        "Becoming.VersionedTaskInstances.continuation_of_completed",
+        "Becoming.VersionedTaskInstances.continuation_eq",
+        "Becoming.VersionedTaskInstances.continuation_isSome_iff",
+        "Becoming.VersionedTaskInstances.harmful_continuation_instance"
+      ]
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T141427.442103Z/verification.json",
+      "role": "receipt",
+      "sha256": "eb3ccaec5f33b5a6ff7fc20e10ef491a130fbdc013a03bd0c5b3f399a7eaad7f",
+      "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261014T092502.891314Z/verification.json",
+      "role": "receipt",
+      "sha256": "a96ddf7c21bc027d5eed8b1bd3c7ba6c21731d3b2f9297a5f42f6b649af3ed55",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "role": "receipt",
+      "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json",
+      "role": "receipt",
+      "sha256": "04603eb9a2886e68a09da9ad1e3015350cd41e5b40d2ea35f2fecfcc1b2f5b3e",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/market-generativity/meta-attractor/CommonTaskRevision.lean",
+      "receipt": "experiments/market-generativity/meta-attractor/common-task-revision-verification.json",
+      "sha256_pointer": "/modules/6/source_sha256",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Countdown.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Countdown",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean",
+      "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json",
+      "sha256_pointer": "/source_sha256/VersionedTaskInstances",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "直接复用在途改写；pending-task-context-applicability 已接通取用工作的作用前复查。继续说明相关性取得和旧做法不适用时真实需求的有支持接续。",
+    "en": "Reuse pending rewriting directly; pending-task-context-applicability now connects pre-effect review that uses work. Continue acquisition of relevance and supported continuation of actual needs when the old method is inapplicable."
+  },
+  "history": [
+    {
+      "zh": "2026-10-09：新增一项组合成果；17项定理声明／27项审计与188项继承定理／327项继承审计分别列出。作者反审已记录，未声称独立验收。",
+      "en": "2026-10-09: one new composition result; 17 theorem declarations/27 audits are separated from 188 inherited theorems/327 inherited audits. Author counterreview is recorded; no independent acceptance is claimed."
+    },
+    {
+      "zh": "2026-10-14：按旧记录一般律审计，主张改为一般律先行。新核心模块 Becoming.Countdown：计数的工作恰在剩余工作加一次中完成；改写后的队首经外围 VersionedTaskInstances 仍是 Countdown.Advances 的实例，revised_head_completes 是实例。有比较根据的修订条件仍是该协议的事实。scratch_build 实编，核心公理报告为空，外围只用标准公理；回执由落地运行绑定。原定理、回执与反例不变。",
+      "en": "2026-10-14: under the general-law audit of older records, the claim now states the law first. New core module Becoming.Countdown: counted work finishes in exactly its remaining work plus one tick; through the periphery VersionedTaskInstances the rewritten head stays an instance of Countdown.Advances, and revised_head_completes is an instance. The warranted-revision conditions remain facts of the protocol. Built with scratch_build: core axiom reports empty, the periphery with standard axioms only; the landing run binds the receipts. The original theorems, receipts and counterexamples are unchanged."
+    },
+    {
+      "zh": "2026-10-14，开放问题计划（研究第117节）：主张加入对每个条件的律：外围 VersionedTaskInstances 的 continuation_eq 与 continuation_isSome_iff——对每个条件与每个有队首待完成的有效装置，在途修订恰在访问有损而转变维护保留时运行，即比较认可学习之处（formed-goal-revision-continuation 的 better_iff）；旧 acquired_revision_changes_pending_action 是 harmful 处的实例（harmful_continuation_instance）。协议自身给出两条作用规律、目的编码与工作单位。下一连接中“有成本的作用前复查”改为“取用工作的作用前复查”，意义不变。scratch_build 实编，核心公理报告为空，外围只用标准公理；对 VersionedTaskInstances 的证明绑定仍指先前运行，落地时改指新运行。原定理与反例不变。",
+      "en": "14 October 2026, open-issues plan (study section 117): the claim now adds the law for every condition: continuation_eq and continuation_isSome_iff in the periphery VersionedTaskInstances, for every condition and every valid installation with a pending head the pending revision runs exactly under access loss with kept transition maintenance, where the comparison warrants learning (better_iff in formed-goal-revision-continuation); the old acquired_revision_changes_pending_action is the instance at harmful (harmful_continuation_instance). The protocol itself supplies the two outcome laws, the goal encoding and the work units. In the next step, “paid pre-effect review” now reads “pre-effect review that uses work”, meaning unchanged. Built with scratch_build: core axiom reports empty, the periphery with standard axioms only; the proof binding to VersionedTaskInstances still names the earlier run and is repointed at landing. The original theorems and counterexamples are unchanged."
+    },
+    {
+      "en": "14 October 2026, seventeenth independent review ([BECOMING-GENERAL-LAWS-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-GENERAL-LAWS-REVIEW.md)), finding G5: \"no shorter run delivers it\" follows from `pending_before` only where pending and delivered are exclusive (`not_done_before`); here they are exclusive by construction. The claim now says so, and the `Countdown` docstrings were corrected.",
+      "zh": "2026年10月14日，第十七次独立审查（[BECOMING-GENERAL-LAWS-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-GENERAL-LAWS-REVIEW.md)）发现 G5：“更短的运行都不交付”只在待完成与已交付互斥时由 `pending_before` 推出（`not_done_before`）；此处二者按构造互斥。主张现写明这一点，`Countdown` 的文档注释也已改正。"
+    },
+    {
+      "en": "18 October 2026, the N1 renaming (Ren: \"Renames, full scope\"): BECOMING-RENEWAL-READING.md changed by the renaming (identifiers renamed; the chapter's glossary gains a table of retired Lean names; the renewal study gains section 172). Read the change: it touches no statement of this record; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Countdown.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Countdown.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Countdown.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Countdown.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。另读过改动后重新指向：BECOMING-RENEWAL-READING.md，新增第 221 节；此前各节指向改名模块文件的链接随改名表，文字不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 19 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/384523f1e5ec0477/acquired-revision-of-pending-task.json and in git.",
+      "zh": "2026-10-20：19 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/384523f1e5ec0477/acquired-revision-of-pending-task.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired label G0/J in a hypothesis and a dependency's conditions named in current terms, living significance and the practical commitments. The claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：假设与一条依赖条件中的退役标签 G0/J 按现行术语称为生生之意义与实践承诺。主张不变。"
+    }
+  ]
+}

@@ -1,28 +1,141 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "binding-preserving-substitution",
-  "kind": "theorem",
-  "status": "recorded-checked",
-  "family": "F11",
-  "reviewed_at_utc": "2026-10-08T18:44:38.578475+00:00",
   "title": {
     "zh": "保留绑定的代入及精确位置判据",
     "en": "Binding-preserving substitution and its exact position criterion"
   },
-  "claim": {
-    "zh": "给定有限类型项语言、代入与前后赋值，全部消费者在代入前后求值相同，当且仅当每个替换项给出其原位置的根据。构造的代入在嵌套假设下保留位置；单假设接入与先后代入满足相应语义等式。",
-    "en": "For the supplied finite typed-term language, substitution and context assignments, every consumer evaluates equally before and after replacement iff each replacement term supplies the ground at its original position. Constructed substitution retains positions under nested binders; single insertion and successive substitution satisfy the corresponding semantic equations."
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F11",
+  "reviewed_at_utc": "2026-10-28T12:03:41+00:00",
+  "statement": {
+    "en": "In a supplied finite typed-term language, a substitution leaves every consumer's evaluation unchanged exactly where each replacement supplies the ground at its original position, the core's law of readings through parts carried to the language; positions are kept under nested binders.",
+    "zh": "在给定的有限类型项语言中，代入使每个消费者的求值不变，恰当每个替换项给出其原位置的根据；这是核心中“经部分而读”的规律带到该语言上；嵌套绑定之下位置保留。"
   },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "使用既有 InferentialGrounds 的有限项、类型及求值；同一原子载体族与稳定的绑定位置给定。无可变状态、非终止或物理成本。",
-      "en": "Uses existing InferentialGrounds finite terms, types and evaluation, with the same atomic carrier family and stable binding positions; no mutable state, divergence or physical cost."
+      "en": "Where every reading of a family reads a configuration only through its parts, configurations agreeing at every part being read alike, and each part is read directly by some reading, two configurations agree under every reading exactly where they agree at every part.",
+      "zh": "凡一族的每个读法只经部分读配置（在每个部分一致的配置读得相同），且每个部分都被某个读法直接读出，两个配置在每个读法下一致，恰当它们在每个部分一致。",
+      "declarations": [
+        "Becoming.Readout.ThroughParts",
+        "Becoming.Readout.ReadsDirectly",
+        "Becoming.Readout.agree_iff_parts"
+      ]
     },
     {
-      "zh": "全部消费者的范围包括每个位置的直接使用。判断保持另须假设保证及实际生产根据满足输入要求；这两个前提不被代入定理证明。",
-      "en": "The all-consumer scope includes direct use of every position. Assessment preservation additionally requires a hypothetical guarantee and an actual producer satisfying its input criterion; substitution does not prove either premise."
+      "en": "Where every reading of a family reads only through the parts, each part is read directly by some reading, and each reading of a replacement is the reading of the configuration supplied from it, the replacement agrees with an original under every reading exactly where the supplied configuration agrees with the original at every part.",
+      "zh": "凡一族的每个读法只经部分而读、每个部分都被某个读法直接读出、替换者的每个读法就是从它供给的配置的读法，替换者在每个读法下与原配置一致，恰当所供给的配置在每个部分与原配置一致。",
+      "declarations": [
+        "Becoming.Readout.supplied_agree_iff_parts"
+      ]
+    },
+    {
+      "en": "In the supplied typed-term language, replacing every use of a position by a producer term, under binders too, evaluates as supplying each producer's evaluated ground at its position; renaming positions evaluates alike where each renamed position carries the original's ground.",
+      "zh": "在给定的类型项语言中，把一个位置的每次使用（绑定之下亦然）替换为产生项，其求值等于在该位置给出产生项求得的根据；重命名位置后求值相同，只要每个改名后的位置带着原位置的根据。",
+      "declarations": [
+        "Generative.InferentialSubstitution.extract_substitute",
+        "Generative.InferentialSubstitution.extract_rename",
+        "Generative.InferentialGrounds.extract"
+      ]
+    },
+    {
+      "en": "In the supplied typed-term language, with grounds assigned to the positions of both contexts, every term evaluates alike before and after a substitution exactly where each producer evaluates to the ground at its position; the periphery proves it directly, and again by the core's law, evaluation reading only through the positions (by function extensionality) and a position's direct use reading it.",
+      "zh": "在给定的类型项语言中，两个语境的位置都赋了根据时，每个项在代入前后求值相同，恰当每个产生项求值为其位置上的根据；外围直接证明它，并经核心规律再证：求值只经位置而读（借函数外延性），位置的直接使用读出该位置。",
+      "declarations": [
+        "Generative.InferentialSubstitution.all_terms_agree_iff_positions",
+        "Becoming.SubstitutionCorrespondence.part",
+        "Becoming.SubstitutionCorrespondence.read",
+        "Becoming.SubstitutionCorrespondence.use",
+        "Becoming.SubstitutionCorrespondence.through",
+        "Becoming.SubstitutionCorrespondence.direct",
+        "Becoming.SubstitutionCorrespondence.supplied",
+        "Becoming.SubstitutionCorrespondence.supplies",
+        "Becoming.SubstitutionCorrespondence.all_terms_agree_iff_positions_by_core"
+      ]
+    },
+    {
+      "en": "In the supplied typed-term language, plugging a producer into a body's first position evaluates as the body with the producer's ground added to the context, as applying the body's abstraction to it does; where the body sends each input meeting a criterion to an output meeting another and the producer's ground meets the first, the plugged body meets the second; two successive substitutions evaluate as their composite.",
+      "zh": "在给定的类型项语言中，把产生项接入一个体的首位置，其求值等于把产生项的根据加入语境后体的求值，与把体的抽象应用于它相同；若体把满足一准则的每个输入送到满足另一准则的输出，且产生项的根据满足前者，接入后的体满足后者；先后两次代入的求值等于一次合成的代入。",
+      "declarations": [
+        "Generative.InferentialSubstitution.discharge_matches_supply",
+        "Generative.InferentialSubstitution.discharge_preserves_assessment",
+        "Generative.InferentialSubstitution.successive_substitution",
+        "Generative.InferentialGrounds.application_after_abstraction"
+      ]
+    },
+    {
+      "en": "In a witness, substituting an outer producer into a body waiting under a binder keeps the outer position: the result is the term whose inner abstraction still uses the outer position.",
+      "zh": "在一个见证中，把外层产生项代入在绑定之下等待的体，保留外层位置：结果是内层抽象仍使用外层位置的项。",
+      "declarations": [
+        "Generative.InferentialSubstitution.nested_substitution_retains_outer"
+      ]
+    },
+    {
+      "en": "In a witness, two well-typed terms of the same type, one using the outer position under a binder and one whose use the binder captured, give different answers at one assignment and input and the same answer at another input, so one coincident value does not reveal the capture.",
+      "zh": "在一个见证中，两个同类型的良类型项，一个在绑定之下使用外层位置，一个的使用被绑定捕获，在一个赋值与输入处给出不同答案，在另一输入处答案相同，所以一次相同的值不显出捕获。",
+      "declarations": [
+        "Generative.InferentialSubstitution.typed_capture_changes_answer",
+        "Generative.InferentialSubstitution.matching_values_hide_capture"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "The finite typed terms, forms and evaluation of the supplied inferential language (InferentialGrounds), with one family of atomic grounds and fixed binding positions; no mutable state, no divergence and no physical resources are modelled.",
+      "zh": "使用给定推理语言（InferentialGrounds）的有限项、类型与求值，同一原子根据族与稳定的绑定位置；不建模可变状态、非终止或物理资源。"
+    },
+    {
+      "en": "The all-consumer scope includes direct use of every position. Preserving an assessment also needs a hypothetical guarantee and an actual producer meeting its input criterion; substitution proves neither premise.",
+      "zh": "全部消费者的范围包括每个位置的直接使用。判断保持另须一个假设保证，及满足其输入准则的实际产生项；代入不证明这两个前提。"
+    },
+    {
+      "en": "In the periphery, function extensionality (through Quot.sound) is used for evaluation under a binder in the renaming and substitution lemmas, and gives that evaluation reads an assignment only through its positions.",
+      "zh": "在外围，函数外延性（经 Quot.sound）用于重命名与代入引理中绑定之下的求值，并给出求值只经位置读赋值。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "For one consumer the position criterion is shown sufficient, by the substitution lemma, and not shown necessary: a consumer that ignores a position does not test it.",
+      "zh": "对单个消费者，位置判据经代入引理被表明为充分，未被表明为必要：忽略某个位置的消费者不检验该位置。",
+      "kind": "converse"
+    },
+    {
+      "en": "The language, its typing and the interpretation of binding are supplied; the result gives no presuppositionless grounding of the logic it uses.",
+      "zh": "语言、其类型与绑定的解释是给定的；本结果不给出其所用逻辑的无前提根据。",
+      "kind": "scope"
+    },
+    {
+      "en": "Equal evaluation does not establish identity of reference, content or history.",
+      "zh": "求值相等不确立指向、内容或历史的同一。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Successive substitution is shown equal in evaluation, not shown syntactically equal; no physical double execution, preservation of resources or uniqueness of this calculus for all reasoning is shown.",
+      "zh": "先后代入被表明在求值上相等，未被表明在语法上相等；不表明物理上的重复执行、资源保持，也不表明此演算对一切推理唯一。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialSubstitution.lean",
+      "detail": {
+        "en": "A same-type capture of an inner position can change the answer; equal current values can conceal the capture.",
+        "zh": "同类型误接到内层位置可改变答案；两位置当前同值时又可掩盖误接。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free"
+  ],
+  "validation_scope": {
+    "en": "Core, by check_becoming.py (Lean 4.29.1): Readout bound to becoming-checks/20261019T185632.962707Z and Courses to 20261020T051144.879480Z, cited declarations with empty axiom reports. Periphery: InferentialSubstitution and InferentialGrounds to inferential-substitution-checks/20261008T181823.552825Z (check_inferential_substitution.py, Lean 4.29.1; 13 of 19 audits empty, 6 only Quot.sound); SubstitutionCorrespondence to substitution-correspondence-checks/20261020T161957.579185Z (check_substitution_correspondence.py, Lean 4.30.0-rc2; three cited use Quot.sound). Author counter-review only.",
+    "zh": "核心 Readout、Courses（check_becoming.py，Lean 4.29.1，回执在 becoming-checks）：所引声明公理为空。外围：代入与根据模块（inferential-substitution-checks，Lean 4.29.1）19 项审计 13 空、6 仅 Quot.sound；SubstitutionCorrespondence（substitution-correspondence-checks，Lean 4.30.0-rc2）三项用 Quot.sound。仅作者反审。"
+  },
+  "next_delta": {
+    "en": "The passage from local reference constitution to an adequate warrant for the metainferential resources this result uses, without repeating the substitution theorem or reading an intelligible challenge as acceptance of the whole logic.",
+    "zh": "从局部引用构成到本结果所用元推理资源之充分根据的连接，不重复代入定理，也不把能够反对等同于接受整套逻辑。"
+  },
   "correspondence": {
     "zh": "引入、位置、使用与代入是同一论证内部的分析角色；形式等式保留所选求值，实际指向、完整意义和来源历史的对应仍须说明。",
     "en": "Introduction, position, use and substitution are analytical roles within one derivation. The equations preserve the selected denotation; actual reference, full content and source-history correspondence remain obligations."
@@ -50,23 +163,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialSubstitution.lean",
-      "detail": {
-        "zh": "同类型误接到内层位置可改变答案；两位置当前同值时又可掩盖误接。全体消费者条件不能当作忽略该位置的单一消费者之必要条件。",
-        "en": "A same-type capture of an inner position can change the answer; equal current values can conceal the capture. The all-consumer condition is not necessary for an individual consumer that ignores that position."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "形式语言与绑定解释仍给定，未完成元逻辑的无前提根据；求值相等不独自证明指向、意义或历史相同。未证明物理重复执行、成本保持或此演算对一切推理的唯一性。",
-    "en": "The language and interpretation of binding remain supplied; presuppositionless grounding of metalogic is unfinished. Denotational equality alone does not establish identity of reference, content or history. No physical double execution, cost preservation or uniqueness of this calculus for all reasoning is proved."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1实际编译9项新定理及10项继承声明审计，共19项：13空，6仅Quot.sound（函数外延性）；无自定义公理、证明空洞、警告或经典选择。作者反审和原典方法比较，无独立验收或新经验实验。",
-    "en": "Actual Lean 4.29.1 compilation: 9 new theorems plus 10 inherited declaration audits, 19 total: 13 empty and 6 only Quot.sound through function extensionality. No custom axioms, proof holes, warnings or classical choice. Author counterreview and primary-method comparison; no independent acceptance or new empirical experiment."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialSubstitution.lean",
@@ -271,10 +367,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "严格目标仍缺从局部引用构成到本论证所用元推理资源之充分根据的连接；须正面说明此连接，不能重复代入定理或把能够反对等同接受整套逻辑。",
-    "en": "The strict target still lacks the passage from local reference constitution to adequate warrant for the metainferential resources used here; repeating substitution or equating intelligible challenge with acceptance of the entire logic does not supply it."
-  },
   "history": [
     {
       "zh": "2026-10-09：在既有绑定研究第9节接续；新增代入构造、精确位置判据与捕获边界。既有恒等、关系传递、根基替换与健全性成果保留原范围，不重复计为新结果。",
@@ -298,6 +390,28 @@
     {
       "en": "2026-10-20: 9 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/aa3cdb27b14d323d/binding-preserving-substitution.json and in git.",
       "zh": "2026-10-20：9 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/aa3cdb27b14d323d/binding-preserving-substitution.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): a statement written from the claim and the home section; the claim split into seven laws, each read against its declarations in Readout.lean (the core criterion and its replacement form), InferentialSubstitution.lean and InferentialGrounds.lean (the substitution lemma, the language criterion, plugging, assessment, successive substitution, the two witnesses) and SubstitutionCorrespondence.lean (the criterion by the core law); the limitations to four does-not-show items, the counterexample's last sentence, which no declaration witnesses, among them as a converse, its two witnessed sentences kept; the first hypothesis reworded without a word of exchange (physical resources), and a third naming the function extensionality the periphery uses; the shared boundary no-ethical-premise-core-axiom-free cited; the next step stated positively; no declaration, reference, source hash, binding or status changed. Every earlier sentence is mapped in [binding-preserving-substitution.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/binding-preserving-substitution.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the evidence paragraph, does-not-show items, hypotheses, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依主张与主章写出陈述；主张拆为七条规律，各条对照 Readout.lean（核心判据及其替换形式）、InferentialSubstitution.lean 与 InferentialGrounds.lean（代入引理、语言上的判据、接入、判断保持、先后代入、两个见证）与 SubstitutionCorrespondence.lean（经核心规律的判据）中的声明核读；限制分为四条“未表明”，反例中无声明见证的末句作为一条逆命题项并入其中，其两句有见证者保留；第一条前提改写，去掉交换之词（改为物理资源），另加第三条，写明外围所用的函数外延性；引用通用边界 no-ethical-premise-core-axiom-free；下一步正面陈述；声明、引用、来源哈希、绑定与状态均未改变。每句旧文本的去向见 [binding-preserving-substitution.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/binding-preserving-substitution.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及证据段、“未表明”各项、前提，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/b9f306f90c0e2e47/binding-preserving-substitution.json",
+      "sha256": "b9f306f90c0e2e47936f7878c46e08c6222aa1eafc97e41716b6b0f143f97292",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/aa3cdb27b14d323d/binding-preserving-substitution.json",
+      "sha256": "aa3cdb27b14d323dc7e1ccd5cfe090d334b25b2fe1a961a91d9dc9a924ac83ce",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

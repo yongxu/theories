@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "id": "endpoint-loss-and-return",
+  "title": {
+    "en": "Endpoint opportunity loss and return",
+    "zh": "端点可能性丧失与返回"
+  },
+  "statement": {
+    "en": "What can be had from a configuration is kept from another exactly where the other leads back to it; failing to return loses a possibility, the start itself a witness; and return belongs to the law, not to the change, which a reading that omits the configuration reached can hide.",
+    "zh": "从一个构形可得者，从另一构形保有，恰当后者能回到前者；不能回返即失去一个可能，起点本身即为见证；回返属于律而非变化，省略所到构形的读法可以把它遮住。"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
+  "claim": {
+    "en": "Every configuration reachable from s is reachable from t exactly when t leads back to s; along a path from s to t, the configurations reachable from both are the same exactly when t leads back to s. t does not lead back to s exactly when some configuration reachable from s is not reachable from t; s itself is one. Witnesses: the dead end and the flip both take false to true; the flip returns from true to false and the dead end does not; read through the constant summary, every question about what the dead end reaches has the same answer from false and from true, though it cannot return.",
+    "zh": "从 s 可达的每个构形从 t 都可达，恰当 t 能回到 s；沿从 s 到 t 之路，二者可达的构形相同，恰当 t 能回到 s。t 不能回到 s，恰当有从 s 可达而从 t 不可达的构形；s 本身即是。见证：死路与翻转都把 false 取为 true；翻转从 true 回到 false，死路不能；经常数摘要读出，关于死路可达什么的每个问题从 false 与从 true 答案相同，它却不能回返。"
+  },
+  "hypotheses": [
+    {
+      "en": "Supplied Process.step, configuration identity, finite Trace and endpoint predicates; an actual forward path for the change interpretation.",
+      "zh": "给定 Process.step、配置身份、有限 Trace 与端点谓词；变化解释需要实际正向路径。"
+    },
+    {
+      "en": "Full endpoint test family is structural, not an omniscient available observation; actual meanings require correspondence.",
+      "zh": "完整端点测试族是结构刻画，不是可用的全知观察；实际含义须有对应。"
+    }
+  ],
+  "correspondence": {
+    "en": "States articulate relations within one unfolding. A return restores precisely the represented configuration; historical harms and distinct projected recovery targets are not erased.",
+    "zh": "状态表达同一展开中的关系。返回仅恢复被表示的配置；历史损害及不同的投影恢复目标不被抹除。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+  "aliases": [
+    "BecomingReversibility.same_endpoint_possibilities_iff_return",
+    "BecomingReversibility.irreversible_iff_endpoint_loss",
+    "Becoming.same_reach_iff_returns",
+    "Becoming.not_returns_iff_loses"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "trace-law-equivalence",
+      "detail": {
+        "en": "Both retain endpoint distinctions; no import adapter to DynamicConsequences is claimed.",
+        "zh": "两者保留端点区别；未声称导入 DynamicConsequences 的证明转换。"
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Irreversibility.lean",
+      "detail": {
+        "en": "One occurring step admits both reversible and non-returning declared laws; a constant observation hides non-return. These are weak-description controls, not refutations of a fully specified constitutive account.",
+        "zh": "同一发生步骤容许返回及无返回两种给定规律；常量观察遮蔽无返回。这是弱描述的控制，不反驳完整构成性论述。"
+      }
+    }
+  ],
+  "limitations": {
+    "en": "Fixed-law endpoint reachability only; configuration equality does not erase history. No physical irreversibility, ethical ranking, law origin or zero-substantive-axiom foundation is proved.",
+    "zh": "仅及固定规律下端点可达性；配置相同不抹去历史。未证明物理不可逆、伦理排序、规律起源或零实质公理基础。"
+  },
+  "validation_scope": {
+    "en": "Lean 4.29.1: 10 new theorems / 14 audits, all empty named-axiom dependencies; 23 inherited theorems / 28 audits separately rebuilt. Two application examples. Author counterreview; no independent-agent acceptance or empirical validation.",
+    "zh": "Lean 4.29.1：10项新定理／14项审计，命名公理依赖均空；另重编23项继承定理／28项审计。2项应用例。作者反审，无独立 agent 验收或经验验证。"
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/BecomingReversibility.lean",
+      "role": "provenance",
+      "sha256": "363af50ef3fbac55322d7820c75728bcf30edc8bc785ef95d2c1f454e4553678"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
+      "role": "proof",
+      "sha256": "e3daca1b729118fc309585a5d3ba1af60ac99cd80bab41e477aed204177069e8"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/becoming-reversibility-verification.json",
+      "role": "receipt",
+      "sha256": "a034c0963319a4992e736b36242ac48e8db54df04d05befe7e7fa1d1f8b6e352"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-REVERSIBILITY-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "a92df67f30def194dbfa22a00f2ed87b65bdfe9f156f226ecc0a6fd7369a9c01"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-08-theory-of-becoming-priority.md",
+      "role": "provenance",
+      "sha256": "a08597b97e1763ffd369b5d3eec8588b1d174adf793e3e44d2f88b5bd6a28729"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+      "role": "proof",
+      "sha256": "a6fef844c6464152369b1c1117c602f1e6d0ec6c7645fda7d6f60c8930c52def",
+      "declarations": [
+        "Becoming.keeps_reach_iff_returns",
+        "Becoming.same_reach_iff_returns",
+        "Becoming.not_returns_iff_loses",
+        "Becoming.DeadEnd.law"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Irreversibility.lean",
+      "role": "proof",
+      "sha256": "88cecd0a1457caffbbb3f975e63ee821a0f0b2e674b4e3685d1e5d18e689c2b6",
+      "declarations": [
+        "Becoming.Irreversibility.deadEnd_no_return",
+        "Becoming.Irreversibility.same_change_different_return",
+        "Becoming.Irreversibility.constant_reading_hides_loss",
+        "Becoming.Irreversibility.flip"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean",
+      "role": "provenance",
+      "sha256": "1c90a7f2788e21264c20a65e979ead06c0b3c5b4ce1d0b2831fe452f060eab36",
+      "declarations": [
+        "Becoming.keeps_possible_iff_keeps_reach",
+        "Becoming.same_endpoint_possibilities_iff_return_by_core",
+        "Becoming.irreversible_iff_endpoint_loss_by_core"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T150956.178111Z/verification.json",
+      "role": "receipt",
+      "sha256": "795c0b40d7c58facc38f3f95d306c44f29617431e16828b65c1aecc9cd6f7d77",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T163210.426211Z/verification.json",
+      "role": "receipt",
+      "sha256": "20a27676496da965792e40912a2754e4954496525e5641cb7d0708095235734b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json",
+      "role": "receipt",
+      "sha256": "04b95ada137f2c932e26f3dba4eea50303af59762ab2be9f6bdd28f1649eadd9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T134446.673561Z/verification.json",
+      "role": "receipt",
+      "sha256": "1182d296bfd637111591eb33277de93d008f28c1436b469969810422b5f7a991",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T191422.542444Z/verification.json",
+      "role": "receipt",
+      "sha256": "d87f0ffbdb0bafc510a5b95de2dd83714570dfc1ed7f1a6261578f8cb9125a79",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json",
+      "role": "receipt",
+      "sha256": "5ff8cceae947d3c3bacba7144a68d144126cc739e92e7c43fb448f51966f5665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f7165394767e93fae5bd03aec472a194f9797cebcdd3202397a0b31a07359f1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json",
+      "role": "receipt",
+      "sha256": "4d94c1b82af02e7869351aba40ea8ebaa61b5614423929afa25924281fdda97a",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Irreversibility.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Irreversibility",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Labelled",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "en": "Specify actual target-relative restoration in an existing formation/reconstruction mechanism, preserving support and history; do not reconstruct completed path-composition results.",
+    "zh": "在已有形成／重构机制中落实针对实际目标的恢复，保留支持与历史；不重建已完成的路径组合成果。"
+  },
+  "history": [
+    {
+      "en": "9 October 2026: checked structural connection and author counterreview registered. Helpers and repeated applications are not counted as independent foundational results.",
+      "zh": "2026年10月9日：登记经检查的结构连接及作者反审；辅助声明与重复应用不计作独立基础成果。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Labelled.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Labelled.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Labelled.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Labelled.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 12 bookkeeping notes condensed from 14 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/c6d4517c23a99e3a/endpoint-loss-and-return.json and in git.",
+      "zh": "2026-10-20：12 条记账性说明合并（14 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/c6d4517c23a99e3a/endpoint-loss-and-return.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (BecomingReversibility and Bridge) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Irreversibility, Becoming.Labelled and GenerativeCore). The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（BecomingReversibility and Bridge）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Irreversibility, Becoming.Labelled and GenerativeCore）。主张不变。"
+    },
+    {
+      "en": "20 October 2026, R37 (lens B of the twentieth review): the proof bindings to the Lean files R37 changed rebound to its core receipt; 2 aliases naming declarations of modules no longer in the run, which only the earlier receipt this record was bound to elaborated, marked as R35 (E8) did: Becoming.same_endpoint_possibilities_iff_return_by_core (retired module); Becoming.irreversible_iff_endpoint_loss_by_core (retired module). The claim is unchanged.",
+      "zh": "2026年10月20日，R37（第二十次评审的 B 视角）：对 R37 改动的 Lean 文件的证明绑定改到其核心回执；2 个指向已不在运行中的模块之声明的别名（只有本记录先前绑定的回执列出它们）按 R35（E8）的做法标出：Becoming.same_endpoint_possibilities_iff_return_by_core (retired module)；Becoming.irreversible_iff_endpoint_loss_by_core (retired module)。论断不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): statement added and the claim restated on the core laws (what can be had is kept exactly where the other leads back; not returning loses a possibility, the start a witness; the same change with different returns, hidden by the constant reading); the counterexample re-pointed from the periphery file to the core witnesses; the two retired Bridge aliases replaced by the core names. No law changed.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，主张按核心规律重述（可得者恰在另一构形能回到它时保有；不能回返即失去可能，起点为见证；同一变化而回返不同，常数读法遮住此点）；反例由外围文件改指核心见证；两个退役的 Bridge 别名改为核心名称。规律未变。"
+    }
+  ]
+}

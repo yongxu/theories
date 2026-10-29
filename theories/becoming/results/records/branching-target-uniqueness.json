@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "branching-target-uniqueness",
   "title": {
     "zh": "分支测试下的目标唯一性",
@@ -8,17 +8,72 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-08T12:31:53.854610+00:00",
-  "claim": {
-    "zh": "若目标模型由分支测试分离，与同一源位置有相同测试真值的两个目标位置相等。",
-    "en": "If branching tests separate the target model, two target positions agreeing with one source position on all tests are equal."
+  "reviewed_at_utc": "2026-10-28T11:53:56+00:00",
+  "statement": {
+    "en": "Where branching tests tell apart the configurations of a target frame, a configuration of any source frame passes the same branching tests as at most one target configuration; likewise for likeness.",
+    "zh": "凡分支测试区分目标框架的构形，任一源框架的构形至多与一个目标构形通过相同分支测试；相同（likeness）亦然。"
   },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "ExplanatoryBranching 的 Model、Test、Same；目标满足 Separated。",
-      "en": "ExplanatoryBranching Model, Test and Same; Separated holds for the target."
+      "en": "A branching test is nothing, a claim, the failure of a test, two tests together, or that some step by a move leads to where a test holds; configurations of two frames pass the same branching tests where every such test holds at the one exactly where it holds at the other.",
+      "zh": "分支测试是：无、一个主张、一个测试的失败、两个测试同时，或某步经某动作通往测试成立处；两个框架的构形通过相同分支测试，是指每个这样的测试在一处成立恰当在另一处成立。",
+      "declarations": [
+        "Becoming.BranchingTest",
+        "Becoming.BranchingTest.Holds",
+        "Becoming.SameBranchingTests"
+      ]
+    },
+    {
+      "en": "For any two frames, with no finiteness of their steps assumed: where branching tests tell apart the configurations of the target (any two passing the same branching tests are equal), a configuration of the source passes the same branching tests as at most one target configuration.",
+      "zh": "对任意两个框架，不假设其步的任何有限性：凡分支测试区分目标的构形（通过相同分支测试的任两个相等），源的一个构形至多与一个目标构形通过相同分支测试。",
+      "declarations": [
+        "Becoming.SameBranchingTests.functional"
+      ]
+    },
+    {
+      "en": "For any two frames: where likeness tells apart the configurations of the target (any two alike configurations of it are equal), a configuration of the source is alike to at most one target configuration.",
+      "zh": "对任意两个框架：凡相同（likeness）区分目标的构形（其任两个相同的构形相等），源的一个构形至多与一个目标构形相同。",
+      "declarations": [
+        "Becoming.Alike.functional"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "Any two frames of the spine with the same moves and claims; the target frame is separated by branching tests, or for the likeness law by likeness.",
+      "zh": "脊柱上任意两个有相同动作与主张的框架；目标框架被分支测试分离，相同之律中被相同分离。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Configurations passing the same branching tests need not be alike: where a move has infinitely many outcomes, two configurations can pass the same tests and not be alike.",
+      "zh": "通过相同分支测试的构形不必相同：某动作有无穷多结果时，两个构形可通过相同测试而不相同。",
+      "kind": "non-implication",
+      "witness": "Becoming.Unbounded.not_alike"
+    },
+    {
+      "en": "Uniqueness of the matching configuration does not make the target frame the one right description of the source.",
+      "zh": "匹配构形的唯一性不使目标框架成为源的唯一正确描述。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The law is for these branching tests; a richer test language must keep its own semantics, as the tests with parts do.",
+      "zh": "此律针对这些分支测试；更丰富的测试语言须保留其自身语义，如带部分的测试。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated core checker (check_becoming.py), Lean 4.29.1 as its receipt records: the current bytes of Becoming.Likeness are bound to core receipt becoming-checks/20261020T051144.879480Z, which reports an empty axiom list for every cited declaration. The periphery ExplanatoryBranching and the retired Bridge are provenance; the receipt under explanatory-branching-checks keeps its earlier scope.",
+    "zh": "合并核心检查器（check_becoming.py）实查，回执所记 Lean 4.29.1：Becoming.Likeness 的当前字节绑定核心回执 becoming-checks/20261020T051144.879480Z，所引声明的公理报告皆为空。外围 ExplanatoryBranching 与退役的 Bridge 是来源；explanatory-branching-checks 下的回执保持原范围。"
+  },
+  "next_delta": {
+    "en": "Give, for an application, the target frame its branching tests separate, so that each observed configuration has one matching target configuration.",
+    "zh": "为一个应用给出其分支测试所分离的目标框架，使每个被观察的构形有唯一匹配的目标构形。"
+  },
   "correspondence": {
     "zh": "测试包括条件、否定、合取和动作后继；测试适用性是解释范围的一部分。",
     "en": "Tests include conditions, negation, conjunction and action successors; their applicability is part of explanatory scope."
@@ -40,28 +95,11 @@
     {
       "id": "configurations-alike-by-relation",
       "detail": {
-        "zh": "Alike.functional：相同分离一个框架的配置时，一个配置至多与其中一个相同；配置的同一读作相同时（Ren 同意这一方向），这就是那种同一。",
-        "en": "Alike.functional: where likeness tells a frame's configurations apart, a configuration is alike to at most one of them; with the identity of configurations read as likeness (Ren agreed with the direction), this is that identity."
+        "zh": "Alike.functional：相同分离一个框架的配置时，一个配置至多与其中一个相同；配置的同一读作相同时（AI 的读法），这就是那种同一。",
+        "en": "Alike.functional: where likeness tells a frame's configurations apart, a configuration is alike to at most one of them; with the identity of configurations read as likeness (an AI reading), this is that identity."
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryBranching.lean",
-      "detail": {
-        "zh": "这个小引理本身不要求 image-finiteness，也不独自证明普遍双模拟或唯一本体。",
-        "en": "This lemma itself needs no image-finiteness and does not alone establish universal bisimulation or unique ontology."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "这个小引理本身不要求 image-finiteness，也不独自证明普遍双模拟或唯一本体。",
-    "en": "This lemma itself needs no image-finiteness and does not alone establish universal bisimulation or unique ontology."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryBranching.lean",
@@ -95,7 +133,12 @@
       "sha256": "c2ce8ed970473ced65a6addb9ef5ff6a0a994f33507d2d24316a7f79888858e1",
       "declarations": [
         "Becoming.SameBranchingTests.functional",
-        "Becoming.Alike.functional"
+        "Becoming.Alike.functional",
+        "Becoming.BranchingTest",
+        "Becoming.BranchingTest.Holds",
+        "Becoming.SameBranchingTests",
+        "Becoming.Unbounded.sameBranchingTests",
+        "Becoming.Unbounded.not_alike"
       ]
     },
     {
@@ -219,10 +262,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "使用这一测试语言时复用；更丰富语言需保留其本地语义。",
-    "en": "Reuse for this test language; a richer language must retain its own semantics."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -249,6 +288,28 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge and ExplanatoryBranching) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Likeness). The retired modules' content is also stated in Becoming.BranchingCorrespondence, Becoming.Granularity and Becoming.Labelled, which this record does not cite with declarations. 1 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge and ExplanatoryBranching）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Likeness）。退役模块的内容也陈述于 Becoming.BranchingCorrespondence, Becoming.Granularity and Becoming.Labelled，本记录未以声明引用它们。1 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement written from the claim and the home section, with the likeness law the record already cited; the claim split into three laws, each read against its declarations in Likeness.lean (the branching tests, SameBranchingTests.functional, Alike.functional); the hypothesis, which named the retired module's Model, Test and Same, restated on the spine's frames, where the cited proof lies; the limitation, which the counterexample repeated, became two does-not-show items, the first witnessed by Unbounded.not_alike, and the next step's note that a richer language keeps its own semantics a third, its note that the lemma needs no image-finiteness written into the second law; BranchingTest, BranchingTest.Holds and SameBranchingTests added to Likeness.lean's reference; in the related link to configurations-alike-by-relation, the reading of identity as likeness labelled an AI reading, the earlier note that Ren agreed with its direction kept here as provenance; the shared boundary no-ethical-premise cited; no premise, status or source hash changed. Every earlier sentence is mapped in [branching-target-uniqueness.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/branching-target-uniqueness.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the references, does-not-show items, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依主张与所在章节写出陈述，并含记录已引的相同之律；主张拆为三条规律，各条对照 Likeness.lean 中的声明核读（分支测试、SameBranchingTests.functional、Alike.functional）；原前提指名退役模块的 Model、Test 与 Same，现按所引证明所在的脊柱框架重述；限制与反例同句，改为两条“未表明”，第一条由 Unbounded.not_alike 见证，下一步中“更丰富语言保留其自身语义”改为第三条，其“不需 image-finiteness”写入第二条规律；BranchingTest、BranchingTest.Holds 与 SameBranchingTests 加入 Likeness.lean 的引用；指向 configurations-alike-by-relation 的相关说明中，把同一读作相同标为 AI 的读法，原注“Ren 同意这一方向”作为来源保存在此；引用通用边界 no-ethical-premise；前提、状态与来源哈希均未改变。每句旧文本的去向见 [branching-target-uniqueness.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/branching-target-uniqueness.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及引用、“未表明”各项，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/3aa5b9aa10693210/branching-target-uniqueness.json",
+      "sha256": "3aa5b9aa10693210ed495496a5feec728bc83fe0f6b8a012c4afa1ecbe42bb37",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/9a06aabe1c113759/branching-target-uniqueness.json",
+      "sha256": "9a06aabe1c11375962011232805399894793334e11d12d8bfde8813ce4401741",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

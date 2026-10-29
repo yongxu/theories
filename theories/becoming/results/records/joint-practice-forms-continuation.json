@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "joint-practice-forms-continuation",
   "title": {
     "zh": "共同实践形成后续参与与接续",
@@ -8,15 +8,93 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F10",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-10-28T14:46:51+00:00",
   "statement": {
     "en": "A practice round of attempt, response, revision and tested retry completes exactly when the worker is present and so is a rostered reviewer, not the worker, whose recorded method answers as the context does; it then only records the review, installs that method in the worker and completes the trial.",
     "zh": "尝试、回应、修订与经检验之重试的一轮实践完成，恰当工作者在场、另一在场之在册审查者所记之做法应答当前处境；完成后记下审查、把该做法装入工作者、完成试验，别无改变。"
   },
-  "claim": {
-    "zh": "实践机器是一条部分律：它的轨迹恰是其完成的运行。门控改变之律的实例：只有修订改变记录的做法，只有组织采纳改变规则，所以每段不含它们的进程保持两者。一轮实践，对每个状态：审查者与工作者的一轮（尝试、回应、修订、经检验的重试）完成，恰当工作者在场、审查者是在场的在册者且不是工作者、审查者所记的做法应答当前处境；完成后记下审查、把处境的做法装入工作者、完成试验，别无改变。所以工作者此后已受训，受训的审查者无需再检，受训沿每段不含修订、回到原处境的进程保持。完整历史的三轮是实例；步定义是该机器自身的，其间的接纳与交接在该历史上检查。在明示二方法任务中，实际尝试与回应形成做法修订；成功重试产生既有程序所需审查关系，授权接纳后的参与者可回应下一次实践，并在最初回应者离开后继续形成新的参与关系。",
-    "en": "The practice machine is a partial law: its traces are exactly its completed runs. Instances of the gated-change law: only revision changes the recorded methods and only an organizational adoption changes the rule, so every course without them keeps both. A practice round, for every state: the round of attempt, response, revision and tested retry by a reviewer and a worker completes exactly when the worker is present and the reviewer is a present roster member other than the worker whose recorded method answers as the current context does; it then records the review, installs the context’s method in the worker, completes the trial and changes nothing else. So the worker is then trained, a trained reviewer needs no further check, and training is kept along every course without revision that returns to the context. The three rounds of the complete history are instances; the step definitions are the machine’s own, and the enrollments and handoff between the rounds are checked on that history. Within the declared two-method task, actual attempts and responses form a revised procedure. A successful retry produces the review relation consumed by the existing admission process; admitted participation enables later response and formation of further participation after the initial reviewer leaves."
-  },
+  "laws": [
+    {
+      "en": "The practice machine's process and run are the partial process and run of its step, and its traces are exactly its completed runs. Only revision changes the recorded methods and only an organizational adoption changes the rule, so every course without revision keeps the methods and every course without an organizational adoption keeps the rule.",
+      "zh": "实践机的过程与运行即其步的部分过程与运行，其轨迹恰是其完成的运行。只有修订改变记录的做法，只有组织采纳改变规则，所以每段不含修订的进程保持做法，每段不含组织采纳的进程保持规则。",
+      "declarations": [
+        "Becoming.MachineInstances.practice_process_eq",
+        "Becoming.MachineInstances.practice_run_eq",
+        "Becoming.MachineInstances.practice_trace_iff_run",
+        "Becoming.MachineInstances.revises",
+        "Becoming.MachineInstances.adoptsRule",
+        "Becoming.MachineInstances.methods_kept",
+        "Becoming.MachineInstances.methods_inherited",
+        "Becoming.MachineInstances.practice_rule_kept",
+        "Becoming.MachineInstances.practice_rule_inherited"
+      ]
+    },
+    {
+      "en": "From every state, the round of attempt, response, revision and tested retry by reviewer r and worker w completes exactly when w is present and r is a present roster member other than w whose recorded method is the current context's; the state after it records the review, installs the context's method in w, completes the trial and leaves nothing pending, changing nothing else.",
+      "zh": "自每个状态：审查者 r 与工作者 w 的一轮（尝试、回应、修订与经检验的重试）完成，恰当 w 在场、r 是在场的在册者且不是 w、r 所记的做法即当前处境的做法；其后的状态记下审查、把处境的做法装入 w、完成试验、无待办，别无改变。",
+      "declarations": [
+        "Becoming.MachineInstances.afterRound",
+        "Becoming.MachineInstances.round_iff"
+      ]
+    },
+    {
+      "en": "After a round the worker's recorded method is the context's. From every state in which a reviewer's recorded method is the context's, a round by that reviewer completes exactly when the worker is present and the reviewer is a present roster member other than the worker. Along every course without revision that returns to the context, a worker trained at its start stays trained.",
+      "zh": "一轮之后，工作者所记的做法即处境的做法。自审查者所记做法即处境做法的每个状态，该审查者的一轮完成，恰当工作者在场、审查者是在场的在册者且不是工作者。沿每段不含修订、回到原处境的进程，起点已受训的工作者保持受训。",
+      "declarations": [
+        "Becoming.MachineInstances.round_trains",
+        "Becoming.MachineInstances.trained_round_iff",
+        "Becoming.MachineInstances.trained_along"
+      ]
+    },
+    {
+      "en": "The complete declared history, three rounds with enrollments between them and a handoff after which the first reviewer is absent, is one trace of the machine, and its three rounds are instances of the round law; the enrollments and the handoff are the organization's own steps.",
+      "zh": "完整的声明历史（三轮，其间有进入名册，以及一次使最初审查者不在场的交接）是该机的一条轨迹，其三轮是轮之律的实例；进入名册与交接是组织自身的步骤。",
+      "declarations": [
+        "Becoming.MachineInstances.complete_history_instance",
+        "Becoming.MachineInstances.complete_history_rounds",
+        "JointPracticeContinuation.complete_history_is_one_trace"
+      ]
+    },
+    {
+      "en": "In the declared two-method task a method keeps or inverts a Boolean input; inference from an input and the observed output recovers the method applied, and revision read from the earlier result and the response is that inference. A response identifies the context's method, and revision installs the inferred method in the worker.",
+      "zh": "在声明的二方法任务中，做法保持或翻转一个布尔输入；从输入与观察到的输出推断，恢复所用的做法；由先前结果与回应读出的修订即该推断。回应识别处境的做法，修订把推断的做法装入工作者。",
+      "declarations": [
+        "JointPracticeContinuation.infer_recovers_method",
+        "JointPracticeContinuation.result_revision_eq_inference",
+        "JointPracticeContinuation.response_identifies_current_method",
+        "JointPracticeContinuation.revision_installs_inferred_method"
+      ]
+    },
+    {
+      "en": "A successful retry has a response whose worker's method gives the context's result on the trial's input, and its organization is the result of the existing review step of that reviewer and worker; enrollment in the practice machine needs a recorded review of the entrant and a ballot passing the existing governance.",
+      "zh": "成功的重试有一个回应，其工作者的做法在试验输入上给出处境的结果，其组织即该审查者与工作者的既有审查步骤的结果；在实践机中进入名册需要对进入者的一条审查记录与一张通过既有治理的选票。",
+      "declarations": [
+        "JointPracticeContinuation.retry_produces_existing_review",
+        "JointPracticeContinuation.enrollment_consumes_review"
+      ]
+    },
+    {
+      "en": "In the declared history, participants admitted after a tested round review the next worker: the first round and enrollment admit the first worker, a round by that worker admits a second, and after the first reviewer leaves, a round by the first worker trains and admits a third.",
+      "zh": "在声明的历史中，经检验的一轮后被接纳的参与者审查下一位工作者：第一轮与进入名册接纳第一位工作者，该工作者主持的一轮接纳第二位；最初审查者离开后，第一位工作者主持的一轮训练并接纳第三位。",
+      "declarations": [
+        "JointPracticeContinuation.first_history_enacts_revision",
+        "JointPracticeContinuation.acquired_participation_forms_next_review",
+        "JointPracticeContinuation.continuation_without_first_reviewer"
+      ]
+    },
+    {
+      "en": "In witnesses of the declared machine, from its initial state retry without revision, revision without response, the first reviewer's departure before the round, a changed context before revision, and enrollment before a tested retry each make the run fail; after the second round and a handoff leaving positions 1, 3, 4 and 5 present, a round with 1 reviewing completes and trains worker 3 while 3's enrollment fails.",
+      "zh": "在声明之机的见证中：自其初始状态，无修订的重试、无回应的修订、最初审查者在该轮前离开、修订前处境改变、经检验重试前进入名册，各使运行失败；第二轮后交接只留位置 1、3、4、5 在场时，由 1 审查的一轮完成并训练工作者 3，而 3 进入名册失败。",
+      "declarations": [
+        "JointPracticeContinuation.response_without_revision_does_not_pass_retry",
+        "JointPracticeContinuation.revision_without_response_fails",
+        "JointPracticeContinuation.early_departure_prevents_this_practice",
+        "JointPracticeContinuation.changed_context_rejects_old_response",
+        "JointPracticeContinuation.admission_without_tested_review_fails",
+        "JointPracticeContinuation.operation_can_continue_while_admission_fails"
+      ]
+    }
+  ],
   "hypotheses": [
     {
       "zh": "二方法任务、当前检验关系、推断操作、正确种子做法与一个资格给定。",
@@ -25,8 +103,45 @@
     {
       "zh": "记录、通信、执行、可用参与者、具体次序、遵守程序及固定较高授权条件给定；交接不自动删除登记席位。",
       "en": "Records, communication, execution, available participants, event order, compliance and fixed higher authorization are supplied; handoff does not automatically delete recorded offices."
+    },
+    {
+      "en": "Methods, inputs and outputs are Boolean, positions natural numbers, and the organization the rule protocol of the periphery module it imports.",
+      "zh": "做法、输入与输出是布尔值，位置是自然数，组织是其所导入外围模块中的规则程序。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "One connection from enacted practice to further participation is shown, for one declared two-method task and history.",
+      "zh": "所表明的是从实际实践到后续参与的一段连接，限于一个声明的二方法任务与历史。",
+      "kind": "scope"
+    },
+    {
+      "en": "The arrival of people, general cognition, the formation of tasks or test relations, indefinite self-maintenance and comparative superiority do not follow from it.",
+      "zh": "由此推不出人员的到来、一般认知、任务或检验关系的形成、无限的自维持或比较上的优越。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/JointPracticeContinuation.lean",
+      "detail": {
+        "zh": "无回应、未修订、过早离开、处境改变和未检验便申请接纳均有失败；局部操作成功时，更高接纳条件仍可能失败。",
+        "en": "Missing response or revision, early departure, changed context and untested admission fail; local operation can succeed while higher admission conditions fail."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "discrete-steps",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked, periphery only: JointPracticeContinuation by its folder's check (joint-practice-continuation-verification/, Lean 4.29.1: 22 new theorems, 51 new audits, 132 in the three-module closure) and MachineInstances by its instance checker (machine-instances-checks/20261020T161859.257200Z, Lean 4.29.1), reporting at most propext, Quot.sound and Classical.choice for the cited declarations, some none. The author's counterreview and readings of primary abstracts are separate; no independent review.",
+    "zh": "机器检查，只有外围：JointPracticeContinuation 由目录检查（joint-practice-continuation-verification/，4.29.1，新定理22、审计51、三模块闭包132），MachineInstances 由实例检查器（machine-instances-checks/，4.29.1），所引声明至多 propext、Quot.sound、Classical.choice，有的为空。作者反审与原始摘要阅读另列；无独立审查。"
+  },
+  "next_delta": {
+    "zh": "解释共同活动怎样改变任务、当前检验关系或参与形成方式本身，并保留替代接续与真实失败。",
+    "en": "Explain how joint activity changes the task, current testing relation or means of forming participation themselves, preserving alternative continuations and real failure."
+  },
   "correspondence": {
     "zh": "同一状态历史中的尝试、回应、修订、检验及认可关系分化；配置是局部可执行做法，不能当成人类理解的完整模型。原始群体学习与换人研究仅为有限经验根据，并非该历史的实证复现。 修订同时读取先前实际结果和回应，核对后保留或改变做法；二方法内的等价性已查。",
     "en": "Attempt, response, revision, testing and recognition differentiate within one state history. Configuration is a local executable procedure, not a full model of human understanding. Primary group-learning and turnover studies provide bounded empirical motivation, not reproduction of this exact history. Revision reads the earlier actual result together with the response, retaining or changing the procedure after comparison; equivalence within the two-method family is checked."
@@ -69,23 +184,6 @@
     }
   ],
   "related": [],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/JointPracticeContinuation.lean",
-      "detail": {
-        "zh": "无回应、未修订、过早离开、处境改变和未检验便申请接纳均有失败；局部操作成功时，更高接纳条件仍可能失败。",
-        "en": "Missing response or revision, early departure, changed context and untested admission fail; local operation can succeed while higher admission conditions fail."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "仅闭合实际实践形成后续参与的一段连接；未推出人员到来、一般认知、任务及检验关系的形成、无限自维持或比较优越性。",
-    "en": "Closes one enacted-practice-to-further-participation connection, not arrival of people, general cognition, formation of tasks/test relations, indefinite self-maintenance or comparative superiority."
-  },
-  "validation_scope": {
-    "zh": "22项新定理声明／51项新声明审计；81项继承审计独立分列，实际三模块闭包共132项。作者反审与原始摘要阅读另列，无独立agent验收。",
-    "en": "22 new theorem declarations / 51 new declaration audits, separately from 81 inherited audits; 132 in the actual three-module closure. Author counterreview and primary-abstract readings are separate; no independent-agent acceptance."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/JointPracticeContinuation.lean",
@@ -99,7 +197,15 @@
         "JointPracticeContinuation.enrollment_consumes_review",
         "JointPracticeContinuation.complete_history_is_one_trace",
         "JointPracticeContinuation.operation_can_continue_while_admission_fails",
-        "JointPracticeContinuation.result_revision_eq_inference"
+        "JointPracticeContinuation.result_revision_eq_inference",
+        "JointPracticeContinuation.first_history_enacts_revision",
+        "JointPracticeContinuation.acquired_participation_forms_next_review",
+        "JointPracticeContinuation.continuation_without_first_reviewer",
+        "JointPracticeContinuation.response_without_revision_does_not_pass_retry",
+        "JointPracticeContinuation.revision_without_response_fails",
+        "JointPracticeContinuation.early_departure_prevents_this_practice",
+        "JointPracticeContinuation.changed_context_rejects_old_response",
+        "JointPracticeContinuation.admission_without_tested_review_fails"
       ]
     },
     {
@@ -190,10 +296,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "解释共同活动怎样改变任务、当前检验关系或参与形成方式本身，并保留替代接续与真实失败。",
-    "en": "Explain how joint activity changes the task, current testing relation or means of forming participation themselves, preserving alternative continuations and real failure."
-  },
   "history": [
     {
       "zh": "2026年10月9日：依照systems/subsystems与结构动态语言纠正，接通实际重试、既有认可程序、后续回应及接续；一个新组合成果，非定理数量对应的多个发现。",
@@ -221,6 +323,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): statement added (a practice round completes exactly where the worker is present and so is a rostered reviewer, not the worker, whose recorded method answers as the context does, and then changes only the review, the worker's method and the trial); the canonical source is the module holding the round law, the earlier module kept as a proof reference; the claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述（一轮实践恰在工作者在场、另一在场之在册审查者所记之做法应答当前处境时完成，此后只改变审查、工作者之做法与试验）；规范来源改为持有该轮实践律的模块，原模块保留为证明引用；主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement kept; the claim split into 8 laws, each read against its declarations in MachineInstances and JointPracticeContinuation (periphery), with the conditions the Lean takes written in (presence, roster membership, the reviewer's method answering the context, no revision and the same context for training kept, the declared states of the history); eight witnesses the claim and the counterexample describe (first_history_enacts_revision, acquired_participation_forms_next_review, continuation_without_first_reviewer and the five failures) added to JointPracticeContinuation's references (its receipt binds them, with propext only); the limitation became two does-not-show items, with the standard boundaries discrete-steps and formal-not-empirical and one added hypothesis; next step kept; no premise's content, status, proof binding or source hash changed. Every earlier sentence is mapped in [joint-practice-forms-continuation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joint-practice-forms-continuation.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述保留；主张拆为 8 条规律，各条对照 MachineInstances 与 JointPracticeContinuation（外围）中的声明核读，Lean 所取的条件都写入（在场、在册、审查者的做法应答处境、受训保持所需的无修订与同一处境、历史的声明状态）；主张与反例所述的八个见证（first_history_enacts_revision、acquired_participation_forms_next_review、continuation_without_first_reviewer 与五个失败）加入 JointPracticeContinuation 的引用（其回执绑定它们，只用 propext）；限制改为两条“未表明”，并引用通用边界 discrete-steps、formal-not-empirical，加一条前提；下一步保留；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [joint-practice-forms-continuation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joint-practice-forms-continuation.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/19621c4df701bfd0/joint-practice-forms-continuation.json",
+      "sha256": "19621c4df701bfd0eb68b49a1d35765849d2c681b94900bd9d45edcb210f47f2",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/11f32a1cb81d7291/joint-practice-forms-continuation.json",
+      "sha256": "11f32a1cb81d7291333a9e6ec2af92ee934c33a467bfc1de2b0c50823f1efd66",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

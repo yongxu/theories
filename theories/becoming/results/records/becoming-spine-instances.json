@@ -1,35 +1,312 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "becoming-spine-instances",
   "title": {
-    "zh": "既有接口是 Becoming 脊柱的实例；比较经提升规则推广到每个框架",
-    "en": "Existing interfaces are instances of the Becoming spine; comparison extends to every frame under the lifting rule"
+    "zh": "既有接口是脊柱的实例；比较经提升规则推广到每个框架",
+    "en": "Earlier interfaces as instances of the spine, and comparison lifted to every frame"
   },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
-  "claim": {
-    "zh": "种子—边闭包（WholeGroundCoverage 的 Reached、CutCoverageAudit 的 Reach）与评价者链（EvaluatorGrounding 的 Chain）恰是边过程上的可达。框架的可达配置构成共同延续空间：保持步骤与主张的映射携带每个可共同实现的组合，步骤可提升、主张可反映的摘要不丢失任何组合。稳健回应恰是可容许性取完成的共同回应，每个稳健回应都是判断过程的共同回应；保证即一步完成；LiveStep 即 Enabled；按一次观察过滤规则表即纯观察上的 After。函数式情境的实践表述恰是提升规则 L 下表述在确定框架上的情形；在 L 下，生成比较提升到回应，并给出理由、协调选择的存活与持续改进无存活者，对每个框架成立。L 是实质承诺：有一好一坏两个结果的回应，在保守规则下两个方向都不可比。核心的生生之意义、生成扩展、C、确保的正面根据与 D 在定义上就是 GenerativeComparison 与 PositionedPositiveReason 的定义；“先基本条件、后生的增益”的实践判断在配置上即 PracticalJudgment.Better（BetterAt）。判断即一步探究：一个回应是判断过程的共同回应，当且仅当它在每个所信配置上可容许（核心的 commonResponse_judge_iff）。在外围（Mathlib）：观察上的策略实施纠正，当且仅当它在每个观察值的格上的行动是共同回应；共同行动存在，当且仅当每个格都有共同回应；安全选择即显示该值的世界上的共同回应；CorrectionBoundary 与 ObservationChange 的细化定理由核心的 commonResponse_antitone 导出。开放形态有限实现直接作用于共同 Frame 的 Run，同一个新形成见证在显式意义条件下取得 relevance；另两项旧接口适配完成原生成生产端到正面根据消费端的组合。",
-    "en": "Seed–edge closures (WholeGroundCoverage.Reached, CutCoverageAudit.Reach) and evaluator chains (EvaluatorGrounding.Chain) are exactly reachability on the edge process. A frame's reachable configurations form a joint-continuation space: a step- and claim-preserving map carries every jointly realizable bundle, and a summary whose steps lift and whose claims reflect loses none. A robust response is exactly a common response with completion as admissibility, and every robust response is a common response of the judgment process; a guarantee is one-step completion; LiveStep is Enabled; filtering a rule list by one observation is After on a pure observation. The functional articulation of a situation is exactly the articulation under the lifting rule L on the deterministic frame; under L, generative comparison lifts to responses and supplies reasons, survival of coherent selection and the absence of survivors under continual improvement on every frame. L is substantive: a response with one better and one worse outcome is comparable in neither direction under the conservative rule. The core's living significance, generative extension, C, secured positive ground and D are by definition those of GenerativeComparison and PositionedPositiveReason; the practical judgment of basic conditions first, then living gain, on configurations is PracticalJudgment.Better (BetterAt). A judgment is a one-step inquiry: a response is a common response of the judgment process exactly when it is admissible at every believed configuration (the core's commonResponse_judge_iff). In the periphery, with Mathlib, a policy on observations implements correction exactly when its action on each observation value's cell is a common response; a common action exists exactly when every cell has one; a safe choice is a common response on the worlds showing the value; and the refinement theorems of CorrectionBoundary and ObservationChange follow from the core's commonResponse_antitone. Bounded open-form realization applies to a Run of the shared Frame, and the same novel witness receives relevance under the explicit significance condition; two inherited-interface adapters complete the generation-to-positive-ground composition."
+  "reviewed_at_utc": "2026-10-28T12:30:49+00:00",
+  "statement": {
+    "zh": "既有接口是脊柱的实例：种子沿边的闭包与评价者链是可达，共同延续是框架的可达配置，稳健回应是共同回应；在保守提升规则之下，比较从配置推广到每个框架的回应。",
+    "en": "Earlier interfaces are instances of the spine: closures of seeds under edges and evaluator chains are reachability, joint continuations are a frame's reachable configurations, robust responses are common responses; under the conservative lifting rule, comparison extends to every frame's responses."
   },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "桥接定理是定义层面的等同，不引入规范前提；它们只搬运定理，原定理需要的外给前提照旧需要。",
-      "en": "The bridge theorems are definitional identifications and add no normative premise; they transport theorems, and the supplied premises the original theorems need are still needed."
+      "en": "Edges give a one-label process whose steps are the edges, and the seed–edge closure is what that process reaches from a seed: it holds the seeds, is closed under the edges and lies within every property holding at the seeds and carried along the edges. The core's closure under a relation from one formation is exactly the seed–edge closure from it.",
+      "zh": "边给出一个单标签过程，其步就是边；种子—边闭包是该过程从种子出发所达者：它含种子、对边封闭，并落在每个在种子处成立且沿边传递的性质之内。核心中从一个形成出发的关系闭包，恰是从它出发的种子—边闭包。",
+      "declarations": [
+        "Becoming.edgeProcess",
+        "Becoming.Closure",
+        "Becoming.Closure.base",
+        "Becoming.Closure.step",
+        "Becoming.Closure.induction",
+        "Becoming.withinClosure_iff_closure"
+      ]
     },
     {
-      "zh": "提升后的结果以比较原则 C、提升后的实践表述或选择协调为外给前提；L 取保守规则“每个结果都优于每个结果”，按计划第 6 节公开为默认，更强规则是可选承诺。",
-      "en": "The lifted results take comparison principle C and the lifted articulation or selection coherence as supplied premises; L is the conservative rule “every outcome better than every outcome”, public as the default by plan §6, with stronger rules optional commitments."
+      "en": "In the retired bridge, the periphery's finite chains of steps are exactly reachability on the edge process, and its two closures of seeds under edges, of whole-ground coverage and of the cut audit, are exactly the seed–edge closure.",
+      "zh": "在退役的桥接中，外围的有限步链恰是边过程上的可达，其两种种子沿边的闭包（整体根据覆盖的与切割审计的）恰是种子—边闭包。",
+      "declarations": [
+        "Becoming.chain_iff_reach",
+        "Becoming.reached_iff_closure",
+        "Becoming.cutReach_iff_closure"
+      ]
+    },
+    {
+      "en": "On a frame, a bundle of claims is jointly realizable in a region where one configuration of the region realizes all of it, and one region preserves another's bundles where every bundle jointly realizable in the first is in the second. Among configurations reachable from a root, a map preserving steps and claims preserves bundles, and a map whose steps lift and whose claims reflect loses none.",
+      "zh": "在框架上，一束主张在一个区域中可共同实现，是指该区域的一个配置实现其全部；一个区域保持另一区域的组合，是指在前者可共同实现的每一束在后者也可共同实现。在从一个根可达的配置之间，保持步与主张的映射保持组合，步可提升、主张可反映的映射不丢失任何组合。",
+      "declarations": [
+        "Becoming.Jointly",
+        "Becoming.PreservesBundles",
+        "Becoming.Frame.map_preserves",
+        "Becoming.Frame.lift_reflects"
+      ]
+    },
+    {
+      "en": "One region of a frame carries another's profiles where each configuration of the first has one in the second realizing all it realizes; a transport sending each configuration of a region into another region and keeping every realization preserves bundles.",
+      "zh": "框架的一个区域承载另一区域的轮廓，是指前者每个配置在后者都有一个实现其所实现之全部的配置；把一个区域的每个配置送入另一区域并保持每项实现的传送保持组合。",
+      "declarations": [
+        "Becoming.CarriesProfiles",
+        "Becoming.preserves_of_transport"
+      ]
+    },
+    {
+      "en": "In the retired bridge, a frame's configurations reachable from a root, with their realized claims, form the periphery's joint-continuation space, and maps preserving steps and claims, or whose steps lift and whose claims reflect, preserve its joint bundles as the periphery defines them.",
+      "zh": "在退役的桥接中，框架从一个根可达的配置连同其实现的主张，构成外围的共同延续空间；保持步与主张的映射，或步可提升、主张可反映的映射，按外围的定义保持其共同组合。",
+      "declarations": [
+        "Becoming.Frame.continuations",
+        "Becoming.Frame.map_preserves_bundles",
+        "Becoming.Frame.lift_reflects_bundles"
+      ]
+    },
+    {
+      "en": "Judging is a one-step process: at a configuration under judgment, an admissible response closes the judgment. A response is a common response of that process (one move, every step safe, every configuration a goal), over the belief that sees a set of configurations, exactly where it is admissible at every configuration of the set; a common response stays one as belief narrows.",
+      "zh": "判断是一步过程：在受判断的配置处，一个可容许的回应结束判断。一个回应是该过程（一个动作，每步安全，每个配置都是目标）在看见一组配置的信念上的共同回应，恰当它在这组的每个配置处可容许；信念收窄时共同回应仍是共同回应。",
+      "declarations": [
+        "Becoming.judgeProcess",
+        "Becoming.sees",
+        "Becoming.commonResponse_judge_iff",
+        "Becoming.commonResponse_antitone",
+        "Generative.InquirySufficiency.CommonResponse"
+      ]
+    },
+    {
+      "en": "In the retired bridge, a common response is exactly a robust response whose admissibility is completion, and a robust response is exactly a common response of the judgment process; a guarantee is completion in one step, and a live step is an enabled move.",
+      "zh": "在退役的桥接中，共同回应恰是以完成为可容许性的稳健回应，稳健回应恰是判断过程的共同回应；保证是一步完成，活的步就是可行的动作。",
+      "declarations": [
+        "Becoming.commonResponse_is_robust",
+        "Becoming.robust_iff_commonResponse",
+        "Becoming.guarantees_iff_completes",
+        "Becoming.liveStep_iff_enabled"
+      ]
+    },
+    {
+      "en": "The pure observation keeps the configuration as it is; a configuration is in the belief after it, at a question and an outcome, exactly where it was believed and gives that outcome there. A candidate rule is kept by revising a list of rules by one observation exactly where it is in the belief after the pure observation of the observed value.",
+      "zh": "纯观察使配置保持原样；在一个问题与一个结果处，一个配置在它之后的信念中，恰当它原被相信且在那里给出该结果。一条候选规则在以一次观察修订规则列表后被保留，恰当它在对所观察值的纯观察之后的信念中。",
+      "declarations": [
+        "Becoming.Narrowing.observe",
+        "Becoming.Narrowing.after_observe_iff",
+        "Becoming.Narrowing.revise",
+        "Becoming.Narrowing.revise_is_after",
+        "Generative.InquirySufficiency.After"
+      ]
+    },
+    {
+      "en": "In the retired bridge, a rule is kept by the periphery's revision of a list of rules by one observation exactly where it is in the belief after the pure observation of the observed value.",
+      "zh": "在退役的桥接中，一条规则在外围以一次观察修订规则列表后被保留，恰当它在对所观察值的纯观察之后的信念中。",
+      "declarations": [
+        "Becoming.revise_is_after",
+        "Becoming.after_observe_iff",
+        "Generative.StandardsBridge.revise"
+      ]
+    },
+    {
+      "en": "What a belief narrowed by a list of observations settles is what the learned list's answer asserts; that answer is safe for the belief and, where the belief holds some rule, the greatest safe answer. Along every run of the pure observation of a rule in the candidate list, the rule stays in the belief narrowed by the run's record, and the answer from the record asserts only that rule's values.",
+      "zh": "以一列观察收窄的信念所确定的，就是所学列表的答案所断言的；该答案对信念安全，且在信念含某条规则时是最大的安全答案。沿候选列表中一条规则的纯观察的每个运行，该规则留在由运行记录收窄的信念中，记录给出的答案只断言该规则的值。",
+      "declarations": [
+        "Becoming.NarrowingRuns.SafeFor",
+        "Becoming.NarrowingRuns.GreatestFor",
+        "Becoming.NarrowingRuns.settles_iff_answer",
+        "Becoming.NarrowingRuns.narrowed_answer_greatest",
+        "Becoming.NarrowingRuns.run_kept",
+        "Becoming.NarrowingRuns.run_answer_greatest"
+      ]
+    },
+    {
+      "en": "Alternatives of one history at a configuration are one step of a process taking each feasible alternative to its configuration, enabled exactly where feasible. For two feasible alternatives, the lifted comparison is the comparison of their configurations, and a reason from every strict comparison of feasible alternatives is exactly a reason from every lifted comparison of live ones on that step.",
+      "zh": "一个历史在一个配置处的备选是一个过程的一步：它把每个可行的备选带到其配置，恰在可行处可行动。对两个可行备选，提升的比较就是其配置的比较；从可行备选的每个严格比较得出的理由，恰是该步上从活的备选的每个提升比较得出的理由。",
+      "declarations": [
+        "Becoming.Alternatives",
+        "Becoming.Alternatives.process",
+        "Becoming.Alternatives.enabled_iff",
+        "Becoming.Alternatives.lift_iff",
+        "Becoming.Alternatives.Articulation",
+        "Becoming.Alternatives.articulation_iff_lifted"
+      ]
+    },
+    {
+      "en": "The conservative lifting rule L calls one response better than another at a configuration where every outcome of the first is better than every outcome of the second. A response liftedly extends another where every outcome of it generatively extends every outcome of the other: keeps every claim that outcome realizes and realizes a living claim it does not.",
+      "zh": "保守提升规则 L 在一个配置处称一个回应优于另一个，是指前者的每个结果都优于后者的每个结果。一个回应提升地扩展另一个，是指它的每个结果都生成地扩展另一个的每个结果：保留那个结果实现的每项主张，并实现一项它未实现的活的主张。",
+      "declarations": [
+        "Becoming.LiftBetter",
+        "Becoming.LiftExtension",
+        "Becoming.Extension"
+      ]
+    },
+    {
+      "en": "Under C on a frame (every generative extension is better), where one response liftedly extends another, it is better under L; with the lifted articulation as well (a lifted comparison between live responses gives a reason to move), such an extension between live responses gives a reason to move to the extending one.",
+      "zh": "在框架上的 C（每个生成扩展都更好）之下，一个回应提升地扩展另一个时，它在 L 下更好；再加提升的阐明（活的回应之间的提升比较给出移动的理由），活的回应之间这样的扩展给出移向扩展者的理由。",
+      "declarations": [
+        "Becoming.Comparison",
+        "Becoming.comparison_lifts",
+        "Becoming.LiftedArticulation",
+        "Becoming.lifted_comparison_supplies_reason"
+      ]
+    },
+    {
+      "en": "Under C on a frame, with lifted coherence (each selected response is live and no live response is better than it under L), every selected response survives: it is live and no live response liftedly extends it.",
+      "zh": "在框架上的 C 与提升的融贯（每个被选回应是活的，且没有活的回应在 L 下优于它）之下，每个被选回应都存活：它是活的，且没有活的回应提升地扩展它。",
+      "declarations": [
+        "Becoming.LiftCoherence",
+        "Becoming.LiftSurvives",
+        "Becoming.lift_coherent_selection_survives"
+      ]
+    },
+    {
+      "en": "Where every live response at a configuration of a frame is liftedly extended by a live one, no response survives; no comparison premise is used.",
+      "zh": "框架的一个配置处每个活的回应都被一个活的回应提升地扩展时，没有回应存活；不用任何比较前提。",
+      "declarations": [
+        "Becoming.lift_continual_improvement_has_no_survivor"
+      ]
+    },
+    {
+      "en": "On a frame, living significance says that living content realized at a configuration falls under a given relevance there. A response secures new content where every admitted outcome holds relevant content absent before it, and the positioned articulation D says that a position with access to a response securing new content has a reason for it.",
+      "zh": "在框架上，生生之意义是说：在一个配置处实现的活的内容在那里落于给定的相关性之下。一个回应确保新内容，是指每个被容许的结果都含有此前没有的相关内容；定位阐明 D 是说：对确保新内容的回应有通达的位置有对它的理由。",
+      "declarations": [
+        "Becoming.LivingSignificance",
+        "Becoming.SecuresNewContent",
+        "Becoming.PositionedArticulation"
+      ]
+    },
+    {
+      "en": "In the retired bridge, by definition, the core's living significance, generative extension and C on a frame are the periphery's on the frame's inventory, and the core's securing of new content and D are the periphery's secured positive ground and positioned articulation.",
+      "zh": "在退役的桥接中，按定义，核心在框架上的生生之意义、生成扩展与 C，就是外围在框架库存上的这些；核心的确保新内容与 D，就是外围的确保的正面根据与定位阐明。",
+      "declarations": [
+        "Becoming.Frame.inventory",
+        "Becoming.g0_iff",
+        "Becoming.extension_iff",
+        "Becoming.comparison_iff",
+        "Becoming.securesPositiveGround_iff",
+        "Becoming.positionedArticulation_iff"
+      ]
+    },
+    {
+      "en": "Two tiers compared lexically: one alternative is above another where it strictly includes the other's basic claims, or holds exactly them and strictly includes its gains; on a frame, configurations are compared so by the basic, then the living claims they realize. Basic priority is the condition that a comparison is exactly that order.",
+      "zh": "两层的词典序比较：一个备选在另一个之上，是指它严格包含另一个的基本主张，或恰含其基本主张而严格包含其增益；在框架上，配置按其实现的基本主张、再按活的主张如此比较。基本优先是一个比较恰为此序的条件。",
+      "declarations": [
+        "Becoming.Lexical.Above",
+        "Becoming.Lexical.Frame.Above",
+        "Becoming.Lexical.BasicPriority"
+      ]
+    },
+    {
+      "en": "In the retired bridge, the comparison of configurations by basic conditions first, then living gains, is defined as the periphery's practical comparison of the basic and the living claims each configuration realizes.",
+      "zh": "在退役的桥接中，先比基本条件、后比生的增益的配置比较，定义为外围对各配置所实现的基本主张与活的主张的实践比较。",
+      "declarations": [
+        "Becoming.BetterAt"
+      ]
+    },
+    {
+      "en": "In the periphery, with Mathlib: a policy on observations implements correction over admitted histories exactly where its action on each observation value is a common response of the judgment (one move, every step safe, every configuration a goal) on that value's cell, the admitted histories showing it; a common action exists exactly where every cell has a common response.",
+      "zh": "在外围（用 Mathlib）：观察上的策略在被容许的历史上实施纠正，恰当它在每个观察值的格（显示该值的被容许历史）上的行动是判断（一个动作，每步安全，每个配置都是目标）的共同回应；共同行动存在，恰当每个格都有共同回应。",
+      "declarations": [
+        "Becoming.cell",
+        "Becoming.implements_iff_commonResponse",
+        "Becoming.commonAction_iff_commonResponse",
+        "CorrectionBoundary.Implements",
+        "CorrectionBoundary.CommonAction"
+      ]
+    },
+    {
+      "en": "In the periphery, with Mathlib: a choice is safe at an observation value exactly where it is a common response of the judgment (one move, every step safe, every configuration a goal) on the worlds showing that value; where a finer observation determines a coarser one, implementing correction and a safe choice carry from the coarser to the finer, by the narrowing of common responses.",
+      "zh": "在外围（用 Mathlib）：一个选择在一个观察值处安全，恰当它是判断（一个动作，每步安全，每个配置都是目标）在显示该值的世界上的共同回应；较细的观察决定较粗的观察时，实施纠正与安全选择经共同回应的收窄从较粗传到较细。",
+      "declarations": [
+        "Becoming.safeOn_iff_commonResponse",
+        "ObservationChange.SafeOn",
+        "Becoming.implements_refine",
+        "Becoming.safeOn_refine",
+        "Becoming.commonResponse_antitone"
+      ]
+    },
+    {
+      "en": "Reachability carries along a map preserving steps: what is reachable from a configuration maps to what is reachable from its image. Where every step from the image of a configuration lifts to a step from it, whatever is reachable from an image is the image of something reachable from the configuration.",
+      "zh": "可达性沿保持步的映射传递：从一个配置可达者映为从其像可达者。从每个配置之像出发的每一步都能提升为从该配置出发的一步时，从一个像可达的，都是从该配置可达者之像。",
+      "declarations": [
+        "Becoming.Reach.map",
+        "Becoming.Reach.lift"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "zh": "桥接定理把外围的接口等同于脊柱的接口（若干按定义，其余经链与列表上的简短证明），不引入规范前提；它们只搬运定理，原定理需要的外给前提照旧需要。",
+      "en": "The bridge theorems identify the periphery's interfaces with the spine's (several by definition, the others by short proofs on chains and lists) and add no normative premise; they transport theorems, and the supplied premises the original theorems need are still needed."
+    },
+    {
+      "zh": "提升后的结果以比较原则 C、提升后的实践表述或选择协调为外给前提；L 取保守规则“每个结果都优于每个结果”，作为默认，更强规则是可选承诺。",
+      "en": "The lifted results take comparison principle C and the lifted articulation or selection coherence as supplied premises; L is the conservative rule “every outcome better than every outcome”, the default, with stronger rules optional commitments."
     },
     {
       "zh": "方向约定不同且保留：GenerativeComparison 的 Better first second 表示后者更好；PracticalJudgment 与 LiftBetter 的 better x y 表示前者更好。",
       "en": "Direction conventions differ and are kept: GenerativeComparison's Better first second says the second is better; PracticalJudgment's and LiftBetter's better x y says x is better."
     }
   ],
+  "does_not_show": [
+    {
+      "en": "The identifications prove none of the premises of the theorems they carry over: the meaning of history types and the normative warrant of supplied relations are supplied with them.",
+      "zh": "这些等同不证明所搬运定理的任何前提：历史类型的含义与外给关系的规范根据随它们一起由外部给出。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The identifications with the periphery's interfaces are proved in the retired bridge, which current checks do not compile against the core.",
+      "zh": "与外围接口的等同在退役的桥接中证明，当前检查不再把它与核心一起编译。",
+      "kind": "scope",
+      "witness": "Becoming.chain_iff_reach"
+    },
+    {
+      "en": "Only the conservative lifting rule is studied; the some-outcome, expectation and risk rules are not.",
+      "zh": "只研究保守提升规则；某结果规则、期望规则与风险规则未研究。",
+      "kind": "scope"
+    },
+    {
+      "en": "The periphery bridge reads only the selection and safety interfaces of correction and observation change; their randomized bounds and real-valued models are not stated on the core.",
+      "zh": "外围桥接只读纠正与观察变化的选择与安全接口；它们的随机化界与实数模型不在核心上陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "The passage by choice from a common action on every cell to one policy is not restated.",
+      "zh": "由选择从每个格上的共同行动得到单一策略的一步没有重述。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Some modules are not bridged: concrete models (CorrectionParent, ObservationRepair and nine more) and an algebra of relational boundaries (CorrectionRelations), which have no core interface to instantiate.",
+      "zh": "有些模块没有桥接：具体模型（CorrectionParent、ObservationRepair 及另外九个）与关系边界的代数（CorrectionRelations），它们没有可实例化的核心接口。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean",
+      "detail": {
+        "zh": "L 是实质承诺：从配置 0 出发，mixed 到 0 或 4，high 到 3；mixed 有结果胜过 high，但保守规则在两个方向都不比较（LiftModel.some_outcome_does_not_lift）。",
+        "en": "L is substantive: from configuration 0, mixed reaches 0 or 4 and high reaches 3; some outcome of mixed beats high, yet the conservative rule compares them in neither direction (LiftModel.some_outcome_does_not_lift)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean",
+      "detail": {
+        "zh": "经没有结果的中间回应，两段提升比较空洞成立而合成失败（LiftModel.lift_needs_live_middle）。",
+        "en": "Through a middle response with no outcome both lifted comparisons hold vacuously while the composite fails (LiftModel.lift_needs_live_middle)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "conditional-not-universal"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked: the cited core modules and InquirySufficiency are bound to core receipts under becoming-checks (Lean 4.29.1), every cited core declaration with an empty axiom report; CorrectionInquiry, CorrectionBoundary and ObservationChange to periphery receipt correction-inquiry-checks/20261020T161757.201244Z (Lean 4.30.0-rc2, Mathlib ea11ccc0), CorrectionInquiry's declarations with empty axiom reports. The retired Bridge and SeedReachProcesses are unbound: core receipt 20261018T235724.886433Z last checked their current bytes, with empty axiom reports. Author's review only.",
+    "zh": "实查：所引核心模块绑定 becoming-checks 下的核心回执（Lean 4.29.1），所引核心声明公理报告全空；CorrectionInquiry 及其所读的两个模块绑定外围回执 20261020T161757.201244Z（Lean 4.30.0-rc2，Mathlib），CorrectionInquiry 的声明公理报告为空。退役的 Bridge 与 SeedReachProcesses 未绑定，核心回执 20261018T235724.886433Z 末次实查其当前字节，公理报告为空。仅作者自审。"
+  },
+  "next_delta": {
+    "en": "Compare lifting rules stronger than the conservative one (some outcome better, expectation, risk): which of the lifted laws of comparison, reason and survival each keeps, and what each commits to.",
+    "zh": "比较强于保守规则的提升规则（某结果更好、期望、风险）：每种保留比较、理由与存活的哪些提升规律，各承诺什么。"
+  },
   "correspondence": {
-    "zh": "按核心约定，配置保留问题所需的历史，因此把模块的历史类型取为框架的配置是对应选择，不是 Lean 结果。分类页逐模块记录其定理经桥接、因已在核心上、或经类型代入作用于脊柱，以及哪些模块有意不桥接（三个 Mathlib 叶子、具体模型）；两个 Mathlib 叶子经外围桥接 CorrectionInquiry 连接；两个更新模块由 P3b 归入运行上的更新界。",
-    "en": "By the core convention a configuration retains whatever history the question needs, so taking a module's history type as a frame's configurations is a correspondence choice, not a Lean result. The classification page records, module by module, whether its theorems reach the spine by a bridge, by already being on the core, or by type substitution, and which modules are deliberately not bridged (three Mathlib leaves, concrete models); two Mathlib leaves connect through the peripheral bridge CorrectionInquiry; P3b places the two renewal modules as renewal bounds on runs."
+    "zh": "按核心约定，配置保留问题所需的历史，因此把模块的历史类型取为框架的配置是对应选择，不是 Lean 结果。分类页逐模块记录其定理经桥接、因已在核心上、或经类型代入作用于脊柱，以及哪些模块有意不桥接（三个 Mathlib 叶子、具体模型）；两个 Mathlib 叶子经外围桥接 CorrectionInquiry 连接；两个更新模块归入运行上的更新界。",
+    "en": "By the core convention a configuration retains whatever history the question needs, so taking a module's history type as a frame's configurations is a correspondence choice, not a Lean result. The classification page records, module by module, whether its theorems reach the spine by a bridge, by already being on the core, or by type substitution, and which modules are deliberately not bridged (three Mathlib leaves, concrete models); two Mathlib leaves connect through the peripheral bridge CorrectionInquiry; the two renewal modules are placed as renewal bounds on runs."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean",
   "aliases": [
@@ -129,22 +406,22 @@
     {
       "id": "positioned-positive-reason",
       "detail": {
-        "zh": "securesPositiveGround_iff 与 positionedArticulation_iff 表明核心的确保的正面根据与 D 就是该结果的定义。",
-        "en": "securesPositiveGround_iff and positionedArticulation_iff show that the core's secured positive ground and D are that result's definitions."
+        "zh": "securesPositiveGround_iff 与 positionedArticulation_iff 表明核心的确保新内容与 D 就是该结果的确保的正面根据与定位阐明。",
+        "en": "securesPositiveGround_iff and positionedArticulation_iff show that the core's securing of new content and D are that result's secured positive ground and positioned articulation."
       }
     },
     {
       "id": "levels-of-closure",
       "detail": {
-        "zh": "核心的闭包 WithinClosure（Becoming.Feedback）恰是这里从一个种子出发的种子—边闭包（withinClosure_iff_closure，Becoming.EdgeClosure）。",
-        "en": "The core's closure WithinClosure (Becoming.Feedback) is exactly the seed–edge closure here from one seed (withinClosure_iff_closure, Becoming.EdgeClosure)."
+        "zh": "核心的闭包 WithinClosure（Becoming.Frame）恰是这里从一个种子出发的种子—边闭包（withinClosure_iff_closure，Becoming.EdgeClosure）。",
+        "en": "The core's closure WithinClosure (Becoming.Frame) is exactly the seed–edge closure here from one seed (withinClosure_iff_closure, Becoming.EdgeClosure)."
       }
     },
     {
       "id": "continuation-condition-yields-living-significance",
       "detail": {
-        "zh": "桥接的 Discharge 一节在那里：延续条件之下外围的 G0 对每个清单成立，外围的三项定理由延续条件推出。",
-        "en": "The bridge's Discharge section belongs there: under the continuation condition the periphery's G0 holds for every inventory, and three of the periphery's theorems follow from the continuation condition."
+        "zh": "桥接的 Discharge 一节在那里：延续条件之下外围的 GenerativeComparison.G0 对每个清单成立，外围的三项定理由延续条件推出。",
+        "en": "The bridge's Discharge section belongs there: under the continuation condition the periphery's GenerativeComparison.G0 holds for every inventory, and three of the periphery's theorems follow from the continuation condition."
       }
     },
     {
@@ -153,39 +430,15 @@
         "zh": "四项适配归该既有结果，不新增成果身份；桥接内声明已检查。",
         "en": "The four checked adapters belong to that existing result, with no new result identity."
       }
-    }
-  ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean",
-      "detail": {
-        "zh": "L 是实质承诺：从配置 0 出发，mixed 到 0 或 4，high 到 3；mixed 有结果胜过 high，但保守规则在两个方向都不比较（LiftModel.some_outcome_does_not_lift）。",
-        "en": "L is substantive: from configuration 0, mixed reaches 0 or 4 and high reaches 3; some outcome of mixed beats high, yet the conservative rule compares them in neither direction (LiftModel.some_outcome_does_not_lift)."
-      }
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean",
+      "id": "becoming-renewal-reading",
       "detail": {
-        "zh": "经没有结果的中间回应，两段提升比较空洞成立而合成失败（LiftModel.lift_needs_live_middle）。",
-        "en": "Through a middle response with no outcome both lifted comparisons hold vacuously while the composite fails (LiftModel.lift_needs_live_middle)."
-      }
-    },
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-INSTANCE-CLASSIFICATION.md",
-      "detail": {
-        "zh": "有意不桥接：CorrectionParent 与 ObservationRepair 是具体模型，CorrectionRelations 是关系边界的代数，核心没有对应接口；另有 9 个具体模型没有需要实例化的接口。",
-        "en": "Deliberately not bridged: CorrectionParent and ObservationRepair are concrete models and CorrectionRelations is an algebra of relational boundaries, with no core interface; 9 further concrete models have no interface to instantiate."
+        "zh": "更新与消耗的统一，以及 living 的动力学读法，在那里，不在这里。",
+        "en": "The unification of renewal and consumption, and the dynamic reading of `living`, are there, not here."
       }
     }
   ],
-  "limitations": {
-    "zh": "不增加任何规范内容：桥接只搬运定理，不证明其前提，历史类型的含义与外给关系的规范根据仍由使用者提供。L 只取保守规则；更强的提升规则（某结果、期望或风险规则）未研究。更新／消耗的统一与 living 的动力学读法见 becoming-renewal-reading。Mathlib 桥接只连接 CorrectionBoundary 与 ObservationChange 的选择与安全接口；它们的随机化界与实数模型不在核心上陈述，由选择得到单一策略的一步也不在桥接中重述。",
-    "en": "Adds no normative content: bridges transport theorems without proving their premises, and the meaning of history types and the normative warrant of supplied relations remain the user's to supply. L is only the conservative rule; stronger lifting rules (some-outcome, expectation or risk rules) are not studied. The unification of renewal and consumption and the dynamic reading of `living` are in becoming-renewal-reading. The Mathlib bridge connects only the selection and safety interfaces of CorrectionBoundary and ObservationChange; their randomized bounds and real-valued models are not stated on the core, and the passage by choice to a single policy is not restated."
-  },
-  "validation_scope": {
-    "zh": "Becoming.Bridge 自 2026-10-19 在 lean/history/becoming/，末次实查于 20261018T235724.886433Z；当前只查核心重述，公理报告全空；下文较早的回执以旧名检查了同一陈述，旧名与新名的对照见统一计划 §10。 Lean 4.29.1 合并检查器成功实查（20261013T094743.528770Z）：Becoming.Bridge 40 项定理（其中 Ranking.wholeRun_iff 与 Ranking.undisturbed_eq 属 ranking-under-readings，withinClosure_iff_closure 属 levels-of-closure，Discharge 一节的 5 项属 continuation-condition-yields-living-significance），连同 Becoming.Frame 新增的 Reach.map、Reach.lift，全部空依赖；同一回执覆盖包内 75 个模块（含只作导入的根模块与桥接），共 4518 项定理／6370 项声明审计，22 个继承模块的当前字节与已通过回执一致，其 propext、Quot.sound、Classical.choice 另列。控制例不计为新定理。分类检查对 46 个模块逐行机械检查。作者自审，尚无独立反审。检查器另核对核心纯净：核心（GenerativeCore、InquirySufficiency、RelationalRenewal、L1–L4 与根模块 Becoming）的导入闭包恰为这 77 个模块，其中每条源声明的公理报告为空（Lean 生成的常量中，只有带字段构造子的单射引理 injEq 依赖 propext，没有源声明使用它们，检查器逐一列出），并且只用 Lean 内置前导即可编译（基础模块的 import Std 在该次编译中去掉）。核心新增 commonResponse_judge_iff，空依赖。外围桥接 CorrectionInquiry 经 Lean 4.30.0-rc2 与 Mathlib（ea11ccc0）成功实查（20261013T095049.338744Z）：7 项定理／8 项声明审计，全部空依赖；闭包中其余 80 个模块（含核心）的当前字节与已通过回执一致。 P89（2026-10-13）：Bridge 的旧声明保持，四项新增适配已实查且公理报告为空；不将适配另计为独立成果。",
-    "en": "Becoming.Bridge has been in lean/history/becoming/ since 19 October 2026, last checked at 20261018T235724.886433Z; current runs check the core restatements (Lifting, EdgeClosure, Bundles, Alternatives, Narrowing, Inquiry), every source declaration with an empty axiom report. Earlier receipts below checked the same statements under the former names, tabulated in plan section 10. Successful Lean 4.29.1 consolidated check (20261013T094743.528770Z): Becoming.Bridge's 40 theorems (Ranking.wholeRun_iff and Ranking.undisturbed_eq belonging to ranking-under-readings, withinClosure_iff_closure to levels-of-closure, the 5 of the Discharge section to continuation-condition-yields-living-significance), with Becoming.Frame's new Reach.map and Reach.lift, all have empty axiom reports; the same receipt covers the package's 75 modules (including the import-only root and the bridge) with 4518 theorems/6370 declaration audits, and 22 inherited modules whose current bytes match passed receipts, with their propext, Quot.sound and Classical.choice listed separately. Controls are not counted as new theorems. The classification check mechanically checks all 46 module rows. Author's review only; no independent review yet. The checker also verifies core purity: the import closure of the core (GenerativeCore, InquirySufficiency, RelationalRenewal, L1–L4 and the root module Becoming) is exactly these 77 modules, every source declaration in it has an empty axiom report (of the constants Lean generates, only the injectivity lemmas of constructors with fields, injEq, depend on propext; no source declaration uses them, and the checker lists them), and it compiles from Lean's prelude alone (the foundation's import Std removed for that run). The core adds commonResponse_judge_iff with an empty axiom report. The peripheral bridge CorrectionInquiry passed a check with Lean 4.30.0-rc2 and Mathlib (ea11ccc0) (20261013T095049.338744Z): 7 theorems/8 declaration audits, all with empty axiom reports; the current bytes of the other 80 modules in its closure, the core included, match passed receipts. P89 (13 October 2026): prior Bridge declarations remain; four added adapters are checked with empty axiom reports. Adapters are not independent results."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean",
@@ -246,7 +499,11 @@
       "sha256": "bc67b6ed7e70a6c3cec89ed790d20fb6d29a1a305ef16c3f5a845fadffb65f3b",
       "declarations": [
         "Becoming.edgeProcess",
-        "Becoming.Closure"
+        "Becoming.Closure",
+        "Becoming.Closure.base",
+        "Becoming.Closure.step",
+        "Becoming.Closure.induction",
+        "Becoming.withinClosure_iff_closure"
       ]
     },
     {
@@ -392,7 +649,8 @@
       "declarations": [
         "Becoming.judgeProcess",
         "Becoming.sees",
-        "Becoming.commonResponse_judge_iff"
+        "Becoming.commonResponse_judge_iff",
+        "Becoming.commonResponse_antitone"
       ]
     },
     {
@@ -514,7 +772,8 @@
         "Becoming.CarriesProfiles",
         "Becoming.Frame.map_preserves",
         "Becoming.Frame.lift_reflects",
-        "Becoming.preserves_of_transport"
+        "Becoming.preserves_of_transport",
+        "Becoming.PreservesBundles"
       ]
     },
     {
@@ -524,7 +783,8 @@
       "declarations": [
         "Becoming.Narrowing.after_observe_iff",
         "Becoming.Narrowing.revise_is_after",
-        "Becoming.Narrowing.revise"
+        "Becoming.Narrowing.revise",
+        "Becoming.Narrowing.observe"
       ]
     },
     {
@@ -536,7 +796,8 @@
         "Becoming.Alternatives.lift_iff",
         "Becoming.Alternatives.articulation_iff_lifted",
         "Becoming.Alternatives",
-        "Becoming.Alternatives.Articulation"
+        "Becoming.Alternatives.Articulation",
+        "Becoming.Alternatives.process"
       ]
     },
     {
@@ -676,6 +937,12 @@
       "role": "receipt",
       "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T235724.886433Z/verification.json",
+      "role": "receipt",
+      "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -799,10 +1066,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "新的形式结果直接陈述在核心上；需要 Mathlib 的结果放在外围，导入核心。",
-    "en": "State new formal results directly on the core; results needing Mathlib live in the periphery and import the core."
-  },
   "history": [
     {
       "zh": "2026-10-09：应 Ren“你自己全改了吧……先更新好计划，然后再一步步完整完成，保持代码和整体结构优雅”新增，作为整合计划 P3（实例化而不复制）。",
@@ -866,6 +1129,28 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the validation scope says the bridge module has been retired to history since it was last checked, with current runs checking the core restatements, instead of binding its current bytes, drops the sentence that this record binds the bridge, and names the living-significance record by its current id; aliases point to the core names where the core restates the bridge's laws (Bundles, Alternatives, Narrowing), and the bridge-only names are marked as retired; 'the axiom' in a related detail reads 'the continuation condition'; the label G0 in a dependency detail reads living significance (the Lean names g0_iff and the periphery's G0 are kept); J, the label of J1–J4 as PracticalJudgment, in a related detail reads the practical commitments. The claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：验证范围改为：桥接模块自末次实查后已移入历史，当前只查核心重述，不再说其当前字节被绑定，删去本记录绑定桥接一句，并以现行 id 称生生之意义的记录；别名在核心重述桥接规律处改指核心名称（Bundles、Alternatives、Narrowing），只属桥接的名称标为退役；一条相关说明中的“公理”改为“延续条件”；一条依存说明中的标签 G0 改为生生之意义（Lean 名 g0_iff 与外围的 G0 保留）；一条相关说明中的 J（作为 PracticalJudgment 的 J1–J4 之标签）改为实践承诺。主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the title shortened, a statement written from the claim and the home section; the claim split into twenty-one laws, each read against its declarations: the core restatements (EdgeClosure, Bundles, Frame, Inquiry, Narrowing, NarrowingRuns, Alternatives, Lifting, Extension, Metaethics, Lexical, FrontierFrames), the periphery bridge CorrectionInquiry, and, as identifications in the retired bridge, Bridge and SeedReachProcesses at the bytes their last receipt binds; the open-form adapters left to the related result that owns them; the limitations became four does-not-show items and a related entry for the renewal reading, one does-not-show item was added on the retired bridge's scope, and the standard boundary conditional-not-universal; the classification's row, which no declaration witnesses, left the counterexamples for a sixth does-not-show item; the plan section and the label P3b cut from a hypothesis and the correspondence; the next step replaced by the study of stronger lifting rules; withinClosure_iff_closure, Closure.base, Closure.step, Closure.induction, PreservesBundles, commonResponse_antitone, Narrowing.observe and Alternatives.process added to their files' references; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [becoming-spine-instances.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the evidence paragraph, related entries, the references, does-not-show items, laws, hypotheses, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：标题缩短，依主张与归属节写出陈述；主张拆为二十一条规律，各条对照其声明核读：核心重述（EdgeClosure、Bundles、Frame、Inquiry、Narrowing、NarrowingRuns、Alternatives、Lifting、Extension、Metaethics、Lexical、FrontierFrames）、外围桥接 CorrectionInquiry，以及作为退役桥接中等同的 Bridge 与 SeedReachProcesses（按其末次回执绑定的字节）；开放形态适配留给拥有它们的相关结果；限制改为四条“未表明”与一条指向更新读法的相关条目，另加一条关于退役桥接范围的“未表明”与通用边界 conditional-not-universal；分类页的一行不由任何声明见证，移出反例改为第六条“未表明”；前提与对应说明中删去计划节号与标签 P3b；下一步改为研究更强的提升规则；withinClosure_iff_closure、Closure.base、Closure.step、Closure.induction、PreservesBundles、commonResponse_antitone、Narrowing.observe 与 Alternatives.process 加入其文件的引用；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [becoming-spine-instances.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-spine-instances.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及证据段、相关条目、引用、“未表明”各项、规律、前提，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/92a1332c1b656339/becoming-spine-instances.json",
+      "sha256": "92a1332c1b656339d89799d8eb4646a33a48a25521913ff75aaf909120d9908b",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/cdf613c0e8f3444d/becoming-spine-instances.json",
+      "sha256": "cdf613c0e8f3444d2acff1e1413657223d246f60a58db4fc01d75f6a55c1f124",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

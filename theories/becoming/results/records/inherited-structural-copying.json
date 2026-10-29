@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "inherited-structural-copying",
   "title": {
     "zh": "继承排列改变进一步复制",
@@ -8,21 +8,215 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F10",
-  "reviewed_at_utc": "2026-10-14T08:40:00+00:00",
-  "claim": {
-    "zh": "对每个可判等字母表与每个汲取律：一词的复制完成且产物即该词，当且仅当池中每个记号的数量不少于词中所用、且空闲支持覆盖各次接合的汲取；含释放时，当且仅当支持另覆盖释放；自同一共同池依次复制的各词全部释放，当且仅当池共同供给所有词且支持覆盖全部汲取与释放，与次序无关；一词复制n次时，当且仅当池与支持各有一次释放复制所需的n倍。局部汲取下，词的用量只经其长度与相异邻对数依赖于汲取律：同长的词中，相异邻对较多的词汲取较少，当且仅当异类之后的接合比同类之后的接合汲取较少；相异邻对成等差时用量亦成等差。结构复制机是实例：模板链被复制并释放，当且仅当池供给其记号且支持覆盖其汲取加一，对每个池成立；旧的所需支持定理、交替／聚簇排序与第三排列约束都是实例；路径链的n代谱系每次都释放，当且仅当所用支持增加n倍的汲取与释放，这即任意有限谱系定理的逆，只看链本身则不成立。实际交换改变保留次序，逐项材料复制传递该变化。",
-    "en": "For every alphabet with decidable equality and every law of draws: a copy of a word produces the word exactly when the pool holds each token at least as often as the word uses it and the free support covers what its attachments draw; with a release, exactly when the support also covers it; copies drawn in turn from one shared pool are all released exactly when the pool supplies all the words together and the support covers all their draws and releases, whatever their order, and for n copies of one word exactly when the pool and support hold n times what one released copy needs. Under local draws a word's use depends on the law only through its length and unlike adjacent pairs: among words of one length, the one with more unlike pairs draws less exactly when an unlike attachment draws less than a like one, and uses are in arithmetic progression where unlike pairs are. The structural copy machine is an instance: a template strand is copied and released exactly when the pool supplies its tokens and the support covers its draws plus one, for every pool; the old theorem of the support needed, the alternating/clustered ranking and the third-arrangement constraint are instances; a lineage of n from a path strand is released at every reproduction exactly when the support used grows by n times the draws and release, the converse of the every-finite-lineage theorem, which fails on the strands alone. An actual exchange changes retained order and tokenwise material copying transmits it."
+  "reviewed_at_utc": "2026-10-28T12:38:26+00:00",
+  "statement": {
+    "en": "Copies made in turn from one pool are all released exactly when it supplies the words together and the support covers their draws and releases, in any order; under local draws a word's use depends on the law only through its length and unlike adjacent pairs, so retained order changes what is drawn.",
+    "zh": "自一个池依次复制的诸副本全部释放，恰当池共同供给所有词、支持覆盖其全部汲取与释放，与次序无关；局部汲取下，词的用量只经其长度与相异邻对依赖于汲取律，所以保留的次序改变进一步复制所取。"
   },
+  "laws": [
+    {
+      "en": "For every alphabet with decidable equality and every law of draws, a pool supplies a word where it holds each token at least as often as the word uses it. A copy of a word completes, its product what was built followed by the word, exactly when the pool supplies it and the support covers its attachments' draws; with r more free to release it, exactly when the pool supplies it and the support covers the draws and r.",
+      "zh": "对每个有可判定相等的字母表与每条汲取律：池持有每个记号至少与词用它一样多次，即池供给该词。词的复制完成、产物为已建者接上该词，恰当池供给该词且自由支持覆盖其接合所取；另需 r 以释放时，恰当池供给该词且支持覆盖所取与 r。",
+      "declarations": [
+        "Becoming.Copying.Supplies",
+        "Becoming.Copying.completes_iff",
+        "Becoming.Copying.built_iff",
+        "Becoming.Copying.releases_iff"
+      ]
+    },
+    {
+      "en": "Read as a process, a copy's moves go along the orbit of its determined law, and a plan of as many moves as the word has tokens completes with the word appended to the product exactly when the pool supplies the word and the support covers its draws.",
+      "zh": "读作过程：复制的诸步沿其确定之律的轨道进行；步数等于词长的计划以产物接上该词而完成，恰当池供给该词且支持覆盖其所取。",
+      "declarations": [
+        "Becoming.Courses.steps_orbit",
+        "Becoming.Courses.copy_built_iff"
+      ]
+    },
+    {
+      "en": "Copying words in turn from one shared pool and support, each from no previous token, and releasing each copy that completes with r free: every copy is released exactly when the pool supplies all the words joined together and the support covers all their draws and releases. Exchanging two adjacent words, which generates every reordering, keeps whether every copy is released.",
+      "zh": "从一个共享的池与支持依次复制诸词（各自无前一记号），以 r 自由完成的副本即释放：每个副本都被释放，恰当池供给诸词连接后的全体、支持覆盖其全部所取与释放。交换两个相邻的词（由此生成任意重排）不改变是否全部释放。",
+      "declarations": [
+        "Becoming.Copying.batch",
+        "Becoming.Copying.batch_all_iff",
+        "Becoming.Copying.batch_all_swap"
+      ]
+    },
+    {
+      "en": "A pool supplies one word followed by another exactly when it supplies the first and what is left once the first is taken supplies the second.",
+      "zh": "池供给一词接另一词，恰当它供给前一词、取走前一词后所余供给后一词。",
+      "declarations": [
+        "Becoming.Copying.supplies_append_iff"
+      ]
+    },
+    {
+      "en": "Read as courses, the release law copies a word from the pool and support held and releases it where it completes with r free, making no move where it does not; every copy of a batch is released exactly when its words are a course of the release law, so exactly when the pool supplies them together and the support covers their draws and releases.",
+      "zh": "读作进程：释放律从所持的池与支持复制一词，以 r 自由完成处即释放，否则不动；一批的每个副本都被释放，恰当其诸词是释放律的一段进程，即恰当池共同供给它们、支持覆盖其所取与释放。",
+      "declarations": [
+        "Becoming.Courses.release",
+        "Becoming.Courses.every_released_iff_course",
+        "Becoming.Courses.release_course_iff"
+      ]
+    },
+    {
+      "en": "A lineage, one word copied n times in turn from one shared pool and support, is released copy by copy, and is a course of the release law, exactly when the pool holds each token at least n times as often as the word uses it and the support covers n times the word's draws and release.",
+      "zh": "谱系即一词从一个共享的池与支持依次复制 n 次：它逐个释放、也是释放律的一段进程，恰当池持有每个记号至少为词所用的 n 倍，且支持覆盖词的所取与释放的 n 倍。",
+      "declarations": [
+        "Becoming.Copying.lineage_all_iff",
+        "Becoming.Courses.lineage_course_iff"
+      ]
+    },
+    {
+      "en": "Under local draws, the first attachment drawing first and each further one same after a like token and differ after an unlike one, a word of one token followed by l more uses, with same times its unlike adjacent pairs, first plus same times l plus differ times its unlike pairs: its use depends on the law only through its length and its unlike pairs.",
+      "zh": "局部汲取下（首次接合取 first，其后每次在同类之后取 same、在异类之后取 differ）：由一个记号后接 l 个记号组成的词，其用量加 same 乘相异邻对数，等于 first 加 same 乘 l 再加 differ 乘相异邻对数：用量只经其长度与相异邻对依赖于汲取律。",
+      "declarations": [
+        "Becoming.Copying.pairDraw",
+        "Becoming.Copying.use_word"
+      ]
+    },
+    {
+      "en": "Among words of one length under local draws, one with strictly more unlike adjacent pairs than another draws less exactly when an unlike attachment draws less than a like one; and where the unlike pairs of three such words are in arithmetic progression, so are their uses.",
+      "zh": "局部汲取下同长的词中，相异邻对严格较多的词汲取较少，恰当异类之后的接合比同类之后的接合汲取较少；三个这样的词的相异邻对成等差时，其用量亦成等差。",
+      "declarations": [
+        "Becoming.Copying.use_lt_iff",
+        "Becoming.Copying.use_midpoint"
+      ]
+    },
+    {
+      "en": "In the structural copy machine one move is one core move, its draws the core's local draws with first draw 1. For a nonempty template strand whose bonds are the path on its tokens, copying reproduces its tokens exactly when the pool supplies them and the support covers the draws, and the strand is copied and released exactly when the support also covers one more unit, for every pool.",
+      "zh": "在结构复制机中，一步即核心的一步，其汲取为首次取 1 的核心局部汲取。对键为其记号上路径的非空模板链：复制再现其记号，恰当池供给它们且支持覆盖所取；该链被复制并释放，恰当支持另覆盖一个单位，对每个池成立。",
+      "declarations": [
+        "Becoming.CopyingInstances.draw_eq",
+        "Becoming.CopyingInstances.view_tick",
+        "Becoming.CopyingInstances.copy_cells_iff",
+        "Becoming.CopyingInstances.reproduce_iff"
+      ]
+    },
+    {
+      "en": "For a nonempty template strand whose bonds are the path on its tokens, with its own tokens and any tail in the pool, the strand is copied and released exactly when the free support covers its draws plus one: the machine's earlier law of the support needed.",
+      "zh": "对键为其记号上路径的非空模板链：池中有其自身的记号加任意尾部时，该链被复制并释放，恰当自由支持覆盖其所取加一：即该机此前关于所需支持的规律。",
+      "declarations": [
+        "Becoming.CopyingInstances.template_pool_reproduce_iff",
+        "StructuralCopying.exact_reproduction_budget"
+      ]
+    },
+    {
+      "en": "For the alternating, clustered and mixed strands of four tokens, the alternating strand draws less than the clustered one exactly when an unlike attachment draws less than a like one; the mixed strand's draws plus one are the mean of the other two's; and two laws giving the alternating and clustered strands the same draws give the mixed strand the same.",
+      "zh": "对四记号的交替、聚簇与混合三链：交替链比聚簇链汲取较少，恰当异类之后的接合比同类之后汲取较少；混合链所取加一是另两者所取加一的平均；两条汲取律给交替链与聚簇链相同所取时，也给混合链相同所取。",
+      "declarations": [
+        "Becoming.CopyingInstances.local_ranking_from_law",
+        "Becoming.CopyingInstances.third_structure_from_law",
+        "StructuralCopying.third_structure_cost_constraint",
+        "StructuralCopying.two_costs_determine_third"
+      ]
+    },
+    {
+      "en": "Reproducing nonempty strands whose bonds are the path on their tokens in turn from one shared pool is the core's batch with release 1, flag for flag and supply for supply: every strand is released exactly when the pool supplies all their tokens together and the support covers all their draws and releases, and exchanging two adjacent strands keeps this.",
+      "zh": "从一个共享池依次复制键为其记号上路径的非空链，逐个标记、逐份供给都是释放取 1 的核心之批：每条链都被释放，恰当池共同供给其全部记号、支持覆盖其全部所取与释放；交换两条相邻的链保持这一点。",
+      "declarations": [
+        "Becoming.CopyingInstances.batch_view",
+        "Becoming.CopyingInstances.batch_all_released_iff",
+        "Becoming.CopyingInstances.batch_all_released_swap"
+      ]
+    },
+    {
+      "en": "For every pool and support, every reproduction of a lineage of n from a nonempty path-shaped strand is released exactly when the pool holds each token at least n times as often as the strand uses it and the free support covers n times its draws and release; the lineage then holds n + 1 copies of the parent, and its support used grows by n times the draws and release exactly when every reproduction is released.",
+      "zh": "对每个池与支持：自路径形的非空链出发、n 代谱系的每次复制都被释放，恰当池持有每个记号至少为链所用的 n 倍、自由支持覆盖其所取与释放的 n 倍；此时谱系含亲代的 n+1 个副本；所用支持增加所取与释放的 n 倍，恰当每次复制都被释放。",
+      "declarations": [
+        "Becoming.CopyingInstances.AllReleased",
+        "Becoming.CopyingInstances.lineage_released_iff",
+        "Becoming.CopyingInstances.lineage_of_released",
+        "Becoming.CopyingInstances.lineage_used_iff"
+      ]
+    },
+    {
+      "en": "For a nonempty path-shaped template strand, with n copies of its tokens and any tail in the pool and the free support raised by n times the draws and release, a lineage of n yields n + 1 copies of the parent, leaving the tail and the free support: the earlier finite-lineage theorem, the lineage law's sufficient side. Every lineage keeps the tokens in strands and pool together, and the free and used support together.",
+      "zh": "对路径形的非空模板链：池中有其记号的 n 份加任意尾部、自由支持增加所取与释放的 n 倍时，n 代谱系得到亲代的 n+1 个副本，余下尾部与原自由支持：即此前的有限谱系定理，谱系律的充分一侧。每个谱系保持链与池中记号的总数，以及自由与已用支持之和。",
+      "declarations": [
+        "StructuralCopying.finite_lineage_inherits",
+        "Becoming.CopyingInstances.finite_lineage_instance",
+        "StructuralCopying.lineage_accounts"
+      ]
+    },
+    {
+      "en": "Read on the strands alone the converse fails, in a witness: with support for the copy but not for its release, a lineage of one from the alternating strand holds two copies of the parent while its reproduction is not released.",
+      "zh": "只看链本身，逆命题不成立，见于一个见证：支持覆盖复制而不覆盖释放时，自交替链出发的一代谱系含亲代的两个副本，而其复制未被释放。",
+      "declarations": [
+        "Becoming.CopyingInstances.strands_do_not_show_release"
+      ]
+    },
+    {
+      "en": "In witnesses of the machine where an unlike attachment draws less: an exchange turns the alternating strand into the clustered one, which is then copied and released from the pool; from one shared pool the strand copied first is released and the second not, in either order, so the clustered strand, which draws more, can be released first; and a complete copy need not be released.",
+      "zh": "在异类之后接合汲取较少的机器见证中：一次交换把交替链变为聚簇链，后者随即从池中被复制并释放；从一个共享池，不论次序，先复制的链被释放而后者不被释放，所以汲取较多的聚簇链可以先被释放；完整的复制未必被释放。",
+      "declarations": [
+        "StructuralCopying.formed_variant_enters_copying",
+        "StructuralCopying.shared_supply_order_matters",
+        "StructuralCopying.full_copy_need_not_be_released"
+      ]
+    },
+    {
+      "en": "With a like attachment drawing less, the ranking reverses in a witness: from the same pool and six units of support the clustered strand is reproduced and the alternating one is not.",
+      "zh": "同类之后接合汲取较少时，排序在一个见证中反转：同一池与六个单位支持下，聚簇链被复制而交替链没有。",
+      "declarations": [
+        "StructuralCopying.changed_local_law_reverses_advantage"
+      ]
+    }
+  ],
   "hypotheses": [
     {
-      "zh": "非空路径模板可按序精确读取；局部相同／不同邻接成本、交换、释放和发生次序给定。",
-      "en": "A nonempty path template admits ordered exact access; equal/unequal adjacency costs, exchange, release and occurrence order are supplied."
+      "zh": "非空路径模板可按序精确读取；局部相同／不同邻接汲取、交换、释放和发生次序给定。",
+      "en": "A nonempty path template admits ordered exact access; equal/unequal adjacency draws, exchange, release and occurrence order are supplied."
     },
     {
       "zh": "一般充足性与必要性使用模板序列加剩余尾部的材料池；接合消耗材料，首次接合及释放各需一支持。",
       "en": "The general sufficiency/necessity theorem uses the template sequence plus a residual tail as stock; attachment consumes material, with one support unit each for first attachment and release."
+    },
+    {
+      "en": "The core laws hold for every alphabet with decidable equality and every law of draws; the machine's tokens are Boolean and its counts of tokens and support natural numbers.",
+      "zh": "核心规律对每个有可判定相等的字母表与每条汲取律成立；该机的记号是布尔值，记号与支持的计数是自然数。"
     }
   ],
+  "does_not_show": [
+    {
+      "en": "Reading and its fidelity, the physicochemical values of the draws, the occurrence of mutation, an autonomous feed and invasion of a population do not follow from these laws.",
+      "zh": "由这些规律推不出读取及其保真、汲取的物理化学数值、变异的发生、自供材料或种群入侵。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The constraint on the third arrangement, beyond independently fitted coefficients, does not set this model apart from a strong conventional model with the same local mechanism, which has it too.",
+      "zh": "第三排列的约束超出独立拟合的系数，但具有同一局部机制的强传统模型也有此约束。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/StructuralCopying.lean",
+      "detail": {
+        "zh": "共同库存中先后次序可使汲取更多的排列先释放；完整复制未必释放，局部汲取律改变可反转排序。",
+        "en": "Shared-stock order can release the arrangement that draws more first; a complete copy need not be released, and changed local draws can reverse the ranking."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean",
+      "detail": {
+        "zh": "strands_do_not_show_release：支持覆盖复制而不覆盖释放时，一代谱系含两个亲本副本，复制却未释放；所以只看链本身，有限谱系定理的逆不成立。",
+        "en": "strands_do_not_show_release: with support for the copy but not for its release, a lineage of one holds two copies of the parent while its reproduction is not released, so read on the strands alone the converse of the finite-lineage theorem fails."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise-core-axiom-free",
+    "discrete-steps",
+    "decidability",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Core: Becoming.Copying (becoming-checks/20261022T054058.112616Z) and Becoming.Courses (becoming-checks/20261020T051144.879480Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: StructuralCopying by its folder's check (structural-copying-verification/, Lean 4.29.1: 34 new theorems, 57 new audits, 430 in the import closure) and CopyingInstances by its instance checker (copying-instances-checks/20261020T161910.956874Z, Lean 4.29.1), at most propext, Quot.sound and Classical.choice. The primary paper gives mechanism and comparison context; no new reanalysis of data.",
+    "zh": "核心 Copying、Courses：4.29.1 合并检查器（becoming-checks/），公理报告为空。外围 StructuralCopying：其目录的检查（structural-copying-verification/，4.29.1，新定理34、审计57、闭包430）；CopyingInstances：实例检查器（copying-instances-checks/，4.29.1）；至多 propext、Quot.sound、Classical.choice。论文只作机制与比较背景，无新复算。"
+  },
+  "next_delta": {
+    "en": "Explain how selective contacts and reference relations form, how the support copying draws on is renewed, and how selection proceeds under shared provision.",
+    "zh": "说明选择性接触与参考关系怎样形成，复制所取的支持怎样更新，以及共同供给之下的选择怎样进行。"
+  },
   "correspondence": {
     "zh": "先前实际 ABAB 片段满足新模板结构输入；这只核对端点，不证明旧接合作用形成读取能力。操作角色由保留排列、逐项移入和释放关系分化。",
     "en": "The previous actual ABAB fragment meets the new structural template input; this checks the endpoint without deriving reading capability from old attachment. Operational roles differentiate through retained order, token transfers and release."
@@ -46,8 +240,8 @@
       "id": "recurrent-chain-assembly",
       "relation": "formal-reuse",
       "detail": {
-        "zh": "previous_fragment_is_template 核对既有片段与模板输入；新复制关系另为前提，不复用旧倍增成本。",
-        "en": "previous_fragment_is_template checks the existing fragment against the template input; the new copying relation is an added premise and does not reuse old doubling costs."
+        "zh": "previous_fragment_is_template 核对既有片段与模板输入；新复制关系另为前提，不复用旧倍增的汲取。",
+        "en": "previous_fragment_is_template checks the existing fragment against the template input; the new copying relation is an added premise and does not reuse the old doubling draws."
       },
       "interface": {
         "output": {
@@ -66,31 +260,22 @@
       }
     }
   ],
-  "related": [],
-  "counterexamples": [
+  "related": [
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/StructuralCopying.lean",
+      "id": "formed-copying-registration",
       "detail": {
-        "zh": "共同库存中先后次序可使更昂贵排列先释放；完整复制未必释放，相容规律改变可反转排序。",
-        "en": "Shared-stock order can release the more costly arrangement first; a complete copy need not be released, and changed local costs can reverse ranking."
+        "en": "Contacts formed by consuming connectors and support enter this copying; their loss, displacement and rebinding change what is copied.",
+        "zh": "消耗连接件与支持而形成的接触接入此复制；其丢失、错位与重接改变所复制者。"
       }
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean",
+      "id": "formed-copying-correction",
       "detail": {
-        "zh": "strands_do_not_show_release：支持覆盖复制而不覆盖释放时，一代谱系含两个亲本副本，复制却未释放；所以只看链本身，有限谱系定理的逆不成立。",
-        "en": "strands_do_not_show_release: with support for the copy but not for its release, a lineage of one holds two copies of the parent while its reproduction is not released, so read on the strands alone the converse of the finite-lineage theorem fails."
+        "en": "Edits an existing product of this copying against a reference and passes the edited successor on to further copying.",
+        "zh": "对照参考编辑此复制的既有产物，并把编辑后的后继交给进一步复制。"
       }
     }
   ],
-  "limitations": {
-    "zh": "未导出读取／保真能力、物理化学成本、变异发生率、自供或种群入侵。第三成本约束超出独立拟合系数，但同机制的强传统模型也有此约束。",
-    "en": "Reading/fidelity capability, physicochemical costs, mutation occurrence, autonomous feed and population invasion are not derived. The third-cost constraint exceeds independently fitted coefficients but is also available to a strong conventional model with the same mechanism."
-  },
-  "validation_scope": {
-    "zh": "34项新定理声明／57项新审计，430项实际闭包审计中373项继承分列；原始论文只作机制与比较对应，无新数据复算。一般律已由检查器回执绑定。",
-    "en": "34 new theorem declarations / 57 new audits, with 373 inherited declarations separate in 430 actual-closure audits. The primary paper supplies mechanism/comparison context, not a new data reanalysis. General laws: checker receipts bound."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/StructuralCopying.lean",
@@ -103,7 +288,9 @@
         "StructuralCopying.lineage_accounts",
         "StructuralCopying.third_structure_cost_constraint",
         "StructuralCopying.two_costs_determine_third",
-        "StructuralCopying.shared_supply_order_matters"
+        "StructuralCopying.shared_supply_order_matters",
+        "StructuralCopying.full_copy_need_not_be_released",
+        "StructuralCopying.changed_local_law_reverses_advantage"
       ]
     },
     {
@@ -295,10 +482,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "配准形成和已成产物编辑均有后续条件组合；继续选择性／参考规律、持续支持及共同供给中的选择。",
-    "en": "Contact formation and editing of existing products now have conditional continuations; next explain selectivity/reference relations, renewed support and selection under shared provision."
-  },
   "history": [
     {
       "zh": "2026-10-09：接续原分割研究，保留原固定规律成果与社会组织支线；一个局部组合成果，不按声明数认领独立发现。",
@@ -341,6 +524,28 @@
     {
       "en": "2026-10-20: 22 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/dfa67bcd56c05cdd/inherited-structural-copying.json and in git.",
       "zh": "2026-10-20：22 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/dfa67bcd56c05cdd/inherited-structural-copying.json 和 git 中。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): a statement written from the home section; the claim split into 17 laws, each read against its declarations in Becoming.Copying and Becoming.Courses (core) and StructuralCopying and CopyingInstances (periphery), with the conditions the Lean takes written in (decidable equality, nonempty strands whose bonds are the path on their tokens, one release unit, strictly more unlike pairs for the ranking); StructuralCopying.full_copy_need_not_be_released and changed_local_law_reverses_advantage, which witness the first counterexample, added to the file's references (its receipt binds them, with propext only); the limitations became two does-not-show items, with the standard boundaries no-ethical-premise-core-axiom-free, discrete-steps, decidability and formal-not-empirical and one added hypothesis; words of exchange replaced by draws in a hypothesis, the first counterexample and the dependency's detail (costs, costly), the meaning unchanged; the next step's completed part went to two related entries (formed-copying-registration, formed-copying-correction), its Chinese no longer using the retired 配准; no premise's content, status, proof binding or source hash changed. Every earlier sentence is mapped in [inherited-structural-copying.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/inherited-structural-copying.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, does-not-show items, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依主章写出陈述；主张拆为 17 条规律，各条对照 Becoming.Copying、Becoming.Courses（核心）与 StructuralCopying、CopyingInstances（外围）中的声明核读，Lean 所取的条件都写入（可判定相等、键为记号上路径的非空链、一个释放单位、排序要求相异邻对严格较多）；见证第一条反例的 StructuralCopying.full_copy_need_not_be_released 与 changed_local_law_reverses_advantage 加入该文件的引用（其回执绑定它们，只用 propext）；限制改为两条“未表明”，并引用通用边界 no-ethical-premise-core-axiom-free、discrete-steps、decidability、formal-not-empirical，加一条前提；一条前提、第一条反例与依赖说明中的交换词（成本、昂贵）改为汲取，意义不变；下一步中已完成者移入两个相关条目（formed-copying-registration、formed-copying-correction），其中文不再用已退役的“配准”；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [inherited-structural-copying.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/inherited-structural-copying.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、“未表明”各项，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/cefe1fdeb750607f/inherited-structural-copying.json",
+      "sha256": "cefe1fdeb750607f81df20bed586abd8f576e1ce9a0c68b78c5b7a48c245f604",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/dfa67bcd56c05cdd/inherited-structural-copying.json",
+      "sha256": "dfa67bcd56c05cddad85ba672d06f6c7502e634900c9aa9601f9eb86cb0a06b5",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "id": "relational-generative-comparison",
+  "title": {
+    "zh": "共同生成比较所需的关系信息",
+    "en": "Relational information required for a joint-generative comparison"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
+  "claim": {
+    "zh": "同一事件法则中的保留／解除耦合描述具有相同单项可能性，但前者保留全部所表示共同组合并新增完整共同组合。该结构输出接入明确比较原则 C 后，任何完全由这些单项可能性决定的摘要上的非自反比较都无法实现 C；共同组合描述能区分此例，丰富可能性仍不强迫实际共同实现。",
+    "en": "Under one event law, retaining and releasing a coupling have identical marginal possibilities, while retention preserves every represented joint bundle and adds the full bundle. Feeding this structural output into explicit comparison principle C excludes any irreflexive comparator over a summary fully determined by those marginals. A joint-bundle description distinguishes the case; richer possibility still does not force joint actualization."
+  },
+  "hypotheses": [
+    {
+      "zh": "复用 JointContinuationClassification 的共同初始配置、事件法则及稳定的活动含义；这些是局部关系表示，不是从零导出的普遍物理学。",
+      "en": "Reuses JointContinuationClassification's common initial configuration, event law and stable claim meanings; these supply a local relational representation, not a universal physics derived from nothing."
+    },
+    {
+      "zh": "比较阻碍定理明确假定 GenerativeComparison.ComparisonPrinciple C 的此项应用；标为 generative 的仅是含全部两个所表示实现的组合，不能以该标签证明其正面意义。",
+      "en": "The comparison obstruction explicitly assumes this application of GenerativeComparison.ComparisonPrinciple C. Only a bundle containing both represented realizations is marked generative; the label does not warrant its favorable meaning."
+    },
+    {
+      "zh": "摘要仅由全部单项可能性决定，且摘要比较非自反；不要求可加总分、全排序或传递性。",
+      "en": "The summary is determined solely by all marginal possibilities and its comparator is irreflexive; additive scores, totality and transitivity are not required."
+    },
+    {
+      "zh": "伦理应用仍需说明该实际共同能力如何实现生生的正面可能性，并完整涵盖相关成本、损失与其他变化。",
+      "en": "Ethical application still requires warrant that the actual joint capacity realizes a favorable living possibility and adequately covers relevant costs, losses and other changes."
+    }
+  ],
+  "correspondence": {
+    "zh": "先有同一展开中耦合关系的保留与解除，左／右是其中分化的位置。jointInventory.realized 表示共同能力实际成立而非所有未来结果已经发生。形式组合直接以尚未单独迁移的 JointContinuationClassification 输出，满足尚未单独迁移的 GenerativeComparison 中 C 的输入；并未导入一般实践判断或 AI 方向模块。",
+    "en": "Retention and release concern a coupling within one unfolding; left and right are differentiated positions within it. jointInventory.realized denotes an actually present joint capacity, not all future outcomes having happened. The formal composition directly uses outputs of the unmigrated JointContinuationClassification module as inputs to C in the unmigrated GenerativeComparison module; it does not import the general practical-judgment or AI-direction modules."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Bundles.lean",
+  "aliases": [
+    "RelationalGrounding.released_profiles_are_carried",
+    "RelationalGrounding.joint_bundle_extension",
+    "RelationalGrounding.marginals_agree_but_joint_descriptions_differ",
+    "RelationalGrounding.strict_comparison_cannot_factor_through_marginals",
+    "RelationalGrounding.joint_description_separates",
+    "RelationalGrounding.retained_possibility_does_not_force_joint_actualization",
+    "Becoming.strict_comparison_through_marginals_by_core (retired module)"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "practical-judgment-under-living-significance",
+      "detail": {
+        "zh": "解释关联：沿既有的条件对齐路线说明 C 的实践地位；本组合没有以该记录作为直接 Lean 输入。",
+        "en": "Interpretive connection: the established conditional alignment route explains C's practical role; this record is not a direct Lean input to the composition."
+      }
+    },
+    {
+      "id": "alignment-direction-under-widening",
+      "detail": {
+        "zh": "解释关联：跨智能方向同样需要保留实际关系及其损失；这里没有证明部署可靠性或行为收敛。",
+        "en": "Interpretive connection: the cross-intelligence direction likewise must retain actual relations and losses; deployment reliability and behavioral convergence are not proved here."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RelationalGrounding.lean",
+      "detail": {
+        "zh": "retainedLeft 是同一法则下实际可行的仅左实现历史；存在共同可能性不强迫实际共同实现。",
+        "en": "retainedLeft is an admissible left-only history under the same law; joint possibility does not force actual joint realization."
+      }
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/RELATIONAL-GROUNDING-INTEGRATION.md",
+      "detail": {
+        "zh": "保留所有组合的存在性不保证概率、可靠性、负担或既有损失不变；不能从任意共同可实现结构直接推出完整生生质量。",
+        "en": "Preserving the existence of all bundles does not guarantee unchanged probability, reliability, burdens or past losses; arbitrary joint-realizability structure does not directly determine complete generative ethical quality."
+      }
+    }
+  ],
+  "limitations": {
+    "zh": "仅排除所声明输入摘要的严格比较；不排除所有标量评价或保留关系的局部分析，不证明所有耦合应保留、C 或生生之意义无前提成立或普遍伦理完成。也不要求完备可判定识别算法或所有智能已经认可规范。",
+    "en": "Excludes only strict comparison through the declared summary, not all scalar evaluation or relationally adequate local analysis. It proves neither preservation of every coupling, premise-free C or living significance nor completed universal ethics, and imposes no gate of complete decidable identification or universal recognition."
+  },
+  "validation_scope": {
+    "zh": "复用本轮成功 Lean 4.29.1 回执：6项新定理／12项声明审计，新增依赖全空；16项既有定理／48项审计另列，3项应用控制例不重复计数。独立反审核对3份源码、2份检查辅助及23份工件，未第二次编译；本次登记不重新编译。",
+    "en": "Credits this round's successful Lean 4.29.1 receipt: 6 new theorems/12 declaration audits, all new dependencies empty; 16 inherited theorems/48 audits are separate, and 3 application controls are not recounted. Independent review matched 3 sources, 2 checker helpers and 23 artifacts without a second compiler run. Registration does not recompile."
+  },
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RelationalGrounding.lean",
+      "role": "provenance",
+      "sha256": "9b2319e752ee1b93d4245b1c5fe0a9d1e0758b1caf37282623598ea491e84c87",
+      "declarations": [
+        "RelationalGrounding.released_profiles_are_carried",
+        "RelationalGrounding.joint_bundle_extension",
+        "RelationalGrounding.marginals_agree_but_joint_descriptions_differ",
+        "RelationalGrounding.strict_comparison_cannot_factor_through_marginals",
+        "RelationalGrounding.joint_description_separates",
+        "RelationalGrounding.retained_possibility_does_not_force_joint_actualization"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/JointContinuationClassification.lean",
+      "role": "provenance",
+      "sha256": "e508683cc80832744a28f44c69f9c2561701cd099219448b75cfdb474c0786ee",
+      "declarations": [
+        "JointContinuationClassification.whole_profile_preservation_iff_joint_bundle_preservation",
+        "JointContinuationClassification.same_marginal_realizations_can_lose_a_joint_bundle"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GenerativeComparison.lean",
+      "role": "provenance",
+      "sha256": "948d36b4cddc0b2289219604464bd38eb6e607183b157cee1075d50fb9797a03",
+      "declarations": [
+        "GenerativeComparison.GenerativeExtension",
+        "GenerativeComparison.ComparisonPrinciple"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/relational-grounding-verification.json",
+      "role": "receipt",
+      "sha256": "c6467de2a60e516186c40a9c18f3f509899e5dfa9bba77c361501bbee611bec0",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/RELATIONAL-GROUNDING-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "984896144a37c75461ab4d2c3103fa63ce41cf9801c6a010e3292cf4f00a4f7c",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/RELATIONAL-GROUNDING-PROOF.md",
+      "role": "statement",
+      "sha256": "a2be10b9cd8bfd2a6f8aa4e665ad18fd47368ceac451a211788e9324de0388f3",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/RELATIONAL-GROUNDING-REVIEW.md",
+      "role": "review",
+      "sha256": "8ecbd3cf9a6fbb3fb4df1409e47bc3a65f96a053c21a0d7122989c83c9b5b4a0",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-08-monist-relational-ontology-first.md",
+      "role": "provenance",
+      "sha256": "54a19521ba6c1345c86060b8379965c42da0429ad3015adc75f326510e98e5c1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+      "role": "proof",
+      "sha256": "3bd4a208c5c0da12a3e24093fe3c67738185a97e979dd0fc09142c714fa1299c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Extension.lean",
+      "role": "proof",
+      "sha256": "4d3afe46d3d4b297acc6a1e6b126ad2e0f2d08dfa9205fdcf2aa32bb7b5bcbf1",
+      "declarations": [
+        "Becoming.Comparison.separates",
+        "Becoming.Extension",
+        "Becoming.Comparison"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/Bridge.lean",
+      "role": "provenance",
+      "sha256": "1c90a7f2788e21264c20a65e979ead06c0b3c5b4ce1d0b2831fe452f060eab36",
+      "declarations": [
+        "Becoming.Frame.ofInventory",
+        "Becoming.strict_comparison_through_marginals_by_core"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T192014.437564Z/verification.json",
+      "role": "receipt",
+      "sha256": "e75f316ff9857ac3bdc90d127459709ef17bdce3d952f85c95e8771d8da84b3b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261015T163210.426211Z/verification.json",
+      "role": "receipt",
+      "sha256": "20a27676496da965792e40912a2754e4954496525e5641cb7d0708095235734b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261017T113233.209872Z/verification.json",
+      "role": "receipt",
+      "sha256": "79d2d4c12c9c90f46007b6186de47e17047575627cdea297b3f222f1244b076b",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T134446.673561Z/verification.json",
+      "role": "receipt",
+      "sha256": "1182d296bfd637111591eb33277de93d008f28c1436b469969810422b5f7a991",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json",
+      "role": "receipt",
+      "sha256": "c5e118f377ae815cdb1d8afb02bbc5e3fb7ee519d45ab85f12a834fc467e8f0a",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Bundles.lean",
+      "role": "proof",
+      "sha256": "4055d193bbc130905a315a149089f831af9bf49cd5d9b57a8196be531b98634c",
+      "declarations": [
+        "Becoming.Regimes.released_carried",
+        "Becoming.Regimes.extension",
+        "Becoming.Regimes.marginals_agree",
+        "Becoming.Regimes.no_comparison_through_marginals",
+        "Becoming.Regimes.joint_separates",
+        "Becoming.Regimes.possibility_not_realization",
+        "Becoming.carries_iff_preserves",
+        "Becoming.Activation.same_marginals_lose_bundle"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T201753.515165Z/verification.json",
+      "role": "receipt",
+      "sha256": "3c40ea48ba97e221d435520ce8abbb1577b04d871cb49bfe7a7e9efd78fe9665",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T090457.012800Z/verification.json",
+      "role": "receipt",
+      "sha256": "73da26fa45a43969d573d4f0f79afeaf50f1b40ecd31082bc842b017a49920b4",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "role": "receipt",
+      "sha256": "ace68a8204b4d696007b214fe3d23183492a76d03ba95c5ecef598c535ae0fe9",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json",
+      "role": "receipt",
+      "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7d6c80b402ec417240edad046a1e8b0e1db954f42a99727f3745726dae729f7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json",
+      "role": "receipt",
+      "sha256": "dead8cbc141ae38108fddc4ff56228e537fb1aacb27e96ef14d50647140a2be0",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "role": "receipt",
+      "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Bundles.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Bundles",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ValuationFrames",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Extension.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Extension",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "next_delta": {
+    "zh": "复用已完成的结构到比较组合；若扩展到新的生命／组织范围，说明共同能力的具体生生内容、真实转化损失及适用比较，不以重复模型、另一摘要或无公理门槛代替该对应。",
+    "en": "Reuse the completed structural-to-comparison adapter. Extension to new life or organizational scopes requires an account of the capacity's generative content, actual transformation losses and applicable comparison, rather than another summary, duplicate model or axiom-free gate."
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：首次登记本轮新的形式组合与明确边界；信用原有两个模块，不把6个支撑声明计作6项独立奠基发现。",
+      "en": "2026-10-08: first registration of this new formal composition and explicit boundaries; credits the two existing modules and does not count six supporting declarations as six independent grounding discoveries."
+    },
+    {
+      "en": "18 October 2026, F3J, the port of the judgment and comparison family into the core (Ren: \"work with other sessions, totally resolve these extra/ugly bridges, and move toward to the direction of unification\"): the core counterparts of the cited periphery and bridge declarations are cited (8 in Becoming.Bundles; 2 in Becoming.Metaethics), graded in development/bridge-fold/port-j.md; the periphery stays cited until the sweep retires it. Canonical source moved from RelationalGrounding.lean to Bundles.lean. A port restates; the claim is unchanged.",
+      "zh": "2026年10月18日，F3J 将判断与比较族移入核心：引用其核心对应声明，规范来源随之移动。移植只是重述，论断不变。"
+    },
+    {
+      "en": "20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Bundles.lean, ValuationFrames.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Bundles.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; ValuationFrames.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，R30（一个概念一个名字：名字说出陈述所没有的意思或相撞者，按一张表改名，见 development/r30-names/RENAME-TABLE.json）：证明绑定（Bundles.lean、ValuationFrames.lean）改到核心回执 20261019T194851.524223Z。读过改动后重新指向：Bundles.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变；ValuationFrames.lean，声明、命名空间与用法按 R30 改名表改名（一个概念一个名字）；陈述与证明不变。论断不变。"
+    },
+    {
+      "en": "2026-10-20: 13 bookkeeping notes condensed from 14 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/0725fa1aa53f6e89/relational-generative-comparison.json and in git.",
+      "zh": "2026-10-20：13 条记账性说明合并（14 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/0725fa1aa53f6e89/relational-generative-comparison.json 和 git 中。"
+    },
+    {
+      "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge, GenerativeComparison, JointContinuationClassification and RelationalGrounding) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Bundles, Becoming.Extension and Becoming.ValuationFrames). The retired modules' content is also stated in Becoming.Alternatives and Becoming.Metaethics, which this record does not cite with declarations. 1 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
+      "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge, GenerativeComparison, JointContinuationClassification and RelationalGrounding）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Bundles, Becoming.Extension and Becoming.ValuationFrames）。退役模块的内容也陈述于 Becoming.Alternatives and Becoming.Metaethics，本记录未以声明引用它们。1 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired labels named in current terms: the G0/J route in a related detail as the conditional alignment route, and G0 in the limitations as living significance; the claim is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役标签按现行术语称：一条相关说明中的 G0/J 路线改为条件对齐路线，限度中的 G0 改为生生之意义；主张不变。"
+    }
+  ]
+}

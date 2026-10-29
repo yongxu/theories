@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "branching-tests-bisimulation",
   "title": {
     "zh": "分支测试等价与双模拟",
@@ -8,17 +8,89 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-08T13:02:25.936140+00:00",
-  "claim": {
-    "zh": "两个 image-finite 模型在全部有限分支测试上同测，等价于存在关联这两个位置的双模拟。",
-    "en": "For two image-finite models, agreement on all finite branching tests is equivalent to a bisimulation relating the two positions."
+  "reviewed_at_utc": "2026-10-28T11:52:21+00:00",
+  "statement": {
+    "en": "Alike configurations pass the same branching tests; under excluded middle as a hypothesis, where each move's outcomes are listed in both frames, configurations passing the same branching tests are alike, so agreeing on all of them is equivalent to a bisimulation relating the two (Hennessy–Milner).",
+    "zh": "相同的配置通过相同的分支检验；以排中律为假设，凡两个框架中每个动作的结果都已列出，通过相同分支检验的配置相同，所以在全部分支检验上一致，等价于有一个双模拟关联二者（Hennessy–Milner）。"
   },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "ExplanatoryBranching 的模型、测试与两侧 ImageFinite；既有经典逻辑依赖保留。",
-      "en": "ExplanatoryBranching models and tests, ImageFinite on both sides, and the recorded classical logical dependencies."
+      "en": "A branching test is truth, a claim, a test's failure, two tests together, or that some step by a move leads to where a test holds; two configurations pass the same branching tests where every such test holds at the one exactly where it holds at the other.",
+      "zh": "分支检验是真、一个主张、一个检验的不成立、两个检验同时成立，或某一动作的某一步通向一个检验成立之处；两个配置通过相同的分支检验，是指每个这样的检验在一个配置处成立，恰当它在另一个处成立。",
+      "declarations": [
+        "Becoming.BranchingTest",
+        "Becoming.BranchingTest.Holds",
+        "Becoming.SameBranchingTests"
+      ]
+    },
+    {
+      "en": "With no premise, alike configurations, related by some bisimulation of their frames, pass the same branching tests.",
+      "zh": "不加前提，相同的配置（由其框架的某个双模拟关联）通过相同的分支检验。",
+      "declarations": [
+        "Becoming.Alike.sameBranchingTests"
+      ]
+    },
+    {
+      "en": "Under excluded middle as a named hypothesis, two configurations not passing the same branching tests are told apart by one test, which holds at the first and fails at the second.",
+      "zh": "以排中律为具名假设，不通过相同分支检验的两个配置由一个检验分开：它在前者成立、在后者不成立。",
+      "declarations": [
+        "Becoming.apart_of_not_sameBranchingTests"
+      ]
+    },
+    {
+      "en": "Under excluded middle as a named hypothesis, where each move from each configuration of both frames has listed outcomes, configurations passing the same branching tests are alike, so they are alike exactly where they pass the same branching tests; neither the moves, nor the claims, nor the configurations need be listed.",
+      "zh": "以排中律为具名假设，凡两个框架中每个配置的每个动作都有已列出的结果，通过相同分支检验的配置相同，所以配置相同恰当它们通过相同的分支检验；动作、主张与配置都无须列出。",
+      "declarations": [
+        "Becoming.alike_of_sameBranchingTests_of_em",
+        "Becoming.alike_iff_sameBranchingTests_of_em"
+      ]
+    },
+    {
+      "en": "Without excluded middle, where the moves and claims are listed, the claims decided and each move's outcomes listed in both frames, the configurations possibly infinitely many, configurations are alike exactly where they pass the same branching tests, given that of two decided families, each holding at a step where it holds at the next and one of them holding at each step, one holds at every step.",
+      "zh": "不用排中律：凡动作与主张已列出、主张已定、两个框架中每个动作的结果已列出（配置可以无穷多），配置相同恰当它们通过相同的分支检验，前提是：两个已判定的族，各在下一步成立时于此步成立，且每步至少一个成立，则其中一个每步都成立。",
+      "declarations": [
+        "Becoming.EitherThroughout",
+        "Becoming.OutcomesListed",
+        "Becoming.OutcomesListed.alike_iff_sameBranchingTests"
+      ]
+    },
+    {
+      "en": "That configurations passing the same branching tests are alike, for every pair of frames with one move and no claims whose moves have listed outcomes, holds exactly where, of two decided families each holding at a step where it holds at the next and one of which holds at each step, one holds at every step.",
+      "zh": "“通过相同分支检验的配置相同”对每对只有一个动作、没有主张、动作结果已列出的框架成立，恰当：两个已判定的族，各在下一步成立时于此步成立，且每步至少一个成立，则其中一个每步都成立。",
+      "declarations": [
+        "Becoming.alike_of_sameBranchingTests_outcomes_iff"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "Frames of the spine on configurations of any type, with moves and claims. For the direction from the tests to likeness: each move from each configuration has listed outcomes in both frames (image-finite), and excluded middle is the named hypothesis em : ∀ p, Decided p.",
+      "zh": "脊柱上任意类型配置的框架，带动作与主张。从检验到相同的方向：两个框架中每个配置的每个动作都有已列出的结果（像有限），排中律为具名假设 em : ∀ p, Decided p。"
+    },
+    {
+      "en": "For the form without excluded middle: the moves and claims listed, the claims decided, each move's outcomes listed, and the principle on decided families (EitherThroughout) supplied.",
+      "zh": "不用排中律的形式：动作与主张已列出，主张已定，每个动作的结果已列出，并给出关于已判定族的原则（EitherThroughout）。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The tests read steps and claims, not joint occupation: parts held together are read by a richer language of tests, with its own relations and conditions.",
+      "zh": "这些检验读步与主张，不读共同占用：共同持有的部分由更丰富的检验语言读出，有其自己的关系与条件。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated core checker check_becoming.py (Lean 4.29.1): the current bytes of Becoming.Likeness are bound to core receipt becoming-checks/20261020T051144.879480Z, which reports an empty axiom list for every cited declaration. The periphery ExplanatoryBranching, whose image-finite form reasons classically, with its receipt under explanatory-branching-checks, and the retired Bridge are provenance and keep their earlier scope.",
+    "zh": "核心检查器 check_becoming.py（Lean 4.29.1）实查：Becoming.Likeness 的当前字节绑定核心回执 becoming-checks/20261020T051144.879480Z，所引声明的公理报告均为空。外围 ExplanatoryBranching（其像有限形式用经典推理，回执在 explanatory-branching-checks 下）与退役的 Bridge 是来源，保持原范围。"
+  },
+  "next_delta": {
+    "en": "The principle branching tests need to fix likeness where each move's outcomes are listed but the moves or the claims are not, and whether one weaker than excluded middle suffices there.",
+    "zh": "每个动作的结果已列出、但动作或主张未列出时，分支检验固定相同所需的原则，以及弱于排中律者在那里是否已足够。"
+  },
   "correspondence": {
     "zh": "解释声称覆盖这些问题时才适用；没有证明所有测试实际可取得。",
     "en": "Applies when the explanation covers these questions; it does not establish actual availability of all tests."
@@ -33,28 +105,11 @@
     {
       "id": "tests-fix-likeness-where-determined",
       "detail": {
-        "zh": "脊柱上的形式：线性检验在相同之下确定时固定相同，分支检验在有限已定的框架上固定相同；本定理是核心定理（以排中律为假设，只需每一动作的结果已列出）在模型上的实例。",
-        "en": "The spine's form: linear tests fix likeness where frames are determined up to likeness, branching tests where they are finite and decided; this theorem is the instance on models of the core theorem with excluded middle as a hypothesis, which needs only each move's outcomes listed."
+        "zh": "脊柱上的形式：线性检验在相同之下确定时固定相同，分支检验在有限已定的框架上固定相同；本记录陈述该核心定理（以排中律为假设，只需每一动作的结果已列出），外围在模型上的像有限定理是其实例。",
+        "en": "The spine's form: linear tests fix likeness where frames are determined up to likeness, branching tests where they are finite and decided; this record states the core theorem with excluded middle as a hypothesis, which needs only each move's outcomes listed, and the periphery's image-finite theorem on models is its instance."
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryBranching.lean",
-      "detail": {
-        "zh": "该测试语言不自动表达共同占用；更丰富的共同语言有自己的关系与条件。",
-        "en": "This test language does not automatically express joint occupation; the richer joint language has its own relations and conditions."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "该测试语言不自动表达共同占用；更丰富的共同语言有自己的关系与条件。",
-    "en": "This test language does not automatically express joint occupation; the richer joint language has its own relations and conditions."
-  },
-  "validation_scope": {
-    "zh": "复用所列既有 Lean 回执；本次仅审读源码、核对声明及回执哈希对应，未重新编译。",
-    "en": "Credits the linked existing Lean receipt. This migration reads source and checks declaration presence and receipt hash binding; it does not rerun Lean."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryBranching.lean",
@@ -86,7 +141,12 @@
         "Becoming.alike_of_sameBranchingTests_of_em",
         "Becoming.alike_iff_sameBranchingTests_of_em",
         "Becoming.OutcomesListed.alike_iff_sameBranchingTests",
-        "Becoming.alike_of_sameBranchingTests_outcomes_iff"
+        "Becoming.alike_of_sameBranchingTests_outcomes_iff",
+        "Becoming.BranchingTest",
+        "Becoming.BranchingTest.Holds",
+        "Becoming.SameBranchingTests",
+        "Becoming.EitherThroughout",
+        "Becoming.OutcomesListed"
       ]
     },
     {
@@ -218,10 +278,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "动作或条件未列出时，是否有弱于排中律的原则已足够。",
-    "en": "Whether a principle weaker than excluded middle suffices where the moves or conditions are not listed."
-  },
   "history": [
     {
       "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
@@ -252,6 +308,28 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (Bridge and ExplanatoryBranching) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Likeness). The retired modules' content is also stated in Becoming.BranchingCorrespondence, Becoming.Granularity and Becoming.Labelled, which this record does not cite with declarations. 2 aliases naming retired declarations are marked \"(retired module)\". The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（Bridge and ExplanatoryBranching）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Likeness）。退役模块的内容也陈述于 Becoming.BranchingCorrespondence, Becoming.Granularity and Becoming.Labelled，本记录未以声明引用它们。2 个指向退役声明的别名标为“(retired module)”。主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): a statement written from the claim and the home section, the claim read as the core law it now is; six laws, each read against its declarations in Likeness.lean (the tests, likeness giving them, telling apart, the excluded-middle form, the form with the moves and claims listed, and the principle that form needs); the limitation, the same sentence as the counterexample, which no declaration witnesses, to one does-not-show item, the counterexample entry removed; the hypothesis rewritten for the core frames, with excluded middle and listed outcomes as the Lean has them, and a second for the form without excluded middle; BranchingTest, BranchingTest.Holds, SameBranchingTests, EitherThroughout and OutcomesListed added to Likeness.lean's references; the shared boundary no-ethical-premise cited; the next step stated positively; no source hash, binding or status changed. Every earlier sentence is mapped in [branching-tests-bisimulation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/branching-tests-bisimulation.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in related entries, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依主张与主章写出陈述，主张读作它现在所是的核心规律；六条规律，各条对照 Likeness.lean 中的声明核读（检验、相同给出检验一致、分开、排中律形式、动作与主张已列出的形式，及该形式所需的原则）；限制与反例是同一句，无声明见证，改为一条“未表明”，删去反例项；前提按核心框架改写，排中律与已列出的结果如 Lean 所取，另加不用排中律形式的前提；BranchingTest、BranchingTest.Holds、SameBranchingTests、EitherThroughout 与 OutcomesListed 加入 Likeness.lean 的引用；引用通用边界 no-ethical-premise；下一步正面陈述；来源哈希、绑定与状态均未改变。每句旧文本的去向见 [branching-tests-bisimulation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/branching-tests-bisimulation.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及相关条目，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/ad01eefea512da33/branching-tests-bisimulation.json",
+      "sha256": "ad01eefea512da33515f8f46d792bbaf597ce1530d66643086aaf6f60d1ea5ed",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/21c20641d7380b2d/branching-tests-bisimulation.json",
+      "sha256": "21c20641d7380b2dae66e9c35390cce7e93f83082a25baa338acd1d476b75542",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

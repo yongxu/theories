@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "retained-reference-joining-recovery",
   "title": {
     "zh": "保留共同引用的跨表述形成对应",
@@ -8,21 +8,96 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F22",
-  "reviewed_at_utc": "2026-10-08T13:52:31.763955+00:00",
-  "claim": {
-    "zh": "不同片段载体的有限配置若初始位置数相同且对保留引用的全部分支问题同测，在固定输入对有限结果条件下，每个有限形成命令序列都有相应历史，保留原配置、同测结果及位置对齐。同一实际过程的精确说明必须区分空历史与已消耗历史。",
-    "en": "Finite configurations over different fragment carriers with equal initial slot counts and agreement on all retained-reference branch questions match every finite formation command sequence under finite fixed-pair outcomes, preserving the original configuration, final answers and slot alignment. Exact accounts of the same actual process must distinguish its idle and spent histories."
+  "reviewed_at_utc": "2026-10-28T11:47:48+00:00",
+  "statement": {
+    "en": "Alike retained-reference configurations with equally many slots match every finite course of formation, keeping start and slots aligned; passing the same branching tests suffices with listed outcomes and excluded middle. Exact descriptions code a self-joining fragment apart from one that is not.",
+    "zh": "槽数相同且相似的保留引用构型匹配每条有限形成路径，保留起点并使槽对齐；在结果可列举并有排中律时，通过相同分支检验即足够。精确的说明以不同编码区分能自结合的片段与不能者。"
   },
-  "hypotheses": [
+  "laws": [
     {
-      "zh": "两侧 FiniteOutcomes；全部有限否定、合取与位置对接续问题同测；相同初始位置数。",
-      "en": "FiniteOutcomes on both sides; agreement on all finite negation, conjunction and slot-pair continuation questions; equal initial slot counts."
+      "en": "For any joining, read through retained references a configuration is the list of fragments formed, and a move names two slots whose fragments join into a third, which it appends; along every course a configuration is extended by one fragment for each move.",
+      "zh": "对任一结合，经保留引用读出，构型是已形成片段的列表，一个动作指名两个槽，其片段结合成第三个片段并追加之；沿每条路径，构型每一动作被延长一个片段。",
+      "declarations": [
+        "Becoming.Joining.retainedFrame",
+        "Becoming.Joining.retained_extends"
+      ]
     },
     {
-      "zh": "每步从同一配置选择两个位置并追加有见证的结果，原位置保持不变。不可抹去区别的具体定理只需 Exact，不需有限性或 Reduced。",
-      "en": "Each step selects two slots in the same configuration and appends a witnessed result while retaining old slots. The concrete unavoidable-distinction theorem only needs Exact, not finiteness or Reduced."
+      "en": "For any two joinings, retained configurations alike across their frames with equally many slots match every finite course of formation: the matched course takes the same moves, ends alike with equally many slots and extends the configuration it started from; no premise beyond likeness and equal slot counts.",
+      "zh": "对任意两个结合，跨其框架相似且槽数相同的保留构型匹配每条有限形成路径：被匹配的路径取相同动作、以相同槽数相似地结束，并延长其起始构型；除相似与槽数相同外不加前提。",
+      "declarations": [
+        "Becoming.Joining.retained_history_matches"
+      ]
+    },
+    {
+      "en": "Where each pair of both joinings joins into listed fragments, with excluded middle as a hypothesis, retained configurations passing the same branching tests with equally many slots match every finite course of formation by the same moves, ending where the same tests pass, with equally many slots, extending the start.",
+      "zh": "两个结合的每对都结合成可列举的片段，并以排中律为假设时，通过相同分支检验且槽数相同的保留构型以相同动作匹配每条有限形成路径，结束处通过相同检验、槽数相同，并延长起点。",
+      "declarations": [
+        "Becoming.Joining.FiniteOutcomes",
+        "Becoming.Joining.retained_history_matches_of_em"
+      ]
+    },
+    {
+      "en": "With excluded middle as a hypothesis and each pair of the second joining joining into listed fragments, a pair joined in a retained configuration is matched in any configuration passing the same tests with equally many slots: the same slots hold fragments joining into one, and the two extended configurations pass the same tests with equally many slots.",
+      "zh": "以排中律为假设、第二个结合的每对都结合成可列举的片段时，在一保留构型中结合的一对，在任何通过相同检验且槽数相同的构型中被匹配：相同的槽持有能结合的片段，两个延长后的构型通过相同检验且槽数相同。",
+      "declarations": [
+        "Becoming.Joining.retained_pair_matches_of_em"
+      ]
+    },
+    {
+      "en": "As configurations of one slot, a self-joining fragment and one that cannot join itself do not pass the same branching tests of the retained frame, and every description whose equal codes pass the same retained tests gives them different codes.",
+      "zh": "作为单槽构型，能自结合的片段与不能自结合者不通过保留框架的相同分支检验；凡相等编码都通过相同保留检验的描述，都给它们不同编码。",
+      "declarations": [
+        "Becoming.Joining.SelfJoinable",
+        "Becoming.Joining.retained_apart",
+        "Becoming.Joining.retained_codes_apart"
+      ]
+    },
+    {
+      "en": "The one fragment of the one-fragment joining joins itself and the traced passage of the process that moves once does not; the self-joining test of retained references holds at the one fragment and fails at the passage, and every code reading the retained tests exactly gives the idle start and the passage different codes.",
+      "zh": "单片段结合的单一片段能与自身结合，而只动一次的过程的已追踪经过不能；保留引用的自结合检验在单一片段处成立、在经过处不成立；凡精确读出保留检验的编码都给空闲起点与经过不同编码。",
+      "declarations": [
+        "Becoming.Fragment.passageTrace",
+        "Becoming.Fragment.once_self_apart",
+        "Becoming.Fragment.once_retained_apart",
+        "Becoming.Fragment.once_codes_apart"
+      ]
     }
   ],
+  "hypotheses": [
+    {
+      "en": "For configurations passing the same tests: each pair of both joinings joins into listed fragments (FiniteOutcomes), excluded middle is a named hypothesis, the tests are all finite negation, conjunction and slot-pair continuation questions, and the initial slot counts are equal; for alike configurations, likeness and equal slot counts only.",
+      "zh": "对通过相同检验的构型：两个结合的每对都结合成可列举的片段（FiniteOutcomes），排中律为具名假设，检验是全部有限的否定、合取与槽对接续问题，初始槽数相同；对相似的构型，只需相似与槽数相同。"
+    },
+    {
+      "en": "Each step selects two slots in the same configuration and appends a witnessed result while retaining old slots. The concrete unavoidable-distinction theorem only needs exactness, not finiteness or reduction.",
+      "zh": "每步从同一配置选择两个位置并追加有见证的结果，原位置保持不变。不可抹去区别的具体定理只需精确，不需有限性或约简。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Agreement of actual articulations at the start is a hypothesis, which the laws take and do not supply.",
+      "zh": "实际分节在起点的问答一致是假设：规律取用它而不提供它。",
+      "kind": "scope"
+    },
+    {
+      "en": "Acquired memory, permission to copy resources, probabilities, cycles and changes of the primitive joining grain are not modelled.",
+      "zh": "不模拟取得的记忆、复制资源的许可、概率、循环与基本结合粒度的改变。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked with Lean 4.29.1 by the consolidated core checker (check_becoming.py): the current bytes of Becoming.Joining and Becoming.JoiningRoles are bound to becoming-checks/20261020T051144.879480Z, BranchingCorrespondence to 20261018T222948.779875Z, Labelled to 20261028T085101.429997Z and Prelude to 20261021T133545.845568Z, and every cited declaration has an empty axiom report. The superseded periphery modules are provenance; their receipt keeps its earlier scope. Author counterreview; no independent-agent acceptance.",
+    "zh": "Lean 4.29.1 合并核心检查器实查：Joining、JoiningRoles 的当前字节绑定 becoming-checks/20261020T051144.879480Z，BranchingCorrespondence 绑定 20261018T222948.779875Z，Labelled 绑定 20261028T085101.429997Z，Prelude 绑定 20261021T133545.845568Z，所引声明公理报告皆空。已被取代的外围模块是来源，其回执保持原范围。作者反审，无独立验收。"
+  },
+  "next_delta": {
+    "en": "Translate what remains, tests and formation between descriptions with different internal syntax, telling semantic tests apart from tests a formation has actually acquired.",
+    "zh": "在内部语法不同的描述之间翻译余项、检验与形成，区分语义检验与形成实际取得的检验。"
+  },
   "correspondence": {
     "zh": "编号是配置内部位置，可引用之前形成的结果；没有共同原生对象名。形成安排语义不自动是破坏性资源的实际执行。",
     "en": "Indices name positions internal to the configuration and can reference earlier formed results; no common native object names are supplied. Formation-arrangement semantics is not automatically execution with destructive resources."
@@ -111,23 +186,6 @@
       }
     }
   ],
-  "counterexamples": [
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/EXPLANATORY-JOINING-CONTEXTS-INTEGRATION.md",
-      "detail": {
-        "zh": "不推出任意实际分节的初始问答一致、记忆取得、资源复制许可、概率、循环或基本接合粒度变化；一般恢复含标准经典依赖。",
-        "en": "Does not establish initial question agreement for arbitrary actual articulations, acquired memory, permission to copy resources, probabilities, cycles or changes of primitive joining granularity; general recovery retains standard classical dependencies."
-      }
-    }
-  ],
-  "limitations": {
-    "zh": "不推出任意实际分节的初始问答一致、记忆取得、资源复制许可、概率、循环或基本接合粒度变化；一般恢复含标准经典依赖。",
-    "en": "Does not establish initial question agreement for arbitrary actual articulations, acquired memory, permission to copy resources, probabilities, cycles or changes of primitive joining granularity; general recovery retains standard classical dependencies."
-  },
-  "validation_scope": {
-    "zh": "Lean 4.29.1 实查：本次43项新声明，213项继承审计，共256项；新9空依赖、34标准，7项含经典选择。冻结源码、日志与回执逐字绑定；非独立 agent 验收。",
-    "en": "Lean 4.29.1 checks 43 new declarations and 213 inherited audits, 256 total; new 9 empty and 34 standard dependency lists, 7 with classical choice. Frozen source/logs bind to the receipt; no independent-agent acceptance."
-  },
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJoiningRegisters.lean",
@@ -150,7 +208,8 @@
         "Becoming.Joining.retained_pair_matches_of_em",
         "Becoming.Fragment.once_retained_apart",
         "Becoming.Fragment.once_codes_apart",
-        "Becoming.Fragment.once_self_apart"
+        "Becoming.Fragment.once_self_apart",
+        "Becoming.Fragment.passageTrace"
       ]
     },
     {
@@ -208,7 +267,9 @@
         "Becoming.Joining.retained_history_matches_of_em",
         "Becoming.Joining.retained_apart",
         "Becoming.Joining.retained_codes_apart",
-        "Becoming.Joining.retained_extends"
+        "Becoming.Joining.retained_extends",
+        "Becoming.Joining.FiniteOutcomes",
+        "Becoming.Joining.SelfJoinable"
       ]
     },
     {
@@ -338,10 +399,6 @@
       "success_value": "passed"
     }
   ],
-  "next_delta": {
-    "zh": "复用有限条件程序与真实余项恢复；继续建立内部语法不同的说明之间余项、判断与实际形成关系的有据翻译，区分语义可判定与实际取得。",
-    "en": "Reuse finite guarded programs and coherent residual recovery; establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition."
-  },
   "history": [
     {
       "zh": "2026-10-08：在既有接合情境研究中继续；共同细化、相容因子、真实信息丢失与保留引用修复各保留准确范围。",
@@ -374,6 +431,28 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (ExplanatoryBranching, ExplanatoryJoiningAnchors, ExplanatoryJoiningRegisters and JoiningBridge) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.BranchingCorrespondence, Becoming.Joining, Becoming.JoiningRoles, Becoming.Labelled and Becoming.Prelude). The retired modules' content is also stated in Becoming.Granularity and Becoming.Likeness, which this record does not cite with declarations. The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（ExplanatoryBranching, ExplanatoryJoiningAnchors, ExplanatoryJoiningRegisters and JoiningBridge）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.BranchingCorrespondence, Becoming.Joining, Becoming.JoiningRoles, Becoming.Labelled and Becoming.Prelude）。退役模块的内容也陈述于 Becoming.Granularity and Becoming.Likeness，本记录未以声明引用它们。主张不变。"
+    },
+    {
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement written from the claim and the home section; the claim split into six laws, each read against its declarations in Joining.lean and JoiningRoles.lean (the retained frame, matching from alike configurations, matching under listed outcomes and excluded middle, the pair step, the self-joining distinction and the witness of the process that moves once); the limitation, also the only counterexample, which no declaration witnesses, to two does-not-show items, and its clause on classical dependencies, which the core no longer has, to the hypothesis naming excluded middle; FiniteOutcomes, SelfJoinable and Fragment.passageTrace added to their files' references; the shared boundary no-ethical-premise cited; no premise, status or source hash changed. Every earlier sentence is mapped in [retained-reference-joining-recovery.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/retained-reference-joining-recovery.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, the statement, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依主张与主章节写出陈述；主张拆为六条规律，各条对照 Joining.lean 与 JoiningRoles.lean 中的声明核读（保留框架、自相似构型的匹配、结果可列举并有排中律时的匹配、成对一步、自结合的区分，以及只动一次之过程的见证）；限制（也是唯一的反例，无声明见证）改为两条“未表明”，其中关于经典依赖的分句（核心已不再有）归入写明排中律的前提；FiniteOutcomes、SelfJoinable 与 Fragment.passageTrace 加入其文件的引用；引用通用边界 no-ethical-premise；前提、状态与来源哈希均未改变。每句旧文本的去向见 [retained-reference-joining-recovery.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/retained-reference-joining-recovery.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、陈述，各条对照所引 Lean 核读。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/c93c2b6075fee1ed/retained-reference-joining-recovery.json",
+      "sha256": "c93c2b6075fee1ed9fdbee8063083b11bfa8f70dff9df9111fcc57a55f20e0ac",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/444c99a77aa57df3/retained-reference-joining-recovery.json",
+      "sha256": "444c99a77aa57df3569242eb320dece297f267b5278a8ec110b1680d3db78332",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35）；每条被合并的说明都保存在这里。"
+      }
     }
   ]
 }

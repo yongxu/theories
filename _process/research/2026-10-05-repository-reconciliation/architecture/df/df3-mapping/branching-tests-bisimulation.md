@@ -1,0 +1,30 @@
+# Migration map: branching-tests-bisimulation
+
+Old record sha256 `ad01eefea512da33515f8f46d792bbaf597ce1530d66643086aaf6f60d1ea5ed`; snapshot `_process/architecture/history/ad01eefea512da33/branching-tests-bisimulation.json`.
+
+Labels number the old English sentences and clauses (split at full stops and semicolons outside parentheses): T title, S statement, C claim, L limitations, V validation_scope, R correspondence, N next_delta, H hypotheses, X counterexamples. The Chinese text of each field goes to the same place as its English counterpart; the old Chinese was read alongside, sentence by sentence.
+
+Each law was read against its declarations in `Becoming/Likeness.lean`: `BranchingTest`, `BranchingTest.Holds`, `SameBranchingTests` (law 1), `Alike.sameBranchingTests` (law 2), `apart_of_not_sameBranchingTests` (law 3), `alike_of_sameBranchingTests_of_em` and `alike_iff_sameBranchingTests_of_em` (law 4), `EitherThroughout`, `OutcomesListed` and `OutcomesListed.alike_iff_sameBranchingTests` (law 5), `alike_of_sameBranchingTests_outcomes_iff` (law 6); `Alike` and `Bisimulation` of `Becoming/Labelled.lean` are written out in words. Every condition the Lean takes is kept: excluded middle as the named hypothesis `em` and the listed outcomes of every move on both sides, the moves, claims and configurations unlisted (laws 3 and 4); the listed moves and claims, decided claims, listed outcomes and `EitherThroughout` (law 5); law 6 is an iff the Lean proves both ways, for every pair of frames on one type of configurations with one move and no claims whose moves have listed outcomes. The bound core receipt `becoming-checks/20261020T051144.879480Z` holds Likeness.lean's current bytes and reports an empty axiom list for every cited declaration, and the hypotheses hold no ethical premise, so `no-ethical-premise` is cited. The five added declarations are in the same file and receipt.
+
+The old record had no statement. The old claim is the periphery's image-finite theorem (`Generative.ExplanatoryBranching.same_iff_bisimilar`, now provenance); since 14 October (history entry 1) it is stated on the spine, and the statement says what the home section (03-KNOWING, `r-branching-tests-bisimulation`) and the core law say.
+
+| Old text | Type | New place |
+|---|---|---|
+| T0 “Branching-test equivalence and bisimulation” | title | title (unchanged) |
+| (none) | statement | statement, written from C0 and the home section, in the core's form |
+| C0 “For two image-finite models, agreement on all finite branching tests is equivalent to a bisimulation relating the two positions.” | law | law 4 (`alike_iff_sameBranchingTests_of_em`, with `alike_of_sameBranchingTests_of_em` the direction from the tests), likeness being the existence of a bisimulation relating the two; law 2 is the direction with no premise; “image-finite” is read as the Lean has it, each move's outcomes listed in both frames; law 1 defines the tests, law 3 the excluded-middle lemma telling configurations apart, laws 5 and 6 the form without excluded middle and the principle it needs (all already in the record's references since 14 October) |
+| H0 “ExplanatoryBranching models and tests, ImageFinite on both sides, and the recorded classical logical dependencies.” | premise | hypotheses[0], rewritten for the current proof: the core frames on configurations of any type, listed outcomes on both sides (image-finite), and excluded middle as the named hypothesis in place of the periphery's classical dependencies; the periphery module and its models are provenance (validation_scope) |
+| — | added premise | hypotheses[1]: the premises of the form without excluded middle (law 5), which the record has cited since 14 October |
+| R0 “Applies when the explanation covers these questions;” | correspondence | correspondence (unchanged) |
+| R1 “it does not establish actual availability of all tests.” | correspondence | correspondence (unchanged) |
+| X0 “This test language does not automatically express joint occupation;” | counterexample (no declaration witnesses it) | does_not_show[0] (scope: the tests read steps and claims, not joint occupation; the type `BranchingTest` has no constructor for parts held together); the counterexample entry is removed: it repeated the limitation and no declaration witnesses it |
+| X1 “the richer joint language has its own relations and conditions.” | counterexample (no declaration witnesses it) | does_not_show[0] |
+| L0 “This test language does not automatically express joint occupation;” | scope | does_not_show[0] (the same sentence as X0) |
+| L1 “the richer joint language has its own relations and conditions.” | scope | does_not_show[0] (the same sentence as X1) |
+| V0 “Credits the linked existing Lean receipt.” | evidence | validation_scope (the core receipt named by location, the checker check_becoming.py and Lean 4.29.1 as the receipt records it; the periphery receipt under explanatory-branching-checks keeps its earlier scope) |
+| V1 “This migration reads source and checks declaration presence and receipt hash binding” | evidence (bookkeeping of the 8 October migration) | snapshot; history entry 0 records that migration |
+| V2 “it does not rerun Lean.” | evidence (bookkeeping) | snapshot; the new history entry says no source hash or binding changed |
+| N0 “Whether a principle weaker than excluded middle suffices where the moves or conditions are not listed.” | next step | next_delta, stated positively: the principle branching tests need where each move's outcomes are listed but the moves or claims are not, and whether one weaker than excluded middle suffices; where they are listed, law 5 and law 6 already give the principle |
+| — | standard boundary | standard_boundaries: no-ethical-premise |
+
+The home section and the Lean agree; no chapter edit is needed. Laws 5 and 6 restate laws of tests-fix-likeness-where-determined, which is related; they stay here because this record has cited them since 14 October as the boundary of its excluded-middle form.
