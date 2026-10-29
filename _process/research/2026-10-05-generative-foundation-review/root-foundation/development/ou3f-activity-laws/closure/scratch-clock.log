@@ -1,0 +1,23 @@
+Becoming/Clock.lean:41:17: warning: unused variable `m`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/ou3f-laws/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/closure/tree",
+  "modules": 8,
+  "ran": [
+    "Becoming.Clock",
+    "BecomingClockAxiomAudit"
+  ],
+  "reused": 7,
+  "unclean": [
+    "Becoming.Clock"
+  ],
+  "audits": {
+    "Becoming.Clock": {
+      "theorems": 1,
+      "declarations": 2,
+      "with_axioms": {}
+    }
+  }
+}
