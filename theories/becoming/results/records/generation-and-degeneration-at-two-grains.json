@@ -107,7 +107,7 @@
       ]
     },
     {
-      "en": "On the World model (occurrences: a step and a formation): carrying renewal steps into a formation that did not carry on as itself; under passing, generation makes carriers arise arbitrarily late; by names nothing generates; consumption held, a family drawn beyond renewal and stopped passing refute going on every branch; the relay renews and ends.",
+      "en": "On the World model (occurrences: a step and a formation): carrying renewal steps into a formation that did not carry on as itself; under passing, generation makes carriers arise arbitrarily late; by names, as wherever each formation continues only itself, nothing generates; consumption held, a family drawn beyond renewal and stopped passing refute going on every branch; the relay renews and ends.",
       "zh": "在 World 模型的延续关系上（事为步与形成之对）：传是步入一个其形成未以自身延续之事；在传递之下，生成使载者迟迟生起；只按名读则无生成；所耗仍持、家族超出更新、传之止皆否诸支之不穷；中继复生而终。",
       "declarations": [
         "Becoming.Web.carries_iff",
@@ -123,7 +123,9 @@
         "Becoming.Web.stopped_not_endless",
         "Becoming.Map.shifted_generates",
         "Becoming.Map.relay_renews_and_ends",
-        "Becoming.Map.renewal_undecided"
+        "Becoming.Map.renewal_undecided",
+        "Becoming.Web.not_carries_of_within_itself",
+        "Becoming.Web.not_generation_of_within_itself"
       ]
     },
     {
@@ -383,7 +385,9 @@
         "Becoming.Web.itself_keeps",
         "Becoming.Web.itself_not_generation",
         "Becoming.Web.keeping_of_carried_on",
+        "Becoming.Web.not_carries_of_within_itself",
         "Becoming.Web.not_endless_of_gone",
+        "Becoming.Web.not_generation_of_within_itself",
         "Becoming.Web.passing_carries_iff",
         "Becoming.Web.reached_later",
         "Becoming.Web.reaches_onward",
@@ -441,6 +445,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the law on the World model names its base in the current vocabulary (the World model, not the old base); the law and its declarations are unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：World 模型上的定律用现行词汇称其基底（World 模型，而非旧基底）；定律及其声明不变。"
+    },
+    {
+      "en": "29 October 2026, board item GW: by names nothing generates is a case of the law for any continuation in which each formation continues only itself, proved once in MapInstances (board rule 9); itself_carries_nothing and itself_not_generation derived from it, statements unchanged. A law widened.",
+      "zh": "2026年10月29日，工作板条目 GW：按名无一生成，为\"每一构成只延续自身之任一延续\"之律之特例，于 MapInstances 一次证之（工作板规则 9）；itself_carries_nothing 与 itself_not_generation 由之推出，陈述不变。一律放宽。"
     }
   ]
 }

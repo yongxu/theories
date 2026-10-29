@@ -168,16 +168,17 @@ premises in which the conclusion fails:
   `.dependent`, `.unloosened`, `.taking`, `.conserving`, `.requiresWithin`). By name (its supports
   last one step), carrying on while supported, along supported passings and within kinds with
   dormant carrying on by name it keeps widening from no step (`KindRelay.not_keepsWidening_byName`,
-  `KindRelay.Runs.not_keepsWidening_supportedItself`, `.not_keepsWidening_supportedPassing`,
-  `.not_keepsWidening_dormant`); it returns with period two (`KindRelay.returns`). The fed relay
+  `KindRelay.Runs.not_keepsWidening_supportedItself`, `KindRelay.not_keepsWidening_supportedPassing`,
+  `KindRelay.not_keepsWidening_dormant`); it returns with period two (`KindRelay.returns`). The fed relay
   (`KindRelay.Fed`) adds a condition of fuel for each step, drawn on and taken a unit by each
   formation taking part and required by none; it is dissipative (`KindRelay.Fed.dissipative`) and
   meets `Flow.Taking`, its supports and passings are the closed relay's, and keeping widening within
   kinds, 全生成 at both orders, renewal without end and the exclusions by name, along supported
   passings and with dormant carrying on hold of it. On the six conditions its formations require it
   conserves exactly (`KindRelay.Fed.conserving_on_part`): the fuel pays only the loss dissipation
-  asks for, so the laws for dissipated requirements do not apply to it, and no list holds its
-  conditions (`KindRelay.Fed.not_listed`). Both run one relay (`KindRelay.Runs`), on which the laws
+  asks for. No list holding what its formations require is dissipated on from any step
+  (`KindRelay.Fed.requirements_not_dissipated`), since its requirements conserve and a list holds
+  the fuel of only finitely many steps, and no list holds its conditions (`KindRelay.Fed.not_listed`). Both run one relay (`KindRelay.Runs`), on which the laws
   are proved once.
 
 **Standing.** Every law here is a restatement or near-definitional. The first two read the
@@ -1109,7 +1110,7 @@ theorem not_keepsWidening_along_passings (balances : L.Balances W) (acting : L.A
   not_keepsWidening_along_supportedPassing balances acting dependent unloosened
     (fun t g f step => contains t g f (Web.supportedPassing_within t g f step)) T
 
-/-! ### Under dissipation a finite world has neither -/
+/-! ### Where what is required is dissipated on, neither -/
 
 /-- **Under dissipation a passing of support takes**: across a step at which a family holding what
 the gainer requires is dissipated on, some formation takes from it, since the giver gives to it. -/
@@ -1973,8 +1974,7 @@ end Source
 
 /-! ### The kind relay: 全生成 at two orders and keeping widening, together -/
 
-/-- Over lists without repetition holding where a quantity is positive, its totals agree. Its home is
-beside `total_le_of_support` (`Becoming.Dissipation`), to move there at the next full rebuild. -/
+/-- Over lists without repetition holding where a quantity is positive, its totals agree. -/
 theorem total_eq_of_supports {α : Type} {q : α → Nat} {l m : List α} (dl : Distinct l)
     (dm : Distinct m) (lm : ∀ a, 0 < q a → a ∈ m) (ml : ∀ a, 0 < q a → a ∈ l) :
     total l q = total m q :=
@@ -2492,11 +2492,16 @@ theorem renews_without_end :
   runs.renews_without_end
 
 /-- **By name the closed relay keeps widening from no step**: no formation is supported at two
-steps running (`Runs.not_keepsWidening_byName`). It also meets the premises of the finite-whole law
-(`every_form`, `distinct_forms`, `gainless`, `balances`, `requiresWithin`), which
-`Flow.whole_not_keepsWidening` turns into the same exclusion. -/
+steps running (`Runs.not_keepsWidening_byName`). -/
 theorem not_keepsWidening_byName (T : Nat) : ¬ web.KeepsWidening Web.itself web.level T :=
   runs.not_keepsWidening_byName T
+
+/-- **The closed relay meets the finite-whole law's premises**: its six conditions are listed without
+repetition, it balances, nothing comes from nothing and what its formations require is fixed, so
+`Flow.whole_not_keepsWidening` gives the same exclusion by name. -/
+theorem not_keepsWidening_byName_of_whole (T : Nat) : ¬ web.KeepsWidening Web.itself web.level T :=
+  Flow.whole_not_keepsWidening every_form distinct_forms gainless (T₀ := 0)
+    (fun t _ => balances.on allForms t) fun _ f _ _ => requiresWithin f
 
 /-- **Along supported passings the closed relay keeps widening from no step**: it meets the World
 premises (`Flow.not_keepsWidening_along_supportedPassing`). -/
@@ -2695,6 +2700,18 @@ theorem not_listed : ¬ ∃ all : List (Form ⊕ Nat), ∀ x, x ∈ all :=
 theorem keeps_widening :
     web.KeepsWidening (web.withinKind sameKind (flow.PassesSupport web)) web.level 0 :=
   runs.keeps_widening
+
+/-- **No list holding what the fed relay's formations require is dissipated on from any step**:
+otherwise nothing would keep widening within kinds (`Flow.not_keepsWidening_of_dissipated_requirements`),
+which the fed relay does. Its requirements conserve, and a list holds the fuel of only finitely many
+steps. -/
+theorem requirements_not_dissipated :
+    ¬ ∃ (all : List (Form ⊕ Nat)) (T₀ : Nat), (∀ t f x, web.requires t f x → x ∈ all) ∧
+      ∀ t, T₀ ≤ t → flow.DissipatesOn all t :=
+  fun ⟨_, T₀, required, dissipates⟩ =>
+    Flow.not_keepsWidening_of_dissipated_requirements balances acting dependent unloosened
+      required dissipates (R := web.withinKind sameKind (flow.PassesSupport web))
+      (fun _ _ s => .inl ⟨rfl, s⟩) T₀ (Web.KeepsWidening.later (Nat.zero_le T₀) keeps_widening)
 
 /-- **全生成 within kinds at every supported occurrence**, the fed relay. -/
 theorem generation {x : Nat × Form} (start : web.Supported x.1 x.2) :

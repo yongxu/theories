@@ -60,7 +60,8 @@
         "Becoming.Web.byPassing_iff_hasPred",
         "Becoming.Web.arises_iff_sheng_carrier",
         "Becoming.Web.ceases_iff_wang_carrier",
-        "Becoming.Web.ceases_of_pattern_ends"
+        "Becoming.Web.ceases_of_pattern_ends",
+        "Becoming.Web.begins_of_arises"
       ]
     },
     {
@@ -207,6 +208,7 @@
         "Becoming.Web.Present",
         "Becoming.Web.alters_of_passes",
         "Becoming.Web.arises_iff_sheng_carrier",
+        "Becoming.Web.begins_of_arises",
         "Becoming.Web.begins_within",
         "Becoming.Web.byPassing_iff_continues",
         "Becoming.Web.byPassing_iff_hasPred",
@@ -325,6 +327,10 @@
     {
       "en": "29 October 2026, board item OU3f (study section 443): the second law's two statements and the third law's ending are proved from grammar laws under their own names (board rule 9). ByPassing.passes_within and begins_passed take the derivations of their twins, which are retired (passes_within_by_line, begins_passed_by_grammar), and ByPassing.ends_within is proved as passes_within is, through the pattern's line and «两端分则中有标»; the law on the grammar, its declarations, the aliases and the module's reference brought to the kept names.",
       "zh": "2026年10月29日，工作板条目 OU3f（研究第 443 节）：第二条律的两个陈述及第三条律中的终止，以其本名由文法规律证出（板规九）。ByPassing.passes_within 与 begins_passed 取其孪生之推导，孪生（passes_within_by_line、begins_passed_by_grammar）退役；ByPassing.ends_within 如 passes_within 之证，经样式之相续与「两端分则中有标」；文法上之律、其声明、别名与该模块之引用皆改为所存之名。"
+    },
+    {
+      "en": "29 October 2026, board item GW: what arises begins a carrier along every continuation (begins_of_arises), proved once (board rule 9); the forward half of arises_iff_sheng_carrier derived from it, statement unchanged. A declaration added to a law; no text changed.",
+      "zh": "2026年10月29日，工作板条目 GW：所生者沿每一延续皆起一载体（begins_of_arises），一次证之（工作板规则 9）；arises_iff_sheng_carrier 之前半由之推出，陈述不变。一律增一声明，文字不变。"
     }
   ],
   "text_versions": [

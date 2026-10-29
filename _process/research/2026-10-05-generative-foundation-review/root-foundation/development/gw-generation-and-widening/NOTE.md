@@ -17,7 +17,7 @@ Purpose (board, "Purpose first"): the step argued where the theory bears on it, 
 
 The link exists, and it runs one way. The negative results stay, and they become the formal content of a distinction the account already draws: generation (生成) is not 生生 (D65 item 4, 01 §6). 生生, as D1 reads it, includes changing what can form. The law of this note says that keeping what can form widening always rides on the map's renewals one grain up, and that those renewals, even generation at two orders, do not by themselves give it.
 
-1. **The law, one way** [argued; planned Lean].
+1. **The law, one way** [Lean, §15].
    - **The World.** Along any reading of the World containing carrying on of the supported, keeping opening needs, up to double negation, a *beginning* after every step: a passing of support that the reading leaves out, into a formation that the reading continues from nothing supported (§3). Each beginning is a carrying renewal (传) along "carry on, or pass support". Where the reading is "within a kind", it is a carrying renewal of the whole at the grain of kinds, the map's order-1 event (§3.3). So keeping widening needs the map's events one grain up to recur. It does not need the map's regions: the law places no renewal ahead of every point of one line.
    - **By name.** The same law says that keeping widening by name needs passings of support at arbitrarily late steps (§3.2, corollary 5).
    - **The held possible.** Where holding is decided, keeping widening gives 全生成 of the course at the pair (the one, what is held). This is `Run.begins_of_heldKeepsWidening` read on the map (§5).
@@ -26,8 +26,8 @@ The link exists, and it runs one way. The negative results stay, and they become
    - Along all passings, nothing is left out to begin a line of the reading, so nothing opens (`Flow.not_keepsWidening_along_passings`).
    - By name, no step of the reading crosses formations, so nothing is 全生成 (`Web.itself_not_generation`).
    - `Flow.whole_not_keepsWidening` is not an end of the interval. It is the gain bridge on what can form by name, and on that it is central.
-3. **Under dissipation, a finite closed world has neither** [Lean, §15]. 01's dissipation premise stops taking from recurring in a finite closed family (`Balances.taking_not_recurring`). Passings need giving, and giving needs taking, so passings do not recur either. Then along any reading containing carrying on of the supported, nothing keeps opening, and along any reading contained in "carry on, or pass support", no supported line is 全生成. The Lean takes a weaker premise than a finite closed world: a list holding every condition any formation requires, dissipated on from some step. Where what is required is dissipated on, both need what lies beyond it.
-4. **A reading on which 全生成 and keeping widening hold together** [hand check; planned Lean]: passings within a kind continue, passings across kinds begin, and carrying on counts only while supported (§6). Two witnesses carry it.
+3. **Under dissipation, a finite closed world has neither** [Lean, §15]. 01's dissipation premise stops taking from recurring in a finite closed family (`Balances.taking_not_recurring`). Passings need giving, and giving needs taking, so passings do not recur either. Then, under the four premises of the descent law, along any reading containing carrying on of the supported nothing keeps opening, and, with balance on the list alone, along any reading contained in "carry on, or pass support" no supported line is 全生成. The Lean takes a weaker premise than a finite closed world: a list holding every condition any formation requires, dissipated on from some step. Where a finite family holding what is required is dissipated on, neither holds; both need what lies beyond such a family (corrected after the re-check, §17).
+4. **A reading on which 全生成 and keeping widening hold together** [Lean, §15]: passings within a kind continue, passings across kinds begin, and carrying on counts only while supported (§6). Two witnesses carry it.
    - `KindRelay` is a closed conserving world. It meets the four premises of the descent law and the first law, and it is not dissipative.
    - `KindRelay.Fed` is dissipative, its loss paid by fuel each formation draws on and none requires; no list holds its conditions, and the six conditions its formations require conserve, so what is required is not dissipated on (corrected after the Lean review, §16).
 
@@ -134,7 +134,7 @@ Write `P` for the continuation step of "carry on, or pass support", `A` for acti
 - `BeginsAlong.carries_kind_iff`: from a supported giver, a beginning along `withinKind Q` is exactly `«传» P A K`, the whole lineage going on while a line of a kind begins.
 
 So, with `Es 0 = C`, `Es 1 = K` and `Es 2 = A`:
-- 全生成 along `withinKind Q` at (activity, one formation) is `«阶全生成» P Es 0`;
+- 全生成 along `withinKind Q` at (activity, one formation) is `«阶全生成» P Es 0` [argued in general; on the relay both are Lean, §15, and their identity is not];
 - the beginnings are the order-1 carrying renewals `«传» P (Es 2) (Es 1)`;
 - nothing lost along `withinKind Q` is `«不穷» P K` from every supported occurrence (`includesAcrossFrom_iff_endless`).
 
@@ -154,7 +154,7 @@ Keeping widening along the kind reading **needs** nothing lost at `Es 1` and ord
 
 Constructively, corollary 2 gives "for every `N`, not not some beginning at a step from `N`". So the rest law is needed in the form "not for every `N` from `T`, not not taking at a step from `N`". `Amounts.rests_unrefuted` concludes exactly that form: take the stock of the list, a least loss of one, "some present formation takes" as the marked steps, and the stock at `T` plus one as the bound, with its premises from `BalancesOn.runs_down` and `DissipatesOn.replenishment_takers`, as `taking_not_recurring_from` uses them (the re-check, R5).
 
-This places the togetherness question: in a world that dissipates, keeping widening and 全生成 along such readings both need that what the formations require not be dissipated on, either supplied from beyond the family of requirements or exchanging beyond it without loss to it. The fed witness of §6 is of the second kind: its loss lies wholly in fuel no formation requires, and its family of requirements conserves. It is not a part sustained by supply from beyond (corrected after the Lean review, §16).
+This places the togetherness question: in a world that dissipates, keeping widening and 全生成 along such readings both need that no finite family holding what the formations require is dissipated on from some step: what is required lies in no finite family, is supplied from beyond such a family, or is exchanged beyond it without loss to it (corrected after the re-check, §17). The fed witness of §6 is of the second kind: its loss lies wholly in fuel no formation requires, and its family of requirements conserves. It is not a part sustained by supply from beyond (corrected after the Lean review, §16).
 
 ## 4. The two negative results as the ends
 
@@ -256,7 +256,7 @@ Two limits on this criterion:
   - with formations not listed, under the first law and fixed requirements, it still does not (`Flow.whole_not_keepsWidening`).
 - **One fixed process:** nothing is added to its whole possible (`Run.possible_of_next`).
 - **The held possible:** it keeps widening only where what is held changes without end (`Run.changes_of_heldKeepsWidening`).
-- **Under dissipation, a finite closed world:** nothing keeps opening along any reading of §4's interval, and nothing is 全生成 there (§3.4, argued).
+- **Under dissipation, a finite closed world:** nothing keeps opening along any reading of §4's interval, and nothing is 全生成 there (§3.4; Lean, §15).
 - **Novelty that keeps coming:** it needs exchange beyond every finite family (`Flow.new_beyond_every`, a necessity). That it can be had is `Ladder.frontier_witness`.
 
 **Proposal for the account.** These are proposals; each changes a document only through GW's landing:
@@ -272,7 +272,7 @@ The law narrows that open question in one way. A second-order direction read alo
 **For the question of a collective's direction** [for AJ5's page].
 - Whatever widening of what can form a collective keeps, its renewals one grain up carry it. This is necessary and not sufficient.
 - A collective can renew itself at two orders and begin new lineages without end while what it can form only returns.
-- Keeping what can form widening needs, besides, exchange beyond the closed whole, or rules the collective holds that keep changing (§5). In a world that dissipates, the renewal needs that what is required not be dissipated on: supply from beyond the family of requirements, or exchange beyond it without loss to it (§3.4, corrected after the Lean review, §16).
+- Keeping what can form widening needs, besides, exchange beyond the closed whole, or rules the collective holds that keep changing (§5). In a world that dissipates, the renewal needs that no finite family holding what is required is dissipated on from some step: what is required lies in no finite family, as where new forms keep arising (`Flow.new_beyond_every`), is supplied from beyond such a family, or is exchanged beyond it without loss to it (§3.4; Lean, §15; corrected after the Lean review and its re-check, §§16–17).
 
 ## 8. The two orders of "more", read with the split
 
@@ -487,12 +487,27 @@ The review is [REVIEW-GW-LEAN.md](REVIEW-GW-LEAN.md) (Claude Opus 5.5, read-only
 | 9 docstring | `gain_carried` cited as stating the step, not as used. |
 | 10 "both readings" | "On names and on passing of support". |
 | 11 name | `Web.generation_of_one_step_supports`, "where supports last one step". |
-| 12 dissipation names and premise | `every` weakened to every required condition listed; the laws renamed `…_of_dissipated_requirements`. The fed relay escapes them because its requirements conserve, which `Fed.conserving_on_part` states. |
-| 13 helper twins | `Bool.not_not`, `ListTests.false_of_not` and `distinct_map_on` used; `total_eq_of_supports` moved out of the witness's namespace, its home beside `total_le_of_support` at the next full rebuild. |
+| 12 dissipation names and premise | `every` weakened to every required condition listed; the laws renamed `…_of_dissipated_requirements`. The fed relay escapes them because its requirements conserve and a list holds the fuel of only finitely many steps (`Fed.conserving_on_part`, `Fed.requirements_not_dissipated`, the latter after the re-check). |
+| 13 helper twins | `Bool.not_not`, `ListTests.false_of_not` and `distinct_map_on` used; `total_eq_of_supports` moved out of the witness's namespace, its home beside `total_le_of_support` at the next full rebuild (on GW's board row); `KindRelay.inside` stays, since it fixes the formations to the relay's. |
 | 14 `begins_of_gains` | Replaced by `Web.begins_of_arises` in `Becoming.PatternPassing`, of which `arises_iff_sheng_carrier`'s forward half is a case. |
 | 15 duplicate proofs | `Run.generation_of_held_changes`, of which `RaisedRule.generation` and `Oscillating.generation` are cases. |
 | 16 wrapper | `RaisedEveryOther.generation_with_both` removed. |
-| 17 by name | `Runs.not_includes_within_itself` from brevity gives the by-name exclusion for both relays; the finite-whole law stays a remark. The fed relay's docstring lists the laws that hold of it. |
+| 17 by name | `Runs.not_includes_within_itself` from brevity gives the by-name exclusion for both relays; the finite-whole law's application stays checked (`KindRelay.not_keepsWidening_byName_of_whole`, after the re-check). The fed relay's docstring lists the laws that hold of it. |
 | 18 the reading chosen | The docstrings and §15 say `Q` is chosen with the witness, and that its openings are the passings across kinds. |
 | 19 item 5 and `Taking` | `Runs.not_keepsWidening_supportedItself`; `KindRelay.taking`; §6's "Not met" updated. |
 | 20 instance | `local instance`. |
+
+## 17. The re-check of the Lean, and how each finding was taken
+
+The same reviewer re-checked the fixes ([RECHECK-GW-LEAN.md](RECHECK-GW-LEAN.md), at `2ce13d0d1`). It found all twenty findings taken as asked and the fed relay's reading exact, no high finding, one medium and seven low, all taken.
+
+| Finding | Taken as |
+|---|---|
+| 1 the escapes from dissipation | §1 item 3, §3.4 and §7's bullet name three: what is required lies in no finite family (the route of novelty, `Flow.new_beyond_every`), is supplied from beyond such a family, or is exchanged beyond it without loss to it; §1 item 3 no longer inverts the conditional. |
+| 2 "do not apply" | `KindRelay.Fed.requirements_not_dissipated`, cited in the module docstring and §16. |
+| 3 citations | Full names. |
+| 4 the finite-whole law | `KindRelay.not_keepsWidening_byName_of_whole`, the earlier proof, kept checked. |
+| 5 labels | The section header reads "Where what is required is dissipated on, neither"; §1 item 4 and §7 relabelled. |
+| 6 premises | §1 item 3 names the descent law's premises for the opening half and balance for the 全生成 half. |
+| 7 §3.3's identity | Marked argued in general. |
+| 8 the pending move | Recorded on GW's board row; the docstring states only the lemma; `inside` named in §16. |

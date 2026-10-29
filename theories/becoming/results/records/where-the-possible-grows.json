@@ -110,6 +110,26 @@
       ]
     },
     {
+      "en": "On the map. Read along the steps with the one as the coarse class, a moment is 全生成 at a class exactly where a line under it begins after every later moment; so where holding is decided and the held possible keeps widening, every moment is 全生成 at (the one, what is held), and so where what is held changes at every step. A restatement; not conversely.",
+      "zh": "于图谱上。沿诸步读、以一为粗类，一时刻于某类全生成，恰当其下之线于每一更晚时刻之后皆有所起；故持守可判定且持守时之可能持续扩大时，每一时刻于（一，所持守者）全生成；所持守者每步皆变时亦然。重述；反之不然。",
+      "declarations": [
+        "Becoming.Steps.generation_iff_begins",
+        "Becoming.Run.generation_of_heldKeepsWidening",
+        "Becoming.Run.generation_of_held_changes"
+      ]
+    },
+    {
+      "en": "Witnesses on the map. Every moment of the raised rule is 全生成 under the rule held while every moment ceases: generation without renewal without end. On the rule raised every other step, every moment is 全生成 beside renewal without end and keeping widening. On the oscillating rule every moment is 全生成 while the held possible does not keep widening.",
+      "zh": "图谱上之见证。提升规则之每一时刻于持守规则时全生成，而每一时刻皆息：生成而无生生。隔步提升之规则上，每一时刻全生成，与生生及持续扩大并存。振荡之规则上每一时刻全生成，而持守时之可能不持续扩大。",
+      "declarations": [
+        "Becoming.RaisedRule.generation",
+        "Becoming.RaisedEveryOther.begins_after_even",
+        "Becoming.RaisedEveryOther.generation",
+        "Becoming.Oscillating.generation",
+        "Becoming.Oscillating.generation_without_widening"
+      ]
+    },
+    {
       "en": "A rule changing its own rule. On adaptive F G a step keeps the rule exactly where G leaves it as it is; so the possible with the rule held keeps widening only where G changes the rule without end, located from every step on where rules are decided; nothing is added to the whole possible (Run.possible_of_next at adaptive F G).",
       "zh": "改变自身规则之规则。于 adaptive F G 上，一步保持规则，恰当 G 使之不变时；故持守规则时之可能仅当 G 无尽地改变规则时持续扩大，规则可判定时自每一步起可定位；全部可能无所增（Run.possible_of_next 于 adaptive F G）。",
       "declarations": [
@@ -319,8 +339,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean",
       "detail": {
-        "en": "The rule changes at every step and every formation is possible everywhere, yet the possible with the rule held does not keep widening (Oscillating.converse_fails).",
-        "zh": "规则每步皆改变，处处每一构成皆可能，然持守规则时之可能不持续扩大（Oscillating.converse_fails）。"
+        "en": "The rule changes at every step and every formation is possible everywhere, yet the possible with the rule held does not keep widening (Oscillating.converse_fails). Every moment is 全生成 under the rule held, so 全生成 does not give keeping widening (Oscillating.generation_without_widening).",
+        "zh": "规则每步皆改变，处处每一构成皆可能，然持守规则时之可能不持续扩大（Oscillating.converse_fails）。每一时刻于持守规则时皆全生成，故全生成不给出持续扩大（Oscillating.generation_without_widening）。"
       }
     },
     {
@@ -537,6 +557,8 @@
         "Becoming.Oscillating.every",
         "Becoming.Oscillating.exceeds_now",
         "Becoming.Oscillating.flip",
+        "Becoming.Oscillating.generation",
+        "Becoming.Oscillating.generation_without_widening",
         "Becoming.Oscillating.held_widens",
         "Becoming.Oscillating.held_zero",
         "Becoming.Oscillating.process",
@@ -544,8 +566,10 @@
         "Becoming.Oscillating.returns",
         "Becoming.Oscillating.rule",
         "Becoming.Oscillating.rule_changes",
+        "Becoming.RaisedEveryOther.begins_after_even",
         "Becoming.RaisedEveryOther.both",
         "Becoming.RaisedEveryOther.course",
+        "Becoming.RaisedEveryOther.generation",
         "Becoming.RaisedEveryOther.held_iff",
         "Becoming.RaisedEveryOther.held_keeps_widening",
         "Becoming.RaisedEveryOther.odd",
@@ -558,6 +582,7 @@
         "Becoming.RaisedRule.adm",
         "Becoming.RaisedRule.ceases",
         "Becoming.RaisedRule.course",
+        "Becoming.RaisedRule.generation",
         "Becoming.RaisedRule.held_iff",
         "Becoming.RaisedRule.held_keeps_widening",
         "Becoming.RaisedRule.held_trace",
@@ -595,6 +620,8 @@
         "Becoming.Run.changes_of_heldGrows",
         "Becoming.Run.changes_of_heldKeepsWidening",
         "Becoming.Run.departs_of_keepsWidening",
+        "Becoming.Run.generation_of_heldKeepsWidening",
+        "Becoming.Run.generation_of_held_changes",
         "Becoming.Run.held_change_located",
         "Becoming.Run.held_change_recurs_of_keepsWidening",
         "Becoming.Run.not_heldKeepsWidening_of_listed",
@@ -605,6 +632,7 @@
         "Becoming.Run.possibleHeld_of_stays",
         "Becoming.Run.possible_of_stretch",
         "Becoming.Run.ruleTower_move_above_recurs_of_keepsWidening",
+        "Becoming.Steps.generation_iff_begins",
         "Becoming.Synchronous.adm",
         "Becoming.Synchronous.not_held",
         "Becoming.Synchronous.possible_two",
@@ -725,6 +753,10 @@
     {
       "en": "28 October 2026, board item UE13 (study section 431): related to what-can-be-born-next; no statement, next step or declaration changed.",
       "zh": "2026年10月28日，工作板条目 UE13（研究第 431 节）：与 what-can-be-born-next 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "29 October 2026, board item GW: the held possible read on the map: 全生成 at (the one, what is held) exactly where a line under the part begins after every moment, so wherever the held possible keeps widening with holding decided; the witnesses read so. A law added; statement and next step unchanged.",
+      "zh": "2026年10月29日，工作板条目 GW：持守时之可能读于图谱：于（一，所持守者）全生成，恰当该部分下之线于每一时刻之后皆有所起，故凡持守可判定而持守时之可能持续扩大处皆然；诸见证如此读之。增一律；陈述与下一步不变。"
     }
   ]
 }

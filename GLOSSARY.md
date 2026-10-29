@@ -27,7 +27,7 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
 |---|---|---|
 | carrying renewal (传) | the coarse pattern continues while a fine line begins (火传) | [02 §1](theories/becoming/chapters/02-MAP.md#branches) |
 | goes on, ends (延, 尽) | goes on along some branch; ends on every branch | [02 §1](theories/becoming/chapters/02-MAP.md#branches) |
-| generation, keeping, degeneration (生成, 守, 退化) | a pattern going on through carrying renewal; going on without it; ending on every branch. "Generation" never means arising, nor any new organization | [02 §1](theories/becoming/chapters/02-MAP.md#branches) |
+| generation, keeping, degeneration (生成, 守, 退化) | a pattern going on through carrying renewal; going on without it; ending on every branch. "Generation" never means arising, nor any new organization, and it is not 生生: it can go on at two orders while what can form only returns | [02 §1](theories/becoming/chapters/02-MAP.md#branches) |
 | renewal, consumption | of a formation along a run: what it draws on is given back, or used up | [02](theories/becoming/chapters/02-MAP.md#renewal) |
 | rest | change stops from some step on | [02](theories/becoming/chapters/02-MAP.md#rest) |
 | margin, draw, giving | how far a level lies above a need; what is taken; what is given | [02](theories/becoming/chapters/02-MAP.md#margin) |
