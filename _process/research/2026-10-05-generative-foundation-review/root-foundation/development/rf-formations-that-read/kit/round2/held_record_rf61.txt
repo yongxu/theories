@@ -1,0 +1,73 @@
+# --- a-revision-that-opens-a-correction ------------------------------------------------------------------------------
+rE = build(
+    'a-revision-that-opens-a-correction', OC,
+    {'en': 'A revision of a reading that opens a correction', 'zh': '开一更正之读之修订'},
+    {'en': "Through a reading a correction is chosen exactly where each reading has one act acceptable and executable at "
+           "every configuration giving it; a revision opens one only by telling apart what the old reading read alike, "
+           "with what counts as acceptable held fixed.",
+     'zh': '经一读而择更正，恰当每一读有一行于给此读之每一形态皆可受且可行；修订唯分旧读所同读者方开之，且所谓可受者守而不变。'},
+    [("Through a reading, a correction acceptable and executable at every configuration giving each reading is chosen, "
+      "given choice over the readings, exactly where each reading has one such act.",
+      "经一读，于诸读有择，则于给每一读之每一形态皆可受且可行之更正被择，恰当每一读有一此行。",
+      C(OC, 'OpenedCorrection.chosen_iff')),
+     ("A revision opens a correction where none is chosen through the old reading and one is through the new; given "
+      "choice over the new readings, exactly where none is chosen through the old and each new reading has a fitting act.",
+      "修订开一更正，当经旧读无所择而经新读有所择；于新读有择，则恰当经旧读无所择而每一新读有一合之行。",
+      C(OC, 'OpenedCorrection.Opens', 'OpenedCorrection.opens_iff')),
+     ("A revision to a finer reading closes nothing, and one to a reading the old one refines opens nothing, so an "
+      "opening tells apart what the old reading read alike.",
+      "修订为更细之读则无所闭，修订为旧读所细分之读则无所开，故开者必分旧读所同读者。",
+      C(OC, 'OpenedCorrection.finer_closes_nothing', 'OpenedCorrection.coarser_opens_nothing')),
+     ("Widening what counts as acceptable to everything opens a correction through every reading, the coarsest "
+      "included, given an act: an opening counts only with the acceptability fixed.",
+      "将可受者宽至一切，则有一行时经每一读皆开更正，最粗者亦然：开唯于可受者守定时方算。",
+      C(OC, 'OpenedCorrection.widened_opens')),
+     ("Witness: two faults, at the first line or the second, each needing the repair of its own line; read by the count "
+      "of reports, one in either, no repair is chosen; read by which line reports, the repair is chosen; so revising "
+      "the reading from the count to the line opens the correction.",
+      "例：二故障，在第一线或第二线，各需修其己线；以报告之数读之，二者皆一，无修被择；以何线报告读之，修被择；故自数修订其读至线，开此更正。",
+      C(OC, 'OpenedCorrection.Reports.Fault', 'OpenedCorrection.Reports.Repair', 'OpenedCorrection.Reports.fit',
+        'OpenedCorrection.Reports.count', 'OpenedCorrection.Reports.line', 'OpenedCorrection.Reports.count_chooses_none',
+        'OpenedCorrection.Reports.line_chooses', 'OpenedCorrection.Reports.opens'))],
+    [{'en': "Any types of configurations, acts and readings; readings as maps; acceptability and executability one "
+            "predicate on configurations and acts, the same before and after the revision; choice over the readings "
+            "only for the iff forms.",
+      'zh': '形态、行与读之任一型；读为映射；可受与可行合为形态与行之一谓词，修订前后同一；唯 iff 之形需于诸读有择。'}],
+    [{'en': "That the revision or the correction is executable: that is Revising's, where a rebuilt reading can consume "
+            "the last support for using it.",
+      'zh': '修订或更正之可行：此为 Revising 之事，彼处重建之读可耗尽用之之最后之支。', 'kind': 'non-implication'},
+     {'en': "Which revision an institution can make, or that it makes one.",
+      'zh': '一制度能作何修订，或其作之。', 'kind': 'non-implication'},
+     {'en': "What a finer reading draws on, or which finer reading to take.",
+      'zh': '更细之读所耗，或当取何更细之读。', 'kind': 'scope'}],
+    [{'en': "Read by the count, no repair is chosen; read by the line, the repair is "
+            "(OpenedCorrection.Reports.count_chooses_none, OpenedCorrection.Reports.line_chooses).",
+      'zh': '以数读之无修被择；以线读之修被择（OpenedCorrection.Reports.count_chooses_none、OpenedCorrection.Reports.line_chooses）。'}],
+    {'en': "Pure core, every axiom report empty: OpenedCorrection imports GuardHorizon and Revision; chosen_iff is "
+           "GuardHorizon.uniform_policy_iff_fiber_feasible, the two monotonicities GuardHorizon.uniform_finer.",
+     'zh': '纯核，公理报告皆空：OpenedCorrection 引 GuardHorizon 与 Revision；chosen_iff 即 GuardHorizon.uniform_policy_iff_fiber_feasible，二单调即 GuardHorizon.uniform_finer。'},
+    {'en': "The revision as a reachable step of a formation's own course, composed with Revising's stock and link; an "
+           "institution revising its rule of reading what its members report (RF round 2's later items); a frozen "
+           "institution simulation with three controls (the plan's TR4); review by a person.",
+     'zh': '修订为形成己历程之可达之步，与 Revising 之储与联合；制度修订其读成员所报之规（RF 第二轮之后项）；具三对照之冻结制度模拟（计划之 TR4）；人之审查。'},
+    {'en': "AI reading: double-loop learning (Argyris and Schön 1978): correcting through a fixed reading is the single "
+           "loop, revising the reading the double; the double loop is needed exactly where a reading lumps "
+           "configurations needing different acts, and opens a correction only by telling them apart, with what counts "
+           "as acceptable held fixed. Replacing a finer reading by a coarser one, as by a summary measure, can close "
+           "corrections and opens none. The executability of the revision and of the correction is Revising's: "
+           "discrimination, support and enactment come apart (selection-under-registration-revision). These are "
+           "readings, not containments.",
+     'zh': 'AI 解读：双环之学（Argyris 与 Schön 1978）：经定读而更正为单环，修订其读为双环；凡一读同归需异行之诸形态处，方需双环，且唯分之方开更正，所谓可受者守而不变。'
+           '以较粗之读代较细之读，如以一综合之量，可闭更正而无所开。修订与更正之可行为 Revising 之事：辨、支与施各异（selection-under-registration-revision）。皆为读，非包含。'},
+    ['double-loop learning', '双环之学', 'opening a correction', '开更正', 'Becoming.OpenedCorrection.opens_iff',
+     'Becoming.OpenedCorrection.coarser_opens_nothing'],
+    [dep('when-to-inquire-and-when-to-respond', "GuardHorizon.UniformPolicy, FiberFeasible, "
+         "uniform_policy_iff_fiber_feasible and uniform_finer.", 'GuardHorizon.UniformPolicy、FiberFeasible、'
+         'uniform_policy_iff_fiber_feasible 与 uniform_finer。')],
+    [rel('selection-under-registration-revision', "Revising's process, where discrimination, support and enactment come "
+         "apart: the executability this law leaves out.", 'Revising 之过程，辨、支与施各异：此律所未及之可行。')],
+    [{'path': LEAN['GuardHorizon'], 'role': 'proof', 'sha256': sha(LEAN['GuardHorizon'])},
+     {'path': LEAN['Revision'], 'role': 'context', 'sha256': sha(LEAN['Revision'])}],
+    CH3, done('a-revision-that-opens-a-correction', 'a revision of a reading that opens a correction: chosen through a '
+              'reading, opening, the two monotonicities, acceptability held fixed', '开一更正之读之修订：经读而择、开、二单调、可受者守定'))
+
