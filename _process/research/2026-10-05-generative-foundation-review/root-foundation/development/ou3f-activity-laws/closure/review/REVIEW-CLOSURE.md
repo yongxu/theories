@@ -50,3 +50,47 @@ AI-written independent review, 29 October 2026, of `closure/tree/` against main 
 - **No other clock:** `Changing.run` and `Climb.course` sit above Retaining and Reserve, as the design says. Nothing of `kept_onward`'s form exists in Prelude, the grammar, Frame or Recurrence. `Invariant.run` (Frame:259, its own induction) gives the same content, but only through `Law.run` and `succ_orbit` (§5).
 
 `checks/tree-*` are the copies built; their `.build/` is ignored build output.
+
+## Second pass (branch `ou3f-laws` at `30e866f03`)
+
+**Verdict: ready after two record fixes.** The Lean is ready as it stands.
+
+1. **The audit still derives the six through the dropped clock.**
+   - AUDIT.md:53 says each of the six "runs on a clock (the successor law's run, `⟨id, fun _ => (), fun _ => rfl⟩`)".
+   - The six closure rows of `data/classification.tsv` (lines 50, 193, 217, 413, 428, 437) give the same route: "Invariant.reach with Run.reach on a clock". TABLE.md renders those notes.
+   - The new `trace` row says `kept_onward`, so the audit disagrees with itself and with the Lean.
+
+   **Fix:** in that paragraph and in the six notes, say `kept_onward`, the grammar's closure at the successor (`«线则所闭»` with `«闭含所闭»`). Then re-render TABLE.md.
+2. **DESIGN.md:16 says `Pace.stays` uses `Law.run Nat.succ`.** It does not: `Pace.stays` uses `Law.run` at its own law, `step f h reads`.
+
+   **Fix:** write "`Law.run` (Recurrence), which `Pace.stays` uses at its own law; at `Nat.succ` its state is the step by `Law.succ_orbit`".
+
+   Nit, line 5: the first review found three more inductions, not two. Line 49 names the third (`old_still`); two of the three are derived here.
+
+**Confirmed.**
+- **(a) Statements.** All 507 declarations of the six print exactly as on main, `trace` and `line_back` included.
+  - The `#check @` and `#check` outputs are identical to round 1's main outputs.
+  - Main's package is unchanged at `c2dc1773d`, and `BASE.sha256` matches.
+  - The declaration lists match in content and order.
+  - `kept_onward` keeps round 1's statement.
+  - No recursion survives in `trace` or `line_back`. Each step is the old successor case, with `held` in place of the recursive call, and `line_back`'s base is its old case `0`.
+- **(b) KeptOnward.** Its doc is accurate. The move into GrammarLaws is a cut and paste: the declaration and its docstring, pasted verbatim after `«线则所闭»` in a copy of GrammarLaws, compile with the same full name, the same statement and an empty report (`checks/paste/`, `paste.out`).
+  - The six already reach GrammarLaws through Frame. The move therefore only drops their import line and the leaf's registrations.
+  - The leaf adds no import edge; Reserve no longer gains Recurrence.
+- **(c) Builds.**
+  - `scratch-4.log` is clean.
+  - My rebuild of the revised tree reused all 43 modules from the cache. Nothing is unclean and every report is empty: KeptOnward has 1 theorem in 1 declaration, and the six keep their counts.
+  - A fresh compile of the 7 sources exits 0 with no messages.
+  - Downstream, the same six importers compile clean with empty reports (10 modules compiled).
+- **(d) Audit and design.** The `trace` correction is right.
+  - The totals add up: 15 + 4 + 10 = 29, B1 and B2 add nine, and 398 remain. The model subtotals give 60 + 38 + 20 + 16 + 38 = 172.
+  - TABLE.md equals a fresh render of the tsv (rendered in memory, nothing written).
+  - `line_back` stays (c) representation.
+  - Apart from fix 2, DESIGN.md is accurate: its table, the eight consumers, the counts, and the `old_still` paragraph. The board's WRP row does take the theorems that read no field whole.
+
+**Second-pass files in `checks/`:**
+- `tree-second`: the revised copies built.
+- `SignaturesSecond.lean`, `BindersSecond.lean`, `signatures-second.out`, `binders-second.out`: the statement checks.
+- `fresh-second.out`: the fresh compile. Its per-module `fresh-second-*.tmp` logs are empty.
+- `scratch-second*.log`: the scratch builds.
+- `paste/` and `paste.out`: the GrammarLaws cut-and-paste check.

@@ -2,7 +2,7 @@
 
 AI-written design for the next part of board item OU3f's derivations, 29 October 2026, on main at `255acf565`, after the twins ([design](../derivations/DESIGN.md), study §443).
 
-[The audit](../AUDIT.md) found six activity laws that keep a region along the steps by their own induction (*Closure: six inductions over steps*). EC6's audit put such lemmas among the cases of closure, and EC6b derived one through `Invariant.reach` with `Run.reach` (`Pace.stays`). The review of this part's first draft found two more in the same modules. Each needs the one law that a region every step keeps holds from where it holds on, and that law is stated once. The coordinating session chose a small new module for it so that adding it rebuilds only the modules that use it. Its three conditions are below.
+[The audit](../AUDIT.md) found six activity laws that keep a region along the steps by their own induction (*Closure: six inductions over steps*). EC6's audit put such lemmas among the cases of closure, and EC6b derived one through `Invariant.reach` with `Run.reach` (`Pace.stays`). The review of this part's first draft found three more in the same modules; two are derived here, and the third reads no activity (below). Each needs the one law that a region every step keeps holds from where it holds on, and that law is stated once. The coordinating session chose a small new module for it so that adding it rebuilds only the modules that use it. Its three conditions are below.
 
 ## The law, on the grammar
 
@@ -13,7 +13,7 @@ AI-written design for the next part of board item OU3f's derivations, 29 October
 | `kept_onward` | `(∀ n, I n → I (n + 1)) → I a → a ≤ b → I b`, for `I : Nat → Prop`: a region of the steps of time that every step keeps holds from where it holds on. Proof: the steps from `a` to `b` are a line under the successor (`«线则所闭»`), and a closed region holds what lies within the closure from where it holds (`«闭含所闭»`). It is the grammar's closure at the successor relation; no process and no run is needed. |
 
 The coordinating session's three conditions:
-1. **Not a second clock.** The module defines no run. The first draft stated a run of the successor law, `Law.clock`. The review showed that one already exists: `Law.run Nat.succ` (Recurrence), whose state is the step by `Law.succ_orbit`, and which `Pace.stays` uses. It also noted that the law needs no run at all when stated on the grammar. The draft's run is gone. The local copies of the successor's process and run stand where they were:
+1. **Not a second clock.** The module defines no run. The first draft stated a run of the successor law, `Law.clock`. The review showed that one already exists: `Law.run` (Recurrence), which `Pace.stays` uses at its own law; at `Nat.succ` its state is the step by `Law.succ_orbit`. It also noted that the law needs no run at all when stated on the grammar. The draft's run is gone. The local copies of the successor's process and run stand where they were:
    - `Changing.run` (LawAlongRun);
    - `Climb.course` (ReachableRanges), whose process is `Law.process (· + 1)` by `rfl`;
    - `AdjacentHeld.process` (HeldPossible);
@@ -91,3 +91,5 @@ One independent read-only review by a separate AI agent ([REVIEW-CLOSURE](review
 4. **Names.** With no run there is no clock to name. The module is named for its law, which collides with nothing.
 5. **More inductions of the same kind.** `trace` and `line_back` are derived here; the audit and PatternPassing's header are corrected. `old_still` is left to the layer that reads no field, with the reason.
 6. **The nit about `n + 1 = n + 1`** went with the run.
+
+**Second pass.** The reviewer read the revised tree: every statement of the six modules prints as on main, `trace` and `line_back` included; `kept_onward` pasted beside `«线则所闭»` in a copy of `GrammarLaws` compiles with the same name, statement and empty report, so the move is a cut and paste; the builds are clean. Two fixes to the texts, both taken: the audit's closure paragraph and its six rows now say `kept_onward`, not a clock run, and this note says `Pace.stays` uses `Law.run` at its own law.

@@ -47,7 +47,7 @@ Web.persisting_census	c-model		the census of the persisting web (counts)
 Web.sheng_state_of_change	a	«生于粗则生于细»	small: the proof already inlines the coarse-to-fine step as the destructuring of alike; the law replaces that step, as arises_of_persisting_arises already does
 Web.stateClass_class	c-rep	«类»	the state class is a class
 Web.stateClass_finer	c-rep	«则»	the state class is finer than the persisting web's activity class (definitional)
-Web.steady_held	a	closure	an equality of names kept along a held stretch, bounded at both ends: a bounded region, Invariant.reach with Run.reach on a clock (the successor law's run; at the occurrence model the names' step), as EC6b re-proved Pace.stays; it reads the names
+Web.steady_held	a	closure	an equality of names kept along a held stretch, bounded at both ends: a bounded region, kept_onward, the grammar's closure at the successor («线则所闭» with «闭含所闭»), as EC6b re-proved Pace.stays by closure; it reads the names
 Web.unending_of_holds	c-rep	«不穷»	a formation held throughout is unending in the persisting web's activity line (unfolding)
 Web.wakes_alters	c-rep	«生»,«异»	waking read as a beginning and an alteration (positions)
 Web.waking_not_arising	c-model		held formations do not arise in the persisting web (definitional)
@@ -190,7 +190,7 @@ Web.Whole.parts_unceasing	c-model		a whole active where some part is (union of a
 Web.Whole.persists_from	c-model		a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it
 Web.Whole.persists_of_arising	c-model		a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it
 Web.Whole.same_iff_inStep	c-model		a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it
-Web.active_back	a	closure	a bounded region kept by k steps with no part arising: Invariant.reach with Run.reach on a clock (the successor law's run; at the occurrence model the names' step), as EC6b re-proved Pace.stays, bounded; the review compiled it (checks/)
+Web.active_back	a	closure	a bounded region kept by k steps with no part arising: kept_onward, the grammar's closure at the successor («线则所闭» with «闭含所闭»), as EC6b re-proved Pace.stays by closure, bounded; the review compiled it (checks/)
 Web.allWhole_self	c-rep		every formation is the whole of itself (definitional)
 Web.diminished_iff	c-model		a list's union whole active and its meet whole not is a diminished grade (counting)
 Web.whole_self	c-rep		every formation is the whole of itself (definitional)
@@ -214,7 +214,7 @@ Web.ByPassing.line_back	c-rep	«相续»	by passing, an active formation at S + 
 Web.ByPassing.passes_within	a	«两端分则中有标»,«线内同类»	the direct proof (through trace, an induction) duplicates ByPassing.passes_within_by_line, which derives the same statement from the law that a line whose ends lie apart in a class has a marked step: rule 9 keeps the derivation, the direct proof goes and one name is retired
 Web.ByPassing.passes_within_by_line	a-done	«两端分则中有标»,«线内同类»	already the derivation (see ByPassing.passes_within)
 Web.ByPassing.present_back	c-model		by passing, presence at t + 1 gives presence at t (definitional)
-Web.ByPassing.present_earlier	a	closure	presence kept by the backward step, by passing: a bounded region over k steps, Invariant.reach with Run.reach on a clock (the successor law's run; at the occurrence model the names' step), as EC6b re-proved Pace.stays
+Web.ByPassing.present_earlier	a	closure	presence kept by the backward step, by passing: a bounded region over k steps, kept_onward, the grammar's closure at the successor («线则所闭» with «闭含所闭»), as EC6b re-proved Pace.stays by closure
 Web.ByPassing.present_of_le	a-follows	Web.ByPassing.present_earlier	one application of present_earlier: it reaches closure, unchanged, once present_earlier does
 Web.ByPassing.trace	a	closure	that every carrier at S + n carried the pattern at S or some carrier passed it across one of the n steps is a region every step keeps: kept_onward, the grammar's closure at the successor (found by the closure review; filed (c) model before, its reason concerning only the route through the pattern's line)
 Web.alters_of_passes	c-rep	«异»	a passing to another formation is an alteration of the activity class under the carrier class (positions)
@@ -410,7 +410,7 @@ Flow.byOccurrence_uncounted	c-model		listings and counts across steps: counting
 Web.arising_of_ceasing_listing	c-below	Listed.coming_of_ceasing,Listed.of_listing	the alternation of arising and ceasing over a listing (counting); it rests on balance (represented), through balance_over_stretch_on
 Excluding.continues	c-witness		a fact of a constructed web, world or law (Exclusion)
 Excluding.second_lasting	c-witness		a fact of a constructed web, world or law (Exclusion)
-Web.active_before	a	closure	activity at a later step kept back to an earlier one, never arising after T: a bounded region, Invariant.reach with Run.reach on a clock (the successor law's run; at the occurrence model the names' step), as EC6b re-proved Pace.stays
+Web.active_before	a	closure	activity at a later step kept back to an earlier one, never arising after T: a bounded region, kept_onward, the grammar's closure at the successor («线则所闭» with «闭含所闭»), as EC6b re-proved Pace.stays by closure
 World.stutter_arisingRecurs_iff	c-model		stuttering the index keeps recurring arising, ceasing and counts (the index re-read)
 World.stutter_ceasingRecurs_iff	c-model		stuttering the index keeps recurring arising, ceasing and counts (the index re-read)
 World.stutter_counted_of_section	c-model		stuttering the index keeps recurring arising, ceasing and counts (the index re-read)
@@ -425,7 +425,7 @@ Interleavings.LocalLaw.world_renumber_active	c-model		a local law's world and it
 Net.cycle_never_rests	c-witness		a fact of a constructed web, world or law (PlaceTransitionNets)
 Net.world_counted	c-model		a net's world is counted over listed transitions and places (counting)
 Once.once	c-witness		a fact of a constructed web, world or law (Reserve)
-Web.ended_for_good	a	closure	inactive with nothing in reserve is a region every step from U keeps: Invariant.reach with Run.reach on a clock (the successor law's run; at the occurrence model the names' step), as EC6b re-proved Pace.stays
+Web.ended_for_good	a	closure	inactive with nothing in reserve is a region every step from U keeps: kept_onward, the grammar's closure at the successor («线则所闭» with «闭含所闭»), as EC6b re-proved Pace.stays by closure
 Ranking.absent_sustains	c-witness		a fact of a constructed web, world or law (Ranking)
 Ranking.withheld_of_extends	c-model		a reading extending another withholds what it withheld: a law of the renewal model's ranking
 Seeker.ends	c-witness		a fact of a constructed web, world or law (Exhaustion)
@@ -434,4 +434,4 @@ Web.commute_active_away	c-model		the commutation of two steps moves activity onl
 Web.commute_active_true	c-model		the commutation of two steps moves activity only at the swapped step (definitional)
 Contextual.world_active	c-rep		a contextual system's world is active where the claim is within the context (definitional)
 Passing.counted	c-witness		a fact of a constructed web, world or law (Entropy)
-Web.inactive_of_not_arising	a	closure	not being active is a region every step keeps where nothing arises: Invariant.reach with Run.reach on a clock (the successor law's run; at the occurrence model the names' step), as EC6b re-proved Pace.stays; the review compiled it (checks/)
+Web.inactive_of_not_arising	a	closure	not being active is a region every step keeps where nothing arises: kept_onward, the grammar's closure at the successor («线则所闭» with «闭含所闭»), as EC6b re-proved Pace.stays by closure; the review compiled it (checks/)

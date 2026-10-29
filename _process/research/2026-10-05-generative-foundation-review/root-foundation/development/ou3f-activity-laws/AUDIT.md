@@ -50,7 +50,7 @@ All fifteen are web theorems at the occurrence carrier `Nat × F` that OU3a's in
 
 ### Closure: six inductions over steps
 
-EC6's audit put lemmas that prove invariance by their own induction on the step count among the cases of closure. EC6b derived them through `Invariant.reach` with `Run.reach` (`Pace.stays`). Six activity laws do the same by hand. Each keeps a region along steps, and runs on a clock (the successor law's run, `⟨id, fun _ => (), fun _ => rfl⟩`), which needs no induction. At WRT's occurrence model this clock is the names' step.
+EC6's audit put lemmas that prove invariance by their own induction on the step count among the cases of closure. EC6b derived them through `Invariant.reach` with `Run.reach` (`Pace.stays`). Six activity laws do the same by hand. Each keeps a region along steps, so each is a case of the grammar's closure at the successor relation: a region every step keeps holds from where it holds on (`kept_onward`, from `«线则所闭»` with `«闭含所闭»`; the closure derivations' [design](closure/DESIGN.md)). The audit first wrote this as `Invariant.reach` on a clock run; the review of the closure derivations found that run already exists (`Law.run Nat.succ`) and that the grammar needs none.
 
 | theorem | the region every step keeps |
 |---|---|

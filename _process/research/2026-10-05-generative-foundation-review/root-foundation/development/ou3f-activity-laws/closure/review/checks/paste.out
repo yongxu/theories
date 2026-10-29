@@ -1,0 +1,4 @@
+@Becoming.kept_onward : ∀ {I : Nat → Prop}, (∀ (n : Nat), I n → I (n + 1)) → ∀ {a b : Nat}, I a → a ≤ b → I b
+Becoming.kept_onward {I : Nat → Prop} (keeps : ∀ (n : Nat), I n → I (n + 1)) {a b : Nat} (holds : I a) (later : a ≤ b) :
+  I b
+'Becoming.kept_onward' does not depend on any axioms
