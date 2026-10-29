@@ -2,13 +2,13 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3076 nodes, 5701 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3086 nodes, 5735 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
 | The root: relation, condition, class, continuation, core | 31 | 83 | 69 | 0 |
 | The map: generation, keeping, degeneration, orders | 5 | 91 | 74 | 0 |
-| Knowing and testing | 0 | 92 | 74 | 0 |
+| Knowing and testing | 0 | 96 | 76 | 0 |
 | Life and evolution | 0 | 42 | 17 | 0 |
 | Collectives and selection | 0 | 62 | 18 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
@@ -241,7 +241,7 @@ Modules (74, 11 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attr
 
 ## Knowing and testing
 
-Results (92):
+Results (96):
 
 - [A family of readings within what it reads](records/readings-within-what-they-read.md) (recorded-checked)
 - [A formation's own course](records/a-formations-own-course.md) (recorded-checked)
@@ -272,6 +272,7 @@ Results (92):
 - [Cross-articulation formation matching with retained references](records/retained-reference-joining-recovery.md) (recorded-checked)
 - [Empirical scope of encounter control and retained use](records/encounter-control-and-retention.md) (reviewed-scoped)
 - [Evidence through change: candidates propagated through every admitted change](records/evidence-through-change.md) (recorded-checked)
+- [Expected free energy and its terms](records/expected-free-energy-and-its-terms.md) (recorded-checked)
 - [Experiment needs return](records/experiment-needs-return.md) (recorded-checked)
 - [Extrapolation by elimination](records/learning-by-refutation.md) (recorded-checked)
 - [Feedback and reach](records/feedback-and-reach.md) (recorded-checked)
@@ -310,6 +311,7 @@ Results (92):
 - [Testing within the couplings](records/testing-within-couplings.md) (recorded-checked)
 - [Testing within the net](records/testing-within-the-net.md) (recorded-checked)
 - [Tests that fix likeness](records/tests-fix-likeness-where-determined.md) (recorded-checked)
+- [The Markov blanket as a coupling structure](records/the-markov-blanket-as-a-coupling-structure.md) (recorded-checked)
 - [The boundary of enough under undetermined laws](records/the-boundary-of-enough-under-undetermined-laws.md) (recorded-checked)
 - [The composition route: order not identified by primitives, a duplicate exposed by a fresh record](records/composition-route.md) (recorded-checked)
 - [The least coupling with any number of conditions](records/sensitivity-is-the-least-coupling.md) (recorded-checked)
@@ -329,6 +331,8 @@ Results (92):
 - [What choices show of the order they come from](records/what-choices-show-of-an-order.md) (recorded-checked)
 - [What finitely many labels fix](records/what-finitely-many-labels-fix.md) (recorded-checked)
 - [What readings fix of the unread](records/what-readings-fix-of-the-unread.md) (recorded-checked)
+- [What seeking cannot separate](records/what-seeking-cannot-separate.md) (recorded-checked)
+- [What the existence claim forbids](records/what-the-existence-claim-forbids.md) (recorded-checked)
 - [When readings in context glue, for parity](records/gluing-under-parity.md) (recorded-checked)
 - [When to inquire and when to respond](records/when-to-inquire-and-when-to-respond.md) (recorded-checked)
 - [Where a formation's acts return](records/where-a-formations-acts-return.md) (recorded-checked)
@@ -336,7 +340,7 @@ Results (92):
 - [Which selections survive and remain executable when the lumping changes](records/selection-under-registration-revision.md) (recorded-checked)
 - [文 in the grammar of continuation](records/wen-in-the-grammar.md) (recorded-checked)
 
-Modules (74, 6 stated on the grammar): `ClassifiedBeliefProcesses`, `CodeAcquisition`, `ConditionalWeights`, `ContactCourses`, `Contacts`, `Context`, `ContextArrivalTraces`, `ContingentPlans`, `ContinuingRuns`, `Counterfactual`, `CounterfactualRuns`, `CrossSituational`, `Dephasing`, `Description`, `Diagonal`, `Distinguishing`, `Experiment`, `FaultEnvelopes`, `Feedback`, `GrammarTesting`, `Horizon`, `Identification`, `IdentificationRuns`, `Inquiry`, `Labels`, `Latency`, `LawAlongRun`, `Learnable`, `LearnableRuns`, `LearnedGrouping`, `Learning`, `LearningRuns`, `LimitVerification`, `Mechanism`, `MoveOutcomeProcesses`, `Narrowing`, `NarrowingRuns`, `Observation`, `PartialReadout`, `Parting`, `PooledEnvelopes`, `Postponement`, `ProjectedLaws`, `Quantum`, `ReadingSchedule`, `Readout`, `Reconfiguration`, `ReferencePlan`, `ReferencePlanTraces`, `Rejoining`, `Response`, `ResponseLearning`, `Retrodiction`, `Revision`, `RouteFormation`, `Sampling`, `Segmentation`, `Selection`, `Sensitivity`, `SensitivityWebs`, `ShownOrder`, `SummaryFutures`, `Testing`, `TimedResponse`, `TreeSearch`, `TypicalRuns`, `Typicality`, `Unread`, `Unrolling`, `Verification`, `Weighted`, `WeightedTraces`, `WitnessRefinement`, `WitnessRefinementRuns`
+Modules (76, 6 stated on the grammar): `Blanket`, `ClassifiedBeliefProcesses`, `CodeAcquisition`, `ConditionalWeights`, `ContactCourses`, `Contacts`, `Context`, `ContextArrivalTraces`, `ContingentPlans`, `ContinuingRuns`, `Counterfactual`, `CounterfactualRuns`, `CrossSituational`, `Dephasing`, `Description`, `Diagonal`, `Distinguishing`, `Experiment`, `FaultEnvelopes`, `Feedback`, `GrammarTesting`, `Horizon`, `Identification`, `IdentificationRuns`, `Inquiry`, `Labels`, `Latency`, `LawAlongRun`, `Learnable`, `LearnableRuns`, `LearnedGrouping`, `Learning`, `LearningRuns`, `LimitVerification`, `LumpedSeeking`, `Mechanism`, `MoveOutcomeProcesses`, `Narrowing`, `NarrowingRuns`, `Observation`, `PartialReadout`, `Parting`, `PooledEnvelopes`, `Postponement`, `ProjectedLaws`, `Quantum`, `ReadingSchedule`, `Readout`, `Reconfiguration`, `ReferencePlan`, `ReferencePlanTraces`, `Rejoining`, `Response`, `ResponseLearning`, `Retrodiction`, `Revision`, `RouteFormation`, `Sampling`, `Segmentation`, `Selection`, `Sensitivity`, `SensitivityWebs`, `ShownOrder`, `SummaryFutures`, `Testing`, `TimedResponse`, `TreeSearch`, `TypicalRuns`, `Typicality`, `Unread`, `Unrolling`, `Verification`, `Weighted`, `WeightedTraces`, `WitnessRefinement`, `WitnessRefinementRuns`
 
 
 ## Life and evolution
@@ -614,4 +618,4 @@ Modules (2, 2 stated on the grammar): `GrammarPath`, `KeptOnward`
 
 ## Not yet on the root
 
-294 of 342 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+296 of 344 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

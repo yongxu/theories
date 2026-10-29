@@ -1,0 +1,22 @@
+import ExpectedFreeEnergyReals
+#print axioms Becoming.ExpectedFreeEnergy.predicted
+#print axioms Becoming.ExpectedFreeEnergy.risk
+#print axioms Becoming.ExpectedFreeEnergy.ambiguity
+#print axioms Becoming.ExpectedFreeEnergy.expectedFreeEnergy
+#print axioms Becoming.ExpectedFreeEnergy.pragmatic
+#print axioms Becoming.ExpectedFreeEnergy.epistemic
+#print axioms Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic
+#print axioms Becoming.ExpectedFreeEnergy.joint
+#print axioms Becoming.ExpectedFreeEnergy.product
+#print axioms Becoming.ExpectedFreeEnergy.epistemic_eq_divergence
+#print axioms Becoming.ExpectedFreeEnergy.epistemic_nonneg
+#print axioms Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped
+#print axioms Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped
+#print axioms Becoming.ExpectedFreeEnergy.coarse
+#print axioms Becoming.ExpectedFreeEnergy.sum_through
+#print axioms Becoming.ExpectedFreeEnergy.predicted_through
+#print axioms Becoming.ExpectedFreeEnergy.epistemic_through
+#print axioms Becoming.ExpectedFreeEnergy.expectedFreeEnergy_through
+#print axioms Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse
+#print axioms Becoming.ExpectedFreeEnergy.gain_term
+#print axioms Becoming.ExpectedFreeEnergy.epistemic_eq_expected_gain

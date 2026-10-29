@@ -276,6 +276,13 @@
         "zh": "观察是从所观察者出发的所读路线：差别只往下游去，储量只经形成所读的、在储量下游的水平耦合入它；路线由闭合而形成。",
         "en": "Observation is a route of readings from what is observed: a difference goes only downstream, and a stock couples into a formation only through a level it reads downstream of the stock; a route forms by closing."
       }
+    },
+    {
+      "id": "the-markov-blanket-as-a-coupling-structure",
+      "detail": {
+        "en": "The Markov blanket as a coupling structure: the distance to the break unseen by a blanketed agent with any model and policy, reading its supply by threshold.",
+        "zh": "马尔可夫毯作为耦合结构：以阈读供给之毯化主体，无论模型与策略，皆不见至断裂之距离。"
+      }
     }
   ],
   "references": [
@@ -602,6 +609,10 @@
     {
       "en": "26 October 2026, board item DF1b (study section 422): The related note on how-loops-form reads its witness (Closing.Onset.unforeseen) as one: the formation need not show in the amounts.",
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：关于 how-loops-form 的相关说明把其见证（Closing.Onset.unforeseen）读作见证：形成未必显示在量中。"
+    },
+    {
+      "en": "29 October 2026, board item UE18 (study section 452): related to the-markov-blanket-as-a-coupling-structure; no statement, next step or declaration changed.",
+      "zh": "2026年10月29日，工作板条目 UE18（研究第 452 节）：与 the-markov-blanket-as-a-coupling-structure 相关联；无一陈述、下一步或声明改变。"
     }
   ],
   "text_versions": [

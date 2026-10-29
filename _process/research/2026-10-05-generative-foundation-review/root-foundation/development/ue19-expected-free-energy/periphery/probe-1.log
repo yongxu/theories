@@ -1,0 +1,12 @@
+'Becoming.ExpectedFreeEnergy.efe_eq_neg_epistemic_sub_pragmatic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.ExpectedFreeEnergy.epistemic_eq_divergence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.epistemic_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Becoming.ExpectedFreeEnergy.epistemic_nonneg : ∀ {σ : Type u_1} {ω : Type u_2} (S : Finset σ) (O : Finset ω)
+  (Qs : σ → ℝ) (A : σ → ω → ℝ),
+  (∀ s ∈ S, 0 ≤ Qs s) →
+    ∑ s ∈ S, Qs s = 1 →
+      (∀ s ∈ S, ∀ o ∈ O, 0 ≤ A s o) → (∀ s ∈ S, ∑ o ∈ O, A s o = 1) → 0 ≤ Becoming.ExpectedFreeEnergy.epistemic S O Qs A

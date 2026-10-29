@@ -216,8 +216,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T153820.435638Z）：Becoming.FreeEnergyGuarantees 之 98 项声明中之 58 项，余者由其姊妹记录引用，公理报告皆空。由一 AI 代理起草，会话中审读；另一 AI 代理作独立只读审查（REVIEW-UE16）并复查，见研究第 449 节；未经人审。诸律应用已落地之定理。"
   },
   "next_delta": {
-    "en": "Expected free energy with its ambiguity term within a lumping (UE19); conditions under which a shared reading of the joint outcome keeps a collective going; review by a person.",
-    "zh": "于归并之内带模糊项之期望自由能（UE19）；对共同结果之共享读取使集体延续之条件；人之审查。"
+    "en": "Conditions under which a shared reading of the joint outcome keeps a collective going; review by a person.",
+    "zh": "对共同结果之共享读取使集体延续之条件；人之审查。"
   },
   "correspondence": {
     "en": "The commons (Lloyd 1833; Hardin 1968, Science 162) and pivotality (Palfrey and Rosenthal 1984). Against Albarracin and others (2024, Systems 12, 163), where risk minimization ensures that an agent's needs are met, and Friston, Ramstead and others (2024, Collective Intelligence 3) with Da Costa and others (2025, arXiv:2410.00258), where with one generative model and one set of preferences each agent's goal is the group's: read as guarantees, both fail where the rest outruns a gated renewal, or alike preferences are indexical; their simulations have no shared draw (UE1's search, candidates 2 and 3, graded b; candidate 2 weak). Claim 3's forbidding is the landed held pair (what-a-set-point-optimum-does-beyond), here with each take a generative model's least-risk choice; the others apply the outrun law and joint excess. Graded in UE16's NOTE.",
@@ -274,6 +274,13 @@
       "detail": {
         "en": "The other third part of the free-energy principle stated in the same module.",
         "zh": "同一模块所陈自由能原理之另一第三部分。"
+      }
+    },
+    {
+      "id": "expected-free-energy-and-its-terms",
+      "detail": {
+        "en": "Expected free energy and its terms: risk and ambiguity over the reals; the chooser here takes risk alone, as a distance from a point prediction.",
+        "zh": "期望自由能及其诸项：实数上之风险与模糊；此处之选择者唯取风险，为点预测之距离。"
       }
     }
   ],
@@ -402,6 +409,10 @@
     {
       "en": "29 October 2026: added (UE16), risk minimization on a shared renewal: a chooser of least risk has its need end where the rest outruns a gated renewal, unread after and below what it expects; alike preferences for own stores are not one goal, and a goal over the joint level no guarantee either (two regulators continue, three end); against risk minimization ensuring needs and shared preferences making a group goal (candidates 2 and 3); after a review and a re-check; study section 449.",
       "zh": "2026年10月29日：新增（UE16），共享更新上之风险最小化：他者超出门控之更新时，风险最少之选择者其需求终结，此后不可读，且低于其所预期；对各自储量之相同偏好非一目标，对共同水平之目标亦无保证（二调节者延续，三者终结）；针对风险最小化保证需求与共享偏好成群体目标之说（候选 2 与 3）；经审查与复查；研究第 449 节。"
+    },
+    {
+      "en": "29 October 2026, board item UE19 (study section 453): related to expected-free-energy-and-its-terms; the next step drops expected free energy, now stated; no statement or declaration changed.",
+      "zh": "2026年10月29日，工作板条目 UE19（研究第 453 节）：与 expected-free-energy-and-its-terms 相关联；下一步删去期望自由能（已述）；无一陈述或声明改变。"
     }
   ]
 }

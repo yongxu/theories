@@ -1,0 +1,28 @@
+Becoming/Blanket.lean:114:31: error: Application type mismatch: The argument
+  b
+has type
+  Blanketed I S A E
+of sort `Type u` but is expected to have type
+  Parts.inner ?m.62 = Parts.inner ?m.63
+of sort `Prop` in the application
+  internal_through_blanket b
+Becoming/Blanket.lean:128:31: error: Application type mismatch: The argument
+  b
+has type
+  Blanketed I S A E
+of sort `Type u` but is expected to have type
+  Parts.outer ?m.62 = Parts.outer ?m.63
+of sort `Prop` in the application
+  external_through_blanket b
+
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue16/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue18-blanket-and-existence/tree",
+  "modules": 59,
+  "ran": [
+    "Becoming.Blanket"
+  ],
+  "reused": 58,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.Blanket"
+}

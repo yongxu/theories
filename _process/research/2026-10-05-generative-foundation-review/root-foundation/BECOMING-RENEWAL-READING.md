@@ -20987,3 +20987,112 @@ A second pass found the Lean ready, with every shared statement unchanged and th
 3. A lemma moves to the module of the definition it reads when an earlier module needs it, rather than being proved twice.
 4. A lemma left with no consumer and no law of its own is retired, not registered.
 5. Not done: the items in Boundary.
+
+## 452. The Markov blanket as a coupling structure, and what the existence claim forbids (UE18)
+
+The free-energy principle partitions a system's states into internal, sensory, active and external states, and claims that whatever persists, with such a partition, will appear to minimize free energy. UE1's search graded the persistence statements (d): necessity or as-if claims ([search](development/ue1-fep-bridge/THIRD-PART-SEARCH.md), candidate 15). UE18 states the partition on a determined law and the existence claim in counting form, as item 3 of the plan for the principle as an integral part of the theory ([plan](development/ue-unified-explanation/FEP-INTEGRATION.md); [note](development/ue18-blanket-and-existence/NOTE.md)).
+
+```text
+Result(s): new records the-markov-blanket-as-a-coupling-structure (home 03 §1) and what-the-existence-claim-forbids
+       (home 03 §6), one module, each declaration cited by one of them; selection-through-couplings,
+       runaway-distance-uncoupled, capture-by-counted-choices, conditioning-by-restriction and
+       free-energy-bounds-surprisal related to them.
+Delta: (1) the agent through its sensory course. Four parts of one determined law, told apart by which reads which
+       (Blanketed, Parts, step, course); from one internal and one active state, courses alike on the sensory part
+       have one internal and one active course, and the world is driven by the active course
+       (agent_through_sensory, world_through_active); each side fixed by its start and the blanket's course
+       (internal_through_blanket, external_through_blanket, reads_through_blanket), the deterministic case of the
+       time-unrolled blanket; a reading through the blanket separates at most what it tells apart (Deaf).
+       (2) through what the sensory part reads: where it reads the world only through a map, courses alike through
+       it are alike for the agent (through_reading, on Learning.Lumped).
+       (3) self-evidencing does not see its break coming: with any model and policy, a supply read by threshold
+       only, from a supply of three and every supply of four or more, every reading of the internal course alike up
+       to step four, the first ended at step five (ThresholdDrain.any_model); the break registered when it comes
+       (sensed_at_break); the ended course resting at a fixed point (short_rests); the witness's blanket the World's
+       coupling by threshold (sensory_is_admission, blanket_iff_through).
+       (4) the existence claim: the point weighting is conditioning on the outcome (point_is_restrict); under it a
+       listed outcome is of least surprisal and every event off it weighs nothing (least_surprisal,
+       point_forbids_rest); the occupation weighting admits every visited state (read_off_admits); a listed outcome
+       is forbidden exactly where its weight is nothing (forbids_iff).
+Premises: no axiom; discrete synchronous steps; four parts of any types; the blanket as sparse coupling of a
+       determined law; the witness's supply draining by one, no action changing it, read at the threshold of need
+       one; natural weights on listed outcomes, their equality decided; surprisal as the reciprocal share.
+Evidence: core receipt 20261029T164943.729811Z; Becoming.Blanket (33 theorems in 49 declarations), every declaration with an empty axiom report; a leaf at
+       L1 importing Becoming.ConditionalWeights; imported with the whole package, no name
+       clash; an independent review (REVIEW-UE18), whose probe the revision adopted, and a re-check (RECHECK-UE18);
+       no landed statement or proof changed.
+Boundary: densities, the Helmholtz decomposition and steady-state densities; that statistical and dynamical
+       blankets coincide; a World formation in general as the agent of a blanketed law (proved for the witness
+       only); any free energy; the foraging law (a threshold-reading policy unable to draw on a larger supply); no
+       sentence of the principle's literature forbidden; each law near-definitional, a composition or a witness.
+Output→input: selection-through-couplings, generalization-through-lumping, runaway-distance-uncoupled,
+       conditioning-by-restriction → the-markov-blanket-as-a-coupling-structure, what-the-existence-claim-forbids →
+       03 §1, §6, 08 §8, capture-by-counted-choices, free-energy-bounds-surprisal, UE, FEP-INTEGRATION.
+```
+
+**Its standing.** The blanket laws are the deterministic case of the time-unrolled Markov blanket (Virgo, Rosas and Biehl 2022), Pearl's blanket (1988) of the internal course in the law's unrolled graph, while the partition is what Bruineberg and others (2022) call a Friston blanket: near-definitional. What is added is the agent form, which removes, for a determined policy, UE1's caveat that an action must be listed among what couples in, the lumping form, and T6's invisible half for every model and policy on a blanketed agent, joined to the World's coupling for its witness. That the existence claim alone forbids nothing is conceded by the principle's proponents, who class it with principles of stationary action, not falsifiable strictly speaking (Ramstead and others 2023); the counting form here is near-definitional. No sentence of the principle's literature is forbidden.
+
+**The review and the fix round.** An independent read-only review by another AI agent ([REVIEW-UE18](development/ue18-blanket-and-existence/REVIEW-UE18.md), with a probe of 25 theorems in 30 declarations, every axiom report empty) found the Lean sound and pure core and the partition fairly formalized, but the module proving less than its text said and, as drafted, explaining nothing beyond landed laws: the join to selection through couplings asserted, not proved; a free energy, which reads the sensory record, wrongly counted among readings of the internal course; a witness with one trivial internal law; the blanket law a known result restating UE1; two existence laws vacuous off the domain and the "only" unproved; the calibration's standing to correct. Its eight findings are all taken, mostly by adopting its probe ([note §7](development/ue18-blanket-and-existence/NOTE.md#7-review)): the agent form, the lumping law, the self-evidencing law for every model and policy, the witness joined to the World, the existence laws with their content and the necessity proved. The module went from 13 theorems in 24 declarations to 31 in 47. The reviewer then re-checked the fold ([RECHECK-UE18](development/ue18-blanket-and-existence/RECHECK-UE18.md)): the Lean sound, with eight findings, every one taken: a free energy at the step the break registers reads the record there, so the readings alike are those before it (`sensory_apart_at_four`); one selection through the couplings separates at most what they tell apart, all together exactly; the witness ends whatever couples in, so sufficiency's failure is pinned on renewal, not on the uncoupled distance; the `Runaway` import was unused and is dropped; and the blankets' agreement before step four has its own law (`alike_before_four`).
+
+**Decisions at landing.** One module, two records, the claims being distinct: the blanket beside selection through couplings in 03 §1, linking 02's runaway record and 03 §10, and the existence claim beside free energy in 03 §6. The module is a leaf at L1 importing `ConditionalWeights` alone, through which the World's admission and coupling, used in the witness's join, come. A World formation in general as the agent of a blanketed law, and the foraging law the review proposed, are named as not shown.
+
+**Readings** [AI reading, D45]. The principle's blanket names the theory's couplings, and its existence claim, with the model read off the persisting thing, holds of every course. What forbids are laws of the courses themselves, holding whatever weighting is put on them (UE16). What persistence needs beyond self-evidencing is what the theory's renewal and coupling laws state; and where the principle has an agent act ahead of actuality through a deep generative model, the theory places that anticipation, for a supply coupled in by threshold only, in priors, a coupling by level or another formation, never in the blanket's course.
+
+## 453. Expected free energy within a lumping, and what seeking cannot separate (UE19)
+
+Active inference scores a policy by its expected free energy, whose epistemic term is the information its outcomes are expected to carry about hidden states; one proposal reads that term as inherent self-verification and self-correction, which UE1's search graded (b), weak (candidate 7, [search](development/ue1-fep-bridge/THIRD-PART-SEARCH.md)). UE19 states expected free energy and its terms in the periphery beside UE17's free energy, and in counting form, in the pure core, what no seeking separates, as item 4 of the plan for the principle as an integral part of the theory ([plan](development/ue-unified-explanation/FEP-INTEGRATION.md); [note](development/ue19-expected-free-energy/NOTE.md)).
+
+```text
+Result(s): new records expected-free-energy-and-its-terms (home 03 §6, periphery) and what-seeking-cannot-separate
+       (home 03 §6, pure core), one module each, each declaration cited by its record; free-energy-bounds-surprisal,
+       conditioning-by-restriction, generalization-through-lumping, selection-under-registration-revision,
+       capture-by-counted-choices and risk-minimization-on-a-shared-renewal related to them.
+Delta: (1) the decompositions (periphery): expected free energy, risk plus ambiguity, is the negative of the epistemic
+       value less the pragmatic value, with no hypothesis (expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic); the
+       epistemic value is the divergence of the joint weights from the product of the states' weights and the
+       predicted outcomes, nonnegative where these are distributions (epistemic_eq_divergence, epistemic_nonneg), and
+       the expected information gain through UE17's posterior (epistemic_eq_expected_gain).
+       (2) through the lumping (periphery): where the likelihood reads a state only through its class, the epistemic
+       value and the expected free energy are the classes' (epistemic_through, expectedFreeEnergy_through), so beliefs
+       alike on the classes have one expected free energy (expectedFreeEnergy_same_of_coarse); one likelihood for
+       every state reached gives nothing to learn (epistemic_eq_zero_of_lumped); two states of one likelihood keep
+       their prior ratio in UE17's posterior (posterior_ratio_of_lumped).
+       (3) tied pairs (core): a pair one likelihood ties compares and stands, given every record weighing something
+       under it, as its prior weights do, the whole's weight not needed (posterior_le_iff_prior, posterior_ratio_kept,
+       single_le_evidence); an error in the prior's order of a tied pair stays (order_kept).
+       (4) seeking (core): a course of seeking weighs, at each step, the weight of choosing the experiment, read from
+       the course so far, times the outcome's weight under it (seekWeight); a pair every experiment ties is tied over
+       every course (seek_tied), so no seeking corrects an error every experiment ties, whatever the policy of choice
+       (seeking_keeps_order).
+       (5) the witness (core): three coins, the prior weighing both false ones above the true one; a model reading only
+       whether two tosses agree turns the wrong order it separates and keeps the one it ties under one record
+       (Agree.turns_fair, Agree.keeps_tails); seeking keeps the tied order with only that experiment and turns it,
+       from the same outcome, once an experiment reading both tosses is chosen (Agree.seeking_keeps_tails,
+       Agree.seeking_turns_tails).
+Premises: in the periphery, Lean's three standard axioms through Mathlib, each declaration's reported; finite states
+       and outcomes, real distributions, one step and one policy with its predicted distribution over states given,
+       Mathlib's conventions at zero. In the core, no axiom; natural weights, listed hypotheses and records, exact
+       posteriors, the tie fixed and pointwise.
+Evidence: core receipt 20261029T164943.729811Z; Becoming.LumpedSeeking (14 theorems in 27 declarations), every declaration with an empty axiom report, a leaf
+       at L1 importing Becoming.ConditionalWeights; periphery receipt 20261029T164946.410686Z; ExpectedFreeEnergyReals (12 theorems in 21 declarations),
+       each on Lean's standard axioms, FreeEnergyReals and every core module of the closure matching a passed
+       receipt; check_expected_free_energy_reals.py, UE17's checker with its target changed; an independent review
+       (REVIEW-UE19) and a re-check (RECHECK-UE19); no landed statement or proof changed.
+Boundary: the softmax over policies, precision, multi-step policies with transitions (a many-step form with lumpable
+       transitions, Kemeny and Snell 1960), learning of the likelihood, novelty terms, any process by which an agent
+       reaches its choice; the data-processing bound; a theorem joining the core and periphery halves; that actual
+       agents' likelihoods tie what matters; that seeking never corrects. The decompositions are the principle's
+       definitions; the forms through the lumping near-definitional; the posterior laws corollaries; new is the
+       seeking form.
+Output→input: conditioning-by-restriction, free-energy-bounds-surprisal, generalization-through-lumping →
+       expected-free-energy-and-its-terms, what-seeking-cannot-separate → 03 §6, 08 §8,
+       selection-under-registration-revision, capture-by-counted-choices, UE, FEP-INTEGRATION; UE20 reads them.
+```
+
+**Its standing.** The decompositions are the definitions of Parr and Friston (2019; Friston, Rigoli, Ognibene, Mathys, FitzGerald and Pezzulo 2015 split a policy's quality into extrinsic and epistemic value, and Da Costa and others 2020 take risk over states), the epistemic value is the mutual information of states and outcomes, and the information-gain form is known; the forms through the lumping are near-definitional. That tied hypotheses keep their prior order is identification (Rothenberg 1971) in its Bayesian form (Poirier 1998): the posterior laws are corollaries of `posterior_single` and `posterior_le_iff`. New is the seeking form, with the choice of experiment read from the course, and its witness, which puts the contrast in one model: seeking corrects within what some experiment separates, and not beyond. Refuted by a pair every experiment ties that some course of seeking separates, which would mean a likelihood differing somewhere.
+
+**The review and the fix round.** An independent read-only review by another AI agent ([REVIEW-UE19](development/ue19-expected-free-energy/REVIEW-UE19.md)) rebuilt both modules with probes and checked the citations at their sources. It found the Lean sound and the identities as stated, and the text saying more than the Lean in four places, chiefly the reading "no outcome sought separates", false of the principle's T-maze, where the cue separates the contexts and seeking corrects. Its eleven findings are all taken ([note §6](development/ue19-expected-free-energy/NOTE.md#6-review)): seeking formalized with the experiment chosen from the course, the law now that what every experiment ties no seeking separates; expected free energy read through the classes in general; the information-gain form; the conventions at zero; the three-coin witness; names that do not clash with the landed `Learning.Lumped`; and the third part placed honestly, against the unqualified wording, not active inference's account. The reviewer then re-checked the fold ([RECHECK-UE19](development/ue19-expected-free-energy/RECHECK-UE19.md)): every finding folded soundly, with five findings, every one taken: the data-processing bound named as not stated; the periphery's header no longer reading as joining the halves; the conventions at zero in two docstrings; `posterior_le_iff_prior` freed of the whole's weight; and the contrast stated in the seeking form, from the re-check's probe. The core module went from 12 theorems in 20 declarations to 14 in 27.
+
+**Decisions at landing.** Two records, the claims being distinct: the periphery's identities on the reals and the core's law in counting form, both in 03 §6 after UE17's free energy, since expected free energy is read there through a lumping. The core module is a leaf at L1 importing `ConditionalWeights` alone; the periphery module sits in `lean/free-energy/` beside `FreeEnergyReals`, which it imports, with its own checker, and the core does not import it. No theorem joins the halves: the periphery's ratio law is stated on UE17's posterior, the core's on the core's share given the record, and the join through `givenShare_eq_posterior` is named as not stated.
+
+**Readings** [AI reading, D45]. Seeking information within a model separates only what some experiment it can choose separates: the epistemic drive corrects within its hypothesis space, under the policies it has, not beyond. What changes a lumping is what couples in from beyond the model, a new likelihood or a new hypothesis, as the laws of registration revision state; the principle's own literature adds novelty and structure learning for this reason, both conditioning in a larger model, whose ties the law covers too. So what the theory adds to active inference here is where its self-correction ends, stated for every policy.

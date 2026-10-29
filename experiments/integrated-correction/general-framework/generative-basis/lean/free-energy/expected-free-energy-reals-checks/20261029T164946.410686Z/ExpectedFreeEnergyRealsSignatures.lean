@@ -1,0 +1,13 @@
+import ExpectedFreeEnergyReals
+#check @Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic
+#check @Becoming.ExpectedFreeEnergy.epistemic_eq_divergence
+#check @Becoming.ExpectedFreeEnergy.epistemic_nonneg
+#check @Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped
+#check @Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped
+#check @Becoming.ExpectedFreeEnergy.sum_through
+#check @Becoming.ExpectedFreeEnergy.predicted_through
+#check @Becoming.ExpectedFreeEnergy.epistemic_through
+#check @Becoming.ExpectedFreeEnergy.expectedFreeEnergy_through
+#check @Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse
+#check @Becoming.ExpectedFreeEnergy.gain_term
+#check @Becoming.ExpectedFreeEnergy.epistemic_eq_expected_gain

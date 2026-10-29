@@ -131,8 +131,8 @@
       "kind": "scope"
     },
     {
-      "en": "Expected free energy, or any process by which a system lowers its free energy, such as a gradient descent or message passing.",
-      "zh": "期望自由能，或系统降低其自由能之任何过程，如梯度下降或消息传递。",
+      "en": "Any process by which a system lowers its free energy, such as a gradient descent or message passing; expected free energy is stated in expected-free-energy-and-its-terms.",
+      "zh": "系统降低其自由能之任何过程，如梯度下降或消息传递；期望自由能述于 expected-free-energy-and-its-terms。",
       "kind": "scope"
     },
     {
@@ -177,8 +177,8 @@
     "zh": "外围检查器 check_free_energy_reals.py 以 Lean 4.30.0-rc2 与固定之 Mathlib 实查（回执 20261029T155901.350188Z）：FreeEnergyReals 之全部 47 项声明，皆只依 Lean 之标准公理，其闭包之每一核心模块皆合于已通过之核心回执。另一 AI 代理作独立审查（REVIEW-UE17）并复查，见研究第 450 节；未经人审。"
   },
   "next_delta": {
-    "en": "Expected free energy and its epistemic term within a lumping (UE19); a core form of the bound, N^N·∏ a^n ≤ A^N·∏ n^n for beliefs with natural counts, equal, where the record weighs something, exactly at the share given the record; complexity and accuracy from the core's own shares; review by a person.",
-    "zh": "期望自由能及其于一合并中之认知项（UE19）；界之核心形式：自然数计数之信念 N^N·∏ a^n ≤ A^N·∏ n^n，记录有权重时恰于记录下之份额取等；由核心自身份额读出之复杂度与准确度；人之审查。"
+    "en": "A core form of the bound, N^N·∏ a^n ≤ A^N·∏ n^n for beliefs with natural counts, equal, where the record weighs something, exactly at the share given the record; complexity and accuracy from the core's own shares; review by a person.",
+    "zh": "界之核心形式：自然数计数之信念 N^N·∏ a^n ≤ A^N·∏ n^n，记录有权重时恰于记录下之份额取等；由核心自身份额读出之复杂度与准确度；人之审查。"
   },
   "correspondence": {
     "en": "Gibbs' inequality (Gibbs 1902) and the divergence of Kullback and Leibler (1951); the variational bound on the log evidence of variational Bayes (Hinton and van Camp 1993; Neal and Hinton 1998; the Helmholtz machine of Dayan, Hinton, Neal and Zemel 1995), the free-energy principle's variational free energy (Friston 2005, 2010), with the decompositions into divergence plus surprisal and into complexity less accuracy. Gibbs' inequality and its equality case are classical; the decompositions and the join are near-definitional. New is the join: the core states the posterior by counting, the periphery characterizes it as the one minimizer of free energy among the beliefs where it is finite. Graded in UE17's NOTE.",
@@ -205,7 +205,22 @@
       }
     }
   ],
-  "related": [],
+  "related": [
+    {
+      "id": "what-the-existence-claim-forbids",
+      "detail": {
+        "en": "What the existence claim forbids: the claim with the model read off the course, in counting form; its average form is this bound.",
+        "zh": "存在之主张所禁者：模型读自历程之主张之计数形式；其平均形式即此界。"
+      }
+    },
+    {
+      "id": "expected-free-energy-and-its-terms",
+      "detail": {
+        "en": "Expected free energy and its terms: risk, ambiguity, epistemic and pragmatic value stated beside free energy, the epistemic value an expected information gain through this posterior.",
+        "zh": "期望自由能及其诸项：风险、模糊、认知价值与实用价值述于自由能之旁，认知价值为经此后验之期望信息增益。"
+      }
+    }
+  ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
@@ -299,7 +314,7 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "ca32809355d9e8dca6d73177547cd8713319de3c2ec0cdeec2bc37ee734e33db"
+      "sha256": "7a3737d048bbdf649da364ff3a688643fef458f088c6bd4b5b5c04ea874db53f"
     }
   ],
   "proof_bindings": [
@@ -322,6 +337,14 @@
     {
       "en": "29 October 2026: added (UE17), variational free energy and its bound in the periphery: Gibbs' inequality, equality exactly at the posterior, the three decompositions, and the join, the minimizer the core's share given the record; after a review and a re-check; study section 450.",
       "zh": "2026年10月29日：新增（UE17），外围之变分自由能及其界：Gibbs 不等式，恰于后验取等，三分解，及相接：其最小者即核心之记录下份额；经审查与复查；研究第 450 节。"
+    },
+    {
+      "en": "29 October 2026, board item UE18 (study section 452): related to what-the-existence-claim-forbids; no statement, next step or declaration changed.",
+      "zh": "2026年10月29日，工作板条目 UE18（研究第 452 节）：与 what-the-existence-claim-forbids 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "29 October 2026, board item UE19 (study section 453): related to expected-free-energy-and-its-terms; the next step drops expected free energy, now stated, and the second item of what it does not show names the record that states it; no statement or declaration changed.",
+      "zh": "2026年10月29日，工作板条目 UE19（研究第 453 节）：与 expected-free-energy-and-its-terms 相关联；下一步删去期望自由能（已述），所不示之第二项指明述之之记录；无一陈述或声明改变。"
     }
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue16/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue19-expected-free-energy/tree",
+  "modules": 58,
+  "ran": [
+    "Becoming.LumpedSeeking",
+    "BecomingLumpedSeekingAxiomAudit"
+  ],
+  "reused": 57,
+  "unclean": [],
+  "audits": {
+    "Becoming.LumpedSeeking": {
+      "theorems": 8,
+      "declarations": 17,
+      "with_axioms": {}
+    }
+  }
+}

@@ -1,0 +1,111 @@
+Becoming/LumpedSeeking.lean:61:49: error: Type mismatch
+  rec ?m.34
+has type
+  Bool
+but is expected to have type
+  ?m.31 → Prop
+Becoming/LumpedSeeking.lean:63:51: error: Type mismatch
+  rec ?m.53
+has type
+  Bool
+but is expected to have type
+  ?m.50 → Prop
+Becoming/LumpedSeeking.lean:61:53: error: Invalid projection: Type of
+  c
+is not known; cannot resolve projection `2`
+Becoming/LumpedSeeking.lean:63:55: error: Invalid projection: Type of
+  c
+is not known; cannot resolve projection `2`
+Becoming/LumpedSeeking.lean:76:49: error: Type mismatch
+  rec ?m.17
+has type
+  Bool
+but is expected to have type
+  ?m.14 → Prop
+Becoming/LumpedSeeking.lean:78:51: error: Type mismatch
+  rec ?m.37
+has type
+  Bool
+but is expected to have type
+  ?m.34 → Prop
+Becoming/LumpedSeeking.lean:76:53: error: Invalid projection: Type of
+  c
+is not known; cannot resolve projection `2`
+Becoming/LumpedSeeking.lean:78:55: error: Invalid projection: Type of
+  c
+is not known; cannot resolve projection `2`
+Becoming/LumpedSeeking.lean:94:51: error: Type mismatch
+  rec ?m.36
+has type
+  Bool
+but is expected to have type
+  ?m.33 → Prop
+Becoming/LumpedSeeking.lean:96:51: error: Type mismatch
+  rec ?m.55
+has type
+  Bool
+but is expected to have type
+  ?m.52 → Prop
+Becoming/LumpedSeeking.lean:94:55: error: Invalid projection: Type of
+  c
+is not known; cannot resolve projection `2`
+Becoming/LumpedSeeking.lean:96:55: error: Invalid projection: Type of
+  c
+is not known; cannot resolve projection `2`
+Becoming/LumpedSeeking.lean:121:2: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/LumpedSeeking.lean:122:15: error: Application type mismatch: The argument
+  List.Mem.tail ?m.14 no
+has type
+  List.Mem ?m.17 (?m.14 :: ?m.18)
+but is expected to have type
+  List.Mem Bias.heads []
+in the application
+  List.Mem.tail Bias.fair (List.Mem.tail ?m.14 no)
+Becoming/LumpedSeeking.lean:155:65: error: Type mismatch
+  twoHeads ?m.8
+has type
+  Bool
+but is expected to have type
+  ?m.5 → Prop
+Becoming/LumpedSeeking.lean:157:65: error: Type mismatch
+  twoHeads ?m.27
+has type
+  Bool
+but is expected to have type
+  ?m.24 → Prop
+Becoming/LumpedSeeking.lean:155:74: error: Invalid projection: Type of
+  c
+is not known; cannot resolve projection `2`
+Becoming/LumpedSeeking.lean:157:74: error: Invalid projection: Type of
+  c
+is not known; cannot resolve projection `2`
+Becoming/LumpedSeeking.lean:166:28: error: Type mismatch
+  twoHeads ?m.8
+has type
+  Bool
+but is expected to have type
+  ?m.5 → Prop
+Becoming/LumpedSeeking.lean:169:28: error: Type mismatch
+  twoHeads ?m.27
+has type
+  Bool
+but is expected to have type
+  ?m.24 → Prop
+Becoming/LumpedSeeking.lean:166:37: error: Invalid projection: Type of
+  c
+is not known; cannot resolve projection `2`
+Becoming/LumpedSeeking.lean:169:37: error: Invalid projection: Type of
+  c
+is not known; cannot resolve projection `2`
+
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue16/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue19-expected-free-energy/tree",
+  "modules": 58,
+  "ran": [
+    "Becoming.LumpedSeeking"
+  ],
+  "reused": 57,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.LumpedSeeking"
+}

@@ -1,11 +1,11 @@
 {
- "commit": "75c132f0fdec8462cfd5ba80cbfd830ffb94d0b6",
+ "commit": "162cd261965329bc29ef2ba018b19f31828c5a2c",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261029T153820.435638Z",
+ "core_receipt_at_commit": "20261029T162632.074811Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 346,
- "constants": 49972,
- "spine_theorems": 16885,
+ "tracked_modules": 348,
+ "constants": 50165,
+ "spine_theorems": 16932,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,17 +28,17 @@
  "classes": {
   "statement on both families": 1090,
   "statement on Process/Frame/Run/Trace": 3531,
-  "statement on World/Flow/Web": 4210,
+  "statement on World/Flow/Web": 4212,
   "statement on the base only through a law of its own module": 270,
   "proof through a base family": 215,
-  "used by a theorem on the base": 5720,
+  "used by a theorem on the base": 5723,
   "instance on the base recorded": 159,
-  "apart: own vocabulary": 1582,
-  "apart: prelude-only statement": 108
+  "apart: own vocabulary": 1623,
+  "apart: prelude-only statement": 109
  },
- "apart": 1690,
- "apart_general_structure_by_design": 678,
- "apart_otherwise": 1012,
+ "apart": 1732,
+ "apart_general_structure_by_design": 674,
+ "apart_otherwise": 1058,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 119,
   "of them on the base": 81,
@@ -74,12 +74,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 972,
- "apart_roots": 972,
+ "apart_used_by_nothing": 993,
+ "apart_roots": 993,
  "apart_roots_by_category": {
-  "model-witness": 436,
-  "support": 137,
-  "general-structure": 357,
+  "model-witness": 448,
+  "support": 138,
+  "general-structure": 365,
   "calibration": 16,
   "restates": 14,
   "logical-strength": 12
@@ -227,6 +227,10 @@
    28,
    28
   ],
+  "Becoming.Blanket": [
+   28,
+   33
+  ],
   "Becoming.Training": [
    27,
    59
@@ -274,6 +278,10 @@
   "Becoming.IntegerOrder": [
    15,
    38
+  ],
+  "Becoming.LumpedSeeking": [
+   14,
+   14
   ],
   "Becoming.SharedCodes": [
    14,
@@ -762,19 +770,19 @@
  },
  "rings": {
   "core": {
-   "modules": 330,
-   "theorems": 16125,
-   "apart": 1596,
+   "modules": 332,
+   "theorems": 16172,
+   "apart": 1638,
    "classes": {
     "statement on both families": 1076,
     "statement on Process/Frame/Run/Trace": 3320,
-    "statement on World/Flow/Web": 4185,
+    "statement on World/Flow/Web": 4187,
     "statement on the base only through a law of its own module": 224,
     "proof through a base family": 204,
-    "used by a theorem on the base": 5361,
+    "used by a theorem on the base": 5364,
     "instance on the base recorded": 159,
-    "apart: own vocabulary": 1489,
-    "apart: prelude-only statement": 107
+    "apart: own vocabulary": 1530,
+    "apart: prelude-only statement": 108
    }
   },
   "instances": {
@@ -811,7 +819,7 @@
   }
  },
  "components": {
-  "count": 92,
+  "count": 93,
   "theorems_outside_the_main_component": [
    "Becoming.Dispatch.add_three_assoc",
    "Becoming.FaultEnvelopes.or_self",
@@ -8800,6 +8808,53 @@
   "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeDependent": "statement on World/Flow/Web",
   "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeGated": "statement on World/Flow/Web",
   "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end": "statement on World/Flow/Web",
+  "Becoming.Blanket.congr3": "apart: prelude-only statement",
+  "Becoming.Blanket.Blanketed.agent_through_sensory": "apart: own vocabulary",
+  "Becoming.Blanket.Blanketed.world_through_active": "apart: own vocabulary",
+  "Becoming.Blanket.Blanketed.internal_through_blanket": "apart: own vocabulary",
+  "Becoming.Blanket.Blanketed.external_through_blanket": "apart: own vocabulary",
+  "Becoming.Blanket.Blanketed.reads_through_blanket": "apart: own vocabulary",
+  "Becoming.Blanket.Blanketed.through_reading": "apart: own vocabulary",
+  "Becoming.Blanket.Deaf.lumps": "apart: own vocabulary",
+  "Becoming.Blanket.ThresholdDrain.reads_threshold": "apart: own vocabulary",
+  "Becoming.Blanket.ThresholdDrain.sensed_at_break": "apart: own vocabulary",
+  "Becoming.Blanket.ThresholdDrain.alike_before_four": "apart: own vocabulary",
+  "Becoming.Blanket.ThresholdDrain.ended_rests": "apart: own vocabulary",
+  "Becoming.Blanket.ThresholdDrain.short_rests": "apart: own vocabulary",
+  "Becoming.Blanket.ThresholdDrain.sensory_is_admission": "statement on World/Flow/Web",
+  "Becoming.Blanket.ThresholdDrain.external_course": "used by a theorem on the base",
+  "Becoming.Blanket.ThresholdDrain.sensory_succ": "used by a theorem on the base",
+  "Becoming.Blanket.ThresholdDrain.bool_eq_of_iff": "used by a theorem on the base",
+  "Becoming.Blanket.ThresholdDrain.blanket_iff_through": "statement on World/Flow/Web",
+  "Becoming.Blanket.ThresholdDrain.sensed_alike": "apart: own vocabulary",
+  "Becoming.Blanket.ThresholdDrain.blanket_alike": "apart: own vocabulary",
+  "Becoming.Blanket.ThresholdDrain.any_model": "apart: own vocabulary",
+  "Becoming.Blanket.ThresholdDrain.sensory_apart_at_four": "apart: own vocabulary",
+  "Becoming.Blanket.le_mass_of_mem": "apart: own vocabulary",
+  "Becoming.Blanket.point_is_restrict": "apart: own vocabulary",
+  "Becoming.Blanket.point_whole": "apart: own vocabulary",
+  "Becoming.Blanket.least_surprisal": "apart: own vocabulary",
+  "Becoming.Blanket.point_forbids_rest": "apart: own vocabulary",
+  "Becoming.Blanket.visits_le_succ": "apart: own vocabulary",
+  "Becoming.Blanket.visits_pos": "apart: own vocabulary",
+  "Becoming.Blanket.visits_zero": "apart: own vocabulary",
+  "Becoming.Blanket.read_off_admits": "apart: own vocabulary",
+  "Becoming.Blanket.unweighted_share": "apart: own vocabulary",
+  "Becoming.Blanket.forbids_iff": "apart: own vocabulary",
+  "Becoming.LumpedSeeking.tied_mass": "apart: own vocabulary",
+  "Becoming.LumpedSeeking.single_le_evidence": "apart: own vocabulary",
+  "Becoming.LumpedSeeking.posterior_le_iff_prior": "apart: own vocabulary",
+  "Becoming.LumpedSeeking.posterior_ratio_kept": "apart: own vocabulary",
+  "Becoming.LumpedSeeking.order_kept": "apart: own vocabulary",
+  "Becoming.LumpedSeeking.seek_tied": "apart: own vocabulary",
+  "Becoming.LumpedSeeking.seeking_keeps_order": "apart: own vocabulary",
+  "Becoming.LumpedSeeking.Agree.distinct": "apart: own vocabulary",
+  "Becoming.LumpedSeeking.Agree.ties": "apart: own vocabulary",
+  "Becoming.LumpedSeeking.Agree.totals": "apart: own vocabulary",
+  "Becoming.LumpedSeeking.Agree.turns_fair": "apart: own vocabulary",
+  "Becoming.LumpedSeeking.Agree.keeps_tails": "apart: own vocabulary",
+  "Becoming.LumpedSeeking.Agree.seeking_keeps_tails": "apart: own vocabulary",
+  "Becoming.LumpedSeeking.Agree.seeking_turns_tails": "apart: own vocabulary",
   "Becoming.Web.includesAlong_id_iff": "statement on World/Flow/Web",
   "Becoming.Web.exceedsAlong_id_iff": "statement on World/Flow/Web",
   "Becoming.Web.widensAlong_id_iff": "statement on World/Flow/Web",
