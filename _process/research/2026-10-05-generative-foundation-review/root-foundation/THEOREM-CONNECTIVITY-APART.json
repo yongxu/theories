@@ -5186,6 +5186,11 @@
    "module": "Becoming.ReflexivePrediction",
    "category": "general-structure",
    "reason": "ReflexivePrediction.rests_iff_right: a law of any type of values (a prediction read by what it predicts); it waits for a public prediction read by a pool on the base (RF)"
+  },
+  "Becoming.OpenedCorrection.correctable_iff": {
+   "module": "Becoming.OpenedCorrection",
+   "category": "general-structure",
+   "reason": "OpenedCorrection.correctable_iff: a law of any process with a reading in force at each configuration (a revision of a reading that opens a correction); it waits for an institution's rule of reading what its members report, on the base (RF)"
   }
  },
  "instances": {

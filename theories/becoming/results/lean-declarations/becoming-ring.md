@@ -1079,6 +1079,41 @@ Definitions and types:
 
 </details>
 
+<a id="module-a7b3d8e562d5"></a>
+
+<details>
+<summary>OpenedCorrection.lean — 16 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: application layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean`
+
+Imports: `Becoming.GuardHorizon`, `Becoming.Revision`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.OpenedCorrection.correctable_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean#L80) | 80 |
+| [Becoming.OpenedCorrection.finer_keeps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean#L95) | 95 |
+| [Becoming.OpenedCorrection.coarser_opens_nothing](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean#L107) | 107 |
+| [Becoming.OpenedCorrection.widened_correctable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean#L115) | 115 |
+| [Becoming.OpenedCorrection.Linked.unlinked_uncorrectable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean#L138) | 138 |
+| [Becoming.OpenedCorrection.Linked.linked_correctable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean#L146) | 146 |
+| [Becoming.OpenedCorrection.Linked.starved_uncorrectable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean#L157) | 157 |
+| [Becoming.OpenedCorrection.Linked.opens](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean#L168) | 168 |
+| [Becoming.OpenedCorrection.Linked.rebuilt_starved](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean#L175) | 175 |
+| [Becoming.OpenedCorrection.Linked.opens_after_replenishing](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean#L182) | 182 |
+| [Becoming.OpenedCorrection.Linked.opens_by_support](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean#L189) | 189 |
+| [Becoming.OpenedCorrection.Linked.widened_unlinked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean#L195) | 195 |
+
+Definitions and types:
+
+- `def` [Becoming.OpenedCorrection.Correctable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean#L74) (L74)
+- `def` [Becoming.OpenedCorrection.OpensAlong](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean#L89) (L89)
+- `abbrev` [Becoming.OpenedCorrection.Linked.acceptable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean#L128) (L128)
+- `abbrev` [Becoming.OpenedCorrection.Linked.executable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean#L134) (L134)
+
+</details>
+
 <a id="module-5e2e120f84b5"></a>
 
 <details>

@@ -560,6 +560,18 @@
    "page": "theories/becoming/results/records/a-regularity-kept-and-changed.md"
   },
   {
+   "id": "record:a-revision-that-opens-a-correction",
+   "type": "result",
+   "record": "a-revision-that-opens-a-correction",
+   "title": "A revision of a reading that opens a correction, along one process",
+   "title_zh": "沿一过程开一更正之读之修订",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "frame",
+   "page": "theories/becoming/results/records/a-revision-that-opens-a-correction.md"
+  },
+  {
    "id": "record:a-rise-past-the-inflow-is-drawn-from-beyond",
    "type": "result",
    "record": "a-rise-past-the-inflow-is-drawn-from-beyond",
@@ -8579,6 +8591,17 @@
    "level": "L1",
    "theorems": 32,
    "region": "map",
+   "base": "frame",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.OpenedCorrection",
+   "type": "module",
+   "name": "Becoming.OpenedCorrection",
+   "level": "L1",
+   "theorems": 12,
+   "region": "knowing",
    "base": "frame",
    "on_grammar": false,
    "reaches_grammar": true
@@ -28741,6 +28764,12 @@
    "anchor": "r-selection-under-registration-revision"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-a-revision-that-opens-a-correction",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-a-revision-that-opens-a-correction"
+  },
+  {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-consequence-revised-reference-plan",
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
@@ -32472,6 +32501,16 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.OpenedCorrection",
+   "to": "module:Becoming.GuardHorizon",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OpenedCorrection",
+   "to": "module:Becoming.Revision",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Openness",
    "to": "module:Becoming.Premises",
    "type": "imports"
@@ -34599,6 +34638,36 @@
   {
    "from": "record:a-regularity-kept-and-changed",
    "to": "record:wen-in-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-revision-that-opens-a-correction",
+   "to": "module:Becoming.GuardHorizon",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-revision-that-opens-a-correction",
+   "to": "module:Becoming.OpenedCorrection",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-revision-that-opens-a-correction",
+   "to": "module:Becoming.Revision",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-revision-that-opens-a-correction",
+   "to": "record:a-reading-kept-by-its-update",
+   "type": "related"
+  },
+  {
+   "from": "record:a-revision-that-opens-a-correction",
+   "to": "record:selection-under-registration-revision",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-revision-that-opens-a-correction",
+   "to": "record:when-to-inquire-and-when-to-respond",
    "type": "formal-reuse"
   },
   {
@@ -57384,6 +57453,11 @@
   {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-a-reading-kept-by-its-update",
    "to": "record:a-reading-kept-by-its-update",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-a-revision-that-opens-a-correction",
+   "to": "record:a-revision-that-opens-a-correction",
    "type": "states"
   },
   {

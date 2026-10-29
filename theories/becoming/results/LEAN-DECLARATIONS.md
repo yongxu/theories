@@ -13,7 +13,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
 | [Becoming pure core](lean-declarations/becoming-core.md) | 336 | 16,319 |
-| [Becoming instances and applications](lean-declarations/becoming-ring.md) | 13 | 760 |
+| [Becoming instances and applications](lean-declarations/becoming-ring.md) | 14 | 772 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
 | [Attainable inquiry, contact and process laws](lean-declarations/inquiry.md) | 71 | 1,864 |
@@ -598,6 +598,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [OneStep.lean](lean-declarations/becoming-core.md#module-181010f81637) | Becoming pure core |
 | [Onward.lean](lean-declarations/becoming-core.md#module-d8b9f7e31a6f) | Becoming pure core |
 | [OpenFutureRevision.lean](lean-declarations/ethics.md#module-a5f26298589c) | Normative grounding and generative direction |
+| [OpenedCorrection.lean](lean-declarations/becoming-ring.md#module-a7b3d8e562d5) | Becoming instances and applications |
 | [Openness.lean](lean-declarations/becoming-core.md#module-5be60c839fbf) | Becoming pure core |
 | [OperationRoles.lean](lean-declarations/core.md#module-9f4103888949) | Generative core and relational structure |
 | [OperativeCoherence.lean](lean-declarations/core.md#module-9712b4ea2312) | Generative core and relational structure |
