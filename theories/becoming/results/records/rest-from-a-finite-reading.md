@@ -11,8 +11,11 @@
 ## Laws
 
 1. Let a list hold the configurations an amount is read off and the amount not rise across any step from T on. Of any l.length + 1 steps f 0 < f 1 < … from T on, not every one is a step across which the amount falls strictly (is not, after the step, back within its value before): a strict fall leaves a configuration the amount never reads again, and the list has room for only so many (the pigeonhole with no decidability). (`Becoming.Amounts.rising_apart`, `Becoming.Amounts.falls_within_reading`)
+   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 2. So steps across which the amount falls strictly do not recur, over any amounts: nothing about the amounts is used but the transitivity of their order. Along a run of every process whose configurations a list holds, the falls of an amount read off them come to rest, whether or not the process merges. (`Becoming.Amounts.rests_of_finite_reading`, `Becoming.Branching.rests_along_run`)
+   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 3. Falls that recur need a reading no list holds: the halving stock falls strictly at every step, and no list holds its values. Its lack of a least loss and the unbounded count of its values are one fact read twice. (`Becoming.Halving.stock_unlisted`)
+   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

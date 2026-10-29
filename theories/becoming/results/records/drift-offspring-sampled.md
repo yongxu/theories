@@ -11,10 +11,15 @@
 ## Laws
 
 1. Sampling is unbiased: drawn n times from p listed offspring of one kind and q of another, each sampling weighed by the ways of drawing it, p + q times the weighted count of the first kind is n p (p + q)^n, so on average the sampled share is the listed share. (`Becoming.Drift.step_ones`, `Becoming.Drift.step_zeros`, `Becoming.Drift.weighted_ones_step`, `Becoming.Drift.weighted_zeros_step`, `Becoming.Drift.step_expected`, `Becoming.Drift.expected_ones`, `Becoming.Drift.expected_zeros`, `Becoming.Drift.Generations.expected_sampled`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Drift can undo selection with a weight falling as 1/n: where (p + q) h + g = N p, the samplings with at most h/N of the first kind weigh, times n^2 g^2, at most N^2 n p q (p + q)^n (each far back by the gap, summed against the spread). (`Becoming.Drift.fallsBack`, `Becoming.Drift.gap_le`, `Becoming.Drift.square_mul`, `Becoming.Drift.far_back`, `Becoming.Drift.falls_back_le`, `Becoming.Drift.falls_back`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; the measure counts central declaration `Becoming.Drift.falls_back` as following from a law of its model (a second-moment bound on samplings).
 3. Never ruled out: the samplings with no draw of the first kind weigh exactly q^n, and each falls back, so the samplings undoing the step weigh at least q^n at every sample size. (`Becoming.Drift.lost`, `Becoming.Drift.lost_true`, `Becoming.Drift.lost_false`, `Becoming.Drift.lost_weight`, `Becoming.Drift.lost_le`, `Becoming.Drift.falls_back_ge`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Over listed generations a step raising the mean of an amount held or not has a positive gap with that bound; on the base, where the step is ending among groups (the groups with less of the amount not active), both bounds hold. (`Becoming.Drift.Generations.raised_falls_back`, `Becoming.Drift.Flow.ended_falls_back`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Witness: one draw from three and two after a step raising the share from a half; the draw of the second kind falls back, weighing two of the five ways. (`Becoming.Drift.OneDraw.falls_back`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

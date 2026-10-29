@@ -11,10 +11,15 @@
 ## Laws
 
 1. For every reduction and observable, what the observable reads through the reduction is single-valued exactly where the observable goes alike across what the reduction merges; a decoder of the observable from the reduced value exists only there, and where the reduction has a section, exactly there. (`Becoming.Readout.Reading`, `Becoming.Readout.SingleValued`, `Becoming.Readout.reading_single_iff`, `Becoming.Readout.Decodes`, `Becoming.Readout.lumped_of_decodes`, `Becoming.Readout.decodes_iff_of_section`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. On two configurations the reduction merges, a decoder right at both exists exactly when the observable agrees there; a reduction has no inverse on two different configurations it merges, and where the reduced runs agree at a date at which the runs differ, no map of the reduced runs restores both runs at every date. (`Becoming.Readout.decoder_pair_iff`, `Becoming.Readout.no_restore`, `Becoming.Courses.reducedRun`, `Becoming.Courses.runs_no_restore`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. In the integer real-amplitude fragment, the Hadamard step on a control with a blank branch prepares the joint, and switching the order of X and Z negates the control's off-diagonal entries; dephasing keeps the diagonal and the weight, keeps the plus response exactly where the cross terms sum to zero, and keeping the cross-term sum is enough for that response. (`Becoming.Dephasing.preparation_from_blank`, `Becoming.Dephasing.switched_density`, `Becoming.Dephasing.dephase_keeps_response_iff`, `Becoming.Dephasing.retained_response_exact`, `Becoming.Dephasing.dephase_preserves_diagonal`, `Becoming.Dephasing.dephase_preserves_mass`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. The coherent and degraded controls have the responses (0, 4, 4) and (2, 2, 4) and the same diagonal, so no decoder of the plus response reads the diagonal; dephasing merges the prepared and coherent controls, so nothing restores both from their dephasing. (`Becoming.Dephasing.coherent_response`, `Becoming.Dephasing.degraded_response`, `Becoming.Dephasing.no_diagonal_response_decoder`, `Becoming.Dephasing.no_uniform_dephase_inverse`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Reducing after a controlled X onto a blank register is dephasing; recording is an involution, so retaining and reversing the joint relation restores the control; along runs, the dephasing process is not lossless, and no reading of a later configuration recovers where the prepared and coherent runs began. (`Becoming.Dephasing.recording_reduces_to_dephase`, `Becoming.Dephasing.joint_reversal_restores_control`, `Becoming.Dephasing.not_lossless`, `Becoming.Dephasing.no_restore_along`)
+   - *Master laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

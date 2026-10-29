@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-29T12:08:52+00:00",
+  "reviewed_at_utc": "2026-10-29T12:09:54+00:00",
   "statement": {
     "en": "Readings fix a formation's act where it is not read exactly where its lumping ties that occasion to a read one; where it can tell the occasion from every read one, a selected law has a selected twin agreeing on every reading and acting otherwise there.",
     "zh": "读处定一成形于未读处之行，恰当其归并将此时系于一读处；其能分此时于每一读处，则有所选之孪生，于每一读处皆合而于此处行异。"
@@ -192,7 +192,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "803dbb7579c5d55989720bd42cde5e9bffe6c8518d04452042ad0a2479d17dad"
+      "sha256": "bfc9879dbf43ae9455f66a462df4c54c28138a2a1152cfb69871d4553e145360"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
@@ -226,8 +226,8 @@
   ],
   "history": [
     {
-      "en": "29 October 2026: added (RF round 1), what readings fix of the unread: the twin where the formation can tell, the chain of acts, states and couplings with its converses failing, and the cue witnesses; after a review of the plan and a review of the Lean; study section 444.",
-      "zh": "2026年10月29日：新增（RF 第一轮），读处所定于未读处者：能分处之孪生，行、态、耦合之链及其逆不成，讯之诸例；经计划之审与 Lean 之审；研究第 444 节。"
+      "en": "29 October 2026: added (RF round 1), what readings fix of the unread: the twin where the formation can tell, the chain of acts, states and couplings with its converses failing, and the cue witnesses; after a review of the plan and a review of the Lean; study section 445.",
+      "zh": "2026年10月29日：新增（RF 第一轮），读处所定于未读处者：能分处之孪生，行、态、耦合之链及其逆不成，讯之诸例；经计划之审与 Lean 之审；研究第 445 节。"
     }
   ]
 }

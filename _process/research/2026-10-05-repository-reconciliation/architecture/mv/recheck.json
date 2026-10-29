@@ -1,0 +1,114 @@
+{
+ "findings": [
+  {
+   "file": "tools/research/master_laws.py",
+   "where": "main, lines 83-91 (the source check), and tools/research/registry.py master_laws_status line 546 ('same')",
+   "severity": "error",
+   "problem": "The generator's guard and the status's core-sources test compare only source hashes. They never look at the receipt's status. check_becoming.py writes becoming-verification.json in a `finally` block, so a failed run still writes it, with status 'failed' and the source_sha256 of the current sources (set when the receipt is created). After a run that fails an audit following compilation (axiom report, purity), every module is in the cache. The generator then runs on Lean that did not pass, and the check reports core_sources_current and current as true. That contradicts the commit's 'the generator refuses unchecked sources' and the workflow's 'once check_becoming.py has passed on those sources'.",
+   "fix": "In master_laws.py, right after `core = json.loads(CORE.read_text())`, add:\n    if core.get('status') != 'passed':\n        sys.exit(f\"the latest core receipt ({core.get('utc')}) has status {core.get('status')!r}: run check_becoming.py until it passes\")\nIn registry.master_laws_status, replace the start of line 546, `same = data.get('core_sources_sha256') == ...`, with `same = receipt.get('status') == 'passed' and data.get('core_sources_sha256') == ...`. In the test helper `status()`, write `{'utc': 'R', 'status': 'passed', 'source_sha256': receipt_sources}`, and add one case where status 'failed' with matching sources gives core_sources_current False.",
+   "evidence": "check_becoming.py main(): the receipt is built with \"status\": \"checking\", \"source_paths\" and \"source_sha256\" at about line 3787. Lines 4003-4010 are `receipt[\"status\"] = \"failed\"` … `finally: … receipt_path.write_text(serialized)`. output_paths returns RECEIPT unless BECOMING_OUT is set. master_laws.py line 87 reads only source_paths and source_sha256. registry.py line 546 compares only the digest."
+  },
+  {
+   "file": "tools/research/registry.py",
+   "where": "master_laws_status line 550 ('current'), and master_laws.py main lines 84-92 and 179",
+   "severity": "misleading",
+   "problem": "With --dump the generator skips the source check. It still writes core_sources_sha256 from the receipt on disk, not from the sources the pickle was dumped from, and the status's `current` ignores from_dump. A file computed from a pickle of any earlier state therefore reads core_sources_current: true and current: true. Finding 4(b) was answered only by recording from_dump. Also, in neither mode does the generator check that the dumped modules are ones the receipt checked.",
+   "fix": "registry.py line 550: `'current': same and not changed and not unmatched and not data.get('from_dump', False),`. master_laws.py, after `C = ec.constants()`, add:\n    extra = sorted({x['m'] for x in C.values()} - set(core.get('source_paths', {})))\n    if extra:\n        sys.exit(f'the constants hold modules the latest core receipt did not check: {extra[:3]}')\nDocstring line 8: '…with --dump it reads a saved dump and records that it did; the check never reads such a file as current.' In the RESULT-WORKFLOW paragraph, after the `check` sentence, add: 'A file computed from a saved dump (`--dump`) never reads as current.' Add a status test with from_dump True and everything else matching that expects current False.",
+   "evidence": "master_laws.py line 85: `if not from_dump:` guards the only source check. Line 179: 'core_sources_sha256': sources_digest(core), the receipt's. registry.py line 550 does not read from_dump. In this session's restored constants every module (339) is in the receipt's source_paths (340, plus the root Becoming), so the added check holds today."
+  },
+  {
+   "file": "tools/research/registry.py",
+   "where": "master_law_note lines 518-519 (the 'defines' clause); test_master_laws.py line 58",
+   "severity": "misleading",
+   "problem": "The page says 'it defines the anchor X' wherever an anchor is among the law's declarations, which the docstring correctly calls 'the anchors the law itself declares'. Three anchors are theorems, and many laws only cite an anchor definition as a hypothesis. Lists of two read 'the anchor `A`, `B`'.",
+   "fix": "Replace lines 518-519 with:\n    if e.get('defines'):\n        a = _listed(['`' + x + '`' for x in e['defines']])\n        text = (f'its declarations include the anchor {a} itself; ' if len(e['defines']) == 1\n                else f'its declarations include the anchors {a} themselves; ') + text\nIn test_master_laws.py line 58, change 'it defines the anchor `X.a`; ' to 'its declarations include the anchor `X.a` itself; '. Re-render. Optionally rename the data key 'defines' to 'anchors_declared' in the generator, registry and test, which needs a regeneration.",
+   "evidence": "In the restored constants, Becoming.revisits_within, Becoming.balance_over_stretch_on and Becoming.Amounts.rests are kind 'thm'. These pages say they are defined: master-laws-on-the-grammar.md:48, recurrence-without-premise.md:14, census-balance.md:28, rest-by-balance.md:14, least-loss-rest.md:18. Two cite a definition only. living-on-and-descent law 6 ('In a balanced flow…', `Becoming.Flow.Balances` among six) shows 'it defines the anchor `Becoming.Flow.Balances`'. rest-at-every-resolution law 3 ('with r constantly one it is Balances') does too. Plurals: process-and-frame-as-readings.md:24 and returning-where-the-course-branches.md:14 read 'it defines the anchor `…Balances`, `…BalancesOn`'."
+  },
+  {
+   "file": "tools/research/registry.py",
+   "where": "master_law_note line 524 (`alone = f' ({ALONE…} alone)'`) and ALONE line 497; test_master_laws.py test_central_defines_and_outside",
+   "severity": "misleading",
+   "problem": "The parenthetical that gives a central declaration's own dependence puts 'alone' after the phrase, so it modifies the wrong words. '(reaching the grammar alone)' reads as 'reaching only the grammar'. '(on an anchor, not reaching the grammar alone)', the test's expected string, reads as 'not reaching only the grammar'. '(on no master law's anchor alone)', the 5 notes on pages now, can be read as 'not resting on an anchor only'. Each of these is the opposite of, or different from, 'this declaration, taken by itself, …'.",
+   "fix": "Line 524: `alone = f' (taken alone: {ALONE.get(c[\"dependence\"], c[\"dependence\"])})' if c.get('dependence') and c['dependence'] != e['dependence'] else ''`. In the test, expect '`X.a` (taken alone: on an anchor, not reaching the grammar) as following from a master law (…)'. Re-render. The next finding extends this line.",
+   "evidence": "Pages: living-on-and-descent 6, evolution-on-descent and transmission-is-inheritance-and-need ('`Becoming.Flow.transmitted_supported` (on no master law's anchor alone)'), wisdom-root-without-axiom 8 ('`…Training.unselected_beyond_data` (on no master law's anchor alone)'), and continuation-condition-decomposition ('`Becoming.Valuation.significant_iff_held` (on no master law's anchor alone)'). test_master_laws.py expects '`X.a` (on an anchor, not reaching the grammar alone)'."
+  },
+  {
+   "file": "tools/research/registry.py",
+   "where": "master_law_note lines 520-526 (central clause), master_laws.py line 131 (central entries)",
+   "severity": "imprecise",
+   "problem": "Finding 18 is fixed only where a central declaration's dependence differs from its law's. Where the dependence is the same but the central declaration's own master laws differ, the note still places it after the law's whole list, and a reader takes it to rest on all of them. Separately, for category 'master law' with dependence 'grammar' (the measure's 'reaches the grammar'), the page says 'as following from a master law' without naming one, even where the central declaration reaches no anchor and the line begins 'no master law's anchor'.",
+   "fix": "master_laws.py line 131: add `'master_laws': [k for k in NAMES if k in row['laws']],` to the central entry, then regenerate. registry.py: replace line 524 (and the fix of the previous finding) with:\n        own = c.get('master_laws')\n        if c.get('dependence') and (c['dependence'] != e['dependence'] or (own is not None and own != e['master_laws'])):\n            on = _listed([m['names'].get(k, k) for k in own]) if own else \"no master law's anchor\"\n            alone = f' (taken alone: {on}; ' + ('reaching' if c['dependence'] == 'grammar' else 'not reaching') + ' the grammar)'\n        else:\n            alone = ''\nand, after the `why` lines, add `if c['category'] == 'master law' and c.get('dependence') == 'grammar' and not why: why = 'by reaching the grammar'`. Add a test with a central entry whose master_laws differ from the law's under the same dependence.",
+   "evidence": "Recomputed from the restored constants (C.pickle, 49,098 constants; the recomputed per-law data matches master-laws.json with 0 mismatches). There are 6 such central entries. alignment-approaches-under-the-selection-laws 2: Flow.withinCoupling_reads_iff on closure only, law closure and balance. master-laws-on-the-grammar 18: Law.drawn_iff_not_returns and Law.lossless_iff_returns on finite runs only, Learning.goAlike_iff_lumped on lumping only, WithinMoves.after_course on none, law closure, finite runs, lumping and order. necessarily-drawn-is-not-returning 3: drawn_iff_not_returns finite runs only, law closure and finite runs. Category 'master law' with no anchor appears 4 times: after_course (effective-capacity-and-eventual-reachability 1, master-laws-on-the-grammar 18), Withholding.withholding_spreads (giving-that-waits-on-giving 1), Tolerance.answers_restores_iff (restoring-giving-from-the-worst-start 4). For example: \"no master law's anchor; its declarations reach the grammar; the measure counts central declaration `Becoming.WithinMoves.after_course` as following from a master law.\""
+  },
+  {
+   "file": "tools/research/master_laws.py",
+   "where": "module docstring lines 21-22",
+   "severity": "imprecise",
+   "problem": "The docstring places finite runs' anchor revisits_within among the number and list lemmas of Becoming.GrammarLaws. The anchor `Becoming.revisits_within` is declared in Becoming.Recurrence and proved by the GrammarLaws lemma `Becoming.GrammarLaws.revisits_within`. It is not itself a GrammarLaws lemma. It does not reach the grammar because what it rests on has no «» name. The wording comes from finding 22's own fix.",
+   "fix": "Replace 'The number and list lemmas of Becoming.GrammarLaws do not count, among them finite runs' anchor\n  revisits_within;' with 'The number and list lemmas of Becoming.GrammarLaws (no «» name) do not count, so finite runs' anchor\n  Becoming.revisits_within, Becoming.Recurrence's name for the pigeonhole GrammarLaws.revisits_within, does not reach it;'.",
+   "evidence": "In the restored constants, Becoming.revisits_within is kind 'thm' in module Becoming.Recurrence. Recurrence.lean:188-190 reads `theorem revisits_within … := GrammarLaws.revisits_within`. GrammarLaws.lean:246 opens `namespace GrammarLaws` and line 331 declares the lemma there."
+  },
+  {
+   "file": "_process/RESULT-WORKFLOW.md",
+   "where": "line 131, the rerun sentence and the `check` sentence; master_laws.py 'about' (lines 174-177) and the docstring's last sentence (lines 34-36)",
+   "severity": "imprecise",
+   "problem": "The data hashes six inputs: the measure, EC's measure.py, COVERAGE.json, THEOREM-CONNECTIVITY.py, THEOREM-CONNECTIVITY-DUMP.lean and the generator. The texts each list a different subset. The paragraph says check reports 'whether the measure or the generator changed', leaving out COVERAGE.json and the dump. It says to rerun after 'the Lean, a record's laws, COVERAGE.json or the measure', leaving out the dump and the generator. 'about' leaves out the dump and the generator. The docstring says 'the core sources, the measure or this tool', leaving out COVERAGE.json and the dump.",
+   "fix": "Workflow: 'After a landing that changes the Lean, a record's laws, `COVERAGE.json`, the measure, the dump (`THEOREM-CONNECTIVITY.py` and its `.lean`) or the generator, …' and '… and whether the measure, `COVERAGE.json`, the dump or the generator changed (`master_laws`).' 'about': \"…rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.\" Docstring: '…and whether the core sources, the measure, COVERAGE.json, the dump or this tool changed since it was written.'",
+   "evidence": "master-laws.json inputs_sha256 keys: measure_grammar.py, ec-elegant-completion/measure.py, COVERAGE.json, THEOREM-CONNECTIVITY.py, THEOREM-CONNECTIVITY-DUMP.lean, tools/research/master_laws.py. registry.master_laws_status's docstring already names 'the measure, its coverage, the dump or the generator'."
+  },
+  {
+   "file": "tools/research/registry.py",
+   "where": "FOLLOWS line 492-496 ('definitional or representational', 'no reason given') and the central clause line 526",
+   "severity": "style",
+   "problem": "For category 'definitional or representational', FOLLOWS ends in a parenthesis and the reason adds another: 'following from its definitions (definitional or representational) (Iff.rfl)'. 'no reason given' would render as 'nothing named (no reason given) (NO REASON GIVEN)'.",
+   "fix": "FOLLOWS: 'definitional or representational': 'its definitions', 'no reason given': 'nothing named'. In the loop, after `why = MARKER.sub(...)`, add `if c['category'] == 'definitional or representational': why = 'definitional or representational' + (': ' + why if why else '')` and `if c['category'] == 'no reason given': why = 'no reason given'`. The result reads 'as following from its definitions (definitional or representational: Iff.rfl)'.",
+   "evidence": "15 notes, for example: '…`Becoming.Viability.kernel_and_iff` as following from its definitions (definitional or representational) (logic: for all reached, and).' The measure sets reason 'NO REASON GIVEN' for category 'no reason given' (measure_grammar.py lines 164-166)."
+  },
+  {
+   "file": "tools/research/tests/test_master_laws.py",
+   "where": "test_the_note_is_a_child_of_its_item, lines 77-90",
+   "severity": "style",
+   "problem": "The test rebuilds the render loop itself, asserts on its own lines, and then greps registry.py for the source line. It would still pass if render_record_v2 stopped calling master_law_note or put the note elsewhere.",
+   "fix": "Render through the real function:\n    def test_the_note_is_a_child_of_its_item(self):\n        recs, _ = registry.load_records()\n        r = next((x for x in recs if len(x.get('laws', [])) >= 10 and x.get('_master_laws')), None)\n        if r is None:\n            self.skipTest('no record with ten laws and data')\n        lines = registry.render_record_v2(r).split('\\n')\n        widths = [len(m.group(0)) for i, l in enumerate(lines[:-1]) if (m := re.match(r'\\d+\\. ', l)) and '*Master laws' in lines[i + 1]]\n        self.assertIn(4, widths)\n        for i, l in enumerate(lines[:-1]):\n            if (m := re.match(r'\\d+\\. ', l)) and '*Master laws' in lines[i + 1]:\n                self.assertTrue(lines[i + 1].startswith(' ' * len(m.group(0)) + '- '))\n(import re).",
+   "evidence": "Lines 85-90 build `lines` in the test and then `self.assertIn(\"lines += [' ' * len(f'{i}. ') + '- ' + note]\", source)`. In memory, render_record_v2 on whole-law-of-counting gives '10. …' followed by '    - *Master laws…', and all 481 schema-2 pages rendered in memory equal the files on disk."
+  },
+  {
+   "file": "tools/research/master_laws.py",
+   "where": "main lines 105 and 129-130",
+   "severity": "style",
+   "problem": "anchors is built from NAMES. If EC's LAWS gains or renames a master law, MV drops it silently, and the run ends with 'MV and the measure disagree on <declaration>', which names the wrong cause.",
+   "fix": "After `ec = mg.ec`: `if set(ec.LAWS) != set(NAMES): sys.exit(f'the measure names master laws {sorted(ec.LAWS)}, MV names {sorted(NAMES)}: update NAMES')`.",
+   "evidence": "Line 105: `anchors = {k: [a for a in ec.LAWS[k] if a in C] for k in NAMES}`. The measure uses `ec.LAWS.items()` (measure_grammar.py line 139), so a row's 'laws' could then hold a key MV never computes."
+  }
+ ],
+ "verified": [
+  "0",
+  "1",
+  "2",
+  "3",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "11",
+  "12",
+  "13",
+  "14",
+  "15",
+  "16 (not taken; the docstring and the workflow paragraph do say so)",
+  "17",
+  "19",
+  "20",
+  "21",
+  "22 (one wording slip about revisits_within remains, reported)",
+  "23",
+  "24",
+  "26",
+  "4 (in part: measure, coverage, dump and generator are hashed and read; the core sources compared by digest, so a rerun on the same sources is no longer stale; the generator checks sources; open: failed receipts and --dump data still read as current, reported)",
+  "18 (in part: shown where the dependence differs; open: the 'alone' wording, and differing master laws under the same dependence, reported)",
+  "25 (in part: the anchors are named; open: 'defines' is wrong for theorem anchors and cited definitions, reported)"
+ ],
+ "checked": "Read only; I edited no repository file. Scratch scripts are in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/mv-recheck/.\n\nInputs read:\n- `git show c763b567a -- tools _process/RESULT-WORKFLOW.md` in full.\n- All 27 first-review findings in review.json.\n- The current tools/research/master_laws.py, the MV functions in registry.py (master_laws, master_law_note, master_laws_status, render_record_v2, load_records, affected_ids), research.py input_snapshot, measure_grammar.py, and EC's measure.py.\n- THEOREM-CONNECTIVITY.py dump_constants, the dump's kind mapping, check_becoming.py's receipt writing (main and output_paths), and the receipt's fields.\n\nTests: `python3 -B -m unittest tools.research.tests.test_master_laws` ran 9 tests, OK.\n\nStatus: computed read-only from load_records. It reports current True, core_sources_current True, inputs_changed [], 0 laws not matched, receipt 20261029T084618.786422Z with status 'passed'.\n\nPages:\n- Rendered every schema-2 record page in memory with render_record_v2. All 481 equal the files on disk.\n- Tallied every note shape on the pages: 3644 notes, which is 3653 laws minus 9 with no declarations.\n- Checked indentation. Every note follows its law line, indented by its marker's width: 2945 at 3 spaces, 699 at 4. The raw Markdown around laws 9/10 and 28-30 of whole-law-of-counting is structured as children.\n\nNotes spot-checked, including the earlier findings' examples:\n- rest-at-every-resolution 1-3\n- balance-from-conservation 1 and 3\n- becoming-spine-instances 16 and 21\n- reorderings 8 and 13\n- master-laws-on-the-grammar 1, 4 and 18\n- effective-capacity 1\n- how-a-carried-difference-grows 7\n- space-and-its-parts 16\n- continued-change-needs-openness 3\n- living-on-and-descent 6\n- more-needs-renewers 1\n- where-a-move-is-formed 4\n- widening-as-what-every-weighting-ranks 3\n\nRecomputation from the constants this session restored (scratchpad/mvreview/C.pickle):\n- The per-law grammar flags and master laws agree with master-laws.json (0 mismatches).\n- No grammar-theorem reach comes only through auxiliary lemmas (eq_, injEq, sizeOf_spec).\n- No law reaches only the «» names outside the Grammar modules.\n- The 49 vocabulary-only laws reach only grammar def, ind, ctor and rec constants.\n- Continuity.Balancing reaches no anchor.\n- Kinds of the anchors and of the declared anchors.\n- Central entries whose own master laws differ from their law's.\n- The dump's modules are all in the receipt's source_paths.\n\nAlso checked:\n- The receipt's source_paths resolve from CORE.parents[1].\n- No process marker remains in a note (only the Lean name S0).\n- No central declaration lies outside the run, and none occurs in a law that also has declarations outside it.\n\nI did not run the generator, research.py check, render, links or the lint."
+}

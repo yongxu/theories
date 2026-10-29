@@ -11,6 +11,7 @@
 ## Laws
 
 1. A predicate on two roles, read as the two Boolean values, that holds of each role exactly where it holds of the other does not hold of exactly one of them; the assignment to the first role and the assignment to the second each hold of exactly one, so each fits a task needing exactly one. (`PracticalPriorityIdentification.SwapInvariant`, `PracticalPriorityIdentification.ExactlyOne`, `PracticalPriorityIdentification.symmetric_assignment_not_unique`, `PracticalPriorityIdentification.two_assignments_fit_one_task`)
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

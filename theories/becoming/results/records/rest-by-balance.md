@@ -11,10 +11,15 @@
 ## Laws
 
 1. Where a count is balanced across each step of a stretch (after the step with what it loses equals before it with what it gains) and loses at least one more than it gains at each, it ends the stretch with the stretch's length within what it was at the start. The stretch balance is the reason. (`Becoming.Amounts.falls_by_stretch`, `Becoming.Amounts.total_steps_lose`, `Becoming.balance_over_stretch_on`)
+   - *Master laws, by Lean dependency:* its declarations include the anchor `Becoming.balance_over_stretch_on` itself; balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. Where whether a step is marked is decided, and from a step on the count is balanced across each step and loses at least one more than it gains at each marked step, some step from there within what the count was is unmarked. The steps up to that bound are searched, so no omniscience is used. (`Becoming.Amounts.unmarked_within`, `Becoming.Amounts.unmarked_or_marked`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. Two counts balanced across each step of a stretch, the first starting within the second: where at each step the first's gain with the second's loss is within the second's gain with the first's loss, the first ends the stretch within the second. (`Becoming.Amounts.le_by_exchange`, `Becoming.Amounts.total_steps_le`, `Becoming.Amounts.total_steps_add`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. Its cases among courses: a course drawn above its renewal falls below every positive need within its starting excess over it, its step balancing with what it takes; and a course gaining the most at each step could draw, weighted, at least what any open course could. (`Becoming.Optimum.ends_within`, `Becoming.Optimum.drawnAt`, `Becoming.Optimum.Next.drawable_le_of_gains`, `Becoming.Optimum.Next.drawable_step`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Its cases among runs and regimes: a law's run with a bounded mark comes to rest within the bound; below a regime's point of no return the level falls by at least one a step until nothing is left; and a coupled web within a band under mutual support comes to rest. (`Becoming.LastChange.still_within`, `Becoming.LastChange.room_balance`, `Becoming.LastChange.still_of_fixed_at`, `Becoming.RegimeMargin.Adjusted.orbit_bound`, `Becoming.RegimeMargin.Adjusted.step_balances`, `Becoming.RegimeMargin.Adjusted.orbit_inside`, `Becoming.RegimeMargin.Coupled.Indexed.rests_by`)
+   - *Master laws, by Lean dependency:* balance; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

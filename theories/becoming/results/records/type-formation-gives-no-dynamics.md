@@ -11,7 +11,9 @@
 ## Laws
 
 1. The tower T(0) = X, T(n+1) = T(n) × T(n) is inhabited, empty, or of at most one element, at any n, exactly where X is; the diagonal sends X into every level one to one, so distinct elements of the seed stay distinct, and the leaf of an element's diagonal is that element. (`Generative.Deeper.Tower`, `Generative.Deeper.diagonal`, `Generative.Deeper.leaf`, `Generative.Deeper.leaf_diagonal`, `Generative.Deeper.diagonal_injective`, `Generative.Deeper.tower_nonempty_iff`, `Generative.Deeper.tower_empty_iff`, `Generative.Deeper.tower_subsingleton`, `Generative.Deeper.tower_subsingleton_iff`, `Generative.Deeper.seed_distinction_persists`)
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. Reachability (some finite trace) is reflexive, transitive and contains the steps, and lies within every relation that is; so it is the least such relation, and every least such relation agrees with it pointwise. A map sending steps into a reflexive-transitive relation sends every reach into it. With no steps, reachability is equality. (`Generative.Deeper.Reach`, `Generative.Deeper.ReflexiveRel`, `Generative.Deeper.TransitiveRel`, `Generative.Deeper.ContainsSteps`, `Generative.Deeper.IsLeastClosure`, `Generative.Deeper.reach_refl`, `Generative.Deeper.reach_trans`, `Generative.Deeper.reach_step`, `Generative.Deeper.reach_evaluate`, `Generative.Deeper.reach_least`, `Generative.Deeper.reach_is_least_closure`, `Generative.Deeper.least_closure_unique`, `Generative.Deeper.reach_without_steps_iff`)
+   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

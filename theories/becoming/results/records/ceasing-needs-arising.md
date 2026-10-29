@@ -11,12 +11,19 @@
 ## Laws
 
 1. Where the members of which a determination holds are listed at each step, each once, and the determination is decided at each step, members ceasing to hold at arbitrarily late steps need members coming to hold at arbitrarily late steps. (`Becoming.Listed`, `Becoming.Listed.coming_of_ceasing`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts; the measure counts central declaration `Becoming.Listed.coming_of_ceasing` as following from balance, which the grammar represents.
 2. The proof goes through the census balance: with ceasing to be recurring, the ceasings from any step N on accumulate past the list at N, while the list at the end with what ceased between is the list at N with what came between, so something comes to be between. (`Becoming.recurring_accumulates`, `Becoming.Listed.over_stretch`, `Becoming.Listed.coming_iff_excess`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. A census is the listing of activity: under a census, ceasing recurring needs arising recurring; read of worlds, in a world with a census whose activity is decided, ceasing recurs only where arising recurs. (`Becoming.Web.Census`, `Becoming.Listed.coming_of_ceasing`, `Becoming.World.Counted`, `Becoming.World.arising_of_ceasing`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts; the measure counts central declaration `Becoming.Listed.coming_of_ceasing` as following from balance, which the grammar represents.
 4. Read of standing: under a census of what stands, ceasing to stand recurring needs coming to stand recurring. Read of dependence: where the dependences of each step are listed, dissolving recurring needs forming recurring. (`Becoming.Web.StandingCensus`, `Becoming.Web.StandingCensus.coming_of_ceasing`, `Becoming.Web.DependenceCensus`, `Becoming.Web.DependenceCensus.forming_of_dissolving`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Not conversely: accretion has a census, and arising recurs in it while nothing ever ceases; attrition keeps ceasing while nothing arises, so by this law it has no census. (`Becoming.World.accretion`, `Becoming.World.attrition`, `Becoming.Accretion.census`, `Becoming.World.census_one_way`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. Ceasing recurring needs coming to be recurring wherever some list covers what holds at arbitrarily late steps; a census is the case of covering every step, so the world and standing readings are corollaries of this law of laws-of-one-step. (`Becoming.coming_of_ceasing_covered`, `Becoming.Listed.covered`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 7. With no decision, where a list covers step N and nothing comes to be after it, ceasing does not recur. (`Becoming.Covers.ceasing_not_recurring`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

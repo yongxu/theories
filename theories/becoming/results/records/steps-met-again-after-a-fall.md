@@ -11,11 +11,17 @@
 ## Laws
 
 1. The steps among the first n at which a Boolean reading holds, counted: at most every step, all where it holds throughout, fewer where it fails at some step, and the steps before j number j. (`Becoming.Optimum.countUpTo`, `Becoming.Optimum.counted_le_one`, `Becoming.Optimum.countUpTo_le`, `Becoming.Optimum.countUpTo_all`, `Becoming.Optimum.countUpTo_lt`, `Becoming.Optimum.countUpTo_below`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Where what is given at each counted step is at most q, r for each counted step is at most everything given falls short of r, with q for each counted step, wherever they lie (the count from the start its case); so what a course draws with what it leaves and r for each step met is at most the start with what is given there, r a step after and q for each step met. (`Becoming.Optimum.counted_step`, `Becoming.Optimum.shortfall_count_ge`, `Becoming.Optimum.metCount`, `Becoming.Optimum.metCount_of_met`, `Becoming.Optimum.met_count_drawn_le`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. A course below the need at some step, counted at every step met, is worth at most the keeping course ending at e, less d, where r ≤ q + c, r + e + d ≤ q + c + m and e + d ≤ c: a fall met again loses the coupling only at the steps below. (`Becoming.Optimum.le_of_met_count`, `Becoming.Optimum.mul_le_of_rate`, `Becoming.Optimum.met_key_end`, `Becoming.Optimum.met_key_drop`, `Becoming.Optimum.falls_met_le`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. Every optimum of every order rising with a worth adding at least c a step to a keeping course and at most c for each step met, wherever, keeps the need through the horizon where r + e < q + c + m and e < c; the keeping course ending at m is an optimum where r ≤ q + c and m ≤ c. (`Becoming.Optimum.frontier_keeps_met`, `Becoming.Optimum.continued_met_frontier`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. On a web, under those conditions, every such optimum meets the dependence at every step through the horizon. (`Becoming.Web.frontier_met_kept`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 6. Witness: under a burst renewing four at one, from the dweller's need two with capacity three, a coupling of four a step keeps the dweller under every optimum counting from the start, while counting every step met the course falling once and met again is an optimum beside the keeping course; five a step keeps it under every optimum. (`Becoming.Optimum.Holding.burst`, `Becoming.Optimum.Holding.burst_le`, `Becoming.Optimum.Holding.burst_above`, `Becoming.Optimum.Holding.fallOnce`, `Becoming.Optimum.Holding.fallOnce_open`, `Becoming.Optimum.Holding.fallOnce_drawn`, `Becoming.Optimum.Holding.fallOnce_met`, `Becoming.Optimum.Holding.metDraw`, `Becoming.Optimum.Holding.metDraw_of_keeps`, `Becoming.Optimum.Holding.burst_met`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,8 +11,11 @@
 ## Laws
 
 1. A member that has coupled two histories apart up to a step keeps the pool apart at every later step at which it stays; where every member at a step couples them alike up to it, every selection through the pool there selects them alike. (`Becoming.Web.apart_while_member`, `Becoming.Web.selects_alike_of_members`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Under recruitment through the pool and the same members at the start, the members are the same under both histories at every step up to and including the first at which the pool couples them apart, and the pool along either history separates them there; it never separates them exactly when the pool along the other never does, the members are then the same at every step, and every selection through the pool at every step selects them alike. (`Becoming.Web.SameMembers`, `Becoming.Web.RecruitsThrough`, `Becoming.Web.AlikeThroughAll.of_same`, `Becoming.Web.RecruitsThrough.members_alike`, `Becoming.Web.RecruitsThrough.first_apart`, `Becoming.Web.RecruitsThrough.members_alike_always`, `Becoming.Web.RecruitsThrough.alike_iff`, `Becoming.Web.RecruitsThrough.selects_alike`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. The exits bind: a keeper alone, recruiting through itself, never couples a lost habitat apart; a pool admitting a reader where the habitat reads empty does not recruit through itself and couples the loss apart at once; a pool that recruits through itself and admits the reader at step 2 in every history couples the loss apart there, through a member the course without the loss holds too. (`Becoming.PoolCourse.alone_through`, `Becoming.PoolCourse.alone_never_apart`, `Becoming.PoolCourse.called_not_through`, `Becoming.PoolCourse.called_apart`, `Becoming.PoolCourse.scheduled_through`, `Becoming.PoolCourse.scheduled_apart`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

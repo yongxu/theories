@@ -11,25 +11,45 @@
 ## Laws
 
 1. The history of a family's exchanges since T never shrinks; this uses no balance premise. (`Becoming.Flow.exchangeCount`, `Becoming.Flow.history_mono`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. In a balanced flow every change of a member's level is an exchange with the family. (`Becoming.Flow.Balances.exchanges_of_change`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. An exchange with its reverse (the same formations, each taking what it gave and giving what it took) restores every level, while the history counts both. (`Becoming.Flow.Reverses`, `Becoming.Flow.Balances.restores_levels_not_history`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. Zero: the first law at a fixed unit is nothing from nothing, losing nothing is getting back exactly, and dissipation is the first law with a least loss. (`Becoming.Flow.Gainless`, `Becoming.Flow.Conserving`, `Becoming.Flow.Dissipative.gainless`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Under the first law a reverse is within the law exactly where the exchange is lossless, and under dissipation no exchange is reversed. (`Becoming.Flow.Reverses.gainlessOn_iff`, `Becoming.Flow.Dissipative.irreversible`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 6. Passing is finite, balanced, lossless and enclosed at every step, each exchange reversed at the next, arising and ceasing recurring, its history growing by one at every step. (`Becoming.Passing.passes`, `Becoming.Passing.history_grows`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 7. The record: with the record of the exchanges counted as a condition given to and never taken from, balance with the record counted is balance, as a whole and at each step on each family. (`Becoming.Flow.withRecord`, `Becoming.Web.withRecord`, `Becoming.Flow.balances_withRecord`, `Becoming.Flow.balancesOn_withRecord`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 8. A flow dissipates on a family across a step exactly where, for some record, every exchange conserves the family with its record exactly and leaves the record at least one unit, and exactly where, recording each exchange at one unit, the family with its record gains nothing. (`Becoming.Flow.dissipatesOn_iff_conserved`, `Becoming.Flow.dissipatesOn_iff_unitRecord`, `Becoming.Flow.dissipatesOn_iff_recorded`, `Becoming.Flow.Dissipative.of_recorded`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 9. Both parts are needed; under the first law the record receives exactly what the family loses. (`Becoming.Passing.record_needs_both`, `Becoming.Flow.GainlessOn.residues_lost`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 10. The amount dissipated never falls; with the stock it is conserved under the first law, the history is within it, and under loss in proportion q everything taken is at most q + 1 times it. (`Becoming.Flow.dissipated`, `Becoming.Flow.dissipated_mono`, `Becoming.Flow.Balances.stock_dissipated`, `Becoming.Flow.Balances.history_within`, `Becoming.Flow.DissipatesBy.uptake_le_lost`, `Becoming.Flow.uptake_within_dissipated`)
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 11. Configurations: under the first law the family's configuration stays among its stock's configurations, configurations n K listing each way K units fall into n members exactly once. (`Becoming.Web.config_within`, `Becoming.configurations`, `Becoming.configurations_exact`)
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 12. Never revisiting, it changes at most that many times, so its change does not recur, and change without end revisits, and under dissipation a family never revisits. (`Becoming.Web.Revisits`, `Becoming.Flow.Balances.changes_within`, `Becoming.Flow.Balances.changes_within_conserving`, `Becoming.Flow.Balances.rests_of_never_revisits`, `Becoming.Flow.Balances.unending_change_revisits`, `Becoming.World.arising_revisits`, `Becoming.Flow.Balances.never_revisits`)
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 13. The arrow: a quantity of the configuration that never falls and rises at every change rules out revisiting, so under the first law an arrow leaves change not recurring and while change goes on there is none. (`Becoming.Web.Arrow`, `Becoming.Web.never_revisits_of_arrow`, `Becoming.Flow.Balances.rests_of_arrow`, `Becoming.Flow.Balances.no_arrow`, `Becoming.World.no_arrow`, `Becoming.Passing.no_arrow`)
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 14. Merging: where change is a function of the configuration, rest after a change merges two configurations, with no law of the flow. (`Becoming.Web.Determined`, `Becoming.Web.merges_of_settles`, `Becoming.Web.Merges`)
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 15. Merging none, change never stops and under the first law revisits; never revisiting, under an arrow or under dissipation, it is not the case that it merges none. (`Becoming.Web.changes_persist`, `Becoming.Flow.Balances.revisits_of_apart`, `Becoming.Flow.Balances.merges_of_never_revisits`, `Becoming.Flow.Balances.merges_of_arrow`, `Becoming.Flow.Balances.merges_of_dissipates`)
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 16. Holding the history: where the configuration carries the history, its reading is an arrow, exchange stops within the configurations under the first law, and a finite world that keeps exchanging forgets. (`Becoming.Flow.CarriesHistory`, `Becoming.Flow.Balances.arrow_of_carries`, `Becoming.Flow.Balances.exchange_stops_of_carries`, `Becoming.World.forgets`)
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 17. Gathering: under exact conservation, every step enclosed, a record's level rises without end, gaining from beyond, in a world that is not finite. (`Becoming.Gathering.gathers`)
+    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 18. Instances of the laws of change: revisiting after a change is revisiting, an arrow marks every change, a merge along the family is a merge of the law, and determined change runs along the law's orbit. (`Becoming.Web.Revisits.recurs`, `Becoming.Web.Arrow.marks`, `Becoming.Web.Merges.law`, `Becoming.Web.Determined.orbit`)
+    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 19. The first law keeps the configurations among those within the stock at T (this bound is the supplied Z), so from every step on the configuration takes one value twice, constructively, and an arrow stops change. (`Becoming.Flow.Balances.held`, `Becoming.Flow.Balances.recurs`, `Becoming.Flow.Balances.arrow_stops`)
+    - *Master laws, by Lean dependency:* balance and finite runs; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 20. Within that bound a law merging nothing brings the start back (the bound does the work, not losing alone: the successor law merges nothing and never returns); the present forgets the kept history; and an arrow or dissipation rules out a law merging nothing. (`Becoming.Flow.Balances.returns_of_conserving`, `Becoming.Law.succ_open`, `Becoming.Flow.Balances.present_forgets`, `Becoming.Flow.Balances.not_conserving_of_arrow`, `Becoming.Flow.Balances.not_conserving_of_dissipates`)
+    - *Master laws, by Lean dependency:* balance and finite runs; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

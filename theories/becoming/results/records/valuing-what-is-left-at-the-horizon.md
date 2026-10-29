@@ -11,10 +11,15 @@
 ## Laws
 
 1. What a course draws across n + 1 steps with what it leaves after them is at most the start with what is given there and r for each step after, exactly where r is given at every step after the first, whatever is left; so for every course open from the start. (`Becoming.Optimum.drawn_add_left_le_most`, `Becoming.Optimum.most_left_iff`, `Becoming.Optimum.open_left_le_most`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. The order by what is drawn and what is left after the horizon, valued alike. The course standing at a level y of greatest renewal at every step after the start draws and leaves the most and is open over any horizon where the capacity covers what the first step draws down to y and r, so it is an optimum; the course draining y at the end is one too. (`Becoming.Optimum.byDrawnLeft`, `Becoming.Optimum.holdingTo_same`, `Becoming.Optimum.keeping_left_most`, `Becoming.Optimum.keeping_open`, `Becoming.Optimum.keeping_frontier_left`, `Becoming.Optimum.holding_frontier_left`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. Every optimum of every order rising with what is drawn and left stands at a level of greatest renewal at every step to the horizon, and the optima of the order by what is drawn and left are exactly the open courses doing so; where y is positive, the course keeping it is no optimum of the order by the draw alone. (`Becoming.Optimum.frontier_holds_left`, `Becoming.Optimum.frontier_left_iff`, `Becoming.Optimum.keeping_not_frontier`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. On a web, from a start s, a dependence every level of greatest renewal meets stands through the horizon under every such optimum, and one above every such level is broken at the first step and unmet through the horizon. (`Becoming.Web.frontier_kept_left`, `Becoming.Web.frontier_broken_left`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Witnesses: under a gate, from the dweller's need with capacity three, keeping the source at the need through and past the horizon is an optimum keeping the dweller at every step, draining at the end is one too, the optima are exactly the courses standing where the gate renews, and keeping is no optimum by the draw alone; under the logistic law every such optimum breaks the dweller at the first step. (`Becoming.Optimum.Holding.gated_left`, `Becoming.Optimum.Holding.logistic_left`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

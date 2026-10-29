@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-29T12:08:52+00:00",
+  "reviewed_at_utc": "2026-10-29T12:09:54+00:00",
   "statement": {
     "en": "The positive comparisons shared by every strict order that strict choices could come from are exactly the reach of the relation they show; such an order exists exactly where nothing shown returns, and beyond the reach no comparison is forced.",
     "zh": "严择所可出之每一严序所共有之正比较，恰为其所示之关系之及；此序有之，恰当所示无返；及之外，无比较为所迫。"
@@ -280,7 +280,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "803dbb7579c5d55989720bd42cde5e9bffe6c8518d04452042ad0a2479d17dad"
+      "sha256": "bfc9879dbf43ae9455f66a462df4c54c28138a2a1152cfb69871d4553e145360"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
@@ -314,8 +314,8 @@
   ],
   "history": [
     {
-      "en": "29 October 2026: added (RF round 1), what choices show of the order they come from: the shown reach, its exactness under no cycle, the freedom beyond it, choices among equals, and the witness of one search with two orders; after a review of the plan and a review of the Lean; study section 444.",
-      "zh": "2026年10月29日：新增（RF 第一轮），所择所示之序：所示之及，无环时之确，及外之自由，等者中之择，一搜二序之例；经计划之审与 Lean 之审；研究第 444 节。"
+      "en": "29 October 2026: added (RF round 1), what choices show of the order they come from: the shown reach, its exactness under no cycle, the freedom beyond it, choices among equals, and the witness of one search with two orders; after a review of the plan and a review of the Lean; study section 445.",
+      "zh": "2026年10月29日：新增（RF 第一轮），所择所示之序：所示之及，无环时之确，及外之自由，等者中之择，一搜二序之例；经计划之审与 Lean 之审；研究第 445 节。"
     }
   ]
 }

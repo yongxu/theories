@@ -11,6 +11,7 @@
 ## Laws
 
 1. Along a course whose rules favour, the share falls at no stretch; read against the share, the rule read later is not above the rule read earlier. (`Becoming.RuleCapture.share_kept_along`, `Becoming.RuleCapture.against_not_rising`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -11,8 +11,11 @@
 ## Laws
 
 1. The two-part family read in two tiers over any claims with a part read off each: the sustaining formation's included claims, whose activity is the condition meeting its need, are basic; the focal formation's are gains. (`Becoming.Ranking.basicTier`, `Becoming.Ranking.gainTier`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Under the stepwise reading's premises the course without the focal formation is lexically above the course with it: it keeps every basic event, the sustaining formation active and drawing nothing at every step of it, and holds one the other loses after the loss; the same relation by relation. (`Becoming.Ranking.basic_first_stepwise`, `Becoming.Ranking.basic_first_relational`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Every comparison meeting J1 (BasicPriority with these tiers) ranks absence above malignant growth under the stepwise and relation-level readings, where C alone leaves the two unranked. (`Becoming.Ranking.basic_first_ranks`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions

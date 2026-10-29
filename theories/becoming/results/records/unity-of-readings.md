@@ -11,9 +11,13 @@
 ## Laws
 
 1. Along a run, what a contextual system shows, each claim read with its context, are the relata of one world, each active exactly where it is shown with its value; as in Frame.world, nothing stands or is exchanged in it; no gluing is used, so what quantum measurements show is included. (`Becoming.Contextual.world`, `Becoming.Contextual.world_active`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. A condition's change across a step is read by its standing, as the rise and fall of its level, and by the exchange, as what the flow gave it beyond what it took and took beyond what it gave; the two read it alike exactly where the flow balances there, so the readings glue at every step exactly where the flow balances, and a frame of context-free claims of change fits exactly then. (`Becoming.ChangeReading`, `Becoming.Flow.changeReadings`, `Becoming.sub_add_add_right`, `Becoming.sub_eq_of_add_eq`, `Becoming.add_eq_of_sub_eq`, `Becoming.changes_agree_iff`, `Becoming.Flow.changeReadings_agree_iff`, `Becoming.Flow.changeReadings_glue_iff`, `Becoming.Flow.changeReadings_glue_everywhere_iff`, `Becoming.Flow.changeReadings_free_iff`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. With the rest counted the two readings glue at every step: the rest's exchange is the difference between them, counted as a relatum; the readings of every world glue at every step, its own readings glue exactly where it balances, which is exactly where the rest is never active, and the world is a run of the law of exchange whose standings are the world's. (`Becoming.Flow.changeReadings_glue_counting_rest`, `Becoming.World.unity`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 4. Significance under the same standard of invariance (a restatement, not a new result): with the whole admissible and the presupposition boundary-invariant, it holds as the boundary is drawn somewhere exactly where the continuation of everything has significance from that standpoint; a rival bounded by a region holding the self's closure meets the standard exactly where the region is everything. (`Becoming.presupposition_iff_all_of_invariant`, `Becoming.bounded_invariant_iff`)
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

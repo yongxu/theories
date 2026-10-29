@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-29T12:08:52+00:00",
+  "reviewed_at_utc": "2026-10-29T12:09:54+00:00",
   "statement": {
     "en": "From the member on whom every later member reads only the acts before it, a pool's acts are alike across worlds alike through the earlier members' couplings: it reaches only what couples into those read first, however many follow.",
     "zh": "自其后每一成员唯读其前之行者起，池之行于前者耦合无别之二世界皆同：其所及唯在先所读者之所耦合入，后继者多寡不论。"
@@ -179,7 +179,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "803dbb7579c5d55989720bd42cde5e9bffe6c8518d04452042ad0a2479d17dad"
+      "sha256": "bfc9879dbf43ae9455f66a462df4c54c28138a2a1152cfb69871d4553e145360"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
@@ -213,8 +213,8 @@
   ],
   "history": [
     {
-      "en": "29 October 2026: added (RF round 1), readers reading readers: from a cascade on, a pool reaches only the couplings of those read first; a member carrying its coupling; copying; after a review of the plan and a review of the Lean; study section 444.",
-      "zh": "2026年10月29日：新增（RF 第一轮），读者读读者：自级联起池唯及在先所读者之耦合；载其耦合之员；相仿；经计划之审与 Lean 之审；研究第 444 节。"
+      "en": "29 October 2026: added (RF round 1), readers reading readers: from a cascade on, a pool reaches only the couplings of those read first; a member carrying its coupling; copying; after a review of the plan and a review of the Lean; study section 445.",
+      "zh": "2026年10月29日：新增（RF 第一轮），读者读读者：自级联起池唯及在先所读者之耦合；载其耦合之员；相仿；经计划之审与 Lean 之审；研究第 445 节。"
     }
   ]
 }

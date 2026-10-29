@@ -11,10 +11,15 @@
 ## Laws
 
 1. Whether a formation exchanges with some member of a list is decided by going through the list; where a family closes a step, a formation exchanges exactly where it takes part and exchanges within the family, so the formations taking part, listed once, are kept to those that exchange: a census read off the exchange, with no decision procedure supplied. (`Becoming.Flow.ExchangesWithin`, `Becoming.Flow.exchangesWithin_decided`, `Becoming.of_not_not`, `Becoming.Flow.exchanging_iff_within`, `Becoming.Flow.listed_at_of_closed`, `Becoming.Flow.listed_at_of_enclosed`, `Becoming.Flow.readOff_census_of_closed`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. With the rest counted, every world whose formations taking part are listed once and whose steps a named family closes has a census; so does every finite world whose formations taking part are listed once, where World.Finite.counted needed activity decided. (`Becoming.World.withRest_counted`, `Becoming.World.Finite.withRest_counted`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Without enclosure, that a world read off an exchange fails a census at a step is refuted: of a list without repetition, the members meeting any property cannot fail to be listable. (`Becoming.listed_of_em`, `Becoming.not_not_listed`, `Becoming.Flow.not_not_listed_at`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. A census at every step of every flow over Nat with its formations listed once is exactly LPO: under marking s a formation exchanges exactly where s marks something. (`Becoming.Flow.marking`, `Becoming.Flow.cond_pos`, `Becoming.Flow.marking_exchanging`, `Becoming.Flow.memDecided`, `Becoming.Flow.listed_iff_lpo`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Enclosure is not read off: read off the spreading law, which gives every relatum a unit, the rest is idle and no step is enclosed, and the world has a census all the same. (`Becoming.ExchangeLaw.spreading`, `Becoming.ExchangeLaw.spreadingWorld`, `Becoming.ExchangeLaw.spreading_closed`, `Becoming.ExchangeLaw.origin`, `Becoming.ExchangeLaw.optionIndex`, `Becoming.ExchangeLaw.spreading_not_enclosed`, `Becoming.ExchangeLaw.spreading_counted`)
+   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions
