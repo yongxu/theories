@@ -105,5 +105,8 @@ b = b.replace(old[0], f'batch B, the other 87, landed 29 October 2026 (study §{
 old2 = 'DF3: batch A landed (study §436); batch B, the other 87 schema-1 records, claimed 28 October 2026.'
 assert b.count(old2) == 1
 b = b.replace(old2, f'DF3: batch A landed (study §436) and batch B (study §{N}); every record is on schema 2.')
+mv = "to start after OU3c's and fork 2's changes to measure_grammar.py land, on fork 2's version."
+assert b.count(mv) == 1
+b = b.replace(mv, "on the measure as OU3c, fork 2's categories and OU3d left it (all landed); it waits on Ren's go-ahead.")
 BOARD.write_text(b, encoding='utf-8')
 print('STUDY_SECTION', N)
