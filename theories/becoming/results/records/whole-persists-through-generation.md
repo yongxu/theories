@@ -17,15 +17,15 @@
 3. On any web, a whole arises across a step only as some part arises across it, so a whole that arises at arbitrarily late steps has parts arising at arbitrarily late steps. (`Becoming.Web.Whole.arises_part`, `Becoming.Web.Whole.parts_unceasing`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. On any web, where parts cover the steps from T on and no part is active at two steps d apart, no d consecutive steps from any step at or after T pass with no part arising. (`Becoming.Web.Covered.arises_within`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 5. On any web, where parts cover the steps from T on, every part's activity ends and the active parts are listed: no step is followed only by steps at which no part arises, and, for any finite list of parts, none only by steps at which no part outside the list arises. (`Becoming.Web.Covered.needs_arising`, `Becoming.Web.Covered.needs_new`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 6. On any web, a whole active at every step from T on is covered by its parts from T on; so with parts none of which is active at two steps d apart, no d consecutive steps from T on pass with no part arising, and with parts that each end and are listed, no step is followed only by steps with no part arising, nor, for a finite list of parts, with none outside it arising. (`Becoming.Web.Whole.covered`, `Becoming.Web.Whole.arises_within`, `Becoming.Web.Whole.needs_arising`, `Becoming.Web.Whole.needs_new`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 7. Witness: a whole of one part that is active at every step, its active parts listed, is active at every step while nothing ever arises, the part's activity not ending. (`Becoming.Immortal.immortal`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 8. Witness: with infinitely many parts, the n-th active up to step n, every part's activity ends, the whole is active at every step and nothing ever arises; so no list names exactly its active parts at each step. (`Becoming.Countless.countless`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 9. Witness: with the n-th member active at steps n and n + 1, the lineage is the whole of its members, which are listed, end and are brief for two steps; the lineage is active at every step and never arises, while a member arises at every step. (`Becoming.Generations.generations`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 10. Witness: with the n-th member active at steps 2n and 2n + 1, the lineage is the whole of its members and active at every step, its members are brief for two steps, and no member arises across a step from an even step: the bound two of the law for brief parts is attained. (`Becoming.Shifts.shifts`)
@@ -33,7 +33,7 @@
 11. Witness: with the n-th member active only at step n and only if n is odd, the lineage is the whole of its members, which are listed and end; parts arise at arbitrarily late steps, yet the whole is inactive at every even step. (`Becoming.Gaps.gaps`)
     - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 12. Witness: a lineage active at every step with two members active at alternate steps is the whole of its members, each brief for one step, so no step passes with no member arising across it; every arising is of one of the two members, and neither member's activity ends. (`Becoming.Layered.composed`, `Becoming.Layered.brief`, `Becoming.Layered.within`, `Becoming.Layered.arise_again`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -128,6 +128,7 @@ The fifth independent review found that a lineage and its members are two levels
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T125805.763052Z/verification.json) | — |
 
 Aliases: `Becoming.Web.Whole`, `Becoming.Web.Listed`, `Becoming.Web.Ends`, `Becoming.Web.Brief`, `Becoming.Web.Whole.arises_part`, `Becoming.Web.Whole.parts_unceasing`, `Becoming.Web.Whole.arises_within`, `Becoming.Web.Whole.needs_arising`, `Becoming.Generations.generations`, `Becoming.Shifts.shifts`, `Becoming.Immortal.immortal`, `Becoming.Countless.countless`, `Becoming.Gaps.gaps`, `Becoming.Layered.composed`, `Becoming.Web.Covered`, `Becoming.Web.whole_self`, `Becoming.Web.Covered.needs_new`, `Becoming.Web.Whole.needs_new`, `Becoming.Layered.arise_again`
 
