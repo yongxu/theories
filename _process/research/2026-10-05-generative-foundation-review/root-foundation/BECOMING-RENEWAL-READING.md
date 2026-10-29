@@ -21096,3 +21096,32 @@ Output→input: conditioning-by-restriction, free-energy-bounds-surprisal, gener
 **Decisions at landing.** Two records, the claims being distinct: the periphery's identities on the reals and the core's law in counting form, both in 03 §6 after UE17's free energy, since expected free energy is read there through a lumping. The core module is a leaf at L1 importing `ConditionalWeights` alone; the periphery module sits in `lean/free-energy/` beside `FreeEnergyReals`, which it imports, with its own checker, and the core does not import it. No theorem joins the halves: the periphery's ratio law is stated on UE17's posterior, the core's on the core's share given the record, and the join through `givenShare_eq_posterior` is named as not stated.
 
 **Readings** [AI reading, D45]. Seeking information within a model separates only what some experiment it can choose separates: the epistemic drive corrects within its hypothesis space, under the policies it has, not beyond. What changes a lumping is what couples in from beyond the model, a new likelihood or a new hypothesis, as the laws of registration revision state; the principle's own literature adds novelty and structure learning for this reason, both conditioning in a larger model, whose ties the law covers too. So what the theory adds to active inference here is where its self-correction ends, stated for every policy.
+
+## 454. The free-energy principle in the theory, on one page (UE20)
+
+UE16 to UE19 stated the free-energy principle's quantities and claims in the theory and forbade four statements of its literature. UE20 gathers them for readers from that literature on [one page](../../../../theories/becoming/FREE-ENERGY-PRINCIPLE.md), as the last item of the plan for the principle as an integral part of the theory ([plan](development/ue-unified-explanation/FEP-INTEGRATION.md)).
+
+```text
+Result(s): none new; the page theories/becoming/FREE-ENERGY-PRINCIPLE.md, documents only, with no Lean and no record.
+Delta: (1) claim by claim: belief, surprisal, variational and expected free energy, the Markov blanket, self-evidencing,
+       the existence claim and the habit, each with its home section, standing and relation, and the statements of the
+       literature forbidden or graded.
+       (2) where the two agree, labelled as readings: perception as conditioning, the blanket's partition as the
+       couplings, the habit as a count, risk for a point prediction, collective knowledge within the pooled couplings.
+       (3) the four third parts with their hypotheses, the readings' failure conditions and their standing; three more
+       statements graded under the laws of a code, not counted.
+       (4) what persistence needs: the existence claim forbids nothing alone; the unseen break on a blanketed agent.
+       (5) what the principle states that the theory cannot yet.
+Premises: none beyond the linked records'.
+Evidence: an independent review by another AI agent (REVIEW-UE20), fourteen findings, every one taken, and a re-check
+       (RECHECK-UE20); the page's links checked at landing.
+Boundary: adds no result; every law is stated once in its home section and the page says no more than that statement.
+Output→input: conditioning-by-restriction, free-energy-bounds-surprisal, expected-free-energy-and-its-terms,
+       what-seeking-cannot-separate, the-markov-blanket-as-a-coupling-structure, what-the-existence-claim-forbids,
+       identical-cells-under-a-descent-treating-them-alike, risk-minimization-on-a-shared-renewal,
+       capture-by-counted-choices → the page → 03 §6, 08 §8, FEP-INTEGRATION, UE.
+```
+
+**The review and the fix round.** An independent read-only review by another AI agent ([REVIEW-UE20](development/ue20-fep-in-the-theory/REVIEW-UE20.md)) checked every Lean name and link, the attributions against the records and four papers at their sources, and the page against the plan's list of quantities and claims. It found the links and names right and the summaries saying more than their sources: readings stated as laws, a witness stated as a law, a free energy counted among the readings alike at the step where it can differ, two wrong sentences on the papers' simulations and on refutation, and claims left unplaced. Its fourteen findings are all taken: the readings labelled, the held pair marked as a witness, the free energy placed before the break registers with no action changing the supply, the simulations and refutation conditions stated paper by paper, the three statements under the laws of a code placed and not counted, and §5 completed. The reviewer then re-checked the fold ([RECHECK-UE20](development/ue20-fep-in-the-theory/RECHECK-UE20.md)): twelve findings taken soundly and two in part, with five findings, every one taken: the code law's conditions and the papers' systems for the three statements under it, the ecosystems paper's sentence on shared goals read as a guarantee, expected free energy's source, the pool's pairwise law beside collective knowledge, kept apart from the reading drawn from it, and the uniqueness clause in 05 §9's words.
+
+**Decisions at landing.** The page sits in `theories/becoming/` beside the collective-direction page, linked from 03 §6 after the free-energy laws, from 08 §8's bullet on UE1's record and from the plan. The reviewed draft became the page by a move, so no copy stays beside it. UE1's record already reads as a containment with its third parts, brought there by UE16 and UE19, so it is unchanged. With UE20 the plan's "done when" holds: UE16 to UE20 landed after a review and a re-check, every quantity and claim of the plan's list has a record, and the page places each claim.
