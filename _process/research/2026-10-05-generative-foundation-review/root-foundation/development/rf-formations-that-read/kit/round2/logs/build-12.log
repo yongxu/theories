@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/rf-landing/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/tree",
+  "modules": 13,
+  "ran": [
+    "Becoming.ReflexivePrediction",
+    "BecomingReflexivePredictionAxiomAudit"
+  ],
+  "reused": 12,
+  "unclean": [],
+  "audits": {
+    "Becoming.ReflexivePrediction": {
+      "theorems": 22,
+      "declarations": 26,
+      "with_axioms": {}
+    }
+  }
+}

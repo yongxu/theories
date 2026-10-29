@@ -66,6 +66,11 @@
    "base": "old-base",
    "note": "PoolCourse: self-recruiting pool reach"
   },
+  "a-prediction-read-by-what-it-predicts": {
+   "region": "knowing",
+   "base": "general",
+   "note": "ReflexivePrediction RF6.3: right where the response leaves it; the least right prediction on a chain"
+  },
   "a-race-for-position-draws-everything": {
    "region": "collective",
    "base": "general",
@@ -75,6 +80,11 @@
    "region": "map",
    "base": "general",
    "note": "RuleCapture: no ratchet when rule read against share"
+  },
+  "a-reading-kept-by-its-update": {
+   "region": "knowing",
+   "base": "general",
+   "note": "ReadingLoop RF3: a reading kept by its update, good and enabled acts for it; the worlds possible after a history and a history policy"
   },
   "a-regularity-kept-and-changed": {
    "region": "root",
@@ -135,6 +145,11 @@
    "region": "knowing",
    "base": "general",
    "note": "CommonTaskRevision: goal revision of pending task"
+  },
+  "acts-alike-from-a-model-or-from-an-order": {
+   "region": "knowing",
+   "base": "general",
+   "note": "ReadingLoop RF-M: formations related by a relation their steps keep act alike; an unresolved model and a reversed ranking"
   },
   "adaptive-closure-cannot-resolve": {
    "region": "knowing",
@@ -2186,6 +2201,11 @@
    "base": "general",
    "note": "symmetry; hexagram instance"
   },
+  "what-a-course-chosen-through-its-model-does-not-test": {
+   "region": "knowing",
+   "base": "general",
+   "note": "ReadingLoop RF-M: two worlds and one formation, a formation keeping candidate laws, keeping a task as not telling worlds apart"
+  },
   "what-a-course-keeps-reachable": {
    "region": "significance",
    "base": "old-base",
@@ -3643,6 +3663,11 @@
    "base": "old-base",
    "note": "activity/drawing/requirement read off exchange (P107)"
   },
+  "Becoming.ReadingLoop": {
+   "region": "knowing",
+   "base": "general",
+   "note": "RF3 and RF-M the reading loop (03 §12)"
+  },
   "Becoming.ReadingSchedule": {
    "region": "knowing",
    "base": "old-base",
@@ -3682,6 +3707,11 @@
    "region": "method",
    "base": "general",
    "note": "P83c chain of equivalences stops within its classes"
+  },
+  "Becoming.ReflexivePrediction": {
+   "region": "knowing",
+   "base": "general",
+   "note": "RF6.3 a prediction read by what it predicts (03 §12)"
   },
   "Becoming.RegimeMargin": {
    "region": "map",
