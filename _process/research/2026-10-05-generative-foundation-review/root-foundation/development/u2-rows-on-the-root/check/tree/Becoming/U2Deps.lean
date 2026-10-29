@@ -4,10 +4,14 @@ import Becoming.U2Check
 /-!
 # Scratch dependency check of the U2 readings (not a landed module)
 
-For each reading: whether its proof reaches its row (through declarations of `Becoming`, not
-expanding grammar constants), and which grammar constants its statement names directly. A grammar
-constant is one with a «» name or one declared in a module named `Becoming.Grammar*`, as OU3b's
-measure recognises them.
+A reachability and mention check, its own test and not OU3b's measure. For each reading it reports:
+whether its proof reaches its row's declaration (through declarations of `Becoming`, grammar constants
+not expanded); the grammar terms its statement names, a grammar term being a «» name other than the
+relation type «际»; and every other constant its statement names that is neither a grammar term, nor
+one of the readings' own named relations (`Becoming.ModelStatements`), nor a relation of WRT2's or
+WRP2's models listed below, nor a constant of Lean's `Init`. That last list is what the reading keeps
+in other terms: the row's own notion on the left of a definitional reading, the model's structures
+and their data, and supplied parameters' types.
 -/
 
 open Lean
@@ -15,31 +19,37 @@ open Lean
 #eval show CoreM Unit from do
   let env ← getEnv
   let pairs : List (Name × Name) := [
-    (`Becoming.U2Check.roles_supported_reading, `Becoming.Web.roles_supported),
-    (`Becoming.U2Check.roles_dependent_reading, `Becoming.Web.roles_dependent),
-    (`Becoming.U2Check.roles_alive_reading, `Becoming.Web.roles_alive),
-    (`Becoming.U2Check.renewingAt_reading, `Becoming.Web.renewingAt_iff_over_all),
-    (`Becoming.U2Check.transmits_at_reading, `Becoming.Web.transmits_at_iff),
-    (`Becoming.U2Check.transmits_at_one_kind, `Becoming.Web.transmits_at_iff),
-    (`Becoming.U2Check.identifies_iff_reading, `Becoming.Limit.identifies_iff_tracks),
-    (`Becoming.U2Check.kernel_and_reading, `Becoming.Viability.kernel_and_iff),
-    (`Becoming.U2Check.verifiableBy_reading, `Becoming.Ideals.verifiableBy_iff_interior),
-    (`Becoming.U2Check.significant_iff_held_reading, `Becoming.Valuation.significant_iff_held),
-    (`Becoming.U2Check.significance_undetermined_reading, `Becoming.Web.significance_undetermined),
-    (`Becoming.U2Check.only_together_reading, `Becoming.Dependence.Overdetermined.only_together),
-    (`Becoming.U2Check.response_not_fixed_reading, `Becoming.ExchangeLaw.response_not_fixed_by_coupling),
-    (`Becoming.U2Check.differenceOnlyTogether_reading, `Becoming.Dependence.differenceOnlyTogether_iff),
-    (`Becoming.U2Check.not_fixes_reading, `Becoming.Run.not_fixes_of_untaken),
-    (`Becoming.U2Check.run_agrees_every_start_reading, `Becoming.SharedCodes.run_agrees_every_start_iff),
-    (`Becoming.U2Check.living_on_reaches_reading, `Becoming.Web.living_on_reaches),
-    (`Becoming.U2Check.descent_reaches_reading, `Becoming.Flow.descent_reaches),
-    (`Becoming.U2Check.unselected_beyond_data_reading, `Becoming.Learning.Training.unselected_beyond_data),
-    (`Becoming.U2Check.no_exact_finite_reading_reading, `Becoming.Renewable.no_exact_finite_reading)]
-  let isGrammar : Name → Bool := fun n =>
-    n.toString.any (· == '«') ||
-      match env.getModuleIdxFor? n with
-      | some idx => (env.allImportedModuleNames[idx.toNat]!).toString.startsWith "Becoming.Grammar"
-      | none => false
+    (`Becoming.ModelStatements.roles_supported_reading, `Becoming.Web.roles_supported),
+    (`Becoming.ModelStatements.roles_dependent_reading, `Becoming.Web.roles_dependent),
+    (`Becoming.ModelStatements.roles_alive_reading, `Becoming.Web.roles_alive),
+    (`Becoming.ModelStatements.renewingAt_iff_over_all_reading, `Becoming.Web.renewingAt_iff_over_all),
+    (`Becoming.ModelStatements.transmits_at_reading, `Becoming.Web.transmits_at_iff),
+    (`Becoming.ModelStatements.identifies_iff_reading, `Becoming.Limit.identifies_iff_tracks),
+    (`Becoming.ModelStatements.verifiableBy_reading, `Becoming.Ideals.verifiableBy_iff_interior),
+    (`Becoming.ModelStatements.significant_iff_held_reading, `Becoming.Valuation.significant_iff_held),
+    (`Becoming.ModelStatements.significance_undetermined_reading, `Becoming.Web.significance_undetermined),
+    (`Becoming.ModelStatements.only_together_reading, `Becoming.Dependence.Overdetermined.only_together),
+    (`Becoming.ModelStatements.response_not_fixed_reading, `Becoming.ExchangeLaw.response_not_fixed_by_coupling),
+    (`Becoming.ModelStatements.kernel_and_reading, `Becoming.Viability.kernel_and_iff),
+    (`Becoming.ModelStatements.differenceOnlyTogether_reading, `Becoming.Dependence.differenceOnlyTogether_iff),
+    (`Becoming.ModelStatements.not_fixes_reading, `Becoming.Run.not_fixes_of_untaken),
+    (`Becoming.ModelStatements.run_agrees_every_start_reading, `Becoming.SharedCodes.run_agrees_every_start_iff),
+    (`Becoming.ModelStatements.optimum_broken_reading, `Becoming.Web.optimum_broken_iff),
+    (`Becoming.ModelStatements.living_on_reaches_reading, `Becoming.Web.living_on_reaches),
+    (`Becoming.ModelStatements.descent_reaches_reading, `Becoming.Flow.descent_reaches),
+    (`Becoming.ModelStatements.unselected_beyond_data_reading, `Becoming.Learning.Training.unselected_beyond_data),
+    (`Becoming.ModelStatements.finite_reading_not_exact, `Becoming.Renewable.no_exact_finite_reading)]
+  let moduleOf : Name → Option Name := fun n =>
+    (env.getModuleIdxFor? n).map fun idx => env.allImportedModuleNames[idx.toNat]!
+  let fromInit : Name → Bool := fun n =>
+    match moduleOf n with
+    | some m => m.getRoot == `Init
+    | none => false
+  let isGrammarTerm : Name → Bool := fun n => n.toString.any (· == '«') && n != `Becoming.«际»
+  let ownRelations : Name → Bool := fun n => (`Becoming.ModelStatements).isPrefixOf n
+  let modelRelations : List Name := [`Becoming.World.withinStep, `Becoming.Web.partialIdentity,
+    `Becoming.Steps.along, `Becoming.Steps.next, `Becoming.moveRel, `Becoming.sameValue,
+    `Becoming.Web.admitted, `Becoming.Web.roles, `Becoming.Steps, `Becoming.«际»]
   let mut failures : Array String := #[]
   for (reading, row) in pairs do
     let some info := env.find? reading | throwError s!"missing {reading}"
@@ -56,13 +66,16 @@ open Lean
         if seen.contains n then continue
         seen := seen.insert n
         if n == row then usesRow := true
-        if !((`Becoming).isPrefixOf n) || isGrammar n then continue
+        if !((`Becoming).isPrefixOf n) || isGrammarTerm n then continue
         match env.find? n with
         | some ci =>
           let used := ci.type.getUsedConstants ++ (ci.value?.map Expr.getUsedConstants).getD #[]
           todo := used.toList ++ todo
         | none => pure ()
-    let stated := (info.type.getUsedConstants.filter isGrammar).toList.eraseDups
-    logInfo m!"{reading}: uses its row {row}: {usesRow}; grammar terms in the statement: {stated}"
-    if !usesRow || stated.isEmpty then failures := failures.push reading.toString
+    let stated := info.type.getUsedConstants.toList.eraseDups
+    let grammar := stated.filter isGrammarTerm
+    let other := stated.filter fun n => !(isGrammarTerm n) && !(ownRelations n) &&
+      !(modelRelations.contains n) && !(fromInit n)
+    logInfo m!"{reading.getString!} | row reached: {usesRow} | grammar terms: {grammar} | other terms: {other}"
+    if !usesRow || grammar.isEmpty then failures := failures.push reading.toString
   unless failures.isEmpty do throwError m!"readings failing the check: {failures}"

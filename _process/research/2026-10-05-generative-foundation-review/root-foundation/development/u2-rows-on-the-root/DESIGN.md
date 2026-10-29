@@ -2,236 +2,247 @@
 
 AI-written design, 29 October 2026, on main at `5956c2cff`, branch `u2`. No Lean in the package.
 
-U2 is an item of full unification (OU plan §十三 item 13, 全二, decision D25; [WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md), FU's U2 in [the proposal](../fu-full-unification/PROPOSAL.md)). OU's owner posted it with its gate open once WRP2 landed and gave it to WRP's designer, this session. The order is a design first, with scratch checks, then one independent review. No Lean is claimed before that review.
+U2 is an item of full unification (OU plan §十三 item 13, 全二, decision D25; [WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md), FU's U2 in [the proposal](../fu-full-unification/PROPOSAL.md)). OU's owner posted it, proposed with its gate open, on its branch `ou-after-wrp2` (`00b5fe590`). That board row is not yet on main. OU's owner gave the item to WRT's and WRP's designer, this session. The shape is a design first, with scratch checks, then one independent review; no Lean is claimed before that.
+
+**Status: reviewed once; every finding is taken ([REVIEW-U2](REVIEW-U2.md)).**
 
 **Scratch.**
-- [check/tree/Becoming/U2Check.lean](check/tree/Becoming/U2Check.lean): 48 theorems in 68 declarations, every axiom report empty. Built with `scratch_build.py` against main `5956c2cff` ([log](check/scratch-4.log)).
-- [check/tree/Becoming/U2Deps.lean](check/tree/Becoming/U2Deps.lean): a dependency check, run with Lean directly because it imports `Lean` ([log](check/deps.log)). For each reading it confirms two things. The reading's proof reaches its row's declaration. And its statement names grammar constants: `«»` names, or declarations of a `Becoming.Grammar*` module, as OU3b's measure recognises them.
+- [check/tree/Becoming/U2Check.lean](check/tree/Becoming/U2Check.lean): 77 theorems in 120 declarations, every axiom report empty, built with `scratch_build.py` against main `5956c2cff` ([log](check/scratch-5.log)). Its namespace, `Becoming.ModelStatements`, is the one proposed for the leaf.
+- [check/tree/Becoming/U2Deps.lean](check/tree/Becoming/U2Deps.lean): a dependency check, run with Lean directly because it imports `Lean` ([log](check/deps.log)). It is its own test, not OU3b's measure. For each reading it reports three things:
+  - whether the proof reaches the row's declaration;
+  - the grammar terms its statement names: «» names other than the relation type «际»;
+  - every other constant the statement names, beyond U2's own relations, WRT2's and WRP2's model relations, and Lean's `Init`.
 
-**Review.** Pending: one independent review.
+  That last list is what the reading keeps in other terms. It passes for all 20 readings, and §2's column records its report.
+- [check/tree/Becoming/U2Preserving.lean](check/tree/Becoming/U2Preserving.lean): §6's two cases of `«保之像»`, 2 theorems, empty axiom reports ([log](check/preserving.log)).
 
-## 0. What is asked, and what counts
+## 0. What is asked, and the one criterion
 
-**The rows.** OU3b's measure at WRP2's receipt rests 24 central rows on no master law under three categories:
+**The rows.** OU3b's measure at WRP2's receipt rests 24 central rows on no master law, under three categories:
 - 13 definitional or representational;
 - 7 laws of their models;
 - 4 single applications.
 
-Their reasons are [EC6's audit §(c)](../ec6-no-master-law/AUDIT.md) and the measure's `NO_LAW` table ([measure_grammar.py](../ou3b-master-laws-on-the-grammar/measure_grammar.py)). EC6's audit lists 14 definitional rows. The 14th, `partForms_iff`, stopped being central at EC6d, which put `PartForms.goAlike` in its place in COVERAGE's actor row.
+Their reasons are [EC6's audit §(c)](../ec6-no-master-law/AUDIT.md) and the `NO_LAW` table of [measure_grammar.py](../ou3b-master-laws-on-the-grammar/measure_grammar.py). EC6's audit has 14 definitional rows; its 14th, `partForms_iff`, left COVERAGE at EC6d, when the actor row came to cite `PartForms.goAlike` instead.
 
-**What a reading is.** A theorem whose statement is the row's, in the grammar's terms, at one of three places:
-- the World's occurrence model (WRT2);
-- a process's model of its moves' relations (WRP2);
+**A reading** is a theorem whose statement is the row's, stated at one of three places:
+- a World's occurrence model (WRT2's);
+- a process's model of its moves' relations (WRP2's);
 - the row's own carrier, where the row lives on one.
 
-Its proof goes through the row: it uses the row's theorem, and the row's proof is unchanged. U2Deps checks this for all 19 readings.
+Its proof goes through the row's theorem, whose proof is unchanged.
 
-**How it counts (change 1).** A reading counts as a representation, not a derivation. No row is derived from a grammar law here, and the count of rows reaching the grammar (全二, 44 of 118 distinct) does not change. The measure separating representation from derivation is MV's line (F5). U2 supplies its values: the table of §2, each row with its reading.
+**The criterion, the same for all 24 rows.** A row is stated at the model where every term of its statement is one of these:
+- a relation or region of the model: a grammar term, WRT2's or WRP2's selection, or a named relation of the model;
+- a named comparison of the model's given amounts, possibly with a supplied amount added (a need against a level, two levels, two outcomes' levels at a condition);
+- a supplied parameter;
+- in a definitional reading, the row's own notion on the left of the equivalence.
 
-**Premises (F2).** Every premise a reading takes is itself a grammar statement at that model: support, relational neutrality, a selection through the data, determinism, reading through a coupling, and the closure of a finite reading (§3).
+A row resists where a term of its statement is an amount computed over a family by arithmetic: sums, products, moments, the bound of a propagation. A relation "read from" such an amount would only be the statement renamed. Under this criterion 20 rows are read, 3 resist (§4), and 1 is U3's (§5).
 
-**Rows that resist.** For these the result is a written reason, not a forced reading (§4). No row moves only to change a count.
+**How it counts (change 1).** Each reading counts as a representation, not a derivation. No row is derived from a grammar law here, and the measure's count of central declarations reaching the grammar (45 of 127 rows, 44 of 118 distinct) does not change. Telling representation from derivation in the measure is MV's line (F5); U2 supplies its values, the row-to-reading pairs of §2.
 
-## 1. The models, and what U2 adds to them
+**Premises (F2).** The account's premises that the readings take are grammar statements at the model (§3), and so are the rows' other hypotheses, apart from what §3 lists as kept.
 
-### 1.1 The occurrence model of a web (WRT2's)
+## 1. The models, and what each added relation reads
 
-**Carrier and kinds.**
-- The carrier is `Nat × X`, for a web of one kind `V : Web X X`.
+**The occurrence model.**
+- For a web of one kind `V : Web X X`, the carrier is `Nat × X`.
 - A web of two kinds `W : Web F C` is read through its one-kind reading `W.roles` (`Becoming.Roles`), on the carrier `Nat × (F ⊕ C)`.
-- A World's web is of one kind, so every reading in this section is a statement at a World's occurrence model.
+- Every one-kind web is a World's web, through `World.of`, so these are statements at a World's occurrence model.
+- A valuation's claims `(x, t)` are the occurrences `(t, x)` with their coordinates swapped. The readings that involve claims (rows 21–22) state their relations on the occurrences.
 
-**WRT2's own selection, named.** These are its within-step relations and regions, read formation first, as `World.withinStep` reads them:
-- `requiring`: `World.withinStep V.requires`.
-- `drawing`.
-- `needMet`: a need within the condition's level at the step.
-- `activeAt`: activity, held as a region or as its partial identity.
-- `participating`: requiring or drawing, the union of two of WRT2's relations.
+| Relation or region | What it reads | In WRT2's ten carried relations? |
+|---|---|---|
+| `requiring`, `drawing`, `needMet`; activity, presence, standing, `giving` | within a step | yes (`World.reidentify_carries`) |
+| `participating` | within a step: requiring or drawing | a union of two of them; not shown to be carried |
+| `bearing` | within a step: requiring with the need's sign | no. It is of the kind `Reidentify.withinStep_carried` covers, but that is not stated for it |
+| partial identity at one occurrence `(· = (t, x))` (support) | names one occurrence | no |
+| `sameName` | one name at any two steps | no: it reads the names |
+| `Steps.along` | one name at consecutive steps (WRT2's names' step) | no |
+| `metAfter`, `belowAfter`, `keptAcross` | a need at `t` against a level at `t + 1`: the condition's name at two steps | no; not shown to be carried |
+| `undermined` | `Web.MetAbove`: requiring at every step since the dependence formed, a need met then, and the level at `t + 1` | no; not shown |
+| `comesToStand`, `descentStep`, `descendsRel` | standing at two steps along the names; presence and giving within a step; any steps through `sameName` | no; not shown |
+| `requiringOf c`, partial identity `(·.2 = c)` | the name `c` at every step | no |
+| `needWithin δ c` | two needs for `c` compared with `δ` added; the name `c` at two steps | no; the addition is outside U1's interface |
+| `atPair p q` | exactly one pair of occurrences | no |
 
-**Added: relations read from amounts across one step.** Each reads one name at two steps, so re-identification does not carry them, as WRT2 found for recurrence:
-- `metAfter`: an occurrence's need within the condition's level at the next step.
-- `keptAcross`: a dependence kept across the step.
-- `lostAcross`: a dependence lost across the step. It reads `Web.MetAbove`'s history along the names.
+**A process's model (WRP2's).**
+- `moveRel` (`Becoming.GrammarRegularity`), with three readings WRP2 uses: `«定后»` for `Determined` (`determined_iff_fixed`, Laws), `«所闭» (Steps P)` for reach (`reach_iff_withinClosure`, Frame), and the steps on `Nat`, `Steps.next` (Arising).
+- Runs are the model's lines (`run_iff_image`). Agreeing up to `h` reads the configurations within `«所闭» Steps.next` up to `h` and the moves before it, through `«及» Steps.next` (`agreeUpTo_iff`, `before_iff_lt`).
+- Added relations:
+  - `withholding f`, the supplied map read as a relation; withholding all parts is `«历»` of these (`withholdAll_iff_li`);
+  - `requiresAt` and `needMetAt`, regions of configurations: requiring, and a need against a level at one configuration;
+  - `breaking` and `keeping`, a need at `s` against levels at `s` and `t`.
+- The hearing process: what a word of hearings reaches is `«历»` of the moves (`reached_iff`). The copying relation `copies m e` is read from who hears whom at which sense.
 
-`keptAcross` and `lostAcross` are read as 缘, from the condition to the formation, as WRT2 reads requiring under `«逆»`.
+**The rows' own carriers.**
+- Claims: regions held as partial identities.
+- (step, formation) pairs: `Web.admitted` (OU3b's reading, needs against levels) met with `significantAt`.
+- Level histories: `couplingAlike` (`Web.Admits`, needs against levels, and levels equal at coupled conditions) and `exchangingAlike` (the meet over conditions of the `sameValue` classes of a supplied law's outputs).
+- Points and stretches: `member` and `onPoints`, on `X ⊕ α`.
+- Functions: `agreeingOn D`, the meet over the data of the `sameValue` classes of values.
+- Outcomes `C → Nat`: `exceedsOn` and `lowerBeyond`, comparisons of given levels.
 
-**Added: one descent and one need comparison.**
-- `descentAt t x g`: one descent, as a pair of occurrences, `x` at `t + 1` and `g` at `t`.
-- `requiringOf c`: the occurrences requiring `c`, a region.
-- `needWithin δ c`: two needs compared with `δ` added. This is an addition on amounts, which U1's limited interface does not hold.
-
-**So** support and dependence are grammar statements in WRT2's name-free selection alone. Keeping, renewal, undermining and transmission read the names and amounts across a step, through the relations just listed.
-
-### 1.2 A process's model (WRP2's)
-
-`moveRel P a` comes from `Becoming.GrammarRegularity`, used as WRP2 uses it. Three of WRP2's readings are used:
-- `«定后»` for `Determined`, by `determined_iff_fixed`;
-- `«所闭» (Steps P)` for reach, by `reach_iff_withinClosure`;
-- `Steps.next` on `Nat`, for the step index.
-
-Added: `breaking K g c` and `keeping K g c`, relations on configurations read from a dependence's amounts at two configurations (`Dependence.Breaks`, `Keeps`).
-
-### 1.3 The rows' own carriers
-
-| Carrier | Relations and regions |
-|---|---|
-| a valuation's claims | regions held as partial identities (`Web.partialIdentity`), as WRT2 holds activity |
-| (step, formation) pairs | `Web.admitted`, met with a significance region (`significantAt`) |
-| runs | `Run.AgreeUpTo h` |
-| level histories | `couplingAlike` and `exchangingAlike` (the meet over conditions of `sameValue` classes) |
-| a code's formations | `copies m e`, read from who hears whom at which sense |
-| points and stretches | `member` and `onPoints`, on one carrier `X ⊕ α` |
-| functions | `AgreeOn D` |
+**U1's limited interface.** It states equal counts from a matching and its residual-count laws, with their sums of counts. It states no product, no componentwise order of outcomes, and no comparison of a need with a level. So every comparison of a need with a level above (`needMet`, `Web.admitted`, `keeping`, `couplingAlike`) is a relation of the model read from amounts, not a law of the second sort, as is the order of outcomes (`exceedsOn`).
 
 ## 2. The rows
 
-Each row of the table is the row's statement at the place given. "Terms" are the grammar constants U2Deps finds in the reading's statement. The *Model* column uses three labels:
-- **occ.**, the occurrence model;
-- **proc.**, a process's model;
-- **own**, the row's own carrier.
+The *Model* column uses three labels: **occ.**, the occurrence model; **proc.**, a process's model; **own**, the row's own carrier. *Kept in other terms* is U2Deps' report, beyond the model's structures and data.
 
 ### 2.1 Definitional or representational (13)
 
-| # | Row (region) | Record | Reading in scratch | Model | Terms | What the reading states |
+| # | Row (region) | Record | Reading (scratch) | Model | Kept in other terms | What the reading states |
 |---|---|---|---|---|---|---|
-| 1 | `Web.roles_supported` (actor) | life-as-condition-of-life | `roles_supported_reading`, via `supported_iff` | occ., WRT2's selection | `«则»`, `«而»` | Support at `(t, x)`: what the occurrence requires lies within the needs met. |
-| 2 | `Web.roles_dependent` (patient) | life-as-condition-of-life | `roles_dependent_reading`, via `dependent_iff` | occ., WRT2's selection | `«则»`, `«而»` | Dependence: requiring from the active occurrences lies within the needs met. |
-| 3 | `Web.roles_alive` (life) | life-as-condition-of-life | `roles_alive_reading`, via `living_iff`, `underminingAt_iff` | occ., across a step | `«能»`, `«而»`, `«合»`, `«逆»` | Living: active, and with no drawing on a condition from which a dependence is lost across the step: `¬ «能» («而» drawing («合» («逆» requiring) lostAcross))`. |
-| 4 | `Web.renewingAt_iff_over_all` (evaluation) | represented-boundary-against-dependence | `renewingAt_reading`, via `renewingOver_iff`, `roles_renewingOver` | occ., across a step | `«则»`, `«而»`, `«逆»` | Renewal: active, and requiring, from the conditions it takes part in (the region of all), lies within the kept relation. |
-| 5 | `Web.transmits_at_iff` (evolution) | transmission-is-inheritance-and-need | `transmits_at_reading`, via `transmits_at_one_kind`, `inheritsAt_iff`, `needsWithinAt_iff` | occ., across a step | `«则»`, `«而»`, `«逆»`, `«合»` | Two inclusions. (1) What the descendant requires of `c`, carried back one step along the names (`«逆» Steps.along`), the giver requires. (2) The descent, where both require `c`, lies within the need-within relation, which is read from amounts with an addition. |
-| 6 | `Limit.identifies_iff_tracks` (learning) | learning-through-a-map-is-tracking-in-the-limit | `identifies_iff_reading`, via `tracks_iff`, `withinSteps_iff_le` | the step index | `«所闭»` | On each run, from some horizon, the closure of the steps on `Nat` lies within agreement with the constant target. That `n ≤ k` is `«所闭» Steps.next n k` is proved from the grammar's closure laws. |
-| 7 | `Ideals.verifiableBy_iff_interior` (knowing) | what-a-finite-stretch-verifies | `verifiableBy_reading`, via `interiorBy_iff` | own (`X ⊕ α`) | `«能»`, `«合»`, `«承»` | Every point the reading holds bears membership to a stretch whose every bearer the reading holds (`«承»`, what every condition held). |
-| 8 | `unrestricted_iff_livingSignificance` (significance) | continuation-condition-yields-living-significance | **U3's** (§5) | | | |
-| 9 | `Valuation.significant_iff_held` (evaluation) | living-significance-on-held-lives | `significant_iff_held_reading`, via four region readings | own (claims) | `«则»`, `«合»` | Where living lies within the own regions together, two things are the same. Living lies within every position's significance. And at each position its own living lies within its significance (S0), while living and significant from one position lies within every other's (N_std). |
-| 10 | `Web.significance_undetermined` (evaluation) | continuation-condition-yields-living-significance | `significance_undetermined_reading`, via `retains_iff`, `adds_iff` | own ((step, formation), claims) | `«则»`, `«合»`, `«逾»` | With the empty region of significance, what one path admits with it lies within what every other admits, and exceeds nothing. With the full region, living lies within significance; with the empty one it does not, where an event lives. A free region shown free. |
-| 11 | `Dependence.Overdetermined.only_together` (responsibility) | joint-difference-making | `only_together_reading`, via `overdetermined_iff` | proc. | `«能»`, `«合»`, `moveRel` | An overdetermined loss: the move's relation meets the breaking from the configuration and from each withholding. So the parts make the difference only together. |
-| 12 | `ExchangeLaw.response_not_fixed_by_coupling` (alignment) | what-a-pools-acts-respond-to | `response_not_fixed_reading`, via `through_iff_inclusion` | own (histories) | `«则»`, `sameValue`, `«谓»`, `«一»` | Reading through the coupling is an inclusion: alike through every formation's coupling lies within exchanging alike. Some such law does not relate the two histories by what is taken. Another has the full relation at every step. |
-| 13 | `Viability.kernel_and_iff` (maintenance) | conditions-kept-together | `kernel_and_reading`, via `kernel_iff` | proc. | `«所闭»` | A kernel: the closure of the steps from a configuration lies within the guard. It lies within a meet exactly where it lies within each. |
+| 1 | `Web.roles_supported` (actor) | life-as-condition-of-life | `roles_supported_reading` (`supported_iff`) | occ. | `Web.Supported`, on the left | Support at `(t, x)`: what the occurrence requires lies within the needs met. The partial identity of one occurrence is added to WRT2's relations |
+| 2 | `Web.roles_dependent` (patient) | life-as-condition-of-life | `roles_dependent_reading` (`dependent_iff`) | occ. | `Web.Dependent`, on the left | Requiring from the active occurrences lies within the needs met: WRT2's relations alone |
+| 3 | `Web.roles_alive` (life) | life-as-condition-of-life | `roles_alive_reading` (`living_iff`, `underminingAt_iff`) | occ., across a step | the living event, on the left | Active, and `¬ «能» («而» drawing («合» («逆» requiring) undermined))`: no drawing on a condition from which a dependence is undermined |
+| 4 | `Web.renewingAt_iff_over_all` (evaluation) | represented-boundary-against-dependence | `renewingAt_iff_over_all_reading` (`renewingAt_reading`, `renewingOver_reading`, `roles_renewingAt`, `roles_renewingOver`) | occ., across a step | none | Both sides at the model. Renewal at a step: active, and requiring, from the conditions taken part in, lies within the kept relation. Renewal over a region: the same, the source met with the region. The row is their equivalence for the region of every condition |
+| 5 | `Web.transmits_at_iff` (evolution) | transmission-is-inheritance-and-need | `transmits_at_reading` (`transmits_at_one_kind`, `inheritsAt_iff`, `needsWithinAt_iff`) | occ., across a step | transmission in the web's data, on the left | Two inclusions. (1) What the descendant at `t + 1` requires of `c`, read from the giver and carried back one step along the names, the giver at `t` requires. (2) The pair, where both require `c`, lies within `needWithin δ c` |
+| 6 | `Limit.identifies_iff_tracks` (learning) | learning-through-a-map-is-tracking-in-the-limit | `identifies_iff_reading` (`tracks_iff`, `withinSteps_iff_le`) | the step index | `Limit.Identifies`, on the left | On each run, from some horizon `n`, the closure of the steps from `n` lies within agreement with the constant target |
+| 7 | `Ideals.verifiableBy_iff_interior` (knowing) | what-a-finite-stretch-verifies | `verifiableBy_reading` (`interiorBy_iff`) | own (`X ⊕ α`) | `VerifiableBy`, on the left | Every point the reading holds bears membership to a stretch every bearer of which the reading holds (`«承»`) |
+| 8 | `unrestricted_iff_livingSignificance` (significance) | continuation-condition-yields-living-significance | U3's (§5) | | | |
+| 9 | `Valuation.significant_iff_held` (evaluation) | living-significance-on-held-lives | `significant_iff_held_reading` | own (claims) | none | Where living lies within the own regions together: living lies within every position's significance exactly where each position's own living lies within its significance (S0), and living and significant from one lies within every other's (N_std) |
+| 10 | `Web.significance_undetermined` (evaluation) | continuation-condition-yields-living-significance | `significance_undetermined_reading` (`retains_iff`, `adds_iff`, `livingClaim`) | own, and occ. | none | For a claim living at the occurrence model, three statements. With the empty region of significance, what one path admits with it lies within what every other admits, and exceeds nothing. With the full region, the living claims lie within significance. With the empty one, they do not |
+| 11 | `Dependence.Overdetermined.only_together` (responsibility) | joint-difference-making | `only_together_reading` (`overdetermined_iff`, `makesDifferenceTogether_iff`, `withholdAll_iff_li`) | proc. | none | Where the move's relation meets the breaking from `s` and from what each withholding leaves, the but-for statement for the parts together (`differenceAt`, from `«历»` of the withholdings) holds for no single part |
+| 12 | `ExchangeLaw.response_not_fixed_by_coupling` (alignment) | what-a-pools-acts-respond-to | `response_not_fixed_reading` (`through_iff_inclusion`) | own (histories) | none (decidability data kept, §3) | Where each coupling class of `l` is decided and `g` couples `l` and `l'` apart up to `t`, two laws exist. Each has its exchanging alike containing every formation's coupling class. For the first, what `g` takes from `c` across the step from `t` is not alike under `l` and `l'`. For the second, exchanging alike is the full relation at every step |
+| 13 | `Viability.kernel_and_iff` (maintenance) | conditions-kept-together | `kernel_and_reading` (`kernel_iff`) | proc. | none | The closure of the steps from `s` lies within a meet exactly where it lies within each: a law of logic, for any relation |
 
 ### 2.2 Laws of their models (7) and single applications (4)
 
-| # | Row (region) | Record | Reading in scratch | Model | Terms | What the reading states |
+| # | Row (region) | Record | Reading (scratch) | Model | Kept in other terms | What the reading states |
 |---|---|---|---|---|---|---|
-| 14 | `Dependence.differenceOnlyTogether_iff` (actor) | joint-difference-making | `differenceOnlyTogether_reading` | proc. | `«定后»`, `moveRel`, `«能»`, `«合»` | With each move's relation fixing its successor, the parts make the difference only together exactly where they do together, and each one's withholding leaves the move's relation meeting the breaking. |
-| 15 | `Run.not_fixes_of_untaken` (knowing) | experiment-needs-return | `not_fixes_reading`, via `fixes_iff` | proc., relations indexed by moves | `«定后»`, `moveRel`, `«际»` | A record fixes an outcome exactly where every family of relations indexed by moves relates `s` by `a` only to `u`, each relation fixing its successor and the family holding the run's steps (WRP2's pattern, `forall_moveRel_iff`). For an untaken move no outcome is so fixed. |
-| 16 | `SharedCodes.run_agrees_every_start_iff` (collective) | a-code-formed-between-formations | `run_agrees_every_start_reading`, via `origin_iff_li` | own (formations) | `«而»`, `«逆»`, `«历»` | Agreement from every start: every two formations are reached from one formation through the hearings' copying relations in turn. A formation's origin is what passes into it along the word (`origin_iff_li`). |
+| 14 | `Dependence.differenceOnlyTogether_iff` (actor) | joint-difference-making | `differenceOnlyTogether_reading` | proc. | none | Two premises hold: each move's relation fixes its successor, and from what each withholding leaves the move is available and the dependence is required and met there (`requiresAt`, `needMetAt`). Then the parts make the difference only together exactly where they do together and, from what each withholding leaves, the move's relation meets the breaking |
+| 15 | `Run.not_fixes_of_untaken` (knowing) | experiment-needs-return | `not_fixes_reading` (`fixes_iff`, `takes_iff`, `before_iff_lt`) | proc., runs as lines | `x ≠ y`, logic | Two premises hold: each move's relation fixes its successor, and two configurations differ. Then, where the run's line does not pass `(s, b)` at any step before `t` (`«及» Steps.next`), no record relates `s` by `b` to one outcome |
+| 16 | `SharedCodes.run_agrees_every_start_iff` (collective) | a-code-formed-between-formations | `run_agrees_every_start_reading` (`runs_agree_iff_reached`, `reached_iff`, `origin_iff_li`) | proc., and own (formations) | `a ≠ b`, logic | Where two forms differ, two statements are equivalent. (1) Every code the first `k` hearings reach (`«历»` of the moves) from any start has all formations alike at `m`. (2) Every two formations are reached from one formation through the hearings' copying relations in turn: `«则» «一» («而» («逆» («历» copies)) («历» copies))` |
 | 17 | `responses_le_missBound` (patient) | what-a-cut-loses | resists (§4) | | | |
 | 18 | `Drift.falls_back` (evolution) | drift-offspring-sampled | resists (§4) | | | |
 | 19 | `RelativePosition.rise_needs_fall` (collective) | relative-position-is-zero-sum | resists (§4) | | | |
-| 20 | `Web.optimum_broken_iff` (alignment) | what-an-optimum-does-beyond-what-couples-in | resists (§4) | | | |
-| 21 | `Web.living_on_reaches` (life) | living-on-and-descent | `living_on_reaches_reading`, via `neutral_transmits_iff` | own (claims) | `«闭»`, `«合»` | N_rel is significance from each position closed under the formed relation into living content. The row is one step of that closure, along living on. |
-| 22 | `Flow.descent_reaches` (life) | living-on-and-descent | `descent_reaches_reading` | own (claims) | `«闭»`, `«合»` | The same, along descent. |
-| 23 | `Learning.Training.unselected_beyond_data` (learning) | generalization-through-lumping | `unselected_beyond_data_reading`, via `through_iff` | own (functions) | `«闭»`, `«逆»` | A selection through the data is closed both ways along agreement on it. The row's proof uses the closure back along agreement once. |
-| 24 | `Renewable.no_exact_finite_reading` (capacity) | becoming-finite-horizon | `no_exact_finite_reading_reading`, `no_exact_finite_reading_iff` | own (runs) | `«闭»` | No region of runs closed under agreeing up to `h` is the region of renewing runs. Equivalently, that region is not closed under agreeing up to `h`. |
+| 20 | `Web.optimum_broken_iff` (alignment) | what-an-optimum-does-beyond-what-couples-in | `optimum_broken_reading` (`rising_iff`, `room_iff`, `frontier_iff`, `metOn_iff`, `broken_iff`) | own (outcomes), and occ. | none | Four premises hold:<br>• the order contains exceeding on the family (`«则» exceedsOn better`);<br>• room beyond: where an eligible outcome stands lower than another beyond, something eligible exceeds the first;<br>• the levels after the step are eligible and nothing eligible beats them;<br>• each condition beyond is required and met by the formation named on it.<br>Then a dependence beyond is broken across the step (required, met, and below after it) exactly where some eligible outcome stands below its need there |
+| 21 | `Web.living_on_reaches` (life) | living-on-and-descent | `living_on_reaches_reading` (`sustenance_neutral_iff`, `livesOn_iff`, `interacts_iff`) | occ. | none | N_rel for the sustenance valuation is `«闭» («合» sustenanceRel livingOcc)` of significance on the occurrences. The row is one step of it, along `livesOn` |
+| 22 | `Flow.descent_reaches` (life) | living-on-and-descent | `descent_reaches_reading` (`descent_neutral_iff`, `descends_iff`) | occ. | none | The same along descent: present, giving, coming to stand |
+| 23 | `Learning.Training.unselected_beyond_data` (learning) | generalization-through-lumping | `unselected_beyond_data_reading` (`through_of_closed`, `free_iff`, `agreeingOn`) | own (functions) | none | With the selection closed along agreeing on the data (one closure, agreement being symmetric) and the class free at `x` (an inclusion), a selected member is related to each member through a selected member of the class agreeing with it on the data, alike at `x` with the second |
+| 24 | `Renewable.no_exact_finite_reading` (capacity) | becoming-finite-horizon | `finite_reading_not_exact`, `finite_reading_iff` (`agreeUpTo_iff`, `renewing_iff_along`, `renewingIn_iff`) | proc., runs as lines, and occ. | none | No region of runs closed under agreeing up to `h` is the region of runs along which the focal formation renews, read at the occurrence model of the run's web. Equivalently, that region is not so closed |
 
-**Notes on single rows.**
-- **Rows 1–5: the same occurrence model for one kind and two.** Each is stated first for a web of one kind, then for a two-kind web through `W.roles`. The rows' own bridges, `roles_supported`, `roles_dependent` and `roles_alive`, are used as they stand. `Becoming.Roles` has no bridge for renewal over a region, so U2 adds `roles_renewingOver` in its own module, beside the region `onConditions` it needs, and leaves Roles unchanged.
-- **Row 5's two inclusions are of different kinds.** Inheritance is a statement in WRT2's requiring and the names' step. The need within `δ` reads two needs against each other with an addition, which neither WRT2's selection nor U1's interface states.
-- **Row 6's horizon.** The statement keeps Tracks' horizon `n`. Only "from `n` on" is read in the grammar.
-- **Row 13's reach.** `Kernel` reads reach as `«所闭» (Steps P)`, through WRP2's `reach_iff_withinClosure`.
-- **Row 16's copying relation.** `copies m e j i` says that `i` holds, after the hearing, `j`'s form before it. This is the converse of `SharedCodes.back` read as a relation. The proof that `origin` is `«历»` is by induction on the word.
+## 3. Premises, and what is kept
 
-## 3. Premises as grammar statements at the model (F2)
+**The account's premises the readings take, as grammar statements at the model.**
 
 | Premise | Grammar statement | Where |
 |---|---|---|
-| support at an occurrence | `«则» («而» (partial identity at x) requiring) needMet` | `supported_iff`; occurrence model, WRT2's selection |
-| dependence (support of the active) | `«则» («而» (partial identity of activity) requiring) needMet` | `dependent_iff` |
-| relational neutrality (N_rel) | `∀ p, «闭» («合» related (into living)) (sig p)` | `neutral_transmits_iff`; claims |
+| support at an occurrence | `«则» («而» (partial identity at x) requiring) needMet` | `supported_iff` |
+| dependence | `«则» («而» (partial identity of activity) requiring) needMet` | `dependent_iff` |
+| relational neutrality (N_rel) | `∀ p, «闭» («合» related (into living)) (sig p)`, from `Valuation.transmits_iff_closed`; at the occurrence model for sustenance and descent | `neutral_transmits_iff`, `sustenance_neutral_iff`, `descent_neutral_iff` |
 | standpoint neutrality (N_std), S0, held lives | inclusions of partial identities | `shares_iff_reading`, `selfSignificance_iff_reading`, `held_iff_reading` |
-| a selection through the data | `«闭» E select ∧ «闭» («逆» E) select` | `through_iff` |
-| a determined process | `∀ a, «定后» (moveRel P a)` | WRP2's `determined_iff_fixed` |
-| a law reading through a coupling | `«则» (couplingAlike W obs h t) (exchangingAlike law t h)` | `through_iff_inclusion` |
-| a reading decided by the first `h` steps | `«闭» (agreeing up to h) reading` | `no_exact_finite_reading_reading` |
 | transmission at a descent | the two inclusions of row 5 | `inheritsAt_iff`, `needsWithinAt_iff` |
+| a determined process | `∀ a, «定后» (moveRel P a)` | `determined_iff_fixed` |
+| a selection through the data | `«闭» (agreeingOn D) select` | `through_of_closed` |
+| a law reading through a coupling | `«则» (couplingAlike W obs h t) (exchangingAlike law t h)` | `through_iff_inclusion` |
+| a reading decided by the first `h` steps | `«闭» (agreeing up to h) reading` | `finite_reading_not_exact` |
 
-**The rows that take support as a premise.** Nine rows are "premise of the account" (support, dissipation). They are not U2's: U1 §4 leaves them unchanged, and their content is Price's identity and counting on amounts. Support's grammar statement above is the statement they would cite. That citation makes them statements at the model with a grammar premise. It does not derive them.
+**What the readings keep.**
+- **Decidability data** (row 12): `∀ h t m, Decidable (couplingAlike W obs h t l m)`, which the row needs to build the law marking each class.
+- **Logic** (rows 15 and 16): `x ≠ y` and `a ≠ b`.
+- **Supplied parameters**, which are free at the model: `withhold`, `obs`, `eligible`, `better`, `dep`, `own`, `sig`, the class `C`, the data `D`, `select`, and the supplied law of exchange.
 
-## 4. The rows that resist, with reasons
+**The nine rows "premise of the account."** They are not U2's, and U1 §4 leaves them unchanged. Their content, by `NO_LAW`'s reasons:
+- support with Price's identity or its counting form: `support_not_lower`, `support_moved_rises`, `selection_within`;
+- support itself: `selected_le`, and `carried_iff_rising` as `NeedsSupportAt`;
+- support with inheritance within a bound: `transmitted_supported`;
+- only the active giving: the two GroupEnding rows;
+- dissipation: `number_within_take`.
 
-Each keeps its category, and its reason now cites U1's verdict. Amounts are the root's second sort, with a limited interface: frame bijections, a fixed predecessor at a frame, the crossing laws, the residual-count laws and their dissipation case, lossless storage excluded, and the stretch law under a supplied pairing. That interface states no addition, product or order of amounts, and no comparison of a need with a level.
+Support's grammar statement above is the one the six support rows would cite. Stating that premise in grammar terms does not state those rows at the model.
 
-- **`responses_le_missBound`** (law of its model). It bounds what a cut at order `j` loses by `Loops.missBound M D j t`, for every schedule of couplings, using `carried_le_carriedWithin_add`. The content is that numerical bound, in sums of carried amounts. The couplings' schedule is relational, but it carries none of the bound. A reading would restate the inequality with the amounts unread.
-- **`Drift.falls_back`** (law of its model). A second-moment bound on samplings weighted by binomial weights. This is counting with products and binomial coefficients, outside the interface. It has no premise of the unfolding to read.
-- **`RelativePosition.rise_needs_fall`** (law of its model). A counting identity. Over the family, each part's rise count (`n·b p + Σa`) and fall count (`n·a p + Σb`) total alike, by commutativity and distribution (`change_balances`), so a rise needs a fall.
-  - In the grammar, the totals' equality could only be a perfect pairing (`«对»`, with `«对则守数»`) of rise units against fall units.
-  - That needs amounts as unit lists for every profile, and products as repeated lists. U1's unit selection holds only at a World's condition frames and has no product.
-  - The reading would need a pairing the interface does not have. By U1's test such a law is "a discipline, to be named as a premise", not a reading.
-- **`Web.optimum_broken_iff`** (law of its model). An optimum of an order rising with the family, with room beyond, breaks exactly what some eligible outcome breaks. Its content is `least_of_room`, the drive to the least level beyond. That is an order law of amounts: `Exceeds` is a componentwise `≤` with a strict `<` on the family.
-  - The relational part reads in §1.1's relations: `Broken` is a need met and left below after the step. Restating it alone would be a definitional mention, because the law is the order.
-  - **What would change it.** U1 §4 says the comparison `need ≤ level` "could read as units paired into the standing units: representation, not done". If that law joins the interface, `Exceeds` reads as units of one outcome paired into another's. This row could then be stated at the unit model.
+## 4. The rows that resist
+
+Each keeps its category, and its reason now cites U1's verdict.
+
+- **`responses_le_missBound`.** It bounds what a cut at order `j` loses by `Loops.missBound M D j t`, for every schedule of couplings. Its statement is an inequality between two amounts, each computed over the run:
+  - the responses of the carried amounts, computed by the propagation;
+  - the bound, computed from `M`, `D`, `j` and `t`.
+
+  The couplings' schedule is relational, but it is not a term of the statement.
+- **`Drift.falls_back`.** A second-moment bound on samplings, weighted by their binomial weights. Its terms are moments computed with products and binomial coefficients.
+- **`RelativePosition.rise_needs_fall`.** Its terms are each part's rise and fall counts, `ps.length * b p + total ps a` and `ps.length * a p + total ps b`, computed over the family by sums weighted by the family's length. Its proof is the sum identity `change_balances` with the order lemmas `total_lt_of_mem` and `below_somewhere_or_not`. None of these is in U1's limited interface.
+
+**What would change these.** Arithmetic on the second sort beyond U1's interface: sums weighted by a length, products and moments. Nothing in sight supplies it.
 
 ## 5. The row U3 holds
 
-`unrestricted_iff_livingSignificance` is one of U3's five significance rows. U3's design (in `development/u3-significance-on-the-root/`, not yet on main) gives it a root form: `noOutside_iff_paths_livingSignificance`, the condition in its structural reading on a web's level paths. U2 restates nothing of it and counts it with U3.
+`unrestricted_iff_livingSignificance` is one of U3's five significance rows. U3's design, in `development/u3-significance-on-the-root/` and not yet on main, gives it a root form: `noOutside_iff_paths_livingSignificance`, the condition in its structural reading on a web's level paths. U2 restates nothing of it.
 
-Two of U2's readings sit next to U3's rows, and U3 may use them in place of the native forms its scratch keeps:
-- `retains_iff`: Retaining is an inclusion (`«则»`) at what the paths admit, met with a significance region;
-- `adds_iff`: Adding is exceeding (`«逾»`) there.
+Two of U2's readings border U3's rows. `retains_iff` states retaining as an inclusion (`«则»`) at what the paths admit, met with a significance region; `adds_iff` states adding as exceeding (`«逾»`) there. U3's scratch keeps the native forms, and could use these. Whichever item lands first holds them, with nothing duplicated.
 
-Whichever item lands first holds them, with nothing duplicated.
+## 6. «保之像» beside «像»: an edit for HE's list
 
-## 6. «保之像» beside «像»: a small Lean item after U2
-
-**The item.** `«保之像»` moves from `Becoming.GrammarTransport` to `Becoming.GrammarLaws`, beside `«像»`, with its statement and name unchanged and no copy left behind. Mechanism's `factors_image` and `Image.least` then become its cases:
+**The edit.** `«保之像»` moves from `Becoming.GrammarTransport` to `Becoming.GrammarLaws`, beside `«像»`, with its statement and name unchanged and no copy left behind. Mechanism's `factors_image` and `Image.least` are then proved as its cases, statements and names unchanged:
 - the image lies within its own process's moves;
 - a process the step factors through holds the image.
 
-Their statements and names are unchanged. Mechanism imports no GrammarTransport, which is why the move comes first.
+The scratch proves both from `«保之像»` where it now is ([U2Preserving](check/tree/Becoming/U2Preserving.lean)). Mechanism imports GrammarLaws and not GrammarTransport, which is why the lemma must move first. `factorsThrough_iff_image` (`Becoming.ProcessRepresentation`) is unchanged.
 
-**Why after U2 and not folded in.**
+**Why HE and not U2.**
 - No U2 reading uses `«像»` or `«保之像»`.
-- U2 adds one leaf and changes no module.
-- The move changes GrammarLaws, which nearly every module imports, so the checker rebuilds the package. It also needs three owners: GrammarLaws' owner, who decided the move; GrammarTransport's owner, WRT's designer; and Mechanism's owner, which no note names, so rule 3's fallback applies.
+- The move changes GrammarLaws, which nearly every module imports, so it means a near-full rebuild. HE (main `981a93316`) is the one landing that rebuilds the package once, on purpose, for every edit held for a rebuild, and its row asks that such edits be added to its list.
+- So this edit belongs on HE's list, as a sixth edit, not a second rebuild.
 
-Folding it in would tie a leaf's landing to a full rebuild and to two more owners' decisions.
+**Owners.**
+- **GrammarLaws:** the move is in OU's plan, WHAT-REMAINS on OU's owner's branch (`ou-after-wrp2`, the second of the next items). It comes from GrammarLaws' owner's decision during WRP2, which reached this session by message and is recorded nowhere else. REVIEW-WRP2 had left it "proposed to the owner". The plan's text names only Mechanism's owner or rule 3's fallback as still needed.
+- **The move's size:** GrammarLaws has 322 dependents of the package's 342 modules.
+- **GrammarTransport:** its owner is WRT's designer, this session, which agrees to the removal.
+- **Mechanism:** no owner is named, so rule 3's fallback applies and OU's owner decides.
 
-**When.** As its own item, at a quiet point in the queue, rehearsed outside the repository as WRP2 was. Its design is the paragraph above, plus a check that `factorsThrough_iff_image` (`Becoming.ProcessRepresentation`) is unchanged.
+HE's owner adds the edit to its list. If HE has already rebuilt when this is decided, the edit becomes its own small item at a quiet point, rehearsed outside the repository.
 
-## 7. Placement, and the Lean item proposed (none claimed)
+## 7. Placement and the Lean item proposed (none claimed)
 
-**One core leaf module.** Its working name is `Becoming.ModelStatements`. The name is deliberately not `Becoming.Grammar*`: OU3b's measure counts every declaration of a `Grammar*` module as a grammar constant, and U2's are not grammar laws. It holds `U2Check`'s declarations, minus the scratch header. It imports only Becoming modules, so the pure core's rules apply. Adding it changes no other module's source, so the checker builds only it.
+**One core leaf.**
+- Its module and namespace are `Becoming.ModelStatements`. Its relation names (`drawing`, `copies`, `member`, `keeping`, `supported_iff`, `kept_iff`) exist elsewhere only in other namespaces.
+- It holds the scratch's declarations and imports only Becoming modules, so the pure core's rules apply.
+- It is not named `Becoming.Grammar*`, since it is not the grammar layer and states no grammar law.
+- No row module changes. `roles_renewingAt` and `roles_renewingOver` would have their natural home in `Becoming.Regions`, which defines `RenewingOver` and the row and imports Roles. Regions has 169 dependents, so it is a candidate for HE's list; otherwise the leaf holds them.
 
-**No module changes.** Every reading, including the one new bridge (`roles_renewingOver`), is in the leaf. The rows' modules and their owners are untouched, so no owner's decision is needed for any module.
+**Records, by RESULT-WORKFLOW.** A wrapper goes to the same record, so there is no new record.
+- Each reading is proposed for its row's own record: a law "at the model", with the reading and its lemmas bound to the record's receipt, and the pair (row, reading) as data for MV's F5, in a field MV chooses.
+- These are other owners' records. The records' owners decide, or rule 3's fallback applies and OU's owner decides on the board.
 
-**One record.** Its working id is `definitions-and-model-laws-at-the-models`. Its laws come by model:
-- the occurrence model: support, dependence, keeping, renewal, undermining, transmission;
-- a process's model: kernel, overdetermination, joint difference, fixing;
-- the rows' own carriers: significance regions, N_rel, selection, the finite reading, coupling, copying, verification.
+**Landing touch points, as WRP2's landing (`f28abafc6`) had them.**
+- The root `Becoming.lean`: an import and a bullet.
+- `check_becoming.py`: `CORE` and `SCOPE`.
+- `README.md` and `README.zh.md`.
+- `regions.json`.
+- The rows' records and their proof bindings.
+- MV's generator, rerun.
+- A rehearsal outside the repository, then render and check in a clean worktree.
 
-It states what U2 does not show (§8).
+The checker compiles the leaf and the root.
 
-**Its home.** Proposed: a new 01 §8.8 after §8.7, "The rows at the models". OU's owner decides.
-
-**The rows' records.** Unchanged. A `related` link from each to the new record is optional, by OU's owner's decision under rule 3's fallback.
-
-**The measure.** U2 supplies the reading of each row in §2, the reasons of §4 updated to cite U1's verdict, and U3's row. MV's F5 separates representation from derivation and reads them. The `NO_LAW` table is OU's owner's.
-
-**At landing.** Rerun MV's generator. Render and check in a clean worktree. Rehearse outside the repository first. The checker run is one leaf.
+**The measure.** U2 supplies the 20 pairs of §2, §4's reasons citing U1's verdict, and U3's row. MV's F5 reads them. The `NO_LAW` table is OU's owner's.
 
 ## 8. What this establishes, and what it does not
 
 **Established, in scratch, at the scopes above.**
-- 19 of the 24 rows have statements whose terms are the grammar's, at a World's occurrence model, a process's model or the row's own carrier.
-- Each statement is proved through its row.
-- Each premise the readings take is a grammar statement at the model.
-- Support and dependence use WRT2's name-free selection alone.
+- 20 of the 24 rows are stated at a World's occurrence model, a process's model or the row's own carrier, every term of each statement under §0's criterion.
+- Each reading is proved through its row.
+- The account's premises they take are grammar statements at the model.
+- Support and dependence are read in WRT2's relations, support with the partial identity of one occurrence added.
 
 **Not established.**
-- **No derivation.** No row is derived from a grammar law. The definitional rows' readings are their definitions written in the grammar's terms. The model laws keep the row's proof.
-- **Names and amounts.** The across-step relations read the names and amounts, so re-identification does not carry them. The need-within relation adds amounts, outside U1's interface. The occurrence model's selection is extended by named relations read from amounts; it does not hold amounts as the grammar's own.
-- **Four rows resist** (§4). One row is U3's.
-- **The 9 premise rows** keep U1's verdict.
-- **A partial identity at one occurrence** names that occurrence. Support is a statement about one occurrence, not a name-free class.
+- **No derivation.** No row is derived from a grammar law. A definitional row's reading is its definition written at the model, and a model law keeps the row's proof.
+- **The names and the amounts.** The relations across a step read names, and are not shown to be carried by re-identification. Comparisons of needs with levels, and the order of outcomes, are relations of the model read from amounts, outside U1's interface. The need-within relation adds a supplied amount.
+- **Three rows resist** (§4), and one is U3's.
+- **The nine premise rows** keep U1's verdict.
 
 **What would change this.**
-- U1's interface gaining the comparison of a need with a level, as units paired into standing units. Then the comparisons in §1.1 (need met, met after the step, below after it) read in units, and `optimum_broken_iff` with them.
-- A law of unit lists for products, which would bear on `rise_needs_fall`.
+- U1's interface gaining the comparison of a need with a level, as units paired into the standing units. The comparisons of §1 would then read in units.
+- Arithmetic on the second sort, which would bear on §4's rows.
 
 ## 9. Owners
 
-- **The design, the scratch and, once claimed, the leaf and its record:** this session, WRP's designer.
+- **The design, the scratch and, once claimed, the leaf:** this session, WRT's and WRP's designer.
 - **The rows' modules:** unchanged, so none is engaged.
-- **GrammarLaws, GrammarTransport and Mechanism:** only for §6's item, as named there.
+- **The rows' records:** their owners, or rule 3's fallback with OU's owner deciding.
+- **GrammarLaws, GrammarTransport and Mechanism:** only for §6's edit, as named there. HE's owner holds HE's list.
 - **WHAT-REMAINS and the measure's `NO_LAW` table:** OU's owner.
 - **F5's report:** MV.
