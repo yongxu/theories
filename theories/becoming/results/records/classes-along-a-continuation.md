@@ -72,6 +72,7 @@ Reading a class along lineages rather than names is the move from token identity
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T152455.465323Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T104256.342764Z/verification.json) | — |
 
 Aliases: `classes under splits and merges`, `分裂与合并下的类`, `Becoming.Web.RenewingAlong`, `Becoming.Web.ConsumingAlong`
 
