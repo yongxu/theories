@@ -250,12 +250,13 @@ counterexamples = [
 
 # the master-laws record's new law
 master_law = capped('laws', {
-    'en': "Passing through a word's relations in turn («历»: no step on the empty word, then each letter's relation): n "
-          "steps are its case for one relation; it composes along joined words, reads its last letter last and the "
-          "reversed word by the converse relations backward, merges nothing where no letter merges and keeps alike where "
-          "each goes alike. Six laws of n steps are its cases, and its list lemmas are proved by induction.",
-    'zh': '依次历一字之诸关系（«历»：空字无步，然后依次每字母之关系）：n 步为其一关系之例；沿相接之字可接，末字母末历，逆字以逆关系倒历，无字母并则不并，'
-          '各同行则保同行。n 步之六律为此诸律之例；列表引理以归纳证之。',
+    'en': "«历», passing through a word's relations in turn, with «迭» its constant family («迭即历»): it composes along "
+          "joined words, reads its last letter last and the reversed word by the converse relations backward, merges "
+          "nothing where no letter merges and keeps alike where each goes alike, with the list lemmas it uses. The six "
+          "laws of «迭» are its cases, with statements unchanged: «迭之接», «迭之分», «迭之末步», «迭之逆», «迭之定前» and "
+          "«同行之迭».",
+    'zh': '«历»，依次历一字之诸关系，«迭» 为其常族（«迭即历»）：沿相接之字可接，末字母末历，逆字以逆关系倒历，无字母并则不并，各同行则保同行，并其所用之列表引理。'
+          '«迭» 之六律为其例，陈述不改：«迭之接»、«迭之分»、«迭之末步»、«迭之逆»、«迭之定前»、«同行之迭»。',
     'declarations': C(set(added['Becoming.GrammarLaws']), '«历»', '«迭即历»', '«历之接»', '«历之末步»', '«历之逆»',
                       '«历之定前»', '«同行之历»', 'GrammarLaws.replicate_add_right', 'GrammarLaws.replicate_succ_right',
                       'GrammarLaws.reverseAux_append_right', 'GrammarLaws.reverse_cons_right',
@@ -389,7 +390,10 @@ p = RECORDS / f'{RIDM}.json'
 d = json.loads(p.read_text(encoding='utf-8'))
 before = json.dumps({k: v for k, v in d.items() if k not in ('laws', 'references', 'history')}, ensure_ascii=False)
 assert not any(set(master_law['declarations']) & set(x.get('declarations', [])) for x in d['laws']), 'cited already'
-d['laws'].append(master_law)
+# beside the laws of steps counted, where «迭之末步» is (OU3d's part), as the record's owner asked
+counted = [i for i, x in enumerate(d['laws']) if 'Becoming.«迭之末步»' in x.get('declarations', [])]
+assert len(counted) == 1, counted
+d['laws'].insert(counted[0] + 1, master_law)
 assert len(d['laws']) <= style.ITEM_CAPS_V2['laws'][2]
 refs = [r for r in d['references'] if r['path'] == LEAN['GrammarLaws']]
 assert len(refs) == 1, refs
@@ -403,7 +407,8 @@ d['history'].append({
           f"（GrammarLaws 主之决定 (a)）；其所用之列表引理以归纳证之，因核之 List.reverse_cons 报 propext。"})
 assert json.dumps({k: v for k, v in d.items() if k not in ('laws', 'references', 'history')}, ensure_ascii=False) == before
 p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-print('record:', RIDM, 'law', len(d['laws']), 'added with', len(master_law['declarations']), 'declarations')
+print('record:', RIDM, 'law', counted[0] + 2, 'of', len(d['laws']), 'added with', len(master_law['declarations']),
+      'declarations')
 
 # the World's record: its item and next step on processes brought to the landed theorem
 p = RECORDS / f'{RIDW}.json'

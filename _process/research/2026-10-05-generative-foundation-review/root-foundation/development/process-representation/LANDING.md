@@ -1,0 +1,65 @@
+# WRP2: landing the processes' representation
+
+29 October 2026. AI-written landing note for board item WRP2. It says what lands, the decisions taken at landing, the exact command sequence and what the run showed. The scripts are in [kit/](kit/).
+
+## What lands
+
+**Lean.** From [tree/Becoming/](tree/Becoming/):
+- `Becoming.GrammarLaws`, extended under its owner's decision (a). It adds `«历»`, passing through a word's relations in turn, whose constant family is `«迭»` (`«迭即历»`), with its laws `«历之接»`, `«历之末步»`, `«历之逆»`, `«历之定前»` and `«同行之历»`, and the five list lemmas they use. Six laws of `«迭»` are proved as their cases: `«迭之接»`, `«迭之分»`, `«迭之末步»`, `«迭之逆»`, `«迭之定前»` and `«同行之迭»`.
+- `Becoming.GrammarTransport`, extended:
+  - preserving as an image lying within (`«保之像»`);
+  - going on along some branch, pulled back along lifting (`«延之拉回»`);
+  - the correspondence lemmas for steps, words, within `n` steps, closed regions, a fixed successor and predecessor, going alike and going on;
+  - correspondences side by side (`«一一对应».prod`).
+- `Becoming.ProcessRepresentation`, a new leaf at L1. It imports `Becoming.EdgeClosure`, `Becoming.GrammarTransport`, `Becoming.Labelled`, `Becoming.Onward`, `Becoming.GrammarRegularity` and `Becoming.GrammarCandidates`.
+
+[signatures.json](signatures.json) is the signature audit, against the latest core receipt. Every landed declaration of the two extended modules keeps its statement (`#check @`), and every definition keeps its body (`#print`). Nothing is removed, and exactly the six theorems above change their source. The whole package compiles with the three modules and no clash ([clash-2.log](clash-2.log)).
+
+The new module is added:
+- to `CORE` in `check_becoming.py`, after `Becoming.WorldRepresentation`, with its scope sentence; GrammarLaws' and GrammarTransport's sentences are extended;
+- to the root `Becoming.lean`, as an import and an L1 bullet after WorldRepresentation's; GrammarLaws' and GrammarTransport's bullets are extended;
+- to the package README rows, EN and ZH, after WorldRepresentation's; GrammarLaws' and GrammarTransport's rows are extended.
+
+**Records.**
+- `processes-represented-both-ways`, new, recorded-checked, family F01, home 01 §8.1. It cites ProcessRepresentation's 54 declarations and GrammarTransport's 13 additions, each once, in ten laws.
+- `master-laws-on-the-grammar` gains one law for GrammarLaws' 12 additions, its GrammarLaws reference extended and a history note. Its statement and other laws are unchanged.
+- `the-world-represented-both-ways` has its item and next step on processes brought to the new record, with a related entry and a history note. No statement, law or declaration changes.
+
+**Texts.**
+- 01 §8.1: the theorem block and the table's process row.
+- 01: its bases line (any process split from any type), thesis, claims paragraph and Open entry, and §8.6's not-shown line on processes.
+- 01 §7's finite runs, for `«历»`.
+- 08: its Open entry, and its counts read from the receipt.
+- The overview's two sentences on faithful representation.
+- L-21's weakness line in the logic dossier.
+- The one page, both editions.
+- The glossary line for the moves' relations.
+- The study section.
+- regions.json: the record and the module.
+
+## Decisions
+
+- **Records follow the modules.**
+  - GrammarLaws' additions go to its record, master-laws-on-the-grammar, as OU3d's, OU3e's and OU3f's did.
+  - GrammarTransport's additions go to the processes' record, whose terms they keep, as WRT2's went to the World's.
+- **Re-pointing.** No landed statement changes. The records citing GrammarLaws or GrammarTransport drift by their bytes only; they are re-pointed and their proof bindings rebound. The records whose cited sections the texts write are re-pointed after reading.
+- **The measure** is taken before and after on the measure_grammar and EC measures. WRP's own measure is retaken at the receipt.
+
+## Commands
+
+All commands run from the landing worktree's root (`.claude/worktrees/wrp2`, branch `wrp2`, merged with main). `K` is this folder's kit, `P=experiments/integrated-correction/general-framework/generative-basis/lean/becoming`, and `RF=_process/research/2026-10-05-generative-foundation-review/root-foundation`.
+
+1. `python3 -B $K/signatures_wrp2.py --json <this folder>/signatures.json`, at the latest receipt. Then the measures before: `measure_grammar.py`, EC's `measure.py` and this folder's `measure_wrp.py`.
+2. `python3 -B $K/integrate_wrp2.py`.
+3. `(cd $P && python3 -B check_becoming.py)`, giving `RECEIPT`.
+4. `python3 -B $RF/THEOREM-CONNECTIVITY.py --check`. Any apart roots it reports are registered by `$K/register_wrp2.py` from the log; then the check runs again, and `--write`.
+5. `python3 -B $K/texts_wrp2.py RECEIPT N`, where `N` is the last § plus one.
+6. `python3 -B $K/make_records_wrp2.py RECEIPT N`.
+7. `python3 -B $K/repoint_wrp2.py RECEIPT`, a dry run, then the same with `--apply`.
+8. The measures after; then `tools/research/master_laws.py` (MV) on the new receipt.
+9. `python3 -B $K/board_wrp2.py head TEXT` before step 2; `python3 -B $K/board_wrp2.py land RECEIPT N "QUEUE" "STATE"` here.
+10. In the clean worktree: `make research-render`, then `research-check` with `--strict-fresh`, `research-links` and `research-test`. Commit the owned paths with `git commit -m … -- <paths>`, merge main if it moved, re-render, and fast-forward main.
+
+## What the run showed
+
+(Written at landing.)
