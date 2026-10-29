@@ -237,3 +237,24 @@ Re-check, read-only, in /Users/ren/theories/.claude/worktrees/rf-landing (do not
 
 Return: a verdict line; for each of findings 19 to 23, one line: taken correctly, partly, or not, with what is missing; then any new problem, each with severity, location (file:line), the quoted text, the problem against the Lean, and a replacement. Report only what you can point to.
 ```
+
+### The cold read of RF6.1's texts (piped to `cx -m astra -e high --sandboxed --fresh`)
+
+```text
+Cold read, read-only, in <a scratch copy of the repository with RF6.1's texts integrated> (a scratch copy of the repository with RF6.1's texts integrated; do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine).
+
+Context. This repository develops one theory with a pure Lean core. Board item RF, round 2, RF6.1 adds one Lean module, reviewed on the code with a re-check: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean (an application of the checker's ring, since it imports Becoming/GuardHorizon.lean; it builds with every axiom report empty). It states, for any process, when a course opens a correction (Correctable, OpensAlong, finer_keeps, coarser_opens_nothing, widened_correctable) and witnesses on the stock-and-link process of Becoming/Revision.lean (Linked). You are reading the texts written about it, cold, against the Lean: each text must say exactly what the Lean proves, with every hypothesis it needs, and every reading must be labelled as a reading.
+
+The texts:
+1. theories/becoming/chapters/03-KNOWING.md: the new theorem paragraph at anchor r-a-revision-that-opens-a-correction in section 8 and its reading, and the Open bullet "Formations that read, beyond".
+2. theories/becoming/chapters/08-METHOD.md: the known-results bullet "A revision of a reading that opens a correction" in section 8.
+3. The package's README.md and README.zh.md rows for the module, and Becoming.lean's L1 bullet for it.
+4. The module's own header (its doc comment).
+5. The record as it will be written: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf61.py (the build(...) call; English and Chinese).
+6. The study section template: the same folder's study_rf61.txt ({N} and {RECEIPT} are filled at landing).
+7. The plan's RF6.1 bullet in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md section 4.6.
+
+Check especially: dropped hypotheses (one type of readings, the supplied map, the direction of the executability comparison, choice over the readings, the fixed acceptability); "opens" said of a revision where the Lean says a course; "chosen" or "corrects" where the Lean says a policy exists; witness results stated for every configuration; the Chinese saying the same as the English; double-loop learning or institutions stated as proved.
+
+Return: a verdict line; then numbered findings, each with severity (high, medium, low), location (file:line), the quoted text, the problem against the Lean, and a replacement in the text's language. Report only what you can point to.
+```

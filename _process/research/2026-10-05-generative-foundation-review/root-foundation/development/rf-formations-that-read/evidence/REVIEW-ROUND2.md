@@ -723,3 +723,68 @@ Verdict: **Needs revision.** The detailed theorem paragraphs are mostly careful,
 
     If correctability should additionally guarantee an executable action exists, require an inhabited situation domain or an explicit witness.
 
+## The cold read of RF6.1's texts
+
+Before RF6.1's own landing, its texts (03 §8's entry and Open bullet, 08's bullet, the package's rows and bullet, the module's header, the record, the study template and the plan's bullet) were cold-read against the Lean by a fresh session of the same reviewer, in a scratch copy with the texts integrated ([BRIEF](BRIEF.md#round-2)).
+
+Verdict: **Needs textual correction.** Four findings below; no files changed or checks run.
+
+1. **Medium — The rebuild summaries omit the initially-off link.**
+
+   **Locations and quoted text:**
+   - [03-KNOWING.md:316](../../../../../../../theories/becoming/chapters/03-KNOWING.md): “rebuilding the link from two units opens the correction”.
+   - [OpenedCorrection.lean:35](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean) and [study_rf61.txt:20](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf61.txt): the same formulation.
+   - [Becoming.lean:3097](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean), [PLAN.md:178](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md), and [make_records_rf61.py:147](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf61.py): “rebuilding the link opens [the correction/it] where a unit of stock remains after”.
+   - [README.md:289](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md): “where a unit of stock remains after the rebuild”.
+   - [README.zh.md:126](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md): “重建后尚余一储处”.
+   - [make_records_rf61.py:149](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf61.py): “重建其联而后尚余一储处开之”; also line 178, “自二储重建其联，一步而开更正”.
+
+   **Against the Lean:** `Linked.opens` starts specifically at `(n + 2, false, v)` and ends at `(n + 1, true, v)`. Remaining stock alone is insufficient: with the link already on and positive stock, `linked_correctable` says the starting configuration is already correctable, contradicting the required initial non-correctability in `OpensAlong`. The rebuilding-then-replenishing witness likewise starts with the link off.
+
+   **Replacement, English:** “Starting with the link off and at least two units of stock, rebuilding it to on opens the correction in one step. Starting with the link off and one unit, rebuilding alone does not; rebuilding to on and then replenishing does.”
+
+   **Replacement, Chinese:** “初始联断且至少有二储时，将联重建为通，一步而开更正。初始联断且仅有一储时，唯重建不能开之；重建为通而后补储则开之。”
+
+2. **Medium — An unused reading still requires an act, although it imposes no acceptability or executability condition.**
+
+   **Locations:** [03-KNOWING.md:316](../../../../../../../theories/becoming/chapters/03-KNOWING.md), [OpenedCorrection.lean:19](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean), and [study_rf61.txt:11](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf61.txt).
+
+   **Quoted text:** “a reading no situation gives asking nothing”.
+
+   **Against the Lean:** `correctable_iff` states `∀ o, ∃ a, ∀ s, …`. An empty fiber makes the condition following `∃ a` vacuous; it does not remove that existential. `UniformPolicy` likewise requires a total function `O → A`. The texts quantify over arbitrary types, so an inhabited act type cannot silently be assumed.
+
+   **Replacement:** “A reading no situation gives imposes no acceptability or executability condition, but still requires an act as the value of the total policy.”
+
+3. **Low — The monotonicity summaries leave the supplied total map implicit; the chapter also omits the common reading type.**
+
+   **Locations and quoted text:**
+   - [03-KNOWING.md:316](../../../../../../../theories/becoming/chapters/03-KNOWING.md): “any types”; “A revision to a reading the old one is read off, losing no executability, closes nothing”.
+   - [OpenedCorrection.lean:24](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean): the same monotonicity wording.
+   - [study_rf61.txt:14](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf61.txt): “a reading the old one is read off, losing no executability, closes nothing”.
+   - [make_records_rf61.py:160](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf61.py): the same English wording; line 162: “修订为旧读所由读出之读，而不失可行者，则无所闭”.
+
+   **Against the Lean:** `finer_keeps` and `coarser_opens_nothing` take an explicit total `forget : O → O` and a factorization equation for every situation. “Read off” leaves this important constructive premise implicit. Both readings have the same codomain `O`; the header, record and study state that elsewhere, but the chapter does not. The executability directions themselves are correctly stated.
+
+   **Replacement, English:** “With readings in one fixed type `O` and acceptability fixed: a supplied map `f : O → O` satisfying `f (reading x' s) = reading x s` for every situation preserves correctability when every act executable at `x` remains executable at `x'`. A supplied map satisfying `f (reading x s) = reading x' s` rules out an opening when every act executable at `x'` was executable at `x`.”
+
+   **Replacement, Chinese:** “诸读同属一固定型 `O`，可受者守定。给定映射 `f : O → O`：若每一情形皆满足 `f (reading x' s) = reading x s`，且于 `x` 可行之行于 `x'` 仍可行，则保持可更正性；若皆满足 `f (reading x s) = reading x' s`，且于 `x'` 可行之行于 `x` 已可行，则不能开一更正。”
+
+4. **Low — The record’s relationship description makes reading revision unconditional.**
+
+   **Location:** [make_records_rf61.py:230](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf61.py).
+
+   **Quoted text:** “here the reading in force itself revised along the course”; “此处所行之读本身沿历程而修订”.
+
+   **Against the Lean:** `OpensAlong` requires no change of reading. `Linked.opens_by_support` explicitly witnesses an opening with the reading unchanged. This relationship summary drops the qualification retained in the record’s main statement.
+
+   **Replacement, English:** “Here correctability is compared along a process course; the reading in force, executability, or both may change.”
+
+   **Replacement, Chinese:** “此处沿一过程之历程比较可更正性；所行之读、可行者，或二者皆可改变。”
+
+| # | Finding | Taken |
+|---|---|---|
+| 1 | The rebuild summaries omit the link starting off | every summary says the link starts off, with at least two units for one step and one unit for rebuilding then replenishing |
+| 2 | A reading no situation gives still needs an act | "imposing no such condition though the policy still gives it an act" |
+| 3 | The monotonicities leave the supplied map and the common type implicit | the map and its equations, the executability directions and the one type of readings stated in the chapter, the header, the record and the study |
+| 4 | The record's relation detail makes revision unconditional | correctability compared along a course, the reading, executability or both changing |
+

@@ -91,6 +91,11 @@
    "base": "grammar",
    "note": "GrammarRegularity: core always admits continuation; last step into an end leaves it"
   },
+  "a-revision-that-opens-a-correction": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "OpenedCorrection RF6.1: a course opening a correction along a trace, acceptability fixed; on Revising's process"
+  },
   "a-rise-past-the-inflow-is-drawn-from-beyond": {
    "region": "collective",
    "base": "old-base",
@@ -3507,6 +3512,11 @@
    "region": "map",
    "base": "frame",
    "note": "finite run = course into a return (P127)"
+  },
+  "Becoming.OpenedCorrection": {
+   "region": "knowing",
+   "base": "frame",
+   "note": "RF6.1 a revision of a reading that opens a correction (03 §8)"
   },
   "Becoming.Openness": {
    "region": "map",

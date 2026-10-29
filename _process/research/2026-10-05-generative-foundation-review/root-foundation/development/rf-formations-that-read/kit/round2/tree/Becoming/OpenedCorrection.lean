@@ -16,14 +16,16 @@ as acceptable, which is held fixed.
   configuration, a uniform policy exists whose act at each reading is acceptable at every situation
   giving it and executable at the configuration; given choice over the readings, exactly where for
   every reading there is an act acceptable and executable at the configuration for every situation
-  giving that reading, a reading no situation gives asking nothing (`correctable_iff`, from
-  `GuardHorizon.uniform_policy_iff_fiber_feasible`).
+  giving that reading, a reading no situation gives imposing no such condition though the policy
+  still gives it an act (`correctable_iff`, from `GuardHorizon.uniform_policy_iff_fiber_feasible`).
 * **Opening along a course** (`OpensAlong`). A course opens a correction from `x` to `x'` where a
   trace of the process leads from `x` to `x'`, no fitting uniform policy exists at `x` and one exists
   at `x'`, with one acceptability throughout; the gain may come from the reading, from executability,
-  or both. A revision to a reading the old one is read off, losing
-  no executability, closes nothing (`finer_keeps`); one to a reading read off the old, gaining no
-  executability, opens nothing (`coarser_opens_nothing`). With every act counted acceptable, a
+  or both. With the readings in one type and a supplied map `f` between readings: where
+  `f (reading x' s) = reading x s` at every situation and every act executable at `x` stays executable
+  at `x'`, correctability is kept (`finer_keeps`); where `f (reading x s) = reading x' s` at every
+  situation and every act executable at `x'` was executable at `x`, nothing is opened
+  (`coarser_opens_nothing`). With every act counted acceptable, a
   configuration with an executable act is correctable already (`widened_correctable`), so an opening
   counts only with the acceptability fixed.
 * **On Revising's process** (`Linked`). The process of `Becoming.Revision`: a stock supporting
@@ -31,9 +33,10 @@ as acceptable, which is held fixed.
   is acceptable where it is needed and replenishing where it is not; executability is the process's
   enabling. With the link off no configuration is correctable (`Linked.unlinked_uncorrectable`); with
   it on and a unit of stock, every configuration is (`Linked.linked_correctable`); with it on and no
-  stock, none is (`Linked.starved_uncorrectable`). So rebuilding the link from two units opens the
-  correction in one step, the reading revised (`Linked.opens`); rebuilding it from one does not
-  (`Linked.rebuilt_starved`), though replenishing after it does (`Linked.opens_after_replenishing`);
+  stock, none is (`Linked.starved_uncorrectable`). So, starting with the link off and at least two
+  units, rebuilding it opens the correction in one step, the reading revised (`Linked.opens`); starting
+  with the link off and one unit, rebuilding alone does not (`Linked.rebuilt_starved`), though
+  rebuilding and then replenishing does (`Linked.opens_after_replenishing`);
   replenishing alone opens it where the link is on and the stock is not, the reading unchanged
   (`Linked.opens_by_support`); and with every act counted acceptable, the unlinked configuration is
   correctable already (`Linked.widened_unlinked`).

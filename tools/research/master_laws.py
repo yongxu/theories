@@ -36,6 +36,29 @@ own and reaches none. A master law's statement on the grammar (08 §7) is among 
 pages show the result under each law. The check
 reports how many laws the file no longer matches, and whether the core sources, the measure, COVERAGE.json, the
 dump or this tool changed since it was written.
+
+F5 (architecture/mv/F5-MODEL-STATEMENTS.md). A law may carry statements_at_model: theorems that state a row of
+the same record at a model, each declaring its row, its models and its review. That the theorem states the row's
+statement is a reader's judgment; this tool verifies what the Lean can show and computes the rest:
+
+- the theorem and the row are in the spine run;
+- the walk from the theorem through the constants each declaration uses (statement and proof or body), grammar
+  constants not expanded, reaches the row without entering the theorem of another item, except one on the same
+  law with the same row;
+- its statement names a grammar term other than «际», among its own constants or, transitively, in the bodies of
+  the definitions of its own module that it names;
+- in that same reach, a relation of each declared model: OCCURRENCE for a World's occurrence model, PROCESS for a
+  process's model, nothing for the row's own carrier;
+- the law carrying it holds no central declaration of COVERAGE.json.
+
+It also lists the grammar terms the statement names and what it keeps in other terms (U2Deps' report), and the
+row's own dependence. An item that fails is written unverified, with what it fails; the tool does not stop for it.
+So is an item the check would refuse, except one whose review does not name it: only the check reads the review.
+A law carrying items is measured as any law is, and counted in counts_at_model instead of counts, so a statement
+at a model raises no count of the others. Under every law whose declarations include a verified item's row, the
+file names the item (stated_at_model). central_reach counts the distinct central declarations: reaching the
+grammar, by the measure; not reaching it but stated at a represented model (a World's occurrence model or a
+process's model); not reaching it and stated only on their own carrier; and the rest.
 """
 import hashlib, importlib.util, json, os, pickle, sys, tempfile
 from pathlib import Path
@@ -49,6 +72,106 @@ CORE = ROOT / 'experiments/integrated-correction/general-framework/generative-ba
 # The order of 08 §7 and the names it gives them.
 NAMES = {'closure': 'closure', 'balance': 'balance', 'return': 'finite runs', 'lumping': 'lumping', 'order': 'order'}
 DEPENDENCES = ('grammar', 'balance, represented', 'anchor, not reached', 'no master law')
+AT_MODEL_KEYS = ('declaration', 'of', 'models', 'review')
+# The relations that evidence each model, split from U2Deps' modelRelations (U2's check); WRT's and WRP's designer
+# changes them. U2Deps' other model relations are regions or classes on any carrier: they count as a model's
+# structure when listing other terms, and evidence no model.
+OCCURRENCE = {'Becoming.World.withinStep', 'Becoming.Web.roles', 'Becoming.Steps.along'}
+PROCESS = {'Becoming.moveRel', 'Becoming.Steps', 'Becoming.Steps.next'}
+MODEL_RELATIONS = {'occurrence': OCCURRENCE, 'process': PROCESS}
+STRUCTURE = OCCURRENCE | PROCESS | {'Becoming.Web.partialIdentity', 'Becoming.sameValue', 'Becoming.Web.admitted'}
+RELATION_TYPE = 'Becoming.«际»'
+
+
+def is_grammar_term(name):
+    """A grammar term for F5: a «» name other than the relation type «际» (the measure's grammar test counts it)."""
+    return '«' in name and name != RELATION_TYPE
+
+
+def stated(C, d):
+    """What the statement of d names: its own constants, and transitively the bodies of the definitions of its own
+    module that they name. Grammar constants are not expanded."""
+    module, seen = C[d]['m'], set(C[d]['t'])
+    stack = [n for n in seen if n in C and C[n]['m'] == module and C[n]['k'] == 'def' and '«' not in n]
+    while stack:
+        for b in C[stack.pop()]['v']:
+            if b not in seen:
+                seen.add(b)
+                if b in C and C[b]['m'] == module and C[b]['k'] == 'def' and '«' not in b:
+                    stack.append(b)
+    return seen
+
+
+def reaches(C, d, row, blocked):
+    """Whether the walk from d through the constants each declaration uses reaches row, entering no blocked theorem
+    and expanding no grammar constant (as U2Deps walks)."""
+    seen, stack = {d}, [d]
+    while stack:
+        n = stack.pop()
+        if n == row:
+            return True
+        if n in C and '«' not in n:
+            for b in list(C[n]['t']) + list(C[n]['v']):
+                if b not in seen and b not in blocked:
+                    seen.add(b)
+                    stack.append(b)
+    return False
+
+
+MODELS = ('occurrence', 'process', 'own')
+
+
+def shape_failures(r, i, item, declared):
+    """What the check would refuse in an item, so the generator writes it unverified rather than stop or miscount:
+    every rule of the check but one. Whether the review names the theorem is read by the check alone, since the
+    review's text is not among this tool's inputs."""
+    d, of, models, review = (item.get(k) for k in AT_MODEL_KEYS)
+    if set(item) != set(AT_MODEL_KEYS) or not all(isinstance(x, str) and x for x in (d, of, review)) \
+            or not isinstance(models, list) or not models or any(not isinstance(m, str) or m not in MODELS for m in models) \
+            or len(set(models)) != len(models):
+        return ['not in the shape the check requires']
+    laws = [law if isinstance(law, dict) else {} for law in r.get('laws', [])]
+    names = [[n for n in law.get('declarations', []) if isinstance(n, str)] if isinstance(law.get('declarations'), list) else []
+             for law in laws]
+    rows = {y.get('of') for r2, _, y in declared if r2 == r['id'] and isinstance(y.get('of'), str)}
+    reviews = {x.get('path') for x in r.get('references', []) if isinstance(x, dict) and x.get('role') == 'review'}
+    if r.get('status') in {'superseded', 'withdrawn'} or d not in names[i - 1] \
+            or not any(of in n for j, n in enumerate(names, 1) if j != i) or review not in reviews \
+            or any(rows & set(names[j - 1]) for j, law in enumerate(laws, 1) if 'statements_at_model' in law) \
+            or sum(1 for _, _, y in declared if y.get('declaration') == d) > 1:
+        return ["its record breaks the check's rules"]
+    return []
+
+
+def blocked(declared, rid, i, item):
+    """The theorems of the other items, which the walk from item's theorem may not enter: all but those on the same
+    law stating the same row."""
+    return {y['declaration'] for r2, j, y in declared if y is not item and isinstance(y.get('declaration'), str)
+            and not (r2 == rid and j == i and y.get('of') == item.get('of'))}
+
+
+def verify(C, item, law_names, central, others):
+    """F5's tests of one declared statement at a model; others are the theorems of items it must not pass through.
+    Returns what it fails, the grammar terms its statement names and what it keeps in other terms."""
+    d, row = item['declaration'], item['of']
+    failed, terms, kept = [], [], []
+    if d not in C or row not in C:
+        failed.append('not in the spine run')
+    else:
+        if not reaches(C, d, row, others):
+            failed.append('its proof does not reach the row')
+        names = stated(C, d)
+        terms = sorted(n for n in names if is_grammar_term(n))
+        if not terms:
+            failed.append('its statement names no grammar term')
+        for m in item['models']:
+            if m in MODEL_RELATIONS and not names & MODEL_RELATIONS[m]:
+                failed.append(f'its statement names no relation of the {m} model')
+        kept = sorted(n for n in C[d]['t'] if n in C and '«' not in n and C[n]['m'] != C[d]['m'] and n not in STRUCTURE)
+    held = sorted(set(law_names) & central)
+    if held:
+        failed.append('its law holds the central declaration ' + ', '.join(held))
+    return failed, terms, kept
 
 
 def digest(path):
@@ -143,8 +266,28 @@ def main():
                                        **({'reason': row['reason']} if 'reason' in row else {})}
     records = {}
     counts = {'laws': 0, 'no_declarations': 0, 'outside': 0, **{d: 0 for d in DEPENDENCES}, 'vocabulary_only': 0, **{k: 0 for k in NAMES}}
-    for path in sorted((ROOT / 'theories/becoming/results/records').glob('*.json')):
-        r = json.loads(path.read_text())
+    counts_at_model = dict.fromkeys(counts, 0)  # laws carrying statements at a model, counted apart (F5)
+    loaded = [json.loads(path.read_text()) for path in sorted((ROOT / 'theories/becoming/results/records').glob('*.json'))]
+    by_id = {r['id']: r for r in loaded}
+    declared = [(r['id'], i, x) for r in loaded for i, law in enumerate(r.get('laws', []), 1) if isinstance(law, dict)
+                for x in (law.get('statements_at_model') if isinstance(law.get('statements_at_model'), list) else [])
+                if isinstance(x, dict)]
+    checked, at_model = {}, {}  # (record, law) -> its items as verified; row -> its verified statements at a model
+    for rid, i, x in declared:
+        failed = shape_failures(by_id[rid], i, x, declared)
+        terms, kept, row = [], [], 'not measured'
+        if not failed:
+            failed, terms, kept = verify(C, x, by_id[rid]['laws'][i - 1].get('declarations', []), set(central),
+                                         blocked(declared, rid, i, x))
+            g, _, hit = above(x['of'])
+            row = dependence(g, hit) if x['of'] in C else 'not measured'
+        checked.setdefault((rid, i), []).append({**{k: x.get(k) for k in AT_MODEL_KEYS}, 'verified': not failed,
+                                                 **({'failed': failed} if failed else {}), 'grammar_terms': terms,
+                                                 'other_terms': kept, 'row_dependence': row})
+        if not failed:
+            at_model.setdefault(x['of'], []).append({'of': x['of'], 'record': rid, 'law': i, 'declaration': x['declaration'],
+                                                     'models': x['models'], 'review': x['review']})
+    for r in loaded:
         entries = []
         for i, law in enumerate(r.get('laws', []), 1):
             names = list(law.get('declarations', []))
@@ -154,33 +297,44 @@ def main():
                 gn, gln, hn = above(n)
                 g, gl, hit = g or gn, gl or gln, hit | hn
             e = {'law': i, 'declarations': names}
-            counts['laws'] += 1
+            c = counts_at_model if (r['id'], i) in checked else counts
+            c['laws'] += 1
             if inside:
                 e['master_laws'] = [k for k in NAMES if k in hit]
                 e['grammar'] = g
                 if g and not gl:
                     e['grammar_vocabulary_only'] = True
-                    counts['vocabulary_only'] += 1
+                    c['vocabulary_only'] += 1
                 e['dependence'] = dependence(g, hit)
-                counts[e['dependence']] += 1
+                c[e['dependence']] += 1
                 for k in e['master_laws']:
-                    counts[k] += 1
+                    c[k] += 1
                 defines = [n for n in inside if n in is_anchor]
                 if defines:
                     e['defines'] = defines
             elif names:
-                counts['outside'] += 1
+                c['outside'] += 1
             else:
-                counts['no_declarations'] += 1
+                c['no_declarations'] += 1
             cen = [{'declaration': n, **central[n]} for n in names if n in central]
             if cen:
                 e['central'] = cen
             out = [n for n in names if n not in C]
             if out:
                 e['outside'] = out
+            if (r['id'], i) in checked:
+                e['statements_at_model'] = checked[r['id'], i]
+            elsewhere = [x for n in dict.fromkeys(names) for x in at_model.get(n, []) if (x['record'], x['law']) != (r['id'], i)]
+            if elsewhere:
+                e['stated_at_model'] = elsewhere
             entries.append(e)
         if entries:
             records[r['id']] = entries
+    reach = {'reaching the grammar': 0, 'stated at a represented model': 0, 'stated on its own carrier only': 0, 'the rest': 0}
+    for n, row in central.items():
+        models = {m for x in at_model.get(n, []) for m in x['models']}
+        reach['reaching the grammar' if row['dependence'] == 'grammar' else 'stated at a represented model' if models & {'occurrence', 'process'}
+              else 'stated on its own carrier only' if models else 'the rest'] += 1
     data = {
         'about': ('MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by '
                   'tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean '
@@ -193,10 +347,16 @@ def main():
         'names': NAMES,
         'anchors': anchors,
         'counts': counts,
+        'counts_at_model': counts_at_model,
+        'model_relations': {'occurrence': sorted(OCCURRENCE), 'process': sorted(PROCESS), 'structure': sorted(STRUCTURE)},
+        'central_reach': {'counts': reach, 'rows': {n: at_model[n] for n in sorted(central) if n in at_model}},
         'records': records,
     }
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1) + '\n')
-    print(json.dumps({'records': len(records), **counts, 'core_receipt': core['utc'], 'from_dump': from_dump}, ensure_ascii=False))
+    unverified = sum(1 for v in checked.values() for x in v if not x['verified'])
+    print(json.dumps({'records': len(records), **counts, 'at_model_laws': counts_at_model['laws'], 'statements_at_model': len(declared),
+                      'unverified': unverified, 'central_reach': reach, 'core_receipt': core['utc'], 'from_dump': from_dump},
+                     ensure_ascii=False))
 
 
 if __name__ == '__main__':

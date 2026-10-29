@@ -2,13 +2,13 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3095 nodes, 5757 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3098 nodes, 5766 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
 | The root: relation, condition, class, continuation, core | 31 | 83 | 69 | 0 |
 | The map: generation, keeping, degeneration, orders | 5 | 91 | 74 | 0 |
-| Knowing and testing | 0 | 100 | 78 | 0 |
+| Knowing and testing | 0 | 101 | 79 | 0 |
 | Life and evolution | 0 | 42 | 17 | 0 |
 | Collectives and selection | 0 | 62 | 18 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
@@ -241,7 +241,7 @@ Modules (74, 11 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attr
 
 ## Knowing and testing
 
-Results (100):
+Results (101):
 
 - [A family of readings within what it reads](records/readings-within-what-they-read.md) (recorded-checked)
 - [A formation's own course](records/a-formations-own-course.md) (recorded-checked)
@@ -250,6 +250,7 @@ Results (100):
 - [A prediction read by what it predicts](records/a-prediction-read-by-what-it-predicts.md) (recorded-checked)
 - [A projection carrying a law](records/projection-carrying-a-law.md) (recorded-checked)
 - [A reading kept by its update, and the reading its own history carries](records/a-reading-kept-by-its-update.md) (recorded-checked)
+- [A revision of a reading that opens a correction, along one process](records/a-revision-that-opens-a-correction.md) (recorded-checked)
 - [Access yet to form: a newly permitted probe tells apart what old observations do not](records/access-yet-to-form.md) (recorded-checked)
 - [Acquired access selects learning encounters](records/encounter-selection-and-revision.md) (recorded-checked)
 - [Acquired bindings enter compositional use](records/acquired-binding-compositional-use.md) (recorded-checked)
@@ -344,7 +345,7 @@ Results (100):
 - [Which selections survive and remain executable when the lumping changes](records/selection-under-registration-revision.md) (recorded-checked)
 - [文 in the grammar of continuation](records/wen-in-the-grammar.md) (recorded-checked)
 
-Modules (78, 7 stated on the grammar): `Blanket`, `ClassifiedBeliefProcesses`, `CodeAcquisition`, `ConditionalWeights`, `ContactCourses`, `Contacts`, `Context`, `ContextArrivalTraces`, `ContingentPlans`, `ContinuingRuns`, `Counterfactual`, `CounterfactualRuns`, `CrossSituational`, `Dephasing`, `Description`, `Diagonal`, `Distinguishing`, `Experiment`, `FaultEnvelopes`, `Feedback`, `GrammarTesting`, `Horizon`, `Identification`, `IdentificationRuns`, `Inquiry`, `Labels`, `Latency`, `LawAlongRun`, `Learnable`, `LearnableRuns`, `LearnedGrouping`, `Learning`, `LearningRuns`, `LimitVerification`, `LumpedSeeking`, `Mechanism`, `MoveOutcomeProcesses`, `Narrowing`, `NarrowingRuns`, `Observation`, `PartialReadout`, `Parting`, `PooledEnvelopes`, `Postponement`, `ProjectedLaws`, `Quantum`, `ReadingLoop`, `ReadingSchedule`, `Readout`, `Reconfiguration`, `ReferencePlan`, `ReferencePlanTraces`, `ReflexivePrediction`, `Rejoining`, `Response`, `ResponseLearning`, `Retrodiction`, `Revision`, `RouteFormation`, `Sampling`, `Segmentation`, `Selection`, `Sensitivity`, `SensitivityWebs`, `ShownOrder`, `SummaryFutures`, `Testing`, `TimedResponse`, `TreeSearch`, `TypicalRuns`, `Typicality`, `Unread`, `Unrolling`, `Verification`, `Weighted`, `WeightedTraces`, `WitnessRefinement`, `WitnessRefinementRuns`
+Modules (79, 7 stated on the grammar): `Blanket`, `ClassifiedBeliefProcesses`, `CodeAcquisition`, `ConditionalWeights`, `ContactCourses`, `Contacts`, `Context`, `ContextArrivalTraces`, `ContingentPlans`, `ContinuingRuns`, `Counterfactual`, `CounterfactualRuns`, `CrossSituational`, `Dephasing`, `Description`, `Diagonal`, `Distinguishing`, `Experiment`, `FaultEnvelopes`, `Feedback`, `GrammarTesting`, `Horizon`, `Identification`, `IdentificationRuns`, `Inquiry`, `Labels`, `Latency`, `LawAlongRun`, `Learnable`, `LearnableRuns`, `LearnedGrouping`, `Learning`, `LearningRuns`, `LimitVerification`, `LumpedSeeking`, `Mechanism`, `MoveOutcomeProcesses`, `Narrowing`, `NarrowingRuns`, `Observation`, `OpenedCorrection`, `PartialReadout`, `Parting`, `PooledEnvelopes`, `Postponement`, `ProjectedLaws`, `Quantum`, `ReadingLoop`, `ReadingSchedule`, `Readout`, `Reconfiguration`, `ReferencePlan`, `ReferencePlanTraces`, `ReflexivePrediction`, `Rejoining`, `Response`, `ResponseLearning`, `Retrodiction`, `Revision`, `RouteFormation`, `Sampling`, `Segmentation`, `Selection`, `Sensitivity`, `SensitivityWebs`, `ShownOrder`, `SummaryFutures`, `Testing`, `TimedResponse`, `TreeSearch`, `TypicalRuns`, `Typicality`, `Unread`, `Unrolling`, `Verification`, `Weighted`, `WeightedTraces`, `WitnessRefinement`, `WitnessRefinementRuns`
 
 
 ## Life and evolution
@@ -622,4 +623,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-297 of 345 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+298 of 346 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

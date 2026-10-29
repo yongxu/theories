@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261029T191748.070149Z",
- "core_sources_sha256": "31a95c7d6189f77c634750fd2bc335920538fcc54c9fee6cc631010d76fb928d",
+ "core_receipt": "20261029T200440.502813Z",
+ "core_sources_sha256": "6c5b807ed09a7ce2ba5d07622875fdb92bd9c7ae0497d91d53999c4eb31a3ab5",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -9,7 +9,7 @@
   "theories/becoming/results/completion/COVERAGE.json": "022ae0fc28b40f798c02823be35d7463afac2a92a0ada74bfbd3789e160d9749",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "c8e349f57adecd7bd8d25bd0fde850c9f813919cdbf0e4a3734005c43340043a",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
-  "tools/research/master_laws.py": "02c404983046d8e75d18cd7abcbcefe8758be3d0c0c687d579e874332e3aec0e"
+  "tools/research/master_laws.py": "f7e423e8630df318b18b5fc2b48d0c8f2941953053af4561ac49b83390d82f23"
  },
  "names": {
   "closure": "closure",
@@ -56,19 +56,66 @@
   ]
  },
  "counts": {
-  "laws": 3781,
+  "laws": 3788,
   "no_declarations": 9,
   "outside": 357,
   "grammar": 749,
   "balance, represented": 645,
   "anchor, not reached": 134,
-  "no master law": 1887,
+  "no master law": 1894,
   "vocabulary_only": 65,
   "closure": 476,
   "balance": 815,
   "return": 252,
   "lumping": 83,
   "order": 78
+ },
+ "counts_at_model": {
+  "laws": 0,
+  "no_declarations": 0,
+  "outside": 0,
+  "grammar": 0,
+  "balance, represented": 0,
+  "anchor, not reached": 0,
+  "no master law": 0,
+  "vocabulary_only": 0,
+  "closure": 0,
+  "balance": 0,
+  "return": 0,
+  "lumping": 0,
+  "order": 0
+ },
+ "model_relations": {
+  "occurrence": [
+   "Becoming.Steps.along",
+   "Becoming.Web.roles",
+   "Becoming.World.withinStep"
+  ],
+  "process": [
+   "Becoming.Steps",
+   "Becoming.Steps.next",
+   "Becoming.moveRel"
+  ],
+  "structure": [
+   "Becoming.Steps",
+   "Becoming.Steps.along",
+   "Becoming.Steps.next",
+   "Becoming.Web.admitted",
+   "Becoming.Web.partialIdentity",
+   "Becoming.Web.roles",
+   "Becoming.World.withinStep",
+   "Becoming.moveRel",
+   "Becoming.sameValue"
+  ]
+ },
+ "central_reach": {
+  "counts": {
+   "reaching the grammar": 44,
+   "stated at a represented model": 0,
+   "stated on its own carrier only": 0,
+   "the rest": 74
+  },
+  "rows": {}
  },
  "records": {
   "a-code-formed-between-formations": [
@@ -1667,6 +1714,80 @@
     "master_laws": [],
     "grammar": true,
     "dependence": "grammar"
+   }
+  ],
+  "a-revision-that-opens-a-correction": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.OpenedCorrection.Correctable",
+     "Becoming.OpenedCorrection.correctable_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.OpenedCorrection.OpensAlong"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.OpenedCorrection.finer_keeps",
+     "Becoming.OpenedCorrection.coarser_opens_nothing"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.OpenedCorrection.widened_correctable"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.OpenedCorrection.Linked.acceptable",
+     "Becoming.OpenedCorrection.Linked.executable",
+     "Becoming.OpenedCorrection.Linked.unlinked_uncorrectable",
+     "Becoming.OpenedCorrection.Linked.linked_correctable",
+     "Becoming.OpenedCorrection.Linked.starved_uncorrectable"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.OpenedCorrection.Linked.opens",
+     "Becoming.OpenedCorrection.Linked.rebuilt_starved",
+     "Becoming.OpenedCorrection.Linked.opens_after_replenishing",
+     "Becoming.OpenedCorrection.Linked.widened_unlinked"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.OpenedCorrection.Linked.opens_by_support"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
    }
   ],
   "a-rise-past-the-inflow-is-drawn-from-beyond": [
