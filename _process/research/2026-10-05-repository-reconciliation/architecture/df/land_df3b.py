@@ -74,7 +74,7 @@ s = s.rstrip('\n') + ('\n\n## Batch B, measured\n\n'
                       f'Batch B landed on 29 October 2026 (study §{N}).\n\n'
                       '- **Agents:** 13 migrators and 13 reviewers, in units by region, and 4 for the cold read: 3 readers and 1 chain reader. '
                       'Two network outages stopped 11 agents, and the five reviews and three migrations they had not finished were rerun.\n'
-                      '- **Subagent tokens:** about TOKENS in all, more than the 12–13M estimated, because of the outages and the larger records.\n\n'
+                      '- **Subagent tokens:** about 17.0M in all, more than the 12–13M estimated, because of the outages and the larger records.\n\n'
                       'Every result record is now on schema 2. The tools\' schema-1 code paths can go, and that is a change of its own.\n')
 P.write_text(s, encoding='utf-8')
 
