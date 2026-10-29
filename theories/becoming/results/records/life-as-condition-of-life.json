@@ -167,6 +167,62 @@
         "Becoming.Brood.brood",
         "Becoming.Brood.arises"
       ]
+    },
+    {
+      "en": "At the occurrence model of the one-kind reading, a web's support at an occurrence is an inclusion: what the occurrence requires within its step lies within the needs met there. The partial identity of one occurrence is added to WRT2's relations.",
+      "zh": "在一类读法的出现模型上，网在一个出现处的支持即一包含：该出现于其步内所需者，皆在该步已满足之需之中。于 WRT2 之关系之外，仅添一个出现之部分恒等。",
+      "declarations": [
+        "Becoming.ModelStatements.roles_supported_reading",
+        "Becoming.ModelStatements.supported_iff"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.ModelStatements.roles_supported_reading",
+          "of": "Becoming.Web.roles_supported",
+          "models": [
+            "occurrence"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+        }
+      ]
+    },
+    {
+      "en": "At the same model, dependence is requiring from the active occurrences lying within the needs met: WRT2's relations within a step alone.",
+      "zh": "在同一模型上，依存即由活跃出现出发之所需含于已满足之需之中：仅用 WRT2 之步内关系。",
+      "declarations": [
+        "Becoming.ModelStatements.roles_dependent_reading",
+        "Becoming.ModelStatements.dependent_iff"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.ModelStatements.roles_dependent_reading",
+          "of": "Becoming.Web.roles_dependent",
+          "models": [
+            "occurrence"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+        }
+      ]
+    },
+    {
+      "en": "At the same model, a living event is an active occurrence from which no drawing reaches a condition whose dependence is undermined across the step, the undermining reading the dependence's history along the names.",
+      "zh": "在同一模型上，活事件即一活跃出现，自其出发之汲取不及于任何其依存跨步而被削弱之条件；削弱沿名字读该依存之历史。",
+      "declarations": [
+        "Becoming.ModelStatements.roles_alive_reading",
+        "Becoming.ModelStatements.living_iff",
+        "Becoming.ModelStatements.underminingAt_iff",
+        "Becoming.ModelStatements.undermined"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.ModelStatements.roles_alive_reading",
+          "of": "Becoming.Web.roles_alive",
+          "models": [
+            "occurrence"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+        }
+      ]
     }
   ],
   "hypotheses": [
@@ -727,7 +783,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "sha256": "c71e9f32b0fc7e1a8528142f309eb700da852facef0fbcf0757f04e01c9b81e0",
       "declarations": []
     },
     {
@@ -842,6 +898,36 @@
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ModelStatements.dependent_iff",
+        "Becoming.ModelStatements.living_iff",
+        "Becoming.ModelStatements.roles_alive_reading",
+        "Becoming.ModelStatements.roles_dependent_reading",
+        "Becoming.ModelStatements.roles_supported_reading",
+        "Becoming.ModelStatements.supported_iff",
+        "Becoming.ModelStatements.undermined",
+        "Becoming.ModelStatements.underminingAt_iff"
+      ],
+      "sha256": "86aec5d02e4b3ddff4d0f2687fa6a9ee7ce1d120d06aa7e6c954bc8ac87f82b8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "role": "review",
+      "sha256": "2f27f7de12336a450dc686d86563371385ab3db1263a44c4cef3959d74c8f99a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md",
+      "role": "integration",
+      "sha256": "4a6de8c3a7735db3ace316dd45b88b0fe5ab7e91b1e340daf2e9521a854aa2af"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "role": "receipt",
+      "sha256": "e16b5ece7b28c05f2b3349d3f8d51ff4aef68bdedbe6e3b16942c0b9e28acda1"
     }
   ],
   "proof_bindings": [
@@ -891,6 +977,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ModelStatements",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -981,6 +1074,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired label G0 in a dependency's detail and interface reads living significance, and 'the author reads' in the correspondence reads 'the AI reads', keeping the reading's AI label; the claim is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：一条依存的说明与接口中的退役标签 G0 改为生生之意义，对应中的“作者把……读作”改为“AI 把……读作”，读法保留其 AI 标签；主张不变。"
+    },
+    {
+      "en": "30 October 2026 (U2, study section 461): 3 laws at the model added, stating `Becoming.Web.roles_supported`, `Becoming.Web.roles_dependent`, `Becoming.Web.roles_alive` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
+      "zh": "2026年10月30日（U2，研究第 461 节）：增模型上之律 3 条，于其项为文法之处陈述 `Becoming.Web.roles_supported`, `Becoming.Web.roles_dependent`, `Becoming.Web.roles_alive`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
     }
   ],
   "text_versions": [

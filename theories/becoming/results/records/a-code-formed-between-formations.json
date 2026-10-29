@@ -153,6 +153,28 @@
         "Becoming.SharedCodes.course_read",
         "Becoming.SharedCodes.code_read_every"
       ]
+    },
+    {
+      "en": "At the hearing process's model, where two forms differ: every code the first k hearings reach from any start («历» of the moves) has all formations alike at a sense exactly where every two formations are reached from one formation through the hearings' copying relations in turn; an origin is what passes in along them.",
+      "zh": "在听闻过程之模型上，当二形式相异：前 k 次听闻自任一起点所达之每一码（诸着之 «历»），于某义上诸形成皆同，恰当每二形成皆经诸听闻之抄录关系依次自同一形成所达；起源即沿之传入者。",
+      "declarations": [
+        "Becoming.ModelStatements.run_agrees_every_start_reading",
+        "Becoming.ModelStatements.runs_agree_iff_reached",
+        "Becoming.ModelStatements.reached_iff",
+        "Becoming.ModelStatements.origin_iff_li",
+        "Becoming.ModelStatements.copies"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.ModelStatements.run_agrees_every_start_reading",
+          "of": "Becoming.SharedCodes.run_agrees_every_start_iff",
+          "models": [
+            "process",
+            "own"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+        }
+      ]
     }
   ],
   "hypotheses": [
@@ -555,7 +577,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929"
+      "sha256": "c71e9f32b0fc7e1a8528142f309eb700da852facef0fbcf0757f04e01c9b81e0"
     },
     {
       "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
@@ -624,6 +646,33 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ModelStatements.copies",
+        "Becoming.ModelStatements.origin_iff_li",
+        "Becoming.ModelStatements.reached_iff",
+        "Becoming.ModelStatements.run_agrees_every_start_reading",
+        "Becoming.ModelStatements.runs_agree_iff_reached"
+      ],
+      "sha256": "86aec5d02e4b3ddff4d0f2687fa6a9ee7ce1d120d06aa7e6c954bc8ac87f82b8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "role": "review",
+      "sha256": "2f27f7de12336a450dc686d86563371385ab3db1263a44c4cef3959d74c8f99a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md",
+      "role": "integration",
+      "sha256": "4a6de8c3a7735db3ace316dd45b88b0fe5ab7e91b1e340daf2e9521a854aa2af"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "role": "receipt",
+      "sha256": "e16b5ece7b28c05f2b3349d3f8d51ff4aef68bdedbe6e3b16942c0b9e28acda1"
     }
   ],
   "proof_bindings": [
@@ -645,6 +694,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.IdentificationRuns",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ModelStatements",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -681,6 +737,10 @@
     {
       "en": "22 October 2026, WL2: the course of forms through a code and read by cross-situational resolution added (SharedCodes.course_states_iff, course_read, code_read_every); Law.KeepsRelation and Law.KeepsRelation.run moved to Becoming.IdentificationRuns, cited there; study section 351.",
       "zh": "2026年10月22日，WL2：增经码与通意之名之文（SharedCodes.course_states_iff、course_read、code_read_every）；Law.KeepsRelation 与 Law.KeepsRelation.run 移至 Becoming.IdentificationRuns，于彼引之；研究第 351 节。"
+    },
+    {
+      "en": "30 October 2026 (U2, study section 461): a law at the model added, stating `Becoming.SharedCodes.run_agrees_every_start_iff` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
+      "zh": "2026年10月30日（U2，研究第 461 节）：增模型上之律，于其项为文法之处陈述 `Becoming.SharedCodes.run_agrees_every_start_iff`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
     }
   ],
   "text_versions": [

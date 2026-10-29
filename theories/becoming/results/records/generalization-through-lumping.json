@@ -137,6 +137,26 @@
         "Becoming.LearningCorrespondence.responsive_kept",
         "Becoming.LearningCorrespondence.responsive_learns"
       ]
+    },
+    {
+      "en": "On functions, agreeing on the data is the meet of the value classes there. A selection closed along it is a selection through the data, and a class free beyond the data is an inclusion; with both, a selected member is related to every member through a selected member agreeing with it on the data and alike with that member at the untried point.",
+      "zh": "在函数上，于数据上一致即诸值类之交。沿之封闭之选取即经数据之选取，类于数据外自由即一包含；二者俱在时，一被选成员经一于数据上与之一致、于未试之点与彼成员同值之被选成员，关联于每一成员。",
+      "declarations": [
+        "Becoming.ModelStatements.unselected_beyond_data_reading",
+        "Becoming.ModelStatements.through_of_closed",
+        "Becoming.ModelStatements.free_iff",
+        "Becoming.ModelStatements.agreeingOn"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.ModelStatements.unselected_beyond_data_reading",
+          "of": "Becoming.Learning.Training.unselected_beyond_data",
+          "models": [
+            "own"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+        }
+      ]
     }
   ],
   "hypotheses": [
@@ -438,7 +458,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "sha256": "c71e9f32b0fc7e1a8528142f309eb700da852facef0fbcf0757f04e01c9b81e0",
       "declarations": []
     },
     {
@@ -589,6 +609,32 @@
       "role": "receipt",
       "sha256": "6fbe7c7f21314fbd0a3eba90ff6bde5198b56d52137d19fc6857a87e83949aa4",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ModelStatements.agreeingOn",
+        "Becoming.ModelStatements.free_iff",
+        "Becoming.ModelStatements.through_of_closed",
+        "Becoming.ModelStatements.unselected_beyond_data_reading"
+      ],
+      "sha256": "86aec5d02e4b3ddff4d0f2687fa6a9ee7ce1d120d06aa7e6c954bc8ac87f82b8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "role": "review",
+      "sha256": "2f27f7de12336a450dc686d86563371385ab3db1263a44c4cef3959d74c8f99a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md",
+      "role": "integration",
+      "sha256": "4a6de8c3a7735db3ace316dd45b88b0fe5ab7e91b1e340daf2e9521a854aa2af"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "role": "receipt",
+      "sha256": "e16b5ece7b28c05f2b3349d3f8d51ff4aef68bdedbe6e3b16942c0b9e28acda1"
     }
   ],
   "proof_bindings": [
@@ -652,6 +698,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ModelStatements",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -738,6 +791,10 @@
     {
       "en": "29 October 2026, board item UE19 (study section 453): related to expected-free-energy-and-its-terms; no statement, next step or declaration changed.",
       "zh": "2026年10月29日，工作板条目 UE19（研究第 453 节）：与 expected-free-energy-and-its-terms 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "30 October 2026 (U2, study section 461): a law on its own carrier added, stating `Becoming.Learning.Training.unselected_beyond_data` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
+      "zh": "2026年10月30日（U2，研究第 461 节）：增于其自身之载体上之律，于其项为文法之处陈述 `Becoming.Learning.Training.unselected_beyond_data`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
     }
   ],
   "text_versions": [

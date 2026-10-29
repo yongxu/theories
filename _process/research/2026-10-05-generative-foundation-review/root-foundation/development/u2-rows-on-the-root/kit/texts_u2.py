@@ -63,7 +63,8 @@ assert s.count(anchor) == 1, s.count(anchor)
 design = '../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md'
 sentence = (f"Of those 24, 20 are stated where their terms are the grammar's, each proved through its row and declared on "
             f"its row's record as a statement at a model, a representation and not a derivation ([U2]({design})); three "
-            f"resist, their terms amounts computed over a family; and one is read on the root with the significance rows. "
+            f"resist, their terms amounts computed over a family; and one, `unrestricted_iff_livingSignificance`, waits "
+            f"for the significance rows' statement on the root. "
             f"So F5's report, over the 118, counts {REACH} reaching the grammar, {AT_MODEL} stated at a represented model, "
             f"{OWN} stated on their own carrier only, and {REST} the rest. ")
 assert sentence not in s

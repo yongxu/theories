@@ -34,9 +34,9 @@ Supplied premises / correspondence: none added. The relations read across a step
        shown carried by re-identification; comparisons of needs with levels, the order of outcomes and the need
        within δ are relations of the model read from amounts, outside U1's interface; one decidability premise
        (row 12) and two premises of logic are kept.
-Evidence: core receipt `{RECEIPT}`; Becoming.ModelStatements (COUNTS), every axiom report empty; F5's verification of
-       the twenty-one items from the checker cache (master-laws.json, none unverified); the dependency check
-       (development/u2-rows-on-the-root/check/deps.log).
+Evidence: core receipt `{RECEIPT}`; Becoming.ModelStatements (COUNTS), every
+       axiom report empty; F5's verification of the twenty-one items from the checker cache (master-laws.json, none
+       unverified); the dependency check (development/u2-rows-on-the-root/check/deps.log).
 Standing: representations at the models, not derivations. A definitional row's reading is its definition at the
        model; a model law keeps the row's proof.
 Boundary:

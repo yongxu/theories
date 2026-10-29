@@ -66,6 +66,28 @@
         "Becoming.Flow.Taking",
         "Becoming.Web.Dependent"
       ]
+    },
+    {
+      "en": "At the occurrence model, renewal at a step is an inclusion: the occurrence is active, and requiring, from the conditions it takes part in, lies within the relation kept across the step. Renewal over a region is the same with the source met with the region, and the row is their equivalence for the region of every condition.",
+      "zh": "在出现模型上，一步之更新即一包含：该出现活跃，且由其所参与之条件出发之所需，含于跨步而保持之关系。一区域上之更新同此，惟其源与该区域相交；本行即二者于一切条件之区域上相等。",
+      "declarations": [
+        "Becoming.ModelStatements.renewingAt_iff_over_all_reading",
+        "Becoming.ModelStatements.renewingAt_reading",
+        "Becoming.ModelStatements.renewingOver_reading",
+        "Becoming.ModelStatements.roles_renewingAt",
+        "Becoming.ModelStatements.roles_renewingOver",
+        "Becoming.ModelStatements.keptAcross"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.ModelStatements.renewingAt_iff_over_all_reading",
+          "of": "Becoming.Web.renewingAt_iff_over_all",
+          "models": [
+            "occurrence"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+        }
+      ]
     }
   ],
   "hypotheses": [
@@ -325,7 +347,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093"
+      "sha256": "c71e9f32b0fc7e1a8528142f309eb700da852facef0fbcf0757f04e01c9b81e0"
     },
     {
       "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
@@ -461,6 +483,34 @@
       "role": "receipt",
       "sha256": "8aec0bc8a1531907a80ec2d51c849088cdd1ffaf368e16f4d95a8513d56494a5",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ModelStatements.keptAcross",
+        "Becoming.ModelStatements.renewingAt_iff_over_all_reading",
+        "Becoming.ModelStatements.renewingAt_reading",
+        "Becoming.ModelStatements.renewingOver_reading",
+        "Becoming.ModelStatements.roles_renewingAt",
+        "Becoming.ModelStatements.roles_renewingOver"
+      ],
+      "sha256": "86aec5d02e4b3ddff4d0f2687fa6a9ee7ce1d120d06aa7e6c954bc8ac87f82b8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "role": "review",
+      "sha256": "2f27f7de12336a450dc686d86563371385ab3db1263a44c4cef3959d74c8f99a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md",
+      "role": "integration",
+      "sha256": "4a6de8c3a7735db3ace316dd45b88b0fe5ab7e91b1e340daf2e9521a854aa2af"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "role": "receipt",
+      "sha256": "e16b5ece7b28c05f2b3349d3f8d51ff4aef68bdedbe6e3b16942c0b9e28acda1"
     }
   ],
   "proof_bindings": [
@@ -503,6 +553,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Clearing.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Clearing",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ModelStatements",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -587,6 +644,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): title and statement kept; the claim split into five laws, each read against its declarations in Regions.lean, Clearing.lean, Admission.lean, Dependence.lean and Flow.lean (renewal over a region and its order, the covering region, keeping its own support, the Clearing and Omitted witnesses); the limitations to three does-not-show items, the hypotheses and the standard boundaries no-ethical-premise, no-evaluation, discrete-steps and names-provisional; the first counterexample's path corrected to Clearing.lean, which defines its witness since R31, and the second's text narrowed to the witness it is (“need not keep”); a round number and a stale clause on route (b), whose feeding closure the related records feeding-closure and consumption-ends-with-feeders state, cut from the correspondence, Ren's words kept verbatim with their date and the AI label kept; no premise, status, reference, source hash or proof binding changed. Every earlier sentence is mapped in [represented-boundary-against-dependence.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/represented-boundary-against-dependence.md); the exact earlier record is the first text_versions entry.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：标题与陈述保留；主张拆为五条规律，各条对照 Regions.lean、Clearing.lean、Admission.lean、Dependence.lean 与 Flow.lean 中的声明核读（区域上的更新及其次序、覆盖的区域、保住自身支持、Clearing 与 Omitted 见证）；限制改为三条“未表明”、前提与通用边界 no-ethical-premise、no-evaluation、discrete-steps、names-provisional；第一条反例的路径改为 Clearing.lean（R31 起其见证在此定义），第二条的文字按其见证收窄（“不必保住”）；对应中删去一处轮次编号与一句关于路线 (b) 的过时说法（其供给闭包由相关记录 feeding-closure 与 consumption-ends-with-feeders 陈述），Ren 的原话连同日期逐字保留，AI 标签保留；前提、状态、引用、来源哈希与证明绑定均未改变。每句旧文本的去向见 [represented-boundary-against-dependence.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/represented-boundary-against-dependence.md)；迁移前的完整记录为 text_versions 首项。"
+    },
+    {
+      "en": "30 October 2026 (U2, study section 461): a law at the model added, stating `Becoming.Web.renewingAt_iff_over_all` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
+      "zh": "2026年10月30日（U2，研究第 461 节）：增模型上之律，于其项为文法之处陈述 `Becoming.Web.renewingAt_iff_over_all`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
     }
   ],
   "text_versions": [

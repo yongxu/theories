@@ -5256,6 +5256,21 @@
    "module": "Becoming.FreeEnergyCounting",
    "category": "model-witness",
    "reason": "Witness.duplicate_share: a hypothesis listed twice breaks the join to the share; a fact about one constructed model of two or three listed hypotheses with small natural weights (UE21)"
+  },
+  "Becoming.ModelStatements.significant_iff_held_reading": {
+   "module": "Becoming.ModelStatements",
+   "category": "general-structure",
+   "reason": "ModelStatements.significant_iff_held_reading: the row Valuation.significant_iff_held through the partial identities of regions of claims: where living lies within the positions' own regions, living lies within every position's significance exactly where each position's own living lies within its significance and what is living and significant from one position is significant from every other; a law of every valuation of any claims, stated on its own carrier; the base supplies no reading of claims, positions or significance (the theory states them as conditions) (U2)"
+  },
+  "Becoming.ModelStatements.unselected_beyond_data_reading": {
+   "module": "Becoming.ModelStatements",
+   "category": "general-structure",
+   "reason": "ModelStatements.unselected_beyond_data_reading: the row Learning.Training.unselected_beyond_data through agreeing on the data: with the selection closed along that agreement and the class free at a point beyond the data, a selected member is related to every member by agreeing on the data with a selected member then alike at the point; a law of every class and selection of functions on any types, stated on its own carrier; the base supplies no reading of functions or data (U2)"
+  },
+  "Becoming.ModelStatements.verifiableBy_reading": {
+   "module": "Becoming.ModelStatements",
+   "category": "general-structure",
+   "reason": "ModelStatements.verifiableBy_reading: the row Ideals.verifiableBy_iff_interior through membership of points in stretches: a reading is verifiable exactly where each point it holds bears membership to a stretch every bearer of which it holds; a law of every family of ideals of any order, stated on its own carrier; the base supplies no reading of an order's ideals (at runs they are the finite stretches) (U2)"
   }
  },
  "instances": {

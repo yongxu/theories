@@ -120,6 +120,46 @@
       "declarations": [
         "Becoming.Renewable.breaking_event_makes_step_difference"
       ]
+    },
+    {
+      "en": "At a process's model, withholding all parts is passing through their withholdings in turn («历»). Where the move's relation meets the breaking from the configuration and from what each withholding leaves, parts whose but-for statement holds together make the difference only together: it holds for no single one of them.",
+      "zh": "在过程之模型上，扣除诸部分即依次历经其各扣除（«历»）。当着之关系自该构型及自每一扣除所留者皆与破坏相交，“若无”陈述合之而成立之诸部分唯合之方造成差别：该陈述于其中任一单一部分皆不成立。",
+      "declarations": [
+        "Becoming.ModelStatements.only_together_reading",
+        "Becoming.ModelStatements.overdetermined_iff",
+        "Becoming.ModelStatements.differenceAt",
+        "Becoming.ModelStatements.withholdAll_iff_li"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.ModelStatements.only_together_reading",
+          "of": "Becoming.Dependence.Overdetermined.only_together",
+          "models": [
+            "process"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+        }
+      ]
+    },
+    {
+      "en": "At the same model, each move's relation fixing its successor, and the move available from what each withholding leaves with the dependence required and met there: the parts make the difference only together exactly where they do together and from what each withholding leaves the move's relation meets the breaking.",
+      "zh": "在同一模型上，每一着之关系定其后继，且自每一扣除所留者该着可行、依存所需且被满足：诸部分唯合之方造成差别，恰当其合之造成差别，且自每一扣除所留者着之关系与破坏相交。",
+      "declarations": [
+        "Becoming.ModelStatements.differenceOnlyTogether_reading",
+        "Becoming.ModelStatements.differenceOnlyTogether_iff_model",
+        "Becoming.ModelStatements.makesDifference_iff",
+        "Becoming.ModelStatements.makesDifferenceTogether_iff"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.ModelStatements.differenceOnlyTogether_reading",
+          "of": "Becoming.Dependence.differenceOnlyTogether_iff",
+          "models": [
+            "process"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+        }
+      ]
     }
   ],
   "hypotheses": [
@@ -450,7 +490,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929",
+      "sha256": "c71e9f32b0fc7e1a8528142f309eb700da852facef0fbcf0757f04e01c9b81e0",
       "declarations": []
     },
     {
@@ -541,6 +581,36 @@
       "role": "receipt",
       "sha256": "4d94c1b82af02e7869351aba40ea8ebaa61b5614423929afa25924281fdda97a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ModelStatements.differenceAt",
+        "Becoming.ModelStatements.differenceOnlyTogether_iff_model",
+        "Becoming.ModelStatements.differenceOnlyTogether_reading",
+        "Becoming.ModelStatements.makesDifferenceTogether_iff",
+        "Becoming.ModelStatements.makesDifference_iff",
+        "Becoming.ModelStatements.only_together_reading",
+        "Becoming.ModelStatements.overdetermined_iff",
+        "Becoming.ModelStatements.withholdAll_iff_li"
+      ],
+      "sha256": "86aec5d02e4b3ddff4d0f2687fa6a9ee7ce1d120d06aa7e6c954bc8ac87f82b8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "role": "review",
+      "sha256": "2f27f7de12336a450dc686d86563371385ab3db1263a44c4cef3959d74c8f99a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md",
+      "role": "integration",
+      "sha256": "4a6de8c3a7735db3ace316dd45b88b0fe5ab7e91b1e340daf2e9521a854aa2af"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "role": "receipt",
+      "sha256": "e16b5ece7b28c05f2b3349d3f8d51ff4aef68bdedbe6e3b16942c0b9e28acda1"
     }
   ],
   "proof_bindings": [
@@ -569,6 +639,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Laws",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ModelStatements",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -647,6 +724,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): 'the author's prior knowledge' in the correspondence reads 'the AI's', the claim from prior knowledge keeping its AI label. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中“作者据先前知识”改为“AI 据先前知识”，依先前知识之说保留其 AI 标签。规律未变。"
+    },
+    {
+      "en": "30 October 2026 (U2, study section 461): 2 laws at the model added, stating `Becoming.Dependence.Overdetermined.only_together`, `Becoming.Dependence.differenceOnlyTogether_iff` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
+      "zh": "2026年10月30日（U2，研究第 461 节）：增模型上之律 2 条，于其项为文法之处陈述 `Becoming.Dependence.Overdetermined.only_together`, `Becoming.Dependence.differenceOnlyTogether_iff`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
     }
   ],
   "text_versions": [

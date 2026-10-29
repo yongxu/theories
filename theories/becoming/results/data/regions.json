@@ -3478,6 +3478,11 @@
    "base": "old-base",
    "note": "L2 premise card, living significance, universal reason, C and L"
   },
+  "Becoming.ModelStatements": {
+   "region": "root",
+   "base": "grammar",
+   "note": "U2 rows stated at the grammar's models: occurrence, process, own carrier (each record's law at the model)"
+  },
   "Becoming.MoveFormation": {
    "region": "root",
    "base": "frame",
