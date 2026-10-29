@@ -1,0 +1,62 @@
+{
+ "receipt": "20261029T104256.342764Z",
+ "modules": {
+  "Becoming.GrammarLaws": {
+   "landed_declarations": 148,
+   "landed_theorems": 125,
+   "tree_declarations": 160,
+   "removed": [],
+   "added": [
+    "Becoming.GrammarLaws.replicate_add_right",
+    "Becoming.GrammarLaws.replicate_succ_right",
+    "Becoming.GrammarLaws.reverseAux_append_right",
+    "Becoming.GrammarLaws.reverse_cons_right",
+    "Becoming.GrammarLaws.reverse_replicate",
+    "Becoming.«历»",
+    "Becoming.«历之接»",
+    "Becoming.«历之末步»",
+    "Becoming.«历之逆»",
+    "Becoming.«历之定前»",
+    "Becoming.«迭即历»",
+    "Becoming.«同行之历»"
+   ],
+   "theorems_whose_source_changed": [
+    "Becoming.«迭之接»",
+    "Becoming.«迭之末步»",
+    "Becoming.«迭之分»",
+    "Becoming.«迭之逆»",
+    "Becoming.«迭之定前»",
+    "Becoming.«同行之迭»"
+   ]
+  },
+  "Becoming.GrammarTransport": {
+   "landed_declarations": 44,
+   "landed_theorems": 41,
+   "tree_declarations": 57,
+   "removed": [],
+   "added": [
+    "Becoming.«一一对应».prod",
+    "Becoming.«延之拉回»",
+    "Becoming.«保之像»",
+    "Becoming.«迭之像»",
+    "Becoming.«迭之对应»",
+    "Becoming.«历之像»",
+    "Becoming.«历之对应»",
+    "Becoming.«迭内之对应»",
+    "Becoming.«闭之对应»",
+    "Becoming.«定后之对应»",
+    "Becoming.«定前之对应»",
+    "Becoming.«同行之对应»",
+    "Becoming.«延之对应»"
+   ],
+   "theorems_whose_source_changed": []
+  }
+ },
+ "statements_or_bodies_differing": [],
+ "without_output": [],
+ "checked": {
+  "statements": 192,
+  "bodies": 26
+ }
+}
+python3 -B $K/signatures_wrp2.py --json $F/signatures.json  1.40s user 1.12s system 47% cpu 5.326 total
