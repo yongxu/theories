@@ -1,0 +1,437 @@
+# theorem	category	law or anchor	note
+Accretion.never_ceases	c-witness		a fact of the one constructed web Accretion: nothing ceases
+Accretion.unceasing	c-witness		Accretion's web is unceasing
+Attrition.ceasing	c-witness		Attrition's web ceases at arbitrarily late steps
+Attrition.nothing_arises	c-witness		nothing arises in Attrition's web
+Web.arising_recurs_iff	c-below	Change.coming_recurs_iff	already the instance of a field-free law of predicates along steps (comings and goings recur together over a listed carrier); see B1
+Web.unceasing_iff	c-below	Web.unceasing_iff_covering	the covering form at T = 0
+Web.unceasing_iff_covering	c-below	Web.arising_recurs_iff	unceasing is ceasing recurring, over a list covering activity from T on
+Web.ceases_iff_inactive_sheng	c-rep	«生»	ceasing is a beginning of the activity class's line after an active step (OU3a)
+Web.ceases_iff_wang	c-rep	«亡»	ceasing is an end of the activity class's line (OU3a)
+Web.ceasing_readings	c-rep		ceasing and arising read as Change's comings-to-be of inactivity, with stability for the converses
+Web.flash_positions	c-rep	«四相无自立»	a flash read in four lines at once; it uses the grammar's four positions
+Web.sheng_iff_arises_or_ceases	c-rep	«生»	a beginning of the activity class's line is an arising or a ceasing (decidable)
+Web.activityClass_class	c-rep	«类»	activity's sameness is a class
+Web.arises_iff_sheng	c-rep	«生»	arising is a beginning of the activity class's line at an active step (OU3a)
+Web.dissipation_arising_not_recurring	a-done	«尽则不或屡» via falls_not_recurring	arisings as falls of a bounded count: already the law of rest through falls_not_recurring and Amounts.rests (OU3b)
+Web.renews_iff	c-rep	«复生»	renewal of the activity class's line is an arising with a successor active
+Web.sheng_iff_steps	c-rep	«生»	the same beginning read on the steps of one formation (Steps.next)
+Web.unceasing_iff_late_beginnings	c-rep	«生»	unceasing is late beginnings at active steps, through arises_iff_sheng
+Web.wang_iff_steps	c-rep	«亡»	the same end read on the steps of one formation
+Bud.fission	c-witness	«相续»	a fact of the constructed Bud: one line splits in two
+MergeClass.candles	c-witness	«续»,«同族»	a fact of the constructed MergeClass: two lines join, one family
+Web.Continuing.itself_from_zero	c-model		an always active formation continues along itself from 0 (the names' identity)
+Web.Continuing.itself_onward	c-model		the same from any step (induction on the names' steps)
+Web.Continuing.itself_same	c-model		continuing along the identity keeps the formation (the names)
+Web.Continuing.line	c-rep	«相续»	a continuation is a line of the activity class's continuation (the bridge's one direction)
+Web.Continuing.mono	a	«及之单调»	the direct induction duplicates Continuing.mono_by_reach, which proves the same statement from «及之单调» through continuing_iff_line: rule 9 keeps the derivation, so the direct proof goes and one of the two names is retired
+Web.Continuing.mono_by_reach	a-done	«及之单调»	already the derivation (see Continuing.mono)
+Web.Continuing.of_reidentify	c-model		re-identification carries continuations (the names; WRT: a case of carrying, re-deriving it would be rerouting)
+Web.Continuing.to_reidentify	c-model		the converse direction
+Web.carry_step_iff	c-model		re-identification carries the continuation step
+Web.continuing_iff_line	c-rep	«相续»	Continuing is the activity class's line, or staying (the bridge)
+Web.continuing_reidentify	c-model		re-identification of continuations, both ways
+Web.line_continuing	c-rep	«及»	the bridge's other direction (its own induction on reach)
+Web.line_reidentify	c-model		re-identification carries lines (WRT §1.4: a case of carrying, not to be rerouted)
+Web.arisesFrom_of_arises	c-model		arising from nothing under R gives arising from R (a reading of ArisesFrom)
+Web.arises_iff_sheng_state	c-rep	«生»	arising as a beginning of the state class's line
+Web.arises_of_persisting_arises	a-done	«生于粗则生于细»	already the grammar's law: born in the coarse class, born in the finer
+Web.arises_persisting_iff	c-model		arising in the persisting web, read back (definitional)
+Web.ceases_iff_wang_state	c-rep	«亡»	ceasing as an end of the state class's line
+Web.ceases_of_persisting_ceases	a-done	«亡于粗则亡于细»	already the grammar's law: ended in the coarse class, ended in the finer
+Web.ceases_persisting_iff	c-model		ceasing in the persisting web, read back (definitional)
+Web.fallsDormant_alters	c-rep	«亡»,«异»	falling dormant read as an end and an alteration (positions)
+Web.keepsActive_of_held	c-model		re-identification keeping activity of the persisting web keeps W's (the names)
+Web.named_throughout	c-model		a re-identification keeping persisting activity names a held formation throughout (the names)
+Web.persisting_census	c-model		the census of the persisting web (counts)
+Web.sheng_state_of_change	a	«生于粗则生于细»	a change of activity begins the activity class's line, and the state class is finer (stateClass_finer); the law replaces the step from alike in the state class to alike in activity, as arises_of_persisting_arises already does
+Web.stateClass_class	c-rep	«类»	the state class is a class
+Web.stateClass_finer	c-rep	«则»	the state class is finer than the persisting web's activity class (definitional)
+Web.steady_held	c-model		re-identification keeping persisting activity is steady on held stretches (the names)
+Web.unending_of_holds	c-rep	«不穷»	a formation held throughout is unending in the persisting web's activity line (unfolding)
+Web.wakes_alters	c-rep	«生»,«异»	waking read as a beginning and an alteration (positions)
+Web.waking_not_arising	c-model		held formations do not arise in the persisting web (definitional)
+Web.wang_state_of_change	a	«亡于粗则亡于细»	the dual of sheng_state_of_change
+World.ofRoles_reidentify_arises	c-model		arising under the roles' re-identification (the names)
+World.ofRoles_reidentify_unceasing	c-model		unceasing under the roles' re-identification (the names)
+Confluence.confluence	c-witness		a fact of the constructed Confluence: two lines join
+Confluence.ended	c-witness		Confluence's first formation is gone after step 0
+Confluence.noSplit	c-witness		Confluence splits nothing
+Dormancy.active_once	c-witness		Dormancy's formations are active at no two steps in a row
+Dormancy.joined_once	c-witness		the same for the joined reading
+Identity.Fork.fission	c-witness	«相续»	a fact of the constructed Fork: a line splits
+Identity.Fork.split_unceasing	c-witness		Fork splits and is unceasing from its continuation
+Layered.both	c-witness		a fact of the constructed Layered web
+Lineage.arises	c-witness		the constructed Lineage's first member arises at odd steps
+Lineage.one_way	c-witness		a re-identification keeping activity one way only (the names)
+Lineage.readings	c-witness		Lineage's readings under a re-identification (the names)
+Merge.idle	c-witness		a fact of the constructed Merge
+Merge.noSplit	c-witness		Merge splits nothing
+Tandem.budding	c-witness		a fact of the constructed Tandem (budding)
+Tandem.budding_fission	c-witness	«相续»	Tandem's lines split
+Tandem.census	c-witness		Tandem's census
+Tandem.joining	c-witness		a fact of the constructed Tandem (joining)
+Tandem.joining_candles	c-witness	«续»,«同族»	Tandem's lines join, one family
+Tandem.kept	c-witness		Tandem arises and ceases at every step
+TideFlip.arises	c-witness		the flipped tide's moon arises at odd steps
+Web.Census.arisingFrom_of_ceasingFrom	c-model		census: arisings recur where ceasings do, by counts over lists (balance represented, not derived)
+Web.Census.arisingFrom_of_ceasingFrom_from	c-model		the same from a step on
+Web.Census.balanceFrom	c-model		census balance: counts of arising, ceasing and alive over a stretch (the prelude's stretch balance)
+Web.Census.balanceFrom_at	c-model		the same at a step
+Web.Census.balanceFrom_eq	c-model		the same as an equation
+Web.Census.balanceFrom_eq_at	c-model		the same at a step
+Web.Census.ceasingFrom_of_arisingFrom	c-model		census: ceasings recur where arisings do (counts)
+Web.Census.ceasingFrom_of_arisingFrom_from	c-model		the same from a step on
+Web.Census.reidentify	c-model		re-identification carries a census (the names)
+Web.Lineage.active	c-rep		a lineage stays within activity (the definition's partial identity)
+Web.Lineage.back	b	B2	with nothing arising from M on, every active formation at M + k has a lineage back to M, as a double negation: B2 read backward (no beginning)
+Web.Lineage.cons	a	«迭之接»	a first step then k steps is k + 1 steps: «迭之接» (1 then k) through a bridge from Lineage to «迭» of the active continuation step (its own induction, by «迭之末步»), in place of the induction on k
+Web.Lineage.ends	a	«迭之定于», B1	no split from M on and a ceasing at the end leave no longer lineage: from Lineage.through (B1) and Lineage.unique («迭之定于»)
+Web.Lineage.line	c-rep	«相续»	a lineage of k + 1 steps is a line of the activity class (already through «及之传递»)
+Web.Lineage.onward	b	B2	with nothing ceasing from N on, a lineage of every length exists, as a double negation: B2 (no end gives n steps for every n)
+Web.Lineage.origin	a	«迭之定前»	merging nothing from M on, k steps to one formation come from one: «迭之定前» at the active continuation step restricted to steps from M on, through the bridge, in place of the induction
+Web.Lineage.split	b	B1	j + i steps split into j and then i: the converse of «迭之接», which the grammar lacks (B1)
+Web.Lineage.through	b	B1	k + 1 + i steps pass through a k-th and a (k + 1)-th formation: B1 with «迭之末步»
+Web.Lineage.unique	a	«迭之定于»	with a fixed successor from M on (no split within activity), k steps from (M, g) lead to one formation: «迭之定于» at the active continuation step, through the bridge, in place of the induction
+Web.abides_iff	c-rep	«住»	abiding of the activity class's line is continuing and being continued (OU3a)
+Web.arisesFrom_iff_sheng	c-rep	«生»	arising from R is a beginning of the activity class's line under R
+Web.arisesFrom_of_more	c-model		no split and more formations after than before: some arise (counting over lists)
+Web.arisesFrom_self	c-rep		arising from the identity is arising (definitional)
+Web.arises_iff_of_keepsActive_both	c-model		arising under a re-identification keeping activity both ways (the names)
+Web.arises_iff_sheng_itself	c-rep	«生»	arising as a beginning of the line under the names' step
+Web.arises_of_back_keepsActive	c-model		arising carried by a re-identification (the names)
+Web.arises_of_keepsActive	c-model		the converse direction (the names)
+Web.arisingFrom_found	c-model		unceasing from R gives n distinct late arisings (counting)
+Web.arisingFrom_not_stopping_covered	c-model		covered at late steps and no split: arisings do not stop (pigeonhole over lists)
+Web.ceasesFrom_iff_wang	c-rep	«亡»	ceasing from R is an end of the activity class's line under R
+Web.ceasesFrom_of_unconditioned	a-done	«亡于粗则亡于细»	already the grammar's law (an active formation with no successor under R ends)
+Web.ceasesFrom_self	c-rep		ceasing from the identity is ceasing (definitional)
+Web.ceases_iff_wang_itself	c-rep	«亡»	ceasing as an end of the line under the names' step
+Web.ceasingFrom_found	c-model		recurring ceasings give n distinct late ones (counting)
+Web.ceasingFrom_not_stopping_covered	c-model		covered from T on and no merge: ceasings do not stop (pigeonhole over lists)
+Web.continuation_reidentify	c-model		a re-identification's continuation splits nothing, and arising from it is arising after it (the names)
+Web.hasPred_iff_continues	c-rep	«有前»	having a predecessor in the activity class's line is continuing
+Web.hasSucc_iff_continued	c-rep	«有后»	having a successor is being continued
+Web.line_lineage	c-rep	«及»	a reach of the activity class's continuation is a lineage of some length (bridge)
+Web.lineage_iff_line	c-rep	«相续»	a lineage of k + 1 steps is a line of the activity class (bridge)
+Web.lineages_apart	a	«迭之定前», B1	merging nothing from N on, a lineage from an earlier formation does not meet one arising later: from Lineage.split (B1) and Lineage.origin («迭之定前»)
+Web.merge_candles	a-done	«蜡烛之合»	already the grammar's candle law (two lines joining are one family)
+Web.noMerge_iff	c-rep	«续»	no merge is the continuation merging nothing within activity
+Web.noSplit_iff	c-rep	«续»	no split is the continuation splitting nothing within activity
+Web.no_join	c-model		a re-identification keeping activity back joins no two formations across a step (the names)
+Web.not_not_arisingFrom_covered	c-model		covered and no split: arisings recur, as a double negation (pigeonhole over lists)
+Web.rename_unceasing	c-model		a renaming keeps unceasing (the names)
+Web.self_one_to_one	c-rep		the identity splits and merges nothing (definitional)
+Web.split_fission	c-rep	«分叉»	any web with two active successors of one active formation realizes the shape of the grammar's fork, which is a witness («分叉» is an existential example), not a law to derive from; the proof builds the steps and uses only that steps advance the index
+Web.unceasingFrom_of_growth	c-model		a census growing without bound and no split: arising recurs (counting)
+Web.unceasingFrom_self	c-rep		unceasing from the identity is unceasing (definitional)
+Web.unceasing_iff_of_keepsActive_both	c-model		unceasing under a re-identification keeping activity both ways (the names)
+Web.unceasing_of_keepsActive	c-model		unceasing carried back by a re-identification (the names)
+Countless.countless	c-witness		a fact of a constructed web of wholes and parts (Countless)
+Countless.ends	c-witness		a fact of a constructed web of wholes and parts (Countless)
+Countless.never	c-witness		a fact of a constructed web of wholes and parts (Countless)
+Countless.whole	c-witness		a fact of a constructed web of wholes and parts (Countless)
+Gaps.ends	c-witness		a fact of a constructed web of wholes and parts (Gaps)
+Gaps.gaps	c-witness		a fact of a constructed web of wholes and parts (Gaps)
+Gaps.listed	c-witness		a fact of a constructed web of wholes and parts (Gaps)
+Gaps.whole	c-witness		a fact of a constructed web of wholes and parts (Gaps)
+Generations.allWhole_never	c-witness		a fact of a constructed web of wholes and parts (Generations)
+Generations.brief	c-witness		a fact of a constructed web of wholes and parts (Generations)
+Generations.ends	c-witness		a fact of a constructed web of wholes and parts (Generations)
+Generations.generations	c-witness		a fact of a constructed web of wholes and parts (Generations)
+Generations.listed	c-witness		a fact of a constructed web of wholes and parts (Generations)
+Generations.whole	c-witness		a fact of a constructed web of wholes and parts (Generations)
+Immortal.each_other	c-witness		a fact of a constructed web of wholes and parts (Immortal)
+Immortal.immortal	c-witness		a fact of a constructed web of wholes and parts (Immortal)
+Layered.arise_again	c-witness		a fact of a constructed web of wholes and parts (Layered)
+Layered.brief	c-witness		a fact of a constructed web of wholes and parts (Layered)
+Layered.composed	c-witness		a fact of a constructed web of wholes and parts (Layered)
+Layered.within	c-witness		a fact of a constructed web of wholes and parts (Layered)
+Rafters.decided	c-witness		a fact of a constructed web of wholes and parts (Rafters)
+Rafters.grade_two	c-witness		a fact of a constructed web of wholes and parts (Rafters)
+Rafters.house	c-witness		a fact of a constructed web of wholes and parts (Rafters)
+Rafters.remains	c-witness		a fact of a constructed web of wholes and parts (Rafters)
+Rafters.taken	c-witness		a fact of a constructed web of wholes and parts (Rafters)
+Shifts.shifts	c-witness		a fact of a constructed web of wholes and parts (Shifts)
+Web.AllWhole.active_of_none	c-model		a whole active where every part is (meet of activities): predicate logic at each step, decidability and lists where a part must be named
+Web.AllWhole.active_whole	c-model		a whole active where every part is (meet of activities): predicate logic at each step, decidability and lists where a part must be named
+Web.AllWhole.arises_part	c-model		a whole active where every part is (meet of activities): predicate logic at each step, decidability and lists where a part must be named
+Web.AllWhole.atLeastWhole	c-model		a whole active where every part is (meet of activities): predicate logic at each step, decidability and lists where a part must be named
+Web.AllWhole.brief_of_part	c-model		a whole active where every part is (meet of activities): predicate logic at each step, decidability and lists where a part must be named
+Web.AllWhole.ceases_part	c-model		a whole active where every part is (meet of activities): predicate logic at each step, decidability and lists where a part must be named
+Web.AllWhole.ends_of_part	c-model		a whole active where every part is (meet of activities): predicate logic at each step, decidability and lists where a part must be named
+Web.AllWhole.inactive_of_part	c-model		a whole active where every part is (meet of activities): predicate logic at each step, decidability and lists where a part must be named
+Web.AllWhole.persists_iff	c-model		a whole active where every part is (meet of activities): predicate logic at each step, decidability and lists where a part must be named
+Web.AtLeastWhole.allWhole	c-model		a whole active where at least j listed parts are: counting (Counts) at each step
+Web.AtLeastWhole.arises_part	c-model		a whole active where at least j listed parts are: counting (Counts) at each step
+Web.AtLeastWhole.ceases_part	c-model		a whole active where at least j listed parts are: counting (Counts) at each step
+Web.AtLeastWhole.whole	c-model		a whole active where at least j listed parts are: counting (Counts) at each step
+Web.Covered.arises_within	c-model		parts covering the steps from T on: counting and pigeonhole over a listing
+Web.Covered.needs_arising	c-model		parts covering the steps from T on: counting and pigeonhole over a listing
+Web.Covered.needs_new	c-model		parts covering the steps from T on: counting and pigeonhole over a listing
+Web.Ends.all	c-model		eventual inactivity of finitely many listed formations: a common bound (numbers)
+Web.Grade.across_step	c-model		the grade of a list of parts at a step is a count: arithmetic of Counts across a step
+Web.Grade.arises_of_lt	c-model		the grade of a list of parts at a step is a count: arithmetic of Counts across a step
+Web.Grade.ceases_of_lt	c-model		the grade of a list of parts at a step is a count: arithmetic of Counts across a step
+Web.Grade.diminished_iff	c-model		the grade of a list of parts at a step is a count: arithmetic of Counts across a step
+Web.Grade.eq_length_iff	c-model		the grade of a list of parts at a step is a count: arithmetic of Counts across a step
+Web.Grade.lt_length_of_inactive	c-model		the grade of a list of parts at a step is a count: arithmetic of Counts across a step
+Web.Grade.pos_iff	c-model		the grade of a list of parts at a step is a count: arithmetic of Counts across a step
+Web.Listed.end_without_arising	c-model		a listing of the active parts: counting over lists
+Web.Whole.arises_part	c-model		a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it
+Web.Whole.arises_within	c-model		a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it
+Web.Whole.atLeastWhole	c-model		a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it
+Web.Whole.ceases_part	c-model		a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it
+Web.Whole.covered	c-model		a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it
+Web.Whole.ends_without_arising	c-model		a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it
+Web.Whole.needs_arising	c-model		a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it
+Web.Whole.needs_new	c-model		a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it
+Web.Whole.parts_unceasing	c-model		a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it
+Web.Whole.persists_from	c-model		a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it
+Web.Whole.persists_of_arising	c-model		a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it
+Web.Whole.same_iff_inStep	c-model		a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it
+Web.active_back	c-model		with no part arising over k steps, a part active at S + k was active at S (induction over steps)
+Web.allWhole_self	c-rep		every formation is the whole of itself (definitional)
+Web.diminished_iff	c-model		a list's union whole active and its meet whole not is a diminished grade (counting)
+Web.whole_self	c-rep		every formation is the whole of itself (definitional)
+WholeExceeding.ends	c-witness		a fact of a constructed web of wholes and parts (WholeExceeding)
+WholeExceeding.listed	c-witness		a fact of a constructed web of wholes and parts (WholeExceeding)
+WholeExceeding.whole	c-witness		a fact of a constructed web of wholes and parts (WholeExceeding)
+PatternRelay.brief	c-witness		a fact of the constructed relay (PatternRelay)
+PatternRelay.fire_shape	c-witness		a fact of the constructed relay (PatternRelay)
+PatternRelay.relay	c-witness		a fact of the constructed relay (PatternRelay)
+PatternRelay.shifted_fire	c-witness		a fact of the constructed relay (PatternRelay)
+PatternRelay.shifts	c-witness		a fact of the constructed relay (PatternRelay)
+PatternRelay.stopped_brief	c-witness		a fact of the constructed relay (PatternRelay)
+PatternRelay.stopped_by_passing	c-witness		a fact of the constructed relay (PatternRelay)
+PatternRelay.stopped_quiet	c-witness		a fact of the constructed relay (PatternRelay)
+PatternRelay.stopped_relay	c-witness		a fact of the constructed relay (PatternRelay)
+Web.ByPassing.begins_passed	a	«生于细而续于粗则异»	the direct proof duplicates ByPassing.begins_passed_by_grammar, which proves the same statement from the law (born in the finer class and continued in the coarser, the step alters): rule 9 keeps the derivation, so the direct proof goes and one name is retired
+Web.ByPassing.begins_passed_by_grammar	a-done	«生于细而续于粗则异»	already the derivation (see ByPassing.begins_passed)
+Web.ByPassing.empty_stays	c-model		by passing, an empty step stays empty (no formation arises unpassed): induction over steps
+Web.ByPassing.ends_within	c-model		brief formations and no passing from T on: presence ends within d steps (counting over steps)
+Web.ByPassing.line_back	c-rep	«相续»	by passing, an active formation at S + k + 1 has a line back to S (a bridge, already through «及之传递»)
+Web.ByPassing.passes_within	a	«两端分则中有标»,«线内同类»	the direct proof (through trace, an induction) duplicates ByPassing.passes_within_by_line, which derives the same statement from the law that a line whose ends lie apart in a class has a marked step: rule 9 keeps the derivation, the direct proof goes and one name is retired
+Web.ByPassing.passes_within_by_line	a-done	«两端分则中有标»,«线内同类»	already the derivation (see ByPassing.passes_within)
+Web.ByPassing.present_back	c-model		by passing, presence at t + 1 gives presence at t (definitional)
+Web.ByPassing.present_earlier	c-model		the same over k steps (induction)
+Web.ByPassing.present_of_le	c-model		the same for any earlier step
+Web.ByPassing.trace	c-model		active at S + k: active at S or a passing within k steps (induction); the grammar route of passes_within_by_line would need deciding sameness of formations, a change of statement
+Web.alters_of_passes	c-rep	«异»	a passing to another formation is an alteration of the activity class under the carrier class (positions)
+Web.arises_iff_sheng_carrier	c-rep	«生»	arising as a beginning of the carrier class's line under passing
+Web.begins_within	c-model		presence from T on and brief formations: some arising within every d steps, as a double negation (counting over steps)
+Web.byPassing_iff_continues	c-rep		by passing is every arising being continued under the passing continuation (definitional)
+Web.byPassing_iff_hasPred	c-rep	«有前»	by passing is every active formation after a step having a predecessor in the activity class's line
+Web.carrierClass_class	c-rep	«类»	the carrier class is a class
+Web.carrierClass_finer	c-rep	«则»	the carrier class is finer than the activity class (definitional)
+Web.carrying_active	c-model		the carrying web's activity lies within W's (definitional)
+Web.carrying_iff	c-model		the carrying web's activity is what it carries, within W's (definitional)
+Web.ceases_iff_wang_carrier	c-rep	«亡»	ceasing as an end of the carrier class's line under passing
+Web.ceases_of_pattern_ends	a-done	«亡于粗则亡于细»	already the grammar's law: the pattern's line ending in the coarser class ends the formation
+Web.passesAt_of_alters	c-rep	«异»	an alteration of the activity class under the carrier class is a passing (positions)
+Web.passing_fire	c-rep	«亡»	a ceasing passed on ends the carrier class's line while the activity line goes on (positions)
+Map.relay_renews_and_ends	c-witness		the map's terms on the constructed relay (PatternRelay)
+Map.shifted_carry	c-witness		the map's terms on the constructed relay (PatternRelay)
+Map.shifted_generates	c-witness		the map's terms on the constructed relay (PatternRelay)
+Map.shifted_pass	c-witness		the map's terms on the constructed relay (PatternRelay)
+Web.active_along_line	a-done	«线内同类»	already the grammar's law: activity is one class along the activity class's lines
+Web.always_keeps	c-rep	«全守»	always active from t: total keeping under the names' step (an instance of the map)
+Web.carries_iff	c-rep	«传»	transmission read at the activity and carrier classes (an instance of the map)
+Web.degenerates_of_gone	a-done	GrammarMap	activity gone after N: degeneration, through the map's laws (already reaching the grammar)
+Web.generation_arises_late	a-done	GrammarMap	total generation: arising arbitrarily late, through the map's laws
+Web.generation_renews_late	a-done	«所及之传递»	total generation: renewals arbitrarily late, through the map's laws
+Web.itself_carries_nothing	c-rep	«传»	the names' step transmits nothing (definitional)
+Web.itself_keeps	c-rep	«全守»	under the names' step, unending is total keeping (an instance)
+Web.itself_not_generation	c-rep	«全生成»	the names' step generates nothing (definitional)
+Web.keeping_of_carried_on	a-done	«所及之传递»	carried on and unending: keeping, through the map's laws
+Web.not_endless_of_gone	a-done	GrammarMap	the same: not endless, through the map's laws
+Web.passing_carries_iff	c-rep	«传»	transmission under passing is a passing to another formation (an instance)
+Web.stopped_not_endless	a-done	GrammarMap	stopped passing with brief formations: not endless, through the map's laws
+Accretion.alive_distinct	c-witness		a fact of a constructed world or census (Accretion)
+Accretion.census	c-witness		a fact of a constructed world or census (Accretion)
+Accretion.mem_alive	c-witness		a fact of a constructed world or census (Accretion)
+Exposed.census	c-witness		a fact of a constructed world or census (Exposed)
+Holding.census	c-witness		a fact of a constructed world or census (Holding)
+Procession.census	c-witness		a fact of a constructed world or census (Procession)
+Slow.census	c-witness		a fact of a constructed world or census (Slow)
+Throughput.census	c-witness		a fact of a constructed world or census (Throughput)
+World.CountedBy.arising_iff_ceasing	c-model		counted by a bound returning below K: arising recurs exactly where ceasing does (counting, decidability)
+World.CountedWithin.arising_iff_ceasing	c-model		counted within a bound: arising recurs exactly where ceasing does (counting)
+World.Finite.census_bounded	c-model		a finite world's census is bounded (lists)
+World.Finite.countedWithin	c-model		a finite world is counted within a bound (lists, decidability)
+World.accretion_unbounded	c-witness		a fact of a constructed world or census (accretion_unbounded)
+World.arising_of_ceasing	c-model		counted: recurring ceasing gives recurring arising (counting)
+World.census_one_way	c-witness		a fact of a constructed world or census (census_one_way)
+World.procession_world	c-witness		a fact of a constructed world or census (procession_world)
+World.slow_world	c-witness		a fact of a constructed world or census (slow_world)
+Ring.census	c-witness		a fact of a constructed world, queue or census (Counting)
+TallyWorlds.balance_not_shown	c-witness		a balance that no world shows (a counterexample)
+TallyWorlds.lpo_of_census_ends	c-calibration		a census law over all worlds gives LPO: the logical strength of deciding where a census ends
+TallyWorlds.shown_iff_balance	c-model		counts a world shows are a balance with ceasings within the alive (arithmetic of tallies)
+TallyWorlds.shown_iff_tally	c-model		shown counts are a tally (arithmetic)
+World.CountsOf.active_pos	c-model		an active relatum makes the alive count positive (counting)
+World.CountsOf.arising_pos	c-model		an arising makes the arising count positive (counting)
+World.counts_active	c-model		an active relatum makes the census list non-empty (lists)
+World.counts_arising	c-model		an arising makes the comings count positive (lists, decidability)
+World.enclosedQueue_census	c-witness		a fact of a constructed world, queue or census (Counting)
+World.finiteQueue_census	c-witness		a fact of a constructed world, queue or census (Counting)
+World.finiteQueue_counts	c-witness		a fact of a constructed world, queue or census (Counting)
+World.onceClosedQueue_census	c-witness		a fact of a constructed world, queue or census (Counting)
+World.openQueue_census	c-witness		a fact of a constructed world, queue or census (Counting)
+World.openQueue_counts	c-witness		a fact of a constructed world, queue or census (Counting)
+Alternation.active_iff	c-witness		a fact of a constructed world, queue or census (Resolution)
+Alternation.census	c-witness		a fact of a constructed world, queue or census (Resolution)
+Alternation.counted	c-witness		a fact of a constructed world, queue or census (Resolution)
+Emission.active_bud	c-witness		a fact of a constructed world, queue or census (Resolution)
+Emission.arises	c-witness		a fact of a constructed world, queue or census (Resolution)
+Emission.arising_recurs	c-witness		a fact of a constructed world, queue or census (Resolution)
+Emission.census	c-witness		a fact of a constructed world, queue or census (Resolution)
+Emission.counted	c-witness		a fact of a constructed world, queue or census (Resolution)
+Trickle.active_iff	c-witness		a fact of a constructed world, queue or census (Resolution)
+Trickle.census	c-witness		a fact of a constructed world, queue or census (Resolution)
+Trickle.counted	c-witness		a fact of a constructed world, queue or census (Resolution)
+World.after_counted	c-model		a counted world stays counted after T steps (the shift of the index)
+World.restsFrom_of_after	c-model		resting from N after T is resting from T + N (the shift)
+World.rests_unrefuted_of_after	c-model		the same, as far as can be refuted
+World.arising_iff_ceasing	c-below	World.arising_iff_ceasing_covering	a finite world: arising recurs exactly where ceasing does, from the field-free law of comings and goings through the covering form
+World.arising_iff_ceasing_covering	c-below	Web.unceasing_iff_covering	the covering form for worlds
+World.ceasingRecurs_ofRoles	c-model		recurring ceasing of a world built from roles is W's (the roles' construction)
+World.drawdown_quiet	c-witness		a fact of a constructed world, queue or census (Space)
+World.grazing_arising	c-witness		a fact of a constructed world, queue or census (Space)
+World.law_decides	c-calibration		the law over all finite worlds decides every proposition
+World.law_iff_em	c-calibration		the law over all finite worlds is exactly excluded middle
+World.law_iff_grammar_positions	c-calibration	«四相之定当且仅当排中»	the law over all finite worlds is exactly the grammar's positions decided (beginning or having a predecessor, for every relation and class): already read on the grammar
+World.law_iff_positions	c-calibration	«生»,«有前»	the same on the steps of predicates
+World.law_of_em	c-calibration		excluded middle gives the law
+World.not_recurring_of_rests_unrefuted	c-model		resting as far as can be refuted: neither arising nor ceasing recurs (definitional)
+World.separate	c-witness		a fact of a constructed world, queue or census (Space)
+World.shuttle_arising	c-witness		a fact of a constructed world, queue or census (Space)
+World.undecided_world	c-witness		a fact of a constructed world, queue or census (Space)
+Strobe.coarse_quiet	c-witness		a fact of a constructed web or world (Sampling)
+Strobe.converse_fails	c-witness		a fact of a constructed web or world (Sampling)
+Strobe.fine_arises	c-witness		a fact of a constructed web or world (Sampling)
+Strobe.fine_ceases	c-witness		a fact of a constructed web or world (Sampling)
+Web.held_of_constant	c-model		activity constant between sample points: the sampling is held (the index re-read)
+Web.sample_arises	c-model		an arising of the sampled web comes from an arising within its stretch (decidability finds the step); «两端分则中有标» would find a change in the stretch but not its direction, so it does not replace the search
+Web.sample_ceases	c-model		the same for ceasing
+Web.sample_ceasing	c-model		recurring ceasing of the sampled web gives recurring ceasing of W
+Web.sample_census	c-model		a census of W samples to a census of the sampled web (lists)
+Web.sample_unceasing	c-model		the sampled web unceasing gives W unceasing
+World.sample_counted	c-model		a counted world samples to a counted world
+World.CountsHold.obey	c-model		census tables: counts holding a predicate obey it (counting)
+World.CountsOf.tally	c-model		a census's counts are a tally (arithmetic)
+World.census_table_holds₂	c-model		census tables of two classes (counting)
+World.census_table_holds₃	c-model		census tables of three classes (counting)
+World.census_table_obeys	c-model		a census table obeys a pointwise predicate (counting)
+World.census_table_obeys_free	c-model		the same with no class premise (counting)
+World.census_table_obeys₂	c-model		two classes (counting)
+World.census_table_obeys₃	c-model		three classes (counting)
+World.countsHold_of_obey	c-model		obeying a pointwise predicate gives holding it (counting)
+World.countsOf_decided	c-model		decided activity gives counts of a census (lists)
+Pass.arises	c-witness		a fact of a constructed web or world (InAmounts)
+Pass.ceases	c-witness		a fact of a constructed web or world (InAmounts)
+Pass.census	c-witness		a fact of a constructed web or world (InAmounts)
+Pass.embodied	c-witness		the constructed Pass is embodied in amounts that never rise
+Pass.never_rests	c-witness		a fact of a constructed web or world (InAmounts)
+World.InAmounts.falls_of_ceases	c-model		embodiment: a ceasing is a fall in amounts (the embodiment premise read)
+World.InAmounts.rises_of_arises	c-model		embodied arising: an arising is a rise in amounts
+World.InAmounts.stock_census	c-model		a census and embodiment give the stock as a sum over the alive (counting in amounts)
+World.arising_unrefuted_covering	c-model		covered from T and ceasing unrefuted: arising unrefuted (counting over a list)
+World.rests_unrefuted_iff	c-model		resting as far as can be refuted is neither arising nor ceasing recurring, as far as can be refuted (logic of the definitions)
+Brood.arises	c-witness		a fact of a constructed web or world (Roles)
+Predation.hare_ends	c-witness		a fact of a constructed web or world (Roles)
+Shuttle.arises	c-witness		a fact of a constructed web or world (Roles)
+Shuttle.recurs	c-witness		a fact of a constructed web or world (Roles)
+Web.roles_arises	c-model		arising in the roles web is W's (the roles construction)
+Web.roles_census	c-model		a census carried to the roles web (lists)
+Web.roles_event_onto	c-model		every active event of the roles web is a formation's (the construction)
+Web.roles_unceasing	c-model		unceasing in the roles web is W's
+Wilting.ends	c-witness		a fact of a constructed web or world (Roles)
+Cycle.census	c-witness		a fact of a constructed web or world (Population)
+Expansion.census	c-witness		a fact of a constructed web or world (Population)
+Oscillation.census	c-witness		a fact of a constructed web or world (Population)
+Repeated.census	c-witness		a fact of a constructed web or world (Population)
+Web.Census.over_stretch	c-model		a census over a stretch, or arising forced by more formations after than before, or unceasing by bounded or growing counts: counting over lists with decidability
+Web.arises_of_more	c-model		a census over a stretch, or arising forced by more formations after than before, or unceasing by bounded or growing counts: counting over lists with decidability
+Web.unceasing_iff_bounded	c-model		a census over a stretch, or arising forced by more formations after than before, or unceasing by bounded or growing counts: counting over lists with decidability
+Web.unceasing_of_growth	c-model		a census over a stretch, or arising forced by more formations after than before, or unceasing by bounded or growing counts: counting over lists with decidability
+World.balancedRing_countsOf	c-witness		a fact of a constructed web or world (CensusCounts)
+World.ceasings_exist_iff_listed	c-model		counts of a census as a tally, or of constructed queues and rings: counting
+World.comings_exist_iff	c-model		counts of a census as a tally, or of constructed queues and rings: counting
+World.comings_exist_iff_listed	c-model		counts of a census as a tally, or of constructed queues and rings: counting
+World.embodiedQueue_countsOf	c-witness		a fact of a constructed web or world (CensusCounts)
+World.embodiedRing_countsOf	c-witness		a fact of a constructed web or world (CensusCounts)
+World.queue_countsOf	c-witness		a fact of a constructed web or world (CensusCounts)
+World.ring_countsOf	c-witness		a fact of a constructed web or world (CensusCounts)
+Web.unceasing_iff_decided	c-below	coming_recurs_iff_decided	the alternation of arising and ceasing (the field-free laws of comings) with decidability from some step on: counting over a covering list
+World.arising_iff_ceasing_covered	c-below	coming_recurs_iff_decided	the alternation of arising and ceasing (the field-free laws of comings) with decidability from some step on: counting over a covering list
+World.arising_iff_ceasing_decided	c-below	coming_recurs_iff_decided	the alternation of arising and ceasing (the field-free laws of comings) with decidability from some step on: counting over a covering list
+World.arising_not_stopping	c-below	Recurs.coming_not_stopping	the alternation of arising and ceasing (the field-free laws of comings) with decidability from some step on: counting over a covering list
+World.arising_not_stopping_covered	c-below	Recurs.coming_not_stopping	the alternation of arising and ceasing (the field-free laws of comings) with decidability from some step on: counting over a covering list
+World.ceasing_not_stopping	c-below	Recurs.ceasing_not_stopping	the alternation of arising and ceasing (the field-free laws of comings) with decidability from some step on: counting over a covering list
+World.ceasing_not_stopping_covered	c-below	Recurs.ceasing_not_stopping	the alternation of arising and ceasing (the field-free laws of comings) with decidability from some step on: counting over a covering list
+ContextualRuns.chsh_in_context_not_free	c-model		a contextual parity system (CHSH, Specker, the square) is not free at a run's state: a law of those systems, reading activity only through the run
+ContextualRuns.noGlobal_run_iff	c-model		a contextual parity system (CHSH, Specker, the square) is not free at a run's state: a law of those systems, reading activity only through the run
+ContextualRuns.specker_not_free	c-model		a contextual parity system (CHSH, Specker, the square) is not free at a run's state: a law of those systems, reading activity only through the run
+ContextualRuns.specker_respecting_not_free	c-model		a contextual parity system (CHSH, Specker, the square) is not free at a run's state: a law of those systems, reading activity only through the run
+ContextualRuns.square_in_context_not_free	c-model		a contextual parity system (CHSH, Specker, the square) is not free at a run's state: a law of those systems, reading activity only through the run
+ContextualRuns.square_respecting_not_free	c-model		a contextual parity system (CHSH, Specker, the square) is not free at a run's state: a law of those systems, reading activity only through the run
+Flow.capacityWithout_split	c-model		capacities of the other active formations over a list (decidable equality and activity): counting
+Flow.firstActiveOther_active	c-model		capacities of the other active formations over a list (decidable equality and activity): counting
+Flow.firstActiveOther_mem	c-model		capacities of the other active formations over a list (decidable equality and activity): counting
+Flow.otherCapacity_split	c-model		capacities of the other active formations over a list (decidable equality and activity): counting
+SharedCopies.without_two	c-witness		a fact of a constructed web or world (Weightings)
+Web.otherCapacity_le	c-model		capacities of the other active formations over a list (decidable equality and activity): counting
+ListedWebs.ceasing_not_recurring	c-model		listed webs: forcing by more formations, no split, rest as far as can be refuted: counting over lists
+ListedWebs.forcedAlong_iff_more	c-model		listed webs: forcing by more formations, no split, rest as far as can be refuted: counting over lists
+ListedWebs.forcedAlong_of_eventually_noSplit	c-model		listed webs: forcing by more formations, no split, rest as far as can be refuted: counting over lists
+ListedWebs.forced_iff_more	c-model		listed webs: forcing by more formations, no split, rest as far as can be refuted: counting over lists
+ListedWebs.forces_iff_noSplit	c-model		listed webs: forcing by more formations, no split, rest as far as can be refuted: counting over lists
+ListedWebs.rests_unrefuted_iff	c-model		listed webs: forcing by more formations, no split, rest as far as can be refuted: counting over lists
+Contextual.glues_iff_freeAt	c-model		a contextual parity system glues exactly where it is free at a run's state, and the quantum square is not free: laws of those systems
+ParitySystem.world_free_iff	c-model		a contextual parity system glues exactly where it is free at a run's state, and the quantum square is not free: laws of those systems
+ParitySystem.world_met_le	c-model		a contextual parity system glues exactly where it is free at a run's state, and the quantum square is not free: laws of those systems
+Square.QuantumAt.not_freeAt	c-model		a contextual parity system glues exactly where it is free at a run's state, and the quantum square is not free: laws of those systems
+Square.quantum_readings	c-model		a contextual parity system glues exactly where it is free at a run's state, and the quantum square is not free: laws of those systems
+World.Finite.counted	c-model		finite or listed worlds are counted: counting over lists with decidability
+World.counted_of_ever	c-model		finite or listed worlds are counted: counting over lists with decidability
+World.hatch_counted	c-witness		a fact of a constructed web, world or law (Premises)
+World.hatch_ever	c-witness		a fact of a constructed web, world or law (Premises)
+World.keep_lists	c-model		finite or listed worlds are counted: counting over lists with decidability
+Footprinted.counted_reorder	c-model		a reordering or commutation of the index keeps counts and activity (the index re-read, UE15's reorderings)
+Web.commute_active_false	c-model		a reordering or commutation of the index keeps counts and activity (the index re-read, UE15's reorderings)
+Web.commute_census	c-model		a reordering or commutation of the index keeps counts and activity (the index re-read, UE15's reorderings)
+World.commute_counted	c-model		a reordering or commutation of the index keeps counts and activity (the index re-read, UE15's reorderings)
+ActiveReading.overdraw_admits_occurrence	c-model		readings of a renewal law that overdraws: a law of that model
+ActiveReading.overdraw_unranked	c-model		readings of a renewal law that overdraws: a law of that model
+ActiveReading.winning_active	c-witness		a fact of a constructed web, world or law (ActiveReading)
+CensusWebs.keep_pace	c-model		listings and counts across steps: counting
+Flow.byOccurrence_uncounted	c-model		listings and counts across steps: counting
+Web.arising_of_ceasing_listing	c-below	Listed.coming_of_ceasing,Listed.of_listing	the alternation of arising and ceasing over a listing (counting)
+Excluding.continues	c-witness		a fact of a constructed web, world or law (Exclusion)
+Excluding.second_lasting	c-witness		a fact of a constructed web, world or law (Exclusion)
+Web.active_before	c-model		never arising after T, activity at a later step gives activity at earlier ones (induction over steps)
+World.stutter_arisingRecurs_iff	c-model		stuttering the index keeps recurring arising, ceasing and counts (the index re-read)
+World.stutter_ceasingRecurs_iff	c-model		stuttering the index keeps recurring arising, ceasing and counts (the index re-read)
+World.stutter_counted_of_section	c-model		stuttering the index keeps recurring arising, ceasing and counts (the index re-read)
+Frame.arises_iff	c-rep		a frame's world: arising is the realization coming to be (a reading of the frame)
+Frame.novel_iff_arises	c-rep		novelty of a reading is arising in the frame's world (a reading)
+Frame.world_active	c-rep		the frame's world is active where the configuration realizes the claim (definitional)
+Frame.world_fixes_run	c-model		the frame's world fixes the run: a law of the frame
+Hexagram.world_arising_recurs	c-witness		a fact of a constructed web, world or law (Hexagrams)
+Hexagram.world_ceasing_recurs	c-witness		a fact of a constructed web, world or law (Hexagrams)
+Interleavings.LocalLaw.world_active_iff	c-model		a local law's world and its renumberings: a law of interleavings
+Interleavings.LocalLaw.world_renumber_active	c-model		a local law's world and its renumberings: a law of interleavings
+Net.cycle_never_rests	c-witness		a fact of a constructed web, world or law (PlaceTransitionNets)
+Net.world_counted	c-model		a net's world is counted over listed transitions and places (counting)
+Once.once	c-witness		a fact of a constructed web, world or law (Reserve)
+Web.ended_for_good	c-model		inactive with nothing in reserve stays ended (induction over steps)
+Ranking.absent_sustains	c-witness		a fact of a constructed web, world or law (Ranking)
+Ranking.withheld_of_extends	c-model		a reading extending another withholds what it withheld: a law of the renewal model's ranking
+Seeker.ends	c-witness		a fact of a constructed web, world or law (Exhaustion)
+Seeker.lasting	c-witness		a fact of a constructed web, world or law (Exhaustion)
+Web.commute_active_away	c-model		the commutation of two steps moves activity only at the swapped step (definitional)
+Web.commute_active_true	c-model		the commutation of two steps moves activity only at the swapped step (definitional)
+Contextual.world_active	c-rep		a contextual system's world is active where the claim is within the context (definitional)
+Passing.counted	c-witness		a fact of a constructed web, world or law (Entropy)
+Web.inactive_of_not_arising	c-model		inactive at 0 and never arising: never active (induction over steps)

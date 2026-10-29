@@ -1,0 +1,2760 @@
+{
+ "Becoming.Accretion.alive_distinct": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Accretion.census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Accretion.mem_alive": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Accretion.never_ceases": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Accretion.unceasing": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ActiveReading.overdraw_admits_occurrence": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ActiveReading.overdraw_unranked": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ActiveReading.winning_active": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Alternation.active_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Alternation.census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Alternation.counted": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Attrition.ceasing": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Attrition.nothing_arises": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Brood.arises": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Bud.fission": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 3,
+  "transitive": [
+   "Becoming.«及之单调»",
+   "Becoming.«相续含于及»",
+   "Becoming.«续含于缘»"
+  ]
+ },
+ "Becoming.CensusWebs.keep_pace": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Confluence.confluence": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Confluence.ended": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Confluence.noSplit": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Contextual.glues_iff_freeAt": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Contextual.world_active": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ContextualRuns.chsh_in_context_not_free": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ContextualRuns.noGlobal_run_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ContextualRuns.specker_not_free": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ContextualRuns.specker_respecting_not_free": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ContextualRuns.square_in_context_not_free": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ContextualRuns.square_respecting_not_free": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Countless.countless": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Countless.ends": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Countless.never": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Countless.whole": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Cycle.census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Dormancy.active_once": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Dormancy.joined_once": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Emission.active_bud": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Emission.arises": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Emission.arising_recurs": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Emission.census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Emission.counted": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Excluding.continues": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Excluding.second_lasting": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Expansion.census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Exposed.census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Flow.byOccurrence_uncounted": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Flow.capacityWithout_split": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Flow.firstActiveOther_active": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Flow.firstActiveOther_mem": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Flow.otherCapacity_split": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Footprinted.counted_reorder": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Frame.arises_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Frame.novel_iff_arises": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Frame.world_active": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Frame.world_fixes_run": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Gaps.ends": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Gaps.gaps": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Gaps.listed": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Gaps.whole": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Generations.allWhole_never": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Generations.brief": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Generations.ends": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Generations.generations": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Generations.listed": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Generations.whole": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Hexagram.world_arising_recurs": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Hexagram.world_ceasing_recurs": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Holding.census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Identity.Fork.fission": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 3,
+  "transitive": [
+   "Becoming.«及之单调»",
+   "Becoming.«相续含于及»",
+   "Becoming.«续含于缘»"
+  ]
+ },
+ "Becoming.Identity.Fork.split_unceasing": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Immortal.each_other": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Immortal.immortal": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Interleavings.LocalLaw.world_active_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Interleavings.LocalLaw.world_renumber_active": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Layered.arise_again": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Layered.both": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Layered.brief": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Layered.composed": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Layered.within": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Lineage.arises": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Lineage.one_way": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Lineage.readings": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ListedWebs.ceasing_not_recurring": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ListedWebs.forcedAlong_iff_more": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ListedWebs.forcedAlong_of_eventually_noSplit": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ListedWebs.forced_iff_more": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ListedWebs.forces_iff_noSplit": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ListedWebs.rests_unrefuted_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Map.relay_renews_and_ends": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Map.shifted_carry": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Map.shifted_generates": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 2,
+  "transitive": [
+   "Becoming.«类».trans",
+   "Becoming.«线内同类»"
+  ]
+ },
+ "Becoming.Map.shifted_pass": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Merge.idle": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Merge.noSplit": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.MergeClass.candles": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 1,
+  "transitive": [
+   "Becoming.«蜡烛之合»"
+  ]
+ },
+ "Becoming.Net.cycle_never_rests": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Net.world_counted": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Once.once": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Oscillation.census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ParitySystem.world_free_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.ParitySystem.world_met_le": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Pass.arises": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Pass.ceases": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Pass.census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Pass.embodied": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Pass.never_rests": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Passing.counted": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.PatternRelay.brief": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.PatternRelay.fire_shape": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.PatternRelay.relay": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.PatternRelay.shifted_fire": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.PatternRelay.shifts": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.PatternRelay.stopped_brief": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.PatternRelay.stopped_by_passing": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.PatternRelay.stopped_quiet": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.PatternRelay.stopped_relay": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Predation.hare_ends": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Procession.census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Rafters.decided": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Rafters.grade_two": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Rafters.house": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Rafters.remains": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Rafters.taken": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Ranking.absent_sustains": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Ranking.withheld_of_extends": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Repeated.census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Ring.census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Seeker.ends": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Seeker.lasting": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.SharedCopies.without_two": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Shifts.shifts": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Shuttle.arises": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Shuttle.recurs": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Slow.census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Square.QuantumAt.not_freeAt": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Square.quantum_readings": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Strobe.coarse_quiet": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Strobe.converse_fails": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Strobe.fine_arises": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Strobe.fine_ceases": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.TallyWorlds.balance_not_shown": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.TallyWorlds.lpo_of_census_ends": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.TallyWorlds.shown_iff_balance": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.TallyWorlds.shown_iff_tally": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Tandem.budding": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Tandem.budding_fission": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 3,
+  "transitive": [
+   "Becoming.«及之单调»",
+   "Becoming.«相续含于及»",
+   "Becoming.«续含于缘»"
+  ]
+ },
+ "Becoming.Tandem.census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Tandem.joining": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Tandem.joining_candles": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 1,
+  "transitive": [
+   "Becoming.«蜡烛之合»"
+  ]
+ },
+ "Becoming.Tandem.kept": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Throughput.census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.TideFlip.arises": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Trickle.active_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Trickle.census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Trickle.counted": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.AllWhole.active_of_none": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.AllWhole.active_whole": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.AllWhole.arises_part": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.AllWhole.atLeastWhole": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.AllWhole.brief_of_part": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.AllWhole.ceases_part": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.AllWhole.ends_of_part": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.AllWhole.inactive_of_part": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.AllWhole.persists_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.AtLeastWhole.allWhole": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.AtLeastWhole.arises_part": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.AtLeastWhole.ceases_part": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.AtLeastWhole.whole": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ByPassing.begins_passed": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ByPassing.begins_passed_by_grammar": {
+  "statement_names_grammar": false,
+  "direct": [
+   "Becoming.«生于细而续于粗则异»"
+  ],
+  "transitive_count": 1,
+  "transitive": [
+   "Becoming.«生于细而续于粗则异»"
+  ]
+ },
+ "Becoming.Web.ByPassing.empty_stays": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ByPassing.ends_within": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ByPassing.line_back": {
+  "statement_names_grammar": true,
+  "direct": [
+   "Becoming.«及之传递»"
+  ],
+  "transitive_count": 1,
+  "transitive": [
+   "Becoming.«及之传递»"
+  ]
+ },
+ "Becoming.Web.ByPassing.passes_within": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ByPassing.passes_within_by_line": {
+  "statement_names_grammar": false,
+  "direct": [
+   "Becoming.«两端分则中有标»",
+   "Becoming.«线内同类»"
+  ],
+  "transitive_count": 7,
+  "transitive": [
+   "Becoming.«两端分则中有标»",
+   "Becoming.«及之传递»",
+   "Becoming.«及之单调»",
+   "Becoming.«相续含于及»",
+   "Becoming.«类».trans",
+   "Becoming.«线内同类»",
+   "Becoming.«续含于缘»"
+  ]
+ },
+ "Becoming.Web.ByPassing.present_back": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ByPassing.present_earlier": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ByPassing.present_of_le": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ByPassing.trace": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Census.arisingFrom_of_ceasingFrom": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Census.arisingFrom_of_ceasingFrom_from": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Census.balanceFrom": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Census.balanceFrom_at": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Census.balanceFrom_eq": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Census.balanceFrom_eq_at": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Census.ceasingFrom_of_arisingFrom": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Census.ceasingFrom_of_arisingFrom_from": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Census.over_stretch": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Census.reidentify": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Continuing.itself_from_zero": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Continuing.itself_onward": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Continuing.itself_same": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Continuing.line": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Continuing.mono": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Continuing.mono_by_reach": {
+  "statement_names_grammar": false,
+  "direct": [
+   "Becoming.«及之单调»"
+  ],
+  "transitive_count": 1,
+  "transitive": [
+   "Becoming.«及之单调»"
+  ]
+ },
+ "Becoming.Web.Continuing.of_reidentify": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Continuing.to_reidentify": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Covered.arises_within": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Covered.needs_arising": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Covered.needs_new": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Ends.all": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Grade.across_step": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Grade.arises_of_lt": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Grade.ceases_of_lt": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Grade.diminished_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Grade.eq_length_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Grade.lt_length_of_inactive": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Grade.pos_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Lineage.active": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Lineage.back": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Lineage.cons": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Lineage.ends": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Lineage.line": {
+  "statement_names_grammar": true,
+  "direct": [
+   "Becoming.«及之传递»"
+  ],
+  "transitive_count": 1,
+  "transitive": [
+   "Becoming.«及之传递»"
+  ]
+ },
+ "Becoming.Web.Lineage.onward": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Lineage.origin": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Lineage.split": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Lineage.through": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Lineage.unique": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Listed.end_without_arising": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Whole.arises_part": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Whole.arises_within": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Whole.atLeastWhole": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Whole.ceases_part": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Whole.covered": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Whole.ends_without_arising": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Whole.needs_arising": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Whole.needs_new": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Whole.parts_unceasing": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Whole.persists_from": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Whole.persists_of_arising": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.Whole.same_iff_inStep": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.abides_iff": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.active_along_line": {
+  "statement_names_grammar": true,
+  "direct": [
+   "Becoming.«线内同类»"
+  ],
+  "transitive_count": 2,
+  "transitive": [
+   "Becoming.«类».trans",
+   "Becoming.«线内同类»"
+  ]
+ },
+ "Becoming.Web.active_back": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.active_before": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.activityClass_class": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.allWhole_self": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.alters_of_passes": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.always_keeps": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 3,
+  "transitive": [
+   "Becoming.«及之单调»",
+   "Becoming.«相续含于及»",
+   "Becoming.«续含于缘»"
+  ]
+ },
+ "Becoming.Web.arisesFrom_iff_sheng": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.arisesFrom_of_arises": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.arisesFrom_of_more": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.arisesFrom_self": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.arises_iff_of_keepsActive_both": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.arises_iff_sheng": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.arises_iff_sheng_carrier": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.arises_iff_sheng_itself": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.arises_iff_sheng_state": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.arises_of_back_keepsActive": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.arises_of_keepsActive": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.arises_of_more": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.arises_of_persisting_arises": {
+  "statement_names_grammar": false,
+  "direct": [
+   "Becoming.«生于粗则生于细»"
+  ],
+  "transitive_count": 2,
+  "transitive": [
+   "Becoming.«生于粗则生于细»",
+   "Becoming.«粗化»"
+  ]
+ },
+ "Becoming.Web.arises_persisting_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.arisingFrom_found": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.arisingFrom_not_stopping_covered": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.arising_of_ceasing_listing": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.arising_recurs_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.begins_within": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.byPassing_iff_continues": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.byPassing_iff_hasPred": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.carrierClass_class": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.carrierClass_finer": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.carries_iff": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.carry_step_iff": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.carrying_active": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.carrying_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ceasesFrom_iff_wang": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ceasesFrom_of_unconditioned": {
+  "statement_names_grammar": false,
+  "direct": [
+   "Becoming.«亡于粗则亡于细»"
+  ],
+  "transitive_count": 2,
+  "transitive": [
+   "Becoming.«亡于粗则亡于细»",
+   "Becoming.«粗化»"
+  ]
+ },
+ "Becoming.Web.ceasesFrom_self": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ceases_iff_inactive_sheng": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ceases_iff_wang": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ceases_iff_wang_carrier": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ceases_iff_wang_itself": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ceases_iff_wang_state": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ceases_of_pattern_ends": {
+  "statement_names_grammar": true,
+  "direct": [
+   "Becoming.«亡于粗则亡于细»"
+  ],
+  "transitive_count": 2,
+  "transitive": [
+   "Becoming.«亡于粗则亡于细»",
+   "Becoming.«粗化»"
+  ]
+ },
+ "Becoming.Web.ceases_of_persisting_ceases": {
+  "statement_names_grammar": false,
+  "direct": [
+   "Becoming.«亡于粗则亡于细»"
+  ],
+  "transitive_count": 2,
+  "transitive": [
+   "Becoming.«亡于粗则亡于细»",
+   "Becoming.«粗化»"
+  ]
+ },
+ "Becoming.Web.ceases_persisting_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ceasingFrom_found": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ceasingFrom_not_stopping_covered": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.ceasing_readings": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.commute_active_away": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.commute_active_false": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.commute_active_true": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.commute_census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.continuation_reidentify": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.continuing_iff_line": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.continuing_reidentify": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.degenerates_of_gone": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 4,
+  "transitive": [
+   "Becoming.«及之传递»",
+   "Becoming.«所及之传递»",
+   "Becoming.«类».trans",
+   "Becoming.«线内同类»"
+  ]
+ },
+ "Becoming.Web.diminished_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.dissipation_arising_not_recurring": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 5,
+  "transitive": [
+   "Becoming.«尽则不或屡»",
+   "Becoming.«所闭之传递»",
+   "Becoming.«所闭之自反»",
+   "Becoming.«线或在所闭»",
+   "Becoming.«缘在所闭»"
+  ]
+ },
+ "Becoming.Web.ended_for_good": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.fallsDormant_alters": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.flash_positions": {
+  "statement_names_grammar": true,
+  "direct": [
+   "Becoming.«四相无自立»"
+  ],
+  "transitive_count": 1,
+  "transitive": [
+   "Becoming.«四相无自立»"
+  ]
+ },
+ "Becoming.Web.generation_arises_late": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 7,
+  "transitive": [
+   "Becoming.«及之传递»",
+   "Becoming.«及之单调»",
+   "Becoming.«所及之传递»",
+   "Becoming.«相续含于及»",
+   "Becoming.«类».trans",
+   "Becoming.«线内同类»",
+   "Becoming.«续含于缘»"
+  ]
+ },
+ "Becoming.Web.generation_renews_late": {
+  "statement_names_grammar": true,
+  "direct": [
+   "Becoming.«所及之传递»"
+  ],
+  "transitive_count": 5,
+  "transitive": [
+   "Becoming.«及之传递»",
+   "Becoming.«及之单调»",
+   "Becoming.«所及之传递»",
+   "Becoming.«相续含于及»",
+   "Becoming.«续含于缘»"
+  ]
+ },
+ "Becoming.Web.hasPred_iff_continues": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.hasSucc_iff_continued": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.held_of_constant": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.inactive_of_not_arising": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.itself_carries_nothing": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.itself_keeps": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.itself_not_generation": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.keeping_of_carried_on": {
+  "statement_names_grammar": true,
+  "direct": [
+   "Becoming.«所及之传递»"
+  ],
+  "transitive_count": 7,
+  "transitive": [
+   "Becoming.«及之传递»",
+   "Becoming.«及之单调»",
+   "Becoming.«所及之传递»",
+   "Becoming.«相续含于及»",
+   "Becoming.«类».trans",
+   "Becoming.«线内同类»",
+   "Becoming.«续含于缘»"
+  ]
+ },
+ "Becoming.Web.keepsActive_of_held": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.line_continuing": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.line_lineage": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.line_reidentify": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.lineage_iff_line": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 1,
+  "transitive": [
+   "Becoming.«及之传递»"
+  ]
+ },
+ "Becoming.Web.lineages_apart": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.merge_candles": {
+  "statement_names_grammar": true,
+  "direct": [
+   "Becoming.«蜡烛之合»"
+  ],
+  "transitive_count": 1,
+  "transitive": [
+   "Becoming.«蜡烛之合»"
+  ]
+ },
+ "Becoming.Web.named_throughout": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.noMerge_iff": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.noSplit_iff": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.no_join": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.not_endless_of_gone": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 4,
+  "transitive": [
+   "Becoming.«及之传递»",
+   "Becoming.«所及之传递»",
+   "Becoming.«类».trans",
+   "Becoming.«线内同类»"
+  ]
+ },
+ "Becoming.Web.not_not_arisingFrom_covered": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.otherCapacity_le": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.passesAt_of_alters": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.passing_carries_iff": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.passing_fire": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.persisting_census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.rename_unceasing": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.renews_iff": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.roles_arises": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.roles_census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.roles_event_onto": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.roles_unceasing": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.sample_arises": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.sample_ceases": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.sample_ceasing": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.sample_census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.sample_unceasing": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.self_one_to_one": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.sheng_iff_arises_or_ceases": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.sheng_iff_steps": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.sheng_state_of_change": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.split_fission": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 3,
+  "transitive": [
+   "Becoming.«及之单调»",
+   "Becoming.«相续含于及»",
+   "Becoming.«续含于缘»"
+  ]
+ },
+ "Becoming.Web.stateClass_class": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.stateClass_finer": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.steady_held": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.stopped_not_endless": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 4,
+  "transitive": [
+   "Becoming.«及之传递»",
+   "Becoming.«所及之传递»",
+   "Becoming.«类».trans",
+   "Becoming.«线内同类»"
+  ]
+ },
+ "Becoming.Web.unceasingFrom_of_growth": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.unceasingFrom_self": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.unceasing_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.unceasing_iff_bounded": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.unceasing_iff_covering": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.unceasing_iff_decided": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.unceasing_iff_late_beginnings": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.unceasing_iff_of_keepsActive_both": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.unceasing_of_growth": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.unceasing_of_keepsActive": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.unending_of_holds": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.wakes_alters": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.waking_not_arising": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.wang_iff_steps": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.wang_state_of_change": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Web.whole_self": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.WholeExceeding.ends": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.WholeExceeding.listed": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.WholeExceeding.whole": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.Wilting.ends": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.CountedBy.arising_iff_ceasing": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.CountedWithin.arising_iff_ceasing": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.CountsHold.obey": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.CountsOf.active_pos": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.CountsOf.arising_pos": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.CountsOf.tally": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.Finite.census_bounded": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.Finite.counted": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.Finite.countedWithin": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.InAmounts.falls_of_ceases": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.InAmounts.rises_of_arises": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.InAmounts.stock_census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.accretion_unbounded": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.after_counted": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.arising_iff_ceasing": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.arising_iff_ceasing_covered": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.arising_iff_ceasing_covering": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.arising_iff_ceasing_decided": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.arising_not_stopping": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.arising_not_stopping_covered": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.arising_of_ceasing": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.arising_unrefuted_covering": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.balancedRing_countsOf": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.ceasingRecurs_ofRoles": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.ceasing_not_stopping": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.ceasing_not_stopping_covered": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.ceasings_exist_iff_listed": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.census_one_way": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.census_table_holds₂": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.census_table_holds₃": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.census_table_obeys": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.census_table_obeys_free": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.census_table_obeys₂": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.census_table_obeys₃": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.comings_exist_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.comings_exist_iff_listed": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.commute_counted": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.counted_of_ever": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.countsHold_of_obey": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.countsOf_decided": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.counts_active": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.counts_arising": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.drawdown_quiet": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.embodiedQueue_countsOf": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.embodiedRing_countsOf": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.enclosedQueue_census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.finiteQueue_census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.finiteQueue_counts": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.grazing_arising": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.hatch_counted": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.hatch_ever": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.keep_lists": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.law_decides": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.law_iff_em": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.law_iff_grammar_positions": {
+  "statement_names_grammar": true,
+  "direct": [
+   "Becoming.«四相之定当且仅当排中»"
+  ],
+  "transitive_count": 1,
+  "transitive": [
+   "Becoming.«四相之定当且仅当排中»"
+  ]
+ },
+ "Becoming.World.law_iff_positions": {
+  "statement_names_grammar": true,
+  "direct": [],
+  "transitive_count": 1,
+  "transitive": [
+   "Becoming.«四相之定当且仅当排中»"
+  ]
+ },
+ "Becoming.World.law_of_em": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.not_recurring_of_rests_unrefuted": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.ofRoles_reidentify_arises": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.ofRoles_reidentify_unceasing": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.onceClosedQueue_census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.openQueue_census": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.openQueue_counts": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.procession_world": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.queue_countsOf": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.restsFrom_of_after": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.rests_unrefuted_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.rests_unrefuted_of_after": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.ring_countsOf": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.sample_counted": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.separate": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.shuttle_arising": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.slow_world": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.stutter_arisingRecurs_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.stutter_ceasingRecurs_iff": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.stutter_counted_of_section": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ },
+ "Becoming.World.undecided_world": {
+  "statement_names_grammar": false,
+  "direct": [],
+  "transitive_count": 0,
+  "transitive": []
+ }
+}
