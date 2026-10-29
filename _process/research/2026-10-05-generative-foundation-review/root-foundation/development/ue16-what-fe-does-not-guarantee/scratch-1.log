@@ -1,0 +1,38 @@
+Becoming/FreeEnergyGuarantees.lean:271:73: error: Application type mismatch: The argument
+  second
+has type
+  Copying.nth (x :: head✝ :: tail✝) (0 + 1) = some x✝
+but is expected to have type
+  some (?m.92 (exchangeAt 0 (x :: head✝ :: tail✝))) = some ?m.102
+in the application
+  Option.some.inj second
+Becoming/FreeEnergyGuarantees.lean:272:2: error: Type mismatch
+  Option.noConfusion ?m.126
+has type
+  ?m.123 ≍ ?m.125 → Option.noConfusionType ?m.121 ?m.123 ?m.125
+but is expected to have type
+  x✝² = x✝¹
+Becoming/FreeEnergyGuarantees.lean:284:2: error: Type mismatch
+  Option.noConfusion ?m.108
+has type
+  ?m.105 ≍ ?m.107 → Option.noConfusionType ?m.103 ?m.105 ?m.107
+but is expected to have type
+  exchangeAt (n✝ + 1) [] = []
+Becoming/FreeEnergyGuarantees.lean:289:2: error: Type mismatch
+  Option.noConfusion ?m.22
+has type
+  ?m.19 ≍ ?m.21 → Option.noConfusionType ?m.17 ?m.19 ?m.21
+but is expected to have type
+  x✝¹ < [].length
+
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue16/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue16-what-fe-does-not-guarantee/tree",
+  "modules": 76,
+  "ran": [
+    "Becoming.FreeEnergyGuarantees"
+  ],
+  "reused": 75,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.FreeEnergyGuarantees"
+}

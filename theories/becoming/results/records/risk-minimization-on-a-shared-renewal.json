@@ -1,0 +1,407 @@
+{
+  "schema_version": 2,
+  "id": "risk-minimization-on-a-shared-renewal",
+  "title": {
+    "en": "Risk minimization on a shared renewal",
+    "zh": "共享更新上之风险最小化"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-29T15:42:56+00:00",
+  "statement": {
+    "en": "Holders of one generative model, each taking its choice of least risk at its own store, each store at its set point at every step, together end the renewal they share; a member outside a rest that outruns a gated renewal has its need end whatever its model and preference.",
+    "zh": "一生成模型之诸持守者，各于其自身储量取风险最少之选择，各储量每步皆在设定点，共同终结其所共享之更新；他者超出门控之更新时，他者之外之成员无论其模型与偏好，其需求皆终结。"
+  },
+  "laws": [
+    {
+      "en": "Counting helpers: the first element of least score scores no more than any element and is among them (le_of_blt_false, firstMin, firstMin_le, firstMin_mem).",
+      "zh": "计数之助：得分最少之首元素不多于任一元素，且在其中（le_of_blt_false、firstMin、firstMin_le、firstMin_mem）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.le_of_blt_false",
+        "Becoming.FreeEnergyGuarantees.firstMin",
+        "Becoming.FreeEnergyGuarantees.firstMin_le",
+        "Becoming.FreeEnergyGuarantees.firstMin_mem"
+      ]
+    },
+    {
+      "en": "A chooser has the amounts it may take, a generative model predicting the level after a step from what it reads and takes, and a preferred level; its risk is the predicted distance from that level (gap), and its choice the first amount of least risk; restraint, taking only nothing, is one chooser (Chooser and six more).",
+      "zh": "选择者有可取之量、依所读与所取预测一步后水平之生成模型、及偏好之水平；其风险为预测与该水平之距离（gap），其选择为风险最少之首量；克制（唯取零）为一选择者（Chooser 等七项）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.risk",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen_minimizes",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen_mem",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.restraint",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.restraint_chosen"
+      ]
+    },
+    {
+      "en": "The holder reads its own store, loses one a step and prefers one; in the held pair each holder takes, at the two steps they take part, its choice of least risk at its own store, a condition, at no risk, predicting its next level, each store at its set point at every step, while together they end the pool's renewal, unseen (holder, heldPair_choices, held_not_one).",
+      "zh": "持守者读其自身之储量，每步失一，偏好为一；于持守之对，各持守者于其参与之二步，于其自身储量（一条件）无风险地取其风险最少之选择，预测其下一水平，各储量每步皆在设定点，而共同终结池之更新，不可见（holder、heldPair_choices、held_not_one）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.SharedModels.holder",
+        "Becoming.FreeEnergyGuarantees.SharedModels.heldPair_choices",
+        "Becoming.FreeEnergyGuarantees.SharedModels.held_not_one"
+      ]
+    },
+    {
+      "en": "The forager reads a stipulated store of three, uses two a step and prefers three, so takes two at no risk; the takes of Exceeding's two takers are its choices at the two steps they take part, and the same forager ends with the pair and continues alone (forager and five more).",
+      "zh": "觅食者读规定之储量三，每步用二，偏好为三，故无风险地取二；Exceeding 二取者于其参与之二步所取即其选择，同一觅食者成对则终结、独处则延续（forager 等六项）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager_choice",
+        "Becoming.FreeEnergyGuarantees.SharedModels.store",
+        "Becoming.FreeEnergyGuarantees.SharedModels.exceeding_choices",
+        "Becoming.FreeEnergyGuarantees.SharedModels.store_kept",
+        "Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one"
+      ]
+    },
+    {
+      "en": "Under the World premises, the gate at need m and the rest taking jointly more than a step gives at each of n steps from a level below n + m, a member outside the rest depending at a need of at least m is inactive from then on, whatever chooser gives its takes (need_ends, by Flow.outrun_below and Flow.outrun_ends).",
+      "zh": "世界之前提、门控于需求 m、及他者于 n 步之每步共取多于一步所给（起于低于 n + m 之水平）之下，以至少 m 之需求依赖之他者之外之成员此后不活动，无论何选择者给其所取（need_ends，依 Flow.outrun_below 与 Flow.outrun_ends）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends"
+      ]
+    },
+    {
+      "en": "With need one, every score reading the condition only from the rest's end on scores alike the course in which a member outside the rest takes a chooser's choice and the course in which it takes nothing; at the last outrun step, from a level of at most one, such a member takes nothing (restraint_unread, by Flow.outrun_reading_alike; outside_takes_nothing).",
+      "zh": "需求为一时，凡仅自他者之终起读条件之评分，于他者之外之成员取选择者之选择与其不取之历程评分相同；于最后超出之步，水平至多为一时，此成员不取（restraint_unread，依 Flow.outrun_reading_alike；outside_takes_nothing）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.restraint_unread",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.outside_takes_nothing"
+      ]
+    },
+    {
+      "en": "Where a chooser reading the level predicts, at no risk, a level at least the need, the level reached across the step is below the prediction, at every step from the rest's end on (expectation_not_course).",
+      "zh": "读水平之选择者无风险地预测至少为需求之水平，则自他者之终起每步，该步所达之水平低于其预测（expectation_not_course）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.expectation_not_course"
+      ]
+    },
+    {
+      "en": "A witness at need three: the forager takes two at no risk, the rest takes three against a renewal of two, and from step one the forager is inactive, by need_ends, as it is restrained (Outrun: ends_either_way and thirteen more).",
+      "zh": "需求为三之例：觅食者无风险地取二，他者取三而更新为二，自第一步起觅食者不活动（依 need_ends），克制亦然（Outrun：ends_either_way 等十四项）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.present",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.flow",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.balances",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained_balances",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.acting",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained_acting",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.dependent",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.gated",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.distinct",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.rest_present",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.outside",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.ends_either_way"
+      ]
+    },
+    {
+      "en": "A goal over the shared level: two regulators reading the level and preferring four, each counting only its own take, continue with every member active (OneGoal: continues and ten more).",
+      "zh": "对共享水平之一目标：二调节者读水平而偏好其为四，各只计己取，延续，每一成员皆活动（OneGoal：continues 等十一项）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator_choice",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.level",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.balances",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.level_two",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.dependent",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.acting",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.gated",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.continues"
+      ]
+    },
+    {
+      "en": "Three such regulators each take two at no risk, each within what is given, while together they take six against a level of four and a renewal of two, and from step one no member is active (three_end and eight more).",
+      "zh": "三如此之调节者各无风险地取二，各在所给之内，而共取六，水平为四、更新为二，自第一步起无成员活动（three_end 等九项）。",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.Three",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeLevel",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeFlow",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeWeb",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeBalances",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeActing",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeDependent",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeGated",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. For the ending: the World premises (balance, activity needing support, only active giving), the gate at need m, the rest listed without repetition, present where it takes, taking jointly more than a step gives at each of n steps from a level below n + m, and a member outside the rest.",
+      "zh": "不加公理。终结所需：世界之前提（平衡、活动需支持、唯活动者给予）、需求 m 之门控、他者无重复列出、取时在场、于 n 步之每步共取多于一步所给，起于低于 n + m 之水平，及他者之外之成员。"
+    },
+    {
+      "en": "The chooser's own hypotheses enter no premise of the ending: its takes may be any. The unread law takes need one; at the last outrun step, from a level of at most one, a member outside the rest that takes part takes nothing. The held pair's laws are those of the landed set point, its holders taking part at two steps.",
+      "zh": "选择者自身之假设不入终结之前提：其所取可为任何。不可读之律需需求为一；于最后超出之步，水平至多为一时，他者之外之参与成员不取。持守之对之律即已落地之设定点之律，其持守者参与二步。"
+    },
+    {
+      "en": "Modelling choices: a chooser of one step, its model a point prediction with no probability, its risk the distance of the prediction from its preferred level, ties to the earlier amount; natural-number levels and amounts; the holders' stores conditions of the web, the foragers' stores stipulated readings.",
+      "zh": "建模之选：一步之选择者，其模型为无概率之点预测，其风险为预测与偏好水平之距离，平局取较前之量；水平与量为自然数；持守者之储量为网之条件，觅食者之储量为规定之读数。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the papers' simulations fail: they have no shared draw.",
+      "zh": "诸论文之模拟失败：其无共享之汲取。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Anything of expected free energy beyond risk in counting form: ambiguity, the epistemic term, precision, the softmax over policies, policies over more than one step, learning.",
+      "zh": "计数形式之风险以外之期望自由能：模糊性、认知项、精度、策略之 softmax、多步策略、学习。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a goal over the shared level keeps a collective going: two regulators each counting only its own take continue, three end at the first step.",
+      "zh": "对共享水平之目标使集体延续：各只计己取之二调节者延续，三者于第一步终结。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the outrun law forbids the authors' gloss of risk minimization: it forbids only the wording that risk minimization ensures needs are met.",
+      "zh": "超出律禁作者对风险最小化之注解：其所禁唯风险最小化保证需求得满足之措辞。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Who ought to take less, or that the ending is a loss: no evaluation enters.",
+      "zh": "谁应少取，或终结为损失：不涉评价。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
+      "detail": {
+        "en": "In the held pair each holder takes its choice of least risk at its own store at no risk at the two steps they take part, each store at its set point at every step, while the pool's renewal ends from step two, unseen by either (held_not_one).",
+        "zh": "于持守之对，各持守者于其参与之二步，于其自身储量无风险地取风险最少之选择，各储量每步皆在设定点，而池之更新自第二步起终结，二者皆不见（held_not_one）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
+      "detail": {
+        "en": "Three regulators of the shared level, each counting only its own take, end at the first step (OneGoal.three_end).",
+        "zh": "共享水平之三调节者，各只计己取，于第一步终结（OneGoal.three_end）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
+      "detail": {
+        "en": "In Exceeding each forager takes its choice of least risk at no risk and its predicted store is kept, while from step two no member is active, the renewer included (alike_not_one, store_kept).",
+        "zh": "Exceeding 中每一觅食者无风险地取其风险最少之选择，其预测之储量得保持，而自第二步起无成员活动，更新者亦然（alike_not_one、store_kept）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
+      "detail": {
+        "en": "In OneGoal two takers read the shared level and prefer it at four, and every member continues, by what both read of the level (OneGoal.continues).",
+        "zh": "OneGoal 中二取者皆读共享之水平而偏好其为四，每一成员皆延续，凭二者所读之水平（OneGoal.continues）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T153820.435638Z): 58 of the 98 declarations of Becoming.FreeEnergyGuarantees, the rest cited by its sibling record, each with an empty axiom report. Drafted by an AI agent and read in the session; an independent read-only review by another AI agent (REVIEW-UE16) and a re-check, study section 449; not reviewed by a person. The laws apply landed theorems.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T153820.435638Z）：Becoming.FreeEnergyGuarantees 之 98 项声明中之 58 项，余者由其姊妹记录引用，公理报告皆空。由一 AI 代理起草，会话中审读；另一 AI 代理作独立只读审查（REVIEW-UE16）并复查，见研究第 449 节；未经人审。诸律应用已落地之定理。"
+  },
+  "next_delta": {
+    "en": "Expected free energy with its ambiguity term within a lumping (UE19); conditions under which a shared reading of the joint outcome keeps a collective going; review by a person.",
+    "zh": "于归并之内带模糊项之期望自由能（UE19）；对共同结果之共享读取使集体延续之条件；人之审查。"
+  },
+  "correspondence": {
+    "en": "The commons (Lloyd 1833; Hardin 1968, Science 162) and pivotality (Palfrey and Rosenthal 1984). Against Albarracin and others (2024, Systems 12, 163), where risk minimization ensures that an agent's needs are met, and Friston, Ramstead and others (2024, Collective Intelligence 3) with Da Costa and others (2025, arXiv:2410.00258), where with one generative model and one set of preferences each agent's goal is the group's: read as guarantees, both fail where the rest outruns a gated renewal, or alike preferences are indexical; their simulations have no shared draw (UE1's search, candidates 2 and 3, graded b; candidate 2 weak). Claim 3's forbidding is the landed held pair (what-a-set-point-optimum-does-beyond), here with each take a generative model's least-risk choice; the others apply the outrun law and joint excess. Graded in UE16's NOTE.",
+    "zh": "公地（Lloyd 1833；Hardin 1968，Science 162）与关键性（Palfrey、Rosenthal 1984）。针对 Albarracin 等（2024，Systems 12，163）：风险最小化保证主体之需求得满足；及 Friston、Ramstead 等（2024，Collective Intelligence 3）与 Da Costa 等（2025，arXiv:2410.00258）：一生成模型与一组偏好使每一主体之目标即群体之目标。作保证读，二者于他者超出门控之更新、或相同之偏好为指己时皆失效；其模拟无共享之汲取（UE1 之搜索，候选 2 与 3，b 级；候选 2 弱）。候选 3 之禁即已落地之持守之对，此处每一所取为生成模型之最少风险之选择；余者应用超出律与共同超出。分级见 UE16 之 NOTE。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
+  "aliases": [
+    "Risk minimization on a shared renewal",
+    "共享更新上之风险最小化",
+    "risk minimization and needs",
+    "alike preferences are not one goal",
+    "shared generative models",
+    "Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends",
+    "Becoming.FreeEnergyGuarantees.SharedModels.held_not_one",
+    "Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one"
+  ],
+  "dependencies": [
+    {
+      "id": "the-rest-outruns-the-renewal",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Flow.outrun_below, Flow.outrun_ends and Flow.outrun_reading_alike: the rest outrunning a gated renewal.",
+        "zh": "Flow.outrun_below、Flow.outrun_ends 与 Flow.outrun_reading_alike：他者超出门控之更新。"
+      }
+    },
+    {
+      "id": "own-count-misses-joint-excess",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Exceeding, Alone, Flow.WithinOwn, Flow.WithinJoint, Flow.Balances and Flow.Acting: joint excess and its witnesses.",
+        "zh": "Exceeding、Alone、Flow.WithinOwn、Flow.WithinJoint、Flow.Balances 与 Flow.Acting：共同超出及其例。"
+      }
+    },
+    {
+      "id": "support-from-the-supported",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Web.Dependent and Web.Supported: activity needing support, met by the witness.",
+        "zh": "Web.Dependent 与 Web.Supported：活动需支持，例中满足之。"
+      }
+    },
+    {
+      "id": "what-a-set-point-optimum-does-beyond",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Optimum.HeldPair and its held_end, by Flow.held_excess_ends: two holders at set points end the pool's renewal; gap, the distance.",
+        "zh": "Optimum.HeldPair 及其 held_end（依 Flow.held_excess_ends）：二持守者于设定点终结池之更新；gap 即距离。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "identical-cells-under-a-descent-treating-them-alike",
+      "detail": {
+        "en": "The other third part of the free-energy principle stated in the same module.",
+        "zh": "同一模块所陈自由能原理之另一第三部分。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen_mem",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen_minimizes",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.restraint",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.restraint_chosen",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.risk",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.acting",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.balances",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.dependent",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.distinct",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.ends_either_way",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.flow",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.gated",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.outside",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.present",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.rest_present",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained_acting",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained_balances",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.expectation_not_course",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager_choice",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.outside_takes_nothing",
+        "Becoming.FreeEnergyGuarantees.RiskAndNeeds.restraint_unread",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.Three",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.acting",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.balances",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.continues",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.dependent",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.gated",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.level",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.level_two",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator_choice",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeActing",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeBalances",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeDependent",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeFlow",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeGated",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeLevel",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeWeb",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end",
+        "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web",
+        "Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one",
+        "Becoming.FreeEnergyGuarantees.SharedModels.exceeding_choices",
+        "Becoming.FreeEnergyGuarantees.SharedModels.heldPair_choices",
+        "Becoming.FreeEnergyGuarantees.SharedModels.held_not_one",
+        "Becoming.FreeEnergyGuarantees.SharedModels.holder",
+        "Becoming.FreeEnergyGuarantees.SharedModels.store",
+        "Becoming.FreeEnergyGuarantees.SharedModels.store_kept",
+        "Becoming.FreeEnergyGuarantees.firstMin",
+        "Becoming.FreeEnergyGuarantees.firstMin_le",
+        "Becoming.FreeEnergyGuarantees.firstMin_mem",
+        "Becoming.FreeEnergyGuarantees.le_of_blt_false"
+      ],
+      "sha256": "6a4890e5c985b4e2f20738d82dd829ab643f4c8a14a604ed2133463b0ba3eff5"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
+      "role": "proof",
+      "sha256": "762bc2a8b53535d1b429e9bf86563b05971a712b38113d93500f7cedb5127d7d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "role": "proof",
+      "sha256": "3100cfdb5668db77d208d34986472af7511b880439132be7a45e56e42e7ba439"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SetPointOptimum.lean",
+      "role": "proof",
+      "sha256": "22b6140d3a4cc2631a1f125b3a39395f8140d264431ed0ef3d145864a204253a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T153820.435638Z/verification.json",
+      "role": "receipt",
+      "sha256": "38d138368556dfbb9761afa63aa915b43bb9250c636d0be095eefb260a2f1b29"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e61b588a0f2462676b0072aa957703d65e759e3fe904eb30a89a190ec2aae333"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue16-what-fe-does-not-guarantee/NOTE.md",
+      "role": "integration",
+      "sha256": "5a80be71b74ba850209e7b76bce89423171a4246f9582474712cf38fea498c62"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue16-what-fe-does-not-guarantee/REVIEW-UE16.md",
+      "role": "integration",
+      "sha256": "32b7e9e764b6dbefe0a2351ddc6d6760decc56e8f0935a4372442feec514a0e8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/THIRD-PART-SEARCH.md",
+      "role": "integration",
+      "sha256": "e459bac59373f9b756f8730447b330dab1bceb790f1b7b55d70f95877a16e5e8"
+    },
+    {
+      "path": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "role": "statement",
+      "sha256": "ba6bbed00fa6d28aae3a2e2e97faba4d5ad6c903a3197eebb3446b9027d249ce"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T153820.435638Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.FreeEnergyGuarantees",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "29 October 2026: added (UE16), risk minimization on a shared renewal: a chooser of least risk has its need end where the rest outruns a gated renewal, unread after and below what it expects; alike preferences for own stores are not one goal, and a goal over the joint level no guarantee either (two regulators continue, three end); against risk minimization ensuring needs and shared preferences making a group goal (candidates 2 and 3); after a review and a re-check; study section 449.",
+      "zh": "2026年10月29日：新增（UE16），共享更新上之风险最小化：他者超出门控之更新时，风险最少之选择者其需求终结，此后不可读，且低于其所预期；对各自储量之相同偏好非一目标，对共同水平之目标亦无保证（二调节者延续，三者终结）；针对风险最小化保证需求与共享偏好成群体目标之说（候选 2 与 3）；经审查与复查；研究第 449 节。"
+    }
+  ]
+}

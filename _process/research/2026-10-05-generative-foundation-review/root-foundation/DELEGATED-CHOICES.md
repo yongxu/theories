@@ -122,6 +122,8 @@ Where: section 8, Ren's choices, first item; the records above.
 
 **What widening counts (20 October 2026, R25; twentieth review D6, F6).** `Web.Widens` compares which members of the world's type of formations `F`, given in advance, the levels admit at given thresholds. A course that brings about a kind of formation or requirement outside `F` widens nothing on this measure, so 生生 as read in the revision above, creating the conditions and generators of further forming, can exceed what widening registers. Widening over a grown world (`Flow.GrownBy`, `Becoming.Cuts`) is open (chapter §8.1, item 5). `Flow.GrownBy` says how the conditions of one flow over fixed types of formations and conditions were attached, a structure of sharing, not a course in which the type of formations grows, so widening over a grown world needs a reading of one world's formations in another's, which no core module states (R34, 20 October 2026). Since this revision only C shares the reading: the `living` readings include no further generation, so living significance does not read 生生 (chapter §8.3). The original text above is kept.
 
+**The law and a witness (29 October 2026, board item GW; no change of reading).** Along any reading of the World containing carrying on of the supported, keeping widening needs beginnings of the reading, carrying renewals along passing ([07 §2](../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-keeping-widening-needs)), so renewal of what forms is necessary for keeping what can form widening along a reading. It is not sufficient: on the kind relay, generation at two orders and renewal without end hold while what can form by name only returns. The revision's "生生还改变接下来能够形成哪些状态" is what widening registers within `F`; R25's point stands that 生生 can exceed it ([study](development/gw-generation-and-widening/NOTE.md)).
+
 <a id="d2-生成的退化的--generative-and-degenerative"></a>
 ### Generative and degenerative
 
@@ -918,6 +920,8 @@ Where: the eight chapters of the restructured account ([01](../../../../theories
 **Reasons.** Each reading interprets content the chapter checks against its Lean and says no more than the laws it names; where it rests on no theorem, the chapter says so (an argument, a hypothetical case, a historical correspondence). The readings carried from earlier chapters keep those chapters' arguments, which stay readable in history. Registering them here, rather than leaving them unnumbered, keeps the rule that no reading is open.
 
 **What would change it.** A reading found to claim more than the laws it names, or to conflict with another reading of the one account, is revised in the chapter and here.
+
+**Item 4 on a model (29 October 2026, board item GW; no change of reading).** The kind relay is generation at two orders together with renewal without end, while what it can form by name only returns ([07 §2](../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-keeping-widening-needs)): the map's generation does not give 生生, as item 4 reads, and keeping widening along a reading needs the map's renewals one grain up, within a kind ([study](development/gw-generation-and-widening/NOTE.md)).
 
 <a id="d66-the-work-read-by-its-own-laws"></a>
 ### The work read by its own laws

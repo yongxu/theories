@@ -159,16 +159,16 @@ The condition and C stay named premises, and the free predicate stays the genera
 
 - **全一 (every model both ways).** The World's relations (WRT2) and processes (WRP2) are represented both ways. Amounts are the root's second sort, with the limited interface U1's reviewed verdict states. Each seam is written down with its witnesses, so 全一 is met as an exact statement of its seams, as item 13 allows. The interface laws are checked in scratch, and are in the package only if a later leaf takes them (U1's §6).
 - **全二 (every central declaration on the root).** Of the 118 distinct, 44 reach the grammar and 74 do not. Balance's 31 stay "balance, represented", with U1 as the reason. U2 takes up the definitional rows and the statements at a model.
-- **全三 (the three readings of "more").** GW joins generation and widening in one direction. Its Lean (GW1–GW5) comes next, on its own line.
+- **全三 (the three readings of "more").** GW joins generation and widening in one direction. GW3–GW5 landed (`4edb05c1f`, study §448): the law of beginnings, the kind relay and the held possible on the map. GW1 and GW2 stay on GW's line.
 - **全四 (the ethics stated on the root).** U3's design is reviewed but not landed. 全四 is designed, not met, until U3's Lean items 1 and 2 land.
 - **全五 (the measure tells derivation, representation and premise apart).** Each master law's grammar statement now counts among its anchors (`f1a4f6b81`). Separating representation at a model from derivation is MV's line. It gets its values once U2's and U3's representations land.
 
 **Next, in order:**
 
-1. **U2** (gate open since WRP landed): the 13 definitional or representational rows and the 11 laws of their models and single applications. Each is stated as the grammar reading it is, or at the World's or a process's grammar model through the transport, and counted as a representation (change 1). It goes module by module with each module's owner. A design comes first, with one independent review. Offered to WRT's and WRP's designer.
+1. **U2** (gate open since WRP landed): the 13 definitional or representational rows and the 11 laws of their models and single applications. Each is stated as the grammar reading it is, or at the World's or a process's grammar model through the transport, and counted as a representation (change 1). It goes module by module with each module's owner. Taken by WRT's and WRP's designer. Its design is reviewed, every finding taken, on its branch `u2`: 20 rows read at the models, 3 resist (amounts computed over a family), 1 U3's. Placement is decided on U2's board row; the design lands with its claim.
 2. **«保之像» beside «像» in GrammarLaws** (rule 9; WRP2's review; U2's design, §6). Preserving along a map is the image lying within. Mechanism's `factors_image` and `Image.least` become its cases, statements and names unchanged; U2's scratch proves both from «保之像». Mechanism names no owner, so by rule 3's fallback OU's owner decides: yes. GrammarTransport's owner agrees to the removal. GrammarLaws has 322 dependents among the package's 342 modules, so the move goes on HE's list as its sixth edit rather than costing a second near-full rebuild; HE's owner adds it to the list. Until HE lands, «保之像» stays in GrammarTransport, where WRP2 put it, with nothing duplicated.
-3. **OU3f's lineage laws** (fork 1).
-4. **U3's Lean items 1 and 2**, once its documents land; **GW1–GW5** on GW's line.
+3. **OU3f's lineage laws** (fork 1): landed (`1cd8ef1fe`, study §451), the lineage laws of `Becoming.Identity` proved from the grammar's laws of steps through `Web.steps_iff_lineage`; the measure unchanged (45 of 127).
+4. **U3's Lean items 1 and 2**, once its documents land; **GW1 and GW2** on GW's line; **HE**, the one near-full rebuild that lands every held edit, «保之像» among them.
 
 After these come plan §八 steps 5–10.
 

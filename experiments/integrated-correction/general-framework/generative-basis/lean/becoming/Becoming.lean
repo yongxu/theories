@@ -104,6 +104,7 @@ import Becoming.Tasks
 import Becoming.CausalGrowth
 import Becoming.Presence
 import Becoming.ReorderingGrowth
+import Becoming.FreeEnergyGuarantees
 import Becoming.Growth
 import Becoming.Retaining
 import Becoming.OwnWidening
@@ -627,7 +628,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   exact: more forces arising under a continuation exactly when no formation continues as
   two. The census balance holds under a continuation in two halves: without splits,
   ceasing recurring needs arising recurring; without merges, under a bounded census,
-  arising recurring needs ceasing recurring.
+  arising recurring needs ceasing recurring. A lineage under a continuation is the grammar's
+  steps of the continuation within activity from its start (`Web.steps_iff_lineage`), so the
+  lineage laws the covering forms of these halves rest on are cases of the grammar's laws of
+  steps (board item OU3f).
 * `Becoming.ContinuedClasses` (L1): formation classes read along a continuation rather than a
   name (`Web.Continuing`, `Web.RenewingAlong`, `Web.ConsumingAlong`): renewing passes into every
   branch of a split and consuming back into every formation merged (`Web.renewingAlong_iff`,
@@ -1567,6 +1571,25 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `ReorderingGrowth.MovedBack.persists_not_present`); the vee as a world
   (`ReorderingGrowth.VeeWorld.presence_varies`). Each law is near-definitional, a composition, a
   lemma or a witness. A leaf (board item UE15).
+* `Becoming.FreeEnergyGuarantees` (L1): what free-energy minimization does not guarantee, the
+  free-energy principle's third parts on explicit models in its terms. Under a descent moving every
+  cell by one rule from its own state and a field reading no cell's number, two cells alike at the
+  start stay alike (`FreeEnergyGuarantees.IdenticalCells.two_alike_stay_alike`); with the field
+  exchangeable the descent commutes with exchanging neighbouring cells
+  (`FreeEnergyGuarantees.IdenticalCells.descent_commutes`), the exchanged run is the run of the
+  exchanged start, and among configurations of one number of cells a unique minimum of a free energy
+  symmetric in the cells has its cells alike
+  (`FreeEnergyGuarantees.IdenticalCells.unique_minimum_alike`). A member outside the rest choosing,
+  under its model, the amount whose predicted level lies nearest its preferred level has its need
+  end whatever its model where the rest outruns a gated renewal
+  (`FreeEnergyGuarantees.RiskAndNeeds.need_ends`, by the outrun law). Holders of one model, each
+  taking, at the two steps they take part, its choice of least risk at its own store, a condition,
+  each store at its set point at every step, end the shared renewal
+  (`FreeEnergyGuarantees.SharedModels.held_not_one`, by
+  `Optimum.HeldPair.held_end`), and three regulators of the shared level end it at the first step
+  (`FreeEnergyGuarantees.SharedModels.OneGoal.three_end`). Each law applies a landed law in the
+  principle's terms or is a witness. A leaf importing `Becoming.Commuting`, `Becoming.Exclusion`
+  and `Becoming.SetPointOptimum` (board item UE16).
 * `Becoming.Growth` (L1): widening along a reading of one web's formations in another's
   (`Web.WidensAlong`), which along the identity is widening (`Web.widensAlong_id_iff`), and widening
   over a grown world: a growth adds formations and conditions without changing the old formations'
@@ -2867,7 +2890,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `Becoming.Withholding`'s closed forms are proved from them, its chains of waits read as the
   grammar's steps; so is `WithinMoves.after_course` in `Becoming.Labelled`, a trace read as them,
   and `Web.reaches_onward` in `Becoming.MapInstances`, an unending line's index advancing with its
-  steps (board items OU3d, OU3e, OU3f).
+  steps; and the lineage laws in `Becoming.Identity`, a lineage read as steps of the continuation
+  within activity (`Web.Lineage.unique`, `origin`, `split`, `through`, `onward`, `back`, and a
+  lineage as a line both ways, `Web.Lineage.line`, `Web.line_lineage`; board items OU3d, OU3e,
+  OU3f).
   Lumping: with the successor fixed where `E`
   leads, constancy is going alike with a successor available (`«局定后则有常当且仅当同行可续»`), and a
   map's image has a fixed successor exactly where sameness under the map goes alike

@@ -35,7 +35,7 @@
 
 - Conditioning beyond natural weightings: for possibility, restriction is conditioning without shares; signed counts cancel, so a restricted signed weighting has no share.
 - The prior and likelihood readings without one likelihood total: otherwise a hypothesis's share before any record is its prior weight times its own likelihood total, over the whole.
-- Surprisal, entropy or free energy as numbers: the reciprocal share orders as pointwise surprisal does and multiplies where it adds, but averages of logarithms have no reciprocal-share form.
+- Surprisal, entropy or free energy as numbers: the reciprocal share orders as pointwise surprisal does and multiplies where it adds, but an average of logarithms is not the logarithm of one reciprocal share.
 - Graded evidence on a general domain: records are Boolean, and a likelihood weighting multiplying a prior appears only as the generative model's pair weight.
 - That these identities are substantive results of a containment of the free-energy principle: they are identities of counting, near-definitional.
 - That whole_courses is a new law: it generalizes Typicality.transfer_weight, the two-valued case, and lands above it; transfer_weight keeps its own proof until the general law moves into Becoming.Weighted.
@@ -56,14 +56,14 @@ Canonical source: [ConditionalWeights.lean](../../../../experiments/integrated-c
 <a id="next--下一步"></a>
 ## Next
 
-Restriction stated once for every weighting, with possibility's support commuting with it; graded records on a general domain; the join to the periphery's variational bound once it has a receipt; review by a person.
+Restriction stated once for every weighting, with possibility's support commuting with it; graded records on a general domain; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Read a share as a probability, a number of situations of a kind (weights-count-situations): restriction is conditioning, restrict_two_ways is Bayes's theorem P(h | o) P(o) = P(o | h) P(h) (Bayes 1763; Laplace 1774), the share of evidence in the whole is a generative model's marginal likelihood and posterior_single its posterior, these readings of the prior and the likelihood holding where every listed hypothesis's likelihood weights have one total (prior_share). The reciprocal share is a counting form of pointwise surprisal, log (1 / P): it reverses the order of shares and its products are surprisal's sums. Entropy and free energy, averages of logarithms, have no such form; free energy and its bound are drafted for the periphery with no receipt. The readings are the AI's, stated in development/ue2-conditional-weights/NOTE.md, with the review in REVIEW-UE2.md.
+Read a share as a probability, a number of situations of a kind (weights-count-situations): restriction is conditioning, restrict_two_ways is Bayes's theorem P(h | o) P(o) = P(o | h) P(h) (Bayes 1763; Laplace 1774), the share of evidence in the whole is a generative model's marginal likelihood and posterior_single its posterior, these readings of the prior and the likelihood holding where every listed hypothesis's likelihood weights have one total (prior_share). The reciprocal share is a counting form of pointwise surprisal, log (1 / P): it reverses the order of shares and its products are surprisal's sums. Entropy and free energy, averages of logarithms, are not the logarithm of one reciprocal share; free energy and its bound are stated in the periphery and joined to posterior_single there (free-energy-bounds-surprisal). The readings are the AI's, stated in development/ue2-conditional-weights/NOTE.md, with the review in REVIEW-UE2.md.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -71,8 +71,9 @@ Read a share as a probability, a number of situations of a kind (weights-count-s
 - **formal-reuse**: [fulfillment-chance-floor](fulfillment-chance-floor.md). mass, mass_mono and IncludedOn: the mass of an event on a listed domain and its monotonicity.
 - **formal-reuse**: [sum-over-histories-exact](sum-over-histories-exact.md). counting, openSteps, courses, joinMap and Weights.along; Weights.sum_congr, sum_append, sum_map, sum_joinMap and mul_sum, from which the mass laws are read through mass_eq_sum.
 - related, not a proved adapter: [weights-count-situations](weights-count-situations.md). Shares read as numbers of situations of a kind, a reading.
+- related, not a proved adapter: [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md). Variational free energy bounds surprisal: over the reals, in the periphery, exact minimization of free energy over beliefs with no weight on a hypothesis the prior or the record rules out gives the share given the record.
 
-**Used by:** [exit-from-a-margin](exit-from-a-margin.md)
+**Used by:** [exit-from-a-margin](exit-from-a-margin.md) · [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -92,6 +93,7 @@ Aliases: `Conditioning by restriction, shares and a generative model's posterior
 ### History
 
 - 26 October 2026: added (UE2), conditioning on the counting layer, identities of counting; study section 412.
+- 29 October 2026, board item UE17 (study section 450): related to free-energy-bounds-surprisal; the next step drops the join to the periphery's bound, now done, and the correspondence and the third item of what it does not show say that free energy, an average of logarithms, is not the logarithm of one reciprocal share and is stated in the periphery; no statement or declaration changed.
 
 </details>
 

@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261029T142634.455566Z",
- "core_sources_sha256": "dc191a35b0ae78d52d4509bf00a3b9bb3041b44a155a0d8dc250ea8ef4a80ee7",
+ "core_receipt": "20261029T162632.074811Z",
+ "core_sources_sha256": "075fad12fcacffbc88724b1c15da15d3b04eb4337383e556114df13647f8c7f1",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -56,17 +56,17 @@
   ]
  },
  "counts": {
-  "laws": 3686,
+  "laws": 3721,
   "no_declarations": 9,
-  "outside": 342,
-  "grammar": 729,
-  "balance, represented": 635,
+  "outside": 350,
+  "grammar": 739,
+  "balance, represented": 645,
   "anchor, not reached": 134,
-  "no master law": 1837,
-  "vocabulary_only": 57,
-  "closure": 472,
-  "balance": 802,
-  "return": 250,
+  "no master law": 1844,
+  "vocabulary_only": 59,
+  "closure": 476,
+  "balance": 815,
+  "return": 252,
   "lumping": 83,
   "order": 78
  },
@@ -1246,7 +1246,8 @@
      "Becoming.Web.byPassing_iff_hasPred",
      "Becoming.Web.arises_iff_sheng_carrier",
      "Becoming.Web.ceases_iff_wang_carrier",
-     "Becoming.Web.ceases_of_pattern_ends"
+     "Becoming.Web.ceases_of_pattern_ends",
+     "Becoming.Web.begins_of_arises"
     ],
     "master_laws": [],
     "grammar": true,
@@ -5037,9 +5038,11 @@
      "Becoming.Web.not_not_arisingFrom_covered",
      "Becoming.Web.arisingFrom_not_stopping_covered"
     ],
-    "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 11,
@@ -5047,8 +5050,8 @@
      "Becoming.Web.ceasingFrom_not_stopping_covered"
     ],
     "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "census-balance": [
@@ -9235,7 +9238,9 @@
      "Becoming.Web.ConsumingAlong.merged_candles",
      "Becoming.Web.line_reidentify"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -16443,6 +16448,158 @@
     "dependence": "balance, represented"
    }
   ],
+  "free-energy-bounds-surprisal": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.FreeEnergy.freeEnergy",
+     "Becoming.FreeEnergy.divergence",
+     "Becoming.FreeEnergy.surprisal",
+     "Becoming.FreeEnergy.posterior",
+     "Becoming.FreeEnergy.freeEnergy_congr",
+     "Becoming.FreeEnergy.freeEnergy_eq_divergence",
+     "Becoming.FreeEnergy.freeEnergy_eq_energy_sub_entropy"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.freeEnergy",
+     "Becoming.FreeEnergy.divergence",
+     "Becoming.FreeEnergy.surprisal",
+     "Becoming.FreeEnergy.posterior",
+     "Becoming.FreeEnergy.freeEnergy_congr",
+     "Becoming.FreeEnergy.freeEnergy_eq_divergence",
+     "Becoming.FreeEnergy.freeEnergy_eq_energy_sub_entropy"
+    ]
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.FreeEnergy.surprisal_le_freeEnergy",
+     "Becoming.FreeEnergy.total_pos",
+     "Becoming.FreeEnergy.term_le",
+     "Becoming.FreeEnergy.sum_terms",
+     "Becoming.FreeEnergy.sum_normalized_sub"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.surprisal_le_freeEnergy",
+     "Becoming.FreeEnergy.total_pos",
+     "Becoming.FreeEnergy.term_le",
+     "Becoming.FreeEnergy.sum_terms",
+     "Becoming.FreeEnergy.sum_normalized_sub"
+    ]
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff",
+     "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_pos",
+     "Becoming.FreeEnergy.term_eq_iff",
+     "Becoming.FreeEnergy.term_eq_iff_of_pos",
+     "Becoming.FreeEnergy.posterior_nonneg",
+     "Becoming.FreeEnergy.posterior_eq_zero",
+     "Becoming.FreeEnergy.sum_posterior",
+     "Becoming.FreeEnergy.freeEnergy_posterior",
+     "Becoming.FreeEnergy.minimizes_iff_posterior",
+     "Becoming.FreeEnergy.Witness.bound_fails_off_support"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff",
+     "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_pos",
+     "Becoming.FreeEnergy.term_eq_iff",
+     "Becoming.FreeEnergy.term_eq_iff_of_pos",
+     "Becoming.FreeEnergy.posterior_nonneg",
+     "Becoming.FreeEnergy.posterior_eq_zero",
+     "Becoming.FreeEnergy.sum_posterior",
+     "Becoming.FreeEnergy.freeEnergy_posterior",
+     "Becoming.FreeEnergy.minimizes_iff_posterior",
+     "Becoming.FreeEnergy.Witness.bound_fails_off_support"
+    ]
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.FreeEnergy.freeEnergy_eq_divergence_add_surprisal",
+     "Becoming.FreeEnergy.divergence_nonneg",
+     "Becoming.FreeEnergy.divergence_eq_zero_iff",
+     "Becoming.FreeEnergy.divergence_posterior_nonneg",
+     "Becoming.FreeEnergy.divergence_posterior_eq_zero_iff"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.freeEnergy_eq_divergence_add_surprisal",
+     "Becoming.FreeEnergy.divergence_nonneg",
+     "Becoming.FreeEnergy.divergence_eq_zero_iff",
+     "Becoming.FreeEnergy.divergence_posterior_nonneg",
+     "Becoming.FreeEnergy.divergence_posterior_eq_zero_iff"
+    ]
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.FreeEnergy.freeEnergy_eq_complexity_sub_accuracy"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.freeEnergy_eq_complexity_sub_accuracy"
+    ]
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.ConditionalWeights.Share.toReal",
+     "Becoming.ConditionalWeights.Share.toReal_nonneg",
+     "Becoming.FreeEnergy.share_toReal_pos",
+     "Becoming.ConditionalWeights.Share.toReal_mul",
+     "Becoming.FreeEnergy.cast_mass_eq_sum",
+     "Becoming.FreeEnergy.jointShare_part",
+     "Becoming.FreeEnergy.jointShare_toReal",
+     "Becoming.FreeEnergy.recordShare_toReal",
+     "Becoming.FreeEnergy.sum_jointShare",
+     "Becoming.FreeEnergy.givenShare_toReal",
+     "Becoming.FreeEnergy.givenShare_eq_posterior",
+     "Becoming.FreeEnergy.weight_zero_of_jointShare_zero"
+    ],
+    "outside": [
+     "Becoming.ConditionalWeights.Share.toReal",
+     "Becoming.ConditionalWeights.Share.toReal_nonneg",
+     "Becoming.FreeEnergy.share_toReal_pos",
+     "Becoming.ConditionalWeights.Share.toReal_mul",
+     "Becoming.FreeEnergy.cast_mass_eq_sum",
+     "Becoming.FreeEnergy.jointShare_part",
+     "Becoming.FreeEnergy.jointShare_toReal",
+     "Becoming.FreeEnergy.recordShare_toReal",
+     "Becoming.FreeEnergy.sum_jointShare",
+     "Becoming.FreeEnergy.givenShare_toReal",
+     "Becoming.FreeEnergy.givenShare_eq_posterior",
+     "Becoming.FreeEnergy.weight_zero_of_jointShare_zero"
+    ]
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.FreeEnergy.record_pos_of_belief",
+     "Becoming.FreeEnergy.record_surprisal_le_freeEnergy",
+     "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff",
+     "Becoming.FreeEnergy.freeEnergy_givenShare",
+     "Becoming.FreeEnergy.minimizes_iff_givenShare"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.record_pos_of_belief",
+     "Becoming.FreeEnergy.record_surprisal_le_freeEnergy",
+     "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff",
+     "Becoming.FreeEnergy.freeEnergy_givenShare",
+     "Becoming.FreeEnergy.minimizes_iff_givenShare"
+    ]
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.FreeEnergy.surprisal_product",
+     "Becoming.FreeEnergy.surprisal_eq_log_reciprocal"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.surprisal_product",
+     "Becoming.FreeEnergy.surprisal_eq_log_reciprocal"
+    ]
+   }
+  ],
   "fulfillment-chance-floor": [
    {
     "law": 1,
@@ -16874,7 +17031,9 @@
      "Becoming.Web.stopped_not_endless",
      "Becoming.Map.shifted_generates",
      "Becoming.Map.relay_renews_and_ends",
-     "Becoming.Map.renewal_undecided"
+     "Becoming.Map.renewal_undecided",
+     "Becoming.Web.not_carries_of_within_itself",
+     "Becoming.Web.not_generation_of_within_itself"
     ],
     "master_laws": [
      "closure",
@@ -19972,6 +20131,104 @@
     ],
     "grammar": false,
     "dependence": "balance, represented"
+   }
+  ],
+  "identical-cells-under-a-descent-treating-them-alike": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.total_exchangeAt",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.map_exchangeAt",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.length_exchangeAt"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.two_alike_stay_alike",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.all_alike_stay_alike",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.nth_map",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.nth_replicate"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.descent",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.Exchangeable",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.othersField",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.othersField_exchangeable",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.descent_commutes"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.keeps_exchange_fixed",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.exchanged_run",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.rests_exchanged",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.alike_of_fixed",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.fixed_of_alike"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.Symmetric",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy_symmetric",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.minimum_exchanged",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.unique_minimum_alike",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.apart_not_unique",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.unique_across_sizes_empty"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.give",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.field",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.away",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.step",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.energy",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.step_commutes",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_rests",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_energy",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.pair_of_alike",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_never_least",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.run_length"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.parts",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.exchanged_parts",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.minima",
+     "Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.other_minima"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
    }
   ],
   "identification-where-bounded": [
@@ -26664,6 +26921,13 @@
      "Becoming.Web.Includes.trans",
      "Becoming.Web.Keeps.not_mixed",
      "Becoming.Web.Keeps.symm",
+     "Becoming.Web.Lineage.back",
+     "Becoming.Web.Lineage.line",
+     "Becoming.Web.Lineage.onward",
+     "Becoming.Web.Lineage.origin",
+     "Becoming.Web.Lineage.split",
+     "Becoming.Web.Lineage.through",
+     "Becoming.Web.Lineage.unique",
      "Becoming.Web.Mixed.symm",
      "Becoming.Web.Widens.not_keeps",
      "Becoming.Web.Widens.not_mixed",
@@ -26673,6 +26937,7 @@
      "Becoming.Web.active_before",
      "Becoming.Web.ended_for_good",
      "Becoming.Web.inactive_of_not_arising",
+     "Becoming.Web.line_lineage",
      "Becoming.Web.reaches_onward",
      "Becoming.Web.steady_held",
      "Becoming.Web.steps_advance",
@@ -37466,6 +37731,162 @@
      "Becoming.JudgingCorrespondence.endpoint_judge_iff",
      "Becoming.JudgingCorrespondence.no_endpoint_only_prior_certificate_by_core"
     ]
+   }
+  ],
+  "risk-minimization-on-a-shared-renewal": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.le_of_blt_false",
+     "Becoming.FreeEnergyGuarantees.firstMin",
+     "Becoming.FreeEnergyGuarantees.firstMin_le",
+     "Becoming.FreeEnergyGuarantees.firstMin_mem"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.risk",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen_minimizes",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen_mem",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.restraint",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.restraint_chosen"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.SharedModels.holder",
+     "Becoming.FreeEnergyGuarantees.SharedModels.heldPair_choices",
+     "Becoming.FreeEnergyGuarantees.SharedModels.held_not_one"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager_choice",
+     "Becoming.FreeEnergyGuarantees.SharedModels.store",
+     "Becoming.FreeEnergyGuarantees.SharedModels.exceeding_choices",
+     "Becoming.FreeEnergyGuarantees.SharedModels.store_kept",
+     "Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.restraint_unread",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.outside_takes_nothing"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.expectation_not_course"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.present",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.flow",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.balances",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained_balances",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.acting",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained_acting",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.dependent",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.gated",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.distinct",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.rest_present",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.outside",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.ends_either_way"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator_choice",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.level",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.balances",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.level_two",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.dependent",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.acting",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.gated",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.continues"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.Three",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeLevel",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeFlow",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeWeb",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeBalances",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeActing",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeDependent",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeGated",
+     "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
    }
   ],
   "rivals-bounded-in-time": [
@@ -50357,11 +50778,16 @@
    {
     "law": 9,
     "declarations": [
+     "Becoming.Web.supportedItself",
+     "Becoming.Web.supportedPassing",
+     "Becoming.Web.supportedItself_within",
+     "Becoming.Web.supportedPassing_within",
+     "Becoming.Flow.BeginsAlong",
+     "Becoming.Flow.BeginsAlong.not_along",
+     "Becoming.Flow.BeginsAlong.carries",
+     "Becoming.Flow.BeginsAlong.iff_begins",
      "Becoming.Web.Linked.snoc",
-     "Becoming.Flow.descends_along_passings",
-     "Becoming.Flow.not_exceedsAcross_along_passings",
-     "Becoming.Flow.not_keepsOpening_along_passings",
-     "Becoming.Flow.not_keepsWidening_along_passings"
+     "Becoming.Flow.descends_or_begun"
     ],
     "master_laws": [
      "balance"
@@ -50372,6 +50798,234 @@
    },
    {
     "law": 10,
+    "declarations": [
+     "Becoming.Flow.begun_of_exceedsAcross",
+     "Becoming.Flow.begins_late_of_keepsOpening",
+     "Becoming.Flow.beginsAlong_supportedItself_iff",
+     "Becoming.Flow.passes_late_of_keepsOpening_byName",
+     "Becoming.KindRelay.Runs.begins_dormant",
+     "Becoming.KindRelay.Runs.beginnings_without_opening"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.Flow.descends_along_supportedPassing",
+     "Becoming.Flow.descends_along_passings",
+     "Becoming.Flow.not_exceedsAcross_along_supportedPassing",
+     "Becoming.Flow.not_keepsOpening_along_supportedPassing",
+     "Becoming.Flow.not_keepsWidening_along_supportedPassing",
+     "Becoming.Flow.not_exceedsAcross_along_passings",
+     "Becoming.Flow.not_keepsOpening_along_passings",
+     "Becoming.Flow.not_keepsWidening_along_passings",
+     "Becoming.Web.supportedPassing_cont_iff",
+     "Becoming.Web.supportedItself_not_generation"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.Web.withinKind",
+     "Becoming.Web.withinKind_within",
+     "Becoming.Web.kindClass",
+     "Becoming.Web.kindClass_within",
+     "Becoming.Web.kindGrains",
+     "Becoming.Web.withinKind_cont_iff",
+     "Becoming.Web.withinKind_begins_iff",
+     "Becoming.Flow.BeginsAlong.carries_kind_iff"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 13,
+    "declarations": [
+     "Becoming.Flow.PassesSupport.takes",
+     "Becoming.Flow.not_keepsOpening_of_dissipated_requirements",
+     "Becoming.Flow.not_keepsWidening_of_dissipated_requirements",
+     "Becoming.Flow.not_generation_of_dissipated_requirements"
+    ],
+    "master_laws": [
+     "closure",
+     "balance",
+     "return"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 14,
+    "declarations": [
+     "Becoming.Web.supported_along",
+     "Becoming.Web.endless_of_successor",
+     "Becoming.Web.generation_of_one_step_supports",
+     "Becoming.Web.Linked.last"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 15,
+    "declarations": [
+     "Becoming.KindRelay.Form",
+     "Becoming.KindRelay.memDecidable",
+     "Becoming.KindRelay.allForms",
+     "Becoming.KindRelay.every_form",
+     "Becoming.KindRelay.distinct_forms",
+     "Becoming.KindRelay.kind",
+     "Becoming.KindRelay.sameKind",
+     "Becoming.KindRelay.sameKind_refl",
+     "Becoming.KindRelay.amount",
+     "Becoming.KindRelay.Holds",
+     "Becoming.KindRelay.giveSupport",
+     "Becoming.KindRelay.giveAt",
+     "Becoming.KindRelay.takeAt",
+     "Becoming.KindRelay.presentAt",
+     "Becoming.KindRelay.lineage",
+     "Becoming.KindRelay.starter",
+     "Becoming.KindRelay.back",
+     "Becoming.KindRelay.parity_two",
+     "Becoming.KindRelay.odd_of_next_even",
+     "Becoming.KindRelay.holds_brief",
+     "Becoming.KindRelay.present_holds",
+     "Becoming.KindRelay.moves_facts",
+     "Becoming.KindRelay.lineage_facts",
+     "Becoming.KindRelay.starter_facts",
+     "Becoming.KindRelay.starter_fresh",
+     "Becoming.KindRelay.back_facts",
+     "Becoming.KindRelay.Runs",
+     "Becoming.KindRelay.Runs.step",
+     "Becoming.KindRelay.Runs.along",
+     "Becoming.KindRelay.Runs.brief",
+     "Becoming.KindRelay.Runs.linked",
+     "Becoming.KindRelay.Runs.includes",
+     "Becoming.KindRelay.Runs.not_into",
+     "Becoming.KindRelay.Runs.exceeds",
+     "Becoming.KindRelay.Runs.opens",
+     "Becoming.KindRelay.Runs.keeps_widening",
+     "Becoming.KindRelay.Runs.generation",
+     "Becoming.KindRelay.Runs.renews_even",
+     "Becoming.KindRelay.Runs.generation_one_up",
+     "Becoming.KindRelay.Runs.generation_order_zero",
+     "Becoming.KindRelay.Runs.generation_two_orders",
+     "Becoming.KindRelay.Runs.renews_without_end",
+     "Becoming.KindRelay.web",
+     "Becoming.KindRelay.flow",
+     "Becoming.KindRelay.supported_iff",
+     "Becoming.KindRelay.passes_iff",
+     "Becoming.KindRelay.runs",
+     "Becoming.KindRelay.keeps_widening",
+     "Becoming.KindRelay.generation",
+     "Becoming.KindRelay.generation_one_up",
+     "Becoming.KindRelay.renews_without_end"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 16,
+    "declarations": [
+     "Becoming.KindRelay.balance_at",
+     "Becoming.KindRelay.balances",
+     "Becoming.KindRelay.acting",
+     "Becoming.KindRelay.dependent",
+     "Becoming.KindRelay.unloosened",
+     "Becoming.KindRelay.takes_own",
+     "Becoming.KindRelay.taking",
+     "Becoming.KindRelay.requiresWithin",
+     "Becoming.total_eq_of_supports",
+     "Becoming.KindRelay.single_distinct",
+     "Becoming.KindRelay.pair_distinct",
+     "Becoming.KindRelay.give_support",
+     "Becoming.KindRelay.take_support",
+     "Becoming.KindRelay.give_distinct",
+     "Becoming.KindRelay.moves_taken",
+     "Becoming.KindRelay.inside",
+     "Becoming.KindRelay.conserving",
+     "Becoming.KindRelay.gainless",
+     "Becoming.KindRelay.Runs.dormant_not_exceeds",
+     "Becoming.KindRelay.Runs.not_keepsOpening_dormant",
+     "Becoming.KindRelay.Runs.some_supported",
+     "Becoming.KindRelay.Runs.not_includes_within_itself",
+     "Becoming.KindRelay.Runs.not_keepsWidening_byName",
+     "Becoming.KindRelay.Runs.not_keepsWidening_supportedItself",
+     "Becoming.KindRelay.not_keepsWidening_byName",
+     "Becoming.KindRelay.not_keepsWidening_byName_of_whole",
+     "Becoming.KindRelay.not_keepsWidening_supportedPassing",
+     "Becoming.KindRelay.not_keepsWidening_dormant",
+     "Becoming.KindRelay.returns"
+    ],
+    "master_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 17,
+    "declarations": [
+     "Becoming.KindRelay.Fed.fuelNeed",
+     "Becoming.KindRelay.Fed.fuel_present",
+     "Becoming.KindRelay.Fed.level",
+     "Becoming.KindRelay.Fed.web",
+     "Becoming.KindRelay.Fed.take",
+     "Becoming.KindRelay.Fed.give",
+     "Becoming.KindRelay.Fed.flow",
+     "Becoming.KindRelay.Fed.supported_iff",
+     "Becoming.KindRelay.Fed.passes_iff",
+     "Becoming.KindRelay.Fed.runs",
+     "Becoming.KindRelay.Fed.fuel_balance",
+     "Becoming.KindRelay.Fed.balances",
+     "Becoming.KindRelay.Fed.acting",
+     "Becoming.KindRelay.Fed.dependent",
+     "Becoming.KindRelay.Fed.unloosened",
+     "Becoming.KindRelay.Fed.taking",
+     "Becoming.KindRelay.Fed.give_support",
+     "Becoming.KindRelay.Fed.take_support",
+     "Becoming.KindRelay.Fed.map_distinct",
+     "Becoming.KindRelay.Fed.take_distinct",
+     "Becoming.KindRelay.Fed.dissipative",
+     "Becoming.KindRelay.Fed.gainless",
+     "Becoming.KindRelay.Fed.part_conserves",
+     "Becoming.KindRelay.Fed.conserving_on_part",
+     "Becoming.KindRelay.Fed.fuelBound",
+     "Becoming.KindRelay.Fed.lt_fuelBound",
+     "Becoming.KindRelay.Fed.not_listed",
+     "Becoming.KindRelay.Fed.requirements_not_dissipated",
+     "Becoming.KindRelay.Fed.not_keepsWidening_byName",
+     "Becoming.KindRelay.Fed.keeps_widening",
+     "Becoming.KindRelay.Fed.generation",
+     "Becoming.KindRelay.Fed.generation_one_up",
+     "Becoming.KindRelay.Fed.renews_without_end",
+     "Becoming.KindRelay.Fed.not_keepsWidening_supportedPassing",
+     "Becoming.KindRelay.Fed.not_keepsWidening_dormant",
+     "Becoming.KindRelay.Fed.returns"
+    ],
+    "master_laws": [
+     "closure",
+     "balance",
+     "return"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 18,
     "declarations": [
      "Becoming.Ladder.atZero",
      "Becoming.Ladder.atZero_pos",
@@ -50424,7 +51078,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 11,
+    "law": 19,
     "declarations": [
      "Becoming.ClosedCycle.mark_sum",
      "Becoming.ClosedCycle.gainless",
@@ -50457,7 +51111,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 12,
+    "law": 20,
     "declarations": [
      "Becoming.OpeningChain.keeps_widening",
      "Becoming.OpeningChain.stock_le",
@@ -50477,7 +51131,7 @@
     "dependence": "balance, represented"
    },
    {
-    "law": 13,
+    "law": 21,
     "declarations": [
      "Becoming.OpeningChain.lagging",
      "Becoming.OpeningChain.laggedRelay",
@@ -50502,7 +51156,7 @@
     "dependence": "balance, represented"
    },
    {
-    "law": 14,
+    "law": 22,
     "declarations": [
      "Becoming.Saturated.supported",
      "Becoming.Saturated.no_carry",
@@ -50521,7 +51175,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 15,
+    "law": 23,
     "declarations": [
      "Becoming.Loosening.strict",
      "Becoming.Loosening.strict_le_one_iff",
@@ -52484,6 +53138,30 @@
    {
     "law": 12,
     "declarations": [
+     "Becoming.Steps.generation_iff_begins",
+     "Becoming.Run.generation_of_heldKeepsWidening",
+     "Becoming.Run.generation_of_held_changes"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 13,
+    "declarations": [
+     "Becoming.RaisedRule.generation",
+     "Becoming.RaisedEveryOther.begins_after_even",
+     "Becoming.RaisedEveryOther.generation",
+     "Becoming.Oscillating.generation",
+     "Becoming.Oscillating.generation_without_widening"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 14,
+    "declarations": [
      "Becoming.adaptive_keeps_rule_iff",
      "Becoming.Run.adaptive_rule_changes_of_keepsWidening",
      "Becoming.Run.adaptive_rule_change_recurs_of_keepsWidening"
@@ -52493,7 +53171,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 13,
+    "law": 15,
     "declarations": [
      "Becoming.«及在渐粗列之相续»",
      "Becoming.Reaching.reach_held_of_sequence",
@@ -52506,7 +53184,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 14,
+    "law": 16,
     "declarations": [
      "Becoming.RuleTower.process",
      "Becoming.RuleTower.SameFrom",
@@ -52522,7 +53200,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 15,
+    "law": 17,
     "declarations": [
      "Becoming.RuleTower.synchronous",
      "Becoming.Synchronous.process",
@@ -52537,7 +53215,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 16,
+    "law": 18,
     "declarations": [
      "Becoming.Run.ruleTower_move_above_recurs_of_keepsWidening",
      "Becoming.RuleTower.reflected",
@@ -52548,7 +53226,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 17,
+    "law": 19,
     "declarations": [
      "Becoming.RaisedRule.process",
      "Becoming.RaisedRule.adm",
@@ -52566,7 +53244,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 18,
+    "law": 20,
     "declarations": [
      "Becoming.Oscillating.process",
      "Becoming.Oscillating.adm",
@@ -52585,7 +53263,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 19,
+    "law": 21,
     "declarations": [
      "Becoming.Oscillating.returns",
      "Becoming.Oscillating.comes_back",
@@ -52598,7 +53276,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 20,
+    "law": 22,
     "declarations": [
      "Becoming.CopyDown.process",
      "Becoming.CopyDown.adm",
@@ -52620,7 +53298,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 21,
+    "law": 23,
     "declarations": [
      "Becoming.RaisedRule.not_renews",
      "Becoming.RaisedRule.ceases",
@@ -52632,7 +53310,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 22,
+    "law": 24,
     "declarations": [
      "Becoming.RaisedEveryOther.odd",
      "Becoming.RaisedEveryOther.rule",
@@ -52650,7 +53328,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 23,
+    "law": 25,
     "declarations": [
      "Becoming.AdjacentHeld.process",
      "Becoming.AdjacentHeld.Same",

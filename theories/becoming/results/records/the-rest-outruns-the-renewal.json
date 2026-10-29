@@ -145,6 +145,13 @@
         "en": "The gap read on the rest: the member's act differs only where its reading no longer looks once the rest has ended the condition, so no selection through that reading tells its acts apart.",
         "zh": "读到其余者上的间隙：其余者终结条件之后，成员行动的差异只在其读取不再看的地方，故经由该读取的选择分不出其各行动。"
       }
+    },
+    {
+      "id": "risk-minimization-on-a-shared-renewal",
+      "detail": {
+        "en": "Risk minimization on a shared renewal: the outrun law read on a chooser of least risk, against risk minimization ensuring needs.",
+        "zh": "共享更新上之风险最小化：超出律读于风险最少之选择者，针对风险最小化保证需求之说。"
+      }
     }
   ],
   "references": [
@@ -233,6 +240,10 @@
     {
       "en": "22 October 2026: EM1's verdicts added to the correspondence and Next; study section 359.",
       "zh": "2026年10月22日：EM1 之判定加入对应与下一步；研究第 359 节。"
+    },
+    {
+      "en": "29 October 2026, board item UE16 (study section 449): related to risk-minimization-on-a-shared-renewal; no statement, next step or declaration changed.",
+      "zh": "2026年10月29日，工作板条目 UE16（研究第 449 节）：与 risk-minimization-on-a-shared-renewal 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

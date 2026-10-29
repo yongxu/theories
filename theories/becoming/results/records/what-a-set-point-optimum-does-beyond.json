@@ -470,6 +470,13 @@
         "en": "UE1's chooser reading what couples in; its note's reading 3, that a chooser with set points escapes the optimizer's drain, is tested here and holds in part.",
         "zh": "UE1 之读其所耦合者之择者；其笔记的读法三——有设定点之择者逃脱优化者之抽取——于此检验，部分成立。"
       }
+    },
+    {
+      "id": "risk-minimization-on-a-shared-renewal",
+      "detail": {
+        "en": "Risk minimization on a shared renewal: the held pair's takes are one generative model's choices of least risk at each holder's own store, against shared preferences making a group goal.",
+        "zh": "共享更新上之风险最小化：持守之对之所取即一生成模型于各持守者自身储量之最少风险之选择，针对共享偏好成群体目标之说。"
+      }
     }
   ],
   "references": [
@@ -657,7 +664,7 @@
     {
       "path": "theories/becoming/chapters/05-COLLECTIVES.md",
       "role": "statement",
-      "sha256": "94bbe144b0c0b4577d4f4edcf43a039610f94b106c40284ca7eed812b00cf375"
+      "sha256": "ba6bbed00fa6d28aae3a2e2e97faba4d5ad6c903a3197eebb3446b9027d249ce"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",
@@ -686,6 +693,10 @@
     {
       "en": "25 October 2026: added (UE1b), what an order with a set point does beyond what couples in: the drain below the set point, the draw at it, and joint excess for holders with no choice in that law; the three general laws of the exchange moved into Becoming.Optimum (board rule 9); reviewed independently and re-checked; study section 415.",
       "zh": "2026年10月25日：新增（UE1b），有设定点之序在耦合入者之外做什么：设定点之下的抽取、设定点处的抽取，以及持水平者的联合超额，该律中不入选择；交换之三条一般定律移入 Becoming.Optimum（看板规则 9）；经独立审查并复查；研究第 415 节。"
+    },
+    {
+      "en": "29 October 2026, board item UE16 (study section 449): related to risk-minimization-on-a-shared-renewal; no statement, next step or declaration changed.",
+      "zh": "2026年10月29日，工作板条目 UE16（研究第 449 节）：与 risk-minimization-on-a-shared-renewal 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

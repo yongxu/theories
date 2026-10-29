@@ -6,8 +6,8 @@ Files:
 
 - [`tree/Becoming/ConditionalWeights.lean`](tree/Becoming/ConditionalWeights.lean): the new pure-core module (imports `Becoming.Typicality`).
 - [`tree/Becoming/Typicality.lean`](tree/Becoming/Typicality.lean): the change to the landed module under board rule 9 (§2).
-- [`periphery/ConditionalWeightsReals.lean`](periphery/ConditionalWeightsReals.lean): the periphery draft, Gibbs' inequality with Mathlib (§3). It replaces `periphery/VariationalBound.lean`, whose bytes stay in history at `4c1639402`.
-- [`scratch.log`](scratch.log) and [`periphery/periphery.log`](periphery/periphery.log): the builds.
+- [`periphery/ConditionalWeightsReals.lean`](../../../history/root-foundation/development/ue2-conditional-weights/periphery/ConditionalWeightsReals.lean): the periphery draft, Gibbs' inequality with Mathlib (§3). It replaces `periphery/VariationalBound.lean`, whose bytes stay in history at `4c1639402`.
+- [`scratch.log`](scratch.log) and [`periphery/periphery.log`](../../../history/root-foundation/development/ue2-conditional-weights/periphery/periphery.log): the builds.
 - The landing scripts, modelled on UE1's landed kit and listed in order in [LANDING.md](LANDING.md) §7: [`integrate_ue2.py`](integrate_ue2.py), [`texts_ue2.py`](texts_ue2.py), [`make_records_ue2.py`](make_records_ue2.py), [`update_typicality_record_ue2.py`](update_typicality_record_ue2.py), [`register_ue2.py`](register_ue2.py), [`board_ue2.py`](board_ue2.py) and the study section [`study_ue2.txt`](study_ue2.txt). None has been run here beyond a parse check.
 
 ## 1. What is proved
@@ -111,7 +111,7 @@ Typicality's owner (the session that landed P116) is inactive and no definition 
 
 ## 3. The periphery draft
 
-[`periphery/ConditionalWeightsReals.lean`](periphery/ConditionalWeightsReals.lean) is named after the core module it instantiates, as `regime/RegimeReals.lean` is after `Becoming.RegimeMargin`. Its declarations sit in the namespace `Becoming.ConditionalWeights` and take structural names; the free-energy names stay in its docstring as the correspondence. Over Mathlib's reals, for a finite set of causes, it states:
+[`periphery/ConditionalWeightsReals.lean`](../../../history/root-foundation/development/ue2-conditional-weights/periphery/ConditionalWeightsReals.lean) is named after the core module it instantiates, as `regime/RegimeReals.lean` is after `Becoming.RegimeMargin`. Its declarations sit in the namespace `Becoming.ConditionalWeights` and take structural names; the free-energy names stay in its docstring as the correspondence. Over Mathlib's reals, for a finite set of causes, it states:
 
 - `term_le`: the termwise bound, from log x ≤ x − 1, where q is zero wherever p is. `term_eq_iff`: with p positive, equality exactly at q = p/P.
 - `neg_log_sum_le`: for q ≥ 0 with Σ q = 1, and p ≥ 0 with q zero wherever p is, −log Σ p ≤ Σ q (log q − log p) (Gibbs' inequality). A record can weigh nothing under a hypothesis, so a joint weight can be zero; this support form is the main theorem.
@@ -120,7 +120,7 @@ Typicality's owner (the session that landed P116) is inactive and no definition 
 - `neg_log_sum_eq_iff`: with p positive, equality exactly where q = p / Σ p, so minimizing over q recovers the posterior. `neg_log_sum_at_posterior`: equality there, derived from it.
 - `log_reciprocal_share_le`: with natural weights w over a positive total Z, and q zero wherever w is, −log((Σ w)/Z), the logarithm of the reciprocal of the share ⟨Σ w, Z⟩, is at most Σ q (log q − log(w/Z)).
 
-It compiles with no error or warning against the pinned Mathlib (`lake env lean` in `~/repos/生生不息`, Lean 4.30.0-rc2, Mathlib `ea11ccc0…`, pin hashes as in `lean/periphery-mathlib-pin/README.md`). Each theorem depends on `propext`, `Classical.choice` and `Quot.sound`, as the periphery allows ([log](periphery/periphery.log)). It has no checker or receipt, and it does not import the core. LANDING.md says what landing it needs, including the target theorem joining it to `share` and `posterior_single`.
+It compiles with no error or warning against the pinned Mathlib (`lake env lean` in `~/repos/生生不息`, Lean 4.30.0-rc2, Mathlib `ea11ccc0…`, pin hashes as in `lean/periphery-mathlib-pin/README.md`). Each theorem depends on `propext`, `Classical.choice` and `Quot.sound`, as the periphery allows ([log](../../../history/root-foundation/development/ue2-conditional-weights/periphery/periphery.log)). It has no checker or receipt, and it does not import the core. LANDING.md says what landing it needs, including the target theorem joining it to `share` and `posterior_single`.
 
 ## 4. Correspondences [AI reading]
 

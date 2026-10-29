@@ -289,6 +289,13 @@
         "en": "The joint excess and the gap between own and joint draw, derived for optimizers along a course.",
         "zh": "联合超出以及自身与联合汲取之间的差距，对过程中的优化者导出。"
       }
+    },
+    {
+      "id": "risk-minimization-on-a-shared-renewal",
+      "detail": {
+        "en": "Risk minimization on a shared renewal: joint excess read on foragers of one model with alike preferences, against shared preferences making a group goal.",
+        "zh": "共享更新上之风险最小化：共同超出读于一模型且偏好相同之觅食者，针对共享偏好成群体目标之说。"
+      }
     }
   ],
   "references": [
@@ -543,6 +550,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): in the correspondence \"the author's reading (an AI argument)\" now reads \"a reading (the AI's argument)\", keeping its AI label; the laws are unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对应中的“作者的读法（AI 论证）”改为“读法（AI 的论证）”，保留其 AI 标签；规律不变。"
+    },
+    {
+      "en": "29 October 2026, board item UE16 (study section 449): related to risk-minimization-on-a-shared-renewal; no statement, next step or declaration changed.",
+      "zh": "2026年10月29日，工作板条目 UE16（研究第 449 节）：与 risk-minimization-on-a-shared-renewal 相关联；无一陈述、下一步或声明改变。"
     }
   ],
   "text_versions": [

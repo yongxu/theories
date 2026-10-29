@@ -29,9 +29,9 @@
 9. The laws hold of every world in a local form: the balance across a step uses only the listings at its two ends and that step's splits and merges; the recurrence laws use only the listing, no split (or no merge and the bound) from some step on; Web.Census.balanceFrom, arisingFrom_of_ceasingFrom and ceasingFrom_of_arisingFrom are their corollaries. (`Becoming.Web.Census.balanceFrom_at`, `Becoming.Web.Census.balanceFrom_eq_at`, `Becoming.Web.Census.arisingFrom_of_ceasingFrom_from`, `Becoming.Web.Census.ceasingFrom_of_arisingFrom_from`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 10. Under a continuation from one covering list, with no census and no decision: where a list covers the active formations at step M, nothing splits from M on, and ceasing under the continuation recurs, it is not refuted that something arises from M on; with covering lists at arbitrarily late steps and no splits from some step on, arising does not stop. (`Becoming.Web.not_not_arisingFrom_covered`, `Becoming.Web.arisingFrom_not_stopping_covered`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
 11. The converse from one covering list too, with no census and no decision: where one list covers the active formations from some step on, nothing merges from that step on, and arising under the continuation recurs, ceasing under it does not stop from any step on. (`Becoming.Web.ceasingFrom_not_stopping_covered`)
-    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+    - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -127,6 +127,7 @@ identity-across-steps shows that readings following a formation (arising, unceas
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T191425.159994Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T162632.074811Z/verification.json) | — |
 
 Aliases: `Becoming.Web.Census.balanceFrom`, `Becoming.Web.Census.balanceFrom_eq`, `Becoming.Web.Census.arisingFrom_of_ceasingFrom`, `Becoming.Web.Census.ceasingFrom_of_arisingFrom`, `Becoming.Web.CeasesFrom`, `Becoming.Web.NoMerge`, `Becoming.Tandem.budding`, `Becoming.Tandem.joining`, `Becoming.gaining_of_losing`, `Becoming.losing_of_gaining`
 

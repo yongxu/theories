@@ -117,7 +117,7 @@ The three re-points change nothing a record says, so they are bookkeeping. A fou
 
 ## 4. The periphery module
 
-[`periphery/ConditionalWeightsReals.lean`](periphery/ConditionalWeightsReals.lean) compiles against the pinned Mathlib with the three standard axioms ([log](periphery/periphery.log)). A compile by hand is not a receipt, so the module needs a checker to land: every periphery module in the repository has one.
+[`periphery/ConditionalWeightsReals.lean`](../../../history/root-foundation/development/ue2-conditional-weights/periphery/ConditionalWeightsReals.lean) compiles against the pinned Mathlib with the three standard axioms ([log](../../../history/root-foundation/development/ue2-conditional-weights/periphery/periphery.log)). A compile by hand is not a receipt, so the module needs a checker to land: every periphery module in the repository has one.
 
 - **Where.** A folder `lean/conditional-weights-reals/` beside `regime/` and `representation/`, holding `ConditionalWeightsReals.lean`, `check_conditional_weights_reals.py`, a receipt `conditional-weights-reals-verification.json` and run folders `conditional-weights-reals-checks/<utc>/`.
 - **Template.** `regime/check_regime_reals.py`, since RegimeReals imports `Becoming.RegimeMargin` as this module would import `Becoming.ConditionalWeights` once it states the join:
