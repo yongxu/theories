@@ -102,7 +102,8 @@ def main():
             sys.argv = argv
         measured = json.loads(report.read_text())
     deps = {n: set(x['t']) | set(x['v']) for n, x in C.items()}
-    anchors = {k: [a for a in ec.LAWS[k] if a in C] for k in NAMES}
+    laws = getattr(mg, 'ANCHORS', ec.LAWS)  # the measure's joined map of anchors where it exports one, else EC's
+    anchors = {k: [a for a in laws[k] if a in C] for k in NAMES}
     is_anchor = {a for v in anchors.values() for a in v}
     memo = {}
 
