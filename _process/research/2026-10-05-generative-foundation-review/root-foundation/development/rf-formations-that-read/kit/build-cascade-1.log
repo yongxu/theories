@@ -1,0 +1,48 @@
+Becoming/Cascade.lean:98:6: error: Application type mismatch: The argument
+  congrArg (fun a => [a]) (law_alike_of_cascade cascade alike before)
+has type
+  Eq.{w + 1} [T.law n (T.coupling n w) (T.acts w n)] [T.law n (T.coupling n w') (T.acts w' n)]
+but is expected to have type
+  Eq.{1} (n + 1) (n + 1)
+in the application
+  congr ?m.45 (congrArg (fun a => [a]) (law_alike_of_cascade cascade alike before))
+Becoming/Cascade.lean:97:10: error: Application type mismatch: The argument
+  congrArg HAppend.hAppend before
+has type
+  HAppend.hAppend (T.acts w n) = HAppend.hAppend (T.acts w' n)
+but is expected to have type
+  T.acts w = T.acts w'
+in the application
+  congr (congrArg HAppend.hAppend before)
+Becoming/Cascade.lean:113:18: error: invalid `▸` notation, expected result type of cast is 
+  (fun w => select (T.acts w N)) x✝
+however, the equality 
+  same
+of type 
+  T.acts x✝¹ N = T.acts x✝ N
+does not contain the expected result type on either the left or the right hand side
+Becoming/Cascade.lean:113:45: error: invalid `▸` notation, expected result type of cast is 
+  (fun w => select (T.acts w N)) x✝¹
+however, the equality 
+  same
+of type 
+  T.acts x✝¹ N = T.acts x✝ N
+does not contain the expected result type on either the left or the right hand side
+Becoming/Cascade.lean:143:13: warning: unused variable `o`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/Cascade.lean:143:15: warning: unused variable `o'`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/tree",
+  "modules": 37,
+  "ran": [
+    "Becoming.Cascade"
+  ],
+  "reused": 36,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.Cascade"
+}

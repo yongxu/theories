@@ -1,0 +1,142 @@
+python3 -B tools/research/research.py links
+{
+  "files_checked": 1768,
+  "links_checked": 85001,
+  "broken": 17,
+  "broken_by_kind": {
+    "missing-anchor": 5,
+    "missing-path": 12
+  },
+  "broken_by_role": {
+    "live": 17
+  },
+  "by_directory": {
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence": 11,
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/cold-read": 6
+  },
+  "list": [
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md",
+      "line": 41,
+      "target": "#r-generalization-through-lumping",
+      "kind": "missing-anchor",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md",
+      "line": 260,
+      "target": "05-COLLECTIVES.md#r-readers-reading-readers",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md",
+      "line": 339,
+      "target": "#r-generalization-through-lumping",
+      "kind": "missing-anchor",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md",
+      "line": 339,
+      "target": "#r-generalization-through-lumping",
+      "kind": "missing-anchor",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md",
+      "line": 360,
+      "target": "07-SIGNIFICANCE.md#alignment-without-premise",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md",
+      "line": 381,
+      "target": "03-KNOWING.md#r-what-readings-fix-of-the-unread",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md",
+      "line": 395,
+      "target": "05-COLLECTIVES.md#r-readers-reading-readers",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md",
+      "line": 409,
+      "target": "../chapters/03-KNOWING.md#what-the-acts-show",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md",
+      "line": 409,
+      "target": "../chapters/05-COLLECTIVES.md#r-readers-reading-readers",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md",
+      "line": 444,
+      "target": "chapters/03-KNOWING.md#what-the-acts-show",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md",
+      "line": 486,
+      "target": "#r-when-to-inquire-and-when-to-respond",
+      "kind": "missing-anchor",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/cold-read/s11.md",
+      "line": 4,
+      "target": "07-SIGNIFICANCE.md#alignment-without-premise",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/cold-read/s11.md",
+      "line": 7,
+      "target": "../results/records/what-choices-show-of-an-order.md",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/cold-read/s11.md",
+      "line": 9,
+      "target": "07-SIGNIFICANCE.md#r-what-training-installs",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/cold-read/s11.md",
+      "line": 12,
+      "target": "#r-generalization-through-lumping",
+      "kind": "missing-anchor",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/cold-read/s11.md",
+      "line": 12,
+      "target": "../results/records/what-readings-fix-of-the-unread.md",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/cold-read/s5.md",
+      "line": 2,
+      "target": "../results/records/readers-reading-readers.md",
+      "kind": "missing-path",
+      "role": "live"
+    }
+  ],
+  "not_in_repository": [],
+  "scope": "Relative links and #anchors in live and generated Markdown (paths.py roles); history, evidence, sources and scratch are frozen and not checked. Paths must match tracked or untracked files exactly. Targets inside a submodule or excluded by .gitignore are listed under not_in_repository, not counted."
+}
+make: *** [research-links] Error 1
+links exit 2

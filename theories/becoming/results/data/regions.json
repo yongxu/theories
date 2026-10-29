@@ -1471,6 +1471,11 @@
    "base": "general",
    "note": "ClosedCapture MA2: the rule read by readers drawn from the selected; a loss read in time or late"
   },
+  "readers-reading-readers": {
+   "region": "collective",
+   "base": "general",
+   "note": "Cascade RF4: readers reading readers; from a cascade on, the pool's acts carry no more than the couplings of the members before it; copying"
+  },
   "reading-anothers-couplings-is-pooling": {
    "region": "collective",
    "base": "old-base",
@@ -2231,6 +2236,11 @@
    "base": "frame",
    "note": "CausalGrowth UE13: sequential growth holding the past, what can be born next keeping widening; the stems reverse the inclusion of precedence, labelled or up to relabelling, so widening adds no continuation; finding the lost pair excluded middle; read on what continues the order reverses, no strict order holds both; no configuration renews without end; a finer class on links; kinds of birth not so ordered"
   },
+  "what-choices-show-of-an-order": {
+   "region": "knowing",
+   "base": "grammar",
+   "note": "ShownOrder RF1: what choices show of the order they come from is the reach of the shown relation; free beyond it; one search with two orders"
+  },
   "what-dependence-alone-carries-of-a-level": {
    "region": "root",
    "base": "old-base",
@@ -2265,6 +2275,11 @@
    "region": "collective",
    "base": "old-base",
    "note": "RelativePosition"
+  },
+  "what-readings-fix-of-the-unread": {
+   "region": "knowing",
+   "base": "general",
+   "note": "Unread RF2: what readings fix of the unread; a selected twin where the formation can tell; acts, states and couplings apart"
   },
   "what-self-concern-alone-ranks": {
    "region": "significance",
@@ -2502,6 +2517,11 @@
    "region": "root",
    "base": "frame",
    "note": "one carrier, several laws; symmetry does not fix law"
+  },
+  "Becoming.Cascade": {
+   "region": "collective",
+   "base": "general",
+   "note": "RF4 readers reading readers (05 §8)"
   },
   "Becoming.CausalGrowth": {
    "region": "significance",
@@ -3868,6 +3888,11 @@
    "base": "general",
    "note": "codes formed between formations (约定俗成), SC"
   },
+  "Becoming.ShownOrder": {
+   "region": "knowing",
+   "base": "grammar",
+   "note": "RF1 what choices show of the order they come from (03 §11)"
+  },
   "Becoming.Significance": {
    "region": "significance",
    "base": "old-base",
@@ -4012,6 +4037,11 @@
    "region": "life",
    "base": "old-base",
    "note": "support in fixed unit, coextinction"
+  },
+  "Becoming.Unread": {
+   "region": "knowing",
+   "base": "general",
+   "note": "RF2 what readings fix of the unread (03 §11)"
   },
   "Becoming.Unrolling": {
    "region": "knowing",

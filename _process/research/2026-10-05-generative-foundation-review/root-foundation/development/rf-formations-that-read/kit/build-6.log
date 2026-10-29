@@ -1,0 +1,45 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/tree",
+  "modules": 2,
+  "ran": [
+    "Becoming.ShownOrder",
+    "BecomingShownOrderAxiomAudit"
+  ],
+  "reused": 1,
+  "unclean": [],
+  "audits": {
+    "Becoming.ShownOrder": {
+      "theorems": 27,
+      "declarations": 39,
+      "with_axioms": {
+        "Becoming.ChoiceOccasions.Untried.aboveFirst": [
+          "propext"
+        ],
+        "Becoming.ChoiceOccasions.Untried.aboveThird": [
+          "propext"
+        ],
+        "Becoming.ChoiceOccasions.Untried.same": [
+          "propext"
+        ],
+        "Becoming.ChoiceOccasions.Untried.search": [
+          "propext"
+        ],
+        "Becoming.ChoiceOccasions.Untried.aboveFirst_strict": [
+          "propext"
+        ],
+        "Becoming.ChoiceOccasions.Untried.aboveThird_strict": [
+          "propext"
+        ],
+        "Becoming.ChoiceOccasions.Untried.both_accord": [
+          "propext"
+        ],
+        "Becoming.ChoiceOccasions.Untried.same_search_met": [
+          "propext"
+        ],
+        "Becoming.ChoiceOccasions.Untried.same_search_after": [
+          "propext"
+        ]
+      }
+    }
+  }
+}

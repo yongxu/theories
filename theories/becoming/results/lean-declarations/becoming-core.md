@@ -65,11 +65,11 @@ Contains 18 textual `#print axioms` commands; their results belong to the origin
 <details>
 <summary>Becoming.lean — 0 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean`
 
-Imports: `Becoming.Grammar`, `Becoming.GrammarReadings`, `Becoming.GrammarMap`, `Becoming.GrammarTesting`, `Becoming.GrammarCandidates`, `Becoming.MapInstances`, `Becoming.GrammarLaws`, `Becoming.GrammarTransport`, `Becoming.KeptOnward`, `Becoming.World`, `Becoming.Witnesses`, `Becoming.Frame`, `Becoming.Laws`, `Becoming.Labelled`, `Becoming.Inquiry`, `Becoming.Derivation`, `Becoming.ClassifiedBeliefProcesses`, `Becoming.MoveOutcomeProcesses`, `Becoming.Recurrence`, `Becoming.Diagonal`, `Becoming.Context`, `Becoming.ContextArrivalTraces`, `Becoming.Quantum`, `Becoming.Renewal`, `Becoming.Dependence`, `Becoming.Restoration`, `Becoming.Horizon`, `Becoming.Joint`, `Becoming.Experiment`, `Becoming.Mechanism`, `Becoming.Unfolding`, `Becoming.LawAlongRun`, `Becoming.Irreversibility`, `Becoming.Histories`, `Becoming.Branching`, `Becoming.Listing`, `Becoming.Stuttering`, `Becoming.Reordering`, `Becoming.IdleRemoval`, `Becoming.OrderNormal`, `Becoming.OneStep`, `Becoming.Weighted`, `Becoming.Transmission`, `Becoming.Succession`, `Becoming.Attraction`, `Becoming.Substitution`, `Becoming.Arising`, `Becoming.Flow`, `Becoming.Stock`, `Becoming.Change`, `Becoming.Population`, `Becoming.Identity`, `Becoming.Persistence`, `Becoming.ContinuedClasses`, `Becoming.WorldRepresentation`, `Becoming.Wholes`, `Becoming.Dissipation`, `Becoming.Locality`, `Becoming.Seeking`, `Becoming.Roles`, `Becoming.LabelledRoles`, `Becoming.Reserve`, `Becoming.Evolution`, `Becoming.Capture`, `Becoming.SelectionTerm`, `Becoming.Reproduction`, `Becoming.SelectionLevels`, `Becoming.GroupEnding`, `Becoming.Founding`, `Becoming.Drift`, `Becoming.Space`, `Becoming.Premises`, `Becoming.Sampling`, `Becoming.Tower`, `Becoming.Openness`, `Becoming.Decidedness`, `Becoming.Refinement`, `Becoming.CensusTable`, `Becoming.Counting`, `Becoming.Standing`, `Becoming.Resolution`, `Becoming.Amounts`, `Becoming.LeastLoss`, `Becoming.WholeAmounts`, `Becoming.InAmounts`, `Becoming.Entropy`, `Becoming.SelectionPace`, `Becoming.Units`, `Becoming.Imbalance`, `Becoming.Continuity`, `Becoming.Continuation`, `Becoming.RenewalFlow`, `Becoming.Admission`, `Becoming.Exclusion`, `Becoming.Exhaustion`, `Becoming.Regions`, `Becoming.EventualWidening`, `Becoming.EventualWideningInstances`, `Becoming.ComparingCourses`, `Becoming.ReachableRanges`, `Becoming.HeldPossible`, `Becoming.Tasks`, `Becoming.CausalGrowth`, `Becoming.Presence`, `Becoming.ReorderingGrowth`, `Becoming.Growth`, `Becoming.Retaining`, `Becoming.OwnWidening`, `Becoming.Clearing`, `Becoming.Extension`, `Becoming.Metaethics`, `Becoming.Lifting`, `Becoming.Ranking`, `Becoming.ActiveReading`, `Becoming.LossMatching`, `Becoming.StrictTransport`, `Becoming.MatchedCourses`, `Becoming.Correspondence`, `Becoming.Descent`, `Becoming.Standpoints`, `Becoming.Significance`, `Becoming.ValuationFrames`, `Becoming.RelativePosition`, `Becoming.Interdependence`, `Becoming.Feeding`, `Becoming.Feedback`, `Becoming.BoundedSignificance`, `Becoming.Cuts`, `Becoming.EdgeClosure`, `Becoming.SeedReach`, `Becoming.ScopedReach`, `Becoming.Boundaries`, `Becoming.Weightings`, `Becoming.Relevance`, `Becoming.Testing`, `Becoming.Runaway`, `Becoming.Response`, `Becoming.TimedResponse`, `Becoming.Latency`, `Becoming.Centers`, `Becoming.Counterfactual`, `Becoming.Regrouping`, `Becoming.Selection`, `Becoming.Learning`, `Becoming.PropositionIdentity`, `Becoming.Hexagrams`, `Becoming.HexagramPlaces`, `Becoming.HexagramLaws`, `Becoming.HexagramSites`, `Becoming.HexagramSequences`, `Becoming.Withholding`, `Becoming.LoopReturn`, `Becoming.Pace`, `Becoming.RuleCapture`, `Becoming.ClosedCapture`, `Becoming.RuleShaping`, `Becoming.ChoiceCountCapture`, `Becoming.DrawnShaping`, `Becoming.ReadInTime`, `Becoming.PatternPassing`, `Becoming.JointKeeping`, `Becoming.Undecided`, `Becoming.Junctures`, `Becoming.Commuting`, `Becoming.HexagramCommuting`, `Becoming.Tolerance`, `Becoming.Revision`, `Becoming.Contacts`, `Becoming.RegroupingSelection`, `Becoming.ReferencePlan`, `Becoming.ContinuingRevision`, `Becoming.Description`, `Becoming.Identification`, `Becoming.Learnable`, `Becoming.Assurance`, `Becoming.AssurancePlans`, `Becoming.Integers`, `Becoming.Segmentation`, `Becoming.Readout`, `Becoming.Dephasing`, `Becoming.ProjectedLaws`, `Becoming.JointPhase`, `Becoming.SummaryFutures`, `Becoming.Gated`, `Becoming.Viability`, `Becoming.Keeping`, `Becoming.Prelude`, `Becoming.Ideals`, `Becoming.ContingentPlans`, `Becoming.Actuation`, `Becoming.TreeSearch`, `Becoming.Dispatch`, `Becoming.FaultEnvelopes`, `Becoming.Transactions`, `Becoming.Reconfiguration`, `Becoming.PooledEnvelopes`, `Becoming.WitnessRefinement`, `Becoming.WitnessRefinementRuns`, `Becoming.ChanceFloors`, `Becoming.IntegerOrder`, `Becoming.Acceptance`, `Becoming.GuardHorizon`, `Becoming.Countdown`, `Becoming.Lasting`, `Becoming.Copying`, `Becoming.Retrodiction`, `Becoming.CrossSituational`, `Becoming.Likeness`, `Becoming.Distinguishing`, `Becoming.JointPlans`, `Becoming.Composition`, `Becoming.Joining`, `Becoming.Granularity`, `Becoming.HistoryLanguages`, `Becoming.HistoryIdeals`, `Becoming.HistoryIdealsTraces`, `Becoming.Verification`, `Becoming.Coverage`, `Becoming.Presentations`, `Becoming.Carriers`, `Becoming.BranchingCorrespondence`, `Becoming.JointCorrespondence`, `Becoming.ListFootprints`, `Becoming.Fragments`, `Becoming.LocalUnits`, `Becoming.JoiningContexts`, `Becoming.JoiningCodes`, `Becoming.JoiningRoles`, `Becoming.Postponement`, `Becoming.Novelty`, `Becoming.Reading`, `Becoming.PlaceTransitionNets`, `Becoming.SharedCodes`, `Becoming.ExchangePremises`, `Becoming.OverExchange`, `Becoming.Readings`, `Becoming.MoveFormation`, `Becoming.Sensitivity`, `Becoming.Tail`, `Becoming.Courses`, `Becoming.Parting`, `Becoming.Onward`, `Becoming.Typicality`, `Becoming.ConditionalWeights`, `Becoming.Situations`, `Becoming.Propagation`, `Becoming.Regulation`, `Becoming.ReadingSchedule`, `Becoming.RegimeMargin`, `Becoming.ListingRefutations`, `Becoming.Loops`, `Becoming.Remainder`, `Becoming.Routes`, `Becoming.Closing`, `Becoming.Thresholds`, `Becoming.Observation`, `Becoming.Frequency`, `Becoming.MutualDependence`, `Becoming.Gain`, `Becoming.KeepingWidening`, `Becoming.Gluing`, `Becoming.Runs`, `Becoming.CourseWorlds`, `Becoming.LearnableRuns`, `Becoming.PartialReadout`, `Becoming.CodeAcquisition`, `Becoming.RouteFormation`, `Becoming.ResponseLearning`, `Becoming.LearnedGrouping`, `Becoming.ParityReadings`, `Becoming.FinerTraces`, `Becoming.HistorySums`, `Becoming.FormedLoops`, `Becoming.AttractionRuns`, `Becoming.ContactCourses`, `Becoming.ContextualRuns`, `Becoming.ContinuingRuns`, `Becoming.CopyCourses`, `Becoming.CounterfactualRuns`, `Becoming.CouplingTraces`, `Becoming.CourseRoles`, `Becoming.HorizonWebs`, `Becoming.IdentificationRuns`, `Becoming.LastingRuns`, `Becoming.LearningRuns`, `Becoming.ListedWebs`, `Becoming.ReferencePlanTraces`, `Becoming.RouteTraces`, `Becoming.SeekingRuns`, `Becoming.SelectionRuns`, `Becoming.SensitivityWebs`, `Becoming.SituationTraces`, `Becoming.StrengthFlows`, `Becoming.TypicalRuns`, `Becoming.WeightedTraces`, `Becoming.LevelCoupling`, `Becoming.Interleavings`, `Becoming.CensusCounts`, `Becoming.CensusBinding`, `Becoming.Unrolling`, `Becoming.Labels`, `Becoming.Enough`, `Becoming.Settling`, `Becoming.LastChange`, `Becoming.LimitVerification`, `Becoming.SelectionGap`, `Becoming.SelectionReach`, `Becoming.DrawnBeyond`, `Becoming.JointDraw`, `Becoming.Optimum`, `Becoming.SetPointOptimum`, `Becoming.SelectionPool`, `Becoming.PoolResponse`, `Becoming.Training`, `Becoming.PoolCourse`, `Becoming.Rejoining`, `Becoming.Lexical`, `Becoming.Frontier`, `Becoming.FrontierFrames`, `Becoming.FrontierWorlds`, `Becoming.Direction`, `Becoming.ScoreRepresentation`, `Becoming.Alternatives`, `Becoming.Bundles`, `Becoming.ActivationCapacity`, `Becoming.Narrowing`, `Becoming.NarrowingRuns`, `Becoming.SecuredContent`, `Becoming.ProfileReach`, `Becoming.RenewalBound`, `Becoming.Handoff`, `Becoming.RuleHandoff`, `Becoming.GrammarCourse`, `Becoming.GrammarRegularity`, `Becoming.GrammarScope`, `Becoming.GrammarCases`, `Becoming.GrammarPath`
+Imports: `Becoming.Grammar`, `Becoming.GrammarReadings`, `Becoming.GrammarMap`, `Becoming.GrammarTesting`, `Becoming.GrammarCandidates`, `Becoming.MapInstances`, `Becoming.GrammarLaws`, `Becoming.GrammarTransport`, `Becoming.ShownOrder`, `Becoming.KeptOnward`, `Becoming.World`, `Becoming.Witnesses`, `Becoming.Frame`, `Becoming.Laws`, `Becoming.Labelled`, `Becoming.Inquiry`, `Becoming.Derivation`, `Becoming.ClassifiedBeliefProcesses`, `Becoming.MoveOutcomeProcesses`, `Becoming.Recurrence`, `Becoming.Diagonal`, `Becoming.Context`, `Becoming.ContextArrivalTraces`, `Becoming.Quantum`, `Becoming.Renewal`, `Becoming.Dependence`, `Becoming.Restoration`, `Becoming.Horizon`, `Becoming.Joint`, `Becoming.Experiment`, `Becoming.Mechanism`, `Becoming.Unfolding`, `Becoming.LawAlongRun`, `Becoming.Irreversibility`, `Becoming.Histories`, `Becoming.Branching`, `Becoming.Listing`, `Becoming.Stuttering`, `Becoming.Reordering`, `Becoming.IdleRemoval`, `Becoming.OrderNormal`, `Becoming.OneStep`, `Becoming.Weighted`, `Becoming.Transmission`, `Becoming.Succession`, `Becoming.Attraction`, `Becoming.Substitution`, `Becoming.Arising`, `Becoming.Flow`, `Becoming.Stock`, `Becoming.Change`, `Becoming.Population`, `Becoming.Identity`, `Becoming.Persistence`, `Becoming.ContinuedClasses`, `Becoming.WorldRepresentation`, `Becoming.Wholes`, `Becoming.Dissipation`, `Becoming.Locality`, `Becoming.Seeking`, `Becoming.Roles`, `Becoming.LabelledRoles`, `Becoming.Reserve`, `Becoming.Evolution`, `Becoming.Capture`, `Becoming.SelectionTerm`, `Becoming.Reproduction`, `Becoming.SelectionLevels`, `Becoming.GroupEnding`, `Becoming.Founding`, `Becoming.Drift`, `Becoming.Space`, `Becoming.Premises`, `Becoming.Sampling`, `Becoming.Tower`, `Becoming.Openness`, `Becoming.Decidedness`, `Becoming.Refinement`, `Becoming.CensusTable`, `Becoming.Counting`, `Becoming.Standing`, `Becoming.Resolution`, `Becoming.Amounts`, `Becoming.LeastLoss`, `Becoming.WholeAmounts`, `Becoming.InAmounts`, `Becoming.Entropy`, `Becoming.SelectionPace`, `Becoming.Units`, `Becoming.Imbalance`, `Becoming.Continuity`, `Becoming.Continuation`, `Becoming.RenewalFlow`, `Becoming.Admission`, `Becoming.Exclusion`, `Becoming.Exhaustion`, `Becoming.Regions`, `Becoming.EventualWidening`, `Becoming.EventualWideningInstances`, `Becoming.ComparingCourses`, `Becoming.ReachableRanges`, `Becoming.HeldPossible`, `Becoming.Tasks`, `Becoming.CausalGrowth`, `Becoming.Presence`, `Becoming.ReorderingGrowth`, `Becoming.Growth`, `Becoming.Retaining`, `Becoming.OwnWidening`, `Becoming.Clearing`, `Becoming.Extension`, `Becoming.Metaethics`, `Becoming.Lifting`, `Becoming.Ranking`, `Becoming.ActiveReading`, `Becoming.LossMatching`, `Becoming.StrictTransport`, `Becoming.MatchedCourses`, `Becoming.Correspondence`, `Becoming.Descent`, `Becoming.Standpoints`, `Becoming.Significance`, `Becoming.ValuationFrames`, `Becoming.RelativePosition`, `Becoming.Interdependence`, `Becoming.Feeding`, `Becoming.Feedback`, `Becoming.BoundedSignificance`, `Becoming.Cuts`, `Becoming.EdgeClosure`, `Becoming.SeedReach`, `Becoming.ScopedReach`, `Becoming.Boundaries`, `Becoming.Weightings`, `Becoming.Relevance`, `Becoming.Testing`, `Becoming.Runaway`, `Becoming.Response`, `Becoming.TimedResponse`, `Becoming.Latency`, `Becoming.Centers`, `Becoming.Counterfactual`, `Becoming.Regrouping`, `Becoming.Selection`, `Becoming.Learning`, `Becoming.Unread`, `Becoming.Cascade`, `Becoming.PropositionIdentity`, `Becoming.Hexagrams`, `Becoming.HexagramPlaces`, `Becoming.HexagramLaws`, `Becoming.HexagramSites`, `Becoming.HexagramSequences`, `Becoming.Withholding`, `Becoming.LoopReturn`, `Becoming.Pace`, `Becoming.RuleCapture`, `Becoming.ClosedCapture`, `Becoming.RuleShaping`, `Becoming.ChoiceCountCapture`, `Becoming.DrawnShaping`, `Becoming.ReadInTime`, `Becoming.PatternPassing`, `Becoming.JointKeeping`, `Becoming.Undecided`, `Becoming.Junctures`, `Becoming.Commuting`, `Becoming.HexagramCommuting`, `Becoming.Tolerance`, `Becoming.Revision`, `Becoming.Contacts`, `Becoming.RegroupingSelection`, `Becoming.ReferencePlan`, `Becoming.ContinuingRevision`, `Becoming.Description`, `Becoming.Identification`, `Becoming.Learnable`, `Becoming.Assurance`, `Becoming.AssurancePlans`, `Becoming.Integers`, `Becoming.Segmentation`, `Becoming.Readout`, `Becoming.Dephasing`, `Becoming.ProjectedLaws`, `Becoming.JointPhase`, `Becoming.SummaryFutures`, `Becoming.Gated`, `Becoming.Viability`, `Becoming.Keeping`, `Becoming.Prelude`, `Becoming.Ideals`, `Becoming.ContingentPlans`, `Becoming.Actuation`, `Becoming.TreeSearch`, `Becoming.Dispatch`, `Becoming.FaultEnvelopes`, `Becoming.Transactions`, `Becoming.Reconfiguration`, `Becoming.PooledEnvelopes`, `Becoming.WitnessRefinement`, `Becoming.WitnessRefinementRuns`, `Becoming.ChanceFloors`, `Becoming.IntegerOrder`, `Becoming.Acceptance`, `Becoming.GuardHorizon`, `Becoming.Countdown`, `Becoming.Lasting`, `Becoming.Copying`, `Becoming.Retrodiction`, `Becoming.CrossSituational`, `Becoming.Likeness`, `Becoming.Distinguishing`, `Becoming.JointPlans`, `Becoming.Composition`, `Becoming.Joining`, `Becoming.Granularity`, `Becoming.HistoryLanguages`, `Becoming.HistoryIdeals`, `Becoming.HistoryIdealsTraces`, `Becoming.Verification`, `Becoming.Coverage`, `Becoming.Presentations`, `Becoming.Carriers`, `Becoming.BranchingCorrespondence`, `Becoming.JointCorrespondence`, `Becoming.ListFootprints`, `Becoming.Fragments`, `Becoming.LocalUnits`, `Becoming.JoiningContexts`, `Becoming.JoiningCodes`, `Becoming.JoiningRoles`, `Becoming.Postponement`, `Becoming.Novelty`, `Becoming.Reading`, `Becoming.PlaceTransitionNets`, `Becoming.SharedCodes`, `Becoming.ExchangePremises`, `Becoming.OverExchange`, `Becoming.Readings`, `Becoming.MoveFormation`, `Becoming.Sensitivity`, `Becoming.Tail`, `Becoming.Courses`, `Becoming.Parting`, `Becoming.Onward`, `Becoming.Typicality`, `Becoming.ConditionalWeights`, `Becoming.Situations`, `Becoming.Propagation`, `Becoming.Regulation`, `Becoming.ReadingSchedule`, `Becoming.RegimeMargin`, `Becoming.ListingRefutations`, `Becoming.Loops`, `Becoming.Remainder`, `Becoming.Routes`, `Becoming.Closing`, `Becoming.Thresholds`, `Becoming.Observation`, `Becoming.Frequency`, `Becoming.MutualDependence`, `Becoming.Gain`, `Becoming.KeepingWidening`, `Becoming.Gluing`, `Becoming.Runs`, `Becoming.CourseWorlds`, `Becoming.LearnableRuns`, `Becoming.PartialReadout`, `Becoming.CodeAcquisition`, `Becoming.RouteFormation`, `Becoming.ResponseLearning`, `Becoming.LearnedGrouping`, `Becoming.ParityReadings`, `Becoming.FinerTraces`, `Becoming.HistorySums`, `Becoming.FormedLoops`, `Becoming.AttractionRuns`, `Becoming.ContactCourses`, `Becoming.ContextualRuns`, `Becoming.ContinuingRuns`, `Becoming.CopyCourses`, `Becoming.CounterfactualRuns`, `Becoming.CouplingTraces`, `Becoming.CourseRoles`, `Becoming.HorizonWebs`, `Becoming.IdentificationRuns`, `Becoming.LastingRuns`, `Becoming.LearningRuns`, `Becoming.ListedWebs`, `Becoming.ReferencePlanTraces`, `Becoming.RouteTraces`, `Becoming.SeekingRuns`, `Becoming.SelectionRuns`, `Becoming.SensitivityWebs`, `Becoming.SituationTraces`, `Becoming.StrengthFlows`, `Becoming.TypicalRuns`, `Becoming.WeightedTraces`, `Becoming.LevelCoupling`, `Becoming.Interleavings`, `Becoming.CensusCounts`, `Becoming.CensusBinding`, `Becoming.Unrolling`, `Becoming.Labels`, `Becoming.Enough`, `Becoming.Settling`, `Becoming.LastChange`, `Becoming.LimitVerification`, `Becoming.SelectionGap`, `Becoming.SelectionReach`, `Becoming.DrawnBeyond`, `Becoming.JointDraw`, `Becoming.Optimum`, `Becoming.SetPointOptimum`, `Becoming.SelectionPool`, `Becoming.PoolResponse`, `Becoming.Training`, `Becoming.PoolCourse`, `Becoming.Rejoining`, `Becoming.Lexical`, `Becoming.Frontier`, `Becoming.FrontierFrames`, `Becoming.FrontierWorlds`, `Becoming.Direction`, `Becoming.ScoreRepresentation`, `Becoming.Alternatives`, `Becoming.Bundles`, `Becoming.ActivationCapacity`, `Becoming.Narrowing`, `Becoming.NarrowingRuns`, `Becoming.SecuredContent`, `Becoming.ProfileReach`, `Becoming.RenewalBound`, `Becoming.Handoff`, `Becoming.RuleHandoff`, `Becoming.GrammarCourse`, `Becoming.GrammarRegularity`, `Becoming.GrammarScope`, `Becoming.GrammarCases`, `Becoming.GrammarPath`
 
 No explicit theorem/lemma scanned; this may be an import, audit or definition module.
 
@@ -1297,6 +1297,38 @@ Definitions and types:
 
 </details>
 
+<a id="module-8a990367ee47"></a>
+
+<details>
+<summary>Cascade.lean — 13 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean`
+
+Imports: `Becoming.Learning`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.Turns.law_alike_of_cascade](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean#L89) | 89 |
+| [Becoming.Turns.acts_alike_of_cascade](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean#L101) | 101 |
+| [Becoming.Turns.act_alike_of_cascade](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean#L112) | 112 |
+| [Becoming.Turns.cascade_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean#L119) | 119 |
+| [Becoming.Turns.separates_at](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean#L129) | 129 |
+| [Becoming.Turns.Copying.readsOnlyActs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean#L153) | 153 |
+| [Becoming.Turns.Copying.reaches_first_only](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean#L162) | 162 |
+
+Definitions and types:
+
+- `structure` [Becoming.Turns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean#L58) (L58)
+- `def` [Becoming.Turns.acts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean#L69) (L69)
+- `def` [Becoming.Turns.act](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean#L74) (L74)
+- `def` [Becoming.Turns.ReadsOnlyActsFrom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean#L79) (L79)
+- `def` [Becoming.Turns.AlikeBefore](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean#L83) (L83)
+- `def` [Becoming.Turns.Copying.turns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean#L145) (L145)
+
+</details>
+
 <a id="module-29529544b0e3"></a>
 
 <details>
@@ -1993,7 +2025,7 @@ Definitions and types:
 <details>
 <summary>ClosedCapture.lean — 85 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean`
 
@@ -2646,7 +2678,7 @@ Definitions and types:
 <details>
 <summary>ConditionalWeights.lean — 110 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/SECOND-OPINION-LITERATURE.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean`
 
@@ -5152,7 +5184,7 @@ Definitions and types:
 <details>
 <summary>Diagonal.lean — 46 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Diagonal.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Diagonal.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Diagonal.lean`
 
@@ -7858,7 +7890,7 @@ Definitions and types:
 <details>
 <summary>Grammar.lean — 118 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean`
 
@@ -8189,7 +8221,7 @@ Definitions and types:
 <details>
 <summary>GrammarCourse.lean — 36 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCourse.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCourse.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCourse.lean`
 
@@ -8244,7 +8276,7 @@ Definitions and types:
 <details>
 <summary>GrammarLaws.lean — 148 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean`
 
@@ -9209,7 +9241,7 @@ Definitions and types:
 <details>
 <summary>HeldPossible.lean — 110 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean`
 
@@ -12695,7 +12727,7 @@ Definitions and types:
 <details>
 <summary>Learning.lean — 112 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean`
 
@@ -14674,7 +14706,7 @@ Definitions and types:
 <details>
 <summary>Narrowing.lean — 79 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Narrowing.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-REFERENCE.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Narrowing.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-REFERENCE.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/SECOND-OPINION-LITERATURE.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Narrowing.lean`
 
@@ -17510,7 +17542,7 @@ Definitions and types:
 <details>
 <summary>Presence.lean — 190 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean`
 
@@ -18242,7 +18274,7 @@ Definitions and types:
 <details>
 <summary>ReachableRanges.lean — 196 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean`
 
@@ -18457,7 +18489,7 @@ Definitions and types:
 <details>
 <summary>ReadInTime.lean — 39 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/SECOND-OPINION-LITERATURE.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean`
 
@@ -18717,7 +18749,7 @@ Definitions and types:
 <details>
 <summary>Readout.lean — 35 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean`
 
@@ -21429,7 +21461,7 @@ Definitions and types:
 <details>
 <summary>Revision.lean — 46 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean`
 
@@ -22103,7 +22135,7 @@ Definitions and types:
 <details>
 <summary>RuleShaping.lean — 58 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/REVIEW-UE1.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean`
 
@@ -22630,7 +22662,7 @@ Definitions and types:
 <details>
 <summary>Selection.lean — 95 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean) · [Theory](../../history/ARGUMENTS-M-Z-2026-10-08.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean`
 
@@ -23141,7 +23173,7 @@ Definitions and types:
 <details>
 <summary>SelectionPool.lean — 55 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean) · [Theory](../../chapters/05-COLLECTIVES.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean) · [Theory](../../chapters/05-COLLECTIVES.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean`
 
@@ -23856,6 +23888,65 @@ Definitions and types:
 - `def` [Becoming.SharedCodes.Gloss.offersOne](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean#L1621) (L1621)
 - `def` [Becoming.SharedCodes.Gloss.rep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean#L1623) (L1623)
 - `def` [Becoming.SharedCodes.Gloss.uptake](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean#L1652) (L1652)
+
+</details>
+
+<a id="module-480052fbf3c0"></a>
+
+<details>
+<summary>ShownOrder.lean — 40 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean`
+
+Imports: `Becoming.Grammar`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.ChoiceOccasions.shown_accords](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L113) | 113 |
+| [Becoming.ChoiceOccasions.reach_accords](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L117) | 117 |
+| [Becoming.ChoiceOccasions.reach_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L123) | 123 |
+| [Becoming.ChoiceOccasions.accorded_iff_noCycle](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L139) | 139 |
+| [Becoming.ChoiceOccasions.above_in_every_iff_reach](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L148) | 148 |
+| [Becoming.ChoiceOccasions.above_in_class_of_every](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L158) | 158 |
+| [Becoming.ChoiceOccasions.top_in_every_iff_reach](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L171) | 171 |
+| [Becoming.ChoiceOccasions.reach_withPair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L186) | 186 |
+| [Becoming.ChoiceOccasions.reach_withPair_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L209) | 209 |
+| [Becoming.ChoiceOccasions.noCycle_withPair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L223) | 223 |
+| [Becoming.ChoiceOccasions.noCycle_withPair_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L237) | 237 |
+| [Becoming.ChoiceOccasions.above_in_some_of_unreached](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L251) | 251 |
+| [Becoming.ChoiceOccasions.both_ways_of_unreached](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L262) | 262 |
+| [Becoming.ChoiceOccasions.weakly_forces_no_comparison](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L275) | 275 |
+| [Becoming.ChoiceOccasions.Untried.first_ne_second](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L297) | 297 |
+| [Becoming.ChoiceOccasions.Untried.first_ne_third](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L299) | 299 |
+| [Becoming.ChoiceOccasions.Untried.shown_from_first](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L302) | 302 |
+| [Becoming.ChoiceOccasions.Untried.shown_to_second](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L307) | 307 |
+| [Becoming.ChoiceOccasions.Untried.reach_first_second](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L313) | 313 |
+| [Becoming.ChoiceOccasions.Untried.noCycle](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L324) | 324 |
+| [Becoming.ChoiceOccasions.Untried.met_fixed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L330) | 330 |
+| [Becoming.ChoiceOccasions.Untried.untried_free](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L335) | 335 |
+| [Becoming.ChoiceOccasions.Untried.noTrue](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L360) | 360 |
+| [Becoming.ChoiceOccasions.Untried.aboveFirst_strict](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L375) | 375 |
+| [Becoming.ChoiceOccasions.Untried.aboveThird_strict](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L386) | 386 |
+| [Becoming.ChoiceOccasions.Untried.both_accord](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L398) | 398 |
+| [Becoming.ChoiceOccasions.Untried.same_search_met](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L414) | 414 |
+| [Becoming.ChoiceOccasions.Untried.same_search_after](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L421) | 421 |
+
+Definitions and types:
+
+- `structure` [Becoming.ChoiceOccasions](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L83) (L83)
+- `def` [Becoming.ChoiceOccasions.Shown](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L94) (L94)
+- `def` [Becoming.ChoiceOccasions.Accords](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L98) (L98)
+- `def` [Becoming.ChoiceOccasions.AccordsWeakly](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L103) (L103)
+- `def` [Becoming.ChoiceOccasions.PicksOpen](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L108) (L108)
+- `def` [Becoming.ChoiceOccasions.withPair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L182) (L182)
+- `inductive` [Becoming.ChoiceOccasions.Untried.Alt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L287) (L287)
+- `def` [Becoming.ChoiceOccasions.Untried.occasions](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L293) (L293)
+- `def` [Becoming.ChoiceOccasions.Untried.aboveFirst](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L348) (L348)
+- `def` [Becoming.ChoiceOccasions.Untried.aboveThird](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L354) (L354)
+- `def` [Becoming.ChoiceOccasions.Untried.same](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L363) (L363)
+- `def` [Becoming.ChoiceOccasions.Untried.search](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean#L371) (L371)
 
 </details>
 
@@ -25321,7 +25412,7 @@ Definitions and types:
 <details>
 <summary>Training.lean — 88 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Training.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Training.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Training.lean`
 
@@ -26096,6 +26187,36 @@ Definitions and types:
 - `def` [Becoming.unitFactor](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Units.lean#L354) (L354)
 - `def` [Becoming.Feeding.flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Units.lean#L434) (L434)
 - `def` [Becoming.Feeding.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Units.lean#L441) (L441)
+
+</details>
+
+<a id="module-4bcd0c40ca6d"></a>
+
+<details>
+<summary>Unread.lean — 11 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean`
+
+Imports: `Becoming.Learning`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.Learning.free_lumped](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean#L87) | 87 |
+| [Becoming.Learning.twin_selected](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean#L104) | 104 |
+| [Becoming.Learning.determines_iff_not_not](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean#L120) | 120 |
+| [Becoming.Learning.state_apart_of_acts_apart](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean#L139) | 139 |
+| [Becoming.Learning.coupling_apart_of_state_apart](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean#L145) | 145 |
+| [Becoming.Learning.Cue.seen_twin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean#L168) | 168 |
+| [Becoming.Learning.Cue.unseen_fixed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean#L179) | 179 |
+| [Becoming.Learning.Cue.apart_with_content_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean#L187) | 187 |
+
+Definitions and types:
+
+- `abbrev` [Becoming.Learning.Cue.Occasion](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean#L156) (L156)
+- `def` [Becoming.Learning.Cue.read](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean#L159) (L159)
+- `def` [Becoming.Learning.Cue.contentAct](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean#L162) (L162)
 
 </details>
 
@@ -27369,7 +27490,7 @@ Definitions and types:
 <details>
 <summary>WitnessRefinementRuns.lean — 29 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WitnessRefinementRuns.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WitnessRefinementRuns.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WitnessRefinementRuns.lean`
 
