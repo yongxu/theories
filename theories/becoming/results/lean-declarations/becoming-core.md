@@ -17236,22 +17236,22 @@ Imports: `Becoming.Grammar`, `Becoming.Identity`, `Becoming.Unfolding`, `Becomin
 | [Becoming.Shuttle.named_as_themselves](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1080) | 1080 |
 | [Becoming.Lineage.world_readings](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1093) | 1093 |
 | [Becoming.Hibernation.world_readings](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1129) | 1129 |
-| [Becoming.Web.stateClass_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1197) | 1197 |
-| [Becoming.Web.stateClass_finer](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1202) | 1202 |
-| [Becoming.Web.wang_state_of_change](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1210) | 1210 |
-| [Becoming.Web.sheng_state_of_change](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1217) | 1217 |
-| [Becoming.Web.ceases_iff_wang_state](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1225) | 1225 |
-| [Becoming.Web.arises_iff_sheng_state](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1234) | 1234 |
-| [Becoming.Web.ceases_of_persisting_ceases](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1245) | 1245 |
-| [Becoming.Web.arises_of_persisting_arises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1252) | 1252 |
-| [Becoming.Web.fallsDormant_alters](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1260) | 1260 |
-| [Becoming.Web.wakes_alters](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1271) | 1271 |
-| [Becoming.Web.names_line_same](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1281) | 1281 |
-| [Becoming.Web.unending_of_holds](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1288) | 1288 |
-| [Becoming.World.arises_fixed_iff_sheng](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1306) | 1306 |
-| [Becoming.World.ceases_fixed_iff_wang](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1314) | 1314 |
-| [Becoming.Hibernation.positions](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1329) | 1329 |
-| [Becoming.Seed.held_classes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1355) | 1355 |
+| [Becoming.Web.stateClass_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1201) | 1201 |
+| [Becoming.Web.stateClass_finer](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1206) | 1206 |
+| [Becoming.Web.wang_state_of_change](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1214) | 1214 |
+| [Becoming.Web.sheng_state_of_change](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1222) | 1222 |
+| [Becoming.Web.ceases_iff_wang_state](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1230) | 1230 |
+| [Becoming.Web.arises_iff_sheng_state](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1239) | 1239 |
+| [Becoming.Web.ceases_of_persisting_ceases](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1250) | 1250 |
+| [Becoming.Web.arises_of_persisting_arises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1257) | 1257 |
+| [Becoming.Web.fallsDormant_alters](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1265) | 1265 |
+| [Becoming.Web.wakes_alters](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1276) | 1276 |
+| [Becoming.Web.names_line_same](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1286) | 1286 |
+| [Becoming.Web.unending_of_holds](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1293) | 1293 |
+| [Becoming.World.arises_fixed_iff_sheng](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1311) | 1311 |
+| [Becoming.World.ceases_fixed_iff_wang](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1319) | 1319 |
+| [Becoming.Hibernation.positions](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1334) | 1334 |
+| [Becoming.Seed.held_classes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1360) | 1360 |
 
 Definitions and types:
 
@@ -17274,7 +17274,7 @@ Definitions and types:
 - `def` [Becoming.Reidentify.exchangeAfter](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L673) (L673)
 - `def` [Becoming.Reidentify.roles](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L916) (L916)
 - `def` [Becoming.Shuttle.asOne](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1022) (L1022)
-- `def` [Becoming.Web.stateClass](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1194) (L1194)
+- `def` [Becoming.Web.stateClass](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean#L1198) (L1198)
 
 </details>
 
