@@ -64,15 +64,16 @@
       ]
     },
     {
-      "en": "An alteration (异) of a carrying occurrence is a passing, and a passing to another formation is an alteration, not conversely: passing the pattern to itself alters nothing. Under the passing premise every carrying occurrence lies on a line (相续) under the pattern's class from one at each earlier step, and both statements of the second law follow from grammar laws; in the relay witness's shifts every odd step is 火传.",
-      "zh": "承载出现的异是一次传递，传给另一形成的传递是异；逆不成立：形成把样式传给自身不改变什么。在传递前提下，每个承载出现都在样式之类下与任何较早一步的某个出现相续，第二条律的两个陈述都由文法规律导出；在接力见证的轮班中每个奇数步都是火传。",
+      "en": "An alteration (异) of a carrying occurrence is a passing, and a passing to another formation is an alteration, not conversely: passing the pattern to itself alters nothing. Under the passing premise every carrying occurrence lies on a line (相续) under the pattern's class from one at each earlier step, and both statements of the second law and the ending of the third are proved from grammar laws; in the relay witness's shifts every odd step is 火传.",
+      "zh": "承载出现的异是一次传递，传给另一形成的传递是异；逆不成立：形成把样式传给自身不改变什么。在传递前提下，每个承载出现都在样式之类下与任何较早一步的某个出现相续，第二条律的两个陈述及第三条律中的终止都由文法规律证出；在接力见证的轮班中每个奇数步都是火传。",
       "declarations": [
         "Becoming.Web.passesAt_of_alters",
         "Becoming.Web.alters_of_passes",
         "Becoming.Web.passing_fire",
         "Becoming.Web.ByPassing.line_back",
-        "Becoming.Web.ByPassing.passes_within_by_line",
-        "Becoming.Web.ByPassing.begins_passed_by_grammar",
+        "Becoming.Web.ByPassing.passes_within",
+        "Becoming.Web.ByPassing.begins_passed",
+        "Becoming.Web.ByPassing.ends_within",
         "Becoming.PatternRelay.shifted_fire",
         "Becoming.PatternRelay.fire_shape"
       ]
@@ -135,8 +136,6 @@
     "Becoming.Web.passesAt_of_alters",
     "Becoming.Web.alters_of_passes",
     "Becoming.Web.ByPassing.line_back",
-    "Becoming.Web.ByPassing.passes_within_by_line",
-    "Becoming.Web.ByPassing.begins_passed_by_grammar",
     "Becoming.PatternRelay.shifted_fire"
   ],
   "dependencies": [
@@ -196,12 +195,10 @@
         "Becoming.PatternRelay.web",
         "Becoming.Web.ByPassing",
         "Becoming.Web.ByPassing.begins_passed",
-        "Becoming.Web.ByPassing.begins_passed_by_grammar",
         "Becoming.Web.ByPassing.empty_stays",
         "Becoming.Web.ByPassing.ends_within",
         "Becoming.Web.ByPassing.line_back",
         "Becoming.Web.ByPassing.passes_within",
-        "Becoming.Web.ByPassing.passes_within_by_line",
         "Becoming.Web.ByPassing.present_back",
         "Becoming.Web.ByPassing.present_earlier",
         "Becoming.Web.ByPassing.present_of_le",
@@ -226,7 +223,7 @@
         "Becoming.Web.passing_fire",
         "Becoming.Web.sameFormation"
       ],
-      "sha256": "32cf59f492d1b2a90d1331b966bc3028836bd1050082d8ddcb93dd63b036bfcf"
+      "sha256": "b0fb02ba3f8923f28ff24c78f7fc7f3c604f2a9040680892a41594f4654e3fc2"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
@@ -273,12 +270,18 @@
       "role": "receipt",
       "sha256": "e308626a3bfd5618e8279b5167ad81be01de5b97e4981a617ac1acd31fa7686b",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T104256.342764Z/verification.json",
+      "role": "receipt",
+      "sha256": "d7a12bee44f38799684738a3d1442a9802df2daad3faa6a62d501774515d152b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T035943.256483Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T104256.342764Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.PatternPassing",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -312,6 +315,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): two laws added stating PatternPassing's readings on the grammar: the passing premise as a continuation and a predecessor under the pattern's class, beginning and ending under the carrier class, alteration and passing, the pattern's line, the derivations of the second law's statements from grammar laws and 火传 in the shifts; their declarations added to the module's reference and, where no other record holds them, to the aliases (four are aliases of continuation-relative-to-a-class).",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：新增两条律，陈述 PatternPassing 在文法上的读法：传递前提即接续、即在样式之类下有前，承载者之类下的生与亡，异与传递，样式之相续，第二条律两个陈述由文法规律之导出，以及轮班中的火传；其声明加入该模块之引用，并在无他记录持有处加入别名（四个是 continuation-relative-to-a-class 的别名）。"
+    },
+    {
+      "en": "29 October 2026, board item OU3f (study section 443): the second law's two statements and the third law's ending are proved from grammar laws under their own names (board rule 9). ByPassing.passes_within and begins_passed take the derivations of their twins, which are retired (passes_within_by_line, begins_passed_by_grammar), and ByPassing.ends_within is proved as passes_within is, through the pattern's line and «两端分则中有标»; the law on the grammar, its declarations, the aliases and the module's reference brought to the kept names.",
+      "zh": "2026年10月29日，工作板条目 OU3f（研究第 443 节）：第二条律的两个陈述及第三条律中的终止，以其本名由文法规律证出（板规九）。ByPassing.passes_within 与 begins_passed 取其孪生之推导，孪生（passes_within_by_line、begins_passed_by_grammar）退役；ByPassing.ends_within 如 passes_within 之证，经样式之相续与「两端分则中有标」；文法上之律、其声明、别名与该模块之引用皆改为所存之名。"
     }
   ],
   "text_versions": [
