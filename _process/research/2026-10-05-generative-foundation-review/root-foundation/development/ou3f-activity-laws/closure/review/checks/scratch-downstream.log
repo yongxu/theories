@@ -1,0 +1,56 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/ou3f-laws/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/closure/review/checks/tree-new",
+  "modules": 57,
+  "ran": [
+    "Becoming.Clearing",
+    "Becoming.OwnWidening",
+    "Becoming.Exhaustion",
+    "Becoming.Significance",
+    "Becoming.Extension",
+    "Becoming.ValuationFrames",
+    "Becoming.Correspondence",
+    "Becoming.Descent",
+    "Becoming.ContinuedClasses",
+    "Becoming.MapInstances",
+    "BecomingClearingAxiomAudit",
+    "BecomingOwnWideningAxiomAudit",
+    "BecomingExhaustionAxiomAudit",
+    "BecomingDescentAxiomAudit",
+    "BecomingMapInstancesAxiomAudit",
+    "BecomingContinuedClassesAxiomAudit"
+  ],
+  "reused": 47,
+  "unclean": [],
+  "audits": {
+    "Becoming.Clearing": {
+      "theorems": 14,
+      "declarations": 25,
+      "with_axioms": {}
+    },
+    "Becoming.OwnWidening": {
+      "theorems": 15,
+      "declarations": 25,
+      "with_axioms": {}
+    },
+    "Becoming.Exhaustion": {
+      "theorems": 23,
+      "declarations": 27,
+      "with_axioms": {}
+    },
+    "Becoming.Descent": {
+      "theorems": 40,
+      "declarations": 49,
+      "with_axioms": {}
+    },
+    "Becoming.MapInstances": {
+      "theorems": 26,
+      "declarations": 26,
+      "with_axioms": {}
+    },
+    "Becoming.ContinuedClasses": {
+      "theorems": 73,
+      "declarations": 98,
+      "with_axioms": {}
+    }
+  }
+}

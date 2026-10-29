@@ -4372,11 +4372,6 @@
    "category": "general-structure",
    "reason": "a class going alike under a relation with a successor everywhere lies inside its own core: a law of every relation on any carrier (OU3b) joining lumping to the core; nothing on the base uses it"
   },
-  "Becoming.«闭含所闭»": {
-   "module": "Becoming.GrammarLaws",
-   "category": "support",
-   "reason": "a one-line unpacking of the grammar's own definitions (OU3b)"
-  },
   "Becoming.«非定后返而不入之例»": {
    "module": "Becoming.GrammarLaws",
    "category": "model-witness",

@@ -1,0 +1,17 @@
+Law.clock : Run (Law.process Nat.succ)
+def Becoming.Law.clock : Run (Law.process Nat.succ) :=
+{ state := id, act := fun x => (), step := Law.clock._proof_1 }
+@kept_onward : ∀ {I : Nat → Prop}, (∀ (n : Nat), I n → I (n + 1)) → ∀ {a b : Nat}, I a → a ≤ b → I b
+Becoming.kept_onward {I : Nat → Prop} (keeps : ∀ (n : Nat), I n → I (n + 1)) {a b : Nat} (holds : I a) (later : a ≤ b) :
+  I b
+'Becoming.Law.clock' does not depend on any axioms
+'Becoming.kept_onward' does not depend on any axioms
+'Becoming.Web.inactive_of_not_arising' does not depend on any axioms
+'Becoming.Web.active_back' does not depend on any axioms
+'Becoming.Web.active_before' does not depend on any axioms
+'Becoming.Web.ended_for_good' does not depend on any axioms
+'Becoming.Web.ByPassing.present_earlier' does not depend on any axioms
+'Becoming.Web.steady_held' does not depend on any axioms
+'Becoming.kept_onward_byLaw' does not depend on any axioms
+'Becoming.kept_onward_byRun' does not depend on any axioms
+'Becoming.kept_onward_onGrammar' does not depend on any axioms

@@ -1,0 +1,3 @@
+Becoming.clock.{w} (A : Type w) : Generative.Process Nat A
+Becoming.Law.clock : Run (Law.process Nat.succ)
+Becoming.Law.clock : Run (process Nat.succ)

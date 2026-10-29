@@ -1,4 +1,5 @@
 import Becoming.Regions
+import Becoming.KeptOnward
 
 /-!
 # Retaining: what one level path keeps of another
@@ -166,11 +167,12 @@ theorem UnderminingOn.not_retains {l : Nat → C → Nat} {t : Nat} {f : F} {c :
       (retains (t + 1) g (significant g depends) (admits g depends) c (holds g depends).1)
 
 /-- **Never arising from an inactive start is never being active.** A formation not active at the
-start that arises across no step is active at no step. -/
+start that arises across no step is active at no step: not being active is a region every step
+keeps (`kept_onward`). -/
 theorem inactive_of_not_arising {f : F} (start : ¬ W.active 0 f) (never : ∀ t, ¬ W.Arises t f) :
-    ∀ t, ¬ W.active t f
-  | 0 => start
-  | t + 1 => fun active => never t ⟨inactive_of_not_arising start never t, active⟩
+    ∀ t, ¬ W.active t f :=
+  fun t => kept_onward (I := fun n => ¬ W.active n f)
+    (fun n inactive active => never n ⟨inactive, active⟩) start (Nat.zero_le t)
 
 end Web
 

@@ -1,6 +1,7 @@
 import Becoming.Identity
 import Becoming.Continuation
 import Becoming.Decidedness
+import Becoming.KeptOnward
 
 /-!
 # Wholes: a persisting whole of brief parts, or of ending listed parts, needs their generation;
@@ -178,14 +179,16 @@ theorem Ends.all : ∀ {l : List F}, (∀ f, f ∈ l → W.Ends f) →
       | f, .tail _ mem => rest f mem t (Nat.le_trans (Nat.le_add_left M T) later)⟩
 
 /-- With no part arising across the `k` steps from `S`, a part active `k` steps later was
-not inactive at `S`. -/
+not inactive at `S`: within the `k` steps, being active there only if not inactive at `S` is a
+region every step keeps (`kept_onward`). -/
 theorem active_back {S : Nat} : ∀ {k : Nat},
     (∀ j, j < k → ∀ p, parts p → ¬ W.Arises (S + j) p) →
-    ∀ {p : F}, parts p → W.active (S + k) p → ¬ ¬ W.active S p
-  | 0, _, _, _, active => fun inactive => inactive active
-  | k + 1, quiet, p, part, active => fun inactive => quiet k (Nat.lt_succ_self k) p part
-      ⟨fun before => active_back (fun j below => quiet j (Nat.lt_succ_of_lt below)) part before
-        inactive, active⟩
+    ∀ {p : F}, parts p → W.active (S + k) p → ¬ ¬ W.active S p :=
+  fun {k} quiet {p} part active =>
+    kept_onward (I := fun n => n ≤ k → W.active (S + n) p → ¬ ¬ W.active S p) (a := 0)
+      (fun n held le act inactive =>
+        quiet n le p part ⟨fun before => held (Nat.le_of_succ_le le) before inactive, act⟩)
+      (fun _ act inactive => inactive act) (Nat.zero_le k) (Nat.le_refl k) active
 
 /-- Parts covering the steps from `T` on, none of them active at two steps `d` apart,
 have a part arising within every `d` consecutive steps from `T` on. -/

@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261029T104256.342764Z",
- "core_sources_sha256": "7eda1e87ba55211512a41b730d60243f52c969489b0d4c29ff750cc12b8d8dc6",
+ "core_receipt": "20261029T125805.763052Z",
+ "core_sources_sha256": "d4b2fcefb4e7c85503eaa784eb87aba7d0b38e3c3f0ff66574bdf056b51c9072",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -59,12 +59,12 @@
   "laws": 3653,
   "no_declarations": 9,
   "outside": 342,
-  "grammar": 690,
-  "balance, represented": 643,
+  "grammar": 708,
+  "balance, represented": 635,
   "anchor, not reached": 134,
-  "no master law": 1835,
+  "no master law": 1825,
   "vocabulary_only": 49,
-  "closure": 449,
+  "closure": 471,
   "balance": 802,
   "return": 248,
   "lumping": 80,
@@ -1197,9 +1197,11 @@
      "Becoming.Web.Present",
      "Becoming.Web.begins_within"
     ],
-    "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 2,
@@ -1211,7 +1213,9 @@
      "Becoming.Web.ByPassing.passes_within",
      "Becoming.PatternRelay.shifts"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -1224,7 +1228,9 @@
      "Becoming.PatternRelay.relay",
      "Becoming.PatternRelay.stopped_relay"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -1259,7 +1265,9 @@
      "Becoming.PatternRelay.shifted_fire",
      "Becoming.PatternRelay.fire_shape"
     ],
-    "master_laws": [],
+    "master_laws": [
+     "closure"
+    ],
     "grammar": true,
     "dependence": "grammar"
    }
@@ -5362,10 +5370,11 @@
      "Becoming.World.takingUnsupported_not_readOff"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "certificates-sound-and-available": [
@@ -12061,9 +12070,11 @@
      "Becoming.Web.ended_for_good",
      "Becoming.Web.late_return_finds_none"
     ],
-    "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 3,
@@ -16866,6 +16877,7 @@
      "Becoming.Map.renewal_undecided"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
     "grammar": true,
@@ -20628,9 +20640,11 @@
      "Becoming.Web.renewingIn_held",
      "Becoming.Web.consumingIn_held"
     ],
-    "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 25,
@@ -20640,9 +20654,11 @@
      "Becoming.Dormancy.held_both",
      "Becoming.Seed.held_readings"
     ],
-    "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 26,
@@ -26225,7 +26241,8 @@
      "Becoming.«闭之及»",
      "Becoming.«及之所闭»",
      "Becoming.«所闭当且仅当同一或及»",
-     "Becoming.«及当且仅当一步而所闭»"
+     "Becoming.«及当且仅当一步而所闭»",
+     "Becoming.kept_onward"
     ],
     "master_laws": [
      "closure"
@@ -26617,6 +26634,9 @@
      "Becoming.Learning.lumped_iff_fixed_image",
      "Becoming.Reaching.WidensOrLater.irrefl",
      "Becoming.Reaching.WidensOrLater.trans",
+     "Becoming.Web.ByPassing.line_back",
+     "Becoming.Web.ByPassing.present_earlier",
+     "Becoming.Web.ByPassing.trace",
      "Becoming.Web.Includes.not_exceeded",
      "Becoming.Web.Includes.refl",
      "Becoming.Web.Includes.trans",
@@ -26627,7 +26647,12 @@
      "Becoming.Web.Widens.not_mixed",
      "Becoming.Web.Widens.not_reverse",
      "Becoming.Web.Widens.trans",
+     "Becoming.Web.active_back",
+     "Becoming.Web.active_before",
+     "Becoming.Web.ended_for_good",
+     "Becoming.Web.inactive_of_not_arising",
      "Becoming.Web.reaches_onward",
+     "Becoming.Web.steady_held",
      "Becoming.Web.steps_advance",
      "Becoming.Withholding.answers_closed",
      "Becoming.Withholding.chain_iff_steps",
@@ -43322,10 +43347,11 @@
      "Becoming.Flow.Balances.keeps_of_not_arising"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 6,
@@ -50495,10 +50521,11 @@
      "Becoming.Flow.alongside_not_all"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented",
+    "grammar": true,
+    "dependence": "grammar",
     "central": [
      {
       "declaration": "Becoming.Flow.continuing_excludes",
@@ -50550,10 +50577,11 @@
      "Becoming.Excluding.three_courses"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 5,
@@ -51505,10 +51533,11 @@
      "Becoming.Flow.seeking_ends"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 4,
@@ -51543,10 +51572,11 @@
      "Becoming.Alone.takes_all"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "where-a-run-goes-on": [
@@ -52597,9 +52627,11 @@
      "Becoming.Web.Listed.end_without_arising",
      "Becoming.Web.Whole.ends_without_arising"
     ],
-    "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 2,
@@ -52608,16 +52640,18 @@
      "Becoming.Web.Whole.joint_excess_ends"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented",
+    "grammar": true,
+    "dependence": "grammar",
     "central": [
      {
       "declaration": "Becoming.Web.Whole.family_excess_ends",
-      "category": "balance, represented",
-      "dependence": "balance, represented",
+      "category": "master law",
+      "dependence": "grammar",
       "master_laws": [
+       "closure",
        "balance"
       ]
      }
@@ -52644,10 +52678,11 @@
      "Becoming.WholeExceeding.drawn"
     ],
     "master_laws": [
+     "closure",
      "balance"
     ],
-    "grammar": false,
-    "dependence": "balance, represented"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 4,
@@ -53149,9 +53184,11 @@
     "declarations": [
      "Becoming.Web.Covered.arises_within"
     ],
-    "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 5,
@@ -53159,9 +53196,11 @@
      "Becoming.Web.Covered.needs_arising",
      "Becoming.Web.Covered.needs_new"
     ],
-    "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 6,
@@ -53171,9 +53210,11 @@
      "Becoming.Web.Whole.needs_arising",
      "Becoming.Web.Whole.needs_new"
     ],
-    "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 7,
@@ -53189,9 +53230,11 @@
     "declarations": [
      "Becoming.Countless.countless"
     ],
-    "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 9,
@@ -53228,9 +53271,11 @@
      "Becoming.Layered.within",
      "Becoming.Layered.arise_again"
     ],
-    "master_laws": [],
-    "grammar": false,
-    "dependence": "no master law"
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "widening-along-a-reading": [
