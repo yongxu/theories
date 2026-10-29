@@ -102,7 +102,10 @@ def main(results_path, keys):
                 if value is None:
                     failures.append(tag + ': new is not JSON')
                     continue
-                setp(r, f, value)
+                if isinstance(cur, list) and isinstance(value, dict):
+                    cur.append(value)  # one entry given for a list: appended
+                else:
+                    setp(r, f, value)
             elif new == '' and f.endswith('.witness'):
                 parent = get(r, f.rsplit('.', 1)[0])
                 parent.pop('witness', None)  # the reviewer drops an optional witness

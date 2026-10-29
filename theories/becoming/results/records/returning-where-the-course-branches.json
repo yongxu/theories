@@ -100,8 +100,8 @@
       ]
     },
     {
-      "en": "Witness: the fork merges nothing and lists its three configurations, yet its origin, whose ends cannot move, never returns and is possibly drawn into its left end: within listed configurations, merging nothing need not give a configuration its return without a run from it.",
-      "zh": "见证：分叉不合并且列出其三个构形，而其起点（其终点不能动）从不返回，并可能被吸入左端：在被列出的构形之内，没有从某构形出发的运行，不合并不必给出它的返回。",
+      "en": "Witness: the fork merges nothing and lists its three configurations, yet its origin, whose ends cannot move, never returns and is possibly drawn into some region the fork never leaves (its left end, in the proof): within listed configurations, merging nothing need not give a configuration its return without a run from it.",
+      "zh": "见证：分叉不合并且列出其三个构形，而其起点（其终点不能动）从不返回，并可能被吸入分叉从不离开的某个区域（证明中为其左端）：在被列出的构形之内，没有从某构形出发的运行，不合并不必给出它的返回。",
       "declarations": [
         "Becoming.Branching.fork_lossless_not_returns"
       ]
@@ -121,8 +121,8 @@
       "en": "The laws along runs take a run as given: building a run from every configuration that can move needs choosing a continuation at each step, which is a choice."
     },
     {
-      "en": "The laws along runs require a list holding the run's configurations (finitely many configurations); that a configuration at which a run begins returns requires a list holding every configuration.",
-      "zh": "沿运行的定律要求列表含有运行的配置（有限多配置）；运行开始处的配置返回，要求列表含有每个配置。"
+      "en": "The laws along runs require a list holding the run's configurations (finitely many configurations); the law that a configuration at which a run begins returns is stated with a list holding every configuration, though the run's coming back to each of its configurations needs only the run's list.",
+      "zh": "沿运行的定律要求列表含有运行的配置（有限多配置）；运行开始处的配置返回之律以列表含有每个配置陈述，而运行回到其每个配置只需列表含有运行的配置。"
     }
   ],
   "does_not_show": [
@@ -154,8 +154,8 @@
     "zh": "陈述路径分支之处，一个构形在多少步之内被吸入一个区域。"
   },
   "correspondence": {
-    "en": "Following Ren's “move towards 100%” of 12 October 2026: the three-way equivalence of determined change (recurrence-without-premise) fails for laws that are not determined (with a→a, a→b, b→c, c→c, b never returns); Ren then compared this with Feynman diagrams. This states those laws for every process. A reading (the AI's, adopted on Ren's delegation): where the course branches, returning asks more than keeping every possibility; “losing nothing is returning” is a law of determined change within finitely many configurations, and under every process it holds along each run.",
-    "zh": "按 Ren 2026-10-12 的“move towards 100%”：确定变化的三方等价（recurrence-without-premise）对不确定的律不成立（a→a、a→b、b→c、c→c 中 b 从不返回）；Ren 随后把这比作费曼图。这里对每个过程陈述这些规律。读法（AI 的，依 Ren 的交托采用）：路径分支之处，返回比保留每个可能要求更多；“不失去即返回”是有限多配置中确定变化的规律，对每个过程它沿每个运行成立。"
+    "en": "Following Ren's “move towards 100%” of 12 October 2026: the three-way equivalence of determined change (recurrence-without-premise) fails for laws that are not determined (with a→a, a→b, b→c, c→c, b never returns); Ren then compared this with Feynman diagrams. This states those laws for every process. An AI reading: where the course branches, returning asks more than keeping every possibility; “losing nothing is returning” is a law of determined change within finitely many configurations, and under every process it holds along each run.",
+    "zh": "按 Ren 2026-10-12 的“move towards 100%”：确定变化的三方等价（recurrence-without-premise）对不确定的律不成立（a→a、a→b、b→c、c→c 中 b 从不返回）；Ren 随后把这比作费曼图。这里对每个过程陈述这些规律。AI 的读法：路径分支之处，返回比保留每个可能要求更多；“不失去即返回”是有限多配置中确定变化的规律，对每个过程它沿每个运行成立。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Branching.lean",
   "aliases": [
@@ -640,8 +640,8 @@
       "zh": "2026-10-20：45 条记账性说明合并（2026-10-13 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/1f681195b50de5ba/returning-where-the-course-branches.json 和 git 中。"
     },
     {
-      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement kept; the claim split into eleven laws, each read against its declarations in Recurrence.lean and Branching.lean (the notions, the determined law as their instance, what holds with no premise, the exact condition for returning, the laws along runs with their lists, the witnesses, merged staying merged), the condition that a run's start returns only with every configuration listed written in, as Lossless.returns takes it; the limitations to one does-not-show item, the hypotheses and the standard boundaries no-ethical-premise and no-evaluation; OneWay.merge_keeps and the five determined-law bridges added to Branching.lean's references; process markers cut from the correspondence; no premise, status, source hash or proof binding changed. Every earlier sentence is mapped in [returning-where-the-course-branches.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/returning-where-the-course-branches.md); the exact earlier record is the first text_versions entry.",
-      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留；主张拆为十一条规律，各条对照 Recurrence.lean 与 Branching.lean 中的声明核读（诸概念、确定的律作为其实例、不加前提成立者、返回的精确条件、沿运行的定律及其列表、见证、合并后保持合并），并按 Lossless.returns 写明运行起点返回需要每个构形都被列出；限制改为一条“未表明”、前提与通用边界 no-ethical-premise、no-evaluation；OneWay.merge_keeps 与五条确定律的桥接加入 Branching.lean 的引用；对应中的过程标记删去；前提、状态、来源哈希与证明绑定均未改变。每句旧文本的去向见 [returning-where-the-course-branches.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/returning-where-the-course-branches.md)；迁移前的完整记录为 text_versions 首项。"
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement kept; the claim split into eleven laws, each read against its declarations in Recurrence.lean and Branching.lean (the notions, the determined law as their instance, what holds with no premise, the exact condition for returning, the laws along runs with their lists, the witnesses, merged staying merged), the premise Lossless.returns takes, a list holding every configuration, written in; the limitations to one does-not-show item, the hypotheses and the standard boundaries no-ethical-premise and no-evaluation; OneWay.merge_keeps and the five determined-law bridges added to Branching.lean's references; process markers cut from the correspondence; no premise, status, source hash or proof binding changed. Every earlier sentence is mapped in [returning-where-the-course-branches.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/returning-where-the-course-branches.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in hypotheses, laws, the correspondence, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留；主张拆为十一条规律，各条对照 Recurrence.lean 与 Branching.lean 中的声明核读（诸概念、确定的律作为其实例、不加前提成立者、返回的精确条件、沿运行的定律及其列表、见证、合并后保持合并），并写明 Lossless.returns 所取的前提：列表含有每个构形；限制改为一条“未表明”、前提与通用边界 no-ethical-premise、no-evaluation；OneWay.merge_keeps 与五条确定律的桥接加入 Branching.lean 的引用；对应中的过程标记删去；前提、状态、来源哈希与证明绑定均未改变。每句旧文本的去向见 [returning-where-the-course-branches.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/returning-where-the-course-branches.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及前提、规律、对应，各条对照所引 Lean 核读。"
     }
   ],
   "text_versions": [

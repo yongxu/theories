@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3052 nodes, 5540 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3052 nodes, 5562 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -566,7 +566,7 @@ Results (19):
 - [Common interpretation of a finite basis](records/finite-basis-common-interpretation.md) (recorded-checked)
 - [Contraction is admissible exactly where duplication is reachable](records/contraction-where-duplication-is-reachable.md) (recorded-checked)
 - [Counting is a relation](records/counts-exist-where-decided.md) (recorded-checked)
-- [Existing interfaces are instances of the Becoming spine; comparison extends to every frame under the lifting rule](records/becoming-spine-instances.md) (recorded-checked)
+- [Earlier interfaces as instances of the spine, and comparison lifted to every frame](records/becoming-spine-instances.md) (recorded-checked)
 - [Fidelity coders on their own and the other's texts](records/fidelity-coders-on-own-and-other-texts.md) (reviewed-scoped)
 - [Lifting where branching is finite](records/lifting-where-branching-is-finite.md) (recorded-checked)
 - [Listing once is decided identity](records/listing-once-is-decided-identity.md) (recorded-checked)

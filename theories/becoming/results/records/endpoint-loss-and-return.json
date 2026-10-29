@@ -59,8 +59,8 @@
   ],
   "does_not_show": [
     {
-      "en": "The laws concern reachability under one fixed law; where a law comes from, and how laws compare, lies outside them.",
-      "zh": "诸律只及一个固定规律下的可达性；规律从何而来、规律之间如何比较，不在其内。",
+      "en": "The laws concern reachability under one fixed law; where a law comes from lies outside them.",
+      "zh": "诸律只及一个固定规律下的可达性；规律从何而来，不在其内。",
       "kind": "scope"
     },
     {
@@ -290,8 +290,8 @@
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：增加陈述，主张按核心规律重述（可得者恰在另一构形能回到它时保有；不能回返即失去可能，起点为见证；同一变化而回返不同，常数读法遮住此点）；反例由外围文件改指核心见证；两个退役的 Bridge 别名改为核心名称。规律未变。"
     },
     {
-      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement kept; the claim split into four laws, each read against its declarations in Labelled.lean and Irreversibility.lean (reach kept and lost, the witnesses, the constant reading); the limitations to three does-not-show items and the standard boundaries no-ethical-premise, no-evaluation and zero-axiom-target-open; hypotheses and the counterexample kept; the next step's instruction not to reconstruct completed results dropped, an instruction to later sessions; no premise, status, reference, proof binding or source hash changed. Every earlier sentence is mapped in [endpoint-loss-and-return.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/endpoint-loss-and-return.md); the exact earlier record is the first text_versions entry.",
-      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留；主张拆为四条规律，各条对照 Labelled.lean 与 Irreversibility.lean 中的声明核读（可达的保有与丧失、见证、常数读法）；限制改为三条“未表明”与通用边界 no-ethical-premise、no-evaluation、zero-axiom-target-open；前提与反例保留；下一步中“不重建已完成成果”是对后续会话的指示，删去；前提、状态、引用、证明绑定与来源哈希均未改变。每句旧文本的去向见 [endpoint-loss-and-return.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/endpoint-loss-and-return.md)；迁移前的完整记录为 text_versions 首项。"
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement kept; the claim split into four laws, each read against its declarations in Labelled.lean and Irreversibility.lean (reach kept and lost, the witnesses, the constant reading); the limitations to three does-not-show items and the standard boundaries no-ethical-premise, no-evaluation and zero-axiom-target-open; hypotheses and the counterexample kept; the next step's instruction not to reconstruct completed results dropped, an instruction to later sessions; no premise, status, reference, proof binding or source hash changed. Every earlier sentence is mapped in [endpoint-loss-and-return.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/endpoint-loss-and-return.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, each read against the Lean it cites.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：陈述保留；主张拆为四条规律，各条对照 Labelled.lean 与 Irreversibility.lean 中的声明核读（可达的保有与丧失、见证、常数读法）；限制改为三条“未表明”与通用边界 no-ethical-premise、no-evaluation、zero-axiom-target-open；前提与反例保留；下一步中“不重建已完成成果”是对后续会话的指示，删去；前提、状态、引用、证明绑定与来源哈希均未改变。每句旧文本的去向见 [endpoint-loss-and-return.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/endpoint-loss-and-return.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及“未表明”各项，各条对照所引 Lean 核读。"
     }
   ],
   "text_versions": [

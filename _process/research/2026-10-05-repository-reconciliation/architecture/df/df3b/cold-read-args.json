@@ -1,0 +1,250 @@
+{
+ "readers": [
+  {
+   "key": "a",
+   "ids": [
+    "claims-shown-in-context",
+    "seeking-boundary",
+    "binding-preserving-substitution",
+    "retrospective-source-binding",
+    "branching-tests-bisimulation",
+    "joining-questions-survive-encoding",
+    "consequence-revised-reference-plan",
+    "fallible-witness-diagnosability",
+    "unanchored-incidence-collapse",
+    "risk-certificate-outcome-distinction",
+    "enacted-scene-binding",
+    "acquired-revision-of-pending-task",
+    "branching-target-uniqueness",
+    "joint-target-uniqueness",
+    "learning-by-refutation",
+    "finite-fallible-inquiry-necessity",
+    "readings-within-what-they-read",
+    "timely-response-necessity",
+    "incidence-common-refinement",
+    "acquired-binding-compositional-use",
+    "causal-models-as-processes",
+    "recurring-reference-revision",
+    "historical-source-binding",
+    "finite-continuation-plans",
+    "residual-continuation-correspondence",
+    "retained-reference-joining-recovery",
+    "prefix-observation-loss",
+    "functional-joining-common-structure"
+   ]
+  },
+  {
+   "key": "b",
+   "ids": [
+    "selection-under-registration-revision",
+    "transition-grouping-word-partition",
+    "guarded-program-question-recovery",
+    "finite-granularity-question-recovery",
+    "multivalued-joining-common-structure",
+    "encounter-selection-and-revision",
+    "formed-goal-revision-continuation",
+    "joining-open-map-factor",
+    "laws-of-one-step-complete",
+    "sum-over-histories-exact",
+    "histories-fix-law-up-to-dead-ends",
+    "imbalance-as-relatum",
+    "laws-at-coarser-steps",
+    "order-of-exchanges-is-the-invariant",
+    "laws-at-finer-units",
+    "recurrence-without-decidedness",
+    "losses-of-the-sum-over-histories",
+    "code-plan-global-support",
+    "process-and-frame-as-readings",
+    "recurrence-without-premise",
+    "transmission-independent-where-it-binds",
+    "runs-on-families-chosen-step-by-step",
+    "separation-loses-the-relation",
+    "one-step-missing-laws",
+    "becoming-spine-instances",
+    "listing-once-is-decided-identity",
+    "relata-counted-up-to-indiscernibility",
+    "counts-exist-where-decided"
+   ]
+  },
+  {
+   "key": "c",
+   "ids": [
+    "condition-correspondence-discipline",
+    "positive-ground-open-futures",
+    "open-form-realization-under-revision",
+    "relational-generative-comparison",
+    "assured-route-criterion",
+    "fulfillment-chance-floor",
+    "comparison-by-widening",
+    "own-good-to-reachable-living-significance",
+    "comparison-content-under-regrouping",
+    "protection-priority-excludes-uniform-aggregation",
+    "positioned-positive-reason",
+    "reserved-shutdown-during-recovery",
+    "versioned-request-completion",
+    "mediated-evidence-transport",
+    "returning-where-the-course-branches",
+    "whole-persists-through-generation",
+    "rest-with-refinement-counted",
+    "differences-below-threshold",
+    "target-capture",
+    "becoming-renewal-reading",
+    "represented-boundary-against-dependence",
+    "endpoint-loss-and-return",
+    "transmission-is-inheritance-and-need",
+    "inherited-structural-copying",
+    "formed-copying-registration",
+    "organizational-rule-inheritance",
+    "formed-copying-correction",
+    "recurrent-chain-assembly",
+    "joint-practice-forms-continuation",
+    "conveyance-crosses-the-boundary",
+    "material-preparation-output"
+   ]
+  }
+ ],
+ "chain": {
+  "sources": [
+   "theories/becoming/results/records/acquired-binding-compositional-use.json",
+   "theories/becoming/results/records/acquired-binding-compositional-use.md",
+   "theories/becoming/results/records/acquired-revision-of-pending-task.md",
+   "theories/becoming/results/records/binding-preserving-substitution.json",
+   "theories/becoming/results/records/consequence-revised-reference-plan.md",
+   "theories/becoming/results/records/enacted-scene-binding.json",
+   "theories/becoming/results/records/enacted-scene-binding.md",
+   "theories/becoming/results/records/encounter-selection-and-revision.json",
+   "theories/becoming/results/records/encounter-selection-and-revision.md",
+   "theories/becoming/results/records/finite-fallible-inquiry-necessity.json",
+   "theories/becoming/results/records/finite-fallible-inquiry-necessity.md",
+   "theories/becoming/results/records/finite-granularity-question-recovery.json",
+   "theories/becoming/results/records/formed-copying-correction.json",
+   "theories/becoming/results/records/formed-copying-registration.json",
+   "theories/becoming/results/records/functional-joining-common-structure.json",
+   "theories/becoming/results/records/guarded-program-question-recovery.json",
+   "theories/becoming/results/records/historical-source-binding.json",
+   "theories/becoming/results/records/historical-source-binding.md",
+   "theories/becoming/results/records/incidence-common-refinement.json",
+   "theories/becoming/results/records/inherited-structural-copying.json",
+   "theories/becoming/results/records/joining-open-map-factor.json",
+   "theories/becoming/results/records/joining-questions-survive-encoding.json",
+   "theories/becoming/results/records/joint-practice-forms-continuation.json",
+   "theories/becoming/results/records/mediated-evidence-transport.json",
+   "theories/becoming/results/records/mediated-evidence-transport.md",
+   "theories/becoming/results/records/multivalued-joining-common-structure.json",
+   "theories/becoming/results/records/open-form-realization-under-revision.json",
+   "theories/becoming/results/records/organizational-rule-inheritance.json",
+   "theories/becoming/results/records/prefix-observation-loss.json",
+   "theories/becoming/results/records/recurrent-chain-assembly.json",
+   "theories/becoming/results/records/recurring-reference-revision.md",
+   "theories/becoming/results/records/reserved-shutdown-during-recovery.json",
+   "theories/becoming/results/records/reserved-shutdown-during-recovery.md",
+   "theories/becoming/results/records/residual-continuation-correspondence.json",
+   "theories/becoming/results/records/retained-reference-joining-recovery.json",
+   "theories/becoming/results/records/retrospective-source-binding.json",
+   "theories/becoming/results/records/retrospective-source-binding.md",
+   "theories/becoming/results/records/selection-under-registration-revision.md",
+   "theories/becoming/results/records/timely-response-necessity.json",
+   "theories/becoming/results/records/timely-response-necessity.md",
+   "theories/becoming/results/records/transition-grouping-word-partition.json",
+   "theories/becoming/results/records/transition-grouping-word-partition.md",
+   "theories/becoming/results/records/unanchored-incidence-collapse.json"
+  ],
+  "links": {
+   "multivalued-joining-common-structure.json": [
+    "C30",
+    "F22"
+   ],
+   "incidence-common-refinement.json": [
+    "C30",
+    "F22"
+   ],
+   "retained-reference-joining-recovery.json": [
+    "C30",
+    "F22"
+   ],
+   "finite-granularity-question-recovery.json": [
+    "C30",
+    "F22"
+   ],
+   "prefix-observation-loss.json": [
+    "C30",
+    "F22"
+   ],
+   "guarded-program-question-recovery.json": [
+    "C30",
+    "F22"
+   ],
+   "residual-continuation-correspondence.json": [
+    "C30",
+    "F22"
+   ],
+   "recurrent-chain-assembly.json": [
+    "C14"
+   ],
+   "organizational-rule-inheritance.json": [
+    "C14"
+   ],
+   "joint-practice-forms-continuation.json": [
+    "C14"
+   ],
+   "inherited-structural-copying.json": [
+    "C14"
+   ],
+   "formed-copying-registration.json": [
+    "C14"
+   ],
+   "formed-copying-correction.json": [
+    "C14"
+   ],
+   "finite-fallible-inquiry-necessity.json": [
+    "M15"
+   ],
+   "timely-response-necessity.json": [
+    "M15"
+   ],
+   "open-form-realization-under-revision.json": [
+    "M20"
+   ],
+   "timely-response-necessity.md": [
+    "M21"
+   ],
+   "acquired-revision-of-pending-task.md": [
+    "M24"
+   ],
+   "selection-under-registration-revision.md": [
+    "M24"
+   ],
+   "consequence-revised-reference-plan.md": [
+    "M24"
+   ],
+   "recurring-reference-revision.md": [
+    "M24"
+   ],
+   "reserved-shutdown-during-recovery.md": [
+    "F30",
+    "M25"
+   ],
+   "acquired-binding-compositional-use.md": [
+    "M26"
+   ],
+   "transition-grouping-word-partition.md": [
+    "M26"
+   ],
+   "enacted-scene-binding.md": [
+    "M26"
+   ],
+   "encounter-selection-and-revision.md": [
+    "M26"
+   ],
+   "retrospective-source-binding.md": [
+    "M26"
+   ],
+   "historical-source-binding.md": [
+    "M26"
+   ],
+   "binding-preserving-substitution.json": [
+    "F01"
+   ]
+  }
+ }
+}

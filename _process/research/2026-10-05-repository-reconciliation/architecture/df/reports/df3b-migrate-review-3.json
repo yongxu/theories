@@ -1,0 +1,441 @@
+[
+ {
+  "unit": "K",
+  "migrated": {
+   "records": [
+    {
+     "id": "target-capture",
+     "laws": 8,
+     "does_not_show": 4,
+     "statement": "edited",
+     "claim_kept": false,
+     "declarations_added": [],
+     "references_added": [],
+     "narrowed": "Statement S1 said descent \"stops\" where what stands runs down from some step on. Flow.descent_exhausted proves only the negated universal (not at arbitrarily late steps), and \"stops\" is the existential form, which the core does not derive. The statement now says \"keeps running down, descent does not recur\", and law 6 says \"does not occur at arbitrarily late steps\". The statement also adds the transmission premise (\"and offspring carry the target\"): without it the counts are not shares. The old next step \"the general form in which a rule rewritten by its winners still holds the outcome\" is completed for a rule read from the share by capture-through-the-rule (RuleCapture.favouring_locks). It went to history and to a new related entry, and next_delta keeps the two open steps. In the correspondence, \"where descent stops\" became \"where descent does not recur\".",
+     "chapter_edits": [],
+     "mapping_file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df3b/_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/target-capture.md",
+     "lint_clean": true,
+     "lint_warnings": "",
+     "notes": "Title kept. The eight laws cover: the counts; share_not_lower; share_rises; the world forms CaptureWorlds.* (referenced and aliased, but in no law before); descent_needs_unrun, with running down written out; descent_exhausted; perturbation_reabsorbed as the instance of Law.reabsorbed; and the Captured witness with its SeekingRuns run forms. Every law was read against Capture, SeekingRuns, Mechanism, Recurrence, Locality, Evolution and Flow. The limitations became four does-not-show items. The Price item is written as \"the selection term of Price's equation (1970)\" so that the market-word lint does not fire. Standard boundaries: no-ethical-premise, no-evaluation, discrete-steps, names-provisional. All bound receipts are core Lean 4.29.1 with empty axiom reports. The counterexample is unchanged. Cut from the correspondence: \"See §83 of the integration note\" and \"adopted on Ren's delegation\". Ren's words are kept verbatim, \"even rationality is self-interest\" with its date (10 October). One related entry was added (capture-through-the-rule). The text_versions are the snapshot d23adf01 and the R35 compaction snapshot ce9b5dc1. The home section in 02-MAP already says \"does not recur\", so no chapter edit is needed. The full check showed only the generated-view error for this id."
+    },
+    {
+     "id": "becoming-renewal-reading",
+     "laws": 6,
+     "does_not_show": 7,
+     "statement": "kept",
+     "claim_kept": false,
+     "declarations_added": [
+      "Becoming.Web.conditions_along",
+      "Becoming.Renewable.process",
+      "Becoming.Renewable.withinRenewal",
+      "Becoming.Renewable.beyondRenewal",
+      "Becoming.Renewable.conditions"
+     ],
+     "references_added": [],
+     "narrowed": "Counterexample X0.1 said \"irreversible loss needs the feedback of the RelationalRenewal law family\". No declaration proves that need, so does_not_show[6] says only that the renewable witness \"shows no irreversible loss\". Loss for good in the support-gated family belongs to the dependency relational-renewal-classification. The statement (DF2's) is exact: \"is a web\" is Web.conditions_along, now cited in law 1. The conclusions are kept as the negated universals the Lean proves.",
+     "chapter_edits": [],
+     "mapping_file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df3b/_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-renewal-reading.md",
+     "lint_clean": true,
+     "lint_warnings": "",
+     "notes": "The six laws cover: a run read as one unfolding; falls_not_recurring; depletion; recurrent renewal (\"no tail ... is free of renewal\"); unrenewed drawdown; and class_belongs_to_the_run with its process and runs. None of the three old counterexamples is witnessed by a declaration, so all became does-not-show items and counterexamples is now []. The retired label J1–J4 became \"the practical commitments\". The pointer to significance-through-a-common-condition was cut from hypotheses[1]: it is not a premise, and that record depends on this one. The review label \"(independent review Q10)\" was cut from the correspondence. Three related entries were added: becoming-stepwise-reading, becoming-dependence-dynamics and identity-across-steps. Standard boundaries: no-ethical-premise, discrete-steps. no-evaluation is not cited, because the references still name Metaethics and ValuationFrames predicates. The five added declarations are elaborated in their files' bound receipts: Labelled 20261028T085101 and Renewal 20261019T185632. For the lander, not changed: the ValuationFrames and Metaethics declarations in references, and the metaethical-core-characterization dependency, describe the connection and transmission laws DF2 moved to significance-through-a-common-condition, and no law here names them. Dropping them is a separate decision. Triage rows 36 and 54 (the 02-MAP links on lines 105 and 114) are already applied in the chapter. The text_versions are the snapshot 1179e425 and the R35 snapshot 7d364839."
+    },
+    {
+     "id": "represented-boundary-against-dependence",
+     "laws": 5,
+     "does_not_show": 3,
+     "statement": "kept",
+     "claim_kept": false,
+     "declarations_added": [],
+     "references_added": [],
+     "narrowed": "Counterexample X1 said renewal over a region omitting a requirement \"does not keep its own support\", which reads as a universal. Omitted.loses_own is one witness, so the text now says \"need not keep its own support: in Omitted the formation renews over the other condition and is unsupported after the step\". The correspondence's \"that route has not begun\" is stale and was cut: route (b)'s feeding closure is stated by the related records feeding-closure and consumption-ends-with-feeders. Law 1 says, as the definition does, that renewal over a region keeps every formation's dependence on each condition of the region the formation takes part in, not only its own dependence.",
+     "chapter_edits": [],
+     "mapping_file": "/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/wt-df3b/_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/represented-boundary-against-dependence.md",
+     "lint_clean": true,
+     "lint_warnings": "",
+     "notes": "The five laws cover: RenewingOver and its order (over, iff_over_all, narrow); the covering region, with RenewingAt.not_undermining; keeps_own with Untightened written out; the Clearing witness, with the conjuncts of undermines_within_renewal; and the Omitted witness with every conjunct of loses_own. The limitations became three does-not-show items. Standard boundaries: no-ethical-premise, no-evaluation, discrete-steps, names-provisional. Hypotheses are kept. The first counterexample's path was corrected from Regions.lean to Clearing.lean, which defines Clearing.renewing_over_resource since R31 and is a hashed reference. Cut from the correspondence: \"(P40)\". The date \"on 10 October\" was added to Ren's verbatim quotes, which come from 2026-10-10-centers-within-the-dynamics.md. next_delta is now stated positively, without the \"route (b)\" label. The text_versions are the snapshot 35dff4ae and the R35 snapshot 1bf28b34. The home section matches the Lean, so no chapter edit is needed. The full check (run once) showed only the generated-view errors for all three ids, and lint --ids reports 0 findings for the three."
+    }
+   ],
+   "not_migrated": []
+  },
+  "review": {
+   "edits": [
+    {
+     "id": "returning-where-the-course-branches",
+     "field": "hypotheses[1].en",
+     "old": "that a configuration at which a run begins returns requires a list holding every configuration.",
+     "new": "the law that a configuration at which a run begins returns is stated with a list holding every configuration, though the run's coming back to each of its configurations needs only the run's list.",
+     "severity": "imprecise",
+     "why": "Lossless.returns takes the stronger premise (every configuration listed), but it is not required. Lossless.comes_back and Lossless.recurs, with only the run's configurations listed, already give the run back at r.state 0 after d > 0 steps, and that is a return of the start. Read as a necessity, 'requires' is false. New length 295/71.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean:448-458 (comes_back, recurs: held : ∀ n, r.state n ∈ l), :463-467 (Lossless.returns: every : ∀ s, s ∈ all); theories/becoming/results/records/returning-where-the-course-branches.json:124"
+    },
+    {
+     "id": "returning-where-the-course-branches",
+     "field": "hypotheses[1].zh",
+     "old": "运行开始处的配置返回，要求列表含有每个配置。",
+     "new": "运行开始处的配置返回之律以列表含有每个配置陈述，而运行回到其每个配置只需列表含有运行的配置。",
+     "severity": "imprecise",
+     "why": "The same correction in Chinese.",
+     "evidence": "Recurrence.lean:448-467; returning-where-the-course-branches.json:125"
+    },
+    {
+     "id": "returning-where-the-course-branches",
+     "field": "laws[9].en",
+     "old": "is possibly drawn into its left end",
+     "new": "is possibly drawn into some region the fork never leaves (its left end, in the proof)",
+     "severity": "imprecise",
+     "why": "fork_lossless_not_returns concludes PossiblyDrawn Fork.law .origin, which says some invariant region possibly draws the origin in. The region {left} is only the proof's witness, so the law states more than the theorem does.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Branching.lean:369-370 (PossiblyDrawn := ∃ R, Invariant P R ∧ …), :771-774; returning-where-the-course-branches.json:103"
+    },
+    {
+     "id": "returning-where-the-course-branches",
+     "field": "laws[9].zh",
+     "old": "并可能被吸入左端",
+     "new": "并可能被吸入分叉从不离开的某个区域（证明中为其左端）",
+     "severity": "imprecise",
+     "why": "The same correction in Chinese.",
+     "evidence": "Branching.lean:369-370, 771-774; returning-where-the-course-branches.json:104"
+    },
+    {
+     "id": "returning-where-the-course-branches",
+     "field": "correspondence.en",
+     "old": "A reading (the AI's, adopted on Ren's delegation):",
+     "new": "An AI reading:",
+     "severity": "style",
+     "why": "'Adopted on Ren's delegation' presents Ren's delegation as the standing of a reading. AGENTS.md forbids this, and the 17 October wording sweep replaced the phrasing by marking readings as readings. Target-capture's migrator cut the same phrase, and the delegation stays in history.",
+     "evidence": "AGENTS.md:25; theories/becoming/results/records/becoming-stepwise-reading.json:756; returning-where-the-course-branches.json:157"
+    },
+    {
+     "id": "returning-where-the-course-branches",
+     "field": "correspondence.zh",
+     "old": "读法（AI 的，依 Ren 的交托采用）：",
+     "new": "AI 的读法：",
+     "severity": "style",
+     "why": "The same correction in Chinese.",
+     "evidence": "AGENTS.md:25; returning-where-the-course-branches.json:158"
+    },
+    {
+     "id": "returning-where-the-course-branches",
+     "field": "history[18].en",
+     "old": "the condition that a run's start returns only with every configuration listed written in, as Lossless.returns takes it",
+     "new": "the premise Lossless.returns takes, a list holding every configuration, written in",
+     "severity": "imprecise",
+     "why": "'Returns only with every configuration listed' is a false necessity: comes_back with the run's list gives the start's return.",
+     "evidence": "Recurrence.lean:448-458, 463-467; returning-where-the-course-branches.json:643"
+    },
+    {
+     "id": "returning-where-the-course-branches",
+     "field": "history[18].zh",
+     "old": "并按 Lossless.returns 写明运行起点返回需要每个构形都被列出",
+     "new": "并写明 Lossless.returns 所取的前提：列表含有每个构形",
+     "severity": "imprecise",
+     "why": "The same correction in Chinese.",
+     "evidence": "Recurrence.lean:448-467; returning-where-the-course-branches.json:644"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/returning-where-the-course-branches.md",
+     "field": "mapping",
+     "old": "| law 7, narrowed to what `Lossless.returns` takes: a list holding every configuration, not only the run's |",
+     "new": "| law 7, with the premise `Lossless.returns` takes, a list holding every configuration; with only the run's configurations listed, the run coming back to its start (law 5, `Lossless.comes_back`) already makes the start return, so nothing that holds is narrowed |",
+     "severity": "imprecise",
+     "why": "The table should describe the record as corrected above. The old C10 (run's list) was true by comes_back.",
+     "evidence": "Recurrence.lean:448-458; df3-mapping/returning-where-the-course-branches.md:26"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/returning-where-the-course-branches.md",
+     "field": "mapping",
+     "old": "| hypotheses[1], extended: a run's start returning requires a list holding every configuration (`Lossless.returns`) |",
+     "new": "| hypotheses[1], extended: the start's return is stated (`Lossless.returns`) with a list holding every configuration, while the run's coming back needs only the run's list |",
+     "severity": "imprecise",
+     "why": "This matches the corrected hypotheses[1]. The intro's clause 'which the old claim and hypothesis did not distinguish from the run's list' (line 7) should be read the same way.",
+     "evidence": "df3-mapping/returning-where-the-course-branches.md:7, :36"
+    },
+    {
+     "id": "whole-persists-through-generation",
+     "field": "laws[11].en",
+     "old": "so a member arises across every step",
+     "new": "so no step passes with no member arising across it",
+     "severity": "overclaim",
+     "why": "Layered.within proves only the negated universal ¬ ∀ j < 1, ∀ p ≠ lineage, ¬ Arises (S + j) p. 'A member arises across every step' is the existential, which the law does not have.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean:906-908; whole-persists-through-generation.json:105"
+    },
+    {
+     "id": "whole-persists-through-generation",
+     "field": "laws[11].zh",
+     "old": "所以每步都有成员生起",
+     "new": "所以没有一步无成员生起",
+     "severity": "overclaim",
+     "why": "The same correction in Chinese.",
+     "evidence": "Wholes.lean:906-908; whole-persists-through-generation.json:106"
+    },
+    {
+     "id": "whole-persists-through-generation",
+     "field": "counterexamples[4].detail.en",
+     "old": "a member arises at every step",
+     "new": "no step passes with no member arising",
+     "severity": "overclaim",
+     "why": "This counterexample is witnessed by Layered.within, a negated universal. The kept text states the existential that the 17 October A4 correction removed from the claim.",
+     "evidence": "Wholes.lean:906-908; whole-persists-through-generation.json:195"
+    },
+    {
+     "id": "whole-persists-through-generation",
+     "field": "counterexamples[4].detail.zh",
+     "old": "每步都有成员生起",
+     "new": "没有一步无成员生起",
+     "severity": "overclaim",
+     "why": "The same correction in Chinese.",
+     "evidence": "Wholes.lean:906-908; whole-persists-through-generation.json:194"
+    },
+    {
+     "id": "whole-persists-through-generation",
+     "field": "hypotheses[1].en",
+     "old": "two premises, each used by one law",
+     "new": "two alternative premises, each taken by its own laws",
+     "severity": "imprecise",
+     "why": "Brief is taken by laws 4 and 6 (Covered.arises_within, Whole.arises_within), and Ends with Listed by laws 5 and 6, so 'each used by one law' is false. The Chinese still says 定理. New length 418.",
+     "evidence": "Wholes.lean:192-195, 220-232, 247-250, 282-297; whole-persists-through-generation.json:121"
+    },
+    {
+     "id": "whole-persists-through-generation",
+     "field": "hypotheses[1].zh",
+     "old": "两种前提，各用于一个定理",
+     "new": "两种可选的前提，各由其自身的规律取用",
+     "severity": "imprecise",
+     "why": "The same correction in Chinese (186 characters), which also aligns it with the English 'law'.",
+     "evidence": "whole-persists-through-generation.json:122"
+    },
+    {
+     "id": "whole-persists-through-generation",
+     "field": "correspondence.en",
+     "old": "is an AI reading, adopted on Ren's delegation.",
+     "new": "is an AI reading.",
+     "severity": "style",
+     "why": "Delegation phrasing presents Ren's words as the standing of a reading. The delegation provenance stays in history and the snapshot.",
+     "evidence": "AGENTS.md:25; becoming-stepwise-reading.json:756; whole-persists-through-generation.json:212"
+    },
+    {
+     "id": "whole-persists-through-generation",
+     "field": "correspondence.zh",
+     "old": "是 AI 的读法，依 Ren 的交托采用。",
+     "new": "是 AI 的读法。",
+     "severity": "style",
+     "why": "The same correction in Chinese.",
+     "evidence": "AGENTS.md:25; whole-persists-through-generation.json:213"
+    },
+    {
+     "id": "whole-persists-through-generation",
+     "field": "proof_bindings",
+     "old": "",
+     "new": "append: [{\"source\": \"experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean\", \"receipt\": \"experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json\", \"sha256_pointer\": \"/source_sha256/Becoming.Identity\", \"success_pointer\": \"/status\", \"success_value\": \"passed\"}, {\"source\": \"experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean\", \"receipt\": \"experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json\", \"sha256_pointer\": \"/source_sha256/Becoming.Arising\", \"success_pointer\": \"/status\", \"success_value\": \"passed\"}]",
+     "severity": "missing",
+     "why": "Identity.lean (odd, Layered.Level, Layered.web, Layered.both) and Arising.lean (Web.Arises, Web.Unceasing) are proof references with cited declarations but no proof binding. Without bindings, the evidence paragraph's 'empty axiom report for every cited declaration' and no-ethical-premise rest on unbound receipts. binding_for.py gives receipt 20261028T085101.429997Z, which binds both files' current bytes and reports [] for all six declarations. If added, validation_scope should name Identity and Arising among the bound modules.",
+     "evidence": "binding_for.py output for Becoming/Identity.lean and Becoming/Arising.lean; becoming-checks/20261028T085101.429997Z/verification.json modules Becoming.Identity, Becoming.Arising axiom_dependencies"
+    },
+    {
+     "id": "whole-persists-through-generation",
+     "field": "references",
+     "old": "",
+     "new": "append: {\"path\": \"experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json\", \"role\": \"receipt\", \"sha256\": \"4d94c1b82af02e7869351aba40ea8ebaa61b5614423929afa25924281fdda97a\"}",
+     "severity": "missing",
+     "why": "This is the receipt the two added bindings name, as binding_for.py prints it.",
+     "evidence": "binding_for.py output for Becoming/Identity.lean"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/whole-persists-through-generation.md",
+     "field": "mapping",
+     "old": "| law 12 (the witness) |",
+     "new": "| law 12 (the witness; “a member arises at every step” narrowed to the negated universal `Layered.within` proves: no step passes with no member arising) |",
+     "severity": "overclaim",
+     "why": "The table follows the corrected law 12.",
+     "evidence": "df3-mapping/whole-persists-through-generation.md:19; Wholes.lean:906-908"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/whole-persists-through-generation.md",
+     "field": "mapping",
+     "old": "| counterexamples[4] (unchanged; law 12) |",
+     "new": "| counterexamples[4] (“a member arises at every step” narrowed to the negated universal `Layered.within` proves; law 12) |",
+     "severity": "overclaim",
+     "why": "The table follows the corrected counterexample.",
+     "evidence": "df3-mapping/whole-persists-through-generation.md:44"
+    },
+    {
+     "id": "rest-with-refinement-counted",
+     "field": "hypotheses[1].en",
+     "old": "(an AI reading, adopted on Ren's delegation)",
+     "new": "(an AI reading)",
+     "severity": "style",
+     "why": "Delegation phrasing gives the reading its standing from Ren. Ren's words are now provenance in the correspondence, as the migrator intended.",
+     "evidence": "AGENTS.md:25; becoming-stepwise-reading.json:756; rest-with-refinement-counted.json:102"
+    },
+    {
+     "id": "rest-with-refinement-counted",
+     "field": "hypotheses[1].zh",
+     "old": "（AI 的读法，依 Ren 的交托采用）",
+     "new": "（AI 的读法）",
+     "severity": "style",
+     "why": "The same correction in Chinese.",
+     "evidence": "rest-with-refinement-counted.json:103"
+    },
+    {
+     "id": "rest-with-refinement-counted",
+     "field": "correspondence.en",
+     "old": "there is difference … or it won't be",
+     "new": "there is difference … so in the sense of becoming, the becoming into will have relational difference, or it won't be",
+     "severity": "style",
+     "why": "The quote was shortened past 'relational difference', the words the hypothesis's reading ('an amount is a difference made') takes up. The fragment is verbatim from the source, and the change brings the English to 1125. The Chinese would reach about 534, a warning over the 500 cap, so the lander may decline it.",
+     "evidence": "sources/15-codex-theory-conversations/2026-10-11-difference-in-becoming.md:13; rest-with-refinement-counted.json:162"
+    },
+    {
+     "id": "rest-with-refinement-counted",
+     "field": "correspondence.zh",
+     "old": "there is difference … or it won't be",
+     "new": "there is difference … so in the sense of becoming, the becoming into will have relational difference, or it won't be",
+     "severity": "style",
+     "why": "The same English quote inside the Chinese text. Apply it with the English edit or neither.",
+     "evidence": "rest-with-refinement-counted.json:163"
+    },
+    {
+     "id": "theories/becoming/chapters/02-MAP.md",
+     "field": "chapter",
+     "old": "then the spine's premises bring rest at every resolution with nothing added",
+     "new": "then, with nothing added to the spine's premises, that the world rests at every resolution cannot be refuted",
+     "severity": "overclaim",
+     "why": "World.rests_unrefuted_refinement_counted concludes ¬ ¬ ∃ N, w.RestsFrom N. 'Bring rest' reads as rest established. The record's statement ('unrefutable as there') and its does_not_show[2] say the weaker thing.",
+     "evidence": "theories/becoming/chapters/02-MAP.md:223; experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean:681-685"
+    },
+    {
+     "id": "differences-below-threshold",
+     "field": "laws[8].en",
+     "old": "fail a formation from step one",
+     "new": "fail a formation at step one",
+     "severity": "imprecise",
+     "why": "JointFailure.difference_kept proves ¬ (web 2).Supported 1 () ∧ ¬ (web 3).Supported 1 (), failure at step one only. Its docstring says 'from the second step on', but the theorem does not.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean:1032-1036; differences-below-threshold.json:77"
+    },
+    {
+     "id": "differences-below-threshold",
+     "field": "laws[8].zh",
+     "old": "两个网从第 1 步起都不支持一个形成",
+     "new": "两个网在第 1 步都不支持一个形成",
+     "severity": "imprecise",
+     "why": "The same correction in Chinese.",
+     "evidence": "Testing.lean:1032-1036; differences-below-threshold.json:78"
+    },
+    {
+     "id": "differences-below-threshold",
+     "field": "correspondence.en",
+     "old": "and 理 is read as a model answerable to coupling. So the readings recorded here are the AI's narrowed ones, adopted on Ren's delegation, not the wording Ren accepted.",
+     "new": "and 理 is read as a model answerable to coupling, later as a lumping that models structure and change. So the readings here are AI readings the review narrowed, not the wording Ren accepted.",
+     "severity": "imprecise",
+     "why": "Two fixes in one span. (1) Cutting 'later … as the modeling of the laws of structure and change' leaves the superseded reading of 理 as the record's reading, while the glossary and 03 §li give 'a lumping that models structure and change at once'. (2) The delegation phrasing gives the readings their standing from Ren. The result is 1193 characters, under the 1200 cap.",
+     "evidence": "GLOSSARY.md:46; theories/becoming/chapters/03-KNOWING.md:183; AGENTS.md:25; differences-below-threshold.json:182"
+    },
+    {
+     "id": "differences-below-threshold",
+     "field": "correspondence.zh",
+     "old": "理 读作对耦合负责的模型。所以记录中的读法是 AI 收窄之后的，依 Ren 的交托采用，不是 Ren 所接受的原文。",
+     "new": "理 读作对耦合负责的模型，后读作同时为结构与变化建模的归并。所以这里的读法是经审查收窄的 AI 读法，不是 Ren 所接受的原文。",
+     "severity": "imprecise",
+     "why": "The same two corrections in Chinese. The result is 500 characters, within the cap.",
+     "evidence": "GLOSSARY.md:46; differences-below-threshold.json:183"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/differences-below-threshold.md",
+     "field": "mapping",
+     "old": "| law 9 (from step one, counted from 0) |",
+     "new": "| law 9 (at step one, counted from 0: the theorem states the failure at step 1 only) |",
+     "severity": "imprecise",
+     "why": "The table follows the corrected law 9.",
+     "evidence": "df3-mapping/differences-below-threshold.md:21"
+    },
+    {
+     "id": "_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/differences-below-threshold.md",
+     "field": "mapping",
+     "old": "| correspondence (“a model answerable to coupling”); the later reading, a reading of 理 for the whole account, stays in the snapshot, cut for the cap |",
+     "new": "| correspondence (“a model answerable to coupling, later as a lumping that models structure and change”, the glossary's current reading) |",
+     "severity": "imprecise",
+     "why": "The table follows the corrected correspondence. The R7 row ('the delegation label D26 cut') should add that the delegation phrase was replaced by the AI label.",
+     "evidence": "df3-mapping/differences-below-threshold.md:38-39"
+    },
+    {
+     "id": "becoming-renewal-reading",
+     "field": "laws[0].en",
+     "old": "are defined on it.",
+     "new": "are defined on the unfolding.",
+     "severity": "imprecise",
+     "why": "'It' reads as the static web, the nearest noun. The cited RelationalRenewal.RenewingIn and ConsumingIn are defined on the Unfolding (Conditions.along). The static web is Web.conditions_along's static (K.along r).",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean:132-135; becoming/Becoming/Labelled.lean:510-512, 607-609; becoming-renewal-reading.json:18"
+    },
+    {
+     "id": "becoming-renewal-reading",
+     "field": "laws[0].zh",
+     "old": "更新与消耗之形成的类在其上定义",
+     "new": "更新与消耗之形成的类在该展开上定义",
+     "severity": "imprecise",
+     "why": "The same correction in Chinese.",
+     "evidence": "becoming-renewal-reading.json:19"
+    },
+    {
+     "id": "endpoint-loss-and-return",
+     "field": "does_not_show[0].en",
+     "old": "; where a law comes from, and how laws compare, lies outside them.",
+     "new": "; where a law comes from lies outside them.",
+     "severity": "imprecise",
+     "why": "No old sentence supplies 'how laws compare': mapping row L4 is law origin only, and 'ethical ranking' went to no-evaluation. The record's own witness also compares two laws taking one change with different returns. The item adds an unsourced and misleading scope.",
+     "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Irreversibility.lean:41-45; df3-mapping/endpoint-loss-and-return.md:31-32; endpoint-loss-and-return.json:62"
+    },
+    {
+     "id": "endpoint-loss-and-return",
+     "field": "does_not_show[0].zh",
+     "old": "；规律从何而来、规律之间如何比较，不在其内。",
+     "new": "；规律从何而来，不在其内。",
+     "severity": "imprecise",
+     "why": "The same correction in Chinese.",
+     "evidence": "endpoint-loss-and-return.json:63"
+    }
+   ],
+   "verdicts": [
+    {
+     "id": "returning-where-the-course-branches",
+     "verdict": "sound-after-edits",
+     "note": "All 11 laws were checked against Recurrence.lean and Branching.lean, and the iff, witness and negated-universal readings are right. Every old sentence is mapped. text_versions and the history note are as required, and the receipts (Branching 20261020T051144, Recurrence/Frame/Laws 20261025T182341, and others) report empty axioms. Edits: (1) the hypothesis and history call the every-configuration list for a run's start 'required', but comes_back already gives the return with the run's list. (2) Law 10 names the left end where the theorem states only PossiblyDrawn. (3) The correspondence keeps 'adopted on Ren's delegation'. Style note, no edit: the Chinese laws use 构形 while the statement and hypotheses use 配置."
+    },
+    {
+     "id": "whole-persists-through-generation",
+     "verdict": "sound-after-edits",
+     "note": "All 12 laws were checked against Wholes.lean. The cover and whole laws keep their negated universals and premises, and the witnesses match. Edits: (1) law 12 and counterexample 4 read Layered.within's negated universal as 'a member arises at every step' (overclaim). (2) hypotheses[1] says 'each used by one law', which is false, and its Chinese differs from the English. (3) Delegation phrasing remains in the correspondence. (4) Identity.lean and Arising.lean have cited declarations but no binding; a binding to 20261028T085101 is proposed, and all six declarations are axiom-free there."
+    },
+    {
+     "id": "rest-with-refinement-counted",
+     "verdict": "sound-after-edits",
+     "note": "All 10 laws were checked against Resolution.lean, InAmounts.lean and Space.lean. The every-step dissipation, the enclosure from T, the decided activity and the negated universals of refinement_feeds_witnesses are all right, and the counterexample narrowing is correct. Edits: delegation phrasing in hypotheses[1], an optional restoration of the shortened Ren quote (it would cause a zh cap warning), and a chapter edit at 02-MAP:223, where 'bring rest' overstates the ¬¬∃ conclusion."
+    },
+    {
+     "id": "differences-below-threshold",
+     "verdict": "sound-after-edits",
+     "note": "All 13 laws were checked against Testing.lean. The narrowing of difference_changes_after_divergence to its negated universals is correct, and Web.CoupledInto and AlikeThrough are defined in Testing.lean and bound. Edits: (1) the JointFailure law says 'from step one', but the theorem proves step 1 only. (2) The correspondence leaves the superseded reading of 理 as the current one and keeps the delegation phrasing; the combined fix fits the caps. Cutting Ren's second quote and the 识 word history from the correspondence is mapped and acceptable."
+    },
+    {
+     "id": "target-capture",
+     "verdict": "sound",
+     "note": "All 8 laws match Capture.lean (with CaptureWorlds), SeekingRuns.lean, Mechanism.lean, Locality.lean and Evolution.lean. The two narrowings are correct: 'stops' became 'does not recur', and the transmission premise is written into the statement. Every receipt is core 4.29.1 with empty axioms. The correspondence has no delegation phrasing, and its Ren quotes and dates are verified. Moving the old next step to capture-through-the-rule is acceptable, because that record's own next step carries the general case."
+    },
+    {
+     "id": "becoming-renewal-reading",
+     "verdict": "sound-after-edits",
+     "note": "All 6 laws match Renewal.lean, Labelled.lean and RelationalRenewal.lean, and the five added declarations exist and are bound. Turning the three counterexamples into does-not-show items, J1–J4 into 'the practical commitments' and dropping the hypothesis pointer are all correct. Edit: one ambiguous 'on it' in law 1. Not changed, for the lander: the Metaethics and ValuationFrames references and the metaethical-core-characterization dependency name no law here. The full check's error 'missing or self result link becoming-spine-instances' comes from that other record being in an invalid state (references not a list) under another unit's edit, not from this record."
+    },
+    {
+     "id": "represented-boundary-against-dependence",
+     "verdict": "sound",
+     "note": "All 5 laws match Regions.lean, Clearing.lean, Dependence.lean, Admission.lean and Flow.lean: Acting, Taking, Untightened and RenewingOver keep every formation's dependence. The counterexample path fix to Clearing.lean and the 'need not keep' narrowing are correct. The Ren quotes are verified against the 10 October source, and the stale route clause is cut with its reason mapped. Bindings and axioms are clean."
+    },
+    {
+     "id": "endpoint-loss-and-return",
+     "verdict": "sound-after-edits",
+     "note": "All 4 laws match Labelled.lean and Irreversibility.lean, both iffs are proved in both directions, and the receipts are clean. Edit: does_not_show[0] adds 'how laws compare', which no old sentence supplies and which the record's own witness contradicts. Style note, no edit: the Chinese uses 构形 in the laws and 配置 in the hypotheses."
+    }
+   ],
+   "checked": "For all 8 records I read the snapshot, the migrated record, the mapping file and the home section in theories/becoming/chapters/02-MAP.md, and checked every law against the current Lean. A script confirmed for every referenced Lean file that its sha256 matches the current bytes and its bound receipt. Every law declaration is listed in references, and every cited bound declaration has an empty axiom_dependencies entry in its receipt (all core, Lean 4.29.1). Unbound proof references with declarations: Identity.lean and Arising.lean in whole-persists (edit proposed). Bridge and RenewalComparison are provenance only. text_versions entry 0 equals df3b/snapshots.json and entry 1 is the R35 snapshot, each file present with a matching hash. Earlier history entries, ids, aliases, dependencies and proof_bindings are unchanged, and the files round-trip with indent 2. All Ren quotes were checked against sources/15-*. lint --ids (space-separated) for the 8 ids gives 0 findings and 0 errors. One full check (52 s) shows no error for these ids except 'becoming-renewal-reading: missing or self result link becoming-spine-instances', caused by becoming-spine-instances currently failing 'expected lists: references' under another unit's in-progress edit. No file was edited. The scratch audit scripts are /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/audit.py and /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/meta.py."
+  }
+ }
+]

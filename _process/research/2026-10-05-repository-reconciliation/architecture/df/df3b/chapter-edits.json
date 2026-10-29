@@ -286,5 +286,21 @@
   "old": "finishes it in exactly that work plus one tick, every shorter run leaving it pending",
   "new": "finishes it in that work plus one tick, every shorter run leaving it pending",
   "by": "reviewer"
+ },
+ {
+  "unit": "J",
+  "record": "positioned-positive-reason",
+  "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "old": "the least such reason is fixed by access and positive ground alone.",
+  "new": "the least such reason is access together with the secured new content (`SecuredContent.route_reason_is_least`).",
+  "by": "migrator"
+ },
+ {
+  "unit": "K",
+  "record": "",
+  "file": "theories/becoming/chapters/02-MAP.md",
+  "old": "then the spine's premises bring rest at every resolution with nothing added",
+  "new": "then, with nothing added to the spine's premises, that the world rests at every resolution cannot be refuted",
+  "by": "reviewer"
  }
 ]
