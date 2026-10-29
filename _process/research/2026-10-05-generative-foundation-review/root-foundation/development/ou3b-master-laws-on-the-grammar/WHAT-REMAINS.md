@@ -81,6 +81,32 @@ With the central declarations settled, two lines go on, on disjoint files:
 
 After them, the 9,370 theorems that read no field of the old base (frames, processes, runs, numbers, lists) are the largest remaining question of the lifting: whether their statements can be put in the grammar's terms. That gets a design when OU3f's audit shows what the pattern is. *(29 October 2026.)* WRT2 landed (`8882b7995`, study §440). OU3f's audit (`cafb743de`) shows the pattern: of 436 theorems reading only activity, 400 are laws of their models. The no-field layer is therefore taken whole, through a representation of processes both ways (WRP: the other model, the first boundary WRT2's record names), not theorem by theorem. Its design goes to WRT's designer.
 
+## From no gap to the root: full unification (29 October 2026)
+
+No gap is EC's sense of completion: every central declaration has a master law or a named reason. It does not yet make the root the root of every law. Of the 118 distinct central declarations, 43 reach the grammar. Of the other 75, 44 rest on amounts: balance, represented (32); the premises support and dissipation (9); Price's identity (3). Seven more rest on weights. A proposal from the session of the twenty-first review (`../fu-full-unification/PROPOSAL.md`) asked what "full" would require. OU's plan now takes its answer, with three changes, as §十三 item 13 and decision D25:
+
+- **F1.** Every model is represented both ways, amounts included, or the failure is written down at every selection tried.
+- **F2.** Every central declaration is either derived from a grammar law or stated at a represented model, and its premises are stated there too. "Balance, represented" does not remain as a category.
+- **F3.** The three readings of "more" are joined, or their separation is adopted as central (GW's line).
+- **F4.** The five significance rows are stated on the root, with the condition and C still named premises and the free predicate still the general form.
+- **F5.** The measure tells derivation, representation at a model, and a named premise apart (MV's line).
+
+The three changes:
+
+- A statement at a represented model counts as a representation, not a derivation.
+- If balance is not derived, amounts become the root's second sort only with their interface stated as laws, not as a category name.
+- The plan's deferral of the ethics is lifted for F4 alone.
+
+A failure written down with its witnesses completes an item.
+
+The items:
+
+- **U1, balance under a relation.** Units are occurrences whose continuation pairs before ++ given with after ++ taken. A design first, then one independent review, with no Lean claimed. It is taken by the session that proposed it, beside WRP and on disjoint files, and builds on WRT2's occurrence model without editing it. `Flow.balances_iff_units` already says why this is the crux: "the matching is supplied, built from the numbers, not derived from the unfolding." Any pairing at one relatum is just equal counts (Hume's principle), so it would make the item near-definitional. Content can only come from a relation of the unfolding that restricts which pairings exist: units given and taken along the World's own exchanges, continued across the coupling boundary. The design's first question is therefore whether balance under that relation is strictly stronger than count balance, with a witness where counts balance and no matching that respects the exchanges exists, and whether a central law follows from it (`Acting.giversSupported`, `Balances.rise_draws_beyond_inflow`, `joint_excess_ends`). If not, F13's verdict stands, and amounts get their interface as the second sort. The atomism this needs is a modelling choice (natural-number amounts) and is named as one.
+- **U2, the 13 definitional rows and 11 statements at a model.** These go on the root after WRP lands, module by module with each module's owner.
+- **U3, the significance rows.** These follow U1, for weightings.
+
+U2 and U3 get board rows when their gates open. Until then they stay here, so that no unclaimed rows lapse on the board.
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.
