@@ -20,7 +20,6 @@ a model in the grammar needs if it is not to depend on how its carrier is named
 | `«静之像»`, `«一之像»`, `«部分恒等之像»` | identity, the one and a predicate's partial identity are carried |
 | `«合之像»`, `«逆之像»`, `«而之像»`, `«及之像»`, `«历之像»`, `«迭之像»`, `«则之对应»` | carrying kept by the grammar's operations, by passing through a word (its letters renamed) and by steps, and inclusion kept |
 | `«X之对应»` | the listed term `X` kept by a correspondence carrying what it reads |
-| `«保之像»` | preserving (保), read through the image: `«则» («像» φ R) R'` exactly where `R x y → R' (φ x) (φ y)`; a map preserving a relation, not a relation kept (守) nor two kept each within the other (齐) |
 | `«尽之拉回»`, `«延之拉回»` | ending on every branch pulled back along a map carrying continuation from a closed region; going on along some branch pulled back along a map lifting continuation |
 
 * **Carrying through the image.** That `e` carries `R` to `R'` is written with no new term, as the image of
@@ -42,8 +41,9 @@ a model in the grammar needs if it is not to depend on how its carrier is named
   The other terms of the grammar are not stated here; each would be kept the same way, and is added when
   a consumer reads it.
 * **Along maps.** A map preserves a relation exactly where the image lies within the other
-  (`«保之像»`), the inclusion counterpart of carrying. Ending on every branch (`«尽»`) reflects along any
-  map that carries continuation from a region closed under it (`«尽之拉回»`), and going on along some
+  (`«保之像»`, stated beside `«像»` in `Becoming.GrammarLaws`), the inclusion counterpart of
+  carrying. Ending on every branch (`«尽»`) reflects along any map that carries continuation from a
+  region closed under it (`«尽之拉回»`), and going on along some
   branch (`«延»`) along any map that lifts continuation (`«延之拉回»`): no inverse is needed for either.
   `«尽之对应»` and `«延之对应»` are two cases of each, and the World reads the amounts' law of falls
   ending through the first.
@@ -96,7 +96,7 @@ def prod {γ : Type w} {δ : Type u'} (e : «一一对应» α β) (e' : «一�
 
 end «一一对应»
 
-/-! ## Along maps: pulled back, and preserving -/
+/-! ## Along maps: pulled back -/
 
 /-- **Ending on every branch, pulled back (尽之拉回).** Along a map carrying continuation from a region
 `P` closed under it into continuation of another model, ending on every branch at an image gives it at
@@ -126,14 +126,6 @@ theorem «延之拉回» {α : Type u} {κ : Type v} {R L : «际» α} {R' L' :
     match goes (φ z) inside with
     | ⟨w', next, c'⟩ => match lifts z w' c' with
       | ⟨y, c, same⟩ => ⟨y, Eq.subst (motive := S') same.symm next, c⟩⟩
-
-/-- **Preserving, read through the image (保之像).** A map takes every pair `R` relates to a pair `R'`
-relates exactly where the image of `R` along it lies within `R'`. -/
-theorem «保之像» {α : Type u} {κ : Type v} (φ : α → κ) (R : «际» α) (R' : «际» κ) :
-    «则» («像» φ R) R' ↔ ∀ x y, R x y → R' (φ x) (φ y) :=
-  ⟨fun within x y r => within _ _ ⟨x, y, rfl, r, rfl⟩,
-   fun keeps _ _ ⟨x, y, hx, r, hy⟩ => Eq.subst (motive := fun b => R' _ b) hy
-     (Eq.subst (motive := fun a => R' a (φ y)) hx (keeps x y r))⟩
 
 /-- Every relation is the relation it is (`«谓»` is reflexive). -/
 theorem «谓之自反» {α : Type u} (R : «际» α) : «谓» R R :=

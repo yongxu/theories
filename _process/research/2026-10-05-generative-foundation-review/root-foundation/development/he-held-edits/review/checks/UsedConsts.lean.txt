@@ -1,0 +1,17 @@
+import Becoming.Mechanism
+import Becoming.GrammarLaws
+import Becoming.Dissipation
+import Lean
+open Lean Elab Command
+#eval show CommandElabM Unit from do
+  let env ← getEnv
+  for n in [`Becoming.factors_image, `Becoming.Image.least, `Becoming.kept_onward, `Becoming.«保之像», `Becoming.total_eq_of_supports] do
+    match env.find? n with
+    | some (.thmInfo t) =>
+      let cs := t.value.getUsedConstants.filter (fun c => (`Becoming).isPrefixOf c || (`Generative).isPrefixOf c)
+      logInfo m!"{n} uses {cs.toList}"
+    | _ => logInfo m!"{n}: not a theorem here"
+set_option pp.proofs true
+set_option pp.explicit true
+#print Becoming.factors_image
+#print Becoming.Image.least

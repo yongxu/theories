@@ -1,0 +1,32 @@
+# UsedConstsOld.lean.txt (compiled as a .lean file) against the old build (main receipt 20261029T162632.074811Z)
+Becoming.factors_image uses [Generative.Process, Generative.Process.step]
+Becoming.Image.least uses [Generative.Process,
+ Becoming.FactorsThrough,
+ Generative.Process.step,
+ Becoming.Image,
+ Becoming.Image.least.match_1_1]
+Becoming.kept_onward uses [Becoming.kept_onward.match_1_1, Becoming.le_dest, Becoming.«闭含所闭», Becoming.«线则所闭»]
+Becoming.«保之像» uses [Becoming.«际», Becoming.«则», Becoming.«像», Becoming.«保之像».match_1_1]
+Becoming.total_eq_of_supports uses [Becoming.Distinct, Becoming.total, Becoming.total_le_of_support]
+theorem Becoming.factors_image.{u, v, w} : ∀ {S : Type u} {A : Type v} {K : Type w} (P : Generative.Process S A)
+  (π : S → K), @Becoming.FactorsThrough S A K P π (@Becoming.Image S A K P π) :=
+fun {S} {A} {K} P π s x u step =>
+  @Exists.intro S
+    (fun s_1 =>
+      @Exists S fun u_1 =>
+        And (@Eq K (π s_1) (π s)) (And (@Generative.Process.step S A P s_1 x u_1) (@Eq K (π u_1) (π u))))
+    s
+    (@Exists.intro S
+      (fun u_1 => And (@Eq K (π s) (π s)) (And (@Generative.Process.step S A P s x u_1) (@Eq K (π u_1) (π u)))) u
+      (@And.intro (@Eq K (π s) (π s)) (And (@Generative.Process.step S A P s x u) (@Eq K (π u) (π u))) (@rfl K (π s))
+        (@And.intro (@Generative.Process.step S A P s x u) (@Eq K (π u) (π u)) step (@rfl K (π u)))))
+theorem Becoming.Image.least.{u, v, w} : ∀ {S : Type u} {A : Type v} {K : Type w} {P : Generative.Process S A}
+  {π : S → K} {Q : Generative.Process K A},
+  @Becoming.FactorsThrough S A K P π Q →
+    ∀ {k : K} {a : A} {κ : K},
+      @Generative.Process.step K A (@Becoming.Image S A K P π) k a κ → @Generative.Process.step K A Q k a κ :=
+fun {S} {A} {K} {P} {π} {Q} factors {k} {a} {κ} x =>
+  @Becoming.Image.least.match_1_1 S A K P π k a κ (fun x => @Generative.Process.step K A Q k a κ) x
+    fun s u at_k step to =>
+    @Eq.rec K (π s) (fun x h => @Generative.Process.step K A Q x a κ)
+      (@Eq.rec K (π u) (fun x h => @Generative.Process.step K A Q (π s) a x) (factors s a u step) κ to) k at_k

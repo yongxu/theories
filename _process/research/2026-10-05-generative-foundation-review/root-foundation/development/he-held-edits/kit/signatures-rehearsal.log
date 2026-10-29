@@ -1,0 +1,31 @@
+{
+ "old_receipt": "20261029T164943.729811Z",
+ "new_receipt": "20261029T182639.094829Z",
+ "declarations_old": 1062,
+ "declarations_new": 1062,
+ "changed": [],
+ "gone": [],
+ "added": [],
+ "moved": {
+  "Becoming.kept_onward": [
+   "KeptOnward",
+   "GrammarLaws"
+  ],
+  "Becoming.total_eq_of_supports": [
+   "KeepingWidening",
+   "Dissipation"
+  ],
+  "Becoming.«保之像»": [
+   "GrammarTransport",
+   "GrammarLaws"
+  ]
+ },
+ "definitions_rewritten": [],
+ "definitions_gone": [],
+ "definitions_added": [],
+ "scanner_false_positives": [
+  "Becoming.constant"
+ ]
+}
+every statement of the 12 changed modules unchanged; moved: {'Becoming.kept_onward': ['KeptOnward', 'GrammarLaws'], 'Becoming.total_eq_of_supports': ['KeepingWidening', 'Dissipation'], 'Becoming.«保之像»': ['GrammarTransport', 'GrammarLaws']} ; Becoming.KeptOnward gone from the run; every axiom report of them empty; scanner false positives: ['Becoming.constant']
+OK

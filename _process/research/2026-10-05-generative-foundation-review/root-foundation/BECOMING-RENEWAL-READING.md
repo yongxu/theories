@@ -21096,3 +21096,270 @@ Output→input: conditioning-by-restriction, free-energy-bounds-surprisal, gener
 **Decisions at landing.** Two records, the claims being distinct: the periphery's identities on the reals and the core's law in counting form, both in 03 §6 after UE17's free energy, since expected free energy is read there through a lumping. The core module is a leaf at L1 importing `ConditionalWeights` alone; the periphery module sits in `lean/free-energy/` beside `FreeEnergyReals`, which it imports, with its own checker, and the core does not import it. No theorem joins the halves: the periphery's ratio law is stated on UE17's posterior, the core's on the core's share given the record, and the join through `givenShare_eq_posterior` is named as not stated.
 
 **Readings** [AI reading, D45]. Seeking information within a model separates only what some experiment it can choose separates: the epistemic drive corrects within its hypothesis space, under the policies it has, not beyond. What changes a lumping is what couples in from beyond the model, a new likelihood or a new hypothesis, as the laws of registration revision state; the principle's own literature adds novelty and structure learning for this reason, both conditioning in a larger model, whose ties the law covers too. So what the theory adds to active inference here is where its self-correction ends, stated for every policy.
+
+## 454. The free-energy principle in the theory, on one page (UE20)
+
+UE16 to UE19 stated the free-energy principle's quantities and claims in the theory and forbade four statements of its literature. UE20 gathers them for readers from that literature on [one page](../../../../theories/becoming/FREE-ENERGY-PRINCIPLE.md), as the last item of the plan for the principle as an integral part of the theory ([plan](development/ue-unified-explanation/FEP-INTEGRATION.md)).
+
+```text
+Result(s): none new; the page theories/becoming/FREE-ENERGY-PRINCIPLE.md, documents only, with no Lean and no record.
+Delta: (1) claim by claim: belief, surprisal, variational and expected free energy, the Markov blanket, self-evidencing,
+       the existence claim and the habit, each with its home section, standing and relation, and the statements of the
+       literature forbidden or graded.
+       (2) where the two agree, labelled as readings: perception as conditioning, the blanket's partition as the
+       couplings, the habit as a count, risk for a point prediction, collective knowledge within the pooled couplings.
+       (3) the four third parts with their hypotheses, the readings' failure conditions and their standing; three more
+       statements graded under the laws of a code, not counted.
+       (4) what persistence needs: the existence claim forbids nothing alone; the unseen break on a blanketed agent.
+       (5) what the principle states that the theory cannot yet.
+Premises: none beyond the linked records'.
+Evidence: an independent review by another AI agent (REVIEW-UE20), fourteen findings, every one taken, and a re-check
+       (RECHECK-UE20); the page's links checked at landing.
+Boundary: adds no result; every law is stated once in its home section and the page says no more than that statement.
+Output→input: conditioning-by-restriction, free-energy-bounds-surprisal, expected-free-energy-and-its-terms,
+       what-seeking-cannot-separate, the-markov-blanket-as-a-coupling-structure, what-the-existence-claim-forbids,
+       identical-cells-under-a-descent-treating-them-alike, risk-minimization-on-a-shared-renewal,
+       capture-by-counted-choices → the page → 03 §6, 08 §8, FEP-INTEGRATION, UE.
+```
+
+**The review and the fix round.** An independent read-only review by another AI agent ([REVIEW-UE20](development/ue20-fep-in-the-theory/REVIEW-UE20.md)) checked every Lean name and link, the attributions against the records and four papers at their sources, and the page against the plan's list of quantities and claims. It found the links and names right and the summaries saying more than their sources: readings stated as laws, a witness stated as a law, a free energy counted among the readings alike at the step where it can differ, two wrong sentences on the papers' simulations and on refutation, and claims left unplaced. Its fourteen findings are all taken: the readings labelled, the held pair marked as a witness, the free energy placed before the break registers with no action changing the supply, the simulations and refutation conditions stated paper by paper, the three statements under the laws of a code placed and not counted, and §5 completed. The reviewer then re-checked the fold ([RECHECK-UE20](development/ue20-fep-in-the-theory/RECHECK-UE20.md)): twelve findings taken soundly and two in part, with five findings, every one taken: the code law's conditions and the papers' systems for the three statements under it, the ecosystems paper's sentence on shared goals read as a guarantee, expected free energy's source, the pool's pairwise law beside collective knowledge, kept apart from the reading drawn from it, and the uniqueness clause in 05 §9's words.
+
+**Decisions at landing.** The page sits in `theories/becoming/` beside the collective-direction page, linked from 03 §6 after the free-energy laws, from 08 §8's bullet on UE1's record and from the plan. The reviewed draft became the page by a move, so no copy stays beside it. UE1's record already reads as a containment with its third parts, brought there by UE16 and UE19, so it is unchanged. With UE20 the plan's "done when" holds: UE16 to UE20 landed after a review and a re-check, every quantity and claim of the plan's list has a record, and the page places each claim.
+
+## 455. The held edits, in one near-full rebuild (HE)
+
+Edits held "for the next full rebuild" slip when a rebuild comes without them: OC5's approved wording for `Becoming.GrammarPath` missed WRP2's rebuild of that module. So the coordinating session asked for one landing that rebuilds the package once, on purpose, after a rehearsal outside the repository, and applies every edit held for a rebuild ([design](development/he-held-edits/DESIGN.md)). The board's row listed them, so no later rebuild had to remember them.
+
+```text
+Result(s): records what-a-line-holds-and-a-regularity-takes-in (its owner's wording), master-laws-on-the-grammar,
+       processes-represented-both-ways and what-keeping-widening-needs changed; the records pinning the changed
+       sources re-pointed; no new record.
+Delta: (1) OC5's findings 8 and 18, by their owner's script (oc-own-class/deferred_grammarpath.py), word for word as
+       approved on 27 October: "neither premise can be dropped from these laws", and "what leaves the class follows each
+       alike occurrence", in GrammarPath's docstrings, 07 §4.6, the root module, the checker's scope, the record, the
+       apart register and regions.json; the script checks every edit before it writes.
+       (2) GrammarLaws' module doc says what OU3f's lineage part (§451) showed: the lineage laws are among the models'
+       step-indexed laws proved from the laws of steps counted, and the clause naming them as not shown goes.
+       (3) kept_onward moves from Becoming.KeptOnward to its home beside «线则所闭» in GrammarLaws (OU3f's closure
+       design, condition 3). The leaf is retired: its file goes to the Lean history folder with its bytes, by
+       research.py move (batch HE-history, its manifest and receipt), and its imports, the checker's core list and
+       scope sentence, the root module's import and bullet and the README rows go. GrammarLaws' closure texts name it,
+       with the models' activity laws that keep a region along the steps by their own induction as its cases.
+       (4) the clock run beside Run.reach in Frame: nothing to move; it existed only in the closure's first draft.
+       (5) total_eq_of_supports moves from KeepingWidening to beside total_le_of_support in Dissipation (GW3–GW5).
+       (6) «保之像» moves from GrammarTransport to beside «像» in GrammarLaws, and Mechanism's factors_image and
+       Image.least are proved as its cases (U2's design §6; OU's owner for Mechanism under rule 3's fallback, and
+       GrammarTransport's owner, agreeing). The texts follow: GrammarLaws' lumping bullet, 01 §7's lumping bullet, the
+       root module's bullets, the checker's scope (under lumping) and the README rows.
+       Every statement and name is unchanged. GrammarLaws has 138 theorems in 162 declarations; the run holds
+       347 modules.
+Supplied premises / correspondence: none.
+Evidence: core receipt 20261029T184601.050950Z, every axiom report empty, after a near-full pre-rehearsal and a rehearsal on main
+       outside the repository. The signature audit (he_signatures.py) shows every statement of the twelve changed
+       modules printing as before, three declarations moving module (kept_onward, «保之像», total_eq_of_supports),
+       Becoming.KeptOnward gone from the run, and one docstring line the source scanner reads as a definition reported
+       as the scanner's. The move receipt (_process/architecture/moves/HE-history.json) holds KeptOnward's bytes. The
+       connectivity check is clean, and the measure is unchanged.
+Boundary: none of the six changes a statement; Mechanism's two image lemmas are derived, and the rest are moves and
+       wording.
+Output → input: the records; 01 §7; 07 §4.6; 08's counts; the root module, the checker and the README rows; the Lean
+       history folder; the master-law view.
+```
+
+**The review, and what was taken.** One independent read-only review by a separate AI agent ([REVIEW-HE](development/he-held-edits/review/REVIEW-HE.md)), every finding taken. It rebuilt both builds from the checker's cache and compared every constant of the package. The only differences are the three moves, one matcher of the old proof gone and two re-proved values, and the 1,366 declarations of the thirteen modules print byte for byte alike. Mechanism's two lemmas are genuine cases of «保之像», and item 1 is applied exactly as its owner's script writes it. What was taken:
+- the record script's halfway stop, fixed before the review ended;
+- two validation scopes brought to HE, and the receipt referenced wherever a new binding uses it;
+- one date for every line, the day of the landing;
+- the landed row moved to the history file, and the head claim guarded against jumping the queue;
+- OU3f's row brought to `kept_onward`'s new home;
+- GrammarLaws' doc claiming no more than the Lean: some of the step-indexed laws, and the activity laws that keep a region along the steps by their own induction;
+- the README rows;
+- «保之像» filed under lumping in the checker's scope;
+- this section's account of the move and the review;
+- a stale heading in GrammarTransport, wrapping and a double blank line;
+- the history move checked by `research.py move --check`.
+
+The doc fixes changed GrammarLaws, so the rehearsal was run again before the head was claimed. One rebuild still carries every held edit.
+
+## 456. The reading loop, and a prediction read by what it predicts (RF, round 2, first landing)
+
+Board item RF, formations that read (识), round 2's first landing ([plan](development/rf-formations-that-read/PLAN.md#46-round-2-first-landing-the-reading-loop-and-a-prediction-read-by-what-it-predicts)). The Lean was read by an independent cross-model reviewer and re-checked, every finding taken ([REVIEW-ROUND2](development/rf-formations-that-read/evidence/REVIEW-ROUND2.md)); the texts were then cold-read against the Lean (the same file, its last section).
+
+```text
+Result(s): a-reading-kept-by-its-update, what-a-course-chosen-through-its-model-does-not-test,
+       acts-alike-from-a-model-or-from-an-order and a-prediction-read-by-what-it-predicts (new, home 03 §12).
+Delta:
+  - A reading kept by its update (Becoming.ReadingLoop). A region kept along every reach is closed
+    (kept_iff_closed, by «闭之及»). On one carrier of world and state (joint), with a supplied reading kept by the
+    update under every act (KeptBy), a policy keeps a task and goes on from every sound configuration exactly where
+    each state's act is good and enabled for its reading (keeps_continues_iff); successor safety alone is met by an
+    act no world can take (keeps_iff_good); given choice over the states, such a policy exists exactly where each
+    state has one such act (keeping_policy_iff). Acts good pairwise need not be one act good for all
+    (PairwiseShared); the readings of every world and of none are kept by every update (everything_kept,
+    nothing_kept). With the state the history, the worlds possible after it are kept by recording and are the least
+    reading so kept that holds at the starts (possible_kept, possible_least); a policy acting from its history keeps
+    a task and goes on exactly where its act is safe and enabled at every world possible after each history it
+    generates (history_keeps_iff, history_continues_iff).
+  - What a course chosen through its model does not test (Becoming.ReadingLoop). For one blanketed law from one
+    internal, sensory and active start, two worlds give the formation one sensed course through N exactly as long as
+    they answer alike the first course's act and value at each step before N (sensed_alike_iff); equality of values
+    decided, where each differing answer of the second world breaks a task K and K holds there at steps one to N, the
+    sensed courses agree through N, and at every step where so at every step (alike_within, alike_of_kept). A
+    formation keeping candidate laws is a blanketed law (Loop.law): from a start listing candidates with no answer
+    pending, at configuration n + 1 it keeps exactly those listed that fit the answers to the acts before step n, the
+    latest answer taken in at the next step (Loop.kept_iff); a listed candidate predicting as the world answers in a
+    region every move keeps is never dropped from a start in it (Loop.faithful_kept, Loop.fitting_closed); and from a
+    start where the world answers the act with the value sensed and stays, the formation chooses that act and every
+    candidate listed predicts that answer, the configuration is constant from step one (Loop.rests_of_unrefuted). The
+    witness Untested, from no answer pending, the middle value and the known act: a formation choosing by the worst
+    case keeps both candidates and never senses the high value one world holds; with the untried act first it
+    separates the worlds; and every blanketed law with the witness's answer and stationary worlds, from one start in
+    both, that never senses low in one senses alike in both, and, where the start does not sense high, never senses
+    high in the other (floor_forgoes, floor_never_high).
+  - Acts alike from a model or from an order (Becoming.ReadingLoop). Formations related by a relation their steps
+    keep, under which the values sensed and the acts are one, act and sense alike from related starts
+    (observed_alike); from the middle value and the known act, an unresolved model and a reversed ranking act alike in
+    one world (model_or_order), both rankings according with one training occasion and apart beyond it (both_accord,
+    apart_beyond); started the same way with the true candidate alone, the first turns (informed_turns), the second
+    already so started.
+  - A prediction read by what it predicts (Becoming.ReflexivePrediction). Right exactly where the response leaves it
+    (Right); none right where the response moves every value, whatever the predictor reads (no_predictor_right);
+    repeated publication rests exactly at a right prediction (rests_iff_right); on the chain 0 to n under a
+    response mapping it into itself and keeping its order, repeated publication from zero is the least right
+    prediction by step n (bottom_rests). Witnesses: a threshold response with two right predictions, Boolean negation with none,
+    a reflection reversing the order with one.
+Supplied premises / correspondence: none added beyond each theorem's own hypotheses (the reading kept by the
+       update, the shared start, decided equality of values, the region the world's moves keep, the chain and its
+       order); choice over the states for keeping_policy_iff and over the admitted responses for predictor_iff.
+       Discrete synchronous steps of a blanketed law for the loop; candidates predicting the next value from the value
+       sensed and the act, kept by elimination; the response a function of the prediction alone; natural numbers for
+       the chain.
+Evidence: core receipt `20261029T191748.070149Z`; Becoming.ReadingLoop (51 theorems in 84 declarations) and Becoming.ReflexivePrediction
+       (22 theorems in 26 declarations), every axiom report empty; two core lemmas that report propext were avoided
+       (Nat.succ_ne_zero, Nat.sub_le_sub_left), the second by an induction of its own (Reflecting.sub_antitone).
+Standing: near-definitional compositions, general laws of blanketed laws and of a loop keeping candidates, and
+       witnesses; none is claimed new as mathematics. What they add is their place in one account: sensing,
+       predicting, choosing, acting and revising as one law, with self-confirmation, the trade between keeping a task
+       and learning which world holds, the ambiguity between a model and an order, and reflexive prediction read on
+       it.
+Boundary:
+  - A condition for a policy acting from its history to exist, tying histories to the task's futures; the
+    nonvacuity of the starts; Loop.law as an instance of joint, which the texts relate in prose only.
+  - RF6.1 (Becoming.OpenedCorrection, built and reviewed in the kit, held: a revision as a reachable step of one
+    process, with the institution revising its rule of reading); a helper's acts within the law and preference as
+    state; RF7's disclosure or concealment in two stages.
+  - Probabilistic forms: belief, the value of information, calibration under performativity.
+Output → input: 03 §12, 03's bases and Open; 08 §8's known results and counts; the overview's §3; AJ5's scope box in
+       the alignment dossier; RF round 2's next landings.
+```
+
+**The review, and what was taken.** The cross-model reviewer read the first draft of `Becoming.ReadingLoop` and found no invalid proof and seventeen places to change. The main ones: keeping could succeed by deadlock, since successor safety is met by an act no world can take; keeping stays successor safety, and the added requirement of going on asks the act enabled at every world the reading admits; the existence condition was for a supplied reading, and the reading a formation's own history carries was added, the least kept by recording; faithfulness everywhere did not cover the module's own witness, and it is now relative to a region the world's moves keep; the witness's minimum was capped at three, and it is now the least over nonempty lists; prose said more than the Lean in nine places. Its re-check found fifteen taken correctly, two in part, now stated as open, and one new overstatement (the history reading said to be the one needed, no finer and no coarser), taken. A cold read of the texts by a fresh session of the same reviewer found sixteen places where summaries dropped hypotheses (the shared start, decidability, the witness's answer and stationary worlds, the listing and the delay, the chain mapped into itself) or stated a witness's outcome without its start; all were taken. It also reviewed `Becoming.ReflexivePrediction`, four findings, taken (order reversal does not exclude a fixed point; performative stability is defined by risk minimization; the continuity result needs the bounded domain; `Coordination` an interpretation as a name), and `Becoming.OpenedCorrection`, five findings, taken by holding that module for its own landing: its opening is a static statement where the plan asks for a revision that is a reachable step of one process.
+
+**Self-review.**
+1. Two core lemmas report `propext` on this toolchain (`Nat.succ_ne_zero`, `Nat.sub_le_sub_left`), as does matching on number literals with patterns `0`, `1`, `2`; the module uses `Nat.noConfusion`, nested matches on `n + 1` and its own induction. `nomatch e` inside an anonymous constructor reads a following comma as a second discriminant, so each is parenthesized.
+2. The witnesses evaluate by `rfl` on concrete starts; `floor_forgoes` and its corollary `floor_never_high` are the statements there quantified over formations, with the witness's answer and stationary worlds.
+3. The informing of `model_or_order`'s reading is represented by its outcome, a start with the true candidate alone; the witness's world does not move.
+4. Not done: the items in Boundary.
+
+## 457. A revision of a reading that opens a correction, along one process (RF, round 2, RF6.1)
+
+Board item RF, formations that read (识), round 2's RF6.1 ([plan](development/rf-formations-that-read/PLAN.md#46-round-2-first-landing-the-reading-loop-and-a-prediction-read-by-what-it-predicts)). The module was reviewed with round 2's first landing and held, rebuilt along one process and re-checked, and its texts cold-read, every finding taken ([REVIEW-ROUND2](development/rf-formations-that-read/evidence/REVIEW-ROUND2.md)).
+
+```text
+Result(s): a-revision-that-opens-a-correction (new, home 03 §8).
+Delta:
+  - Correctable at a configuration (Becoming.OpenedCorrection): through the reading in force there, a uniform policy
+    exists whose act at each reading is acceptable at every situation giving it and executable there; given choice
+    over the readings, exactly where for every reading there is an act acceptable and executable at the configuration
+    for every situation giving it, a reading no situation gives imposing no such condition though the policy still
+    gives it an act (Correctable, correctable_iff).
+  - A course of a process opens a correction where a trace leads from a configuration lacking a fitting uniform
+    policy to one with it, with one acceptability, the gain from the reading, from executability or both
+    (OpensAlong); with the readings in one type and a supplied map f between them, correctability is kept where
+    f (reading x' s) = reading x s at every situation and every act executable at x stays executable at x', and
+    nothing is opened where f (reading x s) = reading x' s and every act executable at x' was executable at x
+    (finer_keeps, coarser_opens_nothing); with
+    every act counted acceptable, a configuration with an executable act is correctable already
+    (widened_correctable).
+  - On Revising's stock-and-link process (Linked), the correction acceptable where needed and replenishing where
+    not, executability the process's enabling: with the link off no configuration is correctable, with it on and a
+    unit of stock every one is, with it on and none none is; starting with the link off and at least two units,
+    rebuilding it opens the correction in one step; starting with it off and one unit, rebuilding alone does not and
+    rebuilding then replenishing does; and replenishing alone opens it where the link is on and the stock is not
+    (opens, rebuilt_starved, opens_after_replenishing, opens_by_support).
+Supplied premises / correspondence: none added beyond each theorem's own hypotheses (one type of readings in force at
+       every configuration; acceptability fixed; executability read at the configuration; choice over the readings
+       for correctable_iff). Revising's natural-number stock.
+Evidence: core receipt `20261029T200440.502813Z`; Becoming.OpenedCorrection (12 theorems in 16 declarations), an application of the ring, every
+       axiom report empty.
+Standing: near-definitional compositions of GuardHorizon's choice from readings with Revising's process, and
+       witnesses on that process; none is claimed new as mathematics. What it adds is the correction a revision
+       opens stated along one process, with discrimination, support and acceptability kept apart.
+Boundary:
+  - What a formation chooses: uniform-policy existence is not a controller's run (Revising's controlled_revision is
+    one); an institution's rule of reading as its own process with members' acts; double-loop learning proper, which
+    turns on changing governing norms.
+  - RF-M's helper and preference cases; RF7.
+Output → input: 03 §8 and Open; 08 §8's known results and counts; RF's plan §4.6 and §12; RF round 2's next landing.
+```
+
+**The review, and what was taken.** The first version of `Becoming.OpenedCorrection` was reviewed with round 2's first landing and held: its opening was a static statement of two policy existences, where the plan asks for a revision that is a reachable step of one process, and its prose said "chosen" of policy existence, claimed a distinguishing pair from non-factorization, and attributed double-loop learning too strongly. It was rebuilt along a trace of one process, on Revising's stock-and-link process. A re-check found findings 19 to 22 taken, 23 in part, and three new points (the coarsening condition stated the wrong way round; an opening along a course need not change the reading, replenishing alone opening one; empty fibers asking nothing), all taken, the second with a witness (`Linked.opens_by_support`). The texts were then cold-read against the Lean.
+
+**Self-review.**
+1. `OpenedCorrection` imports `GuardHorizon`, an application of the ring, so it joins as an application, not a core module: no core module may import a ring module.
+2. The witnesses evaluate Revising's process by `rfl` and anonymous constructors on concrete configurations.
+3. Not done: the items in Boundary.
+
+## 458. Statements at a model, declared on a law and verified from the Lean (F5's field)
+
+Board item F5's field, MV's part, on RA's line. F5 is item 全五 of full unification (OU plan §十三 item 13, D25): the measure reports derivation, representation at a model and a named premise on the grammar apart, so that its headline cannot read connection as derivation. U2 states 20 central rows at a World's occurrence model, a process's model or the row's own carrier, each through its row, and asked which field carries the pairs. The answer is a field on the law at the model, `statements_at_model`, whose items declare the theorem, its row, its models and the review that checked it. Only that correspondence is declared, because only it needs a reader: Lean shows the theorem holds, not that its statement is the row's. MV computes and checks everything else from the checker cache. The design is [F5-MODEL-STATEMENTS](../../2026-10-05-repository-reconciliation/architecture/mv/F5-MODEL-STATEMENTS.md).
+
+```text
+Result(s): no new result; a record field, its check, and what MV computes and shows from it.
+Delta: (1) the check (registry.py, schema 2):
+       - a law item's keys are closed: en, zh, declarations, statements_at_model;
+       - an item has exactly declaration, of, models and review; its theorem is among the law's declarations,
+         its row among another law's of the same record, its models among occurrence, process and own;
+       - its review is a review reference of the record whose file names the theorem in code;
+       - a law carrying items holds no row of an item; a theorem is the declaration of one item at most,
+         across all records; superseded and withdrawn records carry none.
+       (2) master_laws.py:
+       - it verifies each item: both names in the spine run;
+       - the theorem's walk reaches the row without entering another item's theorem, except one on the same
+         law stating the same row;
+       - its statement names a grammar term other than «际», also through the definitions of its own module;
+       - for occurrence and process, a relation of that model (two lists split from U2Deps' model relations);
+       - its law holds no central declaration;
+       - it writes an item the check would refuse as unverified, never counted;
+       - it lists the grammar terms, what the statement keeps in other terms, and the row's own dependence;
+       - it counts a law carrying items in counts_at_model, apart from counts, and gives central_reach: the
+         distinct central declarations reaching the grammar, stated at a represented model, stated only on
+         their own carrier, and the rest.
+       (3) the record pages: under the law at the model, each verified item, marked declared, with its
+       review linked; under every law naming its row, in any record, the same mark. An item only on its row's
+       own carrier is labelled so, not as at a model. Nothing shows for an unverified item, or while the
+       carrying record's items differ from the data's.
+       (4) the check's master_laws entry lists unverified items and counts changed items as not matched.
+       (5) RESULT-WORKFLOW: the laws row and a paragraph on F5. (6) 14 tests.
+Premises: none added. The models' relation lists are generator inputs, changed by WRT's and WRP's designer.
+Evidence:
+       - no record carries items yet, so on core receipt `20261029T200440.502813Z` every existing figure is the generator's as before:
+         3,788 laws: 749 reach the grammar (65 through its vocabulary only), 645 rest on balance and do not reach it, 134 rest on another anchor and do not reach it, 1,894 have no master law's anchor, 357 cite only declarations the spine run does not have, 9 cite none; counts_at_model all zero;
+       - central_reach: of the 118 distinct central declarations, 44 reach the grammar, 0 are stated at a represented model, 0 only on their own carrier, and 74 are the rest;
+       - two readers reviewed the field's design (20 findings) and a third re-checked it (10 more), applying its
+         rules to U2's 21 drafted items. Two readers reviewed the code (13), one building U2's 16 records in
+         memory: every rule passed. A re-check of the fixes found 6 more, among them that the generator verified
+         items the check refuses. Every finding was taken;
+       - research check --strict-fresh, links and test pass.
+Boundary:
+       - it reports representation at a model, not derivation. Telling derivation from connection within
+         "reaches the grammar", and F5's third value, a named premise on the grammar, are F5's further parts;
+       - the premise part's input (U2 §3's grammar forms of the premises) goes beside the premises in
+         COVERAGE.json, which has no active owner, so OU's owner decides under rule 3's fallback;
+       - an instance or a specialization of a row is not an item: U3's forms are reported by the measure's
+         dependence until U3 brings its reading to OU's owner;
+       - the review guard checks that the review names the theorem, not that it read the item as it stands;
+         that is the landing's to ensure.
+Output -> input: U2's Lean lands with its 21 items in this field, each naming RECHECK-U2, and central_reach
+       then gives F5's first figures.
+```

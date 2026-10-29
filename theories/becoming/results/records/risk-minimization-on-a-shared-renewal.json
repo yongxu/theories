@@ -353,7 +353,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
       "role": "proof",
-      "sha256": "762bc2a8b53535d1b429e9bf86563b05971a712b38113d93500f7cedb5127d7d"
+      "sha256": "09c2c5e40d7494135b7da9fd96c8eae1a4b8bfeb1202951f903418a699d6e3f3"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",

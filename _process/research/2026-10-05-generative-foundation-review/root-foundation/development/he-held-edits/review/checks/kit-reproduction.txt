@@ -1,0 +1,44 @@
+# "<lean>/" stands for experiments/integrated-correction/general-framework/generative-basis/lean/ (abbreviated so that the history move's path scan does not list this log)
+# Item 1 and the kit, reproduced on copies (git archive of the touched paths; scripts run as written, cwd = the copy)
+## main a15457b2e -> deferred_grammarpath.py (as of e5a9b32ea): files it changed
+Files _process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-APART.json
+Files <lean>/becoming/Becoming/GrammarPath.lean
+Files <lean>/becoming/Becoming.lean
+Files <lean>/becoming/check_becoming.py
+Files theories/becoming/chapters/07-SIGNIFICANCE.md
+Files theories/becoming/results/data/regions.json
+Files theories/becoming/results/records/what-a-line-holds-and-a-regularity-takes-in.json
+changed lines (diff -r, < and >): 47
+## item-1-only files compared with the scratch worktree he-pre
+identical: <lean>/becoming/Becoming/GrammarPath.lean
+identical: theories/becoming/chapters/07-SIGNIFICANCE.md
+identical: theories/becoming/results/data/regions.json
+identical: _process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-APART.json
+differs: theories/becoming/results/records/what-a-line-holds-and-a-regularity-takes-in.json
+    333,334c333,334
+    <       "en": "30 October 2026: the fourth law scoped to these laws, as OC5's review found; content unchanged.",
+    <       "zh": "2026年10月30日：第 4 条规律限于此诸律，如 OC5 之审查所见；内容未变。"
+    ---
+    >       "en": "29 October 2026: the fourth law scoped to these laws, as OC5's review found; content unchanged.",
+    >       "zh": "2026年10月29日：第 4 条规律限于此诸律，如 OC5 之审查所见；内容未变。"
+## then he_lean.py (6dc48d002 version: it deleted KeptOnward.lean): every touched file compared with he-pre
+differs: theories/becoming/results/records/what-a-line-holds-and-a-regularity-takes-in.json (only the run-day date of the record's history line)
+absent in both (deleted): <lean>/becoming/Becoming/KeptOnward.lean
+## main fdd5e8c23 (UE18, UE19 landed) -> deferred_grammarpath.py -> he_lean.py (db4f978ae version)
+identical to he-pre: Becoming/GrammarLaws.lean
+identical to he-pre: Becoming/GrammarTransport.lean
+identical to he-pre: Becoming/Mechanism.lean
+identical to he-pre: Becoming/KeepingWidening.lean
+identical to he-pre: Becoming/Dissipation.lean
+identical to he-pre: Becoming/Retaining.lean
+identical to he-pre: Becoming/Wholes.lean
+identical to he-pre: Becoming/Exclusion.lean
+identical to he-pre: Becoming/Reserve.lean
+identical to he-pre: Becoming/PatternPassing.lean
+identical to he-pre: Becoming/Persistence.lean
+identical to he-pre: Becoming/GrammarPath.lean
+Becoming/KeptOnward.lean still present after he_lean.py (moved later by he_history_move.py): yes
+Becoming.lean: (main a15457b2e -> fdd5e8c23) lines efd23ffa27e27ff0, (he-pre -> kit on fdd5e8c23) lines efd23ffa27e27ff0: the same lines, i.e. only UE18/UE19
+check_becoming.py: (main a15457b2e -> fdd5e8c23) lines 1c80c6b49e6a572e, (he-pre -> kit on fdd5e8c23) lines 1c80c6b49e6a572e: the same lines, i.e. only UE18/UE19
+README.md: (main a15457b2e -> fdd5e8c23) lines c684dacc8650b114, (he-pre -> kit on fdd5e8c23) lines c684dacc8650b114: the same lines, i.e. only UE18/UE19
+README.zh.md: (main a15457b2e -> fdd5e8c23) lines 34d121954aa99937, (he-pre -> kit on fdd5e8c23) lines 34d121954aa99937: the same lines, i.e. only UE18/UE19

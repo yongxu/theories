@@ -116,6 +116,7 @@ Ren's proposal says: “the pure "self" is an illusion, where only when outside 
 | proof | [LeastLoss.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean) | `Becoming.Halving.never_rests` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T080929.528151Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
 
 Aliases: `Becoming.Flow.Conveys`, `Becoming.Flow.FedFromBeyond`, `Becoming.Flow.inward_iff_not_fed`, `Becoming.Flow.fed_of_not_inward`, `Becoming.Flow.fed_from_beyond`, `Becoming.Flow.rising_fed_from_beyond`, `Becoming.Web.embodiedArising_fed_from_beyond`, `Becoming.Lone.fed_not_recurring`, `Becoming.Successive.relay`, `Becoming.Successive.takes_part_once`
 

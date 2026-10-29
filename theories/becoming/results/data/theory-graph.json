@@ -500,6 +500,18 @@
    "page": "theories/becoming/results/records/a-pool-that-recruits-through-itself.md"
   },
   {
+   "id": "record:a-prediction-read-by-what-it-predicts",
+   "type": "result",
+   "record": "a-prediction-read-by-what-it-predicts",
+   "title": "A prediction read by what it predicts",
+   "title_zh": "为其所预言者所读之预言",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/a-prediction-read-by-what-it-predicts.md"
+  },
+  {
    "id": "record:a-race-for-position-draws-everything",
    "type": "result",
    "record": "a-race-for-position-draws-everything",
@@ -524,6 +536,18 @@
    "page": "theories/becoming/results/records/a-reading-against-the-share-does-not-ratchet.md"
   },
   {
+   "id": "record:a-reading-kept-by-its-update",
+   "type": "result",
+   "record": "a-reading-kept-by-its-update",
+   "title": "A reading kept by its update, and the reading its own history carries",
+   "title_zh": "更新所守之读，与己历所载之读",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/a-reading-kept-by-its-update.md"
+  },
+  {
    "id": "record:a-regularity-kept-and-changed",
    "type": "result",
    "record": "a-regularity-kept-and-changed",
@@ -534,6 +558,18 @@
    "region": "root",
    "base": "grammar",
    "page": "theories/becoming/results/records/a-regularity-kept-and-changed.md"
+  },
+  {
+   "id": "record:a-revision-that-opens-a-correction",
+   "type": "result",
+   "record": "a-revision-that-opens-a-correction",
+   "title": "A revision of a reading that opens a correction, along one process",
+   "title_zh": "沿一过程开一更正之读之修订",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "frame",
+   "page": "theories/becoming/results/records/a-revision-that-opens-a-correction.md"
   },
   {
    "id": "record:a-rise-past-the-inflow-is-drawn-from-beyond",
@@ -666,6 +702,18 @@
    "region": "knowing",
    "base": "general",
    "page": "theories/becoming/results/records/acquired-revision-of-pending-task.md"
+  },
+  {
+   "id": "record:acts-alike-from-a-model-or-from-an-order",
+   "type": "result",
+   "record": "acts-alike-from-a-model-or-from-an-order",
+   "title": "Acts alike from a model or from an order",
+   "title_zh": "出于模型或出于序之同行",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/acts-alike-from-a-model-or-from-an-order.md"
   },
   {
    "id": "record:adaptive-closure-cannot-resolve",
@@ -5588,6 +5636,18 @@
    "page": "theories/becoming/results/records/what-a-commuting-law-keeps-apart.md"
   },
   {
+   "id": "record:what-a-course-chosen-through-its-model-does-not-test",
+   "type": "result",
+   "record": "what-a-course-chosen-through-its-model-does-not-test",
+   "title": "What a course chosen through its model does not test",
+   "title_zh": "依其模型而择之历程所不验者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/what-a-course-chosen-through-its-model-does-not-test.md"
+  },
+  {
    "id": "record:what-a-course-keeps-reachable",
    "type": "result",
    "record": "what-a-course-keeps-reachable",
@@ -6318,7 +6378,7 @@
    "type": "module",
    "name": "Becoming.GrammarLaws",
    "level": "L0",
-   "theorems": 136,
+   "theorems": 138,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -6329,7 +6389,7 @@
    "type": "module",
    "name": "Becoming.GrammarTransport",
    "level": "L1",
-   "theorems": 54,
+   "theorems": 53,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -6343,17 +6403,6 @@
    "theorems": 28,
    "region": "knowing",
    "base": "grammar",
-   "on_grammar": true,
-   "reaches_grammar": true
-  },
-  {
-   "id": "module:Becoming.KeptOnward",
-   "type": "module",
-   "name": "Becoming.KeptOnward",
-   "level": "L1",
-   "theorems": 1,
-   "region": "unassigned",
-   "base": "",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -6879,7 +6928,7 @@
    "type": "module",
    "name": "Becoming.Dissipation",
    "level": "L1",
-   "theorems": 110,
+   "theorems": 111,
    "region": "map",
    "base": "old-base",
    "on_grammar": false,
@@ -8360,6 +8409,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.ReflexivePrediction",
+   "type": "module",
+   "name": "Becoming.ReflexivePrediction",
+   "level": "L1",
+   "theorems": 22,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.Prelude",
    "type": "module",
    "name": "Becoming.Prelude",
@@ -8531,6 +8591,17 @@
    "level": "L1",
    "theorems": 32,
    "region": "map",
+   "base": "frame",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.OpenedCorrection",
+   "type": "module",
+   "name": "Becoming.OpenedCorrection",
+   "level": "L1",
+   "theorems": 12,
+   "region": "knowing",
    "base": "frame",
    "on_grammar": false,
    "reaches_grammar": true
@@ -9167,7 +9238,7 @@
    "type": "module",
    "name": "Becoming.KeepingWidening",
    "level": "L2",
-   "theorems": 249,
+   "theorems": 248,
    "region": "significance",
    "base": "old-base",
    "on_grammar": true,
@@ -9908,6 +9979,17 @@
    "region": "knowing",
    "base": "frame",
    "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ReadingLoop",
+   "type": "module",
+   "name": "Becoming.ReadingLoop",
+   "level": "L1",
+   "theorems": 51,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -28682,6 +28764,12 @@
    "anchor": "r-selection-under-registration-revision"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-a-revision-that-opens-a-correction",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-a-revision-that-opens-a-correction"
+  },
+  {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-consequence-revised-reference-plan",
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
@@ -28890,6 +28978,30 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
    "anchor": "r-what-readings-fix-of-the-unread"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-a-reading-kept-by-its-update",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-a-reading-kept-by-its-update"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-what-a-course-chosen-through-its-model-does-not-test"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-acts-alike-from-a-model-or-from-an-order",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-acts-alike-from-a-model-or-from-an-order"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-a-prediction-read-by-what-it-predicts"
   },
   {
    "id": "section:theories/becoming/chapters/04-LIFE.md#r-life-as-condition-of-life",
@@ -31140,11 +31252,6 @@
   },
   {
    "from": "module:Becoming.Exclusion",
-   "to": "module:Becoming.KeptOnward",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Exclusion",
    "to": "module:Becoming.Witnesses",
    "type": "imports"
   },
@@ -31909,11 +32016,6 @@
    "type": "imports"
   },
   {
-   "from": "module:Becoming.KeptOnward",
-   "to": "module:Becoming.GrammarLaws",
-   "type": "imports"
-  },
-  {
    "from": "module:Becoming.Labelled",
    "to": "module:Becoming.Arising",
    "type": "imports"
@@ -32399,6 +32501,16 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.OpenedCorrection",
+   "to": "module:Becoming.GuardHorizon",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OpenedCorrection",
+   "to": "module:Becoming.Revision",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Openness",
    "to": "module:Becoming.Premises",
    "type": "imports"
@@ -32530,11 +32642,6 @@
   },
   {
    "from": "module:Becoming.PatternPassing",
-   "to": "module:Becoming.KeptOnward",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.PatternPassing",
    "to": "module:Becoming.Wholes",
    "type": "imports"
   },
@@ -32546,11 +32653,6 @@
   {
    "from": "module:Becoming.Persistence",
    "to": "module:Becoming.Identity",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Persistence",
-   "to": "module:Becoming.KeptOnward",
    "type": "imports"
   },
   {
@@ -32804,6 +32906,26 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.ReadingLoop",
+   "to": "module:Becoming.Blanket",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReadingLoop",
+   "to": "module:Becoming.Keeping",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReadingLoop",
+   "to": "module:Becoming.Narrowing",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReadingLoop",
+   "to": "module:Becoming.ShownOrder",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.ReadingSchedule",
    "to": "module:Becoming.Regulation",
    "type": "imports"
@@ -32890,6 +33012,16 @@
   },
   {
    "from": "module:Becoming.Refinement",
+   "to": "module:Becoming.Recurrence",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReflexivePrediction",
+   "to": "module:Becoming.Keeping",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReflexivePrediction",
    "to": "module:Becoming.Recurrence",
    "type": "imports"
   },
@@ -33070,11 +33202,6 @@
   },
   {
    "from": "module:Becoming.Reserve",
-   "to": "module:Becoming.KeptOnward",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Reserve",
    "to": "module:Becoming.Roles",
    "type": "imports"
   },
@@ -33111,11 +33238,6 @@
   {
    "from": "module:Becoming.Restoration",
    "to": "module:Becoming.Dependence",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.Retaining",
-   "to": "module:Becoming.KeptOnward",
    "type": "imports"
   },
   {
@@ -33829,11 +33951,6 @@
    "type": "imports"
   },
   {
-   "from": "module:Becoming.Wholes",
-   "to": "module:Becoming.KeptOnward",
-   "type": "imports"
-  },
-  {
    "from": "module:Becoming.Withholding",
    "to": "module:Becoming.Labelled",
    "type": "imports"
@@ -34424,6 +34541,26 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:a-prediction-read-by-what-it-predicts",
+   "to": "module:Becoming.ReflexivePrediction",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-prediction-read-by-what-it-predicts",
+   "to": "record:learning-by-refutation",
+   "type": "related"
+  },
+  {
+   "from": "record:a-prediction-read-by-what-it-predicts",
+   "to": "record:readings-within-what-they-read",
+   "type": "related"
+  },
+  {
+   "from": "record:a-prediction-read-by-what-it-predicts",
+   "to": "record:when-to-inquire-and-when-to-respond",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:a-race-for-position-draws-everything",
    "to": "module:Becoming.Optimum",
    "type": "proved-in"
@@ -34459,6 +34596,31 @@
    "type": "related"
   },
   {
+   "from": "record:a-reading-kept-by-its-update",
+   "to": "module:Becoming.GuardHorizon",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-reading-kept-by-its-update",
+   "to": "module:Becoming.ReadingLoop",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-reading-kept-by-its-update",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-reading-kept-by-its-update",
+   "to": "record:what-a-course-chosen-through-its-model-does-not-test",
+   "type": "related"
+  },
+  {
+   "from": "record:a-reading-kept-by-its-update",
+   "to": "record:when-to-inquire-and-when-to-respond",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:a-regularity-kept-and-changed",
    "to": "module:Becoming.GrammarRegularity",
    "type": "proved-in"
@@ -34476,6 +34638,36 @@
   {
    "from": "record:a-regularity-kept-and-changed",
    "to": "record:wen-in-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-revision-that-opens-a-correction",
+   "to": "module:Becoming.GuardHorizon",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-revision-that-opens-a-correction",
+   "to": "module:Becoming.OpenedCorrection",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-revision-that-opens-a-correction",
+   "to": "module:Becoming.Revision",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-revision-that-opens-a-correction",
+   "to": "record:a-reading-kept-by-its-update",
+   "type": "related"
+  },
+  {
+   "from": "record:a-revision-that-opens-a-correction",
+   "to": "record:selection-under-registration-revision",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-revision-that-opens-a-correction",
+   "to": "record:when-to-inquire-and-when-to-respond",
    "type": "formal-reuse"
   },
   {
@@ -34806,6 +34998,26 @@
   {
    "from": "record:acquired-revision-of-pending-task",
    "to": "record:versioned-request-completion",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:acts-alike-from-a-model-or-from-an-order",
+   "to": "module:Becoming.Blanket",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:acts-alike-from-a-model-or-from-an-order",
+   "to": "module:Becoming.ReadingLoop",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:acts-alike-from-a-model-or-from-an-order",
+   "to": "record:what-a-course-chosen-through-its-model-does-not-test",
+   "type": "related"
+  },
+  {
+   "from": "record:acts-alike-from-a-model-or-from-an-order",
+   "to": "record:what-choices-show-of-an-order",
    "type": "formal-reuse"
   },
   {
@@ -44550,11 +44762,6 @@
   },
   {
    "from": "record:master-laws-on-the-grammar",
-   "to": "module:Becoming.KeptOnward",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:master-laws-on-the-grammar",
    "to": "module:Becoming.Labelled",
    "type": "proved-in"
   },
@@ -53164,6 +53371,36 @@
    "type": "related"
   },
   {
+   "from": "record:what-a-course-chosen-through-its-model-does-not-test",
+   "to": "module:Becoming.Blanket",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-course-chosen-through-its-model-does-not-test",
+   "to": "module:Becoming.ReadingLoop",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-course-chosen-through-its-model-does-not-test",
+   "to": "record:a-reading-kept-by-its-update",
+   "type": "related"
+  },
+  {
+   "from": "record:what-a-course-chosen-through-its-model-does-not-test",
+   "to": "record:learning-a-rule-by-narrowing",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-course-chosen-through-its-model-does-not-test",
+   "to": "record:the-markov-blanket-as-a-coupling-structure",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-a-course-chosen-through-its-model-does-not-test",
+   "to": "record:what-seeking-cannot-separate",
+   "type": "related"
+  },
+  {
    "from": "record:what-a-course-keeps-reachable",
    "to": "module:Becoming.Branching",
    "type": "proved-in"
@@ -54161,6 +54398,11 @@
   {
    "from": "record:what-keeping-widening-needs",
    "to": "module:Becoming.ContinuedClasses",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-keeping-widening-needs",
+   "to": "module:Becoming.Dissipation",
    "type": "proved-in"
   },
   {
@@ -57204,6 +57446,21 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts",
+   "to": "record:a-prediction-read-by-what-it-predicts",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-a-reading-kept-by-its-update",
+   "to": "record:a-reading-kept-by-its-update",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-a-revision-that-opens-a-correction",
+   "to": "record:a-revision-that-opens-a-correction",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-access-yet-to-form",
    "to": "record:access-yet-to-form",
    "type": "states"
@@ -57216,6 +57473,11 @@
   {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-acquired-revision-of-pending-task",
    "to": "record:acquired-revision-of-pending-task",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-acts-alike-from-a-model-or-from-an-order",
+   "to": "record:acts-alike-from-a-model-or-from-an-order",
    "type": "states"
   },
   {
@@ -57596,6 +57858,11 @@
   {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-a-center-can-know-by-a-step",
    "to": "record:what-a-center-can-know-by-a-step",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test",
+   "to": "record:what-a-course-chosen-through-its-model-does-not-test",
    "type": "states"
   },
   {

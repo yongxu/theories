@@ -1,0 +1,25 @@
+{
+ "records": 2,
+ "apply": true,
+ "by_record": {
+  "processes-represented-both-ways": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+    "theories/becoming/chapters/01-ROOT.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTransport.lean"
+   ]
+  },
+  "what-keeping-widening-needs": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean"
+   ]
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}

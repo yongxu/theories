@@ -1,0 +1,300 @@
+{
+  "schema_version": 2,
+  "id": "a-reading-kept-by-its-update",
+  "title": {
+    "en": "A reading kept by its update, and the reading its own history carries",
+    "zh": "更新所守之读，与己历所载之读"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-29T19:32:28+00:00",
+  "statement": {
+    "en": "A region kept along every reach is closed; for a reading its update keeps under every act, a policy keeps a task and goes on exactly where each state's act is enabled at every world the reading admits and leads only where the task holds.",
+    "zh": "沿每一及而守之域即闭域；于其更新于每一行下所守之读，策略守务且不止，恰当每态之行于其读所容之每一世皆可行且唯通务成之处。"
+  },
+  "laws": [
+    {
+      "en": "A region kept along every finite reach of a relation is a closed region of it, and conversely: one step is a reach, and a closed region holds what is reached (by «闭之及»).",
+      "zh": "沿一关系之每一有穷之及而守之域即其闭域，反之亦然：一步即一及，闭域含所及者（由 «闭之及»）。",
+      "declarations": [
+        "Becoming.ReadingLoop.kept_iff_closed"
+      ]
+    },
+    {
+      "en": "On one carrier of world and state, the world becomes what a relation admits under the act the state gives and the state is updated from that act and the value sensed; a reading of the world by the state kept by the update under every act is a closed region of every policy's loop.",
+      "zh": "于世与态之一载体，世成为一关系于态所予之行下所容者，态由此行与所感之值更新；态于世之读若于每一行下为更新所守，则为每一策略之环之闭域。",
+      "declarations": [
+        "Becoming.ReadingLoop.joint",
+        "Becoming.ReadingLoop.Sound",
+        "Becoming.ReadingLoop.KeptBy",
+        "Becoming.ReadingLoop.closed_of_keptBy"
+      ]
+    },
+    {
+      "en": "Successor safety: an act leads, from every world a reading admits, only where the task holds, which an act no world can take meets; good and enabled adds that it can be taken at each; a policy keeps a task where it holds at every configuration reached from a sound one, and goes on where each sound one has a successor.",
+      "zh": "后继之安：一行自其读所容之每一世唯通务成之处，无世可行之行亦合之；善且可行又加于每一世皆可行；策略于自合读之形态所及之每一形态务皆成则守务，每一合读之形态皆有后继则不止。",
+      "declarations": [
+        "Becoming.ReadingLoop.Good",
+        "Becoming.ReadingLoop.GoodEnabled",
+        "Becoming.ReadingLoop.Keeps",
+        "Becoming.ReadingLoop.Continues"
+      ]
+    },
+    {
+      "en": "Where the reading is a closed region of the policy's loop and each state's act is good for its reading, the task holds at every configuration reached from a sound one; a policy keeping the task is good for every state's reading, with no hypothesis; with the reading kept by the update, the two are equivalent.",
+      "zh": "读为策略之环之闭域，且每态之行于其读为善，则自合读之形态所及之每一形态务皆成；守务之策略于每态之读皆善，无需前提；读为更新所守，则二者相等。",
+      "declarations": [
+        "Becoming.ReadingLoop.keeps_of_good",
+        "Becoming.ReadingLoop.good_of_keeps",
+        "Becoming.ReadingLoop.keeps_iff_good"
+      ]
+    },
+    {
+      "en": "With the reading kept by the update, a policy keeps the task and goes on from every sound configuration exactly where its act is good and enabled for every state's reading; given choice over the states, such a policy exists exactly where each state has one such act.",
+      "zh": "读为更新所守，则策略守务且自每一合读之形态不止，恰当其行于每态之读皆善且可行；于诸态有择，则此策略存在，恰当每态有一此行。",
+      "declarations": [
+        "Becoming.ReadingLoop.keeps_continues_iff",
+        "Becoming.ReadingLoop.keeping_policy_iff"
+      ]
+    },
+    {
+      "en": "The reading admitting every world is kept by every update, an act good for it only where good at every world; the reading admitting none is kept by every update, every act is good for it, and no configuration is sound for it: being kept is not being informative.",
+      "zh": "容每一世之读为每一更新所守，行于其为善唯当于每一世为善；无所容之读为每一更新所守，每一行于其皆善，而无形态合之：被守非即有所告。",
+      "declarations": [
+        "Becoming.ReadingLoop.everything_kept",
+        "Becoming.ReadingLoop.everything_good_iff",
+        "Becoming.ReadingLoop.nothing_kept",
+        "Becoming.ReadingLoop.nothing_good",
+        "Becoming.ReadingLoop.nothing_sound"
+      ]
+    },
+    {
+      "en": "Witness: three worlds and three acts, an act good at a world where it is not the act that world names; every two worlds share a good act and no act is good at all three, so acts good pairwise need not be one act good for all.",
+      "zh": "例：三世三行，一行于一世为善当其非该世所名之行；每二世共一善行，而无行于三者皆善，故两两皆善之行未必为一于全体皆善之行。",
+      "declarations": [
+        "Becoming.ReadingLoop.PairwiseShared.Point",
+        "Becoming.ReadingLoop.PairwiseShared.good",
+        "Becoming.ReadingLoop.PairwiseShared.two_share",
+        "Becoming.ReadingLoop.PairwiseShared.none_for_all"
+      ]
+    },
+    {
+      "en": "With the state the history of acts and values sensed, newest first, the worlds possible after a history are where a course from a start taking its acts and sensing its values could be; they are kept by recording, and are the least reading so kept that holds at every start.",
+      "zh": "态为行与所感之值之历（新者居先），历后可能之诸世为自一起点行其行、感其值之历程可在之处；其为记录所守，且为如此所守而于每一起点成立之最小之读。",
+      "declarations": [
+        "Becoming.ReadingLoop.record",
+        "Becoming.ReadingLoop.Possible",
+        "Becoming.ReadingLoop.possible_kept",
+        "Becoming.ReadingLoop.possible_least"
+      ]
+    },
+    {
+      "en": "A policy acting from its history generates the histories whose every act is the policy's at the history before it; what it reaches from a start is possible after a history it generates, and every world possible after such a history is a start or reached from one.",
+      "zh": "依己历而行之策略所生之历，其每一行皆为该策略于其前之历之行；其自一起点所及者为其所生之某历后之可能之世，而每一如此之历后可能之世为一起点或自一起点所及。",
+      "declarations": [
+        "Becoming.ReadingLoop.Generated",
+        "Becoming.ReadingLoop.generated_closed",
+        "Becoming.ReadingLoop.possible_of_reached",
+        "Becoming.ReadingLoop.reached_of_possible"
+      ]
+    },
+    {
+      "en": "A policy acting from its history keeps a task at every configuration reached from a start exactly where, at every history it generates, its act leads only where the task holds from every world possible after it; it goes on from every start and what it reaches exactly where its act can be taken at each such world.",
+      "zh": "依己历而行之策略守务于自起点所及之每一形态，恰当于其所生之每一历，其行自该历后之每一可能之世唯通务成之处；自每一起点及其所及者不止，恰当其行于每一此世皆可行。",
+      "declarations": [
+        "Becoming.ReadingLoop.history_keeps_iff",
+        "Becoming.ReadingLoop.history_continues_iff"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Any types of world, state, act and value sensed; the world's change a relation, the update and the sensing functions; the history form needs no decision, list or finiteness; choice over the states only where a policy's existence is asked.",
+      "zh": "世、态、行与所感之值之任一型；世之变为一关系，更新与感为函数；历之形不需判定、列或有限；唯问策略之存在时需于诸态有择。"
+    },
+    {
+      "en": "Keeping is at configurations reached by one step or more: the sound start is not asked to hold the task; going on is asked apart from keeping.",
+      "zh": "守于一步或多步所及之形态：合读之起点不必成务；不止与守另问之。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Optimal or simplest regulation, or that a good regulator must be a model of what it regulates (Conant and Ashby 1970): a safety composition and its exact condition are proved.",
+      "zh": "最优或最简之调节，或善调节者须为其所调者之模型（Conant 与 Ashby 1970）：所证者为安之合成与其确条件。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That an actual formation keeps the reading stated, or computes the worlds possible after its history.",
+      "zh": "实际之形成守所陈之读，或算其历后可能之诸世。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Probabilistic belief or noise: the reading is possibilistic, a set of worlds.",
+      "zh": "概率之信或噪：此读为可能性之读，即一世之集。",
+      "kind": "scope"
+    },
+    {
+      "en": "Which policy exists in the history form: the condition is exact for a given policy, and its existence is a choice of acts along the histories it generates.",
+      "zh": "历之形中何策略存在：此条件于给定之策略为确，其存在为沿其所生之历择行。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+      "detail": {
+        "en": "Acts good pairwise, none for all: three worlds read alike, each act good at the worlds it differs from (ReadingLoop.PairwiseShared.two_share, ReadingLoop.PairwiseShared.none_for_all).",
+        "zh": "两两皆善而无全善：三世同读，每行于其所异之世为善（ReadingLoop.PairwiseShared.two_share、ReadingLoop.PairwiseShared.none_for_all）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+      "detail": {
+        "en": "Kept and uninformative: the reading of every world and the reading of none are kept by every update (ReadingLoop.everything_kept, ReadingLoop.nothing_kept).",
+        "zh": "被守而无所告：容每一世之读与无所容之读皆为每一更新所守（ReadingLoop.everything_kept、ReadingLoop.nothing_kept）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty: ReadingLoop imports Blanket, Keeping, Narrowing and ShownOrder; closure is the grammar's «闭» with «闭之及»; the history form is proved by recursion on the history, with no decision.",
+    "zh": "纯核，公理报告皆空：ReadingLoop 引 Blanket、Keeping、Narrowing 与 ShownOrder；闭为文法之 «闭» 与 «闭之及»；历之形以历之递归证之，不用判定。"
+  },
+  "next_delta": {
+    "en": "The existence of a history policy as a choice along the histories it generates; probabilistic belief in the periphery; a frozen test intervening on a formation's observations (the plan's TR5); review by a person.",
+    "zh": "历策略之存在为沿其所生之历之择；外围之概率信念；干预形成之观察之冻结检验（计划之 TR5）；人之审查。"
+  },
+  "correspondence": {
+    "en": "A safety composition related to possibilistic belief interpretations of regulation (Virgo, Biehl, Baltieri and Capucci 2025), whose closure is under the policy chosen, as keeps_of_good takes it, where KeptBy asks it under every act; with GuardHorizon's choice from readings it is requisite variety along a loop. AI reading: the history form says what a regulator acting from what couples in must meet: safety and enabledness at every world compatible with its own history and the starts, the least reading kept by recording; a coarser reading can suffice where its further worlds ask compatible acts, and verifying a given policy is not finding one. The good regulator theorem (Conant and Ashby 1970) concerns simplest optimal regulation and is not reproduced. These are readings, not containments.",
+    "zh": "此为安之合成，近于以可能性之信读调节（Virgo、Biehl、Baltieri 与 Capucci 2025），彼之闭于所择之策略下，如 keeps_of_good 所取，KeptBy 则于每一行下求之；与 GuardHorizon 之由读择行并，为沿环之必要变异。AI 解读：历之形言依所耦合入者而行之调节者须合者：于与其己历及起点相容之每一世皆安且可行，此即为记录所守之最小之读；较粗之读于其所增之世所求之行相容处亦可足，验一给定之策略非即得之。善调节者定理（Conant 与 Ashby 1970）关最简之最优调节，此未重现。皆为读，非包含。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+  "aliases": [
+    "a kept reading",
+    "所守之读",
+    "the worlds possible after a history",
+    "历后可能之诸世",
+    "Becoming.ReadingLoop.keeps_continues_iff",
+    "Becoming.ReadingLoop.history_keeps_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "master-laws-on-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The grammar's closure «闭» and «闭之及».",
+        "zh": "文法之闭 «闭» 与 «闭之及»。"
+      }
+    },
+    {
+      "id": "when-to-inquire-and-when-to-respond",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Choice over the states, Viability.ChoiceOver, as in GuardHorizon.uniform_policy_iff_fiber_feasible.",
+        "zh": "于诸态之择 Viability.ChoiceOver，如 GuardHorizon.uniform_policy_iff_fiber_feasible。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "what-a-course-chosen-through-its-model-does-not-test",
+      "detail": {
+        "en": "The loop of a formation keeping candidate laws: for a candidate faithful throughout a region of worlds every move keeps, the configurations where it is kept, agrees with the answer pending and the world is in that region form a closed region.",
+        "zh": "守候选律之形成之环：候选于世之每移所守之域内皆如世之答而预言时，其被守、合待纳之答且世在此域之形态，构成闭域。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ReadingLoop.Continues",
+        "Becoming.ReadingLoop.Generated",
+        "Becoming.ReadingLoop.Good",
+        "Becoming.ReadingLoop.GoodEnabled",
+        "Becoming.ReadingLoop.Keeps",
+        "Becoming.ReadingLoop.KeptBy",
+        "Becoming.ReadingLoop.PairwiseShared.Point",
+        "Becoming.ReadingLoop.PairwiseShared.good",
+        "Becoming.ReadingLoop.PairwiseShared.none_for_all",
+        "Becoming.ReadingLoop.PairwiseShared.two_share",
+        "Becoming.ReadingLoop.Possible",
+        "Becoming.ReadingLoop.Sound",
+        "Becoming.ReadingLoop.closed_of_keptBy",
+        "Becoming.ReadingLoop.everything_good_iff",
+        "Becoming.ReadingLoop.everything_kept",
+        "Becoming.ReadingLoop.generated_closed",
+        "Becoming.ReadingLoop.good_of_keeps",
+        "Becoming.ReadingLoop.history_continues_iff",
+        "Becoming.ReadingLoop.history_keeps_iff",
+        "Becoming.ReadingLoop.joint",
+        "Becoming.ReadingLoop.keeping_policy_iff",
+        "Becoming.ReadingLoop.keeps_continues_iff",
+        "Becoming.ReadingLoop.keeps_iff_good",
+        "Becoming.ReadingLoop.keeps_of_good",
+        "Becoming.ReadingLoop.kept_iff_closed",
+        "Becoming.ReadingLoop.nothing_good",
+        "Becoming.ReadingLoop.nothing_kept",
+        "Becoming.ReadingLoop.nothing_sound",
+        "Becoming.ReadingLoop.possible_kept",
+        "Becoming.ReadingLoop.possible_least",
+        "Becoming.ReadingLoop.possible_of_reached",
+        "Becoming.ReadingLoop.reached_of_possible",
+        "Becoming.ReadingLoop.record"
+      ],
+      "sha256": "5ca0f323c689c19d56edeb317a3eb371d715bd74533d5edad32429433db71812"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean",
+      "role": "proof",
+      "sha256": "1043c114b33c1217dd61f0aa5a64ba30345ca787fd7da00963559fad9a47ac9b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T191748.070149Z/verification.json",
+      "role": "receipt",
+      "sha256": "442db94f6d0719ec28958e4fcca9f2017d4425bc63e7f28379dbf292b15e2e12"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "1d54324cb0e5a8ed7cb553a67433994ca4c58c53c8a6901928c6ca7952c12e65"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
+      "role": "integration",
+      "sha256": "637eda898da1bab151770333e3c5bbcdd80a93729d0d7cd6f3ab7a53cbcaa0e9"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md",
+      "role": "integration",
+      "sha256": "6425b8f20cf4b6eeb67dc24fd81eddec5988550a2d3d79793920c226a8af9b93"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "62025a2b610fb1726559d2a6dd34536225d2a5ea66012ef29fd3865b1055ebb5"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T191748.070149Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReadingLoop",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "30 October 2026: added (RF round 2), a reading kept by its update, with going on, and the reading its own history carries; after a cross-model review of the Lean with a re-check, every finding taken; study section 456.",
+      "zh": "2026年10月30日：新增（RF 第二轮），更新所守之读，并不止，与己历所载之读；经 Lean 之跨模型审查与复查，凡所见皆取；研究第 456 节。"
+    }
+  ]
+}

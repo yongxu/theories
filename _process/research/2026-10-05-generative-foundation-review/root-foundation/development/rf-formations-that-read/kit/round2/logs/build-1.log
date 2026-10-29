@@ -1,0 +1,132 @@
+ for which to substitute `L`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:354:23: error: Invalid field notation: Function `start` does not have a usable parameter of type `Loop ...` for which to substitute `L`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:354:68: error: Invalid field notation: Function `start` does not have a usable parameter of type `Loop ...` for which to substitute `L`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:358:15: error: Invalid field notation: Function `kept_iff` does not have a usable parameter of type `Loop ...` for which to substitute `L`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:357:13: error: unsolved goals
+H S A E : Type
+inst✝ : DecidableEq S
+L : Loop H S A E
+hs : List H
+s : S
+a : A
+e : E
+h : H
+n : Nat
+⊢ h ∈ (L.law.course sorry (n + 1 + 1)).internal.fst ↔
+    h ∈ hs ∧
+      ∀ (k : Nat),
+        k < n + 1 →
+          L.predict h (L.law.course sorry k).sensory (L.law.course sorry k).active =
+            (L.law.course sorry (k + 1)).sensory
+Becoming/ReadingLoop.lean:376:23: error: Invalid field notation: Function `start` does not have a usable parameter of type `Loop ...` for which to substitute `L`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:383:54: error: Invalid field notation: Function `start` does not have a usable parameter of type `Loop ...` for which to substitute `L`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:384:23: error: Invalid field notation: Function `start` does not have a usable parameter of type `Loop ...` for which to substitute `L`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:385:34: error: Invalid field notation: Function `start` does not have a usable parameter of type `Loop ...` for which to substitute `L`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:386:23: error: Invalid field notation: Function `start` does not have a usable parameter of type `Loop ...` for which to substitute `L`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:387:24: error: Invalid field notation: Function `start` does not have a usable parameter of type `Loop ...` for which to substitute `L`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:388:26: error: Invalid field notation: Function `start` does not have a usable parameter of type `Loop ...` for which to substitute `L`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:492:33: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:499:34: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:500:33: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:501:31: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:502:33: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:503:31: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:504:33: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:513:34: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:514:21: error: Missing cases:
+_
+Becoming/ReadingLoop.lean:530:33: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:537:33: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:544:29: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:628:34: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank'`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:636:34: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:637:34: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank'`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:638:31: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:639:34: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank'`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+Becoming/ReadingLoop.lean:648:33: error: Invalid field notation: Function `Loop.start` does not have a usable parameter of type `Loop ...` for which to substitute `loop
+  rank`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/rf-landing/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/tree",
+  "modules": 65,
+  "ran": [
+    "Becoming.ReadingLoop"
+  ],
+  "reused": 64,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.ReadingLoop"
+}
+python3 -B scratch_build.py $K/tree Becoming.ReadingLoop  3.36s user 1.51s system 55% cpu 8.817 total

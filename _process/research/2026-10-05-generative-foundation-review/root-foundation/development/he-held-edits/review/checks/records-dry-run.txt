@@ -1,0 +1,45 @@
+# "<lean>/" stands for experiments/integrated-correction/general-framework/generative-basis/lean/ (abbreviated so that the history move's path scan does not list this log)
+# he_records.py dry runs on copies (copy of main a15457b2e after item 1 and he_lean.py, plus the pre-rehearsal receipt and DESIGN.md), RECEIPT 20261029T165328.855758Z, N 452
+## 1. as of ca50cc67d (the kit as first sent for review)
+  File "/private/tmp/claude-501/-Users-ren-theories/06fee326-8a27-436c-8689-e8d27ff445bf/scratchpad/review-he/kitpatch/he_records_ca50cc67d.py", line 119, in <module>
+    assert 'Becoming.«保之像»' in gt['declarations'] and 'Becoming.«保之像»' not in g['declarations']
+                                                                              ~^^^^^^^^^^^^^^^^
+KeyError: 'declarations'
+exit status: 1 (the traceback's last lines shown)
+  WRITTEN before the stop: master-laws-on-the-grammar
+  unchanged: processes-represented-both-ways
+  unchanged: what-keeping-widening-needs
+## 2. as of db4f978ae, the KeptOnward reference at its package path
+records: master-laws-on-the-grammar, processes-represented-both-ways, what-keeping-widening-needs
+exit: 0
+## 3. as of db4f978ae, the reference and binding first re-pointed to the history path (as research.py move would)
+  history-path strings before the run: 2
+records: master-laws-on-the-grammar, processes-represented-both-ways, what-keeping-widening-needs
+exit: 0
+  KeptOnward paths left in the record: 0
+  runs 2 and 3 agree: master-laws-on-the-grammar
+  runs 2 and 3 agree: processes-represented-both-ways
+  runs 2 and 3 agree: what-keeping-widening-needs
+## 4. the repository's own validator (tools/research/registry.validate, via validate_overlay.py) on run 2's records
+errors in the named records: 6
+   master-laws-on-the-grammar: invalid proof receipt binding: receipt does not bind the reviewed proof source
+   master-laws-on-the-grammar: invalid proof receipt binding: receipt does not bind the reviewed proof source
+   processes-represented-both-ways: invalid proof receipt binding: receipt does not bind the reviewed proof source
+   processes-represented-both-ways: invalid proof receipt binding: '<lean>/becoming/becoming-checks/20261029T165328.855758Z/verification.json'
+   what-keeping-widening-needs: invalid proof receipt binding: receipt does not bind the reviewed proof source
+   what-keeping-widening-needs: invalid proof receipt binding: '<lean>/becoming/becoming-checks/20261029T165328.855758Z/verification.json'
+errors elsewhere: 0
+## 5. after the landing's usual re-point (repoint.repoint_record with --receipt <HE receipt> --lean <the 12 changed modules>, via repoint_overlay.py)
+master-laws-on-the-grammar rebound ['GrammarLaws.lean', 'Mechanism.lean', 'Retaining.lean', 'Wholes.lean', 'Exclusion.lean', 'Reserve.lean', 'PatternPassing.lean', 'Persistence.lean'] touched 6
+processes-represented-both-ways rebound ['GrammarTransport.lean'] touched 3
+what-keeping-widening-needs rebound ['KeepingWidening.lean'] touched 3
+errors in the named records: 0
+errors elsewhere: 0
+## 6. master-laws-on-the-grammar after run 2: validation scope and history
+validation_scope en, 572 characters (cap 600):
+  Machine-checked by the Lean 4.29.1 checker (receipt 20261029T165328.855758Z): Becoming.GrammarLaws, 138 theorems in 162 declarations, 40 representation and bridge declarations in fourteen model modules, and the derivations of OU3c, OU3e and OU3f in fourteen more, every axiom report empty, all cited; every changed module's statements print as before, but for the two relation laws moved into the grammar at any universe. Read-only AI reviews, every finding taken: three of OU3b, one each of OU3c to OU3e, three of OU3f, three with a second pass; not reviewed by a person.
+validation_scope zh, 236 characters:
+  Lean 4.29.1 检查器实查（回执 20261029T165328.855758Z）：Becoming.GrammarLaws，162 项声明中 138 条定理，十四个模型模块中 40 项表示与桥接声明，及另十四模块中 OU3c、OU3e、OU3f 之推导，公理报告皆空，本记录全引；诸改动模块之陈述所印如前，唯移入文法之二关系律推广至任一宇宙。只读 AI 审查，所见皆采：OU3b 三次，OU3c 至 OU3e 各一次，OU3f 三次，其中三次复审一遍；未经人审。
+Mechanism reference declarations: ['Becoming.image_determined_iff', 'Becoming.image_step_iff', 'Becoming.factors_image', 'Becoming.Image.least']
+review references: ['REVIEW-OU3b2.md', 'REVIEW-ASTRA-A.md', 'REVIEW-ASTRA-3.md', 'REVIEW-OU3c.md', 'REVIEW-OU3d.md', 'REVIEW-OU3e.md', 'REVIEW-LAWS.md', 'REVIEW-CLOSURE.md', 'REVIEW-LINEAGE.md']
+last history line: 29 October 2026 (HE, study section 452): kept_onward moved from Becoming.KeptOnward, now retired, to its home beside «线则所闭» in GrammarLaws; «保之像» moved from GrammarTransport to beside «像» in GrammarLaws, and Mechanism's factors_image and Image.least proved as its cases, statements and names unchanged; GrammarLaws' module doc says the lineage laws are proved from the laws of steps.

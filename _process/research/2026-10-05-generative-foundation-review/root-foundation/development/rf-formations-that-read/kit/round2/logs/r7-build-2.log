@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/rf-landing/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/tree",
+  "modules": 37,
+  "ran": [
+    "Becoming.Concealment",
+    "BecomingConcealmentAxiomAudit"
+  ],
+  "reused": 36,
+  "unclean": [],
+  "audits": {
+    "Becoming.Concealment": {
+      "theorems": 10,
+      "declarations": 22,
+      "with_axioms": {}
+    }
+  }
+}

@@ -1,0 +1,20 @@
+# he_texts.py (db4f978ae) dry run on a copy (main a15457b2e after the kit, the pre-rehearsal receipt), RECEIPT 20261029T165328.855758Z, N 452
+texts: 01 §7 lumping bullet; 08 counts; study section 452
+## 01-ROOT.md: added text
+A map preserves a relation exactly where its image lies within the other (`«保之像»`), and the image of a step along a projection being the least process the step factors through is its case (`factors_image`, `Image.least`).
+## 08-METHOD.md: new counts sentence
+> At core receipt [`20261029T165328.855758Z`](../../../experiments/integrated-correction/general-framework/generative-ba
+the closure held 345 modules (3 foundation, 329 core, 13 in the instance and application ring) and 16,959 theorems; the 329 core modules held 16,125 of them
+## study: appended section (first 3 lines) and unfilled placeholders
+## 452. The held edits, in one near-full rebuild (HE)
+
+Edits held "for the next full rebuild" slip when a rebuild comes without them: OC5's approved wording for `Becoming.GrammarPath` missed WRP2's rebuild of that module. So the coordinating session asked
+placeholders left: 0
+mentions of the history move in the section (he_study.txt): 0
+mentions of a review in the section (he_study.txt): 0
+## order of writes in he_texts.py: 01 is written by edit() before 08's regex is checked (lines):
+21:    path.write_text(text.replace(old, new), encoding='utf-8')
+24:edit(CH / '01-ROOT.md',
+55:assert k == 1, k
+56:path.write_text(s, encoding='utf-8')
+68:STUDY.write_text(t.rstrip('\n') + '\n\n' + section.strip('\n') + '\n', encoding='utf-8')

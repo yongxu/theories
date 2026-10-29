@@ -7,7 +7,6 @@ import Becoming.MapInstances
 import Becoming.GrammarLaws
 import Becoming.GrammarTransport
 import Becoming.ShownOrder
-import Becoming.KeptOnward
 import Becoming.World
 import Becoming.Witnesses
 import Becoming.Frame
@@ -191,6 +190,7 @@ import Becoming.SummaryFutures
 import Becoming.Gated
 import Becoming.Viability
 import Becoming.Keeping
+import Becoming.ReflexivePrediction
 import Becoming.Prelude
 import Becoming.Ideals
 import Becoming.ContingentPlans
@@ -207,6 +207,7 @@ import Becoming.ChanceFloors
 import Becoming.IntegerOrder
 import Becoming.Acceptance
 import Becoming.GuardHorizon
+import Becoming.OpenedCorrection
 import Becoming.Countdown
 import Becoming.Lasting
 import Becoming.Copying
@@ -332,6 +333,7 @@ import Becoming.Bundles
 import Becoming.ActivationCapacity
 import Becoming.Narrowing
 import Becoming.NarrowingRuns
+import Becoming.ReadingLoop
 import Becoming.SecuredContent
 import Becoming.ProfileReach
 import Becoming.RenewalBound
@@ -2728,6 +2730,24 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   and, where it holds a rule, its greatest safe answer, the only one; along every run observing
   a candidate rule the answer from the record is the greatest safe answer and asserts the
   observed rule's values; re-encoding transports what the belief settles.
+* `Becoming.ReadingLoop` (L1): the reading loop, sensing, predicting, choosing, acting and revising as
+  one blanketed law. A region kept along every reach is closed (`ReadingLoop.kept_iff_closed`); with a
+  reading its update keeps, a policy keeps a task and goes on exactly where each state's act is good and
+  enabled for its reading (`ReadingLoop.keeps_continues_iff`); the worlds possible after a history are
+  the least reading kept by recording that holds at the starts (`ReadingLoop.possible_least`), and a
+  policy acting from its history keeps a task exactly where its act is safe at every world possible
+  after each history it generates (`ReadingLoop.history_keeps_iff`); for one blanketed law from one
+  internal, sensory and active start, two worlds give the formation one sensed course exactly as long
+  as they answer alike what it does (`ReadingLoop.sensed_alike_iff`), and, equality of values decided,
+  where every answer telling them apart breaks a task, keeping it is not telling them apart
+  (`ReadingLoop.alike_within`, `ReadingLoop.alike_of_kept`); from a start with no answer pending, a
+  formation keeping candidate laws keeps those listed that fit its course's answers taken in
+  (`ReadingLoop.Loop.kept_iff`), and where the world answers its act with what it sensed and stays,
+  it chooses that act and every candidate predicts that answer, it rests at once
+  (`ReadingLoop.Loop.rests_of_unrefuted`); from related starts, two blanketed laws whose steps keep a
+  relation under which the values sensed and the acts are one sense and act alike
+  (`ReadingLoop.observed_alike`); witnesses (`ReadingLoop.Untested.floor_forgoes`,
+  `ReadingLoop.Untested.model_or_order`). A leaf (board item RF).
 * `Becoming.SecuredContent` (L2): secured new content with open future form: one response
   can secure new living content in each admitted continuation without one fixed content in all;
   a finite signed integral certifies it where each positive occurrence means such content; with
@@ -2828,6 +2848,14 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   horizon. Two parts' plans run together keep both guards where joint steps project onto the
   parts and the joint moves are usable throughout, and every joint plan that keeps a guard has
   them usable.
+* `Becoming.ReflexivePrediction` (L1): a prediction read by what it predicts. Right exactly where the
+  response leaves it (`ReflexivePrediction.Right`); none right where the response moves every value,
+  whatever the predictor reads (`ReflexivePrediction.no_predictor_right`); on the chain `0` to `n`,
+  under a response mapping it into itself and keeping its order, repeated publication from zero is the
+  least right prediction by step `n` (`ReflexivePrediction.bottom_rests`); witnesses with two right predictions,
+  none and one (`ReflexivePrediction.ThresholdResponse.reached_by_start`,
+  `ReflexivePrediction.Negating.alternates`, `ReflexivePrediction.Reflecting.middle_right`). A leaf
+  (board item RF).
 * `Becoming.Grammar` (L0): the grammar, a relational calculus with continuation relative to a
   class at its centre, stated for every carrier and every relation and named in Chinese with a
   binding table. Continuation (`«续»`) is 缘 met with a class; lines, families and the positions
@@ -2903,7 +2931,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   from which the stretch balances of flows, amounts, courses and censuses are derived.
 * `Becoming.GrammarLaws` (L0): the five master laws of 08 §7 on the grammar, for every carrier and
   relation, with no premise. Closure: lying within a closure (`«所闭»`) is being the occurrence
-  itself or reached (`«所闭当且仅当同一或及»`). Balance: a perfect pairing of finite lists under a
+  itself or reached (`«所闭当且仅当同一或及»`), and a region of the steps of time that every step
+  keeps holds from where it holds on (`kept_onward`), the activity laws of `Becoming.Retaining`,
+  `Becoming.Wholes`, `Becoming.Exclusion`, `Becoming.Reserve`, `Becoming.PatternPassing` and
+  `Becoming.Persistence` that keep a region along the steps by their own induction being its cases
+  (board items OU3f, HE). Balance: a perfect pairing of finite lists under a
   relation (`«对»`) conserves count (`«对之长»`) and under the one is exactly equal count
   (`«一之对»`); pairings compose, join, gather over a family and carry over a stretch under the
   closure (`«对之接»`, `«对之并»`, `«对之族»`, `«对之程»`), and the count law at a step and over a
@@ -2937,7 +2969,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   Lumping: with the successor fixed where `E`
   leads, constancy is going alike with a successor available (`«局定后则有常当且仅当同行可续»`), and a
   map's image has a fixed successor exactly where sameness under the map goes alike
-  (`«像定后当且仅当同行»`). Order: widening of relations is irreflexive, one-way and transitive and
+  (`«像定后当且仅当同行»`); a map preserves a relation exactly where its image lies within the
+  other (`«保之像»`), with Mechanism's `factors_image` and `Image.least` its cases. Order: widening
+  of relations is irreflexive, one-way and transitive and
   excludes keeping and being mixed (`«广不可逆»`, `«广之传递»`); a transitive relation joined to the
   strict part of a transitive relation containing it is transitive, and irreflexive where the first
   is (`strictJoin_trans`, `strictJoin_irrefl`). It imports the grammar, its map
@@ -2959,8 +2993,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   through the grammar's image (`«对应之像»`) and kept by its operations (`«合之像»`, `«而之像»`,
   `«及之像»`), and a predicate is carried as its partial identity (`«部分恒等之像»`). Ending on every
   branch is pulled back along any map carrying continuation from a closed region (`«尽之拉回»`).
-  Along maps, a map preserves a relation exactly where its image lies within the other (`«保之像»`),
-  and going on along some branch is pulled back along any map lifting continuation (`«延之拉回»`);
+  Going on along some branch is pulled back along any map lifting continuation (`«延之拉回»`);
   steps, passing through a word, within `n` steps, closed regions, a fixed successor and
   predecessor, going alike and going on are kept (`«迭之对应»`, `«历之对应»`, `«迭内之对应»`,
   `«闭之对应»`, `«定后之对应»`, `«定前之对应»`, `«同行之对应»`, `«延之对应»`), and correspondences
@@ -2979,13 +3012,6 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   one search, two orders according with one choice, alike on the menu met and apart after
   (`ChoiceOccasions.Untried.same_search_met`, `ChoiceOccasions.Untried.same_search_after`). A leaf
   (board item RF).
-* `Becoming.KeptOnward` (L1): a region every step keeps holds from where it holds on. A region of
-  the steps of time that every step keeps, holding at step `a`, holds at every later step
-  (`kept_onward`): the steps are a line under the successor (`«线则所闭»`), and a closed region
-  holds what lies within the closure (`«闭含所闭»`). The inductions over steps that keep a region in
-  `Becoming.Retaining`, `Becoming.Wholes`, `Becoming.Exclusion`, `Becoming.Reserve`,
-  `Becoming.PatternPassing` and `Becoming.Persistence` are its cases. Its home is beside
-  `«线则所闭»` in `Becoming.GrammarLaws`, where it moves at the next full rebuild (board item OU3f).
 * `Becoming.Ideals` (L1): a history read off its finite stretches, as an ideal of their order
   (no premise; it imports nothing). A refutable reading holds, up to double negation, where a
   point adheres, and what adheres is closed. A class of ideals is closed exactly where it is the
@@ -3076,6 +3102,17 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   each reading has one good move, the converse with `Viability.ChoiceOver`
   (`uniform_policy_iff_fiber_feasible`); endpoint access can hide a gap that an overlapping
   handoff closes (`endpoint_access_hides_gap`, `overlapping_handoff_keeps_access`).
+* `Becoming.OpenedCorrection` (L1): a revision of a reading that opens a correction, along one
+  process. Correctable at a configuration: a fitting uniform policy exists through the reading in
+  force there, its acts acceptable and executable (`OpenedCorrection.Correctable`); a course of the
+  process opens a correction where it leads from a configuration lacking one to one with it,
+  acceptability fixed (`OpenedCorrection.OpensAlong`); with the readings in one type, a reading read
+  off the old through a supplied map, gaining no executability, opens nothing
+  (`OpenedCorrection.coarser_opens_nothing`); on Revising's process, starting with the link off,
+  rebuilding it opens the correction where a unit of stock remains after
+  (`OpenedCorrection.Linked.opens`, `OpenedCorrection.Linked.rebuilt_starved`), and replenishing
+  alone opens it where the link is on and the stock is not (`OpenedCorrection.Linked.opens_by_support`).
+  An application in the ring (board item RF).
 * `Becoming.Countdown` (L1): counted work, kept properties of admitted courses and a reserved
   exit, with no premise. An admitted course keeps a property exactly when every admitted step
   does; work done one unit per tick for one unit of fuel finishes in `work + 1` ticks exactly
@@ -3962,9 +3999,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`«常类之闭当且仅当后皆同类»`); the same holds up to the net's end (`«至终有常»`,
   `«至终常闭则后皆续»`, `«至终常类之闭当且仅当后皆同类»`), and a relation under which a line ends at an
   occurrence that still conditions something is not constant up to the net's end
-  (`«亡而网续则不至终有常»`). Witnesses that neither premise can be dropped (`Unclosed`, `Inconstant`),
-  and a finite net with two families in which the one is not constant while one family's class,
-  narrower than the one, is constant up to the net's end and the organism's is not
+  (`«亡而网续则不至终有常»`). Witnesses that neither premise can be dropped from these laws
+  (`Unclosed`, `Inconstant`), and a finite net with two families in which the one is not constant while
+  one family's class, narrower than the one, is constant up to the net's end and the organism's is not
   (`FiniteFamilies`); and a finite net with two families sharing a condition they affect, where every
   premise holds at once and the line from one family's first birth reaches the other past the first
   member's end (`FiniteSharedCondition`). `Becoming.GrammarCases` derives from `«所经不同则不及»` its

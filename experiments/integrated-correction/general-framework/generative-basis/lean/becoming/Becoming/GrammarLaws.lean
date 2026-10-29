@@ -48,7 +48,10 @@ their consumers' stay arithmetic, since each needs only the count.
   closed region holding `x` is `x` itself with what `x` reaches. It is reflexive, transitive, holds
   every step, grows with the relation, is symmetric for a symmetric relation, is itself closed,
   nothing within it bears the relation beyond it, and a region is `x`'s closure exactly where it
-  holds `x`, is closed and lies within the closure (`«所闭之证»`).
+  holds `x`, is closed and lies within the closure (`«所闭之证»`). A region of the steps of time that
+  every step keeps holds from where it holds on, the closure at the successor along a line
+  (`kept_onward`); the models' activity laws that keep a region along the steps by their own
+  induction are its cases.
 * **Balance.** A perfect pairing (`«对»`) between finite lists under any relation conserves their
   count (`«对之长»`); under the one it is exactly equal count (`«一之对»`), and under an arbitrary
   relation equal count need not give one (`«等长而不对之例»`, under the empty relation). Pairings
@@ -109,10 +112,13 @@ their consumers' stay arithmetic, since each needs only the count.
   its successors along one line; `«迭之周»` repeats a loop; `«迭内即静或缘之迭»` relates steps of
   different lengths and `«承之迭»` a course of regions round by round, which no law of `«历»` states;
   and `«迭内之接»`, `«存承之迭»`, `«迭之定»` and `«同行于迭»` follow from laws above with no induction
-  of their own. Three of the models' step-indexed laws are proved
-  from the laws of steps counted: `Withholding`'s closed forms from the laws of taking on, a course carrying
-  its bounds (`WithinMoves.after_course`) from `«迭内之接»`, and an unending line reaching every later
-  step (`Web.reaches_onward`) from `«不穷则迭»`.
+  of their own. Of the models' step-indexed laws, these are proved from the laws of steps counted:
+  `Withholding`'s closed forms from the laws of taking on, a course carrying its bounds
+  (`WithinMoves.after_course`) from `«迭内之接»`, an unending line reaching every later step
+  (`Web.reaches_onward`) from `«不穷则迭»`, and the lineage laws of `Becoming.Identity`
+  (`Web.Lineage.unique`, `origin`, `split`, `through`, `onward`, `back`) from `«迭之定»`,
+  `«迭之定前»`, `«迭之分»` and `«或有后则或迭»` with `«迭之逆»`, a lineage read as the steps of the
+  continuation within activity (`Web.steps_iff_lineage`).
 * **Finite runs: rest.** A line is at rest where its steps of `F` (a least fall, say) stop
   recurring (`«屡»`, `«或屡»`) while its steps are steps of `Q` (no rise, say). Where every course
   of `Q` steps then an `F` step ends from the line's place (`«尽» («而» («所闭» Q) F) «一»`, the
@@ -133,7 +139,8 @@ their consumers' stay arithmetic, since each needs only the count.
   (`«有常定后则同行»`, `«同行遍后则有常»`) are corollaries. The image of a relation along a map has
   a fixed successor exactly where sameness under the map goes alike (`«像定后当且仅当同行»`): a part
   read alone carries a law, possibly partial, exactly where the rest makes no difference to where it
-  goes. Going alike keeps lines of every length alike (`«同行之迭»`).
+  goes. Going alike keeps lines of every length alike (`«同行之迭»`). A map preserves a relation
+  exactly where the image lies within the other (`«保之像»`).
 * **Order.** Widening (`«广» R S`: `S ⊆ R` and `R` relates something `S` does not) is irreflexive,
   asymmetric and transitive; it excludes keeping and being mixed, and keeping excludes being mixed.
   Where inclusion or exceeding is decided both ways, one of the four holds (`«四比之周»`); that it is
@@ -142,9 +149,7 @@ their consumers' stay arithmetic, since each needs only the count.
   partial identity: `Web.admitted`, `Weighting.admittedOn`), so the models' comparisons are these.
 
 What is not shown: that any model's relation is functional, total or listed (the models supply
-these); the n-step lines law for lines of different lengths; that the models' lineage laws
-(`Web.Lineage.split`, `through`, `onward`, `back`, `unique`, `origin`) follow from the laws of steps,
-which is board item OU3f's next part; that a pairing under continuation
+these); the n-step lines law for lines of different lengths; that a pairing under continuation
 (`«对» («续» R E)`) adds anything to equal count, which is not stated; any converse of the law of
 rest, from rest along a line to the ending of the courses: none is established, and one would have
 to say which step relations it compares and on what logic. Every statement is pointwise; no equality of
@@ -1091,6 +1096,19 @@ theorem «线则所闭» {R : «际» α} {g : Nat → α} {N : Nat} (steps : �
   | 0, _ => «所闭之自反» R (g 0)
   | m + 1, le => «所闭之传递» («线则所闭» steps m (Nat.le_of_succ_le le)) («缘在所闭» (steps m le))
 
+/-- **A region every step keeps holds from where it holds on.** A region of the steps of time
+that every step keeps, holding at step `a`, holds at every later step `b`: the steps from `a` to
+`b` are a line under the successor (`«线则所闭»`), and a closed region holds what lies within the
+closure from where it holds (`«闭含所闭»`). It is the grammar's closure at the successor relation;
+no process and no run is needed. -/
+theorem kept_onward {I : Nat → Prop} (keeps : ∀ n, I n → I (n + 1)) {a b : Nat} (holds : I a)
+    (later : a ≤ b) : I b :=
+  match le_dest later with
+  | ⟨k, at_⟩ => Eq.subst (motive := I) at_.symm
+      («闭含所闭» (R := fun x y => y = x + 1)
+        (fun x _ held stepped => Eq.subst (motive := I) stepped.symm (keeps x held)) holds
+        («线则所闭» (g := fun i => a + i) (N := k) (fun _ _ => rfl) k (Nat.le_refl k)))
+
 open GrammarLaws in
 /-- **Along a line held by a list, merging nothing at its places, the line comes back to its start**
 within as many steps as the list is long: pigeonhole along the line, with no decidability, then back
@@ -1366,6 +1384,15 @@ variable {κ : Type v}
 /-- The image of a relation along a map (像): `k` conditions `k'` where something read as `k`
 conditions something read as `k'`. -/
 def «像» (π : α → κ) (R : «际» α) : «际» κ := fun k k' => ∃ s u, π s = k ∧ R s u ∧ π u = k'
+
+/-- **Preserving, read through the image (保之像).** A map takes every pair `R` relates to a pair `R'`
+relates exactly where the image of `R` along it lies within `R'`: a map preserving a relation, not a
+relation kept (守) nor two kept each within the other (齐). -/
+theorem «保之像» {α : Type u} {κ : Type v} (φ : α → κ) (R : «际» α) (R' : «际» κ) :
+    «则» («像» φ R) R' ↔ ∀ x y, R x y → R' (φ x) (φ y) :=
+  ⟨fun within x y r => within _ _ ⟨x, y, rfl, r, rfl⟩,
+   fun keeps _ _ ⟨x, y, hx, r, hy⟩ => Eq.subst (motive := fun b => R' _ b) hy
+     (Eq.subst (motive := fun a => R' a (φ y)) hx (keeps x y r))⟩
 
 /-- **The image along a map has a fixed successor exactly where sameness under the map goes
 alike.** The read-alone part carries a law, possibly partial (nothing is said about a successor

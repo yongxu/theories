@@ -63,6 +63,8 @@ Keeping exactly the candidates consistent with the observations is the version s
 - related, not a proved adapter: [encounter-selection-and-revision](encounter-selection-and-revision.md). Records only narrow the candidates; there of bindings, here of rules.
 - related, not a proved adapter: [generalization-through-lumping](generalization-through-lumping.md). Data fix a value where an input is lumped with an observed one; here the safe answer of what is kept.
 
+**Used by:** [what-a-course-chosen-through-its-model-does-not-test](what-a-course-chosen-through-its-model-does-not-test.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

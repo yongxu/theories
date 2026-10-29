@@ -300,7 +300,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
       "role": "integration",
-      "sha256": "ed0fffaf49e2c2923e03dd8265d34425f9175ed8a6fa2515d5970cbffd1174eb"
+      "sha256": "637eda898da1bab151770333e3c5bbcdd80a93729d0d7cd6f3ab7a53cbcaa0e9"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
@@ -320,7 +320,7 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "7a3737d048bbdf649da364ff3a688643fef458f088c6bd4b5b5c04ea874db53f"
+      "sha256": "62025a2b610fb1726559d2a6dd34536225d2a5ea66012ef29fd3865b1055ebb5"
     }
   ],
   "proof_bindings": [

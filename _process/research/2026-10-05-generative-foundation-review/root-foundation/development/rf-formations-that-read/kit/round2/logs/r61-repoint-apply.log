@@ -1,0 +1,74 @@
+re-pointing 9 pairs in 9 records:
+   a-prediction-read-by-what-it-predicts _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws']
+   a-reading-kept-by-its-update _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws']
+   acts-alike-from-a-model-or-from-an-order _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws']
+   capture-by-counted-choices theories/becoming/chapters/03-KNOWING.md ['## Open']
+   exit-from-a-margin theories/becoming/chapters/03-KNOWING.md ['## Open']
+   readers-reading-readers _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws']
+   what-a-course-chosen-through-its-model-does-not-test _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws']
+   what-choices-show-of-an-order _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws']
+   what-readings-fix-of-the-unread _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ['## 12. Order, owners and what it serves', '## 4. The new laws']
+left to their owners: []
+{
+ "records": 9,
+ "apply": true,
+ "by_record": {
+  "a-prediction-read-by-what-it-predicts": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  },
+  "a-reading-kept-by-its-update": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  },
+  "acts-alike-from-a-model-or-from-an-order": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  },
+  "capture-by-counted-choices": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "exit-from-a-margin": {
+   "paths": [
+    "theories/becoming/chapters/03-KNOWING.md"
+   ],
+   "rebound": []
+  },
+  "readers-reading-readers": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  },
+  "what-a-course-chosen-through-its-model-does-not-test": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  },
+  "what-choices-show-of-an-order": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  },
+  "what-readings-fix-of-the-unread": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}
+ 
+repoint (texts): 9 records written
