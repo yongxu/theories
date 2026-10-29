@@ -208,3 +208,32 @@ Also review, as an adversarial reviewer in the same way as before, two further r
 
 Return: a verdict line; for each of your seventeen findings, one line: taken correctly, partly, or not, with what is missing; any new problem the rewrite introduces; then numbered findings on the two further modules, each with severity, location (file:line), the quoted text, the problem against the Lean, and a replacement. Report only what you can point to.
 ```
+
+### The cold read of the texts (piped to `cx -m astra -e high --sandboxed --fresh`)
+
+```text
+Cold read, read-only, in <a scratch copy of the repository with the texts integrated> (a scratch copy of the repository with round 2's texts integrated; do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine).
+
+Context. This repository develops one theory (the Theory of Becoming) with a pure Lean core. Board item RF, round 2's first landing, adds two Lean modules, already reviewed on the code: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean and .../Becoming/ReflexivePrediction.lean (both build with every axiom report empty). You are reading the texts written about them, cold, against the Lean: each text must say exactly what the Lean proves, with every hypothesis the Lean needs, and every reading must be labelled as a reading.
+
+The texts:
+1. theories/becoming/chapters/03-KNOWING.md: the new section 12 (anchor the-reading-loop, four theorem paragraphs and their readings), the bases sentence near the top ("a region kept along every reach"), and the Open bullet "Formations that read, beyond".
+2. theories/becoming/chapters/08-METHOD.md: the known-results bullet "The reading loop" in section 8.
+3. theories/becoming/THE-THEORY-OF-BECOMING.md: the paragraph "A formation that senses, predicts, chooses, acts and revises is one law" in section 3.
+4. theories/becoming/review/ALIGNMENT.md: the scope box's assistance bullet and the sentence "Round 2's first landing".
+5. The package's README.md and README.zh.md rows for the two modules, Becoming.lean's two L1 bullets, and check_becoming.py's two scope sentences ("ReadingLoop: ...", "ReflexivePrediction: ...").
+6. The four records as they will be written: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf2.py (the build(...) calls; English and Chinese).
+7. The study section template: the same folder's study_rf2.txt ({N} and {RECEIPT} are filled at landing).
+
+Check especially: dropped hypotheses (decidability, the shared start, the horizon, the listing, the region the world's moves keep, choice over the states, the chain and its order); "every formation" or "never" where the Lean fixes the world pair or a start; general claims made of witnesses; the Chinese saying the same as the English; citations said to be contained where they are only related.
+
+Return: a verdict line; then numbered findings, each with severity (high, medium, low), location (file:line), the quoted text, the problem against the Lean, and a replacement in the text's language. Report only what you can point to.
+```
+
+### The re-check of the rebuilt RF6.1 module (the review's session continued, `cx -r`)
+
+```text
+Re-check, read-only, in /Users/ren/theories/.claude/worktrees/rf-landing (do not edit, create, commit, render, run make or build Lean). Your findings 19 to 23 on kit/round2/tree/Becoming/OpenedCorrection.lean were taken by rebuilding the module (it now builds with 11 theorems in 15 declarations, every axiom report empty). It now states, for any process: Correctable (a fitting uniform policy exists through the reading in force at a configuration, with the act acceptable at every situation giving each reading and executable at that configuration) and correctable_iff under choice; OpensAlong (a trace of the process from x to x', not correctable at x, correctable at x', one acceptability); finer_keeps and coarser_opens_nothing (one type of readings, readings related by a supplied map, executability compared); widened_correctable. Then, on Revising's stock-and-link process of Becoming/Revision.lean (in the package), Linked: with the link off no configuration is correctable, with it on and a unit of stock every one is, with it on and none none is; rebuilding from two units opens the correction in one step, from one it does not, and rebuilding then replenishing from one does; with every act counted acceptable the unlinked configuration is correctable already. The header's prose and readings were rewritten after findings 20 and 23.
+
+Return: a verdict line; for each of findings 19 to 23, one line: taken correctly, partly, or not, with what is missing; then any new problem, each with severity, location (file:line), the quoted text, the problem against the Lean, and a replacement. Report only what you can point to.
+```

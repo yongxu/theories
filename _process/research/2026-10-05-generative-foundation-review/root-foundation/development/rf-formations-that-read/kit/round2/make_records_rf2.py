@@ -148,10 +148,10 @@ ROUND1_NOTE = {'en': '', 'zh': ''}
 rA = build(
     'a-reading-kept-by-its-update', RL,
     {'en': 'A reading kept by its update, and the reading its own history carries', 'zh': '更新所守之读，与己历所载之读'},
-    {'en': "A region kept along every reach is closed; for a reading its update keeps, a policy keeps a task "
-           "and goes on exactly where each state's act can be taken at every world the reading admits and leads only "
-           "where the task holds; acting from its history, that reading is the worlds possible after it.",
-     'zh': '沿每一及而守之域即闭域；于其更新所守之读，策略守务且不止，恰当每态之行于其读所容之每一世皆可行且唯通务成之处；依己历而行者，此读即其历后可能之诸世。'},
+    {'en': "A region kept along every reach is closed; for a reading its update keeps under every act, a policy keeps a "
+           "task and goes on exactly where each state's act is enabled at every world the reading admits and leads only "
+           "where the task holds.",
+     'zh': '沿每一及而守之域即闭域；于其更新于每一行下所守之读，策略守务且不止，恰当每态之行于其读所容之每一世皆可行且唯通务成之处。'},
     [("A region kept along every finite reach of a relation is a closed region of it, and conversely: one step is a "
       "reach, and a closed region holds what is reached (by «闭之及»).",
       "沿一关系之每一有穷之及而守之域即其闭域，反之亦然：一步即一及，闭域含所及者（由 «闭之及»）。",
@@ -251,8 +251,10 @@ rA = build(
      dep('when-to-inquire-and-when-to-respond', "Choice over the states, Viability.ChoiceOver, as in "
          "GuardHorizon.uniform_policy_iff_fiber_feasible.", '于诸态之择 Viability.ChoiceOver，如 GuardHorizon.uniform_policy_iff_fiber_feasible。')],
     [rel('what-a-course-chosen-through-its-model-does-not-test',
-         "The loop of a formation keeping candidate laws, where the reading that a candidate is kept is a closed region.",
-         '守候选律之形成之环，其中「某候选被守」之读为闭域。')],
+         "The loop of a formation keeping candidate laws: for a candidate faithful throughout a region of worlds every "
+         "move keeps, the configurations where it is kept, agrees with the answer pending and the world is in that "
+         "region form a closed region.",
+         '守候选律之形成之环：候选于世之每移所守之域内皆如世之答而预言时，其被守、合待纳之答且世在此域之形态，构成闭域。')],
     [{'path': LEAN['GuardHorizon'], 'role': 'proof', 'sha256': sha(LEAN['GuardHorizon'])}],
     CH3, done('a-reading-kept-by-its-update', 'a reading kept by its update, with going on, and the reading its own '
               'history carries', '更新所守之读，并不止，与己历所载之读'))
@@ -261,10 +263,10 @@ rA = build(
 rB = build(
     'what-a-course-chosen-through-its-model-does-not-test', RL,
     {'en': 'What a course chosen through its model does not test', 'zh': '依其模型而择之历程所不验者'},
-    {'en': "Two worlds give one formation one course exactly as long as they answer alike what it does; a formation "
-           "keeping candidate laws keeps those fitting its own course's answers; where only answers breaking a task tell "
-           "two worlds apart, a formation keeping the task never tells them apart.",
-     'zh': '二世予一形成同一历程，恰当其于所行之答相同；守候选律之形成所守者为合其己历程之答者；唯毁务之答能分二世之处，守务之形成终不分之。'},
+    {'en': "For one blanketed law from one start, two worlds give the formation one sensed course exactly as long as "
+           "they answer alike what it does; where only answers breaking a task tell them apart, keeping it is sensing "
+           "alike in both; candidates are kept where they fit the course's answers.",
+     'zh': '于同一毯化之律自同一起点，二世予形成同一所感之历程，恰当其于所行之答相同；唯毁务之答能分之处，守务即于二世所感皆同；守候选律之形成所守者为所列且合其历程之答者。'},
     [("For every blanketed law, from one internal, sensory and active start, two worlds give the formation one sensed "
       "course through step n exactly as long as, at each step before n, they answer alike the act it takes at the "
       "value it senses.",
@@ -305,22 +307,23 @@ rB = build(
         'ReadingLoop.Untested.lower_le_left', 'ReadingLoop.Untested.lower_le_right', 'ReadingLoop.Untested.lower_cases',
         'ReadingLoop.Untested.worst', 'ReadingLoop.Untested.worst_le', 'ReadingLoop.Untested.worst_attained',
         'ReadingLoop.Untested.byWorst', 'ReadingLoop.Untested.byWorst_iff', 'ReadingLoop.Untested.loop')),
-     ("Keeping both candidates, the formation rests at once on the known act and the middle value in either world, with "
-      "one course in both, never sensing the high value of the first; the true candidate is kept in its own world from "
-      "every listing holding it.",
-      "守二候选，形成于任一世即止于已知之行与中值，二世之历程同一，终不感第一世之高值；真候选于其己世自含之之每一列皆被守。",
+     ("Started with both candidates listed, no answer pending, the middle value and the known act, the formation rests "
+      "at once on the known act and the middle value in either world, alike in both, never sensing the high value of the "
+      "first; the true candidate is kept in its own world from every listing holding it.",
+      "以列二候选、无待纳之答、中值与已知之行为起点，形成于任一世即止于已知之行与中值，二世所感所行皆同，终不感第一世之高值；真候选于其己世自含之之每一列皆被守。",
       C(RL, 'ReadingLoop.Untested.rest', 'ReadingLoop.Untested.rests', 'ReadingLoop.Untested.true_kept',
         'ReadingLoop.Untested.alike_in_both', 'ReadingLoop.Untested.never_high')),
-     ("Trying the untried act first separates the worlds: in the first the formation rests from step four on the true "
-      "candidate, the untried act and high; in the second from step three on the true candidate and the known act, "
-      "sensing the low value at step one and at no other step.",
-      "先试未试之行则分二世：于第一世，形成自第四步止于真候选、未试之行与高；于第二世，自第三步止于真候选与已知之行，唯于第一步感低值，余步皆不。",
+     ("Started the same way but with the untried act, the formation separates the worlds: in the first it rests from "
+      "step four on the true candidate, the untried act and high; in the second from step three on the true candidate "
+      "and the known act, sensing the low value at step one and at no other step.",
+      "以同一起点而初取未试之行，则形成分二世：于第一世，自第四步止于真候选、未试之行与高；于第二世，自第三步止于真候选与已知之行，唯于第一步感低值，余步皆不。",
       C(RL, 'ReadingLoop.Untested.upRest', 'ReadingLoop.Untested.downRest', 'ReadingLoop.Untested.explorer_up',
         'ReadingLoop.Untested.explorer_down', 'ReadingLoop.Untested.explorer_low_once')),
-     ("Every formation on these worlds, whatever its internal part, update and choice of act, that never senses the low "
-      "value in the second world senses alike in both and takes the known act at every step there, and from a start "
-      "not sensing high never senses high in the first.",
-      "于此二世之每一形成，无论其内部部分、更新与择行如何，若于第二世终不感低值，则于二世所感皆同，且于彼处每步皆取已知之行；自不感高之起点，于第一世终不感高。",
+     ("Every blanketed law with the witness's answer and stationary worlds, whatever its internal part, update and "
+      "choice of act, from one internal, sensory and active start in both worlds, that never senses the low value in the "
+      "second senses alike in both and takes the known act at every step there; where the shared start does not sense "
+      "high, it never senses high in the first.",
+      "于感官之答为例之 reply 且世不移之每一毯化之律，无论其内部部分、更新与择行如何，自二世中相同之内部、感官与主动之起点，若于第二世终不感低值，则二世所感皆同，且于彼处每步皆取已知之行；共同起点不感高处，于第一世终不感高。",
       C(RL, 'ReadingLoop.Untested.floor_forgoes', 'ReadingLoop.Untested.floor_never_high'))],
     [{'en': "Any types for the general laws, discrete synchronous steps of a blanketed law; equality of the values "
             "sensed decided for the law of a task's breaking and for the loop's candidates; candidates predicting the "
@@ -341,9 +344,10 @@ rB = build(
     [{'en': "A model never refuted: the formation keeping both candidates and choosing by the worst case senses the "
             "middle value at every step in both worlds (ReadingLoop.Untested.rests, ReadingLoop.Untested.alike_in_both).",
       'zh': '永不被驳之模型：守二候选而依最坏择之形成，于二世每步皆感中值（ReadingLoop.Untested.rests、ReadingLoop.Untested.alike_in_both）。'},
-     {'en': "Keeping the floor is not learning: every formation never sensing low in the second world has one course in "
-            "both (ReadingLoop.Untested.floor_forgoes).",
-      'zh': '守底非学：于第二世终不感低之每一形成，于二世历程同一（ReadingLoop.Untested.floor_forgoes）。'}],
+     {'en': "Keeping the floor is not telling the worlds apart: with the witness's answer and stationary worlds, every "
+            "formation from one start in both that never senses low in the second senses alike in both "
+            "(ReadingLoop.Untested.floor_forgoes).",
+      'zh': '守底即不分二世：感官之答为例之 reply 且世不移，自二世相同之起点于第二世终不感低之每一形成，二世所感皆同（ReadingLoop.Untested.floor_forgoes）。'}],
     {'en': "Pure core, every axiom report empty: the loop is a Blanket.Blanketed law, Blanket's agent_through_sensory "
            "used throughout; candidate lists filtered with Narrowing.mem_filter; the witness evaluates by rfl, and its "
            "law over every formation is a case of alike_of_kept.",
@@ -385,10 +389,10 @@ rB = build(
 rC = build(
     'acts-alike-from-a-model-or-from-an-order', RL,
     {'en': 'Acts alike from a model or from an order', 'zh': '出于模型或出于序之同行'},
-    {'en': "Formations related by a relation their steps keep, under which the values sensed and the acts are one, "
-           "sense and act alike at every step; a formation not separating two worlds and one ranking otherwise can so "
-           "act alike, while informing turns only the first.",
-     'zh': '诸步所守之关系所联、其下所感之值与行皆同之形成，每步所感所行皆同；未分二世之形成与排序相异之形成可如此同行，而告之唯转其前者。'},
+    {'en': "From related starts, formations whose steps keep a relation under which the values sensed and the acts are "
+           "one sense and act alike; in a witness an unresolved model and a reversed ranking so act alike, and starting "
+           "the first with the true candidate alone changes its course.",
+     'zh': '自相联之起点，诸步守一关系、其下所感之值与行皆同之形成，所感所行皆同；于一例，未决之模型与相反之排序如此同行，而以真候选独起前者则变其历程。'},
     [("For two blanketed laws reading one kind of value and act, a relation between their configurations that their "
       "steps keep, under which the values sensed and the acts are one, gives from related starts the same values sensed "
       "and acts at every step, so no selection through those tells the two apart.",
@@ -400,14 +404,14 @@ rC = build(
       "例，于未试之行之二世：第二排序，中高于高、高高于低；一训练之时，中值与低值开而择中；二排序读为序皆与之合，而于高与中相反排之。",
       C(RL, "ReadingLoop.Untested.rank'", 'ReadingLoop.Untested.training', 'ReadingLoop.Untested.above',
         'ReadingLoop.Untested.both_accord', 'ReadingLoop.Untested.apart_beyond')),
-     ("In the first world, the formation keeping both candidates with the first ranking and the one keeping the true "
-      "candidate with the second have the same acts and values sensed at every step, the second resting at once on the "
-      "known act.",
-      "于第一世，守二候选而用第一排序之形成，与守真候选而用第二排序之形成，每步所行与所感之值皆同，后者即止于已知之行。",
+     ("In the first world, each started with no answer pending, the middle value and the known act, the formation "
+      "keeping both candidates with the first ranking and the one keeping the true candidate with the second have the "
+      "same acts and values sensed at every step, the second resting at once on the known act.",
+      "于第一世，各以无待纳之答、中值与已知之行为起点，守二候选而用第一排序之形成，与守真候选而用第二排序之形成，每步所行与所感之值皆同，后者即止于已知之行。",
       C(RL, 'ReadingLoop.Untested.orderRest', 'ReadingLoop.Untested.order_rests', 'ReadingLoop.Untested.model_or_order')),
-     ("Started with the true candidate alone, the first ranking turns: from step three on the formation takes the "
-      "untried act and senses high, while the second keeps the known act.",
-      "以真候选独起，第一排序即转：自第三步起，形成取未试之行而感高，而第二排序守已知之行。",
+     ("Started the same way with the true candidate alone, the first ranking turns: from step three on the formation "
+      "takes the untried act and senses high; the second, already so started, keeps the known act.",
+      "以同一起点而唯以真候选，第一排序即转：自第三步起，形成取未试之行而感高；第二排序原已如此起，守已知之行。",
       C(RL, 'ReadingLoop.Untested.informed_turns'))],
     [{'en': "Any types for the general law; the relation is supplied and must be kept by both steps; the witness fixes "
             "the two candidate lists, the two rankings, the start and the world.",
@@ -457,9 +461,9 @@ rD = build(
     'a-prediction-read-by-what-it-predicts', RP,
     {'en': 'A prediction read by what it predicts', 'zh': '为其所预言者所读之预言'},
     {'en': "A published prediction read by the response is right exactly where the response leaves it; none is right "
-           "where the response moves every value; where the response keeps the order on a chain of n + 1 values, "
-           "repeated publication from the bottom reaches the least right prediction by step n.",
-     'zh': '为应所读之公预言，恰当应不移之处为是；应移每一值处无一为是；应于 n + 1 值之链上守其序处，自底反复公布至第 n 步达最小之是者。'},
+           "where it moves every value; on the chain 0 to n, under a response mapping it into itself and keeping its "
+           "order, publication from zero reaches the least right prediction by step n.",
+     'zh': '为应所读之公预言，恰当应不移之处为是；应移每一值处无一为是；于链 0 至 n，应映此链入其自身且守其序，自零反复公布至第 n 步达最小之是者。'},
     [("A prediction, published and read by the response, is right where the outcome, the response to it, is itself.",
       "预言既公布而为应所读，其果即对之之应，若为其自身则为是。",
       C(RP, 'ReflexivePrediction.Right')),

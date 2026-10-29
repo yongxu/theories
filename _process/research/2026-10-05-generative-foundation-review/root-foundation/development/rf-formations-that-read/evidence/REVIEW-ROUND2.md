@@ -453,3 +453,273 @@ Every finding was taken. Findings 19 to 23, on `Becoming.OpenedCorrection` (RF6.
 | 25 | Performative stability is not outcome equality | related to, defined there by risk minimization; this orbit only where retraining returns the outcome exactly; no general correspondence |
 | 26 | The continuity attribution omits the domain | the bounded scalar setup stated; an existence, not its reaching by repeated publication |
 | 27 | `Coordination` an interpretation as a name | renamed `ThresholdResponse`, zero and two the fixed points; coordination kept in the labelled reading |
+
+## The cold read of the texts
+
+After the review, the texts (03 §12, 03's bases and Open, 08's bullet, the overview's paragraph, the dossier's sentence, the package's rows and bullets, the checker's scope sentences, the four records and the study template) were cold-read against the Lean by a fresh session of the same reviewer, in a scratch copy with the texts integrated ([BRIEF](BRIEF.md#round-2)). Line numbers refer to that copy.
+
+Verdict: **Needs revision.** The detailed theorem paragraphs are mostly careful, but several summaries drop necessary hypotheses or strengthen witness results.
+
+1. **High — A preserved relation alone does not imply matching observations.**
+
+   **Locations:** [Becoming.lean:2730](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean); [check_becoming.py:2891](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py).
+
+   **Quoted:** “formations related by a relation their steps keep act alike”; “formations related by a relation their steps keep act and sense alike.”
+
+   **Problem:** `ReadingLoop.observed_alike` additionally requires that related configurations have equal sensory and active parts, and that the starts are related. An arbitrary preserved relation—for example, the universal relation—does not supply observational equality.
+
+   **Replacement:** “From related starts, two blanketed laws sense and act alike at every step where their paired steps preserve the relation and related configurations have equal sensed values and acts.”
+
+2. **High — The least-reading claim loses its boundary condition.**
+
+   **Locations:** [Becoming.lean:2723](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean); [check_becoming.py:2887](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py).
+
+   **Quoted:** “the least reading kept by recording”.
+
+   **Problem:** `possible_least` requires `∀ w, start w → B [] w`. Without requiring the reading to hold at the starts, the empty reading is also kept; `nothing_kept` expressly proves that.
+
+   **Replacement:** “the least reading kept by recording that holds at every specified start with empty history”.
+
+3. **Medium — Acting from history does not uniquely determine the reading.**
+
+   **Location:** [make_records_rf2.py:151](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf2.py).
+
+   **Quoted:** “acting from its history, that reading is the worlds possible after it”; “依己历而行者，此读即其历后可能之诸世。”
+
+   **Problem:** `Possible` is a particular construction, least among readings preserved by recording and containing the starts. Neither `possible_least` nor the history-policy equivalences require a history-based formation’s supplied reading to equal it. Coarser preserved readings remain possible.
+
+   **Replacement, English:** “With history as state, the worlds possible after it form the least reading kept by recording that holds at the specified starts.”
+
+   **Replacement, Chinese:** “以历为态时，历后可能之诸世构成为记录所守、且于指定起点成立之最小之读。”
+
+4. **High — The general indistinguishability summaries drop the shared start and decision hypothesis.**
+
+   **Locations:** [THE-THEORY-OF-BECOMING.md:98](../../../../../../../theories/becoming/THE-THEORY-OF-BECOMING.md); [Becoming.lean:2725](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean); [check_becoming.py:2888](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py); [study_rf2.txt:20](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf2.txt); [make_records_rf2.py:264](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf2.py); [ALIGNMENT.md:28](../../../../../../../theories/becoming/review/ALIGNMENT.md).
+
+   **Quoted:** “two worlds give one formation one course exactly as long as they answer alike what it does”; “where only answers breaking a task tell two worlds apart, no formation keeping the task learns which holds”.
+
+   **Problem:** `sensed_alike_iff`, `alike_within`, and `alike_of_kept` compare runs of **one blanketed law from equal internal, sensory and active starts**. The latter two require `DecidableEq S`. The finite result concerns steps through `N`; “never” requires the hypotheses at every step. “One course” also overstates equality: the external parts can differ.
+
+   **Replacement, English:** “For one blanketed law from equal internal, sensory and active starts, the sensed courses agree through `N` exactly when the worlds answer alike the first course’s act and sensed value at every step before `N`. With decidable equality of sensed values, if each differing second-world answer would violate `K`, and `K` holds in the second run at steps 1 through `N`, the sensed courses agree through `N`. If these hypotheses hold at every step, they agree forever.”
+
+   **Replacement, Chinese:** “于同一毯化之律，自内部、感官与主动部分皆相同之起点，二所感历程至 N 相同，恰当 N 前每步二世对第一历程之行与所感之值答之相同。所感之值之相等可判定时，若第二世之异答皆违 K，且第二历程于第一至第 N 步皆守 K，则二所感历程至 N 相同；诸条件每步皆成立，则每步皆同。”
+
+   For the dossier’s interpretive sentence, prefix this scoped conclusion with **“[AI reading]”** before describing it as failure to learn which world holds.
+
+5. **High — “Every formation on those worlds” needs the fixed response, stationary worlds and shared start.**
+
+   **Locations:** [03-KNOWING.md:472](../../../../../../../theories/becoming/chapters/03-KNOWING.md); [make_records_rf2.py:320](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf2.py), also line 344; [study_rf2.txt:28](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf2.txt).
+
+   **Quoted:** “every formation on those worlds, whatever its internal part, update and choice of act, that never senses the low value in the second senses alike in both”.
+
+   **Problem:** `floor_forgoes` fixes `nextSensory = reply`, requires `nextExternal s a w = w`, and compares `⟨i,s,a,.up⟩` with `⟨i,s,a,.down⟩`. Merely using the two-world carrier does not suffice. The initial sensory equality is especially necessary for equality at step zero.
+
+   **Replacement, English:** “For every blanketed law with the witness’s response `reply` and stationary worlds, from the same internal, sensory and active start in both worlds, never sensing low in `down` entails equal sensed courses and the known act at every step in `down`. If the shared initial sensed value is not high, the `up` course never senses high.”
+
+   **Replacement, Chinese:** “于感官响应为例中 reply、且世不移之每一毯化之律，自二世中内部、感官与主动部分皆相同之起点，若于 down 终不感低，则二所感历程皆同，且于 down 每步皆取已知之行；若共同之初始所感值非高，则于 up 终不感高。”
+
+6. **Medium — The concrete witness conclusions omit their concrete starts.**
+
+   **Locations:** [03-KNOWING.md:472](../../../../../../../theories/becoming/chapters/03-KNOWING.md), also line 477; [make_records_rf2.py:308](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf2.py), also lines 314 and 403; [study_rf2.txt:27](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf2.txt).
+
+   **Quoted:** “Keeping both candidates, the formation rests at once”; “sensing the low value at step one and at no other step”; “have the same acts and values sensed at every step”.
+
+   **Problem:** These are theorems about specified starts, not all starts with those candidate lists. `rests` starts at `.mid, .known`; the exploration results start at `.mid, .untried`; `model_or_order` and `informed_turns` start at `.mid, .known` in `.up`. All use `Loop.start`, with no pending answer. Starting low already invalidates “low at step one and at no other step”.
+
+   **Replacement, English:** “In this witness, start with no pending answer and the middle sensed value. With both candidates listed, the initial known act gives the resting course; changing only the initial act to untried gives the exploration course. The model/order comparison uses the specified two listings and rankings, with the initial known act in `up`; the informed variant changes the first listing to `[up]`.”
+
+   **Replacement, Chinese:** “此例皆以无待纳之答及中值为起点。列二候选而初取已知之行，得所述之静止历程；唯将初始行改为未试之行，得所述之探索历程。模型与序之比较用所定之二列与二排序，于 up 初取已知之行；告之之变体唯将前者之列改为 [up]。”
+
+7. **High — An unrefuted model does not by itself force rest.**
+
+   **Locations:** [Becoming.lean:2729](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean); [study_rf2.txt:25](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf2.txt).
+
+   **Quoted:** “rests on a model its course never refutes”; “it rests … where the world answers its act with what it sensed”.
+
+   **Problem:** `rests_of_unrefuted` requires four equations/conditions: `answer s a e = s`, `move s a e = e`, `choose hs s = a`, and every listed candidate predicting `s` at `(s,a)`. The study supplies only the first explicitly. Accurate candidates can remain unrefuted along a changing course.
+
+   **Replacement:** “From `Loop.start hs s a e`, if the world answers `a` with `s` and remains at `e`, the formation chooses `a` from `hs` at `s`, and every listed candidate predicts that answer, the configuration is constant from step one onward.”
+
+8. **Medium — Candidate retention summaries lose the listing and processing delay.**
+
+   **Locations:** [THE-THEORY-OF-BECOMING.md:98](../../../../../../../theories/becoming/THE-THEORY-OF-BECOMING.md); [Becoming.lean:2728](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean); [check_becoming.py:2890](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py); [study_rf2.txt:24](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf2.txt); [make_records_rf2.py:265](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf2.py).
+
+   **Quoted:** “its candidates are kept exactly where they fit the answers its own course received”.
+
+   **Problem:** `Loop.kept_iff` requires initial membership in `hs`, starts with no pending answer, and at configuration `n+1` tests only acts at steps `k<n`. The answer just received at `n+1` is not yet incorporated. The loop also requires decidable equality of sensed values.
+
+   **Replacement, English:** “With decidable equality of sensed values, from a listed-candidate start with no pending answer, the candidates retained at configuration `n+1` are exactly those initially listed that fit the answers to acts before step `n`; the latest sensed answer is incorporated at the next step.”
+
+   **Replacement, Chinese:** “所感之值之相等可判定时，自列候选且无待纳之答之起点，第 n+1 形态所守者恰为初列且合第 n 步前诸行之答之候选；最近所感之答于下一步方纳之。”
+
+   In [03-KNOWING.md:472](../../../../../../../theories/becoming/chapters/03-KNOWING.md), replace the ambiguous header qualification “decided where stated” with “decided for the task-breaking laws and the candidate loop”; the paragraph never otherwise identifies those uses.
+
+9. **High — Candidate membership alone is not the closed region.**
+
+   **Location:** [make_records_rf2.py:254](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf2.py).
+
+   **Quoted:** “the reading that a candidate is kept is a closed region”; “其中「某候选被守」之读为闭域。”
+
+   **Problem:** `Loop.fitting_closed` proves closure of `Fitting h x ∧ Q x.external`. `Fitting` includes both membership and agreement with the pending answer. It also requires `Q` to be preserved by every world move and the candidate to predict the world’s answers throughout `Q`. Membership alone can disappear at the next filtering step.
+
+   **Replacement, English:** “For a candidate faithful throughout a world-region preserved by every move, the configurations where it is retained, agrees with the pending answer, and the world lies in that region form a closed region of the loop.”
+
+   **Replacement, Chinese:** “候选于世之每移所守之域内皆如世之答而预言时，其被守、合待纳之答、且世在此域之形态，构成环之闭域。”
+
+10. **Medium — The study’s retention claim omits initial membership and the invariant region.**
+
+    **Location:** [study_rf2.txt:24](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf2.txt).
+
+    **Quoted:** “a faithful one is never dropped”.
+
+    **Problem:** `faithful_kept` requires the candidate to be listed, the initial world to lie in `Q`, every move to preserve `Q`, and answer/prediction agreement throughout `Q` for every sensed value and act.
+
+    **Replacement:** “A listed candidate is never dropped from a start in `Q` when every world move preserves `Q` and the candidate predicts the world’s answer for every sensed value and act throughout `Q`.”
+
+11. **High — The finite-chain summaries omit conditions needed for convergence.**
+
+    **Locations:** [08-METHOD.md:483](../../../../../../../theories/becoming/chapters/08-METHOD.md); [README.md:287](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md); [README.zh.md:126](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md); [THE-THEORY-OF-BECOMING.md:98](../../../../../../../theories/becoming/THE-THEORY-OF-BECOMING.md).
+
+    **Quoted:** “reaches Tarski’s least fixed point … on a finite chain within its length”; “from the bottom of a chain under a response keeping the order”; “守序之应下自链之底达最小之是者”.
+
+    **Problem:** `bottom_rests` concerns the natural-number interval `0,…,n`, a response preserving **both the interval and its order**, and iteration **from zero**. The method bullet omits order preservation and the initial value; the README rows omit finiteness and interval preservation; the overview omits interval preservation. Order preservation alone permits `r(v)=v+1`.
+
+    **Replacement, English:** “On the natural-number chain `0,…,n`, a response mapping the chain into itself and preserving its order reaches its least fixed point by step `n` when each publication repeats the preceding outcome, starting from zero.”
+
+    **Replacement, Chinese:** “于自然数链 0,…,n，应映此链入其自身且守其序；自零起、每步公布前步之果，则至第 n 步达其最小不动点。”
+
+12. **Medium — “No premise” conflates empty axiom reports with conditional theorems.**
+
+    **Locations:** [README.md:218](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md), also line 287; [README.zh.md:125](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md), also line 126; [study_rf2.txt:41](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf2.txt).
+
+    **Quoted:** “no premise”; “不加前提”; “Supplied premises / correspondence: none added.”
+
+    **Problem:** The declarations have empty axiom reports but explicitly supplied hypotheses: `KeptBy`, shared starts, decidable equality, invariant regions, chain preservation, and `ChoiceOver` for the existence equivalences. The study’s following modelling-choice list does not supply these omissions.
+
+    **Replacement, English:** “Every axiom report is empty; the results are conditional on the hypotheses stated for each theorem.”
+
+    **Replacement, Chinese:** “每项公理报告皆空；各结果以各定理所列条件为前提。”
+
+    For the study, add: “Choice over states is required for `keeping_policy_iff`; choice over admitted responses is required for `predictor_iff`.”
+
+13. **Medium — “Informing” enters a theorem statement without its reading label.**
+
+    **Location:** [make_records_rf2.py:388](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf2.py).
+
+    **Quoted:** “while informing turns only the first”; “而告之唯转其前者。”
+
+    **Problem:** `informed_turns` compares a separately initialized run whose candidate list is `[up]`; no informing act occurs within the law. The correspondence field labels this reading, but the theorem’s headline statement presents the intervention as proved.
+
+    **Replacement, English:** “In the specified witness, starting the first formation with the true candidate alone changes its course; the second already starts with that candidate alone. [AI reading] This change of initial listing represents the outcome of informing.”
+
+    **Replacement, Chinese:** “于指定之例，以真候选独起前一形成则变其历程；后一形成原已以真候选独起。[AI 解读] 此初始候选列之改变表告之之果。”
+
+14. **Medium — The study says `Keeps` now includes enabledness, but it still does not.**
+
+    **Location:** [study_rf2.txt:63](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf2.txt).
+
+    **Quoted:** “keeping now asks the act enabled at every world the reading admits”.
+
+    **Problem:** `Keeps` remains successor safety along positive reach and can hold under deadlock. Enabledness is supplied separately by `Continues`; `keeps_continues_iff` characterizes their conjunction.
+
+    **Replacement:** “Keeping remains successor safety; the added continuation requirement asks that the act be enabled at every world the reading admits.”
+
+15. **Low — The reading says the response, rather than its fixed point, is reached.**
+
+    **Location:** [03-KNOWING.md:484](../../../../../../../theories/becoming/chapters/03-KNOWING.md).
+
+    **Quoted:** “a response keeping a finite chain and its order is reached from the bottom”.
+
+    **Problem:** The iterates are prediction values. `bottom_rests` reaches a fixed point of the response, not the response function.
+
+    **Replacement:** “under a response keeping the finite chain `0,…,n` and its order, the least right prediction is reached from the bottom by step `n`”.
+
+16. **Low — There are two witness theorems quantified over formations.**
+
+    **Location:** [study_rf2.txt:67](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf2.txt).
+
+    **Quoted:** “`floor_forgoes` … is the one statement there quantified over formations”.
+
+    **Problem:** `floor_never_high` also quantifies over arbitrary `I` and `b : Blanketed I Value Act World`, with the specified response and stationary-world hypotheses.
+
+    **Replacement:** “`floor_forgoes` and its corollary `floor_never_high` quantify over formations with the witness’s response and stationary worlds.”
+
+| # | Finding | Taken |
+|---|---|---|
+| 1 | A kept relation alone does not give matching observations | the summaries add related starts and the relation's giving equal values sensed and acts |
+| 2 | The least reading loses its condition at the starts | "that holds at the starts" in the bullet and the scope sentence |
+| 3 | Acting from a history does not fix the reading | record A's statement no longer says so; the history laws stay in its laws |
+| 4 | The indistinguishability summaries drop the shared start and the decision | one blanketed law from one start, equality of values decided, through `N` and at every step; the dossier's conclusion labelled a reading |
+| 5 | "Every formation on those worlds" needs the answer, the stationary worlds and the start | stated in 03 §12, the record's law and counterexample, and the study |
+| 6 | The witnesses' conclusions omit their starts | the starts named: no answer pending, the middle value, the known or the untried act |
+| 7 | An unrefuted model does not by itself force rest | the study gives `rests_of_unrefuted`'s four conditions |
+| 8 | Keeping candidates loses the listing and the delay | the listing, no answer pending, the steps before `n` and the delay stated; 03's header names where equality is decided |
+| 9 | Membership alone is not the closed region | record A's related detail names the region, the pending answer and faithfulness |
+| 10 | The study's "a faithful one is never dropped" omits the region | the region every move keeps stated |
+| 11 | The chain summaries omit the chain mapped into itself and the start at zero | stated in 08, the READMEs, the overview, the bullet, the scope sentence and record D |
+| 12 | "No premise" conflates empty axiom reports with conditional theorems | the rows say every axiom report is empty and each result is under its theorem's hypotheses; the study lists the hypotheses and the choice each iff needs |
+| 13 | "Informing" stated as proved | record C says starting with the true candidate alone changes the course; informing stays in the labelled reading |
+| 14 | The study says keeping asks enabledness | keeping stays successor safety; going on asks enabledness |
+| 15 | The reading says the response is reached | the least right prediction is reached |
+| 16 | Two witness theorems quantify over formations | both named |
+
+## The re-check of the rebuilt RF6.1 module
+
+`Becoming.OpenedCorrection` was rebuilt after findings 19 to 23 (an opening along a trace of one process, on Revising's stock-and-link process) and re-checked in the review's session. It stays held for its own landing, with findings 24 to 26 taken there and its texts cold-read first.
+
+**Verdict: the executable composition is now present, and the proofs appear sound on source inspection. Findings 19–22 are resolved; 23 is partly resolved. One false summary and two scope qualifications remain. No files were changed or Lean builds run.**
+
+19. **Taken correctly** — `OpensAlong` includes a trace, and `Linked` connects policy feasibility to `Enabled Revising.P`, including rebuilding, starvation, and replenishment.
+20. **Taken correctly** — the text consistently states policy existence and explicitly distinguishes it from a controller’s actual choices.
+21. **Taken correctly** — refinement uses supplied maps and the appropriate executability inclusions; the unsupported distinguishing-pair conclusion is gone.
+22. **Taken correctly** — `widened_correctable` preserves executability, requires an executable action, and claims correctability rather than a before/after opening.
+23. **Partly** — the double-loop attribution is correctly qualified, but the final coarsening sentence reverses the required executability condition; see finding 24.
+
+24. **[Medium] The readings paragraph reverses “no gain” into “no loss.”**  
+    Location: [OpenedCorrection.lean:41](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/tree/Becoming/OpenedCorrection.lean).
+
+    **Quoted:** “Replacing a finer reading by a coarser one, as by a summary measure, losing no executability, opens no correction.”
+
+    **Problem against the Lean:** `coarser_opens_nothing` requires:
+    ```lean
+    no_gain : ∀ a, executable x' a → executable x a
+    ```
+    The quoted condition has the opposite direction.
+
+    The module’s own definitions supply a counterexample. Replenishment takes `(0, true, v)` to `(1, true, v)` with an unchanged reading. It loses no executable action, but the former configuration is uncorrectable by `starved_uncorrectable` and the latter correctable by `linked_correctable`. The newly enabled correction creates the opening.
+
+    **Replacement:**
+    > Replacing a reading by one obtained from it through the supplied map, while gaining no executability and keeping acceptability fixed, opens no correction.
+
+25. **[Medium] `OpensAlong` records a reachable gain in correctability, not necessarily a revision of the reading.**  
+    Location: [OpenedCorrection.lean:77](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/tree/Becoming/OpenedCorrection.lean), also header lines 19–21.
+
+    **Quoted:** “A revision opens a correction along a course of the process”.
+
+    **Problem against the Lean:** The definition requires a trace and a change from uncorrectable to correctable. It requires neither a changed reading nor a designated revision action. The replenishment example in finding 24 satisfies it while leaving the reading unchanged.
+
+    Consequently, the general predicate does not identify whether the opening comes from information, executability, or both. The concrete `Linked.opens` witness does explicitly supply a rebuilding step, so the new RF6.1 instance remains valid.
+
+    **Replacement:**
+    > A course opens correctability when it reaches a configuration with a fitting uniform policy from one without such a policy, under fixed acceptability. The gain may come from the reading, executability, or both. `Linked.opens` exhibits an opening along a rebuilding step.
+
+    If the general predicate is intended specifically to certify reading revision, add an explicit revision condition to the trace.
+
+26. **[Low] Executability is required only on occupied reading fibers.**  
+    Location: [OpenedCorrection.lean:69](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/tree/Becoming/OpenedCorrection.lean), also lines 15–18 and 63–64.
+
+    **Quoted:** “each reading has one act acceptable at every situation giving it and executable at the configuration”.
+
+    **Problem against the Lean:** In `correctable_iff`, both acceptability and executability occur inside:
+    ```lean
+    ∀ s, reading x s = o → ...
+    ```
+    An empty fiber imposes neither condition. The prose can instead be read as requiring executability independently for every `o`.
+
+    This matters at the allowed empty-domain boundary: with `S = Empty`, `A = O = Unit`, and `executable := False`, `Correctable` holds vacuously although no action is executable. The `Linked` instances are unaffected because their situation type is `Bool`.
+
+    **Replacement:**
+    > For every reading value, there is an action that is acceptable and executable at the configuration for every situation producing that value. Empty fibers impose no such requirement.
+
+    If correctability should additionally guarantee an executable action exists, require an inhabited situation domain or an explicit witness.
+
