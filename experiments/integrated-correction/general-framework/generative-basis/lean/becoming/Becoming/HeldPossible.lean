@@ -54,7 +54,8 @@ read as processes.
   map, a moment is 全生成 at (the one, what is held) exactly where a line under the part begins
   after every moment from it (`Steps.generation_iff_begins`), so there every moment is 全生成
   (`Run.generation_of_heldKeepsWidening`), the landed law restated; not conversely
-  (`Oscillating.generation_without_widening`). It keeps
+  (`Oscillating.generation_without_widening`). Where what is held changes at every step, every
+  moment is 全生成 there (`Run.generation_of_held_changes`). It keeps
   widening only where no list holds the whole possible from the course's start
   (`Run.not_heldKeepsWidening_of_listed`). Endless change of the part with an unlisted whole
   possible does not suffice for keeping widening (`Oscillating.converse_fails`).
@@ -111,7 +112,7 @@ read as processes.
   widening, every formation stays possible, and renewal without end (`«生生»`) holds at every even
   moment, so moment `0` does not cease (`RaisedEveryOther.both`): growth relative to what is held
   and renewal without end are different relations, and both can hold with a fixed whole possible;
-  every moment is 全生成 there as well (`RaisedEveryOther.generation_with_both`).
+  every moment is 全生成 there as well (`RaisedEveryOther.generation`).
 
 Each law is near-definitional or a witness; no choice principle enters, and runs are built, never
 chosen. What is read: along a course of a stated process the whole possible never grows, and the
@@ -431,6 +432,14 @@ theorem Run.generation_of_heldKeepsWidening (r : Run P)
     (N : Nat) : «全生成» Steps.next «一» (fun n m => Same (r.state n) (r.state m)) N :=
   Steps.generation_iff_begins.mpr fun y _ => r.begins_of_heldKeepsWidening decided keeps y
 
+/-- **Where what is held changes at every step, every moment is 全生成 at (the one, what is
+held).** -/
+theorem Run.generation_of_held_changes (r : Run P)
+    (changes : ∀ n, ¬ Same (r.state n) (r.state (n + 1))) (N : Nat) :
+    «全生成» Steps.next «一» (fun n m => Same (r.state n) (r.state m)) N :=
+  Steps.generation_iff_begins.mpr fun y _ =>
+    ⟨y, Nat.le_refl y, fun pred => changes y (Steps.hasPred_iff.mp pred)⟩
+
 /-- **The possible with a part held keeps widening only where no list holds the whole possible
 from the course's start** (`Reaching.KeepsWidening.not_listed`). -/
 theorem Run.not_heldKeepsWidening_of_listed (r : Run P)
@@ -717,8 +726,7 @@ every step, while every moment ceases (`ceases`): the map's generation without r
 end. -/
 theorem generation (N : Nat) :
     «全生成» Steps.next «一» (fun i j => Same (course.state i) (course.state j)) N :=
-  Steps.generation_iff_begins.mpr fun y _ =>
-    ⟨y, Nat.le_refl y, fun pred => rule_changes y (Steps.hasPred_iff.mp pred)⟩
+  course.generation_of_held_changes rule_changes N
 
 end RaisedRule
 
@@ -822,17 +830,6 @@ theorem both :
     ¬ «息» Steps.next (fun i j => Same (course.state i) (course.state j)) 0 :=
   ⟨held_keeps_widening, whole_every, renews_without_end rfl, «生生不息» (renews_without_end rfl)⟩
 
-/-- **The map's generation with both**: besides `both`, every moment of the course is 全生成 at (the
-one, the rule held). Generation on the map, renewal without end and growth relative to what is held
-hold together on one course, with a fixed whole possible. -/
-theorem generation_with_both :
-    (Reaching.KeepsWidening (fun k => Reaching.PossibleHeld process Same adm (course.state k)) ∧
-      (∀ k y, Reaching.Possible process adm (course.state k) y) ∧
-      «生生» Steps.next (fun i j => Same (course.state i) (course.state j)) 0 ∧
-      ¬ «息» Steps.next (fun i j => Same (course.state i) (course.state j)) 0) ∧
-    ∀ N, «全生成» Steps.next «一» (fun i j => Same (course.state i) (course.state j)) N :=
-  ⟨both, generation⟩
-
 end RaisedEveryOther
 
 /-! ### Endless change of the part does not suffice -/
@@ -912,8 +909,7 @@ theorem returns (k : Nat) : course.state (k + 2) = course.state k :=
 step. -/
 theorem generation (N : Nat) :
     «全生成» Steps.next «一» (fun i j => Same (course.state i) (course.state j)) N :=
-  Steps.generation_iff_begins.mpr fun y _ =>
-    ⟨y, Nat.le_refl y, fun pred => rule_changes y (Steps.hasPred_iff.mp pred)⟩
+  course.generation_of_held_changes rule_changes N
 
 /-- **The map's generation without keeping widening**: every moment is 全生成 at (the one, the rule
 held) while the possible with the rule held does not keep widening, so the converse of
