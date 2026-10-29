@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-481 registered results: 450 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1114 curated edges join 409 results to the results they draw on.
+484 registered results: 453 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1117 curated edges join 412 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -259,6 +259,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [reach-through-a-shared-condition][] ← <a id="reach-through-a-shared-condition--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="reach-through-a-shared-condition--generation-and-degeneration-at-two-grains"></a>[generation-and-degeneration-at-two-grains][] · <a id="reach-through-a-shared-condition--wen-in-the-grammar"></a>[wen-in-the-grammar][] · <a id="reach-through-a-shared-condition--what-a-line-holds-and-a-regularity-takes-in"></a>[what-a-line-holds-and-a-regularity-takes-in][]
 - [reaching-before-and-after-a-juncture][] ← <a id="reaching-before-and-after-a-juncture--every-loss-passes-a-juncture"></a>[every-loss-passes-a-juncture][] · <a id="reaching-before-and-after-a-juncture--basins-of-a-determined-law"></a>[basins-of-a-determined-law][]
 - [readers-drawn-from-the-selected][] ← <a id="readers-drawn-from-the-selected--capture-through-the-rule"></a>[capture-through-the-rule][] · <a id="readers-drawn-from-the-selected--closed-capture"></a>[closed-capture][]
+- [readers-reading-readers][] ← <a id="readers-reading-readers--generalization-through-lumping"></a>[generalization-through-lumping][]
 - [reading-anothers-couplings-is-pooling][] ← <a id="reading-anothers-couplings-is-pooling--what-pooled-coupling-reaches"></a>[what-pooled-coupling-reaches][] · <a id="reading-anothers-couplings-is-pooling--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][]
 - [reading-through-a-pool][] ← <a id="reading-through-a-pool--how-fast-a-rule-may-change"></a>[how-fast-a-rule-may-change][]
 - [readings-a-response-needs][] ← <a id="readings-a-response-needs--assured-route-criterion"></a>[assured-route-criterion][]
@@ -390,12 +391,14 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [what-an-optimum-does-beyond-what-couples-in][] ← <a id="what-an-optimum-does-beyond-what-couples-in--what-a-rise-draws-from-beyond"></a>[what-a-rise-draws-from-beyond][] · <a id="what-an-optimum-does-beyond-what-couples-in--selection-through-couplings"></a>[selection-through-couplings][]
 - [what-bounds-offspring-numbers][] ← <a id="what-bounds-offspring-numbers--selection-term-over-generations"></a>[selection-term-over-generations][] · <a id="what-bounds-offspring-numbers--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][]
 - [what-can-be-born-next][] ← <a id="what-can-be-born-next--precedence-and-its-links"></a>[precedence-and-its-links][] · <a id="what-can-be-born-next--what-a-course-keeps-reachable"></a>[what-a-course-keeps-reachable][] · <a id="what-can-be-born-next--where-the-possible-grows"></a>[where-the-possible-grows][] · <a id="what-can-be-born-next--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][]
+- [what-choices-show-of-an-order][] ← <a id="what-choices-show-of-an-order--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][]
 - [what-dependence-alone-carries-of-a-level][] ← <a id="what-dependence-alone-carries-of-a-level--where-a-level-couples"></a>[where-a-level-couples][]
 - [what-discrete-steps-and-whole-amounts-represent][] ← <a id="what-discrete-steps-and-whole-amounts-represent--rest-theorem-in-any-amounts"></a>[rest-theorem-in-any-amounts][]
 - [what-keeping-widening-needs][] ← <a id="what-keeping-widening-needs--eventual-widening"></a>[eventual-widening][] · <a id="what-keeping-widening-needs--returning-novelty-forgetting-on-levels"></a>[returning-novelty-forgetting-on-levels][] · <a id="what-keeping-widening-needs--where-novelty-gain-comes-from"></a>[where-novelty-gain-comes-from][] · <a id="what-keeping-widening-needs--more-needs-renewers"></a>[more-needs-renewers][] · <a id="what-keeping-widening-needs--support-passed-on"></a>[support-passed-on][] · <a id="what-keeping-widening-needs--support-from-the-supported"></a>[support-from-the-supported][] · <a id="what-keeping-widening-needs--a-pattern-lasts-through-passing"></a>[a-pattern-lasts-through-passing][] · <a id="what-keeping-widening-needs--generation-and-degeneration-at-two-grains"></a>[generation-and-degeneration-at-two-grains][] · <a id="what-keeping-widening-needs--classes-along-a-continuation"></a>[classes-along-a-continuation][] · <a id="what-keeping-widening-needs--widening-along-a-reading"></a>[widening-along-a-reading][] · <a id="what-keeping-widening-needs--loops-within-what-a-law-reads"></a>[loops-within-what-a-law-reads][]
 - [what-leaves-a-class-follows-its-line][] ← <a id="what-leaves-a-class-follows-its-line--what-a-line-holds-and-a-regularity-takes-in"></a>[what-a-line-holds-and-a-regularity-takes-in][]
 - [what-pooled-coupling-reaches][] ← <a id="what-pooled-coupling-reaches--selection-through-couplings"></a>[selection-through-couplings][] · <a id="what-pooled-coupling-reaches--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][]
 - [what-position-reads][] ← <a id="what-position-reads--relative-position-is-zero-sum"></a>[relative-position-is-zero-sum][]
+- [what-readings-fix-of-the-unread][] ← <a id="what-readings-fix-of-the-unread--generalization-through-lumping"></a>[generalization-through-lumping][]
 - [what-self-concern-alone-ranks][] ← <a id="what-self-concern-alone-ranks--widening-as-what-every-weighting-ranks"></a>[widening-as-what-every-weighting-ranks][] · <a id="what-self-concern-alone-ranks--groups-whose-conditions-are-coupled"></a>[groups-whose-conditions-are-coupled][]
 - [what-the-claims-do-not-read][] ← <a id="what-the-claims-do-not-read--basic-priority-step-by-step"></a>[basic-priority-step-by-step][]
 - [what-the-dynamics-leave-open][] ← <a id="what-the-dynamics-leave-open--rivals-bounded-in-time"></a>[rivals-bounded-in-time][]
@@ -694,6 +697,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [reach-through-a-shared-condition]: theories/becoming/results/records/reach-through-a-shared-condition.md
 [reaching-before-and-after-a-juncture]: theories/becoming/results/records/reaching-before-and-after-a-juncture.md
 [readers-drawn-from-the-selected]: theories/becoming/results/records/readers-drawn-from-the-selected.md
+[readers-reading-readers]: theories/becoming/results/records/readers-reading-readers.md
 [reading-anothers-couplings-is-pooling]: theories/becoming/results/records/reading-anothers-couplings-is-pooling.md
 [reading-through-a-pool]: theories/becoming/results/records/reading-through-a-pool.md
 [readings-a-response-needs]: theories/becoming/results/records/readings-a-response-needs.md
@@ -836,12 +840,14 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [what-an-optimum-does-beyond-what-couples-in]: theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.md
 [what-bounds-offspring-numbers]: theories/becoming/results/records/what-bounds-offspring-numbers.md
 [what-can-be-born-next]: theories/becoming/results/records/what-can-be-born-next.md
+[what-choices-show-of-an-order]: theories/becoming/results/records/what-choices-show-of-an-order.md
 [what-dependence-alone-carries-of-a-level]: theories/becoming/results/records/what-dependence-alone-carries-of-a-level.md
 [what-discrete-steps-and-whole-amounts-represent]: theories/becoming/results/records/what-discrete-steps-and-whole-amounts-represent.md
 [what-keeping-widening-needs]: theories/becoming/results/records/what-keeping-widening-needs.md
 [what-leaves-a-class-follows-its-line]: theories/becoming/results/records/what-leaves-a-class-follows-its-line.md
 [what-pooled-coupling-reaches]: theories/becoming/results/records/what-pooled-coupling-reaches.md
 [what-position-reads]: theories/becoming/results/records/what-position-reads.md
+[what-readings-fix-of-the-unread]: theories/becoming/results/records/what-readings-fix-of-the-unread.md
 [what-self-concern-alone-ranks]: theories/becoming/results/records/what-self-concern-alone-ranks.md
 [what-taking-all-excludes]: theories/becoming/results/records/what-taking-all-excludes.md
 [what-the-claims-do-not-read]: theories/becoming/results/records/what-the-claims-do-not-read.md

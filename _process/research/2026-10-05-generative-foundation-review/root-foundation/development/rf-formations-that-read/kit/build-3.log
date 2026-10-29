@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/tree",
+  "modules": 2,
+  "ran": [
+    "Becoming.ShownOrder",
+    "BecomingShownOrderAxiomAudit"
+  ],
+  "reused": 1,
+  "unclean": [],
+  "audits": {
+    "Becoming.ShownOrder": {
+      "theorems": 20,
+      "declarations": 27,
+      "with_axioms": {}
+    }
+  }
+}
