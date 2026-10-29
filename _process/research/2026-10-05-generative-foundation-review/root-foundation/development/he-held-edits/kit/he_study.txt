@@ -1,0 +1,34 @@
+## {N}. The held edits, in one near-full rebuild (HE)
+
+Edits held "for the next full rebuild" slip when a rebuild comes without them: OC5's approved wording for `Becoming.GrammarPath` missed WRP2's rebuild of that module. So the coordinating session asked for one landing that rebuilds the package once, on purpose, after a rehearsal outside the repository, and applies every edit held for a rebuild ([notes](development/he-held-edits/DESIGN.md)). The board's row for it lists them, so no later rebuild has to remember them.
+
+```text
+Result(s): records what-a-line-holds-and-a-regularity-takes-in (its owner's wording), master-laws-on-the-grammar,
+       processes-represented-both-ways and what-keeping-widening-needs changed; the records pinning the changed
+       sources re-pointed; no new record.
+Delta: (1) OC5's findings 8 and 18, by their owner's script (oc-own-class/deferred_grammarpath.py), word for word as
+       approved on 27 October: "neither premise can be dropped from these laws", and "what leaves the class follows each
+       alike occurrence", in GrammarPath's docstrings, 07 §4.6, the root module, the checker's scope, the record, the
+       apart register and regions.json; the script checks every edit before it writes.
+       (2) GrammarLaws' module doc says what OU3f's lineage part (§451) showed: the lineage laws are proved from the
+       laws of steps, among the models' step-indexed laws, and the clause naming them as not shown goes.
+       (3) kept_onward moves from Becoming.KeptOnward to its home beside «线则所闭» in GrammarLaws (OU3f's closure
+       design, condition 3); the leaf is retired, with its imports, the checker's core list and scope sentence, the
+       root module's import and bullet and the README rows; GrammarLaws' closure texts name it.
+       (4) the clock run beside Run.reach in Frame: nothing to move; it existed only in the closure's first draft.
+       (5) total_eq_of_supports moves from KeepingWidening to beside total_le_of_support in Dissipation (GW3–GW5).
+       (6) «保之像» moves from GrammarTransport to beside «像» in GrammarLaws, and Mechanism's factors_image and
+       Image.least are proved as its cases (U2's design §6; OU's owner for Mechanism under rule 3's fallback, and
+       GrammarTransport's owner, agreeing).
+       Every statement and name is unchanged. GrammarLaws has {GT} theorems in {GD} declarations; the run holds
+       {MODULES} modules.
+Supplied premises / correspondence: none.
+Evidence: core receipt {RECEIPT}, every axiom report empty, after a rehearsal outside the repository. The signature
+       audit (he_signatures.py) shows every statement of the twelve changed modules printing as before, three
+       declarations moving module (kept_onward, «保之像», total_eq_of_supports), and Becoming.KeptOnward gone from
+       the run.
+Boundary: none of the six changes a statement; Mechanism's two image lemmas are derived, and the rest are moves and
+       wording.
+Output → input: the records; 01 §7; 07 §4.6; 08's counts; the root module, the checker and the README rows; the
+       master-law view.
+```
