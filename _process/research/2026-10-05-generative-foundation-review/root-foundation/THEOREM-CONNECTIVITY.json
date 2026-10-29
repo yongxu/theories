@@ -1,11 +1,11 @@
 {
- "commit": "7c3829c8259d286ceb62b81e268b05381e178c5b",
+ "commit": "cba92d9732f0960d77c4d0909086841c3950150b",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261028T085101.429997Z",
+ "core_receipt_at_commit": "20261029T081505.616437Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 340,
- "constants": 49081,
- "spine_theorems": 16559,
+ "constants": 49098,
+ "spine_theorems": 16565,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -31,13 +31,13 @@
   "statement on World/Flow/Web": 4089,
   "statement on the base only through a law of its own module": 263,
   "proof through a base family": 213,
-  "used by a theorem on the base": 5634,
+  "used by a theorem on the base": 5637,
   "instance on the base recorded": 159,
-  "apart: own vocabulary": 1534,
+  "apart: own vocabulary": 1537,
   "apart: prelude-only statement": 104
  },
- "apart": 1638,
- "apart_general_structure_by_design": 667,
+ "apart": 1641,
+ "apart_general_structure_by_design": 670,
  "apart_otherwise": 971,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 116,
@@ -73,12 +73,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 941,
- "apart_roots": 941,
+ "apart_used_by_nothing": 944,
+ "apart_roots": 944,
  "apart_roots_by_category": {
   "model-witness": 420,
   "support": 134,
-  "general-structure": 345,
+  "general-structure": 348,
   "calibration": 16,
   "restates": 14,
   "logical-strength": 12
@@ -206,13 +206,13 @@
    38,
    40
   ],
+  "Becoming.GrammarLaws": [
+   36,
+   125
+  ],
   "Becoming.GrammarMap": [
    34,
    39
-  ],
-  "Becoming.GrammarLaws": [
-   33,
-   120
   ],
   "Becoming.GrammarTransport": [
    32,
@@ -644,7 +644,7 @@
   ],
   "Becoming.MapInstances": [
    1,
-   25
+   26
   ],
   "Becoming.Recurrence": [
    1,
@@ -742,17 +742,17 @@
  "rings": {
   "core": {
    "modules": 324,
-   "theorems": 15799,
-   "apart": 1544,
+   "theorems": 15805,
+   "apart": 1547,
    "classes": {
     "statement on both families": 1076,
     "statement on Process/Frame/Run/Trace": 3262,
     "statement on World/Flow/Web": 4064,
     "statement on the base only through a law of its own module": 217,
     "proof through a base family": 202,
-    "used by a theorem on the base": 5275,
+    "used by a theorem on the base": 5278,
     "instance on the base recorded": 159,
-    "apart: own vocabulary": 1441,
+    "apart: own vocabulary": 1444,
     "apart: prelude-only statement": 103
    }
   },
@@ -863,12 +863,12 @@
   "theorems_outside_the_main_component": []
  },
  "records_by_best_alias_class": {
-  "statement on both families": 80,
-  "statement on Process/Frame/Run/Trace": 166,
+  "statement on both families": 83,
+  "statement on Process/Frame/Run/Trace": 169,
   "statement on World/Flow/Web": 132,
   "statement on the base only through a law of its own module": 5,
-  "proof through a base family": 4,
-  "used by a theorem on the base": 10,
+  "proof through a base family": 5,
+  "used by a theorem on the base": 11,
   "instance on the base recorded": 1,
   "apart: own vocabulary": 31
  },
@@ -2054,6 +2054,7 @@
   "Becoming.Map.outside_of_not_endless": "apart: own vocabulary",
   "Becoming.Web.reached_later": "used by a theorem on the base",
   "Becoming.Web.active_along_line": "statement on World/Flow/Web",
+  "Becoming.Web.steps_advance": "used by a theorem on the base",
   "Becoming.Web.reaches_onward": "used by a theorem on the base",
   "Becoming.Web.ends_or_reaches": "used by a theorem on the base",
   "Becoming.Web.carries_iff": "statement on World/Flow/Web",
@@ -2256,6 +2257,11 @@
   "Becoming.«迭内即静或缘之迭»": "used by a theorem on the base",
   "Becoming.«承之迭»": "used by a theorem on the base",
   "Becoming.«存承之迭»": "used by a theorem on the base",
+  "Becoming.«迭之分»": "apart: own vocabulary",
+  "Becoming.«迭之逆»": "apart: own vocabulary",
+  "Becoming.«或有后则或迭»": "apart: own vocabulary",
+  "Becoming.«迭则同一或及»": "used by a theorem on the base",
+  "Becoming.«不穷则迭»": "used by a theorem on the base",
   "Becoming.«定后则定后于»": "used by a theorem on the base",
   "Becoming.«定后于之后»": "used by a theorem on the base",
   "Becoming.«迭之定于»": "used by a theorem on the base",

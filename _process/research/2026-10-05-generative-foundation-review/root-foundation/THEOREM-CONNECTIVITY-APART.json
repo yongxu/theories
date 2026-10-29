@@ -4721,6 +4721,21 @@
    "module": "Becoming.GrammarTransport",
    "category": "general-structure",
    "reason": "«静之像»: a law of every relation on any carrier, the grammar term kept by a one-to-one correspondence carrying what it reads; WorldRepresentation uses the transport its pattern needs, and this one waits for a model reading the term through a correspondence (WRT2)"
+  },
+  "Becoming.«或有后则或迭»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "where whatever is reached in fewer than n steps has a successor as far as can be refuted, n steps exist as far as can be refuted, a law of every relation on any carrier, stated before the models' lineage laws (Identity) use it (OU3f's next part)"
+  },
+  "Becoming.«迭之分»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "steps split as they compose, the converse of «迭之接», a law of every relation on any carrier, stated before the models' lineage laws (Identity) use it (OU3f's next part)"
+  },
+  "Becoming.«迭之逆»": {
+   "module": "Becoming.GrammarLaws",
+   "category": "general-structure",
+   "reason": "steps read backward are steps of the converse, a law of every relation on any carrier, stated before the models' lineage laws (Identity) use it (OU3f's next part)"
   }
  },
  "instances": {

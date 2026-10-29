@@ -1,0 +1,33 @@
+{
+ "old_receipt": "20261029T081505.616437Z",
+ "new_receipt": "20261029T084618.786422Z",
+ "declarations_old": 145,
+ "declarations_new": 151,
+ "changed": [],
+ "gone": [],
+ "added": [
+  "Becoming.Web.steps_advance",
+  "Becoming.«不穷则迭»",
+  "Becoming.«或有后则或迭»",
+  "Becoming.«迭之分»",
+  "Becoming.«迭之逆»",
+  "Becoming.«迭则同一或及»"
+ ],
+ "definitions_rewritten": [],
+ "definitions_gone": [],
+ "definitions_added": []
+}
++++ @Becoming.Web.steps_advance : ∀ {F : Type} {R : Nat → F → F → Prop} {E : Becoming.«际» (Nat × F)} (k : Nat)
+  {x y : Nat × F}, Becoming.«迭» (Becoming.«续» (Becoming.Web.continuationStep R) E) k x y → y.fst = x.fst + k
++++ @Becoming.«不穷则迭» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x : α},
+  Becoming.«不穷» R E x → ∀ (n : Nat), ∃ y, Becoming.«迭» (Becoming.«续» R E) n x y
++++ @Becoming.«或有后则或迭» : ∀ {α : Type u_1} {R : Becoming.«际» α} {x : α} (n : Nat),
+  (∀ (k : Nat) (y : α), k < n → Becoming.«迭» R k x y → ¬¬∃ z, R y z) → ¬¬∃ y, Becoming.«迭» R n x y
++++ @Becoming.«迭之分» : ∀ {α : Type u_1} {R : Becoming.«际» α} (a : Nat) {b : Nat} {x z : α},
+  Becoming.«迭» R (b + a) x z → ∃ y, Becoming.«迭» R a x y ∧ Becoming.«迭» R b y z
++++ @Becoming.«迭之逆» : ∀ {α : Type u_1} {R : Becoming.«际» α} (n : Nat) {x y : α},
+  Becoming.«迭» (Becoming.«逆» R) n x y ↔ Becoming.«迭» R n y x
++++ @Becoming.«迭则同一或及» : ∀ {α : Type u_1} {R : Becoming.«际» α} (n : Nat) {x y : α},
+  Becoming.«迭» R n x y → x = y ∨ Becoming.«及» R x y
+every old statement of GrammarLaws and MapInstances unchanged; new: ['Becoming.Web.steps_advance', 'Becoming.«不穷则迭»', 'Becoming.«或有后则或迭»', 'Becoming.«迭之分»', 'Becoming.«迭之逆»', 'Becoming.«迭则同一或及»'] ; new definitions: []
+OK

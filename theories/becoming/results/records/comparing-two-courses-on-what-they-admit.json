@@ -845,7 +845,7 @@
         "Becoming.strictJoin_irrefl",
         "Becoming.strictJoin_trans"
       ],
-      "sha256": "c33037600c9b935b6e59f21640822e75632991d2fbfbf1856499aabe71bc1ae0"
+      "sha256": "31f3bdd79cc2f7e2f7930f793fae8a125dd8cbd4ce31f2d9e530dea184f3b614"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean",
@@ -927,6 +927,12 @@
       "role": "receipt",
       "sha256": "57c3bab24affcd734b578e214ebea8e6b03f61db7674afe3b81244d942d5ea46",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T084618.786422Z/verification.json",
+      "role": "receipt",
+      "sha256": "49232d758f8d54f8079e810cbbfd70285808e5425831e7e11650e70daa084dfd",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -939,7 +945,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T081241.505586Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T084618.786422Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"

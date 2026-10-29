@@ -92,8 +92,14 @@ their consumers' stay arithmetic, since each needs only the count.
   relation are one taking on along its `n` steps. With memory, each round also keeping what it held,
   round `n` holds exactly where everything reaching within `n` steps held (`«存承之迭»`), the law
   without memory under staying or a step: keeping is counting oneself among one's conditions.
-  `Withholding`'s closed forms (`answers_closed`, `waitsAll_closed`) have these shapes for its chains;
-  the bridges are not shown (below).
+  Steps split as they compose (`«迭之分»`, the converse of `«迭之接»`), and steps read backward are
+  steps of the converse (`«迭之逆»`). Where whatever is reached in fewer than `n` steps has a
+  successor as far as can be refuted, `n` steps exist as far as can be refuted (`«或有后则或迭»`); an
+  unending line has steps of every length (`«不穷则迭»`), `n` steps leading to the occurrence itself
+  or to what it reaches (`«迭则同一或及»`). Three of the models' step-indexed laws are proved from the
+  laws of steps counted: `Withholding`'s closed forms from the laws of taking on, a course carrying
+  its bounds (`WithinMoves.after_course`) from `«迭内之接»`, and an unending line reaching every later
+  step (`Web.reaches_onward`) from `«不穷则迭»`.
 * **Finite runs: rest.** A line is at rest where its steps of `F` (a least fall, say) stop
   recurring (`«屡»`, `«或屡»`) while its steps are steps of `Q` (no rise, say). Where every course
   of `Q` steps then an `F` step ends from the line's place (`«尽» («而» («所闭» Q) F) «一»`, the
@@ -123,9 +129,9 @@ their consumers' stay arithmetic, since each needs only the count.
   partial identity: `Web.admitted`, `Weighting.admittedOn`), so the models' comparisons are these.
 
 What is not shown: that any model's relation is functional, total or listed (the models supply
-these); the n-step lines law for lines of different lengths; that the models' step-indexed laws
-(`Withholding`, `Tolerance`, `Labelled`) are proved from the laws of steps counted, through bridges
-from their chains and traces to `«迭»`, a second step; that a pairing under continuation
+these); the n-step lines law for lines of different lengths; that the models' lineage laws
+(`Web.Lineage.split`, `through`, `onward`, `back`, `unique`, `origin`) follow from the laws of steps,
+which is board item OU3f's next part; that a pairing under continuation
 (`«对» («续» R E)`) adds anything to equal count, which is not stated; any converse of the law of
 rest, from rest along a line to the ending of the courses: none is established, and one would have
 to say which step relations it compares and on what logic. Every statement is pointwise; no equality of
@@ -747,6 +753,48 @@ theorem «存承之迭» {R : «际» α} {S : Nat → α → Prop}
        fun all => ⟨all c (.inl rfl), fun b r => all b (.inr r)⟩⟩) n a).trans
     ⟨fun all b within => all b ((«迭内即静或缘之迭» n).mp within),
      fun all b steps => all b ((«迭内即静或缘之迭» n).mpr steps)⟩
+
+/-- **Steps split as they compose (迭之分).** `b + a` steps are `a` steps and then `b`: the converse of
+`«迭之接»`, read in its order, with no arithmetic. -/
+theorem «迭之分» {R : «际» α} : ∀ (a : Nat) {b : Nat} {x z : α},
+    «迭» R (b + a) x z → ∃ y, «迭» R a x y ∧ «迭» R b y z
+  | 0, _, x, _, steps => ⟨x, rfl, steps⟩
+  | a + 1, _, _, _, ⟨w, r, rest⟩ => match «迭之分» a rest with
+    | ⟨y, first, second⟩ => ⟨y, ⟨w, r, first⟩, second⟩
+
+/-- **Steps read backward are steps of the converse (迭之逆).** -/
+theorem «迭之逆» {R : «际» α} : ∀ (n : Nat) {x y : α}, «迭» («逆» R) n x y ↔ «迭» R n y x
+  | 0, _, _ => ⟨Eq.symm, Eq.symm⟩
+  | n + 1, _, _ => ⟨fun ⟨w, r, rest⟩ => («迭之末步» n).mpr ⟨w, («迭之逆» n).mp rest, r⟩,
+      fun steps => match («迭之末步» n).mp steps with
+        | ⟨w, first, r⟩ => ⟨w, r, («迭之逆» n).mpr first⟩⟩
+
+/-- **Where there is a successor as far as can be refuted, there are steps as far as can be refuted
+(或有后则或迭).** If whatever `x` reaches in fewer than `n` steps has a successor, as far as can be
+refuted, then `n` steps from `x` exist, as far as can be refuted: the conclusion is a double negation
+because each successor is given only as far as can be refuted. -/
+theorem «或有后则或迭» {R : «际» α} {x : α} : ∀ (n : Nat),
+    (∀ k y, k < n → «迭» R k x y → ¬¬ ∃ z, R y z) → ¬¬ ∃ y, «迭» R n x y
+  | 0, _ => fun none => none ⟨x, rfl⟩
+  | n + 1, more => fun none =>
+    «或有后则或迭» n (fun k y below steps => more k y (Nat.lt_succ_of_lt below) steps)
+      fun ⟨y, steps⟩ => more n y (Nat.lt_succ_self n) steps
+        fun ⟨z, r⟩ => none ⟨z, («迭之末步» n).mpr ⟨y, steps, r⟩⟩
+
+/-- `n` steps lead to the occurrence itself or to what it reaches (迭则同一或及); for a line's
+continuation, this is lying within the line's reach (`«所及»`, by definition). -/
+theorem «迭则同一或及» {R : «际» α} : ∀ (n : Nat) {x y : α}, «迭» R n x y → x = y ∨ «及» R x y
+  | 0, _, _, e => .inl e
+  | n + 1, _, _, steps => .inr («迭则及» n steps)
+
+/-- **An unending line has steps of every length (不穷则迭).** Where every occurrence on the line from
+`x` has a successor, `n` steps of the line's continuation lead from `x`, for every `n`. -/
+theorem «不穷则迭» {R E : «际» α} {x : α} (endless : «不穷» R E x) :
+    ∀ n, ∃ y, «迭» («续» R E) n x y
+  | 0 => ⟨x, rfl⟩
+  | n + 1 => match «不穷则迭» endless n with
+    | ⟨y, steps⟩ => match endless y («迭则同一或及» n steps) with
+      | ⟨z, c⟩ => ⟨z, («迭之末步» n).mpr ⟨y, steps, c⟩⟩
 
 /-- The successor is fixed at what `x` reaches (定后于): two successors of one occurrence within
 `x`'s closure are one. It is `«定后»` read within `«所闭» R x` only, and the laws of return below

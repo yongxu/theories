@@ -106,14 +106,21 @@ theorem active_along_line {x y : Nat × F} (start : W.active x.1 x.2)
   | .inl same => Eq.subst (motive := fun z : Nat × F => W.active z.1 z.2) same start
   | .inr line => («线内同类» (activityClass_class W) line).mp start
 
-/-- A line that never ends reaches an occurrence at every later step. -/
+/-- `k` steps of a continuation under `continuationStep R` advance the step index by `k`. -/
+theorem steps_advance {E : «际» (Nat × F)} : ∀ (k : Nat) {x y : Nat × F},
+    «迭» («续» (continuationStep R) E) k x y → y.1 = x.1 + k
+  | 0, _, _, e => (congrArg Prod.fst e).symm
+  | k + 1, x, _, ⟨_, c, rest⟩ =>
+    (steps_advance k rest).trans ((congrArg (· + k) c.1.1).trans (Nat.succ_add x.1 k))
+
+/-- A line that never ends reaches an occurrence at every later step: the grammar's unending line has
+steps of every length (`«不穷则迭»`), which lie within its reach (`«迭则同一或及»`, at the line's
+continuation) and advance the index (`steps_advance`). -/
 theorem reaches_onward {E : «际» (Nat × F)} {x : Nat × F}
     (endless : «不穷» (continuationStep R) E x) :
-    ∀ k, ∃ y, «所及» (continuationStep R) E x y ∧ y.1 = x.1 + k
-  | 0 => ⟨x, .inl rfl, rfl⟩
-  | k + 1 => match reaches_onward endless k with
-    | ⟨y, hy, at_⟩ => match endless y hy with
-      | ⟨z, c⟩ => ⟨z, «所及之传递» hy (.inr (.one c)), c.1.1.trans (congrArg (· + 1) at_)⟩
+    ∀ k, ∃ y, «所及» (continuationStep R) E x y ∧ y.1 = x.1 + k :=
+  fun k => match «不穷则迭» endless k with
+  | ⟨y, steps⟩ => ⟨y, «迭则同一或及» k steps, steps_advance k steps⟩
 
 /-- Where going on is decided at the points of a line, the line reaches an end or an occurrence at
 every later step. -/

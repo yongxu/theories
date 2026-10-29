@@ -1,0 +1,70 @@
+{
+  "errors": [
+    "master-laws-on-the-grammar: invalid proof receipt binding: declarations not elaborated in Becoming.GrammarLaws: Becoming.«不穷则迭», Becoming.«或有后则或迭», Becoming.«迭之分», Becoming.«迭之逆», Becoming.«迭则同一或及»"
+  ],
+  "source_drift": [
+    {
+      "id": "comparing-two-courses-on-what-they-admit",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "reviewed_sha256": "c33037600c9b935b6e59f21640822e75632991d2fbfbf1856499aabe71bc1ae0",
+      "current_sha256": "31f3bdd79cc2f7e2f7930f793fae8a125dd8cbd4ce31f2d9e530dea184f3b614",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "generation-and-degeneration-at-two-grains",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
+      "reviewed_sha256": "5f66a2f3fa4afb314d3f5a6bb5ec13194e81c0c1a234aa10b723aaa74141a932",
+      "current_sha256": "5067c504199c40220907085b3d5c3fc9b77cf68e0cb173b433bf9952e215712c",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "reviewed_sha256": "c33037600c9b935b6e59f21640822e75632991d2fbfbf1856499aabe71bc1ae0",
+      "current_sha256": "31f3bdd79cc2f7e2f7930f793fae8a125dd8cbd4ce31f2d9e530dea184f3b614",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "the-world-represented-both-ways",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "reviewed_sha256": "c33037600c9b935b6e59f21640822e75632991d2fbfbf1856499aabe71bc1ae0",
+      "current_sha256": "31f3bdd79cc2f7e2f7930f793fae8a125dd8cbd4ce31f2d9e530dea184f3b614",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "what-a-course-keeps-reachable",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "reviewed_sha256": "c33037600c9b935b6e59f21640822e75632991d2fbfbf1856499aabe71bc1ae0",
+      "current_sha256": "31f3bdd79cc2f7e2f7930f793fae8a125dd8cbd4ce31f2d9e530dea184f3b614",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "what-keeping-widening-needs",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
+      "reviewed_sha256": "5f66a2f3fa4afb314d3f5a6bb5ec13194e81c0c1a234aa10b723aaa74141a932",
+      "current_sha256": "5067c504199c40220907085b3d5c3fc9b77cf68e0cb173b433bf9952e215712c",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "where-the-possible-grows",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "reviewed_sha256": "c33037600c9b935b6e59f21640822e75632991d2fbfbf1856499aabe71bc1ae0",
+      "current_sha256": "31f3bdd79cc2f7e2f7930f793fae8a125dd8cbd4ce31f2d9e530dea184f3b614",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    }
+  ]
+}
