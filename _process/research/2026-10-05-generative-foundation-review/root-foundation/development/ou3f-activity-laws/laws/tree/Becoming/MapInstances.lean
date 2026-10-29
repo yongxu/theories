@@ -114,13 +114,13 @@ theorem steps_advance {E : «际» (Nat × F)} : ∀ (k : Nat) {x y : Nat × F},
     (steps_advance k rest).trans ((congrArg (· + k) c.1.1).trans (Nat.succ_add x.1 k))
 
 /-- A line that never ends reaches an occurrence at every later step: the grammar's unending line has
-steps of every length (`«不穷则迭»`), which lie within its reach (`«迭则所及»`) and advance the
-index (`steps_advance`). -/
+steps of every length (`«不穷则迭»`), which lie within its reach (`«迭则同一或及»`, at the line's
+continuation) and advance the index (`steps_advance`). -/
 theorem reaches_onward {E : «际» (Nat × F)} {x : Nat × F}
     (endless : «不穷» (continuationStep R) E x) :
     ∀ k, ∃ y, «所及» (continuationStep R) E x y ∧ y.1 = x.1 + k :=
   fun k => match «不穷则迭» endless k with
-  | ⟨y, steps⟩ => ⟨y, «迭则所及» k steps, steps_advance k steps⟩
+  | ⟨y, steps⟩ => ⟨y, «迭则同一或及» k steps, steps_advance k steps⟩
 
 /-- Where going on is decided at the points of a line, the line reaches an end or an occurrence at
 every later step. -/

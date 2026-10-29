@@ -50,3 +50,13 @@ On OU3d's pattern, after WRT2, whose new module imports `GrammarLaws`. Main is m
 4. 01 §7's finite-runs bullet;
 5. the record master-laws-on-the-grammar's group of steps counted;
 6. a study section, carrying the audit's main finding: of the 436 theorems that read only activity, 400 are laws of their models, so the general content this layer leaves to lift is small.
+
+## The review, and what was taken
+
+One independent read-only review by a separate AI agent, the reviewer of the audit ([REVIEW-LAWS](REVIEW-LAWS.md)). It found the five laws right and constructive and the set close to minimal. It also found `reaches_onward`'s re-proof a genuine rule-9 derivation, which it compiled over main's `MapInstances`, with empty axiom reports (`checks/`). Every finding was taken.
+1. **The header overclaimed.** It now says three of the models' step-indexed laws follow from the laws of steps. *What is not shown* names the lineage laws, the item's next part.
+2. **`«迭之分»`'s docstring** no longer calls `«迭之末步»` its case. That case is `1 + n` steps, the last read as `«迭» R 1`, and runs one way only.
+3. **`«迭则所及»` is now the general `«迭则同一或及»`**, for any relation, of which lying within a line's reach is the case at the line's continuation, by definition (rule 9).
+4. **`«或有后则或迭»`'s docstring** explains its double negation instead of claiming it is the exact strength, which nothing proves.
+
+The review's note for the next part is kept for its design. Write the restricted step for `split` and `through` as `«续» (continuationStep R) E_N`, so that `steps_advance` fixes B1's middle step, and state the bridge for any bound `N ≤ M`.

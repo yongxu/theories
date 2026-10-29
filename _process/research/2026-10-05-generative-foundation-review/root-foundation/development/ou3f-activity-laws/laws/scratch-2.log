@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/ou3f-laws/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/laws/tree",
+  "modules": 4,
+  "ran": [
+    "Becoming.GrammarLaws",
+    "BecomingGrammarLawsAxiomAudit"
+  ],
+  "reused": 3,
+  "unclean": [],
+  "audits": {
+    "Becoming.GrammarLaws": {
+      "theorems": 125,
+      "declarations": 148,
+      "with_axioms": {}
+    }
+  }
+}
