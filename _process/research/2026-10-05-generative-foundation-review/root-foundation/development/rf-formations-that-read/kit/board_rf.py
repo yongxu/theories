@@ -38,8 +38,8 @@ STATEMENTS = [
      "shaping (`RuleShaping.favours_iff`). ",
      "Readings, no new Lean: a shared obstruction pattern across scales, each row's standing stated; concealment as "
      "shaping an analogy until RF7. "),
-    ("First: the plan's independent review (cross-model). ",
-     "The plan and the Lean each had an independent cross-model review, every finding taken (plan §13). "),
+    ("First: the plan's independent review (cross-model).",
+     "The plan and the Lean each had an independent cross-model review, every finding taken (plan §13)."),
 ]
 board = BOARD.read_text(encoding='utf-8').split('\n')
 rows = [i for i, line in enumerate(board) if line.startswith('| **RF: ')]

@@ -11,10 +11,15 @@
 ## Laws
 
 1. Where no read occasion is lumped with x, the class going alike across the lumping is free at x beyond the readings: every member's values on the read occasions combine with every value at x. (`Becoming.Learning.free_lumped`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. So every act law reading through the lumping that a selection through agreement on the readings selects has, for every value, a selected twin agreeing with it on every reading and taking that value at x. (`Becoming.Learning.twin_selected`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Where acts read a state formed from what couples in, acts that differ at two occasions come from states that differ, and states that differ from couplings that differ. (`Becoming.Learning.state_apart_of_acts_apart`, `Becoming.Learning.coupling_apart_of_state_apart`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 4. Witness: occasions with a cue and a content, read where the cue is up, the content act answering with the content; a formation coupled into the cue has a selected twin acting otherwise at an unread occasion; among laws reading only the content, agreement on the readings fixes the act there. (`Becoming.Learning.Cue.Occasion`, `Becoming.Learning.Cue.read`, `Becoming.Learning.Cue.contentAct`, `Becoming.Learning.Cue.seen_twin`, `Becoming.Learning.Cue.unseen_fixed`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 5. Witness, the converses fail: a read and an unread occasion differ while their contents agree, so a state keeping the cue with an act reading the content is detected and not acted on, and a coupling taking in the cue with a state keeping the content is detectable and not detected. (`Becoming.Learning.Cue.apart_with_content_alike`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -80,8 +85,8 @@ Aliases: `what readings fix of the unread`, `读处所定于未读处者`, `a tw
 <a id="history--沿革"></a>
 ### History
 
-- 29 October 2026: added (RF round 1), what readings fix of the unread: the twin where the formation can tell, the chain of acts, states and couplings with its converses failing, and the cue witnesses; after a review of the plan and a review of the Lean; study section 444.
+- 29 October 2026: added (RF round 1), what readings fix of the unread: the twin where the formation can tell, the chain of acts, states and couplings with its converses failing, and the cue witnesses; after a review of the plan and a review of the Lean; study section 445.
 
 </details>
 
-Documentary review UTC: `2026-10-29T11:49:30+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-29T12:09:54+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

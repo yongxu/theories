@@ -1637,6 +1637,31 @@
         "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md": {
+      "title": "Review of the RF plan (GPT astra, high effort, read-only, 29 October 2026)",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/BRIEF.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Diagonal.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCourse.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Training.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WitnessRefinementRuns.lean"
+      ]
+    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/SECOND-OPINION-LITERATURE.md": {
       "title": "Second opinion: the literature's exact results and an independent sketch (GPT astra, high effort, read-only, web, 29 October 2026)",
       "local_links": [

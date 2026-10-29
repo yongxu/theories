@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261029T104256.342764Z",
- "core_sources_sha256": "7eda1e87ba55211512a41b730d60243f52c969489b0d4c29ff750cc12b8d8dc6",
+ "core_receipt": "20261029T113907.548004Z",
+ "core_sources_sha256": "47586f9674af6fb37fb6b532f9c436cb931a19610f2f8cae2a9d1842a2435a9d",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "4952228938aef973e6cf0a17b3873636b34c75955f7bf53be72310cacbb59203",
@@ -44,14 +44,14 @@
   ]
  },
  "counts": {
-  "laws": 3653,
+  "laws": 3672,
   "no_declarations": 9,
   "outside": 342,
-  "grammar": 690,
+  "grammar": 699,
   "balance, represented": 643,
   "anchor, not reached": 134,
-  "no master law": 1835,
-  "vocabulary_only": 49,
+  "no master law": 1845,
+  "vocabulary_only": 53,
   "closure": 286,
   "balance": 800,
   "return": 236,
@@ -32567,6 +32567,61 @@
     "dependence": "grammar"
    }
   ],
+  "readers-reading-readers": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Turns",
+     "Becoming.Turns.acts",
+     "Becoming.Turns.act",
+     "Becoming.Turns.ReadsOnlyActsFrom",
+     "Becoming.Turns.AlikeBefore"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Turns.law_alike_of_cascade",
+     "Becoming.Turns.acts_alike_of_cascade",
+     "Becoming.Turns.act_alike_of_cascade"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Turns.cascade_through"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Turns.separates_at"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.Turns.Copying.turns",
+     "Becoming.Turns.Copying.readsOnlyActs",
+     "Becoming.Turns.Copying.reaches_first_only"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   }
+  ],
   "reading-anothers-couplings-is-pooling": [
    {
     "law": 1,
@@ -49280,6 +49335,123 @@
     "dependence": "no master law"
    }
   ],
+  "what-choices-show-of-an-order": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.ChoiceOccasions",
+     "Becoming.ChoiceOccasions.Shown",
+     "Becoming.ChoiceOccasions.Accords",
+     "Becoming.ChoiceOccasions.AccordsWeakly",
+     "Becoming.ChoiceOccasions.PicksOpen"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.ChoiceOccasions.reach_within",
+     "Becoming.ChoiceOccasions.shown_accords",
+     "Becoming.ChoiceOccasions.reach_accords"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.ChoiceOccasions.accorded_iff_noCycle"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.ChoiceOccasions.above_in_every_iff_reach",
+     "Becoming.ChoiceOccasions.top_in_every_iff_reach"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.ChoiceOccasions.withPair",
+     "Becoming.ChoiceOccasions.reach_withPair",
+     "Becoming.ChoiceOccasions.reach_withPair_iff",
+     "Becoming.ChoiceOccasions.noCycle_withPair",
+     "Becoming.ChoiceOccasions.noCycle_withPair_iff"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.ChoiceOccasions.above_in_some_of_unreached",
+     "Becoming.ChoiceOccasions.both_ways_of_unreached"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.ChoiceOccasions.weakly_forces_no_comparison"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.ChoiceOccasions.Untried.Alt",
+     "Becoming.ChoiceOccasions.Untried.occasions",
+     "Becoming.ChoiceOccasions.Untried.first_ne_second",
+     "Becoming.ChoiceOccasions.Untried.first_ne_third",
+     "Becoming.ChoiceOccasions.Untried.shown_from_first",
+     "Becoming.ChoiceOccasions.Untried.shown_to_second",
+     "Becoming.ChoiceOccasions.Untried.reach_first_second",
+     "Becoming.ChoiceOccasions.Untried.noCycle",
+     "Becoming.ChoiceOccasions.Untried.met_fixed",
+     "Becoming.ChoiceOccasions.Untried.untried_free"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.ChoiceOccasions.Untried.aboveFirst",
+     "Becoming.ChoiceOccasions.Untried.aboveThird",
+     "Becoming.ChoiceOccasions.Untried.noTrue",
+     "Becoming.ChoiceOccasions.Untried.same",
+     "Becoming.ChoiceOccasions.Untried.search",
+     "Becoming.ChoiceOccasions.Untried.aboveFirst_strict",
+     "Becoming.ChoiceOccasions.Untried.aboveThird_strict",
+     "Becoming.ChoiceOccasions.Untried.both_accord",
+     "Becoming.ChoiceOccasions.Untried.same_search_met",
+     "Becoming.ChoiceOccasions.Untried.same_search_after"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   }
+  ],
   "what-dependence-alone-carries-of-a-level": [
    {
     "law": 1,
@@ -50160,6 +50332,58 @@
     ],
     "grammar": false,
     "dependence": "balance, represented"
+   }
+  ],
+  "what-readings-fix-of-the-unread": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Learning.free_lumped"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Learning.twin_selected"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Learning.state_apart_of_acts_apart",
+     "Becoming.Learning.coupling_apart_of_state_apart"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Learning.Cue.Occasion",
+     "Becoming.Learning.Cue.read",
+     "Becoming.Learning.Cue.contentAct",
+     "Becoming.Learning.Cue.seen_twin",
+     "Becoming.Learning.Cue.unseen_fixed"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.Learning.Cue.apart_with_content_alike"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
    }
   ],
   "what-self-concern-alone-ranks": [
