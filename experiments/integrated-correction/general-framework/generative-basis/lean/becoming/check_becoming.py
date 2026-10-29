@@ -73,7 +73,7 @@ CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "
         "Becoming.Restoration", "Becoming.Horizon", "Becoming.Joint", "Becoming.Experiment", "Becoming.Mechanism", "Becoming.Unfolding", "Becoming.Irreversibility", "Becoming.LawAlongRun", "Becoming.Histories", "Becoming.Branching", "Becoming.Listing", "Becoming.Stuttering", "Becoming.Reordering", "Becoming.IdleRemoval", "Becoming.OrderNormal", "Becoming.OneStep", "Becoming.Weighted", "Becoming.Transmission", "Becoming.Succession", "Becoming.Attraction",
         "Becoming.Substitution",
         "Becoming.Arising", "Becoming.Flow", "Becoming.Stock", "Becoming.Change", "Becoming.Population",
-        "Becoming.Identity", "Becoming.Persistence", "Becoming.ContinuedClasses", "Becoming.WorldRepresentation", "Becoming.Wholes", "Becoming.Dissipation", "Becoming.Locality",
+        "Becoming.Identity", "Becoming.Persistence", "Becoming.ContinuedClasses", "Becoming.WorldRepresentation", "Becoming.ProcessRepresentation", "Becoming.Wholes", "Becoming.Dissipation", "Becoming.Locality",
         "Becoming.Seeking", "Becoming.Roles", "Becoming.LabelledRoles",
         "Becoming.Reserve", "Becoming.Evolution", "Becoming.Capture", "Becoming.SelectionTerm", "Becoming.Reproduction", "Becoming.SelectionLevels", "Becoming.GroupEnding", "Becoming.Founding", "Becoming.Drift", "Becoming.Space",
         "Becoming.Premises", "Becoming.Sampling", "Becoming.Tower",
@@ -199,6 +199,9 @@ SCOPE = (
     "within m + n, and a course of regions each of whose rounds holds what every condition held holds at round n "
     "exactly where everything reaching in n steps held at the start, with memory within n steps; steps split as "
     "they compose, steps read backward are steps of the converse, and an unending line has steps of every length; "
+    "passing through a word's relations in turn composes along joined words, reads its last letter last and the "
+    "reversed word by the converse relations backward, merges nothing where no letter merges and keeps alike where "
+    "each goes alike, n steps being its case for one relation and six laws of n steps its cases; "
     "going alike is "
     "constancy where the "
     "successor is fixed and a successor available, and a map's image has a fixed successor exactly where sameness "
@@ -210,7 +213,10 @@ SCOPE = (
     "GrammarTransport: the grammar's listed terms are kept by a one-to-one correspondence of models carrying the "
     "relations they read, carrying being read through the grammar's image and kept by its operations, a predicate "
     "carried as its partial identity; ending on every branch reflects along any map carrying continuation from a "
-    "closed region. "
+    "closed region, and going on along some branch along any map lifting continuation; a map preserves a relation "
+    "exactly where its image lies within the other; steps, passing through a word, within n steps, closed regions, a "
+    "fixed successor and predecessor, going alike and going on along some branch are kept, and correspondences "
+    "compose side by side. "
     "ShownOrder: every transitive relation in which what is chosen stands above every other open alternative "
     "contains the reach of the relation the choices show; some strict order does exactly where nothing shown returns; "
     "then the positive comparisons every such order shares are exactly the shown reach, and beyond that reach no "
@@ -772,6 +778,19 @@ SCOPE = (
     "amounts induce is decided; the model does not determine standings, balance is not determined by the web and the "
     "signs of exchange, conservation is never identity on the predicates of Nat, and a line of falls ends, a "
     "condition of the World's image and not a law of the grammar. "
+    "ProcessRepresentation: processes in the grammar both ways. A process is exactly its relations, one per move, "
+    "by definition, and its steps their union; so a property of relations shared by relations alike pointwise holds "
+    "of every process's steps exactly where it holds of every relation. Every relation is a process's steps and every "
+    "class a frame's class of claims. The model with the move inside recovers the process on its fixed carrier, its "
+    "image exactly the relations leaving the next move open; a renaming relating two processes is a correspondence of "
+    "these models carrying the steps and the classes of the same move and the same configuration, and from a "
+    "configuration and a move every such correspondence is a renaming relating them, while neither class alone "
+    "suffices and with no move or no configuration a point is needed; a renaming keeps traces with the word renamed, n "
+    "steps, reach, returning, invariants, determination, merging nothing, going alike and going on. A trace "
+    "is passing through the moves' relations along its word; factoring through a map is the image of each move's "
+    "relation lying within; a run's configurations carry the line of steps into the steps, exactly so with the move "
+    "inside; going on along some branch is lying in a family that keeps moving, a line from it exactly dependent "
+    "choice and within finitely many configurations a line with nothing chosen; the steps forget the moves. "
     "Identity: re-identifying formations one to one at each step leaves every step's levels, "
     "activity, dependences and drawing unchanged; a renaming preserves the readings that follow "
     "a formation, and every re-identification preserves support, keeping and breaking, the class "

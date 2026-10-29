@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """WRP2: register the apart roots the connectivity check lists without a reason that are WRP2's, each with a category
-and a reason; stop on any other root, which belongs to its owner, and on a ProcessRepresentation or GrammarLaws root,
-which this kit does not expect (ProcessRepresentation's statements read processes and frames; GrammarLaws' additions
-are used by the laws of «迭» they carry).
+and a reason, and retire WRT2's GrammarTransport roots that WRP2's renaming theorems now use; stop on any other root,
+which belongs to its owner, and on a ProcessRepresentation or GrammarLaws root, which this kit does not expect
+(ProcessRepresentation's statements read processes and frames; GrammarLaws' additions are used by the laws of «迭»
+they carry).
 
 * GrammarTransport's new roots are laws of every relation on any carrier: a grammar term kept by a one-to-one
   correspondence carrying what it reads. ProcessRepresentation uses the transport along maps it needs («保之像»); the
@@ -34,8 +35,17 @@ for name in unclassified:
 others = [n for n in unclassified if n not in reasons]
 assert not others, ("apart roots not registered here: read them; another session's belong to their owners", others)
 stale_names = [] if not stale else [s.strip().strip("'\"") for s in stale.group(1).strip('[]').split(',') if s.strip()]
-assert not stale_names, ('stale entries: read them, and retire only those WRP2 made no longer apart', stale_names)
+# WRT2's GrammarTransport roots that WRP2's renaming theorems now use: «一之像» (going on), «所闭之对应» (reach) and
+# «静之像» (passing through a word, and steps); they are no longer apart and retire
+RETIRE = ['Becoming.«一之像»', 'Becoming.«所闭之对应»', 'Becoming.«静之像»']
+assert set(stale_names) <= set(RETIRE), ('stale entries not WRP2\'s to retire: their owners do', stale_names)
 t = F.read_text(encoding='utf-8')
+for name in stale_names:
+    start = t.index('  ' + json.dumps(name, ensure_ascii=False) + ': {\n')
+    end = t.index('\n  },\n', start) + len('\n  },\n')
+    assert t[start:end].count('"module": "Becoming.GrammarTransport"') == 1, name
+    t = t[:start] + t[end:]
+    json.loads(t)
 block = ''
 for name in unclassified:
     assert json.dumps(name, ensure_ascii=False) not in t, name
@@ -47,5 +57,6 @@ if block:
     assert t.count(anchor) == 1
     t = t.replace(anchor, '  },\n' + block.rstrip(',\n') + '\n },\n "instances": {')
     json.loads(t)
+if block or stale_names:
     F.write_text(t, encoding='utf-8')
-print('register: added', len(unclassified), unclassified)
+print('register: added', len(unclassified), unclassified, '; retired', stale_names)

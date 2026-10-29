@@ -3740,6 +3740,18 @@
    "page": "theories/becoming/results/records/process-and-frame-as-readings.md"
   },
   {
+   "id": "record:processes-represented-both-ways",
+   "type": "result",
+   "record": "processes-represented-both-ways",
+   "title": "Processes represented in the grammar both ways",
+   "title_zh": "过程于文法中两向得表示",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "root",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/processes-represented-both-ways.md"
+  },
+  {
    "id": "record:projection-carrying-a-law",
    "type": "result",
    "record": "projection-carrying-a-law",
@@ -6222,7 +6234,7 @@
    "type": "module",
    "name": "Becoming.GrammarLaws",
    "level": "L0",
-   "theorems": 125,
+   "theorems": 136,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -6233,7 +6245,7 @@
    "type": "module",
    "name": "Becoming.GrammarTransport",
    "level": "L1",
-   "theorems": 41,
+   "theorems": 54,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -9853,6 +9865,17 @@
    "name": "Becoming.GrammarRegularity",
    "level": "L1",
    "theorems": 25,
+   "region": "root",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ProcessRepresentation",
+   "type": "module",
+   "name": "Becoming.ProcessRepresentation",
+   "level": "L1",
+   "theorems": 52,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -27168,6 +27191,12 @@
    "anchor": "r-master-laws-on-the-grammar"
   },
   {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-processes-represented-both-ways",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-processes-represented-both-ways"
+  },
+  {
    "id": "section:theories/becoming/chapters/01-ROOT.md#r-place-transition-nets-on-the-spine",
    "type": "section",
    "chapter": "theories/becoming/chapters/01-ROOT.md",
@@ -32423,6 +32452,36 @@
   {
    "from": "module:Becoming.Presentations",
    "to": "module:Becoming.Composition",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ProcessRepresentation",
+   "to": "module:Becoming.EdgeClosure",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ProcessRepresentation",
+   "to": "module:Becoming.GrammarCandidates",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ProcessRepresentation",
+   "to": "module:Becoming.GrammarRegularity",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ProcessRepresentation",
+   "to": "module:Becoming.GrammarTransport",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ProcessRepresentation",
+   "to": "module:Becoming.Labelled",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ProcessRepresentation",
+   "to": "module:Becoming.Onward",
    "type": "imports"
   },
   {
@@ -46506,6 +46565,166 @@
    "type": "related"
   },
   {
+   "from": "record:processes-represented-both-ways",
+   "to": "module:Becoming.Arising",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "module:Becoming.EdgeClosure",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "module:Becoming.Experiment",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "module:Becoming.Frame",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "module:Becoming.Grammar",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "module:Becoming.GrammarCandidates",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "module:Becoming.GrammarCourse",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "module:Becoming.GrammarMap",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "module:Becoming.GrammarRegularity",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "module:Becoming.GrammarTransport",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "module:Becoming.Labelled",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "module:Becoming.Likeness",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "module:Becoming.Onward",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "module:Becoming.ProcessRepresentation",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "module:Becoming.Recurrence",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:becoming-spine-instances",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:candidate-theorems-of-the-corpus",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:experiment-needs-return",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:histories-fix-law-up-to-dead-ends",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:levels-of-closure",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:process-and-frame-as-readings",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:recurrence-without-premise",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:rules-that-change-themselves-in-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:tests-fix-likeness-where-determined",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:the-world-represented-both-ways",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:the-world-represented-both-ways",
+   "type": "related"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:wen-in-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:processes-represented-both-ways",
+   "to": "record:where-a-run-goes-on",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:projection-carrying-a-law",
    "to": "module:Becoming.Experiment",
    "type": "proved-in"
@@ -51287,6 +51506,11 @@
   },
   {
    "from": "record:the-world-represented-both-ways",
+   "to": "record:processes-represented-both-ways",
+   "type": "related"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
    "to": "record:readings-within-what-they-read",
    "type": "formal-reuse"
   },
@@ -55913,6 +56137,11 @@
   {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-process-and-frame-as-readings",
    "to": "record:process-and-frame-as-readings",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-processes-represented-both-ways",
+   "to": "record:processes-represented-both-ways",
    "type": "states"
   },
   {

@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 331 | 15,920 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 332 | 15,996 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 13 | 760 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -671,6 +671,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Presence.lean](lean-declarations/becoming-core.md#module-f832ab565d73) | Becoming pure core |
 | [Presentations.lean](lean-declarations/becoming-core.md#module-d9c1534690a0) | Becoming pure core |
 | [PretrainingEvidence.lean](lean-declarations/shared.md#module-c09aabdc4749) | Organizational formation through revisable evaluation |
+| [ProcessRepresentation.lean](lean-declarations/becoming-core.md#module-649ffce719ee) | Becoming pure core |
 | [ProductTower.lean](lean-declarations/core.md#module-4d5adece21ab) | Generative core and relational structure |
 | [ProfileReach.lean](lean-declarations/becoming-core.md#module-cfe7a096681c) | Becoming pure core |
 | [ProjectedLaws.lean](lean-declarations/becoming-core.md#module-321a4be2da04) | Becoming pure core |

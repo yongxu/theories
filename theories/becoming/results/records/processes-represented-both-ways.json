@@ -1,0 +1,647 @@
+{
+  "schema_version": 2,
+  "id": "processes-represented-both-ways",
+  "title": {
+    "en": "Processes represented in the grammar both ways",
+    "zh": "过程于文法中两向得表示"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-29T14:30:35+00:00",
+  "statement": {
+    "en": "A process is exactly its relations, one per move, so a law over processes holds of all relations indexed by moves; every relation is a process's steps. With the move inside, a correspondence carrying the steps and both classes is a renaming, which keeps the bridged notions; one class is not enough.",
+    "zh": "过程恰为其诸关系，每一着一关系，故过程上之律于一切以着为指标之关系成立；每一关系为某过程之步。着在其内，携步与二类之一一对应即重名，重名保诸已桥之概念；单一类不足。"
+  },
+  "laws": [
+    {
+      "en": "A process is exactly its relations, one per move: they are read back from it and make it, by definition, and its steps are their union. A process with one move steps by its one relation, so every relation is the steps of the one-move process of its edges, a process with its moves forgotten has the same steps, and a determined law's steps are its step relation; enabledness is «能» at a move's relation.",
+      "zh": "过程恰为其诸关系，每一着一关系：其所由成之诸关系自之回读，且由其自身之关系成之，皆依定义；其步为诸关系之并。一着之过程以其唯一之关系而行，故每一关系为其边之一着过程之步，忘其着之过程同其步，定律之步为其步之关系；可行即一着之关系上之 «能»。",
+      "declarations": [
+        "Becoming.moveRel_mk",
+        "Becoming.mk_moveRel",
+        "Becoming.steps_iff_moveRel",
+        "Becoming.steps_one_move",
+        "Becoming.steps_edgeProcess",
+        "Becoming.steps_unlabelled",
+        "Becoming.steps_lawProcess",
+        "Becoming.enabled_iff_neng"
+      ]
+    },
+    {
+      "en": "A law's truth is carried: a property of relations shared by relations alike pointwise (a hypothesis from the core's logic, not the property's content) holds of every process's steps exactly where of every relation, and one of relations indexed by moves of every process's exactly where of all such. A statement naming a process notion is in the grammar's terms only through its bridge.",
+      "zh": "律之真为所携：逐点相同之关系所共之载体与关系之性质（此共出于纯核之逻辑，非性质之内容），于每一过程之步成立恰当于每一关系成立；以着为指标之关系之性质，于每一过程者成立恰当于一切如此者成立。陈述不为所携：言过程概念之陈述，唯经其桥方入文法之项。",
+      "declarations": [
+        "Becoming.forall_steps_iff",
+        "Becoming.forall_moveRel_iff"
+      ]
+    },
+    {
+      "en": "The converse: every class is the class of a frame's claims, likeness to depth zero. The model with the move inside recovers the process on its fixed carrier, and its image is exactly the relations leaving the next move open, so the relation 'the next move is true' is no process's model.",
+      "zh": "逆向：每一类为某框架断言之类，即零深之相似。着在其内之模型于其定载体上复得其过程，其像恰为留下一着未定之关系，故「下一着为真」之关系非任何过程之模型。",
+      "declarations": [
+        "Becoming.class_is_claims",
+        "Becoming.step_iff_withMove",
+        "Becoming.withMove_image_iff",
+        "Becoming.reading_next_move_not_withMove"
+      ]
+    },
+    {
+      "en": "Faithful up to correspondence with both classes, the sameness of each coordinate: a renaming relating two processes is a correspondence of their models with the move inside carrying the steps and both classes, and from a configuration and a move every such correspondence is the product of a renaming relating them. With no move, or no configuration, the point is needed: the empty models correspond, yet one is not two.",
+      "zh": "携二类（各坐标之同）则于对应下忠实：关联二过程之重名即携步与二类之着在其内之模型之一一对应；自一构形与一着起，每一如此之对应即关联二者之重名之积。无着或无构形则需一点：空模型相对应，而一非二。",
+      "declarations": [
+        "Becoming.withMove_of_renaming",
+        "Becoming.configurationRenaming",
+        "Becoming.moveRenaming",
+        "Becoming.renaming_of_withMove",
+        "Becoming.NoMoves.P",
+        "Becoming.NoMoves.P'",
+        "Becoming.NoMoves.e",
+        "Becoming.NoMoves.models_correspond",
+        "Becoming.NoMoves.not_renamed",
+        "Becoming.NoConfigurations.P",
+        "Becoming.NoConfigurations.P'",
+        "Becoming.NoConfigurations.e",
+        "Becoming.NoConfigurations.models_correspond",
+        "Becoming.NoConfigurations.not_renamed"
+      ]
+    },
+    {
+      "en": "Neither class alone: the twist flips the configuration where the move is true and keeps the class of the same move, the flip flips the move where the configuration is true and keeps the class of the same configuration, and each carries the model of one process to that of another which no renaming of configurations and moves relates to it.",
+      "zh": "单一类不足：扭于着为真处翻其构形而保同着之类，翻于构形为真处翻其着而保同构形之类；各携一过程之模型至另一过程者，而构形与着之重名无一关联二者。",
+      "declarations": [
+        "Becoming.Twist.P₁",
+        "Becoming.Twist.P₂",
+        "Becoming.Twist.flipConfiguration",
+        "Becoming.Twist.flipConfiguration_twice",
+        "Becoming.Twist.e",
+        "Becoming.Twist.steps_carried",
+        "Becoming.Twist.models_correspond",
+        "Becoming.Twist.P₂_not_both",
+        "Becoming.Twist.P₂_loops_by_one_move",
+        "Becoming.Twist.not_renamed",
+        "Becoming.Flip.P₃",
+        "Becoming.Flip.P₄",
+        "Becoming.Flip.flipMove",
+        "Becoming.Flip.flipMove_twice",
+        "Becoming.Flip.e",
+        "Becoming.Flip.steps_carried",
+        "Becoming.Flip.models_correspond",
+        "Becoming.Flip.P₄_apart",
+        "Becoming.Flip.not_renamed"
+      ]
+    },
+    {
+      "en": "A renaming relating two processes carries each move's relation and the steps, so through the bridges and the grammar's terms kept by correspondence it keeps traces, the word renamed letter by letter, n steps and within n steps, reach, returning and invariants, determination and merging nothing, going alike under a description read back, and going on along some branch.",
+      "zh": "关联二过程之重名携每一着之关系与其步，故经诸桥与为对应所保之文法诸项，保迹（字逐字母重名）、n 步与 n 步以内、及、返与不变者、定与不并、回读之描述下之同行，及沿某支而延。",
+      "declarations": [
+        "Becoming.renaming_moveRel",
+        "Becoming.renaming_steps",
+        "Becoming.renaming_trace",
+        "Becoming.renaming_iterate",
+        "Becoming.renaming_reach",
+        "Becoming.renaming_returns",
+        "Becoming.renaming_invariant",
+        "Becoming.renaming_determined",
+        "Becoming.renaming_lossless",
+        "Becoming.renaming_goAlike",
+        "Becoming.renaming_yan"
+      ]
+    },
+    {
+      "en": "Forward: a trace is passing through the moves' relations along its word («历»), and a word is feasible exactly where that leads somewhere. A process factors through a map exactly where each move's image lies within the other's (Mechanism's image, move by move); a run's configurations carry the line of steps into the steps, and with the move inside a run is exactly a sequence along which that image lies within.",
+      "zh": "前向：迹即沿其字依次历诸着之关系（«历»），字可行恰当如此有所至。过程经一映射分解，恰当每一着其关系之像在他者之内；运行之构形携步之线入其步，着在其内则运行恰为如此之像在步内之序列。",
+      "declarations": [
+        "Becoming.trace_iff_li",
+        "Becoming.feasible_iff_li",
+        "Becoming.factorsThrough_iff_image",
+        "Becoming.run_image",
+        "Becoming.run_iff_image"
+      ]
+    },
+    {
+      "en": "Going on along some branch of the steps («延») is lying in a family that keeps moving, and a run goes on from where it starts. On relations on a type of the first universe, going on gives a line exactly under dependent choice, read from Onward's calibration; within finitely many configurations it gives one with nothing chosen.",
+      "zh": "沿某支而延于步（«延»）即在一常动之族中，运行自其始而延。于第一宇宙之类型上之关系，延恰于依赖选择下给出一线，读自 Onward 之校准；于有限多构形之内则无所选而给出一线。",
+      "declarations": [
+        "Becoming.yan_iff_keepsMoving",
+        "Becoming.run_yan",
+        "Becoming.yan_line_iff_dependentChoice",
+        "Becoming.yan_line_of_list"
+      ]
+    },
+    {
+      "en": "The steps forget the moves: on one configuration with two moves, the process stepping only by true and the one stepping only by false have the same steps, and only the first is enabled by true.",
+      "zh": "步忘其着：一构形二着，唯以真行之过程与唯以假行之过程同其步，而唯前者以真为可行。",
+      "declarations": [
+        "Becoming.Forgotten.byTrue",
+        "Becoming.Forgotten.byFalse",
+        "Becoming.Forgotten.moves_forgotten"
+      ]
+    },
+    {
+      "en": "Along any map: it preserves a relation exactly where the image of the relation along it lies within the other («保之像»), and going on along some branch reflects along any map lifting continuation, with no inverse («延之拉回»).",
+      "zh": "沿任一映射：其保一关系恰当该关系沿之之像在他者之内（«保之像»）；沿某支而延沿任一提升续之映射回射，无需逆（«延之拉回»）。",
+      "declarations": [
+        "Becoming.«保之像»",
+        "Becoming.«延之拉回»"
+      ]
+    },
+    {
+      "en": "Correspondences compose side by side («一一对应».prod), and the terms the renamings read are kept by a correspondence carrying what they read: passing through a word with its letters renamed, n steps its case; within n steps; a closed region where membership is carried; a fixed successor and predecessor; going alike; and going on along some branch, two cases of its pulling back.",
+      "zh": "一一对应可并置（«一一对应».prod），重名所读诸项为携其所读之一一对应所保：历一字而字母重名，n 步为其例；n 步以内；成员被携之闭区；定后与定前；同行；沿某支而延，即其拉回之二例。",
+      "declarations": [
+        "Becoming.«一一对应».prod",
+        "Becoming.GrammarTransport.map_replicate",
+        "Becoming.«历之像»",
+        "Becoming.«历之对应»",
+        "Becoming.«迭之像»",
+        "Becoming.«迭之对应»",
+        "Becoming.«迭内之对应»",
+        "Becoming.«闭之对应»",
+        "Becoming.«定后之对应»",
+        "Becoming.«定前之对应»",
+        "Becoming.«同行之对应»",
+        "Becoming.«延之对应»"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "The process model's commitments: configurations and moves as types, Prop-valued steps, discrete runs indexed by the natural numbers; a process is read only through its steps, so what a statement reads beyond them is outside the reading.",
+      "zh": "过程模型之所承：构形与着为类型，步为命题值，离散之运行以自然数为指标；过程唯经其步读之，故陈述读于其外者在此读之外。"
+    },
+    {
+      "en": "Faithfulness up to correspondence is for the model with the move inside, on configurations paired with moves, with the classes of the same move and the same configuration carried, from a configuration and a move given.",
+      "zh": "于对应下之忠实为着在其内之模型而言，于构形与着之偶上，携同着与同构形之类，自给定之一构形与一着起。"
+    },
+    {
+      "en": "The calibration is for relations on types of the first universe, as Onward's dependent choice is; the forward bridges are notion by notion, for the notions listed.",
+      "zh": "校准为第一宇宙类型上之关系而言，如 Onward 之依赖选择；前向之桥逐概念而立，限于所列之概念。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a statement over processes is in the grammar's terms: its truth is carried, but a statement naming an unbridged process notion (likeness by bisimulation, stretch orders, branching tests and others) stays with its model.",
+      "zh": "过程上之陈述即在文法之项中：其真为所携，而言未立桥之过程概念者（互模拟之相似、段之序、分支之测等）仍随其模型。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That every functional total relation is a determined law's step: that is unique choice on one carrier, which the core does not assume.",
+      "zh": "每一函数且全之关系皆为某定律之步：此即一载体上之唯一选择，纯核不设之。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A product and its factors as one construction: the grammar relates the three carriers only through maps, forming no pairing.",
+      "zh": "积与其因子为一构造：文法唯经映射关联三载体，不成偶对。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a sequence whose image lies within the steps is a run's configurations: a move chosen at each step is countable choice, not assumed; with the move inside it is a run, and nothing is chosen.",
+      "zh": "像在步内之序列即运行之构形：每步择一着为可数选择，不设之；着在其内则为运行，无所选。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A line from going on along some branch beyond finitely many configurations without dependent choice.",
+      "zh": "无依赖选择而于有限多构形之外自沿某支而延得一线。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The theorems that read no field of the old base and are about other structures than processes (optima, weightings, regime margins and the rest), which this reading does not reach.",
+      "zh": "不读旧基之域而关乎过程以外之结构之定理（最优、权重、制度边际等），此读不及之。",
+      "kind": "scope"
+    },
+    {
+      "en": "A forward theorem: no statement says every process notion is a grammar term; correspondence lemmas for the grammar's terms not listed in GrammarTransport.",
+      "zh": "前向之定理：无陈述言每一过程概念皆为文法之项；GrammarTransport 未列之文法诸项之对应引理。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Morphisms of models beyond correspondences, the functor question 55 of the logic dossier asks for; and the design's counting remarks (fewer relations than processes on a finite carrier), which are not in Lean.",
+      "zh": "对应之外之模型之态射，即逻辑档案第 55 问所求之函子；及设计之计数之言（有限载体上关系少于过程），未入 Lean。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ProcessRepresentation.lean",
+      "detail": {
+        "en": "The twist: P₁ steps exactly from true, P₂ by true from false and by false from true; flipping the configuration where the move is true carries one model to the other with the class of the same move, and no renaming relates them (Twist.models_correspond, Twist.not_renamed).",
+        "zh": "扭：P₁ 恰自真而行，P₂ 自假以真、自真以假而行；于着为真处翻其构形，携一模型至另一，保同着之类，而无重名关联二者（Twist.models_correspond、Twist.not_renamed）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ProcessRepresentation.lean",
+      "detail": {
+        "en": "The flip: P₃ steps by true everywhere, P₄ by false at true and by true at false; flipping the move where the configuration is true carries one model to the other with the class of the same configuration, and no renaming relates them (Flip.models_correspond, Flip.not_renamed).",
+        "zh": "翻：P₃ 处处以真而行，P₄ 于真以假、于假以真而行；于构形为真处翻其着，携一模型至另一，保同构形之类，而无重名关联二者（Flip.models_correspond、Flip.not_renamed）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ProcessRepresentation.lean",
+      "detail": {
+        "en": "With no move, the models of a process on one configuration and of one on two are both empty and correspond, and no renaming relates them (NoMoves.models_correspond, NoMoves.not_renamed); with no configuration, likewise for one move and two (NoConfigurations.not_renamed).",
+        "zh": "无着时，一构形之过程与二构形之过程之模型皆空而相对应，而无重名关联二者（NoMoves.models_correspond、NoMoves.not_renamed）；无构形时，一着与二着亦然（NoConfigurations.not_renamed）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ProcessRepresentation.lean",
+      "detail": {
+        "en": "On one configuration, stepping only by true and only by false give the same steps, and only the first is enabled by true (Forgotten.moves_forgotten); a relation reading the next move is no process's model (reading_next_move_not_withMove).",
+        "zh": "一构形上，唯以真行与唯以假行同其步，而唯前者以真为可行（Forgotten.moves_forgotten）；读下一着之关系非任何过程之模型（reading_next_move_not_withMove）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty: ProcessRepresentation imports EdgeClosure, GrammarTransport, Labelled, Onward, GrammarRegularity and GrammarCandidates, and with GrammarLaws and GrammarTransport extended the whole package compiles with no name clash. Every result is pointwise; the core's List.reverse_cons reports propext, so the list lemmas «历» needs are proved by induction. The witnesses are single small processes.",
+    "zh": "纯核，公理报告皆空：ProcessRepresentation 引 EdgeClosure、GrammarTransport、Labelled、Onward、GrammarRegularity 与 GrammarCandidates；GrammarLaws 与 GrammarTransport 扩充后，全包同编译，无名冲突。皆逐点；核之 List.reverse_cons 报 propext，故 «历» 所需之列表引理以归纳证之。诸例皆单一小过程。"
+  },
+  "next_delta": {
+    "en": "Bridges for the unbridged process notions, the most named first: likeness by bisimulation, stretch orders, branching tests, adherence; whether every functional total relation is a law's step; a product and its factors as one construction; review by a person.",
+    "zh": "为未立桥之过程概念立桥，先其最常名者：互模拟之相似、段之序、分支之测、依循；每一函数且全之关系是否为某律之步；积与因子为一构造；人之审查。"
+  },
+  "correspondence": {
+    "en": "A process is a labelled transition system, and its moves' relations are its labelled transition relations; the model with the move inside is the system read on states paired with labels. That a correspondence of such models respecting both coordinates is a pair of renamings is the elementary fact that a bijection of a product preserving both projection kernels is a product of bijections. A trace as the composite along its word is the relational semantics of words (the transition monoid); a line from going on is dependent choice (Onward's calibration). Graded in WRP's DESIGN.md.",
+    "zh": "过程为带标之迁移系统，其诸着之关系即其带标之迁移关系；着在其内之模型即于状态与标之偶上读之系统。此类模型之对应保其二坐标即一对重名，乃积之双射保二投影之核即为双射之积之初等事实。迹为沿其字之复合，即字之关系语义（迁移幺半群）；自延得线即依赖选择（Onward 之校准）。分级见 WRP 之 DESIGN.md。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ProcessRepresentation.lean",
+  "aliases": [
+    "The processes' representation theorem",
+    "过程之表示定理",
+    "the model with the move inside",
+    "着在其内之模型",
+    "Becoming.renaming_of_withMove",
+    "Becoming.forall_steps_iff",
+    "Becoming.trace_iff_li",
+    "Becoming.yan_line_iff_dependentChoice"
+  ],
+  "dependencies": [
+    {
+      "id": "master-laws-on-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«历» and its laws, «迭», «像», «闭», «定后», «定前» and «同行».",
+        "zh": "«历» 及其律，«迭»、«像»、«闭»、«定后»、«定前» 与 «同行»。"
+      }
+    },
+    {
+      "id": "the-world-represented-both-ways",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«一一对应», «对应之像» with its pointwise and back readings, the carrying of «静», «而» and inclusion, «续之对应», and «尽之拉回»'s pattern.",
+        "zh": "«一一对应»、«对应之像» 及其逐点与回读，«静»、«而» 与含之携，«续之对应»，及 «尽之拉回» 之式。"
+      }
+    },
+    {
+      "id": "rules-that-change-themselves-in-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "moveRel, a move of a process read as a relation.",
+        "zh": "moveRel：过程之一着读为一关系。"
+      }
+    },
+    {
+      "id": "process-and-frame-as-readings",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "withMove, withMove_open and unlabelled.",
+        "zh": "withMove、withMove_open 与 unlabelled。"
+      }
+    },
+    {
+      "id": "becoming-spine-instances",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "edgeProcess and Frame.",
+        "zh": "edgeProcess 与 Frame。"
+      }
+    },
+    {
+      "id": "candidate-theorems-of-the-corpus",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«能», the correlative.",
+        "zh": "«能»，相关者。"
+      }
+    },
+    {
+      "id": "tests-fix-likeness-where-determined",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "AlikeTo, likeness to a depth.",
+        "zh": "AlikeTo：至某深之相似。"
+      }
+    },
+    {
+      "id": "experiment-needs-return",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "FactorsThrough, a step factoring through a map.",
+        "zh": "FactorsThrough：步经映射而分解。"
+      }
+    },
+    {
+      "id": "wen-in-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Law.step, a determined law's step read as 缘.",
+        "zh": "Law.step：定律之步读为缘。"
+      }
+    },
+    {
+      "id": "recurrence-without-premise",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Law.process, a determined law as a process.",
+        "zh": "Law.process：定律为过程。"
+      }
+    },
+    {
+      "id": "where-a-run-goes-on",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Onward.KeepsMoving, KeepsMoving.run, DependentChoice and runs_iff_dependentChoice.",
+        "zh": "Onward.KeepsMoving、KeepsMoving.run、DependentChoice 与 runs_iff_dependentChoice。"
+      }
+    },
+    {
+      "id": "levels-of-closure",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Steps, one step of a process whatever its move.",
+        "zh": "Steps：过程之一步，无论其着。"
+      }
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Steps.next, the steps' 缘.",
+        "zh": "Steps.next：诸步之缘。"
+      }
+    },
+    {
+      "id": "generation-and-degeneration-at-two-grains",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«延», going on along some branch.",
+        "zh": "«延»：沿某支而延。"
+      }
+    },
+    {
+      "id": "histories-fix-law-up-to-dead-ends",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "trace_nil_iff and trace_cons_iff, a trace's two cases.",
+        "zh": "trace_nil_iff 与 trace_cons_iff：迹之二例。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "the-world-represented-both-ways",
+      "detail": {
+        "en": "The World's representation and this one are two models of the grammar read both ways: the World fails on its amounts, processes on nothing their steps carry, and both read their terms through GrammarTransport.",
+        "zh": "世界之表示与此为文法两向读之二模型：世界于其数量不成，过程于其步所载者无所不成；二者皆经 GrammarTransport 读其诸项。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ProcessRepresentation.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flip.P₃",
+        "Becoming.Flip.P₄",
+        "Becoming.Flip.P₄_apart",
+        "Becoming.Flip.e",
+        "Becoming.Flip.flipMove",
+        "Becoming.Flip.flipMove_twice",
+        "Becoming.Flip.models_correspond",
+        "Becoming.Flip.not_renamed",
+        "Becoming.Flip.steps_carried",
+        "Becoming.Forgotten.byFalse",
+        "Becoming.Forgotten.byTrue",
+        "Becoming.Forgotten.moves_forgotten",
+        "Becoming.NoConfigurations.P",
+        "Becoming.NoConfigurations.P'",
+        "Becoming.NoConfigurations.e",
+        "Becoming.NoConfigurations.models_correspond",
+        "Becoming.NoConfigurations.not_renamed",
+        "Becoming.NoMoves.P",
+        "Becoming.NoMoves.P'",
+        "Becoming.NoMoves.e",
+        "Becoming.NoMoves.models_correspond",
+        "Becoming.NoMoves.not_renamed",
+        "Becoming.Twist.P₁",
+        "Becoming.Twist.P₂",
+        "Becoming.Twist.P₂_loops_by_one_move",
+        "Becoming.Twist.P₂_not_both",
+        "Becoming.Twist.e",
+        "Becoming.Twist.flipConfiguration",
+        "Becoming.Twist.flipConfiguration_twice",
+        "Becoming.Twist.models_correspond",
+        "Becoming.Twist.not_renamed",
+        "Becoming.Twist.steps_carried",
+        "Becoming.class_is_claims",
+        "Becoming.configurationRenaming",
+        "Becoming.enabled_iff_neng",
+        "Becoming.factorsThrough_iff_image",
+        "Becoming.feasible_iff_li",
+        "Becoming.forall_moveRel_iff",
+        "Becoming.forall_steps_iff",
+        "Becoming.mk_moveRel",
+        "Becoming.moveRel_mk",
+        "Becoming.moveRenaming",
+        "Becoming.reading_next_move_not_withMove",
+        "Becoming.renaming_determined",
+        "Becoming.renaming_goAlike",
+        "Becoming.renaming_invariant",
+        "Becoming.renaming_iterate",
+        "Becoming.renaming_lossless",
+        "Becoming.renaming_moveRel",
+        "Becoming.renaming_of_withMove",
+        "Becoming.renaming_reach",
+        "Becoming.renaming_returns",
+        "Becoming.renaming_steps",
+        "Becoming.renaming_trace",
+        "Becoming.renaming_yan",
+        "Becoming.run_iff_image",
+        "Becoming.run_image",
+        "Becoming.run_yan",
+        "Becoming.step_iff_withMove",
+        "Becoming.steps_edgeProcess",
+        "Becoming.steps_iff_moveRel",
+        "Becoming.steps_lawProcess",
+        "Becoming.steps_one_move",
+        "Becoming.steps_unlabelled",
+        "Becoming.trace_iff_li",
+        "Becoming.withMove_image_iff",
+        "Becoming.withMove_of_renaming",
+        "Becoming.yan_iff_keepsMoving",
+        "Becoming.yan_line_iff_dependentChoice",
+        "Becoming.yan_line_of_list"
+      ],
+      "sha256": "606456a4fa05befc155cd9a98803591a628e44b9325210e3ea0a7d397078ecbb"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTransport.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.GrammarTransport.map_replicate",
+        "Becoming.«一一对应».prod",
+        "Becoming.«保之像»",
+        "Becoming.«历之像»",
+        "Becoming.«历之对应»",
+        "Becoming.«同行之对应»",
+        "Becoming.«定前之对应»",
+        "Becoming.«定后之对应»",
+        "Becoming.«延之对应»",
+        "Becoming.«延之拉回»",
+        "Becoming.«迭之像»",
+        "Becoming.«迭之对应»",
+        "Becoming.«迭内之对应»",
+        "Becoming.«闭之对应»"
+      ],
+      "sha256": "d5d12bd4915c3e02ff313001845b5879779d8236c9217f2129093db1dbb6f0b2"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+      "role": "proof",
+      "sha256": "7cb999f6f9f20bfbb4cc0878e613403a87ccc174a1920720bfe9d4cb23294295"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
+      "role": "proof",
+      "sha256": "b24f3482898c95886d483c1eeb868ccb7412459eafa24d0dce70646a3884d79f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
+      "role": "proof",
+      "sha256": "8909769afb0351d4d635b7c05380b5b9fe9a65d2bc1030c881690b8004898e35"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCourse.lean",
+      "role": "proof",
+      "sha256": "851873b3d76fd1a9f89d41b962ab9f66b080baad1bbfba706b09d16546083457"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
+      "role": "proof",
+      "sha256": "1fb25d2f7ce4d6e3471a11619413e02e4963f9965966132f20207273d8e02636"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+      "role": "proof",
+      "sha256": "597036b7017d77d548b949ca29aeb036379904c8b7d8fd7be8329e4df400c940"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
+      "role": "proof",
+      "sha256": "a6fef844c6464152369b1c1117c602f1e6d0ec6c7645fda7d6f60c8930c52def"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Onward.lean",
+      "role": "proof",
+      "sha256": "025c021e950e028796acffa360c17499db3388147224805b88d11e0e2a4d0b21"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EdgeClosure.lean",
+      "role": "proof",
+      "sha256": "bc67b6ed7e70a6c3cec89ed790d20fb6d29a1a305ef16c3f5a845fadffb65f3b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
+      "role": "proof",
+      "sha256": "ba694373b40b71a95dad4e8b2b3200841047ccd228f731edd5315b8642c4fcf8"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
+      "role": "proof",
+      "sha256": "c2ce8ed970473ced65a6addb9ef5ff6a0a994f33507d2d24316a7f79888858e1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Experiment.lean",
+      "role": "proof",
+      "sha256": "7634077005d8a36d9d0a9c0f85fc408aa7a13a97aa6db60b43a5c4c722086045"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+      "role": "proof",
+      "sha256": "536e2a32c187c540f3f86a69742722375bc384831fb2d3f763be1e5f15fb29d0"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
+      "role": "proof",
+      "sha256": "8cbe05184cce5042da4800c11bd3cf4a7158369d9ca81c2ba21235115fa9468a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T142634.455566Z/verification.json",
+      "role": "receipt",
+      "sha256": "0cddecdb0aa23825d3112bd51aa78355a77196434e914adbfee29fdd2befeaa9"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "3dbcbd0c9de36c866a72186b7c107ae8c6d5bd8c892194fadd3f9280eeccf08f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/process-representation/DESIGN.md",
+      "role": "integration",
+      "sha256": "5f07f303e25076b03ddac517142db4ea151a2e447955e84464283c728e4c7ab2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/process-representation/REVIEW-WRP.md",
+      "role": "integration",
+      "sha256": "25413be3f0b777133a83924fb3e77c4912f12c478ec48c18135ca5bc724f9650"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/process-representation/REVIEW-WRP2.md",
+      "role": "integration",
+      "sha256": "d649f194a2e5d3619efae8f198148439900d9c258bb4722153c40bed187bf67c"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/process-representation/measure.json",
+      "role": "integration",
+      "sha256": "5f9009529abffda1a836f541297c9ecb5acacc3147afbe3cdef81acc4889d8da"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/process-representation/signatures.json",
+      "role": "integration",
+      "sha256": "327e69aa0b7a9ebe6643df897498bcf0e6b9aab421dc60ca3802610c0cedc435"
+    },
+    {
+      "path": "theories/becoming/chapters/01-ROOT.md",
+      "role": "statement",
+      "sha256": "1658f64102f186e8e1c1c2790592da8c0a19c8a903e7923d17affee554f82587"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ProcessRepresentation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T142634.455566Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ProcessRepresentation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTransport.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T142634.455566Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarTransport",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "29 October 2026: added (WRP2), processes represented in the grammar both ways: a process exactly its relations, one per move, a law's truth carried to all relations indexed by moves; the converse, with the model with the move inside faithful up to correspondence carrying both classes and neither alone, a renaming keeping the bridged notions; the forward bridges and the calibration read on the grammar; after the design's review and re-read, a review of the Lean; study section 447.",
+      "zh": "2026年10月29日：新增（WRP2），过程于文法中两向得表示：过程恰为其诸关系，每一着一关系，律之真携至一切以着为指标之关系；逆向，着在其内之模型携二类则于对应下忠实，单一类不足，重名保诸已桥之概念；前向之桥与于文法上读之校准；经设计之审及其复读、Lean 之审；研究第 447 节。"
+    }
+  ]
+}

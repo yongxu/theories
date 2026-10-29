@@ -35,6 +35,7 @@ their consumers' stay arithmetic, since each needs only the count.
 | `«线不并»` | merging nothing at the first `N` places of a line |
 | `«入»` | drawn in: a closed region `x` lies outside holds something `x` reaches |
 | `«迭»` | `n` steps: the `n`-fold composition of a relation |
+| `«历»` | passing through a word's relations in turn: on the empty word no step, then each letter's relation; `«迭»` is its case for one relation repeated |
 | `«迭内»`, `«静或缘»` | within `n` steps: some number of steps not more than `n`; staying, or a step of a relation |
 | `«承»` | what every condition held: the occurrences whose every condition under a relation lies in a region |
 | `«屡»`, `«或屡»` | steps of a relation recur along a line; recur as far as can be refuted, from a place on |
@@ -96,8 +97,20 @@ their consumers' stay arithmetic, since each needs only the count.
   steps of the converse (`«迭之逆»`). Where whatever is reached in fewer than `n` steps has a
   successor as far as can be refuted, `n` steps exist as far as can be refuted (`«或有后则或迭»`); an
   unending line has steps of every length (`«不穷则迭»`), `n` steps leading to the occurrence itself
-  or to what it reaches (`«迭则同一或及»`). Three of the models' step-indexed laws are proved from the
-  laws of steps counted: `Withholding`'s closed forms from the laws of taking on, a course carrying
+  or to what it reaches (`«迭则同一或及»`). Passing through a word's relations in turn (`«历»`) holds
+  a word of relations where `«迭»` repeats one: `«迭»` is its case for one relation repeated (`«迭即历»`).
+  Passing through two words is passing through the first and then the second (`«历之接»`), the last
+  letter last (`«历之末步»`), and the reversed word by the converse relations is the word backward
+  (`«历之逆»`); where no letter's relation merges, it merges nothing (`«历之定前»`), and where each
+  goes alike under `E`, it keeps `E`-alike occurrences alike (`«同行之历»`). Six laws of `«迭»` are
+  these laws' cases for one relation (`«迭之接»`, `«迭之分»`, `«迭之末步»`, `«迭之逆»`, `«迭之定前»`
+  and `«同行之迭»`). The others keep their proofs, each for its reason: `«迭则及»`, `«及即迭»`,
+  `«迭则同一或及»` and `«迭之定于»` read one relation's closure, and `«或有后则或迭»` and `«不穷则迭»`
+  its successors along one line; `«迭之周»` repeats a loop; `«迭内即静或缘之迭»` relates steps of
+  different lengths and `«承之迭»` a course of regions round by round, which no law of `«历»` states;
+  and `«迭内之接»`, `«存承之迭»`, `«迭之定»` and `«同行于迭»` follow from laws above with no induction
+  of their own. Three of the models' step-indexed laws are proved
+  from the laws of steps counted: `Withholding`'s closed forms from the laws of taking on, a course carrying
   its bounds (`WithinMoves.after_course`) from `«迭内之接»`, and an unending line reaching every later
   step (`Web.reaches_onward`) from `«不穷则迭»`.
 * **Finite runs: rest.** A line is at rest where its steps of `F` (a least fall, say) stop
@@ -239,9 +252,12 @@ end Closure
 
 /-! ## Lists (helpers, stated without `simp` so that no axiom enters)
 
-Lemmas on numbers and lists, not statements of the grammar: pigeonhole (`revisits_within`) and the
-list surgery that pairings need. `le_dest`, `ListTests.length_append`, `ListTests.append_assoc` and
-`Naturals.add_congr` are the prelude's (`Becoming.Prelude`), used here, not restated. -/
+Lemmas on numbers and lists, not statements of the grammar: pigeonhole (`revisits_within`), the
+list surgery that pairings need, and the words that `«迭»` reads as cases of `«历»` (copies joined,
+`replicate_add_append`; a word read backward, `reverse_cons_append`, proved here by induction because
+the core's `List.reverse_cons` reports `propext`). `le_dest`, `ListTests.length_append`,
+`ListTests.append_assoc` and `Naturals.add_congr` are the prelude's (`Becoming.Prelude`), used here,
+not restated. -/
 
 namespace GrammarLaws
 
@@ -364,6 +380,33 @@ theorem split_append : ∀ (d₁ : List α) {d₂ e₁ e₂ : List α} {z : α},
 def prepend (x : α) (h : Nat → α) : Nat → α
   | 0 => x
   | i + 1 => h i
+
+/-- `b + a` copies are `a` copies and then `b`. -/
+theorem replicate_add_append (c : α) : ∀ (a b : Nat),
+    List.replicate (b + a) c = List.replicate a c ++ List.replicate b c
+  | 0, _ => rfl
+  | a + 1, b => congrArg (c :: ·) (replicate_add_append c a b)
+
+/-- `n + 1` copies are `n` copies and then one. -/
+theorem replicate_succ_append (c : α) : ∀ n, List.replicate (n + 1) c = List.replicate n c ++ [c]
+  | 0 => rfl
+  | n + 1 => congrArg (c :: ·) (replicate_succ_append c n)
+
+/-- Reading a list backward onto a joined list joins the second part after. -/
+theorem reverseAux_append : ∀ (as r s : List α),
+    List.reverseAux as (r ++ s) = List.reverseAux as r ++ s
+  | [], _, _ => rfl
+  | b :: as, r, s => reverseAux_append as (b :: r) s
+
+/-- `a :: as` read backward is `as` read backward and then `a`. -/
+theorem reverse_cons_append (a : α) (as : List α) : (a :: as).reverse = as.reverse ++ [a] :=
+  reverseAux_append as [] [a]
+
+/-- Copies read backward are the same copies. -/
+theorem reverse_replicate (c : α) : ∀ n, (List.replicate n c).reverse = List.replicate n c
+  | 0 => rfl
+  | n + 1 => (reverse_cons_append c (List.replicate n c)).trans
+      ((congrArg (· ++ [c]) (reverse_replicate c n)).trans (replicate_succ_append c n).symm)
 
 end GrammarLaws
 
@@ -655,10 +698,62 @@ theorem «定前之逐点» {R : «际» α} : «定前» R ↔ ∀ x y z, R x z
 theorem «定前即逆之定后» {R : «际» α} : «定前» R ↔ «定后» («逆» R) :=
   ⟨fun h y z ⟨x, r, r'⟩ => h y z ⟨x, r, r'⟩, fun h x y ⟨z, r, r'⟩ => h x y ⟨z, r, r'⟩⟩
 
+/-- **Passing through a word's relations in turn (历); `«迭»` is its case for one relation repeated**
+(`«迭即历»`).
+On the empty word it is no step (`«静»`); on `a :: as` it is the relation of `a` and then passing
+through `as` (`«而»`). -/
+def «历» {A : Type v} (F : A → «际» α) : List A → «际» α
+  | [] => «静»
+  | a :: as => «而» (F a) («历» F as)
+
+/-- **Passing through two words is passing through the first and then the second (历之接).** -/
+theorem «历之接» {A : Type v} (F : A → «际» α) : ∀ (as bs : List A) {x z : α},
+    «历» F (as ++ bs) x z ↔ «而» («历» F as) («历» F bs) x z
+  | [], bs, x, z => ⟨fun h => ⟨x, rfl, h⟩,
+      fun ⟨_, e, h⟩ => Eq.subst (motive := fun w => «历» F bs w z) e.symm h⟩
+  | _ :: as, bs, _, _ => ⟨fun ⟨m, r, rest⟩ => match («历之接» F as bs).mp rest with
+      | ⟨y, first, second⟩ => ⟨y, ⟨m, r, first⟩, second⟩,
+    fun ⟨y, ⟨m, r, first⟩, second⟩ => ⟨m, r, («历之接» F as bs).mpr ⟨y, first, second⟩⟩⟩
+
+/-- **The last letter is passed through last (历之末步).** -/
+theorem «历之末步» {A : Type v} (F : A → «际» α) (as : List A) (a : A) {x z : α} :
+    «历» F (as ++ [a]) x z ↔ ∃ y, «历» F as x y ∧ F a y z :=
+  («历之接» F as [a]).trans
+    ⟨fun ⟨y, first, ⟨_, r, e⟩⟩ => ⟨y, first, Eq.subst (motive := fun v => F a y v) e r⟩,
+     fun ⟨y, first, r⟩ => ⟨y, first, ⟨z, r, rfl⟩⟩⟩
+
+/-- **Passing through the reversed word by the converse relations is passing through the word
+backward (历之逆).** -/
+theorem «历之逆» {A : Type v} (F : A → «际» α) : ∀ (as : List A) {x y : α},
+    «历» (fun a => «逆» (F a)) as.reverse x y ↔ «历» F as y x
+  | [], _, _ => ⟨Eq.symm, Eq.symm⟩
+  | a :: as, x, y =>
+    (Iff.of_eq (congrArg (fun l => «历» (fun a => «逆» (F a)) l x y)
+        (GrammarLaws.reverse_cons_append a as))).trans
+      ((«历之末步» _ as.reverse a).trans
+        ⟨fun ⟨m, first, r⟩ => ⟨m, r, («历之逆» F as).mp first⟩,
+         fun ⟨m, r, rest⟩ => ⟨m, («历之逆» F as).mpr rest, r⟩⟩)
+
+/-- **Where no letter's relation merges, passing through the word merges nothing (历之定前).** -/
+theorem «历之定前» {A : Type v} {F : A → «际» α} (merges : ∀ a, «定前» (F a)) :
+    ∀ (as : List A) {x y z : α}, «历» F as x z → «历» F as y z → x = y
+  | [], _, _, _, e₁, e₂ => e₁.trans e₂.symm
+  | a :: as, x, y, _, ⟨w, r, first⟩, ⟨w', r', second⟩ => by
+    have e : w = w' := «历之定前» merges as first second
+    subst e
+    exact merges a x y ⟨w, r, r'⟩
+
 /-- `n` steps (迭): the `n`-fold composition of `R`, the first step first. -/
 def «迭» (R : «际» α) : Nat → «际» α
   | 0 => «静»
   | n + 1 => «而» R («迭» R n)
+
+/-- **`n` steps are passing through a word of `n` letters, each read as `R` (迭即历)**: `«迭»` is
+`«历»`'s case for one relation repeated. -/
+theorem «迭即历» (R : «际» α) : ∀ n, «谓» («历» (fun (_ : Unit) => R) (List.replicate n ())) («迭» R n)
+  | 0 => fun _ _ => Iff.rfl
+  | n + 1 => fun _ _ => ⟨fun ⟨w, r, rest⟩ => ⟨w, r, («迭即历» R n _ _).mp rest⟩,
+      fun ⟨w, r, rest⟩ => ⟨w, r, («迭即历» R n _ _).mpr rest⟩⟩
 
 /-- `n + 1` steps reach. -/
 theorem «迭则及» {R : «际» α} : ∀ (n : Nat) {x y : α}, «迭» R (n + 1) x y → «及» R x y
@@ -674,10 +769,15 @@ theorem «及即迭» {R : «际» α} {x y : α} : «及» R x y ↔ ∃ n, «�
       | ⟨n, rest⟩ => ⟨n + 1, _, r, rest⟩,
    fun ⟨n, steps⟩ => «迭则及» n steps⟩
 
-/-- Steps compose: `a` steps, then `b` steps, are `b + a` steps. -/
+/-- Steps compose: `a` steps, then `b` steps, are `b + a` steps, the case of `«历之接»` for one
+relation. -/
 theorem «迭之接» {R : «际» α} : ∀ (a b : Nat) {x y z : α}, «迭» R a x y → «迭» R b y z → «迭» R (b + a) x z
-  | 0, _, _, _, _, e, rest => by cases e; exact rest
-  | a + 1, b, _, _, _, ⟨_, r, first⟩, rest => ⟨_, r, «迭之接» a b first rest⟩
+  | a, b, x, y, z, first, second =>
+    («迭即历» R (b + a) x z).mp
+      (Eq.subst (motive := fun l => «历» (fun (_ : Unit) => R) l x z)
+        (GrammarLaws.replicate_add_append () a b).symm
+        ((«历之接» (fun (_ : Unit) => R) (List.replicate a ()) (List.replicate b ())).mpr
+          ⟨y, («迭即历» R a x y).mpr first, («迭即历» R b y z).mpr second⟩))
 
 /-- A loop of `p` steps is a loop of every multiple of `p` steps. -/
 theorem «迭之周» {R : «际» α} {p : Nat} {x : α} (loop : «迭» R p x x) : ∀ k, «迭» R (p * k) x x
@@ -685,13 +785,15 @@ theorem «迭之周» {R : «际» α} {p : Nat} {x : α} (loop : «迭» R p x 
   | k + 1 => «迭之接» p (p * k) loop («迭之周» loop k)
 
 /-- `n + 1` steps are `n` steps and then the last (迭之末步): `«迭»` takes the first step first, and
-this reads its last step last, as `«相续之末步»` reads the last step of a line. -/
+this reads its last step last, as `«相续之末步»` reads the last step of a line; the case of
+`«历之末步»` for one relation. -/
 theorem «迭之末步» {R : «际» α} : ∀ (n : Nat) {x z : α}, «迭» R (n + 1) x z ↔ ∃ y, «迭» R n x y ∧ R y z
-  | 0, x, z => ⟨fun ⟨_, r, e⟩ => ⟨x, rfl, Eq.subst (motive := R x) e r⟩,
-      fun ⟨_, e, r⟩ => ⟨z, Eq.subst (motive := fun v => R v z) e.symm r, rfl⟩⟩
-  | n + 1, _, _ => ⟨fun ⟨w, r, rest⟩ => match («迭之末步» n).mp rest with
-      | ⟨y, steps, last⟩ => ⟨y, ⟨w, r, steps⟩, last⟩,
-    fun ⟨y, ⟨w, r, steps⟩, last⟩ => ⟨w, r, («迭之末步» n).mpr ⟨y, steps, last⟩⟩⟩
+  | n, x, z => («迭即历» R (n + 1) x z).symm.trans
+      ((Iff.of_eq (congrArg (fun l => «历» (fun (_ : Unit) => R) l x z)
+          (GrammarLaws.replicate_succ_append () n))).trans
+        ((«历之末步» (fun (_ : Unit) => R) (List.replicate n ()) ()).trans
+          ⟨fun ⟨y, steps, r⟩ => ⟨y, («迭即历» R n x y).mp steps, r⟩,
+           fun ⟨y, steps, r⟩ => ⟨y, («迭即历» R n x y).mpr steps, r⟩⟩))
 
 /-- Within `n` steps (迭内): some number of steps not more than `n`. -/
 def «迭内» (R : «际» α) (n : Nat) : «际» α := fun x y => ∃ k, k ≤ n ∧ «迭» R k x y
@@ -755,19 +857,22 @@ theorem «存承之迭» {R : «际» α} {S : Nat → α → Prop}
      fun all b steps => all b ((«迭内即静或缘之迭» n).mpr steps)⟩
 
 /-- **Steps split as they compose (迭之分).** `b + a` steps are `a` steps and then `b`: the converse of
-`«迭之接»`, read in its order, with no arithmetic. -/
+`«迭之接»`, read in its order; the case of `«历之接»` for one relation. -/
 theorem «迭之分» {R : «际» α} : ∀ (a : Nat) {b : Nat} {x z : α},
     «迭» R (b + a) x z → ∃ y, «迭» R a x y ∧ «迭» R b y z
-  | 0, _, x, _, steps => ⟨x, rfl, steps⟩
-  | a + 1, _, _, _, ⟨w, r, rest⟩ => match «迭之分» a rest with
-    | ⟨y, first, second⟩ => ⟨y, ⟨w, r, first⟩, second⟩
+  | a, b, x, z, steps =>
+    match («历之接» (fun (_ : Unit) => R) (List.replicate a ()) (List.replicate b ())).mp
+        (Eq.subst (motive := fun l => «历» (fun (_ : Unit) => R) l x z)
+          (GrammarLaws.replicate_add_append () a b) ((«迭即历» R (b + a) x z).mpr steps)) with
+    | ⟨y, first, second⟩ => ⟨y, («迭即历» R a x y).mp first, («迭即历» R b y z).mp second⟩
 
-/-- **Steps read backward are steps of the converse (迭之逆).** -/
+/-- **Steps read backward are steps of the converse (迭之逆)**, the case of `«历之逆»` for one
+relation, whose word of copies read backward is itself. -/
 theorem «迭之逆» {R : «际» α} : ∀ (n : Nat) {x y : α}, «迭» («逆» R) n x y ↔ «迭» R n y x
-  | 0, _, _ => ⟨Eq.symm, Eq.symm⟩
-  | n + 1, _, _ => ⟨fun ⟨w, r, rest⟩ => («迭之末步» n).mpr ⟨w, («迭之逆» n).mp rest, r⟩,
-      fun steps => match («迭之末步» n).mp steps with
-        | ⟨w, first, r⟩ => ⟨w, r, («迭之逆» n).mpr first⟩⟩
+  | n, x, y => («迭即历» («逆» R) n x y).symm.trans
+      ((Iff.of_eq (congrArg (fun l => «历» (fun (_ : Unit) => «逆» R) l x y)
+          (GrammarLaws.reverse_replicate () n))).symm.trans
+        ((«历之逆» (fun (_ : Unit) => R) (List.replicate n ())).trans («迭即历» R n y x)))
 
 /-- **Where there is a successor as far as can be refuted, there are steps as far as can be refuted
 (或有后则或迭).** If whatever `x` reaches in fewer than `n` steps has a successor, as far as can be
@@ -824,14 +929,13 @@ theorem «迭之定» {R : «际» α} (fixed : «定后» R) : ∀ (n : Nat) {x
     «迭» R n x y → «迭» R n x z → y = z
   | n, x, _, _, first, second => «迭之定于» n («定后则定后于» fixed x) first second
 
-/-- **Merging nothing, `n` steps to one occurrence come from one occurrence.** -/
+/-- **Merging nothing, `n` steps to one occurrence come from one occurrence**, the case of
+`«历之定前»` for one relation. -/
 theorem «迭之定前» {R : «际» α} (merges : «定前» R) : ∀ (n : Nat) {x y z : α},
     «迭» R n x z → «迭» R n y z → x = y
-  | 0, _, _, _, e₁, e₂ => e₁.trans e₂.symm
-  | n + 1, x, y, _, ⟨w, r, first⟩, ⟨w', r', second⟩ => by
-    have e : w = w' := «迭之定前» merges n first second
-    subst e
-    exact merges x y ⟨w, r, r'⟩
+  | n, x, y, z, first, second =>
+    «历之定前» (F := fun (_ : Unit) => R) (fun _ => merges) (List.replicate n ())
+      ((«迭即历» R n x z).mpr first) ((«迭即历» R n y z).mpr second)
 
 /-- Drawn in (入): some region closed under `R` that `x` lies outside holds something `x` reaches. -/
 def «入» (R : «际» α) (x : α) : Prop := ∃ P : α → Prop, «闭» R P ∧ ¬ P x ∧ ∃ y, «及» R x y ∧ P y
@@ -1237,13 +1341,21 @@ theorem «类同行遍后则含于核» {R E : «际» α} (hE : «类» E) (ali
     «则» E («核» R E) :=
   («类有常当且仅当含于核» R hE).mp («同行遍后则有常» alike total)
 
+/-- **Where every letter's relation goes alike under `E`, passing through the word keeps `E`-alike
+occurrences alike (同行之历).** -/
+theorem «同行之历» {A : Type v} {F : A → «际» α} {E : «际» α} (alike : ∀ a, «同行» (F a) E) :
+    ∀ (as : List A) {x x' y y' : α}, E x x' → «历» F as x y → «历» F as x' y' → E y y'
+  | [], _, _, _, _, e, e₁, e₂ => by cases e₁; cases e₂; exact e
+  | a :: as, x, x', _, _, e, ⟨w, r, first⟩, ⟨w', r', second⟩ =>
+    «同行之历» alike as («同行之逐点».mp (alike a) x x' e w w' r r') first second
+
 /-- **Going alike keeps lines of every length alike**: `E`-alike occurrences go, by `n` steps, to
-`E`-alike occurrences. -/
+`E`-alike occurrences; the case of `«同行之历»` for one relation. -/
 theorem «同行之迭» {R E : «际» α} (alike : «同行» R E) :
     ∀ (n : Nat) {x x' y y' : α}, E x x' → «迭» R n x y → «迭» R n x' y' → E y y'
-  | 0, _, _, _, _, e, e₁, e₂ => by cases e₁; cases e₂; exact e
-  | n + 1, x, x', _, _, e, ⟨w, r, first⟩, ⟨w', r', second⟩ =>
-    «同行之迭» alike n («同行之逐点».mp alike x x' e w w' r r') first second
+  | n, x, x', y, y', e, first, second =>
+    «同行之历» (F := fun (_ : Unit) => R) (fun _ => alike) (List.replicate n ()) e
+      ((«迭即历» R n x y).mpr first) ((«迭即历» R n x' y').mpr second)
 
 /-- So `E` goes alike under every number of steps. -/
 theorem «同行于迭» {R E : «际» α} (alike : «同行» R E) (n : Nat) : «同行» («迭» R n) E :=

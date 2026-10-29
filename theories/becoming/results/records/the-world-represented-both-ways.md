@@ -60,7 +60,7 @@
 - That a world leaves its activity undecided: none can be shown to (not_not_decided); what holds is that every world deciding it is exactly excluded middle, activity being Prop-valued, a modelling choice.
 - A forward theorem: no statement says every World notion is a grammar term, and that keeping to correspondences gives a term is not stated, the embedding having no syntax of terms.
 - Re-identification beyond the ten relations and the class of activity: that the names' step is carried only by renamings the same at every step, and the faithful but not full reading, are not in Lean.
-- Processes; a representation through the order of joined exchanges; whether the descent laws follow from F3; interpretation with Lean; the grammar's terms not listed in GrammarTransport.
+- A representation through the order of joined exchanges; whether the descent laws follow from F3; interpretation with Lean; the grammar's terms not listed in GrammarTransport. Processes are represented in processes-represented-both-ways.
 - **Counterexample:** Two worlds of one relatum, never active, standing at 1 and at 2 throughout with nothing exchanged, agree on every field the model reads (World.standingAt_alike): the model does not determine standings. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean)
 - **Counterexample:** The idle world, one relatum never active and standing at the number of steps, gives itself one unit a step and balances; giving itself two it does not, with the same web and signs of exchange (World.balance_needs_conservation). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean)
 - **Counterexample:** On the predicates of Nat as relata, conservation across a step is identity in no world (World.not_conserves_identity). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean)
@@ -78,7 +78,7 @@ Canonical source: [WorldRepresentation.lean](../../../../experiments/integrated-
 <a id="next--下一步"></a>
 ## Next
 
-A representation theorem for processes; the amount part's joint image; a representation through the order of joined exchanges; the laws that read only activity at the occurrence model (OU3f); review by a person.
+The amount part's joint image; a representation through the order of joined exchanges; the laws that read only activity at the occurrence model (OU3f); review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -101,6 +101,9 @@ That definable properties are kept by isomorphisms of structures is standard mod
 - **formal-reuse**: [space-and-its-parts](space-and-its-parts.md). World.idle and World.idle_world, the idle world, and Flow.still.
 - **formal-reuse**: [worlds-are-runs](worlds-are-runs.md). World.of, the world with given relata, flow and web.
 - related, not a proved adapter: [reorderings-as-courses-of-growth](reorderings-as-courses-of-growth.md). The interleavings are one aspect of the World's representation: the occurrence model reads the shared index, which a world's reorderings change while keeping the order of joined exchanges.
+- related, not a proved adapter: [processes-represented-both-ways](processes-represented-both-ways.md). Processes are represented in the grammar both ways by their moves' relations, faithful up to correspondence with the move inside and both classes; the World's representation reads its terms through the same GrammarTransport.
+
+**Used by:** [processes-represented-both-ways](processes-represented-both-ways.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -127,6 +130,7 @@ That definable properties are kept by isomorphisms of structures is standard mod
 | integration | [REVIEW-WRT.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/world-representation/REVIEW-WRT.md) | — |
 | integration | [REVIEW-WRT2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/world-representation/REVIEW-WRT2.md) | — |
 | statement | [01-ROOT.md](../../chapters/01-ROOT.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T142634.455566Z/verification.json) | — |
 
 Aliases: `The World's representation theorem`, `世界之表示定理`, `the occurrence model`, `出现模型`, `the grammar kept by correspondence`, `Becoming.World.reidentify_carries`, `Becoming.World.standingAt_alike`, `Becoming.World.balance_needs_conservation`, `Becoming.World.ofConservationForm_conserves`, `Becoming.World.falls_exhaust`
 
@@ -134,6 +138,7 @@ Aliases: `The World's representation theorem`, `世界之表示定理`, `the occ
 ### History
 
 - 29 October 2026: added (WRT2), the World represented in the grammar both ways, its amounts not: the occurrence model and its name-free part, carried by every re-identification; the grammar's listed terms kept by correspondence; recurrence at the model; the relational part ranging over everything, conservation exactly its form, what amounts induce decided; the failure on amounts with four witnesses; after the design's two reviews, a review of the Lean and its re-read; study section 440.
+- 29 October 2026 (WRP2, study section 447): its item and next step on processes brought to the landed theorem, processes-represented-both-ways, as a related record; no statement, law or declaration changed.
 
 </details>
 

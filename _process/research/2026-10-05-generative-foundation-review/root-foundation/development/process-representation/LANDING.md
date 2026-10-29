@@ -68,4 +68,30 @@ All commands run from the landing worktree's root (`.claude/worktrees/wrp2`, bra
 - GrammarLaws 136 theorems in 160 declarations, GrammarTransport 54 in 58, ProcessRepresentation 52 in 70, every axiom report empty, and no spine module with an axiom;
 - 16,713 theorems, 22,797 declarations audited, and 231 generated `injEq` lemmas on `propext`.
 
-(The landing run is written here at landing.)
+**The landing run.** 29 October 2026, in `.claude/worktrees/wrp2`, branch `wrp2` merged with main at the head clause `e519da671` (RF round 1 landed at `cbb396723`).
+- **The signature audit**, at RF's receipt `20261029T134236.345943Z` ([signatures.json](signatures.json)):
+  - 192 landed statements and 26 bodies unchanged;
+  - GrammarLaws 148 → 160 declarations, GrammarTransport 44 → 58, nothing removed;
+  - the six proofs of «迭» the only changed sources.
+- **The checker passed** in 1 minute 38 seconds, reusing the rehearsal's steps; the fresh compiles were RF's three leaves and the root. Core receipt `20261029T142634.455566Z`:
+  - 345 modules in the closure; the core compiles from the prelude alone;
+  - GrammarLaws 136 theorems in 160 declarations, GrammarTransport 54 in 58, ProcessRepresentation 52 in 70, every axiom report empty;
+  - 16,756 theorems, 22,861 declarations audited, and 233 generated `injEq` lemmas on `propext`.
+- **Connectivity.**
+  - No new apart root: the renaming theorems connect every GrammarTransport addition to the base.
+  - Three of WRT2's GrammarTransport roots, `«一之像»`, `«所闭之对应»` and `«静之像»`, now have consumers in the renaming theorems. Their register entries are retired (`kit/register_wrp2.py`).
+- **Texts and records.**
+  - The texts wrote study §447.
+  - processes-represented-both-ways was written with 84 declarations in 11 laws.
+  - master-laws-on-the-grammar gained its law, the ninth of nineteen, after the law of steps counted.
+  - the-world-represented-both-ways had its item and next step on processes brought to the new record.
+- **Re-pointing.**
+  - Five records citing GrammarLaws or GrammarTransport re-pointed to the new bytes, with the proof bindings of the two files rebound to the receipt in three of them.
+  - Eleven records whose cited sections the texts write, read first: eight cite 01 before its first heading, three the overview's §1 and §10.
+  - Logged in `_process/architecture/rebinds.jsonl`.
+- **The measures**, before at RF's receipt and after at WRP2's:
+  - measure_grammar unchanged: 45 of 127 central declarations reach the grammar, and the distinct split 44 / 31 / 7 / 36 has no gap;
+  - EC's measure unchanged: 39 rest on no master law;
+  - WRP's measure grows by WRP2's own 76 theorems, all reading no field: 3,209 on processes, 1,336 binding.
+  - The six files are `measure-*-before.json` and `measure-*-after.json`.
+- **MV** was regenerated on the receipt (`tools/research/master_laws.py`).

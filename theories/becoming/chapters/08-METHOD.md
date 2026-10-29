@@ -159,7 +159,7 @@ Within Lean's proof-irrelevant `Prop`, the identification loses no distinction b
 
 No module imports a higher layer. The instance and application ring (the Changes and place/transition nets; six leaf applications) meets the pure core's requirements and lies outside it by direction. The periphery (Mathlib leaves, older modules, Python experiments) may use any tool, with dependence running toward the pure core. There has been no bridge since 19 October 2026: the pure core states the content of the superseded periphery modules, whose bytes are kept, and the bridge files are in `lean/history/becoming/`.
 
-At core receipt [`20261029T134236.345943Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T134236.345943Z/verification.json) (Lean 4.29.1), the closure held 344 modules (3 foundation, 328 core, 13 in the instance and application ring) and 16,680 theorems; the 328 core modules held 15,846 of them; 22,765 declarations were audited; 233 generated `injEq` lemmas depend on `propext`; 75 superseded modules were kept out of the run. Periphery results keep their own receipts, with their axioms listed. New results extend the one spine, and an earlier module keeps its scope and connects by an instance or equivalence theorem ([package README](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md)).
+At core receipt [`20261029T142634.455566Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T142634.455566Z/verification.json) (Lean 4.29.1), the closure held 345 modules (3 foundation, 329 core, 13 in the instance and application ring) and 16,756 theorems; the 329 core modules held 15,922 of them; 22,861 declarations were audited; 233 generated `injEq` lemmas depend on `propext`; 75 superseded modules were kept out of the run. Periphery results keep their own receipts, with their axioms listed. New results extend the one spine, and an earlier module keeps its scope and connects by an instance or equivalence theorem ([package README](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md)).
 
 <a id="premise-card"></a>
 ## 4. Premise card
@@ -715,7 +715,7 @@ Every review so far is by AI ([§11](#reviews)) and checked existing results. No
 <a id="open"></a>
 ## Open
 
-- The lifting; representation theorems for processes and the other models (the World's is shown both ways for its relations, with its failure on amounts written down: [01 §8.6](01-ROOT.md#r-the-world-represented-both-ways)).
+- The lifting; representation theorems for the other models (processes' is shown both ways by their moves' relations: [01 §8.1](01-ROOT.md#r-processes-represented-both-ways); the World's both ways for its relations, with its failure on amounts written down: [01 §8.6](01-ROOT.md#r-the-world-represented-both-ways)).
 - Pairing and power in the corpus; mutual interpretation of a named fragment with Lean.
 - Settling and the tail beyond lists and numbered conditions; whether WLPO as a proposition gives the rule.
 - Absolute minimality, against a fixed comparison of expressive resources.
