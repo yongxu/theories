@@ -10,8 +10,10 @@ import Becoming.Thresholds
 `T` on, along a continuation, nothing admitted is lost and something keeps being opened). This
 module states what such a course needs (supply from beyond a finite family, and renewers
 multiplying under upkeep), the form support passing on gives *opened by the opened*, how the map
-reads keeping and carrying, and that under the World premises nothing keeps opening along passing
-of support. Each law is a property of one course or one flow. None compares two courses, so none
+reads keeping and carrying, that under the World premises nothing keeps opening along passing
+of support, what keeping opening needs along any reading (beginnings, renewals one grain up), and
+a reading on which 全生成 and keeping widening hold together. Each law is a property of one course
+or one flow. None compares two courses, so none
 is the second-order comparison the account leaves open. No ethical predicate, ranking or axiom
 occurs.
 
@@ -76,7 +78,47 @@ occurs.
   (`Flow.not_exceedsAcross_along_passings`), and nothing keeps opening or keeps widening there
   (`Flow.not_keepsOpening_along_passings`, `Flow.not_keepsWidening_along_passings`). On both
   readings used here, names and passing of support under the World premises, 全生成 and keeping
-  widening do not hold together.
+  widening do not hold together. These are derived from the law of beginnings below (board rule
+  9), their statements unchanged.
+* **Keeping opening needs beginnings, one grain up.** Along a continuation `R` containing carrying
+  on of the supported, a passing of support *begins* along `R` where nothing supported continues
+  into its end along `R` (`Flow.BeginsAlong`): it is not a step of `R` (`BeginsAlong.not_along`)
+  and is a carrying renewal along passing of support (`BeginsAlong.carries`). Under the World
+  premises, whatever is supported at `S + k` is, up to double negation, linked along `R` to
+  something supported at `S` or to the end of a beginning across a step between
+  (`Flow.descends_or_begun`). So where the levels exceed along `R` a beginning lies between
+  (`Flow.begun_of_exceedsAcross`), and keeping opening needs one after every step
+  (`Flow.begins_late_of_keepsOpening`); by name, a passing of support after every step
+  (`Flow.passes_late_of_keepsOpening_byName`). The law is one way: a beginning opens only where
+  nothing supported at the earlier step is linked to its end (the relay's dormant reading,
+  `KindRelay.Runs.not_keepsOpening_dormant`).
+* **The ends of an interval of readings.** Along "carry on while supported, or pass support"
+  (`Web.supportedPassing`) every passing is a step, so nothing begins: whatever is supported
+  descends along it (`Flow.descends_along_supportedPassing`), and along every continuation
+  containing it nothing is opened, keeps opening or keeps widening
+  (`Flow.not_exceedsAcross_along_supportedPassing`, `Flow.not_keepsOpening_along_supportedPassing`,
+  `Flow.not_keepsWidening_along_supportedPassing`). From an active occurrence it continues as "carry
+  on, or pass support" does (`Web.supportedPassing_cont_iff`). Along "carry on while supported"
+  (`Web.supportedItself`) a beginning is a passing (`Flow.beginsAlong_supportedItself_iff`) and
+  nothing is 全生成 (`Web.supportedItself_not_generation`, from
+  `Web.not_generation_of_within_itself`).
+* **Within a kind.** For a reflexive relation `Q` on formations, a kind, read "carry on while
+  supported, or pass within a kind" (`Web.withinKind`) and the kind class (`Web.kindClass`). From a
+  supported occurrence, continuing along it under activity is continuing along passing under the
+  kind class (`Web.withinKind_cont_iff`); at an active occurrence a carrier begins along it exactly
+  where it begins along passing (`Web.withinKind_begins_iff`); and from a supported giver a
+  beginning along it is exactly a carrying renewal along passing at (activity, kind)
+  (`Flow.BeginsAlong.carries_kind_iff`): the whole lineage goes on while a line of a kind begins.
+* **Under dissipation a finite world has neither.** Where finitely many conditions, listed, are all
+  there is and the flow dissipates on them from some step, under the World premises nothing keeps
+  opening or keeps widening along a continuation containing carrying on of the supported
+  (`Flow.not_keepsOpening_of_dissipative`, `Flow.not_keepsWidening_of_dissipative`), and, with
+  balance alone, no supported occurrence is 全生成 along a continuation contained in "carry on, or
+  pass support" (`Flow.not_generation_of_dissipative`): a passing of support takes from the whole
+  (`Flow.PassesSupport.takes`), and taking from it stops.
+* **Where supports alternate**, along every continuation every endless supported line is 全生成
+  (`Web.generation_of_alternating`): a gain of support begins a carrier under every reading
+  (`Web.begins_of_gains`).
 
 **Witnesses.** `Ladder` meets every premise of the gain bridge together, nothing coming from
 nothing (`Ladder.frontier_witness`; its family is open at every step). Under upkeep it meets the
@@ -106,6 +148,21 @@ premises in which the conclusion fails:
   support" its levels exceed from no step to a later one, and by name it keeps widening from no
   step (`ClosedCycle.generation_without_widening`, `ClosedCycle.generates`). The rising course is kept
   by name (`OwnCondition.rising_kept`).
+* 全生成 and keeping widening together, between the ends: the kind relay (`KindRelay`), six
+  formations of two kinds whose units pass within and across kinds with period two. Within kinds it
+  keeps widening from step `0` (`KindRelay.keeps_widening`); every supported occurrence is 全生成
+  there (`KindRelay.generation`) and one grain up, along passing at (activity, kind)
+  (`KindRelay.generation_one_up`); and renewal without end (`«生生»`) holds at the kind grain
+  (`KindRelay.renews_without_end`). It balances, meets the World premises, conserves and lists its
+  conditions (`KindRelay.balances`, `.acting`, `.dependent`, `.unloosened`, `.conserving`,
+  `.requiresWithin`), so by name, along supported passings and within kinds with dormant carrying
+  on by name it keeps widening from no step (`KindRelay.not_keepsWidening_byName`,
+  `.not_keepsWidening_supportedPassing`, `.not_keepsWidening_dormant`); it returns with period two
+  (`KindRelay.returns`). The fed relay (`KindRelay.Fed`) adds a condition of fuel for each step,
+  taken a unit by each formation taking part, and is dissipative (`KindRelay.Fed.dissipative`);
+  its supports and passings are the closed relay's, and the same laws hold of it. Both run one relay
+  (`KindRelay.Runs`), on which the laws are proved once. No list holds the fed relay's conditions,
+  so the dissipation laws above do not apply to it: it is a part fed from beyond.
 
 **Standing.** Every law here is a restatement or near-definitional. The first two read the
 theory's gain and renewal laws (`Flow.newly_supported_from_rest_or_open`,
@@ -113,7 +170,12 @@ theory's gain and renewal laws (`Flow.newly_supported_from_rest_or_open`,
 `Flow.gains_from_supported` with brevity. The map laws unfold the map's definitions beside the
 pattern-passing law (`Web.begins_within`). The exclusion along passing of support follows the
 gains of support back step by step, close to `Web.ByPassing.trace`, with the World premises
-supplying each passing up to double negation: near-definitional, the theory's biogenesis.
+supplying each passing up to double negation: near-definitional, the theory's biogenesis. The law
+of beginnings is the same induction along any reading containing carrying on of the supported,
+with excluded middle on whether something supported continues into each gainer inside the double
+negation; the exclusions and the dissipation laws are its corollaries, with the rest law of
+`Becoming.Space` (`falls_stop_unrefuted`) and the non-recurrence of taking
+(`Flow.taking_not_recurring_from`).
 
 **Readings (the AI's, for UE7's note; not adopted).** A finite family whose kept widening goes on
 is fed from beyond, by the rest or across its boundary; under upkeep its renewers multiply. Where
@@ -121,14 +183,19 @@ every support is brief, every balanced flow with recurring gains is opened by th
 property tells carriers apart only where some support lasts. Under the World premises nothing is
 new along lineage, the theory's form of "every cell from a cell": a course keeps widening by name
 only because names leave lineage out, a lead for what the second-order direction should count as
-novel.
+novel. Along any reading the price of keeping widening is fresh beginnings of it, renewals one
+grain up along lineage; the kind relay pays it, with 全生成 at two orders and renewal without end,
+while what it can form by name only returns: renewal is necessary for keeping widening along a
+reading and not sufficient for what can form, by name, to grow.
 
 **What is not derived.** The second-order comparison of two courses; growth by kinds not given in
-advance; requirements that tighten; a reading on which 全生成 and keeping widening hold together;
-any law on the opening half of keeping widening or on the widening order beyond the exclusion;
-生成 on the World where 全生成 fails; the capture loop.
+advance; requirements that tighten; which reading the widening order should be read on, beyond its
+comparison by name; any law on the widening order beyond the exclusions; 生成 on the World where
+全生成 fails; the capture loop.
 The representation commits to discrete steps on one index, natural-number levels and amounts, and
-a present list that may repeat entries; upkeep is at least a unit a step. Passing every bound uses
+a present list that may repeat entries; upkeep is at least a unit a step. The relay uses unit
+amounts and needs of one, kinds given in advance, and in its fed form one condition of fuel for
+each step. Passing every bound uses
 that a finite family has finitely many configurations within a bound, which natural-number amounts
 give. Every declaration has an empty axiom report (scratch build).
 -/
@@ -467,6 +534,15 @@ theorem Linked.snoc : ∀ {s : Nat} {f : F} {t : Nat} {g h : F},
   | _, _, _, _, _, .here t _, r => .next r (.here (t + 1) _)
   | _, _, _, _, _, .next r' rest, r => .next r' (Linked.snoc rest r)
 
+/-- A link chain is the occurrence itself, or a link chain followed by one step. -/
+theorem Linked.last : ∀ {s : Nat} {f : F} {u : Nat} {h : F}, Linked R s f u h →
+    (s = u ∧ f = h) ∨ ∃ t g, t + 1 = u ∧ Linked R s f t g ∧ R t g h
+  | _, _, _, _, .here _ _ => .inl ⟨rfl, rfl⟩
+  | s, f, _, _, .next step rest => match Linked.last rest with
+    | .inl ⟨at_, same⟩ =>
+      .inr ⟨s, f, at_, .here s f, Eq.subst (motive := fun x => R s f x) same step⟩
+    | .inr ⟨t, g, at_, linked, last⟩ => .inr ⟨t, g, at_, .next step linked, last⟩
+
 /-- What a line reaches is linked to its start. -/
 theorem linked_of_reached {E : «际» (Nat × F)} {x y : Nat × F}
     (reached : «所及» (continuationStep R) E x y) : Linked R x.1 x.2 y.1 y.2 :=
@@ -623,50 +699,370 @@ theorem generation_of_includes_brief {K T : Nat}
   generation_of_brief brief supported
     (Web.includesAcrossFrom_iff_endless.mp includes S f from_ supported)
 
+end Flow
+
+/-! ## Beginnings along a reading: what keeping opening needs -/
+
+namespace Web
+
+variable {W : Web F C}
+
+/-- **Carrying on while supported**: each formation continues only itself, and only across a step
+from which it is supported. Unlike `itself`, it links no dormant formation. -/
+def supportedItself (W : Web F C) : Nat → F → F → Prop := fun t g f => g = f ∧ W.Supported t g
+
+/-- **Carry on while supported, or pass**: across the step from `t`, `f` continues `g` where `g` is
+supported there and carries on as `f`, or `g` passes to `f`. Unlike `passingContinuation`, it links
+no dormant formation to itself. -/
+def supportedPassing (W : Web F C) (passes : Nat → F → F → Prop) : Nat → F → F → Prop :=
+  fun t g f => (g = f ∧ W.Supported t g) ∨ passes t g f
+
+/-- **Within a kind**: across the step from `t`, `f` continues `g` where `g` is supported there and
+carries on as `f`, or `g` passes to `f` and the two are of one kind `Q`. -/
+def withinKind (W : Web F C) (Q : F → F → Prop) (passes : Nat → F → F → Prop) :
+    Nat → F → F → Prop :=
+  fun t g f => (g = f ∧ W.Supported t g) ∨ (passes t g f ∧ Q g f)
+
+/-- **The kind class** on a web's occurrences: alike in activity, and of one kind `Q`. -/
+def kindClass (V : Web F C) (Q : F → F → Prop) : «际» (Nat × F) :=
+  «合» V.activityClass (fun x y => Q x.2 y.2)
+
+theorem supportedItself_within : ∀ t g f, W.supportedItself t g f → itself t g f :=
+  fun _ _ _ step => step.1
+
+theorem supportedPassing_within {passes : Nat → F → F → Prop} :
+    ∀ t g f, W.supportedPassing passes t g f → passingContinuation passes t g f
+  | _, _, _, .inl step => .inl step.1
+  | _, _, _, .inr p => .inr p
+
+theorem withinKind_within {Q : F → F → Prop} {passes : Nat → F → F → Prop} :
+    ∀ t g f, W.withinKind Q passes t g f → W.supportedPassing passes t g f
+  | _, _, _, .inl step => .inl step
+  | _, _, _, .inr step => .inr step.1
+
+/-- **A gain of support begins a carrier under every reading**: where `f` gains support across the
+step from `t`, the occurrence `(t + 1, f)`, read through the actual levels, has no predecessor
+alike in activity and of one formation, along any continuation. -/
+theorem begins_of_gains {R : Nat → F → F → Prop} {t : Nat} {f : F} (gains : W.GainsSupport t f) :
+    «生» (continuationStep R) (W.admitting W.level).carrierClass (t + 1, f) :=
+  fun ⟨⟨s, _⟩, ⟨at_, _⟩, alike, same⟩ =>
+    match s, Nat.succ.inj at_ with
+    | _, rfl => gains.1 (Eq.subst (motive := fun h => W.Supported t h) same
+        (alike.mpr gains.2))
+
+/-- **A line that always has a supported successor never ends**: where every supported formation
+continues along `R` into one supported at the next step, the line under activity from a supported
+occurrence never ends (不穷). -/
+theorem endless_of_successor {R : Nat → F → F → Prop}
+    (next : ∀ t f, W.Supported t f → ∃ g, R t f g ∧ W.Supported (t + 1) g) {x : Nat × F}
+    (start : W.Supported x.1 x.2) :
+    «不穷» (continuationStep R) (W.admitting W.level).activityClass x :=
+  fun y reached =>
+    have sy : W.Supported y.1 y.2 := active_along_line (W := W.admitting W.level) start reached
+    match next y.1 y.2 sy with
+    | ⟨g, step, sg⟩ => ⟨(y.1 + 1, g), ⟨rfl, step⟩, ⟨fun _ => sg, fun _ => sy⟩⟩
+
+/-- **Where supports alternate, every endless supported line generates**: where no formation is
+supported at two steps running, along every continuation, every supported occurrence whose line
+under activity never ends is 全生成 at (activity, one formation). Each step of the line ends in a
+gain of support, which begins a carrier (`begins_of_gains`). `Flow.generation_of_brief` takes any
+bound on supports, along passing of support. -/
+theorem generation_of_alternating {R : Nat → F → F → Prop}
+    (brief : ∀ t g, W.Supported t g → ¬ W.Supported (t + 1) g) {x : Nat × F}
+    (start : W.Supported x.1 x.2)
+    (endless : «不穷» (continuationStep R) (W.admitting W.level).activityClass x) :
+    «全生成» (continuationStep R) (W.admitting W.level).activityClass
+      (W.admitting W.level).carrierClass x :=
+  ⟨endless, fun y reached =>
+    have sy : W.Supported y.1 y.2 := active_along_line (W := W.admitting W.level) start reached
+    match endless y reached with
+    | ⟨w, step⟩ =>
+      have sw : W.Supported (y.1 + 1) w.2 :=
+        Eq.subst (motive := fun s => W.Supported s w.2) step.1.1 (step.2.mp sy)
+      ⟨y, w, .inl rfl, step,
+       Eq.subst (motive := fun s => «生» (continuationStep R) (W.admitting W.level).carrierClass
+           (s, w.2)) step.1.1.symm
+         (begins_of_gains ⟨fun before => brief y.1 w.2 before sw, sw⟩)⟩⟩
+
+/-- **Where each formation continues only itself, nothing is carried**: no step along such a
+continuation is a carrying renewal at (activity, one formation). -/
+theorem not_carries_of_within_itself {V : Web F C} {R : Nat → F → F → Prop}
+    (within : ∀ t g f, R t g f → itself t g f) (z w : Nat × F) :
+    ¬ «传» (continuationStep R) V.activityClass V.carrierClass z w :=
+  fun ⟨⟨step, alike⟩, begins⟩ => begins ⟨z, step, ⟨alike, within _ _ _ step.2⟩⟩
+
+/-- **Where each formation continues only itself, nothing generates.** -/
+theorem not_generation_of_within_itself {V : Web F C} {R : Nat → F → F → Prop}
+    (within : ∀ t g f, R t g f → itself t g f) (x : Nat × F) :
+    ¬ «全生成» (continuationStep R) V.activityClass V.carrierClass x :=
+  fun ⟨_, ahead⟩ => match ahead x (.inl rfl) with
+    | ⟨z, w, _, c⟩ => not_carries_of_within_itself within z w c
+
+/-- **Carrying on while supported, nothing generates**: the bottom of the interval of readings. -/
+theorem supportedItself_not_generation (x : Nat × F) :
+    ¬ «全生成» (continuationStep W.supportedItself) (W.admitting W.level).activityClass
+      (W.admitting W.level).carrierClass x :=
+  not_generation_of_within_itself supportedItself_within x
+
+/-- **From an active occurrence the two passing readings continue alike**: read through the actual
+levels, from a supported occurrence, continuing along "carry on while supported, or pass" under
+activity is continuing along "carry on, or pass" under activity. -/
+theorem supportedPassing_cont_iff {passes : Nat → F → F → Prop} {x y : Nat × F}
+    (supported : W.Supported x.1 x.2) :
+    «续» (continuationStep (W.supportedPassing passes)) (W.admitting W.level).activityClass x y ↔
+      «续» (continuationStep (passingContinuation passes)) (W.admitting W.level).activityClass x y :=
+  ⟨fun ⟨⟨at_, step⟩, alike⟩ => ⟨⟨at_, supportedPassing_within _ _ _ step⟩, alike⟩,
+   fun ⟨⟨at_, step⟩, alike⟩ => ⟨⟨at_, match step with
+     | .inl same => .inl ⟨same, supported⟩
+     | .inr p => .inr p⟩, alike⟩⟩
+
+/-- **Within a kind under activity is passing under the kind class**, from a supported occurrence:
+read through the actual levels, with `Q` reflexive, continuing along `withinKind Q` under activity
+is continuing along "carry on, or pass" under the kind class. At a dormant occurrence the two
+differ: "carry on, or pass" carries a dormant formation on, and `withinKind Q` does not. -/
+theorem withinKind_cont_iff {Q : F → F → Prop} (refl : ∀ f, Q f f)
+    {passes : Nat → F → F → Prop} {x y : Nat × F} (supported : W.Supported x.1 x.2) :
+    «续» (continuationStep (W.withinKind Q passes)) (W.admitting W.level).activityClass x y ↔
+      «续» (continuationStep (passingContinuation passes)) ((W.admitting W.level).kindClass Q)
+        x y :=
+  ⟨fun ⟨⟨at_, step⟩, alike⟩ => match step with
+     | .inl ⟨same, _⟩ => ⟨⟨at_, .inl same⟩, alike,
+         Eq.subst (motive := fun f => Q x.2 f) same (refl x.2)⟩
+     | .inr ⟨p, q⟩ => ⟨⟨at_, .inr p⟩, alike, q⟩,
+   fun ⟨⟨at_, step⟩, alike, q⟩ => match step with
+     | .inl same => ⟨⟨at_, .inl ⟨same, supported⟩⟩, alike⟩
+     | .inr p => ⟨⟨at_, .inr ⟨p, q⟩⟩, alike⟩⟩
+
+/-- **At an active occurrence, a carrier begins within a kind exactly where it begins along
+passing**: read through the actual levels, at a supported occurrence, beginning under (activity, one
+formation) along `withinKind Q` is beginning so along "carry on, or pass", since either is refuted
+only by the formation carrying on from an active occurrence. -/
+theorem withinKind_begins_iff {Q : F → F → Prop} {passes : Nat → F → F → Prop} {y : Nat × F}
+    (supported : W.Supported y.1 y.2) :
+    «生» (continuationStep (W.withinKind Q passes)) (W.admitting W.level).carrierClass y ↔
+      «生» (continuationStep (passingContinuation passes)) (W.admitting W.level).carrierClass y :=
+  ⟨fun begins ⟨z, ⟨at_, _⟩, alike, same⟩ =>
+     begins ⟨z, ⟨at_, .inl ⟨same, alike.mpr supported⟩⟩, alike, same⟩,
+   fun begins ⟨z, ⟨at_, step⟩, carrier⟩ =>
+     begins ⟨z, ⟨at_, supportedPassing_within _ _ _ (withinKind_within _ _ _ step)⟩, carrier⟩⟩
+
+end Web
+
+namespace Flow
+
+variable {L : Flow F C} {W : Web F C}
+
+/-- **A passing of support begins a line of `R`** across the step from `t`: `g` passes support to
+`h`, and nothing supported at `t` continues into `h` along `R`. Read on the map, it begins a line
+of `R` at `(t + 1, h)` under activity (`«生»`); it is not the founding of `Becoming.Founding`. -/
+def BeginsAlong (L : Flow F C) (W : Web F C) (R : Nat → F → F → Prop) (t : Nat) (g h : F) : Prop :=
+  L.PassesSupport W t g h ∧ ∀ f, R t f h → ¬ W.Supported t f
+
+/-- A beginning along `R` is not a step of `R`: its giver is supported. -/
+theorem BeginsAlong.not_along {R : Nat → F → F → Prop} {t : Nat} {g h : F}
+    (begins : L.BeginsAlong W R t g h) : ¬ R t g h :=
+  fun step => begins.2 g step begins.1.2.1
+
+/-- **A beginning is a carrying renewal along passing of support**, at (activity, one formation). -/
+theorem BeginsAlong.carries {R : Nat → F → F → Prop} {t : Nat} {g h : F}
+    (begins : L.BeginsAlong W R t g h) :
+    «传» (Web.continuationStep (Web.passingContinuation (L.PassesSupport W)))
+      (W.admitting W.level).activityClass (W.admitting W.level).carrierClass (t, g) (t + 1, h) :=
+  (passesSupport_carries_iff begins.1.2.1).mpr begins.1
+
+/-- **A beginning within a kind is a renewal one grain up**: from a supported giver, with `Q`
+reflexive, a beginning along `withinKind Q` is exactly a carrying renewal along "carry on, or pass
+support" at (activity, kind): the whole lineage goes on while a line of a kind begins. -/
+theorem BeginsAlong.carries_kind_iff {Q : F → F → Prop} (refl : ∀ f, Q f f) {t : Nat} {g h : F}
+    (supported : W.Supported t g) :
+    L.BeginsAlong W (W.withinKind Q (L.PassesSupport W)) t g h ↔
+      «传» (Web.continuationStep (Web.passingContinuation (L.PassesSupport W)))
+        (W.admitting W.level).activityClass ((W.admitting W.level).kindClass Q) (t, g)
+        (t + 1, h) :=
+  ⟨fun ⟨passes, fresh⟩ =>
+     ⟨⟨⟨rfl, .inr passes⟩, ⟨fun _ => passes.2.2.1.2, fun _ => supported⟩⟩,
+      fun ⟨⟨s, f⟩, ⟨at_, step⟩, alike, q⟩ =>
+        match s, Nat.succ.inj at_ with
+        | _, rfl => fresh f (match step with
+            | .inl same => .inl ⟨same, alike.mpr passes.2.2.1.2⟩
+            | .inr p => .inr ⟨p, q⟩) (alike.mpr passes.2.2.1.2)⟩,
+   fun ⟨⟨⟨_, step⟩, alike⟩, begins⟩ =>
+     have passes : L.PassesSupport W t g h := match step with
+       | .inl same => absurd ⟨(t, g), ⟨rfl, .inl same⟩, alike,
+           Eq.subst (motive := fun f => Q g f) same (refl g)⟩ begins
+       | .inr p => p
+     ⟨passes, fun f step' sf => begins ⟨(t, f),
+       ⟨rfl, Web.supportedPassing_within _ _ _ (Web.withinKind_within _ _ _ step')⟩,
+       ⟨fun _ => passes.2.2.1.2, fun _ => sf⟩,
+       match step' with
+       | .inl ⟨same, _⟩ => Eq.subst (motive := fun x => Q f x) same (refl f)
+       | .inr ⟨_, q⟩ => q⟩⟩⟩
+
+/-- **Carrying on while supported, a beginning is a passing of support.** -/
+theorem beginsAlong_supportedItself_iff {t : Nat} {g h : F} :
+    L.BeginsAlong W W.supportedItself t g h ↔ L.PassesSupport W t g h :=
+  ⟨fun begins => begins.1, fun passes => ⟨passes, fun _ step sf =>
+    passes.2.2.1.1 (Eq.subst (motive := fun x => W.Supported t x) step.1 sf)⟩⟩
+
+/-- **What is supported descends from what was supported, or from a beginning.** Under the World
+premises (balance, only active formations giving, activity needing support, requirements never
+loosening), along any continuation `R` containing carrying on of the supported, whatever is
+supported at `S + k` is, up to double negation, linked along `R` to something supported at `S`,
+or linked along `R` to the end of a beginning along `R` across a step from `S` to before `S + k`.
+The double negation holds excluded middle on whether some supported formation continues into each
+gainer, and the World premises supply each gain's passing (`gain_given_by_supported_at`). -/
+theorem descends_or_begun (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) (unloosened : ∀ t f, W.Unloosened t f) {R : Nat → F → F → Prop}
+    (carries : ∀ t f, W.Supported t f → R t f f) (S : Nat) :
+    ∀ k g, W.Supported (S + k) g →
+      ¬ ¬ ((∃ f, Web.Linked R S f (S + k) g ∧ W.Supported S f) ∨
+        ∃ j g' h, j < k ∧ L.BeginsAlong W R (S + j) g' h ∧ Web.Linked R (S + j + 1) h (S + k) g)
+  | 0, g, supported => fun none => none (.inl ⟨g, .here S g, supported⟩)
+  | k + 1, g, supported => fun none =>
+    (fun em : ¬ ¬ ((∃ f, W.Supported (S + k) f ∧ R (S + k) f g) ∨
+        ¬ ∃ f, W.Supported (S + k) f ∧ R (S + k) f g) => em fun decided =>
+      match decided with
+      | .inl ⟨f, sf, step⟩ =>
+        descends_or_begun balances acting dependent unloosened carries S k f sf fun found =>
+          match found with
+          | .inl ⟨f₀, linked, s₀⟩ => none (.inl ⟨f₀, Web.Linked.snoc linked step, s₀⟩)
+          | .inr ⟨j, g', h, lt, begins, linked⟩ =>
+            none (.inr ⟨j, g', h, Nat.lt_succ_of_lt lt, begins, Web.Linked.snoc linked step⟩)
+      | .inr fresh =>
+        have gains : W.GainsSupport (S + k) g :=
+          ⟨fun before => fresh ⟨g, before, carries _ _ before⟩, supported⟩
+        gain_given_by_supported_at (fun c _ => balances.on [c] (S + k))
+          (fun c _ => acting.giversSupported dependent (S + k) c) gains (unloosened (S + k) g)
+          fun ⟨c, g', requires, rises, mem, gives, sg'⟩ =>
+            none (.inr ⟨k, g', g, Nat.lt_succ_self k,
+              ⟨⟨mem, sg', gains, c, requires, rises, gives⟩, fun f step sf => fresh ⟨f, sf, step⟩⟩,
+              .here _ g⟩))
+      (fun no => no (.inr fun holds => no (.inl holds)))
+
+/-- **Where the levels exceed, a beginning lies between**: under the World premises, along a
+continuation containing carrying on of the supported, where the actual levels exceed from `S` to
+`U` a beginning along it lies, up to double negation, across a step from `S` to before `U`, linked
+along it to something supported at `U`. -/
+theorem begun_of_exceedsAcross (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) (unloosened : ∀ t f, W.Unloosened t f) {R : Nat → F → F → Prop}
+    (carries : ∀ t f, W.Supported t f → R t f f) {S U : Nat} (le : S ≤ U)
+    (exceeds : W.ExceedsAcross R W.level S U) :
+    ¬ ¬ ∃ j g h, S ≤ j ∧ j < U ∧ L.BeginsAlong W R j g h ∧
+      ∃ g', Web.Linked R (j + 1) h U g' ∧ W.Supported U g' :=
+  match exceeds, le_dest le with
+  | ⟨g', admitted, apart⟩, ⟨k, at_⟩ => fun none =>
+    descends_or_begun balances acting dependent unloosened carries S k g'
+      (Eq.subst (motive := fun x => W.Supported x g') at_ admitted) fun found =>
+      match found with
+      | .inl ⟨f, linked, sf⟩ =>
+        apart f (Eq.subst (motive := fun x => Web.Linked R S f x g') at_.symm linked) sf
+      | .inr ⟨j, g, h, lt, begins, linked⟩ =>
+        none ⟨S + j, g, h, Nat.le_add_right S j,
+          Eq.subst (motive := fun x => S + j < x) at_.symm (Nat.add_lt_add_left lt S), begins, g',
+          Eq.subst (motive := fun x => Web.Linked R (S + j + 1) h x g') at_.symm linked, admitted⟩
+
+/-- **Keeping opening needs a beginning after every step**: under the World premises, along a
+continuation containing carrying on of the supported, where the actual levels keep opening from
+`T`, after every step from `T` a beginning along it lies, up to double negation. -/
+theorem begins_late_of_keepsOpening (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) (unloosened : ∀ t f, W.Unloosened t f) {R : Nat → F → F → Prop}
+    (carries : ∀ t f, W.Supported t f → R t f f) {T : Nat} (opens : W.KeepsOpening R W.level T) :
+    ∀ S, T ≤ S → ¬ ¬ ∃ j g h, S ≤ j ∧ L.BeginsAlong W R j g h :=
+  fun S from_ none => match opens S from_ with
+    | ⟨_, le, exceeds⟩ => begun_of_exceedsAcross balances acting dependent unloosened carries le
+        exceeds fun ⟨j, g, h, after, _, begins, _⟩ => none ⟨j, g, h, after, begins⟩
+
+/-- **Keeping opening by name needs passings of support after every step**: under the World
+premises, where the actual levels keep opening by name from `T`, after every step from `T` a
+supported formation passes support, up to double negation. By name reads more links than carrying
+on while supported, so it opens only where that does (`ExceedsAcross.anti`), and there a
+beginning is a passing (`beginsAlong_supportedItself_iff`). -/
+theorem passes_late_of_keepsOpening_byName (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) (unloosened : ∀ t f, W.Unloosened t f) {T : Nat}
+    (opens : W.KeepsOpening Web.itself W.level T) :
+    ∀ S, T ≤ S → ¬ ¬ ∃ j g h, S ≤ j ∧ L.PassesSupport W j g h :=
+  fun S from_ none =>
+    begins_late_of_keepsOpening balances acting dependent unloosened (R := W.supportedItself)
+      (fun _ _ s => ⟨rfl, s⟩)
+      (fun S' from' => match opens S' from' with
+        | ⟨U, le, exceeds⟩ => ⟨U, le, Web.ExceedsAcross.anti Web.supportedItself_within exceeds⟩)
+      S from_ fun ⟨j, g, h, after, begins⟩ => none ⟨j, g, h, after, begins.1⟩
+
+/-- **What is supported descends from what was supported, along supported passings.** Under the
+World premises, whatever is supported at `S + k` is, up to double negation, linked along "carry on
+while supported, or pass support" to something supported at `S`. Every passing is a step of it, so
+nothing begins along it (`descends_or_begun`). -/
+theorem descends_along_supportedPassing (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) (unloosened : ∀ t f, W.Unloosened t f) (S : Nat) :
+    ∀ k g, W.Supported (S + k) g →
+      ¬ ¬ ∃ f, Web.Linked (W.supportedPassing (L.PassesSupport W)) S f (S + k) g ∧
+        W.Supported S f :=
+  fun k g supported none =>
+    descends_or_begun balances acting dependent unloosened
+      (R := W.supportedPassing (L.PassesSupport W)) (fun _ _ s => .inl ⟨rfl, s⟩) S k g supported
+      fun found => match found with
+        | .inl descends => none descends
+        | .inr ⟨_, _, _, _, begins, _⟩ => begins.not_along (.inr begins.1)
+
 /-! ### Under the World premises nothing keeps opening along passing of support -/
 
 /-- **What is supported descends from what was supported, along passings.** Under the World
 premises (balance, only active formations giving, activity needing support, requirements never
 loosening), whatever is supported at `S + k` is, up to double negation, linked along "carry on, or
 pass support" to something supported at `S`: each gain of support on the way is a passing from a
-supported formation (`gain_carried`). -/
+supported formation (`gain_carried`). Derived from the law along supported passings
+(`descends_along_supportedPassing`), whose continuation the passing continuation contains. -/
 theorem descends_along_passings (balances : L.Balances W) (acting : L.Acting W)
     (dependent : W.Dependent) (unloosened : ∀ t f, W.Unloosened t f) (S : Nat) :
     ∀ k g, W.Supported (S + k) g →
       ¬ ¬ ∃ f, Web.Linked (Web.passingContinuation (L.PassesSupport W)) S f (S + k) g ∧
-        W.Supported S f
-  | 0, g, supported => fun none => none ⟨g, .here S g, supported⟩
-  | k + 1, g, supported => fun none =>
-    (fun em : ¬ ¬ (W.Supported (S + k) g ∨ ¬ W.Supported (S + k) g) => em fun decided =>
-      match decided with
-      | .inl before =>
-        descends_along_passings balances acting dependent unloosened S k g before
-          fun ⟨f, linked, sf⟩ => none ⟨f, Web.Linked.snoc linked (.inl rfl), sf⟩
-      | .inr notBefore =>
-        gain_carried (fun c _ => balances.on [c] (S + k))
-          (fun c _ => acting.giversSupported dependent (S + k) c)
-          (unloosened (S + k) g) ⟨notBefore, supported⟩
-          fun ⟨h, sh, carries⟩ =>
-            descends_along_passings balances acting dependent unloosened S k h sh
-              fun ⟨f, linked, sf⟩ =>
-                none ⟨f, Web.Linked.snoc linked
-                  (.inr ((passesSupport_carries_iff sh).mp carries)), sf⟩)
-      (fun no => no (.inr fun holds => no (.inl holds)))
+        W.Supported S f :=
+  fun k g supported none =>
+    descends_along_supportedPassing balances acting dependent unloosened S k g supported
+      fun ⟨f, linked, sf⟩ => none ⟨f, Web.Linked.mono Web.supportedPassing_within linked, sf⟩
+
+/-- **Under the World premises nothing is opened along supported passings.** Along every
+continuation that contains "carry on while supported, or pass support", the actual levels exceed
+from no step to a later one: a beginning along it would be a passing that is not one of its steps
+(`begun_of_exceedsAcross`). -/
+theorem not_exceedsAcross_along_supportedPassing (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) (unloosened : ∀ t f, W.Unloosened t f) {R : Nat → F → F → Prop}
+    (contains : ∀ t g f, W.supportedPassing (L.PassesSupport W) t g f → R t g f)
+    {S U : Nat} (le : S ≤ U) : ¬ W.ExceedsAcross R W.level S U :=
+  fun exceeds => begun_of_exceedsAcross balances acting dependent unloosened
+    (R := W.supportedPassing (L.PassesSupport W)) (fun _ _ s => .inl ⟨rfl, s⟩) le
+    (Web.ExceedsAcross.anti contains exceeds)
+    fun ⟨_, _, _, _, _, begins, _⟩ => begins.not_along (.inr begins.1)
+
+/-- **Under the World premises nothing keeps opening along supported passings**, from any step,
+along every continuation that contains "carry on while supported, or pass support". -/
+theorem not_keepsOpening_along_supportedPassing (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) (unloosened : ∀ t f, W.Unloosened t f) {R : Nat → F → F → Prop}
+    (contains : ∀ t g f, W.supportedPassing (L.PassesSupport W) t g f → R t g f) (T : Nat) :
+    ¬ W.KeepsOpening R W.level T :=
+  fun opens => match opens T (Nat.le_refl T) with
+    | ⟨_, le, exceeds⟩ =>
+      not_exceedsAcross_along_supportedPassing balances acting dependent unloosened contains le
+        exceeds
+
+/-- So, under the World premises, nothing keeps widening along such a continuation either. -/
+theorem not_keepsWidening_along_supportedPassing (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) (unloosened : ∀ t f, W.Unloosened t f) {R : Nat → F → F → Prop}
+    (contains : ∀ t g f, W.supportedPassing (L.PassesSupport W) t g f → R t g f) (T : Nat) :
+    ¬ W.KeepsWidening R W.level T :=
+  fun keeps =>
+    not_keepsOpening_along_supportedPassing balances acting dependent unloosened contains T keeps.2
 
 /-- **Under the World premises nothing is opened along passings.** Along every continuation that
 contains "carry on, or pass support", the actual levels exceed from no step to a later one: no
-formation supported at a step is apart from everything supported at an earlier step. -/
+formation supported at a step is apart from everything supported at an earlier step. A case of the
+law along supported passings, which that continuation contains. -/
 theorem not_exceedsAcross_along_passings (balances : L.Balances W) (acting : L.Acting W)
     (dependent : W.Dependent) (unloosened : ∀ t f, W.Unloosened t f) {R : Nat → F → F → Prop}
     (contains : ∀ t g f, Web.passingContinuation (L.PassesSupport W) t g f → R t g f)
     {S U : Nat} (le : S ≤ U) : ¬ W.ExceedsAcross R W.level S U :=
-  fun exceeds => match Web.ExceedsAcross.anti contains exceeds, le_dest le with
-    | ⟨g, admitted, apart⟩, ⟨k, at_⟩ =>
-      descends_along_passings balances acting dependent unloosened S k g
-        (Eq.subst (motive := fun x => W.Supported x g) at_ admitted)
-        fun ⟨f, linked, sf⟩ =>
-          apart f (Eq.subst (motive := fun x =>
-              Web.Linked (Web.passingContinuation (L.PassesSupport W)) S f x g) at_.symm linked) sf
+  not_exceedsAcross_along_supportedPassing balances acting dependent unloosened
+    (fun t g f step => contains t g f (Web.supportedPassing_within t g f step)) le
 
 /-- **Under the World premises nothing keeps opening along passings**, from any step, along every
 continuation that contains "carry on, or pass support". -/
@@ -674,16 +1070,86 @@ theorem not_keepsOpening_along_passings (balances : L.Balances W) (acting : L.Ac
     (dependent : W.Dependent) (unloosened : ∀ t f, W.Unloosened t f) {R : Nat → F → F → Prop}
     (contains : ∀ t g f, Web.passingContinuation (L.PassesSupport W) t g f → R t g f) (T : Nat) :
     ¬ W.KeepsOpening R W.level T :=
-  fun opens => match opens T (Nat.le_refl T) with
-    | ⟨_, le, exceeds⟩ =>
-      not_exceedsAcross_along_passings balances acting dependent unloosened contains le exceeds
+  not_keepsOpening_along_supportedPassing balances acting dependent unloosened
+    (fun t g f step => contains t g f (Web.supportedPassing_within t g f step)) T
 
 /-- So, under the World premises, nothing keeps widening along such a continuation either. -/
 theorem not_keepsWidening_along_passings (balances : L.Balances W) (acting : L.Acting W)
     (dependent : W.Dependent) (unloosened : ∀ t f, W.Unloosened t f) {R : Nat → F → F → Prop}
     (contains : ∀ t g f, Web.passingContinuation (L.PassesSupport W) t g f → R t g f) (T : Nat) :
     ¬ W.KeepsWidening R W.level T :=
-  fun keeps => not_keepsOpening_along_passings balances acting dependent unloosened contains T keeps.2
+  not_keepsWidening_along_supportedPassing balances acting dependent unloosened
+    (fun t g f step => contains t g f (Web.supportedPassing_within t g f step)) T
+
+/-! ### Under dissipation a finite world has neither -/
+
+/-- **Under dissipation a passing of support takes**: across a step at which a family holding every
+condition is dissipated on, some formation takes from it, since the giver gives to it. -/
+theorem PassesSupport.takes {cs : List C} (every : ∀ c, c ∈ cs) {t : Nat} {g h : F}
+    (passes : L.PassesSupport W t g h) (dissipates : L.DissipatesOn cs t) : 0 < L.takers cs t :=
+  match passes with
+  | ⟨mem, _, _, c, _, _, gives⟩ =>
+    total_pos_of_mem (q := fun f => sign (total cs (L.take t f))) mem
+      (sign_pos (dissipates.takes_of_gives mem (total_pos_of_mem (every c) gives)))
+
+/-- **Under dissipation nothing keeps opening.** Where finitely many conditions, listed, are all
+there is and the flow dissipates on them from `T₀`, under the World premises, along any
+continuation containing carrying on of the supported the actual levels keep opening from no step.
+Keeping opening needs a beginning after every step, up to double negation
+(`begins_late_of_keepsOpening`); each is a passing of support, which takes from the whole
+(`PassesSupport.takes`), and the whole's stock then falls; that its falls stop cannot be refuted
+(`falls_stop_unrefuted`). -/
+theorem not_keepsOpening_of_dissipative (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) (unloosened : ∀ t f, W.Unloosened t f) {all : List C}
+    (every : ∀ c, c ∈ all) {T₀ : Nat} (dissipates : ∀ t, T₀ ≤ t → L.DissipatesOn all t)
+    {R : Nat → F → F → Prop} (carries : ∀ t f, W.Supported t f → R t f f) (T : Nat) :
+    ¬ W.KeepsOpening R W.level T :=
+  fun opens => falls_stop_unrefuted (q := W.stock all) (T := T + T₀)
+    (fun t later => Nat.le_trans (Nat.le_add_right _ _)
+      ((balances.on all t).runs_down (dissipates t (Nat.le_trans (Nat.le_add_left T₀ T) later))))
+    fun M from_ none =>
+      begins_late_of_keepsOpening balances acting dependent unloosened carries opens M
+        (Nat.le_trans (Nat.le_add_right T T₀) from_) fun ⟨j, _, _, after, begins⟩ =>
+          have later : T₀ ≤ j := Nat.le_trans (Nat.le_add_left T₀ T) (Nat.le_trans from_ after)
+          none ⟨j, after, Nat.lt_of_lt_of_le
+            (Nat.add_lt_add_left (begins.1.takes every (dissipates j later)) (W.stock all (j + 1)))
+            ((balances.on all j).runs_down (dissipates j later))⟩
+
+/-- So, under dissipation, nothing keeps widening along such a continuation either. -/
+theorem not_keepsWidening_of_dissipative (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) (unloosened : ∀ t f, W.Unloosened t f) {all : List C}
+    (every : ∀ c, c ∈ all) {T₀ : Nat} (dissipates : ∀ t, T₀ ≤ t → L.DissipatesOn all t)
+    {R : Nat → F → F → Prop} (carries : ∀ t f, W.Supported t f → R t f f) (T : Nat) :
+    ¬ W.KeepsWidening R W.level T :=
+  fun keeps => not_keepsOpening_of_dissipative balances acting dependent unloosened every
+    dissipates carries T keeps.2
+
+/-- **Under dissipation nothing generates along passing.** Where finitely many conditions, listed,
+are all there is and the flow balances and dissipates on them from `T₀`, along any continuation
+contained in "carry on, or pass support" no supported occurrence is 全生成 at (activity, one
+formation). 全生成 renews at arbitrarily late steps (`Web.generation_renews_late`); along such a
+continuation a carrying renewal from a supported occurrence is a passing of support
+(`Web.carries_iff`), which takes from the whole (`PassesSupport.takes`), and taking from it does not
+recur (`taking_not_recurring_from`). No World premise beyond balance is used. -/
+theorem not_generation_of_dissipative {all : List C} (every : ∀ c, c ∈ all) {T₀ : Nat}
+    (balances : ∀ t, T₀ ≤ t → L.BalancesOn W all t)
+    (dissipates : ∀ t, T₀ ≤ t → L.DissipatesOn all t) {R : Nat → F → F → Prop}
+    (within : ∀ t g f, R t g f → Web.passingContinuation (L.PassesSupport W) t g f)
+    {x : Nat × F} (start : W.Supported x.1 x.2) :
+    ¬ «全生成» (Web.continuationStep R) (W.admitting W.level).activityClass
+      (W.admitting W.level).carrierClass x :=
+  fun generates => taking_not_recurring_from balances dissipates fun N =>
+    match Web.generation_renews_late (W := W.admitting W.level) generates (N + T₀) with
+    | ⟨z, _, reached, later, carries⟩ =>
+      have sz : W.Supported z.1 z.2 :=
+        Web.active_along_line (W := W.admitting W.level) start reached
+      have from₀ : T₀ ≤ z.1 := Nat.le_trans (Nat.le_add_left T₀ N) later
+      match (Web.carries_iff (W := W.admitting W.level) sz).mp carries with
+      | ⟨step, _, fresh⟩ => match within _ _ _ step.2 with
+        | .inl same => absurd ⟨Eq.subst (motive := fun f => W.Supported z.1 f) same sz,
+            Eq.subst (motive := fun f => R z.1 f _) same step.2⟩ fresh
+        | .inr passes => ⟨z.1, Nat.le_trans (Nat.le_add_right N T₀) later,
+            passes.takes every (dissipates z.1 from₀)⟩
 
 end Flow
 
@@ -1470,5 +1936,658 @@ theorem from_nothing :
     | .inr open_ => open_ (closed t)⟩
 
 end Source
+
+/-! ### The kind relay: 全生成 at two orders and keeping widening, together -/
+
+namespace KindRelay
+
+open ClosedCycle (parity)
+
+theorem not_not_bool : ∀ b : Bool, (!!b) = b
+  | false => rfl
+  | true => rfl
+
+theorem false_of_not_true : ∀ {b : Bool}, (!b) = true → b = false
+  | false, _ => rfl
+  | true, no => Bool.noConfusion no
+
+theorem true_of_not_false : ∀ {b : Bool}, (!b) = false → b = true
+  | true, _ => rfl
+  | false, no => Bool.noConfusion no
+
+/-- Parity returns after two steps. -/
+theorem parity_two (t : Nat) : parity (t + 2) = parity t := not_not_bool (parity t)
+
+/-- Six formations of two kinds: `a0`, `a1` and `e` of one, `b0`, `b1` and `c` of the other. -/
+inductive Form
+  | a0 | a1 | e | b0 | b1 | c
+  deriving DecidableEq
+
+open Form
+
+instance (a : Form) (l : List Form) : Decidable (a ∈ l) := decideMem a l
+
+/-- The six formations, listed. -/
+def allForms : List Form := [a0, a1, e, b0, b1, c]
+
+theorem every_form : ∀ f, f ∈ allForms := by
+  intro f; cases f <;> decide
+
+theorem distinct_forms : Distinct allForms :=
+  ⟨by decide, by decide, by decide, by decide, by decide, (fun no => nomatch no), trivial⟩
+
+/-- The kind of a formation. -/
+def kind : Form → Bool
+  | a0 => false | a1 => false | e => false
+  | b0 => true | b1 => true | c => true
+
+/-- Two formations of one kind. -/
+def sameKind (g f : Form) : Prop := kind g = kind f
+
+theorem sameKind_refl (f : Form) : sameKind f f := rfl
+
+/-- What each formation's own condition holds at a step of each parity: at even steps `a0` and `b0`
+hold two units, at odd steps `a1`, `e`, `b1` and `c` one each. -/
+def amount : Bool → Form → Nat
+  | false, a0 => 2 | false, a1 => 0 | false, e => 0
+  | false, b0 => 2 | false, b1 => 0 | false, c => 0
+  | true, a0 => 0 | true, a1 => 1 | true, e => 1
+  | true, b0 => 0 | true, b1 => 1 | true, c => 1
+
+/-- Supported at a step of the parity: its own condition holds its need of one. -/
+abbrev Holds (p : Bool) (f : Form) : Prop := 1 ≤ amount p f
+
+/-- Where each formation moves its units across a step of each parity. Across an even step `a0`
+moves a unit to `a1` and one to `c`, and `b0` one to `b1` and one to `e`; across an odd step `a1`
+and `e` move theirs to `a0`, and `b1` and `c` theirs to `b0`. -/
+def giveSupport : Bool → Form → List Form
+  | false, a0 => [a1, c] | false, a1 => [] | false, e => []
+  | false, b0 => [b1, e] | false, b1 => [] | false, c => []
+  | true, a0 => [] | true, a1 => [a0] | true, e => [a0]
+  | true, b0 => [] | true, b1 => [b0] | true, c => [b0]
+
+/-- The units a formation moves to a condition across a step of each parity. -/
+def giveAt (p : Bool) (g f : Form) : Nat := total (giveSupport p g) fun x => if x = f then 1 else 0
+
+/-- Each formation taking part takes all its own condition holds. -/
+def takeAt (p : Bool) (g x : Form) : Nat := if x = g then amount p g else 0
+
+/-- The formations taking part at a step of each parity: the supported ones. -/
+def presentAt : Bool → List Form
+  | false => [a0, b0]
+  | true => [a1, e, b1, c]
+
+/-- Where each supported formation's unit goes on within its kind. -/
+def lineage : Bool → Form → Form
+  | false, a0 => a1 | false, a1 => a1 | false, e => e
+  | false, b0 => b1 | false, b1 => b1 | false, c => c
+  | true, a0 => a0 | true, a1 => a0 | true, e => a0
+  | true, b0 => b0 | true, b1 => b0 | true, c => b0
+
+/-- Where a supported formation at an even step begins a line of the other kind. -/
+def starter : Form → Form
+  | a0 => c | a1 => a1 | e => e | b0 => e | b1 => b1 | c => c
+
+/-- What gives a formation supported at an even step its units, within its kind. -/
+def back : Form → Form
+  | a0 => a1 | a1 => a1 | e => e | b0 => b1 | b1 => b1 | c => c
+
+/-! #### The relay's facts, by cases -/
+
+theorem holds_brief : ∀ p f, Holds p f → ¬ Holds (!p) f := by
+  intro p f; cases p <;> cases f <;> decide
+
+theorem present_holds : ∀ p f, f ∈ presentAt p → Holds p f := by
+  intro p f; cases p <;> cases f <;> decide
+
+theorem moves_facts : ∀ p g f, 0 < giveAt p g f →
+    g ∈ presentAt p ∧ Holds p g ∧ ¬ Holds p f ∧ Holds (!p) f ∧ amount p f < amount (!p) f := by
+  intro p g f; cases p <;> cases g <;> cases f <;> decide
+
+theorem lineage_facts : ∀ p f, Holds p f →
+    0 < giveAt p f (lineage p f) ∧ kind f = kind (lineage p f) ∧ Holds (!p) (lineage p f) := by
+  intro p f; cases p <;> cases f <;> decide
+
+theorem starter_facts : ∀ f, Holds false f →
+    0 < giveAt false f (starter f) ∧ ¬ Holds false (starter f) := by
+  intro f; cases f <;> decide
+
+theorem starter_fresh : ∀ f g, Holds false f → 0 < giveAt false g (starter f) →
+    kind g ≠ kind (starter f) := by
+  intro f g; cases f <;> cases g <;> decide
+
+theorem back_facts : ∀ f, Holds false f →
+    Holds true (back f) ∧ 0 < giveAt true (back f) f ∧ kind (back f) = kind f := by
+  intro f; cases f <;> decide
+
+/-! #### Any web and flow that run the relay -/
+
+/-- A web and a flow on the six formations **run the relay** where a formation is supported exactly
+where its own condition holds at the step's parity, and passes support exactly where it moves a
+unit. The closed relay and the fed one both run it. -/
+structure Runs {C : Type} (W : Web Form C) (L : Flow Form C) : Prop where
+  supported : ∀ t f, W.Supported t f ↔ Holds (parity t) f
+  passes : ∀ t g f, L.PassesSupport W t g f ↔ 0 < giveAt (parity t) g f
+
+namespace Runs
+
+variable {C : Type} {W : Web Form C} {L : Flow Form C}
+
+/-- Each supported formation passes support within its kind. -/
+theorem step (run : Runs W L) {t : Nat} {f : Form} (supported : W.Supported t f) :
+    L.PassesSupport W t f (lineage (parity t) f) ∧ sameKind f (lineage (parity t) f) ∧
+      W.Supported (t + 1) (lineage (parity t) f) :=
+  match lineage_facts (parity t) f ((run.supported t f).mp supported) with
+  | ⟨moves, same, holds⟩ =>
+    ⟨(run.passes t f _).mpr moves, same, (run.supported (t + 1) _).mpr holds⟩
+
+theorem along (run : Runs W L) {t : Nat} {f : Form} (supported : W.Supported t f) :
+    W.withinKind sameKind (L.PassesSupport W) t f (lineage (parity t) f) :=
+  .inr ⟨(run.step supported).1, (run.step supported).2.1⟩
+
+/-- No formation is supported at two steps running. -/
+theorem brief (run : Runs W L) (t : Nat) (g : Form) (supported : W.Supported t g) :
+    ¬ W.Supported (t + 1) g :=
+  fun after => holds_brief _ g ((run.supported t g).mp supported) ((run.supported (t + 1) g).mp after)
+
+/-- Every supported formation is linked, within its kind, to a formation supported at every later
+step. -/
+theorem linked (run : Runs W L) (S : Nat) {f : Form} (supported : W.Supported S f) :
+    ∀ k, ∃ g, Web.Linked (W.withinKind sameKind (L.PassesSupport W)) S f (S + k) g ∧
+      W.Supported (S + k) g
+  | 0 => ⟨f, .here S f, supported⟩
+  | k + 1 => match run.linked S supported k with
+    | ⟨g, linked, sg⟩ =>
+      ⟨lineage (parity (S + k)) g, Web.Linked.snoc linked (run.along sg), (run.step sg).2.2⟩
+
+/-- **Within kinds nothing admitted is lost.** -/
+theorem includes (run : Runs W L) :
+    W.IncludesAcrossFrom (W.withinKind sameKind (L.PassesSupport W)) W.level 0 :=
+  fun S _ _ le f admitted => match le_dest le with
+    | ⟨k, at_⟩ => match run.linked S admitted k with
+      | ⟨g, linked, sg⟩ =>
+        ⟨g, Eq.subst (motive := fun x => Web.Linked (W.withinKind sameKind (L.PassesSupport W)) S f
+            x g) at_.symm linked,
+         Eq.subst (motive := fun x => W.Supported x g) at_.symm sg⟩
+
+/-- Across an even step nothing continues, within its kind, into a formation begun there. -/
+theorem not_into (run : Runs W L) {t : Nat} (even : parity t = false) {f : Form}
+    (holds : Holds false f) (g : Form) :
+    ¬ W.withinKind sameKind (L.PassesSupport W) t g (starter f) :=
+  fun step => match step with
+  | .inl ⟨same, sg⟩ => (starter_facts f holds).2
+      (Eq.subst (motive := fun p => Holds p (starter f)) even
+        (Eq.subst (motive := fun x => Holds (parity t) x) same ((run.supported t g).mp sg)))
+  | .inr ⟨passes, kinds⟩ => starter_fresh f g holds
+      (Eq.subst (motive := fun q => 0 < giveAt q g (starter f)) even ((run.passes t g _).mp passes))
+      kinds
+
+/-- **At every odd step something is open**: `c`, begun across the even step before, is linked
+within its kind to nothing at any earlier step. -/
+theorem exceeds (run : Runs W L) {S U : Nat} (lt : S < U) (odd : parity U = true) :
+    W.ExceedsAcross (W.withinKind sameKind (L.PassesSupport W)) W.level S U :=
+  ⟨c, (run.supported U c).mpr (Eq.subst (motive := fun p => Holds p c) odd.symm (by decide)),
+   fun _ linked _ => match Web.Linked.last linked with
+    | .inl ⟨at_, _⟩ => Nat.lt_irrefl S (Eq.subst (motive := fun x => S < x) at_.symm lt)
+    | .inr ⟨t, g, at_, _, step⟩ =>
+      run.not_into (f := a0)
+        (false_of_not_true (b := parity t) (Eq.subst (motive := fun x => parity x = true) at_.symm odd))
+        (by decide) g step⟩
+
+/-- **Within kinds something keeps being opened.** -/
+theorem opens (run : Runs W L) :
+    W.KeepsOpening (W.withinKind sameKind (L.PassesSupport W)) W.level 0 :=
+  fun S _ => match h : parity S with
+    | false => ⟨S + 1, Nat.le_succ S, run.exceeds (Nat.lt_succ_self S)
+        (show (!parity S) = true from Eq.subst (motive := fun b => (!b) = true) h.symm rfl)⟩
+    | true => ⟨S + 2, Nat.le_add_right S 2,
+        run.exceeds (Nat.lt_of_lt_of_le (Nat.lt_succ_self S) (Nat.le_succ (S + 1)))
+          ((parity_two S).trans h)⟩
+
+/-- **The relay keeps widening within kinds**, from step `0`. -/
+theorem keeps_widening (run : Runs W L) :
+    W.KeepsWidening (W.withinKind sameKind (L.PassesSupport W)) W.level 0 :=
+  ⟨run.includes, run.opens⟩
+
+/-- **Every supported occurrence is 全生成 within kinds**, at (activity, one formation): each
+lineage renews through brief carriers at every step. -/
+theorem generation (run : Runs W L) {x : Nat × Form} (start : W.Supported x.1 x.2) :
+    «全生成» (Web.continuationStep (W.withinKind sameKind (L.PassesSupport W)))
+      (W.admitting W.level).activityClass (W.admitting W.level).carrierClass x :=
+  Web.generation_of_alternating run.brief start
+    (Web.endless_of_successor (fun _ _ s => ⟨_, run.along s, (run.step s).2.2⟩) start)
+
+/-- At an even step a supported formation begins a line of the other kind, while its lineage goes
+on: a carrying renewal along passing of support at (activity, kind). -/
+theorem renews_even (run : Runs W L) {t : Nat} (even : parity t = false) {f : Form}
+    (supported : W.Supported t f) :
+    «传» (Web.continuationStep (Web.passingContinuation (L.PassesSupport W)))
+      (W.admitting W.level).activityClass ((W.admitting W.level).kindClass sameKind) (t, f)
+      (t + 1, starter f) :=
+  have holds : Holds false f :=
+    Eq.subst (motive := fun p => Holds p f) even ((run.supported t f).mp supported)
+  (Flow.BeginsAlong.carries_kind_iff sameKind_refl supported).mp
+    ⟨(run.passes t f _).mpr (Eq.subst (motive := fun p => 0 < giveAt p f (starter f)) even.symm
+        (starter_facts f holds).1),
+     fun g step _ => run.not_into even holds g step⟩
+
+/-- **Every supported occurrence is 全生成 one grain up**, along passing of support at (activity,
+kind): from every point of the whole lineage, `a0` or `b0` begins a line of a kind within two
+steps. -/
+theorem generation_one_up (run : Runs W L) {x : Nat × Form} (start : W.Supported x.1 x.2) :
+    «全生成» (Web.continuationStep (Web.passingContinuation (L.PassesSupport W)))
+      (W.admitting W.level).activityClass ((W.admitting W.level).kindClass sameKind) x :=
+  ⟨Web.endless_of_successor (fun _ _ s => ⟨_, .inr (run.step s).1, (run.step s).2.2⟩) start,
+   fun y reached =>
+     have sy : W.Supported y.1 y.2 := Web.active_along_line (W := W.admitting W.level) start reached
+     match h : parity y.1 with
+     | false => ⟨y, (y.1 + 1, starter y.2), .inl rfl, run.renews_even h sy⟩
+     | true =>
+       have sz : W.Supported (y.1 + 1) (lineage (parity y.1) y.2) := (run.step sy).2.2
+       ⟨(y.1 + 1, lineage (parity y.1) y.2), (y.1 + 1 + 1, starter (lineage (parity y.1) y.2)),
+        .inr (.one ⟨⟨rfl, .inr (run.step sy).1⟩, ⟨fun _ => sz, fun _ => sy⟩⟩),
+        run.renews_even (t := y.1 + 1) (show (!parity y.1) = false from
+          Eq.subst (motive := fun b => (!b) = false) h.symm rfl) sz⟩⟩
+
+/-- **Renewal without end at the kind grain** (`«生生»`): from `(0, a0)`, `a0` conditions the
+beginning of `c`'s kind-line, which goes on into `b0`; `b0` begins `e`'s, which reaches `a0`; and so
+on, the family being the supported occurrences at even steps. -/
+theorem renews_without_end (run : Runs W L) :
+    «生生» (Web.continuationStep (Web.passingContinuation (L.PassesSupport W)))
+      ((W.admitting W.level).kindClass sameKind) (0, a0) :=
+  ⟨fun z => parity z.1 = false ∧ W.Supported z.1 z.2,
+   fun z ⟨even, sz⟩ => match run.renews_even even sz with
+     | ⟨⟨stepP, alike⟩, begins⟩ =>
+       have sy : W.Supported (z.1 + 1) (starter z.2) := alike.mp sz
+       ⟨(z.1 + 1, starter z.2), (z.1 + 1 + 1, lineage (parity (z.1 + 1)) (starter z.2)), stepP,
+        begins,
+        .one ⟨⟨rfl, .inr (run.step sy).1⟩, ⟨fun _ => (run.step sy).2.2, fun _ => sy⟩,
+          (run.step sy).2.1⟩,
+        ⟨(parity_two z.1).trans even, (run.step sy).2.2⟩⟩,
+   ⟨rfl, (run.supported 0 a0).mpr (by decide)⟩⟩
+
+/-- Read with dormant carrying on by name, nothing opens from an odd step: whatever is supported
+later is linked, within its kind, to something supported there. -/
+theorem dormant_not_exceeds (run : Runs W L) {S U : Nat} (odd : parity S = true) (le : S ≤ U) :
+    ¬ W.ExceedsAcross (Web.passingContinuation fun t g f => L.PassesSupport W t g f ∧ sameKind g f)
+      W.level S U :=
+  fun ⟨g, sgU, apart⟩ => match hU : parity U with
+  | true =>
+    apart g (Web.Linked.mono (fun _ _ _ same => .inl same) (Web.Linked.itself_of_le le))
+      ((run.supported S g).mpr (Eq.subst (motive := fun p => Holds p g) (hU.trans odd.symm)
+        ((run.supported U g).mp sgU)))
+  | false => match le_dest le with
+    | ⟨0, at_⟩ => Bool.noConfusion (odd.symm.trans
+        (Eq.subst (motive := fun x => parity x = false) at_ hU))
+    | ⟨k + 1, at_⟩ =>
+      have holds : Holds false g :=
+        Eq.subst (motive := fun p => Holds p g) hU ((run.supported U g).mp sgU)
+      have odd' : parity (S + k) = true :=
+        true_of_not_false (b := parity (S + k)) (Eq.subst (motive := fun x => parity x = false) at_ hU)
+      apart (back g)
+        (Eq.subst (motive := fun x => Web.Linked
+            (Web.passingContinuation fun t g f => L.PassesSupport W t g f ∧ sameKind g f) S (back g) x g)
+          at_.symm
+          (Web.Linked.snoc (Web.Linked.mono (fun _ _ _ same => .inl same)
+              (Web.Linked.itself_of_le (Nat.le_add_right S k)))
+            (.inr ⟨(run.passes (S + k) (back g) g).mpr
+                (Eq.subst (motive := fun p => 0 < giveAt p (back g) g) odd'.symm (back_facts g holds).2.1),
+              (back_facts g holds).2.2⟩)))
+        ((run.supported S (back g)).mpr
+          (Eq.subst (motive := fun p => Holds p (back g)) odd.symm (back_facts g holds).1))
+
+/-- **Read with dormant carrying on by name, the relay keeps opening from no step**: there `c`,
+begun across an even step, is linked to `c` supported at the step before it, so nothing opens from
+odd steps. The reading counts names, not lineages. -/
+theorem not_keepsOpening_dormant (run : Runs W L) (T : Nat) :
+    ¬ W.KeepsOpening (Web.passingContinuation fun t g f => L.PassesSupport W t g f ∧ sameKind g f)
+      W.level T :=
+  fun opens => match h : parity T with
+  | true => match opens T (Nat.le_refl T) with
+    | ⟨_, le, exceeds⟩ => run.dormant_not_exceeds h le exceeds
+  | false => match opens (T + 1) (Nat.le_succ T) with
+    | ⟨_, le, exceeds⟩ => run.dormant_not_exceeds (S := T + 1)
+        (show (!parity T) = true from Eq.subst (motive := fun b => (!b) = true) h.symm rfl) le exceeds
+
+end Runs
+
+/-! #### The closed relay -/
+
+/-- Six formations, each requiring its own condition at need one; the levels are `amount` at the
+step's parity. -/
+def web : Web Form Form :=
+  ⟨fun t x => amount (parity t) x, fun t f => Holds (parity t) f, fun _ f x => x = f,
+   fun _ _ _ => 1, fun _ f x => x = f⟩
+
+/-- The supported formations take all their units and move them as `giveAt` says. -/
+def flow : Flow Form Form :=
+  ⟨fun t => presentAt (parity t), fun t g x => takeAt (parity t) g x,
+   fun t g x => giveAt (parity t) g x⟩
+
+theorem supported_iff {t : Nat} {f : Form} : web.Supported t f ↔ Holds (parity t) f :=
+  ⟨fun s => s f rfl, fun h _ same =>
+    Eq.subst (motive := fun x => 1 ≤ amount (parity t) x) same.symm h⟩
+
+theorem passes_iff {t : Nat} {g f : Form} :
+    flow.PassesSupport web t g f ↔ 0 < giveAt (parity t) g f :=
+  ⟨fun ⟨_, _, _, _, same, _, gives⟩ =>
+     Eq.subst (motive := fun x => 0 < giveAt (parity t) g x) same gives,
+   fun gives => match moves_facts (parity t) g f gives with
+    | ⟨mem, hg, nf, hf, rises⟩ => ⟨mem, supported_iff.mpr hg,
+        ⟨fun s => nf (supported_iff.mp s), supported_iff.mpr hf⟩, f, rfl, rises, gives⟩⟩
+
+/-- The closed relay runs the relay. -/
+theorem runs : Runs web flow := ⟨fun _ _ => supported_iff, fun _ _ _ => passes_iff⟩
+
+theorem balance_at : ∀ p x, amount (!p) x + total (presentAt p) (fun f => takeAt p f x) =
+    amount p x + total (presentAt p) (fun f => giveAt p f x) := by
+  intro p x; cases p <;> cases x <;> rfl
+
+/-- The relay balances: units move, nothing is made. -/
+theorem balances : flow.Balances web := fun t x => balance_at (parity t) x
+
+/-- Only supported formations give. -/
+theorem acting : flow.Acting web := fun t f _ mem _ => present_holds (parity t) f mem
+
+theorem dependent : web.Dependent := fun _ _ active => supported_iff.mpr active
+
+theorem unloosened : ∀ t f, web.Unloosened t f := fun _ _ _ req => ⟨req, Nat.le_refl 1⟩
+
+/-- What each formation requires is fixed, and within the six conditions. -/
+theorem requiresWithin : ∀ f, web.RequiresWithin allForms f :=
+  fun _ _ _ x same => ⟨same, rfl, every_form x⟩
+
+/-- Over lists without repetition holding where a quantity is positive, its totals agree. -/
+theorem total_eq_of_supports {α : Type} {q : α → Nat} {l m : List α} (dl : Distinct l)
+    (dm : Distinct m) (lm : ∀ a, 0 < q a → a ∈ m) (ml : ∀ a, 0 < q a → a ∈ l) :
+    total l q = total m q :=
+  Nat.le_antisymm (total_le_of_support dl fun a _ pos => lm a pos)
+    (total_le_of_support dm fun a _ pos => ml a pos)
+
+theorem give_support : ∀ p f a, 0 < giveAt p f a → a ∈ giveSupport p f := by
+  intro p f a; cases p <;> cases f <;> cases a <;> decide
+
+theorem take_support : ∀ p f a, 0 < takeAt p f a → a ∈ [f] := by
+  intro p f a; cases p <;> cases f <;> cases a <;> decide
+
+theorem single_distinct (f : Form) : Distinct [f] := ⟨(fun no => nomatch no), trivial⟩
+
+theorem pair_distinct {f g : Form} (other : f ≠ g) : Distinct [f, g] :=
+  ⟨fun mem => match mem_cons_cases mem with
+    | .inl same => other same
+    | .inr no => (nomatch no),
+   (fun no => nomatch no), trivial⟩
+
+theorem give_distinct : ∀ p f, Distinct (giveSupport p f) := by
+  intro p f; cases p <;> cases f <;>
+    first
+    | exact trivial
+    | exact single_distinct _
+    | exact pair_distinct (by decide)
+
+/-- Each formation taking part moves exactly what it takes. -/
+theorem moves_taken : ∀ p f, f ∈ presentAt p →
+    total (giveSupport p f) (giveAt p f) = total [f] (takeAt p f) := by
+  intro p f; cases p <;> cases f <;> decide
+
+/-- A formation taking part touches only conditions of a family closed across the step. -/
+theorem inside {C : Type} [DecidableEq C] {L : Flow Form C} {cs : List C} {t : Nat}
+    (closed : L.ClosedAt cs t) {f : Form} (mem : f ∈ L.present t) {q : C → Nat}
+    (zero : ∀ a, L.take t f a = 0 ∧ L.give t f a = 0 → q a = 0) : ∀ a, 0 < q a → a ∈ cs :=
+  fun a pos => match decideMem a cs with
+    | .isTrue h => h
+    | .isFalse out => absurd (Eq.subst (motive := fun x => 0 < x)
+        (zero a (closed f mem a out)) pos) (Nat.lt_irrefl 0)
+
+/-- **The relay conserves**: every formation taking part gives every family closed across the step
+exactly what it takes. -/
+theorem conserving : flow.Conserving := fun _ _ distinct closed f mem =>
+  (total_eq_of_supports distinct (give_distinct _ f) (give_support _ f)
+      (inside closed mem fun _ none => none.2)).trans
+    ((moves_taken _ f mem).trans
+      (total_eq_of_supports distinct (single_distinct f) (take_support _ f)
+        (inside closed mem fun _ none => none.1)).symm)
+
+theorem gainless : flow.Gainless := conserving.gainless
+
+/-- **Keeping widening within kinds**, the closed relay. -/
+theorem keeps_widening :
+    web.KeepsWidening (web.withinKind sameKind (flow.PassesSupport web)) web.level 0 :=
+  runs.keeps_widening
+
+/-- **全生成 within kinds at every supported occurrence**, the closed relay. -/
+theorem generation {x : Nat × Form} (start : web.Supported x.1 x.2) :
+    «全生成» (Web.continuationStep (web.withinKind sameKind (flow.PassesSupport web)))
+      (web.admitting web.level).activityClass (web.admitting web.level).carrierClass x :=
+  runs.generation start
+
+/-- **全生成 one grain up at every supported occurrence**, the closed relay. -/
+theorem generation_one_up {x : Nat × Form} (start : web.Supported x.1 x.2) :
+    «全生成» (Web.continuationStep (Web.passingContinuation (flow.PassesSupport web)))
+      (web.admitting web.level).activityClass ((web.admitting web.level).kindClass sameKind) x :=
+  runs.generation_one_up start
+
+/-- **Renewal without end at the kind grain**, the closed relay. -/
+theorem renews_without_end :
+    «生生» (Web.continuationStep (Web.passingContinuation (flow.PassesSupport web)))
+      ((web.admitting web.level).kindClass sameKind) (0, a0) :=
+  runs.renews_without_end
+
+/-- **By name the closed relay keeps widening from no step**: its six conditions are listed, it
+balances, nothing comes from nothing and what its formations require is fixed
+(`Flow.whole_not_keepsWidening`). -/
+theorem not_keepsWidening_byName (T : Nat) : ¬ web.KeepsWidening Web.itself web.level T :=
+  Flow.whole_not_keepsWidening every_form distinct_forms gainless (T₀ := 0)
+    (fun t _ => balances.on allForms t) fun _ f _ _ => requiresWithin f
+
+/-- **Along supported passings the closed relay keeps widening from no step**: it meets the World
+premises (`Flow.not_keepsWidening_along_supportedPassing`). -/
+theorem not_keepsWidening_supportedPassing (T : Nat) :
+    ¬ web.KeepsWidening (web.supportedPassing (flow.PassesSupport web)) web.level T :=
+  Flow.not_keepsWidening_along_supportedPassing balances acting dependent unloosened
+    (fun _ _ _ step => step) T
+
+/-- **Read with dormant carrying on by name, the closed relay keeps widening from no step.** -/
+theorem not_keepsWidening_dormant (T : Nat) :
+    ¬ web.KeepsWidening
+      (Web.passingContinuation fun t g f => flow.PassesSupport web t g f ∧ sameKind g f)
+      web.level T :=
+  fun keeps => runs.not_keepsOpening_dormant T keeps.2
+
+/-- **The closed relay returns**: its levels and its flow repeat with period two. -/
+theorem returns (t : Nat) :
+    (∀ x, web.level (t + 2) x = web.level t x) ∧ flow.present (t + 2) = flow.present t ∧
+      (∀ g x, flow.take (t + 2) g x = flow.take t g x) ∧
+      ∀ g x, flow.give (t + 2) g x = flow.give t g x :=
+  ⟨fun x => congrArg (fun p => amount p x) (parity_two t),
+   congrArg presentAt (parity_two t),
+   fun g x => congrArg (fun p => takeAt p g x) (parity_two t),
+   fun g x => congrArg (fun p => giveAt p g x) (parity_two t)⟩
+
+/-! #### The fed relay: dissipative, supplied from beyond -/
+
+namespace Fed
+
+/-- The fuel a step uses: a unit for each formation taking part. -/
+def fuelNeed : Bool → Nat
+  | false => 2
+  | true => 4
+
+theorem fuel_present : ∀ p, total (presentAt p) (fun _ => 1) = fuelNeed p
+  | false => rfl
+  | true => rfl
+
+/-- The levels: each formation's own condition as in the closed relay; the fuel of step `t` holds
+what step `t` uses until step `t`, and nothing after. -/
+def level (s : Nat) : Form ⊕ Nat → Nat
+  | .inl f => amount (parity s) f
+  | .inr t => if s ≤ t then fuelNeed (parity t) else 0
+
+/-- The fed relay's web: the formations and their requirements are the closed relay's. -/
+def web : Web Form (Form ⊕ Nat) :=
+  ⟨level, fun t f => Holds (parity t) f, fun _ f x => x = .inl f, fun _ _ _ => 1,
+   fun _ f x => x = .inl f⟩
+
+/-- Each formation taking part takes as in the closed relay, and one unit of the step's fuel. -/
+def take (s : Nat) (g : Form) : Form ⊕ Nat → Nat
+  | .inl x => takeAt (parity s) g x
+  | .inr t => if s = t then 1 else 0
+
+/-- Each formation taking part gives as in the closed relay, and no fuel. -/
+def give (s : Nat) (g : Form) : Form ⊕ Nat → Nat
+  | .inl x => giveAt (parity s) g x
+  | .inr _ => 0
+
+def flow : Flow Form (Form ⊕ Nat) := ⟨fun t => presentAt (parity t), take, give⟩
+
+theorem supported_iff {t : Nat} {f : Form} : web.Supported t f ↔ Holds (parity t) f :=
+  ⟨fun s => s (.inl f) rfl, fun h _ same =>
+    Eq.subst (motive := fun x => 1 ≤ level t x) same.symm h⟩
+
+theorem passes_iff {t : Nat} {g f : Form} :
+    flow.PassesSupport web t g f ↔ 0 < giveAt (parity t) g f :=
+  ⟨fun ⟨_, _, _, _, same, _, gives⟩ =>
+     Eq.subst (motive := fun x => 0 < give t g x) same gives,
+   fun gives => match moves_facts (parity t) g f gives with
+    | ⟨mem, hg, nf, hf, rises⟩ => ⟨mem, supported_iff.mpr hg,
+        ⟨fun s => nf (supported_iff.mp s), supported_iff.mpr hf⟩, .inl f, rfl, rises, gives⟩⟩
+
+/-- The fed relay runs the relay: supports and passings are the closed relay's. -/
+theorem runs : Runs web flow := ⟨fun _ _ => supported_iff, fun _ _ _ => passes_iff⟩
+
+theorem fuel_balance (s t : Nat) :
+    level (s + 1) (.inr t) + total (presentAt (parity s)) (fun g => take s g (.inr t)) =
+      level s (.inr t) + total (presentAt (parity s)) (fun g => give s g (.inr t)) :=
+  have given : total (presentAt (parity s)) (fun g => give s g (.inr t)) = 0 :=
+    total_eq_zero fun _ _ => rfl
+  match Nat.decEq s t with
+  | .isTrue same =>
+    have taken : total (presentAt (parity s)) (fun g => take s g (.inr t)) = fuelNeed (parity s) :=
+      (total_congr (fun _ => if_pos same) _).trans (fuel_present (parity s))
+    have after : level (s + 1) (.inr t) = 0 :=
+      if_neg (Eq.subst (motive := fun x => ¬ s + 1 ≤ x) same (Nat.not_succ_le_self s))
+    have before : level s (.inr t) = fuelNeed (parity s) :=
+      (if_pos (Nat.le_of_eq same)).trans (congrArg (fun x => fuelNeed (parity x)) same.symm)
+    (congrArg (· + total (presentAt (parity s)) (fun g => take s g (.inr t))) after).trans
+      ((Nat.zero_add _).trans (taken.trans
+        (before.symm.trans (congrArg (level s (.inr t) + ·) given).symm)))
+  | .isFalse other =>
+    have taken : total (presentAt (parity s)) (fun g => take s g (.inr t)) = 0 :=
+      total_eq_zero fun _ _ => if_neg other
+    have alike : level (s + 1) (.inr t) = level s (.inr t) := match Nat.decLe (s + 1) t with
+      | .isTrue later => (if_pos later).trans (if_pos (Nat.le_of_succ_le later)).symm
+      | .isFalse notLater => (if_neg notLater).trans (if_neg fun le =>
+          match Nat.eq_or_lt_of_le le with
+          | .inl same => other same
+          | .inr lt => notLater lt).symm
+    (congrArg (level (s + 1) (.inr t) + ·) taken).trans
+      (alike.trans (congrArg (level s (.inr t) + ·) given).symm)
+
+/-- The fed relay balances, at the formations' conditions and at the fuel. -/
+theorem balances : flow.Balances web := fun s x => match x with
+  | .inl x => balance_at (parity s) x
+  | .inr t => fuel_balance s t
+
+theorem acting : flow.Acting web := fun t f _ mem _ => present_holds (parity t) f mem
+
+theorem dependent : web.Dependent := fun _ _ active => supported_iff.mpr active
+
+theorem unloosened : ∀ t f, web.Unloosened t f := fun _ _ _ req => ⟨req, Nat.le_refl 1⟩
+
+theorem give_support (s : Nat) (f : Form) :
+    ∀ a, 0 < give s f a → a ∈ (giveSupport (parity s) f).map Sum.inl
+  | .inl a, pos => mem_map_of (KindRelay.give_support _ f a pos)
+  | .inr _, pos => absurd pos (Nat.lt_irrefl 0)
+
+theorem take_support (s : Nat) (f : Form) : ∀ a, 0 < take s f a → a ∈ [.inl f, .inr s]
+  | .inl a, pos => match mem_cons_cases (KindRelay.take_support _ f a pos) with
+    | .inl same => Eq.subst (motive := fun x => Sum.inl x ∈ [Sum.inl f, Sum.inr s]) same.symm
+        (.head _)
+    | .inr no => nomatch no
+  | .inr t, pos => match Nat.decEq s t with
+    | .isTrue same => Eq.subst (motive := fun x => Sum.inr x ∈ [Sum.inl f, Sum.inr s]) same
+        (.tail _ (.head _))
+    | .isFalse other => absurd (Eq.subst (motive := fun x => 0 < x) (if_neg other) pos)
+        (Nat.lt_irrefl 0)
+
+theorem map_distinct : ∀ {l : List Form}, Distinct l → Distinct (l.map (Sum.inl (β := Nat)))
+  | [], _ => trivial
+  | _ :: _, ⟨fresh, distinct⟩ =>
+    ⟨fun mem => match ListTests.mem_map_iff.mp mem with
+      | ⟨_, inside, same⟩ => fresh (Eq.subst (motive := fun y => y ∈ _) (Sum.inl.inj same) inside),
+     map_distinct distinct⟩
+
+theorem take_distinct (s : Nat) (f : Form) : Distinct [Sum.inl (β := Nat) f, .inr s] :=
+  ⟨fun mem => (match mem with
+    | .tail _ no => nomatch no), (fun no => nomatch no), trivial⟩
+
+/-- **The fed relay dissipates**: every formation taking part gives every family closed across the
+step a unit less than it takes, the unit of fuel. -/
+theorem dissipative : flow.Dissipative := fun cs s distinct closed f mem =>
+  have given : total cs (flow.give s f) = total [f] (takeAt (parity s) f) :=
+    (total_eq_of_supports distinct (map_distinct (give_distinct _ f)) (give_support s f)
+        (inside closed mem fun _ none => none.2)).trans
+      ((total_map Sum.inl (give s f) _).trans (moves_taken _ f mem))
+  have taken : total cs (flow.take s f) = total [f] (takeAt (parity s) f) + 1 :=
+    (total_eq_of_supports distinct (take_distinct s f) (take_support s f)
+        (inside closed mem fun _ none => none.1)).trans
+      (congrArg (fun x => takeAt (parity s) f f + (x + 0)) (if_pos rfl))
+  Eq.subst (motive := fun x => x + sign (total cs (flow.take s f)) ≤ total cs (flow.take s f))
+    given.symm
+    (Eq.subst (motive := fun y => total [f] (takeAt (parity s) f) + sign y ≤ y) taken.symm
+      (Nat.le_refl _))
+
+theorem gainless : flow.Gainless := dissipative.gainless
+
+/-- **Keeping widening within kinds**, the fed relay. -/
+theorem keeps_widening :
+    web.KeepsWidening (web.withinKind sameKind (flow.PassesSupport web)) web.level 0 :=
+  runs.keeps_widening
+
+/-- **全生成 within kinds at every supported occurrence**, the fed relay. -/
+theorem generation {x : Nat × Form} (start : web.Supported x.1 x.2) :
+    «全生成» (Web.continuationStep (web.withinKind sameKind (flow.PassesSupport web)))
+      (web.admitting web.level).activityClass (web.admitting web.level).carrierClass x :=
+  runs.generation start
+
+/-- **全生成 one grain up at every supported occurrence**, the fed relay. -/
+theorem generation_one_up {x : Nat × Form} (start : web.Supported x.1 x.2) :
+    «全生成» (Web.continuationStep (Web.passingContinuation (flow.PassesSupport web)))
+      (web.admitting web.level).activityClass ((web.admitting web.level).kindClass sameKind) x :=
+  runs.generation_one_up start
+
+/-- **Renewal without end at the kind grain**, the fed relay. -/
+theorem renews_without_end :
+    «生生» (Web.continuationStep (Web.passingContinuation (flow.PassesSupport web)))
+      ((web.admitting web.level).kindClass sameKind) (0, a0) :=
+  runs.renews_without_end
+
+/-- **Along supported passings the fed relay keeps widening from no step**: it meets the World
+premises. -/
+theorem not_keepsWidening_supportedPassing (T : Nat) :
+    ¬ web.KeepsWidening (web.supportedPassing (flow.PassesSupport web)) web.level T :=
+  Flow.not_keepsWidening_along_supportedPassing balances acting dependent unloosened
+    (fun _ _ _ step => step) T
+
+/-- **Read with dormant carrying on by name, the fed relay keeps widening from no step.** -/
+theorem not_keepsWidening_dormant (T : Nat) :
+    ¬ web.KeepsWidening
+      (Web.passingContinuation fun t g f => flow.PassesSupport web t g f ∧ sameKind g f)
+      web.level T :=
+  fun keeps => runs.not_keepsOpening_dormant T keeps.2
+
+/-- **The fed relay's part returns while its fuel is spent**: the formations' own levels and the
+moves between them repeat with period two. -/
+theorem returns (t : Nat) :
+    (∀ f, web.level (t + 2) (.inl f) = web.level t (.inl f)) ∧
+      flow.present (t + 2) = flow.present t ∧
+      ∀ g f, flow.give (t + 2) g (.inl f) = flow.give t g (.inl f) :=
+  ⟨fun f => congrArg (fun p => amount p f) (parity_two t),
+   congrArg presentAt (parity_two t),
+   fun g f => congrArg (fun p => giveAt p g f) (parity_two t)⟩
+
+end Fed
+
+end KindRelay
 
 end Becoming

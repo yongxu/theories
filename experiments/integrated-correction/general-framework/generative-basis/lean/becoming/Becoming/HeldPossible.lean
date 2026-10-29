@@ -50,7 +50,11 @@ read as processes.
   step on (`Run.held_change_recurs_of_keepsWidening`). Where it keeps widening, read on the
   course's moments in the grammar, from no moment is the course's line under the part unending
   (`«不穷»`, `Run.not_unending_of_heldKeepsWidening`), and where holding is also decided, a line
-  under the part begins (`«生»`) after every moment (`Run.begins_of_heldKeepsWidening`). It keeps
+  under the part begins (`«生»`) after every moment (`Run.begins_of_heldKeepsWidening`). On the
+  map, a moment is 全生成 at (the one, what is held) exactly where a line under the part begins
+  after every moment from it (`Steps.generation_iff_begins`), so there every moment is 全生成
+  (`Run.generation_of_heldKeepsWidening`), the landed law restated; not conversely
+  (`Oscillating.generation_without_widening`). It keeps
   widening only where no list holds the whole possible from the course's start
   (`Run.not_heldKeepsWidening_of_listed`). Endless change of the part with an unlisted whole
   possible does not suffice for keeping widening (`Oscillating.converse_fails`).
@@ -100,11 +104,14 @@ read as processes.
   rules from every height up held keeps widening while every formation stays possible; each rule
   changes once, and the change climbs (`CopyDown.held_keeps_widening`, `CopyDown.whole_every`,
   `CopyDown.changes_iff`). Read on the course's moments under what is held, no moment of either
-  renews, so every moment ceases (`«息»`; `RaisedRule.ceases`, `CopyDown.ceases`). In
+  renews, so every moment ceases (`«息»`; `RaisedRule.ceases`, `CopyDown.ceases`), while every
+  moment of `RaisedRule` is 全生成 there (`RaisedRule.generation`): the map's generation without
+  renewal without end. In
   `RaisedEveryOther`, the rule raised at every other step, the possible with the rule held keeps
   widening, every formation stays possible, and renewal without end (`«生生»`) holds at every even
   moment, so moment `0` does not cease (`RaisedEveryOther.both`): growth relative to what is held
-  and renewal without end are different relations, and both can hold with a fixed whole possible.
+  and renewal without end are different relations, and both can hold with a fixed whole possible;
+  every moment is 全生成 there as well (`RaisedEveryOther.generation_with_both`).
 
 Each law is near-definitional or a witness; no choice principle enters, and runs are built, never
 chosen. What is read: along a course of a stated process the whole possible never grows, and the
@@ -387,6 +394,43 @@ theorem Run.begins_of_heldKeepsWidening (r : Run P)
   match r.held_change_recurs_of_keepsWidening decided keeps N with
   | ⟨n, from_, changes⟩ => ⟨n, from_, fun before => changes (Steps.hasPred_iff.mp before)⟩
 
+/-- **On a course's moments, 全生成 under the one is a beginning after every moment**: read along
+the steps (`Steps.next`) with the one (`«一»`) as the coarse class and any relation `E` as the fine,
+a moment `N` is 全生成 exactly where, after every moment from `N` on, a line under `E` begins. The
+line under the one never ends and reaches every later moment (`Steps.reached_of_buqiong`), and a
+step of it is a carrying renewal exactly where its end begins under `E`. -/
+theorem Steps.generation_iff_begins {E : «际» Nat} {N : Nat} :
+    «全生成» Steps.next «一» E N ↔ ∀ y, N ≤ y → ∃ n, y ≤ n ∧ «生» Steps.next E (n + 1) :=
+  have endless : ∀ x, «不穷» Steps.next «一» x := fun _ => Steps.buqiong_iff.mpr fun _ => trivial
+  have reach_to : ∀ {x y : Nat}, x ≤ y → «所及» Steps.next «一» x y := fun {x _} le =>
+    match Nat.eq_or_lt_of_le le with
+    | .inl same => .inl same
+    | .inr lt => match le_dest lt with
+      | ⟨m, at_⟩ => .inr (Eq.subst (motive := fun z => «相续» Steps.next «一» x z)
+          ((Nat.add_right_comm x 1 m).symm.trans at_.symm) (Steps.reached_of_buqiong (endless x) m))
+  have reached_le : ∀ {x y : Nat}, «所及» Steps.next «一» x y → x ≤ y := fun {x _} reached =>
+    match reached with
+    | .inl same => Nat.le_of_eq same
+    | .inr line => match Steps.reach_later line with
+      | ⟨n, at_⟩ => Eq.subst (motive := fun z => x ≤ z) at_.symm
+          (Nat.le_succ_of_le (Nat.le_add_right x n))
+  ⟨fun ⟨_, ahead⟩ y later => match ahead y (reach_to later) with
+     | ⟨z, _, toZ, ⟨⟨next, _⟩, begins⟩⟩ =>
+       ⟨z, reached_le toZ, Eq.subst (motive := fun x => «生» Steps.next E x) next begins⟩,
+   fun begins => ⟨endless N, fun y reached => match begins y (reached_le reached) with
+     | ⟨n, le, begun⟩ => ⟨n, n + 1, reach_to le, ⟨⟨rfl, trivial⟩, begun⟩⟩⟩⟩
+
+/-- **Where holding is decided and the possible with a part held keeps widening, every moment is
+全生成 at (the one, what is held)**: read on the course's moments, after every moment a line under
+the part begins (`Run.begins_of_heldKeepsWidening`), which is 全生成 there
+(`Steps.generation_iff_begins`). The landed law restated on the map; not conversely
+(`Oscillating.generation_without_widening`). -/
+theorem Run.generation_of_heldKeepsWidening (r : Run P)
+    (decided : ∀ n, Same (r.state n) (r.state (n + 1)) ∨ ¬ Same (r.state n) (r.state (n + 1)))
+    (keeps : Reaching.KeepsWidening (fun n => Reaching.PossibleHeld P Same adm (r.state n)))
+    (N : Nat) : «全生成» Steps.next «一» (fun n m => Same (r.state n) (r.state m)) N :=
+  Steps.generation_iff_begins.mpr fun y _ => r.begins_of_heldKeepsWidening decided keeps y
+
 /-- **The possible with a part held keeps widening only where no list holds the whole possible
 from the course's start** (`Reaching.KeepsWidening.not_listed`). -/
 theorem Run.not_heldKeepsWidening_of_listed (r : Run P)
@@ -668,6 +712,14 @@ possible with the rule held keeps widening while no line under the rule goes on.
 theorem ceases (n : Nat) : «息» Steps.next (fun i j => Same (course.state i) (course.state j)) n :=
   «自不复生则息» (not_renews n)
 
+/-- **Every moment of the course is 全生成 at (the one, the rule held)**, since the rule changes at
+every step, while every moment ceases (`ceases`): the map's generation without renewal without
+end. -/
+theorem generation (N : Nat) :
+    «全生成» Steps.next «一» (fun i j => Same (course.state i) (course.state j)) N :=
+  Steps.generation_iff_begins.mpr fun y _ =>
+    ⟨y, Nat.le_refl y, fun pred => rule_changes y (Steps.hasPred_iff.mp pred)⟩
+
 end RaisedRule
 
 /-! ### Growth relative to what is held, with renewal without end -/
@@ -743,6 +795,22 @@ theorem renews_without_end {k : Nat} (even : odd k = false) :
         | .inr ⟨stay, _⟩ => stay⟩,
       (Bool.not_not (odd j)).trans evenJ⟩, even⟩
 
+/-- After every even moment a line under the rule held begins: the rule is raised across the
+step. -/
+theorem begins_after_even {k : Nat} (even : odd k = false) :
+    «生» Steps.next (fun i j => Same (course.state i) (course.state j)) (k + 1) :=
+  fun pred => match step_cases k, Steps.hasPred_iff.mp pred with
+    | .inl ⟨raise, _⟩, same => Nat.succ_ne_self (rule k) (raise.symm.trans same)
+    | .inr ⟨_, isOdd⟩, _ => Bool.noConfusion (even.symm.trans isOdd)
+
+/-- **Every moment of the course is 全生成 at (the one, the rule held).** -/
+theorem generation (N : Nat) :
+    «全生成» Steps.next «一» (fun i j => Same (course.state i) (course.state j)) N :=
+  Steps.generation_iff_begins.mpr fun y _ => match h : odd y with
+    | false => ⟨y, Nat.le_refl y, begins_after_even h⟩
+    | true => ⟨y + 1, Nat.le_succ y, begins_after_even (k := y + 1)
+        (show (!odd y) = false from Eq.subst (motive := fun b => (!b) = false) h.symm rfl)⟩
+
 /-- **Growth relative to what is held and renewal without end, both at once, with a fixed whole
 possible**: the possible with the rule held keeps widening, every formation is possible from every
 configuration of the course, and the course's moments under the rule held renew without end from
@@ -753,6 +821,17 @@ theorem both :
     «生生» Steps.next (fun i j => Same (course.state i) (course.state j)) 0 ∧
     ¬ «息» Steps.next (fun i j => Same (course.state i) (course.state j)) 0 :=
   ⟨held_keeps_widening, whole_every, renews_without_end rfl, «生生不息» (renews_without_end rfl)⟩
+
+/-- **The map's generation with both**: besides `both`, every moment of the course is 全生成 at (the
+one, the rule held). Generation on the map, renewal without end and growth relative to what is held
+hold together on one course, with a fixed whole possible. -/
+theorem generation_with_both :
+    (Reaching.KeepsWidening (fun k => Reaching.PossibleHeld process Same adm (course.state k)) ∧
+      (∀ k y, Reaching.Possible process adm (course.state k) y) ∧
+      «生生» Steps.next (fun i j => Same (course.state i) (course.state j)) 0 ∧
+      ¬ «息» Steps.next (fun i j => Same (course.state i) (course.state j)) 0) ∧
+    ∀ N, «全生成» Steps.next «一» (fun i j => Same (course.state i) (course.state j)) N :=
+  ⟨both, generation⟩
 
 end RaisedEveryOther
 
@@ -828,6 +907,22 @@ theorem converse_fails :
 /-- **The course returns every two steps.** -/
 theorem returns (k : Nat) : course.state (k + 2) = course.state k :=
   congrArg (fun b => ((cond b 1 0 : Nat), (0 : Nat))) (Bool.not_not (flip k))
+
+/-- **Every moment of the course is 全生成 at (the one, the rule held)**: the rule changes at every
+step. -/
+theorem generation (N : Nat) :
+    «全生成» Steps.next «一» (fun i j => Same (course.state i) (course.state j)) N :=
+  Steps.generation_iff_begins.mpr fun y _ =>
+    ⟨y, Nat.le_refl y, fun pred => rule_changes y (Steps.hasPred_iff.mp pred)⟩
+
+/-- **The map's generation without keeping widening**: every moment is 全生成 at (the one, the rule
+held) while the possible with the rule held does not keep widening, so the converse of
+`Run.generation_of_heldKeepsWidening` fails. -/
+theorem generation_without_widening :
+    (∀ N, «全生成» Steps.next «一» (fun i j => Same (course.state i) (course.state j)) N) ∧
+      ¬ Reaching.KeepsWidening
+        (fun k => Reaching.PossibleHeld process Same adm (course.state k)) :=
+  ⟨generation, converse_fails.2.2⟩
 
 /-- The configuration at step `0` comes back at arbitrarily late steps. -/
 theorem comes_back : ∀ d, ∃ m, 0 + d ≤ m ∧ course.state m = course.state 0
