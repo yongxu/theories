@@ -1,6 +1,6 @@
 # U2's leaf: the re-check of its 21 items against their rows
 
-AI re-check, 30 October 2026, by one independent reader, read-only, of the leaf `Becoming.ModelStatements` as it lands: 78 theorems in 121 declarations, at `f8bcee9b4`, where its kit moved to `78cdcc2c5` during the reading. F5's specification ([mv/F5-MODEL-STATEMENTS.md](../../../2026-10-05-repository-reconciliation/architecture/mv/F5-MODEL-STATEMENTS.md) §6) asks for it: [REVIEW-U2](REVIEW-U2.md) read the 48-theorem scratch, before rows 11, 14, 15, 16 and 20–24 took their present statements and before `renewing_not_closed` existed. Each item's `review` names this re-check.
+AI re-check, 30 October 2026, by one independent reader, read-only, of the leaf `Becoming.ModelStatements` as it lands: 78 theorems in 121 declarations, at `f8bcee9b4`, where its kit moved to `78cdcc2c5` during the reading. F5's specification ([mv/F5-MODEL-STATEMENTS.md](../../../../2026-10-05-repository-reconciliation/architecture/mv/F5-MODEL-STATEMENTS.md) §6) asks for it: [REVIEW-U2](REVIEW-U2.md) read the 48-theorem scratch, before rows 11, 14, 15, 16 and 20–24 took their present statements and before `renewing_not_closed` existed. Each item's `review` names this re-check.
 
 **What the reader checked.** For each of the 21 items it checked four things:
 - whether the declaration states what its row states at the declared models, with exactly the row's hypotheses: none weakened, strengthened or vacuous, none dropped;

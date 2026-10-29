@@ -7519,6 +7519,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.ModelStatements",
+   "type": "module",
+   "name": "Becoming.ModelStatements",
+   "level": "L1",
+   "theorems": 78,
+   "region": "root",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.Growth",
    "type": "module",
    "name": "Becoming.Growth",
@@ -32435,6 +32446,101 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Descent",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Experiment",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Joint",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.JointKeeping",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.LabelledRoles",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Learning",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.LimitVerification",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Optimum",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.PoolResponse",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.ProcessRepresentation",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Regions",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Roles",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.SharedCodes",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Significance",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Standpoints",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Transmission",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.ValuationFrames",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.Verification",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ModelStatements",
+   "to": "module:Becoming.WorldRepresentation",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.MoveFormation",
    "to": "module:Becoming.Counterfactual",
    "type": "imports"
@@ -34061,6 +34167,11 @@
   },
   {
    "from": "record:a-code-formed-between-formations",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-code-formed-between-formations",
    "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
@@ -35542,6 +35653,11 @@
   {
    "from": "record:becoming-finite-horizon",
    "to": "module:Becoming.LabelledRoles",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:becoming-finite-horizon",
+   "to": "module:Becoming.ModelStatements",
    "type": "proved-in"
   },
   {
@@ -37821,6 +37937,11 @@
   },
   {
    "from": "record:conditions-kept-together",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:conditions-kept-together",
    "to": "module:Becoming.Onward",
    "type": "proved-in"
   },
@@ -38237,6 +38358,11 @@
   {
    "from": "record:continuation-condition-yields-living-significance",
    "to": "module:Becoming.Metaethics",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:continuation-condition-yields-living-significance",
+   "to": "module:Becoming.ModelStatements",
    "type": "proved-in"
   },
   {
@@ -40276,6 +40402,11 @@
   },
   {
    "from": "record:experiment-needs-return",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:experiment-needs-return",
    "to": "module:Becoming.Recurrence",
    "type": "proved-in"
   },
@@ -41082,6 +41213,11 @@
   {
    "from": "record:generalization-through-lumping",
    "to": "module:Becoming.Mechanism",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:generalization-through-lumping",
+   "to": "module:Becoming.ModelStatements",
    "type": "proved-in"
   },
   {
@@ -43006,6 +43142,11 @@
   },
   {
    "from": "record:joint-difference-making",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:joint-difference-making",
    "to": "module:Becoming.Restoration",
    "type": "proved-in"
   },
@@ -43616,6 +43757,11 @@
   },
   {
    "from": "record:learning-through-a-map-is-tracking-in-the-limit",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:learning-through-a-map-is-tracking-in-the-limit",
    "to": "record:learnable-through-a-map",
    "type": "formal-reuse"
   },
@@ -43946,6 +44092,11 @@
   },
   {
    "from": "record:life-as-condition-of-life",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:life-as-condition-of-life",
    "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
@@ -44146,6 +44297,11 @@
   },
   {
    "from": "record:living-on-and-descent",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:living-on-and-descent",
    "to": "module:Becoming.Reserve",
    "type": "proved-in"
   },
@@ -44197,6 +44353,11 @@
   {
    "from": "record:living-significance-on-held-lives",
    "to": "module:Becoming.Metaethics",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:living-significance-on-held-lives",
+   "to": "module:Becoming.ModelStatements",
    "type": "proved-in"
   },
   {
@@ -48611,6 +48772,11 @@
   },
   {
    "from": "record:represented-boundary-against-dependence",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:represented-boundary-against-dependence",
    "to": "module:Becoming.Regions",
    "type": "proved-in"
   },
@@ -52486,6 +52652,11 @@
   },
   {
    "from": "record:transmission-is-inheritance-and-need",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:transmission-is-inheritance-and-need",
    "to": "module:Becoming.Transmission",
    "type": "proved-in"
   },
@@ -53731,6 +53902,11 @@
   },
   {
    "from": "record:what-a-finite-stretch-verifies",
+   "to": "module:Becoming.ModelStatements",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-finite-stretch-verifies",
    "to": "module:Becoming.Verification",
    "type": "proved-in"
   },
@@ -53917,6 +54093,11 @@
   {
    "from": "record:what-a-pools-acts-respond-to",
    "to": "module:Becoming.Frame",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-a-pools-acts-respond-to",
+   "to": "module:Becoming.ModelStatements",
    "type": "proved-in"
   },
   {
@@ -54197,6 +54378,11 @@
   {
    "from": "record:what-an-optimum-does-beyond-what-couples-in",
    "to": "module:Becoming.Frontier",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-an-optimum-does-beyond-what-couples-in",
+   "to": "module:Becoming.ModelStatements",
    "type": "proved-in"
   },
   {
