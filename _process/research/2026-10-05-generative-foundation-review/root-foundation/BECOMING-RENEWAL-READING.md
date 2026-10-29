@@ -20272,3 +20272,44 @@ Output → input: the record; 01 §7; 08 §7 and its counts; Withholding and Lab
 - `after_course`'s docstring says the course is `m` moves.
 
 **Self-review.** (1) Each re-proof was checked against OU3d's second review's test: the law replaces the old induction, and only a representation, with its own induction, remains. (2) No row needed a stated reason instead of a bridge. (3) Not done: the items in Boundary.
+
+## 440. The World represented in the grammar both ways, and where its amounts fail (WRT2)
+
+Board item WRT2, designed as WRT ([design](development/world-representation/DESIGN.md), its two reviews and a last read in [REVIEW-WRT](development/world-representation/REVIEW-WRT.md)). It is the last part of OU's completion criterion 7: the World's representation theorem, proved both ways or its failure written down. The Lean was read by one independent reviewer, every finding taken, and its narrow re-read ([REVIEW-WRT2](development/world-representation/REVIEW-WRT2.md)). The work is the AI's.
+
+```text
+Result(s): the-world-represented-both-ways (new, home 01 §8.6), with Becoming.GrammarTransport as its lemma module.
+Delta:
+  - The occurrence model: occurrences Nat × Relatum. Its name-free part reads no name at two steps: the same-step
+    class (Web.sameStep), conservation's step (World.conservationStep), activity, standing and presence as partial
+    identities (Web.partialIdentity), and five relations within a step (World.withinStep). It is a stated
+    selection; a re-identification carries more.
+  - Forward, a schema: the instance theorems, with recurrence at the model through the names' step
+    (World.arisingRecurs_iff, World.ceasingRecurs_iff); every re-identification is a one-to-one correspondence of the
+    name-free part (World.reidentify_carries), and the grammar's listed terms are kept by correspondence
+    (Becoming.GrammarTransport), so each read there is fixed (World.sheng_conservation_reidentify, the pattern).
+  - Converse: the relational part ranges over everything, at the model too (World.ofModel_model); conservation is
+    exactly a relation of its form, half by definition (World.conserves_form, World.ofConservationForm_conserves),
+    labelled by standings; what amounts induce is decided, and that every world decides activity is exactly excluded
+    middle (World.decides_activity_iff_em).
+  - The failure on amounts, with witnesses: the model does not determine standings (World.standingAt_alike); balance
+    is not determined by the web and the signs of exchange (World.balance_needs_conservation); conservation is never
+    identity on the predicates of Nat (World.not_conserves_identity, through Diagonal.no_injection_of_predicates); a
+    line of falls ends (World.falls_exhaust, from Amounts.falls_end through «尽之拉回», by rule 9), a condition of the
+    World's image and no law of the grammar (Steps.along_endless, World.not_falls_everywhere).
+Supplied premises / correspondence: none added; the modelling commitments are the World's own (discrete steps, one
+       shared index, whole-number amounts, Prop-valued activity, equality on relata).
+Evidence: core receipt `20261029T081505.616437Z`; Becoming.GrammarTransport (41 theorems in 44 declarations) and Becoming.WorldRepresentation (34 theorems in 48 declarations), every
+       axiom report empty; the whole package with both modules compiles with no clash (clash.log).
+Standing: a representation theorem in OU's sense, with its failure written down; most laws near-definitional,
+       lemmas or witnesses; F3 a genuine use of the amounts' law.
+Boundary:
+  - Amounts are not represented: the model does not determine standings, and balance is represented only through
+    conservation's step read along the names, defined from the balance equation.
+  - The amount part's image beyond conservation alone; a forward theorem (the forward direction is a schema);
+    re-identification beyond the ten relations; the faithful-but-not-full reading of question 55 (not in Lean).
+  - Processes; a representation through the order of joined exchanges rather than the shared index; whether the
+    descent laws follow from F3; mutual interpretation with a fragment of Lean.
+Output → input: 01 §8.6 and 01's Open; 08's Open list; the overview; L-21 in the logic dossier; the glossary;
+       OU3f (the laws that read only activity), which reads the occurrence model.
+```

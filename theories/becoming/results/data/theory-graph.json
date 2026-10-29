@@ -5144,6 +5144,18 @@
    "page": "theories/becoming/results/records/the-world-an-interleaving-builds.md"
   },
   {
+   "id": "record:the-world-represented-both-ways",
+   "type": "result",
+   "record": "the-world-represented-both-ways",
+   "title": "The World represented in the grammar both ways, its amounts not",
+   "title_zh": "世界于文法中两向得表示，其数量则否",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "root",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/the-world-represented-both-ways.md"
+  },
+  {
    "id": "record:theory-of-becoming-foundation",
    "type": "result",
    "record": "theory-of-becoming-foundation",
@@ -6181,6 +6193,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.GrammarTransport",
+   "type": "module",
+   "name": "Becoming.GrammarTransport",
+   "level": "L1",
+   "theorems": 41,
+   "region": "root",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.World",
    "type": "module",
    "name": "Becoming.World",
@@ -6670,6 +6693,17 @@
    "name": "Becoming.ContinuedClasses",
    "level": "L1",
    "theorems": 74,
+   "region": "root",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.WorldRepresentation",
+   "type": "module",
+   "name": "Becoming.WorldRepresentation",
+   "level": "L1",
+   "theorems": 34,
    "region": "root",
    "base": "grammar",
    "on_grammar": true,
@@ -27156,6 +27190,12 @@
    "anchor": "r-what-dependence-alone-carries-of-a-level"
   },
   {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-the-world-represented-both-ways",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-the-world-represented-both-ways"
+  },
+  {
    "id": "section:theories/becoming/chapters/01-ROOT.md#r-the-source-texts-test-systems",
    "type": "section",
    "chapter": "theories/becoming/chapters/01-ROOT.md",
@@ -31078,6 +31118,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.GrammarTransport",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Granularity",
    "to": "module:Becoming.Joining",
    "type": "imports"
@@ -33430,6 +33475,26 @@
   {
    "from": "module:Becoming.World",
    "to": "module:Becoming.Frame",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.WorldRepresentation",
+   "to": "module:Becoming.ContinuedClasses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.WorldRepresentation",
+   "to": "module:Becoming.Decidedness",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.WorldRepresentation",
+   "to": "module:Becoming.Diagonal",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.WorldRepresentation",
+   "to": "module:Becoming.GrammarTransport",
    "type": "imports"
   },
   {
@@ -47429,6 +47494,11 @@
   },
   {
    "from": "record:reorderings-as-courses-of-growth",
+   "to": "record:the-world-represented-both-ways",
+   "type": "related"
+  },
+  {
+   "from": "record:reorderings-as-courses-of-growth",
    "to": "record:what-can-be-born-next",
    "type": "formal-reuse"
   },
@@ -50799,6 +50869,131 @@
   },
   {
    "from": "record:the-world-an-interleaving-builds",
+   "to": "record:worlds-are-runs",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "module:Becoming.Amounts",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "module:Becoming.Arising",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "module:Becoming.Change",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "module:Becoming.ContinuedClasses",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "module:Becoming.Decidedness",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "module:Becoming.Diagonal",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "module:Becoming.Grammar",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "module:Becoming.GrammarMap",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "module:Becoming.GrammarTransport",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "module:Becoming.Identity",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "module:Becoming.Persistence",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "module:Becoming.Space",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "module:Becoming.WorldRepresentation",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "record:classes-along-a-continuation",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "record:counts-exist-where-decided",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "record:identity-across-steps",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "record:least-loss-rest",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "record:readings-within-what-they-read",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "record:reorderings-as-courses-of-growth",
+   "type": "related"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
+   "to": "record:space-and-its-parts",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-world-represented-both-ways",
    "to": "record:worlds-are-runs",
    "type": "formal-reuse"
   },
@@ -55420,6 +55615,11 @@
   {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-the-world-an-interleaving-builds",
    "to": "record:the-world-an-interleaving-builds",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-the-world-represented-both-ways",
+   "to": "record:the-world-represented-both-ways",
    "type": "states"
   },
   {

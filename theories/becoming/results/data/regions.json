@@ -2001,6 +2001,11 @@
    "base": "old-base",
    "note": "Interleavings builds World"
   },
+  "the-world-represented-both-ways": {
+   "region": "root",
+   "base": "grammar",
+   "note": "WorldRepresentation WRT2: the World represented both ways, its amounts not; the occurrence model and its name-free part, carried by every re-identification; the converse; the failure on amounts with witnesses; GrammarTransport its lemmas"
+  },
   "theory-of-becoming-foundation": {
    "region": "method",
    "base": "none",
@@ -2967,6 +2972,11 @@
    "region": "knowing",
    "base": "grammar",
    "note": "验 within the net; core approximated by stages"
+  },
+  "Becoming.GrammarTransport": {
+   "region": "root",
+   "base": "grammar",
+   "note": "WRT2 the grammar kept by one-to-one correspondence (lemmas)"
   },
   "Becoming.Granularity": {
    "region": "root",
@@ -4072,6 +4082,11 @@
    "region": "root",
    "base": "old-base",
    "note": "L0 old base: dependence, web, flow, exchange, world over Nat/Prop; premises as gluings; one model of grammar"
+  },
+  "Becoming.WorldRepresentation": {
+   "region": "root",
+   "base": "grammar",
+   "note": "WRT2 the World as a model of the grammar, both ways (01 §8.6)"
   }
  }
 }

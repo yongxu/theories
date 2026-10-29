@@ -219,8 +219,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "The World's representation theorem of the one-unfolding plan: this is one aspect of it, the interleavings.",
-      "zh": "一体展开计划中世界之表示定理：此为其一面，即交错。",
+      "en": "A representation of the World through the order of joined exchanges: the World's representation theorem (the-world-represented-both-ways) reads the shared index, and this is one aspect of it, the interleavings.",
+      "zh": "经相接交换之序之世界之表示：世界之表示定理（the-world-represented-both-ways）读共指标，此为其一面，即交错。",
       "kind": "non-implication"
     },
     {
@@ -346,7 +346,15 @@
       }
     }
   ],
-  "related": [],
+  "related": [
+    {
+      "id": "the-world-represented-both-ways",
+      "detail": {
+        "en": "The World represented in the grammar both ways, its amounts not: its occurrence model reads the shared index.",
+        "zh": "世界于文法中两向得表示，其数量则否：其出现模型读共指标。"
+      }
+    }
+  ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReorderingGrowth.lean",
@@ -479,7 +487,7 @@
     {
       "path": "theories/becoming/chapters/01-ROOT.md",
       "role": "statement",
-      "sha256": "7e581cfdc432443d81d99c743ecbe339e0b9ba43ac0358ffc9b2854f5f91bf92"
+      "sha256": "1d84409fa1a3f757e992135156fd0fa38aa82ecef21962c3fa0835feba56e8bf"
     }
   ],
   "proof_bindings": [
@@ -495,6 +503,10 @@
     {
       "en": "28 October 2026: added (UE15), a world's reorderings as courses of growth: the exchanges of a stretch a causal set under the order of joined exchanges, its natural labellings the renumberings keeping it, so with the footprint containing the exchanges the reorderings the courses of causal-set growth; the laws of presence on the reorderings by instance, each with its decision; presence on the world as it is precedence with nothing between joined to the earlier exchange, giving persistence of what it touched, not conversely, through a dependence or by moving and moving back; the vee as a world; after a review and a re-check; study section 438.",
       "zh": "2026年10月28日：新增（UE15），世界之重排作为生长之历程：一段之交换在相接交换之序下成因果集，其自然编号即守此序之重编号，故足迹含诸交换时，诸重排即因果集生长之历程；在之诸律依实例成立于诸重排，各带其判定；世界本身之在即先后且其间无交换与先者相接，给出所触者之持存，反之不然，经依赖或动而复回；作为世界之叉；经审查与复查；研究第 438 节。"
+    },
+    {
+      "en": "29 October 2026, board item WRT2 (study section 440): the does-not-show item on the World's representation theorem brought to the landed theorem, the-world-represented-both-ways; related to it; no statement, next step or declaration changed.",
+      "zh": "2026年10月29日，工作板条目 WRT2（研究第 440 节）：关于世界之表示定理之「未示」条目随已落地之定理 the-world-represented-both-ways 而更新；与之相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

@@ -1,0 +1,40 @@
+Becoming/WorldRepresentation.lean:143:13: warning: unused variable `k`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/WorldRepresentation.lean:146:8: warning: unused variable `z`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/WorldRepresentation.lean:149:15: warning: unused variable `b`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/WorldRepresentation.lean:214:25: warning: unused variable `x`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/WorldRepresentation.lean:214:27: warning: unused variable `y`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/world-representation/tree",
+  "modules": 41,
+  "ran": [
+    "Becoming.WorldRepresentation",
+    "BecomingWorldRepresentationAxiomAudit"
+  ],
+  "reused": 41,
+  "unclean": [
+    "Becoming.WorldRepresentation"
+  ],
+  "audits": {
+    "Becoming.GrammarTransport": {
+      "theorems": 38,
+      "declarations": 41,
+      "with_axioms": {}
+    },
+    "Becoming.WorldRepresentation": {
+      "theorems": 32,
+      "declarations": 45,
+      "with_axioms": {}
+    }
+  }
+}
