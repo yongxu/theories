@@ -1,9 +1,8 @@
 # What DF leaves, and where it goes
 
-DF2 (27 October 2026) made the 33 missing-record rows into thirty records, gave the two records with no statement their statements, and added decision D69; DF3 (28 October 2026, study §436) migrated the thirty schema-1 records DF1 named to schema 2; what DF leaves is below.
+DF2 (27 October 2026) made the 33 missing-record rows into thirty records, gave the two records with no statement their statements, and added decision D69; DF3 (28 October 2026, study §436) migrated the thirty schema-1 records DF1 named to schema 2, and DF3 batch B (29 October 2026, study §441) the other 87, so every record is on schema 2; what DF leaves is below.
 
 ## For a next landing of DF
-- Batch B of the schema-2 migrations ([plan](DF3-PLAN.md)): the 87 schema-1 records DF3 (study §436) did not take, 46 of them without a statement and 33 fingerprinted by the generativity chain, among them endpoint-loss-and-return, open-form-realization-under-revision, versioned-request-completion and joint-practice-forms-continuation. Batch A (the thirty DF1 named) is migrated.
 - Two id renames whose names state the retired registration sense: selection-under-registration-revision → selection-when-the-lumping-changes, formed-copying-registration → formed-contacts-change-copying-fidelity. `rename_ids.py` refuses both, because the generativity chain's record names them (in its historical evidence); the chain changes only through its maintenance record, so the renames wait on that decision.
 - recurrence-without-selector-revision is reviewed-scoped: no receipt binds BoundaryModels.lean's current bytes (a first-line comment changed after its last check). A rerun of its checker, or a binding to the checked snapshot, would make it recorded-checked.
 

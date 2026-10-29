@@ -1,4 +1,4 @@
-# DF3: the plan (batch A landed, study §436)
+# DF3: the plan (batch A landed, study §436; batch B landed, study §441)
 
 DF3 migrates to schema 2, with laws arrays, the schema-1 records that DF1's record editors named ([LEFT](LEFT.md)). Main at `5e9f14f5c` has 117 schema-1 records (every one recorded-checked); this plan takes the 30 the editors named as batch A and leaves the other 87 as batch B, to be proposed with batch A's measured cost. The editors' row numbers in [`edit-records-0.json`](reports/edit-records-0.json) and the group-1 list are indices into each group's `rows` in [`units.json`](units.json), not into `triage.json`; resolved, they name the records below.
 
@@ -79,3 +79,12 @@ Batch A landed on 28 October 2026 (study §436). Two figures differ from the est
 - **Subagent tokens:** 4.3M (3.46M for migration and review in 75 minutes, 0.87M for the cold read), more than the 2.5–3.5M estimated.
 
 At that rate, batch B (87 records) would take about 12–13M tokens in three region batches.
+
+## Batch B, measured
+
+Batch B landed on 29 October 2026 (study §441).
+
+- **Agents:** 13 migrators and 13 reviewers, in units by region, and 4 for the cold read: 3 readers and 1 chain reader. Two network outages stopped 11 agents, and the five reviews and three migrations they had not finished were rerun.
+- **Subagent tokens:** about 17.0M in all, more than the 12–13M estimated, because of the outages and the larger records.
+
+Every result record is now on schema 2. The tools' schema-1 code paths can go, and that is a change of its own.
