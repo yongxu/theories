@@ -1,0 +1,107 @@
+Becoming.Web.Lineage.unique
+  grammar, direct: []
+  web, direct: [Becoming.Web.Lineage]
+  own induction marks: [Nat.brecOn, Nat.below]
+  reaches Becoming.«迭之定»: false
+  reaches Becoming.«迭之定于»: false
+Becoming.Web.Lineage.origin
+  grammar, direct: []
+  web, direct: [Becoming.Web.Lineage]
+  own induction marks: [Nat.brecOn, Nat.below]
+  reaches Becoming.«迭之定前»: false
+  reaches Becoming.«历之定前»: false
+Becoming.Web.Lineage.split
+  grammar, direct: []
+  web, direct: [Becoming.Web.Lineage]
+  own induction marks: [Nat.brecOn, Nat.below]
+  reaches Becoming.«迭之分»: false
+  reaches Becoming.«历之接»: false
+Becoming.Web.Lineage.through
+  grammar, direct: []
+  web, direct: [Becoming.Web.Lineage]
+  own induction marks: [Nat.brecOn, Nat.below]
+  reaches Becoming.«迭之分»: false
+  reaches Becoming.Web.Lineage.split: false
+Becoming.Web.Lineage.onward
+  grammar, direct: []
+  web, direct: [Becoming.Web.CeasesFrom, Becoming.Web.Continued, Becoming.Web.Lineage, Becoming.Web.Lineage.active]
+  own induction marks: [Nat.brecOn, Nat.below]
+  reaches Becoming.«或有后则或迭»: false
+Becoming.Web.Lineage.back
+  grammar, direct: []
+  web, direct: [Becoming.Web.ArisesFrom, Becoming.Web.Continues, Becoming.Web.Lineage]
+  own induction marks: [Nat.brecOn, Nat.below]
+  reaches Becoming.«或有后则或迭»: false
+  reaches Becoming.«迭之逆»: false
+  reaches Becoming.Web.steps_advance: false
+Becoming.Web.Lineage.ends
+  grammar, direct: []
+  web, direct: [Becoming.Web.CeasesFrom, Becoming.Web.Continued, Becoming.Web.Lineage, Becoming.Web.Lineage.through, Becoming.Web.Lineage.unique]
+  own induction marks: []
+  reaches Becoming.«迭之定»: false
+  reaches Becoming.«迭之分»: false
+Becoming.Web.lineages_apart
+  grammar, direct: []
+  web, direct: [Becoming.Web.ArisesFrom, Becoming.Web.Continues, Becoming.Web.Lineage, Becoming.Web.Lineage.origin, Becoming.Web.Lineage.split]
+  own induction marks: []
+  reaches Becoming.«迭之定前»: false
+  reaches Becoming.«迭之分»: false
+Becoming.Web.steps_iff_lineage: not in this build
+Becoming.Web.steps_start_active: not in this build
+Becoming.Web.lineage_of_steps: not in this build
+Becoming.Web.steps_advance
+  grammar, direct: [Becoming.«续», Becoming.«迭», Becoming.«际»]
+  web, direct: [Becoming.Web.continuationStep]
+  own induction marks: [Nat.brecOn, Nat.below]
+Becoming.Web.reaches_onward
+  grammar, direct: [Becoming.«不穷», Becoming.«不穷则迭», Becoming.«所及», Becoming.«续», Becoming.«迭», Becoming.«迭则同一或及», Becoming.«际»]
+  web, direct: [Becoming.Web.continuationStep, Becoming.Web.steps_advance]
+  own induction marks: []
+  reaches Becoming.«不穷则迭»: true
+Becoming.Web.not_not_arisingFrom_covered
+  grammar, direct: []
+  web, direct: [Becoming.Web.ArisesFrom, Becoming.Web.CeasesFrom, Becoming.Web.Continued, Becoming.Web.Lineage, Becoming.Web.Lineage.back, Becoming.Web.Lineage.ends, Becoming.Web.Lineage.unique, Becoming.Web.ceasingFrom_found]
+  own induction marks: []
+  reaches Becoming.«或有后则或迭»: false
+  reaches Becoming.«迭之定»: false
+  reaches Becoming.«迭之分»: false
+Becoming.Web.arisingFrom_not_stopping_covered
+  grammar, direct: []
+  web, direct: [Becoming.Web.ArisesFrom, Becoming.Web.CeasesFrom, Becoming.Web.not_not_arisingFrom_covered]
+  own induction marks: []
+  reaches Becoming.«或有后则或迭»: false
+  reaches Becoming.«迭之定»: false
+Becoming.Web.ceasingFrom_not_stopping_covered
+  grammar, direct: []
+  web, direct: [Becoming.Web.ArisesFrom, Becoming.Web.CeasesFrom, Becoming.Web.Continues, Becoming.Web.Lineage, Becoming.Web.Lineage.active, Becoming.Web.Lineage.onward, Becoming.Web.Lineage.origin, Becoming.Web.UnceasingFrom, Becoming.Web.arisingFrom_found, Becoming.Web.lineages_apart]
+  own induction marks: []
+  reaches Becoming.«或有后则或迭»: false
+  reaches Becoming.«迭之定前»: false
+  reaches Becoming.«迭之分»: false
+Becoming.Web.Lineage.cons
+  grammar, direct: []
+  web, direct: [Becoming.Web.Lineage]
+  own induction marks: [Nat.brecOn, Nat.below]
+Becoming.Web.Lineage.line
+  grammar, direct: [Becoming.«及».one, Becoming.«及之传递», Becoming.«相续», Becoming.«续»]
+  web, direct: [Becoming.Web.Lineage, Becoming.Web.activityClass, Becoming.Web.continuationStep]
+  own induction marks: [Nat.brecOn, Nat.below]
+  reaches Becoming.«迭则及»: false
+  reaches Becoming.«及之单调»: false
+Becoming.Web.line_lineage
+  grammar, direct: [Becoming.«及», Becoming.«及».rec, Becoming.«续»]
+  web, direct: [Becoming.Web.Lineage, Becoming.Web.Lineage.cons, Becoming.Web.activityClass, Becoming.Web.continuationStep]
+  own induction marks: [Becoming.«及».rec]
+  reaches Becoming.«闭之及»: false
+  reaches Becoming.«及即迭»: false
+Becoming.Web.lineage_iff_line
+  grammar, direct: [Becoming.«相续»]
+  web, direct: [Becoming.Web.Lineage, Becoming.Web.Lineage.line, Becoming.Web.activityClass, Becoming.Web.continuationStep, Becoming.Web.line_lineage, Becoming.Web.steps_cancel]
+  own induction marks: []
+  reaches Becoming.«迭则及»: false
+  reaches Becoming.«闭之及»: false
+  reaches Becoming.«及即迭»: false
+Becoming.Web.Lineage.active
+  grammar, direct: []
+  web, direct: [Becoming.Web.Lineage]
+  own induction marks: []

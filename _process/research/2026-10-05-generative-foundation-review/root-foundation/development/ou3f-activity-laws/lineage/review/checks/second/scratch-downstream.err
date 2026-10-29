@@ -1,0 +1,1 @@
+python3 -B scratch_build.py $S/tree-new Becoming  6.33s user 1.16s system 76% cpu 9.734 total

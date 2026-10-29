@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """OU3f, lineage laws: drop the register entries connectivity lists as no longer apart roots that this part's laws give a
-consumer («或有后则或迭», «迭之分» and «迭之逆», registered with the laws of steps for the lineage laws to use, which
-Lineage.split, onward and back now use); stop on any other stale entry or any unregistered apart root.
+consumer: «或有后则或迭», «迭之分» and «迭之逆», registered with the laws of steps for the lineage laws to use, which
+Lineage.split, onward and back now use, and «定前之逐点», OU3b's one-line unpacking, which Lineage.origin now uses; stop on any
+other stale entry or any unregistered apart root.
 usage (from the checkout root): python3 -B register_lineage.py CONNECTIVITY_LOG"""
 import json
 import re
@@ -19,7 +20,7 @@ def listed(label):
 
 unclassified = listed('apart roots without a reason in')
 stale = listed('register entries no longer apart roots')
-OURS = {'Becoming.«或有后则或迭»', 'Becoming.«迭之分»', 'Becoming.«迭之逆»'}
+OURS = {'Becoming.«或有后则或迭»', 'Becoming.«迭之分»', 'Becoming.«迭之逆»', 'Becoming.«定前之逐点»'}
 assert not unclassified, ('apart roots without a reason; for their owners', unclassified)
 assert set(stale) <= OURS, ('stale entries not this part\'s; for their owners', sorted(set(stale) - OURS))
 t = F.read_text(encoding='utf-8')

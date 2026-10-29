@@ -35,7 +35,7 @@ Delta: (1) the bridge. A lineage of k steps from g at step M (Web.Lineage: each 
        (4) texts. Identity's header (Lineages on the grammar), the bridge's doc section, a heading for the census law
        and the grammar section's notes; 01 §7's finite-runs bullet; the root module's Identity and GrammarLaws bullets;
        08's counts. The connectivity register drops «或有后则或迭», «迭之分» and «迭之逆», which were registered for the
-       lineage laws to use. The audit's note After the lineage review.
+       lineage laws to use, and «定前之逐点», which origin now uses. The audit's note After the lineage review.
        (5) the measure cannot change: no declaration in COVERAGE depends on these laws. MV's view is regenerated,
        since laws 10 and 11 of census-balance-under-continuation now reach the laws of steps.
 Supplied premises / correspondence: none.

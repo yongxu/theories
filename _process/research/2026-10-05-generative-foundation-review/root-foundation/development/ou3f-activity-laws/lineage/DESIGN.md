@@ -103,13 +103,18 @@ Identity was last changed by OU2 and OU3a (`46a72f71f`, 23 October), and no acti
 ## Landing
 
 Queued after UE16 and UE17, behind any earlier clause, after a rehearsal on main outside the repository.
+
+**The rehearsal passed.** It ran on main at `0471d3343`, with UE16 landed and UE17 at the head, outside the repository: core receipt `20261029T155901.365282Z`, 346 modules, 75 Lean steps run and 1,309 reused.
+- The signature audit shows exactly the expected changes (`kit/signatures-rehearsal.log`).
+- The connectivity check names the four register entries below and nothing else (`kit/conn-check-rehearsal.log`).
+- The measure is unchanged (`kit/measure-rehearsal.json`): 45 of 127 central rows reach the grammar, and of the 118 distinct declarations 44, 31, 7 and 36, with no gap.
 - **Rebuild.** It covers Identity's cone, 19 modules and Identity, MapInstances among them.
 - **Signatures.**
   - Every remaining statement of Identity and MapInstances prints unchanged.
   - Identity adds three theorems (`lineage_of_steps`, `steps_iff_lineage`, `steps_start_active`) and one definition (`activityOnward`), and `Lineage.cons` is gone. `steps_advance` moves from MapInstances to Identity with its statement unchanged.
   - Nothing else is gone or added.
 - **The dependency check** (`deps_lineage.py`) on the rehearsal's build: the eight with no induction of their own, each reaching its law.
-- **Connectivity register.** It drops «或有后则或迭», «迭之分» and «迭之逆», registered with the laws of steps for the lineage laws to use. Nothing becomes a root.
+- **Connectivity register.** It drops «或有后则或迭», «迭之分» and «迭之逆», registered with the laws of steps for the lineage laws to use, and «定前之逐点», OU3b's one-line unpacking, which `origin` now uses (the rehearsal's connectivity check). Nothing becomes a root.
 - **Records.**
   - `master-laws-on-the-grammar` takes the eight into its last group. It gets an Identity reference and binding: the bridge, `steps_advance` moved there, and the eight. Its MapInstances reference drops `steps_advance`, and its does-not-show item on the lineage laws goes.
   - `census-balance-under-continuation`, whose laws 10 and 11 rest on these lemmas, is re-pointed only.
