@@ -105,6 +105,8 @@ The items:
 - **U2, the 13 definitional rows and 11 statements at a model.** These go on the root after WRP lands, module by module with each module's owner.
 - **U3, the significance rows.** These follow U1, for weightings.
 
+*Correction, from WRP's measure at OU3f's receipt.* The theorems that read no field of the old base are not all taken through WRP, as the section "The next layer" and the plan's first wording of item 13 said. Of 11,430, 3,168 are on processes. The other 8,262 are about optima, weightings, regime margins and other structures WRP does not reach. These are theorems of the mathematics the account uses. They come onto the root only where a central declaration uses them, through U2 or U3; otherwise the plan writes down that they do not. Item 13 now says this.
+
 U2 and U3 get board rows when their gates open. Until then they stay here, so that no unclaimed rows lapse on the board.
 
 ## What this note does not do
