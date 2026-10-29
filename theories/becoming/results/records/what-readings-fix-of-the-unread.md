@@ -5,37 +5,38 @@
 
 `what-readings-fix-of-the-unread` · **recorded-checked** · theorem · F04 · [record](what-readings-fix-of-the-unread.json) · [register](../../../../RESULTS.md)
 
-> Readings fix a formation's act where it is not read exactly where its lumping ties that occasion to a read one; where it can tell the occasion from every read one, a selected law has a selected twin agreeing on every reading and acting otherwise there.
+> Where a formation's lumping tells an unread occasion from every read one, being in its lump decided, a selection through the readings that selects a law reading through the lumping also selects twins agreeing on every reading and taking every value there.
 
 <a id="laws--规律"></a>
 ## Laws
 
-1. Where no read occasion is lumped with x, the class going alike across the lumping is free at x beyond the readings: every member's values on the read occasions combine with every value at x. (`Becoming.Learning.free_lumped`)
+1. With being in x's lump decided, where no read occasion is lumped with x, the class going alike across the lumping is free at x beyond the readings: every member's values on the read occasions combine with every value at x. (`Becoming.Learning.free_lumped`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
-2. So every act law reading through the lumping that a selection through agreement on the readings selects has, for every value, a selected twin agreeing with it on every reading and taking that value at x. (`Becoming.Learning.twin_selected`)
+2. So every act law reading through the lumping that a selection through agreement on the readings selects has, for every value, a selected twin reading through the lumping, agreeing with it on every reading and taking that value at x. (`Becoming.Learning.twin_selected`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
-3. Where acts read a state formed from what couples in, acts that differ at two occasions come from states that differ, and states that differ from couplings that differ. (`Becoming.Learning.state_apart_of_acts_apart`, `Becoming.Learning.coupling_apart_of_state_apart`)
+3. Example, why the exact form takes a list: with one occasion, a constant lumping and two act values, the occasion read exactly where P holds, the readings fix the act exactly where ¬¬P, where the exact form would say P. (`Becoming.Learning.determines_iff_not_not`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
-4. Witness: occasions with a cue and a content, read where the cue is up, the content act answering with the content; a formation coupled into the cue has a selected twin acting otherwise at an unread occasion; among laws reading only the content, agreement on the readings fixes the act there. (`Becoming.Learning.Cue.Occasion`, `Becoming.Learning.Cue.read`, `Becoming.Learning.Cue.contentAct`, `Becoming.Learning.Cue.seen_twin`, `Becoming.Learning.Cue.unseen_fixed`)
+4. Where acts read a state formed from what couples in, acts that differ at two occasions come from states that differ, and states that differ from couplings that differ. (`Becoming.Learning.state_apart_of_acts_apart`, `Becoming.Learning.coupling_apart_of_state_apart`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
-5. Witness, the converses fail: a read and an unread occasion differ while their contents agree, so a state keeping the cue with an act reading the content is detected and not acted on, and a coupling taking in the cue with a state keeping the content is detectable and not detected. (`Becoming.Learning.Cue.apart_with_content_alike`)
+5. Witness: occasions with a cue and a content, read where the cue is up, the content act answering with the content (Learning.Shift's pattern); for every selection through agreement on the readings that selects the content act, a formation coupled into the cue has a selected twin answering otherwise at an unread occasion; among laws reading only the content, agreement on the readings fixes the act there. (`Becoming.Learning.Cue.Occasion`, `Becoming.Learning.Cue.read`, `Becoming.Learning.Cue.contentAct`, `Becoming.Learning.Cue.seen_twin`, `Becoming.Learning.Cue.unseen_fixed`)
+   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+6. Witness, the converses fail: a read and an unread occasion differ while their content acts agree; with the state the occasion and the act its content, states differ and acts agree, and with the coupling the occasion and the state its content, couplings differ and states agree. (`Becoming.Learning.Cue.apart_with_content_alike`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions
 
-- Any types of occasions, values and lumps; the twin needs being in the target's lump decided, and nothing about the read occasions.
-- The exact form, fixed exactly where tied, is Learning.determines_lumped_iff's: the read occasions listed, equality of lumps decided, two act values.
+- Any types of occasions, values and lumps; the freedom and the twin need being in the target's lump decided and no read occasion lumped with it, and no list or decision of the read occasions.
+- Where the lumping ties the occasion to a read one, the act is fixed by generalization through lumping (lumped_determines; exactly there, Learning.determines_lumped_iff, with the read occasions listed, equality of lumps decided and two act values): read here, cited, not proved again.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That fixed is right: an act carried to an occasion sharing a read one's lump is right exactly where the world takes one value at the two (Learning.lumped_right_iff).
-- The exact form for an arbitrary schedule: with one occasion and a constant lumping, read where P holds, fixing is ¬¬P.
+- That fixed is right: for a law reading through the lumping and fitting the world on the read occasions, its act at an occasion sharing a read one's lump is right exactly where the world agrees at the two (Learning.lumped_right_iff).
 - Intention, anticipation, another's false belief or an incentive to differ where unread.
-- A reader misled: it lies outside the chain of acting, detecting and detectable, in prose only.
-- Which lumping an actual formation has, and the probabilistic form (the data-processing inequality).
-- **Counterexample:** Occasions with a cue: a formation coupled into the cue has, at the unread occasion with content true, a selected twin agreeing with the content act on every reading and answering false (Learning.Cue.seen_twin). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean)
+- A reader misled: it lies outside the chain of acts, states and couplings apart, in prose only.
+- Which lumping an actual formation has, and the probabilistic form of the chain (the data-processing inequality).
+- **Counterexample:** Occasions with a cue: for every selection through agreement on the readings that selects the content act, a formation coupled into the cue has, at the unread occasion with content true, a selected twin agreeing with the content act on every reading and answering false (Learning.Cue.seen_twin). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean)
 - **Counterexample:** A read and an unread occasion differing only in the cue: a state keeping the cue tells them apart while the content act gives one answer (Learning.Cue.apart_with_content_alike). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision.
@@ -43,7 +44,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Pure core, every axiom report empty: Unread imports only Learning. It reuses Learning.determines_lumped_iff, lumped_determines and Training.unselected_beyond_data; the witnesses are on pairs of truth values.
+Pure core, every axiom report empty: Unread imports only Learning. It reuses lumped_determines and Training.unselected_beyond_data, and reads Learning.determines_lumped_iff as the exact form (cited, not used in a proof); the witnesses are on pairs of truth values.
 
 Canonical source: [Unread.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean)
 
@@ -57,13 +58,13 @@ Disclosure or concealment when read, in two stages, with the continuation value 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Indistinguishability: two laws agreeing on every reading are selected alike by every selection through them. Read as evaluation and deployment it is the exact kernel of evaluation awareness and deceptive alignment (Hubinger and others 2019; Greenblatt and others 2024), the measurements of detection without behavioural change being the chain's failed converse; read with a supervised reporter, the identification limit of eliciting latent knowledge. The probabilistic form is the data-processing inequality. These are readings, not containments.
+Indistinguishability: two laws agreeing on every reading are selected alike by every selection through them. AI reading: read as evaluation and deployment, it locates where behaviour can differ when not read while every reading agrees, only where the formation's lumping tells the occasion from every read one: a necessary condition of what deceptive alignment and alignment faking describe (Hubinger and others 2019; Greenblatt and others 2024), whose intention, anticipation and incentive are not represented. A state telling read from unread while the act does not differ reads as detection not acted on, and a coupling taking in the cue while the state keeps only the content as detectable and not detected; measurements of the first are the chain's failed converse. Read with a supervised reporter, the identification limit of eliciting latent knowledge (Christiano, Cotra and Xu 2021). The probabilistic form of the chain is the data-processing inequality. These are readings, not containments.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [generalization-through-lumping](generalization-through-lumping.md). Learning.Lumped, Free, Determines, lumped_determines, determines_lumped_iff and lumped_world_right; Training.Through, AgreeOn and unselected_beyond_data.
-- related, not a proved adapter: [what-training-installs](what-training-installs.md). Off its courses a law is installed only where the representation lumps a history with a course; read with read occasions as the data, the same law.
+- **formal-reuse**: [generalization-through-lumping](generalization-through-lumping.md). Learning.Lumped, Free, Determines and lumped_determines; Training.Through, AgreeOn and unselected_beyond_data (determines_lumped_iff and lumped_right_iff cited).
+- related, not a proved adapter: [what-training-installs](what-training-installs.md). Off its courses a law is installed only where the representation lumps a history with a course. Here the read occasions are fixed in advance, as data are in generalization through lumping; there the data are the courses the candidate itself generates, and its twin needs laws reading what has stood to keep them: the same boundary, with no instance theorem.
 - related, not a proved adapter: [what-choices-show-of-an-order](what-choices-show-of-an-order.md). What choices show of an order: the same question for the order a chooser's choices come from.
 
 <a id="sources--来源"></a>
@@ -71,22 +72,23 @@ Indistinguishability: two laws agreeing on every reading are selected alike by e
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [Unread.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean) | `Becoming.Learning.Cue.Occasion`, `Becoming.Learning.Cue.apart_with_content_alike`, `Becoming.Learning.Cue.contentAct`, `Becoming.Learning.Cue.read`, `Becoming.Learning.Cue.seen_twin`, `Becoming.Learning.Cue.unseen_fixed`, `Becoming.Learning.coupling_apart_of_state_apart`, `Becoming.Learning.free_lumped`, `Becoming.Learning.state_apart_of_acts_apart`, `Becoming.Learning.twin_selected` |
+| proof | [Unread.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean) | `Becoming.Learning.Cue.Occasion`, `Becoming.Learning.Cue.apart_with_content_alike`, `Becoming.Learning.Cue.contentAct`, `Becoming.Learning.Cue.read`, `Becoming.Learning.Cue.seen_twin`, `Becoming.Learning.Cue.unseen_fixed`, `Becoming.Learning.coupling_apart_of_state_apart`, `Becoming.Learning.determines_iff_not_not`, `Becoming.Learning.free_lumped`, `Becoming.Learning.state_apart_of_acts_apart`, `Becoming.Learning.twin_selected` |
 | proof | [Learning.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean) | — |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T113907.548004Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T134236.345943Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [PLAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md) | — |
 | integration | [REVIEW-PLAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) | — |
 | integration | [REVIEW-LEAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-LEAN.md) | — |
+| integration | [REVIEW-TEXTS.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md) | — |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
 
-Aliases: `what readings fix of the unread`, `读处所定于未读处者`, `a twin where it can tell`, `evaluation awareness, the kernel`, `Becoming.Learning.free_lumped`, `Becoming.Learning.twin_selected`
+Aliases: `what readings fix of the unread`, `读处所定于未读处者`, `a twin where it can tell`, `behaviour where not read`, `Becoming.Learning.free_lumped`, `Becoming.Learning.twin_selected`
 
 <a id="history--沿革"></a>
 ### History
 
-- 29 October 2026: added (RF round 1), what readings fix of the unread: the twin where the formation can tell, the chain of acts, states and couplings with its converses failing, and the cue witnesses; after a review of the plan and a review of the Lean; study section 445.
+- 29 October 2026: added (RF round 1), what readings fix of the unread: the twin where the formation can tell, a one-occasion example fixed exactly where ¬¬P, the chain of acts, states and couplings with its converses failing, and the cue witnesses; after a review of the plan, a review of the Lean and a cold read of the texts; study section 446.
 
 </details>
 
-Documentary review UTC: `2026-10-29T12:09:54+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-29T14:08:27+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

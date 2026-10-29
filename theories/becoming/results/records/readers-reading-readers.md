@@ -5,14 +5,14 @@
 
 `readers-reading-readers` · **recorded-checked** · theorem · F04 · [record](readers-reading-readers.json) · [register](../../../../RESULTS.md)
 
-> From the member on whom every later member reads only the acts before it, a pool's acts are alike across worlds alike through the earlier members' couplings: it reaches only what couples into those read first, however many follow.
+> Where every member from member k on, k included, acts alike whatever its own coupling, on every list of earlier acts, a pool's acts are alike across worlds alike through the couplings of the members before k: they carry no more than what couples into those members, however many follow.
 
 <a id="laws--规律"></a>
 ## Laws
 
-1. Members act in turn: member n by its law on its own coupling of the world and the list of the acts before it; from member k on, every member acting alike whatever its coupling, and two worlds alike through the couplings of the members before k, are named. (`Becoming.Turns`, `Becoming.Turns.acts`, `Becoming.Turns.act`, `Becoming.Turns.ReadsOnlyActsFrom`, `Becoming.Turns.AlikeBefore`)
+1. Members act in turn: member n by its law on its own coupling of the world and the list of the acts before it; from member k on, every member acting alike whatever its coupling, on every list of earlier acts, and two worlds alike through the couplings of the members before k, are named. (`Becoming.Turns`, `Becoming.Turns.acts`, `Becoming.Turns.act`, `Becoming.Turns.ReadsOnlyActsFrom`, `Becoming.Turns.AlikeBefore`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
-2. From member k on, where every member reads only the acts before it, two worlds alike through the couplings of the members before k give every member the same act, and the same list of acts at every length. (`Becoming.Turns.law_alike_of_cascade`, `Becoming.Turns.acts_alike_of_cascade`, `Becoming.Turns.act_alike_of_cascade`)
+2. From member k on, k included, where every member reads only the acts before it, two worlds alike through the couplings of the members before k give every member the same act, and the same list of acts at every length. (`Becoming.Turns.law_alike_of_cascade`, `Becoming.Turns.acts_alike_of_cascade`, `Becoming.Turns.act_alike_of_cascade`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. So every selection reading the list of the first N acts, for any N, selects alike any two worlds alike through the couplings of the members before k. (`Becoming.Turns.cascade_through`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
@@ -25,15 +25,15 @@
 ## Conditions
 
 - Any types of worlds, couplings and acts; members indexed by the natural numbers, each reading the whole list of acts before it.
-- From member k on, every member acts alike whatever its own coupling; member k's coupling is then not read, so it is not among those the acts reach.
+- From member k on, k included, every member acts alike whatever its own coupling, on every list of earlier acts, histories no run reaches included; member k's coupling is then not read, so it is not among those the acts reach.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- When an actual member stops reading its own coupling: in the probabilistic model, once the public evidence outweighs any private signal, which is a premise here.
+- When an actual member stops reading its own coupling: in the probabilistic model (Bikhchandani, Hirshleifer and Welch 1992), once the public evidence outweighs any private signal, a premise here.
 - That a cascade errs: it suppresses what later members' couplings carry, and can be accurate.
 - That a pool's later selection keeps a coupling one member's act carries.
-- Weighted averaging (DeGroot) and its wisdom condition, networks where members read only some earlier acts, and members in no well-founded order.
+- Weighted averaging (DeGroot 1974) and its wisdom condition (Golub and Jackson 2010); a bound depending on who reads whom (laws ignoring some earlier acts are covered); members in no well-founded order.
 - **Counterexample:** Copying: worlds differing in every member's coupling but the first give every member the same act (Turns.Copying.reaches_first_only). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision.
@@ -55,13 +55,13 @@ The probabilistic form, a cascade once public evidence outweighs every private s
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The deterministic form of an information cascade (Bikhchandani, Hirshleifer and Welch 1992; Banerjee 1992), where the act has stopped reading the member's own signal; the dependence failure of Condorcet's jury theorem; WitnessRefinementRuns.copied_witnesses_same is a neighbour, where copied witnesses add nothing under its further hypotheses. Read as echo chambers or evaluators trained on one another's verdicts, a reading, not a containment.
+The deterministic form of an information cascade (Bikhchandani, Hirshleifer and Welch 1992; Banerjee 1992), where the act has stopped reading the member's own signal; WitnessRefinementRuns.copied_witnesses_same is a neighbour, where copied witnesses add nothing under its further hypotheses. AI reading: copying as the dependence failure of Condorcet's jury theorem; echo chambers, or evaluators trained on one another's verdicts, under the cascade premise. These are readings, not containments.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
 - **formal-reuse**: [generalization-through-lumping](generalization-through-lumping.md). Training.Through, the selection through a relation of being alike.
-- related, not a proved adapter: [what-pooled-coupling-reaches](what-pooled-coupling-reaches.md). A pool reaches no further than the union of its members' closures; where members read one another's acts, only what couples into those read first.
+- related, not a proved adapter: [what-pooled-coupling-reaches](what-pooled-coupling-reaches.md). A pool reaches no further than the union of its members' closures; where, from some member on, every member reads only the acts before it, a selection through the acts reaches only what couples into the members before that one.
 
 <a id="sources--来源"></a>
 ### Sources
@@ -70,11 +70,12 @@ The deterministic form of an information cascade (Bikhchandani, Hirshleifer and 
 |---|---|---|
 | proof | [Cascade.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean) | `Becoming.Turns`, `Becoming.Turns.AlikeBefore`, `Becoming.Turns.Copying.reaches_first_only`, `Becoming.Turns.Copying.readsOnlyActs`, `Becoming.Turns.Copying.turns`, `Becoming.Turns.ReadsOnlyActsFrom`, `Becoming.Turns.act`, `Becoming.Turns.act_alike_of_cascade`, `Becoming.Turns.acts`, `Becoming.Turns.acts_alike_of_cascade`, `Becoming.Turns.cascade_through`, `Becoming.Turns.law_alike_of_cascade`, `Becoming.Turns.separates_at` |
 | proof | [Learning.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean) | — |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T113907.548004Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T134236.345943Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [PLAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md) | — |
 | integration | [REVIEW-PLAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md) | — |
 | integration | [REVIEW-LEAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-LEAN.md) | — |
+| integration | [REVIEW-TEXTS.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md) | — |
 | statement | [05-COLLECTIVES.md](../../chapters/05-COLLECTIVES.md) | — |
 
 Aliases: `readers reading readers`, `读者读读者`, `a cascade`, `级联`, `Becoming.Turns.acts_alike_of_cascade`, `Becoming.Turns.Copying.reaches_first_only`
@@ -82,8 +83,8 @@ Aliases: `readers reading readers`, `读者读读者`, `a cascade`, `级联`, `B
 <a id="history--沿革"></a>
 ### History
 
-- 29 October 2026: added (RF round 1), readers reading readers: from a cascade on, a pool reaches only the couplings of those read first; a member carrying its coupling; copying; after a review of the plan and a review of the Lean; study section 445.
+- 29 October 2026: added (RF round 1), readers reading readers: from a cascade on, a pool's acts carry no more than the couplings of the members before it; a member carrying its coupling; copying; after a review of the plan, a review of the Lean and a cold read of the texts; study section 446.
 
 </details>
 
-Documentary review UTC: `2026-10-29T12:09:54+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-29T14:08:27+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

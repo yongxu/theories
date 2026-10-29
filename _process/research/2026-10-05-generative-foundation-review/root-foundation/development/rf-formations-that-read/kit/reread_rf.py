@@ -3,7 +3,7 @@
 one-occasion example read as an example, not a law for every schedule not given as a list, and accordance assuming
 strict dominance at the occasions shown, without fixing a planner. Applied once to the branch (the chapters, the two
 modules' doc comments in the package and the kit, the root's bullet, the README rows) and mirrored into the kit's
-scripts and blocks (cold-read/s11.md, texts_rf.py, integrate_rf.py, make_records_rf.py, study_rf.txt). Each edit is
+scripts and blocks (cold-read/s11.txt, texts_rf.py, integrate_rf.py, make_records_rf.py, study_rf.txt). Each edit is
 asserted to apply exactly once in each file named.
 usage (from the checkout root of the landing worktree): python3 -B reread_rf.py"""
 from pathlib import Path
@@ -12,7 +12,7 @@ ROOT = Path.cwd()
 HERE = Path(__file__).resolve().parent
 PKG = ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
 CH3 = ROOT / 'theories/becoming/chapters/03-KNOWING.md'
-S11, TEXTS, INTEGRATE = HERE / 'cold-read/s11.md', HERE / 'texts_rf.py', HERE / 'integrate_rf.py'
+S11, TEXTS, INTEGRATE = HERE / 'cold-read/s11.txt', HERE / 'texts_rf.py', HERE / 'integrate_rf.py'
 RECORDS, STUDY = HERE / 'make_records_rf.py', HERE / 'study_rf.txt'
 UNREAD = [PKG / 'Becoming/Unread.lean', HERE / 'tree/Becoming/Unread.lean']
 SHOWN = [PKG / 'Becoming/ShownOrder.lean', HERE / 'tree/Becoming/ShownOrder.lean']

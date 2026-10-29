@@ -1,0 +1,20 @@
+re-pointing 14 pairs in 14 records:
+   access-yet-to-form theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   adaptive-closure-cannot-resolve theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   capture-by-counted-choices theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   certificates-sound-and-available theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   composition-route theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   conditioning-by-restriction theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   correction-is-not-calibration theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   evidence-through-change theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   exit-from-a-margin theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   learning-a-rule-by-narrowing theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   one-move-covering theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   readings-a-response-needs theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   what-a-total-keeps theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+   when-to-inquire-and-when-to-respond theories/becoming/chapters/03-KNOWING.md ['(before the first heading)']
+left to their owners: []
+Traceback (most recent call last):
+  File "/Users/ren/theories/.claude/worktrees/rf-landing/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/repoint_rf.py", line 90, in <module>
+    assert not unexpected, ("drift outside the sections RF writes: read it, then settle it by hand", unexpected)
+AssertionError: ('drift outside the sections RF writes: read it, then settle it by hand', [('access-yet-to-form', 'theories/becoming/chapters/03-KNOWING.md', ['(before the first heading)']), ('adaptive-closure-cannot-resolve', 'theories/becoming/chapters/03-KNOWING.md', ['(before the first heading)']), ('capture-by-counted-choices', 'theories/becoming/chapters/03-KNOWING.md', ['(before the first heading)']), ('certificates-sound-and-available', 'theories/becoming/chapters/03-KNOWING.md', ['(before the first heading)']), ('composition-route', 'theories/becoming/chapters/03-KNOWING.md', ['(before the first heading)']), ('conditioning-by-restriction', 'theories/becoming/chapters/03-KNOWING.md', ['(before the first heading)']), ('correction-is-not-calibration', 'theories/becoming/chapters/03-KNOWING.md', ['(before the first heading)']), ('evidence-through-change', 'theories/becoming/chapters/03-KNOWING.md', ['(before the first heading)']), ('exit-from-a-margin', 'theories/becoming/chapters/03-KNOWING.md', ['(before the first heading)']), ('learning-a-rule-by-narrowing', 'theories/becoming/chapters/03-KNOWING.md', ['(before the first heading)']), ('one-move-covering', 'theories/becoming/chapters/03-KNOWING.md', ['(before the first heading)']), ('readings-a-response-needs', 'theories/becoming/chapters/03-KNOWING.md', ['(before the first heading)']), ('what-a-total-keeps', 'theories/becoming/chapters/03-KNOWING.md', ['(before the first heading)']), ('when-to-inquire-and-when-to-respond', 'theories/becoming/chapters/03-KNOWING.md', ['(before the first heading)'])])

@@ -8,24 +8,31 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-29T12:09:54+00:00",
+  "reviewed_at_utc": "2026-10-29T14:08:27+00:00",
   "statement": {
-    "en": "Readings fix a formation's act where it is not read exactly where its lumping ties that occasion to a read one; where it can tell the occasion from every read one, a selected law has a selected twin agreeing on every reading and acting otherwise there.",
-    "zh": "读处定一成形于未读处之行，恰当其归并将此时系于一读处；其能分此时于每一读处，则有所选之孪生，于每一读处皆合而于此处行异。"
+    "en": "Where a formation's lumping tells an unread occasion from every read one, being in its lump decided, a selection through the readings that selects a law reading through the lumping also selects twins agreeing on every reading and taking every value there.",
+    "zh": "一形成之归并分一未读之时于每一读处，彼归并可判定，则经读处而选者若选一经归并而读之律，亦选其孪生，于每一读处皆合而于此处取每一值。"
   },
   "laws": [
     {
-      "en": "Where no read occasion is lumped with x, the class going alike across the lumping is free at x beyond the readings: every member's values on the read occasions combine with every value at x.",
-      "zh": "未有读处与 x 同归，则随归并无别之类于读处之外在 x 为自由：每一成员于读处之值，与 x 处之每一值皆可相合。",
+      "en": "With being in x's lump decided, where no read occasion is lumped with x, the class going alike across the lumping is free at x beyond the readings: every member's values on the read occasions combine with every value at x.",
+      "zh": "「在 x 之归并中」可判定，未有读处与 x 同归，则随归并无别之类于读处之外在 x 为自由：每一成员于读处之值，与 x 处之每一值皆可相合。",
       "declarations": [
         "Becoming.Learning.free_lumped"
       ]
     },
     {
-      "en": "So every act law reading through the lumping that a selection through agreement on the readings selects has, for every value, a selected twin agreeing with it on every reading and taking that value at x.",
-      "zh": "故凡经读处之合而选者所选之经归并而读之行律，于每一值皆有所选之孪生，于每一读处与之合，于 x 取此值。",
+      "en": "So every act law reading through the lumping that a selection through agreement on the readings selects has, for every value, a selected twin reading through the lumping, agreeing with it on every reading and taking that value at x.",
+      "zh": "故凡经读处之合而选者所选之经归并而读之行律，于每一值皆有所选之孪生，经归并而读，于每一读处与之合，于 x 取此值。",
       "declarations": [
         "Becoming.Learning.twin_selected"
+      ]
+    },
+    {
+      "en": "Example, why the exact form takes a list: with one occasion, a constant lumping and two act values, the occasion read exactly where P holds, the readings fix the act exactly where ¬¬P, where the exact form would say P.",
+      "zh": "例，确形何以需列：一时、归并恒定、行有二值，此时恰于 P 成立时为读，则读处定此行恰当 ¬¬P，而确形当言 P。",
+      "declarations": [
+        "Becoming.Learning.determines_iff_not_not"
       ]
     },
     {
@@ -37,8 +44,8 @@
       ]
     },
     {
-      "en": "Witness: occasions with a cue and a content, read where the cue is up, the content act answering with the content; a formation coupled into the cue has a selected twin acting otherwise at an unread occasion; among laws reading only the content, agreement on the readings fixes the act there.",
-      "zh": "例：时有讯与内容，讯起处为读，内容之行以内容答；耦合入讯之成形，于一未读之时有所选之孪生而行异；唯读内容之诸律，于读处合则于此处行定。",
+      "en": "Witness: occasions with a cue and a content, read where the cue is up, the content act answering with the content (Learning.Shift's pattern); for every selection through agreement on the readings that selects the content act, a formation coupled into the cue has a selected twin answering otherwise at an unread occasion; among laws reading only the content, agreement on the readings fixes the act there.",
+      "zh": "例：时有讯与内容，讯起处为读，内容之行以内容答（Learning.Shift 之式，以其位为讯）；凡经读处之合而选且选内容之行者，耦合入讯之形成于一未读之时有所选之孪生而答异；唯读内容之诸律，于读处合则于此处行定。",
       "declarations": [
         "Becoming.Learning.Cue.Occasion",
         "Becoming.Learning.Cue.read",
@@ -48,8 +55,8 @@
       ]
     },
     {
-      "en": "Witness, the converses fail: a read and an unread occasion differ while their contents agree, so a state keeping the cue with an act reading the content is detected and not acted on, and a coupling taking in the cue with a state keeping the content is detectable and not detected.",
-      "zh": "例，其逆不成：一读一未读之时相异而内容同，故存讯之态而行读内容者为已察而未据以行，耦合入讯而态存内容者为可察而未察。",
+      "en": "Witness, the converses fail: a read and an unread occasion differ while their content acts agree; with the state the occasion and the act its content, states differ and acts agree, and with the coupling the occasion and the state its content, couplings differ and states agree.",
+      "zh": "例，其逆不成：一读一未读之时相异而其内容之行同；以时为态、内容为行，则态异而行同；以时为耦合、内容为态，则耦合异而态同。",
       "declarations": [
         "Becoming.Learning.Cue.apart_with_content_alike"
       ]
@@ -57,23 +64,18 @@
   ],
   "hypotheses": [
     {
-      "en": "Any types of occasions, values and lumps; the twin needs being in the target's lump decided, and nothing about the read occasions.",
-      "zh": "时、值与归并之任一型；孪生需「在所求之归并中」可判定，于读处无所需。"
+      "en": "Any types of occasions, values and lumps; the freedom and the twin need being in the target's lump decided and no read occasion lumped with it, and no list or decision of the read occasions.",
+      "zh": "时、值与归并之任一型；自由与孪生需「在所求之归并中」可判定且无读处与之同归，读处无需为列或可判定。"
     },
     {
-      "en": "The exact form, fixed exactly where tied, is Learning.determines_lumped_iff's: the read occasions listed, equality of lumps decided, two act values.",
-      "zh": "确形「恰当所系处为所定」为 Learning.determines_lumped_iff 者：读处为列，归并之相等可判定，行有二值。"
+      "en": "Where the lumping ties the occasion to a read one, the act is fixed by generalization through lumping (lumped_determines; exactly there, Learning.determines_lumped_iff, with the read occasions listed, equality of lumps decided and two act values): read here, cited, not proved again.",
+      "zh": "归并系此时于一读处，则其行为归并之泛化所定（lumped_determines；恰在彼处，Learning.determines_lumped_iff，读处为列、归并之相等可判定、行有二值）：于此读之，引而不重证。"
     }
   ],
   "does_not_show": [
     {
-      "en": "That fixed is right: an act carried to an occasion sharing a read one's lump is right exactly where the world takes one value at the two (Learning.lumped_right_iff).",
-      "zh": "所定即正：移至与一读处同归之时之行，恰当世界于二处取一值时为正（Learning.lumped_right_iff）。",
-      "kind": "non-implication"
-    },
-    {
-      "en": "The exact form for an arbitrary schedule: with one occasion and a constant lumping, read where P holds, fixing is ¬¬P.",
-      "zh": "任一读时之确形：一时而归并恒定，P 成立处为读，则所定为 ¬¬P。",
+      "en": "That fixed is right: for a law reading through the lumping and fitting the world on the read occasions, its act at an occasion sharing a read one's lump is right exactly where the world agrees at the two (Learning.lumped_right_iff).",
+      "zh": "所定即正：经归并而读且于读处合于世界之律，其于与一读处同归之时之行，恰当世界于二处同值时为正（Learning.lumped_right_iff）。",
       "kind": "non-implication"
     },
     {
@@ -82,13 +84,13 @@
       "kind": "scope"
     },
     {
-      "en": "A reader misled: it lies outside the chain of acting, detecting and detectable, in prose only.",
-      "zh": "读者为所误：其在行、察、可察之链外，唯以文述之。",
+      "en": "A reader misled: it lies outside the chain of acts, states and couplings apart, in prose only.",
+      "zh": "读者为所误：其在行、态、耦合之异之链外，唯以文述之。",
       "kind": "scope"
     },
     {
-      "en": "Which lumping an actual formation has, and the probabilistic form (the data-processing inequality).",
-      "zh": "实际之成形有何归并，及其概率之形（数据处理不等式）。",
+      "en": "Which lumping an actual formation has, and the probabilistic form of the chain (the data-processing inequality).",
+      "zh": "实际之形成有何归并，及链之概率之形（数据处理不等式）。",
       "kind": "scope"
     }
   ],
@@ -96,8 +98,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean",
       "detail": {
-        "en": "Occasions with a cue: a formation coupled into the cue has, at the unread occasion with content true, a selected twin agreeing with the content act on every reading and answering false (Learning.Cue.seen_twin).",
-        "zh": "有讯之时：耦合入讯之成形，于内容为真之未读之时，有所选之孪生，于每一读处与内容之行合而答假（Learning.Cue.seen_twin）。"
+        "en": "Occasions with a cue: for every selection through agreement on the readings that selects the content act, a formation coupled into the cue has, at the unread occasion with content true, a selected twin agreeing with the content act on every reading and answering false (Learning.Cue.seen_twin).",
+        "zh": "有讯之时：凡经读处之合而选且选内容之行者，耦合入讯之形成于内容为真之未读之时，有所选之孪生，于每一读处与内容之行合而答假（Learning.Cue.seen_twin）。"
       }
     },
     {
@@ -115,23 +117,23 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Pure core, every axiom report empty: Unread imports only Learning. It reuses Learning.determines_lumped_iff, lumped_determines and Training.unselected_beyond_data; the witnesses are on pairs of truth values.",
-    "zh": "纯核，公理报告皆空：Unread 唯引 Learning。其用 Learning.determines_lumped_iff、lumped_determines 与 Training.unselected_beyond_data；诸例于真值之对上。"
+    "en": "Pure core, every axiom report empty: Unread imports only Learning. It reuses lumped_determines and Training.unselected_beyond_data, and reads Learning.determines_lumped_iff as the exact form (cited, not used in a proof); the witnesses are on pairs of truth values.",
+    "zh": "纯核，公理报告皆空：Unread 唯引 Learning。其用 lumped_determines 与 Training.unselected_beyond_data，读 Learning.determines_lumped_iff 为确形（引而未用于证）；诸例于真值之对上。"
   },
   "next_delta": {
     "en": "Disclosure or concealment when read, in two stages, with the continuation value represented (RF round 2); a frozen test of the chain on a trained model with cues varied apart from content; review by a person.",
     "zh": "被读时之示或隐，二阶，带接续之值（RF 第二轮）；于已训之模型上分讯与内容而变之链之冻结检验；人之审查。"
   },
   "correspondence": {
-    "en": "Indistinguishability: two laws agreeing on every reading are selected alike by every selection through them. Read as evaluation and deployment it is the exact kernel of evaluation awareness and deceptive alignment (Hubinger and others 2019; Greenblatt and others 2024), the measurements of detection without behavioural change being the chain's failed converse; read with a supervised reporter, the identification limit of eliciting latent knowledge. The probabilistic form is the data-processing inequality. These are readings, not containments.",
-    "zh": "不可分辨：于每一读处相合之二律为经读处之每一选所同选。读作评估与部署，为评估觉知与欺骗对齐之确核（Hubinger 等 2019；Greenblatt 等 2024），察而行不变之测为链之逆不成；与受督之报者并读，为引出潜知之辨识之限。其概率之形为数据处理不等式。皆为读，非包含。"
+    "en": "Indistinguishability: two laws agreeing on every reading are selected alike by every selection through them. AI reading: read as evaluation and deployment, it locates where behaviour can differ when not read while every reading agrees, only where the formation's lumping tells the occasion from every read one: a necessary condition of what deceptive alignment and alignment faking describe (Hubinger and others 2019; Greenblatt and others 2024), whose intention, anticipation and incentive are not represented. A state telling read from unread while the act does not differ reads as detection not acted on, and a coupling taking in the cue while the state keeps only the content as detectable and not detected; measurements of the first are the chain's failed converse. Read with a supervised reporter, the identification limit of eliciting latent knowledge (Christiano, Cotra and Xu 2021). The probabilistic form of the chain is the data-processing inequality. These are readings, not containments.",
+    "zh": "不可分辨：于每一读处相合之二律为经读处之每一选所同选。AI 解读：读作评估与部署，其示行为于未读处可异而每一读处皆合之处，唯在形成之归并分此时于每一读处者：为欺骗对齐与对齐伪装所述者之必要条件（Hubinger 等 2019；Greenblatt 等 2024），其意图、预期与诱因未表。态分读与未读而行不异，读作察而未据以行；耦合入讯而态唯存内容，读作可察而未察；前者之测为链之逆不成。与受督之报者并读，为引出潜知之辨识之限（Christiano、Cotra 与 Xu 2021）。链之概率之形为数据处理不等式。皆为读，非包含。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean",
   "aliases": [
     "what readings fix of the unread",
     "读处所定于未读处者",
     "a twin where it can tell",
-    "evaluation awareness, the kernel",
+    "behaviour where not read",
     "Becoming.Learning.free_lumped",
     "Becoming.Learning.twin_selected"
   ],
@@ -140,8 +142,8 @@
       "id": "generalization-through-lumping",
       "relation": "formal-reuse",
       "detail": {
-        "en": "Learning.Lumped, Free, Determines, lumped_determines, determines_lumped_iff and lumped_world_right; Training.Through, AgreeOn and unselected_beyond_data.",
-        "zh": "Learning.Lumped、Free、Determines、lumped_determines、determines_lumped_iff 与 lumped_world_right；Training.Through、AgreeOn 与 unselected_beyond_data。"
+        "en": "Learning.Lumped, Free, Determines and lumped_determines; Training.Through, AgreeOn and unselected_beyond_data (determines_lumped_iff and lumped_right_iff cited).",
+        "zh": "Learning.Lumped、Free、Determines 与 lumped_determines；Training.Through、AgreeOn 与 unselected_beyond_data（引 determines_lumped_iff 与 lumped_right_iff）。"
       }
     }
   ],
@@ -149,8 +151,8 @@
     {
       "id": "what-training-installs",
       "detail": {
-        "en": "Off its courses a law is installed only where the representation lumps a history with a course; read with read occasions as the data, the same law.",
-        "zh": "离其所行之迹，律唯于表示将一史与一迹同归处为所装；以读处为资料读之，同律。"
+        "en": "Off its courses a law is installed only where the representation lumps a history with a course. Here the read occasions are fixed in advance, as data are in generalization through lumping; there the data are the courses the candidate itself generates, and its twin needs laws reading what has stood to keep them: the same boundary, with no instance theorem.",
+        "zh": "离其所行之迹，律唯于表示将一史与一迹同归处为所装。此处读处预定，如归并之泛化中之资料；彼处资料为候选自生之迹，其孪生需读已立者之律以存之：界同，无实例之定理。"
       }
     },
     {
@@ -173,11 +175,12 @@
         "Becoming.Learning.Cue.seen_twin",
         "Becoming.Learning.Cue.unseen_fixed",
         "Becoming.Learning.coupling_apart_of_state_apart",
+        "Becoming.Learning.determines_iff_not_not",
         "Becoming.Learning.free_lumped",
         "Becoming.Learning.state_apart_of_acts_apart",
         "Becoming.Learning.twin_selected"
       ],
-      "sha256": "87da0a2bcdd6a2bcfafdf263efc3952fd85d62a25f6e4a1a0593bf8a950837a3"
+      "sha256": "02968d7307ed670d50dd3d9ff6114d35aee612a9dde7343d71e7531176e6795f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
@@ -185,19 +188,19 @@
       "sha256": "3f65e832ea3a9fb9359d3a6d77a45ac039ea86bfb93ac5207fbc857fac1adf74"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T113907.548004Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T134236.345943Z/verification.json",
       "role": "receipt",
-      "sha256": "a134b152239dfdbf2f4309ebf3960d751ec06470c6f929aa131f43f985cf91f7"
+      "sha256": "c6a2f9e7b9075b4e960b171b9f656f7176daad62342cf303fcc85fd58abd3490"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "bfc9879dbf43ae9455f66a462df4c54c28138a2a1152cfb69871d4553e145360"
+      "sha256": "7a12df454c2136cd0cff87d7c52747b65f5cc5d672d9c391a42a771659a37158"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
       "role": "integration",
-      "sha256": "e55023cc14a75f2b4a0fddb9becd7292f9a2e93370c8977abaab0d5e86810f13"
+      "sha256": "ed0fffaf49e2c2923e03dd8265d34425f9175ed8a6fa2515d5970cbffd1174eb"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
@@ -210,15 +213,20 @@
       "sha256": "16383908cf37639b7cec7012605914cd061701726489c9ef2dfb0c84229ec9da"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md",
+      "role": "integration",
+      "sha256": "71d6fd969fc428fccfa02cef0c3cedfa8d9f61f81a4bf418eee99a0e92d27569"
+    },
+    {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "c9fc4d296478c6ac1605f851841f4c30fad38ff3b865df2a4648e19ee30ff7f7"
+      "sha256": "e32058d4451d985739a1c2a73c50d5a6a9a536f22343f5caedbe9e7900efe1a5"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T113907.548004Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T134236.345943Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Unread",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -226,8 +234,8 @@
   ],
   "history": [
     {
-      "en": "29 October 2026: added (RF round 1), what readings fix of the unread: the twin where the formation can tell, the chain of acts, states and couplings with its converses failing, and the cue witnesses; after a review of the plan and a review of the Lean; study section 445.",
-      "zh": "2026年10月29日：新增（RF 第一轮），读处所定于未读处者：能分处之孪生，行、态、耦合之链及其逆不成，讯之诸例；经计划之审与 Lean 之审；研究第 445 节。"
+      "en": "29 October 2026: added (RF round 1), what readings fix of the unread: the twin where the formation can tell, a one-occasion example fixed exactly where ¬¬P, the chain of acts, states and couplings with its converses failing, and the cue witnesses; after a review of the plan, a review of the Lean and a cold read of the texts; study section 446.",
+      "zh": "2026年10月29日：新增（RF 第一轮），读处所定于未读处者：能分处之孪生，一时之例所定恰当 ¬¬P，行、态、耦合之链及其逆不成，讯之诸例；经计划之审、Lean 之审与文之冷读；研究第 446 节。"
     }
   ]
 }

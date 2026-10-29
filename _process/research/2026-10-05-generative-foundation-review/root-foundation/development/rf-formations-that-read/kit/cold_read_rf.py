@@ -38,8 +38,8 @@ def placeheld(text):
     return text
 
 
-S11 = (HERE / 'cold-read/s11.md').read_text(encoding='utf-8')
-S5 = (HERE / 'cold-read/s5.md').read_text(encoding='utf-8')
+S11 = (HERE / 'cold-read/s11.txt').read_text(encoding='utf-8')
+S5 = (HERE / 'cold-read/s5.txt').read_text(encoding='utf-8')
 assert '{' not in S11 and '{' not in S5
 
 # 03 §11 and 05 §8: the blocks whole

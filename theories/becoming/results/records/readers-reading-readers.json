@@ -8,15 +8,15 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-29T12:09:54+00:00",
+  "reviewed_at_utc": "2026-10-29T14:08:27+00:00",
   "statement": {
-    "en": "From the member on whom every later member reads only the acts before it, a pool's acts are alike across worlds alike through the earlier members' couplings: it reaches only what couples into those read first, however many follow.",
-    "zh": "自其后每一成员唯读其前之行者起，池之行于前者耦合无别之二世界皆同：其所及唯在先所读者之所耦合入，后继者多寡不论。"
+    "en": "Where every member from member k on, k included, acts alike whatever its own coupling, on every list of earlier acts, a pool's acts are alike across worlds alike through the couplings of the members before k: they carry no more than what couples into those members, however many follow.",
+    "zh": "自第 k 员起（含第 k 员），每员于每一前行之列皆不论其耦合而同行，则池之行于第 k 员前诸员之耦合无别之二世界皆同：其所载不逾彼诸员之所耦合入，后继者多寡不论。"
   },
   "laws": [
     {
-      "en": "Members act in turn: member n by its law on its own coupling of the world and the list of the acts before it; from member k on, every member acting alike whatever its coupling, and two worlds alike through the couplings of the members before k, are named.",
-      "zh": "成员依次而行：第 n 员依其律，于其对世界之耦合及其前之行之列而行；自第 k 员起每员不论其耦合皆同行，及于第 k 员前诸员之耦合无别之二世界，皆有名。",
+      "en": "Members act in turn: member n by its law on its own coupling of the world and the list of the acts before it; from member k on, every member acting alike whatever its coupling, on every list of earlier acts, and two worlds alike through the couplings of the members before k, are named.",
+      "zh": "成员依次而行：第 n 员依其律，于其对世界之耦合及其前之行之列而行；自第 k 员起每员于每一前行之列皆不论其耦合而同行，及于第 k 员前诸员之耦合无别之二世界，皆有名。",
       "declarations": [
         "Becoming.Turns",
         "Becoming.Turns.acts",
@@ -26,8 +26,8 @@
       ]
     },
     {
-      "en": "From member k on, where every member reads only the acts before it, two worlds alike through the couplings of the members before k give every member the same act, and the same list of acts at every length.",
-      "zh": "自第 k 员起每员唯读其前之行，则于第 k 员前诸员之耦合无别之二世界，每员之行皆同，每一长之行列皆同。",
+      "en": "From member k on, k included, where every member reads only the acts before it, two worlds alike through the couplings of the members before k give every member the same act, and the same list of acts at every length.",
+      "zh": "自第 k 员起（含第 k 员）每员唯读其前之行，则于第 k 员前诸员之耦合无别之二世界，每员之行皆同，每一长之行列皆同。",
       "declarations": [
         "Becoming.Turns.law_alike_of_cascade",
         "Becoming.Turns.acts_alike_of_cascade",
@@ -64,14 +64,14 @@
       "zh": "世界、耦合与行之任一型；成员以自然数为序，各读其前之全部行列。"
     },
     {
-      "en": "From member k on, every member acts alike whatever its own coupling; member k's coupling is then not read, so it is not among those the acts reach.",
-      "zh": "自第 k 员起每员不论其耦合皆同行；故第 k 员之耦合不为所读，不在诸行所及之中。"
+      "en": "From member k on, k included, every member acts alike whatever its own coupling, on every list of earlier acts, histories no run reaches included; member k's coupling is then not read, so it is not among those the acts reach.",
+      "zh": "自第 k 员起（含第 k 员），每员于每一前行之列（未行至之史亦然）皆不论其耦合而同行；故第 k 员之耦合不为所读，不在诸行所及之中。"
     }
   ],
   "does_not_show": [
     {
-      "en": "When an actual member stops reading its own coupling: in the probabilistic model, once the public evidence outweighs any private signal, which is a premise here.",
-      "zh": "实际之员何时不复读其耦合：于概率之模型，公示之据重于任一私讯之时；此处为前提。",
+      "en": "When an actual member stops reading its own coupling: in the probabilistic model (Bikhchandani, Hirshleifer and Welch 1992), once the public evidence outweighs any private signal, a premise here.",
+      "zh": "实际之员何时不复读其耦合：于概率之模型（Bikhchandani 等 1992），公示之据重于任一私讯之时；此处为前提。",
       "kind": "non-implication"
     },
     {
@@ -85,8 +85,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "Weighted averaging (DeGroot) and its wisdom condition, networks where members read only some earlier acts, and members in no well-founded order.",
-      "zh": "加权平均（DeGroot）及其智之条件，成员唯读部分前行之网，及无良基之序之成员。",
+      "en": "Weighted averaging (DeGroot 1974) and its wisdom condition (Golub and Jackson 2010); a bound depending on who reads whom (laws ignoring some earlier acts are covered); members in no well-founded order.",
+      "zh": "加权平均（DeGroot 1974）及其智之条件（Golub 与 Jackson 2010）；依谁读谁之界（不读某些前行之律已含）；无良基之序之成员。",
       "kind": "scope"
     }
   ],
@@ -114,8 +114,8 @@
     "zh": "概率之形，公示之据重于每一私讯时之级联；预测依次之择者何时不复读其私讯之检验；人之审查。"
   },
   "correspondence": {
-    "en": "The deterministic form of an information cascade (Bikhchandani, Hirshleifer and Welch 1992; Banerjee 1992), where the act has stopped reading the member's own signal; the dependence failure of Condorcet's jury theorem; WitnessRefinementRuns.copied_witnesses_same is a neighbour, where copied witnesses add nothing under its further hypotheses. Read as echo chambers or evaluators trained on one another's verdicts, a reading, not a containment.",
-    "zh": "信息级联之定形（Bikhchandani、Hirshleifer 与 Welch 1992；Banerjee 1992），行已不读员之私讯者；Condorcet 陪审定理之依存之失；WitnessRefinementRuns.copied_witnesses_same 为其邻，其另加诸前提下仿制之证人无所增。读作回声室或以彼此之判而训之评者，为读，非包含。"
+    "en": "The deterministic form of an information cascade (Bikhchandani, Hirshleifer and Welch 1992; Banerjee 1992), where the act has stopped reading the member's own signal; WitnessRefinementRuns.copied_witnesses_same is a neighbour, where copied witnesses add nothing under its further hypotheses. AI reading: copying as the dependence failure of Condorcet's jury theorem; echo chambers, or evaluators trained on one another's verdicts, under the cascade premise. These are readings, not containments.",
+    "zh": "信息级联之定形（Bikhchandani、Hirshleifer 与 Welch 1992；Banerjee 1992），行已不读员之私讯者；WitnessRefinementRuns.copied_witnesses_same 为其邻，其另加诸前提下仿制之证人无所增。AI 解读：相仿为 Condorcet 陪审定理之依存之失；回声室，或以彼此之判而训之评者，于级联之前提下。皆为读，非包含。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean",
   "aliases": [
@@ -140,8 +140,8 @@
     {
       "id": "what-pooled-coupling-reaches",
       "detail": {
-        "en": "A pool reaches no further than the union of its members' closures; where members read one another's acts, only what couples into those read first.",
-        "zh": "池之所及不逾其诸员之闭包之并；诸员彼此读行之处，唯及在先所读者之所耦合入。"
+        "en": "A pool reaches no further than the union of its members' closures; where, from some member on, every member reads only the acts before it, a selection through the acts reaches only what couples into the members before that one.",
+        "zh": "池之所及不逾其诸员之闭包之并；自某员起每员唯读其前之行之处，经诸行之选唯及彼员前诸员之所耦合入。"
       }
     }
   ],
@@ -172,19 +172,19 @@
       "sha256": "3f65e832ea3a9fb9359d3a6d77a45ac039ea86bfb93ac5207fbc857fac1adf74"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T113907.548004Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T134236.345943Z/verification.json",
       "role": "receipt",
-      "sha256": "a134b152239dfdbf2f4309ebf3960d751ec06470c6f929aa131f43f985cf91f7"
+      "sha256": "c6a2f9e7b9075b4e960b171b9f656f7176daad62342cf303fcc85fd58abd3490"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "bfc9879dbf43ae9455f66a462df4c54c28138a2a1152cfb69871d4553e145360"
+      "sha256": "7a12df454c2136cd0cff87d7c52747b65f5cc5d672d9c391a42a771659a37158"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
       "role": "integration",
-      "sha256": "e55023cc14a75f2b4a0fddb9becd7292f9a2e93370c8977abaab0d5e86810f13"
+      "sha256": "ed0fffaf49e2c2923e03dd8265d34425f9175ed8a6fa2515d5970cbffd1174eb"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
@@ -197,15 +197,20 @@
       "sha256": "16383908cf37639b7cec7012605914cd061701726489c9ef2dfb0c84229ec9da"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md",
+      "role": "integration",
+      "sha256": "71d6fd969fc428fccfa02cef0c3cedfa8d9f61f81a4bf418eee99a0e92d27569"
+    },
+    {
       "path": "theories/becoming/chapters/05-COLLECTIVES.md",
       "role": "statement",
-      "sha256": "2dcf9f2058f3073f2f05065a5678723adeffe493b45d6a64e4f60393a78eebc3"
+      "sha256": "32eea32923b719dda1cc21c83dd34a0761165fcc38c0338e9185f6a9cbf3a009"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T113907.548004Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T134236.345943Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Cascade",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -213,8 +218,8 @@
   ],
   "history": [
     {
-      "en": "29 October 2026: added (RF round 1), readers reading readers: from a cascade on, a pool reaches only the couplings of those read first; a member carrying its coupling; copying; after a review of the plan and a review of the Lean; study section 445.",
-      "zh": "2026年10月29日：新增（RF 第一轮），读者读读者：自级联起池唯及在先所读者之耦合；载其耦合之员；相仿；经计划之审与 Lean 之审；研究第 445 节。"
+      "en": "29 October 2026: added (RF round 1), readers reading readers: from a cascade on, a pool's acts carry no more than the couplings of the members before it; a member carrying its coupling; copying; after a review of the plan, a review of the Lean and a cold read of the texts; study section 446.",
+      "zh": "2026年10月29日：新增（RF 第一轮），读者读读者：自级联起池之行所载不逾其前诸员之耦合；载其耦合之员；相仿；经计划之审、Lean 之审与文之冷读；研究第 446 节。"
     }
   ]
 }

@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-29T12:09:54+00:00",
+  "reviewed_at_utc": "2026-10-29T14:08:27+00:00",
   "statement": {
-    "en": "The positive comparisons shared by every strict order that strict choices could come from are exactly the reach of the relation they show; such an order exists exactly where nothing shown returns, and beyond the reach no comparison is forced.",
-    "zh": "严择所可出之每一严序所共有之正比较，恰为其所示之关系之及；此序有之，恰当所示无返；及之外，无比较为所迫。"
+    "en": "Strict choices come from some strict order exactly where nothing they show returns; then the positive comparisons every such order shares are exactly the reach of the relation they show, and beyond that reach no comparison is forced.",
+    "zh": "严择出于某一严序，恰当其所示无返；其时每一此序所共有之正比较，恰为其所示之关系之及；及之外，无比较为所迫。"
   },
   "laws": [
     {
@@ -35,8 +35,8 @@
       ]
     },
     {
-      "en": "Some irreflexive transitive relation accords with the choices exactly where nothing reaches itself in the shown relation, the shown reach then being one («无环则及为序»).",
-      "zh": "有一非自反之传递关系与诸择相合，恰当所示之关系中无自及者；其时所示之及即其一（«无环则及为序»）。",
+      "en": "Some irreflexive transitive relation accords with the choices exactly where nothing reaches itself in the shown relation, the shown reach then being one (by «及之传递»; the grammar states the same as «无环则及为序»).",
+      "zh": "有一非自反之传递关系与诸择相合，恰当所示之关系中无自及者；其时所示之及即其一（由 «及之传递»；文法以 «无环则及为序» 陈之）。",
       "declarations": [
         "Becoming.ChoiceOccasions.accorded_iff_noCycle"
       ]
@@ -50,8 +50,15 @@
       ]
     },
     {
-      "en": "Reach with one pair added is reach without it, or reach to the pair's first member, the pair and reach from its second; adding a pair leaves no cycle exactly where there was none and the second member neither is nor reaches the first.",
-      "zh": "增一对后之及，或为未增之及，或为及于对之首、经此对、自其次而及；增一对而无环，恰当原无环且次者非首者亦不及首者。",
+      "en": "A narrower class of strict orders according with the choices makes every comparison that every strict according order makes: restricting the orders a reader allows can only add comparisons.",
+      "zh": "与诸择相合之严序之较窄之类，凡每一相合之严序皆作之比较，皆作之：限读者所许之序，唯能增比较。",
+      "declarations": [
+        "Becoming.ChoiceOccasions.above_in_class_of_every"
+      ]
+    },
+    {
+      "en": "Reach with one pair added is reach without it, or a path through the pair: from the pair's first member or what reaches it, to its second member or what it reaches; adding a pair leaves no cycle exactly where there was none and the second member neither is nor reaches the first.",
+      "zh": "增一对后之及，或为未增之及，或经此对：自对之首或及于首者，至其次或次所及者；增一对而无环，恰当原无环且次者非首者亦不及首者。",
       "declarations": [
         "Becoming.ChoiceOccasions.withPair",
         "Becoming.ChoiceOccasions.reach_withPair",
@@ -93,7 +100,7 @@
     },
     {
       "en": "Witness, one search with two orders: the search takes the first listed alternative standing above every distinct listed one, or none; run with either of two strict orders according with the choice, it chooses the first from the menu met, and from the first and the third the first under one order and the third under the other.",
-      "zh": "例，一搜二序：搜取所列中居其余每一者之上之首者；以与此择相合之二严序之任一行之，于所遇之单择首；于首与第三，一序择首，另一序择第三。",
+      "zh": "例，一搜二序：搜取所列中居其余每一相异者之上之首者，无则无；以与此择相合之二严序之任一行之，于所遇之单择首；于首与第三，一序择首，另一序择第三。",
       "declarations": [
         "Becoming.ChoiceOccasions.Untried.aboveFirst",
         "Becoming.ChoiceOccasions.Untried.aboveThird",
@@ -110,16 +117,16 @@
   ],
   "hypotheses": [
     {
-      "en": "Any carrier of alternatives and any occasions; what is open at an occasion is any predicate; nothing is decided, and no finiteness is used.",
-      "zh": "任一备择之载体与任一时；一时所开者为任一谓词；无所判定，不用有限。"
+      "en": "Any carrier of alternatives and any occasions; what is open at an occasion is any predicate; no decidability is assumed, and no finiteness is used.",
+      "zh": "任一备择之载体与任一时；一时所开者为任一谓词；不设可判定，不用有限。"
     },
     {
-      "en": "Accordance is strict dominance: what is chosen stands above every other open alternative; ties broken by a separate rule are choices among equals, which accord only weakly.",
-      "zh": "相合为严胜：所择居每一他开者之上；以另则断之平局为等者中之择，唯弱合。"
+      "en": "Accordance is strict dominance: what is chosen stands above every other open alternative; choices required only to be maximal, nothing open standing above what is chosen, accord only weakly.",
+      "zh": "相合为严胜：所择居每一他开者之上；唯求极大之择（无开者居所择之上）唯弱合。"
     },
     {
-      "en": "The freedom beyond the reach needs no cycle shown and the two alternatives distinct.",
-      "zh": "及之外之自由，需所示无环且二备择相异。"
+      "en": "The exactness of the shared comparisons and the freedom beyond the reach need no cycle shown; the freedom needs the two alternatives distinct and the second not reaching the first, and ranking both ways needs neither reaching the other.",
+      "zh": "所共有之比较之确与及外之自由皆需所示无环；自由又需二备择相异且次者不及首者，两向排之需二者互不相及。"
     }
   ],
   "does_not_show": [
@@ -129,8 +136,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That a training can install either order of the witness, or which class of orders an architecture can install; a narrower class holding an according order fixes at least as much.",
-      "zh": "训练能装入例中之任一序，或某架构能装入何类之序；含一相合之序之较窄之类所定者至少同多。",
+      "en": "That a training can install either order of the witness, or which class of orders an architecture can install; a narrower class fixes at least as much (a law above), and possibly more.",
+      "zh": "训练能装入例中之任一序，或某架构能装入何类之序；较窄之类所定者至少同多（见上律），或更多。",
       "kind": "non-implication"
     },
     {
@@ -160,8 +167,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean",
       "detail": {
-        "en": "One search, two strict orders according with that choice: alike on the menu met, the first and the third chosen apart on the menu met after (ChoiceOccasions.Untried.same_search_after).",
-        "zh": "一搜，与此择相合之二严序：于所遇之单同择，于其后之单分择首与第三（ChoiceOccasions.Untried.same_search_after）。"
+        "en": "One search, two strict orders according with that choice: alike on the menu met, the first and the third chosen apart on the menu met after (ChoiceOccasions.Untried.same_search_met, ChoiceOccasions.Untried.same_search_after).",
+        "zh": "一搜，与此择相合之二严序：于所遇之单同择，于其后之单分择首与第三（ChoiceOccasions.Untried.same_search_met、ChoiceOccasions.Untried.same_search_after）。"
       }
     }
   ],
@@ -180,8 +187,8 @@
     "zh": "可实现之类：训练装入一搜之任一序；预测、选择、修订与干预之有限机制，内对齐与协助于其上陈述（RF 第二轮）；择者之及之冻结检验；人之审查。"
   },
   "correspondence": {
-    "en": "Rationalizing strict choices by a strict partial order, through the least transitive relation holding what they show, is close to Richter's theorem (1966) in order form; it is not Afriat's theorem (1967), which concerns expenditure data and utility. Read with training, the shown reach is what a training reading a trained law's choices fixes of its order (inner alignment, goal misgeneralization in exact form); read with a helper, what inverse reinforcement learning can fix of a principal (Ng and Russell 2000; Armstrong and Mindermann 2018 for choices among equals). These are readings, not containments.",
-    "zh": "以所示者之最小传递关系由严偏序合理化严择，近于 Richter 定理（1966）之序形；非 Afriat 定理（1967），彼关支出资料与效用。与训练并读，所示之及为读已训之律之择之训练于其序所定者（内对齐、目标误泛化之确形）；与助者并读，为逆强化学习于委托者所能定者（Ng 与 Russell 2000；等者中之择见 Armstrong 与 Mindermann 2018）。皆为读，非包含。"
+    "en": "Rationalizing strict choices by a strict partial order, through the least transitive relation holding what they show, is close to Richter's theorem (1966) without completeness: a strict partial order, not a complete preference, so no extension principle (Szpilrajn 1930) is needed; it is not Afriat's theorem (1967), which concerns expenditure data and utility. AI reading: read with training, where the training restricts the orders no further, comparisons beyond the shown reach stay open, goal misgeneralization located exactly as a possibility, not shown (Langosco and others 2022; Shah and others 2022), and inner alignment (Hubinger and others 2019) for searches by an order; the kernel on a law's own courses is what training installs. Read with a helper, what strict choices alone fix of an order: maximal choices force none, the order form of the degenerate reward (Ng and Russell 2000); that behaviour fixes a planner and a reward together only under assumptions on the planner (Armstrong and Mindermann 2018) lies outside: the law assumes strict dominance at the occasions shown and does not represent how choices are computed. These are readings, not containments.",
+    "zh": "以所示者之最小传递关系由严偏序合理化严择，近于 Richter 定理（1966）而无完备：为严偏序而非完备之偏好，故无需扩张之原理（Szpilrajn 1930）；非 Afriat 定理（1967），彼关支出资料与效用。AI 解读：与训练并读，训练于序不另加限，则所示之及外之比较仍开：目标误泛化为确定其处之可能，非所示（Langosco 等 2022；Shah 等 2022），内对齐（Hubinger 等 2019）为依序之搜；律自行之迹上之核为训练所装者。与助者并读，为唯严择于序所定者：极大之择不迫任何比较，为退化报酬之序形（Ng 与 Russell 2000）；行为唯于择者之设下方合定择者与报酬（Armstrong 与 Mindermann 2018），在外：此律设所择于所示之时严胜，未表择之所算。皆为读，非包含。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean",
   "aliases": [
@@ -199,8 +206,8 @@
       "id": "continuation-relative-to-a-class",
       "relation": "formal-reuse",
       "detail": {
-        "en": "The grammar's reach «及» with its transitivity «及之传递» and monotonicity «及之单调», acyclicity «无环» and «无环则及为序».",
-        "zh": "文法之及 «及»，及其传递 «及之传递» 与单调 «及之单调»，无环 «无环» 与 «无环则及为序»。"
+        "en": "The grammar's reach «及» with its transitivity «及之传递» and monotonicity «及之单调», and acyclicity «无环».",
+        "zh": "文法之及 «及»，及其传递 «及之传递» 与单调 «及之单调»，与无环 «无环»。"
       }
     }
   ],
@@ -208,8 +215,8 @@
     {
       "id": "what-training-installs",
       "detail": {
-        "en": "Read with training: a training reading a trained law's choices fixes of the order it carries exactly the shown reach.",
-        "zh": "与训练并读：读已训之律之择之训练，于其所携之序所定者恰为所示之及。"
+        "en": "AI reading, with training: where a trained law chooses strictly by a strict order and the training reads only its choices and restricts the orders no further, the comparisons every according order shares are the shown reach; a narrower class can fix more; what a training installs is not established.",
+        "zh": "AI 解读，与训练并读：已训之律依一严序严择，而训练唯读其择、于序不另加限，则每一相合之序所共有之比较为所示之及；较窄之类可定更多；训练所装者未立。"
       }
     },
     {
@@ -217,6 +224,13 @@
       "detail": {
         "en": "What readings fix of the unread: the same question for acts at occasions not read.",
         "zh": "读处所定于未读处者：同问于未读之时之行。"
+      }
+    },
+    {
+      "id": "the-present-on-causal-set-growth",
+      "detail": {
+        "en": "The linear-extension form on finite causal sets with precedence decided: what every course keeps is precedence, unrelated elements born either way; here strict partial orders on any carrier, with nothing decided.",
+        "zh": "有限因果集上之线性扩张之形，先后可判定：每一程所存者为先后，无关之元两向而生；此处为任一载体上之严偏序，无所判定。"
       }
     }
   ],
@@ -250,6 +264,7 @@
         "Becoming.ChoiceOccasions.Untried.shown_from_first",
         "Becoming.ChoiceOccasions.Untried.shown_to_second",
         "Becoming.ChoiceOccasions.Untried.untried_free",
+        "Becoming.ChoiceOccasions.above_in_class_of_every",
         "Becoming.ChoiceOccasions.above_in_every_iff_reach",
         "Becoming.ChoiceOccasions.above_in_some_of_unreached",
         "Becoming.ChoiceOccasions.accorded_iff_noCycle",
@@ -265,7 +280,7 @@
         "Becoming.ChoiceOccasions.weakly_forces_no_comparison",
         "Becoming.ChoiceOccasions.withPair"
       ],
-      "sha256": "4e8c442362dd328d4b38c65a5043bdfa23ff7a94281a5f1b43ad45150b604a3d"
+      "sha256": "ca92c7871146fdde11aec4b001c2117a188a58f59eeeabab9f8b6b0764652b43"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
@@ -273,19 +288,19 @@
       "sha256": "597036b7017d77d548b949ca29aeb036379904c8b7d8fd7be8329e4df400c940"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T113907.548004Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T134236.345943Z/verification.json",
       "role": "receipt",
-      "sha256": "a134b152239dfdbf2f4309ebf3960d751ec06470c6f929aa131f43f985cf91f7"
+      "sha256": "c6a2f9e7b9075b4e960b171b9f656f7176daad62342cf303fcc85fd58abd3490"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "bfc9879dbf43ae9455f66a462df4c54c28138a2a1152cfb69871d4553e145360"
+      "sha256": "7a12df454c2136cd0cff87d7c52747b65f5cc5d672d9c391a42a771659a37158"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
       "role": "integration",
-      "sha256": "e55023cc14a75f2b4a0fddb9becd7292f9a2e93370c8977abaab0d5e86810f13"
+      "sha256": "ed0fffaf49e2c2923e03dd8265d34425f9175ed8a6fa2515d5970cbffd1174eb"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
@@ -298,15 +313,20 @@
       "sha256": "16383908cf37639b7cec7012605914cd061701726489c9ef2dfb0c84229ec9da"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md",
+      "role": "integration",
+      "sha256": "71d6fd969fc428fccfa02cef0c3cedfa8d9f61f81a4bf418eee99a0e92d27569"
+    },
+    {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "c9fc4d296478c6ac1605f851841f4c30fad38ff3b865df2a4648e19ee30ff7f7"
+      "sha256": "e32058d4451d985739a1c2a73c50d5a6a9a536f22343f5caedbe9e7900efe1a5"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T113907.548004Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T134236.345943Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ShownOrder",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -314,8 +334,8 @@
   ],
   "history": [
     {
-      "en": "29 October 2026: added (RF round 1), what choices show of the order they come from: the shown reach, its exactness under no cycle, the freedom beyond it, choices among equals, and the witness of one search with two orders; after a review of the plan and a review of the Lean; study section 445.",
-      "zh": "2026年10月29日：新增（RF 第一轮），所择所示之序：所示之及，无环时之确，及外之自由，等者中之择，一搜二序之例；经计划之审与 Lean 之审；研究第 445 节。"
+      "en": "29 October 2026: added (RF round 1), what choices show of the order they come from: the shown reach, its exactness under no cycle, a narrower class, the freedom beyond it, maximal choices, and the witness of one search with two orders; after a review of the plan, a review of the Lean and a cold read of the texts; study section 446.",
+      "zh": "2026年10月29日：新增（RF 第一轮），所择所示之序：所示之及，无环时之确，较窄之类，及外之自由，极大之择，一搜二序之例；经计划之审、Lean 之审与文之冷读；研究第 446 节。"
     }
   ]
 }

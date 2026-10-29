@@ -26,6 +26,7 @@ OTHER = [f'{PKG}/Becoming.lean', f'{PKG}/README.md', f'{PKG}/README.zh.md', f'{P
          'theories/becoming/chapters/07-SIGNIFICANCE.md', 'theories/becoming/chapters/08-METHOD.md',
          'theories/becoming/results/data/regions.json',
          'theories/becoming/THE-THEORY-OF-BECOMING.md',
+         'theories/becoming/review/ALIGNMENT.md',
          f'{RF}/BECOMING-RENEWAL-READING.md', f'{RF}/THEOREM-CONNECTIVITY.json',
          f'{RF}/THEOREM-CONNECTIVITY-APART.json']
 MINE = set(LEAN) | set(OTHER)
@@ -47,7 +48,8 @@ EXPECTED = {
 }
 # after the cold read (cold_read_rf.py): 03's bases (the chapter's head), 03 §11, and 07 §9's open row
 EXPECTED['theories/becoming/chapters/03-KNOWING.md'] |= {'Knowing, learning and testing', 'knowing',
-                                                         'knowing-learning-and-testing', "11. What a formation's acts show",
+                                                         'knowing-learning-and-testing', '(before the first heading)',
+                                                         "11. What a formation's acts show",
                                                          '11-what-a-formations-acts-show', 'what-the-acts-show'}
 EXPECTED['theories/becoming/chapters/07-SIGNIFICANCE.md'] |= {'9. Objections and verdicts', '9-objections-and-verdicts',
                                                               'objections'}
