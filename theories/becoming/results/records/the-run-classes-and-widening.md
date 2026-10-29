@@ -19,7 +19,7 @@
 4. The consuming class alone does not narrow: in Untaken a formation draws on a condition that stays at zero below its need, so it is consuming over the run, yet nothing is taken or given, the flow balances, and the levels with and without its part keep what can form the same. (`Becoming.Untaken.flow`, `Becoming.Untaken.web`, `Becoming.Untaken.part`, `Becoming.Untaken.consuming_keeps`)
    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Arising is where a part's place in the order begins. In a balanced flow where only active formations take, and only from what they draw on, and only active formations give, a part none of whose members is active at the start and none of which arises across any step takes and gives nothing, so the levels with and without it admit alike; a formation not active at the start that never arises is never active. (`Becoming.Web.inactive_of_not_arising`, `Becoming.Flow.Balances.keeps_of_inactive`, `Becoming.Flow.Balances.keeps_of_not_arising`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Master laws, by Lean dependency:* balance; its declarations reach the grammar.
 6. The arising class does not decide the order: under the same premises (balance, only active formations taking from what they draw on, only active formations giving), a member not active at the start that arises across the first step then narrows what can form by taking a condition's unit before a dependence on it forms (ArisingDrawer), or widens it by giving a condition the unit a later dependence needs (ArisingGiver). (`Becoming.ArisingDrawer.flow`, `Becoming.ArisingDrawer.web`, `Becoming.ArisingDrawer.arises_narrows`, `Becoming.ArisingGiver.flow`, `Becoming.ArisingGiver.web`, `Becoming.ArisingGiver.arises_widens`)
    - *Master laws, by Lean dependency:* balance and order; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
@@ -89,6 +89,7 @@ The twentieth review's D2 and F13 asked how a part's class over a run relates to
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [BECOMING-TWENTIETH-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-TWENTIETH-REVIEW.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T125805.763052Z/verification.json) | — |
 
 Aliases: `the run classes and widening`, `整段的类与扩大`, `Becoming.Flow.Balances.not_narrows_of_renewed`, `Becoming.Flow.Balances.narrows_of_consumed`, `Becoming.Flow.Balances.keeps_of_not_arising`
 

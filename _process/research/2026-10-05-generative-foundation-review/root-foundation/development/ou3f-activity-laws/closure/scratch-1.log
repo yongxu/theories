@@ -1,0 +1,22 @@
+Becoming/Reserve.lean:302:5: error: Application type mismatch: The argument
+  inactive
+has type
+  ¬W.active U f
+but is expected to have type
+  ¬W.active (U + ?m.96) f
+in the application
+  And.intro inactive
+
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/ou3f-laws/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/closure/tree",
+  "modules": 43,
+  "ran": [
+    "Becoming.Clock",
+    "Becoming.Reserve",
+    "BecomingClockAxiomAudit"
+  ],
+  "reused": 31,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.Reserve"
+}

@@ -4,7 +4,7 @@ Rendered by `kit/render_table.py` from `data/classification.tsv` (the classifica
 
 | category | theorems |
 |---|---|
-| (a) | 14 |
+| (a) | 15 |
 | (a), follows | 4 |
 | (a), done | 10 |
 | (b) | 4 |
@@ -15,7 +15,7 @@ Rendered by `kit/render_table.py` from `data/classification.tsv` (the classifica
 | (c) representation | 63 |
 | (c) calibration | 6 |
 | (c) witness | 141 |
-| (c) model | 173 |
+| (c) model | 172 |
 | all | 436 |
 
 ## Identity (73: (a) 2, (a), follows 2, (a), done 2, (b) 4, (c) representation 19, (c) witness 20, (c) model 24)
@@ -100,7 +100,7 @@ Rendered by `kit/render_table.py` from `data/classification.tsv` (the classifica
 
 | theorem | category | law or anchor | note |
 |---|---|---|---|
-| `Web.active_back` | (a) | closure | a bounded region kept by k steps with no part arising: Invariant.reach with Run.reach on a clock (the successor law's run; at the occurrence model the names' step), as EC6b re-proved Pace.stays, bounded; the review compiled it (checks/) |
+| `Web.active_back` | (a) | closure | a bounded region kept by k steps with no part arising: kept_onward, the grammar's closure at the successor («线则所闭» with «闭含所闭»), as EC6b re-proved Pace.stays by closure, bounded; the review compiled it (checks/) |
 | `Web.allWhole_self` | (c) representation |  | every formation is the whole of itself (definitional) |
 | `Web.whole_self` | (c) representation |  | every formation is the whole of itself (definitional) |
 | `Countless.countless` | (c) witness |  | a fact of a constructed web of wholes and parts (Countless) |
@@ -171,20 +171,21 @@ Rendered by `kit/render_table.py` from `data/classification.tsv` (the classifica
 | `Web.Whole.same_iff_inStep` | (c) model |  | a whole active where some part is (union of activities): predicate logic at each step and counting over steps; the grammar has no union of partial identities, and routing through «生于粗则生于细» would wrap the step, not replace it |
 | `Web.diminished_iff` | (c) model |  | a list's union whole active and its meet whole not is a diminished grade (counting) |
 
-## PatternPassing (33: (a) 4, (a), follows 2, (a), done 3, (c) representation 10, (c) witness 9, (c) model 5)
+## PatternPassing (33: (a) 5, (a), follows 2, (a), done 3, (c) representation 10, (c) witness 9, (c) model 4)
 
 | theorem | category | law or anchor | note |
 |---|---|---|---|
 | `Web.ByPassing.begins_passed` | (a) | «生于细而续于粗则异» | small: the twin begins_passed_by_grammar replaces only the contradiction from the arising (absurd before begins.1), through two representation lemmas; rule 9 still keeps the derivation and retires the direct proof |
 | `Web.ByPassing.ends_within` | (a) | «两端分则中有标»,«线内同类» | the direct proof traced a carrier back (trace), as passes_within's did; through line_back and «两端分则中有标» the passing lies on the pattern's line, where none is from T on; its conclusion is a negation, so trace's reason does not apply (found by the twins' review; filed (c) model before) |
 | `Web.ByPassing.passes_within` | (a) | «两端分则中有标»,«线内同类» | the direct proof (through trace, an induction) duplicates ByPassing.passes_within_by_line, which derives the same statement from the law that a line whose ends lie apart in a class has a marked step: rule 9 keeps the derivation, the direct proof goes and one name is retired |
-| `Web.ByPassing.present_earlier` | (a) | closure | presence kept by the backward step, by passing: a bounded region over k steps, Invariant.reach with Run.reach on a clock (the successor law's run; at the occurrence model the names' step), as EC6b re-proved Pace.stays |
+| `Web.ByPassing.present_earlier` | (a) | closure | presence kept by the backward step, by passing: a bounded region over k steps, kept_onward, the grammar's closure at the successor («线则所闭» with «闭含所闭»), as EC6b re-proved Pace.stays by closure |
+| `Web.ByPassing.trace` | (a) | closure | that every carrier at S + n carried the pattern at S or some carrier passed it across one of the n steps is a region every step keeps: kept_onward, the grammar's closure at the successor (found by the closure review; filed (c) model before, its reason concerning only the route through the pattern's line) |
 | `Web.ByPassing.empty_stays` | (a), follows | Web.ByPassing.present_of_le | one application of present_of_le: it follows |
 | `Web.ByPassing.present_of_le` | (a), follows | Web.ByPassing.present_earlier | one application of present_earlier: it reaches closure, unchanged, once present_earlier does |
 | `Web.ByPassing.begins_passed_by_grammar` | (a), done | «生于细而续于粗则异» | already the derivation (see ByPassing.begins_passed) |
 | `Web.ByPassing.passes_within_by_line` | (a), done | «两端分则中有标»,«线内同类» | already the derivation (see ByPassing.passes_within) |
 | `Web.ceases_of_pattern_ends` | (a), done | «亡于粗则亡于细» | already the grammar's law: the pattern's line ending in the coarser class ends the formation |
-| `Web.ByPassing.line_back` | (c) representation | «相续» | by passing, an active formation at S + k + 1 has a line back to S (a bridge, already through «及之传递») |
+| `Web.ByPassing.line_back` | (c) representation | «相续» | by passing, an active formation at S + k + 1 has a line back to S (a bridge, already through «及之传递»; proved by closure, kept_onward, after the closure review) |
 | `Web.alters_of_passes` | (c) representation | «异» | a passing to another formation is an alteration of the activity class under the carrier class (positions) |
 | `Web.arises_iff_sheng_carrier` | (c) representation | «生» | arising as a beginning of the carrier class's line under passing |
 | `Web.byPassing_iff_continues` | (c) representation |  | by passing is every arising being continued under the passing continuation (definitional) |
@@ -204,7 +205,6 @@ Rendered by `kit/render_table.py` from `data/classification.tsv` (the classifica
 | `PatternRelay.stopped_quiet` | (c) witness |  | a fact of the constructed relay (PatternRelay) |
 | `PatternRelay.stopped_relay` | (c) witness |  | a fact of the constructed relay (PatternRelay) |
 | `Web.ByPassing.present_back` | (c) model |  | by passing, presence at t + 1 gives presence at t (definitional) |
-| `Web.ByPassing.trace` | (c) model |  | active at S + k: active at S or a passing within k steps (induction); the grammar route of passes_within (through line_back) would need deciding sameness of formations, a change of statement |
 | `Web.begins_within` | (c) model |  | presence from T on and brief formations: some arising within every d steps, as a double negation (counting over steps) |
 | `Web.carrying_active` (upper) | (c) model |  | the carrying web's activity lies within W's (definitional) |
 | `Web.carrying_iff` (upper) | (c) model |  | the carrying web's activity is what it carries, within W's (definitional) |
@@ -214,7 +214,7 @@ Rendered by `kit/render_table.py` from `data/classification.tsv` (the classifica
 | theorem | category | law or anchor | note |
 |---|---|---|---|
 | `Web.sheng_state_of_change` (upper) | (a) | «生于粗则生于细» | small: the proof already inlines the coarse-to-fine step as the destructuring of alike; the law replaces that step, as arises_of_persisting_arises already does |
-| `Web.steady_held` (upper) | (a) | closure | an equality of names kept along a held stretch, bounded at both ends: a bounded region, Invariant.reach with Run.reach on a clock (the successor law's run; at the occurrence model the names' step), as EC6b re-proved Pace.stays; it reads the names |
+| `Web.steady_held` (upper) | (a) | closure | an equality of names kept along a held stretch, bounded at both ends: a bounded region, kept_onward, the grammar's closure at the successor («线则所闭» with «闭含所闭»), as EC6b re-proved Pace.stays by closure; it reads the names |
 | `Web.wang_state_of_change` (upper) | (a) | «亡于粗则亡于细» | small: the dual of sheng_state_of_change |
 | `Web.arises_of_persisting_arises` (upper) | (a), done | «生于粗则生于细» | already the grammar's law: born in the coarse class, born in the finer |
 | `Web.ceases_of_persisting_ceases` (upper) | (a), done | «亡于粗则亡于细» | already the grammar's law: ended in the coarse class, ended in the finer |
@@ -558,7 +558,7 @@ Rendered by `kit/render_table.py` from `data/classification.tsv` (the classifica
 
 | theorem | category | law or anchor | note |
 |---|---|---|---|
-| `Web.active_before` | (a) | closure | activity at a later step kept back to an earlier one, never arising after T: a bounded region, Invariant.reach with Run.reach on a clock (the successor law's run; at the occurrence model the names' step), as EC6b re-proved Pace.stays |
+| `Web.active_before` | (a) | closure | activity at a later step kept back to an earlier one, never arising after T: a bounded region, kept_onward, the grammar's closure at the successor («线则所闭» with «闭含所闭»), as EC6b re-proved Pace.stays by closure |
 | `Excluding.continues` | (c) witness |  | a fact of a constructed web, world or law (Exclusion) |
 | `Excluding.second_lasting` | (c) witness |  | a fact of a constructed web, world or law (Exclusion) |
 
@@ -631,7 +631,7 @@ Rendered by `kit/render_table.py` from `data/classification.tsv` (the classifica
 
 | theorem | category | law or anchor | note |
 |---|---|---|---|
-| `Web.ended_for_good` | (a) | closure | inactive with nothing in reserve is a region every step from U keeps: Invariant.reach with Run.reach on a clock (the successor law's run; at the occurrence model the names' step), as EC6b re-proved Pace.stays |
+| `Web.ended_for_good` | (a) | closure | inactive with nothing in reserve is a region every step from U keeps: kept_onward, the grammar's closure at the successor («线则所闭» with «闭含所闭»), as EC6b re-proved Pace.stays by closure |
 | `Once.once` | (c) witness |  | a fact of a constructed web, world or law (Reserve) |
 
 ## Unfolding (2: (c) representation 2)
@@ -657,4 +657,4 @@ Rendered by `kit/render_table.py` from `data/classification.tsv` (the classifica
 
 | theorem | category | law or anchor | note |
 |---|---|---|---|
-| `Web.inactive_of_not_arising` | (a) | closure | not being active is a region every step keeps where nothing arises: Invariant.reach with Run.reach on a clock (the successor law's run; at the occurrence model the names' step), as EC6b re-proved Pace.stays; the review compiled it (checks/) |
+| `Web.inactive_of_not_arising` | (a) | closure | not being active is a region every step keeps where nothing arises: kept_onward, the grammar's closure at the successor («线则所闭» with «闭含所闭»), as EC6b re-proved Pace.stays by closure; the review compiled it (checks/) |
