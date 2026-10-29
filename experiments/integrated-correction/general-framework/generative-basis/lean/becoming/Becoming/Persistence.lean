@@ -1171,6 +1171,10 @@ and ceasing read through it are beginning (生) and ending (亡) under that clas
 * **Derived from grammar laws.** The halves of `Web.ceases_persisting_iff` and
   `Web.arises_persisting_iff` that go from holding to activity follow from `«亡于粗则亡于细»` and
   its dual `«生于粗则生于细»` (`Web.ceases_of_persisting_ceases`, `Web.arises_of_persisting_arises`).
+  So do ending and beginning under the state class where activity changes, read from ending and
+  beginning under activity (`Web.wang_state_of_change`, `Web.sheng_state_of_change`).
+* **By closure.** A name kept over a held stretch (`Web.steady_held`) keeps a region along the
+  steps, so it is a case of the grammar's closure at the successor (`kept_onward`).
 * **Holding at every step is a line without end (不穷)** under holding (`Web.unending_of_holds`).
   Which `h` holds is a choice of class (`Seed.held_classes`): the spent seed's line never ends
   under holding by dependence and ends at the fourth step under holding by its reserve.
@@ -1179,8 +1183,8 @@ and ceasing read through it are beginning (生) and ending (亡) under that clas
   conservation induces, in the class of activity (`World.arises_fixed_iff_sheng`), and ceases so
   exactly where it ends there (`World.ceases_fixed_iff_wang`).
 
-Not connected: the laws of re-identification (`Web.steady_held`, `Web.renewingIn_held` and the
-classes fixed under conservation) concern namings of the carrier, which the grammar takes as a
+Not connected: the other laws of re-identification (`Web.renewingIn_held` and the classes fixed
+under conservation) concern namings of the carrier, which the grammar takes as a
 model commitment (equality on the carrier); the census laws (`Web.persisting_census`) count lists,
 which the grammar does not state.
 -/
@@ -1206,18 +1210,19 @@ theorem stateClass_finer (h : Nat → F → Prop) :
 variable {W} {h : Nat → F → Prop}
 
 /-- Where activity changes across the step from `t`, the occurrence before it ends (亡) under the
-state class. -/
+state class: it ends under activity, which the state class is finer than (`«亡于粗则亡于细»`). -/
 theorem wang_state_of_change {t : Nat} {f : F} (change : ¬ (W.active t f ↔ W.active (t + 1) f)) :
     «亡» (continuationStep fun _ g f => g = f) (W.stateClass h) (t, f) :=
-  fun ⟨y, ⟨next, same⟩, ⟨alike, _⟩⟩ => change
-    (Eq.subst (motive := fun s => W.active t f ↔ W.active s f) next
+  «亡于粗则亡于细» _ (E' := W.activityClass) (fun _ _ same => same.1) fun ⟨y, ⟨next, same⟩, alike⟩ =>
+    change (Eq.subst (motive := fun s => W.active t f ↔ W.active s f) next
       (Eq.subst (motive := fun g => W.active t f ↔ W.active y.1 g) same.symm alike))
 
-/-- and the occurrence after it begins (生) under the state class. -/
+/-- and the occurrence after it begins (生) under the state class: it begins under activity
+(`«生于粗则生于细»`). -/
 theorem sheng_state_of_change {t : Nat} {f : F} (change : ¬ (W.active t f ↔ W.active (t + 1) f)) :
     «生» (continuationStep fun _ g f => g = f) (W.stateClass h) (t + 1, f) :=
-  fun ⟨x, ⟨next, same⟩, ⟨alike, _⟩⟩ => change
-    (Eq.subst (motive := fun s => W.active s f ↔ W.active (t + 1) f) (Nat.succ.inj next).symm
+  «生于粗则生于细» _ (E' := W.activityClass) (fun _ _ same => same.1) fun ⟨x, ⟨next, same⟩, alike⟩ =>
+    change (Eq.subst (motive := fun s => W.active s f ↔ W.active (t + 1) f) (Nat.succ.inj next).symm
       (Eq.subst (motive := fun g => W.active x.1 g ↔ W.active (t + 1) f) same alike))
 
 /-- **Ceasing in activity is ending (亡) under the state class**, where activity lies within

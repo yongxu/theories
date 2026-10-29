@@ -1,0 +1,16 @@
+{
+ "old_receipt": "20261029T200440.502813Z",
+ "new_receipt": "20261029T204932.343754Z",
+ "declarations_old": 86,
+ "declarations_new": 86,
+ "changed": [],
+ "gone": [],
+ "added": [],
+ "moved": {},
+ "definitions_rewritten": [],
+ "definitions_gone": [],
+ "definitions_added": []
+}
+Becoming.Persistence 86 theorems in 106 declarations, axiom report empty
+every statement of Persistence unchanged; moved: {} ; gone: [] ; new: [] ; new definitions: []
+OK

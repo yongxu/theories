@@ -1,0 +1,230 @@
+{
+  "records": 497,
+  "selected_records": [
+    "continuation-relative-to-a-class",
+    "identity-across-steps",
+    "master-laws-on-the-grammar",
+    "the-world-represented-both-ways"
+  ],
+  "errors": [
+    "generated view differs; reconcile and run make research-render: theories/becoming/results/completion/COMPLETION.md",
+    "generated view differs; reconcile and run make research-render: theories/becoming/results/records/continuation-relative-to-a-class.md",
+    "generated view differs; reconcile and run make research-render: theories/becoming/results/records/identity-across-steps.md",
+    "generated view differs; reconcile and run make research-render: theories/becoming/results/records/master-laws-on-the-grammar.md"
+  ],
+  "source_drift": [],
+  "unrelated_source_drift": [],
+  "style_warnings": {
+    "findings": 547,
+    "records": 184,
+    "by_severity": {
+      "warning": 547
+    },
+    "by_rule": {
+      "length": 434,
+      "market-word": 45,
+      "negation-lead": 43,
+      "status-restatement": 15,
+      "one-sentence": 5,
+      "item-count": 3,
+      "stock-boundary": 2
+    },
+    "list": "python3 -B tools/research/research.py lint [--ids ...]"
+  },
+  "changed_outside_cited": 6,
+  "reading_drift": 99,
+  "stale_indexes": [
+    "_process/research/README.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md"
+  ],
+  "master_laws": {
+    "measured_against": "20261029T200440.502813Z",
+    "latest_core_receipt": "20261029T204932.343754Z",
+    "core_sources_current": false,
+    "inputs_changed": [],
+    "from_dump": false,
+    "current": false,
+    "laws_not_matched": 0,
+    "first_not_matched": [],
+    "statements_at_model_unverified": [],
+    "refresh": "python3 -B tools/research/master_laws.py, then make research-render"
+  },
+  "selected_style_warnings": [
+    {
+      "id": "continuation-relative-to-a-class",
+      "field": "laws[4]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 473 chars > 420"
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "field": "laws[10]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 928 chars > 420"
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "field": "laws[10]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "zh 216 chars > 190"
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "field": "laws[11]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 521 chars > 420"
+    },
+    {
+      "id": "identity-across-steps",
+      "field": "correspondence",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 2282 chars > 1200"
+    },
+    {
+      "id": "identity-across-steps",
+      "field": "correspondence",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "zh 734 chars > 500"
+    },
+    {
+      "id": "identity-across-steps",
+      "field": "does_not_show[0]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 266 chars > 240"
+    },
+    {
+      "id": "identity-across-steps",
+      "field": "does_not_show[1]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 371 chars > 240"
+    },
+    {
+      "id": "identity-across-steps",
+      "field": "does_not_show[1]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "zh 117 chars > 110"
+    },
+    {
+      "id": "identity-across-steps",
+      "field": "does_not_show[4]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 271 chars > 240"
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "field": "does_not_show",
+      "rule": "item-count",
+      "severity": "warning",
+      "detail": "11 items > 8"
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "field": "does_not_show[6]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 272 chars > 240"
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "field": "does_not_show[6]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "zh 138 chars > 110"
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "field": "does_not_show[7]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 496 chars > 240"
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "field": "does_not_show[7]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "zh 207 chars > 110"
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "field": "does_not_show[10]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 460 chars > 240"
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "field": "does_not_show[10]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "zh 137 chars > 110"
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "field": "laws[0]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 507 chars > 420"
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "field": "laws[7]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 906 chars > 420"
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "field": "laws[7]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "zh 234 chars > 190"
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "field": "laws[14]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 472 chars > 420"
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "field": "laws[16]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 517 chars > 420"
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "field": "laws[18]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 2108 chars > 420"
+    },
+    {
+      "id": "master-laws-on-the-grammar",
+      "field": "laws[18]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "zh 507 chars > 190"
+    },
+    {
+      "id": "the-world-represented-both-ways",
+      "field": "does_not_show[3]",
+      "rule": "one-sentence",
+      "severity": "warning",
+      "detail": "item has more than two sentences"
+    }
+  ],
+  "scope": "Metadata, navigation, preserved history and proof-receipt bindings only. No new Lean or empirical validation."
+}

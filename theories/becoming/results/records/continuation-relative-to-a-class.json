@@ -682,7 +682,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
       "role": "proof",
-      "sha256": "e61983bd18766a0bdb88aa15d80e307350d7d755e8efff1ed27cff855eafa33a",
+      "sha256": "993b1fe983e5eb9530fb0ab3af2ca3dbad317501de9d90b13d8cda2e3249cba7",
       "declarations": [
         "Becoming.Hibernation.positions",
         "Becoming.Seed.held_classes",
@@ -746,6 +746,12 @@
       "role": "receipt",
       "sha256": "6fbe7c7f21314fbd0a3eba90ff6bde5198b56d52137d19fc6857a87e83949aa4",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T204932.343754Z/verification.json",
+      "role": "receipt",
+      "sha256": "8f8496373eb5c8786fd47fcb0fe630abb6237c47c9e6f13a4040812e0e3e2329",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -793,7 +799,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Persistence",
       "success_pointer": "/status",
       "success_value": "passed"
