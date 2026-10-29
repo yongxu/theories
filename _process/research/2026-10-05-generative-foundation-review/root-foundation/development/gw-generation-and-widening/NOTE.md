@@ -1,6 +1,6 @@
-# GW: generation and widening, joined or kept apart (study note, no Lean)
+# GW: generation and widening, joined or kept apart (study note; the Lean of GW3–GW5 in §15)
 
-AI-written, 29 October 2026, for board item GW, and revised the same day after the [independent review](REVIEW-GW.md). §13 says how each finding was taken.
+AI-written, 29 October 2026, for board item GW, and revised the same day after the [independent review](REVIEW-GW.md). §13 says how each finding was taken. §15 records the Lean of GW3, GW3b, GW4 and GW5, built the same day; §§1–14 are the study as reviewed, and the marks **[planned Lean]** in them refer to the plan of §10, which §15 says how the Lean met.
 
 The [twenty-first review](../../BECOMING-TWENTY-FIRST-REVIEW.md) (§2.3 item 3, §2.5, §7) names this the most consequential open link. No law joins the map's generation (生成, `Becoming.GrammarMap`) to the ethics' widening (07 §2), and on the two readings studied, 全生成 and keeping widening do not hold together.
 
@@ -431,3 +431,35 @@ The same reviewer re-checked the revision ([RECHECK-GW.md](RECHECK-GW.md)). It f
 | R8 registration and comments | GW4's row names the registration. The script comments are corrected. |
 
 No high finding remained after the re-check. The Lean items are claimed on GW's row before any Lean, and each landing has its own review.
+
+## 15. The Lean of GW3, GW3b, GW4 and GW5
+
+Built on 29 October 2026 in `Becoming.KeepingWidening` (GW3, GW3b and GW4) and `Becoming.HeldPossible` (GW5), on the `gw-lean` branch from main at `0227f5c7e`. GW4's witnesses sit in `Becoming.KeepingWidening` itself, which §10 allows, so no module is added. GW1 and GW2 (`Becoming.GrammarMap`) are not claimed and not built.
+
+**Checks.** A scratch build of the whole package (340 modules; the six that depend on the two changed modules recompiled, the rest reused from the shared cache) has no error or warning, and every declaration of both modules has an empty axiom report. A namespace-aware comparison of both modules against main finds no earlier declaration's statement changed and none removed. By the scratch audit `Becoming.KeepingWidening` goes from 154 declarations to 288 (233 theorems), and `Becoming.HeldPossible` from 110 to 118 (89 theorems). These are scratch builds, not a receipt; the core checker runs at landing.
+
+**GW3, the law of beginnings** (§3.2, §3.3, §4).
+
+| Plan | Lean | Note |
+|---|---|---|
+| `Web.supportedItself`, `Web.supportedPassing` | as planned | with `supportedItself_within`, `supportedPassing_within` |
+| `Flow.BeginsAlong`, `.not_along`, `.carries` | as planned | |
+| `Flow.descends_or_begun` | as planned | the induction of §3.2, excluded middle inside the double negation |
+| `Flow.begun_of_exceedsAcross` | as planned | also gives the supported end at `U` the beginning is linked to |
+| `Flow.begins_late_of_keepsOpening` | as planned | |
+| corollary 5 | `Flow.beginsAlong_supportedItself_iff`, `Flow.passes_late_of_keepsOpening_byName` | by name, keeping opening needs a passing of support after every step |
+| `descends_along_passings` re-proved (rule 9) | from `Flow.descends_along_supportedPassing`, itself from `descends_or_begun` | statement unchanged; the new law links along supported passings, a stronger statement |
+| the three general exclusions | `Flow.not_exceedsAcross_along_supportedPassing`, `not_keepsOpening_…`, `not_keepsWidening_…` | the landed three derived from them, statements unchanged |
+| `Web.supportedPassing_cont_iff` | as planned | |
+| `Web.supportedItself_not_generation` | from `Web.not_generation_of_within_itself` | any continuation in which each formation continues only itself; `Web.itself_not_generation` (MapInstances) is a case too, and is left as landed |
+| `Web.withinKind`, `Web.kindClass`, `withinKind_cont_iff`, `withinKind_begins_iff`, `BeginsAlong.carries_kind_iff` | as planned | |
+| (added) | `Web.begins_of_gains`, `Web.generation_of_alternating`, `Web.endless_of_successor`, `Web.Linked.last` | a gain of support begins a carrier under every reading, so where no formation is supported at two steps running every endless supported line is 全生成 along every reading; used by the witness |
+
+**GW3b, dissipation** (§3.4). `Flow.not_keepsOpening_of_dissipative` and `Flow.not_keepsWidening_of_dissipative` go through `falls_stop_unrefuted` (`Becoming.Space`), which is `Amounts.rests_unrefuted` at whole numbers, the route of the re-check's R5; a passing of support takes from the whole (`Flow.PassesSupport.takes`). `Flow.not_generation_of_dissipative` needs no World premise beyond balance on the listed conditions, and since 全生成's renewals are given outright (`Web.generation_renews_late`) it uses the outright `Flow.taking_not_recurring_from`. Both take dissipation on the list from some step (`DissipatesOn`) rather than `Dissipative` with the list without repetition.
+
+**GW4, the witnesses** (§6). Both relays run one relay (`KindRelay.Runs`: a formation is supported exactly where its own condition holds at the step's parity, and passes support exactly where it moves a unit), and items 1–5 are proved once on it: `Runs.keeps_widening` (item 1, along `withinKind`, carrying on only while supported), `Runs.generation` (item 2), `Runs.generation_one_up` (item 3), `Runs.renews_without_end` (item 4, at `(0, a0)`, the family the supported occurrences at even steps) and `Runs.not_keepsOpening_dormant` (item 5's last case). The closed relay (`KindRelay.web`, `.flow`) proves its premises (`.balances`, `.acting`, `.dependent`, `.unloosened`, `.conserving`, `.gainless`, `.requiresWithin`), item 5's other cases (`.not_keepsWidening_byName` through `Flow.whole_not_keepsWidening`, so the first law's finite-world premises are met; `.not_keepsWidening_supportedPassing`) and item 6 (`.returns`). The fed relay (`KindRelay.Fed`) has a condition of fuel for each step, holding what that step uses until it is used and taken a unit by each formation taking part; it proves `.balances`, `.dissipative`, `.gainless` and the rest of the closed relay's list, and its formations' own levels and moves return with period two. Item 7, that linking any two formations of one kind opens nothing, stays a hand check.
+
+**GW5, the held possible** (§5). `Steps.generation_iff_begins` is the equivalence: on the steps under the one, a moment is 全生成 at any fine class exactly where a line under it begins after every later moment. `Run.generation_of_heldKeepsWidening` restates `Run.begins_of_heldKeepsWidening` on the map. `RaisedRule.generation` (全生成 while every moment ceases), `RaisedEveryOther.generation` with `generation_with_both` (extending `both`, whose statement is kept) and `Oscillating.generation_without_widening` (the converse fails) are the instances.
+
+**Not done.** GW1 and GW2. ClosedCycle's 全生成 at the top of the interval as a theorem: `Web.supportedPassing_cont_iff` is its first step, and the transfer is argued (§4). Corollary 3, freshness for the converse, stays argued; the relay's dormant reading is its witness. Item 7 of §6.
+

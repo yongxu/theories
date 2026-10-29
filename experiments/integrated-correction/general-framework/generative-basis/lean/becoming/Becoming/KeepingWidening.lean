@@ -161,8 +161,9 @@ premises in which the conclusion fails:
   (`KindRelay.returns`). The fed relay (`KindRelay.Fed`) adds a condition of fuel for each step,
   taken a unit by each formation taking part, and is dissipative (`KindRelay.Fed.dissipative`);
   its supports and passings are the closed relay's, and the same laws hold of it. Both run one relay
-  (`KindRelay.Runs`), on which the laws are proved once. No list holds the fed relay's conditions,
-  so the dissipation laws above do not apply to it: it is a part fed from beyond.
+  (`KindRelay.Runs`), on which the laws are proved once. No list holds the fed relay's conditions
+  (`KindRelay.Fed.not_listed`), so the dissipation laws above do not apply to it: it is a part fed
+  from beyond.
 
 **Standing.** Every law here is a restatement or near-definitional. The first two read the
 theory's gain and renewal laws (`Flow.newly_supported_from_rest_or_open`,
@@ -2538,6 +2539,22 @@ theorem dissipative : flow.Dissipative := fun cs s distinct closed f mem =>
       (Nat.le_refl _))
 
 theorem gainless : flow.Gainless := dissipative.gainless
+
+/-- A bound above every step whose fuel a list holds. -/
+def fuelBound : List (Form ⊕ Nat) → Nat
+  | [] => 0
+  | .inl _ :: l => fuelBound l
+  | .inr t :: l => t + 1 + fuelBound l
+
+theorem lt_fuelBound : ∀ {l : List (Form ⊕ Nat)} {t : Nat}, Sum.inr t ∈ l → t < fuelBound l
+  | .inl _ :: l, _, .tail _ mem => lt_fuelBound (l := l) mem
+  | .inr _ :: _, _, .head _ => Nat.lt_of_lt_of_le (Nat.lt_succ_self _) (Nat.le_add_right _ _)
+  | .inr _ :: _, _, .tail _ mem => Nat.lt_of_lt_of_le (lt_fuelBound mem) (Nat.le_add_left _ _)
+
+/-- **No list holds the fed relay's conditions**: the fuel of every step is a condition, so the
+laws for a world whose conditions are listed do not apply to it. -/
+theorem not_listed : ¬ ∃ all : List (Form ⊕ Nat), ∀ x, x ∈ all :=
+  fun ⟨all, every⟩ => Nat.lt_irrefl _ (lt_fuelBound (every (.inr (fuelBound all))))
 
 /-- **Keeping widening within kinds**, the fed relay. -/
 theorem keeps_widening :
