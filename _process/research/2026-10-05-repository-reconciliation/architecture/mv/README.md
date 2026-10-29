@@ -18,3 +18,5 @@ The plan was agreed on RA's line, 28 October 2026, with the session coordinating
 ## To keep it current
 
 Every core landing that changes dependencies, every change to a record's laws, and every change to `COVERAGE.json` or the measure makes the data stale. After `check_becoming.py` passes on the new sources, run `python3 -B tools/research/master_laws.py` and then `make research-render`. Until then, the check's `master_laws` entry says the data is stale, and pages show nothing under a law whose declarations changed.
+
+**F5's field (landed, study §458).** `statements_at_model` on a law declares a theorem that states a row of the same record at a model, with its models and review; the check enforces its rules, `master_laws.py` verifies it from the checker cache and counts laws carrying items apart, and the record pages show it marked as declared. Design, reviews and re-checks: [F5-MODEL-STATEMENTS.md](F5-MODEL-STATEMENTS.md), [reports/](reports/).

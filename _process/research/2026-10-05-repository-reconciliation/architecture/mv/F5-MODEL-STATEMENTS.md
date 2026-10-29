@@ -2,7 +2,7 @@
 
 AI-written, 30 October 2026, by MV's owner, on main at `24397d633`. It answers U2's request ([U2's design §7](../../../2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md#7-placement-decided-and-the-lean-item-not-yet-claimed)): which record field carries the pairs of a central row and its statement at a model, which F5 reads. F5 is item 全五 of full unification ([FU](../../../2026-10-05-generative-foundation-review/root-foundation/development/fu-full-unification/PROPOSAL.md), change 1): the measure reports derivation, representation at a model, and a named premise on the grammar apart.
 
-**Status:** final shape, given to U2; MV's part built on branch `f5a`. Draft 1 was reviewed by two independent readers, one on F5 and the measure and one on the schema and the record rules. They raised 20 findings ([reports/f5-field-review.json](reports/f5-field-review.json)), and §7 maps them. A re-check of draft 2 ([reports/f5-field-recheck.json](reports/f5-field-recheck.json)) found seven of them taken wrongly or in part and three new problems. It also applied the rules to U2's 21 drafted items. Everything it raised is taken (§7).
+**Status:** MV's part landed (study §458); U2's Lean fills the field. Draft 1 was reviewed by two independent readers, one on F5 and the measure and one on the schema and the record rules. They raised 20 findings ([reports/f5-field-review.json](reports/f5-field-review.json)), and §7 maps them. A re-check of draft 2 ([reports/f5-field-recheck.json](reports/f5-field-recheck.json)) found seven of them taken wrongly or in part and three new problems. It also applied the rules to U2's 21 drafted items. Everything it raised is taken (§7).
 
 ## 1. The field
 
