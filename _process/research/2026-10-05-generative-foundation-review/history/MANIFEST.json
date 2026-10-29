@@ -38217,6 +38217,24 @@
       "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u5-general-structure"
     },
     {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/periphery/ConditionalWeightsReals.lean",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/ue2-conditional-weights/periphery/ConditionalWeightsReals.lean",
+      "sha256": "31532e34157d077998d8a31d921c61e5aefef01278c9a9f2244b3862524477b0",
+      "blob": "302e4015ed266d629b5915427e36b2769a1a786e",
+      "batch": "moves-2026-10-29-move_ue2_draft",
+      "reason": "superseded by UE17's FreeEnergyReals in lean/free-energy, which states the variational bound with its checker and record",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/periphery/ConditionalWeightsReals.lean"
+    },
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/periphery/periphery.log",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/ue2-conditional-weights/periphery/periphery.log",
+      "sha256": "b738d7a4bfe37557b54bc53ba559ce04b844430d345bbfca8aa20359da7f2a1d",
+      "blob": "1b8d4a29f7df2ef969a3c48ccda49fe6bb4e18b0",
+      "batch": "moves-2026-10-29-move_ue2_draft",
+      "reason": "the build log of the superseded draft, kept with it",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/periphery/periphery.log"
+    },
+    {
       "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/v-collective-continuation/BRIEF.md",
       "new_path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/v-collective-continuation/BRIEF.md",
       "sha256": "3a1e374e38dcbfd75f28b8b7202ebc421da89a6ac9d03f30d7469159ad8cadaa",

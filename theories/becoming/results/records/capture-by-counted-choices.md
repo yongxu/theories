@@ -57,14 +57,14 @@ Canonical source: [ChoiceCountCapture.lean](../../../../experiments/integrated-c
 <a id="next--下一步"></a>
 ## Next
 
-A third part against the free-energy principle, the first candidate a claim that belief sharing lets a collective respond to what no member couples to; a law with a bound for additive counting; SPM's prior and its split among equally good policies; a frozen test of whether a count of choices reverses; review by a person.
+A law with a bound for additive counting; SPM's prior and its split among equally good policies; a frozen test of whether a count of choices reverses; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Active inference (Friston, FitzGerald, Rigoli, Schwartenbeck, O'Doherty and Pezzulo 2016, 'Active inference and learning', Neuroscience & Biobehavioral Reviews 68): the prior over policies counts beliefs about the selected policy at the end of each trial (§2.4; SPM12's spm_MDP_VB adds the end-of-trial posterior over policies); devalued after the habit has formed (trial 48) the habit persists and strengthens itself with repeated execution, devalued after 16 trials the agent switches at once (§5.2). The lock is the lock-in of increasing returns (Arthur 1989, The Economic Journal 99); counting the action taken is the value-free habit (Miller, Shenhav and Ludvig 2019, Psychological Review 126). Overtraining and insensitivity to devaluation in rats (Adams 1982; Dickinson 1985); five failures to induce it in humans (de Wit and others 2018, Journal of Experimental Psychology: General 147). The free-energy principle's sparse coupling read as the couplings; shared generative models (Friston and others 2024, 'Designing ecosystems of intelligence from first principles', Collective Intelligence 3) as pooled couplings at most. A restatement with its third part open; the readings are the AI's, stated in development/ue1-fep-bridge/NOTE.md with the sources read and the review in REVIEW-UE1.md.
+Active inference (Friston, FitzGerald, Rigoli, Schwartenbeck, O'Doherty and Pezzulo 2016, 'Active inference and learning', Neuroscience & Biobehavioral Reviews 68): the prior over policies counts beliefs about the selected policy at the end of each trial (§2.4; SPM12's spm_MDP_VB adds the end-of-trial posterior over policies); devalued after the habit has formed (trial 48) the habit persists and strengthens itself with repeated execution, devalued after 16 trials the agent switches at once (§5.2). The lock is the lock-in of increasing returns (Arthur 1989, The Economic Journal 99); counting the action taken is the value-free habit (Miller, Shenhav and Ludvig 2019, Psychological Review 126). Overtraining and insensitivity to devaluation in rats (Adams 1982; Dickinson 1985); five failures to induce it in humans (de Wit and others 2018, Journal of Experimental Psychology: General 147). The free-energy principle's sparse coupling read as the couplings; shared generative models (Friston and others 2024, 'Designing ecosystems of intelligence from first principles', Collective Intelligence 3) as pooled couplings at most. Its own laws restate; the containment's third parts are UE16's two related records, on identical cells and on risk minimization. The readings are the AI's, in development/ue1-fep-bridge/NOTE.md, the review in REVIEW-UE1.md.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -75,6 +75,9 @@ Active inference (Friston, FitzGerald, Rigoli, Schwartenbeck, O'Doherty and Pezz
 - **formal-reuse**: [selection-through-couplings](selection-through-couplings.md). Web.SelectsThrough, Web.SelectsThroughAll, Web.AlikeThroughUpTo, Web.AlikeThroughAll, Flow.unselected_beyond_coupling, Flow.unselected_beyond_pool.
 - **formal-reuse**: [a-formations-own-course](a-formations-own-course.md). Web.ValuesThrough, Web.courseThrough, Web.selectsThrough_iff_prefix, Web.alikeThroughUpTo_iff_prefix; Learning.prefixOf.
 - related, not a proved adapter: [what-pooled-coupling-reaches](what-pooled-coupling-reaches.md). What a pool separates; choosers sharing their folds are such a pool.
+- related, not a proved adapter: [identical-cells-under-a-descent-treating-them-alike](identical-cells-under-a-descent-treating-them-alike.md). A third part of the free-energy principle's containment: a statement of its literature, read as a guarantee, that a landed law forbids on a model in its terms.
+- related, not a proved adapter: [risk-minimization-on-a-shared-renewal](risk-minimization-on-a-shared-renewal.md). A third part of the free-energy principle's containment: a statement of its literature, read as a guarantee, that a landed law forbids on a model in its terms.
+- related, not a proved adapter: [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md). Variational free energy bounds surprisal: the free-energy principle's central quantity, its bound and its minimizer stated in the periphery and joined to the core's conditioning.
 
 **Used by:** [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md)
 
@@ -101,6 +104,8 @@ Aliases: `A chooser reading what couples in, its rule read from the count of its
 ### History
 
 - 25 October 2026: added (UE1), the free-energy principle's first containment, a restatement with its third part open; study section 406.
+- 29 October 2026, board item UE16 (study section 449): the containment now has third parts (identical-cells-under-a-descent-treating-them-alike, risk-minimization-on-a-shared-renewal): the correspondence's last sentence and the next step brought to them, each related here; no statement or declaration changed.
+- 29 October 2026, board item UE17 (study section 450): related to free-energy-bounds-surprisal; no statement, next step or declaration changed.
 
 </details>
 

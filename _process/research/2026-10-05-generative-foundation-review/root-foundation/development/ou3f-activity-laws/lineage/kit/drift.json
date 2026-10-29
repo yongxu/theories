@@ -1,0 +1,88 @@
+{
+  "errors": [
+    "master-laws-on-the-grammar: invalid proof receipt binding: receipt does not bind the reviewed proof source"
+  ],
+  "source_drift": [
+    {
+      "id": "census-balance-under-continuation",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+      "reviewed_sha256": "c28cb4492b18b6907671a602c88356085ca3656d36e3ba0c918b328dbd913098",
+      "current_sha256": "9733fcf3858f3cd9b52cc1bd9e147cefc11dd6b6ea3ebcefb2f95f26d4212de4",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "comparing-two-courses-on-what-they-admit",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+      "reviewed_sha256": "c28cb4492b18b6907671a602c88356085ca3656d36e3ba0c918b328dbd913098",
+      "current_sha256": "9733fcf3858f3cd9b52cc1bd9e147cefc11dd6b6ea3ebcefb2f95f26d4212de4",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+      "reviewed_sha256": "c28cb4492b18b6907671a602c88356085ca3656d36e3ba0c918b328dbd913098",
+      "current_sha256": "9733fcf3858f3cd9b52cc1bd9e147cefc11dd6b6ea3ebcefb2f95f26d4212de4",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "generation-and-degeneration-at-two-grains",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
+      "reviewed_sha256": "96aed83c502f2e37ee56e1d0e0f3483ec2bf96f67a2b8657349829238d42bc42",
+      "current_sha256": "681f22400eb90cb11f90f37b09a9e2c51a4d5793292a9428ddf203855c5364e5",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "identity-across-steps",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+      "reviewed_sha256": "c28cb4492b18b6907671a602c88356085ca3656d36e3ba0c918b328dbd913098",
+      "current_sha256": "9733fcf3858f3cd9b52cc1bd9e147cefc11dd6b6ea3ebcefb2f95f26d4212de4",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "the-world-represented-both-ways",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+      "reviewed_sha256": "c28cb4492b18b6907671a602c88356085ca3656d36e3ba0c918b328dbd913098",
+      "current_sha256": "9733fcf3858f3cd9b52cc1bd9e147cefc11dd6b6ea3ebcefb2f95f26d4212de4",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "unceasing-generation-needs-renewal",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+      "reviewed_sha256": "c28cb4492b18b6907671a602c88356085ca3656d36e3ba0c918b328dbd913098",
+      "current_sha256": "9733fcf3858f3cd9b52cc1bd9e147cefc11dd6b6ea3ebcefb2f95f26d4212de4",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "what-keeping-widening-needs",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
+      "reviewed_sha256": "96aed83c502f2e37ee56e1d0e0f3483ec2bf96f67a2b8657349829238d42bc42",
+      "current_sha256": "681f22400eb90cb11f90f37b09a9e2c51a4d5793292a9428ddf203855c5364e5",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    },
+    {
+      "id": "whole-persists-through-generation",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
+      "reviewed_sha256": "c28cb4492b18b6907671a602c88356085ca3656d36e3ba0c918b328dbd913098",
+      "current_sha256": "9733fcf3858f3cd9b52cc1bd9e147cefc11dd6b6ea3ebcefb2f95f26d4212de4",
+      "changed_sections": [
+        "(not Markdown: exact bytes required)"
+      ]
+    }
+  ]
+}

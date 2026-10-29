@@ -1,0 +1,10 @@
+kit/edit_tree.py (1b1c204ab) run on copies of main's Identity.lean and MapInstances.lean (sha256 as in tree/BASE.sha256):
+edited
+exit 0
+outputs:
+6b2baa27e5f6fe712712eb435c5eea4c91036cf66c470445ab20e2ef4f30c066  kit-repro/tree/Becoming/Identity.lean
+681f22400eb90cb11f90f37b09a9e2c51a4d5793292a9428ddf203855c5364e5  kit-repro/tree/Becoming/MapInstances.lean
+lineage tree:
+6b2baa27e5f6fe712712eb435c5eea4c91036cf66c470445ab20e2ef4f30c066  ../../../tree/Becoming/Identity.lean
+681f22400eb90cb11f90f37b09a9e2c51a4d5793292a9428ddf203855c5364e5  ../../../tree/Becoming/MapInstances.lean
+byte-identical to tree/

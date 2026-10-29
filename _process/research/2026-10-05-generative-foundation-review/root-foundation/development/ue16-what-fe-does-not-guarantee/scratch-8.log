@@ -1,0 +1,20 @@
+Becoming/FreeEnergyGuarantees.lean:753:40: error: Application type mismatch: The argument
+  List.Mem.head ?m.448
+has type
+  List.Mem ?m.447 (?m.447 :: ?m.448)
+but is expected to have type
+  List.Mem x✝² [Member.second]
+in the application
+  List.Mem.tail Member.first (List.Mem.head ?m.448)
+
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue16/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue16-what-fe-does-not-guarantee/tree",
+  "modules": 91,
+  "ran": [
+    "Becoming.FreeEnergyGuarantees"
+  ],
+  "reused": 90,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.FreeEnergyGuarantees"
+}

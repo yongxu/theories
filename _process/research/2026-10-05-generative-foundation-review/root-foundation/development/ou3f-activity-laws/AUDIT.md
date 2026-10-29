@@ -219,3 +219,15 @@ The review of the twins' derivations ([REVIEW-TWINS](derivations/review/REVIEW-T
 ## After the closure review (29 October 2026)
 
 The review of the closure derivations ([REVIEW-CLOSURE](closure/review/REVIEW-CLOSURE.md)) found one more row misfiled. `ByPassing.trace` keeps a region along the steps, so it is a case of closure, derived with the six ([design](closure/DESIGN.md)). So (a) has 15 rows and (c) model 172, and 398 of the 436 are laws of their models. `ByPassing.line_back`, a representation, is now proved by closure too, with its standing unchanged.
+
+## After the lineage review (29 October 2026)
+
+The review of the lineage derivations ([REVIEW-LINEAGE](lineage/review/REVIEW-LINEAGE.md)) found two corrections ([design](lineage/DESIGN.md)).
+- **The bridge's endpoint step is a convenience, not a need.** The section on the restricted bridge says the bridge "must also fix the endpoint's step". It need not: with the restriction in the class position of `«续»`, `steps_advance` gives the step of the middle occurrence of split steps. The landed bridge (`Web.steps_iff_lineage`) states the endpoint's step because it saves rewrites. Its forward reading needs no bound (`Web.lineage_of_steps`).
+- **Two representations are cases of grammar laws through the bridge.** `Web.Lineage.line` follows from `«迭则及»`, and `Web.line_lineage` from `«闭之及»` with `«及即迭»`. Both are now proved so, with their standing (c) representation unchanged, as `ByPassing.line_back`'s was. `Web.Lineage.cons`, one of the audit's 436, is the bridge read at one more first step. It lost its one consumer and is retired.
+
+So all six lineage rows are derived:
+- the two in (a), `unique` and `origin`;
+- the four in (b), `split`, `through`, `onward` and `back`.
+
+The two that follow (`ends` and `lineages_apart`) reach the grammar unchanged. So does `lineage_iff_line`, a (c) representation, through `line` and `line_lineage`, its standing unchanged.

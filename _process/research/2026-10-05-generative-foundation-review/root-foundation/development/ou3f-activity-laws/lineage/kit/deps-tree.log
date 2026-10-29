@@ -1,0 +1,16 @@
+Becoming.Web.Lineage.unique | induction marks: [] | reaches all named laws
+Becoming.Web.Lineage.origin | induction marks: [] | reaches all named laws
+Becoming.Web.Lineage.split | induction marks: [] | reaches all named laws
+Becoming.Web.Lineage.through | induction marks: [] | reaches all named laws
+Becoming.Web.Lineage.onward | induction marks: [] | reaches all named laws
+Becoming.Web.Lineage.back | induction marks: [] | reaches all named laws
+Becoming.Web.Lineage.line | induction marks: [] | reaches all named laws
+Becoming.Web.line_lineage | induction marks: [] | reaches all named laws
+Becoming.Web.Lineage.ends | induction marks: [] | reaches all named laws
+Becoming.Web.lineages_apart | induction marks: [] | reaches all named laws
+Becoming.Web.lineage_iff_line | induction marks: [] | reaches all named laws
+Becoming.Web.steps_iff_lineage | induction marks (kept): [Nat.brecOn, Nat.below]
+Becoming.Web.lineage_of_steps | induction marks (kept): [Nat.brecOn, Nat.below]
+Becoming.Web.steps_advance | induction marks (kept): [Nat.brecOn, Nat.below]
+Becoming.Web.steps_start_active | induction marks (kept): []
+OK

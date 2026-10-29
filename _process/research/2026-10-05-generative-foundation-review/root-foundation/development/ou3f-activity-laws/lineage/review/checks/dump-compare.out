@@ -1,0 +1,34 @@
+constants: 757 -> 771
+gone (0):
+added (14):
+   def Becoming.Web.Lineage.origin.match_1_3 Becoming.Identity
+   def Becoming.Web.Lineage.split.match_1_5 Becoming.Identity
+   def Becoming.Web.Lineage.through.match_1_3 Becoming.Identity
+   def Becoming.Web.Lineage.unique.match_1_3 Becoming.Identity
+   def Becoming.Web.Lineage.unique.match_1_5 Becoming.Identity
+   def Becoming.Web.activityFrom Becoming.Identity
+   theorem Becoming.Web.steps_iff_lineage Becoming.Identity
+   def Becoming.Web.steps_iff_lineage.match_1_1 Becoming.Identity
+   def Becoming.Web.steps_iff_lineage.match_1_3 Becoming.Identity
+   def Becoming.Web.steps_iff_lineage.match_1_5 Becoming.Identity
+   def Becoming.Web.steps_iff_lineage.match_1_7 Becoming.Identity
+   def Becoming.Web.steps_iff_lineage.match_1_9 Becoming.Identity
+   theorem Becoming.Web.steps_start_active Becoming.Identity
+   def Becoming.Web.steps_start_active.match_1_1 Becoming.Identity
+moved between modules (2):
+   Becoming.Web.steps_advance Becoming.MapInstances -> Becoming.Identity
+   Becoming.Web.steps_advance.match_1_1 Becoming.MapInstances -> Becoming.Identity
+changed (11):
+   def Becoming.Web.Lineage.back.match_1_1 type 
+   def Becoming.Web.Lineage.back.match_1_3 type 
+   def Becoming.Web.Lineage.back.match_1_5 type 
+   def Becoming.Web.Lineage.onward.match_1_1 type 
+   def Becoming.Web.Lineage.onward.match_1_3 type 
+   def Becoming.Web.Lineage.onward.match_1_5 type 
+   def Becoming.Web.Lineage.origin.match_1_1 type 
+   def Becoming.Web.Lineage.split.match_1_1 type 
+   def Becoming.Web.Lineage.split.match_1_3 type 
+   def Becoming.Web.Lineage.through.match_1_1 type 
+   def Becoming.Web.Lineage.unique.match_1_1 type 
+db4fe66c52da91bb92b859c530c0770cb86956aa4e766402f9d1a1d6feac9f43  dump-main.out
+5c32b02e37820b98bae1e13f3e2133124bb6b628cc1af9bcafaebeba0f758f4c  dump-new.out

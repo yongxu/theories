@@ -32,7 +32,9 @@ Results.
   itself keeps (`Web.keeping_of_carried_on`). Read by names alone (`Web.itself`, the continuation
   along which `Becoming.ContinuedClasses` reads the name classes `RenewingIn` and `ConsumingIn`),
   nothing carries a renewal (`Web.itself_carries_nothing`), so nothing generates
-  (`Web.itself_not_generation`), every endless line keeps (`Web.itself_keeps`), and a formation
+  (`Web.itself_not_generation`), both cases of the laws for any continuation in which each
+  formation continues only itself (`Web.not_carries_of_within_itself`,
+  `Web.not_generation_of_within_itself`); every endless line keeps (`Web.itself_keeps`), and a formation
   active at every step keeps (`Web.always_keeps`). The name classes therefore never read as
   generation: generation needs a continuation other than names.
 * **Not going on, and reaching an end.** A line from an active occurrence along which nothing reached at some step is
@@ -105,13 +107,6 @@ theorem active_along_line {x y : Nat × F} (start : W.active x.1 x.2)
   match reached with
   | .inl same => Eq.subst (motive := fun z : Nat × F => W.active z.1 z.2) same start
   | .inr line => («线内同类» (activityClass_class W) line).mp start
-
-/-- `k` steps of a continuation under `continuationStep R` advance the step index by `k`. -/
-theorem steps_advance {E : «际» (Nat × F)} : ∀ (k : Nat) {x y : Nat × F},
-    «迭» («续» (continuationStep R) E) k x y → y.1 = x.1 + k
-  | 0, _, _, e => (congrArg Prod.fst e).symm
-  | k + 1, x, _, ⟨_, c, rest⟩ =>
-    (steps_advance k rest).trans ((congrArg (· + k) c.1.1).trans (Nat.succ_add x.1 k))
 
 /-- A line that never ends reaches an occurrence at every later step: the grammar's unending line has
 steps of every length (`«不穷则迭»`), which lie within its reach (`«迭则同一或及»`, at the line's
@@ -216,17 +211,28 @@ theorem keeping_of_carried_on {x : Nat × F} {S : Nat} (start : W.active x.1 x.2
             (reached_later hz))
           (Eq.subst (motive := fun s => W.active s w.2) next after))⟩
 
+/-- **Where each formation continues only itself, nothing carries a renewal**: along any
+continuation contained in `itself`, no step begins a part. -/
+theorem not_carries_of_within_itself (within : ∀ t g f, R t g f → itself t g f) (z w : Nat × F) :
+    ¬ «传» (continuationStep R) W.activityClass W.carrierClass z w :=
+  fun ⟨⟨step, alike⟩, begins⟩ => begins ⟨z, step, ⟨alike, within _ _ _ step.2⟩⟩
+
+/-- **Where each formation continues only itself, nothing generates.** -/
+theorem not_generation_of_within_itself (within : ∀ t g f, R t g f → itself t g f) (x : Nat × F) :
+    ¬ «全生成» (continuationStep R) W.activityClass W.carrierClass x :=
+  fun ⟨_, ahead⟩ => match ahead x (.inl rfl) with
+    | ⟨z, w, _, c⟩ => not_carries_of_within_itself within z w c
+
 /-- **By names alone nothing carries a renewal.** Along the continuation in which each formation
 continues only itself, no step begins a part. -/
 theorem itself_carries_nothing (z w : Nat × F) :
     ¬ «传» (continuationStep itself) W.activityClass W.carrierClass z w :=
-  fun ⟨⟨step, alike⟩, begins⟩ => begins ⟨z, step, ⟨alike, step.2⟩⟩
+  not_carries_of_within_itself (fun _ _ _ same => same) z w
 
 /-- **By names alone nothing generates.** -/
 theorem itself_not_generation (x : Nat × F) :
     ¬ «全生成» (continuationStep itself) W.activityClass W.carrierClass x :=
-  fun ⟨_, ahead⟩ => match ahead x (.inl rfl) with
-    | ⟨z, w, _, c⟩ => itself_carries_nothing z w c
+  not_generation_of_within_itself (fun _ _ _ same => same) x
 
 /-- **By names alone an endless line keeps.** -/
 theorem itself_keeps {x : Nat × F}

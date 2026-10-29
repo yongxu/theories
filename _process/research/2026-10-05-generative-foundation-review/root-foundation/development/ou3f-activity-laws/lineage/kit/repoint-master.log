@@ -1,0 +1,16 @@
+{
+ "records": 1,
+ "apply": true,
+ "by_record": {
+  "master-laws-on-the-grammar": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+    "theories/becoming/chapters/01-ROOT.md"
+   ],
+   "rebound": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean"
+   ]
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}

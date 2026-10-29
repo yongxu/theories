@@ -1,0 +1,29 @@
+@Becoming.Web.activityOnward : {F C : Type} → Becoming.Web F C → Nat → Becoming.«际» (Nat × F)
+@Becoming.Web.lineage_of_steps : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {N M : Nat} {g : F}
+  (k : Nat) {y : Nat × F},
+  Becoming.«迭» (Becoming.«续» (Becoming.Web.continuationStep R) (W.activityOnward N)) k (M, g) y →
+    W.Lineage R M g k y.snd
+@Becoming.Web.steps_iff_lineage : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {N M : Nat},
+  N ≤ M →
+    ∀ {g : F} (k : Nat) {y : Nat × F},
+      Becoming.«迭» (Becoming.«续» (Becoming.Web.continuationStep R) (W.activityOnward N)) k (M, g) y ↔
+        y.fst = M + k ∧ W.Lineage R M g k y.snd
+@Becoming.Web.steps_start_active : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {N k : Nat}
+  {x y : Nat × F},
+  Becoming.«迭» (Becoming.«续» (Becoming.Web.continuationStep R) (W.activityOnward N)) k x y →
+    W.active y.fst y.snd → W.active x.fst x.snd
+Becoming.Web.activityOnward {F C : Type} (W : Becoming.Web F C) (N : Nat) : Becoming.«际» (Nat × F)
+Becoming.Web.lineage_of_steps {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {N M : Nat} {g : F} (k : Nat)
+  {y : Nat × F} :
+  Becoming.«迭» (Becoming.«续» (Becoming.Web.continuationStep R) (W.activityOnward N)) k (M, g) y →
+    W.Lineage R M g k y.snd
+Becoming.Web.steps_iff_lineage {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {N M : Nat} (from_ : N ≤ M)
+  {g : F} (k : Nat) {y : Nat × F} :
+  Becoming.«迭» (Becoming.«续» (Becoming.Web.continuationStep R) (W.activityOnward N)) k (M, g) y ↔
+    y.fst = M + k ∧ W.Lineage R M g k y.snd
+Becoming.Web.steps_start_active {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {N k : Nat}
+  {x y : Nat × F} :
+  Becoming.«迭» (Becoming.«续» (Becoming.Web.continuationStep R) (W.activityOnward N)) k x y →
+    W.active y.fst y.snd → W.active x.fst x.snd
+def Becoming.Web.activityOnward : {F C : Type} → Becoming.Web F C → Nat → Becoming.«际» (Nat × F) :=
+fun {F C} W N x y => W.activityClass x y ∧ N ≤ x.fst ∧ W.active x.fst x.snd

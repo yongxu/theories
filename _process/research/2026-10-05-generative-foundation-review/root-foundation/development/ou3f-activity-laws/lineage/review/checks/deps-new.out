@@ -1,0 +1,107 @@
+Becoming.Web.Lineage.unique
+  grammar, direct: [Becoming.«定后», Becoming.«定后之逐点», Becoming.«续», Becoming.«迭», Becoming.«迭之定»]
+  web, direct: [Becoming.Web.Lineage, Becoming.Web.activityClass, Becoming.Web.activityFrom, Becoming.Web.continuationStep, Becoming.Web.occurrence_eq, Becoming.Web.steps_iff_lineage]
+  own induction marks: []
+  reaches Becoming.«迭之定»: true
+  reaches Becoming.«迭之定于»: true
+Becoming.Web.Lineage.origin
+  grammar, direct: [Becoming.«定前», Becoming.«定前之逐点», Becoming.«续», Becoming.«迭», Becoming.«迭之定前»]
+  web, direct: [Becoming.Web.Lineage, Becoming.Web.activityClass, Becoming.Web.activityFrom, Becoming.Web.continuationStep, Becoming.Web.occurrence_eq, Becoming.Web.steps_iff_lineage]
+  own induction marks: []
+  reaches Becoming.«迭之定前»: true
+  reaches Becoming.«历之定前»: true
+Becoming.Web.Lineage.split
+  grammar, direct: [Becoming.«续», Becoming.«迭», Becoming.«迭之分»]
+  web, direct: [Becoming.Web.Lineage, Becoming.Web.activityFrom, Becoming.Web.continuationStep, Becoming.Web.steps_iff_lineage]
+  own induction marks: []
+  reaches Becoming.«迭之分»: true
+  reaches Becoming.«历之接»: true
+Becoming.Web.Lineage.through
+  grammar, direct: []
+  web, direct: [Becoming.Web.Lineage, Becoming.Web.Lineage.split]
+  own induction marks: []
+  reaches Becoming.«迭之分»: true
+  reaches Becoming.Web.Lineage.split: true
+Becoming.Web.Lineage.onward
+  grammar, direct: [Becoming.«或有后则或迭», Becoming.«续», Becoming.«迭»]
+  web, direct: [Becoming.Web.CeasesFrom, Becoming.Web.Continued, Becoming.Web.Lineage, Becoming.Web.Lineage.active, Becoming.Web.activityClass, Becoming.Web.activityFrom, Becoming.Web.continuationStep, Becoming.Web.steps_iff_lineage]
+  own induction marks: []
+  reaches Becoming.«或有后则或迭»: true
+Becoming.Web.Lineage.back
+  grammar, direct: [Becoming.«或有后则或迭», Becoming.«续», Becoming.«迭», Becoming.«迭之逆», Becoming.«逆»]
+  web, direct: [Becoming.Web.ArisesFrom, Becoming.Web.Continues, Becoming.Web.Lineage, Becoming.Web.activityClass, Becoming.Web.activityFrom, Becoming.Web.continuationStep, Becoming.Web.steps_advance, Becoming.Web.steps_iff_lineage, Becoming.Web.steps_start_active]
+  own induction marks: []
+  reaches Becoming.«或有后则或迭»: true
+  reaches Becoming.«迭之逆»: true
+  reaches Becoming.Web.steps_advance: true
+Becoming.Web.Lineage.ends
+  grammar, direct: []
+  web, direct: [Becoming.Web.CeasesFrom, Becoming.Web.Continued, Becoming.Web.Lineage, Becoming.Web.Lineage.through, Becoming.Web.Lineage.unique]
+  own induction marks: []
+  reaches Becoming.«迭之定»: true
+  reaches Becoming.«迭之分»: true
+Becoming.Web.lineages_apart
+  grammar, direct: []
+  web, direct: [Becoming.Web.ArisesFrom, Becoming.Web.Continues, Becoming.Web.Lineage, Becoming.Web.Lineage.origin, Becoming.Web.Lineage.split]
+  own induction marks: []
+  reaches Becoming.«迭之定前»: true
+  reaches Becoming.«迭之分»: true
+Becoming.Web.steps_iff_lineage
+  grammar, direct: [Becoming.«续», Becoming.«迭», Becoming.«迭之末步»]
+  web, direct: [Becoming.Web.Lineage, Becoming.Web.activityClass, Becoming.Web.activityFrom, Becoming.Web.continuationStep, Becoming.Web.occurrence_eq]
+  own induction marks: [Nat.brecOn, Nat.below]
+  reaches Becoming.«迭之末步»: true
+  reaches Becoming.«历之末步»: true
+Becoming.Web.steps_start_active
+  grammar, direct: [Becoming.«续», Becoming.«迭»]
+  web, direct: [Becoming.Web.activityClass, Becoming.Web.activityFrom, Becoming.Web.continuationStep]
+  own induction marks: []
+Becoming.Web.steps_advance
+  grammar, direct: [Becoming.«续», Becoming.«迭», Becoming.«际»]
+  web, direct: [Becoming.Web.continuationStep]
+  own induction marks: [Nat.brecOn, Nat.below]
+Becoming.Web.reaches_onward
+  grammar, direct: [Becoming.«不穷», Becoming.«不穷则迭», Becoming.«所及», Becoming.«续», Becoming.«迭», Becoming.«迭则同一或及», Becoming.«际»]
+  web, direct: [Becoming.Web.continuationStep, Becoming.Web.steps_advance]
+  own induction marks: []
+  reaches Becoming.«不穷则迭»: true
+Becoming.Web.not_not_arisingFrom_covered
+  grammar, direct: []
+  web, direct: [Becoming.Web.ArisesFrom, Becoming.Web.CeasesFrom, Becoming.Web.Continued, Becoming.Web.Lineage, Becoming.Web.Lineage.back, Becoming.Web.Lineage.ends, Becoming.Web.Lineage.unique, Becoming.Web.ceasingFrom_found]
+  own induction marks: []
+  reaches Becoming.«或有后则或迭»: true
+  reaches Becoming.«迭之定»: true
+  reaches Becoming.«迭之分»: true
+Becoming.Web.arisingFrom_not_stopping_covered
+  grammar, direct: []
+  web, direct: [Becoming.Web.ArisesFrom, Becoming.Web.CeasesFrom, Becoming.Web.not_not_arisingFrom_covered]
+  own induction marks: []
+  reaches Becoming.«或有后则或迭»: true
+  reaches Becoming.«迭之定»: true
+Becoming.Web.ceasingFrom_not_stopping_covered
+  grammar, direct: []
+  web, direct: [Becoming.Web.ArisesFrom, Becoming.Web.CeasesFrom, Becoming.Web.Continues, Becoming.Web.Lineage, Becoming.Web.Lineage.active, Becoming.Web.Lineage.onward, Becoming.Web.Lineage.origin, Becoming.Web.UnceasingFrom, Becoming.Web.arisingFrom_found, Becoming.Web.lineages_apart]
+  own induction marks: []
+  reaches Becoming.«或有后则或迭»: true
+  reaches Becoming.«迭之定前»: true
+  reaches Becoming.«迭之分»: true
+Becoming.Web.Lineage.cons
+  grammar, direct: []
+  web, direct: [Becoming.Web.Lineage]
+  own induction marks: [Nat.brecOn, Nat.below]
+Becoming.Web.Lineage.line
+  grammar, direct: [Becoming.«及».one, Becoming.«及之传递», Becoming.«相续», Becoming.«续»]
+  web, direct: [Becoming.Web.Lineage, Becoming.Web.activityClass, Becoming.Web.continuationStep]
+  own induction marks: [Nat.brecOn, Nat.below]
+Becoming.Web.line_lineage
+  grammar, direct: [Becoming.«及», Becoming.«及».rec, Becoming.«续»]
+  web, direct: [Becoming.Web.Lineage, Becoming.Web.Lineage.cons, Becoming.Web.activityClass, Becoming.Web.continuationStep]
+  own induction marks: [Becoming.«及».rec]
+Becoming.Web.lineage_iff_line
+  grammar, direct: [Becoming.«相续»]
+  web, direct: [Becoming.Web.Lineage, Becoming.Web.Lineage.line, Becoming.Web.activityClass, Becoming.Web.continuationStep, Becoming.Web.line_lineage, Becoming.Web.steps_cancel]
+  own induction marks: []
+Becoming.Web.Lineage.active
+  grammar, direct: []
+  web, direct: [Becoming.Web.Lineage]
+  own induction marks: []

@@ -1,0 +1,43 @@
+{
+ "old_receipt": "20261029T153820.435638Z",
+ "new_receipt": "20261029T161417.265481Z",
+ "declarations_old": 177,
+ "declarations_new": 179,
+ "changed": [],
+ "gone": [
+  "Becoming.Web.Lineage.cons"
+ ],
+ "added": [
+  "Becoming.Web.lineage_of_steps",
+  "Becoming.Web.steps_iff_lineage",
+  "Becoming.Web.steps_start_active"
+ ],
+ "moved": {
+  "Becoming.Web.steps_advance": [
+   "MapInstances",
+   "Identity"
+  ]
+ },
+ "definitions_rewritten": [],
+ "definitions_gone": [],
+ "definitions_added": [
+  "Becoming.Web.activityOnward"
+ ]
+}
++++ @Becoming.Web.lineage_of_steps : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {N M : Nat} {g : F}
+  (k : Nat) {y : Nat × F},
+  Becoming.«迭» (Becoming.«续» (Becoming.Web.continuationStep R) (W.activityOnward N)) k (M, g) y →
+    W.Lineage R M g k y.snd
++++ @Becoming.Web.steps_iff_lineage : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {N M : Nat},
+  N ≤ M →
+    ∀ {g : F} (k : Nat) {y : Nat × F},
+      Becoming.«迭» (Becoming.«续» (Becoming.Web.continuationStep R) (W.activityOnward N)) k (M, g) y ↔
+        y.fst = M + k ∧ W.Lineage R M g
++++ @Becoming.Web.steps_start_active : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {N k : Nat}
+  {x y : Nat × F},
+  Becoming.«迭» (Becoming.«续» (Becoming.Web.continuationStep R) (W.activityOnward N)) k x y →
+    W.active y.fst y.snd → W.active x.fst x.snd
+Becoming.Identity 152 theorems in 217 declarations, axiom report empty
+Becoming.MapInstances 27 theorems in 27 declarations, axiom report empty
+every remaining statement of Identity and MapInstances unchanged; moved: {'Becoming.Web.steps_advance': ['MapInstances', 'Identity']} ; gone: ['Becoming.Web.Lineage.cons'] ; new: ['Becoming.Web.lineage_of_steps', 'Becoming.Web.steps_iff_lineage', 'Becoming.Web.steps_start_active'] ; new definitions: ['Becoming.Web.activityOnward']
+OK
