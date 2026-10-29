@@ -1,0 +1,154 @@
+Becoming/ProcessRepresentation.lean:214:88: error: Application type mismatch: The argument
+  h
+has type
+  Process.step.{max u' v', 0} (withMove P') (e.to (s, a)) w✝ (e.to (t, a))
+but is expected to have type
+  Process.step.{u', v'} P' (?m.225 (e.to (s, a))) (?m.226 (e.to (s, a))) (e.to (t, a)).fst
+in the application
+  Eq.subst (split (s, a)) h
+Becoming/ProcessRepresentation.lean:215:21: error: Application type mismatch: The argument
+  Eq.subst (Eq.symm (split (s, a))) ?m.303
+has type
+  Process.step.{u', v'} P' (?m.265 (e.to (s, a))) (?m.266 (e.to (s, a))) (e.to (t, a)).fst
+but is expected to have type
+  Process.step.{max u' v', 0} (withMove P') (e.to (s, a)) () (e.to (t, a))
+in the application
+  Exists.intro () (Eq.subst (Eq.symm (split (s, a))) ?m.303)
+Becoming/ProcessRepresentation.lean:213:29: error: Application type mismatch: The argument
+  split (t, a)
+has type
+  e.to (t, a) = ((e.to ((t, a).fst, a₀)).fst, (e.to (s₀, (t, a).snd)).snd)
+but is expected to have type
+  e.to (t, a) = e.to (t, a₀)
+in the application
+  congrArg Prod.fst (split (t, a))
+Becoming/ProcessRepresentation.lean:229:2: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `Becoming.«一一对应».mk` has 4 explicit field, but only 1 was provided
+Becoming/ProcessRepresentation.lean:229:78: error: Missing cases:
+_
+Becoming/ProcessRepresentation.lean:229:56: error: Missing cases:
+_, _
+Becoming/ProcessRepresentation.lean:229:34: error: Missing cases:
+_, _
+Becoming/ProcessRepresentation.lean:229:42: error: Invalid projection: Type of
+  y
+is not known; cannot resolve projection `2`
+Becoming/ProcessRepresentation.lean:229:64: error: Invalid projection: Type of
+  x
+is not known; cannot resolve projection `2`
+Becoming/ProcessRepresentation.lean:229:86: error: Invalid projection: Type of
+  y
+is not known; cannot resolve projection `2`
+Becoming/ProcessRepresentation.lean:238:3: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `And.intro` has 2 explicit field, but only 1 was provided
+Becoming/ProcessRepresentation.lean:238:63: error: Missing cases:
+_
+Becoming/ProcessRepresentation.lean:238:39: error: Missing cases:
+_, _
+Becoming/ProcessRepresentation.lean:238:47: error: Invalid projection: Type of
+  k
+is not known; cannot resolve projection `2`
+Becoming/ProcessRepresentation.lean:238:71: error: Invalid projection: Type of
+  k
+is not known; cannot resolve projection `2`
+
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/wrp2/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/process-representation/tree",
+  "modules": 101,
+  "ran": [
+    "Becoming.GrammarLaws",
+    "Becoming.GrammarTransport",
+    "Becoming.Frame",
+    "Becoming.EdgeClosure",
+    "Becoming.Amounts",
+    "Becoming.Renewal",
+    "Becoming.World",
+    "Becoming.Witnesses",
+    "Becoming.Dependence",
+    "Becoming.Restoration",
+    "Becoming.Arising",
+    "Becoming.Recurrence",
+    "Becoming.Labelled",
+    "Becoming.Horizon",
+    "Becoming.Laws",
+    "Becoming.Joint",
+    "Becoming.Experiment",
+    "Becoming.Mechanism",
+    "Becoming.Flow",
+    "Becoming.Change",
+    "Becoming.Evolution",
+    "Becoming.Population",
+    "Becoming.Dissipation",
+    "Becoming.Locality",
+    "Becoming.Roles",
+    "Becoming.Reserve",
+    "Becoming.InAmounts",
+    "Becoming.Space",
+    "Becoming.Unfolding",
+    "Becoming.Attraction",
+    "Becoming.Capture",
+    "Becoming.Branching",
+    "Becoming.Diagonal",
+    "Becoming.Admission",
+    "Becoming.Continuation",
+    "Becoming.Regions",
+    "Becoming.Retaining",
+    "Becoming.Clearing",
+    "Becoming.Interdependence",
+    "Becoming.Feedback",
+    "Becoming.Testing",
+    "Becoming.Selection",
+    "Becoming.Learning",
+    "Becoming.Description",
+    "Becoming.Decidedness",
+    "Becoming.Refinement",
+    "Becoming.Identification",
+    "Becoming.Histories",
+    "Becoming.Likeness",
+    "Becoming.Distinguishing",
+    "Becoming.Viability",
+    "Becoming.Lasting",
+    "Becoming.Parting",
+    "Becoming.Onward",
+    "Becoming.Seeking",
+    "Becoming.Learnable",
+    "Becoming.HistoryLanguages",
+    "Becoming.HistoryIdeals",
+    "Becoming.Verification",
+    "Becoming.SeekingRuns",
+    "Becoming.Enough",
+    "Becoming.LimitVerification",
+    "Becoming.LearnableRuns",
+    "Becoming.LearningRuns",
+    "Becoming.Inquiry",
+    "Becoming.Assurance",
+    "Becoming.Countdown",
+    "Becoming.Gated",
+    "Becoming.Copying",
+    "Becoming.Readout",
+    "Becoming.Premises",
+    "Becoming.Openness",
+    "Becoming.Resolution",
+    "Becoming.Weighted",
+    "Becoming.Extension",
+    "Becoming.Courses",
+    "Becoming.Entropy",
+    "Becoming.Imbalance",
+    "Becoming.Novelty",
+    "Becoming.Gain",
+    "Becoming.IdentificationRuns",
+    "Becoming.Unrolling",
+    "Becoming.GrammarCourse",
+    "Becoming.Pace",
+    "Becoming.RuleCapture",
+    "Becoming.ClosedCapture",
+    "Becoming.GrammarRegularity",
+    "Becoming.ProcessRepresentation",
+    "BecomingGrammarLawsAxiomAudit",
+    "BecomingGrammarTransportAxiomAudit"
+  ],
+  "reused": 13,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.ProcessRepresentation"
+}
+python3 -B scratch_build.py $F/tree  111.20s user 29.63s system 227% cpu 1:01.86 total
+build exit 1

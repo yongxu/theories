@@ -152,6 +152,24 @@
       ]
     },
     {
+      "en": "«历», passing through a word's relations in turn, with «迭» its case for one relation repeated («迭即历»): it composes along joined words, reads its last letter last and the reversed word by the converse relations backward, merges nothing where no letter merges and keeps alike where each goes alike. The six laws of «迭» are its cases, statements unchanged: «迭之接», «迭之分», «迭之末步», «迭之逆», «迭之定前», «同行之迭».",
+      "zh": "«历»，依次历一字之诸关系，«迭» 为其一关系重复之例（«迭即历»）：沿相接之字可接，末字母末历，逆字以逆关系倒历，无字母并则不并，各同行则保同行。«迭» 之六律为其例，陈述不改：«迭之接»、«迭之分»、«迭之末步»、«迭之逆»、«迭之定前»、«同行之迭»。",
+      "declarations": [
+        "Becoming.«历»",
+        "Becoming.«迭即历»",
+        "Becoming.«历之接»",
+        "Becoming.«历之末步»",
+        "Becoming.«历之逆»",
+        "Becoming.«历之定前»",
+        "Becoming.«同行之历»",
+        "Becoming.GrammarLaws.replicate_add_append",
+        "Becoming.GrammarLaws.replicate_succ_append",
+        "Becoming.GrammarLaws.reverseAux_append",
+        "Becoming.GrammarLaws.reverse_cons_append",
+        "Becoming.GrammarLaws.reverse_replicate"
+      ]
+    },
+    {
       "en": "Being drawn. For every relation, x is drawn in exactly where it reaches something that does not reach back, and with a successor that does not reach itself it is drawn. With the successor fixed at what x reaches, x reaching itself is not drawn, and with some successor drawn is not reaching itself; the global forms follow. Witnesses: neither hypothesis can be omitted, and the global one is more than the law uses.",
       "zh": "入：对每一关系，x 恰在及于不返者时入；有后而不自返则入。于 x 所及处定后，自返之 x 不入；有后时入即不自返；全局之形为推论。见证：二假设皆不可省，全局之假设多于此律所用。",
       "declarations": [
@@ -652,6 +670,11 @@
         "Becoming.GrammarLaws.length_replicate",
         "Becoming.GrammarLaws.mem_cons_split",
         "Becoming.GrammarLaws.prepend",
+        "Becoming.GrammarLaws.replicate_add_append",
+        "Becoming.GrammarLaws.replicate_succ_append",
+        "Becoming.GrammarLaws.reverseAux_append",
+        "Becoming.GrammarLaws.reverse_cons_append",
+        "Becoming.GrammarLaws.reverse_replicate",
         "Becoming.GrammarLaws.revisits_within",
         "Becoming.GrammarLaws.skipAt",
         "Becoming.GrammarLaws.skipAt_le",
@@ -671,10 +694,16 @@
         "Becoming.«入而屡之例»",
         "Becoming.«入而返之例»",
         "Becoming.«则逾之定当且仅当排中»",
+        "Becoming.«历»",
+        "Becoming.«历之定前»",
+        "Becoming.«历之接»",
+        "Becoming.«历之末步»",
+        "Becoming.«历之逆»",
         "Becoming.«及之所闭»",
         "Becoming.«及即迭»",
         "Becoming.«及当且仅当一步而所闭»",
         "Becoming.«同行»",
+        "Becoming.«同行之历»",
         "Becoming.«同行之迭»",
         "Becoming.«同行之逐点»",
         "Becoming.«同行于迭»",
@@ -781,6 +810,7 @@
         "Becoming.«迭内即静或缘之迭»",
         "Becoming.«迭则及»",
         "Becoming.«迭则同一或及»",
+        "Becoming.«迭即历»",
         "Becoming.«逾»",
         "Becoming.«逾则不则»",
         "Becoming.«遍后则有线»",
@@ -795,7 +825,7 @@
         "Becoming.«齐则非杂»",
         "Becoming.«齐即谓»"
       ],
-      "sha256": "31f3bdd79cc2f7e2f7930f793fae8a125dd8cbd4ce31f2d9e530dea184f3b614"
+      "sha256": "7cb999f6f9f20bfbb4cc0878e613403a87ccc174a1920720bfe9d4cb23294295"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
@@ -1143,7 +1173,7 @@
     {
       "path": "theories/becoming/chapters/01-ROOT.md",
       "role": "statement",
-      "sha256": "1d84409fa1a3f757e992135156fd0fa38aa82ecef21962c3fa0835feba56e8bf"
+      "sha256": "1658f64102f186e8e1c1c2790592da8c0a19c8a903e7923d17affee554f82587"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
@@ -1237,12 +1267,18 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T125805.763052Z/verification.json",
       "role": "receipt",
       "sha256": "c454c53dedd8a940944ce068d35afdca66a077aaddbcc488c1aa713df77de453"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T142634.455566Z/verification.json",
+      "role": "receipt",
+      "sha256": "0cddecdb0aa23825d3112bd51aa78355a77196434e914adbfee29fdd2befeaa9",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T084618.786422Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T142634.455566Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1468,6 +1504,10 @@
     {
       "en": "29 October 2026 (OU3f, study section 445): the closure at the successor along a line, that a region every step keeps holds from where it holds on (kept_onward, in Becoming.KeptOnward, its home beside «线则所闭» in GrammarLaws), and the eight inductions over steps in six model modules proved by it in place of their own (board rule 9), statements unchanged.",
       "zh": "2026年10月29日（OU3f，研究第 445 节）：闭包于后继沿线，即每步皆守之域自其所守处以后皆守（kept_onward，在 Becoming.KeptOnward，其所居在 GrammarLaws 中「线则所闭」之旁），及六个模型模块中八条逐步归纳以之代其自证（板规九），陈述不变。"
+    },
+    {
+      "en": "29 October 2026 (WRP2, study section 447): passing through a word's relations in turn («历»), n steps its case for one relation, stated beside n steps; six laws of n steps proved as cases of its laws with their statements and names unchanged (GrammarLaws' owner's decision (a)), and the list lemmas it uses proved by induction, the core's List.reverse_cons reporting propext.",
+      "zh": "2026年10月29日（WRP2，研究第 447 节）：依次历一字之诸关系（«历»），n 步为其一关系之例，置于 n 步之旁；n 步之六律证为其律之例，陈述与名不改（GrammarLaws 主之决定 (a)）；其所用之列表引理以归纳证之，因核之 List.reverse_cons 报 propext。"
     }
   ]
 }

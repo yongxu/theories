@@ -93,7 +93,7 @@ Reading (the AI's): what linear tests cannot see is exactly where the unfolding 
 - related, not a proved adapter: [branching-tests-bisimulation](branching-tests-bisimulation.md). In the periphery, branching tests fix likeness exactly for image-finite models (classically); in the core, linear tests fix it under determinacy up to likeness, and branching tests fix it constructively on finite decided frames.
 - related, not a proved adapter: [determinacy-up-to-likeness](determinacy-up-to-likeness.md). The same module, Becoming.Likeness, completes up to likeness the laws stated with equality.
 
-**Used by:** [identification-where-runs-part](identification-where-runs-part.md) · [lifting-where-branching-is-finite](lifting-where-branching-is-finite.md) · [scientific-inquiry-foundation](scientific-inquiry-foundation.md) (interpretive) · [wisdom-root](wisdom-root.md) (interpretive)
+**Used by:** [identification-where-runs-part](identification-where-runs-part.md) · [lifting-where-branching-is-finite](lifting-where-branching-is-finite.md) · [processes-represented-both-ways](processes-represented-both-ways.md) · [scientific-inquiry-foundation](scientific-inquiry-foundation.md) (interpretive) · [wisdom-root](wisdom-root.md) (interpretive)
 
 <a id="sources--来源"></a>
 ### Sources

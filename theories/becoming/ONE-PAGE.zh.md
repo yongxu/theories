@@ -24,7 +24,7 @@
 
 **尚未完成之事。**
 
-- 多数律是在模型上证明的，尚未在文法本身上重新陈述。五条主律已在文法上陈述：模型上闭包之律，及有限运行与序之律的一部分，由之证出；归并之律证为与其文法形式等价；平衡只表示、不推出（[01 §7](chapters/01-ROOT.md#r-master-laws-on-the-grammar)）。127 条核心声明中，现有 45 条通到文法，演化的 18 条与意义的 5 条尚无一条，其余每一条都写明其不通之由（[08 §7](chapters/08-METHOD.md#master-laws-and-connectivity)）。世界在其关系上于文法中双向表示，在其量上则否（[01 §8](chapters/01-ROOT.md#r-the-world-represented-both-ways)）。
+- 多数律是在模型上证明的，尚未在文法本身上重新陈述。五条主律已在文法上陈述：模型上闭包之律，及有限运行与序之律的一部分，由之证出；归并之律证为与其文法形式等价；平衡只表示、不推出（[01 §7](chapters/01-ROOT.md#r-master-laws-on-the-grammar)）。127 条核心声明中，现有 45 条通到文法，演化的 18 条与意义的 5 条尚无一条，其余每一条都写明其不通之由（[08 §7](chapters/08-METHOD.md#master-laws-and-connectivity)）。过程以其诸着之关系于文法中双向表示（[01 §8.1](chapters/01-ROOT.md#r-processes-represented-both-ways)），世界在其关系上亦双向表示，在其量上则否（[01 §8](chapters/01-ROOT.md#r-the-world-represented-both-ways)）。
 - 根与伦理只在部分上是一个说明：以从己方式沿一个关系持有，延续条件就是根的条件，即在该关系的全类之下，没有任何东西位于每一个中心的相续之外；沿一个无环的网，它只在只有一个中心时成立（[意义](chapters/07-SIGNIFICANCE.md#r-the-continuation-condition-on-the-root)）。自由的意义尚未提升到根上，一个中心自己的相续在哪个类之下进行，仍属未决。
 - 伦理的两个前提中任何一个能否得到根据，尚属未决。
 - 本理论应当首先面对的检验系统中，放射性衰变与一个按固定规则传播的信念在根上只有小的见证，一个有机体与一个制度尚无模型（[01 §8](chapters/01-ROOT.md#r-the-source-texts-test-systems)）。

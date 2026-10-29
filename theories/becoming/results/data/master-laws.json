@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261029T134236.345943Z",
- "core_sources_sha256": "65e61314bb330e391a0d3c3dcbbe50abf370af2066c952b2ef66d7a5965ee31e",
+ "core_receipt": "20261029T142634.455566Z",
+ "core_sources_sha256": "dc191a35b0ae78d52d4509bf00a3b9bb3041b44a155a0d8dc250ea8ef4a80ee7",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -56,18 +56,18 @@
   ]
  },
  "counts": {
-  "laws": 3674,
+  "laws": 3686,
   "no_declarations": 9,
   "outside": 342,
-  "grammar": 718,
+  "grammar": 729,
   "balance, represented": 635,
   "anchor, not reached": 134,
-  "no master law": 1836,
-  "vocabulary_only": 54,
-  "closure": 471,
+  "no master law": 1837,
+  "vocabulary_only": 57,
+  "closure": 472,
   "balance": 802,
-  "return": 248,
-  "lumping": 80,
+  "return": 250,
+  "lumping": 83,
   "order": 78
  },
  "records": {
@@ -26402,6 +26402,28 @@
    {
     "law": 9,
     "declarations": [
+     "Becoming.«历»",
+     "Becoming.«迭即历»",
+     "Becoming.«历之接»",
+     "Becoming.«历之末步»",
+     "Becoming.«历之逆»",
+     "Becoming.«历之定前»",
+     "Becoming.«同行之历»",
+     "Becoming.GrammarLaws.replicate_add_append",
+     "Becoming.GrammarLaws.replicate_succ_append",
+     "Becoming.GrammarLaws.reverseAux_append",
+     "Becoming.GrammarLaws.reverse_cons_append",
+     "Becoming.GrammarLaws.reverse_replicate"
+    ],
+    "master_laws": [
+     "lumping"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 10,
+    "declarations": [
      "Becoming.«入»",
      "Becoming.«入当且仅当有不返»",
      "Becoming.«定后于环则所及皆返»",
@@ -26426,7 +26448,7 @@
     ]
    },
    {
-    "law": 10,
+    "law": 11,
     "declarations": [
      "Becoming.«遍后则有线»",
      "Becoming.«线不并»",
@@ -26455,7 +26477,7 @@
     ]
    },
    {
-    "law": 11,
+    "law": 12,
     "declarations": [
      "Becoming.Branching.returns_iff_reaches",
      "Becoming.Branching.lossless_iff_fixedBefore",
@@ -26479,7 +26501,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 12,
+    "law": 13,
     "declarations": [
      "Becoming.«屡»",
      "Becoming.«或屡»",
@@ -26501,7 +26523,7 @@
     ]
    },
    {
-    "law": 13,
+    "law": 14,
     "declarations": [
      "Becoming.Amounts.falls_end",
      "Becoming.Amounts.fallsStop_iff",
@@ -26515,7 +26537,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 14,
+    "law": 15,
     "declarations": [
      "Becoming.«同行»",
      "Becoming.«同行之逐点»",
@@ -26543,7 +26565,7 @@
     ]
    },
    {
-    "law": 15,
+    "law": 16,
     "declarations": [
      "Becoming.determined_iff_fixed",
      "Becoming.goAlikeUnder_iff_alike",
@@ -26556,7 +26578,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 16,
+    "law": 17,
     "declarations": [
      "Becoming.strictJoin_irrefl",
      "Becoming.strictJoin_trans",
@@ -26590,7 +26612,7 @@
     ]
    },
    {
-    "law": 17,
+    "law": 18,
     "declarations": [
      "Becoming.Web.admitted",
      "Becoming.Web.includes_iff",
@@ -26613,7 +26635,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 18,
+    "law": 19,
     "declarations": [
      "Becoming.Amounts.rests_unrefuted",
      "Becoming.Branching.Lossless.cancel",
@@ -31666,6 +31688,191 @@
     "master_laws": [],
     "grammar": false,
     "dependence": "no master law"
+   }
+  ],
+  "processes-represented-both-ways": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.moveRel_mk",
+     "Becoming.mk_moveRel",
+     "Becoming.steps_iff_moveRel",
+     "Becoming.steps_one_move",
+     "Becoming.steps_edgeProcess",
+     "Becoming.steps_unlabelled",
+     "Becoming.steps_lawProcess",
+     "Becoming.enabled_iff_neng"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.forall_steps_iff",
+     "Becoming.forall_moveRel_iff"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.class_is_claims",
+     "Becoming.step_iff_withMove",
+     "Becoming.withMove_image_iff",
+     "Becoming.reading_next_move_not_withMove"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.withMove_of_renaming",
+     "Becoming.configurationRenaming",
+     "Becoming.moveRenaming",
+     "Becoming.renaming_of_withMove",
+     "Becoming.NoMoves.P",
+     "Becoming.NoMoves.P'",
+     "Becoming.NoMoves.e",
+     "Becoming.NoMoves.models_correspond",
+     "Becoming.NoMoves.not_renamed",
+     "Becoming.NoConfigurations.P",
+     "Becoming.NoConfigurations.P'",
+     "Becoming.NoConfigurations.e",
+     "Becoming.NoConfigurations.models_correspond",
+     "Becoming.NoConfigurations.not_renamed"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.Twist.P₁",
+     "Becoming.Twist.P₂",
+     "Becoming.Twist.flipConfiguration",
+     "Becoming.Twist.flipConfiguration_twice",
+     "Becoming.Twist.e",
+     "Becoming.Twist.steps_carried",
+     "Becoming.Twist.models_correspond",
+     "Becoming.Twist.P₂_not_both",
+     "Becoming.Twist.P₂_loops_by_one_move",
+     "Becoming.Twist.not_renamed",
+     "Becoming.Flip.P₃",
+     "Becoming.Flip.P₄",
+     "Becoming.Flip.flipMove",
+     "Becoming.Flip.flipMove_twice",
+     "Becoming.Flip.e",
+     "Becoming.Flip.steps_carried",
+     "Becoming.Flip.models_correspond",
+     "Becoming.Flip.P₄_apart",
+     "Becoming.Flip.not_renamed"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.renaming_moveRel",
+     "Becoming.renaming_steps",
+     "Becoming.renaming_trace",
+     "Becoming.renaming_iterate",
+     "Becoming.renaming_reach",
+     "Becoming.renaming_returns",
+     "Becoming.renaming_invariant",
+     "Becoming.renaming_determined",
+     "Becoming.renaming_lossless",
+     "Becoming.renaming_goAlike",
+     "Becoming.renaming_yan"
+    ],
+    "master_laws": [
+     "closure",
+     "return",
+     "lumping"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.trace_iff_li",
+     "Becoming.feasible_iff_li",
+     "Becoming.factorsThrough_iff_image",
+     "Becoming.run_image",
+     "Becoming.run_iff_image"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.yan_iff_keepsMoving",
+     "Becoming.run_yan",
+     "Becoming.yan_line_iff_dependentChoice",
+     "Becoming.yan_line_of_list"
+    ],
+    "master_laws": [
+     "return"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.Forgotten.byTrue",
+     "Becoming.Forgotten.byFalse",
+     "Becoming.Forgotten.moves_forgotten"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.«保之像»",
+     "Becoming.«延之拉回»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.«一一对应».prod",
+     "Becoming.GrammarTransport.map_replicate",
+     "Becoming.«历之像»",
+     "Becoming.«历之对应»",
+     "Becoming.«迭之像»",
+     "Becoming.«迭之对应»",
+     "Becoming.«迭内之对应»",
+     "Becoming.«闭之对应»",
+     "Becoming.«定后之对应»",
+     "Becoming.«定前之对应»",
+     "Becoming.«同行之对应»",
+     "Becoming.«延之对应»"
+    ],
+    "master_laws": [
+     "lumping"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "projection-carrying-a-law": [

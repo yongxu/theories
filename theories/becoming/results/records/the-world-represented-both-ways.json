@@ -254,8 +254,8 @@
       "kind": "scope"
     },
     {
-      "en": "Processes; a representation through the order of joined exchanges; whether the descent laws follow from F3; interpretation with Lean; the grammar's terms not listed in GrammarTransport.",
-      "zh": "过程；经相接交换之序之表示；降律是否由 F3 推出；与 Lean 之互译；GrammarTransport 未列之文法诸项。",
+      "en": "A representation through the order of joined exchanges; whether the descent laws follow from F3; interpretation with Lean; the grammar's terms not listed in GrammarTransport. Processes are represented in processes-represented-both-ways.",
+      "zh": "经相接交换之序之表示；降律是否由 F3 推出；与 Lean 之互译；GrammarTransport 未列之文法诸项。过程之表示见 processes-represented-both-ways。",
       "kind": "scope"
     }
   ],
@@ -301,8 +301,8 @@
     "zh": "纯核，公理报告皆空：GrammarTransport 引 GrammarLaws，WorldRepresentation 引 ContinuedClasses、Decidedness、Diagonal 与 GrammarTransport；二者与全包同编译，无名冲突。建模之选为世界自身者；诸例皆单一小世界；皆逐点，不用函数外延性。"
   },
   "next_delta": {
-    "en": "A representation theorem for processes; the amount part's joint image; a representation through the order of joined exchanges; the laws that read only activity at the occurrence model (OU3f); review by a person.",
-    "zh": "过程之表示定理；数量部分之共像；经相接交换之序之表示；于出现模型上唯读活动之诸律（OU3f）；人之审查。"
+    "en": "The amount part's joint image; a representation through the order of joined exchanges; the laws that read only activity at the occurrence model (OU3f); review by a person.",
+    "zh": "数量部分之共像；经相接交换之序之表示；于出现模型上唯读活动之诸律（OU3f）；人之审查。"
   },
   "correspondence": {
     "en": "That definable properties are kept by isomorphisms of structures is standard model theory; here it is shown term by term, since the grammar is embedded with no syntax of terms. Difunctional relations are Riguet's (1948). The no-injection lemma is the constructive form of Cantor's theorem for a powerset, through the package's diagonal lemma (Lawvere 1969 states the general form). That conservation is labelled by standings is the cancellation of a whole-number equation. The representation is an interpretation of the World into grammar models, faithful on re-identifications and not injective on amounts. Graded in WRT's DESIGN.md.",
@@ -410,6 +410,13 @@
         "en": "The interleavings are one aspect of the World's representation: the occurrence model reads the shared index, which a world's reorderings change while keeping the order of joined exchanges.",
         "zh": "交错为世界之表示之一面：出现模型读共指标，世界之重排改之而守相接交换之序。"
       }
+    },
+    {
+      "id": "processes-represented-both-ways",
+      "detail": {
+        "en": "Processes are represented in the grammar both ways by their moves' relations, faithful up to correspondence with the move inside and both classes; the World's representation reads its terms through the same GrammarTransport.",
+        "zh": "过程以其诸着之关系于文法中两向得表示，着在其内携二类则于对应下忠实；世界之表示经同一 GrammarTransport 读其诸项。"
+      }
     }
   ],
   "references": [
@@ -462,7 +469,7 @@
         "Becoming.«部分恒等之像»",
         "Becoming.«静之像»"
       ],
-      "sha256": "02348e9ee93809fb1a0ae75d86d979d530bd7c4c6248ee1c419b9fce393bd8f5"
+      "sha256": "d5d12bd4915c3e02ff313001845b5879779d8236c9217f2129093db1dbb6f0b2"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean",
@@ -562,7 +569,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
       "role": "proof",
-      "sha256": "31f3bdd79cc2f7e2f7930f793fae8a125dd8cbd4ce31f2d9e530dea184f3b614"
+      "sha256": "7cb999f6f9f20bfbb4cc0878e613403a87ccc174a1920720bfe9d4cb23294295"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
@@ -607,13 +614,19 @@
     {
       "path": "theories/becoming/chapters/01-ROOT.md",
       "role": "statement",
-      "sha256": "1d84409fa1a3f757e992135156fd0fa38aa82ecef21962c3fa0835feba56e8bf"
+      "sha256": "1658f64102f186e8e1c1c2790592da8c0a19c8a903e7923d17affee554f82587"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T142634.455566Z/verification.json",
+      "role": "receipt",
+      "sha256": "0cddecdb0aa23825d3112bd51aa78355a77196434e914adbfee29fdd2befeaa9",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTransport.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T081505.616437Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T142634.455566Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarTransport",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -630,6 +643,10 @@
     {
       "en": "29 October 2026: added (WRT2), the World represented in the grammar both ways, its amounts not: the occurrence model and its name-free part, carried by every re-identification; the grammar's listed terms kept by correspondence; recurrence at the model; the relational part ranging over everything, conservation exactly its form, what amounts induce decided; the failure on amounts with four witnesses; after the design's two reviews, a review of the Lean and its re-read; study section 440.",
       "zh": "2026年10月29日：新增（WRT2），世界于文法中两向得表示，其数量则否：出现模型及其无名部分，为每一重认所携；文法所列诸项为对应所保；模型上之屡；关系部分遍及一切，守恒恰为其形，数量所引者可判定；数量处之不成及其四例；经设计之二审、Lean 之审及其复读；研究第 440 节。"
+    },
+    {
+      "en": "29 October 2026 (WRP2, study section 447): its item and next step on processes brought to the landed theorem, processes-represented-both-ways, as a related record; no statement, law or declaration changed.",
+      "zh": "2026年10月29日（WRP2，研究第 447 节）：其言过程之项与下一步归于已成之定理 processes-represented-both-ways，列为相关；陈述、律与声明皆不改。"
     }
   ]
 }
