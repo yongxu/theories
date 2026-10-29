@@ -27,7 +27,7 @@ Each law was read against its declarations in `Becoming/Transmission.lean` and `
 | C13 “No axiom.” | evidence | standard_boundaries no-ethical-premise; validation_scope (empty axiom reports) |
 | (new) law 14 | law | `Web.needsWithinAt_of_supported`, referenced and not stated in the old claim: the need half from support at the first standing step |
 | H0 “The equivalence of inheritance with forming needs … (bare); the general split needs that holding decided, and asked of every descent it is excluded middle.” | premise | hypotheses[0] (unchanged) |
-| H1 “No new dependence and descent from a participant need balance at the relatum coming to stand; the evolution bounds need only active relata giving (Acting) and activity needing support (Dependent), as in evolution-on-descent.” | premise | hypotheses[1] (unchanged) |
+| H1 “No new dependence and descent from a participant need balance at the relatum coming to stand; the evolution bounds need only active relata giving (Acting) and activity needing support (Dependent), as in evolution-on-descent.” | premise | hypotheses[1], with “and the bounds over a stretch balance as well” (跨一段的界另需平衡) added, since `Flow.inherited_within_at` and `Flow.inherited_within` take balance at c across the stretch |
 | H2 “TwoGivers and Drawdown.carried are witnesses, each stated on one given small world.” | premise | hypotheses[2] (unchanged) |
 | X0 “TwoGivers: the some-giver form holds while transmission fails for every δ.” | counterexample | counterexamples[0] (unchanged); law 12 |
 | L0 “Stated for discrete steps and natural-number amounts;” | standard boundary + premise | standard_boundaries discrete-steps; hypotheses[3] (added: natural-number steps, levels, needs and amounts) |

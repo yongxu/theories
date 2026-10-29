@@ -39,7 +39,7 @@ The old record had no statement; the new one says what the claim and the home se
 | N1 “repeating substitution or equating intelligible challenge with acceptance of the entire logic does not supply it.” | next step | next_delta (“without repeating the substitution theorem or reading an intelligible challenge as acceptance of the whole logic”) |
 | — | standard boundary | standard_boundaries: no-ethical-premise-core-axiom-free |
 
-**Chapter edit (proposed, not made).** The home section's standing says “`Quot.sound` in six declarations, as the record reports”. The record now reports, for the cited periphery declarations, six in InferentialSubstitution and three in SubstitutionCorrespondence (`through`, `supplies`, `all_terms_agree_iff_positions_by_core`), nine in all. In 03-KNOWING.md, `r-binding-preserving-substitution`:
+**Chapter edit (made).** The home section's standing says “`Quot.sound` in six declarations, as the record reports”. The record now reports, for the cited periphery declarations, six in InferentialSubstitution and three in SubstitutionCorrespondence (`through`, `supplies`, `all_terms_agree_iff_positions_by_core`), nine in all. In 03-KNOWING.md, `r-binding-preserving-substitution`:
 
 - old: “(periphery; a supplied finite typed-term language; \`Quot.sound\` in six declarations, as the record reports)”
 - new: “(periphery; a supplied finite typed-term language; \`Quot.sound\` in nine of the cited declarations, as the receipts report)”

@@ -45,7 +45,7 @@ The old record had no statement; the new one says what the claim's first sentenc
 | N2 “Primary evidence constrains automatic transfer without identifying a unique mechanism or evolutionary history.” | correspondence | does_not_show[3] (correspondence) |
 | — | standard boundary | standard_boundaries: no-ethical-premise-core-axiom-free |
 
-**Chapter edit (proposed, not made).** The home section's standing says “the original periphery history uses propext and inherits choice”. The cited periphery declarations use `propext`, most with `Quot.sound`, and none `Classical.choice`; only modules inherited by its receipt use `Classical.choice`. In 03-KNOWING.md, the row `r-retrospective-source-binding`:
+**Chapter edit (made; in review the row's “resolves earlier records” also became “can resolve earlier records”, as the statement reads).** The home section's standing says “the original periphery history uses propext and inherits choice”. The cited periphery declarations use `propext`, most with `Quot.sound`, and none `Classical.choice`; only modules inherited by its receipt use `Classical.choice`. In 03-KNOWING.md, the row `r-retrospective-source-binding`:
 
 - old: “the original periphery history uses propext and inherits choice”
 - new: “the periphery history and its instances use propext and Quot.sound, and modules its receipt inherits use choice”

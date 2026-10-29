@@ -23,7 +23,7 @@ Each law was read against its declarations in `Becoming/Standpoints.lean`, `Beco
 | C8 “what is new is the relation between conditions, and region_not_a_cut is distinctive in direction.” | reading | correspondence (an AI reading, “in the direction of inflow”) |
 | C9 “No ethical axiom and no Lean axiom is used;” | evidence | validation_scope (empty axiom reports); standard_boundaries significance-related-not-asserted (the record asserts no significance) |
 | C10 “relational neutrality is a hypothesis.” | premise | hypotheses[3] (added) |
-| H0 “Conveyance as related is a correspondence premise: decided by the AI, …” | premise | hypotheses[0] (unchanged) |
+| H0 “Conveyance as related is a correspondence premise: decided by the AI, …” | premise | hypotheses[0], ‘decided by the AI’ restated as ‘an AI reading, D12’ |
 | H1 “The one-kind reading: conditions and formations share an index, …(see life-as-condition-of-life).” | premise | hypotheses[1] (unchanged) |
 | H2 “The crossing theorems need balance, dissipation, no repetition, enclosure around, recurring taking and decided equality, as in continuing-self-fed-from-beyond.” | premise | hypotheses[2] (unchanged); standard_boundaries decidability |
 | X0 “The earlier readings relate no two conditions: … (Clearing.conveyance_only); under living on, though, the resource's region is no cut either (Clearing.resource_not_cut_living_on).” | counterexample | counterexamples[0] (unchanged); law 5 |

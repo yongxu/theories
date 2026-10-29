@@ -448,7 +448,10 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "role": "proof",
       "sha256": "b6dbed19c25ed2c0bb4f66ebfa97c40103fbdbc1892ef16be788350daa2d780e",
-      "declarations": []
+      "declarations": [
+        "Becoming.Repeated.rep",
+        "Becoming.Repeated.web"
+      ]
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
@@ -471,6 +474,14 @@
       "declarations": [
         "Becoming.Decided"
       ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Lone.repeated_family"
+      ],
+      "sha256": "f22c4d760412ac525a5dc3c461ca148e4e0267bd572c495818b30071a8acdd79"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261013T094743.528770Z/verification.json",
@@ -627,6 +638,11 @@
       "role": "receipt",
       "sha256": "d5900bc8b613124282a1b19105136d6be2334131768151b24783f9206f1a54e0",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json",
+      "role": "receipt",
+      "sha256": "4d94c1b82af02e7869351aba40ea8ebaa61b5614423929afa25924281fdda97a"
     }
   ],
   "proof_bindings": [
@@ -683,6 +699,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.InAmounts",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Dissipation",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -770,8 +793,8 @@
       "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.rests_unrefuted, World.Finite to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
     },
     {
-      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): title kept; the statement's last clause narrowed to what the Lean proves (a law refuting something wherever a list is listed once refutes it with no premise), the local uses becoming laws; the claim split into fourteen laws, each read against its declarations in Listing.lean, ListingRefutations.lean, Prelude.lean and InAmounts.lean, the twenty-two refutation corollaries named in two laws; the limitations became one does-not-show item, the standard boundaries no-evaluation and names-provisional and the correspondence's breakdown of the thirty uses; two does-not-show items added (non-recurrence is not settling; decided identity at each step is not shown to give a census, the census law narrowed to the decision procedure it takes); the claim's \"No premise\" read as no-ethical-premise; the hypothesis on unchanged modules moved to the correspondence and one on the corollaries' premises added; the inventory, which no declaration witnesses, left the counterexamples and stays a provenance reference; twelve refutation corollaries added to ListingRefutations.lean's reference; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [listing-once-is-decided-identity.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/listing-once-is-decided-identity.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in a dependency, hypotheses, each read against the Lean it cites.",
-      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：标题保留；陈述末一分句按 Lean 收窄（处处列出一次时否证某事的律不加前提地否证它），局部用法改为规律；主张拆为十四条规律，各条对照 Listing.lean、ListingRefutations.lean、Prelude.lean 与 InAmounts.lean 中的声明核读，二十二条否证推论分在两条规律中；限制改为一条“未表明”、通用边界 no-evaluation 与 names-provisional 及对应说明中三十个用处的分解；另加两条“未表明”（不复现不是安定；未表明每步已定的同一给出普查，普查之律按其所取的判定程序收窄）；主张中的“不加前提”读作 no-ethical-premise；关于模块未变的前提移入对应说明，并加一条关于推论前提的前提；清点不由任何声明见证，移出反例，仍为来源引用；十二条否证推论加入 ListingRefutations.lean 的引用；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [listing-once-is-decided-identity.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/listing-once-is-decided-identity.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及依赖、前提，各条对照所引 Lean 核读。"
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): title kept; the statement's last clause narrowed to what the Lean proves (a law refuting something wherever a list is listed once refutes it with no premise), the local uses becoming laws; the claim split into fourteen laws, each read against its declarations in Listing.lean, ListingRefutations.lean, Prelude.lean and InAmounts.lean, the twenty-two refutation corollaries named in two laws; the limitations became one does-not-show item, the standard boundaries no-evaluation and names-provisional and the correspondence's breakdown of the thirty uses; two does-not-show items added (non-recurrence is not settling; decided identity at each step is not shown to give a census, the census law narrowed to the decision procedure it takes); the claim's \"No premise\" read as no-ethical-premise; the hypothesis on unchanged modules moved to the correspondence and one on the corollaries' premises added; the inventory, which no declaration witnesses, left the counterexamples and stays a provenance reference; twelve refutation corollaries added to ListingRefutations.lean's reference; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [listing-once-is-decided-identity.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/listing-once-is-decided-identity.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in a dependency, hypotheses, each read against the Lean it cites. A cold read of the applied record was taken in the references, the proof bindings.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：标题保留；陈述末一分句按 Lean 收窄（处处列出一次时否证某事的律不加前提地否证它），局部用法改为规律；主张拆为十四条规律，各条对照 Listing.lean、ListingRefutations.lean、Prelude.lean 与 InAmounts.lean 中的声明核读，二十二条否证推论分在两条规律中；限制改为一条“未表明”、通用边界 no-evaluation 与 names-provisional 及对应说明中三十个用处的分解；另加两条“未表明”（不复现不是安定；未表明每步已定的同一给出普查，普查之律按其所取的判定程序收窄）；主张中的“不加前提”读作 no-ethical-premise；关于模块未变的前提移入对应说明，并加一条关于推论前提的前提；清点不由任何声明见证，移出反例，仍为来源引用；十二条否证推论加入 ListingRefutations.lean 的引用；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [listing-once-is-decided-identity.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/listing-once-is-decided-identity.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及依赖、前提，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及引用、证明绑定。"
     }
   ],
   "text_versions": [

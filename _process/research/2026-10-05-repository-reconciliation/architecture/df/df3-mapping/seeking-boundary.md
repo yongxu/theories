@@ -57,7 +57,7 @@ Each law was read against its declarations: `MoreThanNow`, `RestsAt`, `AboveAll`
 | N2 “the boundary of enough under undetermined laws.” | next step done elsewhere | dropped from next_delta: the-boundary-of-enough-under-undetermined-laws states it, and it is added to `related` |
 | — | standard boundaries | discrete-steps, no-ethical-premise, no-evaluation, names-provisional |
 
-**Chapter edit (proposed, not made).** The home section says “Where what stands runs down from some step on, rises stop by exhaustion, not by enough.” `Flow.more_exhausted` proves that no condition rises at arbitrarily late steps, a negated universal, not that the rises stop after some step. In 03-KNOWING.md, `r-seeking-boundary`:
+**Chapter edit (made).** The home section says “Where what stands runs down from some step on, rises stop by exhaustion, not by enough.” `Flow.more_exhausted` proves that no condition rises at arbitrarily late steps, a negated universal, not that the rises stop after some step. In 03-KNOWING.md, `r-seeking-boundary`:
 
 - old: “Where what stands runs down from some step on, rises stop by exhaustion, not by enough.”
 - new: “Where what stands runs down at every step from some step on, no condition rises at arbitrarily late steps: exhaustion, not enough.”

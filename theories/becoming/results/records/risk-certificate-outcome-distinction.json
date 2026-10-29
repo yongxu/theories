@@ -15,8 +15,8 @@
   },
   "laws": [
     {
-      "en": "For a listed family of any type, a reduction to values compared decidedly and an observable: a judge reading only the reduced value gives the observable at every member exactly where the observable goes alike across every two members the reduction merges. No choice is used: the judge answers with the first listed member of each reduced value.",
-      "zh": "对任意类型的列出族、到可判定相等之值的约化与一个可观察量：只读约化值的判断器在每个成员处给出该可观察量，恰当该可观察量在约化所合并的任两个成员上相同。不用选择：判断器以每个约化值的第一个列出成员作答。",
+      "en": "For a listed family of any type, a reduction to values compared decidedly, an observable and a default value of it: a judge reading only the reduced value gives the observable at every member exactly where the observable goes alike across every two members the reduction merges. No choice is used: the judge answers with the first listed member of each reduced value, and with the default where there is none.",
+      "zh": "对任意类型的列出族、到可判定相等之值的约化、一个可观察量及其一个默认值：只读约化值的判断器在每个成员处给出该可观察量，恰当该可观察量在约化所合并的任两个成员上相同。不用选择：判断器以每个约化值的第一个列出成员作答，无此成员处答以默认值。",
       "declarations": [
         "Becoming.Readout.LumpedOn",
         "Becoming.Readout.Judges",
@@ -34,8 +34,8 @@
       ]
     },
     {
-      "en": "For every process, run and observable, and a reduction to values compared decidedly, a judge reading only the reduced run gives the observable at each of the first n dates exactly when it goes alike at every two of those dates the reduction merges; for values of any type, where the reduction merges two of those dates the observable tells apart, no judge does.",
-      "zh": "对每个过程、运行、可观察量及到可判定相等之值的约化：只读约化运行的判断器在前 n 个日期的每一个给出可观察量，恰当它在约化所合并的这些日期中任两个上相同；对任意类型的值，凡约化合并了可观察量所区分的两个这样的日期，就没有判断器做到。",
+      "en": "For every process, run, observable with a default value, and a reduction to values compared decidedly, a judge reading only the reduced run gives the observable at each of the first n dates exactly when it goes alike at every two of those dates the reduction merges; for values of any type, where the reduction merges two of those dates the observable tells apart, no judge does.",
+      "zh": "对每个过程、运行、带默认值的可观察量及到可判定相等之值的约化：只读约化运行的判断器在前 n 个日期的每一个给出可观察量，恰当它在约化所合并的这些日期中任两个上相同；对任意类型的值，凡约化合并了可观察量所区分的两个这样的日期，就没有判断器做到。",
       "declarations": [
         "Becoming.Courses.reducedRun",
         "Becoming.Courses.run_judges_iff",
@@ -370,8 +370,8 @@
       "zh": "2026-10-20：6 条记账性说明合并（15 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/67359b32d6b3e135/risk-certificate-outcome-distinction.json 和 git 中。"
     },
     {
-      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement written from the claim and the home section, the core law it rests on first; the claim split into six laws, each read against its declarations in Readout.lean, Courses.lean, WisdomFallibleJudgment.lean and JudgingCorrespondence.lean (judging through a reduction, its failure, its run form, the three-route laws, the endpoint impossibility, its reading on the core law); the limitations became three does-not-show items; the counterexample, whose source is the study and whose first clause the fourth law now carries, became two more; the hypotheses kept; the shared boundary no-ethical-premise-core-axiom-free cited; no premise, status or source hash changed. Every earlier sentence is mapped in [risk-certificate-outcome-distinction.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/risk-certificate-outcome-distinction.md); the exact earlier record is the first text_versions entry.",
-      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主张与所在章节写出陈述，先写其所依的核心规律；主张拆为六条规律，各条对照 Readout.lean、Courses.lean、WisdomFallibleJudgment.lean 与 JudgingCorrespondence.lean 中的声明核读（经约化判断、其失败、其运行形式、三路线规律、终点不可能性、其在核心规律上的读法）；限制改为三条“未表明”；反例的来源是研究文档，其首句现由第四条规律承载，其余改为另两条；前提保留；引用通用边界 no-ethical-premise-core-axiom-free；前提、状态与来源哈希均未改变。每句旧文本的去向见 [risk-certificate-outcome-distinction.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/risk-certificate-outcome-distinction.md)；迁移前的完整记录为 text_versions 首项。"
+      "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section DF_N): statement written from the claim and the home section, the core law it rests on first; the claim split into six laws, each read against its declarations in Readout.lean, Courses.lean, WisdomFallibleJudgment.lean and JudgingCorrespondence.lean (judging through a reduction, its failure, its run form, the three-route laws, the endpoint impossibility, its reading on the core law); the limitations became three does-not-show items; the counterexample, whose source is the study and whose first clause the fourth law now carries, became two more; the hypotheses kept; the shared boundary no-ethical-premise-core-axiom-free cited; no premise, status or source hash changed. Every earlier sentence is mapped in [risk-certificate-outcome-distinction.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/risk-certificate-outcome-distinction.md); the exact earlier record is the first text_versions entry. A cold read of the applied record was taken in laws.",
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 DF_N 节）：依主张与所在章节写出陈述，先写其所依的核心规律；主张拆为六条规律，各条对照 Readout.lean、Courses.lean、WisdomFallibleJudgment.lean 与 JudgingCorrespondence.lean 中的声明核读（经约化判断、其失败、其运行形式、三路线规律、终点不可能性、其在核心规律上的读法）；限制改为三条“未表明”；反例的来源是研究文档，其首句现由第四条规律承载，其余改为另两条；前提保留；引用通用边界 no-ethical-premise-core-axiom-free；前提、状态与来源哈希均未改变。每句旧文本的去向见 [risk-certificate-outcome-distinction.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/risk-certificate-outcome-distinction.md)；迁移前的完整记录为 text_versions 首项。对已应用记录的通读意见已采纳，涉及规律。"
     }
   ],
   "text_versions": [

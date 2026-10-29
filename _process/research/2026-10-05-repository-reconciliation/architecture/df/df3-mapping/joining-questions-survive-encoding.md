@@ -32,4 +32,4 @@ The old record had no statement; the new one says what the claim and the home se
 | N1 “establish warranted residual/guard/formation translation between descriptions with different internal syntax, distinguishing semantic tests from actual acquisition.” | next step | next_delta (stated positively) |
 | — | standard boundary | standard_boundaries: no-ethical-premise (no ethical premise in the hypotheses; empty axiom reports for every cited declaration in the bound receipts) |
 
-The home section and the Lean agree; no chapter edit is needed. The home section's “one account” is the description of the Lean; the record no longer uses the word.
+The home section and the Lean agree; one chapter edit was made in review: the home section's “one account” became “one description”, the word the record uses.

@@ -9,7 +9,7 @@ Each law was read against its declarations in `Becoming/Countdown.lean` and `Bec
 | Old text | Type | New place |
 |---|---|---|
 | T0 “Completion of an in-flight request along its retained route” | title | title (unchanged) |
-| S0 “A partial law doing one unit of a pending task's work a tick, and finishing when none is left, finishes it in exactly that work plus one tick, shorter runs leaving it pending;” | statement | statement (unchanged); laws 2 and 3 |
+| S0 “A partial law doing one unit of a pending task's work a tick, and finishing when none is left, finishes it in exactly that work plus one tick, shorter runs leaving it pending;” | statement | statement, “exactly” dropped before “that work plus one tick” (恰 in Chinese), as in the home section: `pending_before` concludes only that a shorter run leaves the task busy, and `CountedWork` does not make busy exclude done, so no earlier finish is excluded; laws 2 and 3 |
 | S1 “with fuel, exactly when the fuel covers them.” | statement | statement (unchanged); law 1 |
 | S2 “Under the bank and queue invariant the versioned queue's head is such a task.” | statement | statement (unchanged); laws 4 and 5 |
 | C0 “For every partial law that, while a task is pending, does one unit of its remaining work per tick and finishes when none is left, the task finishes in exactly its remaining work plus one tick, and every shorter run leaves it pending with the work lowered by the ticks taken;” | law | law 2 (`Advances`, `Advances.countedWork`, `Advances.completes`, with `pending_before`), law 3 on the courses of the tick's process (`Courses.Advances.completes_plan`, `Courses.pending_before_course`) |
