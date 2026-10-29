@@ -1,5 +1,6 @@
 import Becoming.Roles
 import Becoming.Witnesses
+import Becoming.KeptOnward
 
 /-!
 # Reserve: activity beyond support, standing beyond activity
@@ -290,14 +291,16 @@ theorem ends_within_from {f : F} {S : Nat} (carries : ∀ t, S ≤ t → W.Carri
 
 /-- **An ending that is final stays.** Where, from `U` on, a formation inactive with its reserve
 spent does not arise and its reserve does not rise, a formation inactive at `U` with its reserve
-spent is inactive at every later step, whatever support comes back. -/
+spent is inactive at every later step, whatever support comes back: inactive with the reserve
+spent is a region every step from `U` keeps (`kept_onward`). -/
 theorem ended_for_good {f : F} {U : Nat} (inactive : ¬ W.active U f) (spent : r U f = 0)
     (final : ∀ t, U ≤ t → ¬ W.active t f → r t f = 0 → ¬ W.Arises t f ∧ r (t + 1) f = 0) :
-    ∀ k, ¬ W.active (U + k) f ∧ r (U + k) f = 0
-  | 0 => ⟨inactive, spent⟩
-  | k + 1 => match ended_for_good inactive spent final k with
-    | ⟨before, empty⟩ => match final (U + k) (Nat.le_add_right U k) before empty with
-      | ⟨stays, kept⟩ => ⟨fun after => stays ⟨before, after⟩, kept⟩
+    ∀ k, ¬ W.active (U + k) f ∧ r (U + k) f = 0 :=
+  fun k => kept_onward (I := fun n => ¬ W.active (U + n) f ∧ r (U + n) f = 0) (a := 0)
+    (fun n held => match held with
+      | ⟨before, empty⟩ => match final (U + n) (Nat.le_add_right U n) before empty with
+        | ⟨stays, kept⟩ => ⟨fun after => stays ⟨before, after⟩, kept⟩)
+    ⟨inactive, spent⟩ (Nat.zero_le k)
 
 /-- **A return later than the reserve finds no one.** Carried, decaying and unsupported across the
 steps from `S` to `S + n`, with a reserve at `S` of at most `n`, and an ending that is final from

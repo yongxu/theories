@@ -1,5 +1,6 @@
 import Becoming.Grammar
 import Becoming.Wholes
+import Becoming.KeptOnward
 
 /-!
 # PatternPassing: a pattern that outlasts each of its carriers lasts only through passing
@@ -123,16 +124,20 @@ theorem begins_within {d T : Nat} (present : ∀ t, T ≤ t → V.Present t)
 
 /-- **Tracing a carrier back.** Under the passing premise, a formation carrying the pattern `k`
 steps after `S` carried it at `S`, or some carrier passed it across one of the `k` steps from
-`S`. -/
+`S`: that every carrier at `S + n` carried it at `S` or some carrier passed it across one of the
+`n` steps is a region every step keeps (`kept_onward`). -/
 theorem ByPassing.trace (by_passing : V.ByPassing passes) {S : Nat} :
     ∀ {k : Nat} {a : F}, V.active (S + k) a →
-      V.active S a ∨ ∃ j, j < k ∧ V.PassesAt passes (S + j)
-  | 0, _, active => .inl active
-  | k + 1, a, active => match by_passing (S + k) a active with
-    | .inl before => match trace by_passing before with
-      | .inl start => .inl start
-      | .inr ⟨j, below, passing⟩ => .inr ⟨j, Nat.lt_succ_of_lt below, passing⟩
-    | .inr ⟨b, carrier, given⟩ => .inr ⟨k, Nat.lt_succ_self k, b, a, carrier, given, active⟩
+      V.active S a ∨ ∃ j, j < k ∧ V.PassesAt passes (S + j) :=
+  fun {k} {a} => kept_onward
+    (I := fun n => ∀ x, V.active (S + n) x → V.active S x ∨ ∃ j, j < n ∧ V.PassesAt passes (S + j))
+    (a := 0)
+    (fun n held x active => match by_passing (S + n) x active with
+      | .inl before => match held x before with
+        | .inl start => .inl start
+        | .inr ⟨j, below, passing⟩ => .inr ⟨j, Nat.lt_succ_of_lt below, passing⟩
+      | .inr ⟨b, carrier, given⟩ => .inr ⟨n, Nat.lt_succ_self n, b, x, carrier, given, active⟩)
+    (fun _ active => .inl active) (Nat.zero_le k) a
 
 /-- **Presence goes back one step.** Under the passing premise, a pattern present at `t + 1` was
 present at `t`. -/
@@ -143,11 +148,12 @@ theorem ByPassing.present_back (by_passing : V.ByPassing passes) {t : Nat}
     | .inl before => ⟨a, before⟩
     | .inr ⟨b, carrier, _⟩ => ⟨b, carrier⟩
 
-/-- Presence goes back any number of steps. -/
+/-- Presence goes back any number of steps: presence at `t + n` giving presence at `t` is a
+region every step keeps (`kept_onward`). -/
 theorem ByPassing.present_earlier (by_passing : V.ByPassing passes) {t : Nat} :
-    ∀ {k : Nat}, V.Present (t + k) → V.Present t
-  | 0, present => present
-  | _ + 1, present => present_earlier by_passing (by_passing.present_back present)
+    ∀ {k : Nat}, V.Present (t + k) → V.Present t :=
+  fun {k} => kept_onward (I := fun n => V.Present (t + n) → V.Present t) (a := 0)
+    (fun _ held present => held (by_passing.present_back present)) id (Nat.zero_le k)
 
 /-- **Under the passing premise, presence at a step gives presence at every earlier step.** -/
 theorem ByPassing.present_of_le (by_passing : V.ByPassing passes) {t t' : Nat} (le : t ≤ t')
@@ -304,14 +310,15 @@ formation). Nothing else is supplied.
   beginning under a finer class, continued under a coarser one, is an alteration). An occurrence
   with no continuation under the pattern's class ends under the carrier class, by
   `«亡于粗则亡于细»`: its carrier ceases (`Web.ceases_of_pattern_ends`).
+* **By closure.** Tracing a carrier back (`Web.ByPassing.trace`), the pattern's line back
+  (`Web.ByPassing.line_back`) and presence going back (`Web.ByPassing.present_earlier`, and through
+  it `present_of_le` and `empty_stays`) each keep a region along the steps, so each is a case of the
+  grammar's closure at the successor (`kept_onward`).
 
 Not connected: `Web.begins_within` is an instance of `Web.Covered.arises_within` and reads no
 continuation. `Web.ByPassing.present_back` is one application of the passing premise to presence
-at a step, with no line to read, and `Web.ByPassing.trace`'s disjunction would need deciding
-whether the carriers at its two ends are one formation; `present_earlier`, and through it
-`present_of_le` and `empty_stays`, go back by an induction over steps that is a case of closure,
-not yet derived. `PassesAt` counts a formation passing the pattern to itself, which is no
-alteration; so an alteration gives a passing, not conversely.
+at a step, with no line to read. `PassesAt` counts a formation passing the pattern to itself,
+which is no alteration; so an alteration gives a passing, not conversely.
 -/
 
 namespace Web
@@ -423,23 +430,30 @@ theorem ceases_of_pattern_ends {t : Nat} {b : F} (carrying : V.active t b)
 
 /-- **The pattern's line (相续).** Under the passing premise, an occurrence carrying the pattern
 `k + 1` steps after `S` lies on a line under the pattern's class from an occurrence carrying it at
-`S`. -/
+`S`: that every carrier at `S + (n + 1)` lies on such a line is a region every step keeps
+(`kept_onward`). -/
 theorem ByPassing.line_back (byPassing : V.ByPassing passes) {S : Nat} :
     ∀ {k : Nat} {a : F}, V.active (S + (k + 1)) a →
       ∃ b, V.active S b ∧
         «相续» (continuationStep (passingContinuation passes)) V.activityClass (S, b)
-          (S + (k + 1), a)
-  | 0, a, after => match byPassing S a after with
-    | .inl before => ⟨a, before, .one ⟨⟨rfl, .inl rfl⟩, ⟨fun _ => after, fun _ => before⟩⟩⟩
-    | .inr ⟨b, carrier, given⟩ =>
-      ⟨b, carrier, .one ⟨⟨rfl, .inr given⟩, ⟨fun _ => after, fun _ => carrier⟩⟩⟩
-  | k + 1, a, after => match byPassing (S + (k + 1)) a after with
-    | .inl before => match line_back byPassing before with
-      | ⟨b, start, line⟩ => ⟨b, start, «及之传递» line
-          (.one ⟨⟨rfl, .inl rfl⟩, ⟨fun _ => after, fun _ => before⟩⟩)⟩
-    | .inr ⟨_, carrier, given⟩ => match line_back byPassing carrier with
-      | ⟨b, start, line⟩ => ⟨b, start, «及之传递» line
-          (.one ⟨⟨rfl, .inr given⟩, ⟨fun _ => after, fun _ => carrier⟩⟩)⟩
+          (S + (k + 1), a) :=
+  fun {k} {a} => kept_onward
+    (I := fun n => ∀ x, V.active (S + (n + 1)) x → ∃ b, V.active S b ∧
+        «相续» (continuationStep (passingContinuation passes)) V.activityClass (S, b)
+          (S + (n + 1), x))
+    (a := 0)
+    (fun n held x after => match byPassing (S + (n + 1)) x after with
+      | .inl before => match held x before with
+        | ⟨b, start, line⟩ => ⟨b, start, «及之传递» line
+            (.one ⟨⟨rfl, .inl rfl⟩, ⟨fun _ => after, fun _ => before⟩⟩)⟩
+      | .inr ⟨_, carrier, given⟩ => match held _ carrier with
+        | ⟨b, start, line⟩ => ⟨b, start, «及之传递» line
+            (.one ⟨⟨rfl, .inr given⟩, ⟨fun _ => after, fun _ => carrier⟩⟩)⟩)
+    (fun x after => match byPassing S x after with
+      | .inl before => ⟨x, before, .one ⟨⟨rfl, .inl rfl⟩, ⟨fun _ => after, fun _ => before⟩⟩⟩
+      | .inr ⟨b, carrier, given⟩ =>
+        ⟨b, carrier, .one ⟨⟨rfl, .inr given⟩, ⟨fun _ => after, fun _ => carrier⟩⟩⟩)
+    (Nat.zero_le k) a
 
 /-- **Under the passing premise, the pattern lasts only through passing.** A pattern present at
 every step from `T` on, no carrier carrying it at two steps `d` apart, is passed by some carrier

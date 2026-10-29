@@ -6,6 +6,8 @@ import Becoming.GrammarCandidates
 import Becoming.MapInstances
 import Becoming.GrammarLaws
 import Becoming.GrammarTransport
+import Becoming.ShownOrder
+import Becoming.KeptOnward
 import Becoming.World
 import Becoming.Witnesses
 import Becoming.Frame
@@ -141,6 +143,8 @@ import Becoming.Counterfactual
 import Becoming.Regrouping
 import Becoming.Selection
 import Becoming.Learning
+import Becoming.Unread
+import Becoming.Cascade
 import Becoming.PropositionIdentity
 import Becoming.Hexagrams
 import Becoming.HexagramPlaces
@@ -2104,6 +2108,23 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   adopted on Ren's delegation of 15 October 2026 or, for selection through a model, approved by
   Ren on 16 October 2026.
   A selection through a map can be right exactly where what matters is read off the map.
+* `Becoming.Unread` (L1): what readings fix of what is not read. With being in `x`'s lump decided,
+  where no read occasion is lumped with `x`, the class going alike across the lumping is free at `x`
+  beyond the readings (`Learning.free_lumped`), so every act law reading through the lumping that a
+  selection through agreement on the readings selects has, for every value, a selected twin agreeing
+  on every reading and taking that value at `x` (`Learning.twin_selected`); in a one-occasion example
+  read where `P` holds, fixed exactly where `¬¬P` (`Learning.determines_iff_not_not`); for fixed maps
+  from coupling to state to act, acts apart come from states apart and states apart from couplings
+  apart (`Learning.state_apart_of_acts_apart`, `Learning.coupling_apart_of_state_apart`), neither
+  converse holding, by a witness (`Learning.Cue.apart_with_content_alike`).
+  A leaf (board item RF).
+* `Becoming.Cascade` (L1): readers reading readers. Members act in turn on their own couplings and
+  the acts before them (`Turns`); where every member from member `k` on, `k` included, acts alike
+  whatever its own coupling on every list of earlier acts, every act is alike across worlds alike
+  through the couplings of the members before `k` (`Turns.acts_alike_of_cascade`), so every
+  selection through the acts is one through those couplings (`Turns.cascade_through`), an upper
+  bound on what the acts carry; copying carries only the first member's coupling
+  (`Turns.Copying.reaches_first_only`). A leaf (board item RF).
 * `Becoming.PropositionIdentity` (L1): what identifying interderivable propositions (`propext`)
   keeps and loses, with no axiom. `propext`, as a proposition, holds exactly where every reading
   of propositions is lumped (`Learning.Lumped`) by interderivability, read through the two ends
@@ -2844,6 +2865,26 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `«及之像»`), and a predicate is carried as its partial identity (`«部分恒等之像»`). Ending on every
   branch is pulled back along any map carrying continuation from a closed region (`«尽之拉回»`).
   Lemmas of the World's representation, with no record of their own (board item WRT2).
+* `Becoming.ShownOrder` (L1): what choices show of the order they come from, on the grammar. The
+  choices show `x` above `y` where `x` was chosen while `y`, another, was open
+  (`ChoiceOccasions.Shown`); every transitive relation according with them contains the shown reach
+  (`ChoiceOccasions.reach_within`); some strict order accords exactly where nothing shown returns
+  (`ChoiceOccasions.accorded_iff_noCycle`), and then the positive comparisons every such order shares
+  are exactly the shown reach (`ChoiceOccasions.above_in_every_iff_reach`), a narrower class making
+  at least those (`ChoiceOccasions.above_in_class_of_every`), with no comparison forced beyond it
+  (`ChoiceOccasions.above_in_some_of_unreached`, `ChoiceOccasions.both_ways_of_unreached`, through
+  `ChoiceOccasions.reach_withPair_iff` and `ChoiceOccasions.noCycle_withPair_iff`); choices required
+  only to be maximal force no positive comparison (`ChoiceOccasions.weakly_forces_no_comparison`);
+  one search, two orders according with one choice, alike on the menu met and apart after
+  (`ChoiceOccasions.Untried.same_search_met`, `ChoiceOccasions.Untried.same_search_after`). A leaf
+  (board item RF).
+* `Becoming.KeptOnward` (L1): a region every step keeps holds from where it holds on. A region of
+  the steps of time that every step keeps, holding at step `a`, holds at every later step
+  (`kept_onward`): the steps are a line under the successor (`«线则所闭»`), and a closed region
+  holds what lies within the closure (`«闭含所闭»`). The inductions over steps that keep a region in
+  `Becoming.Retaining`, `Becoming.Wholes`, `Becoming.Exclusion`, `Becoming.Reserve`,
+  `Becoming.PatternPassing` and `Becoming.Persistence` are its cases. Its home is beside
+  `«线则所闭»` in `Becoming.GrammarLaws`, where it moves at the next full rebuild (board item OU3f).
 * `Becoming.Ideals` (L1): a history read off its finite stretches, as an ideal of their order
   (no premise; it imports nothing). A refutable reading holds, up to double negation, where a
   point adheres, and what adheres is closed. A class of ideals is closed exactly where it is the

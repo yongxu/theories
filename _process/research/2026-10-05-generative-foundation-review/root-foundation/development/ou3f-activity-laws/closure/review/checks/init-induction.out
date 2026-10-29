@@ -1,0 +1,2 @@
+@Nat.le.rec : ∀ {n : Nat} {motive : (a : Nat) → n.le a → Prop},
+  motive n ⋯ → (∀ {m : Nat} (a : n.le m), motive m a → motive m.succ ⋯) → ∀ {a : Nat} (t : n.le a), motive a t

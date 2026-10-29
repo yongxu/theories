@@ -527,6 +527,8 @@ A *selection* is any claim about level histories (which are kept, rewarded, repr
 
 ([record](../results/records/what-training-installs.md))
 
+What a reader of a formation's acts fixes of it, the comparisons its choices show and its acts where it is not read, is [03 §11](03-KNOWING.md#what-the-acts-show)'s; what a pool's acts carry where, from some member on, every member reads only the acts before it (no more than what couples into the members before that one) is [05 §8](05-COLLECTIVES.md#r-readers-reading-readers)'s.
+
 *What a selection through its own couplings cannot reach*, one law in eight cases, without the condition: what lies beyond its coupling closure ([03](03-KNOWING.md#r-selection-through-couplings)); its own act's difference there ([below](#r-the-gap-for-ones-own-act)); where what it raises is drawn from, and an optimum's drain wherever there is room ([05](05-COLLECTIVES.md#r-raising-what-couples-in-draws-from-beyond), [the optimum](05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in)); how far off its break is ([02](02-MAP.md#r-runaway-distance-uncoupled)); what a finite history leaves open ([03](03-KNOWING.md#r-what-a-finite-history-refutes)); what its untaken acts would have done ([02](02-MAP.md#r-counterfactual-is-the-course)); whether its target can rest ([03](03-KNOWING.md#r-seeking-boundary)); and what loops do to its consequences ([02](02-MAP.md#r-how-a-carried-difference-grows)).
 
 **Reading** [AI reading, D26]. The position is not a defect; 无明 is the seeking it leaves locked ([03](03-KNOWING.md)).
@@ -642,7 +644,7 @@ No objection is shown to defeat the step, nor the step shown ([record](../result
 | The externalism of A | sharpened, not resolved | restated internally, every significance meeting the presupposition gives the closure (`forced_iff_within`), a theorem about significance, not reasons, and that A's external part is the step a reading; endorsement independence is D's content |
 | Graded status, priority, sufficiency, constraints | answered, except constraints on acts | every grade positive is a positive weighting; priority agrees with C and decides transfers; sufficiency ties above a threshold ([§4.4](#r-graded-significance-and-priority)) |
 | An expansion producing ever more novelty is generative | answered; the order left open | generation is a pattern going on through carrying renewal, and 生生 life in the whole, not novelty or scale ([02](02-MAP.md#branches)); an expansion that ends forms of life another course keeps both exceeds that course and fails to include it, so the two are mixed and C does not rank them, and T8 falls only to such a case argued better from every standpoint with no further premise ([§8](#theses)); where what it ends is needed by everything, itself included, every order rising with a standpoint's own continuation ranks that ending below from every standpoint ([§4](#r-what-self-concern-alone-ranks)) |
-| Which function is learned | open | the laws say where any neighbourhood rests, not which one or which lumping an actual system has, nor anything of deception |
+| Which function is learned | open | the laws say where any neighbourhood rests, not which one or which lumping an actual system has, nor anything of deception beyond where behaviour can differ when not read ([03 §11](03-KNOWING.md#r-what-readings-fix-of-the-unread)) |
 
 <a id="does-not-show"></a>
 ## What this chapter does not show

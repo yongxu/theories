@@ -1,0 +1,46 @@
+Becoming/ShownOrder.lean:97:8: warning: unused variable `y`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Becoming/ShownOrder.lean:110:10: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.25 = ?m.25
+but is expected to have type
+  ch.pick o = x✝
+in the application
+  And.intro rfl
+Becoming/ShownOrder.lean:122:74: error: Application type mismatch: The argument
+  accords
+has type
+  ch.Accords w✝
+but is expected to have type
+  ch.Accords fun {x_1 y} => w✝ x x
+in the application
+  reach_within (fun {x_1 y z} => trans) accords
+Becoming/ShownOrder.lean:133:34: error: Type mismatch
+  reach_within (fun {x y z} => trans) ?m.43 x y reach
+has type
+  x✝¹ ?m.42 ?m.42
+but is expected to have type
+  x✝¹ x y
+Becoming/ShownOrder.lean:144:4: error: Type mismatch
+  reach_within (fun {x y z} => trans) ?m.53 x y (reach y open_y other)
+has type
+  x✝¹ ?m.52 ?m.52
+but is expected to have type
+  x✝¹ x y
+Becoming/ShownOrder.lean:272:46: warning: unused variable `a`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/tree",
+  "modules": 2,
+  "ran": [
+    "Becoming.ShownOrder"
+  ],
+  "reused": 1,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.ShownOrder"
+}

@@ -1,0 +1,17 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/rf-tree",
+  "modules": 37,
+  "ran": [
+    "Becoming.Unread",
+    "BecomingUnreadAxiomAudit"
+  ],
+  "reused": 36,
+  "unclean": [],
+  "audits": {
+    "Becoming.Unread": {
+      "theorems": 8,
+      "declarations": 11,
+      "with_axioms": {}
+    }
+  }
+}

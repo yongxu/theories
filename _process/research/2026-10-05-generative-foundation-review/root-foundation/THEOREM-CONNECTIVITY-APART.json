@@ -4372,11 +4372,6 @@
    "category": "general-structure",
    "reason": "a class going alike under a relation with a successor everywhere lies inside its own core: a law of every relation on any carrier (OU3b) joining lumping to the core; nothing on the base uses it"
   },
-  "Becoming.«闭含所闭»": {
-   "module": "Becoming.GrammarLaws",
-   "category": "support",
-   "reason": "a one-line unpacking of the grammar's own definitions (OU3b)"
-  },
   "Becoming.«非定后返而不入之例»": {
    "module": "Becoming.GrammarLaws",
    "category": "model-witness",
@@ -4736,6 +4731,121 @@
    "module": "Becoming.GrammarLaws",
    "category": "general-structure",
    "reason": "steps read backward are steps of the converse, a law of every relation on any carrier, stated before the models' lineage laws (Identity) use it (OU3f's next part)"
+  },
+  "Becoming.ChoiceOccasions.Untried.aboveFirst_strict": {
+   "module": "Becoming.ShownOrder",
+   "category": "model-witness",
+   "reason": "ChoiceOccasions.Untried.aboveFirst_strict: a fact about one constructed model, one occasion with a third alternative never met, and one search run with two orders (RF)"
+  },
+  "Becoming.ChoiceOccasions.Untried.aboveThird_strict": {
+   "module": "Becoming.ShownOrder",
+   "category": "model-witness",
+   "reason": "ChoiceOccasions.Untried.aboveThird_strict: a fact about one constructed model, one occasion with a third alternative never met, and one search run with two orders (RF)"
+  },
+  "Becoming.ChoiceOccasions.Untried.both_accord": {
+   "module": "Becoming.ShownOrder",
+   "category": "model-witness",
+   "reason": "ChoiceOccasions.Untried.both_accord: a fact about one constructed model, one occasion with a third alternative never met, and one search run with two orders (RF)"
+  },
+  "Becoming.ChoiceOccasions.Untried.met_fixed": {
+   "module": "Becoming.ShownOrder",
+   "category": "model-witness",
+   "reason": "ChoiceOccasions.Untried.met_fixed: a fact about one constructed model, one occasion with a third alternative never met, and one search run with two orders (RF)"
+  },
+  "Becoming.ChoiceOccasions.Untried.same_search_after": {
+   "module": "Becoming.ShownOrder",
+   "category": "model-witness",
+   "reason": "ChoiceOccasions.Untried.same_search_after: a fact about one constructed model, one occasion with a third alternative never met, and one search run with two orders (RF)"
+  },
+  "Becoming.ChoiceOccasions.Untried.same_search_met": {
+   "module": "Becoming.ShownOrder",
+   "category": "model-witness",
+   "reason": "ChoiceOccasions.Untried.same_search_met: a fact about one constructed model, one occasion with a third alternative never met, and one search run with two orders (RF)"
+  },
+  "Becoming.ChoiceOccasions.Untried.untried_free": {
+   "module": "Becoming.ShownOrder",
+   "category": "model-witness",
+   "reason": "ChoiceOccasions.Untried.untried_free: a fact about one constructed model, one occasion with a third alternative never met, and one search run with two orders (RF)"
+  },
+  "Becoming.ChoiceOccasions.above_in_every_iff_reach": {
+   "module": "Becoming.ShownOrder",
+   "category": "general-structure",
+   "reason": "ChoiceOccasions.above_in_every_iff_reach: a law of every carrier of alternatives and every family of occasions (what choices show of the order they come from); it waits for a model reading choices on the base, a training's or a helper's (RF round 2) (RF)"
+  },
+  "Becoming.ChoiceOccasions.accorded_iff_noCycle": {
+   "module": "Becoming.ShownOrder",
+   "category": "general-structure",
+   "reason": "ChoiceOccasions.accorded_iff_noCycle: a law of every carrier of alternatives and every family of occasions (what choices show of the order they come from); it waits for a model reading choices on the base, a training's or a helper's (RF round 2) (RF)"
+  },
+  "Becoming.ChoiceOccasions.noCycle_withPair_iff": {
+   "module": "Becoming.ShownOrder",
+   "category": "general-structure",
+   "reason": "ChoiceOccasions.noCycle_withPair_iff: a law of every carrier of alternatives and every family of occasions (what choices show of the order they come from); it waits for a model reading choices on the base, a training's or a helper's (RF round 2) (RF)"
+  },
+  "Becoming.ChoiceOccasions.reach_withPair_iff": {
+   "module": "Becoming.ShownOrder",
+   "category": "general-structure",
+   "reason": "ChoiceOccasions.reach_withPair_iff: a law of every carrier of alternatives and every family of occasions (what choices show of the order they come from); it waits for a model reading choices on the base, a training's or a helper's (RF round 2) (RF)"
+  },
+  "Becoming.ChoiceOccasions.top_in_every_iff_reach": {
+   "module": "Becoming.ShownOrder",
+   "category": "general-structure",
+   "reason": "ChoiceOccasions.top_in_every_iff_reach: a law of every carrier of alternatives and every family of occasions (what choices show of the order they come from); it waits for a model reading choices on the base, a training's or a helper's (RF round 2) (RF)"
+  },
+  "Becoming.ChoiceOccasions.weakly_forces_no_comparison": {
+   "module": "Becoming.ShownOrder",
+   "category": "general-structure",
+   "reason": "ChoiceOccasions.weakly_forces_no_comparison: a law of every carrier of alternatives and every family of occasions (what choices show of the order they come from); it waits for a model reading choices on the base, a training's or a helper's (RF round 2) (RF)"
+  },
+  "Becoming.Learning.Cue.apart_with_content_alike": {
+   "module": "Becoming.Unread",
+   "category": "model-witness",
+   "reason": "Learning.Cue.apart_with_content_alike: a fact about one constructed model, occasions with a cue and a content, read where the cue is up (RF)"
+  },
+  "Becoming.Learning.Cue.seen_twin": {
+   "module": "Becoming.Unread",
+   "category": "model-witness",
+   "reason": "Learning.Cue.seen_twin: a fact about one constructed model, occasions with a cue and a content, read where the cue is up (RF)"
+  },
+  "Becoming.Learning.Cue.unseen_fixed": {
+   "module": "Becoming.Unread",
+   "category": "model-witness",
+   "reason": "Learning.Cue.unseen_fixed: a fact about one constructed model, occasions with a cue and a content, read where the cue is up (RF)"
+  },
+  "Becoming.Learning.coupling_apart_of_state_apart": {
+   "module": "Becoming.Unread",
+   "category": "general-structure",
+   "reason": "Learning.coupling_apart_of_state_apart: a law of every lumping of occasions (what readings fix of the unread); it waits for a model reading an overseer's schedule on the base (RF)"
+  },
+  "Becoming.Learning.state_apart_of_acts_apart": {
+   "module": "Becoming.Unread",
+   "category": "general-structure",
+   "reason": "Learning.state_apart_of_acts_apart: a law of every lumping of occasions (what readings fix of the unread); it waits for a model reading an overseer's schedule on the base (RF)"
+  },
+  "Becoming.Turns.Copying.reaches_first_only": {
+   "module": "Becoming.Cascade",
+   "category": "model-witness",
+   "reason": "Turns.Copying.reaches_first_only: a fact about one constructed model, members copying the first act (RF)"
+  },
+  "Becoming.Turns.cascade_through": {
+   "module": "Becoming.Cascade",
+   "category": "general-structure",
+   "reason": "Turns.cascade_through: a law of members in turn on any types (readers reading readers); it waits for a pool of members in turn on the base (RF)"
+  },
+  "Becoming.Turns.separates_at": {
+   "module": "Becoming.Cascade",
+   "category": "general-structure",
+   "reason": "Turns.separates_at: a law of members in turn on any types (readers reading readers); it waits for a pool of members in turn on the base (RF)"
+  },
+  "Becoming.ChoiceOccasions.above_in_class_of_every": {
+   "module": "Becoming.ShownOrder",
+   "category": "general-structure",
+   "reason": "ChoiceOccasions.above_in_class_of_every: a law of every carrier of alternatives and every family of occasions (what choices show of the order they come from); it waits for a model reading choices on the base, a training's or a helper's (RF round 2) (RF)"
+  },
+  "Becoming.Learning.determines_iff_not_not": {
+   "module": "Becoming.Unread",
+   "category": "model-witness",
+   "reason": "Learning.determines_iff_not_not: a fact about one constructed model, one occasion with a constant lumping and two act values, read where a proposition holds (RF)"
   }
  },
  "instances": {

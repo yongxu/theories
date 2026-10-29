@@ -1,0 +1,19 @@
+Becoming/Unread.lean:116:33: error: invalid `▸` notation, expected result type of cast is 
+  (false, true).fst = true
+however, the equality 
+  same
+of type 
+  (fun i => i) d = (fun i => i) ?m.20
+does not contain the expected result type on either the left or the right hand side
+
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/tree",
+  "modules": 37,
+  "ran": [
+    "Becoming.Unread"
+  ],
+  "reused": 36,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.Unread"
+}

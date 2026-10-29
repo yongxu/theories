@@ -20,12 +20,12 @@ It then reads these for alignment. Humans, institutions and AI systems select to
 > - **inner alignment and mesa-optimization**, which function training installs: of that question chapter 7 says Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "the laws say where any neighbourhood rests, not which one or which lumping an actual system has, nor anything of deception". A-05 says where training leaves a learner free, not what it learns there;
 > - **deception** and deceptive alignment;
 > - **goal misgeneralization**;
-> - **assistance games** and cooperative inverse reinforcement learning, which appear nowhere in the theory. A-12 concerns an assistant at a mutual best response with its principal; assistance that informs the principal adds coupling, which it does not model;
+> - **assistance games** and cooperative inverse reinforcement learning, which the theory reaches only in RF's reading of what strict choices show (below). A-12 concerns an assistant at a mutual best response with its principal; assistance that informs the principal adds coupling, which it does not model;
 > - **corrigibility as an incentive**. Shutdown appears only as a protocol that completes under stated conditions: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "A disposition to accept a stop or revision does not make the change reach the system and complete." Whether a system is willing to accept costly correction is not derived.
 >
 > Its evidence on trained systems is one model choosing in context; no model was trained by gradient (A-18, A-19).
 >
-> Work on inner alignment, mesa-optimization, goal misgeneralization, deception and assistance games began on 29 October 2026 (board item RF, formations that read); no law of it has landed, and this dossier contains none.
+> Round 1 of the work on inner alignment, mesa-optimization, goal misgeneralization, deception and assistance games (board item RF, formations that read) landed on 29 October 2026: what choices show of an order and what readings fix of the unread ([03 §11](../chapters/03-KNOWING.md#what-the-acts-show)), and readers reading readers ([05 §8](../chapters/05-COLLECTIVES.md#r-readers-reading-readers)). In readings, they locate where goal misgeneralization is possible (comparisons the shown reach leaves open), where behaviour can differ when not read (where a formation's lumping tells the occasion from every read one), and what strict choices alone show a helper; installation, intention, anticipation and incentive are not represented, and this dossier quotes none of them yet.
 
 **Can a collective always move the world toward generation?** No guarantee, by the theory's own laws. [The collective question on one page](../COLLECTIVE-DIRECTION.md) separates what is a theorem with its hypotheses, what the laws rule out, what needs the continuation condition or C, and what is empirical, and says what "enough" observation of the situation would have to mean.
 

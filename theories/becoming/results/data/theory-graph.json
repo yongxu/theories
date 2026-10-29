@@ -3872,6 +3872,18 @@
    "page": "theories/becoming/results/records/readers-drawn-from-the-selected.md"
   },
   {
+   "id": "record:readers-reading-readers",
+   "type": "result",
+   "record": "readers-reading-readers",
+   "title": "Readers reading readers",
+   "title_zh": "读者读读者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "general",
+   "page": "theories/becoming/results/records/readers-reading-readers.md"
+  },
+  {
    "id": "record:reading-anothers-couplings-is-pooling",
    "type": "result",
    "record": "reading-anothers-couplings-is-pooling",
@@ -5696,6 +5708,18 @@
    "page": "theories/becoming/results/records/what-can-be-born-next.md"
   },
   {
+   "id": "record:what-choices-show-of-an-order",
+   "type": "result",
+   "record": "what-choices-show-of-an-order",
+   "title": "What choices show of the order they come from",
+   "title_zh": "所择所示之序",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/what-choices-show-of-an-order.md"
+  },
+  {
    "id": "record:what-dependence-alone-carries-of-a-level",
    "type": "result",
    "record": "what-dependence-alone-carries-of-a-level",
@@ -5778,6 +5802,18 @@
    "region": "collective",
    "base": "old-base",
    "page": "theories/becoming/results/records/what-position-reads.md"
+  },
+  {
+   "id": "record:what-readings-fix-of-the-unread",
+   "type": "result",
+   "record": "what-readings-fix-of-the-unread",
+   "title": "What readings fix of the unread",
+   "title_zh": "读处所定于未读处者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "knowing",
+   "base": "general",
+   "page": "theories/becoming/results/records/what-readings-fix-of-the-unread.md"
   },
   {
    "id": "record:what-self-concern-alone-ranks",
@@ -6200,6 +6236,28 @@
    "theorems": 41,
    "region": "root",
    "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ShownOrder",
+   "type": "module",
+   "name": "Becoming.ShownOrder",
+   "level": "L1",
+   "theorems": 28,
+   "region": "knowing",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.KeptOnward",
+   "type": "module",
+   "name": "Becoming.KeptOnward",
+   "level": "L1",
+   "theorems": 1,
+   "region": "unassigned",
+   "base": "",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -7686,6 +7744,28 @@
    "region": "knowing",
    "base": "old-base",
    "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.Unread",
+   "type": "module",
+   "name": "Becoming.Unread",
+   "level": "L1",
+   "theorems": 8,
+   "region": "knowing",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.Cascade",
+   "type": "module",
+   "name": "Becoming.Cascade",
+   "level": "L1",
+   "theorems": 7,
+   "region": "collective",
+   "base": "general",
+   "on_grammar": false,
    "reaches_grammar": true
   },
   {
@@ -28624,6 +28704,18 @@
    "anchor": "r-slowing-down-before-an-own-end"
   },
   {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-what-choices-show-of-an-order",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-what-choices-show-of-an-order"
+  },
+  {
+   "id": "section:theories/becoming/chapters/03-KNOWING.md#r-what-readings-fix-of-the-unread",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/03-KNOWING.md",
+   "anchor": "r-what-readings-fix-of-the-unread"
+  },
+  {
    "id": "section:theories/becoming/chapters/04-LIFE.md#r-life-as-condition-of-life",
    "type": "section",
    "chapter": "theories/becoming/chapters/04-LIFE.md",
@@ -29120,6 +29212,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
    "anchor": "r-reading-through-a-pool"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-readers-reading-readers",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-readers-reading-readers"
   },
   {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
@@ -30148,6 +30246,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.Cascade",
+   "to": "module:Becoming.Learning",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.CausalGrowth",
    "to": "module:Becoming.HeldPossible",
    "type": "imports"
@@ -30840,6 +30943,11 @@
   {
    "from": "module:Becoming.Exclusion",
    "to": "module:Becoming.JointPlans",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Exclusion",
+   "to": "module:Becoming.KeptOnward",
    "type": "imports"
   },
   {
@@ -31593,6 +31701,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.KeptOnward",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Labelled",
    "to": "module:Becoming.Arising",
    "type": "imports"
@@ -32204,6 +32317,11 @@
   },
   {
    "from": "module:Becoming.PatternPassing",
+   "to": "module:Becoming.KeptOnward",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PatternPassing",
    "to": "module:Becoming.Wholes",
    "type": "imports"
   },
@@ -32215,6 +32333,11 @@
   {
    "from": "module:Becoming.Persistence",
    "to": "module:Becoming.Identity",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Persistence",
+   "to": "module:Becoming.KeptOnward",
    "type": "imports"
   },
   {
@@ -32704,6 +32827,11 @@
   },
   {
    "from": "module:Becoming.Reserve",
+   "to": "module:Becoming.KeptOnward",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Reserve",
    "to": "module:Becoming.Roles",
    "type": "imports"
   },
@@ -32740,6 +32868,11 @@
   {
    "from": "module:Becoming.Restoration",
    "to": "module:Becoming.Dependence",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Retaining",
+   "to": "module:Becoming.KeptOnward",
    "type": "imports"
   },
   {
@@ -33083,6 +33216,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.ShownOrder",
+   "to": "module:Becoming.Grammar",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Significance",
    "to": "module:Becoming.Clearing",
    "type": "imports"
@@ -33353,6 +33491,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.Unread",
+   "to": "module:Becoming.Learning",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Unrolling",
    "to": "module:Becoming.LearnableRuns",
    "type": "imports"
@@ -33440,6 +33583,11 @@
   {
    "from": "module:Becoming.Wholes",
    "to": "module:Becoming.Identity",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Wholes",
+   "to": "module:Becoming.KeptOnward",
    "type": "imports"
   },
   {
@@ -44014,6 +44162,11 @@
   },
   {
    "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Exclusion",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
    "to": "module:Becoming.Flow",
    "type": "proved-in"
   },
@@ -44054,6 +44207,11 @@
   },
   {
    "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.KeptOnward",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
    "to": "module:Becoming.Labelled",
    "type": "proved-in"
   },
@@ -44084,6 +44242,16 @@
   },
   {
    "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.PatternPassing",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Persistence",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
    "to": "module:Becoming.ReachableRanges",
    "type": "proved-in"
   },
@@ -44099,7 +44267,22 @@
   },
   {
    "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Reserve",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Retaining",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
    "to": "module:Becoming.Weightings",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:master-laws-on-the-grammar",
+   "to": "module:Becoming.Wholes",
    "type": "proved-in"
   },
   {
@@ -46835,6 +47018,26 @@
   {
    "from": "record:readers-drawn-from-the-selected",
    "to": "record:shaping-read-by-readers-drawn-from-the-selected",
+   "type": "related"
+  },
+  {
+   "from": "record:readers-reading-readers",
+   "to": "module:Becoming.Cascade",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:readers-reading-readers",
+   "to": "module:Becoming.Learning",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:readers-reading-readers",
+   "to": "record:generalization-through-lumping",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:readers-reading-readers",
+   "to": "record:what-pooled-coupling-reaches",
    "type": "related"
   },
   {
@@ -53203,6 +53406,36 @@
    "type": "related"
   },
   {
+   "from": "record:what-choices-show-of-an-order",
+   "to": "module:Becoming.Grammar",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-choices-show-of-an-order",
+   "to": "module:Becoming.ShownOrder",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-choices-show-of-an-order",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-choices-show-of-an-order",
+   "to": "record:the-present-on-causal-set-growth",
+   "type": "related"
+  },
+  {
+   "from": "record:what-choices-show-of-an-order",
+   "to": "record:what-readings-fix-of-the-unread",
+   "type": "related"
+  },
+  {
+   "from": "record:what-choices-show-of-an-order",
+   "to": "record:what-training-installs",
+   "type": "related"
+  },
+  {
    "from": "record:what-dependence-alone-carries-of-a-level",
    "to": "module:Becoming.Admission",
    "type": "proved-in"
@@ -53525,6 +53758,31 @@
   {
    "from": "record:what-position-reads",
    "to": "record:whole-first-and-bounded-centers",
+   "type": "related"
+  },
+  {
+   "from": "record:what-readings-fix-of-the-unread",
+   "to": "module:Becoming.Learning",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-readings-fix-of-the-unread",
+   "to": "module:Becoming.Unread",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-readings-fix-of-the-unread",
+   "to": "record:generalization-through-lumping",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-readings-fix-of-the-unread",
+   "to": "record:what-choices-show-of-an-order",
+   "type": "related"
+  },
+  {
+   "from": "record:what-readings-fix-of-the-unread",
+   "to": "record:what-training-installs",
    "type": "related"
   },
   {
@@ -56678,8 +56936,18 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-choices-show-of-an-order",
+   "to": "record:what-choices-show-of-an-order",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-finitely-many-labels-fix",
    "to": "record:what-finitely-many-labels-fix",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/03-KNOWING.md#r-what-readings-fix-of-the-unread",
+   "to": "record:what-readings-fix-of-the-unread",
    "type": "states"
   },
   {
@@ -57085,6 +57353,11 @@
   {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it",
    "to": "record:re-optimizing-above-a-renewal-ends-it",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-readers-reading-readers",
+   "to": "record:readers-reading-readers",
    "type": "states"
   },
   {

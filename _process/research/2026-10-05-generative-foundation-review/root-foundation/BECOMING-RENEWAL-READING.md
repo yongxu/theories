@@ -20540,3 +20540,130 @@ Output → input: each law of the account shows what it rests on, for the chapte
        laws of no master law are the gaps the measure does not count, being no central declarations), and the
        review packet's readers.
 ```
+
+## 445. The inductions over steps, cases of closure (OU3f)
+
+After the twins ([§443](#443-the-activity-laws-proved-twice-derived-once-ou3f)), OU3f's derivations go on with the activity laws that keep a region along the steps by their own induction ([design](development/ou3f-activity-laws/closure/DESIGN.md)). [The audit](development/ou3f-activity-laws/AUDIT.md) found six; the review of this part found two more in the same modules. EC6's audit counted such inductions as cases of closure, and EC6b derived one (`Pace.stays`). Each needs one law, that a region every step keeps holds from where it holds on, stated once. The coordinating session asked for it in a small new module, so that adding it rebuilds only the modules using it; for it not to stand beside an existing run; to be named exactly; and to say where it belongs.
+
+```text
+Result(s): record master-laws-on-the-grammar extended (the closure group, the last group, references, history); the
+       records citing the six modules re-pointed; no new record.
+Delta: (1) the law. kept_onward: a region of the steps of time that every step keeps, holding at step a, holds at
+       every later step. It is the grammar's closure at the successor relation: the steps from a to b are a line
+       under the successor («线则所闭»), and a closed region holds what lies within the closure from where it holds
+       («闭含所闭»). It needs no process and no run. Becoming.KeptOnward holds it, a leaf importing only
+       GrammarLaws (1 theorem in 1 declaration).
+       (2) where it belongs. Its home is beside «线则所闭» in GrammarLaws. It is stated in a leaf so that adding it
+       rebuilds only the six modules and what imports them; it moves there, as a cut and paste, at the next full
+       rebuild of the package that someone needs anyway. The review pasted it beside «线则所闭» in a copy of
+       GrammarLaws, and it compiled unchanged.
+       (3) the derivations. Each induction is replaced by kept_onward, and only its step remains, the old successor
+       case: never arising from an inactive start is never being active (Web.inactive_of_not_arising), a part active
+       later was not inactive before (Web.active_back), activity kept back (Web.active_before), a final ending kept
+       (Web.ended_for_good), presence going back (Web.ByPassing.present_earlier), a name kept over a held stretch
+       (Web.steady_held), a carrier traced back (Web.ByPassing.trace) and the pattern's line back
+       (Web.ByPassing.line_back). Statements and names are unchanged.
+       (4) not a second run. The first draft stated a run of the successor law with the step as its state. The
+       review found the package already has one (Law.run, which Pace.stays uses at its own law; at Nat.succ its state
+       is the step by Law.succ_orbit), and that the law needs none on the grammar. The draft's run is gone, and the
+       local copies of the successor's process and run stay where they are.
+       (5) the audit corrected. ByPassing.trace was filed a law of its model, with no grammar law of its shape;
+       closure is one. So (a) has 15 rows and (c) model 172, and 398 of the 436 theorems reading only activity are
+       laws of their models. The audit's closure paragraph and rows say kept_onward, not a run.
+       (6) texts. 01 §7's closure bullet; PatternPassing's header (a bullet By closure, and Not connected keeping
+       begins_within and present_back); each derived theorem's docstring names the region kept; the root module's
+       bullet, the checker's core list and scope, the README rows (EN, ZH); 08's counts; the connectivity register
+       drops «闭含所闭», which kept_onward uses.
+       (7) the measure moved. Web.Whole.family_excess_ends rests on balance; its proof uses active_back, now a case
+       of closure, so it reaches the grammar too. Of the 127 rows, 45 reach the grammar (16 of the 55 on balance);
+       of the 118 distinct central declarations, 44 reach it, 31 rest on balance, represented, 7 on another anchor
+       and 36 on no master law, each with its reason. Evolution's 18 rows and significance's 5 still reach it in
+       none. 08 §7 and the four front pages give the new counts.
+Supplied premises / correspondence: none.
+Evidence: core receipt 20261029T125805.763052Z, every axiom report empty; the signature audit (signatures_closure.py) shows every
+       statement of the six modules printing as before, nothing gone, and kept_onward new.
+Boundary: Reidentify.old_still (Persistence) keeps a region the same way but reads no activity; it belongs to the
+       layer that reads no field, which the coordinating note takes whole through the representation of processes.
+       The restricted bridge with the lineage laws, and the coarse-to-fine pair, are not derived.
+Output → input: the record; 01 §7; Becoming.KeptOnward and the six modules; the root module, the checker and the
+       README rows; the audit and its table; the measure, 08 §7 and the front pages; 08's counts; the master-law view;
+       OU3f's next part, the lineage laws through the restricted bridge.
+```
+
+**The review, and what was taken.** One independent read-only review by a separate AI agent, with a second pass ([REVIEW-CLOSURE](development/ou3f-activity-laws/closure/review/REVIEW-CLOSURE.md)); every finding was taken. It found the derivations right and every statement printing as on main (507 declarations compared, `trace` and `line_back` included), but two of the coordinating session's conditions unmet.
+- The draft's run of the successor law stood beside `Law.run`. The law is now stated on the grammar, with no run.
+- The home it named, beside `Run.reach` in `Frame`, was unreachable, since `Law.process` is in `Recurrence`, above it. The home is `GrammarLaws`, beside `«线则所闭»`, reachable unchanged.
+- The search for existing runs had missed several. They are listed.
+- `trace` and `line_back` keep a region the same way, so they are derived here. The audit is corrected for `trace`.
+- The second pass found the audit still describing the six through the dropped run, and the design misdescribing `Pace.stays`. Both are corrected.
+
+**Self-review.** (1) Each derivation was checked against OU3d's second review's test: the law replaces the induction, and only the step remains. (2) A shared law is placed where the coordinator asked, with its real home written down, so the leaf does not become a second home by accident. (3) A search for an existing definition must cover the generic forms (`Law.run f s`), not only the literal instance. (4) Not done: the items in Boundary.
+
+## 446. What a formation's acts show, and readers reading readers (RF, round 1)
+
+Board item RF, formations that read (识), round 1 ([plan](development/rf-formations-that-read/PLAN.md), with the evidence it rests on: three maps of what the theory already proves, a cross-model second opinion on the literature, and a review of the plan's first draft, every finding taken, in its §13). The Lean was read by one independent reviewer and every finding taken ([REVIEW-LEAN](development/rf-formations-that-read/evidence/REVIEW-LEAN.md)); the texts were then cold-read by three independent readers against the Lean, and every finding weighed ([REVIEW-TEXTS](development/rf-formations-that-read/evidence/REVIEW-TEXTS.md)).
+
+```text
+Result(s): what-choices-show-of-an-order (new, home 03 §11), what-readings-fix-of-the-unread (new, home 03 §11),
+       readers-reading-readers (new, home 05 §8).
+Delta:
+  - What choices show of an order, on the grammar (Becoming.ShownOrder). The choices show x above y where x was
+    chosen while y, another, was open (ChoiceOccasions.Shown). Every transitive relation according with the
+    choices contains the shown reach (reach_within); some strict order accords exactly where nothing shown returns
+    (accorded_iff_noCycle, by the grammar's reach and «及之传递»); then the positive comparisons every such order
+    shares are exactly the shown reach (above_in_every_iff_reach; over a menu, top_in_every_iff_reach, saying
+    nothing of the alternative being open or chosen), a narrower class of such orders makes every comparison they
+    all make (above_in_class_of_every), and beyond the reach no comparison is forced (above_in_some_of_unreached,
+    both_ways_of_unreached), through reach with one pair added, exactly (reach_withPair_iff), and the exact
+    condition for adding a pair with no cycle (noCycle_withPair_iff). Choices required only to be maximal force no
+    positive comparison (weakly_forces_no_comparison). The witness Untried: every according relation putting the
+    first above the second, the untried pair ranked both ways, and one search procedure run with either of two
+    strict orders according with the training choice, alike on the menu met and apart on the menu met after
+    (same_search_met, same_search_after).
+  - What readings fix of the unread (Becoming.Unread). Learning.determines_lumped_iff read with the read occasions
+    as the data, and a one-occasion example read where P holds is fixed exactly where ¬¬P
+    (determines_iff_not_not), why the exact form takes a list; with being in x's lump decided, where no read occasion is lumped with x, the lumped
+    class is free at x (free_lumped), so every act law reading through π that a selection through agreement on the
+    readings selects has, for every value, a selected twin reading through π, agreeing with it on every reading and
+    taking that value at x (twin_selected); for fixed maps from coupling to state to act, acts apart come from
+    states apart and states apart from couplings apart (state_apart_of_acts_apart, coupling_apart_of_state_apart),
+    the converses failing by a witness (Cue.apart_with_content_alike); the cue witness (seen_twin, unseen_fixed).
+  - Readers reading readers (Becoming.Cascade). Members in turn on their own couplings and the acts before them
+    (Turns); where every member from member k on, k included, acts alike whatever its own coupling on every list of
+    earlier acts, every act is alike across worlds alike through the couplings of the members before k
+    (acts_alike_of_cascade, act_alike_of_cascade), so every selection through the acts is one through those
+    couplings (cascade_through), an upper bound on what the acts carry; after the same acts a member acts
+    differently in two worlds exactly where its law tells apart the values they give its coupling (separates_at);
+    copying carries only the first member's coupling (Copying.reaches_first_only).
+Supplied premises / correspondence: none added. ShownOrder is any carrier and any occasions; Unread and Cascade any
+       types, Cascade's members indexed by the natural numbers; Unread's exact form takes the read occasions as a
+       list, equality of lumps decided and two act values, as determines_lumped_iff does.
+Evidence: core receipt `20261029T134236.345943Z`; Becoming.ShownOrder (28 theorems in 40 declarations), Becoming.Unread (8 theorems in 11 declarations) and Becoming.Cascade
+       (7 theorems in 13 declarations), every axiom report empty; the witnesses' tables are nested matches on one argument at a time, since
+       one table written as a match on two arguments with a wildcard row compiled through propext.
+Standing: near-definitional laws and witnesses; RF1 the order form of rationalizing strict choices (close to Richter
+       1966 without completeness, not Afriat), RF2 indistinguishability, RF4 the deterministic form of a cascade. What
+       they add is their place in one account: inner alignment and inverse reinforcement learning read as one law of
+       what choices show, deception and evaluation awareness read as what readings fix of the unread, cascades as
+       readers reading readers; the readings are not containments.
+Boundary:
+  - Which order an actual chooser carries, that it chooses strictly, and that a training can install either order of
+    the witness; an architecture's class (a narrower class fixes at least as much, above_in_class_of_every).
+  - Intention, anticipation and another's false belief; the incentive to conceal (an analogy to RuleShaping until
+    round 2's two-stage model); probabilistic forms (the data-processing inequality for the chain, a cascade's
+    public log-odds, DeGroot averaging).
+  - Round 2: a formation's reading kept by its own update, composed with the good regulator's adequacy; revision
+    that opens an executable correction; a prediction negated by the response it predicts; one finite mechanism of
+    prediction, selection, revision and intervention; disclosure or concealment in two stages.
+Output → input: 03 §11, 03's bases and Open; 05 §8; 07 §6's pointer and its open row on deception; 08's counts and
+       §8's known results; the overview's §3 and §5; AJ5's scope box in the alignment dossier, updated at RF's merge
+       with main; round 2 of RF.
+```
+
+**The reviews, and what was taken.** The plan's first draft was read by an independent cross-model reviewer, which found fourteen problems; all were taken (plan §13). Among them: RF2's four-way hierarchy was false, and its chain of three is now proved with its converses witnessed. RF3's interval claim was false and was dropped. The plan's "one failure" conflated indistinguishability with locking and is now an obstruction pattern with each row's standing. Concealment as shaping is an analogy. The plan's inner-alignment claim needed an implemented witness, which is now `Untried`'s one search with two orders. The Lean was read by the same reviewer on the code; what it found and what was taken are in REVIEW-LEAN. The texts were then cold-read by three readers, one cross-model and two on one lens each (exactness against the Lean; the account's rules and RF's place), with fifty-nine findings among them, many shared; the table in REVIEW-TEXTS says what was taken and how. The main ones: headline statements had dropped hypotheses the Lean needs (no cycle shown, the cascade premise from member k on, the selection through the readings, the fit for being right); 03 §11 restated two laws of its own §6 and now points to them; two claims had no Lean and now have it (`determines_iff_not_not`, replacing a hand argument, and `above_in_class_of_every`); the record readings say "AI reading", and "exact kernel" and "exact form" are gone. A re-read by the cross-model reader found thirteen of its fourteen findings taken correctly and two further problems (the one-occasion example generalized in some summaries; accordance said to fix a planner), both taken.
+
+**Self-review.**
+1. A witness's table, written as one match on two arguments with a wildcard, compiled through `propext`. It is written as nested matches on one argument, as the core's other witnesses are; other matches on two arguments with a wildcard row in these modules have empty reports.
+2. The search witness evaluates by `rfl` on concrete menus. Its competence (choosing the top of the menu under its order) is shown on those menus only, not for every list.
+3. The two laws added after the cold read were checked by the scratch build and the core receipt, not re-read by a second reader.
+4. Not done: the items in Boundary.
