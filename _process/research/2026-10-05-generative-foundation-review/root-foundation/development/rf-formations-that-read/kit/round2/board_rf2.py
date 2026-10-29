@@ -5,7 +5,8 @@ front of the queue note; `land BOARD RECEIPT N QUEUE STATE` sets the state cell 
 round 2 sentence to the first landing, drops RF's head-of-queue clause, puts QUEUE at the head of the queue note and
 names the receipt as the latest. BOARD is the path of the board file to edit (in the landing worktree, or a copy of
 main's for a commit made without a working tree).
-usage: python3 -B board_rf2.py state BOARD TEXT | head BOARD TEXT | land BOARD RECEIPT N QUEUE STATE"""
+usage: python3 -B board_rf2.py state BOARD TEXT | head BOARD TEXT | land BOARD RECEIPT N QUEUE STATE
+       | land61 BOARD RECEIPT N QUEUE STATE (RF6.1's landing: its own statements sentence)"""
 import datetime
 import re
 import sys
@@ -30,7 +31,7 @@ elif mode == 'head':
     clause = f'RF at the head of the queue ({text}); '
     assert HEAD.fullmatch(clause), clause
     board[queue[0]] = board[queue[0]].replace('- **Queue:** ', '- **Queue:** ' + clause, 1)
-elif mode == 'land':
+elif mode in ('land', 'land61'):
     receipt, section, queue_text, state_text = text, int(sys.argv[4]), sys.argv[5], sys.argv[6]
     assert f'§{section}' in queue_text and receipt in queue_text
     cells[2] = state_text
@@ -47,6 +48,16 @@ elif mode == 'land':
            "a chain). Designed: RF6.1 revision that opens an executable correction (built in the kit, held for a "
            "revision as a reachable step); RF-M's helper, preference and institution cases; RF7 disclosure or "
            "concealment in two stages. ")
+    if mode == 'land61':
+        old = ("Designed: RF6.1 revision that opens an executable correction (built in the kit, held for a "
+               "revision as a reachable step); RF-M's helper, preference and institution cases; RF7 disclosure or "
+               "concealment in two stages. ")
+        new = ("RF6.1 landed: a revision of a reading that opens a correction, along one process "
+               "(`Becoming.OpenedCorrection`, an application of the ring: a course opens a correction where it leads "
+               "from a configuration lacking a fitting uniform policy through the reading in force to one with it, "
+               "acceptability fixed; on Revising's process, starting with the link off, rebuilding it opens the "
+               "correction where a unit of stock remains after). Designed: RF-M's helper, preference and institution "
+               "cases; RF7 disclosure or concealment in two stages (built in the kit, not yet reviewed). ")
     assert cells[0].count(old) == 1, 'round 2 sentence'
     cells[0] = cells[0].replace(old, new)
     cells[0] = cells[0].replace("The plan and the Lean each had an independent cross-model review and the texts a cold "

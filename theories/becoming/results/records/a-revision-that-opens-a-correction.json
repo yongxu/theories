@@ -1,0 +1,244 @@
+{
+  "schema_version": 2,
+  "id": "a-revision-that-opens-a-correction",
+  "title": {
+    "en": "A revision of a reading that opens a correction, along one process",
+    "zh": "沿一过程开一更正之读之修订"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-29T20:07:38+00:00",
+  "statement": {
+    "en": "A course of a process opens a correction where it leads to a configuration with a fitting uniform policy through the reading in force from one lacking it, acceptability fixed; on Revising's process, rebuilding the link from off opens it where a unit of stock remains after.",
+    "zh": "一过程之历程开一更正，当其自经所行之读缺合之一致策略之形态，至有之之形态，可受者守定；于 Revising 之过程，初始联断时重建其联而后尚余一储处开之。"
+  },
+  "laws": [
+    {
+      "en": "Correctable at a configuration: through the reading in force there, a uniform policy exists whose act at each reading is acceptable at every situation giving it and executable there; given choice over the readings, exactly where each reading has one such act.",
+      "zh": "于一形态可更正：经其时所行之读，有一致之策略，其于每一读之行于给此读之每一情形皆可受，且于此形态可行；于诸读有择，则恰当每一读有一此行。",
+      "declarations": [
+        "Becoming.OpenedCorrection.Correctable",
+        "Becoming.OpenedCorrection.correctable_iff"
+      ]
+    },
+    {
+      "en": "A course opens a correction from x to x' where a trace of the process leads from x to x', no fitting uniform policy exists at x and one exists at x', with one acceptability throughout; the gain may come from the reading, from executability, or both.",
+      "zh": "一历程开一更正自 x 至 x'，当过程之一迹自 x 至 x'，于 x 无合之一致策略而于 x' 有之，可受者始终同一；所得或来自读，或来自可行，或二者皆是。",
+      "declarations": [
+        "Becoming.OpenedCorrection.OpensAlong"
+      ]
+    },
+    {
+      "en": "With readings in one type and a supplied map f between them: where f (reading x' s) = reading x s at every situation and every act executable at x stays executable at x', correctability is kept; where f (reading x s) = reading x' s at every situation and every act executable at x' was executable at x, nothing is opened.",
+      "zh": "诸读同属一型，给定映射 f：若每一情形皆 f (reading x' s) = reading x s，且于 x 可行之行于 x' 仍可行，则保持可更正；若每一情形皆 f (reading x s) = reading x' s，且于 x' 可行之行于 x 已可行，则无所开。",
+      "declarations": [
+        "Becoming.OpenedCorrection.finer_keeps",
+        "Becoming.OpenedCorrection.coarser_opens_nothing"
+      ]
+    },
+    {
+      "en": "With every act counted acceptable, a configuration with an executable act is correctable already: an opening counts only with the acceptability fixed.",
+      "zh": "凡行皆计为可受，则有一可行之行之形态已可更正：开唯于可受者守定时方算。",
+      "declarations": [
+        "Becoming.OpenedCorrection.widened_correctable"
+      ]
+    },
+    {
+      "en": "On Revising's stock-and-link process, the correction acceptable where it is needed and replenishing where it is not, executability the process's enabling: with the link off no configuration is correctable; with it on and a unit of stock every one is; with it on and no stock none is.",
+      "zh": "于 Revising 之储与联之过程，需处更正为可受，不需处补储为可受，可行即过程之所使可行：联断则无形态可更正；联通且有一储则每一皆可；联通而无储则无一可。",
+      "declarations": [
+        "Becoming.OpenedCorrection.Linked.acceptable",
+        "Becoming.OpenedCorrection.Linked.executable",
+        "Becoming.OpenedCorrection.Linked.unlinked_uncorrectable",
+        "Becoming.OpenedCorrection.Linked.linked_correctable",
+        "Becoming.OpenedCorrection.Linked.starved_uncorrectable"
+      ]
+    },
+    {
+      "en": "Starting with the link off and at least two units, rebuilding it opens the correction in one step; starting with it off and one unit, rebuilding alone does not, the rebuild consuming the last unit, though rebuilding then replenishing does; with every act counted acceptable, the unlinked configuration is correctable already.",
+      "zh": "初始联断且至少有二储时，重建其联一步而开更正；初始联断且仅有一储时，唯重建不能开之，重建耗尽最后之储，然重建而后补储则开之；凡行皆计为可受，则联断之形态已可更正。",
+      "declarations": [
+        "Becoming.OpenedCorrection.Linked.opens",
+        "Becoming.OpenedCorrection.Linked.rebuilt_starved",
+        "Becoming.OpenedCorrection.Linked.opens_after_replenishing",
+        "Becoming.OpenedCorrection.Linked.widened_unlinked"
+      ]
+    },
+    {
+      "en": "Replenishing alone opens the correction where the link is on and the stock is not: the reading unchanged, the gain is in what can be executed.",
+      "zh": "联通而无储处，唯补储即开更正：读未变，所得在可行者。",
+      "declarations": [
+        "Becoming.OpenedCorrection.Linked.opens_by_support"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Any types of configurations, revision acts, situations, acts and readings; one type of readings in force at every configuration; acceptability on situations and acts, fixed; executability read at the configuration; choice over the readings only for the iff.",
+      "zh": "形态、修订之行、情形、行与读之任一型；每一形态所行之读同属一型；可受者于情形与行上，守定；可行于形态上读之；唯 iff 需于诸读有择。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "What a formation chooses: uniform-policy existence is not a controller's act or run (Revising's controlled_revision states one).",
+      "zh": "形成之所择：一致策略之存在非一控者之行或其历程（Revising 之 controlled_revision 陈之）。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Double-loop learning in Argyris and Schön's sense, which turns on changing governing norms; here the acceptability is fixed.",
+      "zh": "Argyris 与 Schön 所谓之双环之学，其要在改所循之规；此处可受者守定。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Which revision an institution can make or makes, or what a finer reading draws on beyond Revising's unit of stock.",
+      "zh": "一制度能作或所作之修订，或更细之读于 Revising 一储之外所耗者。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean",
+      "detail": {
+        "en": "Rebuilding the link from one unit consumes the last unit, and the correction cannot be taken (OpenedCorrection.Linked.rebuilt_starved).",
+        "zh": "自一储重建其联耗尽最后之储，更正不可行（OpenedCorrection.Linked.rebuilt_starved）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean",
+      "detail": {
+        "en": "With every act counted acceptable the unlinked configuration is correctable, so nothing is opened (OpenedCorrection.Linked.widened_unlinked).",
+        "zh": "凡行皆计为可受，则联断之形态可更正，故无所开（OpenedCorrection.Linked.widened_unlinked）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "The core's conditions, every axiom report empty, as an application of the ring: OpenedCorrection imports GuardHorizon, an application, and Revision; correctable_iff is GuardHorizon.uniform_policy_iff_fiber_feasible; the Linked witnesses evaluate Revising's process.",
+    "zh": "合纯核之条件，公理报告皆空，为环中之应用：OpenedCorrection 引 GuardHorizon（一应用）与 Revision；correctable_iff 即 GuardHorizon.uniform_policy_iff_fiber_feasible；Linked 之例计算 Revising 之过程。"
+  },
+  "next_delta": {
+    "en": "A supplied controller's run along which an opening is taken; an institution's rule of reading what its members report as its own process, with the members' acts; a frozen institution simulation with three controls (the plan's TR4); review by a person.",
+    "zh": "一所予之控者沿之而取所开之历程；制度读成员所报之规为其己之过程，并成员之行；具三对照之冻结制度模拟（计划之 TR4）；人之审查。"
+  },
+  "correspondence": {
+    "en": "AI reading: for an institution, the link is its rule of reading what its members report, by which line rather than how many, the stock what that reading draws on, and the correction the repair a report calls for. Revising an observation map is one formal mechanism that may take part in organizational learning; its relation to double-loop learning (Argyris and Schön 1978) depends on whether inquiry changes a governing norm or assumption, and here the acceptability is fixed and the law concerns uniform-policy existence along a course. Replacing a reading by one read off it through a supplied map, gaining no executability and with the acceptability fixed, opens no correction. With selection-under-registration-revision, where discrimination, support and enactment come apart, this states in policy form the correction they open. These are readings, not containments.",
+    "zh": "AI 解读：于一制度，联即其读成员所报之规（依何线而非几何），储为此读所耗者，更正为报告所求之修。修订一观察之映射为可参与组织之学之一形式机制；其与双环之学（Argyris 与 Schön 1978）之关系，视探究是否改所循之规或所设；此处可受者守定，律所关者为沿一历程之一致策略之存在。以经所予之映射由之读出之读代之，而不增可行者且可受者守定，无所开。与「注册修订下之选」并：彼处辨、支与施各异，此以策略之形陈其所开之更正。皆为读，非包含。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean",
+  "aliases": [
+    "opening a correction",
+    "开更正",
+    "a correctable configuration",
+    "可更正之形态",
+    "Becoming.OpenedCorrection.OpensAlong",
+    "Becoming.OpenedCorrection.Linked.opens"
+  ],
+  "dependencies": [
+    {
+      "id": "when-to-inquire-and-when-to-respond",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "GuardHorizon.UniformPolicy and uniform_policy_iff_fiber_feasible.",
+        "zh": "GuardHorizon.UniformPolicy 与 uniform_policy_iff_fiber_feasible。"
+      }
+    },
+    {
+      "id": "selection-under-registration-revision",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Revising's process P, its reading read and its acts.",
+        "zh": "Revising 之过程 P、其读 read 与其行。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "a-reading-kept-by-its-update",
+      "detail": {
+        "en": "Acts good and enabled for a reading the update keeps; here correctability is compared along a course of a process, where the reading in force, executability, or both may change.",
+        "zh": "于更新所守之读善且可行之行；此处沿一过程之历程比较可更正性，所行之读、可行者，或二者皆可改变。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.OpenedCorrection.Correctable",
+        "Becoming.OpenedCorrection.Linked.acceptable",
+        "Becoming.OpenedCorrection.Linked.executable",
+        "Becoming.OpenedCorrection.Linked.linked_correctable",
+        "Becoming.OpenedCorrection.Linked.opens",
+        "Becoming.OpenedCorrection.Linked.opens_after_replenishing",
+        "Becoming.OpenedCorrection.Linked.opens_by_support",
+        "Becoming.OpenedCorrection.Linked.rebuilt_starved",
+        "Becoming.OpenedCorrection.Linked.starved_uncorrectable",
+        "Becoming.OpenedCorrection.Linked.unlinked_uncorrectable",
+        "Becoming.OpenedCorrection.Linked.widened_unlinked",
+        "Becoming.OpenedCorrection.OpensAlong",
+        "Becoming.OpenedCorrection.coarser_opens_nothing",
+        "Becoming.OpenedCorrection.correctable_iff",
+        "Becoming.OpenedCorrection.finer_keeps",
+        "Becoming.OpenedCorrection.widened_correctable"
+      ],
+      "sha256": "b1d5b92dd61af5a0d12d3af51902c3f1c9f0f192cac2df358d0de23c299d360d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean",
+      "role": "proof",
+      "sha256": "1043c114b33c1217dd61f0aa5a64ba30345ca787fd7da00963559fad9a47ac9b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean",
+      "role": "proof",
+      "sha256": "364b4b03df4f7c539e5f56bb978962afab2d7797f481a057e136f4ca1e192caf"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T200440.502813Z/verification.json",
+      "role": "receipt",
+      "sha256": "22f0bc6fbc202942cae51ca56d114e90aeeeea1f86f8ed0b311d4ded3182aeae"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "4babe33460b0cef1f254cb4f8205b1b8443431705032228c35b91d5c48ee0356"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
+      "role": "integration",
+      "sha256": "637eda898da1bab151770333e3c5bbcdd80a93729d0d7cd6f3ab7a53cbcaa0e9"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md",
+      "role": "integration",
+      "sha256": "aad97ffdc5dcc508bf903a09e3126fec329f02d5543cf99fe6f5cee811965170"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "f338f56cd638d639db8b213f3615831b375f52f7fa53e5b685710df3fe2b1037"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T200440.502813Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.OpenedCorrection",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "30 October 2026: added (RF round 2), a revision of a reading that opens a correction along one process: correctable at a configuration, opening along a trace, the two monotonicities, acceptability held fixed, on Revising's process; after a cross-model review of the Lean with a re-check, every finding taken; study section 457.",
+      "zh": "2026年10月30日：新增（RF 第二轮），沿一过程开一更正之读之修订：于形态可更正、沿迹而开、二单调、可受者守定，于 Revising 之过程；经 Lean 之跨模型审查与复查，凡所见皆取；研究第 457 节。"
+    }
+  ]
+}

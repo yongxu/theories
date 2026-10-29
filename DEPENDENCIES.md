@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-496 registered results: 465 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1149 curated edges join 424 results to the results they draw on.
+497 registered results: 466 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1151 curated edges join 425 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -29,6 +29,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [a-reading-against-the-share-does-not-ratchet][] ← <a id="a-reading-against-the-share-does-not-ratchet--capture-through-the-rule"></a>[capture-through-the-rule][]
 - [a-reading-kept-by-its-update][] ← <a id="a-reading-kept-by-its-update--master-laws-on-the-grammar"></a>[master-laws-on-the-grammar][] · <a id="a-reading-kept-by-its-update--when-to-inquire-and-when-to-respond"></a>[when-to-inquire-and-when-to-respond][]
 - [a-regularity-kept-and-changed][] ← <a id="a-regularity-kept-and-changed--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="a-regularity-kept-and-changed--wen-in-the-grammar"></a>[wen-in-the-grammar][]
+- [a-revision-that-opens-a-correction][] ← <a id="a-revision-that-opens-a-correction--when-to-inquire-and-when-to-respond"></a>[when-to-inquire-and-when-to-respond][] · <a id="a-revision-that-opens-a-correction--selection-under-registration-revision"></a>[selection-under-registration-revision][]
 - [a-rise-past-the-inflow-is-drawn-from-beyond][] ← <a id="a-rise-past-the-inflow-is-drawn-from-beyond--entropy-history-and-record"></a>[entropy-history-and-record][] · <a id="a-rise-past-the-inflow-is-drawn-from-beyond--what-a-rise-draws-from-beyond"></a>[what-a-rise-draws-from-beyond][] · <a id="a-rise-past-the-inflow-is-drawn-from-beyond--selection-through-couplings"></a>[selection-through-couplings][]
 - [a-source-before-a-juncture][] ← <a id="a-source-before-a-juncture--every-loss-passes-a-juncture"></a>[every-loss-passes-a-juncture][] · <a id="a-source-before-a-juncture--timely-response-necessity"></a>[timely-response-necessity][]
 - [a-step-coupling-keeps-at-every-horizon][] ← <a id="a-step-coupling-keeps-at-every-horizon--keeping-forgoes-the-renewal-at-the-need"></a>[keeping-forgoes-the-renewal-at-the-need][] · <a id="a-step-coupling-keeps-at-every-horizon--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="a-step-coupling-keeps-at-every-horizon--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
@@ -454,6 +455,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [a-reading-against-the-share-does-not-ratchet]: theories/becoming/results/records/a-reading-against-the-share-does-not-ratchet.md
 [a-reading-kept-by-its-update]: theories/becoming/results/records/a-reading-kept-by-its-update.md
 [a-regularity-kept-and-changed]: theories/becoming/results/records/a-regularity-kept-and-changed.md
+[a-revision-that-opens-a-correction]: theories/becoming/results/records/a-revision-that-opens-a-correction.md
 [a-rise-past-the-inflow-is-drawn-from-beyond]: theories/becoming/results/records/a-rise-past-the-inflow-is-drawn-from-beyond.md
 [a-source-before-a-juncture]: theories/becoming/results/records/a-source-before-a-juncture.md
 [a-step-coupling-keeps-at-every-horizon]: theories/becoming/results/records/a-step-coupling-keeps-at-every-horizon.md

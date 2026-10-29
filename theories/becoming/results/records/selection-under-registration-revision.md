@@ -101,7 +101,7 @@ This connects the existing common-organization study to the spine. Lumping, sele
 - related, not a proved adapter: [correction-is-not-calibration](correction-is-not-calibration.md). Renewed references there repair an overwritten matrix: revision of a reference through observation is completed in that record, not absent here.
 - related, not a proved adapter: [what-seeking-cannot-separate](what-seeking-cannot-separate.md). What seeking cannot separate: what every experiment ties stays in the prior's order; what changes a tie couples in from beyond the model, as a revised lumping does.
 
-**Used by:** [consequence-revised-reference-plan](consequence-revised-reference-plan.md) · [wisdom-root](wisdom-root.md)
+**Used by:** [a-revision-that-opens-a-correction](a-revision-that-opens-a-correction.md) · [consequence-revised-reference-plan](consequence-revised-reference-plan.md) · [wisdom-root](wisdom-root.md)
 
 <a id="sources--来源"></a>
 ### Sources

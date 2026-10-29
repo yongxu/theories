@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261029T191748.070149Z",
- "core_sources_sha256": "31a95c7d6189f77c634750fd2bc335920538fcc54c9fee6cc631010d76fb928d",
+ "core_receipt": "20261029T200440.502813Z",
+ "core_sources_sha256": "6c5b807ed09a7ce2ba5d07622875fdb92bd9c7ae0497d91d53999c4eb31a3ab5",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -56,13 +56,13 @@
   ]
  },
  "counts": {
-  "laws": 3781,
+  "laws": 3788,
   "no_declarations": 9,
   "outside": 357,
   "grammar": 749,
   "balance, represented": 645,
   "anchor, not reached": 134,
-  "no master law": 1887,
+  "no master law": 1894,
   "vocabulary_only": 65,
   "closure": 476,
   "balance": 815,
@@ -1714,6 +1714,80 @@
     "master_laws": [],
     "grammar": true,
     "dependence": "grammar"
+   }
+  ],
+  "a-revision-that-opens-a-correction": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.OpenedCorrection.Correctable",
+     "Becoming.OpenedCorrection.correctable_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.OpenedCorrection.OpensAlong"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.OpenedCorrection.finer_keeps",
+     "Becoming.OpenedCorrection.coarser_opens_nothing"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.OpenedCorrection.widened_correctable"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.OpenedCorrection.Linked.acceptable",
+     "Becoming.OpenedCorrection.Linked.executable",
+     "Becoming.OpenedCorrection.Linked.unlinked_uncorrectable",
+     "Becoming.OpenedCorrection.Linked.linked_correctable",
+     "Becoming.OpenedCorrection.Linked.starved_uncorrectable"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.OpenedCorrection.Linked.opens",
+     "Becoming.OpenedCorrection.Linked.rebuilt_starved",
+     "Becoming.OpenedCorrection.Linked.opens_after_replenishing",
+     "Becoming.OpenedCorrection.Linked.widened_unlinked"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.OpenedCorrection.Linked.opens_by_support"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
    }
   ],
   "a-rise-past-the-inflow-is-drawn-from-beyond": [

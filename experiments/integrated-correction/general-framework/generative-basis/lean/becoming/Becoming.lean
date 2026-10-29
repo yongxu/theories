@@ -206,6 +206,7 @@ import Becoming.ChanceFloors
 import Becoming.IntegerOrder
 import Becoming.Acceptance
 import Becoming.GuardHorizon
+import Becoming.OpenedCorrection
 import Becoming.Countdown
 import Becoming.Lasting
 import Becoming.Copying
@@ -3087,6 +3088,17 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   each reading has one good move, the converse with `Viability.ChoiceOver`
   (`uniform_policy_iff_fiber_feasible`); endpoint access can hide a gap that an overlapping
   handoff closes (`endpoint_access_hides_gap`, `overlapping_handoff_keeps_access`).
+* `Becoming.OpenedCorrection` (L1): a revision of a reading that opens a correction, along one
+  process. Correctable at a configuration: a fitting uniform policy exists through the reading in
+  force there, its acts acceptable and executable (`OpenedCorrection.Correctable`); a course of the
+  process opens a correction where it leads from a configuration lacking one to one with it,
+  acceptability fixed (`OpenedCorrection.OpensAlong`); with the readings in one type, a reading read
+  off the old through a supplied map, gaining no executability, opens nothing
+  (`OpenedCorrection.coarser_opens_nothing`); on Revising's process, starting with the link off,
+  rebuilding it opens the correction where a unit of stock remains after
+  (`OpenedCorrection.Linked.opens`, `OpenedCorrection.Linked.rebuilt_starved`), and replenishing
+  alone opens it where the link is on and the stock is not (`OpenedCorrection.Linked.opens_by_support`).
+  An application in the ring (board item RF).
 * `Becoming.Countdown` (L1): counted work, kept properties of admitted courses and a reserved
   exit, with no premise. An admitted course keeps a property exactly when every admitted step
   does; work done one unit per tick for one unit of fuel finishes in `work + 1` ticks exactly

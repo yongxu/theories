@@ -89,7 +89,7 @@ CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "
 # outside it by direction: no core module but the root `Becoming` imports a ring module, and no
 # instance imports an application (`ring_direction`).
 INSTANCES = ["Becoming.Hexagrams", "Becoming.HexagramPlaces", "Becoming.HexagramCommuting", "Becoming.HexagramLaws", "Becoming.HexagramSites", "Becoming.HexagramSequences", "Becoming.PlaceTransitionNets"]
-APPLICATIONS = ["Becoming.Dispatch", "Becoming.GuardHorizon", "Becoming.ResponseLearning", "Becoming.Coverage", "Becoming.SeedReach", "Becoming.ScopedReach"]
+APPLICATIONS = ["Becoming.Dispatch", "Becoming.GuardHorizon", "Becoming.ResponseLearning", "Becoming.Coverage", "Becoming.SeedReach", "Becoming.ScopedReach", "Becoming.OpenedCorrection"]
 RING = INSTANCES + APPLICATIONS
 # The bridge: emptied by the F3 sweep (19 October 2026). Every bridge and pure join module is in
 # lean/history/becoming/Becoming/ with its bytes, checked by the receipts before the sweep; the core
