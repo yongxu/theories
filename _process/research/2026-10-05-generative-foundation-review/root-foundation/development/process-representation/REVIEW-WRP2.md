@@ -62,7 +62,7 @@ It ran no build. It found one error, six should-fixes and five suggestions. Ever
 
 7. **Should-fix.** ProcessRepresentation used "family" for relations indexed by moves, a second sense beside the glossary's (同族) and Onward's. **Taken:** ProcessRepresentation and the record now say "relations, one per move" and "relations indexed by moves".
 
-   «历»'s docstring keeps "constant family", the phrase GrammarLaws' owner adopted. It is flagged to the owner.
+   «历»'s docstring said "constant family", the phrase GrammarLaws' owner had adopted. Flagged to the owner, who changed it in «历»'s docstrings and the master-laws entry to "«迭» is its case for one relation repeated".
 
 8. **Suggestion (wording).** **Taken:**
    - The two directions of the faithfulness say which is the converse of which, and the hypothesis that the renaming relates the processes is stated.

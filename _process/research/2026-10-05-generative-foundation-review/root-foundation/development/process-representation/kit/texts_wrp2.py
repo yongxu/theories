@@ -120,7 +120,7 @@ edit(ONE, "- a representation of processes, or one through the order of joined e
 edit(ONE, "Steps split as they compose (`«迭之分»`), and steps read backward are steps of the converse (`«迭之逆»`). "
           "Where whatever is reached",
      "Steps split as they compose (`«迭之分»`), and steps read backward are steps of the converse (`«迭之逆»`). Passing "
-     "through a word's relations in turn (`«历»`) has `«迭»` as its constant family (`«迭即历»`), and these two laws, "
+     "through a word's relations in turn (`«历»`) has `«迭»` as its case for one relation repeated (`«迭即历»`), and these two laws, "
      "with `«迭之接»`, `«迭之末步»`, `«迭之定前»` and `«同行之迭»`, are cases of its laws (`«历之接»`, `«历之逆»`, "
      "`«同行之历»` and the others). Where whatever is reached")
 

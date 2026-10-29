@@ -35,7 +35,7 @@ their consumers' stay arithmetic, since each needs only the count.
 | `«线不并»` | merging nothing at the first `N` places of a line |
 | `«入»` | drawn in: a closed region `x` lies outside holds something `x` reaches |
 | `«迭»` | `n` steps: the `n`-fold composition of a relation |
-| `«历»` | passing through a word's relations in turn: on the empty word no step, then each letter's relation; `«迭»` is its constant family |
+| `«历»` | passing through a word's relations in turn: on the empty word no step, then each letter's relation; `«迭»` is its case for one relation repeated |
 | `«迭内»`, `«静或缘»` | within `n` steps: some number of steps not more than `n`; staying, or a step of a relation |
 | `«承»` | what every condition held: the occurrences whose every condition under a relation lies in a region |
 | `«屡»`, `«或屡»` | steps of a relation recur along a line; recur as far as can be refuted, from a place on |
@@ -98,7 +98,7 @@ their consumers' stay arithmetic, since each needs only the count.
   successor as far as can be refuted, `n` steps exist as far as can be refuted (`«或有后则或迭»`); an
   unending line has steps of every length (`«不穷则迭»`), `n` steps leading to the occurrence itself
   or to what it reaches (`«迭则同一或及»`). Passing through a word's relations in turn (`«历»`) holds
-  a word of relations where `«迭»` repeats one, and `«迭»` is its constant family (`«迭即历»`).
+  a word of relations where `«迭»` repeats one: `«迭»` is its case for one relation repeated (`«迭即历»`).
   Passing through two words is passing through the first and then the second (`«历之接»`), the last
   letter last (`«历之末步»`), and the reversed word by the converse relations is the word backward
   (`«历之逆»`); where no letter's relation merges, it merges nothing (`«历之定前»`), and where each
@@ -698,7 +698,8 @@ theorem «定前之逐点» {R : «际» α} : «定前» R ↔ ∀ x y z, R x z
 theorem «定前即逆之定后» {R : «际» α} : «定前» R ↔ «定后» («逆» R) :=
   ⟨fun h y z ⟨x, r, r'⟩ => h y z ⟨x, r, r'⟩, fun h x y ⟨z, r, r'⟩ => h x y ⟨z, r, r'⟩⟩
 
-/-- **Passing through a word's relations in turn (历); `«迭»` is its constant family** (`«迭即历»`).
+/-- **Passing through a word's relations in turn (历); `«迭»` is its case for one relation repeated**
+(`«迭即历»`).
 On the empty word it is no step (`«静»`); on `a :: as` it is the relation of `a` and then passing
 through `as` (`«而»`). -/
 def «历» {A : Type v} (F : A → «际» α) : List A → «际» α
@@ -748,7 +749,7 @@ def «迭» (R : «际» α) : Nat → «际» α
   | n + 1 => «而» R («迭» R n)
 
 /-- **`n` steps are passing through a word of `n` letters, each read as `R` (迭即历)**: `«迭»` is
-`«历»` of a constant family. -/
+`«历»`'s case for one relation repeated. -/
 theorem «迭即历» (R : «际» α) : ∀ n, «谓» («历» (fun (_ : Unit) => R) (List.replicate n ())) («迭» R n)
   | 0 => fun _ _ => Iff.rfl
   | n + 1 => fun _ _ => ⟨fun ⟨w, r, rest⟩ => ⟨w, r, («迭即历» R n _ _).mp rest⟩,

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """WRP2 records. Writes processes-represented-both-ways (Becoming.ProcessRepresentation with GrammarTransport's
 additions, homed at 01 §8.1), each of their declarations cited once; adds to master-laws-on-the-grammar one law for
-GrammarLaws' additions (passing through a word's relations in turn, «历», whose constant family is «迭», with six laws
+GrammarLaws' additions (passing through a word's relations in turn, «历», whose case for one relation repeated is «迭», with six laws
 of «迭» its cases and the list lemmas it uses), its GrammarLaws reference extended and a history note, nothing else of
 it changed; and brings the-world-represented-both-ways' item and next step on processes to the landed theorem, with
 a related entry and a history note. The limits are stated as plainly as the success. Asserts the receipt's hashes and
@@ -262,12 +262,11 @@ counterexamples = [
 
 # the master-laws record's new law
 master_law = capped('laws', {
-    'en': "«历», passing through a word's relations in turn, with «迭» its constant family («迭即历»): it composes along "
-          "joined words, reads its last letter last and the reversed word by the converse relations backward, merges "
-          "nothing where no letter merges and keeps alike where each goes alike, with the list lemmas it uses. The six "
-          "laws of «迭» are its cases, with statements unchanged: «迭之接», «迭之分», «迭之末步», «迭之逆», «迭之定前» and "
-          "«同行之迭».",
-    'zh': '«历»，依次历一字之诸关系，«迭» 为其常族（«迭即历»）：沿相接之字可接，末字母末历，逆字以逆关系倒历，无字母并则不并，各同行则保同行，并其所用之列表引理。'
+    'en': "«历», passing through a word's relations in turn, with «迭» its case for one relation repeated («迭即历»): it "
+          "composes along joined words, reads its last letter last and the reversed word by the converse relations "
+          "backward, merges nothing where no letter merges and keeps alike where each goes alike. The six laws of «迭» "
+          "are its cases, statements unchanged: «迭之接», «迭之分», «迭之末步», «迭之逆», «迭之定前», «同行之迭».",
+    'zh': '«历»，依次历一字之诸关系，«迭» 为其一关系重复之例（«迭即历»）：沿相接之字可接，末字母末历，逆字以逆关系倒历，无字母并则不并，各同行则保同行。'
           '«迭» 之六律为其例，陈述不改：«迭之接»、«迭之分»、«迭之末步»、«迭之逆»、«迭之定前»、«同行之迭»。',
     'declarations': C(set(added['Becoming.GrammarLaws']), '«历»', '«迭即历»', '«历之接»', '«历之末步»', '«历之逆»',
                       '«历之定前»', '«同行之历»', 'GrammarLaws.replicate_add_append', 'GrammarLaws.replicate_succ_append',

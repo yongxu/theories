@@ -30,7 +30,7 @@ What it answers:
 
   So the representation of processes takes whole only the part on processes. OU's plan, §十三 item 13, now says so (`2e37676f9`).
 - **Where the laws on processes hold is given by definition.**
-  - A process is exactly its relations, one per move (`moveRel`, landed), both ways by `rfl`. So a theorem quantified over processes is, as stated, a law of every family of relations on its carriers, under its hypotheses.
+  - A process is exactly its relations, one per move (`moveRel`, landed), both ways by `rfl`. So a theorem quantified over processes is, as stated, a law of all relations indexed by moves on its carriers, under its hypotheses.
   - One that reads a process only through its steps is a law of every relation (`forall_steps_iff`, checked), since every relation is a process's steps.
   - This is 08 §6's third requirement, the representation theorem, for processes. It carries a law's truth to every relation, not its statement into the grammar's terms.
 - **Whether the statements are in the grammar's terms is decided notion by notion.** The 1,306 binding statements name 322 process notions.
@@ -46,7 +46,7 @@ What it answers:
   - *One relation per move.* The moves need not be in the carrier: the relations of the moves on the configurations are the process itself.
 - **Forward and converse.**
   - *Forward.* Notions are grammar terms at the moves' relations, notion by notion. Landed: closure, return, merging nothing, determination, going alike, the image along a map, steps counted, and a deterministic law's step, constancy and core. Checked here: enabledness as «能», a trace as the composite along its word, runs as images of the line of steps, factoring through a map, and going on along some branch.
-  - *Converse.* Every relation is a process's steps (`edgeProcess`). Every family of relations is a process's moves. Every class is a frame's class of claims (checked).
+  - *Converse.* Every relation is a process's steps (`edgeProcess`). All relations indexed by moves are a process's moves. Every class is a frame's class of claims (checked).
 - **Where it fails.**
   - **F1.** The steps forget the moves (witness, checked).
   - **F2.** On the grammar, going on along some branch gives a line exactly under dependent choice (checked), read from Onward's landed calibration. Within finitely many configurations nothing is chosen (checked).
@@ -54,7 +54,7 @@ What it answers:
   - **F4.** The grammar relates three carriers, the factors and their product, only through maps, since it forms no pairing.
   - **F5.** A deterministic law's image is read through its map.
 - **One item, WRP2.** It has two parts:
-  - the grammar layer: transport along maps and correspondence lemmas in `Becoming.GrammarTransport`; and, by GrammarLaws' owner's decision, the composite of a family along a word in `Becoming.GrammarLaws`, with six laws of `«迭»` derived from it as cases, their statements and names unchanged;
+  - the grammar layer: transport along maps and correspondence lemmas in `Becoming.GrammarTransport`; and, by GrammarLaws' owner's decision, the composite along a word of relations in `Becoming.GrammarLaws`, with six laws of `«迭»` derived from it as cases, their statements and names unchanged;
   - a leaf module, `Becoming.ProcessRepresentation`, with one record homed at 01 §8.1.
 
 ## 1. What "represented both ways" means for processes
@@ -75,7 +75,7 @@ A `Generative.Process S A` is a relation `step : S → A → S → Prop`, read a
 |---|---|---|---|---|
 | the steps (01 §8.1's row) | `S` | `Steps P`: some move takes one to the other | no (F1) | every relation |
 | the move inside (`withMove`, Labelled) | `S × A` | `(s, a)` to `(t, b)` where `a` takes `s` to `t`; classes "the same move" and "the same configuration" | on the fixed carrier; up to correspondence, not with either class alone (F3) | the relations leaving the next move open (F3) |
-| the moves' relations (`moveRel`, GrammarRegularity) | `S` | one relation per move | yes, by definition (`moveRel_mk`, `mk_moveRel`, `rfl`) | every family of relations |
+| the moves' relations (`moveRel`, GrammarRegularity) | `S` | one relation per move | yes, by definition (`moveRel_mk`, `mk_moveRel`, `rfl`) | all relations indexed by moves |
 
 What the models carry besides:
 - **A frame's claims.** Each claim is a predicate on configurations, read as its partial identity (`Web.partialIdentity`, landed with WRT2, for carriers in `Type`). Their class, "alike in every claim", is likeness to depth zero (`AlikeTo F F 0`, Likeness).
@@ -99,7 +99,7 @@ As for the World, the forward direction is a schema, discharged notion by notion
 
 **A law's truth, carried (checked).**
 - `forall_steps_iff`: a property of a carrier and a relation, kept by relations alike pointwise («谓»), holds of every process's steps exactly where it holds of every relation. The proof takes the one-move process of the relation.
-- `forall_moveRel_iff`: a property of every process's moves' relations is a property of every family, with no hypothesis. It is currying, by `moveRel_mk`.
+- `forall_moveRel_iff`: a property of every process's moves' relations is a property of all relations indexed by moves, with no hypothesis. It is currying, by `moveRel_mk`.
 - What these show is where the laws hold. Restating a theorem's statement in the grammar's terms (08 §6's lifting) is still per notion, and a theorem reads only the steps where each notion it names is a function of them. `Reach`, `Invariant`, `Returns` and `Lossless` are. `Determined`, `GoAlikeUnder`, `Enabled` and `Trace` read the moves, and are terms at the moves' relations.
 
 **Transport along maps (checked).** For a map between carriers:
@@ -113,9 +113,9 @@ A process factors through a map exactly where, at each move, the image of its re
 
 ### 1.4 The converse
 
-**The image is every relation and every family (checked).**
+**The image is every relation and all relations indexed by moves (checked).**
 - Every relation is the steps of the one-move process of its edges (`edgeProcess`; `steps_edgeProcess`).
-- Every family of relations is a process's moves (`moveRel_mk`, `rfl`).
+- All relations indexed by moves are a process's moves (`moveRel_mk`, `rfl`).
 - Every class is the class of claims of a frame whose claims are the carrier, realized where the class relates (`class_is_claims`, at `AlikeTo F F 0`).
 
 The World's image is graded and conserving. A process adds nothing to the grammar but the index of its moves; a run adds a choice of course (F2), and a frame its claims.
@@ -163,7 +163,7 @@ Related laws that state no grammar term: `same_steps_iff_traces` (a law is fixed
   - `step_iff_withMove` and `withMove_image_iff`;
   - the witnesses: `reading_next_move_not_withMove`, the twist (`Twist.models_correspond`, `Twist.not_renamed`), the flip (`Flip.models_correspond`, `Flip.not_renamed`) and the forgotten moves (`Forgotten.moves_forgotten`).
 - **M4. The forward bridges not landed.**
-  - *A trace as a composite.* `wordRel` is the composite of a family of relations along a word (`«静»` and `«而»`), in GrammarLaws (§4, Part 1). Its case for a constant family is `«迭»` (`wordRel_replicate`). With it come `trace_iff_wordRel` and `feasible_iff_wordRel`.
+  - *A trace as a composite.* `wordRel` is the composite of relations along a word (`«静»` and `«而»`), in GrammarLaws (§4, Part 1). Its case for one relation repeated is `«迭»` (`wordRel_replicate`). With it come `trace_iff_wordRel` and `feasible_iff_wordRel`.
   - *Runs.* `run_image` and `run_iff_image`.
   - *Factoring.* `factorsThrough_iff_image`.
   - *Going on along some branch:* `yan_iff_keepsMoving` and `run_yan`.
@@ -195,7 +195,7 @@ Related laws that state no grammar term: `same_steps_iff_traces` (a law is fixed
 
 **Binding.**
 - 1,306 of the 3,163 bind a process (984) or only a frame (322).
-  - Each binding a process is a law of every family of relations on its carriers, under its hypotheses.
+  - Each binding a process is a law of all relations indexed by moves on its carriers, under its hypotheses.
   - Each binding only a frame is a law of every such family with claims. That follows by the same definition, though the lemma is stated for processes only.
   - So where these laws hold is answered for all of them at once.
 - The other 1,857 name a constructed process, or reach processes through a law. They are laws of their models or of the deterministic laws.
@@ -317,7 +317,7 @@ The item is WRP2. Every statement is core, fixed before its proof, and no landed
 - **Transport along maps.** `preserves_iff_image` and `yan_pullback`. They take Chinese names in the module's style; the second sits beside «尽之拉回».
 - **Correspondence lemmas** for `«延»`, `«迭»`, `«迭内»`, `«闭»`, `«定后»`, `«定前»` and `«同行»`, on the module's pattern. *Checked in WRP2, with a consumer: a renaming keeps the bridged notions (§8).*
 
-**In `Becoming.GrammarLaws`: the composite along a word.** GrammarLaws' owner chose this placement (option (a)): one law of composition along a word, with iteration as its case for a constant family, in place of a second law beside it (board rule 9). It holds a trace's word, which is what makes a process faithful (F3), where `«迭»` reads a trace only with its word forgotten.
+**In `Becoming.GrammarLaws`: the composite along a word.** GrammarLaws' owner chose this placement (option (a)): one law of composition along a word, with iteration as its case for one relation repeated, in place of a second law beside it (board rule 9). It holds a trace's word, which is what makes a process faithful (F3), where `«迭»` reads a trace only with its word forgotten.
 
 - **Conditions, from the owner.**
   - `«迭»` keeps its definition, the recursion on numbers, and every statement and name in GrammarLaws and in the modules that use it stays as it is.
@@ -326,7 +326,7 @@ The item is WRP2. Every statement is core, fixed before its proof, and no landed
   - At landing, the core receipt and the signature audit show only additions in GrammarLaws and the changed proofs, with no statement changed, and the measure is reported before and after.
 - **The composite and its laws (checked).**
   - `wordRel`, placed before `«迭»`: `«静»` on the empty word, `«而»` for each letter.
-  - `wordRel_replicate`, beside `«迭»`'s definition: `«迭»` is the composite for a constant family.
+  - `wordRel_replicate`, beside `«迭»`'s definition: `«迭»` is the composite's case for one relation repeated.
   - The composite of two words is the composite of the composites (`wordRel_append`); the last letter is read last (`wordRel_snoc`).
   - The reversed word with the converse family is the converse (`wordRel_reverse`).
   - Where no letter's relation merges, the composite merges nothing (`wordRel_fixedBefore`).
@@ -349,8 +349,8 @@ The item is WRP2. Every statement is core, fixed before its proof, and no landed
   - `«或有后则或迭»` and `«不穷则迭»` read successors along one relation's line.
   - `«承之迭»` reads a course of regions round by round. A word form would be a new law that nothing reads, so it keeps its induction, and `«存承之迭»` is its corollary under staying or a step. (Added after the review of WRP2's Lean.)
 - **The name: «历», adopted by GrammarLaws' owner.**
-  - `«历» F w` relates `x` to `y` exactly when `y` is reached by passing through the word's relations in turn. `«迭»` is «历» of a constant family.
-  - Its docstring states the operation, not the etymology: "passing through a word's relations in turn (历); «迭» is its constant family".
+  - `«历» F w` relates `x` to `y` exactly when `y` is reached by passing through the word's relations in turn. `«迭»` is «历»'s case for one relation repeated.
+  - Its docstring states the operation, not the etymology: "passing through a word's relations in turn (历); «迭» is its case for one relation repeated". (The owner's first wording, "its constant family", was changed after the review of WRP2's Lean flagged it as a second sense of "family".)
   - *The reading* [AI reading]: 歷, glossed in 說文 as 過也, passing through, as in 歷代 and 歷數.
   - «历» is used nowhere in the package or in 01. The glossary's 历程 (a course) is the path such a passage makes, so the two readings agree.
   - The scratch keeps the structural name `wordRel`, and the names of the laws on it are fixed at the Lean stage with a clash check.
@@ -376,8 +376,8 @@ Its contents, with the checked statements:
 
 What it says:
 - A process is exactly its relations, one per move.
-- The image is every relation and every family.
-- A law over processes holds of every family of relations, and one reading only the steps holds of every relation.
+- The image is every relation and all relations indexed by moves.
+- A law over processes holds of all relations indexed by moves, and one reading only the steps holds of every relation.
 - The forward bridges, notion by notion.
 - **Its limits,** as plainly as the success:
   - the steps forget the moves;

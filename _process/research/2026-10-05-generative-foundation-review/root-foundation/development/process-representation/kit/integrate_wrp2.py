@@ -118,7 +118,8 @@ edit(root, """  Lemmas of the World's representation, with no record of their ow
 edit(root, """  as can be refuted (`«或有后则或迭»`); an unending line has steps of every length (`«不穷则迭»`).
   `Becoming.Withholding`'s closed forms""",
      """  as can be refuted (`«或有后则或迭»`); an unending line has steps of every length (`«不穷则迭»`).
-  Passing through a word's relations in turn (`«历»`) has `«迭»` as its constant family (`«迭即历»`);
+  Passing through a word's relations in turn (`«历»`) has `«迭»` as its case for one relation repeated
+  (`«迭即历»`);
   it composes along joined words (`«历之接»`), reads its last letter last (`«历之末步»`) and the
   reversed word by the converse relations backward (`«历之逆»`), merges nothing where no letter
   merges (`«历之定前»`) and keeps alike where each goes alike (`«同行之历»`), and six laws of `«迭»`
@@ -194,10 +195,11 @@ edit(PKG / 'README.zh.md', '处处终尽沿同态拉回（`«尽之拉回»`）�
 edit(PKG / 'README.md', "steps splitting as they compose and an unending line having steps of every length (`«迭之分»`, "
                         "`«不穷则迭»`);",
      "steps splitting as they compose and an unending line having steps of every length (`«迭之分»`, `«不穷则迭»`); "
-     "passing through a word's relations in turn (`«历»`), `«迭»` its constant family (`«迭即历»`), six laws of `«迭»` "
+     "passing through a word's relations in turn (`«历»`), `«迭»` its case for one relation repeated (`«迭即历»`), six "
+     "laws of `«迭»` "
      "the cases of its laws (`«历之接»`, `«历之逆»`, `«同行之历»` and the others);")
 edit(PKG / 'README.zh.md', '步可分如其可接，不穷之线有任意长之步（`«迭之分»`、`«不穷则迭»`）；',
-     '步可分如其可接，不穷之线有任意长之步（`«迭之分»`、`«不穷则迭»`）；依次历一字之诸关系（`«历»`），`«迭»` 为其常族'
+     '步可分如其可接，不穷之线有任意长之步（`«迭之分»`、`«不穷则迭»`）；依次历一字之诸关系（`«历»`），`«迭»` 为其一关系重复之例'
      '（`«迭即历»`），`«迭»` 之六律为其律之例（`«历之接»`、`«历之逆»`、`«同行之历»` 等）；')
 print('integrated: GrammarLaws and GrammarTransport replaced (additions and six changed proofs), '
       'Becoming.ProcessRepresentation joined (root import and L1 bullet, checker core list and scope, README rows EN '

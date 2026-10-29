@@ -5,15 +5,16 @@
 ## What lands
 
 **Lean.** From [tree/Becoming/](tree/Becoming/):
-- `Becoming.GrammarLaws`, extended under its owner's decision (a). It adds `«历»`, passing through a word's relations in turn, whose constant family is `«迭»` (`«迭即历»`), with its laws `«历之接»`, `«历之末步»`, `«历之逆»`, `«历之定前»` and `«同行之历»`, and the five list lemmas they use. Six laws of `«迭»` are proved as their cases: `«迭之接»`, `«迭之分»`, `«迭之末步»`, `«迭之逆»`, `«迭之定前»` and `«同行之迭»`.
-- `Becoming.GrammarTransport`, extended:
+- `Becoming.GrammarLaws`, extended under its owner's decision (a). It adds `«历»`, passing through a word's relations in turn, with `«迭»` its case for one relation repeated (`«迭即历»`), with its laws `«历之接»`, `«历之末步»`, `«历之逆»`, `«历之定前»` and `«同行之历»`, and the five list lemmas they use. Six laws of `«迭»` are proved as their cases: `«迭之接»`, `«迭之分»`, `«迭之末步»`, `«迭之逆»`, `«迭之定前»` and `«同行之迭»`.
+- `Becoming.GrammarTransport`, extended with 14 declarations:
   - preserving as an image lying within (`«保之像»`);
   - going on along some branch, pulled back along lifting (`«延之拉回»`);
-  - the correspondence lemmas for steps, words, within `n` steps, closed regions, a fixed successor and predecessor, going alike and going on;
-  - correspondences side by side (`«一一对应».prod`).
-- `Becoming.ProcessRepresentation`, a new leaf at L1. It imports `Becoming.EdgeClosure`, `Becoming.GrammarTransport`, `Becoming.Labelled`, `Becoming.Onward`, `Becoming.GrammarRegularity` and `Becoming.GrammarCandidates`.
+  - passing through a word carried with its letters renamed (`«历之像»`), with steps its case (`«迭之像»`);
+  - the correspondence lemmas for within `n` steps, closed regions, a fixed successor and predecessor, going alike and going on;
+  - correspondences side by side (`«一一对应».prod`), and one list lemma (`GrammarTransport.map_replicate`).
+- `Becoming.ProcessRepresentation`, a new leaf at L1, 52 theorems in 70 declarations. It imports `Becoming.EdgeClosure`, `Becoming.GrammarTransport`, `Becoming.Labelled`, `Becoming.Onward`, `Becoming.GrammarRegularity` and `Becoming.GrammarCandidates`. After the review of the Lean, a renaming relating two processes keeps every bridged notion (`renaming_*`), which gives the correspondence lemmas their consumer.
 
-[signatures.json](signatures.json) is the signature audit, against the latest core receipt. Every landed declaration of the two extended modules keeps its statement (`#check @`), and every definition keeps its body (`#print`). Nothing is removed, and exactly the six theorems above change their source. The whole package compiles with the three modules and no clash ([clash-2.log](clash-2.log)).
+[signatures.json](signatures.json) is the signature audit, against the latest core receipt. Every landed declaration of the two extended modules keeps its statement (`#check @`), and every definition keeps its body (`#print`). Nothing is removed, and exactly the six theorems above change their source. The whole package compiles with the three modules and no clash ([clash-3.log](clash-3.log)). The review of the Lean, every finding taken, is [REVIEW-WRP2](REVIEW-WRP2.md).
 
 The new module is added:
 - to `CORE` in `check_becoming.py`, after `Becoming.WorldRepresentation`, with its scope sentence; GrammarLaws' and GrammarTransport's sentences are extended;
@@ -21,8 +22,8 @@ The new module is added:
 - to the package README rows, EN and ZH, after WorldRepresentation's; GrammarLaws' and GrammarTransport's rows are extended.
 
 **Records.**
-- `processes-represented-both-ways`, new, recorded-checked, family F01, home 01 §8.1. It cites ProcessRepresentation's 54 declarations and GrammarTransport's 13 additions, each once, in ten laws.
-- `master-laws-on-the-grammar` gains one law for GrammarLaws' 12 additions, its GrammarLaws reference extended and a history note. Its statement and other laws are unchanged.
+- `processes-represented-both-ways`, new, recorded-checked, family F01, home 01 §8.1. It cites ProcessRepresentation's 70 declarations and GrammarTransport's 14 additions, each once, in eleven laws. It cites «历» only where traces read it, and links to the master-laws record for the law.
+- `master-laws-on-the-grammar` gains one law for GrammarLaws' 12 additions, placed after the law of steps counted and worded as its owner asked, with its GrammarLaws reference extended and a history note. Its statement and other laws are unchanged.
 - `the-world-represented-both-ways` has its item and next step on processes brought to the new record, with a related entry and a history note. No statement, law or declaration changes.
 
 **Texts.**
