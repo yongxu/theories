@@ -189,6 +189,7 @@ import Becoming.SummaryFutures
 import Becoming.Gated
 import Becoming.Viability
 import Becoming.Keeping
+import Becoming.ReflexivePrediction
 import Becoming.Prelude
 import Becoming.Ideals
 import Becoming.ContingentPlans
@@ -330,6 +331,7 @@ import Becoming.Bundles
 import Becoming.ActivationCapacity
 import Becoming.Narrowing
 import Becoming.NarrowingRuns
+import Becoming.ReadingLoop
 import Becoming.SecuredContent
 import Becoming.ProfileReach
 import Becoming.RenewalBound
@@ -2713,6 +2715,24 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   and, where it holds a rule, its greatest safe answer, the only one; along every run observing
   a candidate rule the answer from the record is the greatest safe answer and asserts the
   observed rule's values; re-encoding transports what the belief settles.
+* `Becoming.ReadingLoop` (L1): the reading loop, sensing, predicting, choosing, acting and revising as
+  one blanketed law. A region kept along every reach is closed (`ReadingLoop.kept_iff_closed`); with a
+  reading its update keeps, a policy keeps a task and goes on exactly where each state's act is good and
+  enabled for its reading (`ReadingLoop.keeps_continues_iff`); the worlds possible after a history are
+  the least reading kept by recording that holds at the starts (`ReadingLoop.possible_least`), and a
+  policy acting from its history keeps a task exactly where its act is safe at every world possible
+  after each history it generates (`ReadingLoop.history_keeps_iff`); for one blanketed law from one
+  internal, sensory and active start, two worlds give the formation one sensed course exactly as long
+  as they answer alike what it does (`ReadingLoop.sensed_alike_iff`), and, equality of values decided,
+  where every answer telling them apart breaks a task, keeping it is not telling them apart
+  (`ReadingLoop.alike_within`, `ReadingLoop.alike_of_kept`); from a start with no answer pending, a
+  formation keeping candidate laws keeps those listed that fit its course's answers taken in
+  (`ReadingLoop.Loop.kept_iff`), and where the world answers its act with what it sensed and stays,
+  it chooses that act and every candidate predicts that answer, it rests at once
+  (`ReadingLoop.Loop.rests_of_unrefuted`); from related starts, two blanketed laws whose steps keep a
+  relation under which the values sensed and the acts are one sense and act alike
+  (`ReadingLoop.observed_alike`); witnesses (`ReadingLoop.Untested.floor_forgoes`,
+  `ReadingLoop.Untested.model_or_order`). A leaf (board item RF).
 * `Becoming.SecuredContent` (L2): secured new content with open future form: one response
   can secure new living content in each admitted continuation without one fixed content in all;
   a finite signed integral certifies it where each positive occurrence means such content; with
@@ -2813,6 +2833,14 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   horizon. Two parts' plans run together keep both guards where joint steps project onto the
   parts and the joint moves are usable throughout, and every joint plan that keeps a guard has
   them usable.
+* `Becoming.ReflexivePrediction` (L1): a prediction read by what it predicts. Right exactly where the
+  response leaves it (`ReflexivePrediction.Right`); none right where the response moves every value,
+  whatever the predictor reads (`ReflexivePrediction.no_predictor_right`); on the chain `0` to `n`,
+  under a response mapping it into itself and keeping its order, repeated publication from zero is the
+  least right prediction by step `n` (`ReflexivePrediction.bottom_rests`); witnesses with two right predictions,
+  none and one (`ReflexivePrediction.ThresholdResponse.reached_by_start`,
+  `ReflexivePrediction.Negating.alternates`, `ReflexivePrediction.Reflecting.middle_right`). A leaf
+  (board item RF).
 * `Becoming.Grammar` (L0): the grammar, a relational calculus with continuation relative to a
   class at its centre, stated for every carrier and every relation and named in Chinese with a
   binding table. Continuation (`«续»`) is 缘 met with a class; lines, families and the positions
