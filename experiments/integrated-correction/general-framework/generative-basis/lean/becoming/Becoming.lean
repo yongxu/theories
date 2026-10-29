@@ -106,6 +106,7 @@ import Becoming.ReorderingGrowth
 import Becoming.FreeEnergyGuarantees
 import Becoming.Blanket
 import Becoming.LumpedSeeking
+import Becoming.FreeEnergyCounting
 import Becoming.Growth
 import Becoming.Retaining
 import Becoming.OwnWidening
@@ -1618,6 +1619,17 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `LumpedSeeking.Agree.seeking_turns_tails`). Expected free energy and its terms, over the reals,
   are the periphery's `ExpectedFreeEnergyReals`. A leaf importing `Becoming.ConditionalWeights`
   (board item UE19).
+* `Becoming.FreeEnergyCounting` (L1): the free-energy bound in counting form. For natural counts
+  `n` and weights `a` over any listed hypotheses, `N ^ N * ∏ a ^ n ≤ A ^ N * ∏ n ^ n`, the bound
+  exponentiated for a positive total (`FreeEnergyCounting.bound`), from the arithmetic–geometric mean inequality in
+  counts (`FreeEnergyCounting.mean_two`) proved from a Bernoulli-type inequality
+  (`FreeEnergyCounting.bernoulli`); equal exactly where the counts are proportional to the weights
+  (`FreeEnergyCounting.bound_eq_iff`). In a generative model the total weight is the record's, and
+  the count beliefs at the bound are exactly those in proportion to the joint weights
+  (`FreeEnergyCounting.given_record_eq_iff`), with the hypotheses listed once those at the shares
+  given the record (`FreeEnergyCounting.given_record_eq_iff_share`). Its real form, agreeing with it
+  on the support, is the periphery's `FreeEnergyReals`.
+  A leaf importing `Becoming.ConditionalWeights` (board item UE21).
 * `Becoming.Growth` (L1): widening along a reading of one web's formations in another's
   (`Web.WidensAlong`), which along the identity is widening (`Web.widensAlong_id_iff`), and widening
   over a grown world: a growth adds formations and conditions without changing the old formations'
