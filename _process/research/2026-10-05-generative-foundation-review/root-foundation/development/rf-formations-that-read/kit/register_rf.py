@@ -45,7 +45,11 @@ for name in unclassified:
     mod = NAMES.get(name)
     if mod is None:
         continue
-    if any(part in name for part in ('.Untried.', '.Cue.', '.Copying.')):
+    if name == 'Becoming.Learning.determines_iff_not_not':
+        reasons[name] = (mod, 'model-witness', 'Learning.determines_iff_not_not: a fact about one constructed model, one '
+                                               'occasion with a constant lumping and two act values, read where a '
+                                               'proposition holds (RF)')
+    elif any(part in name for part in ('.Untried.', '.Cue.', '.Copying.')):
         reasons[name] = (mod, 'model-witness', f"{name.replace('Becoming.', '')}: a fact about one constructed model, "
                                                f'{WITNESS[mod]}')
     else:

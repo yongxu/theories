@@ -25,6 +25,7 @@ OTHER = [f'{PKG}/Becoming.lean', f'{PKG}/README.md', f'{PKG}/README.zh.md', f'{P
          'theories/becoming/chapters/03-KNOWING.md', 'theories/becoming/chapters/05-COLLECTIVES.md',
          'theories/becoming/chapters/07-SIGNIFICANCE.md', 'theories/becoming/chapters/08-METHOD.md',
          'theories/becoming/results/data/regions.json',
+         'theories/becoming/THE-THEORY-OF-BECOMING.md',
          f'{RF}/BECOMING-RENEWAL-READING.md', f'{RF}/THEOREM-CONNECTIVITY.json',
          f'{RF}/THEOREM-CONNECTIVITY-APART.json']
 MINE = set(LEAN) | set(OTHER)
@@ -39,14 +40,24 @@ EXPECTED = {
                                                       '6-what-a-selection-reaches-alignment-with-no-premise',
                                                       'alignment-without-premise', 'r-what-training-installs'},
     'theories/becoming/chapters/08-METHOD.md': {'3. The pure core and the periphery', '3-the-pure-core-and-the-periphery',
-                                                'pure-core-and-periphery'},
+                                                'pure-core-and-periphery', '8. Known results', '8-known-results',
+                                                'known-results'},
+    'theories/becoming/THE-THEORY-OF-BECOMING.md': {'3. Knowing, learning and testing', '3-knowing-learning-and-testing',
+                                                    '5. Joint activity and selection', '5-joint-activity-and-selection'},
 }
+# after the cold read (cold_read_rf.py): 03's bases (the chapter's head), 03 §11, and 07 §9's open row
+EXPECTED['theories/becoming/chapters/03-KNOWING.md'] |= {'Knowing, learning and testing', 'knowing',
+                                                         'knowing-learning-and-testing', "11. What a formation's acts show",
+                                                         '11-what-a-formations-acts-show', 'what-the-acts-show'}
+EXPECTED['theories/becoming/chapters/07-SIGNIFICANCE.md'] |= {'9. Objections and verdicts', '9-objections-and-verdicts',
+                                                              'objections'}
 REASON = ("RF round 1 landed: Becoming.ShownOrder, Becoming.Unread and Becoming.Cascade joined to the core as leaves (the "
           "root module's imports and doc, the checker's core list and scope, the package README rows EN and ZH), no "
           "landed statement or proof changed; 03 §11 (what a formation's acts show: the theorems of "
           "what-choices-show-of-an-order and what-readings-fix-of-the-unread with their readings) and 03's Open; 05 §8 "
           "(the theorem of readers-reading-readers); one pointer sentence in 07 §6; 08's counts; the study; "
-          "regions.json; the connectivity; read before re-pointing")
+          "regions.json; the connectivity; after the cold read of the texts, 03's bases, 07 §9's open row on deception, 08 "
+          "§8's known results and the overview's §3 and §5; read before re-pointing")
 
 
 def run_repoint(args):

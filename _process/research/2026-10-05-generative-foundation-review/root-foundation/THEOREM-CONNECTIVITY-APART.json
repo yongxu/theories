@@ -4836,6 +4836,16 @@
    "module": "Becoming.Cascade",
    "category": "general-structure",
    "reason": "Turns.separates_at: a law of members in turn on any types (readers reading readers); it waits for a pool of members in turn on the base (RF)"
+  },
+  "Becoming.ChoiceOccasions.above_in_class_of_every": {
+   "module": "Becoming.ShownOrder",
+   "category": "general-structure",
+   "reason": "ChoiceOccasions.above_in_class_of_every: a law of every carrier of alternatives and every family of occasions (what choices show of the order they come from); it waits for a model reading choices on the base, a training's or a helper's (RF round 2) (RF)"
+  },
+  "Becoming.Learning.determines_iff_not_not": {
+   "module": "Becoming.Unread",
+   "category": "model-witness",
+   "reason": "Learning.determines_iff_not_not: a fact about one constructed model, one occasion with a constant lumping and two act values, read where a proposition holds (RF)"
   }
  },
  "instances": {

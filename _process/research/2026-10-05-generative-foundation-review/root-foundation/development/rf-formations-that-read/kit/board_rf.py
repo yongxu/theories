@@ -26,10 +26,12 @@ STATEMENTS = [
      "formation's reading kept by its own update (on the grammar: «闭»), joined to "
      "`GuardHorizon.uniform_policy_iff_fiber_feasible` (good regulator, requisite variety); RF4 readers reading readers "
      "(cascades, copying). ",
-     "Round 1, landed: RF1 what choices show of the order they come from (`Becoming.ShownOrder`, on the grammar: the "
-     "positive comparisons every according strict order shares are exactly the shown reach, none forced beyond it; "
-     "one search with two orders); RF2 what readings fix of the unread (`Becoming.Unread`: a selected twin where the "
-     "formation can tell; acts, states and couplings); RF4 readers reading readers (`Becoming.Cascade`). Round 2, "
+     "Round 1, landed: RF1 what choices show of the order they come from (`Becoming.ShownOrder`, on the grammar: with "
+     "no cycle shown, the positive comparisons every according strict order shares are exactly the shown reach, none "
+     "forced beyond it; one search with two orders); RF2 what readings fix of the unread (`Becoming.Unread`: under a "
+     "selection through the readings, a selected twin where the formation can tell; acts, states and couplings); RF4 "
+     "readers reading readers (`Becoming.Cascade`: from member k on, the acts carry no more than the couplings before "
+     "it). Round 2, "
      "designed: RF3 a formation's reading kept by its own update, joined to "
      "`GuardHorizon.uniform_policy_iff_fiber_feasible`; RF6.1 revision that opens an executable correction; RF6.3 "
      "reflexive prediction; RF-M one finite mechanism of prediction, selection, revision and intervention; RF7 "
@@ -39,7 +41,8 @@ STATEMENTS = [
      "Readings, no new Lean: a shared obstruction pattern across scales, each row's standing stated; concealment as "
      "shaping an analogy until RF7. "),
     ("First: the plan's independent review (cross-model).",
-     "The plan and the Lean each had an independent cross-model review, every finding taken (plan §13)."),
+     "The plan and the Lean each had an independent cross-model review and the texts a cold read by three readers, "
+     "every finding taken (plan §13)."),
 ]
 board = BOARD.read_text(encoding='utf-8').split('\n')
 rows = [i for i, line in enumerate(board) if line.startswith('| **RF: ')]
