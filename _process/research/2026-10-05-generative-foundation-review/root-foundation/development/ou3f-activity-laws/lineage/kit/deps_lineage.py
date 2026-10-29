@@ -4,7 +4,7 @@ the design names. The review's check (review/checks/Deps.lean) is adapted: for e
 uses directly, with its own compiler-made matchers unfolded, are scanned for the marks of an induction (`brecOn`,
 `below`, `rec`, `recOn`, `binductionOn`, `WellFounded.fix`, a `_unary` helper, or its own name), and its proof is
 followed transitively to each named constant. The connectivity dump cannot do this, since it leaves out Init's
-constants (`Nat.brecOn` among them). On main every one of the eight carries `Nat.brecOn`.
+constants (`Nat.brecOn` among them). On main seven of the eight carry `Nat.brecOn`, and `line_lineage` `«及».rec`.
 usage: python3 -B <kit>/deps_lineage.py BUILD_DIR   (a scratch build's TREE/.build, or the checker's compiled tree)"""
 import os
 import subprocess

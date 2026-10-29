@@ -82,11 +82,11 @@ vs['en'] = (f"Machine-checked by the Lean 4.29.1 checker (receipt {RECEIPT_ID}):
             f"and bridge declarations in fourteen model modules, and the derivations of OU3c, OU3e and OU3f in fourteen more, "
             f"every axiom report empty, all cited; every changed module's statements print as before, but for the two "
             f"relation laws moved into the grammar at any universe. Read-only AI reviews, every finding taken: three of OU3b, "
-            f"one each of OU3c to OU3e, three of OU3f, two with a second pass; not reviewed by a person.")
+            f"one each of OU3c to OU3e, three of OU3f, three with a second pass; not reviewed by a person.")
 vs['zh'] = (f"Lean 4.29.1 检查器实查（回执 {RECEIPT_ID}）：Becoming.GrammarLaws，{len(gl['declarations'])} 项声明中 "
             f"{gl['theorems']} 条定理，及 Becoming.KeptOnward，十四个模型模块中 40 项表示与桥接声明，及另十四模块中 OU3c、OU3e、OU3f "
             f"之推导，公理报告皆空，本记录全引；诸改动模块之陈述所印如前，唯移入文法之二关系律推广至任一宇宙。只读 AI 审查，所见皆采："
-            f"OU3b 三次，OU3c 至 OU3e 各一次，OU3f 三次，其中两次复审一遍；未经人审。")
+            f"OU3b 三次，OU3c 至 OU3e 各一次，OU3f 三次，其中三次复审一遍；未经人审。")
 assert len(vs['en']) <= 600, len(vs['en'])
 r['history'].append({
     'en': f"29 October 2026 (OU3f, study section {N}): the lineage laws of Becoming.Identity proved from the laws of steps "

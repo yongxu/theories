@@ -32,7 +32,7 @@ The bridge is a representation: its content is the correspondence, like OU3a's `
 
 ## The derivations
 
-Every statement and name is unchanged. Each docstring gains a clause naming the law. In what follows, *within activity onward from `M`* means the continuation step within `W.activityOnward M`.
+Every derived theorem keeps its statement and name. Each docstring gains a clause naming the law. In what follows, *within activity onward from `M`* means the continuation step within `W.activityOnward M`.
 
 | theorem | the law | the old proof's induction, replaced |
 |---|---|---|
@@ -59,7 +59,7 @@ Each new proof has none. The grammar law's induction replaces the old one, and w
 - no split, no merge, nothing ceasing or nothing arising;
 - for `line_lineage`, the region's closure under one step.
 
-The inductions left are the bridge's (the correspondence), `steps_advance`'s (the index) and the laws' own.
+The inductions left are the bridge's, split between `lineage_of_steps` and the converse of `steps_iff_lineage` (the correspondence), `steps_advance`'s (the index) and the laws' own.
 
 The landing checks this mechanically with `kit/deps_lineage.py`, the review's dependency check adapted (`kit/deps-tree.log`). For each proof it reads the constants used, with the compiler's matchers unfolded:
 - on the tree, none of the eight carries an induction mark, and each reaches its named law;
@@ -72,7 +72,7 @@ The connectivity dump cannot do this, since it leaves out `Init`'s constants, `N
 - **`continuationStep` and `occurrence_eq` move up within Identity.** They go from the start of the grammar section at the end of the module to the bridge, right after `def Lineage`. The bridge must come before the lineage laws, and those come before the grammar section. Names, statements and docstrings are unchanged.
   - The grammar section's text says where they now stand.
   - It names `steps_advance` beside `reach_advances`, and the laws giving `Lineage.line` and `line_lineage`.
-- **`steps_advance` moves from MapInstances into Identity.** `back` needs it, since its steps back start where it is not given, and so do the forward reading and `split`. It reads only `continuationStep`, which Identity defines. Its name and statement are unchanged, and MapInstances' `reaches_onward`, its one other use, takes it from Identity. GW3–GW5, the last change to MapInstances (`2ce13d0d1`), touched another place.
+- **`steps_advance` moves from MapInstances into Identity.** `back` needs it, since its steps back start where it is not given, and so do the forward reading, `split` and `onward`. It reads only `continuationStep`, which Identity defines. Its name and statement are unchanged, and MapInstances' `reaches_onward`, its one other use, takes it from Identity. GW3–GW5, the last change to MapInstances (`2ce13d0d1`), touched another place.
 - **`split` moves up,** from the converse's subsection to just after `unique`, since `through` is now its case.
 
 Identity's header gains a bullet, *Lineages on the grammar*. The covering-list section gains a doc section on the bridge, and a heading of its own before the census law (`ceasingFrom_found` on).
@@ -81,7 +81,7 @@ Identity's header gains a bullet, *Lineages on the grammar*. The covering-list s
 
 - **`Lineage.active`** stays a representation with two cases.
 - **The coarse-to-fine pair** (Persistence) is the next part.
-- **GrammarLaws' module doc.** It says, under *What is not shown*, that the lineage laws following from the laws of steps "is board item OU3f's next part". Its sentence "Three of the models' step-indexed laws are proved from the laws of steps counted…" also leaves out the lineage laws once they land. Correcting either touches GrammarLaws, which 322 modules import, so a rebuild of 323 of the package's 345 modules, against 20 for Identity's change.
+- **GrammarLaws' module doc.** It says, under *What is not shown*, that the lineage laws following from the laws of steps "is board item OU3f's next part". Its sentence "Three of the models' step-indexed laws are proved from the laws of steps counted…" also leaves out the lineage laws once they land. Correcting either touches GrammarLaws, which 323 modules import, so a rebuild of 324 of the package's 346 modules (after UE16), against 20 for Identity's change.
   - The coordinating session decided: this landing stays narrow, and both corrections go to board item HE, the one near-full rebuild that carries every edit held for a rebuild (item 2, with `kept_onward`'s move as item 3).
   - Until HE lands, OU3f's board row says GrammarLaws' module doc lags. The records this landing changes say what holds: `master-laws-on-the-grammar` drops its does-not-show item on the lineage laws.
 
@@ -153,3 +153,22 @@ On the open question, the review held the GrammarLaws correction for HE, with th
 - this design records the decision;
 - HE's item 2 covers the "Three of the models' step-indexed laws" sentence too;
 - the board row says GrammarLaws' doc lags until HE.
+
+**Second pass.** The reviewer read the revised tree, the design and the kit, with the rehearsal's logs.
+- **Confirmed.**
+  - All 240 declarations that main and the tree share print identically; `Lineage.cons` is gone and the four additions are there.
+  - Retiring `cons` is sound: nothing uses or names it.
+  - `edit_tree.py` reproduces the tree byte for byte from main's bytes.
+  - None of the eight carries an induction of its own, and each reaches its law, with the control on main failing as it should.
+- **Fixes, all taken.**
+  - The audit's note gave a running total. The twins had already retired three of the 436, so it now says only that `cons`, one of them, is retired. It also no longer counts `lineage_iff_line`, a representation, among the rows that follow.
+  - The superseded dump check moved to `kit/history/` (`research.py move`).
+  - Wording:
+    - a region stated as the region, not as a relation;
+    - where steps back end;
+    - `«迭之逆»` tied to `back` alone in 01 §7's text;
+    - "every derived theorem keeps its statement and name";
+    - the inductions left;
+    - `onward`'s use of `steps_advance`.
+  - The counts after UE16: GrammarLaws rebuilds 324 of 346.
+  - The record's count of second passes: three.

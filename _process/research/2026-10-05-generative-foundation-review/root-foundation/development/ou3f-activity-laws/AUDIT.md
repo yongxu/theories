@@ -224,10 +224,10 @@ The review of the closure derivations ([REVIEW-CLOSURE](closure/review/REVIEW-CL
 
 The review of the lineage derivations ([REVIEW-LINEAGE](lineage/review/REVIEW-LINEAGE.md)) found two corrections ([design](lineage/DESIGN.md)).
 - **The bridge's endpoint step is a convenience, not a need.** The section on the restricted bridge says the bridge "must also fix the endpoint's step". It need not: with the restriction in the class position of `«续»`, `steps_advance` gives the step of the middle occurrence of split steps. The landed bridge (`Web.steps_iff_lineage`) states the endpoint's step because it saves rewrites. Its forward reading needs no bound (`Web.lineage_of_steps`).
-- **Two representations are cases of grammar laws through the bridge.** `Web.Lineage.line` follows from `«迭则及»`, and `Web.line_lineage` from `«闭之及»` with `«及即迭»`. Both are now proved so, with their standing (c) representation unchanged, as `ByPassing.line_back`'s was. `Web.Lineage.cons`, the bridge read at one more first step, lost its one consumer and is retired, so the theorems reading only activity on main number one fewer than this audit's 436.
+- **Two representations are cases of grammar laws through the bridge.** `Web.Lineage.line` follows from `«迭则及»`, and `Web.line_lineage` from `«闭之及»` with `«及即迭»`. Both are now proved so, with their standing (c) representation unchanged, as `ByPassing.line_back`'s was. `Web.Lineage.cons`, one of the audit's 436, is the bridge read at one more first step. It lost its one consumer and is retired.
 
 So all six lineage rows are derived:
 - the two in (a), `unique` and `origin`;
 - the four in (b), `split`, `through`, `onward` and `back`.
 
-The three that follow (`ends`, `lineages_apart` and `lineage_iff_line`) reach the grammar unchanged.
+The two that follow (`ends` and `lineages_apart`) reach the grammar unchanged. So does `lineage_iff_line`, a (c) representation, through `line` and `line_lineage`, its standing unchanged.

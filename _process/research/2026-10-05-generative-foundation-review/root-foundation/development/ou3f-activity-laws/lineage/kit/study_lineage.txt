@@ -44,7 +44,7 @@ Evidence: core receipt {RECEIPT}, every axiom report empty. The signature audit 
        Lineage.cons gone, three theorems and one definition new. The dependency check (deps_lineage.py, the review's
        adapted) shows each of the eight with no induction of its own and reaching its law; on main each carries one.
 Boundary: GrammarLaws' module doc still lists the lineage laws among what is not shown, and its sentence on the
-       models' step-indexed laws leaves them out. Correcting either rebuilds 323 of the 345 modules, so both go to
+       models' step-indexed laws leaves them out. Correcting either rebuilds 324 of the 346 modules, so both go to
        board item HE, the one near-full rebuild for every edit held for a rebuild. The coarse-to-fine pair is not
        derived.
 Output → input: the record; 01 §7; Identity and MapInstances; the root module; 08's counts; the master-law view; HE's
@@ -66,6 +66,8 @@ What was taken:
 - Wording; a heading for the census law; and the design's counts after GW3–GW5 merged.
 
 On GrammarLaws' doc, the review held the corrections for HE, with HE's item 2 widened to the sentence on the step-indexed laws and the board row saying the doc lags until then.
+
+A second pass found the Lean ready, with every shared statement unchanged and the tree reproduced byte for byte by its script. Its fixes, both taken: the audit's note no longer gives a running total of the theorems reading only activity, and the superseded dump check moved to the kit's history. Its wording fixes were taken too.
 
 **Self-review.**
 1. Each derivation was checked against OU3d's second review's test, and mechanically by a dependency check that a control on main shows can fail.

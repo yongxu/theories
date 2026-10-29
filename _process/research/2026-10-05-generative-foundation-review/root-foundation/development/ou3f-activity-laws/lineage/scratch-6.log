@@ -1,0 +1,28 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/ou3f-laws/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/lineage/tree",
+  "modules": 41,
+  "ran": [
+    "Becoming.Identity",
+    "Becoming.Persistence",
+    "Becoming.ContinuedClasses",
+    "Becoming.Wholes",
+    "Becoming.PatternPassing",
+    "Becoming.MapInstances",
+    "BecomingIdentityAxiomAudit",
+    "BecomingMapInstancesAxiomAudit"
+  ],
+  "reused": 35,
+  "unclean": [],
+  "audits": {
+    "Becoming.Identity": {
+      "theorems": 152,
+      "declarations": 217,
+      "with_axioms": {}
+    },
+    "Becoming.MapInstances": {
+      "theorems": 27,
+      "declarations": 27,
+      "with_axioms": {}
+    }
+  }
+}

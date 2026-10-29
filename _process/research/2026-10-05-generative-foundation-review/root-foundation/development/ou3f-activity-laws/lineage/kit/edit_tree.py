@@ -105,9 +105,10 @@ identity = replace(identity, """* **Lines are orders of precedence.** Continuati
   cycle (`continuationStep_acyclic`) and its reach is a strict order (`reach_strict_order`, from
   `«无环则及为序»`). A lineage (`Lineage`) is exactly a line (相续) under activity from an active
   occurrence (`lineage_iff_line`). Its steps within activity onward from its start reach
-  (`Lineage.line`, from `«迭则及»`); a line from an active occurrence stays within activity onward
-  from its start, a region closed under its steps (`«闭之及»`), so it is a positive number of steps
-  there (`line_lineage`, with `«及即迭»`). Those steps are exactly the lineage
+  (`Lineage.line`, from `«迭则及»`); a line from an active occurrence stays among the occurrences
+  active, at or after its start and within the closure of activity onward from it, a region closed
+  under the line's steps (`«闭之及»`), so it is a positive number of steps within activity onward
+  from its start (`line_lineage`, with `«及即迭»`). Those steps are exactly the lineage
   (`steps_iff_lineage`, above).""",
 "grammar section: lines")
 
@@ -152,7 +153,7 @@ step (`Lineage.through`). Where nothing ceases, a lineage goes on, as far as can
 (`Lineage.onward`, from `«或有后则或迭»`); where nothing arises, it goes back, as far as can be
 refuted (`Lineage.back`, from the same law read backward through `«迭之逆»`). Steps of a
 continuation advance the step index by their number (`steps_advance`), which places where split
-steps meet and where steps back begin. -/
+steps meet and where steps back end. -/
 
 /-- 缘 read off a continuation `R`: the occurrence `(t, g)` is a condition of `(u, f)` when `u` is
 the step after `t` and `R t g f`. -/
@@ -442,8 +443,9 @@ theorem Lineage.line {M : Nat} {g : F} : ∀ (k : Nat) {h : F}, W.Lineage R M g 
      «及之单调» (fun _ _ ⟨step, alike, _⟩ => ⟨step, alike⟩) _ _ («迭则及» k steps)⟩
 
 /-- A line (相续) under activity from an active occurrence is a lineage of some number of
-steps: the line stays within activity onward from its start, a region closed under its steps
-(`«闭之及»`), so it is a positive number of steps there (`«及即迭»`), which are the lineage. -/
+steps: the line stays among the occurrences active, at or after its start and within the closure
+of activity onward from it, a region closed under its steps (`«闭之及»`), so it is a positive
+number of steps within activity onward from its start (`«及即迭»`), which are the lineage. -/
 theorem line_lineage {x y : Nat × F}
     (line : «及» («续» (continuationStep R) W.activityClass) x y) :
     W.active x.1 x.2 → ∃ k, y.1 = x.1 + (k + 1) ∧ W.Lineage R x.1 x.2 (k + 1) y.2 :=
