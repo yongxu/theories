@@ -2,6 +2,7 @@ import Becoming.Grammar
 import Becoming.Identity
 import Becoming.Unfolding
 import Becoming.Witnesses
+import Becoming.KeptOnward
 
 /-!
 # Persistence: identity across dormancy, and identity read off a world's relations
@@ -166,17 +167,20 @@ theorem keepsTenure_of_held {σ : Reidentify F F'} (holding : ∀ t f c, W.requi
   fun t g c now next => keeps t g (holding t g c now) (holding (t + 1) g c next)
 
 /-- **Keeping the names of what holds, a formation keeps one name over every stretch through
-which it holds, active or dormant.** -/
+which it holds, active or dormant.** From a step of the stretch, having the name it had there is a
+region every later step of the stretch keeps (`kept_onward`). -/
 theorem steady_held {σ : Reidentify F F'} (keeps : σ.KeepsActive (W.persisting h)) {g : F}
-    {s : Nat} : ∀ {t}, (∀ u, s ≤ u → u ≤ t → h u g) → ∀ u, s ≤ u → u ≤ t → σ.new u g = σ.new t g
-  | 0, _, u, _, le => congrArg (σ.new · g) (Nat.le_antisymm le (Nat.zero_le u))
-  | t + 1, held, u, from_, le => match Nat.lt_or_ge u (t + 1) with
-    | .inl below =>
-      have within : u ≤ t := Nat.le_of_lt_succ below
-      (steady_held keeps (fun v a b => held v a (Nat.le_succ_of_le b)) u from_ within).trans
-        (keeps t g (held t (Nat.le_trans from_ within) (Nat.le_succ t))
-          (held (t + 1) (Nat.le_trans from_ (Nat.le_succ_of_le within)) (Nat.le_refl _))).symm
-    | .inr above => congrArg (σ.new · g) (Nat.le_antisymm le above)
+    {s : Nat} : ∀ {t}, (∀ u, s ≤ u → u ≤ t → h u g) → ∀ u, s ≤ u → u ≤ t → σ.new u g = σ.new t g :=
+  fun held u from_ le =>
+    kept_onward (I := fun t => u ≤ t → (∀ v, s ≤ v → v ≤ t → h v g) → σ.new u g = σ.new t g) (a := u)
+      (fun t steady le held => match Nat.lt_or_ge u (t + 1) with
+        | .inl below =>
+          have within : u ≤ t := Nat.le_of_lt_succ below
+          (steady within (fun v a b => held v a (Nat.le_succ_of_le b))).trans
+            (keeps t g (held t (Nat.le_trans from_ within) (Nat.le_succ t))
+              (held (t + 1) (Nat.le_trans from_ (Nat.le_succ_of_le within)) (Nat.le_refl _))).symm
+        | .inr above => congrArg (σ.new · g) (Nat.le_antisymm le above))
+      (fun _ _ => rfl) le le held
 
 /-- A formation holding at every step bears, under such a re-identification, the name it has at
 the first step throughout. -/

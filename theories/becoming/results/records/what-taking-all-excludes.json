@@ -230,7 +230,7 @@
         "Becoming.add_le_total_of_mem",
         "Becoming.mem_of_mem_cons_ne"
       ],
-      "sha256": "ef82273d1887b8557387c6056390326f952be0a7d7dd1a29cd4863a80663dff8"
+      "sha256": "762bc2a8b53535d1b429e9bf86563b05971a712b38113d93500f7cedb5127d7d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T154830.591298Z/verification.json",
@@ -275,12 +275,18 @@
       "role": "receipt",
       "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T125805.763052Z/verification.json",
+      "role": "receipt",
+      "sha256": "c454c53dedd8a940944ce068d35afdca66a077aaddbcc488c1aa713df77de453",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T125805.763052Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Exclusion",
       "success_pointer": "/status",
       "success_value": "passed"

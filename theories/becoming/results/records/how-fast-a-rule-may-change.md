@@ -11,13 +11,13 @@
 ## Laws
 
 1. A two-level course, the fast configuration stepping by a rule that changes only at reading steps, is a run of one law; a rule that never reads is kept, nothing the fast level meets reaches it, and under it what is lost stays lost and merges lose configurations. (`Becoming.Pace.paced`, `Becoming.Pace.paced_run`, `Becoming.Pace.rule_kept`, `Becoming.Pace.rule_unreached`, `Becoming.Pace.never_reads_lost`, `Becoming.Pace.never_reads_merged`, `Becoming.Pace.never_reads_loses`, `Becoming.Pace.byRule_reabsorbed`)
-   - *Master laws, by Lean dependency:* finite runs and lumping; its declarations reach the grammar.
+   - *Master laws, by Lean dependency:* closure, finite runs and lumping; its declarations reach the grammar.
 2. A fast difference reaches the rule only at a reading step: up to and including the first reading step the rule is the one at the start, exact in Copying; regaining what a fixed rule loses needs a change of rule (Switching). (`Becoming.Pace.rule_until_reading`, `Becoming.Pace.rule_alike_until_reading`, `Becoming.Pace.rule_at_reading`, `Becoming.Pace.Copying.rule_parts`, `Becoming.Switching.fixed_loses`, `Becoming.Switching.changing_regains`)
    - *Master laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.Pace.rule_until_reading` as following from a master law (by reaching the grammar).
 3. Given two values, a stretch of L steps fixes every pair of courses with at most N states that held rules generate exactly when L ≥ 2N − 1: shorter stretches dissolve (from prefix_short_twice), longer ones fix (from bounded_agree); within a paced course a rule held that long is fixed over its stretch. (`Becoming.Pace.heldCourse`, `Becoming.Pace.held_statesBelow`, `Becoming.Pace.held_realizes`, `Becoming.Pace.dissolving`, `Becoming.Pace.held_fixed`, `Becoming.Pace.stretch_fixed`, `Becoming.Pace.StretchFixes`, `Becoming.Pace.pace_law`)
-   - *Master laws, by Lean dependency:* finite runs; its declarations reach the grammar.
+   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 4. A course of configurations read whole, with at most N states, is fixed among every run of every law by its first N + 1 steps, exactly. (`Becoming.Pace.whole_fixed`, `Becoming.Pace.whole_fixed_exact`)
-   - *Master laws, by Lean dependency:* finite runs; its declarations reach the grammar.
+   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

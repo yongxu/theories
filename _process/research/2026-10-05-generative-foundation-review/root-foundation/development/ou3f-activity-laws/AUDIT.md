@@ -29,7 +29,7 @@ A row counts as (a) only where the grammar law would replace part of the proof: 
 
 | standing | theorems | what it says |
 |---|---|---|
-| (a) | 14 | a grammar law replaces part of the proof; three of them are small |
+| (a) | 15 | a grammar law replaces part of the proof; three of them are small |
 | (a), follows | 4 | no induction of their own: they reach the grammar unchanged once rows they apply do |
 | (a), done | 10 | the proof already reaches the grammar law it is a case of |
 | (b) | 4 | B1 and B2, two laws of steps the grammar lacks, needed for the row's own derivation |
@@ -40,17 +40,17 @@ A row counts as (a) only where the grammar law would replace part of the proof: 
 | (c) representation | 63 | an instance theorem reading a notion as its grammar term, or a definitional fact of the readings |
 | (c) calibration | 6 | the logical strength of a law over all worlds (excluded middle, LPO) |
 | (c) witness | 141 | a fact of one constructed web, world or law |
-| (c) model | 173 | a law of the model, reason by kind below |
+| (c) model | 172 | a law of the model, reason by kind below |
 
-So 28 of the 436 are cases of a grammar law today: 14 to derive, 4 following them, and 10 already derived. Nine more reach a grammar law once B1 and B2 are stated: four to derive, five following. The other 399 are laws of their models, read on the grammar where a representation theorem applies, with their reasons. (The audit first counted 13, 27 and 400: the twins' review found `ByPassing.ends_within` a case of `«两端分则中有标»`, filed as a law of its model; see the last section.)
+So 29 of the 436 are cases of a grammar law today: 15 to derive, 4 following them, and 10 already derived. Nine more reach a grammar law once B1 and B2 are stated: four to derive, five following. The other 398 are laws of their models, read on the grammar where a representation theorem applies, with their reasons. (The audit first counted 13, 27 and 400: the twins' review found `ByPassing.ends_within` a case of `«两端分则中有标»`, and the closure review `ByPassing.trace` a case of closure, both filed as laws of their models; see the last sections.)
 
 ## (a) Cases of a grammar law, with derivations
 
-All fourteen are web theorems at the occurrence carrier `Nat × F` that OU3a's instance theorems use (`Web.continuationStep`, `Web.activityClass`). The derivations use OU3a's class reading. On lines from an active occurrence, that reading agrees with activity as a partial identity, since activity is one class along a line (`«线内同类»`). So they need no WRT2 occurrence model, which represents the World; these laws are the web's.
+All fifteen are web theorems at the occurrence carrier `Nat × F` that OU3a's instance theorems use (`Web.continuationStep`, `Web.activityClass`). The derivations use OU3a's class reading. On lines from an active occurrence, that reading agrees with activity as a partial identity, since activity is one class along a line (`«线内同类»`). So they need no WRT2 occurrence model, which represents the World; these laws are the web's.
 
 ### Closure: six inductions over steps
 
-EC6's audit put lemmas that prove invariance by their own induction on the step count among the cases of closure. EC6b derived them through `Invariant.reach` with `Run.reach` (`Pace.stays`). Six activity laws do the same by hand. Each keeps a region along steps, and runs on a clock (the successor law's run, `⟨id, fun _ => (), fun _ => rfl⟩`), which needs no induction. At WRT's occurrence model this clock is the names' step.
+EC6's audit put lemmas that prove invariance by their own induction on the step count among the cases of closure. EC6b derived them through `Invariant.reach` with `Run.reach` (`Pace.stays`). Six activity laws do the same by hand. Each keeps a region along steps, so each is a case of the grammar's closure at the successor relation: a region every step keeps holds from where it holds on (`kept_onward`, from `«线则所闭»` with `«闭含所闭»`; the closure derivations' [design](closure/DESIGN.md)). The audit first wrote this as `Invariant.reach` on a clock run; the review of the closure derivations found that run already exists (`Law.run Nat.succ`) and that the grammar needs none.
 
 | theorem | the region every step keeps |
 |---|---|
@@ -60,6 +60,8 @@ EC6's audit put lemmas that prove invariance by their own induction on the step 
 | `Web.ended_for_good` (Reserve) | inactive with nothing in reserve, from `U` on |
 | `Web.ByPassing.present_earlier` (PatternPassing) | bounded: presence kept by the backward step, by passing |
 | `Web.steady_held` (Persistence) | bounded at both ends: an equality of names kept along a held stretch (it reads the names) |
+
+A seventh, found by the closure review: `Web.ByPassing.trace` (PatternPassing) keeps a region along the steps, that every carrier at `S + n` carried the pattern at `S` or some carrier passed it across one of the `n` steps. It was filed (c) model, as an induction with no grammar law of its shape; closure is that law. The reason given, deciding whether two carriers are one formation, concerns only the route through the pattern's line.
 
 ### Three proved twice: rule 9 retires the direct proof
 
@@ -158,27 +160,27 @@ The review compiled B1 (both orders), B2 bounded and B2 from it, and the convers
   - PatternRelay, queues and rings, Strobe, Pass, and nets.
 
   Six of them reach grammar laws in building their facts (the fissions and joinings, and `Map.shifted_generates`). They stay witnesses: a witness's content is its model.
-- **Model (173), by kind** (read off each row's reason):
+- **Model (172), by kind** (read off each row's reason):
   - **Counting over lists (60).** Censuses and their balance, tallies and census tables, pigeonhole over coverings, capacities and listed webs. They read decidability, lists and numbers, which the grammar does not count.
   - **Combinations of activity (38, Wholes).** A whole active where some, every, or at least `j` of its parts are is predicate logic at each step plus counting over steps. The grammar has no union of partial identities and no count of them. Routing `Whole.arises_part` through «生于粗则生于细» would wrap its one step, not replace it.
   - **The names (20).** Re-identification laws: continuations and arising carried, activity kept both ways. WRT's design (§1.4) reads these as cases of carrying, and re-deriving them through transport would be rerouting.
   - **The index re-read (16).** Sampling, stuttering, commuting and reordering steps, and the world after `T` steps. These re-index time; the grammar's coarsening is of classes, not of the index.
-  - **Inductions, definitional readings and contextual systems (39).**
-    - inductions with no grammar law of their shape: `ByPassing.trace`, whose grammar route would need deciding sameness of formations, a change of statement (`ByPassing.ends_within`, which rested on it, is now (a));
+  - **Inductions, definitional readings and contextual systems (38).**
+    - inductions with no grammar law of their shape (`ByPassing.trace` was filed here; it is a case of closure, now (a), as `ByPassing.ends_within`, which rested on it, is a case of `«两端分则中有标»`);
     - definitional facts of the persisting, carrying and roles constructions;
     - the contextual parity systems, which read activity only through a run.
 
 ## What follows
 
-1. **The fourteen (a) derivations.** Each is one module, statements unchanged, after its owner or rule 3's fallback:
-   - closure: Retaining, Wholes, Exclusion, Reserve, PatternPassing and Persistence;
+1. **The fifteen (a) derivations.** Each is one module, statements unchanged, after its owner or rule 3's fallback:
+   - closure: Retaining, Wholes, Exclusion, Reserve, PatternPassing (two) and Persistence;
    - the twins and `ends_within`: ContinuedClasses and PatternPassing;
    - the restricted bridge with `unique` and `origin`: Identity;
    - the coarse-to-fine laws: Persistence.
 
    The four (a), follows rows then reach the grammar unchanged.
 2. **B1, B2 and the converse law, stated and reviewed in `GrammarLaws` before any lineage law bridges to them**, as OU3d was. Then `Lineage.split`, `through`, `onward` and `back`; `reaches_onward` becomes B2's case, and the five laws resting on it follow.
-3. **Nothing else here is a derivation to make.** The 399 laws of their models keep their proofs; their standing is now written down, which is what OU's criterion 7 asks of every old theorem.
+3. **Nothing else here is a derivation to make.** The 398 laws of their models keep their proofs; their standing is now written down, which is what OU's criterion 7 asks of every old theorem.
 
 ## What this audit does not do
 
@@ -213,3 +215,7 @@ The review also confirmed:
 ## After the twins' review (29 October 2026)
 
 The review of the twins' derivations ([REVIEW-TWINS](derivations/review/REVIEW-TWINS.md)) found one row misfiled. `ByPassing.ends_within` is a case of `«两端分则中有标»`, as `passes_within` is, and is derived with the twins ([design](derivations/DESIGN.md)). So (a) has 14 rows and (c) model 173, and 399 of the 436 are laws of their models. The main finding stands: the general content this layer leaves to lift is small.
+
+## After the closure review (29 October 2026)
+
+The review of the closure derivations ([REVIEW-CLOSURE](closure/review/REVIEW-CLOSURE.md)) found one more row misfiled. `ByPassing.trace` keeps a region along the steps, so it is a case of closure, derived with the six ([design](closure/DESIGN.md)). So (a) has 15 rows and (c) model 172, and 398 of the 436 are laws of their models. `ByPassing.line_back`, a representation, is now proved by closure too, with its standing unchanged.

@@ -2,6 +2,7 @@ import Becoming.Continuation
 import Becoming.Admission
 import Becoming.Witnesses
 import Becoming.JointPlans
+import Becoming.KeptOnward
 
 /-!
 # Exclusion: what taking all that is given excludes, and the joint course that keeps all
@@ -95,13 +96,12 @@ namespace Web
 variable {F C : Type} {W : Web F C}
 
 /-- Where a formation's activity does not resume after `T` once it stops, activity at `T + s`
-means activity at every step from `T` to it. -/
+means activity at every step from `T` to it: being active there only if active at `T + j` is a
+region every step keeps (`kept_onward`). -/
 theorem active_before {g : F} {T j : Nat} (lasting : ∀ i, W.active (T + i + 1) g → W.active (T + i) g) :
-    ∀ {s : Nat}, j ≤ s → W.active (T + s) g → W.active (T + j) g := by
-  intro s le
-  induction le with
-  | refl => exact fun active => active
-  | step _ earlier => exact fun active => earlier (lasting _ active)
+    ∀ {s : Nat}, j ≤ s → W.active (T + s) g → W.active (T + j) g :=
+  fun le => kept_onward (I := fun n => W.active (T + n) g → W.active (T + j) g)
+    (fun n held active => held (lasting n active)) id le
 
 end Web
 

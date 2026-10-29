@@ -69,7 +69,7 @@ import check as audit_support  # noqa: E402
 FOUNDATION = ["GenerativeCore", "InquirySufficiency", "RelationalRenewal"]
 # The package: the base (`Becoming.World`, the one unfolding's records, a world being a run of the
 # frame; prelude only), the four core layers and their root. Compile order comes from the imports.
-CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "Becoming.GrammarTesting", "Becoming.GrammarCandidates", "Becoming.MapInstances", "Becoming.Prelude", "Becoming.GrammarLaws", "Becoming.GrammarTransport", "Becoming.World", "Becoming.Witnesses", "Becoming.Frame", "Becoming.Laws", "Becoming.Labelled", "Becoming.Inquiry", "Becoming.Derivation", "Becoming.ClassifiedBeliefProcesses", "Becoming.MoveOutcomeProcesses", "Becoming.Recurrence", "Becoming.Diagonal", "Becoming.Context", "Becoming.ContextArrivalTraces", "Becoming.Quantum", "Becoming.Renewal", "Becoming.Dependence",
+CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "Becoming.GrammarTesting", "Becoming.GrammarCandidates", "Becoming.MapInstances", "Becoming.Prelude", "Becoming.GrammarLaws", "Becoming.GrammarTransport", "Becoming.KeptOnward", "Becoming.World", "Becoming.Witnesses", "Becoming.Frame", "Becoming.Laws", "Becoming.Labelled", "Becoming.Inquiry", "Becoming.Derivation", "Becoming.ClassifiedBeliefProcesses", "Becoming.MoveOutcomeProcesses", "Becoming.Recurrence", "Becoming.Diagonal", "Becoming.Context", "Becoming.ContextArrivalTraces", "Becoming.Quantum", "Becoming.Renewal", "Becoming.Dependence",
         "Becoming.Restoration", "Becoming.Horizon", "Becoming.Joint", "Becoming.Experiment", "Becoming.Mechanism", "Becoming.Unfolding", "Becoming.Irreversibility", "Becoming.LawAlongRun", "Becoming.Histories", "Becoming.Branching", "Becoming.Listing", "Becoming.Stuttering", "Becoming.Reordering", "Becoming.IdleRemoval", "Becoming.OrderNormal", "Becoming.OneStep", "Becoming.Weighted", "Becoming.Transmission", "Becoming.Succession", "Becoming.Attraction",
         "Becoming.Substitution",
         "Becoming.Arising", "Becoming.Flow", "Becoming.Stock", "Becoming.Change", "Becoming.Population",
@@ -211,6 +211,8 @@ SCOPE = (
     "relations they read, carrying being read through the grammar's image and kept by its operations, a predicate "
     "carried as its partial identity; ending on every branch reflects along any map carrying continuation from a "
     "closed region. "
+    "KeptOnward: a region of the steps of time that every step keeps holds from where it holds on, the "
+    "grammar's closure at the successor along a line; the inductions over steps that keep a region are its cases. "
     "GrammarPath: a line under a class that must pass through a set holds a member of it alike to its start; "
     "under a constant class, and up to the net's end, everything downstream of anything alike to a member whose "
     "effects the class holds is alike to it and on its line, and given the regularity that is equivalent to holding "

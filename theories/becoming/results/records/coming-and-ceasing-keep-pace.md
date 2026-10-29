@@ -19,7 +19,7 @@
 4. No amount falls below zero, so over a stretch a finite family falls by at most its total at the start more than it rises, and members falling at arbitrarily late steps rise at arbitrarily late steps: in every unfolding, levels of finitely many conditions that keep falling keep rising. (`Becoming.fallen_within`, `Becoming.rising_recurs`, `Becoming.Web.falls_need_rises`)
    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. For one amount this is Becoming.Renewal's law that an observable never rising from some step on does not fall at arbitrarily late steps. (`Becoming.falls_not_recurring`)
-   - *Master laws, by Lean dependency:* finite runs; its declarations reach the grammar.
+   - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 6. With the amounts bounded, the family rises by at most its bound per member more than it falls, and rising at arbitrarily late steps needs falling at arbitrarily late steps. (`Becoming.risen_within`, `Becoming.falling_recurs`)
    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 7. A determination counts as zero or one, so both hold of it: over any stretch, the members of a finite family holding at the end with those that ceased to be are those holding at the start with those that came to be; comings and ceasings differ by at most the number of members; and each recurs exactly when the other does. (`Becoming.mark`, `Becoming.held_over_stretch`, `Becoming.keep_pace`, `Becoming.coming_recurs_iff`)

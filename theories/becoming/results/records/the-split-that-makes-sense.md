@@ -35,7 +35,7 @@
 12. The coarsest class, one law: the same course through the map is the coarsest relation keeping the map's values that the law keeps, with no premise; for a class keeping the values and carrying the law, being coarser than every such relation, merging every two configurations with the same course, merging exactly those and making sense are one, and it is then coarser than every other such class. (`Becoming.Law.KeepsRelation`, `Becoming.Law.KeepsRelation.run`, `Becoming.Law.KeepsAndCarries`, `Becoming.Law.sameFuture_coarsest`, `Becoming.Law.KeepsAndCarries.of_exact`, `Becoming.Law.coarser_of_exact`, `Becoming.Law.coarsest_iff`)
     - *Master laws, by Lean dependency:* lumping; its declarations reach the grammar.
 13. Where a list holds every configuration the names keep the values, carry the law and merge exactly the configurations with the same course, and a class keeping the values and carrying the law is coarser than every such class into the universe of the values exactly where it merges exactly those. (`Becoming.Law.coarsest_class`)
-    - *Master laws, by Lean dependency:* finite runs and lumping; its declarations reach the grammar.
+    - *Master laws, by Lean dependency:* closure, finite runs and lumping; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
