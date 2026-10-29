@@ -64,6 +64,17 @@ def sha(path):
 
 
 assert (ROOT / REVIEW).exists(), REVIEW
+REVIEW_TEXT = (ROOT / REVIEW).read_text(encoding='utf-8')
+
+
+def names_theorem(text, declaration):
+    # MV's review guard: the review's file names the item's theorem, its last component as a whole word
+    short = declaration.split('.')[-1]
+    return re.search(r'(?<![A-Za-z0-9_])' + re.escape(short) + r'(?![A-Za-z0-9_])', text) is not None
+
+
+def on_own_carrier(row):
+    return MODELS[row] == ['own']
 
 # the leaf's declarations: from the receipt when writing, from the source when checking
 source = (ROOT / LEAF).read_text(encoding='utf-8')
@@ -104,6 +115,7 @@ for record, laws in laws_of.items():
             items_seen.add(item['declaration'])
             assert item['models'] and len(set(item['models'])) == len(item['models'])
             assert set(item['models']) <= {'occurrence', 'process', 'own'}
+            assert names_theorem(REVIEW_TEXT, item['declaration']), ('the review does not name', item['declaration'])
         law = {'en': en, 'zh': zh, 'declarations': decls, 'statements_at_model': items}
         assert len(en) <= style.ITEM_CAPS_V2['laws'][0] and len(zh) <= style.ITEM_CAPS_V2['laws'][1], (record, row)
         new_laws.append(law)
@@ -133,12 +145,15 @@ for record, laws in laws_of.items():
     bindings.append({'source': LEAF, 'receipt': RECEIPT, 'sha256_pointer': '/source_sha256/Becoming.ModelStatements',
                      'success_pointer': '/status', 'success_value': 'passed'})
     rows = ', '.join(f'`{row}`' for row, *_ in laws)
+    own_only = all(on_own_carrier(row) for row, *_ in laws)
+    where_en = 'on its own carrier' if own_only else 'at the model'
+    where_zh = '于其自身之载体上' if own_only else '模型上'
     d['history'].append({
-        'en': f"{DATE_EN} (U2, study section {N}): {'a law' if len(laws) == 1 else f'{len(laws)} laws'} at the model "
-              f"added, stating {rows} where its terms are the grammar's, through the row, a representation and not a "
-              f"derivation (F5's statements_at_model); the row's statement, proof and every other law unchanged.",
-        'zh': f"{DATE_ZH}（U2，研究第 {N} 节）：增模型上之律{'' if len(laws) == 1 else f' {len(laws)} 条'}，于其项为文法之处陈述 "
-              f"{rows}，经其本行，为表示而非推导（F5 之 statements_at_model）；本行之陈述、证明与他律皆不改。"})
+        'en': f"{DATE_EN} (U2, study section {N}): {'a law' if len(laws) == 1 else f'{len(laws)} laws'} {where_en} "
+              f"added, stating {rows} where its terms are the grammar's, through the row (F5's statements_at_model, "
+              f"reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
+        'zh': f"{DATE_ZH}（U2，研究第 {N} 节）：增{where_zh}之律{'' if len(laws) == 1 else f' {len(laws)} 条'}，于其项为文法之处陈述 "
+              f"{rows}，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"})
     after = json.dumps({k: v for k, v in d.items() if k not in ('laws', 'references', 'proof_bindings', 'history')},
                        ensure_ascii=False)
     assert after == before, (record, 'another field changed')
@@ -174,7 +189,8 @@ for record, laws in laws_of.items():
     new = []
     for row, reading, decls, en, zh in laws:
         names_text = ', '.join(f'`{x}`' for x in decls)
-        new.append(f"- **Theorem** ({BASES[row]}). *Stated at the model.* {en[:-1]} ({names_text}).")
+        where = 'On its own carrier.' if on_own_carrier(row) else 'Stated at the model.'
+        new.append(f"- **Theorem** ({BASES[row]}). *{where}* {en[:-1]} ({names_text}).")
     assert not any(n in text for n in new), (record, 'bullet present already')
     lines[j:j] = gap + new
     bullets += len(new)
