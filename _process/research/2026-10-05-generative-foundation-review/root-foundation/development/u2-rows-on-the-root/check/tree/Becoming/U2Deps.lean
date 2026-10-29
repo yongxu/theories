@@ -38,7 +38,8 @@ open Lean
     (`Becoming.ModelStatements.living_on_reaches_reading, `Becoming.Web.living_on_reaches),
     (`Becoming.ModelStatements.descent_reaches_reading, `Becoming.Flow.descent_reaches),
     (`Becoming.ModelStatements.unselected_beyond_data_reading, `Becoming.Learning.Training.unselected_beyond_data),
-    (`Becoming.ModelStatements.finite_reading_not_exact, `Becoming.Renewable.no_exact_finite_reading)]
+    (`Becoming.ModelStatements.finite_reading_not_exact, `Becoming.Renewable.no_exact_finite_reading),
+    (`Becoming.ModelStatements.renewing_not_closed, `Becoming.Renewable.no_exact_finite_reading)]
   let moduleOf : Name → Option Name := fun n =>
     (env.getModuleIdxFor? n).map fun idx => env.allImportedModuleNames[idx.toNat]!
   let fromInit : Name → Bool := fun n =>

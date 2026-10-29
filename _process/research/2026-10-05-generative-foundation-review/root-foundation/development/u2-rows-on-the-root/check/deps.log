@@ -67,3 +67,6 @@ unselected_beyond_data_reading | row reached: true | grammar terms: [Becoming.«
 finite_reading_not_exact | row reached: true | grammar terms: [Becoming.«闭»,
  Becoming.«所闭»,
  Becoming.«及»] | other terms: [Becoming.Run, Becoming.Renewable.process, Becoming.Run.state, Becoming.Run.act]
+renewing_not_closed | row reached: true | grammar terms: [Becoming.«闭»,
+ Becoming.«所闭»,
+ Becoming.«及»] | other terms: [Becoming.Run, Becoming.Renewable.process, Becoming.Run.state, Becoming.Run.act]

@@ -1007,6 +1007,13 @@ theorem finite_reading_iff (h : Nat) :
    fun not_closed _ closed exact => not_closed fun r r' renews agree =>
      (exact r').mp (closed r r' ((exact r).mpr renews) agree)⟩
 
+/-- **The row `Renewable.no_exact_finite_reading` as a statement of closure**: the region of runs along
+which the focal formation renews is not closed under agreeing up to `h`. -/
+theorem renewing_not_closed (h : Nat) :
+    ¬ «闭» (fun r r' : Run Renewable.process => (∀ n, «所闭» Steps.next n h → r.state n = r'.state n) ∧
+        ∀ n, «及» Steps.next n h → r.act n = r'.act n) renewingAlong :=
+  (finite_reading_iff h).mp (finite_reading_not_exact h)
+
 /-! ## 9. The rows' own carriers -/
 
 section Coupling

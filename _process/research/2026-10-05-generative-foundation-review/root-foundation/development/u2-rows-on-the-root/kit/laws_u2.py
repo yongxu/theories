@@ -135,15 +135,29 @@ LAWS = [
      "the untried point.",
      "在函数上，于数据上一致即诸值类之交。沿之封闭之选取即经数据之选取，类于数据外自由即一包含；二者俱在时，一被选成员经一于数据上与之一致、于未试之点与彼成员同值之被选成员，关联于每一成员。"),
     ('becoming-finite-horizon', 'Becoming.Renewable.no_exact_finite_reading', M + 'finite_reading_not_exact',
-     [M + 'finite_reading_not_exact', M + 'finite_reading_iff', M + 'agreeUpTo_iff', M + 'renewing_iff_along',
-      M + 'renewingIn_iff'],
+     [M + 'finite_reading_not_exact', M + 'renewing_not_closed', M + 'finite_reading_iff', M + 'agreeUpTo_iff',
+      M + 'renewing_iff_along', M + 'renewingIn_iff'],
      "At a process's model, with runs as its lines and agreeing up to h read through the steps' closure: no region "
      "of runs closed under that agreement is the region of runs along which the focal formation renews, read at the "
      "occurrence model of the run's web; equivalently that region is not so closed.",
      "在过程之模型上，以历程为其线，并以诸步之闭包读至 h 之一致：无一于此一致下封闭之历程域，等于焦点形成沿之更新之历程域（在历程之网之出现模型上读）；等价地，该域不如此封闭。"),
 ]
 
+# MV's F5 field (its owner's draft, 30 October 2026, final after its review): on each law at the model,
+# model_statements: [{"states": the row's declaration, "by": the reading's declaration}], "by" among the law's
+# own declarations, "states" a declared reference of the record and not among the law's declarations. Row 24
+# has two readings, the row's form and its statement of closure.
+EXTRA_READINGS = {'Becoming.Renewable.no_exact_finite_reading': [M + 'renewing_not_closed']}
+
+
+def model_statements(row, reading):
+    return [{'states': row, 'by': by} for by in [reading] + EXTRA_READINGS.get(row, [])]
+
+
 if __name__ == '__main__':
+    for record, row, reading, decls, en, zh in LAWS:
+        for pair in model_statements(row, reading):
+            assert pair['by'] in decls and pair['states'] not in decls, (record, pair)
     import collections
     assert len(LAWS) == 20
     over = [(r, len(en)) for r, _, _, _, en, _ in LAWS if len(en) > 420]
