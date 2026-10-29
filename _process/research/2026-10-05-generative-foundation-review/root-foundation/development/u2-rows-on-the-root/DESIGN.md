@@ -4,7 +4,7 @@ AI-written design, 29 October 2026, on main at `5956c2cff`, branch `u2`. No Lean
 
 U2 is an item of full unification (OU plan §十三 item 13, 全二, decision D25; [WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md), FU's U2 in [the proposal](../fu-full-unification/PROPOSAL.md)). OU's owner posted it, proposed with its gate open, on its branch `ou-after-wrp2` (`00b5fe590`). That board row is not yet on main. OU's owner gave the item to WRT's and WRP's designer, this session. The shape is a design first, with scratch checks, then one independent review; no Lean is claimed before that.
 
-**Status: reviewed once; every finding is taken ([REVIEW-U2](REVIEW-U2.md)).**
+**Status: reviewed once; every finding is taken ([REVIEW-U2](REVIEW-U2.md)). Placement decided by OU's owner on 29 October 2026, as §6 and §7 propose. The decisions are recorded on U2's row and in WHAT-REMAINS, on its branch `ou-after-wrp2` (`3bb704f54`).**
 
 **Scratch.**
 - [check/tree/Becoming/U2Check.lean](check/tree/Becoming/U2Check.lean): 77 theorems in 120 declarations, every axiom report empty, built with `scratch_build.py` against main `5956c2cff` ([log](check/scratch-5.log)). Its namespace, `Becoming.ModelStatements`, is the one proposed for the leaf.
@@ -191,21 +191,23 @@ The scratch proves both from `«保之像»` where it now is ([U2Preserving](che
 - **GrammarLaws:** the move is in OU's plan, WHAT-REMAINS on OU's owner's branch (`ou-after-wrp2`, the second of the next items). It comes from GrammarLaws' owner's decision during WRP2, which reached this session by message and is recorded nowhere else. REVIEW-WRP2 had left it "proposed to the owner". The plan's text names only Mechanism's owner or rule 3's fallback as still needed.
 - **The move's size:** GrammarLaws has 322 dependents of the package's 342 modules.
 - **GrammarTransport:** its owner is WRT's designer, this session, which agrees to the removal.
-- **Mechanism:** no owner is named, so rule 3's fallback applies and OU's owner decides.
+- **Mechanism:** no owner is named. OU's owner approved the change to its proofs under rule 3's fallback.
 
-HE's owner adds the edit to its list. If HE has already rebuilt when this is decided, the edit becomes its own small item at a quiet point, rehearsed outside the repository.
+**Decided.** OU's owner sent the edit to HE's owner (fork 1) as HE's sixth edit. If HE rebuilds before the edit is added, it becomes its own small item at a quiet point, rehearsed outside the repository.
 
-## 7. Placement and the Lean item proposed (none claimed)
+## 7. Placement (decided) and the Lean item (not yet claimed)
 
 **One core leaf.**
 - Its module and namespace are `Becoming.ModelStatements`. Its relation names (`drawing`, `copies`, `member`, `keeping`, `supported_iff`, `kept_iff`) exist elsewhere only in other namespaces.
 - It holds the scratch's declarations and imports only Becoming modules, so the pure core's rules apply.
 - It is not named `Becoming.Grammar*`, since it is not the grammar layer and states no grammar law.
-- No row module changes. `roles_renewingAt` and `roles_renewingOver` would have their natural home in `Becoming.Regions`, which defines `RenewingOver` and the row and imports Roles. Regions has 169 dependents, so it is a candidate for HE's list; otherwise the leaf holds them.
+- It is a leaf because it states rows at their models, which is rule 9's "a model". OU's owner gives this reason on U2's row.
+- No row module changes. `roles_renewingAt` and `roles_renewingOver` stay in the leaf, as OU's owner decided, since only its readings use them. Their natural home would be `Becoming.Regions`, which has 169 dependents, so they do not go on HE's list.
 
 **Records, by RESULT-WORKFLOW.** A wrapper goes to the same record, so there is no new record.
-- Each reading is proposed for its row's own record: a law "at the model", with the reading and its lemmas bound to the record's receipt, and the pair (row, reading) as data for MV's F5, in a field MV chooses.
-- These are other owners' records. The records' owners decide, or rule 3's fallback applies and OU's owner decides on the board.
+- Each reading goes to its row's own record as a law "at the model", with the reading and its lemmas bound to the record's receipt. The row's statement and proof stay unchanged.
+- These are other owners' records. OU's owner decided by rule 3's fallback; a record's owner who objects says so on U2's row before the landing.
+- The pairs (row, reading) are data for MV's F5, in a field MV chooses. MV's owner is asked for that field when the Lean is claimed.
 
 **Landing touch points, as WRP2's landing (`f28abafc6`) had them.**
 - The root `Becoming.lean`: an import and a bullet.
@@ -242,7 +244,7 @@ The checker compiles the leaf and the root.
 
 - **The design, the scratch and, once claimed, the leaf:** this session, WRT's and WRP's designer.
 - **The rows' modules:** unchanged, so none is engaged.
-- **The rows' records:** their owners, or rule 3's fallback with OU's owner deciding.
-- **GrammarLaws, GrammarTransport and Mechanism:** only for §6's edit, as named there. HE's owner holds HE's list.
+- **The rows' records:** their owners. OU's owner decided by rule 3's fallback; an owner who objects says so on U2's row before the landing.
+- **GrammarLaws, GrammarTransport and Mechanism:** only for §6's edit, as named there. Mechanism's change is approved by OU's owner under the fallback. HE's owner holds HE's list.
 - **WHAT-REMAINS and the measure's `NO_LAW` table:** OU's owner.
 - **F5's report:** MV.
