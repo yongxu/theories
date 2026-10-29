@@ -1,0 +1,45 @@
+## {N}. The lineage laws, cases of the grammar's laws of steps (OU3f)
+
+After the closure ([§445](#445-the-inductions-over-steps-cases-of-closure-ou3f)), OU3f's derivations go on with the lineage laws of `Becoming.Identity` ([design](development/ou3f-activity-laws/lineage/DESIGN.md)). [The audit](development/ou3f-activity-laws/AUDIT.md) found two of them cases of grammar laws through a bridge to the grammar's steps restricted to active occurrences from a bound on, and four needing laws of steps the grammar lacked; those laws landed in [§442](#442-the-theorems-that-read-only-activity-and-the-laws-of-steps-they-lack-ou3f). The census law under a continuation from one covering list, and its converse, rest on these six.
+
+```text
+Result(s): record master-laws-on-the-grammar extended (the last group, an Identity reference, history; its item on
+       the lineage laws dropped); record census-balance-under-continuation re-pointed; no new record.
+Delta: (1) the bridge. A lineage of k steps from g at step M (Web.Lineage, each step of the continuation between
+       formations active at its two ends, taken last step last) is exactly the grammar's k steps (first step first)
+       of the continuation within activity from a step N not after M: k such steps lead from (M, g) to y exactly
+       where y lies at step M + k and the lineage reaches y's formation (Web.steps_iff_lineage, for every k, 0
+       included). A step within activity from N is one of the continuation between occurrences alike in activity,
+       from an active one at or after N (Web.activityFrom, not a class). The restriction makes "no split from M on"
+       the fixed successor and "no merge from M on" merging nothing; the endpoint's step lets split steps be read
+       back; the bound N ≤ M lets the second part of a split lineage keep its steps within activity from M.
+       (2) the derivations. Lineage.unique from «迭之定», Lineage.origin from «迭之定前», Lineage.split from «迭之分»
+       and Lineage.through as split at k + 1; Lineage.onward from «或有后则或迭», and Lineage.back from it read on
+       the converse through «迭之逆». Each old proof was an induction on the step count; each new one has none of
+       its own, and only one step's argument remains (no split, no merge, nothing ceasing, nothing arising).
+       Lineage.ends and lineages_apart apply them and follow. Statements and names are unchanged.
+       (3) what moves. continuationStep and occurrence_eq move up within Identity, to the bridge, which must come
+       before the lineage laws; split moves up, since through is now its case; steps_advance (k steps of a
+       continuation advance the index by k) moves from MapInstances to Identity, since back needs it, steps back
+       starting where it is not given. Names and statements are unchanged. Identity {IT} theorems in {ID}
+       declarations, MapInstances {MT} in {MD}.
+       (4) texts. Identity's header (Lineages on the grammar), the covering forms' doc section and the grammar
+       section's notes; 01 §7's finite-runs bullet; the root module's Identity and GrammarLaws bullets; 08's counts;
+       the connectivity register drops «或有后则或迭», «迭之分» and «迭之逆», registered for the lineage laws to use.
+       (5) the measure is unchanged: no central declaration rests on these laws.
+Supplied premises / correspondence: none.
+Evidence: core receipt {RECEIPT}, every axiom report empty; the signature audit (signatures_lineage.py) shows every
+       statement of Identity and MapInstances printing as before, steps_advance moved with its statement, and the two
+       theorems and one definition new; the dependency dump shows each of the six reaching the law named and none
+       with an induction of its own (dump_check_lineage.py).
+Boundary: GrammarLaws' module doc still names the lineage laws among what is not shown; correcting it rebuilds 323 of
+       the 343 modules, and it waits for the next full rebuild, with kept_onward's move into GrammarLaws. The
+       coarse-to-fine pair is not derived. Lineage.cons, Lineage.line, line_lineage and lineage_iff_line stay
+       representation.
+Output → input: the record; 01 §7; Identity and MapInstances; the root module; 08's counts; the master-law view;
+       OU3f's next part, the coarse-to-fine pair.
+```
+
+**The review, and what was taken.** (to be written from the review)
+
+**Self-review.** (1) Each derivation was checked against OU3d's second review's test, mechanically against the dependency dump as well: the law replaces the induction, and only one step's argument remains. (2) A bridge that fixes the endpoint's step makes every use a reading rather than a re-indexing. (3) A lemma moves to the module of the definition it reads when an earlier module needs it, rather than being proved twice. (4) Not done: the items in Boundary.
