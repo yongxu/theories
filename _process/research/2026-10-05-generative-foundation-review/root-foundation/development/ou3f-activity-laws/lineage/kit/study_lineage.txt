@@ -29,8 +29,9 @@ Delta: (1) the bridge. A lineage of k steps from g at step M (Web.Lineage: each 
          lineage laws.
        - split moves up, since through is now its case.
        - steps_advance moves from MapInstances to Identity, since the forward reading and back need it.
-       - Lineage.cons, the bridge read at one more first step, lost its one consumer (line_lineage's old induction)
-         and is retired.
+       - Lineage.cons is retired. It put a first step onto a lineage, and is the bridge read at one more first step,
+         with only «迭»'s definition between, so it states no law of its own. Its one consumer was line_lineage's
+         old induction, and no module or record names it.
        Identity has {IT} theorems in {ID} declarations, MapInstances {MT} in {MD}.
        (4) texts. Identity's header (Lineages on the grammar), the bridge's doc section, a heading for the census law
        and the grammar section's notes; 01 §7's finite-runs bullet; the root module's Identity and GrammarLaws bullets;
@@ -40,8 +41,10 @@ Delta: (1) the bridge. A lineage of k steps from g at step M (Web.Lineage: each 
        since laws 10 and 11 of census-balance-under-continuation now reach the laws of steps.
 Supplied premises / correspondence: none.
 Evidence: core receipt {RECEIPT}, every axiom report empty. The signature audit (signatures_lineage.py) shows every
-       remaining statement of Identity and MapInstances printing as before: steps_advance moved with its statement,
-       Lineage.cons gone, three theorems and one definition new. The dependency check (deps_lineage.py, the review's
+       remaining statement of Identity and MapInstances printing as before. Its line: moved
+       {'Becoming.Web.steps_advance': ['MapInstances', 'Identity']}; gone ['Becoming.Web.Lineage.cons']; new
+       ['Becoming.Web.lineage_of_steps', 'Becoming.Web.steps_iff_lineage', 'Becoming.Web.steps_start_active'];
+       new definitions ['Becoming.Web.activityOnward']. The dependency check (deps_lineage.py, the review's
        adapted) shows each of the eight with no induction of its own and reaching its law; on main each carries one.
 Boundary: GrammarLaws' module doc still lists the lineage laws among what is not shown, and its sentence on the
        models' step-indexed laws leaves them out. Correcting either rebuilds 324 of the 346 modules, so both go to
