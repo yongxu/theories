@@ -39,12 +39,16 @@ MR, WM = by['Becoming.MapRegions'], by['Becoming.WideningOnTheMap']
 COUNTS = (f'Becoming.MapRegions ({MR["theorems"]} theorems in {len(MR["declarations"])} declarations) and '
           f'Becoming.WideningOnTheMap ({WM["theorems"]} in {len(WM["declarations"])})')
 
+import os
+# BOARD_ONLY=1 runs only the board and history steps (the earlier ones assert they have not yet applied)
+BOARD_ONLY = os.environ.get('BOARD_ONLY') == '1'
+
 # 08's counts
 m08 = Path('theories/becoming/chapters/08-METHOD.md')
 text = m08.read_text(encoding='utf-8')
 pat = re.compile(r'At core receipt \[`[0-9T.Z]+`\]\(\.\./\.\./\.\./' + re.escape(PKG) + r'/becoming-checks/[0-9T.Z]+/verification\.json\) \(Lean 4\.29\.1\), the closure held [0-9,]+ modules \([0-9]+ foundation, [0-9]+ core, [0-9]+ in the instance and application ring\) and [0-9,]+ theorems; the [0-9]+ core modules held [0-9,]+ of them; [0-9,]+ declarations were audited;')
-assert len(pat.findall(text)) == 1
-text = pat.sub(f'At core receipt [`{RECEIPT}`](../../../{PKG}/becoming-checks/{RECEIPT}/verification.json) (Lean 4.29.1), the closure held '
+assert BOARD_ONLY or len(pat.findall(text)) == 1
+text = text if BOARD_ONLY else pat.sub(f'At core receipt [`{RECEIPT}`](../../../{PKG}/becoming-checks/{RECEIPT}/verification.json) (Lean 4.29.1), the closure held '
                f'{len(mods)} modules ({layers["foundation"]} foundation, {layers["core"]} core, {ring} in the instance and application ring) '
                f'and {theorems:,} theorems; the {layers["core"]} core modules held {core_theorems:,} of them; {decls:,} declarations were audited;', text)
 m08.write_text(text, encoding='utf-8')
@@ -56,12 +60,14 @@ study = study.replace('MEASURE', MEASURE)
 assert 'SECTION' not in study and 'COUNTS' not in study and 'MEASURE' not in study and '`RECEIPT`' not in study
 reading = RF / 'BECOMING-RENEWAL-READING.md'
 text = reading.read_text(encoding='utf-8')
-assert f'\n## {int(N) - 1}.' in text and f'\n## {N}.' not in text, 'section number'
-reading.write_text(text.rstrip('\n') + '\n\n' + study.rstrip('\n') + '\n', encoding='utf-8')
+if not BOARD_ONLY:
+    assert f'\n## {int(N) - 1}.' in text and f'\n## {N}.' not in text, 'section number'
+    reading.write_text(text.rstrip('\n') + '\n\n' + study.rstrip('\n') + '\n', encoding='utf-8')
 
 # the note's landing line
-edit(G / 'NOTE.md', '''Figures at the build (`scratch_build.py`):''',
-     f'''The core checker passed at landing, at receipt `{RECEIPT}` (study §{N}); the two modules are new leaves, so no earlier statement changed. Figures at the build (`scratch_build.py`):''')
+if not BOARD_ONLY:
+    edit(G / 'NOTE.md', '''Figures at the build (`scratch_build.py`):''',
+         f'''The core checker passed at landing, at receipt `{RECEIPT}` (study §{N}); the two modules are new leaves, so no earlier statement changed. Figures at the build (`scratch_build.py`):''')
 
 # the board
 board = Path('_process/BECOMING-WORKBOARD.md')
@@ -87,10 +93,10 @@ qline = [l for l in text.split('\n') if l.startswith('- **Queue:**')]
 assert len(qline) == 1
 rest = qline[0][len(landed):]
 stale = re.findall(r"\)\. Then, in the coordinator's order: [^;]*; ask the coordinator for a slot[;.] ", rest)
-assert len(stale) <= 1, stale
-if stale:
-    print('dropped the earlier order sentence:', stale[0])
-    text = text.replace(qline[0], landed + rest.replace(stale[0], '); ', 1))
+for s in stale:
+    print('dropped an earlier order sentence:', s)
+    rest = rest.replace(s, '); ', 1)
+text = text.replace(qline[0], landed + rest)
 old_latest = re.search(r"the latest core receipt is [^`]*`[0-9T.Z]+` \([0-9]+ October 2026\)", text)
 assert old_latest and text.count(old_latest.group(0)) == 1
 text = text.replace(old_latest.group(0), f"the latest core receipt is GW1, GW2 and GW6's `{RECEIPT}` (30 October 2026)")

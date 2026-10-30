@@ -554,7 +554,7 @@ Built on 30 October 2026 on the `gw-lean` branch from main at `6376f0da3`, the c
 
 What changes in the verdict (§1). The link is one way on the readings of formations (§§3–4) and on the held possible under the one (§5). Read on the moments it is both ways under the two premises, as a representation; as a join with classes fixed apart, it is the split by loss. At (the one, the same possible) the join is one way because the one does not count loss (`Steps.Moving`). The held class of §5 is a further fine class, and its converse fails on `Oscillating`.
 
-Figures at the build (`scratch_build.py`): `Becoming.MapRegions` has 39 theorems in 45 declarations and `Becoming.WideningOnTheMap` 43 theorems in 52; every axiom report is empty and there are no warnings. No earlier module's statement changed. Besides the two leaves, two files changed:
+The core checker passed at landing, at receipt `20261030T152859.871907Z` (study §467); the two modules are new leaves, so no earlier statement changed. Figures at the build (`scratch_build.py`): `Becoming.MapRegions` has 39 theorems in 45 declarations and `Becoming.WideningOnTheMap` 43 theorems in 52; every axiom report is empty and there are no warnings. No earlier module's statement changed. Besides the two leaves, two files changed:
 - `Becoming.lean`: the imports, the two new bullets, and the bullets of KeepingWidening and HeldPossible brought up to GW3–GW5;
 - `check_becoming.py`: the core list and the scope.
 
