@@ -5,7 +5,8 @@ python3 -B run_controls.py U4_BUILD [WORK]
 U4_BUILD is the .build folder of U4's boundary-scratch, built by its run_check.sh (U4 at fe2a1942b). The script
 compiles BoundaryCheckControls.lean (beside it) against that build into WORK (default: a temporary folder), runs the
 check on row 17, row 5 and the controls, and exits non-zero unless each case fails exactly as expected
-(controls-run.log is its output on 30 October 2026)."""
+(controls-run.log is its output on 31 October 2026, after the discharge condition counted a package's
+definitions of propositions as proofs and test 3's message named the hypotheses)."""
 import copy, json, os, subprocess, sys, tempfile
 from pathlib import Path
 
@@ -68,7 +69,7 @@ CASES = [
      ['the fit Becoming.BoundaryCheckControls.gate_needed_aside does not apply the form to its hypothesis'], False),
     ('a degenerate form, its one hypothesis its conclusion', holds,
      ['the discharge condition fails: the recovery uses [Becoming.GroupEnding.Flow.all_end]',
-      'the form\'s statement names no «» term of the root'], False),
+      'neither the form\'s statement nor a hypothesis it applies names a «» term of the root'], False),
     ('the degenerate form with the row declared a bridge', changed(holds, bridges=['Becoming.GroupEnding.Flow.all_end']),
      ['the bridge Becoming.GroupEnding.Flow.all_end uses theorems outside the closed set',
       'the bridge Becoming.GroupEnding.Flow.all_end, used by the recovery, is not an equivalence'], False),

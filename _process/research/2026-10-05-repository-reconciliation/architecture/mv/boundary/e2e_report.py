@@ -6,7 +6,10 @@ CHECKOUT is a checkout at the run's commit (the Lean check restores its modules 
 October, the mv-probe worktree at main e332ae87a, core run 20261030T152859.871907Z). INPUTS holds that run's
 constants.pickle, measure.json and probe.json (probe.py's output). The carrier holds U4's eight derived rows with the
 probe's bridges and support, the three readings equal to the rule, act_courses_unselected declared derived (which
-must fail), and the two premises of the ethics. OUT receives the report (e2e-report.json beside this file).
+must fail), and the two premises of the ethics. OUT receives the report (e2e-report.json beside this file). The run
+asserts the outcomes: the Lean check ran, the eight derived rows and the three readings stand as declared, only
+act_courses_unselected is unverified, failing D2, D3 and D5, the premises are not entailed and not shown, and the
+counts sum to the central declarations.
 """
 import json, pickle, sys, importlib.util
 from pathlib import Path
@@ -60,3 +63,12 @@ print(json.dumps({k: rep[k] for k in ('counts', 'groups', 'derived_by_forwarder'
 for x in rep['unverified']:
     print('UNVERIFIED', x['declaration'], x['failed'])
 print(json.dumps(rep['against_f5'], ensure_ascii=False))
+eight = ['Becoming.' + d for d in probe['summary']['eight']]
+assert rep['lean_check']['ran'], rep['lean_check']
+assert all((rep['rows'][d]['label'], rep['rows'][d]['placed']) == ('derived', 'checked entry') for d in eight), eight
+assert all(rep['rows'][s['declaration']]['placed'] == 'reading' for s in standings[len(eight):-1])
+assert [x['declaration'] for x in rep['unverified']] == [acts], rep['unverified']
+assert sorted({f[:2] for f in rep['unverified'][0]['failed']}) == ['D2', 'D3', 'D5'], rep['unverified'][0]['failed']
+assert [p['result'] for p in rep['premises_of_the_ethics']] == ['not entailed', 'not shown'], rep['premises_of_the_ethics']
+assert sum(rep['counts'].values()) == sum(rep['groups'].values()) == len(central)
+print('the expected outcomes hold')

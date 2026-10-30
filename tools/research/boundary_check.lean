@@ -43,7 +43,8 @@ checked there. Malformed input is an error; a failed test never is.
    is through the package's constants, so an amount behind a prelude definition counts.
 3. **F's statement.**
    - It names only admitted constants and its hypotheses.
-   - It names `«际»` or another «» term of the root. This excludes only forms free of relations.
+   - It, or a hypothesis it applies, names `«际»` or another «» term of the root. This excludes only forms free of
+     relations.
    - Nothing it reaches is a closed value of the package: a definition, opaque or constructor whose type is
      neither a function type nor a sort (the dump's `cv`).
    - Every binder that is not a proposition is implicit. Every propositional binder is an application of one
@@ -56,16 +57,19 @@ checked there. Malformed input is an error; a failed test never is.
    - Its type is `¬ H w`. Every constant of `w` is admitted, or a witness: a definition of F's module naming only
      admitted constants.
    - Its proof is `fun h => …`, and applies F with `h` among F's arguments.
-   - Its facts are the package's theorems its proof names besides F. No fact reaches F or the row. The
-     countermodel's proof names the same facts.
+   - Its facts are the package's proofs its proof uses besides F, found as in test 9. No fact reaches F or the
+     row. The countermodel's proof uses the same facts.
 6. **F's proof.** It reaches only constants of `Init`, the prelude, `Grammar*` modules and F's own module. It
    does not reach the row.
 7. **The certificate.** Its type is `@Row = @Recovery`, in either order. The row is at distinct universe
    parameters of the certificate, so the recovery states the row at its full generality.
 8. **The recovery.** Under its leading binders, its proof is F applied.
 9. **The discharge condition.** The recovery meets F's hypotheses from the row's own by definitions alone.
-   - Its proof, through its own auxiliary definitions, uses no theorem but F, the declared bridges and
-     projections (`And.left`, `Iff.mp`, …). Constructors and `rfl` are not theorems.
+   - Its proof uses no proof but F, the declared bridges and projections (`And.left`, `Iff.mp`, …). A proof is a
+     theorem, or a definition or opaque of the package whose type is a proposition. The proofs it uses are those
+     it and its own auxiliary definitions name, and the package's proofs inside every definition of the package
+     they reach, so a fact held in a definition, or carried by a model's data, counts. Constructors and `rfl` are
+     not proofs, and `Init`'s proofs inside a definition are not counted.
    - Each bridge the recovery uses is an equivalence: under its binders, an `Iff`, or an `Eq` between
      propositions, predicates or relations (an `Eq` at a type of values, `size = 0`, is not one).
    - The bridges are a closed set: each bridge's proof uses no theorem but admitted ones, other bridges and
@@ -73,7 +77,8 @@ checked there. Malformed input is an error; a failed test never is.
 
 The kernel has checked every declaration, so the certificate's statement holding is the kernel's verdict that the
 recovery states the row. What a review still reads: that the hypotheses are the row's relational content, and that
-each principal bridge adds no hypothesis the row lacks. `boundary_check_test.py` runs the negative controls.
+each principal bridge adds no hypothesis the row lacks. `tools/research/tests/test_boundary.py` (TheLeanCheck) runs it on
+stub modules, with the negative controls.
 -/
 
 open Lean Meta
@@ -170,21 +175,42 @@ def closedValue (env : Environment) (c : Name) : Bool :=
 def grammarTerm (env : Environment) (c : Name) : Bool :=
   packaged env c && admitted env c && (toString c).contains '«'
 
-/-- The theorems a proof uses, through its own auxiliary definitions (those under its name). -/
-partial def theoremsUsed (env : Environment) (owner : Name) : List Name := Id.run do
+/-- A proof: a theorem, or a definition or opaque of the package whose type is a proposition (a fact held in a
+definition, or an instance of a class of propositions). `Init`'s, such as `rfl`, are not. -/
+def isProof (c : Name) : MetaM Bool := do
+  let env ← getEnv
+  match env.find? c with
+  | some (.thmInfo _) => return true
+  | some (.defnInfo v) => return packaged env c && (← Meta.isProp v.type)
+  | some (.opaqueInfo v) => return packaged env c && (← Meta.isProp v.type)
+  | _ => return false
+
+def isDefOrOpaque (env : Environment) (c : Name) : Bool :=
+  match env.find? c with
+  | some (.defnInfo _) | some (.opaqueInfo _) => true
+  | _ => false
+
+/-- The proofs a proof uses: every proof it and its own auxiliary definitions (those under its name) name, and the
+package's proofs inside every definition of the package they reach, all the way down. So a fact held in a
+definition, or carried by a model's data (`⟨f, f_rel⟩ : {f // …}`), counts. `Init`'s proofs inside a definition, such
+as its termination proofs' lemmas, do not. -/
+partial def theoremsUsed (owner : Name) : MetaM (List Name) := do
+  let env ← getEnv
   let mut seen : NameSet := {}
   let mut found : List Name := []
-  let mut stack := [owner]
+  let mut stack : List (Name × Bool) := [(owner, true)]
   repeat
     match stack with
     | [] => break
-    | n :: rest =>
+    | (n, own) :: rest =>
       stack := rest
       if seen.contains n then continue
       seen := seen.insert n
       for m in namesOf env n do
-        if owner.isPrefixOf m && m != owner then stack := m :: stack
-        else if isTheorem env m && !found.contains m then found := found ++ [m]
+        if own && owner.isPrefixOf m && m != owner then stack := (m, true) :: stack
+        else if ← isProof m then
+          if (own || packaged env m) && !found.contains m then found := found ++ [m]
+        else if packaged env m && isDefOrOpaque env m then stack := (m, false) :: stack
   return found
 
 /-- An expression with its leading binders and metadata removed. -/
@@ -260,7 +286,7 @@ def checkEntry (e : Entry) : MetaM Json := do
   unless bad.isEmpty do
     fail s!"the form's statement names constants neither admitted nor its hypotheses: {show_ bad}"
   unless (stated ++ hyps.flatMap (namesOf env)).any (grammarTerm env) do
-    fail "the form's statement names no «» term of the root"
+    fail "neither the form's statement nor a hypothesis it applies names a «» term of the root"
   let closed := (closureOf env stated).toList.filter (closedValue env)
   unless closed.isEmpty do fail s!"the form's statement reaches closed values: {show_ closed}"
   forallTelescope formInfo.type fun xs concl => do
@@ -308,11 +334,11 @@ def checkEntry (e : Entry) : MetaM Json := do
       let applied ← withLocalDecl n bi t fun x => pure (appliesWith (b.instantiate1 x) e.form x)
       unless applied do fail s!"the fit {h.fit} does not apply the form to its hypothesis"
     | _ => fail s!"the fit {h.fit}'s proof is not a function of its hypothesis"
-    let facts := ((namesOf env h.fit).filter fun c => isTheorem env c && packaged env c && c != e.form).eraseDups
+    let facts := (← theoremsUsed h.fit).filter fun c => packaged env c && c != e.form
     for fact in facts do
       let r := closure env fact
       if r.contains e.form || r.contains e.row then fail s!"the fact {fact} reaches the form or the row"
-    let cmFacts := ((namesOf env h.countermodel).filter fun c => isTheorem env c && packaged env c).eraseDups
+    let cmFacts := (← theoremsUsed h.countermodel).filter fun c => packaged env c
     unless facts.all cmFacts.contains && cmFacts.all facts.contains do
       fail s!"the countermodel {h.countermodel} uses {show_ cmFacts}, the fit {h.fit} uses {show_ facts}"
     factsOf := factsOf ++ [(toString h.fit, toJson (facts.map toString))]
@@ -344,14 +370,14 @@ def checkEntry (e : Entry) : MetaM Json := do
   | none => fail s!"the recovery {e.recovery} has no proof"
   -- 9. The discharge condition and the bridges.
   let projection (c : Name) : Bool := env.isProjectionFn c
-  let used := theoremsUsed env e.recovery
+  let used ← theoremsUsed e.recovery
   note "recovery_uses" (toJson (used.map toString))
   let others := used.filter fun c => c != e.form && !e.bridges.contains c && !projection c
   unless others.isEmpty do
     fail s!"the discharge condition fails: the recovery uses {show_ others}"
   let mut usedBy : List Name := used
   for b in e.bridges do
-    let bUsed := theoremsUsed env b
+    let bUsed ← theoremsUsed b
     usedBy := usedBy ++ bUsed
     let outside := bUsed.filter fun c => !admitted env c && !e.bridges.contains c && !projection c
     unless outside.isEmpty do fail s!"the bridge {b} uses theorems outside the closed set: {show_ outside}"

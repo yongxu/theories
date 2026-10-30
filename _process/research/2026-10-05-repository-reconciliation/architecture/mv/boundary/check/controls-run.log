@@ -1,3 +1,4 @@
+
 ok   row 17
 ok   row 5: the discharge condition fails
        the discharge condition fails: the recovery uses [Becoming.Flow.descends_of_comes]
@@ -38,10 +39,10 @@ ok   a fit not applying the form to its hypothesis
        the fit Becoming.BoundaryCheckControls.gate_needed_aside does not apply the form to its hypothesis
        the countermodel Becoming.U4Boundary.outside_leaves_no_offspring.needs_gate uses [Becoming.U4Boundary.one_offspring, Becoming.U4Boundary.listed_within_all, Becoming.U4Boundary.outside_nowhere], the fit Becoming.BoundaryC
 ok   a degenerate form, its one hypothesis its conclusion
-       the form's statement names no «» term of the root
+       neither the form's statement nor a hypothesis it applies names a «» term of the root
        the discharge condition fails: the recovery uses [Becoming.GroupEnding.Flow.all_end]
 ok   the degenerate form with the row declared a bridge
-       the form's statement names no «» term of the root
+       neither the form's statement nor a hypothesis it applies names a «» term of the root
        the bridge Becoming.GroupEnding.Flow.all_end uses theorems outside the closed set: [Becoming.SelectionTerm.Generations.born_eq, Becoming.SelectionTerm.total_zero_of, Becoming.GroupEnding.Flow.offspring_zero]
        the bridge Becoming.GroupEnding.Flow.all_end, used by the recovery, is not an equivalence
 ok   an unused bridge

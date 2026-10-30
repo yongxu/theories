@@ -1,6 +1,6 @@
 # The boundary field: each central declaration's standing, declared on U4's record and checked against the Lean
 
-**Status:** draft 3, implemented (§8 step 1): the rules in [tools/research/boundary.py](../../../../../tools/research/boundary.py), applied by the check (registry.py) and the generator (master_laws.py); the Lean check in [tools/research/boundary_check.lean](../../../../../tools/research/boundary_check.lean); the tests in [tools/research/tests/test_boundary.py](../../../../../tools/research/tests/test_boundary.py). This is MV's part of U4's boundary record ([WHAT-REMAINS](../../../2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md), "One root to its edge" and "OU's decisions on U4").
+**Status:** draft 3, implemented (§8 step 1) and its code reviewed by four lenses, every confirmed finding taken (§9): the rules in [tools/research/boundary.py](../../../../../tools/research/boundary.py), applied by the check (registry.py) and the generator (master_laws.py); the Lean check in [tools/research/boundary_check.lean](../../../../../tools/research/boundary_check.lean); the tests in [tools/research/tests/test_boundary.py](../../../../../tools/research/tests/test_boundary.py). This is MV's part of U4's boundary record ([WHAT-REMAINS](../../../2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md), "One root to its edge" and "OU's decisions on U4").
 - **How the field lands.** U4's owner asked for it on 30 October 2026. U4's owner agreed that the record is built to it and that the field lands first, as F5's field ([F5-MODEL-STATEMENTS.md](F5-MODEL-STATEMENTS.md)) landed before U2's Lean.
 - **The drafts and their reviews.**
   - Draft 1 (88b470a44): three independent reviewers read it, for the Lean, for the edge's meaning and for the tooling ([reports/boundary-field-review.json](reports/boundary-field-review.json), 49 findings).
@@ -98,7 +98,7 @@ No other key is allowed, and a key outside its standing is refused. A reading ca
 | `name` | `{en, zh}`, at least one nonempty |
 | `premise` | the definition stating it |
 | `not_entailed` | a theorem showing that no statement reading only the dynamics entails it, or `null` |
-| `absent` | required when `not_entailed` is `null`: why |
+| `absent` | required when, and allowed only when, `not_entailed` is `null`: why |
 | `basis`, `review` | as for a standing |
 
 - **The condition:** `premise` is `Becoming.Unrestricted`, and `not_entailed` is `Becoming.ReadsOnlyDynamics.not_entails`.
@@ -125,7 +125,7 @@ In the code, §3.0 to §3.5 and the report are boundary.py's, which master_laws.
 ### 3.0 Terms
 
 These are computed from the dump. [boundary/probe.py](boundary/probe.py) is their reference implementation for the design, and the generator's code is among the inputs MV hashes.
-- **Generated auxiliaries** are Lean's own constants, matched on the last name component by the probe's pattern (`AUX`), which is normative. It covers:
+- **Generated auxiliaries** are Lean's own constants, matched by boundary.py's pattern (`AUX`), which is normative, on any name component after the first, the components split at the dots outside «». It covers:
   - `match_N` with any further `_N` (Lean 4.29.1 names matchers `match_N_M`);
   - `_proof_N`, `proof_N`, `eq_N`, `eq_def`, `_aux_N`;
   - `sizeOf_spec`, `_sizeOf_N`, `_sizeOf_inst`;
@@ -133,6 +133,7 @@ These are computed from the dump. [boundary/probe.py](boundary/probe.py) is thei
   - `splitter`, `_unsafe_rec`, `_sunfold`, `_flat_ctor`, `_default`.
 
   They are never laws, bridges or theorems a proof names: every walk goes through them.
+  - **An auxiliary's own constants** are generated too: the constructors of a `below` family (`«同族».below.refl`) and a `brecOn`'s `go` and `eq`. The probe matched the last component only. On GW's run the difference is 97 names (69 constructors, 14 theorems and 14 definitions), and no figure, walk or reach changes.
 - **Reaching** is the closure through types and values, all the way down, definitions and theorems alike. Init is not in the dump, so the closure stops there.
 - **A root constant** is a constant of `Becoming.Prelude` or of a `Becoming.Grammar*` module whose closure lies wholly in those modules. A theorem's proof is included, so this is a matter of content.
   - On the current run there are 2,258.
@@ -207,7 +208,7 @@ This is the strict reading U4's design adopts (DESIGN-BOUNDARY §1.2). F is stat
    A «» name declared elsewhere is refused.
 3. **F's statement.**
    - It names only admitted constants and its hypotheses.
-   - It names `«际»` or another «» term of the root. This excludes only forms free of relations.
+   - It, or a hypothesis it applies, names `«际»` or another «» term of the root. This excludes only forms free of relations.
    - It reaches no closed value.
    - Every binder that is not a proposition is implicit. Every propositional binder is an application of one listed hypothesis, and each hypothesis is used exactly once. So no hypothesis is written inline.
 4. **The countermodel `F.needs_H`.**
@@ -216,7 +217,7 @@ This is the strict reading U4's design adopts (DESIGN-BOUNDARY §1.2). F is stat
 5. **The fit `F.H_needed`.**
    - Its type is `¬ H w`, at a witness of admitted constants and definitions of F's module that name only admitted constants.
    - Its proof is `fun h => …` and applies F with `h` among F's arguments, so the kernel checks that the facts meet F's other hypotheses and that F's conclusion fails there.
-   - Its facts are the package's theorems it names besides F. No fact reaches F or the row, and the countermodel names exactly the same facts.
+   - Its facts are the package's proofs it uses besides F, found as in test 9. No fact reaches F or the row, and the countermodel uses exactly the same facts.
 6. **F's proof** reaches only Init, the prelude, grammar modules and F's own module, and not the row. A lemma of the leaf whose content is on the root, such as `length_zero_of_none`, is allowed.
 7. **The certificate.**
    - Its type is `@Row = @Recovery`, in either order.
@@ -224,7 +225,7 @@ This is the strict reading U4's design adopts (DESIGN-BOUNDARY §1.2). F is stat
    - The kernel has checked it, so Lean has checked that the recovery states what the row states.
 8. **The recovery,** under its leading binders, is F applied.
 9. **The discharge condition** (U4 §1.2). The recovery meets F's hypotheses by definitions alone.
-   - Its proof uses no theorem but F, the entry's `bridges` and projections. Constructors and `rfl` are not theorems.
+   - Its proof uses no proof but F, the entry's `bridges` and projections. A proof is a theorem, or a definition of the package whose type is a proposition. The proofs it uses are those it and its own auxiliaries name, and the package's proofs inside every definition of the package they reach, all the way down. So a fact held in a definition, or carried by a model's data (`⟨f, f_rel⟩ : {f // …}`), counts. Constructors and `rfl` are not proofs, and `Init`'s proofs inside a definition (its termination lemmas, say) are not counted.
    - Each bridge it uses is an equivalence.
    - The bridges are a closed set: each bridge's proof uses only admitted theorems, other bridges and projections, and each bridge is used.
 
@@ -239,7 +240,7 @@ This is the strict reading U4's design adopts (DESIGN-BOUNDARY §1.2). F is stat
 Where a hypothesis matches a premise of K3's register, the basis names it (U4 §1.2), and K3's witnesses may be cited beside the countermodel.
 
 **On U4's forms** (u4-edge fe2a1942b; [boundary/check/controls-run.log](boundary/check/controls-run.log)):
-- **Row 17, `GroupEnding.Flow.all_end`, passes every test.** Its recovery uses no theorem but `outside_leaves_no_offspring`, `And.left` and `And.right`.
+- **Row 17, `GroupEnding.Flow.all_end`, passes every test.** Its recovery uses no theorem but `outside_leaves_no_offspring`, `And.left` and `And.right`. On 31 October the controls were rerun after test 9's walk was carried into the package's definitions (the code review's LEAN-1), with the same outcome for every case.
 - **Row 5, `Flow.no_new_dependence`, fails only the discharge condition.** Its recovery uses `Flow.descends_of_comes`, which is amount reasoning. So the row keeps "balance in its statement", with `descent_forms_no_dependence` as its relational part.
 - **The controls.** They are U4's nine, adapted, and twelve more:
   - a fit that names F aside without applying it;
@@ -326,11 +327,11 @@ U4's readings place the 31, and move 8 connected rows to derived (U4's table, `r
   - every derived entry's bridges, as `equivalences`;
   - the derived entries' laws, as `names`, for the name test.
 - **The cost.** The run takes about 12 seconds.
-- **When it cannot run.** If a module is missing from the cache, or Lean fails, the entries it would check (every derived entry and every entry under a stated hypothesis) are unverified with that reason. With none to check, Lean is not run.
+- **When it cannot run.** If the checker cannot be set up (its Lean binary or module index missing), a module is missing from the cache, or Lean fails, the entries it would check (every derived entry and every entry under a stated hypothesis) are unverified with that reason. With none to check, Lean is not run.
 
 **Failures.** As for F5, the generator never refuses to run.
 - An entry that fails a check is written as unverified, with the checks it fails, and its row takes the rule's label. An entry whose declaration is not a central one, or names a constant not in the run, is unverified for that reason.
-- An entry the registry would refuse is written the same way: the generator mirrors every rule of §2 except the review's text.
+- An entry the registry would refuse is written the same way: the generator mirrors every rule of §2 except the review's text. An item of `standings` or `premises_of_the_ethics` that is not an object is unverified by its place in the record (`standing 2`, `premise 1`).
 - **With no record carrying the field,** the data has no `boundary` key and no page has a standing line.
 - **With two or more records carrying it,** the data holds `boundary: {error, records}`:
   - nothing renders;
@@ -341,11 +342,12 @@ U4's readings place the 31, and move 8 connected rows to derived (U4's table, `r
 **Status.** The check's `master_laws` status lists:
 - `boundary_unverified` and `boundary_premises_unverified`;
 - `boundary_unplaced`;
-- `boundary_not_matched`: each central declaration whose entry on the record, or its absence, differs from the data's, and a premises list that differs.
+- `boundary_not_matched`: each central declaration whose entry on the record, or its absence, differs from the data's, and a premises list that differs. Where what the rules read around the field differs (the record's schema, status, review references or laws' declarations, or the field's own keys), every declaration is listed, with "the field", since any verdict may then differ.
 
 **Staleness.**
 - `current` is false while `boundary_not_matched` is nonempty.
 - A standing's page line shows only while its declaration is matched. A line the rule places from F5's items shows only while each F5 law it cites is matched too.
+- While the data has not read the field a record carries (it has no report, or a report of another record), that record's section says so and shows nothing else. A record whose field the data read, and which carries it no longer, has no section.
 - The Lean check's source and the restored modules' keys are among the inputs MV hashes.
 
 **U4's landing gate.** U4's landing requires the four lists empty, which U4's review keeps. Premise items "not shown" are not unverified.
@@ -355,12 +357,13 @@ U4's readings place the 31, and move 8 connected rows to derived (U4's table, `r
 `master-laws.json` gains `boundary` once a record carries the field:
 - `record`;
 - `counts` for each label of §1, `derived_by_forwarder` with each forwarder's kind, and `groups` (on the edge, below the grammar, distances, unplaced), which sum to the distinct central declarations;
-- `against_f5`: each label against F5's four classes, so the report shows how the standings divide F5's 44 / 16 / 7 / 51;
-- `premises_of_the_ethics`, each with Q1's result;
-- `lean_check`: the toolchain, the module keys' hash, the check's hash, and whether it ran (with the reason where it did not);
+- `against_f5`: each label against F5's four classes, zeros included, so the report shows how the standings divide F5's 44 / 16 / 7 / 51;
+- `premises_of_the_ethics`, each with its place in the record (`item`) and Q1's result;
+- `lean_check`: the toolchain, the module keys' hash, the check's hash, and whether it ran (with the reason where it did not); with nothing to check, or a checker that cannot be set up, only that it did not run and why;
 - `declared`: the field as the record carried it, which the check compares with the record's field now (§3.6);
+- `context`: what the rules read of the record besides the field (its schema, status, review references and laws' declarations), compared in the same way;
 - `field_failures`: the rules the field breaks as a whole, where it breaks any; every entry is then unverified;
-- `unverified`;
+- `unverified`: each entry that fails, with its place in the record (`item`), its declaration and standing, and its failures;
 - `rows`: for each central declaration:
   - its label, and how it came (checked entry, reading or rule);
   - the rule's label;
@@ -385,13 +388,13 @@ U4's readings place the 31, and move 8 connected rows to derived (U4's table, `r
 **Every record page whose law names a central declaration** gets one line under that law for each such declaration, once though the law names it twice, as F5's statements at a model get theirs. The master-law note above it is unchanged: it gives the measure's dependence, and the standing line gives the edge. One sentence per standing, naming the declaration, with full names throughout:
 - **Derived.** "*Standing of `Learning.goAlike_iff_lumped`:* derived, a case of `«像定后当且仅当同行»` through `Learning.lumped_iff_fixed_image` and `goAlikeUnder_iff_alike`, using also `«同行之逐点»` (declared in [record]; the closed set checked against the Lean, the bridges checked as equivalences; the case read in [review])." Where the walk entered root theorems: "Root theorems its proofs name: … (Init not shown)." With support: ", with the support …" after the bridges.
 - **Under a stated hypothesis.** "*Standing of `GroupEnding.Flow.all_end`:* under a stated hypothesis, the root form `F` at its model, with hypotheses `H₁`, `H₂` and `H₃`, each with its countermodel and fit (declared in [record]; checked in Lean: the form, its countermodels, the certificate and the discharge condition; the hypotheses read as the row's relational content in [review])."
-- **A reading.** "*Standing of `…`:* amounts, a reading: [basis] ([review])." Where the rule gives the same label: "; the rule gives the same". With a relational part: "; its relational part: `descent_forms_no_dependence`".
+- **A reading.** "*Standing of `…`:* amounts, a reading: [basis] ([review])." Where the rule gives the same label: "; the rule gives the same". Where it gives another, its label and its reason, as below (§3.4): "; the rule gives connected (it reaches `«所闭之传递»` among its reasons; not declared a case of one)", or "; the rule gives unplaced (none of the rule's tests holds)". With a relational part: "; its relational part: `descent_forms_no_dependence`".
 - **The rule.** "*Standing of `…`, by the rule:* connected (it reaches `«所闭之传递»` and `«缘在所闭»` among its reasons; not declared a case of one)". The other reasons read "`Flow.BalancesOn` in its statement", "balance written out in its statement", "F5's verified items at the process model", "F5's verified items on its own carrier only" and, for unplaced, "no standing declared, and none of the rule's tests holds".
-- **An unverified entry.** "*Standing of `…`, by the rule:* connected (…; the declared standing, derived, is unverified: [failures])".
+- **An unverified entry.** "*Standing of `…`, by the rule:* connected (it reaches … among its reasons; not verified as a case of one; the declared standing, derived, is unverified: [failures])". For unplaced the reason reads "no standing verified, and none of the rule's tests holds".
 
-**The boundary record's section,** "Standings on the edge", follows its laws. Its counts line gives each group with its labels; a line for each premise of the ethics gives its definition and Q1's result; then one line per central declaration under its group. While the data read another version of the field, the section says so and shows nothing else.
+**The boundary record's section,** "Standings on the edge", follows its laws. Its counts line gives each group with its labels; a line for each premise of the ethics gives its definition and Q1's result; then one line per central declaration under its group, a reading's line with the rule's label ("a reading; the rule gives the same", or "gives unplaced"). While the data read another version of the field, or none, the section says so and shows nothing else.
 
-**Re-rendering.** When the boundary record changes, `registry.affected_ids` selects every record whose laws name a central declaration, since their standing lines change.
+**Re-rendering.** When the boundary record changes, `registry.affected_ids` selects every record whose laws name a central declaration, since their standing lines change; so it does when the record the data read is deleted. When the data changes, it selects the boundary record with every record that has laws. When an F5 carrier changes, it selects the records whose laws name a row the rule places from that carrier's items.
 
 ## 6. What the probe found
 
@@ -457,7 +460,7 @@ The closed set splits by the Lean check into bridges (equivalences) and support.
 
 1. **MV lands the field first,** with one claim on RA's row of the board.
    - **What lands:** this specification; the registry's check; the generator's checks, rule and report; the Lean check and its runner; `counts_at_boundary_record`; the page lines; a RESULT-WORKFLOW paragraph; and the tests below.
-   - **Reviews:** the code gets an independent review and a re-check.
+   - **Reviews:** the code gets an independent review and a re-check. The review of 36d4b0fae and what it changed are in §9.
    - **Figures:** no record carries the field, so no figure changes, which a test asserts.
 2. **U4 builds the leaf and the record.**
    - **The leaf** is a core leaf, as `SignificanceStatements` is. It holds:
@@ -470,7 +473,7 @@ The closed set splits by the Lean check into bridges (equivalences) and support.
 
 **RESULT-WORKFLOW** gains a paragraph. `law`, `bridges`, `support` and a standing-2 entry's names declare a correspondence: the row is a case of these laws through these lemmas, or an instance of this form. F5's `of` does the same. They record nothing about which master laws a row rests on, which stays computed.
 
-**The tests** ([tools/research/tests/test_boundary.py](../../../../../tools/research/tests/test_boundary.py), 45). The registry and generator tests run against constants made for the case and a stubbed Lean-check output; the pages through the real render.
+**The tests** ([tools/research/tests/test_boundary.py](../../../../../tools/research/tests/test_boundary.py), 54). The registry and generator tests run against constants made for the case and a stubbed Lean-check output; the pages through the real render.
 - **Registry.**
   - the field on a schema-1, superseded, withdrawn or second record;
   - unknown keys at every level, the `boundary` object included;
@@ -480,32 +483,35 @@ The closed set splits by the Lean check into bridges (equivalences) and support.
   - duplicate declarations, roles, hypotheses, countermodels and fits;
   - `bridges` meeting `support`;
   - premises other than one `scope` and one `order`;
-  - `absent` missing beside a `null`;
-  - a review that is not a review reference, or does not name each name (by full name, or without the root);
-  - an introduced name outside the record's law declarations;
-  - one hypothesis definition shared by two entries.
+  - `absent` missing beside a `null`, or present beside a theorem;
+  - a review that is not a review reference, or does not name each name (by full name, or without the root), for every kind of name;
+  - names, a status or references of another shape, refused and never a crash;
+  - an introduced name outside the record's law declarations, for every kind of introduced name;
+  - one hypothesis definition shared by two entries;
+  - the field through `registry.validate`: on a schema-1 record, on a schema-2 record with the review's text, and on two records.
 - **Generator.**
   - **The checks:** a passing and a failing case for each of D1–D6 and Q1, including:
     - a row with `Flow`'s balance declared derived, which must come out unverified (`act_courses_unselected`'s shape);
     - a lemma that is a central declaration;
     - `law` with two laws;
-  - **The terms:** a pure forwarder row and a projection; the predicate of §3.0 on a helper, a witness theorem, a `Bool` fact, an auxiliary, a grammar-module constant built on a model, a root-statement theorem proved off the root, and a «» law declared in a leaf;
-  - **The walks:** through a definition holding a theorem; reach through a root helper;
+  - **The terms:** a pure forwarder row, a projection, a forwarder of a forwarder and a theorem that is not one; the predicate of §3.0 on a helper, a witness theorem, a `Bool` fact, an auxiliary (by its last or an inner component), a grammar-module constant built on a model, a root-statement theorem proved off the root, and a «» law declared in a leaf; the grammar's balance form, a law and not an anchor;
+  - **The walks:** through a definition holding a theorem and through auxiliaries; reach through a root helper, stopping at a «» name; a law reached through a forwarder (D3), and a forwarder or a law listed as a lemma (D4);
   - **The rule:** every branch, written-out balance and unplaced included;
   - **Precedence:** an entry or a reading over the rule; a failing entry falling to the rule, not to a reading; a reading of a computed label without its fact;
-  - **The Lean check:** a standing-2 entry whose check fails, and the check not running;
-  - **Robustness:** a declaration that is not central or not in the run, and malformed entries never crashing;
-  - **The report:** counts and groups summing to the distinct declarations; `against_f5`; `derived_by_forwarder`; where balance enters; `counts` unchanged by the boundary record's laws, and a law with both fields counted once.
+  - **The Lean check:** a standing-2 entry whose check fails, gives no result or does not pass; output of another shape; the check not running, or its checker not set up; the module of every name sent; a failing entry kept out of the query; a reason with no local path;
+  - **Robustness:** a declaration that is not central or not in the run, an item that is not an object listed unverified by its place, and malformed entries never crashing;
+  - **The report:** counts and groups summing to the distinct declarations; `against_f5` with every label; `derived_by_forwarder`; where balance enters; the generator's three tables (`law_entries`), the boundary record's laws apart with one carrier or two, and a law with both fields counted once; the boundary field's code and Lean check among the hashed inputs.
 - **Pages.**
   - one line per central declaration under a law naming several, and under laws in several records;
-  - each standing's sentence;
-  - the boundary record's section with its counts line;
-  - lines hidden when not matched, or when an F5 law they cite is not matched;
-  - pages byte-identical when no record carries the field;
-  - `affected_ids` after a change to the boundary record.
-- **Status.** The four lists and `current`; premise items "not shown" kept out of the unverified list; the error when two records carry the field.
-- **The Lean check.** A test compiles stub modules (a prelude, a grammar, a model and a leaf) from strings in a temporary folder and runs the check once on a form passing every test, a recovery through a model fact (the discharge condition fails), a hypothesis with an amount behind a prelude definition, a certificate not in the environment, the name test and the equivalence test; about ten seconds. It is skipped when the toolchain is absent. The run against U4's build stays as evidence ([boundary/check/run_controls.py](boundary/check/run_controls.py)).
-- **End to end.** On GW's run (core 20261030T152859.871907Z), the report with a synthetic carrier of U4's eight derived rows, three readings, `act_courses_unselected` declared derived and the two premises, the real Lean check run (16.5 seconds): the eight verify; `act_courses_unselected` fails D2, D3 and D5; the condition is not entailed and C not shown; the counts are 8 derived, 24 connected, 32 at balance in its statement, 16 at a represented model, 7 on their own carrier and 31 unplaced.
+  - each standing's sentence, the readings beside a rule that differs, the unverified entries, a forwarder row, two hypotheses with a bridge, an anchor and two represented models included;
+  - the boundary record's section with its counts line, after the laws and before the conditions;
+  - lines hidden when not matched, or when an F5 law they cite is not matched, or when the record around the field changed;
+  - a carrier the data has not read, and the data's record no longer carrying the field;
+  - real pages rendered byte-identical when no record carries the field;
+  - `affected_ids` after a change to the boundary record, to the data, to an F5 carrier, and after the boundary record is deleted.
+- **Status.** The four lists and `current`, true at a matched field and false at a changed one or the error, on a matching receipt; premise items "not shown" kept out of the unverified list; the error when two records carry the field.
+- **The Lean check.** A test compiles stub modules (a prelude, a grammar, a model, a leaf and a grammar module built on the model) from strings in a temporary folder and runs the check once on a form passing every test, a recovery through a model fact, a fact held in a definition and one carried by a model's data (the discharge condition fails on each), a hypothesis with an amount behind a prelude definition, a certificate not in the environment, the name test (by module and by content) and the equivalence test (an `Iff`, an `Eq` of propositions and of predicates, an `Eq` at a type of values); about twenty seconds. It runs the installed toolchain directly, so nothing is downloaded, and is skipped when it is not installed. The run against U4's build stays as evidence ([boundary/check/run_controls.py](boundary/check/run_controls.py)).
+- **End to end.** On GW's run (core 20261030T152859.871907Z), the report with a synthetic carrier of U4's eight derived rows, three readings, `act_courses_unselected` declared derived and the two premises, the real Lean check run, and rerun after the code review's fixes with every row the same ([boundary/e2e-report.json](boundary/e2e-report.json); the harness asserts these outcomes): the eight verify; `act_courses_unselected` fails D2, D3 and D5; the condition is not entailed and C not shown; the counts are 8 derived, 24 connected, 32 at balance in its statement, 16 at a represented model, 7 on their own carrier and 31 unplaced.
 
 ## 9. Findings taken
 
@@ -546,3 +552,28 @@ The closed set splits by the Lean check into bridges (equivalences) and support.
 | R2-CRITIC-8 | one law per entry | §2 `law` a list; D1, D3 |
 | R2-CRITIC-9 | untested behaviours | §8's tests |
 | draft 1's partly-taken BF-L2, L3, L4, L9, L14, E1, E8, E10, BF-T1, T5 | carried into the findings above | BF-L2 and E1 by R2-EDGE-6/7 and tests 4–5; BF-L3 by test 3; BF-L4 and E8 by tests 2–3; BF-L9 by D5 (the prelude's `le_over_stretch` and `ge_over_stretch` are root theorems listed on a derived row's line); BF-L14 by R2-LEAN-6; E10 by §3.4's reason; BF-T1 by the closed `boundary` object and D2's central-lemma rule; BF-T5 by the probe's rewrite |
+
+**The code review of 36d4b0fae: 46 findings, 29 confirmed and all taken; the verifiers judged 17 nits on correct code, of which 15 are taken as cheap defences or tests and two in part.** Four lenses read the implementation (spec conformance, robustness and regressions, the Lean integration, the tests), each followed by one adversarial verifier of its findings ([reports/boundary-code-review.json](reports/boundary-code-review.json), with the verdicts). A first pass of the Lean and tests lenses ran before a restart, and its verifiers did not; the two lenses ran again, and their second findings, which take in most of the first, are the ones verified. Three of the first pass's own are taken as well: the check's docstring now names its test (it cited a file that does not exist), `run_check` refuses a check that does not begin with `import Lean`, and the stub test runs the installed toolchain directly, so that elan downloads nothing.
+
+| Findings | What 36d4b0fae had wrong | Where taken |
+|---|---|---|
+| LEAN-1 (major) | test 9 saw only the theorems the recovery and its own auxiliaries name, so a model fact held in a definition, or carried by a model's data, passed the discharge condition | boundary_check.lean: a proof is a theorem or a package definition of a proposition, and the walk enters the package's definitions (§3.2 tests 5 and 9); two stub controls; U4's 31 controls rerun with the same outcomes |
+| SPEC-1, ROBUSTNESS-1, TESTS-4 | the check crashed on an unhashable name when the review's text was read | `reviewed` filters full names first; tests through the check |
+| SPEC-2, LEAN-2, ROBUSTNESS-4 | a missing Lean binary or checker stopped the generator | `lean_check`'s setup inside its guard, recorded as not run (§3.6) |
+| SPEC-3, ROBUSTNESS-6 | a rule line said both that nothing was declared and that a declared standing was unverified | "no standing verified", "not verified as a case of one" (§5) |
+| SPEC-4 | a reading did not show the rule's label where it differs | the reading's line and the section give it, with the rule's reason (§5) |
+| SPEC-5, ROBUSTNESS-2 | an item that is not an object was dropped from the report | unverified by its place, `item` (§3.6, §4) |
+| SPEC-6, SPEC-7, ROBUSTNESS-8 | a carrier without laws, or one the data had not read, kept a stale or no section; a deleted boundary record or a changed F5 carrier re-rendered nothing | `attach_standings` and `affected_ids` (§3.6, §5) |
+| SPEC-8 | test 3 also reads a hypothesis's «» terms | the wording and the message say so (§3.2) |
+| SPEC-9, SPEC-10, SPEC-11 | `lean_check` with nothing to check; `against_f5` dropped zeros; `absent` beside a theorem refused unstated | §4; every label kept; §2 |
+| SPEC-12, TESTS-13 | "pages byte-identical" tested by proxy | real pages rendered with and without the attach |
+| ROBUSTNESS-3 | a status or review path of another shape crashed the rules | refused, never a crash |
+| ROBUSTNESS-5 | a change around the field (its record's schema, status, review references or laws, or the field's own keys) left the data current | `context` in the report; every declaration and "the field" not matched (§3.6, §4) |
+| ROBUSTNESS-7 | the data hashes `master_laws.py`, which changed | the generator rerun at landing |
+| TESTS-1, ROBUSTNESS-9 | `current` was false in every status test whatever the field did | a matching receipt; `current` true at a matched field |
+| TESTS-2 | no test went through `registry.validate` | the schema-1, schema-2 and two-record cases through it |
+| TESTS-3 | the generator's counting was tested only through `counted_in` | `law_entries`, with one carrier and two |
+| TESTS-5, TESTS-8 | the «» anchor exclusion and D3 and D4 through a forwarder were vacuous | the grammar's balance form among the constants; a row through a forwarder |
+| LEAN-3 to LEAN-7, TESTS-6, 7, 9 to 12, 14 to 18 (nits) | defences and tests the verifiers judged unneeded on correct code | output of another shape and an entry that did not pass; the module of every name sent (LEAN-6, without its Lean-side report of an absent name); reasons without local paths and a fixed timeout message; the grammar module built on a model and the `Eq` branches in the stubs; the facts on both sides; forwarders of forwarders and a theorem that is not one; the walk through auxiliaries; no result, a failing entry kept out of the query and Q1 on a definition; every introduced name and every required key; the sentence variants; `affected_ids` before the data has read the field; the harness's asserts. In part: TESTS-16 (the absent certificate's message pinned, the model-fact case left as it is) and TESTS-17 (its case added beside the original, which the verifier upheld) |
+
+**Inner auxiliary components** (U4's owner's note, 31 October): the pattern now matches any component after the first (§3.0). On GW's run it adds 97 generated names and changes no figure, walk or reach.

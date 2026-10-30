@@ -54,7 +54,8 @@ PREMISE_KEYS = ('role', 'name', 'premise', 'not_entailed', 'absent', 'basis', 'r
 PREMISE_ROLES = ('scope', 'order')
 FULL = re.compile(r'(?:Becoming|Generative)\.\S+')  # a full Lean name: a module root of the package, then the rest
 
-# Lean's generated auxiliaries, by their last name component (§3.0; normative).
+# Lean's generated auxiliaries, by any name component after the first (§3.0; normative): an auxiliary's own
+# auxiliaries, such as `match_1.eq_1` or `_proof_1.splitter`, are generated too.
 AUX = re.compile(r'^(match_\d+(_\d+)*|_proof_\d+|proof_\d+|eq_\d+|eq_def|sizeOf_spec|_sizeOf_\d+|_sizeOf_inst|injEq|inj|'
                  r'brecOn|below|binductionOn|casesOn|recOn|rec|noConfusion|noConfusionType|ctorIdx|toCtorIdx|'
                  r'ctorElim|ctorElimType|splitter|_unsafe_rec|_sunfold|_flat_ctor|_aux_\d+|_default|elim)$')
@@ -67,6 +68,19 @@ REPRESENTED = {'occurrence', 'process'}
 
 def full(name):
     return isinstance(name, str) and bool(FULL.fullmatch(name))
+
+
+def components(name):
+    """A Lean name's components: split at the dots outside «»."""
+    out, depth, part = [], 0, ''
+    for ch in name:
+        depth += (ch == '«') - (ch == '»')
+        if ch == '.' and depth == 0:
+            out.append(part)
+            part = ''
+        else:
+            part += ch
+    return out + [part]
 
 
 def text(value):
@@ -108,24 +122,20 @@ def field_findings(r, review_text=None):
     out = []
     if r.get('schema_version') != 2:
         out.append((None, 'the boundary field needs schema_version 2'))
-    if r.get('status') in {'superseded', 'withdrawn'}:
+    if isinstance(r.get('status'), str) and r['status'] in {'superseded', 'withdrawn'}:
         out.append((None, 'the boundary field is not allowed on a superseded or withdrawn record'))
     b = r['boundary']
     if not isinstance(b, dict):
         return out + [(None, 'boundary must be an object with the keys standings and premises_of_the_ethics')]
     if set(b) != set(FIELD_KEYS):
         out.append((None, 'boundary has exactly the keys standings and premises_of_the_ethics'))
-    refs = r.get('references') if isinstance(r.get('references'), list) else []
-    reviews = {x.get('path') for x in refs if isinstance(x, dict) and x.get('role') == 'review'}
-    laws = r.get('laws') if isinstance(r.get('laws'), list) else []
-    own = {d for law in laws if isinstance(law, dict) and isinstance(law.get('declarations'), list)
-           for d in law['declarations'] if isinstance(d, str)}
+    reviews, own = set(context(r)['reviews']), set(context(r)['laws'])
 
     def reviewed(where, review, names):
         if not isinstance(review, str) or review not in reviews:
             out.append((where, f'its review {review} is not a reference of role review in the record'))
         elif review_text is not None and (t := review_text(review)) is not None:
-            unnamed = [n for n in dict.fromkeys(names) if full(n) and not names_in(t, n)]
+            unnamed = [n for n in dict.fromkeys(x for x in names if full(x)) if not names_in(t, n)]
             if unnamed:
                 out.append((where, f'its review {review} does not name ' + ', '.join(unnamed)))
 
@@ -234,6 +244,17 @@ def field_findings(r, review_text=None):
     return out
 
 
+def context(r):
+    """What the field's rules read of record r besides the field: its schema and status, its review references and its
+    laws' declarations. The data keeps it, so that a change to any of them makes the field not matched (§3.6)."""
+    refs = r.get('references') if isinstance(r.get('references'), list) else []
+    laws = r.get('laws') if isinstance(r.get('laws'), list) else []
+    return {'schema_version': r.get('schema_version'), 'status': r.get('status'),
+            'reviews': sorted({x['path'] for x in refs if isinstance(x, dict) and x.get('role') == 'review' and isinstance(x.get('path'), str)}),
+            'laws': sorted({d for law in laws if isinstance(law, dict) and isinstance(law.get('declarations'), list)
+                            for d in law['declarations'] if isinstance(d, str)})}
+
+
 def field_errors(r, review_text=None):
     """The check's messages for record r."""
     def item(where):
@@ -279,7 +300,7 @@ class Terms:
         self.forwarders = {n: g for n, g in self._fw.items() if g and n not in self.laws}
 
     def aux(self, n):
-        return bool(AUX.match(n.rsplit('.', 1)[-1]))
+        return any(AUX.match(c) for c in components(n)[1:])
 
     def closure(self, names):
         """Everything the constants reach through types and values, all the way down."""
@@ -438,6 +459,8 @@ def run_check(work, imports, query, lean, timeout):
     """Run boundary_check.lean in work, whose compiled modules LEAN_PATH reaches, after the given imports. Returns its
     output; raises RuntimeError with Lean's output where Lean fails."""
     source = CHECK.read_text()
+    if not source.startswith('import Lean\n'):
+        raise RuntimeError(f'{CHECK.name} does not begin with import Lean, after which the imports are written')
     (work / 'BoundaryCheck.lean').write_text(source.replace('import Lean\n', 'import Lean\n' + ''.join(f'import {m}\n' for m in imports), 1))
     (work / 'boundary-in.json').write_text(json.dumps(query, ensure_ascii=False))
     out = work / 'boundary-out.json'
@@ -449,19 +472,31 @@ def run_check(work, imports, query, lean, timeout):
     return json.loads(out.read_text())
 
 
+def local(message, work=None):
+    """A failure's message as the data records it: one line, at most 500 characters, without the scratch folder or the
+    home folder, so that a rerun in the same state writes the same data."""
+    if work is not None:
+        message = message.replace(str(work), '<scratch>')
+    return ' '.join(message.replace(str(Path.home()), '~').split())[:500]
+
+
 def lean_check(query, modules):
     """Restore the core run's modules from the checker's cache, with the same keys as THEOREM-CONNECTIVITY.py's dump and
     no recompile, and run the check after `import Becoming`, the periphery joins and the given modules. Returns
-    (output or None, what the report records of the run)."""
-    cb = checker()
-    index = cb.module_index()
-    order = cb.closure(index)
-    sources = {name: index[name][0].read_bytes() for name in order}
-    binary = getattr(cb, 'DEFAULT_LEAN', Path.home() / '.elan/toolchains/leanprover--lean4---v4.29.1/bin/lean')
-    keys = cb.module_keys([cb.audit_support.TOOLCHAIN, cb.audit_support.digest(Path(binary).read_bytes())], sources, order)
-    info = {'toolchain': cb.audit_support.TOOLCHAIN,
-            'modules_sha256': hashlib.sha256(json.dumps(keys, sort_keys=True).encode()).hexdigest(),
-            'check_sha256': hashlib.sha256(CHECK.read_bytes()).hexdigest()}
+    (output or None, what the report records of the run). Where the checker cannot be set up, nothing is run and the
+    reason is recorded: the generator never stops here."""
+    try:
+        cb = checker()
+        index = cb.module_index()
+        order = cb.closure(index)
+        sources = {name: index[name][0].read_bytes() for name in order}
+        binary = getattr(cb, 'DEFAULT_LEAN', Path.home() / '.elan/toolchains/leanprover--lean4---v4.29.1/bin/lean')
+        keys = cb.module_keys([cb.audit_support.TOOLCHAIN, cb.audit_support.digest(Path(binary).read_bytes())], sources, order)
+        info = {'toolchain': cb.audit_support.TOOLCHAIN,
+                'modules_sha256': hashlib.sha256(json.dumps(keys, sort_keys=True).encode()).hexdigest(),
+                'check_sha256': hashlib.sha256(CHECK.read_bytes()).hexdigest()}
+    except Exception as e:  # a missing binary, source or checker: the entries it would check are unverified with this
+        return None, {'ran': False, 'reason': 'the checker could not be set up: ' + local(f'{type(e).__name__}: {e}')}
     with tempfile.TemporaryDirectory(prefix='boundary-check-') as scratch:
         work = Path(scratch)
         missing = []
@@ -476,8 +511,10 @@ def lean_check(query, modules):
         imports = list(dict.fromkeys(['Becoming', *getattr(cb, 'PERIPHERY_JOINS', []), *(m for m in modules if m in order)]))
         try:
             out = run_check(work, imports, query, [str(Path.home() / '.elan/bin/lean'), '+' + cb.audit_support.TOOLCHAIN], cb.TIMEOUT)
+        except subprocess.TimeoutExpired:
+            return None, {**info, 'ran': False, 'reason': f'Lean timed out after {cb.TIMEOUT} s'}
         except (RuntimeError, OSError, subprocess.SubprocessError, ValueError) as e:
-            return None, {**info, 'ran': False, 'reason': 'Lean failed: ' + ' '.join(str(e).split())[:500]}
+            return None, {**info, 'ran': False, 'reason': 'Lean failed: ' + local(str(e), work)}
     return out, {**info, 'ran': True}
 
 
@@ -495,11 +532,10 @@ def report(C, central, at_model, f5_class, carrier, balance_anchors, lean=lean_c
     for w, m in findings:
         if w:
             per[w].append("its record breaks the check's rules: " + m)
-    checks = []  # (standing, failures, report) in the record's order
+    checks = []  # (item, standing, failures, report) in the record's order; an item that is no object is checked as {}
     for k, s in enumerate(b.get('standings', []) if isinstance(b.get('standings'), list) else []):
-        if not isinstance(s, dict):
-            continue
         failed = whole + per[('standing', k)]
+        s = s if isinstance(s, dict) else {}
         d = s.get('declaration')
         if not failed:
             given, _ = given_names(s)
@@ -516,22 +552,27 @@ def report(C, central, at_model, f5_class, carrier, balance_anchors, lean=lean_c
                 failed += more
             elif label in COMPUTED and not has_fact(label, T.reach(d), T.balance(d), at_model.get(d, [])):
                 failed.append(f'the reading needs the rule\'s fact for {label}, which does not hold')
-        checks.append((s, failed, rep))
+        checks.append((k + 1, s, failed, rep))
     # The Lean check: the forms under a stated hypothesis, the derived rows' laws (the name test) and their bridges (D6).
-    lean_entries = [s for s, failed, _ in checks if not failed and s['standing'] == 'under a stated hypothesis']
-    derived_ok = [s for s, failed, _ in checks if not failed and s['standing'] == 'derived']
+    lean_entries = [s for _, s, failed, _ in checks if not failed and s['standing'] == 'under a stated hypothesis']
+    derived_ok = [s for _, s, failed, _ in checks if not failed and s['standing'] == 'derived']
     query = {'entries': [{'row': s['declaration'], **{k: s[k] for k in ('form', 'hypotheses', 'recovery', 'certificate')},
                           'bridges': s.get('bridges', [])} for s in lean_entries],
              'names': sorted({y for s in derived_ok for y in s['law']}),
              'equivalences': sorted({x for s in derived_ok for x in s.get('bridges', [])})}
     output, info = (None, {'ran': False, 'reason': 'nothing to check'})
     if lean_entries or derived_ok:
-        output, info = lean(query, sorted({C[s['form']]['m'] for s in lean_entries}))
+        sent = [d for s in lean_entries + derived_ok for d in [s['declaration'], *given_names(s)[0]]]
+        output, info = lean(query, sorted({C[x]['m'] for x in sent}))
+    if output is not None and not (isinstance(output, dict) and isinstance(output.get('entries', []), list)
+                                   and all(isinstance(x, dict) for x in output.get('entries', []))
+                                   and all(isinstance(output.get(k, {}), dict) for k in ('admitted', 'equivalence'))):
+        output, info = None, {**info, 'ran': False, 'reason': 'the Lean check gave malformed output'}
     results = {}
     if output is not None:
         for x in output.get('entries', []):
             results.setdefault(x.get('row'), x)
-    for s, failed, rep in checks:
+    for _, s, failed, rep in checks:
         if failed or s['standing'] not in EDGE:
             continue
         if output is None:
@@ -544,15 +585,16 @@ def report(C, central, at_model, f5_class, carrier, balance_anchors, lean=lean_c
             if x is None:
                 failed.append('the Lean check gave no result')
             else:
-                failed += list(x.get('failures', []))
+                failures = [str(f) for f in x['failures']] if isinstance(x.get('failures'), list) else []
+                failed += failures or ([] if x.get('passed') is True else ['the Lean check did not pass it'])
                 rep.update({k: x[k] for k in ('statement_names', 'hypothesis_names', 'facts', 'recovery_uses') if k in x})
     entries = {}
     unverified = []
-    for s, failed, rep in checks:
+    for item, s, failed, rep in checks:
         d = s.get('declaration')
         entry = {**s, 'verified': not failed, **({'failed': failed} if failed else {}), **({'report': rep} if rep else {})}
         if failed:
-            unverified.append({'declaration': d, 'standing': s.get('standing'), 'failed': failed})
+            unverified.append({'item': item, 'declaration': d, 'standing': s.get('standing'), 'failed': failed})
         if isinstance(d, str) and d in central and d not in entries:
             entries[d] = entry
     rows, counts = {}, dict.fromkeys(LABELS, 0)
@@ -578,17 +620,16 @@ def report(C, central, at_model, f5_class, carrier, balance_anchors, lean=lean_c
         against[label][f5_class[n]] += 1
     premises = []
     for k, p in enumerate(b.get('premises_of_the_ethics', []) if isinstance(b.get('premises_of_the_ethics'), list) else []):
-        if not isinstance(p, dict):
-            continue
         failed = whole + per[('premise', k)]
+        p = p if isinstance(p, dict) else {}
         result = 'unverified'
         if not failed:
             result, failed = q1(C, p)
-        premises.append({**{x: p.get(x) for x in ('role', 'name', 'premise', 'not_entailed') if x in p},
+        premises.append({'item': k + 1, **{x: p.get(x) for x in ('role', 'name', 'premise', 'not_entailed') if x in p},
                          **({'absent': p['absent']} if 'absent' in p else {}), 'result': result, **({'failed': failed} if failed else {})})
-    return {'record': carrier['id'], 'declared': carrier['boundary'],
+    return {'record': carrier['id'], 'declared': carrier['boundary'], 'context': context(carrier),
             'counts': counts, 'groups': {g: sum(counts[x] for x in labels) for g, labels in GROUPS.items()},
             'derived_by_forwarder': by_forwarder,
-            'against_f5': {label: v for label, v in against.items() if any(v.values())},
+            'against_f5': against,
             'premises_of_the_ethics': premises, 'lean_check': info,
             **({'field_failures': whole} if whole else {}), 'unverified': unverified, 'rows': rows}

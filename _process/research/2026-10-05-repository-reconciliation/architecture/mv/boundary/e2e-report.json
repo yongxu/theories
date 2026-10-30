@@ -233,6 +233,27 @@
    }
   ]
  },
+ "context": {
+  "schema_version": 2,
+  "status": "recorded-checked",
+  "reviews": [
+   "R.md"
+  ],
+  "laws": [
+   "Becoming.Flow.beyond_gives_nothing",
+   "Becoming.Flow.mutuallyDependent_iff_reach",
+   "Becoming.Flow.no_new_dependence",
+   "Becoming.Flow.withinCoupling_reads_iff",
+   "Becoming.Flow.withinSystem_of_withinInfluence",
+   "Becoming.Law.drawn_iff_not_returns",
+   "Becoming.Law.lossless_iff_returns",
+   "Becoming.Learning.goAlike_iff_lumped",
+   "Becoming.Tolerance.answers_restores_iff",
+   "Becoming.Withholding.withholding_spreads",
+   "Becoming.WithinMoves.after_course",
+   "Becoming.act_courses_unselected"
+  ]
+ },
  "counts": {
   "derived": 8,
   "under a stated hypothesis": 0,
@@ -261,8 +282,26 @@
    "stated on its own carrier only": 0,
    "the rest": 0
   },
+  "under a stated hypothesis": {
+   "reaching the grammar": 0,
+   "stated at a represented model": 0,
+   "stated on its own carrier only": 0,
+   "the rest": 0
+  },
+  "counting": {
+   "reaching the grammar": 0,
+   "stated at a represented model": 0,
+   "stated on its own carrier only": 0,
+   "the rest": 0
+  },
   "connected": {
    "reaching the grammar": 24,
+   "stated at a represented model": 0,
+   "stated on its own carrier only": 0,
+   "the rest": 0
+  },
+  "witnessed at its model": {
+   "reaching the grammar": 0,
    "stated at a represented model": 0,
    "stated on its own carrier only": 0,
    "the rest": 0
@@ -272,6 +311,12 @@
    "stated at a represented model": 0,
    "stated on its own carrier only": 0,
    "the rest": 20
+  },
+  "amounts": {
+   "reaching the grammar": 0,
+   "stated at a represented model": 0,
+   "stated on its own carrier only": 0,
+   "the rest": 0
   },
   "at a represented model": {
    "reaching the grammar": 0,
@@ -285,6 +330,18 @@
    "stated on its own carrier only": 7,
    "the rest": 0
   },
+  "at its model": {
+   "reaching the grammar": 0,
+   "stated at a represented model": 0,
+   "stated on its own carrier only": 0,
+   "the rest": 0
+  },
+  "free significance": {
+   "reaching the grammar": 0,
+   "stated at a represented model": 0,
+   "stated on its own carrier only": 0,
+   "the rest": 0
+  },
   "unplaced": {
    "reaching the grammar": 0,
    "stated at a represented model": 0,
@@ -294,6 +351,7 @@
  },
  "premises_of_the_ethics": [
   {
+   "item": 1,
    "role": "scope",
    "name": {
     "en": "the continuation condition"
@@ -303,6 +361,7 @@
    "result": "not entailed"
   },
   {
+   "item": 2,
    "role": "order",
    "name": {
     "en": "C"
@@ -318,11 +377,12 @@
  "lean_check": {
   "toolchain": "leanprover/lean4:v4.29.1",
   "modules_sha256": "4aa713a853453d066a43f81adddef8428132e544975bf6167e750714420817ff",
-  "check_sha256": "5cb5c32c2e7a0617efb0d59b632545445cf7331ee1aad5dec1a3abd8754b72eb",
+  "check_sha256": "ea6606bd85dda094b0d30b43f2530a368f11babfdb9f6f15b6b5b11a324e164a",
   "ran": true
  },
  "unverified": [
   {
+   "item": 12,
    "declaration": "Becoming.act_courses_unselected",
    "standing": "derived",
    "failed": [

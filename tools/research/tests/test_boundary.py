@@ -1,6 +1,7 @@
 """MV's boundary field (architecture/mv/BOUNDARY-FIELD.md): the check's rules, the generator's terms, checks, rule and
 report on constants made for the case, the page lines and section, the status, and the Lean check on stub modules."""
 import copy
+import hashlib
 import json
 import os
 import shutil
@@ -18,8 +19,9 @@ SCOPE = {'role': 'scope', 'name': {'en': 'the continuation condition'}, 'premise
 ORDER = {'role': 'order', 'name': {'en': 'C'}, 'premise': 'Becoming.Comparison', 'not_entailed': None,
          'absent': {'en': 'No theorem shows it.'}, 'basis': {'en': 'Its order.'}, 'review': REVIEW}
 HYP = {'hypothesis': 'Becoming.Leaf.H', 'countermodel': 'Becoming.Leaf.form.needs_H', 'fit': 'Becoming.Leaf.form.H_needed'}
+HYP2 = {'hypothesis': 'Becoming.Leaf.H2', 'countermodel': 'Becoming.Leaf.form.needs_H2', 'fit': 'Becoming.Leaf.form.H2_needed'}
 LEAF = ['Becoming.Leaf.form', 'Becoming.Leaf.H', 'Becoming.Leaf.form.needs_H', 'Becoming.Leaf.form.H_needed',
-        'Becoming.Leaf.recovery', 'Becoming.Leaf.certified', 'Becoming.Leaf.part', 'Becoming.Leaf.bridge']
+        'Becoming.Leaf.recovery', 'Becoming.Leaf.certified', 'Becoming.Leaf.part', 'Becoming.Leaf.bridge', *HYP2.values()]
 
 
 def standing(d, label, **more):
@@ -45,14 +47,21 @@ WELL_FORMED = [standing('Becoming.Flow.row', 'derived', law=['Becoming.«所闭�
                standing('Becoming.Flow.counted', 'counting')]
 
 
+# Every name the field tests below give, written out, so that the review's test does not rest on given_names.
+NAMED = ['Becoming.Flow.row', 'Becoming.«所闭之界»', 'Becoming.Flow.bridge_iff', 'Becoming.Flow.support', 'Becoming.Flow.two',
+         'Becoming.Flow.three', 'Becoming.Leaf.form', 'Becoming.Leaf.H', 'Becoming.Leaf.form.needs_H', 'Becoming.Leaf.form.H_needed',
+         'Becoming.Leaf.recovery', 'Becoming.Leaf.certified', 'Becoming.Leaf.bridge', 'Becoming.Flow.balanced', 'Becoming.Leaf.part',
+         'Becoming.Flow.counted', 'Becoming.Unrestricted', 'Becoming.ReadsOnlyDynamics.not_entails', 'Becoming.Comparison']
+
+
+def review(*names):
+    return ' '.join(f'`{n}`' for n in names)
+
+
 class FieldRules(unittest.TestCase):
     """The check's rules (§2), as registry.py applies them with the review's text."""
     def errors(self, r, text=None):
-        field = r['boundary'] if isinstance(r['boundary'], dict) else {}
-        named = '`' + '` `'.join(sorted({n for s in field.get('standings', []) if isinstance(s, dict)
-                                         for n in [s.get('declaration'), *boundary.given_names(s)[0]] if isinstance(n, str)}
-                                        | {'Becoming.Unrestricted', 'Becoming.ReadsOnlyDynamics.not_entails', 'Becoming.Comparison'})) + '`'
-        with patch.object(registry, '_review_text', return_value=named if text is None else text):
+        with patch.object(registry, '_review_text', return_value=review(*NAMED) if text is None else text):
             return registry.boundary_errors(r)
 
     def assertRefused(self, r, text):
@@ -63,9 +72,13 @@ class FieldRules(unittest.TestCase):
         self.assertEqual(self.errors(carrier(*WELL_FORMED)), [])
 
     def test_one_hypothesis_definition_may_serve_two_entries(self):
-        other = at_hypothesis('Becoming.Flow.three', [{'hypothesis': 'Becoming.Leaf.H', 'countermodel': 'Becoming.Leaf.form.needs_H',
-                                                       'fit': 'Becoming.Leaf.form.H_needed'}])
-        self.assertEqual(self.errors(carrier(at_hypothesis(), other)), [])
+        mine = ['Becoming.Leaf.form3', 'Becoming.Leaf.form3.needs_H', 'Becoming.Leaf.form3.H_needed', 'Becoming.Leaf.recovery3',
+                'Becoming.Leaf.certified3']
+        other = standing('Becoming.Flow.three', 'under a stated hypothesis', form=mine[0], recovery=mine[3], certificate=mine[4],
+                         hypotheses=[{'hypothesis': 'Becoming.Leaf.H', 'countermodel': mine[1], 'fit': mine[2]}])
+        self.assertEqual(self.errors(carrier(at_hypothesis(), other, own=LEAF + mine), text=review(*NAMED, *mine)), [])
+        same = at_hypothesis('Becoming.Flow.three')  # the same form: its countermodel and fit are shared too
+        self.assertEqual(self.errors(carrier(at_hypothesis(), same)), [])
 
     def test_the_record_carrying_it(self):
         self.assertRefused(carrier(*WELL_FORMED, schema=1), 'needs schema_version 2')
@@ -86,12 +99,17 @@ class FieldRules(unittest.TestCase):
         r = carrier(*WELL_FORMED)
         r['boundary'] = []
         self.assertRefused(r, 'boundary must be an object')
+        r = carrier(*WELL_FORMED, status=['withdrawn'])  # a record's own keys of another shape: refused, never a crash
+        r['references'] = [{'role': 'review', 'path': [REVIEW]}, 3]
+        self.assertRefused(r, 'is not a reference of role review')
+        boundary.report(CONSTANTS, CENTRAL, AT_MODEL, F5, r, ANCHORS, lean=lean_passing)
 
     def test_each_standings_required_and_forbidden_keys(self):
         self.assertRefused(carrier(standing('Becoming.Flow.row', 'derived')), 'missing keys: law')
-        s2 = at_hypothesis()
-        del s2['certificate']
-        self.assertRefused(carrier(s2), 'missing keys: certificate')
+        for key in ('form', 'hypotheses', 'recovery', 'certificate'):
+            s2 = at_hypothesis()
+            del s2[key]
+            self.assertRefused(carrier(s2), f'missing keys: {key}')
         self.assertRefused(carrier(standing('Becoming.Flow.counted', 'amounts', law=['Becoming.«所闭之界»'])), 'keys outside the standing amounts: law')
         self.assertRefused(carrier(standing('Becoming.Flow.counted', 'connected', relational_part='Becoming.Leaf.part')),
                            'keys outside the standing connected: relational_part')
@@ -150,13 +168,24 @@ class FieldRules(unittest.TestCase):
         found = self.errors(carrier(*WELL_FORMED), text='`Becoming.Flow.row` and the rest unnamed.')
         self.assertTrue(any('does not name' in e and 'Becoming.Flow.bridge_iff' in e for e in found), found)
         self.assertTrue(any('does not name Becoming.Unrestricted, Becoming.ReadsOnlyDynamics.not_entails' in e for e in found), found)
+        for key in ('Becoming.Flow.support', 'Becoming.Leaf.form.needs_H', 'Becoming.Leaf.form.H_needed', 'Becoming.Leaf.recovery',
+                    'Becoming.Leaf.certified', 'Becoming.Leaf.bridge', 'Becoming.Leaf.part', 'Becoming.Leaf.H', 'Becoming.Leaf.form'):
+            found = self.errors(carrier(*WELL_FORMED), text=review(*(n for n in NAMED if n != key)))
+            self.assertEqual([e.rsplit(' ', 1)[-1] for e in found if 'does not name' in e], [key], key)
+        unhashable = carrier(*WELL_FORMED, premises=[{**SCOPE, 'premise': {'en': 'x'}}, {**ORDER, 'not_entailed': ['x']}])
+        self.assertTrue(any('premise must be a full Lean name' in e for e in self.errors(unhashable)))  # refused, not a crash
+        self.assertTrue(any('its declaration must be a full Lean name' in e
+                            for e in self.errors(carrier(standing(['Becoming.Flow.row'], 'counting')))))
         less_root = carrier(standing('Becoming.Flow.counted', 'counting'))
         self.assertEqual(self.errors(less_root, text='`Flow.counted` is counting; `Unrestricted`, `ReadsOnlyDynamics.not_entails`, '
                                                      '`Comparison`.'), [])
         self.assertTrue(self.errors(less_root, text='`counted` is counting; `Unrestricted`, `ReadsOnlyDynamics.not_entails`, `Comparison`.'))
 
     def test_introduced_names_are_the_records_own(self):
-        self.assertRefused(carrier(at_hypothesis(), own=LEAF[1:]), "not among the declarations of the record's laws: Becoming.Leaf.form")
+        for name in ('Becoming.Leaf.form', 'Becoming.Leaf.H', 'Becoming.Leaf.form.needs_H', 'Becoming.Leaf.form.H_needed',
+                     'Becoming.Leaf.recovery', 'Becoming.Leaf.certified', 'Becoming.Leaf.bridge'):
+            self.assertRefused(carrier(at_hypothesis(bridges=['Becoming.Leaf.bridge']), own=[x for x in LEAF if x != name]),
+                               f"not among the declarations of the record's laws: {name}")
         self.assertRefused(carrier(standing('Becoming.Flow.b', 'balance in its statement', relational_part='Becoming.Other.part')),
                            'Becoming.Other.part')
         # a derived entry's laws, bridges and support are the grammar's and the models', not the record's
@@ -203,11 +232,21 @@ CONSTANTS = {
     'Becoming.Flow.counted': const(F, 'thm', [F]), 'Becoming.Flow.modelled': const(F, 'thm', [F]),
     'Becoming.Flow.own': const(F, 'thm', [F]), 'Becoming.Flow.two': const(F, 'thm', [F]),
     'Becoming.Leaf.form': const('Becoming.Leaf', 'thm', ['Becoming.«际»']), 'Becoming.Leaf.part': const('Becoming.Leaf', 'thm', [F]),
+    'Becoming.«守数当且仅当可对»': const(G, 'thm', ['Becoming.«际»']),  # the grammar's balance form: a law, not an anchor
+    'Becoming.«所闭».brecOn.eq': const(G, 'thm', ['Becoming.«际»']),  # generated, by an inner component
+    'Becoming.Flow.via_aux': const(F, 'thm', [F], ['Becoming.Flow.via_aux.brecOn.go', 'Becoming.Flow.via_aux.brecOn.eq']),
+    'Becoming.Flow.via_aux.brecOn.go': const(F, 'def', [], [LAW]), 'Becoming.Flow.via_aux.brecOn.eq': const(F, 'thm', [], ['Becoming.Flow.fact']),
+    'Becoming.«容»': const(G, 'def', ['Becoming.«际»'], [LAW]),  # a «» name, where reaching stops
+    'Becoming.Flow.through_term': const(F, 'thm', ['Becoming.«容»']),
+    'Becoming.Flow.not_forwarder': const(F, 'thm', ['Becoming.«所闭»'], [LAW, 'Becoming.Flow.fact'], f=LAW, fk='pure'),
+    'Becoming.Flow.forwarder2': const(F, 'thm', ['Becoming.«所闭»'], ['Becoming.Flow.forwarder'], f='Becoming.Flow.forwarder', fk='pure'),
+    'Becoming.Flow.via_fw': const(F, 'thm', [F], ['Becoming.Flow.forwarder']),  # a proof naming a forwarder
+    'Becoming.Flow.written_two': const(F, 'thm', ['Becoming.Dependence.level', 'Becoming.Flow.taken']),  # two of the three
     'Becoming.Unrestricted': const('Becoming.Significance', 'def'), 'Becoming.Comparison': const('Becoming.Extension', 'def'),
     'Becoming.ReadsOnlyDynamics.not_entails': const('Becoming.Significance', 'thm', ['Becoming.Unrestricted']),
 }
 for n in ('Becoming.Leaf.H', 'Becoming.Leaf.form.needs_H', 'Becoming.Leaf.form.H_needed', 'Becoming.Leaf.recovery',
-          'Becoming.Leaf.certified', 'Becoming.Leaf.bridge'):
+          'Becoming.Leaf.certified', 'Becoming.Leaf.bridge', *HYP2.values()):
     CONSTANTS[n] = const('Becoming.Leaf', 'def' if n.endswith('.H') else 'thm')
 ANCHORS = ['Becoming.Flow.Balances', 'Becoming.Flow.BalancesOn', 'Becoming.balance_over_stretch_on', 'Becoming.«守数当且仅当可对»']
 
@@ -219,9 +258,9 @@ class TheTerms(unittest.TestCase):
         cls.T = boundary.Terms(CONSTANTS, ANCHORS)
 
     def test_grammar_laws(self):
-        self.assertEqual(self.T.laws, {LAW, LAW2, 'Becoming.Law.constant_iff_core'})
+        self.assertEqual(self.T.laws, {LAW, LAW2, 'Becoming.Law.constant_iff_core', 'Becoming.«守数当且仅当可对»'})
         for n in ('Becoming.kept_onward', 'Becoming.helper', 'Becoming.«两火»', 'Becoming.«非真则假»', 'Becoming.«所闭之界»._proof_1',
-                  'Becoming.TwoCourses.core_iff', 'Becoming.MapRegions.«图»'):
+                  'Becoming.TwoCourses.core_iff', 'Becoming.MapRegions.«图»', 'Becoming.«所闭».brecOn.eq'):
             self.assertNotIn(n, self.T.laws, n)
 
     def test_root_constants_by_content(self):
@@ -230,18 +269,30 @@ class TheTerms(unittest.TestCase):
         self.assertNotIn('Becoming.TwoCourses.core_iff', self.T.root)  # a root statement proved off the root
         self.assertEqual(self.T.anchors, {'Becoming.Flow.Balances', 'Becoming.Flow.BalancesOn', 'Becoming.balance_over_stretch_on'})
 
+    def test_auxiliaries_by_any_component(self):
+        self.assertEqual(boundary.components('Becoming.«a.b».c'), ['Becoming', '«a.b»', 'c'])
+        for n in ('Becoming.«所闭之界»._proof_1', 'Becoming.«同族».below.refl', 'Becoming.X.brecOn.go', 'Becoming.X.match_1.eq_1'):
+            self.assertTrue(self.T.aux(n), n)
+        for n in ('Becoming.Flow.row', 'Becoming.«a.rec».b', 'Becoming.Flow.recording'):
+            self.assertFalse(self.T.aux(n), n)
+
     def test_forwarders(self):
-        self.assertEqual(self.T.forwarders, {'Becoming.Flow.forwarder': LAW, 'Becoming.Flow.projection': LAW2})
+        # a proof naming another theorem is no forwarder; a forwarder of a forwarder forwards to its law
+        self.assertEqual(self.T.forwarders, {'Becoming.Flow.forwarder': LAW, 'Becoming.Flow.projection': LAW2, 'Becoming.Flow.forwarder2': LAW})
         self.assertEqual((self.T.kind['Becoming.Flow.forwarder'], self.T.kind['Becoming.Flow.projection']), ('pure', 'projection'))
+        self.assertEqual(self.T.law_of('Becoming.Flow.not_forwarder'), None)
 
     def test_the_walks(self):
         self.assertEqual(self.T.walk('Becoming.Flow.row'), {LAW, 'Becoming.Flow.bridge_iff', 'Becoming.Flow.support', 'Becoming.helper'})
         self.assertEqual(self.T.reach('Becoming.Flow.row'), {LAW, LAW2})
         self.assertEqual(self.T.reach('Becoming.Flow.via_helper'), {LAW})  # through a root helper without a «» name
+        self.assertEqual(self.T.reach('Becoming.Flow.through_term'), set())  # stopping at a «» name
+        self.assertEqual(self.T.walk('Becoming.Flow.via_aux'), {LAW, 'Becoming.Flow.fact'})  # through the auxiliaries
 
     def test_where_balance_enters(self):
         self.assertEqual(self.T.balance('Becoming.Flow.balanced')['anchor_in_statement'], ['Becoming.Flow.Balances'])
         self.assertTrue(self.T.balance('Becoming.Flow.written')['written_out'])
+        self.assertFalse(self.T.balance('Becoming.Flow.written_two')['written_out'])  # all three, or balance is not written out
         self.assertEqual(self.T.balance('Becoming.Flow.proof_balance'),
                          {'anchor_in_statement': [], 'written_out': False, 'proof_only': ['Becoming.balance_over_stretch_on']})
 
@@ -274,12 +325,20 @@ class TheDerivedChecks(unittest.TestCase):
         self.assertEqual(failed, ['D4: the lemma Becoming.Flow.fact is not reached'])
         failed = self.check('Becoming.Flow.forwarder', law=[LAW], support=['Becoming.Flow.projection'])[0]
         self.assertIn('it is a grammar law or a forwarder of one', failed[0])
+        failed = self.check('Becoming.Flow.row', law=[LAW], bridges=['Becoming.Flow.bridge_iff'], support=['Becoming.Flow.support', LAW2])[0]
+        self.assertEqual(failed, [f'D4: the lemma {LAW2} is not reached as a lemma: it is a grammar law or a forwarder of one'])
 
     def test_balance_in_the_closure_fails_d5(self):
         # act_courses_unselected's shape: balance in the statement, or only in the proof
         self.assertEqual(self.check('Becoming.Flow.balanced', law=[LAW])[0], ['D5: balance enters its closure: Becoming.Flow.Balances'])
         self.assertEqual(self.check('Becoming.Flow.proof_balance', law=[LAW])[0],
                          ['D5: balance enters its closure: Becoming.balance_over_stretch_on'])
+
+    def test_through_a_forwarder_and_an_auxiliary(self):
+        self.assertEqual(self.check('Becoming.Flow.via_fw', law=[LAW])[0], [])  # D3: the law, through a forwarder
+        self.assertEqual(self.check('Becoming.Flow.via_fw', law=[LAW], support=['Becoming.Flow.forwarder'])[0],
+                         ['D4: the lemma Becoming.Flow.forwarder is not reached as a lemma: it is a grammar law or a forwarder of one'])
+        self.assertEqual(self.check('Becoming.Flow.via_aux', law=[LAW], support=['Becoming.Flow.fact'])[0], [])  # reached through brecOn.eq
 
     def test_a_forwarder_row(self):
         failed, report = self.check('Becoming.Flow.forwarder', law=[LAW])
@@ -308,6 +367,10 @@ class TheRule(unittest.TestCase):
         self.assertTrue(boundary.has_fact('balance in its statement', set(), {**self.NONE, 'written_out': True}, []))
         self.assertFalse(boundary.has_fact('own carrier', set(), self.NONE, [{'models': ['own', 'process']}]))
         self.assertTrue(boundary.has_fact('at a represented model', set(), self.NONE, [{'models': ['own', 'process']}]))
+        self.assertTrue(boundary.has_fact('own carrier', set(), self.NONE, [{'models': ['own']}]))
+        self.assertFalse(boundary.has_fact('own carrier', set(), self.NONE, []))
+        self.assertFalse(boundary.has_fact('balance in its statement', {LAW}, {**self.NONE, 'proof_only': ['Becoming.Flow.Balances']}, []))
+        self.assertTrue(boundary.has_fact('balance in its statement', set(), {**self.NONE, 'anchor_in_statement': ['Becoming.Flow.Balances']}, []))
 
 
 CENTRAL = {n: {'category': 'master law', 'dependence': d} for n, d in (
@@ -361,6 +424,9 @@ class TheReport(unittest.TestCase):
         self.assertEqual(rep['rows']['Becoming.Flow.counted']['label'], 'unplaced')
         self.assertEqual(rep['rows']['Becoming.Flow.via_helper']['placed'], 'reading')
         self.assertEqual(rep['rows']['Becoming.Flow.written']['placed'], 'reading')
+        rep = self.report(standing('Becoming.Flow.own', 'own carrier'), standing('Becoming.Flow.counted', 'balance in its statement'))
+        self.assertEqual([x['declaration'] for x in rep['unverified']], ['Becoming.Flow.counted'])
+        self.assertEqual(rep['rows']['Becoming.Flow.own']['placed'], 'reading')
 
     def test_the_lean_check(self):
         def failing(query, modules):
@@ -378,7 +444,7 @@ class TheReport(unittest.TestCase):
         rep = self.report(*entries, lean=recording)
         self.assertEqual(rep['rows']['Becoming.Flow.two']['label'], 'under a stated hypothesis')
         self.assertEqual(rep['rows']['Becoming.Flow.two']['entry']['report']['recovery_uses'], ['Becoming.Leaf.form'])
-        self.assertEqual(seen[0][1], ['Becoming.Leaf'])
+        self.assertEqual(seen[0][1], ['Becoming.Flow', 'Becoming.Grammar', 'Becoming.Leaf'])  # the module of every name sent
         self.assertEqual((seen[0][0]['names'], seen[0][0]['equivalences']), ([LAW], ['Becoming.Flow.bridge_iff']))
         rep = self.report(*entries, lean=failing)
         failed = {x['declaration']: x['failed'] for x in rep['unverified']}
@@ -386,12 +452,45 @@ class TheReport(unittest.TestCase):
         self.assertEqual(failed['Becoming.Flow.row'], [f'D1: the Lean check does not admit {LAW}',
                                                        'D6: the bridge Becoming.Flow.bridge_iff is not an equivalence'])
         self.assertEqual(rep['rows']['Becoming.Flow.two']['label'], 'unplaced')
+        def dropping(query, modules):
+            out, info = lean_passing(query, modules)
+            out['entries'] = []
+            return out, info
+        rep = self.report(*entries, lean=dropping)
+        self.assertEqual({x['declaration']: x['failed'] for x in rep['unverified']}, {'Becoming.Flow.two': ['the Lean check gave no result']})
+        def silent(query, modules):  # an entry that did not pass, with no failures given
+            out, info = lean_passing(query, modules)
+            out['entries'][0].update(passed=False, failures=[])
+            return out, info
+        rep = self.report(*entries, lean=silent)
+        self.assertEqual({x['declaration']: x['failed'] for x in rep['unverified']}, {'Becoming.Flow.two': ['the Lean check did not pass it']})
+        for bad in ([], {'entries': [1]}, {'entries': [], 'admitted': []}):
+            rep = self.report(*entries, lean=lambda q, m, bad=bad: (bad, {'ran': True}))
+            self.assertEqual(len(rep['unverified']), 2, bad)
+            self.assertEqual(rep['lean_check'], {'ran': False, 'reason': 'the Lean check gave malformed output'})
+        seen.clear()
+        self.report(*entries, standing('Becoming.Flow.steps', 'derived', law=[LAW2]), lean=recording)
+        self.assertEqual(seen[0][0]['names'], [LAW])  # the failing entry's law is not sent
         rep = self.report(*entries, lean=lambda q, m: (None, {'ran': False, 'reason': 'not in the cache'}))
         self.assertEqual(len(rep['unverified']), 2)
         self.assertTrue(all(x['failed'] == ['the Lean check did not run: not in the cache'] for x in rep['unverified']))
         self.assertEqual(rep['lean_check'], {'ran': False, 'reason': 'not in the cache'})
         rep = self.report(standing('Becoming.Flow.counted', 'counting'), lean=None)  # nothing to check: Lean is not run
         self.assertEqual(rep['lean_check'], {'ran': False, 'reason': 'nothing to check'})
+
+    def test_the_lean_check_when_the_checker_cannot_be_set_up(self):
+        def missing():
+            raise FileNotFoundError('no lean binary')
+        with patch.object(boundary, 'checker', missing):
+            out, info = boundary.lean_check({'entries': [], 'names': [LAW], 'equivalences': []}, [])
+        self.assertEqual((out, info), (None, {'ran': False, 'reason': 'the checker could not be set up: FileNotFoundError: no lean binary'}))
+        with tempfile.TemporaryDirectory() as scratch:
+            check = Path(scratch) / 'check.lean'
+            check.write_text('-- no import line\n')
+            with patch.object(boundary, 'CHECK', check), self.assertRaisesRegex(RuntimeError, 'does not begin with import Lean'):
+                boundary.run_check(Path(scratch), [], {}, ['lean'], 1)
+        self.assertEqual(boundary.local(f'error at {Path.home()}/x and /tmp/w1/B.lean:\n  line 3', Path('/tmp/w1')),
+                         'error at ~/x and <scratch>/B.lean: line 3')  # a rerun in the same state writes the same data
 
     def test_robustness(self):
         rep = self.report(standing('Becoming.Flow.fact', 'counting'), standing('Becoming.Flow.absent', 'counting'),
@@ -408,6 +507,22 @@ class TheReport(unittest.TestCase):
             rep = boundary.report(CONSTANTS, CENTRAL, AT_MODEL, F5, r, ANCHORS, lean=lean_passing)
             self.assertTrue(rep['field_failures'] or rep['unverified'], field)
             self.assertEqual(sum(rep['counts'].values()), len(CENTRAL))
+        r = carrier(standing('Becoming.Flow.counted', 'counting'))
+        r['boundary']['standings'].insert(0, 1)
+        rep = boundary.report(CONSTANTS, CENTRAL, AT_MODEL, F5, r, ANCHORS, lean=lean_passing)  # an item that is no object
+        self.assertEqual(rep['unverified'], [{'item': 1, 'declaration': None, 'standing': None,
+                                              'failed': ["its record breaks the check's rules: a standing must be an object"]}])
+        self.assertEqual(rep['rows']['Becoming.Flow.counted']['placed'], 'reading')
+        self.assertEqual(registry.boundary_status([r], {'boundary': rep})['boundary_unverified'],
+                         ["standing 1: its record breaks the check's rules: a standing must be an object"])
+        r['boundary']['standings'].pop(0)
+        r['boundary']['premises_of_the_ethics'][1] = None
+        rep = boundary.report(CONSTANTS, CENTRAL, AT_MODEL, F5, r, ANCHORS, lean=lean_passing)
+        whole = "its record breaks the check's rules: premises_of_the_ethics lists exactly two items, one of role scope and one of role order"
+        self.assertEqual(rep['premises_of_the_ethics'][1], {'item': 2, 'result': 'unverified',
+                                                            'failed': [whole, "its record breaks the check's rules: a premise must be an object"]})
+        self.assertEqual(registry.boundary_status([r], {'boundary': rep})['boundary_premises_unverified'][1],
+                         f"premise 2: None ({whole}; its record breaks the check's rules: a premise must be an object)")
         rep = self.report(standing('Becoming.Flow.counted', 'counting', note=1))
         self.assertEqual(rep['unverified'][0]['failed'], ["its record breaks the check's rules: keys outside the standing counting: note"])
         rep = self.report(standing('Becoming.Flow.counted', 'counting'), status='withdrawn')
@@ -422,6 +537,7 @@ class TheReport(unittest.TestCase):
         self.assertEqual(rep['groups']['on the edge'], 3)
         self.assertEqual(rep['groups']['below the grammar'], 1)
         self.assertEqual(sum(n for v in rep['against_f5'].values() for n in v.values()), len(CENTRAL))
+        self.assertEqual(list(rep['against_f5']), list(boundary.LABELS))  # every label, zeros included
         self.assertEqual(rep['against_f5']['derived'], {'reaching the grammar': 2, 'stated at a represented model': 0,
                                                         'stated on its own carrier only': 0, 'the rest': 0})
         self.assertEqual(rep['derived_by_forwarder'], [{'declaration': 'Becoming.Flow.forwarder', 'law': LAW, 'kind': 'pure'}])
@@ -436,12 +552,50 @@ class TheReport(unittest.TestCase):
         self.assertEqual([(p['result'], p['failed']) for p in rep['premises_of_the_ethics']],
                          [('unverified', ['the type of Becoming.Flow.fact does not name Becoming.Unrestricted']),
                           ('unverified', ['Becoming.Flow.fact is not a definition of the run'])])
+        rep = self.report(standing('Becoming.Flow.counted', 'counting'), premises=[{**SCOPE, 'not_entailed': 'Becoming.Comparison'}, ORDER])
+        self.assertEqual(rep['premises_of_the_ethics'][0]['failed'], ['Becoming.Comparison is not a theorem of the run'])
 
     def test_the_counts_of_the_boundary_record(self):
         self.assertEqual(master_laws.counted_in('edge', 1, ['edge'], {('edge', 1)}), 'counts_at_boundary_record')
         self.assertEqual(master_laws.counted_in('m', 2, ['edge'], {('m', 2)}), 'counts_at_model')
         self.assertEqual(master_laws.counted_in('m', 1, ['edge'], {('m', 2)}), 'counts')
         self.assertEqual(master_laws.counted_in('m', 1, [], set()), 'counts')
+        # the generator's tables: each law in one, the boundary record's laws apart, one carrying items there only
+        loaded = [{'id': 'edge', 'laws': [{'declarations': ['Becoming.Leaf.form']}, {'declarations': ['Becoming.Leaf.part']}]},
+                  {'id': 'm', 'laws': [{'declarations': ['Becoming.Flow.row']}, {'declarations': ['Becoming.Flow.own']}]}]
+        checked = {('edge', 2): [{'declaration': 'Becoming.Leaf.part', 'verified': True}], ('m', 2): [{'declaration': 'Becoming.M.own', 'verified': True}]}
+        def above(n):
+            return True, True, frozenset({'balance'} if n == 'Becoming.Leaf.part' else ())
+        for carrying, laws in ((['edge'], [1, 1, 2]), ([], [2, 2, 0])):
+            records, tables = master_laws.law_entries(loaded, CONSTANTS, above, {}, set(), checked, {}, carrying)
+            self.assertEqual([tables[k]['laws'] for k in master_laws.COUNTED], laws, carrying)
+            self.assertEqual(list(tables['counts']), list(tables['counts_at_boundary_record']))
+        self.assertEqual((tables['counts_at_model']['grammar'], tables['counts_at_model']['balance']), (2, 1))
+        _, two = master_laws.law_entries(loaded, CONSTANTS, above, {}, set(), checked, {}, ['edge', 'm'])
+        self.assertEqual([two[k]['laws'] for k in master_laws.COUNTED], [0, 0, 4])  # with two carriers, both records' laws apart
+        self.assertEqual(records['edge'][1]['statements_at_model'], checked['edge', 2])
+        ec = type('EC', (), {'__file__': str(master_laws.MEASURE), 'COVERAGE': master_laws.MEASURE})
+        self.assertLessEqual({'tools/research/boundary.py', 'tools/research/boundary_check.lean'}, set(master_laws.hashed_inputs(ec)))
+
+
+class ThroughTheCheck(unittest.TestCase):
+    """The field through registry.validate: on a schema-1 record, on a schema-2 record with the review's text, and on
+    two records."""
+    def test_validate(self):
+        from tools.research.tests.test_schema2 import TemporaryRoot
+        field = {'standings': [standing('Becoming.Flow.counted', 'counting', review='Law.lean')],
+                 'premises_of_the_ethics': [{**SCOPE, 'review': 'Law.lean'}, {**ORDER, 'review': 'Law.lean'}]}
+        with TemporaryRoot() as t:
+            errors = registry.validate([t.record(boundary=copy.deepcopy(field))])[0]
+            self.assertIn('example: boundary standing 1 (Becoming.Flow.counted): its review Law.lean does not name Becoming.Flow.counted', errors)
+            (t.root / 'Law.lean').write_text('`Becoming.Flow.counted` `Becoming.Unrestricted` `Becoming.ReadsOnlyDynamics.not_entails` '
+                                             '`Becoming.Comparison`\n')
+            self.assertEqual([e for e in registry.validate([t.record(boundary=copy.deepcopy(field))])[0] if 'boundary' in e], [])
+            errors = registry.validate([t.record(boundary=copy.deepcopy(field), schema_version=1)])[0]
+            self.assertTrue(any('schema-2 fields need schema_version 2:' in e and e.endswith(', boundary') for e in errors), errors)
+            two = [t.record(boundary=copy.deepcopy(field)), t.record(boundary=copy.deepcopy(field), id='example2',
+                                                                      _record_path='records/example2.json')]
+            self.assertIn('the boundary field is carried by more than one record: example, example2', registry.validate(two)[0])
 
 
 class ThePages(unittest.TestCase):
@@ -451,7 +605,8 @@ class ThePages(unittest.TestCase):
                                          support=['Becoming.Flow.support']),
                                 at_hypothesis(), standing('Becoming.Flow.counted', 'counting'),
                                 standing('Becoming.Flow.balanced', 'balance in its statement', relational_part='Becoming.Leaf.part'),
-                                standing('Becoming.Flow.steps', 'derived', law=[LAW]))
+                                standing('Becoming.Flow.steps', 'derived', law=[LAW]),
+                                standing('Becoming.Flow.via_helper', 'amounts'), standing('Becoming.Flow.absent', 'counting'))
         self.data = {'boundary': boundary.report(CONSTANTS, CENTRAL, AT_MODEL, F5, self.declared, ANCHORS, lean=lean_passing)}
 
     def records(self, *laws, matched_at_model=('m:2', 'm:3'), now=None):
@@ -476,12 +631,16 @@ class ThePages(unittest.TestCase):
                          'form, its countermodels, the certificate and the discharge condition; the hypotheses read as the row\'s relational '
                          'content in [review.md](../../../../_process/review.md)).')
         self.assertEqual(self.line('Becoming.Flow.counted'),
-                         '*Standing of `Becoming.Flow.counted`:* counting, a reading: Why it stands so ([review.md](../../../../_process/review.md)).')
+                         '*Standing of `Becoming.Flow.counted`:* counting, a reading: Why it stands so ([review.md](../../../../_process/review.md)); '
+                         "the rule gives unplaced (none of the rule's tests holds).")
+        self.assertEqual(self.line('Becoming.Flow.via_helper'),  # a reading where the rule differs: its label and its reason
+                         '*Standing of `Becoming.Flow.via_helper`:* amounts, a reading: Why it stands so ([review.md](../../../../_process/review.md)); '
+                         f'the rule gives connected (it reaches `{LAW}` among its reasons; not declared a case of one).')
         self.assertEqual(self.line('Becoming.Flow.balanced'),
                          '*Standing of `Becoming.Flow.balanced`:* balance in its statement, a reading: Why it stands so '
                          '([review.md](../../../../_process/review.md)); the rule gives the same; its relational part: `Becoming.Leaf.part`.')
-        self.assertEqual(self.line('Becoming.Flow.via_helper'),
-                         f'*Standing of `Becoming.Flow.via_helper`, by the rule:* connected (it reaches `{LAW}` among its reasons; not '
+        self.assertEqual(self.line('Becoming.Flow.forwarder'),
+                         f'*Standing of `Becoming.Flow.forwarder`, by the rule:* connected (it reaches `{LAW}` among its reasons; not '
                          'declared a case of one).')
         self.assertEqual(self.line('Becoming.Flow.written'),
                          '*Standing of `Becoming.Flow.written`, by the rule:* balance in its statement (balance written out in its statement).')
@@ -489,11 +648,52 @@ class ThePages(unittest.TestCase):
                          "*Standing of `Becoming.Flow.modelled`, by the rule:* at a represented model (F5's verified items at the occurrence model).")
         self.assertEqual(self.line('Becoming.Flow.own'),
                          "*Standing of `Becoming.Flow.own`, by the rule:* own carrier (F5's verified items on its own carrier only).")
+        self.assertEqual(self.line('Becoming.Flow.absent'),  # an unverified entry: the reason does not say none was declared
+                         "*Standing of `Becoming.Flow.absent`, by the rule:* unplaced (no standing verified, and none of the rule's tests holds; "
+                         'the declared standing, counting, is unverified: not in the spine run: Becoming.Flow.absent).')
+        self.assertEqual(self.line('Becoming.Flow.steps'),
+                         f'*Standing of `Becoming.Flow.steps`, by the rule:* connected (it reaches `{LAW}` among its reasons; not verified as a '
+                         'case of one; the declared standing, derived, is unverified: D2: the proofs name theorems that are neither grammar '
+                         'laws, root theorems nor declared lemmas: Becoming.Flow.fact).')
+        unplaced = copy.deepcopy(self.declared)
+        unplaced['boundary']['standings'].pop()
+        self.data = {'boundary': boundary.report(CONSTANTS, CENTRAL, AT_MODEL, F5, unplaced, ANCHORS, lean=lean_passing)}
+        self.declared = unplaced
         self.assertEqual(self.line('Becoming.Flow.absent'),
                          "*Standing of `Becoming.Flow.absent`, by the rule:* unplaced (no standing declared, and none of the rule's tests holds).")
-        self.assertTrue(self.line('Becoming.Flow.steps').endswith(
-            '; the declared standing, derived, is unverified: D2: the proofs name theorems that are neither grammar laws, root theorems '
-            'nor declared lemmas: Becoming.Flow.fact).'))
+
+    def test_the_other_sentences(self):
+        # a forwarder row, standing 2 with two hypotheses and a bridge, an anchor in the statement, two represented models
+        at_model = {**AT_MODEL, 'Becoming.Flow.modelled': AT_MODEL['Becoming.Flow.modelled'] + [
+            {'of': 'Becoming.Flow.modelled', 'record': 'm', 'law': 4, 'declaration': 'Becoming.M.process', 'models': ['process'], 'review': REVIEW}]}
+        self.declared = carrier(standing('Becoming.Flow.forwarder', 'derived', law=[LAW]),
+                                at_hypothesis(hyps=(HYP, HYP2), bridges=['Becoming.Leaf.bridge']))
+        self.data = {'boundary': boundary.report(CONSTANTS, CENTRAL, at_model, F5, self.declared, ANCHORS, lean=lean_passing)}
+        line = lambda d: registry.standing_line(d, self.records([d], matched_at_model=('m:2', 'm:3', 'm:4'))[0]['_standings']['rows'][d],
+                                                'edge', lambda i: f'[{i}]({i}.md)', registry.ROOT / 'theories/becoming/results/records')
+        self.assertEqual(line('Becoming.Flow.forwarder'),
+                         f'*Standing of `Becoming.Flow.forwarder`:* derived, a case of `{LAW}` (it forwards to `{LAW}`, of kind pure) (declared '
+                         'in [edge](edge.md); the closed set checked against the Lean; the case read in [review.md](../../../../_process/review.md)).')
+        self.assertEqual(line('Becoming.Flow.two'),
+                         '*Standing of `Becoming.Flow.two`:* under a stated hypothesis, the root form `Becoming.Leaf.form` at its model, with '
+                         'hypotheses `Becoming.Leaf.H` and `Becoming.Leaf.H2`, each with its countermodel and fit, through the bridges '
+                         '`Becoming.Leaf.bridge` (declared in [edge](edge.md); checked in Lean: the form, its countermodels, the certificate and '
+                         "the discharge condition; the hypotheses read as the row's relational content in [review.md](../../../../_process/review.md)).")
+        self.assertEqual(line('Becoming.Flow.balanced'),
+                         '*Standing of `Becoming.Flow.balanced`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).')
+        self.assertEqual(line('Becoming.Flow.modelled'),
+                         "*Standing of `Becoming.Flow.modelled`, by the rule:* at a represented model (F5's verified items at the occurrence and "
+                         'process models).')
+
+    def test_the_section_follows_the_laws(self):
+        edge = self.records()[-1]
+        r = json.loads(json.dumps(next(x for x in registry.load_records()[0] if x.get('schema_version') == 2 and x.get('laws')
+                                       and x.get('hypotheses')), ensure_ascii=False))
+        r.pop('_standings', None)
+        r['_boundary'] = edge['_boundary']
+        page = registry.render_record_v2(r)
+        self.assertLess(page.index('## Laws'), page.index('## Standings on the edge'))
+        self.assertLess(page.index('## Standings on the edge'), page.index('## Conditions'))
 
     def test_one_line_per_central_declaration_and_record(self):
         records = self.records(['Becoming.Flow.row', 'Becoming.Flow.fact', 'Becoming.Flow.counted', 'Becoming.Flow.row'], ['Becoming.Flow.row'])
@@ -515,6 +715,38 @@ class ThePages(unittest.TestCase):
         self.assertIn('_standings', self.records(['Becoming.Flow.modelled'])[0])
         moved = {**copy.deepcopy(self.declared), 'id': 'elsewhere'}
         self.assertNotIn('_standings', self.records(['Becoming.Flow.row'], now=moved)[0])  # the data read another record
+
+    def test_the_record_around_the_field(self):
+        # what the rules read besides the field: a change there leaves every verdict in doubt
+        for change in (lambda r: r['references'].append({'role': 'review', 'path': '_process/another.md'}),
+                       lambda r: r.update(status='recorded-open'), lambda r: r['laws'][0]['declarations'].pop(),
+                       lambda r: r['boundary'].update(note={'en': 'x'})):
+            now = copy.deepcopy(self.declared)
+            change(now)
+            shown, not_matched = registry.boundary_matching([now], self.data)
+            self.assertEqual(shown, set())
+            self.assertIn('the field', not_matched)
+            self.assertIn('Becoming.Flow.row', not_matched)
+        self.assertEqual(registry.boundary_matching([copy.deepcopy(self.declared)], self.data)[1], [])
+
+    def test_a_carrier_the_data_has_not_read(self):
+        unread = carrier(standing('Becoming.Flow.counted', 'counting'))
+        for data in ({}, {'boundary': {'record': 'another', 'declared': {}, 'rows': {}}}):
+            records = [copy.deepcopy(unread), {'id': 'another', 'laws': []}]
+            registry.attach_standings(records, data, set())
+            self.assertEqual(records[0]['_boundary'], {'not_matched': ['Becoming.Flow.counted', 'premises_of_the_ethics']})
+            self.assertNotIn('_boundary', records[1])  # the data's record carries the field no longer
+            section = '\n'.join(x for x in registry.boundary_section(records[0], registry.ROOT) if isinstance(x, str))
+            self.assertIn('*Not matched:* the data read another version of this field (Becoming.Flow.counted and premises_of_the_ethics)', section)
+
+    def test_pages_unchanged_without_the_field(self):
+        records = [r for r in registry.load_records()[0] if r.get('schema_version') == 2 and r.get('laws')][:40]
+        for r in records:
+            r.pop('_standings', None)
+            r.pop('_boundary', None)
+        before = [registry.render_record_v2(copy.deepcopy(r)) for r in records]
+        registry.attach_standings(records, {'records': {}}, set())
+        self.assertEqual([registry.render_record_v2(r) for r in records], before)
 
     def test_nothing_without_the_field(self):
         records = [{'id': 'p', 'laws': [{'declarations': ['Becoming.Flow.row']}]}]
@@ -539,6 +771,7 @@ class ThePages(unittest.TestCase):
                       'certificate `Becoming.Leaf.certified`.', text)
         self.assertIn('- `Becoming.Flow.steps`: connected (by the rule; the declared standing, derived, is unverified).', text)
         self.assertIn('- `Becoming.Flow.balanced`: balance in its statement (a reading; the rule gives the same).', text)
+        self.assertIn('- `Becoming.Flow.counted`: counting (a reading; the rule gives unplaced).', text)
         for group in ('On the edge', 'Below the grammar', 'Distances', 'Unplaced'):
             self.assertIn(group, text)
         now = copy.deepcopy(self.declared)
@@ -557,20 +790,52 @@ class ThePages(unittest.TestCase):
         with patch.object(registry, 'master_laws', return_value=self.data):
             self.assertEqual(registry.affected_ids(records, {'theories/becoming/results/records/edge.json'}), {'edge', 'naming'})
             self.assertEqual(registry.affected_ids(records, {'theories/becoming/results/records/other.json'}), {'other'})
+            # the data changed: every record with laws, and the boundary record, which has none here
+            self.assertEqual(registry.affected_ids(records, {registry.MASTER_LAWS}), {'edge', 'naming', 'other'})
+        with patch.object(registry, 'master_laws', return_value=self.data):
+            # the boundary record deleted: the data's record, though it is gone
+            self.assertEqual(registry.affected_ids(records[1:], {'theories/becoming/results/records/edge.json'}), {'naming'})
+            # an F5 carrier changed: the rule's lines citing its laws show or hide
+            cited = [{'id': 'm', '_record_path': 'theories/becoming/results/records/m.json', 'references': [], 'dependencies': [], 'laws': []},
+                     {'id': 'shows', '_record_path': 'theories/becoming/results/records/shows.json', 'references': [], 'dependencies': [],
+                      'laws': [{'declarations': ['Becoming.Flow.modelled']}]}]
+            self.assertEqual(registry.affected_ids(records + cited, {'theories/becoming/results/records/m.json'}), {'m', 'shows'})
+        unread = {'records': {'naming': [{'law': 1, 'central': [{'declaration': 'Becoming.Flow.row'}]}]}}  # U4's first landing
+        with patch.object(registry, 'master_laws', return_value=unread):
+            self.assertEqual(registry.affected_ids(records, {'theories/becoming/results/records/edge.json'}), {'edge', 'naming'})
+
+
+def bare(*standings, **more):
+    """A carrier whose law declares nothing, so that the status reads no law of it."""
+    return carrier(*standings, own=[], **more)
 
 
 class TheStatus(unittest.TestCase):
-    """The status's four lists, current, and the error (§3.6)."""
+    """The status's four lists, current, and the error (§3.6). The core receipt and the inputs match, and the carrier's
+    law declares nothing, so that `current` turns on the boundary field alone."""
+    def setUp(self):
+        self.dir = tempfile.TemporaryDirectory()
+        (Path(self.dir.name) / 'receipt.json').write_text(json.dumps({'utc': 'R', 'status': 'passed', 'source_sha256': {}}))
+        self.patches = [patch.object(registry, 'ROOT', Path(self.dir.name)), patch.object(registry, 'CORE_RECEIPT', 'receipt.json')]
+        for x in self.patches:
+            x.start()
+
+    def tearDown(self):
+        for x in self.patches:
+            x.stop()
+        self.dir.cleanup()
+
     def status(self, data, records):
         with patch.object(registry, 'master_laws', return_value=data):
             return registry.master_laws_status(records)
 
     def base(self, boundary_data):
-        return {'core_receipt': 'R', 'names': {}, 'inputs_sha256': {}, 'core_sources_sha256': '', 'records': {},
+        return {'core_receipt': 'R', 'names': {}, 'inputs_sha256': {}, 'records': {},
+                'core_sources_sha256': hashlib.sha256(json.dumps({}, sort_keys=True).encode()).hexdigest(),
                 **({'boundary': boundary_data} if boundary_data is not None else {})}
 
     def test_the_four_lists_and_current(self):
-        declared = carrier(standing('Becoming.Flow.steps', 'derived', law=[LAW]), standing('Becoming.Flow.counted', 'counting'),
+        declared = bare(standing('Becoming.Flow.steps', 'derived', law=[LAW]), standing('Becoming.Flow.counted', 'counting'),
                            premises=[SCOPE, {**ORDER, 'premise': 'Becoming.Flow.fact'}])
         rep = boundary.report(CONSTANTS, CENTRAL, AT_MODEL, F5, declared, ANCHORS, lean=lean_passing)
         status = self.status(self.base(rep), [copy.deepcopy(declared)])
@@ -579,6 +844,7 @@ class TheStatus(unittest.TestCase):
         self.assertEqual(status['boundary_premises_unverified'], ['order: Becoming.Flow.fact (Becoming.Flow.fact is not a definition of the run)'])
         self.assertEqual(status['boundary_unplaced'], ['Becoming.Flow.absent', 'Becoming.Flow.two'])
         self.assertEqual(status['boundary_not_matched'], [])
+        self.assertTrue(status['current'])  # unverified entries leave the data current; a changed field does not
         now = copy.deepcopy(declared)
         now['boundary']['standings'].pop()
         status = self.status(self.base(rep), [now])
@@ -590,7 +856,7 @@ class TheStatus(unittest.TestCase):
                          ['Becoming.Flow.counted', 'Becoming.Flow.steps', 'premises_of_the_ethics'])  # the data has not read it
 
     def test_premises_not_shown_are_not_unverified(self):
-        declared = carrier(standing('Becoming.Flow.counted', 'counting'))
+        declared = bare(standing('Becoming.Flow.counted', 'counting'))
         rep = boundary.report(CONSTANTS, CENTRAL, AT_MODEL, F5, declared, ANCHORS, lean=lean_passing)
         status = self.status(self.base(rep), [declared])
         self.assertEqual((status['boundary_unverified'], status['boundary_premises_unverified']), ([], []))
@@ -600,14 +866,15 @@ class TheStatus(unittest.TestCase):
         self.assertEqual([status[k] for k in ('boundary_unverified', 'boundary_premises_unverified', 'boundary_unplaced',
                                               'boundary_not_matched')], [[], [], [], []])
         self.assertNotIn('boundary_error', status)
+        self.assertTrue(status['current'])
         status = self.status(self.base({'error': 'the boundary field is carried by more than one record', 'records': ['a', 'b']}),
-                             [carrier(ident='a'), carrier(ident='b')])
+                             [bare(ident='a'), bare(ident='b')])
         self.assertEqual(status['boundary_error'], 'the boundary field is carried by more than one record: a, b')
         self.assertFalse(status['current'])
         self.assertEqual(status['boundary_not_matched'], [])
 
     def test_the_field_fails_as_a_whole(self):
-        declared = carrier(standing('Becoming.Flow.counted', 'counting'))
+        declared = bare(standing('Becoming.Flow.counted', 'counting'))
         declared['boundary'] = {'standings': [], 'premises_of_the_ethics': []}
         rep = boundary.report(CONSTANTS, CENTRAL, AT_MODEL, F5, declared, ANCHORS, lean=lean_passing)
         self.assertEqual(self.status(self.base(rep), [declared])['boundary_unverified'][0],
@@ -634,6 +901,10 @@ theorem Model.rel_total : ¬ ∃ x, ∀ y, ¬ Model.rel x y := fun ⟨x, h⟩ =>
 theorem Model.rel_onward : ∀ x, ∃ y, Model.rel x y := fun x => ⟨Model.next x, rfl⟩
 theorem Model.and_swap {a b : Prop} : a ∧ b ↔ b ∧ a := ⟨fun ⟨x, y⟩ => ⟨y, x⟩, fun ⟨x, y⟩ => ⟨y, x⟩⟩
 theorem Model.size_zero : ([] : List Nat).length = 0 := rfl
+theorem Model.eq_props {a : Prop} : (a ∧ True) = a := propext ⟨And.left, fun h => ⟨h, trivial⟩⟩
+theorem Model.eq_predicates : (fun x : Nat => Model.rel x x) = (fun x => Model.rel x x) := rfl
+theorem Model.next_rel : ∀ x, Model.rel x (Model.next x) := fun _ => rfl
+def Model.step : {f : Nat → Nat // ∀ x, Model.rel x (f x)} := ⟨Model.next, Model.next_rel⟩
 end Becoming
 ''',
     'Becoming/Leaf.lean': '''import Becoming.Model
@@ -651,24 +922,36 @@ theorem rel_total_at_model : ¬ ∃ x, ∀ y, ¬ Model.rel x y := total_form (fu
 theorem rel_total_certified : @Model.rel_total = @rel_total_at_model := rfl
 theorem rel_total_through_fact : ¬ ∃ x, ∀ y, ¬ Model.rel x y := total_form Model.rel_onward
 theorem rel_total_through_fact_certified : @Model.rel_total = @rel_total_through_fact := rfl
+def onward_held : Total Model.rel := fun x => ⟨Model.next x, rfl⟩
+theorem rel_total_through_held : ¬ ∃ x, ∀ y, ¬ Model.rel x y := total_form onward_held
+theorem rel_total_through_held_certified : @Model.rel_total = @rel_total_through_held := rfl
+theorem rel_total_through_data : ¬ ∃ x, ∀ y, ¬ Model.rel x y := total_form (fun x => ⟨Model.step.1 x, Model.step.2 x⟩)
+theorem rel_total_through_data_certified : @Model.rel_total = @rel_total_through_data := rfl
 theorem small_form {X : Type} {r : «际» X} {q : X → Nat} (small : SmallAll r q) : ¬ ∃ x, ∀ y, ¬ r x y :=
   fun ⟨x, h⟩ => match (small x).2 with | ⟨y, hy⟩ => h y hy
 end Becoming.Leaf
 ''',
+    'Becoming/GrammarCourse.lean': '''import Becoming.Model
+namespace Becoming
+theorem GrammarCourse.built_on_model : ∀ x, ∃ y, Model.rel x y := Model.rel_onward
+end Becoming
+''',
 }
 SPINE = registry.ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
-LEAN = Path.home() / '.elan/bin/lean'
 
 
 class TheLeanCheck(unittest.TestCase):
     """boundary_check.lean on stub modules: a form passing every test, a recovery through a model fact, a hypothesis
-    with an amount behind a prelude definition, the name test and the equivalence test. Skipped without the toolchain."""
+    with an amount behind a prelude definition, an absent certificate, the name test (by module and by content) and the
+    equivalence test (an Iff, an Eq of propositions, an Eq at a type of values). Skipped without the installed toolchain,
+    which the test runs directly, so that nothing is downloaded."""
     @classmethod
     def setUpClass(cls):
         toolchain = (SPINE / 'lean-toolchain').read_text().strip() if (SPINE / 'lean-toolchain').is_file() else ''
-        cls.lean = [str(LEAN), '+' + toolchain]
-        if not LEAN.is_file() or not toolchain or subprocess.run(cls.lean + ['--version'], capture_output=True).returncode != 0:
-            raise unittest.SkipTest('the Lean toolchain is absent')
+        binary = Path.home() / '.elan/toolchains' / toolchain.replace('/', '--').replace(':', '---') / 'bin/lean'
+        cls.lean = [str(binary)]
+        if not toolchain or not binary.is_file() or subprocess.run(cls.lean + ['--version'], capture_output=True).returncode != 0:
+            raise unittest.SkipTest('the Lean toolchain is not installed')
         cls.dir = tempfile.mkdtemp(prefix='boundary-stubs-')
         work = Path(cls.dir)
         for path, text in STUBS.items():
@@ -682,13 +965,17 @@ class TheLeanCheck(unittest.TestCase):
         def entry(form, hyp, recovery, certificate):
             return {'row': 'Becoming.Model.rel_total', 'form': L + form, 'recovery': L + recovery, 'certificate': L + certificate,
                     'hypotheses': [{'hypothesis': L + hyp, 'countermodel': L + 'total_form.needs_total', 'fit': L + 'total_form.total_needed'}]}
-        cls.out = boundary.run_check(work, ['Becoming.Leaf'], {
+        cls.out = boundary.run_check(work, ['Becoming.Leaf', 'Becoming.GrammarCourse'], {
             'entries': [entry('total_form', 'Total', 'rel_total_at_model', 'rel_total_certified'),
                         entry('total_form', 'Total', 'rel_total_through_fact', 'rel_total_through_fact_certified'),
                         entry('small_form', 'SmallAll', 'rel_total_at_model', 'rel_total_certified'),
-                        entry('total_form', 'Total', 'rel_total_at_model', 'absent_certificate')],
-            'names': ['Becoming.«际之自»', 'Becoming.Model.rel_total', 'Becoming.Small', 'Becoming.Absent'],
-            'equivalences': ['Becoming.Model.and_swap', 'Becoming.Model.size_zero', 'Becoming.Model.rel_total']}, cls.lean, 600)
+                        entry('total_form', 'Total', 'rel_total_at_model', 'absent_certificate'),
+                        entry('total_form', 'Total', 'rel_total_through_held', 'rel_total_through_held_certified'),
+                        entry('total_form', 'Total', 'rel_total_through_data', 'rel_total_through_data_certified')],
+            'names': ['Becoming.«际之自»', 'Becoming.Model.rel_total', 'Becoming.Small', 'Becoming.Absent',
+                      'Becoming.GrammarCourse.built_on_model'],
+            'equivalences': ['Becoming.Model.and_swap', 'Becoming.Model.size_zero', 'Becoming.Model.rel_total',
+                             'Becoming.Model.eq_props', 'Becoming.Model.eq_predicates']}, cls.lean, 600)
 
     @classmethod
     def tearDownClass(cls):
@@ -701,13 +988,20 @@ class TheLeanCheck(unittest.TestCase):
     def test_the_failures(self):
         self.assertIn('the discharge condition fails: the recovery uses [Becoming.Model.rel_onward]', self.out['entries'][1]['failures'])
         self.assertIn('the hypothesis Becoming.Leaf.SmallAll names amounts: [Nat, LE.le]', self.out['entries'][2]['failures'])
-        self.assertFalse(self.out['entries'][3]['passed'])
+        self.assertEqual((self.out['entries'][3]['passed'], self.out['entries'][3]['failures']),
+                         (False, ['not in the environment: [Becoming.Leaf.absent_certificate]']))
+        self.assertEqual(self.out['entries'][4]['failures'],  # a fact held in a definition is a proof the recovery uses
+                         ['the discharge condition fails: the recovery uses [Becoming.Leaf.onward_held]'])
+        self.assertEqual(self.out['entries'][5]['failures'],  # and so is one a model's data carries
+                         ['the discharge condition fails: the recovery uses [Becoming.Model.next_rel]'])
 
     def test_the_name_and_equivalence_tests(self):
+        # a grammar module's theorem built on a model is refused by its content
         self.assertEqual(self.out['admitted'], {'Becoming.«际之自»': True, 'Becoming.Model.rel_total': False, 'Becoming.Small': True,
-                                                'Becoming.Absent': False})
+                                                'Becoming.Absent': False, 'Becoming.GrammarCourse.built_on_model': False})
         self.assertEqual(self.out['equivalence'], {'Becoming.Model.and_swap': True, 'Becoming.Model.size_zero': False,
-                                                   'Becoming.Model.rel_total': False})
+                                                   'Becoming.Model.rel_total': False, 'Becoming.Model.eq_props': True,
+                                                   'Becoming.Model.eq_predicates': True})
 
 
 class TheRepositoryFile(unittest.TestCase):
@@ -717,6 +1011,7 @@ class TheRepositoryFile(unittest.TestCase):
             self.skipTest('no record carries the boundary field')
         b = data['boundary']
         if 'error' in b:
+            self.assertGreater(len(b['records']), 1)
             return
         self.assertEqual(sum(b['counts'].values()), len(b['rows']))
         self.assertEqual(sum(b['groups'].values()), len(b['rows']))

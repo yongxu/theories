@@ -680,6 +680,20 @@ def _names(names):
     return _listed(['`' + n + '`' for n in names])
 
 
+def _rule_reason(row, label, e):
+    """Why U4's rule gives `label` to a row (BOUNDARY-FIELD.md §5), with e the row's entry where it has one."""
+    b = row['balance']
+    models = sorted({m for x in row['at_model'] for m in x['models']} & {'occurrence', 'process'})
+    case = 'not verified as a case of one' if e.get('standing') == 'derived' else 'not declared a case of one'
+    return {'balance in its statement': f'{_names(b["anchor_in_statement"])} in its statement' if b['anchor_in_statement']
+            else 'balance written out in its statement',
+            'connected': (f'it reaches {_names(row["grammar_laws_reached"])} among its reasons' if row['grammar_laws_reached']
+                          else 'the measure has it reaching the grammar') + '; ' + case,
+            'at a represented model': f"F5's verified items at the {_listed(models)} model" + ('s' if len(models) > 1 else ''),
+            'own carrier': "F5's verified items on its own carrier only",
+            'unplaced': ('no standing verified' if e else 'no standing declared') + ", and none of the rule's tests holds"}.get(label, label)
+
+
 def standing_line(d, row, record, result_link, base):
     """The line for central declaration d under a law that names it (BOUNDARY-FIELD.md §5): one sentence for its
     standing, as the data placed it from the boundary record (declared in `record`) or by U4's rule."""
@@ -714,18 +728,13 @@ def standing_line(d, row, record, result_link, base):
         text = f'*Standing of `{d}`:* {e["standing"]}, a reading: {en(e["basis"]).strip().rstrip(".")} ({link(e["review"], base)})'
         if row['rule'] == e['standing']:
             text += '; the rule gives the same'
+        else:
+            why = "none of the rule's tests holds" if row['rule'] == 'unplaced' else _rule_reason(row, row['rule'], {})
+            text += f'; the rule gives {row["rule"]} ({why})'
         if e.get('relational_part'):
             text += f'; its relational part: `{e["relational_part"]}`'
         return text + '.'
-    b = row['balance']
-    models = sorted({m for x in row['at_model'] for m in x['models']} & {'occurrence', 'process'})
-    why = {'balance in its statement': f'{_names(b["anchor_in_statement"])} in its statement' if b['anchor_in_statement']
-           else 'balance written out in its statement',
-           'connected': (f'it reaches {_names(row["grammar_laws_reached"])} among its reasons' if row['grammar_laws_reached']
-                         else 'the measure has it reaching the grammar') + '; not declared a case of one',
-           'at a represented model': f"F5's verified items at the {_listed(models)} model" + ('s' if len(models) > 1 else ''),
-           'own carrier': "F5's verified items on its own carrier only",
-           'unplaced': "no standing declared, and none of the rule's tests holds"}.get(row['label'], row['label'])
+    why = _rule_reason(row, row['label'], e)
     if e:
         why += f'; the declared standing, {e.get("standing")}, is unverified: ' + '; '.join(e.get('failed', []))
     return f'*Standing of `{d}`, by the rule:* {row["label"]} ({why}).'
@@ -772,7 +781,8 @@ def boundary_section(r, base):
                         + (f'; bridges {_names(e["bridges"])}' if e.get('bridges') else ''))
             else:
                 more = ''
-            how = {'checked entry': 'a checked entry', 'reading': 'a reading' + ('; the rule gives the same' if x['rule'] == x['label'] else ''),
+            how = {'checked entry': 'a checked entry',
+                   'reading': 'a reading; the rule gives ' + ('the same' if x['rule'] == x['label'] else x['rule']),
                    'the rule': 'by the rule' + (f'; the declared standing, {e.get("standing")}, is unverified' if e else '')}[x['placed']]
             lines += [f'- `{d}`: {x["label"]} ({how}){more}.']
     return lines + ['']
@@ -803,6 +813,10 @@ def boundary_matching(records, data):
     if now is None or now.get('id') != b.get('record'):
         return set(), sorted({*_grouped(b.get('declared')), *(d for r in carrying for d in _grouped(r['boundary'])), 'premises_of_the_ethics'})
     read, declared = _grouped(b.get('declared')), _grouped(now['boundary'])
+    keys = lambda f: sorted(map(str, f)) if isinstance(f, dict) else None
+    if b.get('context') != boundary.context(now) or keys(b.get('declared')) != keys(now['boundary']):
+        # the record around the field, or the field's own keys, changed: every verdict may differ
+        return set(), sorted({*read, *declared, 'premises_of_the_ethics', 'the field'})
     differ = {d for d in {*read, *declared} if read.get(d) != declared.get(d)}
     premises = lambda f: f.get('premises_of_the_ethics') if isinstance(f, dict) else None
     return ({d for d in b.get('rows', {}) if d not in differ},
@@ -815,9 +829,11 @@ def boundary_status(records, data):
     if 'error' in b:
         return {'boundary_error': f'{b["error"]}: ' + ', '.join(map(str, b.get('records', []))), 'boundary_unverified': [],
                 'boundary_premises_unverified': [], 'boundary_unplaced': [], 'boundary_not_matched': []}
-    unverified = [f'{x.get("declaration")} ({x.get("standing")}): ' + '; '.join(x.get('failed', [])) for x in b.get('unverified', [])]
+    unverified = [(f'{x["declaration"]} ({x.get("standing")})' if isinstance(x.get('declaration'), str) else f'standing {x.get("item")}')
+                  + ': ' + '; '.join(x.get('failed', [])) for x in b.get('unverified', [])]
     return {'boundary_unverified': unverified or ['the field: ' + m for m in b.get('field_failures', [])],
-            'boundary_premises_unverified': [f'{p.get("role")}: {p.get("premise")} (' + '; '.join(p.get('failed', [])) + ')'
+            'boundary_premises_unverified': [(p['role'] if isinstance(p.get('role'), str) else f'premise {p.get("item")}')
+                                             + f': {p.get("premise")} (' + '; '.join(p.get('failed', [])) + ')'
                                              for p in b.get('premises_of_the_ethics', []) if p.get('result') == 'unverified'],
             'boundary_unplaced': sorted(d for d, x in b.get('rows', {}).items() if x.get('label') == 'unplaced'),
             'boundary_not_matched': boundary_matching(records, data)[1]}
@@ -1280,11 +1296,17 @@ def record_path(record):
 def attach_standings(records, measured, matched_at_model):
     """The boundary field on the pages: a central declaration's standing line shows under the laws naming it while its
     entry, or its absence, is what the data read; a line the rule places from F5's items, while each F5 law it cites is
-    matched too. The record carrying the field gets the data's report for its section."""
+    matched too. The record carrying the field gets the data's report for its section, or, where the data read another
+    version of the field or none, the declarations not matched."""
+    from tools.research import boundary
     b = measured.get('boundary')
-    if not isinstance(b, dict) or not isinstance(b.get('rows'), dict):
-        return
+    if isinstance(b, dict) and 'error' in b:
+        return  # two records carry the field: the check refuses it and nothing renders
     shown, not_matched = boundary_matching(records, measured)
+    if not isinstance(b, dict) or not isinstance(b.get('rows'), dict):
+        for r in boundary.carriers(records):
+            r['_boundary'] = {'not_matched': not_matched}
+        return
     def cites(row):
         return row['placed'] != 'the rule' or row['label'] not in ('at a represented model', 'own carrier') \
             or all(f'{x["record"]}:{x["law"]}' in matched_at_model for x in row['at_model'])
@@ -1292,8 +1314,8 @@ def attach_standings(records, measured, matched_at_model):
         rows = {d: b['rows'][d] for d in sorted(law_names(r) & shown) if cites(b['rows'][d])}
         if rows:
             r['_standings'] = {'record': b['record'], 'rows': rows}
-        if r.get('id') == b.get('record'):
-            r['_boundary'] = {**b, 'not_matched': not_matched}
+        if 'boundary' in r:
+            r['_boundary'] = {**b, 'not_matched': not_matched} if r.get('id') == b.get('record') else {'not_matched': not_matched}
 
 
 def law_names(r):
@@ -1359,14 +1381,20 @@ def affected_ids(records, changed):
     data = master_laws()
     b = data.get('boundary') if isinstance(data.get('boundary'), dict) else {}
     holders = {b.get('record')} | {r['id'] for r in boundary.carriers(records)}
+    paths = {str(record_path(r).relative_to(ROOT)) for r in records if r['id'] in holders}
+    if isinstance(b.get('record'), str):
+        paths.add(str((RECORDS / (b['record'] + '.json')).relative_to(ROOT)))  # the data's record, though it is gone
     edge = set()
-    if any(str(record_path(r).relative_to(ROOT)) in changed for r in records if r['id'] in holders):
+    if paths & changed:
         edge = {c['declaration'] for entries in (data.get('records') or {}).values() for e in entries for c in e.get('central', [])}
         edge |= set(b.get('rows', {}))
+    # A change to an F5 carrier shows or hides the rule's lines that cite its laws.
+    touched = {r['id'] for r in records if str(record_path(r).relative_to(ROOT)) in changed}
+    edge |= {d for d, x in b.get('rows', {}).items() if isinstance(x, dict) and any(i.get('record') in touched for i in x.get('at_model', []))}
     selected = {r['id'] for r in records if str(record_path(r).relative_to(ROOT)) in changed or any(x['path'] in changed for x in r['references'])
                 or any(v.get('path') in changed for v in r.get('text_versions', []) if isinstance(v, dict))
                 or (shared and r.get('standard_boundaries')) or (families and r.get('_law_family'))
-                or (measured and r.get('laws')) or (edge and any(d in edge for d in law_names(r)))}
+                or (measured and (r.get('laws') or r['id'] in holders)) or (edge and any(d in edge for d in law_names(r)))}
     # A changed record's producers list it under "Used by" on their pages.
     selected |= {e['id'] for r in records if r['id'] in selected for e in r['dependencies']}
     while True:

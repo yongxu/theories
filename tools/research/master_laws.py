@@ -193,6 +193,62 @@ def counted_in(rid, i, carrying, checked):
     return 'counts_at_boundary_record' if rid in carrying else 'counts_at_model' if (rid, i) in checked else 'counts'
 
 
+COUNTED = ('counts', 'counts_at_model', 'counts_at_boundary_record')
+
+
+def law_entries(loaded, C, above, central, is_anchor, checked, at_model, carrying):
+    """Each record's law entries, and the three tables each law is counted in one of (counted_in): counts,
+    counts_at_model (F5's carrying laws) and counts_at_boundary_record (the laws of the record carrying the boundary
+    field). above(n) is (reaches the grammar, reaches a grammar theorem, the master laws whose anchors it reaches)."""
+    counts = {'laws': 0, 'no_declarations': 0, 'outside': 0, **{d: 0 for d in DEPENDENCES}, 'vocabulary_only': 0, **{k: 0 for k in NAMES}}
+    tables = {k: dict.fromkeys(counts, 0) for k in COUNTED}
+    records = {}
+    for r in loaded:
+        entries = []
+        for i, law in enumerate(r.get('laws', []), 1):
+            names = list(law.get('declarations', []))
+            inside = [n for n in names if n in C]
+            g, gl, hit = False, False, set()
+            for n in inside:
+                gn, gln, hn = above(n)
+                g, gl, hit = g or gn, gl or gln, hit | hn
+            e = {'law': i, 'declarations': names}
+            c = tables[counted_in(r['id'], i, carrying, checked)]
+            c['laws'] += 1
+            if inside:
+                e['master_laws'] = [k for k in NAMES if k in hit]
+                e['grammar'] = g
+                if g and not gl:
+                    e['grammar_vocabulary_only'] = True
+                    c['vocabulary_only'] += 1
+                e['dependence'] = dependence(g, hit)
+                c[e['dependence']] += 1
+                for k in e['master_laws']:
+                    c[k] += 1
+                defines = [n for n in inside if n in is_anchor]
+                if defines:
+                    e['defines'] = defines
+            elif names:
+                c['outside'] += 1
+            else:
+                c['no_declarations'] += 1
+            cen = [{'declaration': n, **central[n]} for n in names if n in central]
+            if cen:
+                e['central'] = cen
+            out = [n for n in names if n not in C]
+            if out:
+                e['outside'] = out
+            if (r['id'], i) in checked:
+                e['statements_at_model'] = checked[r['id'], i]
+            elsewhere = [x for n in dict.fromkeys(names) for x in at_model.get(n, []) if (x['record'], x['law']) != (r['id'], i)]
+            if elsewhere:
+                e['stated_at_model'] = elsewhere
+            entries.append(e)
+        if entries:
+            records[r['id']] = entries
+    return records, tables
+
+
 def digest(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
@@ -285,10 +341,6 @@ def main():
         central[row['declaration']] = {'category': row['category'], 'dependence': row['dependence'],
                                        'master_laws': [k for k in NAMES if k in row['laws']],
                                        **({'reason': row['reason']} if 'reason' in row else {})}
-    records = {}
-    counts = {'laws': 0, 'no_declarations': 0, 'outside': 0, **{d: 0 for d in DEPENDENCES}, 'vocabulary_only': 0, **{k: 0 for k in NAMES}}
-    counts_at_model = dict.fromkeys(counts, 0)  # laws carrying statements at a model, counted apart (F5)
-    counts_at_boundary_record = dict.fromkeys(counts, 0)  # the laws of the record carrying the boundary field
     loaded = [json.loads(path.read_text()) for path in sorted((ROOT / 'theories/becoming/results/records').glob('*.json'))]
     by_id = {r['id']: r for r in loaded}
     carrying = [r['id'] for r in boundary.carriers(loaded)]
@@ -310,50 +362,8 @@ def main():
         if not failed:
             at_model.setdefault(x['of'], []).append({'of': x['of'], 'record': rid, 'law': i, 'declaration': x['declaration'],
                                                      'models': x['models'], 'review': x['review']})
-    for r in loaded:
-        entries = []
-        for i, law in enumerate(r.get('laws', []), 1):
-            names = list(law.get('declarations', []))
-            inside = [n for n in names if n in C]
-            g, gl, hit = False, False, set()
-            for n in inside:
-                gn, gln, hn = above(n)
-                g, gl, hit = g or gn, gl or gln, hit | hn
-            e = {'law': i, 'declarations': names}
-            c = {'counts': counts, 'counts_at_model': counts_at_model,
-                 'counts_at_boundary_record': counts_at_boundary_record}[counted_in(r['id'], i, carrying, checked)]
-            c['laws'] += 1
-            if inside:
-                e['master_laws'] = [k for k in NAMES if k in hit]
-                e['grammar'] = g
-                if g and not gl:
-                    e['grammar_vocabulary_only'] = True
-                    c['vocabulary_only'] += 1
-                e['dependence'] = dependence(g, hit)
-                c[e['dependence']] += 1
-                for k in e['master_laws']:
-                    c[k] += 1
-                defines = [n for n in inside if n in is_anchor]
-                if defines:
-                    e['defines'] = defines
-            elif names:
-                c['outside'] += 1
-            else:
-                c['no_declarations'] += 1
-            cen = [{'declaration': n, **central[n]} for n in names if n in central]
-            if cen:
-                e['central'] = cen
-            out = [n for n in names if n not in C]
-            if out:
-                e['outside'] = out
-            if (r['id'], i) in checked:
-                e['statements_at_model'] = checked[r['id'], i]
-            elsewhere = [x for n in dict.fromkeys(names) for x in at_model.get(n, []) if (x['record'], x['law']) != (r['id'], i)]
-            if elsewhere:
-                e['stated_at_model'] = elsewhere
-            entries.append(e)
-        if entries:
-            records[r['id']] = entries
+    records, tables = law_entries(loaded, C, above, central, is_anchor, checked, at_model, carrying)
+    counts, counts_at_model, counts_at_boundary_record = (tables[k] for k in COUNTED)
     reach, f5_class = dict.fromkeys(boundary.F5_CLASSES, 0), {}
     for n, row in central.items():
         models = {m for x in at_model.get(n, []) for m in x['models']}
