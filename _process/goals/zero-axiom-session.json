@@ -2,8 +2,8 @@
   "schema_version": 1,
   "id": "zero-axiom-session",
   "title": {
-    "zh": "无公理实践判断的独立接续",
-    "en": "Independent axiom-free practical judgment"
+    "zh": "生命的实践判断，立于最少的前提",
+    "en": "Practical judgment for life, on the fewest premises"
   },
   "scope_type": "authorized-session",
   "state": "unmarked",
@@ -12,25 +12,30 @@
     "en": "A later, separately authorized line of work; it does not revoke completed work on the conditional alignment route."
   },
   "objective": {
-    "zh": "专注普遍规范奠基：从同一活动中生活、理解、目的、评价与回应的分化，说明修复、开启、限制与结束的规范根据及适用范围，不预设独立事实、价值和行动者再求外部连接。",
-    "en": "Focus on universal normative grounding: explain grounds and scope of repair, opening, restriction and ending through living, understanding, purposes, evaluation and response differentiating within one activity, without presupposing separate facts, values and agents plus an external connection."
+    "zh": "把实践判断说明为生命的判断（第七章 T8：对生命而言，方向是生生）：修复、开启、限制与结束的选择，有多少出于生命自身的立场与本理论之律（每一律各于所注明之基上）。立场始于行动所预设者（第七章 §4.6，P1）；凡 §4.6 之路把它带得更远之处，一并注明该路的前提 P2–P4。所择的诸进程在生成、守与退化之图（第二章）上读出；在图与扩大相接之处以扩大比较，否则以判断所注明的比较。说明经由同一活动中生活、理解、目的、评价与回应的分化，不预设独立事实、价值和行动者再求外部连接。注明判断所用的每一前提，其中有范围上的延续条件、次序上的 C，以及第七章 §5 的读法、提升与承诺。以图与立场推出其中能推出者，并说明其余各需什么：在 §4.6 之路以外，延续条件需要不变之步，而该预设与所表示的动力学都不提供它（`bounded_rival`）；C 需要其自身的理由。是否存在对一切可能的心智都有约束力的根据，仍是开放的问题，这项工作不待其解决。",
+    "en": "Explain practical judgment as life's (chapter 7, T8: for life, the way is 生生): how far choices of repair, opening, restriction and ending follow from life's own stance and from the theory's laws, each law on its stated base. The stance starts from what acting presupposes (chapter 7 §4.6, P1); wherever §4.6's path carries it further, the path's premises P2–P4 are named with it. The courses chosen among are read on the map of generation, keeping and degeneration (chapter 2) and compared by widening where the map and widening are joined, otherwise by a comparison the judgment names. The account runs through living, understanding, purposes, evaluation and response differentiating within one activity, without presupposing separate facts, values and agents plus an external connection. Name every premise a judgment uses, among them the continuation condition for scope, C for order, and the readings, the lifting and the commitments of chapter 7 §5. Derive from the map and the stance as many as can be derived, and state what each of the rest needs: beyond §4.6's path the condition needs the step of invariance, which neither the presupposition nor the represented dynamics supplies (`bounded_rival`), and C needs its own reason. Whether a warrant binding every possible mind exists stays an open question the work does not wait on."
   },
   "premises": {
     "zh": "保留整体关系与真实对手，不能用弱表示中的自由谓词开关否定完整理论。 组织、目的、认识、规范与meta-attractor属于同一个理论，分章及证明范围不建立独立本体。",
     "en": "Retain whole relations and substantive rivals; freely toggled predicates in a weaker representation do not refute the fuller theory. Organization, purposes, knowing, normativity and meta-attraction belong to one theory; chapter and proof scopes do not establish separate ontologies."
   },
   "completion": {
-    "zh": "完成标准取自原指示和当前目标；已有局部证明不得冒充中心主张完成。",
-    "en": "Use the original directive and current target; local proofs cannot substitute for the central result."
+    "zh": "以本目标判断完成：一项判断所用的每一前提皆已注明，并已推出、已论证，或作为开放问题注明其所需，才算得到说明；已有局部证明不得冒充中心主张完成。",
+    "en": "Judge the work by this objective: a judgment counts as explained when every premise it uses is named and is derived, argued or left open with what it needs; local proofs cannot substitute for the central result."
   },
   "sources": [
     "sources/15-codex-theory-conversations/2026-10-08-zero-axiom-practical-judgment.md",
     "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
     "sources/15-codex-theory-conversations/2026-10-13-universal-normative-grounding-focus.md",
     "sources/15-codex-theory-conversations/2026-10-13-nondual-normative-grounding-correction.md",
-    "sources/15-codex-theory-conversations/2026-10-13-one-theory-normativity-meta-attractor.md"
+    "sources/15-codex-theory-conversations/2026-10-13-one-theory-normativity-meta-attractor.md",
+    "sources/15-codex-theory-conversations/2026-10-30-no-absolute-good-the-way-for-life.md",
+    "sources/15-codex-theory-conversations/2026-10-30-goal-practical-judgment-for-life-approved.md"
   ],
   "result_ids": [
-    "universal-practical-warrant"
+    "universal-practical-warrant",
+    "practical-judgment-under-living-significance",
+    "classification-robust-generative-comparison",
+    "positioned-positive-reason"
   ]
 }

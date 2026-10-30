@@ -452,12 +452,12 @@ theorem lower_c_raises {a s p c c' : Nat} {pos : 0 < a} (lower : c' ≤ c) :
 <a id="a-12"></a>
 ### A-12 Obedience adds capacity, not coupling
 
-**Meaning.** An assistant that optimizes its principal's signal adds to what the principal can do, not to what the principal reads. Where the two act as optimizers at a mutual best response, what lies beyond both falls as it would under one optimizer of their joint capacity (A-04).
+**Meaning.** The law behind it, A-04, treats every optimizer alike: none is principal or assistant in it. Read an assistant and its principal as two optimizers at a mutual best response, each order rising with the family the principal's signal rises with. Then, at a condition beyond that family, the assistant adds to what the principal can do, not to what the principal reads, and what lies there falls as it would under one optimizer of their joint capacity.
 
 **Standing and use.** Reading [AI reading, D68]. Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Alignment to a principal alone is therefore not alignment of the joint selection." It rests on A-04, not on A-10.
 
 **Known weaknesses.**
-- [this dossier, AI] It assumes the assistant reads nothing the principal does not. An assistant that adds what it reads, by warning of effects beyond the principal's signal, is the case the reading excludes. The decision register reads it as extending the joint coupling, not as obedience.
+- [this dossier, AI] It assumes that the assistant's order rises with the principal's family, and since 30 October 2026 the chapter states this as the reading's premise, not the law's: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "That the assistant's order rises with the principal's family is the reading's premise, not the law's." An assistant that ranks effects beyond the principal's signal only after it is still within the law. One that would give up something the signal ranks for them is outside the law and the case the reading excludes, and whether a warning changes the principal's order is not modelled. The decision register reads such an assistant as extending the joint coupling, not as obedience.
 
 **Questions.**
 1. Is this a fair statement of how an aligned assistant can amplify its principal's effects on what neither reads?
