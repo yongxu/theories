@@ -35,8 +35,8 @@
 ## Does not show
 
 - That the 2015 paper's simulations fail: they break the symmetry by random initial expectations.
-- Anything of densities, variational free energy, noise or continuous time: independent fluctuations break the symmetry almost surely, and the law then does not apply.
-- Exchanges of other than neighbouring cells, or which asymmetry differentiates actual cells.
+- Densities, variational free energy or continuous time. With noise the law does not apply, as independent fluctuations can part alike cells; what holds instead for finite Markov chains, an exchangeable law, is stated in the periphery.
+- Exchanges of any two cells in the pure core, shown in the periphery for every rearrangement (ofFn_rearranged), or which asymmetry differentiates actual cells.
 - Which configuration, differentiated or not, is better.
 - **Counterexample:** In TwoCells two cells at [1, 1] rest where they started (TwoCells.alike_rests), and from any two alike cells the free energy stays at six, above the nothing of [0, 3] (TwoCells.alike_never_least), while a start differing by one unit parts them to either end (TwoCells.parts). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean)
 
@@ -52,7 +52,7 @@ Canonical source: [FreeEnergyGuarantees.lean](../../../../experiments/integrated
 <a id="next--下一步"></a>
 ## Next
 
-A frozen run of the 2015 scheme from exactly identical expectations with no noise; exchanges of any two cells; review by a person.
+A frozen run of the 2015 scheme from exactly identical expectations with no noise; exchanges of any two cells in the pure core; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -66,6 +66,9 @@ Symmetry breaking needs an asymmetric cause (Curie 1894, Journal de Physique 3);
 
 - **formal-reuse**: [what-a-commuting-law-keeps-apart](what-a-commuting-law-keeps-apart.md). Law.Commutes, Law.Commutes.keeps_fixed, Law.Commutes.iterate and Law.run: the commuting law and the run of a law.
 - related, not a proved adapter: [risk-minimization-on-a-shared-renewal](risk-minimization-on-a-shared-renewal.md). The other third part of the free-energy principle stated in the same module.
+- related, not a proved adapter: [identical-cells-under-noise](identical-cells-under-noise.md). Identical cells under noise: over the reals, in the periphery, under the descent with an exchangeable field and noise of one law at every cell, the law stays exchangeable, deciding nothing of which cell takes which place; the exchanges of neighbouring cells generate every rearrangement.
+
+**Used by:** [identical-cells-under-noise](identical-cells-under-noise.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -87,6 +90,7 @@ Aliases: `Identical cells under a descent that treats them alike`, `同等相待
 ### History
 
 - 29 October 2026: added (UE16), identical cells under a descent that treats them alike: under any descent reading no cell's number alike cells stay alike; with an exchangeable field the descent commutes with exchanging neighbouring cells, and among configurations of one size a symmetric free energy has its minima in exchanged pairs; the witness TwoCells; against guaranteed differentiation (Friston and others 2015, candidate 1); after a review and a re-check; study section 449.
+- 30 October 2026, board item UE24 (study section 468): related to identical-cells-under-noise; the second and third does-not-show items say that with noise the law does not apply and what holds instead is stated in the periphery, and that every rearrangement is shown there, and the next step asks for exchanges of any two cells in the pure core. No statement, law or declaration changed.
 
 </details>
 

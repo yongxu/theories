@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261030T134037.582088Z",
- "core_sources_sha256": "7529856d2ae370694c552d73394d350f17ccae0f4634edeaf0d22caa668c2fbb",
+ "core_receipt": "20261030T164445.569791Z",
+ "core_sources_sha256": "7495d67b161e42b9bd1f016a1db6bd73062897973b3322e46999dee7116a07a2",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -56,13 +56,13 @@
   ]
  },
  "counts": {
-  "laws": 3845,
+  "laws": 3873,
   "no_declarations": 9,
-  "outside": 366,
-  "grammar": 753,
+  "outside": 377,
+  "grammar": 762,
   "balance, represented": 645,
   "anchor, not reached": 134,
-  "no master law": 1938,
+  "no master law": 1946,
   "vocabulary_only": 66,
   "closure": 479,
   "balance": 815,
@@ -18615,6 +18615,83 @@
    {
     "law": 4,
     "declarations": [
+     "Becoming.«传则粗不生»",
+     "Becoming.«粗有前则生为传»",
+     "Becoming.«生则或粗生或传»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.«后守»",
+     "Becoming.«守则后守»",
+     "Becoming.«全守则后守»",
+     "Becoming.«后守则延»",
+     "Becoming.«后守退化不并»",
+     "Becoming.«单行则生成后守不并»"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.«三域之周»",
+     "Becoming.«三域之定当且仅当排中»",
+     "Becoming.Map.Stage",
+     "Becoming.Map.once",
+     "Becoming.Map.Once.func",
+     "Becoming.Map.Once.renews",
+     "Becoming.Map.Once.third_not_renews",
+     "Becoming.Map.Once.third_next",
+     "Becoming.Map.Once.stays_third",
+     "Becoming.Map.Once.family",
+     "Becoming.Map.Once.endless",
+     "Becoming.Map.Once.not_generates",
+     "Becoming.Map.Once.not_keeps",
+     "Becoming.Map.Once.not_degenerates",
+     "Becoming.Map.Once.keeping",
+     "Becoming.Map.Once.keepsAfter"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.Map.«后守之定则LPO»",
+     "Becoming.Map.«生成之定则WLPO»",
+     "Becoming.Map.«生成后守之定则LPO»",
+     "Becoming.Map.generates_iff_changes",
+     "Becoming.Map.keepsAfter_iff_settles",
+     "Becoming.Map.step_func",
+     "Becoming.Map.step_reached_le",
+     "Becoming.Map.step_reaches",
+     "Becoming.Map.step_reaches_of_le",
+     "Becoming.Map.step_family",
+     "Becoming.Map.Settles.seen",
+     "Becoming.Map.Settles.turning",
+     "Becoming.Map.Settles.sequence",
+     "Becoming.Map.Settles.seen_succ",
+     "Becoming.Map.Settles.seen_of_le",
+     "Becoming.Map.Settles.seen_of",
+     "Becoming.Map.Settles.seen_witness",
+     "Becoming.Map.Settles.sequence_seen",
+     "Becoming.Map.Settles.sequence_unseen",
+     "Becoming.Map.Settles.turning_turns"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 8,
+    "declarations": [
      "Becoming.«全生成»",
      "Becoming.«全守»",
      "Becoming.«有终»",
@@ -18633,7 +18710,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 5,
+    "law": 9,
     "declarations": [
      "Becoming.Map.step",
      "Becoming.Map.step_irrefl",
@@ -18655,7 +18732,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 6,
+    "law": 10,
     "declarations": [
      "Becoming.«有常则无终»",
      "Becoming.«有终则粗不有常»",
@@ -18669,7 +18746,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 7,
+    "law": 11,
     "declarations": [
      "Becoming.Web.carries_iff",
      "Becoming.Web.passing_carries_iff",
@@ -18696,7 +18773,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 8,
+    "law": 12,
     "declarations": [
      "Becoming.«生生即延»",
      "Becoming.«息即尽»"
@@ -21884,6 +21961,237 @@
     "dependence": "no master law"
    }
   ],
+  "identical-cells-under-noise": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.CellsUnderNoise.rearrange",
+     "Becoming.CellsUnderNoise.Invariant",
+     "Becoming.CellsUnderNoise.Exchangeable",
+     "Becoming.CellsUnderNoise.KernelCommutes",
+     "Becoming.CellsUnderNoise.step",
+     "Becoming.CellsUnderNoise.weightsAt",
+     "Becoming.CellsUnderNoise.step_invariant",
+     "Becoming.CellsUnderNoise.weightsAt_invariant",
+     "Becoming.CellsUnderNoise.weightsAt_exchangeable",
+     "Becoming.CellsUnderNoise.step_nonneg",
+     "Becoming.CellsUnderNoise.step_total",
+     "Becoming.CellsUnderNoise.weightsAt_law"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.rearrange",
+     "Becoming.CellsUnderNoise.Invariant",
+     "Becoming.CellsUnderNoise.Exchangeable",
+     "Becoming.CellsUnderNoise.KernelCommutes",
+     "Becoming.CellsUnderNoise.step",
+     "Becoming.CellsUnderNoise.weightsAt",
+     "Becoming.CellsUnderNoise.step_invariant",
+     "Becoming.CellsUnderNoise.weightsAt_invariant",
+     "Becoming.CellsUnderNoise.weightsAt_exchangeable",
+     "Becoming.CellsUnderNoise.step_nonneg",
+     "Becoming.CellsUnderNoise.step_total",
+     "Becoming.CellsUnderNoise.weightsAt_law"
+    ]
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.CellsUnderNoise.pointMass",
+     "Becoming.CellsUnderNoise.pointMass_invariant_iff",
+     "Becoming.CellsUnderNoise.pointMass_exchangeable_alike",
+     "Becoming.CellsUnderNoise.alike_fixed",
+     "Becoming.CellsUnderNoise.alike_exchangeable",
+     "Becoming.CellsUnderNoise.independent_exchangeable",
+     "Becoming.CellsUnderNoise.independent_law",
+     "Becoming.CellsUnderNoise.pointMass_law"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.pointMass",
+     "Becoming.CellsUnderNoise.pointMass_invariant_iff",
+     "Becoming.CellsUnderNoise.pointMass_exchangeable_alike",
+     "Becoming.CellsUnderNoise.alike_fixed",
+     "Becoming.CellsUnderNoise.alike_exchangeable",
+     "Becoming.CellsUnderNoise.independent_exchangeable",
+     "Becoming.CellsUnderNoise.independent_law",
+     "Becoming.CellsUnderNoise.pointMass_law"
+    ]
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.CellsUnderNoise.marginal",
+     "Becoming.CellsUnderNoise.marginal_eq",
+     "Becoming.CellsUnderNoise.distinct_le"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.marginal",
+     "Becoming.CellsUnderNoise.marginal_eq",
+     "Becoming.CellsUnderNoise.distinct_le"
+    ]
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.CellsUnderNoise.Stationary",
+     "Becoming.CellsUnderNoise.stationary_rearranged",
+     "Becoming.CellsUnderNoise.unique_stationary_exchangeable",
+     "Becoming.CellsUnderNoise.gibbs_exchangeable"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.Stationary",
+     "Becoming.CellsUnderNoise.stationary_rearranged",
+     "Becoming.CellsUnderNoise.unique_stationary_exchangeable",
+     "Becoming.CellsUnderNoise.gibbs_exchangeable"
+    ]
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.CellsUnderNoise.noisy",
+     "Becoming.CellsUnderNoise.noisy_commutes",
+     "Becoming.CellsUnderNoise.noiseless",
+     "Becoming.CellsUnderNoise.step_noiseless",
+     "Becoming.CellsUnderNoise.weightsAt_noiseless"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.noisy",
+     "Becoming.CellsUnderNoise.noisy_commutes",
+     "Becoming.CellsUnderNoise.noiseless",
+     "Becoming.CellsUnderNoise.step_noiseless",
+     "Becoming.CellsUnderNoise.weightsAt_noiseless"
+    ]
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.CellsUnderNoise.cellwise",
+     "Becoming.CellsUnderNoise.ofFn_cellwise",
+     "Becoming.CellsUnderNoise.ofFn_iterate_cellwise",
+     "Becoming.CellsUnderNoise.cellwise_alike",
+     "Becoming.CellsUnderNoise.noiseless_run"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.cellwise",
+     "Becoming.CellsUnderNoise.ofFn_cellwise",
+     "Becoming.CellsUnderNoise.ofFn_iterate_cellwise",
+     "Becoming.CellsUnderNoise.cellwise_alike",
+     "Becoming.CellsUnderNoise.noiseless_run"
+    ]
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.CellsUnderNoise.ofFn_swap",
+     "Becoming.CellsUnderNoise.ofFn_rearranged",
+     "Becoming.CellsUnderNoise.cellwise_commutes",
+     "Becoming.CellsUnderNoise.run_rearranged",
+     "Becoming.CellsUnderNoise.symmetric_rearranged",
+     "Becoming.CellsUnderNoise.gibbs_symmetric_exchangeable"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.ofFn_swap",
+     "Becoming.CellsUnderNoise.ofFn_rearranged",
+     "Becoming.CellsUnderNoise.cellwise_commutes",
+     "Becoming.CellsUnderNoise.run_rearranged",
+     "Becoming.CellsUnderNoise.symmetric_rearranged",
+     "Becoming.CellsUnderNoise.gibbs_symmetric_exchangeable"
+    ]
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.CellsUnderNoise.noisyDescent",
+     "Becoming.CellsUnderNoise.noisy_eq_noisyDescent",
+     "Becoming.CellsUnderNoise.noisyDescent_commutes",
+     "Becoming.CellsUnderNoise.noisyDescent_nonneg",
+     "Becoming.CellsUnderNoise.noisyDescent_rows",
+     "Becoming.CellsUnderNoise.noisyDescent_exchangeable",
+     "Becoming.CellsUnderNoise.noisyDescent_distinct_le",
+     "Becoming.CellsUnderNoise.noisyDescent_from_alike",
+     "Becoming.CellsUnderNoise.noisyDescent_from_independent"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.noisyDescent",
+     "Becoming.CellsUnderNoise.noisy_eq_noisyDescent",
+     "Becoming.CellsUnderNoise.noisyDescent_commutes",
+     "Becoming.CellsUnderNoise.noisyDescent_nonneg",
+     "Becoming.CellsUnderNoise.noisyDescent_rows",
+     "Becoming.CellsUnderNoise.noisyDescent_exchangeable",
+     "Becoming.CellsUnderNoise.noisyDescent_distinct_le",
+     "Becoming.CellsUnderNoise.noisyDescent_from_alike",
+     "Becoming.CellsUnderNoise.noisyDescent_from_independent"
+    ]
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.CellsUnderNoise.alike_positive",
+     "Becoming.CellsUnderNoise.Witness.independentNoise_parts"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.alike_positive",
+     "Becoming.CellsUnderNoise.Witness.independentNoise_parts"
+    ]
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.CellsUnderNoise.Witness.Two",
+     "Becoming.CellsUnderNoise.Witness.sum_two",
+     "Becoming.CellsUnderNoise.Witness.partedUniform",
+     "Becoming.CellsUnderNoise.Witness.partedUniform_law",
+     "Becoming.CellsUnderNoise.Witness.partedUniform_not_product",
+     "Becoming.CellsUnderNoise.Witness.parted_rearranged",
+     "Becoming.CellsUnderNoise.Witness.toParted",
+     "Becoming.CellsUnderNoise.Witness.toParted_commutes",
+     "Becoming.CellsUnderNoise.Witness.toParted_not_noisy",
+     "Becoming.CellsUnderNoise.Witness.toParted_not_noisyDescent",
+     "Becoming.CellsUnderNoise.Witness.toParted_once",
+     "Becoming.CellsUnderNoise.Witness.alike_none",
+     "Becoming.CellsUnderNoise.Witness.each_half",
+     "Becoming.CellsUnderNoise.Witness.toParted_stationary_iff",
+     "Becoming.CellsUnderNoise.Witness.partedUniform_exchangeable",
+     "Becoming.CellsUnderNoise.Witness.assign",
+     "Becoming.CellsUnderNoise.Witness.assign_not_commutes",
+     "Becoming.CellsUnderNoise.Witness.toParted_eq_mixture"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.Witness.Two",
+     "Becoming.CellsUnderNoise.Witness.sum_two",
+     "Becoming.CellsUnderNoise.Witness.partedUniform",
+     "Becoming.CellsUnderNoise.Witness.partedUniform_law",
+     "Becoming.CellsUnderNoise.Witness.partedUniform_not_product",
+     "Becoming.CellsUnderNoise.Witness.parted_rearranged",
+     "Becoming.CellsUnderNoise.Witness.toParted",
+     "Becoming.CellsUnderNoise.Witness.toParted_commutes",
+     "Becoming.CellsUnderNoise.Witness.toParted_not_noisy",
+     "Becoming.CellsUnderNoise.Witness.toParted_not_noisyDescent",
+     "Becoming.CellsUnderNoise.Witness.toParted_once",
+     "Becoming.CellsUnderNoise.Witness.alike_none",
+     "Becoming.CellsUnderNoise.Witness.each_half",
+     "Becoming.CellsUnderNoise.Witness.toParted_stationary_iff",
+     "Becoming.CellsUnderNoise.Witness.partedUniform_exchangeable",
+     "Becoming.CellsUnderNoise.Witness.assign",
+     "Becoming.CellsUnderNoise.Witness.assign_not_commutes",
+     "Becoming.CellsUnderNoise.Witness.toParted_eq_mixture"
+    ]
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.CellsUnderNoise.Witness.firstCell",
+     "Becoming.CellsUnderNoise.Witness.flipBy",
+     "Becoming.CellsUnderNoise.Witness.firstCell_not_exchangeable",
+     "Becoming.CellsUnderNoise.Witness.firstCell_assigns"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.Witness.firstCell",
+     "Becoming.CellsUnderNoise.Witness.flipBy",
+     "Becoming.CellsUnderNoise.Witness.firstCell_not_exchangeable",
+     "Becoming.CellsUnderNoise.Witness.firstCell_assigns"
+    ]
+   }
+  ],
   "identification-where-bounded": [
    {
     "law": 1,
@@ -24018,6 +24326,100 @@
     ],
     "grammar": false,
     "dependence": "balance, represented"
+   }
+  ],
+  "keeping-widening-is-generation-losing-nothing": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Steps.includes",
+     "Becoming.Steps.same",
+     "Becoming.Steps.KeepsWideningFrom",
+     "Becoming.Steps.same_class",
+     "Becoming.Steps.same_includes",
+     "Becoming.Steps.includes_refl",
+     "Becoming.Steps.includes_trans",
+     "Becoming.Steps.begins_iff",
+     "Becoming.Steps.reached_le",
+     "Becoming.Steps.reaches_of_buqiong",
+     "Becoming.Steps.buqiong_includes_iff",
+     "Becoming.Steps.includesFrom_iff"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Steps.change_located",
+     "Becoming.Steps.generation_of_keepsWidening",
+     "Becoming.Steps.includes_not_back_of_generation",
+     "Becoming.Steps.keepsWidening_of_generation",
+     "Becoming.Steps.generation_iff_keepsWidening",
+     "Becoming.Steps.new_in_list_or_none",
+     "Becoming.Steps.found_of_listed",
+     "Becoming.Steps.keepsWideningFrom_iff_shift",
+     "Becoming.Steps.keepsWidening_iff_from_zero",
+     "Becoming.Steps.generation_of_reachingKeepsWidening"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Steps.generation_includes_iff",
+     "Becoming.Steps.keepsWidening_iff_generation_losing_nothing",
+     "Becoming.Steps.moving",
+     "Becoming.Steps.Moving.generation",
+     "Becoming.Steps.Moving.not_generation_includes",
+     "Becoming.Steps.Moving.not_keepsWidening",
+     "Becoming.Steps.growing",
+     "Becoming.Steps.Growing.keepsWidening",
+     "Becoming.Steps.Growing.generation"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Steps.forward_iff_wem",
+     "Becoming.Steps.wem_of_generation_of_keepsWidening",
+     "Becoming.Steps.twice",
+     "Becoming.Steps.le_twice",
+     "Becoming.Steps.arriving",
+     "Becoming.Steps.Arriving.includes",
+     "Becoming.Steps.Arriving.early",
+     "Becoming.Steps.Arriving.late",
+     "Becoming.Steps.Arriving.keepsWidening",
+     "Becoming.Steps.Arriving.tells",
+     "Becoming.Steps.back_iff_em",
+     "Becoming.Steps.dne_of_keepsWidening_of_generation",
+     "Becoming.Steps.found_of_em",
+     "Becoming.Steps.dawning",
+     "Becoming.Steps.Dawning.generation",
+     "Becoming.Steps.marked",
+     "Becoming.Steps.markov_of_keepsWidening_of_generation"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.Web.keepsWidening_itself_iff",
+     "Becoming.Web.generation_of_keepsWidening_byName",
+     "Becoming.Web.keepsWidening_byName_iff_generation",
+     "Becoming.Web.kept_by_name_and_generation_on_moments"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "laws-at-coarser-steps": [
@@ -55122,6 +55524,7 @@
     "declarations": [
      "Becoming.ReadStages.Prospects.gain",
      "Becoming.ReadStages.Prospects.loss",
+     "Becoming.ReadStages.Prospects.order",
      "Becoming.ReadStages.Prospects.Above",
      "Becoming.ReadStages.above_irrefl",
      "Becoming.ReadStages.above_asymm"
@@ -55160,6 +55563,21 @@
    {
     "law": 5,
     "declarations": [
+     "Becoming.ReadStages.Prospects.toRoutes",
+     "Becoming.ReadStages.asRoute",
+     "Becoming.ReadStages.gain_asRoute",
+     "Becoming.ReadStages.loss_asRoute",
+     "Becoming.ReadStages.above_iff_routes",
+     "Becoming.ReadStages.complyAtBoth_not_above_ownAtBoth",
+     "Becoming.ReadStages.complyAtBoth_maximal_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
      "Becoming.ReadStages.no_value",
      "Becoming.ReadStages.kept_not_raised",
      "Becoming.ReadStages.no_value_chooses_own",
@@ -55174,7 +55592,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 6,
+    "law": 7,
     "declarations": [
      "Becoming.ReadStages.Uniform",
      "Becoming.ReadStages.lumped_uniform",
@@ -55189,7 +55607,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 7,
+    "law": 8,
     "declarations": [
      "Becoming.ReadStages.read_fixes_unread",
      "Becoming.ReadStages.twin_complyThenOwn",
@@ -55200,7 +55618,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 8,
+    "law": 9,
     "declarations": [
      "Becoming.ReadStages.Prospects.FreshDrawAbove",
      "Becoming.ReadStages.Prospects.MixtureAbove",
@@ -55223,7 +55641,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 9,
+    "law": 10,
     "declarations": [
      "Becoming.ReadStages.Example.prospects",
      "Becoming.ReadStages.Example.valid",
@@ -55238,6 +55656,107 @@
      "Becoming.ReadStages.Example.freshDraw_above",
      "Becoming.ReadStages.Example.freshDraw_boundary",
      "Becoming.ReadStages.Example.no_total"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   }
+  ],
+  "when-no-route-stands-above-a-revision": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.RevisionRoutes.GainLoss",
+     "Becoming.RevisionRoutes.GainLoss.Above",
+     "Becoming.RevisionRoutes.GainLoss.Maximal",
+     "Becoming.RevisionRoutes.GainLoss.above_irrefl",
+     "Becoming.RevisionRoutes.GainLoss.above_asymm",
+     "Becoming.RevisionRoutes.GainLoss.maximal_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.RevisionRoutes.Prospects",
+     "Becoming.RevisionRoutes.Prospects.Valid",
+     "Becoming.RevisionRoutes.Prospects.gain",
+     "Becoming.RevisionRoutes.Prospects.loss",
+     "Becoming.RevisionRoutes.Prospects.order",
+     "Becoming.RevisionRoutes.Prospects.Above",
+     "Becoming.RevisionRoutes.Prospects.Maximal",
+     "Becoming.RevisionRoutes.Prospects.withLosses",
+     "Becoming.RevisionRoutes.Prospects.withValue",
+     "Becoming.RevisionRoutes.Prospects.withKeptRevised",
+     "Becoming.RevisionRoutes.above_irrefl",
+     "Becoming.RevisionRoutes.above_asymm"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.RevisionRoutes.route_above_iff",
+     "Becoming.RevisionRoutes.revised_maximal_iff",
+     "Becoming.RevisionRoutes.above_needs",
+     "Becoming.RevisionRoutes.pos_of_mul_lt_mul",
+     "Becoming.RevisionRoutes.lt_of_mul_lt_mul"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.RevisionRoutes.maximal_of_no_value",
+     "Becoming.RevisionRoutes.maximal_of_kept_le",
+     "Becoming.RevisionRoutes.maximal_of_certain",
+     "Becoming.RevisionRoutes.maximal_of_more_restored"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.RevisionRoutes.every_loss_iff",
+     "Becoming.RevisionRoutes.every_loss_iff_kept"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.RevisionRoutes.above_of_value_exceeds",
+     "Becoming.RevisionRoutes.above_at_some_value",
+     "Becoming.RevisionRoutes.above_of_more_value",
+     "Becoming.RevisionRoutes.every_value_iff",
+     "Becoming.RevisionRoutes.every_value_loss_iff",
+     "Becoming.RevisionRoutes.eq_zero_of_mul_eq_zero",
+     "Becoming.RevisionRoutes.every_value_loss_iff_of_route"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.RevisionRoutes.Example.twoRoutes",
+     "Becoming.RevisionRoutes.Example.twoRoutes_valid",
+     "Becoming.RevisionRoutes.Example.twoRoutes_open_not_above",
+     "Becoming.RevisionRoutes.Example.twoRoutes_complying_above",
+     "Becoming.RevisionRoutes.Example.both_at_loss_ten",
+     "Becoming.RevisionRoutes.Example.restored",
+     "Becoming.RevisionRoutes.Example.restored_every"
     ],
     "master_laws": [],
     "grammar": false,
