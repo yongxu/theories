@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-500 registered results: 469 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1159 curated edges join 428 results to the results they draw on.
+501 registered results: 470 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1163 curated edges join 429 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -189,6 +189,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [joint-plans-from-a-supported-start][] ← <a id="joint-plans-from-a-supported-start--joint-plan-composition"></a>[joint-plan-composition][]
 - [joint-practice-forms-continuation][] ← <a id="joint-practice-forms-continuation--organizational-rule-inheritance"></a>[organizational-rule-inheritance][]
 - [keeping-forgoes-the-renewal-at-the-need][] ← <a id="keeping-forgoes-the-renewal-at-the-need--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="keeping-forgoes-the-renewal-at-the-need--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
+- [keeping-widening-is-generation-losing-nothing][] ← <a id="keeping-widening-is-generation-losing-nothing--generation-and-degeneration-at-two-grains"></a>[generation-and-degeneration-at-two-grains][] · <a id="keeping-widening-is-generation-losing-nothing--where-the-possible-grows"></a>[where-the-possible-grows][] · <a id="keeping-widening-is-generation-losing-nothing--what-a-course-keeps-reachable"></a>[what-a-course-keeps-reachable][] · <a id="keeping-widening-is-generation-losing-nothing--what-keeping-widening-needs"></a>[what-keeping-widening-needs][]
 - [laws-at-coarser-steps][] ← <a id="laws-at-coarser-steps--laws-of-one-step"></a>[laws-of-one-step][] · <a id="laws-at-coarser-steps--census-balance"></a>[census-balance][] · <a id="laws-at-coarser-steps--map-of-premises"></a>[map-of-premises][]
 - [laws-at-finer-units][] ← <a id="laws-at-finer-units--laws-of-one-step"></a>[laws-of-one-step][] · <a id="laws-at-finer-units--rest-at-every-resolution"></a>[rest-at-every-resolution][]
 - [laws-of-one-step][] ← <a id="laws-of-one-step--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="laws-of-one-step--more-needs-renewers"></a>[more-needs-renewers][] · <a id="laws-of-one-step--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="laws-of-one-step--census-balance"></a>[census-balance][]
@@ -637,6 +638,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [joint-plans-from-a-supported-start]: theories/becoming/results/records/joint-plans-from-a-supported-start.md
 [joint-practice-forms-continuation]: theories/becoming/results/records/joint-practice-forms-continuation.md
 [keeping-forgoes-the-renewal-at-the-need]: theories/becoming/results/records/keeping-forgoes-the-renewal-at-the-need.md
+[keeping-widening-is-generation-losing-nothing]: theories/becoming/results/records/keeping-widening-is-generation-losing-nothing.md
 [laws-at-coarser-steps]: theories/becoming/results/records/laws-at-coarser-steps.md
 [laws-at-finer-units]: theories/becoming/results/records/laws-at-finer-units.md
 [laws-of-one-step]: theories/becoming/results/records/laws-of-one-step.md

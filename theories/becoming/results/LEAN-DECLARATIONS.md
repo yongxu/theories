@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 341 | 16,600 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 343 | 16,682 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 14 | 772 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -556,6 +556,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [MachineInstances.lean](lean-declarations/ethics.md#module-589a347ca85c) | Normative grounding and generative direction |
 | [MaintenanceBaseline.lean](lean-declarations/ethics.md#module-878f7de6ea2c) | Normative grounding and generative direction |
 | [MapInstances.lean](lean-declarations/becoming-core.md#module-234f732a5fe8) | Becoming pure core |
+| [MapRegions.lean](lean-declarations/becoming-core.md#module-ad1c7a3013eb) | Becoming pure core |
 | [MarketDiagnosis.lean](lean-declarations/other.md#module-e2732406feff) | Other formal studies |
 | [MarketGenerativity.lean](lean-declarations/other.md#module-e2e5c347dc5a) | Other formal studies |
 | [MarketInstances.lean](lean-declarations/other.md#module-96b312116575) | Other formal studies |
@@ -973,6 +974,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [WholeQualityNaturalism.lean](lean-declarations/core.md#module-b4942b7409e4) | Generative core and relational structure |
 | [WholeTheoryDischarge.lean](lean-declarations/inquiry.md#module-ca1aed5ff8a7) | Attainable inquiry, contact and process laws |
 | [Wholes.lean](lean-declarations/becoming-core.md#module-708cbc7816ed) | Becoming pure core |
+| [WideningOnTheMap.lean](lean-declarations/becoming-core.md#module-4c62d912982c) | Becoming pure core |
 | [WisdomFallibleJudgment.lean](lean-declarations/core.md#module-782abba8ef08) | Generative core and relational structure |
 | [WisdomGoalGrounds.lean](lean-declarations/ethics.md#module-3bd6cb85aa59) | Normative grounding and generative direction |
 | [WisdomResponseStructure.lean](lean-declarations/core.md#module-25c8adeade56) | Generative core and relational structure |

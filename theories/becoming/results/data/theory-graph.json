@@ -2912,6 +2912,18 @@
    "page": "theories/becoming/results/records/keeping-forgoes-the-renewal-at-the-need.md"
   },
   {
+   "id": "record:keeping-widening-is-generation-losing-nothing",
+   "type": "result",
+   "record": "keeping-widening-is-generation-losing-nothing",
+   "title": "Keeping widening is generation that loses nothing",
+   "title_zh": "持续扩大即不失之生成",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "general",
+   "page": "theories/becoming/results/records/keeping-widening-is-generation-losing-nothing.md"
+  },
+  {
    "id": "record:laws-at-coarser-steps",
    "type": "result",
    "record": "laws-at-coarser-steps",
@@ -6410,6 +6422,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.MapRegions",
+   "type": "module",
+   "name": "Becoming.MapRegions",
+   "level": "L1",
+   "theorems": 39,
+   "region": "map",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.GrammarLaws",
    "type": "module",
    "name": "Becoming.GrammarLaws",
@@ -9310,6 +9333,17 @@
    "theorems": 248,
    "region": "significance",
    "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.WideningOnTheMap",
+   "type": "module",
+   "name": "Becoming.WideningOnTheMap",
+   "level": "L2",
+   "theorems": 43,
+   "region": "significance",
+   "base": "general",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -29923,6 +29957,12 @@
    "anchor": "r-where-the-possible-grows"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-keeping-widening-is-generation-losing-nothing"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-tasks-and-what-performs-them",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -32505,6 +32545,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.MapRegions",
+   "to": "module:Becoming.GrammarMap",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.MatchedCourses",
    "to": "module:Becoming.LossMatching",
    "type": "imports"
@@ -34187,6 +34232,16 @@
   {
    "from": "module:Becoming.Wholes",
    "to": "module:Becoming.Identity",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.WideningOnTheMap",
+   "to": "module:Becoming.HeldPossible",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.WideningOnTheMap",
+   "to": "module:Becoming.KeepingWidening",
    "type": "imports"
   },
   {
@@ -41436,6 +41491,11 @@
   },
   {
    "from": "record:generation-and-degeneration-at-two-grains",
+   "to": "module:Becoming.MapRegions",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:generation-and-degeneration-at-two-grains",
    "to": "record:continuation-relative-to-a-class",
    "type": "formal-reuse"
   },
@@ -43453,6 +43513,41 @@
    "from": "record:keeping-forgoes-the-renewal-at-the-need",
    "to": "record:what-an-optimum-does-beyond-what-couples-in",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:keeping-widening-is-generation-losing-nothing",
+   "to": "module:Becoming.WideningOnTheMap",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:keeping-widening-is-generation-losing-nothing",
+   "to": "record:generation-and-degeneration-at-two-grains",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:keeping-widening-is-generation-losing-nothing",
+   "to": "record:what-a-course-keeps-reachable",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:keeping-widening-is-generation-losing-nothing",
+   "to": "record:what-keeping-widening-needs",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:keeping-widening-is-generation-losing-nothing",
+   "to": "record:what-keeping-widening-needs",
+   "type": "related"
+  },
+  {
+   "from": "record:keeping-widening-is-generation-losing-nothing",
+   "to": "record:where-the-possible-grows",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:keeping-widening-is-generation-losing-nothing",
+   "to": "record:where-the-possible-grows",
+   "type": "related"
   },
   {
    "from": "record:laws-at-coarser-steps",
@@ -59202,6 +59297,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-graded-significance-and-priority",
    "to": "record:graded-significance-and-priority",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing",
+   "to": "record:keeping-widening-is-generation-losing-nothing",
    "type": "states"
   },
   {
