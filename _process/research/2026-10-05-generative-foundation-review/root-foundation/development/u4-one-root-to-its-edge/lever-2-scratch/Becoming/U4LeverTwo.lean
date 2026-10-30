@@ -1,44 +1,41 @@
 import Becoming.Grammar
 import Becoming.SelectionLevels
 import Becoming.GroupEnding
+import Becoming.Transmission
 
 /-!
 # U4, lever 2 (scratch): evolution's rows read on the root
 
-Scratch for the audit `../LEVER-2-AUDIT.md`, not package Lean. It checks four readings the
-audit leans on.
+Scratch for the audit `../LEVER-2-AUDIT.md`, not package Lean, revised after its one independent
+review (`../REVIEW-U4-L2.md`). It checks the readings the audit leans on.
 
-* **Exact transmission is continuation under the trait's class.** Read one step of descent on
-  occurrences (a parent before the step, an offspring after it), with descent as condition (the
-  parent is among what the offspring comes from) and the trait as a map to `Nat`. Each offspring
-  carries its parent's amount (`SelectionTerm.Exact`) exactly where descent lies within sameness
-  under the trait (`exact_iff_within`), so exactly where descent lies within its own continuation
-  under that class (`exact_iff_continues`). The two transmission terms of Price's equation in
-  counting form both vanish exactly there (`exact_iff_terms_vanish`), and then the offspring's
-  total is the parents' amounts weighted by offspring number (`offspring_eq_selected_of_within`).
-  Equal totals do not give exactness (`Unexact.totals_alike`, `Unexact.not_exact`): the class
-  reading is pointwise.
-* **Three strengths, and where lever 1's count law sits.** Exact transmission pairs the parents,
-  once for every offspring, with the offspring under continuation relative to the trait's class
-  (`exact_pairs`), so, by lever 1's `«续之对则类类等数»`, every class of the trait holds as many
-  of the one as of the other. A pairing under the class gives equal totals (`totals_of_paired`),
-  and equal totals are exactly the two transmission terms cancelling (`totals_iff_cancel`).
-  Neither step reverses: `Swap` is paired under the class and not exact, its terms each one
-  (`Swap.paired`, `Swap.not_exact`, `Swap.terms`); `Unexact` has equal totals with offspring at
-  none and two against a parent at one.
-* **The hypothesis is needed.** Where transmission is not exact, the levels law of
-  `SelectionLevels.rises_exact_iff_levels` fails: in `Raised`, one parent and one offspring that
-  carries more, the mean rises while the levels' side is false (`Raised.levels_fail`).
-* **The gate is an inclusion of relations.** "Only active formations give" (`Flow.Acting`) is
-  exactly that giving, at every step, lies within giving from an active formation
-  (`acting_iff`), and listed descent lies within giving (`listed_within_gives`). From these two
-  inclusions alone a generation whose members are all inactive has no offspring
-  (`size_zero_of_within`), which is `GroupEnding.Flow.all_end` read on the root
-  (`all_end_on_root`).
+* **Exact transmission is descent within the trait's class.** Read one step of descent on
+  occurrences (a parent before the step, an offspring after it), with descent built from the
+  generations' lists and the trait as a map to `Nat`. Each offspring carries its parent's amount
+  (`SelectionTerm.Exact`) exactly where descent lies within sameness under the trait
+  (`exact_iff_within`). Read as continuation (`exact_iff_continues`) this is `within_iff_continues`,
+  true of every relation and class: a representation of U2's kind, not a derivation. Price's two
+  transmission terms both vanish exactly there (`exact_iff_terms_vanish`).
+* **Three strengths.** Exact transmission pairs the parents, once for every offspring, with the
+  offspring under continuation relative to the class (`exact_pairs`), so under the class
+  (`exact_paired_class`). A pairing under the class gives equal totals (`totals_of_paired`), and
+  equal totals are the two terms cancelling (`totals_iff_cancel`). Neither step reverses: `Swap` is
+  paired and not exact, each term one; `Unexact` has equal totals and no pairing
+  (`unexact_not_paired`).
+* **Cancellation is what the levels rows use.** `rises_cancel_iff_levels` is
+  `SelectionLevels.rises_exact_iff_levels` with exact transmission weakened to the terms
+  cancelling. `Raised` shows the hypothesis cannot be dropped (`Raised.levels_fail`,
+  `Raised.not_cancel`).
+* **The gate is inclusions.** "Only active formations give" is giving within giving from an active
+  formation (`acting_iff`), and listed descent lies within giving (`listed_within_gives`). From
+  them: `all_end_on_root` (`GroupEnding.Flow.all_end`), and `rises_iff_inactive_on_root`
+  (`GroupEnding.Flow.rises_iff_inactive`, with cancellation for exactness). `Ungated` shows the
+  gate cannot be dropped from `all_end`.
+* **Coming to stand is given to.** `no_new_dependence_of_given` is `Flow.no_new_dependence` with
+  balance weakened to that inclusion; balance is one way to meet it
+  (`no_new_dependence_from_balance`), and `Ungiven` shows it cannot be dropped.
 
-Modelling choices, stated: one step of descent at a time, read on `Bool × α`; amounts and traits
-are natural numbers; listing is by `List`. Nothing here touches the World's levels, so the rows
-that read them wait on lever 1.
+The modelling choices are listed in the audit's §8.
 -/
 
 namespace Becoming
@@ -205,6 +202,13 @@ theorem exact_pairs {ps : List α} {kids : α → List α} {a b : α → Nat}
   pairs_all kids ps fun p mp k mk =>
     (exact_iff_continues ps kids a b).mp exact (false, p) (true, k) ⟨p, k, rfl, rfl, mp, mk⟩
 
+/-- **Exact transmission gives a pairing under the class**: `«对之单调»` drops continuation to
+the class, so the first strength gives the second without lever 1's tree. -/
+theorem exact_paired_class {ps : List α} {kids : α → List α} {a b : α → Nat}
+    (exact : SelectionTerm.Exact ps kids a b) :
+    «对» (alike (trait a b)) (before kids ps) (after kids ps) :=
+  «对之单调» (fun _ _ r => r.2) (exact_pairs exact)
+
 /-! ### From a pairing under the class to the totals -/
 
 theorem total_app {β : Type} (f : β → Nat) : ∀ xs ys : List β, total (xs ++ ys) f = total xs f + total ys f
@@ -316,7 +320,24 @@ theorem terms : raised ps kids a b = 1 ∧ lowered ps kids a b = 1 := ⟨by deci
 
 end Swap
 
-/-! ## The hypothesis is needed: inexact transmission breaks the levels law -/
+namespace Unexact
+
+/-- One for an occurrence whose trait is one, none otherwise. -/
+def atOne : Occ Bool → Nat := fun u => cond (Nat.beq (trait a b u) 1) 1 0
+
+end Unexact
+
+/-- **`Unexact` has equal totals and no pairing under the class**: the class of trait one holds
+the parent twice before the step and nothing after it, while a pairing under the class keeps the
+total of every reading constant on its classes (`total_of_paired`). -/
+theorem unexact_not_paired :
+    ¬ «对» (alike (trait Unexact.a Unexact.b)) (before Unexact.kids Unexact.ps)
+      (after Unexact.kids Unexact.ps) := fun paired =>
+  absurd (total_of_paired Unexact.atOne («对之单调»
+      (fun u v (same : trait Unexact.a Unexact.b u = trait Unexact.a Unexact.b v) =>
+        congrArg (fun n => cond (Nat.beq n 1) 1 0) same) paired)) (by decide)
+
+/-! ## The hypothesis cannot be dropped: without it the levels law fails -/
 
 /-- One parent with none of the amount and one offspring carrying one: transmission raised. -/
 def Raised : SelectionTerm.Generations Bool where
@@ -353,8 +374,10 @@ theorem levels_false :
         SelectionLevels.concordAmong groups (Raised.offspringNumber 0) (Raised.amount 0)) := by
   decide
 
-/-- **Without exact transmission the levels law fails**: the mean rises while the levels' side
-is false, so `SelectionLevels.rises_exact_iff_levels` needs its hypothesis. -/
+/-- **Without its hypothesis the levels law fails**: the mean rises while the levels' side is
+false, so `SelectionLevels.rises_exact_iff_levels` cannot drop its hypothesis. The weakest
+hypothesis it needs is the terms cancelling (`rises_cancel_iff_levels`), which fails here too
+(`not_cancel`). -/
 theorem levels_fail :
     ¬ (Raised.Raises 0 ↔
       groups.length * SelectionLevels.discordWithin groups (Raised.offspringNumber 0)
@@ -365,7 +388,46 @@ theorem levels_fail :
         SelectionLevels.concordAmong groups (Raised.offspringNumber 0) (Raised.amount 0)) :=
   fun same => levels_false (same.mp raises)
 
+/-- Nor do the transmission terms cancel here: transmission raised one and lowered nothing. -/
+theorem not_cancel : Raised.raisedAt 0 ≠ Raised.loweredAt 0 := by decide
+
 end Raised
+
+/-! ## Cancellation is all the levels law uses -/
+
+theorem lt_iff_add_lt {n m : Nat} (k : Nat) : n + k < m + k ↔ n < m :=
+  ⟨fun h => Naturals.le_of_add_le_add_right (Nat.le_trans (Nat.le_of_eq (Nat.succ_add n k)) h),
+   fun h => Nat.le_trans (Nat.le_of_eq (Nat.succ_add n k).symm) (Nat.add_le_add_right h k)⟩
+
+/-- **Where the transmission terms cancel, the mean rises exactly where concordance exceeds
+discordance.** `SelectionTerm.Generations.raises_exact_iff` uses exact transmission only for
+this. -/
+theorem rises_cancel_iff (G : SelectionTerm.Generations α) {t : Nat}
+    (cancel : G.raisedAt t = G.loweredAt t) : G.Raises t ↔ G.discordAt t < G.concordAt t := by
+  show G.size t * G.loweredAt t + G.discordAt t < G.concordAt t + G.size t * G.raisedAt t ↔ _
+  rw [cancel, Nat.add_comm (G.size t * G.loweredAt t)]
+  exact lt_iff_add_lt _
+
+/-- Exact transmission makes the terms cancel, both being zero. -/
+theorem cancel_of_exact {G : SelectionTerm.Generations α} {t : Nat}
+    (exact : SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) :
+    G.raisedAt t = G.loweredAt t :=
+  (SelectionTerm.raised_exact exact).trans (SelectionTerm.lowered_exact exact).symm
+
+/-- **Row 13 at its weakest hypothesis**: `SelectionLevels.rises_exact_iff_levels` with exact
+transmission weakened to the terms cancelling, equivalently equal totals (`totals_iff_cancel`). -/
+theorem rises_cancel_iff_levels (G : SelectionTerm.Generations α) {t m : Nat}
+    (gs : List (List α)) (listing : SelectionLevels.whole gs = G.family t)
+    (equal : ∀ g, g ∈ gs → g.length = m) (cancel : G.raisedAt t = G.loweredAt t) :
+    G.Raises t ↔
+      gs.length * SelectionLevels.discordWithin gs (G.offspringNumber t) (G.amount t) +
+          SelectionLevels.discordAmong gs (G.offspringNumber t) (G.amount t) <
+        gs.length * SelectionLevels.concordWithin gs (G.offspringNumber t) (G.amount t) +
+          SelectionLevels.concordAmong gs (G.offspringNumber t) (G.amount t) :=
+  (rises_cancel_iff G cancel).trans (by
+    unfold SelectionTerm.Generations.concordAt SelectionTerm.Generations.discordAt
+    rw [← listing]
+    exact SelectionLevels.rises_iff gs _ _ equal)
 
 /-! ## The gate as an inclusion of relations -/
 
@@ -415,6 +477,147 @@ theorem all_end_on_root {L : Flow X X} {W : Web X X} (acting : L.Acting W)
     {G : SelectionTerm.Generations X} (descended : SelectionTerm.Flow.Descended L W G) {t : Nat}
     (inactive : ∀ p, p ∈ G.family t → ¬ W.active t p) : G.size (t + 1) = 0 :=
   size_zero_of_within (acting_iff.mp acting t) (listed_within_gives descended t) inactive
+
+/-! **The gate cannot be dropped from row 17**: a formation not active gives, its offspring come
+to stand, and the generation after an inactive one is not empty. -/
+namespace Ungated
+
+def web : Web Bool Bool where
+  level t _ := t
+  active _ _ := False
+  requires _ _ _ := False
+  need _ _ _ := 0
+  draws _ _ _ := False
+
+def flow : Flow Bool Bool where
+  present _ := [false, true]
+  take _ _ _ := 0
+  give _ _ _ := 1
+
+def gens : SelectionTerm.Generations Bool where
+  first := [false]
+  kids t _ := match t with
+    | 0 => [true]
+    | _ + 1 => []
+  amount _ _ := 0
+
+theorem present_all : ∀ p : Bool, p ∈ ([false, true] : List Bool)
+  | false => .head _
+  | true => .tail _ (.head _)
+
+theorem descended : SelectionTerm.Flow.Descended flow web gens := fun t p k _ mk =>
+  match t, mk with
+  | 0, _ => ⟨present_all p, Nat.zero_lt_one, Nat.lt_irrefl 0, Nat.zero_lt_one⟩
+  | _ + 1, m => nomatch (m : k ∈ ([] : List Bool))
+
+theorem inactive : ∀ p, p ∈ gens.family 0 → ¬ web.active 0 p := fun _ _ act => act
+
+theorem not_ended : gens.size 1 = 1 := rfl
+
+theorem not_acting : ¬ flow.Acting web := fun acting =>
+  acting 0 false true (.head _) Nat.zero_lt_one
+
+/-- Every hypothesis of `GroupEnding.Flow.all_end` but the gate holds, and its conclusion fails. -/
+theorem gate_needed : SelectionTerm.Flow.Descended flow web gens ∧
+    (∀ p, p ∈ gens.family 0 → ¬ web.active 0 p) ∧ gens.size 1 ≠ 0 ∧ ¬ flow.Acting web :=
+  ⟨descended, inactive, fun zero => Nat.noConfusion (not_ended.symm.trans zero), not_acting⟩
+
+end Ungated
+
+/-- Over generations, a member not active has no offspring, from the two inclusions alone
+(`GroupEnding.Flow.offspring_zero`'s content). -/
+theorem offspring_zero_within {L : Flow X X} {W : Web X X} {G : SelectionTerm.Generations X}
+    {t : Nat} (acting : «则» (gives L t) («而» (activeAt W t) (gives L t)))
+    (descended : «则» (listed G t) (gives L t)) {p : X} (mp : p ∈ G.family t)
+    (inactive : ¬ W.active t p) : G.offspringNumber t p = 0 :=
+  length_zero_of_none fun k mk => match acting p k (descended p k ⟨mp, mk⟩) with
+    | ⟨_, ⟨rfl, act⟩, _⟩ => inactive act
+
+/-- Where the groups with less of the amount are not active, they leave nothing, from the two
+inclusions (`GroupEnding.Flow.ended_of_inactive`'s content). -/
+theorem ended_within {L : Flow X X} {W : Web X X} {G : SelectionTerm.Generations X} {t : Nat}
+    (acting : «则» (gives L t) («而» (activeAt W t) (gives L t)))
+    (descended : «则» (listed G t) (gives L t)) {gs : List (List X)}
+    (listing : SelectionLevels.whole gs = G.family t) {a : X → Nat}
+    (inactive : ∀ g h, g ∈ gs → h ∈ gs → total h a < total g a → ∀ p, p ∈ h → ¬ W.active t p) :
+    GroupEnding.Ended gs (G.offspringNumber t) a :=
+  fun g h mg mh less => SelectionTerm.total_zero_of fun p mp =>
+    offspring_zero_within acting descended (listing ▸ GroupEnding.mem_whole mh mp)
+      (inactive g h mg mh less p mp)
+
+/-- **Row 14 on the root**: `GroupEnding.Flow.rises_iff_inactive` with the gate and descent as
+the two inclusions and exact transmission weakened to the terms cancelling. Its `inactive`
+hypothesis compares sums of the trait, so it is not an inclusion. -/
+theorem rises_iff_inactive_on_root {L : Flow X X} {W : Web X X}
+    {G : SelectionTerm.Generations X} {t m : Nat}
+    (acting : «则» (gives L t) («而» (activeAt W t) (gives L t)))
+    (descended : «则» (listed G t) (gives L t)) (gs : List (List X))
+    (listing : SelectionLevels.whole gs = G.family t) (equal : ∀ g, g ∈ gs → g.length = m)
+    (cancel : G.raisedAt t = G.loweredAt t)
+    (inactive : ∀ g h, g ∈ gs → h ∈ gs → total h (G.amount t) < total g (G.amount t) →
+      ∀ p, p ∈ h → ¬ W.active t p) :
+    G.Raises t ↔
+      gs.length * SelectionLevels.discordWithin gs (G.offspringNumber t) (G.amount t) <
+        gs.length * SelectionLevels.concordWithin gs (G.offspringNumber t) (G.amount t) +
+          SelectionLevels.concordAmong gs (G.offspringNumber t) (G.amount t) := by
+  have h := rises_cancel_iff_levels G gs listing equal cancel
+  rw [GroupEnding.among_not_against (ended_within acting descended listing inactive),
+    Nat.add_zero] at h
+  exact h
+
+/-! ## Row 5: what comes to stand is given to -/
+
+/-- **Row 5 under an inclusion**: where coming to stand lies within being given to by something
+taking part, with inheritance at the descents and nothing taking part depending on `c`, nothing
+coming to stand depends on `c` after the step. -/
+theorem no_new_dependence_of_given {L : Flow X X} {W : Web X X} {t : Nat} {x c : X}
+    (given : W.ComesToStand t x → ∃ g, L.DescendsAt W t x g)
+    (inherits : ∀ g, L.DescendsAt W t x g → W.InheritsAt t x g c)
+    (none : ∀ g, g ∈ L.present t → ¬ W.requires t g c) (comes : W.ComesToStand t x) :
+    ¬ W.requires (t + 1) x c :=
+  fun depends => match given comes with
+    | ⟨g, descends⟩ => none g descends.1 (inherits g descends depends)
+
+/-- Balance at the relatum is one way to meet the inclusion (`Flow.descends_of_comes`), and it
+gives `Flow.no_new_dependence` back. -/
+theorem no_new_dependence_from_balance {L : Flow X X} {W : Web X X} {t : Nat} {x c : X}
+    (balances : W.level (t + 1) x + L.taken t x = W.level t x + L.given t x)
+    (inherits : ∀ g, L.DescendsAt W t x g → W.InheritsAt t x g c)
+    (none : ∀ g, g ∈ L.present t → ¬ W.requires t g c) (comes : W.ComesToStand t x) :
+    ¬ W.requires (t + 1) x c :=
+  no_new_dependence_of_given (Flow.descends_of_comes balances) inherits none comes
+
+/-! **The inclusion cannot be dropped from row 5**: something comes to stand with nothing taking
+part, and depends on a condition after the step that nothing held before it. -/
+namespace Ungiven
+
+def web : Web Bool Bool where
+  level t _ := t
+  active _ _ := False
+  requires t f _ := t = 1 ∧ f = true
+  need _ _ _ := 0
+  draws _ _ _ := False
+
+def flow : Flow Bool Bool where
+  present _ := []
+  take _ _ _ := 0
+  give _ _ _ := 0
+
+theorem comes : web.ComesToStand 0 true := ⟨Nat.lt_irrefl 0, Nat.zero_lt_one⟩
+
+theorem inherits : ∀ g, flow.DescendsAt web 0 true g → web.InheritsAt 0 true g false :=
+  fun g descends => nomatch (descends.1 : g ∈ ([] : List Bool))
+
+theorem none : ∀ g, g ∈ flow.present 0 → ¬ web.requires 0 g false :=
+  fun g mem => nomatch (mem : g ∈ ([] : List Bool))
+
+theorem depends : web.requires 1 true false := ⟨rfl, rfl⟩
+
+theorem not_given : ¬ (web.ComesToStand 0 true → ∃ g, flow.DescendsAt web 0 true g) :=
+  fun given => match given comes with
+    | ⟨g, descends⟩ => nomatch (descends.1 : g ∈ ([] : List Bool))
+
+end Ungiven
 
 end U4LeverTwo
 
