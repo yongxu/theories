@@ -257,9 +257,8 @@ The proposal's test: "The lift counts only if two things hold … If either fail
 - **Above `Becoming.Flow`.** These are the representations: the place reading, and the census at a step and across a run.
   - They add no content to Flow's own representations, so they are placed only if a consumer needs their form.
   - `Flow` has no active owner, so by rule 3's fallback OU's owner decides.
-- **Next candidates, each its own item:**
-  - The two census rows (§1), where the census pairing could put a pairing behind their per-step count.
-  - Lever 2's row 5 (`no_new_dependence`). It uses balance only to find a giver for what comes to stand, which `arising_iff_begins` with the census's given count would supply.
+- **Next candidate, its own item:** the two census rows (§1), where the census pairing could put a pairing behind their per-step count.
+- **Not a candidate:** lever 2's row 5 (`no_new_dependence`). It needs no census. It holds under the inclusion that coming to stand is given to (`no_new_dependence_of_given`, in [lever 2's audit](LEVER-2-AUDIT.md)), and a route through the census's given count would be balance restated (F1).
 
 ## 6. What would change this
 
