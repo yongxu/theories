@@ -33,7 +33,7 @@ Read at one class, turnover that sustains a pattern and turnover that ends it lo
 | A coarse class constant under 缘 has no end from a continued point; what ends after a continued step has a coarse class that is not constant. | `«有常则无终»`, `«有终则粗不有常»` |
 | For any sequence of classes `Es`, no order of grain assumed, generation at order `k` (the class `Es (k + 1)` going on through renewals at `Es k`) keeps order `k + 1` from ending on every branch, and 全生成 at order `k` keeps order `k + 1` from reaching an end. | `«阶生成则上不退化»`, `«阶全生成则上无终»` |
 
-**Theorem** (root). *The regions' coverage, and the split of a beginning.* 守 forbids renewal throughout its family where 全守 allows an earlier one, so a line that renews once and then stays still is, at its start, none of 生成, 守 and 退化. *Keeping from some point on* (后守, hòushǒu) closes the gap: along some branch the pattern goes on and, from a point of that branch reached from the start, no carrying renewal lies on it. For every carrier, relation and pair of classes (`Becoming.MapRegions`; [record](../results/records/generation-and-degeneration-at-two-grains.md)):
+**Theorem** (root; witness). *The regions' coverage, and the split of a beginning.* 守 forbids renewal throughout its family where 全守 allows an earlier one, so a line that renews once and then stays still is, at its start, none of 生成, 守 and 退化. *Keeping from some point on* (后守, hòushǒu) closes the gap: along some branch the pattern goes on and, from a point of that branch reached from the start, no carrying renewal lies on it. For every carrier, relation and pair of classes (`Becoming.MapRegions`; [record](../results/records/generation-and-degeneration-at-two-grains.md)):
 
 | Law | Lean |
 |---|---|

@@ -126,8 +126,8 @@
       ]
     },
     {
-      "en": "The strong forms read the whole coarse line: 全生成 (the line never ends, and from every point it reaches a carrying renewal lies ahead), 全守 (it never ends, and from some point no carrying renewal lies ahead, renewals before that point allowed) and 有终 (some point it reaches ends, which is not degeneration) exclude each other and, with excluded middle, cover every point; coverage by the some-branch regions is not proved. Placing every point of every model in one of the strong forms is exactly excluded middle, and so is telling a line that never ends from one that ends; 全生成 holds along its line and an end reaches back along it.",
-      "zh": "强形读整条粗线：全生成（线不穷，且自其所及之每一点，前有传）、全守（不穷，且自某点起前无传，此前之传不论）与有终（其所及之某点终，此非退化）彼此排斥，以排中律则覆盖每一点；某支诸域之覆盖未证。把每一模型之每一点都置于强形之一，恰是排中律；分开不穷之线与有终之线，亦恰是排中律；全生成沿其线而存，有终沿其线而回溯。",
+      "en": "The strong forms read the whole coarse line: 全生成 (the line never ends, and from every point it reaches a carrying renewal lies ahead), 全守 (it never ends, and from some point no carrying renewal lies ahead, renewals before that point allowed) and 有终 (some point it reaches ends, which is not degeneration) exclude each other and, with excluded middle, cover every point; with strict keeping the some-branch regions do not cover, and with keeping from some point on and excluded middle they do (law 6). Placing every point of every model in one of the strong forms is exactly excluded middle, and so is telling a line that never ends from one that ends; 全生成 holds along its line and an end reaches back along it.",
+      "zh": "强形读整条粗线：全生成（线不穷，且自其所及之每一点，前有传）、全守（不穷，且自某点起前无传，此前之传不论）与有终（其所及之某点终，此非退化）彼此排斥，以排中律则覆盖每一点；某支诸域以严格之守不周遍，以排中为前提、守读作后守则周遍（律 6）。把每一模型之每一点都置于强形之一，恰是排中律；分开不穷之线与有终之线，亦恰是排中律；全生成沿其线而存，有终沿其线而回溯。",
       "declarations": [
         "Becoming.«全生成»",
         "Becoming.«全守»",
@@ -624,6 +624,10 @@
     {
       "en": "30 October 2026, board item GW (study section 467): GW1 and GW2 in Becoming.MapRegions, a core leaf importing GrammarMap only: the split of a beginning on the root; keeping from some point on, with which excluded middle makes the regions cover and on single lines partition; the gap strict keeping leaves; on a single line, deciding keeping from some point on is LPO and deciding generation WLPO. Statement, four laws, the hypothesis, a does-not-show item and a counterexample changed.",
       "zh": "2026年10月30日，工作板条目 GW（研究第 467 节）：GW1 与 GW2 于 Becoming.MapRegions（只导入 GrammarMap 之核心叶）：根上起始之分；自某点起之守，以之排中使诸域周遍、单行之上互斥；严格之守所留之隙；单行之上，判定后守即 LPO，判定生成即 WLPO。陈述、四律、前提、一项不示与一反例有变。"
+    },
+    {
+      "en": "30 October 2026, board item GW, after item 13's fourth review round: law 8's clause on the some-branch regions brought into line with law 6 (strict keeping leaves them short of covering; with keeping from some point on and excluded middle they cover). Law 8 corrected to what law 6 proves; no new law.",
+      "zh": "2026年10月30日，工作板条目 GW，依条目 13 之第四轮审查：律 8 关于某支诸域之一句与律 6 相合（以严格之守不周遍；以排中为前提、守读作后守则周遍）。律 8 改正为律 6 所证；无新律。"
     }
   ]
 }
