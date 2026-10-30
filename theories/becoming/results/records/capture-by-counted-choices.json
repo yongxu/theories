@@ -186,8 +186,8 @@
     "zh": "加性计数之有界之律；SPM 之先验与其于同等之策间之分；计数之择于常立评分下是否反转之冻结检验；人之独立审查。"
   },
   "correspondence": {
-    "en": "Active inference (Friston, FitzGerald, Rigoli, Schwartenbeck, O'Doherty and Pezzulo 2016, 'Active inference and learning', Neuroscience & Biobehavioral Reviews 68): the prior over policies counts beliefs about the selected policy at the end of each trial (§2.4; SPM12's spm_MDP_VB adds the end-of-trial posterior over policies); devalued after the habit has formed (trial 48) the habit persists and strengthens itself with repeated execution, devalued after 16 trials the agent switches at once (§5.2). The lock is the lock-in of increasing returns (Arthur 1989, The Economic Journal 99); counting the action taken is the value-free habit (Miller, Shenhav and Ludvig 2019, Psychological Review 126). Overtraining and insensitivity to devaluation in rats (Adams 1982; Dickinson 1985); five failures to induce it in humans (de Wit and others 2018, Journal of Experimental Psychology: General 147). The free-energy principle's sparse coupling read as the couplings; shared generative models (Friston and others 2024, 'Designing ecosystems of intelligence from first principles', Collective Intelligence 3) as pooled couplings at most. Its own laws restate; its third parts are related records: identical cells, risk minimization and what seeking cannot separate. The readings are the AI's, in development/ue1-fep-bridge/NOTE.md, the review in REVIEW-UE1.md.",
-    "zh": "主动推断（Friston、FitzGerald、Rigoli、Schwartenbeck、O'Doherty、Pezzulo 2016）：策之先验于每试之末计关于所选之策之信念（§2.4；SPM12 之 spm_MDP_VB 加试末之策后验）；习惯成后贬值（第 48 试），习惯持续且以重复之执行自强，16 试后贬值则主体立即转向（§5.2）。锁定即递增报酬之锁入（Arthur 1989）；计所行之行动即无值习惯（Miller、Shenhav、Ludvig 2019）。大鼠之过度训练与对贬值之不敏（Adams 1982；Dickinson 1985）；人类诱导之五次失败（de Wit 等 2018）。自由能原理之稀疏耦合读作耦合；共享之生成模型（Friston 等 2024）至多读作合耦合。其自身之律为重述；包含之第三部分为相关之记录：同一细胞、风险最小化与探求所不能分者。读法皆 AI 之读，载于 development/ue1-fep-bridge/NOTE.md，审查见 REVIEW-UE1.md。"
+    "en": "Active inference (Friston, FitzGerald, Rigoli, Schwartenbeck, O'Doherty and Pezzulo 2016, 'Active inference and learning', Neuroscience & Biobehavioral Reviews 68): the prior over policies counts beliefs about the selected policy at the end of each trial (§2.4; SPM12's spm_MDP_VB adds the end-of-trial posterior over policies); devalued after the habit has formed (trial 48) the habit persists and strengthens itself with repeated execution, devalued after 16 trials the agent switches at once (§5.2). The lock is the lock-in of increasing returns (Arthur 1989, The Economic Journal 99); counting the action taken is the value-free habit (Miller, Shenhav and Ludvig 2019, Psychological Review 126). Overtraining and insensitivity to devaluation in rats (Adams 1982; Dickinson 1985); five failures to induce it in humans (de Wit and others 2018, Journal of Experimental Psychology: General 147). The free-energy principle's sparse coupling read as the couplings; shared generative models (Friston and others 2024, 'Designing ecosystems of intelligence from first principles', Collective Intelligence 3) as pooled couplings at most. Its own laws restate; its third parts are related records: identical cells, risk minimization, what seeking cannot separate and a code held as counts. The readings are the AI's, in development/ue1-fep-bridge/NOTE.md, the review in REVIEW-UE1.md.",
+    "zh": "主动推断（Friston、FitzGerald、Rigoli、Schwartenbeck、O'Doherty、Pezzulo 2016）：策之先验于每试之末计关于所选之策之信念（§2.4；SPM12 之 spm_MDP_VB 加试末之策后验）；习惯成后贬值（第 48 试），习惯持续且以重复之执行自强，16 试后贬值则主体立即转向（§5.2）。锁定即递增报酬之锁入（Arthur 1989）；计所行之行动即无值习惯（Miller、Shenhav、Ludvig 2019）。大鼠之过度训练与对贬值之不敏（Adams 1982；Dickinson 1985）；人类诱导之五次失败（de Wit 等 2018）。自由能原理之稀疏耦合读作耦合；共享之生成模型（Friston 等 2024）至多读作合耦合。其自身之律为重述；包含之第三部分为相关之记录：同一细胞、风险最小化、探求所不能分者与以计数持之码。读法皆 AI 之读，载于 development/ue1-fep-bridge/NOTE.md，审查见 REVIEW-UE1.md。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean",
   "aliases": [
@@ -281,6 +281,13 @@
       "detail": {
         "en": "What seeking cannot separate: the third part against the unqualified wording of inherent self-correction by seeking information (candidate 7).",
         "zh": "探求所不能分者：针对“经探求信息而内在自我纠正”之不加限定措辞之第三部分（候选 7）。"
+      }
+    },
+    {
+      "id": "a-code-held-as-counts",
+      "detail": {
+        "en": "A code held as counts: the third part against language as an emergent property of free-energy minimization, read universally.",
+        "zh": "以计数持之码：反对普遍而读之语言为自由能最小化之涌现性质之第三部分。"
       }
     }
   ],
@@ -417,6 +424,10 @@
     {
       "en": "29 October 2026, board item UE19 (study section 453): related to what-seeking-cannot-separate; the correspondence names the containment's third parts, UE19's among them, by their records; no statement, next step or declaration changed.",
       "zh": "2026年10月29日，工作板条目 UE19（研究第 453 节）：与 what-seeking-cannot-separate 相关联；对应以其记录指明包含之第三部分，UE19 者在其中；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "31 October 2026, board item UE25 (study section 471): related to a-code-held-as-counts; the correspondence names it among the containment's third parts; no statement, next step or declaration changed.",
+      "zh": "2026年10月31日，工作板条目 UE25（研究第 471 节）：与 a-code-held-as-counts 相关联；对应将其列于包含之第三部分；无一陈述、下一步或声明改变。"
     }
   ]
 }
