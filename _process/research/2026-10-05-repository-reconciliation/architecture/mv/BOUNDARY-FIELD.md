@@ -150,7 +150,7 @@ These are computed from the dump. [boundary/probe.py](boundary/probe.py) is thei
     - 15 are declared off the grammar modules: 13 in GW's leaf `MapRegions`, laws of the map that nothing below uses (OU's GW decision), with `«全生成则生成»` (KeepingWidening) and `«及在渐粗列之相续»` (HeldPossible).
 
     A leaf's «» laws are thus counted, or not, as a whole.
-  - **The one point to settle with OU's owner.** U4 records that `kept_onward` "meets the test". By this predicate it does not, because its statement is about `Nat` alone and reaches no «» term: it is a law of counting kept in GrammarLaws. Its proof applies «闭含所闭» and «线则所闭», and the walk below sees those. The point changes no label.
+  - **`kept_onward` is not a grammar law.** U4 recorded OU's owner's wording that it "meets the test". By this predicate it does not, because its statement is about `Nat` and a predicate on it and reaches no «» term. It is a law of the steps of time (induction along the successor), proved through the grammar's closure: its proof applies «闭含所闭» and «线则所闭», and the walk below sees those. OU's owner accepted the predicate with this difference on 31 October, and corrects that wording in WHAT-REMAINS. No label changes.
 - **A forwarder of a grammar law** is a theorem whose dump `f` names a grammar law or another forwarder, and whose proof names no other theorem of the run.
   - The probe finds 14. Thirteen are through closure's laws, such as `WithinClosure.not_rel` for `«所闭之界»`, and one is `Amounts.fallsStop_of_ends`, through `«尽则不或屡»`. Eight are direct.
   - Only a forwarder of kind `pure` whose binders Y uses is the exact case. One of kind `projection` (`Iff.mp`, `Iff.mpr`, `symm`) states one direction, and is reported as such.
@@ -427,7 +427,7 @@ The closed set splits by the Lean check into bridges (equivalences) and support.
 - The review reads each support lemma as U4 §1.1 asks.
 - A row whose support includes a model fact that adds a hypothesis the row lacks stays connected.
 
-## 7. Settled with U4's owner, and points for OU's owner
+## 7. Settled with U4's owner and OU's owner
 
 **With U4's owner** (u4-edge a93071609 to fe2a1942b):
 - **Derived.** The closed set, now split into `bridges` (equivalences, checked in Lean) and `support` (the review's), with `law` a list. "Derived" and "under a stated hypothesis" are never readings.
@@ -443,9 +443,9 @@ The closed set splits by the Lean check into bridges (equivalences) and support.
 - **The counts.** The standings are counted in `boundary.counts`; the record's own laws' dependence in `counts_at_boundary_record`.
 - **Premises.** No central declaration is a premise. The record lists the two premises of the ethics apart: the condition with its not-entailed theorem, and C, `Comparison`, with none. Standing 3 is empty today (§3.3).
 
-**For OU's owner:**
-- **The grammar-law predicate** (§3.0). It is OU's location rule with the content tests, and it differs on one point: `kept_onward`, a statement about `Nat` alone, is not a grammar law. No label changes either way. The leaf `MapRegions`' «» laws are not grammar laws, as a whole.
-- **WHAT-REMAINS' two sentences on standing 3,** and U4 §1.3's, as §3.3 gives them.
+**With OU's owner** (31 October):
+- **The grammar-law predicate** (§3.0) is accepted: OU's location rule with the content tests, `kept_onward` not a grammar law, and the leaf `MapRegions`' «» laws left out as a whole.
+- **WHAT-REMAINS' two sentences on standing 3** are wrong, and OU's owner corrects them in its proposal section, marked as a correction, with its bullet on `kept_onward`. U4 §1.3's sentence is U4's owner's to correct.
 
 ## 8. Order of work
 
@@ -460,7 +460,7 @@ The closed set splits by the Lean check into bridges (equivalences) and support.
      - any juncture law the leaf's design admits.
    - **The record** carries the field, with the eight derived rows' laws, bridges and support as §6 lists them, and the three readings equal to the rule.
    - **The landing** reruns `master_laws.py` and requires none unverified, unplaced or not matched. It lands after GW's landing, by OU's order.
-3. **OU's owner** brings WHAT-REMAINS and 08 §7's account of the edge to MV's report, with the corrections of §3.3.
+3. **OU's owner** brings WHAT-REMAINS and 08 §7's account of the edge to MV's report. The corrections of §3.3 land after RR's landed clause.
 
 **RESULT-WORKFLOW** gains a paragraph. `law`, `bridges`, `support` and a standing-2 entry's names declare a correspondence: the row is a case of these laws through these lemmas, or an instance of this form. F5's `of` does the same. They record nothing about which master laws a row rests on, which stays computed.
 
@@ -518,7 +518,7 @@ The closed set splits by the Lean check into bridges (equivalences) and support.
 | R2-LEAN-8, R2-TOOLING-7 | Q2 judged the premise by its packaging | §3.3: Q2 dropped, the relation to the root a reading |
 | R2-LEAN-9 | the certificate's order | §3.2 test 7: either order |
 | R2-EDGE-6 | bridges were the whole closed set, mostly not equivalences; the checks pass steps rows | §2 `bridges` and `support`; §3.1 D6 and what it does not show (28 of 32) |
-| R2-EDGE-8, R2-CRITIC-7 | the predicate departed from OU's decision; figures before GW | §3.0: OU's location rule with content tests, 406 on GW's run, the leaf counted as a whole; `kept_onward` put to OU's owner (§7) |
+| R2-EDGE-8, R2-CRITIC-7 | the predicate departed from OU's decision; figures before GW | §3.0: OU's location rule with content tests, 406 on GW's run, the leaf counted as a whole; `kept_onward` not a law, accepted by OU's owner (§7) |
 | R2-EDGE-9 | C said to have no statement | §2: `premise` `Comparison`, `not_entailed` null |
 | R2-EDGE-10 | the correction covered C only | §3.3: standing 3 empty; both WHAT-REMAINS sentences and U4 §1.3 |
 | R2-EDGE-11 | readings of computed labels unchecked | §1 table; §3.4 |
