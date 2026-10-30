@@ -60,7 +60,7 @@ t = load('generation-and-degeneration-at-two-grains')
 en, zh = t['validation_scope']['en'], t['validation_scope']['zh']
 add_en = (f' Becoming.MapRegions (GW1, GW2), a core leaf importing GrammarMap only, {MR_T} theorems in {MR_D} declarations '
           f'at receipt {RECEIPT}, every axiom report empty; independent read-only review REVIEW-GW126-LEAN.')
-add_zh = f'Becoming.MapRegions（GW1、GW2，只导入 GrammarMap 之核心叶）于回执 {RECEIPT}：{MR_D} 项声明（{MR_T} 项定理），公理报告皆空；独立只读审查 REVIEW-GW126-LEAN。'
+add_zh = f'MapRegions（GW1、GW2，核心叶）于回执 {RECEIPT}：{MR_D} 项声明（{MR_T} 项定理），公理报告皆空；审查 REVIEW-GW126-LEAN。'
 assert 'MapRegions' not in en
 assert len(en + add_en) <= LIM[0] and len(zh + add_zh) <= LIM[1], (len(en + add_en), len(zh + add_zh))
 t['validation_scope'] = {'en': en + add_en, 'zh': zh + add_zh}
