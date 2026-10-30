@@ -671,3 +671,86 @@ Review the design as a second opinion, before any Lean is written:
 
 Report numbered findings. For each: location (file:line or the item number), the problem, and a replacement (text for the plan, or a corrected statement of the law). Mark each finding confirmed by a check you ran, or a judgment. End with a one-paragraph verdict: which items to build as designed, which to change, which to drop.
 ```
+
+### The review of `Becoming.HeldForReading` (piped to `cx -m astra -e high --sandboxed --fresh`, in the landing worktree at the kit's commit)
+
+```text
+You are reviewing, read-only, a new Lean 4 module in this repository (do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine). Read AGENTS.md first for the method, the naming rule and the pure core's requirements.
+
+The module: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean, scratch-built with Lean 4.29.1 against this checkout's package (experiments/integrated-correction/general-framework/generative-basis/lean/becoming/): 56 theorems in 80 declarations, every axiom report empty, no warnings (log kit/round2b/logs/build-9.log; the audit driver kit/round2b/tree/.build/BecomingHeldForReadingAxiomAudit.lean is present though ignored by git). It imports Becoming.ShownOrder and Becoming.ReadingLoop and reuses Becoming.total with its lemmas (Flow.lean's Totals section, Population.lean's total_congr_on, Dissipation.lean's total_eq_zero) and the Prelude's axiom-free arithmetic.
+
+It implements the plan's §4.7, RF-M.2 (_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md), redesigned after your own review of the design: evidence/REVIEW-RFM2.md in the same folder, with a table of what was taken.
+
+Review it as a second opinion:
+1. For each finding of REVIEW-RFM2 marked taken, is it taken as its row says, in the Lean and the module's account?
+2. Exactness. Compare every docstring and every sentence of the module's header with the Lean statement it cites: dropped or superfluous hypotheses, "exactly" where one direction is proved, conclusions stronger than proved, the Standing labels (near-definitional, general law, witness). Do the names state exactly what the statements mean, in the repository's structural vocabulary?
+3. Reuse. Does the module reprove anything the package already has (search for list totals compared item by item, finite searches over lists, cancellation and subtraction lemmas, products with a positive factor)? Name the declaration to reuse.
+4. The literature claims in the Standing and Readings paragraphs: Good (1967) on the principle of total evidence; Hadfield-Menell, Dragan, Abbeel and Russell (2017), Theorem 1 and Equation 1; Carey (2018); Milli, Hadfield-Menell, Dragan and Russell (2017).
+5. Strength. Is a stronger or more useful statement in reach on these definitions for alignment researchers and readers of coordination (for example: the strict forms of cost_within_margins_iff; the margins' positivity and held_gains_iff joined; a reading that tells the candidate only partly, as a policy through a lumping, against the full reading)? Is anything presented as more than it is?
+6. The witness Bypass: do its theorems show what the docstrings say (the steps, "never sensed", the rule for ties), and is any conclusion an artifact of the construction rather than of the law it instantiates?
+
+Report numbered findings. For each: location (file:line), the problem, and a replacement (Lean or text). Mark each confirmed by a check you ran, or a judgment. End with a one-paragraph verdict.
+```
+
+### The three-lens review of `Becoming.HeldForReading` (a workflow of Opus readers, beside the cross-model reader)
+
+Three readers, one lens each, given a common preamble and their lens; then one verifier per lens, given all of that lens's findings to refute.
+
+The common preamble:
+
+```text
+You are an independent, adversarial reviewer of one Lean 4 module in a theory repository. Work read-only: read files and run read-only shell commands only; do not edit, create, commit, render, run make or build Lean. The module builds in the repository's pure core (Lean 4.29.1) with every axiom report empty and no warnings: 56 theorems in 80 declarations. Do not try to build it.
+
+The module: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean (paths are relative to the working directory).
+It imports Becoming.ShownOrder and Becoming.ReadingLoop, in experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ (ShownOrder.lean, ReadingLoop.lean), and uses Becoming.total with its lemmas from Prelude.lean, Flow.lean, Population.lean and Dissipation.lean in the same folder. The plan that asked for it: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md, section 4.7 (RF-M.2). The cross-model design review it answers, with a table of what was taken: evidence/REVIEW-RFM2.md in the same folder.
+
+The module states, in natural-number counts: what holding an act for a reading that tells the candidate is worth against committing (a finite form of the value of evidence); the case of a reading that stops or releases a held act (a deterministic finite form of the off-switch game); any rule of stopping; the threshold joining a rule's shortfall, a cost of holding and the model's two weighted margins; a conditional join with the shown reach of choices (ShownOrder); and a witness on ReadingLoop.Loop of a reading bypassed under a misspecified listing. Report only what you can point to in the files, with file:line locations and exact quotes. Severity: high (a claim the Lean does not prove, or a wrong theorem), medium (a dropped hypothesis, an overstated reading, a reproved package lemma, a statement the header promises and the Lean lacks), low (wording or naming). Give a concrete replacement (Lean or text) for each finding, most severe first.
+```
+
+The exactness lens (findings numbered E1, E2, …):
+
+```text
+Your lens: exactness of prose against statements, and the arithmetic. For every theorem and definition, compare its docstring, and every sentence of the module header and of the Standing, Readings and Modelling paragraphs that cites it, with the Lean statement: hypotheses dropped (for example a hypothesis on every listed candidate presented as a property of some), quantifiers changed, "exactly" where only one direction is proved, conclusions stated more strongly than proved, the Standing labels (near-definitional, general law, witness). Check the arithmetic: that shifted keeps every comparison between policies as the header says; that gainMargin, lossMargin and shortfall mean what their docstrings say; the strict halves of held_above_go_iff and held_above_off_iff; ties (gain equal to loss) and candidates of zero weight; whether held_gains_iff's gloss "the model leaves the act's sign open" is exact. Check that the Bypass theorems compute what their docstrings and the header say (which step, what is sensed when, what "from step four on" covers, what the listing does). Names must be structural and exact in the repository's vocabulary: flag dualist, social or financial words in Lean names and in prose (AGENTS.md, Proof and naming).
+```
+
+The sources lens (L1, L2, …):
+
+```text
+Your lens: the labelled readings and the literature. Check every attribution and correspondence in the Standing and Readings paragraphs and the docstrings against the works: Good (1967), On the principle of total evidence; Hadfield-Menell, Dragan, Abbeel and Russell (2017), The off-switch game (arXiv 1611.08219), its Theorem 1 and its Equation 1; Carey (2018), Incorrigibility in the CIRL framework (arXiv 1709.06275); Milli, Hadfield-Menell, Dragan and Russell (2017), Should robots be obedient? (arXiv 1705.09990). Read the papers on the web where your tools allow it (load a fetch or search tool with ToolSearch if one is deferred); otherwise use your knowledge, and where unsure of a detail say so rather than assert it. For each correspondence: is it fair; is "the deterministic finite case of Theorem 1" exact (the paper's robot has a belief distribution over the action's utility and the human a policy on it; here candidates carry natural-number weights and the rule is a Boolean function of the candidate); does the module claim more or less than the paper proves (for example a converse the paper does not state); is "its Equation 1 for a deterministic rule" the right equation; are the Carey and Milli summaries accurate; is the link to the plan's obstruction pattern (PLAN.md section 5) fair. Also check that the readings stay labelled readings and keep the repository's method (AGENTS.md: one relational unfolding first; helper and principal as roles in one configuration, not separate entities presupposed).
+```
+
+The structure lens (F1, F2, …):
+
+```text
+Your lens: structure, reuse, fit and strength. (1) Reuse: does the module reprove anything the package already has? Search experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/*.lean for totals compared item by item or strictly, finite searches over lists, cancellation and subtraction lemmas, products with a positive factor, membership helpers and Bool case lemmas, and name each declaration to reuse with its file:line. (2) Fit: is each row of REVIEW-RFM2.md's table marked taken taken in the Lean and in the module's account as the row says; does the module meet RF-M.2 as PLAN.md section 4.7 states it; is ShownOrder's ChoiceOccasions.reach_within used correctly in reach_fixes, and is the header's mention of ChoiceOccasions.both_ways_of_unreached accurate; is Bypass a correct instance of ReadingLoop.Loop and of Loop.rests_of_unrefuted, and does the header describe that law correctly? (3) Strength: is a stronger or more useful statement in reach on the same definitions, worth adding before landing (for example: the strict forms of cost_within_margins_iff; held_gains_iff joined with the margins' positivity, that holding gains over both moves exactly where both margins are positive; a policy reading through a lumping compared with the full reading, with the inquiry laws GuardHorizon.uniform_policy_iff_fiber_feasible and ReadingLoop.keeping_policy_iff)? Give the statement and a proof sketch for each, in priority order.
+```
+
+The verifier, for each lens's findings (followed by the findings, each with its id, severity, location, quote, problem and proposed replacement):
+
+```text
+You are an adversarial verifier. Work read-only: read files and run read-only shell commands only; no edits, no builds. A reviewer reported the findings below on the Lean module _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean (paths relative to the working directory; the package is experiments/integrated-correction/general-framework/generative-basis/lean/becoming/; PLAN.md and evidence/REVIEW-RFM2.md are in the rf-formations-that-read folder). For each finding, try to refute it against the module's actual text and Lean statements and the files it cites. A finding is real only if the quoted text exists at or near the location and the problem holds against the Lean as written. A claimed reuse is real only if the named declaration exists, states what is needed, and has an empty axiom report (no propext, Quot.sound or Classical.choice: check its proof and what it uses). A suggested strengthening is real only if the stronger statement is true on these definitions and provable without axioms. A literature point is real only if you can confirm it; otherwise say it is unconfirmed. Default to real=false if you cannot confirm. For each finding give its id, real, your reason in two or three sentences, and, where the proposed replacement is wrong or could be better, a better replacement.
+```
+
+### The check of how the Lean review's findings were taken (a workflow of four Opus readers, one per set of findings)
+
+Run on the rebuilt module (81 theorems in 111 declarations), each reader given the common prompt, the findings of one set and a note; `<saved>` stands for the folder where the reviewed version (`git show 7f4679003:` the module's path) and the four sets of findings were saved. Each reader returned rows of id, status (taken, partly taken, not taken, pending in a text not yet written, superseded), how and where.
+
+```text
+You are checking, read-only, how each finding of a review of a Lean module was taken. Do not edit, create, build or commit anything; reading files and read-only shell commands (grep, sed, diff) are fine.
+
+The module as reviewed: <saved>/reviewed-7f4679003.lean (56 theorems in 80 declarations).
+The module now: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean (81 theorems in 111 declarations, built clean, every axiom report empty).
+The record the module will land with: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/make_records_rfm2.py (its laws, hypotheses, does_not_show, counterexamples, correspondence).
+A diff between the two module versions is the fastest start: diff <saved>/reviewed-7f4679003.lean _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean.
+
+For every finding, decide from the files alone whether the current module (or the record script) takes it, and how. "taken": the problem no longer occurs and the replacement, or an equivalent, is in place. "partly taken": some of it. "not taken": the problem still occurs. "pending in a text not yet written": the finding concerns a file other than the module and the record script (PLAN.md, REVIEW-RFM2.md, chapter texts), which have not yet been revised. "superseded": the passage or declaration it concerns was replaced by something the finding's problem no longer applies to (say what). Name current declarations exactly and give current line numbers. Be exact and brief; do not judge whether a finding was right, only whether and how it is reflected. Report every finding in the file, in order.
+
+The findings: <saved>/<file>. <note>
+```
+
+The four sets and their notes:
+
+- astra (`astra.md`): The findings are the numbered items 1 to 14 of a cross-model review (astra). Use ids A1 to A14. Item 1 concerns REVIEW-RFM2.md's table (not yet revised). Items with several sub-points: report the whole item in one row, saying which parts are taken.
+- exactness (`exactness.md`): Ids E1 to E17. A separate refuter judged E8, E11 and E15 not real (see <saved>/exactness-verdicts.md); for those, still say whether the module changed at the place, and use status "not taken" if nothing changed.
+- structure (`structure.md`): Ids F1 to F24.
+- sources (`sources.md`): Ids L1 to L14. Several concern literature attributions in the header's Standing and Readings paragraphs and the record's correspondence; L14 concerns PLAN.md's literature table.
