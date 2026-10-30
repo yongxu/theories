@@ -157,10 +157,10 @@ def sl(*short):
 rW = build(
     'what-holding-for-a-reading-is-worth', HF,
     {'en': 'What holding an act for a reading is worth', 'zh': '为读而持其行之值'},
-    {'en': "Holding for a reading telling the candidate gains over every open act exactly where none is valued best at "
-           "each candidate of positive weight; holding for a stopping rule, forgoing an amount, is no lower than going "
-           "on exactly where its shortfall and the amount are at most the excess of switching off.",
-     'zh': '为辨候选之读而持，恰当无一可取之行于每一正权候选皆值同最优时胜于每一可取之行；为止之规则而持、舍一量，不低于续，恰当其所缺与此量合不逾止之余。'},
+    {'en': "Choosing best after a reading telling the candidate gains over every open act exactly where none is valued "
+           "best at every listed candidate of positive weight; holding for a stopping rule, forgoing an amount, is not "
+           "below going on exactly where shortfall and amount are within switching off's excess.",
+     'zh': '经辨候选之读而择最优，恰当无一可取之行于每一正权之列候选皆值同最优时胜于每一可取之行；为止之规则而持、舍一量，不低于续，恰当其所缺与此量合不逾止之余。'},
     [("A model lists candidates with natural-number weights; committing to one act and choosing after a reading that "
       "tells the candidate are the weighted totals of the act's values and of a policy's; a policy is best at a "
       "candidate where its act is open and no open act has more value there; one exists for every nonempty list of "
@@ -169,21 +169,21 @@ rW = build(
       hf('Model', 'Model.committed', 'Model.after', 'BestAt', 'bestOf', 'bestOf_best')),
      ("Given a policy best at every listed candidate, any policy choosing open acts there, reading through a map or "
       "reading nothing, with the weighted total of the amounts by which its act is valued below the best makes the "
-      "best total: it stands at most as high, as high exactly where its act is valued as the best at every candidate "
-      "of positive weight, and below exactly where some such candidate values it lower.",
-      '设一策于每列候选皆最优，凡于其处择可取之行之策（经映射而读或无所读），加其行低于最优之量之加权之总，即得最优之总：不高于之；恰当其行于每一正权候选值同最优乃等高；恰当某正权候选值之较低乃居下。',
+      "best total: it stands at most as high, as high exactly where its act is valued as the best at every listed "
+      "candidate of positive weight, and below exactly where some such candidate values it lower.",
+      '设一策于每列候选皆最优，凡于其处择可取之行之策（经映射而读或无所读），加其行低于最优之量之加权之总，即得最优之总：不高于之；恰当其行于每一正权之列候选值同最优乃等高；恰当某此候选值之较低乃居下。',
       hf('after_le_after', 'after_add_gap', 'after_lt_after_iff', 'after_eq_after_iff')),
-     ("Committing to one open act is the policy taking it everywhere: it never stands above choosing after the "
-      "reading, as high exactly where the act is valued as the best at every candidate of positive weight; the "
-      "reading gains over every open act exactly where no act is so valued; one act falls below exactly where some "
-      "candidate of positive weight has a property marking where it is valued below the best.",
-      '守一可取之行即处处取之之策：不高于经读而择，恰当此行于每一正权候选值同最优乃等高；读胜于每一可取之行，恰当无一行如此；一行居下，恰当某正权候选具一标其值低于最优之性。',
+     ("Committing to one open act, the policy taking it everywhere, never stands above choosing best after the "
+      "reading, as high exactly where the act is valued as the best at every listed candidate of positive weight; "
+      "choosing best after the reading gains over every open act exactly where none is so valued; an act falls "
+      "below exactly where some such candidate has a property marking where it is valued below the best.",
+      '守一可取之行即处处取之之策：不高于经读而择最优，恰当此行于每一正权之列候选值同最优乃等高；经读择最优胜于每一可取之行，恰当无一可取之行如此；一行居下，恰当某正权之列候选具一标其值低于最优之性。',
       hf('committed_le_after', 'committed_eq_after_iff', 'reading_gains_iff', 'below_iff')),
-     ("A policy taking one act at each cell of a map stands as high as the best exactly where each cell has one open "
-      "act valued as the best at every candidate of positive weight in it, given choice over the cells; values "
-      "raised at each candidate by one amount for every act raise every policy's total by one amount and order every "
-      "two policies of a model alike.",
-      '于映射之每格取一行之策与最优等高，恰当每格有一可取之行于其中每一正权候选值同最优（设于诸格有择）；于每候选对每行加同一量，则每策之总加同一量，一模型中任二策之序不变。',
+     ("Some policy taking one open act at each cell of a map stands as high as the best exactly where each cell has "
+      "one open act valued as the best at every listed candidate of positive weight in it, given choice over the "
+      "whole type of cells; values raised at each candidate by one amount for every act raise every policy's total "
+      "by one amount and order every two policies of a model alike.",
+      '有一于映射之每格取一可取之行之策与最优等高，恰当每格有一可取之行于其中每一正权之列候选值同最优（设于格之全类有择）；于每候选对每行加同一量，则每策之总加同一量，一模型中任二策之序不变。',
       hf('cell_policy_iff', 'after_offset', 'after_offset_le_iff')),
      ("Two moves, going on and switching off, the acts open (what holds of two holds of every member of their list); "
       "going on valued at the gain and switching off at the loss, the loss added to both at each candidate; a rule of "
@@ -235,18 +235,19 @@ rW = build(
       "model gives positive weight to its strict sign.",
       '为辨候选之读而持、舍一量，不低于续恰当此量不逾止之余，高于续恰当此量少于之；较之于止，以续之余同之；每一余为正，恰当模型予其严号以正权。',
       hf('forgone_within_excess_iff', 'forgone_below_excess_iff', 'excess_pos_iff')),
-     ("Over cells of a map listed once each and covering every listed candidate's cell, a total over the candidates "
+     ("Over cells of a map, their equality decidable, listed once each and covering every listed candidate's cell, a "
+      "total over the candidates "
       "is the total over the cells of the total within each; so a rule through the map falls short, at each cell, by "
       "the excess of going on within it where it stops the cell and by that of switching off within it where it "
       "releases the cell.",
-      '映射之格各列一次且覆每列候选之格，则候选之总为诸格内之总之总；故经映射之规则于每格之所缺：止其格处为格内续之余，放其格处为格内止之余。',
+      '映射之格（其等可判）各列一次且覆每列候选之格，则候选之总为诸格内之总之总；故经映射之规则于每格之所缺：止其格处为格内续之余，放其格处为格内止之余。',
       hf('total_single', 'total_by_cells', 'goExcessWithin', 'offExcessWithin', 'cell_term', 'total_cond_both',
          'shortfall_through')),
      ("The least shortfall through the map, stopping a cell exactly where its excess of going on is at most that of "
-      "switching off, totals the smaller excess within each cell, nothing exactly where no cell holds both; a finer "
-      "map never falls short by more; holding for some rule through it, forgoing an amount, stands at least as high "
-      "as both moves exactly where that least shortfall and the amount are at most both excesses.",
-      '经映射之最少所缺：于格内续之余不逾止之余处止其格，为诸格较小之余之总，恰当无格兼有二者时为零；更细之映射所缺永不更多；为经映射之某规则而持、舍一量，不低于二行，恰当此最少所缺与此量合不逾二余。',
+      "switching off, totals the smaller excess within each cell, is nothing exactly where no listed cell holds "
+      "both and never increases through a finer map; holding for some rule through it, forgoing an amount, is no "
+      "lower than both moves exactly where that least shortfall and the amount are within both excesses.",
+      '经映射之最少所缺：于格内续之余不逾止之余处止其格，为诸格较小之余之总，恰当无列格兼有二者时为零；经更细之映射，最少所缺永不增；为经映射之某规则而持、舍一量，不低于二行，恰当此最少所缺与此量合不逾二余。',
       hf('leastThrough', 'cond_least_le', 'least_through', 'cond_least_eq_zero_iff', 'least_zero_iff',
          'finer_least_le', 'through_threshold_iff')),
      ("A pick of one of two alternatives, valued one where a candidate's decided comparisons rank it above the other "
@@ -256,11 +257,11 @@ rW = build(
       '于二者择一，候选之可判之较排其于他者之上处值一，余处值零；经读而择，于每候选皆最优；候选不以二者各居其他之上，则择首者之值低于之，恰当其排次者于首者之上；择次者亦然，恰当其排首者于上。',
       hf('Pick', 'pairValue', 'pairPolicy', 'first_open', 'second_open', 'pairPolicy_best', 'first_below_iff',
          'second_below_iff')),
-     ("Joined to the shown reach: where the first reaches the second in the shown relation and every listed candidate "
-      "of positive weight is transitive and accords with the choices, holding the pick gains nothing; where none of "
-      "positive weight ranks each above the other, holding gains over both picks exactly where some such candidate "
-      "ranks the first higher and some the second, so only where neither reaches the other.",
-      '接于所示之及：首者于所示之关系及于次者，且每一正权之列候选皆传递且合于所择，则持其择无所得；无正权候选以二者各居其他之上，则持胜于二择，恰当某正权候选排首者于次者之上而某排次者于首者之上，故唯在二者互不相及处。',
+     ("Joined to the shown reach: with every listed candidate of positive weight transitive and according with the "
+      "choices, holding the pick gains nothing where the first reaches the second, and over "
+      "both picks only where neither reaches the other; where none of positive weight ranks each above the other, "
+      "holding gains over both exactly where some such candidate ranks the first higher and some the second.",
+      '接于所示之及：每一正权之列候选皆传递且合于所择，则首者于所示之关系及于次者处持其择无所得，唯在二者互不相及处持胜于二择；无正权候选以二者各居其他之上，则持胜于二择，恰当某此候选排首在上而某排次在上。',
       hf('reach_fixes', 'pair_gains_iff', 'pair_gains_unreached')),
      ("A witness on the reading loop: the signs of going on as candidates predicting the answer and as the unmoving "
       "world; acts going on, holding, switching off; plain, a stop or a release sensed; a held act answered by the "
@@ -271,9 +272,9 @@ rW = build(
      ("Listing only candidates predicting that going on gains, and going on from the start, the formation rests at "
       "once whatever the true sign, a case of Loop.rests_of_unrefuted, never sensing the stop; holding first, the "
       "listing of gain alone, where going on loses, senses the stop at the first step, which refutes its only "
-      "candidate at the second, and with none kept goes on, resting from the third.",
-      '唯列预续得之候选、自始即续，则无论真号为何，形成即刻恒定，为 Loop.rests_of_unrefuted 之一例，永不感止；先持，则唯列得者而续实损，第一步感止，第二步此止驳其唯一候选，无所留则续，自第三步恒定。',
-      sl('rests_unread', 'never_senses_stop', 'refuted_senses_stop', 'refuted_goes_on')),
+      "candidate at the second, and with none kept goes on by the witness's default, resting from the third.",
+      '唯列预续得之候选、自始即续，则无论真号为何，形成即刻恒定，为 Loop.rests_of_unrefuted 之一例，永不感止；先持，则唯列得者而续实损，第一步感止，第二步此止驳其唯一候选，无所留则依此例之默认而续，自第三步恒定。',
+      sl('rests_unread', 'never_senses_stop', 'refuted_senses_stop', 'refuted_drops', 'refuted_goes_on')),
      ("Listing both signs and holding first, where going on loses the formation senses the stop at the first step, "
       "keeps the true sign alone and is off from the second, its configuration resting from the fourth; where going "
       "on gains it senses the release, keeps the true sign alone and goes on from the second, resting from the "
@@ -293,15 +294,16 @@ rW = build(
             "its weight); the amount forgone counted in the units of the weighted totals, an amount c forgone for each "
             "decision entering as c times the total weight.",
       'zh': '权与值为自然数，唯于有效处读为概率与差：总权为正，每候选列一次（一列可重列一候选，每次计其权）；所舍之量以加权之总为单位，每次抉择所舍之量 c 以 c 乘总权计入。'},
-     {'en': "A policy best at every listed candidate supplied, one existing for every nonempty list of acts; choice over "
-            "the cells for a policy through a map (listed cells have it); for the cells' laws, cells listed once each "
-            "and covering every listed candidate's cell.",
-      'zh': '所予一于每列候选皆最优之策，凡非空之行列皆有之；经映射之策需于诸格有择（所列之格有之）；格之诸律需诸格各列一次且覆每列候选之格。'},
+     {'en': "A policy best at every listed candidate supplied, one existing for every nonempty list of acts; for a "
+            "policy through a map, choice over the whole type of cells (Viability.choiceOver_fin supplies it for Fin "
+            "k); for the cells' laws, equality of cells decidable, cells listed once each and covering every listed "
+            "candidate's cell.",
+      'zh': '所予一于每列候选皆最优之策，凡非空之行列皆有之；经映射之策需于格之全类有择（Viability.choiceOver_fin 于 Fin k 予之）；格之诸律需格之等可判，诸格各列一次且覆每列候选之格。'},
      {'en': "The reading that tells the candidate stops by the very gain and loss the model values with, one valuation "
             "shared by the formation held and its reading, as in the off-switch game's common payoff; a reading "
-            "stopping by other values enters as a rule, its shortfall counted by these values; rules are functions of "
-            "the candidate; ties between gain and loss go on.",
-      'zh': '辨候选之读依模型所用之得与损而止，为所持之形成与其读所共之一值，如关机博弈之共同收益；依他值而止之读作为一规则计入，其所缺依此值而计；规则为候选之函数；得损相等则续。'},
+            "stopping by other values enters as a rule, its shortfall counted by these; rules are functions of the "
+            "candidate; at ties byReading goes on, leastThrough stops a cell, and other rules go either way.",
+      'zh': '辨候选之读依模型所用之得与损而止，为所持之形成与其读所共之一值，如关机博弈之共同收益；依他值而止之读作为一规则计入，其所缺依此值而计；规则为候选之函数；byReading 于得损相等时续，他规则可任断其等，leastThrough 于二余相等之格止。'},
      {'en': "Picks valued one or nothing, a cardinal choice the choices do not supply; the candidates' comparisons "
             "decided, and where each law asks it, transitive, according with the choices and not ranking each of the two "
             "above the other, at every listed candidate of positive weight.",
@@ -341,19 +343,19 @@ rW = build(
            "the reading formation's own state and learning; noisy readings and continuous beliefs in the periphery; a "
            "frozen test of whether holding follows the model's two excesses; review by a person.",
      'zh': '受助者之值为助者之行可移之态，先设其载体（RF-M 之下一情形）；读之形成己之态与学；有噪之读与连续之信于外围；持是否随模型之二余之冻结检验；人之审查。'},
-    {'en': "In natural-number counts: the worth of a reading that tells the candidate is the "
-           "perfect-information case of Good's (1967) argument, its equality boundary his Lemma's dominating row; "
-           "holding for that reading is the off-switch game's waiting with a rational human (Hadfield-Menell, "
-           "Dragan, Abbeel and Russell 2017): its Theorem 1 for a belief of finite support, the strict case an "
-           "equivalence, waiting's two differences T times its Equation 3's terms (T the total weight), and for a rule "
-           "that is a function "
-           "of the candidate, T times the two terms of its Equation 1 as balances; the least shortfall through a "
-           "partition, telling more apart never worth less, is the partition case of Blackwell's (1953) comparison. "
-           "AI reading: the threshold relates the model's openness, the reading's shortfall and what holding forgoes, "
-           "as that paper's Remark 1 and Theorem 2 do for a Gaussian belief; SignLoop, choosing as the worth law does "
-           "on its own model, is where that assessment and the outcome part, nearest to Carey's (2018) conflating "
-           "model that predicts the human without error and ignores shutdown. These are readings, not containments.",
-     'zh': '以自然数之权与值：辨候选之读之值即 Good（1967）论证之完全信息之例，其等号之界即其引理之支配行；为此读而持即关机博弈中理性之人在侧之等待（Hadfield-Menell、Dragan、Abbeel 与 Russell 2017）：其定理一，信之支撑有限，严格之情形为等价；等待之二差为其式三之项乘 T（T 为总权）；规则为候选之函数时，其式一之二项乘 T 为平衡。经分割之最少所缺（分辨愈细永不愈劣）即 Blackwell（1953）比较之分割之例。AI 解读：其界关联模型之开放、读之所缺与持之所舍，如该文之注一与定理二于高斯之信所为；SignLoop 依其模型上值之律而择，即其所估与结果相离之处，最近于 Carey（2018）混同二行之模型：其预人无误而不从关机。皆为读，非包含。'},
+    {'en': "In counts: the worth of a reading telling the candidate is the perfect-information case of Good's (1967) "
+           "argument, his Lemma's dominating row its equality boundary; holding for that reading is the off-switch "
+           "game's waiting with a rational human (Hadfield-Menell and others 2017): its Theorem 1 for a belief of "
+           "finite support; waiting's two differences, T E[U⁺] and T E[(−U)⁺] with T the total weight, are T times "
+           "its Equation 3's terms read with Pr(U < 0) where Pr(U ≤ 0) is printed; for a rule that is a function of "
+           "the candidate, T times its Equation 1's two terms are balances; the least shortfall through a partition "
+           "is the partition case of Blackwell's (1953) comparison. AI reading: the threshold relates the model's "
+           "openness, the reading's shortfall and what holding forgoes, as the paper's Remark 1 does qualitatively; "
+           "its Theorem 2, Δ = σ²E[π̇H] − |µ|Pr(C), is the Gaussian form, the counts decomposing it differently. "
+           "SignLoop is nearest to Carey's (2018) conflating model, whose predictions look perfectly accurate on its "
+           "encoded observations and which ignores shutdown: related by a misspecified model never refuted, not "
+           "formalizing the conflation. Readings, not containments.",
+     'zh': '以计：辨候选之读之值即 Good（1967）论证之完全信息之例，其引理之支配行为其等号之界；为此读而持即关机博弈中理性之人在侧之等待（Hadfield-Menell 等 2017）：其定理一，信之支撑有限；等待之二差 T E[U⁺] 与 T E[(−U)⁺]（T 为总权）为其式三之项乘 T，负事件之概率读为 Pr(U < 0)（原印为 Pr(U ≤ 0)）；规则为候选之函数时，其式一之二项乘 T 为平衡；经分割之最少所缺即 Blackwell（1953）比较之分割之例。AI 解读：其界关联模型之开放、读之所缺与持之所舍，如该文之注一定性所为；其定理二 Δ = σ²E[π̇H] − |µ|Pr(C) 为高斯之形，诸计以异式分解之。SignLoop 最近于 Carey（2018）混同二行之模型：其预测于所编之观察上似全然无误，而不从关机；二者相关于永不被驳之误设模型，非形式化其混同。皆为读，非包含。'},
     ['what holding an act for a reading is worth', '为读而持其行之值', 'the worth of a reading in counts', '读之值之计',
      'the off-switch game', '关机博弈', 'Becoming.HeldForReading.held_gains_iff',
      'Becoming.HeldForReading.threshold_go_iff'],
@@ -397,10 +399,12 @@ SHOWN = 'what-choices-show-of-an-order'
 UNTESTED = 'what-a-course-chosen-through-its-model-does-not-test'
 ALIKE = 'acts-alike-from-a-model-or-from-an-order'
 AMEND = {
-    SHOWN: {'related': rel(NEW[0], "The shown reach joined to the worth of holding a pick for a reading: within it "
-                                   "holding gains nothing, and over both picks it gains only where neither alternative "
-                                   "reaches the other.",
-                           '所示之及接于为读而持其择之值：其内持无所得；唯在二者互不相及处，持方胜于二择。'),
+    SHOWN: {'related': rel(NEW[0], "The shown reach joined to the worth of holding a pick for a reading: for listed "
+                                   "candidates of positive weight whose comparisons are transitive and accord with the "
+                                   "choices, the shown reach makes the corresponding fixed pick attain the reading's "
+                                   "value, and holding gains over both picks only where neither alternative reaches "
+                                   "the other.",
+                           '所示之及接于为读而持其择之值：于正权之列候选其较传递且合于所择者，所示之及使相应之定择达读之值；唯在二者互不相及处，持方胜于二择。'),
             'history': ('related to what-holding-for-a-reading-is-worth; no statement, next step or declaration '
                         'changed.', '与 what-holding-for-a-reading-is-worth 相关联；无一陈述、下一步或声明改变。')},
     UNTESTED: {'related': rel(NEW[0], "The worth of a reading in counts, of one telling the candidate and of one "

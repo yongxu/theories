@@ -204,7 +204,7 @@ I reviewed [§4.7 of PLAN.md\](_process/research/2026-10-05-generative-foundatio
 
 ## What was taken
 
-Statuses as the module was built and then revised on the review of its Lean ([REVIEW-RFM2-LEAN](REVIEW-RFM2-LEAN.md), whose first finding asked for them): *implemented* in the Lean and its account, *deferred as specified* to RF-M.3's design, *handed over* to a record's owner, or *taken in part*. Names are the module's as revised.
+Statuses as the module was built and then revised on the review of its Lean ([REVIEW-RFM2-LEAN](REVIEW-RFM2-LEAN.md), whose first finding asked for them): *implemented* in the Lean and its account, *deferred as specified* to RF-M.3's design (11 to 17) or to the institutional reading (19), *handed over* to a record's owner, or *taken in part*. Names are the module's as revised.
 
 | # | Finding | Status | Taken |
 |---|---|---|---|

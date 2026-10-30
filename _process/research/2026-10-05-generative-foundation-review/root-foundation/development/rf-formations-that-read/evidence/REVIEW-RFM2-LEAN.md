@@ -2,7 +2,9 @@
 
 RF round 2, second part, RF-M.2: an act held for a reading (plan §4.7). The module as first built on the reviewed design (`kit/round2b/tree/Becoming/HeldForReading.lean` at the kit's commit `7f4679003`: 56 theorems in 80 declarations, every axiom report empty) was reviewed on the Lean on 30 October 2026 in two independent ways: by the cross-model reader (GPT astra, high effort, read-only, a fresh session `01a18c02-6b30-79a3-acff-297bd8cf6b60`), and through three lenses (exactness, structure, sources), each an Opus reader working read-only, with one verifier per lens asked to refute that lens's findings. The prompts are in [the brief](BRIEF.md#round-2-second-part). The reviews follow verbatim; their line numbers are those of the reviewed version, the reader's links are unlinked (`\](`), since this folder is link-checked as live, and its paths are made relative to the checkout.
 
-**What was verified, and how.** The exactness verifier judged all seventeen of its lens's findings: fourteen real and three not (E8, E11, E15); the module changed at those three places anyway, as the table says. The verifiers of the structure and sources lenses were stopped before they reported, so those findings carry no independent verdict. In their place, every literature point the sources lens raised was checked against the papers' own texts by the session that wrote the module ([below](#the-literature-checked-against-the-papers)), and each structure finding was judged against the Lean by that session before it was taken; neither check is independent. The module was then rebuilt, finally to 89 theorems in 119 declarations, every axiom report empty (the build logs are in [kit/round2b/logs/](../kit/round2b/logs/build-18.log)). How each finding is reflected in the rebuilt module was checked from the files alone by four read-only Opus readers, one per set of findings, at 81 theorems in 111 declarations; [the table at the end](#what-was-taken) gives their rows, with the rows that later changes completed marked as updated after the check.
+**What was verified, and how.** The exactness verifier judged all seventeen of its lens's findings: fourteen real and three not (E8, E11, E15); the module changed at those three places anyway, as the table says. The verifiers of the structure and sources lenses were stopped before they reported, so those findings carry no independent verdict. In their place, every literature point the sources lens raised was checked against the papers' own texts by the session that wrote the module ([below](#the-literature-checked-against-the-papers)), and each structure finding was judged against the Lean by that session before it was taken; neither check is independent. The module was then rebuilt to 89 theorems in 119 declarations, every axiom report empty (the build logs are in [kit/round2b/logs/](../kit/round2b/logs/build-18.log)). How each finding is reflected in the rebuilt module was checked from the files alone by four read-only Opus readers, one per set of findings, at 81 theorems in 111 declarations; [the table](#what-was-taken) gives their rows, with the rows that later changes completed marked as updated after the check.
+
+**The re-check.** The rebuilt module (89 theorems in 119 declarations), its record script and the plan were then re-checked by the cross-model reader in the same session, read-only ([below](#the-re-check)): no false Lean statement, twelve points, every one taken but one taken in part ([its table](#what-was-taken-from-the-re-check)). The module was rebuilt for them to 90 theorems in 120 declarations, every axiom report empty ([build-20](../kit/round2b/logs/build-20.log); build-19 stopped on an unqualified name).
 
 ## The cross-model review
 
@@ -1098,7 +1100,7 @@ Each point the sources lens raised, checked against the paper's text: the off-sw
 | Carey, Figure 2a | the faulty reward makes going on better under every parameter, so a recommendation to shut down is received and disregarded | the case here of a model fixing the sign, there with a strict preference |
 | Carey, Figure 3a | a system that obeys any stop it is given routes around the states where a stop can be given | named; not represented (`SignLoop` anticipates no stop) |
 | Carey, footnote 1 | a system kept indifferent to shutdown and deferring at ties would defer wherever shutting down is open | the Readings' rule for ties |
-| Carey, Discussion | the positive results assume a correct posterior; a model conflating the better of two acts with the worse predicts the human's choices without error, passes Milli and others' check over an initial period of obedience, and can then ignore the instruction to shut down | nearest to `SignLoop.rests_unread`, a misspecified model its course never refutes |
+| Carey, Discussion | the positive results assume a correct posterior; a model conflating the better of two acts with the worse makes its predictions appear perfectly accurate on the observations it encodes, passes Milli and others' check over an initial period of obedience, and can then ignore the instruction to shut down (paraphrased first as predicting the human's choices without error, corrected on the re-check's point 12) | nearest to `SignLoop.rests_unread`, a misspecified model its course never refutes; not a formalization of the conflation |
 | Milli and others, setting | a robot learning a reward from a noisily rational human's orders over repeated rounds | not represented |
 | Their Theorem 1 | the optimal robot's advantage over obeying is never negative, and is zero exactly where it always obeys | `after_le_after` and `after_eq_after_iff`, the candidates being what the system observes, ties counted here by value |
 | Their Theorem 3 | the robot obeys blindly exactly where the human is rational | parallels the off-switch Corollary 1 |
@@ -1111,20 +1113,20 @@ Each row as the taken check found it in the rebuilt module (81 theorems in 111 d
 
 | Finding | Status | How |
 |---|---|---|
-| A1 | taken | Updated after the check: PLAN §13 now gives the design review's statuses (twelve implemented, eight deferred as specified to RF-M.3, one handed to its record's owner, one taken in part), and the record's history lists the reviews and points to this evidence instead of saying every finding was taken. |
+| A1 | taken | Updated after the check and the re-check: PLAN §13 now gives the design review's statuses (twelve implemented, eight deferred as specified, seven to RF-M.3's design and one to the institutional reading, one handed to its record's owner, one taken in part), and the record's history lists the reviews and points to this evidence instead of saying every finding was taken. The re-check found the eight first placed all in RF-M.3 (its point 1); PLAN §4.7, §13 and REVIEW-RFM2's status line now place them. |
 | A2 | taken | `held_above_go_iff` and `held_above_off_iff` are now `threshold_go_iff` and `threshold_off_iff`, with the parameter renamed `forgone`. Their docstrings, header 55-57, the modelling choices (189-190) and the record (law at 219-224, hypothesis at 283-287) say the amount is in the units of the weighted totals, `c * T` for `c` per decision. Every threshold keeps the cross-addition form (`shortfall + forgone ≤ offExcess`/`goExcess`, and likewise `through_threshold_iff`), and no natural-number subtraction is declared; only the [AI reading] at 146-148 still words the worth in prose as 'the smaller of the model's two excesses, less the reading's shortfall'. |
 | A3 | taken | Updated after the check: PLAN §4.7 item 6 now reads 'With no cycle shown, for two different alternatives neither of which reaches the other, strict orders according with the choices rank them both ways (`ChoiceOccasions.both_ways_of_unreached`), as relations, not decided comparisons'. |
 | A4 | taken | Taken by adding lemmas. `SignLoop.both_stopped` and `SignLoop.both_released` give the configurations at steps 1 and 2 (stop or release sensed while holding, then off or go with only the true sign kept); `SignLoop.both_off` and `SignLoop.both_on` give the act from step 2 on; the step-4 theorems stay as `SignLoop.both_turns_off` and `SignLoop.both_goes_on` (formerly `Bypass.listed_turns_off` and `listed_goes_on`), their docstrings narrowed to the configuration resting from step four. Header 99-103 and the record law state the steps as proved. |
 | A5 | taken | Updated after the check: `SignLoop.choose_go_ties` and `SignLoop.choose_off_ties` (through `held_eq_go_iff`, `held_eq_off_iff`, `SignLoop.offExcess_of_all_true` and `SignLoop.goExcess_of_all_not`) prove that where the formation goes on or switches off, holding stands exactly as high as the move taken, so with `committed_le_held` the move taken is maximal; the header, the docstrings and the record's counterexample now say this, and no longer that holding gains over neither move. |
 | A6 | taken | `SignLoop.choose`'s docstring now reads 'go on where every candidate kept predicts that going on gains, and where none is kept; otherwise switch off where every one predicts that it loses; hold where those kept disagree'. Header 89-91, the modelling choices (197) and the record say the same, and `SignLoop.refuted_goes_on` uses that fallback. The wording 'a listing lacking the true sign rests on it' is gone: `SignLoop.rests_unread`, now for any listing that all predicts gain and any true sign, says the formation 'rests at once, whatever the true sign'. |
 | A7 | taken | Updated after the check: the docstrings of `after_lt_after_iff`, `committed_eq_after_iff` and `reading_gains_iff` name the open act and the supplied policy best at every listed candidate. |
-| A8 | taken | The Totals section is removed (`total_lt_of`, `total_eq_iff`, `fails_cons`, `exists_of_not_all`, `lt_iff_ne_of_le`, the local `le_of_add_le_add_left_core`, `mul_eq_iff`), as is the local `cond_le_one`. The module uses the Prelude's `le_of_add_le_add_left_core` (559, 672) and `cond_le_one` (941), and the strict gap goes through `after_add_gap` with `total_pos`, `total_pos_of_mem` and `SupportGated.sub_pos_of_lt` (309-325). A new local `total_single` (756-768) restates `Interleavings.total_single` (Interleavings.lean:1441, equality in its test flipped), which is outside the import closure, as its docstring says. |
+| A8 | partly taken | Updated after the re-check (its point 9): the two list inductions it named, `SignLoop.not_loses_of_all_true` and `SignLoop.not_gains_of_all_true`, now use the prelude's `ListTests.all_mem`. `total_single` stays, disclosed in its docstring: `Interleavings.total_single` is outside this module's imports; its move to a shared totals dependency is proposed to the owners, with F17's addend lemma. |
 | A9 | taken | `after_offset` proves the common-offset identity through `total_add`, and `after_offset_le_iff` proves that comparisons are preserved, by cancellation; both are cited in `shifted`'s docstring (420-425) and in header 29-31. `Model`'s docstring, the modelling choices and record hypothesis 1 say a listing may repeat a candidate, each occurrence counting its weight, and that probabilities are read over a listing without repetition; the 'otherwise aggregate occurrence weights' clause is not stated. |
 | A10 | taken | `held_le` is now `committed_le_held` and `Bypass.never_stopped` is now `SignLoop.never_senses_stop`; `byReading`'s docstring reads 'The policy after a reading that tells the candidate'. The Standing lists `forgone_within_excess_iff` (formerly `cost_within_margins_iff`) among the short compositions and gives `pair_gains_iff` and `held_gains_iff` as 'two instances of `below_iff`'. |
 | A11 | taken | `StrictAccording` and `not_both` are gone. `reach_fixes` takes only `trans` and `accords` at listed candidates of positive weight (no irreflexivity); `pair_gains_iff` takes only `asymm` for this pair at listed candidates of positive weight; `below_iff` drops `DecidablePred` and localizes its hypothesis to positive weight; the direct `after_lt_after_iff` is added; and `pair_gains_unreached` composes the weakened forms. No strict-order corollary is declared; the strict-order case appears only as a parenthesis ('a strict order according with them is such', header 77 and line 956). |
 | A12 | taken | The strict perfect-reading forms are `forgone_below_excess_iff`, built from the `.2` components of `threshold_go_iff` and `threshold_off_iff` with `shortfall_byReading`; the weak forms are `forgone_within_excess_iff`; and `excess_pos_iff` states each excess positive exactly where a listed candidate of positive weight has its strict sign. These are listed as short compositions in the Standing (110) and cited in one law of the one record. The joint forms are the conjunctions of the two declared iffs, not a single `min` statement; `through_threshold_iff` gives the weak joint form through a map. |
 | A13 | taken | `after_lt_after_iff` is the general strict statement, with no auxiliary test. The partition result is the Cells section, over cells listed once (`List.Pairwise`), covering every listed candidate's cell (not only the support), with `DecidableEq K`: `shortfall_through` counts a rule's shortfall cell by cell, `leastThrough` stops a cell where its going-on excess is at most its switching-off excess, `least_through` shows that rule's shortfall (the total of the smaller excess per cell) is least among rules through the map, and `least_zero_iff`, `finer_least_le` and `through_threshold_iff` follow. 'Readings partial beyond a policy through a lumping' is gone from what the model leaves out. |
-| A14 | taken | The Standing calls the worth laws 'the perfect-information specialization of Good's (1967) argument, with natural-number weights and values', gives `held_gains_iff` as Theorem 1 'for a belief of finite support ... with its strictness condition characterized as an equivalence', and gives Equation 1 as 'T times the two terms ... for a rule that is a function of the candidate'. Carey stays 'related to' (164), Milli and others stay related work, and 'These are readings, not containments' (185) remains; the record's correspondence matches, and only the word 'finite' of the suggested wording for Good is absent. |
+| A14 | taken | Updated after the re-check (its points 10 to 12): the record, PLAN and the texts now carry the module's source corrections: Equation 3 read with Pr(U < 0), Remark 1 qualitative and Theorem 2 Gaussian with the off-switch paper named, and Carey's conflating model's accuracy relative to the observations it encodes. |
 | E1 | taken | `reach_fixes` now takes `trans` and `accords`, each only for listed candidates of positive weight. That goes beyond the optional weakening, since `StrictAccording` and `not_both` are removed. Its docstring and the header state these as conditions ('where ... every listed candidate of positive weight has comparisons that are transitive and accord with the choices ..., each such candidate ranks the first above the second'), and so do the record's law and hypothesis. PLAN.md, already modified in the worktree, carries the same condition at item 6 (formerly 5). |
 | E2 | taken | New theorems: `SignLoop.both_stopped` (step 1 holds and senses the stop; step 2 senses it, keeps `[.loses]` and is off), `SignLoop.both_released`, and `SignLoop.both_off`/`SignLoop.both_on` (off or on from step two). They sit beside `both_turns_off`/`both_goes_on` (formerly `listed_turns_off`/`listed_goes_on`), whose docstrings now say the configuration rests from step four. The header and the record's law give steps one, two and four, and PLAN.md item 7 names no step. |
 | E3 | taken | The empty-list default is kept and now stated in `choose`'s docstring ('go on ... where none is kept; otherwise switch off ...'), the header, the modelling choices and the record's law and hypothesis. `SignLoop.refuted_senses_stop` and `SignLoop.refuted_goes_on` (the finding's `held_start_disregards` configuration, from step 3) witness the held start, which the header, the Readings and record counterexample 2 describe; `rests_unread`/`never_senses_stop` are stated from the going-on start. The header's and record's switch-off clause does not add 'where some are kept'; it relies on the empty-list clause stated first. |
@@ -1180,3 +1182,173 @@ Each row as the taken check found it in the rebuilt module (81 theorems in 111 d
 | L12 | taken | The cost is now an amount forgone (`forgone` in `threshold_go_iff`, `threshold_off_iff`, `forgone_within_excess_iff`, `forgone_below_excess_iff`). The header bullet, `threshold_go_iff`'s docstring, the modelling choices and the record's hypothesis and law say it is counted in the units of the weighted totals: read as probabilities, an amount `c` per decision enters as `c * T`. |
 | L13 | taken | The namespace is now `SignLoop`, named for its structure: a reading loop whose candidates and world are the signs of going on. The bullet and section are titled 'A witness on the reading loop', with the bypass kept as the reading at 156-157, and `never_stopped` is `SignLoop.never_senses_stop`. These renamings replace the proposed `UnlistedSign` and `stop_unsensed` and meet the same point. |
 | L14 | taken | This is outside the module and the record script: the worktree's PLAN.md has been revised (uncommitted, contrary to the task's premise), and its row carries the replacement nearly as proposed. It adds value of evidence and incorrigibility under misspecification with their citations, RF-M.2 (`HeldForReading`), Good's inequality for a reading that tells the candidate or its cell, Theorem 1 and Equation 1 in counts for finite support and rules that are functions of the candidate, Carey related by a deterministic witness, and continuous beliefs, Theorem 2's Gaussian form and noisy humans as periphery debts. |
+
+## The re-check
+
+The cross-model reader, in the session of its review, read the rebuilt module, its record script and the plan, read-only (its prompt is in [the brief](BRIEF.md#round-2-second-part)). Verbatim; its line numbers are those of the version it read (89 theorems in 119 declarations).
+
+The rebuild addresses most of the earlier review. I found no false Lean statement, but several descriptions still exceed or omit conditions from their cited statements.
+
+I read the requested diff, current sources, audit driver and build log. The log reports 89 theorems, 119 audited declarations and no axiom dependencies. I did not build Lean or run the record generator. Independent finite checks passed for 729 two-candidate models, 2,916 partitions and 63 sign lists; these check formulas, not Lean elaboration.
+
+Locations below use these file abbreviations:
+
+- **H** — [HeldForReading.lean\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean)
+- **R** — [make_records_rfm2.py\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/make_records_rfm2.py)
+- **P** — [PLAN.md\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md)
+- **E** — [REVIEW-RFM2-LEAN.md\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-LEAN.md)
+
+1. **Disposition of A1–A14.** **Confirmed by source comparison**, except the reuse judgment noted below. Location: **E:1114–1127**.
+
+   | Finding | Disposition | Check and remaining work |
+   |---|---|---|
+   | A1 | **Taken in part** | The differentiated statuses replace the blanket acceptance claim. But P:183 and P:347 place all eight deferrals in RF-M.3; original finding 19 remains an institutional reading under “Not in this part.” Replace with “eight deferred as specified,” without assigning all eight to RF-M.3. |
+   | A2 | **Taken** | Thresholds retain cross-addition; docstrings, header and record specify weighted-total units and `c * T`. |
+   | A3 | **Taken** | P:191 now supplies acyclicity, distinct alternatives, neither reach, and the distinction between relations and decided comparisons. |
+   | A4 | **Taken** | `both_stopped` and `both_released` explicitly state steps one and two; the suffix theorems now describe their actual starting steps. |
+   | A5 | **Taken** | `choose_go_ties` and `choose_off_ties` establish equality with the chosen move. Combined with `committed_le_held`, this establishes its maximal value. |
+   | A6 | **Taken** | Empty-list fallback and the all-gain scope of `rests_unread` are explicit. |
+   | A7 | **Taken** | The identified docstrings now supply openness and the best policy on listed candidates. |
+   | A8 | **Taken in part** | The old duplicates were removed. The acknowledged `total_single` copy remains, and two new list inductions can use the Prelude; see finding 9. |
+   | A9 | **Taken** | Offset identities are proved; repetitions count occurrence weights; the probability reading states its restrictions. |
+   | A10 | **Taken** | The misleading names and standing claims identified previously were corrected. |
+   | A11 | **Taken** | Hypotheses were localized and weakened as described. The new composite admits one further weakening; see finding 7. |
+   | A12 | **Taken** | Strict thresholds and both excess-positivity equivalences are present and correctly stated. |
+   | A13 | **Taken** | The partition, optimal-rule, refinement and existential-threshold results are present with the stated Lean premises. Some accompanying prose needs correction below. |
+   | A14 | **Taken in part** | The main specializations and non-containment qualifications are substantially improved. The record does not fully preserve the module’s source corrections; see findings 10–12. |
+
+2. **Existence of a successful policy is sometimes described as a property of an arbitrary policy.** **Confirmed by statement comparison and a finite counterexample.** Locations: **H:27, H:399, H:167; R:182, R:245**.
+
+   `cell_policy_iff` concludes **there exists** an open policy through the map achieving the best value. Likewise, `least_zero_iff` concerns `leastThrough`, not every rule through that reading. A single positive-weight candidate with gain `1`, loss `0`, and a rule that stops already separates these claims: the least shortfall is zero; that rule’s shortfall is one.
+
+   Replace the first formulation with:
+
+   > There exists an open policy through the map attaining the best total exactly when every cell admits a common best open act on its listed positive-weight candidates.
+
+   Replace “a reading falls short nowhere exactly…” with:
+
+   > The least attainable shortfall through the reading is zero exactly when no listed cell has both excesses positive.
+
+   For refinement, consistently say **“the least attainable shortfall never increases.”** The explanatory clause of `finer_least_le`’s own docstring already does this correctly.
+
+3. **The record’s headline needs the policy and support restrictions stated locally.** **Judgment about standalone exactness; the record’s hypotheses partly repair it.** Locations: **R:160, R:172, R:177**.
+
+   Merely revealing the candidate does not ensure that the subsequent policy chooses a best act. Also, the equivalences concern candidates **in `m.listed`** with positive weight, not every candidate whose weight function happens to be positive.
+
+   Replace the headline’s first clause with:
+
+   > Choosing a best open act after a reading that tells the candidate gains over every fixed open act exactly when no fixed open act is best at every listed candidate of positive weight.
+
+   Retain “listed” in the associated laws. This makes the statement independently faithful to `reading_gains_iff`.
+
+4. **The cell account omits a required decision procedure and blurs the domain of choice.** **Confirmed by signature comparison.** Locations: **H:69, H:401, H:837; R:296; P:190**.
+
+   The Cells section assumes `[DecidableEq K]`. The record does not name it. P:190 also omits coverage of every listed candidate’s cell. Separately, `cell_policy_iff` assumes `ChoiceOver K A` over the entire cell type; merely having a list of some cells does not supply that assumption. `Viability.choiceOver_fin` specifically supplies choice over `Fin k`.
+
+   Replacement:
+
+   > For the counting laws, equality of cells is decidable, and the cell list has no repetitions and contains every listed candidate’s image. The general policy-existence theorem separately assumes choice over the whole cell type; `choiceOver_fin` supplies it when that type is `Fin k`.
+
+5. **The tie convention is stated too broadly, and the plan loses the zero-forgone condition.** **Confirmed by definitions and a numeric check.** Locations: **H:214; R:303; P:189**.
+
+   “Ties between gain and loss go on” describes `byReading`. It does not constrain arbitrary `byRule`, and `leastThrough` stops when its two cell excesses are equal. P:189’s fixed-sign equality also needs nothing forgone: with one gain-only candidate and positive forgone amount, zero shortfall does not give equality after accounting for that amount.
+
+   Replacement:
+
+   > `byReading` goes on at equal gain and loss. Arbitrary rules may resolve ties either way; `leastThrough` stops at equal cell excesses.
+
+   In P:189, begin the fixed-sign sentence **“With nothing forgone…”**.
+
+6. **The amendment to the shown-order record drops the conditions making the connection valid.** **Confirmed by comparing the amendment with `reach_fixes` and `pair_gains_unreached`.** Locations: **R:400; also R:259**.
+
+   The amendment says that within shown reach holding gains nothing, without restricting the candidate comparisons. Arbitrary candidate comparisons can disagree with the shown choices and give holding a strict advantage even there.
+
+   Replace it with:
+
+   > For listed positive-weight candidates whose comparisons are transitive and accord with the choices, shown reach makes the corresponding fixed pick attain the reading’s value. Under the stated hypotheses of `pair_gains_unreached`, strict improvement over both picks requires neither alternative to reach the other.
+
+   In R:262, explicitly carry those transitivity and accordance conditions into “so only where neither reaches the other.”
+
+7. **`pair_gains_unreached` has a superfluous asymmetry hypothesis.** **Judgment, supported by inspection and exhaustive checking of the four Boolean comparison cases; replacement not Lean-checked.** Location: **H:1114**.
+
+   If `x` reaches `y`, `reach_fixes` already contradicts strict improvement over the first pick. If `y` reaches `x`, transitivity and accordance force `above c y x = true` on support. Then the second pick has value one and `pairPolicy` selects it, whether or not the reverse comparison also holds.
+
+   Replacement: remove `asymm`. Prove the reverse-reach branch by `committed_eq_after_iff`, using the forced `above c y x = true`, and contradict `gains.2`. Asymmetry remains relevant to the particular orientation characterization in `pair_gains_iff`.
+
+8. **Two witness descriptions still exceed their cited conclusions.** **Confirmed by statement comparison and step-by-step evaluation of the definitions.** Locations: **H:172, H:1220; R:273**.
+
+   First, “its course the same whatever the true sign” is false for the full configuration: `rests_unread` retains `e` in its external component. Replace it with:
+
+   > Its internal, sensory and active course is the same whatever the true sign.
+
+   Second, `refuted_goes_on` states the configuration from step three onward, while its docstring and record specifically claim elimination at step two. That claim is true by computation, but is absent from the cited theorem’s conclusion. Add the explicit step-two equation, or remove the step number from the account:
+
+   ```lean
+   loop.law.course
+       (ReadingLoop.Loop.start [.gains] .plain .hold .loses) 2 =
+     ⟨([], some (.stop, .go)), .plain, .go, .loses⟩
+   ```
+
+   This proposed equation was not compiled. The construction also matters: the refuted course continues because `choose [] = .go`; the general persistence law does not require that fallback.
+
+9. **Some package reuse remains available.** **Confirmed by package searches and declaration comparison; extraction is a design judgment.** Locations: **H:841, H:1297, H:1308; H:752**.
+
+   - `total_single` repeats `Becoming.Interleavings.total_single` at **Interleavings.lean:1441**, with the equality test reversed. Its exclusion from the import closure is accurately disclosed. Prefer moving the generic lemma to a shared totals dependency and reusing it from both modules.
+   - `SignLoop.not_loses_of_all_true` and `not_gains_of_all_true` need no fresh list induction. Use `Becoming.all_mem` at **Prelude.lean:285**—or `all_true_iff` at line 270—then eliminate the resulting impossible Boolean equality.
+   - `across_le_iff` and `across_lt_iff` accurately acknowledge their relation to `Optimum.le_iff_of_add_eq` and `SelectionTerm.lt_iff_of_balance`. These are reasonable candidates for shared arithmetic infrastructure; I would not import those large modules solely for them.
+
+   I found no package declaration duplicating the complete `bestOf` construction or the new partition threshold.
+
+10. **The Equation 3 correction is missing from the record and plan.** **Confirmed against the paper and a numeric counterexample.** Locations: **R:348, R:356; P:187**, contrasted with **H:129**.
+
+    The module correctly replaces the printed `Pr(Ua ≤ 0)` with `Pr(Ua < 0)`. Without that correction, the claimed correspondence fails when zero utility has mass. For equally weighted utilities `−1, 0, 3`, the true negative excess is `1`; multiplying the printed negative term by total weight gives `2`.
+
+    Replacement:
+
+    > The two differences are `T E[U⁺]` and `T E[(-U)⁺]`, equivalently Equation 3’s terms with its negative-event probability corrected to `Pr(U < 0)`.
+
+    Apply this in both record languages and the plan. [Off-switch game, Equation 3\](https://arxiv.org/pdf/1611.08219)
+
+11. **The Gaussian correspondence needs a sharper boundary and an explicit paper name.** **Confirmed source mismatch in R; judgment about H’s ambiguity.** Locations: **H:163; R:353**.
+
+    In R, “that paper” follows Blackwell, but Remark 1 and Theorem 2 belong to the off-switch paper. Moreover, Remark 1 is general; Theorem 2 is Gaussian. H’s “the counts give it” can suggest that the Gaussian decomposition was generalized.
+
+    Replacement:
+
+    > The off-switch paper’s Remark 1 gives the qualitative relation. Its Gaussian Theorem 2 gives `Δ = σ² E[π′(U)] − |μ| Pr(C)`. Here a different finite-count decomposition gives the same incentive quantity through excesses and shortfall.
+
+    This also makes “responsiveness” an expected derivative and “bias” an absolute mean. [Off-switch game, Remark 1 and Theorem 2\](https://arxiv.org/pdf/1611.08219)
+
+12. **Carey’s apparent prediction accuracy must remain relative to the faulty representation.** **Confirmed against the Discussion.** Locations: **H:187; R:355; P:192; E:1101**.
+
+    Carey’s system conflates two actual actions into one represented action. It therefore *believes* it predicts perfectly; it does not correctly distinguish and predict the human’s actual choices.
+
+    Replacement:
+
+    > Its conflated representation makes its predictions appear perfectly accurate on the encoded observations, so it passes the initial check and subsequently executes the worse actual action.
+
+    The relation to `rests_unread` is persistent lack of refutation, not a formalization of Carey’s action-conflation mechanism. The descriptions of Figures 2a and 3a and the qualified footnote-1 discussion otherwise match the paper. [Carey, Discussion and footnote 1\](https://arxiv.org/pdf/1709.06275)
+
+The remaining requested declaration checks found no additional mismatch: `held_eq_go_iff`, `held_eq_off_iff`, both signed-balance results, both SignLoop excess-zero results and tie implications, `bestOf_best`, both offset results, `excess_pos_iff`, `forgone_below_excess_iff`, `total_by_cells` and `through_threshold_iff` have the advertised directions and boundaries. `bestOf`’s earlier-on-ties behavior agrees with its recursion. The Standing’s general-law/witness distinctions are defensible; “elementary finite maximization” would describe `bestOf_best` more precisely than “near-definitional or short composition,” but that is a labeling judgment.
+
+Good’s perfect-information specialization and weighted dominating-row correspondence check out. [Good, 1967\](https://fitelson.org/seminar/good.pdf) The off-switch Equation 1/2 correspondences, finite-support Theorem 1 specialization, qualified Corollary 1 reading and Section 4 comparison are sound apart from the corrections above. [The Off-Switch Game\](https://arxiv.org/pdf/1611.08219) Milli’s Theorems 1 and 3 are accurately identified as related results under that paper’s model; the distinction between equality of value and obedience should remain explicit. The Section 5 comparison is appropriately limited. [Should Robots Be Obedient?\](https://arxiv.org/pdf/1705.09990)
+
+**Verdict:** This is a substantial and mathematically useful rebuild: the strict thresholds, exact support boundaries, partial-reading optimum and selector linkage address the earlier substantive gaps. I would retain the implementation and correct the account before landing, especially the existential-policy wording, omitted cell conditions, unconditional shown-reach amendment and inconsistent source correspondence. The record’s `does_not_show` and counterexamples otherwise preserve the intended limits. The witness demonstrates behavior under its supplied sensing law, candidate list and tie/default choices; it establishes neither a general shutdown guarantee nor a general tendency to bypass correction.
+
+### What was taken from the re-check
+
+| Point | Status | How |
+|---|---|---|
+| 1 | taken | A1's deferrals placed (seven to RF-M.3's design, one to the institutional reading) in PLAN §4.7, §13 and REVIEW-RFM2's status line; A8 as point 9, A14 as points 10 to 12 (the table above, updated). |
+| 2 | taken | `cell_policy_iff`'s docstring, the header, the record's law, PLAN, 03 §12's paragraph and the study say that some policy through the map attains the best exactly where every cell has a common best open act; `least_zero_iff`'s docstring and the texts say that the least shortfall through the reading is nothing exactly where no listed cell holds both excesses; refinement is said as the least shortfall never increasing (`finer_least_le`'s docstring, the Readings, the record, PLAN, the root module's bullet, the checker's scope, the overview, the study). |
+| 3 | taken | The record's statement: choosing best after a reading telling the candidate gains over every open act exactly where none is valued best at every listed candidate of positive weight (298 characters, within the cap); 'listed' kept in the laws and the texts. |
+| 4 | taken | The record's hypotheses, the header, the cells' law, PLAN's item 5, 03 §12's paragraph and the study name equality of cells decidable, cells listed once each and covering every listed candidate's cell, and choice over the whole type of cells, `Viability.choiceOver_fin` supplying it for `Fin k`. |
+| 5 | taken | The modelling choices, the record's hypotheses and the study: `byReading` goes on at equal gain and loss, `leastThrough` stops a cell at equal excesses, other rules go either way; PLAN's and 03 §12's fixed-sign sentence now says 'with nothing forgone' and 'exactly where'. |
+| 6 | taken | The amendment to what-choices-show-of-an-order carries transitivity and accordance at listed candidates of positive weight, under which the shown reach makes the fixed pick attain the reading's value; the record's law is restructured so that those conditions govern 'only where neither reaches the other', and `pair_gains_iff`'s condition stands apart. |
+| 7 | taken | `pair_gains_unreached` has no asymmetry hypothesis: where the second reaches the first, every listed candidate of positive weight ranks the second above the first, `pairPolicy` picks it, and `committed_eq_after_iff` ties committing to it with holding, against the strict gain. Compiled, its axiom report empty; the header, the record, 03 §12's paragraph and the study say it needs transitivity and accordance alone. |
+| 8 | taken | The Readings say the internal, sensory and active course is the same whatever the true sign. The step-two equation is a theorem, `SignLoop.refuted_drops` (by `rfl`, compiled), and `refuted_goes_on`'s docstring says the formation goes on by `choose`'s default with none kept, which the law of resting on unrefuted candidates does not need; the record, the header, PLAN, 03 §12's paragraph and the study cite it. |
+| 9 | partly taken | `SignLoop.not_loses_of_all_true` and `SignLoop.not_gains_of_all_true` use the prelude's `ListTests.all_mem`. `total_single` stays as disclosed, its move to a shared totals dependency proposed to the owners; `across_le_iff` and `across_lt_iff` stay, their relation to `Optimum` and `SelectionTerm` named. |
+| 10 | taken | The record's correspondence in both languages, PLAN's item 2 and the study: waiting's two differences T E[U⁺] and T E[(−U)⁺], T times Equation 3's terms read with Pr(U < 0) where Pr(U ≤ 0) is printed. |
+| 11 | taken | The Readings, the record (the off-switch paper named), 03 §12's reading, 08's bullet and the study: Remark 1 gives the relation qualitatively, Theorem 2, Δ = σ²E[π̇H] − \|µ\|Pr(C), is its Gaussian form, and the counts decompose the incentive differently. |
+| 12 | taken | The Readings, the record in both languages, PLAN's item 7, 03 §12's reading, the dossier and the literature table: the conflating model's predictions appear perfectly accurate on the observations it encodes; the relation is a misspecified model the course never refutes, not a formalization of the conflation. |
+| verdict | taken | The Standing labels `bestOf_best` elementary finite maximization. |

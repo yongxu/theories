@@ -63,14 +63,15 @@ edit(checker, '''    "alike. "
     "NarrowingRuns: the answer is the greatest safe answer of the belief narrowed by After on the "''',
      '''    "alike. "
     "HeldForReading: in natural numbers, a policy choosing open acts falls short of one best at every listed "
-    "candidate by the weighted total of what its acts lose, so a reading telling the candidate gains over every open "
-    "act exactly where none is valued best at every candidate of positive weight; holding for the reading that stops "
+    "candidate by the weighted total of what its acts lose, so choosing best after a reading telling the candidate "
+    "gains over every open act exactly where none is valued best at every listed candidate of positive weight; "
+    "holding for the reading that stops "
     "where the "
     "loss exceeds the gain stands above going on and switching off exactly where both strict signs have positive "
     "weight, and holding for any rule of stopping, forgoing an amount, stands at least as high as going on exactly "
     "where its shortfall and the amount are at most the weighted excess of switching off; through a map of the "
-    "candidates, the least shortfall totals the smaller excess within each cell, a finer map never falling short by "
-    "more; within ShownOrder's reach, holding a pick gains nothing; on ReadingLoop's loop, a formation choosing so on "
+    "candidates, the least shortfall totals the smaller excess within each cell, never increasing through a finer "
+    "map; within ShownOrder's reach, holding a pick gains nothing; on ReadingLoop's loop, a formation choosing so on "
     "its own model, listing only that going on gains and going on from the start, rests at once and never senses the "
     "stop. "
     "NarrowingRuns: the answer is the greatest safe answer of the belief narrowed by After on the "''')
@@ -83,15 +84,15 @@ edit(root, "  (`ChoiceOccasions.Untried.same_search_met`, `ChoiceOccasions.Untri
      "  by `Becoming.HeldForReading` (board item RF).\n* `Becoming.Ideals`")
 BULLET = """* `Becoming.HeldForReading` (L1): what holding an act for a reading is worth, in natural-number
   counts. A policy choosing open acts falls short of one best at every listed candidate by the
-  weighted total of what its acts lose (`HeldForReading.after_add_gap`), so a reading telling the
-  candidate gains over every open act exactly where none is valued best at every candidate of
-  positive weight (`HeldForReading.reading_gains_iff`); holding for the reading that stops where the loss exceeds
+  weighted total of what its acts lose (`HeldForReading.after_add_gap`), so choosing best after a
+  reading telling the candidate gains over every open act exactly where none is valued best at every
+  listed candidate of positive weight (`HeldForReading.reading_gains_iff`); holding for the reading that stops where the loss exceeds
   the gain stands above going on and switching off exactly where both strict signs have positive
   weight (`HeldForReading.held_gains_iff`), and holding for any rule of stopping, forgoing an
   amount, stands at least as high as going on exactly where its shortfall and the amount are at
   most the weighted excess of switching off (`HeldForReading.threshold_go_iff`); through a map of
-  the candidates the least shortfall totals the smaller excess within each cell, a finer map never
-  falling short by more (`HeldForReading.least_through`, `HeldForReading.finer_least_le`); within
+  the candidates the least shortfall totals the smaller excess within each cell, never increasing
+  through a finer map (`HeldForReading.least_through`, `HeldForReading.finer_least_le`); within
   `ShownOrder`'s reach holding a pick gains nothing (`HeldForReading.reach_fixes`); on
   `ReadingLoop`'s loop, a formation choosing so on its own model
   (`HeldForReading.SignLoop.choose_hold_iff`), listing only that going on gains and going on from
@@ -171,8 +172,8 @@ edit(ch8, "It represents neither a recipient's belief nor an intention to cause 
      "equivalence, and its Equation 1's two terms as balances for any rule of stopping that is a function of the "
      "candidate; a reading that tells only a cell gives the partition case of Blackwell's (1953) comparison, for this "
      "decision. None of it is new as mathematics; what the counts add is one threshold joining the model's openness, "
-     "the reading's shortfall and what holding forgoes, the relation the paper's Remark 1 and Theorem 2 draw for a "
-     "Gaussian belief, which is not represented. Its witness on the reading loop is related to Carey's (2018) "
+     "the reading's shortfall and what holding forgoes, the relation the paper's Remark 1 draws qualitatively and "
+     "its Theorem 2 writes for a Gaussian belief, which is not represented; the counts decompose it differently. Its witness on the reading loop is related to Carey's (2018) "
      "counterexamples under a misspecified reward and contains none of them [AI reading]. Near-definitional "
      "compositions and general laws, with a witness.\n")
 
@@ -184,14 +185,15 @@ edit(overview, "Read as self-confirmation, the trade between keeping a task and 
      "acts, and self-fulfilling prediction [AI reading] ([the reading loop](chapters/03-KNOWING.md#the-reading-"
      "loop)).\n\nHolding an act for another's reading is worth what the reading tells, on the formation's own model. "
      "Proved with natural-number weights and values, read as probabilities where valid: any policy falls short of one "
-     "best at every candidate by the weighted total of what its acts lose, so choosing after a reading that tells the "
-     "candidate stands above committing to any open act exactly where no open act is valued best at every candidate "
-     "of positive weight; "
+     "best at every listed candidate by the weighted total of what its acts lose, so choosing best after a reading "
+     "that tells the candidate stands above committing to any open act exactly where no open act is valued best at "
+     "every listed candidate of positive weight; "
      "holding for a reading that stops or releases stands above both going on and switching off exactly where the "
      "model gives positive weight to both signs of going on; holding for any rule of stopping, forgoing an amount, "
      "stands at least as high as going on exactly where the rule's shortfall and the amount are at most the weighted "
      "excess of switching off; and through a reading that tells only a cell no rule falls short by less than the "
-     "total, over the cells, of the smaller excess within each, a finer reading never by more. On the reading loop, a "
+     "total, over the cells, of the smaller excess within each, a total never increasing through a finer reading. On "
+     "the reading loop, a "
      "formation choosing so on its own model, listing only that going on gains and going on from the start, never "
      "senses the stop. Read as the "
      "off-switch game's waiting and Good's value of evidence in counts, and, beside Carey's counterexamples, as a "
@@ -228,7 +230,8 @@ edit(dossier, "does better by defecting at random, here with weights and an exac
      "§12](../chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth)). Read [AI reading], a formation sure of "
      "the sign has no strict reason to be read, and one choosing so on a listing that misses the true sign can rest "
      "without ever meeting the stop: related to Carey's (2018) counterexamples under misspecification, nearest to his "
-     "model conflating two acts, which predicts the human without error and ignores shutdown. The reading "
+     "model conflating two acts, whose predictions appear perfectly accurate on the observations it encodes and "
+     "which then ignores shutdown. The reading "
      "formation's own state, a noisy reading and continuous beliefs are not represented.\n")
 edit(dossier, "the paragraph on RF's rounds in the box above, its clauses on deception and assistance games,",
      "the paragraph on RF's rounds in the box above, its clauses on deception, assistance games and corrigibility as "

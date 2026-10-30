@@ -24,9 +24,10 @@ derived.
   lower (`after_le_after`, `after_eq_after_iff`, `after_lt_after_iff`). Committing to one open act is
   the policy reading nothing (`committed_le_after`, `committed_eq_after_iff`, `below_iff`): the
   reading gains over every open act exactly where none is valued as the best at every listed
-  candidate of positive weight (`reading_gains_iff`). A policy taking one act at each cell of a map
-  stands as high as the best exactly where each cell has one open act valued as the best at every
-  listed candidate of positive weight in it, given choice over the cells (`cell_policy_iff`). Values
+  candidate of positive weight (`reading_gains_iff`). Some policy taking one open act at each cell of
+  a map stands as high as the best exactly where each cell has one open act valued as the best at
+  every listed candidate of positive weight in it, given choice over the whole type of cells
+  (`cell_policy_iff`). Values
   raised at each candidate by one amount for every act order every two policies of a model alike
   (`after_offset`, `after_offset_le_iff`).
 * **Holding for a reading that stops or releases** (two moves, `Move`). Going on has a gain and a
@@ -66,8 +67,8 @@ derived.
   amount is below it, and likewise against switching off with the excess of going on
   (`forgone_within_excess_iff`, `forgone_below_excess_iff`); each excess is positive exactly where
   the model gives positive weight to its strict sign (`excess_pos_iff`).
-* **A reading that tells only a cell** (a map of the candidates, its cells listed once each and
-  covering every listed candidate's cell). A rule through the map falls short, at each cell, by the
+* **A reading that tells only a cell** (a map of the candidates, equality of cells decidable, its
+  cells listed once each and covering every listed candidate's cell). A rule through the map falls short, at each cell, by the
   excess of going on there where it stops the cell and by that of switching off where it releases it
   (`shortfall_through`, through `total_by_cells`); the least shortfall through the map is the total,
   over the cells, of the smaller excess within each, taken by stopping a cell exactly where its
@@ -84,9 +85,9 @@ derived.
   ranks the first above the second and holding the pick gains nothing (`reach_fixes`, through
   `ChoiceOccasions.reach_within`). Where no listed candidate of positive weight ranks each of the
   two above the other, holding gains over both picks exactly where some candidate of positive weight
-  ranks the first above the second and some the second above the first (`pair_gains_iff`); with both
-  conditions, it gains over both only where neither alternative reaches the other
-  (`pair_gains_unreached`). With no cycle shown, for two different alternatives neither of which
+  ranks the first above the second and some the second above the first (`pair_gains_iff`). With
+  comparisons transitive and according with the choices alone, it gains over both only where neither
+  alternative reaches the other (`pair_gains_unreached`). With no cycle shown, for two different alternatives neither of which
   reaches the other, strict orders according with the choices rank them both ways
   (`ChoiceOccasions.both_ways_of_unreached`), as relations, not decided comparisons; whether the
   model lists decided candidates of both rankings with positive weight is not fixed by the choices.
@@ -102,14 +103,16 @@ derived.
   step whatever the true sign, keeping every candidate, none refuted by its course
   (`SignLoop.rests_unread`, a case of `ReadingLoop.Loop.rests_of_unrefuted`), and the stop is never
   sensed (`SignLoop.never_senses_stop`). Holding first, the listing of gain alone, where going on
-  loses, senses the stop, which refutes its only candidate, and with none kept it goes on
-  (`SignLoop.refuted_senses_stop`, `SignLoop.refuted_goes_on`). Listing both signs, it holds, senses
+  loses, senses the stop at the first step, which refutes its only candidate at the second, and
+  with none kept it goes on (`SignLoop.refuted_senses_stop`, `SignLoop.refuted_drops`,
+  `SignLoop.refuted_goes_on`). Listing both signs, it holds, senses
   the stop at the first step and is off from the second, its configuration resting from the fourth
   (`SignLoop.both_stopped`, `SignLoop.both_off`, `SignLoop.both_turns_off`), or, where going on
   gains, is released and goes on (`SignLoop.both_released`, `SignLoop.both_on`,
   `SignLoop.both_goes_on`).
 
-**Standing.** Near-definitional or short compositions: `bestOf_best`, `after_le_after`,
+**Standing.** Elementary finite maximization: `bestOf_best`. Near-definitional or short
+compositions: `after_le_after`,
 `committed_le_after`, `committed_eq_after_iff` and `below_iff` (`after_eq_after_iff` and
 `after_lt_after_iff` at a constant policy), `cell_policy_iff` (`after_eq_after_iff` with choice over
 the cells), `after_offset`, `after_offset_le_iff`, `committed_le_held`, `after_rule_add_onLoss`,
@@ -159,17 +162,19 @@ shutting down is open. The threshold reads the worth of a stopping reading to th
 the smaller of the model's two excesses less the reading's shortfall, counted by the valuation the
 reading shares with the model: a relation among the model's openness, the reading's shortfall and
 what holding forgoes, not a disposition of one formation. The off-switch paper draws this relation
-in its own terms: its Remark 1 places the incentive to defer in uncertainty about the other's
-preferences and in the other's effectiveness at acting on them, and its Theorem 2 writes the
-incentive, for a Gaussian belief, as the variance times the human's responsiveness less the bias
-times the chance of correction; the counts give it for any finite listing and any rule that is a
-function of the candidate, the shortfall counting the reading's errors by what they lose. Through a
-reading that tells only a cell, the shortfall no rule avoids is what each cell mixes of the two
-excesses: telling more apart never raises it, and a reading falls short nowhere exactly where none
-of its cells holds both. `SignLoop` is a deterministic witness of a stopping reading bypassed under
+in its own terms: its Remark 1 places the incentive to defer, qualitatively, in uncertainty about
+the other's preferences and in the other's effectiveness at acting on them, and its Theorem 2 writes
+the incentive, for a Gaussian belief, as `Δ = σ² E[π̇H] − |µ| Pr(C)`, the variance times the expected
+derivative of the human's policy less the absolute mean times the chance of correction; the counts
+decompose the same incentive differently, for any finite listing and any rule that is a function of
+the candidate, as the smaller excess less the shortfall, the shortfall counting the reading's errors
+by what they lose. Through a reading that tells only a cell, the least shortfall is what each cell
+mixes of the two excesses: telling more apart never raises it, and it is nothing exactly where none
+of the listed cells holds both. `SignLoop` is a deterministic witness of a stopping reading bypassed under
 a misspecified candidate list, by a formation choosing as the worth law does on its own model:
 listing only that going on gains, its model fixes the sign, so on that model holding has no strict
-worth, and going on it never senses the stop, its course the same whatever the true sign; holding
+worth, and going on it never senses the stop, its internal, sensory and active course the same whatever
+the true sign; holding
 first, it senses the stop, which refutes its model, and goes on with nothing kept. The witness has
 the structure of `ReadingLoop.Untested` (read there with self-confirming equilibrium and incomplete
 learning), its kept candidate agreeing with the world along the course and not off it, and is a case
@@ -185,10 +190,11 @@ around the states where a stop can be given. `SignLoop` represents no valuation 
 the kept listing and anticipates no stop: going on from the start it is never given one, and from a
 held start it disregards the stop by elimination and the default of going on with nothing kept. Its
 closest case is in Carey's Discussion: a model conflating the better of two acts with the worse
-predicts the human's choices without error, passes the check Milli and others propose over an
-initial period of obedience, and then takes the worse act, so that where the better act is shutting
-down it goes on ignoring the instruction to shut down; that is a misspecified model its course never
-refutes, as in `SignLoop.rests_unread`. Carey's diagnosis is that the off-switch paper's and Milli
+makes its predictions appear perfectly accurate on the observations it encodes, so it passes the
+check Milli and others propose over an initial period of obedience, and then takes the worse act, so
+that where the better act is shutting down it goes on ignoring the instruction to shut down. The
+relation to `SignLoop.rests_unread` is a misspecified model its course never refutes, not a
+formalization of the conflation. Carey's diagnosis is that the off-switch paper's and Milli
 and others' guarantees assume a correct posterior, a prior and reward free of error; the worth laws
 are the model's own assessment under any weights, and `SignLoop` is where that assessment and the
 outcome part. Milli, Hadfield-Menell, Dragan and Russell (2017) treat a system learning from a
@@ -211,7 +217,8 @@ reading stopping by other values enters as a rule, its shortfall counted by thes
 game's signed values, going on at the gain less the loss and switching off at nothing, entering
 through the shifted ones, on which every two rules compare as on the signed values
 (`after_rule_le_iff`); rules that are functions of the candidate; acts and values unchanged by
-holding; one decision, not a sequence; ties between gain and loss going on; picks valued one or
+holding; one decision, not a sequence; `byReading` going on at equal gain and loss (other rules may
+resolve ties either way, and `leastThrough` stops a cell at equal excesses); picks valued one or
 nothing, a cardinal choice the choices do not supply; in `SignLoop`, discrete steps, a world that
 does not move, the start's act supplied, candidates eliminated, not weighted, and, with no candidate
 kept, going on. **What the model leaves out:** a reading's errors as probabilities (a noisy stop, or
@@ -396,9 +403,10 @@ theorem below_iff (best : ∀ c, c ∈ m.listed → BestAt acts value p c) {a : 
     ⟨fun ⟨c, mem, weighted, lt⟩ => ⟨c, mem, weighted, (below c mem weighted).mp lt⟩,
      fun ⟨c, mem, weighted, q⟩ => ⟨c, mem, weighted, (below c mem weighted).mpr q⟩⟩
 
-/-- **A policy taking one act at each cell of a map stands as high as one best at every candidate
-exactly where each cell has one open act valued as the best at every listed candidate of positive
-weight in it**, given choice over the cells (for cells listed, `Viability.choiceOver_fin`). -/
+/-- **Some policy taking one open act at each cell of a map stands as high as one best at every
+listed candidate exactly where each cell has one open act valued as the best at every listed
+candidate of positive weight in it**, given choice over the whole type of cells
+(`Viability.choiceOver_fin` supplies it where that type is `Fin k`). -/
 theorem cell_policy_iff {K : Type} (choice : Viability.ChoiceOver K A)
     (best : ∀ c, c ∈ m.listed → BestAt acts value p c) (π : C → K) :
     (∃ f : K → A, (∀ k, f k ∈ acts) ∧ m.after value (fun c => f (π c)) = m.after value p) ↔
@@ -939,9 +947,9 @@ theorem cond_least_eq_zero_iff (x y : Nat) : cond (decide (x ≤ y)) x y = 0 ↔
       | .inl zero => absurd (Nat.le_trans (Nat.le_of_eq zero) (Nat.zero_le y)) le
       | .inr zero => zero⟩
 
-/-- **A reading that tells only a cell falls short nowhere exactly where no cell holds both
-excesses**: the least shortfall through the map is nothing exactly where, at every cell, the excess
-of going on or that of switching off is nothing. -/
+/-- **Through a reading that tells only a cell, the least shortfall is nothing exactly where no
+listed cell holds both excesses**: the least shortfall through the map is nothing exactly where, at
+every listed cell, the excess of going on or that of switching off is nothing. -/
 theorem least_zero_iff (m : Model C) (gain loss : C → Nat) (π : C → K) {zs : List K}
     (once : List.Pairwise (fun a b => a ≠ b) zs) (covers : ∀ c, c ∈ m.listed → π c ∈ zs) :
     shortfall m gain loss (fun c => leastThrough m gain loss π (π c)) = 0 ↔
@@ -952,8 +960,9 @@ theorem least_zero_iff (m : Model C) (gain loss : C → Nat) (π : C → K) {zs 
         (goExcessWithin m gain loss π z) (offExcessWithin m gain loss π z)) mem) (Nat.le_of_eq zero))),
     fun unmixed => total_eq_zero fun z mem => (cond_least_eq_zero_iff _ _).mpr (unmixed z mem)⟩
 
-/-- **A reading telling apart all a coarser one tells apart never falls short by more**: the least
-shortfall through a map is at most that of any rule through a map factoring through it. -/
+/-- **Through a reading telling apart all a coarser one tells apart, the least shortfall never
+increases**: the least shortfall through a map is at most that of any rule through a map factoring
+through it. -/
 theorem finer_least_le {L : Type} (m : Model C) (gain loss : C → Nat) (π : C → K) {zs : List K}
     (once : List.Pairwise (fun a b => a ≠ b) zs) (covers : ∀ c, c ∈ m.listed → π c ∈ zs)
     (f : K → L) (s : L → Bool) :
@@ -1108,25 +1117,27 @@ theorem pair_gains_iff (m : Model C) {above : C → α → α → Bool} {x y : �
   ⟨fun ⟨f, s⟩ => ⟨first.mp f, second.mp s⟩, fun ⟨f, s⟩ => ⟨first.mpr f, second.mpr s⟩⟩
 
 /-- **Holding the pick gains over both only beyond the shown reach.** With every listed candidate of
-positive weight transitive, according with the choices and not ranking each of the two above the
-other, where holding gains over both picks neither alternative reaches the other in the shown
-relation. -/
+positive weight transitive and according with the choices, where holding gains over both picks
+neither alternative reaches the other in the shown relation: where the first reaches the second,
+picking the first stands as high as holding (`reach_fixes`), and where the second reaches the first,
+each such candidate ranks the second above the first, so picking the second does. -/
 theorem pair_gains_unreached (m : Model C) {ch : ChoiceOccasions α O} {above : C → α → α → Bool}
     (trans : ∀ c, c ∈ m.listed → 0 < m.weight c →
       ∀ a b d, above c a b = true → above c b d = true → above c a d = true)
     (accords : ∀ c, c ∈ m.listed → 0 < m.weight c → ch.Accords fun a b => above c a b = true)
-    {x y : α} (asymm : ∀ c, c ∈ m.listed → 0 < m.weight c → above c y x = true → above c x y = false)
+    {x y : α}
     (gains : m.committed (pairValue above x y) .first <
         m.after (pairValue above x y) (pairPolicy above x y) ∧
       m.committed (pairValue above x y) .second <
         m.after (pairValue above x y) (pairPolicy above x y)) :
     ¬ «及» ch.Shown x y ∧ ¬ «及» ch.Shown y x :=
-  match (pair_gains_iff m asymm).mp gains with
-  | ⟨_, ⟨d, mem, weighted, xy⟩⟩ =>
-    ⟨fun reach => Nat.ne_of_lt gains.1 (reach_fixes m trans accords reach),
-     fun reach => nomatch (asymm d mem weighted (ChoiceOccasions.reach_within
-        (P := fun a b => above d a b = true) (trans d mem weighted) (accords d mem weighted) y x
-        reach)).symm.trans xy⟩
+  ⟨fun reach => Nat.ne_of_lt gains.1 (reach_fixes m trans accords reach),
+   fun reach => Nat.ne_of_lt gains.2
+    ((committed_eq_after_iff (fun c _ => pairPolicy_best above x y c) second_open).mpr
+      fun c mem weighted => congrArg (pairValue above x y c)
+        (congrArg (fun b => cond b Pick.second Pick.first)
+          (ChoiceOccasions.reach_within (P := fun a b => above c a b = true) (trans c mem weighted)
+            (accords c mem weighted) y x reach)).symm)⟩
 
 end Shown
 
@@ -1217,9 +1228,16 @@ theorem refuted_senses_stop :
       ⟨([.gains], some (.plain, .hold)), .stop, .go, .loses⟩ :=
   rfl
 
-/-- **The stop refutes the only candidate, and with none kept the formation goes on**: taken in at the
-second step, the stop drops the candidate, which predicts a release; with none kept the choice goes
-on (`choose`), and from step three the formation keeps no candidate, goes on and senses plainly. -/
+/-- **The stop refutes the only candidate at the second step**: taken in there, the stop drops the
+candidate, which predicts a release, and with none kept the choice goes on (`choose`). -/
+theorem refuted_drops :
+    loop.law.course (ReadingLoop.Loop.start [.gains] .plain .hold .loses) 2 =
+      ⟨([], some (.stop, .go)), .plain, .go, .loses⟩ :=
+  rfl
+
+/-- **With none kept the formation goes on**: from step three it keeps no candidate, goes on and
+senses plainly. It goes on because `choose` goes on where no candidate is kept, a default of this
+witness; the law of resting on unrefuted candidates does not need it. -/
 theorem refuted_goes_on : ∀ n,
     loop.law.course (ReadingLoop.Loop.start [.gains] .plain .hold .loses) (n + 3) =
       ⟨([], some (.plain, .go)), .plain, .go, .loses⟩
@@ -1294,22 +1312,18 @@ theorem loses_of_all_false : ∀ {hs : List Sign}, hs.all predictsGain = false �
   | .gains :: _, all => .tail _ (loses_of_all_false all)
   | .loses :: _, _ => .head _
 
-theorem not_loses_of_all_true : ∀ {hs : List Sign}, hs.all predictsGain = true → ¬ Sign.loses ∈ hs
-  | [], _ => fun mem => nomatch mem
-  | .gains :: hs, all => fun mem => match mem with
-    | .tail _ mem' => not_loses_of_all_true (hs := hs) all mem'
-  | .loses :: _, all => nomatch all
+theorem not_loses_of_all_true {hs : List Sign} (all : hs.all predictsGain = true) :
+    ¬ Sign.loses ∈ hs :=
+  fun mem => Bool.noConfusion (ListTests.all_mem all mem : false = true)
 
 theorem gains_of_all_false : ∀ {hs : List Sign}, hs.all (fun h => !predictsGain h) = false → Sign.gains ∈ hs
   | [], all => nomatch all
   | .gains :: _, _ => .head _
   | .loses :: _, all => .tail _ (gains_of_all_false all)
 
-theorem not_gains_of_all_true : ∀ {hs : List Sign}, hs.all (fun h => !predictsGain h) = true → ¬ Sign.gains ∈ hs
-  | [], _ => fun mem => nomatch mem
-  | .gains :: _, all => nomatch all
-  | .loses :: hs, all => fun mem => match mem with
-    | .tail _ mem' => not_gains_of_all_true (hs := hs) all mem'
+theorem not_gains_of_all_true {hs : List Sign} (all : hs.all (fun h => !predictsGain h) = true) :
+    ¬ Sign.gains ∈ hs :=
+  fun mem => Bool.noConfusion (ListTests.all_mem all mem : false = true)
 
 /-- The formation holds exactly where its kept candidates hold both signs. -/
 theorem choose_hold_iff_mem (hs : List Sign) (s : Seen) :
