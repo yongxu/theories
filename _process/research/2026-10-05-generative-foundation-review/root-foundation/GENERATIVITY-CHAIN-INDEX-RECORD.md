@@ -1384,3 +1384,19 @@ The other 14 are linked by no entry, and were read for their claims and recorded
 A6 and A7 change only conditions the Lean already takes, so they can be applied with A1–A5 in one revision of the chain.
 
 This is author reading, not independent acceptance, and proves no new claim.
+
+## 实践根据之记录重述为问题：复读与一项可选提议 / The practical-warrant record restated as a question: read, and one optional proposal — 30 October 2026
+
+第二十一次审查第 13 项与 LW 的后续一同落地（[说明](development/rv21-one-sense/NOTE.md)）：universal-practical-warrant 重述为问题，即是否存在对一切可能心智都有约束力的根据；它保持开放，伦理作为生命的立场不待其解决。链对该记录的 JSON 取了指纹，故复读之。
+
+**复读并记录，1。** universal-practical-warrant.json：标题、陈述、假设与下一步改称问题；does_not_show 第八项确切陈述第七章之不蕴含（单凭逻辑或只读所表示动力学的可满足陈述都不蕴含延续条件）；共享边界 zero-axiom-target-open 自本记录移去，因其所说的问题即本记录；进展诸行是先前目标在实践判断上的工作，今属目标“生命的实践判断，立于最少的前提”。无条目链接本记录。C20 与之相合：C20 的范围说普遍奠基既未证明也未证明不可能，本记录说它保持开放。
+
+**A8. C20 的范围记下重述（可选，不在此改）。** C20 照原文成立，其标题与论断是历史条目，保留。可选地在其范围之末加一句：“2026 年 10 月 30 日，该记录重述为问题：是否存在对一切可能心智都有约束力的根据；目标重述为‘生命的实践判断，立于最少的前提’。”
+
+The twenty-first review's item 13 landed with LW's follow-up ([note](development/rv21-one-sense/NOTE.md)): universal-practical-warrant is restated as the question whether a warrant binding every possible mind exists. It stays open, and the ethics, life's stance, does not wait on it. The chain fingerprints the record's JSON, so it was read.
+
+**Read and recorded, 1.** universal-practical-warrant.json: title, statement, hypothesis and next step now say question; does_not_show's eighth item states chapter 7's non-entailment exactly (neither logic alone nor a satisfiable statement reading only the represented dynamics entails the condition); the shared boundary zero-axiom-target-open is dropped from the record, since the question it names is the record's own; the progress lines are the earlier target's work on practical judgment, now the goal "Practical judgment for life, on the fewest premises". No entry links the record. C20 agrees with it: C20's scope says universal grounding is neither proved nor shown impossible, and the record says it stays open.
+
+**A8. C20's scope noting the restatement (optional, not made here).** C20 holds as written; its title and claim are a historical entry and stay. Optionally, its scope can end: "On 30 October 2026 the record was restated as the question whether a warrant binding every possible mind exists, and the goal as 'Practical judgment for life, on the fewest premises'."
+
+This is author reading, not independent acceptance, and proves no new claim.

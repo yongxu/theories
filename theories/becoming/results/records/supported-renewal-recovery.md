@@ -35,7 +35,7 @@
 - **Counterexample:** unsupported_pulse_never_recovers refutes guaranteed recovery from a later contribution schedule alone; recovered_history_neither_global_class retains the interruption rather than replacing dynamics with a global label. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RenewalRecovery.lean)
 - **Counterexample:** Earlier material repair, initiation obstructions and continuous recovery basins remain earlier results; the delta is the finite window, absorbing state and actual-history comparison in this inherited gated law. [source](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/RELATIONAL-BECOMING-INTEGRATION.md)
 
-**Standard boundaries:** Premise-free (zero-substantive-axiom) grounding is a separate open target; completed results on the conditional alignment route keep their scope.
+**Standard boundaries:** The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
 
 <a id="evidence--证据"></a>
 ## Evidence

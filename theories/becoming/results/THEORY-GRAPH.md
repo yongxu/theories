@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3118 nodes, 5877 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3118 nodes, 5878 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -545,7 +545,6 @@ Results (79):
 - [Self-concern through dependence](records/self-concern-through-dependence.md) (recorded-checked)
 - [Significance retained within the margin](records/significance-retained-within-margin.md) (recorded-checked)
 - [Significance through a common condition](records/significance-through-a-common-condition.md) (recorded-checked)
-- [Stronger universal practical warrant target](records/universal-practical-warrant.md) (open)
 - [Support from the supported](records/support-from-the-supported.md) (recorded-checked)
 - [Tasks and what performs them](records/tasks-and-what-performs-them.md) (recorded-checked)
 - [The class of being joined](records/the-class-of-being-joined.md) (recorded-checked)
@@ -575,6 +574,7 @@ Results (79):
 - [When no route of keeping a law stands above a revision of it](records/when-no-route-stands-above-a-revision.md) (recorded-checked)
 - [Where the possible grows](records/where-the-possible-grows.md) (recorded-checked)
 - [Where the verdict within the closure meets the continuation condition](records/closure-verdict-meets-continuation-condition.md) (recorded-checked)
+- [Whether a universal practical warrant exists](records/universal-practical-warrant.md) (open)
 - [Widening along a reading, and over a grown world](records/widening-along-a-reading.md) (recorded-checked)
 - [Widening as what every weighting ranks](records/widening-as-what-every-weighting-ranks.md) (recorded-checked)
 - [Widening on late tails, and what carries a widening](records/eventual-widening.md) (recorded-checked)

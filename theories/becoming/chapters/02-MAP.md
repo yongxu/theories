@@ -23,7 +23,7 @@ Read at one class, turnover that sustains a pattern and turnover that ends it lo
 |---|---|
 | A carrying renewal is an alteration (异). | `«传则异»` |
 | Going on along some branch and ending on every branch exclude each other; a line with no end anywhere goes on along some branch. | `«延尽不并»`, `«不穷则延»` |
-| Read along renewing into (复生至) under the one, renewal without end (生生) of [the root](01-ROOT.md#renewal-and-grains) is going on along some branch, and ceasing (息) is ending on every branch. | `«生生即延»`, `«息即尽»` |
+| Read along renewing into (复生至) under the one, renewal without end (`«生生»`) of [the root](01-ROOT.md#renewal-and-grains) is going on along some branch, and ceasing (息) is ending on every branch. | `«生生即延»`, `«息即尽»` |
 | Generation and keeping each exclude degeneration. | `«生成退化不并»`, `«守退化不并»` |
 | Generation and keeping can share a point along different branches (生守相杂, the mixed region; witness: a root with a renewing chain on one branch and a still occurrence on the other). | `Map.«生守相杂»` |
 | On a single line, each occurrence conditioning at most one other, they exclude each other. | `«单行则生守不并»` |
@@ -33,7 +33,7 @@ Read at one class, turnover that sustains a pattern and turnover that ends it lo
 | A coarse class constant under 缘 has no end from a continued point; what ends after a continued step has a coarse class that is not constant. | `«有常则无终»`, `«有终则粗不有常»` |
 | For any sequence of classes `Es`, no order of grain assumed, generation at order `k` (the class `Es (k + 1)` going on through renewals at `Es k`) keeps order `k + 1` from ending on every branch, and 全生成 at order `k` keeps order `k + 1` from reaching an end. | `«阶生成则上不退化»`, `«阶全生成则上无终»` |
 
-**Theorem** (root). *The regions' coverage, and the split of a beginning.* 守 forbids renewal throughout its family where 全守 allows an earlier one, so a line that renews once and then stays still is, at its start, none of 生成, 守 and 退化. *Keeping from some point on* (后守, hòushǒu) closes the gap: along some branch the pattern goes on and, from a point of that branch reached from the start, no carrying renewal lies on it. For every carrier, relation and pair of classes (`Becoming.MapRegions`; [record](../results/records/generation-and-degeneration-at-two-grains.md)):
+**Theorem** (root; witness). *The regions' coverage, and the split of a beginning.* 守 forbids renewal throughout its family where 全守 allows an earlier one, so a line that renews once and then stays still is, at its start, none of 生成, 守 and 退化. *Keeping from some point on* (后守, hòushǒu) closes the gap: along some branch the pattern goes on and, from a point of that branch reached from the start, no carrying renewal lies on it. For every carrier, relation and pair of classes (`Becoming.MapRegions`; [record](../results/records/generation-and-degeneration-at-two-grains.md)):
 
 | Law | Lean |
 |---|---|
