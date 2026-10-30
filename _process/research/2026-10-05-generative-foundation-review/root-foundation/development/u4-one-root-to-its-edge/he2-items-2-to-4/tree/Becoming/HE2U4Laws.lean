@@ -376,8 +376,9 @@ end Balance
 
 Units listed once before and after a step, under a continuation decided by a test: those before
 that no unit after continues cease, and those after that continue no unit before arise. Where the
-continuation fixes successors and predecessors, the census pairs them one to one; on a listing
-closed at the step, arising and ceasing are the grammar's beginning (`«生»`) and ending (`«亡»`).
+continuation fixes successors and predecessors, the census pairs them one to one; where every
+predecessor of a unit after stands before and every successor of a unit before stands after,
+arising and ceasing are the grammar's beginning (`«生»`) and ending (`«亡»`).
 The listing and the test are supplied, as the pairing is in `section Balance`. -/
 
 section Census
@@ -478,7 +479,7 @@ variable {R E : «际» α} {k : α → α → Bool}
 (`«续» R E`, decided by `k`) that fixes successors and predecessors: the units before with those
 arising are paired one to one with the units after with those ceasing, each pair a continuation or
 the same unit. -/
-theorem «定后定前则前生对后亡» (dec : ∀ x y, «续» R E x y ↔ k x y = true)
+theorem «定后定前则前并生对后并亡» (dec : ∀ x y, «续» R E x y ↔ k x y = true)
     (before after : List α) (dB : Distinct before) (dA : Distinct after)
     (fixedAfter : «定后» («续» R E)) (fixedBefore : «定前» («续» R E)) :
     «对» (fun x y => «续» R E x y ∨ x = y) (before ++ GrammarLaws.arising k before after)
@@ -490,11 +491,11 @@ theorem «定后定前则前生对后亡» (dec : ∀ x y, «续» R E x y ↔ k
       (fun g f f' _ _ _ r r' => «定后之逐点».mp fixedAfter g f f' ((dec g f).mpr r) ((dec g f').mpr r'))
       (fun g g' f _ _ _ r r' => «定前之逐点».mp fixedBefore g g' f ((dec g f).mpr r) ((dec g' f).mpr r')))
 
-/-- **Arising is beginning, on a closed step.** Where every predecessor of a unit after the step
-stands before it, the units the census lists as arising are exactly the units after that begin
-(`«生»`). -/
-theorem «步闭则所列生者生» (dec : ∀ x y, «续» R E x y ↔ k x y = true) {before after : List α}
-    (closedBefore : ∀ x f, f ∈ after → «续» R E x f → x ∈ before) {f : α} :
+/-- **Arising is beginning, where the predecessors stand before.** Where every predecessor of a unit
+after the step stands before it, the units the census lists as arising are exactly the units after
+that begin (`«生»`). -/
+theorem «前者在前则所列生者生» (dec : ∀ x y, «续» R E x y ↔ k x y = true) {before after : List α}
+    (predecessorsBefore : ∀ x f, f ∈ after → «续» R E x f → x ∈ before) {f : α} :
     f ∈ GrammarLaws.arising k before after ↔ f ∈ after ∧ «生» R E f := by
   constructor
   · intro m
@@ -502,7 +503,7 @@ theorem «步闭则所列生者生» (dec : ∀ x y, «续» R E x y ↔ k x y =
     refine ⟨h.1, fun ⟨x, c⟩ => ?_⟩
     have off := GrammarLaws.not_eq_true_iff.mp h.2
     have on : before.any (fun g => k g f) = true :=
-      GrammarLaws.any_true_of_mem (p := fun g => k g f) (closedBefore x f h.1 c) ((dec x f).mp c)
+      GrammarLaws.any_true_of_mem (p := fun g => k g f) (predecessorsBefore x f h.1 c) ((dec x f).mp c)
     exact nomatch off.symm.trans on
   · intro ⟨mf, begins⟩
     refine GrammarLaws.mem_keep.mpr ⟨mf, GrammarLaws.not_eq_true_iff.mpr
@@ -511,10 +512,11 @@ theorem «步闭则所列生者生» (dec : ∀ x y, «续» R E x y ↔ k x y =
     | false => exact h
     | true => exact absurd ⟨g, (dec g f).mpr h⟩ begins
 
-/-- **Ceasing is ending, on a closed step.** Where every successor of a unit before the step stands
-after it, the units the census lists as ceasing are exactly the units before that end (`«亡»`). -/
-theorem «步闭则所列亡者亡» (dec : ∀ x y, «续» R E x y ↔ k x y = true) {before after : List α}
-    (closedAfter : ∀ g y, g ∈ before → «续» R E g y → y ∈ after) {g : α} :
+/-- **Ceasing is ending, where the successors stand after.** Where every successor of a unit before
+the step stands after it, the units the census lists as ceasing are exactly the units before that
+end (`«亡»`). -/
+theorem «后者在后则所列亡者亡» (dec : ∀ x y, «续» R E x y ↔ k x y = true) {before after : List α}
+    (successorsAfter : ∀ g y, g ∈ before → «续» R E g y → y ∈ after) {g : α} :
     g ∈ GrammarLaws.ceasing k before after ↔ g ∈ before ∧ «亡» R E g := by
   constructor
   · intro m
@@ -522,7 +524,7 @@ theorem «步闭则所列亡者亡» (dec : ∀ x y, «续» R E x y ↔ k x y =
     refine ⟨h.1, fun ⟨y, c⟩ => ?_⟩
     have off := GrammarLaws.not_eq_true_iff.mp h.2
     have on : after.any (k g) = true :=
-      GrammarLaws.any_true_of_mem (p := k g) (closedAfter g y h.1 c) ((dec g y).mp c)
+      GrammarLaws.any_true_of_mem (p := k g) (successorsAfter g y h.1 c) ((dec g y).mp c)
     exact nomatch off.symm.trans on
   · intro ⟨mg, ends⟩
     refine GrammarLaws.mem_keep.mpr ⟨mg, GrammarLaws.not_eq_true_iff.mpr

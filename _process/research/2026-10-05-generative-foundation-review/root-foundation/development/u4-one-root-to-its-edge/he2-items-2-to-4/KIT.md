@@ -2,7 +2,7 @@
 
 *AI-written kit, 31 October 2026, by U4's taker, for whoever lands HE2's rebuild (the board's HE2 row, items 2 to 4). It is checked outside the package; none of it is package Lean yet.*
 
-**Who decides what.** Item 2 is U4's own (lever 1, landed `c5e6b1060` as a study scratch). Items 3 and 4 came from U4's boundary review (u4-edge `2cc1bac0b`, DESIGN-BOUNDARY §3). The coordinator routed them here on 31 October 2026: neither Response nor SelectionPool has a live owner, and both edits are proof-only with every statement kept. OU's owner decides the GrammarLaws additions, since the grammar is theirs, and was sent every «» name below before this kit was committed.
+**Who decides what.** Item 2 is U4's own (lever 1, landed `c5e6b1060` as a study scratch). Items 3 and 4 came from U4's boundary review (u4-edge `2cc1bac0b`, DESIGN-BOUNDARY §3). The coordinator routed them here on 31 October 2026: neither Response nor SelectionPool has a live owner, and both edits are proof-only with every statement kept. OU's owner decides the GrammarLaws additions, since the grammar is theirs, and read every «» name below: all were taken as sent but two in the census, renamed on that reading. «前并生» and «后并亡» read before ++ arising and after ++ ceasing, with «并» the word of joined lists («对之并»), where «前生» read alone means a former life. «前者在前» and «后者在后» say what the hypotheses state, the predecessors lying in the list before and the successors in the list after, with «在» as in «缘在所闭»; «步闭» would have read as «闭», a forward closure the hypotheses are not.
 
 ## What lands
 
@@ -25,8 +25,8 @@ Three model lemmas are re-proved through the new laws, and 38 declarations go in
 | `«类之对当且仅当类类等数»` | Under a class decided by a test, `«对» E a b` holds exactly where every class counts as many units in `a` as in `b`. |
 | `«一对而静不对之例»` | Witness, cited by the class law's docstring as its scope, since the class does work: `[0]` and `[1]` are paired under `«一»` and not under `«静»`. |
 | `«续之对则类类等数»` | A pairing under `«续» R E`, with `E` a class decided by a test, keeps the count in every class. This is what a pairing under continuation adds to equal count. |
-| `«定后定前则前生对后亡»` | The census of a step. Take units listed once before and after it, under `«续» R E` decided by a test, with successors and predecessors fixed. The units before, joined with those arising, are paired one to one with the units after, joined with those ceasing; each pair is a continuation or the same unit. |
-| `«步闭则所列生者生»`, `«步闭则所列亡者亡»` | On a listing closed at the step, the units listed as arising are exactly those after that begin (`«生»`), and those listed as ceasing are exactly those before that end (`«亡»`). |
+| `«定后定前则前并生对后并亡»` | The census of a step. Take units listed once before and after it, under `«续» R E` decided by a test, with successors and predecessors fixed. The units before, joined with those arising, are paired one to one with the units after, joined with those ceasing; each pair is a continuation or the same unit. |
+| `«前者在前则所列生者生»`, `«后者在后则所列亡者亡»` | Where every predecessor of a unit after the step stands before it, the units listed as arising are exactly those after that begin (`«生»`); where every successor of a unit before stands after it, those listed as ceasing are exactly those before that end (`«亡»`). |
 
 **Item 2's helpers.** None has a «» name.
 - With `«计»`, as `total_congr` already stands in Balance: `GrammarLaws.count_append`, `count_insert`, `split_of_count_pos`, `count_go`, `count_eq_countP`, `uncrossed_of_closed`, `class_test_congr` and `pair_of_class_counts`.
@@ -108,6 +108,5 @@ GrammarLaws lies above Grammar.lean, which items 1 and 7 edit, so HE2's rebuild 
 
 ## Not done here
 
-- OU's owner's reading of the names, sent before this commit. A rename is a text change in `HE2U4Laws.lean` plus a rebuild of the three modules.
 - Response and SelectionPool have not been built against the edited GrammarLaws inside the package. That build is HE2's rebuild.
 - No chapter text changes. Chapter 08 §7 and U4's boundary record point at GrammarLaws through the master-laws record, which this kit updates.

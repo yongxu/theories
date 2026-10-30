@@ -130,9 +130,10 @@ DOC = [
      "  (`«续之对则类类等数»`). The census of a step (its own section, after the runs, whose fixed\n"
      "  successor and predecessor it reads): units listed once before and after a step, under a\n"
      "  continuation fixing successors and predecessors, pair those before with those arising to those\n"
-     "  after with those ceasing (`«定后定前则前生对后亡»`), and on a listing closed at the step, arising\n"
-     "  and ceasing are exactly beginning (`«生»`) and ending (`«亡»`) (`«步闭则所列生者生»`,\n"
-     "  `«步闭则所列亡者亡»`). The listing and the test are supplied, as the pairing is.\n"),
+     "  after with those ceasing (`«定后定前则前并生对后并亡»`), and where every predecessor of a unit\n"
+     "  after stands before and every successor of a unit before stands after, arising and ceasing are\n"
+     "  exactly beginning (`«生»`) and ending (`«亡»`) (`«前者在前则所列生者生»`, `«后者在后则所列亡者亡»`).\n"
+     "  The listing and the test are supplied, as the pairing is.\n"),
     ('What is not shown: a pairing under continuation, now stated',
      "these); the n-step lines law for lines of different lengths; that a pairing under continuation\n"
      "(`«对» («续» R E)`) adds anything to equal count, which is not stated; any converse of the law of\n"
@@ -251,13 +252,14 @@ ML_EDITS = {  # law index: (the clause it follows, en, zh, declarations added)
         "the class does work (equal count pairs under the one, not under sameness), so a pairing under continuation "
         "relative to such a class keeps the count in every class. The census of a step: units listed once before "
         "and after it, under a continuation fixing successors and predecessors, pair those before with those "
-        "arising to those after with those ceasing, and on a listing closed at the step, arising and ceasing are "
-        "beginning and ending. The listing and the test are supplied, as the pairing is.",
+        "arising to those after with those ceasing, and where the predecessors of the units after stand before and "
+        "the successors of the units before stand after, arising and ceasing are beginning and ending. The listing "
+        "and the test are supplied, as the pairing is.",
         "近乎定义。",
         "计一域之单位（域读作一判别，此为建模之择），配对守其关系所不越之每一域之数，故守对关系及其逆皆封闭之每一域之数，"
         "单向封闭不足；在由一判别所定之类下，配对恰是每一类中等数，而类有其用（等长者在「一」下配对，在「静」下不配对），"
         "故相对于此类之续下之配对守每一类之数。一步之清点：一步前后各列一次之单位，在定后定前之续下，前者并所生者与后者并"
-        "所亡者一一配对；于该步封闭之列表上，所列之生与亡恰是生与亡。列表与判别皆为所给，如配对然。",
+        "所亡者一一配对；后列诸单位之前者皆在前列、前列诸单位之后者皆在后列之处，所列之生与亡恰是生与亡。列表与判别皆为所给，如配对然。",
         BALANCE_LAWS),
 }
 ML_LIST_EN = ("a value put in front of a sequence, and totals that agree pointwise.",
@@ -347,9 +349,9 @@ APART_NEW = {
     '«一对而静不对之例»': ('model-witness', 'a fact about one constructed relation: equal count pairs under the one '
                                        'and not under sameness, so the class in «类之对当且仅当类类等数» does work '
                                        '(HE2 item 2)'),
-    '«定后定前则前生对后亡»': ('general-structure', CENSUS_REASON),
-    '«步闭则所列生者生»': ('general-structure', CENSUS_REASON),
-    '«步闭则所列亡者亡»': ('general-structure', CENSUS_REASON),
+    '«定后定前则前并生对后并亡»': ('general-structure', CENSUS_REASON),
+    '«前者在前则所列生者生»': ('general-structure', CENSUS_REASON),
+    '«后者在后则所列亡者亡»': ('general-structure', CENSUS_REASON),
     'GrammarLaws.count_eq_countP': ('support', "a list lemma: the grammar's count is Lean's List.countP, proved with "
                                                "no axiom where Init's countP lemmas report propext (HE2 item 2)"),
 }
