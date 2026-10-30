@@ -44,6 +44,28 @@ Each against a publisher, catalogue, proceedings or repository record found by w
 
 The draft page also cites Critch 2021, "What Multipolar Failure Looks Like, and Robust Agent-Agnostic Processes". The Alignment Forum post was found, but its date was not shown in the records. The dossier does not cite it.
 
+Checked on 31 October 2026, for the credits the edition of that day lists outside quotations (the fourth pass's F15 and F16), each against a publisher, catalogue, journal or repository record found by web search. The works RF's sentences cite were checked by RF against their texts ([provenance](#provenance-of-the-dossiers-additions)).
+
+| Work | Record checked | Item |
+|---|---|---|
+| Alboszta and Miękisz 2004, "Stability of evolutionarily stable strategies in discrete replicator dynamics with time delay" | *Journal of Theoretical Biology* 231:175–179, doi 10.1016/j.jtbi.2004.06.012; arXiv q-bio/0409024 | A-10c |
+| Arthur 1989, "Competing Technologies, Increasing Returns, and Lock-In by Historical Events" | *Economic Journal* 99(394):116–131 (RePEc) | A-10b, A-10c |
+| Aumann, Hart and Perry 1997, "The Absent-Minded Driver" | *Games and Economic Behavior* 20(1):102–116 (RePEc; the second author's page) | A-20 |
+| Biggs, Carpenter and Brock 2009, "Turning back from the brink: detecting an impending regime shift in time to avert it" | *PNAS* 106(3):826–831, doi 10.1073/pnas.0811729106 | A-10c |
+| Cowan 1991, "Tortoises and Hares: Choice among Technologies of Unknown Merit" | *Economic Journal* 101(407):801–814 (RePEc) | A-10c |
+| David 1985, "Clio and the Economics of QWERTY" | *American Economic Review* 75(2):332–337, Papers and Proceedings | A-10c |
+| Gardner and West 2010, "Greenbeards" | *Evolution* 64(1):25–38, doi 10.1111/j.1558-5646.2009.00842.x | A-10b |
+| Granovetter 1978, "Threshold Models of Collective Behavior" | *American Journal of Sociology* 83(6):1420–1443, doi 10.1086/226707 | A-10b, A-10c |
+| Harsanyi and Selten 1988, *A General Theory of Equilibrium Selection in Games* | MIT Press, xiii+378 pp. (CiNii; RePEc) | A-10b |
+| Hofbauer and Sigmund 1998, *Evolutionary Games and Population Dynamics* | Cambridge University Press, doi 10.1017/CBO9781139173179 | A-10b |
+| Odling-Smee, Laland and Feldman 2003, *Niche Construction: The Neglected Process in Evolution* | library catalogues: Princeton University Press, Monographs in Population Biology 37 | A-10 |
+| Oliver, Marwell and Teixeira 1985, "A Theory of the Critical Mass. I." | *American Journal of Sociology* 91(3):522–556 | A-10b |
+| Piccione and Rubinstein 1997, "On the Interpretation of Decision Problems with Imperfect Recall" | *Games and Economic Behavior* 20(1):3–24 (RePEc; LSE repository) | A-20 |
+| Schelling 1973, "Hockey Helmets, Concealed Weapons, and Daylight Saving" | *Journal of Conflict Resolution* 17(3):381–428 (RePEc) | A-10b |
+| Schelling 1978, *Micromotives and Macrobehavior* | library catalogues: W. W. Norton, New York, 252 pp. | A-10b, A-10c |
+| Skyrms 2004, *The Stag Hunt and the Evolution of Social Structure* | Cambridge University Press, ISBN 9780521826518 | A-10b |
+| Soares, Fallenstein, Yudkowsky and Armstrong 2015, "Corrigibility" | Workshops at the Twenty-Ninth AAAI Conference on Artificial Intelligence (AI and Ethics), Austin, January 2015 (MIRI; FHI) | A-20 |
+
 <a id="review"></a>
 ## Review
 
@@ -96,6 +118,8 @@ The same faults in 07 §6's readings and in D68 were fixed there too.
 - **After the pass, 30 October 2026:** AJ5 restated the joint selection's first condition on 29 October, from "control is not selected" to "control of the rule is not captured", telling capture from accountable revision. The texts that called the four combinations of control selected or not with a lock left or not "the two conditions" now name them so and say that the models do not tell capture from accountable revision: 07 §6's *Read in time*, the dossier's Part 2 opening, A-10b, A-10c (its weakness, its standing and a third question) and the page (its reading on control, results 8 and 9, question 6). No independent reader has read them.
 - **"The converse":** the two records used the word for opposite cases. The records' owner took it in MA4b's record (`047b090f7`), and MA4's record keeps the word in one sense. The owner also noted that the case not shown depends on how condition 2 is read. Read for the shapers' capture alone, it is control left unselected with that capture kept. Read for any lock that forms, as the plan states the condition, it is both conditions together. Either way three of the four combinations occur. The dossier (A-10b, A-10c and a third question there), the page (results 8 and 9, the bullet on getting out of a lock, a sixth question) and chapter 7 §6 now name both (27 October 2026).
 
+**Fourth pass, 31 October 2026: 42 findings** (16 errors, 20 imprecisions, 6 points of readability), on the edition sized for a person: its ten-minute section, the cut items, A-18 to A-20 and its provenance. Most were hypotheses dropped in the cut, or regressions of the third pass's fixes. How they were taken is [below](#the-fourth-pass-taken).
+
 ## The edition of 31 October 2026: sized for a person
 
 Ren, 31 October 2026, on whether the dossier's latest additions should be checked before the packet is sent: "let's get everything ready before presenting to humans. you can easily read 100k tokens, but we as human can not. please" ([source](../../../../../../sources/15-codex-theory-conversations/2026-10-31-ready-for-human-readers.md)).
@@ -103,16 +127,26 @@ Ren, 31 October 2026, on whether the dossier's latest additions should be checke
 **What a reader met before.** The dossier was 14,817 words, 3,016 of them before its first item: a summary, a box of 1,100 words on what the theory does not address, which had grown with each landing of RF and RR, a provenance list of 900 words and the terms. Five items (A-10, A-10b, A-10c, A-18, A-19) held 6,437 words between them, much of it chains of quotations crediting known forms and the history of each review. The page this kit drafted for alignment readers, [DRAFT-ONE-PAGE.md](history/DRAFT-ONE-PAGE.md), had grown from "one page, readable in ten minutes" ([PLAN](PLAN.md)) to 5,503 words.
 
 **What changed** (AI-authored, no result, chapter or record changed):
-- **The dossier in ten minutes** opens the dossier: the question, seven results with the hypotheses that decide them, the readings for alignment, the tests as they fell, failures first, what is not claimed, five questions and the times. It replaces the draft page, which moved to [history/](history/) by `research.py move`: one text, not two.
+- **The dossier in ten minutes** opens the dossier: the question with the joint selection's three conditions, the terms its results use, seven results with the hypotheses that decide them, readings for alignment, what is not claimed, and the times. **The tests, as they fell** follow in three minutes: what failed, what held and what is untested. Together they replace the draft page, which moved to [history/](history/) by `research.py move`: one text, not two. The questions for the whole close the response form.
 - **The items** and compact **terms** follow; the box became item **A-20** (complying when read, holding an act for a stop, letting a revision through), with its claims as RF and RR wrote them and their records' limits, so that a reviewer can give it a verdict.
 - **A-10, A-10b, A-10c, A-18 and A-19** were cut to their statement, meaning, standing, weaknesses and questions. Credits keep each record's own sentence on what is new; the names it credits are listed, not quoted. A-10c keeps one Lean block. Each landing's history left the items for this section.
 - **Provenance** moved to the end of the dossier, with the full list below, verbatim.
-- **Reading times**, measured on the visible text at 100 to 130 words a minute: the ten-minute section 8.5 to 11 minutes; the one-hour path with it 35 to 46 minutes; the whole dossier, 12,200 words, 94 to 122 minutes.
+- **Reading times**, by [the kit's measure](kit/measure_layers.py) at 100 to 130 words a minute, after the fourth pass was taken: the front with the title, 1,097 words, 8.4 to 11 minutes; the tests, 2 to 3; the one-hour path with both, 5,274 words, 41 to 53; the whole dossier, 13,234 words and 50 lines of Lean, 102 to 132 minutes.
 
 **Landing notes dropped from the items' standings:**
 - A-10: "Theorem (counts), landed 25 October 2026 after an independent AI review narrowed three claims: p does not change the direction *at a step* only; `byBack_reads_iff` is an equivalence, not a derivation of `ReadsShare`; only the numbers of steps matter, and the verdict depends on a."
 - A-10b: "Theorem (counts), landed on 26 October 2026 (board item MA4), after both of this dossier's review passes."
 - A-10c: "Theorem (counts), landed on 26 October 2026 (board item MA4b), after both of this dossier's review passes."
+
+<a id="the-fourth-pass-taken"></a>
+### The fourth pass, taken
+
+An independent AI reader read the edition at `b61aa5bbd` on 31 October 2026 ([its report](REVIEW-FOURTH-PASS.md)) and found 42 problems, 16 of them errors. Most lay in the ten-minute section, which had dropped hypotheses that decide its results and misreported the tests, and in the provenance, which claimed citation checks not made; the cut items' faults were mostly regressions of fixes the third pass had made. Each finding was checked against its source (the Lean statement, the chapter, the record or the experiment's README) and held. All were taken, as proposed except where said:
+- **The ten-minute section** (F1, F3 to F8, F17 to F22, F37, F38, F41, and F42's first point): each result states the hypotheses that decide it, the terms its results use are defined where it begins, and the question names the joint selection's three conditions. To keep ten minutes with these, the tests became a section of their own after it, and the five questions for the whole moved, with Q3 completed, to the response form. A-03's half of result 2 (F3, F17) stays in its item, which states it with its hypotheses, and the dossier's note on instrumental convergence moved to A-03.
+- **The tests** (F9 to F13, F23, F29, F30): taken in the new section and in A-18. F9's "no language model was trained" holds: IN2, which would have fine-tuned one, was dropped before any training job ran. One correction beyond the findings: IN1's own frozen predictions, on installing the direction by instruction, mostly failed (H1 to H3, H5 and D1 in its first round; with talk, R1 to R4 held for gpt-5.4-mini and R2 alone for gpt-4.1-mini), which neither the edition nor the finding reported; both the tests and A-18, whose IN1 row now links its README, say so. F11's flaw is also in chapter 5's T3 ("no frozen test on a trained system yet does"), for its owner.
+- **Provenance** (F15, F36): the seventeen works the edition listed outside quotations unchecked were checked against publication records ([above](#references-as-checked-on-25-october-2026)); the works RF's sentences cite had been checked by RF against their texts. F36's wording was taken.
+- **The items** (F2, F14, F16, F24 to F28, F31 to F35, F39, F40, F42): taken. For F33 the theorems are named (`ChoiceOccasions.above_in_every_iff_reach`, `ChoiceOccasions.both_ways_of_unreached`, `Learning.free_lumped`, `Learning.twin_selected`, `ReadingLoop.alike_within`, `ReadingLoop.Untested.model_or_order`); for F31 the label is the home sections' (natural-number weights and values, read as probabilities where valid; near-definitional, with witnesses; for holding, none claimed new as mathematics).
+- **Restored**, a never-cut item the edition had dropped: that assistance informing the principal adds coupling, which A-12's law does not model, and that the principal's own state and learning are not represented (A-12's weaknesses).
 
 <a id="provenance-of-the-dossiers-additions"></a>
 ## Provenance of the dossier's additions

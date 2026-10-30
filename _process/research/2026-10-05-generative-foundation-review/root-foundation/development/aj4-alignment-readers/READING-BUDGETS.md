@@ -32,7 +32,7 @@ The first two sentences are the item as it stands.
 | Each dossier's front, to its first item or the end of its labelled ten minutes | Within: classical texts, Buddhist thought, philosophy (8 to 11 minutes). Over: logic (13.5 to 17.5), alignment on main (24 to 31) | Ten minutes, with the whole's time and an hour's path | Logic: a third of its front moved later. Alignment: [below](#the-worked-example-the-alignment-dossier) | each dossier's owner |
 | Failure-mode map (a study AJ4 cites) | 8,792 words; its table (§2, 574 words) comes after 1,150 words | Its first part within ten minutes; each row readable alone | A ten-minute section first, on its holder's branch | the map's holder |
 
-Whole dossiers: classical texts 64 to 83 minutes, Buddhist thought 67 to 88, logic 89 to 115 (its four hours include 251 lines of Lean), philosophy 94 to 122, alignment 92 to 120 in the new edition. The cover's times are these or longer. Chapters, records and studies have no budget.
+Whole dossiers: classical texts 64 to 83 minutes, Buddhist thought 67 to 88, logic 89 to 115 (its four hours include 251 lines of Lean), philosophy 94 to 122, alignment 102 to 132 in the new edition. The cover's times are these or longer. Chapters, records and studies have no budget.
 
 <a id="the-readmes-first-screen"></a>
 ## The README's first screen
@@ -65,12 +65,12 @@ Until the layers are within budget, the template states their measured times.
 
 | | On main | New edition |
 |---|---|---|
-| Whole | 13,467 words, 104 to 135 minutes | 11,971 words, 92 to 120 ("about two hours") |
-| Before the first item | 3,077 words, 24 to 31 minutes | The dossier in ten minutes, 1,151 words with the title (to be cut within 1,100) |
-| An hour's path | none | Those ten minutes and seven items, 4,586 words, 35 to 46 minutes |
+| Whole | 13,467 words, 104 to 135 minutes | 13,234 words, 102 to 132 ("about two hours") |
+| Before the first item | 3,077 words, 24 to 31 minutes | The dossier in ten minutes, 1,097 words with the title (8.4 to 11 minutes), then the tests, 290 words (2 to 3) |
+| An hour's path | none | Those ten minutes, the tests and seven items, 5,274 words, 41 to 53 minutes |
 | A separate "one page" | 5,503 words, called ten minutes | Retired to the kit's history |
 
-Provenance moved whole to [the kit's README](README.md#the-edition-of-31-october-2026-sized-for-a-person), and the box on reading and revision became item A-20. A machine checked every quotation against its file, every link and every Lean name: no faults. An independent reader is checking the edition against the records now; its findings are taken before landing.
+Provenance moved whole to [the kit's README](README.md#the-edition-of-31-october-2026-sized-for-a-person), and the box on reading and revision became item A-20. A machine checked every quotation, link and Lean name: no faults. An independent reader then found 42 problems, 16 of them errors, mostly hypotheses the cut had dropped, all taken ([the kit](README.md#the-fourth-pass-taken)). Hypotheses are never cut, so the tests and the questions for the whole left the front, which stays within ten minutes.
 
 ## If OU adopts it
 

@@ -38,8 +38,9 @@ LAYERS = [
     ('front: Buddhist thought', REVIEW + 'BUDDHIST-THOUGHT.md', None, r'^###? B-01', TEN),
     ('front: logic', REVIEW + 'LOGIC.md', None, r'^###? L-01', TEN),
     ('front: philosophy', REVIEW + 'PHILOSOPHY.md', None, r'^###? P-01', TEN),
-    # To the end of the part the dossier labels as its ten-minute reading, or to its first item.
-    ('front: alignment', REVIEW + 'ALIGNMENT.md', None, r'^(## The items|###? A-01)', TEN),
+    # To the end of the part the dossier labels as its ten-minute reading, or else to its first item.
+    ('front: alignment', REVIEW + 'ALIGNMENT.md', None,
+     [(r'^## The dossier in ten minutes$', r'^## '), ('', r'^(## The items|###? A-01)')], TEN),
     # To the end of its ten-minute section, or else to the end of its table.
     ('failure-mode map, its first part', MAP, None,
      [(r'^## The map in ten minutes$', r'^## '), (r'^## \d+\. The map$', r'^## ')], TEN),
