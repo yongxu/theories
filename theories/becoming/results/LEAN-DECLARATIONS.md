@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 344 | 16,715 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 346 | 16,796 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 14 | 772 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -608,6 +608,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [OperationRoles.lean](lean-declarations/core.md#module-9f4103888949) | Generative core and relational structure |
 | [OperativeCoherence.lean](lean-declarations/core.md#module-9712b4ea2312) | Generative core and relational structure |
 | [Optimum.lean](lean-declarations/becoming-core.md#module-86be84561604) | Becoming pure core |
+| [OptimumSeason.lean](lean-declarations/becoming-core.md#module-0116411bbe45) | Becoming pure core |
 | [OrderNormal.lean](lean-declarations/becoming-core.md#module-7412c6ab20ba) | Becoming pure core |
 | [OrganizationCorrespondence.lean](lean-declarations/ethics.md#module-c045ec9ae1ef) | Normative grounding and generative direction |
 | [OrganizationalRuleInheritance.lean](lean-declarations/ethics.md#module-d6cdb351c744) | Normative grounding and generative direction |
@@ -967,6 +968,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [VersionedTaskInstances.lean](lean-declarations/other.md#module-f82d00be1c12) | Other formal studies |
 | [Viability.lean](lean-declarations/becoming-core.md#module-9e2d826ba824) | Becoming pure core |
 | [Weighted.lean](lean-declarations/becoming-core.md#module-d37846dd645c) | Becoming pure core |
+| [WeightedCommuting.lean](lean-declarations/becoming-core.md#module-f0e802abd0ee) | Becoming pure core |
 | [WeightedTraces.lean](lean-declarations/becoming-core.md#module-1855e5878d07) | Becoming pure core |
 | [Weightings.lean](lean-declarations/becoming-core.md#module-f069f36cfea6) | Becoming pure core |
 | [WholeAmounts.lean](lean-declarations/becoming-core.md#module-a68f505bcda8) | Becoming pure core |
