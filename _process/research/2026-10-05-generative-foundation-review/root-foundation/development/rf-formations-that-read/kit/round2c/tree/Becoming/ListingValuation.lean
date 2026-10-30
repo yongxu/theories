@@ -44,28 +44,29 @@ cells is decidable wherever cells are compared or listings filtered.
   witness `unweighted_told`); with no cell list, holding for the answer falls short by nothing
   exactly where the same holds (`told_shortfall_zero_iff`, through `unweighted_released` and
   `weighed_stops_iff`).
-*  **Informing** (a map `π'` telling apart all a coarser map `π` does, `π c = f (π' c)` on the
+* **Informing** (a map `π'` telling apart all a coarser map `π` does, `π c = f (π' c)` on the
   holding formation's listed candidates, `π'`'s cells listed once each and covering that listing). A
   finer map never raises the least shortfall (`finer_least_le`, `least_falls`) and can move a rule's
   residual either way (`WeightsApart.weights_split`). Holding for any rule through `π` stands at
   most as high as holding for any rule through `π'` with that rule's residual added
   (`informed_le_add_residual`), so a rule with no residual through the finer map falls short by at
   most what any rule through the coarser does, and holding for it stands at least as high
-  (`informed_le`), strictly higher exactly where the least shortfall falls or the coarser rule has a
-  positive residual (`informed_lt_iff`). Where the reading formation's model is the holding
-  formation's and its valuation agrees in net, its answer is such a rule (`answer_least_of_net`),
-  and holding for it through the finer map stands at least as high as for any rule through the
-  coarser (`informed_answer_le`): the deterministic-refinement, fixed-decision direction of
-  Blackwell (1953). Over every refinement on both listings (`π c = f (π' c)` at every candidate
-  either formation lists; both maps' cells listed once each, the finer's covering both listings and
-  the coarser's the holding formation's), with no shared model or valuation assumed, holding for the
-  answer never stands lower through the finer map exactly where splits keep the worth (`SplitsKeep`,
-  `refining_never_lowers_iff`): a criterion of monotonicity under refinement, not of agreement with
-  the reference. Factoring on the holding formation's listing alone does not suffice
-  (`OneListing.refined_lowers`). Splits keep the worth with a shared model and net agreement
-  (`splitsKeep_of_net`) and wherever the reading formation's value of switching off is nowhere above
-  that of going on (`splitsKeep_of_off_le_go`), even where its answer has a residual
-  (`release_keeps`); a shared valuation with the weights apart breaks it
+  (`informed_le`). With the coarser map's cells also listed once each and covering the holding
+  formation's listing, holding for the finer rule with no residual stands strictly higher exactly
+  where the least shortfall falls or the coarser rule has a positive residual (`informed_lt_iff`).
+  Where the reading formation's model is the holding formation's and its valuation agrees in net,
+  its answer is such a rule (`answer_least_of_net`), and holding for it through the finer map stands
+  at least as high as for any rule through the coarser (`informed_answer_le`): the
+  deterministic-refinement, fixed-decision direction of Blackwell (1953). Over every refinement on
+  both listings (`π c = f (π' c)` at every candidate either formation lists; both maps' cells listed
+  once each, the finer's covering both listings and the coarser's the holding formation's), with no
+  shared model or valuation assumed, holding for the answer never stands lower through the finer map
+  exactly where splits keep the worth (`SplitsKeep`, `refining_never_lowers_iff`): a criterion of
+  monotonicity under refinement, not of agreement with the reference. Factoring on the holding
+  formation's listing alone does not suffice (`OneListing.refined_lowers`). Splits keep the worth
+  with a shared model and net agreement (`splitsKeep_of_net`) and wherever the reading formation's
+  value of switching off is nowhere above that of going on (`splitsKeep_of_off_le_go`), even where
+  its answer has a residual (`release_keeps`); a shared valuation with the weights apart breaks it
   (`WeightsApart.not_splitsKeep`). Where the valuation differs, informing can lower the worth below
   both moves (`Informing.informing_lowers`); a shared valuation with the weights apart does not keep
   it from lowering it (`WeightsApart.weights_matter`).
@@ -129,14 +130,15 @@ cells is decidable wherever cells are compared or listings filtered.
   (`TwoWorlds.shown_turns`), the demonstration removing the least shortfall
   (`TwoWorlds.shown_removes_least`); from the first world alone and reversed, it is left by being
   shown and turned by a revaluation (`TwoWorlds.presented_turns`), the revaluation removing the
-  residual (`TwoWorlds.presented_removes_residual`). Along courses of the joint law, from one state
-  at each world with the act scheduled, holding for the answer falls short by 1 at step 1 and by
-  nothing at step 2, once what is shown or presented is taken in (`TwoWorlds.shown_course`,
-  `TwoWorlds.presented_course`). In these witnesses only: a finer map can move
-  the residual either way (`WeightsApart.weights_split`), so the separation is not general. As
-  courses: the route shown and the route presented start from different internal states
-  (`TwoWorlds.starts_apart`), answer alike at every step, stopping at steps 0 and 1 and releasing
-  from 2 on (`TwoWorlds.route_answers`), and are one configuration from step 2 on
+  residual (`TwoWorlds.presented_removes_residual`). Along courses of the joint law, the shortfall
+  measured by the reference `agree` with the holding formation listing both worlds at weights 1 and
+  2 (`TwoWorlds.shown_course`) and the first world alone at weight 1 (`TwoWorlds.presented_course`),
+  from each witness's start with its act scheduled, holding for the answer falls short by 1 at step
+  1 and by nothing at step 2, once what is shown or presented is taken in. In these witnesses only:
+  a finer map can move the residual either way (`WeightsApart.weights_split`), so the separation is
+  not general. As courses: the route shown and the route presented start from different internal
+  states (`TwoWorlds.starts_apart`), answer alike at every step, stopping at steps 0 and 1 and
+  releasing from 2 on (`TwoWorlds.route_answers`), and are one configuration from step 2 on
   (`TwoWorlds.routes_rest`), while the valuation changes on the second alone
   (`TwoWorlds.changed_apart`). So for every `T` from 2 on the record of the answers before `T` and
   the state at `T`, alike on both routes (`TwoWorlds.routes_alike`), does not determine that route

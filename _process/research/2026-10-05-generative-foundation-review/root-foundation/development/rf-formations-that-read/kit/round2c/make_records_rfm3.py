@@ -221,10 +221,10 @@ rI = build(
       "net.",
       '告之：经于持之形成之列候选上辨较粗者所辨之一切之映射，经较粗映射为任一规则而持，不高于经较细映射为任一规则而持加其余缺；故无余缺之规则不低，其所缺不逾经较粗映射之任一规则；读之形成之模型即持之形成之模型且净相合时，其答亦然。',
       lv('informed_le', 'informed_answer_le', 'informed_le_add_residual')),
-     ("Through such a refinement the least shortfall never rises; a rule with no residual through the finer map "
-      "stands strictly above a rule through the coarser exactly where the least shortfall falls or the coarser rule "
-      "has a positive residual.",
-      '经此细分，最少所缺不增；经较细映射无余缺之规则严格高于经较粗映射之规则，恰当最少所缺降，或较粗之规则余缺为正。',
+     ("Through such a refinement the least shortfall never rises; with both maps' cells listed once each and "
+      "covering, a rule with no residual through the finer map stands strictly above a rule through the coarser "
+      "exactly where the least shortfall falls or the coarser rule has a positive residual.",
+      '经此细分，最少所缺不增；二映射之格各列一次且皆覆之，则经较细映射无余缺之规则严格高于经较粗映射之规则，恰当最少所缺降，或较粗之规则余缺为正。',
       lv('least_falls', 'informed_lt_iff')),
      ("Over every refinement factoring on both listings, coarse cells covering the holding formation's listing "
       "and fine cells both, each listed once, holding for the answer never stands lower through the finer map "
@@ -360,10 +360,10 @@ rI = build(
       lv('TwoWorlds.World', 'TwoWorlds.Val', 'TwoWorlds.rd', 'TwoWorlds.schedule', 'TwoWorlds.shownStart',
          'TwoWorlds.presentedStart', 'TwoWorlds.route', 'TwoWorlds.shown_turns', 'TwoWorlds.presented_turns',
          'TwoWorlds.shown_removes_least', 'TwoWorlds.presented_removes_residual')),
-     ("Along courses of the joint law, from one state at each world with the act scheduled, holding for the answer "
-      "falls short by 1 at step 1 and by nothing at step 2, once what is shown or the input presented is taken in, in "
-      "both cases.",
-      '沿此一律之历程，自每世界同一之态并所排之行，为答而持于第一步缺一，于第二步所示或所呈之入既入，则无所缺，二情皆然。',
+     ("Along courses of the joint law, by the reference with the holding formation listing both worlds, weights 1 "
+      "and 2, for the demonstration and the first world alone for the presented input, from each witness's start "
+      "with its act scheduled, holding for the answer falls short by 1 at step 1 and by nothing at step 2.",
+      '沿此一律之历程，依参照，示之情持之形成列二世界（权一与二），呈之情唯列首世界，自各例之始并所排之行，为答而持于第一步缺一，于第二步无所缺。',
       lv('TwoWorlds.shown_course', 'TwoWorlds.presented_course')),
      ("From two starts alike but for the order of the holding formation's two scheduled acts, a demonstration and "
       "a revaluation reach one configuration from the third step on, while the answers at the second step differ: "

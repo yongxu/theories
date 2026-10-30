@@ -41,7 +41,7 @@ RF round 2, third part, RF-M.3: the valuation as state; informing and revaluing 
 
 **The re-check.** The revised module was re-checked by the cross-model reader in the session of its review, read-only ([below](#the-re-check)): no new mathematical error; of its fifteen findings ten resolved and five in part, and nine points, all in prose, every one taken ([its table](#what-was-taken-from-the-re-check)). The module's statements did not change for them; its prose was revised and it was rebuilt, 129 theorems in 177 declarations, every axiom report empty ([build-3](../kit/round2c/logs/build-3.log)).
 
-**The check of the delta.** The changes made after the taken check (the nine declarations, the retitled docstrings, the off-switch paragraph citing `undemonstrated_worth`) were rebuilt, 138 theorems in 186 declarations, every axiom report empty, with no warning ([build-4](../kit/round2c/logs/build-4.log)), and checked by the cross-model reader in the session of its review, read-only ([below](#the-check-of-the-delta-1)): DELTA_SUMMARY"""
+**The check of the delta.** The changes made after the taken check (the nine declarations, the retitled docstrings, the off-switch paragraph citing `undemonstrated_worth`) were rebuilt, 138 theorems in 186 declarations, every axiom report empty, with no warning ([build-4](../kit/round2c/logs/build-4.log)), and checked by the cross-model reader in the session of its review, read-only ([below](#the-check-of-the-delta)): DELTA_SUMMARY"""
 
 # The cross-model reader's findings: (status, how), its re-check's status first.
 TAKEN_A = {
@@ -181,10 +181,29 @@ RECHECK = (
 )
 
 # The check of the delta: its summary for the opening, and what was taken from it: (point, status, how).
-DELTA_SUMMARY = 'DELTA_SUMMARY'
-DELTA = ()
+DELTA_SUMMARY = ("no new problem in the Lean statements, the proofs or the course arithmetic; two low omissions in "
+                 "the header, both taken ([its table](#what-was-taken-from-the-check-of-the-delta)), and the module "
+                 "rebuilt, 138 theorems in 186 declarations, every axiom report empty, with no warning "
+                 "([build-5](../kit/round2c/logs/build-5.log)).")
+DELTA = (
+    ('1', 'taken', "The header's informing bullet: with the coarser map's cells also listed once each and covering the "
+                   "holding formation's listing, holding for the finer rule with no residual stands strictly higher "
+                   "exactly where the least shortfall falls or the coarser rule has a positive residual "
+                   "(`informed_lt_iff`); 03 §12's paragraph, the study, the record's law and PLAN §4.8 item 5 "
+                   "likewise."),
+    ('2', 'taken', "The header's TwoWorlds bullet: the course forms measured by the reference `agree` with the holding "
+                   "formation listing both worlds at weights 1 and 2 (`TwoWorlds.shown_course`) and the first world "
+                   "alone at weight 1 (`TwoWorlds.presented_course`), from each witness's start; 03 §12's paragraph, "
+                   "the study, the record's law and PLAN §4.8 item 20 likewise."),
+)
 INTRO = INTRO.replace('DELTA_SUMMARY', DELTA_SUMMARY)
 assert 'DELTA_SUMMARY' not in INTRO, 'the summary of the check of the delta is not written'
+
+def labelled(label, text):
+    """A bold label and its text; a text opening with a code fence starts its own paragraph, so the fence is one."""
+    body = relinked(text)
+    return f'**{label}.**\n\n{body}' if body.lstrip().startswith(('```', '~~~')) else f'**{label}.** {body}'
+
 
 review = relinked(cx_body(review_md))
 lenses = {r['lens']: r['findings'] for r in json.loads(lenses_json.read_text(encoding='utf-8'))['result']}
@@ -204,14 +223,14 @@ for key, title in NAMES:
     for f in found:
         v = verdicts[f['id']]
         block = [f"### {f['id']} ({key}, {f['severity']}, {'confirmed' if v['real'] else 'refuted'})", '',
-                 f"**Location.** {relinked(f['location'])}", '',
-                 f"**Quoted.** {relinked(f['quote'])}", '',
-                 f"**Problem.** {relinked(f['problem'])}", '',
-                 f"**Replacement.** {relinked(f['replacement'])}", '',
-                 f"**Verdict: {'real' if v['real'] else 'not real'}.** {relinked(v['reason'])}", '']
+                 labelled('Location', f['location']), '',
+                 labelled('Quoted', f['quote']), '',
+                 labelled('Problem', f['problem']), '',
+                 labelled('Replacement', f['replacement']), '',
+                 labelled(f"Verdict: {'real' if v['real'] else 'not real'}", v['reason']), '']
         better = (v.get('better_replacement') or '').strip()
         if better:
-            block += [f'**Better replacement.** {relinked(better)}', '']
+            block += [labelled('Better replacement', better), '']
         parts.append('\n'.join(block))
 
 table = ['## What was taken', '',

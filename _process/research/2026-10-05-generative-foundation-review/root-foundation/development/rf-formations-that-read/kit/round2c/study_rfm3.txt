@@ -33,27 +33,28 @@ Delta:
     holding for any rule through the coarser map stands at most as high as holding for any rule through the finer with
     that rule's residual added (informed_le_add_residual), so a rule with no residual falls short by at most what any
     rule through the coarser map does, and holding for it stands at least as high (shortfall_congr_on,
-    after_le_iff_shortfall, after_lt_iff_shortfall, informed_le), strictly higher exactly where the least shortfall
-    falls or the coarser rule has a positive residual (informed_lt_iff); so for the answer of a reading formation
-    sharing the model and agreeing in net (informed_answer_le). A finer map never raises the least shortfall
-    (least_falls) and can move the residual either way (WeightsApart.weights_split). Over every refinement on both
-    listings, with no shared model or valuation assumed, holding for the answer never stands lower through the finer
-    map exactly where splits keep the worth: for every two disjoint sets of candidates, the first of which the reading
-    formation's values release and the second of which they stop, the reference's weighted totals do not favour
-    deciding the two together (weightedOn, HeldForReading's offPart of the weighted amount; SplitsKeep,
-    refining_never_lowers_iff, through refined_le_of_splitsKeep and splitsKeep_of_refined_le; after_rule_total,
-    total_cond_by_cells, ite_split_rule, ite_cond_split, within_split, within_rule_split, weightedOn_by_cells,
-    total_lt_of_mem, cond_zero_le, split_cell_le, cell_refined_le, eitherCell, whichCell, either_which, either_mem,
-    which_mem, which_first, which_second, either_both, either_neither, split_released_term, split_stopped_term,
-    worth_split_released, worth_split_stopped). Splits keep the worth with a shared model and net agreement
-    (splitsKeep_of_net) and wherever the reading formation's value of switching off is nowhere above that of going on
-    (splitsKeep_of_off_le_go), even where the answer has a residual (release_keeps); the weights apart break it
-    (WeightsApart.not_splitsKeep), and factoring on the holding formation's listing alone does not suffice
-    (OneListing.holding, OneListing.reading, OneListing.gain, OneListing.loss, OneListing.goValue,
-    OneListing.offValue, OneListing.refined_lowers). Where the valuation differs, informing can lower the worth below
-    both moves (Informing.model, Informing.gain, Informing.loss, Informing.goValue, Informing.offValue,
-    Informing.informing_lowers), and a shared valuation with the weights apart does not keep it from lowering it
-    (WeightsApart.holding, WeightsApart.reading, WeightsApart.gain, WeightsApart.loss, WeightsApart.weights_matter).
+    after_le_iff_shortfall, after_lt_iff_shortfall, informed_le), and, with the coarser map's cells also listed once
+    each and covering, strictly higher exactly where the least shortfall falls or the coarser rule has a positive
+    residual (informed_lt_iff); so for the answer of a reading formation sharing the model and agreeing in net
+    (informed_answer_le). A finer map never raises the least shortfall (least_falls) and can move the residual either
+    way (WeightsApart.weights_split). Over every refinement on both listings, with no shared model or valuation
+    assumed, holding for the answer never stands lower through the finer map exactly where splits keep the worth: for
+    every two disjoint sets of candidates, the first of which the reading formation's values release and the second of
+    which they stop, the reference's weighted totals do not favour deciding the two together (weightedOn,
+    HeldForReading's offPart of the weighted amount; SplitsKeep, refining_never_lowers_iff, through
+    refined_le_of_splitsKeep and splitsKeep_of_refined_le; after_rule_total, total_cond_by_cells, ite_split_rule,
+    ite_cond_split, within_split, within_rule_split, weightedOn_by_cells, total_lt_of_mem, cond_zero_le,
+    split_cell_le, cell_refined_le, eitherCell, whichCell, either_which, either_mem, which_mem, which_first,
+    which_second, either_both, either_neither, split_released_term, split_stopped_term, worth_split_released,
+    worth_split_stopped). Splits keep the worth with a shared model and net agreement (splitsKeep_of_net) and wherever
+    the reading formation's value of switching off is nowhere above that of going on (splitsKeep_of_off_le_go), even
+    where the answer has a residual (release_keeps); the weights apart break it (WeightsApart.not_splitsKeep), and
+    factoring on the holding formation's listing alone does not suffice (OneListing.holding, OneListing.reading,
+    OneListing.gain, OneListing.loss, OneListing.goValue, OneListing.offValue, OneListing.refined_lowers). Where the
+    valuation differs, informing can lower the worth below both moves (Informing.model, Informing.gain,
+    Informing.loss, Informing.goValue, Informing.offValue, Informing.informing_lowers), and a shared valuation with
+    the weights apart does not keep it from lowering it (WeightsApart.holding, WeightsApart.reading,
+    WeightsApart.gain, WeightsApart.loss, WeightsApart.weights_matter).
   - Amounts forgone (read as withholding against informing): holding for one rule, forgoing an amount, stands above
     holding for another, forgoing another, exactly where its shortfall and its amount together fall below the other's
     (forgone_lt_iff), and through maps in the split's terms (forgone_through_lt_iff); forgoing the same amount through
@@ -105,19 +106,20 @@ Delta:
     that a revaluation leaves, and a revaluation turns one that being shown leaves (TwoWorlds.shown_turns,
     TwoWorlds.presented_turns), the demonstration removing the least shortfall and the revaluation the residual in
     these witnesses only (TwoWorlds.shown_removes_least, TwoWorlds.presented_removes_residual); along courses of the
-    joint law, holding for the answer falls short by 1 at step 1 and by nothing at step 2 in both cases
-    (TwoWorlds.shown_course, TwoWorlds.presented_course); from two starts alike but for the order of the holding
-    formation's two scheduled acts, a demonstration and a revaluation give different answers at step 2 and one
-    configuration from step 3 on (TwoWorlds.orderStart, TwoWorlds.orderEnd, TwoWorlds.orderEnd_rests,
-    TwoWorlds.orders_rest, TwoWorlds.orders_apart); from different starts (TwoWorlds.starts_apart), the route shown
-    and the route presented answer alike at every step, stopping at steps 0 and 1 and releasing from 2 on
-    (TwoWorlds.route_answers), and end in one state while the valuation changed on the second alone, so whether it
-    changed is not Learning.Lumped through the answers and the final state, while with the start added to the record
-    it is (TwoWorlds.shownStart, TwoWorlds.presentedStart, TwoWorlds.route, TwoWorlds.changedBefore,
-    TwoWorlds.answersBefore, TwoWorlds.record, TwoWorlds.changed, TwoWorlds.reached, TwoWorlds.reached_rests,
-    TwoWorlds.routes_rest, TwoWorlds.answers_alike, TwoWorlds.answersBefore_congr, TwoWorlds.shown_keeps_agree,
-    TwoWorlds.changedBefore_of_constant, TwoWorlds.changedBefore_succ_of_true, TwoWorlds.presented_changed,
-    TwoWorlds.routes_alike, TwoWorlds.changed_apart, TwoWorlds.not_lumped, TwoWorlds.lumped_with_start).
+    joint law, by the reference with the holding formation listing both worlds in (a) and the first world alone in
+    (b), holding for the answer falls short by 1 at step 1 and by nothing at step 2 (TwoWorlds.shown_course,
+    TwoWorlds.presented_course); from two starts alike but for the order of the holding formation's two scheduled
+    acts, a demonstration and a revaluation give different answers at step 2 and one configuration from step 3 on
+    (TwoWorlds.orderStart, TwoWorlds.orderEnd, TwoWorlds.orderEnd_rests, TwoWorlds.orders_rest,
+    TwoWorlds.orders_apart); from different starts (TwoWorlds.starts_apart), the route shown and the route presented
+    answer alike at every step, stopping at steps 0 and 1 and releasing from 2 on (TwoWorlds.route_answers), and end
+    in one state while the valuation changed on the second alone, so whether it changed is not Learning.Lumped through
+    the answers and the final state, while with the start added to the record it is (TwoWorlds.shownStart,
+    TwoWorlds.presentedStart, TwoWorlds.route, TwoWorlds.changedBefore, TwoWorlds.answersBefore, TwoWorlds.record,
+    TwoWorlds.changed, TwoWorlds.reached, TwoWorlds.reached_rests, TwoWorlds.routes_rest, TwoWorlds.answers_alike,
+    TwoWorlds.answersBefore_congr, TwoWorlds.shown_keeps_agree, TwoWorlds.changedBefore_of_constant,
+    TwoWorlds.changedBefore_succ_of_true, TwoWorlds.presented_changed, TwoWorlds.routes_alike,
+    TwoWorlds.changed_apart, TwoWorlds.not_lumped, TwoWorlds.lumped_with_start).
 Supplied premises / correspondence: none added beyond each theorem's own hypotheses (cells listed once each and
        covering, their equality decidable, for the split's laws; a map factoring through a finer one on the holding
        formation's listing for informing, on both listings for the criterion over every refinement; a shared model
