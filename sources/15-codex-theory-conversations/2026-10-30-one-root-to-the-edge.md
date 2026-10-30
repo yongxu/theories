@@ -1,10 +1,10 @@
 # Ren: push unification, one root, to the edge
 
-30 October 2026. Ren's words in a Claude Code desktop session in `/Users/ren/theories`, the session that answered whether to release the work now or wait for unification. AI-authored context is labelled separately.
+30 October 2026. Ren's words in the Claude Code desktop session "time moves fast, for all our (fork)" in `/Users/ren/theories`, a fork of the session that answered whether to release the work now or wait for unification. AI-authored context is labelled separately.
 
 ## Context (AI-authored)
 
-Earlier that day Ren asked whether to release the work for AI alignment and academic readers now, or to wait for unification. He chose to unify first. He then asked whether the theory could be a coherent system guiding alignment, extending everything from one interconnected root. The session's answer traced the alignment records' laws to the root through the master-laws view: reach and capture mostly follow from the closure law; the drain rests on amounts, which U1's reviewed verdict keeps as the root's second sort; the direction rests on the two premises, which the dynamics provably do not entail (`ReadsOnlyDynamics.not_entails`). About one law in five across the alignment records reaches the grammar.
+Earlier that day Ren asked whether to release the work for AI alignment and academic readers now, or to wait for unification. He chose to unify first ([source](2026-10-30-release-after-unification.md)). He then asked whether the theory could be a coherent system guiding alignment, extending everything from one interconnected root. The session's answer traced the alignment records' laws to the root through the master-laws view: reach and capture mostly follow from the closure law; the drain rests on amounts, which U1's reviewed verdict keeps as the root's second sort; the direction rests on the two premises, which the dynamics provably do not entail (`ReadsOnlyDynamics.not_entails`). About one law in five across the alignment records reaches the grammar.
 
 ## Ren's words
 
