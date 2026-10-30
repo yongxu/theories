@@ -342,6 +342,87 @@ def snapshot_directory(settings=None):
     return path.rstrip('/') if isinstance(path, str) and path.strip('/') else None
 
 
+LAW_KEYS = ('en', 'zh', 'declarations', 'statements_at_model')
+AT_MODEL_KEYS = ('declaration', 'of', 'models', 'review')
+# F5's field (architecture/mv/F5-MODEL-STATEMENTS.md): where a law states a row, in the order and words the page uses.
+MODELS = {'occurrence': "a World's occurrence model", 'process': "a process's model", 'own': "the row's own carrier"}
+
+
+def _review_text(path):
+    p = path_in_repo(path)
+    try:
+        return p.read_text() if p is not None and p.is_file() else None
+    except (OSError, UnicodeDecodeError):
+        return None
+
+
+def statements_at_model_errors(r):
+    """F5's field: a law's theorems that state a row of the same record at a model, each naming its models and its
+    review. Only the pair, its models and its review are declared; MV's generator verifies the rest from the Lean."""
+    laws = [x for x in r.get('laws', []) if isinstance(x, dict)]
+    errors = [f'law {i}: keys must lie among {", ".join(LAW_KEYS)}: ' + ', '.join(sorted(map(str, set(x) - set(LAW_KEYS))))
+              for i, x in enumerate(laws, 1) if set(x) - set(LAW_KEYS)]
+    carrying = [(i, x) for i, x in enumerate(laws, 1) if 'statements_at_model' in x]
+    if not carrying:
+        return errors
+    if r.get('status') in {'superseded', 'withdrawn'}:
+        errors.append('statements_at_model is not allowed on a superseded or withdrawn record')
+    reviews = {x.get('path') for x in r.get('references', []) if isinstance(x, dict) and x.get('role') == 'review'}
+    names = {i: [d for d in x.get('declarations', []) if isinstance(d, str)] if isinstance(x.get('declarations'), list) else []
+             for i, x in enumerate(laws, 1)}
+    items = []
+    for i, law in carrying:
+        block = law['statements_at_model']
+        if not isinstance(block, list) or not block:
+            errors.append(f'law {i}: statements_at_model must be a nonempty list')
+            continue
+        for item in block:
+            if not isinstance(item, dict) or set(item) != set(AT_MODEL_KEYS):
+                errors.append(f'law {i}: a statement at a model has exactly the keys {", ".join(AT_MODEL_KEYS)}')
+                continue
+            d, of, models, review = (item[k] for k in AT_MODEL_KEYS)
+            if not all(isinstance(x, str) and x for x in (d, of, review)):
+                errors.append(f'law {i}: declaration, of and review must be nonempty strings')
+                continue
+            items.append((i, item))
+            if not isinstance(models, list) or not models or any(not isinstance(m, str) or m not in MODELS for m in models) \
+                    or len(set(models)) != len(models):
+                errors.append(f'law {i}: models must be a nonempty list of distinct values among {", ".join(MODELS)}')
+            if d not in names[i]:
+                errors.append(f'law {i}: its statement at a model {d} is not among its declarations')
+            if not any(of in names[j] for j in names if j != i):
+                errors.append(f'law {i}: the row {of} is among the declarations of no other law of the record')
+            if review not in reviews:
+                errors.append(f'law {i}: {review} is not a reference of role review in the record')
+            elif (text := _review_text(review)) is not None and not re.search(r'`(?:[^`\s]*\.)?' + re.escape(d.rsplit('.', 1)[-1]) + '`', text):
+                errors.append(f'law {i}: its review {review} does not name {d}')
+    rows = {item['of'] for _, item in items}
+    for i, _ in carrying:
+        held = sorted(rows & set(names[i]))
+        if held:
+            errors.append(f'law {i} carries statements at a model and holds the row of one: ' + ', '.join(held))
+    seen = {}
+    for _, item in items:
+        seen[item['declaration']] = seen.get(item['declaration'], 0) + 1
+    twice = sorted(d for d, n in seen.items() if n > 1)
+    if twice:
+        errors.append('a theorem is the statement at a model of more than one item: ' + ', '.join(twice))
+    return errors
+
+
+def statements_at_model_across(records):
+    """Across all records, a theorem states a row at a model in at most one record."""
+    where = {}
+    for r in records:
+        for law in r.get('laws', []) if isinstance(r.get('laws'), list) else []:
+            block = law.get('statements_at_model') if isinstance(law, dict) else None
+            for item in block if isinstance(block, list) else []:
+                if isinstance(item, dict) and isinstance(item.get('declaration'), str):
+                    where.setdefault(item['declaration'], set()).add(r.get('id'))
+    return [f'{d}: the statement at a model of items in more than one record: ' + ', '.join(sorted(map(str, ids)))
+            for d, ids in sorted(where.items()) if len(ids) > 1]
+
+
 def validate_v2_fields(r, settings=None):
     """Structure of the schema-2 fields; readability rules come from style.lint."""
     settings = config() if settings is None else settings
@@ -369,6 +450,7 @@ def validate_v2_fields(r, settings=None):
         unknown = [d for d in names if not isinstance(d, str) or d not in declared]
         if unknown:
             errors.append('law names undeclared references: ' + ', '.join(map(str, unknown)))
+    errors += statements_at_model_errors(r)
     for item in r.get('does_not_show', []):
         if not isinstance(item.get('kind'), str) or item['kind'] not in NOT_SHOWN:
             errors.append(f'does_not_show kind must be one of {", ".join(sorted(NOT_SHOWN))}')
@@ -543,6 +625,42 @@ def master_law_note(r, i, law):
     return label + text + '.'
 
 
+def declared_items(law):
+    """A law's statements at a model as its record declares them, in the form the data keeps them."""
+    block = law.get('statements_at_model') if isinstance(law, dict) else None
+    return [{k: x.get(k) for k in AT_MODEL_KEYS} for x in block if isinstance(x, dict)] if isinstance(block, list) else []
+
+
+def at_model_notes(r, i, law, result_link, base):
+    """F5's lines under law i: its own statements at a model, as the data verified them, and the statements at a model
+    of its rows, wherever they are carried. Each appears only while the carrying record declares exactly the items the
+    data read; an item the data did not verify shows nothing. Both mark what is declared and name its review, and an
+    item only on its row's own carrier is not labelled as at a model."""
+    m = r.get('_master_laws')
+    e = m['laws'].get(i) if m else None
+    if not e or e.get('declarations') != law.get('declarations', []):
+        return []
+    def label(x):
+        kind = 'At a model' if set(x['models']) & {'occurrence', 'process'} else 'On its own carrier'
+        return f'*{kind} (declared; reviewed in {link(x["review"], base)}):*'
+    lines = []
+    shown = set(m.get('matched_at_model', []))
+    if f'{r.get("id")}:{i}' in shown:
+        for x in e['statements_at_model']:
+            if x.get('verified'):
+                kept = _listed(['`' + n + '`' for n in x.get('other_terms', [])]) or 'nothing'
+                alone = ALONE.get(x.get('row_dependence'), x.get('row_dependence'))
+                lines.append(f'{label(x)} `{x["declaration"]}` states `{x["of"]}` at {_listed([MODELS.get(k, k) for k in x["models"]])}. '
+                             f'Computed: its proof reaches the row; its statement names, directly or through its module\'s definitions, '
+                             f'{_listed(["`" + n + "`" for n in x["grammar_terms"]])}; it keeps {kept} in other terms. The row taken alone: {alone}.')
+    for x in e.get('stated_at_model', []):
+        if f'{x["record"]}:{x["law"]}' in shown:
+            where = f'law {x["law"]} of this record' if x['record'] == r.get('id') else f'{result_link(x["record"])}, law {x["law"]}'
+            lines.append(f'{label(x)} `{x["of"]}` is stated at {_listed([MODELS.get(k, k) for k in x["models"]])} by '
+                         f'`{x["declaration"]}` ({where}).')
+    return lines
+
+
 def master_laws_status(records):
     """How far data/master-laws.json still matches: laws whose declarations changed or that it has not read, whether
     the core sources it was computed on are still the latest receipt's, and whether the measure, its coverage, the
@@ -554,7 +672,11 @@ def master_laws_status(records):
         return {'measured': False, 'error': data['error']}
     unmatched = [f'{r["id"]}:{i}' for r in records for i, law in enumerate(r.get('laws', []), 1)
                  if law.get('declarations') and (not r.get('_master_laws') or (e := r['_master_laws']['laws'].get(i)) is None
-                                                 or e.get('declarations') != law.get('declarations', []))]
+                                                 or e.get('declarations') != law.get('declarations', [])
+                                                 or declared_items(e) != declared_items(law))]
+    unverified = [f'{ident}:{e["law"]}:{x.get("declaration")} ({"; ".join(x.get("failed", []))})'
+                  for ident, entries in sorted(data.get('records', {}).items()) for e in entries
+                  for x in e.get('statements_at_model', []) if not x.get('verified')]
     receipt = json.loads((ROOT / CORE_RECEIPT).read_text()) if (ROOT / CORE_RECEIPT).is_file() else {}
     same = receipt.get('status') == 'passed' and data.get('core_sources_sha256') == hashlib.sha256(json.dumps(receipt.get('source_sha256', {}), sort_keys=True).encode()).hexdigest()
     changed = sorted(p for p, h in data.get('inputs_sha256', {}).items() if not (ROOT / p).is_file() or digest(ROOT / p) != h)
@@ -562,6 +684,7 @@ def master_laws_status(records):
             'core_sources_current': same, 'inputs_changed': changed, 'from_dump': data.get('from_dump', False),
             'current': same and not changed and not unmatched and not data.get('from_dump', False),
             'laws_not_matched': len(unmatched), 'first_not_matched': unmatched[:10],
+            'statements_at_model_unverified': unverified,
             'refresh': 'python3 -B tools/research/master_laws.py, then make research-render'}
 
 
@@ -591,6 +714,7 @@ def validate(records):
     settings = config()
     errors += validate_standard_boundaries(settings)
     errors += law_family_errors(records)
+    errors += statements_at_model_across(records)
     for r in records:
         ident = r.get('id', '<missing>')
         def fail(message):
@@ -873,8 +997,8 @@ def render_record_v2(r):
             names = ', '.join('`' + d + '`' for d in law.get('declarations', []))
             lines += [f'{i}. ' + en(law) + (f' ({names})' if names else '')]
             note = master_law_note(r, i, law)
-            if note:
-                lines += [' ' * len(f'{i}. ') + '- ' + note]  # a child of item i: as wide as its marker
+            for line in ([note] if note else []) + at_model_notes(r, i, law, result_link, base):
+                lines += [' ' * len(f'{i}. ') + '- ' + line]  # a child of item i: as wide as its marker
         lines += ['']
     lines += [heading('##', 'Conditions', 'Conditions / 条件'), '']
     lines += ['- ' + en(x) for x in r['hypotheses']]
@@ -1017,6 +1141,16 @@ def load_records():
     for r in records:
         if isinstance(measured.get('records'), dict) and r['id'] in measured['records']:
             r['_master_laws'] = {'names': measured.get('names', {}), 'laws': {e['law']: e for e in measured['records'][r['id']]}}
+    # F5: the laws whose statements at a model the data read exactly as their records now declare them; the lines of
+    # an item, under its own law and under its row's laws in any record, are shown only for these.
+    matched = {f'{r["id"]}:{i}' for r in records if '_master_laws' in r and isinstance(r.get('laws'), list)
+               for i, law in enumerate(r['laws'], 1)
+               if isinstance(law, dict) and law.get('statements_at_model') is not None
+               and (e := r['_master_laws']['laws'].get(i)) is not None and e.get('statements_at_model') is not None
+               and e.get('declarations') == law.get('declarations', []) and declared_items(e) == declared_items(law)}
+    for r in records:
+        if '_master_laws' in r:
+            r['_master_laws']['matched_at_model'] = sorted(matched)  # a list: records are dumped as JSON elsewhere
     return sorted(records, key=lambda r: r['id']), errors
 
 

@@ -84,6 +84,8 @@ Expected free energy as defined by Parr and Friston (2019, Biological Cybernetic
 | integration | [REVIEW-UE19.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue19-expected-free-energy/REVIEW-UE19.md) | — |
 | integration | [RECHECK-UE19.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue19-expected-free-energy/RECHECK-UE19.md) | — |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T043340.180184Z/verification.json) | — |
 
 Aliases: `Expected free energy and its terms`, `期望自由能及其诸项`, `expected free energy`, `risk and ambiguity`, `epistemic and pragmatic value`, `expected information gain`, `Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic`, `Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse`
 

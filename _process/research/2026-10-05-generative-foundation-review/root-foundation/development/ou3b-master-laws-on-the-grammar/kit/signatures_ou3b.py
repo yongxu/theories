@@ -62,13 +62,84 @@ STARTS = ('def ', 'abbrev ', 'structure ', 'inductive ', 'class ', 'theorem ', '
           'universe ', 'set_option ', 'attribute ', 'local ', '#')
 
 
-def definitions(text):
-    """name (with the enclosing namespaces) -> the definition's text, docstrings left out."""
+def blank_comments(text, where=''):
+    """The text with every comment (block comments, nested, docstrings and module docs among them, and line comments)
+    replaced by spaces, line breaks kept, so that a scan reads code only. String literals (raw strings among them),
+    «» names and character literals are kept as they are, and a comment marker inside one is not read as a comment; a
+    docstring opens with all of `/--`, so `/--/` opens one. A comment, string or «» name still open at the end of the
+    text stops the scan, naming `where`. Not parsed: strings nested inside an interpolated string's braces. (Added 30
+    October 2026, after HE: a reflowed docstring line starting "class constant ..." was read as a definition; the
+    catalogue's parser blanks comments the same way.)"""
+    out, i, n, depth, in_string, in_name = [], 0, len(text), 0, False, False
+    while i < n:
+        c, two = text[i], text[i:i + 2]
+        if depth:
+            if two == '/-':
+                depth, i = depth + 1, i + 2
+                out.append('  ')
+            elif two == '-/':
+                depth, i = depth - 1, i + 2
+                out.append('  ')
+            else:
+                out.append('\n' if c == '\n' else ' ')
+                i += 1
+        elif in_name:
+            if c == '»':
+                in_name = False
+            out.append(c)
+            i += 1
+        elif in_string:
+            if c == '\\' and i + 1 < n:
+                out.append(text[i:i + 2])
+                i += 2
+            else:
+                if c == '"':
+                    in_string = False
+                out.append(c)
+                i += 1
+        elif two == '/-':
+            opener = 3 if text[i:i + 3] == '/--' else 2
+            depth, i = 1, i + opener
+            out.append(' ' * opener)
+        elif two == '--':
+            j = text.find('\n', i)
+            j = n if j < 0 else j
+            out.append(' ' * (j - i))
+            i = j
+        elif c == "'" and i + 2 < n and text[i + 1] != '\\' and text[i + 2] == "'":
+            out.append(text[i:i + 3])
+            i += 3
+        elif c == "'" and i + 3 < n and text[i + 1] == '\\' and text[i + 3] == "'":
+            out.append(text[i:i + 4])
+            i += 4
+        elif (raw := c == 'r' and re.match(r'r(#*)"', text[i:i + 300])) and not (
+                i and (text[i - 1].isalnum() or text[i - 1] in "_'!?.»")):
+            close = text.find('"' + raw.group(1), i + raw.end())
+            assert close >= 0, (f'{where}: a raw string is still open at the end', i)
+            j = close + 1 + len(raw.group(1))
+            out.append(text[i:j])
+            i = j
+        else:
+            if c == '"':
+                in_string = True
+            elif c == '«':
+                in_name = True
+            out.append(c)
+            i += 1
+    assert not (depth or in_string or in_name), (f'{where}: a comment, string or «» name is still open at the end',
+                                                 depth, in_string, in_name)
+    return ''.join(out)
+
+
+def definitions(text, where=''):
+    """name (with the enclosing namespaces) -> the definition's text, comments and docstrings left out (read through
+    blank_comments, so that no comment line is read as a definition) and runs of whitespace collapsed (so that no edit
+    of a comment, or of its length, reads as a rewrite). `where` names the text in blank_comments' errors."""
     out, ns, name, body = {}, [], None, []
-    for line in text.split('\n'):
+    for line in blank_comments(text, where).split('\n'):
         if line.startswith(STARTS) or (line and not line[0].isspace() and line[0] != '|'):
             if name:
-                out[name] = '\n'.join(body).rstrip()
+                out[name] = ' '.join('\n'.join(body).split())
                 name = None
             m = DEF_RE.match(line)
             if line.startswith('namespace '):
@@ -80,7 +151,7 @@ def definitions(text):
         elif name is not None:
             body.append(line)
     if name:
-        out[name] = '\n'.join(body).rstrip()
+        out[name] = ' '.join('\n'.join(body).split())
     return out
 
 

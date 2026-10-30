@@ -1,0 +1,97 @@
+import Lean
+import Becoming.Identity
+import Becoming.PatternPassing
+import Becoming.ContinuedClasses
+import Becoming.Wholes
+import Becoming.Exclusion
+import Becoming.Reserve
+import Becoming.Retaining
+import Becoming.Persistence
+import Becoming.MapInstances
+import Becoming.Arising
+import Becoming.GrammarLaws
+
+open Lean Elab Command
+
+/-! For each (a) and (b) row of OU3f's audit, and the rows that follow them: which of the named grammar laws its
+proof reaches, directly (in its own value) and transitively (through the values of the constants it uses). -/
+
+def rows : List (Name × List Name) := [
+  -- (a): closure
+  (`Becoming.Web.inactive_of_not_arising, [`Becoming.kept_onward, `Becoming.«线则所闭»]),
+  (`Becoming.Web.active_back, [`Becoming.kept_onward, `Becoming.«线则所闭»]),
+  (`Becoming.Web.active_before, [`Becoming.kept_onward, `Becoming.«线则所闭»]),
+  (`Becoming.Web.ended_for_good, [`Becoming.kept_onward, `Becoming.«线则所闭»]),
+  (`Becoming.Web.ByPassing.present_earlier, [`Becoming.kept_onward, `Becoming.«线则所闭»]),
+  (`Becoming.Web.ByPassing.trace, [`Becoming.kept_onward, `Becoming.«线则所闭»]),
+  (`Becoming.Web.steady_held, [`Becoming.kept_onward, `Becoming.«线则所闭»]),
+  -- (a): twins and ends_within
+  (`Becoming.Web.Continuing.mono, [`Becoming.«及之单调»]),
+  (`Becoming.Web.ByPassing.passes_within, [`Becoming.«两端分则中有标», `Becoming.«线内同类»]),
+  (`Becoming.Web.ByPassing.begins_passed, [`Becoming.«生于细而续于粗则异»]),
+  (`Becoming.Web.ByPassing.ends_within, [`Becoming.«两端分则中有标», `Becoming.«线内同类»]),
+  -- (a): restricted bridge
+  (`Becoming.Web.Lineage.unique, [`Becoming.«迭之定»]),
+  (`Becoming.Web.Lineage.origin, [`Becoming.«迭之定前»]),
+  -- (a): this pair
+  (`Becoming.Web.wang_state_of_change, [`Becoming.«亡于粗则亡于细»]),
+  (`Becoming.Web.sheng_state_of_change, [`Becoming.«生于粗则生于细»]),
+  -- (b)
+  (`Becoming.Web.Lineage.split, [`Becoming.«迭之分»]),
+  (`Becoming.Web.Lineage.through, [`Becoming.«迭之分»]),
+  (`Becoming.Web.Lineage.onward, [`Becoming.«不穷则迭», `Becoming.«或有后则或迭»]),
+  (`Becoming.Web.Lineage.back, [`Becoming.«或有后则或迭», `Becoming.«迭之逆»]),
+  -- (a), follows
+  (`Becoming.Web.ByPassing.present_of_le, [`Becoming.kept_onward]),
+  (`Becoming.Web.ByPassing.empty_stays, [`Becoming.kept_onward]),
+  (`Becoming.Web.Lineage.ends, [`Becoming.«迭之分», `Becoming.«迭之定»]),
+  (`Becoming.Web.lineages_apart, [`Becoming.«迭之分», `Becoming.«迭之定前»]),
+  -- (b), follows
+  (`Becoming.Web.reaches_onward, [`Becoming.«不穷则迭»]),
+  (`Becoming.Web.not_endless_of_gone, [`Becoming.«不穷则迭»]),
+  (`Becoming.Web.stopped_not_endless, [`Becoming.«不穷则迭»]),
+  (`Becoming.Web.generation_arises_late, [`Becoming.«不穷则迭»]),
+  (`Becoming.Web.generation_renews_late, [`Becoming.«不穷则迭»]),
+  (`Becoming.Web.keeping_of_carried_on, [`Becoming.«不穷则迭»]),
+  -- (a), done
+  (`Becoming.Web.arises_of_persisting_arises, [`Becoming.«生于粗则生于细»]),
+  (`Becoming.Web.ceases_of_persisting_ceases, [`Becoming.«亡于粗则亡于细»]),
+  (`Becoming.Web.ceasesFrom_of_unconditioned, [`Becoming.«亡于粗则亡于细»]),
+  (`Becoming.Web.ceases_of_pattern_ends, [`Becoming.«亡于粗则亡于细»]),
+  (`Becoming.Web.merge_candles, [`Becoming.«蜡烛之合»]),
+  (`Becoming.Web.active_along_line, [`Becoming.«线内同类»]),
+  (`Becoming.Web.dissipation_arising_not_recurring, [`Becoming.«尽则不或屡»])]
+
+/-- The twins and the retired names: present or gone. -/
+def retired : List Name := [`Becoming.Web.Continuing.mono_by_reach, `Becoming.Web.ByPassing.passes_within_by_line,
+  `Becoming.Web.ByPassing.begins_passed_by_grammar, `Becoming.Web.Lineage.cons]
+
+partial def reach (env : Environment) (start : Name) : NameSet := Id.run do
+  let mut seen : NameSet := {}
+  let mut todo : Array Name := #[start]
+  while h : todo.size > 0 do
+    let n := todo.back
+    todo := todo.pop
+    match env.find? n with
+    | none => pure ()
+    | some ci =>
+      let used := (ci.value? (allowOpaque := true)).map Expr.getUsedConstants |>.getD #[]
+      for m in used ++ ci.type.getUsedConstants do
+        if !seen.contains m then
+          seen := seen.insert m
+          todo := todo.push m
+  return seen
+
+#eval show CommandElabM Unit from do
+  let env ← getEnv
+  for (n, laws) in rows do
+    match env.find? n with
+    | none => logInfo m!"MISSING {n}"
+    | some ci =>
+      let direct := (ci.value? (allowOpaque := true)).map Expr.getUsedConstants |>.getD #[]
+      let all := reach env n
+      let marks := laws.map fun l =>
+        s!"{l.toString}: {if direct.contains l then "direct" else if all.contains l then "transitive" else "NO"}"
+      logInfo m!"ROW {n} | {String.intercalate "; " marks}"
+  for n in retired do
+    logInfo m!"RETIRED? {n} {if env.contains n then "present" else "gone"}"

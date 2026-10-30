@@ -1,0 +1,5 @@
+ROW Becoming.Web.wang_state_of_change | Becoming.«亡于粗则亡于细»: direct; Becoming.«粗化»: transitive
+ROW Becoming.Web.sheng_state_of_change | Becoming.«生于粗则生于细»: direct; Becoming.«粗化»: transitive
+ROW Becoming.Web.arises_of_persisting_arises | Becoming.«生于粗则生于细»: direct
+ROW Becoming.Web.ceases_of_persisting_ceases | Becoming.«亡于粗则亡于细»: direct
+ROW Becoming.Web.steady_held | Becoming.kept_onward: direct

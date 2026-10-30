@@ -78,7 +78,7 @@ Canonical source: [WorldRepresentation.lean](../../../../experiments/integrated-
 <a id="next--下一步"></a>
 ## Next
 
-The amount part's joint image; a representation through the order of joined exchanges; the laws that read only activity at the occurrence model (OU3f); review by a person.
+The amount part's joint image; a representation through the order of joined exchanges; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -140,6 +140,7 @@ Aliases: `The World's representation theorem`, `世界之表示定理`, `the occ
 
 - 29 October 2026: added (WRT2), the World represented in the grammar both ways, its amounts not: the occurrence model and its name-free part, carried by every re-identification; the grammar's listed terms kept by correspondence; recurrence at the model; the relational part ranging over everything, conservation exactly its form, what amounts induce decided; the failure on amounts with four witnesses; after the design's two reviews, a review of the Lean and its re-read; study section 440.
 - 29 October 2026 (WRP2, study section 447): its item and next step on processes brought to the landed theorem, processes-represented-both-ways, as a related record; no statement, law or declaration changed.
+- 30 October 2026 (U2, study section 461): the next step's item on the laws reading only activity at the occurrence model dropped: OU3f landed them at the web's carrier, which its audit (part (a)) shows needs no occurrence model; no statement, law or declaration changed.
 
 </details>
 

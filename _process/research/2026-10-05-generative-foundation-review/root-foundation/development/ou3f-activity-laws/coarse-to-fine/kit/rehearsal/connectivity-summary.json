@@ -1,0 +1,11 @@
+{
+ "commit": "24d20df6ef59d50507cac94ff7d2b6975841f0f5",
+ "core_receipt_at_commit": "20261029T191748.070149Z",
+ "tracked_modules": 349,
+ "constants": 50474,
+ "spine_theorems": 17005,
+ "apart": 1805,
+ "apart_roots": 1034,
+ "apart_roots_unclassified": [],
+ "register_entries_not_apart_roots": []
+}

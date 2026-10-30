@@ -1,0 +1,42 @@
+{
+ "modules": 347,
+ "differ_from_scrub": [],
+ "differ_count": 0,
+ "census": {
+  "raw_string": [],
+  "char_literal": [
+   [
+    "Becoming.Description",
+    "'b'"
+   ],
+   [
+    "Becoming.Description",
+    "'b'"
+   ],
+   [
+    "Becoming.Description",
+    "'b'"
+   ],
+   [
+    "Becoming.Description",
+    "'b'"
+   ],
+   [
+    "Becoming.Description",
+    "'b'"
+   ]
+  ],
+  "code_quote_lines": 2,
+  "guillemet_specials": [],
+  "slash_dash_dash_slash": [],
+  "prime_window": 7
+ },
+ "census_counts": {
+  "raw_string": 0,
+  "char_literal": 5,
+  "code_quote_lines": 2,
+  "guillemet_specials": 0,
+  "slash_dash_dash_slash": 0,
+  "prime_window": 7
+ }
+}

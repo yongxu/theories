@@ -1,0 +1,44 @@
+{
+ "source_drift": [
+  {
+   "id": "continuation-relative-to-a-class",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
+   "reviewed_sha256": "e61983bd18766a0bdb88aa15d80e307350d7d755e8efff1ed27cff855eafa33a",
+   "current_sha256": "993b1fe983e5eb9530fb0ab3af2ca3dbad317501de9d90b13d8cda2e3249cba7",
+   "changed_sections": [
+    "(not Markdown: exact bytes required)"
+   ]
+  },
+  {
+   "id": "identity-across-steps",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
+   "reviewed_sha256": "e61983bd18766a0bdb88aa15d80e307350d7d755e8efff1ed27cff855eafa33a",
+   "current_sha256": "993b1fe983e5eb9530fb0ab3af2ca3dbad317501de9d90b13d8cda2e3249cba7",
+   "changed_sections": [
+    "(not Markdown: exact bytes required)"
+   ]
+  },
+  {
+   "id": "master-laws-on-the-grammar",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
+   "reviewed_sha256": "e61983bd18766a0bdb88aa15d80e307350d7d755e8efff1ed27cff855eafa33a",
+   "current_sha256": "993b1fe983e5eb9530fb0ab3af2ca3dbad317501de9d90b13d8cda2e3249cba7",
+   "changed_sections": [
+    "(not Markdown: exact bytes required)"
+   ]
+  },
+  {
+   "id": "the-world-represented-both-ways",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
+   "reviewed_sha256": "e61983bd18766a0bdb88aa15d80e307350d7d755e8efff1ed27cff855eafa33a",
+   "current_sha256": "993b1fe983e5eb9530fb0ab3af2ca3dbad317501de9d90b13d8cda2e3249cba7",
+   "changed_sections": [
+    "(not Markdown: exact bytes required)"
+   ]
+  }
+ ],
+ "unrelated_source_drift": [],
+ "errors": [
+  "generated view differs; reconcile and run make research-render: theories/becoming/results/completion/COMPLETION.md"
+ ]
+}

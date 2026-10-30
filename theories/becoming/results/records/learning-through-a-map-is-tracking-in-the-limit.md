@@ -12,6 +12,7 @@
 
 1. A guess tracks a target in the limit where, on every run, from some horizon on it is the target's value at the horizon; identifying a hypothesis is tracking a target constant in the horizon, and two targets one guess tracks agree from some horizon on. (`Becoming.Limit.Tracks`, `Becoming.Limit.identifies_iff_tracks`, `Becoming.Limit.Tracks.agree`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use; the measure counts central declaration `Becoming.Limit.identifies_iff_tracks` as following from its definitions (definitional or representational: Iff.rfl).
+   - *At a model (declared; reviewed in [RECHECK-U2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md)):* `Becoming.Limit.identifies_iff_tracks` is stated at a process's model by `Becoming.ModelStatements.identifies_iff_reading` (law 6 of this record).
 2. An extrapolation's guess at horizon k is what it proposes from the prefix before k of the run's course through the map; it is fixed by the record through the map, so by the record. The extrapolation predicts the feature along every run exactly where its guess tracks it. (`Becoming.LearnableRuns.guess`, `Becoming.LearnableRuns.FixedThrough`, `Becoming.LearnableRuns.guess_fixedThrough`, `Becoming.LearnableRuns.FixedThrough.byRecord`, `Becoming.LearnableRuns.predicts_iff_tracks`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. A guess fixed by the record through the map that tracks the feature gives runs beginning alike in the frame features agreeing from some step on; learnable through the map, some such guess tracks it, with no premise; in a world a list holds, learnable exactly where some such guess tracks the feature. (`Becoming.LearnableRuns.agree_of_tracks`, `Becoming.LearnableRuns.tracks_of_learnable`, `Becoming.LearnableRuns.learnable_iff_tracks`)
@@ -20,6 +21,9 @@
    - *Master laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 5. In Merge every configuration goes to 0 and the feature says whether a configuration is 1: through the map that tells nothing apart it is learnable, proposing false from step 1, the law changes it, and no guess fixed by the record identifies its value at the start. (`Becoming.LearnableRuns.Merge.next`, `Becoming.LearnableRuns.Merge.val`, `Becoming.LearnableRuns.Merge.at_zero`, `Becoming.LearnableRuns.Merge.learnable`, `Becoming.LearnableRuns.Merge.not_identifies`, `Becoming.LearnableRuns.Merge.learnable_not_identifies`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+6. At a process's model, identification reads its horizon through the closure of the steps on the step index: on each run, from some horizon, the closure of the steps from it lies within agreement with the constant target, coming no earlier being lying within that closure. (`Becoming.ModelStatements.identifies_iff_reading`, `Becoming.ModelStatements.tracks_iff`, `Becoming.ModelStatements.withinSteps_iff_le`)
+   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *At a model (declared; reviewed in [RECHECK-U2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md)):* `Becoming.ModelStatements.identifies_iff_reading` states `Becoming.Limit.identifies_iff_tracks` at a process's model. Computed: its proof reaches the row; its statement names, directly or through its module's definitions, `Becoming.«所闭»`; it keeps `Becoming.Limit.Identifies`, `Becoming.Run` and `Generative.Process` in other terms. The row taken alone: on no master law's anchor.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -78,6 +82,10 @@ The twentieth review's G5 found two theories of learning in the limit, Learnable
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [G-FRONTIER.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/twentieth-review/G-FRONTIER.md) | — |
+| proof | [ModelStatements.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean) | `Becoming.ModelStatements.identifies_iff_reading`, `Becoming.ModelStatements.tracks_iff`, `Becoming.ModelStatements.withinSteps_iff_le` |
+| review | [RECHECK-U2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md) | — |
+| integration | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json) | — |
 
 Aliases: `learning is tracking in the limit`, `学习是极限中的跟随`, `tracking in the limit`, `极限中的跟随`, `Becoming.LearnableRuns.learnable_iff_identifies`, `Becoming.LearnableRuns.predicts_iff_tracks`
 
@@ -86,6 +94,7 @@ Aliases: `learning is tracking in the limit`, `学习是极限中的跟随`, `tr
 
 - 20 October 2026: added (R33, G5 of the twentieth review, learning in the limit joined): Limit.Tracks and the bridge from learning through a map to tracking and identification in the limit, with Merge; study section 224.
 - 25 October 2026, board item DF (study section 418): the statement names what identification in the limit takes (a world a list holds and the map's values decided, besides the law keeping the feature) and says that where the law changes the feature, learnability and identification can part; the laws are unchanged.
+- 30 October 2026 (U2, study section 461): a law at the model added, stating `Becoming.Limit.identifies_iff_tracks` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](learning-through-a-map-is-tracking-in-the-limit.json).
 
 <a id="earlier-text--早期文本"></a>

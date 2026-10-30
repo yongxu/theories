@@ -137,6 +137,27 @@
       "zh": "对生生之意义全部出现的逐处审计表明，每处用法都是对任意正面相关的假设、等价式、反模型或说明中的提及，所以每处都由延续条件解除。",
       "en": "The audit of every occurrence of living significance finds each use a hypothesis for an arbitrary positive relevance, an equivalence, a countermodel or a mention in prose, so the continuation condition discharges each.",
       "declarations": []
+    },
+    {
+      "en": "At the model, retaining is an inclusion and adding is exceeding at what the paths admit, met with a region of significance. Where a claim lives at the occurrence model: with the empty region, what one path admits with it lies within what every other admits and exceeds nothing; with the full region the living claims lie within significance, and with the empty region they do not.",
+      "zh": "在模型上，保留即包含、增添即超出，于诸路径所容纳者与一意义域相交处读之。凡有一主张于出现模型上为活：以空域，一路径所容纳者含于每一其他路径所容纳者而无所超出；以满域，活主张含于意义之中，以空域则否。",
+      "declarations": [
+        "Becoming.ModelStatements.significance_undetermined_reading",
+        "Becoming.ModelStatements.retains_iff",
+        "Becoming.ModelStatements.adds_iff",
+        "Becoming.ModelStatements.livingClaim"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.ModelStatements.significance_undetermined_reading",
+          "of": "Becoming.Web.significance_undetermined",
+          "models": [
+            "own",
+            "occurrence"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+        }
+      ]
     }
   ],
   "hypotheses": [
@@ -702,7 +723,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093"
+      "sha256": "c71e9f32b0fc7e1a8528142f309eb700da852facef0fbcf0757f04e01c9b81e0"
     },
     {
       "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
@@ -929,6 +950,32 @@
       "role": "receipt",
       "sha256": "6fbe7c7f21314fbd0a3eba90ff6bde5198b56d52137d19fc6857a87e83949aa4",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ModelStatements.adds_iff",
+        "Becoming.ModelStatements.livingClaim",
+        "Becoming.ModelStatements.retains_iff",
+        "Becoming.ModelStatements.significance_undetermined_reading"
+      ],
+      "sha256": "86aec5d02e4b3ddff4d0f2687fa6a9ee7ce1d120d06aa7e6c954bc8ac87f82b8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "role": "review",
+      "sha256": "2237e3b55420880977acbc68a35800d8f3984d0eae6c40924c6eecfd329bbbe1"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md",
+      "role": "integration",
+      "sha256": "4a6de8c3a7735db3ace316dd45b88b0fe5ab7e91b1e340daf2e9521a854aa2af"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "role": "receipt",
+      "sha256": "e16b5ece7b28c05f2b3349d3f8d51ff4aef68bdedbe6e3b16942c0b9e28acda1"
     }
   ],
   "proof_bindings": [
@@ -1006,6 +1053,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Retaining",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ModelStatements",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -1138,6 +1192,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired label replaced by the current term: the first hypothesis now names the continuation condition, stated and not asserted, its reading an AI reading (D16), with no person as its standing; the fold hypothesis restated in current terms and the audit hypothesis naming living significance; 'the axiom' in the dependency details and interfaces, related details and validation scope reads 'the continuation condition'; the correspondence keeps Ren's quoted words, calls his sentence the condition's source and labels its readings as AI readings (D16) instead of 'adopted on Ren's delegation', and a dependency interface labels its reading likewise (D11). No law changed. The labels G0, S0 and N_std left in the dependency details and interfaces and in two related details now read living significance, self-significance and standpoint neutrality, the periphery's G0 kept as its Lean name and the core's G0 in a list of reused declarations given its current name, LivingSignificance; the old reading of section 6.2 that took standpoint neutrality as 'the axiom' takes it as the premise.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役标签改为现行术语：第一条假设改称延续条件，陈述而不断言，其读法是 AI 的读法（D16），不以任何人为其地位；折叠一条按现行术语重述，审计一条改称生生之意义；依赖说明与接口、相关说明与验证范围中的“公理”改为“延续条件”；对应保留 Ren 的原话，称其句为条件的来源，把其中的读法标为 AI 的读法（D16），不再写“依 Ren 的交托采用”，一个依赖接口的读法同样标注（D11）。规律未变。依赖说明与接口及两条关联说明中余下的标签 G0、S0、N_std 改为生生之意义、自身意义、立场中立，外围的 G0 作为其 Lean 名保留，复用声明列表中核心的 G0 改用现名 LivingSignificance；§6.2 旧读法中立场中立“为公理”改为“为前提”。"
+    },
+    {
+      "en": "30 October 2026 (U2, study section 461): a law at the model added, stating `Becoming.Web.significance_undetermined` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
+      "zh": "2026年10月30日（U2，研究第 461 节）：增模型上之律，于其项为文法之处陈述 `Becoming.Web.significance_undetermined`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
     }
   ],
   "text_versions": [

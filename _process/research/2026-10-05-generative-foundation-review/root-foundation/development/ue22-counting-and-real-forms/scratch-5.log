@@ -1,0 +1,2 @@
+{"status": "passed", "theorems": 70, "declaration_audits": 76, "axioms": ["Classical.choice", "Quot.sound", "propext"], "inherited_modules": 57, "lean_steps_run": 4, "lean_steps_reused": 57, "receipt": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue22/experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-verification.json"}
+exit 0

@@ -105,10 +105,14 @@ and after it. -/
 def keptAcross : «际» (Nat × X) := fun y z => needMet V z y ∧ metAfter V z (y.1 + 1, y.2)
 
 /-- A dependence undermined across the step, from the condition to the formation: at one step, the
-condition's level after the step is below the need, and the dependence was met above that level
-while it held (`Web.MetAbove`, which reads the dependence at every step since it formed). -/
+condition's level after the step is below the need; and from some step on the dependence has held at
+every step up to this one, its need met at that first step and above the level after this one
+(`Web.MetAbove`, written out). -/
 def undermined : «际» (Nat × X) := fun y z =>
-  z.1 = y.1 ∧ V.MetAbove z.1 z.2 y.2 (V.level (y.1 + 1) y.2) ∧ V.level (y.1 + 1) y.2 < V.need z.1 z.2 y.2
+  z.1 = y.1 ∧
+    (∃ s, s ≤ z.1 ∧ (∀ u, s ≤ u → u ≤ z.1 → V.requires u z.2 y.2) ∧ V.need s z.2 y.2 ≤ V.level s y.2 ∧
+      V.level (y.1 + 1) y.2 < V.need s z.2 y.2) ∧
+    V.level (y.1 + 1) y.2 < V.need z.1 z.2 y.2
 
 /-- **A dependence kept across the step is the kept relation from the condition to the formation.** -/
 theorem kept_iff (t : Nat) (g c : X) : V.Kept t g c ↔ keptAcross V (t, c) (t, g) :=
@@ -516,11 +520,11 @@ end Sustenance
 
 /-- **The row `Web.living_on_reaches` at the occurrence model**: one step of N_rel's closure, along
 living on. -/
-theorem living_on_reaches_reading {X Pos : Type} {W : Web X X} {own sig : Pos → X × Nat → Prop}
+theorem living_on_reaches_reading {X Pos : Type} {W : Web X X} {sig : Pos → X × Nat → Prop}
     (closed : ∀ p, «闭» («合» (sustenanceRel W) fun _ b => livingOcc W b) (fun a => sig p (a.2, a.1)))
     {p : Pos} {a b : Nat × X} (lives : livesOn W a b) (held : sig p (a.2, a.1)) (alive : livingOcc W b) :
     sig p (b.2, b.1) :=
-  Web.living_on_reaches ((sustenance_neutral_iff W own sig).mpr closed) ((livesOn_iff W a b).mpr lives) held
+  Web.living_on_reaches ((sustenance_neutral_iff W (fun _ _ => False) sig).mpr closed) ((livesOn_iff W a b).mpr lives) held
     ((living_iff W b.1 b.2).mpr alive)
 
 section DescentModel
@@ -597,11 +601,11 @@ end DescentModel
 
 /-- **The row `Flow.descent_reaches` at the occurrence model**: one step of N_rel's closure, along
 descent. -/
-theorem descent_reaches_reading {X Pos : Type} {L : Flow X X} {W : Web X X} {own sig : Pos → X × Nat → Prop}
+theorem descent_reaches_reading {X Pos : Type} {L : Flow X X} {W : Web X X} {sig : Pos → X × Nat → Prop}
     (closed : ∀ p, «闭» («合» (descentRel L W) fun _ b => livingOcc W b) (fun a => sig p (a.2, a.1)))
     {p : Pos} {a b : Nat × X} (descends : descendsRel L W a b) (held : sig p (a.2, a.1))
     (alive : livingOcc W b) : sig p (b.2, b.1) :=
-  Flow.descent_reaches ((descent_neutral_iff L W own sig).mpr closed)
+  Flow.descent_reaches ((descent_neutral_iff L W (fun _ _ => False) sig).mpr closed)
     ((descends_iff L W b.2 a.2 a.1 b.1).mpr descends) held ((living_iff W b.1 b.2).mpr alive)
 
 /-! ## 6. What the paths admit -/
@@ -647,19 +651,19 @@ theorem significant_iff_livingClaim (own sig : Pos → F × Nat → Prop) :
 /-- **The row `Web.significance_undetermined` on the grammar**: with the empty region of significance,
 what one path admits with it lies within what every other admits and exceeds nothing; with the full
 region living lies within significance, and with the empty region it does not, where a claim lives. -/
-theorem significance_undetermined_reading (own : Pos → F × Nat → Prop) (p : Pos) {e : F × Nat}
+theorem significance_undetermined_reading (p : Pos) {e : F × Nat}
     (alive : livingClaim W e) :
     (∀ l l' : Nat → C → Nat,
         «则» («合» (significantAt (fun _ _ _ => False) p) (W.admitted l')) (W.admitted l) ∧
         ¬ «逾» («合» (significantAt (fun _ _ _ => False) p) (W.admitted l)) (W.admitted l')) ∧
       «则» (Web.partialIdentity (livingClaim W)) (Web.partialIdentity fun _ => True) ∧
       ¬ «则» (Web.partialIdentity (livingClaim W)) (Web.partialIdentity fun _ => False) :=
-  match W.significance_undetermined own p ((roles_alive_reading W e.2 e.1).mpr alive) with
+  match W.significance_undetermined (fun _ _ => False) p ((roles_alive_reading W e.2 e.1).mpr alive) with
   | ⟨paths, full, empty⟩ =>
     ⟨fun l l' => ⟨(retains_iff W _ p l l').mp (paths l l').1,
         fun adds => (paths l l').2 ((adds_iff W _ p l l').mpr adds)⟩,
-     (significant_iff_livingClaim W own fun _ _ => True).mp full p,
-     fun inside => empty ((significant_iff_livingClaim W own fun _ _ => False).mpr fun _ => inside)⟩
+     (significant_iff_livingClaim W (fun _ _ => False) fun _ _ => True).mp full p,
+     fun inside => empty ((significant_iff_livingClaim W (fun _ _ => False) fun _ _ => False).mpr fun _ => inside)⟩
 
 end Retaining
 
@@ -756,11 +760,13 @@ def requiresAt (g : F) (c : C) (s : S) : Prop := K.requires s g c
 def needMetAt (g : F) (c : C) (s : S) : Prop := K.need s g c ≤ K.level s c
 
 /-- The change from `s` to `t` breaks `g`'s dependence on `c`: required and met at `s`, with `c`'s level
-at `t` below the need. -/
-def breaking (g : F) (c : C) : «际» S := fun s t => K.Breaks s t g c
+at `t` below the need (`Dependence.Breaks`, written out). -/
+def breaking (g : F) (c : C) : «际» S := fun s t =>
+  K.requires s g c ∧ K.need s g c ≤ K.level s c ∧ K.level t c < K.need s g c
 
-/-- The change from `s` to `t` keeps `g`'s dependence on `c`: its need at `s` met at `s` and at `t`. -/
-def keeping (g : F) (c : C) : «际» S := fun s t => K.Keeps s t g c
+/-- The change from `s` to `t` keeps `g`'s dependence on `c`: its need at `s` met at `s` and at `t`
+(`Dependence.Keeps`, written out). -/
+def keeping (g : F) (c : C) : «际» S := fun s t => K.need s g c ≤ K.level s c ∧ K.need s g c ≤ K.level t c
 
 /-- **The but-for statement at the model**: from `s` the move's relation meets the breaking; from what
 `R` leaves the move can be taken, and the move from there lies within the keeping. -/
@@ -1007,15 +1013,24 @@ theorem finite_reading_iff (h : Nat) :
    fun not_closed _ closed exact => not_closed fun r r' renews agree =>
      (exact r').mp (closed r r' ((exact r).mpr renews) agree)⟩
 
+/-- **The row `Renewable.no_exact_finite_reading` as a statement of closure**: the region of runs along
+which the focal formation renews is not closed under agreeing up to `h`. -/
+theorem renewing_not_closed (h : Nat) :
+    ¬ «闭» (fun r r' : Run Renewable.process => (∀ n, «所闭» Steps.next n h → r.state n = r'.state n) ∧
+        ∀ n, «及» Steps.next n h → r.act n = r'.act n) renewingAlong :=
+  (finite_reading_iff h).mp (finite_reading_not_exact h)
+
 /-! ## 9. The rows' own carriers -/
 
 section Coupling
 
 variable {F C : Type}
 
-/-- Alike through `h`'s couplings up to `t`, as a relation on level histories. -/
+/-- Alike through `h`'s couplings up to `t`, as a relation on level histories: at every step up to `t`
+the two histories' levels admit `h` alike (`Web.Admits`, needs against levels) and the conditions coupled
+into `h` stand alike (`Web.AlikeThroughUpTo`, written out). -/
 def couplingAlike (W : Web F C) (obs : F → C → Prop) (h : F) (t : Nat) : «际» (Nat → C → Nat) :=
-  fun l l' => W.AlikeThroughUpTo obs h l l' t
+  fun l l' => ∀ s, s ≤ t → (W.Admits (l s) s h ↔ W.Admits (l' s) s h) ∧ ∀ c, obs h c → l s c = l' s c
 
 /-- Exchanging alike for `h` across the step from `t`, as a relation on level histories: the meet,
 over the conditions, of the classes of what `h` takes and gives (`sameValue`). -/
@@ -1138,7 +1153,8 @@ one. Given levels compared. -/
 def exceedsOn (ds : List C) : «际» (C → Nat) := fun o' o =>
   (∀ c, c ∈ ds → o c ≤ o' c) ∧ ∃ c, c ∈ ds ∧ o c < o' c
 
-/-- One outcome stands lower than another at a condition beyond. Given levels compared. -/
+/-- `lowerBeyond rest o o'`: at some condition beyond, the second outcome `o'` stands lower than the
+first `o`; read from the outcome standing higher. Given levels compared. -/
 def lowerBeyond (rest : List C) : «际» (C → Nat) := fun o o' => ∃ c, c ∈ rest ∧ o' c < o c
 
 theorem rising_iff {ds : List C} {better : (C → Nat) → (C → Nat) → Prop} :

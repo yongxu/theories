@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-29T16:00:32+00:00",
+  "reviewed_at_utc": "2026-10-30T05:54:02+00:00",
   "statement": {
     "en": "Over finitely many causes, a belief zero where the joint weight is has variational free energy at least the record's surprisal, equal exactly at the posterior; in a core generative model that is the share given the record, so minimizing free energy over such beliefs is conditioning.",
     "zh": "于有限诸因之上，于联合权重为零处为零之信念，其变分自由能至少为记录之惊异，恰于后验取等；于核心之生成模型，此即记录下之份额，故于此等信念上最小化自由能即条件化。"
@@ -39,8 +39,8 @@
       ]
     },
     {
-      "en": "Equality exactly at the posterior: the bound is met exactly where q is the posterior, at which the free energy is the surprisal, and the posterior alone has the least free energy among beliefs zero wherever p is, where it is finite; off that support the bound fails under the convention log 0 = 0 (freeEnergy_eq_surprisal_iff and nine more).",
-      "zh": "等号恰于后验：界恰于 q 为后验处取等，其时自由能即惊异，且于 p 为零处为零之诸信念中唯后验自由能最小；出此支撑，依 log 0 = 0 之约定界不成立（freeEnergy_eq_surprisal_iff 等十项）。",
+      "en": "Equality exactly at the posterior: the bound is met exactly where q is the posterior, at which the free energy is the surprisal, and the posterior alone has the least free energy among beliefs zero wherever p is, where it is finite; off that support the bound can fail under the convention log 0 = 0 (freeEnergy_eq_surprisal_iff and nine more).",
+      "zh": "等号恰于后验：界恰于 q 为后验处取等，其时自由能即惊异，且于 p 为零处为零之诸信念中唯后验自由能最小；出此支撑，依 log 0 = 0 之约定界或不成立（freeEnergy_eq_surprisal_iff 等十项）。",
       "declarations": [
         "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff",
         "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_pos",
@@ -108,12 +108,65 @@
         "Becoming.FreeEnergy.surprisal_product",
         "Becoming.FreeEnergy.surprisal_eq_log_reciprocal"
       ]
+    },
+    {
+      "en": "The counting form through the logarithm: for counts n over hypotheses listed once, total N positive, none where a natural weight is nothing, N times the free energy of n / N less the surprisal of the total weight is log (A^N·∏ n^n) − log (N^N·∏ a^n); the log ratio is N times the divergence from the posterior, the two sides differing by the exponential of N times it (gap_counts and eleven more).",
+      "zh": "经对数之计数形式：列而不重之假设上计数 n，总数 N 为正，自然数权重为零处无计数，则 N 乘 n / N 之自由能减总权重之惊异等于 log (A^N·∏ n^n) − log (N^N·∏ a^n)；此对数比为 N 乘对后验之散度，两边相差 N 乘之之指数（gap_counts 等十二项）。",
+      "declarations": [
+        "Becoming.FreeEnergy.countBelief",
+        "Becoming.FreeEnergy.cast_total",
+        "Becoming.FreeEnergy.cast_powerProduct",
+        "Becoming.FreeEnergy.total_pos_of_counts",
+        "Becoming.FreeEnergy.powerProduct_pos",
+        "Becoming.FreeEnergy.countBelief_nonneg",
+        "Becoming.FreeEnergy.sum_countBelief",
+        "Becoming.FreeEnergy.countBelief_support",
+        "Becoming.FreeEnergy.self_pow_ne_zero",
+        "Becoming.FreeEnergy.gap_counts",
+        "Becoming.FreeEnergy.divergence_counts",
+        "Becoming.FreeEnergy.counts_eq_mul_exp"
+      ]
+    },
+    {
+      "en": "The two bounds are one at such a belief, each holding exactly where the other does; from the core's counting laws, not through UE17's Gibbs lemmas (a dependency audit), the bound holds, is met exactly where the counts are in proportion to the weights, which is where the belief is the posterior, and is strict elsewhere (surprisal_le_freeEnergy_iff_bound and five more).",
+      "zh": "于此等信念二界为一，各恰于彼成立处成立；由核心之计数之律，不经 UE17 之 Gibbs 引理（依赖审查），界成立，恰于计数与权重成比例处取等，即信念为后验之处，余处严格（surprisal_le_freeEnergy_iff_bound 等六项）。",
+      "declarations": [
+        "Becoming.FreeEnergy.counting_lhs_pos",
+        "Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound",
+        "Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts",
+        "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts",
+        "Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts",
+        "Becoming.FreeEnergy.proportional_iff_posterior"
+      ]
+    },
+    {
+      "en": "The gap reads the joint weights up to a factor, so in a core generative model, against the joint shares and the record's share, N times the gap is the log ratio of bound_given_record's two sides; from the core's laws the bound holds, is met exactly where each count over the total is the same ratio as, and as a real number equal to, the share given the record, and is strict elsewhere (gap_div and seven more).",
+      "zh": "差距读联合权重至一因子，故于核心之生成模型，对联合份额与记录之份额，N 乘差距为 bound_given_record 两边之对数比；由核心之律，界成立，恰于每一计数比总数与记录下之份额同比、作为实数相等处取等，余处严格（gap_div 等八项）。",
+      "declarations": [
+        "Becoming.FreeEnergy.freeEnergy_congr_weights",
+        "Becoming.FreeEnergy.gap_div",
+        "Becoming.FreeEnergy.gap_counts_given_record",
+        "Becoming.ConditionalWeights.Share.same_iff_toReal_eq",
+        "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts",
+        "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts",
+        "Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts",
+        "Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts"
+      ]
+    },
+    {
+      "en": "The identity can fail off the support (counts one and one against weights nothing and one: N times the gap −2 log 2, the core's bound strict) and with a hypothesis listed twice; at one count off the support it holds, and against weights totalling one the real form is at equality while the core's bound is strict (Witness.gap_counts_off_support and two more).",
+      "zh": "离支撑恒等式或不成立（计数一与一对权重零与一：N 乘差距为 −2 log 2，核心之界严格），假设列二次亦然；离支撑一计数时恒等式成立，权重总和为一时实数形式取等而核心之界严格（Witness.gap_counts_off_support 等三项）。",
+      "declarations": [
+        "Becoming.FreeEnergy.Witness.gap_counts_off_support",
+        "Becoming.FreeEnergy.Witness.one_count_off_support",
+        "Becoming.FreeEnergy.Witness.gap_counts_duplicate"
+      ]
     }
   ],
   "hypotheses": [
     {
-      "en": "In the periphery, on Mathlib's reals: each declaration depends on Lean's three standard axioms at most, reported by the module's checker, Share.toReal and its two lemmas among them, periphery definitions in the core's namespace; the core laws it reads have empty axiom reports.",
-      "zh": "于外围，基于 Mathlib 之实数：每一声明至多依赖 Lean 之三条标准公理，由本模块之检查器报告，Share.toReal 及其二引理亦然，为置于核心命名空间之外围定义；其所读之核心之律公理报告皆空。"
+      "en": "In the periphery, on Mathlib's reals: each declaration depends on Lean's three standard axioms at most, reported by the module's checker, Share.toReal and its three lemmas among them, periphery definitions in the core's namespace; the core laws it reads have empty axiom reports.",
+      "zh": "于外围，基于 Mathlib 之实数：每一声明至多依赖 Lean 之三条标准公理，由本模块之检查器报告，Share.toReal 及其三引理亦然，为置于核心命名空间之外围定义；其所读之核心之律公理报告皆空。"
     },
     {
       "en": "The belief is nonnegative with total one and zero wherever the joint weight is, where its free energy is finite as usually defined; equality and the posterior's value need the joint weights' total not zero; such a belief over the core's hypotheses exists only where the record weighs something (record_pos_of_belief).",
@@ -122,6 +175,10 @@
     {
       "en": "Modelling choices: a finite set of causes; real beliefs and joint weights; in the core, natural weights and Boolean records, hypotheses listed without repetition; Mathlib's conventions log 0 = 0 and x / 0 = 0.",
       "zh": "建模之选：有限诸因；实数之信念与联合权重；于核心，自然数权重与布尔记录，假设列而不重；Mathlib 之约定 log 0 = 0 与 x / 0 = 0。"
+    },
+    {
+      "en": "For the counting form: natural counts over hypotheses listed once, with a positive total and no count where the natural joint weight is nothing, the belief read as n / N; in the generative model, no count where a hypothesis's prior weight times the record's weight under it is nothing.",
+      "zh": "计数形式需：列而不重之假设上之自然数计数，总数为正，自然数联合权重为零处无计数，信念读作 n / N；于生成模型，假设之先验权重乘记录于其下之权重为零处无计数。"
     }
   ],
   "does_not_show": [
@@ -141,8 +198,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "The bound's counting form for beliefs with natural counts, N^N·∏ a^n ≤ A^N·∏ n^n, or complexity and accuracy read from the core's own prior and likelihood shares.",
-      "zh": "自然数计数之信念之界之计数形式 N^N·∏ a^n ≤ A^N·∏ n^n，或由核心自身之先验与似然份额读出之复杂度与准确度。",
+      "en": "Complexity and accuracy read from the core's own prior and likelihood shares.",
+      "zh": "由核心自身之先验与似然份额读出之复杂度与准确度。",
       "kind": "scope"
     },
     {
@@ -154,14 +211,33 @@
       "en": "Free energy as a bound on the long-run average of surprisal, the entropy of sensory states, or free energy over parameters and models, as in learning and model comparison.",
       "zh": "自由能作为长期平均惊异（感官状态之熵）之界，或参数与模型上之自由能，如学习与模型比较。",
       "kind": "scope"
+    },
+    {
+      "en": "Read from the core: beliefs whose shares are not ratios of counts (their bound rests on log x ≤ x − 1, term_le), joint weights with irrational ratios, a listing with a hypothesis repeated, or a record of weight nothing (excluded).",
+      "zh": "由核心读出者：份额非计数之比之信念（其界依 log x ≤ x − 1，term_le）、比为无理数之联合权重、某假设重复之列表，或前提所排除之无权重记录。",
+      "kind": "scope"
     }
   ],
   "counterexamples": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
       "detail": {
-        "en": "With a belief putting weight on a cause of joint weight zero, the bound fails under Mathlib's log 0 = 0: the free energy as usually defined is then infinite (Witness.bound_fails_off_support).",
-        "zh": "信念置权于联合权重为零之因时，依 Mathlib 之 log 0 = 0 界不成立：其时通常定义之自由能为无穷（Witness.bound_fails_off_support）。"
+        "en": "With a belief putting weight on a cause of joint weight zero, the bound can fail under Mathlib's log 0 = 0: the free energy as usually defined is then infinite (Witness.bound_fails_off_support).",
+        "zh": "信念置权于联合权重为零之因时，依 Mathlib 之 log 0 = 0 界或不成立：其时通常定义之自由能为无穷（Witness.bound_fails_off_support）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
+      "detail": {
+        "en": "Off the support the counting identity can fail: counts one and one against weights nothing and one give N times the gap −2 log 2 under log 0 = 0, against a log ratio of 0, the counting bound's sides being nothing and one (Witness.gap_counts_off_support); at one count it holds, and against weights totalling one the real form is at equality (Witness.one_count_off_support).",
+        "zh": "离支撑计数之恒等式或不成立：计数一与一对权重零与一，依 log 0 = 0，N 乘差距为 −2 log 2，而对数比为 0，计数之界两边为零与一（Witness.gap_counts_off_support）；一计数时成立，权重总和为一时实数形式取等（Witness.one_count_off_support）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
+      "detail": {
+        "en": "With true listed twice and every count and weight one, N times the gap is −log 2 while the log ratio is 0: the real side sums over the set of hypotheses, the core's over the listing (Witness.gap_counts_duplicate).",
+        "zh": "true 列二次且计数与权重皆一时，N 乘差距为 −log 2 而对数比为 0：实数一侧于假设之集合上求和，核心一侧于列表上求和（Witness.gap_counts_duplicate）。"
       }
     }
   ],
@@ -173,12 +249,12 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the periphery checker check_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261029T155901.350188Z): all 47 declarations of FreeEnergyReals, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. An independent review by another AI agent (REVIEW-UE17) and a re-check, study section 450; not reviewed by a person.",
-    "zh": "外围检查器 check_free_energy_reals.py 以 Lean 4.30.0-rc2 与固定之 Mathlib 实查（回执 20261029T155901.350188Z）：FreeEnergyReals 之全部 47 项声明，皆只依 Lean 之标准公理，其闭包之每一核心模块皆合于已通过之核心回执。另一 AI 代理作独立审查（REVIEW-UE17）并复查，见研究第 450 节；未经人审。"
+    "en": "Machine-checked by the periphery checker check_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261030T043328.214810Z): all 76 declarations of FreeEnergyReals, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. Independent reviews by other AI agents (REVIEW-UE17; REVIEW-UE22 and RECHECK-UE22 for the counting form), study sections 450 and 462; not reviewed by a person.",
+    "zh": "外围检查器 check_free_energy_reals.py 以 Lean 4.30.0-rc2 与固定之 Mathlib 实查（回执 20261030T043328.214810Z）：FreeEnergyReals 之全部 76 项声明，皆只依 Lean 之标准公理，其闭包之每一核心模块皆合于已通过之核心回执。另有 AI 代理作独立审查（REVIEW-UE17；计数形式见 REVIEW-UE22 与 RECHECK-UE22），见研究第 450 与 462 节；未经人审。"
   },
   "next_delta": {
-    "en": "A core form of the bound, N^N·∏ a^n ≤ A^N·∏ n^n for beliefs with natural counts, equal, where the record weighs something, exactly at the share given the record; complexity and accuracy from the core's own shares; review by a person.",
-    "zh": "界之核心形式：自然数计数之信念 N^N·∏ a^n ≤ A^N·∏ n^n，记录有权重时恰于记录下之份额取等；由核心自身份额读出之复杂度与准确度；人之审查。"
+    "en": "Complexity and accuracy from the core's own shares; review by a person.",
+    "zh": "由核心自身份额读出之复杂度与准确度；人之审查。"
   },
   "correspondence": {
     "en": "Gibbs' inequality (Gibbs 1902) and the divergence of Kullback and Leibler (1951); the variational bound on the log evidence of variational Bayes (Hinton and van Camp 1993; Neal and Hinton 1998; the Helmholtz machine of Dayan, Hinton, Neal and Zemel 1995), the free-energy principle's variational free energy (Friston 2005, 2010), with the decompositions into divergence plus surprisal and into complexity less accuracy. Gibbs' inequality and its equality case are classical; the decompositions and the join are near-definitional. New is the join: the core states the posterior by counting, the periphery characterizes it as the one minimizer of free energy among the beliefs where it is finite. Graded in UE17's NOTE.",
@@ -193,7 +269,8 @@
     "Gibbs inequality",
     "perception as conditioning",
     "Becoming.FreeEnergy.surprisal_le_freeEnergy",
-    "Becoming.FreeEnergy.minimizes_iff_givenShare"
+    "Becoming.FreeEnergy.minimizes_iff_givenShare",
+    "Becoming.FreeEnergy.gap_counts"
   ],
   "dependencies": [
     {
@@ -202,6 +279,14 @@
       "detail": {
         "en": "Share, share, restrict, pairWeight, evidence, posterior_single, share_product and Share.reciprocal: conditioning by restriction and a generative model's share given a record.",
         "zh": "Share、share、restrict、pairWeight、evidence、posterior_single、share_product 与 Share.reciprocal：以限制为条件，及生成模型于记录下之份额。"
+      }
+    },
+    {
+      "id": "free-energy-bound-in-counts",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "powerProduct, self_pow_pos, powerProduct_self_pos, bound, bound_eq_iff, bound_lt_of_not_proportional, joint, record_total, bound_given_record, given_record_eq_iff_share and the witnesses' counts: the bound in counts, read through the logarithm.",
+        "zh": "powerProduct、self_pow_pos、powerProduct_self_pos、bound、bound_eq_iff、bound_lt_of_not_proportional、joint、record_total、bound_given_record、given_record_eq_iff_share 与见证之计数：取对数而读之计数之界。"
       }
     }
   ],
@@ -219,6 +304,13 @@
         "en": "Expected free energy and its terms: risk, ambiguity, epistemic and pragmatic value stated beside free energy, the epistemic value an expected information gain through this posterior.",
         "zh": "期望自由能及其诸项：风险、模糊、认知价值与实用价值述于自由能之旁，认知价值为经此后验之期望信息增益。"
       }
+    },
+    {
+      "id": "free-energy-bound-in-counts",
+      "detail": {
+        "en": "The free-energy bound in counts: the bound and its equality for count beliefs in the pure core, with no axiom and no support condition; on the support, over hypotheses listed once, this bound is it through the logarithm (gap_counts).",
+        "zh": "计数之自由能界：纯核心中计数信念之界及其取等，无公理，无支撑条件；于支撑上且假设列而不重时，此界即彼界取对数（gap_counts）。"
+      }
     }
   ],
   "references": [
@@ -226,27 +318,46 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
       "role": "proof",
       "declarations": [
+        "Becoming.ConditionalWeights.Share.same_iff_toReal_eq",
         "Becoming.ConditionalWeights.Share.toReal",
         "Becoming.ConditionalWeights.Share.toReal_mul",
         "Becoming.ConditionalWeights.Share.toReal_nonneg",
         "Becoming.FreeEnergy.Witness.bound_fails_off_support",
+        "Becoming.FreeEnergy.Witness.gap_counts_duplicate",
+        "Becoming.FreeEnergy.Witness.gap_counts_off_support",
+        "Becoming.FreeEnergy.Witness.one_count_off_support",
         "Becoming.FreeEnergy.cast_mass_eq_sum",
+        "Becoming.FreeEnergy.cast_powerProduct",
+        "Becoming.FreeEnergy.cast_total",
+        "Becoming.FreeEnergy.countBelief",
+        "Becoming.FreeEnergy.countBelief_nonneg",
+        "Becoming.FreeEnergy.countBelief_support",
+        "Becoming.FreeEnergy.counting_lhs_pos",
+        "Becoming.FreeEnergy.counts_eq_mul_exp",
         "Becoming.FreeEnergy.divergence",
+        "Becoming.FreeEnergy.divergence_counts",
         "Becoming.FreeEnergy.divergence_eq_zero_iff",
         "Becoming.FreeEnergy.divergence_nonneg",
         "Becoming.FreeEnergy.divergence_posterior_eq_zero_iff",
         "Becoming.FreeEnergy.divergence_posterior_nonneg",
         "Becoming.FreeEnergy.freeEnergy",
         "Becoming.FreeEnergy.freeEnergy_congr",
+        "Becoming.FreeEnergy.freeEnergy_congr_weights",
         "Becoming.FreeEnergy.freeEnergy_eq_complexity_sub_accuracy",
         "Becoming.FreeEnergy.freeEnergy_eq_divergence",
         "Becoming.FreeEnergy.freeEnergy_eq_divergence_add_surprisal",
         "Becoming.FreeEnergy.freeEnergy_eq_energy_sub_entropy",
         "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff",
+        "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts",
+        "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts",
         "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff",
+        "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts",
         "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_pos",
         "Becoming.FreeEnergy.freeEnergy_givenShare",
         "Becoming.FreeEnergy.freeEnergy_posterior",
+        "Becoming.FreeEnergy.gap_counts",
+        "Becoming.FreeEnergy.gap_counts_given_record",
+        "Becoming.FreeEnergy.gap_div",
         "Becoming.FreeEnergy.givenShare_eq_posterior",
         "Becoming.FreeEnergy.givenShare_toReal",
         "Becoming.FreeEnergy.jointShare_part",
@@ -256,10 +367,16 @@
         "Becoming.FreeEnergy.posterior",
         "Becoming.FreeEnergy.posterior_eq_zero",
         "Becoming.FreeEnergy.posterior_nonneg",
+        "Becoming.FreeEnergy.powerProduct_pos",
+        "Becoming.FreeEnergy.proportional_iff_posterior",
         "Becoming.FreeEnergy.recordShare_toReal",
         "Becoming.FreeEnergy.record_pos_of_belief",
         "Becoming.FreeEnergy.record_surprisal_le_freeEnergy",
+        "Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts",
+        "Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts",
+        "Becoming.FreeEnergy.self_pow_ne_zero",
         "Becoming.FreeEnergy.share_toReal_pos",
+        "Becoming.FreeEnergy.sum_countBelief",
         "Becoming.FreeEnergy.sum_jointShare",
         "Becoming.FreeEnergy.sum_normalized_sub",
         "Becoming.FreeEnergy.sum_posterior",
@@ -267,24 +384,23 @@
         "Becoming.FreeEnergy.surprisal",
         "Becoming.FreeEnergy.surprisal_eq_log_reciprocal",
         "Becoming.FreeEnergy.surprisal_le_freeEnergy",
+        "Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound",
+        "Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts",
+        "Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts",
         "Becoming.FreeEnergy.surprisal_product",
         "Becoming.FreeEnergy.term_eq_iff",
         "Becoming.FreeEnergy.term_eq_iff_of_pos",
         "Becoming.FreeEnergy.term_le",
         "Becoming.FreeEnergy.total_pos",
+        "Becoming.FreeEnergy.total_pos_of_counts",
         "Becoming.FreeEnergy.weight_zero_of_jointShare_zero"
       ],
-      "sha256": "2cc970c8b974f707a4f191793fd5fa1f8982e46cdfe8e9a30eff4bb785105f7d"
+      "sha256": "829be4a72850ec218e919547c2bec124b8d13a78b14a0c34c891a4a0903f16d5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
       "role": "proof",
       "sha256": "479c8401487664728e63fd6d247dcfb89b2fd578185097251bcf2055cac0361f"
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
-      "role": "receipt",
-      "sha256": "8dcfa9b39752ec857d28027a8483e7502fb4fa0e1c79b8454e7006ce122cb897"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T153820.435638Z/verification.json",
@@ -294,12 +410,12 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/check_free_energy_reals.py",
       "role": "integration",
-      "sha256": "390bcb0f8a8c7396bfedb99f69ac0c3bc25413ae1498902a88acf598531f693d"
+      "sha256": "8bfdfe6332c99e5f3ce0057014bd9c9087d404edb12395b6bf90075f3d7b21b5"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "5991da2f53ddd47eebac45ffa9873a439537fb43a95fd7f612c3326b0b9d5aed"
+      "sha256": "bf770b9211a8466ce8d857e853fbef6abcbbc2659edc912baa4cd5cffc882c46"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/NOTE.md",
@@ -314,7 +430,37 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "62025a2b610fb1726559d2a6dd34536225d2a5ea66012ef29fd3865b1055ebb5"
+      "sha256": "079ff0a095e1f42b0d2a7b72fca397399fe383b85d2528e7ad642dcbcd79e563"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyCounting.lean",
+      "role": "proof",
+      "sha256": "f9087252c4c7d2d74e7f2288f4c3b089ac3fbe3da4c98af7126da9a16002d42c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
+      "role": "receipt",
+      "sha256": "72f22c953104b33c0277caf5eaa1ca3f28ebd1720c3d77eb042868a3e96981d8"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T210603.495422Z/verification.json",
+      "role": "receipt",
+      "sha256": "0017f43103acea4cac68471d20b5ccad683c1b74e41a961175b3e581416c6a4d"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/NOTE.md",
+      "role": "integration",
+      "sha256": "275e44547872e4ae15bcb243a350606ee4c806ebd12dc80e44062933c04163a5"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/REVIEW-UE22.md",
+      "role": "integration",
+      "sha256": "bc8bf96dd207d6921b33171b8f798bd54f6b7c2960bfcc996044944091e34048"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/RECHECK-UE22.md",
+      "role": "integration",
+      "sha256": "fba7f509dbf9532507e35c42d47628a79580ad88899bdc87125dacd07fdfdf79"
     }
   ],
   "proof_bindings": [
@@ -327,8 +473,15 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
       "sha256_pointer": "/source_sha256/FreeEnergyReals",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyCounting.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T210603.495422Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.FreeEnergyCounting",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -345,6 +498,14 @@
     {
       "en": "29 October 2026, board item UE19 (study section 453): related to expected-free-energy-and-its-terms; the next step drops expected free energy, now stated, and the second item of what it does not show names the record that states it; no statement or declaration changed.",
       "zh": "2026年10月29日，工作板条目 UE19（研究第 453 节）：与 expected-free-energy-and-its-terms 相关联；下一步删去期望自由能（已述），所不示之第二项指明述之之记录；无一陈述或声明改变。"
+    },
+    {
+      "en": "30 October 2026, board item UE21 (study section 460): related to free-energy-bound-in-counts; the next step drops the core form of the bound, now stated, and the fourth item of what it does not show names the record that states it; no statement or declaration changed.",
+      "zh": "2026年10月30日，工作板条目 UE21（研究第 460 节）：与 free-energy-bound-in-counts 相关联；下一步删去界之核心形式（已述），所不示之第四项指明述之之记录；无一陈述或声明改变。"
+    },
+    {
+      "en": "30 October 2026, board item UE22 (study section 462): the counting form joined to the real form, four laws citing the 29 new declarations of FreeEnergyReals (gap_counts, the two bounds as one, the bound, equality and strictness from the core's counting laws, the divergence and exponential forms, the generative model with the whole weight dropping out, three witnesses), a hypothesis, a does-not-show item, two counterexamples, a formal-reuse dependency and a binding to the core receipt for Becoming.FreeEnergyCounting; the fourth does-not-show item no longer names the counting form's record; the third law, the first hypothesis and the first counterexample brought to the witnesses (the bound can fail off the support) and to Share.toReal's three lemmas; receipt 20261030T043328.214810Z; after a review and a re-check. No earlier statement or declaration changed.",
+      "zh": "2026年10月30日，工作板条目 UE22（研究第 462 节）：计数形式与实数形式相接，四律引 FreeEnergyReals 之 29 项新声明（gap_counts、二界为一、由核心计数之律所得之界、取等与严格、散度与指数之形式、整体权重消去之生成模型、三见证），一前提、一所不示、二反例、一形式复用之依赖，并绑定 Becoming.FreeEnergyCounting 之核心回执；所不示之第四项不再指明计数形式之记录；第三律、第一前提与第一反例依见证（离支撑界或不成立）与 Share.toReal 之三引理修订；回执 20261030T043328.214810Z；经审查与复查。先前之陈述与声明皆未改变。"
     }
   ]
 }

@@ -1,0 +1,44 @@
+# Check 1: statements and constants of Becoming.Persistence, main's build against the tree's
+# (ReviewCtfCheck.lean.txt run with LEAN_PATH=tree-main/.build and tree-new/.build; Lean 4.29.1)
+out-main sha256: e97e912eff65cfe93ab6e490e0a859488040b39e8816b04c540adbe3a629a1a1  lines:      701
+out-new  sha256: 40691f225032b2d662afcd95c68eb169edd3bdac303864711e124e50d0e2da91  lines:      701
+#check @ lines (106 declarations, then the two theorems under pp.all): identical: yes
+constants Lean put in the module: 293 (main), 293 (tree)
+constants whose type hash differs: Becoming.Web.sheng_state_of_change.match_1_1 def 1640115239;Becoming.Web.wang_state_of_change.match_1_1 def 3154870734;
+constants whose value hash differs: Becoming.Web.sheng_state_of_change Becoming.Web.sheng_state_of_change.match_1_1 Becoming.Web.wang_state_of_change Becoming.Web.wang_state_of_change.match_1_1 
+full diff of the two outputs:
+602,603c602,603
+< CONST Becoming.Web.sheng_state_of_change theorem 1277794862 1040713722
+< CONST Becoming.Web.sheng_state_of_change.match_1_1 def 4088240686 2869444406
+---
+> CONST Becoming.Web.sheng_state_of_change theorem 1277794862 170154777
+> CONST Becoming.Web.sheng_state_of_change.match_1_1 def 1640115239 1392157854
+614,615c614,615
+< CONST Becoming.Web.wang_state_of_change theorem 2809513049 1531714082
+< CONST Becoming.Web.wang_state_of_change.match_1_1 def 3965314663 4164891294
+---
+> CONST Becoming.Web.wang_state_of_change theorem 2809513049 58500326
+> CONST Becoming.Web.wang_state_of_change.match_1_1 def 3154870734 2295829246
+
+# The two theorems, as printed (identical in both builds):
+@Becoming.Web.wang_state_of_change : ∀ {F C : Type} {W : Becoming.Web F C} {h : Nat → F → Prop} {t : Nat} {f : F},
+  ¬(W.active t f ↔ W.active (t + 1) f) →
+    Becoming.«亡» (Becoming.Web.continuationStep fun x g f => g = f) (W.stateClass h) (t, f)
+@Becoming.Web.sheng_state_of_change : ∀ {F C : Type} {W : Becoming.Web F C} {h : Nat → F → Prop} {t : Nat} {f : F},
+  ¬(W.active t f ↔ W.active (t + 1) f) →
+    Becoming.«生» (Becoming.Web.continuationStep fun x g f => g = f) (W.stateClass h) (t + 1, f)
+
+# Signature driver (the checker's text: import + #check @ of the 86 theorems), BecomingPersistenceSignatures.lean.txt
+sig-main.log sha256: 95dfb3ee70f1c03fb65e043cc3dc8b92a79fff5ac01a98e4cd957460a0a72c52
+sig-new.log  sha256: 95dfb3ee70f1c03fb65e043cc3dc8b92a79fff5ac01a98e4cd957460a0a72c52
+sig-main.log equals the cached BecomingPersistenceSignatures.log of HEAD's receipt 20261029T184601.050950Z: yes (checked in Python, 26109 characters each)
+
+# Axioms of every constant in the module, generated ones included (ReviewCtfAxioms.lean.txt)
+main: CONSTANTS 293 WITH_AXIOMS 0
+tree: CONSTANTS 293 WITH_AXIOMS 0
+
+# Independent recompile of the tree's Persistence (lean -o, imports restored from the cache by scratch_build)
+compile messages:        0 bytes
+olean sha256, recompiled: 01fb4dad2b625d63268465eecc59bd96a07dda4424b3a92562c37312fddab85a
+olean sha256, scratch_build's: 01fb4dad2b625d63268465eecc59bd96a07dda4424b3a92562c37312fddab85a
+olean sha256, main's: e51597a667e1ce895af62f23a29b943941f05c21edcef2851f5587a8af0f45db

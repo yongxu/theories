@@ -209,7 +209,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
       "role": "proof",
-      "sha256": "2cc970c8b974f707a4f191793fd5fa1f8982e46cdfe8e9a30eff4bb785105f7d"
+      "sha256": "829be4a72850ec218e919547c2bec124b8d13a78b14a0c34c891a4a0903f16d5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261029T164946.410686Z/verification.json",
@@ -249,20 +249,32 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "62025a2b610fb1726559d2a6dd34536225d2a5ea66012ef29fd3865b1055ebb5"
+      "sha256": "fb52f044256608a41faf11728a17d5a5c971ead1b8dafffbc675122e452321a6"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
+      "role": "receipt",
+      "sha256": "72f22c953104b33c0277caf5eaa1ca3f28ebd1720c3d77eb042868a3e96981d8",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T043340.180184Z/verification.json",
+      "role": "receipt",
+      "sha256": "11544a4219bbe517cf65964c03df590024150d57822ddff43587b7593bcc0d68",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
       "sha256_pointer": "/source_sha256/FreeEnergyReals",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261029T164946.410686Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T043340.180184Z/verification.json",
       "sha256_pointer": "/source_sha256/ExpectedFreeEnergyReals",
       "success_pointer": "/status",
       "success_value": "passed"

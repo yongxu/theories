@@ -1,0 +1,47 @@
+import Lean
+import Becoming.Persistence
+
+open Lean Elab Command
+
+/-! For each (a) and (b) row of OU3f's audit, and the rows that follow them: which of the named grammar laws its
+proof reaches, directly (in its own value) and transitively (through the values of the constants it uses). -/
+
+def rows : List (Name × List Name) := [
+  (`Becoming.Web.wang_state_of_change, [`Becoming.«亡于粗则亡于细», `Becoming.«粗化»]),
+  (`Becoming.Web.sheng_state_of_change, [`Becoming.«生于粗则生于细», `Becoming.«粗化»]),
+  (`Becoming.Web.arises_of_persisting_arises, [`Becoming.«生于粗则生于细»]),
+  (`Becoming.Web.ceases_of_persisting_ceases, [`Becoming.«亡于粗则亡于细»]),
+  (`Becoming.Web.steady_held, [`Becoming.kept_onward])]
+
+/-- The twins and the retired names: present or gone. -/
+def retired : List Name := []
+
+partial def reach (env : Environment) (start : Name) : NameSet := Id.run do
+  let mut seen : NameSet := {}
+  let mut todo : Array Name := #[start]
+  while h : todo.size > 0 do
+    let n := todo.back
+    todo := todo.pop
+    match env.find? n with
+    | none => pure ()
+    | some ci =>
+      let used := (ci.value? (allowOpaque := true)).map Expr.getUsedConstants |>.getD #[]
+      for m in used ++ ci.type.getUsedConstants do
+        if !seen.contains m then
+          seen := seen.insert m
+          todo := todo.push m
+  return seen
+
+#eval show CommandElabM Unit from do
+  let env ← getEnv
+  for (n, laws) in rows do
+    match env.find? n with
+    | none => logInfo m!"MISSING {n}"
+    | some ci =>
+      let direct := (ci.value? (allowOpaque := true)).map Expr.getUsedConstants |>.getD #[]
+      let all := reach env n
+      let marks := laws.map fun l =>
+        s!"{l.toString}: {if direct.contains l then "direct" else if all.contains l then "transitive" else "NO"}"
+      logInfo m!"ROW {n} | {String.intercalate "; " marks}"
+  for n in retired do
+    logInfo m!"RETIRED? {n} {if env.contains n then "present" else "gone"}"

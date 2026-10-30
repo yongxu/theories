@@ -172,6 +172,23 @@ The condition and C stay named premises, and the free predicate stays the genera
 
 After these come plan §八 steps 5–10.
 
+## After OU3f: plan §八 step 4 done, and where the set-aside items go (30 October 2026)
+
+**OU3f is done** (`1636c8a42`, study §459). Every (a) and (b) row of its audit (`cafb743de`) is derived from grammar laws: the laws of steps (§442), the twins (§443), the closure (§445), the lineage laws (§451) and the coarse-to-fine pair (§459), `Web.sheng_state_of_change` and `Web.wang_state_of_change` from «生于粗则生于细» and «亡于粗则亡于细». The 398 laws of their models keep their standing with reasons. Three representations were re-proved through grammar laws, and `Lineage.cons` was retired. The measure is unchanged: 45 of 127 rows reach the grammar.
+
+With that, **plan §八 step 4 (剥前提) is complete** in all four of its parts: the continuation family (OU2, OU3a), the theorems that read only `active` (OU3f), the five master laws (OU3b–OU3e), and the old World's representation (WRT2, with processes in WRP2). The plan's next step is §八 step 5 (丙一与验).
+
+**What the audit set aside, and where each goes.** None is claimed. Each is placed by what would make it a result, not by a count.
+
+1. **The alternation of a two-valued class over a listing** (the seven Decidedness rows marked "(b), not proposed"). They stay laws of their model. They become grammar cases only if alternation is stated as a grammar law, a relation of «两端» read along a listing, that is a reason for more than these seven. That is a question for plan §八 step 5, where each conditional law is written as "Y 当且仅当 Z" with a counterexample, and not a separate item.
+2. **`Sampling.arises_within`** (and `ceases_within`), a candidate case of «两端分则中有标» that reads no field (the audit's review: "a (b) candidate"). As stated, the law is not its reason. It takes a class (`«类» K`, reflexive, symmetric and transitive), and with a class it finds a change but not its direction: with K "p alike" the marked step can be a ceasing one. `arises_within` is its case only under "p holds later → held earlier", which is transitive but not symmetric. Its proof uses only transitivity, as its docstring says. So the root law's hypothesis is weakened to transitivity first, with its two consumers in PatternPassing passing their class's `.trans`. Then `arises_within` and `ceases_within` are derived from the given decidability alone. That generalizes a root law (Grammar.lean), so it rides the next planned full or near-full rebuild, as HE's edits did, not Sampling's cone. OU3f's owner takes it then, with a scratch check that the derivations are genuine and no longer than the proofs they replace.
+3. **The theorems that read `active` together with other fields.** These are the dependency audit's next groups. Each group is a lift, or a reason, on OU3f's pattern: an audit first, then derivations. Each audit looks for closure cases first (seven of OU3f's fifteen (a) rows were), and reuses OU3f's kit: the classification table, `reach.py`, and the dependency check with a control run on main. The groups are taken in the order the central declarations use them, since full unification (§十三 item 13) asks only that central declarations reach the root.
+4. **The layer that reads no field** (WRP's, for example `Reidentify.old_still` and `Linked.mono`). These are taken whole through WRP as statements at a represented model, which 全一 counts. Under §十三 item 13 they enter the root through U2 or U3 only where a central declaration uses them, or the place where they do not enter is written down. No sweep is planned.
+
+**U2 landed** (`08ed13d33`, study §461). `Becoming.ModelStatements` is a core leaf, 78 theorems in 121 declarations, every axiom report empty. 20 of U2's 24 rows are read at the World's or a process's model, as laws at the model in their rows' own 16 records, and MV's F5 verifies each pair and counts it apart. Of the 118 distinct central declarations, 44 reach the grammar, 16 are stated at a represented model, 4 on their own carrier only, and 54 are the rest. 3 rows resist, since their terms are amounts computed over a family, and 1 waits for U3. So 全五 now tells derivation from representation.
+
+**Next, in order:** U3's documents, then its Lean items 1 and 2 (全四). GW1 and GW2 stay on GW's line. The root generalization behind item 2 above rides the next planned full rebuild. After these comes plan §八 step 5.
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.

@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261029T200440.502813Z",
- "core_sources_sha256": "6c5b807ed09a7ce2ba5d07622875fdb92bd9c7ae0497d91d53999c4eb31a3ab5",
+ "core_receipt": "20261029T213154.508889Z",
+ "core_sources_sha256": "dd23a4e42ddac2aad686c66170e8fd84433539d6fe3f977fa09131f2af28c61f",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -9,7 +9,7 @@
   "theories/becoming/results/completion/COVERAGE.json": "022ae0fc28b40f798c02823be35d7463afac2a92a0ada74bfbd3789e160d9749",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "c8e349f57adecd7bd8d25bd0fde850c9f813919cdbf0e4a3734005c43340043a",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
-  "tools/research/master_laws.py": "02c404983046d8e75d18cd7abcbcefe8758be3d0c0c687d579e874332e3aec0e"
+  "tools/research/master_laws.py": "f7e423e8630df318b18b5fc2b48d0c8f2941953053af4561ac49b83390d82f23"
  },
  "names": {
   "closure": "closure",
@@ -56,19 +56,322 @@
   ]
  },
  "counts": {
-  "laws": 3788,
+  "laws": 3808,
   "no_declarations": 9,
-  "outside": 357,
+  "outside": 361,
   "grammar": 749,
   "balance, represented": 645,
   "anchor, not reached": 134,
-  "no master law": 1894,
+  "no master law": 1910,
   "vocabulary_only": 65,
   "closure": 476,
   "balance": 815,
   "return": 252,
   "lumping": 83,
   "order": 78
+ },
+ "counts_at_model": {
+  "laws": 20,
+  "no_declarations": 0,
+  "outside": 0,
+  "grammar": 20,
+  "balance, represented": 0,
+  "anchor, not reached": 0,
+  "no master law": 0,
+  "vocabulary_only": 16,
+  "closure": 3,
+  "balance": 0,
+  "return": 0,
+  "lumping": 0,
+  "order": 0
+ },
+ "model_relations": {
+  "occurrence": [
+   "Becoming.Steps.along",
+   "Becoming.Web.roles",
+   "Becoming.World.withinStep"
+  ],
+  "process": [
+   "Becoming.Steps",
+   "Becoming.Steps.next",
+   "Becoming.moveRel"
+  ],
+  "structure": [
+   "Becoming.Steps",
+   "Becoming.Steps.along",
+   "Becoming.Steps.next",
+   "Becoming.Web.admitted",
+   "Becoming.Web.partialIdentity",
+   "Becoming.Web.roles",
+   "Becoming.World.withinStep",
+   "Becoming.moveRel",
+   "Becoming.sameValue"
+  ]
+ },
+ "central_reach": {
+  "counts": {
+   "reaching the grammar": 44,
+   "stated at a represented model": 16,
+   "stated on its own carrier only": 4,
+   "the rest": 54
+  },
+  "rows": {
+   "Becoming.Dependence.Overdetermined.only_together": [
+    {
+     "of": "Becoming.Dependence.Overdetermined.only_together",
+     "record": "joint-difference-making",
+     "law": 13,
+     "declaration": "Becoming.ModelStatements.only_together_reading",
+     "models": [
+      "process"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Dependence.differenceOnlyTogether_iff": [
+    {
+     "of": "Becoming.Dependence.differenceOnlyTogether_iff",
+     "record": "joint-difference-making",
+     "law": 14,
+     "declaration": "Becoming.ModelStatements.differenceOnlyTogether_reading",
+     "models": [
+      "process"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.ExchangeLaw.response_not_fixed_by_coupling": [
+    {
+     "of": "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+     "record": "what-a-pools-acts-respond-to",
+     "law": 12,
+     "declaration": "Becoming.ModelStatements.response_not_fixed_reading",
+     "models": [
+      "own"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Flow.descent_reaches": [
+    {
+     "of": "Becoming.Flow.descent_reaches",
+     "record": "living-on-and-descent",
+     "law": 11,
+     "declaration": "Becoming.ModelStatements.descent_reaches_reading",
+     "models": [
+      "occurrence"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Ideals.verifiableBy_iff_interior": [
+    {
+     "of": "Becoming.Ideals.verifiableBy_iff_interior",
+     "record": "what-a-finite-stretch-verifies",
+     "law": 15,
+     "declaration": "Becoming.ModelStatements.verifiableBy_reading",
+     "models": [
+      "own"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Learning.Training.unselected_beyond_data": [
+    {
+     "of": "Becoming.Learning.Training.unselected_beyond_data",
+     "record": "generalization-through-lumping",
+     "law": 13,
+     "declaration": "Becoming.ModelStatements.unselected_beyond_data_reading",
+     "models": [
+      "own"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Limit.identifies_iff_tracks": [
+    {
+     "of": "Becoming.Limit.identifies_iff_tracks",
+     "record": "learning-through-a-map-is-tracking-in-the-limit",
+     "law": 6,
+     "declaration": "Becoming.ModelStatements.identifies_iff_reading",
+     "models": [
+      "process"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Renewable.no_exact_finite_reading": [
+    {
+     "of": "Becoming.Renewable.no_exact_finite_reading",
+     "record": "becoming-finite-horizon",
+     "law": 8,
+     "declaration": "Becoming.ModelStatements.finite_reading_not_exact",
+     "models": [
+      "process",
+      "occurrence"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    },
+    {
+     "of": "Becoming.Renewable.no_exact_finite_reading",
+     "record": "becoming-finite-horizon",
+     "law": 8,
+     "declaration": "Becoming.ModelStatements.renewing_not_closed",
+     "models": [
+      "process",
+      "occurrence"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Run.not_fixes_of_untaken": [
+    {
+     "of": "Becoming.Run.not_fixes_of_untaken",
+     "record": "experiment-needs-return",
+     "law": 9,
+     "declaration": "Becoming.ModelStatements.not_fixes_reading",
+     "models": [
+      "process"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.SharedCodes.run_agrees_every_start_iff": [
+    {
+     "of": "Becoming.SharedCodes.run_agrees_every_start_iff",
+     "record": "a-code-formed-between-formations",
+     "law": 11,
+     "declaration": "Becoming.ModelStatements.run_agrees_every_start_reading",
+     "models": [
+      "process",
+      "own"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Valuation.significant_iff_held": [
+    {
+     "of": "Becoming.Valuation.significant_iff_held",
+     "record": "living-significance-on-held-lives",
+     "law": 10,
+     "declaration": "Becoming.ModelStatements.significant_iff_held_reading",
+     "models": [
+      "own"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Viability.kernel_and_iff": [
+    {
+     "of": "Becoming.Viability.kernel_and_iff",
+     "record": "conditions-kept-together",
+     "law": 5,
+     "declaration": "Becoming.ModelStatements.kernel_and_reading",
+     "models": [
+      "process"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Web.living_on_reaches": [
+    {
+     "of": "Becoming.Web.living_on_reaches",
+     "record": "living-on-and-descent",
+     "law": 10,
+     "declaration": "Becoming.ModelStatements.living_on_reaches_reading",
+     "models": [
+      "occurrence"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Web.optimum_broken_iff": [
+    {
+     "of": "Becoming.Web.optimum_broken_iff",
+     "record": "what-an-optimum-does-beyond-what-couples-in",
+     "law": 8,
+     "declaration": "Becoming.ModelStatements.optimum_broken_reading",
+     "models": [
+      "own",
+      "occurrence"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Web.renewingAt_iff_over_all": [
+    {
+     "of": "Becoming.Web.renewingAt_iff_over_all",
+     "record": "represented-boundary-against-dependence",
+     "law": 6,
+     "declaration": "Becoming.ModelStatements.renewingAt_iff_over_all_reading",
+     "models": [
+      "occurrence"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Web.roles_alive": [
+    {
+     "of": "Becoming.Web.roles_alive",
+     "record": "life-as-condition-of-life",
+     "law": 16,
+     "declaration": "Becoming.ModelStatements.roles_alive_reading",
+     "models": [
+      "occurrence"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Web.roles_dependent": [
+    {
+     "of": "Becoming.Web.roles_dependent",
+     "record": "life-as-condition-of-life",
+     "law": 15,
+     "declaration": "Becoming.ModelStatements.roles_dependent_reading",
+     "models": [
+      "occurrence"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Web.roles_supported": [
+    {
+     "of": "Becoming.Web.roles_supported",
+     "record": "life-as-condition-of-life",
+     "law": 14,
+     "declaration": "Becoming.ModelStatements.roles_supported_reading",
+     "models": [
+      "occurrence"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Web.significance_undetermined": [
+    {
+     "of": "Becoming.Web.significance_undetermined",
+     "record": "continuation-condition-yields-living-significance",
+     "law": 15,
+     "declaration": "Becoming.ModelStatements.significance_undetermined_reading",
+     "models": [
+      "own",
+      "occurrence"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Web.transmits_at_iff": [
+    {
+     "of": "Becoming.Web.transmits_at_iff",
+     "record": "transmission-is-inheritance-and-need",
+     "law": 16,
+     "declaration": "Becoming.ModelStatements.transmits_at_reading",
+     "models": [
+      "occurrence"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ]
+  }
  },
  "records": {
   "a-code-formed-between-formations": [
@@ -123,6 +426,19 @@
       "dependence": "no master law",
       "master_laws": [],
       "reason": "copying from an origin"
+     }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.SharedCodes.run_agrees_every_start_iff",
+      "record": "a-code-formed-between-formations",
+      "law": 11,
+      "declaration": "Becoming.ModelStatements.run_agrees_every_start_reading",
+      "models": [
+       "process",
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
      }
     ]
    },
@@ -242,6 +558,46 @@
     "master_laws": [],
     "grammar": false,
     "dependence": "no master law"
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.ModelStatements.run_agrees_every_start_reading",
+     "Becoming.ModelStatements.runs_agree_iff_reached",
+     "Becoming.ModelStatements.reached_iff",
+     "Becoming.ModelStatements.origin_iff_li",
+     "Becoming.ModelStatements.copies"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.run_agrees_every_start_reading",
+      "of": "Becoming.SharedCodes.run_agrees_every_start_iff",
+      "models": [
+       "process",
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«一»",
+       "Becoming.«则»",
+       "Becoming.«历»",
+       "Becoming.«而»",
+       "Becoming.«逆»"
+      ],
+      "other_terms": [
+       "Becoming.SharedCodes.Hearing",
+       "Becoming.SharedCodes.always",
+       "Becoming.SharedCodes.hearings",
+       "Becoming.SharedCodes.process"
+      ],
+      "row_dependence": "no master law"
+     }
+    ]
    }
   ],
   "a-coupling-saturated-by-what-it-has-carried": [
@@ -3814,6 +4170,100 @@
       "master_laws": [],
       "reason": "a prefix reading used once; the open continuation"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Renewable.no_exact_finite_reading",
+      "record": "becoming-finite-horizon",
+      "law": 8,
+      "declaration": "Becoming.ModelStatements.finite_reading_not_exact",
+      "models": [
+       "process",
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     },
+     {
+      "of": "Becoming.Renewable.no_exact_finite_reading",
+      "record": "becoming-finite-horizon",
+      "law": 8,
+      "declaration": "Becoming.ModelStatements.renewing_not_closed",
+      "models": [
+       "process",
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     }
+    ]
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.ModelStatements.finite_reading_not_exact",
+     "Becoming.ModelStatements.renewing_not_closed",
+     "Becoming.ModelStatements.finite_reading_iff",
+     "Becoming.ModelStatements.agreeUpTo_iff",
+     "Becoming.ModelStatements.renewing_iff_along",
+     "Becoming.ModelStatements.renewingIn_iff"
+    ],
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.finite_reading_not_exact",
+      "of": "Becoming.Renewable.no_exact_finite_reading",
+      "models": [
+       "process",
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«则»",
+       "Becoming.«及»",
+       "Becoming.«所闭»",
+       "Becoming.«而»",
+       "Becoming.«能»",
+       "Becoming.«逆»",
+       "Becoming.«闭»"
+      ],
+      "other_terms": [
+       "Becoming.Renewable.process",
+       "Becoming.Run",
+       "Becoming.Run.act",
+       "Becoming.Run.state"
+      ],
+      "row_dependence": "no master law"
+     },
+     {
+      "declaration": "Becoming.ModelStatements.renewing_not_closed",
+      "of": "Becoming.Renewable.no_exact_finite_reading",
+      "models": [
+       "process",
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«则»",
+       "Becoming.«及»",
+       "Becoming.«所闭»",
+       "Becoming.«而»",
+       "Becoming.«能»",
+       "Becoming.«逆»",
+       "Becoming.«闭»"
+      ],
+      "other_terms": [
+       "Becoming.Renewable.process",
+       "Becoming.Run",
+       "Becoming.Run.act",
+       "Becoming.Run.state"
+      ],
+      "row_dependence": "no master law"
+     }
     ]
    }
   ],
@@ -5104,6 +5554,18 @@
       "dependence": "no master law",
       "master_laws": [],
       "reason": "an untaken move retargeted"
+     }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Run.not_fixes_of_untaken",
+      "record": "experiment-needs-return",
+      "law": 9,
+      "declaration": "Becoming.ModelStatements.not_fixes_reading",
+      "models": [
+       "process"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
      }
     ]
    },
@@ -8170,6 +8632,18 @@
       "master_laws": [],
       "reason": "logic: for all reached, and"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Viability.kernel_and_iff",
+      "record": "conditions-kept-together",
+      "law": 5,
+      "declaration": "Becoming.ModelStatements.kernel_and_reading",
+      "models": [
+       "process"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     }
     ]
    },
    {
@@ -8210,6 +8684,36 @@
     "master_laws": [],
     "grammar": false,
     "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.ModelStatements.kernel_and_reading",
+     "Becoming.ModelStatements.kernel_iff"
+    ],
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.kernel_and_reading",
+      "of": "Becoming.Viability.kernel_and_iff",
+      "models": [
+       "process"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«所闭»"
+      ],
+      "other_terms": [
+       "Generative.Process"
+      ],
+      "row_dependence": "no master law"
+     }
+    ]
    }
   ],
   "configurations-alike-by-relation": [
@@ -9102,6 +9606,18 @@
       "master_laws": [],
       "reason": "S0 and N_std unpacked"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Valuation.significant_iff_held",
+      "record": "living-significance-on-held-lives",
+      "law": 10,
+      "declaration": "Becoming.ModelStatements.significant_iff_held_reading",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     }
     ]
    },
    {
@@ -9227,6 +9743,19 @@
       "master_laws": [],
       "reason": "a free slot shown free"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Web.significance_undetermined",
+      "record": "continuation-condition-yields-living-significance",
+      "law": 15,
+      "declaration": "Becoming.ModelStatements.significance_undetermined_reading",
+      "models": [
+       "own",
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     }
     ]
    },
    {
@@ -9326,6 +9855,43 @@
    {
     "law": 14,
     "declarations": []
+   },
+   {
+    "law": 15,
+    "declarations": [
+     "Becoming.ModelStatements.significance_undetermined_reading",
+     "Becoming.ModelStatements.retains_iff",
+     "Becoming.ModelStatements.adds_iff",
+     "Becoming.ModelStatements.livingClaim"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.significance_undetermined_reading",
+      "of": "Becoming.Web.significance_undetermined",
+      "models": [
+       "own",
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«则»",
+       "Becoming.«合»",
+       "Becoming.«而»",
+       "Becoming.«能»",
+       "Becoming.«逆»",
+       "Becoming.«逾»"
+      ],
+      "other_terms": [
+       "Becoming.Web"
+      ],
+      "row_dependence": "no master law"
+     }
+    ]
    }
   ],
   "continuation-relative-to-a-class": [
@@ -14578,6 +15144,18 @@
       "master_laws": [],
       "reason": "an untaken move retargeted"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Run.not_fixes_of_untaken",
+      "record": "experiment-needs-return",
+      "law": 9,
+      "declaration": "Becoming.ModelStatements.not_fixes_reading",
+      "models": [
+       "process"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     }
     ]
    },
    {
@@ -14663,6 +15241,40 @@
     "master_laws": [],
     "grammar": false,
     "dependence": "no master law"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.ModelStatements.not_fixes_reading",
+     "Becoming.ModelStatements.fixes_iff",
+     "Becoming.ModelStatements.takes_iff",
+     "Becoming.ModelStatements.before_iff_lt"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.not_fixes_reading",
+      "of": "Becoming.Run.not_fixes_of_untaken",
+      "models": [
+       "process"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«及»",
+       "Becoming.«定后»"
+      ],
+      "other_terms": [
+       "Becoming.Run",
+       "Becoming.Run.act",
+       "Becoming.Run.state",
+       "Generative.Process"
+      ],
+      "row_dependence": "no master law"
+     }
+    ]
    }
   ],
   "fallible-witness-diagnosability": [
@@ -16871,6 +17483,201 @@
     "dependence": "balance, represented"
    }
   ],
+  "free-energy-bound-in-counts": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.mul_pow_eq",
+     "Becoming.FreeEnergyCounting.self_pow_pos",
+     "Becoming.FreeEnergyCounting.lt_cancel_mul_left",
+     "Becoming.FreeEnergyCounting.lt_cancel_mul_right",
+     "Becoming.FreeEnergyCounting.base_zero_of_pow_zero",
+     "Becoming.FreeEnergyCounting.pow_succ_lt_pow_succ"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.rearrange",
+     "Becoming.FreeEnergyCounting.rearrange_strict",
+     "Becoming.FreeEnergyCounting.powers_rearrange",
+     "Becoming.FreeEnergyCounting.powers_rearrange_strict"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.bernoulli",
+     "Becoming.FreeEnergyCounting.bernoulli_strict",
+     "Becoming.FreeEnergyCounting.bernoulli_split",
+     "Becoming.FreeEnergyCounting.bernoulli_regroup",
+     "Becoming.FreeEnergyCounting.bernoulli_close"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.mean_step",
+     "Becoming.FreeEnergyCounting.mean_step_strict",
+     "Becoming.FreeEnergyCounting.mean_step_identity",
+     "Becoming.FreeEnergyCounting.mean_step_lhs",
+     "Becoming.FreeEnergyCounting.mean_step_rhs"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.mean_two",
+     "Becoming.FreeEnergyCounting.mean_two_strict",
+     "Becoming.FreeEnergyCounting.mean_two_sum",
+     "Becoming.FreeEnergyCounting.mean_two_ident"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.two_parts",
+     "Becoming.FreeEnergyCounting.two_parts_strict",
+     "Becoming.FreeEnergyCounting.proportional_of_two_parts_eq",
+     "Becoming.FreeEnergyCounting.two_parts_lhs",
+     "Becoming.FreeEnergyCounting.two_parts_rhs"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.powerProduct",
+     "Becoming.FreeEnergyCounting.powerProduct_self_pos",
+     "Becoming.FreeEnergyCounting.zero_of_total_zero",
+     "Becoming.FreeEnergyCounting.cons_left",
+     "Becoming.FreeEnergyCounting.cons_mid",
+     "Becoming.FreeEnergyCounting.cons_right",
+     "Becoming.FreeEnergyCounting.bound"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.powerProduct_scaled",
+     "Becoming.FreeEnergyCounting.bound_eq_of_proportional",
+     "Becoming.FreeEnergyCounting.proportional_cons",
+     "Becoming.FreeEnergyCounting.proportional_of_bound_eq",
+     "Becoming.FreeEnergyCounting.bound_eq_iff",
+     "Becoming.FreeEnergyCounting.bound_lt_of_not_proportional"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.zero_weights_reach",
+     "Becoming.FreeEnergyCounting.no_counts_reach"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.joint",
+     "Becoming.FreeEnergyCounting.record_total",
+     "Becoming.FreeEnergyCounting.bound_given_record",
+     "Becoming.FreeEnergyCounting.given_record_eq_iff",
+     "Becoming.FreeEnergyCounting.posterior_counts_reach"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.nothing_record_reach_all"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.given_record_eq_iff_share"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 13,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.Witness.even",
+     "Becoming.FreeEnergyCounting.Witness.first",
+     "Becoming.FreeEnergyCounting.Witness.strict_off_proportion",
+     "Becoming.FreeEnergyCounting.Witness.twoEach",
+     "Becoming.FreeEnergyCounting.Witness.scaled_reach"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 14,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.Witness.secondOnly",
+     "Becoming.FreeEnergyCounting.Witness.off_support"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 15,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.Witness.oneTwo",
+     "Becoming.FreeEnergyCounting.Witness.split2",
+     "Becoming.FreeEnergyCounting.Witness.total_two_unreached"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 16,
+    "declarations": [
+     "Becoming.FreeEnergyCounting.Witness.unitPrior",
+     "Becoming.FreeEnergyCounting.Witness.unitLik",
+     "Becoming.FreeEnergyCounting.Witness.nothing_record_reach",
+     "Becoming.FreeEnergyCounting.Witness.duplicate_share"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   }
+  ],
   "free-energy-bounds-surprisal": [
    {
     "law": 1,
@@ -17020,6 +17827,92 @@
     "outside": [
      "Becoming.FreeEnergy.surprisal_product",
      "Becoming.FreeEnergy.surprisal_eq_log_reciprocal"
+    ]
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.FreeEnergy.countBelief",
+     "Becoming.FreeEnergy.cast_total",
+     "Becoming.FreeEnergy.cast_powerProduct",
+     "Becoming.FreeEnergy.total_pos_of_counts",
+     "Becoming.FreeEnergy.powerProduct_pos",
+     "Becoming.FreeEnergy.countBelief_nonneg",
+     "Becoming.FreeEnergy.sum_countBelief",
+     "Becoming.FreeEnergy.countBelief_support",
+     "Becoming.FreeEnergy.self_pow_ne_zero",
+     "Becoming.FreeEnergy.gap_counts",
+     "Becoming.FreeEnergy.divergence_counts",
+     "Becoming.FreeEnergy.counts_eq_mul_exp"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.countBelief",
+     "Becoming.FreeEnergy.cast_total",
+     "Becoming.FreeEnergy.cast_powerProduct",
+     "Becoming.FreeEnergy.total_pos_of_counts",
+     "Becoming.FreeEnergy.powerProduct_pos",
+     "Becoming.FreeEnergy.countBelief_nonneg",
+     "Becoming.FreeEnergy.sum_countBelief",
+     "Becoming.FreeEnergy.countBelief_support",
+     "Becoming.FreeEnergy.self_pow_ne_zero",
+     "Becoming.FreeEnergy.gap_counts",
+     "Becoming.FreeEnergy.divergence_counts",
+     "Becoming.FreeEnergy.counts_eq_mul_exp"
+    ]
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.FreeEnergy.counting_lhs_pos",
+     "Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound",
+     "Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts",
+     "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts",
+     "Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts",
+     "Becoming.FreeEnergy.proportional_iff_posterior"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.counting_lhs_pos",
+     "Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound",
+     "Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts",
+     "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts",
+     "Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts",
+     "Becoming.FreeEnergy.proportional_iff_posterior"
+    ]
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.FreeEnergy.freeEnergy_congr_weights",
+     "Becoming.FreeEnergy.gap_div",
+     "Becoming.FreeEnergy.gap_counts_given_record",
+     "Becoming.ConditionalWeights.Share.same_iff_toReal_eq",
+     "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts",
+     "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts",
+     "Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts",
+     "Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.freeEnergy_congr_weights",
+     "Becoming.FreeEnergy.gap_div",
+     "Becoming.FreeEnergy.gap_counts_given_record",
+     "Becoming.ConditionalWeights.Share.same_iff_toReal_eq",
+     "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts",
+     "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts",
+     "Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts",
+     "Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts"
+    ]
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.FreeEnergy.Witness.gap_counts_off_support",
+     "Becoming.FreeEnergy.Witness.one_count_off_support",
+     "Becoming.FreeEnergy.Witness.gap_counts_duplicate"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.Witness.gap_counts_off_support",
+     "Becoming.FreeEnergy.Witness.one_count_off_support",
+     "Becoming.FreeEnergy.Witness.gap_counts_duplicate"
     ]
    }
   ],
@@ -17254,6 +18147,18 @@
       "master_laws": [],
       "reason": "a selection through the data, used once"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Learning.Training.unselected_beyond_data",
+      "record": "generalization-through-lumping",
+      "law": 13,
+      "declaration": "Becoming.ModelStatements.unselected_beyond_data_reading",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     }
     ]
    },
    {
@@ -17330,6 +18235,39 @@
      "Becoming.LearningCorrespondence.updating_no_network_law",
      "Becoming.LearningCorrespondence.responsive_kept",
      "Becoming.LearningCorrespondence.responsive_learns"
+    ]
+   },
+   {
+    "law": 13,
+    "declarations": [
+     "Becoming.ModelStatements.unselected_beyond_data_reading",
+     "Becoming.ModelStatements.through_of_closed",
+     "Becoming.ModelStatements.free_iff",
+     "Becoming.ModelStatements.agreeingOn"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.unselected_beyond_data_reading",
+      "of": "Becoming.Learning.Training.unselected_beyond_data",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«则»",
+       "Becoming.«合»",
+       "Becoming.«而»",
+       "Becoming.«逆»",
+       "Becoming.«闭»"
+      ],
+      "other_terms": [],
+      "row_dependence": "no master law"
+     }
     ]
    }
   ],
@@ -22191,6 +23129,18 @@
       "master_laws": [],
       "reason": "one line from the definitions"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Dependence.Overdetermined.only_together",
+      "record": "joint-difference-making",
+      "law": 13,
+      "declaration": "Becoming.ModelStatements.only_together_reading",
+      "models": [
+       "process"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     }
     ]
    },
    {
@@ -22209,6 +23159,18 @@
       "dependence": "no master law",
       "master_laws": [],
       "reason": "the dichotomy of a determined process"
+     }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Dependence.differenceOnlyTogether_iff",
+      "record": "joint-difference-making",
+      "law": 14,
+      "declaration": "Becoming.ModelStatements.differenceOnlyTogether_reading",
+      "models": [
+       "process"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
      }
     ]
    },
@@ -22267,6 +23229,79 @@
     "master_laws": [],
     "grammar": false,
     "dependence": "no master law"
+   },
+   {
+    "law": 13,
+    "declarations": [
+     "Becoming.ModelStatements.only_together_reading",
+     "Becoming.ModelStatements.overdetermined_iff",
+     "Becoming.ModelStatements.differenceAt",
+     "Becoming.ModelStatements.withholdAll_iff_li"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.only_together_reading",
+      "of": "Becoming.Dependence.Overdetermined.only_together",
+      "models": [
+       "process"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«则»",
+       "Becoming.«历»",
+       "Becoming.«合»",
+       "Becoming.«而»",
+       "Becoming.«能»"
+      ],
+      "other_terms": [
+       "Becoming.Dependence",
+       "Generative.Process"
+      ],
+      "row_dependence": "no master law"
+     }
+    ]
+   },
+   {
+    "law": 14,
+    "declarations": [
+     "Becoming.ModelStatements.differenceOnlyTogether_reading",
+     "Becoming.ModelStatements.differenceOnlyTogether_iff_model",
+     "Becoming.ModelStatements.makesDifference_iff",
+     "Becoming.ModelStatements.makesDifferenceTogether_iff"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.differenceOnlyTogether_reading",
+      "of": "Becoming.Dependence.differenceOnlyTogether_iff",
+      "models": [
+       "process"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«则»",
+       "Becoming.«历»",
+       "Becoming.«合»",
+       "Becoming.«定后»",
+       "Becoming.«而»",
+       "Becoming.«能»"
+      ],
+      "other_terms": [
+       "Becoming.Dependence",
+       "Generative.Process"
+      ],
+      "row_dependence": "no master law"
+     }
+    ]
    }
   ],
   "joint-plan-composition": [
@@ -23945,6 +24980,18 @@
       "master_laws": [],
       "reason": "Iff.rfl"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Limit.identifies_iff_tracks",
+      "record": "learning-through-a-map-is-tracking-in-the-limit",
+      "law": 6,
+      "declaration": "Becoming.ModelStatements.identifies_iff_reading",
+      "models": [
+       "process"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     }
     ]
    },
    {
@@ -24011,6 +25058,39 @@
     "master_laws": [],
     "grammar": false,
     "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.ModelStatements.identifies_iff_reading",
+     "Becoming.ModelStatements.tracks_iff",
+     "Becoming.ModelStatements.withinSteps_iff_le"
+    ],
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.identifies_iff_reading",
+      "of": "Becoming.Limit.identifies_iff_tracks",
+      "models": [
+       "process"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«所闭»"
+      ],
+      "other_terms": [
+       "Becoming.Limit.Identifies",
+       "Becoming.Run",
+       "Generative.Process"
+      ],
+      "row_dependence": "no master law"
+     }
+    ]
    }
   ],
   "least-footprint-where-idleness-decided": [
@@ -24719,6 +25799,38 @@
       "master_laws": [],
       "reason": "the one-kind reading keeps living"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Web.roles_supported",
+      "record": "life-as-condition-of-life",
+      "law": 14,
+      "declaration": "Becoming.ModelStatements.roles_supported_reading",
+      "models": [
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     },
+     {
+      "of": "Becoming.Web.roles_dependent",
+      "record": "life-as-condition-of-life",
+      "law": 15,
+      "declaration": "Becoming.ModelStatements.roles_dependent_reading",
+      "models": [
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     },
+     {
+      "of": "Becoming.Web.roles_alive",
+      "record": "life-as-condition-of-life",
+      "law": 16,
+      "declaration": "Becoming.ModelStatements.roles_alive_reading",
+      "models": [
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     }
     ]
    },
    {
@@ -24885,6 +25997,104 @@
     ],
     "grammar": true,
     "dependence": "grammar"
+   },
+   {
+    "law": 14,
+    "declarations": [
+     "Becoming.ModelStatements.roles_supported_reading",
+     "Becoming.ModelStatements.supported_iff"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.roles_supported_reading",
+      "of": "Becoming.Web.roles_supported",
+      "models": [
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«则»",
+       "Becoming.«而»"
+      ],
+      "other_terms": [
+       "Becoming.Web",
+       "Becoming.Web.Supported"
+      ],
+      "row_dependence": "no master law"
+     }
+    ]
+   },
+   {
+    "law": 15,
+    "declarations": [
+     "Becoming.ModelStatements.roles_dependent_reading",
+     "Becoming.ModelStatements.dependent_iff"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.roles_dependent_reading",
+      "of": "Becoming.Web.roles_dependent",
+      "models": [
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«则»",
+       "Becoming.«而»"
+      ],
+      "other_terms": [
+       "Becoming.Web",
+       "Becoming.Web.Dependent"
+      ],
+      "row_dependence": "no master law"
+     }
+    ]
+   },
+   {
+    "law": 16,
+    "declarations": [
+     "Becoming.ModelStatements.roles_alive_reading",
+     "Becoming.ModelStatements.living_iff",
+     "Becoming.ModelStatements.underminingAt_iff",
+     "Becoming.ModelStatements.undermined"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.roles_alive_reading",
+      "of": "Becoming.Web.roles_alive",
+      "models": [
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«合»",
+       "Becoming.«而»",
+       "Becoming.«能»",
+       "Becoming.«逆»"
+      ],
+      "other_terms": [
+       "Becoming.Dependence.active",
+       "Becoming.Web",
+       "Becoming.Web.UnderminingAt"
+      ],
+      "row_dependence": "no master law"
+     }
+    ]
    }
   ],
   "lifting-where-branching-is-finite": [
@@ -25269,6 +26479,18 @@
       "master_laws": [],
       "reason": "N_rel once; its closure form is Valuation.reaches"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Web.living_on_reaches",
+      "record": "living-on-and-descent",
+      "law": 10,
+      "declaration": "Becoming.ModelStatements.living_on_reaches_reading",
+      "models": [
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     }
     ]
    },
    {
@@ -25311,6 +26533,18 @@
       "dependence": "no master law",
       "master_laws": [],
       "reason": "N_rel once; its closure form is Valuation.reaches"
+     }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Flow.descent_reaches",
+      "record": "living-on-and-descent",
+      "law": 11,
+      "declaration": "Becoming.ModelStatements.descent_reaches_reading",
+      "models": [
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
      }
     ]
    },
@@ -25359,6 +26593,78 @@
     ],
     "grammar": true,
     "dependence": "grammar"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.ModelStatements.living_on_reaches_reading",
+     "Becoming.ModelStatements.sustenance_neutral_iff",
+     "Becoming.ModelStatements.neutral_transmits_iff",
+     "Becoming.ModelStatements.livesOn_iff",
+     "Becoming.ModelStatements.interacts_iff"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.living_on_reaches_reading",
+      "of": "Becoming.Web.living_on_reaches",
+      "models": [
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«合»",
+       "Becoming.«而»",
+       "Becoming.«能»",
+       "Becoming.«逆»",
+       "Becoming.«闭»"
+      ],
+      "other_terms": [
+       "Becoming.Web"
+      ],
+      "row_dependence": "no master law"
+     }
+    ]
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.ModelStatements.descent_reaches_reading",
+     "Becoming.ModelStatements.descent_neutral_iff",
+     "Becoming.ModelStatements.descends_iff",
+     "Becoming.ModelStatements.descentStep"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.descent_reaches_reading",
+      "of": "Becoming.Flow.descent_reaches",
+      "models": [
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«合»",
+       "Becoming.«而»",
+       "Becoming.«能»",
+       "Becoming.«逆»",
+       "Becoming.«闭»"
+      ],
+      "other_terms": [
+       "Becoming.Flow",
+       "Becoming.Web"
+      ],
+      "row_dependence": "no master law"
+     }
+    ]
    }
   ],
   "living-significance-on-held-lives": [
@@ -25392,6 +26698,18 @@
       "dependence": "no master law",
       "master_laws": [],
       "reason": "S0 and N_std unpacked"
+     }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Valuation.significant_iff_held",
+      "record": "living-significance-on-held-lives",
+      "law": 10,
+      "declaration": "Becoming.ModelStatements.significant_iff_held_reading",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
      }
     ]
    },
@@ -25489,6 +26807,42 @@
       "master_laws": [
        "closure"
       ]
+     }
+    ]
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.ModelStatements.significant_iff_held_reading",
+     "Becoming.ModelStatements.significant_iff_reading",
+     "Becoming.ModelStatements.selfSignificance_iff_reading",
+     "Becoming.ModelStatements.shares_iff_reading",
+     "Becoming.ModelStatements.held_iff_reading"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.significant_iff_held_reading",
+      "of": "Becoming.Valuation.significant_iff_held",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«则»",
+       "Becoming.«合»"
+      ],
+      "other_terms": [
+       "Becoming.Valuation",
+       "Becoming.Valuation.living",
+       "Becoming.Valuation.own",
+       "Becoming.Valuation.sig"
+      ],
+      "row_dependence": "no master law"
      }
     ]
    }
@@ -35916,6 +37270,18 @@
       "master_laws": [],
       "reason": "a one-line unpacking"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Web.renewingAt_iff_over_all",
+      "record": "represented-boundary-against-dependence",
+      "law": 6,
+      "declaration": "Becoming.ModelStatements.renewingAt_iff_over_all_reading",
+      "models": [
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     }
     ]
    },
    {
@@ -35971,6 +37337,41 @@
     "dependence": "balance, represented",
     "defines": [
      "Becoming.Flow.Balances"
+    ]
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.ModelStatements.renewingAt_iff_over_all_reading",
+     "Becoming.ModelStatements.renewingAt_reading",
+     "Becoming.ModelStatements.renewingOver_reading",
+     "Becoming.ModelStatements.roles_renewingAt",
+     "Becoming.ModelStatements.roles_renewingOver",
+     "Becoming.ModelStatements.keptAcross"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.renewingAt_iff_over_all_reading",
+      "of": "Becoming.Web.renewingAt_iff_over_all",
+      "models": [
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«则»",
+       "Becoming.«而»",
+       "Becoming.«逆»"
+      ],
+      "other_terms": [
+       "Becoming.Web"
+      ],
+      "row_dependence": "no master law"
+     }
     ]
    }
   ],
@@ -46084,6 +47485,18 @@
       "master_laws": [],
       "reason": "transmission unpacked"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Web.transmits_at_iff",
+      "record": "transmission-is-inheritance-and-need",
+      "law": 16,
+      "declaration": "Becoming.ModelStatements.transmits_at_reading",
+      "models": [
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     }
     ]
    },
    {
@@ -46268,6 +47681,18 @@
       "dependence": "no master law",
       "master_laws": [],
       "reason": "transmission unpacked"
+     }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Web.transmits_at_iff",
+      "record": "transmission-is-inheritance-and-need",
+      "law": 16,
+      "declaration": "Becoming.ModelStatements.transmits_at_reading",
+      "models": [
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
      }
     ]
    },
@@ -46461,6 +47886,43 @@
     "master_laws": [],
     "grammar": false,
     "dependence": "no master law"
+   },
+   {
+    "law": 16,
+    "declarations": [
+     "Becoming.ModelStatements.transmits_at_reading",
+     "Becoming.ModelStatements.transmits_at_one_kind",
+     "Becoming.ModelStatements.inheritsAt_iff",
+     "Becoming.ModelStatements.needsWithinAt_iff"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.transmits_at_reading",
+      "of": "Becoming.Web.transmits_at_iff",
+      "models": [
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«则»",
+       "Becoming.«合»",
+       "Becoming.«而»",
+       "Becoming.«能»",
+       "Becoming.«逆»"
+      ],
+      "other_terms": [
+       "Becoming.Dependence.need",
+       "Becoming.Dependence.requires",
+       "Becoming.Web"
+      ],
+      "row_dependence": "no master law"
+     }
+    ]
    }
   ],
   "two-act-worlds-carry-the-difference": [
@@ -48865,6 +50327,18 @@
       "master_laws": [],
       "reason": "Iff.rfl"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Ideals.verifiableBy_iff_interior",
+      "record": "what-a-finite-stretch-verifies",
+      "law": 15,
+      "declaration": "Becoming.ModelStatements.verifiableBy_reading",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     }
     ]
    },
    {
@@ -49058,6 +50532,40 @@
     "master_laws": [],
     "grammar": false,
     "dependence": "no master law"
+   },
+   {
+    "law": 15,
+    "declarations": [
+     "Becoming.ModelStatements.verifiableBy_reading",
+     "Becoming.ModelStatements.interiorBy_iff",
+     "Becoming.ModelStatements.member"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.verifiableBy_reading",
+      "of": "Becoming.Ideals.verifiableBy_iff_interior",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«合»",
+       "Becoming.«承»",
+       "Becoming.«能»"
+      ],
+      "other_terms": [
+       "Becoming.Ideals.Ideal",
+       "Becoming.Ideals.Preorder",
+       "Becoming.Ideals.VerifiableBy"
+      ],
+      "row_dependence": "no master law"
+     }
+    ]
    }
   ],
   "what-a-law-of-the-whole-and-no-part-takes": [
@@ -49464,6 +50972,18 @@
       "master_laws": [],
       "reason": "two laws through one coupling"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+      "record": "what-a-pools-acts-respond-to",
+      "law": 12,
+      "declaration": "Becoming.ModelStatements.response_not_fixed_reading",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     }
     ]
    },
    {
@@ -49532,6 +51052,41 @@
     ],
     "grammar": true,
     "dependence": "grammar"
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.ModelStatements.response_not_fixed_reading",
+     "Becoming.ModelStatements.through_iff_inclusion",
+     "Becoming.ModelStatements.couplingAlike",
+     "Becoming.ModelStatements.exchangingAlike"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.response_not_fixed_reading",
+      "of": "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«一»",
+       "Becoming.«则»",
+       "Becoming.«谓»"
+      ],
+      "other_terms": [
+       "Becoming.ExchangeLaw",
+       "Becoming.ExchangeLaw.take",
+       "Becoming.Web"
+      ],
+      "row_dependence": "no master law"
+     }
+    ]
    }
   ],
   "what-a-rise-draws-from-beyond": [
@@ -50266,6 +51821,19 @@
       "master_laws": [],
       "reason": "the drive to the least level"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Web.optimum_broken_iff",
+      "record": "what-an-optimum-does-beyond-what-couples-in",
+      "law": 8,
+      "declaration": "Becoming.ModelStatements.optimum_broken_reading",
+      "models": [
+       "own",
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     }
     ]
    },
    {
@@ -50320,6 +51888,46 @@
     ],
     "grammar": false,
     "dependence": "balance, represented"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.ModelStatements.optimum_broken_reading",
+     "Becoming.ModelStatements.rising_iff",
+     "Becoming.ModelStatements.room_iff",
+     "Becoming.ModelStatements.frontier_iff",
+     "Becoming.ModelStatements.metOn_iff",
+     "Becoming.ModelStatements.broken_iff"
+    ],
+    "master_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.ModelStatements.optimum_broken_reading",
+      "of": "Becoming.Web.optimum_broken_iff",
+      "models": [
+       "own",
+       "occurrence"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«则»",
+       "Becoming.«合»",
+       "Becoming.«而»",
+       "Becoming.«能»",
+       "Becoming.«逆»"
+      ],
+      "other_terms": [
+       "Becoming.Dependence.level",
+       "Becoming.Dependence.need",
+       "Becoming.Web"
+      ],
+      "row_dependence": "no master law"
+     }
+    ]
    }
   ],
   "what-bounds-offspring-numbers": [
@@ -55462,6 +57070,18 @@
       "master_laws": [],
       "reason": "an untaken move retargeted"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Run.not_fixes_of_untaken",
+      "record": "experiment-needs-return",
+      "law": 9,
+      "declaration": "Becoming.ModelStatements.not_fixes_reading",
+      "models": [
+       "process"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+     }
     ]
    },
    {
@@ -55550,6 +57170,18 @@
       "dependence": "no master law",
       "master_laws": [],
       "reason": "a selection through the data, used once"
+     }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Learning.Training.unselected_beyond_data",
+      "record": "generalization-through-lumping",
+      "law": 13,
+      "declaration": "Becoming.ModelStatements.unselected_beyond_data_reading",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
      }
     ]
    },

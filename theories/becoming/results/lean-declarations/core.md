@@ -5131,66 +5131,95 @@ Definitions and types:
 <a id="module-00dcabf3b882"></a>
 
 <details>
-<summary>FreeEnergyReals.lean — 47 explicit declarations</summary>
+<summary>FreeEnergyReals.lean — 76 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean) · [Theory](../../chapters/03-KNOWING.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue17-free-energy/DRAFT-NOTES.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean`
 
-Imports: `Mathlib.Analysis.SpecialFunctions.Log.Basic`, `Mathlib.Algebra.BigOperators.Field`, `Becoming.ConditionalWeights`
+Imports: `Mathlib.Analysis.SpecialFunctions.Log.Basic`, `Mathlib.Algebra.BigOperators.Field`, `Becoming.ConditionalWeights`, `Becoming.FreeEnergyCounting`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.FreeEnergy.freeEnergy_eq_divergence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L119) | 119 |
-| [Becoming.FreeEnergy.term_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L131) | 131 |
-| [Becoming.FreeEnergy.term_eq_iff_of_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L148) | 148 |
-| [Becoming.FreeEnergy.term_eq_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L179) | 179 |
-| [Becoming.FreeEnergy.freeEnergy_congr](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L188) | 188 |
-| [Becoming.FreeEnergy.sum_terms](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L193) | 193 |
-| [Becoming.FreeEnergy.sum_normalized_sub](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L203) | 203 |
-| [Becoming.FreeEnergy.total_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L210) | 210 |
-| [Becoming.FreeEnergy.surprisal_le_freeEnergy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L219) | 219 |
-| [Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L233) | 233 |
-| [Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L251) | 251 |
-| [Becoming.FreeEnergy.posterior_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L258) | 258 |
-| [Becoming.FreeEnergy.posterior_eq_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L263) | 263 |
-| [Becoming.FreeEnergy.sum_posterior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L268) | 268 |
-| [Becoming.FreeEnergy.freeEnergy_posterior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L274) | 274 |
-| [Becoming.FreeEnergy.minimizes_iff_posterior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L284) | 284 |
-| [Becoming.FreeEnergy.freeEnergy_eq_divergence_add_surprisal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L305) | 305 |
-| [Becoming.FreeEnergy.divergence_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L323) | 323 |
-| [Becoming.FreeEnergy.divergence_eq_zero_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L332) | 332 |
-| [Becoming.FreeEnergy.divergence_posterior_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L341) | 341 |
-| [Becoming.FreeEnergy.divergence_posterior_eq_zero_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L352) | 352 |
-| [Becoming.FreeEnergy.freeEnergy_eq_complexity_sub_accuracy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L366) | 366 |
-| [Becoming.FreeEnergy.freeEnergy_eq_energy_sub_entropy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L381) | 381 |
-| [Becoming.FreeEnergy.Witness.bound_fails_off_support](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L395) | 395 |
-| [Becoming.ConditionalWeights.Share.toReal_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L420) | 420 |
-| [Becoming.FreeEnergy.share_toReal_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L424) | 424 |
-| [Becoming.ConditionalWeights.Share.toReal_mul](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L430) | 430 |
-| [Becoming.FreeEnergy.surprisal_eq_log_reciprocal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L437) | 437 |
-| [Becoming.FreeEnergy.cast_mass_eq_sum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L444) | 444 |
-| [Becoming.FreeEnergy.jointShare_part](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L457) | 457 |
-| [Becoming.FreeEnergy.jointShare_toReal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L467) | 467 |
-| [Becoming.FreeEnergy.recordShare_toReal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L479) | 479 |
-| [Becoming.FreeEnergy.sum_jointShare](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L491) | 491 |
-| [Becoming.FreeEnergy.givenShare_toReal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L506) | 506 |
-| [Becoming.FreeEnergy.givenShare_eq_posterior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L519) | 519 |
-| [Becoming.FreeEnergy.weight_zero_of_jointShare_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L544) | 544 |
-| [Becoming.FreeEnergy.record_pos_of_belief](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L564) | 564 |
-| [Becoming.FreeEnergy.record_surprisal_le_freeEnergy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L587) | 587 |
-| [Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L604) | 604 |
-| [Becoming.FreeEnergy.freeEnergy_givenShare](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L631) | 631 |
-| [Becoming.FreeEnergy.minimizes_iff_givenShare](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L660) | 660 |
-| [Becoming.FreeEnergy.surprisal_product](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L703) | 703 |
+| [Becoming.FreeEnergy.freeEnergy_eq_divergence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L159) | 159 |
+| [Becoming.FreeEnergy.term_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L171) | 171 |
+| [Becoming.FreeEnergy.term_eq_iff_of_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L188) | 188 |
+| [Becoming.FreeEnergy.term_eq_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L219) | 219 |
+| [Becoming.FreeEnergy.freeEnergy_congr](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L228) | 228 |
+| [Becoming.FreeEnergy.freeEnergy_congr_weights](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L233) | 233 |
+| [Becoming.FreeEnergy.sum_terms](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L238) | 238 |
+| [Becoming.FreeEnergy.sum_normalized_sub](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L248) | 248 |
+| [Becoming.FreeEnergy.total_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L255) | 255 |
+| [Becoming.FreeEnergy.surprisal_le_freeEnergy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L264) | 264 |
+| [Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L278) | 278 |
+| [Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L296) | 296 |
+| [Becoming.FreeEnergy.posterior_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L303) | 303 |
+| [Becoming.FreeEnergy.posterior_eq_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L308) | 308 |
+| [Becoming.FreeEnergy.sum_posterior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L313) | 313 |
+| [Becoming.FreeEnergy.freeEnergy_posterior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L319) | 319 |
+| [Becoming.FreeEnergy.minimizes_iff_posterior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L329) | 329 |
+| [Becoming.FreeEnergy.freeEnergy_eq_divergence_add_surprisal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L350) | 350 |
+| [Becoming.FreeEnergy.divergence_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L368) | 368 |
+| [Becoming.FreeEnergy.divergence_eq_zero_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L377) | 377 |
+| [Becoming.FreeEnergy.divergence_posterior_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L386) | 386 |
+| [Becoming.FreeEnergy.divergence_posterior_eq_zero_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L397) | 397 |
+| [Becoming.FreeEnergy.freeEnergy_eq_complexity_sub_accuracy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L411) | 411 |
+| [Becoming.FreeEnergy.freeEnergy_eq_energy_sub_entropy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L426) | 426 |
+| [Becoming.FreeEnergy.gap_div](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L435) | 435 |
+| [Becoming.FreeEnergy.Witness.bound_fails_off_support](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L460) | 460 |
+| [Becoming.ConditionalWeights.Share.toReal_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L485) | 485 |
+| [Becoming.FreeEnergy.share_toReal_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L489) | 489 |
+| [Becoming.ConditionalWeights.Share.toReal_mul](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L495) | 495 |
+| [Becoming.FreeEnergy.surprisal_eq_log_reciprocal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L502) | 502 |
+| [Becoming.FreeEnergy.cast_mass_eq_sum](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L509) | 509 |
+| [Becoming.FreeEnergy.jointShare_part](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L522) | 522 |
+| [Becoming.FreeEnergy.jointShare_toReal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L532) | 532 |
+| [Becoming.FreeEnergy.recordShare_toReal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L544) | 544 |
+| [Becoming.FreeEnergy.sum_jointShare](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L556) | 556 |
+| [Becoming.FreeEnergy.givenShare_toReal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L571) | 571 |
+| [Becoming.FreeEnergy.givenShare_eq_posterior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L584) | 584 |
+| [Becoming.FreeEnergy.weight_zero_of_jointShare_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L609) | 609 |
+| [Becoming.FreeEnergy.record_pos_of_belief](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L629) | 629 |
+| [Becoming.FreeEnergy.record_surprisal_le_freeEnergy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L652) | 652 |
+| [Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L669) | 669 |
+| [Becoming.FreeEnergy.freeEnergy_givenShare](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L696) | 696 |
+| [Becoming.FreeEnergy.minimizes_iff_givenShare](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L725) | 725 |
+| [Becoming.FreeEnergy.surprisal_product](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L768) | 768 |
+| [Becoming.FreeEnergy.cast_total](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L796) | 796 |
+| [Becoming.FreeEnergy.cast_powerProduct](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L806) | 806 |
+| [Becoming.FreeEnergy.total_pos_of_counts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L817) | 817 |
+| [Becoming.FreeEnergy.powerProduct_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L832) | 832 |
+| [Becoming.FreeEnergy.countBelief_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L844) | 844 |
+| [Becoming.FreeEnergy.sum_countBelief](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L848) | 848 |
+| [Becoming.FreeEnergy.countBelief_support](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L856) | 856 |
+| [Becoming.FreeEnergy.self_pow_ne_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L863) | 863 |
+| [Becoming.FreeEnergy.gap_counts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L874) | 874 |
+| [Becoming.FreeEnergy.counting_lhs_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L926) | 926 |
+| [Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L934) | 934 |
+| [Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L949) | 949 |
+| [Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L977) | 977 |
+| [Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L992) | 992 |
+| [Becoming.FreeEnergy.proportional_iff_posterior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L1021) | 1021 |
+| [Becoming.FreeEnergy.divergence_counts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L1043) | 1043 |
+| [Becoming.FreeEnergy.counts_eq_mul_exp](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L1062) | 1062 |
+| [Becoming.FreeEnergy.gap_counts_given_record](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L1087) | 1087 |
+| [Becoming.ConditionalWeights.Share.same_iff_toReal_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L1130) | 1130 |
+| [Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L1146) | 1146 |
+| [Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L1185) | 1185 |
+| [Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L1212) | 1212 |
+| [Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L1228) | 1228 |
+| [Becoming.FreeEnergy.Witness.gap_counts_off_support](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L1256) | 1256 |
+| [Becoming.FreeEnergy.Witness.one_count_off_support](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L1290) | 1290 |
+| [Becoming.FreeEnergy.Witness.gap_counts_duplicate](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L1322) | 1322 |
 
 Definitions and types:
 
-- `def` [Becoming.FreeEnergy.freeEnergy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L109) (L109)
-- `def` [Becoming.FreeEnergy.divergence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L114) (L114)
-- `def` [Becoming.FreeEnergy.surprisal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L124) (L124)
-- `def` [Becoming.FreeEnergy.posterior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L127) (L127)
-- `def` [Becoming.ConditionalWeights.Share.toReal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L416) (L416)
+- `def` [Becoming.FreeEnergy.freeEnergy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L149) (L149)
+- `def` [Becoming.FreeEnergy.divergence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L154) (L154)
+- `def` [Becoming.FreeEnergy.surprisal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L164) (L164)
+- `def` [Becoming.FreeEnergy.posterior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L167) (L167)
+- `def` [Becoming.ConditionalWeights.Share.toReal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L481) (L481)
+- `def` [Becoming.FreeEnergy.countBelief](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean#L792) (L792)
 
 </details>
 

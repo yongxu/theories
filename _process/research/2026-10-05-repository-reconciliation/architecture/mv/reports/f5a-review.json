@@ -1,0 +1,90 @@
+[
+  {
+    "verdict": "The code mostly does what the spec says, but I found five problems. One is should-fix in code: the generator crashes or miscounts on a malformed item, although spec §2 says it never refuses to run. One is should-fix in documentation: RESULT-WORKFLOW states the path rule wrongly. The other three are minor: an inconsistency in the own-module walk, two inexact sentences in RESULT-WORKFLOW, and an untested exemption in main(). Everything else checks out. That covers the per-record and cross-record rules, the counts kept apart, the four-way central_reach counts, stated_at_model and the page lines. I ran synthetic items through main() on a saved dump with OUT sent to scratch: verified items showed on both transmission records. When the record changed its models or dropped its items, no lines showed and the law counted in laws_not_matched. On the same dump, HEAD~1's and HEAD's generators give identical counts and records for the 3,749 laws, and the 21 tests pass. Scratch is in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/f5a-review/spec-lens/.",
+    "findings": [
+      {
+        "severity": "should-fix",
+        "claim": "master_laws.py does not apply §1's shape rules before it uses an item. A non-string `declaration` or `of` crashes the generator, and a malformed `models` value is marked verified and miscounted in central_reach. Spec §2 says MV never refuses to run on an item and writes a failing item as unverified.",
+        "evidence": "The only filter is master_laws.py:239-240, which checks the key set (`set(x) == set(AT_MODEL_KEYS)`). Case run: transmission-is-inheritance-and-need, law 15, with `\"declaration\": [\"Becoming.Transmission.ZZ.reading\"]`. It stops with `TypeError: unhashable type: 'list'` at master_laws.py:125 (`if d not in C`); the `others` set at :243 and `above(x['of'])` at :245 would fail the same way. Case run with `\"models\": \"occurrence\"` (a string): the loop at :134 walks the characters, the item is verified, and central_reach reports `stated on its own carrier only: 1` for an item declared at the occurrence model. `models: [\"world\"]` miscounts the same way, because `m in MODEL_RELATIONS` is false and nothing fails. Items on a superseded record, or whose `of` is on no other law of the record, are also verified and enter central_reach and stated_at_model. The check rejects all of these, so pages stay blocked, but the generator's data is wrong or not written.",
+        "change": "At the top of verify() (master_laws.py:121), return `(['not in the shape the check requires'], [], [])` unless all of these hold: declaration, of and review are nonempty strings; models is a nonempty list of distinct values among ('occurrence', 'process', 'own'). At :243, build `others` only from items whose `declaration` is a str. At :245, use `above(x['of']) if isinstance(x['of'], str) else (False, False, frozenset())`. Optionally also fail an item whose record is superseded or withdrawn, whose declaration is not in its law's declarations, or whose `of` is on no other law, with the failure 'its record breaks the rules of the check'."
+      },
+      {
+        "severity": "should-fix",
+        "claim": "RESULT-WORKFLOW's new paragraph states the path rule more loosely than the code applies it.",
+        "evidence": "_process/RESULT-WORKFLOW.md:135 says the walk reaches the row \"without entering another row's item\", which would allow passing through an item of the same row on another law or in another record. The code at master_laws.py:243 blocks every other item's theorem, except one on the same law with the same `of`, as spec §2 and the docstring say. Case run: an item `ZZ.other` of `Web.transmits_at_iff` on law 14 reaches the row only through `ZZ.reading`, an item of the same row on law 15. The generator refused it with \"its proof does not reach the row\"; the paragraph's wording would accept it.",
+        "change": "Replace line 135 with: \"- the theorem's walk reaches the row without entering the theorem of another item, except one on the same law with the same row;\""
+      },
+      {
+        "severity": "minor",
+        "claim": "stated() expands a «» definition of the theorem's own module when the statement names it directly, but not when it is reached one level down. The spec says grammar constants are not expanded.",
+        "evidence": "The first stack at master_laws.py:94 lacks the `'«' not in` test that the inner loop at :100 applies. Case run on synthetic constants in Becoming.HeldPossible: theorem t1 names `HeldPossible.«保»` directly, whose body names World.withinStep and «则». verify passes the occurrence check and lists «则» among its terms, both found only inside the grammar definition. Theorem t2 reaches `HeldPossible.«保2»` through `inner` and fails the occurrence check. «» constants already sit outside Grammar modules (HeldPossible, KeepingWidening), and HE places «保之像» in Mechanism.",
+        "change": "master_laws.py:94: `stack = [n for n in seen if n in C and C[n]['m'] == module and C[n]['k'] == 'def' and '«' not in n]`"
+      },
+      {
+        "severity": "minor",
+        "claim": "Two sentences of RESULT-WORKFLOW's paragraph do not say exactly what the code does: one calls `counts` counts of derivations, and the paragraph never says that changed items make a law count as not matched.",
+        "evidence": "_process/RESULT-WORKFLOW.md:140 says \"so a representation raises no count of derivations\". `counts` counts laws by dependence and by the master laws reached, not derivations, and spec §4 leaves telling derivation from connection to F5's further part. The status now counts a law whose items differ from the data's in `laws_not_matched` (registry.py:663-665; spec §2: \"otherwise the carrying law counts in laws_not_matched\"), which the paragraph does not say.",
+        "change": "At line 140, replace \"so a representation raises no count of derivations\" with \"so a statement at a model changes none of the existing counts\". After \"...the carrying record still declares it so.\", add: \"A law whose items differ from the data's counts among the laws the data no longer matches.\""
+      },
+      {
+        "severity": "minor",
+        "claim": "No test exercises the exemption that decides which other items' theorems block the walk (same law, same `of`). The test passes `others` in by hand.",
+        "evidence": "tools/research/tests/test_master_laws.py:253 (test_the_path_through_another_item) calls verify with `others={...}` or none, and its comment says \"the generator leaves it out of others then\". That logic is master_laws.py:243 inside main(), which no test runs. If it ignored the law or the `of`, all 21 tests would still pass. It is correct today: in my run, `ZZ.closure` through `ZZ.reading` on the same law was verified and `ZZ.other` on law 14 failed.",
+        "change": "Move line 243 into `def blocked(declared, rid, i, x): return {y['declaration'] for r2, j, y in declared if y is not x and not (r2 == rid and j == i and y['of'] == x['of'])}` and call it in main(). Add a test: with items x1 and x2 of R on ('a', 2), x3 of R on ('a', 3) and x4 of R2 on ('b', 2), `blocked(declared, 'a', 2, x1)` returns exactly {x3's declaration, x4's declaration}."
+      }
+    ]
+  },
+  {
+    "verdict": "No MV rule fails on U2's real records. I built U2's landing in memory from its kit at 78cdcc2c5 (the latest u2 commit, two after 033429fba): 16 records, 20 laws and 21 items in the final shape, with models from DESIGN §2 and row 6 as 'process'. Each item's review is REVIEW-U2.md, added as a reference of role review. The leaf's declarations are added to the references, and the leaf's binding goes to a synthetic receipt; the leaf and receipt are read from scratch, never the repository. On that set, statements_at_model_errors returns nothing for every record, statements_at_model_across returns nothing, and registry.validate adds no error over the baseline of 0. style.lint shows no errors. None of the other branches uses a law key outside the closed set. With synthetic data I rendered the pages, marking one item unverified. master_laws_status gives laws_not_matched 0 and lists the unverified item, and the unverified item shows no line anywhere. The lines appear under life-as-condition-of-life law 2 (rows 1 to 3, pointing to laws 14, 15 and 16) and under the four rows held in other records (transmission-independent-where-it-binds 1, continuation-condition-decomposition 8, causal-models-as-processes 2, wisdom-root-without-axiom 3 and 8). So nothing is U2's to fix in the rules. The problems are in what the page lines say, plus one rule too weak to make 'reviewed in' true. The scripts and rendered pages are in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/f5a-review/ (build.py, render.py, pages/).",
+    "findings": [
+      {
+        "severity": "should-fix",
+        "claim": "The line under a row's law, in its own record or another, states a declared correspondence as a fact. It has no 'declared' mark and no review, though §2 and §5 say the item's line marks what is declared.",
+        "evidence": "registry.py:649 writes '*At a model:* `of` is stated at … by `declaration` (…)'. master_laws.py:250-251 keeps no review in stated_at_model. Rendered: transmission-independent-where-it-binds.md:15 '*At a model:* `Web.transmits_at_iff` is stated at a World's occurrence model by `ModelStatements.transmits_at_reading` ([transmission-is-inheritance-and-need](…), law 16).' The same form appears on wisdom-root-without-axiom (laws 3 and 8), causal-models-as-processes law 2 and continuation-condition-decomposition law 8. A reader of those pages sees a reader's judgment stated as a fact, with no link to the review that made it.",
+        "change": "registry.py:649: write '*At a model (declared):* ' in place of '*At a model:* '. Better: add 'review': x['review'] to the dict at master_laws.py:250-251 and write f'*At a model (declared; reviewed in {link(x[\"review\"], base)}):* '. Update §5's second example line in F5-MODEL-STATEMENTS.md to match."
+      },
+      {
+        "severity": "should-fix",
+        "claim": "An item whose only model is 'own' is labelled 'At a model'. §4 says an own carrier is not a represented model, and central_reach counts these rows apart ('stated on its own carrier only'). MODELS['own'] = 'its own carrier' also leaves 'its' ambiguous in the item line.",
+        "evidence": "registry.py:348 and :642/:649 use one label for all models. Rendered: what-a-finite-stretch-verifies.md:44 '*At a model (declared; …):* `ModelStatements.verifiableBy_reading` states `Ideals.verifiableBy_iff_interior` at its own carrier.' and living-significance-on-held-lives.md:17 / continuation-condition-decomposition.md:29 '*At a model:* `Valuation.significant_iff_held` is stated at its own carrier by …'. Rows 7, 9, 12 and 23 (generalization-through-lumping, what-a-pools-acts-respond-to and wisdom-root-without-axiom law 8 too) read as represented at a model, which §4 and change 1 deny. 'its own carrier' after 'states X' can be read as the theorem's carrier.",
+        "change": "In at_model_notes, choose the label from the models: label = 'At a model' if set(x['models']) & {'occurrence', 'process'} else 'On its own carrier'. Use it in both lines ('*{label} (declared; …):*'). Set MODELS['own'] = \"the row's own carrier\"."
+      },
+      {
+        "severity": "should-fix",
+        "claim": "Spec §2 lists the row's own dependence among what is 'computed and shown for each item'. The data computes it, but no page shows it. So for rows 6, 13 and 24 the at-model law's line 'closure; its declarations reach the grammar' stands next to the item alone, inviting the move between categories that §3 rules out.",
+        "evidence": "F5-MODEL-STATEMENTS.md:55-58 lists 'the row's own dependence, as the measure gives it' under 'Computed and shown for each item'. master_laws.py:248 writes row_dependence, and at_model_notes (registry.py:628-651) never reads it. Rendered with closure on the carrying law (pages/conditions-kept-together.md:22-24): law 5 '*Master laws, by Lean dependency:* closure; its declarations reach the grammar.' then '`ModelStatements.kernel_and_reading` states `Viability.kernel_and_iff` at …'. The row's own law 1 says 'no master law's anchor', and law 5 does not say so.",
+        "change": "registry.py:645: end the item line with f' The row taken alone: {ALONE.get(x[\"row_dependence\"], x[\"row_dependence\"])}.' (ALONE is at registry.py:569). The other way is to drop 'and shown' and the third bullet from §2."
+      },
+      {
+        "severity": "should-fix",
+        "claim": "The review rule lets every item name REVIEW-U2.md, which never read 18 of the 21 items. Each page would then say 'reviewed in REVIEW-U2.md' for those items. U2's kit takes one REVIEW for all items. This is U2's to fix by naming the re-check (§6.2), but MV's rule cannot tell the difference.",
+        "evidence": "With review = REVIEW-U2.md on all 21 items, every rule passes. A text search of REVIEW-U2.md (u2 at 78cdcc2c5) finds only 3 item theorems. Missing: roles_supported_reading, roles_dependent_reading, roles_alive_reading, transmits_at_reading, identifies_iff_reading, verifiableBy_reading, significant_iff_held_reading, significance_undetermined_reading, only_together_reading, differenceOnlyTogether_reading, response_not_fixed_reading, kernel_and_reading, not_fixes_reading, run_agrees_every_start_reading, living_on_reaches_reading, descent_reaches_reading, unselected_beyond_data_reading, renewing_not_closed. make_records_u2.py writes 'review': REVIEW for every item.",
+        "change": "U2: pass the re-check of all 21 items as REVIEW at landing, not REVIEW-U2.md. MV, as a cheap guard in statements_at_model_errors after the review-reference test: if a path_in_repo(review) file's text lacks re.escape(d.rsplit('.', 1)[-1]) as a word, append f'law {i}: its review {review} does not name {d}'. This makes the review name the item it checked."
+      },
+      {
+        "severity": "minor",
+        "claim": "MODELS['process'] = \"a process's moves' relations\" misdescribes row 6, which the spec maps to 'process' for its step index. The page contradicts the law text above it.",
+        "evidence": "registry.py:348. Rendered learning-through-a-map-is-tracking-in-the-limit.md:26: '`ModelStatements.identifies_iff_reading` states `Limit.identifies_iff_tracks` at a process's moves' relations'. That law's text (law 6) says 'On the step index, identification reads its horizon through the steps' closure'. Its statement names Steps.next on Nat, not moveRel.",
+        "change": "registry.py:348: 'process': \"a process's model\" (DESIGN §2's and U2's kit wording). Make the same change in RESULT-WORKFLOW.md's F5 paragraph and the master_laws.py docstring."
+      },
+      {
+        "severity": "minor",
+        "claim": "'its statement names «…»' lists grammar terms found only in the bodies of the module's definitions. A reader who checks the Lean statement does not find them all.",
+        "evidence": "master_laws.py:90-101 (stated) adds bodies of ModelStatements definitions transitively, and registry.py:644 renders the result as 'its statement names'. For living_on_reaches_reading the statement names «闭» and «合». The computed list also gets «而», «逆» and «能», which appear only in livesOn, interacts and livingOcc.",
+        "change": "registry.py:644: 'its statement names, directly or through its module's definitions, {…}'."
+      },
+      {
+        "severity": "minor",
+        "claim": "RESULT-WORKFLOW misstates the walk's block: 'without entering another row's item'. The generator blocks every other item's theorem, except one on the same law with the same row. That includes an item of the same row on another law or in another record.",
+        "evidence": "RESULT-WORKFLOW.md:135 against master_laws.py:243 (others = every other item except those with r2 == rid, j == i and the same 'of').",
+        "change": "RESULT-WORKFLOW.md:135: '- the theorem's walk reaches the row without entering another item's theorem, except one on the same law stating the same row;'."
+      },
+      {
+        "severity": "minor",
+        "claim": "The at-model lines shorten names (Web.roles_supported) while the same law's declaration list and master-law note give full names (Becoming.Web.roles_supported). A reader searching the page for a declaration misses the F5 line.",
+        "evidence": "registry.py:624-626 (_short) is used at :642-650. Rendered life-as-condition-of-life.md:16-19: the master-law note says 'central declaration `Becoming.Web.roles_supported`', and the next bullet says '`Web.roles_supported` is stated at …'.",
+        "change": "Drop _short in at_model_notes and use the full names, as master_law_note does."
+      }
+    ]
+  }
+]
