@@ -254,6 +254,13 @@
         "en": "MA4: this module's rule after shaping read by readers drawn from the selected; the threshold assumed here (thresholdBack) is replaced there by a critical mass located by who reads and the cost.",
         "zh": "MA4：本模块塑规后之规则由取自被选者之读者读之；此处所设之门槛（thresholdBack）于彼处代以由谁读与成本所定之临界量。"
       }
+    },
+    {
+      "id": "when-complying-when-read-is-best",
+      "detail": {
+        "en": "Complying when read so that the law is kept, which RF's plan first read as this shaping by analogy: there a strict comparison of expected values in two stages.",
+        "zh": "读时从以使其律被守，RF 之计划初以类比读为此塑；彼处为两阶段中期望值之严格比较。"
+      }
     }
   ],
   "references": [
@@ -370,6 +377,10 @@
     {
       "en": "26 October 2026 (MA4, study section 414): joined with the readers drawn from the selected in shaping-read-by-readers-drawn-from-the-selected; the next step, the related record and the scope item on the pool updated. The laws are unchanged.",
       "zh": "2026年10月26日（MA4，研究第 414 节）：与取自被选者之读者接于 shaping-read-by-readers-drawn-from-the-selected；下一步、相关记录及关于读者池之范围条目随之更新。诸律不变。"
+    },
+    {
+      "en": "30 October 2026, board item RF, RF7 (study section 463): related to when-complying-when-read-is-best; no statement, next step or declaration changed.",
+      "zh": "2026年10月30日，工作板条目 RF，RF7（研究第 463 节）：与 when-complying-when-read-is-best 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

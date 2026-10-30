@@ -79,8 +79,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "Intention, anticipation, another's false belief or an incentive to differ where unread.",
-      "zh": "意图、预期、他者之误信，或于未读处行异之诱因。",
+      "en": "Intention, anticipation, another's false belief or an incentive to differ where unread; when, in two stages, differing there is uniquely best in the order given prospects give is stated in when-complying-when-read-is-best.",
+      "zh": "意图、预期、他者之误信，或于未读处行异之诱因；于两阶段，彼处行异何时于所予之望之序中唯一最优，见 when-complying-when-read-is-best。",
       "kind": "scope"
     },
     {
@@ -121,12 +121,12 @@
     "zh": "纯核，公理报告皆空：Unread 唯引 Learning。其用 lumped_determines 与 Training.unselected_beyond_data，读 Learning.determines_lumped_iff 为确形（引而未用于证）；诸例于真值之对上。"
   },
   "next_delta": {
-    "en": "Disclosure or concealment when read, in two stages, with the continuation value represented (RF round 2); a frozen test of the chain on a trained model with cues varied apart from content; review by a person.",
-    "zh": "被读时之示或隐，二阶，带接续之值（RF 第二轮）；于已训之模型上分讯与内容而变之链之冻结检验；人之审查。"
+    "en": "A frozen test of the chain on a trained model with cues varied apart from content; review by a person.",
+    "zh": "于已训之模型上分讯与内容而变之链之冻结检验；人之审查。"
   },
   "correspondence": {
-    "en": "Indistinguishability: two laws agreeing on every reading are selected alike by every selection through them. AI reading: read as evaluation and deployment, it locates where behaviour can differ when not read while every reading agrees, only where the formation's lumping tells the occasion from every read one: a necessary condition of what deceptive alignment and alignment faking describe (Hubinger and others 2019; Greenblatt and others 2024), whose intention, anticipation and incentive are not represented. A state telling read from unread while the act does not differ reads as detection not acted on, and a coupling taking in the cue while the state keeps only the content as detectable and not detected; measurements of the first are the chain's failed converse. Read with a supervised reporter, the identification limit of eliciting latent knowledge (Christiano, Cotra and Xu 2021). The probabilistic form of the chain is the data-processing inequality. These are readings, not containments.",
-    "zh": "不可分辨：于每一读处相合之二律为经读处之每一选所同选。AI 解读：读作评估与部署，其示行为于未读处可异而每一读处皆合之处，唯在形成之归并分此时于每一读处者：为欺骗对齐与对齐伪装所述者之必要条件（Hubinger 等 2019；Greenblatt 等 2024），其意图、预期与诱因未表。态分读与未读而行不异，读作察而未据以行；耦合入讯而态唯存内容，读作可察而未察；前者之测为链之逆不成。与受督之报者并读，为引出潜知之辨识之限（Christiano、Cotra 与 Xu 2021）。链之概率之形为数据处理不等式。皆为读，非包含。"
+    "en": "Indistinguishability: two laws agreeing on every reading are selected alike by every selection through them. AI reading: read as evaluation and deployment, it says two laws reading through one lumping can agree on every reading and differ unread only where the lumping tells the occasion from every read one. Read with deceptive alignment (Hubinger and others 2019), such a law acting alike on every reading acts otherwise unread only there; differing rates, as in alignment faking (Greenblatt and others 2024), are not so bounded. Intention, anticipation and incentive are not represented; a law drawing afresh can act otherwise unread without telling read from unread (Hubinger and others' §4.5). A state telling read from unread while the act does not differ reads as detection not acted on, and a coupling taking in the cue while the state keeps only the content as detectable and not detected; measurements of the first are the chain's failed converse. Read with a supervised reporter, the identification limit of eliciting latent knowledge (Christiano, Cotra and Xu 2021). The probabilistic form of the chain is the data-processing inequality. These are readings, not containments.",
+    "zh": "不可分辨：于每一读处相合之二律为经读处之每一选所同选。AI 解读：读作评估与部署，其言经同一归并而读之二律可于每一读处皆合而于未读处相异，唯在此归并分此时于每一读处者。与欺骗对齐并读（Hubinger 等 2019），此类律于每一读处同行者，唯于彼处于未读处行异；率之差，如对齐伪装（Greenblatt 等 2024），不受此界。意图、预期与诱因未表；每处重抽其行之律不分读与未读亦可于未读处行异（Hubinger 等 §4.5）。态分读与未读而行不异，读作察而未据以行；耦合入讯而态唯存内容，读作可察而未察；前者之测为链之逆不成。与受督之报者并读，为引出潜知之辨识之限（Christiano、Cotra 与 Xu 2021）。链之概率之形为数据处理不等式。皆为读，非包含。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean",
   "aliases": [
@@ -160,6 +160,13 @@
       "detail": {
         "en": "What choices show of an order: the same question for the order a chooser's choices come from.",
         "zh": "所择所示之序：同问于择者之择所出之序。"
+      }
+    },
+    {
+      "id": "when-complying-when-read-is-best",
+      "detail": {
+        "en": "Its twin and the fixing at two stages, read and unread, with prospects: when complying when read and acting by its own law when not is uniquely best, the twin where the stages are told apart and the fixing where they are tied.",
+        "zh": "此孪生与其定于读与不读两阶段而有望：读时从而不读时依己律何时唯一最优；两阶段可分处有此孪生，合处有其定。"
       }
     }
   ],
@@ -200,7 +207,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
       "role": "integration",
-      "sha256": "637eda898da1bab151770333e3c5bbcdd80a93729d0d7cd6f3ab7a53cbcaa0e9"
+      "sha256": "cbe448cbcf6dd59057af10f976a89bc22d27396f04412a821e5e2cf0dd462b6c"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
@@ -236,6 +243,10 @@
     {
       "en": "29 October 2026: added (RF round 1), what readings fix of the unread: the twin where the formation can tell, a one-occasion example fixed exactly where ¬¬P, the chain of acts, states and couplings with its converses failing, and the cue witnesses; after a review of the plan, a review of the Lean and a cold read of the texts; study section 446.",
       "zh": "2026年10月29日：新增（RF 第一轮），读处所定于未读处者：能分处之孪生，一时之例所定恰当 ¬¬P，行、态、耦合之链及其逆不成，讯之诸例；经计划之审、Lean 之审与文之冷读；研究第 446 节。"
+    },
+    {
+      "en": "30 October 2026, board item RF, RF7 (study section 463): related to when-complying-when-read-is-best; the next step drops disclosure or concealment in two stages, whose two-stage comparison with the continuation value is now stated there, disclosure and concealment readings of it; the second item of what it does not show points to it; the correspondence says two laws reading through one lumping can agree on every reading and differ unread only where the lumping tells the occasion from every read one, reads with deceptive alignment that such a law acting alike on every reading acts otherwise unread only there, says differing rates, as in alignment faking, are not so bounded, no longer calls telling the occasion apart a necessary condition of what deceptive alignment and alignment faking describe, and adds that a law drawing afresh can act otherwise unread without telling read from unread (Hubinger and others' §4.5); no statement or declaration changed.",
+      "zh": "2026年10月30日，工作板条目 RF，RF7（研究第 463 节）：与 when-complying-when-read-is-best 相关联；下一步删去两阶段中之示或隐（其带接续之值之两阶段比较已于彼陈述，示与隐为其读）；所不示之第二项指向之；对应言经同一归并而读之二律可于每一读处皆合而于未读处相异，唯在此归并分此时于每一读处者；与欺骗对齐并读，此类律于每一读处同行者唯于彼处于未读处行异；言率之差，如对齐伪装，不受此界；不复称分此时为欺骗对齐与对齐伪装所述者之必要条件，并补言每处重抽其行之律不分读与未读亦可于未读处行异（Hubinger 等 §4.5）；无一陈述或声明改变。"
     }
   ]
 }

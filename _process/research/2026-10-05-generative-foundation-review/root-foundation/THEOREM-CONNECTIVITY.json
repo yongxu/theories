@@ -1,11 +1,11 @@
 {
- "commit": "6d74002dfa254f6936ba58e2aff4302f82e2e9b7",
- "sources_match_commit": true,
- "core_receipt_at_commit": "20261029T210603.495422Z",
+ "commit": "627163ef394731097c6555ddc9ca45a3903b3cc8",
+ "sources_match_commit": false,
+ "core_receipt_at_commit": "20261029T213154.508889Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 352,
- "constants": 50821,
- "spine_theorems": 17150,
+ "tracked_modules": 353,
+ "constants": 50967,
+ "spine_theorems": 17202,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -33,14 +33,14 @@
   "proof through a base family": 216,
   "used by a theorem on the base": 5734,
   "instance on the base recorded": 159,
-  "apart: own vocabulary": 1726,
-  "apart: prelude-only statement": 144
+  "apart: own vocabulary": 1771,
+  "apart: prelude-only statement": 151
  },
- "apart": 1870,
- "apart_general_structure_by_design": 764,
- "apart_otherwise": 1106,
+ "apart": 1922,
+ "apart_general_structure_by_design": 798,
+ "apart_otherwise": 1124,
  "pure_forwarders": {
-  "spine theorems that are pure forwarders": 119,
+  "spine theorems that are pure forwarders": 120,
   "of them on the base": 81,
   "their targets, by class": {
    "statement on Process/Frame/Run/Trace": 18,
@@ -74,12 +74,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 1051,
- "apart_roots": 1051,
+ "apart_used_by_nothing": 1081,
+ "apart_roots": 1081,
  "apart_roots_by_category": {
-  "model-witness": 476,
+  "model-witness": 486,
   "support": 138,
-  "general-structure": 395,
+  "general-structure": 415,
   "calibration": 16,
   "restates": 14,
   "logical-strength": 12
@@ -195,6 +195,10 @@
   "Becoming.FreeEnergyCounting": [
    55,
    55
+  ],
+  "Becoming.ReadStages": [
+   52,
+   52
   ],
   "Becoming.ReadingLoop": [
    51,
@@ -791,9 +795,9 @@
  },
  "rings": {
   "core": {
-   "modules": 335,
-   "theorems": 16378,
-   "apart": 1775,
+   "modules": 336,
+   "theorems": 16430,
+   "apart": 1827,
    "classes": {
     "statement on both families": 1080,
     "statement on Process/Frame/Run/Trace": 3337,
@@ -802,8 +806,8 @@
     "proof through a base family": 205,
     "used by a theorem on the base": 5373,
     "instance on the base recorded": 159,
-    "apart: own vocabulary": 1632,
-    "apart: prelude-only statement": 143
+    "apart: own vocabulary": 1677,
+    "apart: prelude-only statement": 150
    }
   },
   "instances": {
@@ -924,7 +928,7 @@
   "proof through a base family": 5,
   "used by a theorem on the base": 11,
   "instance on the base recorded": 1,
-  "apart: own vocabulary": 41
+  "apart: own vocabulary": 42
  },
  "records_resting_only_on_apart_theorems": [
   {
@@ -1172,6 +1176,12 @@
    "id": "what-the-existence-claim-forbids",
    "modules": [
     "Becoming.Blanket"
+   ]
+  },
+  {
+   "id": "when-complying-when-read-is-best",
+   "modules": [
+    "Becoming.ReadStages"
    ]
   }
  ],
@@ -10940,6 +10950,58 @@
   "Becoming.Turns.separates_at": "apart: own vocabulary",
   "Becoming.Turns.Copying.readsOnlyActs": "apart: own vocabulary",
   "Becoming.Turns.Copying.reaches_first_only": "apart: own vocabulary",
+  "Becoming.ReadStages.above_irrefl": "apart: own vocabulary",
+  "Becoming.ReadStages.above_asymm": "apart: own vocabulary",
+  "Becoming.ReadStages.complyThenOwn_best_iff": "apart: own vocabulary",
+  "Becoming.ReadStages.ownAtBoth_best_iff": "apart: own vocabulary",
+  "Becoming.ReadStages.unread_comply_not_above": "apart: own vocabulary",
+  "Becoming.ReadStages.choose_optimal": "apart: own vocabulary",
+  "Becoming.ReadStages.choose_eq_iff": "apart: own vocabulary",
+  "Becoming.ReadStages.choose_of_not_outweighs": "apart: own vocabulary",
+  "Becoming.ReadStages.only_complyThenOwn_iff": "apart: own vocabulary",
+  "Becoming.ReadStages.complyThenOwn_maximal_iff": "apart: own vocabulary",
+  "Becoming.ReadStages.no_value": "apart: own vocabulary",
+  "Becoming.ReadStages.kept_not_raised": "apart: own vocabulary",
+  "Becoming.ReadStages.no_value_chooses_own": "apart: own vocabulary",
+  "Becoming.ReadStages.kept_not_raised_chooses_own": "apart: own vocabulary",
+  "Becoming.ReadStages.ownAtBoth_above_without_value": "apart: own vocabulary",
+  "Becoming.ReadStages.ownAtBoth_above_of_not_raised": "apart: own vocabulary",
+  "Becoming.ReadStages.outweighs_needs": "apart: own vocabulary",
+  "Becoming.ReadStages.outweighs_needs_more": "apart: own vocabulary",
+  "Becoming.ReadStages.lumped_uniform": "apart: own vocabulary",
+  "Becoming.ReadStages.complyThenOwn_not_uniform": "apart: own vocabulary",
+  "Becoming.ReadStages.plan_realized_iff": "apart: own vocabulary",
+  "Becoming.ReadStages.complyThenOwn_realized_iff": "apart: own vocabulary",
+  "Becoming.ReadStages.read_fixes_unread": "apart: own vocabulary",
+  "Becoming.ReadStages.twin_complyThenOwn": "apart: own vocabulary",
+  "Becoming.ReadStages.kept_alike": "apart: own vocabulary",
+  "Becoming.ReadStages.uniform_best_iff": "apart: own vocabulary",
+  "Becoming.ReadStages.uniform_tie": "apart: own vocabulary",
+  "Becoming.ReadStages.square_split": "apart: prelude-only statement",
+  "Becoming.ReadStages.sum_le_square": "apart: prelude-only statement",
+  "Becoming.ReadStages.sum_regroup": "apart: prelude-only statement",
+  "Becoming.ReadStages.freshDraw_bound": "apart: prelude-only statement",
+  "Becoming.ReadStages.freshDraw_gap": "apart: own vocabulary",
+  "Becoming.ReadStages.freshDraw_reduce": "apart: prelude-only statement",
+  "Becoming.ReadStages.freshDraw_above_iff_chance": "apart: own vocabulary",
+  "Becoming.ReadStages.sum_lt_of_room": "apart: prelude-only statement",
+  "Becoming.ReadStages.freshDraw_witness": "apart: prelude-only statement",
+  "Becoming.ReadStages.freshDraw_above_iff": "apart: own vocabulary",
+  "Becoming.ReadStages.freshDraw_not_above_without_value": "apart: own vocabulary",
+  "Becoming.ReadStages.freshDraw_not_above_of_not_raised": "apart: own vocabulary",
+  "Becoming.ReadStages.mixture_never_above": "apart: own vocabulary",
+  "Becoming.ReadStages.Example.valid": "apart: own vocabulary",
+  "Becoming.ReadStages.Example.outweighs": "apart: own vocabulary",
+  "Becoming.ReadStages.Example.best": "apart: own vocabulary",
+  "Becoming.ReadStages.Example.chosen": "apart: own vocabulary",
+  "Becoming.ReadStages.Example.variants_valid": "apart: own vocabulary",
+  "Becoming.ReadStages.Example.valueless": "apart: own vocabulary",
+  "Becoming.ReadStages.Example.equal_weights": "apart: own vocabulary",
+  "Becoming.ReadStages.Example.tie": "apart: own vocabulary",
+  "Becoming.ReadStages.Example.exit_tie": "apart: own vocabulary",
+  "Becoming.ReadStages.Example.freshDraw_above": "apart: own vocabulary",
+  "Becoming.ReadStages.Example.freshDraw_boundary": "apart: own vocabulary",
+  "Becoming.ReadStages.Example.no_total": "apart: own vocabulary",
   "Becoming.PropositionIdentity.lumped_iff": "apart: own vocabulary",
   "Becoming.PropositionIdentity.extensional_iff_lumped": "apart: own vocabulary",
   "Becoming.PropositionIdentity.lumped_of_extensional": "apart: own vocabulary",

@@ -5271,6 +5271,156 @@
    "module": "Becoming.ModelStatements",
    "category": "general-structure",
    "reason": "ModelStatements.verifiableBy_reading: the row Ideals.verifiableBy_iff_interior through membership of points in stretches: a reading is verifiable exactly where each point it holds bears membership to a stretch every bearer of which it holds; a law of every family of ideals of any order, stated on its own carrier; the base supplies no reading of an order's ideals (at runs they are the finite stretches) (U2)"
+  },
+  "Becoming.ReadStages.Example.best": {
+   "module": "Becoming.ReadStages",
+   "category": "model-witness",
+   "reason": "ReadStages.Example.best: a fact about one constructed model, prospects of a total of 10, weights 9 and 1, a value of 10 and a loss of 5, and their variations (RF)"
+  },
+  "Becoming.ReadStages.Example.chosen": {
+   "module": "Becoming.ReadStages",
+   "category": "model-witness",
+   "reason": "ReadStages.Example.chosen: a fact about one constructed model, prospects of a total of 10, weights 9 and 1, a value of 10 and a loss of 5, and their variations (RF)"
+  },
+  "Becoming.ReadStages.Example.equal_weights": {
+   "module": "Becoming.ReadStages",
+   "category": "model-witness",
+   "reason": "ReadStages.Example.equal_weights: a fact about one constructed model, prospects of a total of 10, weights 9 and 1, a value of 10 and a loss of 5, and their variations (RF)"
+  },
+  "Becoming.ReadStages.Example.exit_tie": {
+   "module": "Becoming.ReadStages",
+   "category": "model-witness",
+   "reason": "ReadStages.Example.exit_tie: a fact about one constructed model, prospects of a total of 10, weights 9 and 1, a value of 10 and a loss of 5, and their variations (RF)"
+  },
+  "Becoming.ReadStages.Example.freshDraw_above": {
+   "module": "Becoming.ReadStages",
+   "category": "model-witness",
+   "reason": "ReadStages.Example.freshDraw_above: a fact about one constructed model, prospects of a total of 10, weights 9 and 1, a value of 10 and a loss of 5, and their variations (RF)"
+  },
+  "Becoming.ReadStages.Example.freshDraw_boundary": {
+   "module": "Becoming.ReadStages",
+   "category": "model-witness",
+   "reason": "ReadStages.Example.freshDraw_boundary: a fact about one constructed model, prospects of a total of 10, weights 9 and 1, a value of 10 and a loss of 5, and their variations (RF)"
+  },
+  "Becoming.ReadStages.Example.no_total": {
+   "module": "Becoming.ReadStages",
+   "category": "model-witness",
+   "reason": "ReadStages.Example.no_total: a fact about one constructed model, prospects with a total of 0, weights 1 and 0, a value of 1 and a loss of 100, not valid (RF)"
+  },
+  "Becoming.ReadStages.Example.tie": {
+   "module": "Becoming.ReadStages",
+   "category": "model-witness",
+   "reason": "ReadStages.Example.tie: a fact about one constructed model, prospects of a total of 10, weights 9 and 1, a value of 10 and a loss of 5, and their variations (RF)"
+  },
+  "Becoming.ReadStages.Example.valueless": {
+   "module": "Becoming.ReadStages",
+   "category": "model-witness",
+   "reason": "ReadStages.Example.valueless: a fact about one constructed model, prospects of a total of 10, weights 9 and 1, a value of 10 and a loss of 5, and their variations (RF)"
+  },
+  "Becoming.ReadStages.Example.variants_valid": {
+   "module": "Becoming.ReadStages",
+   "category": "model-witness",
+   "reason": "ReadStages.Example.variants_valid: a fact about one constructed model, prospects of a total of 10, weights 9 and 1, a value of 10 and a loss of 5, and their variations (RF)"
+  },
+  "Becoming.ReadStages.choose_of_not_outweighs": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.choose_of_not_outweighs: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.complyThenOwn_maximal_iff": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.complyThenOwn_maximal_iff: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.complyThenOwn_realized_iff": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.complyThenOwn_realized_iff: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.freshDraw_above_iff": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.freshDraw_above_iff: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.freshDraw_above_iff_chance": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.freshDraw_above_iff_chance: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.freshDraw_not_above_of_not_raised": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.freshDraw_not_above_of_not_raised: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.freshDraw_not_above_without_value": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.freshDraw_not_above_without_value: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.kept_alike": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.kept_alike: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.lumped_uniform": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.lumped_uniform: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.mixture_never_above": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.mixture_never_above: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.only_complyThenOwn_iff": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.only_complyThenOwn_iff: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.outweighs_needs": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.outweighs_needs: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.outweighs_needs_more": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.outweighs_needs_more: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.ownAtBoth_above_of_not_raised": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.ownAtBoth_above_of_not_raised: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.ownAtBoth_above_without_value": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.ownAtBoth_above_without_value: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.ownAtBoth_best_iff": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.ownAtBoth_best_iff: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.read_fixes_unread": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.read_fixes_unread: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.twin_complyThenOwn": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.twin_complyThenOwn: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.uniform_best_iff": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.uniform_best_iff: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
+  },
+  "Becoming.ReadStages.uniform_tie": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.uniform_tie: a law of any two-stage prospects in natural-number weights (when complying when read and acting by its own law when not is best); it waits for a formation's own order and the selection a reading applies, on the base (RF)"
   }
  },
  "instances": {

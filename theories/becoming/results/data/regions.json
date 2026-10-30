@@ -2381,6 +2381,11 @@
    "base": "old-base",
    "note": "alignment: training as selection"
   },
+  "when-complying-when-read-is-best": {
+   "region": "knowing",
+   "base": "general",
+   "note": "ReadStages RF7: when complying when read and acting by its own law when not is best, in two stages; the exits; drawing afresh"
+  },
   "when-the-runs-of-a-process-settle": {
    "region": "method",
    "base": "general",
@@ -3682,6 +3687,11 @@
    "region": "map",
    "base": "general",
    "note": "MA4b the readers' timing joined to the critical mass"
+  },
+  "Becoming.ReadStages": {
+   "region": "knowing",
+   "base": "general",
+   "note": "RF7 when complying when read and acting by its own law when not is best (03 §11)"
   },
   "Becoming.Reading": {
    "region": "root",

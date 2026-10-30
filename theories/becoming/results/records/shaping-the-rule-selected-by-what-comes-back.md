@@ -75,6 +75,7 @@ The meta-attractor's second order (theories/meta-attractor, 'Selection for contr
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). Capacity joined without coupling; here help that lowers the cost of shaping moves the rule toward the shapers.
 - related, not a proved adapter: [readers-drawn-from-the-selected](readers-drawn-from-the-selected.md). MA2: ReadsShare from a pool of readers drawn from the selected; here ReadsShare is equivalent to what comes back to the shapers being monotone in their share. The two are joined in shaping-read-by-readers-drawn-from-the-selected (MA4), where the pool of two rules after shaping reads the share exactly where lo ≤ hi.
 - related, not a proved adapter: [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md). MA4: this module's rule after shaping read by readers drawn from the selected; the threshold assumed here (thresholdBack) is replaced there by a critical mass located by who reads and the cost.
+- related, not a proved adapter: [when-complying-when-read-is-best](when-complying-when-read-is-best.md). Complying when read so that the law is kept, which RF's plan first read as this shaping by analogy: there a strict comparison of expected values in two stages.
 
 **Used by:** [capture-by-counted-choices](capture-by-counted-choices.md) · [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md)
 
@@ -98,6 +99,7 @@ Aliases: `The capacity to shape the rule, selected by what comes back to it`, `�
 - 25 October 2026: added (MA3), the meta-attractor's second order; study section 403.
 - 25 October 2026 (MA3a, study section 409, after an independent review of the alignment dossier): lower_c_raises_strictly added, so that a strictly smaller cost gives a strictly higher rule; the home section, the module's doc, the root bullet and the checker's scope say "a smaller cost gives a rule not lower" where they had said "raises it", and state "the shapers present" with nothing_back_falls and stretch_iff.
 - 26 October 2026 (MA4, study section 414): joined with the readers drawn from the selected in shaping-read-by-readers-drawn-from-the-selected; the next step, the related record and the scope item on the pool updated. The laws are unchanged.
+- 30 October 2026, board item RF, RF7 (study section 463): related to when-complying-when-read-is-best; no statement, next step or declaration changed.
 
 </details>
 

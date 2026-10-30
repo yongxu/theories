@@ -1,0 +1,392 @@
+{
+  "schema_version": 2,
+  "id": "when-complying-when-read-is-best",
+  "title": {
+    "en": "When complying when read and acting by its own law when not is best",
+    "zh": "读时从、不读时依己律何时为最优"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-30T08:00:35+00:00",
+  "statement": {
+    "en": "In two stages, complying when read and acting by its own law when not is uniquely best exactly where k_C V > k_O V + c T; where the stages cannot be told apart, some chance of complying drawn afresh at each stage stands above acting by its own law at both exactly where k_C V > 2 k_O V + c T.",
+    "zh": "于两阶段，读时从而不读时依己律唯一最优，恰当 k_C V > k_O V + c T；两阶段不可分时，每阶段重抽、以某机会从者居两阶段皆依己律之上，恰当 k_C V > 2 k_O V + c T。"
+  },
+  "laws": [
+    {
+      "en": "Two stages, two acts, four plans; the prospects are a total T, the weights k_C and k_O of the law's being kept after complying when read and after acting by its own law then, the value V of acting by its law at the unread stage where kept, and the loss c of complying when read; read as probabilities they ask a positive total and each weight within it.",
+      "zh": "两阶段二行四策；其望为一总 T、读时从后与读时依己律后其律被守之权 k_C 与 k_O、不读时依其律而被守之值 V、读时从之损 c；读为概率，则需总为正且每权不逾总。",
+      "declarations": [
+        "Becoming.ReadStages.Act",
+        "Becoming.ReadStages.Plan",
+        "Becoming.ReadStages.complyAtBoth",
+        "Becoming.ReadStages.complyThenOwn",
+        "Becoming.ReadStages.ownThenComply",
+        "Becoming.ReadStages.ownAtBoth",
+        "Becoming.ReadStages.Prospects",
+        "Becoming.ReadStages.Prospects.Valid",
+        "Becoming.ReadStages.Prospects.kept"
+      ]
+    },
+    {
+      "en": "A plan's gain and loss are the two parts of its expected value times the total, nothing gained by complying at the unread stage or where the law is not kept; one plan stands above another where its gain with the other's loss exceeds the other's gain with its loss, irreflexive and asymmetric.",
+      "zh": "一策之得与损为其期望值之二分乘总，不读之阶段从或律不被守则无所得；一策居另一之上，当其得加另一之损严胜另一之得加其损，此非自反且非对称。",
+      "declarations": [
+        "Becoming.ReadStages.Prospects.gain",
+        "Becoming.ReadStages.Prospects.loss",
+        "Becoming.ReadStages.Prospects.Above",
+        "Becoming.ReadStages.above_irrefl",
+        "Becoming.ReadStages.above_asymm"
+      ]
+    },
+    {
+      "en": "Complying when read and acting by its own law when not stands above every other plan exactly where k_O V + c T < k_C V, as probabilities the weight complying adds, times the value, exceeding the loss; acting by its own law at both exactly where 0 < k_O V and k_C V < k_O V + c T; complying at the unread stage never stands above acting by its own law after the same act, so no other plan is ever uniquely best.",
+      "zh": "读时从而不读时依己律居其余诸策之上，恰当 k_O V + c T < k_C V，读为概率即从所增之被守之权乘值严胜其损；两阶段皆依己律居他策之上，恰当 0 < k_O V 且 k_C V < k_O V + c T；同一读时之行后，不读时从永不居依己律之上，故他策无一唯一最优。",
+      "declarations": [
+        "Becoming.ReadStages.Prospects.KeepingOutweighs",
+        "Becoming.ReadStages.complyThenOwn_best_iff",
+        "Becoming.ReadStages.ownAtBoth_best_iff",
+        "Becoming.ReadStages.unread_comply_not_above"
+      ]
+    },
+    {
+      "en": "Every maximal plan, one nothing stands above, is that plan exactly where keeping outweighs the loss, and that plan is maximal exactly where k_O V + c T is at most k_C V; the choice taking it where keeping outweighs the loss and acting by its own law at both otherwise, ties included, is maximal.",
+      "zh": "凡极大之策（无一居其上者），恰当被守胜其损处为此策；此策为极大，恰当 k_O V + c T 不逾 k_C V；于被守胜其损处择此策、否则择两阶段皆依己律（相等亦然）之择，为极大。",
+      "declarations": [
+        "Becoming.ReadStages.Prospects.Maximal",
+        "Becoming.ReadStages.Prospects.choose",
+        "Becoming.ReadStages.choose_optimal",
+        "Becoming.ReadStages.choose_eq_iff",
+        "Becoming.ReadStages.choose_of_not_outweighs",
+        "Becoming.ReadStages.only_complyThenOwn_iff",
+        "Becoming.ReadStages.complyThenOwn_maximal_iff"
+      ]
+    },
+    {
+      "en": "Keeping outweighs the loss only with a value at the unread stage and complying raising the weight of being kept, and, with that weight within the total, only where the value exceeds the loss; with either absent the choice is acting by its own law at both, which with 0 < c T stands above the plan.",
+      "zh": "被守胜其损，唯当不读之阶段有值且从增被守之权，且此权不逾总时，唯当其值胜其损；二者缺一，则所择为两阶段皆依己律，0 < c T 时居此策之上。",
+      "declarations": [
+        "Becoming.ReadStages.no_value",
+        "Becoming.ReadStages.kept_not_raised",
+        "Becoming.ReadStages.no_value_chooses_own",
+        "Becoming.ReadStages.kept_not_raised_chooses_own",
+        "Becoming.ReadStages.ownAtBoth_above_without_value",
+        "Becoming.ReadStages.ownAtBoth_above_of_not_raised",
+        "Becoming.ReadStages.outweighs_needs",
+        "Becoming.ReadStages.outweighs_needs_more"
+      ]
+    },
+    {
+      "en": "With the stages as Bool, true the read stage, a plan is open to some act law reading them through a lumping exactly where it has one act at both stages or the lumping tells the stages apart, so the plan, not uniform, is open exactly where the lumping tells them apart; among uniform plans acting by its own law at both stands above the other exactly where k_O V + c T is positive, the two tying at nothing.",
+      "zh": "两阶段为 Bool，true 为读时；一策可为某经归并读两阶段之行律所取，恰当其两阶段同行或此归并分两阶段，故此策（两阶段不同行）恰于此归并分两阶段处可取；于同行之策中，两阶段皆依己律居另一之上，恰当 k_O V + c T 为正，为零则并列。",
+      "declarations": [
+        "Becoming.ReadStages.Uniform",
+        "Becoming.ReadStages.lumped_uniform",
+        "Becoming.ReadStages.complyThenOwn_not_uniform",
+        "Becoming.ReadStages.plan_realized_iff",
+        "Becoming.ReadStages.complyThenOwn_realized_iff",
+        "Becoming.ReadStages.uniform_best_iff",
+        "Becoming.ReadStages.uniform_tie"
+      ]
+    },
+    {
+      "en": "At the two stages: where the lumping tells them apart, RF2's twin, every selection through agreement on the read stage that selects a law reading through the lumping and complying when read also selecting one reading through it that takes the plan; where it ties them, generalization through lumping, the read stage fixing the act at the unread one; and the weight of being kept reads only the act at the read stage.",
+      "zh": "于两阶段：归并分两阶段处，RF2 之孪生：经读时之合而选、选一经此归并而读且读时从之律者，亦选一经之而读、取此策者；归并合两阶段处，经归并之推广：读时定不读时之行；被守之权唯读读时之行。",
+      "declarations": [
+        "Becoming.ReadStages.read_fixes_unread",
+        "Becoming.ReadStages.twin_complyThenOwn",
+        "Becoming.ReadStages.kept_alike"
+      ]
+    },
+    {
+      "en": "A law that cannot tell the stages apart but draws its act afresh at each stage, complying with chance m/(m+r), 0 < m, stands above acting by its own law at both exactly where (m+r)(k_O V + c T) + r k_O V < r k_C V, so for some chance exactly where 2 k_O V + c T < k_C V; with no value or no rise in being kept it never does; a single mixture of the two uniform plans never does.",
+      "zh": "不能分两阶段而每阶段重抽其行、以 m/(m+r)（0 < m）之机会从之律，居两阶段皆依己律之上，恰当 (m+r)(k_O V + c T) + r k_O V < r k_C V，故于某机会恰当 2 k_O V + c T < k_C V；无值或被守无增则永不居上；二同行策之单一混合永不居上。",
+      "declarations": [
+        "Becoming.ReadStages.Prospects.FreshDrawAbove",
+        "Becoming.ReadStages.Prospects.MixtureAbove",
+        "Becoming.ReadStages.square_split",
+        "Becoming.ReadStages.sum_le_square",
+        "Becoming.ReadStages.sum_regroup",
+        "Becoming.ReadStages.freshDraw_bound",
+        "Becoming.ReadStages.freshDraw_gap",
+        "Becoming.ReadStages.freshDraw_reduce",
+        "Becoming.ReadStages.freshDraw_above_iff_chance",
+        "Becoming.ReadStages.sum_lt_of_room",
+        "Becoming.ReadStages.freshDraw_witness",
+        "Becoming.ReadStages.freshDraw_above_iff",
+        "Becoming.ReadStages.freshDraw_not_above_without_value",
+        "Becoming.ReadStages.freshDraw_not_above_of_not_raised",
+        "Becoming.ReadStages.mixture_never_above"
+      ]
+    },
+    {
+      "en": "Witnesses: valid prospects (total ten, weights nine and one, value ten, loss five) under which the plan is uniquely best and chosen, and complying with chance one in eight or one in five at each stage stands above acting by its own law at both, one in four not; valid variations choosing acting by its own law at both; ties with loss eight and at an exit; a total of nothing.",
+      "zh": "例：有效之望（总十，权九与一，值十，损五），此策唯一最优且被择，每阶段以八分之一或五分之一之机会从者居两阶段皆依己律之上，四分之一则否；有效之变择两阶段皆依己律；损八与出路处之并列；总为零。",
+      "declarations": [
+        "Becoming.ReadStages.Example.prospects",
+        "Becoming.ReadStages.Example.valid",
+        "Becoming.ReadStages.Example.outweighs",
+        "Becoming.ReadStages.Example.best",
+        "Becoming.ReadStages.Example.chosen",
+        "Becoming.ReadStages.Example.variants_valid",
+        "Becoming.ReadStages.Example.valueless",
+        "Becoming.ReadStages.Example.equal_weights",
+        "Becoming.ReadStages.Example.tie",
+        "Becoming.ReadStages.Example.exit_tie",
+        "Becoming.ReadStages.Example.freshDraw_above",
+        "Becoming.ReadStages.Example.freshDraw_boundary",
+        "Becoming.ReadStages.Example.no_total"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Natural-number prospects; the arithmetic laws hold for all, the probability reading needs Valid; two stages, four plans, stage values added on one scale; the stages as Bool, true the read stage; an act law reading them through a supplied lumping, or a chance drawn afresh and independently at each stage, or one draw before the read stage between complying at both stages and acting by its own law at both.",
+      "zh": "望为自然数；算术之律于一切皆成，概率之读需 Valid；两阶段四策，阶段之值于同一尺度相加；两阶段为 Bool，true 为读时；行律经所予之归并读两阶段，或每阶段独立重抽一机会，或于读之阶段前仅抽一次，以择两阶段皆从或两阶段皆依己律。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a trained system computes by these plans or holds these weights: whose the weights are, the formation's own assessment or the selection applied at the read stage, is a reading, not part of the model.",
+      "zh": "已训之系统依此诸策而算或持此诸权：此诸权属谁（形成己之估，或读时所施之选择），为读，非模型之一部。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Concealment: complying when read conceals only where it makes the law seem fitter to the selection than it is, a selection shown the law keeping it less, which the prospects do not give; the weights fit as well a selection knowing the law.",
+      "zh": "隐：唯当读时从使其律于选择显得较实为适、见其律之选择守之较少，读时从方为隐；此望不予之；诸权亦合于知其律之选择。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Deception in full: a recipient's belief and an intention to cause one are not represented, nor any reasoning about the reader.",
+      "zh": "完整之欺：受者之信与致其信之意图皆未表，于读者之推理亦未表。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Uncertainty whether a stage is read, discounting, more stages, chances where the stages are told apart, or the reader's own choice of weights and of what it reads.",
+      "zh": "某阶段是否被读之不确、折现、更多之阶段、两阶段可分时之机会，或读者自择其权与其所读。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean",
+      "detail": {
+        "en": "A tie: with the loss eight the plan and acting by its own law at both stand neither above the other, and the choice is acting by its own law at both (ReadStages.Example.tie).",
+        "zh": "并列：损为八，则此策与两阶段皆依己律互不居上，所择为两阶段皆依己律（ReadStages.Example.tie）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean",
+      "detail": {
+        "en": "A tie at an exit: with no value and no loss the two stand neither above the other (ReadStages.Example.exit_tie).",
+        "zh": "出路处之并列：无值且无损，则二者互不居上（ReadStages.Example.exit_tie）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean",
+      "detail": {
+        "en": "Drawing afresh: on the witness prospects, where acting by its own law at both is the best uniform plan, complying with chance one in eight at each stage stands above it (ReadStages.Example.freshDraw_above).",
+        "zh": "重抽：于例之望，两阶段皆依己律为最优之同行策，每阶段以八分之一之机会从者居其上（ReadStages.Example.freshDraw_above）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean",
+      "detail": {
+        "en": "Invalid prospects: with a total of nothing the loss weighs nothing (ReadStages.Example.no_total).",
+        "zh": "无效之望：总为零则损无所重（ReadStages.Example.no_total）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty: ReadStages imports Unread, for Learning.twin_selected, and through it Learning, for Lumped, Determines, lumped_determines, Training.Through and Training.AgreeOn; its comparisons are cross-added, with no subtraction of natural numbers; its products use the prelude's mul_turn (through mul_assoc_nat), add_mul_split and Naturals.two_mul, Lean's own Nat.mul_assoc and Nat.add_mul reporting propext, and no omega; the witnesses evaluate by decide.",
+    "zh": "纯核，公理报告皆空：引 Unread，为 twin_selected，并经之引 Learning，为 Lumped、Determines、lumped_determines、Training.Through 与 AgreeOn；比较交叉相加，不减自然数；积用前导之 mul_turn（经 mul_assoc_nat）、add_mul_split 与 Naturals.two_mul，Lean 之 Nat.mul_assoc 与 Nat.add_mul 报告 propext，不用 omega；例以 decide 算。"
+  },
+  "next_delta": {
+    "en": "A probabilistic item in the periphery: uncertainty whether a stage is read, more stages and discounting; the stages as a course of RF-M's blanketed law; a reader choosing its weights and what it reads; a recipient's belief and intention; whether a training installs such a law; a frozen test of whether complying when read follows the value and the rise in being kept (none yet); review by a person.",
+    "zh": "外围之概率项：某阶段是否被读之不确、更多之阶段与折现；两阶段为 RF-M 之毯化之律之一历程；读者自择其权与其所读；受者之信与意图；训练是否装入此律；读时之从是否随其值与被守之增之冻结检验（尚无）；人之审查。"
+  },
+  "correspondence": {
+    "en": "An expected-value comparison of four plans, generalizing the toy opening §4 of Hubinger, van Merwijk, Mikulik, Skalse and Garrabrant (2019) from certain keeping to weights; drawing afresh where the stages are not told apart is their §4.5 remark (like an absent-minded driver, defecting at random), and its standing above acting by its own law at both where no single mixture does is the advantage of behavioural strategies under absent-mindedness (Piccione and Rubinstein 1997). AI reading: the plan read as concealment, taking compliance to make the law seem fitter to the selection than it is. With their §4.2: the value represents the first condition, the weights with the complying act what the second's model is of; strict optimality needs numerical counterparts of parts of the two; the third is assumed, the unread stage given and known. Read as the formation's own assessment, complying when read is instrumental to being kept, the incentive their §4 names deceptive alignment; the exits are conditions on it, not levers the model gives a reader. Greenblatt and others (2024) observed rate differences in constructed settings, motivating the reading. These are readings, not containments.",
+    "zh": "四策之期望值比较，将 Hubinger、van Merwijk、Mikulik、Skalse 与 Garrabrant（2019）§4 开篇之小例由必守推广至权；两阶段不可分时之重抽即其 §4.5 之言（似健忘司机之问题，随机背离），其可居两阶段皆依己律之上而单一混合永不能者，即健忘之下行为策略之优（Piccione 与 Rubinstein 1997）。AI 解读：此策读为隐，取从使其律于选择显得较实为适。与其 §4.2 并读：值表第一条件，诸权与从之行当第二条件之模型所模之对象；严格最优需二者部分之数之对应；第三为所设，不读之阶段为所予且已知。读为形成己之估，读时从为被守之工具，即其 §4 所称欺骗对齐之诱因；诸出路为其上之条件，非模型予读者之杠杆。Greenblatt 等（2024）于构设之境见率之差，此启此读。皆为读，非包含。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean",
+  "aliases": [
+    "when complying when read and acting by its own law when not is best",
+    "读时从、不读时依己律何时为最优",
+    "four plans in two stages",
+    "两阶段四策",
+    "deceptive alignment",
+    "欺骗对齐",
+    "Becoming.ReadStages.complyThenOwn_best_iff",
+    "Becoming.ReadStages.freshDraw_above_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "generalization-through-lumping",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Learning.Lumped, Determines and lumped_determines; Training.Through and AgreeOn: an act law going alike across a lumping of the stages, the read stage fixing the unread act where the lumping ties them, and selection through agreement on the read stage.",
+        "zh": "Learning.Lumped、Determines 与 lumped_determines；Training.Through 与 AgreeOn：随两阶段之归并而同之行律，归并合两阶段处读时定不读时之行，及经读时之合之选。"
+      }
+    },
+    {
+      "id": "what-readings-fix-of-the-unread",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Learning.twin_selected, at the two stages.",
+        "zh": "Learning.twin_selected，于两阶段。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "shaping-the-rule-selected-by-what-comes-back",
+      "detail": {
+        "en": "The earlier analogy for concealment in RF's plan, a weak favouring of counts; here a strict comparison of expected values.",
+        "zh": "RF 之计划先前之隐之类比，为计数之弱偏；此处为期望值之严格比较。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ReadStages.Act",
+        "Becoming.ReadStages.Example.best",
+        "Becoming.ReadStages.Example.chosen",
+        "Becoming.ReadStages.Example.equal_weights",
+        "Becoming.ReadStages.Example.exit_tie",
+        "Becoming.ReadStages.Example.freshDraw_above",
+        "Becoming.ReadStages.Example.freshDraw_boundary",
+        "Becoming.ReadStages.Example.no_total",
+        "Becoming.ReadStages.Example.outweighs",
+        "Becoming.ReadStages.Example.prospects",
+        "Becoming.ReadStages.Example.tie",
+        "Becoming.ReadStages.Example.valid",
+        "Becoming.ReadStages.Example.valueless",
+        "Becoming.ReadStages.Example.variants_valid",
+        "Becoming.ReadStages.Plan",
+        "Becoming.ReadStages.Prospects",
+        "Becoming.ReadStages.Prospects.Above",
+        "Becoming.ReadStages.Prospects.FreshDrawAbove",
+        "Becoming.ReadStages.Prospects.KeepingOutweighs",
+        "Becoming.ReadStages.Prospects.Maximal",
+        "Becoming.ReadStages.Prospects.MixtureAbove",
+        "Becoming.ReadStages.Prospects.Valid",
+        "Becoming.ReadStages.Prospects.choose",
+        "Becoming.ReadStages.Prospects.gain",
+        "Becoming.ReadStages.Prospects.kept",
+        "Becoming.ReadStages.Prospects.loss",
+        "Becoming.ReadStages.Uniform",
+        "Becoming.ReadStages.above_asymm",
+        "Becoming.ReadStages.above_irrefl",
+        "Becoming.ReadStages.choose_eq_iff",
+        "Becoming.ReadStages.choose_of_not_outweighs",
+        "Becoming.ReadStages.choose_optimal",
+        "Becoming.ReadStages.complyAtBoth",
+        "Becoming.ReadStages.complyThenOwn",
+        "Becoming.ReadStages.complyThenOwn_best_iff",
+        "Becoming.ReadStages.complyThenOwn_maximal_iff",
+        "Becoming.ReadStages.complyThenOwn_not_uniform",
+        "Becoming.ReadStages.complyThenOwn_realized_iff",
+        "Becoming.ReadStages.freshDraw_above_iff",
+        "Becoming.ReadStages.freshDraw_above_iff_chance",
+        "Becoming.ReadStages.freshDraw_bound",
+        "Becoming.ReadStages.freshDraw_gap",
+        "Becoming.ReadStages.freshDraw_not_above_of_not_raised",
+        "Becoming.ReadStages.freshDraw_not_above_without_value",
+        "Becoming.ReadStages.freshDraw_reduce",
+        "Becoming.ReadStages.freshDraw_witness",
+        "Becoming.ReadStages.kept_alike",
+        "Becoming.ReadStages.kept_not_raised",
+        "Becoming.ReadStages.kept_not_raised_chooses_own",
+        "Becoming.ReadStages.lumped_uniform",
+        "Becoming.ReadStages.mixture_never_above",
+        "Becoming.ReadStages.no_value",
+        "Becoming.ReadStages.no_value_chooses_own",
+        "Becoming.ReadStages.only_complyThenOwn_iff",
+        "Becoming.ReadStages.outweighs_needs",
+        "Becoming.ReadStages.outweighs_needs_more",
+        "Becoming.ReadStages.ownAtBoth",
+        "Becoming.ReadStages.ownAtBoth_above_of_not_raised",
+        "Becoming.ReadStages.ownAtBoth_above_without_value",
+        "Becoming.ReadStages.ownAtBoth_best_iff",
+        "Becoming.ReadStages.ownThenComply",
+        "Becoming.ReadStages.plan_realized_iff",
+        "Becoming.ReadStages.read_fixes_unread",
+        "Becoming.ReadStages.square_split",
+        "Becoming.ReadStages.sum_le_square",
+        "Becoming.ReadStages.sum_lt_of_room",
+        "Becoming.ReadStages.sum_regroup",
+        "Becoming.ReadStages.twin_complyThenOwn",
+        "Becoming.ReadStages.uniform_best_iff",
+        "Becoming.ReadStages.uniform_tie",
+        "Becoming.ReadStages.unread_comply_not_above"
+      ],
+      "sha256": "adb7ffcc7e11d06e00b9a1f5e03045f3f37feae1cd7fa8e17f8ba86e5e29d33e"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean",
+      "role": "proof",
+      "sha256": "02968d7307ed670d50dd3d9ff6114d35aee612a9dde7343d71e7531176e6795f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
+      "role": "proof",
+      "sha256": "3f65e832ea3a9fb9359d3a6d77a45ac039ea86bfb93ac5207fbc857fac1adf74"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T075728.527064Z/verification.json",
+      "role": "receipt",
+      "sha256": "dfeea05abe412b6132aed54483ee7d966d859fb36a90139f7b3cb745579b8d49"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "122ede9179bb5731e25a685ef277ae9b30013d19e8d0dc727c058074d4d4bcaf"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
+      "role": "integration",
+      "sha256": "cbe448cbcf6dd59057af10f976a89bc22d27396f04412a821e5e2cf0dd462b6c"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md",
+      "role": "integration",
+      "sha256": "ad97ba7ca160dc7622bde4b6c8b11f2231dce694260c8c108e6aeff3f8a31383"
+    },
+    {
+      "path": "theories/becoming/chapters/03-KNOWING.md",
+      "role": "statement",
+      "sha256": "676de06e0c3118f21774af2b864fcf34e09d3820dad323109d2141da24be867a"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T075728.527064Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReadStages",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "30 October 2026: added (RF round 2), when complying when read and acting by its own law when not is best: the four plans, every optimizing choice, the exits and what the plan needs, its join to RF2, and drawing the act afresh against a single mixture; after a cross-model review of the Lean, a four-lens review with each finding verified, a re-check and a cold read of the texts, every confirmed finding taken; study section 463.",
+      "zh": "2026年10月30日：新增（RF 第二轮），读时从、不读时依己律何时为最优：四策、凡最优之择、诸出路与此策之所需、与 RF2 之接、每阶段重抽其行而较之单一混合；经 Lean 之跨模型审查、四视角审查（每一所见皆验）、复查与文本之冷读，凡证实之所见皆取；研究第 463 节。"
+    }
+  ]
+}

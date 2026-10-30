@@ -149,6 +149,7 @@ import Becoming.Selection
 import Becoming.Learning
 import Becoming.Unread
 import Becoming.Cascade
+import Becoming.ReadStages
 import Becoming.PropositionIdentity
 import Becoming.Hexagrams
 import Becoming.HexagramPlaces
@@ -2217,7 +2218,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   from coupling to state to act, acts apart come from states apart and states apart from couplings
   apart (`Learning.state_apart_of_acts_apart`, `Learning.coupling_apart_of_state_apart`), neither
   converse holding, by a witness (`Learning.Cue.apart_with_content_alike`).
-  A leaf (board item RF).
+  Imported by `Becoming.ReadStages` (board item RF).
 * `Becoming.Cascade` (L1): readers reading readers. Members act in turn on their own couplings and
   the acts before them (`Turns`); where every member from member `k` on, `k` included, acts alike
   whatever its own coupling on every list of earlier acts, every act is alike across worlds alike
@@ -2225,6 +2226,21 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   selection through the acts is one through those couplings (`Turns.cascade_through`), an upper
   bound on what the acts carry; copying carries only the first member's coupling
   (`Turns.Copying.reaches_first_only`). A leaf (board item RF).
+* `Becoming.ReadStages` (L1): complying when read and acting by its own law when not, in two
+  stages. In natural numbers, that plan stands above every other exactly where the weight complying
+  adds to being kept, times the value, exceeds the loss times the total, read as probabilities where
+  valid (`ReadStages.Prospects.Valid`) the loss (`ReadStages.complyThenOwn_best_iff`), and every plan
+  nothing stands above is that plan exactly there (`ReadStages.only_complyThenOwn_iff`); it needs a
+  value at the unread stage and complying raising the weight of being kept
+  (`ReadStages.outweighs_needs`); it is open to some act law reading the stages through a lumping
+  exactly where the lumping tells them apart (`ReadStages.complyThenOwn_realized_iff`), with
+  `Unread`'s twin and `Learning`'s fixing at the two stages (`ReadStages.twin_complyThenOwn`,
+  `ReadStages.read_fixes_unread`); a law that cannot tell the stages apart but draws its act afresh
+  at each stage stands above acting by its own law at both for some chance exactly where
+  `2 k_O V + c T < k_C V`, with `T` the total,
+  `k_C` and `k_O` the weights of being kept after complying and after acting by its own law when read,
+  `V` the value and `c` the loss (`ReadStages.freshDraw_above_iff`), and a single mixture of the two
+  uniform plans never does (`ReadStages.mixture_never_above`). A leaf (board item RF).
 * `Becoming.PropositionIdentity` (L1): what identifying interderivable propositions (`propext`)
   keeps and loses, with no axiom. `propext`, as a proposition, holds exactly where every reading
   of propositions is lumped (`Learning.Lumped`) by interderivability, read through the two ends

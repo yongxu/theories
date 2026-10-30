@@ -33,7 +33,7 @@
 ## Does not show
 
 - That fixed is right: for a law reading through the lumping and fitting the world on the read occasions, its act at an occasion sharing a read one's lump is right exactly where the world agrees at the two (Learning.lumped_right_iff).
-- Intention, anticipation, another's false belief or an incentive to differ where unread.
+- Intention, anticipation, another's false belief or an incentive to differ where unread; when, in two stages, differing there is uniquely best in the order given prospects give is stated in when-complying-when-read-is-best.
 - A reader misled: it lies outside the chain of acts, states and couplings apart, in prose only.
 - Which lumping an actual formation has, and the probabilistic form of the chain (the data-processing inequality).
 - **Counterexample:** Occasions with a cue: for every selection through agreement on the readings that selects the content act, a formation coupled into the cue has, at the unread occasion with content true, a selected twin agreeing with the content act on every reading and answering false (Learning.Cue.seen_twin). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean)
@@ -51,14 +51,14 @@ Canonical source: [Unread.lean](../../../../experiments/integrated-correction/ge
 <a id="next--下一步"></a>
 ## Next
 
-Disclosure or concealment when read, in two stages, with the continuation value represented (RF round 2); a frozen test of the chain on a trained model with cues varied apart from content; review by a person.
+A frozen test of the chain on a trained model with cues varied apart from content; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Indistinguishability: two laws agreeing on every reading are selected alike by every selection through them. AI reading: read as evaluation and deployment, it locates where behaviour can differ when not read while every reading agrees, only where the formation's lumping tells the occasion from every read one: a necessary condition of what deceptive alignment and alignment faking describe (Hubinger and others 2019; Greenblatt and others 2024), whose intention, anticipation and incentive are not represented. A state telling read from unread while the act does not differ reads as detection not acted on, and a coupling taking in the cue while the state keeps only the content as detectable and not detected; measurements of the first are the chain's failed converse. Read with a supervised reporter, the identification limit of eliciting latent knowledge (Christiano, Cotra and Xu 2021). The probabilistic form of the chain is the data-processing inequality. These are readings, not containments.
+Indistinguishability: two laws agreeing on every reading are selected alike by every selection through them. AI reading: read as evaluation and deployment, it says two laws reading through one lumping can agree on every reading and differ unread only where the lumping tells the occasion from every read one. Read with deceptive alignment (Hubinger and others 2019), such a law acting alike on every reading acts otherwise unread only there; differing rates, as in alignment faking (Greenblatt and others 2024), are not so bounded. Intention, anticipation and incentive are not represented; a law drawing afresh can act otherwise unread without telling read from unread (Hubinger and others' §4.5). A state telling read from unread while the act does not differ reads as detection not acted on, and a coupling taking in the cue while the state keeps only the content as detectable and not detected; measurements of the first are the chain's failed converse. Read with a supervised reporter, the identification limit of eliciting latent knowledge (Christiano, Cotra and Xu 2021). The probabilistic form of the chain is the data-processing inequality. These are readings, not containments.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -66,6 +66,9 @@ Indistinguishability: two laws agreeing on every reading are selected alike by e
 - **formal-reuse**: [generalization-through-lumping](generalization-through-lumping.md). Learning.Lumped, Free, Determines and lumped_determines; Training.Through, AgreeOn and unselected_beyond_data (determines_lumped_iff and lumped_right_iff cited).
 - related, not a proved adapter: [what-training-installs](what-training-installs.md). Off its courses a law is installed only where the representation lumps a history with a course. Here the read occasions are fixed in advance, as data are in generalization through lumping; there the data are the courses the candidate itself generates, and its twin needs laws reading what has stood to keep them: the same boundary, with no instance theorem.
 - related, not a proved adapter: [what-choices-show-of-an-order](what-choices-show-of-an-order.md). What choices show of an order: the same question for the order a chooser's choices come from.
+- related, not a proved adapter: [when-complying-when-read-is-best](when-complying-when-read-is-best.md). Its twin and the fixing at two stages, read and unread, with prospects: when complying when read and acting by its own law when not is uniquely best, the twin where the stages are told apart and the fixing where they are tied.
+
+**Used by:** [when-complying-when-read-is-best](when-complying-when-read-is-best.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -88,6 +91,7 @@ Aliases: `what readings fix of the unread`, `读处所定于未读处者`, `a tw
 ### History
 
 - 29 October 2026: added (RF round 1), what readings fix of the unread: the twin where the formation can tell, a one-occasion example fixed exactly where ¬¬P, the chain of acts, states and couplings with its converses failing, and the cue witnesses; after a review of the plan, a review of the Lean and a cold read of the texts; study section 446.
+- 30 October 2026, board item RF, RF7 (study section 463): related to when-complying-when-read-is-best; the next step drops disclosure or concealment in two stages, whose two-stage comparison with the continuation value is now stated there, disclosure and concealment readings of it; the second item of what it does not show points to it; the correspondence says two laws reading through one lumping can agree on every reading and differ unread only where the lumping tells the occasion from every read one, reads with deceptive alignment that such a law acting alike on every reading acts otherwise unread only there, says differing rates, as in alignment faking, are not so bounded, no longer calls telling the occasion apart a necessary condition of what deceptive alignment and alignment faking describe, and adds that a law drawing afresh can act otherwise unread without telling read from unread (Hubinger and others' §4.5); no statement or declaration changed.
 
 </details>
 

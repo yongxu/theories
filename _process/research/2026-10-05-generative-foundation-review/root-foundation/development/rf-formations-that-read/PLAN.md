@@ -83,7 +83,7 @@ So "subsystems are also selected by what selects the system" has an exact form w
 
 ## 4. The new laws
 
-Round 1 is built in [kit/tree/](kit/tree/Becoming/) and passes scratch builds, every axiom report empty. It is three leaves on the spine, each a near-definitional law or a known result restated; what each adds is its place in one account and what it forbids. Round 1 landed on 29 October 2026 (study §446). Round 2's first landing is §4.6: RF3 and RF-M's mechanism with its first cases (`Becoming.ReadingLoop`) and RF6.3 (`Becoming.ReflexivePrediction`); RF6.1, RF-M's other cases and RF7 follow.
+Round 1 is built in [kit/tree/](kit/tree/Becoming/) and passes scratch builds, every axiom report empty. It is three leaves on the spine, each a near-definitional law or a known result restated; what each adds is its place in one account and what it forbids. Round 1 landed on 29 October 2026 (study §446). Round 2's first landing is §4.6: RF3 and RF-M's mechanism with its first cases (`Becoming.ReadingLoop`) and RF6.3 (`Becoming.ReflexivePrediction`); RF6.1 and RF7 followed (§4.6); RF-M's other cases follow.
 
 ### 4.1 RF1. What choices show of the order they come from: `Becoming.ShownOrder` (on the grammar; 27 theorems, 39 declarations)
 
@@ -124,7 +124,7 @@ So two mechanisms of one class, one search with two internal orders, agree on ev
 
 *Readings.* Deceptive alignment and evaluation awareness, at the level of what any selection by readings can fix, with the quantifiers of statement 2: given a selected law. The measurements that find detection without behavioural change (in the second opinion: Li and others 2026) are statement 4's failed converse. For eliciting latent knowledge, an identification limit for reporters: two reporters agreeing on every supervised occasion are selected alike by every selection through the supervision; latent knowledge and its relation to reporting are not represented.
 
-*Concealment as shaping: an analogy, not an instance.* A formation that complies when read so that its own law is kept resembles the shaping that `RuleShaping.favours_iff` selects where what comes back to the shaper covers its cost. But that law is about natural-number offspring counts with weak favouring (`c ≤ s`), while a preservation incentive is strict and involves probabilities and continuation value (`(q_M − q_H)V > c`). It stays an analogy until RF7 states a two-stage model with a defined choice between disclosure and concealment.
+*Concealment as shaping: an analogy, not an instance.* A formation that complies when read so that its own law is kept resembles the shaping that `RuleShaping.favours_iff` selects where what comes back to the shaper covers its cost. But that law is about natural-number offspring counts with weak favouring (`c ≤ s`), while a preservation incentive is strict and involves probabilities and continuation value (`(q_M − q_H)V > c`). The connection to RuleShaping stays an analogy; RF7 states the separate two-stage comparison (§4.6), with disclosure and concealment as labelled readings.
 
 ### 4.3 RF4. Readers reading readers: `Becoming.Cascade` (any types; 7 theorems, 13 declarations)
 
@@ -137,7 +137,7 @@ So two mechanisms of one class, one search with two internal orders, agree on ev
 
 *Readings.* Information cascades and herding, in the deterministic form where the act has stopped reading the private signal. A cascade can be accurate: it suppresses information and need not err. Copying illustrates Condorcet's dependence failure; no probabilistic accuracy or majority convergence is proved. `WitnessRefinementRuns.copied_witnesses_same` is a neighbour under its further hypotheses. Debts: the probabilistic form (public log-odds past every private increment), and DeGroot averaging with Golub and Jackson's wisdom.
 
-### 4.4 Round 2: RF3, RF6.1, RF6.3 (the design; RF3 and RF6.3 built, §4.6)
+### 4.4 Round 2: RF3, RF6.1, RF6.3 (the design; all three built, §4.6)
 
 **RF3. A formation's reading kept by its own update.**
 - **Carrier.** One carrier `W × M`, or an admissible subtype. The joint relation combines the world's step under the act chosen, the observation coming in and the update.
@@ -149,7 +149,7 @@ So two mechanisms of one class, one search with two internal orders, agree on ev
 
 **RF6.3. Reflexive prediction.** A prediction published, read before the response and negated by an admitted response is not right on every response. For Boolean outputs negation gives the counter-response constructively. For general outputs a map with no fixed point is supplied, the class of responses inhabited and including it. The theorem is to be proved, not named through `Diagonal.gap_unsaid`.
 
-### 4.5 RF-M and RF7 (the design; RF-M's mechanism and first cases built, §4.6)
+### 4.5 RF-M and RF7 (the design; RF-M's mechanism and first cases, and RF7, built, §4.6)
 
 **RF-M. One joint finite mechanism.**
 - A formation on a small finite world with an observation map.
@@ -170,12 +170,13 @@ This is the review's "joint finite mechanism connecting prediction, selection, u
 
 ### 4.6 Round 2, first landing: the reading loop, and a prediction read by what it predicts
 
-Built in [kit/round2/tree/](kit/round2/tree/Becoming/), every axiom report empty, after a cross-model review of the Lean with a re-check, every finding taken ([REVIEW-ROUND2](evidence/REVIEW-ROUND2.md)). The results are stated in their records and in 03 §12; this section says what the design became.
+Built in [kit/round2/tree/](kit/round2/tree/Becoming/), every axiom report empty, after a cross-model review of the Lean with a re-check (RF7's also a review through four lenses), every confirmed finding taken ([REVIEW-ROUND2](evidence/REVIEW-ROUND2.md)). The results are stated in their records and in 03 §12, RF6.1's in 03 §8 and RF7's in 03 §11; this section says what the design became.
 
 - **RF3** (`Becoming.ReadingLoop`, kept readings). As designed, with two changes the review asked for. Keeping now asks the act enabled at every world the reading admits, since successor safety alone is met by an act no world can take. The design's existence condition linking accessible histories to the task's futures is met in part: the reading a formation's own history carries, the worlds possible after it, is the least reading kept by recording, and a policy acting from its history keeps a task and goes on exactly where its act is safe and enabled at every world possible after each history it generates. A condition for such a policy to exist, and the nonvacuity of the starts, are not proved.
 - **RF-M** (`Becoming.ReadingLoop`, the loop as a blanketed law). The mechanism as designed: a model revised by narrowing candidate laws, acts chosen through it by an internal order, acts changing what is sensed. Three general laws the design did not name came with it: two worlds give one formation one course exactly as long as they answer alike what it does; where every answer telling two worlds apart breaks a task, keeping the task is never telling them apart; and formations related by a relation their steps keep act and sense alike. Its first cases are the inner-alignment case (two rankings fitting one training occasion, apart beyond it) and the assistance case in part (an unresolved model and a reversed ranking act alike, and informing, represented by its outcome, turns only the first). Not built: a helper's acts within the law, preference as state, the institutional case; the witness's world does not move.
 - **RF6.3** (`Becoming.ReflexivePrediction`). As designed, with the positive side added: on a finite chain, repeated publication from the bottom under a response keeping the order reaches the least right prediction within the chain's length; Boolean negation leaves no value fixed; a response reversing the order can leave one.
 - **RF6.1** (`Becoming.OpenedCorrection`). Built in the kit and reviewed, and held out of the first landing: its opening was a static statement where the design asks for a revision that is a reachable step of one process. Rebuilt along a trace of one process, on Revising's stock-and-link process, re-checked (findings 19 to 26) and its texts cold-read, it landed on its own after the first landing: a course opens a correction where it leads from a configuration lacking a fitting uniform policy through the reading in force to one with it, acceptability fixed, the gain from the reading, from executability or both; starting with the link off, rebuilding it opens the correction where a unit of stock remains after. The institutional case is read on it; an institution's rule of reading as its own process with members' acts is not built.
+- **RF7** (`Becoming.ReadStages`, named for its structure; the item keeps the name of its reading). As designed, with the reviews' corrections: the weights read as probabilities only where valid; complying when read and acting by its own law when not uniquely best exactly where the weight complying adds to being kept, times the value, exceeds the loss times the total (read as probabilities, the loss), every optimizing choice taking it exactly there; the exits and what that plan needs; its join to RF2, that plan open to some act law reading the stages through a lumping exactly where the lumping tells them apart, with RF2's twin and the lumping's fixing at the two stages; and a law that cannot tell the stages apart but draws its act afresh at each stage, with one chance of complying at both, which for some such chance stands above acting by its own law at both exactly where `k_C V > 2 k_O V + c T`, the improving chances stated exactly, while a single mixture of the uniform plans never does (with `T` the total, `k_C` and `k_O` the weights of being kept after complying and after acting by its own law, `V` the value and `c` the loss; the weights are `q_M T` and `q_H T`, so that the first threshold, `k_C V > k_O V + c T`, is §4.2's `(q_M − q_H) V > c` scaled by the total). The toy it generalizes opens §4 of Hubinger and others (2019), and drawing afresh where the stages cannot be told apart is their §4.5's random defection. In place of §4.2's analogy with RuleShaping it states its own comparison of expected values; a recipient's belief and an intention to cause one are not represented. Landed on its own after RF6.1.
 
 ## 5. A shared obstruction pattern (readings, on existing laws)
 
@@ -187,7 +188,7 @@ The review corrected the first draft's "one failure, one exit". `ClosedCapture.c
 | capture of an institution | an existing mechanism under its premises: `RuleCapture`, `ClosedCapture.Drawn.pool_through`, `DrawnShaping` |
 | motivated updating, self-deception (无明) | interpretation and selected examples (`Seeking`), not a universal reduction |
 | confirmation in inquiry | an information restriction (RF2 at a formation's own selection of data); no dynamics of bias is stated |
-| preference shaping, deceptive alignment | analogies until RF-M and RF7 represent preferences, intervention and continuation |
+| preference shaping, deceptive alignment | preference shaping an analogy until RF-M represents preferences and intervention; deceptive alignment's incentive a reading of RF7's two-stage comparison, the continuation value represented (§4.6) |
 | echo chambers | conditional indistinguishability of a pool recruiting through itself (`Web.RecruitsThrough.alike_iff`), not automatic capture |
 | cascades | information suppression (RF4), possibly accurate |
 
@@ -223,7 +224,7 @@ From the second opinion, checked against the repository; the full table, with ci
 | Francis and Wonham, internal model principle | — | debt (stability, perturbation classes) |
 | Mesa-optimization, inner alignment (Hubinger and others 2019) | RF1 with its search witness | made exact for searches by an order; realizability by a training and an architecture a debt |
 | Goal misgeneralization (Langosco and others 2022; Shah and others 2022) | RF1.4, `Untried` | the possibility exact; prevalence empirical |
-| Deceptive alignment, alignment faking (Greenblatt and others 2024) | RF2; RF7 (round 2) | the possibility exact; the incentive a debt until RF7 |
+| Deceptive alignment, alignment faking (Hubinger and others 2019, §4; Greenblatt and others 2024) | RF2; RF7 | the selected twin's boundary exact under RF2's hypotheses; the incentive in two stages, a reading (Hubinger and others' §4 toy with weights; their §4.5's random defection with an exact threshold); the third of their §4.2 conditions, an expectation that the threat of modification will go away, assumed; the rates empirical |
 | Evaluation awareness (Needham and others 2025; 2026 studies) | RF2.4 | the chain exact, its converses failing; the measurements empirical |
 | Eliciting latent knowledge | RF2.1 | the identification limit restated; the problem open |
 | Crawford and Sobel; Ward and others 2023, deception | — | debt (sender objective, recipient belief) |
@@ -278,11 +279,11 @@ Each design is frozen in the repository's form, predictions fixed before scoring
 
 **Order** (pace rule: a few lines landed before many open):
 1. Round 1, RF1, RF2 and RF4, after an independent review of the Lean. Records, the home sections (03 §11 for RF1 and RF2, 05 §8 for RF4) and the study section; then the queue.
-2. Round 2, each landing reviewed before it: first RF3, RF-M's mechanism and RF6.3 (§4.6, landed); then RF6.1 (landed, §4.6); then RF-M's assistance and preference cases, an institution's rule of reading with members' acts, and RF7.
+2. Round 2, each landing reviewed before it: first RF3, RF-M's mechanism and RF6.3 (§4.6, landed); then RF6.1 (landed, §4.6); then RF7 (landed, §4.6); then RF-M's assistance and preference cases and an institution's rule of reading with members' acts.
 3. The tests' designs, frozen; runs on Ren's yes.
 
 **Coordination.**
-- **AJ5's scope box** names RF as begun, without a link, until RF lands.
+- **AJ5's scope box** names RF's landed results on the questions it lists (all but RF6.1, 03 §8), with links to their home sections (03 §11 and §12, 05 §8).
 - **The full-unification proposal (FU)** counts a law as on the root where it is derived from a grammar law or stated on the grammar at a represented model. RF1 is stated on the grammar (`«际»`, `«及»`, `«无环»`, `«无环则及为序»`). RF2 and RF4 rest on `Learning`'s laws.
 - **UE's debts** (UE2's free energy, UE1's update rule) are the periphery queue for the probabilistic forms named here.
 
@@ -323,8 +324,10 @@ Each design is frozen in the repository's form, predictions fixed before scoring
 
 **The review of round 2's Lean.** The first module, `Becoming.ReadingLoop`, was read by the cross-model reviewer, which found no invalid proof and seventeen places to change: keeping by deadlock, a supplied reading where the formation's own was asked, faithfulness too strong for the witness, a minimum capped at three, and prose saying more than the Lean. All were taken, the module rewritten from 32 theorems to 51; a re-check found fifteen taken correctly, two in part (now stated as open) and one new overstatement, taken. It also reviewed `Becoming.ReflexivePrediction` (four findings, taken) and `Becoming.OpenedCorrection` (five, taken by holding the module for its own landing). The table is in [REVIEW-ROUND2](evidence/REVIEW-ROUND2.md#what-was-taken).
 
+**The reviews of RF7.** `Becoming.ReadStages`, first `Becoming.Concealment`, had a cross-model review (seven findings) with a re-check, a review through four lenses whose 50 points were each verified against the Lean (42 confirmed, 8 refuted), a re-check of the rebuilt module (nine points, all taken, confirmed) and a cold read of its texts, by the cross-model reader (five points) and through three lenses with each point verified (75 confirmed, 5 refuted), with the cross-model reader's re-check of what was taken (four taken in part, three new points, then all seven taken correctly), a final check through three lenses (42 confirmed, 8 refuted), the cross-model reader's re-check of how the final check's points were taken (four points still wanting) and a second final check through three lenses (27 confirmed, 1 refuted), then the reader's re-check of that round (one of its points taken only in part) and a third check through three lenses scoped to the round's changes (9 confirmed, 2 refuted), and the reader's re-check of the round that took those (one point, on the study's account of the re-checks) with a fourth check through two lenses so scoped (4 confirmed, 5 refuted); every confirmed finding was taken ([REVIEW-ROUND2](evidence/REVIEW-ROUND2.md#the-review-of-rf7s-module)).
+
 ## Evidence
 
 - [evidence/](evidence/): the three maps (Claude Opus 5.5 readers, read-only), the second opinion and the review (GPT astra, high effort, read-only), and their [briefs](evidence/BRIEF.md).
 - [kit/tree/Becoming/](kit/tree/Becoming/): the round 1 modules, with their scratch build logs in [kit/](kit/); [kit/round2/tree/Becoming/](kit/round2/tree/Becoming/): round 2's, with the review in [REVIEW-ROUND2](evidence/REVIEW-ROUND2.md).
-- What this plan has not done: no human has read it and no test has run; the Lean has had one independent review and the texts a cold read by three readers, every finding taken.
+- What this plan has not done: no human has read it and no test has run; the Lean of each round has had an independent cross-model review, with re-checks in round 2 and for RF7 a review through four lenses, and the texts cold reads, every confirmed finding taken (§13).
