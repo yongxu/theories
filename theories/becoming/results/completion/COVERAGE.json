@@ -875,7 +875,7 @@
         "law": "Becoming.Flow.excess_bounded",
         "dense": "Becoming.Amounts.losses_within",
         "kind": "form",
-        "note": "for one amount: the level after n steps with the excesses summed is within the level before; the unit bound fails without a least loss (Halving.no_least_loss); flows over any amounts are open (chapter 8.1 item 6); the joint-excess laws at a gated renewal, Flow.outrun_below and Web.Whole.family_excess_ends, rest on this unit bound through excess_bounded_at and its family form, so their n steps from below n + m are whole-number laws too"
+        "note": "for one amount: the level after n steps with the excesses summed is within the level before; the unit bound fails without a least loss (Halving.no_least_loss); flows over any amounts are open (chapter 8.1 item 6); the joint-excess laws at a gated renewal, Flow.joint_excess_ends, Flow.outrun_below and Web.Whole.family_excess_ends, rest on this unit bound through excess_bounded_at and its family form, so their n steps from below n + m are whole-number laws too"
       },
       {
         "law": "Becoming.Flow.More.replenishment_unbounded",
