@@ -3,6 +3,7 @@ import Becoming.SelectionLevels
 import Becoming.GroupEnding
 import Becoming.Transmission
 import Becoming.WorldRepresentation
+import Becoming.ModelStatements
 
 /-!
 # U4, lever 2 (scratch): evolution's rows read on the root
@@ -43,6 +44,14 @@ review (`../REVIEW-U4-L2.md`). It checks the readings the audit leans on.
   the other hypotheses of rows 1–3 (`Undepending`, `Untransmitted`, `Undependent`), rows 7 and 8
   (`TopMissed`, `Lowered`), or row 5 (`Uninherited`, `Held`, `Standing`), nor descent in rows
   1–3, 7, 8, 14 and 17 (the `silent` flows).
+* **After the second read.** Row 8's `moved` (`Kept`: one step of exact descent, the mean not
+  moved) and row 17's `inactive` (`Lifted.inactive_needed`) cannot be dropped either, so every
+  hypothesis of the rows at standing 2 and of the gate rows has its witness, except the list facts
+  of rows 13 and 14 (the listing and equal sizes). Rows 14 and 17's gate and descent fail at the
+  one step the on-root statements take (`EndsAmong.not_acting_at`, `EndsAmong.not_descended_at`,
+  `Ungated.not_acting_at`, `Ungated.not_descended_at`). `rising` is an order, not a class
+  (`rising_refl`, `rising_trans`, `rising_not_class`). The gate on occurrences reads activity as
+  U2's region `ModelStatements.activeAt`, both parts in one form (`gate_iff_occurrences`).
 
 The modelling choices are listed in the audit's §8.
 -/
@@ -633,6 +642,17 @@ end Ungiven
 /-- Keeping or rising under a reading: an order (reflexive, transitive), not a class. -/
 def rising (f : Occ α → Nat) : «际» (Occ α) := fun u v => f u ≤ f v
 
+theorem rising_refl (f : Occ α → Nat) (u : Occ α) : rising f u u := Nat.le_refl _
+
+theorem rising_trans (f : Occ α → Nat) {u v w : Occ α} :
+    rising f u v → rising f v w → rising f u w := Nat.le_trans
+
+/-- Not a class: under a reading that is one after the step and none before it, the offspring's
+side rises from the parent's and not back. -/
+theorem rising_not_class : ¬ «类» (rising (fun u : Occ Bool => cond u.1 1 0)) := fun c =>
+  have up : rising (fun u : Occ Bool => cond u.1 1 0) (false, false) (true, false) := Nat.zero_le 1
+  Nat.not_succ_le_zero 0 (c.symm up)
+
 /-- **"Transmission never lowers" is descent within the trait's order**: what transmission lowered
 is nothing exactly where every step of descent keeps or raises the trait. -/
 theorem unlowered_iff_within (ps : List α) (kids : α → List α) (a b : α → Nat) :
@@ -654,20 +674,34 @@ theorem unlowered_at_iff (G : SelectionTerm.Generations α) (t : Nat) :
 
 /-! ## The gate's first part on occurrences, as U2 reads the second -/
 
-/-- Giving on occurrences, within a step, read by its sign (as U2 reads requiring). -/
+/-- Giving on occurrences, within a step, read by its sign (as U2 reads requiring). Giving is
+placed within the giving step, `(t, g)` to `(t, x)`, though the recipient comes to stand at
+`t + 1`: a modelling choice (audit §8). -/
 def givingOcc (L : Flow X X) : «际» (Nat × X) :=
   World.withinStep fun t g x => g ∈ L.present t ∧ 0 < L.give t g x
 
-/-- The occurrences active at their step. -/
-def activeOcc (W : Web X X) (o : Nat × X) : Prop := W.active o.1 o.2
-
 /-- **"Only active formations give", on occurrences**: giving lies within giving from an active
-occurrence, the form of U2's `ModelStatements.dependent_iff` for the gate's second part. -/
+occurrence, with activity U2's region `ModelStatements.activeAt`, the form of U2's
+`ModelStatements.dependent_iff` for the gate's second part. -/
 theorem acting_iff_occurrences {L : Flow X X} {W : Web X X} :
-    L.Acting W ↔ «则» (givingOcc L) («而» (Web.partialIdentity (activeOcc W)) (givingOcc L)) :=
+    L.Acting W ↔
+      «则» (givingOcc L) («而» (Web.partialIdentity (ModelStatements.activeAt W)) (givingOcc L)) :=
   ⟨fun acting o z gz => ⟨o, ⟨rfl, acting o.1 o.2 z.2 gz.2.1 gz.2.2⟩, gz⟩,
    fun incl t f c present pos => match incl (t, f) (t, c) ⟨rfl, present, pos⟩ with
      | ⟨_, ⟨rfl, act⟩, _⟩ => act⟩
+
+/-- **The gate on occurrences, both parts**: only active formations give and activity needs
+support exactly where giving lies within giving from an active occurrence and requiring from an
+active occurrence lies within the needs met, one region of activity (U2's `activeAt`) for both. -/
+theorem gate_iff_occurrences {L : Flow X X} {W : Web X X} :
+    L.Acting W ∧ W.Dependent ↔
+      «则» (givingOcc L) («而» (Web.partialIdentity (ModelStatements.activeAt W)) (givingOcc L)) ∧
+        «则» («而» (Web.partialIdentity (ModelStatements.activeAt W)) (ModelStatements.requiring W))
+          (ModelStatements.needMet W) :=
+  ⟨fun ⟨acting, dependent⟩ =>
+      ⟨acting_iff_occurrences.mp acting, (ModelStatements.dependent_iff W).mp dependent⟩,
+   fun ⟨acting, dependent⟩ =>
+      ⟨acting_iff_occurrences.mpr acting, (ModelStatements.dependent_iff W).mpr dependent⟩⟩
 
 /-! ## Membership in short lists -/
 
@@ -730,6 +764,9 @@ theorem descend (act : Bool) : ∀ p k, p ∈ ps → k ∈ kids p → flow.Desce
   fun _ _ mp _ => ⟨mp, Nat.zero_lt_one, Nat.lt_irrefl 0, Nat.zero_lt_one⟩
 
 theorem depends (act : Bool) : ∀ p, p ∈ ps → (web act).requires 0 p 2 := fun _ _ => rfl
+
+/-- Row 2's offspring dependence: the offspring depends on `2` after the step. -/
+theorem offspring_depends (act : Bool) : (web act).requires (0 + 1) 1 2 := rfl
 
 theorem transmits (act : Bool) : flow.TransmitsWithin (web act) 2 0 :=
   fun _ _ _ _ _ => ⟨rfl, Nat.le_refl _⟩
@@ -1307,6 +1344,43 @@ theorem not_rises :
 
 end Lowered
 
+/-! **The mean moved, row 8 (`Kept`).** `Lowered`'s web and flow, with one member at one giving
+to one offspring that carries one. The gate, descent, the top reading and exact transmission
+hold over the one step; the mean has not moved, and the conclusion, a strict rise, fails. -/
+
+namespace Kept
+
+def gens : SelectionTerm.Generations Nat where
+  first := [0]
+  kids t := match t with
+    | 0 => fun _ => [1]
+    | _ + 1 => fun _ => []
+  amount _ _ := 1
+
+theorem descended : SelectionTerm.Flow.Descended Lowered.flow Lowered.web gens := by
+  intro t p k mp mk
+  cases t with
+  | zero => exact ⟨mp, Nat.zero_lt_one, Nat.lt_irrefl 0, Nat.zero_lt_one⟩
+  | succ n => exact absurd (mk : k ∈ ([] : List Nat)) not_mem_nil
+
+theorem top : ∀ t p, p ∈ gens.family t → Lowered.web.Supported t p →
+    ∀ q, q ∈ gens.family t → gens.amount t q ≤ gens.amount t p :=
+  fun _ _ _ _ _ _ => Nat.le_refl _
+
+theorem exact : ∀ t, t < 1 →
+    SelectionTerm.Exact (gens.family t) (gens.kids t) (gens.amount t) (gens.amount (t + 1)) :=
+  fun _ _ _ _ _ _ => rfl
+
+theorem not_moved : ¬ gens.size 0 * gens.sum 1 ≠ gens.size 1 * gens.sum 0 := fun moved =>
+  moved (by decide)
+
+theorem not_rises :
+    ¬ (gens.size 1 * gens.sum 0 < gens.size 0 * gens.sum 1 ∧
+      ∃ t, t < 1 ∧ gens.discordAt t < gens.concordAt t) :=
+  fun rises => absurd rises.1 (by decide)
+
+end Kept
+
 /-! **Descent, rows 7 and 8.** `LowGives`'s generations listed under a flow that gives nothing,
 with nothing active. -/
 
@@ -1338,6 +1412,15 @@ theorem silent_acting : silent.Acting (web false) := fun _ _ _ _ pos => absurd p
 theorem not_descended : ¬ SelectionTerm.Flow.Descended silent (web false) gens :=
   fun d => Nat.lt_irrefl 0 (d 0 0 10 (.head _) (.head _)).2.1
 
+/-- The gate fails at the one step `rises_iff_inactive_on_root` takes. -/
+theorem not_acting_at : ¬ «则» (gives flow 0) («而» (activeAt (web false) 0) (gives flow 0)) :=
+  fun incl => match incl 2 20 ⟨.tail _ (.tail _ (.head _)), Nat.zero_lt_one⟩ with
+    | ⟨_, ⟨rfl, act⟩, _⟩ => act.elim (fun e => absurd e (by decide)) (fun e => absurd e (by decide))
+
+/-- Descent fails at that step. -/
+theorem not_descended_at : ¬ «则» (U4LeverTwo.listed gens 0) (gives silent 0) :=
+  fun incl => Nat.lt_irrefl 0 (incl 0 10 ⟨.head _, .head _⟩).2
+
 end EndsAmong
 
 namespace Ungated
@@ -1352,7 +1435,36 @@ theorem silent_acting : silent.Acting web := fun _ _ _ _ pos => absurd pos (Nat.
 theorem not_descended : ¬ SelectionTerm.Flow.Descended silent web gens :=
   fun d => Nat.lt_irrefl 0 (d 0 false true (.head _) (.head _)).2.1
 
+/-- The gate fails at the one step `size_zero_of_within` takes. -/
+theorem not_acting_at : ¬ «则» (gives flow 0) («而» (activeAt web 0) (gives flow 0)) :=
+  fun incl => match incl false true ⟨.head _, Nat.zero_lt_one⟩ with
+    | ⟨_, ⟨rfl, act⟩, _⟩ => act
+
+/-- Descent fails at that step. -/
+theorem not_descended_at : ¬ «则» (listed gens 0) (gives silent 0) :=
+  fun incl => Nat.lt_irrefl 0 (incl false true ⟨.head _, .head _⟩).2
+
 end Ungated
+
+/-! ## Row 17's `inactive` cannot be dropped
+
+`Lifted`'s world: every formation is active and gives, descent holds, the one member of the first
+generation is active, and the next generation has one member. -/
+
+namespace Lifted
+
+theorem active_member : ¬ ∀ p, p ∈ gens.family 0 → ¬ web.active 0 p :=
+  fun inactive => inactive 0 (.head _) trivial
+
+theorem not_ended : gens.size 1 = 1 := rfl
+
+/-- Every hypothesis of `GroupEnding.Flow.all_end` but `inactive` holds, and its conclusion
+fails. -/
+theorem inactive_needed : flow.Acting web ∧ SelectionTerm.Flow.Descended flow web gens ∧
+    ¬ (∀ p, p ∈ gens.family 0 → ¬ web.active 0 p) ∧ gens.size 1 ≠ 0 :=
+  ⟨acting, descended, active_member, fun zero => Nat.noConfusion (not_ended.symm.trans zero)⟩
+
+end Lifted
 
 /-! ## The other hypotheses of row 5 -/
 
