@@ -66,12 +66,14 @@ edit(checker, '''    "alike. "
     "gains over every open act exactly where none is valued best at every listed candidate of positive weight; "
     "holding for the reading that stops where the loss exceeds the gain stands above going on and switching off "
     "exactly where both strict signs have positive weight, and holding for any rule of stopping, forgoing an amount, "
-    "stands at least as high as going on exactly where its shortfall and the amount are at most the weighted excess "
-    "of switching off; through a map of the candidates, the least shortfall totals the smaller excess within each "
-    "cell, never increasing through a finer map; where every listed candidate of positive weight has transitive "
+    "stands at least as high as going on exactly where its shortfall and the amount together are at most the "
+    "weighted excess of switching off; through a map of the candidates whose cells are listed once each and cover "
+    "every listed "
+    "candidate's cell, the least shortfall totals the smaller excess within each cell, never increasing through a "
+    "finer map; where every listed candidate of positive weight has transitive "
     "comparisons according with the choices, holding a pick gains nothing within ShownOrder's reach; on "
-    "ReadingLoop's loop, a formation choosing so on its own model, listing only that going on gains and going on "
-    "from the start, rests at once and never senses the stop. "
+    "ReadingLoop's loop, a formation holding exactly where holding for the reading gains over both moves on its own "
+    "model, listing only that going on gains and going on from the start, rests at once and never senses the stop. "
     "NarrowingRuns: the answer is the greatest safe answer of the belief narrowed by After on the "''')
 
 root = PKG / 'Becoming.lean'
@@ -79,7 +81,7 @@ edit(root, 'import Becoming.ReadingLoop\n', 'import Becoming.ReadingLoop\nimport
 edit(root, "  (`ChoiceOccasions.Untried.same_search_met`, `ChoiceOccasions.Untried.same_search_after`). A leaf\n"
            "  (board item RF).\n* `Becoming.Ideals`",
      "  (`ChoiceOccasions.Untried.same_search_met`, `ChoiceOccasions.Untried.same_search_after`). Imported\n"
-     "  by `Becoming.HeldForReading` (board item RF).\n* `Becoming.Ideals`")
+     "  by `Becoming.ReadingLoop` and `Becoming.HeldForReading` (board item RF).\n* `Becoming.Ideals`")
 BULLET = """* `Becoming.HeldForReading` (L1): what holding an act for a reading is worth, in natural-number
   counts. A policy choosing open acts falls short of one best at every listed candidate by the
   weighted total of what its acts lose (`HeldForReading.after_add_gap`), so choosing best after a
@@ -88,16 +90,17 @@ BULLET = """* `Becoming.HeldForReading` (L1): what holding an act for a reading 
   that stops where the loss exceeds the gain stands above going on and switching off exactly where
   both strict signs have positive weight (`HeldForReading.held_gains_iff`), and holding for any rule
   of stopping, forgoing an amount, stands at least as high as going on exactly where its shortfall
-  and the amount are at most the weighted excess of switching off
-  (`HeldForReading.threshold_go_iff`); through a map of the candidates the least shortfall totals
-  the smaller excess within each cell, never increasing through a finer map
-  (`HeldForReading.least_through`, `HeldForReading.finer_least_le`); where every listed candidate of
+  and the amount together are at most the weighted excess of switching off
+  (`HeldForReading.threshold_go_iff`); through a map of the candidates whose cells are listed once
+  each and cover every listed candidate's cell, the least shortfall totals the smaller excess within
+  each cell, never increasing through a finer map (`HeldForReading.shortfall_through`,
+  `HeldForReading.least_through`, `HeldForReading.finer_least_le`); where every listed candidate of
   positive weight has transitive comparisons according with the choices, holding a pick gains
   nothing within `ShownOrder`'s reach (`HeldForReading.reach_fixes`); on `ReadingLoop`'s loop, a
-  formation choosing so on its own model
+  formation holding exactly where holding for the reading gains over both moves on its own model
   (`HeldForReading.SignLoop.choose_hold_iff`), listing only that going on gains and going on from
-  the start, rests at once and never senses the stop (`HeldForReading.SignLoop.never_senses_stop`). A
-  leaf (board item RF).
+  the start, rests at once and never senses the stop (`HeldForReading.SignLoop.rests_unread`,
+  `HeldForReading.SignLoop.never_senses_stop`). A leaf (board item RF).
 """
 edit(root, "  `ReadingLoop.Untested.model_or_order`). A leaf (board item RF).\n* `Becoming.SecuredContent`",
      "  `ReadingLoop.Untested.model_or_order`). Imported by `Becoming.HeldForReading` (board item RF).\n"
@@ -146,7 +149,7 @@ edit(ch3, '\n<a id="does-not-show"></a>\n## What this chapter does not show',
      + '\n\n<a id="does-not-show"></a>\n## What this chapter does not show')
 edit(ch3, "and informing is represented by its outcome, not by an act within the law.",
      "and informing is represented by its outcome, not by an act within the law; what holding an act for another's "
-     "reading is worth is [the last law](#r-what-holding-for-a-reading-is-worth).")
+     "reading is worth has [its own law](#r-what-holding-for-a-reading-is-worth).")
 edit(ch3, "a helper's acts within the loop, a principal's order as state those acts can move, and an institution "
           "revising its rule of reading;",
      "a principal's valuation as state a helper's acts can move, and an institution revising its rule of reading; of "
@@ -156,10 +159,12 @@ edit(ch3, "a helper's acts within the loop, a principal's order as state those a
 ch7 = CH / '07-SIGNIFICANCE.md'
 edit(ch7, "A disposition to accept a stop or revision does not make the change reach the system and complete. Each result "
           "below holds for a stated protocol;",
-     "A disposition to accept a stop or revision does not make the change reach the system and complete. Nor does an "
-     "incentive to accept one, which is the formation's own assessment: on its model, holding an act for a stopping "
-     "reading stands above both going on and switching off exactly where the reading's shortfall, with what holding "
-     "forgoes, stays below both of the model's excesses, which needs the model open on the sign of going on, and a "
+     "A disposition to accept a stop or revision does not make the change reach the system and complete. Nor does the "
+     "worth of accepting one on the formation's own model, read as an incentive to accept it [AI reading]: there, "
+     "holding an act for a stopping "
+     "reading stands above both going on and switching off exactly where the reading's shortfall and what holding "
+     "forgoes together stay below both of the model's excesses, which needs the model open on the sign of going on, "
+     "and a "
      "model that misses the true sign can rest without meeting the stop ([03 "
      "§12](03-KNOWING.md#r-what-holding-for-a-reading-is-worth)). Each result below holds for a stated protocol;")
 
@@ -171,10 +176,12 @@ edit(ch8, "It represents neither a recipient's belief nor an intention to cause 
      "dominating row the equality boundary, and the off-switch game's waiting with a rational human (Hadfield-Menell, "
      "Dragan, Abbeel and Russell 2017): its Theorem 1 for a belief of finite support, the strictness condition an "
      "equivalence, and its Equation 1's two terms as balances for any rule of stopping that is a function of the "
-     "candidate; a reading that tells only a cell gives the partition case of Blackwell's (1953) comparison, for this "
-     "decision. None of it is new as mathematics; what the counts add is one threshold joining the model's openness, "
-     "the reading's shortfall and what holding forgoes, the relation the paper's Remark 1 draws qualitatively and "
-     "its Theorem 2 writes for a Gaussian belief, which is not represented; the counts decompose it differently. Its witness on the reading loop is related to Carey's (2018) "
+     "candidate; a reading that tells only a cell gives, for this decision, the partition case of Blackwell's (1953) "
+     "comparison, from finer to worth at least as much. None of it is claimed new as mathematics; what the counts add "
+     "is one threshold joining the model's openness, the reading's shortfall and what holding forgoes. Read [AI "
+     "reading], the openness less the shortfall is the incentive the off-switch paper's Remark 1 places "
+     "qualitatively; its Theorem 2's form for a Gaussian belief is not represented, the counts decompose the "
+     "incentive differently, and the paper's game has no cost of waiting. Its witness on the reading loop is related to Carey's (2018) "
      "counterexamples under a misspecified reward and contains none of them [AI reading]. Near-definitional "
      "compositions and general laws, with a witness.\n")
 
@@ -188,19 +195,22 @@ edit(overview, "Read as self-confirmation, the trade between keeping a task and 
      "Proved with natural-number weights and values, read as probabilities where valid: a policy choosing open acts "
      "falls short of one best at every listed candidate by the weighted total of what its acts lose, so choosing "
      "best after a reading "
-     "that tells the candidate stands above committing to any open act exactly where no open act is valued best at "
+     "that tells the candidate stands above committing to every open act exactly where none is valued best at "
      "every listed candidate of positive weight; "
      "holding for the reading that stops where the loss exceeds the gain stands above both going on and switching "
      "off exactly where the model gives positive weight to both strict signs of going on; holding for any rule of "
      "stopping, forgoing an amount, "
-     "stands at least as high as going on exactly where the rule's shortfall and the amount are at most the weighted "
-     "excess of switching off; and through a reading that tells only a cell no rule falls short by less than the "
+     "stands at least as high as going on exactly where the rule's shortfall and the amount together are at most "
+     "the weighted excess of switching off; and through a reading that tells only a cell, no rule through it falls "
+     "short by less than the "
      "total, over the cells, of the smaller excess within each, a total never increasing through a finer reading. On "
      "the reading loop, a "
-     "formation choosing so on its own model, listing only that going on gains and going on from the start, never "
-     "senses the stop. Read as the "
+     "formation holding exactly where holding for the reading gains over both moves on its own model, listing only "
+     "that going on gains and going on from the start, never senses the stop. Read as the "
      "off-switch game's waiting and Good's value of evidence in counts, and, beside Carey's counterexamples, as a "
-     "reason to be corrected that holds only as far as the formation's model is right [AI reading] ([what holding for "
+     "strict reason to be corrected that the formation has only where its own model leaves the sign of going on "
+     "open, so "
+     "that a model missing the true sign can rest without meeting the stop [AI reading] ([what holding for "
      "a reading is worth](chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth)).\n")
 
 dossier = ROOT / 'theories/becoming/review/ALIGNMENT.md'
@@ -215,26 +225,32 @@ edit(dossier, "> - **assistance games** and cooperative inverse reinforcement le
      "model, and the principal's own state and learning are not represented;")
 edit(dossier, "> - **corrigibility as an incentive**. Shutdown appears only as a protocol that completes under stated "
               "conditions:",
-     "> - **corrigibility as an incentive**, which RF reaches only on a formation's own model: there, holding an act "
-     "for a stopping reading stands at least as high as going on and as switching off exactly where the reading's "
-     "shortfall and what holding forgoes are within both of the model's excesses, and a model that misses the true "
+     "> - **corrigibility as an incentive**, which RF reaches [AI reading] only on a formation's own model: there, "
+     "holding an act for a stopping reading stands at least as high as going on and as switching off exactly where "
+     "the reading's shortfall and what holding forgoes together are within both of the model's excesses, and a model "
+     "that misses the true "
      "sign can rest without meeting the stop (below). Otherwise shutdown appears only as a protocol that completes "
      "under stated conditions:")
+edit(dossier, "Whether a system is willing to accept costly correction is not derived.",
+     "Whether an actual system's model leaves the sign open, or whether the system acts on that assessment and accepts "
+     "costly correction, is not derived.")
 edit(dossier, "and a prediction read by what it predicts; a helper's acts within the law and preference as state are "
               "later items.",
-     "and a prediction read by what it predicts; preference as state is a later item.")
+     "and a prediction read by what it predicts; a principal's valuation as state is a later item.")
 edit(dossier, "does better by defecting at random, here with weights and an exact threshold.\n",
      "does better by defecting at random, here with weights and an exact threshold. Round 2's RF-M.2 restates in "
      "counts the off-switch game's waiting with a rational human and Good's value of evidence (Hadfield-Menell, "
      "Dragan, Abbeel and Russell 2017; Good 1967): holding an act for the reading that stops where going on loses "
      "stands above both going on and switching off exactly where the formation's model gives positive weight to both "
      "strict signs of going on, and holding for any rule of stopping, forgoing an amount, stands at least as high as going on exactly "
-     "where the rule's shortfall and the amount are at most the weighted excess of switching off over going on ([03 "
+     "where the rule's shortfall and the amount together are at most the weighted excess of switching off over "
+     "going on ([03 "
      "§12](../chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth)). Read [AI reading], a formation sure of "
-     "the sign has no strict reason to be read, and one choosing so on a listing that misses the true sign can rest "
-     "without ever meeting the stop: related to Carey's (2018) counterexamples under misspecification, nearest to his "
+     "the sign has no strict reason to be read, and one holding exactly where holding for the reading gains over both "
+     "moves on its own model, on a listing that misses the true sign, can rest without ever meeting the stop: related "
+     "to Carey's (2018) counterexamples under misspecification, nearest to his "
      "model conflating two acts, whose predictions appear perfectly accurate on the observations it encodes and "
-     "which then ignores shutdown. The reading "
+     "which then takes the worse act, ignoring shutdown where the better act is shutting down. The reading "
      "formation's own state, a noisy reading and continuous beliefs are not represented.\n")
 edit(dossier, "the paragraph on RF's rounds in the box above, its clauses on deception and assistance games,",
      "the paragraph on RF's rounds in the box above, its clauses on deception, assistance games and corrigibility as "

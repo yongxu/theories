@@ -1,6 +1,6 @@
 ## {N}. What holding an act for a reading is worth (RF, round 2, RF-M.2)
 
-Board item RF, formations that read (识), round 2's second part, RF-M's assistance case ([plan](development/rf-formations-that-read/PLAN.md#47-round-2-second-part-an-act-held-for-a-reading-and-the-order-as-state)). The design was reviewed by an independent cross-model reader before any Lean ([REVIEW-RFM2](development/rf-formations-that-read/evidence/REVIEW-RFM2.md)); the module was then reviewed by the same reader and through three lenses, rebuilt for their findings and re-checked by that reader ([REVIEW-RFM2-LEAN](development/rf-formations-that-read/evidence/REVIEW-RFM2-LEAN.md)).
+Board item RF, formations that read (识), round 2's second part, RF-M's assistance case ([plan](development/rf-formations-that-read/PLAN.md#47-round-2-second-part-an-act-held-for-a-reading-and-the-valuation-as-state)). The design was reviewed by an independent cross-model reader before any Lean ([REVIEW-RFM2](development/rf-formations-that-read/evidence/REVIEW-RFM2.md)); the module was then reviewed by the same reader and through three lenses, rebuilt for their findings and re-checked by that reader ([REVIEW-RFM2-LEAN](development/rf-formations-that-read/evidence/REVIEW-RFM2-LEAN.md)); its texts were cold-read before the landing ([REVIEW-RFM2-COLDREAD](development/rf-formations-that-read/evidence/REVIEW-RFM2-COLDREAD.md)).
 
 ```text
 Result(s): what-holding-for-a-reading-is-worth (new, home 03 §12).
@@ -37,8 +37,8 @@ Delta:
     after_add_shortfall); with it, holding for the rule is going on with the excess of switching off, and switching
     off with the excess of going on (after_add_shortfall_go, after_add_shortfall_off).
   - What holding forgoes: holding for any rule, forgoing an amount counted in the units of the weighted totals,
-    stands at least as high as going on exactly where its shortfall and the amount are at most the excess of
-    switching off, above it exactly where they fall below it, and against switching off with the excess of going on
+    stands at least as high as going on exactly where its shortfall and the amount together are at most the
+    excess of switching off, above it exactly where together they fall below it, and against switching off with the excess of going on
     (across_le_iff, across_lt_iff, threshold_go_iff, threshold_off_iff); for the reading that tells the candidate,
     exactly where the amount is at most, or below, each excess (forgone_within_excess_iff,
     forgone_below_excess_iff), each excess positive exactly where its strict sign has positive weight
@@ -51,9 +51,9 @@ Delta:
     cond_least_le, least_through), nothing exactly where no listed cell holds both (cond_least_eq_zero_iff,
     least_zero_iff); through a finer map the least shortfall never increases (finer_least_le); and holding for some
     rule through the map, forgoing an amount, stands at least as high as both moves exactly where that least shortfall
-    and the amount are at most both excesses (through_threshold_iff).
-  - Joined to the shown reach (RF1, a conditional composition): picks of two alternatives valued one where a
-    candidate's decided comparisons rank them above the other (Pick, pairValue, pairPolicy, first_open, second_open,
+    and the amount together are at most both excesses (through_threshold_iff).
+  - Joined to the shown reach (RF1, a conditional composition): picks of two alternatives, each valued one where a
+    candidate's decided comparisons rank the alternative picked above the other (Pick, pairValue, pairPolicy, first_open, second_open,
     pairPolicy_best, first_below_iff, second_below_iff); within the shown reach, with every listed candidate of
     positive weight transitive and according with the choices, holding gains nothing (reach_fixes, through
     ChoiceOccasions.reach_within); where none of positive weight ranks each of the two above the other, holding gains
@@ -70,10 +70,11 @@ Delta:
     Loop.rests_of_unrefuted, never sensing the stop (rests_unread, never_senses_stop); holding first with the listing
     of gain alone, where going on loses, it senses the stop at the first step, which refutes its only candidate at the
     second, and with none kept goes on by the witness's default (refuted_senses_stop, refuted_drops, refuted_goes_on);
-    listing both signs it holds and is stopped or released as the sign is (both_stopped, both_released,
+    listing both signs and holding first, it is stopped or released as the sign is (both_stopped, both_released,
     both_turns_off, both_goes_on, both_off, both_on).
 Supplied premises / correspondence: none added beyond each theorem's own hypotheses (a policy best at every listed
-       candidate supplied, one existing for every nonempty list of acts; choice over the whole type of cells for a
+       candidate supplied, one existing for every nonempty list of acts, and the policies and acts compared open at
+       the listed candidates; choice over the whole type of cells for a
        policy through a map; equality of cells decidable, cells listed once each and covering for the cells' laws;
        transitive, according and one-way comparisons where the join asks them). Modelling choices: natural-number
        weights and values, read as probabilities only where valid; one valuation shared by the formation held and its
@@ -94,10 +95,10 @@ Standing: near-definitional compositions and general laws, none claimed new as m
        of a common act for each cell is the inquiry laws' (GuardHorizon.uniform_policy_iff_fiber_feasible, an
        application of the ring, and ReadingLoop.keeping_policy_iff); what is added is the weighted comparison, its
        identities, boundaries and thresholds, and the witness's choice shown to be the worth law's. Read [AI reading],
-       the threshold relates the model's openness, the reading's shortfall and what holding forgoes, as the off-switch
-       paper's Remark 1 does qualitatively, its Theorem 2 writing the incentive for a Gaussian belief and the counts
-       decomposing it differently; SignLoop is related to Carey's (2018) counterexamples, nearest to his conflating
-       model, whose predictions appear perfectly accurate on the observations it encodes, through a misspecified model
+       the model's openness less the reading's shortfall is the incentive the off-switch paper's Remark 1 places
+       qualitatively, its Theorem 2 writing it for a Gaussian belief and the counts decomposing it differently; the
+       threshold adds what holding forgoes, which the paper's game lacks; SignLoop is related to Carey's (2018)
+       counterexamples, nearest to his conflating model, whose predictions appear perfectly accurate on the observations it encodes, through a misspecified model
        the course never refutes, not a containment of them.
 Boundary:
   - The reading formation's own state and learning: in the counts the reading is a rule on the candidates, in the
@@ -109,16 +110,19 @@ Boundary:
   - That a formation computes by these counts: the values, weights, listing and the reading's cells are supplied,
     not formed; whether holding follows the model's two excesses is untested (no frozen test designed yet).
 Output → input: 03 §12, its opening, the acts-alike reading and the chapter's Open; 07 §7's paragraph on executable
-       change; 08 §8's known results; the overview's paragraph on the reading loop; the alignment dossier's scope box,
-       its round paragraph and its account of how it was made; the root module's bullets (ShownOrder and ReadingLoop
-       now imported); RF's plan (§4.7, §8's row, §12, §13 and Evidence); the records of RF1, of ReadingLoop's
-       untested model (its next step) and of acts alike from a model or from an order (related, its next step); the
-       board's RF row.
+       change; 08 §8's known results; a new paragraph of the overview after the one on the reading loop; the
+       alignment dossier's scope box, its round paragraph and its account of how it was made; the root module's
+       bullets (ReadingLoop now imported, ShownOrder's importers corrected), the package READMEs and the checker's
+       scope; regions.json; RF's plan (§4.7, §8's row, §12, §13 and Evidence); the records of RF1 (related), of what
+       a course chosen through its model does not test (related, its next step) and of acts alike from a model or
+       from an order (related, its next step); the board's RF row.
 ```
 
-{REVIEWS}
+**The reviews, and what was taken.** The design (plan §4.7) was read by the cross-model reader before any Lean: 22 findings, twelve implemented, eight deferred as specified (seven to RF-M.3's design, one to the institutional reading), one handed to its record's owner and one taken in part. The module as first built (56 theorems in 80 declarations) was reviewed on the Lean by the cross-model reader, fourteen findings, and through three lenses: exactness, seventeen findings, each judged by a verifier, fourteen real and three not; structure, twenty-four; and sources, fourteen, whose verifiers were stopped before they reported, so their literature points were checked against the papers' texts and their structure findings judged against the Lean by the session that wrote the module. Every finding was taken but two, taken in part (one shared addend lemma and `total_single`'s move to a shared totals dependency, each left for a board proposal), and one superseded: a best policy proved to exist for every nonempty list of acts; ties stated, a candidate where gain equals loss counting for neither; the cost an amount forgone, in the units of the weighted totals; the strict forms, the positivity of the two excesses and holding's tie with a move as laws; the shifted values' correspondence with the signed ones proved for every rule; the least shortfall never increasing through a finer map; the witness's steps stated whole; and the attributions brought to the papers' texts. The cross-model reader's re-check of the rebuilt module (89 theorems in 119 declarations) found no false Lean statement and twelve points, every one taken but one, in part: the asymmetry hypothesis dropped from `pair_gains_unreached`; the refuted witness's second step a theorem of its own (`SignLoop.refuted_drops`); Equation 3 read with Pr(U < 0) where Pr(U ≤ 0) is printed; Remark 1 qualitative and Theorem 2 its Gaussian form; and Carey's conflating model's accuracy relative to the observations it encodes. The module was rebuilt to 90 theorems in 120 declarations, every axiom report empty.
+
+**The cold read of the texts.** The texts (03 §12, its opening, its Reading, the pointer in the acts-alike reading and the Open bullet; 07 §7's sentence; 08's bullet; the overview's paragraph; the dossier's scope box, its round paragraph and its account of how it was made; the root bullets, both READMEs and the checker's scope; the module's header and docstrings; the record in both languages and its amendments; this section; RF's plan; regions; the board's texts; and the opening and tables of the Lean's review) were then cold-read against the Lean: by the cross-model reader, which found eight points, every one taken, and through three lenses (exactness, readings, fit), which found 78, each lens's findings judged by a separate reader, {CONF} confirmed and {REF} refuted. Every confirmed finding was taken, the module's prose included (its statements unchanged, rebuilt with every axiom report empty); {REFUTED}. Among them: each threshold bounds a sum, said as a sum wherever it read as two bounds; `held_gains_iff` stated of the reading that stops where the loss exceeds the gain, with both strict signs, not of any reading that stops or releases; the open acts of `after_add_gap` and the conditions of `reach_fixes` in every summary; the incentive of the off-switch paper's Remark 1 read as the model's openness less the reading's shortfall, that paper's game having no cost of waiting, and its remarks and theorems named as its own wherever Blackwell's or Good's paper came last; the witness's held start, where going on loses, in the plan, the record and the docstrings; Good's value of evidence only for the reading that stops by the formation's own values, his proviso relaxed for the two moves only; holding giving a strict reason to wait for another's reading only where the model leaves the sign open; the incentive readings labelled in 07, 08 and the dossier; `ShownOrder`'s importers named; one name, a principal's valuation as state, for the next item; and the stale rows of the Lean's review updated.
 
 **Self-review.**
-1. `HeldForReading` imports `ShownOrder` and `ReadingLoop`, both core modules, so it joins the core as a leaf at L1; neither is a leaf any longer.
-2. The totals reuse the package's `Flow` lemmas (`total_add`, `total_congr`, `total_le`, `total_pos`, `total_pos_of_mem`, `le_total_of_mem`, `total_swap`), `Population.total_congr_on`, `Dissipation.total_eq_zero` and the prelude's cancellation and subtraction lemmas; comparisons are decided by `Nat.decLt` and `Nat.decLe`, with no `omega` and no `simp`, and the witness's steps evaluate by `rfl`.
+1. `HeldForReading` imports `ShownOrder` and `ReadingLoop`, both core modules, so it joins the core as a leaf at L1, and `ReadingLoop` is no longer a leaf (`ShownOrder` was already imported by `ReadingLoop`, which its bullet in the root module now says).
+2. The totals reuse the package's `Flow` lemmas (`total_add`, `total_congr`, `total_le`, `total_pos`, `total_pos_of_mem`, `le_total_of_mem`, `total_swap`), `total_congr_on` (Population), `total_eq_zero` (Dissipation) and the prelude's cancellation and subtraction lemmas; comparisons are decided by `Nat.decLt` and `Nat.decLe`, with no `omega` and no `simp`, and the witness's steps evaluate by `rfl`.
 3. Not done: the items in Boundary, and RF-M.3, whose carrier is designed before its Lean.

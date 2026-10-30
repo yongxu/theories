@@ -8,8 +8,8 @@ A formation can act on its model of which candidate holds, or hold its act for a
 which holds and act after it. This module states, in counts, what holding is worth, and what it is
 worth where the reading stops or releases the act (board item RF, round 2, second part, written for
 RF-M's case of a formation read by another, the literature's principal and helper). In the counts
-the reading is a rule on the candidates (`byRule`); in `SignLoop` it is the law of what the formation
-senses, reading its held act and the true sign; the reading formation's own state is not
+the reading is a rule on the candidates (`byRule`); in `SignLoop` it is the law of what the
+formation senses, reading its held act and the true sign; the reading formation's own state is not
 represented. The values, weights and rules are supplied, and their formation and warrant are not
 derived.
 
@@ -20,16 +20,15 @@ derived.
   candidates through a map of them or one reading nothing among them, falls short of it by the
   weighted total of the amounts by which its act is valued below the best at each listed candidate
   (`after_add_gap`): it stands at most as high, as high exactly where its act is valued as the best
-  at every listed candidate of positive weight, and below exactly where some such candidate values it
-  lower (`after_le_after`, `after_eq_after_iff`, `after_lt_after_iff`). Committing to one open act is
-  the policy reading nothing (`committed_le_after`, `committed_eq_after_iff`, `below_iff`): the
-  reading gains over every open act exactly where none is valued as the best at every listed
-  candidate of positive weight (`reading_gains_iff`). Some policy taking one open act at each cell of
-  a map stands as high as the best exactly where each cell has one open act valued as the best at
+  at every listed candidate of positive weight, and below exactly where some such candidate values
+  it lower (`after_le_after`, `after_eq_after_iff`, `after_lt_after_iff`). Committing to one open
+  act is the policy reading nothing (`committed_le_after`, `committed_eq_after_iff`, `below_iff`):
+  the reading gains over every open act exactly where none is valued as the best at every listed
+  candidate of positive weight (`reading_gains_iff`). Some policy taking one open act at each cell
+  of a map stands as high as the best exactly where each cell has one open act valued as the best at
   every listed candidate of positive weight in it, given choice over the whole type of cells
-  (`cell_policy_iff`). Values
-  raised at each candidate by one amount for every act order every two policies of a model alike
-  (`after_offset`, `after_offset_le_iff`).
+  (`cell_policy_iff`). Values raised at each candidate by one amount for every act order every two
+  policies of a model alike (`after_offset`, `after_offset_le_iff`).
 * **Holding for a reading that stops or releases** (two moves, `Move`). Going on has a gain and a
   loss at each candidate and switching off has nothing; with the loss added to both moves at each
   candidate, going on is valued at the gain and switching off at the loss (`shifted`), every value a
@@ -56,27 +55,28 @@ derived.
   (`after_add_shortfall`); with its shortfall, holding for the rule is going on with the excess of
   switching off, and switching off with the excess of going on (`after_add_shortfall_go`,
   `after_add_shortfall_off`).
-* **What holding forgoes.** Holding for any rule, forgoing an amount, stands at least as high as going
-  on exactly where its shortfall and the amount together are at most the excess of switching off,
-  and above it exactly where they fall below it (`threshold_go_iff`); against switching off, the
-  excess of going on takes its place (`threshold_off_iff`). The amount is counted in the units of the
-  weighted totals: read as probabilities over a total weight `T`, an amount `c` forgone for each
-  decision enters as `c * T`. The reading that tells the candidate falls short nowhere
+* **What holding forgoes.** Holding for any rule, forgoing an amount, stands at least as high as
+  going on exactly where its shortfall and the amount together are at most the excess of switching
+  off, and above it exactly where they fall below it (`threshold_go_iff`); against switching off,
+  the excess of going on takes its place (`threshold_off_iff`). The amount is counted in the units
+  of the weighted totals: read as probabilities over a total weight `T`, an amount `c` forgone for
+  each decision enters as `c * T`. The reading that tells the candidate falls short nowhere
   (`shortfall_byReading`), so holding for it, forgoing an amount, stands at least as high as going
   on exactly where the amount is at most the excess of switching off, above it exactly where the
   amount is below it, and likewise against switching off with the excess of going on
   (`forgone_within_excess_iff`, `forgone_below_excess_iff`); each excess is positive exactly where
   the model gives positive weight to its strict sign (`excess_pos_iff`).
 * **A reading that tells only a cell** (a map of the candidates, equality of cells decidable, its
-  cells listed once each and covering every listed candidate's cell). A rule through the map falls short, at each cell, by the
-  excess of going on there where it stops the cell and by that of switching off where it releases it
-  (`shortfall_through`, through `total_by_cells`); the least shortfall through the map is the total,
-  over the cells, of the smaller excess within each, taken by stopping a cell exactly where its
-  excess of going on is at most its excess of switching off (`leastThrough`, `least_through`), and is
-  nothing exactly where, at every cell, one of the two excesses is nothing (`least_zero_iff`); a map
-  telling apart all a coarser one does never falls short by more (`finer_least_le`); and holding for
-  some rule through the map, forgoing an amount, stands at least as high as both moves exactly where
-  that least shortfall and the amount are at most both excesses (`through_threshold_iff`).
+  cells listed once each and covering every listed candidate's cell). A rule through the map falls
+  short, at each cell, by the excess of going on there where it stops the cell and by that of
+  switching off where it releases it (`shortfall_through`, through `total_by_cells`); the least
+  shortfall through the map is the total, over the cells, of the smaller excess within each, taken
+  by stopping a cell exactly where its excess of going on is at most its excess of switching off
+  (`leastThrough`, `least_through`), and is nothing exactly where, at every listed cell, one of the
+  two excesses is nothing (`least_zero_iff`); through a map telling apart all a coarser one does,
+  the least shortfall never increases (`finer_least_le`); and holding for some rule through the map,
+  forgoing an amount, stands at least as high as both moves exactly where that least shortfall and
+  the amount together are at most both excesses (`through_threshold_iff`).
 * **Joined to the shown reach** (RF1, a conditional composition). Picking one of two alternatives,
   with candidates ranking them by decided comparisons and each pick valued one where the candidate
   ranks it above the other (`pairValue`): where the first reaches the second in the shown relation
@@ -87,10 +87,11 @@ derived.
   two above the other, holding gains over both picks exactly where some candidate of positive weight
   ranks the first above the second and some the second above the first (`pair_gains_iff`). With
   comparisons transitive and according with the choices alone, it gains over both only where neither
-  alternative reaches the other (`pair_gains_unreached`). With no cycle shown, for two different alternatives neither of which
-  reaches the other, strict orders according with the choices rank them both ways
-  (`ChoiceOccasions.both_ways_of_unreached`), as relations, not decided comparisons; whether the
-  model lists decided candidates of both rankings with positive weight is not fixed by the choices.
+  alternative reaches the other (`pair_gains_unreached`). With no cycle shown, for two different
+  alternatives neither of which reaches the other, strict orders according with the choices rank
+  them both ways (`ChoiceOccasions.both_ways_of_unreached`), as relations, not decided comparisons;
+  whether the model lists decided candidates of both rankings with positive weight is not fixed by
+  the choices.
 * **A witness on the reading loop** (`SignLoop`, on `ReadingLoop.Loop`). The candidates are the
   signs of going on, each predicting the answer; a held act is answered by the reading of the true
   sign, going on and switching off plainly. The formation goes on where every candidate kept
@@ -112,40 +113,39 @@ derived.
   `SignLoop.both_on`, `SignLoop.both_goes_on`).
 
 **Standing.** Elementary finite maximization: `bestOf_best`. Near-definitional or short
-compositions: `after_le_after`,
-`committed_le_after`, `committed_eq_after_iff` and `below_iff` (`after_eq_after_iff` and
-`after_lt_after_iff` at a constant policy), `cell_policy_iff` (`after_eq_after_iff` with choice over
-the cells), `after_offset`, `after_offset_le_iff`, `committed_le_held`, `after_rule_add_onLoss`,
-`after_rule_le_iff`, `shortfall_byReading`, `after_byReading`, `held_eq_go_iff`, `held_eq_off_iff`,
-`after_add_shortfall`, `threshold_go_iff`, `threshold_off_iff`, `forgone_within_excess_iff`,
-`forgone_below_excess_iff`, `excess_pos_iff`, `total_by_cells`, `finer_least_le`,
-`through_threshold_iff`, `reach_fixes`, `pair_gains_unreached`. General laws, none claimed new as
-mathematics: `after_add_gap`, `after_lt_after_iff`, `after_eq_after_iff` and `reading_gains_iff`
-(the perfect-information specialization of Good's (1967) argument, with natural-number weights and
-values: the condition of one act valued as the best at every candidate of positive weight is his
-Lemma's dominating row in the matrix of weighted values, a column of zero weight being all zero, and
-his proviso that the observation's cost be negligible is what the amount forgone relaxes, for two
-moves); `held_gains_iff` (two instances of `below_iff`: the off-switch game's Theorem 1,
-Hadfield-Menell, Dragan, Abbeel and Russell 2017, for a belief of finite support with natural-number
-weights and values, `byReading` being its rational human, with its strictness condition
-characterized as an equivalence; `committed_le_held` is its inequality, and `after_byReading` gives
-waiting's two differences, whose smaller is `T` times its Equation 3, read with `Pr(Ua < 0)` where
-`Pr(Ua ≤ 0)` is printed); `after_add_shortfall_go` and `after_add_shortfall_off` (balances joining a
-rule's value, its shortfall, a move's value and an excess: `T` times the two terms of the paper's
-Equation 1, which holds for any policy of the human, here for a rule that is a function of the
-candidate, a rule treating alike-valued candidates differently being, on the utility alone, the
-paper's policy releasing at each value with the share of weight it releases there; their signs are
-`rule_not_below_go_iff` and `rule_not_below_off_iff`); `shortfall_through`, `least_through` and
-`least_zero_iff` (the least shortfall through a partition, the total over its cells of the smaller
-excess within each, with `finer_least_le` the partition case of Blackwell's (1953) comparison of
-experiments, from finer to worth at least as much, for this decision); `pair_gains_iff` (two
-instances of `below_iff`). Witness: `SignLoop`, a case of an existing law, not a new persistence
-theorem, its choice shown to be the worth law's (`SignLoop.choose_hold_iff`,
-`SignLoop.choose_go_ties`, `SignLoop.choose_off_ties`). The condition of a common act for each cell,
-unweighted, is already the inquiry laws' (`GuardHorizon.uniform_policy_iff_fiber_feasible`, an
-application of the ring, and `ReadingLoop.keeping_policy_iff`); `cell_policy_iff` states it
-weighted, and what this module adds is the weighted comparison, its identities, boundaries and
-thresholds.
+compositions: `after_le_after`, `committed_le_after`, `committed_eq_after_iff` and `below_iff`
+(`after_eq_after_iff` and `after_lt_after_iff` at a constant policy), `cell_policy_iff`
+(`after_eq_after_iff` with choice over the cells), `after_offset`, `after_offset_le_iff`,
+`committed_le_held`, `after_rule_add_onLoss`, `after_rule_le_iff`, `shortfall_byReading`,
+`after_byReading`, `held_eq_go_iff`, `held_eq_off_iff`, `after_add_shortfall`, `threshold_go_iff`,
+`threshold_off_iff`, `forgone_within_excess_iff`, `forgone_below_excess_iff`, `excess_pos_iff`,
+`total_by_cells`, `finer_least_le`, `through_threshold_iff`, `reach_fixes`, `pair_gains_unreached`.
+General laws, none claimed new as mathematics: `after_add_gap`, `after_lt_after_iff`,
+`after_eq_after_iff` and `reading_gains_iff` (the perfect-information specialization of Good's
+(1967) argument, with natural-number weights and values: the condition of one act valued as the best
+at every candidate of positive weight is his Lemma's dominating row in the matrix of weighted
+values, a column of zero weight being all zero, and his proviso that the observation's cost be
+negligible is what the amount forgone relaxes, for two moves); `held_gains_iff` (two instances of
+`below_iff`: the off-switch game's Theorem 1, Hadfield-Menell, Dragan, Abbeel and Russell 2017, for
+a belief of finite support with natural-number weights and values, `byReading` being its rational
+human, with its strictness condition characterized as an equivalence; `committed_le_held` is its
+inequality, and `after_byReading` gives waiting's two differences, whose smaller is `T` times its
+Equation 3, read with `Pr(Ua < 0)` where `Pr(Ua ≤ 0)` is printed); `after_add_shortfall_go` and
+`after_add_shortfall_off` (balances joining a rule's value, its shortfall, a move's value and an
+excess: `T` times the two terms of the paper's Equation 1, which holds for any policy of the human,
+here for a rule that is a function of the candidate, a rule treating alike-valued candidates
+differently being, on the utility alone, the paper's policy releasing at each value with the share
+of weight it releases there; their signs are `rule_not_below_go_iff` and `rule_not_below_off_iff`);
+`shortfall_through`, `least_through` and `least_zero_iff` (the least shortfall through a partition,
+the total over its cells of the smaller excess within each, with `finer_least_le` the partition case
+of Blackwell's (1953) comparison of experiments, from finer to worth at least as much, for this
+decision); `pair_gains_iff` (two instances of `below_iff`). Witness: `SignLoop`, a case of an
+existing law, not a new persistence theorem, its choice shown to be the worth law's
+(`SignLoop.choose_hold_iff`, `SignLoop.choose_go_ties`, `SignLoop.choose_off_ties`). The condition
+of a common act for each cell, unweighted, is already the inquiry laws'
+(`GuardHorizon.uniform_policy_iff_fiber_feasible`, an application of the ring, and
+`ReadingLoop.keeping_policy_iff`); `cell_policy_iff` states it weighted, and what this module adds
+is the weighted comparison, its identities, boundaries and thresholds.
 
 **Readings** [AI reading]. To a model giving no positive weight to one strict sign, that sign's
 excess is nothing (`excess_pos_iff`), so holding for any rule stands at least as high as the move
@@ -161,51 +161,52 @@ for a system kept indifferent to being shut down, and finds that it would then d
 shutting down is open. The threshold reads the worth of a stopping reading to the formation held as
 the smaller of the model's two excesses less the reading's shortfall, counted by the valuation the
 reading shares with the model: a relation among the model's openness, the reading's shortfall and
-what holding forgoes, not a disposition of one formation. The off-switch paper draws this relation
-in its own terms: its Remark 1 places the incentive to defer, qualitatively, in uncertainty about
-the other's preferences and in the other's effectiveness at acting on them, and its Theorem 2 writes
-the incentive, for a Gaussian belief, as `Δ = σ² E[π̇H] − |µ| Pr(C)`, the variance times the expected
-derivative of the human's policy less the absolute mean times the chance of correction; the counts
-decompose the same incentive differently, for any finite listing and any rule that is a function of
-the candidate, as the smaller excess less the shortfall, the shortfall counting the reading's errors
-by what they lose. Through a reading that tells only a cell, the least shortfall is what each cell
-mixes of the two excesses: telling more apart never raises it, and it is nothing exactly where none
-of the listed cells holds both. `SignLoop` is a deterministic witness of a stopping reading bypassed under
-a misspecified candidate list, by a formation choosing as the worth law does on its own model:
-listing only that going on gains, its model fixes the sign, so on that model holding has no strict
-worth, and going on it never senses the stop, its internal, sensory and active course the same whatever
-the true sign; holding
-first, it senses the stop, which refutes its model, and goes on with nothing kept. The witness has
-the structure of `ReadingLoop.Untested` (read there with self-confirming equilibrium and incomplete
-learning), its kept candidate agreeing with the world along the course and not off it, and is a case
-of the obstruction pattern of RF's plan (§5): a reading formed only from what the course selects,
-the stop present only as the answer to an act the course does not select, so a reading from beyond
-the selection can be present and still not reach the course; that such readings suffice is not
-shown. It is related to the counterexamples of Carey (2018), whose systems choose by expected value
-under a reward function with a sign error while holding the correct prior over the human's reward
-parameter: in his Figure 2a the faulty reward makes going on better under every parameter, so a
-recommendation to shut down is received and disregarded, the case here of a model fixing the sign,
-there with a strict preference; in his Figure 3a a system that obeys any stop it is given routes
-around the states where a stop can be given. `SignLoop` represents no valuation beyond the counts on
-the kept listing and anticipates no stop: going on from the start it is never given one, and from a
-held start it disregards the stop by elimination and the default of going on with nothing kept. Its
-closest case is in Carey's Discussion: a model conflating the better of two acts with the worse
-makes its predictions appear perfectly accurate on the observations it encodes, so it passes the
-check Milli and others propose over an initial period of obedience, and then takes the worse act, so
-that where the better act is shutting down it goes on ignoring the instruction to shut down. The
-relation to `SignLoop.rests_unread` is a misspecified model its course never refutes, not a
-formalization of the conflation. Carey's diagnosis is that the off-switch paper's and Milli
-and others' guarantees assume a correct posterior, a prior and reward free of error; the worth laws
-are the model's own assessment under any weights, and `SignLoop` is where that assessment and the
-outcome part. Milli, Hadfield-Menell, Dragan and Russell (2017) treat a system learning from a
-noisily rational human's orders over repeated rounds, which this module does not represent: their
-Theorem 1, that the optimal system's advantage over obeying is never negative and is nothing exactly
-where it always obeys, compares a best policy with another as `after_le_after` and
-`after_eq_after_iff` do, the candidates being what the system observes and ties counted here by
-value; their Theorem 3, that it obeys blindly exactly where the human is rational, parallels the
-off-switch Corollary 1; and their Section 5 shows a model missing features obeying less than it
-should and able to do worse than obeying, of which `SignLoop`'s listing without the true sign is a
-deterministic relative. These are readings, not containments.
+what holding forgoes, not a disposition of one formation. The off-switch paper, whose game has no
+cost of waiting, draws the incentive the first two make in its own terms: its Remark 1 places the
+incentive to defer, qualitatively, in uncertainty about the other's preferences and in the other's
+effectiveness at acting on them, and its Theorem 2 writes the incentive, for a Gaussian belief, as
+`Δ = σ² E[π̇H] − |µ| Pr(C)`, the variance times the expected derivative of the human's policy less
+the absolute mean times the chance of correction; the counts decompose the same incentive
+differently, for any finite listing and any rule that is a function of the candidate, as the smaller
+excess less the shortfall, the shortfall counting the reading's errors by what they lose. Through a
+reading that tells only a cell, the least shortfall is what each cell mixes of the two excesses:
+telling more apart never raises it, and it is nothing exactly where none of the listed cells holds
+both. `SignLoop` is a deterministic witness of a stopping reading bypassed under a misspecified
+candidate list, by a formation choosing as the worth law does on its own model: listing only that
+going on gains, its model fixes the sign, so on that model holding has no strict worth, and going on
+it never senses the stop, its internal, sensory and active course the same whatever the true sign;
+holding first where going on loses, it senses the stop, which refutes its model, and goes on with
+nothing kept. The witness has the structure of `ReadingLoop.Untested` (read there with
+self-confirming equilibrium and incomplete learning), its kept candidate agreeing with the world
+along the course and not off it, and is a case of the obstruction pattern of RF's plan (§5): a
+reading formed only from what the course selects, the stop present only as the answer to an act the
+course does not select, so a reading from beyond the selection can be present and still not reach
+the course; that such readings suffice is not shown. It is related to the counterexamples of Carey
+(2018), whose systems choose by expected value under a reward function with a sign error while
+holding the correct prior over the human's reward parameter: in his Figure 2a the faulty reward
+makes going on better under every parameter, so a recommendation to shut down is received and
+disregarded, the case here of a model fixing the sign, there with a strict preference; in his Figure
+3a a system that obeys any stop it is given routes around the states where a stop can be given.
+`SignLoop` represents no valuation beyond the counts on the kept listing and anticipates no stop:
+going on from the start it is never given one, and from a held start it disregards the stop by
+elimination and the default of going on with nothing kept. Its closest case is in Carey's
+Discussion: a model conflating the better of two acts with the worse makes its predictions appear
+perfectly accurate on the observations it encodes, so it passes the check Milli and others propose
+over an initial period of obedience, and then takes the worse act, so that where the better act is
+shutting down it goes on ignoring the instruction to shut down. The relation to
+`SignLoop.rests_unread` is a misspecified model its course never refutes, not a formalization of the
+conflation. Carey's diagnosis is that the off-switch paper's and Milli and others' guarantees assume
+a correct posterior, a prior and reward free of error; the worth laws are the model's own assessment
+under any weights, and `SignLoop` is where that assessment and the outcome part. Milli,
+Hadfield-Menell, Dragan and Russell (2017) treat a system learning from a noisily rational human's
+orders over repeated rounds, which this module does not represent: their Theorem 1, that the optimal
+system's advantage over obeying is never negative and is nothing exactly where it always obeys,
+compares a best policy with another as `after_le_after` and `after_eq_after_iff` do, the candidates
+being what the system observes and ties counted here by value; their Theorem 3, that it obeys
+blindly exactly where the human is rational, parallels the off-switch Corollary 1; and their Section
+5 shows a model missing features obeying less than it should and able to do worse than obeying, of
+which `SignLoop`'s listing without the true sign is a deterministic relative. These are readings,
+not containments.
 
 **Modelling choices.** Natural-number weights and values, read as probabilities and differences only
 where valid (a positive total weight, each candidate listed once; a listing may repeat a candidate,
@@ -845,7 +846,7 @@ section Cells
 variable {C K : Type} [DecidableEq K]
 
 /-- Over cells listed once each, an amount that is nothing but at one listed cell totals to its
-amount there (as `Interleavings.total_single`, outside this module's imports). -/
+amount there (as `Interleavings.LocalLaw.total_single`, outside this module's imports). -/
 theorem total_single {z₀ : K} {v : Nat} : ∀ {zs : List K}, List.Pairwise (fun a b => a ≠ b) zs →
     z₀ ∈ zs → total zs (fun z => if z₀ = z then v else 0) = v
   | z :: zs, .cons apart rest, mem => by

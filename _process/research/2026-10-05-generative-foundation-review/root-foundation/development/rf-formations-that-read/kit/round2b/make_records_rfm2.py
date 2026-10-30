@@ -26,7 +26,8 @@ RFD = '_process/research/2026-10-05-generative-foundation-review/root-foundation
 STUDY = RFD + 'BECOMING-RENEWAL-READING.md'
 KITD = RFD + 'development/rf-formations-that-read/'
 PLAN = KITD + 'PLAN.md'
-REVIEWS = (KITD + 'evidence/REVIEW-RFM2.md', KITD + 'evidence/REVIEW-RFM2-LEAN.md')
+REVIEWS = (KITD + 'evidence/REVIEW-RFM2.md', KITD + 'evidence/REVIEW-RFM2-LEAN.md',
+           KITD + 'evidence/REVIEW-RFM2-COLDREAD.md')
 CH3 = 'theories/becoming/chapters/03-KNOWING.md'
 LEAN = {m: f'{PKG}/Becoming/{m}.lean' for m in ('HeldForReading', 'ShownOrder', 'ReadingLoop', 'Keeping', 'Flow',
                                                  'Population', 'Dissipation', 'Prelude')}
@@ -159,7 +160,7 @@ rW = build(
     {'en': 'What holding an act for a reading is worth', 'zh': '为读而持其行之值'},
     {'en': "Choosing best after a reading telling the candidate gains over every open act exactly where none is valued "
            "best at every listed candidate of positive weight; holding for a stopping rule, forgoing an amount, is not "
-           "below going on exactly where shortfall and amount are within switching off's excess.",
+           "below going on exactly where shortfall plus amount is within switching off's excess.",
      'zh': '经辨候选之读而择最优，恰当无一可取之行于每一正权之列候选皆值同最优时胜于每一可取之行；为止之规则而持、舍一量，不低于续，恰当其所缺与此量合不逾止之余。'},
     [("A model lists candidates with natural-number weights; committing to one act and choosing after a reading that "
       "tells the candidate are the weighted totals of the act's values and of a policy's; a policy is best at a "
@@ -246,7 +247,7 @@ rW = build(
      ("The least shortfall through the map, stopping a cell exactly where its excess of going on is at most that of "
       "switching off, totals the smaller excess within each cell, is nothing exactly where no listed cell holds "
       "both and never increases through a finer map; holding for some rule through it, forgoing an amount, is no "
-      "lower than both moves exactly where that least shortfall and the amount are within both excesses.",
+      "lower than both moves exactly where that least shortfall plus the amount is within both excesses.",
       '经映射之最少所缺：于格内续之余不逾止之余处止其格，为诸格较小之余之总，恰当无列格兼有二者时为零；经更细之映射，最少所缺永不增；为经映射之某规则而持、舍一量，不低于二行，恰当此最少所缺与此量合不逾二余。',
       hf('leastThrough', 'cond_least_le', 'least_through', 'cond_least_eq_zero_iff', 'least_zero_iff',
          'finer_least_le', 'through_threshold_iff')),
@@ -281,11 +282,11 @@ rW = build(
       "fourth.",
       '兼列二号而先持：续而损处，第一步感止，自第二步唯留真号而止，自第四步构型恒定；续而得处，感放，自第二步唯留真号而续，自第四步恒定。',
       sl('both_stopped', 'both_released', 'both_turns_off', 'both_goes_on', 'both_off', 'both_on')),
-     ("The formation's choice is the worth law's on its model: with each kept candidate weighted one and going on "
-      "valued one where it gains and nothing where it loses, it holds exactly where its kept candidates hold both "
-      "signs, which is exactly where holding for the reading gains over both moves; elsewhere it takes the move they "
-      "agree on, going on where none is kept, and holding stands as high as that move and no higher.",
-      '形成之择即其模型上值之律之择：每留候选权一，续得处值一、损处值零，则恰当所留候选兼有二号时持之，此恰为为读而持胜于二行处；余处取其所共之行，无所留则续，持与此行等高而不更高。',
+     ("The formation's choice is the worth law's on its model: with each kept candidate weighted one, the gain one "
+      "where going on gains, the loss one where it loses, else nothing, it holds exactly where its kept candidates "
+      "hold both signs, which is exactly where holding for the reading gains over both moves; elsewhere it takes the "
+      "move they agree on, going on where none is kept, and holding stands only as high as that move.",
+      '形成之择即其模型上值之律之择：每留候选权一，得于续得处为一、损于续损处为一，余皆为零，则恰当所留候选兼有二号时持之，此恰为为读而持胜于二行处；余处取其所共之行，无所留则续，持与此行等高而不更高。',
       sl('model', 'gainOf', 'lossOf', 'loses_of_all_false', 'not_loses_of_all_true', 'gains_of_all_false',
          'not_gains_of_all_true', 'choose_hold_iff_mem', 'loses_of_lt', 'gains_of_lt', 'choose_hold_iff',
          'offExcess_of_all_true', 'goExcess_of_all_not', 'choose_go_ties', 'choose_off_ties'))],
@@ -294,11 +295,12 @@ rW = build(
             "its weight); the amount forgone counted in the units of the weighted totals, an amount c forgone for each "
             "decision entering as c times the total weight.",
       'zh': '权与值为自然数，唯于有效处读为概率与差：总权为正，每候选列一次（一列可重列一候选，每次计其权）；所舍之量以加权之总为单位，每次抉择所舍之量 c 以 c 乘总权计入。'},
-     {'en': "A policy best at every listed candidate supplied, one existing for every nonempty list of acts; for a "
+     {'en': "A policy best at every listed candidate supplied, one existing for every nonempty list of acts, and the "
+            "policies and acts compared open at the listed candidates; for a "
             "policy through a map, choice over the whole type of cells (Viability.choiceOver_fin supplies it for Fin "
             "k); for the cells' laws, equality of cells decidable, cells listed once each and covering every listed "
             "candidate's cell.",
-      'zh': '所予一于每列候选皆最优之策，凡非空之行列皆有之；经映射之策需于格之全类有择（Viability.choiceOver_fin 于 Fin k 予之）；格之诸律需格之等可判，诸格各列一次且覆每列候选之格。'},
+      'zh': '所予一于每列候选皆最优之策，凡非空之行列皆有之，所比之策与行于列候选皆可取；经映射之策需于格之全类有择（Viability.choiceOver_fin 于 Fin k 予之）；格之诸律需格之等可判，诸格各列一次且覆每列候选之格。'},
      {'en': "The reading that tells the candidate stops by the very gain and loss the model values with, one valuation "
             "shared by the formation held and its reading, as in the off-switch game's common payoff; a reading "
             "stopping by other values enters as a rule, its shortfall counted by these; rules are functions of the "
@@ -339,28 +341,30 @@ rW = build(
            "lemmas, comparisons decided by Nat.decLt and Nat.decLe, with no omega and no simp; the witness steps "
            "evaluate by rfl.",
      'zh': '纯核，公理报告皆空：引 ShownOrder，为 ChoiceOccasions.reach_within；引 ReadingLoop，为 Loop 与 Loop.rests_of_unrefuted，并经之引 Viability.ChoiceOver；诸总用 Flow、Population 与 Dissipation 之引理及前导之消去与减法引理，比较以 Nat.decLt 与 Nat.decLe 判之，不用 omega 与 simp；例之步以 rfl 算。'},
-    {'en': "A principal's valuation as state the helper's acts can move, its carrier designed first (RF-M's next case); "
+    {'en': "A principal's valuation as state the helper's acts can move, its carrier to be designed first (RF-M's next case); "
            "the reading formation's own state and learning; noisy readings and continuous beliefs in the periphery; a "
            "frozen test of whether holding follows the model's two excesses; review by a person.",
      'zh': '受助者之值为助者之行可移之态，先设其载体（RF-M 之下一情形）；读之形成己之态与学；有噪之读与连续之信于外围；持是否随模型之二余之冻结检验；人之审查。'},
     {'en': "In counts: the worth of a reading telling the candidate is the perfect-information case of Good's (1967) "
-           "argument, his Lemma's dominating row its equality boundary; holding for that reading is the off-switch "
-           "game's waiting with a rational human (Hadfield-Menell and others 2017): its Theorem 1 for a belief of "
-           "finite support; waiting's two differences, T E[U⁺] and T E[(−U)⁺] with T the total weight, are T times "
+           "argument, his Lemma's dominating row its equality boundary; holding for it is the off-switch "
+           "game's waiting with a rational human (Hadfield-Menell et al. 2017): its Theorem 1 for a belief of "
+           "finite support; waiting's two differences T E[U⁺] and T E[(−U)⁺], T the total weight, are T times "
            "its Equation 3's terms read with Pr(U < 0) where Pr(U ≤ 0) is printed; for a rule that is a function of "
-           "the candidate, T times its Equation 1's two terms are balances; the least shortfall through a partition "
-           "is the partition case of Blackwell's (1953) comparison. AI reading: the threshold relates the model's "
-           "openness, the reading's shortfall and what holding forgoes, as the paper's Remark 1 does qualitatively; "
-           "its Theorem 2, Δ = σ²E[π̇H] − |µ|Pr(C), is the Gaussian form, the counts decomposing it differently. "
+           "the candidate, T times its Equation 1's terms are balances; a finer partition never raising the least "
+           "shortfall is, for this decision, Blackwell's (1953) partition case. AI reading: openness "
+           "less shortfall is the incentive the off-switch paper's Remark 1 places qualitatively, its Theorem 2, Δ = "
+           "σ²E[π̇H] − |µ|Pr(C), the Gaussian form, decomposed otherwise; its game has no cost of waiting, what "
+           "holding forgoes relaxing Good's proviso. "
            "SignLoop is nearest to Carey's (2018) conflating model, whose predictions look perfectly accurate on its "
-           "encoded observations and which ignores shutdown: related by a misspecified model never refuted, not "
+           "encoded observations and which may ignore shutdown: related by a misspecified model never refuted, not "
            "formalizing the conflation. Readings, not containments.",
-     'zh': '以计：辨候选之读之值即 Good（1967）论证之完全信息之例，其引理之支配行为其等号之界；为此读而持即关机博弈中理性之人在侧之等待（Hadfield-Menell 等 2017）：其定理一，信之支撑有限；等待之二差 T E[U⁺] 与 T E[(−U)⁺]（T 为总权）为其式三之项乘 T，负事件之概率读为 Pr(U < 0)（原印为 Pr(U ≤ 0)）；规则为候选之函数时，其式一之二项乘 T 为平衡；经分割之最少所缺即 Blackwell（1953）比较之分割之例。AI 解读：其界关联模型之开放、读之所缺与持之所舍，如该文之注一定性所为；其定理二 Δ = σ²E[π̇H] − |µ|Pr(C) 为高斯之形，诸计以异式分解之。SignLoop 最近于 Carey（2018）混同二行之模型：其预测于所编之观察上似全然无误，而不从关机；二者相关于永不被驳之误设模型，非形式化其混同。皆为读，非包含。'},
+     'zh': '以计：辨候选之读之值即 Good（1967）论证之完全信息之例，其引理之支配行为其等号之界；为此读而持即关机博弈中理性之人在侧之等待（Hadfield-Menell 等 2017）：其定理一，信之支撑有限；等待之二差 T E[U⁺] 与 T E[(−U)⁺]（T 为总权）为其式三之项乘 T，负事件之概率读为 Pr(U < 0)（原印为 Pr(U ≤ 0)）；规则为候选之函数时，其式一之二项乘 T 为平衡；分割愈细，最少所缺不增，于此抉择即 Blackwell（1953）比较之分割之例。AI 解读：开放减所缺，即关机博弈一文之注一定性所言之诱因，其定理二 Δ = σ²E[π̇H] − |µ|Pr(C) 为高斯之形，诸计以异式分解之；其博弈无等待之费，持之所舍乃放宽 Good 之但书。SignLoop 最近于 Carey（2018）混同二行之模型：其预测于所编之观察上似全然无误，而可不从关机；二者相关于永不被驳之误设模型，非形式化其混同。皆为读，非包含。'},
     ['what holding an act for a reading is worth', '为读而持其行之值', 'the worth of a reading in counts', '读之值之计',
      'the off-switch game', '关机博弈', 'Becoming.HeldForReading.held_gains_iff',
      'Becoming.HeldForReading.threshold_go_iff'],
     [dep('what-choices-show-of-an-order', "ChoiceOccasions.reach_within: comparisons transitive and according with the "
-         "choices rank as the shown reach does.", 'ChoiceOccasions.reach_within：传递且合于所择之较，依所示之及而排。'),
+         "choices contain the shown reach, ranking one alternative above another wherever it reaches the other.",
+         'ChoiceOccasions.reach_within：传递且合于所择之较含所示之及，一者及他者处必排其于上。'),
      dep('what-a-course-chosen-through-its-model-does-not-test', "ReadingLoop.Loop and Loop.rests_of_unrefuted: the "
          "reading loop of the witness and its law of resting on candidates its course never refutes.",
          'ReadingLoop.Loop 与 Loop.rests_of_unrefuted：此例之读环，及其恒于历程永不驳之候选之律。'),
@@ -424,14 +428,14 @@ AMEND = {
                            '律内之告：所持之行以真号之读答之，驳预之异者之候选，此处之告则改其始；彼处读之形成己之态未表。'),
             'next_delta': ("A helper's act within the law that informs, and a principal's order as state the helper's "
                            "acts can move (RF round 2's later items)",
-                           "The reading formation's own state within the law that informs, and a principal's order as "
-                           "state the helper's acts can move (RF round 2's later item)",
+                           "The reading formation's own state and learning, and a principal's valuation as state the "
+                           "helper's acts can move (RF round 2's later items)",
                            '律内能告之助者之行，与助者之行可移之受助者之序为态（RF 第二轮之后项）',
-                           '律内能告者己之态，与助者之行可移之受助者之序为态（RF 第二轮之后项）'),
+                           '读之形成己之态与学，与助者之行可移之受助者之值为态（RF 第二轮之后项）'),
             'history': ("related to what-holding-for-a-reading-is-worth, where a held act is answered within the law; "
-                        "the next step keeps the reading formation's own state and the principal's order as state; no "
+                        "the next step keeps the reading formation's own state and the principal's valuation as state; no "
                         "statement or declaration changed.",
-                        '与 what-holding-for-a-reading-is-worth 相关联，所持之行于彼于律内得答；下一步留读之形成己之态与主者之序为态；无一陈述或声明改变。')},
+                        '与 what-holding-for-a-reading-is-worth 相关联，所持之行于彼于律内得答；下一步留读之形成己之态与受助者之值为态；无一陈述或声明改变。')},
 }
 for rid, amend in AMEND.items():
     path = RECORDS / f'{rid}.json'

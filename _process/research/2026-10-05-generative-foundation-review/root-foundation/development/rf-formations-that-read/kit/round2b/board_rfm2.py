@@ -5,7 +5,7 @@ the landing of RF-M.2's design, reviews and kit without its Lean, brings the sta
 drops RF's head-of-queue clause and puts QUEUE at the head of the queue note; `land BOARD RECEIPT N QUEUE STATE` sets
 the RF row's state cell to STATE, brings the statements cell to RF-M.2's landing (its sentence, the designed cases, the
 review sentence), drops RF's head-of-queue clause, puts QUEUE at the head of the queue note and names the receipt as
-the latest. BOARD is the path of the board file to edit (in the landing worktree, or a copy of main's for a commit made
+the latest, and records the rule-9 decision taken with RR. BOARD is the path of the board file to edit (in the landing worktree, or a copy of main's for a commit made
 without a working tree).
 usage: python3 -B board_rfm2.py head BOARD TEXT | docs BOARD QUEUE | land BOARD RECEIPT N QUEUE STATE"""
 import datetime
@@ -31,15 +31,20 @@ if mode == 'head':
 elif mode == 'docs':
     assert 'RF-M.2' not in cells[2], 'the docs landing is already in the state cell'
     designed = "Designed: RF-M's helper, preference and institution cases. "
-    rule9 = ("Decided with RR (30 October, rule 9): `ReadStages` is to take its order from RR's `RevisionRoutes`, its "
-             "statements and names unchanged, and to carry the corollary on complying at both stages, derived from "
-             "it. ")
+    stages = Path('experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/'
+                  'ReadStages.lean')
+    made = 'import Becoming.RevisionRoutes' in stages.read_text(encoding='utf-8')
+    rule9 = ("Decided with RR (30 October, rule 9): `ReadStages` takes its order from RR's `RevisionRoutes.GainLoss`, "
+             "its statements and names unchanged, with the corollary on complying at both stages and its "
+             "correspondence with a revision at three routes, " + ("made in RR's landing. " if made else
+                                                                   "to be made in RR's landing. "))
     assert cells[0].count(designed) == 1 and rule9 not in cells[0], 'designed sentence'
     cells[0] = cells[0].replace(designed, designed + rule9)
     old = "next RF-M's helper and preference cases and an institution's rule of reading with members' acts"
     new = ("RF-M.2's design, reviews and kit landed without its Lean (documents only: `Becoming.HeldForReading` built "
            "in the kit, its design and its Lean reviewed); next RF-M.2's texts cold-read and its Lean landed, then "
-           "RF-M's preference case, the valuation as state, its carrier first; an institution's rule of reading with "
+           "RF-M's preference case, the valuation as state, its carrier to be designed first; an institution's rule of "
+           "reading with "
            "members' acts stays a reading")
     assert cells[2].count(old) == 1, 'next step in the state cell'
     cells[2] = cells[2].replace(old, new)
@@ -58,12 +63,21 @@ elif mode == 'land':
            "is valued best at every listed candidate of positive weight; holding for the reading that stops where the "
            "loss exceeds the gain stands above both moves exactly where the model gives positive weight to both strict "
            "signs, and holding for any rule of stopping, "
-           "forgoing an amount, stands at least as high as going on exactly where its shortfall and the amount are at "
-           "most the excess of switching off; on the reading loop, a formation choosing so on a listing only of gain, "
-           "going on from the start, never senses the stop). Designed: RF-M's preference case, the valuation as "
-           "state, its carrier first; an institution's rule of reading with members' acts stays a reading. ")
+           "forgoing an amount, stands at least as high as going on exactly where its shortfall and the amount together "
+           "are at most the excess of switching off; on the reading loop, a formation holding exactly where holding "
+           "for the reading gains over both moves on its model, listing only gain and going on from the start, never "
+           "senses the stop). Next: RF-M's preference case, the valuation as "
+           "state, its carrier to be designed first; an institution's rule of reading with members' acts stays a reading. ")
     assert cells[0].count(old) == 1, 'designed sentence'
-    cells[0] = cells[0].replace(old, new)
+    stages = Path('experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/'
+                  'ReadStages.lean')
+    made = 'import Becoming.RevisionRoutes' in stages.read_text(encoding='utf-8')
+    rule9 = ("Decided with RR (30 October, rule 9): `ReadStages` takes its order from RR's `RevisionRoutes.GainLoss`, "
+             "its statements and names unchanged, with the corollary on complying at both stages and its "
+             "correspondence with a revision at three routes, " + ("made in RR's landing. " if made else
+                                                                   "to be made in RR's landing. "))
+    assert rule9 not in cells[0]
+    cells[0] = cells[0].replace(old, new + rule9)
     review = ("The plan and the Lean of each round had an independent cross-model review, with a re-check in round 2, "
               "RF7's Lean also a review through four lenses with each point verified, and the texts a cold read, every "
               "confirmed finding taken (plan §13).")

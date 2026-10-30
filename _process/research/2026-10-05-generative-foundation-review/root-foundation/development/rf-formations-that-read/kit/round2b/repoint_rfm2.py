@@ -53,13 +53,15 @@ EXPECTED = {
         '4. The new laws', '4-the-new-laws',
         '4.7 Round 2, second part: an act held for a reading, and the order as state',
         '47-round-2-second-part-an-act-held-for-a-reading-and-the-order-as-state',
+        '4.7 Round 2, second part: an act held for a reading, and the valuation as state',
+        '47-round-2-second-part-an-act-held-for-a-reading-and-the-valuation-as-state',
         '8. The literature: contained, restated or owed', '8-the-literature-contained-restated-or-owed',
         '12. Order, owners and what it serves', '12-order-owners-and-what-it-serves',
         '13. The review and what was taken', '13-the-review-and-what-was-taken', 'Evidence', 'evidence'},
 }
 REASON = ("RF round 2's RF-M.2: Becoming.HeldForReading joined to the core as a leaf (the root module's import and doc, "
-          "the checker's core list and scope, the package README rows EN and ZH, ShownOrder's and ReadingLoop's root "
-          "bullets no longer leaves), no landed statement or proof changed; 03 §12 (its opening, the theorem of "
+          "the checker's core list and scope, the package README rows EN and ZH, ReadingLoop's root bullet no longer a "
+          "leaf and ShownOrder's naming both its importers), no landed statement or proof changed; 03 §12 (its opening, the theorem of "
           "what-holding-for-a-reading-is-worth with its reading, a pointer in the acts-alike reading) and 03's Open; "
           "07 §7's paragraph on executable change; 08's counts and §8's known results; the overview's paragraph after "
           "the reading loop's; the alignment dossier's scope box and its account of how it was made; RF's plan (§4.7, "

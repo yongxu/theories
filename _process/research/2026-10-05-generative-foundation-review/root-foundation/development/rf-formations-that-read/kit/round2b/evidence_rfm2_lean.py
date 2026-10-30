@@ -29,7 +29,7 @@ INTRO = """# The review of `Becoming.HeldForReading`
 
 RF round 2, second part, RF-M.2: an act held for a reading (plan §4.7). The module as first built on the reviewed design (`kit/round2b/tree/Becoming/HeldForReading.lean` at the kit's commit `7f4679003`: 56 theorems in 80 declarations, every axiom report empty) was reviewed on the Lean on 30 October 2026 in two independent ways: by the cross-model reader (GPT astra, high effort, read-only, a fresh session `01a18c02-6b30-79a3-acff-297bd8cf6b60`), and through three lenses (exactness, structure, sources), each an Opus reader working read-only, with one verifier per lens asked to refute that lens's findings. The prompts are in [the brief](BRIEF.md#round-2-second-part). The reviews follow verbatim; their line numbers are those of the reviewed version, the reader's links are unlinked (`\\](`), since this folder is link-checked as live, and its paths are made relative to the checkout.
 
-**What was verified, and how.** The exactness verifier judged all seventeen of its lens's findings: fourteen real and three not (E8, E11, E15); the module changed at those three places anyway, as the table says. The verifiers of the structure and sources lenses were stopped before they reported, so those findings carry no independent verdict. In their place, every literature point the sources lens raised was checked against the papers' own texts by the session that wrote the module ([below](#the-literature-checked-against-the-papers)), and each structure finding was judged against the Lean by that session before it was taken; neither check is independent. The module was then rebuilt to 89 theorems in 119 declarations, every axiom report empty (the build logs are in [kit/round2b/logs/](../kit/round2b/logs/build-18.log)). How each finding is reflected in the rebuilt module was checked from the files alone by four read-only Opus readers, one per set of findings, at 81 theorems in 111 declarations; [the table](#what-was-taken) gives their rows, with the rows that later changes completed marked as updated after the check.
+**What was verified, and how.** The exactness verifier judged all seventeen of its lens's findings: fourteen real and three not (E8, E11, E15); the module changed at those three places anyway, as the table says. The verifiers of the structure and sources lenses were stopped before they reported, so those findings carry no independent verdict. In their place, every literature point the sources lens raised was checked against the papers' own texts by the session that wrote the module ([below](#the-literature-checked-against-the-papers)), and each structure finding was judged against the Lean by that session before it was taken; neither check is independent. The module was then rebuilt, and at 81 theorems in 111 declarations four read-only Opus readers, one per set of findings, checked from the files alone how each finding is reflected in it; [the table](#what-was-taken) gives their rows, with the rows that later changes completed marked as updated after the check. Later changes brought the module to 89 theorems in 119 declarations, every axiom report empty ([build-18](../kit/round2b/logs/build-18.log)).
 
 **The re-check.** The rebuilt module (89 theorems in 119 declarations), its record script and the plan were then re-checked by the cross-model reader in the same session, read-only ([below](#the-re-check)): no false Lean statement, twelve points, every one taken but one taken in part ([its table](#what-was-taken-from-the-re-check)). The module was rebuilt for them to 90 theorems in 120 declarations, every axiom report empty ([build-20](../kit/round2b/logs/build-20.log); build-19 stopped on an unqualified name).
 """
@@ -44,7 +44,7 @@ Each point the sources lens raised, checked against the paper's text: the off-sw
 | Equation 2 | the rational human lets the robot act exactly where the utility is at least zero | `byReading`, going on where gain and loss are equal |
 | Theorem 1 | for a rational human: (1) the incentive is never negative, and is Equation 3, the smaller of the expected positive part and the expected negative part, the second printed with the probability that the utility is at most zero; (2) if the belief gives positive probability to both strict signs, the incentive is strictly positive (one direction) | `committed_le_held` (part 1); `after_byReading` (Equation 3 as `T` times the smaller of waiting's two differences, read with the probability that the utility is below zero); `held_gains_iff` (part 2 as an equivalence, for a belief of finite support) |
 | Corollary 1 | for a belief putting all its mass on one utility, waiting is optimal exactly where the human is rational | widened to any model fixing the sign (`threshold_go_iff`, `threshold_off_iff` with `excess_pos_iff`), with the exception where gain and loss are equal, which the corollary leaves unstated |
-| Remark 1 | the incentive to defer comes from the robot's uncertainty about the human's preferences and from the human's effectiveness at acting on them | the threshold relates the model's openness, the reading's shortfall and what holding forgoes [AI reading] |
+| Remark 1 | the incentive to defer comes from the robot's uncertainty about the human's preferences and from the human's effectiveness at acting on them | the model's openness less the reading's shortfall is that incentive, decomposed otherwise; the threshold adds what holding forgoes, which the paper's game lacks [AI reading] |
 | Section 4 and Theorem 2 | with a noisily (Boltzmann) rational human the incentive can be negative; for a Gaussian belief it is the variance times the human's expected responsiveness less the size of the mean times the probability that the human corrects the robot (Equation 7), positive exactly where Equation 8's condition holds | not represented: a periphery debt, named in the Readings |
 | Carey, setup | rewards with a sign error, the prior over the human's reward parameter correct, the human noisy | `SignLoop` represents no valuation beyond the counts on the kept listing: related, not contained |
 | Carey, Figure 2a | the faulty reward makes going on better under every parameter, so a recommendation to shut down is received and disregarded | the case here of a model fixing the sign, there with a strict preference |
@@ -69,8 +69,9 @@ AFTER = {
     'A8': ('partly taken', "Updated after the re-check (its point 9): the two list inductions it named, "
                            "`SignLoop.not_loses_of_all_true` and `SignLoop.not_gains_of_all_true`, now use the "
                            "prelude's `ListTests.all_mem`. `total_single` stays, disclosed in its docstring: "
-                           "`Interleavings.total_single` is outside this module's imports; its move to a shared "
-                           "totals dependency is proposed to the owners, with F17's addend lemma."),
+                           "`Interleavings.LocalLaw.total_single` is outside this module's imports; its move to a "
+                           "shared totals dependency is left for a board proposal to the owners, with F17's addend "
+                           "lemma (none made yet)."),
     'A14': ('taken', "Updated after the re-check (its points 10 to 12): the record, PLAN and the texts now carry the "
                      "module's source corrections: Equation 3 read with Pr(U < 0), Remark 1 qualitative and Theorem 2 "
                      "Gaussian with the off-switch paper named, and Carey's conflating model's accuracy relative to "
@@ -146,6 +147,38 @@ AFTER = {
                     "`threshold_off_iff` (were `held_above_*`) as short compositions; the Readings credit Remark 1 and "
                     "Theorem 2, and the record's correspondence matches. `byReading`'s docstring now names Equation 2, "
                     "and 'shortfall' replaces 'the reading's accuracy' (as for L11)."),
+    'L10': ('taken', "Updated after the check: the Readings say the witness has the structure of "
+                     "`ReadingLoop.Untested` (read there with self-confirming equilibrium and incomplete learning, the "
+                     "citations of Fudenberg and Levine (1993) and Rothschild (1974) not repeated), its kept candidate "
+                     "agreeing with the world along the course and not off it, and that holding first where going on "
+                     "loses refutes the only candidate (`SignLoop.refuted_senses_stop`, `SignLoop.refuted_drops`, "
+                     "`SignLoop.refuted_goes_on`). The record depends on and amends "
+                     "`what-a-course-chosen-through-its-model-does-not-test`."),
+    'A6': ('taken', "Updated after the check: `SignLoop.choose`'s docstring now reads 'go on where every "
+                    "candidate kept predicts that going on gains, and where none is kept; switch off where some are "
+                    "kept and every one predicts that it loses; hold where those kept disagree', the switch-off clause "
+                    "adding 'where some are kept' (as for E3); the header, the modelling choices and the record say "
+                    "the same, and `SignLoop.refuted_goes_on` uses the default with none kept. The wording 'a listing "
+                    "lacking the true sign rests on it' is gone: `SignLoop.rests_unread`, for any listing that all "
+                    "predicts gain and any true sign, says the formation 'rests at once, whatever the true sign'."),
+    'A9': ('taken', "Updated after the check: `after_offset` proves the common-offset identity through `total_add`, "
+                    "and `after_offset_le_iff` proves that comparisons are preserved, by cancellation; both are cited "
+                    "in the header and the Standing, and `shifted`'s docstring now cites `after_rule_add_onLoss` and "
+                    "`after_rule_le_iff` (as for F6). `Model`'s docstring, the modelling choices and record hypothesis "
+                    "1 say a listing may repeat a candidate, each occurrence counting its weight, and that "
+                    "probabilities are read over a listing without repetition; the 'otherwise aggregate occurrence "
+                    "weights' clause is not stated."),
+    'E7': ('taken', "Updated after the check and the re-check: the local `le_of_add_le_add_left_core` and "
+                    "`cond_le_one` are deleted, the Prelude's used in their place, and `total_lt_of` is deleted, "
+                    "`after_lt_after_iff` going through `after_add_gap` and Flow's `total_pos`/`total_pos_of_mem`. "
+                    "The one new copy, `total_single`, names `Interleavings.LocalLaw.total_single` (outside the "
+                    "import closure) in its docstring; the counts, recomputed at each rebuild, are now 90 theorems in "
+                    "120 declarations (PLAN §4.7's entry for RF-M.2)."),
+    'F10': ('taken', "Updated after the check: `cell_policy_iff` is the proposed `through_lumping_iff`, with cells of "
+                     "a map for the classes of a lumping and `Viability.ChoiceOver` over the cells "
+                     "(`Viability.choiceOver_fin` named). The header and Standing state it ('`cell_policy_iff` states "
+                     "it weighted'), and the record carries it with the ChoiceOver dependency. The Standing cites "
+                     "`GuardHorizon.uniform_policy_iff_fiber_feasible` as 'an application of the ring', as proposed."),
     'L11': ('taken', "Updated after the check: `byReading`'s docstring says it stops by the supplied values and is the "
                      "paper's rational human, its Equation 2; 'accuracy' is replaced by 'shortfall' in the Readings, the "
                      "record's correspondence and PLAN."),
@@ -238,7 +271,8 @@ RECHECK = (
                    "§12's paragraph and the study cite it."),
     ('9', 'partly taken', "`SignLoop.not_loses_of_all_true` and `SignLoop.not_gains_of_all_true` use the prelude's "
                           "`ListTests.all_mem`. `total_single` stays as disclosed, its move to a shared totals "
-                          "dependency proposed to the owners; `across_le_iff` and `across_lt_iff` stay, their relation "
+                          "dependency left for a board proposal to the owners (none made yet); `across_le_iff` and "
+                           "`across_lt_iff` stay, their relation "
                           "to `Optimum` and `SelectionTerm` named."),
     ('10', 'taken', "The record's correspondence in both languages, PLAN's item 2 and the study: waiting's two "
                     "differences T E[U⁺] and T E[(−U)⁺], T times Equation 3's terms read with Pr(U < 0) where "
