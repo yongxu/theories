@@ -22,6 +22,13 @@ REVIEW = 'theories/becoming/review/'
 MAP = str((HERE.parent / 'FAILURE-MODE-MAP.md').relative_to(ROOT))
 SCREEN, TEN, HOUR = 150, 1100, 6000
 
+
+def front(item):
+    """A dossier's front: to the end of the part it labels as its ten-minute reading, or else to its
+    list of items or its first item."""
+    return [(r'^## The dossier in ten minutes$', r'^## '), ('', rf'^(## The items|###? {item})')]
+
+
 # (layer, path, start, end, budget in words): start and end are patterns, None the file's edge;
 # an end (after, pattern) is the pattern's first match after the first match of after, and a list
 # of ends is tried in order, the first whose after matches being used.
@@ -34,20 +41,19 @@ LAYERS = [
     ('overview, Chinese', 'theories/becoming/THE-THEORY-OF-BECOMING.zh.md', None, None, HOUR),
     ('packet cover', REVIEW + 'README.md', None, None, TEN),
     ('packet cover, Chinese', REVIEW + 'README.zh.md', None, None, TEN),
-    ('front: classical texts', REVIEW + 'CLASSICAL-TEXTS.md', None, r'^###? C-01', TEN),
-    ('front: Buddhist thought', REVIEW + 'BUDDHIST-THOUGHT.md', None, r'^###? B-01', TEN),
-    ('front: logic', REVIEW + 'LOGIC.md', None, r'^###? L-01', TEN),
-    ('front: philosophy', REVIEW + 'PHILOSOPHY.md', None, r'^###? P-01', TEN),
-    # To the end of the part the dossier labels as its ten-minute reading, or else to its first item.
-    ('front: alignment', REVIEW + 'ALIGNMENT.md', None,
-     [(r'^## The dossier in ten minutes$', r'^## '), ('', r'^(## The items|###? A-01)')], TEN),
+    ('front: classical texts', REVIEW + 'CLASSICAL-TEXTS.md', None, front('C-01'), TEN),
+    ('front: Buddhist thought', REVIEW + 'BUDDHIST-THOUGHT.md', None, front('B-01'), TEN),
+    ('front: logic', REVIEW + 'LOGIC.md', None, front('L-01'), TEN),
+    ('front: philosophy', REVIEW + 'PHILOSOPHY.md', None, front('P-01'), TEN),
+    ('front: alignment', REVIEW + 'ALIGNMENT.md', None, front('A-01'), TEN),
     # To the end of its ten-minute section, or else to the end of its table.
     ('failure-mode map, its first part', MAP, None,
      [(r'^## The map in ten minutes$', r'^## '), (r'^## \d+\. The map$', r'^## ')], TEN),
 ]
 WHOLES = ['CLASSICAL-TEXTS.md', 'BUDDHIST-THOUGHT.md', 'LOGIC.md', 'PHILOSOPHY.md', 'ALIGNMENT.md']
-# The alignment dossier's hour, as its "How long" paragraph names it: its ten minutes and these.
-HOUR_PATH = ['a-02', 'a-07', 'a-10', 'a-12', 'a-14', 'a-18', 'a-19']
+# A dossier's hour, as its "How long" paragraph names it: its ten minutes and these items.
+HOUR_PATHS = {'ALIGNMENT.md': ['a-02', 'a-07', 'a-10', 'a-12', 'a-14', 'a-18', 'a-19'],
+              'PHILOSOPHY.md': ['p-04', 'p-05', 'p-07', 'p-10', 'p-11', 'p-20']}
 
 
 def visible(s):
@@ -114,13 +120,16 @@ def main(ref=None):
             en, zh = count(text)
             code = sum(b.count('\n') - 1 for b in re.findall(r'```.*?```', text, flags=re.S))
             print(f'| whole: {name}, and {code:,} lines of code | {en:,} | {zh:,} | {minutes(en, zh)} | | | |')
-    text = read(ref, REVIEW + 'ALIGNMENT.md')
-    if text and '## The dossier in ten minutes' in text:
-        en = count(part(text, r'^## The dossier in ten minutes', r'^## The items'))[0]
-        for item in HOUR_PATH:
-            body = part(text, f'<a id="{item}"></a>', r'^(<a id="a-|---$|## )')
-            en += count(body)[0]
-        print(f'| alignment: its hour | {en:,} | 0 | {minutes(en, 0)} | {HOUR} | {"yes" if en <= HOUR else "no"} | |')
+    for name, items in HOUR_PATHS.items():
+        text = read(ref, REVIEW + name)
+        if not (text and '## The dossier in ten minutes' in text):
+            continue
+        en, zh = count(part(text, r'^## The dossier in ten minutes', r'^## The items'))
+        for item in items:
+            body = count(part(text, f'<a id="{item}"></a>', rf'^(<a id="{item[0]}-|---$|## )'))
+            en, zh = en + body[0], zh + body[1]
+        within = 'yes' if en + zh / 2 <= HOUR else 'no'
+        print(f'| {name[:-3].lower()}: its hour | {en:,} | {zh:,} | {minutes(en, zh)} | {HOUR} | {within} | |')
     text = read(ref, 'README.md')
     notes = [n for n in re.split(r'\n(?=\d+\. <a id="note-)', part(text, r'^### Notes', r'^## ')) if 'note-' in n]
     sizes = [count(n)[0] for n in notes]
