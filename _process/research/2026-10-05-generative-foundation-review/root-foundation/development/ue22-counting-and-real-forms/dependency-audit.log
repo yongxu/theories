@@ -1,0 +1,163 @@
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy uses Becoming.FreeEnergy.term_le: true
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy uses Real.log_le_sub_one_of_pos: true
+[log unexpanded] Becoming.FreeEnergy.surprisal_le_freeEnergy uses Becoming.FreeEnergy.term_le: true
+[log unexpanded] Becoming.FreeEnergy.surprisal_le_freeEnergy uses Real.log_le_sub_one_of_pos: true
+[log unexpanded] Becoming.FreeEnergy.surprisal_le_freeEnergy uses Real.add_one_le_exp: true
+[log unexpanded] Becoming.FreeEnergy.surprisal_le_freeEnergy uses Real.add_one_lt_exp: true
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts uses Becoming.FreeEnergyCounting.bound: true
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts uses Becoming.FreeEnergy.surprisal_le_freeEnergy: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts uses Becoming.FreeEnergy.term_le: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts uses Becoming.FreeEnergy.term_eq_iff: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts uses Becoming.FreeEnergy.term_eq_iff_of_pos: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts uses Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts uses Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts uses Real.log_le_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts uses Real.log_lt_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts uses Real.add_one_le_exp: true
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts uses Real.add_one_lt_exp: true
+[plain] Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts uses Becoming.FreeEnergyCounting.bound_eq_iff: true
+[plain] Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts uses Becoming.FreeEnergy.surprisal_le_freeEnergy: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts uses Becoming.FreeEnergy.term_le: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts uses Becoming.FreeEnergy.term_eq_iff: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts uses Becoming.FreeEnergy.term_eq_iff_of_pos: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts uses Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts uses Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts uses Real.log_le_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts uses Real.log_lt_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts uses Real.add_one_le_exp: true
+[plain] Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts uses Real.add_one_lt_exp: true
+[plain] Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts uses Becoming.FreeEnergyCounting.bound_lt_of_not_proportional: true
+[plain] Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts uses Becoming.FreeEnergy.surprisal_le_freeEnergy: false
+[plain] Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts uses Becoming.FreeEnergy.term_le: false
+[plain] Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts uses Becoming.FreeEnergy.term_eq_iff: false
+[plain] Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts uses Becoming.FreeEnergy.term_eq_iff_of_pos: false
+[plain] Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts uses Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff: false
+[plain] Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts uses Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff: false
+[plain] Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts uses Real.log_le_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts uses Real.log_lt_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts uses Real.add_one_le_exp: true
+[plain] Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts uses Real.add_one_lt_exp: true
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound uses Becoming.FreeEnergyCounting.bound: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound uses Becoming.FreeEnergy.surprisal_le_freeEnergy: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound uses Becoming.FreeEnergy.term_le: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound uses Becoming.FreeEnergy.term_eq_iff: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound uses Becoming.FreeEnergy.term_eq_iff_of_pos: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound uses Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound uses Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound uses Real.log_le_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound uses Real.log_lt_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound uses Real.add_one_le_exp: true
+[plain] Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound uses Real.add_one_lt_exp: true
+[plain] Becoming.FreeEnergy.gap_counts uses Becoming.FreeEnergyCounting.bound: false
+[plain] Becoming.FreeEnergy.gap_counts uses Becoming.FreeEnergy.surprisal_le_freeEnergy: false
+[plain] Becoming.FreeEnergy.gap_counts uses Becoming.FreeEnergy.term_le: false
+[plain] Becoming.FreeEnergy.gap_counts uses Becoming.FreeEnergy.term_eq_iff: false
+[plain] Becoming.FreeEnergy.gap_counts uses Becoming.FreeEnergy.term_eq_iff_of_pos: false
+[plain] Becoming.FreeEnergy.gap_counts uses Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff: false
+[plain] Becoming.FreeEnergy.gap_counts uses Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff: false
+[plain] Becoming.FreeEnergy.gap_counts uses Real.log_le_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.gap_counts uses Real.log_lt_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.gap_counts uses Real.add_one_le_exp: true
+[plain] Becoming.FreeEnergy.gap_counts uses Real.add_one_lt_exp: true
+[plain] Becoming.FreeEnergy.gap_counts_given_record uses Becoming.FreeEnergyCounting.record_total: true
+[plain] Becoming.FreeEnergy.gap_counts_given_record uses Becoming.FreeEnergy.jointShare_toReal: true
+[plain] Becoming.FreeEnergy.gap_counts_given_record uses Becoming.FreeEnergy.surprisal_le_freeEnergy: false
+[plain] Becoming.FreeEnergy.gap_counts_given_record uses Becoming.FreeEnergy.term_le: false
+[plain] Becoming.FreeEnergy.gap_counts_given_record uses Becoming.FreeEnergy.term_eq_iff: false
+[plain] Becoming.FreeEnergy.gap_counts_given_record uses Becoming.FreeEnergy.term_eq_iff_of_pos: false
+[plain] Becoming.FreeEnergy.gap_counts_given_record uses Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff: false
+[plain] Becoming.FreeEnergy.gap_counts_given_record uses Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff: false
+[plain] Becoming.FreeEnergy.gap_counts_given_record uses Real.log_le_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.gap_counts_given_record uses Real.log_lt_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.gap_counts_given_record uses Real.add_one_le_exp: true
+[plain] Becoming.FreeEnergy.gap_counts_given_record uses Real.add_one_lt_exp: true
+[plain] Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts uses Becoming.FreeEnergyCounting.bound_given_record: true
+[plain] Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts uses Becoming.FreeEnergy.surprisal_le_freeEnergy: false
+[plain] Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts uses Becoming.FreeEnergy.term_le: false
+[plain] Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts uses Becoming.FreeEnergy.term_eq_iff: false
+[plain] Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts uses Becoming.FreeEnergy.term_eq_iff_of_pos: false
+[plain] Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts uses Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff: false
+[plain] Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts uses Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff: false
+[plain] Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts uses Real.log_le_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts uses Real.log_lt_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts uses Real.add_one_le_exp: true
+[plain] Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts uses Real.add_one_lt_exp: true
+[plain] Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts uses Becoming.FreeEnergyCounting.given_record_eq_iff_share: true
+[plain] Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts uses Becoming.FreeEnergy.surprisal_le_freeEnergy: false
+[plain] Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts uses Becoming.FreeEnergy.term_le: false
+[plain] Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts uses Becoming.FreeEnergy.term_eq_iff: false
+[plain] Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts uses Becoming.FreeEnergy.term_eq_iff_of_pos: false
+[plain] Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts uses Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff: false
+[plain] Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts uses Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff: false
+[plain] Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts uses Real.log_le_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts uses Real.log_lt_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts uses Real.add_one_le_exp: true
+[plain] Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts uses Real.add_one_lt_exp: true
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts uses Becoming.FreeEnergyCounting.given_record_eq_iff_share: true
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts uses Becoming.FreeEnergy.surprisal_le_freeEnergy: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts uses Becoming.FreeEnergy.term_le: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts uses Becoming.FreeEnergy.term_eq_iff: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts uses Becoming.FreeEnergy.term_eq_iff_of_pos: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts uses Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts uses Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts uses Real.log_le_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts uses Real.log_lt_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts uses Real.add_one_le_exp: true
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts uses Real.add_one_lt_exp: true
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts uses Becoming.FreeEnergyCounting.given_record_eq_iff_share: true
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts uses Becoming.ConditionalWeights.whole_restrict: true
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts uses Becoming.FreeEnergy.surprisal_le_freeEnergy: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts uses Becoming.FreeEnergy.term_le: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts uses Becoming.FreeEnergy.term_eq_iff: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts uses Becoming.FreeEnergy.term_eq_iff_of_pos: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts uses Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts uses Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts uses Real.log_le_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts uses Real.log_lt_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts uses Real.add_one_le_exp: true
+[plain] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts uses Real.add_one_lt_exp: true
+[plain] Becoming.FreeEnergy.divergence_counts uses Becoming.FreeEnergy.freeEnergy_eq_divergence_add_surprisal: true
+[plain] Becoming.FreeEnergy.divergence_counts uses Becoming.FreeEnergy.surprisal_le_freeEnergy: false
+[plain] Becoming.FreeEnergy.divergence_counts uses Becoming.FreeEnergy.term_le: false
+[plain] Becoming.FreeEnergy.divergence_counts uses Becoming.FreeEnergy.term_eq_iff: false
+[plain] Becoming.FreeEnergy.divergence_counts uses Becoming.FreeEnergy.term_eq_iff_of_pos: false
+[plain] Becoming.FreeEnergy.divergence_counts uses Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff: false
+[plain] Becoming.FreeEnergy.divergence_counts uses Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff: false
+[plain] Becoming.FreeEnergy.divergence_counts uses Real.log_le_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.divergence_counts uses Real.log_lt_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.divergence_counts uses Real.add_one_le_exp: true
+[plain] Becoming.FreeEnergy.divergence_counts uses Real.add_one_lt_exp: true
+[plain] Becoming.FreeEnergy.proportional_iff_posterior uses Becoming.FreeEnergy.surprisal_le_freeEnergy: false
+[plain] Becoming.FreeEnergy.proportional_iff_posterior uses Becoming.FreeEnergy.term_le: false
+[plain] Becoming.FreeEnergy.proportional_iff_posterior uses Becoming.FreeEnergy.term_eq_iff: false
+[plain] Becoming.FreeEnergy.proportional_iff_posterior uses Becoming.FreeEnergy.term_eq_iff_of_pos: false
+[plain] Becoming.FreeEnergy.proportional_iff_posterior uses Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff: false
+[plain] Becoming.FreeEnergy.proportional_iff_posterior uses Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff: false
+[plain] Becoming.FreeEnergy.proportional_iff_posterior uses Real.log_le_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.proportional_iff_posterior uses Real.log_lt_sub_one_of_pos: false
+[plain] Becoming.FreeEnergy.proportional_iff_posterior uses Real.add_one_le_exp: false
+[plain] Becoming.FreeEnergy.proportional_iff_posterior uses Real.add_one_lt_exp: false
+[log unexpanded] Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts uses Real.add_one_le_exp: false
+[log unexpanded] Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts uses Real.add_one_lt_exp: false
+[log unexpanded] Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts uses Real.add_one_le_exp: false
+[log unexpanded] Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts uses Real.add_one_lt_exp: false
+[log unexpanded] Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts uses Real.add_one_le_exp: false
+[log unexpanded] Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts uses Real.add_one_lt_exp: false
+[log unexpanded] Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound uses Real.add_one_le_exp: false
+[log unexpanded] Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound uses Real.add_one_lt_exp: false
+[log unexpanded] Becoming.FreeEnergy.gap_counts uses Real.add_one_le_exp: false
+[log unexpanded] Becoming.FreeEnergy.gap_counts uses Real.add_one_lt_exp: false
+[log unexpanded] Becoming.FreeEnergy.gap_counts_given_record uses Real.add_one_le_exp: false
+[log unexpanded] Becoming.FreeEnergy.gap_counts_given_record uses Real.add_one_lt_exp: false
+[log unexpanded] Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts uses Real.add_one_le_exp: false
+[log unexpanded] Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts uses Real.add_one_lt_exp: false
+[log unexpanded] Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts uses Real.add_one_le_exp: false
+[log unexpanded] Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts uses Real.add_one_lt_exp: false
+[log unexpanded] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts uses Real.add_one_le_exp: false
+[log unexpanded] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts uses Real.add_one_lt_exp: false
+[log unexpanded] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts uses Real.add_one_le_exp: false
+[log unexpanded] Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts uses Real.add_one_lt_exp: false
+[log unexpanded] Becoming.FreeEnergy.divergence_counts uses Real.add_one_le_exp: false
+[log unexpanded] Becoming.FreeEnergy.divergence_counts uses Real.add_one_lt_exp: false
+[log unexpanded] Becoming.FreeEnergy.proportional_iff_posterior uses Real.add_one_le_exp: false
+[log unexpanded] Becoming.FreeEnergy.proportional_iff_posterior uses Real.add_one_lt_exp: false

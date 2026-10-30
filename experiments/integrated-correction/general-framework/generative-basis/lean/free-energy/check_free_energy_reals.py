@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Check the periphery module on variational free energy over the reals.
 
-`FreeEnergyReals` imports the core's `Becoming.ConditionalWeights` and Mathlib's real logarithm
-and finite sums, so it is compiled with Lean 4.30.0-rc2 against the installed Mathlib
+`FreeEnergyReals` imports the core's `Becoming.ConditionalWeights` and
+`Becoming.FreeEnergyCounting` and Mathlib's real logarithm and finite sums, so it is compiled with
+Lean 4.30.0-rc2 against the installed Mathlib
 (`SYSTEMS_MATHLIB_PROJECT`, default `~/repos/生生不息`); the core's closure is compiled
 with the same toolchain. Module resolution, declaration scanning and passed-receipt
 matching are those of the core checker. Every other module in the closure must
@@ -47,7 +48,7 @@ SCOPE = (
     "causes: where a belief is nonnegative with total one and zero wherever the nonnegative joint weights are, its "
     "variational free energy is at least the surprisal of the joint weights' total (Gibbs' inequality), with "
     "equality exactly at the posterior, which alone has the least free energy among such beliefs; off that support "
-    "the bound fails under Mathlib's log 0 = 0 (a two-cause witness), the free energy being infinite there as "
+    "the bound can fail under Mathlib's log 0 = 0 (a two-cause witness), the free energy being infinite there as "
     "usually defined. The free energy is the divergence from the joint weights, the energy less the entropy, the "
     "divergence from the posterior plus that surprisal, the divergence nonnegative and zero exactly at the "
     "posterior, and, where each joint weight is a prior weight times a likelihood, the divergence from the prior "
@@ -58,8 +59,21 @@ SCOPE = (
     "hypothesis's prior weight times the record's weight under it is zero exists only where the record weighs "
     "something, the free energy at the share given the record is then the surprisal of the record's share, and "
     "that share is the one belief with the least free energy among such beliefs. Surprisal adds over independent "
-    "parts whose events each weigh something (share_product) and is the logarithm of a share's reciprocal. That "
-    "shares are probabilities and a belief a recognition density are correspondences, not checked."
+    "parts whose events each weigh something (share_product) and is the logarithm of a share's reciprocal. On the "
+    "core's counting form (FreeEnergyCounting), for natural counts over hypotheses listed once with a positive total "
+    "and no count where the natural joint weight is nothing: the total times the free energy of the belief in counts "
+    "less the surprisal of the total weight is the logarithm of the ratio of the counting bound's two sides, so the "
+    "two bounds hold at such a belief exactly together; the bound, its equality exactly in proportion (which is the "
+    "posterior) and its strictness elsewhere are proved from the core's counting laws (FreeEnergyCounting.bound, "
+    "bound_eq_iff, bound_lt_of_not_proportional); the log ratio is the total times the divergence from the posterior, "
+    "the counting bound's two sides differing by the exponential of the total times that divergence; the gap reads the "
+    "joint weights up to a factor, so against a core generative model's joint shares and record share the same identity "
+    "holds, with the bound, its equality exactly where every count over the total is the same ratio as the share given "
+    "the record (as real numbers, equal to it) and its strictness elsewhere proved from the core's laws "
+    "(bound_given_record, given_record_eq_iff_share); the identity can fail with a hypothesis listed twice or off the "
+    "support (witnesses), and at one count off the support it holds, the real form at equality and the core's bound "
+    "strict where the weights total one. That shares are probabilities and a belief a recognition density are "
+    "correspondences, not checked."
 )
 
 

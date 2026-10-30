@@ -47,13 +47,13 @@
 ## Conditions
 
 - No axiom. Natural counts and weights over listed hypotheses, the core's total over a listing; for the join to the shares, hypotheses listed once and their equality decided.
-- Read as the free-energy bound for the belief n / N with a positive total, as UE17's real form on the support; read as conditioning, where the record weighs something, it states which beliefs reach the bound, not a minimization at one total.
+- Read as the free-energy bound for the belief n / N with a positive total, on the support and with the hypotheses listed once UE17's real form through the logarithm (FreeEnergy.gap_counts); read as conditioning, where the record weighs something, it states which beliefs reach the bound, not a minimization at one total.
 - Modelling choices: 0 ^ 0 = 1; the belief read as the shares n / N; the record's weight as the total, where FreeEnergyReals reads the joint weights as shares of the whole weight, both bounds shifting by its logarithm.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- A theorem joining it to FreeEnergyReals' bound for count beliefs; off the support the two laws differ, the real form failing under log 0 = 0.
+- One law off the support: the identity joining the two can fail there (FreeEnergy.Witness.gap_counts_off_support), and at one count, where it holds, the real form can be at equality while this bound is strict.
 - A minimization at one fixed total: there the bound may be reached by no count belief.
 - Conditioning where the record weighs nothing: every count belief is then at the bound, for a degenerate reason.
 - Beliefs with irrational shares or densities, complexity and accuracy from the core's own shares, or any process that lowers free energy.
@@ -72,20 +72,22 @@ Canonical source: [FreeEnergyCounting.lean](../../../../experiments/integrated-c
 <a id="next--下一步"></a>
 ## Next
 
-The periphery theorem joining it to FreeEnergyReals' bound for count beliefs with a positive total on the support; complexity and accuracy from the core's own shares; review by a person.
+Complexity and accuracy from the core's own shares; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-In counts the bound is Cauchy's arithmetic-geometric mean inequality (Cauchy 1821, Cours d'analyse, note II) for N terms, a h / n h taken n h times, a count being a repetition, with its case of equality; equivalently Gibbs' inequality (Gibbs 1902) and the nonnegativity of the divergence (Kullback and Leibler 1951) for rational distributions, the free-energy principle's bound (Friston 2005, 2010) for count beliefs. Read with a / A as a model and n as observed counts it says the observed frequencies maximize the multinomial likelihood (the method of types; Cover and Thomas 2006, §11.1). Both readings are classical; new is that the bound and its equality hold in the pure core. Graded in UE21's NOTE.
+In counts the bound is Cauchy's arithmetic-geometric mean inequality (Cauchy 1821, Cours d'analyse, note II) for N terms, a h / n h taken n h times, a count being a repetition, with its case of equality; equivalently, through the logarithm (FreeEnergy.gap_counts), Gibbs' inequality (Gibbs 1902) and the nonnegativity of the divergence (Kullback and Leibler 1951) for rational distributions, the free-energy principle's bound (Friston 2005, 2010) for count beliefs. Read with a / A as a model and n as observed counts it says the observed frequencies maximize the multinomial likelihood (the method of types; Cover and Thomas 2006, §11.1). Both readings are classical; new is that the bound and its equality hold in the pure core. Graded in UE21's NOTE.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
 - **formal-reuse**: [conditioning-by-restriction](conditioning-by-restriction.md). evidence, mass_eq_total, posterior_single, Share.Same, share, restrict, pairWeight and openSteps: the record's weight as a total, and the share given the record.
-- related, not a proved adapter: [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md). Variational free energy bounds surprisal: its bound over the reals, for count beliefs with a positive total on the support this one through the logarithm.
+- related, not a proved adapter: [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md). Variational free energy bounds surprisal: its bound over the reals, for count beliefs with a positive total on the support, over hypotheses listed once, this one through the logarithm, proved there (gap_counts).
+
+**Used by:** [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -101,6 +103,7 @@ In counts the bound is Cauchy's arithmetic-geometric mean inequality (Cauchy 182
 | integration | [REVIEW-UE21.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue21-free-energy-in-counts/REVIEW-UE21.md) | — |
 | integration | [RECHECK-UE21.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue21-free-energy-in-counts/RECHECK-UE21.md) | — |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
+| integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/NOTE.md) | — |
 
 Aliases: `The free-energy bound in counts`, `计数之自由能界`, `free-energy bound in counting form`, `arithmetic-geometric mean inequality in counts`, `multinomial likelihood at the observed frequencies`, `Becoming.FreeEnergyCounting.bound`, `Becoming.FreeEnergyCounting.bound_eq_iff`, `Becoming.FreeEnergyCounting.given_record_eq_iff_share`
 
@@ -108,6 +111,7 @@ Aliases: `The free-energy bound in counts`, `计数之自由能界`, `free-energ
 ### History
 
 - 30 October 2026: added (UE21), the free-energy bound in counts in the pure core: N^N·∏ a^n ≤ A^N·∏ n^n, equal exactly in proportion, joined to the core's generative model and, with the hypotheses listed once, to the shares given the record; after a review and a re-check; study section 460.
+- 30 October 2026, board item UE22 (study section 462): the theorem joining this bound to FreeEnergyReals' is proved there (gap_counts, in free-energy-bounds-surprisal); the first does-not-show item becomes the boundary off the support, the next step drops the join, and the second hypothesis, the correspondence and the related entry name the theorem. No statement, law or declaration changed.
 
 </details>
 

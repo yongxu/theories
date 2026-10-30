@@ -854,7 +854,7 @@
   "free-energy-bounds-surprisal": {
    "region": "knowing",
    "base": "periphery",
-   "note": "FreeEnergyReals UE17: variational free energy over the reals, its bound by surprisal with equality exactly at the posterior, the decompositions, and the minimizer the core's share given the record (periphery)"
+   "note": "FreeEnergyReals UE17: variational free energy over the reals, its bound by surprisal with equality exactly at the posterior, the decompositions, and the minimizer the core's share given the record (periphery); UE22: for beliefs in counts, the bound in counts through the logarithm"
   },
   "fulfillment-chance-floor": {
    "region": "significance",

@@ -702,6 +702,9 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue21-free-energy-in-counts/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue21-free-energy-in-counts/RECHECK-UE21.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue21-free-energy-in-counts/REVIEW-UE21.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/RECHECK-UE22.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/REVIEW-UE22.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/LANDING.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/REVIEW-UE4.md",
@@ -1877,6 +1880,21 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/representation/check_representation.py",
         "theories/becoming/chapters/02-MAP.md",
         "theories/becoming/chapters/03-KNOWING.md"
+      ]
+    },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/NOTE.md": {
+      "title": "UE22: the counting form and the real form of the free-energy bound, joined",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue-unified-explanation/FEP-INTEGRATION.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/DependencyAudit.lean",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/RECHECK-UE22.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/REVIEW-UE22.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/dependency-audit.log",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/scratch-1.log",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/scratch-2.log",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/scratch-3.log",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/scratch-4.log",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean"
       ]
     },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/ROUND-3-CANDIDATE-4.md": {

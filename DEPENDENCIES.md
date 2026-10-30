@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-498 registered results: 467 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1152 curated edges join 426 results to the results they draw on.
+498 registered results: 467 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1153 curated edges join 426 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -152,7 +152,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [forming-anew-necessary-and-sufficient][] ← <a id="forming-anew-necessary-and-sufficient--transmission-is-inheritance-and-need"></a>[transmission-is-inheritance-and-need][]
 - [four-cases-of-a-part][] ← <a id="four-cases-of-a-part--closing-needs-net-draw"></a>[closing-needs-net-draw][] · <a id="four-cases-of-a-part--support-from-the-supported"></a>[support-from-the-supported][] · <a id="four-cases-of-a-part--derived-extent-limits"></a>[derived-extent-limits][]
 - [free-energy-bound-in-counts][] ← <a id="free-energy-bound-in-counts--conditioning-by-restriction"></a>[conditioning-by-restriction][]
-- [free-energy-bounds-surprisal][] ← <a id="free-energy-bounds-surprisal--conditioning-by-restriction"></a>[conditioning-by-restriction][]
+- [free-energy-bounds-surprisal][] ← <a id="free-energy-bounds-surprisal--conditioning-by-restriction"></a>[conditioning-by-restriction][] · <a id="free-energy-bounds-surprisal--free-energy-bound-in-counts"></a>[free-energy-bound-in-counts][]
 - [generalization-through-lumping][] ← <a id="generalization-through-lumping--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="generalization-through-lumping--selection-through-couplings"></a>[selection-through-couplings][]
 - [generation-and-degeneration-at-two-grains][] ← <a id="generation-and-degeneration-at-two-grains--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][]
 - [generation-is-replenishment][] ← <a id="generation-is-replenishment--life-as-condition-of-life"></a>[life-as-condition-of-life][] · <a id="generation-is-replenishment--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="generation-is-replenishment--more-needs-renewers"></a>[more-needs-renewers][] · <a id="generation-is-replenishment--becoming-renewal-reading"></a>[becoming-renewal-reading][]

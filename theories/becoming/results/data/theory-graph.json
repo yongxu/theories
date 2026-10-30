@@ -41107,6 +41107,11 @@
   },
   {
    "from": "record:free-energy-bounds-surprisal",
+   "to": "module:Becoming.FreeEnergyCounting",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:free-energy-bounds-surprisal",
    "to": "record:conditioning-by-restriction",
    "type": "formal-reuse"
   },
@@ -41114,6 +41119,11 @@
    "from": "record:free-energy-bounds-surprisal",
    "to": "record:expected-free-energy-and-its-terms",
    "type": "related"
+  },
+  {
+   "from": "record:free-energy-bounds-surprisal",
+   "to": "record:free-energy-bound-in-counts",
+   "type": "formal-reuse"
   },
   {
    "from": "record:free-energy-bounds-surprisal",

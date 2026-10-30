@@ -56,9 +56,9 @@
   ]
  },
  "counts": {
-  "laws": 3804,
+  "laws": 3808,
   "no_declarations": 9,
-  "outside": 357,
+  "outside": 361,
   "grammar": 749,
   "balance, represented": 645,
   "anchor, not reached": 134,
@@ -17827,6 +17827,92 @@
     "outside": [
      "Becoming.FreeEnergy.surprisal_product",
      "Becoming.FreeEnergy.surprisal_eq_log_reciprocal"
+    ]
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.FreeEnergy.countBelief",
+     "Becoming.FreeEnergy.cast_total",
+     "Becoming.FreeEnergy.cast_powerProduct",
+     "Becoming.FreeEnergy.total_pos_of_counts",
+     "Becoming.FreeEnergy.powerProduct_pos",
+     "Becoming.FreeEnergy.countBelief_nonneg",
+     "Becoming.FreeEnergy.sum_countBelief",
+     "Becoming.FreeEnergy.countBelief_support",
+     "Becoming.FreeEnergy.self_pow_ne_zero",
+     "Becoming.FreeEnergy.gap_counts",
+     "Becoming.FreeEnergy.divergence_counts",
+     "Becoming.FreeEnergy.counts_eq_mul_exp"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.countBelief",
+     "Becoming.FreeEnergy.cast_total",
+     "Becoming.FreeEnergy.cast_powerProduct",
+     "Becoming.FreeEnergy.total_pos_of_counts",
+     "Becoming.FreeEnergy.powerProduct_pos",
+     "Becoming.FreeEnergy.countBelief_nonneg",
+     "Becoming.FreeEnergy.sum_countBelief",
+     "Becoming.FreeEnergy.countBelief_support",
+     "Becoming.FreeEnergy.self_pow_ne_zero",
+     "Becoming.FreeEnergy.gap_counts",
+     "Becoming.FreeEnergy.divergence_counts",
+     "Becoming.FreeEnergy.counts_eq_mul_exp"
+    ]
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.FreeEnergy.counting_lhs_pos",
+     "Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound",
+     "Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts",
+     "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts",
+     "Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts",
+     "Becoming.FreeEnergy.proportional_iff_posterior"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.counting_lhs_pos",
+     "Becoming.FreeEnergy.surprisal_le_freeEnergy_iff_bound",
+     "Becoming.FreeEnergy.surprisal_le_freeEnergy_of_counts",
+     "Becoming.FreeEnergy.freeEnergy_eq_surprisal_iff_of_counts",
+     "Becoming.FreeEnergy.surprisal_lt_freeEnergy_of_counts",
+     "Becoming.FreeEnergy.proportional_iff_posterior"
+    ]
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.FreeEnergy.freeEnergy_congr_weights",
+     "Becoming.FreeEnergy.gap_div",
+     "Becoming.FreeEnergy.gap_counts_given_record",
+     "Becoming.ConditionalWeights.Share.same_iff_toReal_eq",
+     "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts",
+     "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts",
+     "Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts",
+     "Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.freeEnergy_congr_weights",
+     "Becoming.FreeEnergy.gap_div",
+     "Becoming.FreeEnergy.gap_counts_given_record",
+     "Becoming.ConditionalWeights.Share.same_iff_toReal_eq",
+     "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_of_counts",
+     "Becoming.FreeEnergy.freeEnergy_eq_record_surprisal_iff_toReal_of_counts",
+     "Becoming.FreeEnergy.record_surprisal_le_freeEnergy_of_counts",
+     "Becoming.FreeEnergy.record_surprisal_lt_freeEnergy_of_counts"
+    ]
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.FreeEnergy.Witness.gap_counts_off_support",
+     "Becoming.FreeEnergy.Witness.one_count_off_support",
+     "Becoming.FreeEnergy.Witness.gap_counts_duplicate"
+    ],
+    "outside": [
+     "Becoming.FreeEnergy.Witness.gap_counts_off_support",
+     "Becoming.FreeEnergy.Witness.one_count_off_support",
+     "Becoming.FreeEnergy.Witness.gap_counts_duplicate"
     ]
    }
   ],

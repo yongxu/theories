@@ -182,8 +182,8 @@
       "zh": "不加公理。列出之假设上之自然数计数与权重，核心之列表总和；与份额相接需假设列而不重且其相等可判定。"
     },
     {
-      "en": "Read as the free-energy bound for the belief n / N with a positive total, as UE17's real form on the support; read as conditioning, where the record weighs something, it states which beliefs reach the bound, not a minimization at one total.",
-      "zh": "于总数为正时读作信念 n / N 之自由能界，于支撑上与 UE17 之实数形式相合；读作条件化需记录有权重，且说何信念达界，非一总数下之最小化。"
+      "en": "Read as the free-energy bound for the belief n / N with a positive total, on the support and with the hypotheses listed once UE17's real form through the logarithm (FreeEnergy.gap_counts); read as conditioning, where the record weighs something, it states which beliefs reach the bound, not a minimization at one total.",
+      "zh": "于总数为正时读作信念 n / N 之自由能界，于支撑上且假设列而不重时即 UE17 之实数形式取对数（FreeEnergy.gap_counts）；读作条件化需记录有权重，且说何信念达界，非一总数下之最小化。"
     },
     {
       "en": "Modelling choices: 0 ^ 0 = 1; the belief read as the shares n / N; the record's weight as the total, where FreeEnergyReals reads the joint weights as shares of the whole weight, both bounds shifting by its logarithm.",
@@ -192,8 +192,8 @@
   ],
   "does_not_show": [
     {
-      "en": "A theorem joining it to FreeEnergyReals' bound for count beliefs; off the support the two laws differ, the real form failing under log 0 = 0.",
-      "zh": "与 FreeEnergyReals 之界于计数信念相接之定理；离支撑二律相异，实数形式依 log 0 = 0 不成立。",
+      "en": "One law off the support: the identity joining the two can fail there (FreeEnergy.Witness.gap_counts_off_support), and at one count, where it holds, the real form can be at equality while this bound is strict.",
+      "zh": "离支撑为一律：相接二者之恒等式于彼或不成立（FreeEnergy.Witness.gap_counts_off_support），一计数时虽成立，实数形式可取等而此界严格。",
       "kind": "scope"
     },
     {
@@ -240,12 +240,12 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T210603.495422Z）：Becoming.FreeEnergyCounting 之全部 65 项声明，公理报告皆空。由一 AI 代理起草；另一 AI 代理作独立只读审查（REVIEW-UE21）并复查（RECHECK-UE21），见研究第 460 节；未经人审。"
   },
   "next_delta": {
-    "en": "The periphery theorem joining it to FreeEnergyReals' bound for count beliefs with a positive total on the support; complexity and accuracy from the core's own shares; review by a person.",
-    "zh": "外围之定理：于总数为正且在支撑上之计数信念，与 FreeEnergyReals 之界相接；由核心自身份额读出之复杂度与准确度；人之审查。"
+    "en": "Complexity and accuracy from the core's own shares; review by a person.",
+    "zh": "由核心自身份额读出之复杂度与准确度；人之审查。"
   },
   "correspondence": {
-    "en": "In counts the bound is Cauchy's arithmetic-geometric mean inequality (Cauchy 1821, Cours d'analyse, note II) for N terms, a h / n h taken n h times, a count being a repetition, with its case of equality; equivalently Gibbs' inequality (Gibbs 1902) and the nonnegativity of the divergence (Kullback and Leibler 1951) for rational distributions, the free-energy principle's bound (Friston 2005, 2010) for count beliefs. Read with a / A as a model and n as observed counts it says the observed frequencies maximize the multinomial likelihood (the method of types; Cover and Thomas 2006, §11.1). Both readings are classical; new is that the bound and its equality hold in the pure core. Graded in UE21's NOTE.",
-    "zh": "计数之界即 Cauchy 之算术–几何平均不等式（Cauchy 1821，Cours d'analyse 注 II），N 项中 a h / n h 取 n h 次，计数即重复，及其取等之情形；等价于有理分布之 Gibbs 不等式（Gibbs 1902）与散度之非负（Kullback、Leibler 1951），即自由能原理之界（Friston 2005、2010）于计数信念。以 a / A 为模型、n 为观测计数而读，则谓观测频率使多项似然最大（类型之法；Cover、Thomas 2006，§11.1）。二读皆经典；新者为界及其取等于纯核心成立。分级见 UE21 之 NOTE。"
+    "en": "In counts the bound is Cauchy's arithmetic-geometric mean inequality (Cauchy 1821, Cours d'analyse, note II) for N terms, a h / n h taken n h times, a count being a repetition, with its case of equality; equivalently, through the logarithm (FreeEnergy.gap_counts), Gibbs' inequality (Gibbs 1902) and the nonnegativity of the divergence (Kullback and Leibler 1951) for rational distributions, the free-energy principle's bound (Friston 2005, 2010) for count beliefs. Read with a / A as a model and n as observed counts it says the observed frequencies maximize the multinomial likelihood (the method of types; Cover and Thomas 2006, §11.1). Both readings are classical; new is that the bound and its equality hold in the pure core. Graded in UE21's NOTE.",
+    "zh": "计数之界即 Cauchy 之算术–几何平均不等式（Cauchy 1821，Cours d'analyse 注 II），N 项中 a h / n h 取 n h 次，计数即重复，及其取等之情形；经对数（FreeEnergy.gap_counts）等价于有理分布之 Gibbs 不等式（Gibbs 1902）与散度之非负（Kullback、Leibler 1951），即自由能原理之界（Friston 2005、2010）于计数信念。以 a / A 为模型、n 为观测计数而读，则谓观测频率使多项似然最大（类型之法；Cover、Thomas 2006，§11.1）。二读皆经典；新者为界及其取等于纯核心成立。分级见 UE21 之 NOTE。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyCounting.lean",
   "aliases": [
@@ -272,8 +272,8 @@
     {
       "id": "free-energy-bounds-surprisal",
       "detail": {
-        "en": "Variational free energy bounds surprisal: its bound over the reals, for count beliefs with a positive total on the support this one through the logarithm.",
-        "zh": "变分自由能为惊异之界：其实数上之界，于总数为正且在支撑上之计数信念，即此界取对数。"
+        "en": "Variational free energy bounds surprisal: its bound over the reals, for count beliefs with a positive total on the support, over hypotheses listed once, this one through the logarithm, proved there (gap_counts).",
+        "zh": "变分自由能为惊异之界：其实数上之界，于总数为正、在支撑上且假设列而不重之计数信念，即此界取对数，证于彼处（gap_counts）。"
       }
     }
   ],
@@ -368,7 +368,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "c71e9f32b0fc7e1a8528142f309eb700da852facef0fbcf0757f04e01c9b81e0"
+      "sha256": "bf770b9211a8466ce8d857e853fbef6abcbbc2659edc912baa4cd5cffc882c46"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue21-free-energy-in-counts/NOTE.md",
@@ -388,7 +388,12 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "fb52f044256608a41faf11728a17d5a5c971ead1b8dafffbc675122e452321a6"
+      "sha256": "079ff0a095e1f42b0d2a7b72fca397399fe383b85d2528e7ad642dcbcd79e563"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/NOTE.md",
+      "role": "integration",
+      "sha256": "275e44547872e4ae15bcb243a350606ee4c806ebd12dc80e44062933c04163a5"
     }
   ],
   "proof_bindings": [
@@ -404,6 +409,10 @@
     {
       "en": "30 October 2026: added (UE21), the free-energy bound in counts in the pure core: N^N·∏ a^n ≤ A^N·∏ n^n, equal exactly in proportion, joined to the core's generative model and, with the hypotheses listed once, to the shares given the record; after a review and a re-check; study section 460.",
       "zh": "2026年10月30日：新增（UE21），纯核心中计数之自由能界：N^N·∏ a^n ≤ A^N·∏ n^n，恰于成比例处取等，与核心之生成模型相接，假设列而不重时与记录下之份额相接；经审查与复查；研究第 460 节。"
+    },
+    {
+      "en": "30 October 2026, board item UE22 (study section 462): the theorem joining this bound to FreeEnergyReals' is proved there (gap_counts, in free-energy-bounds-surprisal); the first does-not-show item becomes the boundary off the support, the next step drops the join, and the second hypothesis, the correspondence and the related entry name the theorem. No statement, law or declaration changed.",
+      "zh": "2026年10月30日，工作板条目 UE22（研究第 462 节）：此界与 FreeEnergyReals 之界相接之定理证于彼处（gap_counts，见 free-energy-bounds-surprisal）；所不示之第一项改为离支撑之界限，下一步删去相接，第二前提、对应与关联条目指明此定理。无一陈述、律或声明改变。"
     }
   ]
 }
