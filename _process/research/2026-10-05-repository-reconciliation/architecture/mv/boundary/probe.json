@@ -1,28 +1,36 @@
 {
  "summary": {
-  "run": "core run 20261030T131028.245732Z; main 4ac8cf27e",
-  "constants": 50973,
-  "root_constants": 2260,
-  "located_in_grammar_or_prelude_but_off_the_root": 64,
-  "off_root_examples": [
-   "Belief.rate_changes_on_step",
-   "Belief.rate_read_in_regularity",
-   "ClosedCapture.Beyond.closed_line",
-   "ClosedCapture.Beyond.open_line_ends",
-   "ClosedCapture.constant_iff_unread",
-   "ClosedCapture.lock_line",
-   "ClosedCapture.lockedAlike",
-   "ClosedCapture.lockedAlike_class",
-   "ClosedCapture.loss_alters",
-   "ClosedCapture.loss_ends_line",
-   "ClosedCapture.orbit_paced",
-   "ClosedCapture.turn_fast"
+  "run": "core run 20261030T152859.871907Z; main e332ae87a",
+  "constants": 51515,
+  "root_constants": 2258,
+  "root_by_statement_but_proved_off_the_root": [
+   "Law.continues_in_core_iff",
+   "TwoCourses.core_iff"
   ],
-  "theorems_with_a_grammar_name": 412,
-  "grammar_laws": 391,
+  "located_in_grammar_or_prelude_but_off_the_root": 66,
+  "theorems_with_a_grammar_name": 425,
+  "grammar_laws": 406,
+  "grammar_laws_without_a_grammar_name": [
+   "ClosedCapture.favouredAlike_class",
+   "Law.constant_iff_core",
+   "Law.ends_iff_changes",
+   "Law.step_hasSucc_iff",
+   "ThirdAffects.third_class",
+   "contains_core_iff",
+   "core_within_core_iff",
+   "eq_or_reach_iff_reached",
+   "sameValue_class",
+   "«一一对应».back_to",
+   "«一一对应».to_back",
+   "«一一对应».to_eq_iff",
+   "«类».refl",
+   "«类».symm",
+   "«类».trans"
+  ],
   "grammar_named_left_out": {
    "names a closed value": 13,
-   "names no grammar term other than «际»": 8
+   "names no «» term": 6,
+   "declared off the grammar modules": 15
   },
   "left_out_examples": {
    "names a closed value": [
@@ -31,93 +39,136 @@
     "«火之见证不择类»",
     "«火薪相须»",
     "«以核为判据则火无续»",
-    "Map.«生守相杂»"
+    "Map.«生守相杂»",
+    "«恒温与平衡»",
+    "«甲乙不可诘»"
    ],
-   "names no grammar term other than «际»": [
-    "«从缘生非文法之理»",
+   "names no «» term": [
     "«离觉则皆不觉»",
     "«非真则假»",
     "«非假则真»",
     "«是不俱当»",
-    "«必或不当当且仅当弱排中»"
+    "«必或不当当且仅当弱排中»",
+    "«异三则同»"
+   ],
+   "declared off the grammar modules": [
+    "«三域之定当且仅当排中»",
+    "«守则后守»",
+    "Map.«后守之定则LPO»",
+    "«后守退化不并»",
+    "«三域之周»",
+    "«生则或粗生或传»",
+    "«后守则延»",
+    "«传则粗不生»"
    ]
   },
+  "grammar_named_off_the_grammar_modules": {
+   "Becoming.MapRegions": 13,
+   "Becoming.HeldPossible": 1,
+   "Becoming.KeepingWidening": 1
+  },
   "forwarders_of_grammar_laws": [
-   "Amounts.fallsStop_of_ends -> «尽则不或屡»",
-   "Flow.WithinFeeding.refl -> «所闭之自反»",
-   "Flow.WithinFeeding.trans -> «所闭之传递»",
-   "Flow.WithinFeedingAcross.refl -> «所闭之自反»",
-   "Flow.WithinFeedingAcross.trans -> «所闭之传递»",
-   "Flow.closedAcross_within -> «所闭之闭»",
-   "Flow.fedClosed_within -> «所闭之闭»",
-   "WithinClosure.not_rel -> «所闭之界»",
-   "WithinClosure.of_rel -> «缘在所闭»",
-   "WithinClosure.refl -> «所闭之自反»",
-   "WithinClosure.trans -> «所闭之传递»",
-   "closedUnder_withinClosure -> «所闭之闭»",
-   "closure_iff_certified -> «所闭之证»",
-   "not_within_of_closed -> «闭而外则不所闭»"
+   "Amounts.fallsStop_of_ends -> «尽则不或屡» (pure)",
+   "Flow.WithinFeeding.refl -> «所闭之自反» (pure)",
+   "Flow.WithinFeeding.trans -> «所闭之传递» (pure)",
+   "Flow.WithinFeedingAcross.refl -> «所闭之自反» (pure)",
+   "Flow.WithinFeedingAcross.trans -> «所闭之传递» (pure)",
+   "Flow.closedAcross_within -> «所闭之闭» (pure)",
+   "Flow.fedClosed_within -> «所闭之闭» (pure)",
+   "WithinClosure.not_rel -> «所闭之界» (pure)",
+   "WithinClosure.of_rel -> «缘在所闭» (pure)",
+   "WithinClosure.refl -> «所闭之自反» (pure)",
+   "WithinClosure.trans -> «所闭之传递» (pure)",
+   "closedUnder_withinClosure -> «所闭之闭» (pure)",
+   "closure_iff_certified -> «所闭之证» (pure)",
+   "not_within_of_closed -> «闭而外则不所闭» (pure)"
+  ],
+  "balance_anchors": [
+   "Flow.Balances",
+   "Flow.BalancesBetween",
+   "Flow.BalancesOn",
+   "balance_over_stretch_on"
   ],
   "central_declarations": 118,
-  "rows_passing_the_name_test": [],
   "grammar_rows": 44,
-  "grammar_rows_reaching_a_grammar_law": 43,
-  "grammar_rows_reaching_none": [
-   "Web.Whole.family_excess_ends"
-  ],
+  "grammar_rows_reaching_a_grammar_law": 44,
+  "grammar_rows_reaching_none": [],
   "rows_that_are_forwarders": [],
-  "balance_in_statement": {
-   "grammar": 12,
-   "other": 19
+  "rule": {
+   "connected": 32,
+   "unplaced": 31,
+   "at a represented model": 16,
+   "balance in its statement": 32,
+   "own carrier": 7
   },
+  "balance_in_statement": {
+   "anchor": 31,
+   "written_out_only": [
+    "Flow.no_new_dependence"
+   ]
+  },
+  "connected_rows_passing_D1_to_D5_with_their_whole_closed_set": [
+   28,
+   32
+  ],
   "eight": {
    "Flow.beyond_gives_nothing": {
     "law": "«所闭之界»",
-    "law_is_grammar_law": true,
-    "law_reached": true,
+    "D1_law_is_grammar_law": true,
+    "D3_law_reached": true,
+    "D5_no_balance_anchor": true,
     "laws_used": [
      "«所闭之界»"
     ],
-    "bridges_needed": [
+    "closed_set": [
      "eq_zero_of_not_pos"
     ],
-    "bridges_u4_names": [
+    "u4_names": [
      "eq_zero_of_not_pos"
     ],
-    "needed_not_named": [],
-    "named_not_needed": [],
+    "in_closed_set_not_named": [],
+    "named_not_in_closed_set": [],
     "root_theorems_named": [],
-    "counting_laws_reached": []
+    "bridges": [],
+    "support": [
+     "eq_zero_of_not_pos"
+    ]
    },
    "Flow.withinSystem_of_withinInfluence": {
     "law": "«所闭之单调»",
-    "law_is_grammar_law": true,
-    "law_reached": true,
+    "D1_law_is_grammar_law": true,
+    "D3_law_reached": true,
+    "D5_no_balance_anchor": true,
     "laws_used": [
      "«所闭之单调»"
     ],
-    "bridges_needed": [
+    "closed_set": [
      "Flow.shares_of_affectedBy",
      "WithinClosure.mono"
     ],
-    "bridges_u4_names": [
-     "shares_of_affectedBy"
+    "u4_names": [
+     "Flow.shares_of_affectedBy"
     ],
-    "needed_not_named": [
+    "in_closed_set_not_named": [
      "WithinClosure.mono"
     ],
-    "named_not_needed": [],
+    "named_not_in_closed_set": [],
     "root_theorems_named": [],
-    "counting_laws_reached": []
+    "bridges": [],
+    "support": [
+     "Flow.shares_of_affectedBy",
+     "WithinClosure.mono"
+    ]
    },
    "Law.drawn_iff_not_returns": {
     "law": "«定后有后则入当且仅当不返»",
-    "law_is_grammar_law": true,
-    "law_reached": true,
+    "D1_law_is_grammar_law": true,
+    "D3_law_reached": true,
+    "D5_no_balance_anchor": true,
     "laws_used": [
      "«定后有后则入当且仅当不返»"
     ],
-    "bridges_needed": [
+    "closed_set": [
      "Branching.law_reach_iff",
      "Branching.law_trace_iff",
      "Branching.law_trace_of",
@@ -133,13 +184,13 @@
      "Law.returns_iff",
      "Law.returns_iff_reaches"
     ],
-    "bridges_u4_names": [
-     "drawn_iff_drawnIn",
-     "absorbing_iff_closed",
-     "reaches_iff_orbit",
-     "returns_iff_reaches"
+    "u4_names": [
+     "Law.absorbing_iff_closed",
+     "Law.drawn_iff_drawnIn",
+     "Law.reaches_iff_orbit",
+     "Law.returns_iff_reaches"
     ],
-    "needed_not_named": [
+    "in_closed_set_not_named": [
      "Branching.law_reach_iff",
      "Branching.law_trace_iff",
      "Branching.law_trace_of",
@@ -151,18 +202,36 @@
      "Law.reaches_of_orbit",
      "Law.returns_iff"
     ],
-    "named_not_needed": [],
+    "named_not_in_closed_set": [],
     "root_theorems_named": [],
-    "counting_laws_reached": []
+    "bridges": [
+     "Branching.law_reach_iff",
+     "Branching.law_trace_iff",
+     "Law.absorbing_iff_closed",
+     "Law.drawn_iff_drawnIn",
+     "Law.reaches_iff_orbit",
+     "Law.returns_iff",
+     "Law.returns_iff_reaches"
+    ],
+    "support": [
+     "Branching.law_trace_of",
+     "Branching.units_length",
+     "Law.next_fixed",
+     "Law.next_total",
+     "Law.orbit_add",
+     "Law.orbit_shift",
+     "Law.reaches_of_orbit"
+    ]
    },
    "Law.lossless_iff_returns": {
     "law": "«有限遍后定后则定前当且仅当皆返»",
-    "law_is_grammar_law": true,
-    "law_reached": true,
+    "D1_law_is_grammar_law": true,
+    "D3_law_reached": true,
+    "D5_no_balance_anchor": true,
     "laws_used": [
      "«有限遍后定后则定前当且仅当皆返»"
     ],
-    "bridges_needed": [
+    "closed_set": [
      "Branching.law_reach_iff",
      "Branching.law_trace_iff",
      "Branching.law_trace_of",
@@ -178,11 +247,11 @@
      "Law.returns_iff",
      "Law.returns_iff_reaches"
     ],
-    "bridges_u4_names": [
-     "lossless_iff_fixedBefore",
-     "returns_iff_reaches"
+    "u4_names": [
+     "Law.lossless_iff_fixedBefore",
+     "Law.returns_iff_reaches"
     ],
-    "needed_not_named": [
+    "in_closed_set_not_named": [
      "Branching.law_reach_iff",
      "Branching.law_trace_iff",
      "Branching.law_trace_of",
@@ -196,40 +265,63 @@
      "Law.reaches_of_orbit",
      "Law.returns_iff"
     ],
-    "named_not_needed": [],
+    "named_not_in_closed_set": [],
     "root_theorems_named": [],
-    "counting_laws_reached": []
+    "bridges": [
+     "Branching.law_reach_iff",
+     "Branching.law_trace_iff",
+     "Law.lossless_iff",
+     "Law.lossless_iff_fixedBefore",
+     "Law.reaches_iff_orbit",
+     "Law.returns_iff",
+     "Law.returns_iff_reaches"
+    ],
+    "support": [
+     "Branching.law_trace_of",
+     "Branching.units_length",
+     "Law.next_fixed",
+     "Law.next_total",
+     "Law.orbit_add",
+     "Law.orbit_shift",
+     "Law.reaches_of_orbit"
+    ]
    },
    "Learning.goAlike_iff_lumped": {
     "law": "«像定后当且仅当同行»",
-    "law_is_grammar_law": true,
-    "law_reached": true,
+    "D1_law_is_grammar_law": true,
+    "D3_law_reached": true,
+    "D5_no_balance_anchor": true,
     "laws_used": [
      "«像定后当且仅当同行»",
      "«同行之逐点»"
     ],
-    "bridges_needed": [
+    "closed_set": [
      "Learning.lumped_iff_fixed_image",
      "goAlikeUnder_iff_alike"
     ],
-    "bridges_u4_names": [
-     "goAlikeUnder_iff_alike",
-     "lumped_iff_fixed_image"
+    "u4_names": [
+     "Learning.lumped_iff_fixed_image",
+     "goAlikeUnder_iff_alike"
     ],
-    "needed_not_named": [],
-    "named_not_needed": [],
+    "in_closed_set_not_named": [],
+    "named_not_in_closed_set": [],
     "root_theorems_named": [],
-    "counting_laws_reached": []
+    "bridges": [
+     "Learning.lumped_iff_fixed_image",
+     "goAlikeUnder_iff_alike"
+    ],
+    "support": []
    },
    "Tolerance.answers_restores_iff": {
     "law": "«承之迭»",
-    "law_is_grammar_law": true,
-    "law_reached": true,
+    "D1_law_is_grammar_law": true,
+    "D3_law_reached": true,
+    "D5_no_balance_anchor": true,
     "laws_used": [
      "«承之迭»",
      "«迭之末步»"
     ],
-    "bridges_needed": [
+    "closed_set": [
      "Tolerance.KeepsInclusion.course",
      "Tolerance.KeepsInclusionInto.course",
      "Tolerance.answers_keeps",
@@ -240,10 +332,10 @@
      "Withholding.answers_closed",
      "Withholding.chain_iff_steps"
     ],
-    "bridges_u4_names": [
-     "chain_iff_steps"
+    "u4_names": [
+     "Withholding.chain_iff_steps"
     ],
-    "needed_not_named": [
+    "in_closed_set_not_named": [
      "Tolerance.KeepsInclusion.course",
      "Tolerance.KeepsInclusionInto.course",
      "Tolerance.answers_keeps",
@@ -253,19 +345,32 @@
      "Withholding.Chain.zero_eq",
      "Withholding.answers_closed"
     ],
-    "named_not_needed": [],
+    "named_not_in_closed_set": [],
     "root_theorems_named": [],
-    "counting_laws_reached": []
+    "bridges": [
+     "Tolerance.worst_start",
+     "Withholding.answers_closed",
+     "Withholding.chain_iff_steps"
+    ],
+    "support": [
+     "Tolerance.KeepsInclusion.course",
+     "Tolerance.KeepsInclusionInto.course",
+     "Tolerance.answers_keeps",
+     "Withholding.Chain.last",
+     "Withholding.Chain.last_of_eq",
+     "Withholding.Chain.zero_eq"
+    ]
    },
    "Withholding.withholding_spreads": {
     "law": "«存承之迭»",
-    "law_is_grammar_law": true,
-    "law_reached": true,
+    "D1_law_is_grammar_law": true,
+    "D3_law_reached": true,
+    "D5_no_balance_anchor": true,
     "laws_used": [
      "«存承之迭»",
      "«迭之末步»"
     ],
-    "bridges_needed": [
+    "closed_set": [
      "Withholding.Chain.last",
      "Withholding.Chain.last_of_eq",
      "Withholding.Chain.zero_eq",
@@ -273,41 +378,57 @@
      "Withholding.waitsAll_closed",
      "Withholding.within_iff_withinSteps"
     ],
-    "bridges_u4_names": [
-     "within_iff_withinSteps",
-     "chain_iff_steps"
+    "u4_names": [
+     "Withholding.chain_iff_steps",
+     "Withholding.within_iff_withinSteps"
     ],
-    "needed_not_named": [
+    "in_closed_set_not_named": [
      "Withholding.Chain.last",
      "Withholding.Chain.last_of_eq",
      "Withholding.Chain.zero_eq",
      "Withholding.waitsAll_closed"
     ],
-    "named_not_needed": [],
+    "named_not_in_closed_set": [],
     "root_theorems_named": [],
-    "counting_laws_reached": []
+    "bridges": [
+     "Withholding.chain_iff_steps",
+     "Withholding.waitsAll_closed",
+     "Withholding.within_iff_withinSteps"
+    ],
+    "support": [
+     "Withholding.Chain.last",
+     "Withholding.Chain.last_of_eq",
+     "Withholding.Chain.zero_eq"
+    ]
    },
    "WithinMoves.after_course": {
     "law": "«迭内之接»",
-    "law_is_grammar_law": true,
-    "law_reached": true,
+    "D1_law_is_grammar_law": true,
+    "D3_law_reached": true,
+    "D5_no_balance_anchor": true,
     "laws_used": [
      "«迭内之接»"
     ],
-    "bridges_needed": [
+    "closed_set": [
      "trace_iff_steps",
      "trace_steps",
      "withinMoves_iff_withinSteps"
     ],
-    "bridges_u4_names": [
-     "trace_steps",
+    "u4_names": [
      "trace_iff_steps",
+     "trace_steps",
      "withinMoves_iff_withinSteps"
     ],
-    "needed_not_named": [],
-    "named_not_needed": [],
+    "in_closed_set_not_named": [],
+    "named_not_in_closed_set": [],
     "root_theorems_named": [],
-    "counting_laws_reached": []
+    "bridges": [
+     "trace_iff_steps",
+     "withinMoves_iff_withinSteps"
+    ],
+    "support": [
+     "trace_steps"
+    ]
    }
   }
  },
@@ -316,22 +437,36 @@
    "declaration": "Amounts.rests",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«尽则不或屡»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Amounts.add_le_add_right",
+     "Amounts.falls_end",
+     "Amounts.le_refl",
+     "Amounts.le_trans",
+     "Amounts.rests_unrefuted",
+     "Amounts.zero_le"
+    ],
+    "laws_used": [
+     "«尽则不或屡»"
+    ],
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "Branching.loss_passes_juncture",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«及当且仅当一步而所闭»",
     "«所闭之传递»",
@@ -340,567 +475,653 @@
     "«缘在所闭»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Branching.loss_passes_juncture_from",
+     "Branching.step_back",
+     "Generative.trace_append_iff",
+     "Generative.trace_cons_iff",
+     "Reach.of_step",
+     "Reach.refl",
+     "Reach.trans",
+     "reach_iff_withinClosure",
+     "withinClosure_of_trace"
+    ],
+    "laws_used": [
+     "«及当且仅当一步而所闭»",
+     "«所闭之传递»",
+     "«所闭之自反»",
+     "«所闭当且仅当同一或及»",
+     "«缘在所闭»"
+    ],
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "CensusWebs.keep_pace",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": true
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "balance_over_stretch_on"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "ClosedCapture.lock_outlives_loss",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«所闭之自反»",
     "«缘在所闭»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "ClosedCapture.join_course",
+     "ClosedCapture.loss_grows",
+     "ClosedCapture.turn_join",
+     "Generative.trace_append_iff",
+     "Generative.trace_cons_iff",
+     "Ideals.Preorder.refl",
+     "Ideals.Preorder.trans",
+     "Invariant.reach",
+     "Pace.paced_count",
+     "Pace.paced_fast_succ",
+     "Pace.paced_succ",
+     "Pace.stays",
+     "Pace.stays_turned",
+     "Reach.of_step",
+     "Reach.refl",
+     "Reach.trans",
+     "RuleCapture.locked_not_below",
+     "RuleCapture.locked_stays",
+     "RuleCapture.turn_locked",
+     "Run.reach",
+     "Run.step",
+     "Run.window_trace",
+     "invariant_iff_closedUnder",
+     "reach_iff_withinClosure",
+     "withinClosure_of_trace"
+    ],
+    "laws_used": [
+     "«所闭之传递»",
+     "«所闭之自反»",
+     "«缘在所闭»"
+    ],
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "Dependence.Overdetermined.only_together",
    "dependence": "no master law",
    "category": "definitional or representational",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "at a represented model"
   },
   {
    "declaration": "Dependence.differenceOnlyTogether_iff",
    "dependence": "no master law",
    "category": "law of its model",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "at a represented model"
   },
   {
    "declaration": "Direction.extension_iff_widens",
    "dependence": "anchor, not reached",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "Direction.widening_selected_by_pool",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«缘在所闭»"
    ],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Drift.falls_back",
    "dependence": "no master law",
    "category": "law of its model",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "ExchangeLaw.response_not_fixed_by_coupling",
    "dependence": "no master law",
    "category": "definitional or representational",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "own carrier"
   },
   {
    "declaration": "Flow.Balances.comparison_within_response",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«所闭之自反»",
     "«缘在所闭»"
    ],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.Balances.consumption_ends_with_feeders",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.Balances.renewedBy",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.Balances.retains_iff_within_margin",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.Balances.widens_iff_others_within",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.Dissipative.opens",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«尽则不或屡»"
    ],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.More.replenishment_unbounded",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«尽则不或屡»"
    ],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.act_selected_by_pool",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«缘在所闭»"
    ],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.act_unselected",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«缘在所闭»"
    ],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.beyond_gives_nothing",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之界»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
    "forwarder": null,
-   "eight": {
-    "law": "«所闭之界»",
-    "law_is_grammar_law": true,
-    "law_reached": true,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "eq_zero_of_not_pos"
+    ],
     "laws_used": [
      "«所闭之界»"
     ],
-    "bridges_needed": [
-     "eq_zero_of_not_pos"
-    ],
-    "bridges_u4_names": [
-     "eq_zero_of_not_pos"
-    ],
-    "needed_not_named": [],
-    "named_not_needed": [],
     "root_theorems_named": [],
-    "counting_laws_reached": []
+    "balance_anchors_in_closure": []
+   },
+   "eight": {
+    "law": "«所闭之界»",
+    "D1_law_is_grammar_law": true,
+    "D3_law_reached": true,
+    "D5_no_balance_anchor": true,
+    "laws_used": [
+     "«所闭之界»"
+    ],
+    "closed_set": [
+     "eq_zero_of_not_pos"
+    ],
+    "u4_names": [
+     "eq_zero_of_not_pos"
+    ],
+    "in_closed_set_not_named": [],
+    "named_not_in_closed_set": [],
+    "root_theorems_named": [],
+    "bridges": [],
+    "support": [
+     "eq_zero_of_not_pos"
+    ]
    }
   },
   {
    "declaration": "Flow.change_recurs_iff",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "BalancesOn"
+    "anchor_in_statement": [
+     "Flow.BalancesOn"
     ],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.continuing_excludes",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.descent_reaches",
    "dependence": "no master law",
    "category": "single application",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "at a represented model"
   },
   {
    "declaration": "Flow.mutuallyDependent_iff_reach",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«所闭之自反»",
     "«缘在所闭»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "WithinClosure.converse"
+    ],
+    "laws_used": [
+     "«所闭之传递»",
+     "«所闭之自反»",
+     "«缘在所闭»"
+    ],
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "Flow.new_beyond_every",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [
-     "Balances"
-    ],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Flow.Balances"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "Flow.no_new_dependence",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": true,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.outrun_below",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.restores",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": true,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.selected_le",
    "dependence": "no master law",
    "category": "premise of the account",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "Flow.selection_within",
    "dependence": "no master law",
    "category": "premise of the account",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "Flow.transmitted_supported",
    "dependence": "no master law",
    "category": "premise of the account",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "Flow.unexcluded_beyond_coupling",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之闭»"
    ],
    "balance": {
-    "flow_statement": [
-     "BalancesOn"
+    "anchor_in_statement": [
+     "Flow.BalancesOn"
     ],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.unselected_beyond_coupling",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之闭»"
    ],
    "balance": {
-    "flow_statement": [
-     "BalancesOn"
+    "anchor_in_statement": [
+     "Flow.BalancesOn"
     ],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.unselected_beyond_pool",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之闭»"
    ],
    "balance": {
-    "flow_statement": [
-     "BalancesOn"
+    "anchor_in_statement": [
+     "Flow.BalancesOn"
     ],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.uptake_needs_replenishment",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«尽则不或屡»"
    ],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Flow.withinCoupling_reads_iff",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«所闭之单调»",
@@ -908,143 +1129,173 @@
     "«缘在所闭»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Flow.CoupledFrom.of_reads",
+     "Flow.withinCoupling_reads",
+     "WithinClosure.mono",
+     "WithinClosure.of_reads",
+     "WithinClosureOf.of_member",
+     "WithinClosureOf.to_reads",
+     "closedUnder_withinClosureOf"
+    ],
+    "laws_used": [
+     "«所闭之传递»",
+     "«所闭之单调»",
+     "«所闭之自反»",
+     "«缘在所闭»"
+    ],
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "Flow.withinSystem_of_withinInfluence",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之单调»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
    "forwarder": null,
-   "eight": {
-    "law": "«所闭之单调»",
-    "law_is_grammar_law": true,
-    "law_reached": true,
-    "laws_used": [
-     "«所闭之单调»"
-    ],
-    "bridges_needed": [
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
      "Flow.shares_of_affectedBy",
      "WithinClosure.mono"
     ],
-    "bridges_u4_names": [
-     "shares_of_affectedBy"
+    "laws_used": [
+     "«所闭之单调»"
     ],
-    "needed_not_named": [
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   },
+   "eight": {
+    "law": "«所闭之单调»",
+    "D1_law_is_grammar_law": true,
+    "D3_law_reached": true,
+    "D5_no_balance_anchor": true,
+    "laws_used": [
+     "«所闭之单调»"
+    ],
+    "closed_set": [
+     "Flow.shares_of_affectedBy",
      "WithinClosure.mono"
     ],
-    "named_not_needed": [],
+    "u4_names": [
+     "Flow.shares_of_affectedBy"
+    ],
+    "in_closed_set_not_named": [
+     "WithinClosure.mono"
+    ],
+    "named_not_in_closed_set": [],
     "root_theorems_named": [],
-    "counting_laws_reached": []
+    "bridges": [],
+    "support": [
+     "Flow.shares_of_affectedBy",
+     "WithinClosure.mono"
+    ]
    }
   },
   {
    "declaration": "GroupEnding.Flow.all_end",
    "dependence": "no master law",
    "category": "premise of the account",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "GroupEnding.Flow.coupled_end_together",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "GroupEnding.Flow.family_childless",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "GroupEnding.Flow.rises_iff_inactive",
    "dependence": "no master law",
    "category": "premise of the account",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "Ideals.verifiableBy_iff_interior",
    "dependence": "no master law",
    "category": "definitional or representational",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "own carrier"
   },
   {
    "declaration": "Law.drawn_iff_not_returns",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«定后有后则入当且仅当不返»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
    "forwarder": null,
-   "eight": {
-    "law": "«定后有后则入当且仅当不返»",
-    "law_is_grammar_law": true,
-    "law_reached": true,
-    "laws_used": [
-     "«定后有后则入当且仅当不返»"
-    ],
-    "bridges_needed": [
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
      "Branching.law_reach_iff",
      "Branching.law_trace_iff",
      "Branching.law_trace_of",
@@ -1060,13 +1311,43 @@
      "Law.returns_iff",
      "Law.returns_iff_reaches"
     ],
-    "bridges_u4_names": [
-     "drawn_iff_drawnIn",
-     "absorbing_iff_closed",
-     "reaches_iff_orbit",
-     "returns_iff_reaches"
+    "laws_used": [
+     "«定后有后则入当且仅当不返»"
     ],
-    "needed_not_named": [
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   },
+   "eight": {
+    "law": "«定后有后则入当且仅当不返»",
+    "D1_law_is_grammar_law": true,
+    "D3_law_reached": true,
+    "D5_no_balance_anchor": true,
+    "laws_used": [
+     "«定后有后则入当且仅当不返»"
+    ],
+    "closed_set": [
+     "Branching.law_reach_iff",
+     "Branching.law_trace_iff",
+     "Branching.law_trace_of",
+     "Branching.units_length",
+     "Law.absorbing_iff_closed",
+     "Law.drawn_iff_drawnIn",
+     "Law.next_fixed",
+     "Law.next_total",
+     "Law.orbit_add",
+     "Law.orbit_shift",
+     "Law.reaches_iff_orbit",
+     "Law.reaches_of_orbit",
+     "Law.returns_iff",
+     "Law.returns_iff_reaches"
+    ],
+    "u4_names": [
+     "Law.absorbing_iff_closed",
+     "Law.drawn_iff_drawnIn",
+     "Law.reaches_iff_orbit",
+     "Law.returns_iff_reaches"
+    ],
+    "in_closed_set_not_named": [
      "Branching.law_reach_iff",
      "Branching.law_trace_iff",
      "Branching.law_trace_of",
@@ -1078,33 +1359,44 @@
      "Law.reaches_of_orbit",
      "Law.returns_iff"
     ],
-    "named_not_needed": [],
+    "named_not_in_closed_set": [],
     "root_theorems_named": [],
-    "counting_laws_reached": []
+    "bridges": [
+     "Branching.law_reach_iff",
+     "Branching.law_trace_iff",
+     "Law.absorbing_iff_closed",
+     "Law.drawn_iff_drawnIn",
+     "Law.reaches_iff_orbit",
+     "Law.returns_iff",
+     "Law.returns_iff_reaches"
+    ],
+    "support": [
+     "Branching.law_trace_of",
+     "Branching.units_length",
+     "Law.next_fixed",
+     "Law.next_total",
+     "Law.orbit_add",
+     "Law.orbit_shift",
+     "Law.reaches_of_orbit"
+    ]
    }
   },
   {
    "declaration": "Law.lossless_iff_returns",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«有限遍后定后则定前当且仅当皆返»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
    "forwarder": null,
-   "eight": {
-    "law": "«有限遍后定后则定前当且仅当皆返»",
-    "law_is_grammar_law": true,
-    "law_reached": true,
-    "laws_used": [
-     "«有限遍后定后则定前当且仅当皆返»"
-    ],
-    "bridges_needed": [
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
      "Branching.law_reach_iff",
      "Branching.law_trace_iff",
      "Branching.law_trace_of",
@@ -1120,11 +1412,41 @@
      "Law.returns_iff",
      "Law.returns_iff_reaches"
     ],
-    "bridges_u4_names": [
-     "lossless_iff_fixedBefore",
-     "returns_iff_reaches"
+    "laws_used": [
+     "«有限遍后定后则定前当且仅当皆返»"
     ],
-    "needed_not_named": [
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   },
+   "eight": {
+    "law": "«有限遍后定后则定前当且仅当皆返»",
+    "D1_law_is_grammar_law": true,
+    "D3_law_reached": true,
+    "D5_no_balance_anchor": true,
+    "laws_used": [
+     "«有限遍后定后则定前当且仅当皆返»"
+    ],
+    "closed_set": [
+     "Branching.law_reach_iff",
+     "Branching.law_trace_iff",
+     "Branching.law_trace_of",
+     "Branching.units_length",
+     "Law.lossless_iff",
+     "Law.lossless_iff_fixedBefore",
+     "Law.next_fixed",
+     "Law.next_total",
+     "Law.orbit_add",
+     "Law.orbit_shift",
+     "Law.reaches_iff_orbit",
+     "Law.reaches_of_orbit",
+     "Law.returns_iff",
+     "Law.returns_iff_reaches"
+    ],
+    "u4_names": [
+     "Law.lossless_iff_fixedBefore",
+     "Law.returns_iff_reaches"
+    ],
+    "in_closed_set_not_named": [
      "Branching.law_reach_iff",
      "Branching.law_trace_iff",
      "Branching.law_trace_of",
@@ -1138,184 +1460,375 @@
      "Law.reaches_of_orbit",
      "Law.returns_iff"
     ],
-    "named_not_needed": [],
+    "named_not_in_closed_set": [],
     "root_theorems_named": [],
-    "counting_laws_reached": []
+    "bridges": [
+     "Branching.law_reach_iff",
+     "Branching.law_trace_iff",
+     "Law.lossless_iff",
+     "Law.lossless_iff_fixedBefore",
+     "Law.reaches_iff_orbit",
+     "Law.returns_iff",
+     "Law.returns_iff_reaches"
+    ],
+    "support": [
+     "Branching.law_trace_of",
+     "Branching.units_length",
+     "Law.next_fixed",
+     "Law.next_total",
+     "Law.orbit_add",
+     "Law.orbit_shift",
+     "Law.reaches_of_orbit"
+    ]
    }
   },
   {
    "declaration": "Learnable.learnable_iff",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«迭之定»",
     "«迭之接»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Identification.bounded_agree",
+     "Identification.firstFit_found",
+     "Identification.firstFit_sound",
+     "Identification.lassos_agree",
+     "Identification.period_extends",
+     "Identification.periodic_whole",
+     "Identification.prefix_eq_iff",
+     "Identification.residue",
+     "Identification.statesBelow_iff_lasso",
+     "Identification.statesBelow_mono",
+     "Law.orbit_add",
+     "Law.orbit_held",
+     "Law.orbit_shift",
+     "Law.sameFuture_iff_below",
+     "Law.statesBelow_held",
+     "Law.step_fixed",
+     "Law.steps_orbit",
+     "Learnable.agree_of_predicts_both",
+     "Learnable.firstFit_congr",
+     "Learnable.prefixes_same",
+     "Learning.lasso_of_held",
+     "Learning.prefix_congr",
+     "Learning.prefix_length",
+     "SameAhead.next",
+     "SameAhead.refl",
+     "SameAhead.symm",
+     "SameAhead.trans",
+     "gap_of_lt",
+     "lasso_iff_sameAhead",
+     "le_succ_cases",
+     "revisits_within",
+     "shared_below",
+     "skipAt_le",
+     "skipAt_lt",
+     "skipAt_ne",
+     "split_top",
+     "statesBelow_of_same"
+    ],
+    "laws_used": [
+     "«迭之定»",
+     "«迭之接»"
+    ],
+    "root_theorems_named": [
+     "GrammarLaws.gap_of_lt",
+     "GrammarLaws.le_succ_cases",
+     "GrammarLaws.mem_cons_split",
+     "GrammarLaws.revisits_within",
+     "GrammarLaws.skipAt_le",
+     "GrammarLaws.skipAt_lt",
+     "GrammarLaws.skipAt_ne",
+     "GrammarLaws.split_at_head",
+     "le_dest"
+    ],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "LearnableRuns.learnable_iff_tracks",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«迭之定»",
     "«迭之接»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Alike.realized",
+     "Alike.step",
+     "Branching.law_run_state",
+     "Identification.bounded_agree",
+     "Identification.firstFit_found",
+     "Identification.firstFit_sound",
+     "Identification.lassos_agree",
+     "Identification.period_extends",
+     "Identification.periodic_whole",
+     "Identification.prefix_eq_iff",
+     "Identification.residue",
+     "Identification.statesBelow_iff_lasso",
+     "Identification.statesBelow_mono",
+     "Law.alike_future",
+     "Law.alike_iff_sameFuture",
+     "Law.orbit_add",
+     "Law.orbit_held",
+     "Law.orbit_shift",
+     "Law.sameFuture_bisimulation",
+     "Law.sameFuture_iff_below",
+     "Law.statesBelow_held",
+     "Law.step_fixed",
+     "Law.steps_orbit",
+     "Learnable.agree_of_predicts_both",
+     "Learnable.firstFit_congr",
+     "Learnable.learnable_iff",
+     "Learnable.prefixes_same",
+     "LearnableRuns.agree_of_predicts_both",
+     "LearnableRuns.agree_of_tracks",
+     "LearnableRuns.course_same",
+     "LearnableRuns.guess_fixedThrough",
+     "LearnableRuns.learnable_iff",
+     "LearnableRuns.predictsFrom_iff",
+     "LearnableRuns.predicts_iff",
+     "LearnableRuns.prefix_eq",
+     "LearnableRuns.tracks_of_learnable",
+     "Learning.lasso_of_held",
+     "Learning.prefix_congr",
+     "Learning.prefix_length",
+     "Run.step",
+     "SameAhead.next",
+     "SameAhead.refl",
+     "SameAhead.symm",
+     "SameAhead.trans",
+     "gap_of_lt",
+     "lasso_iff_sameAhead",
+     "le_succ_cases",
+     "revisits_within",
+     "shared_below",
+     "skipAt_le",
+     "skipAt_lt",
+     "skipAt_ne",
+     "split_top",
+     "statesBelow_of_same"
+    ],
+    "laws_used": [
+     "«迭之定»",
+     "«迭之接»"
+    ],
+    "root_theorems_named": [
+     "GrammarLaws.gap_of_lt",
+     "GrammarLaws.le_succ_cases",
+     "GrammarLaws.mem_cons_split",
+     "GrammarLaws.revisits_within",
+     "GrammarLaws.skipAt_le",
+     "GrammarLaws.skipAt_lt",
+     "GrammarLaws.skipAt_ne",
+     "GrammarLaws.split_at_head",
+     "le_dest"
+    ],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "Learning.Training.unselected_beyond_data",
    "dependence": "no master law",
    "category": "single application",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "own carrier"
   },
   {
    "declaration": "Learning.goAlike_iff_lumped",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«像定后当且仅当同行»",
     "«同行之逐点»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
    "forwarder": null,
-   "eight": {
-    "law": "«像定后当且仅当同行»",
-    "law_is_grammar_law": true,
-    "law_reached": true,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Learning.lumped_iff_fixed_image",
+     "goAlikeUnder_iff_alike"
+    ],
     "laws_used": [
      "«像定后当且仅当同行»",
      "«同行之逐点»"
     ],
-    "bridges_needed": [
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   },
+   "eight": {
+    "law": "«像定后当且仅当同行»",
+    "D1_law_is_grammar_law": true,
+    "D3_law_reached": true,
+    "D5_no_balance_anchor": true,
+    "laws_used": [
+     "«像定后当且仅当同行»",
+     "«同行之逐点»"
+    ],
+    "closed_set": [
      "Learning.lumped_iff_fixed_image",
      "goAlikeUnder_iff_alike"
     ],
-    "bridges_u4_names": [
-     "goAlikeUnder_iff_alike",
-     "lumped_iff_fixed_image"
+    "u4_names": [
+     "Learning.lumped_iff_fixed_image",
+     "goAlikeUnder_iff_alike"
     ],
-    "needed_not_named": [],
-    "named_not_needed": [],
+    "in_closed_set_not_named": [],
+    "named_not_in_closed_set": [],
     "root_theorems_named": [],
-    "counting_laws_reached": []
+    "bridges": [
+     "Learning.lumped_iff_fixed_image",
+     "goAlikeUnder_iff_alike"
+    ],
+    "support": []
    }
   },
   {
    "declaration": "Limit.identifies_iff_tracks",
    "dependence": "no master law",
    "category": "definitional or representational",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "at a represented model"
   },
   {
    "declaration": "Listed.coming_of_ceasing",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": true
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "balance_over_stretch_on"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "Optimum.mutual_beyond",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "BalancesBetween"
+    "anchor_in_statement": [
+     "Flow.BalancesBetween"
     ],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Optimum.optimum_beyond",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "BalancesBetween"
+    "anchor_in_statement": [
+     "Flow.BalancesBetween"
     ],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Pace.rule_until_reading",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«所闭之自反»",
     "«缘在所闭»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Generative.trace_append_iff",
+     "Generative.trace_cons_iff",
+     "Invariant.reach",
+     "Pace.paced_count",
+     "Pace.stays",
+     "Reach.of_step",
+     "Reach.refl",
+     "Reach.trans",
+     "Run.reach",
+     "Run.step",
+     "Run.window_trace",
+     "invariant_iff_closedUnder",
+     "reach_iff_withinClosure",
+     "withinClosure_of_trace"
+    ],
+    "laws_used": [
+     "«所闭之传递»",
+     "«所闭之自反»",
+     "«缘在所闭»"
+    ],
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "PartForms.goAlike",
    "dependence": "anchor, not reached",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "RegimeMargin.Adjusted.comes_to_rest",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«所闭之自反»",
@@ -1324,30 +1837,106 @@
     "«迭之定»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": true
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "balance_over_stretch_on"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Amounts.falls_by_stretch",
+     "Amounts.total_steps_lose",
+     "Amounts.unmarked_or_marked",
+     "Amounts.unmarked_within",
+     "Generative.trace_append_iff",
+     "Generative.trace_cons_iff",
+     "Invariant.reach",
+     "LastChange.room_balance",
+     "LastChange.still_of_fixed_at",
+     "LastChange.still_succ",
+     "LastChange.still_within",
+     "Lasting.orbit_mono",
+     "Lasting.orbit_pair",
+     "Law.orbit_add",
+     "Law.orbit_mul",
+     "Law.orbit_shift",
+     "Law.step_fixed",
+     "Law.steps_orbit",
+     "Optimum.sub_le_sub_left_of_le",
+     "Reach.of_step",
+     "Reach.refl",
+     "Reach.trans",
+     "RegimeMargin.Adjusted.fixed_iff",
+     "RegimeMargin.Adjusted.given_le_level",
+     "RegimeMargin.Adjusted.in_band",
+     "RegimeMargin.Adjusted.rest_iff",
+     "RegimeMargin.Adjusted.rests_falling",
+     "RegimeMargin.Adjusted.rests_from",
+     "RegimeMargin.Adjusted.rests_rising",
+     "RegimeMargin.Adjusted.run_falls",
+     "RegimeMargin.Adjusted.run_rises",
+     "RegimeMargin.Adjusted.step_mono",
+     "RegimeMargin.Adjusted.sum_lt_of_below",
+     "RegimeMargin.Adjusted.unordered_below",
+     "RegimeMargin.Adjusted.unordered_falls",
+     "RegimeMargin.Adjusted.unordered_le",
+     "Requirement.Formation.sub_lt_sub_of_lt",
+     "Run.reach",
+     "Run.step",
+     "Run.window_trace",
+     "invariant_iff_closedUnder",
+     "reach_iff_withinClosure",
+     "withinClosure_of_trace"
+    ],
+    "laws_used": [
+     "«所闭之传递»",
+     "«所闭之自反»",
+     "«缘在所闭»",
+     "«迭之周»",
+     "«迭之定»"
+    ],
+    "root_theorems_named": [
+     "Naturals.add_left_cancel",
+     "Naturals.add_right_cancel",
+     "Naturals.add_sub_of_le",
+     "Naturals.le_of_add_le_add_left",
+     "Naturals.le_of_add_le_add_right",
+     "Naturals.le_of_add_le_right",
+     "Naturals.le_sub_of_add_le",
+     "Naturals.sub_add_cancel",
+     "Naturals.sub_sub",
+     "Naturals.succ_sub_succ",
+     "balance_over_stretch_on",
+     "le_dest",
+     "sub_eq_zero_of_le"
+    ],
+    "balance_anchors_in_closure": [
+     "balance_over_stretch_on"
+    ]
+   }
   },
   {
    "declaration": "RegimeMargin.Adjusted.ends_iff_below",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": true
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "balance_over_stretch_on"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "RegimeMargin.Adjusted.falls_iff_below",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«所闭之自反»",
@@ -1356,294 +1945,611 @@
     "«迭之定»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": true
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "balance_over_stretch_on"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Amounts.falls_by_stretch",
+     "Amounts.total_steps_lose",
+     "Amounts.unmarked_or_marked",
+     "Amounts.unmarked_within",
+     "Generative.trace_append_iff",
+     "Generative.trace_cons_iff",
+     "Invariant.reach",
+     "LastChange.room_balance",
+     "LastChange.still_of_fixed_at",
+     "LastChange.still_same",
+     "LastChange.still_stays",
+     "LastChange.still_succ",
+     "LastChange.still_within",
+     "Lasting.orbit_mono",
+     "Lasting.orbit_pair",
+     "Law.orbit_add",
+     "Law.orbit_mul",
+     "Law.orbit_shift",
+     "Law.step_fixed",
+     "Law.steps_orbit",
+     "Optimum.sub_le_sub_left_of_le",
+     "Reach.of_step",
+     "Reach.refl",
+     "Reach.trans",
+     "RegimeMargin.Adjusted.comes_to_rest",
+     "RegimeMargin.Adjusted.falls_iff",
+     "RegimeMargin.Adjusted.falls_of_below",
+     "RegimeMargin.Adjusted.fixed_iff",
+     "RegimeMargin.Adjusted.given_le_level",
+     "RegimeMargin.Adjusted.in_band",
+     "RegimeMargin.Adjusted.rest_iff",
+     "RegimeMargin.Adjusted.rests_falling",
+     "RegimeMargin.Adjusted.rests_from",
+     "RegimeMargin.Adjusted.rests_iff_falling",
+     "RegimeMargin.Adjusted.rests_rising",
+     "RegimeMargin.Adjusted.run_falls",
+     "RegimeMargin.Adjusted.run_rises",
+     "RegimeMargin.Adjusted.step_mono",
+     "RegimeMargin.Adjusted.sum_lt_of_below",
+     "RegimeMargin.Adjusted.unordered_below",
+     "RegimeMargin.Adjusted.unordered_falls",
+     "RegimeMargin.Adjusted.unordered_le",
+     "RegimeMargin.leading_exact",
+     "RegimeMargin.leading_false",
+     "RegimeMargin.leading_le",
+     "RegimeMargin.leading_true",
+     "Requirement.Formation.sub_lt_sub_of_lt",
+     "Run.reach",
+     "Run.step",
+     "Run.window_trace",
+     "invariant_iff_closedUnder",
+     "reach_iff_withinClosure",
+     "withinClosure_of_trace"
+    ],
+    "laws_used": [
+     "«所闭之传递»",
+     "«所闭之自反»",
+     "«缘在所闭»",
+     "«迭之周»",
+     "«迭之定»"
+    ],
+    "root_theorems_named": [
+     "Naturals.add_left_cancel",
+     "Naturals.add_right_cancel",
+     "Naturals.add_sub_of_le",
+     "Naturals.le_of_add_le_add_left",
+     "Naturals.le_of_add_le_add_right",
+     "Naturals.le_of_add_le_right",
+     "Naturals.le_sub_of_add_le",
+     "Naturals.sub_add_cancel",
+     "Naturals.sub_sub",
+     "Naturals.succ_sub_succ",
+     "balance_over_stretch_on",
+     "le_dest",
+     "sub_eq_zero_of_le"
+    ],
+    "balance_anchors_in_closure": [
+     "balance_over_stretch_on"
+    ]
+   }
   },
   {
    "declaration": "RegimeMargin.Coupled.Indexed.ends_downstream",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«所闭之自反»",
     "«缘在所闭»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Amounts.add_comm",
+     "Amounts.add_zero",
+     "Amounts.zero_add",
+     "RegimeMargin.Coupled.Indexed.downstream_within",
+     "RegimeMargin.Coupled.Indexed.drains",
+     "RegimeMargin.Coupled.Indexed.ends_after",
+     "RegimeMargin.Coupled.Indexed.ends_of_partner",
+     "RegimeMargin.Drawn.sub_zero"
+    ],
+    "laws_used": [
+     "«所闭之传递»",
+     "«所闭之自反»",
+     "«缘在所闭»"
+    ],
+    "root_theorems_named": [
+     "Naturals.le_of_add_le_add_right",
+     "Naturals.sub_sub",
+     "add_sub_of_le",
+     "sub_eq_zero_of_le"
+    ],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "RegimeMargin.Coupled.threshold_falls",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«所闭之自反»",
     "«缘在所闭»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": true
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "balance_over_stretch_on"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Amounts.add_comm",
+     "Amounts.add_le_add_left",
+     "Amounts.add_le_add_right",
+     "Amounts.falls_by_stretch",
+     "Amounts.le_of_add_le_add_right",
+     "Amounts.le_of_eq",
+     "Amounts.le_refl",
+     "Amounts.le_trans",
+     "Amounts.total_steps_lose",
+     "Amounts.unmarked_or_marked",
+     "Amounts.unmarked_within",
+     "Amounts.zero_add",
+     "Amounts.zero_le",
+     "Generative.trace_append_iff",
+     "Generative.trace_cons_iff",
+     "Invariant.reach",
+     "Lasting.orbit_mono",
+     "Lasting.orbit_pair",
+     "Reach.of_step",
+     "Reach.refl",
+     "Reach.trans",
+     "RegimeMargin.Coupled.Indexed.alikeOn_false",
+     "RegimeMargin.Coupled.Indexed.alikeOn_true",
+     "RegimeMargin.Coupled.Indexed.comes_to_rest",
+     "RegimeMargin.Coupled.Indexed.ends_iff",
+     "RegimeMargin.Coupled.Indexed.ends_iff_ending",
+     "RegimeMargin.Coupled.Indexed.ends_of_below",
+     "RegimeMargin.Coupled.Indexed.leftOver_bound",
+     "RegimeMargin.Coupled.Indexed.leftOver_le",
+     "RegimeMargin.Coupled.Indexed.leftOver_lt",
+     "RegimeMargin.Coupled.Indexed.left_falls",
+     "RegimeMargin.Coupled.Indexed.pointwise_of_rises",
+     "RegimeMargin.Coupled.Indexed.pointwise_step",
+     "RegimeMargin.Coupled.Indexed.respects",
+     "RegimeMargin.Coupled.Indexed.rests_by",
+     "RegimeMargin.Coupled.Indexed.run_alike",
+     "RegimeMargin.Coupled.Indexed.run_alike_of",
+     "RegimeMargin.Coupled.Indexed.run_below",
+     "RegimeMargin.Coupled.Indexed.run_within",
+     "RegimeMargin.Coupled.Indexed.setAt_below",
+     "RegimeMargin.Coupled.Indexed.setAt_within",
+     "RegimeMargin.Coupled.Indexed.step_alike",
+     "RegimeMargin.Coupled.Indexed.step_mono",
+     "RegimeMargin.Coupled.Indexed.still_of_left",
+     "RegimeMargin.Coupled.Indexed.threshold_falls",
+     "RegimeMargin.Coupled.Indexed.within_draw",
+     "RegimeMargin.Coupled.band_web",
+     "RegimeMargin.Coupled.covers_pair",
+     "RegimeMargin.Coupled.given_within",
+     "RegimeMargin.Coupled.left_le",
+     "RegimeMargin.Coupled.pair_at",
+     "RegimeMargin.Coupled.pair_count",
+     "RegimeMargin.Coupled.pair_rises",
+     "RegimeMargin.Coupled.pair_run",
+     "RegimeMargin.Coupled.pair_within",
+     "RegimeMargin.Coupled.setAt_pair",
+     "RegimeMargin.Coupled.threshold_pair",
+     "RegimeMargin.Drawn.add_cancel",
+     "RegimeMargin.Drawn.add_sub",
+     "RegimeMargin.Drawn.antisymm",
+     "RegimeMargin.Drawn.sub_mono",
+     "RegimeMargin.Drawn.sub_zero",
+     "RegimeMargin.Drawn.total",
+     "RegimeMargin.leading_congr",
+     "RegimeMargin.leading_falls",
+     "RegimeMargin.leading_false",
+     "RegimeMargin.leading_le",
+     "RegimeMargin.leading_true",
+     "Run.reach",
+     "Run.step",
+     "Run.window_trace",
+     "invariant_iff_closedUnder",
+     "reach_iff_withinClosure",
+     "withinClosure_of_trace"
+    ],
+    "laws_used": [
+     "«所闭之传递»",
+     "«所闭之自反»",
+     "«缘在所闭»"
+    ],
+    "root_theorems_named": [
+     "Naturals.add_sub_of_le",
+     "Naturals.le_of_add_le_add_left",
+     "Naturals.le_of_add_le_add_right",
+     "Naturals.le_of_add_le_right",
+     "Naturals.le_sub_of_add_le",
+     "Naturals.sub_add_cancel",
+     "Naturals.succ_sub_succ",
+     "add_sub_of_le",
+     "balance_over_stretch_on",
+     "sub_eq_zero_of_le"
+    ],
+    "balance_anchors_in_closure": [
+     "balance_over_stretch_on"
+    ]
+   }
   },
   {
    "declaration": "RegimeMargin.Drawn.run_shape",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«所闭之自反»",
     "«缘在所闭»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Amounts.add_comm",
+     "Amounts.add_le_add_left",
+     "Amounts.add_le_add_right",
+     "Amounts.add_zero",
+     "Amounts.le_add_left",
+     "Amounts.le_add_right",
+     "Amounts.le_of_add_le_add_right",
+     "Amounts.le_of_eq",
+     "Amounts.le_refl",
+     "Amounts.le_trans",
+     "Amounts.zero_add",
+     "Amounts.zero_le",
+     "Generative.trace_append_iff",
+     "Generative.trace_cons_iff",
+     "Invariant.reach",
+     "Lasting.orbit_mono",
+     "Lasting.orbit_pair",
+     "Law.orbit_add",
+     "Reach.of_step",
+     "Reach.refl",
+     "Reach.trans",
+     "RegimeMargin.Drawn.add_cancel",
+     "RegimeMargin.Drawn.add_sub",
+     "RegimeMargin.Drawn.climbs_next",
+     "RegimeMargin.Drawn.climbs_or_sinks",
+     "RegimeMargin.Drawn.falling_on",
+     "RegimeMargin.Drawn.given_le_level",
+     "RegimeMargin.Drawn.level_down_iff",
+     "RegimeMargin.Drawn.level_of_low",
+     "RegimeMargin.Drawn.level_up_iff",
+     "RegimeMargin.Drawn.rising_on",
+     "RegimeMargin.Drawn.sinks_next",
+     "RegimeMargin.Drawn.step_mono",
+     "RegimeMargin.Drawn.sub_mono",
+     "RegimeMargin.Drawn.sub_zero",
+     "RegimeMargin.Drawn.total",
+     "Run.reach",
+     "Run.step",
+     "Run.window_trace",
+     "invariant_iff_closedUnder",
+     "reach_iff_withinClosure",
+     "withinClosure_of_trace"
+    ],
+    "laws_used": [
+     "«所闭之传递»",
+     "«所闭之自反»",
+     "«缘在所闭»"
+    ],
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "RegimeMargin.ends_iff_below",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": true
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "balance_over_stretch_on"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "RelativePosition.rise_needs_fall",
    "dependence": "no master law",
    "category": "law of its model",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "Renewable.no_exact_finite_reading",
    "dependence": "no master law",
    "category": "single application",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "at a represented model"
   },
   {
    "declaration": "Reproduction.Flow.closed_lineage_lowered",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "BalancesOn"
+    "anchor_in_statement": [
+     "Flow.BalancesOn"
     ],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Reproduction.Flow.lineage_ends",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "BalancesOn"
+    "anchor_in_statement": [
+     "Flow.BalancesOn"
     ],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Reproduction.Flow.number_within_take",
    "dependence": "no master law",
    "category": "premise of the account",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "RuleCapture.favouring_locks",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«所闭之自反»",
     "«缘在所闭»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Generative.trace_append_iff",
+     "Generative.trace_cons_iff",
+     "Invariant.reach",
+     "Pace.paced_count",
+     "Pace.paced_succ",
+     "Pace.stays",
+     "Pace.stays_turned",
+     "Reach.of_step",
+     "Reach.refl",
+     "Reach.trans",
+     "RuleCapture.favours_throughout",
+     "RuleCapture.turn_favours",
+     "Run.reach",
+     "Run.step",
+     "Run.window_trace",
+     "invariant_iff_closedUnder",
+     "reach_iff_withinClosure",
+     "withinClosure_of_trace"
+    ],
+    "laws_used": [
+     "«所闭之传递»",
+     "«所闭之自反»",
+     "«缘在所闭»"
+    ],
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "RuleCapture.uniform_locks",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«所闭之自反»",
     "«缘在所闭»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Generative.trace_append_iff",
+     "Generative.trace_cons_iff",
+     "Invariant.reach",
+     "Pace.paced_count",
+     "Pace.paced_succ",
+     "Pace.stays",
+     "Pace.stays_turned",
+     "Reach.of_step",
+     "Reach.refl",
+     "Reach.trans",
+     "RuleCapture.favours_after_reading",
+     "RuleCapture.turn_favours",
+     "Run.reach",
+     "Run.step",
+     "Run.window_trace",
+     "invariant_iff_closedUnder",
+     "reach_iff_withinClosure",
+     "withinClosure_of_trace"
+    ],
+    "laws_used": [
+     "«所闭之传递»",
+     "«所闭之自反»",
+     "«缘在所闭»"
+    ],
+    "root_theorems_named": [
+     "le_dest"
+    ],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "Run.not_fixes_of_untaken",
    "dependence": "no master law",
    "category": "law of its model",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "at a represented model"
   },
   {
    "declaration": "SelectionLevels.levels_sized",
    "dependence": "no master law",
    "category": "counting identity",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "SelectionLevels.rises_exact_iff_levels",
    "dependence": "no master law",
    "category": "counting identity",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "SelectionTerm.Flow.support_moved_rises",
    "dependence": "no master law",
    "category": "premise of the account",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "SelectionTerm.Flow.support_not_lower",
    "dependence": "no master law",
    "category": "premise of the account",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "SelectionTerm.covariation",
    "dependence": "no master law",
    "category": "counting identity",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "SharedCodes.run_agrees_every_start_iff",
    "dependence": "no master law",
    "category": "law of its model",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "at a represented model"
   },
   {
    "declaration": "Tolerance.answers_restores_iff",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«承之迭»",
     "«迭之末步»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
    "forwarder": null,
-   "eight": {
-    "law": "«承之迭»",
-    "law_is_grammar_law": true,
-    "law_reached": true,
-    "laws_used": [
-     "«承之迭»",
-     "«迭之末步»"
-    ],
-    "bridges_needed": [
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
      "Tolerance.KeepsInclusion.course",
      "Tolerance.KeepsInclusionInto.course",
      "Tolerance.answers_keeps",
@@ -1654,10 +2560,37 @@
      "Withholding.answers_closed",
      "Withholding.chain_iff_steps"
     ],
-    "bridges_u4_names": [
-     "chain_iff_steps"
+    "laws_used": [
+     "«承之迭»",
+     "«迭之末步»"
     ],
-    "needed_not_named": [
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   },
+   "eight": {
+    "law": "«承之迭»",
+    "D1_law_is_grammar_law": true,
+    "D3_law_reached": true,
+    "D5_no_balance_anchor": true,
+    "laws_used": [
+     "«承之迭»",
+     "«迭之末步»"
+    ],
+    "closed_set": [
+     "Tolerance.KeepsInclusion.course",
+     "Tolerance.KeepsInclusionInto.course",
+     "Tolerance.answers_keeps",
+     "Tolerance.worst_start",
+     "Withholding.Chain.last",
+     "Withholding.Chain.last_of_eq",
+     "Withholding.Chain.zero_eq",
+     "Withholding.answers_closed",
+     "Withholding.chain_iff_steps"
+    ],
+    "u4_names": [
+     "Withholding.chain_iff_steps"
+    ],
+    "in_closed_set_not_named": [
      "Tolerance.KeepsInclusion.course",
      "Tolerance.KeepsInclusionInto.course",
      "Tolerance.answers_keeps",
@@ -1667,434 +2600,562 @@
      "Withholding.Chain.zero_eq",
      "Withholding.answers_closed"
     ],
-    "named_not_needed": [],
+    "named_not_in_closed_set": [],
     "root_theorems_named": [],
-    "counting_laws_reached": []
+    "bridges": [
+     "Tolerance.worst_start",
+     "Withholding.answers_closed",
+     "Withholding.chain_iff_steps"
+    ],
+    "support": [
+     "Tolerance.KeepsInclusion.course",
+     "Tolerance.KeepsInclusionInto.course",
+     "Tolerance.answers_keeps",
+     "Withholding.Chain.last",
+     "Withholding.Chain.last_of_eq",
+     "Withholding.Chain.zero_eq"
+    ]
    }
   },
   {
    "declaration": "Valuation.significant_iff",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«所闭之自反»",
     "«缘在所闭»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Generative.trace_append_iff",
+     "Generative.trace_cons_iff",
+     "Invariant.reach",
+     "Reach.of_step",
+     "Reach.refl",
+     "Reach.trans",
+     "Valuation.forced_iff_reach",
+     "Valuation.reaches",
+     "Valuation.significant_of_grounds",
+     "Valuation.transmits_invariant",
+     "invariant_iff_closedUnder",
+     "reach_iff_withinClosure",
+     "withinClosure_of_trace"
+    ],
+    "laws_used": [
+     "«所闭之传递»",
+     "«所闭之自反»",
+     "«缘在所闭»"
+    ],
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "Valuation.significant_iff_held",
    "dependence": "no master law",
    "category": "definitional or representational",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "own carrier"
   },
   {
    "declaration": "Viability.kernel_and_iff",
    "dependence": "no master law",
    "category": "definitional or representational",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "at a represented model"
   },
   {
    "declaration": "Web.Carries.active_not_recurring",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«尽则不或屡»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Amounts.add_le_add_right",
+     "Amounts.falls_end",
+     "Amounts.le_refl",
+     "Amounts.le_trans",
+     "Amounts.rests",
+     "Amounts.rests_unrefuted",
+     "Amounts.whole_times_one",
+     "Amounts.whole_within",
+     "Amounts.zero_le",
+     "Web.active_not_recurring_from",
+     "falls_not_recurring"
+    ],
+    "laws_used": [
+     "«尽则不或屡»"
+    ],
+    "root_theorems_named": [
+     "Naturals.le_of_add_le_add_right"
+    ],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "Web.Embodied.replenishes",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Web.Next.frontier_ends_drawn_first",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": true
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "balance_over_stretch_on"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "Web.Unceasing.activeRenewer_recurs",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«尽则不或屡»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Amounts.add_le_add_right",
+     "Amounts.falls_end",
+     "Amounts.le_refl",
+     "Amounts.le_trans",
+     "Amounts.rests",
+     "Amounts.rests_unrefuted",
+     "Amounts.whole_times_one",
+     "Amounts.whole_within",
+     "Amounts.zero_le",
+     "Web.Unceasing.rises",
+     "Web.depletion_not_recurring",
+     "Web.stock_le",
+     "Web.stock_lt",
+     "falls_not_recurring"
+    ],
+    "laws_used": [
+     "«尽则不或屡»"
+    ],
+    "root_theorems_named": [
+     "Naturals.le_of_add_le_add_right"
+    ],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "Web.Unceasing.rises",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«尽则不或屡»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Amounts.add_le_add_right",
+     "Amounts.falls_end",
+     "Amounts.le_refl",
+     "Amounts.le_trans",
+     "Amounts.rests",
+     "Amounts.rests_unrefuted",
+     "Amounts.whole_times_one",
+     "Amounts.whole_within",
+     "Amounts.zero_le",
+     "Web.depletion_not_recurring",
+     "Web.stock_le",
+     "Web.stock_lt",
+     "falls_not_recurring"
+    ],
+    "laws_used": [
+     "«尽则不或屡»"
+    ],
+    "root_theorems_named": [
+     "Naturals.le_of_add_le_add_right"
+    ],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "Web.Whole.family_excess_ends",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
-   "grammar_laws_reached": [],
+   "grammar_laws_reached": [
+    "«线则所闭»",
+    "«闭含所闭»"
+   ],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Web.course_lost_iff",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "BalancesBetween"
+    "anchor_in_statement": [
+     "Flow.BalancesBetween"
     ],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "balance_over_stretch_on"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "Web.frontier_breaks_below",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": true
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "balance_over_stretch_on"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "Web.frontier_broken",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": true
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "balance_over_stretch_on"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "Web.frontier_exhausts",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": true
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "balance_over_stretch_on"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "Web.frontier_keeps_stepwise",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": true
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "balance_over_stretch_on"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "Web.frontier_rebuilds",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": true
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "balance_over_stretch_on"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "Web.living_on_reaches",
    "dependence": "no master law",
    "category": "single application",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "at a represented model"
   },
   {
    "declaration": "Web.optimum_broken_iff",
    "dependence": "no master law",
    "category": "law of its model",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "at a represented model"
   },
   {
    "declaration": "Web.paths_comparison_widens",
    "dependence": "anchor, not reached",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "own carrier"
   },
   {
    "declaration": "Web.paths_extension_iff_widens",
    "dependence": "anchor, not reached",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "own carrier"
   },
   {
    "declaration": "Web.paths_one_object",
    "dependence": "anchor, not reached",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "Web.renewingAt_iff_over_all",
    "dependence": "no master law",
    "category": "definitional or representational",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "at a represented model"
   },
   {
    "declaration": "Web.roles_alive",
    "dependence": "no master law",
    "category": "definitional or representational",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "at a represented model"
   },
   {
    "declaration": "Web.roles_dependent",
    "dependence": "no master law",
    "category": "definitional or representational",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "at a represented model"
   },
   {
    "declaration": "Web.roles_supported",
    "dependence": "no master law",
    "category": "definitional or representational",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "at a represented model"
   },
   {
    "declaration": "Web.selfValuation_significant_iff",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之自反»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Valuation.significant_iff_held",
+     "Web.selfValuation_held"
+    ],
+    "laws_used": [
+     "«所闭之自反»"
+    ],
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "Web.significance_undetermined",
    "dependence": "no master law",
    "category": "definitional or representational",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "at a represented model"
   },
   {
    "declaration": "Web.transmits_at_iff",
    "dependence": "no master law",
    "category": "definitional or representational",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "at a represented model"
   },
   {
    "declaration": "Web.widens_iff_retains_adds",
    "dependence": "anchor, not reached",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "Weighting.widens_iff_every_positive",
    "dependence": "anchor, not reached",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "own carrier"
   },
   {
    "declaration": "Withholding.withholding_spreads",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«存承之迭»",
     "«迭之末步»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
    "forwarder": null,
-   "eight": {
-    "law": "«存承之迭»",
-    "law_is_grammar_law": true,
-    "law_reached": true,
-    "laws_used": [
-     "«存承之迭»",
-     "«迭之末步»"
-    ],
-    "bridges_needed": [
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
      "Withholding.Chain.last",
      "Withholding.Chain.last_of_eq",
      "Withholding.Chain.zero_eq",
@@ -2102,175 +3163,282 @@
      "Withholding.waitsAll_closed",
      "Withholding.within_iff_withinSteps"
     ],
-    "bridges_u4_names": [
-     "within_iff_withinSteps",
-     "chain_iff_steps"
+    "laws_used": [
+     "«存承之迭»",
+     "«迭之末步»"
     ],
-    "needed_not_named": [
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   },
+   "eight": {
+    "law": "«存承之迭»",
+    "D1_law_is_grammar_law": true,
+    "D3_law_reached": true,
+    "D5_no_balance_anchor": true,
+    "laws_used": [
+     "«存承之迭»",
+     "«迭之末步»"
+    ],
+    "closed_set": [
+     "Withholding.Chain.last",
+     "Withholding.Chain.last_of_eq",
+     "Withholding.Chain.zero_eq",
+     "Withholding.chain_iff_steps",
+     "Withholding.waitsAll_closed",
+     "Withholding.within_iff_withinSteps"
+    ],
+    "u4_names": [
+     "Withholding.chain_iff_steps",
+     "Withholding.within_iff_withinSteps"
+    ],
+    "in_closed_set_not_named": [
      "Withholding.Chain.last",
      "Withholding.Chain.last_of_eq",
      "Withholding.Chain.zero_eq",
      "Withholding.waitsAll_closed"
     ],
-    "named_not_needed": [],
+    "named_not_in_closed_set": [],
     "root_theorems_named": [],
-    "counting_laws_reached": []
+    "bridges": [
+     "Withholding.chain_iff_steps",
+     "Withholding.waitsAll_closed",
+     "Withholding.within_iff_withinSteps"
+    ],
+    "support": [
+     "Withholding.Chain.last",
+     "Withholding.Chain.last_of_eq",
+     "Withholding.Chain.zero_eq"
+    ]
    }
   },
   {
    "declaration": "WithinMoves.after_course",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«迭内之接»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
    "forwarder": null,
-   "eight": {
-    "law": "«迭内之接»",
-    "law_is_grammar_law": true,
-    "law_reached": true,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "trace_iff_steps",
+     "trace_steps",
+     "withinMoves_iff_withinSteps"
+    ],
     "laws_used": [
      "«迭内之接»"
     ],
-    "bridges_needed": [
-     "trace_iff_steps",
-     "trace_steps",
-     "withinMoves_iff_withinSteps"
-    ],
-    "bridges_u4_names": [
-     "trace_steps",
-     "trace_iff_steps",
-     "withinMoves_iff_withinSteps"
-    ],
-    "needed_not_named": [],
-    "named_not_needed": [],
     "root_theorems_named": [],
-    "counting_laws_reached": []
+    "balance_anchors_in_closure": []
+   },
+   "eight": {
+    "law": "«迭内之接»",
+    "D1_law_is_grammar_law": true,
+    "D3_law_reached": true,
+    "D5_no_balance_anchor": true,
+    "laws_used": [
+     "«迭内之接»"
+    ],
+    "closed_set": [
+     "trace_iff_steps",
+     "trace_steps",
+     "withinMoves_iff_withinSteps"
+    ],
+    "u4_names": [
+     "trace_iff_steps",
+     "trace_steps",
+     "withinMoves_iff_withinSteps"
+    ],
+    "in_closed_set_not_named": [],
+    "named_not_in_closed_set": [],
+    "root_theorems_named": [],
+    "bridges": [
+     "trace_iff_steps",
+     "withinMoves_iff_withinSteps"
+    ],
+    "support": [
+     "trace_steps"
+    ]
    }
   },
   {
    "declaration": "World.balanced_reidentify_iff",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "World.comes_to_rest_unrefuted",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«尽则不或屡»"
    ],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": [
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "act_courses_unselected",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之传递»",
     "«缘在所闭»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [
-     "Balances",
-     "BalancesOn"
-    ],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Flow.Balances",
+     "Flow.BalancesOn"
+    ]
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "ExchangeLaw.Through.responds",
+     "ExchangeLaw.course_balances_iff",
+     "ExchangeLaw.history_agree",
+     "ExchangeLaw.history_stable",
+     "ExchangeLaw.history_succ_of_le",
+     "ExchangeLaw.levels_succ",
+     "ExchangeLaw.sub_add_back_iff",
+     "ExchangeLaw.totals_under",
+     "ExchangeLaw.withAct_follows",
+     "ExchangeLaw.withAct_give_of_part",
+     "ExchangeLaw.withAct_nonanticipating",
+     "ExchangeLaw.withAct_take_of_part",
+     "Flow.Balances.on",
+     "Flow.act_unselected",
+     "Flow.alike_within_closed",
+     "Flow.alike_within_coupling",
+     "Flow.exchange_agrees_within",
+     "Flow.unselected_beyond_coupling_responsive",
+     "eq_zero_of_not_pos",
+     "total_congr_on"
+    ],
+    "laws_used": [
+     "«所闭之传递»",
+     "«缘在所闭»"
+    ],
+    "root_theorems_named": [
+     "Naturals.sub_add_cancel",
+     "Naturals.succ_sub_succ",
+     "add_right_cancel",
+     "le_dest"
+    ],
+    "balance_anchors_in_closure": [
+     "Flow.Balances",
+     "Flow.BalancesOn"
+    ]
+   }
   },
   {
    "declaration": "apart_only_downstream",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "carried_iff_rising",
    "dependence": "no master law",
    "category": "premise of the account",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "counterfactual_is_course",
    "dependence": "balance, represented",
    "category": "balance, represented",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [
-     "Balances"
+    "anchor_in_statement": [
+     "Flow.Balances"
     ],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "balance in its statement"
   },
   {
    "declaration": "forced_iff_center",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之自反»",
     "«所闭之闭»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Boundary.closure",
+     "Boundary.holds",
+     "atCenters_least",
+     "atCenters_presupposed",
+     "atCenters_standpointInvariant",
+     "subTrue_all_iff",
+     "subTrue_empty_iff",
+     "subTrue_significantWithin_iff"
+    ],
+    "laws_used": [
+     "«所闭之自反»",
+     "«所闭之闭»"
+    ],
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "onLoop_of_closing",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«及之传递»",
     "«及当且仅当一步而所闭»",
@@ -2278,53 +3446,97 @@
     "«线则所闭»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Closing.join_below",
+     "Closing.join_from",
+     "Coupled.append",
+     "Coupled.of_reach",
+     "Coupled.one",
+     "Remainder.le_of_add_le_add_left_nat",
+     "Upstream.within"
+    ],
+    "laws_used": [
+     "«及之传递»",
+     "«及当且仅当一步而所闭»",
+     "«所闭当且仅当同一或及»",
+     "«线则所闭»"
+    ],
+    "root_theorems_named": [
+     "Naturals.add_sub_cancel",
+     "Naturals.add_sub_cancel_left",
+     "Naturals.ble_false_of_lt",
+     "Naturals.succ_sub_succ",
+     "le_dest"
+    ],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "presupposition_scopes",
    "dependence": "grammar",
    "category": "master law",
-   "name_test_on_row": false,
    "grammar_laws_reached": [
     "«所闭之自反»",
     "«所闭之闭»"
    ],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "connected",
+   "closed_set": {
+    "lemmas": [
+     "Boundary.closure",
+     "Boundary.holds",
+     "Boundary.whole",
+     "subTrue_all_iff",
+     "subTrue_significantWithin_iff",
+     "superTrue_member_iff",
+     "superTrue_significantWithin_iff",
+     "superTrue_significantWithin_iff_union"
+    ],
+    "laws_used": [
+     "«所闭之自反»",
+     "«所闭之闭»"
+    ],
+    "root_theorems_named": [],
+    "balance_anchors_in_closure": []
+   }
   },
   {
    "declaration": "responses_le_missBound",
    "dependence": "no master law",
    "category": "law of its model",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   },
   {
    "declaration": "unrestricted_iff_livingSignificance",
    "dependence": "no master law",
    "category": "definitional or representational",
-   "name_test_on_row": false,
    "grammar_laws_reached": [],
    "balance": {
-    "flow_statement": [],
-    "flow_proof_only": [],
-    "prelude_law_only": false
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
    },
-   "forwarder": null
+   "forwarder": null,
+   "rule": "unplaced"
   }
  ]
 }
