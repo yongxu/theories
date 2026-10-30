@@ -124,6 +124,8 @@ Where: section 8, Ren's choices, first item; the records above.
 
 **The law and a witness (29 October 2026, board item GW; no change of reading).** Along any reading of the World containing carrying on of the supported, keeping widening needs beginnings of the reading, carrying renewals along passing ([07 §2](../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-keeping-widening-needs)), so renewal of what forms is necessary for keeping what can form widening along a reading. It is not sufficient: on the kind relay, generation at two orders and renewal without end hold while what can form by name only returns. The revision's "生生还改变接下来能够形成哪些状态" is what widening registers within `F`; R25's point stands that 生生 can exceed it ([study](development/gw-generation-and-widening/NOTE.md)).
 
+**Both ways on a course's moments (30 October 2026, board item GW; no change of reading).** Read on a course's moments, with what can form at each as the possible, keeping widening is generation under the one that loses nothing, under premises of deciding ([07 §2](../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing)). So what the revision's "生生还改变接下来能够形成哪些状态" asks, read as keeping widening, is generation of what can form that loses none of it. Under the one, generation allows loss, and the generation of a part's lines is not it. R25's point stands ([study](development/gw-generation-and-widening/NOTE.md)).
+
 <a id="d2-生成的退化的--generative-and-degenerative"></a>
 ### Generative and degenerative
 
@@ -922,6 +924,8 @@ Where: the eight chapters of the restructured account ([01](../../../../theories
 **What would change it.** A reading found to claim more than the laws it names, or to conflict with another reading of the one account, is revised in the chapter and here.
 
 **Item 4 on a model (29 October 2026, board item GW; no change of reading).** The kind relay is generation at two orders together with renewal without end, while what it can form by name only returns ([07 §2](../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-keeping-widening-needs)): the map's generation does not give 生生, as item 4 reads, and keeping widening along a reading needs the map's renewals one grain up, within a kind ([study](development/gw-generation-and-widening/NOTE.md)).
+
+**Item 4 on a course's moments (30 October 2026, board item GW; no change of reading).** By name, on the occurrences, keeping widening is keeping (全守), and on a course's moments, under premises of deciding, it is generation under the one that loses nothing ([07 §2](../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing)). Item 4 holds of the map's generation of a part's lines; widening is generation read on the possible as a whole, and only with nothing lost ([study](development/gw-generation-and-widening/NOTE.md)).
 
 <a id="d66-the-work-read-by-its-own-laws"></a>
 ### The work read by its own laws

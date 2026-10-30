@@ -1071,6 +1071,11 @@
    "base": "old-base",
    "note": "Optimum SG6: keeping forgoes renewal"
   },
+  "keeping-widening-is-generation-losing-nothing": {
+   "region": "significance",
+   "base": "general",
+   "note": "WideningOnTheMap GW6: keeping widening is 全生成 at (nothing lost, the same possible) on a course's moments, both ways under premises of deciding; loss parts it from generation under the one; the World by name"
+  },
   "laws-at-coarser-steps": {
    "region": "root",
    "base": "old-base",
@@ -3468,6 +3473,11 @@
    "base": "old-base",
    "note": "old base's regimes on the map"
   },
+  "Becoming.MapRegions": {
+   "region": "map",
+   "base": "grammar",
+   "note": "GW1/GW2 the map's regions: keeping from some point on, coverage with excluded middle, the gap, LPO on a line; the split of a beginning"
+  },
   "Becoming.MatchedCourses": {
    "region": "significance",
    "base": "frame",
@@ -4212,6 +4222,11 @@
    "region": "map",
    "base": "old-base",
    "note": "whole active while some part is; persisting whole only through generation; WE1"
+  },
+  "Becoming.WideningOnTheMap": {
+   "region": "significance",
+   "base": "general",
+   "note": "GW6 keeping widening read on the map: 全生成 at (nothing lost, the same possible) both ways; loss parts it from generation under the one; by name each kept, the whole generating"
   },
   "Becoming.Withholding": {
    "region": "collective",
