@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-29T16:55:21+00:00",
+  "reviewed_at_utc": "2026-10-30T10:17:28+00:00",
   "statement": {
-    "en": "Expected free energy, risk plus ambiguity, is the negative of epistemic less pragmatic value, the epistemic value an expected information gain; where the likelihood reads states only through classes it is the classes', so beliefs alike on the classes have one expected free energy.",
-    "zh": "期望自由能（风险加模糊）即认知价值减实用价值之负，认知价值为期望信息增益；似然唯经类读状态时，其值即诸类之值，故于诸类相同之信念有同一期望自由能。"
+    "en": "Expected free energy, risk plus ambiguity, is the negative of epistemic less pragmatic value, epistemic value an information gain; it reads beliefs only through the likelihood's classes, and seeking by it, its posterior the core's share given the course, reads the prior only through those classes.",
+    "zh": "期望自由能（风险加模糊）即认知价值减实用价值之负，认知价值为信息增益；其唯经似然所成之类读信念，依之探求（其后验即核心于历程下之份额）亦唯经此诸类读先验。"
   },
   "laws": [
     {
@@ -76,6 +76,83 @@
         "Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped",
         "Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped"
       ]
+    },
+    {
+      "en": "A course of seeking, each experiment chosen from the course so far: the posterior after it, the prior times its likelihood normalized, is, with nonnegative weights and where the course weighs something, the belief of least free energy among those zero wherever the joint weights are; choice weights that weigh something, or each experiment's nonzero scale, drop out of it (coursePosterior_minimizes and nine more).",
+      "zh": "探求之历程（每一实验依迄今之历程而选）：其后之后验，即先验乘其似然而归一，于权重非负且历程有权重处，于联合权重为零处亦为零之信念中自由能最小；历程上有权重之择取权重，或每一实验之非零尺度，皆于其中消去（coursePosterior_minimizes 等十项）。",
+      "declarations": [
+        "Becoming.ExpectedFreeEnergy.courseLik",
+        "Becoming.ExpectedFreeEnergy.choiceWeight",
+        "Becoming.ExpectedFreeEnergy.coursePosterior",
+        "Becoming.ExpectedFreeEnergy.courseLik_nonneg",
+        "Becoming.ExpectedFreeEnergy.courseLik_pos",
+        "Becoming.ExpectedFreeEnergy.coursePosterior_minimizes",
+        "Becoming.ExpectedFreeEnergy.posterior_choice_eq_coursePosterior",
+        "Becoming.ExpectedFreeEnergy.choiceWeight_ne_zero",
+        "Becoming.ExpectedFreeEnergy.courseLik_rescale",
+        "Becoming.ExpectedFreeEnergy.coursePosterior_rescale"
+      ]
+    },
+    {
+      "en": "With natural weights and the hypotheses listed once, the core's share given a listed course is, as a real number, the posterior after it where the choices along it weigh something, however often the course is listed, and the core's order of two shares given it is the posterior's order; where the choices weigh nothing the share is 0 (givenCourse_eq_coursePosterior and six more).",
+      "zh": "自然数权重且假设列而不重时，核心于所列历程下之份额作为实数即其后之后验，于其上之择取有权重处，无论此历程列几次；核心于其下二份额之序即后验之序；择取无权重处份额为 0（givenCourse_eq_coursePosterior 等七项）。",
+      "declarations": [
+        "Becoming.ExpectedFreeEnergy.cast_seekWeight",
+        "Becoming.ExpectedFreeEnergy.mass_count",
+        "Becoming.ExpectedFreeEnergy.givenCourse_eq_coursePosterior",
+        "Becoming.ExpectedFreeEnergy.unchosen_share_zero",
+        "Becoming.ExpectedFreeEnergy.share_le_iff_toReal_le",
+        "Becoming.ExpectedFreeEnergy.givenCourse_le_iff",
+        "Becoming.ExpectedFreeEnergy.Witness.unchosen_course"
+      ]
+    },
+    {
+      "en": "Choice by a rule with natural weights reading the experiments' expected free energies is among the core's policies, so the core's law holds at it whatever the agent's model (an instance); over the reals a tied pair keeps its prior ratio, and its strict order where the course is possible under it, under every policy weighing the course something, the softmax among them (coursePosterior_order_kept and twelve more).",
+      "zh": "依读诸实验之期望自由能之自然数权重规则以择实验，为核心之一策略，故无论主体之模型如何，核心之律于其成立（一实例）；于实数，每一实验皆并之二状态于每一历程后保其先验之比，于历程于其下可能处保其严格之序，于予此历程以权重之每一策略下，softmax 在其中（coursePosterior_order_kept 等十三项）。",
+      "declarations": [
+        "Becoming.ExpectedFreeEnergy.courseWeight",
+        "Becoming.ExpectedFreeEnergy.efeChoice",
+        "Becoming.ExpectedFreeEnergy.softmax",
+        "Becoming.ExpectedFreeEnergy.softmax_pos",
+        "Becoming.ExpectedFreeEnergy.sum_softmax",
+        "Becoming.ExpectedFreeEnergy.softmax_choiceWeight_pos",
+        "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order",
+        "Becoming.ExpectedFreeEnergy.courseLik_tied",
+        "Becoming.ExpectedFreeEnergy.coursePosterior_ratio_kept",
+        "Becoming.ExpectedFreeEnergy.coursePosterior_order_kept",
+        "Becoming.ExpectedFreeEnergy.softmax_order_kept",
+        "Becoming.ExpectedFreeEnergy.Witness.agreeing_pos",
+        "Becoming.ExpectedFreeEnergy.Witness.separating_turns"
+      ]
+    },
+    {
+      "en": "Where every likelihood reads a state only through its class, conditioning commutes with the lumping: at every step expected free energy and epistemic value are the classes', and priors alike on the classes choose alike under every rule and give every course one predictive weight; for any likelihoods, seeking by it reads the prior only through each likelihood profile's weight (seeking_reads_profiles and nine more).",
+      "zh": "每一实验之似然唯经其类读状态时，条件化与归并可交换，故每一步之期望自由能与认知价值即诸类之值，于诸类相同之二先验于每一规则下择取相同、予每一历程同一预测权重；于任意似然，依之探求唯经其予每一似然轮廓之权重读先验（seeking_reads_profiles 等十项）。",
+      "declarations": [
+        "Becoming.ExpectedFreeEnergy.courseLik_through",
+        "Becoming.ExpectedFreeEnergy.coarse_div",
+        "Becoming.ExpectedFreeEnergy.coarse_coursePosterior",
+        "Becoming.ExpectedFreeEnergy.efe_through_course",
+        "Becoming.ExpectedFreeEnergy.epistemic_through_course",
+        "Becoming.ExpectedFreeEnergy.courseWeight_through",
+        "Becoming.ExpectedFreeEnergy.efeChoice_same_of_coarse",
+        "Becoming.ExpectedFreeEnergy.seeking_blind_to_split",
+        "Becoming.ExpectedFreeEnergy.softmax_blind_to_split",
+        "Becoming.ExpectedFreeEnergy.seeking_reads_profiles"
+      ]
+    },
+    {
+      "en": "The blindness bites: with an experiment reading agreement and one telling nothing, the coin's prior and the one exchanging the two biases' weights are alike on the classes, so after two heads their posteriors differ (25 and 35 in 84) while under every rule, set of outcomes and preference they weigh both experiments alike at every course and every course alike (Witness.split_unseen and six more).",
+      "zh": "盲之实效：有读是否相同之实验与一无所告之实验，硬币之先验与互换二偏币权重之先验于诸类相同，故两次正面后二者之后验不同（84 中之 25 与 35），而于每一规则、结果集与偏好下，二者于每一历程予二实验同一权重、予每一历程同一权重（Witness.split_unseen 等七项）。",
+      "declarations": [
+        "Becoming.ExpectedFreeEnergy.Witness.biasClass",
+        "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing",
+        "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothingByClass",
+        "Becoming.ExpectedFreeEnergy.Witness.swappedPrior",
+        "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing_through",
+        "Becoming.ExpectedFreeEnergy.Witness.priors_alike",
+        "Becoming.ExpectedFreeEnergy.Witness.split_unseen"
+      ]
     }
   ],
   "hypotheses": [
@@ -90,12 +167,16 @@
     {
       "en": "Modelling choices: finite states and outcomes; real distributions; one step and one policy, its predicted distribution over states given; risk over outcomes; Mathlib's conventions log 0 = 0 and x / 0 = 0.",
       "zh": "建模之选：有限之状态与结果；实数之分布；一步一策略，给定其对状态之预测分布；风险取于结果之上；Mathlib 之约定 log 0 = 0 与 x / 0 = 0。"
+    },
+    {
+      "en": "For seeking: a policy is one experiment, the hidden state fixed over a course, the preferences one for every experiment, a rule reading the expected free energies and the experiment (so a fixed habit), with natural weights for the core's law; the join takes natural weights, hypotheses listed once, and a listed course its policy chooses with some weight; profiles compared classically.",
+      "zh": "于探求：一策略即一实验，隐状态于历程中不变，偏好于每一实验相同，规则读期望自由能与实验（故含固定之习惯），核心之律需其为自然数权重；相接需自然数权重、假设列而不重、策略以某权重所选之所列历程；轮廓之比较为经典。"
     }
   ],
   "does_not_show": [
     {
-      "en": "The softmax over policies, precision, multi-step policies with transitions, learning of the likelihood, novelty terms, or any process by which an agent reaches its choice.",
-      "zh": "策略之 softmax、精度、具转移之多步策略、似然之学习、新奇项，或主体达成其选择之任何过程。",
+      "en": "Precision as a belief, multi-step policies with transitions, habits learned from the course, learning of the likelihood, novelty terms, or any process by which an agent reaches its choice; the softmax only as one rule.",
+      "zh": "作为信念之精度、具转移之多步策略、自历程习得之习惯、似然之学习、新奇项，或主体达成其选择之任何过程；softmax 仅作一规则。",
       "kind": "scope"
     },
     {
@@ -104,8 +185,8 @@
       "kind": "scope"
     },
     {
-      "en": "A theorem joining it to the core's counting form: its ratio law is stated on FreeEnergyReals' posterior.",
-      "zh": "与核心之计数形式相接之定理：其比之律述于 FreeEnergyReals 之后验之上。",
+      "en": "Whether, or how often, an agent choosing by expected free energy chooses an experiment that separates: that turns on its preferences, its posterior and the experiments' information.",
+      "zh": "依期望自由能而选之主体是否、或多常选取能分之实验：此取决于其偏好、其后验与诸实验之信息。",
       "kind": "scope"
     },
     {
@@ -126,6 +207,27 @@
         "en": "Two beliefs splitting a class's weight differently, alike on the classes, have one expected free energy (expectedFreeEnergy_same_of_coarse): no choice by expected free energy tells them apart.",
         "zh": "二信念于一类内分其权重不同，而于诸类相同，有同一期望自由能（expectedFreeEnergy_same_of_coarse）：依期望自由能之选择不分二者。"
       }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean",
+      "detail": {
+        "en": "Where an experiment separates, the posterior turns: with the coin's prior 5, 6 and 7, two heads read by the experiment reading both tosses put the true coin above the tails-biased one, which every course of the experiment reading agreement alone leaves above (Witness.separating_turns).",
+        "zh": "实验能分处后验翻转：硬币之先验为 5、6、7，读两次投掷之实验读得两次正面，置真币于偏反面者之上，而唯读是否相同之实验之每一历程皆令后者居上（Witness.separating_turns）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean",
+      "detail": {
+        "en": "A course the policy never chooses: the policy choosing the experiment reading both tosses never chooses two heads read by agreement, so the core's share given that course is 0 as a real number, while the posterior after it is not (Witness.unchosen_course).",
+        "zh": "策略从不选之历程：选读两次投掷之实验之策略从不选唯读是否相同所读之两次正面，故核心于此历程下之份额作为实数为 0，而其后之后验不然（Witness.unchosen_course）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean",
+      "detail": {
+        "en": "Two priors whose posteriors differ seek alike: with an experiment reading agreement and one telling nothing, the priors 5, 6, 7 and 7, 6, 5 give the heads-biased coin 25 and 35 in 84 after two heads, yet weigh both experiments alike at every course under every rule reading expected free energy (Witness.split_unseen).",
+        "zh": "后验不同之二先验探求相同：有读是否相同之实验与一无所告之实验，先验 5、6、7 与 7、6、5 于两次正面后予偏正面之币 84 中之 25 与 35，而于读期望自由能之每一规则下于每一历程予二实验同一权重（Witness.split_unseen）。"
+      }
     }
   ],
   "standard_boundaries": [
@@ -136,16 +238,16 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the periphery checker check_expected_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261029T164946.410686Z): all 21 declarations of ExpectedFreeEnergyReals, each on Lean's standard axioms only, FreeEnergyReals and every core module of its closure matching a passed receipt. An independent review by another AI agent (REVIEW-UE19) and a re-check, study section 453; not reviewed by a person.",
-    "zh": "外围检查器 check_expected_free_energy_reals.py 以 Lean 4.30.0-rc2 与固定之 Mathlib 实查（回执 20261029T164946.410686Z）：ExpectedFreeEnergyReals 之全部 21 项声明，皆只依 Lean 之标准公理，FreeEnergyReals 与其闭包之每一核心模块皆合于已通过之回执。另一 AI 代理作独立审查（REVIEW-UE19）并复查，见研究第 453 节；未经人审。"
+    "en": "Machine-checked by the periphery checker check_expected_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261030T101649.229011Z): all 68 declarations of ExpectedFreeEnergyReals, each on Lean's standard axioms only, FreeEnergyReals and every core module of its closure, Becoming.LumpedSeeking among them, matching a passed receipt. Independent reviews by other AI agents (REVIEW-UE19; REVIEW-UE23 and RECHECK-UE23 for seeking), study sections 453 and 464; not reviewed by a person.",
+    "zh": "外围检查器 check_expected_free_energy_reals.py 以 Lean 4.30.0-rc2 与定版 Mathlib 实查（回执 20261030T101649.229011Z）：ExpectedFreeEnergyReals 全部 68 项声明只依标准公理，FreeEnergyReals 与闭包之核心模块（含 LumpedSeeking）合于已通过之回执。AI 独立审查（REVIEW-UE19；REVIEW-UE23、RECHECK-UE23），研究第 453 与 464 节；未经人审。"
   },
   "next_delta": {
-    "en": "The data-processing bound; the join to the core's counting form through givenShare_eq_posterior; a many-step form with lumpable transitions; review by a person.",
-    "zh": "数据处理之界；经 givenShare_eq_posterior 与核心之计数形式相接；具可归并转移之多步形式；人之审查。"
+    "en": "The data-processing bound; a many-step form with lumpable transitions; review by a person.",
+    "zh": "数据处理之界；具可归并转移之多步形式；人之审查。"
   },
   "correspondence": {
-    "en": "Expected free energy as defined by Parr and Friston (2019, Biological Cybernetics 113): risk over outcomes plus ambiguity, equivalently the negative of epistemic value, the mutual information of states and outcomes, less pragmatic value, the expected log preference. Friston, Rigoli, Ognibene, Mathys, FitzGerald and Pezzulo (2015) split a policy's quality into extrinsic and epistemic value; Da Costa and others (2020) take risk over states and reach this form approximately. The expected information gain is the form Wen (2025, arXiv:2508.05766) names. The decompositions are the principle's definitions and the gain form is known; the forms through the lumping are near-definitional, new here in the principle's terms. Graded in UE19's NOTE.",
-    "zh": "期望自由能依 Parr 与 Friston（2019，Biological Cybernetics 113）之定义：结果上之风险加模糊，等价于认知价值（状态与结果之互信息）减实用价值（期望对数偏好）之负。Friston、Rigoli、Ognibene、Mathys、FitzGerald、Pezzulo（2015）分策略之质为外在价值与认知价值；Da Costa 等（2020）取状态上之风险，近似得此形式。期望信息增益为 Wen（2025，arXiv:2508.05766）所称之形式。二分解为原理之定义，增益之形式已知；经归并之形式近乎定义，于原理之语汇中为新。分级见 UE19 之 NOTE。"
+    "en": "Expected free energy as defined by Parr and Friston (2019, Biological Cybernetics 113): risk over outcomes plus ambiguity, equivalently the negative of epistemic value, the mutual information of states and outcomes, less pragmatic value, the expected log preference. Friston, Rigoli, Ognibene, Mathys, FitzGerald and Pezzulo (2015) split a policy's quality into extrinsic and epistemic value; Da Costa and others (2020) take risk over states and reach this form approximately. The expected information gain is the form Wen (2025, arXiv:2508.05766) names. The decompositions are the principle's definitions and the gain form is known; the forms through the lumping are near-definitional, new here in the principle's terms. Graded in UE19's NOTE. For seeking: that data leave a prior's split within a class of observationally equivalent states unchanged is Bayesian non-identification (Kadane 1974, Poirier 1998), the blindness of seeking its corollary for designs whose criterion reads the posterior only through the classes; the softmax over expected free energy is the principle's rule (Da Costa and others 2020); new is the join to the core's seeking. Graded in UE23's NOTE.",
+    "zh": "期望自由能依 Parr 与 Friston（2019，Biological Cybernetics 113）之定义：结果上之风险加模糊，等价于认知价值（状态与结果之互信息）减实用价值（期望对数偏好）之负。Friston、Rigoli、Ognibene、Mathys、FitzGerald、Pezzulo（2015）分策略之质为外在价值与认知价值；Da Costa 等（2020）取状态上之风险，近似得此形式。期望信息增益为 Wen（2025，arXiv:2508.05766）所称之形式。二分解为原理之定义，增益之形式已知；经归并之形式近乎定义，于原理之语汇中为新。分级见 UE19 之 NOTE。于探求：数据不改先验于观测等价之状态之类内之分，即贝叶斯之不可识别（Kadane 1974，Poirier 1998），探求之盲为其于准则唯经诸类读后验之设计之推论；期望自由能之 softmax 为原理之规则（Da Costa 等 2020）；新者为与核心之探求相接。分级见 UE23 之 NOTE。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean",
   "aliases": [
@@ -156,7 +258,8 @@
     "epistemic and pragmatic value",
     "expected information gain",
     "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic",
-    "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse"
+    "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse",
+    "Becoming.ExpectedFreeEnergy.seeking_reads_profiles"
   ],
   "dependencies": [
     {
@@ -166,14 +269,22 @@
         "en": "divergence and posterior: the divergence and the posterior of FreeEnergyReals.",
         "zh": "divergence 与 posterior：FreeEnergyReals 之散度与后验。"
       }
+    },
+    {
+      "id": "what-seeking-cannot-separate",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "seekWeight, Tied, seeking_keeps_order and the coin of Agree: the core's course of seeking, read over the reals with choice by expected free energy as its policy.",
+        "zh": "seekWeight、Tied、seeking_keeps_order 与 Agree 之硬币：核心之探求历程，以依期望自由能之择取为其策略，于实数读之。"
+      }
     }
   ],
   "related": [
     {
       "id": "what-seeking-cannot-separate",
       "detail": {
-        "en": "What seeking cannot separate: in counting form, in the pure core, a pair every experiment ties keeps its prior order under every course of seeking.",
-        "zh": "探求所不能分者：于纯核心之计数形式，每一实验皆并之二假设于每一探求历程下保其先验之序。"
+        "en": "What seeking cannot separate: in counting form, in the pure core, a pair every experiment ties keeps its prior order under every course of seeking; choice by expected free energy with natural weights is among its policies (efe_seeking_keeps_order, an instance).",
+        "zh": "探求所不能分者：于纯核心之计数形式，每一实验皆并之二假设于每一探求历程下保其先验之序；依期望自由能之择取为其一策略（自然数权重者；efe_seeking_keeps_order，一实例）。"
       }
     }
   ],
@@ -182,29 +293,76 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean",
       "role": "proof",
       "declarations": [
+        "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing",
+        "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothingByClass",
+        "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing_through",
+        "Becoming.ExpectedFreeEnergy.Witness.agreeing_pos",
+        "Becoming.ExpectedFreeEnergy.Witness.biasClass",
+        "Becoming.ExpectedFreeEnergy.Witness.priors_alike",
+        "Becoming.ExpectedFreeEnergy.Witness.separating_turns",
+        "Becoming.ExpectedFreeEnergy.Witness.split_unseen",
+        "Becoming.ExpectedFreeEnergy.Witness.swappedPrior",
+        "Becoming.ExpectedFreeEnergy.Witness.unchosen_course",
         "Becoming.ExpectedFreeEnergy.ambiguity",
+        "Becoming.ExpectedFreeEnergy.cast_seekWeight",
+        "Becoming.ExpectedFreeEnergy.choiceWeight",
+        "Becoming.ExpectedFreeEnergy.choiceWeight_ne_zero",
         "Becoming.ExpectedFreeEnergy.coarse",
+        "Becoming.ExpectedFreeEnergy.coarse_coursePosterior",
+        "Becoming.ExpectedFreeEnergy.coarse_div",
+        "Becoming.ExpectedFreeEnergy.courseLik",
+        "Becoming.ExpectedFreeEnergy.courseLik_nonneg",
+        "Becoming.ExpectedFreeEnergy.courseLik_pos",
+        "Becoming.ExpectedFreeEnergy.courseLik_rescale",
+        "Becoming.ExpectedFreeEnergy.courseLik_through",
+        "Becoming.ExpectedFreeEnergy.courseLik_tied",
+        "Becoming.ExpectedFreeEnergy.coursePosterior",
+        "Becoming.ExpectedFreeEnergy.coursePosterior_minimizes",
+        "Becoming.ExpectedFreeEnergy.coursePosterior_order_kept",
+        "Becoming.ExpectedFreeEnergy.coursePosterior_ratio_kept",
+        "Becoming.ExpectedFreeEnergy.coursePosterior_rescale",
+        "Becoming.ExpectedFreeEnergy.courseWeight",
+        "Becoming.ExpectedFreeEnergy.courseWeight_through",
+        "Becoming.ExpectedFreeEnergy.efeChoice",
+        "Becoming.ExpectedFreeEnergy.efeChoice_same_of_coarse",
+        "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order",
+        "Becoming.ExpectedFreeEnergy.efe_through_course",
         "Becoming.ExpectedFreeEnergy.epistemic",
         "Becoming.ExpectedFreeEnergy.epistemic_eq_divergence",
         "Becoming.ExpectedFreeEnergy.epistemic_eq_expected_gain",
         "Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped",
         "Becoming.ExpectedFreeEnergy.epistemic_nonneg",
         "Becoming.ExpectedFreeEnergy.epistemic_through",
+        "Becoming.ExpectedFreeEnergy.epistemic_through_course",
         "Becoming.ExpectedFreeEnergy.expectedFreeEnergy",
         "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic",
         "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse",
         "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_through",
         "Becoming.ExpectedFreeEnergy.gain_term",
+        "Becoming.ExpectedFreeEnergy.givenCourse_eq_coursePosterior",
+        "Becoming.ExpectedFreeEnergy.givenCourse_le_iff",
         "Becoming.ExpectedFreeEnergy.joint",
+        "Becoming.ExpectedFreeEnergy.mass_count",
+        "Becoming.ExpectedFreeEnergy.posterior_choice_eq_coursePosterior",
         "Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped",
         "Becoming.ExpectedFreeEnergy.pragmatic",
         "Becoming.ExpectedFreeEnergy.predicted",
         "Becoming.ExpectedFreeEnergy.predicted_through",
         "Becoming.ExpectedFreeEnergy.product",
         "Becoming.ExpectedFreeEnergy.risk",
-        "Becoming.ExpectedFreeEnergy.sum_through"
+        "Becoming.ExpectedFreeEnergy.seeking_blind_to_split",
+        "Becoming.ExpectedFreeEnergy.seeking_reads_profiles",
+        "Becoming.ExpectedFreeEnergy.share_le_iff_toReal_le",
+        "Becoming.ExpectedFreeEnergy.softmax",
+        "Becoming.ExpectedFreeEnergy.softmax_blind_to_split",
+        "Becoming.ExpectedFreeEnergy.softmax_choiceWeight_pos",
+        "Becoming.ExpectedFreeEnergy.softmax_order_kept",
+        "Becoming.ExpectedFreeEnergy.softmax_pos",
+        "Becoming.ExpectedFreeEnergy.sum_softmax",
+        "Becoming.ExpectedFreeEnergy.sum_through",
+        "Becoming.ExpectedFreeEnergy.unchosen_share_zero"
       ],
-      "sha256": "5e39061898c33c668d97f6bb6099bc88517dbc34ebc17ac0b6142a892262719a"
+      "sha256": "c0f9c343586af9d6b379a53eaecd870836a6aa4448894d5fc46e45666b96f54b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
@@ -224,12 +382,12 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/check_expected_free_energy_reals.py",
       "role": "integration",
-      "sha256": "fc48266dbef080763cf41e98b154601b1766ff672909c4f0694da3f2342fd303"
+      "sha256": "1b01d97ae07b8f38838c646b02a436f07d7384c6036d12d579829fb34e78a0e1"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "9e197668e4c87c4ace407a86693dfccf530fb5d9ec81a056ced2dcbb7a6dfd73"
+      "sha256": "a9f62575313222b5c7375cbde76b62b23e10a8c9dcf7a93bb20430a90d169ecc"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue19-expected-free-energy/NOTE.md",
@@ -249,7 +407,7 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "fb52f044256608a41faf11728a17d5a5c971ead1b8dafffbc675122e452321a6"
+      "sha256": "e10ec490ab793eb224d00568a3195690d3a51c4f23938843d1a0ba315441e849"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
@@ -258,10 +416,34 @@
       "declarations": []
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T043340.180184Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LumpedSeeking.lean",
+      "role": "proof",
+      "sha256": "2dd8f4c21db56595f934b8939bc58cd2921e08bcce54cdceae9d6e31dcb3aced"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T101649.229011Z/verification.json",
       "role": "receipt",
-      "sha256": "11544a4219bbe517cf65964c03df590024150d57822ddff43587b7593bcc0d68",
-      "declarations": []
+      "sha256": "faf5fa83ee108a7766cc9e6245e09723e71bc2948adf01b06b1a2607261b9880"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T164943.729811Z/verification.json",
+      "role": "receipt",
+      "sha256": "90045f08330f2bdf2df1d888eb17d62d7cd9c1d0546ab710bd7f5b14b3b2e7a4"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue23-seeking-by-expected-free-energy/NOTE.md",
+      "role": "integration",
+      "sha256": "b252bc0fab2612fe6b69aa1f3efb24621ee0e20aa49bc635b676db38449dc50f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue23-seeking-by-expected-free-energy/REVIEW-UE23.md",
+      "role": "integration",
+      "sha256": "8de8d4df2f14656350b018ddadc2d99eadce6164f22e67723b69340e6874ebbd"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue23-seeking-by-expected-free-energy/RECHECK-UE23.md",
+      "role": "integration",
+      "sha256": "ad58101a35833a4e68e8815421f90601de2f93d6ada7c03e84f0b8d59f456549"
     }
   ],
   "proof_bindings": [
@@ -274,8 +456,15 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T043340.180184Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T101649.229011Z/verification.json",
       "sha256_pointer": "/source_sha256/ExpectedFreeEnergyReals",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LumpedSeeking.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T164943.729811Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.LumpedSeeking",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -284,6 +473,10 @@
     {
       "en": "29 October 2026: added (UE19), expected free energy and its terms in the periphery: risk plus ambiguity as the negative of epistemic less pragmatic value, the epistemic value a divergence and an expected information gain, and expected free energy read only through the lumping its likelihood makes; after a review and a re-check; study section 453.",
       "zh": "2026年10月29日：新增（UE19），外围之期望自由能及其诸项：风险加模糊即认知价值减实用价值之负，认知价值为散度与期望信息增益，期望自由能唯经其似然所成之归并而读；经审查与复查；研究第 453 节。"
+    },
+    {
+      "en": "30 October 2026, board item UE23 (study section 464): seeking by expected free energy, joined to the core's seeking; the statement extended to the course form; five laws citing the 47 new declarations of ExpectedFreeEnergyReals (the posterior after a course and its least free energy, the core's share given the course as that posterior and the two orders as one, choice by expected free energy with natural weights among the core's policies, the tie over the reals under every policy weighing the course something, the course through the lumping and for any likelihoods, three witnesses), a hypothesis, three counterexamples, a formal-reuse dependency and a binding to the core receipt for Becoming.LumpedSeeking; the first and third does-not-show items and the next step brought to the join; receipt 20261030T101649.229011Z; after an independent review and its recheck, every point taken. No earlier declaration changed.",
+      "zh": "2026年10月30日，工作板条目 UE23（研究第 464 节）：依期望自由能之探求与核心之探求相接；陈述扩至历程形式；五律引 ExpectedFreeEnergyReals 之 47 项新声明（历程后之后验及其自由能最小、核心于历程下之份额即此后验且二序为一、依期望自由能之自然数权重择取为核心之一策略、实数上予历程以权重之每一策略下之并、经归并及于任意似然之历程、三见证），一前提、三反例、一形式复用之依赖，并绑定 Becoming.LumpedSeeking 之核心回执；所不示之第一与第三项及下一步依相接修订；回执 20261030T101649.229011Z；经独立审查及复查，诸点皆采。先前之声明皆未改变。"
     }
   ]
 }
