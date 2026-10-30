@@ -4,6 +4,8 @@ RF round 2, second part, RF-M.2: an act held for a reading (plan §4.7). Before 
 
 The cross-model reader reported 8 points, every one taken. The lenses reported 78 findings, 75 confirmed and 3 refuted by their refuters; what each became is in [the table](#what-was-taken-from-the-lenses). The module's statements are unchanged; its header and docstrings changed with the findings, and it was rebuilt after each change, last at 90 theorems in 120 declarations, every axiom report empty and no warnings ([build-25](../kit/round2b/logs/build-25.log)).
 
+**The re-check.** How the findings were taken was then re-checked by the cross-model reader, in the cold read's session, read-only, in the rehearsal rebuilt on main with the kit integrated and the diff of the kit's changes since the cold read at its root ([below](#the-re-check); its prompt is in [the brief](BRIEF.md#round-2-second-part)): one point, F32's correction not yet on REVIEW-RFM2-LEAN's page, and no new error. The page was regenerated from its script ([its table](#what-was-taken-from-the-re-check)).
+
 ## The cross-model reader
 
 Verdict: corrections needed. The findings below concern the texts and their correspondence to the declarations; no files were changed and no build was run.
@@ -1191,4 +1193,27 @@ E7's count is weaker, since the preamble frames counts at 81/111, but its PLAN.m
 | F29 | fit | confirmed | “no such candidate” narrows `pair_gains_iff`'s asymmetry | “where no listed candidate of positive weight ranks each of the two above the other” |
 | F30 | fit | confirmed | the overview's cell clause misparses | “through a reading that tells only a cell, no rule through it” |
 | F31 | fit | confirmed | the dossier's sentence on costly correction | as R17 |
-| F32 | fit | confirmed | REVIEW-RFM2-LEAN's opening tells the check out of order | the check at 81 theorems in 111 declarations told first, then the rebuild to 89 in 119, linked to build-18 |
+| F32 | fit | confirmed | REVIEW-RFM2-LEAN's opening tells the check out of order | the check at 81 theorems in 111 declarations told first, then the rebuild to 89 in 119, linked to build-18; the page regenerated after the re-check (its point 1) |
+
+## The re-check
+
+The cross-model reader, in the session of its cold read, read how the findings were taken, read-only. Verbatim; its line numbers are those of the version it read (the kit at `175550266`).
+
+Verdict: one confirmed finding remains partly taken—F32; I found no new substantive discrepancy in the revised texts.
+
+1. **Low — F32’s corrected opening is in the kit script but not in the evidence document.**  
+   Location: [REVIEW-RFM2-LEAN.md:5\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-LEAN.md:5).
+
+   **Quote:** “The module was then rebuilt to 89 theorems in 119 declarations … How each finding is reflected in the rebuilt module was checked … at 81 theorems in 111 declarations”
+
+   **Problem:** The chronology and misleading link label remain unchanged. The correction exists in `kit/round2b/evidence_rfm2_lean.py:32`, but has not reached this document, although `REVIEW-RFM2-COLDREAD.md:1194` reports F32 as taken.
+
+   **Replacement** for the paragraph’s final two sentences:
+
+   > The module was then rebuilt, and at 81 theorems in 111 declarations four read-only Opus readers, one per set of findings, checked from the files alone how each finding is reflected in it; [the table\](#what-was-taken) gives their rows, with the rows that later changes completed marked as updated after the check. Later changes brought the module to 89 theorems in 119 declarations, every axiom report empty ([build-18\](../kit/round2b/logs/build-18.log)).
+
+### What was taken from the re-check
+
+| Point | Status | How |
+|---|---|---|
+| 1 | taken | REVIEW-RFM2-LEAN regenerated from its script: its opening is now the replacement given, word for word, and the Remark 1 row of its literature table is regenerated with it. |

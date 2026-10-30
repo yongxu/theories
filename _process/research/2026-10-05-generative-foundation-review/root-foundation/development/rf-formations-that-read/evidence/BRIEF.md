@@ -855,3 +855,21 @@ A cold reader (lens: <lens>) reported the findings below. For each, try to refut
 
 <the findings, numbered, each with its severity, location, quoted text, problem and proposed replacement>
 ```
+
+### The re-check of RF-M.2's texts after the cold read (the cold read's session continued, `cx -r`, read-only, in a rehearsal of main with the kit integrated and the cold read's diff at its root)
+
+```text
+You re-check, read-only, RF-M.2's texts after the cold read. This checkout is main merged with the kit at 175550266, with the kit's integration applied (nothing committed; do not edit, create, commit, build, render or run make; reading files and read-only shell commands are fine): run `git diff` to see the integrated texts. The record's texts are in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/make_records_rfm2.py (with its amendments AMEND to the landed records what-choices-show-of-an-order, what-a-course-chosen-through-its-model-does-not-test and acts-alike-from-a-model-or-from-an-order, whose current JSON is in theories/becoming/results/records/), the study's in kit/round2b/study_rfm2.txt, PLAN §13's new paragraphs (on the Lean's reviews and the cold read) in PLAN.md itself, 03 §12's theorem paragraph and Reading in kit/round2b/s12_rfm2.txt, the board's in kit/round2b/board_rfm2.py (land). The Lean module experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean is the source of truth: its header and docstrings changed with the findings, its statements did not, and it was rebuilt (90 theorems in 120 declarations, every axiom report empty, no warnings; kit/round2b/logs/build-25.log).
+
+Your cold read found eight points; three lenses (exactness, readings, fit) found 78 findings, each lens's findings judged by one refuter. The evidence folder next to the kit has them verbatim in REVIEW-RFM2-COLDREAD.md, with a table of what each became. RFM2-COLDREAD-DIFF.txt at the checkout root is the diff of the kit's changes since your read (before: the kit at 82725b416, the state you read; after: the kit at 175550266). Check that each confirmed finding, yours included, is taken correctly, and look for any new error or overstatement the changes introduced, in particular:
+- the threshold's sum ("together", "plus") against threshold_go_iff, threshold_off_iff and through_threshold_iff, wherever the threshold is stated;
+- the off-switch paper's Remark 1 read as placing the incentive that is the model's openness less the reading's shortfall, the paper's game having no cost of waiting, in 03 §12's Reading, 08's bullet, the record (English and Chinese), the study, PLAN §4.7 item 4, the module's Readings and REVIEW-RFM2-LEAN's literature table;
+- "a strict reason to wait for another's reading only where that model leaves the sign of going on open" in 03 §12's Reading, and the overview's "strict reason to be corrected";
+- the witness's model ("the gain one where going on gains, the loss one where it loses, else nothing") in 03 §12 and the record, against SignLoop.model, gainOf, lossOf and SignLoop.choose_hold_iff;
+- "a formation holding exactly where holding for the reading gains over both moves on its own model" in the overview, the dossier, the root bullet, the checker's scope and the board;
+- ShownOrder's importers in the root bullet and the study; the citations of shortfall_through and SignLoop.rests_unread;
+- PLAN §4.6's list of what was not built then, §4.7's new title (and the study's link to it), §4.7 items 2, 4, 6 and 7, and §13's new paragraph;
+- the study's two review paragraphs and its Output → input;
+- REVIEW-RFM2-LEAN's updated rows (A6, A9, E7, F10), its re-check row 9 and its opening.
+Report a one-line verdict, then only what is not taken correctly or is new, each with location, quote, problem and replacement; check that a replacement for a record field fits its cap in tools/research/style.py.
+```

@@ -1,10 +1,10 @@
 """Write evidence/REVIEW-RFM2-COLDREAD.md: the cold read of RF-M.2's texts, verbatim, and what was taken.
 
 Inputs (saved where the reads ran): the cross-model reader's cold read (markdown) and the workflow's result, the three
-lenses' findings with their refuters' verdicts (JSON: a list of {lens, findings, verdicts}). Usage, from the repository
-root:
+lenses' findings with their refuters' verdicts (JSON: a list of {lens, findings, verdicts}), and the cross-model reader's
+re-check of how they were taken (markdown); what was taken from the re-check is RECHECK. Usage, from the repository root:
 
-    python3 -B <this file> <cross-model cold read .md> <lens results .json>
+    python3 -B <this file> <cross-model cold read .md> <lens results .json> <re-check .md>
 """
 import json
 import sys
@@ -16,7 +16,7 @@ OUT = STUDY / 'evidence' / 'REVIEW-RFM2-COLDREAD.md'
 ROOTS = ('/private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/wt-rfm2-rehearse/',
          '/Users/ren/theories/.claude/worktrees/rf-landing/')
 
-reader_md, lens_json = (Path(x) for x in sys.argv[1:3])
+reader_md, lens_json, recheck_md = (Path(x) for x in sys.argv[1:4])
 
 
 def unlink(text):
@@ -31,6 +31,8 @@ INTRO = """# The cold read of RF-M.2's texts
 RF round 2, second part, RF-M.2: an act held for a reading (plan §4.7). Before RF-M.2's landing, its texts were cold-read against the Lean of `Becoming.HeldForReading` (`kit/round2b/tree/Becoming/HeldForReading.lean`, 90 theorems in 120 declarations, every axiom report empty), as the kit's integration applied them to main in a rehearsal worktree (the kit at `6d5f244be`, main at `59ca8c812`): 03 §12's opening, its new theorem paragraph with its Reading, the pointer in the acts-alike reading and the Open bullet; 07 §7's sentence on an incentive to accept a correction; 08 §8's bullet; the overview's paragraph; the dossier's scope box, its paragraph on RF's rounds and its account of how it was made; the package's root bullets, both READMEs and the checker's scope sentence; the module's header and docstrings; the record in both languages and the amendments to three related records; the study section's template; PLAN §4.7, §8's row on assistance games, §12, §13 and the Evidence list; regions; the board's texts; and the opening, the literature table and the two tables of what was taken in [REVIEW-RFM2-LEAN](REVIEW-RFM2-LEAN.md). Two reads ran: the cross-model reader (GPT astra, high effort, read-only, a fresh session) and a workflow of three Opus readers, one per lens (exactness, readings, fit), each lens's findings given to one reader asked to refute them against the files. The prompts are in [the brief](BRIEF.md#round-2-second-part). The findings and verdicts are verbatim, with the rehearsal worktree's absolute paths made repository-relative and links shown unlinked (`]\\(`), their targets being relative to the texts' own folders.
 
 {SUMMARY} The module's statements are unchanged; its header and docstrings changed with the findings, and it was rebuilt after each change, last at 90 theorems in 120 declarations, every axiom report empty and no warnings ([build-25](../kit/round2b/logs/build-25.log)).
+
+**The re-check.** How the findings were taken was then re-checked by the cross-model reader, in the cold read's session, read-only, in the rehearsal rebuilt on main with the kit integrated and the diff of the kit's changes since the cold read at its root ([below](#the-re-check); its prompt is in [the brief](BRIEF.md#round-2-second-part)): one point, F32's correction not yet on REVIEW-RFM2-LEAN's page, and no new error. The page was regenerated from its script ([its table](#what-was-taken-from-the-re-check)).
 """
 
 # What was taken from the cross-model reader: (point, finding, taken).
@@ -220,8 +222,15 @@ TAKEN_LENS = {
     'F30': ("the overview's cell clause misparses", "“through a reading that tells only a cell, no rule through it”"),
     'F31': ("the dossier's sentence on costly correction", "as R17"),
     'F32': ("REVIEW-RFM2-LEAN's opening tells the check out of order",
-            "the check at 81 theorems in 111 declarations told first, then the rebuild to 89 in 119, linked to build-18"),
+            "the check at 81 theorems in 111 declarations told first, then the rebuild to 89 in 119, linked to build-18; "
+            "the page regenerated after the re-check (its point 1)"),
 }
+
+# What was taken from the re-check: (point, status, how).
+RECHECK = (
+    ('1', 'taken', "REVIEW-RFM2-LEAN regenerated from its script: its opening is now the replacement given, word for "
+                   "word, and the Remark 1 row of its literature table is regenerated with it."),
+)
 
 reader = reader_md.read_text(encoding='utf-8')
 reader = reader[:reader.index('\n── cx ·')].rstrip('\n')
@@ -265,6 +274,12 @@ parts.append('\n## The three lenses\n')
 parts += blocks
 parts += ['### What was taken from the lenses\n', '| # | Lens | Verdict | Finding | Taken |', '|---|---|---|---|---|']
 parts += rows
+recheck = recheck_md.read_text(encoding='utf-8')
+recheck = recheck[:recheck.index('\n── cx ·')].rstrip('\n')
+parts += ['\n## The re-check\n', 'The cross-model reader, in the session of its cold read, read how the findings were '
+          'taken, read-only. Verbatim; its line numbers are those of the version it read (the kit at `175550266`).\n',
+          unlink(recheck) + '\n', '### What was taken from the re-check\n', '| Point | Status | How |', '|---|---|---|']
+parts += [f'| {p} | {s} | {h} |' for p, s, h in RECHECK]
 text = '\n'.join(parts) + '\n'
 assert '](/' not in text and not any(root in text for root in ROOTS)
 OUT.write_text(text, encoding='utf-8')
