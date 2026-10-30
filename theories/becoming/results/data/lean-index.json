@@ -20,8 +20,8 @@
   },
   "statistics": {
     "lean_paths": 2143,
-    "distinct_byte_contents": 1690,
-    "byte_identical_duplicate_groups": 186,
+    "distinct_byte_contents": 1691,
+    "byte_identical_duplicate_groups": 185,
     "roles": {
       "audit-driver": 13,
       "development-attempt": 1175,
@@ -29,8 +29,8 @@
       "imported-archive": 23,
       "working-source": 929
     },
-    "working_named_theorem_lemma_occurrences": 28745,
-    "working_explicit_named_declaration_occurrences": 42156,
+    "working_named_theorem_lemma_occurrences": 28782,
+    "working_explicit_named_declaration_occurrences": 42203,
     "working_groups": {
       "abstraction": 45,
       "becoming-core": 339,
@@ -15124,7 +15124,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean",
-      "sha256": "5e39061898c33c668d97f6bb6099bc88517dbc34ebc17ac0b6142a892262719a",
+      "sha256": "c0f9c343586af9d6b379a53eaecd870836a6aa4448894d5fc46e45666b96f54b",
       "role": "working-source",
       "group": "core",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
@@ -400309,6 +400309,436 @@
       },
       "print_axioms_commands": 5
     },
+    "c0f9c343586af9d6b379a53eaecd870836a6aa4448894d5fc46e45666b96f54b": {
+      "byte_size": 59617,
+      "line_count": 996,
+      "imports": [
+        "FreeEnergyReals",
+        "Becoming.LumpedSeeking"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "predicted",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.predicted",
+          "line": 109
+        },
+        {
+          "kind": "def",
+          "name": "risk",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.risk",
+          "line": 114
+        },
+        {
+          "kind": "def",
+          "name": "ambiguity",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.ambiguity",
+          "line": 118
+        },
+        {
+          "kind": "def",
+          "name": "expectedFreeEnergy",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.expectedFreeEnergy",
+          "line": 122
+        },
+        {
+          "kind": "def",
+          "name": "pragmatic",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.pragmatic",
+          "line": 128
+        },
+        {
+          "kind": "def",
+          "name": "epistemic",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.epistemic",
+          "line": 134
+        },
+        {
+          "kind": "theorem",
+          "name": "expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic",
+          "line": 139
+        },
+        {
+          "kind": "def",
+          "name": "joint",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.joint",
+          "line": 179
+        },
+        {
+          "kind": "def",
+          "name": "product",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.product",
+          "line": 182
+        },
+        {
+          "kind": "theorem",
+          "name": "epistemic_eq_divergence",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.epistemic_eq_divergence",
+          "line": 189
+        },
+        {
+          "kind": "theorem",
+          "name": "epistemic_nonneg",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.epistemic_nonneg",
+          "line": 210
+        },
+        {
+          "kind": "theorem",
+          "name": "epistemic_eq_zero_of_lumped",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped",
+          "line": 256
+        },
+        {
+          "kind": "theorem",
+          "name": "posterior_ratio_of_lumped",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped",
+          "line": 274
+        },
+        {
+          "kind": "def",
+          "name": "coarse",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.coarse",
+          "line": 290
+        },
+        {
+          "kind": "theorem",
+          "name": "sum_through",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.sum_through",
+          "line": 293
+        },
+        {
+          "kind": "theorem",
+          "name": "predicted_through",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.predicted_through",
+          "line": 303
+        },
+        {
+          "kind": "theorem",
+          "name": "epistemic_through",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.epistemic_through",
+          "line": 310
+        },
+        {
+          "kind": "theorem",
+          "name": "expectedFreeEnergy_through",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_through",
+          "line": 332
+        },
+        {
+          "kind": "theorem",
+          "name": "expectedFreeEnergy_same_of_coarse",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse",
+          "line": 344
+        },
+        {
+          "kind": "theorem",
+          "name": "gain_term",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.gain_term",
+          "line": 356
+        },
+        {
+          "kind": "theorem",
+          "name": "epistemic_eq_expected_gain",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.epistemic_eq_expected_gain",
+          "line": 370
+        },
+        {
+          "kind": "def",
+          "name": "courseLik",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.courseLik",
+          "line": 393
+        },
+        {
+          "kind": "def",
+          "name": "choiceWeight",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.choiceWeight",
+          "line": 399
+        },
+        {
+          "kind": "def",
+          "name": "coursePosterior",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.coursePosterior",
+          "line": 408
+        },
+        {
+          "kind": "def",
+          "name": "courseWeight",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.courseWeight",
+          "line": 415
+        },
+        {
+          "kind": "def",
+          "name": "efeChoice",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.efeChoice",
+          "line": 423
+        },
+        {
+          "kind": "def",
+          "name": "softmax",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.softmax",
+          "line": 429
+        },
+        {
+          "kind": "theorem",
+          "name": "courseLik_nonneg",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.courseLik_nonneg",
+          "line": 435
+        },
+        {
+          "kind": "theorem",
+          "name": "courseLik_pos",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.courseLik_pos",
+          "line": 441
+        },
+        {
+          "kind": "theorem",
+          "name": "coursePosterior_minimizes",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.coursePosterior_minimizes",
+          "line": 451
+        },
+        {
+          "kind": "theorem",
+          "name": "posterior_choice_eq_coursePosterior",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.posterior_choice_eq_coursePosterior",
+          "line": 466
+        },
+        {
+          "kind": "theorem",
+          "name": "choiceWeight_ne_zero",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.choiceWeight_ne_zero",
+          "line": 478
+        },
+        {
+          "kind": "theorem",
+          "name": "courseLik_rescale",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.courseLik_rescale",
+          "line": 485
+        },
+        {
+          "kind": "theorem",
+          "name": "coursePosterior_rescale",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.coursePosterior_rescale",
+          "line": 497
+        },
+        {
+          "kind": "theorem",
+          "name": "softmax_pos",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.softmax_pos",
+          "line": 506
+        },
+        {
+          "kind": "theorem",
+          "name": "sum_softmax",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.sum_softmax",
+          "line": 510
+        },
+        {
+          "kind": "theorem",
+          "name": "softmax_choiceWeight_pos",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.softmax_choiceWeight_pos",
+          "line": 516
+        },
+        {
+          "kind": "theorem",
+          "name": "cast_seekWeight",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.cast_seekWeight",
+          "line": 525
+        },
+        {
+          "kind": "theorem",
+          "name": "mass_count",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.mass_count",
+          "line": 536
+        },
+        {
+          "kind": "theorem",
+          "name": "givenCourse_eq_coursePosterior",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.givenCourse_eq_coursePosterior",
+          "line": 554
+        },
+        {
+          "kind": "theorem",
+          "name": "unchosen_share_zero",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.unchosen_share_zero",
+          "line": 590
+        },
+        {
+          "kind": "theorem",
+          "name": "share_le_iff_toReal_le",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.share_le_iff_toReal_le",
+          "line": 605
+        },
+        {
+          "kind": "theorem",
+          "name": "givenCourse_le_iff",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.givenCourse_le_iff",
+          "line": 624
+        },
+        {
+          "kind": "theorem",
+          "name": "efe_seeking_keeps_order",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order",
+          "line": 653
+        },
+        {
+          "kind": "theorem",
+          "name": "courseLik_tied",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.courseLik_tied",
+          "line": 674
+        },
+        {
+          "kind": "theorem",
+          "name": "coursePosterior_ratio_kept",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.coursePosterior_ratio_kept",
+          "line": 683
+        },
+        {
+          "kind": "theorem",
+          "name": "coursePosterior_order_kept",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.coursePosterior_order_kept",
+          "line": 695
+        },
+        {
+          "kind": "theorem",
+          "name": "softmax_order_kept",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.softmax_order_kept",
+          "line": 709
+        },
+        {
+          "kind": "theorem",
+          "name": "courseLik_through",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.courseLik_through",
+          "line": 730
+        },
+        {
+          "kind": "theorem",
+          "name": "coarse_div",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.coarse_div",
+          "line": 735
+        },
+        {
+          "kind": "theorem",
+          "name": "coarse_coursePosterior",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.coarse_coursePosterior",
+          "line": 743
+        },
+        {
+          "kind": "theorem",
+          "name": "efe_through_course",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.efe_through_course",
+          "line": 766
+        },
+        {
+          "kind": "theorem",
+          "name": "epistemic_through_course",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.epistemic_through_course",
+          "line": 776
+        },
+        {
+          "kind": "theorem",
+          "name": "courseWeight_through",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.courseWeight_through",
+          "line": 783
+        },
+        {
+          "kind": "theorem",
+          "name": "efeChoice_same_of_coarse",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.efeChoice_same_of_coarse",
+          "line": 793
+        },
+        {
+          "kind": "theorem",
+          "name": "seeking_blind_to_split",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.seeking_blind_to_split",
+          "line": 809
+        },
+        {
+          "kind": "theorem",
+          "name": "softmax_blind_to_split",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.softmax_blind_to_split",
+          "line": 829
+        },
+        {
+          "kind": "theorem",
+          "name": "seeking_reads_profiles",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.seeking_reads_profiles",
+          "line": 847
+        },
+        {
+          "kind": "theorem",
+          "name": "agreeing_pos",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.agreeing_pos",
+          "line": 866
+        },
+        {
+          "kind": "theorem",
+          "name": "separating_turns",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.separating_turns",
+          "line": 875
+        },
+        {
+          "kind": "theorem",
+          "name": "unchosen_course",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.unchosen_course",
+          "line": 901
+        },
+        {
+          "kind": "def",
+          "name": "biasClass",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.biasClass",
+          "line": 922
+        },
+        {
+          "kind": "def",
+          "name": "agreeOrNothing",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing",
+          "line": 926
+        },
+        {
+          "kind": "def",
+          "name": "agreeOrNothingByClass",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothingByClass",
+          "line": 930
+        },
+        {
+          "kind": "def",
+          "name": "swappedPrior",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.swappedPrior",
+          "line": 935
+        },
+        {
+          "kind": "theorem",
+          "name": "agreeOrNothing_through",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing_through",
+          "line": 941
+        },
+        {
+          "kind": "theorem",
+          "name": "priors_alike",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.priors_alike",
+          "line": 953
+        },
+        {
+          "kind": "theorem",
+          "name": "split_unseen",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.split_unseen",
+          "line": 971
+        }
+      ],
+      "declaration_counts": {
+        "def": 19,
+        "theorem": 49
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "c0faf669d3178e2a4284e7ac3191ceb490cfd901bb40c51035774f061a76d197": {
       "byte_size": 17096,
       "line_count": 411,
@@ -515081,10 +515511,6 @@
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/development/1791255039697090000/EmissionArchive.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/development/1791255132840263000/EmissionArchive.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/development/1791255398690790000/EmissionArchive.lean"
-    ],
-    "5e39061898c33c668d97f6bb6099bc88517dbc34ebc17ac0b6142a892262719a": [
-      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue19-expected-free-energy/periphery/ExpectedFreeEnergyReals.lean",
-      "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean"
     ],
     "5eb63e2b7af10e610ef6d34f3121d785c1755a86c73422e0654f074f6674cbf7": [
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/formal/ActionWitness.lean",
