@@ -79,7 +79,7 @@ landed = (f'- **Queue:** GW1, GW2 and GW6 landed (§{N}, core receipt `{RECEIPT}
           'item 2 met by the split stated; the premises exactly weak excluded middle forward and excluded middle back, '
           'Markov\'s principle on decided chains; by name, each admitted formation kept on the occurrences while the '
           f'course\'s moments are 全生成, two carriers. {COUNTS}, every axiom report empty; two records, 02 §1, 07 §2, '
-          "01 §6, the overview, D1, D65, the glossary and 08's counts; one independent review, every finding taken; "
+          "01 §6, the overview, D1, D65, the glossary and 08's counts; the review packet's L-10 brought up to the Lean; one independent review, every finding taken; "
           'row in the history file); ')
 text = text.replace(head.group(0), landed)
 old_latest = re.search(r"the latest core receipt is [^`]*`[0-9T.Z]+` \([0-9]+ October 2026\)", text)

@@ -70,5 +70,6 @@ Output → input:
   - the overview's map and open laws;
   - D1 and D65, a paragraph each, with no change of reading;
   - the glossary's 生成 row;
+  - the review packet's LOGIC L-10: the counterexample now in the Lean, with 后守, and question 27 revised;
   - the release gate's item 2, met in its second form, the split stated (WHAT-REMAINS, cd82afed6).
 ```
