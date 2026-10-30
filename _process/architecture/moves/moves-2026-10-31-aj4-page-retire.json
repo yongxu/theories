@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "batch": "moves-2026-10-31-aj4-page-retire",
+  "date": "2026-10-30T17:25:08+00:00",
+  "base_commit": "549d7c7eeaa38b08e4c5628b203b8f712663dabc",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/DRAFT-ONE-PAGE.md",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/history/DRAFT-ONE-PAGE.md",
+      "sha256": "7a7159ed8abefc536f725de9ed7140404d1f40e605728040a89193d713236bdf",
+      "blob": "32139c90b76c5792f9bfa387c88ae2a1a231a372",
+      "reason": "superseded by the alignment dossier's opening section, The dossier in ten minutes (31 October 2026)",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/DRAFT-ONE-PAGE.md"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/PLAN.md",
+      "old_sha256": "f8208763dfe3c6a5c050440cd67b37a6a467c2741a3259713f616b96fc5a0825",
+      "new_sha256": "c27c024dd81b427fd56c083c7cd44dc4822462fb8898e9a5ddee4cca8f3a9ea8",
+      "references": 1
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/README.md",
+      "old_sha256": "08adf16677e8e979985a1491403f479a478239348395c1523d87aec9674d7949",
+      "new_sha256": "ed615ac7d36a5bc9110d01dab565b5d81984974af3800c33e109e51e5c26ea4a",
+      "references": 1
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/twenty-first-review/C-AI-ALIGNMENT.md",
+      "old_sha256": "d17db28bf6bc594dc0abed82e370790912826e4c1fe44298b1f3bbf5ea1e99b2",
+      "new_sha256": "81d8ecc3c367dd0ef1dc1e42919e294e2734d9f6249c5fc0af289f3f879782d5",
+      "references": 1
+    }
+  ],
+  "history_roots": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/history"
+  ],
+  "generated_pages_to_rerender": [],
+  "verification_errors": []
+}
