@@ -1,0 +1,22 @@
+Becoming/HeldForReading.lean:424:6: error: 'show' tactic failed, pattern
+  m.weight c * (gain c - loss c) = 0
+is not definitionally equal to target
+  (bif (fun c => decide (gain c < loss c)) c then m.weight c * (gain c - loss c) else m.weight c * (loss c - gain c)) =
+    0
+Becoming/HeldForReading.lean:428:6: error: 'show' tactic failed, pattern
+  m.weight c * (loss c - gain c) = 0
+is not definitionally equal to target
+  (bif (fun c => decide (gain c < loss c)) c then m.weight c * (gain c - loss c) else m.weight c * (loss c - gain c)) =
+    0
+
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/rf-landing/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree",
+  "modules": 65,
+  "ran": [
+    "Becoming.HeldForReading"
+  ],
+  "reused": 64,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.HeldForReading"
+}
