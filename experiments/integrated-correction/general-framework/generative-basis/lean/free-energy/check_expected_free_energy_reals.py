@@ -2,7 +2,8 @@
 """Check the periphery module on expected free energy over the reals.
 
 `ExpectedFreeEnergyReals` imports the periphery module `FreeEnergyReals`, and through it the
-core's `Becoming.ConditionalWeights` and Mathlib's real logarithm and finite sums, so it is
+core's `Becoming.ConditionalWeights` and `Becoming.FreeEnergyCounting` and Mathlib's real
+logarithm and finite sums, and the core's `Becoming.LumpedSeeking`, so it is
 compiled with Lean 4.30.0-rc2 against the installed Mathlib (`SYSTEMS_MATHLIB_PROJECT`,
 default `~/repos/生生不息`); the core's closure and `FreeEnergyReals` are compiled with the
 same toolchain. Module resolution, declaration scanning and passed-receipt matching are
@@ -54,7 +55,22 @@ SCOPE = (
     "through its class, the epistemic value and the expected free energy are the classes', with their total weights, "
     "so two beliefs alike on the classes have one expected free energy; one likelihood for every state the policy may "
     "reach gives epistemic value nothing, and two states of one likelihood keep their prior ratio in the posterior "
-    "under every outcome. Mathlib's conventions log 0 = 0 and x / 0 = 0 hold: where the predicted outcomes weigh an "
+    "under every outcome. On Becoming.LumpedSeeking, for courses of experiments each chosen from the course so far, "
+    "the hidden state fixed: the posterior after a course, FreeEnergyReals' posterior of the prior times the "
+    "course's likelihood, is, with a nonnegative prior and likelihoods and where the course weighs something, the "
+    "belief of least free energy among those zero wherever the joint weights are; choice weights reading the course "
+    "drop out of it wherever they weigh something; with natural weights and the hypotheses listed once it is the "
+    "core's share given a listed course whose choices weigh something, and the core's order of two shares given it "
+    "is the order of the posterior. Choosing by a rule with natural weights reading the experiments' expected free "
+    "energies is one of the core's policies, so the core's law holds at it (an instance, whatever the agent's "
+    "model); over the reals a pair every experiment ties keeps its prior ratio in the posterior after every course, "
+    "and its strict order where the course is possible under it and weighs something, so also under every policy "
+    "whose choices weigh something, the softmax among them. Where every experiment's likelihood reads a state only "
+    "through its class, conditioning commutes with the lumping: at the posterior after every course every "
+    "experiment's expected free energy and epistemic value are the classes', and two priors alike on the classes "
+    "choose alike under every rule and give every course one predictive weight, so for any likelihoods seeking by "
+    "expected free energy reads the prior only through the weight it gives each likelihood profile. Mathlib's "
+    "conventions log 0 = 0 and x / 0 = 0 hold: where the predicted outcomes weigh an "
     "outcome of preference nothing, risk and pragmatic value are finite here though infinite as usually defined. That "
     "the weights are probabilities and the likelihood an agent's generative model are correspondences, not checked."
 )

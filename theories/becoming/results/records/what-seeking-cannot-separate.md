@@ -40,8 +40,8 @@
 ## Does not show
 
 - That seeking never corrects: within what some experiment separates it can (Agree.seeking_turns_tails; the principle's T-maze).
-- Expected free energy itself, the softmax over policies, precision, multi-step policies with transitions, or novelty and structure learning.
-- A theorem joining it to the periphery's expected free energy through the share given the record.
+- Precision, multi-step policies with transitions, or novelty and structure learning; expected free energy enters in the periphery (efe_seeking_keeps_order with natural weights; the softmax over the reals, softmax_order_kept).
+- Whether, or how often, an agent choosing by expected free energy chooses an experiment that separates: that turns on its preferences, its posterior and the experiments' information.
 - That actual agents' likelihoods tie what matters, or that a design built on the epistemic drive fails.
 - **Counterexample:** Given two heads, under the model reading only whether two tosses agree, the tails-biased coin stays above the true one (Agree.keeps_tails), and with only that experiment, so does seeking (Agree.seeking_keeps_tails). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LumpedSeeking.lean)
 
@@ -57,7 +57,7 @@ Canonical source: [LumpedSeeking.lean](../../../../experiments/integrated-correc
 <a id="next--下一步"></a>
 ## Next
 
-A many-step form with lumpable transitions; the join to the periphery's expected free energy through givenShare_eq_posterior; novelty and structure learning as conditioning in a larger model; review by a person.
+A many-step form with lumpable transitions; novelty and structure learning as conditioning in a larger model; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -70,7 +70,9 @@ Identification (Rothenberg 1971, Econometrica 39) in its Bayesian form (Poirier 
 ### Dependencies
 
 - **formal-reuse**: [conditioning-by-restriction](conditioning-by-restriction.md). posterior_le_iff, posterior_single, evidence, mass_single, mass_mono, mass_congr and whole_restrict: shares given a record in a generative model.
-- related, not a proved adapter: [expected-free-energy-and-its-terms](expected-free-energy-and-its-terms.md). Expected free energy and its terms: the epistemic value over the reals, read only through the lumping the likelihood makes.
+- related, not a proved adapter: [expected-free-energy-and-its-terms](expected-free-energy-and-its-terms.md). Expected free energy and its terms: over the reals, read only through the lumping the likelihood makes; seeking by it with natural weights is among this law's policies (an instance), and where the agent's model is the core's, its posterior is the core's share given the course (givenCourse_eq_coursePosterior).
+
+**Used by:** [expected-free-energy-and-its-terms](expected-free-energy-and-its-terms.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -85,6 +87,7 @@ Identification (Rothenberg 1971, Econometrica 39) in its Bayesian form (Poirier 
 | integration | [REVIEW-UE19.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue19-expected-free-energy/REVIEW-UE19.md) | — |
 | integration | [RECHECK-UE19.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue19-expected-free-energy/RECHECK-UE19.md) | — |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
+| integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue23-seeking-by-expected-free-energy/NOTE.md) | — |
 
 Aliases: `What seeking cannot separate`, `探求所不能分者`, `identification under seeking`, `epistemic value`, `self-correction by seeking information`, `Becoming.LumpedSeeking.seeking_keeps_order`, `Becoming.LumpedSeeking.order_kept`
 
@@ -92,6 +95,7 @@ Aliases: `What seeking cannot separate`, `探求所不能分者`, `identificatio
 ### History
 
 - 29 October 2026: added (UE19), what seeking cannot separate: a tied pair keeps its prior order given every record, and a pair every experiment ties over every course of seeking, whatever the policy of choice; in the witness, seeking turns the order once an experiment separating it is chosen; after a review and a re-check; study section 453.
+- 30 October 2026, board item UE23 (study section 464): the theorem joining this law to the periphery's expected free energy is proved there (givenCourse_eq_coursePosterior, givenCourse_le_iff, efe_seeking_keeps_order, in expected-free-energy-and-its-terms); the second and third does-not-show items, the next step and the related entry name the join. No statement, law or declaration changed.
 
 </details>
 
