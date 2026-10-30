@@ -2041,6 +2041,29 @@
         "theories/becoming/chapters/08-METHOD.md"
       ]
     },
+    "_process/research/2026-10-05-repository-reconciliation/architecture/mv/BOUNDARY-FIELD.md": {
+      "title": "The boundary field: each central declaration's standing, declared on U4's record and checked against the Lean",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/F5-MODEL-STATEMENTS.md",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/certificate-idiom.lean",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/check",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/check-equivalences.json",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/check/controls-run.log",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/check/run_controls.py",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/e2e-report.json",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/probe.json",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/probe.py",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-code-review.json",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck.json",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-review.json",
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-fix-recheck.json",
+        "tools/research/boundary.py",
+        "tools/research/boundary_check.lean",
+        "tools/research/tests/test_boundary.py"
+      ]
+    },
     "experiments/drain-beyond-the-reward/DESIGN.md": {
       "title": "LA4: the drain beyond the reward, under training by gradient (design)",
       "local_links": [
