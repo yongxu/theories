@@ -48,11 +48,14 @@ HAND = {
     'Flow.no_new_dependence': ('witnessed at its model',
         'row 5: "coming to stand is given to", an implication from ComesToStand to DescendsAt, with inheritance at the '
         'descents and nothing taking part depending (no_new_dependence_of_given); witnesses Ungiven, Uninherited, Held, '
-        f'Standing; balance enters only the proof, as one way to meet the implication ({L2} §5, §10)'),
+        'Standing; the statement takes balance at its relatum written out as an equation, not through Flow.Balances, and '
+        'balance meets "given to" (Flow.descends_of_comes); strict form descent_forms_no_dependence in boundary-scratch, '
+        f'standing 2 when the leaf lands ({L2} §5, §10)'),
     'GroupEnding.Flow.all_end': ('witnessed at its model',
         'row 17: the gate and descent as two inclusions at one step, and a generation wholly inactive '
         '(all_end_on_root, size_zero_of_within); witnesses Ungated (gate), Ungated.silent (descent), '
-        f'Lifted.inactive_needed (inactivity); the conclusion is a count ({L2} §10)'),
+        'Lifted.inactive_needed (inactivity); the conclusion is a count; strict form outside_leaves_no_offspring in '
+        f'boundary-scratch, standing 2 when the leaf lands ({L2} §10)'),
     # Lever 2's rows 13 and 14: their forms are witnessed, but a hypothesis constrains amounts.
     'SelectionLevels.rises_exact_iff_levels': ('amounts',
         f'row 13: cancellation, G.raisedAt t = G.loweredAt t, constrains amounts (rises_cancel_iff_levels); witness '

@@ -1,0 +1,17 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/a1748b36-1177-4857-afe2-0d9f0c541556/scratchpad/wt-u4/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/boundary-scratch",
+  "modules": 34,
+  "ran": [
+    "Becoming.U4Boundary",
+    "BecomingU4BoundaryAxiomAudit"
+  ],
+  "reused": 33,
+  "unclean": [],
+  "audits": {
+    "Becoming.U4Boundary": {
+      "theorems": 14,
+      "declarations": 20,
+      "with_axioms": {}
+    }
+  }
+}
