@@ -91,6 +91,13 @@ elif mode == 'land':
     assert len(HEAD.findall(board[queue[0]])) == 1, 'head-of-queue clause'
     board[queue[0]] = HEAD.sub('', board[queue[0]], count=1)
     board[queue[0]] = board[queue[0]].replace('- **Queue:** ', '- **Queue:** ' + queue_text + '; ', 1)
+    order = re.search(r"Then, in the coordinator's order: ([^;]*);", board[queue[0]])
+    if order:
+        items = order.group(1).split(', ')
+        kept = [item for item in items if not item.startswith('RF-M.2')]
+        assert len(items) - len(kept) <= 1, items
+        board[queue[0]] = board[queue[0]].replace(order.group(0), (
+            "Then, in the coordinator's order: " + ', '.join(kept) + ';') if kept else '', 1)
     latest = [i for i, line in enumerate(board) if 'the latest core receipt is' in line]
     assert len(latest) == 1, latest
     m = re.search(r"the latest core receipt is [^;]*?`(\d{8}T\d{6}\.\d+Z)` \(\d{1,2} October 2026\)", board[latest[0]])
