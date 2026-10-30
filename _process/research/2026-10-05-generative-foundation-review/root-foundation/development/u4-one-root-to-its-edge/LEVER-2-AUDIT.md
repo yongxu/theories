@@ -4,7 +4,7 @@
 
 **Review.** Reviewed once, independently ([REVIEW-U4-L2.md](REVIEW-U4-L2.md)): sound with fixes, one finding blocking. That finding was the tally of rows "waiting on lever 1". Every finding is taken (§9).
 
-**After the review.** §10 closes most of what §7 listed: countermodels for both parts of the gate in rows 1–3, 7 and 8, and for row 14's hypotheses; "never lowers" as descent within the trait's order; and the gate's first part on occurrences. This follow-up is not reviewed.
+**After the review.** §10 closes what §7 listed. Every hypothesis of the rows at standing 2 now has a countermodel showing it cannot be dropped, except the list and counting facts (listing and equal sizes in rows 13 and 14). §10 also states "never lowers" as descent within the trait's order, and the gate's first part on occurrences. This follow-up is not reviewed.
 
 **What it covers.** The 18 central rows whose row is "evolution" in the latest grammar measure ([measure-grammar-after.json](../gw-generation-and-widening/measure-grammar-after.json)), taken from the file, not typed by hand. For each, it gives the standing U4 defines ([WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md), "One root to its edge"):
 1. derived;
@@ -13,7 +13,7 @@
 
 or else the distance at which it stops. What each row reads was found by reading its statement and proof.
 
-**Scratch.** [lever-2-scratch/Becoming/U4LeverTwo.lean](lever-2-scratch/Becoming/U4LeverTwo.lean): 112 theorems in 155 declarations, every axiom report empty (65 in 90 at the review).
+**Scratch.** [lever-2-scratch/Becoming/U4LeverTwo.lean](lever-2-scratch/Becoming/U4LeverTwo.lean): 173 theorems in 236 declarations, every axiom report empty (65 in 90 at the review).
 - It was built with `scratch_build.py`, by module name, in this branch's worktree, whose package equals main's at `282fda08f` ([log](lever-2-scratch/scratch-build.log); the log's `tree` is that worktree's path).
 - §2's constant check is [constant-check.txt](lever-2-scratch/constant-check.txt): the script, how it was run, and its output.
 - These are working builds, not receipts.
@@ -31,8 +31,8 @@ So no evolution row moves by waiting on lever 1. The standings are these.
 |---|---|
 | 4 | A law of logic, already stated at the model by U2 (`ModelStatements.inheritsAt_iff`, `needsWithinAt_iff`, `transmits_at_one_kind`) |
 | 6, 12, 18 | Laws of counting, under a label of their own and counted apart (§2) |
-| 5, 13, 14, 17 | On the root under stated hypotheses (standing 2). Witnesses are built for row 5 (`Ungiven`), row 13 (`Raised`), row 14 (`EndsAmong`, `Lifted`; §10) and row 17 (`Ungated`). Rows 13 and 14 conclude comparisons of counts, so their standing rides on §2 |
-| 1, 2, 3, 7, 8 | The gate fully as inclusions: `acting_iff` (on occurrences, `acting_iff_occurrences`), and U2's `dependent_iff` and `supported_iff` on `needMet`. Each part of the gate has its witness (`NeedOverLevel`, `LowGives`; §10). Their conclusions compare the model's amounts, so they stand at the represented model, as U2's statements do |
+| 5, 13, 14, 17 | On the root under stated hypotheses (standing 2). Every hypothesis but the list facts has its witness (`Ungiven` and §10 for row 5, `Raised` for row 13, §10 for rows 14 and 17, with `Ungated`). Rows 13 and 14 conclude comparisons of counts, so their standing rides on §2 |
+| 1, 2, 3, 7, 8 | The gate fully as inclusions: `acting_iff` (on occurrences, `acting_iff_occurrences`), and U2's `dependent_iff` and `supported_iff` on `needMet`. Every hypothesis has its witness (§10). Their conclusions compare the model's amounts, so they stand at the represented model, as U2's statements do |
 | 9 | Premise of the account: dissipation, and U1 §4's injection from births to given units |
 | 10, 11, 15, 16 | Balance, represented, unchanged, for U1's reason, which lever 1 confirms |
 
@@ -47,7 +47,7 @@ What the Lean shows:
   - Exactness is one sufficient condition. A pairing under the class, the most lever 1's count law reads, is another.
 - **Both parts of the gate are inclusions.**
   - So the gate rows can now "become hypotheses on the root", as WHAT-REMAINS expects (rows 1–3, 7, 8, 14, 17).
-  - Each part of the gate now has its witness in every one of these rows (§10).
+  - Every hypothesis of these rows that is not a list fact now has its witness (§10).
 
 ## 1. The rows
 
@@ -55,23 +55,23 @@ In the measure's order. "Inclusion" means a statement `«则» R S` on the gramm
 
 | # | Row | Measure's category | What it reads | Standing |
 |---|---|---|---|---|
-| 1 | `Flow.selection_within` | premise of the account | the gate; descent; dependence on one condition | at the model: the gate as inclusions, each part witnessed (`NeedOverLevel`); the conclusion compares weighted needs with the level |
-| 2 | `Flow.transmitted_supported` | premise of the account | the gate; transmission with need within δ; descent | at the model: the gate and transmission as inclusions (U2's for transmission), each part of the gate witnessed (`NeedOverLevel`); the conclusion compares a need with a level plus δ |
+| 1 | `Flow.selection_within` | premise of the account | the gate; descent; dependence on one condition | at the model: the gate as inclusions; every hypothesis witnessed (§10); the conclusion compares weighted needs with the level |
+| 2 | `Flow.transmitted_supported` | premise of the account | the gate; transmission with need within δ; descent | at the model: the gate and transmission as inclusions (U2's for transmission), every hypothesis witnessed (§10); the conclusion compares a need with a level plus δ |
 | 3 | `Flow.selected_le` | premise of the account | the gate; descent; dependence on one condition | as row 1 |
 | 4 | `Web.transmits_at_iff` | definitional or representational | `(A → B ∧ C) ↔ (A → B) ∧ (A → B → C)`, with A, B and C read as requiring, inheritance and need within δ | a law of logic, already stated at the model by U2 (`inheritsAt_iff`, `needsWithinAt_iff`, `transmits_at_one_kind`) |
-| 5 | `Flow.no_new_dependence` | balance, represented | balance at one relatum across a step, used only to find a giver; inheritance; coming to stand | standing 2 under "coming to stand is given to" (`no_new_dependence_of_given`), witness `Ungiven` (§5) |
+| 5 | `Flow.no_new_dependence` | balance, represented | balance at one relatum across a step, used only to find a giver; inheritance; coming to stand | standing 2 under "coming to stand is given to" (`no_new_dependence_of_given`), witness `Ungiven` (§5); its other hypotheses witnessed (§10) |
 | 6 | `SelectionTerm.covariation` | counting identity | a list and two maps to `Nat` | a law of counting (§2); reaches no model constant |
-| 7 | `SelectionTerm.Flow.support_not_lower` | premise of the account | the gate; a reading highest at the supported members; transmission never lowering (`loweredAt = 0`) | at the model: the gate as inclusions, each part witnessed (`LowGives`); "never lowers" is descent within the trait's order (`unlowered_at_iff`); the conclusion compares means |
+| 7 | `SelectionTerm.Flow.support_not_lower` | premise of the account | the gate; a reading highest at the supported members; transmission never lowering (`loweredAt = 0`) | at the model: the gate as inclusions; "never lowers" is descent within the trait's order (`unlowered_at_iff`); every hypothesis witnessed (§10); the conclusion compares means |
 | 8 | `SelectionTerm.Flow.support_moved_rises` | premise of the account | as row 7, with exact transmission | at the model, as row 7, with the same witnesses. Its proof uses exactness both as never lowering (`lowered_exact`, for `support_not_lower`) and as cancelling (`moved_by_selection`), and the two together are exactness (`exact_iff_terms_vanish`) |
 | 9 | `Reproduction.Flow.number_within_take` | premise of the account | dissipation on a family; descent; distinct offspring | premise of the account: dissipation, and U1 §4's injection from births to distinct given units |
 | 10 | `Reproduction.Flow.lineage_ends` | balance, represented | balance and dissipation on a family; its stock | balance, represented |
 | 11 | `Reproduction.Flow.closed_lineage_lowered` | balance, represented | as row 10, read by offspring number | balance, represented |
 | 12 | `SelectionLevels.levels_sized` | counting identity | lists of lists; maps to `Nat`; a common multiple | a law of counting (§2); reaches no model constant |
 | 13 | `SelectionLevels.rises_exact_iff_levels` | counting identity | listed generations; exact transmission | standing 2 under cancellation (`rises_cancel_iff_levels`), witness `Raised`; reaches no model constant; rides on §2 |
-| 14 | `GroupEnding.Flow.rises_iff_inactive` | premise of the account | the gate; descent; exact transmission; lower groups inactive (a comparison of trait sums) | standing 2 under the two inclusions, cancellation and the inactive hypothesis (`rises_iff_inactive_on_root`); witnesses `EndsAmong` (the gate, `inactive`) and `Lifted` (cancellation); rides on §2 |
+| 14 | `GroupEnding.Flow.rises_iff_inactive` | premise of the account | the gate; descent; exact transmission; lower groups inactive (a comparison of trait sums) | standing 2 under the two inclusions, cancellation and the inactive hypothesis (`rises_iff_inactive_on_root`); witnesses `EndsAmong` (the gate, `inactive`, descent) and `Lifted` (cancellation); rides on §2 |
 | 15 | `GroupEnding.Flow.family_childless` | balance, represented | balance; uptake and replenishment; stock; need | balance, represented |
 | 16 | `GroupEnding.Flow.coupled_end_together` | balance, represented | as row 15, for groups | balance, represented |
-| 17 | `GroupEnding.Flow.all_end` | premise of the account | the gate; descent; inactivity | standing 2 under the two inclusions (`all_end_on_root`), witness `Ungated` |
+| 17 | `GroupEnding.Flow.all_end` | premise of the account | the gate; descent; inactivity | standing 2 under the two inclusions (`all_end_on_root`), witness `Ungated` (the gate, descent) |
 | 18 | `Drift.falls_back` | law of its model | all courses of `n` binary draws, each weighted | a law of counting (§2); reaches no model constant; reading it as drift is the model's hypothesis |
 
 ## 2. Laws of counting
@@ -174,8 +174,8 @@ Each would need a law of unit lines that holds over every pairing the counts adm
 
 ## 7. Not done
 
-- Witnesses for the hypotheses other than the gate in rows 1–3, 7 and 8: dependence on the one condition, transmission within δ, the top reading, never lowering. §10 witnesses the gate only.
 - A review of §10.
+- Witnesses for the list facts of rows 13 and 14 (the listing, equal sizes). These are counting, and ride on §2.
 - Moving the counting rows' arithmetic to the prelude (§2). This is for the modules' owners.
 
 ## 8. Modelling choices
@@ -205,7 +205,7 @@ Each would need a law of unit lines that holds over every pairing the counts adm
 | S6: unstated modelling assumptions | §8 |
 | M1: "the landed `offspring_eq_selected_of_within`"; the build log's tree; l.65's wording | §3 says it is scratch. The header names the log's tree as this branch's worktree. §3 names `within_iff_continues` in place of l.65's wording |
 
-## 10. After the review: the gate's witnesses, never lowering, and occurrences
+## 10. After the review: witnesses, never lowering, and occurrences
 
 Built after the review and not reviewed. Each witness is a small world in which every other hypothesis of the row holds, the named one fails, and the row's conclusion fails.
 
@@ -232,4 +232,26 @@ Built after the review and not reviewed. Each witness is a small world in which 
 
 **The gate on occurrences.** `acting_iff_occurrences`: "only active formations give" holds exactly where giving on occurrences (`givingOcc`, within a step) lies within giving from an active occurrence. Activity is read as `Web.partialIdentity`, the form U2's `dependent_iff` gives the second part. With both parts in that form, the gate is two inclusions on the occurrence model.
 
-**What the witnesses do not cover.** They show only that the gate (and, for row 14, `inactive` and cancellation) cannot be dropped. The other hypotheses of rows 1–3, 7 and 8 keep their place as the setting of each row, unwitnessed (§7).
+**The other hypotheses of rows 1–3.**
+- **Dependence on the condition, rows 1 and 3 (`Undepending`).** The parent is active and supported, since it requires nothing, but its need exceeds the level. Both parts of the gate and descent hold, and both conclusions fail.
+- **Transmission within δ, row 2 (`Untransmitted`).** Parent and offspring both depend on `2`. Everything is active at the first step only, and only the parent gives, then. The need is none at the first step, where it is met, and two after it. The gate, descent and the offspring's dependence hold, and transmission within none fails (`not_transmits`), as does the conclusion.
+- **The offspring's dependence, row 2 (`Undependent`).** Only the parent depends on anything. The offspring needs two of a condition it does not depend on. The gate, descent and transmission hold, and the conclusion fails.
+- **Descent, rows 1–3 (`NeedOverLevel.silent`).** The parent is listed with an offspring but gives nothing, and nothing is active. Both parts of the gate hold, as do dependence and transmission (vacuously). Descent fails (`not_descend`, `not_descends`), and so does each conclusion.
+
+**The other hypotheses of rows 7 and 8.**
+- **The top reading (`TopMissed`).** The supported member has the amount at none and reproduces. The unsupported member has the amount at one, is not active and gives nothing. The gate, descent and exact transmission hold. The supported member is not the highest (`not_top`), and the mean falls.
+- **Never lowering, row 7, and exact transmission, row 8 (`Lowered`).** One supported, active member at one gives to one offspring carrying none. The gate, descent and the top reading hold, transmission lowers (`not_unlowered`, `not_exact`), and the mean falls.
+- **Descent (`LowGives.silent`).** `LowGives`'s generations listed under a flow that gives nothing, with nothing active.
+
+**Descent in rows 14 and 17.** The same construction: `EndsAmong.silent` with only `0` active, and `Ungated.silent`. In each, the gate holds vacuously, descent fails (`not_descended`), and the conclusion fails as before.
+
+**The other hypotheses of row 5.**
+- **Inheritance (`Uninherited`).** The giver depends on nothing; the offspring depends on `5` after the step.
+- **Nothing taking part depends on the condition (`Held`).** Everything depends on `5` at every step, so the offspring inherits it.
+- **Coming to stand (`Standing`).** The relatum stands already, depends on `5` after the step, and nothing takes part.
+
+In each, the other hypotheses hold, some vacuously, and the relatum depends on `5` after the step.
+
+**What the witnesses do not cover.**
+- They do not cover the list facts of rows 13 and 14 (the listing and equal sizes), which are counting (§2).
+- They cover one hypothesis at a time. They do not show that the hypotheses are independent in every combination.

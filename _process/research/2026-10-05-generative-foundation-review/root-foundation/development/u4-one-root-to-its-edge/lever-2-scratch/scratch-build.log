@@ -9,8 +9,8 @@
   "unclean": [],
   "audits": {
     "Becoming.U4LeverTwo": {
-      "theorems": 112,
-      "declarations": 155,
+      "theorems": 173,
+      "declarations": 236,
       "with_axioms": {}
     }
   }
