@@ -6,7 +6,10 @@ sections, and each changed section must be one RF's texts write (EXPECTED below)
 script, to be read and settled by hand. Then tools/research/repoint.py re-points exactly the kept pairs. The new
 module is cited by no record but the new one.
 usage (from the checkout root, after integrate_rfm2.py and reland_rfm2.py):
-  python3 -B <kit>/round2b/repoint_rfm2.py RECEIPT [--apply]"""
+  python3 -B <kit>/round2b/repoint_rfm2.py RECEIPT [--apply]
+For the landing of RF-M.2's design, reviews and kit without its Lean, `docs` in place of RECEIPT re-points only the
+drift by RF's plan, whose rewritten sections are its own:
+  python3 -B <kit>/round2b/repoint_rfm2.py docs [--apply]"""
 import json
 import subprocess
 import sys
@@ -31,6 +34,9 @@ OTHER = [f'{PKG}/Becoming.lean', f'{PKG}/README.md', f'{PKG}/README.zh.md', f'{P
          f'{RF}/THEOREM-CONNECTIVITY-APART.json',
          f'{RF}/development/rf-formations-that-read/PLAN.md']
 MINE = set(LEAN) | set(OTHER)
+DOCS = RECEIPT_ID == 'docs'
+if DOCS:
+    LEAN, MINE = [], {f'{RF}/development/rf-formations-that-read/PLAN.md'}
 # the sections RF's texts change, as research.py check names them (a heading, or the anchor a record cites),
 # compared without their leading #s
 EXPECTED = {
@@ -59,6 +65,11 @@ REASON = ("RF round 2's RF-M.2: Becoming.HeldForReading joined to the core as a 
           "the reading loop's; the alignment dossier's scope box and its account of how it was made; RF's plan (§4.7, "
           "§8's literature row, §12, §13's reviews and the Evidence list), which RF's records cite; the study; "
           "regions.json; the connectivity; read before re-pointing")
+if DOCS:
+    REASON = ("RF round 2's RF-M.2, its design, reviews and kit landed without its Lean: RF's plan gained §4.7 (the "
+              "second part's design, and RF-M.2's module built in the kit, not yet joined), §8's literature row for "
+              "RF-M.2, §9's eighth proposal, §12's order, §13's review of the design and the Evidence list's kit "
+              "entry; no statement, premise or declaration of the records citing it changed; read before re-pointing")
 
 
 def run_repoint(args):
