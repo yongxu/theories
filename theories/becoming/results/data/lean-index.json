@@ -19,12 +19,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2150,
-    "distinct_byte_contents": 1698,
+    "lean_paths": 2151,
+    "distinct_byte_contents": 1699,
     "byte_identical_duplicate_groups": 185,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1182,
+      "development-attempt": 1183,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 929
@@ -6390,12 +6390,24 @@
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/lever-2-scratch/Becoming/U4LeverTwo.lean",
-      "sha256": "67cdbf1b6d5e766077ead09db67867d53bcac9e325a01d2014b2c40e94b249b6",
+      "sha256": "d1d734da3472227aab29ff4fda23deb710e14f2c341a05ee33dafdbe4703ff5a",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
       "direct_documentation_links_from": [
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/LEVER-2-AUDIT.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/lever-2-scratch/Becoming/U4LeverTwoCheck.lean",
+      "sha256": "a7d143c4ae67a2c2464956d2811fcf00995b4710b9ae34ea386bb7710b72f52f",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/LEVER-2-AUDIT.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-L2-SECOND.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -223279,571 +223291,6 @@
       },
       "print_axioms_commands": 14
     },
-    "67cdbf1b6d5e766077ead09db67867d53bcac9e325a01d2014b2c40e94b249b6": {
-      "byte_size": 30964,
-      "line_count": 624,
-      "imports": [
-        "Becoming.Grammar",
-        "Becoming.SelectionLevels",
-        "Becoming.GroupEnding",
-        "Becoming.Transmission"
-      ],
-      "declarations": [
-        {
-          "kind": "abbrev",
-          "name": "Occ",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Occ",
-          "line": 51
-        },
-        {
-          "kind": "def",
-          "name": "descent",
-          "qualified_name_hint": "Becoming.U4LeverTwo.descent",
-          "line": 55
-        },
-        {
-          "kind": "def",
-          "name": "trait",
-          "qualified_name_hint": "Becoming.U4LeverTwo.trait",
-          "line": 59
-        },
-        {
-          "kind": "def",
-          "name": "alike",
-          "qualified_name_hint": "Becoming.U4LeverTwo.alike",
-          "line": 62
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_class",
-          "qualified_name_hint": "Becoming.U4LeverTwo.alike_class",
-          "line": 65
-        },
-        {
-          "kind": "theorem",
-          "name": "within_iff_continues",
-          "qualified_name_hint": "Becoming.U4LeverTwo.within_iff_continues",
-          "line": 70
-        },
-        {
-          "kind": "theorem",
-          "name": "exact_iff_within",
-          "qualified_name_hint": "Becoming.U4LeverTwo.exact_iff_within",
-          "line": 75
-        },
-        {
-          "kind": "theorem",
-          "name": "exact_iff_continues",
-          "qualified_name_hint": "Becoming.U4LeverTwo.exact_iff_continues",
-          "line": 85
-        },
-        {
-          "kind": "theorem",
-          "name": "zero_of_total_zero",
-          "qualified_name_hint": "Becoming.U4LeverTwo.zero_of_total_zero",
-          "line": 91
-        },
-        {
-          "kind": "theorem",
-          "name": "le_of_excess_zero",
-          "qualified_name_hint": "Becoming.U4LeverTwo.le_of_excess_zero",
-          "line": 100
-        },
-        {
-          "kind": "theorem",
-          "name": "exact_iff_terms_vanish",
-          "qualified_name_hint": "Becoming.U4LeverTwo.exact_iff_terms_vanish",
-          "line": 109
-        },
-        {
-          "kind": "theorem",
-          "name": "offspring_eq_selected_of_within",
-          "qualified_name_hint": "Becoming.U4LeverTwo.offspring_eq_selected_of_within",
-          "line": 122
-        },
-        {
-          "kind": "def",
-          "name": "ps",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.ps",
-          "line": 135
-        },
-        {
-          "kind": "def",
-          "name": "kids",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.kids",
-          "line": 137
-        },
-        {
-          "kind": "def",
-          "name": "a",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.a",
-          "line": 139
-        },
-        {
-          "kind": "def",
-          "name": "b",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.b",
-          "line": 141
-        },
-        {
-          "kind": "theorem",
-          "name": "totals_alike",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.totals_alike",
-          "line": 144
-        },
-        {
-          "kind": "theorem",
-          "name": "not_exact",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.not_exact",
-          "line": 147
-        },
-        {
-          "kind": "def",
-          "name": "before",
-          "qualified_name_hint": "Becoming.U4LeverTwo.before",
-          "line": 155
-        },
-        {
-          "kind": "def",
-          "name": "after",
-          "qualified_name_hint": "Becoming.U4LeverTwo.after",
-          "line": 160
-        },
-        {
-          "kind": "theorem",
-          "name": "append_assoc'",
-          "qualified_name_hint": "Becoming.U4LeverTwo.append_assoc'",
-          "line": 164
-        },
-        {
-          "kind": "theorem",
-          "name": "pair_append",
-          "qualified_name_hint": "Becoming.U4LeverTwo.pair_append",
-          "line": 169
-        },
-        {
-          "kind": "theorem",
-          "name": "pairs_one",
-          "qualified_name_hint": "Becoming.U4LeverTwo.pairs_one",
-          "line": 178
-        },
-        {
-          "kind": "theorem",
-          "name": "pairs_all",
-          "qualified_name_hint": "Becoming.U4LeverTwo.pairs_all",
-          "line": 187
-        },
-        {
-          "kind": "theorem",
-          "name": "exact_pairs",
-          "qualified_name_hint": "Becoming.U4LeverTwo.exact_pairs",
-          "line": 199
-        },
-        {
-          "kind": "theorem",
-          "name": "exact_paired_class",
-          "qualified_name_hint": "Becoming.U4LeverTwo.exact_paired_class",
-          "line": 207
-        },
-        {
-          "kind": "theorem",
-          "name": "total_app",
-          "qualified_name_hint": "Becoming.U4LeverTwo.total_app",
-          "line": 214
-        },
-        {
-          "kind": "theorem",
-          "name": "total_insert",
-          "qualified_name_hint": "Becoming.U4LeverTwo.total_insert",
-          "line": 218
-        },
-        {
-          "kind": "theorem",
-          "name": "total_of_paired",
-          "qualified_name_hint": "Becoming.U4LeverTwo.total_of_paired",
-          "line": 224
-        },
-        {
-          "kind": "theorem",
-          "name": "total_before",
-          "qualified_name_hint": "Becoming.U4LeverTwo.total_before",
-          "line": 232
-        },
-        {
-          "kind": "theorem",
-          "name": "total_after",
-          "qualified_name_hint": "Becoming.U4LeverTwo.total_after",
-          "line": 238
-        },
-        {
-          "kind": "theorem",
-          "name": "add_congr",
-          "qualified_name_hint": "Becoming.U4LeverTwo.add_congr",
-          "line": 243
-        },
-        {
-          "kind": "theorem",
-          "name": "selected_eq",
-          "qualified_name_hint": "Becoming.U4LeverTwo.selected_eq",
-          "line": 245
-        },
-        {
-          "kind": "theorem",
-          "name": "offspring_eq",
-          "qualified_name_hint": "Becoming.U4LeverTwo.offspring_eq",
-          "line": 251
-        },
-        {
-          "kind": "theorem",
-          "name": "totals_of_paired",
-          "qualified_name_hint": "Becoming.U4LeverTwo.totals_of_paired",
-          "line": 260
-        },
-        {
-          "kind": "theorem",
-          "name": "totals_iff_cancel",
-          "qualified_name_hint": "Becoming.U4LeverTwo.totals_iff_cancel",
-          "line": 269
-        },
-        {
-          "kind": "theorem",
-          "name": "beq_self",
-          "qualified_name_hint": "Becoming.U4LeverTwo.beq_self",
-          "line": 280
-        },
-        {
-          "kind": "theorem",
-          "name": "eq_of_beq",
-          "qualified_name_hint": "Becoming.U4LeverTwo.eq_of_beq",
-          "line": 284
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_decided",
-          "qualified_name_hint": "Becoming.U4LeverTwo.alike_decided",
-          "line": 292
-        },
-        {
-          "kind": "def",
-          "name": "ps",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.ps",
-          "line": 300
-        },
-        {
-          "kind": "def",
-          "name": "kids",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.kids",
-          "line": 302
-        },
-        {
-          "kind": "def",
-          "name": "a",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.a",
-          "line": 304
-        },
-        {
-          "kind": "def",
-          "name": "b",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.b",
-          "line": 306
-        },
-        {
-          "kind": "theorem",
-          "name": "paired",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.paired",
-          "line": 310
-        },
-        {
-          "kind": "theorem",
-          "name": "not_exact",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.not_exact",
-          "line": 315
-        },
-        {
-          "kind": "theorem",
-          "name": "terms",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.terms",
-          "line": 319
-        },
-        {
-          "kind": "def",
-          "name": "atOne",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.atOne",
-          "line": 326
-        },
-        {
-          "kind": "theorem",
-          "name": "unexact_not_paired",
-          "qualified_name_hint": "Becoming.U4LeverTwo.unexact_not_paired",
-          "line": 333
-        },
-        {
-          "kind": "def",
-          "name": "Raised",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised",
-          "line": 343
-        },
-        {
-          "kind": "def",
-          "name": "groups",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.groups",
-          "line": 351
-        },
-        {
-          "kind": "theorem",
-          "name": "listed",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.listed",
-          "line": 353
-        },
-        {
-          "kind": "theorem",
-          "name": "equal",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.equal",
-          "line": 355
-        },
-        {
-          "kind": "theorem",
-          "name": "not_exact",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.not_exact",
-          "line": 360
-        },
-        {
-          "kind": "theorem",
-          "name": "raises",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.raises",
-          "line": 365
-        },
-        {
-          "kind": "theorem",
-          "name": "levels_false",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.levels_false",
-          "line": 368
-        },
-        {
-          "kind": "theorem",
-          "name": "levels_fail",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.levels_fail",
-          "line": 381
-        },
-        {
-          "kind": "theorem",
-          "name": "not_cancel",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.not_cancel",
-          "line": 392
-        },
-        {
-          "kind": "theorem",
-          "name": "lt_iff_add_lt",
-          "qualified_name_hint": "Becoming.U4LeverTwo.lt_iff_add_lt",
-          "line": 398
-        },
-        {
-          "kind": "theorem",
-          "name": "rises_cancel_iff",
-          "qualified_name_hint": "Becoming.U4LeverTwo.rises_cancel_iff",
-          "line": 405
-        },
-        {
-          "kind": "theorem",
-          "name": "cancel_of_exact",
-          "qualified_name_hint": "Becoming.U4LeverTwo.cancel_of_exact",
-          "line": 412
-        },
-        {
-          "kind": "theorem",
-          "name": "rises_cancel_iff_levels",
-          "qualified_name_hint": "Becoming.U4LeverTwo.rises_cancel_iff_levels",
-          "line": 419
-        },
-        {
-          "kind": "def",
-          "name": "gives",
-          "qualified_name_hint": "Becoming.U4LeverTwo.gives",
-          "line": 435
-        },
-        {
-          "kind": "def",
-          "name": "activeAt",
-          "qualified_name_hint": "Becoming.U4LeverTwo.activeAt",
-          "line": 438
-        },
-        {
-          "kind": "def",
-          "name": "listed",
-          "qualified_name_hint": "Becoming.U4LeverTwo.listed",
-          "line": 441
-        },
-        {
-          "kind": "theorem",
-          "name": "acting_iff",
-          "qualified_name_hint": "Becoming.U4LeverTwo.acting_iff",
-          "line": 446
-        },
-        {
-          "kind": "theorem",
-          "name": "listed_within_gives",
-          "qualified_name_hint": "Becoming.U4LeverTwo.listed_within_gives",
-          "line": 453
-        },
-        {
-          "kind": "theorem",
-          "name": "length_zero_of_none",
-          "qualified_name_hint": "Becoming.U4LeverTwo.length_zero_of_none",
-          "line": 459
-        },
-        {
-          "kind": "theorem",
-          "name": "size_zero_of_within",
-          "qualified_name_hint": "Becoming.U4LeverTwo.size_zero_of_within",
-          "line": 466
-        },
-        {
-          "kind": "theorem",
-          "name": "all_end_on_root",
-          "qualified_name_hint": "Becoming.U4LeverTwo.all_end_on_root",
-          "line": 476
-        },
-        {
-          "kind": "def",
-          "name": "web",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.web",
-          "line": 485
-        },
-        {
-          "kind": "def",
-          "name": "flow",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.flow",
-          "line": 492
-        },
-        {
-          "kind": "def",
-          "name": "gens",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.gens",
-          "line": 497
-        },
-        {
-          "kind": "theorem",
-          "name": "present_all",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.present_all",
-          "line": 504
-        },
-        {
-          "kind": "theorem",
-          "name": "descended",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.descended",
-          "line": 508
-        },
-        {
-          "kind": "theorem",
-          "name": "inactive",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.inactive",
-          "line": 513
-        },
-        {
-          "kind": "theorem",
-          "name": "not_ended",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.not_ended",
-          "line": 515
-        },
-        {
-          "kind": "theorem",
-          "name": "not_acting",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.not_acting",
-          "line": 517
-        },
-        {
-          "kind": "theorem",
-          "name": "gate_needed",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.gate_needed",
-          "line": 521
-        },
-        {
-          "kind": "theorem",
-          "name": "offspring_zero_within",
-          "qualified_name_hint": "Becoming.U4LeverTwo.offspring_zero_within",
-          "line": 529
-        },
-        {
-          "kind": "theorem",
-          "name": "ended_within",
-          "qualified_name_hint": "Becoming.U4LeverTwo.ended_within",
-          "line": 538
-        },
-        {
-          "kind": "theorem",
-          "name": "rises_iff_inactive_on_root",
-          "qualified_name_hint": "Becoming.U4LeverTwo.rises_iff_inactive_on_root",
-          "line": 551
-        },
-        {
-          "kind": "theorem",
-          "name": "no_new_dependence_of_given",
-          "qualified_name_hint": "Becoming.U4LeverTwo.no_new_dependence_of_given",
-          "line": 573
-        },
-        {
-          "kind": "theorem",
-          "name": "no_new_dependence_from_balance",
-          "qualified_name_hint": "Becoming.U4LeverTwo.no_new_dependence_from_balance",
-          "line": 583
-        },
-        {
-          "kind": "def",
-          "name": "web",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.web",
-          "line": 594
-        },
-        {
-          "kind": "def",
-          "name": "flow",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.flow",
-          "line": 601
-        },
-        {
-          "kind": "theorem",
-          "name": "comes",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.comes",
-          "line": 606
-        },
-        {
-          "kind": "theorem",
-          "name": "inherits",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.inherits",
-          "line": 608
-        },
-        {
-          "kind": "theorem",
-          "name": "none",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.none",
-          "line": 611
-        },
-        {
-          "kind": "theorem",
-          "name": "depends",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.depends",
-          "line": 614
-        },
-        {
-          "kind": "theorem",
-          "name": "not_given",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.not_given",
-          "line": 616
-        }
-      ],
-      "declaration_counts": {
-        "abbrev": 1,
-        "def": 24,
-        "theorem": 65
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "67d04821a9d763968a945923e89006bceb5250b353d5b3a57ae49f11e7232f49": {
       "byte_size": 9722,
       "line_count": 246,
@@ -353357,6 +352804,38 @@
       },
       "print_axioms_commands": 0
     },
+    "a7d143c4ae67a2c2464956d2811fcf00995b4710b9ae34ea386bb7710b72f52f": {
+      "byte_size": 14309,
+      "line_count": 219,
+      "imports": [
+        "Becoming.U4LeverTwo"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "moved_needed",
+          "qualified_name_hint": "Becoming.U4LeverTwoCheck.moved_needed",
+          "line": 115
+        },
+        {
+          "kind": "theorem",
+          "name": "inactive_needed",
+          "qualified_name_hint": "Becoming.U4LeverTwoCheck.inactive_needed",
+          "line": 173
+        }
+      ],
+      "declaration_counts": {
+        "theorem": 2
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "a80e25cb90570d03dbcc766c994d84854f180311b6fa7fe97a3e658161201beb": {
       "byte_size": 6739,
       "line_count": 141,
@@ -431789,6 +431268,1551 @@
         "unsafe": []
       },
       "print_axioms_commands": 36
+    },
+    "d1d734da3472227aab29ff4fda23deb710e14f2c341a05ee33dafdbe4703ff5a": {
+      "byte_size": 65588,
+      "line_count": 1562,
+      "imports": [
+        "Becoming.Grammar",
+        "Becoming.SelectionLevels",
+        "Becoming.GroupEnding",
+        "Becoming.Transmission",
+        "Becoming.WorldRepresentation",
+        "Becoming.ModelStatements"
+      ],
+      "declarations": [
+        {
+          "kind": "abbrev",
+          "name": "Occ",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Occ",
+          "line": 69
+        },
+        {
+          "kind": "def",
+          "name": "descent",
+          "qualified_name_hint": "Becoming.U4LeverTwo.descent",
+          "line": 73
+        },
+        {
+          "kind": "def",
+          "name": "trait",
+          "qualified_name_hint": "Becoming.U4LeverTwo.trait",
+          "line": 77
+        },
+        {
+          "kind": "def",
+          "name": "alike",
+          "qualified_name_hint": "Becoming.U4LeverTwo.alike",
+          "line": 80
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_class",
+          "qualified_name_hint": "Becoming.U4LeverTwo.alike_class",
+          "line": 83
+        },
+        {
+          "kind": "theorem",
+          "name": "within_iff_continues",
+          "qualified_name_hint": "Becoming.U4LeverTwo.within_iff_continues",
+          "line": 88
+        },
+        {
+          "kind": "theorem",
+          "name": "exact_iff_within",
+          "qualified_name_hint": "Becoming.U4LeverTwo.exact_iff_within",
+          "line": 93
+        },
+        {
+          "kind": "theorem",
+          "name": "exact_iff_continues",
+          "qualified_name_hint": "Becoming.U4LeverTwo.exact_iff_continues",
+          "line": 103
+        },
+        {
+          "kind": "theorem",
+          "name": "zero_of_total_zero",
+          "qualified_name_hint": "Becoming.U4LeverTwo.zero_of_total_zero",
+          "line": 109
+        },
+        {
+          "kind": "theorem",
+          "name": "le_of_excess_zero",
+          "qualified_name_hint": "Becoming.U4LeverTwo.le_of_excess_zero",
+          "line": 118
+        },
+        {
+          "kind": "theorem",
+          "name": "exact_iff_terms_vanish",
+          "qualified_name_hint": "Becoming.U4LeverTwo.exact_iff_terms_vanish",
+          "line": 127
+        },
+        {
+          "kind": "theorem",
+          "name": "offspring_eq_selected_of_within",
+          "qualified_name_hint": "Becoming.U4LeverTwo.offspring_eq_selected_of_within",
+          "line": 140
+        },
+        {
+          "kind": "def",
+          "name": "ps",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.ps",
+          "line": 153
+        },
+        {
+          "kind": "def",
+          "name": "kids",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.kids",
+          "line": 155
+        },
+        {
+          "kind": "def",
+          "name": "a",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.a",
+          "line": 157
+        },
+        {
+          "kind": "def",
+          "name": "b",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.b",
+          "line": 159
+        },
+        {
+          "kind": "theorem",
+          "name": "totals_alike",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.totals_alike",
+          "line": 162
+        },
+        {
+          "kind": "theorem",
+          "name": "not_exact",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.not_exact",
+          "line": 165
+        },
+        {
+          "kind": "def",
+          "name": "before",
+          "qualified_name_hint": "Becoming.U4LeverTwo.before",
+          "line": 173
+        },
+        {
+          "kind": "def",
+          "name": "after",
+          "qualified_name_hint": "Becoming.U4LeverTwo.after",
+          "line": 178
+        },
+        {
+          "kind": "theorem",
+          "name": "append_assoc'",
+          "qualified_name_hint": "Becoming.U4LeverTwo.append_assoc'",
+          "line": 182
+        },
+        {
+          "kind": "theorem",
+          "name": "pair_append",
+          "qualified_name_hint": "Becoming.U4LeverTwo.pair_append",
+          "line": 187
+        },
+        {
+          "kind": "theorem",
+          "name": "pairs_one",
+          "qualified_name_hint": "Becoming.U4LeverTwo.pairs_one",
+          "line": 196
+        },
+        {
+          "kind": "theorem",
+          "name": "pairs_all",
+          "qualified_name_hint": "Becoming.U4LeverTwo.pairs_all",
+          "line": 205
+        },
+        {
+          "kind": "theorem",
+          "name": "exact_pairs",
+          "qualified_name_hint": "Becoming.U4LeverTwo.exact_pairs",
+          "line": 217
+        },
+        {
+          "kind": "theorem",
+          "name": "exact_paired_class",
+          "qualified_name_hint": "Becoming.U4LeverTwo.exact_paired_class",
+          "line": 225
+        },
+        {
+          "kind": "theorem",
+          "name": "total_app",
+          "qualified_name_hint": "Becoming.U4LeverTwo.total_app",
+          "line": 232
+        },
+        {
+          "kind": "theorem",
+          "name": "total_insert",
+          "qualified_name_hint": "Becoming.U4LeverTwo.total_insert",
+          "line": 236
+        },
+        {
+          "kind": "theorem",
+          "name": "total_of_paired",
+          "qualified_name_hint": "Becoming.U4LeverTwo.total_of_paired",
+          "line": 242
+        },
+        {
+          "kind": "theorem",
+          "name": "total_before",
+          "qualified_name_hint": "Becoming.U4LeverTwo.total_before",
+          "line": 250
+        },
+        {
+          "kind": "theorem",
+          "name": "total_after",
+          "qualified_name_hint": "Becoming.U4LeverTwo.total_after",
+          "line": 256
+        },
+        {
+          "kind": "theorem",
+          "name": "add_congr",
+          "qualified_name_hint": "Becoming.U4LeverTwo.add_congr",
+          "line": 261
+        },
+        {
+          "kind": "theorem",
+          "name": "selected_eq",
+          "qualified_name_hint": "Becoming.U4LeverTwo.selected_eq",
+          "line": 263
+        },
+        {
+          "kind": "theorem",
+          "name": "offspring_eq",
+          "qualified_name_hint": "Becoming.U4LeverTwo.offspring_eq",
+          "line": 269
+        },
+        {
+          "kind": "theorem",
+          "name": "totals_of_paired",
+          "qualified_name_hint": "Becoming.U4LeverTwo.totals_of_paired",
+          "line": 278
+        },
+        {
+          "kind": "theorem",
+          "name": "totals_iff_cancel",
+          "qualified_name_hint": "Becoming.U4LeverTwo.totals_iff_cancel",
+          "line": 287
+        },
+        {
+          "kind": "theorem",
+          "name": "beq_self",
+          "qualified_name_hint": "Becoming.U4LeverTwo.beq_self",
+          "line": 298
+        },
+        {
+          "kind": "theorem",
+          "name": "eq_of_beq",
+          "qualified_name_hint": "Becoming.U4LeverTwo.eq_of_beq",
+          "line": 302
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_decided",
+          "qualified_name_hint": "Becoming.U4LeverTwo.alike_decided",
+          "line": 310
+        },
+        {
+          "kind": "def",
+          "name": "ps",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.ps",
+          "line": 318
+        },
+        {
+          "kind": "def",
+          "name": "kids",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.kids",
+          "line": 320
+        },
+        {
+          "kind": "def",
+          "name": "a",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.a",
+          "line": 322
+        },
+        {
+          "kind": "def",
+          "name": "b",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.b",
+          "line": 324
+        },
+        {
+          "kind": "theorem",
+          "name": "paired",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.paired",
+          "line": 328
+        },
+        {
+          "kind": "theorem",
+          "name": "not_exact",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.not_exact",
+          "line": 333
+        },
+        {
+          "kind": "theorem",
+          "name": "terms",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.terms",
+          "line": 337
+        },
+        {
+          "kind": "def",
+          "name": "atOne",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.atOne",
+          "line": 344
+        },
+        {
+          "kind": "theorem",
+          "name": "unexact_not_paired",
+          "qualified_name_hint": "Becoming.U4LeverTwo.unexact_not_paired",
+          "line": 351
+        },
+        {
+          "kind": "def",
+          "name": "Raised",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Raised",
+          "line": 361
+        },
+        {
+          "kind": "def",
+          "name": "groups",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.groups",
+          "line": 369
+        },
+        {
+          "kind": "theorem",
+          "name": "listed",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.listed",
+          "line": 371
+        },
+        {
+          "kind": "theorem",
+          "name": "equal",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.equal",
+          "line": 373
+        },
+        {
+          "kind": "theorem",
+          "name": "not_exact",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.not_exact",
+          "line": 378
+        },
+        {
+          "kind": "theorem",
+          "name": "raises",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.raises",
+          "line": 383
+        },
+        {
+          "kind": "theorem",
+          "name": "levels_false",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.levels_false",
+          "line": 386
+        },
+        {
+          "kind": "theorem",
+          "name": "levels_fail",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.levels_fail",
+          "line": 399
+        },
+        {
+          "kind": "theorem",
+          "name": "not_cancel",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.not_cancel",
+          "line": 410
+        },
+        {
+          "kind": "theorem",
+          "name": "lt_iff_add_lt",
+          "qualified_name_hint": "Becoming.U4LeverTwo.lt_iff_add_lt",
+          "line": 416
+        },
+        {
+          "kind": "theorem",
+          "name": "rises_cancel_iff",
+          "qualified_name_hint": "Becoming.U4LeverTwo.rises_cancel_iff",
+          "line": 423
+        },
+        {
+          "kind": "theorem",
+          "name": "cancel_of_exact",
+          "qualified_name_hint": "Becoming.U4LeverTwo.cancel_of_exact",
+          "line": 430
+        },
+        {
+          "kind": "theorem",
+          "name": "rises_cancel_iff_levels",
+          "qualified_name_hint": "Becoming.U4LeverTwo.rises_cancel_iff_levels",
+          "line": 437
+        },
+        {
+          "kind": "def",
+          "name": "gives",
+          "qualified_name_hint": "Becoming.U4LeverTwo.gives",
+          "line": 453
+        },
+        {
+          "kind": "def",
+          "name": "activeAt",
+          "qualified_name_hint": "Becoming.U4LeverTwo.activeAt",
+          "line": 456
+        },
+        {
+          "kind": "def",
+          "name": "listed",
+          "qualified_name_hint": "Becoming.U4LeverTwo.listed",
+          "line": 459
+        },
+        {
+          "kind": "theorem",
+          "name": "acting_iff",
+          "qualified_name_hint": "Becoming.U4LeverTwo.acting_iff",
+          "line": 464
+        },
+        {
+          "kind": "theorem",
+          "name": "listed_within_gives",
+          "qualified_name_hint": "Becoming.U4LeverTwo.listed_within_gives",
+          "line": 471
+        },
+        {
+          "kind": "theorem",
+          "name": "length_zero_of_none",
+          "qualified_name_hint": "Becoming.U4LeverTwo.length_zero_of_none",
+          "line": 477
+        },
+        {
+          "kind": "theorem",
+          "name": "size_zero_of_within",
+          "qualified_name_hint": "Becoming.U4LeverTwo.size_zero_of_within",
+          "line": 484
+        },
+        {
+          "kind": "theorem",
+          "name": "all_end_on_root",
+          "qualified_name_hint": "Becoming.U4LeverTwo.all_end_on_root",
+          "line": 494
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.web",
+          "line": 503
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.flow",
+          "line": 510
+        },
+        {
+          "kind": "def",
+          "name": "gens",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.gens",
+          "line": 515
+        },
+        {
+          "kind": "theorem",
+          "name": "present_all",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.present_all",
+          "line": 522
+        },
+        {
+          "kind": "theorem",
+          "name": "descended",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.descended",
+          "line": 526
+        },
+        {
+          "kind": "theorem",
+          "name": "inactive",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.inactive",
+          "line": 531
+        },
+        {
+          "kind": "theorem",
+          "name": "not_ended",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.not_ended",
+          "line": 533
+        },
+        {
+          "kind": "theorem",
+          "name": "not_acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.not_acting",
+          "line": 535
+        },
+        {
+          "kind": "theorem",
+          "name": "gate_needed",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.gate_needed",
+          "line": 539
+        },
+        {
+          "kind": "theorem",
+          "name": "offspring_zero_within",
+          "qualified_name_hint": "Becoming.U4LeverTwo.offspring_zero_within",
+          "line": 547
+        },
+        {
+          "kind": "theorem",
+          "name": "ended_within",
+          "qualified_name_hint": "Becoming.U4LeverTwo.ended_within",
+          "line": 556
+        },
+        {
+          "kind": "theorem",
+          "name": "rises_iff_inactive_on_root",
+          "qualified_name_hint": "Becoming.U4LeverTwo.rises_iff_inactive_on_root",
+          "line": 569
+        },
+        {
+          "kind": "theorem",
+          "name": "no_new_dependence_of_given",
+          "qualified_name_hint": "Becoming.U4LeverTwo.no_new_dependence_of_given",
+          "line": 591
+        },
+        {
+          "kind": "theorem",
+          "name": "no_new_dependence_from_balance",
+          "qualified_name_hint": "Becoming.U4LeverTwo.no_new_dependence_from_balance",
+          "line": 601
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.web",
+          "line": 612
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.flow",
+          "line": 619
+        },
+        {
+          "kind": "theorem",
+          "name": "comes",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.comes",
+          "line": 624
+        },
+        {
+          "kind": "theorem",
+          "name": "inherits",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.inherits",
+          "line": 626
+        },
+        {
+          "kind": "theorem",
+          "name": "none",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.none",
+          "line": 629
+        },
+        {
+          "kind": "theorem",
+          "name": "depends",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.depends",
+          "line": 632
+        },
+        {
+          "kind": "theorem",
+          "name": "not_given",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.not_given",
+          "line": 634
+        },
+        {
+          "kind": "def",
+          "name": "rising",
+          "qualified_name_hint": "Becoming.U4LeverTwo.rising",
+          "line": 643
+        },
+        {
+          "kind": "theorem",
+          "name": "rising_refl",
+          "qualified_name_hint": "Becoming.U4LeverTwo.rising_refl",
+          "line": 645
+        },
+        {
+          "kind": "theorem",
+          "name": "rising_trans",
+          "qualified_name_hint": "Becoming.U4LeverTwo.rising_trans",
+          "line": 647
+        },
+        {
+          "kind": "theorem",
+          "name": "rising_not_class",
+          "qualified_name_hint": "Becoming.U4LeverTwo.rising_not_class",
+          "line": 652
+        },
+        {
+          "kind": "theorem",
+          "name": "unlowered_iff_within",
+          "qualified_name_hint": "Becoming.U4LeverTwo.unlowered_iff_within",
+          "line": 658
+        },
+        {
+          "kind": "theorem",
+          "name": "unlowered_at_iff",
+          "qualified_name_hint": "Becoming.U4LeverTwo.unlowered_at_iff",
+          "line": 670
+        },
+        {
+          "kind": "def",
+          "name": "givingOcc",
+          "qualified_name_hint": "Becoming.U4LeverTwo.givingOcc",
+          "line": 680
+        },
+        {
+          "kind": "theorem",
+          "name": "acting_iff_occurrences",
+          "qualified_name_hint": "Becoming.U4LeverTwo.acting_iff_occurrences",
+          "line": 686
+        },
+        {
+          "kind": "theorem",
+          "name": "gate_iff_occurrences",
+          "qualified_name_hint": "Becoming.U4LeverTwo.gate_iff_occurrences",
+          "line": 696
+        },
+        {
+          "kind": "theorem",
+          "name": "not_mem_nil",
+          "qualified_name_hint": "Becoming.U4LeverTwo.not_mem_nil",
+          "line": 708
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_single",
+          "qualified_name_hint": "Becoming.U4LeverTwo.mem_single",
+          "line": 710
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_pair",
+          "qualified_name_hint": "Becoming.U4LeverTwo.mem_pair",
+          "line": 714
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_three",
+          "qualified_name_hint": "Becoming.U4LeverTwo.mem_three",
+          "line": 718
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.web",
+          "line": 732
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.flow",
+          "line": 739
+        },
+        {
+          "kind": "def",
+          "name": "ps",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.ps",
+          "line": 744
+        },
+        {
+          "kind": "def",
+          "name": "kids",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.kids",
+          "line": 746
+        },
+        {
+          "kind": "theorem",
+          "name": "acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.acting",
+          "line": 748
+        },
+        {
+          "kind": "theorem",
+          "name": "not_dependent",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.not_dependent",
+          "line": 750
+        },
+        {
+          "kind": "theorem",
+          "name": "not_acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.not_acting",
+          "line": 753
+        },
+        {
+          "kind": "theorem",
+          "name": "dependent",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.dependent",
+          "line": 756
+        },
+        {
+          "kind": "theorem",
+          "name": "gate_parts",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.gate_parts",
+          "line": 759
+        },
+        {
+          "kind": "theorem",
+          "name": "descend",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.descend",
+          "line": 763
+        },
+        {
+          "kind": "theorem",
+          "name": "depends",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.depends",
+          "line": 766
+        },
+        {
+          "kind": "theorem",
+          "name": "offspring_depends",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.offspring_depends",
+          "line": 769
+        },
+        {
+          "kind": "theorem",
+          "name": "transmits",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.transmits",
+          "line": 771
+        },
+        {
+          "kind": "theorem",
+          "name": "selection_fails",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.selection_fails",
+          "line": 775
+        },
+        {
+          "kind": "theorem",
+          "name": "transmitted_fails",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.transmitted_fails",
+          "line": 782
+        },
+        {
+          "kind": "theorem",
+          "name": "selected_fails",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.selected_fails",
+          "line": 786
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.web",
+          "line": 802
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.flow",
+          "line": 809
+        },
+        {
+          "kind": "def",
+          "name": "gens",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.gens",
+          "line": 814
+        },
+        {
+          "kind": "theorem",
+          "name": "acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.acting",
+          "line": 827
+        },
+        {
+          "kind": "theorem",
+          "name": "not_dependent",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.not_dependent",
+          "line": 829
+        },
+        {
+          "kind": "theorem",
+          "name": "not_acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.not_acting",
+          "line": 832
+        },
+        {
+          "kind": "theorem",
+          "name": "dependent",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.dependent",
+          "line": 835
+        },
+        {
+          "kind": "theorem",
+          "name": "gate_parts",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.gate_parts",
+          "line": 837
+        },
+        {
+          "kind": "theorem",
+          "name": "descended",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.descended",
+          "line": 841
+        },
+        {
+          "kind": "theorem",
+          "name": "top",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.top",
+          "line": 847
+        },
+        {
+          "kind": "theorem",
+          "name": "below_one",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.below_one",
+          "line": 863
+        },
+        {
+          "kind": "theorem",
+          "name": "unlowered",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.unlowered",
+          "line": 867
+        },
+        {
+          "kind": "theorem",
+          "name": "exact",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.exact",
+          "line": 871
+        },
+        {
+          "kind": "theorem",
+          "name": "moved",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.moved",
+          "line": 877
+        },
+        {
+          "kind": "theorem",
+          "name": "falls",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.falls",
+          "line": 880
+        },
+        {
+          "kind": "theorem",
+          "name": "not_rises",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.not_rises",
+          "line": 883
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.web",
+          "line": 901
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.flow",
+          "line": 908
+        },
+        {
+          "kind": "def",
+          "name": "gens",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.gens",
+          "line": 913
+        },
+        {
+          "kind": "def",
+          "name": "groups",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.groups",
+          "line": 930
+        },
+        {
+          "kind": "theorem",
+          "name": "descended",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.descended",
+          "line": 932
+        },
+        {
+          "kind": "theorem",
+          "name": "listed",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.listed",
+          "line": 938
+        },
+        {
+          "kind": "theorem",
+          "name": "equal",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.equal",
+          "line": 940
+        },
+        {
+          "kind": "theorem",
+          "name": "exact",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.exact",
+          "line": 948
+        },
+        {
+          "kind": "theorem",
+          "name": "acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.acting",
+          "line": 951
+        },
+        {
+          "kind": "theorem",
+          "name": "not_acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.not_acting",
+          "line": 953
+        },
+        {
+          "kind": "theorem",
+          "name": "inactive",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.inactive",
+          "line": 957
+        },
+        {
+          "kind": "theorem",
+          "name": "not_inactive",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.not_inactive",
+          "line": 980
+        },
+        {
+          "kind": "theorem",
+          "name": "fails",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.fails",
+          "line": 986
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lifted.web",
+          "line": 1003
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lifted.flow",
+          "line": 1010
+        },
+        {
+          "kind": "def",
+          "name": "gens",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lifted.gens",
+          "line": 1015
+        },
+        {
+          "kind": "def",
+          "name": "groups",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lifted.groups",
+          "line": 1024
+        },
+        {
+          "kind": "theorem",
+          "name": "acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lifted.acting",
+          "line": 1026
+        },
+        {
+          "kind": "theorem",
+          "name": "descended",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lifted.descended",
+          "line": 1028
+        },
+        {
+          "kind": "theorem",
+          "name": "listed",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lifted.listed",
+          "line": 1034
+        },
+        {
+          "kind": "theorem",
+          "name": "equal",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lifted.equal",
+          "line": 1036
+        },
+        {
+          "kind": "theorem",
+          "name": "inactive",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lifted.inactive",
+          "line": 1041
+        },
+        {
+          "kind": "theorem",
+          "name": "not_cancel",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lifted.not_cancel",
+          "line": 1050
+        },
+        {
+          "kind": "theorem",
+          "name": "fails",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lifted.fails",
+          "line": 1053
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Undepending.web",
+          "line": 1072
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Undepending.flow",
+          "line": 1079
+        },
+        {
+          "kind": "theorem",
+          "name": "acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Undepending.acting",
+          "line": 1084
+        },
+        {
+          "kind": "theorem",
+          "name": "dependent",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Undepending.dependent",
+          "line": 1086
+        },
+        {
+          "kind": "theorem",
+          "name": "descend",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Undepending.descend",
+          "line": 1088
+        },
+        {
+          "kind": "theorem",
+          "name": "not_depends",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Undepending.not_depends",
+          "line": 1092
+        },
+        {
+          "kind": "theorem",
+          "name": "selection_fails",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Undepending.selection_fails",
+          "line": 1094
+        },
+        {
+          "kind": "theorem",
+          "name": "selected_fails",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Undepending.selected_fails",
+          "line": 1101
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Untransmitted.web",
+          "line": 1115
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Untransmitted.flow",
+          "line": 1122
+        },
+        {
+          "kind": "theorem",
+          "name": "acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Untransmitted.acting",
+          "line": 1129
+        },
+        {
+          "kind": "theorem",
+          "name": "dependent",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Untransmitted.dependent",
+          "line": 1133
+        },
+        {
+          "kind": "theorem",
+          "name": "descends",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Untransmitted.descends",
+          "line": 1137
+        },
+        {
+          "kind": "theorem",
+          "name": "depends",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Untransmitted.depends",
+          "line": 1140
+        },
+        {
+          "kind": "theorem",
+          "name": "not_transmits",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Untransmitted.not_transmits",
+          "line": 1142
+        },
+        {
+          "kind": "theorem",
+          "name": "fails",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Untransmitted.fails",
+          "line": 1145
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Undependent.web",
+          "line": 1154
+        },
+        {
+          "kind": "theorem",
+          "name": "acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Undependent.acting",
+          "line": 1163
+        },
+        {
+          "kind": "theorem",
+          "name": "dependent",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Undependent.dependent",
+          "line": 1165
+        },
+        {
+          "kind": "theorem",
+          "name": "descends",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Undependent.descends",
+          "line": 1169
+        },
+        {
+          "kind": "theorem",
+          "name": "transmits",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Undependent.transmits",
+          "line": 1172
+        },
+        {
+          "kind": "theorem",
+          "name": "not_depends",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Undependent.not_depends",
+          "line": 1179
+        },
+        {
+          "kind": "theorem",
+          "name": "fails",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Undependent.fails",
+          "line": 1181
+        },
+        {
+          "kind": "def",
+          "name": "silent",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.silent",
+          "line": 1190
+        },
+        {
+          "kind": "theorem",
+          "name": "silent_acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.silent_acting",
+          "line": 1195
+        },
+        {
+          "kind": "theorem",
+          "name": "not_descend",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.not_descend",
+          "line": 1197
+        },
+        {
+          "kind": "theorem",
+          "name": "silent_transmits",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.silent_transmits",
+          "line": 1200
+        },
+        {
+          "kind": "theorem",
+          "name": "not_descends",
+          "qualified_name_hint": "Becoming.U4LeverTwo.NeedOverLevel.not_descends",
+          "line": 1203
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.U4LeverTwo.TopMissed.web",
+          "line": 1214
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.U4LeverTwo.TopMissed.flow",
+          "line": 1221
+        },
+        {
+          "kind": "def",
+          "name": "gens",
+          "qualified_name_hint": "Becoming.U4LeverTwo.TopMissed.gens",
+          "line": 1228
+        },
+        {
+          "kind": "theorem",
+          "name": "acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.TopMissed.acting",
+          "line": 1241
+        },
+        {
+          "kind": "theorem",
+          "name": "dependent",
+          "qualified_name_hint": "Becoming.U4LeverTwo.TopMissed.dependent",
+          "line": 1245
+        },
+        {
+          "kind": "theorem",
+          "name": "descended",
+          "qualified_name_hint": "Becoming.U4LeverTwo.TopMissed.descended",
+          "line": 1249
+        },
+        {
+          "kind": "theorem",
+          "name": "not_top",
+          "qualified_name_hint": "Becoming.U4LeverTwo.TopMissed.not_top",
+          "line": 1262
+        },
+        {
+          "kind": "theorem",
+          "name": "unlowered",
+          "qualified_name_hint": "Becoming.U4LeverTwo.TopMissed.unlowered",
+          "line": 1267
+        },
+        {
+          "kind": "theorem",
+          "name": "exact",
+          "qualified_name_hint": "Becoming.U4LeverTwo.TopMissed.exact",
+          "line": 1271
+        },
+        {
+          "kind": "theorem",
+          "name": "moved",
+          "qualified_name_hint": "Becoming.U4LeverTwo.TopMissed.moved",
+          "line": 1277
+        },
+        {
+          "kind": "theorem",
+          "name": "falls",
+          "qualified_name_hint": "Becoming.U4LeverTwo.TopMissed.falls",
+          "line": 1279
+        },
+        {
+          "kind": "theorem",
+          "name": "not_rises",
+          "qualified_name_hint": "Becoming.U4LeverTwo.TopMissed.not_rises",
+          "line": 1281
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lowered.web",
+          "line": 1293
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lowered.flow",
+          "line": 1300
+        },
+        {
+          "kind": "def",
+          "name": "gens",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lowered.gens",
+          "line": 1305
+        },
+        {
+          "kind": "theorem",
+          "name": "acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lowered.acting",
+          "line": 1314
+        },
+        {
+          "kind": "theorem",
+          "name": "dependent",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lowered.dependent",
+          "line": 1316
+        },
+        {
+          "kind": "theorem",
+          "name": "descended",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lowered.descended",
+          "line": 1318
+        },
+        {
+          "kind": "theorem",
+          "name": "top",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lowered.top",
+          "line": 1324
+        },
+        {
+          "kind": "theorem",
+          "name": "not_unlowered",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lowered.not_unlowered",
+          "line": 1329
+        },
+        {
+          "kind": "theorem",
+          "name": "not_exact",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lowered.not_exact",
+          "line": 1332
+        },
+        {
+          "kind": "theorem",
+          "name": "moved",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lowered.moved",
+          "line": 1336
+        },
+        {
+          "kind": "theorem",
+          "name": "falls",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lowered.falls",
+          "line": 1338
+        },
+        {
+          "kind": "theorem",
+          "name": "not_rises",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lowered.not_rises",
+          "line": 1340
+        },
+        {
+          "kind": "def",
+          "name": "gens",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Kept.gens",
+          "line": 1353
+        },
+        {
+          "kind": "theorem",
+          "name": "descended",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Kept.descended",
+          "line": 1360
+        },
+        {
+          "kind": "theorem",
+          "name": "top",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Kept.top",
+          "line": 1366
+        },
+        {
+          "kind": "theorem",
+          "name": "exact",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Kept.exact",
+          "line": 1370
+        },
+        {
+          "kind": "theorem",
+          "name": "not_moved",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Kept.not_moved",
+          "line": 1374
+        },
+        {
+          "kind": "theorem",
+          "name": "not_rises",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Kept.not_rises",
+          "line": 1377
+        },
+        {
+          "kind": "def",
+          "name": "silent",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.silent",
+          "line": 1389
+        },
+        {
+          "kind": "theorem",
+          "name": "silent_acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.silent_acting",
+          "line": 1394
+        },
+        {
+          "kind": "theorem",
+          "name": "not_descended",
+          "qualified_name_hint": "Becoming.U4LeverTwo.LowGives.not_descended",
+          "line": 1396
+        },
+        {
+          "kind": "def",
+          "name": "silent",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.silent",
+          "line": 1405
+        },
+        {
+          "kind": "theorem",
+          "name": "silent_acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.silent_acting",
+          "line": 1410
+        },
+        {
+          "kind": "theorem",
+          "name": "not_descended",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.not_descended",
+          "line": 1412
+        },
+        {
+          "kind": "theorem",
+          "name": "not_acting_at",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.not_acting_at",
+          "line": 1416
+        },
+        {
+          "kind": "theorem",
+          "name": "not_descended_at",
+          "qualified_name_hint": "Becoming.U4LeverTwo.EndsAmong.not_descended_at",
+          "line": 1421
+        },
+        {
+          "kind": "def",
+          "name": "silent",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.silent",
+          "line": 1428
+        },
+        {
+          "kind": "theorem",
+          "name": "silent_acting",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.silent_acting",
+          "line": 1433
+        },
+        {
+          "kind": "theorem",
+          "name": "not_descended",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.not_descended",
+          "line": 1435
+        },
+        {
+          "kind": "theorem",
+          "name": "not_acting_at",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.not_acting_at",
+          "line": 1439
+        },
+        {
+          "kind": "theorem",
+          "name": "not_descended_at",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.not_descended_at",
+          "line": 1444
+        },
+        {
+          "kind": "theorem",
+          "name": "active_member",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lifted.active_member",
+          "line": 1456
+        },
+        {
+          "kind": "theorem",
+          "name": "not_ended",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lifted.not_ended",
+          "line": 1459
+        },
+        {
+          "kind": "theorem",
+          "name": "inactive_needed",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Lifted.inactive_needed",
+          "line": 1463
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Uninherited.web",
+          "line": 1475
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Uninherited.flow",
+          "line": 1482
+        },
+        {
+          "kind": "theorem",
+          "name": "comes",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Uninherited.comes",
+          "line": 1487
+        },
+        {
+          "kind": "theorem",
+          "name": "given",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Uninherited.given",
+          "line": 1489
+        },
+        {
+          "kind": "theorem",
+          "name": "none",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Uninherited.none",
+          "line": 1492
+        },
+        {
+          "kind": "theorem",
+          "name": "not_inherits",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Uninherited.not_inherits",
+          "line": 1495
+        },
+        {
+          "kind": "theorem",
+          "name": "depends",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Uninherited.depends",
+          "line": 1498
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Held.web",
+          "line": 1506
+        },
+        {
+          "kind": "theorem",
+          "name": "given",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Held.given",
+          "line": 1513
+        },
+        {
+          "kind": "theorem",
+          "name": "inherits",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Held.inherits",
+          "line": 1516
+        },
+        {
+          "kind": "theorem",
+          "name": "comes",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Held.comes",
+          "line": 1519
+        },
+        {
+          "kind": "theorem",
+          "name": "not_none",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Held.not_none",
+          "line": 1521
+        },
+        {
+          "kind": "theorem",
+          "name": "depends",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Held.depends",
+          "line": 1524
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Standing.web",
+          "line": 1533
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Standing.flow",
+          "line": 1540
+        },
+        {
+          "kind": "theorem",
+          "name": "not_comes",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Standing.not_comes",
+          "line": 1545
+        },
+        {
+          "kind": "theorem",
+          "name": "given",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Standing.given",
+          "line": 1547
+        },
+        {
+          "kind": "theorem",
+          "name": "inherits",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Standing.inherits",
+          "line": 1550
+        },
+        {
+          "kind": "theorem",
+          "name": "none",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Standing.none",
+          "line": 1553
+        },
+        {
+          "kind": "theorem",
+          "name": "depends",
+          "qualified_name_hint": "Becoming.U4LeverTwo.Standing.depends",
+          "line": 1556
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 62,
+        "theorem": 190
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
     },
     "d1f01ac746fb88127c03ef6ea266ce012b9191bc717c2e5aef6cd6a3417368f7": {
       "byte_size": 48823,

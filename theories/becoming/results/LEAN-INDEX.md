@@ -19,12 +19,12 @@ Warrant of ethical premises, valid inference, recognition, motivation and implem
 <a id="覆盖范围--coverage"></a>
 ## Coverage
 
-The inventory contains **2,150 `.lean` paths and 1,698 distinct byte contents**, including 185 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
+The inventory contains **2,151 `.lean` paths and 1,699 distinct byte contents**, including 185 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
 
 | File role | Paths |
 |---|---:|
 | Audit driver | 13 |
-| Development attempt | 1,182 |
+| Development attempt | 1,183 |
 | Historical draft | 3 |
 | Imported archive | 23 |
 | Working source | 929 |

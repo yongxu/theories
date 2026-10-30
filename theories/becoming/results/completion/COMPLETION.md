@@ -2,7 +2,7 @@
 
 # The completion criterion, run
 
-The criterion K1–K7 adopted on 20 October 2026 ([study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#218-r25-the-twentieth-reviews-step-1-docs-now)), run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), the core receipt `20261030T075728.527064Z` and the connectivity measure of `627163ef3` (core receipt `20261029T213154.508889Z`). A criterion is met when it has no finding. Statements are read from the Lean source text, so a premise reached only through a definition the statement unfolds is not found.
+The criterion K1–K7 adopted on 20 October 2026 ([study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#218-r25-the-twentieth-reviews-step-1-docs-now)), run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), the core receipt `20261030T075728.527064Z` and the connectivity measure of `cd846da34` (core receipt `20261030T075728.527064Z`). A criterion is met when it has no finding. Statements are read from the Lean source text, so a premise reached only through a definition the statement unfolds is not found.
 
 | | Criterion | Met | Findings |
 |---|---|---|---:|
@@ -100,17 +100,17 @@ No finding.
 <a id="master-laws"></a>
 ## The master laws (EC, not a criterion)
 
-Board item EC aims at an elegant completion: few laws, each stated once at the lowest layer, every central result following from them (board rule 9). For each central declaration of the coverage file, the master laws among its reasons: an anchor of the law that its type or value reaches in the compiled environment, directly or through other constants, as the connectivity measure of the commit above records it (`THEOREM-CONNECTIVITY.json`, `master_laws`). A measurement of dependency, not of meaning; it is not a criterion of K1–K7. Counted per row: 86 of 127 central declarations rest on at least one master law.
+Board item EC aims at an elegant completion: few laws, each stated once at the lowest layer, every central result following from them (board rule 9). For each central declaration of the coverage file, the master laws among its reasons: an anchor of the law that its type or value reaches in the compiled environment, directly or through other constants, as the connectivity measure of the commit above records it (`THEOREM-CONNECTIVITY.json`, `master_laws`). A measurement of dependency, not of meaning; it is not a criterion of K1–K7. Counted per row: 88 of 127 central declarations rest on at least one master law.
 
 | Law | Statement | Anchors | Central declarations resting on it |
 |---|---|---|---:|
-| Closure | what a relation carries reaches exactly its closure, and nothing within a closure bears the relation to what lies beyond it | `WithinClosure` | 27 |
-| Balance | a level changes by what is given and taken, at each step and over every stretch | `Flow.Balances`, `Flow.BalancesOn`, `balance_over_stretch_on` | 53 |
-| Finite runs | within finitely many configurations a law returns every configuration or is drawn; where every course of no rise then a least fall ends, falls along a line that does not rise do not recur, and rest is not a case of being drawn | `Branching.Returns`, `Branching.Lossless`, `revisits_within`, `Amounts.rests`, `Amounts.FallsStop` | 13 |
-| Lumping | a part read alone carries a law exactly where the rest makes no difference to its next value | `GoAlikeUnder` | 2 |
-| Order | widening is retaining and adding; the ethics adds two premises, the continuation condition for scope and C for order | `Web.Widens`, `Weighting.WidensOn` | 9 |
+| Closure | what a relation carries reaches exactly its closure, and nothing within a closure bears the relation to what lies beyond it | `WithinClosure`, `«所闭当且仅当同一或及»`, `«所闭»` | 41 |
+| Balance | a level changes by what is given and taken, at each step and over every stretch | `Flow.Balances`, `Flow.BalancesOn`, `Flow.BalancesBetween`, `balance_over_stretch_on`, `«守数当且仅当可对»`, `«程守数当且仅当可对»` | 55 |
+| Finite runs | within finitely many configurations a law returns every configuration or is drawn; where every course of no rise then a least fall ends, falls along a line that does not rise do not recur, and rest is not a case of being drawn | `Branching.Returns`, `Branching.Lossless`, `revisits_within`, `Amounts.rests`, `Amounts.FallsStop`, `«入当且仅当有不返»`, `«有限遍后定后则定前当且仅当皆返»`, `«尽则不或屡»` | 14 |
+| Lumping | a part read alone carries a law exactly where the rest makes no difference to its next value | `GoAlikeUnder`, `«像定后当且仅当同行»`, `«同行»` | 2 |
+| Order | widening is retaining and adding; the ethics adds two premises, the continuation condition for scope and C for order | `Web.Widens`, `Weighting.WidensOn`, `«广不可逆»`, `«广之传递»`, `«广»` | 9 |
 
-Resting on no master law (41), by row:
+Resting on no master law (39), by row:
 
 - Maintenance: `Tolerance.answers_restores_iff`, `Viability.kernel_and_iff`
 - Actor: `Web.roles_supported`, `Dependence.differenceOnlyTogether_iff`
@@ -124,4 +124,4 @@ Resting on no master law (41), by row:
 - Learning: `Limit.identifies_iff_tracks`, `Learning.Training.unselected_beyond_data`
 - Collective: `Withholding.withholding_spreads`, `SharedCodes.run_agrees_every_start_iff`, `RelativePosition.rise_needs_fall`
 - Significance: `unrestricted_iff_livingSignificance`
-- Alignment: `Web.optimum_broken_iff`, `Optimum.optimum_beyond`, `Optimum.mutual_beyond`, `ExchangeLaw.response_not_fixed_by_coupling`
+- Alignment: `Web.optimum_broken_iff`, `ExchangeLaw.response_not_fixed_by_coupling`

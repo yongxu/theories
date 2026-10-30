@@ -330,6 +330,10 @@ This section was added by U4's taker. It edits no earlier section, but it supers
 - **Row 9** stays a premise of the account.
 - **Rows 10, 11, 15 and 16** keep "balance, represented".
 
+**Lever 2's follow-up: every witness checked against its row.** A second independent read found two hypotheses unwitnessed, `moved` in row 8 and `inactive` in row 17; both now have witnesses (`Kept`, `Lifted.inactive_needed`), and a recheck found the fixes sound. Every hypothesis of rows 1–3, 5, 7, 8, 13, 14 and 17 that is not a list fact now has a witness, and a check module applies each package row, or its form on the root, to its witness, so each failure is the row's own. Scratch: 190 theorems in 253 declarations, and 2 in 2, every axiom report empty.
+
+**The master-law counts agree** (the twenty-first review's §6 item 2). 08 §7's column read 16, 52, 14, 1 and 9 against its prose's 41, 55, 14, 2 and 9, and the coverage report counted 41 central declarations on no master law against the prose's 39. The cause: COVERAGE.json's anchors lagged the measure's, without the laws' statements on the grammar or `Flow.BalancesBetween`. With them set to the measure's anchors, the column, the prose and the report agree.
+
 **What this changes in the figures.** MV's figures stand at 44, 16, 4 and 54 until the boundary record lands (F5).
 
 **What comes next for U4:**
