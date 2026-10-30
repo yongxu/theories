@@ -54,12 +54,14 @@ Also proposed, for `Becoming.GrammarTransport`'s owner (WRT's designer): `«广�
 
 No row moves to "master law" or "derived". The free forms keep OU3c's reasons, and the root forms are new statements beside them.
 
-**How F5 counts them.** In F5's field (MV's [spec](../../../../2026-10-05-repository-reconciliation/architecture/mv/F5-MODEL-STATEMENTS.md) §1 and §4), each root form is an item whose model is `own`. It is stated in the grammar's terms on the row's own carrier, a web's level paths or a finite list. It is not stated at a World's occurrence model or a process's model. So F5 counts these rows in its third count, "stated in the grammar's terms on their own carrier". FU's change 1 does not count such statements as representations at a represented model, and this design does not claim it.
-- Where §1 and §2 say "representation", they mean that each statement is a restatement of its row and not a derivation.
-- Row 8's root instance uses the closure law through GS2. Its row's dependence stays the measure's: a statement in the grammar's terms never makes its row reach the grammar (MV's spec §3).
-- Each item is proved through its own row, as F5's verification requires. Row 9's root form is proved through `Web.paths_one_object`, not through the other root forms.
+**How F5 counts them.** In F5's field (MV's [spec](../../../../2026-10-05-repository-reconciliation/architecture/mv/F5-MODEL-STATEMENTS.md) §1 and §4), an item states the row itself. An instance or a specialization of a row states less than the row, so it is not an item (§4, "U3's forms").
+- **Rows 5, 7 and 10.** The root forms keep their row's full generality, restated in the grammar's terms on the row's own carrier: a web's level paths, or a finite list. Each is an item whose model is `own`. It is not stated at a World's occurrence model or a process's model, so F5 counts these rows in its third count, "stated in the grammar's terms on their own carrier". FU's change 1 does not count such statements as representations at a represented model, and this design does not claim it.
+- **Rows 1, 8 and 9.** The root forms fix significance at the structural reading (`selfAscribed (ownClosure rel) center`), so each is a specialization of its row. They land as ordinary laws in their rows' records, labelled as specializations, with no F5 item, and their rows stay in F5's fourth count. Counting them would need the field to gain a declared relation (statement, instance, specialization), which the spec leaves to OU's owner. This design does not propose that now.
+- Where §1 and §2 say "representation", they mean that each statement is a restatement of its row, or of its row at one reading, and not a derivation.
+- Row 8's root form uses the closure law through GS2. Its row's dependence stays the measure's: a statement in the grammar's terms never makes its row reach the grammar (MV's spec §3).
+- Each root form is proved through its own row. Row 9's root form is proved through `Web.paths_one_object`, not through the other root forms. The acyclic boundary that rows 1, 8 and 9's laws state is `«续无外则同一中心»` (GS2), which those laws cite.
 
-*(Corrected 30 October 2026, before landing: the first wording said the measure reports these as representations. MV's spec, which landed after this design was reviewed, counts own-carrier statements apart.)*
+*(Corrected twice on 30 October 2026, before landing. The first wording said the measure reports these as representations. The second counted all six root forms as items. MV's spec, which landed after this design was reviewed, counts own-carrier statements apart and takes no instance or specialization as an item. The review of the Lean found the second error ([REVIEW-U3-LEAN](REVIEW-U3-LEAN.md)).)*
 
 ## 4. Smallest Lean items (none claimed)
 
