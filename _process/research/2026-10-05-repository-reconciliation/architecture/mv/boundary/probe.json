@@ -1,0 +1,2655 @@
+{
+ "summary": {
+  "distinct": 118,
+  "grammar rows reaching a grammar theorem": 44,
+  "grammar rows": 44,
+  "balance among balance-represented rows": {
+   "prelude law only": 10,
+   "statement": 19,
+   "proof": 2
+  },
+  "balance among grammar rows": {
+   "none": 28,
+   "statement": 12,
+   "prelude law only": 3,
+   "proof": 1
+  },
+  "case-of as is, by dependence": {
+   "anchor, not reached / no": 7,
+   "balance, represented / no": 31,
+   "grammar / as is: grammar laws and level-0 lemmas": 2,
+   "grammar / no": 42,
+   "no master law / no": 36
+  },
+  "Init constants in level-0 lemmas these proofs name": []
+ },
+ "rows": [
+  {
+   "declaration": "Becoming.Amounts.rests",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.«尽则不或屡»"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Amounts.rests_unrefuted"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Branching.loss_passes_juncture",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.refl",
+    "Becoming.WithinClosure.trans",
+    "Becoming.«及当且仅当一步而所闭»",
+    "Becoming.«所闭当且仅当同一或及»"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Reach.refl"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Branching.loss_passes_juncture_from"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.CensusWebs.keep_pace",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "prelude law only",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.CountsAcross.keep_pace"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.ClosedCapture.lock_outlives_loss",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.refl",
+    "Becoming.WithinClosure.trans"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.ClosedCapture.join_course",
+     "Becoming.ClosedCapture.loss_grows",
+     "Becoming.RuleCapture.locked_not_below",
+     "Becoming.RuleCapture.locked_stays"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Dependence.Overdetermined.only_together",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [
+     "Becoming.Dependence.DifferenceOnlyTogether.of_breaks"
+    ],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Dependence.differenceOnlyTogether_iff",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Dependence.determined_dichotomy"
+    ],
+    "level 1": [
+     "Becoming.Dependence.DifferenceOnlyTogether.of_breaks"
+    ],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Direction.extension_iff_widens",
+   "dependence": "anchor, not reached",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Web.paths_extension_iff_widens"
+    ],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Direction.widening_selected_by_pool",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.trans"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.act_selected_by_pool"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Drift.falls_back",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [
+    "Becoming.mem_cons_split",
+    "Becoming.total_congr"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [
+     "Becoming.total_congr"
+    ],
+    "prelude": [
+     "Becoming.Naturals.le_of_add_le_add_right",
+     "Becoming.mul_turn"
+    ],
+    "level 0": [
+     "Becoming.Typicality.total_le_mem",
+     "Becoming.Typicality.total_mul_right",
+     "Becoming.total_add",
+     "Becoming.total_mul"
+    ],
+    "level 1": [
+     "Becoming.Typicality.mem_courses_iff"
+    ],
+    "above": [
+     "Becoming.Drift.falls_back_le",
+     "Becoming.Typicality.spread"
+    ],
+    "grammar laws, statement grammar-only": [
+     "Becoming.total_congr"
+    ],
+    "forwarded": {
+     "Becoming.total_congr": "Becoming.GrammarLaws.total_congr"
+    }
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.ExchangeLaw.zero_through"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.ExchangeLaw.ofClass_take_iff",
+     "Becoming.ExchangeLaw.ofClass_through"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.Balances.comparison_within_response",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.refl",
+    "Becoming.WithinClosure.trans"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Flow.Balances.on"
+    ],
+    "level 1": [
+     "Becoming.Flow.Balances.comparison_within_difference"
+    ],
+    "above": [
+     "Becoming.Flow.not_differs_beyond_response"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.Balances.consumption_ends_with_feeders",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [
+     "Becoming.Flow.unfed_of_feeders_unsupported"
+    ],
+    "above": [
+     "Becoming.Flow.Balances.unfed_consumption_ends"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.Balances.renewedBy",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.total_pos"
+    ],
+    "level 1": [
+     "Becoming.Flow.Balances.rise_given"
+    ],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.Balances.retains_iff_within_margin",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Flow.Balances.on"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.retains_iff_within_margin_at"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.Balances.widens_iff_others_within",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Web.WidensWithin.exceeds"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.Balances.includes_iff_beyond_within"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.Dissipative.opens",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.«尽则不或屡»"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Flow.Balances.on"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.taking_not_recurring_within"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.More.replenishment_unbounded",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.«尽则不或屡»"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Flow.Balances.on"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.More.replenishment_unbounded_from"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.act_selected_by_pool",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.trans"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Web.SelectsThrough.all",
+     "Becoming.Web.admits_through"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.act_unselected_pool",
+     "Becoming.Flow.apart_beyond_pool"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.act_unselected",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.trans"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.ExchangeLaw.Through.responds",
+     "Becoming.Flow.Balances.on"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.unselected_beyond_coupling_responsive"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.beyond_gives_nothing",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.not_rel"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [
+     "Becoming.WithinClosure.not_rel"
+    ],
+    "prelude": [],
+    "level 0": [
+     "Becoming.eq_zero_of_not_pos"
+    ],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [
+     "Becoming.WithinClosure.not_rel"
+    ],
+    "forwarded": {
+     "Becoming.WithinClosure.not_rel": "Becoming.«所闭之界»"
+    }
+   },
+   "case_of_as_is": "as is: grammar laws and level-0 lemmas"
+  },
+  {
+   "declaration": "Becoming.Flow.change_recurs_iff",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.RunsDown.changes_iff",
+     "Becoming.Flow.RunsDown.standing_le",
+     "Becoming.Flow.rise_of_standing",
+     "Becoming.recurs_iff_unmet"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.continuing_excludes",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.full_taking_ends"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.descent_reaches",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.mutuallyDependent_iff_reach",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.refl",
+    "Becoming.WithinClosure.trans"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.WithinClosure.converse"
+    ],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.new_beyond_every",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "proof",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.new_from_rest_or_open",
+     "Becoming.Web.new_of_sub"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.no_new_dependence",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "proof",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.inherited_from_giver"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.outrun_below",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Flow.Balances.on"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.excess_bounded_at",
+     "Becoming.Flow.outrun_excess",
+     "Becoming.Flow.stays_below"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.restores",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Flow.Balances.on"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.restores_at"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.selected_le",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [
+     "Becoming.Flow.selected_le_at"
+    ],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.selection_within",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.selected_le",
+     "Becoming.price"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.transmitted_supported",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Flow.transmitted_supported_at"
+    ],
+    "level 1": [
+     "Becoming.Flow.DescendsAt.supported"
+    ],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.unexcluded_beyond_coupling",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.closedUnder_withinClosure"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Web.Excludes.not_of_alike"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.uncoupled_beyond_coupling"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.unselected_beyond_coupling",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.closedUnder_withinClosure"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.uncoupled_beyond_coupling"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.unselected_beyond_pool",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.closedUnder_withinClosure"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.uncoupled_beyond_pool"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.uptake_needs_replenishment",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.«尽则不或屡»"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Flow.Balances.on"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.uptake_needs_replenishment_from"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.withinCoupling_reads_iff",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.refl",
+    "Becoming.WithinClosure.trans",
+    "Becoming.«所闭之单调»"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [
+     "Becoming.WithinClosure.of_rel"
+    ],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [
+     "Becoming.WithinClosureOf.to_reads"
+    ],
+    "above": [
+     "Becoming.Flow.withinCoupling_reads"
+    ],
+    "grammar laws, statement grammar-only": [
+     "Becoming.WithinClosure.of_rel"
+    ],
+    "forwarded": {
+     "Becoming.WithinClosure.of_rel": "Becoming.«缘在所闭»"
+    }
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Flow.withinSystem_of_withinInfluence",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.«所闭之单调»"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Flow.shares_of_affectedBy",
+     "Becoming.WithinClosure.mono"
+    ],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.GroupEnding.Flow.all_end",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.SelectionTerm.total_zero_of"
+    ],
+    "level 1": [
+     "Becoming.GroupEnding.Flow.offspring_zero"
+    ],
+    "above": [
+     "Becoming.SelectionTerm.Generations.born_eq"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.GroupEnding.Flow.coupled_end_together",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.family_excess_ends",
+     "Becoming.GroupEnding.Flow.group_childless",
+     "Becoming.SelectionTerm.concord_uniform",
+     "Becoming.SelectionTerm.discord_uniform"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.GroupEnding.Flow.family_childless",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.GroupEnding.Flow.inactive_childless"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.family_excess_ends"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.GroupEnding.Flow.rises_iff_inactive",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.GroupEnding.Flow.ended_of_inactive",
+     "Becoming.GroupEnding.among_not_against",
+     "Becoming.SelectionLevels.rises_exact_iff_levels"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Ideals.verifiableBy_iff_interior",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Law.drawn_iff_not_returns",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.«定后有后则入当且仅当不返»"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [
+     "Becoming.«定后有后则入当且仅当不返»"
+    ],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Law.next_fixed",
+     "Becoming.Law.next_total"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Law.drawn_iff_drawnIn",
+     "Becoming.Law.returns_iff_reaches"
+    ],
+    "grammar laws, statement grammar-only": [
+     "Becoming.«定后有后则入当且仅当不返»"
+    ],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Law.lossless_iff_returns",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.«有限遍后定后则定前当且仅当皆返»"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [
+     "Becoming.«有限遍后定后则定前当且仅当皆返»"
+    ],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Law.next_fixed",
+     "Becoming.Law.next_total"
+    ],
+    "level 1": [
+     "Becoming.Law.lossless_iff_fixedBefore"
+    ],
+    "above": [
+     "Becoming.Law.returns_iff_reaches"
+    ],
+    "grammar laws, statement grammar-only": [
+     "Becoming.«有限遍后定后则定前当且仅当皆返»"
+    ],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Learnable.learnable_iff",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.gap_of_lt",
+    "Becoming.le_succ_cases",
+    "Becoming.revisits_within",
+    "Becoming.skipAt_le",
+    "Becoming.skipAt_lt",
+    "Becoming.skipAt_ne",
+    "Becoming.«迭之定»",
+    "Becoming.«迭之接»"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Identification.firstFit_found",
+     "Becoming.Identification.firstFit_sound",
+     "Becoming.Learnable.firstFit_congr",
+     "Becoming.Learning.prefix_length"
+    ],
+    "level 1": [
+     "Becoming.Identification.prefix_eq_iff"
+    ],
+    "above": [
+     "Becoming.Law.sameFuture_iff_below",
+     "Becoming.Learnable.agree_of_predicts_both"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.LearnableRuns.learnable_iff_tracks",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.gap_of_lt",
+    "Becoming.le_succ_cases",
+    "Becoming.revisits_within",
+    "Becoming.skipAt_le",
+    "Becoming.skipAt_lt",
+    "Becoming.skipAt_ne",
+    "Becoming.«迭之定»",
+    "Becoming.«迭之接»"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.LearnableRuns.agree_of_tracks",
+     "Becoming.LearnableRuns.learnable_iff",
+     "Becoming.LearnableRuns.tracks_of_learnable"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Learning.Training.unselected_beyond_data",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Learning.goAlike_iff_lumped",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.«像定后当且仅当同行»",
+    "Becoming.«同行之逐点»"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [
+     "Becoming.«像定后当且仅当同行»"
+    ],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Learning.lumped_iff_fixed_image",
+     "Becoming.goAlikeUnder_iff_alike"
+    ],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [
+     "Becoming.«像定后当且仅当同行»"
+    ],
+    "forwarded": {}
+   },
+   "case_of_as_is": "as is: grammar laws and level-0 lemmas"
+  },
+  {
+   "declaration": "Becoming.Limit.identifies_iff_tracks",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Listed.coming_of_ceasing",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "prelude law only",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.total_pos_of_mem"
+    ],
+    "level 1": [
+     "Becoming.mark_pos"
+    ],
+    "above": [
+     "Becoming.Listed.coming_iff_excess",
+     "Becoming.recurring_accumulates"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Optimum.mutual_beyond",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [
+     "Becoming.Naturals.add_sub_cancel",
+     "Becoming.Naturals.sub_sub",
+     "Becoming.sub_eq_zero_of_le"
+    ],
+    "level 0": [
+     "Becoming.Optimum.alone_self",
+     "Becoming.total_congr_on",
+     "Becoming.total_le",
+     "Becoming.total_zero"
+    ],
+    "level 1": [
+     "Becoming.total_split"
+    ],
+    "above": [
+     "Becoming.Optimum.MutualBest.full"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Optimum.optimum_beyond",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Optimum.transfer_exceeds"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Optimum.beyond_of_ranked"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Pace.rule_until_reading",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.refl",
+    "Becoming.WithinClosure.trans"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Pace.paced_count"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Pace.stays"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.PartForms.goAlike",
+   "dependence": "anchor, not reached",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.RegimeMargin.Adjusted.comes_to_rest",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.refl",
+    "Becoming.WithinClosure.trans",
+    "Becoming.«迭之周»",
+    "Becoming.«迭之定»"
+   ],
+   "balance": "prelude law only",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.RegimeMargin.Adjusted.given_le_level"
+    ],
+    "level 1": [
+     "Becoming.RegimeMargin.Adjusted.fixed_iff",
+     "Becoming.RegimeMargin.Adjusted.unordered_le"
+    ],
+    "above": [
+     "Becoming.LastChange.still_succ",
+     "Becoming.RegimeMargin.Adjusted.rests_from"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.RegimeMargin.Adjusted.ends_iff_below",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "prelude law only",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [
+     "Becoming.RegimeMargin.Adjusted.holds"
+    ],
+    "above": [
+     "Becoming.RegimeMargin.Adjusted.ends_below"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.RegimeMargin.Adjusted.falls_iff_below",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.refl",
+    "Becoming.WithinClosure.trans",
+    "Becoming.«迭之周»",
+    "Becoming.«迭之定»"
+   ],
+   "balance": "prelude law only",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.RegimeMargin.Adjusted.falls_of_below",
+     "Becoming.RegimeMargin.Adjusted.rests_iff_falling",
+     "Becoming.RegimeMargin.leading_exact"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.RegimeMargin.Coupled.Indexed.ends_downstream",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.refl",
+    "Becoming.WithinClosure.trans"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [
+     "Becoming.RegimeMargin.Coupled.Indexed.downstream_within"
+    ],
+    "above": [
+     "Becoming.RegimeMargin.Coupled.Indexed.ends_of_partner"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.RegimeMargin.Coupled.threshold_falls",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.refl",
+    "Becoming.WithinClosure.trans"
+   ],
+   "balance": "prelude law only",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.RegimeMargin.Coupled.band_web",
+     "Becoming.RegimeMargin.Coupled.covers_pair",
+     "Becoming.RegimeMargin.Coupled.pair_rises",
+     "Becoming.RegimeMargin.Coupled.pair_within"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls",
+     "Becoming.RegimeMargin.Coupled.threshold_pair"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.RegimeMargin.Drawn.run_shape",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.refl",
+    "Becoming.WithinClosure.trans"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.RegimeMargin.Drawn.climbs_next",
+     "Becoming.RegimeMargin.Drawn.climbs_or_sinks",
+     "Becoming.RegimeMargin.Drawn.falling_on",
+     "Becoming.RegimeMargin.Drawn.given_le_level",
+     "Becoming.RegimeMargin.Drawn.rising_on",
+     "Becoming.RegimeMargin.Drawn.sinks_next"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.RegimeMargin.ends_iff_below",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "prelude law only",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.RegimeMargin.Adjusted.draw_pos",
+     "Becoming.RegimeMargin.Adjusted.orbit_regime",
+     "Becoming.RegimeMargin.Adjusted.regime_fromNothing",
+     "Becoming.RegimeMargin.Adjusted.regime_keeps",
+     "Becoming.RegimeMargin.Adjusted.regime_staysMet",
+     "Becoming.RegimeMargin.Adjusted.regime_staysShort"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.RegimeMargin.Adjusted.ends_iff_below"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.RelativePosition.rise_needs_fall",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.RelativePosition.below_somewhere_or_not"
+    ],
+    "level 1": [
+     "Becoming.RelativePosition.total_lt_of_mem"
+    ],
+    "above": [
+     "Becoming.RelativePosition.change_balances"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Renewable.no_exact_finite_reading",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [
+     "Becoming.Renewable.finite_reading_withholds_renewal",
+     "Becoming.Web.renewing_not_consuming"
+    ],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Reproduction.Flow.closed_lineage_lowered",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [
+     "Becoming.Reproduction.Flow.last_reproducing",
+     "Becoming.SelectionTerm.Generations.empty_after"
+    ],
+    "above": [
+     "Becoming.Reproduction.Flow.lineage_ends",
+     "Becoming.Reproduction.Generations.ByNumber.discord_none",
+     "Becoming.Reproduction.Generations.ByNumber.sum_eq",
+     "Becoming.Reproduction.Generations.falls_step_iff",
+     "Becoming.Reproduction.Generations.fell_step"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Reproduction.Flow.lineage_ends",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [
+     "Becoming.between_of_mem_steps",
+     "Becoming.le_dest"
+    ],
+    "level 0": [
+     "Becoming.steps_ge",
+     "Becoming.total_le"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Reproduction.Flow.reproducing_within",
+     "Becoming.Reproduction.Generations.empty_from"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Reproduction.Flow.number_within_take",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Flow.DissipatesOn.takes_of_gives",
+     "Becoming.Reproduction.exists_mem_of_length_pos",
+     "Becoming.sign_le_one",
+     "Becoming.sign_pos",
+     "Becoming.total_pos_of_mem"
+    ],
+    "level 1": [
+     "Becoming.Reproduction.Flow.born_le_given",
+     "Becoming.total_le_of_support"
+    ],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.RuleCapture.favouring_locks",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.refl",
+    "Becoming.WithinClosure.trans"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [
+     "Becoming.Pace.paced_succ"
+    ],
+    "above": [
+     "Becoming.RuleCapture.favours_throughout"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.RuleCapture.uniform_locks",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.refl",
+    "Becoming.WithinClosure.trans"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [
+     "Becoming.le_dest"
+    ],
+    "level 0": [],
+    "level 1": [
+     "Becoming.Pace.paced_succ"
+    ],
+    "above": [
+     "Becoming.RuleCapture.favours_after_reading"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Run.not_fixes_of_untaken",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.retarget_determined",
+     "Becoming.retarget_step"
+    ],
+    "level 1": [
+     "Becoming.Run.stepsOf_retarget"
+    ],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.SelectionLevels.levels_sized",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [
+     "Becoming.Naturals.add_congr",
+     "Becoming.mul_assoc_nat"
+    ],
+    "level 0": [
+     "Becoming.SelectionLevels.square_split",
+     "Becoming.SelectionLevels.total_eq_of_mem",
+     "Becoming.total_add",
+     "Becoming.total_mul"
+    ],
+    "level 1": [
+     "Becoming.SelectionLevels.meet",
+     "Becoming.SelectionLevels.whole_total"
+    ],
+    "above": [
+     "Becoming.SelectionLevels.context_length",
+     "Becoming.SelectionLevels.context_total",
+     "Becoming.SelectionLevels.whole_weighted",
+     "Becoming.SelectionTerm.covariation"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.SelectionLevels.rises_exact_iff_levels",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.SelectionLevels.rises_iff",
+     "Becoming.SelectionTerm.Generations.raises_exact_iff"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.SelectionTerm.Flow.support_moved_rises",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.SelectionTerm.Flow.support_not_against",
+     "Becoming.SelectionTerm.Flow.support_not_lower",
+     "Becoming.SelectionTerm.Generations.moved_by_selection",
+     "Becoming.SelectionTerm.lowered_exact"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.SelectionTerm.Flow.support_not_lower",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.SelectionTerm.Flow.support_not_against",
+     "Becoming.SelectionTerm.Generations.not_lower",
+     "Becoming.SelectionTerm.Generations.not_lower_step"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.SelectionTerm.covariation",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [
+     "Becoming.total_congr"
+    ],
+    "prelude": [
+     "Becoming.Naturals.add_congr"
+    ],
+    "level 0": [
+     "Becoming.SelectionTerm.half"
+    ],
+    "level 1": [
+     "Becoming.SelectionTerm.pairs_add",
+     "Becoming.SelectionTerm.pairs_cross"
+    ],
+    "above": [
+     "Becoming.SelectionTerm.concord_swap",
+     "Becoming.SelectionTerm.discord_swap",
+     "Becoming.SelectionTerm.pair_balance",
+     "Becoming.SelectionTerm.pairs_cross'",
+     "Becoming.SelectionTerm.pairs_other",
+     "Becoming.SelectionTerm.pairs_own"
+    ],
+    "grammar laws, statement grammar-only": [
+     "Becoming.total_congr"
+    ],
+    "forwarded": {
+     "Becoming.total_congr": "Becoming.GrammarLaws.total_congr"
+    }
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.SharedCodes.run_agrees_every_start_iff",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.SharedCodes.agrees_every_start_iff",
+     "Becoming.SharedCodes.state_hearings"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Tolerance.answers_restores_iff",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.«承之迭»",
+    "Becoming.«迭之末步»"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Tolerance.answers_keeps"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Tolerance.worst_start",
+     "Becoming.Withholding.answers_closed"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Valuation.significant_iff",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.refl",
+    "Becoming.WithinClosure.trans"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Valuation.significant_of_grounds"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Valuation.significant_iff_held",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Viability.kernel_and_iff",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Viability.Kernel.mono"
+    ],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.Carries.active_not_recurring",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.«尽则不或屡»"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Web.active_not_recurring_from"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.Embodied.replenishes",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Flow.Balances.on"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Web.Embodied.replenishes_at"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.Next.frontier_ends_drawn_first",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "prelude law only",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Optimum.Next.frontier_ends_drawn_first"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.Unceasing.activeRenewer_recurs",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.«尽则不或屡»"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Web.Unceasing.rises"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.Unceasing.rises",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.«尽则不或屡»"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Web.depletion_not_recurring"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.Whole.family_excess_ends",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.kept_onward"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Flow.family_excess_ends",
+     "Becoming.Web.Whole.ends_without_arising"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.course_lost_iff",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Optimum.course_beyond",
+     "Becoming.Web.lost_iff"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.frontier_breaks_below",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "prelude law only",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Optimum.drops_of_not_keeps",
+     "Becoming.Optimum.frontier_breaks_below"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.frontier_broken",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "prelude law only",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Optimum.frontier_holds"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.frontier_exhausts",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "prelude law only",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Optimum.frontier_exhausts"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.frontier_keeps_stepwise",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "prelude law only",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Optimum.frontier_keeps_stepwise"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.frontier_rebuilds",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "prelude law only",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Optimum.frontier_rebuilds"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.living_on_reaches",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.optimum_broken_iff",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [
+     "Becoming.Optimum.least_of_room"
+    ],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.paths_comparison_widens",
+   "dependence": "anchor, not reached",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.paths_extension_iff_widens",
+   "dependence": "anchor, not reached",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.paths_one_object",
+   "dependence": "anchor, not reached",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Web.paths_extension_iff_widens"
+    ],
+    "level 1": [
+     "Becoming.Web.unrestricted_iff_paths_livingSignificance"
+    ],
+    "above": [
+     "Becoming.Web.widens_iff_retains_adds"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.renewingAt_iff_over_all",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Web.RenewingAt.over",
+     "Becoming.Web.RenewingOver.at"
+    ],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.roles_alive",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Web.roles_undermining"
+    ],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.roles_dependent",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Web.roles_supported"
+    ],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.roles_supported",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.selfValuation_significant_iff",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.refl"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Valuation.significant_iff_held",
+     "Becoming.Web.selfValuation_held"
+    ],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.significance_undetermined",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.transmits_at_iff",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Web.widens_iff_retains_adds",
+   "dependence": "anchor, not reached",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Web.Adds.exceeds"
+    ],
+    "level 1": [
+     "Becoming.Web.adds_iff_exceeds",
+     "Becoming.Web.retains_iff_includes"
+    ],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Weighting.widens_iff_every_positive",
+   "dependence": "anchor, not reached",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Weighting.exceeds_or_includes"
+    ],
+    "level 1": [
+     "Becoming.Weighting.weighed_le_of_includes"
+    ],
+    "above": [
+     "Becoming.Weighting.outweighs",
+     "Becoming.Weighting.weighed_lt_of_widens"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.Withholding.withholding_spreads",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.«存承之迭»",
+    "Becoming.«迭之末步»"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [
+     "Becoming.Withholding.waitsAll_closed"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.WithinMoves.after_course",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.«迭内之接»"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [
+     "Becoming.«迭内之接»"
+    ],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [
+     "Becoming.trace_steps"
+    ],
+    "above": [
+     "Becoming.withinMoves_iff_withinSteps"
+    ],
+    "grammar laws, statement grammar-only": [
+     "Becoming.«迭内之接»"
+    ],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.World.balanced_reidentify_iff",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Reidentify.new_old",
+     "Becoming.Reidentify.old_new"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.World.reidentify_given",
+     "Becoming.World.reidentify_taken"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.World.comes_to_rest_unrefuted",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.«尽则不或屡»"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Flow.RunsDownClosed.runsDown"
+    ],
+    "level 1": [
+     "Becoming.Flow.AroundStanding.runsDownClosed"
+    ],
+    "above": [
+     "Becoming.World.comes_to_rest_unrefuted_from"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.act_courses_unselected",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.of_rel",
+    "Becoming.WithinClosure.trans"
+   ],
+   "balance": "proof",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.ExchangeLaw.withAct_follows",
+     "Becoming.ExchangeLaw.withAct_give_of_part",
+     "Becoming.ExchangeLaw.withAct_nonanticipating",
+     "Becoming.ExchangeLaw.withAct_take_of_part"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.ExchangeLaw.course_balances_iff",
+     "Becoming.Flow.act_unselected"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.apart_only_downstream",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [
+    "Becoming.le_succ_cases"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [
+     "Becoming.le_succ_cases"
+    ],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Thresholds.pos_cond",
+     "Becoming.Thresholds.same_step",
+     "Becoming.Upstream.refl",
+     "Becoming.total_congr_on"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Upstream.before_mono",
+     "Becoming.Upstream.snoc",
+     "Becoming.couples_before_of_couplesAt"
+    ],
+    "grammar laws, statement grammar-only": [
+     "Becoming.le_succ_cases"
+    ],
+    "forwarded": {
+     "Becoming.le_succ_cases": "Becoming.GrammarLaws.le_succ_cases"
+    }
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.carried_iff_rising",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.onlyAt_noLower",
+     "Becoming.onlyAt_self"
+    ],
+    "level 1": [
+     "Becoming.Layers.carry",
+     "Becoming.Layers.law_needsSupport",
+     "Becoming.Layers.law_through"
+    ],
+    "above": [
+     "Becoming.ExchangeLaw.Through.carried_rises"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.counterfactual_is_course",
+   "dependence": "balance, represented",
+   "grammar_theorems_reached": [
+    "Becoming.le_succ_cases"
+   ],
+   "balance": "statement",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.ExchangeLaw.withAct_follows",
+     "Becoming.ExchangeLaw.withAct_nonanticipating"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.ExchangeLaw.course_balances_iff",
+     "Becoming.counterfactual_fixed"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.forced_iff_center",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.refl",
+    "Becoming.closedUnder_withinClosure"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.atCenters_standpointInvariant"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.atCenters_least",
+     "Becoming.atCenters_presupposed"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.onLoop_of_closing",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.«及».brecOn",
+    "Becoming.«及之传递»",
+    "Becoming.«及当且仅当一步而所闭»",
+    "Becoming.«所闭当且仅当同一或及»",
+    "Becoming.«线则所闭»"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [
+     "Becoming.«及之传递»",
+     "Becoming.«及当且仅当一步而所闭»",
+     "Becoming.«所闭当且仅当同一或及»"
+    ],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Upstream.within"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.Coupled.of_reach"
+    ],
+    "grammar laws, statement grammar-only": [
+     "Becoming.«及之传递»",
+     "Becoming.«及当且仅当一步而所闭»",
+     "Becoming.«所闭当且仅当同一或及»"
+    ],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.presupposition_scopes",
+   "dependence": "grammar",
+   "grammar_theorems_reached": [
+    "Becoming.WithinClosure.refl",
+    "Becoming.closedUnder_withinClosure"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Boundary.whole"
+    ],
+    "level 1": [
+     "Becoming.superTrue_member_iff",
+     "Becoming.superTrue_significantWithin_iff"
+    ],
+    "above": [
+     "Becoming.subTrue_significantWithin_iff"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.responses_le_missBound",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [
+    "Becoming.total_congr"
+   ],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [
+     "Becoming.Remainder.le_of_add_le_add_left_nat"
+    ],
+    "level 1": [],
+    "above": [
+     "Becoming.carried_eq_carriedWithin_add",
+     "Becoming.carried_le_carriedWithin_add"
+    ],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  },
+  {
+   "declaration": "Becoming.unrestricted_iff_livingSignificance",
+   "dependence": "no master law",
+   "grammar_theorems_reached": [],
+   "balance": "none",
+   "own_proof": {
+    "grammar": [],
+    "prelude": [],
+    "level 0": [],
+    "level 1": [],
+    "above": [],
+    "grammar laws, statement grammar-only": [],
+    "forwarded": {}
+   },
+   "case_of_as_is": "no"
+  }
+ ]
+}
