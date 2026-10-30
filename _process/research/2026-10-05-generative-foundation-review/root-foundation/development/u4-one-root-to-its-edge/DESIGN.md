@@ -1,6 +1,6 @@
 # U4, lever 1: balance on the root (design, before review)
 
-AI-written design for U4, "one root to its edge" ([proposal](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#one-root-to-its-edge-a-proposal-30-october-2026), [board row](../../../../../BECOMING-WORKBOARD.md)), lever 1: balance joined to the root. It reads U1's reviewed verdict ([U1](../u1-balance-under-units/DESIGN.md) §0, §5, §7) and applies U1's own round-trip test. No package Lean is claimed. The scratch is two modules, every axiom report empty, built with `scratch_build.py` against main at `3a728388e` ([log](scratch-build.log)): [U4Scratch](scratch/Becoming/U4Scratch.lean), 43 theorems in 51 declarations, and [U4Repairing](scratch/Becoming/U4Repairing.lean), 15 theorems in 18 declarations, written for the condition OU's owner set on the round trip (§2.7). Names are provisional.
+AI-written design for U4, "one root to its edge" ([proposal](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#one-root-to-its-edge-a-proposal-30-october-2026), [board row](../../../../../BECOMING-WORKBOARD.md)), lever 1: balance joined to the root. It reads U1's reviewed verdict ([U1](../u1-balance-under-units/DESIGN.md) §0, §5, §7) and applies U1's own round-trip test. No package Lean is claimed. The scratch is two modules, every axiom report empty, built with `scratch_build.py` against main at `3a728388e` ([log](scratch-build.log)): [U4Scratch](scratch/Becoming/U4Scratch.lean), 43 theorems in 51 declarations, and [U4Repairing](scratch/Becoming/U4Repairing.lean), 15 theorems in 18 declarations, written for the condition OU's owner set on the round trip (§2.7), and [U4Bridge](scratch/Becoming/U4Bridge.lean), 6 theorems in 7 declarations, the census on `«续» R E` (§2.8). Names are provisional.
 
 ## 0. The verdict, proposed
 
@@ -91,6 +91,17 @@ Each law of §2, by OU's condition:
 | `census_pairs`, `census_pairs_of_fixed`, `census_balance`, `balances_at_of_census` | Only as implications. Each holds of every model meeting its hypotheses, and whether a model meets them depends on its lines (`same_counts_other_lines`). The hypotheses are the premise |
 | `balances_at_iff_census` | Yes. Both sides are about counts |
 
+### 2.8 The census on continuation
+
+The census of §2.5 is stated on a continuation `k` over listed units. U4Bridge states it on the grammar's `«续» R E`, decided by a test.
+
+- `census_on_continuation`: where `«续» R E` fixes successors and predecessors (`«定后»`, `«定前»`), `before ++ arising` is paired with `after ++ ceasing` under "`«续» R E`, or the same unit".
+- `arising_iff_begins`: where every predecessor of a unit after the step stands before it, the units the census lists as arising are exactly the units after that begin (`«生» R E`).
+- `ceasing_iff_ends`: where every successor of a unit before the step stands after it, the units listed as ceasing are exactly the units before that end (`«亡» R E`).
+- `unlisted_predecessor`: closure is needed. With `1` continuing `0` and only `1` listed, the census counts `1` as arising, and `1` does not begin.
+
+So on a closed step the census counts the root's beginnings and endings, not a list-relative stand-in. Closure is a hypothesis about the listing: the units listed at a step are all the predecessors and successors there are. It is the premise that keeps a census from counting as new a unit whose predecessor was simply not counted.
+
 ## 3. The round trip, item by item
 
 U4 set the test: the lift counts only if (i) the consumers' balance hypothesis gets a root reading with its witnesses, and (ii) something read on unit lines is not read on counts.
@@ -114,9 +125,7 @@ U4 set the test: the lift counts only if (i) the consumers' balance hypothesis g
 - **The 31 rows' standing.**
   - No row moves. To move one, the row would be stated at the unit model by transport (as U2 stated its rows), with the census hypothesis named and a countermodel per row where one is needed.
   - The MV view would need the standing "on the root under a stated hypothesis" (F5).
-- **The census is not yet a statement about `«续» R E` itself.**
-  - The pairing relation is "continuation, or the same unit", and the hypotheses are stated on a decided continuation `k` over listed units.
-  - Joining `k` to `«续» R E` (with `arising` as `«生»` and `ceasing` as `«亡»` read on the listed units) is a bridge left for the leaf.
+- **The census on `«续» R E` across a run.** §2.8 joins the census to `«续» R E`, `«生»` and `«亡»` at one step, on a closed listing. A run's listings, each closed and each the next one's start, are not stated.
 - **Formations.** The unit reading counts what a flow gives and takes at a condition. It does not say which formation does so, and it does not use locality through formations.
 - **A relation that is not a class.**
   - Beyond the forward law (§2.1), pairings under a relation that is not a class are not characterized. That needs Hall's condition, not counts.
@@ -136,7 +145,8 @@ U4 set the test: the lift counts only if (i) the consumers' balance hypothesis g
 
   GrammarLaws has about 322 dependents, so they ride the next planned near-full rebuild, as HE's edits did, or wait in a leaf above GrammarLaws until then.
 - **The place reading, `balances_at_of_census` and `balances_at_iff_census`** import `Flow`, so they go in a leaf above `Becoming.Flow`. `Flow` has no active owner, so by rule 3's fallback OU's owner decides its place.
-- **Order.** First the review of this design. Then the bridge to `«续» R E` and the existence across steps, in scratch. Then the leaf, with the transport of one row as a trial, before any other row.
+- **The bridge (§2.8)** imports only the grammar laws and the census, so it goes beside the census pairing.
+- **Order.** First the review of this design. Then the existence across steps, in scratch. Then the leaf, with the transport of one row as a trial, before any other row.
 
 ## 6. What would change this
 
