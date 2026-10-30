@@ -30,6 +30,12 @@ if mode == 'head':
     board[queue[0]] = board[queue[0]].replace('- **Queue:** ', '- **Queue:** ' + clause, 1)
 elif mode == 'docs':
     assert 'RF-M.2' not in cells[2], 'the docs landing is already in the state cell'
+    designed = "Designed: RF-M's helper, preference and institution cases. "
+    rule9 = ("Decided with RR (30 October, rule 9): `ReadStages` is to take its order from RR's `RevisionRoutes`, its "
+             "statements and names unchanged, and to carry the corollary on complying at both stages, derived from "
+             "it. ")
+    assert cells[0].count(designed) == 1 and rule9 not in cells[0], 'designed sentence'
+    cells[0] = cells[0].replace(designed, designed + rule9)
     old = "next RF-M's helper and preference cases and an institution's rule of reading with members' acts"
     new = ("RF-M.2's design, reviews and kit landed without its Lean (documents only: `Becoming.HeldForReading` built "
            "in the kit, its design and its Lean reviewed); next RF-M.2's texts cold-read and its Lean landed, then "
@@ -48,8 +54,8 @@ elif mode == 'land':
     cells[2] = state_text
     old = "Designed: RF-M's helper, preference and institution cases. "
     new = ("RF-M.2 landed: what holding an act for a reading is worth (`Becoming.HeldForReading`, in natural-number "
-           "counts: a reading telling the candidate gains over every open act exactly where none is valued best at "
-           "every candidate of positive weight; holding for a reading that stops or releases stands above both moves "
+           "counts: choosing best after a reading telling the candidate gains over every open act exactly where none "
+           "is valued best at every listed candidate of positive weight; holding for a reading that stops or releases stands above both moves "
            "exactly where the model gives positive weight to both strict signs, and holding for any rule of stopping, "
            "forgoing an amount, stands at least as high as going on exactly where its shortfall and the amount are at "
            "most the excess of switching off; on the reading loop, a formation choosing so on a listing only of gain, "
