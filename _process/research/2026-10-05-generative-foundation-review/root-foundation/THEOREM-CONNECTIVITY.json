@@ -1,7 +1,7 @@
 {
- "commit": "627163ef394731097c6555ddc9ca45a3903b3cc8",
- "sources_match_commit": false,
- "core_receipt_at_commit": "20261029T213154.508889Z",
+ "commit": "cd846da347f3097e94de9dd3303549d08eb253d6",
+ "sources_match_commit": true,
+ "core_receipt_at_commit": "20261030T075728.527064Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 353,
  "constants": 50967,
@@ -1187,11 +1187,11 @@
  ],
  "master_laws": {
   "central_declarations": 127,
-  "resting_on_no_master_law": 41,
+  "resting_on_no_master_law": 39,
   "by_law": {
-   "closure": 27,
-   "balance": 53,
-   "return": 13,
+   "closure": 41,
+   "balance": 55,
+   "return": 14,
    "lumping": 2,
    "order": 9
   },
@@ -1202,6 +1202,7 @@
      {
       "declaration": "Becoming.Web.Unceasing.rises",
       "laws": [
+       "closure",
        "return"
       ]
      },
@@ -1209,6 +1210,7 @@
       "declaration": "Becoming.Flow.uptake_needs_replenishment",
       "laws": [
        "balance",
+       "closure",
        "return"
       ]
      },
@@ -1251,6 +1253,7 @@
       "declaration": "Becoming.Flow.More.replenishment_unbounded",
       "laws": [
        "balance",
+       "closure",
        "return"
       ]
      },
@@ -1270,12 +1273,14 @@
      {
       "declaration": "Becoming.Law.drawn_iff_not_returns",
       "laws": [
+       "closure",
        "return"
       ]
      },
      {
       "declaration": "Becoming.Law.lossless_iff_returns",
       "laws": [
+       "closure",
        "return"
       ]
      },
@@ -1312,6 +1317,7 @@
       "declaration": "Becoming.Flow.Dissipative.opens",
       "laws": [
        "balance",
+       "closure",
        "return"
       ]
      },
@@ -1435,18 +1441,22 @@
      {
       "declaration": "Becoming.Amounts.rests",
       "laws": [
+       "closure",
        "return"
       ]
      },
      {
       "declaration": "Becoming.World.comes_to_rest_unrefuted",
       "laws": [
-       "balance"
+       "balance",
+       "closure",
+       "return"
       ]
      },
      {
       "declaration": "Becoming.Web.Carries.active_not_recurring",
       "laws": [
+       "closure",
        "return"
       ]
      },
@@ -1535,6 +1545,7 @@
      {
       "declaration": "Becoming.Learnable.learnable_iff",
       "laws": [
+       "closure",
        "return"
       ]
      },
@@ -1671,6 +1682,7 @@
      {
       "declaration": "Becoming.Web.Unceasing.activeRenewer_recurs",
       "laws": [
+       "closure",
        "return"
       ]
      }
@@ -1775,12 +1787,14 @@
      {
       "declaration": "Becoming.Learnable.learnable_iff",
       "laws": [
+       "closure",
        "return"
       ]
      },
      {
       "declaration": "Becoming.LearnableRuns.learnable_iff_tracks",
       "laws": [
+       "closure",
        "return"
       ]
      },
@@ -1830,7 +1844,8 @@
      {
       "declaration": "Becoming.Web.Whole.family_excess_ends",
       "laws": [
-       "balance"
+       "balance",
+       "closure"
       ]
      }
     ]
@@ -1884,11 +1899,15 @@
      },
      {
       "declaration": "Becoming.Optimum.optimum_beyond",
-      "laws": []
+      "laws": [
+       "balance"
+      ]
      },
      {
       "declaration": "Becoming.Optimum.mutual_beyond",
-      "laws": []
+      "laws": [
+       "balance"
+      ]
      },
      {
       "declaration": "Becoming.Web.course_lost_iff",
