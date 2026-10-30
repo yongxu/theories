@@ -40406,7 +40406,17 @@
   },
   {
    "from": "record:expected-free-energy-and-its-terms",
+   "to": "module:Becoming.LumpedSeeking",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:expected-free-energy-and-its-terms",
    "to": "record:free-energy-bounds-surprisal",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:expected-free-energy-and-its-terms",
+   "to": "record:what-seeking-cannot-separate",
    "type": "formal-reuse"
   },
   {

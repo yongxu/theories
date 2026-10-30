@@ -19,18 +19,18 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2148,
-    "distinct_byte_contents": 1695,
-    "byte_identical_duplicate_groups": 186,
+    "lean_paths": 2145,
+    "distinct_byte_contents": 1693,
+    "byte_identical_duplicate_groups": 185,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1180,
+      "development-attempt": 1177,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 929
     },
-    "working_named_theorem_lemma_occurrences": 28745,
-    "working_explicit_named_declaration_occurrences": 42156,
+    "working_named_theorem_lemma_occurrences": 28782,
+    "working_explicit_named_declaration_occurrences": 42203,
     "working_groups": {
       "abstraction": 45,
       "becoming-core": 339,
@@ -6331,6 +6331,19 @@
       "proof_status": "not_assessed_by_catalogue"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/scratch/Becoming/UnitScratch.lean",
+      "sha256": "d43d8187d34bf1061c6cebbfc9e0bdfe55d7e65dad240d6583e65bcd297da1cd",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1-2.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/check/tree/Becoming/U2Check.lean",
       "sha256": "4ce3e5fe1370598839bc51588dda2b6fbda34c693548105aca439ffeaa9713df",
       "role": "development-attempt",
@@ -6364,57 +6377,14 @@
       "proof_status": "not_assessed_by_catalogue"
     },
     {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/lever-2-scratch/Becoming/U4LeverTwo.lean",
-      "sha256": "67cdbf1b6d5e766077ead09db67867d53bcac9e325a01d2014b2c40e94b249b6",
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/scratch/Becoming/SignificanceRootScratch.lean",
+      "sha256": "fe7ea1e9db177f88b8e262023bc5b7f2628941a14f02f1de641b4985c24a57f1",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
       "direct_documentation_links_from": [
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/LEVER-2-AUDIT.md"
-      ],
-      "proof_status": "not_assessed_by_catalogue"
-    },
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/scratch/Becoming/U4Across.lean",
-      "sha256": "7b89a6cc16ee63ca326db0292113d436469023f87009c4db97a639bc8fdd46b1",
-      "role": "development-attempt",
-      "group": "other",
-      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
-      "direct_documentation_links_from": [
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/DESIGN.md"
-      ],
-      "proof_status": "not_assessed_by_catalogue"
-    },
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/scratch/Becoming/U4Bridge.lean",
-      "sha256": "3c3abf704346ad6ab7481cc2bc6ac99ed877d4115d480555c38772e1b76ea928",
-      "role": "development-attempt",
-      "group": "other",
-      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
-      "direct_documentation_links_from": [
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/DESIGN.md"
-      ],
-      "proof_status": "not_assessed_by_catalogue"
-    },
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/scratch/Becoming/U4Repairing.lean",
-      "sha256": "ce3f0d03514c183df66ab48fedadf27d72a6200589b74e0ca8c95208aaa47d08",
-      "role": "development-attempt",
-      "group": "other",
-      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
-      "direct_documentation_links_from": [
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/DESIGN.md"
-      ],
-      "proof_status": "not_assessed_by_catalogue"
-    },
-    {
-      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/scratch/Becoming/U4Scratch.lean",
-      "sha256": "f67b24acfdeebe584cd9b1b11f1558647e51c97a2e92481e98077f3d7c0c5128",
-      "role": "development-attempt",
-      "group": "other",
-      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
-      "direct_documentation_links_from": [
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/DESIGN.md"
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -9143,6 +9113,7 @@
         "RESULTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.zh.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/twenty-first-review/X3-SCIENCES-AND-TEXTS-CROSS-MODEL.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
@@ -9878,6 +9849,7 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
         "theories/becoming/chapters/07-SIGNIFICANCE.md"
@@ -12419,6 +12391,7 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/twenty-first-review/X3-SCIENCES-AND-TEXTS-CROSS-MODEL.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
@@ -12964,6 +12937,7 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "theories/becoming/chapters/05-COLLECTIVES.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md",
@@ -13879,6 +13853,7 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
       ],
@@ -15179,7 +15154,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean",
-      "sha256": "5e39061898c33c668d97f6bb6099bc88517dbc34ebc17ac0b6142a892262719a",
+      "sha256": "c0f9c343586af9d6b379a53eaecd870836a6aa4448894d5fc46e45666b96f54b",
       "role": "working-source",
       "group": "core",
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
@@ -143508,69 +143483,6 @@
       },
       "print_axioms_commands": 0
     },
-    "3c3abf704346ad6ab7481cc2bc6ac99ed877d4115d480555c38772e1b76ea928": {
-      "byte_size": 5611,
-      "line_count": 120,
-      "imports": [
-        "Becoming.U4Repairing"
-      ],
-      "declarations": [
-        {
-          "kind": "theorem",
-          "name": "mem_keep",
-          "qualified_name_hint": "Becoming.U4Scratch.mem_keep",
-          "line": 24
-        },
-        {
-          "kind": "theorem",
-          "name": "not_eq_true",
-          "qualified_name_hint": "Becoming.U4Scratch.not_eq_true",
-          "line": 50
-        },
-        {
-          "kind": "theorem",
-          "name": "census_on_continuation",
-          "qualified_name_hint": "Becoming.U4Scratch.census_on_continuation",
-          "line": 60
-        },
-        {
-          "kind": "theorem",
-          "name": "arising_iff_begins",
-          "qualified_name_hint": "Becoming.U4Scratch.arising_iff_begins",
-          "line": 74
-        },
-        {
-          "kind": "theorem",
-          "name": "ceasing_iff_ends",
-          "qualified_name_hint": "Becoming.U4Scratch.ceasing_iff_ends",
-          "line": 93
-        },
-        {
-          "kind": "def",
-          "name": "fromZero",
-          "qualified_name_hint": "Becoming.U4Scratch.fromZero",
-          "line": 111
-        },
-        {
-          "kind": "theorem",
-          "name": "unlisted_predecessor",
-          "qualified_name_hint": "Becoming.U4Scratch.unlisted_predecessor",
-          "line": 115
-        }
-      ],
-      "declaration_counts": {
-        "def": 1,
-        "theorem": 6
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "3c4498bf188c752a7eacef40dc2b460308bcaacc208490edb6fdfeddafa5037b": {
       "byte_size": 3742,
       "line_count": 72,
@@ -223249,571 +223161,6 @@
       },
       "print_axioms_commands": 14
     },
-    "67cdbf1b6d5e766077ead09db67867d53bcac9e325a01d2014b2c40e94b249b6": {
-      "byte_size": 30964,
-      "line_count": 624,
-      "imports": [
-        "Becoming.Grammar",
-        "Becoming.SelectionLevels",
-        "Becoming.GroupEnding",
-        "Becoming.Transmission"
-      ],
-      "declarations": [
-        {
-          "kind": "abbrev",
-          "name": "Occ",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Occ",
-          "line": 51
-        },
-        {
-          "kind": "def",
-          "name": "descent",
-          "qualified_name_hint": "Becoming.U4LeverTwo.descent",
-          "line": 55
-        },
-        {
-          "kind": "def",
-          "name": "trait",
-          "qualified_name_hint": "Becoming.U4LeverTwo.trait",
-          "line": 59
-        },
-        {
-          "kind": "def",
-          "name": "alike",
-          "qualified_name_hint": "Becoming.U4LeverTwo.alike",
-          "line": 62
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_class",
-          "qualified_name_hint": "Becoming.U4LeverTwo.alike_class",
-          "line": 65
-        },
-        {
-          "kind": "theorem",
-          "name": "within_iff_continues",
-          "qualified_name_hint": "Becoming.U4LeverTwo.within_iff_continues",
-          "line": 70
-        },
-        {
-          "kind": "theorem",
-          "name": "exact_iff_within",
-          "qualified_name_hint": "Becoming.U4LeverTwo.exact_iff_within",
-          "line": 75
-        },
-        {
-          "kind": "theorem",
-          "name": "exact_iff_continues",
-          "qualified_name_hint": "Becoming.U4LeverTwo.exact_iff_continues",
-          "line": 85
-        },
-        {
-          "kind": "theorem",
-          "name": "zero_of_total_zero",
-          "qualified_name_hint": "Becoming.U4LeverTwo.zero_of_total_zero",
-          "line": 91
-        },
-        {
-          "kind": "theorem",
-          "name": "le_of_excess_zero",
-          "qualified_name_hint": "Becoming.U4LeverTwo.le_of_excess_zero",
-          "line": 100
-        },
-        {
-          "kind": "theorem",
-          "name": "exact_iff_terms_vanish",
-          "qualified_name_hint": "Becoming.U4LeverTwo.exact_iff_terms_vanish",
-          "line": 109
-        },
-        {
-          "kind": "theorem",
-          "name": "offspring_eq_selected_of_within",
-          "qualified_name_hint": "Becoming.U4LeverTwo.offspring_eq_selected_of_within",
-          "line": 122
-        },
-        {
-          "kind": "def",
-          "name": "ps",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.ps",
-          "line": 135
-        },
-        {
-          "kind": "def",
-          "name": "kids",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.kids",
-          "line": 137
-        },
-        {
-          "kind": "def",
-          "name": "a",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.a",
-          "line": 139
-        },
-        {
-          "kind": "def",
-          "name": "b",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.b",
-          "line": 141
-        },
-        {
-          "kind": "theorem",
-          "name": "totals_alike",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.totals_alike",
-          "line": 144
-        },
-        {
-          "kind": "theorem",
-          "name": "not_exact",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.not_exact",
-          "line": 147
-        },
-        {
-          "kind": "def",
-          "name": "before",
-          "qualified_name_hint": "Becoming.U4LeverTwo.before",
-          "line": 155
-        },
-        {
-          "kind": "def",
-          "name": "after",
-          "qualified_name_hint": "Becoming.U4LeverTwo.after",
-          "line": 160
-        },
-        {
-          "kind": "theorem",
-          "name": "append_assoc'",
-          "qualified_name_hint": "Becoming.U4LeverTwo.append_assoc'",
-          "line": 164
-        },
-        {
-          "kind": "theorem",
-          "name": "pair_append",
-          "qualified_name_hint": "Becoming.U4LeverTwo.pair_append",
-          "line": 169
-        },
-        {
-          "kind": "theorem",
-          "name": "pairs_one",
-          "qualified_name_hint": "Becoming.U4LeverTwo.pairs_one",
-          "line": 178
-        },
-        {
-          "kind": "theorem",
-          "name": "pairs_all",
-          "qualified_name_hint": "Becoming.U4LeverTwo.pairs_all",
-          "line": 187
-        },
-        {
-          "kind": "theorem",
-          "name": "exact_pairs",
-          "qualified_name_hint": "Becoming.U4LeverTwo.exact_pairs",
-          "line": 199
-        },
-        {
-          "kind": "theorem",
-          "name": "exact_paired_class",
-          "qualified_name_hint": "Becoming.U4LeverTwo.exact_paired_class",
-          "line": 207
-        },
-        {
-          "kind": "theorem",
-          "name": "total_app",
-          "qualified_name_hint": "Becoming.U4LeverTwo.total_app",
-          "line": 214
-        },
-        {
-          "kind": "theorem",
-          "name": "total_insert",
-          "qualified_name_hint": "Becoming.U4LeverTwo.total_insert",
-          "line": 218
-        },
-        {
-          "kind": "theorem",
-          "name": "total_of_paired",
-          "qualified_name_hint": "Becoming.U4LeverTwo.total_of_paired",
-          "line": 224
-        },
-        {
-          "kind": "theorem",
-          "name": "total_before",
-          "qualified_name_hint": "Becoming.U4LeverTwo.total_before",
-          "line": 232
-        },
-        {
-          "kind": "theorem",
-          "name": "total_after",
-          "qualified_name_hint": "Becoming.U4LeverTwo.total_after",
-          "line": 238
-        },
-        {
-          "kind": "theorem",
-          "name": "add_congr",
-          "qualified_name_hint": "Becoming.U4LeverTwo.add_congr",
-          "line": 243
-        },
-        {
-          "kind": "theorem",
-          "name": "selected_eq",
-          "qualified_name_hint": "Becoming.U4LeverTwo.selected_eq",
-          "line": 245
-        },
-        {
-          "kind": "theorem",
-          "name": "offspring_eq",
-          "qualified_name_hint": "Becoming.U4LeverTwo.offspring_eq",
-          "line": 251
-        },
-        {
-          "kind": "theorem",
-          "name": "totals_of_paired",
-          "qualified_name_hint": "Becoming.U4LeverTwo.totals_of_paired",
-          "line": 260
-        },
-        {
-          "kind": "theorem",
-          "name": "totals_iff_cancel",
-          "qualified_name_hint": "Becoming.U4LeverTwo.totals_iff_cancel",
-          "line": 269
-        },
-        {
-          "kind": "theorem",
-          "name": "beq_self",
-          "qualified_name_hint": "Becoming.U4LeverTwo.beq_self",
-          "line": 280
-        },
-        {
-          "kind": "theorem",
-          "name": "eq_of_beq",
-          "qualified_name_hint": "Becoming.U4LeverTwo.eq_of_beq",
-          "line": 284
-        },
-        {
-          "kind": "theorem",
-          "name": "alike_decided",
-          "qualified_name_hint": "Becoming.U4LeverTwo.alike_decided",
-          "line": 292
-        },
-        {
-          "kind": "def",
-          "name": "ps",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.ps",
-          "line": 300
-        },
-        {
-          "kind": "def",
-          "name": "kids",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.kids",
-          "line": 302
-        },
-        {
-          "kind": "def",
-          "name": "a",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.a",
-          "line": 304
-        },
-        {
-          "kind": "def",
-          "name": "b",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.b",
-          "line": 306
-        },
-        {
-          "kind": "theorem",
-          "name": "paired",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.paired",
-          "line": 310
-        },
-        {
-          "kind": "theorem",
-          "name": "not_exact",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.not_exact",
-          "line": 315
-        },
-        {
-          "kind": "theorem",
-          "name": "terms",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Swap.terms",
-          "line": 319
-        },
-        {
-          "kind": "def",
-          "name": "atOne",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Unexact.atOne",
-          "line": 326
-        },
-        {
-          "kind": "theorem",
-          "name": "unexact_not_paired",
-          "qualified_name_hint": "Becoming.U4LeverTwo.unexact_not_paired",
-          "line": 333
-        },
-        {
-          "kind": "def",
-          "name": "Raised",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised",
-          "line": 343
-        },
-        {
-          "kind": "def",
-          "name": "groups",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.groups",
-          "line": 351
-        },
-        {
-          "kind": "theorem",
-          "name": "listed",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.listed",
-          "line": 353
-        },
-        {
-          "kind": "theorem",
-          "name": "equal",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.equal",
-          "line": 355
-        },
-        {
-          "kind": "theorem",
-          "name": "not_exact",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.not_exact",
-          "line": 360
-        },
-        {
-          "kind": "theorem",
-          "name": "raises",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.raises",
-          "line": 365
-        },
-        {
-          "kind": "theorem",
-          "name": "levels_false",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.levels_false",
-          "line": 368
-        },
-        {
-          "kind": "theorem",
-          "name": "levels_fail",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.levels_fail",
-          "line": 381
-        },
-        {
-          "kind": "theorem",
-          "name": "not_cancel",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Raised.not_cancel",
-          "line": 392
-        },
-        {
-          "kind": "theorem",
-          "name": "lt_iff_add_lt",
-          "qualified_name_hint": "Becoming.U4LeverTwo.lt_iff_add_lt",
-          "line": 398
-        },
-        {
-          "kind": "theorem",
-          "name": "rises_cancel_iff",
-          "qualified_name_hint": "Becoming.U4LeverTwo.rises_cancel_iff",
-          "line": 405
-        },
-        {
-          "kind": "theorem",
-          "name": "cancel_of_exact",
-          "qualified_name_hint": "Becoming.U4LeverTwo.cancel_of_exact",
-          "line": 412
-        },
-        {
-          "kind": "theorem",
-          "name": "rises_cancel_iff_levels",
-          "qualified_name_hint": "Becoming.U4LeverTwo.rises_cancel_iff_levels",
-          "line": 419
-        },
-        {
-          "kind": "def",
-          "name": "gives",
-          "qualified_name_hint": "Becoming.U4LeverTwo.gives",
-          "line": 435
-        },
-        {
-          "kind": "def",
-          "name": "activeAt",
-          "qualified_name_hint": "Becoming.U4LeverTwo.activeAt",
-          "line": 438
-        },
-        {
-          "kind": "def",
-          "name": "listed",
-          "qualified_name_hint": "Becoming.U4LeverTwo.listed",
-          "line": 441
-        },
-        {
-          "kind": "theorem",
-          "name": "acting_iff",
-          "qualified_name_hint": "Becoming.U4LeverTwo.acting_iff",
-          "line": 446
-        },
-        {
-          "kind": "theorem",
-          "name": "listed_within_gives",
-          "qualified_name_hint": "Becoming.U4LeverTwo.listed_within_gives",
-          "line": 453
-        },
-        {
-          "kind": "theorem",
-          "name": "length_zero_of_none",
-          "qualified_name_hint": "Becoming.U4LeverTwo.length_zero_of_none",
-          "line": 459
-        },
-        {
-          "kind": "theorem",
-          "name": "size_zero_of_within",
-          "qualified_name_hint": "Becoming.U4LeverTwo.size_zero_of_within",
-          "line": 466
-        },
-        {
-          "kind": "theorem",
-          "name": "all_end_on_root",
-          "qualified_name_hint": "Becoming.U4LeverTwo.all_end_on_root",
-          "line": 476
-        },
-        {
-          "kind": "def",
-          "name": "web",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.web",
-          "line": 485
-        },
-        {
-          "kind": "def",
-          "name": "flow",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.flow",
-          "line": 492
-        },
-        {
-          "kind": "def",
-          "name": "gens",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.gens",
-          "line": 497
-        },
-        {
-          "kind": "theorem",
-          "name": "present_all",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.present_all",
-          "line": 504
-        },
-        {
-          "kind": "theorem",
-          "name": "descended",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.descended",
-          "line": 508
-        },
-        {
-          "kind": "theorem",
-          "name": "inactive",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.inactive",
-          "line": 513
-        },
-        {
-          "kind": "theorem",
-          "name": "not_ended",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.not_ended",
-          "line": 515
-        },
-        {
-          "kind": "theorem",
-          "name": "not_acting",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.not_acting",
-          "line": 517
-        },
-        {
-          "kind": "theorem",
-          "name": "gate_needed",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungated.gate_needed",
-          "line": 521
-        },
-        {
-          "kind": "theorem",
-          "name": "offspring_zero_within",
-          "qualified_name_hint": "Becoming.U4LeverTwo.offspring_zero_within",
-          "line": 529
-        },
-        {
-          "kind": "theorem",
-          "name": "ended_within",
-          "qualified_name_hint": "Becoming.U4LeverTwo.ended_within",
-          "line": 538
-        },
-        {
-          "kind": "theorem",
-          "name": "rises_iff_inactive_on_root",
-          "qualified_name_hint": "Becoming.U4LeverTwo.rises_iff_inactive_on_root",
-          "line": 551
-        },
-        {
-          "kind": "theorem",
-          "name": "no_new_dependence_of_given",
-          "qualified_name_hint": "Becoming.U4LeverTwo.no_new_dependence_of_given",
-          "line": 573
-        },
-        {
-          "kind": "theorem",
-          "name": "no_new_dependence_from_balance",
-          "qualified_name_hint": "Becoming.U4LeverTwo.no_new_dependence_from_balance",
-          "line": 583
-        },
-        {
-          "kind": "def",
-          "name": "web",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.web",
-          "line": 594
-        },
-        {
-          "kind": "def",
-          "name": "flow",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.flow",
-          "line": 601
-        },
-        {
-          "kind": "theorem",
-          "name": "comes",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.comes",
-          "line": 606
-        },
-        {
-          "kind": "theorem",
-          "name": "inherits",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.inherits",
-          "line": 608
-        },
-        {
-          "kind": "theorem",
-          "name": "none",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.none",
-          "line": 611
-        },
-        {
-          "kind": "theorem",
-          "name": "depends",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.depends",
-          "line": 614
-        },
-        {
-          "kind": "theorem",
-          "name": "not_given",
-          "qualified_name_hint": "Becoming.U4LeverTwo.Ungiven.not_given",
-          "line": 616
-        }
-      ],
-      "declaration_counts": {
-        "abbrev": 1,
-        "def": 24,
-        "theorem": 65
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "67d04821a9d763968a945923e89006bceb5250b353d5b3a57ae49f11e7232f49": {
       "byte_size": 9722,
       "line_count": 246,
@@ -270491,153 +269838,6 @@
         "unsafe": []
       },
       "print_axioms_commands": 8
-    },
-    "7b89a6cc16ee63ca326db0292113d436469023f87009c4db97a639bc8fdd46b1": {
-      "byte_size": 14299,
-      "line_count": 272,
-      "imports": [
-        "Becoming.U4Bridge"
-      ],
-      "declarations": [
-        {
-          "kind": "theorem",
-          "name": "add_one_add",
-          "qualified_name_hint": "Becoming.U4Scratch.add_one_add",
-          "line": 29
-        },
-        {
-          "kind": "theorem",
-          "name": "upto_add",
-          "qualified_name_hint": "Becoming.U4Scratch.upto_add",
-          "line": 33
-        },
-        {
-          "kind": "theorem",
-          "name": "beq_false_of_lt",
-          "qualified_name_hint": "Becoming.U4Scratch.beq_false_of_lt",
-          "line": 42
-        },
-        {
-          "kind": "theorem",
-          "name": "below_split",
-          "qualified_name_hint": "Becoming.U4Scratch.below_split",
-          "line": 49
-        },
-        {
-          "kind": "theorem",
-          "name": "above_split",
-          "qualified_name_hint": "Becoming.U4Scratch.above_split",
-          "line": 55
-        },
-        {
-          "kind": "theorem",
-          "name": "interval_census",
-          "qualified_name_hint": "Becoming.U4Scratch.interval_census",
-          "line": 63
-        },
-        {
-          "kind": "def",
-          "name": "splitOf",
-          "qualified_name_hint": "Becoming.U4Scratch.splitOf",
-          "line": 94
-        },
-        {
-          "kind": "theorem",
-          "name": "splitOf_spec",
-          "qualified_name_hint": "Becoming.U4Scratch.splitOf_spec",
-          "line": 97
-        },
-        {
-          "kind": "theorem",
-          "name": "step_census",
-          "qualified_name_hint": "Becoming.U4Scratch.step_census",
-          "line": 125
-        },
-        {
-          "kind": "def",
-          "name": "oldest",
-          "qualified_name_hint": "Becoming.U4Scratch.oldest",
-          "line": 136
-        },
-        {
-          "kind": "theorem",
-          "name": "census_run",
-          "qualified_name_hint": "Becoming.U4Scratch.census_run",
-          "line": 144
-        },
-        {
-          "kind": "theorem",
-          "name": "balances_iff_census_run",
-          "qualified_name_hint": "Becoming.U4Scratch.balances_iff_census_run",
-          "line": 161
-        },
-        {
-          "kind": "def",
-          "name": "splitThenMerge",
-          "qualified_name_hint": "Becoming.U4Scratch.splitThenMerge",
-          "line": 191
-        },
-        {
-          "kind": "theorem",
-          "name": "pairs_without_one_to_one",
-          "qualified_name_hint": "Becoming.U4Scratch.pairs_without_one_to_one",
-          "line": 197
-        },
-        {
-          "kind": "theorem",
-          "name": "mem_one",
-          "qualified_name_hint": "Becoming.U4Scratch.mem_one",
-          "line": 206
-        },
-        {
-          "kind": "theorem",
-          "name": "mem_twice",
-          "qualified_name_hint": "Becoming.U4Scratch.mem_twice",
-          "line": 211
-        },
-        {
-          "kind": "def",
-          "name": "zeroToOne",
-          "qualified_name_hint": "Becoming.U4Scratch.zeroToOne",
-          "line": 217
-        },
-        {
-          "kind": "theorem",
-          "name": "repeated_unit",
-          "qualified_name_hint": "Becoming.U4Scratch.repeated_unit",
-          "line": 223
-        },
-        {
-          "kind": "theorem",
-          "name": "countIn_go",
-          "qualified_name_hint": "Becoming.U4Scratch.countIn_go",
-          "line": 236
-        },
-        {
-          "kind": "theorem",
-          "name": "countIn_eq_countP",
-          "qualified_name_hint": "Becoming.U4Scratch.countIn_eq_countP",
-          "line": 253
-        },
-        {
-          "kind": "theorem",
-          "name": "place_iff_units",
-          "qualified_name_hint": "Becoming.U4Scratch.place_iff_units",
-          "line": 261
-        }
-      ],
-      "declaration_counts": {
-        "def": 4,
-        "theorem": 17
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
     },
     "7baafebe18026ff238a73f10a45f1efce1e6b55d6f451434949fb2c5b42ce04f": {
       "byte_size": 1749,
@@ -401139,6 +400339,436 @@
       },
       "print_axioms_commands": 5
     },
+    "c0f9c343586af9d6b379a53eaecd870836a6aa4448894d5fc46e45666b96f54b": {
+      "byte_size": 59617,
+      "line_count": 996,
+      "imports": [
+        "FreeEnergyReals",
+        "Becoming.LumpedSeeking"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "predicted",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.predicted",
+          "line": 109
+        },
+        {
+          "kind": "def",
+          "name": "risk",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.risk",
+          "line": 114
+        },
+        {
+          "kind": "def",
+          "name": "ambiguity",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.ambiguity",
+          "line": 118
+        },
+        {
+          "kind": "def",
+          "name": "expectedFreeEnergy",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.expectedFreeEnergy",
+          "line": 122
+        },
+        {
+          "kind": "def",
+          "name": "pragmatic",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.pragmatic",
+          "line": 128
+        },
+        {
+          "kind": "def",
+          "name": "epistemic",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.epistemic",
+          "line": 134
+        },
+        {
+          "kind": "theorem",
+          "name": "expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic",
+          "line": 139
+        },
+        {
+          "kind": "def",
+          "name": "joint",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.joint",
+          "line": 179
+        },
+        {
+          "kind": "def",
+          "name": "product",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.product",
+          "line": 182
+        },
+        {
+          "kind": "theorem",
+          "name": "epistemic_eq_divergence",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.epistemic_eq_divergence",
+          "line": 189
+        },
+        {
+          "kind": "theorem",
+          "name": "epistemic_nonneg",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.epistemic_nonneg",
+          "line": 210
+        },
+        {
+          "kind": "theorem",
+          "name": "epistemic_eq_zero_of_lumped",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped",
+          "line": 256
+        },
+        {
+          "kind": "theorem",
+          "name": "posterior_ratio_of_lumped",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped",
+          "line": 274
+        },
+        {
+          "kind": "def",
+          "name": "coarse",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.coarse",
+          "line": 290
+        },
+        {
+          "kind": "theorem",
+          "name": "sum_through",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.sum_through",
+          "line": 293
+        },
+        {
+          "kind": "theorem",
+          "name": "predicted_through",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.predicted_through",
+          "line": 303
+        },
+        {
+          "kind": "theorem",
+          "name": "epistemic_through",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.epistemic_through",
+          "line": 310
+        },
+        {
+          "kind": "theorem",
+          "name": "expectedFreeEnergy_through",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_through",
+          "line": 332
+        },
+        {
+          "kind": "theorem",
+          "name": "expectedFreeEnergy_same_of_coarse",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse",
+          "line": 344
+        },
+        {
+          "kind": "theorem",
+          "name": "gain_term",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.gain_term",
+          "line": 356
+        },
+        {
+          "kind": "theorem",
+          "name": "epistemic_eq_expected_gain",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.epistemic_eq_expected_gain",
+          "line": 370
+        },
+        {
+          "kind": "def",
+          "name": "courseLik",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.courseLik",
+          "line": 393
+        },
+        {
+          "kind": "def",
+          "name": "choiceWeight",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.choiceWeight",
+          "line": 399
+        },
+        {
+          "kind": "def",
+          "name": "coursePosterior",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.coursePosterior",
+          "line": 408
+        },
+        {
+          "kind": "def",
+          "name": "courseWeight",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.courseWeight",
+          "line": 415
+        },
+        {
+          "kind": "def",
+          "name": "efeChoice",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.efeChoice",
+          "line": 423
+        },
+        {
+          "kind": "def",
+          "name": "softmax",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.softmax",
+          "line": 429
+        },
+        {
+          "kind": "theorem",
+          "name": "courseLik_nonneg",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.courseLik_nonneg",
+          "line": 435
+        },
+        {
+          "kind": "theorem",
+          "name": "courseLik_pos",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.courseLik_pos",
+          "line": 441
+        },
+        {
+          "kind": "theorem",
+          "name": "coursePosterior_minimizes",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.coursePosterior_minimizes",
+          "line": 451
+        },
+        {
+          "kind": "theorem",
+          "name": "posterior_choice_eq_coursePosterior",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.posterior_choice_eq_coursePosterior",
+          "line": 466
+        },
+        {
+          "kind": "theorem",
+          "name": "choiceWeight_ne_zero",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.choiceWeight_ne_zero",
+          "line": 478
+        },
+        {
+          "kind": "theorem",
+          "name": "courseLik_rescale",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.courseLik_rescale",
+          "line": 485
+        },
+        {
+          "kind": "theorem",
+          "name": "coursePosterior_rescale",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.coursePosterior_rescale",
+          "line": 497
+        },
+        {
+          "kind": "theorem",
+          "name": "softmax_pos",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.softmax_pos",
+          "line": 506
+        },
+        {
+          "kind": "theorem",
+          "name": "sum_softmax",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.sum_softmax",
+          "line": 510
+        },
+        {
+          "kind": "theorem",
+          "name": "softmax_choiceWeight_pos",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.softmax_choiceWeight_pos",
+          "line": 516
+        },
+        {
+          "kind": "theorem",
+          "name": "cast_seekWeight",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.cast_seekWeight",
+          "line": 525
+        },
+        {
+          "kind": "theorem",
+          "name": "mass_count",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.mass_count",
+          "line": 536
+        },
+        {
+          "kind": "theorem",
+          "name": "givenCourse_eq_coursePosterior",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.givenCourse_eq_coursePosterior",
+          "line": 554
+        },
+        {
+          "kind": "theorem",
+          "name": "unchosen_share_zero",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.unchosen_share_zero",
+          "line": 590
+        },
+        {
+          "kind": "theorem",
+          "name": "share_le_iff_toReal_le",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.share_le_iff_toReal_le",
+          "line": 605
+        },
+        {
+          "kind": "theorem",
+          "name": "givenCourse_le_iff",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.givenCourse_le_iff",
+          "line": 624
+        },
+        {
+          "kind": "theorem",
+          "name": "efe_seeking_keeps_order",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order",
+          "line": 653
+        },
+        {
+          "kind": "theorem",
+          "name": "courseLik_tied",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.courseLik_tied",
+          "line": 674
+        },
+        {
+          "kind": "theorem",
+          "name": "coursePosterior_ratio_kept",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.coursePosterior_ratio_kept",
+          "line": 683
+        },
+        {
+          "kind": "theorem",
+          "name": "coursePosterior_order_kept",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.coursePosterior_order_kept",
+          "line": 695
+        },
+        {
+          "kind": "theorem",
+          "name": "softmax_order_kept",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.softmax_order_kept",
+          "line": 709
+        },
+        {
+          "kind": "theorem",
+          "name": "courseLik_through",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.courseLik_through",
+          "line": 730
+        },
+        {
+          "kind": "theorem",
+          "name": "coarse_div",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.coarse_div",
+          "line": 735
+        },
+        {
+          "kind": "theorem",
+          "name": "coarse_coursePosterior",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.coarse_coursePosterior",
+          "line": 743
+        },
+        {
+          "kind": "theorem",
+          "name": "efe_through_course",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.efe_through_course",
+          "line": 766
+        },
+        {
+          "kind": "theorem",
+          "name": "epistemic_through_course",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.epistemic_through_course",
+          "line": 776
+        },
+        {
+          "kind": "theorem",
+          "name": "courseWeight_through",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.courseWeight_through",
+          "line": 783
+        },
+        {
+          "kind": "theorem",
+          "name": "efeChoice_same_of_coarse",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.efeChoice_same_of_coarse",
+          "line": 793
+        },
+        {
+          "kind": "theorem",
+          "name": "seeking_blind_to_split",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.seeking_blind_to_split",
+          "line": 809
+        },
+        {
+          "kind": "theorem",
+          "name": "softmax_blind_to_split",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.softmax_blind_to_split",
+          "line": 829
+        },
+        {
+          "kind": "theorem",
+          "name": "seeking_reads_profiles",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.seeking_reads_profiles",
+          "line": 847
+        },
+        {
+          "kind": "theorem",
+          "name": "agreeing_pos",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.agreeing_pos",
+          "line": 866
+        },
+        {
+          "kind": "theorem",
+          "name": "separating_turns",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.separating_turns",
+          "line": 875
+        },
+        {
+          "kind": "theorem",
+          "name": "unchosen_course",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.unchosen_course",
+          "line": 901
+        },
+        {
+          "kind": "def",
+          "name": "biasClass",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.biasClass",
+          "line": 922
+        },
+        {
+          "kind": "def",
+          "name": "agreeOrNothing",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing",
+          "line": 926
+        },
+        {
+          "kind": "def",
+          "name": "agreeOrNothingByClass",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothingByClass",
+          "line": 930
+        },
+        {
+          "kind": "def",
+          "name": "swappedPrior",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.swappedPrior",
+          "line": 935
+        },
+        {
+          "kind": "theorem",
+          "name": "agreeOrNothing_through",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing_through",
+          "line": 941
+        },
+        {
+          "kind": "theorem",
+          "name": "priors_alike",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.priors_alike",
+          "line": 953
+        },
+        {
+          "kind": "theorem",
+          "name": "split_unseen",
+          "qualified_name_hint": "Becoming.ExpectedFreeEnergy.Witness.split_unseen",
+          "line": 971
+        }
+      ],
+      "declaration_counts": {
+        "def": 19,
+        "theorem": 49
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "c0faf669d3178e2a4284e7ac3191ceb490cfd901bb40c51035774f061a76d197": {
       "byte_size": 17096,
       "line_count": 411,
@@ -427690,135 +427320,6 @@
       },
       "print_axioms_commands": 0
     },
-    "ce3f0d03514c183df66ab48fedadf27d72a6200589b74e0ca8c95208aaa47d08": {
-      "byte_size": 10802,
-      "line_count": 210,
-      "imports": [
-        "Becoming.U4Scratch"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "oneToOne",
-          "qualified_name_hint": "Becoming.U4Scratch.oneToOne",
-          "line": 27
-        },
-        {
-          "kind": "theorem",
-          "name": "same_counts_other_lines",
-          "qualified_name_hint": "Becoming.U4Scratch.same_counts_other_lines",
-          "line": 33
-        },
-        {
-          "kind": "def",
-          "name": "upto",
-          "qualified_name_hint": "Becoming.U4Scratch.upto",
-          "line": 44
-        },
-        {
-          "kind": "theorem",
-          "name": "length_upto",
-          "qualified_name_hint": "Becoming.U4Scratch.length_upto",
-          "line": 48
-        },
-        {
-          "kind": "theorem",
-          "name": "mem_upto",
-          "qualified_name_hint": "Becoming.U4Scratch.mem_upto",
-          "line": 52
-        },
-        {
-          "kind": "theorem",
-          "name": "distinct_upto",
-          "qualified_name_hint": "Becoming.U4Scratch.distinct_upto",
-          "line": 62
-        },
-        {
-          "kind": "theorem",
-          "name": "any_true_of_mem",
-          "qualified_name_hint": "Becoming.U4Scratch.any_true_of_mem",
-          "line": 66
-        },
-        {
-          "kind": "theorem",
-          "name": "any_false_of",
-          "qualified_name_hint": "Becoming.U4Scratch.any_false_of",
-          "line": 76
-        },
-        {
-          "kind": "theorem",
-          "name": "keep_none",
-          "qualified_name_hint": "Becoming.U4Scratch.keep_none",
-          "line": 84
-        },
-        {
-          "kind": "def",
-          "name": "stays",
-          "qualified_name_hint": "Becoming.U4Scratch.stays",
-          "line": 92
-        },
-        {
-          "kind": "theorem",
-          "name": "stays_self",
-          "qualified_name_hint": "Becoming.U4Scratch.stays_self",
-          "line": 94
-        },
-        {
-          "kind": "theorem",
-          "name": "stays_off",
-          "qualified_name_hint": "Becoming.U4Scratch.stays_off",
-          "line": 99
-        },
-        {
-          "kind": "theorem",
-          "name": "stays_same",
-          "qualified_name_hint": "Becoming.U4Scratch.stays_same",
-          "line": 108
-        },
-        {
-          "kind": "theorem",
-          "name": "mem_left",
-          "qualified_name_hint": "Becoming.U4Scratch.mem_left",
-          "line": 111
-        },
-        {
-          "kind": "theorem",
-          "name": "mem_right",
-          "qualified_name_hint": "Becoming.U4Scratch.mem_right",
-          "line": 114
-        },
-        {
-          "kind": "theorem",
-          "name": "census_model",
-          "qualified_name_hint": "Becoming.U4Scratch.census_model",
-          "line": 119
-        },
-        {
-          "kind": "theorem",
-          "name": "census_counts",
-          "qualified_name_hint": "Becoming.U4Scratch.census_counts",
-          "line": 164
-        },
-        {
-          "kind": "theorem",
-          "name": "balances_at_iff_census",
-          "qualified_name_hint": "Becoming.U4Scratch.balances_at_iff_census",
-          "line": 186
-        }
-      ],
-      "declaration_counts": {
-        "def": 3,
-        "theorem": 15
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "ce605c17fbc3ebbdf3519a17f0193dc183aaaf7fb2894cbb1e81e72e51c9eec6": {
       "byte_size": 15975,
       "line_count": 259,
@@ -434727,6 +434228,452 @@
         "def": 15,
         "inductive": 1,
         "theorem": 40
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "d43d8187d34bf1061c6cebbfc9e0bdfe55d7e65dad240d6583e65bcd297da1cd": {
+      "byte_size": 31173,
+      "line_count": 650,
+      "imports": [
+        "Becoming.GrammarLaws",
+        "Becoming.Flow",
+        "Becoming.SelectionReach"
+      ],
+      "declarations": [
+        {
+          "kind": "structure",
+          "name": "Tokens",
+          "qualified_name_hint": "Becoming.UnitScratch.Tokens",
+          "line": 21
+        },
+        {
+          "kind": "def",
+          "name": "same",
+          "qualified_name_hint": "Becoming.UnitScratch.same",
+          "line": 27
+        },
+        {
+          "kind": "def",
+          "name": "Tokens.Abides",
+          "qualified_name_hint": "Becoming.UnitScratch.Tokens.Abides",
+          "line": 31
+        },
+        {
+          "kind": "theorem",
+          "name": "Tokens.counts",
+          "qualified_name_hint": "Becoming.UnitScratch.Tokens.counts",
+          "line": 35
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_cons_head",
+          "qualified_name_hint": "Becoming.UnitScratch.mem_cons_head",
+          "line": 40
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_insert_cases",
+          "qualified_name_hint": "Becoming.UnitScratch.mem_insert_cases",
+          "line": 42
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_of_pair",
+          "qualified_name_hint": "Becoming.UnitScratch.mem_of_pair",
+          "line": 60
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_append_left'",
+          "qualified_name_hint": "Becoming.UnitScratch.mem_append_left'",
+          "line": 72
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_append_cases",
+          "qualified_name_hint": "Becoming.UnitScratch.mem_append_cases",
+          "line": 80
+        },
+        {
+          "kind": "theorem",
+          "name": "Tokens.came",
+          "qualified_name_hint": "Becoming.UnitScratch.Tokens.came",
+          "line": 94
+        },
+        {
+          "kind": "theorem",
+          "name": "one_abides_of_counts",
+          "qualified_name_hint": "Becoming.UnitScratch.one_abides_of_counts",
+          "line": 109
+        },
+        {
+          "kind": "def",
+          "name": "upto",
+          "qualified_name_hint": "Becoming.UnitScratch.upto",
+          "line": 119
+        },
+        {
+          "kind": "theorem",
+          "name": "length_upto",
+          "qualified_name_hint": "Becoming.UnitScratch.length_upto",
+          "line": 123
+        },
+        {
+          "kind": "structure",
+          "name": "Units",
+          "qualified_name_hint": "Becoming.UnitScratch.Units",
+          "line": 133
+        },
+        {
+          "kind": "theorem",
+          "name": "Units.balances",
+          "qualified_name_hint": "Becoming.UnitScratch.Units.balances",
+          "line": 139
+        },
+        {
+          "kind": "def",
+          "name": "Units.canonical",
+          "qualified_name_hint": "Becoming.UnitScratch.Units.canonical",
+          "line": 145
+        },
+        {
+          "kind": "theorem",
+          "name": "units_iff_balances",
+          "qualified_name_hint": "Becoming.UnitScratch.units_iff_balances",
+          "line": 154
+        },
+        {
+          "kind": "theorem",
+          "name": "repairing_moves_lines",
+          "qualified_name_hint": "Becoming.UnitScratch.repairing_moves_lines",
+          "line": 162
+        },
+        {
+          "kind": "inductive",
+          "name": "Kind",
+          "qualified_name_hint": "Becoming.UnitScratch.Kind",
+          "line": 179
+        },
+        {
+          "kind": "abbrev",
+          "name": "Occ",
+          "qualified_name_hint": "Becoming.UnitScratch.Occ",
+          "line": 182
+        },
+        {
+          "kind": "def",
+          "name": "label",
+          "qualified_name_hint": "Becoming.UnitScratch.label",
+          "line": 184
+        },
+        {
+          "kind": "theorem",
+          "name": "length_label",
+          "qualified_name_hint": "Becoming.UnitScratch.length_label",
+          "line": 188
+        },
+        {
+          "kind": "def",
+          "name": "standL",
+          "qualified_name_hint": "Becoming.UnitScratch.standL",
+          "line": 195
+        },
+        {
+          "kind": "def",
+          "name": "givenL",
+          "qualified_name_hint": "Becoming.UnitScratch.givenL",
+          "line": 196
+        },
+        {
+          "kind": "def",
+          "name": "takenL",
+          "qualified_name_hint": "Becoming.UnitScratch.takenL",
+          "line": 197
+        },
+        {
+          "kind": "theorem",
+          "name": "stretch_of_units",
+          "qualified_name_hint": "Becoming.UnitScratch.stretch_of_units",
+          "line": 203
+        },
+        {
+          "kind": "theorem",
+          "name": "length_givenL",
+          "qualified_name_hint": "Becoming.UnitScratch.length_givenL",
+          "line": 210
+        },
+        {
+          "kind": "theorem",
+          "name": "length_takenL",
+          "qualified_name_hint": "Becoming.UnitScratch.length_takenL",
+          "line": 213
+        },
+        {
+          "kind": "theorem",
+          "name": "length_standL",
+          "qualified_name_hint": "Becoming.UnitScratch.length_standL",
+          "line": 216
+        },
+        {
+          "kind": "theorem",
+          "name": "stretch_count_of_units",
+          "qualified_name_hint": "Becoming.UnitScratch.stretch_count_of_units",
+          "line": 222
+        },
+        {
+          "kind": "theorem",
+          "name": "one_paired_iff",
+          "qualified_name_hint": "Becoming.UnitScratch.one_paired_iff",
+          "line": 235
+        },
+        {
+          "kind": "def",
+          "name": "ExchangeMatched",
+          "qualified_name_hint": "Becoming.UnitScratch.ExchangeMatched",
+          "line": 260
+        },
+        {
+          "kind": "theorem",
+          "name": "give_le_take_of_matched",
+          "qualified_name_hint": "Becoming.UnitScratch.give_le_take_of_matched",
+          "line": 265
+        },
+        {
+          "kind": "theorem",
+          "name": "one_matched_iff",
+          "qualified_name_hint": "Becoming.UnitScratch.one_matched_iff",
+          "line": 275
+        },
+        {
+          "kind": "theorem",
+          "name": "dissipates_of_ending",
+          "qualified_name_hint": "Becoming.UnitScratch.dissipates_of_ending",
+          "line": 284
+        },
+        {
+          "kind": "theorem",
+          "name": "no_matching_of_giving_without_taking",
+          "qualified_name_hint": "Becoming.UnitScratch.no_matching_of_giving_without_taking",
+          "line": 305
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_append_right'",
+          "qualified_name_hint": "Becoming.UnitScratch.mem_append_right'",
+          "line": 315
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_insert'",
+          "qualified_name_hint": "Becoming.UnitScratch.mem_insert'",
+          "line": 319
+        },
+        {
+          "kind": "theorem",
+          "name": "crossing_edge",
+          "qualified_name_hint": "Becoming.UnitScratch.crossing_edge",
+          "line": 328
+        },
+        {
+          "kind": "theorem",
+          "name": "crossing_line",
+          "qualified_name_hint": "Becoming.UnitScratch.crossing_line",
+          "line": 357
+        },
+        {
+          "kind": "inductive",
+          "name": "Ex",
+          "qualified_name_hint": "Becoming.UnitScratch.Ex",
+          "line": 373
+        },
+        {
+          "kind": "def",
+          "name": "tag",
+          "qualified_name_hint": "Becoming.UnitScratch.tag",
+          "line": 379
+        },
+        {
+          "kind": "theorem",
+          "name": "length_tag",
+          "qualified_name_hint": "Becoming.UnitScratch.length_tag",
+          "line": 383
+        },
+        {
+          "kind": "def",
+          "name": "takeL",
+          "qualified_name_hint": "Becoming.UnitScratch.takeL",
+          "line": 390
+        },
+        {
+          "kind": "def",
+          "name": "giveL",
+          "qualified_name_hint": "Becoming.UnitScratch.giveL",
+          "line": 394
+        },
+        {
+          "kind": "theorem",
+          "name": "length_takeL",
+          "qualified_name_hint": "Becoming.UnitScratch.length_takeL",
+          "line": 397
+        },
+        {
+          "kind": "theorem",
+          "name": "length_giveL",
+          "qualified_name_hint": "Becoming.UnitScratch.length_giveL",
+          "line": 402
+        },
+        {
+          "kind": "theorem",
+          "name": "rise_crossing_weak",
+          "qualified_name_hint": "Becoming.UnitScratch.rise_crossing_weak",
+          "line": 412
+        },
+        {
+          "kind": "theorem",
+          "name": "rise_crossing_strong",
+          "qualified_name_hint": "Becoming.UnitScratch.rise_crossing_strong",
+          "line": 428
+        },
+        {
+          "kind": "theorem",
+          "name": "endings_count",
+          "qualified_name_hint": "Becoming.UnitScratch.endings_count",
+          "line": 447
+        },
+        {
+          "kind": "theorem",
+          "name": "source_free_of_dissipates",
+          "qualified_name_hint": "Becoming.UnitScratch.source_free_of_dissipates",
+          "line": 459
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_of_dissipates",
+          "qualified_name_hint": "Becoming.UnitScratch.ends_of_dissipates",
+          "line": 466
+        },
+        {
+          "kind": "structure",
+          "name": "FrameMatch",
+          "qualified_name_hint": "Becoming.UnitScratch.FrameMatch",
+          "line": 490
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_upto",
+          "qualified_name_hint": "Becoming.UnitScratch.mem_upto",
+          "line": 498
+        },
+        {
+          "kind": "theorem",
+          "name": "length_upto'",
+          "qualified_name_hint": "Becoming.UnitScratch.length_upto'",
+          "line": 505
+        },
+        {
+          "kind": "theorem",
+          "name": "upto_lt",
+          "qualified_name_hint": "Becoming.UnitScratch.upto_lt",
+          "line": 507
+        },
+        {
+          "kind": "theorem",
+          "name": "FrameMatch.le",
+          "qualified_name_hint": "Becoming.UnitScratch.FrameMatch.le",
+          "line": 516
+        },
+        {
+          "kind": "def",
+          "name": "FrameMatch.symm",
+          "qualified_name_hint": "Becoming.UnitScratch.FrameMatch.symm",
+          "line": 528
+        },
+        {
+          "kind": "theorem",
+          "name": "FrameMatch.eq",
+          "qualified_name_hint": "Becoming.UnitScratch.FrameMatch.eq",
+          "line": 536
+        },
+        {
+          "kind": "def",
+          "name": "FrameMatch.id",
+          "qualified_name_hint": "Becoming.UnitScratch.FrameMatch.id",
+          "line": 540
+        },
+        {
+          "kind": "theorem",
+          "name": "FrameMatch.predecessor_unique",
+          "qualified_name_hint": "Becoming.UnitScratch.FrameMatch.predecessor_unique",
+          "line": 550
+        },
+        {
+          "kind": "structure",
+          "name": "KUnits",
+          "qualified_name_hint": "Becoming.UnitScratch.KUnits",
+          "line": 559
+        },
+        {
+          "kind": "theorem",
+          "name": "KUnits.balances",
+          "qualified_name_hint": "Becoming.UnitScratch.KUnits.balances",
+          "line": 562
+        },
+        {
+          "kind": "def",
+          "name": "KUnits.canonical",
+          "qualified_name_hint": "Becoming.UnitScratch.KUnits.canonical",
+          "line": 566
+        },
+        {
+          "kind": "theorem",
+          "name": "kunits_iff_balances",
+          "qualified_name_hint": "Becoming.UnitScratch.kunits_iff_balances",
+          "line": 572
+        },
+        {
+          "kind": "theorem",
+          "name": "KUnits.next",
+          "qualified_name_hint": "Becoming.UnitScratch.KUnits.next",
+          "line": 579
+        },
+        {
+          "kind": "theorem",
+          "name": "lossless_not_dissipative",
+          "qualified_name_hint": "Becoming.UnitScratch.lossless_not_dissipative",
+          "line": 600
+        },
+        {
+          "kind": "theorem",
+          "name": "KUnits.projects_along",
+          "qualified_name_hint": "Becoming.UnitScratch.KUnits.projects_along",
+          "line": 613
+        },
+        {
+          "kind": "theorem",
+          "name": "leaving_and_endings_count",
+          "qualified_name_hint": "Becoming.UnitScratch.leaving_and_endings_count",
+          "line": 630
+        },
+        {
+          "kind": "theorem",
+          "name": "endings_count_closed",
+          "qualified_name_hint": "Becoming.UnitScratch.endings_count_closed",
+          "line": 642
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 15,
+        "inductive": 2,
+        "structure": 4,
+        "theorem": 48
       },
       "textual_markers": {
         "sorry": [],
@@ -500881,334 +500828,6 @@
       },
       "print_axioms_commands": 112
     },
-    "f67b24acfdeebe584cd9b1b11f1558647e51c97a2e92481e98077f3d7c0c5128": {
-      "byte_size": 28726,
-      "line_count": 565,
-      "imports": [
-        "Becoming.GrammarLaws",
-        "Becoming.Continuity"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "countIn",
-          "qualified_name_hint": "Becoming.U4Scratch.countIn",
-          "line": 24
-        },
-        {
-          "kind": "theorem",
-          "name": "countIn_append",
-          "qualified_name_hint": "Becoming.U4Scratch.countIn_append",
-          "line": 28
-        },
-        {
-          "kind": "theorem",
-          "name": "countIn_insert",
-          "qualified_name_hint": "Becoming.U4Scratch.countIn_insert",
-          "line": 35
-        },
-        {
-          "kind": "theorem",
-          "name": "countIn_all",
-          "qualified_name_hint": "Becoming.U4Scratch.countIn_all",
-          "line": 43
-        },
-        {
-          "kind": "theorem",
-          "name": "split_of_pos",
-          "qualified_name_hint": "Becoming.U4Scratch.split_of_pos",
-          "line": 50
-        },
-        {
-          "kind": "theorem",
-          "name": "closed_both",
-          "qualified_name_hint": "Becoming.U4Scratch.closed_both",
-          "line": 69
-        },
-        {
-          "kind": "theorem",
-          "name": "«对则闭域守数»",
-          "qualified_name_hint": "Becoming.U4Scratch.«对则闭域守数»",
-          "line": 80
-        },
-        {
-          "kind": "theorem",
-          "name": "«对则闭域守数'»",
-          "qualified_name_hint": "Becoming.U4Scratch.«对则闭域守数'»",
-          "line": 89
-        },
-        {
-          "kind": "theorem",
-          "name": "test_congr",
-          "qualified_name_hint": "Becoming.U4Scratch.test_congr",
-          "line": 101
-        },
-        {
-          "kind": "theorem",
-          "name": "pair_of_counts",
-          "qualified_name_hint": "Becoming.U4Scratch.pair_of_counts",
-          "line": 110
-        },
-        {
-          "kind": "theorem",
-          "name": "«类之对当且仅当类类等数»",
-          "qualified_name_hint": "Becoming.U4Scratch.«类之对当且仅当类类等数»",
-          "line": 138
-        },
-        {
-          "kind": "theorem",
-          "name": "one_case",
-          "qualified_name_hint": "Becoming.U4Scratch.one_case",
-          "line": 146
-        },
-        {
-          "kind": "theorem",
-          "name": "nat_same_class",
-          "qualified_name_hint": "Becoming.U4Scratch.nat_same_class",
-          "line": 157
-        },
-        {
-          "kind": "theorem",
-          "name": "teleport",
-          "qualified_name_hint": "Becoming.U4Scratch.teleport",
-          "line": 162
-        },
-        {
-          "kind": "def",
-          "name": "listedAdj",
-          "qualified_name_hint": "Becoming.U4Scratch.listedAdj",
-          "line": 173
-        },
-        {
-          "kind": "theorem",
-          "name": "listedAdj_symm",
-          "qualified_name_hint": "Becoming.U4Scratch.listedAdj_symm",
-          "line": 175
-        },
-        {
-          "kind": "theorem",
-          "name": "closes_iff",
-          "qualified_name_hint": "Becoming.U4Scratch.closes_iff",
-          "line": 180
-        },
-        {
-          "kind": "theorem",
-          "name": "balancesOn_iff_closed",
-          "qualified_name_hint": "Becoming.U4Scratch.balancesOn_iff_closed",
-          "line": 190
-        },
-        {
-          "kind": "theorem",
-          "name": "«续之对则类类等数»",
-          "qualified_name_hint": "Becoming.U4Scratch.«续之对则类类等数»",
-          "line": 206
-        },
-        {
-          "kind": "def",
-          "name": "place",
-          "qualified_name_hint": "Becoming.U4Scratch.place",
-          "line": 219
-        },
-        {
-          "kind": "theorem",
-          "name": "countIn_replicate",
-          "qualified_name_hint": "Becoming.U4Scratch.countIn_replicate",
-          "line": 223
-        },
-        {
-          "kind": "theorem",
-          "name": "countIn_place",
-          "qualified_name_hint": "Becoming.U4Scratch.countIn_place",
-          "line": 232
-        },
-        {
-          "kind": "theorem",
-          "name": "cond_add",
-          "qualified_name_hint": "Becoming.U4Scratch.cond_add",
-          "line": 240
-        },
-        {
-          "kind": "theorem",
-          "name": "total_congr",
-          "qualified_name_hint": "Becoming.U4Scratch.total_congr",
-          "line": 245
-        },
-        {
-          "kind": "theorem",
-          "name": "countIn_pair",
-          "qualified_name_hint": "Becoming.U4Scratch.countIn_pair",
-          "line": 253
-        },
-        {
-          "kind": "theorem",
-          "name": "total_off",
-          "qualified_name_hint": "Becoming.U4Scratch.total_off",
-          "line": 260
-        },
-        {
-          "kind": "theorem",
-          "name": "total_pick",
-          "qualified_name_hint": "Becoming.U4Scratch.total_pick",
-          "line": 273
-        },
-        {
-          "kind": "theorem",
-          "name": "balancesOn_iff_place",
-          "qualified_name_hint": "Becoming.U4Scratch.balancesOn_iff_place",
-          "line": 293
-        },
-        {
-          "kind": "def",
-          "name": "keep",
-          "qualified_name_hint": "Becoming.U4Scratch.keep",
-          "line": 318
-        },
-        {
-          "kind": "theorem",
-          "name": "keep_append",
-          "qualified_name_hint": "Becoming.U4Scratch.keep_append",
-          "line": 322
-        },
-        {
-          "kind": "theorem",
-          "name": "keep_congr",
-          "qualified_name_hint": "Becoming.U4Scratch.keep_congr",
-          "line": 329
-        },
-        {
-          "kind": "theorem",
-          "name": "keep_all",
-          "qualified_name_hint": "Becoming.U4Scratch.keep_all",
-          "line": 335
-        },
-        {
-          "kind": "theorem",
-          "name": "any_false_mem",
-          "qualified_name_hint": "Becoming.U4Scratch.any_false_mem",
-          "line": 342
-        },
-        {
-          "kind": "theorem",
-          "name": "any_split",
-          "qualified_name_hint": "Becoming.U4Scratch.any_split",
-          "line": 352
-        },
-        {
-          "kind": "theorem",
-          "name": "any_remove",
-          "qualified_name_hint": "Becoming.U4Scratch.any_remove",
-          "line": 362
-        },
-        {
-          "kind": "theorem",
-          "name": "mem_middle",
-          "qualified_name_hint": "Becoming.U4Scratch.mem_middle",
-          "line": 369
-        },
-        {
-          "kind": "theorem",
-          "name": "mem_of_removed",
-          "qualified_name_hint": "Becoming.U4Scratch.mem_of_removed",
-          "line": 373
-        },
-        {
-          "kind": "theorem",
-          "name": "distinct_removed",
-          "qualified_name_hint": "Becoming.U4Scratch.distinct_removed",
-          "line": 380
-        },
-        {
-          "kind": "def",
-          "name": "ceasing",
-          "qualified_name_hint": "Becoming.U4Scratch.ceasing",
-          "line": 393
-        },
-        {
-          "kind": "def",
-          "name": "arising",
-          "qualified_name_hint": "Becoming.U4Scratch.arising",
-          "line": 396
-        },
-        {
-          "kind": "theorem",
-          "name": "census_pairs",
-          "qualified_name_hint": "Becoming.U4Scratch.census_pairs",
-          "line": 402
-        },
-        {
-          "kind": "theorem",
-          "name": "census_pairs_of_fixed",
-          "qualified_name_hint": "Becoming.U4Scratch.census_pairs_of_fixed",
-          "line": 470
-        },
-        {
-          "kind": "theorem",
-          "name": "census_balance",
-          "qualified_name_hint": "Becoming.U4Scratch.census_balance",
-          "line": 480
-        },
-        {
-          "kind": "theorem",
-          "name": "balances_at_of_census",
-          "qualified_name_hint": "Becoming.U4Scratch.balances_at_of_census",
-          "line": 489
-        },
-        {
-          "kind": "theorem",
-          "name": "or_true_cases",
-          "qualified_name_hint": "Becoming.U4Scratch.or_true_cases",
-          "line": 502
-        },
-        {
-          "kind": "theorem",
-          "name": "and_true_cases",
-          "qualified_name_hint": "Becoming.U4Scratch.and_true_cases",
-          "line": 509
-        },
-        {
-          "kind": "def",
-          "name": "splitAndMerge",
-          "qualified_name_hint": "Becoming.U4Scratch.splitAndMerge",
-          "line": 520
-        },
-        {
-          "kind": "def",
-          "name": "splitRegion",
-          "qualified_name_hint": "Becoming.U4Scratch.splitRegion",
-          "line": 524
-        },
-        {
-          "kind": "theorem",
-          "name": "split_and_merge",
-          "qualified_name_hint": "Becoming.U4Scratch.split_and_merge",
-          "line": 526
-        },
-        {
-          "kind": "theorem",
-          "name": "split_breaks",
-          "qualified_name_hint": "Becoming.U4Scratch.split_breaks",
-          "line": 553
-        },
-        {
-          "kind": "theorem",
-          "name": "merge_breaks",
-          "qualified_name_hint": "Becoming.U4Scratch.merge_breaks",
-          "line": 559
-        }
-      ],
-      "declaration_counts": {
-        "def": 8,
-        "theorem": 43
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "f67cb54e2bedbfae9997b9178832403ae85ec84f21dc92b8d6d2635af68e622a": {
       "byte_size": 24367,
       "line_count": 432,
@@ -514181,6 +513800,73 @@
       },
       "print_axioms_commands": 25
     },
+    "fe7ea1e9db177f88b8e262023bc5b7f2628941a14f02f1de641b4985c24a57f1": {
+      "byte_size": 7161,
+      "line_count": 115,
+      "imports": [
+        "Becoming.Relevance",
+        "Becoming.Extension",
+        "Becoming.GrammarScope",
+        "Becoming.Regions",
+        "Becoming.Weightings",
+        "Becoming.GrammarTransport"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "noOutside_iff_paths_livingSignificance",
+          "qualified_name_hint": "Becoming.SignificanceRootScratch.noOutside_iff_paths_livingSignificance",
+          "line": 29
+        },
+        {
+          "kind": "theorem",
+          "name": "widens_iff_retains_adds_root",
+          "qualified_name_hint": "Becoming.SignificanceRootScratch.widens_iff_retains_adds_root",
+          "line": 43
+        },
+        {
+          "kind": "theorem",
+          "name": "paths_extension_iff_grammar",
+          "qualified_name_hint": "Becoming.SignificanceRootScratch.paths_extension_iff_grammar",
+          "line": 54
+        },
+        {
+          "kind": "theorem",
+          "name": "paths_comparison_grammar",
+          "qualified_name_hint": "Becoming.SignificanceRootScratch.paths_comparison_grammar",
+          "line": 62
+        },
+        {
+          "kind": "theorem",
+          "name": "paths_one_object_root",
+          "qualified_name_hint": "Becoming.SignificanceRootScratch.paths_one_object_root",
+          "line": 70
+        },
+        {
+          "kind": "theorem",
+          "name": "grammar_widens_iff_every_positive",
+          "qualified_name_hint": "Becoming.SignificanceRootScratch.grammar_widens_iff_every_positive",
+          "line": 89
+        },
+        {
+          "kind": "theorem",
+          "name": "guang_correspondence",
+          "qualified_name_hint": "Becoming.SignificanceRootScratch.guang_correspondence",
+          "line": 99
+        }
+      ],
+      "declaration_counts": {
+        "theorem": 7
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "fee4bdd9a38f65bb5c75a828138c442628b245bc98ed345a43110ff95f132f12": {
       "byte_size": 4008,
       "line_count": 76,
@@ -516368,10 +516054,6 @@
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/development/1791255039697090000/EmissionArchive.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/development/1791255132840263000/EmissionArchive.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/development/1791255398690790000/EmissionArchive.lean"
-    ],
-    "5e39061898c33c668d97f6bb6099bc88517dbc34ebc17ac0b6142a892262719a": [
-      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue19-expected-free-energy/periphery/ExpectedFreeEnergyReals.lean",
-      "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean"
     ],
     "5eb63e2b7af10e610ef6d34f3121d785c1755a86c73422e0654f074f6674cbf7": [
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/formal/ActionWitness.lean",

@@ -714,7 +714,7 @@
   "expected-free-energy-and-its-terms": {
    "region": "knowing",
    "base": "periphery",
-   "note": "ExpectedFreeEnergyReals UE19: expected free energy as risk plus ambiguity and as the negative of epistemic less pragmatic value, the epistemic value an expected information gain, read only through the lumping the likelihood makes (periphery)"
+   "note": "ExpectedFreeEnergyReals UE19: expected free energy as risk plus ambiguity and as the negative of epistemic less pragmatic value, the epistemic value an expected information gain, read only through the lumping the likelihood makes (periphery); UE23: seeking by it over courses, joined to the core's seeking, reads the prior only through the weight it gives each likelihood profile"
   },
   "experiment-needs-return": {
    "region": "knowing",
@@ -2344,7 +2344,7 @@
   "what-seeking-cannot-separate": {
    "region": "knowing",
    "base": "general",
-   "note": "LumpedSeeking UE19: a pair every experiment ties keeps its prior order under every course of seeking, whatever the policy of choice; seeking turns it once an experiment separating it is chosen"
+   "note": "LumpedSeeking UE19: a pair every experiment ties keeps its prior order under every course of seeking, whatever the policy of choice; seeking turns it once an experiment separating it is chosen; UE23: choice by expected free energy with natural weights is one such policy (ExpectedFreeEnergyReals)"
   },
   "what-self-concern-alone-ranks": {
    "region": "significance",
