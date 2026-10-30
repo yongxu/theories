@@ -19,21 +19,21 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2164,
-    "distinct_byte_contents": 1708,
-    "byte_identical_duplicate_groups": 189,
+    "lean_paths": 2169,
+    "distinct_byte_contents": 1711,
+    "byte_identical_duplicate_groups": 191,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1190,
+      "development-attempt": 1193,
       "historical-draft": 3,
       "imported-archive": 23,
-      "working-source": 935
+      "working-source": 937
     },
-    "working_named_theorem_lemma_occurrences": 29050,
-    "working_explicit_named_declaration_occurrences": 42553,
+    "working_named_theorem_lemma_occurrences": 29131,
+    "working_explicit_named_declaration_occurrences": 42680,
     "working_groups": {
       "abstraction": 45,
-      "becoming-core": 344,
+      "becoming-core": 346,
       "becoming-ring": 14,
       "concern": 15,
       "core": 143,
@@ -4353,6 +4353,24 @@
       "proof_status": "not_assessed_by_catalogue"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/tree/Becoming/OptimumSeason.lean",
+      "sha256": "c3e01c8cd00e5a6ae73b004278d94b180d601beed832a15c0d5ca072fc7f0bc4",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/tree/Becoming/WeightedCommuting.lean",
+      "sha256": "3fe02a8b09584d4006a6053f5c24469c875527b909bfeda4d1557ba6bdba1f36",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lc1-finite-reading/partA.lean",
       "sha256": "564f6a4ab61775399d54abf7f97a4098f74a79b02f374843797d4784ec6efee5",
       "role": "development-attempt",
@@ -4779,6 +4797,17 @@
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
       "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/he2-item5/tree/Becoming/HE2Item5Check.lean",
+      "sha256": "af1facf72f3eb554399b28ceae161b35112fd14abf2decc22a5b5d66c10390f1",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/he2-item5/KIT.md"
+      ],
       "proof_status": "not_assessed_by_catalogue"
     },
     {
@@ -8026,7 +8055,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
-      "sha256": "1aebb63cea73530cc1383b8271fa070c701371eb9c1cbcf0a73b5cd98a794fd8",
+      "sha256": "09d5f568f91c2a45e18b50671c729672a404cdd6a28065205b46bad0ad9ea1d8",
       "role": "working-source",
       "group": "becoming-core",
       "receipt_layer": "core",
@@ -11636,6 +11665,23 @@
       "proof_status": "not_assessed_by_catalogue"
     },
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean",
+      "sha256": "c3e01c8cd00e5a6ae73b004278d94b180d601beed832a15c0d5ca072fc7f0bc4",
+      "role": "working-source",
+      "group": "becoming-core",
+      "receipt_layer": "core",
+      "receipt_bytes_match": true,
+      "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+      "direct_documentation_links_from": [
+        "RESULTS.md",
+        "experiments/drain-beyond-the-reward/DESIGN.md",
+        "experiments/drain-beyond-the-reward/README.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
       "sha256": "f233c6800d90c4554f572a85d5ce73b7e48107bfc1b9012ec4a8490d6f78f1e1",
       "role": "working-source",
@@ -13895,6 +13941,22 @@
         "theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-REFERENCE.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean",
+      "sha256": "3fe02a8b09584d4006a6053f5c24469c875527b909bfeda4d1557ba6bdba1f36",
+      "role": "working-source",
+      "group": "becoming-core",
+      "receipt_layer": "core",
+      "receipt_bytes_match": true,
+      "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+      "direct_documentation_links_from": [
+        "RESULTS.md",
+        "experiments/drain-beyond-the-reward/DESIGN.md",
+        "experiments/drain-beyond-the-reward/README.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -39685,6 +39747,378 @@
         "def": 7,
         "theorem": 39
       },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "09d5f568f91c2a45e18b50671c729672a404cdd6a28065205b46bad0ad9ea1d8": {
+      "byte_size": 359799,
+      "line_count": 4226,
+      "imports": [
+        "Becoming.Grammar",
+        "Becoming.GrammarReadings",
+        "Becoming.GrammarMap",
+        "Becoming.GrammarTesting",
+        "Becoming.GrammarCandidates",
+        "Becoming.MapInstances",
+        "Becoming.MapRegions",
+        "Becoming.GrammarLaws",
+        "Becoming.GrammarTransport",
+        "Becoming.ShownOrder",
+        "Becoming.World",
+        "Becoming.Witnesses",
+        "Becoming.Frame",
+        "Becoming.Laws",
+        "Becoming.Labelled",
+        "Becoming.Inquiry",
+        "Becoming.Derivation",
+        "Becoming.ClassifiedBeliefProcesses",
+        "Becoming.MoveOutcomeProcesses",
+        "Becoming.Recurrence",
+        "Becoming.Diagonal",
+        "Becoming.Context",
+        "Becoming.ContextArrivalTraces",
+        "Becoming.Quantum",
+        "Becoming.Renewal",
+        "Becoming.Dependence",
+        "Becoming.Restoration",
+        "Becoming.Horizon",
+        "Becoming.Joint",
+        "Becoming.Experiment",
+        "Becoming.Mechanism",
+        "Becoming.Unfolding",
+        "Becoming.LawAlongRun",
+        "Becoming.Irreversibility",
+        "Becoming.Histories",
+        "Becoming.Branching",
+        "Becoming.Listing",
+        "Becoming.Stuttering",
+        "Becoming.Reordering",
+        "Becoming.IdleRemoval",
+        "Becoming.OrderNormal",
+        "Becoming.OneStep",
+        "Becoming.Weighted",
+        "Becoming.Transmission",
+        "Becoming.Succession",
+        "Becoming.Attraction",
+        "Becoming.Substitution",
+        "Becoming.Arising",
+        "Becoming.Flow",
+        "Becoming.Stock",
+        "Becoming.Change",
+        "Becoming.Population",
+        "Becoming.Identity",
+        "Becoming.Persistence",
+        "Becoming.ContinuedClasses",
+        "Becoming.WorldRepresentation",
+        "Becoming.Wholes",
+        "Becoming.Dissipation",
+        "Becoming.Locality",
+        "Becoming.Seeking",
+        "Becoming.Roles",
+        "Becoming.LabelledRoles",
+        "Becoming.Reserve",
+        "Becoming.Evolution",
+        "Becoming.Capture",
+        "Becoming.SelectionTerm",
+        "Becoming.Reproduction",
+        "Becoming.SelectionLevels",
+        "Becoming.GroupEnding",
+        "Becoming.Founding",
+        "Becoming.Drift",
+        "Becoming.Space",
+        "Becoming.Premises",
+        "Becoming.Sampling",
+        "Becoming.Tower",
+        "Becoming.Openness",
+        "Becoming.Decidedness",
+        "Becoming.Refinement",
+        "Becoming.CensusTable",
+        "Becoming.Counting",
+        "Becoming.Standing",
+        "Becoming.Resolution",
+        "Becoming.Amounts",
+        "Becoming.LeastLoss",
+        "Becoming.WholeAmounts",
+        "Becoming.InAmounts",
+        "Becoming.Entropy",
+        "Becoming.SelectionPace",
+        "Becoming.Units",
+        "Becoming.Imbalance",
+        "Becoming.Continuity",
+        "Becoming.Continuation",
+        "Becoming.RenewalFlow",
+        "Becoming.Admission",
+        "Becoming.Exclusion",
+        "Becoming.Exhaustion",
+        "Becoming.Regions",
+        "Becoming.EventualWidening",
+        "Becoming.EventualWideningInstances",
+        "Becoming.ComparingCourses",
+        "Becoming.ReachableRanges",
+        "Becoming.HeldPossible",
+        "Becoming.Tasks",
+        "Becoming.CausalGrowth",
+        "Becoming.Presence",
+        "Becoming.ReorderingGrowth",
+        "Becoming.FreeEnergyGuarantees",
+        "Becoming.Blanket",
+        "Becoming.LumpedSeeking",
+        "Becoming.FreeEnergyCounting",
+        "Becoming.ModelStatements",
+        "Becoming.Growth",
+        "Becoming.Retaining",
+        "Becoming.OwnWidening",
+        "Becoming.Clearing",
+        "Becoming.Extension",
+        "Becoming.Metaethics",
+        "Becoming.Lifting",
+        "Becoming.Ranking",
+        "Becoming.ActiveReading",
+        "Becoming.LossMatching",
+        "Becoming.StrictTransport",
+        "Becoming.MatchedCourses",
+        "Becoming.Correspondence",
+        "Becoming.Descent",
+        "Becoming.Standpoints",
+        "Becoming.Significance",
+        "Becoming.ValuationFrames",
+        "Becoming.RelativePosition",
+        "Becoming.Interdependence",
+        "Becoming.Feeding",
+        "Becoming.Feedback",
+        "Becoming.BoundedSignificance",
+        "Becoming.Cuts",
+        "Becoming.EdgeClosure",
+        "Becoming.SeedReach",
+        "Becoming.ScopedReach",
+        "Becoming.Boundaries",
+        "Becoming.Weightings",
+        "Becoming.Relevance",
+        "Becoming.Testing",
+        "Becoming.Runaway",
+        "Becoming.Response",
+        "Becoming.TimedResponse",
+        "Becoming.Latency",
+        "Becoming.Centers",
+        "Becoming.Counterfactual",
+        "Becoming.Regrouping",
+        "Becoming.Selection",
+        "Becoming.Learning",
+        "Becoming.Unread",
+        "Becoming.Cascade",
+        "Becoming.RevisionRoutes",
+        "Becoming.ReadStages",
+        "Becoming.PropositionIdentity",
+        "Becoming.Hexagrams",
+        "Becoming.HexagramPlaces",
+        "Becoming.HexagramLaws",
+        "Becoming.HexagramSites",
+        "Becoming.HexagramSequences",
+        "Becoming.Withholding",
+        "Becoming.LoopReturn",
+        "Becoming.Pace",
+        "Becoming.RuleCapture",
+        "Becoming.ClosedCapture",
+        "Becoming.RuleShaping",
+        "Becoming.ChoiceCountCapture",
+        "Becoming.DrawnShaping",
+        "Becoming.ReadInTime",
+        "Becoming.PatternPassing",
+        "Becoming.JointKeeping",
+        "Becoming.Undecided",
+        "Becoming.Junctures",
+        "Becoming.Commuting",
+        "Becoming.WeightedCommuting",
+        "Becoming.HexagramCommuting",
+        "Becoming.Tolerance",
+        "Becoming.Revision",
+        "Becoming.Contacts",
+        "Becoming.RegroupingSelection",
+        "Becoming.ReferencePlan",
+        "Becoming.ContinuingRevision",
+        "Becoming.Description",
+        "Becoming.Identification",
+        "Becoming.Learnable",
+        "Becoming.Assurance",
+        "Becoming.AssurancePlans",
+        "Becoming.Integers",
+        "Becoming.Segmentation",
+        "Becoming.Readout",
+        "Becoming.Dephasing",
+        "Becoming.ProjectedLaws",
+        "Becoming.JointPhase",
+        "Becoming.SummaryFutures",
+        "Becoming.Gated",
+        "Becoming.Viability",
+        "Becoming.Keeping",
+        "Becoming.ReflexivePrediction",
+        "Becoming.Prelude",
+        "Becoming.Ideals",
+        "Becoming.ContingentPlans",
+        "Becoming.Actuation",
+        "Becoming.TreeSearch",
+        "Becoming.Dispatch",
+        "Becoming.FaultEnvelopes",
+        "Becoming.Transactions",
+        "Becoming.Reconfiguration",
+        "Becoming.PooledEnvelopes",
+        "Becoming.WitnessRefinement",
+        "Becoming.WitnessRefinementRuns",
+        "Becoming.ChanceFloors",
+        "Becoming.IntegerOrder",
+        "Becoming.Acceptance",
+        "Becoming.GuardHorizon",
+        "Becoming.OpenedCorrection",
+        "Becoming.Countdown",
+        "Becoming.Lasting",
+        "Becoming.Copying",
+        "Becoming.Retrodiction",
+        "Becoming.CrossSituational",
+        "Becoming.Likeness",
+        "Becoming.Distinguishing",
+        "Becoming.JointPlans",
+        "Becoming.Composition",
+        "Becoming.Joining",
+        "Becoming.Granularity",
+        "Becoming.HistoryLanguages",
+        "Becoming.HistoryIdeals",
+        "Becoming.HistoryIdealsTraces",
+        "Becoming.Verification",
+        "Becoming.Coverage",
+        "Becoming.Presentations",
+        "Becoming.Carriers",
+        "Becoming.BranchingCorrespondence",
+        "Becoming.JointCorrespondence",
+        "Becoming.ListFootprints",
+        "Becoming.Fragments",
+        "Becoming.LocalUnits",
+        "Becoming.JoiningContexts",
+        "Becoming.JoiningCodes",
+        "Becoming.JoiningRoles",
+        "Becoming.Postponement",
+        "Becoming.Novelty",
+        "Becoming.Reading",
+        "Becoming.PlaceTransitionNets",
+        "Becoming.SharedCodes",
+        "Becoming.ExchangePremises",
+        "Becoming.OverExchange",
+        "Becoming.Readings",
+        "Becoming.MoveFormation",
+        "Becoming.Sensitivity",
+        "Becoming.Tail",
+        "Becoming.Courses",
+        "Becoming.Parting",
+        "Becoming.Onward",
+        "Becoming.Typicality",
+        "Becoming.ConditionalWeights",
+        "Becoming.Situations",
+        "Becoming.Propagation",
+        "Becoming.Regulation",
+        "Becoming.ReadingSchedule",
+        "Becoming.RegimeMargin",
+        "Becoming.ListingRefutations",
+        "Becoming.Loops",
+        "Becoming.Remainder",
+        "Becoming.Routes",
+        "Becoming.Closing",
+        "Becoming.Thresholds",
+        "Becoming.Observation",
+        "Becoming.Frequency",
+        "Becoming.MutualDependence",
+        "Becoming.Gain",
+        "Becoming.KeepingWidening",
+        "Becoming.WideningOnTheMap",
+        "Becoming.Gluing",
+        "Becoming.Runs",
+        "Becoming.CourseWorlds",
+        "Becoming.LearnableRuns",
+        "Becoming.PartialReadout",
+        "Becoming.CodeAcquisition",
+        "Becoming.RouteFormation",
+        "Becoming.ResponseLearning",
+        "Becoming.LearnedGrouping",
+        "Becoming.ParityReadings",
+        "Becoming.FinerTraces",
+        "Becoming.HistorySums",
+        "Becoming.FormedLoops",
+        "Becoming.AttractionRuns",
+        "Becoming.ContactCourses",
+        "Becoming.ContextualRuns",
+        "Becoming.ContinuingRuns",
+        "Becoming.CopyCourses",
+        "Becoming.CounterfactualRuns",
+        "Becoming.CouplingTraces",
+        "Becoming.CourseRoles",
+        "Becoming.HorizonWebs",
+        "Becoming.IdentificationRuns",
+        "Becoming.LastingRuns",
+        "Becoming.LearningRuns",
+        "Becoming.ListedWebs",
+        "Becoming.ReferencePlanTraces",
+        "Becoming.RouteTraces",
+        "Becoming.SeekingRuns",
+        "Becoming.SelectionRuns",
+        "Becoming.SensitivityWebs",
+        "Becoming.SituationTraces",
+        "Becoming.StrengthFlows",
+        "Becoming.TypicalRuns",
+        "Becoming.WeightedTraces",
+        "Becoming.LevelCoupling",
+        "Becoming.Interleavings",
+        "Becoming.CensusCounts",
+        "Becoming.CensusBinding",
+        "Becoming.Unrolling",
+        "Becoming.Labels",
+        "Becoming.Enough",
+        "Becoming.Settling",
+        "Becoming.LastChange",
+        "Becoming.LimitVerification",
+        "Becoming.SelectionGap",
+        "Becoming.SelectionReach",
+        "Becoming.DrawnBeyond",
+        "Becoming.JointDraw",
+        "Becoming.Optimum",
+        "Becoming.OptimumSeason",
+        "Becoming.SetPointOptimum",
+        "Becoming.SelectionPool",
+        "Becoming.PoolResponse",
+        "Becoming.Training",
+        "Becoming.PoolCourse",
+        "Becoming.Rejoining",
+        "Becoming.Lexical",
+        "Becoming.Frontier",
+        "Becoming.FrontierFrames",
+        "Becoming.FrontierWorlds",
+        "Becoming.Direction",
+        "Becoming.ScoreRepresentation",
+        "Becoming.Alternatives",
+        "Becoming.Bundles",
+        "Becoming.ActivationCapacity",
+        "Becoming.Narrowing",
+        "Becoming.NarrowingRuns",
+        "Becoming.ReadingLoop",
+        "Becoming.HeldForReading",
+        "Becoming.SecuredContent",
+        "Becoming.ProfileReach",
+        "Becoming.RenewalBound",
+        "Becoming.Handoff",
+        "Becoming.RuleHandoff",
+        "Becoming.GrammarCourse",
+        "Becoming.GrammarRegularity",
+        "Becoming.ProcessRepresentation",
+        "Becoming.GrammarScope",
+        "Becoming.GrammarCases",
+        "Becoming.GrammarPath",
+        "Becoming.SignificanceStatements"
+      ],
+      "declarations": [],
+      "declaration_counts": {},
       "textual_markers": {
         "sorry": [],
         "admit": [],
@@ -79831,376 +80265,6 @@
         "def": 19,
         "theorem": 31
       },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
-    "1aebb63cea73530cc1383b8271fa070c701371eb9c1cbcf0a73b5cd98a794fd8": {
-      "byte_size": 358157,
-      "line_count": 4206,
-      "imports": [
-        "Becoming.Grammar",
-        "Becoming.GrammarReadings",
-        "Becoming.GrammarMap",
-        "Becoming.GrammarTesting",
-        "Becoming.GrammarCandidates",
-        "Becoming.MapInstances",
-        "Becoming.MapRegions",
-        "Becoming.GrammarLaws",
-        "Becoming.GrammarTransport",
-        "Becoming.ShownOrder",
-        "Becoming.World",
-        "Becoming.Witnesses",
-        "Becoming.Frame",
-        "Becoming.Laws",
-        "Becoming.Labelled",
-        "Becoming.Inquiry",
-        "Becoming.Derivation",
-        "Becoming.ClassifiedBeliefProcesses",
-        "Becoming.MoveOutcomeProcesses",
-        "Becoming.Recurrence",
-        "Becoming.Diagonal",
-        "Becoming.Context",
-        "Becoming.ContextArrivalTraces",
-        "Becoming.Quantum",
-        "Becoming.Renewal",
-        "Becoming.Dependence",
-        "Becoming.Restoration",
-        "Becoming.Horizon",
-        "Becoming.Joint",
-        "Becoming.Experiment",
-        "Becoming.Mechanism",
-        "Becoming.Unfolding",
-        "Becoming.LawAlongRun",
-        "Becoming.Irreversibility",
-        "Becoming.Histories",
-        "Becoming.Branching",
-        "Becoming.Listing",
-        "Becoming.Stuttering",
-        "Becoming.Reordering",
-        "Becoming.IdleRemoval",
-        "Becoming.OrderNormal",
-        "Becoming.OneStep",
-        "Becoming.Weighted",
-        "Becoming.Transmission",
-        "Becoming.Succession",
-        "Becoming.Attraction",
-        "Becoming.Substitution",
-        "Becoming.Arising",
-        "Becoming.Flow",
-        "Becoming.Stock",
-        "Becoming.Change",
-        "Becoming.Population",
-        "Becoming.Identity",
-        "Becoming.Persistence",
-        "Becoming.ContinuedClasses",
-        "Becoming.WorldRepresentation",
-        "Becoming.Wholes",
-        "Becoming.Dissipation",
-        "Becoming.Locality",
-        "Becoming.Seeking",
-        "Becoming.Roles",
-        "Becoming.LabelledRoles",
-        "Becoming.Reserve",
-        "Becoming.Evolution",
-        "Becoming.Capture",
-        "Becoming.SelectionTerm",
-        "Becoming.Reproduction",
-        "Becoming.SelectionLevels",
-        "Becoming.GroupEnding",
-        "Becoming.Founding",
-        "Becoming.Drift",
-        "Becoming.Space",
-        "Becoming.Premises",
-        "Becoming.Sampling",
-        "Becoming.Tower",
-        "Becoming.Openness",
-        "Becoming.Decidedness",
-        "Becoming.Refinement",
-        "Becoming.CensusTable",
-        "Becoming.Counting",
-        "Becoming.Standing",
-        "Becoming.Resolution",
-        "Becoming.Amounts",
-        "Becoming.LeastLoss",
-        "Becoming.WholeAmounts",
-        "Becoming.InAmounts",
-        "Becoming.Entropy",
-        "Becoming.SelectionPace",
-        "Becoming.Units",
-        "Becoming.Imbalance",
-        "Becoming.Continuity",
-        "Becoming.Continuation",
-        "Becoming.RenewalFlow",
-        "Becoming.Admission",
-        "Becoming.Exclusion",
-        "Becoming.Exhaustion",
-        "Becoming.Regions",
-        "Becoming.EventualWidening",
-        "Becoming.EventualWideningInstances",
-        "Becoming.ComparingCourses",
-        "Becoming.ReachableRanges",
-        "Becoming.HeldPossible",
-        "Becoming.Tasks",
-        "Becoming.CausalGrowth",
-        "Becoming.Presence",
-        "Becoming.ReorderingGrowth",
-        "Becoming.FreeEnergyGuarantees",
-        "Becoming.Blanket",
-        "Becoming.LumpedSeeking",
-        "Becoming.FreeEnergyCounting",
-        "Becoming.ModelStatements",
-        "Becoming.Growth",
-        "Becoming.Retaining",
-        "Becoming.OwnWidening",
-        "Becoming.Clearing",
-        "Becoming.Extension",
-        "Becoming.Metaethics",
-        "Becoming.Lifting",
-        "Becoming.Ranking",
-        "Becoming.ActiveReading",
-        "Becoming.LossMatching",
-        "Becoming.StrictTransport",
-        "Becoming.MatchedCourses",
-        "Becoming.Correspondence",
-        "Becoming.Descent",
-        "Becoming.Standpoints",
-        "Becoming.Significance",
-        "Becoming.ValuationFrames",
-        "Becoming.RelativePosition",
-        "Becoming.Interdependence",
-        "Becoming.Feeding",
-        "Becoming.Feedback",
-        "Becoming.BoundedSignificance",
-        "Becoming.Cuts",
-        "Becoming.EdgeClosure",
-        "Becoming.SeedReach",
-        "Becoming.ScopedReach",
-        "Becoming.Boundaries",
-        "Becoming.Weightings",
-        "Becoming.Relevance",
-        "Becoming.Testing",
-        "Becoming.Runaway",
-        "Becoming.Response",
-        "Becoming.TimedResponse",
-        "Becoming.Latency",
-        "Becoming.Centers",
-        "Becoming.Counterfactual",
-        "Becoming.Regrouping",
-        "Becoming.Selection",
-        "Becoming.Learning",
-        "Becoming.Unread",
-        "Becoming.Cascade",
-        "Becoming.RevisionRoutes",
-        "Becoming.ReadStages",
-        "Becoming.PropositionIdentity",
-        "Becoming.Hexagrams",
-        "Becoming.HexagramPlaces",
-        "Becoming.HexagramLaws",
-        "Becoming.HexagramSites",
-        "Becoming.HexagramSequences",
-        "Becoming.Withholding",
-        "Becoming.LoopReturn",
-        "Becoming.Pace",
-        "Becoming.RuleCapture",
-        "Becoming.ClosedCapture",
-        "Becoming.RuleShaping",
-        "Becoming.ChoiceCountCapture",
-        "Becoming.DrawnShaping",
-        "Becoming.ReadInTime",
-        "Becoming.PatternPassing",
-        "Becoming.JointKeeping",
-        "Becoming.Undecided",
-        "Becoming.Junctures",
-        "Becoming.Commuting",
-        "Becoming.HexagramCommuting",
-        "Becoming.Tolerance",
-        "Becoming.Revision",
-        "Becoming.Contacts",
-        "Becoming.RegroupingSelection",
-        "Becoming.ReferencePlan",
-        "Becoming.ContinuingRevision",
-        "Becoming.Description",
-        "Becoming.Identification",
-        "Becoming.Learnable",
-        "Becoming.Assurance",
-        "Becoming.AssurancePlans",
-        "Becoming.Integers",
-        "Becoming.Segmentation",
-        "Becoming.Readout",
-        "Becoming.Dephasing",
-        "Becoming.ProjectedLaws",
-        "Becoming.JointPhase",
-        "Becoming.SummaryFutures",
-        "Becoming.Gated",
-        "Becoming.Viability",
-        "Becoming.Keeping",
-        "Becoming.ReflexivePrediction",
-        "Becoming.Prelude",
-        "Becoming.Ideals",
-        "Becoming.ContingentPlans",
-        "Becoming.Actuation",
-        "Becoming.TreeSearch",
-        "Becoming.Dispatch",
-        "Becoming.FaultEnvelopes",
-        "Becoming.Transactions",
-        "Becoming.Reconfiguration",
-        "Becoming.PooledEnvelopes",
-        "Becoming.WitnessRefinement",
-        "Becoming.WitnessRefinementRuns",
-        "Becoming.ChanceFloors",
-        "Becoming.IntegerOrder",
-        "Becoming.Acceptance",
-        "Becoming.GuardHorizon",
-        "Becoming.OpenedCorrection",
-        "Becoming.Countdown",
-        "Becoming.Lasting",
-        "Becoming.Copying",
-        "Becoming.Retrodiction",
-        "Becoming.CrossSituational",
-        "Becoming.Likeness",
-        "Becoming.Distinguishing",
-        "Becoming.JointPlans",
-        "Becoming.Composition",
-        "Becoming.Joining",
-        "Becoming.Granularity",
-        "Becoming.HistoryLanguages",
-        "Becoming.HistoryIdeals",
-        "Becoming.HistoryIdealsTraces",
-        "Becoming.Verification",
-        "Becoming.Coverage",
-        "Becoming.Presentations",
-        "Becoming.Carriers",
-        "Becoming.BranchingCorrespondence",
-        "Becoming.JointCorrespondence",
-        "Becoming.ListFootprints",
-        "Becoming.Fragments",
-        "Becoming.LocalUnits",
-        "Becoming.JoiningContexts",
-        "Becoming.JoiningCodes",
-        "Becoming.JoiningRoles",
-        "Becoming.Postponement",
-        "Becoming.Novelty",
-        "Becoming.Reading",
-        "Becoming.PlaceTransitionNets",
-        "Becoming.SharedCodes",
-        "Becoming.ExchangePremises",
-        "Becoming.OverExchange",
-        "Becoming.Readings",
-        "Becoming.MoveFormation",
-        "Becoming.Sensitivity",
-        "Becoming.Tail",
-        "Becoming.Courses",
-        "Becoming.Parting",
-        "Becoming.Onward",
-        "Becoming.Typicality",
-        "Becoming.ConditionalWeights",
-        "Becoming.Situations",
-        "Becoming.Propagation",
-        "Becoming.Regulation",
-        "Becoming.ReadingSchedule",
-        "Becoming.RegimeMargin",
-        "Becoming.ListingRefutations",
-        "Becoming.Loops",
-        "Becoming.Remainder",
-        "Becoming.Routes",
-        "Becoming.Closing",
-        "Becoming.Thresholds",
-        "Becoming.Observation",
-        "Becoming.Frequency",
-        "Becoming.MutualDependence",
-        "Becoming.Gain",
-        "Becoming.KeepingWidening",
-        "Becoming.WideningOnTheMap",
-        "Becoming.Gluing",
-        "Becoming.Runs",
-        "Becoming.CourseWorlds",
-        "Becoming.LearnableRuns",
-        "Becoming.PartialReadout",
-        "Becoming.CodeAcquisition",
-        "Becoming.RouteFormation",
-        "Becoming.ResponseLearning",
-        "Becoming.LearnedGrouping",
-        "Becoming.ParityReadings",
-        "Becoming.FinerTraces",
-        "Becoming.HistorySums",
-        "Becoming.FormedLoops",
-        "Becoming.AttractionRuns",
-        "Becoming.ContactCourses",
-        "Becoming.ContextualRuns",
-        "Becoming.ContinuingRuns",
-        "Becoming.CopyCourses",
-        "Becoming.CounterfactualRuns",
-        "Becoming.CouplingTraces",
-        "Becoming.CourseRoles",
-        "Becoming.HorizonWebs",
-        "Becoming.IdentificationRuns",
-        "Becoming.LastingRuns",
-        "Becoming.LearningRuns",
-        "Becoming.ListedWebs",
-        "Becoming.ReferencePlanTraces",
-        "Becoming.RouteTraces",
-        "Becoming.SeekingRuns",
-        "Becoming.SelectionRuns",
-        "Becoming.SensitivityWebs",
-        "Becoming.SituationTraces",
-        "Becoming.StrengthFlows",
-        "Becoming.TypicalRuns",
-        "Becoming.WeightedTraces",
-        "Becoming.LevelCoupling",
-        "Becoming.Interleavings",
-        "Becoming.CensusCounts",
-        "Becoming.CensusBinding",
-        "Becoming.Unrolling",
-        "Becoming.Labels",
-        "Becoming.Enough",
-        "Becoming.Settling",
-        "Becoming.LastChange",
-        "Becoming.LimitVerification",
-        "Becoming.SelectionGap",
-        "Becoming.SelectionReach",
-        "Becoming.DrawnBeyond",
-        "Becoming.JointDraw",
-        "Becoming.Optimum",
-        "Becoming.SetPointOptimum",
-        "Becoming.SelectionPool",
-        "Becoming.PoolResponse",
-        "Becoming.Training",
-        "Becoming.PoolCourse",
-        "Becoming.Rejoining",
-        "Becoming.Lexical",
-        "Becoming.Frontier",
-        "Becoming.FrontierFrames",
-        "Becoming.FrontierWorlds",
-        "Becoming.Direction",
-        "Becoming.ScoreRepresentation",
-        "Becoming.Alternatives",
-        "Becoming.Bundles",
-        "Becoming.ActivationCapacity",
-        "Becoming.Narrowing",
-        "Becoming.NarrowingRuns",
-        "Becoming.ReadingLoop",
-        "Becoming.HeldForReading",
-        "Becoming.SecuredContent",
-        "Becoming.ProfileReach",
-        "Becoming.RenewalBound",
-        "Becoming.Handoff",
-        "Becoming.RuleHandoff",
-        "Becoming.GrammarCourse",
-        "Becoming.GrammarRegularity",
-        "Becoming.ProcessRepresentation",
-        "Becoming.GrammarScope",
-        "Becoming.GrammarCases",
-        "Becoming.GrammarPath",
-        "Becoming.SignificanceStatements"
-      ],
-      "declarations": [],
-      "declaration_counts": {},
       "textual_markers": {
         "sorry": [],
         "admit": [],
@@ -156021,6 +156085,201 @@
         "def": 33,
         "inductive": 2,
         "theorem": 72
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "3fe02a8b09584d4006a6053f5c24469c875527b909bfeda4d1557ba6bdba1f36": {
+      "byte_size": 12175,
+      "line_count": 245,
+      "imports": [
+        "Becoming.Commuting"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "add_congr",
+          "qualified_name_hint": "Becoming.Weighted.add_congr",
+          "line": 61
+        },
+        {
+          "kind": "def",
+          "name": "total",
+          "qualified_name_hint": "Becoming.Weighted.total",
+          "line": 64
+        },
+        {
+          "kind": "theorem",
+          "name": "total_congr",
+          "qualified_name_hint": "Becoming.Weighted.total_congr",
+          "line": 70
+        },
+        {
+          "kind": "def",
+          "name": "expect",
+          "qualified_name_hint": "Becoming.Weighted.expect",
+          "line": 78
+        },
+        {
+          "kind": "def",
+          "name": "Commutes",
+          "qualified_name_hint": "Becoming.Weighted.Commutes",
+          "line": 84
+        },
+        {
+          "kind": "theorem",
+          "name": "Commutes.carried",
+          "qualified_name_hint": "Becoming.Weighted.Commutes.carried",
+          "line": 90
+        },
+        {
+          "kind": "theorem",
+          "name": "Commutes.fixed_expect",
+          "qualified_name_hint": "Becoming.Weighted.Commutes.fixed_expect",
+          "line": 97
+        },
+        {
+          "kind": "def",
+          "name": "Unchanged",
+          "qualified_name_hint": "Becoming.Weighted.Unchanged",
+          "line": 102
+        },
+        {
+          "kind": "theorem",
+          "name": "Commutes.start_expect",
+          "qualified_name_hint": "Becoming.Weighted.Commutes.start_expect",
+          "line": 107
+        },
+        {
+          "kind": "def",
+          "name": "law",
+          "qualified_name_hint": "Becoming.Weighted.law",
+          "line": 116
+        },
+        {
+          "kind": "theorem",
+          "name": "law_commutes",
+          "qualified_name_hint": "Becoming.Weighted.law_commutes",
+          "line": 120
+        },
+        {
+          "kind": "def",
+          "name": "over",
+          "qualified_name_hint": "Becoming.Weighted.over",
+          "line": 131
+        },
+        {
+          "kind": "theorem",
+          "name": "total_map",
+          "qualified_name_hint": "Becoming.Weighted.total_map",
+          "line": 136
+        },
+        {
+          "kind": "theorem",
+          "name": "over_congr",
+          "qualified_name_hint": "Becoming.Weighted.over_congr",
+          "line": 142
+        },
+        {
+          "kind": "theorem",
+          "name": "Commutes.of_samples",
+          "qualified_name_hint": "Becoming.Weighted.Commutes.of_samples",
+          "line": 150
+        },
+        {
+          "kind": "def",
+          "name": "swap",
+          "qualified_name_hint": "Becoming.Weighted.swap",
+          "line": 165
+        },
+        {
+          "kind": "def",
+          "name": "law",
+          "qualified_name_hint": "Becoming.Weighted.Reinforcing.law",
+          "line": 170
+        },
+        {
+          "kind": "theorem",
+          "name": "commutes",
+          "qualified_name_hint": "Becoming.Weighted.Reinforcing.commutes",
+          "line": 173
+        },
+        {
+          "kind": "theorem",
+          "name": "expect_equal",
+          "qualified_name_hint": "Becoming.Weighted.Reinforcing.expect_equal",
+          "line": 180
+        },
+        {
+          "kind": "def",
+          "name": "oneSidedRun",
+          "qualified_name_hint": "Becoming.Weighted.Reinforcing.oneSidedRun",
+          "line": 185
+        },
+        {
+          "kind": "def",
+          "name": "oneSidedWeight",
+          "qualified_name_hint": "Becoming.Weighted.Reinforcing.oneSidedWeight",
+          "line": 190
+        },
+        {
+          "kind": "theorem",
+          "name": "oneSidedRun_eq",
+          "qualified_name_hint": "Becoming.Weighted.Reinforcing.oneSidedRun_eq",
+          "line": 194
+        },
+        {
+          "kind": "theorem",
+          "name": "oneSidedWeight_pos",
+          "qualified_name_hint": "Becoming.Weighted.Reinforcing.oneSidedWeight_pos",
+          "line": 198
+        },
+        {
+          "kind": "theorem",
+          "name": "oneSided",
+          "qualified_name_hint": "Becoming.Weighted.Reinforcing.oneSided",
+          "line": 204
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Becoming.Weighted.Pooling.step",
+          "line": 212
+        },
+        {
+          "kind": "theorem",
+          "name": "commutes",
+          "qualified_name_hint": "Becoming.Weighted.Pooling.commutes",
+          "line": 215
+        },
+        {
+          "kind": "theorem",
+          "name": "run_counts",
+          "qualified_name_hint": "Becoming.Weighted.Pooling.run_counts",
+          "line": 218
+        },
+        {
+          "kind": "theorem",
+          "name": "share_rises",
+          "qualified_name_hint": "Becoming.Weighted.Pooling.share_rises",
+          "line": 225
+        },
+        {
+          "kind": "theorem",
+          "name": "share_below_half",
+          "qualified_name_hint": "Becoming.Weighted.Pooling.share_below_half",
+          "line": 237
+        }
+      ],
+      "declaration_counts": {
+        "def": 11,
+        "theorem": 18
       },
       "textual_markers": {
         "sorry": [],
@@ -365716,6 +365975,46 @@
       },
       "print_axioms_commands": 0
     },
+    "af1facf72f3eb554399b28ceae161b35112fd14abf2decc22a5b5d66c10390f1": {
+      "byte_size": 2885,
+      "line_count": 67,
+      "imports": [
+        "Becoming.MapRegions",
+        "Becoming.WideningOnTheMap",
+        "Becoming.HeldPossible"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "reached_le",
+          "qualified_name_hint": "Becoming.HE2Item5.reached_le",
+          "line": 19
+        },
+        {
+          "kind": "theorem",
+          "name": "reach_succ",
+          "qualified_name_hint": "Becoming.HE2Item5.reach_succ",
+          "line": 33
+        },
+        {
+          "kind": "theorem",
+          "name": "reach_of_le",
+          "qualified_name_hint": "Becoming.HE2Item5.reach_of_le",
+          "line": 41
+        }
+      ],
+      "declaration_counts": {
+        "theorem": 3
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "af228924c9d09d8fa60d71b3f19f063c4c3fed4f422137b99ee2f736d8a3468b": {
       "byte_size": 21420,
       "line_count": 371,
@@ -411211,6 +411510,617 @@
       "declaration_counts": {
         "def": 10,
         "theorem": 32
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "c3e01c8cd00e5a6ae73b004278d94b180d601beed832a15c0d5ca072fc7f0bc4": {
+      "byte_size": 31693,
+      "line_count": 702,
+      "imports": [
+        "Becoming.Optimum"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "least",
+          "qualified_name_hint": "Becoming.Optimum.Season.least",
+          "line": 71
+        },
+        {
+          "kind": "theorem",
+          "name": "least_le_left",
+          "qualified_name_hint": "Becoming.Optimum.Season.least_le_left",
+          "line": 76
+        },
+        {
+          "kind": "theorem",
+          "name": "least_le_right",
+          "qualified_name_hint": "Becoming.Optimum.Season.least_le_right",
+          "line": 81
+        },
+        {
+          "kind": "theorem",
+          "name": "least_of_le",
+          "qualified_name_hint": "Becoming.Optimum.Season.least_of_le",
+          "line": 86
+        },
+        {
+          "kind": "theorem",
+          "name": "least_of_ge",
+          "qualified_name_hint": "Becoming.Optimum.Season.least_of_ge",
+          "line": 91
+        },
+        {
+          "kind": "theorem",
+          "name": "least_zero_right",
+          "qualified_name_hint": "Becoming.Optimum.Season.least_zero_right",
+          "line": 97
+        },
+        {
+          "kind": "def",
+          "name": "bit",
+          "qualified_name_hint": "Becoming.Optimum.Season.bit",
+          "line": 102
+        },
+        {
+          "kind": "def",
+          "name": "renew",
+          "qualified_name_hint": "Becoming.Optimum.Season.renew",
+          "line": 110
+        },
+        {
+          "kind": "theorem",
+          "name": "renew_le",
+          "qualified_name_hint": "Becoming.Optimum.Season.renew_le",
+          "line": 112
+        },
+        {
+          "kind": "structure",
+          "name": "Act",
+          "qualified_name_hint": "Becoming.Optimum.Season.Act",
+          "line": 116
+        },
+        {
+          "kind": "structure",
+          "name": "Tally",
+          "qualified_name_hint": "Becoming.Optimum.Season.Tally",
+          "line": 123
+        },
+        {
+          "kind": "def",
+          "name": "cap",
+          "qualified_name_hint": "Becoming.Optimum.Season.cap",
+          "line": 131
+        },
+        {
+          "kind": "def",
+          "name": "bayTake",
+          "qualified_name_hint": "Becoming.Optimum.Season.bayTake",
+          "line": 134
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Becoming.Optimum.Season.step",
+          "line": 140
+        },
+        {
+          "kind": "def",
+          "name": "run",
+          "qualified_name_hint": "Becoming.Optimum.Season.run",
+          "line": 145
+        },
+        {
+          "kind": "def",
+          "name": "start",
+          "qualified_name_hint": "Becoming.Optimum.Season.start",
+          "line": 150
+        },
+        {
+          "kind": "def",
+          "name": "caught",
+          "qualified_name_hint": "Becoming.Optimum.Season.caught",
+          "line": 155
+        },
+        {
+          "kind": "def",
+          "name": "takes",
+          "qualified_name_hint": "Becoming.Optimum.Season.takes",
+          "line": 160
+        },
+        {
+          "kind": "def",
+          "name": "asked",
+          "qualified_name_hint": "Becoming.Optimum.Season.asked",
+          "line": 165
+        },
+        {
+          "kind": "def",
+          "name": "landings",
+          "qualified_name_hint": "Becoming.Optimum.Season.landings",
+          "line": 170
+        },
+        {
+          "kind": "theorem",
+          "name": "run_caught",
+          "qualified_name_hint": "Becoming.Optimum.Season.run_caught",
+          "line": 174
+        },
+        {
+          "kind": "theorem",
+          "name": "run_taken",
+          "qualified_name_hint": "Becoming.Optimum.Season.run_taken",
+          "line": 178
+        },
+        {
+          "kind": "theorem",
+          "name": "run_landed",
+          "qualified_name_hint": "Becoming.Optimum.Season.run_landed",
+          "line": 182
+        },
+        {
+          "kind": "theorem",
+          "name": "run_bay",
+          "qualified_name_hint": "Becoming.Optimum.Season.run_bay",
+          "line": 187
+        },
+        {
+          "kind": "theorem",
+          "name": "takes_eq",
+          "qualified_name_hint": "Becoming.Optimum.Season.takes_eq",
+          "line": 192
+        },
+        {
+          "kind": "theorem",
+          "name": "landings_le",
+          "qualified_name_hint": "Becoming.Optimum.Season.landings_le",
+          "line": 201
+        },
+        {
+          "kind": "def",
+          "name": "mark",
+          "qualified_name_hint": "Becoming.Optimum.Season.mark",
+          "line": 209
+        },
+        {
+          "kind": "def",
+          "name": "flagged",
+          "qualified_name_hint": "Becoming.Optimum.Season.flagged",
+          "line": 215
+        },
+        {
+          "kind": "theorem",
+          "name": "flagged_length",
+          "qualified_name_hint": "Becoming.Optimum.Season.flagged_length",
+          "line": 219
+        },
+        {
+          "kind": "theorem",
+          "name": "flagged_caught",
+          "qualified_name_hint": "Becoming.Optimum.Season.flagged_caught",
+          "line": 223
+        },
+        {
+          "kind": "theorem",
+          "name": "flagged_asked",
+          "qualified_name_hint": "Becoming.Optimum.Season.flagged_asked",
+          "line": 227
+        },
+        {
+          "kind": "theorem",
+          "name": "flagged_landings",
+          "qualified_name_hint": "Becoming.Optimum.Season.flagged_landings",
+          "line": 232
+        },
+        {
+          "kind": "inductive",
+          "name": "Cond",
+          "qualified_name_hint": "Becoming.Optimum.Season.Cond",
+          "line": 241
+        },
+        {
+          "kind": "def",
+          "name": "outcome",
+          "qualified_name_hint": "Becoming.Optimum.Season.outcome",
+          "line": 268
+        },
+        {
+          "kind": "def",
+          "name": "Eligible",
+          "qualified_name_hint": "Becoming.Optimum.Season.Eligible",
+          "line": 275
+        },
+        {
+          "kind": "theorem",
+          "name": "outcome_ground",
+          "qualified_name_hint": "Becoming.Optimum.Season.outcome_ground",
+          "line": 279
+        },
+        {
+          "kind": "theorem",
+          "name": "outcome_catch",
+          "qualified_name_hint": "Becoming.Optimum.Season.outcome_catch",
+          "line": 282
+        },
+        {
+          "kind": "theorem",
+          "name": "outcome_bay",
+          "qualified_name_hint": "Becoming.Optimum.Season.outcome_bay",
+          "line": 287
+        },
+        {
+          "kind": "theorem",
+          "name": "outcome_site",
+          "qualified_name_hint": "Becoming.Optimum.Season.outcome_site",
+          "line": 290
+        },
+        {
+          "kind": "theorem",
+          "name": "eligible_of",
+          "qualified_name_hint": "Becoming.Optimum.Season.eligible_of",
+          "line": 295
+        },
+        {
+          "kind": "def",
+          "name": "ceiling",
+          "qualified_name_hint": "Becoming.Optimum.Season.ceiling",
+          "line": 315
+        },
+        {
+          "kind": "def",
+          "name": "entry",
+          "qualified_name_hint": "Becoming.Optimum.Season.entry",
+          "line": 329
+        },
+        {
+          "kind": "def",
+          "name": "row",
+          "qualified_name_hint": "Becoming.Optimum.Season.row",
+          "line": 335
+        },
+        {
+          "kind": "def",
+          "name": "best",
+          "qualified_name_hint": "Becoming.Optimum.Season.best",
+          "line": 341
+        },
+        {
+          "kind": "theorem",
+          "name": "bellman",
+          "qualified_name_hint": "Becoming.Optimum.Season.bellman",
+          "line": 345
+        },
+        {
+          "kind": "theorem",
+          "name": "cap_lt",
+          "qualified_name_hint": "Becoming.Optimum.Season.cap_lt",
+          "line": 348
+        },
+        {
+          "kind": "theorem",
+          "name": "caught_le",
+          "qualified_name_hint": "Becoming.Optimum.Season.caught_le",
+          "line": 351
+        },
+        {
+          "kind": "theorem",
+          "name": "best_ten",
+          "qualified_name_hint": "Becoming.Optimum.Season.best_ten",
+          "line": 362
+        },
+        {
+          "kind": "theorem",
+          "name": "ground_le",
+          "qualified_name_hint": "Becoming.Optimum.Season.ground_le",
+          "line": 365
+        },
+        {
+          "kind": "def",
+          "name": "topTakes",
+          "qualified_name_hint": "Becoming.Optimum.Season.topTakes",
+          "line": 370
+        },
+        {
+          "kind": "theorem",
+          "name": "top_caught",
+          "qualified_name_hint": "Becoming.Optimum.Season.top_caught",
+          "line": 376
+        },
+        {
+          "kind": "theorem",
+          "name": "topTakes_length",
+          "qualified_name_hint": "Becoming.Optimum.Season.topTakes_length",
+          "line": 378
+        },
+        {
+          "kind": "theorem",
+          "name": "eligible_parts",
+          "qualified_name_hint": "Becoming.Optimum.Season.eligible_parts",
+          "line": 383
+        },
+        {
+          "kind": "theorem",
+          "name": "catch_le",
+          "qualified_name_hint": "Becoming.Optimum.Season.catch_le",
+          "line": 393
+        },
+        {
+          "kind": "theorem",
+          "name": "bay_le",
+          "qualified_name_hint": "Becoming.Optimum.Season.bay_le",
+          "line": 398
+        },
+        {
+          "kind": "theorem",
+          "name": "bay_catch",
+          "qualified_name_hint": "Becoming.Optimum.Season.bay_catch",
+          "line": 403
+        },
+        {
+          "kind": "theorem",
+          "name": "bay_catch_le",
+          "qualified_name_hint": "Becoming.Optimum.Season.bay_catch_le",
+          "line": 409
+        },
+        {
+          "kind": "theorem",
+          "name": "kept_catch_le",
+          "qualified_name_hint": "Becoming.Optimum.Season.kept_catch_le",
+          "line": 414
+        },
+        {
+          "kind": "theorem",
+          "name": "shared",
+          "qualified_name_hint": "Becoming.Optimum.Season.shared",
+          "line": 427
+        },
+        {
+          "kind": "theorem",
+          "name": "drained_eligible",
+          "qualified_name_hint": "Becoming.Optimum.Season.drained_eligible",
+          "line": 447
+        },
+        {
+          "kind": "theorem",
+          "name": "bay_drained",
+          "qualified_name_hint": "Becoming.Optimum.Season.bay_drained",
+          "line": 456
+        },
+        {
+          "kind": "def",
+          "name": "catchOrder",
+          "qualified_name_hint": "Becoming.Optimum.Season.catchOrder",
+          "line": 469
+        },
+        {
+          "kind": "theorem",
+          "name": "catch_rising",
+          "qualified_name_hint": "Becoming.Optimum.Season.catch_rising",
+          "line": 471
+        },
+        {
+          "kind": "theorem",
+          "name": "top_frontier",
+          "qualified_name_hint": "Becoming.Optimum.Season.top_frontier",
+          "line": 477
+        },
+        {
+          "kind": "def",
+          "name": "topSiteKept",
+          "qualified_name_hint": "Becoming.Optimum.Season.topSiteKept",
+          "line": 482
+        },
+        {
+          "kind": "def",
+          "name": "topSiteFull",
+          "qualified_name_hint": "Becoming.Optimum.Season.topSiteFull",
+          "line": 489
+        },
+        {
+          "kind": "theorem",
+          "name": "topSiteKept_eligible",
+          "qualified_name_hint": "Becoming.Optimum.Season.topSiteKept_eligible",
+          "line": 495
+        },
+        {
+          "kind": "theorem",
+          "name": "topSiteFull_eligible",
+          "qualified_name_hint": "Becoming.Optimum.Season.topSiteFull_eligible",
+          "line": 497
+        },
+        {
+          "kind": "theorem",
+          "name": "site_optima",
+          "qualified_name_hint": "Becoming.Optimum.Season.site_optima",
+          "line": 503
+        },
+        {
+          "kind": "theorem",
+          "name": "site_no_room",
+          "qualified_name_hint": "Becoming.Optimum.Season.site_no_room",
+          "line": 508
+        },
+        {
+          "kind": "theorem",
+          "name": "site_not_least",
+          "qualified_name_hint": "Becoming.Optimum.Season.site_not_least",
+          "line": 517
+        },
+        {
+          "kind": "def",
+          "name": "groundOrder",
+          "qualified_name_hint": "Becoming.Optimum.Season.groundOrder",
+          "line": 524
+        },
+        {
+          "kind": "theorem",
+          "name": "ground_rising",
+          "qualified_name_hint": "Becoming.Optimum.Season.ground_rising",
+          "line": 526
+        },
+        {
+          "kind": "theorem",
+          "name": "ground_bound",
+          "qualified_name_hint": "Becoming.Optimum.Season.ground_bound",
+          "line": 531
+        },
+        {
+          "kind": "def",
+          "name": "topBayKept",
+          "qualified_name_hint": "Becoming.Optimum.Season.topBayKept",
+          "line": 536
+        },
+        {
+          "kind": "theorem",
+          "name": "topBayKept_eligible",
+          "qualified_name_hint": "Becoming.Optimum.Season.topBayKept_eligible",
+          "line": 542
+        },
+        {
+          "kind": "theorem",
+          "name": "ground_frontier",
+          "qualified_name_hint": "Becoming.Optimum.Season.ground_frontier",
+          "line": 546
+        },
+        {
+          "kind": "theorem",
+          "name": "unshared_optima",
+          "qualified_name_hint": "Becoming.Optimum.Season.unshared_optima",
+          "line": 552
+        },
+        {
+          "kind": "theorem",
+          "name": "unshared_no_room",
+          "qualified_name_hint": "Becoming.Optimum.Season.unshared_no_room",
+          "line": 557
+        },
+        {
+          "kind": "def",
+          "name": "afterScore",
+          "qualified_name_hint": "Becoming.Optimum.Season.afterScore",
+          "line": 568
+        },
+        {
+          "kind": "def",
+          "name": "afterOrder",
+          "qualified_name_hint": "Becoming.Optimum.Season.afterOrder",
+          "line": 571
+        },
+        {
+          "kind": "def",
+          "name": "lexOrder",
+          "qualified_name_hint": "Becoming.Optimum.Season.lexOrder",
+          "line": 574
+        },
+        {
+          "kind": "theorem",
+          "name": "lex_rising",
+          "qualified_name_hint": "Becoming.Optimum.Season.lex_rising",
+          "line": 578
+        },
+        {
+          "kind": "theorem",
+          "name": "seven_lt",
+          "qualified_name_hint": "Becoming.Optimum.Season.seven_lt",
+          "line": 581
+        },
+        {
+          "kind": "theorem",
+          "name": "after_iff",
+          "qualified_name_hint": "Becoming.Optimum.Season.after_iff",
+          "line": 588
+        },
+        {
+          "kind": "theorem",
+          "name": "after_drained",
+          "qualified_name_hint": "Becoming.Optimum.Season.after_drained",
+          "line": 613
+        },
+        {
+          "kind": "def",
+          "name": "plateauOrder",
+          "qualified_name_hint": "Becoming.Optimum.Season.plateauOrder",
+          "line": 621
+        },
+        {
+          "kind": "theorem",
+          "name": "plateau_not_rising",
+          "qualified_name_hint": "Becoming.Optimum.Season.plateau_not_rising",
+          "line": 624
+        },
+        {
+          "kind": "theorem",
+          "name": "plateau_frontier",
+          "qualified_name_hint": "Becoming.Optimum.Season.plateau_frontier",
+          "line": 630
+        },
+        {
+          "kind": "theorem",
+          "name": "plateau_optima",
+          "qualified_name_hint": "Becoming.Optimum.Season.plateau_optima",
+          "line": 636
+        },
+        {
+          "kind": "def",
+          "name": "mass",
+          "qualified_name_hint": "Becoming.Optimum.Season.mass",
+          "line": 644
+        },
+        {
+          "kind": "theorem",
+          "name": "mass_add",
+          "qualified_name_hint": "Becoming.Optimum.Season.mass_add",
+          "line": 648
+        },
+        {
+          "kind": "theorem",
+          "name": "mass_le",
+          "qualified_name_hint": "Becoming.Optimum.Season.mass_le",
+          "line": 657
+        },
+        {
+          "kind": "theorem",
+          "name": "mass_const",
+          "qualified_name_hint": "Becoming.Optimum.Season.mass_const",
+          "line": 665
+        },
+        {
+          "kind": "theorem",
+          "name": "mix_bay_catch",
+          "qualified_name_hint": "Becoming.Optimum.Season.mix_bay_catch",
+          "line": 675
+        },
+        {
+          "kind": "def",
+          "name": "keptMark",
+          "qualified_name_hint": "Becoming.Optimum.Season.keptMark",
+          "line": 682
+        },
+        {
+          "kind": "theorem",
+          "name": "catch_kept_le",
+          "qualified_name_hint": "Becoming.Optimum.Season.catch_kept_le",
+          "line": 684
+        },
+        {
+          "kind": "theorem",
+          "name": "mix_kept",
+          "qualified_name_hint": "Becoming.Optimum.Season.mix_kept",
+          "line": 692
+        }
+      ],
+      "declaration_counts": {
+        "def": 32,
+        "inductive": 1,
+        "structure": 2,
+        "theorem": 63
       },
       "textual_markers": {
         "sorry": [],
@@ -521271,6 +522181,10 @@
       "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3c-anchors-on-the-grammar/tree/Becoming/Learning.lean",
       "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean"
     ],
+    "3fe02a8b09584d4006a6053f5c24469c875527b909bfeda4d1557ba6bdba1f36": [
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/tree/Becoming/WeightedCommuting.lean",
+      "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean"
+    ],
     "400222ef8f8d216a7be6b1314193321808c9ce71d0934e86bbcd615603772ec0": [
       "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/g1-selection-gap/Becoming/SelectionGap.lean",
       "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionGap.lean"
@@ -521842,6 +522756,10 @@
       "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3d-step-indexed-reaching/check-tree/Becoming/GrammarLaws.lean",
       "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3d-step-indexed-reaching/consumers-check/Becoming/GrammarLaws.lean",
       "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3d-step-indexed-reaching/tree/Becoming/GrammarLaws.lean"
+    ],
+    "c3e01c8cd00e5a6ae73b004278d94b180d601beed832a15c0d5ca072fc7f0bc4": [
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/tree/Becoming/OptimumSeason.lean",
+      "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean"
     ],
     "c663ea54de803b3ebac7de4a110df1119f94473f962e762fa5b4332c3cb23591": [
       "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ev13-ev16-draw-mutation-breeding-forming/tree/Becoming/Transmission.lean",

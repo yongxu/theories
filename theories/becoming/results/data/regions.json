@@ -6,6 +6,11 @@
    "base": "general",
    "note": "SharedCodes: hearing-only code change keeps agreement; 约定俗成"
   },
+  "a-commuting-learner-drives-no-unread-choice": {
+   "region": "collective",
+   "base": "general",
+   "note": "LA4; a weighted law commuting with a map keeps expectations"
+  },
   "a-coupling-saturated-by-what-it-has-carried": {
    "region": "map",
    "base": "frame",
@@ -2061,6 +2066,11 @@
    "base": "old-base",
    "note": "R1 Interleavings"
   },
+  "the-test-season-meets-the-optimum-laws": {
+   "region": "collective",
+   "base": "general",
+   "note": "LA4's season; the optimum laws met"
+  },
   "the-updater-line": {
    "region": "life",
    "base": "periphery",
@@ -3578,6 +3588,11 @@
    "base": "old-base",
    "note": "SG1-SG17 optima at least level beyond; 506 thms (UE1b: one law of the exchange)"
   },
+  "Becoming.OptimumSeason": {
+   "region": "collective",
+   "base": "general",
+   "note": "LA4: the season season.py runs, the optimum laws it meets (record the-test-season-meets-the-optimum-laws)"
+  },
   "Becoming.OrderNormal": {
    "region": "root",
    "base": "old-base",
@@ -4232,6 +4247,11 @@
    "region": "knowing",
    "base": "general",
    "note": "P82 weighted histories, sum over courses = stepwise transfer"
+  },
+  "Becoming.WeightedCommuting": {
+   "region": "collective",
+   "base": "general",
+   "note": "LA4: the weighted commuting law and the sampling learner (record a-commuting-learner-drives-no-unread-choice)"
   },
   "Becoming.WeightedTraces": {
    "region": "knowing",

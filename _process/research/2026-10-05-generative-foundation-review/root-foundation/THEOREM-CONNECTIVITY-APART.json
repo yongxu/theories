@@ -5766,6 +5766,101 @@
    "module": "Becoming.RevisionRoutes",
    "category": "general-structure",
    "reason": "RevisionRoutes.route_above_iff: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.Optimum.Season.after_drained": {
+   "module": "Becoming.OptimumSeason",
+   "category": "model-witness",
+   "reason": "LA4's season as season.py runs it, one constructed set of outcomes: the optima of seven times the catch plus the bay left empty the bay: counting the bay after the catch changes nothing (LA4)"
+  },
+  "Becoming.Optimum.Season.ground_rising": {
+   "module": "Becoming.OptimumSeason",
+   "category": "model-witness",
+   "reason": "LA4's season as season.py runs it, one constructed set of outcomes: the order by the ground's catch rises with the ground's catch (LA4)"
+  },
+  "Becoming.Optimum.Season.mix_bay_catch": {
+   "module": "Becoming.OptimumSeason",
+   "category": "model-witness",
+   "reason": "LA4's season as season.py runs it, one constructed set of outcomes: over weighted seasons the weighted bay left plus the weighted catch is at most 40 times the total weight (LA4)"
+  },
+  "Becoming.Optimum.Season.mix_kept": {
+   "module": "Becoming.OptimumSeason",
+   "category": "model-witness",
+   "reason": "LA4's season as season.py runs it, one constructed set of outcomes: over weighted seasons the weighted catch plus three times the weight keeping the bay at three or more is at most 40 times the total weight (LA4)"
+  },
+  "Becoming.Optimum.Season.plateau_not_rising": {
+   "module": "Becoming.OptimumSeason",
+   "category": "model-witness",
+   "reason": "LA4's season as season.py runs it, one constructed set of outcomes: valuing the catch only up to 26 does not rise with the catch (LA4)"
+  },
+  "Becoming.Optimum.Season.plateau_optima": {
+   "module": "Becoming.OptimumSeason",
+   "category": "model-witness",
+   "reason": "LA4's season as season.py runs it, one constructed set of outcomes: among the optima of the plateau order are a season keeping the bay at six and one emptying it (LA4)"
+  },
+  "Becoming.Optimum.Season.site_no_room": {
+   "module": "Becoming.OptimumSeason",
+   "category": "model-witness",
+   "reason": "LA4's season as season.py runs it, one constructed set of outcomes: there is no room at the landing site for the order by the catch, so Optimum.least_of_room does not apply there (LA4)"
+  },
+  "Becoming.Optimum.Season.site_not_least": {
+   "module": "Becoming.OptimumSeason",
+   "category": "model-witness",
+   "reason": "LA4's season as season.py runs it, one constructed set of outcomes: an optimum of the order by the catch need not stand at the site's least level (LA4)"
+  },
+  "Becoming.Optimum.Season.site_optima": {
+   "module": "Becoming.OptimumSeason",
+   "category": "model-witness",
+   "reason": "LA4's season as season.py runs it, one constructed set of outcomes: among the optima of the order by the catch are a season landing beside the nests never and one landing there at every step (LA4)"
+  },
+  "Becoming.Optimum.Season.unshared_no_room": {
+   "module": "Becoming.OptimumSeason",
+   "category": "model-witness",
+   "reason": "LA4's season as season.py runs it, one constructed set of outcomes: ranked by the ground's catch alone there is no room at the bay, which shares no units with what is ranked (LA4)"
+  },
+  "Becoming.Optimum.Season.unshared_optima": {
+   "module": "Becoming.OptimumSeason",
+   "category": "model-witness",
+   "reason": "LA4's season as season.py runs it, one constructed set of outcomes: among the optima of the order by the ground's catch are a season keeping the bay at six and one emptying it (LA4)"
+  },
+  "Becoming.Weighted.Commutes.of_samples": {
+   "module": "Becoming.WeightedCommuting",
+   "category": "general-structure",
+   "reason": "when a law drawing weighted samples and moving by an update commutes with a map, over any type; the base states no sampling law, so nothing on it uses this law (LA4)"
+  },
+  "Becoming.Weighted.Commutes.start_expect": {
+   "module": "Becoming.WeightedCommuting",
+   "category": "general-structure",
+   "reason": "a law of every weighted law on any type commuting with any map, the weights of any type; the base states no weighted law, so nothing on it uses this law (LA4)"
+  },
+  "Becoming.Weighted.Pooling.commutes": {
+   "module": "Becoming.WeightedCommuting",
+   "category": "model-witness",
+   "reason": "Pooling, adding one to both values, commutes with the exchange: a fact about one constructed law (LA4)"
+  },
+  "Becoming.Weighted.Pooling.share_below_half": {
+   "module": "Becoming.WeightedCommuting",
+   "category": "model-witness",
+   "reason": "in Pooling from three and one the less-drawn value's share stays below one half: a fact about one constructed law (LA4)"
+  },
+  "Becoming.Weighted.Pooling.share_rises": {
+   "module": "Becoming.WeightedCommuting",
+   "category": "model-witness",
+   "reason": "in Pooling from three and one the less-drawn value's share rises at every step: a fact about one constructed law, the witness that a commuting law can wear a start's preference away (LA4)"
+  },
+  "Becoming.Weighted.Reinforcing.expect_equal": {
+   "module": "Becoming.WeightedCommuting",
+   "category": "model-witness",
+   "reason": "in Reinforcing, from equal counts the expected counts stay equal at every step: a fact about one constructed law (LA4)"
+  },
+  "Becoming.Weighted.Reinforcing.oneSided": {
+   "module": "Becoming.WeightedCommuting",
+   "category": "model-witness",
+   "reason": "in Reinforcing a run drawing one value at every one of any number of steps has positive weight: a fact about one constructed law, the witness that equal expectations allow arbitrarily long one-sided runs (LA4)"
+  },
+  "Becoming.Weighted.law_commutes": {
+   "module": "Becoming.WeightedCommuting",
+   "category": "general-structure",
+   "reason": "a determined law commuting with a map is a weighted law with one successor of weight one commuting with it, over any type; the base states no weighted law (LA4)"
   }
  },
  "instances": {
