@@ -7,14 +7,14 @@ AI-written design for U4, "one root to its edge" ([proposal](../ou3b-master-laws
 - **Lever 2.** [Lever 2's audit](LEVER-2-AUDIT.md), of the 18 evolution rows, sits beside this design.
 - **No package Lean is claimed.**
 
-**Scratch.** Four modules, 79 theorems in 95 declarations, every axiom report empty. They were built with `scratch_build.py` from this branch's package, whose files equal main's at `cd82afed6` ([log](scratch-build.log)):
+**Scratch.** Four modules, 81 theorems in 97 declarations, every axiom report empty. They were built with `scratch_build.py` from this branch's package, whose files equal main's at `cd82afed6` ([log](scratch-build.log)):
 
 | Module | Theorems / declarations | Content |
 |---|---|---|
 | [U4Scratch](scratch/Becoming/U4Scratch.lean) | 43 / 51 | the pairing laws, the place reading and the census (§2.1–§2.6) |
 | [U4Repairing](scratch/Becoming/U4Repairing.lean) | 15 / 18 | re-pairing (§2.7) |
 | [U4Bridge](scratch/Becoming/U4Bridge.lean) | 6 / 7 | the census on `«续» R E` (§2.8) |
-| [U4Across](scratch/Becoming/U4Across.lean) | 15 / 19 | the census across a run, and the review's witnesses (§2.9, §2.6) |
+| [U4Across](scratch/Becoming/U4Across.lean) | 17 / 21 | the census across a run, the review's witnesses, and `countIn` as `List.countP` (§2.9, §2.6, §5) |
 
 The recount of §1 is [anchor_recount.py](anchor_recount.py), with its output in [anchor-recount.json](anchor-recount.json). Names are provisional.
 
@@ -250,10 +250,10 @@ The proposal's test: "The lift counts only if two things hold … If either fail
 
 - **Beside `«对»` in `Becoming.GrammarLaws` (rule 9).** These are laws of the pairing:
   - `«对则闭域守数»`;
-  - the class law, with `countIn`, a new shared definition beside `«对»` that is OU's to decide;
+  - the class law, with its count. `countIn` is `List.countP`'s structural twin, proved equal with no axiom (`countIn_eq_countP`). It is kept because Init's lemmas on `List.countP` (`countP_cons`, `countP_append`, `countP_congr`) report `propext`. At the rebuild it enters beside `«对»` as `«计»`, or as whatever word the grammar's counting vocabulary takes, with that sentence in its docstring (OU's decision). The law's docstring also says that regions read as Boolean tests are a modelling choice, and that a Prop region enters by `decide` under `DecidablePred`;
   - the census pairing, with its bridge to `«生»` and `«亡»` (U4Bridge imports only the grammar laws and the census).
 
-  They ride the planned near-full rebuild of grammar-wide laws (OU's decision on U4).
+  They ride the planned near-full rebuild of grammar-wide laws, and stay in this kit until then (OU's decision on U4).
 - **Above `Becoming.Flow`.** These are the representations: the place reading, and the census at a step and across a run.
   - They add no content to Flow's own representations, so they are placed only if a consumer needs their form.
   - `Flow` has no active owner, so by rule 3's fallback OU's owner decides.
@@ -284,5 +284,5 @@ The proposal's test: "The lift counts only if two things hold … If either fail
 | F11: global form a corollary of the local | §2.5 |
 | F12: F1 a reading | §3 |
 | F13: `«续之对则类类等数»` a corollary; `teleport` witnesses what it adds | §2.2 |
-| F14: names | `compensation` renamed `split_and_merge`, `compensating` renamed `splitAndMerge`; `countIn` left to OU (§5); "the census pairing stated on `«续» R E`" now names its scope (§2.8, §5) |
+| F14: names | `compensation` renamed `split_and_merge`, `compensating` renamed `splitAndMerge`; `countIn` decided by OU: kept as `List.countP`'s twin, `«计»` at the rebuild (§5); "the census pairing stated on `«续» R E`" now names its scope (§2.8, §5) |
 | F15: build provenance | Header: built from this branch's package, equal to main's at `cd82afed6`; `U4Bridge` builds (6 theorems in 7 declarations), and every module is built by name |

@@ -18,6 +18,7 @@ import Becoming.U4Bridge
   (`repeated_unit`).
 * **The place reading is the units reading.** `place_iff_units` joins `balancesOn_iff_place` to
   `Flow.balancesOn_iff_units`.
+* **`countIn` is `List.countP`** (`countIn_eq_countP`), proved with no axiom.
 -/
 
 namespace Becoming
@@ -229,6 +230,29 @@ theorem repeated_unit :
         [0, 0].length + (arising zeroToOne [0, 0] [1]).length :=
   ⟨rfl, rfl, fun _ _ _ _ m m' _ _ => (mem_one m).trans (mem_one m').symm,
     fun _ _ _ m m' _ _ _ => (mem_twice m).trans (mem_twice m').symm, by decide⟩
+
+/-! ## `countIn` and Lean's `List.countP` -/
+
+theorem countIn_go {α : Type} (p : α → Bool) : ∀ (l : List α) (acc : Nat),
+    List.countP.go p l acc = acc + countIn p l
+  | [], _ => rfl
+  | x :: l, acc => by
+    show (bif p x then List.countP.go p l (acc + 1) else List.countP.go p l acc) =
+      acc + (cond (p x) 1 0 + countIn p l)
+    cases p x with
+    | true =>
+      show List.countP.go p l (acc + 1) = acc + (1 + countIn p l)
+      rw [countIn_go p l (acc + 1), Nat.add_assoc]
+    | false =>
+      show List.countP.go p l acc = acc + (0 + countIn p l)
+      rw [countIn_go p l acc, Nat.zero_add]
+
+/-- **`countIn` is Lean's `List.countP`.** A structural twin, proved equal with no axiom: Init's own
+lemmas on `List.countP` (`countP_cons`, `countP_append`) report `propext`, so the scratch keeps its
+own definition and its own lemmas. -/
+theorem countIn_eq_countP {α : Type} (p : α → Bool) (l : List α) : countIn p l = l.countP p := by
+  show countIn p l = List.countP.go p l 0
+  rw [countIn_go p l 0, Nat.zero_add]
 
 /-! ## The place reading and the units reading -/
 
