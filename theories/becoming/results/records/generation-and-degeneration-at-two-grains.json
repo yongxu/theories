@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-10-30T15:39:22+00:00",
   "statement": {
-    "en": "Read at a fine and a coarse class and on branches, the pattern goes on along some branch or ends on every branch; generation and keeping exclude degeneration and can share a point; renewal does not decide the region, and telling going on from ending is exactly excluded middle.",
-    "zh": "以细类与粗类、按分支同读：样式或沿某支而延，或诸支皆尽；生成与守皆斥退化，而可共于一点；复生不定其域；分辨延与尽恰是排中律。"
+    "en": "At a fine and a coarse class and on branches, the pattern goes on along some branch or ends on every branch; generation and keeping exclude degeneration and can share a point; with keeping from some point on, excluded middle makes the regions cover; telling going on from ending is excluded middle.",
+    "zh": "以细类与粗类同读、按分支读，样式或沿某支而延，或于诸支皆尽；生成与守皆排斥退化，且可共处一点；以守读为自某点起之守，排中使诸域周遍；分辨延与尽即排中。"
   },
   "laws": [
     {
@@ -57,8 +57,77 @@
       ]
     },
     {
-      "en": "The strong forms read the whole coarse line: 全生成 (the line never ends, and from every point it reaches a carrying renewal lies ahead), 全守 (it never ends, and from some point no carrying renewal lies ahead, renewals before that point allowed) and 有终 (some point it reaches ends, which is not degeneration) exclude each other and, with excluded middle, cover every point; coverage by the some-branch regions is not proved. Placing every point of every model in one of the strong forms is exactly excluded middle, and so is telling a line that never ends from one that ends; 全生成 holds along its line and an end reaches back along it.",
-      "zh": "强形读整条粗线：全生成（线不穷，且自其所及之每一点，前有传）、全守（不穷，且自某点起前无传，此前之传不论）与有终（其所及之某点终，此非退化）彼此排斥，以排中律则覆盖每一点；某支诸域之覆盖未证。把每一模型之每一点都置于强形之一，恰是排中律；分开不穷之线与有终之线，亦恰是排中律；全生成沿其线而存，有终沿其线而回溯。",
+      "en": "The split of a beginning. A carrying renewal begins no line of the pattern; where the pattern has a predecessor, a beginning of a part is the end of a carrying renewal; so a beginning of a part is, as far as can be refuted, a beginning of the pattern or the end of a carrying renewal. No order between the classes is assumed. Near-definitional.",
+      "zh": "起始之分。传不起样式之线；样式有前处，部分之起即一传之端；故部分之起，在可驳之限内，或为样式之起，或为一传之端。不设二类之序。近乎定义。",
+      "declarations": [
+        "Becoming.«传则粗不生»",
+        "Becoming.«粗有前则生为传»",
+        "Becoming.«生则或粗生或传»"
+      ]
+    },
+    {
+      "en": "Keeping from some point on (后守): along some branch the pattern goes on and, from a point of that branch reached from the start, no carrying renewal lies on it. Keeping gives it, and so does 全守 with the whole line as the branch; it goes on along its branch, so it excludes degeneration; where each occurrence conditions at most one other, it excludes generation.",
+      "zh": "自某点起之守（后守）：沿某支样式而延，且自此支上自起点所及之一点起，支上无传。守给出之，全守以全线为支亦然；它沿其支而延，故排斥退化；每一事至多为另一事之缘处，它排斥生成。",
+      "declarations": [
+        "Becoming.«后守»",
+        "Becoming.«守则后守»",
+        "Becoming.«全守则后守»",
+        "Becoming.«后守则延»",
+        "Becoming.«后守退化不并»",
+        "Becoming.«单行则生成后守不并»"
+      ]
+    },
+    {
+      "en": "The regions cover. With excluded middle as a hypothesis every point is 生成, 后守 or 退化, and on single lines exactly one; that this holds at every point of every model is exactly excluded middle. A line that renews once and then stays is none of 生成, 守 and 退化 at its start, and is 后守 and 全守 there: the gap strict keeping leaves.",
+      "zh": "诸域周遍。以排中为前提，每一点或生成、或后守、或退化，单行之上恰居其一；其于每一模型之每一点皆成立，恰即排中。一线更新一次而后静止，其起点不在生成、守、退化之任一，而为后守与全守：严格之守所留之隙。",
+      "declarations": [
+        "Becoming.«三域之周»",
+        "Becoming.«三域之定当且仅当排中»",
+        "Becoming.Map.Stage",
+        "Becoming.Map.once",
+        "Becoming.Map.Once.func",
+        "Becoming.Map.Once.renews",
+        "Becoming.Map.Once.third_not_renews",
+        "Becoming.Map.Once.third_next",
+        "Becoming.Map.Once.stays_third",
+        "Becoming.Map.Once.family",
+        "Becoming.Map.Once.endless",
+        "Becoming.Map.Once.not_generates",
+        "Becoming.Map.Once.not_keeps",
+        "Becoming.Map.Once.not_degenerates",
+        "Becoming.Map.Once.keeping",
+        "Becoming.Map.Once.keepsAfter"
+      ]
+    },
+    {
+      "en": "Telling whether a line keeps from some point on is deciding whether it stops renewing. On the steps under the one, read with the class of a sequence of truth values, 生成 at the first step is changing at arbitrarily late steps, 后守 being constant from some step on. Deciding 后守 for one sequence decides whether a given one ever holds (LPO), deciding 生成 gives only WLPO, and placing every sequence gives LPO.",
+      "zh": "于一线上分辨其是否自某点起而守，即判定其是否止于更新。于一之下沿诸步、以一真值序列之类读之，首步生成即序列于任意晚处变，后守即自某步起不变。对一序列判定后守，即判定某序列是否曾真（对其之 LPO）；判定生成只得 WLPO；置每一序列于二者之一给出 LPO。",
+      "declarations": [
+        "Becoming.Map.«后守之定则LPO»",
+        "Becoming.Map.«生成之定则WLPO»",
+        "Becoming.Map.«生成后守之定则LPO»",
+        "Becoming.Map.generates_iff_changes",
+        "Becoming.Map.keepsAfter_iff_settles",
+        "Becoming.Map.step_func",
+        "Becoming.Map.step_reached_le",
+        "Becoming.Map.step_reaches",
+        "Becoming.Map.step_reaches_of_le",
+        "Becoming.Map.step_family",
+        "Becoming.Map.Settles.seen",
+        "Becoming.Map.Settles.turning",
+        "Becoming.Map.Settles.sequence",
+        "Becoming.Map.Settles.seen_succ",
+        "Becoming.Map.Settles.seen_of_le",
+        "Becoming.Map.Settles.seen_of",
+        "Becoming.Map.Settles.seen_witness",
+        "Becoming.Map.Settles.sequence_seen",
+        "Becoming.Map.Settles.sequence_unseen",
+        "Becoming.Map.Settles.turning_turns"
+      ]
+    },
+    {
+      "en": "The strong forms read the whole coarse line: 全生成 (the line never ends, and from every point it reaches a carrying renewal lies ahead), 全守 (it never ends, and from some point no carrying renewal lies ahead, renewals before that point allowed) and 有终 (some point it reaches ends, which is not degeneration) exclude each other and, with excluded middle, cover every point; with strict keeping the some-branch regions do not cover, and with keeping from some point on and excluded middle they do (law 6). Placing every point of every model in one of the strong forms is exactly excluded middle, and so is telling a line that never ends from one that ends; 全生成 holds along its line and an end reaches back along it.",
+      "zh": "强形读整条粗线：全生成（线不穷，且自其所及之每一点，前有传）、全守（不穷，且自某点起前无传，此前之传不论）与有终（其所及之某点终，此非退化）彼此排斥，以排中律则覆盖每一点；某支诸域以严格之守不周遍，以排中为前提、守读作后守则周遍（律 6）。把每一模型之每一点都置于强形之一，恰是排中律；分开不穷之线与有终之线，亦恰是排中律；全生成沿其线而存，有终沿其线而回溯。",
       "declarations": [
         "Becoming.«全生成»",
         "Becoming.«全守»",
@@ -139,8 +208,8 @@
   ],
   "hypotheses": [
     {
-      "en": "None beyond the grammar: every carrier, every relation read as 缘, a fine and a coarse class; the covering law takes excluded middle as a hypothesis.",
-      "zh": "除文法外无前提：每个载体、读作缘的每个关系、一个细类与一个粗类；覆盖之律以排中律为假设。"
+      "en": "None beyond the grammar: every carrier, every relation read as 缘, a fine and a coarse class; the covering laws take excluded middle as a hypothesis, and the calibration on a line reads sequences of truth values on the steps.",
+      "zh": "除文法外无前提：每个载体、读作缘的每个关系、一个细类与一个粗类；覆盖之律以排中律为假设，一线上之校准读诸步上之真值序列。"
     }
   ],
   "does_not_show": [
@@ -166,6 +235,12 @@
       "zh": "复生即生成：一条线可复生而仍终。",
       "kind": "non-implication",
       "witness": "Becoming.Map.Short.renews_and_ends"
+    },
+    {
+      "en": "That the three regions partition where lines branch: 生成 and 后守 overlap there, as 生成 and 守 do.",
+      "zh": "分支之处三域互斥：其处生成与后守相重，如生成与守。",
+      "kind": "non-implication",
+      "witness": "Becoming.Map.«生守相杂»"
     }
   ],
   "counterexamples": [
@@ -175,6 +250,13 @@
         "en": "A short life of two occurrences renews (its second occurrence begins a new part) and ends on every branch (Map.Short.renews_and_ends_everywhere).",
         "zh": "两事之短命：复生（其第二事始一新部分）而诸支皆尽（Map.Short.renews_and_ends_everywhere）。"
       }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean",
+      "detail": {
+        "en": "A line that renews once and then stays (Map.once) is, at its start, none of 生成, 守 and 退化, and is 后守 and 全守 (Map.Once.not_generates, Map.Once.not_keeps, Map.Once.not_degenerates, Map.Once.keepsAfter, Map.Once.keeping).",
+        "zh": "一线更新一次而后静止（Map.once），其起点不在生成、守、退化之任一，而为后守与全守（Map.Once.not_generates、Map.Once.not_keeps、Map.Once.not_degenerates、Map.Once.keepsAfter、Map.Once.keeping）。"
+      }
     }
   ],
   "standard_boundaries": [
@@ -183,8 +265,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarMap, 39 theorems in 58 declarations, and Becoming.MapInstances, 28 theorems, each with an empty axiom report. The instances were written by an Opus coder; no independent review. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarMap，58 个声明中 39 条定理，及 Becoming.MapInstances，公理报告皆空。实例由一位 Opus 编者写成；无独立审查。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarMap, 39 theorems in 58 declarations, and Becoming.MapInstances, 28 theorems, each with an empty axiom report. The instances were written by an Opus coder; no independent review. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers. Becoming.MapRegions (GW1, GW2), a core leaf importing GrammarMap only, 39 theorems in 45 declarations at receipt 20261030T152859.871907Z, every axiom report empty; independent read-only review REVIEW-GW126-LEAN.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarMap，58 个声明中 39 条定理，及 Becoming.MapInstances，公理报告皆空。实例由一位 Opus 编者写成；无独立审查。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。MapRegions（GW1、GW2，核心叶）于回执 20261030T152859.871907Z：45 项声明（39 项定理），公理报告皆空；审查 REVIEW-GW126-LEAN。"
   },
   "next_delta": {
     "en": "State the old map's regimes (renewal, consumption, capture, the five questions of 势) as regions of this map on the old base's readings, and the meta-attractor's reading of selection at the coarse grain.",
@@ -266,7 +348,11 @@
     "Becoming.«阶全生成»",
     "Becoming.«阶全生成则上无终»",
     "Becoming.«阶生成»",
-    "Becoming.«阶生成则上不退化»"
+    "Becoming.«阶生成则上不退化»",
+    "keeping from some point on",
+    "后守",
+    "coverage of the regions",
+    "三域之周"
   ],
   "dependencies": [
     {
@@ -426,6 +512,73 @@
       "role": "receipt",
       "sha256": "a0ece8d77ed72993b2adde3076d3815f0276be957b2d49c541d54d7288c46fed",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Map.Once.endless",
+        "Becoming.Map.Once.family",
+        "Becoming.Map.Once.func",
+        "Becoming.Map.Once.keeping",
+        "Becoming.Map.Once.keepsAfter",
+        "Becoming.Map.Once.not_degenerates",
+        "Becoming.Map.Once.not_generates",
+        "Becoming.Map.Once.not_keeps",
+        "Becoming.Map.Once.renews",
+        "Becoming.Map.Once.stays_third",
+        "Becoming.Map.Once.third_next",
+        "Becoming.Map.Once.third_not_renews",
+        "Becoming.Map.Settles.seen",
+        "Becoming.Map.Settles.seen_of",
+        "Becoming.Map.Settles.seen_of_le",
+        "Becoming.Map.Settles.seen_succ",
+        "Becoming.Map.Settles.seen_witness",
+        "Becoming.Map.Settles.sequence",
+        "Becoming.Map.Settles.sequence_seen",
+        "Becoming.Map.Settles.sequence_unseen",
+        "Becoming.Map.Settles.turning",
+        "Becoming.Map.Settles.turning_turns",
+        "Becoming.Map.Stage",
+        "Becoming.Map.generates_iff_changes",
+        "Becoming.Map.keepsAfter_iff_settles",
+        "Becoming.Map.once",
+        "Becoming.Map.step_family",
+        "Becoming.Map.step_func",
+        "Becoming.Map.step_reached_le",
+        "Becoming.Map.step_reaches",
+        "Becoming.Map.step_reaches_of_le",
+        "Becoming.Map.«后守之定则LPO»",
+        "Becoming.Map.«生成之定则WLPO»",
+        "Becoming.Map.«生成后守之定则LPO»",
+        "Becoming.«三域之周»",
+        "Becoming.«三域之定当且仅当排中»",
+        "Becoming.«传则粗不生»",
+        "Becoming.«全守则后守»",
+        "Becoming.«单行则生成后守不并»",
+        "Becoming.«后守»",
+        "Becoming.«后守则延»",
+        "Becoming.«后守退化不并»",
+        "Becoming.«守则后守»",
+        "Becoming.«生则或粗生或传»",
+        "Becoming.«粗有前则生为传»"
+      ],
+      "sha256": "b28bfeeb64a8a6e854fdda931d284e14fb6e78c408d6968e7e4bea3498863b54"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T152859.871907Z/verification.json",
+      "role": "receipt",
+      "sha256": "dd80d7c5b7c5a15a864d0e3ca5f214c7936fcb65f7eac830b7696118f1723787"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/NOTE.md",
+      "role": "integration",
+      "sha256": "11d6903c36d635a640a40e38262dd106315490df0d3b8fca3fa2ececa675dbd3"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/REVIEW-GW126-LEAN.md",
+      "role": "integration",
+      "sha256": "2a416c2898f9647bd0b6b9d73eabf784149557524d85b042921aa394582ccd8f"
     }
   ],
   "proof_bindings": [
@@ -440,6 +593,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapInstances.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T162632.074811Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.MapInstances",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T152859.871907Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.MapRegions",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -460,6 +620,14 @@
     {
       "en": "29 October 2026, board item GW (study section 448): by names nothing generates is a case of the law for any continuation in which each formation continues only itself, proved once in MapInstances (board rule 9); itself_carries_nothing and itself_not_generation derived from it, statements unchanged. A law widened.",
       "zh": "2026年10月29日，工作板条目 GW（研究第 448 节）：按名无一生成，为\"每一构成只延续自身之任一延续\"之律之特例，于 MapInstances 一次证之（工作板规则 9）；itself_carries_nothing 与 itself_not_generation 由之推出，陈述不变。一律放宽。"
+    },
+    {
+      "en": "30 October 2026, board item GW (study section 467): GW1 and GW2 in Becoming.MapRegions, a core leaf importing GrammarMap only: the split of a beginning on the root; keeping from some point on, with which excluded middle makes the regions cover and on single lines partition; the gap strict keeping leaves; on a single line, deciding keeping from some point on is LPO and deciding generation WLPO. Statement, four laws, the hypothesis, a does-not-show item and a counterexample changed.",
+      "zh": "2026年10月30日，工作板条目 GW（研究第 467 节）：GW1 与 GW2 于 Becoming.MapRegions（只导入 GrammarMap 之核心叶）：根上起始之分；自某点起之守，以之排中使诸域周遍、单行之上互斥；严格之守所留之隙；单行之上，判定后守即 LPO，判定生成即 WLPO。陈述、四律、前提、一项不示与一反例有变。"
+    },
+    {
+      "en": "30 October 2026, board item GW, after item 13's fourth review round: law 8's clause on the some-branch regions brought into line with law 6 (strict keeping leaves them short of covering; with keeping from some point on and excluded middle they cover). Law 8 corrected to what law 6 proves; no new law.",
+      "zh": "2026年10月30日，工作板条目 GW，依条目 13 之第四轮审查：律 8 关于某支诸域之一句与律 6 相合（以严格之守不周遍；以排中为前提、守读作后守则周遍）。律 8 改正为律 6 所证；无新律。"
     }
   ]
 }

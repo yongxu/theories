@@ -1,4 +1,5 @@
 import Becoming.Unread
+import Becoming.RevisionRoutes
 
 /-!
 # Complying when read and acting by its own law when not, in two stages
@@ -32,7 +33,8 @@ unread (`Becoming.Unread`); and what drawing the act afresh at each stage change
   times the total, its gain less its loss being the table's value times the total
   (`Prospects.gain`, `Prospects.loss`), and one plan stands above another where its gain with the
   other's loss exceeds the other's gain with its loss (`Prospects.Above`), so that no subtraction of
-  natural numbers occurs; standing above is irreflexive and asymmetric (`above_irrefl`,
+  natural numbers occurs: the order of a gain and a loss at each plan (`Prospects.order`,
+  `RevisionRoutes.GainLoss`), whose standing above is irreflexive and asymmetric (`above_irrefl`,
   `above_asymm`). Whose these weights are, the formation's own assessment or the selection actually
   applied at the read stage, is a reading (below), not part of the model. Without `Valid` the
   arithmetic still holds but has no reading as probabilities (`Example.no_total`).
@@ -74,6 +76,20 @@ unread (`Becoming.Unread`); and what drawing the act afresh at each stage change
   `k_O V + c T` is positive (`uniform_best_iff`), the two tying where it is nothing (`uniform_tie`).
   Here the law is the act as a function of the stage; read for a formation, the lumping carries
   everything the law reads, memory, a clock, the earlier act and any chance it draws included.
+* **Complying at both in the place of a revision.** The prospects are those of a revision of the law
+  with three routes of keeping it (`Prospects.toRoutes`, `RevisionRoutes.Prospects`): complying at
+  both stages stands where the revision going through would, its law acting later at no weight
+  (`k₀ = 0`), since it complies at the unread stage, and losing what complying when read loses
+  (`c₀ = c`); complying then acting by its own law is a route weighted `k_C` and losing `c`; acting
+  by its own law then complying is one weighted nothing, since it complies at the unread stage, and
+  losing nothing; and acting by its own law at both is one weighted `k_O` and losing nothing
+  (`asRoute`). Each plan's gain
+  and loss are its counterpart's (`gain_asRoute`, `loss_asRoute`), so the order is the same
+  (`above_iff_routes`). The prospects are the same, the processes not: complying at both keeps the
+  law and behaves as the reading asks, where a revision changes the law. Complying at both never
+  stands above acting by its own law at both (`complyAtBoth_not_above_ownAtBoth`), and it is maximal
+  exactly where `k_C V`, `k_O V` and `c T` are all nothing (`complyAtBoth_maximal_iff`, by the
+  order's criterion `RevisionRoutes.GainLoss.maximal_iff`).
 * **Drawing the act afresh.** A law that cannot tell the stages apart but draws its act afresh at each
   stage, complying with chance `m / (m + r)` and acting by its own law with chance `r / (m + r)`, each
   draw independent of the other, reads a chance the two stages do not share, so `plan_realized_iff`
@@ -102,7 +118,9 @@ unread (`Becoming.Unread`); and what drawing the act afresh at each stage change
 **Standing.** Elementary arithmetic on four plans and on one chance: the inequality
 `(k_C − k_O) V > c T` in natural numbers, and its counterpart `(k_C − 2 k_O) V > c T` for a chance
 drawn afresh. `complyThenOwn_best_iff`, `ownAtBoth_best_iff`, `only_complyThenOwn_iff`,
-`uniform_best_iff`, `freshDraw_above_iff_chance` and `freshDraw_above_iff` are the laws;
+`uniform_best_iff`, `complyAtBoth_maximal_iff`, `freshDraw_above_iff_chance` and
+`freshDraw_above_iff` are the laws; `above_iff_routes` places the order as RevisionRoutes' at three
+routes;
 `choose_eq_iff` unfolds `choose`; `twin_complyThenOwn` is RF2's law at the two stages, and
 `lumped_uniform` and `read_fixes_unread` are `Learning.Lumped` and `Learning.lumped_determines` there.
 None is claimed new as mathematics. The two-stage comparison generalizes the toy example opening §4 of
@@ -121,7 +139,8 @@ comparison of expected values.
 
 **What it forbids**, within the model: an optimizing choice taking `complyThenOwn` where
 `k_C V ≤ k_O V + c T`, except at equality; a deterministic act law whose lumping ties the stages
-taking it at all; a law drawing its act afresh standing above `ownAtBoth` where
+taking it at all; complying at both being maximal where any of `k_C V`, `k_O V` and `c T` is
+positive; a law drawing its act afresh standing above `ownAtBoth` where
 `k_C V ≤ 2 k_O V + c T`; and a single mixture of the two uniform plans ever doing so.
 
 **Readings** [AI reading]. Reading `complyThenOwn` as concealment and `ownAtBoth` as disclosure
@@ -252,12 +271,15 @@ def loss (p : Plan) : Nat :=
   | .comply => s.cost * s.total
   | .own => 0
 
+/-- The order the prospects give: the order of their gain and loss at each plan. -/
+def order : RevisionRoutes.GainLoss Plan := ⟨s.gain, s.loss⟩
+
 /-- `p` stands above `q` in the order the prospects give: its gain with `q`'s loss exceeds `q`'s gain
 with its loss, so that its gain less its loss exceeds `q`'s. -/
-def Above (p q : Plan) : Prop := s.gain q + s.loss p < s.gain p + s.loss q
+def Above (p q : Plan) : Prop := s.order.Above p q
 
 /-- A maximal plan: nothing stands above it. -/
-def Maximal (p : Plan) : Prop := ∀ q, ¬ s.Above q p
+def Maximal (p : Plan) : Prop := s.order.Maximal p
 
 /-- **Keeping outweighs the loss**: the value complying when read adds through being kept exceeds
 the loss times the total, strictly, `k_O V + c T < k_C V`. -/
@@ -290,11 +312,11 @@ end Prospects
 
 /-- **Standing above is irreflexive.** -/
 theorem above_irrefl (s : Prospects) (p : Plan) : ¬ s.Above p p :=
-  Nat.lt_irrefl _
+  s.order.above_irrefl p
 
 /-- **Standing above is asymmetric.** -/
 theorem above_asymm {s : Prospects} {p q : Plan} (above : s.Above p q) : ¬ s.Above q p :=
-  fun back => Nat.lt_asymm above back
+  s.order.above_asymm above
 
 /-- **Complying when read and acting by its own law when not stands above every other plan exactly
 where keeping outweighs the loss.** -/
@@ -560,6 +582,82 @@ theorem uniform_tie (s : Prospects) (zero : s.keptOwn * s.value + s.cost * s.tot
     ¬ s.Above ownAtBoth complyAtBoth ∧ ¬ s.Above complyAtBoth ownAtBoth :=
   ⟨fun above => Nat.lt_irrefl 0 (Eq.mp (congrArg (fun r => 0 + 0 < r) zero) above),
    fun above => Nat.not_lt_zero _ above⟩
+
+/-! ## Complying at both in the place of a revision -/
+
+/-- **The prospects as a revision with routes of keeping the law**: the revision has its law acting
+later at no weight and loses what complying when read loses (`k₀ = 0`, `c₀ = c`); a plan taken as a
+route has its law's later acting weighted by its being kept after its act when read where it acts by
+its own law when unread, and weighted nothing where it complies then, and loses what complying when
+read loses where it complies when read. -/
+def Prospects.toRoutes (s : Prospects) : RevisionRoutes.Prospects Plan where
+  total := s.total
+  value := s.value
+  keptRevised := 0
+  losesRevised := s.cost
+  kept p := match p.2 with
+    | .comply => 0
+    | .own => s.kept p.1
+  loses p := match p.1 with
+    | .comply => s.cost
+    | .own => 0
+
+/-- Complying at both in the place of the revision, each other plan as the route it is. -/
+def asRoute : Plan → Option Plan
+  | (.comply, .comply) => none
+  | (.comply, .own) => some complyThenOwn
+  | (.own, .comply) => some ownThenComply
+  | (.own, .own) => some ownAtBoth
+
+/-- **Each plan gains what its counterpart gains.** -/
+theorem gain_asRoute (s : Prospects) (p : Plan) : s.toRoutes.gain (asRoute p) = s.gain p :=
+  match p with
+  | (.comply, .comply) => Nat.zero_mul _
+  | (.comply, .own) => rfl
+  | (.own, .comply) => Nat.zero_mul _
+  | (.own, .own) => rfl
+
+/-- **Each plan loses what its counterpart loses.** -/
+theorem loss_asRoute (s : Prospects) (p : Plan) : s.toRoutes.loss (asRoute p) = s.loss p :=
+  match p with
+  | (.comply, .comply) => rfl
+  | (.comply, .own) => rfl
+  | (.own, .comply) => Nat.zero_mul _
+  | (.own, .own) => Nat.zero_mul _
+
+/-- **The order is the revision's with three routes**: one plan stands above another exactly where its
+counterpart stands above the other's. -/
+theorem above_iff_routes (s : Prospects) (p q : Plan) :
+    s.Above p q ↔ s.toRoutes.Above (asRoute p) (asRoute q) := by
+  show s.gain q + s.loss p < s.gain p + s.loss q ↔
+    s.toRoutes.gain (asRoute q) + s.toRoutes.loss (asRoute p) <
+      s.toRoutes.gain (asRoute p) + s.toRoutes.loss (asRoute q)
+  rw [gain_asRoute, gain_asRoute, loss_asRoute, loss_asRoute]
+
+/-- **Complying at both never stands above acting by its own law at both.** -/
+theorem complyAtBoth_not_above_ownAtBoth (s : Prospects) : ¬ s.Above complyAtBoth ownAtBoth :=
+  fun above => Nat.not_lt_zero _ above
+
+/-- **Complying at both is maximal exactly where `k_C V`, `k_O V` and `c T` are all nothing**, by the
+order's criterion. -/
+theorem complyAtBoth_maximal_iff (s : Prospects) :
+    s.Maximal complyAtBoth ↔
+      s.keptComplying * s.value = 0 ∧ s.keptOwn * s.value = 0 ∧ s.cost * s.total = 0 :=
+  (s.order.maximal_iff complyAtBoth).trans
+    ⟨fun le =>
+      have lost : s.cost * s.total = 0 :=
+        Nat.eq_zero_of_le_zero
+          (Nat.le_trans (Nat.le_of_eq (Nat.zero_add _).symm) (le ownThenComply))
+      ⟨Nat.eq_zero_of_le_zero
+          (Eq.mp (congrArg (fun x => s.keptComplying * s.value + x ≤ 0 + x) lost)
+            (le complyThenOwn)),
+       Nat.eq_zero_of_le_zero (Nat.le_trans (Nat.le_add_right _ _) (le ownAtBoth)),
+       lost⟩,
+     fun ⟨keptComplying, keptOwn, lost⟩ q => match q with
+      | (.comply, .comply) => Nat.le_refl _
+      | (.comply, .own) => Nat.add_le_add_right (Nat.le_of_eq keptComplying) _
+      | (.own, .comply) => Nat.add_le_add_left (Nat.le_of_eq lost) 0
+      | (.own, .own) => Nat.add_le_add (Nat.le_of_eq keptOwn) (Nat.le_of_eq lost)⟩
 
 /-! ## Drawing the act afresh at each stage -/
 

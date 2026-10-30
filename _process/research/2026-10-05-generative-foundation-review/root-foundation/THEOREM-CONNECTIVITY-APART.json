@@ -12,6 +12,126 @@
   "calibration": "the exact logical principle (excluded middle, LPO, WLPO, choice) a stated criterion needs, for a notion the base does not assert; a lemma of the item that needs it"
  },
  "roots": {
+  "Becoming.«传则粗不生»": {
+   "module": "Becoming.MapRegions",
+   "category": "general-structure",
+   "reason": "A law of the map for every carrier, relation and pair of classes, read on no model; the World and the processes are its models (GW1, GW2)"
+  },
+  "Becoming.«生则或粗生或传»": {
+   "module": "Becoming.MapRegions",
+   "category": "general-structure",
+   "reason": "A law of the map for every carrier, relation and pair of classes, read on no model; the World and the processes are its models (GW1, GW2)"
+  },
+  "Becoming.«后守退化不并»": {
+   "module": "Becoming.MapRegions",
+   "category": "general-structure",
+   "reason": "A law of the map for every carrier, relation and pair of classes, read on no model; the World and the processes are its models (GW1, GW2)"
+  },
+  "Becoming.«守则后守»": {
+   "module": "Becoming.MapRegions",
+   "category": "general-structure",
+   "reason": "A law of the map for every carrier, relation and pair of classes, read on no model; the World and the processes are its models (GW1, GW2)"
+  },
+  "Becoming.«三域之定当且仅当排中»": {
+   "module": "Becoming.MapRegions",
+   "category": "calibration",
+   "reason": "That every point of every model is 生成, 后守 or 退化 is exactly excluded middle; a lemma of GW1"
+  },
+  "Becoming.Map.Once.func": {
+   "module": "Becoming.MapRegions",
+   "category": "model-witness",
+   "reason": "A fact about one constructed model, the line that renews once and then stays (Map.once): at its start it is none of 生成, 守 and 退化 and keeps from some point on, the gap strict keeping leaves (GW1)"
+  },
+  "Becoming.Map.Once.keepsAfter": {
+   "module": "Becoming.MapRegions",
+   "category": "model-witness",
+   "reason": "A fact about one constructed model, the line that renews once and then stays (Map.once): at its start it is none of 生成, 守 and 退化 and keeps from some point on, the gap strict keeping leaves (GW1)"
+  },
+  "Becoming.Map.Once.not_degenerates": {
+   "module": "Becoming.MapRegions",
+   "category": "model-witness",
+   "reason": "A fact about one constructed model, the line that renews once and then stays (Map.once): at its start it is none of 生成, 守 and 退化 and keeps from some point on, the gap strict keeping leaves (GW1)"
+  },
+  "Becoming.Map.Once.not_generates": {
+   "module": "Becoming.MapRegions",
+   "category": "model-witness",
+   "reason": "A fact about one constructed model, the line that renews once and then stays (Map.once): at its start it is none of 生成, 守 and 退化 and keeps from some point on, the gap strict keeping leaves (GW1)"
+  },
+  "Becoming.Map.Once.not_keeps": {
+   "module": "Becoming.MapRegions",
+   "category": "model-witness",
+   "reason": "A fact about one constructed model, the line that renews once and then stays (Map.once): at its start it is none of 生成, 守 and 退化 and keeps from some point on, the gap strict keeping leaves (GW1)"
+  },
+  "Becoming.Map.«生成之定则WLPO»": {
+   "module": "Becoming.MapRegions",
+   "category": "calibration",
+   "reason": "On a single line, deciding generation for the sequence that turns until p first holds gives WLPO for p, where deciding keeping from some point on gives LPO: to tell whether a line keeps from some point on is to decide whether it stops renewing (GW1)"
+  },
+  "Becoming.Map.«生成后守之定则LPO»": {
+   "module": "Becoming.MapRegions",
+   "category": "calibration",
+   "reason": "Placing the first step of the line in 生成 or 后守 for every sequence of truth values gives LPO, through Map.«后守之定则LPO» (GW1)"
+  },
+  "Becoming.Steps.same_class": {
+   "module": "Becoming.WideningOnTheMap",
+   "category": "general-structure",
+   "reason": "A law of every chain of predicates read on a course's moments, any type; the World reads it by name through Web.keepsWidening_itself_iff (GW6)"
+  },
+  "Becoming.Steps.same_includes": {
+   "module": "Becoming.WideningOnTheMap",
+   "category": "general-structure",
+   "reason": "A law of every chain of predicates read on a course's moments, any type; the World reads it by name through Web.keepsWidening_itself_iff (GW6)"
+  },
+  "Becoming.Steps.found_of_listed": {
+   "module": "Becoming.WideningOnTheMap",
+   "category": "general-structure",
+   "reason": "A law of every chain of predicates read on a course's moments, any type; the World reads it by name through Web.keepsWidening_itself_iff (GW6)"
+  },
+  "Becoming.Steps.generation_of_reachingKeepsWidening": {
+   "module": "Becoming.WideningOnTheMap",
+   "category": "general-structure",
+   "reason": "A law of every chain of predicates read on a course's moments, any type; the World reads it by name through Web.keepsWidening_itself_iff (GW6)"
+  },
+  "Becoming.Steps.keepsWidening_iff_generation_losing_nothing": {
+   "module": "Becoming.WideningOnTheMap",
+   "category": "general-structure",
+   "reason": "A law of every chain of predicates read on a course's moments, any type; the World reads it by name through Web.keepsWidening_itself_iff (GW6)"
+  },
+  "Becoming.Steps.Moving.generation": {
+   "module": "Becoming.WideningOnTheMap",
+   "category": "model-witness",
+   "reason": "A fact about one constructed possible on a course's moments, holding one point at each moment and losing it at the next, or gaining one at each step: loss parts generation under the one from keeping widening (GW6)"
+  },
+  "Becoming.Steps.Moving.not_generation_includes": {
+   "module": "Becoming.WideningOnTheMap",
+   "category": "model-witness",
+   "reason": "A fact about one constructed possible on a course's moments, holding one point at each moment and losing it at the next, or gaining one at each step: loss parts generation under the one from keeping widening (GW6)"
+  },
+  "Becoming.Steps.Moving.not_keepsWidening": {
+   "module": "Becoming.WideningOnTheMap",
+   "category": "model-witness",
+   "reason": "A fact about one constructed possible on a course's moments, holding one point at each moment and losing it at the next, or gaining one at each step: loss parts generation under the one from keeping widening (GW6)"
+  },
+  "Becoming.Steps.Growing.generation": {
+   "module": "Becoming.WideningOnTheMap",
+   "category": "model-witness",
+   "reason": "A fact about one constructed possible on a course's moments, holding one point at each moment and losing it at the next, or gaining one at each step: loss parts generation under the one from keeping widening (GW6)"
+  },
+  "Becoming.Steps.forward_iff_wem": {
+   "module": "Becoming.WideningOnTheMap",
+   "category": "calibration",
+   "reason": "For every chain, keeping widening gives 全生成 at (nothing lost, the same possible) exactly where weak excluded middle holds: locating the step at which a point arrives needs each holding refuted or unrefuted (GW6)"
+  },
+  "Becoming.Steps.back_iff_em": {
+   "module": "Becoming.WideningOnTheMap",
+   "category": "calibration",
+   "reason": "For every chain, 全生成 at (nothing lost, the same possible) gives keeping widening exactly where excluded middle holds: exhibiting what a step adds, from its not being alike, needs what is unrefuted found (GW6)"
+  },
+  "Becoming.Steps.markov_of_keepsWidening_of_generation": {
+   "module": "Becoming.WideningOnTheMap",
+   "category": "calibration",
+   "reason": "Even on decided chains, the converse for every chain gives Markov's principle: exhibiting the point a step adds is an unbounded search (GW6)"
+  },
   "Becoming.KindRelay.Fed.not_listed": {
    "module": "Becoming.KeepingWidening",
    "category": "model-witness",
@@ -5556,6 +5676,96 @@
    "module": "Becoming.HeldForReading",
    "category": "general-structure",
    "reason": "HeldForReading.through_threshold_iff: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.ReadStages.above_iff_routes": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.above_iff_routes: a law of any two-stage prospects in natural-number weights, the four plans as a revision with three routes; it waits for a formation's own order and the selection a reading applies, on the base (RF, RR)"
+  },
+  "Becoming.ReadStages.complyAtBoth_maximal_iff": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.complyAtBoth_maximal_iff: a law of any two-stage prospects in natural-number weights, the four plans as a revision with three routes; it waits for a formation's own order and the selection a reading applies, on the base (RF, RR)"
+  },
+  "Becoming.ReadStages.complyAtBoth_not_above_ownAtBoth": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.complyAtBoth_not_above_ownAtBoth: a law of any two-stage prospects in natural-number weights, the four plans as a revision with three routes; it waits for a formation's own order and the selection a reading applies, on the base (RF, RR)"
+  },
+  "Becoming.RevisionRoutes.Example.both_at_loss_ten": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "model-witness",
+   "reason": "RevisionRoutes.Example.both_at_loss_ten: a fact about one constructed model, two routes, keeping openly and complying when read, each at weight 1 in a total of 1, the value 4, at losses 10 and 1, and its variations (RR)"
+  },
+  "Becoming.RevisionRoutes.Example.restored_every": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "model-witness",
+   "reason": "RevisionRoutes.Example.restored_every: a fact about one constructed model, two routes, keeping openly and complying when read, each at weight 1 in a total of 1, the value 4, at losses 10 and 1, and its variations (RR)"
+  },
+  "Becoming.RevisionRoutes.Example.twoRoutes_complying_above": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "model-witness",
+   "reason": "RevisionRoutes.Example.twoRoutes_complying_above: a fact about one constructed model, two routes, keeping openly and complying when read, each at weight 1 in a total of 1, the value 4, at losses 10 and 1, and its variations (RR)"
+  },
+  "Becoming.RevisionRoutes.Example.twoRoutes_open_not_above": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "model-witness",
+   "reason": "RevisionRoutes.Example.twoRoutes_open_not_above: a fact about one constructed model, two routes, keeping openly and complying when read, each at weight 1 in a total of 1, the value 4, at losses 10 and 1, and its variations (RR)"
+  },
+  "Becoming.RevisionRoutes.Example.twoRoutes_valid": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "model-witness",
+   "reason": "RevisionRoutes.Example.twoRoutes_valid: a fact about one constructed model, two routes, keeping openly and complying when read, each at weight 1 in a total of 1, the value 4, at losses 10 and 1, and its variations (RR)"
+  },
+  "Becoming.RevisionRoutes.above_asymm": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.above_asymm: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.above_at_some_value": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.above_at_some_value: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.above_needs": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.above_needs: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.above_of_more_value": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.above_of_more_value: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.every_loss_iff_kept": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.every_loss_iff_kept: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.every_value_loss_iff_of_route": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.every_value_loss_iff_of_route: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.maximal_of_certain": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.maximal_of_certain: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.maximal_of_more_restored": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.maximal_of_more_restored: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.maximal_of_no_value": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.maximal_of_no_value: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.route_above_iff": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.route_above_iff: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
   }
  },
  "instances": {

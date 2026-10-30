@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-500 registered results: 469 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1159 curated edges join 428 results to the results they draw on.
+503 registered results: 472 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1164 curated edges join 430 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -175,6 +175,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [how-much-difference-arrives][] ← <a id="how-much-difference-arrives--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="how-much-difference-arrives--timely-response-necessity"></a>[timely-response-necessity][]
 - [how-often-couplings-act][] ← <a id="how-often-couplings-act--what-a-cut-loses"></a>[what-a-cut-loses][] · <a id="how-often-couplings-act--how-a-carried-difference-grows"></a>[how-a-carried-difference-grows][] · <a id="how-often-couplings-act--how-loops-form"></a>[how-loops-form][] · <a id="how-often-couplings-act--how-much-difference-arrives"></a>[how-much-difference-arrives][] · <a id="how-often-couplings-act--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="how-often-couplings-act--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [identical-cells-under-a-descent-treating-them-alike][] ← <a id="identical-cells-under-a-descent-treating-them-alike--what-a-commuting-law-keeps-apart"></a>[what-a-commuting-law-keeps-apart][]
+- [identical-cells-under-noise][] ← <a id="identical-cells-under-noise--identical-cells-under-a-descent-treating-them-alike"></a>[identical-cells-under-a-descent-treating-them-alike][]
 - [identification-where-bounded][] ← <a id="identification-where-bounded--learning-by-refutation"></a>[learning-by-refutation][] · <a id="identification-where-bounded--the-split-that-makes-sense"></a>[the-split-that-makes-sense][] · <a id="identification-where-bounded--configurations-alike-by-relation"></a>[configurations-alike-by-relation][] · <a id="identification-where-bounded--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [identification-where-runs-part][] ← <a id="identification-where-runs-part--identification-where-bounded"></a>[identification-where-bounded][] · <a id="identification-where-runs-part--learning-by-refutation"></a>[learning-by-refutation][] · <a id="identification-where-runs-part--tests-fix-likeness-where-determined"></a>[tests-fix-likeness-where-determined][] · <a id="identification-where-runs-part--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="identification-where-runs-part--the-split-that-makes-sense"></a>[the-split-that-makes-sense][] · <a id="identification-where-runs-part--lifting-where-branching-is-finite"></a>[lifting-where-branching-is-finite][]
 - [identity-across-steps][] ← <a id="identity-across-steps--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][] · <a id="identity-across-steps--unceasing-generation-needs-renewal"></a>[unceasing-generation-needs-renewal][] · <a id="identity-across-steps--more-needs-renewers"></a>[more-needs-renewers][] · <a id="identity-across-steps--configurations-alike-by-relation"></a>[configurations-alike-by-relation][]
@@ -189,6 +190,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [joint-plans-from-a-supported-start][] ← <a id="joint-plans-from-a-supported-start--joint-plan-composition"></a>[joint-plan-composition][]
 - [joint-practice-forms-continuation][] ← <a id="joint-practice-forms-continuation--organizational-rule-inheritance"></a>[organizational-rule-inheritance][]
 - [keeping-forgoes-the-renewal-at-the-need][] ← <a id="keeping-forgoes-the-renewal-at-the-need--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="keeping-forgoes-the-renewal-at-the-need--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
+- [keeping-widening-is-generation-losing-nothing][] ← <a id="keeping-widening-is-generation-losing-nothing--generation-and-degeneration-at-two-grains"></a>[generation-and-degeneration-at-two-grains][] · <a id="keeping-widening-is-generation-losing-nothing--where-the-possible-grows"></a>[where-the-possible-grows][] · <a id="keeping-widening-is-generation-losing-nothing--what-a-course-keeps-reachable"></a>[what-a-course-keeps-reachable][] · <a id="keeping-widening-is-generation-losing-nothing--what-keeping-widening-needs"></a>[what-keeping-widening-needs][]
 - [laws-at-coarser-steps][] ← <a id="laws-at-coarser-steps--laws-of-one-step"></a>[laws-of-one-step][] · <a id="laws-at-coarser-steps--census-balance"></a>[census-balance][] · <a id="laws-at-coarser-steps--map-of-premises"></a>[map-of-premises][]
 - [laws-at-finer-units][] ← <a id="laws-at-finer-units--laws-of-one-step"></a>[laws-of-one-step][] · <a id="laws-at-finer-units--rest-at-every-resolution"></a>[rest-at-every-resolution][]
 - [laws-of-one-step][] ← <a id="laws-of-one-step--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="laws-of-one-step--more-needs-renewers"></a>[more-needs-renewers][] · <a id="laws-of-one-step--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="laws-of-one-step--census-balance"></a>[census-balance][]
@@ -621,6 +623,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [how-much-difference-arrives]: theories/becoming/results/records/how-much-difference-arrives.md
 [how-often-couplings-act]: theories/becoming/results/records/how-often-couplings-act.md
 [identical-cells-under-a-descent-treating-them-alike]: theories/becoming/results/records/identical-cells-under-a-descent-treating-them-alike.md
+[identical-cells-under-noise]: theories/becoming/results/records/identical-cells-under-noise.md
 [identification-where-bounded]: theories/becoming/results/records/identification-where-bounded.md
 [identification-where-runs-part]: theories/becoming/results/records/identification-where-runs-part.md
 [identity-across-steps]: theories/becoming/results/records/identity-across-steps.md
@@ -637,6 +640,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [joint-plans-from-a-supported-start]: theories/becoming/results/records/joint-plans-from-a-supported-start.md
 [joint-practice-forms-continuation]: theories/becoming/results/records/joint-practice-forms-continuation.md
 [keeping-forgoes-the-renewal-at-the-need]: theories/becoming/results/records/keeping-forgoes-the-renewal-at-the-need.md
+[keeping-widening-is-generation-losing-nothing]: theories/becoming/results/records/keeping-widening-is-generation-losing-nothing.md
 [laws-at-coarser-steps]: theories/becoming/results/records/laws-at-coarser-steps.md
 [laws-at-finer-units]: theories/becoming/results/records/laws-at-finer-units.md
 [laws-of-one-step]: theories/becoming/results/records/laws-of-one-step.md

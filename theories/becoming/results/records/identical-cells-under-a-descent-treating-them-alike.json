@@ -114,13 +114,13 @@
       "kind": "non-implication"
     },
     {
-      "en": "Anything of densities, variational free energy, noise or continuous time: independent fluctuations break the symmetry almost surely, and the law then does not apply.",
-      "zh": "关于密度、变分自由能、噪声或连续时间之任何事：独立之涨落几乎必然破对称，此律遂不适用。",
+      "en": "Densities, variational free energy or continuous time. With noise the law does not apply, as independent fluctuations can part alike cells; what holds instead for finite Markov chains, an exchangeable law, is stated in the periphery.",
+      "zh": "密度、变分自由能或连续时间。有噪声时此律不适用，独立之涨落能分开相同之细胞；有限马尔可夫链于此所成立者（律保持可交换）述于外围。",
       "kind": "scope"
     },
     {
-      "en": "Exchanges of other than neighbouring cells, or which asymmetry differentiates actual cells.",
-      "zh": "非相邻细胞之交换，或何种不对称分化实际之细胞。",
+      "en": "Exchanges of any two cells in the pure core, shown in the periphery for every rearrangement (ofFn_rearranged), or which asymmetry differentiates actual cells.",
+      "zh": "纯核心中任二细胞之交换（外围已示于每一重排，ofFn_rearranged），或何种不对称分化实际之细胞。",
       "kind": "scope"
     },
     {
@@ -150,8 +150,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T153820.435638Z）：Becoming.FreeEnergyGuarantees 之 98 项声明中之 40 项，余者由其姊妹记录引用，公理报告皆空。由一 AI 代理起草，会话中审读；另一 AI 代理作独立只读审查（REVIEW-UE16）并复查，见研究第 449 节；未经人审。诸律应用已落地之定理。"
   },
   "next_delta": {
-    "en": "A frozen run of the 2015 scheme from exactly identical expectations with no noise; exchanges of any two cells; review by a person.",
-    "zh": "2015 年方案自完全相同之期望、无噪声之冻结运行；任二细胞之交换；人之审查。"
+    "en": "A frozen run of the 2015 scheme from exactly identical expectations with no noise; exchanges of any two cells in the pure core; review by a person.",
+    "zh": "2015 年方案自完全相同之期望、无噪声之冻结运行；纯核心中任二细胞之交换；人之审查。"
   },
   "correspondence": {
     "en": "Symmetry breaking needs an asymmetric cause (Curie 1894, Journal de Physique 3); morphogenesis from a homogeneous state needs disturbances an instability amplifies (Turing 1952, Philosophical Transactions B 237). Against Friston, Levin, Sengupta and Pezzulo (2015, Journal of the Royal Society Interface 12, 20141383), whose identical cells minimizing free energy from one location are said to be guaranteed unique places; their simulations start from random expectations, so the law forbids the guarantee read for a deterministic descent from a symmetric start, not the simulations (UE1's search, candidate 1, graded b). Never parting needs only a descent reading no cell's number; the commuting law (what-a-commuting-law-keeps-apart) gives the exchanged run and the paired minima, beside the obstruction for codes and roles in 05 §9; uniqueness is symmetric choice (Angluin 1980; Relabel.EquivariantChoice.withholds_of_full_tie). Graded in UE16's NOTE.",
@@ -184,6 +184,13 @@
       "detail": {
         "en": "The other third part of the free-energy principle stated in the same module.",
         "zh": "同一模块所陈自由能原理之另一第三部分。"
+      }
+    },
+    {
+      "id": "identical-cells-under-noise",
+      "detail": {
+        "en": "Identical cells under noise: over the reals, in the periphery, under the descent with an exchangeable field and noise of one law at every cell, the law stays exchangeable, deciding nothing of which cell takes which place; the exchanges of neighbouring cells generate every rearrangement.",
+        "zh": "噪声下之同一细胞：于外围之实数上，于场可交换、每一细胞噪声同律之下降，律保持可交换，于何细胞得何位一无所定；相邻细胞之交换生成每一重排。"
       }
     }
   ],
@@ -248,7 +255,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "e61b588a0f2462676b0072aa957703d65e759e3fe904eb30a89a190ec2aae333"
+      "sha256": "17d821b1eda5031d5875439d1e31f935d4cd631da68d0972826b318a5603f1c5"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue16-what-fe-does-not-guarantee/NOTE.md",
@@ -268,7 +275,7 @@
     {
       "path": "theories/becoming/chapters/05-COLLECTIVES.md",
       "role": "statement",
-      "sha256": "ba6bbed00fa6d28aae3a2e2e97faba4d5ad6c903a3197eebb3446b9027d249ce"
+      "sha256": "b42b6d4faa74708c71c1c7c17160274a46f0de1c503bd3cf0c61b616348137a2"
     }
   ],
   "proof_bindings": [
@@ -284,6 +291,10 @@
     {
       "en": "29 October 2026: added (UE16), identical cells under a descent that treats them alike: under any descent reading no cell's number alike cells stay alike; with an exchangeable field the descent commutes with exchanging neighbouring cells, and among configurations of one size a symmetric free energy has its minima in exchanged pairs; the witness TwoCells; against guaranteed differentiation (Friston and others 2015, candidate 1); after a review and a re-check; study section 449.",
       "zh": "2026年10月29日：新增（UE16），同等相待之下降中之同一细胞：于不读细胞编号之任一下降，相同之细胞保持相同；场可交换时下降与交换相邻细胞可交换，同一细胞数中对称之自由能其极小成交换之对；例 TwoCells；针对必得分化之说（Friston 等 2015，候选 1）；经审查与复查；研究第 449 节。"
+    },
+    {
+      "en": "30 October 2026, board item UE24 (study section 468): related to identical-cells-under-noise; the second and third does-not-show items say that with noise the law does not apply and what holds instead is stated in the periphery, and that every rearrangement is shown there, and the next step asks for exchanges of any two cells in the pure core. No statement, law or declaration changed.",
+      "zh": "2026年10月30日，工作板条目 UE24（研究第 468 节）：与 identical-cells-under-noise 相关联；所不示之第二与第三项改称有噪声时此律不适用、所成立者述于外围，及每一重排已示于彼处；下一步改为纯核心中任二细胞之交换。无一陈述、律或声明改变。"
     }
   ]
 }
