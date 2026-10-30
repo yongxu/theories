@@ -189,6 +189,59 @@ With that, **plan §八 step 4 (剥前提) is complete** in all four of its part
 
 **Next, in order:** U3's documents, then its Lean items 1 and 2 (全四). GW1 and GW2 stay on GW's line. The root generalization behind item 2 above rides the next planned full rebuild. After these comes plan §八 step 5.
 
+## One root to its edge: a proposal (30 October 2026)
+
+*For OU's owner, who decides its place and order ([source](../../../../../../sources/15-codex-theory-conversations/2026-10-30-one-root-to-the-edge.md)). Design only: nothing is claimed, no Lean is proposed for the package, and no row, module or definition another owner holds is changed. Nothing below is checked beyond the declarations it names.*
+
+**What the edge is.** Item 13 asks that every central declaration be derived from a grammar law or stated at a represented model, with its premises (F2). Pushing one root to its edge sharpens this into three standings, and only three:
+
+1. **Derived:** it follows from the grammar's laws, for every relation and class.
+2. **On the root under a stated hypothesis:** the hypothesis is written in the grammar's terms, and a countermodel on the root shows it cannot be dropped.
+3. **A premise:** stated on the root, with a proof that no statement about the dynamics entails it. The continuation condition and C stand here already (`ReadsOnlyDynamics.not_entails`).
+
+Any other standing is a distance from the edge, not a place on it. "Balance, represented" and the root's second sort are such distances, and so is a statement at a represented model whose model no stated hypothesis cuts out. Where an item stops short, its failure is written down with witnesses, as item 13 allows. At §461, of the 118 distinct central declarations, 44 reach the grammar, 16 are stated at a represented model, 4 hold on their own carrier only, and 54 are the rest, 31 of them balance, represented. Three levers would cover most of that distance.
+
+**Lever 1: balance joined to closure.** U1 asked whether balance under a relation of the unfolding is strictly stronger than count balance, with a witness, and whether a central law follows from it. Its verdict kept amounts as the root's second sort. Its design did not consult three results already proved, which answer its first question and recast its failures:
+
+- *Locality.* Over relata listed without repetition, transfers along a relation that balance a step exist exactly where the total is conserved on every family the relation closes (`Continuity.balancesOn_iff_conserved`, record [balance-from-conservation-along-a-relation](../../../../../../theories/becoming/results/records/balance-from-conservation-along-a-relation.md)). A family the relation closes is a region closed under the relation read both ways. The teleport is U1's sought witness: swapping two levels conserves the total, and no transfers along the empty relation balance it (`Continuity.Teleport.conserves`, `Continuity.Teleport.no_transfers_apart`). So balance along a relation is strictly stronger than count balance, and what it adds is closure.
+- *The census.* Under a continuation with no splits and no merges, what is active after a step together with what ceases equals what was active before together with what arises (`Web.Census.balanceFrom_eq`, record [census-balance-under-continuation](../../../../../../theories/becoming/results/records/census-balance-under-continuation.md)). Read at a grain of units, with arising across the boundary as given and ceasing across it as taken, this is the balance equation. The tandem's readings show each condition is needed (`Tandem.census`, `Tandem.budding`, `Tandem.joining`).
+- *Lumping.* No readout undoes a merge (`Readout.no_restore`).
+
+The proposal turns U1's direction around. U1 went from the World's numbers to unit lines and found the lines not determined: which unit goes where is a selected matching's choice, and the projection does not recover WRT's conservation. Going from unit lines to numbers, the World is the count of a unit model, which is a lumping, and those failures are its expected losses. WRT2's F1, two idle worlds standing at 1 and at 2 alike on every field the model reads (`World.standingAt_alike`), is then the occurrence model's coarse grain forgetting the fine one: the root's own two grains.
+
+Three sub-claims would make this a result, each by design, scratch and one independent review:
+
+- **(a) Locality on the grammar.** `balancesOn_iff_conserved` restated with `«所闭»`, for the relation or its converse, in place of `Continuity.Closes`. The grammar's count law `«守数当且仅当可对»` is its case for `«一»`, where the only closed family is the whole. On each closed region this is the count law again; the content is which regions the count is kept on.
+- **(b) The census as a pairing under continuation.** The grammar's header leaves unstated what a pairing under continuation, `«对» («续» R E)`, adds to equal count. (a) and the census state it: locality, and units continuing one to one, arising and ceasing only at the boundary.
+- **(c) Amounts represented both ways at the unit grain.** Every unit model whose units continue one to one inside the frame counts to a balanced World, and every balanced World is the count of one; U1's scratch (`KUnits.canonical`) gives the existence. The kept hypothesis, units continuing one to one, is stated with `«生»`, `«亡»` and `«住»` under a unit class. Its countermodels are the tandem, the teleport and the idle world giving itself two units (`World.balance_needs_conservation`).
+
+*The test that decides it* is U1's own, the round trip. The lift counts only if two things hold. The balance hypothesis of the consumers (`Flow.Balances`) gets a root reading with its witnesses. And something read on unit lines is not read on counts: locality per closed region, and F1 explained. If either fails, U1's verdict stands and the failure is written here.
+
+*What would move.* The 31 declarations resting on balance, represented, reached by transport as U2 reached its rows, not by rebuilding `Flow`'s dependents. With them goes the alignment account's drain layer (`Optimum.optimum_beyond`, `Optimum.mutual_beyond`, the frontier laws). F13's reason would become a hypothesis with its witnesses.
+
+*Known results.* Locality is the uncapacitated case of the feasibility conditions for flows (Gale 1957; Hoffman 1960): conservation on each connected part. The census is bookkeeping. What is new is the join: balance as closure's law for counts.
+
+*Owners.* `Becoming.Flow` has no active owner, so rule 3's fallback names OU's owner. Continuity's and Identity's records name theirs, and GrammarLaws is OU's. A grammar-wide law rides the next planned near-full rebuild, as HE's edits did.
+
+**Lever 2: evolution's rows**, 0 of 18 on the grammar. Two candidate readings, neither checked:
+
+- *Exact transmission as continuation.* Transmission at a descent is already stated for one kind as two inclusions in the grammar's terms (`ModelStatements.transmits_at_one_kind`, record [transmission-is-inheritance-and-need](../../../../../../theories/becoming/results/records/transmission-is-inheritance-and-need.md)). The candidate is that exact transmission is the trait class carried along descent: descent lies within its `«续»` under the class. Where it holds, Fisher's exact case and Price's zero transmission term become laws of continuation under a class.
+- *The counting identities for every finite relation.* Price's covariance identity holds for any parent-to-offspring relation and any class. Its rows (`SelectionTerm.covariation`, `SelectionLevels.levels_sized`, `SelectionLevels.rises_exact_iff_levels`) go on the root as identities if their proofs read nothing of the model but a relation and counts, which is checked row by row.
+
+The gate rows, "premise of the account" in U1 §4's table, become hypotheses on the root, each with its witness. Rows that read amounts, such as `Reproduction.Flow.number_within_take`, wait on lever 1.
+
+**Lever 3: the direction.** No new item. U3's Lean items 1 and 2 put the significance rows on the root (F4). GW1 and GW2 decide whether strong generation and keeping widening hold together on some reading, or prove their independence exactly (F3). Either answer is a place on the edge.
+
+**Where the edge stays.**
+
+- The continuation condition and C are premises, proved not entailed by the dynamics.
+- Amounts are whole units. The pure core is discrete; continuous amounts belong to the periphery.
+- A law of a particular model is stated at a represented model, the model cut out by a stated hypothesis, with a countermodel on the root.
+
+**The edge as a result.** Once the levers are done, or their failures written down, one record states what one root carries: every central declaration in one of the three standings, each kept hypothesis with its witnesses. MV's view then counts the standing "on the root under a stated hypothesis" beside derivation and premise (F5).
+
+**Order, if OU's owner takes it.** Lever 1's design, scratch and review come first: it moves the most, and lever 2 partly waits on it. Lever 2's audit, row by row, can run beside it on disjoint files. Lever 3 continues on U3's and GW's lines. The boundary record comes last. This adds no criterion to item 13: it is one way of meeting F1 and F2 for amounts and for evolution.
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.
