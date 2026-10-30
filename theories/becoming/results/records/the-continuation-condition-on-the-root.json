@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T17:02:48+00:00",
+  "reviewed_at_utc": "2026-10-30T13:31:03+00:00",
   "statement": {
     "en": "Stated on continuation relative to a class, the condition is that every occurrence lies within every center's continuing under the class; held de se along a relation, it is exactly the root's condition at the one of that relation taken as the net.",
     "zh": "以相对于类之续而述，条件为：凡事皆在每一中心于此类下之续中；依一关系 de se 而持，恰即以该关系为网、于其一下之根之条件。"
@@ -93,8 +93,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261023T220231.427406Z）：Becoming.GrammarScope，37 项声明中 30 条定理，公理报告皆空；检查器并核对核心纯净。本记录引其中 14 项。作者审查见研究第 392 节。"
   },
   "next_delta": {
-    "en": "The chapter's other theorems that take the condition stated as instances through the root's; the condition for many centers in families; which class a center's own line runs under, argued or modelled.",
-    "zh": "本章以条件为前提之其他定理，经根之条件述为其例；多中心之族之条件；中心之自线在何类下，论证或建模。"
+    "en": "Beyond the three stated at the own-closure reading on a web's level paths (U3), the chapter's other theorems that take the condition stated as instances through the root's; the condition for many centers in families; which class a center's own line runs under, argued or modelled.",
+    "zh": "除于网之水平路径上、自闭包读下所述之三条（U3）外，本章以条件为前提之其他定理，经根之条件述为其例；多中心之族之条件；中心之自线在何类下，论证或建模。"
   },
   "correspondence": {
     "en": "SW §3's structural reading (what counts for a center is what lies within its continuing along a relation) carried to the root; the source's \"for anything, its continuation into the future has significance\" read as \"nothing lies outside every center's continuing\".",
@@ -168,7 +168,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "babcb23ce824a5e455d7b3600cae5489375a0e98a26d64fd905e8702ba7c5809"
+      "sha256": "cdc54fc98edd5c9c04ac24578f16bde719a11d8961d7ace8e173b06bf697d31b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T230635.949992Z/verification.json",

@@ -81,6 +81,49 @@
       "declarations": [
         "Becoming.Transfer.mixed"
       ]
+    },
+    {
+      "en": "On the root: with every claim counted, an extension of one level path by another is the grammar's widening, «广», of what the second admits over what the first admits.",
+      "zh": "在根上：每个主张都计入时，一条水平路径被另一条扩展，即后者所接纳者对前者所接纳者之文法之「广」。",
+      "declarations": [
+        "Becoming.SignificanceStatements.paths_extension_iff_grammar"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.SignificanceStatements.paths_extension_iff_grammar",
+          "of": "Becoming.Web.paths_extension_iff_widens",
+          "models": [
+            "own"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md"
+        }
+      ]
+    },
+    {
+      "en": "On the root, for every reading of living, C holds on level paths with “better” read as the grammar's widening, «广», of what the paths admit; that this relation is better is C's content, supplied, not shown.",
+      "zh": "在根上，对 living 的每种读法，以“更好”读作路径所接纳者之文法之「广」时，C 在水平路径上成立；此关系之为更好是 C 的内容，系所给，非所证。",
+      "declarations": [
+        "Becoming.SignificanceStatements.paths_comparison_grammar"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.SignificanceStatements.paths_comparison_grammar",
+          "of": "Becoming.Web.paths_comparison_widens",
+          "models": [
+            "own"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md"
+        }
+      ]
+    },
+    {
+      "en": "On the root, at the own-closure reading of significance, a specialization of the row: the condition («续无外»), living significance over admission and an extension with every claim counted read one predicate, admission, with widening the grammar's «广»; and under «续无外», «广» is retaining and adding from each standpoint; proved through the row. On an acyclic relation the condition forces every center to coincide.",
+      "zh": "在根上，于意义之自闭包读法下，为本行之特化：延续条件（「续无外」）、接纳上的生生之意义与计入每个主张之扩展，读同一谓词即接纳，扩大为文法之「广」；在「续无外」之下，「广」即从每一立场保留并增加；经本行证明。关系无环时，该条件迫使一切中心重合。",
+      "declarations": [
+        "Becoming.SignificanceStatements.paths_one_object_root",
+        "Becoming.ownClosure_unrestricted_iff_noOutside",
+        "Becoming.«续无外则同一中心»"
+      ]
     }
   ],
   "hypotheses": [
@@ -290,7 +333,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "8289d1696cd87a708c1dc0b4455fd32eefe6b5266afb97ae4764cb5522274093",
+      "sha256": "a9f62575313222b5c7375cbde76b62b23e10a8c9dcf7a93bb20430a90d169ecc",
       "declarations": []
     },
     {
@@ -418,6 +461,40 @@
       "role": "receipt",
       "sha256": "279a65322c97aa66fd10c042003597aaab1bbed545b4ec2f13ebfb803cd2041f",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ownClosure_unrestricted_iff_noOutside",
+        "Becoming.«续无外则同一中心»"
+      ],
+      "sha256": "12a3171a69cb11fdab9140c2dd20791eb2792e34f176fa83063b1104ea7f2919"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SignificanceStatements.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.SignificanceStatements.paths_comparison_grammar",
+        "Becoming.SignificanceStatements.paths_extension_iff_grammar",
+        "Becoming.SignificanceStatements.paths_one_object_root"
+      ],
+      "sha256": "43839baf82bfbce1014c4435d1e8c622e6dd635112b4a05a51c48116e9ae907f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md",
+      "role": "review",
+      "sha256": "267e0043ac2b9e535e796fe1e64a09ea4c8e85b08ebf32179f2edcfb2b911658"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/DESIGN.md",
+      "role": "integration",
+      "sha256": "ee48af64ed377fc9e9447d1da3aa538aa256a54c139383271acb9a1b477afbda"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json",
+      "role": "receipt",
+      "sha256": "37b752112e19d77ba717f771c6057c5516c1ec47ff247889baeb36374104db54"
     }
   ],
   "proof_bindings": [
@@ -460,6 +537,20 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Relevance",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SignificanceStatements.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SignificanceStatements",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -548,6 +639,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the statement edited to what the home section says, its \"with no axiom\", \"by unfolding Extension there into Widens\" and \"that widening is better is an open warrant\" moved to the laws, the validation scope and a does-not-show item; the claim split into eight laws, each read against its declarations in Becoming.Extension, Becoming.Regions, Becoming.Admission, Becoming.Significance, Becoming.Relevance and Becoming.ValuationFrames (\"widening is a partial order\" stated as the Lean proves it, transitive and one way); the limitations to three does-not-show items and the standard boundaries significance-related-not-asserted, discrete-steps and names-provisional; in the correspondence Ren's \"decided\" became \"proposed\" with the quotation kept, the choices on his delegation stated as AI readings with his taking of the revision as provenance, and the claim's closing reading added with its AI label; the round numbers P56 and P91 left a dependency and a related detail, and a stale chapter section number another related detail; ten declarations added to the references of their files; no premise, status or source hash changed. Every earlier sentence is mapped in [comparison-by-widening.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/comparison-by-widening.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, the correspondence, each read against the Lean it cites. A cold read of the applied record was taken in the correspondence.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述改为主章所说，其中“不用公理”“按定义把 Extension 展开为 Widens”与“扩大之为更好的根据开放”移入规律、validation_scope 与一条“未表明”；主张拆为八条规律，各条对照其在 Becoming.Extension、Regions、Admission、Significance、Relevance 与 ValuationFrames 中的声明核读（“扩大是偏序”按 Lean 所证写为传递且只朝一个方向）；限制改为三条“未表明”与通用边界 significance-related-not-asserted、discrete-steps、names-provisional；对应中 Ren 的“定”改为“提出”，引文不变，依其交托所作的选择写作 AI 的读法，Ren 取此修订作为来历，并加入主张结尾的读法及其 AI 标签；一条依赖与一条相关说明中去掉轮次编号 P56、P91，另一条相关说明中去掉过时的章节编号；十个声明加入其文件的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [comparison-by-widening.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/comparison-by-widening.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、对应，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及对应。"
+    },
+    {
+      "en": "30 October 2026 (U3, study section 465): 3 laws on the root added, stating `Becoming.Web.paths_extension_iff_widens`, `Becoming.Web.paths_comparison_widens` in the grammar's terms on its own carrier, through the row (F5's statements_at_model, model own); specializing `Becoming.Web.paths_one_object` at the own-closure reading of significance, through the row (no F5 item: a specialization states less than its row); reviewed in REVIEW-U3-LEAN.md; a restatement or a specialization, not a derivation; the row's statement, proof and every other law unchanged.",
+      "zh": "2026年10月30日（U3，研究第 465 节）：增根上之律 3 条，于其自身之载体上以文法之项陈述 `Becoming.Web.paths_extension_iff_widens`, `Becoming.Web.paths_comparison_widens`，经其本行（F5 之 statements_at_model，模型 own）；于意义之自闭包读法下特化 `Becoming.Web.paths_one_object`，经其本行（无 F5 项：特化所述少于本行）；经 REVIEW-U3-LEAN.md 复核；为重述或特化，非推导；本行之陈述、证明与他律皆不改。"
     }
   ],
   "text_versions": [

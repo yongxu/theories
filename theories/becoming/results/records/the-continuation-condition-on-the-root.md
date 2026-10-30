@@ -44,7 +44,7 @@ Canonical source: [GrammarScope.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-The chapter's other theorems that take the condition stated as instances through the root's; the condition for many centers in families; which class a center's own line runs under, argued or modelled.
+Beyond the three stated at the own-closure reading on a web's level paths (U3), the chapter's other theorems that take the condition stated as instances through the root's; the condition for many centers in families; which class a center's own line runs under, argued or modelled.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -85,4 +85,4 @@ Aliases: `The continuation condition on the root`, `根上之续存条件`, `Bec
 
 </details>
 
-Documentary review UTC: `2026-10-25T17:02:48+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-30T13:31:03+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

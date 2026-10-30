@@ -1176,6 +1176,18 @@ theorem widens_iff_every_positive {items : List X} {a b : X → Bool} :
        absurd (every (fun _ => 1) fun _ _ => Nat.succ_pos 0)
          (Nat.not_lt_of_le (weighed_le_of_includes _ includes))⟩⟩
 
+/-- **Widening on the root is what every positive weighting ranks higher** (row 10 as an interface law
+of amounts assigned to what is admitted): on the listed items, with Boolean admission and additive
+natural-number weights positive on every listed item, the grammar's `«广»` of what `a` admits over what
+`b` admits holds exactly when every such weighting weighs `a` above `b`. The left side is the root's
+order (`widensOn_iff`); the weights are a second sort the grammar has none of, and nothing here derives
+them. Mixed comparisons have no unanimous ranking: some positive weighting ranks each direction
+(`mixed_either_way`). -/
+theorem grammar_widens_iff_every_positive {items : List X} {a b : X → Bool} :
+    «广» (admittedOn items a) (admittedOn items b) ↔
+      ∀ w, Positive items w → weighed items w b < weighed items w a :=
+  widensOn_iff.symm.trans widens_iff_every_positive
+
 /-- **A weighting the same for every item ranks by number.** Under one positive weight for every
 item, one course is weighed above another exactly when it admits more of the listed items: the
 case `1 / 1` of weights within a ratio. -/

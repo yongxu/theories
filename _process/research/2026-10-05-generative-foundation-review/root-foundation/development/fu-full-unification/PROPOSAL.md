@@ -77,6 +77,12 @@ New, proposed, not claimed:
 
 C stays a premise, and the free predicate stays the general form. Owner: whoever holds 07's significance results, with SW's note as the reading.
 
+*U3's outcome* ([DESIGN.md](../u3-significance-on-the-root/DESIGN.md), 30 October 2026; the design reviewed before the Lean, the Lean and the records kit read by two independent readers, the landing texts through three lenses; core receipt `20261030T131028.245732Z`, every axiom report empty).
+- An extension of level paths with every claim counted is the grammar's `«广»` of what the paths admit, through OU3b's `Web.widens_iff`; for every reading of `living`, C holds on level paths with "better" read as that `«广»`, its being better C's content, supplied (`Web.paths_extension_iff_widens`, `Web.paths_comparison_widens`).
+- Weightings meet the root through one interface law: on a finite list with two-valued admission, `«广»` is what every additive natural-number weighting positive on the listed items ranks higher (`Weighting.widens_iff_every_positive`). The weights are amounts, the second sort of U1's verdict, not units.
+- The condition at its own-closure reading is `«续无外»` at the one of the relation (GS2), and `unrestricted_iff_livingSignificance`, `Web.widens_iff_retains_adds` and `Web.paths_one_object` are specialized there: each fixes significance at one reading, so F5 takes none as an item.
+- 全四 for the significance rows is met as F4 defines it: each row has its root form, the condition and C stay named premises, and the free predicate stays the general form. F5's stricter count takes two of the five (`Web.paths_comparison_widens`, `Weighting.widens_iff_every_positive`; with `Web.paths_extension_iff_widens`, capacity's) as stated on their own carrier and keeps the three specializations among the rest ([WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md), "U3's standing, and what 全四 counts"). The free significance is not lifted, and the condition (scope) and C (order) stay premises.
+
 ## 4. Order
 
 1. U1's design, on disjoint files and in parallel with WRP. U1 touches no module WRP touches: it adds a unit model beside the occurrence model.

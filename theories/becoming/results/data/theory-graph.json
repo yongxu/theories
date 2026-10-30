@@ -7843,7 +7843,7 @@
    "type": "module",
    "name": "Becoming.Weightings",
    "level": "L2",
-   "theorems": 397,
+   "theorems": 398,
    "region": "significance",
    "base": "old-base",
    "on_grammar": true,
@@ -10167,6 +10167,17 @@
    "theorems": 102,
    "region": "unassigned",
    "base": "",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.SignificanceStatements",
+   "type": "module",
+   "name": "Becoming.SignificanceStatements",
+   "level": "L2",
+   "theorems": 5,
+   "region": "significance",
+   "base": "grammar",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -33770,6 +33781,21 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.SignificanceStatements",
+   "to": "module:Becoming.Extension",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.SignificanceStatements",
+   "to": "module:Becoming.GrammarScope",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.SignificanceStatements",
+   "to": "module:Becoming.Relevance",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.SituationTraces",
    "to": "module:Becoming.FinerTraces",
    "type": "imports"
@@ -37571,6 +37597,11 @@
   },
   {
    "from": "record:comparison-by-widening",
+   "to": "module:Becoming.GrammarScope",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:comparison-by-widening",
    "to": "module:Becoming.Regions",
    "type": "proved-in"
   },
@@ -37582,6 +37613,11 @@
   {
    "from": "record:comparison-by-widening",
    "to": "module:Becoming.Significance",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:comparison-by-widening",
+   "to": "module:Becoming.SignificanceStatements",
    "type": "proved-in"
   },
   {
@@ -38391,6 +38427,11 @@
   },
   {
    "from": "record:continuation-condition-yields-living-significance",
+   "to": "module:Becoming.GrammarScope",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:continuation-condition-yields-living-significance",
    "to": "module:Becoming.Metaethics",
    "type": "proved-in"
   },
@@ -38417,6 +38458,11 @@
   {
    "from": "record:continuation-condition-yields-living-significance",
    "to": "module:Becoming.Significance",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:continuation-condition-yields-living-significance",
+   "to": "module:Becoming.SignificanceStatements",
    "type": "proved-in"
   },
   {
@@ -50971,12 +51017,22 @@
   },
   {
    "from": "record:significance-retained-within-margin",
+   "to": "module:Becoming.GrammarScope",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:significance-retained-within-margin",
    "to": "module:Becoming.Retaining",
    "type": "proved-in"
   },
   {
    "from": "record:significance-retained-within-margin",
    "to": "module:Becoming.Significance",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:significance-retained-within-margin",
+   "to": "module:Becoming.SignificanceStatements",
    "type": "proved-in"
   },
   {

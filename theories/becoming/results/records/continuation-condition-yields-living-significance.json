@@ -158,6 +158,15 @@
           "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
         }
       ]
+    },
+    {
+      "en": "On the root, on a web's level paths, a specialization of the row: where a claim's significance from a standpoint is that its formation lies within that standpoint's center's closure under a relation, the condition is «续无外» at the one of that relation, and it holds exactly when living significance does over admission. On an acyclic relation the condition forces every center to coincide.",
+      "zh": "在根上、网的水平路径上，为本行之特化：若一主张从一立场之意义为其形成位于该立场之中心沿一关系之闭包内，则延续条件即该关系之一下的「续无外」，它恰在生生之意义于接纳上成立时成立。关系无环时，该条件迫使一切中心重合。",
+      "declarations": [
+        "Becoming.SignificanceStatements.noOutside_iff_paths_livingSignificance",
+        "Becoming.ownClosure_unrestricted_iff_noOutside",
+        "Becoming.«续无外则同一中心»"
+      ]
     }
   ],
   "hypotheses": [
@@ -723,7 +732,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "c71e9f32b0fc7e1a8528142f309eb700da852facef0fbcf0757f04e01c9b81e0"
+      "sha256": "a9f62575313222b5c7375cbde76b62b23e10a8c9dcf7a93bb20430a90d169ecc"
     },
     {
       "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
@@ -976,6 +985,38 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
       "role": "receipt",
       "sha256": "e16b5ece7b28c05f2b3349d3f8d51ff4aef68bdedbe6e3b16942c0b9e28acda1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ownClosure_unrestricted_iff_noOutside",
+        "Becoming.«续无外则同一中心»"
+      ],
+      "sha256": "12a3171a69cb11fdab9140c2dd20791eb2792e34f176fa83063b1104ea7f2919"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SignificanceStatements.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.SignificanceStatements.noOutside_iff_paths_livingSignificance"
+      ],
+      "sha256": "43839baf82bfbce1014c4435d1e8c622e6dd635112b4a05a51c48116e9ae907f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md",
+      "role": "review",
+      "sha256": "267e0043ac2b9e535e796fe1e64a09ea4c8e85b08ebf32179f2edcfb2b911658"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/DESIGN.md",
+      "role": "integration",
+      "sha256": "ee48af64ed377fc9e9447d1da3aa538aa256a54c139383271acb9a1b477afbda"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json",
+      "role": "receipt",
+      "sha256": "37b752112e19d77ba717f771c6057c5516c1ec47ff247889baeb36374104db54"
     }
   ],
   "proof_bindings": [
@@ -1060,6 +1101,20 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ModelStatements.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ModelStatements",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SignificanceStatements.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SignificanceStatements",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -1196,6 +1251,10 @@
     {
       "en": "30 October 2026 (U2, study section 461): a law at the model added, stating `Becoming.Web.significance_undetermined` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
       "zh": "2026年10月30日（U2，研究第 461 节）：增模型上之律，于其项为文法之处陈述 `Becoming.Web.significance_undetermined`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
+    },
+    {
+      "en": "30 October 2026 (U3, study section 465): a law on the root added, specializing `Becoming.unrestricted_iff_livingSignificance` at the own-closure reading of significance, through the row (no F5 item: a specialization states less than its row); reviewed in REVIEW-U3-LEAN.md; a restatement or a specialization, not a derivation; the row's statement, proof and every other law unchanged.",
+      "zh": "2026年10月30日（U3，研究第 465 节）：增根上之律，于意义之自闭包读法下特化 `Becoming.unrestricted_iff_livingSignificance`，经其本行（无 F5 项：特化所述少于本行）；经 REVIEW-U3-LEAN.md 复核；为重述或特化，非推导；本行之陈述、证明与他律皆不改。"
     }
   ],
   "text_versions": [
