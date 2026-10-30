@@ -7,9 +7,9 @@ projection such as a class's `trans`); PatternPassing's two uses pass their clas
 Each edit names the text it replaces, which must occur exactly as often as stated (once, or twice for
 PatternPassing's two uses), and nothing is written unless every edit applies. An edit already applied (its new
 text present, its old text absent) is reported and left. Sampling's edit reads the successor's reach laws that
-HE2's item 5 states in GrammarMap (`Map.step_reach_of_le`, `Map.step_reached_le`), so it is refused while
-GrammarMap lacks them: apply item 5 first, or apply the weakening alone (Grammar and PatternPassing), which
-reads true without Sampling's part.
+HE2's item 5 moves whole from MapRegions into GrammarMap (`Map.step_reaches_of_le`, `Map.step_reached_le`), so
+it is refused while GrammarMap lacks them: apply item 5 first, or apply the weakening alone (Grammar and
+PatternPassing), which reads true without Sampling's part.
 usage: python3 -B apply_he2_item1.py PACKAGE [--check] [--weakening-only]
   PACKAGE           the folder holding Becoming/ (the package, or a scratch tree holding the three modules)
   --check           say what would change; write nothing
@@ -71,7 +71,7 @@ composes, and it does arise from `T` to `t`, so a step where it arises lies on t
 (`«两端分则中有标»`), its place read back as order (`Map.step_reached_le`). -/
 theorem arises_within {p : Nat → Prop} [∀ n, Decidable (p n)] {T : Nat} :
     ∀ {t : Nat}, T ≤ t → ¬ p T → p t → ∃ u, T ≤ u ∧ u < t ∧ ¬ p u ∧ p (u + 1) :=
-  fun le absent held => match Map.step_reach_of_le le with
+  fun le absent held => match Map.step_reaches_of_le le with
   | .inl same => absurd held (same ▸ absent)
   | .inr line =>
     match «两端分则中有标» (K := fun x y => ¬ (¬ p x ∧ p y)) (fun _ _ _ => (Decidable.em _).symm)
@@ -94,9 +94,9 @@ EDITS = [
     ('PatternPassing', PASSING_OLD, PASSING_NEW, 2),
     ('Sampling', SAMPLING_OLD, SAMPLING_NEW, 1),
 ]
-# Item 5's laws that Sampling's edit reads, as GrammarMap states them once item 5 is applied.
+# Item 5's laws that Sampling's edit reads, as GrammarMap states them once item 5 has moved them from MapRegions.
 ITEM5 = (r'^theorem step_reached_le \{L : «际» Nat\} : ∀ \{x y : Nat\}, «所及» step L x y → x ≤ y',
-         r'^theorem step_reach_of_le \{x y : Nat\} \(le : x ≤ y\) : «所及» step «一» x y')
+         r'^theorem step_reaches_of_le : ∀ \{z n : Nat\}, z ≤ n → «所及» step «一» z n')
 
 
 def main():
@@ -117,7 +117,7 @@ def main():
         first = old.splitlines()[0][:70]
         if text.count(old) == times:
             if module == 'Sampling' and not all(re.search(p, grammar_map, re.M) for p in ITEM5):
-                failed.append(f'{module}: GrammarMap lacks item 5\'s Map.step_reach_of_le or Map.step_reached_le; '
+                failed.append(f'{module}: GrammarMap lacks item 5\'s Map.step_reaches_of_le or Map.step_reached_le; '
                               'apply item 5 first')
                 continue
             texts[module] = text.replace(old, new)

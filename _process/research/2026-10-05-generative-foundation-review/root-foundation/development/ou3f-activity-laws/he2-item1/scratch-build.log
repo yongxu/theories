@@ -2,7 +2,6 @@
   "tree": "/Users/ren/theories/.claude/worktrees/ou3f-laws/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3f-activity-laws/he2-item1/tree",
   "modules": 33,
   "ran": [
-    "Becoming.Grammar",
     "Becoming.GrammarMap",
     "Becoming.GrammarLaws",
     "Becoming.Amounts",
@@ -36,7 +35,7 @@
     "BecomingPatternPassingAxiomAudit",
     "BecomingHE2Item1CheckAxiomAudit"
   ],
-  "reused": 3,
+  "reused": 4,
   "unclean": [],
   "audits": {
     "Becoming.Sampling": {

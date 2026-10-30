@@ -59,7 +59,7 @@ partial def reach (env : Environment) (start : Name) : NameSet := Id.run do
 def coarse : List Name := [`Becoming.Web.sample_arises, `Becoming.Web.sample_ceases,
   `Becoming.Web.sample_unceasing, `Becoming.Web.sample_ceasing]
 
-def marks : List Name := [`Becoming.«两端分则中有标», `Becoming.Map.step_reach_of_le,
+def marks : List Name := [`Becoming.«两端分则中有标», `Becoming.Map.step_reaches_of_le,
   `Becoming.Map.step_reached_le, `Becoming.arises_within]
 
 #eval show CommandElabM Unit from do

@@ -48,7 +48,7 @@ index a91e0ed61..4803f092c 100644
          | ⟨u, v, ⟨⟨next, _⟩, alike⟩, given, from_, _⟩ =>
            have reached : V.activityClass (T + m, b) u := match from_ with
 diff --git a/Becoming/Sampling.lean b/Becoming/Sampling.lean
-index e0e024d5d..b301193d9 100644
+index e0e024d5d..8fc978150 100644
 --- a/Becoming/Sampling.lean
 +++ b/Becoming/Sampling.lean
 @@ -164,22 +164,23 @@ end Web
@@ -66,7 +66,7 @@ index e0e024d5d..b301193d9 100644
 -      | ⟨u, from_, below, no, yes⟩ => ⟨u, from_, Nat.lt_succ_of_lt below, no, yes⟩
 -    | .isFalse npm => ⟨m, le, Nat.lt_succ_self m, npm, held⟩
 +    ∀ {t : Nat}, T ≤ t → ¬ p T → p t → ∃ u, T ≤ u ∧ u < t ∧ ¬ p u ∧ p (u + 1) :=
-+  fun le absent held => match Map.step_reach_of_le le with
++  fun le absent held => match Map.step_reaches_of_le le with
 +  | .inl same => absurd held (same ▸ absent)
 +  | .inr line =>
 +    match «两端分则中有标» (K := fun x y => ¬ (¬ p x ∧ p y)) (fun _ _ _ => (Decidable.em _).symm)
