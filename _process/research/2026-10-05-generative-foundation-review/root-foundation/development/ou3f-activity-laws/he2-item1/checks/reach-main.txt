@@ -1,0 +1,17 @@
+Becoming.arises_within
+  recursion: [Nat.le.below, Nat.le.brecOn]
+  Becoming.«两端分则中有标»: not used
+  Becoming.Map.step_reach_of_le: not used
+  Becoming.Map.step_reached_le: not used
+  every Becoming constant used: []
+Becoming.ceases_within
+  recursion: [Nat.le.below, Nat.le.brecOn]
+  Becoming.«两端分则中有标»: not used
+  Becoming.Map.step_reach_of_le: not used
+  Becoming.Map.step_reached_le: not used
+  Becoming.arises_within: not used
+  every Becoming constant used: []
+Becoming.Web.sample_arises reaches «两端分则中有标»: no
+Becoming.Web.sample_ceases reaches «两端分则中有标»: no
+Becoming.Web.sample_unceasing reaches «两端分则中有标»: no
+Becoming.Web.sample_ceasing reaches «两端分则中有标»: no

@@ -1,0 +1,91 @@
+diff --git a/Becoming/Grammar.lean b/Becoming/Grammar.lean
+index 4f9abfdfd..1fa530fb8 100644
+--- a/Becoming/Grammar.lean
++++ b/Becoming/Grammar.lean
+@@ -662,11 +662,12 @@ section Lines
+ variable {α : Type u}
+ 
+-/-- **A line whose ends a class tells apart has a marked step.** Where every step of continuation
+-under `E` either keeps the class `K` or carries the mark `P`, a line (相续) under `E` from `x` to
+-`y` with `K` telling `x` and `y` apart has a step carrying the mark, given with its place on the
+-line: reached from `x`, and reaching `y`. Stated for every carrier and every relation; only
+-transitivity of `K` is used. -/
+-theorem «两端分则中有标» {R E K P : «际» α} (hK : «类» K)
+-    (split : ∀ x y, «续» R E x y → K x y ∨ P x y) {x y : α} (line : «相续» R E x y) :
++/-- **A line whose ends a transitive relation tells apart has a marked step.** Where every step of
++continuation under `E` either keeps `K` or carries the mark `P`, a line (相续) under `E` from `x` to
++`y` with `K` failing from `x` to `y` has a step carrying the mark, given with its place on the line:
++reached from `x`, and reaching `y`. Stated for every carrier and every relation; `K` need only
++compose, as a class does (by its `trans`) and as a property's not arising from one end to the other
++does. -/
++theorem «两端分则中有标» {R E K P : «际» α} (split : ∀ x y, «续» R E x y → K x y ∨ P x y)
++    (trans : ∀ {a b c}, K a b → K b c → K a c) {x y : α} (line : «相续» R E x y) :
+     ¬ K x y → ∃ u v, «续» R E u v ∧ P u v ∧ (x = u ∨ «相续» R E x u) ∧ (v = y ∨ «相续» R E v y) := by
+   induction line with
+@@ -680,5 +681,5 @@ theorem «两端分则中有标» {R E K P : «际» α} (hK : «类» K)
+     match split _ _ c with
+     | .inl k =>
+-      match ih (fun k' => apart (hK.trans k k')) with
++      match ih (fun k' => apart (trans k k')) with
+       | ⟨u, v, cuv, p, .inl same, after⟩ =>
+         exact ⟨u, v, cuv, p, .inr (Eq.subst (motive := fun w => «相续» R E _ w) same (.one c)), after⟩
+diff --git a/Becoming/PatternPassing.lean b/Becoming/PatternPassing.lean
+index a91e0ed61..4803f092c 100644
+--- a/Becoming/PatternPassing.lean
++++ b/Becoming/PatternPassing.lean
+@@ -487,5 +487,5 @@ theorem ByPassing.passes_within (by_passing : V.ByPassing passes) {d T : Nat}
+           | .inl same => .inl ⟨alike, same⟩
+           | .inr given => .inr given
+-        match «两端分则中有标» (carrierClass_class V) split line apart with
++        match «两端分则中有标» split (carrierClass_class V).trans line apart with
+         | ⟨u, v, ⟨⟨next, _⟩, alike⟩, given, from_, to⟩ =>
+           have reached : V.activityClass (S, b) u := match from_ with
+@@ -533,5 +533,5 @@ theorem ByPassing.ends_within (by_passing : V.ByPassing passes) {d T : Nat}
+           | .inl one => .inl ⟨alike, one⟩
+           | .inr given => .inr given
+-        match «两端分则中有标» (carrierClass_class V) split line apart with
++        match «两端分则中有标» split (carrierClass_class V).trans line apart with
+         | ⟨u, v, ⟨⟨next, _⟩, alike⟩, given, from_, _⟩ =>
+           have reached : V.activityClass (T + m, b) u := match from_ with
+diff --git a/Becoming/Sampling.lean b/Becoming/Sampling.lean
+index e0e024d5d..b301193d9 100644
+--- a/Becoming/Sampling.lean
++++ b/Becoming/Sampling.lean
+@@ -164,22 +164,23 @@ end Web
+ 
+ /-- What fails at one step and holds at a later one arose across some step between them,
+-where the property is decided. -/
++where the property is decided. Along the successor from `T` to `t`, the property's not arising
++composes, and it does arise from `T` to `t`, so a step where it arises lies on the line
++(`«两端分则中有标»`), its place read back as order (`Map.step_reached_le`). -/
+ theorem arises_within {p : Nat → Prop} [∀ n, Decidable (p n)] {T : Nat} :
+-    ∀ {t : Nat}, T ≤ t → ¬ p T → p t → ∃ u, T ≤ u ∧ u < t ∧ ¬ p u ∧ p (u + 1)
+-  | _, .refl, absent, held => absurd held absent
+-  | m + 1, .step le, absent, held => match (inferInstance : Decidable (p m)) with
+-    | .isTrue pm => match arises_within le absent pm with
+-      | ⟨u, from_, below, no, yes⟩ => ⟨u, from_, Nat.lt_succ_of_lt below, no, yes⟩
+-    | .isFalse npm => ⟨m, le, Nat.lt_succ_self m, npm, held⟩
++    ∀ {t : Nat}, T ≤ t → ¬ p T → p t → ∃ u, T ≤ u ∧ u < t ∧ ¬ p u ∧ p (u + 1) :=
++  fun le absent held => match Map.step_reach_of_le le with
++  | .inl same => absurd held (same ▸ absent)
++  | .inr line =>
++    match «两端分则中有标» (K := fun x y => ¬ (¬ p x ∧ p y)) (fun _ _ _ => (Decidable.em _).symm)
++      (fun k₁ k₂ ⟨no, yes⟩ => k₂ ⟨fun m => k₁ ⟨no, m⟩, yes⟩) line (fun k => k ⟨absent, held⟩) with
++    | ⟨u, _, ⟨next, _⟩, ⟨no, yes⟩, from_, to⟩ => ⟨u, Map.step_reached_le from_,
++      show u + 1 ≤ _ from next ▸ Map.step_reached_le to, no, next ▸ yes⟩
+ 
+ /-- What holds at one step and fails at a later one ceased across some step between them,
+-where the property is decided. -/
++where the property is decided: its failing arose there (`arises_within`). -/
+ theorem ceases_within {p : Nat → Prop} [∀ n, Decidable (p n)] {T : Nat} :
+-    ∀ {t : Nat}, T ≤ t → p T → ¬ p t → ∃ u, T ≤ u ∧ u < t ∧ p u ∧ ¬ p (u + 1)
+-  | _, .refl, held, gone => absurd held gone
+-  | m + 1, .step le, held, gone => match (inferInstance : Decidable (p m)) with
+-    | .isTrue pm => ⟨m, le, Nat.lt_succ_self m, pm, gone⟩
+-    | .isFalse npm => match ceases_within le held npm with
+-      | ⟨u, from_, below, yes, no⟩ => ⟨u, from_, Nat.lt_succ_of_lt below, yes, no⟩
++    ∀ {t : Nat}, T ≤ t → p T → ¬ p t → ∃ u, T ≤ u ∧ u < t ∧ p u ∧ ¬ p (u + 1) :=
++  fun le held gone => match arises_within (p := fun n => ¬ p n) le (fun no => no held) gone with
++  | ⟨u, from_, below, no, yes⟩ => ⟨u, from_, below, Decidable.of_not_not no, yes⟩
+ 
+ namespace Web

@@ -1,0 +1,73 @@
+import Lean
+import Becoming.Sampling
+
+open Lean Elab Command
+
+/-! HE2's item 1, read from the compiled proofs: what `arises_within` and `ceases_within` use, through their own
+values and the auxiliary declarations Lean made for them (matchers, named below the theorem), and whether
+either recurses itself (an eliminator of a recursive type, such as `Nat.le.brecOn`, well-founded recursion, or a
+call of itself; `Eq.rec`, the eliminator of a type that does not recur, is a cast, not recursion). Run against
+main's build and the tree's: on main both search by their own recursion; in the tree neither recurses, the law
+doing the search. -/
+
+/-- The constants a declaration's proof uses: its value's, and those of its auxiliary declarations. -/
+partial def uses (env : Environment) (n : Name) : NameSet := Id.run do
+  let mut seen : NameSet := {}
+  let mut todo : Array Name := #[n]
+  let mut out : NameSet := {}
+  while h : todo.size > 0 do
+    let m := todo.back
+    todo := todo.pop
+    if !seen.contains m then
+      seen := seen.insert m
+      match env.find? m with
+      | none => pure ()
+      | some ci =>
+        for c in (ci.value? (allowOpaque := true)).map Expr.getUsedConstants |>.getD #[] do
+          out := out.insert c
+          if n.isPrefixOf c && c != n then
+            todo := todo.push c
+  return out
+
+def recursion (env : Environment) (n c : Name) : Bool :=
+  c == n || (`WellFounded).isPrefixOf c ||
+    match c with
+    | .str ty s => ["rec", "recOn", "brecOn", "below", "binductionOn"].contains s &&
+        match env.find? ty with
+        | some (.inductInfo v) => v.isRec
+        | _ => false
+    | _ => false
+
+/-- Every constant a declaration reaches, through the types and values of what it uses. -/
+partial def reach (env : Environment) (start : Name) : NameSet := Id.run do
+  let mut seen : NameSet := {}
+  let mut todo : Array Name := #[start]
+  while h : todo.size > 0 do
+    let n := todo.back
+    todo := todo.pop
+    match env.find? n with
+    | none => pure ()
+    | some ci =>
+      let used := (ci.value? (allowOpaque := true)).map Expr.getUsedConstants |>.getD #[]
+      for m in used ++ ci.type.getUsedConstants do
+        if !seen.contains m then
+          seen := seen.insert m
+          todo := todo.push m
+  return seen
+
+/-- The coarse-step theorems of the master-laws row laws-at-coarser-steps law 8. -/
+def coarse : List Name := [`Becoming.Web.sample_arises, `Becoming.Web.sample_ceases,
+  `Becoming.Web.sample_unceasing, `Becoming.Web.sample_ceasing]
+
+def marks : List Name := [`Becoming.«两端分则中有标», `Becoming.Map.step_reach_of_le,
+  `Becoming.Map.step_reached_le, `Becoming.arises_within]
+
+#eval show CommandElabM Unit from do
+  let env ← getEnv
+  for n in [`Becoming.arises_within, `Becoming.ceases_within] do
+    let used := uses env n
+    let recs := used.toList.filter (recursion env n)
+    let own := used.toList.filter fun c => (`Becoming).isPrefixOf c && !n.isPrefixOf c
+    logInfo m!"{n}\n  recursion: {if recs.isEmpty then "none" else toString recs}\n  {String.intercalate "\n  " (marks.filter (· != n) |>.map fun l => s!"{l}: {if used.contains l then "used" else "not used"}")}\n  every Becoming constant used: {own.map toString |>.toArray.qsort (· < ·) |>.toList}"
+  for n in coarse do
+    logInfo m!"{n} reaches «两端分则中有标»: {if (reach env n).contains `Becoming.«两端分则中有标» then "yes" else "no"}"
