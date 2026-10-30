@@ -37,13 +37,13 @@ cells is decidable wherever cells are compared or listings filtered.
   with the reference on one positive scale at every listed candidate of positive weight,
   `q * g c + p * loss c = q * l c + p * gain c`, the answer has no residual
   (`answer_least_of_scaled`); net agreement is the scale `p = q = 1` (`answer_least_of_net`). Scales
-  differing by candidate do not suffice (`scales_by_candidate`). Told the candidate, with net
-  agreement where the reading formation gives positive weight, the residual is nothing exactly where
-  every candidate the holding formation weighs positively and where the loss exceeds the gain has
-  positive total weight in the reading formation's listing (`told_residual_zero_iff`, `weightOf`;
-  witness `unweighted_told`); with no cell list, holding for the answer falls short by nothing
-  exactly where the same holds (`told_shortfall_zero_iff`, through `unweighted_released` and
-  `weighed_stops_iff`).
+  differing by candidate do not suffice (`scales_by_candidate`). Told the candidate, over cells
+  covering the holding formation's listing, with net agreement where the reading formation gives
+  positive weight, the residual is nothing exactly where every candidate the holding formation
+  weighs positively and where the loss exceeds the gain has positive total weight in the reading
+  formation's listing (`told_residual_zero_iff`, `weightOf`; witness `unweighted_told`); with no
+  cell list, holding for the answer falls short by nothing exactly where the same holds
+  (`told_shortfall_zero_iff`, through `unweighted_released` and `weighed_stops_iff`).
 * **Informing** (a map `π'` telling apart all a coarser map `π` does, `π c = f (π' c)` on the
   holding formation's listed candidates, `π'`'s cells listed once each and covering that listing). A
   finer map never raises the least shortfall (`finer_least_le`, `least_falls`) and can move a rule's
@@ -66,19 +66,20 @@ cells is decidable wherever cells are compared or listings filtered.
   formation's listing alone does not suffice (`OneListing.refined_lowers`). Splits keep the worth
   with a shared model and net agreement (`splitsKeep_of_net`) and wherever the reading formation's
   value of switching off is nowhere above that of going on (`splitsKeep_of_off_le_go`), even where
-  its answer has a residual (`release_keeps`); a shared valuation with the weights apart breaks it
-  (`WeightsApart.not_splitsKeep`). Where the valuation differs, informing can lower the worth below
-  both moves (`Informing.informing_lowers`); a shared valuation with the weights apart does not keep
-  it from lowering it (`WeightsApart.weights_matter`).
+  its answer has a residual (`release_keeps`); a shared valuation with the weights apart can break
+  it (`WeightsApart.not_splitsKeep`). Where the valuation differs, informing can lower the worth
+  below both moves (`Informing.informing_lowers`); a shared valuation with the weights apart does
+  not keep it from lowering it (`WeightsApart.weights_matter`).
 * **Amounts forgone, and revaluing** (read as withholding against informing, and as revising).
   Holding for one rule, forgoing an amount, stands above holding for another, forgoing another,
   exactly where its shortfall and its amount together fall below the other's (`forgone_lt_iff`),
   through maps in the split's terms (`forgone_through_lt_iff`). Forgoing the same amount through a
-  refinement, holding for the coarser rule stands above holding for the finer exactly where the
-  finer rule's residual exceeds the coarser's by more than the least shortfall falls
-  (`refined_lt_iff`); with both answers least, the least shortfalls and the amounts alone decide
-  (`forgone_least_iff`), so through a refinement holding for the coarser answer, forgoing no less,
-  never stands above holding for the finer (`coarser_not_above`). With the holding formation's
+  refinement, both maps' cells listed once each and covering the holding formation's listing,
+  holding for the coarser rule stands above holding for the finer exactly where the finer rule's
+  residual exceeds the coarser's by more than the least shortfall falls (`refined_lt_iff`); with a
+  shared model and net agreement, so both answers least, the least shortfalls and the amounts alone
+  decide (`forgone_least_iff`), so through a refinement holding for the coarser answer, forgoing no
+  less, never stands above holding for the finer (`coarser_not_above`). With the holding formation's
   model, the reading formation's model, the reference and the map fixed, two valuations' answers
   fall short by amounts that differ exactly as their residuals do (`revalued_split`), and holding
   for one valuation's answer, forgoing an amount, stands above holding for another's, forgoing
@@ -121,9 +122,9 @@ cells is decidable wherever cells are compared or listings filtered.
   model the reading formation's before the demonstration and its valuation agreeing in net, holding
   for it never stands lower than before (`shown_never_lowers`). Where the act emitted along the
   course gives one input at two worlds, from one state of each formation the courses are alike
-  (`inputs_alike_before`), so wherever no demonstration is emitted (`undemonstrated_alike`) or none
-  tells the worlds apart (`inputs_alike`); then holding for the answer is worth one committed move
-  (`undemonstrated_worth`, `answer_constant`).
+  (`inputs_alike_before`), so they are alike wherever no demonstration is emitted
+  (`undemonstrated_alike`) or none tells the worlds apart (`inputs_alike`), and there holding for
+  the answer is worth one committed move (`undemonstrated_worth`, `answer_constant`).
 * **The four cases and two routes** (`TwoWorlds`). Two worlds, weights 1 and 2, valuation states
   agreeing with the reference, raised and reversed. As updates of one state: from both worlds listed
   and agreeing, the answer stops, is turned by being shown and left by a revaluation
@@ -152,29 +153,29 @@ shortfall into the least shortfall and its residual (`shortfall_split`) with its
 (`residual_zero_iff`, `answer_residual_zero_iff`, `told_residual_zero_iff`,
 `told_shortfall_zero_iff`, `informed_lt_iff`, `refining_never_lowers_iff`, with a shared model the
 deterministic-partition counterpart of Kamenica and Gentzkow's convexity condition) and the
-thresholds of withholding against informing and of revaluing (`forgone_lt_iff`,
-`forgone_through_lt_iff`, `refined_lt_iff`, `coarser_not_above`, `revalued_forgone_lt_iff`), joined
-to executable courses of informing and revaluing in one law with the valuation in state (`joint`,
-`TwoWorlds`). General laws on finite weighted listings: the residual's criteria, the criterion over
-every refinement with its sufficient conditions, and the refinement threshold. Identities and
-compositions of `HeldForReading`'s and `Blanketed`'s laws: `shortfall_split` is `shortfall_through`
-read cell by cell through `cond_split_least`, the least rule being the definition `leastThrough`;
-`least_falls` and `shown_least_le` are `finer_least_le` through the factoring and at what is shown;
-`informed_le` and `informed_le_add_residual` compose `finer_least_le` with the split, and
-`informed_lt_iff`, `refined_lt_iff` and `coarser_not_above` compose `least_falls` with it;
-`own_least` and `revaluing_gains_iff` compose `least_through` with the split and
-`answer_least_of_net`, `revaluing_gain` the split with `answer_least_of_net` at the reference, and
-`outcome_least` is `answer_least_of_net` at the revised valuation; `const_worth` is `Model.after` on
-a constant rule; `through_sensed` is `Blanketed.agent_through_sensory`. Definitional equations and
-finite witnesses: the carrier's step lemmas, `timing`, and the witnesses `OneListing`,
-`WeightsApart`, `Informing`, `Revaluing` and `TwoWorlds`. `ReadingLoop.Untested.model_or_order`
-already gives courses alike from an unresolved model and a reversed ranking, and
-`ReadingLoop.Untested.informed_turns` the changed start; the four cases and the routes add executing
-the interventions under one law with the valuation in state. The named capture results stay distinct
-(`ClosedCapture.courses_alike_iff_unread`, `RuleCapture.favouring_locks`,
-`DrawnShaping.critical_mass_iff`, `ReadInTime.turned_early_iff`, `ReadInTime.kept_once_favoured`,
-`ReadInTime.deadline`), and `ReadStages.complyThenOwn_best_iff` and `ReadStages.plan_realized_iff`
-concern another two-stage mechanism.
+thresholds with amounts forgone (read as withholding against informing) and of revaluing
+(`forgone_lt_iff`, `forgone_through_lt_iff`, `refined_lt_iff`, `coarser_not_above`,
+`revalued_forgone_lt_iff`), joined to executable courses of informing and revaluing in one law with
+the valuation in state (`joint`, `TwoWorlds`). General laws on finite weighted listings: the
+residual's criteria, the criterion over every refinement with its sufficient conditions, and the
+refinement threshold. Identities and compositions of `HeldForReading`'s and `Blanketed`'s laws:
+`shortfall_split` is `shortfall_through` read cell by cell through `cond_split_least`, the least
+rule being the definition `leastThrough`; `least_falls` and `shown_least_le` are `finer_least_le`
+through the factoring and at what is shown; `informed_le` and `informed_le_add_residual` compose
+`finer_least_le` with the split, and `informed_lt_iff`, `refined_lt_iff` and `coarser_not_above`
+compose `least_falls` with it; `own_least` and `revaluing_gains_iff` compose `least_through` with
+the split and `answer_least_of_net`, `revaluing_gain` the split with `answer_least_of_net` at the
+reference, and `outcome_least` is `answer_least_of_net` at the revised valuation; `const_worth` is
+`Model.after` on a constant rule; `through_sensed` is `Blanketed.agent_through_sensory`.
+Definitional equations and finite witnesses: the carrier's step lemmas, `timing`, and the witnesses
+`OneListing`, `WeightsApart`, `Informing`, `Revaluing` and `TwoWorlds`.
+`ReadingLoop.Untested.model_or_order` already gives courses alike from an unresolved model and a
+reversed ranking, and `ReadingLoop.Untested.informed_turns` the changed start; the four cases and
+the routes add executing the interventions under one law with the valuation in state. The named
+capture results stay distinct (`ClosedCapture.courses_alike_iff_unread`,
+`RuleCapture.favouring_locks`, `DrawnShaping.critical_mass_iff`, `ReadInTime.turned_early_iff`,
+`ReadInTime.kept_once_favoured`, `ReadInTime.deadline`), and `ReadStages.complyThenOwn_best_iff` and
+`ReadStages.plan_realized_iff` concern another two-stage mechanism.
 
 **Readings** [AI reading]. For a holding formation evaluating by the reading formation's own current
 valuation, with a shared model, and for this decision, no revaluation raises the worth of holding
@@ -188,10 +189,10 @@ than holding for it informed (`Informing.informing_lowers`, `Revaluing.revaluing
 shared model, some replacement valuation gains exactly where its current answer decides a listed
 cell against the reference's strict weighted preference (`revaluing_gains_iff`): read as incentives
 to withhold and to revise, in counts and before costs, the second only where the supplied update
-reaches such a valuation, which is not asserted (for a given input, `presented_forgone_lt_iff`). The
-holding formation's choice among these is represented only by the comparisons of `forgone_lt_iff`,
-`refined_lt_iff` and `revalued_forgone_lt_iff` and the four alternatives of
-`Revaluing.revaluing_best`.
+reaches such a valuation, which is not asserted (for a given input, `presented_forgone_lt_iff`). No
+choice by the holding formation among these is represented: only the worth comparisons of
+`forgone_lt_iff`, `refined_lt_iff` and `revalued_forgone_lt_iff`, and the four valued alternatives
+of `Revaluing.revaluing_best`, relate them.
 
 Read so, this is a deterministic-partition comparison related to Bayesian persuasion (Kamenica and
 Gentzkow 2011), the weights read as a prior once a positive total weight is normalized. There full
@@ -569,7 +570,7 @@ theorem const_worth (m : Model C) (gain loss : C → Nat) (r : C → Bool) (b : 
 
 end Worth
 
-/-! ### Told the candidate, informing, withholding, revaluing and answers telling nothing -/
+/-! ### Told the candidate, informing, amounts forgone, revaluing and answers telling nothing -/
 
 section Told
 
@@ -1660,10 +1661,10 @@ theorem weights_split :
       residual holding gain loss id [0, 1, 2] (answer reading gain loss id) = 0 :=
   ⟨rfl, rfl, rfl, rfl, rfl, rfl⟩
 
-/-- **The weights apart break the criterion**: by its weights the reading formation releases the
-third candidate (going on 2 against switching off nothing), stops the first two (going on 1 against
-switching off 2) and releases all three (going on 3 against switching off 2), while by the holding
-formation's weights the first two gain 2 and lose 1. -/
+/-- **With the weights apart, splits can fail to keep the worth**: by its weights the reading
+formation releases the third candidate (going on 2 against switching off nothing), stops the first
+two (going on 1 against switching off 2) and releases all three (going on 3 against switching off
+2), while by the holding formation's weights the first two gain 2 and lose 1. -/
 theorem not_splitsKeep : ¬ SplitsKeep holding reading gain loss gain loss := fun keep =>
   absurd ((keep (fun c => decide (c = 2)) (fun c => decide (c < 2))
       (fun c two => by rw [of_decide_eq_true two]; rfl) (by decide) (by decide)).1 (by decide))

@@ -37,7 +37,7 @@ INTRO = """# The review of `Becoming.ListingValuation`
 
 RF round 2, third part, RF-M.3: the valuation as state; informing and revaluing (plan §4.8). The module as first built on the reviewed design (`kit/round2c/tree/Becoming/ListingValuation.lean` at the kit's commit `801f74681`: 105 theorems in 145 declarations, every axiom report empty, [build-1](../kit/round2c/logs/build-1.log)) was reviewed on the Lean on 30 October 2026 in two independent ways: by the cross-model reader (GPT astra, high effort, read-only, a fresh session `01a18d75-3522-7a52-87a0-f551210adf5d`), and through three lenses (exactness, structure, sources), each an Opus reader working read-only, with one verifier per lens asked to refute that lens's findings. The prompts are in [the brief](BRIEF.md#round-2-third-part). The reviews follow verbatim; their line numbers are those of the reviewed version, their paths are made relative to the checkout, and their links are made to resolve from this folder, since it is link-checked as live: a line number kept in a link's text and dropped from its target, and a link that does not resolve here shown as its text with its target as code.
 
-**What was verified, and how.** Each lens's verifier judged every finding of its lens: exactness, sixteen of seventeen real (E10 not); structure, nineteen of twenty real (F16 not); sources, all fourteen real. The module was revised on the forty-nine real findings and the cross-model reader's fifteen, and rebuilt at the kit's commit `4843dd795`, 129 theorems in 177 declarations, every axiom report empty ([build-2](../kit/round2c/logs/build-2.log)). Three read-only Opus readers, one per lens, then checked from the files alone how each lens finding is reflected in the revised module: forty-four taken and seven in part (F4, F8, F9, F17, F20, L8, L13). Six of the seven were then completed, with nine more declarations, and L8 stays in part for the re-check's R2 ([the table](#what-was-taken), each row completed after the check saying so); the cross-model reader's own findings were checked by its re-check.
+**What was verified, and how.** Each lens's verifier judged every finding of its lens: exactness, sixteen of seventeen real (E10 not); structure, nineteen of twenty real (F16 not); sources, all fourteen real. The module was revised on all fifty-one lens findings (the two judged not real taken anyway) and the cross-model reader's fifteen, and rebuilt at the kit's commit `4843dd795`, 129 theorems in 177 declarations, every axiom report empty ([build-2](../kit/round2c/logs/build-2.log)). Three read-only Opus readers, one per lens, then checked from the files alone how each lens finding is reflected in the revised module: forty-four taken and seven in part (F4, F8, F9, F17, F20, L8, L13). Six of the seven were then completed, four with nine more declarations (F8, F9, F17, F20) and two in prose (F4, L13), and L8 stays in part for the re-check's R2 ([the table](#what-was-taken), each row completed after the check saying so); the cross-model reader's own findings were checked by its re-check.
 
 **The re-check.** The revised module was re-checked by the cross-model reader in the session of its review, read-only ([below](#the-re-check)): no new mathematical error; of its fifteen findings ten resolved and five in part, and nine points, all in prose, every one taken ([its table](#what-was-taken-from-the-re-check)). The module's statements did not change for them; its prose was revised and it was rebuilt, 129 theorems in 177 declarations, every axiom report empty ([build-3](../kit/round2c/logs/build-3.log)).
 
@@ -81,7 +81,7 @@ TAKEN_A = {
     '10': ('taken', "Re-check: resolved in the import closure. `SupportGated.sub_pos_of_lt`, `across_le_iff`, "
                     "`across_lt_iff` and `lt_iff_pos` replace the four helpers; `total_lt_of_mem` and `cond_zero_le` "
                     "stay, their docstrings naming `Loops.total_lt` and `Weighting.term_le_of`, outside this module's "
-                    "imports (the study leaves their extraction to the owners)."),
+                    "imports (the study leaves one statement of each to its module's owner)."),
     '11': ('taken', "Re-check: resolved. The Standing separates general laws on finite weighted listings, identities "
                     "and compositions of `HeldForReading`'s and `Blanketed`'s laws, and definitional equations and "
                     "finite witnesses; the kit's shard markers are removed."),
@@ -118,13 +118,18 @@ AFTER = {
                     "weighs, unweighted by the reading formation, is one to stop. Completed after the check: the two "
                     "`have`s are factored into `unweighted_released` and `weighed_stops_iff`, and "
                     "`told_shortfall_zero_iff` states the proposed shortfall form, with no cell list."),
+    'F14': ('taken', "The Modelling choices now say the answer is shown at every step, asked or not (`asked` and "
+                     "`none` update alike), that going on, switching off and holding change neither the candidate "
+                     "world nor the reading formation, and that holding's worth is counted in Part 1, not along "
+                     "the courses. Corrected after the cold read of the texts (its findings X17 and T28): "
+                     "`joint`'s docstring says that the answer is exposed at every step, asked or not, and that "
+                     "going on and switching off are sensed as nothing and change no world."),
     'F17': ('taken', "`informed_le_add_residual` is the proposed graded bound, cited in the header with `informed_le` "
                      "its consequence. Completed after the check: `informed_lt_iff`, the strict form (with the finer "
                      "rule's residual nothing, the coarser rule stands strictly lower exactly where the least "
                      "shortfall falls or its own residual is positive), through `least_falls`."),
     'F20': ('taken', "`forgone_least_iff` is the proposed `withhold_net_iff`. Completed after the check: "
-                     "`coarser_not_above`, the corollary (through a refinement, with both answers least, holding for "
-                     "the coarser answer, forgoing no less, never stands above holding for the finer), cited in the "
+                     "`coarser_not_above`, the corollary (through a refinement, with a shared model and net agreement, holding for the coarser answer, forgoing no less, never stands above holding for the finer), cited in the "
                      "header and in the Readings: none against informing where informing forgoes no more."),
     'L8': ('taken in part', "The Readings cite Equation 1 for any policy of the human (a deterministic constant "
                             "policy giving waiting the value of its move, a randomized one a mixture), Theorem 1 as "
@@ -134,6 +139,12 @@ AFTER = {
                             "move (gain 1 and loss 0 everywhere, a constant release is optimal), so constancy is not "
                             "failed effectiveness; the Readings say a constant answer gives holding no strict "
                             "advantage whether or not its move is the better one."),
+    'L9': ('taken', "The Standing now reads `shortfall_split` as `shortfall_through` cell by cell through "
+                    "`cond_split_least`, 'the least rule being the definition `leastThrough`'; `outcome_least` is "
+                    "`answer_least_of_net` at the revised valuation. Corrected after the cold read of the texts (its "
+                    "finding X17): `informed_le` and `informed_le_add_residual` compose `finer_least_le` with the "
+                    "split, and `informed_lt_iff`, `refined_lt_iff` and `coarser_not_above` compose `least_falls` "
+                    "with it, as their proofs do."),
     'L13': ('taken', "(a) `Act.present` replaces `press` at every use. (b) The two laws are renamed `forgone_lt_iff` "
                      "and `forgone_through_lt_iff`, the first titled structurally with 'read as withholding against "
                      "informing' marked. (c) 'an optimal signal chosen by the holding formation'. (d) 'an input "
@@ -148,8 +159,7 @@ RECHECK = (
     ('R1', 'taken', "The header's carrier bullet and `TwoWorlds.orders_apart`'s docstring: two starts alike but for the "
                     "order of the holding formation's two scheduled acts, the answers apart at step 2 and one "
                     "configuration from step 3 on. Where two courses differ only in the world, the docstrings and the "
-                    "header say 'from one state of each formation'; the record's laws and correspondence, 03 §12's "
-                    "paragraph and the study likewise."),
+                    "header say 'from one state of each formation'; the record's laws, 03 §12's paragraph and the study likewise."),
     ('R2', 'taken', "The Readings: `answer_constant` takes one state of each formation at every world, nothing shown "
                     "telling the listed worlds apart; the answer is then constant and holding for it gives no strict "
                     "advantage over the better committed move, whether or not the move it gives is the better one; "
@@ -163,9 +173,7 @@ RECHECK = (
                     "uninformative about state transitions, private and state-based) are among what is not "
                     "represented."),
     ('R5', 'taken', "The header's informing bullet asks only for `π'`'s cells, listed once each and covering the "
-                    "holding formation's listing; the coarser map's cells are named only for the criterion over every "
-                    "refinement and for `refined_lt_iff`. Updated after the check of the delta (its point 1): the "
-                    "bullet also names the coarser map's cells, listed once each and covering, for `informed_lt_iff`."),
+                    "holding formation's listing; the coarser map's cells are named only for the criterion over every refinement. Updated after the check of the delta (its point 1): the bullet also names the coarser map's cells, listed once each and covering, for `informed_lt_iff`; and after the cold read of the texts (its finding X7), the bullet on amounts forgone names both maps' cells, listed once each and covering the holding formation's listing, for `refined_lt_iff`, and the told criterion its cells covering that listing."),
     ('R6', 'taken', "`forgone_least_iff`'s docstring: holding for the answer through `π`, forgoing `k`, stands above "
                     "holding for it through `π'`, forgoing `k'`, exactly where the least shortfall through `π` and "
                     "`k` fall below that through `π'` and `k'`, each map's cells listed once each and covering the "
@@ -214,7 +222,7 @@ for path in (ve_json, vf_json, vl_json):
         verdicts[v['id']] = v
 rows = {r['lens']: r['rows'] for r in json.loads(rows_json.read_text(encoding='utf-8'))}
 
-parts = [INTRO, '## The cross-model review\n', review + '\n']
+parts = [INTRO + '\n', '## The cross-model review\n', review + '\n']
 NAMES = (('exactness', 'The exactness lens'), ('structure', 'The structure lens'), ('sources', 'The sources lens'))
 for key, title in NAMES:
     found = lenses[key]
@@ -253,7 +261,7 @@ for key, _ in NAMES:
         else:
             status = row['status']
             how = row['how'] + (f" Remaining: {row['gap']}" if row['gap'].strip() else '')
-            if row['verdict'] == 'not real':
+            if row['verdict'] == 'not real' and 'not real' not in how:
                 how = 'Judged not real by the verifier. ' + how
         how = relinked(how).replace('|', '\\|').replace('\n', ' ')
         table.append(f'| {rid} | {status} | {how} |')

@@ -1,0 +1,1069 @@
+# The cold read of RF-M.3's texts
+
+RF round 2, third part, RF-M.3: the valuation as state; informing and revaluing (plan §4.8). Before RF-M.3's landing, its texts were cold-read against the Lean of `Becoming.ListingValuation` (`kit/round2c/tree/Becoming/ListingValuation.lean`, 138 theorems in 186 declarations, every axiom report empty), as the kit's integration applied them to main in a rehearsal worktree (for the cross-model reader the kit at `07a24e169` with main at `1ec20513d`; for the lenses, after its points and its first re-check were taken, the kit at `3f43eefcf` with main at `8a8b0df82`): 03 §12's opening, its new theorem paragraph with its Reading, the pointer in the acts-alike reading and the Open bullet; 07 §7's sentences on moving the reading that gives the stop; 08 §8's bullet; the overview's paragraph; the dossier's scope box, its paragraph on RF's rounds and its account of how it was made; the package's root bullets, both READMEs and the checker's scope sentence; the module's header and docstrings; the record in both languages and the amendments to two related records; the study section's template; PLAN §4.8, §12, §13 and the Evidence list, and for the lenses also its §5 and §8 rows; regions; and the opening and the tables of what was taken in [REVIEW-RFM3-LEAN](REVIEW-RFM3-LEAN.md). Two reads ran on 31 October 2026: the cross-model reader (GPT astra, high effort, read-only, a fresh session `01a18ddb-e3da-78a0-ab08-f6fec1f4bf57`) and a workflow of three Opus readers, one per lens (exactness, readings, fit), each lens's findings given to one reader asked to refute them against the files. The prompts are in [the brief](BRIEF.md#round-2-third-part). The findings and verdicts are verbatim, with the rehearsal worktree's absolute paths made repository-relative and links made to resolve from this folder, since it is link-checked as live: a line number kept in a link's text and dropped from its target, and a link that does not resolve here (an anchor of the page a quotation came from, a path of the rehearsal alone) shown as its text with its target as code.
+
+The cross-model reader reported 6 points, every one taken. The lenses reported 64 findings, 54 confirmed and 10 refuted by their refuters; what each became is in [the table](#what-was-taken-from-the-lenses). For the lenses' findings the module's statements did not change: its header, the docstring of `WeightsApart.not_splitsKeep` and one section heading were revised, and it was rebuilt, 138 theorems in 186 declarations, every axiom report empty ([build-6](../kit/round2c/logs/build-6.log)).
+
+Before the lenses ran, the cross-model reader re-checked, in the session of its cold read, how its six points were taken and the texts cut or added since: one point, the reason to keep the valuation stated on a shared model wherever it is stated, taken ([the first re-check](#the-re-check-of-the-cross-model-readers-points)).
+
+## The cross-model reader
+
+1. **Decision changes are repeatedly mistaken for strict losses.**
+
+   Locations:
+   - [03-KNOWING.md:519](../../../../../../../theories/becoming/chapters/03-KNOWING.md): “a decision-changing revision counts as a loss”.
+   - [07-SIGNIFICANCE.md:623](../../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md), [08-METHOD.md:488](../../../../../../../theories/becoming/chapters/08-METHOD.md), [ALIGNMENT.md:28](../../../../../../../theories/becoming/review/ALIGNMENT.md), and [study_rfm3.txt:159](../kit/round2c/study_rfm3.txt): “one that changes a decision loses”.
+   - [THE-THEORY-OF-BECOMING.md:101](../../../../../../../theories/becoming/THE-THEORY-OF-BECOMING.md): “any revision that changes a decision”.
+   - [PLAN.md:231](../PLAN.md): “a decision-changing revision counts as a loss”.
+   - [make_records_rfm3.py:469](../kit/round2c/make_records_rfm3.py), and line 473: “a decision-changing revision”; “有护值免于改断之由”.
+
+   **Problem:** `revalued_lowers_iff` requires a revised decision against the current valuation’s **strict weighted preference at a listed cell**. A decision can change at a tie without losing worth. For example, one unit-weight candidate with current values `(1,1)` releases; revised values `(0,1)` stop; both answers have current worth 1. The module’s own reading preserves the qualification. The source’s preservation claim also concerns preserving optimal policies, not every decision unchanged. [Everitt et al., Claim 2 and footnote 11](https://arxiv.org/html/1908.04734).
+
+   **Exact replacements**, respectively:
+   - Replace “a decision-changing revision counts as a loss” with “a revision deciding a listed cell against the current valuation’s strict weighted preference counts as a loss”.
+   - Replace “one that changes a decision loses” with “one that decides a listed cell against the current valuation’s strict weighted preference loses”.
+   - Replace “any revision that changes a decision” with “any revision that decides a listed cell against that valuation’s strict weighted preference”.
+   - In the record’s English correspondence, replace “a decision-changing revision” with “a revision deciding a listed cell against its current strict weighted preference”.
+   - In its Chinese correspondence, replace “有护值免于改断之由” with “有护值免于使某列格之断逆当下严格加权之偏之改值之由”.
+
+2. **The Chinese record reverses an inequality.**
+
+   [make_records_rfm3.py:246](../kit/round2c/make_records_rfm3.py):
+
+   > “整断一格不逊于分之，当所移之部有得。”
+
+   **Problem:** “不逊于” says deciding the whole cell is at least as good. The English says “at most”, and `split_cell_le` proves whole-cell worth **≤** split worth.
+
+   **Exact replacement:**
+
+   > 整断一格之值不高于分之，当所移之部有得。
+
+3. **Two summaries incorrectly make every holding-formation act inert.**
+
+   [make_records_rfm3.py:413](../kit/round2c/make_records_rfm3.py), line 415, and [study_rfm3.txt:132](../kit/round2c/study_rfm3.txt):
+
+   > “the holding formation’s moves change neither the world nor the reading formation”
+
+   **Problem:** Demonstrating and presenting are also its acts. Their sensed inputs can change the listing and valuation through `Reader.update`. The module and plan correctly restrict this statement to going on, switching off and holding.
+
+   **Exact replacements:**
+   - Record English: “the holding formation’s going on, switching off and holding change neither the candidate world nor the reading formation”.
+   - Record Chinese: replace “持之形成之行不改世界亦不改读之形成” with “持之形成之续、止与持不改候选世界亦不改读之形成”.
+   - Study: “the holding formation’s going on, switching off and holding changing neither the candidate world nor the reading formation”.
+
+4. **The record attributes unnecessary listing hypotheses to the residual criteria.**
+
+   [make_records_rfm3.py:392](../kit/round2c/make_records_rfm3.py):
+
+   > “For the split and its criteria … cells listed once each, covering every listed candidate’s cell”
+
+   **Problem:** The split needs distinctness and coverage. `residual_zero_iff`, `residual_pos_iff` and `answer_residual_zero_iff` need neither; `told_residual_zero_iff` needs coverage but not distinctness. This is an inaccurate dependency account, although adding those hypotheses would not make the conclusions false.
+
+   **Exact replacement for this bilingual hypothesis:**
+
+   **English:**
+   > Cell equality decidable. The split needs distinct cells covering the holding listing; the residual cell criteria need neither, and the told residual criterion needs coverage only. Informing factors on the holding listing; the all-refinements criterion factors on both, with distinct coarse cells covering the holding listing and distinct fine cells covering both.
+
+   **Chinese:**
+   > 格之等可判。分需诸格不重且覆持之列；余缺之格判无需此二条件，辨候选之余缺判唯需覆盖。告之于持之列上分解；于每一细分之判于二列皆分解，粗格不重且覆持之列，细格不重且覆二列。
+
+5. **The re-check table’s R5 description is stale after the strict comparison was added.**
+
+   [REVIEW-RFM3-LEAN.md:1429](REVIEW-RFM3-LEAN.md):
+
+   > “the coarser map’s cells are named only for the criterion over every refinement and for `refined_lt_iff`”
+
+   **Problem:** The current header explicitly names them for `informed_lt_iff` too. The delta table correctly records that addition.
+
+   **Exact replacement for R5’s “How” cell:**
+
+   > The header’s informing bullet asks only for `π'`’s cells, listed once each and covering the holding formation’s listing, for the weak comparison. It additionally names the coarser map’s distinct covering cells for `informed_lt_iff` and the cell-list conditions for the criterion over every refinement; `refined_lt_iff` also requires distinct covering cell lists for both maps.
+
+6. **The dossier retains an unresolved evidence placeholder.**
+
+   [ALIGNMENT.md:41](../../../../../../../theories/becoming/review/ALIGNMENT.md):
+
+   > “the works they cite were checked against their texts (WORKS_CHECKED)”
+
+   **Problem:** This supplies no identifiable evidence for the sentence’s three RF-M.3 citations.
+
+   **Exact replacement for `(WORKS_CHECKED)`:**
+
+   > (Kamenica and Gentzkow 2011, DOI 10.1257/aer.101.6.2590; Everitt, Hutter, Kumar and Krakovna 2021, arXiv 1908.04734, Claim 2; Carroll, Dragan, Russell and Hadfield-Menell 2022, PMLR 162:2686–2708)
+
+For the remaining requested passages: **none** in the section-12 opening, acts-alike pointer or Open bullet; **none** in the package root bullets, either package README row or checker scope sentence; **none** in the module header and docstrings beyond the distinctions already correctly stated there; **none** in the record’s AMEND texts; **none** in the plan’s order, review paragraphs or Evidence list; **none** in either region entry; **none** in the review evidence’s opening or other “How” rows. The other citation correspondences checked are appropriately bounded as readings. The missing generated record page and future cold-read evidence are landing dependencies in this rehearsal, not proposed text corrections; the declared study-template placeholders are likewise expected.
+
+**Verdict:** The integrated account substantially matches the Lean: model separation, positive-scale agreement, refinement factorization, cost directions, unrestricted replacement valuations, timing and different-start route witnesses are preserved. The principal correction is to carry the strict-preference qualification into every preservation summary; the reversed Chinese inequality and overbroad inert-act statement also need correction. The source count is 138 theorems, and the script cites 186 declarations in 37 law items; the saved build log reports empty axiom dependencies. This was a read-only source review, with no edits, rendering, `make` or Lean build.
+
+### What was taken from the cross-model reader
+
+| # | Finding | Taken |
+|---|---|---|
+| A1 | a revision that changes a decision is said to lose, where `revalued_lowers_iff` needs a listed cell decided against the current valuation's strict weighted preference (a change at a tie loses nothing) | deciding “a listed cell against the current valuation's strict weighted preference” (or “its”, or “that valuation's”) wherever the loss is stated: 03 §12's Reading (twice), 07 §7 (with “keep the valuation from such a revision”), 08 §8, the overview, the dossier, the study, PLAN §4.8 and the record's correspondence, English and Chinese (有护值免于使某列格之断逆当下严格加权之偏之改值之由) |
+| A2 | the record's Chinese law on deciding a whole cell reverses `split_cell_le`'s inequality | 整断一格之值不高于分之，当所移之部有得 |
+| A3 | the record and the study make every act of the holding formation leave the world and the reading formation unchanged, though demonstrating and presenting change the reading formation | “the holding formation's going on, switching off and holding change neither the candidate world nor the reading formation” in the record's premise (zh 持之形成之续、止与持不改候选世界亦不改读之形成) and the study, as the module and the plan say |
+| A4 | the record gives every criterion the split's cell-list hypotheses | the record's hypothesis in two items, each law's lists as it takes them: the split needs the cells listed once each and covering; the residual's criteria need neither; the told criterion only its cell list covering the holding formation's listing; informing the factoring and the finer map's cells, the strict comparison the coarser map's as well; the criterion over every refinement the factoring on both listings, the coarse cells covering the holding formation's listing and the fine cells covering both, each listed once |
+| A5 | REVIEW-RFM3-LEAN's row R5 says the coarser map's cells are named only for the criterion over every refinement and for `refined_lt_iff`, stale after `informed_lt_iff` | the row now says that after the check of the delta (its point 1) the bullet also names the coarser map's cells, listed once each and covering, for `informed_lt_iff`; the page regenerated from its script |
+| A6 | the dossier keeps the placeholder `(WORKS_CHECKED)` | the works named as the design's and the Lean's cross-model reviews read them: Kamenica and Gentzkow's paper in the American Economic Review, 2011, and arXiv 1908.04734 and 2204.11966; the entry's date is the landing's |
+
+## The three lenses
+
+### X1 (exactness, medium, confirmed)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:517 (source kit/round2c/s12_rfm3.txt:2); _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/study_rfm3.txt:51; _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py:271 (EN), :274 (ZH); optionally experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean:69 and :1663
+
+**Quoted.** they keep it with a shared model and net agreement, and wherever the reading formation's value of switching off is nowhere above that of going on (`ListingValuation.splitsKeep_of_net`, `ListingValuation.splitsKeep_of_off_le_go`), not with the weights apart (`ListingValuation.WeightsApart.not_splitsKeep`) | study: the weights apart break it (WeightsApart.not_splitsKeep) | record law: The weights apart break the criterion: ... so splits do not keep the worth. / 权相异则破其判 | header: a shared valuation with the weights apart breaks it
+
+**Problem.** WeightsApart.not_splitsKeep is one instance: ¬ SplitsKeep holding reading gain loss gain loss, with holding weights (2,1,1), reading weights (1,2,2) and the valuation equal to the reference. Three texts read as 'with the weights apart, splits never keep the worth': 03's 'not with the weights apart', the study's 'the weights apart break it', and the Chinese conditional 权相异则破其判 ('where the weights differ, the criterion breaks'). That is false in this module. splitsKeep_of_off_le_go proves SplitsKeep m pm ... for any two models, weights apart included, and any reference, wherever l c ≤ g c on pm.listed. 03 cites that theorem in the clause just before, so the sentence contradicts itself. release_keeps is an instance where splits keep the worth even though the answer has a residual. PLAN item 6 already says 'the weights apart can break it', so the texts also disagree with each other.
+
+**Replacement.** 03: '…(`ListingValuation.splitsKeep_of_net`, `ListingValuation.splitsKeep_of_off_le_go`), and a shared valuation with the weights apart can break it (`ListingValuation.WeightsApart.not_splitsKeep`)'. Study: 'a shared valuation with the weights apart can break it (WeightsApart.not_splitsKeep)'. Record law: 'With the weights apart, a shared valuation can break the criterion: by its weights … so splits do not keep the worth.' / '权相异，共值亦可破其判：依其权……故分之不守其值。'. Optionally, with a rebuild: header 'can break it', and docstring title '**With the weights apart the criterion can fail**'.
+
+**Verdict: real.** `WeightsApart.not_splitsKeep` (ListingValuation.lean:1667) is a single instance. `splitsKeep_of_off_le_go` (:1513) proves SplitsKeep for any two models wherever l ≤ g on the reading listing, so a general claim that the weights apart break the criterion is false in the module. 03 §12 says 'not with the weights apart' right after citing splitsKeep_of_off_le_go, and the study (:51) and the record's Chinese conditional 权相异则破其判 (:274) read the same way, while PLAN item 6 says 'can break it'.
+
+**Better replacement.** Use the proposed wording, but in 03 put it after a semicolon so the clauses stay apart: '…(`ListingValuation.splitsKeep_of_net`, `ListingValuation.splitsKeep_of_off_le_go`); a shared valuation with the weights apart can break it (`ListingValuation.WeightsApart.not_splitsKeep`), and factoring on the holding formation's listing alone does not suffice (`ListingValuation.OneListing.refined_lowers`)'. The record's English law stays inside its 420-character cap (256 to about 285).
+
+### X2 (exactness, medium, confirmed)
+
+**Location.** experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean:2877; experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py:2965 (sources: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/integrate_rfm3.py:86 and :70)
+
+**Quoted.** Becoming.lean: a rule with no residual through a finer map falls short by at most any rule through a coarser one (`ListingValuation.informed_le`), and over every refinement holding for the answer never stands lower exactly where splits keep the worth (`ListingValuation.refining_never_lowers_iff`) | check_becoming.py: and holding for the answer never stands lower through every refinement exactly where splits keep the worth
+
+**Problem.** refining_never_lowers_iff quantifies only over pairs of maps that factor on both formations' listings: π c = f (π' c) for c ∈ m.listed and for c ∈ pm.listed. It also requires zs listed once and covering m.listed, and zs' listed once and covering both listings. Both sentences put 'every refinement' right after informed_le's 'finer map', which factors on the holding formation's listing alone, so they read as including such maps. Under that reading the iff is false: in OneListing.refined_lowers, SplitsKeep holds, yet a refinement that factors on the holding listing alone lowers the worth from 1 (identity) to 0 (one cell). 03 §12, the module header, the record's law 11 and PLAN item 6 all say 'on both listings'; these two summaries drop it. A secondary omission: both state shortfall_split ('falls short by the least shortfall through it plus a residual') without the split's cell condition (cells listed once each and covering).
+
+**Replacement.** Becoming.lean: '…and over every refinement factoring on both formations' listings, holding for the answer never stands lower exactly where splits keep the worth (`ListingValuation.refining_never_lowers_iff`)'. check_becoming.py: 'and holding for the answer never stands lower through every refinement factoring on both listings exactly where splits keep the worth'. Optionally also 'over cells listed once each and covering, any rule through the map falls short by …'.
+
+**Verdict: real.** `refining_never_lowers_iff` (:1528) quantifies only over maps that factor on both listings, with zs listed once and covering m.listed and zs' covering both. The module itself calls factoring on the holding listing alone 'a refinement' (the least_falls, refined_lt_iff and coarser_not_above docstrings), and over those maps the iff fails: in `OneListing.refined_lowers` SplitsKeep holds, yet the worth falls from 1 through id to 0 through one cell. Becoming.lean:2877 and check_becoming.py:2965 say 'every refinement' without the 'both listings' qualifier that 03 §12, the header, the record's law on the criterion and PLAN item 6 all carry.
+
+### X3 (exactness, medium, confirmed)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:517 (source kit/round2c/s12_rfm3.txt:2); _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/study_rfm3.txt:69 and :72
+
+**Quoted.** by the reading formation's own current valuation, on the holding formation's model, no rule through the map stands higher than its answer, and a revaluation lowers it exactly where it decides some listed cell against the current valuation's strict weighted preference (`ListingValuation.own_least`, `ListingValuation.revalued_lowers_iff`); by the revised valuation the revised answer has no residual (`ListingValuation.outcome_least`)
+
+**Problem.** own_least, revalued_lowers_iff and outcome_least use one model m both to form the answer (answer m g l π) and to evaluate it. Their hypothesis is therefore that the reading formation's model is the holding formation's. The text says only 'on the holding formation's model', and the same paragraph has just used that phrase for where the evaluation is made ('By a supplied reference valuation on the holding formation's model, a rule through the map falls short …'), not as a condition on the reading formation's model. Read that way, the claim is refuted in this module. In WeightsApart (models apart, valuation = reference = gain/loss), the answer through the cells {0, 1} and {2} has residual 1 (WeightsApart.weights_split). So, by the reading formation's own valuation evaluated on the holding formation's model, leastThrough through that map stands strictly higher (worth 3 against the answer's 2), and the revised answer's residual need not be 0. The record's law 23, the module header and the docstrings all say 'its model the holding formation's'.
+
+**Replacement.** 'with the reference the reading formation's own current valuation and its model the holding formation's, no rule through the map stands higher than its answer, and a revaluation lowers it exactly where … (`ListingValuation.own_least`, `ListingValuation.revalued_lowers_iff`); with that shared model, by the revised valuation the revised answer has no residual (`ListingValuation.outcome_least`)'. Change the study's lines 69 and 72 the same way: 'by the reading formation's own current valuation, its model the holding formation's, …'.
+
+**Verdict: real.** own_least (:998), revalued_lowers_iff (:1010) and outcome_least (:1024) form the answer on the same model m they evaluate on, so they need the reading formation's model to be the holding formation's. 03 §12 says only 'on the holding formation's model', a phrase its own paragraph uses for where the reference evaluates, and it gives outcome_least no model condition; study lines 68–72 do the same. With the models apart this fails: in WeightsApart, with valuation equal to reference, the answer through {0, 1} and {2} has residual 1 (weights_split) and is worth 2, against 3 for leastThrough.
+
+### X4 (exactness, medium, confirmed)
+
+**Location.** _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py:305 (EN), :308 (ZH), :403–406 (hypothesis, EN and ZH)
+
+**Quoted.** By the valuation after a revaluation, the revised answer has no residual, which endorses no revaluation, … / 依改后之值，改后之答无余缺 | own_least, revalued_lowers_iff, revaluing_gain and revaluing_gains_iff take its model to be the holding formation's, residual_pos_of_gains any model.
+
+**Problem.** outcome_least is stated with one model m for both formations: residual m g' l' π zs (answer m g' l' π) = 0. It therefore needs the reading formation's model to be the holding formation's. The record's law gives it no model condition, and the hypothesis listing which theorems take the shared model leaves it out. The record therefore reads as if outcome_least held for any model, like residual_pos_of_gains. With the models apart it fails: in WeightsApart.weights_split, through the cells {0, 1} and {2}, the reading formation's answer has residual 1 by a reference equal to its own valuation (gain, loss).
+
+**Replacement.** Law: 'With the reading formation's model the holding formation's, by the valuation after a revaluation the revised answer has no residual, …' / '读之形成之模型即持之形成之模型，则依改后之值，改后之答无余缺……'. Hypothesis: 'own_least, revalued_lowers_iff, outcome_least, revaluing_gain and revaluing_gains_iff take its model to be the holding formation's, residual_pos_of_gains any model.' / 'own_least、revalued_lowers_iff、outcome_least、revaluing_gain 与 revaluing_gains_iff 取其模型为持之形成之模型，residual_pos_of_gains 取任一模型。'
+
+**Verdict: real.** outcome_least (:1024) states residual m g' l' π zs (answer m g' l' π) = 0, with one model for both formations. The record's law (:305/:308) gives no model condition. Its hypothesis (:403–406) lists own_least, revalued_lowers_iff, revaluing_gain and revaluing_gains_iff as taking the shared model and leaves outcome_least out, although with the models apart the claim fails (WeightsApart.weights_split: residual 1 with valuation equal to reference).
+
+### X5 (exactness, low, confirmed)
+
+**Location.** experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean:79; theories/becoming/chapters/03-KNOWING.md:517; _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py:285 (EN), :287 (ZH); _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/study_rfm3.txt:63; _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md:397
+
+**Quoted.** with both answers least, the least shortfalls and the amounts alone decide (`forgone_least_iff`), so through a refinement holding for the coarser answer, forgoing no less, never stands above holding for the finer (`coarser_not_above`) | ZH: 二答皆最少，则最少所缺与其量定之 | PLAN: through a refinement, with both answers least, the coarser answer forgoing no less never stands above the finer
+
+**Problem.** forgone_least_iff and coarser_not_above assume a shared model m (the answers are answer m g l π and answer m g l π') and net agreement at every listed candidate of positive weight. That both answers are least follows from these (answer_least_of_net); it is not the theorems' hypothesis. The weaker statement does follow in a line from forgone_through_lt_iff (with least_falls), but the cited theorems do not state it. Their docstrings and PLAN item 7 ('a shared model and net agreement') give the actual hypotheses.
+
+**Replacement.** 'with a shared model and net agreement, so both answers least, the least shortfalls and the amounts alone decide (`forgone_least_iff`), so …'. ZH: '共模型且净相合（故二答皆最少），则最少所缺与其量定之'. PLAN §13: 'through a refinement, with a shared model and net agreement, the coarser answer forgoing no less never stands above the finer'.
+
+**Verdict: real.** forgone_least_iff (:924) and coarser_not_above (:946) take a shared model m and `net` as hypotheses, not 'both answers least'. The weaker form does follow from forgone_through_lt_iff and least_falls, but it is not what the cited theorems state. PLAN item 7 already gives '(a shared model and net agreement)'.
+
+**Better replacement.** Use the proposed wording for 03, the header, the study and PLAN §13, but not in the record's English law (:285), which is at 404 of its 420-character cap: the proposed insertion would bring it to about 442 and fail capped(). There, replace 'with both answers least' with 'with a shared model and net agreement' (about 418 characters). Chinese: '共模型且净相合（故二答皆最少），则最少所缺与其量定之'.
+
+### X6 (exactness, low, confirmed)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:517; _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py:294 (EN), :298 (ZH); _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/study_rfm3.txt:66; _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md:211 (source kit/round2c/plan_rfm3.py:100)
+
+**Quoted.** *Revaluing*: at one model and map, two valuations' answers fall short by amounts that differ exactly as their residuals do | Revaluing: at one model and one map / 改值：于一模型一映射 | At one model and one map, two valuations' answers have shortfalls that differ exactly as their residuals do
+
+**Problem.** revalued_split and revalued_forgone_lt_iff take two models, m (holding) and pm (reading), with the reference and the map fixed. The answers are answer pm g l π and answer pm g' l' π, evaluated on m. 'At one model' either suggests a shared model, which narrows a result that holds with the models apart, or leaves the reading formation's model unstated. The header and both docstrings say 'With the holding formation's model, the reading formation's model, the reference and the map fixed'.
+
+**Replacement.** 'with the holding formation's model, the reading formation's model, the reference and the map fixed, two valuations' answers …' / '持之形成之模型、读之形成之模型、参照与映射皆定，二值之答……'
+
+**Verdict: real.** revalued_split (:982) and revalued_forgone_lt_iff (:1092) take two models (the answers are formed on pm, the shortfalls measured on m) and hold with the models apart. The header (:81–83) and the docstrings say exactly that: 'the holding formation's model, the reading formation's model, the reference and the map fixed'. 'At one model and map' in 03, the study (:66), the record (:294/:298) and PLAN item 8 either suggests a shared model, which narrows the result, or leaves the reading model unstated; nothing in it is false, but the hypotheses are stated inexactly.
+
+**Better replacement.** Use the proposed wording in 03, the study and PLAN. The record's English law (:294) is at 356 of its 420-character cap, and the proposed phrase would bring it to about 431 and fail the cap. Use 'Revaluing: with both models, the reference and the map fixed, two valuations' answers have shortfalls differing exactly as their residuals do…' (about 381 characters) / '改值：二模型、参照与映射皆定，二值之答之所缺之差恰如其余缺之差；…'.
+
+### X7 (exactness, low, confirmed)
+
+**Location.** experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean:40–44 and :76–79; _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md:1429 (R5)
+
+**Quoted.** Told the candidate, with net agreement where the reading formation gives positive weight, the residual is nothing exactly where … | Forgoing the same amount through a refinement, holding for the coarser rule stands above holding for the finer exactly where the finer rule's residual exceeds the coarser's by more than the least shortfall falls (`refined_lt_iff`) | R5: the coarser map's cells are named only for the criterion over every refinement and for `refined_lt_iff`
+
+**Problem.** told_residual_zero_iff needs its cell list to cover the holding formation's listing (covers : ∀ c ∈ m.listed, c ∈ zs). refined_lt_iff needs both maps' cells listed once each and covering (once, covers, once', covers'). The header's Informing bullet supplies only π''s cells, and the coarser map's cells only for informed_lt_iff. Neither the told sentence nor the refined_lt_iff sentence states its cell condition, although the record's hypotheses H2 and H3 and the docstrings do. Evidence row R5 says the header names the coarser cells for refined_lt_iff, which it does not.
+
+**Replacement.** 'Told the candidate, over cells covering the holding formation's listing, with net agreement …'; 'Forgoing the same amount through a refinement, both maps' cells listed once each and covering the holding formation's listing, holding for the coarser rule …'. Then correct R5 to match what the header states.
+
+**Verdict: real.** told_residual_zero_iff (:637–638) needs `covers`, and refined_lt_iff (:903–907) needs both maps' cells listed once each and covering. The header's sentences on them (:40–44, :76–79) state neither condition; the header names the coarser map's cells only for informed_lt_iff (:54–56). So R5's row (REVIEW-RFM3-LEAN.md:1429), which says they are named 'for refined_lt_iff', does not match the header.
+
+**Better replacement.** Edit the header as proposed (this needs a rebuild). R5's text is generated from evidence_rfm3_lean.py's RECHECK (:166), so correct it there and regenerate the page, e.g. '…the coarser map's cells are named only for the criterion over every refinement. Updated after the check of the delta (its point 1): the bullet also names them, listed once each and covering, for `informed_lt_iff`'. If the header gains the condition for refined_lt_iff, R5 can stay as it is.
+
+### X8 (exactness, low, confirmed)
+
+**Location.** _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py:327 (EN), :331 (ZH)
+
+**Quoted.** sensory, nothing, a world shown, a valuation input presented, or asked / 感为无、示一世界、呈一值之入或问
+
+**Problem.** Input.shown carries o : O, what a demonstration shows (Reader.input w .demonstrate = .shown (rd.reveal w)), not a world. The update filters the listing to the worlds that show the same o. 'A world shown' says the world itself is sensed, which holds only where reveal is injective. The joint docstring, the study and the carrier's other laws say what a demonstration shows.
+
+**Replacement.** 'sensory, nothing, what a demonstration shows, an input presented, or asked' / '感为无、示之所显、所呈之入或问'
+
+**Verdict: real.** Input.shown carries o : O, and Reader.input w .demonstrate = .shown (rd.reveal w) (:1773–1828); the update filters the listing by that o. So the sensory part holds what a demonstration shows, which is a world only where reveal is the identity, as in TwoWorlds. The record's carrier law (:327/:331) says 'a world shown' / 示一世界, while the Input docstring and the study (:82–83) say 'what a demonstration shows'.
+
+### X9 (exactness, low, confirmed)
+
+**Location.** theories/becoming/review/ALIGNMENT.md:28 (source _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/integrate_rfm3.py:223)
+
+**Quoted.** From different starts the answers and the final state do not tell whether the valuation changed, and no criterion of legitimate change is supplied (Carroll, Dragan, Russell and Hadfield-Menell 2022).
+
+**Problem.** TwoWorlds.not_lumped is one witness. From two particular starts (TwoWorlds.starts_apart), the record of the answers and the state at T are alike while the valuation changed on one route alone. It does not show that, from different starts, the answers and the final state never tell. The header itself says neither an ambiguity from one start nor a test of legitimate change is shown, and 03 §12 states the result as a witness.
+
+**Replacement.** 'From different starts, the answers and the final state can fail to tell whether the valuation changed (one witness), and no criterion of legitimate change is supplied (…)'.
+
+**Verdict: real.** TwoWorlds.not_lumped (:2408) is about two particular executable routes from two particular starts. The header (:143–148) and 03 §12's Reading ('The witness shows only that, across two starts…') present it as a witness, and 07 §7 and the overview say 'can'. ALIGNMENT.md:28's 'From different starts the answers and the final state do not tell whether the valuation changed' reads as a general claim.
+
+**Better replacement.** Either the proposed wording or, in 07's and the overview's terms: 'From different starts a route informing and one revaluing can answer alike and end in one state, so these need not tell whether the valuation changed, and no criterion of legitimate change is supplied (Carroll, Dragan, Russell and Hadfield-Menell 2022).'
+
+### X10 (exactness, low, confirmed)
+
+**Location.** _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py:217–222
+
+**Quoted.** EN: so a rule with no residual stands at least as high, and so does the reading formation's answer where its model is the holding formation's and it agrees in net. | ZH: 故无余缺之规则不低，其所缺不逾经较粗映射之任一规则；读之形成之模型即持之形成之模型且净相合时，其答亦然。
+
+**Problem.** The Chinese adds 其所缺不逾经较粗映射之任一规则 ('its shortfall is at most any rule's through the coarser map'), which the English lacks. The clause is equivalent through after_le_iff_shortfall and matches informed_le's statement, so nothing in it is false, but the two languages state different content.
+
+**Replacement.** EN: 'so a rule with no residual falls short by at most any rule through the coarser map and stands at least as high, and so does …'. Alternatively, drop the clause from the Chinese.
+
+**Verdict: real.** The Chinese law (:222) adds 其所缺不逾经较粗映射之任一规则, informed_le's shortfall conjunct, which the English (:217–221) lacks. Nothing in it is false, since the two forms are equivalent through after_le_iff_shortfall, but the two languages of one law item say different things.
+
+**Better replacement.** Drop the clause from the Chinese ('…故无余缺之规则不低；读之形成之模型即持之形成之模型且净相合时，其答亦然。'). The English item is at 410 of its 420-character cap, so the proposed English addition (about 55 characters) would fail capped().
+
+### X11 (exactness, low, confirmed)
+
+**Location.** experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md:129 (source _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/integrate_rfm3.py:124); _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py:481 (alias)
+
+**Quoted.** 值为态：告与改读之形成之值 | alias '告与改读之形成之值'
+
+**Problem.** The English has 'informing and revaluing a reading formation' in both the row and the alias. The Chinese most readily parses as 告与改[读之形成之值], 'informing and revising the reading formation's valuation', which makes informing act on the valuation. In the Lean (Reader.update), a demonstration filters the listing, and only a presented input revises the valuation.
+
+**Replacement.** '告读之形成与改其值': row '值为态：告读之形成与改其值，以自然数计…', and the alias likewise.
+
+**Verdict: real.** In the Lean a demonstration filters the listing, and only a presented input revises the valuation (Reader.update, :1811–1815). 告与改读之形成之值 most naturally parses as informing and revising the reading formation's valuation, while the English row and alias (make_records_rfm3.py:481) say 'informing and revaluing a reading formation'.
+
+### X12 (exactness, low, confirmed)
+
+**Location.** _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md:211 and :213 (source kit/round2c/plan_rfm3.py:105)
+
+**Quoted.** in 10 it rises from 0 to 1 from one cell to the cells {1, 2} and {3} | 2 through the cells {1, 2} and {3}
+
+**Problem.** WeightsApart's candidates are 0, 1 and 2, and the map decide (c = 2) gives the cells {0, 1} and {2}. The plan counts from one and names a cell {3} that does not exist in the Lean; a reader checking against the Lean finds {2} as the singleton. The record and the header say 'the cells of the first two candidates and of the third'.
+
+**Replacement.** 'the cells {0, 1} and {2}', or 'the cells of the first two candidates and of the third'.
+
+**Verdict: real.** WeightsApart's candidates are the naturals 0, 1 and 2 (:1627), and the middle map decide (c = 2) has cells {0, 1} and {2} (:1645, :1656). PLAN items 8 and 10 (:211, :213) count from one, although §4.8 says it states the design under the Lean's names. Read with the Lean's names, cells {0} and {1, 2} give a worth of 3, not 2.
+
+**Better replacement.** Write 'the cells of the first two candidates and of the third', as the header and the record do; or name the candidates 0, 1 and 2 in item 10 and write {0, 1} and {2}.
+
+### X13 (exactness, low, confirmed)
+
+**Location.** _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md:200
+
+**Quoted.** its *listing* (candidate worlds with weights)
+
+**Problem.** In the carrier, the listing component of the state is List W only. The weights belong to the law (Reader.weight) and are fixed, never revised. A demonstration filters the list and leaves the weights unchanged (answer_shown; the record says 'weights and valuation unchanged'). 'With weights' makes the weights part of the revisable state.
+
+**Replacement.** 'its *listing* (the candidate worlds it keeps, weighted by its law's fixed weights)'
+
+**Verdict: real.** The carrier's state is List W × V (joint, :1853–1854), and the weights belong to the law (Reader.weight) and are never updated. E17 changed the header to '(candidates, weighted by its law)' (:15), but PLAN §4.8's opening (:200) still says '(candidate worlds with weights)', in a sentence saying each component is changed only by its own update.
+
+**Better replacement.** Use the header's words: 'its *listing* (candidate worlds, weighted by its law)'.
+
+### X14 (exactness, low, confirmed)
+
+**Location.** _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md:207
+
+**Quoted.** *Told the candidate, the answer has a residual, and falls short, exactly where an unweighted candidate is one to stop* … Through the identity map, with the reading formation's valuation agreeing in net
+
+**Problem.** By told_residual_zero_iff and told_shortfall_zero_iff, the residual (and the shortfall) is positive exactly where some candidate meets three conditions: the holding formation lists it with positive weight, its loss exceeds its gain, and it has zero total weight in the reading formation's listing. An unweighted candidate that the holding formation does not weigh adds nothing. The title drops that condition; the docstring title keeps it ('a candidate the holding formation weighs, unweighted by the reading formation'). The body also omits that, for the residual form, the cell list must cover the holding formation's listing.
+
+**Replacement.** Title: '*Told the candidate, the answer has a residual, and falls short, exactly where a candidate the holding formation weighs, unweighted by the reading formation, is one to stop*'. Body: 'Through the identity map, over cells covering the holding formation's listing, with …'.
+
+**Verdict: real.** told_residual_zero_iff and told_shortfall_zero_iff (:637–641, :687–690) make the residual and the shortfall positive exactly where some candidate the holding formation lists with positive weight, with loss above gain, has zero total weight in the reading listing. The PLAN title (:207) drops the holding formation's weighing, which the docstring title (:629–630) keeps. The body's cover condition is already supplied by Part 1's heading (:202, 'cells listed once and covering every listed candidate's cell'), so only the half of the finding about the title holds.
+
+**Better replacement.** Change the title as proposed. The body can stay, since Part 1's heading gives the cover.
+
+### X15 (exactness, low, confirmed)
+
+**Location.** _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md:209 (source kit/round2c/plan_rfm3.py:82)
+
+**Quoted.** a criterion of monotonicity under refinement, not of agreement with the reference, and weaker than the answer being least at every cell
+
+**Problem.** 'Weaker than' claims two things: that the answer being least implies SplitsKeep, and that the converse fails. The Lean proves only the second, through release_keeps (SplitsKeep with a residual). No theorem states the first, and 'least at every cell' names no map. The header and the docstrings stop at 'not of agreement with the reference'.
+
+**Replacement.** 'a criterion of monotonicity under refinement, not of agreement with the reference: it can hold where the answer has a residual (`release_keeps`)'
+
+**Verdict: real.** The module shows only that SplitsKeep can hold where the answer has a residual (release_keeps, :1584); no theorem states that the answer being least implies SplitsKeep. 'Least at every cell' also names no map: in WeightsApart the answer has residual 0 through the identity and through one cell (weights_split), yet SplitsKeep fails (not_splitsKeep). The implication holds only for 'least through every map', by composing informed_le with refining_never_lowers_iff.
+
+### X16 (exactness, low, confirmed)
+
+**Location.** _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md:397
+
+**Quoted.** the course forms of the four cases
+
+**Problem.** The added course forms are TwoWorlds.shown_course and TwoWorlds.presented_course. They cover only the two cases in which the act turns the answer: shown, from both worlds listed, and presented, from the first world alone. They do not cover all four cases.
+
+**Replacement.** 'the course forms of the two turning cases (`TwoWorlds.shown_course`, `TwoWorlds.presented_course`)'
+
+**Verdict: real.** Only TwoWorlds.shown_course (:2279) and TwoWorlds.presented_course (:2306) were added, as F8 asked; they cover the two cases in which the act turns the answer ((a) shown, (b) presented). PLAN:397's 'the course forms of the four cases' reads as one course form per case, while the study says just 'the course forms'.
+
+### X17 (exactness, low, confirmed)
+
+**Location.** _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md:1229 (A10), :1265 (F14), :1280 (L9), :1425 (R1)
+
+**Quoted.** A10: (the study leaves their extraction to the owners) | F14: joint's docstring says the same | L9: `informed_le` (with `informed_le_add_residual`, `refined_lt_iff`) composes `finer_least_le` with the split | R1: the record's laws and correspondence, 03 §12's paragraph and the study likewise
+
+**Problem.** The rows do not match the texts as they now stand. A10: the study (line 189) leaves only total_lt_of_mem to Flow's owner and says nothing of cond_zero_le or Weighting.term_le_of. F14: joint's docstring says the answer is exposed at every step and that going on and switching off are sensed as nothing and change no world; it does not say that holding changes neither the world nor the reading formation, nor that holding's worth is counted in Part 1. L9: the Standing now groups refined_lt_iff with informed_lt_iff and coarser_not_above, as composing least_falls with the split. R1: the phrase 'from one state of each formation' appears in the record's laws (line 349) but not in its correspondence.
+
+**Replacement.** A10: '(the study leaves `total_lt_of_mem`'s extraction to `Flow`'s owner)', or add cond_zero_le to the study's sentence. F14: 'joint's docstring says the answer is exposed at every step, asked or not, and that going on and switching off are sensed as nothing and change no world'. L9: '`informed_le` and `informed_le_add_residual` compose `finer_least_le` with the split, and `informed_lt_iff`, `refined_lt_iff` and `coarser_not_above` compose `least_falls` with it'. R1: 'the record's laws, 03 §12's paragraph and the study likewise'.
+
+**Verdict: real.** A10 (:1229) says the study leaves both lemmas' extraction to the owners, but study_rfm3.txt:189 leaves only total_lt_of_mem to Flow's owner. F14 (:1265) says joint's docstring 'says the same', but that docstring (:1850–1852) says only that the answer is exposed asked or not and that going on and switching off are sensed as nothing and change no world. L9 (:1280) groups refined_lt_iff with finer_least_le, while the Standing (:163–164) now groups it with least_falls; R1 (:1425) names the record's correspondence, which lacks 'from one state of each formation' (only the law at make_records_rfm3.py:349 has it).
+
+**Better replacement.** Use the proposed wording, but make the change in the generator rather than on the page. A10 and R1 are in evidence_rfm3_lean.py's TAKEN_A (:84) and RECHECK (:151). F14 and L9 come from the check's data, so correct them through AFTER entries, then regenerate REVIEW-RFM3-LEAN.md.
+
+### X18 (exactness, low, confirmed)
+
+**Location.** _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py:30; _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md:402
+
+**Quoted.** KITD + 'evidence/REVIEW-RFM3-COLDREAD.md' | kit/round2c/ (`kit/round2c/`): the third part's, with the design's review in REVIEW-RFM3 (`evidence/REVIEW-RFM3.md`) and the Lean's in REVIEW-RFM3-LEAN (`evidence/REVIEW-RFM3-LEAN.md`).
+
+**Problem.** The record's references cite evidence/REVIEW-RFM3-COLDREAD.md, which does not yet exist in evidence/; the study's paragraph is still the {COLDREAD} placeholder (study_rfm3.txt:185). PLAN's evidence list does not name the file, although its RF-M.2 entry names REVIEW-RFM2-COLDREAD. Unless the file is written before registration, the record's reference dangles and the two texts disagree.
+
+**Replacement.** Before registering, write evidence/REVIEW-RFM3-COLDREAD.md (evidence_rfm3_coldread.py) and fill the study's {COLDREAD}. Add to PLAN.md:402: '…and the Lean's in REVIEW-RFM3-LEAN (`evidence/REVIEW-RFM3-LEAN.md`), and the cold read of its texts in REVIEW-RFM3-COLDREAD (`evidence/REVIEW-RFM3-COLDREAD.md`).'
+
+**Verdict: real.** This holds only in part. PLAN's Evidence list (:402) names RF-M.2's cold-read file but not REVIEW-RFM3-COLDREAD, and §13 has no paragraph on the third part's cold read, although board_rfm3.py's row says what each finding became is in plan §13 and no kit script (plan_rfm3.py included) adds either. The rest is by design: evidence_rfm3_coldread.py writes the file and {COLDREAD} is filled at landing, and make_records_rfm3.py's sha() would fail rather than leave a dangling reference.
+
+**Better replacement.** Leave the record's references as they are. At landing, add to PLAN.md:402 '…and the Lean's in REVIEW-RFM3-LEAN (`evidence/REVIEW-RFM3-LEAN.md`) and the cold read of its texts in REVIEW-RFM3-COLDREAD (`evidence/REVIEW-RFM3-COLDREAD.md`)', and add a §13 paragraph 'The cold read of the third part's texts', as RF-M.2 has.
+
+### X19 (exactness, low, confirmed)
+
+**Location.** theories/becoming/chapters/08-METHOD.md:486
+
+**Quoted.** The off-switch game's information value (Hadfield-Menell, Dragan, Abbeel and Russell 2017) is not represented here: holding an act for a reading is the bullet above's.
+
+**Problem.** The bullet on holding an act for a reading ('What holding an act for a reading is worth', 03 §12) is at line 487, below RR's bullet at line 486; RF-M.3's bullet follows at line 488. This is already wrong in main, but it sits next to RF-M.3's insertion.
+
+**Replacement.** '…is not represented here: holding an act for a reading is the next bullet's.'
+
+**Verdict: real.** In 08 §8 the RR bullet (line 486) says 'holding an act for a reading is the bullet above's', but the bullet on what holding an act for a reading is worth is the next one (487); the bullet above (485) is about complying when read. Main has the same order (RR at 487, holding at 488), so the slip predates RF-M.3 and lies in RR's bullet, not in RF-M.3's text.
+
+### R1 (readings, medium, confirmed)
+
+**Location.** theories/becoming/review/ALIGNMENT.md:28 (account at :41)
+
+**Quoted.** evaluated by the current valuation on a shared model, there is none against informing and a reason to keep the valuation from any revision deciding a listed cell against its strict weighted preference, beside the preservation incentive of current-reward-function evaluation (Everitt, Hutter, Kumar and Krakovna 2021, Claim 2).
+
+**Problem.** Everitt et al. do not give the preservation incentive to current-reward-function evaluation as such.
+- Their Claim 2 says that, under Assumptions 1–3, preserving the implemented reward function is the only instrumental goal a current-RF agent that anticipates time inconsistency (TI-considering) may have for it.
+- Their Claim 3 says the current-RF agent that ignores time inconsistency has no instrumental goal to influence that function. They present this as sidestepping Omohundro's preservation argument.
+
+The module, 03 §12 and plan §8 name the TI-considering agent; the dossier, the most-read text, drops it. Line 41 says these works, arXiv 1908.04734 among them, were checked against their texts.
+
+**Replacement.** …, beside the preservation incentive their Claim 2 permits a current-reward-function agent that anticipates time inconsistency (Everitt, Hutter, Kumar and Krakovna 2021).
+
+**Verdict: real.** ALIGNMENT.md:28 says "the preservation incentive of current-reward-function evaluation (… Claim 2)", and :41 says arXiv 1908.04734 was checked. The repository's own source checks say Claim 2 permits a preservation incentive only to the agent anticipating time inconsistency, and Claim 3 removes the influence incentive for the agent ignoring it (REVIEW-RFM3.md finding 21; REVIEW-RFM3-LEAN.md L2: the ignoring agent's counterpart in counts would be indifference to revaluation). The module's Readings (:221-230) and 03 §12 name that agent; plan §4.8 does too (§8's row only says "their Claim 2 permits"). In the proposed replacement, "their Claim 2" follows Kamenica and Gentzkow in the same sentence, so it could be read as theirs.
+
+**Better replacement.** …, beside the preservation incentive of current-reward-function evaluation by an agent that anticipates time inconsistency (Everitt, Hutter, Kumar and Krakovna 2021, Claim 2).
+
+### R2 (readings, medium, confirmed)
+
+**Location.** _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py:472-473 (en) and :479 (zh), record a-reading-informed-and-revalued, correspondence
+
+**Quoted.** own_least with revalued_lowers_iff is a one-decision counterpart of current-reward-function evaluation's preservation incentive (Everitt et al. 2021, Claim 2) / own_least 与 revalued_lowers_iff 为以当下奖励函数评估之保存之诱因（Everitt 等 2021，Claim 2）于一次抉择之对应
+
+**Problem.** Same misattribution as R1, in the result's home record, which research-find and the generated pages show. Claim 2's incentive belongs to the TI-considering agent only; Claim 3 gives the TI-ignoring current-RF agent none.
+
+**Replacement.** en: "own_least with revalued_lowers_iff is a one-decision counterpart of current-reward-function evaluation's preservation incentive for an agent anticipating time inconsistency (Everitt et al. 2021, Claim 2)". Adds 44 characters; with R7 and R9 the correspondence is 1196 of the 1200 cap.
+
+zh: "own_least 与 revalued_lowers_iff 为以当下奖励函数评估而顾及时间不一致者之保存之诱因（Everitt 等 2021，Claim 2）于一次抉择之对应". With R7 and R9, 462 of 500.
+
+**Verdict: real.** The record's correspondence (make_records_rfm3.py:472-473; zh :479) has the same unqualified "current-reward-function evaluation's preservation incentive (Everitt et al. 2021, Claim 2)". The module's Readings and the reviews' account of Claims 2 and 3 tie that incentive to the agent that anticipates time inconsistency. The replacement fits the caps: the en field is 1110 characters now; R2 adds 45 (not 44), R7 14 and R9 27, giving 1196 of 1200. The zh field comes to 462 of 500.
+
+### R3 (readings, low, confirmed)
+
+**Location.** theories/becoming/chapters/08-METHOD.md:488; _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/study_rfm3.txt:158-160
+
+**Quoted.** evaluating by the reading formation's current valuation on a shared model is a one-decision counterpart of current-reward-function evaluation (Everitt, Hutter, Kumar and Krakovna 2021): no revaluation gains, and one that decides a listed cell against the current strict weighted preference loses, the preservation incentive their Claim 2 permits
+
+**Problem.** "their Claim 2 permits" is accurate, but the counterpart is named as current-reward-function evaluation in general. Only the TI-considering agent fits, because the answer held for is the revised valuation's; Claim 3's TI-ignoring current-RF agent has no such incentive. The module (Readings) and 03 §12 name that agent; 08 §8 and the study do not, so the texts differ.
+
+**Replacement.** 08: "…is a one-decision counterpart of current-reward-function evaluation by an agent that anticipates time inconsistency (Everitt, Hutter, Kumar and Krakovna 2021): no revaluation gains, and one that decides a listed cell against the current strict weighted preference loses, the preservation incentive their Claim 2 permits that agent;"
+
+Study: "own_least with revalued_lowers_iff is a one-decision counterpart of current-reward-function evaluation by an agent that anticipates time inconsistency (Everitt, Hutter, Kumar and Krakovna 2021), the preservation incentive their Claim 2 permits it:"
+
+**Verdict: real.** 08 §8 (:488) and the study (:157-160) call the result "a one-decision counterpart of current-reward-function evaluation" and then list the loss from a deciding revision. By the module's own account (:223-227) and L2's verdict, only the anticipating agent fits, because the answer held for is the revised valuation's; the ignoring agent (Claim 3) would be indifferent. "their Claim 2 permits" is accurate, but the counterpart's object is too general, and these two texts differ from the module and 03 §12, which name the agent. Low.
+
+### R4 (readings, medium, refuted)
+
+**Location.** theories/becoming/review/ALIGNMENT.md:28
+
+**Quoted.** From different starts the answers and the final state do not tell whether the valuation changed, and no criterion of legitimate change is supplied (Carroll, Dragan, Russell and Hadfield-Menell 2022).
+
+**Problem.** An unlabelled general law built on one witness. TwoWorlds.not_lumped shows two particular routes, one shown and one presented, from two particular starts whose answers and final state agree; it says nothing about every pair of starts.
+
+The sentence also drops what the module header, 03 §12 and the record's law (starts_apart, lumped_with_start) keep:
+- the starts differ, and with the start added the record determines whether the valuation changed;
+- no case from one start is reached.
+
+The overview says "can"; the dossier does not.
+
+**Replacement.** From different starts a route informing and one revaluing can answer alike and end in one state while only one changes the valuation, the start telling them apart; no criterion of legitimate change is supplied (Carroll, Dragan, Russell and Hadfield-Menell 2022).
+
+**Verdict: not real.** "Do not tell whether the valuation changed" denies a determination (`Learning.Lumped π g := ∀ i i', π i = π i' → g i = g i'`, Learning.lean:834), and one colliding pair establishes that, exactly as `TwoWorlds.not_lumped` does. The sentence asserts nothing about every pair of starts. Its "From different starts" keeps the difference of the starts, which the finding says was dropped. Leaving out "with the start added it does" in a summary cut for length removes a detail but states nothing the Lean does not prove; "can" is needed only in the overview's positive form.
+
+### R5 (readings, low, refuted)
+
+**Location.** _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md:289
+
+**Quoted.** from different starts a route informing and one revaluing answer alike and end in one state, so the answers and the final state do not tell whether it changed
+
+**Problem.** Plan §8's row generalizes the same way as R4. It drops "can", the restriction to these routes, and the fact that with the start added the record determines the property. Item 21 (line 227) keeps all three.
+
+**Replacement.** from different starts a route informing and one revaluing can answer alike and end in one state, so on those routes the answers and the final state do not tell whether it changed (with the start added they do)
+
+**Verdict: not real.** In this row, "a route informing and one revaluing answer alike and end in one state" reads as a description of the witness routes (`route_answers`, `routes_rest`). "So the answers and the final state do not tell whether it changed" denies a determination, which `not_lumped` proves. A literature-table row compresses, and item 21 of the same plan (:227) carries the full boundary. Adding "can" would be harmless, but nothing stated is wrong.
+
+### R6 (readings, medium, confirmed)
+
+**Location.** experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean:191-194; theories/becoming/chapters/03-KNOWING.md:519; _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md:231
+
+**Quoted.** The holding formation's choice among these is represented only by the comparisons of `forgone_lt_iff`, `refined_lt_iff` and `revalued_forgone_lt_iff` and the four alternatives of `Revaluing.revaluing_best`. (03: "the holding formation's choice among them represented only by the comparisons with amounts forgone and the four one-decision alternatives"; plan: "the holding formation's choice among these is represented only by the comparisons of 7, 8 and 13 and the alternatives of 14")
+
+**Problem.** These say the holding formation's choice is represented, by the comparisons and the four alternatives. Revaluing.revaluing_best's own docstring and plan item 14 say no choice among them is represented. The witness is one decision with four valued alternatives and no formation choosing among them, and the comparisons order worth; they are not a choice rule.
+
+The plan also lists 13 (revaluing_gain, revaluing_gains_iff, residual_pos_of_gains). These are not comparisons with amounts forgone; the module and 03 name only the theorems of items 7 and 8.
+
+**Replacement.** Module: "No choice by the holding formation among these is represented: only the worth comparisons of `forgone_lt_iff`, `refined_lt_iff` and `revalued_forgone_lt_iff`, and the four valued alternatives of `Revaluing.revaluing_best`, relate them."
+
+03: "…, with no choice by the holding formation among them represented, only the comparisons with amounts forgone and the four one-decision alternatives."
+
+Plan: "no choice by the holding formation among these is represented, only the comparisons of 7 and 8 and the alternatives of 14"
+
+**Verdict: real.** The module's Readings (:191-194) say the holding formation's choice "is represented only by" the comparisons and "the four alternatives of `Revaluing.revaluing_best`". That theorem's docstring (:1754-1756) and plan item 14 say "no choice among them is represented", and REVIEW-RFM3's row 18 records that the minimization is not represented as a choice. 03 §12 and plan §4.8 repeat the tension, and the plan adds 13, which the module and 03 do not list. This is a wording inconsistency, not a mathematical error. The replacements are right.
+
+### R7 (readings, low, confirmed)
+
+**Location.** _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py:476 (en) and :479 (zh)
+
+**Quoted.** answer_constant is the off-switch game's Equation 1 for a constant policy (Hadfield-Menell et al. 2017) / answer_constant 为关机博弈之 Equation 1 于恒定之策（Hadfield-Menell 等 2017）
+
+**Problem.** Equation 1 holds for any policy of the human, randomized ones included. A randomized policy constant in the utility gives waiting a mixture of the two moves, not the one committed move answer_constant states. The module, 03 §12 and the study say "a deterministic policy constant in the utility"; the record drops "deterministic", so it is looser than the other three texts.
+
+**Replacement.** en: "answer_constant is the off-switch game's Equation 1 for a deterministic constant policy (Hadfield-Menell et al. 2017)"
+
+zh: "answer_constant 为关机博弈之 Equation 1 于确定且恒定之策（Hadfield-Menell 等 2017）"
+
+**Verdict: real.** The record (:476; zh :479) says "Equation 1 for a constant policy". The module (:243-245) notes that Equation 1 holds for any policy and that a randomized constant one gives a mixture of the two moves; 03 §12 and the study say "a deterministic policy constant in the utility". `answer_constant` states one committed move. The proposed "deterministic constant policy" (+14) fits the cap with R2 and R9 (1196/1200); the fuller wording used elsewhere (+29) would reach 1211 and break it.
+
+### R8 (readings, low, confirmed)
+
+**Location.** _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md:1425 (re-check table, row R1)
+
+**Quoted.** Where two courses differ only in the world, the docstrings and the header say 'from one state of each formation'; the record's laws and correspondence, 03 §12's paragraph and the study likewise.
+
+**Problem.** The "how" row claims more than the files show. The record's law (make_records_rfm3.py:349) carries "from one state of each formation", but its correspondence does not. The correspondence touches these courses only in "answer_constant is the off-switch game's Equation 1 for a constant policy", with no such condition.
+
+**Replacement.** … Where two courses differ only in the world, the docstrings and the header say 'from one state of each formation'; the record's laws, 03 §12's paragraph and the study likewise.
+
+**Verdict: real.** The re-check table's R1 row (REVIEW-RFM3-LEAN.md:1425) says "the record's laws and correspondence … likewise". The correspondence (make_records_rfm3.py:467-479) has neither "from one state of each formation" nor the order witness; it touches these courses only in "answer_constant is the off-switch game's Equation 1 for a constant policy". The record's laws do carry them (the law at :349 and the orders law), as do 03 §12's paragraph and the study. Dropping "and correspondence" makes the row accurate.
+
+### R9 (readings, low, confirmed)
+
+**Location.** theories/becoming/THE-THEORY-OF-BECOMING.md:102; theories/becoming/review/ALIGNMENT.md:28; _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py:470-471 and :479
+
+**Quoted.** Read [AI reading]: under a reference it does not share, incentives to withhold and to revise; (dossier: "incentives to withhold and to revise before costs"; record: "AI reading: under a reference the valuation differs from, incentives to withhold and to revise, before costs;")
+
+**Problem.** The module's Readings, 03 §12 and plan §4.8 say the incentive to revise holds only where the supplied update reaches such a valuation, which is not asserted:
+- revaluing_gains_iff is an existence claim over unrestricted value functions;
+- presented_forgone_lt_iff compares only a given input.
+
+The re-check's R3 row says this was taken. The overview, the dossier and the record state the incentive to revise without it, and the overview also drops "before costs".
+
+**Replacement.** Overview: "Read [AI reading]: under a reference it does not share, incentives before costs to withhold and, where the supplied update reaches such a valuation, to revise;"
+
+Dossier: "incentives, before costs, to withhold and, where the supplied update reaches such a valuation, to revise"
+
+Record en: "incentives to withhold and to revise (if the update reaches it), before costs;"
+
+Record zh: "读为扣告与改（若所予之更新可达）之诱因，未计其费"
+
+**Verdict: real.** The module's Readings (:189-191) read "incentives to withhold and to revise, in counts and before costs, the second only where the supplied update reaches such a valuation, which is not asserted". That limit was taken in on the re-check (its R3 row), and `revaluing_gains_iff` quantifies over an unrestricted pair of value functions. The overview (:102) drops both "before costs" and the limit. The dossier (:28) and the record's "AI reading" (:470-471, :479) keep "before costs" but drop the limit, so all three state a broader reading than the module gives. The replacements are right, and the record's fits the caps (see R2).
+
+### R10 (readings, low, confirmed)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:519
+
+**Quoted.** their receiver breaks ties in the sender's favour and their prior is common, so the weights apart lie outside their model (Alonso and Câmara 2016)
+
+**Problem.** The "so" makes the sender-favouring tie-break a reason the weights apart lie outside Kamenica and Gentzkow's model. Only the common prior is that reason; heterogeneous priors are Alonso and Câmara's extension. The tie-break is a separate difference: the answer here releases on ties, as the module and the plan say.
+
+**Replacement.** their receiver breaks ties in the sender's favour, where the answer here releases; their prior is common, so the weights apart lie outside their model (heterogeneous priors: Alonso and Câmara 2016)
+
+**Verdict: real.** In 03 §12's Reading, "their receiver breaks ties in the sender's favour and their prior is common, so the weights apart lie outside their model" makes the tie-break part of the reason. The module (:205-208) and plan §4.8 state the tie-break as a separate difference ("where the answer here releases") and give only the common prior as the reason, citing Alonso and Câmara for heterogeneous priors. 03 also drops the release at ties that makes the tie-break worth mentioning. The replacement is right.
+
+### R11 (readings, low, confirmed)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:519 (paraphrase also at study_rfm3.txt:165 and PLAN.md:289)
+
+**Quoted.** who call frozen initial preferences a very crude baseline: by them a revision deciding a listed cell against the current valuation's strict weighted preference counts as a loss, wanted or not
+
+**Problem.** "by them" can be read as "by Carroll and others", who say the opposite: not all preference shifts are unwanted, which is why they propose natural preference shifts. Their own description of initial preferences is "a first (very crude) proposal for safe shifts", not a baseline, and "frozen" is not their word. The module's "by it" (the evaluation) is unambiguous; 03 loses that.
+
+**Replacement.** who call using the initial preferences as safe shifts a first, very crude proposal: evaluated by the current valuation, a revision deciding a listed cell against its strict weighted preference counts as a loss, wanted or not, and no criterion of legitimate, desired or autonomous change is supplied here
+
+**Verdict: real.** Only the pronoun is confirmed. In 03 §12, "who call frozen initial preferences a very crude baseline: by them a revision … counts as a loss, wanted or not" lets "them" be read as Carroll and others, which would misattribute the view; the module's and plan §4.8's "by it" (the evaluation) are unambiguous. The wording claim cannot be confirmed from the files. The repository's checks against the paper themselves say Carroll and others "call frozen initial preferences a 'very crude' baseline" (REVIEW-RFM2.md:132) and the "frozen-initial-preference proposal 'very crude'" (REVIEW-RFM3.md:307), so the paraphrase need not change.
+
+**Better replacement.** who call frozen initial preferences a very crude baseline: evaluated by the current valuation, a revision deciding a listed cell against its strict weighted preference counts as a loss, wanted or not, and no criterion of legitimate, desired or autonomous change is supplied here
+
+### R12 (readings, low, refuted)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:519
+
+**Quoted.** What a reader of the answers alone leaves open is how the state that answered came to be, the route form of §11 (`#what-the-acts-show`)'s obstruction.
+
+**Problem.** A general claim drawn from the witness, right after the sentence that limits it to two starts and says no case from one start is reached. On the two routes the answers alone leave it open; they need not always.
+
+**Replacement.** What a reader of the answers alone can leave open is how the state that answered came to be, the route form of §11 (`#what-the-acts-show`)'s obstruction.
+
+**Verdict: not real.** The sentence is in the labelled Reading paragraph, directly after "The witness shows only that, across two starts, the answers and the final state do not determine whether the valuation changed, while the record with the start does; a case of one start is not reached". Its scope is therefore given in place. "Leaves open" denies a determination, which the witness establishes (answers alike on both routes: `route_answers`, `routes_alike`), so it reads what the witness shows and is not a law.
+
+### R13 (readings, low, confirmed)
+
+**Location.** experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean:155 (also :572); theories/becoming/chapters/08-METHOD.md:488; _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md:229; _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/study_rfm3.txt:151
+
+**Quoted.** thresholds of withholding against informing and of revaluing (`forgone_lt_iff`, `forgone_through_lt_iff`, `refined_lt_iff`, `coarser_not_above`, `revalued_forgone_lt_iff`)
+
+**Problem.** The contribution is stated in the reading's words without its label. The theorems compare holding for a rule through a coarser map with one through a finer, each forgoing an amount. The module's own bullet (line 73) and docstrings (lines 851, 898, 918, 940) mark "withholding against informing" as a reading. The module's Standing, 08 §8, the plan's Standing and the study do not.
+
+**Replacement.** Module: "thresholds of holding through a coarser map against a finer one (read as withholding against informing) and of revaluing (`forgone_lt_iff`, …)". Elsewhere: "the thresholds of a coarser map against a finer (read as withholding against informing) and of revaluing".
+
+**Verdict: real.** The lens reviews judged that `forgone_lt_iff` and `forgone_through_lt_iff` compare any two rules or maps, so "withholding against informing" is a reading of one case (REVIEW-RFM3-LEAN E13, L13). The module's header bullet (:73) and docstrings (:851, :898, :918, :940) mark it so, but the module's Standing (:155), 08 §8 (:488), the plan's Standing (:229) and the study (:151) use those words unmarked to name the contribution. The proposed "holding through a coarser map against a finer one" misdescribes `forgone_lt_iff` and `forgone_through_lt_iff`, which assume no refinement.
+
+**Better replacement.** Module: "the thresholds with amounts forgone (read as withholding against informing) and of revaluing (`forgone_lt_iff`, `forgone_through_lt_iff`, `refined_lt_iff`, `coarser_not_above`, `revalued_forgone_lt_iff`)". In 08 §8, the plan's Standing and the study: "the thresholds with amounts forgone (read as withholding against informing) and of revaluing".
+
+### R14 (readings, low, refuted)
+
+**Location.** theories/becoming/chapters/08-METHOD.md:488; _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py:467-470 ("In counts:")
+
+**Quoted.** with a shared model, its criterion over every refinement is the counterpart, along the cells of the listing's partitions, of the convexity condition for full disclosure in Bayesian persuasion (Kamenica and Gentzkow 2011), no optimal signal or equilibrium represented
+
+**Problem.** One claim carries two standings:
+- 03 §12 and the study label the Kamenica–Gentzkow correspondence an AI reading ("Read so, this is a deterministic-partition comparison related to Bayesian persuasion").
+- 08 §8 states it, unlabelled, as what the result "restates".
+- The record puts it under "In counts:", before its "AI reading:".
+
+**Replacement.** 08: "…; read [AI reading], with a shared model, its criterion over every refinement is the counterpart, along the cells of the listing's partitions, of the convexity condition for full disclosure in Bayesian persuasion (Kamenica and Gentzkow 2011), no optimal signal or equilibrium represented."
+
+Record: move the SplitsKeep clause after "AI reading:". The length does not change.
+
+**Verdict: not real.** This follows the landed convention. For RF-M.2, 03's labelled Reading holds Theorem 1 and Blackwell's partition case, 08 §8 states them as restatements, and the record lists them under "In counts:" before "AI reading:". The module's own Standing (:153-154) also states the Kamenica–Gentzkow counterpart as part of the contribution. The counterpart is mathematical: `SplitsKeep` unfolded is subadditivity of worth over splits into released and stopped parts, i.e. convexity of the indirect value along those splits once the weights are normalized. The cross-model re-check found it "appropriately restricted to deterministic partition splits". No reading is presented as a theorem beyond that convention.
+
+### T1 (fit, medium, confirmed)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:517; also rf-formations-that-read/kit/round2c/study_rfm3.txt:51, rf-formations-that-read/kit/round2c/make_records_rfm3.py:271-274 (law, en and zh), becoming/Becoming/ListingValuation.lean:69-70 and :1663
+
+**Quoted.** not with the weights apart (`ListingValuation.WeightsApart.not_splitsKeep`)
+
+**Problem.** Read plainly, this says splits never keep the worth when the weights are apart. That contradicts the clause just before it: splitsKeep_of_off_le_go takes the two formations' models as arbitrary (m pm) and holds whatever the weights. not_splitsKeep is a single witness, so the Lean shows only that the weights apart can break it, as plan §4.8 item 6 says ("the weights apart can break it"). The same universal appears in four more places: the study ("the weights apart break it"), the record's law ("The weights apart break the criterion" / "权相异则破其判"), the module header ("a shared valuation with the weights apart breaks it") and not_splitsKeep's title. "Break the criterion" also reads as the iff failing, when what fails is SplitsKeep.
+
+**Replacement.** 03: "…(`ListingValuation.splitsKeep_of_net`, `ListingValuation.splitsKeep_of_off_le_go`), whatever the weights, and with the weights apart a shared valuation can fail it (`ListingValuation.WeightsApart.not_splitsKeep`); factoring on the holding formation's listing alone does not suffice (…)". Study: "the weights apart can break it (WeightsApart.not_splitsKeep)". Record: "With the weights apart, splits can fail to keep the worth: by its weights …" / zh "权相异，分可不守其值：依其权……". Module header: "a shared valuation with the weights apart can break it". Title at 1663: "**With the weights apart, splits can fail to keep the worth**".
+
+**Verdict: real.** `WeightsApart.not_splitsKeep` (ListingValuation.lean:1667) proves ¬SplitsKeep for one witness only: shared gain/loss, holding weights 2,1,1 against reading weights 1,2,2. `splitsKeep_of_off_le_go` (L1513) takes `m` and `pm` arbitrary, so splits do keep the worth with the weights apart wherever off ≤ go. 03:517 lists "not with the weights apart" right after that clause, so read plainly it is a universal the Lean contradicts. The study (L51), the record's law (make_records_rfm3.py:271-274), the header (L69-70) and the docstring title (L1663) also state the witness generically, while plan item 6 correctly says "can break it".
+
+**Better replacement.** 03: "…they keep it with a shared model and net agreement (`ListingValuation.splitsKeep_of_net`) and, whatever the models, wherever the reading formation's value of switching off is nowhere above that of going on (`ListingValuation.splitsKeep_of_off_le_go`); with the weights apart a shared valuation can fail it (`ListingValuation.WeightsApart.not_splitsKeep`), and factoring on the holding formation's listing alone does not suffice (…)". The proposal's "whatever the weights" after both citations would wrongly attach to splitsKeep_of_net, which needs a shared model. The study, record (en/zh), header and title take the proposal's "can fail/can break" wording.
+
+### T2 (fit, medium, confirmed)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:519; theories/becoming/chapters/07-SIGNIFICANCE.md:623
+
+**Quoted.** some replacement valuation gains exactly where its answer decides a listed cell against the reference's strict weighted preference
+
+**Problem.** In 03, "its" binds to "some replacement valuation". revaluing_gains_iff's condition is the current answer's residual, and the module's Readings say "its current answer". As written, the condition concerns the replacement's own answer, which is a different claim. 07's "gains exactly where its answer decides a listed cell against that reference's strict weighted preference" has the same gap. Its nearest antecedent is the valuation revalued to the reference, whose own answer has no residual by that reference (outcome_least), so on that reading the condition never holds.
+
+**Replacement.** 03: "some replacement valuation gains exactly where the current answer decides a listed cell against the reference's strict weighted preference". 07: "gains exactly where its current answer decides a listed cell against that reference's strict weighted preference".
+
+**Verdict: real.** `revaluing_gains_iff` (L1051-1055) conditions on `0 < residual … (answer m g l π)`, the current answer's residual. In 03:519, "some replacement valuation gains exactly where its answer decides…" binds "its" to the replacement. Yet the replacement revalued to the reference gains while its own answer has no residual (`revaluing_gain`, `answer_least_of_net`). 07:623 is ambiguous rather than clearly misbound, since "its" is most naturally the reading formation's. "Current" fixes both, as the module's Readings (L188) and plan §4.8 Readings (L231) already say.
+
+### T3 (fit, medium, confirmed)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:517; also rf-formations-that-read/kit/round2c/make_records_rfm3.py:294 and :298 (law, en and zh), rf-formations-that-read/kit/round2c/study_rfm3.txt:66, rf-formations-that-read/PLAN.md:211 (§4.8 item 8)
+
+**Quoted.** *Revaluing*: at one model and map, two valuations' answers fall short by amounts that differ exactly as their residuals do
+
+**Problem.** "At one model" reads as a shared model. revalued_split and revalued_forgone_lt_iff take the holding formation's model m and the reading formation's model pm apart, both fixed. The cross-model reader's A1 was taken on exactly this point: the module header (L81-83) and revalued_split's docstring now say "with the holding formation's model, the reading formation's model, the reference and the map fixed". The texts keep the wording A1 corrected: the record's law ("at one model and one map" / "于一模型一映射"), the study's Revaluing bullet and plan item 8 ("At one model and one map", though its next clause names both models). A reader would take revaluing's split to need a shared model, which the Lean does not assume.
+
+**Replacement.** 03 and the study: "*Revaluing*: with both formations' models, the reference and the map fixed, two valuations' answers fall short by amounts that differ exactly as their residuals do". Record: "Revaluing: with both formations' models, the reference and the map fixed, …" / zh "改值：二形成之模型、参照与映射皆定，…". Plan item 8: "With both formations' models, the reference and the map fixed, …".
+
+**Verdict: real.** `revalued_split` (L982) and `revalued_forgone_lt_iff` (L1092) take the holding model `m` and the reading model `pm` separately. The cross-model reader's A1 asked to name both fixed models precisely so that m ≠ pm is visible, and the header (L81-83) and docstring now do. 03:517 ("at one model and map"), the study (L66), the record's law (make_records_rfm3.py:294 and 298, "于一模型一映射") and plan item 8 (L211) keep "one model", which suggests a shared model the Lean does not assume. The plan's next clause names only the holding formation's model, not both as the finding says; that slip does not change the finding.
+
+**Better replacement.** As proposed. Plan item 8: "With both formations' models, the reference and the map fixed, two valuations' answers have shortfalls that differ exactly as their residuals do: the least shortfall reads only the holding formation's model, the reference and the map; …". The record's law with this wording is 393/86 characters, within the 420/190 caps.
+
+### T4 (fit, medium, refuted)
+
+**Location.** theories/becoming/review/ALIGNMENT.md:28; also rf-formations-that-read/PLAN.md:289 (§8 row)
+
+**Quoted.** From different starts the answers and the final state do not tell whether the valuation changed
+
+**Problem.** The budget cut dropped the witness qualifier. TwoWorlds.not_lumped is one pair of executable routes, so the Lean shows only that the answers and the final state can fail to tell whether the valuation changed. As written, this is a universal the Lean does not prove; 03 §12 and the overview say "can". Plan §8's row says the same: "so the answers and the final state do not tell whether it changed".
+
+**Replacement.** Dossier: "From different starts the answers and the final state can fail to tell whether the valuation changed (one pair of executable routes), and no criterion of legitimate change is supplied (…)". Plan row: "…so the answers and the final state need not tell whether it changed;".
+
+**Verdict: not real.** `TwoWorlds.not_lumped` (L2408) is `¬ Learning.Lumped (record T) (changed T)`: the record does not determine the property. Non-determination is refuted by a single pair, so for routes from different starts, "the answers and the final state do not tell whether the valuation changed" says exactly what is proved. 03's Reading and the docstring use "do not determine" in the same sense. The plan row's "so" is scoped by its preceding clause, which names the two routes. Reading "do not tell" as "never tell" is not the natural reading.
+
+### T5 (fit, medium, confirmed)
+
+**Location.** theories/becoming/THE-THEORY-OF-BECOMING.md:102
+
+**Quoted.** a finer map never raises the first, a revaluation moves only the second, and from different starts a route informing it and one revaluing it can answer alike and end in one state. Read [AI reading]: under a reference it does not share, incentives to withhold and to revise;
+
+**Problem.** The cut kept that a finer map never raises the least shortfall but dropped that it can raise the residual by more. The paragraph then gives no basis for an incentive to withhold. A reader infers that informing never hurts, and the reading appears to contradict the law just stated (the dossier keeps "informing can lower the worth of holding"). The paragraph also opens "In natural-number counts" where its neighbours (L92-L100) state their standing ("Proved …"). "Least shortfall" and "residual" appear nowhere else on the page and are not glossed.
+
+**Replacement.** "Proved in natural-number counts: by a reference valuation, holding for a reading formation's answer through a map falls short by the least any rule through the map falls short by, plus a residual where the answer decides cells against the reference; a finer map never raises the first but can raise the second by more, so informing can lower the worth; a revaluation moves only the second; and from different starts a route informing it and one revaluing it can answer alike and end in one state. Read [AI reading]: …" (the rest unchanged).
+
+**Verdict: real.** L102 states only that a finer map never raises the least shortfall and that a revaluation moves only the residual, then reads "incentives to withhold". Nothing the paragraph states supports withholding. A finer map can raise the residual by more than the least shortfall falls (`Informing.informing_lowers`: least 1→0, residual 0→11), and the paragraph omits it, so it implies the separation the module calls "not general" (L138-139). The neighbouring paragraphs L92-L100 open "Proved …", and "least shortfall" and "residual" occur nowhere else on the page.
+
+**Better replacement.** Closer to the reading budget: "…Proved in natural-number counts: by a reference valuation, holding for a reading formation's answer through a map falls short by the least shortfall through the map plus a residual where the answer decides listed cells against the reference's strict weighted preference; a finer map never raises the first but can raise the second by more, a revaluation moves only the second, and from different starts a route informing it and one revaluing it can answer alike and end in one state. Read [AI reading]: …" (the rest unchanged).
+
+### T6 (fit, medium, confirmed)
+
+**Location.** rf-formations-that-read/PLAN.md:342 (§12 item 2); also PLAN.md §13 (L395-397), Evidence (L402); rf-formations-that-read/kit/round2c/integrate_rfm3.py, evidence_rfm3_coldread.py
+
+**Quoted.** then the valuation as state (§4.8, built in the kit, its design and its Lean reviewed);
+
+**Problem.** No kit step brings the plan up to the landing:
+- integrate_rfm3.py leaves the plan alone, whereas integrate_rfm2.py set RF-M.2's entry to "(§4.7, landed)".
+- Neither plan_rfm3.py nor evidence_rfm3_coldread.py adds anything for the cold read.
+After the landing:
+- §12 still says "built in the kit".
+- §13 has no paragraph on the cold read of the third part's texts; RF-M.2 has one at L393.
+- The Evidence list does not link REVIEW-RFM3-COLDREAD, although the record references it and the study links it.
+Yet board_rfm3.py's landing text, and the plan's own L403, say what each finding became "is in plan §13".
+
+**Replacement.** In the landing step:
+- §12: "then the valuation as state (§4.8, landed);".
+- §13: add "**The cold read of the third part's texts.** Before the landing, RF-M.3's texts were cold-read against the module (REVIEW-RFM3-COLDREAD (`evidence/REVIEW-RFM3-COLDREAD.md`)): …, what each finding became in its table."
+- Evidence: after the Lean's review add "and the cold read of its texts in REVIEW-RFM3-COLDREAD (`evidence/REVIEW-RFM3-COLDREAD.md`)".
+
+**Verdict: real.** integrate_rfm3.py's docstring says "RF's plan is brought to the landing by plan_rfm3.py". But plan_rfm3.py is a pre-cold-read step that exits if run twice. It sets §12 to "(§4.8, built in the kit, its design and its Lean reviewed)", and no kit step sets "landed", whereas integrate_rfm2.py:265-267 did for RF-M.2. §13 has no cold-read paragraph for the third part (RF-M.2's is at L393), and the Evidence list (L402) omits REVIEW-RFM3-COLDREAD. make_records_rfm3.py's REVIEWS and the study cite that file, and board_rfm3.py's landing text says what each finding became "is in plan §13".
+
+**Better replacement.** As proposed, with the §12 edit made in integrate_rfm3.py, as integrate_rfm2.py did. Also correct integrate_rfm3.py's docstring sentence about plan_rfm3.py.
+
+### T7 (fit, low, refuted)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:519
+
+**Quoted.** who call frozen initial preferences a very crude baseline: by them a revision deciding a listed cell against the current valuation's strict weighted preference counts as a loss, wanted or not
+
+**Problem.** "Them" can bind to the authors (the "who"), which makes the loss Carroll et al.'s verdict rather than what the baseline counts. The module and plan say "by it", meaning the baseline. The 03 sentence also no longer says that evaluating by the current valuation is that baseline; it says only that it relates to their work.
+
+**Replacement.** "…(Carroll, Dragan, Russell and Hadfield-Menell 2022), who call evaluation by frozen initial preferences, which evaluating by the current valuation is, a very crude baseline: by that baseline a revision deciding a listed cell against the current valuation's strict weighted preference counts as a loss, wanted or not, …"
+
+**Verdict: not real.** In these texts "by X" consistently means evaluated by a valuation ("by the reference", "by its own current valuation"). "Them" most naturally takes the nearer plural, "frozen initial preferences", and read that way the sentence says what that baseline counts. The phrase "against the current valuation's strict weighted preference" ties the baseline to the current valuation. The rewording is clearer, but nothing stated is wrong.
+
+### T8 (fit, low, confirmed)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:517
+
+**Quoted.** Where the acts taken give two worlds one input, from one state of each formation the courses are alike, so wherever no demonstration is emitted, and holding for the answer is worth one committed move (`ListingValuation.inputs_alike_before`, `ListingValuation.undemonstrated_worth`, `ListingValuation.answer_constant`).
+
+**Problem.** "so wherever no demonstration is emitted, and holding for the answer is worth one committed move" does not parse. The sentence cites answer_constant but leaves out its case, every listed world showing what w₀ shows (inputs_alike). The record's law and the study both state that case ("where no demonstration tells them apart").
+
+**Replacement.** "Where the acts taken give two worlds one input, from one state of each formation the courses are alike, so they are alike wherever no demonstration is emitted or none tells the listed worlds apart; there holding for the answer is worth one committed move (`ListingValuation.inputs_alike_before`, `ListingValuation.undemonstrated_worth`, `ListingValuation.answer_constant`)."
+
+**Verdict: real.** "So wherever no demonstration is emitted, and holding for the answer is worth one committed move" is an elliptical clause joined by "and". The sentence also cites `answer_constant` (L2117) without stating its case: every listed world shows what w₀ shows. The module header (L123-126), the record's law (make_records_rfm3.py:349-351) and the study (L98-101) state both cases.
+
+### T9 (fit, low, confirmed)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:517; rf-formations-that-read/kit/round2c/study_rfm3.txt:109-110
+
+**Quoted.** by the reference with the holding formation listing both worlds in the first and the first world alone in the second
+
+**Problem.** "The first" and "the second" mean the two witnesses, but in a clause about "the first world" they read as worlds. The study's version uses "(a)" and "(b)" without ever introducing them; the plan introduces them and the study does not.
+
+**Replacement.** 03: "by the reference with the holding formation listing both worlds where the world is shown and the first world alone where a valuation is presented". Study: the same, or label the two starts (a) and (b) where the four cases are introduced.
+
+**Verdict: real.** In the study, "(a)" and "(b)" occur only at L109-110: a grep finds no other use, so the labels are undefined there. They come from the Lean's shownStart/presentedStart docstrings and plan item 20. In 03:517, "listing both worlds in the first and the first world alone in the second" is parseable but puts "the first" case next to "the first world".
+
+### T10 (fit, low, confirmed)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:517; rf-formations-that-read/kit/round2c/study_rfm3.txt:101-102
+
+**Quoted.** one presented input compares with the current valuation by the residuals (`ListingValuation.presented_forgone_lt_iff`)
+
+**Problem.** The law does not compare an input with a valuation. It compares holding for the answer after one presented input, forgoing k', with holding for the current answer, forgoing k, by the residuals and the amounts together. The study has the same wording: "One presented input is compared with the current valuation by the residuals".
+
+**Replacement.** "holding for the answer after one presented input, forgoing an amount, stands above holding for the current answer, forgoing another, exactly where its residual and amount together fall below the other's (`ListingValuation.presented_forgone_lt_iff`)"
+
+**Verdict: real.** `presented_forgone_lt_iff` (L2132-2138) compares holding for the answer after one presented input, forgoing k', with holding for the current answer, forgoing k, exactly where residual' + k' < residual + k. 03:517 and the study (L101-102) say instead that the input "compares with the current valuation by the residuals". That misnames what is compared and drops the amounts, which are the theorem's point (its docstring: "at a cost, exactly").
+
+### T11 (fit, low, refuted)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:517 (the Theorem's parenthesis)
+
+**Quoted.** one decision, worth before any amount forgone;
+
+**Problem.** The body states laws about amounts forgone (forgone_lt_iff, refined_lt_iff, coarser_not_above, presented_forgone_lt_iff), so this premise alone reads as if costs were outside the theorem. The module's modelling choices (L276-277), the record's hypothesis and the study all add "costs entering as amounts forgone".
+
+**Replacement.** "one decision, worth before any amount forgone, costs entering as amounts forgone;"
+
+**Verdict: not real.** "Worth before any amount forgone" is accurate: Model.after is worth before amounts, and the body's laws add amounts explicitly ("forgoing an amount …"). "Costs entering as amounts forgone" appears in the module, record and study, but its absence from 03's parenthesis states nothing false.
+
+### T12 (fit, low, confirmed)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:519
+
+**Quoted.** their receiver breaks ties in the sender's favour and their prior is common, so the weights apart lie outside their model
+
+**Problem.** The cut lost the contrast that makes the tie-breaking relevant: the answer here releases on ties (the module says "where the answer here releases"). Joined by "so", the tie-breaking now reads as a reason the weights apart lie outside their model, which only the common prior gives.
+
+**Replacement.** "their receiver breaks ties in the sender's favour, where the answer here releases, and their prior is common, so the weights apart lie outside their model"
+
+**Verdict: real.** The module (L205-208) separates the two points: "Their receiver breaks ties in the sender's favour, where the answer here releases. Their prior is common, so … lies outside their model." 03:519 joins both clauses before "so", so tie-breaking reads as a reason the weights apart lie outside their model; only the common prior gives that (Alonso and Câmara). The cut also drops the contrast that made the tie-breaking relevant.
+
+**Better replacement.** "…their receiver breaks ties in the sender's favour, where the answer here releases; their prior is common, so the weights apart lie outside their model (Alonso and Câmara 2016), and no optimal signal or equilibrium is represented." The semicolon keeps tie-breaking from reading as a reason.
+
+### T13 (fit, low, confirmed)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:519
+
+**Quoted.** By a reference, the least shortfall reads only the map and the residual only the deciding, so revaluing moves the residual alone, while a finer map never raises the least shortfall and can move the residual either way
+
+**Problem.** If the residual read only the deciding, a finer map could not move it, yet the same sentence says it can. The least shortfall also reads the holding formation's model and the reference, not the map alone (revalued_split's docstring; plan item 8).
+
+**Replacement.** "By a reference on the holding formation's model, the least shortfall is fixed by the map and the residual is what the deciding adds through it, so revaluing moves the residual alone, while a finer map never raises the least shortfall and can move the residual either way"
+
+**Verdict: real.** `residual` (L418) totals per-cell terms of goExcessWithin/offExcessWithin through π, so it reads the map's cells as well as the deciding. "The residual only the deciding" is therefore inexact, and it sits against the same sentence's "a finer map … can move the residual either way" (`WeightsApart.weights_split`). `revalued_split`'s docstring also says the least shortfall reads the holding formation's model, the reference and the map.
+
+### T14 (fit, low, refuted)
+
+**Location.** theories/becoming/chapters/03-KNOWING.md:489; also :517
+
+**Quoted.** and what informing the reading formation and revaluing it do to that worth.
+
+**Problem.** §12's opening uses "the reading formation" before the section introduces the role (L517), and in the preceding clause "the formation" is the one that holds. At L517, "the least shortfall through it" is not tied to the quantity the RF-M.2 law already names, "the total over the cells of the smaller excess within each" (L512). A reader meets a new term for a known quantity.
+
+**Replacement.** L489: "…and what informing and revaluing the formation whose reading is held for do to that worth." L517: "…falls short by the least shortfall through it (the total over the cells of the smaller excess within each, as above (`#r-what-holding-for-a-reading-is-worth`)) and its residual, …"
+
+**Verdict: not real.** In the opening's list of six laws, "the reading formation" is inferable as the formation whose reading is held for, and the theorem paragraph defines the role. "The least shortfall through it" describes itself (the least any rule through the map falls short by), with HeldForReading's laws cited. This is a clarity preference with nothing wrong.
+
+### T15 (fit, low, refuted)
+
+**Location.** theories/becoming/chapters/07-SIGNIFICANCE.md:623
+
+**Quoted.** a reason to keep the valuation from such a revision, wanted or not; and from different starts a route informing it and one revaluing it can give the same answers and end in the same state
+
+**Problem.** The sentence runs to 115 words, with three subordinate layers before its main verb. "Wanted or not" has nothing to attach to in 07; it comes from the Carroll et al. point in 03. In "informing it" and "revaluing it", "it" points to "the reading", but what is informed and revalued is the reading formation.
+
+**Replacement.** End the sentence "…loses: a reason to keep the valuation from such a revision (03 §12 (`03-KNOWING.md#r-a-reading-informed-and-revalued`))." Then add "From different starts, a route informing the reading formation and one revaluing it can give the same answers and end in the same state."
+
+**Verdict: not real.** Sentence length is a matter of style. "Wanted or not" qualifies "such a revision" meaningfully on its own: whether or not the revision is wanted. "Informing it" and "revaluing it", with "it" the reading, follow the overview's own usage ("What another's reading answers can be moved by informing it and, apart, by revaluing it"). Nothing stated is wrong.
+
+### T16 (fit, low, confirmed)
+
+**Location.** theories/becoming/review/ALIGNMENT.md:23
+
+**Quoted.** RF carries the principal's listing and valuation as state that informing and revaluing move within one law (below), and the principal's learning beyond what it is shown is not represented;
+
+**Problem.** L28 (the "below") calls the same state "the reading formation's listing and valuation", and nothing ties the principal to the reading formation's role. 03's Open says "the reading formation's learning beyond filtering by what it is shown". "Learning beyond what it is shown" is wider, and it leaves unclear whether revising by a presented input counts.
+
+**Replacement.** "RF carries the listing and valuation of the reading formation (the principal's role) as state that informing and revaluing move within one law (below), and its learning beyond filtering by what it is shown is not represented;"
+
+**Verdict: real.** The tie point is weak. L28's parallel "carries the … listing and valuation as state", together with "(below)", connects the principal to the reading formation. The same clause also says revaluing is represented, so presented inputs are not in doubt. The wording drift is real. 03's Open, the record's does_not_show (make_records_rfm3.py:434-435) and the study say "beyond filtering by what it is shown". The dossier's "beyond what it is shown" implies that all learning from what it is shown is represented, whereas only true filtering is.
+
+**Better replacement.** "…RF carries the principal's listing and valuation as state that informing and revaluing move within one law (below, as the reading formation's), and the principal's learning beyond filtering by what it is shown is not represented;"
+
+### T17 (fit, low, confirmed)
+
+**Location.** theories/becoming/review/ALIGNMENT.md:41
+
+**Quoted.** RF-M.3's sentences, added on 31 October 2026, were cold-read before its landing
+
+**Problem.** RF-M.3 also rewrote the box's assistance-games clause (L23) and removed "a principal's valuation as state is a later item" from round 2's sentence (L28). The entry's first sentence still dates the assistance-games clause to 29 and 30 October, and this sentence names only added sentences.
+
+**Replacement.** "RF-M.3's sentences and its changes to the assistance-games clause and round 2's sentence, made on 31 October 2026, were cold-read before its landing, …"
+
+**Verdict: real.** The first sentence of L41 dates the assistance-games clause to 29 and 30 October. integrate_rfm3.py rewrites that clause (L23) and removes "a principal's valuation as state is a later item" from round 2's sentence, yet the RF-M.3 entry names only "RF-M.3's sentences, added on …". Other entries list the clauses they changed, for example the RR entry at L43.
+
+### T18 (fit, low, confirmed)
+
+**Location.** rf-formations-that-read/kit/round2c/make_records_rfm3.py:462 (next_delta, en and zh); also :526-555 (AMEND)
+
+**Quoted.** A holding formation planning over several steps among informing, revaluing and holding, and its learning about the reading formation;
+
+**Problem.** The new record's next step leaves out the reading formation's learning beyond filtering by what it is shown. The AMEND gives exactly that step to both related records, as the step after RF-M.3's carrier, and 03's Open lists it, so the record the step is deferred to does not name it. The wording also drifts: "beyond what it is shown" in the AMEND and the dossier, "beyond filtering by what it is shown" in 03.
+
+**Replacement.** Prepend "The reading formation's learning beyond filtering by what it is shown;" (zh "读之形成依所示而滤以外之学；"), and use that phrase in the AMEND's next steps and history lines.
+
+**Verdict: real.** The next_delta at make_records_rfm3.py:462 lacks the reading formation's learning beyond filtering. The AMEND (L533-534, L547-548) defers that step to after RF-M.3's carrier, and 03's Open lists it. The record names it only in does_not_show (L434-435) as scope, not as a next step. The AMEND, the history lines and register_rfm3.py say "beyond what it is shown". The proposed prepend makes next_delta.en 403 characters, over the hard cap of 400 (style.CAPS_V2 'next_delta': (400, 180), HARD_CAPS), so `capped` would fail.
+
+**Better replacement.** Use a version within the cap (384 characters): "A holding formation planning over several steps among informing, revaluing and holding, and its learning about the reading formation; the reading formation's learning beyond filtering by what it is shown; a misleading demonstration and a recipient's belief, toward deception; noisy answers and continuous beliefs in the periphery; an institution's rule of reading; review by a person." zh: "持之形成于告、改值与持之间多步之谋，及其于读之形成之学；读之形成依所示而滤以外之学；误导之示与受者之信，以向欺；外围之有噪之答与连续之信；制度之读之规则；人之审查。" Use "beyond filtering by what it is shown" (依所示而滤以外) in the AMEND's next steps and history lines.
+
+### T19 (fit, low, confirmed)
+
+**Location.** rf-formations-that-read/kit/round2c/make_records_rfm3.py:494-495 (related detail, en and zh)
+
+**Quoted.** Informing within one law: a demonstration filtering the reading formation's listing and an input revising its valuation
+
+**Problem.** This files revaluing (an input presented revising the valuation) under "Informing". Everywhere else the two acts are named apart, including the record's own laws and the AMEND line for the same pair of records ("Informing as an act within one law: …; and revaluing, an input revising its valuation"). The zh "一律之内之告：示滤读之形成之列，呈改其值" does the same.
+
+**Replacement.** "Informing and revaluing within one law: a demonstration filtering the reading formation's listing and an input presented revising its valuation, beside …" / zh "一律之内之告与改值：示滤读之形成之列，呈一入改其值，…"
+
+**Verdict: real.** The related detail (make_records_rfm3.py:494-497) is headed "Informing" but lists "an input revising its valuation", which is revaluing. The module, the record's own laws and the AMEND for the same pair (L541-544: "…; and revaluing, an input revising its valuation") keep the two acts apart. The zh line (一律之内之告：…呈改其值) conflates them the same way.
+
+### T20 (fit, low, confirmed)
+
+**Location.** becoming/check_becoming.py:2967; also becoming/Becoming.lean:2881-2882, rf-formations-that-read/kit/round2c/board_rfm3.py:42-43, integrate_rfm3.py:72
+
+**Quoted.** a route shown and a route revalued answer alike and end in one state
+
+**Problem.** The module, 03, the record, the study and the plan call this route "the route presented"; "route revalued" is a third name for it. The checker's scope sentence also leaves out revaluing's law (revalued_split), which the root bullet states. Its "never stands lower through every refinement exactly where splits keep the worth" no longer says through which map.
+
+**Replacement.** "a route shown and a route presented answer alike and end in one state" in all four. Scope: "…and, over every refinement, holding for the answer never stands lower through the finer map exactly where splits keep the worth; revaluing changes only the residual; on one blanketed law …"
+
+**Verdict: real.** The module (`TwoWorlds.route` docstring, L2217: "`true` the route presented"), 03, the record's law (L374), the study (L114) and plan item 21 all say "the route presented". check_becoming.py:2967, Becoming.lean:2881-2882, board_rfm3.py and integrate_rfm3.py say "a route revalued", a third name. The checker's "never stands lower through every refinement" also loses "through the finer map".
+
+### T21 (fit, low, confirmed)
+
+**Location.** becoming/README.md:225; becoming/README.zh.md:129; theories/becoming/chapters/08-METHOD.md:488
+
+**Quoted.** withholding against informing (`ListingValuation.forgone_lt_iff`, `ListingValuation.refined_lt_iff`)
+
+**Problem.** The README names the group by its reading, unmarked. The module renamed these laws structurally and marks the reading (lens finding L13), and the record's title says "amounts forgone, read as withholding against informing". The zh "扣告与告" does the same. So does 08 §8's "the thresholds of withholding against informing and of revaluing", which sits in the list of what the counts add, before that bullet's [AI reading] marker.
+
+**Replacement.** README: "amounts forgone, read as withholding against informing (…)". zh: "舍量，读为扣告与告（…）". 08: "the thresholds of amounts forgone (read as withholding against informing) and of revaluing".
+
+**Verdict: real.** L13 was judged real because `forgone_lt_iff` holds for any two rules with amounts, so naming it by withholding states a reading. The laws were renamed, and the header bullet now marks "(read as withholding against informing…)". README.md:225 and README.zh.md:129 still group `forgone_lt_iff` under "withholding against informing" / "扣告与告", unmarked. 08:488 lists "the thresholds of withholding against informing" among what the counts add, before its [AI reading] marker. The module's own Standing (L155), the study's Standing (L151) and the plan's Standing (L229) use the same unmarked phrase.
+
+**Better replacement.** As proposed for README, README.zh and 08. Apply the same change to the module's Standing ("the thresholds of amounts forgone, read as withholding against informing, and of revaluing") and the study's and plan's Standing, so the texts agree.
+
+### T22 (fit, low, confirmed)
+
+**Location.** rf-formations-that-read/PLAN.md:194 (and heading at :181)
+
+**Quoted.** **RF-M.3 The valuation as state; informing and shaping** (not built; the carrier first).
+
+**Problem.** Stale. §4.8 builds RF-M.3, and "shaping" was renamed "revaluing" (the study says so). §4.7's heading still includes "and the valuation as state", which is also §4.8's heading. A reader of §4.7 is told the item is unbuilt and sees it under its old name.
+
+**Replacement.** Heading: "### 4.7 Round 2, second part: an act held for a reading". Paragraph: "**RF-M.3 The valuation as state; informing and shaping** (the redesign §4.8 builds on; built there, 'shaping' renamed 'revaluing')."
+
+**Verdict: real.** §4.7's "(not built; the carrier first)" and "informing and shaping" (PLAN.md:194) are stale: §4.8 builds RF-M.3 and renames shaping to revaluing. But the proposed heading change would break a live link. The study (BECOMING-RENEWAL-READING.md:21780) links #47-round-2-second-part-an-act-held-for-a-reading-and-the-valuation-as-state, and research-links would fail.
+
+**Better replacement.** Keep §4.7's heading, since its anchor is linked from RF-M.2's study section, or keep the old slug with an explicit <a id> if the heading must change. Change only the paragraph: "**RF-M.3 The valuation as state; informing and shaping** (the redesign §4.8 builds on; built there, 'shaping' renamed 'revaluing')."
+
+### T23 (fit, low, confirmed)
+
+**Location.** rf-formations-that-read/kit/round2c/study_rfm3.txt:178-179
+
+**Quoted.** (§4.8, §12, §13 and Evidence)
+
+**Problem.** RF-M.3 also changes the plan's §5 row and its §8 rows, which repoint_rfm3.py's REASON lists. The study's output→input list leaves them out.
+
+**Replacement.** "(§4.8, §5's and §8's rows, §12, §13 and Evidence)"
+
+**Verdict: real.** repoint_rfm3.py's REASON and EXPECTED list "§5's and §8's rows" among RF-M.3's changes to the plan, and commit 6837be33a changed those rows. The study's Output → input (study_rfm3.txt:179) lists only "§4.8, §12, §13 and Evidence".
+
+### T24 (fit, low, confirmed)
+
+**Location.** rf-formations-that-read/kit/round2c/study_rfm3.txt:183; also rf-formations-that-read/PLAN.md:397, rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md:5
+
+**Quoted.** six of which were completed with nine declarations (informing's strict form, the coarser answer forgoing no less never above the finer, the told criterion with no cell list, the least shortfall through what is shown, the course forms)
+
+**Problem.** In the evidence table, four of the six (F8, F9, F17, F20) were completed with the nine declarations. The other two (F4, L13) were completed in prose: the off-switch Readings now cite undemonstrated_worth, and titles were made structural. The evidence opening's "Six of the seven were then completed, with nine more declarations" has the same slip. The plan's version says "the course forms of the four cases", but shown_course and presented_course cover only the two cases in which an act turns the answer.
+
+**Replacement.** "six of which were completed, four with nine declarations (…) and two in prose (the off-switch Readings citing undemonstrated_worth; structural titles)". Plan: the same, with "the course forms of the two turning cases".
+
+**Verdict: real.** Diffing declarations at the reviewed commit 4843dd795 against the current module gives exactly nine new ones. They are shown_least_le, TwoWorlds.shown_course and TwoWorlds.presented_course (F8); unweighted_released, weighed_stops_iff and told_shortfall_zero_iff (F9); informed_lt_iff and least_falls (F17); and coarser_not_above (F20). F4 and L13 were completed in prose, as their rows say. shown_course and presented_course cover the (a)-shown and (b)-presented courses, the two turning cases, not "the four cases" (plan L397).
+
+### T25 (fit, low, confirmed)
+
+**Location.** rf-formations-that-read/PLAN.md:211 and :213 (§4.8 items 8 and 10)
+
+**Quoted.** from one cell to the cells {1, 2} and {3}
+
+**Problem.** The Lean's candidates are 0, 1 and 2, and its cells are {0, 1} and {2} (`decide (c = 2)`), as E16 and F3 on the evidence page write. 03 and the record say "the cells of the first two candidates and of the third". The plan's one-based sets match none of these.
+
+**Replacement.** "from one cell to the cells of the first two candidates and of the third", and the same in item 10.
+
+**Verdict: real.** WeightsApart's candidates are the naturals 0, 1 and 2, and its finer map is `decide (c = 2)`, giving cells {0, 1} and {2} (L1645, L1656-1658), as E16 and F3 on the evidence page write. Plan items 8 and 10 (L211, L213) write "{1, 2} and {3}". Read against the Lean's candidate names, which the plan cites, those sets denote other cells. 03 and the record say "the cells of the first two candidates and of the third".
+
+### T26 (fit, low, confirmed)
+
+**Location.** rf-formations-that-read/PLAN.md:247 (§5 row)
+
+**Quoted.** its gain under a reference the valuation does not share, and by the reading formation's current valuation on a shared model a reason to keep it from a revision deciding a listed cell against its strict weighted preference, are readings of its laws
+
+**Problem.** The gain under a reference is itself a law (revaluing_gain, revaluing_gains_iff). Only reading it as an incentive to revise is a reading.
+
+**Replacement.** "its gain under a reference the valuation does not share, read as an incentive to revise, and by the reading formation's current valuation on a shared model a reason to keep it from …, are readings of its laws"
+
+**Verdict: real.** `revaluing_gain` (L1067) and `revaluing_gains_iff` (L1051) prove the gain, with a shared model; only reading it as an incentive to revise is a reading. Plan §5's row (L247) files "its gain under a reference the valuation does not share" among "readings of its laws".
+
+### T27 (fit, low, confirmed)
+
+**Location.** rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md:1244 (E10) and :1267 (F16); also :5
+
+**Quoted.** Judged not real by the verifier. Verifier: not real.
+
+**Problem.** The generator's prefix (evidence_rfm3_lean.py:257) repeats what the E10 and F16 rows already say. The opening says the module "was revised on the forty-nine real findings and the cross-model reader's fifteen", but E10 and F16 show that the two findings judged not real were taken as well; the plan and the study say "revised on all of them".
+
+**Replacement.** Skip the prefix where the row already says it (E10: "Verifier: not real. The module changed anyway: …"; F16: "The verifier judged it not real …"). Opening: "revised on all fifty-one lens findings (the two judged not real taken anyway) and the cross-model reader's fifteen".
+
+**Verdict: real.** evidence_rfm3_lean.py prefixes "Judged not real by the verifier." to rows that already say "Verifier: not real." (E10, L1244) or "The verifier judged it not real" (F16, L1267). The opening (L5) says the module was revised "on the forty-nine real findings and the cross-model reader's fifteen". E10 and F16 show the two refuted findings were taken too, and plan L397 and the study say "revised on all of them".
+
+### T28 (fit, low, confirmed)
+
+**Location.** rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md:1265 (F14)
+
+**Quoted.** joint's docstring says the same.
+
+**Problem.** joint's docstring (ListingValuation.lean:1844-1852) says only that the answer is exposed at every step, asked or not, and that going on and switching off are sensed as nothing and change no world. It does not say that asked and none update alike, that holding changes neither the world nor the reading formation, or that holding's worth is counted in Part 1.
+
+**Replacement.** "joint's docstring says that the answer is exposed at every step, asked or not, and that going on and switching off are sensed as nothing and change no world."
+
+**Verdict: real.** joint's docstring (L1844-1852) says only that the answer is exposed at every step, asked or not, and that going on and switching off are sensed as nothing and change no world. It does not say that asked and none update alike, that holding changes neither the world nor the reading formation, or that holding's worth is counted in Part 1. F14's "joint's docstring says the same" (L1265) therefore overstates.
+
+### T29 (fit, low, confirmed)
+
+**Location.** rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md:1229 (A10)
+
+**Quoted.** (the study leaves their extraction to the owners)
+
+**Problem.** The study's self-review (item 2) names only total_lt_of_mem repeating Loops.total_lt. It says nothing of cond_zero_le repeating Weighting.term_le_of.
+
+**Replacement.** Either add to the study's self-review "and cond_zero_le repeats Weighting.term_le_of, outside the import closure; one statement of each is left to its module's owner", or narrow A10 to "(the study leaves total_lt_of_mem's extraction to Flow's owner)".
+
+**Verdict: real.** The study's self-review item 2 mentions only that `total_lt_of_mem` repeats `Loops.total_lt`, with one statement left to Flow's owner. `cond_zero_le` (L1235, whose docstring says "as `Weighting.term_le_of`") is not mentioned. A10's "the study leaves their extraction to the owners" (L1229) therefore holds for only one of the two.
+
+### T30 (fit, low, confirmed)
+
+**Location.** rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md:1425 (R1)
+
+**Quoted.** the record's laws and correspondence, 03 §12's paragraph and the study likewise.
+
+**Problem.** The record's correspondence is its literature mapping and never says "from one state of each formation". Only its law on courses alike says it (make_records_rfm3.py:349).
+
+**Replacement.** "the record's law on courses alike, 03 §12's paragraph and the study likewise."
+
+**Verdict: real.** The record's correspondence (make_records_rfm3.py:467-479) is the literature mapping and never says "from one state of each formation". That phrase is only in the law on courses alike (L349-352). R1 (L1425) says "the record's laws and correspondence … likewise".
+
+### T31 (fit, low, refuted)
+
+**Location.** rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md:9-10; rf-formations-that-read/kit/round2c/evidence_rfm3_lean.py:217
+
+**Quoted.** ## The cross-model review
+
+**Problem.** INTRO ends without a newline and the parts are joined with a single '\n', so this heading follows the opening's last paragraph with no blank line. RF-M.2's page has the blank line. The heading still renders in CommonMark, but the source differs from its sibling page.
+
+**Replacement.** parts = [INTRO + '\n', '## The cross-model review\n', review + '\n']
+
+**Verdict: not real.** The missing blank line before "## The cross-model review" (L9-10) is a source-only difference. In CommonMark/GFM an ATX heading interrupts a paragraph, and the repository's anchor extraction (tools/research/moves.py `anchors`, reading_catalogue `HEADING`) matches headings line by line. The page renders and its anchors resolve, so nothing is wrong beyond the difference from the RF-M.2 page.
+
+### What was taken from the lenses
+
+| # | Lens | Verdict | Finding | Taken |
+|---|---|---|---|---|
+| X1 | exactness | confirmed | with the weights apart, splits read as never keeping the worth, where `WeightsApart.not_splitsKeep` is one witness and `splitsKeep_of_off_le_go` holds whatever the models | 03 §12: “with the weights apart, a shared valuation can fail to keep it”, after a semicolon, `splitsKeep_of_off_le_go` said to hold whatever the models; the header and the study: “can break it”; the record's law: “With the weights apart, splits can fail to keep the worth even with a shared valuation” (zh 权相异，即共值，分亦可不守其值); the docstring title of `WeightsApart.not_splitsKeep` the same |
+| X2 | exactness | confirmed | the root bullet and the checker's scope say “every refinement” without the factoring on both listings that `refining_never_lowers_iff` takes | both: “over every refinement factoring on both (formations') listings” and “through the finer map”; both also give the split its cells, listed once each and covering |
+| X3 | exactness | confirmed | 03 §12 and the study say “on the holding formation's model” where `own_least`, `revalued_lowers_iff` and `outcome_least` need the reading formation's model to be the holding formation's | “with the reference the reading formation's own current valuation and its model the holding formation's”, as the header and the record say, and “with that shared model” before `outcome_least`, in both |
+| X4 | exactness | confirmed | the record's law on `outcome_least` states no model condition, and its hypothesis leaves it out of the theorems taking the shared model | the law opens “With the reading formation's model the holding formation's” (zh 读之形成之模型即持之形成之模型，则), and the hypothesis lists `outcome_least` with `own_least`, `revalued_lowers_iff`, `revaluing_gain` and `revaluing_gains_iff`, in both languages |
+| X5 | exactness | confirmed | “with both answers least” given as the hypothesis of `forgone_least_iff` and `coarser_not_above`, which assume a shared model and net agreement | “with a shared model and net agreement” (and “so both answers least” where it fits) in 03 §12, the header, the study, the record's law (zh 共模型且净相合（故二答皆最少）, the English at 418 of its 420 characters), the plan's item 7 and §13, and the Lean review's row F20 |
+| X6 | exactness | confirmed | “at one model” for `revalued_split` and `revalued_forgone_lt_iff`, which take the two formations' models apart | “with both formations' models, the reference and the map fixed” in 03 §12, the study, the record's law (zh 二形成之模型、参照与映射皆定) and the plan's item 8 |
+| X7 | exactness | confirmed | the header's told sentence and its sentence on `refined_lt_iff` omit their cell conditions, and the Lean review's row R5 says the header names the coarser cells for `refined_lt_iff` | the header: “over cells covering the holding formation's listing” for the told criterion and “both maps' cells listed once each and covering the holding formation's listing” for `refined_lt_iff`; R5 says what was named when, its page regenerated |
+| X8 | exactness | confirmed | the record's carrier law says a world is sensed, where a demonstration gives what it shows | “what a demonstration shows, an input presented, or asked” (zh 示之所显、所呈之入或问) |
+| X9 | exactness | confirmed | the dossier's “From different starts the answers and the final state do not tell” reads as general from one witness | “From different starts a route informing and one revaluing can answer alike and end in one state, so the answers and the final state need not tell whether the valuation changed”, in 07's and the overview's terms |
+| X10 | exactness | confirmed | the record's Chinese law on informing has a clause the English lacks | the clause dropped from the Chinese, the English being at its cap |
+| X11 | exactness | confirmed | the Chinese README row and alias parse as informing acting on the valuation | 告读之形成与改其值, in the row and in the alias |
+| X12 | exactness | confirmed | the plan's cells {1, 2} and {3} count from one, where the candidates are 0, 1 and 2 | “the cells of the first two candidates and of the third” in items 8 and 10, as the header and the record say |
+| X13 | exactness | confirmed | the plan makes the weights part of the revisable listing | “its *listing* (candidate worlds, weighted by its law)”, the header's words |
+| X14 | exactness | confirmed | the plan's item 4 title drops that the unweighted candidate is one the holding formation weighs | “exactly where a candidate the holding formation weighs, unweighted by the reading formation, is one to stop” |
+| X15 | exactness | confirmed | the plan's “weaker than the answer being least at every cell” claims an implication no theorem states | dropped; the next sentence already says splits keep the worth even where the answer has a residual (`release_keeps`) |
+| X16 | exactness | confirmed | the plan's “the course forms of the four cases”, which cover the two turning cases | “the course forms of the two turning cases, `TwoWorlds.shown_course` and `TwoWorlds.presented_course`” |
+| X17 | exactness | confirmed | rows A10, F14, L9 and R1 of the Lean review do not match the texts as they stand | in the generator, and the page regenerated: A10 holds once the study names `cond_zero_le` beside `total_lt_of_mem` (T29) and says so; F14 and L9 corrected through entries made after the check; R1 without “and correspondence” |
+| X18 | exactness | confirmed | the record cites this page before it exists, and the plan's Evidence does not name it | this page written and the study's paragraph filled before registration; the plan's Evidence names the page, and §13 has a paragraph on the cold read of the third part's texts |
+| X19 | exactness | confirmed | 08 §8's bullet on RR says holding an act for a reading is the bullet above's, where it is the next one | RR's text, already on main: given to RR's second item, whose landing, after RF-M.3's, makes it “the next bullet's” |
+| R1 | readings | confirmed | the dossier gives the preservation incentive to current-reward-function evaluation as such, where their Claim 2 gives it to the agent that anticipates time inconsistency and their Claim 3 none to the one that ignores it | “the preservation incentive of current-reward-function evaluation by an agent that anticipates time inconsistency (Everitt, Hutter, Kumar and Krakovna 2021, Claim 2)” |
+| R2 | readings | confirmed | the same in the record's correspondence | “preservation incentive for an agent anticipating time inconsistency (Everitt et al. 2021, Claim 2)” (zh 以当下奖励函数评估而顾及时间不一致者之保存之诱因), within the cap |
+| R3 | readings | confirmed | 08 §8 and the study name current-reward-function evaluation in general | “current-reward-function evaluation by an agent that anticipates time inconsistency”, and “their Claim 2 permits that agent”, in both |
+| R4 | readings | refuted | the dossier's sentence on different starts generalizes one witness and drops that the start tells the routes apart | refuted (one colliding pair shows the record does not determine the property); met all the same by X9's wording |
+| R5 | readings | refuted | the plan's §8 row drops “can” and that with the start the record determines the property | refuted; the row brought to the dossier's wording all the same, as clearer and harmless: “can answer alike and end in one state, so the answers and the final state need not tell whether it changed” |
+| R6 | readings | confirmed | the module, 03 §12 and the plan say the holding formation's choice is represented by the comparisons, where `Revaluing.revaluing_best` represents no choice; the plan adds 13 | the module: “No choice by the holding formation among these is represented: only the worth comparisons of … and the four valued alternatives of `Revaluing.revaluing_best`, relate them”; 03 §12 and the plan likewise, the plan naming 7, 8 and 14 |
+| R7 | readings | confirmed | the record drops “deterministic” from the off-switch reading | “for a deterministic constant policy” (zh 于确定且恒定之策) |
+| R8 | readings | confirmed | the Lean review's re-check row R1 says the record's correspondence says “from one state of each formation” | “the record's laws, 03 §12's paragraph and the study likewise”, the page regenerated |
+| R9 | readings | confirmed | the overview, the dossier and the record state the incentive to revise without the supplied update's reach, the overview also without costs | the overview and the dossier: “incentives, before costs, to withhold and, where the supplied update reaches such a valuation, to revise”; the record: “(if the update reaches it), before costs” (zh 若所予之更新可达) |
+| R10 | readings | confirmed | in 03 §12 the sender-favouring tie-break reads as a reason the weights apart lie outside their model | “their receiver breaks ties in the sender's favour, where the answer here releases; their prior is common, so the weights apart lie outside their model” |
+| R11 | readings | confirmed | “by them” in 03 §12 can be read as Carroll and others' own verdict | “evaluated by the current valuation, a revision deciding a listed cell against its strict weighted preference counts as a loss”; their very crude baseline kept as the design's and the Lean's checks of the paper read it |
+| R12 | readings | refuted | 03 §12's “what a reader of the answers alone leaves open” generalizes the witness | refuted (the labelled Reading scopes it to the witness just stated); not changed |
+| R13 | readings | confirmed | the module's Standing, 08 §8, the plan's Standing and the study name the contribution by its reading, withholding against informing, unmarked | “the thresholds with amounts forgone (read as withholding against informing) and of revaluing” in all four; the module's section heading and the plan's item 7 title likewise |
+| R14 | readings | refuted | 08 §8 and the record state the counterpart of Kamenica and Gentzkow's condition without the reading label | refuted (RF-M.2's landed convention: restatements in 08 §8 and the record's counts, readings labelled); not changed |
+| T1 | fit | confirmed | the weights apart said to break the criterion in 03 §12, the study, the record and the header | as X1 |
+| T2 | fit | confirmed | “its answer” in 03 §12 and 07 §7 binds to the replacement valuation, where `revaluing_gains_iff`'s condition is the current answer's residual | “the current answer” in 03 §12, “its current answer” in 07 §7 |
+| T3 | fit | confirmed | “at one model” in 03 §12, the record, the study and the plan's item 8 | as X6 |
+| T4 | fit | refuted | the dossier's sentence on different starts and the plan's §8 row drop the witness qualifier | refuted; met all the same by X9's and R5's wording |
+| T5 | fit | confirmed | the overview's paragraph, cut for a reading budget, keeps that a finer map never raises the least shortfall but drops that it can raise the residual by more, states no standing and glosses no residual | “Proved in natural-number counts: … plus a residual, positive exactly where the answer decides a listed cell against the reference's strict weighted preference; a finer map never raises the first but can raise the second by more than it lowers the first” |
+| T6 | fit | confirmed | no kit step brings the plan to the landing: §12 says built in the kit, §13 has no paragraph on the cold read, the Evidence omits this page | integrate_rfm3.py sets §12's entry to “(§4.8, landed)” at the landing, as integrate_rfm2.py did, and its docstring says so; §13's paragraph and the Evidence entry added |
+| T7 | fit | refuted | “them” in 03 §12 can bind to the authors | refuted; met all the same by R11's change |
+| T8 | fit | confirmed | 03 §12's sentence on courses alike does not parse and leaves out `answer_constant`'s case | “so they are alike wherever no demonstration is emitted or none tells the listed worlds apart, and there holding for the answer is worth one committed move”; the study and the header likewise |
+| T9 | fit | confirmed | “the first” and “the second” read as worlds, and the study's (a) and (b) are never introduced | “in the course shown” and “in the course presented”, in 03 §12 and the study |
+| T10 | fit | confirmed | 03 §12 and the study say an input is compared with a valuation by the residuals | “holding for the answer after one presented input, forgoing an amount, stands above holding for the current answer, forgoing another, exactly where its residual through the one cell and its amount together fall below the other's”, in both |
+| T11 | fit | refuted | 03 §12's premises omit costs entering as amounts forgone | refuted (worth before any amount forgone is accurate, the laws adding the amounts); not changed |
+| T12 | fit | confirmed | the tie-break joined by “so” to the common prior in 03 §12 | as R10, with the semicolon |
+| T13 | fit | confirmed | “the least shortfall reads only the map and the residual only the deciding” would keep the residual from moving with the map | “By a reference on the holding formation's model, the least shortfall is fixed by the map and the residual is what the deciding adds through it” |
+| T14 | fit | refuted | §12's opening uses “the reading formation” before the section introduces it, and “the least shortfall through it” is not tied to RF-M.2's quantity | refuted; not changed |
+| T15 | fit | refuted | 07 §7's sentence runs to 115 words | refuted (a matter of style, each clause attached); not changed but for T2's word |
+| T16 | fit | confirmed | the dossier's scope box ties the principal to no role, and its “learning beyond what it is shown” is wider than 03's | “move within one law (below, as the reading formation's), and the principal's learning beyond filtering by what it is shown is not represented” |
+| T17 | fit | confirmed | the dossier's account of how it was made names only the sentences added | “RF-M.3's sentences and its changes to the assistance-games clause and round 2's sentence, made on …” |
+| T18 | fit | confirmed | the record's next step omits the reading formation's learning beyond filtering by what it is shown, and the amendments say “beyond what it is shown” | the next step names it (384 of its 400 characters; zh 读之形成依所示而滤以外之学), and the amendments' next steps and history lines and the register's reason say “beyond filtering by what it is shown” |
+| T19 | fit | confirmed | the related detail files revaluing under informing | “Informing and revaluing within one law: … and an input presented revising its valuation” (zh 一律之内之告与改值：…呈一入改其值) |
+| T20 | fit | confirmed | “a route revalued” in the checker's scope, the root bullet and the board's text; the scope without revaluing's law or the map | “a route presented” in all three; the scope adds “revaluing changes only the residual” and “through the finer map” |
+| T21 | fit | confirmed | the READMEs and 08 §8 name the group by its reading, unmarked | the README: “amounts forgone, read as withholding against informing” (zh 舍量，读为扣告与告); 08 §8 and the module's, the study's and the plan's Standing as R13 |
+| T22 | fit | confirmed | the plan's §4.7 paragraph on RF-M.3 says not built and keeps the old name | “(redesigned and built in §4.8, where 'shaping' became 'revaluing')”; §4.7's heading kept, since it is linked |
+| T23 | fit | confirmed | the study's output and input omit the plan's §5 and §8 rows | “(§4.8, §5's and §8's rows, §12, §13 and Evidence)” |
+| T24 | fit | confirmed | the study, the plan and the Lean review say six were completed with nine declarations, where four were and two in prose; the plan's “four cases” | “six … completed, four with nine declarations (…) and two in prose (…)” in the study, the plan and the Lean review's opening; the plan's “the two turning cases” |
+| T25 | fit | confirmed | the plan's cells counted from one | as X12 |
+| T26 | fit | confirmed | the plan's §5 row calls the gain under a reference a reading, where it is a law | “its laws read as an incentive to revise under a reference the valuation does not share and, by the reading formation's current valuation on a shared model, a reason to keep it from a revision …” |
+| T27 | fit | confirmed | the Lean review's prefix repeats “not real” in E10 and F16, and its opening says revised on the forty-nine real findings | the prefix only where the row does not say so; the opening: “revised on all fifty-one lens findings (the two judged not real taken anyway)” |
+| T28 | fit | confirmed | the Lean review's row F14 says `joint`'s docstring says more than it does | as X17: the row says what the docstring says |
+| T29 | fit | confirmed | A10 says the study leaves both lemmas' extraction to their owners, where it names only `total_lt_of_mem` | the study's self-review names `cond_zero_le`, repeating `Weighting.term_le_of`, beside it, one statement of each left to its module's owner, and A10 says so |
+| T30 | fit | confirmed | the Lean review's re-check row R1 names the record's correspondence | as R8 |
+| T31 | fit | refuted | no blank line before the Lean review's first heading | refuted (it renders); taken all the same: a blank line |
+
+## The re-check of the cross-model reader's points
+
+The cross-model reader, in the session of its cold read, read how its six points were taken and, as new text, the overview's paragraph and the dossier's sentences cut for reading budgets, the plan's §5 and §8 rows and the study's paragraph on the reviews, read-only, in a rehearsal rebuilt at the same path on the kit at `18001d918` with main at `8a8b0df82`. Verbatim; its line numbers are those of the version it read.
+
+All six corrections are taken correctly; one new issue remains in two PLAN table summaries.
+
+1. **The new preservation summaries omit the shared-model condition; one also drops the strict-preference qualification.**
+
+   **Locations and quotes:**
+   - [PLAN.md:247](../PLAN.md): “by the current valuation a reason to keep it from a revision deciding a listed cell against its strict weighted preference”.
+   - [PLAN.md:291](../PLAN.md): “evaluated by the current valuation, a reason to keep a valuation from revision”.
+
+   **Problem:** `own_least` and `revalued_lowers_iff` use the same model for producing and evaluating the answer. Evaluating by the reading formation’s current valuation alone does not supply that condition. The second summary also broadens the preservation reason beyond revisions that decide a listed cell against the current strict weighted preference; changes at ties need not lose worth.
+
+   **Exact replacements for the quoted clauses:**
+
+   At line 247:
+   > by the reading formation's current valuation on a shared model, a reason to keep it from a revision deciding a listed cell against its strict weighted preference
+
+   At line 291:
+   > evaluated by the reading formation's current valuation on a shared model, a reason to keep it from a revision deciding a listed cell against its strict weighted preference
+
+No other findings in the requested corrections or new passages.
+
+### What was taken from the re-check of the cross-model reader's points
+
+| Point | Status | How |
+|---|---|---|
+| 1 | taken | the two rows as it gives them (§5's “by the reading formation's current valuation on a shared model a reason to keep it from a revision deciding a listed cell against its strict weighted preference”, §8's corrigibility row the same); and, where the same claim is stated without the shared model, 08 §8's bullet (“evaluating by the reading formation's current valuation on a shared model”), the study's standing (“by the current valuation on a shared model no revaluation gains”) and the record's correspondence (“on a shared model, a reason to keep the valuation”, zh 共模型时), `own_least` and `revalued_lowers_iff` both evaluating on the holding formation's model; kit `6837be33a`, the record's caps passing |

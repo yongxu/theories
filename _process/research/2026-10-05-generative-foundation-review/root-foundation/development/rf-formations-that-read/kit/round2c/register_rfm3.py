@@ -5,8 +5,8 @@ owner.
 
 * ListingValuation's laws hold of any finite listing of candidates with natural-number weights and values read through a
   map, and of one blanketed law carrying a reading formation's listing and valuation as state: the base supplies no
-  reading of their vocabulary yet (general structure). They wait for the reading formation's learning beyond what it is
-  shown and a holding formation planning among informing, revaluing and holding, on the base (RF).
+  reading of their vocabulary yet (general structure). They wait for the reading formation's learning beyond filtering
+  by what it is shown and a holding formation planning among informing, revaluing and holding, on the base (RF).
 * The witnesses (ListingValuation.TwoWorlds, .Informing, .WeightsApart, .OneListing, .Revaluing, and the four witnesses
   of Part 1 at the module's top level) are facts about one constructed model each (model witness).
 
@@ -53,7 +53,7 @@ WAIT = {
                                   'through a map (a reading formation\'s answer by its own valuation, a rule\'s least '
                                   'shortfall and residual by a reference, informing and revaluing), or of one blanketed '
                                   'law carrying the reading formation\'s listing and valuation as state; it waits for the '
-                                  'reading formation\'s learning beyond what it is shown and a holding formation planning '
+                                  'reading formation\'s learning beyond filtering by what it is shown and a holding formation planning '
                                   'among informing, revaluing and holding over several steps, on the base (RF)'),
 }
 WITNESS = {  # the first key a name contains gives its reason

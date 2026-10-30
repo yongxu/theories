@@ -39,8 +39,7 @@ elif mode == 'land':
            "preference; a finer map never raises the first and a revaluation moves only the second, so with a shared "
            "model and agreement in net informing never lowers the worth, and by the reading formation's own current "
            "valuation no revaluation gains and one deciding a listed cell against its strict weighted preference loses; "
-           "on one blanketed law carrying the listing and valuation as state, from different starts a route shown and a "
-           "route revalued answer alike and end in one state). Next: the tests' designs (plan §10); a noisy answer and "
+           "on one blanketed law carrying the listing and valuation as state, from different starts a route shown and a route presented answer alike and end in one state). Next: the tests' designs (plan §10); a noisy answer and "
            "continuous beliefs stay periphery debts; " + NEXT + ". ")
     assert cells[0].count(old) == 1, 'next step in the statements cell'
     cells[0] = cells[0].replace(old, new)

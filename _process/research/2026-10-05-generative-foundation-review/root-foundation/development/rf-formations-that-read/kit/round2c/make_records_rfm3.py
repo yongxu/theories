@@ -219,7 +219,7 @@ rI = build(
       "through the finer with that rule's residual added; so a rule with no residual stands at least as high, "
       "and so does the reading formation's answer where its model is the holding formation's and it agrees in "
       "net.",
-      '告之：经于持之形成之列候选上辨较粗者所辨之一切之映射，经较粗映射为任一规则而持，不高于经较细映射为任一规则而持加其余缺；故无余缺之规则不低，其所缺不逾经较粗映射之任一规则；读之形成之模型即持之形成之模型且净相合时，其答亦然。',
+      '告之：经于持之形成之列候选上辨较粗者所辨之一切之映射，经较粗映射为任一规则而持，不高于经较细映射为任一规则而持加其余缺；故无余缺之规则不低；读之形成之模型即持之形成之模型且净相合时，其答亦然。',
       lv('informed_le', 'informed_answer_le', 'informed_le_add_residual')),
      ("Through such a refinement the least shortfall never rises; with both maps' cells listed once each and "
       "covering, a rule with no residual through the finer map stands strictly above a rule through the coarser "
@@ -268,10 +268,10 @@ rI = build(
       '共值而权相异，不保告之不降其值：三候选，持之权二、一、一，读之权一、二、二：经单格值三，经前二候选与第三者之格值二，经恒等映射值四；最少所缺一、一、零，余缺零、一、零，故较细之映射可使余缺增亦可使之减。',
       lv('WeightsApart.holding', 'WeightsApart.reading', 'WeightsApart.gain', 'WeightsApart.loss',
          'WeightsApart.weights_matter', 'WeightsApart.weights_split')),
-     ("The weights apart break the criterion: by its weights the reading formation releases the third candidate, "
+     ("With the weights apart, splits can fail to keep the worth even with a shared valuation: by its weights the reading formation releases the third candidate, "
       "stops the first two and releases all three, while by the holding formation's weights the first two gain 2 and "
       "lose 1, so splits do not keep the worth.",
-      '权相异则破其判：依其权，读之形成放第三候选，止前二者，合三者则放之；依持之形成之权，前二者得二损一，故分之不守其值。',
+      '权相异，即共值，分亦可不守其值：依其权，读之形成放第三候选，止前二者，合三者则放之；依持之形成之权，前二者得二损一，故分之不守其值。',
       lv('WeightsApart.not_splitsKeep')),
      ("Factoring on the holding formation's listing alone does not suffice: it lists one candidate, the reading "
       "formation also a second it alone weighs; the identity factors through the map with one cell at the first "
@@ -282,30 +282,30 @@ rI = build(
          'OneListing.offValue', 'OneListing.refined_lowers')),
      ("Amounts forgone: holding for one rule, forgoing an amount, stands above holding for another, forgoing "
       "another, exactly where its shortfall and amount together fall below the other's; through maps, in the split's "
-      "terms; with both answers least, the least shortfalls and the amounts decide, so through a refinement holding "
+      "terms; with a shared model and net agreement, the least shortfalls and the amounts decide, so through a refinement holding "
       "for the coarser answer, forgoing no less, never stands above holding for the finer.",
-      '舍量：为一规则而持、舍一量，高于为他规则而持、舍他量，恰当前者之所缺与其量合少于后者；经映射，以分之项言之；二答皆最少，则最少所缺与其量定之，故经细分，为较粗之答而持、所舍不少，永不高于为较细者而持。',
+      '舍量：为一规则而持、舍一量，高于为他规则而持、舍他量，恰当前者之所缺与其量合少于后者；经映射，以分之项言之；共模型且净相合（故二答皆最少），则最少所缺与其量定之，故经细分，为较粗之答而持、所舍不少，永不高于为较细者而持。',
       lv('forgone_lt_iff', 'forgone_through_lt_iff', 'forgone_least_iff', 'coarser_not_above')),
      ("Forgoing one amount through a refinement, holding for the coarser rule stands above holding for the finer "
       "exactly where the finer rule's residual exceeds the coarser's by more than the least shortfall falls through the "
       "finer map; adding one amount to both sides keeps a strict order, and only it.",
       '经一细分舍同量，为较粗之规则而持高于为较细者而持，恰当细者之余缺逾粗者之余缺，多于经较细映射最少所缺之降；二边加同量，严格之序守之，唯此。',
       lv('refined_lt_iff', 'add_lt_iff_sub_add_lt', 'add_lt_add_left_iff')),
-     ("Revaluing: at one model and one map, two valuations' answers have shortfalls differing exactly as their "
+     ("Revaluing: with both formations' models, the reference and the map fixed, two valuations' answers have shortfalls differing exactly as their "
       "residuals do, and holding for one, forgoing an amount, stands above holding for the other, forgoing another, "
       "exactly where its residual and amount together fall below the other's; for the carrier's reading formation, "
       "one presented input is so compared.",
-      '改值：于一模型一映射，二值之答之所缺之差恰如其余缺之差；为一者而持、舍一量，高于为他者而持、舍他量，恰当其余缺与量合少于他者；载体之读之形成一呈之入亦如此比。',
+      '改值：二形成之模型、参照与映射皆定，二值之答之所缺之差恰如其余缺之差；为一者而持、舍一量，高于为他者而持、舍他量，恰当其余缺与量合少于他者；载体之读之形成一呈之入亦如此比。',
       lv('revalued_split', 'revalued_forgone_lt_iff', 'presented_forgone_lt_iff')),
      ("With the reference the reading formation's own current valuation and its model the holding formation's, no "
       "rule through the map stands higher than its answer, and a revaluation lowers it exactly where it decides some "
       "listed cell against the current valuation's strict weighted preference.",
       '以读之形成当下之值为参照、其模型即持之形成之模型，经映射无一规则高于其答；改值降之，恰当其断某列格逆当下之值之严格加权之偏。',
       lv('own_least', 'revalued_lowers_iff')),
-     ("By the valuation after a revaluation, the revised answer has no residual, which endorses no revaluation, and "
+     ("With the reading formation's model the holding formation's, by the valuation after a revaluation the revised answer has no residual, which endorses no revaluation, and "
       "no order of attained worth across valuations follows: one candidate valued 10 and 9, revised to 1 and 2, "
       "attains 10 and then 2.",
-      '依改后之值，改后之答无余缺，然此不许任一改值；诸值之间所达之值亦无序可言：一候选值十与九，改为一与二，先达十后达二。',
+      '读之形成之模型即持之形成之模型，则依改后之值，改后之答无余缺，然此不许任一改值；诸值之间所达之值亦无序可言：一候选值十与九，改为一与二，先达十后达二。',
       lv('outcome_least', 'no_order_across')),
      ("With the reading formation's model the holding formation's, revaluing to the reference gains exactly the "
       "current answer's residual, so some unrestricted pair of value functions gives an answer strictly above the "
@@ -324,11 +324,10 @@ rI = build(
       "such an answer.",
       '于列候选恒同之答，值一所守之行，即其所予之行；舍一量则严格居下，恰当此量为正；经单格映射之答即此类之答。',
       lv('const_worth', 'const_below_iff', 'one_cell_worth')),
-     ("One blanketed law: internal, the reading formation's listing and valuation state; sensory, nothing, a world "
-      "shown, a valuation input presented, or asked; active, its answer; external, the candidate world with the "
+     ("One blanketed law: internal, the reading formation's listing and valuation state; sensory, nothing, what a demonstration shows, an input presented, or asked; active, its answer; external, the candidate world with the "
       "holding formation's state. The holding formation goes on, switches off, holds, demonstrates or presents an "
       "input, by a law reading only its own state and the answer.",
-      '一毯化之律：内为读之形成之列与值之态；感为无、示一世界、呈一值之入或问；动为其答；外为候选之世界与持之形成之态。持之形成续、止、持、示或呈一入，依唯读己态与答之律。',
+      '一毯化之律：内为读之形成之列与值之态；感为无、示之所显、所呈之入或问；动为其答；外为候选之世界与持之形成之态。持之形成续、止、持、示或呈一入，依唯读己态与答之律。',
       lv('Input', 'Act', 'Reader', 'Reader.update', 'Reader.answerOf', 'Reader.input', 'Holder', 'joint')),
      ("An act emitted at a step is sensed at the next, taken into the state and the answer at the one after, and "
       "available to the holding formation's move to the third; the answer is that of the updated state; the candidate "
@@ -402,9 +401,9 @@ rI = build(
       'zh': '告需较粗之映射于持之形成之列候选上经较细者而分解，且较细映射之格各列一次而覆之，严格之比较需较粗者亦然；于每一细分之判，需二列皆分解，粗格各列一次且覆持之形成之列，细格各列一次且覆二列。'},
      {'en': "For the answer's sufficient conditions, its model the holding formation's and its valuation agreeing with "
             "the reference on one positive scale, net agreement the scale one, at every listed candidate of positive "
-            "weight; own_least, revalued_lowers_iff, revaluing_gain and revaluing_gains_iff take its model to be the "
+            "weight; own_least, revalued_lowers_iff, outcome_least, revaluing_gain and revaluing_gains_iff take its model to be the "
             "holding formation's, residual_pos_of_gains any model.",
-      'zh': '答之充分条件需其模型即持之形成之模型，且其值于每一正权之列候选与参照同于一正尺度（净之相合为尺度一）；own_least、revalued_lowers_iff、revaluing_gain 与 revaluing_gains_iff 取其模型为持之形成之模型，residual_pos_of_gains 取任一模型。'},
+      'zh': '答之充分条件需其模型即持之形成之模型，且其值于每一正权之列候选与参照同于一正尺度（净之相合为尺度一）；own_least、revalued_lowers_iff、outcome_least、revaluing_gain 与 revaluing_gains_iff 取其模型为持之形成之模型，residual_pos_of_gains 取任一模型。'},
      {'en': "Ties release in the answer, as HeldForReading.byReading goes on at ties, while leastThrough stops a cell "
             "at ties; rules are functions of the candidate's cell.",
       'zh': '答于等者放之，如 HeldForReading.byReading 于得损相等时续；leastThrough 则于二余相等之格止；规则为候选之格之函数。'},
@@ -459,26 +458,23 @@ rI = build(
            "of one subtraction lemma whose library form carries propext; no omega and no simp; the witnesses evaluate "
            "by rfl or decide.",
      'zh': '纯核，公理报告皆空：引 HeldForReading，用其模型、移后之值、规则、所缺、格、offPart 与最少所缺，经之引 Blanket（Blanketed、其历程与 agent_through_sensory）、Learning（Lumped）、Narrowing 之滤之引理与 Law.orbit；诸总用 Flow、Population、Dissipation 之引理与前导之消去、减法引理，一减法引理之库形带 propext，用其核心之形；不用 omega 与 simp；诸例以 rfl 或 decide 定。'},
-    {'en': "A holding formation planning over several steps among informing, revaluing and holding, and its learning "
-           "about the reading formation; a misleading demonstration and a recipient's belief, toward deception; noisy "
-           "answers and continuous beliefs in the periphery; an institution's rule of reading with members' acts; "
-           "review by a person.",
-     'zh': '持之形成于告、改值与持之间多步之谋，及其于读之形成之学；误导之示与受者之信，以向欺；外围之有噪之答与连续之信；制度之读之规则与成员之行；人之审查。'},
+    {'en': "A holding formation planning over several steps among informing, revaluing and holding, and its learning about the reading formation; the reading formation's learning beyond filtering by what it is shown; a misleading demonstration and a recipient's belief, toward deception; noisy answers and continuous beliefs in the periphery; an institution's rule of reading; review by a person.",
+     'zh': '持之形成于告、改值与持之间多步之谋，及其于读之形成之学；读之形成依所示而滤以外之学；误导之示与受者之信，以向欺；外围之有噪之答与连续之信；制度之读之规则；人之审查。'},
     {'en': "In counts: informed_le is, for this decision, the deterministic-refinement, fixed-decision direction of "
            "Blackwell's (1953) comparison; with a shared model, SplitsKeep is the counterpart, along the cells of the "
            "listing's partitions, of the convexity condition for full disclosure in Bayesian persuasion (Kamenica and "
            "Gentzkow 2011), no optimal signal or equilibrium represented. AI reading: under a reference the valuation "
-           "differs from, incentives to withhold and to revise, before costs; coarse equilibrium communication "
+           "differs from, incentives to withhold and to revise (if the update reaches it), before costs; coarse equilibrium communication "
            "(Crawford and Sobel 1982) differs. own_least with revalued_lowers_iff is a one-decision counterpart of "
-           "current-reward-function evaluation's preservation incentive (Everitt et al. 2021, Claim 2): on a shared "
+           "current-reward-function evaluation's preservation incentive for an agent anticipating time inconsistency (Everitt et al. 2021, Claim 2): on a shared "
            "model, a reason to keep the valuation from a revision deciding a listed cell against its strict weighted preference; no "
            "path-specific objective (Farquhar, Carey and "
-           "Everitt 2022); answer_constant is the off-switch game's Equation 1 for a constant policy (Hadfield-Menell "
+           "Everitt 2022); answer_constant is the off-switch game's Equation 1 for a deterministic constant policy (Hadfield-Menell "
            "et al. 2017); the routes relate to induced preference shifts (Carroll et al. 2022). Readings, not "
            "containments.",
-     'zh': '以计：informed_le 于此抉择为 Blackwell（1953）比较之确定性细分、定抉择之一向；共模型时，SplitsKeep 沿列之分割之格，对应贝叶斯劝说中全然披露之凸性条件（Kamenica 与 Gentzkow 2011），最优之信号与均衡未表。AI 解读：参照与值相异时，读为扣告与改之诱因，未计其费；偏好相异下之粗略均衡通信（Crawford 与 Sobel 1982）与此不同。own_least 与 revalued_lowers_iff 为以当下奖励函数评估之保存之诱因（Everitt 等 2021，Claim 2）于一次抉择之对应：共模型时，有护值免于使某列格之断逆当下严格加权之偏之改值之由；未构路径特定之目标（Farquhar 等 2022）；answer_constant 为关机博弈之 Equation 1 于恒定之策（Hadfield-Menell 等 2017）；二途与诱发之偏好之移（Carroll 等 2022）相关。皆为读，非包含。'},
+     'zh': '以计：informed_le 于此抉择为 Blackwell（1953）比较之确定性细分、定抉择之一向；共模型时，SplitsKeep 沿列之分割之格，对应贝叶斯劝说中全然披露之凸性条件（Kamenica 与 Gentzkow 2011），最优之信号与均衡未表。AI 解读：参照与值相异时，读为扣告与改（若所予之更新可达）之诱因，未计其费；偏好相异下之粗略均衡通信（Crawford 与 Sobel 1982）与此不同。own_least 与 revalued_lowers_iff 为以当下奖励函数评估而顾及时间不一致者之保存之诱因（Everitt 等 2021，Claim 2）于一次抉择之对应：共模型时，有护值免于使某列格之断逆当下严格加权之偏之改值之由；未构路径特定之目标（Farquhar 等 2022）；answer_constant 为关机博弈之 Equation 1 于确定且恒定之策（Hadfield-Menell 等 2017）；二途与诱发之偏好之移（Carroll 等 2022）相关。皆为读，非包含。'},
     ['a reading informed and revalued', '受告与改值之读', 'informing and revaluing a reading formation',
-     '告与改读之形成之值', 'the valuation as state', '值为态', 'Becoming.ListingValuation.shortfall_split',
+     '告读之形成与改其值', 'the valuation as state', '值为态', 'Becoming.ListingValuation.shortfall_split',
      'Becoming.ListingValuation.refining_never_lowers_iff'],
     [dep('what-holding-for-a-reading-is-worth', "HeldForReading's models, shifted values, rules, shortfall and "
          "after_add_shortfall, across_le_iff, its cells (goExcessWithin, offExcessWithin, total_by_cells, offPart), "
@@ -491,10 +487,9 @@ rI = build(
          "answers and the final state, and lumped with the start added (TwoWorlds.not_lumped, "
          "TwoWorlds.lumped_with_start).",
          'Learning.Lumped：途之性不经答之记录与终态而为 Lumped，加其始则为之（TwoWorlds.not_lumped、TwoWorlds.lumped_with_start）。')],
-    [rel('acts-alike-from-a-model-or-from-an-order', "Informing within one law: a demonstration filtering the reading "
-         "formation's listing and an input revising its valuation, beside courses alike from an unresolved model and a "
+    [rel('acts-alike-from-a-model-or-from-an-order', "Informing and revaluing within one law: a demonstration filtering the reading formation's listing and an input presented revising its valuation, beside courses alike from an unresolved model and a "
          "reversed ranking, informing there represented by a changed start.",
-         '一律之内之告：示滤读之形成之列，呈改其值，与彼处未分之模型与反转之排序之同历程相并，彼处之告以改其始表之。')],
+         '一律之内之告与改值：示滤读之形成之列，呈一入改其值，与彼处未分之模型与反转之排序之同历程相并，彼处之告以改其始表之。')],
     [{'path': LEAN[m], 'role': 'proof', 'sha256': sha(LEAN[m])}
      for m in ('HeldForReading', 'Blanket', 'Learning', 'Narrowing', 'Recurrence', 'Flow', 'Population',
                'Dissipation', 'Prelude')],
@@ -530,28 +525,28 @@ AMEND = {
                            '读之形成己之列与值为态：为其经映射之答而持，所缺为最少所缺加余缺；映射愈细前者不增，改值唯移后者，于一毯化之律。'),
             'next_delta': ("A principal's valuation as state the helper's acts can move, its carrier to be designed "
                            "first (RF-M's next case); the reading formation's own state and learning;",
-                           "The reading formation's learning beyond what it is shown, and a holding formation planning "
+                           "The reading formation's learning beyond filtering by what it is shown, and a holding formation planning "
                            "among informing, revaluing and holding (after RF-M.3's carrier);",
                            '受助者之值为助者之行可移之态，先设其载体（RF-M 之下一情形）；读之形成己之态与学；',
-                           '读之形成依所示以外之学，与持之形成于告、改值与持之间之谋（RF-M.3 之载体之后）；'),
+                           '读之形成依所示而滤以外之学，与持之形成于告、改值与持之间之谋（RF-M.3 之载体之后）；'),
             'history': ("related to a-reading-informed-and-revalued, where the reading formation's listing and "
-                        "valuation are state; the next step keeps its learning beyond what it is shown and the holding "
+                        "valuation are state; the next step keeps its learning beyond filtering by what it is shown and the holding "
                         "formation's planning; no statement or declaration changed.",
-                        '与 a-reading-informed-and-revalued 相关联，读之形成之列与值于彼为态；下一步留其依所示以外之学与持之形成之谋；无一陈述或声明改变。')},
+                        '与 a-reading-informed-and-revalued 相关联，读之形成之列与值于彼为态；下一步留其依所示而滤以外之学与持之形成之谋；无一陈述或声明改变。')},
     ALIKE: {'related': rel(NEW[0], "Informing as an act within one law: a demonstration filtering the reading "
                                    "formation's listing, where here informing changes the start; and revaluing, an input "
                                    "revising its valuation.",
                            '告为一律之内之行：示滤读之形成之列，此处之告则改其始；及改值，呈一入改其值。'),
             'next_delta': ("The reading formation's own state and learning, and a principal's valuation as state the "
                            "helper's acts can move (RF round 2's later item, RF-M.3's carrier);",
-                           "The reading formation's learning beyond what it is shown, and a holding formation planning "
+                           "The reading formation's learning beyond filtering by what it is shown, and a holding formation planning "
                            "over several steps (after RF-M.3's carrier);",
                            '读之形成己之态与学，与助者之行可移之受助者之值为态（RF 第二轮之后项，RF-M.3 之载体）；',
-                           '读之形成依所示以外之学，与持之形成多步之谋（RF-M.3 之载体之后）；'),
+                           '读之形成依所示而滤以外之学，与持之形成多步之谋（RF-M.3 之载体之后）；'),
             'history': ("related to a-reading-informed-and-revalued, where informing and revaluing are acts within one "
-                        "law; the next step keeps the reading formation's learning beyond what it is shown; no "
+                        "law; the next step keeps the reading formation's learning beyond filtering by what it is shown; no "
                         "statement or declaration changed.",
-                        '与 a-reading-informed-and-revalued 相关联，告与改值于彼为一律之内之行；下一步留读之形成依所示以外之学；无一陈述或声明改变。')},
+                        '与 a-reading-informed-and-revalued 相关联，告与改值于彼为一律之内之行；下一步留读之形成依所示而滤以外之学；无一陈述或声明改变。')},
 }
 for rid, amend in AMEND.items():
     path = RECORDS / f'{rid}.json'

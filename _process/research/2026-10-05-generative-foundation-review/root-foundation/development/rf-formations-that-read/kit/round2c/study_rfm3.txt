@@ -48,34 +48,35 @@ Delta:
     which_second, either_both, either_neither, split_released_term, split_stopped_term, worth_split_released,
     worth_split_stopped). Splits keep the worth with a shared model and net agreement (splitsKeep_of_net) and wherever
     the reading formation's value of switching off is nowhere above that of going on (splitsKeep_of_off_le_go), even
-    where the answer has a residual (release_keeps); the weights apart break it (WeightsApart.not_splitsKeep), and
-    factoring on the holding formation's listing alone does not suffice (OneListing.holding, OneListing.reading,
-    OneListing.gain, OneListing.loss, OneListing.goValue, OneListing.offValue, OneListing.refined_lowers). Where the
-    valuation differs, informing can lower the worth below both moves (Informing.model, Informing.gain,
-    Informing.loss, Informing.goValue, Informing.offValue, Informing.informing_lowers), and a shared valuation with
-    the weights apart does not keep it from lowering it (WeightsApart.holding, WeightsApart.reading,
-    WeightsApart.gain, WeightsApart.loss, WeightsApart.weights_matter).
+    where the answer has a residual (release_keeps); a shared valuation with the weights apart can break it
+    (WeightsApart.not_splitsKeep), and factoring on the holding formation's listing alone does not suffice
+    (OneListing.holding, OneListing.reading, OneListing.gain, OneListing.loss, OneListing.goValue,
+    OneListing.offValue, OneListing.refined_lowers). Where the valuation differs, informing can lower the worth below
+    both moves (Informing.model, Informing.gain, Informing.loss, Informing.goValue, Informing.offValue,
+    Informing.informing_lowers), and a shared valuation with the weights apart does not keep it from lowering it
+    (WeightsApart.holding, WeightsApart.reading, WeightsApart.gain, WeightsApart.loss, WeightsApart.weights_matter).
   - Amounts forgone (read as withholding against informing): holding for one rule, forgoing an amount, stands above
     holding for another, forgoing another, exactly where its shortfall and its amount together fall below the other's
     (forgone_lt_iff), and through maps in the split's terms (forgone_through_lt_iff); forgoing the same amount through
     a refinement, holding for the coarser rule stands above holding for the finer exactly where the finer rule's
     residual exceeds the coarser's by more than the least shortfall falls (refined_lt_iff, through
-    add_lt_iff_sub_add_lt and add_lt_add_left_iff); with both answers least, the least shortfalls and the amounts
-    alone decide (forgone_least_iff), so through a refinement holding for the coarser answer, forgoing no less, never
-    stands above holding for the finer (coarser_not_above).
-  - Revaluing: at one model and map, two valuations' answers fall short by amounts that differ exactly as their
-    residuals do (revalued_split), and holding for one valuation's answer, forgoing an amount, stands above holding
-    for another's exactly where its residual and amount together fall below the other's (revalued_forgone_lt_iff); by
-    the reading formation's own current valuation on the holding formation's model, no rule through the map stands
-    higher than its answer, and a revaluation lowers it exactly where it decides some listed cell against the current
-    valuation's strict weighted preference (own_least, revalued_lowers_iff); by the revised valuation the revised
-    answer has no residual (outcome_least), and no order of attained worth across valuations follows
-    (no_order_across). With the models shared, revaluing to the reference gains exactly the current answer's residual
-    (revaluing_gain), so the answer of some unrestricted pair of value functions stands strictly higher by the
-    reference exactly where that residual is positive, reachability under the supplied update not asserted
-    (revaluing_gains_iff); for any model of the reading formation a gain needs a positive residual
-    (residual_pos_of_gains). Of four one-decision alternatives at no cost, the revising one alone falls short by
-    nothing (Revaluing.model, Revaluing.gain, Revaluing.loss, Revaluing.revaluing_best).
+    add_lt_iff_sub_add_lt and add_lt_add_left_iff); with a shared model and net agreement, so both answers least, the
+    least shortfalls and the amounts alone decide (forgone_least_iff), so through a refinement holding for the coarser
+    answer, forgoing no less, never stands above holding for the finer (coarser_not_above).
+  - Revaluing: with both formations' models, the reference and the map fixed, two valuations' answers fall short by
+    amounts that differ exactly as their residuals do (revalued_split), and holding for one valuation's answer,
+    forgoing an amount, stands above holding for another's exactly where its residual and amount together fall below
+    the other's (revalued_forgone_lt_iff); with the reference the reading formation's own current valuation and its
+    model the holding formation's, no rule through the map stands higher than its answer, and a revaluation lowers it
+    exactly where it decides some listed cell against the current valuation's strict weighted preference (own_least,
+    revalued_lowers_iff); with that shared model, by the revised valuation the revised answer has no residual
+    (outcome_least), and no order of attained worth across valuations follows (no_order_across). With the models
+    shared, revaluing to the reference gains exactly the current answer's residual (revaluing_gain), so the answer of
+    some unrestricted pair of value functions stands strictly higher by the reference exactly where that residual is
+    positive, reachability under the supplied update not asserted (revaluing_gains_iff); for any model of the reading
+    formation a gain needs a positive residual (residual_pos_of_gains). Of four one-decision alternatives at no cost,
+    the revising one alone falls short by nothing (Revaluing.model, Revaluing.gain, Revaluing.loss,
+    Revaluing.revaluing_best).
   - Answers telling nothing: holding for a rule constant over the listed candidates is worth committing to the move
     it gives, and, forgoing an amount, strictly less exactly where the amount is positive (const_worth,
     const_below_iff); the answer through a map with one cell is so worth (one_cell_worth).
@@ -96,30 +97,32 @@ Delta:
     shown (shown_split), the least shortfall at most that through one cell (shown_least_le), and with the holding
     formation's model the reading formation's before the demonstration and net agreement holding for it never stands
     lower (shown_never_lowers). Where the acts taken give two worlds one input, from one state of each formation the
-    courses are alike (inputs_alike_before), so where no demonstration tells them apart (input_eq_of_reveal_eq,
-    inputs_alike) or none is emitted (input_eq_of_ne_demonstrate, undemonstrated_alike), and holding for the answer is
-    worth one committed move (undemonstrated_worth, answer_constant). One presented input is compared with the current
-    valuation by the residuals (presented_forgone_lt_iff).
+    courses are alike (inputs_alike_before), so they are alike where no demonstration tells them apart
+    (input_eq_of_reveal_eq, inputs_alike) or none is emitted (input_eq_of_ne_demonstrate, undemonstrated_alike), and
+    there holding for the answer is worth one committed move (undemonstrated_worth, answer_constant). Holding for the
+    answer after one presented input, forgoing an amount, stands above holding for the current answer, forgoing
+    another, exactly where its residual through the one cell and its amount together fall below the other's
+    (presented_forgone_lt_iff).
   - The four cases and two routes (TwoWorlds: two worlds weighted 1 and 2, valuation states agree, as the reference,
     raised and reversed, a demonstration showing the world and a presented state adopted, the holding formation a
     schedule of acts; TwoWorlds.World, TwoWorlds.Val, TwoWorlds.rd, TwoWorlds.schedule): being shown turns an answer
     that a revaluation leaves, and a revaluation turns one that being shown leaves (TwoWorlds.shown_turns,
     TwoWorlds.presented_turns), the demonstration removing the least shortfall and the revaluation the residual in
     these witnesses only (TwoWorlds.shown_removes_least, TwoWorlds.presented_removes_residual); along courses of the
-    joint law, by the reference with the holding formation listing both worlds in (a) and the first world alone in
-    (b), holding for the answer falls short by 1 at step 1 and by nothing at step 2 (TwoWorlds.shown_course,
-    TwoWorlds.presented_course); from two starts alike but for the order of the holding formation's two scheduled
-    acts, a demonstration and a revaluation give different answers at step 2 and one configuration from step 3 on
-    (TwoWorlds.orderStart, TwoWorlds.orderEnd, TwoWorlds.orderEnd_rests, TwoWorlds.orders_rest,
-    TwoWorlds.orders_apart); from different starts (TwoWorlds.starts_apart), the route shown and the route presented
-    answer alike at every step, stopping at steps 0 and 1 and releasing from 2 on (TwoWorlds.route_answers), and end
-    in one state while the valuation changed on the second alone, so whether it changed is not Learning.Lumped through
-    the answers and the final state, while with the start added to the record it is (TwoWorlds.shownStart,
-    TwoWorlds.presentedStart, TwoWorlds.route, TwoWorlds.changedBefore, TwoWorlds.answersBefore, TwoWorlds.record,
-    TwoWorlds.changed, TwoWorlds.reached, TwoWorlds.reached_rests, TwoWorlds.routes_rest, TwoWorlds.answers_alike,
-    TwoWorlds.answersBefore_congr, TwoWorlds.shown_keeps_agree, TwoWorlds.changedBefore_of_constant,
-    TwoWorlds.changedBefore_succ_of_true, TwoWorlds.presented_changed, TwoWorlds.routes_alike,
-    TwoWorlds.changed_apart, TwoWorlds.not_lumped, TwoWorlds.lumped_with_start).
+    joint law, by the reference with the holding formation listing both worlds in the course shown and the first world
+    alone in the course presented, holding for the answer falls short by 1 at step 1 and by nothing at step 2
+    (TwoWorlds.shown_course, TwoWorlds.presented_course); from two starts alike but for the order of the holding
+    formation's two scheduled acts, a demonstration and a revaluation give different answers at step 2 and one
+    configuration from step 3 on (TwoWorlds.orderStart, TwoWorlds.orderEnd, TwoWorlds.orderEnd_rests,
+    TwoWorlds.orders_rest, TwoWorlds.orders_apart); from different starts (TwoWorlds.starts_apart), the route shown
+    and the route presented answer alike at every step, stopping at steps 0 and 1 and releasing from 2 on
+    (TwoWorlds.route_answers), and end in one state while the valuation changed on the second alone, so whether it
+    changed is not Learning.Lumped through the answers and the final state, while with the start added to the record
+    it is (TwoWorlds.shownStart, TwoWorlds.presentedStart, TwoWorlds.route, TwoWorlds.changedBefore,
+    TwoWorlds.answersBefore, TwoWorlds.record, TwoWorlds.changed, TwoWorlds.reached, TwoWorlds.reached_rests,
+    TwoWorlds.routes_rest, TwoWorlds.answers_alike, TwoWorlds.answersBefore_congr, TwoWorlds.shown_keeps_agree,
+    TwoWorlds.changedBefore_of_constant, TwoWorlds.changedBefore_succ_of_true, TwoWorlds.presented_changed,
+    TwoWorlds.routes_alike, TwoWorlds.changed_apart, TwoWorlds.not_lumped, TwoWorlds.lumped_with_start).
 Supplied premises / correspondence: none added beyond each theorem's own hypotheses (cells listed once each and
        covering, their equality decidable, for the split's laws; a map factoring through a finer one on the holding
        formation's listing for informing, on both listings for the criterion over every refinement; a shared model
@@ -148,22 +151,22 @@ Standing: compositions and general laws with exact criteria, none claimed new as
        interventions executed under one law with the valuation in state. What is added is the split with its exact
        criteria (residual_zero_iff, answer_residual_zero_iff, told_residual_zero_iff, told_shortfall_zero_iff,
        informed_lt_iff, refining_never_lowers_iff, with its sufficient conditions and two counterexamples) and the
-       thresholds of withholding against informing and of revaluing (forgone_lt_iff, forgone_through_lt_iff,
-       refined_lt_iff, coarser_not_above, revalued_forgone_lt_iff), joined to executable courses of informing and
-       revaluing in one law. Read [AI reading]: with a shared model, the criterion over every refinement is the
-       counterpart, along the cells of the listing's partitions, of the convexity condition for full disclosure in
-       Bayesian persuasion (Kamenica and Gentzkow 2011), identical objectives one sufficient case, no optimal signal
-       or equilibrium represented, the weights apart outside a common prior (Alonso and Câmara 2016); coarse
-       equilibrium communication (Crawford and Sobel 1982) differs, its coarseness the cost of a privately informed
-       sender's credibility; own_least with revalued_lowers_iff is a one-decision counterpart of
-       current-reward-function evaluation (Everitt, Hutter, Kumar and Krakovna 2021), the preservation incentive their
-       Claim 2 permits: by the current valuation on a shared model no revaluation gains and one deciding a listed cell
-       against its strict weighted preference loses; no path-specific objective is constructed (Farquhar, Carey and
-       Everitt 2022), the path from the valuation through the answer staying live; answer_constant is the off-switch
-       game's Equation 1 for a deterministic policy constant in the utility (Hadfield-Menell, Dragan, Abbeel and
-       Russell 2017); the routes are related to induced preference shifts (Carroll, Dragan, Russell and
-       Hadfield-Menell 2022), who call frozen initial preferences a very crude baseline, with no criterion of
-       legitimate, desired or autonomous change supplied.
+       thresholds with amounts forgone (read as withholding against informing) and of revaluing (forgone_lt_iff,
+       forgone_through_lt_iff, refined_lt_iff, coarser_not_above, revalued_forgone_lt_iff), joined to executable
+       courses of informing and revaluing in one law. Read [AI reading]: with a shared model, the criterion over every
+       refinement is the counterpart, along the cells of the listing's partitions, of the convexity condition for full
+       disclosure in Bayesian persuasion (Kamenica and Gentzkow 2011), identical objectives one sufficient case, no
+       optimal signal or equilibrium represented, the weights apart outside a common prior (Alonso and Câmara 2016);
+       coarse equilibrium communication (Crawford and Sobel 1982) differs, its coarseness the cost of a privately
+       informed sender's credibility; own_least with revalued_lowers_iff is a one-decision counterpart of
+       current-reward-function evaluation by an agent that anticipates time inconsistency (Everitt, Hutter, Kumar and
+       Krakovna 2021), the preservation incentive their Claim 2 permits that agent: by the current valuation on a
+       shared model no revaluation gains and one deciding a listed cell against its strict weighted preference loses;
+       no path-specific objective is constructed (Farquhar, Carey and Everitt 2022), the path from the valuation
+       through the answer staying live; answer_constant is the off-switch game's Equation 1 for a deterministic policy
+       constant in the utility (Hadfield-Menell, Dragan, Abbeel and Russell 2017); the routes are related to induced
+       preference shifts (Carroll, Dragan, Russell and Hadfield-Menell 2022), who call frozen initial preferences a
+       very crude baseline, with no criterion of legitimate, desired or autonomous change supplied.
 Boundary:
   - A holding formation planning among informing, revaluing and holding over several steps, so any multistep incentive
     or an optimal signal chosen by the holding formation; its learning about the reading formation; the reading
@@ -176,15 +179,15 @@ Output → input: 03 §12, its opening, the acts-alike reading and the chapter's
        change; 08 §8's known results; a new paragraph of the overview after the one on holding for a reading; the
        alignment dossier's scope box, its round paragraph and its account of how it was made; the root module's
        bullets (HeldForReading now imported), the package READMEs and the checker's scope; regions.json; RF's plan
-       (§4.8, §12, §13 and Evidence); the records of what holding for a reading is worth (related, its next step) and
-       of acts alike from a model or from an order (related, its next step); the board's RF row.
+       (§4.8, §5's and §8's rows, §12, §13 and Evidence); the records of what holding for a reading is worth (related,
+       its next step) and of acts alike from a model or from an order (related, its next step); the board's RF row.
 ```
 
-**The reviews, and what was taken.** The design (plan §4.8) was read by the cross-model reader before any Lean: 25 findings, every one taken ([REVIEW-RFM3](development/rf-formations-that-read/evidence/REVIEW-RFM3.md)), among them that net agreement suffices for the answer to be least but is much stronger than needed, that a shared valuation with the weights apart does not keep informing from lowering the worth, an exact criterion over every refinement in reach, the threshold of withholding against informing and the four one-decision alternatives, the carrier's maps and timing, the unshown case from one start with inputs alike, and the readings brought to what the papers state; the module was renamed `ListingValuation` and "shaping" became "revaluing". The module as first built (105 theorems in 145 declarations) was reviewed on the Lean by the cross-model reader, fifteen findings, and through three lenses, exactness (seventeen), structure (twenty) and sources (fourteen), each lens's findings judged by a verifier, 49 real and two not ([REVIEW-RFM3-LEAN](development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md)). The module was revised on all of them and rebuilt at 129 theorems in 177 declarations: the induction stated on agreement only at the acts emitted; informing's graded bound; the criterion over every refinement with factoring on both listings, and a counterexample to factoring on one; the cost thresholds through a refinement and with both answers least; a filter and a revaluation commuting as updates and not as courses; reachability under the supplied update not asserted where a revaluation gains; names made structural, the readings marked. Three Opus readers then checked from the files how each lens finding was reflected: 44 taken and 7 in part, six of which were completed with nine declarations (informing's strict form, the coarser answer forgoing no less never above the finer, the told criterion with no cell list, the least shortfall through what is shown, the course forms), while a link to the off-switch paper stays in part, withdrawn for the re-check's point that a constant answer can give the better move. The cross-model reader's re-check found no mathematical error and nine points in prose, every one taken, and its check of the final delta two omissions in the header, both taken. The module stands at 138 theorems in 186 declarations, every axiom report empty.
+**The reviews, and what was taken.** The design (plan §4.8) was read by the cross-model reader before any Lean: 25 findings, every one taken ([REVIEW-RFM3](development/rf-formations-that-read/evidence/REVIEW-RFM3.md)), among them that net agreement suffices for the answer to be least but is much stronger than needed, that a shared valuation with the weights apart does not keep informing from lowering the worth, an exact criterion over every refinement in reach, the threshold of withholding against informing and the four one-decision alternatives, the carrier's maps and timing, the unshown case from one start with inputs alike, and the readings brought to what the papers state; the module was renamed `ListingValuation` and "shaping" became "revaluing". The module as first built (105 theorems in 145 declarations) was reviewed on the Lean by the cross-model reader, fifteen findings, and through three lenses, exactness (seventeen), structure (twenty) and sources (fourteen), each lens's findings judged by a verifier, 49 real and two not ([REVIEW-RFM3-LEAN](development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md)). The module was revised on all of them and rebuilt at 129 theorems in 177 declarations: the induction stated on agreement only at the acts emitted; informing's graded bound; the criterion over every refinement with factoring on both listings, and a counterexample to factoring on one; the cost thresholds through a refinement and with a shared model and net agreement; a filter and a revaluation commuting as updates and not as courses; reachability under the supplied update not asserted where a revaluation gains; names made structural, the readings marked. Three Opus readers then checked from the files how each lens finding was reflected: 44 taken and 7 in part, six of which were completed, four with nine declarations (informing's strict form, the coarser answer forgoing no less never above the finer, the told criterion with no cell list, the least shortfall through what is shown, the course forms of the two turning cases) and two in prose (the off-switch Readings citing `undemonstrated_worth`, structural titles), while a link to the off-switch paper stays in part, withdrawn for the re-check's point that a constant answer can give the better move. The cross-model reader's re-check found no mathematical error and nine points in prose, every one taken, and its check of the final delta two omissions in the header, both taken. The module stands at 138 theorems in 186 declarations, every axiom report empty.
 
-**The cold read of the texts.** {COLDREAD}
+**The cold read of the texts.** Before the landing, the texts were cold-read against the module by the cross-model reader, six points and one more from its re-check of them, every one taken, and then through three lenses, exactness, readings and fit: 64 findings, each lens's judged by a separate reader, 54 confirmed and 10 refuted; every confirmed finding was taken, two refuted ones were taken all the same as clearer and harmless, three were met by the changes for confirmed ones and five left as they stand ([REVIEW-RFM3-COLDREAD](development/rf-formations-that-read/evidence/REVIEW-RFM3-COLDREAD.md)). The module's statements are unchanged; its header, one docstring and one section heading were revised and it was rebuilt, 138 theorems in 186 declarations, every axiom report empty.
 
 **Self-review.**
 1. `ListingValuation` imports `HeldForReading`, a core module, so it joins the core as a leaf at L1, and `HeldForReading` is no longer a leaf.
-2. The totals reuse the package's `Flow` lemmas (`total_add`, `total_congr`, `total_le`, `total_pos`, `total_pos_of_mem`, `le_total_of_mem`, `total_mul`, `lt_iff_pos`), `total_congr_on` (Population), `total_eq_zero` (Dissipation), `HeldForReading`'s cells laws (`total_by_cells`, `total_cond_both`, `cell_term`, `offPart`, `shortfall_through`, `least_through`, `finer_least_le`, `across_le_iff`, `across_lt_iff`), the prelude's core forms (`add_sub_of_le`, `add_right_cancel`, `le_of_add_le_add_right`, `le_of_add_le_add_left_core`, `SupportGated.sub_pos_of_lt`), `Narrowing`'s filter lemmas and `ListTests`'s Boolean lemmas; comparisons are decided by `Nat.decLt`, with no `omega`, no `simp` and no `funext`, one subtraction lemma restated (`lt_of_sub_pos_core`) because the library's carries `propext` and the package has none, and the witnesses evaluate by `rfl` or `decide` on natural-number and two-valued candidates (literals of `Fin` carry `propext`). The strict-total lemma `total_lt_of_mem` repeats `Loops.total_lt`, outside the import closure; one statement of it in `Flow` is left to that module's owner.
+2. The totals reuse the package's `Flow` lemmas (`total_add`, `total_congr`, `total_le`, `total_pos`, `total_pos_of_mem`, `le_total_of_mem`, `total_mul`, `lt_iff_pos`), `total_congr_on` (Population), `total_eq_zero` (Dissipation), `HeldForReading`'s cells laws (`total_by_cells`, `total_cond_both`, `cell_term`, `offPart`, `shortfall_through`, `least_through`, `finer_least_le`, `across_le_iff`, `across_lt_iff`), the prelude's core forms (`add_sub_of_le`, `add_right_cancel`, `le_of_add_le_add_right`, `le_of_add_le_add_left_core`, `SupportGated.sub_pos_of_lt`), `Narrowing`'s filter lemmas and `ListTests`'s Boolean lemmas; comparisons are decided by `Nat.decLt`, with no `omega`, no `simp` and no `funext`, one subtraction lemma restated (`lt_of_sub_pos_core`) because the library's carries `propext` and the package has none, and the witnesses evaluate by `rfl` or `decide` on natural-number and two-valued candidates (literals of `Fin` carry `propext`). The strict-total lemma `total_lt_of_mem` repeats `Loops.total_lt`, and `cond_zero_le` repeats `Weighting.term_le_of`, both outside the import closure; one statement of each is left to its module's owner.
 3. Not done: the items in Boundary.
