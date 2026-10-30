@@ -59,11 +59,24 @@ at a model raises no count of the others. Under every law whose declarations inc
 file names the item (stated_at_model). central_reach counts the distinct central declarations: reaching the
 grammar, by the measure; not reaching it but stated at a represented model (a World's occurrence model or a
 process's model); not reaching it and stated only on their own carrier; and the rest.
+
+The boundary field (architecture/mv/BOUNDARY-FIELD.md; tools/research/boundary.py). One record, U4's boundary
+record, may carry `boundary`: the standings of central declarations on U4's edge (derived, on the root under a stated
+hypothesis, or a reading) and the two premises of the ethics. Where a record carries it, this tool checks each entry
+(D1 to D5 on the constants; the forms under a stated hypothesis, the derived rows' laws and their bridges in Lean,
+by tools/research/boundary_check.lean in the core run's environment restored from the cache), places every other
+central declaration by U4's rule, and writes `boundary`: the counts by label and group, the counts against F5's four
+classes, the premises' Q1, what the Lean check ran on, the unverified entries and every row. An entry that fails is
+unverified and its row takes the rule's label. The laws of the record carrying the field are counted in
+counts_at_boundary_record, not counts or counts_at_model, so the standings' own declarations raise no count.
 """
 import hashlib, importlib.util, json, os, pickle, sys, tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+from tools.research import boundary  # noqa: E402
 STUDY = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-foundation'
 MEASURE = STUDY / 'development/ou3b-master-laws-on-the-grammar/measure_grammar.py'
 TC = STUDY / 'THEOREM-CONNECTIVITY.py'
@@ -174,6 +187,12 @@ def verify(C, item, law_names, central, others):
     return failed, terms, kept
 
 
+def counted_in(rid, i, carrying, checked):
+    """Where law i of record rid is counted: the laws of the record carrying the boundary field apart (a law also
+    carrying statements at a model among them), then F5's carrying laws, then every other law."""
+    return 'counts_at_boundary_record' if rid in carrying else 'counts_at_model' if (rid, i) in checked else 'counts'
+
+
 def digest(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
@@ -184,9 +203,11 @@ def sources_digest(receipt):
 
 
 def hashed_inputs(ec):
-    """What decides the data besides the Lean: the measure, its coverage, the dump and this tool."""
+    """What decides the data besides the Lean: the measure, its coverage, the dump, the boundary field's code and
+    Lean check, and this tool."""
     return {str(p.relative_to(ROOT)): digest(p)
-            for p in (MEASURE, Path(ec.__file__), ec.COVERAGE, TC, TC.with_name('THEOREM-CONNECTIVITY-DUMP.lean'), Path(__file__).resolve())}
+            for p in (MEASURE, Path(ec.__file__), ec.COVERAGE, TC, TC.with_name('THEOREM-CONNECTIVITY-DUMP.lean'),
+                      Path(boundary.__file__).resolve(), boundary.CHECK, Path(__file__).resolve())}
 
 
 def load_measure():
@@ -267,8 +288,10 @@ def main():
     records = {}
     counts = {'laws': 0, 'no_declarations': 0, 'outside': 0, **{d: 0 for d in DEPENDENCES}, 'vocabulary_only': 0, **{k: 0 for k in NAMES}}
     counts_at_model = dict.fromkeys(counts, 0)  # laws carrying statements at a model, counted apart (F5)
+    counts_at_boundary_record = dict.fromkeys(counts, 0)  # the laws of the record carrying the boundary field
     loaded = [json.loads(path.read_text()) for path in sorted((ROOT / 'theories/becoming/results/records').glob('*.json'))]
     by_id = {r['id']: r for r in loaded}
+    carrying = [r['id'] for r in boundary.carriers(loaded)]
     declared = [(r['id'], i, x) for r in loaded for i, law in enumerate(r.get('laws', []), 1) if isinstance(law, dict)
                 for x in (law.get('statements_at_model') if isinstance(law.get('statements_at_model'), list) else [])
                 if isinstance(x, dict)]
@@ -297,7 +320,8 @@ def main():
                 gn, gln, hn = above(n)
                 g, gl, hit = g or gn, gl or gln, hit | hn
             e = {'law': i, 'declarations': names}
-            c = counts_at_model if (r['id'], i) in checked else counts
+            c = {'counts': counts, 'counts_at_model': counts_at_model,
+                 'counts_at_boundary_record': counts_at_boundary_record}[counted_in(r['id'], i, carrying, checked)]
             c['laws'] += 1
             if inside:
                 e['master_laws'] = [k for k in NAMES if k in hit]
@@ -330,11 +354,12 @@ def main():
             entries.append(e)
         if entries:
             records[r['id']] = entries
-    reach = {'reaching the grammar': 0, 'stated at a represented model': 0, 'stated on its own carrier only': 0, 'the rest': 0}
+    reach, f5_class = dict.fromkeys(boundary.F5_CLASSES, 0), {}
     for n, row in central.items():
         models = {m for x in at_model.get(n, []) for m in x['models']}
-        reach['reaching the grammar' if row['dependence'] == 'grammar' else 'stated at a represented model' if models & {'occurrence', 'process'}
-              else 'stated on its own carrier only' if models else 'the rest'] += 1
+        f5_class[n] = ('reaching the grammar' if row['dependence'] == 'grammar' else 'stated at a represented model'
+                       if models & {'occurrence', 'process'} else 'stated on its own carrier only' if models else 'the rest')
+        reach[f5_class[n]] += 1
     data = {
         'about': ('MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by '
                   'tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean '
@@ -348,14 +373,22 @@ def main():
         'anchors': anchors,
         'counts': counts,
         'counts_at_model': counts_at_model,
+        'counts_at_boundary_record': counts_at_boundary_record,
         'model_relations': {'occurrence': sorted(OCCURRENCE), 'process': sorted(PROCESS), 'structure': sorted(STRUCTURE)},
         'central_reach': {'counts': reach, 'rows': {n: at_model[n] for n in sorted(central) if n in at_model}},
         'records': records,
     }
+    if len(carrying) > 1:
+        data['boundary'] = {'error': 'the boundary field is carried by more than one record', 'records': carrying}
+    elif carrying:
+        data['boundary'] = boundary.report(C, central, at_model, f5_class, by_id[carrying[0]], laws['balance'])
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1) + '\n')
     unverified = sum(1 for v in checked.values() for x in v if not x['verified'])
+    b = data.get('boundary', {})
     print(json.dumps({'records': len(records), **counts, 'at_model_laws': counts_at_model['laws'], 'statements_at_model': len(declared),
-                      'unverified': unverified, 'central_reach': reach, 'core_receipt': core['utc'], 'from_dump': from_dump},
+                      'unverified': unverified, 'central_reach': reach, 'core_receipt': core['utc'], 'from_dump': from_dump,
+                      **({'boundary': b.get('error') or {'record': b['record'], 'counts': b['counts'], 'unverified': len(b['unverified']),
+                                                          'lean_check': b['lean_check'].get('ran')}} if b else {})},
                      ensure_ascii=False))
 
 

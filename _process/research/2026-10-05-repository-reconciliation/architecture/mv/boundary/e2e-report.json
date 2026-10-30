@@ -1,0 +1,2632 @@
+{
+ "record": "u4-test",
+ "declared": {
+  "standings": [
+   {
+    "declaration": "Becoming.Flow.beyond_gives_nothing",
+    "standing": "derived",
+    "basis": {
+     "en": "A case."
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«所闭之界»"
+    ],
+    "support": [
+     "Becoming.eq_zero_of_not_pos"
+    ]
+   },
+   {
+    "declaration": "Becoming.Flow.withinSystem_of_withinInfluence",
+    "standing": "derived",
+    "basis": {
+     "en": "A case."
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«所闭之单调»"
+    ],
+    "support": [
+     "Becoming.Flow.shares_of_affectedBy",
+     "Becoming.WithinClosure.mono"
+    ]
+   },
+   {
+    "declaration": "Becoming.Law.drawn_iff_not_returns",
+    "standing": "derived",
+    "basis": {
+     "en": "A case."
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«定后有后则入当且仅当不返»"
+    ],
+    "bridges": [
+     "Becoming.Branching.law_reach_iff",
+     "Becoming.Branching.law_trace_iff",
+     "Becoming.Law.absorbing_iff_closed",
+     "Becoming.Law.drawn_iff_drawnIn",
+     "Becoming.Law.reaches_iff_orbit",
+     "Becoming.Law.returns_iff",
+     "Becoming.Law.returns_iff_reaches"
+    ],
+    "support": [
+     "Becoming.Branching.law_trace_of",
+     "Becoming.Branching.units_length",
+     "Becoming.Law.next_fixed",
+     "Becoming.Law.next_total",
+     "Becoming.Law.orbit_add",
+     "Becoming.Law.orbit_shift",
+     "Becoming.Law.reaches_of_orbit"
+    ]
+   },
+   {
+    "declaration": "Becoming.Law.lossless_iff_returns",
+    "standing": "derived",
+    "basis": {
+     "en": "A case."
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«有限遍后定后则定前当且仅当皆返»"
+    ],
+    "bridges": [
+     "Becoming.Branching.law_reach_iff",
+     "Becoming.Branching.law_trace_iff",
+     "Becoming.Law.lossless_iff",
+     "Becoming.Law.lossless_iff_fixedBefore",
+     "Becoming.Law.reaches_iff_orbit",
+     "Becoming.Law.returns_iff",
+     "Becoming.Law.returns_iff_reaches"
+    ],
+    "support": [
+     "Becoming.Branching.law_trace_of",
+     "Becoming.Branching.units_length",
+     "Becoming.Law.next_fixed",
+     "Becoming.Law.next_total",
+     "Becoming.Law.orbit_add",
+     "Becoming.Law.orbit_shift",
+     "Becoming.Law.reaches_of_orbit"
+    ]
+   },
+   {
+    "declaration": "Becoming.Learning.goAlike_iff_lumped",
+    "standing": "derived",
+    "basis": {
+     "en": "A case."
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«像定后当且仅当同行»"
+    ],
+    "bridges": [
+     "Becoming.Learning.lumped_iff_fixed_image",
+     "Becoming.goAlikeUnder_iff_alike"
+    ]
+   },
+   {
+    "declaration": "Becoming.Tolerance.answers_restores_iff",
+    "standing": "derived",
+    "basis": {
+     "en": "A case."
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«承之迭»"
+    ],
+    "bridges": [
+     "Becoming.Tolerance.worst_start",
+     "Becoming.Withholding.answers_closed",
+     "Becoming.Withholding.chain_iff_steps"
+    ],
+    "support": [
+     "Becoming.Tolerance.KeepsInclusion.course",
+     "Becoming.Tolerance.KeepsInclusionInto.course",
+     "Becoming.Tolerance.answers_keeps",
+     "Becoming.Withholding.Chain.last",
+     "Becoming.Withholding.Chain.last_of_eq",
+     "Becoming.Withholding.Chain.zero_eq"
+    ]
+   },
+   {
+    "declaration": "Becoming.Withholding.withholding_spreads",
+    "standing": "derived",
+    "basis": {
+     "en": "A case."
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«存承之迭»"
+    ],
+    "bridges": [
+     "Becoming.Withholding.chain_iff_steps",
+     "Becoming.Withholding.waitsAll_closed",
+     "Becoming.Withholding.within_iff_withinSteps"
+    ],
+    "support": [
+     "Becoming.Withholding.Chain.last",
+     "Becoming.Withholding.Chain.last_of_eq",
+     "Becoming.Withholding.Chain.zero_eq"
+    ]
+   },
+   {
+    "declaration": "Becoming.WithinMoves.after_course",
+    "standing": "derived",
+    "basis": {
+     "en": "A case."
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«迭内之接»"
+    ],
+    "bridges": [
+     "Becoming.trace_iff_steps",
+     "Becoming.withinMoves_iff_withinSteps"
+    ],
+    "support": [
+     "Becoming.trace_steps"
+    ]
+   },
+   {
+    "declaration": "Becoming.Flow.mutuallyDependent_iff_reach",
+    "standing": "connected",
+    "basis": {
+     "en": "Connected."
+    },
+    "review": "R.md"
+   },
+   {
+    "declaration": "Becoming.Flow.withinCoupling_reads_iff",
+    "standing": "connected",
+    "basis": {
+     "en": "Connected."
+    },
+    "review": "R.md"
+   },
+   {
+    "declaration": "Becoming.Flow.no_new_dependence",
+    "standing": "balance in its statement",
+    "basis": {
+     "en": "Balance."
+    },
+    "review": "R.md"
+   },
+   {
+    "declaration": "Becoming.act_courses_unselected",
+    "standing": "derived",
+    "basis": {
+     "en": "Steps?"
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«所闭之传递»"
+    ]
+   }
+  ],
+  "premises_of_the_ethics": [
+   {
+    "role": "scope",
+    "name": {
+     "en": "the continuation condition"
+    },
+    "premise": "Becoming.Unrestricted",
+    "not_entailed": "Becoming.ReadsOnlyDynamics.not_entails",
+    "basis": {
+     "en": "b"
+    },
+    "review": "R.md"
+   },
+   {
+    "role": "order",
+    "name": {
+     "en": "C"
+    },
+    "premise": "Becoming.Comparison",
+    "not_entailed": null,
+    "absent": {
+     "en": "no theorem shows it"
+    },
+    "basis": {
+     "en": "b"
+    },
+    "review": "R.md"
+   }
+  ]
+ },
+ "counts": {
+  "derived": 8,
+  "under a stated hypothesis": 0,
+  "counting": 0,
+  "connected": 24,
+  "witnessed at its model": 0,
+  "balance in its statement": 32,
+  "amounts": 0,
+  "at a represented model": 16,
+  "own carrier": 7,
+  "at its model": 0,
+  "free significance": 0,
+  "unplaced": 31
+ },
+ "groups": {
+  "on the edge": 8,
+  "below the grammar": 0,
+  "distances": 79,
+  "unplaced": 31
+ },
+ "derived_by_forwarder": [],
+ "against_f5": {
+  "derived": {
+   "reaching the grammar": 8,
+   "stated at a represented model": 0,
+   "stated on its own carrier only": 0,
+   "the rest": 0
+  },
+  "connected": {
+   "reaching the grammar": 24,
+   "stated at a represented model": 0,
+   "stated on its own carrier only": 0,
+   "the rest": 0
+  },
+  "balance in its statement": {
+   "reaching the grammar": 12,
+   "stated at a represented model": 0,
+   "stated on its own carrier only": 0,
+   "the rest": 20
+  },
+  "at a represented model": {
+   "reaching the grammar": 0,
+   "stated at a represented model": 16,
+   "stated on its own carrier only": 0,
+   "the rest": 0
+  },
+  "own carrier": {
+   "reaching the grammar": 0,
+   "stated at a represented model": 0,
+   "stated on its own carrier only": 7,
+   "the rest": 0
+  },
+  "unplaced": {
+   "reaching the grammar": 0,
+   "stated at a represented model": 0,
+   "stated on its own carrier only": 0,
+   "the rest": 31
+  }
+ },
+ "premises_of_the_ethics": [
+  {
+   "role": "scope",
+   "name": {
+    "en": "the continuation condition"
+   },
+   "premise": "Becoming.Unrestricted",
+   "not_entailed": "Becoming.ReadsOnlyDynamics.not_entails",
+   "result": "not entailed"
+  },
+  {
+   "role": "order",
+   "name": {
+    "en": "C"
+   },
+   "premise": "Becoming.Comparison",
+   "not_entailed": null,
+   "absent": {
+    "en": "no theorem shows it"
+   },
+   "result": "not shown"
+  }
+ ],
+ "lean_check": {
+  "toolchain": "leanprover/lean4:v4.29.1",
+  "modules_sha256": "4aa713a853453d066a43f81adddef8428132e544975bf6167e750714420817ff",
+  "check_sha256": "5cb5c32c2e7a0617efb0d59b632545445cf7331ee1aad5dec1a3abd8754b72eb",
+  "ran": true
+ },
+ "unverified": [
+  {
+   "declaration": "Becoming.act_courses_unselected",
+   "standing": "derived",
+   "failed": [
+    "D2: the proofs name theorems that are neither grammar laws, root theorems nor declared lemmas: Becoming.ExchangeLaw.course_balances_iff, Becoming.ExchangeLaw.withAct_follows, Becoming.ExchangeLaw.withAct_give_of_part, Becoming.ExchangeLaw.withAct_nonanticipating, Becoming.ExchangeLaw.withAct_take_of_part, Becoming.Flow.act_unselected",
+    "D3: the walk does not reach Becoming.«所闭之传递»",
+    "D5: balance enters its closure: Becoming.Flow.Balances, Becoming.Flow.BalancesOn"
+   ]
+  }
+ ],
+ "rows": {
+  "Becoming.Amounts.rests": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«尽则不或屡»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Branching.loss_passes_juncture": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«及当且仅当一步而所闭»",
+    "Becoming.«所闭之传递»",
+    "Becoming.«所闭之自反»",
+    "Becoming.«所闭当且仅当同一或及»",
+    "Becoming.«缘在所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.CensusWebs.keep_pace": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.balance_over_stretch_on"
+    ]
+   }
+  },
+  "Becoming.ClosedCapture.lock_outlives_loss": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«所闭之自反»",
+    "Becoming.«缘在所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Dependence.Overdetermined.only_together": {
+   "label": "at a represented model",
+   "placed": "the rule",
+   "rule": "at a represented model",
+   "f5": "stated at a represented model",
+   "at_model": [
+    {
+     "record": "joint-difference-making",
+     "law": 13,
+     "declaration": "Becoming.ModelStatements.only_together_reading",
+     "models": [
+      "process"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Dependence.differenceOnlyTogether_iff": {
+   "label": "at a represented model",
+   "placed": "the rule",
+   "rule": "at a represented model",
+   "f5": "stated at a represented model",
+   "at_model": [
+    {
+     "record": "joint-difference-making",
+     "law": 14,
+     "declaration": "Becoming.ModelStatements.differenceOnlyTogether_reading",
+     "models": [
+      "process"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Direction.extension_iff_widens": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Direction.widening_selected_by_pool": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«缘在所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.Drift.falls_back": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.ExchangeLaw.response_not_fixed_by_coupling": {
+   "label": "own carrier",
+   "placed": "the rule",
+   "rule": "own carrier",
+   "f5": "stated on its own carrier only",
+   "at_model": [
+    {
+     "record": "what-a-pools-acts-respond-to",
+     "law": 12,
+     "declaration": "Becoming.ModelStatements.response_not_fixed_reading",
+     "models": [
+      "own"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Flow.Balances.comparison_within_response": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«所闭之自反»",
+    "Becoming.«缘在所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.Flow.Balances.consumption_ends_with_feeders": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.Flow.Balances.renewedBy": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.Flow.Balances.retains_iff_within_margin": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.Flow.Balances.widens_iff_others_within": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.Flow.Dissipative.opens": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«尽则不或屡»"
+   ],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.Flow.More.replenishment_unbounded": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«尽则不或屡»"
+   ],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.Flow.act_selected_by_pool": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«缘在所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.Flow.act_unselected": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«缘在所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.Flow.beyond_gives_nothing": {
+   "label": "derived",
+   "placed": "checked entry",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之界»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   },
+   "entry": {
+    "declaration": "Becoming.Flow.beyond_gives_nothing",
+    "standing": "derived",
+    "basis": {
+     "en": "A case."
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«所闭之界»"
+    ],
+    "support": [
+     "Becoming.eq_zero_of_not_pos"
+    ],
+    "verified": true,
+    "report": {
+     "laws_used_also": [],
+     "root_theorems_named": [],
+     "forwarder": null
+    }
+   }
+  },
+  "Becoming.Flow.change_recurs_iff": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.BalancesOn"
+    ],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Flow.continuing_excludes": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.Flow.descent_reaches": {
+   "label": "at a represented model",
+   "placed": "the rule",
+   "rule": "at a represented model",
+   "f5": "stated at a represented model",
+   "at_model": [
+    {
+     "record": "living-on-and-descent",
+     "law": 11,
+     "declaration": "Becoming.ModelStatements.descent_reaches_reading",
+     "models": [
+      "occurrence"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Flow.mutuallyDependent_iff_reach": {
+   "label": "connected",
+   "placed": "reading",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«所闭之自反»",
+    "Becoming.«缘在所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   },
+   "entry": {
+    "declaration": "Becoming.Flow.mutuallyDependent_iff_reach",
+    "standing": "connected",
+    "basis": {
+     "en": "Connected."
+    },
+    "review": "R.md",
+    "verified": true
+   }
+  },
+  "Becoming.Flow.new_beyond_every": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.Balances"
+    ]
+   }
+  },
+  "Becoming.Flow.no_new_dependence": {
+   "label": "balance in its statement",
+   "placed": "reading",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": true,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   },
+   "entry": {
+    "declaration": "Becoming.Flow.no_new_dependence",
+    "standing": "balance in its statement",
+    "basis": {
+     "en": "Balance."
+    },
+    "review": "R.md",
+    "verified": true
+   }
+  },
+  "Becoming.Flow.outrun_below": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.Flow.restores": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": true,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.Flow.selected_le": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Flow.selection_within": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Flow.transmitted_supported": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Flow.unexcluded_beyond_coupling": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.BalancesOn"
+    ],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Flow.unselected_beyond_coupling": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.BalancesOn"
+    ],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Flow.unselected_beyond_pool": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.BalancesOn"
+    ],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Flow.uptake_needs_replenishment": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«尽则不或屡»"
+   ],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.Flow.withinCoupling_reads_iff": {
+   "label": "connected",
+   "placed": "reading",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«所闭之单调»",
+    "Becoming.«所闭之自反»",
+    "Becoming.«缘在所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   },
+   "entry": {
+    "declaration": "Becoming.Flow.withinCoupling_reads_iff",
+    "standing": "connected",
+    "basis": {
+     "en": "Connected."
+    },
+    "review": "R.md",
+    "verified": true
+   }
+  },
+  "Becoming.Flow.withinSystem_of_withinInfluence": {
+   "label": "derived",
+   "placed": "checked entry",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之单调»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   },
+   "entry": {
+    "declaration": "Becoming.Flow.withinSystem_of_withinInfluence",
+    "standing": "derived",
+    "basis": {
+     "en": "A case."
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«所闭之单调»"
+    ],
+    "support": [
+     "Becoming.Flow.shares_of_affectedBy",
+     "Becoming.WithinClosure.mono"
+    ],
+    "verified": true,
+    "report": {
+     "laws_used_also": [],
+     "root_theorems_named": [],
+     "forwarder": null
+    }
+   }
+  },
+  "Becoming.GroupEnding.Flow.all_end": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.GroupEnding.Flow.coupled_end_together": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.GroupEnding.Flow.family_childless": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.GroupEnding.Flow.rises_iff_inactive": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Ideals.verifiableBy_iff_interior": {
+   "label": "own carrier",
+   "placed": "the rule",
+   "rule": "own carrier",
+   "f5": "stated on its own carrier only",
+   "at_model": [
+    {
+     "record": "what-a-finite-stretch-verifies",
+     "law": 15,
+     "declaration": "Becoming.ModelStatements.verifiableBy_reading",
+     "models": [
+      "own"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Law.drawn_iff_not_returns": {
+   "label": "derived",
+   "placed": "checked entry",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«定后有后则入当且仅当不返»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   },
+   "entry": {
+    "declaration": "Becoming.Law.drawn_iff_not_returns",
+    "standing": "derived",
+    "basis": {
+     "en": "A case."
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«定后有后则入当且仅当不返»"
+    ],
+    "bridges": [
+     "Becoming.Branching.law_reach_iff",
+     "Becoming.Branching.law_trace_iff",
+     "Becoming.Law.absorbing_iff_closed",
+     "Becoming.Law.drawn_iff_drawnIn",
+     "Becoming.Law.reaches_iff_orbit",
+     "Becoming.Law.returns_iff",
+     "Becoming.Law.returns_iff_reaches"
+    ],
+    "support": [
+     "Becoming.Branching.law_trace_of",
+     "Becoming.Branching.units_length",
+     "Becoming.Law.next_fixed",
+     "Becoming.Law.next_total",
+     "Becoming.Law.orbit_add",
+     "Becoming.Law.orbit_shift",
+     "Becoming.Law.reaches_of_orbit"
+    ],
+    "verified": true,
+    "report": {
+     "laws_used_also": [],
+     "root_theorems_named": [],
+     "forwarder": null
+    }
+   }
+  },
+  "Becoming.Law.lossless_iff_returns": {
+   "label": "derived",
+   "placed": "checked entry",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«有限遍后定后则定前当且仅当皆返»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   },
+   "entry": {
+    "declaration": "Becoming.Law.lossless_iff_returns",
+    "standing": "derived",
+    "basis": {
+     "en": "A case."
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«有限遍后定后则定前当且仅当皆返»"
+    ],
+    "bridges": [
+     "Becoming.Branching.law_reach_iff",
+     "Becoming.Branching.law_trace_iff",
+     "Becoming.Law.lossless_iff",
+     "Becoming.Law.lossless_iff_fixedBefore",
+     "Becoming.Law.reaches_iff_orbit",
+     "Becoming.Law.returns_iff",
+     "Becoming.Law.returns_iff_reaches"
+    ],
+    "support": [
+     "Becoming.Branching.law_trace_of",
+     "Becoming.Branching.units_length",
+     "Becoming.Law.next_fixed",
+     "Becoming.Law.next_total",
+     "Becoming.Law.orbit_add",
+     "Becoming.Law.orbit_shift",
+     "Becoming.Law.reaches_of_orbit"
+    ],
+    "verified": true,
+    "report": {
+     "laws_used_also": [],
+     "root_theorems_named": [],
+     "forwarder": null
+    }
+   }
+  },
+  "Becoming.Learnable.learnable_iff": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«迭之定»",
+    "Becoming.«迭之接»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.LearnableRuns.learnable_iff_tracks": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«迭之定»",
+    "Becoming.«迭之接»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Learning.Training.unselected_beyond_data": {
+   "label": "own carrier",
+   "placed": "the rule",
+   "rule": "own carrier",
+   "f5": "stated on its own carrier only",
+   "at_model": [
+    {
+     "record": "generalization-through-lumping",
+     "law": 13,
+     "declaration": "Becoming.ModelStatements.unselected_beyond_data_reading",
+     "models": [
+      "own"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Learning.goAlike_iff_lumped": {
+   "label": "derived",
+   "placed": "checked entry",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«像定后当且仅当同行»",
+    "Becoming.«同行之逐点»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   },
+   "entry": {
+    "declaration": "Becoming.Learning.goAlike_iff_lumped",
+    "standing": "derived",
+    "basis": {
+     "en": "A case."
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«像定后当且仅当同行»"
+    ],
+    "bridges": [
+     "Becoming.Learning.lumped_iff_fixed_image",
+     "Becoming.goAlikeUnder_iff_alike"
+    ],
+    "verified": true,
+    "report": {
+     "laws_used_also": [
+      "Becoming.«同行之逐点»"
+     ],
+     "root_theorems_named": [],
+     "forwarder": null
+    }
+   }
+  },
+  "Becoming.Limit.identifies_iff_tracks": {
+   "label": "at a represented model",
+   "placed": "the rule",
+   "rule": "at a represented model",
+   "f5": "stated at a represented model",
+   "at_model": [
+    {
+     "record": "learning-through-a-map-is-tracking-in-the-limit",
+     "law": 6,
+     "declaration": "Becoming.ModelStatements.identifies_iff_reading",
+     "models": [
+      "process"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Listed.coming_of_ceasing": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.balance_over_stretch_on"
+    ]
+   }
+  },
+  "Becoming.Optimum.mutual_beyond": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.BalancesBetween"
+    ],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Optimum.optimum_beyond": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.BalancesBetween"
+    ],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Pace.rule_until_reading": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«所闭之自反»",
+    "Becoming.«缘在所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.PartForms.goAlike": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.RegimeMargin.Adjusted.comes_to_rest": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«所闭之自反»",
+    "Becoming.«缘在所闭»",
+    "Becoming.«迭之周»",
+    "Becoming.«迭之定»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.balance_over_stretch_on"
+    ]
+   }
+  },
+  "Becoming.RegimeMargin.Adjusted.ends_iff_below": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.balance_over_stretch_on"
+    ]
+   }
+  },
+  "Becoming.RegimeMargin.Adjusted.falls_iff_below": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«所闭之自反»",
+    "Becoming.«缘在所闭»",
+    "Becoming.«迭之周»",
+    "Becoming.«迭之定»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.balance_over_stretch_on"
+    ]
+   }
+  },
+  "Becoming.RegimeMargin.Coupled.Indexed.ends_downstream": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«所闭之自反»",
+    "Becoming.«缘在所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.RegimeMargin.Coupled.threshold_falls": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«所闭之自反»",
+    "Becoming.«缘在所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.balance_over_stretch_on"
+    ]
+   }
+  },
+  "Becoming.RegimeMargin.Drawn.run_shape": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«所闭之自反»",
+    "Becoming.«缘在所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.RegimeMargin.ends_iff_below": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.balance_over_stretch_on"
+    ]
+   }
+  },
+  "Becoming.RelativePosition.rise_needs_fall": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Renewable.no_exact_finite_reading": {
+   "label": "at a represented model",
+   "placed": "the rule",
+   "rule": "at a represented model",
+   "f5": "stated at a represented model",
+   "at_model": [
+    {
+     "record": "becoming-finite-horizon",
+     "law": 8,
+     "declaration": "Becoming.ModelStatements.finite_reading_not_exact",
+     "models": [
+      "process",
+      "occurrence"
+     ]
+    },
+    {
+     "record": "becoming-finite-horizon",
+     "law": 8,
+     "declaration": "Becoming.ModelStatements.renewing_not_closed",
+     "models": [
+      "process",
+      "occurrence"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Reproduction.Flow.closed_lineage_lowered": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.BalancesOn"
+    ],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Reproduction.Flow.lineage_ends": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.BalancesOn"
+    ],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Reproduction.Flow.number_within_take": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.RuleCapture.favouring_locks": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«所闭之自反»",
+    "Becoming.«缘在所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.RuleCapture.uniform_locks": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«所闭之自反»",
+    "Becoming.«缘在所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Run.not_fixes_of_untaken": {
+   "label": "at a represented model",
+   "placed": "the rule",
+   "rule": "at a represented model",
+   "f5": "stated at a represented model",
+   "at_model": [
+    {
+     "record": "experiment-needs-return",
+     "law": 9,
+     "declaration": "Becoming.ModelStatements.not_fixes_reading",
+     "models": [
+      "process"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.SelectionLevels.levels_sized": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.SelectionLevels.rises_exact_iff_levels": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.SelectionTerm.Flow.support_moved_rises": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.SelectionTerm.Flow.support_not_lower": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.SelectionTerm.covariation": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.SharedCodes.run_agrees_every_start_iff": {
+   "label": "at a represented model",
+   "placed": "the rule",
+   "rule": "at a represented model",
+   "f5": "stated at a represented model",
+   "at_model": [
+    {
+     "record": "a-code-formed-between-formations",
+     "law": 11,
+     "declaration": "Becoming.ModelStatements.run_agrees_every_start_reading",
+     "models": [
+      "process",
+      "own"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Tolerance.answers_restores_iff": {
+   "label": "derived",
+   "placed": "checked entry",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«承之迭»",
+    "Becoming.«迭之末步»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   },
+   "entry": {
+    "declaration": "Becoming.Tolerance.answers_restores_iff",
+    "standing": "derived",
+    "basis": {
+     "en": "A case."
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«承之迭»"
+    ],
+    "bridges": [
+     "Becoming.Tolerance.worst_start",
+     "Becoming.Withholding.answers_closed",
+     "Becoming.Withholding.chain_iff_steps"
+    ],
+    "support": [
+     "Becoming.Tolerance.KeepsInclusion.course",
+     "Becoming.Tolerance.KeepsInclusionInto.course",
+     "Becoming.Tolerance.answers_keeps",
+     "Becoming.Withholding.Chain.last",
+     "Becoming.Withholding.Chain.last_of_eq",
+     "Becoming.Withholding.Chain.zero_eq"
+    ],
+    "verified": true,
+    "report": {
+     "laws_used_also": [
+      "Becoming.«迭之末步»"
+     ],
+     "root_theorems_named": [],
+     "forwarder": null
+    }
+   }
+  },
+  "Becoming.Valuation.significant_iff": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«所闭之自反»",
+    "Becoming.«缘在所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Valuation.significant_iff_held": {
+   "label": "own carrier",
+   "placed": "the rule",
+   "rule": "own carrier",
+   "f5": "stated on its own carrier only",
+   "at_model": [
+    {
+     "record": "living-significance-on-held-lives",
+     "law": 10,
+     "declaration": "Becoming.ModelStatements.significant_iff_held_reading",
+     "models": [
+      "own"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Viability.kernel_and_iff": {
+   "label": "at a represented model",
+   "placed": "the rule",
+   "rule": "at a represented model",
+   "f5": "stated at a represented model",
+   "at_model": [
+    {
+     "record": "conditions-kept-together",
+     "law": 5,
+     "declaration": "Becoming.ModelStatements.kernel_and_reading",
+     "models": [
+      "process"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Web.Carries.active_not_recurring": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«尽则不或屡»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Web.Embodied.replenishes": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.Web.Next.frontier_ends_drawn_first": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.balance_over_stretch_on"
+    ]
+   }
+  },
+  "Becoming.Web.Unceasing.activeRenewer_recurs": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«尽则不或屡»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Web.Unceasing.rises": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«尽则不或屡»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Web.Whole.family_excess_ends": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«线则所闭»",
+    "Becoming.«闭含所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.Web.course_lost_iff": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.BalancesBetween"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.balance_over_stretch_on"
+    ]
+   }
+  },
+  "Becoming.Web.frontier_breaks_below": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.balance_over_stretch_on"
+    ]
+   }
+  },
+  "Becoming.Web.frontier_broken": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.balance_over_stretch_on"
+    ]
+   }
+  },
+  "Becoming.Web.frontier_exhausts": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.balance_over_stretch_on"
+    ]
+   }
+  },
+  "Becoming.Web.frontier_keeps_stepwise": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.balance_over_stretch_on"
+    ]
+   }
+  },
+  "Becoming.Web.frontier_rebuilds": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.balance_over_stretch_on"
+    ]
+   }
+  },
+  "Becoming.Web.living_on_reaches": {
+   "label": "at a represented model",
+   "placed": "the rule",
+   "rule": "at a represented model",
+   "f5": "stated at a represented model",
+   "at_model": [
+    {
+     "record": "living-on-and-descent",
+     "law": 10,
+     "declaration": "Becoming.ModelStatements.living_on_reaches_reading",
+     "models": [
+      "occurrence"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Web.optimum_broken_iff": {
+   "label": "at a represented model",
+   "placed": "the rule",
+   "rule": "at a represented model",
+   "f5": "stated at a represented model",
+   "at_model": [
+    {
+     "record": "what-an-optimum-does-beyond-what-couples-in",
+     "law": 8,
+     "declaration": "Becoming.ModelStatements.optimum_broken_reading",
+     "models": [
+      "own",
+      "occurrence"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Web.paths_comparison_widens": {
+   "label": "own carrier",
+   "placed": "the rule",
+   "rule": "own carrier",
+   "f5": "stated on its own carrier only",
+   "at_model": [
+    {
+     "record": "comparison-by-widening",
+     "law": 10,
+     "declaration": "Becoming.SignificanceStatements.paths_comparison_grammar",
+     "models": [
+      "own"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Web.paths_extension_iff_widens": {
+   "label": "own carrier",
+   "placed": "the rule",
+   "rule": "own carrier",
+   "f5": "stated on its own carrier only",
+   "at_model": [
+    {
+     "record": "comparison-by-widening",
+     "law": 9,
+     "declaration": "Becoming.SignificanceStatements.paths_extension_iff_grammar",
+     "models": [
+      "own"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Web.paths_one_object": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Web.renewingAt_iff_over_all": {
+   "label": "at a represented model",
+   "placed": "the rule",
+   "rule": "at a represented model",
+   "f5": "stated at a represented model",
+   "at_model": [
+    {
+     "record": "represented-boundary-against-dependence",
+     "law": 6,
+     "declaration": "Becoming.ModelStatements.renewingAt_iff_over_all_reading",
+     "models": [
+      "occurrence"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Web.roles_alive": {
+   "label": "at a represented model",
+   "placed": "the rule",
+   "rule": "at a represented model",
+   "f5": "stated at a represented model",
+   "at_model": [
+    {
+     "record": "life-as-condition-of-life",
+     "law": 16,
+     "declaration": "Becoming.ModelStatements.roles_alive_reading",
+     "models": [
+      "occurrence"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Web.roles_dependent": {
+   "label": "at a represented model",
+   "placed": "the rule",
+   "rule": "at a represented model",
+   "f5": "stated at a represented model",
+   "at_model": [
+    {
+     "record": "life-as-condition-of-life",
+     "law": 15,
+     "declaration": "Becoming.ModelStatements.roles_dependent_reading",
+     "models": [
+      "occurrence"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Web.roles_supported": {
+   "label": "at a represented model",
+   "placed": "the rule",
+   "rule": "at a represented model",
+   "f5": "stated at a represented model",
+   "at_model": [
+    {
+     "record": "life-as-condition-of-life",
+     "law": 14,
+     "declaration": "Becoming.ModelStatements.roles_supported_reading",
+     "models": [
+      "occurrence"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Web.selfValuation_significant_iff": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之自反»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Web.significance_undetermined": {
+   "label": "at a represented model",
+   "placed": "the rule",
+   "rule": "at a represented model",
+   "f5": "stated at a represented model",
+   "at_model": [
+    {
+     "record": "continuation-condition-yields-living-significance",
+     "law": 15,
+     "declaration": "Becoming.ModelStatements.significance_undetermined_reading",
+     "models": [
+      "own",
+      "occurrence"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Web.transmits_at_iff": {
+   "label": "at a represented model",
+   "placed": "the rule",
+   "rule": "at a represented model",
+   "f5": "stated at a represented model",
+   "at_model": [
+    {
+     "record": "transmission-is-inheritance-and-need",
+     "law": 16,
+     "declaration": "Becoming.ModelStatements.transmits_at_reading",
+     "models": [
+      "occurrence"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Web.widens_iff_retains_adds": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Weighting.widens_iff_every_positive": {
+   "label": "own carrier",
+   "placed": "the rule",
+   "rule": "own carrier",
+   "f5": "stated on its own carrier only",
+   "at_model": [
+    {
+     "record": "widening-as-what-every-weighting-ranks",
+     "law": 10,
+     "declaration": "Becoming.Weighting.grammar_widens_iff_every_positive",
+     "models": [
+      "own"
+     ]
+    }
+   ],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.Withholding.withholding_spreads": {
+   "label": "derived",
+   "placed": "checked entry",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«存承之迭»",
+    "Becoming.«迭之末步»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   },
+   "entry": {
+    "declaration": "Becoming.Withholding.withholding_spreads",
+    "standing": "derived",
+    "basis": {
+     "en": "A case."
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«存承之迭»"
+    ],
+    "bridges": [
+     "Becoming.Withholding.chain_iff_steps",
+     "Becoming.Withholding.waitsAll_closed",
+     "Becoming.Withholding.within_iff_withinSteps"
+    ],
+    "support": [
+     "Becoming.Withholding.Chain.last",
+     "Becoming.Withholding.Chain.last_of_eq",
+     "Becoming.Withholding.Chain.zero_eq"
+    ],
+    "verified": true,
+    "report": {
+     "laws_used_also": [
+      "Becoming.«迭之末步»"
+     ],
+     "root_theorems_named": [],
+     "forwarder": null
+    }
+   }
+  },
+  "Becoming.WithinMoves.after_course": {
+   "label": "derived",
+   "placed": "checked entry",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«迭内之接»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   },
+   "entry": {
+    "declaration": "Becoming.WithinMoves.after_course",
+    "standing": "derived",
+    "basis": {
+     "en": "A case."
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«迭内之接»"
+    ],
+    "bridges": [
+     "Becoming.trace_iff_steps",
+     "Becoming.withinMoves_iff_withinSteps"
+    ],
+    "support": [
+     "Becoming.trace_steps"
+    ],
+    "verified": true,
+    "report": {
+     "laws_used_also": [],
+     "root_theorems_named": [],
+     "forwarder": null
+    }
+   }
+  },
+  "Becoming.World.balanced_reidentify_iff": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.World.comes_to_rest_unrefuted": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«尽则不或屡»"
+   ],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.BalancesOn"
+    ]
+   }
+  },
+  "Becoming.act_courses_unselected": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之传递»",
+    "Becoming.«缘在所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": [
+     "Becoming.Flow.Balances",
+     "Becoming.Flow.BalancesOn"
+    ]
+   },
+   "entry": {
+    "declaration": "Becoming.act_courses_unselected",
+    "standing": "derived",
+    "basis": {
+     "en": "Steps?"
+    },
+    "review": "R.md",
+    "law": [
+     "Becoming.«所闭之传递»"
+    ],
+    "verified": false,
+    "failed": [
+     "D2: the proofs name theorems that are neither grammar laws, root theorems nor declared lemmas: Becoming.ExchangeLaw.course_balances_iff, Becoming.ExchangeLaw.withAct_follows, Becoming.ExchangeLaw.withAct_give_of_part, Becoming.ExchangeLaw.withAct_nonanticipating, Becoming.ExchangeLaw.withAct_take_of_part, Becoming.Flow.act_unselected",
+     "D3: the walk does not reach Becoming.«所闭之传递»",
+     "D5: balance enters its closure: Becoming.Flow.Balances, Becoming.Flow.BalancesOn"
+    ],
+    "report": {
+     "laws_used_also": [],
+     "root_theorems_named": [],
+     "forwarder": null
+    }
+   }
+  },
+  "Becoming.apart_only_downstream": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.carried_iff_rising": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.counterfactual_is_course": {
+   "label": "balance in its statement",
+   "placed": "the rule",
+   "rule": "balance in its statement",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [
+     "Becoming.Flow.Balances"
+    ],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.forced_iff_center": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之自反»",
+    "Becoming.«所闭之闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.onLoop_of_closing": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«及之传递»",
+    "Becoming.«及当且仅当一步而所闭»",
+    "Becoming.«所闭当且仅当同一或及»",
+    "Becoming.«线则所闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.presupposition_scopes": {
+   "label": "connected",
+   "placed": "the rule",
+   "rule": "connected",
+   "f5": "reaching the grammar",
+   "at_model": [],
+   "grammar_laws_reached": [
+    "Becoming.«所闭之自反»",
+    "Becoming.«所闭之闭»"
+   ],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.responses_le_missBound": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  },
+  "Becoming.unrestricted_iff_livingSignificance": {
+   "label": "unplaced",
+   "placed": "the rule",
+   "rule": "unplaced",
+   "f5": "the rest",
+   "at_model": [],
+   "grammar_laws_reached": [],
+   "balance": {
+    "anchor_in_statement": [],
+    "written_out": false,
+    "proof_only": []
+   }
+  }
+ }
+}
