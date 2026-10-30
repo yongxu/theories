@@ -85,7 +85,7 @@ BALANCE_LAWS = [n for n in BALANCE_NAMES + CENSUS_NAMES if not n.startswith('Gra
     ['GrammarLaws.arising', 'GrammarLaws.ceasing']
 LIST_LEMMAS = [n for n in LIST_LEMMAS if n not in BALANCE_LAWS]
 NEW = CLOSURE_LAWS + LIST_LEMMAS + BALANCE_LAWS
-assert len(NEW) == len(set(NEW)) == 38, (len(NEW), NEW)
+assert len(NEW) == len(set(NEW)) == 37, (len(NEW), NEW)
 
 # Insertions into GrammarLaws: (anchor, where, block), each anchor found once.
 A3 = ("    (fun a b back related => «所闭之传递» («缘在所闭» (h a b related)) back) («所闭之自反» R x)\n\n")

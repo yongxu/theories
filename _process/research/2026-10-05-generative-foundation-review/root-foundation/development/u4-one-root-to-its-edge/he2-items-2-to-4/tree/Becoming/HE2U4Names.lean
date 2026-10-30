@@ -564,13 +564,6 @@ def «计» (p : α → Bool) : List α → Nat
   | [] => 0
   | x :: a => cond (p x) 1 0 + «计» p a
 
-theorem GrammarLaws.count_append (p : α → Bool) : ∀ a b : List α,
-    «计» p (a ++ b) = «计» p a + «计» p b
-  | [], b => (Nat.zero_add («计» p b)).symm
-  | x :: a, b => by
-    show cond (p x) 1 0 + «计» p (a ++ b) = cond (p x) 1 0 + «计» p a + «计» p b
-    rw [GrammarLaws.count_append p a b, Nat.add_assoc]
-
 theorem GrammarLaws.count_insert (p : α → Bool) (y : α) : ∀ b₁ b₂ : List α,
     «计» p (b₁ ++ y :: b₂) = cond (p y) 1 0 + «计» p (b₁ ++ b₂)
   | [], _ => rfl

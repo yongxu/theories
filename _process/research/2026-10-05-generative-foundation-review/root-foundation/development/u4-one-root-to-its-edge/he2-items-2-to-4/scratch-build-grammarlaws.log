@@ -9,8 +9,8 @@
   "unclean": [],
   "audits": {
     "Becoming.GrammarLaws": {
-      "theorems": 172,
-      "declarations": 200,
+      "theorems": 171,
+      "declarations": 199,
       "with_axioms": {}
     }
   }

@@ -13,8 +13,8 @@
   "unclean": [],
   "audits": {
     "Becoming.HE2U4Laws": {
-      "theorems": 34,
-      "declarations": 38,
+      "theorems": 33,
+      "declarations": 37,
       "with_axioms": {}
     },
     "Becoming.HE2U4Check": {
@@ -23,8 +23,8 @@
       "with_axioms": {}
     },
     "Becoming.HE2U4Names": {
-      "theorems": 34,
-      "declarations": 38,
+      "theorems": 33,
+      "declarations": 37,
       "with_axioms": {}
     }
   }
