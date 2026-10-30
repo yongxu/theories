@@ -64,7 +64,7 @@ A law with a bound for additive counting; SPM's prior and its split among equall
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Active inference (Friston, FitzGerald, Rigoli, Schwartenbeck, O'Doherty and Pezzulo 2016, 'Active inference and learning', Neuroscience & Biobehavioral Reviews 68): the prior over policies counts beliefs about the selected policy at the end of each trial (§2.4; SPM12's spm_MDP_VB adds the end-of-trial posterior over policies); devalued after the habit has formed (trial 48) the habit persists and strengthens itself with repeated execution, devalued after 16 trials the agent switches at once (§5.2). The lock is the lock-in of increasing returns (Arthur 1989, The Economic Journal 99); counting the action taken is the value-free habit (Miller, Shenhav and Ludvig 2019, Psychological Review 126). Overtraining and insensitivity to devaluation in rats (Adams 1982; Dickinson 1985); five failures to induce it in humans (de Wit and others 2018, Journal of Experimental Psychology: General 147). The free-energy principle's sparse coupling read as the couplings; shared generative models (Friston and others 2024, 'Designing ecosystems of intelligence from first principles', Collective Intelligence 3) as pooled couplings at most. Its own laws restate; its third parts are related records: identical cells, risk minimization and what seeking cannot separate. The readings are the AI's, in development/ue1-fep-bridge/NOTE.md, the review in REVIEW-UE1.md.
+Active inference (Friston, FitzGerald, Rigoli, Schwartenbeck, O'Doherty and Pezzulo 2016, 'Active inference and learning', Neuroscience & Biobehavioral Reviews 68): the prior over policies counts beliefs about the selected policy at the end of each trial (§2.4; SPM12's spm_MDP_VB adds the end-of-trial posterior over policies); devalued after the habit has formed (trial 48) the habit persists and strengthens itself with repeated execution, devalued after 16 trials the agent switches at once (§5.2). The lock is the lock-in of increasing returns (Arthur 1989, The Economic Journal 99); counting the action taken is the value-free habit (Miller, Shenhav and Ludvig 2019, Psychological Review 126). Overtraining and insensitivity to devaluation in rats (Adams 1982; Dickinson 1985); five failures to induce it in humans (de Wit and others 2018, Journal of Experimental Psychology: General 147). The free-energy principle's sparse coupling read as the couplings; shared generative models (Friston and others 2024, 'Designing ecosystems of intelligence from first principles', Collective Intelligence 3) as pooled couplings at most. Its own laws restate; its third parts are related records: identical cells, risk minimization, what seeking cannot separate and a code held as counts. The readings are the AI's, in development/ue1-fep-bridge/NOTE.md, the review in REVIEW-UE1.md.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -80,6 +80,7 @@ Active inference (Friston, FitzGerald, Rigoli, Schwartenbeck, O'Doherty and Pezz
 - related, not a proved adapter: [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md). Variational free energy bounds surprisal: the free-energy principle's central quantity, its bound and its minimizer stated in the periphery and joined to the core's conditioning.
 - related, not a proved adapter: [the-markov-blanket-as-a-coupling-structure](the-markov-blanket-as-a-coupling-structure.md). The Markov blanket as a coupling structure: in the agent form no action need be listed among what couples in.
 - related, not a proved adapter: [what-seeking-cannot-separate](what-seeking-cannot-separate.md). What seeking cannot separate: the third part against the unqualified wording of inherent self-correction by seeking information (candidate 7).
+- related, not a proved adapter: [a-code-held-as-counts](a-code-held-as-counts.md). A code held as counts: the third part against language as an emergent property of free-energy minimization, read universally.
 
 **Used by:** [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md)
 
@@ -110,6 +111,7 @@ Aliases: `A chooser reading what couples in, its rule read from the count of its
 - 29 October 2026, board item UE17 (study section 450): related to free-energy-bounds-surprisal; no statement, next step or declaration changed.
 - 29 October 2026, board item UE18 (study section 452): related to the-markov-blanket-as-a-coupling-structure; no statement, next step or declaration changed.
 - 29 October 2026, board item UE19 (study section 453): related to what-seeking-cannot-separate; the correspondence names the containment's third parts, UE19's among them, by their records; no statement, next step or declaration changed.
+- 31 October 2026, board item UE25 (study section 471): related to a-code-held-as-counts; the correspondence names it among the containment's third parts; no statement, next step or declaration changed.
 
 </details>
 

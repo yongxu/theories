@@ -5861,6 +5861,46 @@
    "module": "Becoming.WeightedCommuting",
    "category": "general-structure",
    "reason": "a determined law commuting with a map is a weighted law with one successor of weight one commuting with it, over any type; the base states no weighted law (LA4)"
+  },
+  "Becoming.CountedCodes.Witness.lead_not_symmetric": {
+   "module": "Becoming.CountedCodes",
+   "category": "model-witness",
+   "reason": "CountedCodes.Witness.lead_not_symmetric: a fact about one constructed model of two agents, two words and one meaning (UE25)"
+  },
+  "Becoming.CountedCodes.Witness.sayFirst_not_alike": {
+   "module": "Becoming.CountedCodes",
+   "category": "model-witness",
+   "reason": "CountedCodes.Witness.sayFirst_not_alike: a fact about one constructed model of two agents, two words and one meaning (UE25)"
+  },
+  "Becoming.CountedCodes.Witness.zero_symmetric": {
+   "module": "Becoming.CountedCodes",
+   "category": "model-witness",
+   "reason": "CountedCodes.Witness.zero_symmetric: a fact about one constructed model of two agents, two words and one meaning (UE25)"
+  },
+  "Becoming.CountedCodes.bound_invariant": {
+   "module": "Becoming.CountedCodes",
+   "category": "general-structure",
+   "reason": "CountedCodes.bound_invariant: a law of any counts agents hold of words for meanings, or of any natural counts and weights over a listing (the code law for beliefs held as counts); the base supplies no reading of agents, meanings or words yet (UE25)"
+  },
+  "Becoming.CountedCodes.gatedHear_keeps": {
+   "module": "Becoming.CountedCodes",
+   "category": "general-structure",
+   "reason": "CountedCodes.gatedHear_keeps: a law of any counts agents hold of words for meanings, or of any natural counts and weights over a listing (the code law for beliefs held as counts); the base supplies no reading of agents, meanings or words yet (UE25)"
+  },
+  "Becoming.CountedCodes.keeps_both": {
+   "module": "Becoming.CountedCodes",
+   "category": "general-structure",
+   "reason": "CountedCodes.keeps_both: a law of any counts agents hold of words for meanings, or of any natural counts and weights over a listing (the code law for beliefs held as counts); the base supplies no reading of agents, meanings or words yet (UE25)"
+  },
+  "Becoming.CountedCodes.read_relabels": {
+   "module": "Becoming.CountedCodes",
+   "category": "general-structure",
+   "reason": "CountedCodes.read_relabels: a law of any counts agents hold of words for meanings, or of any natural counts and weights over a listing (the code law for beliefs held as counts); the base supplies no reading of agents, meanings or words yet (UE25)"
+  },
+  "Becoming.CountedCodes.tied_hears_tied": {
+   "module": "Becoming.CountedCodes",
+   "category": "general-structure",
+   "reason": "CountedCodes.tied_hears_tied: a law of any counts agents hold of words for meanings, or of any natural counts and weights over a listing (the code law for beliefs held as counts); the base supplies no reading of agents, meanings or words yet (UE25)"
   }
  },
  "instances": {
