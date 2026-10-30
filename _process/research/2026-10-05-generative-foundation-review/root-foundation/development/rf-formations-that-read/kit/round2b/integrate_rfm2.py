@@ -22,6 +22,7 @@ HERE = Path(__file__).resolve().parent
 PKG = ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
 CH = ROOT / 'theories/becoming/chapters'
 PLAN = HERE.parent.parent / 'PLAN.md'
+assert '{' not in (HERE / 'plan13_rfm2.txt').read_text(encoding='utf-8'), "plan13_rfm2.txt: a placeholder left"
 NAMES = set(re.findall(r'^#print axioms Becoming\.(\S+)$',
                        (HERE / 'tree/.build/BecomingHeldForReadingAxiomAudit.lean').read_text(encoding='utf-8'), re.M))
 SOURCES = '\n'.join(p.read_text(encoding='utf-8') for p in (PKG / 'Becoming').glob('*.lean'))

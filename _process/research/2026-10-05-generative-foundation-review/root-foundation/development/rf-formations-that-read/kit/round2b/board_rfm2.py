@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """RF round 2, second part, RF-M.2: the board, edited in a copy (board_rf2.py's pattern). `head BOARD TEXT` puts RF's
-head-of-queue clause, "RF at the head of the queue (TEXT); ", at the front of the queue note; `land BOARD RECEIPT N
-QUEUE STATE` sets the RF row's state cell to STATE, brings the statements cell to RF-M.2's landing (its sentence, the
-designed cases, the review sentence), drops RF's head-of-queue clause, puts QUEUE at the head of the queue note and
-names the receipt as the latest. BOARD is the path of the board file to edit (in the landing worktree, or a copy of
-main's for a commit made without a working tree).
-usage: python3 -B board_rfm2.py head BOARD TEXT | land BOARD RECEIPT N QUEUE STATE"""
+head-of-queue clause, "RF at the head of the queue (TEXT); ", at the front of the queue note; `docs BOARD QUEUE`, for
+the landing of RF-M.2's design, reviews and kit without its Lean, brings the state cell's next step to that landing,
+drops RF's head-of-queue clause and puts QUEUE at the head of the queue note; `land BOARD RECEIPT N QUEUE STATE` sets
+the RF row's state cell to STATE, brings the statements cell to RF-M.2's landing (its sentence, the designed cases, the
+review sentence), drops RF's head-of-queue clause, puts QUEUE at the head of the queue note and names the receipt as
+the latest. BOARD is the path of the board file to edit (in the landing worktree, or a copy of main's for a commit made
+without a working tree).
+usage: python3 -B board_rfm2.py head BOARD TEXT | docs BOARD QUEUE | land BOARD RECEIPT N QUEUE STATE"""
 import datetime
 import re
 import sys
@@ -26,6 +28,19 @@ if mode == 'head':
     clause = f'RF at the head of the queue ({text}); '
     assert HEAD.fullmatch(clause), clause
     board[queue[0]] = board[queue[0]].replace('- **Queue:** ', '- **Queue:** ' + clause, 1)
+elif mode == 'docs':
+    assert 'RF-M.2' not in cells[2], 'the docs landing is already in the state cell'
+    old = "next RF-M's helper and preference cases and an institution's rule of reading with members' acts"
+    new = ("RF-M.2's design, reviews and kit landed without its Lean (documents only: `Becoming.HeldForReading` built "
+           "in the kit, its design and its Lean reviewed); next RF-M.2's texts cold-read and its Lean landed, then "
+           "RF-M's preference case, the valuation as state, its carrier first; an institution's rule of reading with "
+           "members' acts stays a reading")
+    assert cells[2].count(old) == 1, 'next step in the state cell'
+    cells[2] = cells[2].replace(old, new)
+    board[rows[0]] = ' | '.join(cells)
+    assert len(HEAD.findall(board[queue[0]])) == 1, 'head-of-queue clause'
+    board[queue[0]] = HEAD.sub('', board[queue[0]], count=1)
+    board[queue[0]] = board[queue[0]].replace('- **Queue:** ', '- **Queue:** ' + text + '; ', 1)
 elif mode == 'land':
     receipt, section, queue_text, state_text = text, int(sys.argv[4]), sys.argv[5], sys.argv[6]
     assert f'§{section}' in queue_text and receipt in queue_text
