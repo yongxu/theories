@@ -22,7 +22,8 @@ REVIEW = 'theories/becoming/review/'
 MAP = str((HERE.parent / 'FAILURE-MODE-MAP.md').relative_to(ROOT))
 SCREEN, TEN, HOUR = 150, 1100, 6000
 
-# (layer, path, start, end, budget in words): start and end are patterns, None the file's edge.
+# (layer, path, start, end, budget in words): start and end are patterns, None the file's edge;
+# an end (after, pattern) is the pattern's first match after the first match of after.
 LAYERS = [
     ("README's first screen, before the opening", 'README.md', None, r'^## ', SCREEN),
     ('the opening, in the first person', 'README.md', r'^## Truth exists', r'^### Notes', None),
@@ -38,7 +39,7 @@ LAYERS = [
     ('front: philosophy', REVIEW + 'PHILOSOPHY.md', None, r'^###? P-01', TEN),
     # To the end of the part the dossier labels as its ten-minute reading, or to its first item.
     ('front: alignment', REVIEW + 'ALIGNMENT.md', None, r'^(## The items|###? A-01)', TEN),
-    ('failure-mode map, before its rows', MAP, None, r'^## \d+\. The rows', TEN),
+    ('failure-mode map, to the end of its table', MAP, None, (r'^## \d+\. The map$', r'^## '), TEN),
 ]
 WHOLES = ['CLASSICAL-TEXTS.md', 'BUDDHIST-THOUGHT.md', 'LOGIC.md', 'PHILOSOPHY.md', 'ALIGNMENT.md']
 # The alignment dossier's hour, as its "How long" paragraph names it: its ten minutes and these.
@@ -73,6 +74,9 @@ def read(ref, path):
 def part(text, start, end):
     m = re.search(start, text, re.M) if start else None
     a, b = (m.start(), m.end()) if m else (0, 0)
+    if isinstance(end, tuple):
+        after = re.search(end[0], text[b:], re.M)
+        b, end = (b + after.end(), end[1]) if after else (b, None)
     n = re.search(end, text[b:], re.M) if end else None
     return text[a:b + n.start()] if n else text[a:]
 
