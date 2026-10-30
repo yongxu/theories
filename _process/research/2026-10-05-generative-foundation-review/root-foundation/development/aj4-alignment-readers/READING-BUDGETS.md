@@ -1,16 +1,16 @@
 # Reading budgets: each layer sized for a person
 
-*AI draft, 31 October 2026, from AJ4 to OU's owner, for the release gate's item 6 ([WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gate-30-october-2026)). Not reviewed by a person. Figures from [the kit's measure](kit/measure_layers.py) on main at `1ec20513d`, and on branch `aj4-human` for the alignment dossier's new edition. About ten minutes to read.*
+*AI-written, 31 October 2026, from AJ4 to OU's owner, for the release gate's item 6 ([WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gate-30-october-2026)), and [adopted](#adopted) with four amendments. Not reviewed by a person. Figures from [the kit's measure](kit/measure_layers.py) on main at `1ec20513d`, and on branch `aj4-human` for the alignment dossier's edition. About ten minutes to read.*
 
 ## Why
 
-Every landing and review adds to the layers, and none has a size it keeps: the one page takes 16 to 21 minutes, the overview nearly two hours, and the README describes its reading layers about 12,800 words in. A person who cannot finish a layer judges it unread or puts it down. Much of the length carries checks a machine can run (quotations, links, Lean names, a reading against the records), so the machine runs them. A person then gets a part to finish in ten minutes, a path of an hour, and the rest if they want it. Asked for on 31 October ([source](../../../../../../sources/15-codex-theory-conversations/2026-10-31-ready-for-human-readers.md)); the reason is the one just given.
+Every landing and review adds to the layers, and none keeps a size: the one page takes 16 to 21 minutes, the overview nearly two hours, and the README describes its reading layers about 12,800 words in. A person who cannot finish a layer judges it unread or puts it down. Much of the length carries checks a machine can run (quotations, links, Lean names, a reading against the records), so the machine runs them. A person then gets a part to finish in ten minutes, a path of an hour, and the rest if they want it. Asked for on 31 October ([source](../../../../../../sources/15-codex-theory-conversations/2026-10-31-ready-for-human-readers.md)), for that reason.
 
 ## Item 6, proposed
 
 > 6. **The front pages current, and sized so a person can finish them.** The one page's counts are brought up to date (on `160a0f780` it says 481 registered results, and RESULTS registers 498). The twenty-first review's remaining §6 fixes go in the same pass. Each layer in [the reading budgets](../aj4-alignment-readers/READING-BUDGETS.md#the-budgets) states its reading time where it begins and is within its budget, by [the kit's measure](../aj4-alignment-readers/kit/measure_layers.py).
 
-The first two sentences are the item as it stands.
+Its last sentence is new.
 
 ## How a time is measured
 
@@ -72,6 +72,6 @@ Until the layers are within budget, the template states their measured times.
 
 Provenance moved whole to [the kit's README](README.md#the-edition-of-31-october-2026-sized-for-a-person), and the box on reading and revision became item A-20. A machine checked every quotation, link and Lean name: no faults. An independent reader then found 42 problems, 16 of them errors, mostly hypotheses the cut had dropped, all taken ([the kit](README.md#the-fourth-pass-taken)). Hypotheses are never cut, so the tests and the questions for the whole left the front, which stays within ten minutes.
 
-## If OU adopts it
+## Adopted
 
-OU's owner amends item 6; the coordinator routes each layer; RA's line takes the README block, and perhaps the measure into `research.py check`, as a warning first; AJ4 lands the dossier in its slot, and the map's holder the map.
+OU's owner adopted it on 31 October 2026 with four amendments. The adopted text is [WHAT-REMAINS's](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gates-item-6-sized-for-a-person-31-october-2026), and where this page differs, that text governs.
