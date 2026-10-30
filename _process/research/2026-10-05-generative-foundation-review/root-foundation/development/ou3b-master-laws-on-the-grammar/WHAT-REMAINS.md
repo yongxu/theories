@@ -378,6 +378,32 @@ U4's taker asked for these decisions on the boundary design (`u4-one-root-to-its
 - **The juncture law** enters the leaf only if rule 9 holds: it must be a law of the grammar that more than this row uses. Otherwise `Branching.loss_passes_juncture` keeps its distance with its reason.
 - **The release gate's item 3.** Once the record lands with no row unplaced, every one of the 51 has its reason written, which meets the item's second branch. U1's seven interface laws for amounts, in the package and not only in scratch, stay open.
 
+## The release gate's item 6, sized for a person (31 October 2026)
+
+AJ4's owner proposed reading budgets for each layer a person meets (READING-BUDGETS.md and its measure `kit/measure_layers.py`, in `development/aj4-alignment-readers/` on branch `aj4-human`; they land with AJ4). The request came on 31 October, and its source record lands with them. The reason: a person who cannot finish a layer either judges it unread or puts it down. Much of the length carries checks a machine can run instead.
+
+**Adopted, with four amendments.** Item 6 now reads: "The front pages current, and sized so a person can finish them." Its two sentences above stand. Added to them: each layer states its reading time where it begins, and keeps within its budget by the measure.
+
+- **The budgets.** A screen is 150 words, ten minutes 1,100 and an hour 6,000, with a Chinese character counting half. The rate is 100 to 130 words a minute for English and 200 to 260 characters a minute for Chinese. A person's reported time replaces the estimate. The README's first screen gets one screen; the one page, the cover and each dossier's front get ten minutes; the overview gets an hour; each of the opening's notes gets three minutes. Chapters, records and studies have no budget.
+- **Amendment 1: the budget yields to what cannot be cut.** The never-cut list stands: a deciding hypothesis, the two premises with their roles (the condition for scope, C for order), a failure as it fell, a frozen rule's caveat, a post hoc label, an AI label on a reading, and what is not claimed. Two items are added to it:
+  - each claim's standing (proved, premise, reading or conjecture);
+  - where an empty axiom report is cited, what it shows and what it does not (logic only, not the modelling choices).
+
+  Where a never-cut item would put a layer over its budget, the layer keeps it and records the excess. Detail moves down a layer instead. A correction is never held back to stay within budget.
+- **Amendment 2: the measure warns and never blocks.** If it joins `research.py check`, it warns. A landing that adds a failure or a premise is never refused for length.
+- **Amendment 3: counts are read, not copied.** Every figure a shortened layer keeps is either rendered from its generated source or checked against it at landing (RESULTS, master-laws.json and F5's counts). A summary that copies its source drifts, so one text is kept and the other moved to history, as the proposal says.
+- **Amendment 4: order.** The cuts that depend on no pending content go now: each dossier's front, the README's generated first screen, the opening's notes, and the failure-mode map table-first, with AJ4. The one page and the overview go in one pass after U4's boundary record and §八 step 5 have landed, since both change what those pages say about standings and conditional laws. The same pass carries item 6's counts and the twenty-first review's remaining §6 fixes. That way each page is cut once.
+
+**Owners, as the coordinator routes them:**
+- OU's owner, also RP's: the one page and the overview (each with its Chinese edition), and the fronts of the logic, classical-texts and Buddhist-thought dossiers, the last two already within budget;
+- RP2's owner: PHILOSOPHY and the reader edition;
+- RA's line: the README's first screen, generated with its times computed at render, with the opening's body untouched;
+- AJ4: the alignment dossier and the failure-mode map, in its own landing.
+
+**Where the layers stand** (the proposal's measure, main `1ec20513d`):
+- over budget: the one page (16.5 to 21.5 minutes against ten), the overview (103.5 to 134.5 against sixty), the logic dossier's front (13.5 to 17.5) and the alignment dossier's front (24 to 31; the new edition's front is within ten);
+- within budget: the cover and the fronts of classical texts, Buddhist thought and philosophy.
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.
