@@ -1,0 +1,310 @@
+{
+  "schema_version": 2,
+  "id": "universal-practical-warrant",
+  "title": {
+    "zh": "普遍实践根据的更强目标",
+    "en": "Stronger universal practical warrant target"
+  },
+  "kind": "target",
+  "status": "open",
+  "family": "F08",
+  "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
+  "statement": {
+    "en": "Target: universal practical warrant with zero substantive axioms, developed as one account of ends, selection, knowing, normativity and revision within becoming.",
+    "zh": "目标：取得零实质公理的普遍实践根据，并在同一生成活动中统一解释目的、选择、认识、规范及修订。"
+  },
+  "hypotheses": [
+    {
+      "zh": "独立获授权的更强目标；不得以局部给定规范或行为收敛替代。",
+      "en": "An independently authorized stronger target; supplied local norms or behavioral convergence do not substitute for it."
+    }
+  ],
+  "correspondence": {
+    "zh": "先展开形成、受阻、察觉、回应与转型；位置和分析区分由关系说明。区分表示遗漏、实际压制与知情维持伤害；边界的实际作用随生活关系变化，完整描述不自动证明规范成立。普遍性不等于同责、遵循或全部Unrestricted断言。",
+    "en": "Begin with formation, obstruction, sensing, response and transformation; explain positions and analytic distinctions relationally. Distinguish representational omission, actual suppression and informed maintenance of harm. A boundary’s role changes with living relations; descriptive completeness does not itself prove normative validity. Universality is not equal duties, compliance or full Unrestricted significance."
+  },
+  "canonical_source": "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
+  "aliases": [],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "practical-judgment-under-living-significance",
+      "detail": {
+        "zh": "条件对齐路线是已有成果；两者的完成标准不同。",
+        "en": "The conditional alignment route is an established result with a different completion standard."
+      }
+    },
+    {
+      "id": "own-good-to-reachable-living-significance",
+      "detail": {
+        "zh": "复用已纠正评价者路线：自我、连续性及容差不能单独完成普遍意义。",
+        "en": "Reuses the corrected evaluator route: selfhood, continuity and tolerance do not independently establish universal significance."
+      }
+    },
+    {
+      "id": "continuation-condition-yields-living-significance",
+      "detail": {
+        "zh": "信用当前意义／理由分工；生生之意义的正式取得没有解除A的规范工作。",
+        "en": "Credits the current significance/reason distinction; deriving living significance does not discharge A’s normative work."
+      }
+    },
+    {
+      "id": "open-form-realization-under-revision",
+      "detail": {
+        "zh": "P89的有限实现与正式连接已结项，不恢复为本目标的待做机制。",
+        "en": "P89 bounded realization and formal connection are complete, not reopened as a missing mechanism for this target."
+      }
+    },
+    {
+      "id": "target-capture",
+      "detail": {
+        "zh": "复用目的的差异延续、传递与特定规则下重吸收的既有条件范围；解释用途，非本轮新证明。",
+        "en": "Reuses conditional differential persistence, transmission and rule-bound reabsorption as explanatory inputs, not new proofs."
+      }
+    },
+    {
+      "id": "selection-under-registration-revision",
+      "detail": {
+        "zh": "复用同一活动内归并改变及可表达选择的既有范围，不从区分保持推出伦理。",
+        "en": "Reuses lumping change and expressible-choice scope within one activity, without inferring ethics from preserved discrimination."
+      }
+    },
+    {
+      "id": "consequence-revised-reference-plan",
+      "detail": {
+        "zh": "复用后果修订计划并进入实际使用的已成接口；可靠回返、参考、支持及规则保持给定。",
+        "en": "Reuses the completed interface from consequences through plan revision to actual use; return, reference, support and revision rules remain supplied."
+      }
+    },
+    {
+      "id": "selection-through-couplings",
+      "detail": {
+        "zh": "复用经耦合的选择范围，区分不能辨认与能辨认却未选择；不把可表达性当作实际选择或伦理方向。",
+        "en": "Reuses the scope of selection through the couplings, distinguishing unavailable discrimination from available but unused selection; expressibility is not enacted choice or ethical direction."
+      }
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "nondual-method-not-proof",
+    "omission-not-refutation",
+    "zero-axiom-target-open"
+  ],
+  "does_not_show": [
+    {
+      "en": "Repair fidelity and historical necessity alone do not refute an openly controlling end; real needs, transition losses, protective boundaries and informed harm remain.",
+      "zh": "修复内容及历史必要性的分析不能单独反驳一个明确追求控制的目标；真实需要、转型损失、保护性边界和知情伤害均保留。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Fuller description alone is no ethical proof.",
+      "zh": "不能以补全描述直接宣告伦理成立。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "No positive weight is preassigned to every added option, and not every removable restriction is judged to require removal.",
+      "zh": "不给所有选项增加预置正权重，不证明所有可解除限制均应解除。",
+      "kind": "scope"
+    },
+    {
+      "en": "No complete ordering of mixed outcomes is given.",
+      "zh": "不给出完整的混合排序。",
+      "kind": "scope"
+    },
+    {
+      "en": "A purpose’s formation history does not by itself invalidate it.",
+      "zh": "目的有形成史，不自动使它无效。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The fulfillment test cannot certify goodness or release from capture: declared beneficiaries do not exhaust affected living, and harm before completion also matters.",
+      "zh": "原完成检验不能单独认证善或脱离俘获：受益者不能只按宣称限定，未完成时的损伤也需评估。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Retaining an arrangement may be warranted, and nominal revisability is not enactment.",
+      "zh": "保持安排未必失当，名义可修订不等于实行。",
+      "kind": "scope"
+    },
+    {
+      "en": "The revised question is itself an inquiry: it substitutes for no normative argument and cannot prove warrant by defining it in.",
+      "zh": "修正版问句本身仍是研究问题：不替代规范论证，也不能把“有根据”写入定义来证明它。",
+      "kind": "non-implication"
+    }
+  ],
+  "progress": [
+    {
+      "en": "Source and address of a reason: a response-specific argument separates what makes a change worth considering, why it bears on a given response and how much can be required, tested against formed-boundary restriction.",
+      "zh": "理由的来源与适用：针对回应的论证分开变化为何值得考虑、为何关涉特定回应、可要求多少，并以形成边界的限制作对照检验。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md#nonexclusive-response-ground"
+    },
+    {
+      "en": "Purpose revision: one revision can both recognize a prior ground and create new reasons, so its success alone does not discriminate between them; pre-commitment practical support is refined against its strongest objection.",
+      "zh": "目的修订：同一次修订可兼有认识已有根据与创造新理由，其成功因此不能单独裁决两者；承诺形成前的实践支持经最强反审细化。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md#purpose-revision-and-prior-warrant"
+    },
+    {
+      "en": "Normative differentiation in one activity: the separate-domain architecture is withdrawn; completed repair can change a response’s purpose and ending, and representational omission, actual suppression and informed harm are distinguished.",
+      "zh": "同一活动中的规范分化：撤回分立领域的架构；完成的修复可以改变回应的目的与结束条件，并区分表示遗漏、实际压制与知情维持伤害。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md#normative-differentiation-within-activity"
+    },
+    {
+      "en": "Restrictions compared: what a boundary does in actual living, not its existence, is assessed; historical necessity does not settle present justification, and purported alternatives also need actual support.",
+      "zh": "限制的比较：评价的是边界在实际生活关系中的作用，而非边界的存在；历史必要性不自行裁决当前正当性，所称替代也须有实际支持。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md#226-实际比较限制怎样保护或阻碍展开"
+    },
+    {
+      "en": "One theory: existing capture and revision results, at their scopes, explain purposes, knowing, normativity and response in the same organization; informed harm tests guarantees of goodwill and is no normative counterexample.",
+      "zh": "一个理论：以既有捕获与修订结果（各按原范围）在同一组织中说明目的、认识、规范与回应；知情伤害检验对善意的保证，不是规范反例。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md#one-theory-selection-and-normativity"
+    },
+    {
+      "en": "Selective correction: method success and harmful reproduction can coexist, so technical learning does not itself warrant ends; the test asks whether actual fulfillment can change tasks, selection and endings, not always requiring exit.",
+      "zh": "选择性纠正：方法的成功可与有害再生产并存，技术学习因此不独自证成目的；检验问实际实现能否改变任务、选择与结束条件，不无条件要求退出。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md#selective-correction-and-formed-ends"
+    },
+    {
+      "en": "Fulfillment test: five conceptual cases narrow it to a local diagnostic, as actual reorganization can perpetuate capture; it now follows actual affected relations, grounds for retaining or changing arrangements, and concrete responses.",
+      "zh": "检验完成问句：五项概念检验将其收窄为局部诊断，因为真实改组仍可延续俘获；修正后追踪实际受影响关系、保持或改变安排的根据及具体回应。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md#fulfillment-test-counterreview"
+    }
+  ],
+  "validation_scope": {
+    "en": "Philosophical argument with substantive author counterreview and five conceptual stress tests; full or targeted rereadings of existing studies (elective concern, relation and reason, the noninstrumental root, relational goodness, whole-process realization, the constitutive audit, ethical learning) and of the capture, coupling and plan-revision records; a bounded rereading of an already used primary source. The independent evaluator review and conditional proofs are reused at their scopes. No new mathematical claim, formal composition, Lean run, empirical result or independent acceptance.",
+    "zh": "哲学论证、实质作者反审及五项概念压力检验；完整或定向重读既有研究（选择关切、关系与理由、非工具性根基、关系善、整体实现、构成审计、伦理学习）及捕获、耦合与计划修订记录；有限复读已用原典的指定段落。复用既有评价者独立审查及条件证明，各按原范围。无新数学命题、形式组合、Lean运行、经验结果或独立验收。"
+  },
+  "references": [
+    {
+      "path": "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
+      "role": "statement",
+      "sha256": "da9d61ecc5dfd42f86463924f29165ad9e1ba20b908291f4b8b796d0ce2afd1a",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/history/UNIFIED-ETHICAL-GROUNDING.md",
+      "role": "integration",
+      "sha256": "a06388eafc08e416e0adecd65c9a2127660637141e10e274638b78ba90e3eb90",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-08-result-centered-repository.md",
+      "role": "provenance",
+      "sha256": "a896df0f8f85139ab323dcb97878b86b2ab3d4c897e4587e15f4ca8b8f7e9017",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md",
+      "role": "integration",
+      "sha256": "af1ea2388032d272ac581b0c725d88218fbd207d24fa48581883009d447f4927",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-13-universal-normative-grounding-focus.md",
+      "role": "provenance",
+      "sha256": "cf6883462d6709528232cf5512bb9f649149aa0b2c5a930e091b851f4a6e4ab8",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-13-nondual-normative-grounding-correction.md",
+      "role": "provenance",
+      "sha256": "acf7ec065778fb7fae18e86a0c68b8ce1f6f12db6c6ae7810f6ebbc993d6ccb1",
+      "declarations": []
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-13-one-theory-normativity-meta-attractor.md",
+      "role": "provenance",
+      "sha256": "f12a4d5acc0570bb6be953e288b5ee0b2e3b45e244ae9388eaa1ba44b7442fdc",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [],
+  "next_delta": {
+    "en": "Directly explain how actual affected living supports judgments to retain, change or end arrangements, preserving substantive contrary grounds and implementation barriers.",
+    "zh": "直接解释实际受影响生活怎样支持保持、改变或结束安排的判断，保留具体反向根据及实行障碍。"
+  },
+  "history": [
+    {
+      "zh": "2026-10-08：迁移既有成果身份与范围；不新增定理，不移动原始资料。",
+      "en": "2026-10-08: migrated existing result identity and scope; no new theorem or relocated source."
+    },
+    {
+      "zh": "2026-10-08：核读整合章新增的有限可见未来正面根据及关系生成比较；它们沿显式G0路线，未改变本独立目标及原研究范围。仅更新该已读整合引用，不新增证明。",
+      "en": "2026-10-08: read the integration additions on positive ground in visible futures and relational comparison. They follow explicit G0 and do not complete or alter this independent target. Updated only this reviewed integration reference; no new proof."
+    },
+    {
+      "zh": "2026-10-13 P98：按Ren明确选择聚焦普遍规范奠基。新增回应的实际根据／适用范围／要求强度的正面论证与形成边界对手比较；普遍目标保持open，没有新证明或独立成果身份。",
+      "en": "13 October 2026, P98: follows Ren’s explicit focus on universal normative grounding. Adds an affirmative account of ground, response bearing and requirement, tested against formed-boundary restriction; the universal target stays open, with no new proof or independent result identity."
+    },
+    {
+      "zh": "2026-10-13 P98接续：完成同一目的修订比较，认识与创造可兼有；收回将修订成功视为单独裁决的期待，细化承诺前的实践支持与其最强反审。仍为同一开放目标，无新证明。",
+      "en": "13 October 2026, P98 continuation: completes the purpose-revision comparison, allowing recognition and creation together; withdraws its use as a standalone discriminator and refines pre-commitment practical support with its strongest objection. Same open target, no new proof."
+    },
+    {
+      "zh": "2026-10-13 P98：按Ren指出的二元回退纠正解释架构；§22/章§20由同一活动展开规范分化，实施修复完成及限制转型比较，保留实际知情伤害。旧尝试保留历史范围，不宣告普遍完成。",
+      "en": "13 October 2026, P98: corrects the dualist regression identified by Ren; study §22/chapter §20 unfolds normative differentiation within one activity and works through completed repair and changing restrictions, preserving actual informed harm. Earlier attempts retain historical scope; no universal completion."
+    },
+    {
+      "zh": "2026-10-13：Ren指出这些就是一个理论；本研究由共同定义与已有捕获／修订结果说明同一组织中的目的、认识、规范和回应，纠正把meta-attractor作外部案例及把知情伤害当作规范反例的写法。",
+      "en": "13 October 2026: Ren states these are one theory. The study uses shared definitions and existing capture/revision results to explain purposes, knowing, normativity and response in the same organization, correcting the external-case framing and the use of informed harm as a normative counterexample."
+    },
+    {
+      "zh": "2026-10-13 P98接续：§23／章§21比较同一组织中的选择性技术纠正与目的修订；复用既有选择、捕获、登记和计划修订及有前提的支持接续，明确实际实现能否改变任务与结束条件的检验。仍为开放目标，无新形式结果。",
+      "en": "13 October 2026, P98 continuation: study §23/chapter §21 compares selective technical correction and revision of ends within one organization, reusing selection, capture, registration/plan revision and conditional supported succession. Tests whether fulfillment can change tasks and endings; same open target, no new formal result."
+    },
+    {
+      "zh": "2026-10-13 P98：检验原完成问句，五项概念接续揭示真实改变仍能延续俘获及范围遗漏；原句保留为局部诊断，修正正文与当前主张，未新增成果身份或证明。",
+      "en": "13 October 2026, P98: five conceptual continuations test the fulfillment question and expose genuine change perpetuating capture and scope omissions. Retains the original as a local diagnostic and revises the chapter and current claim; no new result identity or proof."
+    },
+    {
+      "en": "14 October 2026 (Asia/Bangkok): readability migration to schema 2. The target in the claim becomes the statement, and its narrowed fulfillment question a progress line. The limitations become eight does-not-show items and three shared boundaries; the section-by-section evidence (P98, sections 20–23.5) becomes seven progress lines with anchored study links and one evidence paragraph, with its labels kept here and in the snapshot. The former counterexample entry restated the status and the G0/J scope (now the status and a shared boundary), so it is no longer listed as a counterexample; P89’s scope stays in the related entry. No premise, status, dependency, related entry, reference or source hash changed. Sentence map: [migration table](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/becoming-general-laws-plan/readability/migrations/universal-practical-warrant.md); the exact earlier record is text_versions[0].",
+      "zh": "2026年10月14日（曼谷时间）：可读性迁移到schema 2。主张中的目标成为陈述，收窄的完成问句成为一行“已接通”。限制改为八项“未表明”与三项通用边界；逐节证据（P98，第20–23.5节）改为七行带锚点研究链接的“已接通”与一段证据，其标记保留于本沿革与快照。原反例条目实为状态及G0/J范围的重述（现分别由状态与通用边界承担），故不再列为反例；P89的范围仍见相关条目。前提、状态、依赖、相关条目、引用及来源哈希均未改变。逐句对照：[迁移对照表](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/becoming-general-laws-plan/readability/migrations/universal-practical-warrant.md)；迁移前的完整记录为 text_versions[0]。"
+    },
+    {
+      "zh": "2026年10月17日，全库审查（2026年10月16–17日，CHANGES.md）第 bilingual-16 项：中文标题“普遍实践权威”改为“普遍实践根据”，与英文 warrant 及中文陈述的“根据”一致（AGENTS.md 区分根据与权威）。原文见 text_versions。",
+      "en": "17 October 2026, whole-repository review of 16–17 October 2026 (CHANGES.md), item bilingual-16: the Chinese title's 普遍实践权威 (authority) becomes 普遍实践根据 (warrant), matching the English warrant and the Chinese statement's 根据 (AGENTS.md keeps warrant and authority distinct). Earlier text in text_versions."
+    },
+    {
+      "en": "17 October 2026, wording: authority phrasing removed from public fields, following Ren's 17 October directive that his earlier words are provenance, not authority; the claim is unchanged."
+    },
+    {
+      "en": "17 October 2026, source reconciliation after relabelling (Ren's 17 October directive: earlier words are provenance, not authority): ZERO-AXIOM-PRACTICAL-JUDGMENT.md now uses the current vocabulary (living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I, section 6 retitled), with delegation and process markers removed and every earlier anchor kept. The integrator compared the change and found relabelling only; re-pointed, the claim is unchanged."
+    },
+    {
+      "en": "18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. This record's live fields are read in the adopted words; its id is unchanged. The claim is unchanged."
+    },
+    {
+      "en": "2026-10-20: 2 bookkeeping notes condensed of 17 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/4338855735cfa81a/universal-practical-warrant.json and in git.",
+      "zh": "2026-10-20：2 条记账性说明合并（17 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/4338855735cfa81a/universal-practical-warrant.json 和 git 中。"
+    },
+    {
+      "en": "25 October 2026, board item DF (study section 418): the retired labels in two related notes replaced (the explicit-axiom route by the conditional alignment route, G0 by living significance), and the registration records named by the current word, coupling; the target is unchanged.",
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：两条相关说明中已退役的标签改为现行术语（显式公理路线改为条件对齐路线，G0 改为生生之意义），登记记录以现行词称为耦合记录；目标不变。"
+    }
+  ],
+  "text_versions": [
+    {
+      "path": "_process/architecture/history/ad319e7c0aa96fab/universal-practical-warrant.json",
+      "sha256": "ad319e7c0aa96fab4015eb7706ea3615052db141c6537265d7f0411791a19bc6",
+      "note": {
+        "zh": "迁移前的记录原始字节（schema 1）。",
+        "en": "Exact record bytes before the migration (schema 1)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/735de5280c33f42f/universal-practical-warrant.json",
+      "sha256": "735de5280c33f42ffac520d08583885b66674dceac341d2aa6762add2ecda53f",
+      "note": {
+        "zh": "全库审查（2026年10月16–17日）把措辞对齐 Lean 陈述之前的记录原始字节（schema 2）。",
+        "en": "Exact record bytes before the wording was scoped to the Lean statements (whole-repository review of 16–17 October 2026, schema 2)."
+      }
+    },
+    {
+      "path": "_process/architecture/history/4338855735cfa81a/universal-practical-warrant.json",
+      "sha256": "4338855735cfa81a89d3a283f9460fd01c0b32aa00ae52c6977495c1842afbb7",
+      "note": {
+        "en": "Exact record bytes before its history was compacted (R35, E3); every condensed note is kept here.",
+        "zh": "历史说明压缩前的记录原始字节（R35，E3）；每条被合并的说明都保存在这里。"
+      }
+    }
+  ]
+}

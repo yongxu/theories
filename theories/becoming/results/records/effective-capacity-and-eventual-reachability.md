@@ -37,7 +37,7 @@
 - **Counterexample:** actual_release_loses_eventual_joint retains genuine loss of a joint possibility; prepared_capacity_can_end_without_joint_realization retains a terminal path with available but unexercised joint capacity. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalBecoming.lean)
 - **Counterexample:** This is preparation within the inherited finite opportunity, not the coupling’s first formation, what maintaining it takes, or its recovery. The unbounded inference already has an earlier proof and is not claimed as a new discovery. [source](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/RELATIONAL-BECOMING-INTEGRATION.md)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Premise-free (zero-substantive-axiom) grounding is a separate open target; completed results on the conditional alignment route keep their scope.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
 
 <a id="evidence--证据"></a>
 ## Evidence

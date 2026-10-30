@@ -19,12 +19,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2162,
-    "distinct_byte_contents": 1706,
+    "lean_paths": 2164,
+    "distinct_byte_contents": 1708,
     "byte_identical_duplicate_groups": 189,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1188,
+      "development-attempt": 1190,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 935
@@ -6085,6 +6085,27 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rs1-reading-schedule/tree/Becoming/ReadingSchedule.lean",
       "sha256": "4bcbf3509a156cbb279bdfaadecc956c1ec46842f89e5062ba3a24ac12938473",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rv21-one-sense/review/CoreAndLi.lean",
+      "sha256": "6a00d747bc625c54cf8d0a205a9088571c3ca9f0bfd1f66bdacdab34f49a5163",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rv21-one-sense/review/REVIEW-3-FORMAL.md",
+        "theories/becoming/chapters/01-ROOT.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rv21-one-sense/review/Witness.lean",
+      "sha256": "459328e31de3241bbc3cdad5c1cce87039e9f50a806170319294b3db3fae6094",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
@@ -163665,6 +163686,159 @@
       },
       "print_axioms_commands": 0
     },
+    "459328e31de3241bbc3cdad5c1cce87039e9f50a806170319294b3db3fae6094": {
+      "byte_size": 3406,
+      "line_count": 59,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "abbrev",
+          "name": "Rel",
+          "qualified_name_hint": "Rel",
+          "line": 1
+        },
+        {
+          "kind": "def",
+          "name": "comp",
+          "qualified_name_hint": "comp",
+          "line": 2
+        },
+        {
+          "kind": "def",
+          "name": "conv",
+          "qualified_name_hint": "conv",
+          "line": 3
+        },
+        {
+          "kind": "def",
+          "name": "incl",
+          "qualified_name_hint": "incl",
+          "line": 4
+        },
+        {
+          "kind": "def",
+          "name": "ident",
+          "qualified_name_hint": "ident",
+          "line": 5
+        },
+        {
+          "kind": "def",
+          "name": "constant",
+          "qualified_name_hint": "constant",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "core",
+          "qualified_name_hint": "core",
+          "line": 7
+        },
+        {
+          "kind": "def",
+          "name": "goAlike",
+          "qualified_name_hint": "goAlike",
+          "line": 8
+        },
+        {
+          "kind": "def",
+          "name": "br",
+          "qualified_name_hint": "br",
+          "line": 11
+        },
+        {
+          "kind": "theorem",
+          "name": "core_ident_not_goAlike",
+          "qualified_name_hint": "core_ident_not_goAlike",
+          "line": 12
+        },
+        {
+          "kind": "def",
+          "name": "en",
+          "qualified_name_hint": "en",
+          "line": 21
+        },
+        {
+          "kind": "def",
+          "name": "cls",
+          "qualified_name_hint": "cls",
+          "line": 22
+        },
+        {
+          "kind": "theorem",
+          "name": "cls_goAlike",
+          "qualified_name_hint": "cls_goAlike",
+          "line": 23
+        },
+        {
+          "kind": "theorem",
+          "name": "cls_not_in_core",
+          "qualified_name_hint": "cls_not_in_core",
+          "line": 26
+        },
+        {
+          "kind": "def",
+          "name": "cyc",
+          "qualified_name_hint": "cyc",
+          "line": 33
+        },
+        {
+          "kind": "def",
+          "name": "blk",
+          "qualified_name_hint": "blk",
+          "line": 34
+        },
+        {
+          "kind": "def",
+          "name": "E4",
+          "qualified_name_hint": "E4",
+          "line": 35
+        },
+        {
+          "kind": "def",
+          "name": "cont",
+          "qualified_name_hint": "cont",
+          "line": 37
+        },
+        {
+          "kind": "inductive",
+          "name": "reach",
+          "qualified_name_hint": "reach",
+          "line": 38
+        },
+        {
+          "kind": "def",
+          "name": "begins",
+          "qualified_name_hint": "begins",
+          "line": 41
+        },
+        {
+          "kind": "def",
+          "name": "renewsWithoutEnd",
+          "qualified_name_hint": "renewsWithoutEnd",
+          "line": 42
+        },
+        {
+          "kind": "theorem",
+          "name": "cycle_renews",
+          "qualified_name_hint": "cycle_renews",
+          "line": 44
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 16,
+        "inductive": 1,
+        "theorem": 4
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "45c56a6aa974281b89e1b1a1776e6828dbd2d7a93e70351884410a241ccbde81": {
       "byte_size": 19095,
       "line_count": 489,
@@ -227014,6 +227188,57 @@
         "unsafe": []
       },
       "print_axioms_commands": 0
+    },
+    "6a00d747bc625c54cf8d0a205a9088571c3ca9f0bfd1f66bdacdab34f49a5163": {
+      "byte_size": 3191,
+      "line_count": 56,
+      "imports": [
+        "Becoming.GrammarLaws"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "coreOfClassGoesAlike",
+          "qualified_name_hint": "Becoming.coreOfClassGoesAlike",
+          "line": 14
+        },
+        {
+          "kind": "theorem",
+          "name": "goesAlikeInsideCore",
+          "qualified_name_hint": "Becoming.goesAlikeInsideCore",
+          "line": 20
+        },
+        {
+          "kind": "theorem",
+          "name": "coreIsCoarsestGoingAlike",
+          "qualified_name_hint": "Becoming.coreIsCoarsestGoingAlike",
+          "line": 26
+        },
+        {
+          "kind": "def",
+          "name": "branching",
+          "qualified_name_hint": "Becoming.branching",
+          "line": 33
+        },
+        {
+          "kind": "theorem",
+          "name": "coreNeedNotGoAlike",
+          "qualified_name_hint": "Becoming.coreNeedNotGoAlike",
+          "line": 38
+        }
+      ],
+      "declaration_counts": {
+        "def": 1,
+        "theorem": 4
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 4
     },
     "6a2700b3be73966bd3c0b24f219d136f7c2362cc704fd316d616f61351cde40c": {
       "byte_size": 7466,

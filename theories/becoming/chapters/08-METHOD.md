@@ -109,7 +109,7 @@ The condition by itself orders nothing, and a theorem taking it as a hypothesis 
 |---|---|---|
 | 无明 (wúmíng) | seeking locked onto a target that cannot be met at rest; the position every formation selects from grounds it and is not it (D25, D26, D45); home [03](03-KNOWING.md) | what lies beyond what couples in (that is the reach of a selection) |
 | 明 (míng) | coupling joined to a selection, so it reaches what support does not mark (D26, D45) | |
-| generation | 02's 生成: a pattern going on through carrying renewal; in 07, 生生 as life in the whole and its continuing generation | arising (records titled with "generation" for arising are stated as laws of arising) |
+| generation | 02's 生成: a pattern going on through carrying renewal | arising (records titled with "generation" for arising are stated as laws of arising); 生生 (07), which generation at two orders does not give, and whose English gloss in 01 §6 and 07 §2 ("continuing generation", "generation generating generation") says 生发, not this sense |
 | 生 (shēng) | the mark "begins" ([01](01-ROOT.md)) | what lives and arises |
 | the core | 核, the greatest symmetric relation within a class that the relation never tells apart ([01](01-ROOT.md)) | the Lean package, which is "the pure core" |
 | base | the base of a label (root, the steps, any process, any type, World, periphery, a named model) | "the old base", which is "the World model"; a drawn stock |
@@ -681,7 +681,7 @@ With D65 the register again lists none open; a reading added later is decided th
 ### Philosophical warrant
 
 - **The deductive necessity of the whole.** Argued for the determinations the World premises name ([internal relations](01-ROOT.md#what-internal-means)); open: that every becoming has such a law of exchange. For requirement what remains is that requiring does not read whether it is met, since necessary response is the weakest sound reading that does not read the current level (`ExchangeRelation.respondsBelow_weakest`).
-- **A stronger universal practical warrant**: grounding reasons without an externally supplied end; the ethics does not wait on it ([07](07-SIGNIFICANCE.md#r-universal-practical-warrant), T8).
+- **Whether a universal practical warrant exists**: whether practical reasons have a warrant binding every possible mind, with zero substantive premises; it stays open, and the ethics, life's stance, does not wait on it ([07](07-SIGNIFICANCE.md#r-universal-practical-warrant), T8).
 - **The relational foundation of scientific inquiry**: the indispensability of the theory's central commitments, tested from independently stated achievements.
 - **The grounds of living significance, A and the neutralities**, none independently reviewed; under the condition living significance is an instantiation, so its ground is the condition's.
 - **Calling widening better, P2 and P4 of 07 §4.6, and the step of invariance** (item 12; [07](07-SIGNIFICANCE.md#scope-and-order), [§4.6](07-SIGNIFICANCE.md#future-path)): C's no-loss extension is widening by definition, so the definition carries no warrant; P2 and P4 are the crux of the path that carries concern for one's own continuation past one's own end without the step.

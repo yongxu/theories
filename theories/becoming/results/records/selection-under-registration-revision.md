@@ -59,7 +59,7 @@
 - The run's history of lumpings is defined of the run, not retained by it: an actual memory that keeps it and effects the model leaves out are not shown. Witness: `Becoming.Registration.AlikeUpTo`.
 - **Counterexample:** opens_without_correction gains a distinction while exhausting action support; closes_choice loses an old selection despite remaining stock; old_cannot_select_rebuild shows the initial reading alone cannot distinguish reconstruction modes. As laws: covered_not_enacted is a correction the stock covers and the link process blocks, and linked_not_enacted one the link admits with no stock to cover it. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Premise-free (zero-substantive-axiom) grounding is a separate open target; completed results on the conditional alignment route keep their scope.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
 
 <a id="evidence--证据"></a>
 ## Evidence

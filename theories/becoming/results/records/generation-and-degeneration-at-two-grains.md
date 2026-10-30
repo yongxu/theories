@@ -111,7 +111,8 @@ Aliases: `Becoming.Map.Branch`, `Becoming.Map.Endless.generates`, `Becoming.Map.
 - 29 October 2026, board item GW (study section 448): by names nothing generates is a case of the law for any continuation in which each formation continues only itself, proved once in MapInstances (board rule 9); itself_carries_nothing and itself_not_generation derived from it, statements unchanged. A law widened.
 - 30 October 2026, board item GW (study section 467): GW1 and GW2 in Becoming.MapRegions, a core leaf importing GrammarMap only: the split of a beginning on the root; keeping from some point on, with which excluded middle makes the regions cover and on single lines partition; the gap strict keeping leaves; on a single line, deciding keeping from some point on is LPO and deciding generation WLPO. Statement, four laws, the hypothesis, a does-not-show item and a counterexample changed.
 - 30 October 2026, board item GW, after item 13's fourth review round: law 8's clause on the some-branch regions brought into line with law 6 (strict keeping leaves them short of covering; with keeping from some point on and excluded middle they cover). Law 8 corrected to what law 6 proves; no new law.
+- 30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the grammar's «生生» marked in the Chinese of law 12, as 06 §三 marks it; nothing the record states changed.
 
 </details>
 
-Documentary review UTC: `2026-10-30T15:39:22+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-30T17:41:46+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -5543,8 +5543,8 @@
    "id": "record:universal-practical-warrant",
    "type": "result",
    "record": "universal-practical-warrant",
-   "title": "Stronger universal practical warrant target",
-   "title_zh": "普遍实践根据的更强目标",
+   "title": "Whether a universal practical warrant exists",
+   "title_zh": "是否存在普遍的实践根据",
    "status": "open",
    "kind": "target",
    "region": "significance",
@@ -53564,6 +53564,11 @@
   {
    "from": "record:universal-practical-warrant",
    "to": "record:target-capture",
+   "type": "related"
+  },
+  {
+   "from": "record:universal-practical-warrant",
+   "to": "record:what-the-dynamics-leave-open",
    "type": "related"
   },
   {

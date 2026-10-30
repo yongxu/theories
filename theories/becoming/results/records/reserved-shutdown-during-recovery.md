@@ -48,7 +48,7 @@
 - **Counterexample:** With bound one, actual delay ten and deadline fifteen, retained time reaches eighteen with eight units used and activity still running; stopping is no longer timely. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ReservedShutdown.lean)
 - **Counterexample:** Slow.misses: a course as long as the margin can miss the exit, so the bound is attained. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Countdown.lean)
 
-**Standard boundaries:** No ethical premise is used. The core declarations use no Lean axiom; the periphery declarations cited use only Lean's standard axioms (propext, Quot.sound, Classical.choice), as their receipts report. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Premise-free (zero-substantive-axiom) grounding is a separate open target; completed results on the conditional alignment route keep their scope.
+**Standard boundaries:** No ethical premise is used. The core declarations use no Lean axiom; the periphery declarations cited use only Lean's standard axioms (propext, Quot.sound, Classical.choice), as their receipts report. · A law of the formal model; its correspondence to actual systems is a separate obligation. · The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
 
 <a id="evidence--证据"></a>
 ## Evidence

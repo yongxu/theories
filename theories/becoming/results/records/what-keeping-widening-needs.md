@@ -160,7 +160,8 @@ Aliases: `What keeping widening needs, and what carries it`, `持续扩大需要
 - 27 October 2026, board item UE10 (study section 424): the next step updated: what a course keeps reachable is read in what-a-course-keeps-reachable; no declaration changed.
 - 29 October 2026, board item GW (study section 448): the law of beginnings and what keeping opening needs along any reading; the landed law along passings and its exclusions derived from the law along supported passings, statements unchanged; within a kind, renewals one grain up; the laws for dissipated requirements; generation where supports last one step; the kind relay, closed and fed, on which 全生成 at two orders and keeping widening within kinds hold together. Statement, laws, a hypothesis, two does-not-show items and the next step changed.
 - 30 October 2026 (HE, study section 455): total_eq_of_supports moved from KeepingWidening to beside total_le_of_support in Dissipation, statement and name unchanged; its reference, binding and the validation scope follow; reviewed in REVIEW-HE.
+- 30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the grammar's «生生» marked in the Chinese of law 15 and of the second item it does not show, as the English and KindRelay.renews_without_end state; nothing the record states changed.
 
 </details>
 
-Documentary review UTC: `2026-10-29T15:01:33+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-30T17:41:46+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

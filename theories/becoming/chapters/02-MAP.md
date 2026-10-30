@@ -23,7 +23,7 @@ Read at one class, turnover that sustains a pattern and turnover that ends it lo
 |---|---|
 | A carrying renewal is an alteration (异). | `«传则异»` |
 | Going on along some branch and ending on every branch exclude each other; a line with no end anywhere goes on along some branch. | `«延尽不并»`, `«不穷则延»` |
-| Read along renewing into (复生至) under the one, renewal without end (生生) of [the root](01-ROOT.md#renewal-and-grains) is going on along some branch, and ceasing (息) is ending on every branch. | `«生生即延»`, `«息即尽»` |
+| Read along renewing into (复生至) under the one, renewal without end (`«生生»`) of [the root](01-ROOT.md#renewal-and-grains) is going on along some branch, and ceasing (息) is ending on every branch. | `«生生即延»`, `«息即尽»` |
 | Generation and keeping each exclude degeneration. | `«生成退化不并»`, `«守退化不并»` |
 | Generation and keeping can share a point along different branches (生守相杂, the mixed region; witness: a root with a renewing chain on one branch and a still occurrence on the other). | `Map.«生守相杂»` |
 | On a single line, each occurrence conditioning at most one other, they exclude each other. | `«单行则生守不并»` |
