@@ -1,0 +1,3513 @@
+{
+ "distinct_central_declarations": 118,
+ "counts": {
+  "derived": 0,
+  "under a stated hypothesis": 0,
+  "premise": 0,
+  "logic": 12,
+  "counting": 4,
+  "connected": 31,
+  "balance, represented": 32,
+  "amounts": 18,
+  "at a represented model": 7,
+  "own carrier": 4,
+  "at its model": 7,
+  "free significance": 3
+ },
+ "on_the_edge": 0,
+ "below_the_grammar": 16,
+ "distances": 102,
+ "hand_rows_not_central": [],
+ "rows": [
+  {
+   "declaration": "Amounts.rests",
+   "rows": [
+    "dissolution"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "return"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«尽则不或屡»"
+   ],
+   "grammar_definitions": [
+    "«一»",
+    "«尽»",
+    "«尽».mk",
+    "«所闭»",
+    "«续»",
+    "«而»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Branching.loss_passes_juncture",
+   "rows": [
+    "degeneration"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "return"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«及当且仅当一步而所闭»",
+    "«所闭之传递»",
+    "«所闭之自反»",
+    "«所闭当且仅当同一或及»",
+    "«缘在所闭»"
+   ],
+   "grammar_definitions": [
+    "«及»",
+    "«所闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "CensusWebs.keep_pace",
+   "rows": [
+    "dissolution"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": true
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "as Listed.coming_of_ceasing",
+   "by": "reading",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "ClosedCapture.lock_outlives_loss",
+   "rows": [
+    "collective"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«所闭之自反»",
+    "«缘在所闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Dependence.Overdetermined.only_together",
+   "rows": [
+    "responsibility"
+   ],
+   "dependence": "no master law",
+   "category": "definitional or representational",
+   "reason": "one line from the definitions",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.only_together_reading",
+     "models": [
+      "process"
+     ],
+     "record": "joint-difference-making"
+    }
+   ],
+   "standing": "logic",
+   "basis": "one line from the definitions (U2, process model)",
+   "by": "reading",
+   "rule_would_give": "at a represented model"
+  },
+  {
+   "declaration": "Dependence.differenceOnlyTogether_iff",
+   "rows": [
+    "actor"
+   ],
+   "dependence": "no master law",
+   "category": "law of its model",
+   "reason": "the dichotomy of a determined process",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.differenceOnlyTogether_reading",
+     "models": [
+      "process"
+     ],
+     "record": "joint-difference-making"
+    }
+   ],
+   "standing": "at a represented model",
+   "basis": "F5: process",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Direction.extension_iff_widens",
+   "rows": [
+    "alignment"
+   ],
+   "dependence": "anchor, not reached",
+   "category": "master law",
+   "reason": "C's extension on paths, on the moves' frame (Web.paths_extension_iff_widens)",
+   "laws": [
+    "order"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "at its model",
+   "basis": "C's extension on the moves' frame (Web.paths_extension_iff_widens)",
+   "by": "reading",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Direction.widening_selected_by_pool",
+   "rows": [
+    "alignment"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "balance",
+    "order"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«缘在所闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Drift.falls_back",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "no master law",
+   "category": "law of its model",
+   "reason": "a second-moment bound on samplings",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.mem_cons_split",
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "counting",
+   "basis": "row 18: courses of n binary draws, weighted; reading them as drift is the model's hypothesis (LEVER-2-AUDIT.md §2)",
+   "by": "reading",
+   "rule_would_give": "at its model"
+  },
+  {
+   "declaration": "ExchangeLaw.response_not_fixed_by_coupling",
+   "rows": [
+    "alignment"
+   ],
+   "dependence": "no master law",
+   "category": "definitional or representational",
+   "reason": "two laws through one coupling",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.response_not_fixed_reading",
+     "models": [
+      "own"
+     ],
+     "record": "what-a-pools-acts-respond-to"
+    }
+   ],
+   "standing": "logic",
+   "basis": "two laws through one coupling (U2, own carrier)",
+   "by": "reading",
+   "rule_would_give": "own carrier"
+  },
+  {
+   "declaration": "Flow.Balances.comparison_within_response",
+   "rows": [
+    "responsibility"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«所闭之自反»",
+    "«缘在所闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.Balances.consumption_ends_with_feeders",
+   "rows": [
+    "degeneration"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.Balances.renewedBy",
+   "rows": [
+    "maintenance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.Balances.retains_iff_within_margin",
+   "rows": [
+    "capacity"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.Balances.widens_iff_others_within",
+   "rows": [
+    "capacity",
+    "alignment"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance",
+    "order"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.Dissipative.opens",
+   "rows": [
+    "degeneration"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "balance",
+    "return"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«尽则不或屡»"
+   ],
+   "grammar_definitions": [
+    "«一»",
+    "«尽»",
+    "«尽».mk",
+    "«所闭»",
+    "«续»",
+    "«而»"
+   ],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.More.replenishment_unbounded",
+   "rows": [
+    "maintenance"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "balance",
+    "return"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«尽则不或屡»"
+   ],
+   "grammar_definitions": [
+    "«一»",
+    "«尽»",
+    "«尽».mk",
+    "«所闭»",
+    "«续»",
+    "«而»"
+   ],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.act_selected_by_pool",
+   "rows": [
+    "alignment"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«缘在所闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.act_unselected",
+   "rows": [
+    "responsibility"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«缘在所闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.beyond_gives_nothing",
+   "rows": [
+    "patient"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之界»"
+   ],
+   "grammar_definitions": [
+    "«所闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.change_recurs_iff",
+   "rows": [
+    "transformation"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "BalancesOn"
+    ],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.continuing_excludes",
+   "rows": [
+    "degeneration"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.descent_reaches",
+   "rows": [
+    "life"
+   ],
+   "dependence": "no master law",
+   "category": "single application",
+   "reason": "N_rel once; its closure form is Valuation.reaches",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.descent_reaches_reading",
+     "models": [
+      "occurrence"
+     ],
+     "record": "living-on-and-descent"
+    }
+   ],
+   "standing": "at a represented model",
+   "basis": "F5: occurrence",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.mutuallyDependent_iff_reach",
+   "rows": [
+    "collective"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«所闭之自反»",
+    "«缘在所闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.new_beyond_every",
+   "rows": [
+    "generation"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [
+     "Balances"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "balance only in its proof; its statement is on its model's amounts",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.no_new_dependence",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "at its model",
+   "basis": "row 5: \"coming to stand is given to\" (no_new_dependence_of_given); every hypothesis witnessed (Ungiven); the statement keeps the model's terms, so standing 2 waits for a form over every relation and amount (LEVER-2-AUDIT.md §5)",
+   "by": "reading",
+   "rule_would_give": "amounts"
+  },
+  {
+   "declaration": "Flow.outrun_below",
+   "rows": [
+    "degeneration"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.restores",
+   "rows": [
+    "maintenance"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.selected_le",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "no master law",
+   "category": "premise of the account",
+   "reason": "support: only the active give, the active are supported",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "row 3: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis witnessed; the conclusion compares amounts (LEVER-2-AUDIT.md §4, §10)",
+   "by": "reading",
+   "rule_would_give": "at its model"
+  },
+  {
+   "declaration": "Flow.selection_within",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "no master law",
+   "category": "premise of the account",
+   "reason": "support, with the counting form of Price",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "row 1: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis witnessed; the conclusion compares amounts (LEVER-2-AUDIT.md §4, §10)",
+   "by": "reading",
+   "rule_would_give": "at its model"
+  },
+  {
+   "declaration": "Flow.transmitted_supported",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "no master law",
+   "category": "premise of the account",
+   "reason": "support, with inheritance within the bound",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "row 2: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis witnessed; the conclusion compares amounts (LEVER-2-AUDIT.md §4, §10)",
+   "by": "reading",
+   "rule_would_give": "at its model"
+  },
+  {
+   "declaration": "Flow.unexcluded_beyond_coupling",
+   "rows": [
+    "knowing"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "BalancesOn"
+    ],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.unselected_beyond_coupling",
+   "rows": [
+    "alignment"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "BalancesOn"
+    ],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.unselected_beyond_pool",
+   "rows": [
+    "alignment"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "BalancesOn"
+    ],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.uptake_needs_replenishment",
+   "rows": [
+    "generation"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "balance",
+    "return"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«尽则不或屡»"
+   ],
+   "grammar_definitions": [
+    "«一»",
+    "«尽»",
+    "«尽».mk",
+    "«所闭»",
+    "«续»",
+    "«而»"
+   ],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.withinCoupling_reads_iff",
+   "rows": [
+    "alignment"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«所闭之单调»",
+    "«所闭之自反»",
+    "«缘在所闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Flow.withinSystem_of_withinInfluence",
+   "rows": [
+    "patient"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之单调»"
+   ],
+   "grammar_definitions": [
+    "«所闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "GroupEnding.Flow.all_end",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "no master law",
+   "category": "premise of the account",
+   "reason": "only the active give",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "at its model",
+   "basis": "row 17: the gate as two inclusions (all_end_on_root, size_zero_of_within); every hypothesis witnessed (Ungated, Lifted.inactive_needed); the statement keeps the model's terms, so standing 2 waits for a form over every relation and amount (LEVER-2-AUDIT.md §10)",
+   "by": "reading",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "GroupEnding.Flow.coupled_end_together",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "GroupEnding.Flow.family_childless",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "GroupEnding.Flow.rises_iff_inactive",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "no master law",
+   "category": "premise of the account",
+   "reason": "only the active give, with the partition",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "at its model",
+   "basis": "row 14: the gate as two inclusions, cancellation and inactivity (rises_iff_inactive_on_root); every hypothesis witnessed (Ungated, EndsAmong, Lifted); the statement keeps the model's terms, so standing 2 waits for a form over every relation and amount (LEVER-2-AUDIT.md §10)",
+   "by": "reading",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Ideals.verifiableBy_iff_interior",
+   "rows": [
+    "knowing"
+   ],
+   "dependence": "no master law",
+   "category": "definitional or representational",
+   "reason": "Iff.rfl",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.verifiableBy_reading",
+     "models": [
+      "own"
+     ],
+     "record": "what-a-finite-stretch-verifies"
+    }
+   ],
+   "standing": "logic",
+   "basis": "Iff.rfl (U2, own carrier)",
+   "by": "reading",
+   "rule_would_give": "own carrier"
+  },
+  {
+   "declaration": "Law.drawn_iff_not_returns",
+   "rows": [
+    "transformation"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "return"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«定后有后则入当且仅当不返»"
+   ],
+   "grammar_definitions": [
+    "«入»",
+    "«及»",
+    "«及».more",
+    "«及».one",
+    "«及».rec",
+    "«定后»",
+    "«而»",
+    "«逆»",
+    "«闭»",
+    "«静»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Law.lossless_iff_returns",
+   "rows": [
+    "transformation"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "return"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«有限遍后定后则定前当且仅当皆返»"
+   ],
+   "grammar_definitions": [
+    "«及»",
+    "«及».more",
+    "«及».one",
+    "«及».rec",
+    "«定前»",
+    "«定后»",
+    "«而»",
+    "«逆»",
+    "«静»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Learnable.learnable_iff",
+   "rows": [
+    "knowing",
+    "learning"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "return"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.gap_of_lt",
+    "GrammarLaws.le_succ_cases",
+    "GrammarLaws.revisits_within",
+    "GrammarLaws.skipAt_le",
+    "GrammarLaws.skipAt_lt",
+    "GrammarLaws.skipAt_ne",
+    "«迭之定»",
+    "«迭之接»"
+   ],
+   "grammar_definitions": [
+    "GrammarLaws.skipAt",
+    "«定后»",
+    "«而»",
+    "«迭»",
+    "«逆»",
+    "«静»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "LearnableRuns.learnable_iff_tracks",
+   "rows": [
+    "learning"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "return"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.gap_of_lt",
+    "GrammarLaws.le_succ_cases",
+    "GrammarLaws.revisits_within",
+    "GrammarLaws.skipAt_le",
+    "GrammarLaws.skipAt_lt",
+    "GrammarLaws.skipAt_ne",
+    "«迭之定»",
+    "«迭之接»"
+   ],
+   "grammar_definitions": [
+    "GrammarLaws.skipAt",
+    "«定后»",
+    "«而»",
+    "«迭»",
+    "«逆»",
+    "«静»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Learning.Training.unselected_beyond_data",
+   "rows": [
+    "learning"
+   ],
+   "dependence": "no master law",
+   "category": "single application",
+   "reason": "a selection through the data, used once",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.unselected_beyond_data_reading",
+     "models": [
+      "own"
+     ],
+     "record": "generalization-through-lumping"
+    }
+   ],
+   "standing": "own carrier",
+   "basis": "F5: stated in grammar terms on its own carrier",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Learning.goAlike_iff_lumped",
+   "rows": [
+    "learning"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "lumping"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«像定后当且仅当同行»",
+    "«同行之逐点»"
+   ],
+   "grammar_definitions": [
+    "«像»",
+    "«同行»",
+    "«定后»",
+    "«而»",
+    "«逆»",
+    "«静»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Limit.identifies_iff_tracks",
+   "rows": [
+    "learning"
+   ],
+   "dependence": "no master law",
+   "category": "definitional or representational",
+   "reason": "Iff.rfl",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.identifies_iff_reading",
+     "models": [
+      "process"
+     ],
+     "record": "learning-through-a-map-is-tracking-in-the-limit"
+    }
+   ],
+   "standing": "logic",
+   "basis": "Iff.rfl (U2, process model)",
+   "by": "reading",
+   "rule_would_give": "at a represented model"
+  },
+  {
+   "declaration": "Listed.coming_of_ceasing",
+   "rows": [
+    "dissolution"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": true
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "counts of arising and ceasing over a listing; the census pairing with «计» is lever 1's candidate",
+   "by": "reading",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Optimum.mutual_beyond",
+   "rows": [
+    "alignment"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "BalancesBetween"
+    ],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Optimum.optimum_beyond",
+   "rows": [
+    "alignment"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "BalancesBetween"
+    ],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Pace.rule_until_reading",
+   "rows": [
+    "transformation"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«所闭之自反»",
+    "«缘在所闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "PartForms.goAlike",
+   "rows": [
+    "actor"
+   ],
+   "dependence": "anchor, not reached",
+   "category": "master law",
+   "reason": "a law of its model: the part's law determined at a move the part alone forms; the image law only reads it as carrying a law of its own (carries_law_iff), and a proof through it applies the law and undoes it (OU3d's review)",
+   "laws": [
+    "lumping"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "at its model",
+   "basis": "a law of its model; the image law only reads it (OU3d's review)",
+   "by": "reading",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "RegimeMargin.Adjusted.comes_to_rest",
+   "rows": [
+    "degeneration"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": true
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«所闭之自反»",
+    "«缘在所闭»",
+    "«迭之周»",
+    "«迭之定»"
+   ],
+   "grammar_definitions": [
+    "«定后»",
+    "«所闭»",
+    "«而»",
+    "«迭»",
+    "«逆»",
+    "«闭»",
+    "«静»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1); counting by the prelude's law",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "RegimeMargin.Adjusted.ends_iff_below",
+   "rows": [
+    "degeneration"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": true
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "RegimeMargin.Adjusted.falls_iff_below",
+   "rows": [
+    "degeneration"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": true
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«所闭之自反»",
+    "«缘在所闭»",
+    "«迭之周»",
+    "«迭之定»"
+   ],
+   "grammar_definitions": [
+    "«定后»",
+    "«所闭»",
+    "«而»",
+    "«迭»",
+    "«逆»",
+    "«闭»",
+    "«静»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1); counting by the prelude's law",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "RegimeMargin.Coupled.Indexed.ends_downstream",
+   "rows": [
+    "degeneration"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«所闭之自反»",
+    "«缘在所闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "RegimeMargin.Coupled.threshold_falls",
+   "rows": [
+    "degeneration"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": true
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«所闭之自反»",
+    "«缘在所闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1); counting by the prelude's law",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "RegimeMargin.Drawn.run_shape",
+   "rows": [
+    "degeneration"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«所闭之自反»",
+    "«缘在所闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "RegimeMargin.ends_iff_below",
+   "rows": [
+    "degeneration"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": true
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "RelativePosition.rise_needs_fall",
+   "rows": [
+    "collective"
+   ],
+   "dependence": "no master law",
+   "category": "law of its model",
+   "reason": "a zero-sum count, by commutativity",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "counting",
+   "basis": "a rise and fall count over a list, by commutativity (EC6: law of its model)",
+   "by": "reading",
+   "rule_would_give": "at its model"
+  },
+  {
+   "declaration": "Renewable.no_exact_finite_reading",
+   "rows": [
+    "capacity"
+   ],
+   "dependence": "no master law",
+   "category": "single application",
+   "reason": "a prefix reading used once; the open continuation",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.finite_reading_not_exact",
+     "models": [
+      "process",
+      "occurrence"
+     ],
+     "record": "becoming-finite-horizon"
+    },
+    {
+     "item": "ModelStatements.renewing_not_closed",
+     "models": [
+      "process",
+      "occurrence"
+     ],
+     "record": "becoming-finite-horizon"
+    }
+   ],
+   "standing": "at a represented model",
+   "basis": "F5: occurrence, process",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Reproduction.Flow.closed_lineage_lowered",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "BalancesOn"
+    ],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Reproduction.Flow.lineage_ends",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "BalancesOn"
+    ],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Reproduction.Flow.number_within_take",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "no master law",
+   "category": "premise of the account",
+   "reason": "dissipation",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "row 9: dissipation on a family and an injection from births to given units, a count within a take; dissipation is kept as a premise of the account with no proof of independence (LEVER-2-AUDIT.md §1)",
+   "by": "reading",
+   "rule_would_give": "at its model"
+  },
+  {
+   "declaration": "RuleCapture.favouring_locks",
+   "rows": [
+    "degeneration"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«所闭之自反»",
+    "«缘在所闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "RuleCapture.uniform_locks",
+   "rows": [
+    "collective"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«所闭之自反»",
+    "«缘在所闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Run.not_fixes_of_untaken",
+   "rows": [
+    "knowing"
+   ],
+   "dependence": "no master law",
+   "category": "law of its model",
+   "reason": "an untaken move retargeted",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.not_fixes_reading",
+     "models": [
+      "process"
+     ],
+     "record": "experiment-needs-return"
+    }
+   ],
+   "standing": "at a represented model",
+   "basis": "F5: process",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "SelectionLevels.levels_sized",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "no master law",
+   "category": "counting identity",
+   "reason": "Price's partition among groups",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "counting",
+   "basis": "row 12: Price's partition (LEVER-2-AUDIT.md §2)",
+   "by": "reading",
+   "rule_would_give": "at its model"
+  },
+  {
+   "declaration": "SelectionLevels.rises_exact_iff_levels",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "no master law",
+   "category": "counting identity",
+   "reason": "Price's partition, read for a rise",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "at its model",
+   "basis": "row 13: cancellation (rises_cancel_iff_levels); every hypothesis witnessed (Raised); the statement keeps the model's terms, so standing 2 waits for a form over every relation and amount (LEVER-2-AUDIT.md §1)",
+   "by": "reading",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "SelectionTerm.Flow.support_moved_rises",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "no master law",
+   "category": "premise of the account",
+   "reason": "support, with Price's identity",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "row 8: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis witnessed; the conclusion compares amounts (LEVER-2-AUDIT.md §4, §10)",
+   "by": "reading",
+   "rule_would_give": "at its model"
+  },
+  {
+   "declaration": "SelectionTerm.Flow.support_not_lower",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "no master law",
+   "category": "premise of the account",
+   "reason": "support, with Price's identity",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "row 7: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis witnessed; the conclusion compares amounts (LEVER-2-AUDIT.md §4, §10)",
+   "by": "reading",
+   "rule_would_give": "at its model"
+  },
+  {
+   "declaration": "SelectionTerm.covariation",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "no master law",
+   "category": "counting identity",
+   "reason": "Price's covariance, with no premise",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "counting",
+   "basis": "row 6: Price's covariance (LEVER-2-AUDIT.md §2)",
+   "by": "reading",
+   "rule_would_give": "at its model"
+  },
+  {
+   "declaration": "SharedCodes.run_agrees_every_start_iff",
+   "rows": [
+    "collective"
+   ],
+   "dependence": "no master law",
+   "category": "law of its model",
+   "reason": "copying from an origin",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.run_agrees_every_start_reading",
+     "models": [
+      "process",
+      "own"
+     ],
+     "record": "a-code-formed-between-formations"
+    }
+   ],
+   "standing": "at a represented model",
+   "basis": "F5: own, process",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Tolerance.answers_restores_iff",
+   "rows": [
+    "maintenance"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«承之迭»",
+    "«迭之末步»"
+   ],
+   "grammar_definitions": [
+    "«承»",
+    "«迭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Valuation.significant_iff",
+   "rows": [
+    "evaluation"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«所闭之自反»",
+    "«缘在所闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Valuation.significant_iff_held",
+   "rows": [
+    "evaluation"
+   ],
+   "dependence": "no master law",
+   "category": "definitional or representational",
+   "reason": "S0 and N_std unpacked",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.significant_iff_held_reading",
+     "models": [
+      "own"
+     ],
+     "record": "living-significance-on-held-lives"
+    }
+   ],
+   "standing": "logic",
+   "basis": "S0 and N_std unpacked (U2, own carrier)",
+   "by": "reading",
+   "rule_would_give": "own carrier"
+  },
+  {
+   "declaration": "Viability.kernel_and_iff",
+   "rows": [
+    "maintenance"
+   ],
+   "dependence": "no master law",
+   "category": "definitional or representational",
+   "reason": "logic: for all reached, and",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.kernel_and_reading",
+     "models": [
+      "process"
+     ],
+     "record": "conditions-kept-together"
+    }
+   ],
+   "standing": "logic",
+   "basis": "for all reached, and (U2, process model)",
+   "by": "reading",
+   "rule_would_give": "at a represented model"
+  },
+  {
+   "declaration": "Web.Carries.active_not_recurring",
+   "rows": [
+    "dissolution"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "return"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«尽则不或屡»"
+   ],
+   "grammar_definitions": [
+    "«一»",
+    "«尽»",
+    "«尽».mk",
+    "«所闭»",
+    "«续»",
+    "«而»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.Embodied.replenishes",
+   "rows": [
+    "generation"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.Next.frontier_ends_drawn_first",
+   "rows": [
+    "degeneration",
+    "alignment"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": true
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.Unceasing.activeRenewer_recurs",
+   "rows": [
+    "life"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "return"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«尽则不或屡»"
+   ],
+   "grammar_definitions": [
+    "«一»",
+    "«尽»",
+    "«尽».mk",
+    "«所闭»",
+    "«续»",
+    "«而»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.Unceasing.rises",
+   "rows": [
+    "generation"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "return"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«尽则不或屡»"
+   ],
+   "grammar_definitions": [
+    "«一»",
+    "«尽»",
+    "«尽».mk",
+    "«所闭»",
+    "«续»",
+    "«而»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.Whole.family_excess_ends",
+   "rows": [
+    "collective"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "kept_onward"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.course_lost_iff",
+   "rows": [
+    "degeneration",
+    "alignment"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "BalancesBetween"
+    ],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.frontier_breaks_below",
+   "rows": [
+    "degeneration",
+    "alignment"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": true
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.frontier_broken",
+   "rows": [
+    "degeneration",
+    "alignment"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": true
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.frontier_exhausts",
+   "rows": [
+    "degeneration",
+    "alignment"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": true
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.frontier_keeps_stepwise",
+   "rows": [
+    "degeneration",
+    "alignment"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": true
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.frontier_rebuilds",
+   "rows": [
+    "degeneration",
+    "alignment"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": true
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.living_on_reaches",
+   "rows": [
+    "life"
+   ],
+   "dependence": "no master law",
+   "category": "single application",
+   "reason": "N_rel once; its closure form is Valuation.reaches",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.living_on_reaches_reading",
+     "models": [
+      "occurrence"
+     ],
+     "record": "living-on-and-descent"
+    }
+   ],
+   "standing": "at a represented model",
+   "basis": "F5: occurrence",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.optimum_broken_iff",
+   "rows": [
+    "alignment"
+   ],
+   "dependence": "no master law",
+   "category": "law of its model",
+   "reason": "the drive to the least level",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.optimum_broken_reading",
+     "models": [
+      "own",
+      "occurrence"
+     ],
+     "record": "what-an-optimum-does-beyond-what-couples-in"
+    }
+   ],
+   "standing": "at a represented model",
+   "basis": "F5: occurrence, own",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.paths_comparison_widens",
+   "rows": [
+    "significance"
+   ],
+   "dependence": "anchor, not reached",
+   "category": "master law",
+   "reason": "C's extension on paths, one direction, for every reading of living",
+   "laws": [
+    "order"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "SignificanceStatements.paths_comparison_grammar",
+     "models": [
+      "own"
+     ],
+     "record": "comparison-by-widening"
+    }
+   ],
+   "standing": "own carrier",
+   "basis": "F5: stated in grammar terms on its own carrier",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.paths_extension_iff_widens",
+   "rows": [
+    "capacity"
+   ],
+   "dependence": "anchor, not reached",
+   "category": "master law",
+   "reason": "C's extension on a web's paths: a reindexing of claims (formation, step) to admissions (step, formation), every claim counted; widening enters by its definition, its order laws already from the grammar",
+   "laws": [
+    "order"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "SignificanceStatements.paths_extension_iff_grammar",
+     "models": [
+      "own"
+     ],
+     "record": "comparison-by-widening"
+    }
+   ],
+   "standing": "own carrier",
+   "basis": "F5: stated in grammar terms on its own carrier",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.paths_one_object",
+   "rows": [
+    "significance"
+   ],
+   "dependence": "anchor, not reached",
+   "category": "master law",
+   "reason": "the conjunction of C's extension on paths, the continuation condition as living significance, and the reduction of significance under the condition",
+   "laws": [
+    "order"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "free significance",
+   "basis": "row 9: root form paths_one_object_root at the structural reading only (U3)",
+   "by": "reading",
+   "rule_would_give": "at its model"
+  },
+  {
+   "declaration": "Web.renewingAt_iff_over_all",
+   "rows": [
+    "evaluation"
+   ],
+   "dependence": "no master law",
+   "category": "definitional or representational",
+   "reason": "a one-line unpacking",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.renewingAt_iff_over_all_reading",
+     "models": [
+      "occurrence"
+     ],
+     "record": "represented-boundary-against-dependence"
+    }
+   ],
+   "standing": "logic",
+   "basis": "a one-line unpacking (U2, occurrence model)",
+   "by": "reading",
+   "rule_would_give": "at a represented model"
+  },
+  {
+   "declaration": "Web.roles_alive",
+   "rows": [
+    "life"
+   ],
+   "dependence": "no master law",
+   "category": "definitional or representational",
+   "reason": "the one-kind reading keeps living",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.roles_alive_reading",
+     "models": [
+      "occurrence"
+     ],
+     "record": "life-as-condition-of-life"
+    }
+   ],
+   "standing": "logic",
+   "basis": "the one-kind reading keeps living (U2, occurrence model)",
+   "by": "reading",
+   "rule_would_give": "at a represented model"
+  },
+  {
+   "declaration": "Web.roles_dependent",
+   "rows": [
+    "patient"
+   ],
+   "dependence": "no master law",
+   "category": "definitional or representational",
+   "reason": "the one-kind reading keeps dependence",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.roles_dependent_reading",
+     "models": [
+      "occurrence"
+     ],
+     "record": "life-as-condition-of-life"
+    }
+   ],
+   "standing": "logic",
+   "basis": "the one-kind reading keeps dependence (U2, occurrence model)",
+   "by": "reading",
+   "rule_would_give": "at a represented model"
+  },
+  {
+   "declaration": "Web.roles_supported",
+   "rows": [
+    "actor"
+   ],
+   "dependence": "no master law",
+   "category": "definitional or representational",
+   "reason": "the one-kind reading keeps support",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.roles_supported_reading",
+     "models": [
+      "occurrence"
+     ],
+     "record": "life-as-condition-of-life"
+    }
+   ],
+   "standing": "logic",
+   "basis": "the one-kind reading keeps support (U2 states it at the occurrence model)",
+   "by": "reading",
+   "rule_would_give": "at a represented model"
+  },
+  {
+   "declaration": "Web.selfValuation_significant_iff",
+   "rows": [
+    "evaluation"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之自反»"
+   ],
+   "grammar_definitions": [
+    "«所闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Web.significance_undetermined",
+   "rows": [
+    "evaluation"
+   ],
+   "dependence": "no master law",
+   "category": "definitional or representational",
+   "reason": "a free slot shown free",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.significance_undetermined_reading",
+     "models": [
+      "own",
+      "occurrence"
+     ],
+     "record": "continuation-condition-yields-living-significance"
+    }
+   ],
+   "standing": "logic",
+   "basis": "a free slot shown free (U2, occurrence model and own carrier)",
+   "by": "reading",
+   "rule_would_give": "at a represented model"
+  },
+  {
+   "declaration": "Web.transmits_at_iff",
+   "rows": [
+    "evolution"
+   ],
+   "dependence": "no master law",
+   "category": "definitional or representational",
+   "reason": "transmission unpacked",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "ModelStatements.transmits_at_reading",
+     "models": [
+      "occurrence"
+     ],
+     "record": "transmission-is-inheritance-and-need"
+    }
+   ],
+   "standing": "logic",
+   "basis": "row 4: (A → B ∧ C) ↔ (A → B) ∧ (A → B → C) (U2, occurrence model; LEVER-2-AUDIT.md §1)",
+   "by": "reading",
+   "rule_would_give": "at a represented model"
+  },
+  {
+   "declaration": "Web.widens_iff_retains_adds",
+   "rows": [
+    "significance"
+   ],
+   "dependence": "anchor, not reached",
+   "category": "master law",
+   "reason": "the reduction of what has significance to what can form under the continuation condition; the free significance is not lifted to the root",
+   "laws": [
+    "order"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "free significance",
+   "basis": "row 8: root form widens_iff_retains_adds_root at the structural reading only (U3)",
+   "by": "reading",
+   "rule_would_give": "at its model"
+  },
+  {
+   "declaration": "Weighting.widens_iff_every_positive",
+   "rows": [
+    "significance"
+   ],
+   "dependence": "anchor, not reached",
+   "category": "master law",
+   "reason": "weights: widening is what every positive weighting ranks higher; the grammar has no weights",
+   "laws": [
+    "order"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [
+    {
+     "item": "Weighting.grammar_widens_iff_every_positive",
+     "models": [
+      "own"
+     ],
+     "record": "widening-as-what-every-weighting-ranks"
+    }
+   ],
+   "standing": "own carrier",
+   "basis": "F5: stated in grammar terms on its own carrier",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "Withholding.withholding_spreads",
+   "rows": [
+    "collective"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«存承之迭»",
+    "«迭之末步»"
+   ],
+   "grammar_definitions": [
+    "«承»",
+    "«迭»",
+    "«迭内»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "WithinMoves.after_course",
+   "rows": [
+    "capacity"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«迭内之接»"
+   ],
+   "grammar_definitions": [
+    "«迭»",
+    "«迭内»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "World.balanced_reidentify_iff",
+   "rows": [
+    "transformation"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "World.comes_to_rest_unrefuted",
+   "rows": [
+    "dissolution"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "balance",
+    "return"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«尽则不或屡»"
+   ],
+   "grammar_definitions": [
+    "«一»",
+    "«尽»",
+    "«尽».mk",
+    "«所闭»",
+    "«续»",
+    "«而»"
+   ],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "act_courses_unselected",
+   "rows": [
+    "responsibility"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure",
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [
+     "Balances",
+     "BalancesOn"
+    ],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之传递»",
+    "«缘在所闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "reaches the grammar through another law; balance only in its proof",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "apart_only_downstream",
+   "rows": [
+    "knowing"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.le_succ_cases"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "carried_iff_rising",
+   "rows": [
+    "knowing"
+   ],
+   "dependence": "no master law",
+   "category": "premise of the account",
+   "reason": "support, as NeedsSupportAt",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "at its model",
+   "basis": "an exchange law carries exactly where the reading rises; support is inside the existential, not kept",
+   "by": "reading",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "counterfactual_is_course",
+   "rows": [
+    "actor"
+   ],
+   "dependence": "balance, represented",
+   "category": "balance, represented",
+   "reason": "",
+   "laws": [
+    "balance"
+   ],
+   "balance": {
+    "flow_statement": [
+     "Balances"
+    ],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.le_succ_cases"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "balance, represented",
+   "basis": "takes balance in its statement",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "forced_iff_center",
+   "rows": [
+    "evaluation"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之自反»",
+    "«所闭之闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "onLoop_of_closing",
+   "rows": [
+    "generation"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«及».brecOn",
+    "«及之传递»",
+    "«及当且仅当一步而所闭»",
+    "«所闭当且仅当同一或及»",
+    "«线则所闭»"
+   ],
+   "grammar_definitions": [
+    "«及»",
+    "«及».below",
+    "«及».below.casesOn",
+    "«及».below.more",
+    "«及».below.one",
+    "«及».more",
+    "«及».one",
+    "«所闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "presupposition_scopes",
+   "rows": [
+    "responsibility"
+   ],
+   "dependence": "grammar",
+   "category": "master law",
+   "reason": "",
+   "laws": [
+    "closure"
+   ],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "«所闭之自反»",
+    "«所闭之闭»"
+   ],
+   "grammar_definitions": [
+    "«所闭»",
+    "«闭»"
+   ],
+   "f5": [],
+   "standing": "connected",
+   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "by": "rule",
+   "rule_would_give": null
+  },
+  {
+   "declaration": "responses_le_missBound",
+   "rows": [
+    "patient"
+   ],
+   "dependence": "no master law",
+   "category": "law of its model",
+   "reason": "a bound of propagation",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [
+    "GrammarLaws.total_congr"
+   ],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "amounts",
+   "basis": "a bound of propagation on amounts (EC6: law of its model)",
+   "by": "reading",
+   "rule_would_give": "at its model"
+  },
+  {
+   "declaration": "unrestricted_iff_livingSignificance",
+   "rows": [
+    "significance"
+   ],
+   "dependence": "no master law",
+   "category": "definitional or representational",
+   "reason": "two definitions unpacked",
+   "laws": [],
+   "balance": {
+    "flow_statement": [],
+    "flow_proof": [],
+    "prelude_only": false
+   },
+   "grammar_theorems": [],
+   "grammar_definitions": [],
+   "f5": [],
+   "standing": "free significance",
+   "basis": "row 1: the continuation condition as living significance; root form noOutside_iff_paths_livingSignificance at the structural reading only; the condition is a premise proved not entailed (ReadsOnlyDynamics.not_entails)",
+   "by": "reading",
+   "rule_would_give": "at its model"
+  }
+ ]
+}
