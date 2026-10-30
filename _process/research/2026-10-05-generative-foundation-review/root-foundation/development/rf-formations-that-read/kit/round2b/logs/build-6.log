@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/rf-landing/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree",
+  "modules": 65,
+  "ran": [
+    "Becoming.HeldForReading",
+    "BecomingHeldForReadingAxiomAudit"
+  ],
+  "reused": 64,
+  "unclean": [],
+  "audits": {
+    "Becoming.HeldForReading": {
+      "theorems": 47,
+      "declarations": 64,
+      "with_axioms": {}
+    }
+  }
+}

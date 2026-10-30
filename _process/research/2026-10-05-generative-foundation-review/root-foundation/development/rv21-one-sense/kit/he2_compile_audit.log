@@ -1,0 +1,22 @@
+HE2 items 6 and 7: compile of the import closure of the changed modules (112 modules, lean -o into a flat folder, LEAN_PATH there, as check_becoming compiles), with the kit's lean part applied on main 1e3271112 (the package's Lean unchanged since 8a8b0df82), after the kit review's revisions (the witness strengthened, two names proposed with 其内), 2026-10-30T19:43:41Z
+compiled 112 of 112 (102 recompiled, the rest reused unchanged); failed [] (no error or warning)
+
+Axiom audit (he2_audit.lean.txt, kept as text so the Lean indexes do not count it; compiled as He2Audit.lean against the closure): the four new laws, the seven renamed declarations, and the facts behind keeping the flame names (not package declarations: «定后» of both flame steps, the two flames' alike relation a class, and «定后则类之核同行» on both models):
+'Becoming.«定后则类之核同行»' does not depend on any axioms
+'Becoming.«遍后则其内同行之类含于核»' does not depend on any axioms
+'Becoming.«定后遍后则核为其内最粗同行之类»' does not depend on any axioms
+'Becoming.«后不定则核可不同行»' does not depend on any axioms
+'Becoming.«守核则不穷»' does not depend on any axioms
+'Becoming.«守核之线不亡»' does not depend on any axioms
+'Becoming.«亡前核变»' does not depend on any axioms
+'Becoming.«有亡之线两端核异»' does not depend on any axioms
+'Becoming.«足以定核»' does not depend on any axioms
+'Becoming.«合有常则足以定核»' does not depend on any axioms
+'Becoming.«从缘生非文法之律»' does not depend on any axioms
+«后不定则核可不同行» : ∃ R E,
+  R 0 1 ∧ R 0 2 ∧ (∀ (x y : Nat), E x y ↔ x = y) ∧ «类» E ∧ ¬«定后» R ∧ «核» R E 0 0 ∧ ¬«核» R E 1 2 ∧ ¬«同行» R («核» R E)
+'he2_flame_fixed' does not depend on any axioms
+'he2_twoFlames_fixed' does not depend on any axioms
+'he2_twoFlames_alike_class' does not depend on any axioms
+'he2_flame_core_li' does not depend on any axioms
+'he2_twoFlames_core_li' does not depend on any axioms

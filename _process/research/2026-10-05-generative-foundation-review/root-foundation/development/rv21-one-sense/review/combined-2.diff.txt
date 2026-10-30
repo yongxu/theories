@@ -1,0 +1,308 @@
+diff --git a/GLOSSARY.md b/GLOSSARY.md
+index 057ac0d4f..762842b08 100644
+--- a/GLOSSARY.md
++++ b/GLOSSARY.md
+@@ -16,3 +16,3 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
+| the core (核, *hé*) | the greatest symmetric relation inside a class that the relation never tells apart | [01 §4](theories/becoming/chapters/01-ROOT.md#constancy-and-core) |
+| renewal, renewal without end (复生, [-生生)-]{+`«生生»`)+} | a line started by another that goes on; [-a-]{+the greatest+} family that keeps renewing. [-生生 also-]{+The grammar's word is always written `«生生»`, as its Lean+} names [-life in-]{+write it; it is not+} the [-whole-]{+ethics' 生生 (below),+} and [-its continuing generation-]{+复生 is not 02's renewal of what a formation draws on+} | [01 [-§6](theories/becoming/chapters/01-ROOT.md#renewal-and-grains), [07](theories/becoming/chapters/07-SIGNIFICANCE.md)-]{+§6](theories/becoming/chapters/01-ROOT.md#renewal-and-grains)+} |
+| gate (on moves) | a decided mark on a process's moves; it locates where change can enter a line. Not the gate of a renewal | [01](theories/becoming/chapters/01-ROOT.md#r-every-origin-passes-the-gate) |
+@@ -31,3 +31,3 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
+| generation, keeping, degeneration (生成, 守, 退化) | a pattern going on through carrying renewal; going on without it; ending on every branch. "Generation" never means arising, nor any new organization, and it is not 生生: it can go on at two orders while what can form only returns | [02 §1](theories/becoming/chapters/02-MAP.md#branches) |
+| renewal, consumption | of a formation along a run: what it draws on is given back, or used [-up-]{+up. Not 复生, a line started by another (01 §6)+} | [02](theories/becoming/chapters/02-MAP.md#renewal) |
+| rest | change stops from some step on | [02](theories/becoming/chapters/02-MAP.md#rest) |
+@@ -47,3 +47,3 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
+| testing (验), stages (层) | telling apart within the net; finite approximations of the core | [03](theories/becoming/chapters/03-KNOWING.md#testing) |
+| 理 (*lǐ*) | a lumping that models structure and change at [-once-]{+once: one the step goes alike across (`«同行»`). Along a step that is fixed and always continues, a class's [core](theories/becoming/chapters/01-ROOT.md#constancy-and-core) is its 理, the coarsest such lumping inside it. The root's names on cores that write 理 (`«守理则不穷»`, `«亡前理变»`, `«足以定理»`) are stated for every relation and mean its core, which elsewhere need not be a 理+} | [03](theories/becoming/chapters/03-KNOWING.md#li) |
+| 文 (*wén*) | the course of a run's states through a map | [03](theories/becoming/chapters/03-KNOWING.md#wen) |
+@@ -63,2 +63,3 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
+| living significance | what the condition yields: the significance of what lives on | [07 §3](theories/becoming/chapters/07-SIGNIFICANCE.md#living-significance) |
+{+| 生生 (*shēngshēng*) | life in the whole and its continuing generation [AI reading, D1]. T8 argues it as the way for life, compared by widening what can form, with the continuation condition for scope and C for order. Neither the grammar's `«生生»` (renewal without end) nor any new organization | [07 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#order) |+}
+
+diff --git a/theories/becoming/COLLECTIVE-DIRECTION.md b/theories/becoming/COLLECTIVE-DIRECTION.md
+index 0e1170fb8..d017c64d1 100644
+--- a/theories/becoming/COLLECTIVE-DIRECTION.md
++++ b/theories/becoming/COLLECTIVE-DIRECTION.md
+@@ -101,3 +101,3 @@ Observation is the first condition, necessary and not sufficient: seeing is not
+- The possible with a part held grows across a step only where the step changes the part (`Run.changes_of_heldGrows`), and keeps widening only where the part changes without end (`Run.changes_of_heldKeepsWidening`); endless change of the part does not suffice (`Oscillating.converse_fails`).
+- On a witness, with the rule raised at every other step, the possible with the rule held keeps widening, every formation stays possible, and renewal without end holds [-from-]{+at every even moment, so+} moment `0` [-(`RaisedEveryOther.both`):-]{+does not cease (`«生生»`, `«生生不息»`; `RaisedEveryOther.both`):+} widening relative to what is held and [-生生不息-]{+renewal without end+} can hold together.
+
+diff --git a/theories/becoming/ONE-PAGE.zh.md b/theories/becoming/ONE-PAGE.zh.md
+index e9b397ff3..c5718ec65 100644
+--- a/theories/becoming/ONE-PAGE.zh.md
++++ b/theories/becoming/ONE-PAGE.zh.md
+@@ -6,3 +6,3 @@
+
+**论证的主线**（各结果如何相连，一种 AI [-读法）。任何东西都只作为续而继续下去；一个样式，生命也在其中，经由更新而比它的部分活得更久：旧的部分终止，新的部分开始。更新可以被耗尽：各个取用者各自都在所更新者之内，合起来却可以超出它，并终结它以及依存于它的一切。终结它的东西，可以位于耦合进任何一个取用者的东西之外；而一个选择，无论是认知者、一次训练、一个市场还是一个优化者，只到达耦合进它的东西；有余地时，一个最优解把这之外者耗竭到它所能作的任何选择所耗竭的程度。所以，谁的损失算数，归结为一个关于关系的问题：每一者与之一同继续的东西延伸多远，而动力学让这一点保持开放；把较广的进程称为更好，则是另一个前提。伦理写明这两个前提，对二者都不断言；在它们之下，它论证一个方向：以扩大来比较的生生，即整体之中的生命及其不断的生成。诸证明把这一说明恰好带到这条边界，使任何读者，人或机器，都能检验它到达多远。-]{+读法）。任何东西都只作为续而继续下去；一个样式，生命也在其中，经由更新而比它的部分活得更久：旧的部分终止，新的部分开始。更新可以被耗尽：各个取用者各自都在所更新者之内，合起来却可以超出它，并终结它以及依存于它的一切。终结它的东西，可以位于耦合进任何一个取用者的东西之外；而一个选择，无论是认知者、一次训练、一个市场还是一个优化者，只到达耦合进它的东西；有余地时，一个最优解把这之外者耗竭到它所能作的任何选择所耗竭的程度。所以，谁的损失算数，归结为一个关于关系的问题：每一者与之一同继续的东西延伸多远，而动力学让这一点保持开放；把较广的进程称为更好，则是另一个前提。伦理写明这两个前提，对二者都不断言；在它们之下，它论证一个方向：以扩大来比较的生生，即整体之中的生命及其持续的生发。诸证明把这一说明恰好带到这条边界，使任何读者，人或机器，都能检验它到达多远。+}
+
+diff --git a/theories/becoming/THE-THEORY-OF-BECOMING.md b/theories/becoming/THE-THEORY-OF-BECOMING.md
+index 7c341560e..fd75e45c7 100644
+--- a/theories/becoming/THE-THEORY-OF-BECOMING.md
++++ b/theories/becoming/THE-THEORY-OF-BECOMING.md
+@@ -43,3 +43,3 @@ A flame of three moments shows what the core is not. Under "burning or not" each
+
+A pattern outlasts its parts by renewal, but renewal alone cannot tell turnover that sustains a pattern from turnover that ends it. *Renewal* is a line started by another: `x` conditions an occurrence that begins a line which goes on. Read at a coarser grain, through the conditions between different classes, a pattern continues while its parts begin and end, and renewal without end never ceases (proved for every relation). But renewal cannot tell turnover that sustains a pattern from turnover that ends it: a short-lived pattern can renew and still end. That takes two grains at once, the map of §2. In the grammar [-生生-]{+`«生生»`+} names only renewal without end; the theory reads [-it-]{+plain 生生, without guillemets,+} as life in the whole and its continuing generation, which asks more [AI reading] ([renewal and grains](chapters/01-ROOT.md#renewal-and-grains)).
+
+diff --git a/theories/becoming/THE-THEORY-OF-BECOMING.zh.md b/theories/becoming/THE-THEORY-OF-BECOMING.zh.md
+index 97a1a192e..515744e81 100644
+--- a/theories/becoming/THE-THEORY-OF-BECOMING.zh.md
++++ b/theories/becoming/THE-THEORY-OF-BECOMING.zh.md
+@@ -45,3 +45,3 @@
+
+一个样式经由复生而比它的部分存续更久，但单凭复生，不能把维持一个样式的更替与终结它的更替区分开。*复生*是由另一者开启的一条相续：`x` 是一个发生的缘，这个发生开始一条继续下去的相续。在较粗的粒度上，经由不同类之间的缘来读，一个样式在其部分生而又亡之时继续下去，而无尽的复生永不息（对一切关系证明）。但复生不能把维持一个样式的更替与终结它的更替区分开：一个短暂的样式可以复生，而仍然终止。区分二者需要同时用两种粒度，即 §2 [-的地图。在文法中，生生只指无尽的复生；本理论把它读作整体中的生命及其持续的生发，这要求得更多［AI-]{+的地图。在文法中，`«生生»` 只指无尽的复生；本理论把不加 «» 的生生读作整体中的生命及其持续的生发，这要求得更多［AI+} 读法］（[复生与粒度](chapters/01-ROOT.md#renewal-and-grains)）。
+
+diff --git a/theories/becoming/chapters/01-ROOT.md b/theories/becoming/chapters/01-ROOT.md
+index cbace2028..52678d242 100644
+--- a/theories/becoming/chapters/01-ROOT.md
++++ b/theories/becoming/chapters/01-ROOT.md
+@@ -109,2 +109,4 @@ Some classes are carried by the relation: whatever one member becomes, a member
+
+{+**Theorem** (root; a step that is fixed and always continues). *The core and 理.* Along a step that is fixed and always has a successor, constancy is going alike (`«同行当且仅当有常»`), so the core of a class is the coarsest class inside it that the step goes alike across (with `«根»` and `«核为类»`): a 理 in [knowing's](03-KNOWING.md#li) sense, read relationally, the 理 of `E`. Off such a step the two are related only under the hypotheses of `«有常局定后则同行»` and `«同行可续则有常»`, so the core is shown to be a 理 only there. The names below that write 理 (`«守理则不穷»`, `«亡前理变»`, `«足以定理»`) are stated for the core of every relation, and mean a 理 only along such a step.+}
+
+<a id="r-a-regularity-kept-and-changed"></a>
+@@ -142,3 +144,3 @@ Renewal is a line started by another: an occurrence conditions the beginning of
+
+**Definition.** Renewal without end [-(生生)-]{+(`«生生»`)+} holds of `x` where `x` lies in some family each member of which conditions a beginning whose line goes on and reaches a member of the family again. `x` renews into `w` (复生至) where `x` conditions a beginning whose line reaches `w`. Ceasing (息) is defined positively, by induction: `x` ceases where everything `x` renews into ceases, the least property so closed. Renewal without end is the greatest family that keeps renewing; ceasing is its inductive dual.
+
+@@ -148,3 +150,3 @@ Renewal does not tell renewal sustaining a pattern from turnover ending it: a sh
+
+**Reading** [AI reading, D1]. In the grammar [-生生-]{+`«生生»`+} names only renewal without end. The theory reads [-生生-]{+plain 生生, without guillemets,+} as life in the whole and its continuing generation, generation generating generation: what forms preserves, restores, transmits or creates the conditions and generators of further forming. That asks more than renewal of lines ([07](07-SIGNIFICANCE.md)); generation never means any new organization. On a model it is so: generation at two orders and renewal without end can hold while what can form by name only returns ([07 §2](07-SIGNIFICANCE.md#r-what-keeping-widening-needs)).
+
+diff --git a/theories/becoming/chapters/02-MAP.md b/theories/becoming/chapters/02-MAP.md
+index 63e8361d7..9b233db18 100644
+--- a/theories/becoming/chapters/02-MAP.md
++++ b/theories/becoming/chapters/02-MAP.md
+@@ -25,3 +25,3 @@ Read at one class, turnover that sustains a pattern and turnover that ends it lo
+| Going on along some branch and ending on every branch exclude each other; a line with no end anywhere goes on along some branch. | `«延尽不并»`, `«不穷则延»` |
+| Read along renewing into (复生至) under the one, renewal without end [-(生生)-]{+(`«生生»`)+} of [the root](01-ROOT.md#renewal-and-grains) is going on along some branch, and ceasing (息) is ending on every branch. | `«生生即延»`, `«息即尽»` |
+| Generation and keeping each exclude degeneration. | `«生成退化不并»`, `«守退化不并»` |
+diff --git a/theories/becoming/chapters/06-CLASSICAL-TEXTS.md b/theories/becoming/chapters/06-CLASSICAL-TEXTS.md
+index 8a2ec281e..c81ccdd03 100644
+--- a/theories/becoming/chapters/06-CLASSICAL-TEXTS.md
++++ b/theories/becoming/chapters/06-CLASSICAL-TEXTS.md
+@@ -85,3 +85,3 @@
+- **「一X一Y」不一律是交替。** 「一阖一辟」「一寒一暑」是交替；「一阴一阳」，韩康伯、孔颖达读“一”为“无”，王夫之读为“主持而分剂”。
+- **「生生」有二义。** [-孔疏于「生生之謂易」说「後生次於前生」，合于续而复生；又说经言生不言死是为劝戒，可见这个词本身带有评价之取舍。《老子》「生生之厚」则是求生过度，以至于死。本理论所用的“生生”是整体中的生命及其继续生成（[第七章](07-SIGNIFICANCE.md)），不是后者。-]{+孔疏于「生生之謂易」说「後生次於前生」，合于续而复生；又说经言生不言死是为劝戒，可见这个词本身带有评价之取舍。《老子》「生生之厚」则是求生过度，以至于死。本理论所用的“生生”是整体中的生命及其持续的生发（[第七章](07-SIGNIFICANCE.md)），不是后者；文法之 `«生生»` 只名无尽之复生（[第一章 §6](01-ROOT.md#renewal-and-grains)），是另一词。+}
+- **位依于类，古文有其例。** 《金师子章》「但是金生」，在师子之读下是生，在金之读下是住；《墨经》同一事自前为“且”、自后为“已”，“已”随所追踪者读为成或亡；《老子》「死而不亡者壽」合于“亡于细者不必亡于粗”。
+@@ -112,3 +112,3 @@
+<a id="tong-and-xi"></a>
+**评估**。**通与息之读。** `«通»` 曾以 `«不穷»` 定义（自一事起之线上每一处皆有后），丢掉了原句「往來不窮謂之通」之“往来”，于是凭有常且此事有前就得通。今依往来定义：往沿缘不穷，来沿缘之逆亦不穷（`«通»`；读往来为一关系与其逆，是此读之选择）。一向有常且此事有前，只给往不穷（`«有常则往不穷»`），不给通：自零计数，“一”之类在缘下有常，数 1 有前而往不穷，来则至零而穷（`«有常而不通»`）；类于两向皆有常时，住者通（`«两向有常则通»`）；昼夜互为缘，在“一”之下每一事皆往来不穷（`«昼夜往来不穷»`）。`«息»` [-曾以线上之否定定义；今与复生同族，以归纳正面定义：一事复生至另一事（`«复生至»`），是它为一始之缘，而此始之线达于彼事；一事所复生至者皆息，则此事息；息是如此封闭之最小之性。生生是持续复生之最大之族，息是其归纳之对偶：二者相斥（`«生生不息»`），线上无物复生者息（`«不复生则息»`，旧读蕴含新读），一之类下皆息（`«一之下皆息»`）；在“一”之下沿复生至而读，生生即某一支上之延，息即诸支皆尽（`«生生即延»`、`«息即尽»`，[地图之章](02-MAP.md#r-generation-and-degeneration-at-two-grains)）。仍未证者：“穷-]{+曾以线上之否定定义；今与复生同族，以归纳正面定义：一事复生至另一事（`«复生至»`），是它为一始之缘，而此始之线达于彼事；一事所复生至者皆息，则此事息；息是如此封闭之最小之性。`«生生»` 是持续复生之最大之族，`«息»` 是其归纳之对偶：二者相斥（`«生生不息»`），线上无物复生者息（`«不复生则息»`，旧读蕴含新读），一之类下皆息（`«一之下皆息»`）；在“一”之下沿复生至而读，`«生生»` 即某一支上之延，`«息»` 即诸支皆尽（`«生生即延»`、`«息即尽»`，[地图之章](02-MAP.md#r-generation-and-degeneration-at-two-grains)）。仍未证者：“穷+} → 变 → 通”之序在何处成立（[未决](#open)）。
+
+@@ -476,3 +476,3 @@
+- **「读书百遍，其义自见」。** 给出界，有穷之往便定其文之状；不给界，值至少有二时，没有一段往能定其次值（[第三章](03-KNOWING.md#r-identification-where-bounded)、[第三章](03-KNOWING.md#r-learning-by-refutation)）。在一确定之律下、一族含全部状且象之值可判定时，义若由读所不及者（一个意志或先在的根据）来定，同一文可以有屡异之二义，读多少遍也定不下来（[第三章](03-KNOWING.md#r-learnable-through-a-map)）。某一部书是否满足这些前提，律不说。
+- **理与文。** [-“文理”在这里是一个关系：理自文读出，即守值而承载律之最粗归并，所并恰是文同之状（[第三章](03-KNOWING.md#r-the-split-that-makes-sense)），只在此义。-]{+“文理”在这里是一个关系：文之理自文读出，即守值而承载律之最粗归并，所并恰是文同之状（[第三章](03-KNOWING.md#r-the-split-that-makes-sense)）。它是[第三章之理](03-KNOWING.md#li)（步于其上同行之归并）中守值之最粗者，即值之类之理（[第一章 §4](01-ROOT.md#constancy-and-core)）；“文理”只在此义。+}
+
+@@ -496,3 +496,3 @@
+
+[-文同与理在根之文法中同为一个结构（值之类沿律之步的核），其定理与前提见[第三章](03-KNOWING.md#r-wen-in-the-grammar)；上面所引系辞与「读书百遍」诸句，是它的古典之读。-]{+文同与文之理（值之类之理）在根之文法中同为一个结构（值之类沿律之步的核），其定理与前提见[第三章](03-KNOWING.md#r-wen-in-the-grammar)；上面所引系辞与「读书百遍」诸句，是它的古典之读。+}
+
+@@ -548,3 +548,3 @@
+
+**读法** [AI reading, [-D49]。这一映射得出一个与早期文本相反的结果：早期说“开之四相不可缺一”，视四标为独立的；在脊柱上它们不独立。转作复返即给出可，不需前提；有限构形中，一个运行开始恰当一条历程到达一个复返（`Onward.run_iff_returning`，[第一章](01-ROOT.md#r-where-a-run-goes-on)），所到之复返者不必是起点。所以在那里，可就是到达一个复返；未则要一个不为任何清单所含的世界。早期的“九句”分归与不归，于是在脊柱上成为三种情形：无损之复返（有不息而无生生）；被吸入（不归之“收”：只入阴爻之律下，坤以外的每一构形永不回到自身，有限构形中即有，[§5.1](#hexagram-world)）；永不重访任何已经过之构形（不为任何清单所含，`unlisted_of_new`，有限构形中不可能，任一运行的前-]{+D49]。这一映射得出一个与早期文本相反的结果：早期说“开之四相不可缺一”，视四标为独立的；在脊柱上它们不独立。转作复返即给出可，不需前提；有限构形中，一个运行开始恰当一条历程到达一个复返（`Onward.run_iff_returning`，[第一章](01-ROOT.md#r-where-a-run-goes-on)），所到之复返者不必是起点。所以在那里，可就是到达一个复返；未则要一个不为任何清单所含的世界。早期的“九句”分归与不归，于是在脊柱上成为三种情形：无损之复返（语料所谓“不息”而无“生生”）；被吸入（不归之“收”：只入阴爻之律下，坤以外的每一构形永不回到自身，有限构形中即有，[§5.1](#hexagram-world)）；永不重访任何已经过之构形（不为任何清单所含，`unlisted_of_new`，有限构形中不可能，任一运行的前+} N + 1 个状态必有重访）。唯第三种可当九句之“生”（不归而继续）；它不就是第二章之生成，生成是经传而延续的样式（[第二章](02-MAP.md)）。律不动的构形每步复返，是静，不是熄。稳与元闭在脊柱上是同一结构（扰动被吸回规则所持之处），从规则所持一侧读为稳，从将要到达它的改变一侧读为法源冻结：判断不同而结构相同，这正是评价只经比较进入、从不经定义进入的理由。
+
+diff --git a/theories/becoming/chapters/07-SIGNIFICANCE.md b/theories/becoming/chapters/07-SIGNIFICANCE.md
+index b14915d0b..51c20a701 100644
+--- a/theories/becoming/chapters/07-SIGNIFICANCE.md
++++ b/theories/becoming/chapters/07-SIGNIFICANCE.md
+@@ -110,3 +110,3 @@ With significance brought in, for any significance:
+
+**Reading** [AI reading, D45]. Causal set theory leaves open which course of its growth is better; what the growth bears on, for the theory's direction, is what calling widening better (C) is read on, a first-order matter. Read on what can be born next, widening loses precedence and ranks highest the course in which nothing conditions anything, where nothing continues; read on what continues, the chain. The continuation condition counts every continuation's losses ([§3](#condition)), and every widening of what can be born next loses continuation, so with the scope it fixes the reading is on both together: there no course widens another, two courses differing by a pair are mixed, and ordering them needs a measure ([above](#r-four-cases-of-a-part)), a premise beyond C and the condition. The second order is not reached: every course keeps widening what can be born next, and a direction never reversing widening, read on stems, ranks nothing above the antichain (`CausalGrowth.not_above_antichain`). In the grammar [-生生-]{+`«生生»`+} names only renewal without end, which holds on no configuration and, of the extremes' limits, only on the chain's; the 生生 meant is generation generating generation ([01 §6](01-ROOT.md#renewal-and-grains)), which asks more than renewal of lines, and it is not the order read on what can be born next, since the widest course transmits no condition. Kauffman's tentative law that a biosphere may, on average, enter its adjacent possible as fast as it can sustain, read on the pasts, has its widest course lose all precedence; read on kinds of birth, closer to his kinds of events and to causal set theory's covariance, the extremes are incomparable at offset 2, and a count to five elements, a computation, finds them with the fewest kinds; counting is scale, which the second-order direction does not count ([study](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/NOTE.md)).
+
+@@ -673,2 +673,2 @@ No objection is shown to defeat the step, nor the step shown ([record](../result
+- **The second-order direction of 生生** ([§2](#r-eventual-widening)): a comparison of a range whose widening keeps widening with one merely wider now, never reversing widening and counting neither novelty nor scale. Eventual widening, first-order widening read on late tails, does not give it. What one course keeping widening needs is known ([§2](#r-what-keeping-widening-needs)): gain from beyond a finite family, renewers without bound under upkeep, and, under the World premises with requirements never loosening, no keeping widening along passing of support. On admitted ranges ([§2](#r-comparing-two-courses-on-what-they-admit)), ranking every course that keeps widening by name above every course that admits alike, was wider at first and is mixed with it is not a strict partial order containing widening on every web: on a web of formations on two sides, whose static course admits infinitely many formations, it closes a cycle, and where the static course's admissions are listed it is one on every web. Eventual widening's lag is decided by widening with a lag and by a tail order containing eventual widening; on the own-condition web widening with a lag and eventual widening rank a pair oppositely, so the lag does not choose between counting early steps and reading only tails. On reachable ranges ([§2](#r-what-a-course-keeps-reachable)), covering, the comparison of what courses keep reachable at the same offsets, implies inclusion of what each configuration admits now, so widening what can be reached never ranks a configuration above one that starts a course and admits now what it does not, and on a determined process it is the strict part of range inclusion of the two courses; read with a lag it decides one witness's pair, though not every such pair, and C leaves that pair unranked, so the lag's verdict is a premise beyond C; on a branching witness realized and reachable widening rank a pair oppositely, so no strict partial order there contains both. On causal-set growth ([§2](#r-what-can-be-born-next)) every course keeps widening what can be born next, so the second order is not told apart there; the growth bears on what widening is read on: on what can be born next it ranks highest the course in which nothing continues, on what continues the chain, no strict order contains both, and with every continuation's losses counted the reading is on both together, where C ranks no two courses. The candidate left is what carries a course's openings.
+- <a [-id="r-universal-practical-warrant"></a>**A-]{+id="r-universal-practical-warrant"></a>**Whether a+} universal practical [-warrant**: grounding-]{+warrant exists**: whether+} practical reasons {+have a warrant binding every possible mind,+} with zero substantive [-premises, as one account of ends, selection, knowing and revision within becoming;-]{+premises. It stays open:+} supplied local norms, behavioural convergence or fuller description do not [-substitute for it. The ethics-]{+answer it, and the ethics, life's stance,+} does not wait on it ([T8](#theses)). Since, where there is a standpoint and a formation, no satisfiable statement reading only the dynamics entails the condition ([§1](#r-what-the-dynamics-leave-open)), and a perspectivist denies the condition consistently (`bounded_rival`), such a warrant, where it would ground the condition, comes neither from the laws of the dynamics alone nor from logic alone; [-neither shows-]{+these do not show+} that none exists. ([record](../results/records/universal-practical-warrant.md))
+diff --git a/theories/becoming/chapters/08-METHOD.md b/theories/becoming/chapters/08-METHOD.md
+index e68d86bd3..c2910dde8 100644
+--- a/theories/becoming/chapters/08-METHOD.md
++++ b/theories/becoming/chapters/08-METHOD.md
+@@ -111,3 +111,3 @@ The condition by itself orders nothing, and a theorem taking it as a hypothesis
+| 明 (míng) | coupling joined to a selection, so it reaches what support does not mark (D26, D45) | |
+| generation | 02's 生成: a pattern going on through carrying [-renewal; in 07, 生生 as life in the whole and its continuing generation-]{+renewal+} | arising (records titled with "generation" for arising are stated as laws of [-arising)-]{+arising); 生生, life in the whole and its continuing generation (07), which generation at two orders does not give+} |
+| 生 (shēng) | the mark "begins" ([01](01-ROOT.md)) | what lives and arises |
+@@ -681,3 +681,3 @@ With D65 the register again lists none open; a reading added later is decided th
+- **The deductive necessity of the whole.** Argued for the determinations the World premises name ([internal relations](01-ROOT.md#what-internal-means)); open: that every becoming has such a law of exchange. For requirement what remains is that requiring does not read whether it is met, since necessary response is the weakest sound reading that does not read the current level (`ExchangeRelation.respondsBelow_weakest`).
+- [-**A stronger-]{+**Whether a+} universal practical [-warrant**: grounding-]{+warrant exists**: whether practical+} reasons [-without an externally supplied end;-]{+have a warrant binding every possible mind, with zero substantive premises; it stays open, and+} the [-ethics-]{+ethics, life's stance,+} does not wait on it ([07](07-SIGNIFICANCE.md#r-universal-practical-warrant), T8).
+- **The relational foundation of scientific inquiry**: the indispensability of the theory's central commitments, tested from independently stated achievements.
+diff --git a/theories/becoming/results/data/standard-boundaries.json b/theories/becoming/results/data/standard-boundaries.json
+index 9096fc64e..bd3d9ab1f 100644
+--- a/theories/becoming/results/data/standard-boundaries.json
++++ b/theories/becoming/results/data/standard-boundaries.json
+@@ -15,3 +15,3 @@
+    "conditional-not-universal": {"en": "A conditional law does not make its antecedent universal; a theorem's premise is not thereby necessary for every achievement.", "zh": "条件规律不使其前件普遍成立；定理的前提不因此成为每项成就的必要条件。", "source": "theories/becoming/history/NONDUAL-METHOD.md"},
+    "zero-axiom-target-open": {"en": [-"Premise-free-]{+"Whether premise-free+} (zero-substantive-axiom) grounding {+exists+} is a separate open [-target;-]{+question;+} completed results on the conditional alignment route keep their scope.", "zh": [-"无实质公理奠基是另一开放目标；条件对齐路线上已完成的成果保持原范围。",-]{+"是否存在无实质公理之奠基，是另一开放问题；条件对齐路线上已完成的成果保持原范围。",+} "source": "GOALS.md"},
+    "nondual-method-not-proof": {"en": "The nondual method is a requirement of method, not a proof of ontology or ethical necessity.", "zh": "非二元是方法要求，不是本体或伦理必然性的证明。", "source": "theories/becoming/history/NONDUAL-METHOD.md"},
+diff --git a/theories/becoming/results/records/continuation-relative-to-a-class.json b/theories/becoming/results/records/continuation-relative-to-a-class.json
+index b4dc488fd..a1554d1a1 100644
+--- a/theories/becoming/results/records/continuation-relative-to-a-class.json
++++ b/theories/becoming/results/records/continuation-relative-to-a-class.json
+@@ -10,3 +10,3 @@
+  "family": "F01",
+  "reviewed_at_utc": [-"2026-10-25T15:09:23+00:00",-]{+"2026-10-30T13:26:39+00:00",+}
+  "statement": {
+@@ -179,3 +179,3 @@
+    {
+      "en": "Renewing into: an occurrence conditions a beginning whose line reaches another. Ceasing, defined positively and inductively along renewing into: an occurrence ceases where everything it renews into ceases, the least property so closed. Renewal without end, the greatest family each member of which renews into a member, does not cease [-(生生不息).-]{+(`«生生不息»`).+} Ceasing concerns what an occurrence renews into, not its line: one that does not itself renew ceases, so one on whose line nothing renews ceases; under the one everything ceases.",
+      "zh": "复生至：一事为一始之缘，而此始之线达于另一事。息，正面而沿复生至以归纳定义：一事所复生至者皆息，则此事息；息是如此封闭之最小之性。生生是每一员皆复生至族中一员之最大之族，在此族中者不息（生生不息）。息所论是一事所复生至者，不是其线：自身不复生之事息，故其线上无物复生之事息；在“一”之下皆息。",
+@@ -830,2 +830,6 @@
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役的“旧基底”按现行词汇称为 World 模型（陈述、两条规律、一条界限与一条相关说明）；合按 Lean 的陈述改写：两个缘各与其所缘之事相同（而非彼此相同），见第九条规律与一条界限。规律内容未变。"
+    {+},+}
+{+    {+}
+{+      "en": "30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the theorem's name written `«生生不息»`; nothing the record states changed.",+}
+{+      "zh": "2026年10月30日：仅措辞，依第二十一次审查第 13 项（生生一义）：定理之名写作 `«生生不息»`；记录所述无改变。"+}
+    }
+diff --git a/theories/becoming/results/records/metaethical-core-characterization.json b/theories/becoming/results/records/metaethical-core-characterization.json
+index 4fb0e0020..29234e908 100644
+--- a/theories/becoming/results/records/metaethical-core-characterization.json
++++ b/theories/becoming/results/records/metaethical-core-characterization.json
+@@ -10,3 +10,3 @@
+  "family": "F07",
+  "reviewed_at_utc": [-"2026-10-28T05:21:42+00:00",-]{+"2026-10-30T13:26:40+00:00",+}
+  "statement": {
+@@ -265,4 +265,4 @@
+      "detail": {
+        "zh": [-"推进而未完成：把普遍理由所需的规范内容精确定位为种子、两条中立与-]{+"关涉而未回答：把普遍理由所需的规范内容精确定位为种子、两条中立与+} A；不及于拒绝它们的立场。",
+        "en": [-"Advances-]{+"Bears on it+} without [-completing-]{+answering+} it: locates the normative content universal reasons need exactly in a seed, two neutralities and A; positions rejecting them are not bound."
+      }
+@@ -660,2 +660,6 @@
+      "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：依主章写出陈述；主张拆为十一条规律，各条对照其在 Becoming.Metaethics、ValuationFrames、Extension、Inquiry 与 Frame 中的声明核读（提升规则的传递按 Lean 所证写为中间动作有结果时成立：否则不传递不是定理，故不保留“只有”）；限制与对应中相对于运行的一句分入六条“未表明”与通用边界 significance-related-not-asserted、names-provisional；第二条前提中“正面内容”改为“从自身立场有意义的新内容”，与 R30 改名以来的定义（SecuresNewContent，意义取自该立场）一致，其余前提保留；十九个定义（Within、Neutral、Valuation 及其部分、articulates、模型的部分、Valuation.relations、Valuation.Connected、LiftBetter、Scope、Novel）加入其文件的引用；前提内容、状态与来源哈希均未改变。每句旧文本的去向见 [metaethical-core-characterization.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/metaethical-core-characterization.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、规律、对应，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及规律、引用。"
+    {+},+}
+{+    {+}
+{+      "en": "30 October 2026: the related detail on universal-practical-warrant reworded for its restatement as a question; nothing else changed.",+}
+{+      "zh": "2026年10月30日：关于 universal-practical-warrant 的相关说明因其重述为问题而改写；其余无改变。"+}
+    }
+diff --git a/theories/becoming/results/records/own-good-to-reachable-living-significance.json b/theories/becoming/results/records/own-good-to-reachable-living-significance.json
+index 7aec7e72d..3aa9fbb28 100644
+--- a/theories/becoming/results/records/own-good-to-reachable-living-significance.json
++++ b/theories/becoming/results/records/own-good-to-reachable-living-significance.json
+@@ -10,3 +10,3 @@
+  "family": "F07",
+  "reviewed_at_utc": [-"2026-10-28T12:42:00+00:00",-]{+"2026-10-30T13:26:40+00:00",+}
+  "statement": {
+@@ -244,4 +244,4 @@
+      "detail": {
+        "zh": [-"推进但未完成：普遍性限于持自身意义的评价者，第二步依赖容差；纯现时目的的评价者不受约束。",-]{+"关涉但未回答：普遍性限于持自身意义的评价者，第二步依赖容差；纯现时目的的评价者不受约束。",+}
+        "en": [-"Advances-]{+"Bears on it+} without [-completing-]{+answering+} it: universality is limited to evaluators holding self-significance, and step two relies on tolerance; present-aim evaluators are not bound."
+      }
+@@ -568,2 +568,6 @@
+      "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述保留；主张拆为七条规律，各条对照其在 Becoming.ProfileReach、Becoming.Metaethics、Becoming.ValuationFrames 与 Becoming.Extension 中的声明核读；限制与主张的末句分入七条“未表明”与通用边界 significance-related-not-asserted，“正面意义”读作不带价值方向的意义，与 ProfileReach 对 sig 的说明一致；取自审查探针、引用中无声明见证的三条反例改为“未表明”；第四条反例收窄到 persistence_rival_escapes_self_transcendence 所证，其中关于每个立场与加权序的说法保留在已写明它们的对应中；前提、对应与其余反例保留；十二个声明加入其文件的引用；前提、状态与来源哈希均未改变。每句旧文本的去向见 [own-good-to-reachable-living-significance.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/own-good-to-reachable-living-significance.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、“未表明”各项、反例，各条对照所引 Lean 核读。"
+    {+},+}
+{+    {+}
+{+      "en": "30 October 2026: the related detail on universal-practical-warrant reworded for its restatement as a question; nothing else changed.",+}
+{+      "zh": "2026年10月30日：关于 universal-practical-warrant 的相关说明因其重述为问题而改写；其余无改变。"+}
+    }
+diff --git a/theories/becoming/results/records/practical-judgment-under-living-significance.json b/theories/becoming/results/records/practical-judgment-under-living-significance.json
+index ce494ca73..aac6eb65d 100644
+--- a/theories/becoming/results/records/practical-judgment-under-living-significance.json
++++ b/theories/becoming/results/records/practical-judgment-under-living-significance.json
+@@ -10,3 +10,3 @@
+  "family": "F07",
+  "reviewed_at_utc": [-"2026-10-25T15:09:23+00:00",-]{+"2026-10-30T13:26:40+00:00",+}
+  "statement": {
+@@ -95,4 +95,4 @@
+      "detail": {
+        "zh": [-"无公理目标独立保留，不是本成果的未完成条件。",-]{+"是否存在对一切可能心智都有约束力的根据，此问题保持开放，不是本成果的未完成条件。",+}
+        "en": "The [-independent axiom-free target remains-]{+question of a warrant binding every possible mind stays+} open and is not an unmet completion gate for this result."
+      }
+@@ -545,2 +545,6 @@
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第一条假设按现行术语称生生之意义为前提，即陈述而不断言的条件，在延续条件之下是定理，不在该条件之外另增前提，不再用退役的 G0 接口与“另一条公理”；退役标签的别名保留以便检索。主张不变。"
+    {+},+}
+{+    {+}
+{+      "en": "30 October 2026: the related detail on universal-practical-warrant reworded for its restatement as a question; nothing else changed.",+}
+{+      "zh": "2026年10月30日：关于 universal-practical-warrant 的相关说明因其重述为问题而改写；其余无改变。"+}
+    }
+diff --git a/theories/becoming/results/records/projection-carrying-a-law.json b/theories/becoming/results/records/projection-carrying-a-law.json
+index 81266352a..23ee60b60 100644
+--- a/theories/becoming/results/records/projection-carrying-a-law.json
++++ b/theories/becoming/results/records/projection-carrying-a-law.json
+@@ -10,3 +10,3 @@
+  "family": "F11",
+  "reviewed_at_utc": [-"2026-10-14T14:57:40+00:00",-]{+"2026-10-30T13:26:39+00:00",+}
+  "statement": {
+@@ -224,4 +224,4 @@
+  "correspondence": {
+    "zh": "Ren 2026-10-12 问：“hows cause–effect system comparing to our theory?”，贴入一段作者未注明的说明（不是 Ren 的话，不是前提），又写“think for one more round, what can we learn, being inspired, and improve?”；对 AI 的五项提议答：“Great, let's finish all of them, you can spawn sub agents in a wise order if needed”。这是第三项（机制是一种分解，不是另一种规律）。读法（AI 的，依 Ren [-的交托采用）：机制是承载规律的投影，“关于何者无关的模型”（Becoming.Experiment）由相同者同去精确刻画；配置的投影是时间读法与更细的量的单位之外的第三种东西；较粗描述上的规律（涌现）就是那里的相同者同去，不分任何东西的描述总承载规律，所以内容在于哪个描述；规则持有结果（Becoming.Capture）是只依于规则；改变自身因果的系统的规律在状态与规则的联合配置上，不需要另一种规律；读 理 为投影（Becoming.Experiment），它何时承载规律由此给出。",-]{+的交托采用）：机制是承载规律的投影，“关于何者无关的模型”（Becoming.Experiment）由相同者同去精确刻画；配置的投影是时间读法与更细的量的单位之外的第三种东西；较粗描述上的规律（涌现）就是那里的相同者同去，不分任何东西的描述总承载规律，所以内容在于哪个描述；规则持有结果（Becoming.Capture）是只依于规则；改变自身因果的系统的规律在状态与规则的联合配置上，不需要另一种规律；读模型为投影（Becoming.Experiment），它何时承载规律、即何时为理，由此给出。",+}
+    "en": "On 12 October 2026 Ren asked “hows cause–effect system comparing to our theory?”, pasted an explanation whose author is not stated (not Ren's wording, not a premise), asked “think for one more round, what can we learn, being inspired, and improve?”, and to the AI's five proposals answered “Great, let's finish all of them, you can spawn sub agents in a wise order if needed”. This is the third proposal (a mechanism is a factoring, not a further kind of law). Readings (the AI's, adopted on Ren's delegation): a mechanism is a projection that carries a law, and the model of what is irrelevant (Becoming.Experiment) is characterized exactly by going alike; a projection of configuration is a third thing beside readings of time and finer units of amount; a law at a coarser description (emergence) is going alike there, and since the description that distinguishes nothing always carries one, the content lies in which description carries it; the rule holding the outcome (Becoming.Capture) is dependence on the rule only; a system that changes its own causality has its law on the joint configuration of state and rule, and needs no further kind of law; reading [-理-]{+a model+} as a projection (Becoming.Experiment), this says when [-理-]{+it+} carries a [-law."-]{+law, that is, when it is a 理."+}
+  },
+@@ -723,2 +723,6 @@
+      "zh": "2026年10月24日，GS1：于文法中读（记录 rules-that-change-themselves-in-the-grammar，研究第 390 节）；本记录之陈述未变。"
+    {+},+}
+{+    {+}
+{+      "en": "30 October 2026: wording only, for the twenty-first review's item 13 (理 in one sense): the correspondence reads a model, not 理, as a projection, since a 理 is a lumping the step goes alike across; nothing the record states changed.",+}
+{+      "zh": "2026年10月30日：仅措辞，依第二十一次审查第 13 项（理一义）：对应改为读模型（而非理）为投影，因理是步于其上同行之归并；记录所述无改变。"+}
+    }
+diff --git a/theories/becoming/results/records/universal-practical-warrant.json b/theories/becoming/results/records/universal-practical-warrant.json
+index cdffa2616..f5c24b7fd 100644
+--- a/theories/becoming/results/records/universal-practical-warrant.json
++++ b/theories/becoming/results/records/universal-practical-warrant.json
+@@ -4,4 +4,4 @@
+  "title": {
+[-"zh": "普遍实践根据的更强目标",-]    "en": [-"Stronger-]{+"Whether a+} universal practical warrant [-target"-]{+exists",+}
+{+    "zh": "是否存在普遍的实践根据"+}
+  },
+@@ -10,6 +10,6 @@
+  "family": "F08",
+  "reviewed_at_utc": [-"2026-10-25T17:03:04+00:00",-]{+"2026-10-30T13:26:40+00:00",+}
+  "statement": {
+    "en": [-"Target: universal-]{+"Question: whether+} practical {+reasons have a+} warrant {+binding every possible mind,+} with zero substantive [-axioms, developed as one account of ends, selection, knowing, normativity-]{+premises. It stays open,+} and [-revision within becoming.",-]{+the ethics, life's stance, does not wait on it.",+}
+    "zh": [-"目标：取得零实质公理的普遍实践根据，并在同一生成活动中统一解释目的、选择、认识、规范及修订。"-]{+"问题：实践理由是否有一个零实质前提、对一切可能的心智都有约束力的根据。它保持开放，伦理作为生命的立场不待其解决。"+}
+  },
+@@ -17,4 +17,4 @@
+    {
+[-"zh": "独立获授权的更强目标；不得以局部给定规范或行为收敛替代。",-]      "en": [-"An independently authorized stronger target;-]{+"Left open by the goal of practical judgment for life, on the fewest premises;+} supplied local [-norms or behavioral-]{+norms, behavioural+} convergence {+or fuller description+} do not [-substitute for it."-]{+answer it.",+}
+{+      "zh": "“生命的实践判断，立于最少的前提”这一目标把它留作开放的问题；给定的局部规范、行为收敛或更完整的描述都不回答它。"+}
+    }
+@@ -32,4 +32,4 @@
+      "detail": {
+        "zh": [-"条件对齐路线是已有成果；两者的完成标准不同。",-]{+"条件对齐路线是已有成果；本问题不重开它。",+}
+        "en": "The conditional alignment route is an established [-result with a different completion standard."-]{+result; this question does not reopen it."+}
+      }
+@@ -53,4 +53,4 @@
+      "detail": {
+        "zh": [-"P89的有限实现与正式连接已结项，不恢复为本目标的待做机制。",-]{+"有限实现与正式连接已结项，不恢复为本问题的待做机制。",+}
+        "en": [-"P89 bounded-]{+"Bounded+} realization and formal connection are complete, not reopened as a missing mechanism for this [-target."-]{+question."+}
+      }
+@@ -84,2 +84,9 @@
+      }
+    {+},+}
+{+    {+}
+{+      "id": "what-the-dynamics-leave-open",+}
+{+      "detail": {+}
+{+        "en": "Where there is a standpoint and a formation, no satisfiable statement reading only the represented dynamics entails the condition, and bounded_rival (in continuation-condition-yields-living-significance) denies it consistently; so a warrant grounding the condition comes from neither logic alone nor those dynamics alone, and these do not show that none exists.",+}
+{+        "zh": "在有立场与形成之处，只读所表示动力学的可满足陈述都不蕴含延续条件，bounded_rival（见 continuation-condition-yields-living-significance）一致地否认它；所以为条件奠基的根据既不单出于逻辑，也不单出于这些动力学，而这些并不表明它不存在。"+}
+{+      }+}
+    }
+@@ -129,4 +136,4 @@
+    {
+      "en": [-"The revised question-]{+"With significance a free predicate, where there+} is [-itself an inquiry: it substitutes for no normative argument-]{+a standpoint+} and [-cannot prove-]{+a formation, neither logic alone nor a statement reading only the represented dynamics entails the condition; this does not show that no such+} warrant [-by defining it in.",-]{+exists.",+}
+      "zh": [-"修正版问句本身仍是研究问题：不替代规范论证，也不能把“有根据”写入定义来证明它。",-]{+"意义为自由谓词、有立场与形成之处，单凭逻辑或只读所表示之动力学的陈述都不蕴含延续条件；这不表明不存在这样的根据。",+}
+      "kind": "non-implication"
+@@ -221,4 +228,4 @@
+  "next_delta": {
+    "en": [-"Directly explain how actual affected living supports judgments to retain, change or end arrangements, preserving substantive contrary-]{+"An argument either way: a warrant binding every possible mind that, where it+} grounds {+the condition, says where it comes from beyond logic alone and the represented dynamics alone; or a showing that none exists for a stated class of minds. The practical judgment the ethics for life needs is the work of the goal of practical judgment for life,+} and [-implementation barriers.",-]{+does not wait on this question.",+}
+    "zh": [-"直接解释实际受影响生活怎样支持保持、改变或结束安排的判断，保留具体反向根据及实行障碍。"-]{+"任一方向的论证：一个对一切可能心智都有约束力的根据，若为延续条件奠基，须说明它在单凭逻辑与单凭所表示的动力学之外从何而来；或表明对某一注明的心智类不存在这样的根据。生命之伦理所需的实践判断是“生命的实践判断”这一目标的工作，不待此问。"+}
+  },
+@@ -281,2 +288,6 @@
+      "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：两条相关说明中已退役的标签改为现行术语（显式公理路线改为条件对齐路线，G0 改为生生之意义），登记记录以现行词称为耦合记录；目标不变。"
+    {+},+}
+{+    {+}
+{+      "en": "30 October 2026: restated as the question it now is, whether a warrant binding every possible mind exists. The goal zero-axiom-session, restated and approved on 30 October as practical judgment for life, lists the record as the question, and the ethics, life's stance (chapter 7, T8), does not wait on it. Title, statement, hypothesis and next step rewritten with 07's open item; 07's non-entailment linked and stated exactly in does_not_show, in place of the item on the earlier fulfillment question; two related details say question. The kind stays target, the registry's kind for an open item. The progress lines are the earlier target's work on practical judgment, now the goal's; none bears on whether such a warrant exists. The earlier bytes are in text_versions; no new proof.",+}
+{+      "zh": "2026年10月30日：重述为它现在所是的问题，即是否存在对一切可能心智都有约束力的根据。目标 zero-axiom-session 于 10 月 30 日重述并获批为生命的实践判断，把本记录列为该问题；伦理是生命的立场（第七章 T8），不待其解决。标题、陈述、假设与下一步随第七章的未决条目一并改写；第七章之不蕴含得到链接，并在 does_not_show 中确切陈述，替换关于先前完成问句之条目；两条相关说明改称问题。类别仍为 target，即登记处对未决条目之类别。进展诸行是先前目标在实践判断上的工作，今属该目标；无一关涉这样的根据是否存在。先前字节见 text_versions；无新证明。"+}
+    }
+@@ -307,2 +318,10 @@
+      }
+    {+},+}
+{+    {+}
+{+      "path": "_process/architecture/history/1839482aa15bab24/universal-practical-warrant.json",+}
+{+      "sha256": "1839482aa15bab246ee80aa7aaa0ed9a63ba1a65023781fdf77470689e796227",+}
+{+      "note": {+}
+{+        "en": "Exact record bytes before it was restated as the question (30 October 2026).",+}
+{+        "zh": "重述为问题之前的记录原始字节（2026年10月30日）。"+}
+{+      }+}
+    }
+diff --git a/tools/research/navigation.py b/tools/research/navigation.py
+index cf596a823..17910cd3b 100644
+--- a/tools/research/navigation.py
++++ b/tools/research/navigation.py
+@@ -332,3 +332,3 @@ WHERE_TO_LOOK = [
+    '- Three shared-support results: `draws-on-a-shared-stock`, `exclusive-footprint-support`, `joint-plan-composition`. Their common obstruction does not establish a verified translation between them.',
+    '- Completed conditional alignment argument and its AI application: `practical-judgment-under-living-significance`, `alignment-direction-under-widening`. The [-independent targets-]{+open question+} `universal-practical-warrant` and {+the independent target+} `wisdom-root` remain open.']
+

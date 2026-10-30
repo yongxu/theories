@@ -59,7 +59,7 @@ Canonical source: [ReadingLoop.lean](../../../../experiments/integrated-correcti
 <a id="next--下一步"></a>
 ## Next
 
-Probabilistic candidates and the value of information in the periphery; an intervention moving the world; a frozen test predicting when a learner stops trying what its model ranks low; review by a person.
+Probabilistic candidates and the value of a noisy reading in the periphery; an intervention moving the world; a frozen test predicting when a learner stops trying what its model ranks low; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -75,6 +75,9 @@ A deterministic case of a model right along the course its own choices take and 
 - **formal-reuse**: [learning-a-rule-by-narrowing](learning-a-rule-by-narrowing.md). Narrowing.mem_filter and Narrowing.filter_cons_true for the candidates kept.
 - related, not a proved adapter: [what-seeking-cannot-separate](what-seeking-cannot-separate.md). Seeking corrects only where some experiment it can choose separates; here an experiment separates, and a course chosen through the model need not take it.
 - related, not a proved adapter: [a-reading-kept-by-its-update](a-reading-kept-by-its-update.md). The kept reading on one carrier of world and state; here the reading that a candidate is kept, on the loop.
+- related, not a proved adapter: [what-holding-for-a-reading-is-worth](what-holding-for-a-reading-is-worth.md). The worth of a reading in counts, of one telling the candidate and of one telling only a cell; and a witness on the same loop, a listing right along its course and wrong off it, there with a stopping reading never sensed.
+
+**Used by:** [what-holding-for-a-reading-is-worth](what-holding-for-a-reading-is-worth.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -95,6 +98,7 @@ Aliases: `a model its course never refutes`, `其历程永不驳之模型`, `sel
 ### History
 
 - 30 October 2026: added (RF round 2), what a course chosen through its model does not test: two worlds and one formation, a formation keeping candidate laws, keeping a task as not telling worlds apart; after a cross-model review of the Lean with a re-check, every finding taken; study section 456.
+- 30 October 2026, board item RF, RF-M.2 (study section 466): related to what-holding-for-a-reading-is-worth, where the value of a reading in counts is stated; the next step keeps the value of a noisy reading in the periphery; no statement or declaration changed.
 
 </details>
 

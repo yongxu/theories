@@ -92,8 +92,8 @@
     "zh": "纯核，公理报告皆空：model_or_order 为 observed_alike 之一例，其关系持起点与止处；诸止为 Loop.rests_of_unrefuted 之例。"
   },
   "next_delta": {
-    "en": "A helper's act within the law that informs, and a principal's order as state the helper's acts can move (RF round 2's later items); a frozen test separating a model that does not separate from an order that ranks otherwise by informing; review by a person.",
-    "zh": "律内能告之助者之行，与助者之行可移之受助者之序为态（RF 第二轮之后项）；以告分未分之模型与排序相异之序之冻结检验；人之审查。"
+    "en": "The reading formation's own state and learning, and a principal's valuation as state the helper's acts can move (RF round 2's later item, RF-M.3's carrier); a frozen test separating a model that does not separate from an order that ranks otherwise by informing; review by a person.",
+    "zh": "读之形成己之态与学，与助者之行可移之受助者之值为态（RF 第二轮之后项，RF-M.3 之载体）；以告分未分之模型与排序相异之序之冻结检验；人之审查。"
   },
   "correspondence": {
     "en": "One observed course can leave an unresolved model and a reversed ranking indistinguishable: an illustration of the ambiguity between beliefs and preferences in inferring what a formation values from what it does (Armstrong and Mindermann 2018, for planner and reward; Reddy, Dragan and Levine 2018, for beliefs about dynamics). AI reading: a training, an overseer or a helper reading the acts cannot tell a formation held by what its model does not separate from one held by how it ranks; starting the first with the true candidate changes its course and leaves the second's, so whether informing helps depends on which holds, a reason for assistance to read more than acts. With what-choices-show-of-an-order: both rankings accord with the occasion, and the comparison beyond the shown reach is free. These are readings, not containments.",
@@ -124,6 +124,13 @@
       "detail": {
         "en": "The loop and the worlds of the untried act on which the two formations are stated.",
         "zh": "二形成所陈于其上之环与未试之行之二世。"
+      }
+    },
+    {
+      "id": "what-holding-for-a-reading-is-worth",
+      "detail": {
+        "en": "Informing within the law: a held act answered by the reading of the true sign, which refutes the candidates predicting otherwise, where here informing changes the start; the reading formation's own state is not represented there.",
+        "zh": "律内之告：所持之行以真号之读答之，驳预之异者之候选，此处之告则改其始；彼处读之形成己之态未表。"
       }
     }
   ],
@@ -163,7 +170,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
       "role": "integration",
-      "sha256": "cbe448cbcf6dd59057af10f976a89bc22d27396f04412a821e5e2cf0dd462b6c"
+      "sha256": "3ff802b10fd7cab1210c6d559d4ad243977211b1f97547c91fd48ff07ebc3287"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md",
@@ -189,6 +196,10 @@
     {
       "en": "30 October 2026: added (RF round 2), acts alike from a model or from an order: formations related by a relation their steps keep, an unresolved model and a reversed ranking, informing turning the first; after a cross-model review of the Lean with a re-check, every finding taken; study section 456.",
       "zh": "2026年10月30日：新增（RF 第二轮），出于模型或出于序之同行：诸步所守之关系所联之形成、未决之模型与相反之排序、告之转其前者；经 Lean 之跨模型审查与复查，凡所见皆取；研究第 456 节。"
+    },
+    {
+      "en": "30 October 2026, board item RF, RF-M.2 (study section 466): related to what-holding-for-a-reading-is-worth, where a held act is answered within the law; the next step keeps the reading formation's own state and the principal's valuation as state; no statement or declaration changed.",
+      "zh": "2026年10月30日，工作板条目 RF，RF-M.2（研究第 466 节）：与 what-holding-for-a-reading-is-worth 相关联，所持之行于彼于律内得答；下一步留读之形成己之态与受助者之值为态；无一陈述或声明改变。"
     }
   ]
 }

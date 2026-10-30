@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-27T20:05:52+00:00",
+  "reviewed_at_utc": "2026-10-30T17:41:46+00:00",
   "statement": {
     "en": "Of two courses of causal-set growth from the empty set, one includes the other's stems, what can be born next, exactly where its precedence is included in the other's, so widening adds no continuation. Read on what continues the order reverses; no strict order holds both.",
     "zh": "于因果集之生长上，次可生者反转先后之包含：自空集起之二历程，一者含另一者之茎，恰当其先后含于另一者之先后；故扩大不增相续。读于相续则序反转，无一严格之序兼含二者。"
@@ -269,7 +269,7 @@
     },
     {
       "en": "No configuration renews without end. Where a relation raises the label and relates only below a bound, every element ceases under every class (ceases_of_bounded); so on every causal set of the growth every element ceases, on precedence and on links (ordered_ceases), and the grammar's «生生» holds on no configuration (ordered_not_renews).",
-      "zh": "无构型生生不息。凡一关系使标号升高且仅关联于一界之下，每元于每类皆息（ceases_of_bounded）；故于生长之每一因果集，每元皆息，读于先后与覆盖皆然（ordered_ceases），文法之 «生生» 于任何构型皆不成立（ordered_not_renews）。",
+      "zh": "无构型 «生生»。凡一关系使标号升高且仅关联于一界之下，每元于每类皆息（ceases_of_bounded）；故于生长之每一因果集，每元皆息，读于先后与覆盖皆然（ordered_ceases），文法之 «生生» 于任何构型皆不成立（ordered_not_renews）。",
       "declarations": [
         "Becoming.CausalGrowth.ceases_of_bounded",
         "Becoming.CausalGrowth.ordered_ceases",
@@ -278,7 +278,7 @@
     },
     {
       "en": "In the limits the extremes part. On the antichain's limit nothing renews without end in any class (antichainLimit, antichainLimit_not_renews). On the chain's limit, i before j exactly where i < j (chainLimit, chainLimit_iff), 1 renews without end under the class pairing 2m with 2m + 1 (chainLimit_renews; Halves: half, pairs, pairs_class, double_succ, half_double, half_double_succ, half_lt, odd).",
-      "zh": "于极限，二极相分。反链之极限中，任何类下皆无生生不息者（antichainLimit、antichainLimit_not_renews）。链之极限中，i 先于 j 恰当 i < j（chainLimit、chainLimit_iff），于将 2m 与 2m + 1 相配之类下，1 生生不息（chainLimit_renews；Halves）。",
+      "zh": "于极限，二极相分。反链之极限中，任何类下皆无 «生生» 者（antichainLimit、antichainLimit_not_renews）。链之极限中，i 先于 j 恰当 i < j（chainLimit、chainLimit_iff），于将 2m 与 2m + 1 相配之类下，1 «生生»（chainLimit_renews；Halves）。",
       "declarations": [
         "Becoming.CausalGrowth.antichainLimit",
         "Becoming.CausalGrowth.antichainLimit_not_renews",
@@ -506,7 +506,7 @@
       "relation": "formal-reuse",
       "detail": {
         "en": "«及», «续», «相续», «一», «类», «则», «生», «亡», «住», «息», «生生», «生生之展», «生生不息» and «及之单调»: continuation, its positions, ceasing and renewal without end.",
-        "zh": "«及»、«续»、«相续»、«一»、«类»、«则»、«生»、«亡»、«住»、«息»、«生生»、«生生之展»、«生生不息» 与 «及之单调»：续及其诸位、息与生生不息。"
+        "zh": "«及»、«续»、«相续»、«一»、«类»、«则»、«生»、«亡»、«住»、«息»、«生生»、«生生之展»、«生生不息» 与 «及之单调»：续及其诸位、息与 «生生»。"
       }
     }
   ],
@@ -785,6 +785,10 @@
     {
       "en": "28 October 2026, board item UE14 (study section 432): related to the-present-on-causal-set-growth; no statement, next step or declaration changed.",
       "zh": "2026年10月28日，工作板条目 UE14（研究第 432 节）：与 the-present-on-causal-set-growth 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the Chinese of laws 22 and 23 and of the dependency detail listing the grammar's names writes «生生» (renewal without end), as the English and the theorems state, where it wrote 生生不息; nothing the record states changed.",
+      "zh": "2026年10月30日：仅措辞，依第二十一次审查第 13 项（生生一义）：律 22、23 与列出文法诸名之依赖说明之中文写作 «生生»（无尽之复生），如英文与定理所述，原作生生不息；记录所述无改变。"
     }
   ]
 }

@@ -5088,6 +5088,101 @@ Contains 9 textual `#print axioms` commands; their results belong to the origina
 
 </details>
 
+<a id="module-f20bca7415be"></a>
+
+<details>
+<summary>CellsUnderNoise.lean — 76 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean`
+
+Imports: `Mathlib.Analysis.SpecialFunctions.Exp`, `Mathlib.Algebra.BigOperators.Field`, `Mathlib.GroupTheory.Perm.Sign`, `Becoming.FreeEnergyGuarantees`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.CellsUnderNoise.step_invariant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L157) | 157 |
+| [Becoming.CellsUnderNoise.weightsAt_invariant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L164) | 164 |
+| [Becoming.CellsUnderNoise.weightsAt_exchangeable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L172) | 172 |
+| [Becoming.CellsUnderNoise.step_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L178) | 178 |
+| [Becoming.CellsUnderNoise.step_total](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L183) | 183 |
+| [Becoming.CellsUnderNoise.weightsAt_law](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L190) | 190 |
+| [Becoming.CellsUnderNoise.pointMass_invariant_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L205) | 205 |
+| [Becoming.CellsUnderNoise.pointMass_exchangeable_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L226) | 226 |
+| [Becoming.CellsUnderNoise.alike_fixed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L232) | 232 |
+| [Becoming.CellsUnderNoise.alike_exchangeable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L236) | 236 |
+| [Becoming.CellsUnderNoise.independent_exchangeable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L242) | 242 |
+| [Becoming.CellsUnderNoise.independent_law](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L247) | 247 |
+| [Becoming.CellsUnderNoise.pointMass_law](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L254) | 254 |
+| [Becoming.CellsUnderNoise.marginal_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L267) | 267 |
+| [Becoming.CellsUnderNoise.distinct_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L277) | 277 |
+| [Becoming.CellsUnderNoise.stationary_rearranged](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L300) | 300 |
+| [Becoming.CellsUnderNoise.unique_stationary_exchangeable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L312) | 312 |
+| [Becoming.CellsUnderNoise.gibbs_exchangeable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L323) | 323 |
+| [Becoming.CellsUnderNoise.noisy_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L337) | 337 |
+| [Becoming.CellsUnderNoise.step_noiseless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L346) | 346 |
+| [Becoming.CellsUnderNoise.weightsAt_noiseless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L360) | 360 |
+| [Becoming.CellsUnderNoise.ofFn_swap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L380) | 380 |
+| [Becoming.CellsUnderNoise.ofFn_rearranged](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L405) | 405 |
+| [Becoming.CellsUnderNoise.ofFn_cellwise](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L432) | 432 |
+| [Becoming.CellsUnderNoise.ofFn_iterate_cellwise](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L437) | 437 |
+| [Becoming.CellsUnderNoise.cellwise_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L447) | 447 |
+| [Becoming.CellsUnderNoise.noiseless_run](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L457) | 457 |
+| [Becoming.CellsUnderNoise.cellwise_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L465) | 465 |
+| [Becoming.CellsUnderNoise.run_rearranged](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L473) | 473 |
+| [Becoming.CellsUnderNoise.symmetric_rearranged](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L487) | 487 |
+| [Becoming.CellsUnderNoise.gibbs_symmetric_exchangeable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L495) | 495 |
+| [Becoming.CellsUnderNoise.noisy_eq_noisyDescent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L509) | 509 |
+| [Becoming.CellsUnderNoise.noisyDescent_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L516) | 516 |
+| [Becoming.CellsUnderNoise.noisyDescent_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L526) | 526 |
+| [Becoming.CellsUnderNoise.noisyDescent_rows](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L532) | 532 |
+| [Becoming.CellsUnderNoise.noisyDescent_exchangeable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L542) | 542 |
+| [Becoming.CellsUnderNoise.noisyDescent_distinct_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L551) | 551 |
+| [Becoming.CellsUnderNoise.noisyDescent_from_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L566) | 566 |
+| [Becoming.CellsUnderNoise.noisyDescent_from_independent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L577) | 577 |
+| [Becoming.CellsUnderNoise.alike_positive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L590) | 590 |
+| [Becoming.CellsUnderNoise.Witness.sum_two](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L634) | 634 |
+| [Becoming.CellsUnderNoise.Witness.partedUniform_law](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L647) | 647 |
+| [Becoming.CellsUnderNoise.Witness.partedUniform_not_product](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L653) | 653 |
+| [Becoming.CellsUnderNoise.Witness.parted_rearranged](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L665) | 665 |
+| [Becoming.CellsUnderNoise.Witness.toParted_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L675) | 675 |
+| [Becoming.CellsUnderNoise.Witness.toParted_not_noisy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L679) | 679 |
+| [Becoming.CellsUnderNoise.Witness.toParted_not_noisyDescent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L686) | 686 |
+| [Becoming.CellsUnderNoise.Witness.assign_not_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L699) | 699 |
+| [Becoming.CellsUnderNoise.Witness.toParted_eq_mixture](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L706) | 706 |
+| [Becoming.CellsUnderNoise.Witness.independentNoise_parts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L717) | 717 |
+| [Becoming.CellsUnderNoise.Witness.toParted_once](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L725) | 725 |
+| [Becoming.CellsUnderNoise.Witness.alike_none](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L732) | 732 |
+| [Becoming.CellsUnderNoise.Witness.each_half](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L738) | 738 |
+| [Becoming.CellsUnderNoise.Witness.toParted_stationary_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L745) | 745 |
+| [Becoming.CellsUnderNoise.Witness.partedUniform_exchangeable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L756) | 756 |
+| [Becoming.CellsUnderNoise.Witness.firstCell_not_exchangeable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L769) | 769 |
+| [Becoming.CellsUnderNoise.Witness.firstCell_assigns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L778) | 778 |
+
+Definitions and types:
+
+- `def` [Becoming.CellsUnderNoise.rearrange](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L124) (L124)
+- `def` [Becoming.CellsUnderNoise.Invariant](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L131) (L131)
+- `def` [Becoming.CellsUnderNoise.Exchangeable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L137) (L137)
+- `def` [Becoming.CellsUnderNoise.KernelCommutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L141) (L141)
+- `def` [Becoming.CellsUnderNoise.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L146) (L146)
+- `def` [Becoming.CellsUnderNoise.weightsAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L151) (L151)
+- `def` [Becoming.CellsUnderNoise.pointMass](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L200) (L200)
+- `def` [Becoming.CellsUnderNoise.marginal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L262) (L262)
+- `def` [Becoming.CellsUnderNoise.Stationary](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L294) (L294)
+- `def` [Becoming.CellsUnderNoise.noisy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L332) (L332)
+- `def` [Becoming.CellsUnderNoise.noiseless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L343) (L343)
+- `def` [Becoming.CellsUnderNoise.cellwise](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L427) (L427)
+- `def` [Becoming.CellsUnderNoise.noisyDescent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L505) (L505)
+- `abbrev` [Becoming.CellsUnderNoise.Witness.Two](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L631) (L631)
+- `def` [Becoming.CellsUnderNoise.Witness.partedUniform](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L644) (L644)
+- `def` [Becoming.CellsUnderNoise.Witness.toParted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L672) (L672)
+- `def` [Becoming.CellsUnderNoise.Witness.assign](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L696) (L696)
+- `def` [Becoming.CellsUnderNoise.Witness.firstCell](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L763) (L763)
+- `def` [Becoming.CellsUnderNoise.Witness.flipBy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean#L766) (L766)
+
+</details>
+
 <a id="module-08914cd7e653"></a>
 
 <details>
