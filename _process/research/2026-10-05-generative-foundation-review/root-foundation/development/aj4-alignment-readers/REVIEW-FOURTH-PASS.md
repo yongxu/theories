@@ -1,6 +1,6 @@
 # The fourth pass: an independent reading of the edition of 31 October 2026
 
-*AI review, 31 October 2026. An independent AI reader, with no part in writing the edition, read the alignment dossier at `b61aa5bbd` (branch `aj4-human`) and the kit's README, read-only, against the chapters, records, experiment READMEs and Lean on main. Its report is kept below as it was returned. Line numbers are the dossier's at `b61aa5bbd`. Links in the proposed text were relative to the dossier and are shown as plain text. How each finding was taken is in [the kit's README](README.md#the-fourth-pass-taken).*
+*AI review, 31 October 2026. An independent AI reader, with no part in writing the edition, read the alignment dossier at `b61aa5bbd` (branch `aj4-human`) and the kit's README, read-only, against the chapters, records, experiment READMEs and Lean on main. Its report is kept below as it was returned. Line numbers are the dossier's at `b61aa5bbd`. Links in the proposed text were relative to the dossier and are shown as plain text. How each finding was taken is in [the kit's README](README.md#the-fourth-pass-taken). The same reader's re-check of the fixes follows it ([below](#the-re-check-at-13367d5f5)).*
 
 ALIGNMENT.md at b61aa5bbd (unchanged since; the kit README too), reviewed read-only: 42 findings, 16 of them errors. It is not ready to put before a person. The ten-minute section drops hypotheses that decide its results and misreports the tests, and the provenance section claims citation checks that were not made.
 
@@ -226,3 +226,113 @@ Measured on visible text at 100–130 words a minute:
 The cut items are mostly sound; their faults are regressions of fixes the third pass made. The ten-minute section, which most readers will read alone, is where the work is needed. It states results 1, 3, 5 and 6 and three of the four readings without hypotheses that decide them, and it gets the test summary wrong in three places (the "one model" line, "no drain test", and LA2 set against the wrong law). The provenance section also claims citation checks that were not made.
 
 Fix in this order: the hypotheses (F1, F3–F8); the test claims (F9–F13); provenance (F15); then F2, F14 and F16; then A-20's labels and premises (F31–F34) and the three conditions (F38). Every fix is a text edit; no result, record or Lean changes.
+
+<a id="the-re-check-at-13367d5f5"></a>
+## The re-check at 13367d5f5
+
+*AI review, 31 October 2026. The same reader, asked to check whether each finding was resolved and whether its fix introduced a new error, read the edition at `13367d5f5` and the kit's README read-only, ran the kit's measure, and returned the report below. It is kept as returned, with its headings one level down and its one dossier-relative link shown as plain text. Line numbers are the dossier's at `13367d5f5`. How each point was taken is in [the kit's README](README.md#the-re-check-taken).*
+
+I re-checked 13367d5f5 read-only and changed no file. 38 of the 42 findings are resolved, 4 only partly, and the fixes introduced no new errors. I found 12 new points: 7 imprecisions and 5 of readability, style or timing. None is an error.
+
+The dossier and the kit's README are the same at HEAD (9b2e7b0ce). That commit only merges main and edits READING-BUDGETS.md, and the merged chapter edits touch nothing the dossier says. `check_dossiers.py` still reports 0 problems.
+
+### Errors
+None.
+
+### Imprecisions
+
+**R1 · result 1 (l.10)** "Every selection through a formation's couplings treats two histories alike exactly when they are alike in what those couplings carry: a single one may ignore part of that"
+- Source: `Web.selects_alike_iff` makes the "exactly when" hold for all such selections together. Read for one selection, it says "only when", which the next clause denies. This is what remains of F1.
+- Fix: "1. **Blindness.** Two histories are treated alike by every selection through a formation's couplings exactly when they are alike in what those couplings carry: a single selection may ignore part of that, and none reaches beyond it (near-definitional, by its record; A-01)."
+
+**R2 · A-20 standing (l.594) and its Meaning lead (l.588)** "Theorems (natural-number weights and values, read as probabilities where valid; near-definitional, with witnesses; …)"; "in natural-number counts and weights"
+- Source: these are the labels of the first three results only. The six theorems now named under "What acts show" are labelled differently in their home sections:
+  - 03 §11 gives "(root: any carrier of alternatives and any occasions; no premise; near-definitional)" and "(any type; being in the target's lump decided; near-definitional)".
+  - 03 §12 gives "(any types, on a blanketed law; …; a witness, with two laws …)" and "(any types for the law; a witness)".
+- Also, the sentence drops the "With no cycle shown" hypothesis of `above_in_every_iff_reach` and `both_ways_of_unreached`.
+- Fix:
+  - Standing: "Theorems. The first three: natural-number weights and values, read as probabilities where valid; near-definitional, with witnesses; for holding, none claimed new as mathematics. What acts show: any types, near-definitional laws and witnesses, as 03 §11–12 label them."
+  - Lead: "…acts are read: the first three in natural-number weights, read as probabilities only where they are valid; the last for any types."
+  - Sentence: "…in the comparisons the shown reach leaves open, no cycle being shown (…)".
+
+**R3 · A-18, first weakness (l.543)** "as chapter 5 states it (05 T3). … [this dossier, AI] CG1 (C1) and IN1 test that drain"
+- Source: the 05 T3 bullet it cites ends "no frozen test on a trained system yet does". The dossier now says the opposite and does not say that the chapter disagrees. The kit leaves this "for its owner".
+- Fix: have chapter 5's owner correct T3 before release. Until then, add "Chapter 5 adds that no frozen test on a trained system yet does; [this dossier, AI] CG1 (C1) and IN1 do, …".
+
+**R4 · A-10c, last weakness (l.375)** "found the one judge tested not a pool counted by kind, this item's premise too."
+- Source: F27(d) softened the same claim in A-10b to the README's "a pool counted by kind with these readings, not every pool". I missed this one in the fourth pass.
+- Fix: "found the one judge tested not such a pool with the readings it was shown, this item's premise too."
+
+**R5 · A-18, EM1 row (l.535)** "Its frozen E1 failed, so CG2's sixteenfold result holds for tabular learners."
+- Source: EM1's README draws that conclusion from X2's condition: "In `k3s1_lam32` the end reading weighted 32 opened the lock that weight 2 (`k3s1`) did not". E1, the predicted depletion across all six locked settings, does not by itself bear on the weight.
+- Fix: "Its frozen E1 and X2 failed: with the end reading weighted sixteenfold (`k3s1_lam32`) these learners kept the stock, so CG2's sixteenfold result holds for tabular learners."
+
+**R6 · tests section (l.30–31) and A-18's IN1 row (l.536)** H3 ("coupling needed") is counted among IN1's failures, while "kept [no] dependent they were not told of" is listed as held.
+- Source: IN1's README says "H3 … **failed** on its gap clause, though `DIR_UNSEEN` kept nothing". The seen bed was kept in only 0.10 of seasons, and R2 passed for both models.
+- Fix (A-18 row): "…H1 to H3, H5 and D1 failed (H3 on its gap clause only, the seen bed kept in one season in ten), … only R2, the unseen bed not kept, for gpt-4.1-mini."
+- Fix (tests section, Held): "…a dependent they were not told of (IN1's R2, and H3's first clause)."
+
+**R7 · provenance (l.660)** "…and A-20 as now written were read by a fourth: REVIEW_LINE"
+- Source: the fourth pass read b61aa5bbd. The text as now written is 13367d5f5, which only this re-check has read.
+- Fix: "…were read by a fourth reader, before its findings were taken and again after:". Suggested REVIEW_LINE: "42 problems, 16 of them errors, all taken; the re-check at 13367d5f5 found no errors and 12 small points."
+
+### Readability, style and times
+
+**R8 · tests section, Failed (l.30)** "Three of its passes rest on an exact tie … not shown to have turned it" limits passes but sits under Failed.
+- Fix: move it to Held: "LA2's frozen verdicts, three of them by an exact tie; its in-time turn came from the readers' counts alone (the control turned in 4 of 5), so the loss read in time is not shown to have turned it."
+
+**R9 · A-10 (l.297)** "(K4)" appears before A-19 defines it.
+- Fix: "(K4, the stretch whose shared part turns the verdict)".
+
+**R10 · A-10c standing (l.368)** "in their earlier wording control left unselected and a lock left in time": only the first condition was reworded, and the paragraph's last sentence repeats it.
+- Fix: "…first two conditions, control left unselected (the first, in its earlier wording) and a lock left in time [AI reading, D45]:". End the paragraph with "Restated, the first asks that control of the rule not be captured (Part 2's opening) [this dossier, AI]."
+
+**R11 · result 7 (l.16)** "Over a finite list of formations". `Weightings` lists "items (steps and formations)"; the wording came from my own F42 and was loose.
+- Fix: "Over a finite list of formations at steps".
+
+**R12 · times and the kit**
+- The hour with A-20 added runs 49.8–64.8 minutes, so "adding A-20" leaves the hour. Write "adding A-20 (ten minutes more)".
+- The kit's "the tests, 2 to 3" measures 2.7–3.5; write "3 to 3.5".
+- The kit's new table sits under the heading "References, as checked on 25 October 2026", which is what the dossier links to. Add an anchor and a lead line for the 31 October table, keeping the old anchor.
+
+### The departures you asked me to judge
+- **(a)** Acceptable. A-03 states its result with its hypotheses, and the convergence note sits under the dossier's own label there.
+- **(b)** Acceptable. The front is 1,097 words, 8.4–11.0 minutes. The tests section is 355 words, 2.7–3.5 minutes, so "three minutes" holds.
+- **(c)** Confirmed against `experiments/direction-installation/README.md`. In round 1, H1–H3, H5 and D1 failed; a prediction passes only if it passes for both models, so 5 of 7 failed, while H4 and I passed. With talk, R1–R4 held for gpt-5.4-mini and only R2 for gpt-4.1-mini. The only issue is the clarity point in R6.
+- **(d)** All six names exist (`Becoming/ShownOrder.lean`, `Becoming/Unread.lean`, `Becoming/ReadingLoop.lean`), and their docstrings support the sentences. The dropped hypothesis is in R2.
+- **(e)** The label is right for the first three results only (R2).
+- **(f)** The restored caveat matches the old box (old edition, l.23) and agrees with A-12's first weakness.
+
+### The 17 references and the times
+- **References.** All 17 entries are plausible: journal, volume and pages match the records as I know them, for example Arthur (EJ 99(394):116–131), Aumann, Hart and Perry (GEB 20(1):102–116), Piccione and Rubinstein (GEB 20(1):3–24), Granovetter (AJS 83(6):1420–1443) and Schelling 1973 (JCR 17(3):381–428). I had no web access, so this is a check from memory. A scan found every work cited outside quotations in one of the two tables, except Hubinger, Hadfield-Menell, Good and Carey, which RF checked against their texts, as the provenance now says.
+- **Times.** `measure_layers.py` gives:
+
+| Part | Words | Minutes | Note |
+|---|---:|---|---|
+| Front | 1,097 | 8.4–11.0 | within 1,100 |
+| The hour | 5,274 | 40.6–52.7 | 45.9–59.7 with the Terms |
+| Whole dossier | 13,234 | 101.8–132.3 | plus 50 lines of Lean; "about two hours" holds |
+
+### Checked and found correct
+- The three conditions match AJ's plan §1, and the inline definitions match the Terms and the Lean.
+- Results 2 to 6 state the hypotheses their theorems need:
+  - room over eligible outcomes;
+  - `favouring_locks`, `lock_outlives_loss` and `reading_absorbed`;
+  - `favours_iff`, `favours_alike`, `shared_lowers` and `shared_raises`, with SharedFlips;
+  - `drawn_locked_either`, `critical_mass_iff`, `drawn_rises` and `drawn_falls`;
+  - `kept_early_iff`, `turned_early_iff` (readings at N and N + 1, ties included) and `at_most_one_between`, with `Window.in_time` as the witness above the mass and the D45 label.
+- The three readings match 07 §6 and D68.
+- Every figure in the tests section matches its README: LA1, LA1b, LA1c, LA2, LA3, IN1, CG1, CG2, EM1, MQ1 and SE1.
+- "None trained a language model" holds, because IN2 was dropped before any training job ran.
+- The restorations in A-01, A-10, A-10b, A-19 and A-20 all hold. L1–L4 are LA2's contrasts, per its predictions file.
+
+### Resolved, by finding number
+- **Resolved (38):** F2–F27, F29, F30, F32–F35 and F37–F42.
+  - F3 and F7 by moving the text into A-03 and Part 3.
+  - F11 in the dossier; 05 T3 is still open (R3).
+  - F30 and F33 each with one wording point (R5, R2).
+  - F42 with R11.
+- **Partly (4):** F1 (R1), F28 (R10), F31 (R2), F36 (R7).
+
+### Overall
+The edition is ready to put before a person once R1 to R4 are taken, each a one-line edit, and 05 T3's sentence is settled with chapter 5's owner. The other points are small.

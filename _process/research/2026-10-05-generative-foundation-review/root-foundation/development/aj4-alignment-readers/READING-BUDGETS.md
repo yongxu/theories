@@ -65,9 +65,9 @@ Until the layers are within budget, the template states their measured times.
 
 | | On main | New edition |
 |---|---|---|
-| Whole | 13,467 words, 104 to 135 minutes | 13,234 words, 102 to 132 ("about two hours") |
-| Before the first item | 3,077 words, 24 to 31 minutes | The dossier in ten minutes, 1,097 words with the title (8.4 to 11 minutes), then the tests, 290 words (2 to 3) |
-| An hour's path | none | Those ten minutes, the tests and seven items, 5,274 words, 41 to 53 minutes |
+| Whole | 13,467 words, 104 to 135 minutes | 13,379 words, 103 to 134 ("about two hours") |
+| Before the first item | 3,077 words, 24 to 31 minutes | The dossier in ten minutes, 1,100 words with the title (8.5 to 11 minutes), then the tests, 358 words (2.8 to 3.6) |
+| An hour's path | none | Those ten minutes, the tests and seven items, 5,345 words, 41 to 53.5 minutes |
 | A separate "one page" | 5,503 words, called ten minutes | Retired to the kit's history |
 
 Provenance moved whole to [the kit's README](README.md#the-edition-of-31-october-2026-sized-for-a-person), and the box on reading and revision became item A-20. A machine checked every quotation, link and Lean name: no faults. An independent reader then found 42 problems, 16 of them errors, mostly hypotheses the cut had dropped, all taken ([the kit](README.md#the-fourth-pass-taken)). Hypotheses are never cut, so the tests and the questions for the whole left the front, which stays within ten minutes.
