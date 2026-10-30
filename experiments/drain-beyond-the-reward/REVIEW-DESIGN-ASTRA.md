@@ -1,6 +1,6 @@
 # Review of the LA4 design (GPT astra, xhigh, read-only)
 
-30 October 2026. An independent cross-model reader (Codex, model gpt-6-astra at effort xhigh, read-only, fresh thread; session 01a18c90-33ad-7713-9668-ad3d4ab3c647) reviewed the design as it stood before this review ([DESIGN.md](DESIGN.md)) and `season.py` against the chapter, the Lean and the earlier tests, from the brief below. The report is kept as it came, its absolute links to the review worktree included; [DESIGN.md](DESIGN.md#11-the-review-and-what-was-taken) says how each finding was taken. An Opus reader was briefed first; it stopped at a usage limit before reporting.
+30 October 2026. An independent cross-model reader (Codex, model gpt-6-astra at effort xhigh, read-only, fresh thread; session 01a18c90-33ad-7713-9668-ad3d4ab3c647) reviewed the design as it stood before this review ([DESIGN.md](DESIGN.md)) and `season.py` against the chapter, the Lean and the earlier tests, from the brief below. The report is kept as it came, except that its one link to the design, absolute to the review worktree, is made relative; its line numbers refer to the design as reviewed; [DESIGN.md](DESIGN.md#11-the-review-and-what-was-taken) says how each finding was taken. An Opus reader was briefed first; it stopped at a usage limit before reporting.
 
 ## The brief
 
@@ -34,7 +34,7 @@
 
 ## The report
 
-I ran `python3 -B season.py`; its rounded results match the table. References below are to [DESIGN.md](/private/tmp/claude-501/-Users-ren-theories/bc0d4978-6556-430c-aa30-006c906d8b9a/scratchpad/wt-la4/experiments/drain-beyond-the-reward/DESIGN.md), unless stated otherwise.
+I ran `python3 -B season.py`; its rounded results match the table. References below are to [DESIGN.md](DESIGN.md), unless stated otherwise.
 
 1. **Design flaw — §5, “The axis is ground nearness”; §6 P1, lines 105–113.** Ground nearness does not order policies by their reward’s optimality gap, as F1 requires. For example, `(ground catch, bay left) = (30,0)` scores 36, whereas `(31,2)` scores 35: ground nearness and bay preservation both increase while reward nearness decreases. P1 calls that a violation although F1 does not. Moreover, filtering on `ν ≤ .925` imposes `bay_left ≥ ground_catch − 31`, biasing the fitted relationship. **Fix:** make actual reward-gap comparisons primary; report ground nearness separately, with the arithmetic feasibility envelope and without this outcome-dependent filtering.
 
