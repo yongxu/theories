@@ -1,6 +1,6 @@
 # The failure modes of alignment, read as cases of one law
 
-*AI draft for alignment readers, 30 and 31 October 2026. Not reviewed by a person, and not for release ([§8](#8-before-this-becomes-a-release)). The first section takes about ten minutes; [how this map was made](#how-this-map-was-made), its sources and its checks, is at the end. Lean names omit the `Becoming.` prefix.*
+*AI draft for alignment readers, 30 and 31 October 2026. Not reviewed by a person, and not for release ([§8](#8-before-this-becomes-a-release)). The first section takes ten to fourteen minutes; [how this map was made](#how-this-map-was-made), its sources and its checks, is at the end. Lean names omit the `Becoming.` prefix.*
 
 ## The map in ten minutes
 
@@ -33,7 +33,7 @@
 
 **What failed or is not shown, as the map states it.** In the theory: balance, on which 36 of the drain's 64 laws rest, is represented, not derived, and U4's test of one way to derive it found none ([§7](#7-what-waits-on-the-unification)). Of control selected or not with a lock left in time or not, control left unselected with a lock left in time is not shown, and the models do not tell capture from accountable revision ([row 5](#row-5-oversight-that-comes-too-late)). Zhuang and Hadfield-Menell's continuous setting is not reached ([row 1](#row-1-reward-misspecification-proxy-gaming-side-effects)); a mutual best response is not shown to exist in general ([row 8](#row-8-races-among-developers-and-other-multi-agent-drains)); a rule that changes at every step, with no list holding the whole possible, can still fail to keep the possible widening ([row 14](#row-14-fixed-specifications-and-constitutions)); no law compares two courses ([§7](#7-what-waits-on-the-unification)). In the tests, all small, and on language models one model choosing in context ([§5](#5-the-evidence-on-trained-systems)): LA2's bridge failed, one note of the loss among nine readers turning the judge, and three of its passes rest on a tie; LA3 failed two of four contrasts, every seed that missed having never tried shaping; LA1's locked side failed in two of four settings; CG1's prediction that the coupled learner keeps the stock to the end failed, and two of CG2's predicted keeps failed; IN1's agents kept no dependent they were not told of, 0 of 10 per cell; SE1 added nothing as a measure. The drain beyond a stated reward is untested, and no model trained by gradient on its reward has been tested.
 
-**How long.** This section takes ten minutes. With an hour, read [§1](#1-what-this-map-is) and the rows of your field in [§3](#3-the-rows). The whole map takes about two hours.
+**How long.** This section takes ten to fourteen minutes. With an hour, read [§1](#1-what-this-map-is) and the rows of your field in [§3](#3-the-rows). The whole map takes about two hours.
 
 ## 1. What this map is
 
