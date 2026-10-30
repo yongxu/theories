@@ -189,6 +189,33 @@ With that, **plan §八 step 4 (剥前提) is complete** in all four of its part
 
 **Next, in order:** U3's documents, then its Lean items 1 and 2 (全四). GW1 and GW2 stay on GW's line. The root generalization behind item 2 above rides the next planned full rebuild. After these comes plan §八 step 5.
 
+## The release gate (30 October 2026)
+
+Before the account goes to readers outside the work (the review packet, a note for alignment researchers, or any other release), the items below land. When to send stays a decision with the sender and the consent terms, and on 30 October it was to unify first ([source](../../../../../../sources/15-codex-theory-conversations/2026-10-30-release-after-unification.md)). This section says what has to be true first, and why. A failure written down meets its item, as plan §十三 allows.
+
+**What a release must be able to say.**
+
+1. **The ethics on the root** (全四: U3's documents, then its Lean items 1 and 2). Readers from alignment read the ethics first. Today none of the five significance rows reaches the root, and 全四 is designed, not met. It is met when the five rows are stated in the root's terms in the package, with the condition and C still named premises.
+2. **Generation and widening** (全三: GW1 and GW2 on GW's line). The account's direction, 生生 compared by widening, needs the map's generation and the ethics' widening joined both ways, or their split stated as a central result. Today they are joined one way: keeping widening gives 全生成, and the converse does not hold. Either outcome meets the item. It is new mathematics, not restatement.
+3. **Every central declaration placed** (全二). Of the 118 distinct central declarations, 44 reach the grammar, 16 are stated at a represented model, 4 hold on their own carrier and 54 are the rest. The item is met when each of the 54 is lifted, or its not entering is written with its reason. U1's seven interface laws for amounts must also be in the package (its §6 leaf), not only in scratch.
+4. **Plan §八 step 5** (丙一与验). Each conditional law is written as "Y 当且仅当 Z", with Z in the grammar and a counterexample where Z fails. That is what lets a reader check a law's hypotheses against a situation without reading the Lean.
+
+**What lets an outside reader check it.**
+
+5. **A fresh core receipt**, run with `BECOMING_FRESH=1`, with its logs kept in the repository. At the twenty-first review, 1,349 of 1,360 Lean steps were reused from a cache outside the repository ([review](../../BECOMING-TWENTY-FIRST-REVIEW.md) §3.1). FallibleInquiry's periphery receipt is rechecked too: it was stale at that review, with 19 of its 38 dependencies changed.
+6. **The front pages current.** The one page's counts are brought up to date (on `160a0f780` it says 481 registered results, and RESULTS registers 498). The twenty-first review's remaining §6 fixes go in the same pass.
+7. **Then the freeze** (the board's way now, item 3): one frozen commit, every dossier re-synced to it, the reader edition built with `--release`, and the sending decisions.
+
+**What does not hold a release.** These are named here so that none is read as a gap:
+
+- the theorems that read no field, which enter the root only where a central declaration uses them (§十三 item 13, and item 4 of "After OU3f" above);
+- a derivation of balance, whose failure U1's verdict wrote down, which meets that part;
+- models of an organism and an institution (plan §八 step 9), which is modelling work beyond the unification and is named as open on the one page;
+- real amounts, continuous time, quantum dynamics and consciousness;
+- the warrant of the two premises, which the account names and does not assert.
+
+**Why a gate and not the whole plan.** Plan §十三 asks for steps 5 to 10 in full. That measures the unification, not what a reader needs. The gate takes what would change a statement a release makes (items 1 to 4) and what a reader needs to check it (items 5 and 6). No date is set. OU3 was estimated at five to eight weeks (plan §十一) and took about one, 23 to 30 October 2026, but item 2 has no such precedent.
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.
