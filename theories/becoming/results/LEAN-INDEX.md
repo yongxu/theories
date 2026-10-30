@@ -19,17 +19,17 @@ Warrant of ethical premises, valid inference, recognition, motivation and implem
 <a id="覆盖范围--coverage"></a>
 ## Coverage
 
-The inventory contains **2,164 `.lean` paths and 1,708 distinct byte contents**, including 189 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
+The inventory contains **2,192 `.lean` paths and 1,734 distinct byte contents**, including 191 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
 
 | File role | Paths |
 |---|---:|
 | Audit driver | 13 |
-| Development attempt | 1,190 |
+| Development attempt | 1,217 |
 | Historical draft | 3 |
 | Imported archive | 23 |
-| Working source | 935 |
+| Working source | 936 |
 
-The working-source and audit entries contain **29,050 explicit theorem/lemma occurrences** and 42,553 explicit named declarations. These are source-location counts, **not counts of distinct propositions, passed proofs or research contributions**.
+The working-source and audit entries contain **29,050 explicit theorem/lemma occurrences** and 42,583 explicit named declarations. These are source-location counts, **not counts of distinct propositions, passed proofs or research contributions**.
 
 Hidden, ignored and untracked files are included; `.git`, `.lake`, `.build`, `node_modules`, `.venv`, `venv`, `__pycache__` and other sessions' worktrees (`.claude/worktrees`) are excluded, and directory symlinks are not followed. Archives and attempts remain in the JSON inventory without repeating them in the main table; saved copies in run, check, snapshot and history folders are neither read nor listed, each being bound by its own run's receipt, so a checker run leaves this catalogue unchanged. Working-source is a documentary role, not acceptance or verification status.
 
@@ -51,7 +51,7 @@ The scan lists explicit theorem, lemma, def, abbrev, structure, inductive, opaqu
 | [Concern and shared activity](#group-concern) | 15 |
 | [Organizational formation through revisable evaluation](#group-shared) | 66 |
 | [Generative core and relational structure](#group-core) | 143 |
-| [Other formal studies](#group-other) | 29 |
+| [Other formal studies](#group-other) | 30 |
 
 <a id="group-becoming-core"></a>
 
@@ -1142,6 +1142,7 @@ Conceptual entry: [GENERATIVE-GROUNDING](../history/GENERATIVE-GROUNDING.md) (ea
 | [SharedStockInstances](../../../experiments/market-generativity/meta-attractor/SharedStockInstances.lean) · [Names](lean-declarations/other.md#module-cb1d1649776a) | 4 | 1 | [Theory](../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../experiments/market-generativity/meta-attractor/README.md) |
 | [TestingReorganization](../../../experiments/market-generativity/meta-attractor/TestingReorganization.lean) · [Names](lean-declarations/other.md#module-e1b765e5997b) | 43 | 40 | [Package notes](../../../experiments/market-generativity/meta-attractor/README.md) |
 | [VersionedTaskInstances](../../../experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean) · [Names](lean-declarations/other.md#module-f82d00be1c12) | 22 | 8 | [Theory](../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../experiments/market-generativity/meta-attractor/README.md) |
+| [boundary_check](../../../tools/research/boundary_check.lean) · [Names](lean-declarations/other.md#module-9c753b6e9d67) | 0 | 30 | [Study](../../../_process/research/2026-10-05-repository-reconciliation/architecture/mv/BOUNDARY-FIELD.md) |
 
 <a id="更新目录--refresh-the-catalogue"></a>
 ## Refresh the catalogue

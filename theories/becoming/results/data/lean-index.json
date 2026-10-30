@@ -19,18 +19,18 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2164,
-    "distinct_byte_contents": 1708,
-    "byte_identical_duplicate_groups": 189,
+    "lean_paths": 2192,
+    "distinct_byte_contents": 1734,
+    "byte_identical_duplicate_groups": 191,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1190,
+      "development-attempt": 1217,
       "historical-draft": 3,
       "imported-archive": 23,
-      "working-source": 935
+      "working-source": 936
     },
     "working_named_theorem_lemma_occurrences": 29050,
-    "working_explicit_named_declaration_occurrences": 42553,
+    "working_explicit_named_declaration_occurrences": 42583,
     "working_groups": {
       "abstraction": 45,
       "becoming-core": 344,
@@ -40,7 +40,7 @@
       "ethics": 139,
       "inquiry": 71,
       "learning": 51,
-      "other": 29,
+      "other": 30,
       "renewal": 12,
       "shared": 66,
       "valuation": 19
@@ -4782,6 +4782,17 @@
       "proof_status": "not_assessed_by_catalogue"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/he2-item5/tree/Becoming/HE2Item5Check.lean",
+      "sha256": "af1facf72f3eb554399b28ceae161b35112fd14abf2decc22a5b5d66c10390f1",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/he2-item5/KIT.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/tree/Becoming/Admission.lean",
       "sha256": "767d9a4b834fff22258376d97242e8ed4f71203005f350088cf5297ce40736f0",
       "role": "development-attempt",
@@ -7550,6 +7561,242 @@
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/certificate-idiom-wrong.lean",
+      "sha256": "1330d29488adeb13e1bcb2ce4dba9c25d560224c2de8afded3d9698f0b50eaad",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/certificate-idiom.lean",
+      "sha256": "87ba5f4a9247522c697cffe1a1defc5be06373dae4015fbcd40d7f815dc775e1",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/BOUNDARY-FIELD.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/check/BoundaryCheckControls.lean",
+      "sha256": "92544251441c8430b119d28be3a2aae830707e73e1e9bdbd51bd4d2519cc487f",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/cert-variants.lean",
+      "sha256": "d1fcca9cc97fe01fdd0e1c556d4757e4d8ff4fb684f2b4514a43cc412fabea14",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/critic/U4Boundary-fd3.lean",
+      "sha256": "ef563477cedf82bdc922d4707ec94a7ac60cfc8fc582040141388b5d26f3acc8",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/critic/mr/CriticMR/MapRegions.lean",
+      "sha256": "b28bfeeb64a8a6e854fdda931d284e14fb6e78c408d6968e7e4bea3498863b54",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/critic/mr/dump_MR.lean",
+      "sha256": "2636d99a6323246280a0e64a76886406714fa9cd947c08dca98395fcd0d66eb0",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/drop-check-u4c.lean",
+      "sha256": "73f83eba007eae69a0a9c2151eb2951ddb5d5798955d701534b1c31afe1bb907",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/drop-check.lean",
+      "sha256": "529d6b2b2b5101d9e7f9f26fdc5295e0aac9c8e06ac8f9d6ace271f3a0d2b3c7",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/drop-hash-u4c.lean",
+      "sha256": "0a91e166115bd0f112e4daf54b88674379a7f62362245e6606ca25b5bb3d9ff3",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/dump_RT.lean",
+      "sha256": "14563eb35eb16480b2f64a6134258bf6cd2f9610e5d514ad09c0fdb9ad6d0743",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/dump_U4Boundary.lean",
+      "sha256": "fcfab786b4d7b9f1bd038401128e57aec33cf88d33d7f995c5ff50c9ece05e59",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/dump_U4C.lean",
+      "sha256": "a8eb0511d3122a285690f63025347efc8877346b902b7e3c3769b5b281713739",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/dump_U4L.lean",
+      "sha256": "80d5fb731a88acca232b285e159141ee248a698f9f629d0168e99c95e7a68cfa",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/dump_U4LeverTwo.lean",
+      "sha256": "508e1124585cd5851aa2a2d0a3b5c878264d8e418ca24dc6ebe7fa817488c5f9",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/edge/lean/mini.lean",
+      "sha256": "264f7a0817086339cc46da025ed514e35103605eac13eb77f41528d6619df604",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/edge/lean/mini2.lean",
+      "sha256": "cf59001b5fcc4f36ed270f9568099095f2e4b63d178cf312a4ae8e8cbba9abf2",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/edge/lean/mini3.lean",
+      "sha256": "aa108424dea054149dcea1c1fc9b6a03df1cc71b2af1ce250d962caaed0a5621",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/edge/lean/mini4.lean",
+      "sha256": "c16611912351bc7fda78397d02991e1484b6985d8ef1f3d75566d2214d11e230",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/fwd-check.lean",
+      "sha256": "471764f0f405f82ef001e83f8f8ed3a2e6fbc9c15beedc87bc1e83c6e70280c2",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/head-check-u4c.lean",
+      "sha256": "8fe74cf0fe8cf2602d7b06d6d721a9f69b087496d230032761fa644851bccd74",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/head-check.lean",
+      "sha256": "83349406ddfdfa3909402676860f6d2148b15108b732a1a047099d5c532e82e5",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/lean/S2Mini.lean",
+      "sha256": "d9d1578eda802d4d041db20a8b15bb52dc5537aab608d21807ddc78d650905b5",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/lean/S3Joint.lean",
+      "sha256": "ce87d707e83a4a286158f6b900b52a2630bb84f92a47c55c3607ac228d81a2a6",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/u4c/U4C/Boundary.lean",
+      "sha256": "9e5ea48dd9f2dadf673f194f3e6dce2108f0bb3fb3c0cc06edf581b906fbbfb7",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/u4l/U4L/Boundary.lean",
+      "sha256": "ef563477cedf82bdc922d4707ec94a7ac60cfc8fc582040141388b5d26f3acc8",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/README.md",
       "direct_documentation_links_from": [],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -24457,6 +24704,17 @@
       "group": "other",
       "package_readme": null,
       "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "tools/research/boundary_check.lean",
+      "sha256": "fb0cae07472e46b1fd6d6b7730038307a68b7aeacb01ee7613eaca9f93b41568",
+      "role": "working-source",
+      "group": "other",
+      "package_readme": null,
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/BOUNDARY-FIELD.md"
+      ],
       "proof_status": "not_assessed_by_catalogue"
     }
   ],
@@ -45105,6 +45363,45 @@
       },
       "print_axioms_commands": 0
     },
+    "0a91e166115bd0f112e4daf54b88674379a7f62362245e6606ca25b5bb3d9ff3": {
+      "byte_size": 1902,
+      "line_count": 41,
+      "imports": [
+        "Lean",
+        "U4C.Boundary"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "dropBinder",
+          "qualified_name_hint": "dropBinder",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "drops",
+          "qualified_name_hint": "drops",
+          "line": 13
+        },
+        {
+          "kind": "def",
+          "name": "negated?",
+          "qualified_name_hint": "negated?",
+          "line": 16
+        }
+      ],
+      "declaration_counts": {
+        "def": 3
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "0addcdfd8e19e41f68b1236dd80cdcff6f86b57af68043848cf3aade0aa362d3": {
       "byte_size": 69340,
       "line_count": 1272,
@@ -65026,6 +65323,73 @@
       },
       "print_axioms_commands": 0
     },
+    "1330d29488adeb13e1bcb2ce4dba9c25d560224c2de8afded3d9698f0b50eaad": {
+      "byte_size": 682,
+      "line_count": 15,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "step",
+          "line": 4
+        },
+        {
+          "kind": "def",
+          "name": "Clo",
+          "qualified_name_hint": "Clo",
+          "line": 5
+        },
+        {
+          "kind": "theorem",
+          "name": "row",
+          "qualified_name_hint": "row",
+          "line": 6
+        },
+        {
+          "kind": "theorem",
+          "name": "other",
+          "qualified_name_hint": "other",
+          "line": 7
+        },
+        {
+          "kind": "theorem",
+          "name": "bad",
+          "qualified_name_hint": "bad",
+          "line": 9
+        },
+        {
+          "kind": "theorem",
+          "name": "rowU",
+          "qualified_name_hint": "rowU",
+          "line": 12
+        },
+        {
+          "kind": "theorem",
+          "name": "bAtType",
+          "qualified_name_hint": "bAtType",
+          "line": 13
+        },
+        {
+          "kind": "theorem",
+          "name": "badU.",
+          "qualified_name_hint": "badU.",
+          "line": 15
+        }
+      ],
+      "declaration_counts": {
+        "def": 2,
+        "theorem": 6
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "139eb664804cabc291d9c961a6a421c5307b2be6206d35d4200fae4ef15cda38": {
       "byte_size": 5976,
       "line_count": 112,
@@ -65159,6 +65523,93 @@
       ],
       "declarations": [],
       "declaration_counts": {},
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "14563eb35eb16480b2f64a6134258bf6cd2f9610e5d514ad09c0fdb9ad6d0743": {
+      "byte_size": 9885,
+      "line_count": 198,
+      "imports": [
+        "Lean",
+        "RTest.RT"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "toolchainRoots",
+          "qualified_name_hint": "toolchainRoots",
+          "line": 32
+        },
+        {
+          "kind": "def",
+          "name": "stripLams",
+          "qualified_name_hint": "stripLams",
+          "line": 35
+        },
+        {
+          "kind": "def",
+          "name": "binderInfos",
+          "qualified_name_hint": "binderInfos",
+          "line": 41
+        },
+        {
+          "kind": "def",
+          "name": "closedValue",
+          "qualified_name_hint": "closedValue",
+          "line": 48
+        },
+        {
+          "kind": "def",
+          "name": "namesWitness",
+          "qualified_name_hint": "namesWitness",
+          "line": 56
+        },
+        {
+          "kind": "def",
+          "name": "appliedTheorem",
+          "qualified_name_hint": "appliedTheorem",
+          "line": 64
+        },
+        {
+          "kind": "def",
+          "name": "forwardTarget",
+          "qualified_name_hint": "forwardTarget",
+          "line": 84
+        },
+        {
+          "kind": "def",
+          "name": "sortBinders",
+          "qualified_name_hint": "sortBinders",
+          "line": 99
+        },
+        {
+          "kind": "def",
+          "name": "applications",
+          "qualified_name_hint": "applications",
+          "line": 105
+        },
+        {
+          "kind": "def",
+          "name": "lawHeads",
+          "qualified_name_hint": "lawHeads",
+          "line": 116
+        },
+        {
+          "kind": "def",
+          "name": "eqField",
+          "qualified_name_hint": "eqField",
+          "line": 137
+        }
+      ],
+      "declaration_counts": {
+        "def": 11
+      },
       "textual_markers": {
         "sorry": [],
         "admit": [],
@@ -106695,6 +107146,235 @@
       ],
       "declarations": [],
       "declaration_counts": {},
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "2636d99a6323246280a0e64a76886406714fa9cd947c08dca98395fcd0d66eb0": {
+      "byte_size": 9896,
+      "line_count": 198,
+      "imports": [
+        "Lean",
+        "CriticMR.MapRegions"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "toolchainRoots",
+          "qualified_name_hint": "toolchainRoots",
+          "line": 32
+        },
+        {
+          "kind": "def",
+          "name": "stripLams",
+          "qualified_name_hint": "stripLams",
+          "line": 35
+        },
+        {
+          "kind": "def",
+          "name": "binderInfos",
+          "qualified_name_hint": "binderInfos",
+          "line": 41
+        },
+        {
+          "kind": "def",
+          "name": "closedValue",
+          "qualified_name_hint": "closedValue",
+          "line": 48
+        },
+        {
+          "kind": "def",
+          "name": "namesWitness",
+          "qualified_name_hint": "namesWitness",
+          "line": 56
+        },
+        {
+          "kind": "def",
+          "name": "appliedTheorem",
+          "qualified_name_hint": "appliedTheorem",
+          "line": 64
+        },
+        {
+          "kind": "def",
+          "name": "forwardTarget",
+          "qualified_name_hint": "forwardTarget",
+          "line": 84
+        },
+        {
+          "kind": "def",
+          "name": "sortBinders",
+          "qualified_name_hint": "sortBinders",
+          "line": 99
+        },
+        {
+          "kind": "def",
+          "name": "applications",
+          "qualified_name_hint": "applications",
+          "line": 105
+        },
+        {
+          "kind": "def",
+          "name": "lawHeads",
+          "qualified_name_hint": "lawHeads",
+          "line": 116
+        },
+        {
+          "kind": "def",
+          "name": "eqField",
+          "qualified_name_hint": "eqField",
+          "line": 137
+        }
+      ],
+      "declaration_counts": {
+        "def": 11
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "264f7a0817086339cc46da025ed514e35103605eac13eb77f41528d6619df604": {
+      "byte_size": 3962,
+      "line_count": 66,
+      "imports": [
+        "Lean"
+      ],
+      "declarations": [
+        {
+          "kind": "abbrev",
+          "name": "«际»",
+          "qualified_name_hint": "Becoming.«际»",
+          "line": 11
+        },
+        {
+          "kind": "def",
+          "name": "«而»",
+          "qualified_name_hint": "Becoming.«而»",
+          "line": 12
+        },
+        {
+          "kind": "def",
+          "name": "«则»",
+          "qualified_name_hint": "Becoming.«则»",
+          "line": 13
+        },
+        {
+          "kind": "def",
+          "name": "GivenTo",
+          "qualified_name_hint": "Becoming.U4Boundary.GivenTo",
+          "line": 17
+        },
+        {
+          "kind": "def",
+          "name": "Inherits",
+          "qualified_name_hint": "Becoming.U4Boundary.Inherits",
+          "line": 18
+        },
+        {
+          "kind": "def",
+          "name": "UndependedFrom",
+          "qualified_name_hint": "Becoming.U4Boundary.UndependedFrom",
+          "line": 19
+        },
+        {
+          "kind": "theorem",
+          "name": "descent_forms_no_dependence",
+          "qualified_name_hint": "Becoming.U4Boundary.descent_forms_no_dependence",
+          "line": 20
+        },
+        {
+          "kind": "theorem",
+          "name": "descent_forms_no_dependence.needs_given",
+          "qualified_name_hint": "Becoming.U4Boundary.descent_forms_no_dependence.needs_given",
+          "line": 25
+        },
+        {
+          "kind": "def",
+          "name": "GivesFrom",
+          "qualified_name_hint": "Becoming.U4Boundary.GivesFrom",
+          "line": 30
+        },
+        {
+          "kind": "def",
+          "name": "ListedWithin",
+          "qualified_name_hint": "Becoming.U4Boundary.ListedWithin",
+          "line": 32
+        },
+        {
+          "kind": "def",
+          "name": "Outside",
+          "qualified_name_hint": "Becoming.U4Boundary.Outside",
+          "line": 34
+        },
+        {
+          "kind": "theorem",
+          "name": "length_zero_of_none",
+          "qualified_name_hint": "Becoming.U4Boundary.length_zero_of_none",
+          "line": 35
+        },
+        {
+          "kind": "def",
+          "name": "CancelsAlong",
+          "qualified_name_hint": "Becoming.U4Boundary.CancelsAlong",
+          "line": 41
+        },
+        {
+          "kind": "def",
+          "name": "BoundedAlong",
+          "qualified_name_hint": "Becoming.U4Boundary.BoundedAlong",
+          "line": 42
+        },
+        {
+          "kind": "def",
+          "name": "Redundant",
+          "qualified_name_hint": "Becoming.U4Boundary.Redundant",
+          "line": 45
+        },
+        {
+          "kind": "theorem",
+          "name": "loose_form",
+          "qualified_name_hint": "Becoming.U4Boundary.loose_form",
+          "line": 46
+        },
+        {
+          "kind": "def",
+          "name": "wR",
+          "qualified_name_hint": "Becoming.U4Boundary.wR",
+          "line": 47
+        },
+        {
+          "kind": "theorem",
+          "name": "w_not_redundant",
+          "qualified_name_hint": "Becoming.U4Boundary.w_not_redundant",
+          "line": 48
+        },
+        {
+          "kind": "theorem",
+          "name": "Redundant_needed",
+          "qualified_name_hint": "Becoming.U4Boundary.Redundant_needed",
+          "line": 49
+        },
+        {
+          "kind": "theorem",
+          "name": "loose_form_without",
+          "qualified_name_hint": "Becoming.U4Boundary.loose_form_without",
+          "line": 52
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 12,
+        "theorem": 7
+      },
       "textual_markers": {
         "sorry": [],
         "admit": [],
@@ -165142,6 +165822,94 @@
       },
       "print_axioms_commands": 0
     },
+    "471764f0f405f82ef001e83f8f8ed3a2e6fbc9c15beedc87bc1e83c6e70280c2": {
+      "byte_size": 7596,
+      "line_count": 154,
+      "imports": [
+        "Lean",
+        "Becoming.Frame",
+        "Becoming.GrammarLaws"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "toolchainRoots",
+          "qualified_name_hint": "toolchainRoots",
+          "line": 33
+        },
+        {
+          "kind": "def",
+          "name": "stripLams",
+          "qualified_name_hint": "stripLams",
+          "line": 36
+        },
+        {
+          "kind": "def",
+          "name": "binderInfos",
+          "qualified_name_hint": "binderInfos",
+          "line": 42
+        },
+        {
+          "kind": "def",
+          "name": "closedValue",
+          "qualified_name_hint": "closedValue",
+          "line": 49
+        },
+        {
+          "kind": "def",
+          "name": "namesWitness",
+          "qualified_name_hint": "namesWitness",
+          "line": 57
+        },
+        {
+          "kind": "def",
+          "name": "appliedTheorem",
+          "qualified_name_hint": "appliedTheorem",
+          "line": 65
+        },
+        {
+          "kind": "def",
+          "name": "forwardTarget",
+          "qualified_name_hint": "forwardTarget",
+          "line": 85
+        },
+        {
+          "kind": "def",
+          "name": "sortBinders",
+          "qualified_name_hint": "sortBinders",
+          "line": 100
+        },
+        {
+          "kind": "def",
+          "name": "applications",
+          "qualified_name_hint": "applications",
+          "line": 106
+        },
+        {
+          "kind": "def",
+          "name": "lawHeads",
+          "qualified_name_hint": "lawHeads",
+          "line": 117
+        },
+        {
+          "kind": "def",
+          "name": "reducedBinders",
+          "qualified_name_hint": "reducedBinders",
+          "line": 139
+        }
+      ],
+      "declaration_counts": {
+        "def": 11
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "472b9f2eaace099b154237021fc3311f9c73f2d36db4cbb3c20f3a8ef1395be3": {
       "byte_size": 25468,
       "line_count": 547,
@@ -185227,6 +185995,93 @@
       },
       "print_axioms_commands": 0
     },
+    "508e1124585cd5851aa2a2d0a3b5c878264d8e418ca24dc6ebe7fa817488c5f9": {
+      "byte_size": 9896,
+      "line_count": 198,
+      "imports": [
+        "Lean",
+        "Becoming.U4LeverTwo"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "toolchainRoots",
+          "qualified_name_hint": "toolchainRoots",
+          "line": 32
+        },
+        {
+          "kind": "def",
+          "name": "stripLams",
+          "qualified_name_hint": "stripLams",
+          "line": 35
+        },
+        {
+          "kind": "def",
+          "name": "binderInfos",
+          "qualified_name_hint": "binderInfos",
+          "line": 41
+        },
+        {
+          "kind": "def",
+          "name": "closedValue",
+          "qualified_name_hint": "closedValue",
+          "line": 48
+        },
+        {
+          "kind": "def",
+          "name": "namesWitness",
+          "qualified_name_hint": "namesWitness",
+          "line": 56
+        },
+        {
+          "kind": "def",
+          "name": "appliedTheorem",
+          "qualified_name_hint": "appliedTheorem",
+          "line": 64
+        },
+        {
+          "kind": "def",
+          "name": "forwardTarget",
+          "qualified_name_hint": "forwardTarget",
+          "line": 84
+        },
+        {
+          "kind": "def",
+          "name": "sortBinders",
+          "qualified_name_hint": "sortBinders",
+          "line": 99
+        },
+        {
+          "kind": "def",
+          "name": "applications",
+          "qualified_name_hint": "applications",
+          "line": 105
+        },
+        {
+          "kind": "def",
+          "name": "lawHeads",
+          "qualified_name_hint": "lawHeads",
+          "line": 116
+        },
+        {
+          "kind": "def",
+          "name": "eqField",
+          "qualified_name_hint": "eqField",
+          "line": 137
+        }
+      ],
+      "declaration_counts": {
+        "def": 11
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "50a53898ad23cdd9013f705f4c34652b519ee30b0d01c4823512cb0b64eaee77": {
       "byte_size": 39034,
       "line_count": 932,
@@ -188248,6 +189103,45 @@
         "unsafe": []
       },
       "print_axioms_commands": 10
+    },
+    "529d6b2b2b5101d9e7f9f26fdc5295e0aac9c8e06ac8f9d6ace271f3a0d2b3c7": {
+      "byte_size": 1810,
+      "line_count": 40,
+      "imports": [
+        "Lean",
+        "Becoming.U4Boundary"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "dropBinder",
+          "qualified_name_hint": "dropBinder",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "drops",
+          "qualified_name_hint": "drops",
+          "line": 13
+        },
+        {
+          "kind": "def",
+          "name": "negated?",
+          "qualified_name_hint": "negated?",
+          "line": 16
+        }
+      ],
+      "declaration_counts": {
+        "def": 3
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
     },
     "52d6f776af632644641e01b34bc1e35a64f4c6e37cdf3415fe1d086751ae1728": {
       "byte_size": 53864,
@@ -252096,6 +252990,45 @@
       },
       "print_axioms_commands": 0
     },
+    "73f83eba007eae69a0a9c2151eb2951ddb5d5798955d701534b1c31afe1bb907": {
+      "byte_size": 1803,
+      "line_count": 40,
+      "imports": [
+        "Lean",
+        "U4C.Boundary"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "dropBinder",
+          "qualified_name_hint": "dropBinder",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "drops",
+          "qualified_name_hint": "drops",
+          "line": 13
+        },
+        {
+          "kind": "def",
+          "name": "negated?",
+          "qualified_name_hint": "negated?",
+          "line": 16
+        }
+      ],
+      "declaration_counts": {
+        "def": 3
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "742c1978023c170c41688055cd5229a17a2a55154fd06ae471ae78a496e57e43": {
       "byte_size": 12681,
       "line_count": 293,
@@ -274146,6 +275079,93 @@
       },
       "print_axioms_commands": 15
     },
+    "80d5fb731a88acca232b285e159141ee248a698f9f629d0168e99c95e7a68cfa": {
+      "byte_size": 9889,
+      "line_count": 198,
+      "imports": [
+        "Lean",
+        "U4L.Boundary"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "toolchainRoots",
+          "qualified_name_hint": "toolchainRoots",
+          "line": 32
+        },
+        {
+          "kind": "def",
+          "name": "stripLams",
+          "qualified_name_hint": "stripLams",
+          "line": 35
+        },
+        {
+          "kind": "def",
+          "name": "binderInfos",
+          "qualified_name_hint": "binderInfos",
+          "line": 41
+        },
+        {
+          "kind": "def",
+          "name": "closedValue",
+          "qualified_name_hint": "closedValue",
+          "line": 48
+        },
+        {
+          "kind": "def",
+          "name": "namesWitness",
+          "qualified_name_hint": "namesWitness",
+          "line": 56
+        },
+        {
+          "kind": "def",
+          "name": "appliedTheorem",
+          "qualified_name_hint": "appliedTheorem",
+          "line": 64
+        },
+        {
+          "kind": "def",
+          "name": "forwardTarget",
+          "qualified_name_hint": "forwardTarget",
+          "line": 84
+        },
+        {
+          "kind": "def",
+          "name": "sortBinders",
+          "qualified_name_hint": "sortBinders",
+          "line": 99
+        },
+        {
+          "kind": "def",
+          "name": "applications",
+          "qualified_name_hint": "applications",
+          "line": 105
+        },
+        {
+          "kind": "def",
+          "name": "lawHeads",
+          "qualified_name_hint": "lawHeads",
+          "line": 116
+        },
+        {
+          "kind": "def",
+          "name": "eqField",
+          "qualified_name_hint": "eqField",
+          "line": 137
+        }
+      ],
+      "declaration_counts": {
+        "def": 11
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "814499c86249cfcf6e0ab73cc2b8439fbb3c51f849b982e8f9c818f7859d6ebd": {
       "byte_size": 340989,
       "line_count": 5608,
@@ -281181,6 +282201,33 @@
         "unsafe": []
       },
       "print_axioms_commands": 36
+    },
+    "83349406ddfdfa3909402676860f6d2148b15108b732a1a047099d5c532e82e5": {
+      "byte_size": 673,
+      "line_count": 18,
+      "imports": [
+        "Lean",
+        "Becoming.U4Boundary"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "headUnderLams",
+          "qualified_name_hint": "headUnderLams",
+          "line": 6
+        }
+      ],
+      "declaration_counts": {
+        "def": 1
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
     },
     "83434a825f65c68bf3f44b98928fa479bd750950e0f4dbdbea8b6aebd7567d3f": {
       "byte_size": 18390,
@@ -290912,6 +291959,201 @@
         "unsafe": []
       },
       "print_axioms_commands": 0
+    },
+    "87ba5f4a9247522c697cffe1a1defc5be06373dae4015fbcd40d7f815dc775e1": {
+      "byte_size": 3830,
+      "line_count": 74,
+      "imports": [
+        "Lean"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "Incl",
+          "qualified_name_hint": "Incl",
+          "line": 8
+        },
+        {
+          "kind": "def",
+          "name": "Holds",
+          "qualified_name_hint": "Holds",
+          "line": 9
+        },
+        {
+          "kind": "theorem",
+          "name": "form",
+          "qualified_name_hint": "form",
+          "line": 10
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "step",
+          "line": 14
+        },
+        {
+          "kind": "def",
+          "name": "Clo",
+          "qualified_name_hint": "Clo",
+          "line": 15
+        },
+        {
+          "kind": "theorem",
+          "name": "row",
+          "qualified_name_hint": "row",
+          "line": 16
+        },
+        {
+          "kind": "theorem",
+          "name": "step_incl",
+          "qualified_name_hint": "step_incl",
+          "line": 19
+        },
+        {
+          "kind": "theorem",
+          "name": "recovery",
+          "qualified_name_hint": "recovery",
+          "line": 20
+        },
+        {
+          "kind": "theorem",
+          "name": "cert",
+          "qualified_name_hint": "cert",
+          "line": 22
+        },
+        {
+          "kind": "def",
+          "name": "wR",
+          "qualified_name_hint": "wR",
+          "line": 27
+        },
+        {
+          "kind": "def",
+          "name": "wS",
+          "qualified_name_hint": "wS",
+          "line": 28
+        },
+        {
+          "kind": "theorem",
+          "name": "w_holds",
+          "qualified_name_hint": "w_holds",
+          "line": 29
+        },
+        {
+          "kind": "theorem",
+          "name": "w_fails",
+          "qualified_name_hint": "w_fails",
+          "line": 30
+        },
+        {
+          "kind": "theorem",
+          "name": "incl_needed",
+          "qualified_name_hint": "incl_needed",
+          "line": 31
+        },
+        {
+          "kind": "theorem",
+          "name": "rowImp",
+          "qualified_name_hint": "rowImp",
+          "line": 34
+        },
+        {
+          "kind": "theorem",
+          "name": "bExp",
+          "qualified_name_hint": "bExp",
+          "line": 35
+        },
+        {
+          "kind": "theorem",
+          "name": "certKind",
+          "qualified_name_hint": "certKind",
+          "line": 36
+        },
+        {
+          "kind": "theorem",
+          "name": "rowU",
+          "qualified_name_hint": "rowU",
+          "line": 40
+        },
+        {
+          "kind": "theorem",
+          "name": "bAtType",
+          "qualified_name_hint": "bAtType",
+          "line": 41
+        },
+        {
+          "kind": "theorem",
+          "name": "certAtZero",
+          "qualified_name_hint": "certAtZero",
+          "line": 42
+        },
+        {
+          "kind": "theorem",
+          "name": "bGeneral",
+          "qualified_name_hint": "bGeneral",
+          "line": 43
+        },
+        {
+          "kind": "theorem",
+          "name": "certGeneral.",
+          "qualified_name_hint": "certGeneral.",
+          "line": 44
+        },
+        {
+          "kind": "def",
+          "name": "twice",
+          "qualified_name_hint": "twice",
+          "line": 47
+        },
+        {
+          "kind": "theorem",
+          "name": "rowNum",
+          "qualified_name_hint": "rowNum",
+          "line": 48
+        },
+        {
+          "kind": "theorem",
+          "name": "trivialB",
+          "qualified_name_hint": "trivialB",
+          "line": 49
+        },
+        {
+          "kind": "theorem",
+          "name": "certEval",
+          "qualified_name_hint": "certEval",
+          "line": 50
+        },
+        {
+          "kind": "theorem",
+          "name": "other",
+          "qualified_name_hint": "other",
+          "line": 54
+        },
+        {
+          "kind": "theorem",
+          "name": "vacuous",
+          "qualified_name_hint": "vacuous",
+          "line": 55
+        },
+        {
+          "kind": "def",
+          "name": "eqField",
+          "qualified_name_hint": "eqField",
+          "line": 59
+        }
+      ],
+      "declaration_counts": {
+        "def": 8,
+        "theorem": 21
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 3
     },
     "87c6062991c043f2ed6a8c8cc969f8f1e574d17d98f469b602285c5f7d805007": {
       "byte_size": 31833,
@@ -309257,6 +310499,33 @@
       },
       "print_axioms_commands": 0
     },
+    "8fe74cf0fe8cf2602d7b06d6d721a9f69b087496d230032761fa644851bccd74": {
+      "byte_size": 666,
+      "line_count": 18,
+      "imports": [
+        "Lean",
+        "U4C.Boundary"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "headUnderLams",
+          "qualified_name_hint": "headUnderLams",
+          "line": 6
+        }
+      ],
+      "declaration_counts": {
+        "def": 1
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "904f4c8c4433a37611d80071f89fbd749adc2bcb8ab4a51b656b3de4afbfc82b": {
       "byte_size": 38032,
       "line_count": 701,
@@ -313350,6 +314619,165 @@
       "declaration_counts": {
         "def": 4,
         "theorem": 7
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "92544251441c8430b119d28be3a2aae830707e73e1e9bdbd51bd4d2519cc487f": {
+      "byte_size": 4982,
+      "line_count": 105,
+      "imports": [
+        "Becoming.U4Boundary"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "needs_gate_through_form",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.needs_gate_through_form",
+          "line": 11
+        },
+        {
+          "kind": "theorem",
+          "name": "needs_given_vacuous",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.needs_given_vacuous",
+          "line": 19
+        },
+        {
+          "kind": "theorem",
+          "name": "bounded_form",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.bounded_form",
+          "line": 25
+        },
+        {
+          "kind": "theorem",
+          "name": "one_offspring_through_form",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.one_offspring_through_form",
+          "line": 32
+        },
+        {
+          "kind": "theorem",
+          "name": "gate_needed_through_fact",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.gate_needed_through_fact",
+          "line": 37
+        },
+        {
+          "kind": "theorem",
+          "name": "gate_needed_aside",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.gate_needed_aside",
+          "line": 42
+        },
+        {
+          "kind": "def",
+          "name": "Holds",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.Holds",
+          "line": 49
+        },
+        {
+          "kind": "theorem",
+          "name": "holds_form",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.holds_form",
+          "line": 51
+        },
+        {
+          "kind": "theorem",
+          "name": "holds_form.needs_holds",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.holds_form.needs_holds",
+          "line": 52
+        },
+        {
+          "kind": "theorem",
+          "name": "holds_form.holds_needed",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.holds_form.holds_needed",
+          "line": 53
+        },
+        {
+          "kind": "theorem",
+          "name": "all_end_by_holds",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.all_end_by_holds",
+          "line": 56
+        },
+        {
+          "kind": "theorem",
+          "name": "all_end_by_holds_certified",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.all_end_by_holds_certified",
+          "line": 60
+        },
+        {
+          "kind": "theorem",
+          "name": "«不在文法»",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.«不在文法»",
+          "line": 63
+        },
+        {
+          "kind": "theorem",
+          "name": "all_end_certified_reversed",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.all_end_certified_reversed",
+          "line": 66
+        },
+        {
+          "kind": "theorem",
+          "name": "all_end_vacuous",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.all_end_vacuous",
+          "line": 69
+        },
+        {
+          "kind": "theorem",
+          "name": "all_end_through_have",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.all_end_through_have",
+          "line": 73
+        },
+        {
+          "kind": "theorem",
+          "name": "all_end_through_have_certified",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.all_end_through_have_certified",
+          "line": 82
+        },
+        {
+          "kind": "theorem",
+          "name": "swap_bridge",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.swap_bridge",
+          "line": 85
+        },
+        {
+          "kind": "theorem",
+          "name": "all_end_by_bridge",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.all_end_by_bridge",
+          "line": 88
+        },
+        {
+          "kind": "theorem",
+          "name": "all_end_by_bridge_certified",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.all_end_by_bridge_certified",
+          "line": 96
+        },
+        {
+          "kind": "theorem",
+          "name": "rowU",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.rowU",
+          "line": 101
+        },
+        {
+          "kind": "theorem",
+          "name": "atType",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.atType",
+          "line": 102
+        },
+        {
+          "kind": "theorem",
+          "name": "certAtZero",
+          "qualified_name_hint": "Becoming.BoundaryCheckControls.certAtZero",
+          "line": 103
+        }
+      ],
+      "declaration_counts": {
+        "def": 1,
+        "theorem": 22
       },
       "textual_markers": {
         "sorry": [],
@@ -328340,6 +329768,149 @@
         "unsafe": []
       },
       "print_axioms_commands": 10
+    },
+    "9e5ea48dd9f2dadf673f194f3e6dce2108f0bb3fb3c0cc06edf581b906fbbfb7": {
+      "byte_size": 10353,
+      "line_count": 182,
+      "imports": [
+        "Becoming.Grammar",
+        "Becoming.Transmission",
+        "Becoming.GroupEnding"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "GivenTo",
+          "qualified_name_hint": "Becoming.U4Boundary.GivenTo",
+          "line": 43
+        },
+        {
+          "kind": "def",
+          "name": "Inherits",
+          "qualified_name_hint": "Becoming.U4Boundary.Inherits",
+          "line": 48
+        },
+        {
+          "kind": "def",
+          "name": "UndependedFrom",
+          "qualified_name_hint": "Becoming.U4Boundary.UndependedFrom",
+          "line": 52
+        },
+        {
+          "kind": "theorem",
+          "name": "descent_forms_no_dependence",
+          "qualified_name_hint": "Becoming.U4Boundary.descent_forms_no_dependence",
+          "line": 58
+        },
+        {
+          "kind": "theorem",
+          "name": "descent_forms_no_dependence.needs_given",
+          "qualified_name_hint": "Becoming.U4Boundary.descent_forms_no_dependence.needs_given",
+          "line": 66
+        },
+        {
+          "kind": "theorem",
+          "name": "descent_forms_no_dependence.needs_inherits",
+          "qualified_name_hint": "Becoming.U4Boundary.descent_forms_no_dependence.needs_inherits",
+          "line": 74
+        },
+        {
+          "kind": "theorem",
+          "name": "descent_forms_no_dependence.needs_undepended",
+          "qualified_name_hint": "Becoming.U4Boundary.descent_forms_no_dependence.needs_undepended",
+          "line": 82
+        },
+        {
+          "kind": "theorem",
+          "name": "no_new_dependence_at_model",
+          "qualified_name_hint": "Becoming.U4Boundary.no_new_dependence_at_model",
+          "line": 93
+        },
+        {
+          "kind": "theorem",
+          "name": "no_new_dependence_certified",
+          "qualified_name_hint": "Becoming.U4Boundary.no_new_dependence_certified",
+          "line": 104
+        },
+        {
+          "kind": "def",
+          "name": "GivesFrom",
+          "qualified_name_hint": "Becoming.U4Boundary.GivesFrom",
+          "line": 109
+        },
+        {
+          "kind": "def",
+          "name": "ListedWithin",
+          "qualified_name_hint": "Becoming.U4Boundary.ListedWithin",
+          "line": 114
+        },
+        {
+          "kind": "def",
+          "name": "Outside",
+          "qualified_name_hint": "Becoming.U4Boundary.Outside",
+          "line": 118
+        },
+        {
+          "kind": "theorem",
+          "name": "succ_ne_zero",
+          "qualified_name_hint": "Becoming.U4Boundary.succ_ne_zero",
+          "line": 122
+        },
+        {
+          "kind": "theorem",
+          "name": "length_zero_of_none",
+          "qualified_name_hint": "Becoming.U4Boundary.length_zero_of_none",
+          "line": 125
+        },
+        {
+          "kind": "theorem",
+          "name": "outside_leaves_no_offspring",
+          "qualified_name_hint": "Becoming.U4Boundary.outside_leaves_no_offspring",
+          "line": 132
+        },
+        {
+          "kind": "theorem",
+          "name": "outside_leaves_no_offspring.needs_gate",
+          "qualified_name_hint": "Becoming.U4Boundary.outside_leaves_no_offspring.needs_gate",
+          "line": 141
+        },
+        {
+          "kind": "theorem",
+          "name": "outside_leaves_no_offspring.needs_descent",
+          "qualified_name_hint": "Becoming.U4Boundary.outside_leaves_no_offspring.needs_descent",
+          "line": 149
+        },
+        {
+          "kind": "theorem",
+          "name": "outside_leaves_no_offspring.needs_outside",
+          "qualified_name_hint": "Becoming.U4Boundary.outside_leaves_no_offspring.needs_outside",
+          "line": 157
+        },
+        {
+          "kind": "theorem",
+          "name": "all_end_at_model",
+          "qualified_name_hint": "Becoming.U4Boundary.all_end_at_model",
+          "line": 169
+        },
+        {
+          "kind": "theorem",
+          "name": "all_end_certified",
+          "qualified_name_hint": "Becoming.U4Boundary.all_end_certified",
+          "line": 178
+        }
+      ],
+      "declaration_counts": {
+        "def": 6,
+        "theorem": 14
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
     },
     "9e76cc787e363e0c4ad75e34adc94bf1fe7983076e76a367850d72f65e7bf518": {
       "byte_size": 15121,
@@ -354795,6 +356366,93 @@
       },
       "print_axioms_commands": 0
     },
+    "a8eb0511d3122a285690f63025347efc8877346b902b7e3c3769b5b281713739": {
+      "byte_size": 9889,
+      "line_count": 198,
+      "imports": [
+        "Lean",
+        "U4C.Boundary"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "toolchainRoots",
+          "qualified_name_hint": "toolchainRoots",
+          "line": 32
+        },
+        {
+          "kind": "def",
+          "name": "stripLams",
+          "qualified_name_hint": "stripLams",
+          "line": 35
+        },
+        {
+          "kind": "def",
+          "name": "binderInfos",
+          "qualified_name_hint": "binderInfos",
+          "line": 41
+        },
+        {
+          "kind": "def",
+          "name": "closedValue",
+          "qualified_name_hint": "closedValue",
+          "line": 48
+        },
+        {
+          "kind": "def",
+          "name": "namesWitness",
+          "qualified_name_hint": "namesWitness",
+          "line": 56
+        },
+        {
+          "kind": "def",
+          "name": "appliedTheorem",
+          "qualified_name_hint": "appliedTheorem",
+          "line": 64
+        },
+        {
+          "kind": "def",
+          "name": "forwardTarget",
+          "qualified_name_hint": "forwardTarget",
+          "line": 84
+        },
+        {
+          "kind": "def",
+          "name": "sortBinders",
+          "qualified_name_hint": "sortBinders",
+          "line": 99
+        },
+        {
+          "kind": "def",
+          "name": "applications",
+          "qualified_name_hint": "applications",
+          "line": 105
+        },
+        {
+          "kind": "def",
+          "name": "lawHeads",
+          "qualified_name_hint": "lawHeads",
+          "line": 116
+        },
+        {
+          "kind": "def",
+          "name": "eqField",
+          "qualified_name_hint": "eqField",
+          "line": 137
+        }
+      ],
+      "declaration_counts": {
+        "def": 11
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "a8ff1a2cd56eedd784d76e833f853085f6070f9b26b9115b03df045e3783d093": {
       "byte_size": 14832,
       "line_count": 318,
@@ -356229,6 +357887,52 @@
         "def": 9,
         "inductive": 2,
         "theorem": 17
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "aa108424dea054149dcea1c1fc9b6a03df1cc71b2af1ce250d962caaed0a5621": {
+      "byte_size": 1024,
+      "line_count": 21,
+      "imports": [
+        "Lean"
+      ],
+      "declarations": [
+        {
+          "kind": "abbrev",
+          "name": "«际»",
+          "qualified_name_hint": "Becoming.«际»",
+          "line": 5
+        },
+        {
+          "kind": "def",
+          "name": "«则»",
+          "qualified_name_hint": "Becoming.«则»",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "Gate",
+          "qualified_name_hint": "Becoming.U4Boundary.Gate",
+          "line": 10
+        },
+        {
+          "kind": "theorem",
+          "name": "form_inline",
+          "qualified_name_hint": "Becoming.U4Boundary.form_inline",
+          "line": 12
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 2,
+        "theorem": 1
       },
       "textual_markers": {
         "sorry": [],
@@ -365706,6 +367410,46 @@
         "def": 6,
         "structure": 1,
         "theorem": 12
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "af1facf72f3eb554399b28ceae161b35112fd14abf2decc22a5b5d66c10390f1": {
+      "byte_size": 2885,
+      "line_count": 67,
+      "imports": [
+        "Becoming.MapRegions",
+        "Becoming.WideningOnTheMap",
+        "Becoming.HeldPossible"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "reached_le",
+          "qualified_name_hint": "Becoming.HE2Item5.reached_le",
+          "line": 19
+        },
+        {
+          "kind": "theorem",
+          "name": "reach_succ",
+          "qualified_name_hint": "Becoming.HE2Item5.reach_succ",
+          "line": 33
+        },
+        {
+          "kind": "theorem",
+          "name": "reach_of_le",
+          "qualified_name_hint": "Becoming.HE2Item5.reach_of_le",
+          "line": 41
+        }
+      ],
+      "declaration_counts": {
+        "theorem": 3
       },
       "textual_markers": {
         "sorry": [],
@@ -405180,6 +406924,75 @@
       },
       "print_axioms_commands": 33
     },
+    "c16611912351bc7fda78397d02991e1484b6985d8ef1f3d75566d2214d11e230": {
+      "byte_size": 1021,
+      "line_count": 18,
+      "imports": [
+        "Lean"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "Incl",
+          "qualified_name_hint": "Incl",
+          "line": 4
+        },
+        {
+          "kind": "def",
+          "name": "Holds",
+          "qualified_name_hint": "Holds",
+          "line": 5
+        },
+        {
+          "kind": "theorem",
+          "name": "form",
+          "qualified_name_hint": "form",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "step",
+          "line": 8
+        },
+        {
+          "kind": "def",
+          "name": "Clo",
+          "qualified_name_hint": "Clo",
+          "line": 9
+        },
+        {
+          "kind": "theorem",
+          "name": "row",
+          "qualified_name_hint": "row",
+          "line": 10
+        },
+        {
+          "kind": "theorem",
+          "name": "recovery'",
+          "qualified_name_hint": "recovery'",
+          "line": 12
+        },
+        {
+          "kind": "theorem",
+          "name": "cert'",
+          "qualified_name_hint": "cert'",
+          "line": 13
+        }
+      ],
+      "declaration_counts": {
+        "def": 4,
+        "theorem": 4
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 1
+    },
     "c197a5e999ad41115de1899f1b368d756d37dd95eeed41e738fec33e28215348": {
       "byte_size": 25491,
       "line_count": 459,
@@ -431544,6 +433357,99 @@
       },
       "print_axioms_commands": 0
     },
+    "ce87d707e83a4a286158f6b900b52a2630bb84f92a47c55c3607ac228d81a2a6": {
+      "byte_size": 1536,
+      "line_count": 28,
+      "imports": [
+        "Lean"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "«际»",
+          "qualified_name_hint": "Mini.«际»",
+          "line": 5
+        },
+        {
+          "kind": "def",
+          "name": "«则»",
+          "qualified_name_hint": "Mini.«则»",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "H1",
+          "qualified_name_hint": "Mini.H1",
+          "line": 8
+        },
+        {
+          "kind": "def",
+          "name": "H2",
+          "qualified_name_hint": "Mini.H2",
+          "line": 9
+        },
+        {
+          "kind": "def",
+          "name": "H3",
+          "qualified_name_hint": "Mini.H3",
+          "line": 10
+        },
+        {
+          "kind": "theorem",
+          "name": "F",
+          "qualified_name_hint": "Mini.F",
+          "line": 11
+        },
+        {
+          "kind": "def",
+          "name": "wR",
+          "qualified_name_hint": "Mini.wR",
+          "line": 14
+        },
+        {
+          "kind": "def",
+          "name": "wE",
+          "qualified_name_hint": "Mini.wE",
+          "line": 15
+        },
+        {
+          "kind": "theorem",
+          "name": "w3",
+          "qualified_name_hint": "Mini.w3",
+          "line": 16
+        },
+        {
+          "kind": "theorem",
+          "name": "wfails",
+          "qualified_name_hint": "Mini.wfails",
+          "line": 17
+        },
+        {
+          "kind": "theorem",
+          "name": "joint_needed",
+          "qualified_name_hint": "Mini.joint_needed",
+          "line": 19
+        },
+        {
+          "kind": "theorem",
+          "name": "h2_holds",
+          "qualified_name_hint": "Mini.h2_holds",
+          "line": 21
+        }
+      ],
+      "declaration_counts": {
+        "def": 7,
+        "theorem": 5
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 1
+    },
     "cf305ac30efa2bc9bbbe58b4c2b5d352c79a9620bbbd0cffc91dcd8c9cd5346e": {
       "byte_size": 38525,
       "line_count": 768,
@@ -432153,6 +434059,160 @@
         "inductive": 1,
         "structure": 2,
         "theorem": 67
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "cf59001b5fcc4f36ed270f9568099095f2e4b63d178cf312a4ae8e8cbba9abf2": {
+      "byte_size": 4630,
+      "line_count": 76,
+      "imports": [
+        "Lean"
+      ],
+      "declarations": [
+        {
+          "kind": "abbrev",
+          "name": "«际»",
+          "qualified_name_hint": "Becoming.«际»",
+          "line": 11
+        },
+        {
+          "kind": "def",
+          "name": "«而»",
+          "qualified_name_hint": "Becoming.«而»",
+          "line": 12
+        },
+        {
+          "kind": "def",
+          "name": "«则»",
+          "qualified_name_hint": "Becoming.«则»",
+          "line": 13
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_flatMap_iff",
+          "qualified_name_hint": "Becoming.ListTests.mem_flatMap_iff",
+          "line": 15
+        },
+        {
+          "kind": "def",
+          "name": "GivenTo",
+          "qualified_name_hint": "Becoming.U4Boundary.GivenTo",
+          "line": 21
+        },
+        {
+          "kind": "def",
+          "name": "Inherits",
+          "qualified_name_hint": "Becoming.U4Boundary.Inherits",
+          "line": 22
+        },
+        {
+          "kind": "def",
+          "name": "UndependedFrom",
+          "qualified_name_hint": "Becoming.U4Boundary.UndependedFrom",
+          "line": 23
+        },
+        {
+          "kind": "theorem",
+          "name": "descent_forms_no_dependence",
+          "qualified_name_hint": "Becoming.U4Boundary.descent_forms_no_dependence",
+          "line": 24
+        },
+        {
+          "kind": "theorem",
+          "name": "descent_forms_no_dependence.needs_given",
+          "qualified_name_hint": "Becoming.U4Boundary.descent_forms_no_dependence.needs_given",
+          "line": 29
+        },
+        {
+          "kind": "def",
+          "name": "GivesFrom",
+          "qualified_name_hint": "Becoming.U4Boundary.GivesFrom",
+          "line": 34
+        },
+        {
+          "kind": "def",
+          "name": "ListedWithin",
+          "qualified_name_hint": "Becoming.U4Boundary.ListedWithin",
+          "line": 36
+        },
+        {
+          "kind": "def",
+          "name": "Outside",
+          "qualified_name_hint": "Becoming.U4Boundary.Outside",
+          "line": 38
+        },
+        {
+          "kind": "theorem",
+          "name": "length_zero_of_none",
+          "qualified_name_hint": "Becoming.U4Boundary.length_zero_of_none",
+          "line": 39
+        },
+        {
+          "kind": "theorem",
+          "name": "outside_leaves_no_offspring",
+          "qualified_name_hint": "Becoming.U4Boundary.outside_leaves_no_offspring",
+          "line": 42
+        },
+        {
+          "kind": "def",
+          "name": "CancelsAlong",
+          "qualified_name_hint": "Becoming.U4Boundary.CancelsAlong",
+          "line": 51
+        },
+        {
+          "kind": "def",
+          "name": "BoundedAlong",
+          "qualified_name_hint": "Becoming.U4Boundary.BoundedAlong",
+          "line": 52
+        },
+        {
+          "kind": "def",
+          "name": "Redundant",
+          "qualified_name_hint": "Becoming.U4Boundary.Redundant",
+          "line": 55
+        },
+        {
+          "kind": "theorem",
+          "name": "loose_form",
+          "qualified_name_hint": "Becoming.U4Boundary.loose_form",
+          "line": 56
+        },
+        {
+          "kind": "def",
+          "name": "wR",
+          "qualified_name_hint": "Becoming.U4Boundary.wR",
+          "line": 57
+        },
+        {
+          "kind": "theorem",
+          "name": "w_not_redundant",
+          "qualified_name_hint": "Becoming.U4Boundary.w_not_redundant",
+          "line": 58
+        },
+        {
+          "kind": "theorem",
+          "name": "Redundant_needed",
+          "qualified_name_hint": "Becoming.U4Boundary.Redundant_needed",
+          "line": 59
+        },
+        {
+          "kind": "theorem",
+          "name": "loose_form_without",
+          "qualified_name_hint": "Becoming.U4Boundary.loose_form_without",
+          "line": 62
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 12,
+        "theorem": 9
       },
       "textual_markers": {
         "sorry": [],
@@ -436732,6 +438792,153 @@
         "unsafe": []
       },
       "print_axioms_commands": 0
+    },
+    "d1fcca9cc97fe01fdd0e1c556d4757e4d8ff4fb684f2b4514a43cc412fabea14": {
+      "byte_size": 2678,
+      "line_count": 55,
+      "imports": [
+        "Lean"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "Incl",
+          "qualified_name_hint": "Incl",
+          "line": 4
+        },
+        {
+          "kind": "def",
+          "name": "Holds",
+          "qualified_name_hint": "Holds",
+          "line": 5
+        },
+        {
+          "kind": "theorem",
+          "name": "form",
+          "qualified_name_hint": "form",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "step",
+          "line": 8
+        },
+        {
+          "kind": "def",
+          "name": "Clo",
+          "qualified_name_hint": "Clo",
+          "line": 9
+        },
+        {
+          "kind": "theorem",
+          "name": "row",
+          "qualified_name_hint": "row",
+          "line": 10
+        },
+        {
+          "kind": "theorem",
+          "name": "step_incl",
+          "qualified_name_hint": "step_incl",
+          "line": 11
+        },
+        {
+          "kind": "theorem",
+          "name": "recovery",
+          "qualified_name_hint": "recovery",
+          "line": 12
+        },
+        {
+          "kind": "theorem",
+          "name": "certRev",
+          "qualified_name_hint": "certRev",
+          "line": 15
+        },
+        {
+          "kind": "theorem",
+          "name": "certAsc",
+          "qualified_name_hint": "certAsc",
+          "line": 17
+        },
+        {
+          "kind": "theorem",
+          "name": "certShow",
+          "qualified_name_hint": "certShow",
+          "line": 19
+        },
+        {
+          "kind": "theorem",
+          "name": "certExplicit",
+          "qualified_name_hint": "certExplicit",
+          "line": 21
+        },
+        {
+          "kind": "theorem",
+          "name": "recoveryFake",
+          "qualified_name_hint": "recoveryFake",
+          "line": 23
+        },
+        {
+          "kind": "theorem",
+          "name": "certFake",
+          "qualified_name_hint": "certFake",
+          "line": 26
+        },
+        {
+          "kind": "theorem",
+          "name": "recoveryT",
+          "qualified_name_hint": "recoveryT",
+          "line": 28
+        },
+        {
+          "kind": "theorem",
+          "name": "certT",
+          "qualified_name_hint": "certT",
+          "line": 29
+        },
+        {
+          "kind": "theorem",
+          "name": "rowS",
+          "qualified_name_hint": "rowS",
+          "line": 32
+        },
+        {
+          "kind": "theorem",
+          "name": "bT",
+          "qualified_name_hint": "bT",
+          "line": 33
+        },
+        {
+          "kind": "theorem",
+          "name": "certS.",
+          "qualified_name_hint": "certS.",
+          "line": 34
+        },
+        {
+          "kind": "theorem",
+          "name": "certH",
+          "qualified_name_hint": "certH",
+          "line": 36
+        },
+        {
+          "kind": "def",
+          "name": "eqField",
+          "qualified_name_hint": "eqField",
+          "line": 38
+        }
+      ],
+      "declaration_counts": {
+        "def": 5,
+        "theorem": 16
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 1
     },
     "d20a4db9a6632ff84ce6ca9574d37f1766fd488b83b1922d878b009fd879c9f1": {
       "byte_size": 798,
@@ -449717,6 +451924,87 @@
       ],
       "declarations": [],
       "declaration_counts": {},
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "d9d1578eda802d4d041db20a8b15bb52dc5537aab608d21807ddc78d650905b5": {
+      "byte_size": 2504,
+      "line_count": 37,
+      "imports": [
+        "Lean"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "«际»",
+          "qualified_name_hint": "Mini.«际»",
+          "line": 7
+        },
+        {
+          "kind": "def",
+          "name": "«则»",
+          "qualified_name_hint": "Mini.«则»",
+          "line": 8
+        },
+        {
+          "kind": "def",
+          "name": "«而»",
+          "qualified_name_hint": "Mini.«而»",
+          "line": 9
+        },
+        {
+          "kind": "def",
+          "name": "GivenTo",
+          "qualified_name_hint": "Mini.GivenTo",
+          "line": 12
+        },
+        {
+          "kind": "def",
+          "name": "Inherits",
+          "qualified_name_hint": "Mini.Inherits",
+          "line": 13
+        },
+        {
+          "kind": "def",
+          "name": "UndependedFrom",
+          "qualified_name_hint": "Mini.UndependedFrom",
+          "line": 14
+        },
+        {
+          "kind": "def",
+          "name": "GivesFrom",
+          "qualified_name_hint": "Mini.GivesFrom",
+          "line": 16
+        },
+        {
+          "kind": "def",
+          "name": "Outside",
+          "qualified_name_hint": "Mini.Outside",
+          "line": 17
+        },
+        {
+          "kind": "def",
+          "name": "MixedCancel",
+          "qualified_name_hint": "Mini.MixedCancel",
+          "line": 19
+        },
+        {
+          "kind": "theorem",
+          "name": "form5",
+          "qualified_name_hint": "Mini.form5",
+          "line": 20
+        }
+      ],
+      "declaration_counts": {
+        "def": 9,
+        "theorem": 1
+      },
       "textual_markers": {
         "sorry": [],
         "admit": [],
@@ -495106,6 +497394,281 @@
       },
       "print_axioms_commands": 0
     },
+    "ef563477cedf82bdc922d4707ec94a7ac60cfc8fc582040141388b5d26f3acc8": {
+      "byte_size": 14833,
+      "line_count": 291,
+      "imports": [
+        "Becoming.Grammar",
+        "Becoming.Transmission",
+        "Becoming.GroupEnding"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "everywhere",
+          "qualified_name_hint": "Becoming.U4Boundary.everywhere",
+          "line": 57
+        },
+        {
+          "kind": "def",
+          "name": "nowhere",
+          "qualified_name_hint": "Becoming.U4Boundary.nowhere",
+          "line": 60
+        },
+        {
+          "kind": "def",
+          "name": "allRelated",
+          "qualified_name_hint": "Becoming.U4Boundary.allRelated",
+          "line": 63
+        },
+        {
+          "kind": "def",
+          "name": "noneRelated",
+          "qualified_name_hint": "Becoming.U4Boundary.noneRelated",
+          "line": 66
+        },
+        {
+          "kind": "def",
+          "name": "oneListed",
+          "qualified_name_hint": "Becoming.U4Boundary.oneListed",
+          "line": 69
+        },
+        {
+          "kind": "def",
+          "name": "oneOffspring",
+          "qualified_name_hint": "Becoming.U4Boundary.oneOffspring",
+          "line": 72
+        },
+        {
+          "kind": "def",
+          "name": "GivenTo",
+          "qualified_name_hint": "Becoming.U4Boundary.GivenTo",
+          "line": 77
+        },
+        {
+          "kind": "def",
+          "name": "Inherits",
+          "qualified_name_hint": "Becoming.U4Boundary.Inherits",
+          "line": 82
+        },
+        {
+          "kind": "def",
+          "name": "UndependedFrom",
+          "qualified_name_hint": "Becoming.U4Boundary.UndependedFrom",
+          "line": 86
+        },
+        {
+          "kind": "theorem",
+          "name": "descent_forms_no_dependence",
+          "qualified_name_hint": "Becoming.U4Boundary.descent_forms_no_dependence",
+          "line": 92
+        },
+        {
+          "kind": "theorem",
+          "name": "given_everywhere",
+          "qualified_name_hint": "Becoming.U4Boundary.given_everywhere",
+          "line": 99
+        },
+        {
+          "kind": "theorem",
+          "name": "inherits_vacuous",
+          "qualified_name_hint": "Becoming.U4Boundary.inherits_vacuous",
+          "line": 103
+        },
+        {
+          "kind": "theorem",
+          "name": "inherits_everywhere",
+          "qualified_name_hint": "Becoming.U4Boundary.inherits_everywhere",
+          "line": 107
+        },
+        {
+          "kind": "theorem",
+          "name": "undepended_vacuous",
+          "qualified_name_hint": "Becoming.U4Boundary.undepended_vacuous",
+          "line": 111
+        },
+        {
+          "kind": "theorem",
+          "name": "undepended_nowhere",
+          "qualified_name_hint": "Becoming.U4Boundary.undepended_nowhere",
+          "line": 115
+        },
+        {
+          "kind": "theorem",
+          "name": "some_depends",
+          "qualified_name_hint": "Becoming.U4Boundary.some_depends",
+          "line": 119
+        },
+        {
+          "kind": "theorem",
+          "name": "descent_forms_no_dependence.needs_given",
+          "qualified_name_hint": "Becoming.U4Boundary.descent_forms_no_dependence.needs_given",
+          "line": 124
+        },
+        {
+          "kind": "theorem",
+          "name": "descent_forms_no_dependence.given_needed",
+          "qualified_name_hint": "Becoming.U4Boundary.descent_forms_no_dependence.given_needed",
+          "line": 131
+        },
+        {
+          "kind": "theorem",
+          "name": "descent_forms_no_dependence.needs_inherits",
+          "qualified_name_hint": "Becoming.U4Boundary.descent_forms_no_dependence.needs_inherits",
+          "line": 136
+        },
+        {
+          "kind": "theorem",
+          "name": "descent_forms_no_dependence.inherits_needed",
+          "qualified_name_hint": "Becoming.U4Boundary.descent_forms_no_dependence.inherits_needed",
+          "line": 143
+        },
+        {
+          "kind": "theorem",
+          "name": "descent_forms_no_dependence.needs_undepended",
+          "qualified_name_hint": "Becoming.U4Boundary.descent_forms_no_dependence.needs_undepended",
+          "line": 149
+        },
+        {
+          "kind": "theorem",
+          "name": "descent_forms_no_dependence.undepended_needed",
+          "qualified_name_hint": "Becoming.U4Boundary.descent_forms_no_dependence.undepended_needed",
+          "line": 156
+        },
+        {
+          "kind": "theorem",
+          "name": "no_new_dependence_at_model",
+          "qualified_name_hint": "Becoming.U4Boundary.no_new_dependence_at_model",
+          "line": 168
+        },
+        {
+          "kind": "theorem",
+          "name": "no_new_dependence_certified",
+          "qualified_name_hint": "Becoming.U4Boundary.no_new_dependence_certified",
+          "line": 179
+        },
+        {
+          "kind": "def",
+          "name": "GivesFrom",
+          "qualified_name_hint": "Becoming.U4Boundary.GivesFrom",
+          "line": 184
+        },
+        {
+          "kind": "def",
+          "name": "ListedWithin",
+          "qualified_name_hint": "Becoming.U4Boundary.ListedWithin",
+          "line": 189
+        },
+        {
+          "kind": "def",
+          "name": "Outside",
+          "qualified_name_hint": "Becoming.U4Boundary.Outside",
+          "line": 193
+        },
+        {
+          "kind": "theorem",
+          "name": "length_zero_of_none",
+          "qualified_name_hint": "Becoming.U4Boundary.length_zero_of_none",
+          "line": 197
+        },
+        {
+          "kind": "theorem",
+          "name": "outside_leaves_no_offspring",
+          "qualified_name_hint": "Becoming.U4Boundary.outside_leaves_no_offspring",
+          "line": 204
+        },
+        {
+          "kind": "theorem",
+          "name": "gives_from_everywhere",
+          "qualified_name_hint": "Becoming.U4Boundary.gives_from_everywhere",
+          "line": 212
+        },
+        {
+          "kind": "theorem",
+          "name": "gives_from_vacuous",
+          "qualified_name_hint": "Becoming.U4Boundary.gives_from_vacuous",
+          "line": 216
+        },
+        {
+          "kind": "theorem",
+          "name": "listed_within_all",
+          "qualified_name_hint": "Becoming.U4Boundary.listed_within_all",
+          "line": 220
+        },
+        {
+          "kind": "theorem",
+          "name": "outside_nowhere",
+          "qualified_name_hint": "Becoming.U4Boundary.outside_nowhere",
+          "line": 224
+        },
+        {
+          "kind": "theorem",
+          "name": "one_offspring",
+          "qualified_name_hint": "Becoming.U4Boundary.one_offspring",
+          "line": 228
+        },
+        {
+          "kind": "theorem",
+          "name": "outside_leaves_no_offspring.needs_gate",
+          "qualified_name_hint": "Becoming.U4Boundary.outside_leaves_no_offspring.needs_gate",
+          "line": 233
+        },
+        {
+          "kind": "theorem",
+          "name": "outside_leaves_no_offspring.gate_needed",
+          "qualified_name_hint": "Becoming.U4Boundary.outside_leaves_no_offspring.gate_needed",
+          "line": 240
+        },
+        {
+          "kind": "theorem",
+          "name": "outside_leaves_no_offspring.needs_descent",
+          "qualified_name_hint": "Becoming.U4Boundary.outside_leaves_no_offspring.needs_descent",
+          "line": 245
+        },
+        {
+          "kind": "theorem",
+          "name": "outside_leaves_no_offspring.descent_needed",
+          "qualified_name_hint": "Becoming.U4Boundary.outside_leaves_no_offspring.descent_needed",
+          "line": 252
+        },
+        {
+          "kind": "theorem",
+          "name": "outside_leaves_no_offspring.needs_outside",
+          "qualified_name_hint": "Becoming.U4Boundary.outside_leaves_no_offspring.needs_outside",
+          "line": 259
+        },
+        {
+          "kind": "theorem",
+          "name": "outside_leaves_no_offspring.outside_needed",
+          "qualified_name_hint": "Becoming.U4Boundary.outside_leaves_no_offspring.outside_needed",
+          "line": 266
+        },
+        {
+          "kind": "theorem",
+          "name": "all_end_at_model",
+          "qualified_name_hint": "Becoming.U4Boundary.all_end_at_model",
+          "line": 278
+        },
+        {
+          "kind": "theorem",
+          "name": "all_end_certified",
+          "qualified_name_hint": "Becoming.U4Boundary.all_end_certified",
+          "line": 287
+        }
+      ],
+      "declaration_counts": {
+        "def": 12,
+        "theorem": 30
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "ef8e753b8b55600286df7c327f36368f4a263732c3274270626056b4cf43157b": {
       "byte_size": 73267,
       "line_count": 1264,
@@ -511277,6 +513840,207 @@
       },
       "print_axioms_commands": 0
     },
+    "fb0cae07472e46b1fd6d6b7730038307a68b7aeacb01ee7613eaca9f93b41568": {
+      "byte_size": 26030,
+      "line_count": 488,
+      "imports": [
+        "Lean"
+      ],
+      "declarations": [
+        {
+          "kind": "structure",
+          "name": "Hyp",
+          "qualified_name_hint": "BoundaryCheck.Hyp",
+          "line": 93
+        },
+        {
+          "kind": "structure",
+          "name": "Entry",
+          "qualified_name_hint": "BoundaryCheck.Entry",
+          "line": 98
+        },
+        {
+          "kind": "def",
+          "name": "moduleOf",
+          "qualified_name_hint": "BoundaryCheck.moduleOf",
+          "line": 107
+        },
+        {
+          "kind": "def",
+          "name": "grammarModule",
+          "qualified_name_hint": "BoundaryCheck.grammarModule",
+          "line": 114
+        },
+        {
+          "kind": "def",
+          "name": "rootModule",
+          "qualified_name_hint": "BoundaryCheck.rootModule",
+          "line": 116
+        },
+        {
+          "kind": "def",
+          "name": "packaged",
+          "qualified_name_hint": "BoundaryCheck.packaged",
+          "line": 121
+        },
+        {
+          "kind": "def",
+          "name": "namesOf",
+          "qualified_name_hint": "BoundaryCheck.namesOf",
+          "line": 127
+        },
+        {
+          "kind": "def",
+          "name": "termNames",
+          "qualified_name_hint": "BoundaryCheck.termNames",
+          "line": 135
+        },
+        {
+          "kind": "def",
+          "name": "valueNames",
+          "qualified_name_hint": "BoundaryCheck.valueNames",
+          "line": 159
+        },
+        {
+          "kind": "def",
+          "name": "digits",
+          "qualified_name_hint": "BoundaryCheck.digits",
+          "line": 165
+        },
+        {
+          "kind": "def",
+          "name": "auxComponent",
+          "qualified_name_hint": "BoundaryCheck.auxComponent",
+          "line": 168
+        },
+        {
+          "kind": "def",
+          "name": "generated",
+          "qualified_name_hint": "BoundaryCheck.generated",
+          "line": 181
+        },
+        {
+          "kind": "def",
+          "name": "closureOf",
+          "qualified_name_hint": "BoundaryCheck.closureOf",
+          "line": 187
+        },
+        {
+          "kind": "def",
+          "name": "closure",
+          "qualified_name_hint": "BoundaryCheck.closure",
+          "line": 201
+        },
+        {
+          "kind": "def",
+          "name": "admitted",
+          "qualified_name_hint": "BoundaryCheck.admitted",
+          "line": 204
+        },
+        {
+          "kind": "def",
+          "name": "amounts",
+          "qualified_name_hint": "BoundaryCheck.amounts",
+          "line": 212
+        },
+        {
+          "kind": "def",
+          "name": "isTheorem",
+          "qualified_name_hint": "BoundaryCheck.isTheorem",
+          "line": 214
+        },
+        {
+          "kind": "def",
+          "name": "isDefinition",
+          "qualified_name_hint": "BoundaryCheck.isDefinition",
+          "line": 219
+        },
+        {
+          "kind": "def",
+          "name": "closedValue",
+          "qualified_name_hint": "BoundaryCheck.closedValue",
+          "line": 226
+        },
+        {
+          "kind": "def",
+          "name": "grammarTerm",
+          "qualified_name_hint": "BoundaryCheck.grammarTerm",
+          "line": 233
+        },
+        {
+          "kind": "def",
+          "name": "isProof",
+          "qualified_name_hint": "BoundaryCheck.isProof",
+          "line": 238
+        },
+        {
+          "kind": "def",
+          "name": "isDefOrOpaque",
+          "qualified_name_hint": "BoundaryCheck.isDefOrOpaque",
+          "line": 246
+        },
+        {
+          "kind": "def",
+          "name": "theoremsUsed",
+          "qualified_name_hint": "BoundaryCheck.theoremsUsed",
+          "line": 257
+        },
+        {
+          "kind": "def",
+          "name": "body",
+          "qualified_name_hint": "BoundaryCheck.body",
+          "line": 278
+        },
+        {
+          "kind": "def",
+          "name": "appliesWith",
+          "qualified_name_hint": "BoundaryCheck.appliesWith",
+          "line": 284
+        },
+        {
+          "kind": "def",
+          "name": "show_",
+          "qualified_name_hint": "BoundaryCheck.show_",
+          "line": 287
+        },
+        {
+          "kind": "def",
+          "name": "isEquivalence",
+          "qualified_name_hint": "BoundaryCheck.isEquivalence",
+          "line": 291
+        },
+        {
+          "kind": "def",
+          "name": "checkEntry",
+          "qualified_name_hint": "BoundaryCheck.checkEntry",
+          "line": 300
+        },
+        {
+          "kind": "def",
+          "name": "nameField",
+          "qualified_name_hint": "BoundaryCheck.nameField",
+          "line": 451
+        },
+        {
+          "kind": "def",
+          "name": "parseEntry",
+          "qualified_name_hint": "BoundaryCheck.parseEntry",
+          "line": 456
+        }
+      ],
+      "declaration_counts": {
+        "def": 28,
+        "structure": 2
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "fb2e947cd684e8fffb1b236608bba9842c2f5e044df0e05bfcb1d0b1303ee8b5": {
       "byte_size": 36494,
       "line_count": 582,
@@ -513931,6 +516695,93 @@
         "unsafe": []
       },
       "print_axioms_commands": 29
+    },
+    "fcfab786b4d7b9f1bd038401128e57aec33cf88d33d7f995c5ff50c9ece05e59": {
+      "byte_size": 9896,
+      "line_count": 198,
+      "imports": [
+        "Lean",
+        "Becoming.U4Boundary"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "toolchainRoots",
+          "qualified_name_hint": "toolchainRoots",
+          "line": 32
+        },
+        {
+          "kind": "def",
+          "name": "stripLams",
+          "qualified_name_hint": "stripLams",
+          "line": 35
+        },
+        {
+          "kind": "def",
+          "name": "binderInfos",
+          "qualified_name_hint": "binderInfos",
+          "line": 41
+        },
+        {
+          "kind": "def",
+          "name": "closedValue",
+          "qualified_name_hint": "closedValue",
+          "line": 48
+        },
+        {
+          "kind": "def",
+          "name": "namesWitness",
+          "qualified_name_hint": "namesWitness",
+          "line": 56
+        },
+        {
+          "kind": "def",
+          "name": "appliedTheorem",
+          "qualified_name_hint": "appliedTheorem",
+          "line": 64
+        },
+        {
+          "kind": "def",
+          "name": "forwardTarget",
+          "qualified_name_hint": "forwardTarget",
+          "line": 84
+        },
+        {
+          "kind": "def",
+          "name": "sortBinders",
+          "qualified_name_hint": "sortBinders",
+          "line": 99
+        },
+        {
+          "kind": "def",
+          "name": "applications",
+          "qualified_name_hint": "applications",
+          "line": 105
+        },
+        {
+          "kind": "def",
+          "name": "lawHeads",
+          "qualified_name_hint": "lawHeads",
+          "line": 116
+        },
+        {
+          "kind": "def",
+          "name": "eqField",
+          "qualified_name_hint": "eqField",
+          "line": 137
+        }
+      ],
+      "declaration_counts": {
+        "def": 11
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
     },
     "fd0516e33c61af718264b01f8e7712c6a69730db26a018310ec3575ad14e63d7": {
       "byte_size": 6022,
@@ -521765,6 +524616,10 @@
       "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/tree/Becoming/Weightings.lean",
       "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean"
     ],
+    "b28bfeeb64a8a6e854fdda931d284e14fb6e78c408d6968e7e4bea3498863b54": [
+      "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/critic/mr/CriticMR/MapRegions.lean",
+      "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean"
+    ],
     "b42588f0fa631f858142cabc596f693482f30d933e793543005ab40494d00fc1": [
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/formal/RecipientCorrection.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/development/1791254295824849000/RecipientCorrection.lean",
@@ -521986,6 +524841,10 @@
     "ecdd47fbd72a3ca56ba3a2c1700b2eb3b9580d819e6776e3bc5681a8fce234e6": [
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/PretrainingEvidence.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/pretraining-evidence/development/PretrainingEvidence-attempt05.lean"
+    ],
+    "ef563477cedf82bdc922d4707ec94a7ac60cfc8fc582040141388b5d26f3acc8": [
+      "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/critic/U4Boundary-fd3.lean",
+      "_process/research/2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-field-recheck-evidence/u4l/U4L/Boundary.lean"
     ],
     "efd4fd7b52df1fff29f8c723d29a7b559722c42483c470e03a11b819c11311b8": [
       "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/tree5/Becoming/Openness.lean",
