@@ -2,7 +2,7 @@
 
 **What this is.** One part of the review packet of the Theory of Becoming, for readers in logic: relation algebra, coalgebra and bisimulation, constructive mathematics and modal logic. It sets out 29 items, each a definition or theorem of the theory's formal root or of its logical method, and asks whether each is correctly stated, correctly described in the chapters, credited where it restates known work, and stated at its exact strength.
 
-**Time, and the one-hour path.** Reading the whole with care takes about four hours (some 10,000 words of prose and 27 Lean blocks); an answer to every question would take several days. If you have one hour, skim **Terms** and **Reading the Lean blocks**, then give verdicts on these five, which only a logician can judge: [L-06](#l-06) (the core of a class as the greatest bisimulation inside it, and what its existence uses), [L-09](#l-09) (going on as a coinductive and ending as an inductive predicate), [L-13](#l-13) (the Hennessy–Milner converse in the grammar, refuted and proved under a premise), [L-14](#l-14) (its limit form and LLPO) and [L-19](#l-19) (what an empty axiom report shows). Questions marked (optional) are open research problems, not judgments asked of you.
+**Time, and the one-hour path.** This front, to the first item, takes about ten minutes. Reading the whole with care takes about four hours (some 10,000 words of prose and 27 Lean blocks); an answer to every question would take several days. If you have one hour, skim **Terms** and **Reading the Lean blocks**, then give verdicts on these five, which only a logician can judge: [L-06](#l-06) (the core of a class as the greatest bisimulation inside it, and what its existence uses), [L-09](#l-09) (going on as a coinductive and ending as an inductive predicate), [L-13](#l-13) (the Hennessy–Milner converse in the grammar, refuted and proved under a premise), [L-14](#l-14) (its limit form and LLPO) and [L-19](#l-19) (what an empty axiom report shows). Questions marked (optional) are open research problems, not judgments asked of you.
 
 **How it was made.** Everything in the theory was made with AI: the Lean proofs, the chapters, the readings of the classical texts and this dossier; no human has reviewed any of it. A script copied the Lean statements from the source files, and every block was compared again with the current sources for this version; the prose is AI-written and may be wrong. Under **Known weaknesses**, a bullet citing a chapter or a review reports a weakness the work itself records; one marked [this dossier, AI] is this dossier's own assessment, recorded nowhere else, for the reviewer to confirm or reject. The AI reviews of the chapters found one fault everywhere: Quote [_process/research/2026-10-05-repository-reconciliation/architecture/DECISIONS-ROUND-2.md]: "theorem sentences that drop an operative hypothesis, change a quantifier, turn a negative constructive conclusion into an existential one, or cite a neighbouring declaration of different strength". The chapters were then corrected against the Lean; whether the corrections are complete is part of what is asked.
 
@@ -15,7 +15,7 @@
 - *Models.* A *process* (`Process S A`) is a labelled step relation `S → A → S → Prop` on configurations; a *frame* adds claims realized at configurations. The *World* is the richest model: relata that take from and give to one another's natural-number levels across discrete steps, each active or not, under eight named premises (balance, a census of what is active, and others) that a world may meet or fail ([01 §8](../chapters/01-ROOT.md#models)).
 - *Calibration*: a law proved equivalent to, or conditional on, an omniscience principle. By the theory's own criterion ([08 §5](../chapters/08-METHOD.md#calibrations)) it is a result only where it says what the need means for the unfolding: Quote [theories/becoming/chapters/08-METHOD.md]: "Only a calibration that says something of that kind is a result. One that concerns the logic alone is a lemma of its law."
 - *Record*: the work's entry for one result (statement, Lean declarations, premises, what it does not show), linked from the chapters.
-- *Readings and classes.* [AI reading, Dn] marks an interpretation made by AI, `Dn` its entry in the work's register of decisions; a reading changes no theorem. Each sentence of the classical texts the theory reads (a *unit*, quoted as Source [ID]) was classified by an AI coder into one of eight classes ([the re-coding codebook](recoding/CODEBOOK.md), §三); the three that occur here are 甲, a definition; 乙, a candidate theorem of the grammar, with its outcome in Lean (proved; proved under a premise; refuted); 己, a contrary reading, where the text rejects a thesis of the theory. The English translations of quoted units are this dossier's (AI).
+- *Readings and classes.* [AI reading, Dn] marks an interpretation made by AI, `Dn` its entry in the work's register of decisions; a reading changes no theorem. A quoted sentence of the classical texts (Source [ID]) carries the class an AI coder gave it, glossed with [the names](#the-names); its English translation is this dossier's (AI).
 
 **Reading the Lean blocks.** Each block is Lean 4 source copied from the file named under it; theorem statements stop where the proof begins (`:=`), definitions are given whole.
 
@@ -23,52 +23,8 @@
 - Arguments in `( )` are explicit, in `{ }` implicit (inferred where the theorem is used), in `[ ]` instances such as `[DecidableEq S]`. A type variable such as `α`, declared once in the module (`variable {α : Type u}`), is universally quantified: a grammar theorem holds for every carrier.
 - `Prop` is the type of propositions. Excluded middle is never assumed for all propositions: `P ∨ ¬ P` is proved for particular ones (for instance where `P` is decidable, or is a Boolean equation `b = true`) or taken as a hypothesis, as `em : ∀ P : Prop, P ∨ ¬ P` is in L-10. The theory writes `Decided p` for `p ∨ ¬ p` (a proposition); `Decidable p` is a procedure deciding `p` (data, stronger); `Nonempty T` says that the type `T` has an element.
 - `fun x y => …` is λ-abstraction and application is juxtaposition (`R x y`); `.root` or `.u` names a constructor of a type fixed by the context.
-- Guillemets make a Chinese word one identifier: `«续» R E x y` reads "`y` continues `x` under `E`". A dotted name such as `Web.carries_iff` is a declaration in a namespace (`Web`); the line under each block names the file and, where needed, the namespace.
 
-**The grammar's vocabulary.**
-
-| Name | Gloss | Name | Gloss |
-|---|---|---|---|
-| `«际»` | relation `α → α → Prop` | `«续»` | continuation `R ⊓ E` |
-| `«而»`, `«逆»` | composition `R;S`, converse `R˘` | `«相续»` | line: reach of continuation |
-| `«合»`, `«非»` | meet, complement (pointwise negation) | `«有前»`, `«有后»` | has a predecessor, a successor |
-| `«则»`, `«谓»` | inclusion, pointwise equivalence | `«生»`, `«住»`, `«亡»` | begins, abides, ends |
-| `«一»`, `«静»` | full relation ("the one"), identity | `«异»` | alters: continues under `E` while `F` tells apart |
-| `«及»` | reach: transitive closure | `«有常»` | constancy `E˘;R ⊆ R;E˘` |
-| `«无环»` | acyclic: nothing reaches itself | `«核»`, `«位核»` | the core of a class; the two-way core |
-| `«俱有»` | co-presence: mutual reach | `«不穷»` | the line never ends |
-| `«类»` | class: an equivalence relation | `«所及»` | reached on the coarse line (or the point itself) |
-| `«延»`, `«尽»` | goes on along some branch (coinductive); ends on every branch (inductive) | `«传»` | carrying renewal: the coarse line continues into a fine beginning |
-| `«生成»`, `«守»` | generation, keeping (along some branch) | `«全生成»`, `«全守»` | generation, keeping (the whole coarse line) |
-| `«有终»` | reaches an end | `«阶全生成»` | generation at an order of a sequence of classes |
-| `«复生至»` | renews into | `«生生»`, `«息»` | renewal without end (coinductive); ceasing (inductive) |
-| `«层»` | stage `k` of the core | `«诘»` | stage `k` of inquiry (asks the class at every stage) |
-| `«续无外»` | the continuation condition along the net (L-23) | | |
-
-**Theorem names**, glossed word for word; a name of the form «X之定当且仅当排中» reads "deciding X is exactly excluded middle".
-
-| Item | Name | Gloss |
-|---|---|---|
-| L-02 | `«缘先果后当且仅当无环»`, `«无环则及为序»` | condition before, result after, exactly where acyclic; acyclic, so reach is an order |
-| L-02 | `«相由则俱有»`, `«俱有为一念»` | mutual conditions are co-present; co-presence is one cluster (literally "one thought-moment") |
-| L-03 | `«任一缘可为续»`, `«粗化»`, `«蜡烛之合»`, `«分叉»` | any condition can be a continuation; coarsening; the candles' merge; fission |
-| L-04 | `«四相无自立»`, `«两端分则中有标»` | no mark stands by itself; ends told apart, so a marked step between |
-| L-04 | `«亡于粗则亡于细»`, `«生于细而续于粗则异»` | ending under the coarser, ending under the finer; begun under the finer and continued under the coarser, an alteration |
-| L-05 | `«有常则续不尽»`, `«有亡之续则不有常»` | constancy, so continuation never runs out; a continuation with an end, so not constant |
-| L-05 | `«有常之逐点»`, `«静有常»` | constancy pointwise; identity is constant |
-| L-06 | `«根»`, `«核为类»`, `«类有常当且仅当含于核»` | the root (theorem); the core is a class; a class is constant exactly where it lies inside its core |
-| L-06 | `«火薪相须»`, `«火之见证不择类»` | fire and fuel need each other; the fire witness picks no class |
-| L-06 | `«两火以薪定理»`, `«两火同火不足以定理»` | in two flames the fuel fixes the regularity; in two flames sameness of flame does not suffice |
-| L-07 | `«闭合当且仅当有常»` | closure exactly where constant |
-| L-08 | `«位同则生亡同»`, `«位同则住同»` | same position, same beginning and ending; same position, same abiding |
-| L-08 | `«位根»`, `«位核含于核»` | the root theorem for the two-way core; the two-way core lies inside the core |
-| L-08 | `«亡于核下不变»`, `«生于位核下不变»` | ending invariant under the core; beginning invariant under the two-way core |
-| L-09 | `«延尽不并»`, `«生守相杂»`, `«单行则生守不并»` | going on and ending exclude each other; generation and keeping mixed; on a single line generation and keeping exclude each other |
-| L-09 | `«生生即延»`, `«息即尽»` | renewal without end is going on; ceasing is ending |
-| L-10 | `«全三域之周»` | the three strong regions cover |
-| L-12 | `«核在每层之内»`, `«可分则不在核»`, `«恒温与平衡»` | the core lies in every stage; told apart, so not in the core; thermostat and balance |
-| L-13 | `«核则不可致诘»`, `«致诘不尽»` | in the core, so no inquiry tells apart; inquiry does not exhaust |
-| L-13 | `«不可致诘而有常则混而为一»` | told apart by no inquiry, and constant, so merged into one |
+**Names.** The grammar's vocabulary and the theorem names, each glossed word for word, are in two tables at the end ([the names](#the-names)); keep them open beside the items.
 
 ---
 
@@ -834,6 +790,62 @@ No Lean block: the statements are long; each is named and linked, and the third 
 
 ---
 
+
+<a id="the-names"></a>
+## The names
+
+What the items use: how names are written, the classes of the quoted units, the grammar's vocabulary and the theorem names.
+
+**How names are written.** Guillemets make a Chinese word one identifier: `«续» R E x y` reads "`y` continues `x` under `E`". A dotted name such as `Web.carries_iff` is a declaration in a namespace (`Web`); the line under each block names the file and, where needed, the namespace.
+
+**The classes of quoted units.** Each sentence of the classical texts the theory reads (a *unit*, quoted as Source [ID]) was classified by an AI coder into one of eight classes ([the re-coding codebook](recoding/CODEBOOK.md), §三); the three that occur here are 甲, a definition; 乙, a candidate theorem of the grammar, with its outcome in Lean (proved; proved under a premise; refuted); 己, a contrary reading, where the text rejects a thesis of the theory.
+
+**The grammar's vocabulary.**
+
+| Name | Gloss | Name | Gloss |
+|---|---|---|---|
+| `«际»` | relation `α → α → Prop` | `«续»` | continuation `R ⊓ E` |
+| `«而»`, `«逆»` | composition `R;S`, converse `R˘` | `«相续»` | line: reach of continuation |
+| `«合»`, `«非»` | meet, complement (pointwise negation) | `«有前»`, `«有后»` | has a predecessor, a successor |
+| `«则»`, `«谓»` | inclusion, pointwise equivalence | `«生»`, `«住»`, `«亡»` | begins, abides, ends |
+| `«一»`, `«静»` | full relation ("the one"), identity | `«异»` | alters: continues under `E` while `F` tells apart |
+| `«及»` | reach: transitive closure | `«有常»` | constancy `E˘;R ⊆ R;E˘` |
+| `«无环»` | acyclic: nothing reaches itself | `«核»`, `«位核»` | the core of a class; the two-way core |
+| `«俱有»` | co-presence: mutual reach | `«不穷»` | the line never ends |
+| `«类»` | class: an equivalence relation | `«所及»` | reached on the coarse line (or the point itself) |
+| `«延»`, `«尽»` | goes on along some branch (coinductive); ends on every branch (inductive) | `«传»` | carrying renewal: the coarse line continues into a fine beginning |
+| `«生成»`, `«守»` | generation, keeping (along some branch) | `«全生成»`, `«全守»` | generation, keeping (the whole coarse line) |
+| `«有终»` | reaches an end | `«阶全生成»` | generation at an order of a sequence of classes |
+| `«复生至»` | renews into | `«生生»`, `«息»` | renewal without end (coinductive); ceasing (inductive) |
+| `«层»` | stage `k` of the core | `«诘»` | stage `k` of inquiry (asks the class at every stage) |
+| `«续无外»` | the continuation condition along the net (L-23) | | |
+
+**Theorem names**, glossed word for word; a name of the form «X之定当且仅当排中» reads "deciding X is exactly excluded middle".
+
+| Item | Name | Gloss |
+|---|---|---|
+| L-02 | `«缘先果后当且仅当无环»`, `«无环则及为序»` | condition before, result after, exactly where acyclic; acyclic, so reach is an order |
+| L-02 | `«相由则俱有»`, `«俱有为一念»` | mutual conditions are co-present; co-presence is one cluster (literally "one thought-moment") |
+| L-03 | `«任一缘可为续»`, `«粗化»`, `«蜡烛之合»`, `«分叉»` | any condition can be a continuation; coarsening; the candles' merge; fission |
+| L-04 | `«四相无自立»`, `«两端分则中有标»` | no mark stands by itself; ends told apart, so a marked step between |
+| L-04 | `«亡于粗则亡于细»`, `«生于细而续于粗则异»` | ending under the coarser, ending under the finer; begun under the finer and continued under the coarser, an alteration |
+| L-05 | `«有常则续不尽»`, `«有亡之续则不有常»` | constancy, so continuation never runs out; a continuation with an end, so not constant |
+| L-05 | `«有常之逐点»`, `«静有常»` | constancy pointwise; identity is constant |
+| L-06 | `«根»`, `«核为类»`, `«类有常当且仅当含于核»` | the root (theorem); the core is a class; a class is constant exactly where it lies inside its core |
+| L-06 | `«火薪相须»`, `«火之见证不择类»` | fire and fuel need each other; the fire witness picks no class |
+| L-06 | `«两火以薪定理»`, `«两火同火不足以定理»` | in two flames the fuel fixes the regularity; in two flames sameness of flame does not suffice |
+| L-07 | `«闭合当且仅当有常»` | closure exactly where constant |
+| L-08 | `«位同则生亡同»`, `«位同则住同»` | same position, same beginning and ending; same position, same abiding |
+| L-08 | `«位根»`, `«位核含于核»` | the root theorem for the two-way core; the two-way core lies inside the core |
+| L-08 | `«亡于核下不变»`, `«生于位核下不变»` | ending invariant under the core; beginning invariant under the two-way core |
+| L-09 | `«延尽不并»`, `«生守相杂»`, `«单行则生守不并»` | going on and ending exclude each other; generation and keeping mixed; on a single line generation and keeping exclude each other |
+| L-09 | `«生生即延»`, `«息即尽»` | renewal without end is going on; ceasing is ending |
+| L-10 | `«全三域之周»` | the three strong regions cover |
+| L-12 | `«核在每层之内»`, `«可分则不在核»`, `«恒温与平衡»` | the core lies in every stage; told apart, so not in the core; thermostat and balance |
+| L-13 | `«核则不可致诘»`, `«致诘不尽»` | in the core, so no inquiry tells apart; inquiry does not exhaust |
+| L-13 | `«不可致诘而有常则混而为一»` | told apart by no inquiry, and constant, so merged into one |
+
+---
 
 ## References
 
