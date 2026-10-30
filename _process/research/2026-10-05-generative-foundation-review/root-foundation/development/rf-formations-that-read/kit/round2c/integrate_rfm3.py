@@ -192,23 +192,13 @@ edit(overview, "that a model missing the true sign can rest without meeting the 
                "a reading is worth](chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth)).\n",
      "that a model missing the true sign can rest without meeting the stop [AI reading] ([what holding for "
      "a reading is worth](chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth)).\n\n"
-     "What another's reading answers can be moved by informing it and, apart, by revaluing it. Proved with "
-     "natural-number weights and values on a supplied scale: by a reference valuation, a reading formation's answer "
-     "through a map falls short by the least shortfall through the map and a residual, nothing exactly where no "
-     "listed cell is decided against its strict weighted preference; a finer map never raises the first and a "
-     "revaluation changes only the second, so with a shared model and agreement in net the answer has no residual "
-     "and informing never lowers the worth of holding for it, while where the valuations differ informing can lower "
-     "it below both moves, and revaluing to the reference, a valuation the supplied update need not reach, raises it "
-     "exactly where the residual is positive. On one blanketed "
-     "law carrying the reading formation's listing and valuation as its state, a demonstration filters the listing "
-     "and a presented input revises the valuation, each only through what is sensed; in witnesses, being shown and "
-     "being revalued each turn an answer the other leaves, and from different starts a route shown and a route "
-     "revalued answer alike at every step and end in one state, so the answers and the final state do not tell "
-     "whether the valuation changed. Read [AI reading]: under a reference the reading formation does not share, "
-     "incentives to withhold and to revise, beside Bayesian persuasion; by its own current valuation, a reason to "
-     "keep that valuation from any revision that decides a listed cell against its strict weighted preference, "
-     "the counts form of current-reward-function "
-     "evaluation's preservation incentive ([a reading informed and "
+     "What another's reading answers can be moved by informing it and, apart, by revaluing it. In natural-number "
+     "counts, by a reference valuation, holding for a reading formation's answer through a map falls short by the "
+     "least shortfall through the map plus a residual: a finer map never raises the first, a revaluation moves only "
+     "the second, and from different starts a route informing it and one revaluing it can answer alike and end in one "
+     "state. Read [AI reading]: under a reference it does not share, incentives to withhold and to revise; evaluated "
+     "by its own current valuation on a shared model, a reason to keep that valuation from any revision deciding a "
+     "listed cell against its strict weighted preference ([a reading informed and "
      "revalued](chapters/03-KNOWING.md#r-a-reading-informed-and-revalued)).\n")
 
 dossier = ROOT / 'theories/becoming/review/ALIGNMENT.md'
@@ -220,20 +210,17 @@ edit(dossier, "assistance that informs the principal adds coupling, which it doe
 edit(dossier, "and a prediction read by what it predicts; a principal's valuation as state is a later item.",
      "and a prediction read by what it predicts.")
 edit(dossier, "The reading formation's own state, a noisy reading and continuous beliefs are not represented.\n",
-     "A noisy reading and continuous beliefs are not represented. Round 2's RF-M.3 carries the reading formation's "
-     "own listing and valuation as state ([03 §12](../chapters/03-KNOWING.md#r-a-reading-informed-and-revalued)): by a "
-     "reference, holding for its answer through a map falls short by the least shortfall through the map and a "
-     "residual, nothing exactly where no listed cell is decided against its strict weighted preference; with a shared "
-     "model and agreement in net, informing never lowers the worth, while under a reference the valuation does not "
-     "share informing can lower it and revaluing to the reference, a valuation the supplied update need not reach, "
-     "raises it exactly where the residual is positive. Read [AI "
-     "reading], these are incentives to withhold and to revise, in counts and before costs, related to Bayesian "
-     "persuasion (Kamenica and Gentzkow 2011); by the reading formation's current valuation, no revaluation gains and "
-     "one that decides a listed cell against its strict weighted preference loses, a one-decision counterpart of current-reward-function evaluation's "
-     "preservation incentive (Everitt, Hutter, Kumar and Krakovna 2021, Claim 2), a reason to keep the valuation from "
-     "revision, wanted or not. From different starts a route informing the reading formation and one revaluing it can "
-     "answer alike and end in one state, so the answers do not tell which happened, and no criterion of legitimate "
-     "change of a valuation is supplied (Carroll, Dragan, Russell and Hadfield-Menell 2022).\n")
+     "A noisy reading and continuous beliefs are not represented. RF-M.3 carries the reading formation's listing and "
+     "valuation as state ([03 §12](../chapters/03-KNOWING.md#r-a-reading-informed-and-revalued)): by a reference, "
+     "holding for its answer through a map falls short by the least shortfall through the map plus a residual; a "
+     "finer map never raises the first, and a revaluation moves only the second. Read [AI reading], under a "
+     "reference the valuation does not share these are incentives to withhold and to revise, before costs, beside "
+     "Bayesian persuasion (Kamenica and Gentzkow 2011); evaluated by the current valuation on a shared model, there "
+     "is none against informing and a reason to keep the valuation from any revision deciding a listed cell against "
+     "its strict weighted preference, beside the preservation incentive of current-reward-function evaluation "
+     "(Everitt, Hutter, Kumar and Krakovna 2021, Claim 2). From different starts the answers and the final state do "
+     "not tell whether the valuation changed, and no criterion of legitimate change is supplied (Carroll, Dragan, "
+     "Russell and Hadfield-Menell 2022).\n")
 edit(dossier, "and Good's note in the British Journal for the Philosophy of Science, 1967).\n",
      "and Good's note in the British Journal for the Philosophy of Science, 1967). RF-M.3's sentences, added on "
      f"{TODAY.day} {TODAY:%B} {TODAY.year}, were cold-read before its landing, and the works they cite were checked "
