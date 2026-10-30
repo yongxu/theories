@@ -1,0 +1,87 @@
+where	field	old	new
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean	1 use(s)	«守理则不穷»	«守核则不穷»
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean	1 use(s)	«亡前理变»	«亡前核变»
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md	1 use(s)	«守理则不穷»	«守核则不穷»
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md	1 use(s)	«亡前理变»	«亡前核变»
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md	1 use(s)	«守理则不穷»	«守核则不穷»
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md	1 use(s)	«亡前理变»	«亡前核变»
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean	9 use(s)	«足以定理»	«足以定核»
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean	3 use(s)	«合有常则足以定理»	«合有常则足以定核»
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean	3 use(s)	«守理则不穷»	«守核则不穷»
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean	4 use(s)	«守理之线不亡»	«守核之线不亡»
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean	4 use(s)	«亡前理变»	«亡前核变»
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean	3 use(s)	«有亡之线两端理异»	«有亡之线两端核异»
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean	4 use(s)	«守理则不穷»	«守核则不穷»
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean	1 use(s)	«从缘生非文法之理»	«从缘生非文法之律»
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean	docstring heading (name)	regularity of `E₁` (足以定理):	regularity of `E₁` (足以定核):
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean	docstring or cell (wording)	and the core (核): whether a line has its own 理 -/	and the core (核): whether a line has its own regularity -/
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean	docstring heading (name)	can always be kept (守理则不穷).	can always be kept (守核则不穷).
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean	docstring heading (name)	leaves the core (亡前理变).	leaves the core (亡前核变).
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean	docstring or cell (wording)	rules that change themselves (理之守与变)	rules that change themselves (规律之守与变)
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md	docstring or cell (wording)	故一条续之理是其类之核	故一条续自身之规律是其类之核
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md	docstring or cell (wording)	| 理之守与离，及自改其则者	| 规律之守与离，及自改其则者
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md	docstring or cell (wording)	可能之网中步不在「完与否」之理中	可能之网中步不在「完与否」之规律中
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md	docstring or cell (wording)	一类下之线所必含者，与一理所纳者	一类下之线所必含者，与一规律所纳者
+experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean	after «类同行遍后则含于核»	(new)	«定后则类之核同行», «遍后则其内同行之类含于核», «定后遍后则核为其内最粗同行之类», «后不定则核可不同行»
+theories/becoming/chapters/01-ROOT.md	01 §4: the core and 理, cited from GrammarLaws, the names' residue gone	守理则不穷	(removed with the residue sentence)
+theories/becoming/chapters/01-ROOT.md	01 §4: the core and 理, cited from GrammarLaws, the names' residue gone	守理之线不亡	(removed with the residue sentence)
+theories/becoming/chapters/01-ROOT.md	01 §4: the core and 理, cited from GrammarLaws, the names' residue gone	亡前理变	(removed with the residue sentence)
+theories/becoming/chapters/01-ROOT.md	01 §4: the core and 理, cited from GrammarLaws, the names' residue gone	有亡之线两端理异	(removed with the residue sentence)
+theories/becoming/chapters/01-ROOT.md	01 §4: the core and 理, cited from GrammarLaws, the names' residue gone	足以定理	(removed with the residue sentence)
+theories/becoming/chapters/01-ROOT.md	01 §4: the core and 理, cited from GrammarLaws, the names' residue gone	合有常则足以定理	(removed with the residue sentence)
+theories/becoming/chapters/01-ROOT.md	01 §4: the core and 理, cited from GrammarLaws, the names' residue gone	(new citation)	定后则类之核同行, 遍后则其内同行之类含于核, 定后遍后则核为其内最粗同行之类, 后不定则核可不同行
+theories/becoming/chapters/01-ROOT.md	01 §4: GS1's theorem, the renamed names	守理则不穷	守核则不穷
+theories/becoming/chapters/01-ROOT.md	01 §4: GS1's theorem, the renamed names	守理之线不亡	守核之线不亡
+theories/becoming/chapters/01-ROOT.md	01 §4: GS1's theorem, the renamed names	亡前理变	亡前核变
+theories/becoming/chapters/01-ROOT.md	01 §4: GS1's theorem, the ends of a line	有亡之线两端理异	有亡之线两端核异
+theories/becoming/chapters/01-ROOT.md	01 §5: the definition through the core	足以定理	足以定核
+theories/becoming/chapters/01-ROOT.md	01 §5: the constancy forms imply the core forms	合有常则足以定理	合有常则足以定核
+theories/becoming/chapters/01-ROOT.md	01 §7: the lumping bullet points to §4's theorem on the core	(wording)	(no name)
+GLOSSARY.md	the glossary's 理 row	守理则不穷	(removed with the residue sentence)
+GLOSSARY.md	the glossary's 理 row	亡前理变	(removed with the residue sentence)
+GLOSSARY.md	the glossary's 理 row	有亡之线两端理异	(removed with the residue sentence)
+GLOSSARY.md	the glossary's 理 row	足以定理	(removed with the residue sentence)
+GLOSSARY.md	the glossary's 理 row	(new citation)	定后则类之核同行, 定后遍后则核为其内最粗同行之类
+theories/becoming/chapters/06-CLASSICAL-TEXTS.md	06: the three that do not hold	从缘生非文法之理	从缘生非文法之律
+theories/becoming/chapters/07-SIGNIFICANCE.md	07: GS1's law cited	守理则不穷	守核则不穷
+theories/becoming/chapters/07-SIGNIFICANCE.md	07 §2: the gloss of 生生 labelled (RP2b's independent read)	(wording)	(no name)
+theories/becoming/chapters/07-SIGNIFICANCE.md	07 §8: T8's gloss of 生生 labelled (RP2b's independent read)	(wording)	(no name)
+theories/becoming/review/PHILOSOPHY.md	the philosophy dossier: P-26 quotes T8 with its label, the label once	(wording)	(no name)
+theories/becoming/review/BUDDHIST-THOUGHT.md	the review page on Buddhist thought: the corpus candidate	从缘生非文法之理	从缘生非文法之律
+theories/becoming/review/BUDDHIST-THOUGHT.md	the review page on Buddhist thought: the definition named	足以定理	足以定核
+_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rv21-one-sense/review/CoreAndLi.lean	the outside check: where its laws went	(new citation)	定后则类之核同行, 遍后则其内同行之类含于核, 定后遍后则核为其内最粗同行之类, 后不定则核可不同行
+a-regularity-kept-and-changed	laws.0.declarations	Becoming.«守理之线不亡»	Becoming.«守核之线不亡»
+a-regularity-kept-and-changed	laws.0.declarations	Becoming.«守理则不穷»	Becoming.«守核则不穷»
+a-regularity-kept-and-changed	laws.1.declarations	Becoming.«亡前理变»	Becoming.«亡前核变»
+a-regularity-kept-and-changed	laws.1.declarations	Becoming.«有亡之线两端理异»	Becoming.«有亡之线两端核异»
+a-regularity-kept-and-changed	references.0.declarations	Becoming.«亡前理变»	Becoming.«亡前核变»
+a-regularity-kept-and-changed	references.0.declarations	Becoming.«守理之线不亡»	Becoming.«守核之线不亡»
+a-regularity-kept-and-changed	references.0.declarations	Becoming.«守理则不穷»	Becoming.«守核则不穷»
+a-regularity-kept-and-changed	references.0.declarations	Becoming.«有亡之线两端理异»	Becoming.«有亡之线两端核异»
+a-regularity-kept-and-changed	title.zh	理之守与离	规律之守与离
+a-regularity-kept-and-changed	statement.zh	故所守之理总可再守	故所守之规律总可再守
+a-regularity-kept-and-changed	correspondence.en	the core is the plan's 理 of the class.	the core is the plan's 理 of the class, a 理 in the glossary's sense where the successor is fixed.
+a-regularity-kept-and-changed	correspondence.zh	核即计划所言类之理。	核即计划所言类之理，步之后定处即词汇表所言之理。
+candidate-theorems-of-the-corpus	references.0.declarations	Becoming.«从缘生非文法之理»	Becoming.«从缘生非文法之律»
+continuation-relative-to-a-class	laws.10.declarations	Becoming.«合有常则足以定理»	Becoming.«合有常则足以定核»
+continuation-relative-to-a-class	laws.10.declarations	Becoming.«足以定理»	Becoming.«足以定核»
+continuation-relative-to-a-class	aliases	Becoming.«合有常则足以定理»	Becoming.«合有常则足以定核»
+continuation-relative-to-a-class	aliases	Becoming.«足以定理»	Becoming.«足以定核»
+continuation-relative-to-a-class	references.0.declarations	Becoming.«合有常则足以定理»	Becoming.«合有常则足以定核»
+continuation-relative-to-a-class	references.0.declarations	Becoming.«足以定理»	Becoming.«足以定核»
+continuation-relative-to-a-class	statement.zh	一条线之理是其类之核	一条线自身之规律是其类之核
+continuation-relative-to-a-class	laws.3.zh	其理在其类之核	其自身之规律在其类之核
+continuation-relative-to-a-class	laws.10.zh	则另一类足以定此类之理	则另一类足以定此类之核
+reach-past-ones-own-end	dependencies.0.detail.en	«守理则不穷»	«守核则不穷»
+reach-past-ones-own-end	dependencies.0.detail.zh	«守理则不穷»	«守核则不穷»
+master-laws-on-the-grammar	laws.14 (declarations); references (GrammarLaws.lean)	(new)	Becoming.«定后则类之核同行», Becoming.«遍后则其内同行之类含于核», Becoming.«定后遍后则核为其内最粗同行之类», Becoming.«后不定则核可不同行»
+master-laws-on-the-grammar	laws.14.en	A class going alike lies in its core,	With a successor everywhere, a class that goes alike inside a relation lies in the relation's core, and a class going alike in its own; with a fixed successor a class's core goes alike, so with both it is the coarsest class inside the class that does, and off a fixed successor it need not;
+master-laws-on-the-grammar	laws.14.zh	同行之类含于其核；	遍后，一关系内同行之类含于该关系之核，同行之类含于其己之核；定后，类之核同行，二者兼则为类内最粗之同行之类，后不定则未必；
+master-laws-on-the-grammar	references	(new integration)	_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rv21-one-sense/NOTE.md
+master-laws-on-the-grammar	references	(new review)	_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rv21-one-sense/review/REVIEW-HE2-KIT.md
+_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-APART.json	roots (key, reason kept)	Becoming.«有亡之线两端理异»	Becoming.«有亡之线两端核异»
+_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-APART.json	roots (key, reason kept)	Becoming.«从缘生非文法之理»	Becoming.«从缘生非文法之律»
+_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-APART.json	roots (new, where listed)	(new)	Becoming.«定后则类之核同行»
+_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-APART.json	roots (new, where listed)	(new)	Becoming.«遍后则其内同行之类含于核»
+_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-APART.json	roots (new, where listed)	(new)	Becoming.«定后遍后则核为其内最粗同行之类»
+_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-APART.json	roots (new, where listed)	(new)	Becoming.«后不定则核可不同行»

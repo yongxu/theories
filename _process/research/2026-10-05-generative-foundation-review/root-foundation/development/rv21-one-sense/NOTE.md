@@ -157,3 +157,44 @@ Given to GW's owner, since the text is GW's and neither kit touches it:
 - The two-grains record's law 8 still says coverage is not proved, against its own law 6.
 - The overview's Chinese edition (§2's sentences on coverage and on generation and widening, and its open list) and both one pages still say coverage is open.
 - 02's new theorem is labelled "(root)" but includes a witness (`Map.Once`).
+
+## 8. HE2 items 6 and 7: the core and 理 in GrammarLaws, and the names renamed
+
+After item 13 landed (`b4cec4c71`), OU's owner took both of its proposals for HE2's one near-full rebuild as items 6 and 7 (board row 53, `21a0cd960`), so neither needs a core run of its own.
+
+- **Item 6.** CoreAndLi's composition merges into `Becoming.GrammarLaws` beside `«有常定后则同行»` as four laws: `«定后则类之核同行»`, `«遍后则其内同行之类含于核»`, `«定后遍后则核为其内最粗同行之类»` and the witness `«后不定则核可不同行»`. The witness is stated as an existential, as GrammarLaws states its witnesses, and it names the branching and the identity in its type: `R 0 1 ∧ R 0 2 ∧ (∀ x y, E x y ↔ x = y)`. The four laws get no record of their own, being a composition. The master-laws record's lumping law (law 15 on its page) lists them in one sentence in each language, and its containment clause now carries the successor everywhere that `«类同行遍后则含于核»` takes, as the Lean has it.
+- **Two names.** OU's owner named the second and third laws `«遍后则同行之类含于核»` and `«定后遍后则核为最粗同行之类»`. Both take the class `S` inside `E`, and read literally, without that, they are false: the whole relation goes alike under every step. The kit review showed this in Lean with an empty axiom report. `其内` is proposed to OU's owner, and a different choice changes four lines of the kit.
+- **Item 7.** The names that wrote 理 for the core are renamed to 核, with no aliases kept: `«守核则不穷»`, `«守核之线不亡»`, `«亡前核变»`, `«有亡之线两端核异»`, `«足以定核»` and `«合有常则足以定核»`. Off a class or a fixed successor the core need not be a 理, so the old names stated a wrong meaning. `«从缘生非文法之理»` becomes `«从缘生非文法之律»`: there 理 meant a law of the grammar, and the two conditions it names are conditions on a model.
+- **Wording.** Prose that wrote 理 for a line's regularity, the core, where it need not be one, now writes 规律 where the English writes "regularity", and 核 where it glosses `«足以定核»`. That prose is two docstrings, four README.zh cells and seven record fields; one of the cells is Decay's core, which does not go alike. The correspondence of a-regularity-kept-and-changed says where the core is a 理. The flame clauses keep 理.
+- **Kept.** The flame witnesses' names, `«两火以薪定理»` and `«两火同火不足以定理»`, are kept. On their models the step's successor is fixed (`Flame.step`, and `TwoFlames.step`, each flame going on by `Flame.step`), and the alike relation is a class (`Flame.alike_class`, and `TwoFlames.alike`, which is `Flame.alike` on each flame's moment). So the core there is a class the step goes alike across, a 理, and the names state what they mean. The audit checks these facts with empty axiom reports.
+- **Texts.**
+  - 01 §4 cites the GrammarLaws names in place of the outside check, and the residue sentence leaves it and the glossary's 理 row.
+  - 01 §5, 06, 07 and the review page on Buddhist thought take the renames. That page is in the pinned review packet, and its two edits are name-only, since the dossier checker needs every backticked name to exist in the Lean. RP's owner is told.
+  - 01 §7's lumping bullet, the master-laws record's home, points to §4's theorem.
+  - From RP2b's independent read: 07 §2's and T8's gloss of 生生 take [AI reading, D1], as GLOSSARY.md and 01 §6 do. P-26 of the philosophy dossier quotes T8 with the label inside, once, and drops RP2b's parenthetical if RP2b has landed first, as agreed with RP's owner.
+  - `review/CoreAndLi.lean`'s header names the declarations it became.
+
+**The kit** is `kit/he2_core_li.py`. Its modes:
+- `--check` checks every part against the tree; it writes nothing.
+- `--apply lean`, before the checker run: 8 files. These are the five modules, the root module's docstring and the two READMEs.
+- `--apply records N`, after the run, with HE2's study section `N`. It rebinds the four records and rewords their fields, and adds to the master-laws record its lumping sentence and declarations and item 6's integration and review references (this note, `review/REVIEW-HE2-KIT.md`). It writes one history note in each record touched, naming that record's own changes. `--no-notes` prints these notes instead, for the lander to fold them into one HE2 note per record where other items write notes too.
+- `--apply register LOG`, after the measure's `--check`, with its log. It re-keys the two renamed apart roots, keeping their module, category and reason, and registers item 6's laws that the log lists as roots without a reason. Other items' roots are printed for their owners.
+- `--apply texts`: 15 edits.
+- `--list` prints every rebind and rewording with its old and new text (`kit/he2_rebinds.tsv`, 86 rows).
+- `--scan` lists live files that still write an old name and that no part covers. Excluded are histories, receipts, studies, the twenty-first review's frozen pages, the study log, the architecture brief and the board, which names the renames old → new. Generated files are left to their generators. On `1e3271112` it found none.
+
+Every part works by name or by text, not by line or position, so the parts apply before or after HE2's other items in one pass. Item 1 edits Grammar.lean at `«两端分则中有标»` (line 669), which holds no renamed name, between this kit's sites at 317, 581–612 and 821–863. The records part reads every record and finds the lumping law by `«类同行遍后则含于核»`, so a record that another item makes cite an old name is rebound as well, and the kit prints it.
+
+**Checked outside the package** (`kit/he2_compile_audit.log`).
+- On `1e3271112`, with the lean part applied, the import closure of the changed modules compiles. That is 112 modules, each by `lean -o` into a flat folder with `LEAN_PATH` there, as the checker compiles, with no error or warning. The package's Lean is unchanged since `8a8b0df82`.
+- Every axiom report is empty: the four new laws, the seven renamed declarations, and the five flame facts (`kit/he2_audit.lean.txt`, kept as text so that the Lean indexes do not count it).
+- All parts applied together in a scratch worktree on `1e3271112`, the register from a sample log of the measure. Afterwards every part checks as applied, the dossier checker reports no problem, and the scan finds no old name.
+
+**What HE2's one landing runs besides the parts,** in order after the lean part:
+1. the checker run;
+2. the signature audit, which should expect these differences from this kit: seven names gone and seven new, four laws added in GrammarLaws, and three kept-name statements («火之见证不择类», «两火以薪定理», «两火同火不足以定理») and two definitions («因于核», «相须核») whose text differs only by «足以定理» → «足以定核». The kit's `RENAMES` can be imported and substituted into the old text before comparing.
+3. the records part;
+4. `THEOREM-CONNECTIVITY.py --check`, whose log the register part reads, then the register part, `--write` and `--check` again;
+5. the re-point;
+6. the master-laws record's `validation_scope` in both languages, with the new receipt, GrammarLaws' counts and the reviews, and 08's core counts (both HE2-wide);
+7. MV's generator, the study section and the render, the strict check, links, tests and the dossier check.
