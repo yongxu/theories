@@ -1,0 +1,24 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/bc0d4978-6556-430c-aa30-006c906d8b9a/scratchpad/wt-la4/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/tree",
+  "modules": 85,
+  "ran": [
+    "Becoming.OptimumSeason",
+    "Becoming.WeightedCommuting",
+    "BecomingOptimumSeasonAxiomAudit",
+    "BecomingWeightedCommutingAxiomAudit"
+  ],
+  "reused": 83,
+  "unclean": [],
+  "audits": {
+    "Becoming.OptimumSeason": {
+      "theorems": 63,
+      "declarations": 98,
+      "with_axioms": {}
+    },
+    "Becoming.WeightedCommuting": {
+      "theorems": 18,
+      "declarations": 29,
+      "with_axioms": {}
+    }
+  }
+}
