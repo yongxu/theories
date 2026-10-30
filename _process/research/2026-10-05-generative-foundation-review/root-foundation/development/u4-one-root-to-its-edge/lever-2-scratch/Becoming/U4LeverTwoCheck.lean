@@ -9,8 +9,9 @@ and 17, row 2's offspring dependence cited by name, and the first review's witne
 and 13 (`Ungiven`, `Raised`). Each `example` derives the named hypothesis's negation by applying
 the package row (or its on-root form) to the witness's other-hypothesis theorems and
 contradicting the witness's failing conclusion. So every other hypothesis is proved at exactly
-the row's type, and the failure negates exactly the row's conclusion at that instance. The two the second read found missing are named theorems
-(`moved_needed`, `inactive_needed`); the rest are examples.
+the row's type, and the failure negates exactly the row's conclusion at that instance. The two
+the second read found missing are named theorems (`moved_needed`, `inactive_needed`); the rest
+are examples.
 -/
 
 namespace Becoming.U4LeverTwoCheck

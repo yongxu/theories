@@ -15,7 +15,7 @@
 
 or else the distance at which it stops. What each row reads was found by reading its statement and proof.
 
-**Scratch.** [lever-2-scratch/Becoming/U4LeverTwo.lean](lever-2-scratch/Becoming/U4LeverTwo.lean): 190 theorems in 253 declarations, every axiom report empty (65 in 90 at the review, 173 in 236 at the second read). [U4LeverTwoCheck.lean](lever-2-scratch/Becoming/U4LeverTwoCheck.lean), adapted from the second read's check, applies each row, in its package form or on the root, to each witness: 48 examples and 2 theorems, whose axiom reports are empty.
+**Scratch.** [lever-2-scratch/Becoming/U4LeverTwo.lean](lever-2-scratch/Becoming/U4LeverTwo.lean): 190 theorems in 253 declarations, every axiom report empty (65 in 90 at the review, 173 in 236 at the second read). [U4LeverTwoCheck.lean](lever-2-scratch/Becoming/U4LeverTwoCheck.lean), adapted from the second read's check, applies each row, in its package form or on the root, to each witness: 48 examples and 2 theorems; the 2 theorems' axiom reports are empty, and the examples are elaborated, not audited.
 - It was built with `scratch_build.py`, by module name, in this branch's worktree, whose package equals main's at `282fda08f` ([log](lever-2-scratch/scratch-build.log); the log's `tree` is that worktree's path).
 - §2's constant check is [constant-check.txt](lever-2-scratch/constant-check.txt): the script, how it was run, and its output.
 - These are working builds, not receipts.
