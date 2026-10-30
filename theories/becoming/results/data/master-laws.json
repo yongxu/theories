@@ -9,7 +9,9 @@
   "theories/becoming/results/completion/COVERAGE.json": "0dc05776e9e19df1f4846623890bc421a44b6b422e87f3bf8ce738596afa8a49",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "c8e349f57adecd7bd8d25bd0fde850c9f813919cdbf0e4a3734005c43340043a",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
-  "tools/research/master_laws.py": "f7e423e8630df318b18b5fc2b48d0c8f2941953053af4561ac49b83390d82f23"
+  "tools/research/boundary.py": "8279d5788b317def992143ea29d6602f3bc1aa72509b6e1e8b0c0b020d3bd722",
+  "tools/research/boundary_check.lean": "fb0cae07472e46b1fd6d6b7730038307a68b7aeacb01ee7613eaca9f93b41568",
+  "tools/research/master_laws.py": "95e8ec09142c59b3d45d19e6ac8ca8e63104e80c5d9e222d10cc67c2d4058997"
  },
  "names": {
   "closure": "closure",
@@ -84,6 +86,21 @@
   "return": 0,
   "lumping": 0,
   "order": 3
+ },
+ "counts_at_boundary_record": {
+  "laws": 0,
+  "no_declarations": 0,
+  "outside": 0,
+  "grammar": 0,
+  "balance, represented": 0,
+  "anchor, not reached": 0,
+  "no master law": 0,
+  "vocabulary_only": 0,
+  "closure": 0,
+  "balance": 0,
+  "return": 0,
+  "lumping": 0,
+  "order": 0
  },
  "model_relations": {
   "occurrence": [
