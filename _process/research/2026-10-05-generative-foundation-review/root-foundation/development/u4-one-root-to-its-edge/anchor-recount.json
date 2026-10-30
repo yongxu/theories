@@ -1,0 +1,368 @@
+{
+ "rows": 39,
+ "by_anchors": {
+  "Flow.Balances + Flow.BalancesOn": 11,
+  "Flow.Balances": 4,
+  "Flow.BalancesOn": 4,
+  "balance_over_stretch_on": 16,
+  "Flow.BalancesBetween + balance_over_stretch_on": 2,
+  "Flow.BalancesBetween": 2
+ },
+ "declarations": [
+  {
+   "row": "generation",
+   "declaration": "Becoming.Web.Embodied.replenishes",
+   "anchors": [
+    "Flow.Balances",
+    "Flow.BalancesOn"
+   ],
+   "states": [
+    "Flow.Balances"
+   ]
+  },
+  {
+   "row": "generation",
+   "declaration": "Becoming.Flow.new_beyond_every",
+   "anchors": [
+    "Flow.Balances"
+   ],
+   "states": []
+  },
+  {
+   "row": "maintenance",
+   "declaration": "Becoming.Flow.restores",
+   "anchors": [
+    "Flow.Balances",
+    "Flow.BalancesOn"
+   ],
+   "states": [
+    "Flow.Balances"
+   ]
+  },
+  {
+   "row": "maintenance",
+   "declaration": "Becoming.Flow.Balances.renewedBy",
+   "anchors": [
+    "Flow.Balances",
+    "Flow.BalancesOn"
+   ],
+   "states": [
+    "Flow.Balances"
+   ]
+  },
+  {
+   "row": "transformation",
+   "declaration": "Becoming.Flow.change_recurs_iff",
+   "anchors": [
+    "Flow.BalancesOn"
+   ],
+   "states": []
+  },
+  {
+   "row": "transformation",
+   "declaration": "Becoming.World.balanced_reidentify_iff",
+   "anchors": [
+    "Flow.Balances"
+   ],
+   "states": []
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Flow.Balances.consumption_ends_with_feeders",
+   "anchors": [
+    "Flow.Balances",
+    "Flow.BalancesOn"
+   ],
+   "states": [
+    "Flow.Balances"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Flow.continuing_excludes",
+   "anchors": [
+    "Flow.Balances",
+    "Flow.BalancesOn"
+   ],
+   "states": [
+    "Flow.Balances"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Flow.outrun_below",
+   "anchors": [
+    "Flow.Balances",
+    "Flow.BalancesOn"
+   ],
+   "states": [
+    "Flow.Balances"
+   ]
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RegimeMargin.ends_iff_below",
+   "anchors": [
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.RegimeMargin.Adjusted.ends_iff_below",
+   "anchors": [
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.course_lost_iff",
+   "anchors": [
+    "Flow.BalancesBetween",
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.frontier_broken",
+   "anchors": [
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.frontier_breaks_below",
+   "anchors": [
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.frontier_keeps_stepwise",
+   "anchors": [
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.frontier_exhausts",
+   "anchors": [
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.frontier_rebuilds",
+   "anchors": [
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "degeneration",
+   "declaration": "Becoming.Web.Next.frontier_ends_drawn_first",
+   "anchors": [
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "dissolution",
+   "declaration": "Becoming.Listed.coming_of_ceasing",
+   "anchors": [
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "dissolution",
+   "declaration": "Becoming.CensusWebs.keep_pace",
+   "anchors": [
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "actor",
+   "declaration": "Becoming.counterfactual_is_course",
+   "anchors": [
+    "Flow.Balances"
+   ],
+   "states": [
+    "Flow.Balances"
+   ]
+  },
+  {
+   "row": "knowing",
+   "declaration": "Becoming.apart_only_downstream",
+   "anchors": [
+    "Flow.Balances"
+   ],
+   "states": [
+    "Flow.Balances"
+   ]
+  },
+  {
+   "row": "capacity",
+   "declaration": "Becoming.Flow.Balances.retains_iff_within_margin",
+   "anchors": [
+    "Flow.Balances",
+    "Flow.BalancesOn"
+   ],
+   "states": [
+    "Flow.Balances"
+   ]
+  },
+  {
+   "row": "capacity",
+   "declaration": "Becoming.Flow.Balances.widens_iff_others_within",
+   "anchors": [
+    "Flow.Balances",
+    "Flow.BalancesOn"
+   ],
+   "states": [
+    "Flow.Balances"
+   ]
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Flow.no_new_dependence",
+   "anchors": [
+    "Flow.BalancesOn"
+   ],
+   "states": []
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Reproduction.Flow.lineage_ends",
+   "anchors": [
+    "Flow.BalancesOn"
+   ],
+   "states": [
+    "Flow.BalancesOn"
+   ]
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.Reproduction.Flow.closed_lineage_lowered",
+   "anchors": [
+    "Flow.BalancesOn"
+   ],
+   "states": [
+    "Flow.BalancesOn"
+   ]
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.GroupEnding.Flow.family_childless",
+   "anchors": [
+    "Flow.Balances",
+    "Flow.BalancesOn"
+   ],
+   "states": [
+    "Flow.Balances"
+   ]
+  },
+  {
+   "row": "evolution",
+   "declaration": "Becoming.GroupEnding.Flow.coupled_end_together",
+   "anchors": [
+    "Flow.Balances",
+    "Flow.BalancesOn"
+   ],
+   "states": [
+    "Flow.Balances"
+   ]
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Optimum.optimum_beyond",
+   "anchors": [
+    "Flow.BalancesBetween"
+   ],
+   "states": []
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Optimum.mutual_beyond",
+   "anchors": [
+    "Flow.BalancesBetween"
+   ],
+   "states": []
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.course_lost_iff",
+   "anchors": [
+    "Flow.BalancesBetween",
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.frontier_broken",
+   "anchors": [
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.frontier_breaks_below",
+   "anchors": [
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.frontier_keeps_stepwise",
+   "anchors": [
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.frontier_exhausts",
+   "anchors": [
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.frontier_rebuilds",
+   "anchors": [
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Web.Next.frontier_ends_drawn_first",
+   "anchors": [
+    "balance_over_stretch_on"
+   ],
+   "states": []
+  },
+  {
+   "row": "alignment",
+   "declaration": "Becoming.Flow.Balances.widens_iff_others_within",
+   "anchors": [
+    "Flow.Balances",
+    "Flow.BalancesOn"
+   ],
+   "states": [
+    "Flow.Balances"
+   ]
+  }
+ ]
+}
