@@ -470,13 +470,13 @@ rI = build(
            "Gentzkow 2011), no optimal signal or equilibrium represented. AI reading: under a reference the valuation "
            "differs from, incentives to withhold and to revise, before costs; coarse equilibrium communication "
            "(Crawford and Sobel 1982) differs. own_least with revalued_lowers_iff is a one-decision counterpart of "
-           "current-reward-function evaluation's preservation incentive (Everitt et al. 2021, Claim 2): a reason to "
-           "keep the valuation from a revision deciding a listed cell against its strict weighted preference; no "
+           "current-reward-function evaluation's preservation incentive (Everitt et al. 2021, Claim 2): on a shared "
+           "model, a reason to keep the valuation from a revision deciding a listed cell against its strict weighted preference; no "
            "path-specific objective (Farquhar, Carey and "
            "Everitt 2022); answer_constant is the off-switch game's Equation 1 for a constant policy (Hadfield-Menell "
            "et al. 2017); the routes relate to induced preference shifts (Carroll et al. 2022). Readings, not "
            "containments.",
-     'zh': '以计：informed_le 于此抉择为 Blackwell（1953）比较之确定性细分、定抉择之一向；共模型时，SplitsKeep 沿列之分割之格，对应贝叶斯劝说中全然披露之凸性条件（Kamenica 与 Gentzkow 2011），最优之信号与均衡未表。AI 解读：参照与值相异时，读为扣告与改之诱因，未计其费；偏好相异下之粗略均衡通信（Crawford 与 Sobel 1982）与此不同。own_least 与 revalued_lowers_iff 为以当下奖励函数评估之保存之诱因（Everitt 等 2021，Claim 2）于一次抉择之对应：有护值免于使某列格之断逆当下严格加权之偏之改值之由；未构路径特定之目标（Farquhar 等 2022）；answer_constant 为关机博弈之 Equation 1 于恒定之策（Hadfield-Menell 等 2017）；二途与诱发之偏好之移（Carroll 等 2022）相关。皆为读，非包含。'},
+     'zh': '以计：informed_le 于此抉择为 Blackwell（1953）比较之确定性细分、定抉择之一向；共模型时，SplitsKeep 沿列之分割之格，对应贝叶斯劝说中全然披露之凸性条件（Kamenica 与 Gentzkow 2011），最优之信号与均衡未表。AI 解读：参照与值相异时，读为扣告与改之诱因，未计其费；偏好相异下之粗略均衡通信（Crawford 与 Sobel 1982）与此不同。own_least 与 revalued_lowers_iff 为以当下奖励函数评估之保存之诱因（Everitt 等 2021，Claim 2）于一次抉择之对应：共模型时，有护值免于使某列格之断逆当下严格加权之偏之改值之由；未构路径特定之目标（Farquhar 等 2022）；answer_constant 为关机博弈之 Equation 1 于恒定之策（Hadfield-Menell 等 2017）；二途与诱发之偏好之移（Carroll 等 2022）相关。皆为读，非包含。'},
     ['a reading informed and revalued', '受告与改值之读', 'informing and revaluing a reading formation',
      '告与改读之形成之值', 'the valuation as state', '值为态', 'Becoming.ListingValuation.shortfall_split',
      'Becoming.ListingValuation.refining_never_lowers_iff'],

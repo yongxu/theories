@@ -157,13 +157,13 @@ Standing: compositions and general laws with exact criteria, none claimed new as
        equilibrium communication (Crawford and Sobel 1982) differs, its coarseness the cost of a privately informed
        sender's credibility; own_least with revalued_lowers_iff is a one-decision counterpart of
        current-reward-function evaluation (Everitt, Hutter, Kumar and Krakovna 2021), the preservation incentive their
-       Claim 2 permits: by the current valuation no revaluation gains and one deciding a listed cell against its
-       strict weighted preference loses; no path-specific objective is constructed (Farquhar, Carey and Everitt 2022),
-       the path from the valuation through the answer staying live; answer_constant is the off-switch game's
-       Equation 1 for a deterministic policy constant in the utility (Hadfield-Menell, Dragan, Abbeel and Russell
-       2017); the routes are related to induced preference shifts (Carroll, Dragan, Russell and Hadfield-Menell 2022),
-       who call frozen initial preferences a very crude baseline, with no criterion of legitimate, desired or
-       autonomous change supplied.
+       Claim 2 permits: by the current valuation on a shared model no revaluation gains and one deciding a listed cell
+       against its strict weighted preference loses; no path-specific objective is constructed (Farquhar, Carey and
+       Everitt 2022), the path from the valuation through the answer staying live; answer_constant is the off-switch
+       game's Equation 1 for a deterministic policy constant in the utility (Hadfield-Menell, Dragan, Abbeel and
+       Russell 2017); the routes are related to induced preference shifts (Carroll, Dragan, Russell and
+       Hadfield-Menell 2022), who call frozen initial preferences a very crude baseline, with no criterion of
+       legitimate, desired or autonomous change supplied.
 Boundary:
   - A holding formation planning among informing, revaluing and holding over several steps, so any multistep incentive
     or an optimal signal chosen by the holding formation; its learning about the reading formation; the reading
