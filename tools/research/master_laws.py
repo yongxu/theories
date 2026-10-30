@@ -196,6 +196,14 @@ def counted_in(rid, i, carrying, checked):
 COUNTED = ('counts', 'counts_at_model', 'counts_at_boundary_record')
 
 
+def boundary_data(carrying, report):
+    """The data's `boundary`: report(record) for the one record carrying the field, an error naming the records where
+    more than one carries it, and None where none does."""
+    if len(carrying) > 1:
+        return {'error': 'the boundary field is carried by more than one record', 'records': carrying}
+    return report(carrying[0]) if carrying else None
+
+
 def law_entries(loaded, C, above, central, is_anchor, checked, at_model, carrying):
     """Each record's law entries, and the three tables each law is counted in one of (counted_in): counts,
     counts_at_model (F5's carrying laws) and counts_at_boundary_record (the laws of the record carrying the boundary
@@ -388,10 +396,9 @@ def main():
         'central_reach': {'counts': reach, 'rows': {n: at_model[n] for n in sorted(central) if n in at_model}},
         'records': records,
     }
-    if len(carrying) > 1:
-        data['boundary'] = {'error': 'the boundary field is carried by more than one record', 'records': carrying}
-    elif carrying:
-        data['boundary'] = boundary.report(C, central, at_model, f5_class, by_id[carrying[0]], laws['balance'])
+    b = boundary_data(carrying, lambda rid: boundary.report(C, central, at_model, f5_class, by_id[rid], laws['balance']))
+    if b is not None:
+        data['boundary'] = b
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1) + '\n')
     unverified = sum(1 for v in checked.values() for x in v if not x['verified'])
     b = data.get('boundary', {})

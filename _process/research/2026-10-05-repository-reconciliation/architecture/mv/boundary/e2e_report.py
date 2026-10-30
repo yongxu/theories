@@ -9,7 +9,8 @@ probe's bridges and support, the three readings equal to the rule, act_courses_u
 must fail), and the two premises of the ethics. OUT receives the report (e2e-report.json beside this file). The run
 asserts the outcomes: the Lean check ran, the eight derived rows and the three readings stand as declared, only
 act_courses_unselected is unverified, failing D2, D3 and D5, the premises are not entailed and not shown, and the
-counts sum to the central declarations.
+counts are 8 derived, 24 connected, 32 balance in its statement, 16 at a represented model, 7 own carrier and 31
+unplaced, summing to the central declarations.
 """
 import json, pickle, sys, importlib.util
 from pathlib import Path
@@ -71,4 +72,6 @@ assert [x['declaration'] for x in rep['unverified']] == [acts], rep['unverified'
 assert sorted({f[:2] for f in rep['unverified'][0]['failed']}) == ['D2', 'D3', 'D5'], rep['unverified'][0]['failed']
 assert [p['result'] for p in rep['premises_of_the_ethics']] == ['not entailed', 'not shown'], rep['premises_of_the_ethics']
 assert sum(rep['counts'].values()) == sum(rep['groups'].values()) == len(central)
+assert {k: v for k, v in rep['counts'].items() if v} == {'derived': 8, 'connected': 24, 'balance in its statement': 32,
+                                                         'at a represented model': 16, 'own carrier': 7, 'unplaced': 31}, rep['counts']
 print('the expected outcomes hold')

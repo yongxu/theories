@@ -1,0 +1,273 @@
+{
+ "about": "The re-check of the code review's fixes to MV's boundary field (ffccb515d against 36d4b0fae, branch mv-status): two lenses (the findings taken; what the fixes broke), each followed by one adversarial verifier of that lens's findings. The verdicts' `real` is the verifier's; BOUNDARY-FIELD.md §9 says what was taken.",
+ "commit": "ffccb515d",
+ "against": "36d4b0fae",
+ "lenses": {
+  "taken": {
+   "covered": "Read the diff 36d4b0fae..ffccb515d; BOUNDARY-FIELD.md §2–§5, §8 and §9; all 46 findings and verdicts in boundary-code-review.json; and the current boundary.py, registry.py (standing_line, boundary_section, boundary_matching, boundary_status, attach_standings, affected_ids), master_laws.py (law_entries, main), boundary_check.lean (theoremsUsed, tests 3/5/9), the tests, e2e_report.py and run_controls.py.\n\nCounts: 46 findings, 29 with verdict real (SPEC-1..12, ROBUSTNESS 1-6, 8, 9, LEAN-1, LEAN-2, TESTS-1-5, 8, 13), 17 not real, all nits. That matches §9 except the in-part tally (TAKEN-9).\n\nReran the original reproductions on the fixed code:\n- review-spec: crash.py, nondict.py, nolean.py, lines.py, lines2.py, affected.py.\n- review-robustness: crash_check.py, dropped.py, stale.py, affected.py, vacuous.py, fuzz.py (1,826 cases).\n\nEvery original failure is gone: no unhashable crash with review text; a missing toolchain is recorded as not set up; non-object items are unverified by place; no self-contradictory rule lines; a reading shows the rule's differing label; a carrier without laws, a deleted record and an F5 carrier now re-render; an unread carrier gets its Not-matched section; a change around the field un-matches every declaration and 'the field'. Lines 851/852 are pre-existing master_laws_status code, and boundary.py:528 needs a carrier with no boundary key, which never occurs. The new crash path is TAKEN-2.\n\nRan 38 in-process mutants, one per taken finding or nit (my mutants.py); 37 are killed by the named tests and one survives (TAKEN-6).\n\nRan:\n- test_boundary: 54 tests, OK, 1 skipped.\n- The e2e harness: asserts hold, and its output is identical to the committed e2e-report.json.\n- run_controls.py on U4's build: 31 ok, identical to controls-run.log.\n- One extra Lean stub run, for TAKEN-1.\n\nWith no carrier, pages are unchanged (the render test and the mutants). The status at ffccb515d reports current False with inputs_changed ['tools/research/master_laws.py'] (ROBUSTNESS-7, pending the landing).\n\nNo repository files were edited. Scratch is in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/recheck-taken/.",
+   "findings": [
+    {
+     "id": "TAKEN-1",
+     "severity": "minor",
+     "file": "tools/research/boundary_check.lean",
+     "line": 211,
+     "claim": "LEAN-1 is only partly taken. theoremsUsed treats a theorem it reaches inside an entered package definition as a proof it collects, never as something to walk through. Lean abstracts a definition's inline proofs into generated auxiliary theorems (`X._proof_1`), so an inline `rfl` (or `decide`, or a termination proof) in a model's data is collected as a package proof and fails the discharge condition. §3.2 test 9 and the Lean docstring say the opposite: \"Constructors and `rfl` are not proofs, and `Init`'s proofs inside a definition … are not counted\". The LEAN-1 verdict's fix also required that termination or decide proofs raise no spurious use. §3.0 likewise says every walk goes through auxiliaries. This is fail-closed (a false refusal, not a hole), but a U4 form whose recovery passes through a model structure with an inline proof field would be refused with a message naming a generated `_proof_1`.",
+     "evidence": "I added a stub module on top of test_boundary's STUBS: `def Model.step_rfl : {f : Nat → Nat // ∀ x, Model.rel x (f x)} := ⟨Model.next, fun _ => rfl⟩` and `theorem via_step_rfl : ¬ ∃ x, ∀ y, ¬ Model.rel x y := total_form (fun x => ⟨Model.step_rfl.1 x, Model.step_rfl.2 x⟩)`, with an rfl certificate. boundary.run_check gives failures ['the discharge condition fails: the recovery uses [Becoming.Model.step_rfl._proof_1]'] and recovery_uses [Becoming.Leaf.total_form, Subtype.property, Becoming.Model.step_rfl._proof_1]. A structure `Model.Onward` with an inline `fun _ => rfl` field fails the same way; Lean shares the same `_proof_1`. Script: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/recheck-taken/stub_aux.py. Row 17 and the committed controls are unaffected: I reran run_controls.py, 31 ok, identical to controls-run.log.",
+     "fix": "In theoremsUsed's non-own branch, enter a generated auxiliary of the package instead of collecting it: push (m, false) when a name component after the first matches `_proof_N` or `proof_N` (boundary.py's AUX), so only the package proofs inside it are collected. Add a stub control with an inline rfl in a model's data, which must pass test 9, beside Model.step (carrying next_rel), which must still fail. Rerun run_controls.py.",
+     "verdict": {
+      "id": "TAKEN-1",
+      "real": true,
+      "severity": "minor",
+      "reason": "Reproduced at ffccb515d with one Lean run on test_boundary's STUBS plus the reviewer's extra module (my copy: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/recheck-refute-taken/stub_aux.py). `def Model.step_rfl : {f // ∀ x, Model.rel x (f x)} := ⟨Model.next, fun _ => rfl⟩` with recovery `total_form (fun x => ⟨Model.step_rfl.1 x, Model.step_rfl.2 x⟩)` gives failures ['the discharge condition fails: the recovery uses [Becoming.Model.step_rfl._proof_1]'] and recovery_uses [total_form, Subtype.property, step_rfl._proof_1]. The structure variant fails the same way. The cause is in theoremsUsed (boundary_check.lean:211): a package constant that is a proof is collected before the walk ever asks whether it is a generated auxiliary. Lean abstracts the inline rfl of a definition into a package theorem `_proof_1`, so that theorem gets collected. This contradicts three statements. §3.0 says of generated auxiliaries 'never … theorems a proof names: every walk goes through them'. §3.2 test 9 and the Lean docstring say 'Constructors and `rfl` are not proofs'. The LEAN-1 verdict's fix requires that 'termination or decide proofs raise no spurious use' (an inline `by decide` is abstracted the same way). The same collection also hits test 5's facts, which compare the fit's facts with the countermodel's. The check fails closed: this is a false refusal, not a hole, and row 17 and U4's controls are unaffected. It still refuses a valid form in an ordinary Lean idiom, and its message names a generated constant.",
+      "fix": "In theoremsUsed's non-own branch, check for a generated auxiliary of the package before the isProof test: when a name component after the first matches boundary.py's AUX (`_proof_N`, `proof_N`, `eq_N`, `eq_def`, …), push (m, false) instead of collecting it, so that only the package proofs inside it are collected. Add two stub controls. A model datum with an inline `fun _ => rfl` must pass test 9. A datum with an inline `fun x => Model.next_rel x` must still fail, naming Model.next_rel. Rerun test_boundary and run_controls.py."
+     }
+    },
+    {
+     "id": "TAKEN-2",
+     "severity": "minor",
+     "file": "tools/research/registry.py",
+     "line": 763,
+     "claim": "The boundary record's section crashes on a malformed premise `absent`. boundary_section builds its `what` dict eagerly and so calls `en(p['absent'])` for every premise, whatever its result. A plain-string `absent` (a likely authoring slip), a list or a number makes the page render raise AttributeError. The check refuses that same record cleanly ('absent must say why'), and the generator writes the premise as unverified. This was there at 36d4b0fae too (same crash on the extracted old tools), but ROBUSTNESS-3's fuzz evidence said the page functions showed no other crash. So §8's 'malformed entries never crashing' and §9's ROBUSTNESS-3 'refused, never a crash' do not hold for the page.",
+     "evidence": "Repro: carrier(standing('Becoming.Flow.counted','counting')) with premises_of_the_ethics[1]['absent'] = 'No theorem shows it.', then report, then attach_standings with that data, then boundary_section gives AttributeError: 'str' object has no attribute 'get' (registry.py:171 via :763). registry.boundary_errors on the same record gives ['boundary premise 2 (order): absent must say why, in English or Chinese, beside a null not_entailed']. Script: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/recheck-taken/absent_case.py. Rerunning review-robustness/fuzz.py on the fixed code (1,826 cases) still reports ('pages', AttributeError, registry.py, 171) for ('boundary','premises_of_the_ethics',1,'absent') = 1.5.",
+     "fix": "Guard it as `name` is guarded two lines below: `en(p['absent']) if isinstance(p.get('absent'), dict) else ''`. Or compute only the branch for p['result']. Add a malformed absent to a ThePages section test.",
+     "verdict": {
+      "id": "TAKEN-2",
+      "real": false,
+      "severity": "nit",
+      "reason": "The crash reproduces only on a direct call. boundary_section on a report whose premise `absent` is a string, list or number raises AttributeError at registry.py:763, through en() at :171, because the 'not shown' entry of the dict is built eagerly. It cannot be reached through the toolchain, though. The same record fails validate: boundary_errors in validate_v2_fields gives 'absent must say why, in English or Chinese, beside a null not_entailed'. Both render paths stop before render_record when validation reports errors: research.check_or_render returns at research.py:263-264, and registry.main sets `outputs = {} if errors`. A stale report holding a bad `absent` next to a valid record cannot reach the premise loop either. The field then differs from the data's `declared`, so the section returns early with 'Not matched'. ROBUSTNESS-3's take covers status and review paths in the rules and the generator, and those do not crash here. report() writes the premise as unverified. The crash also predates this commit, so this is hardening of an unreachable path, not a defect of the fix.",
+      "fix": "Optional: compute only the branch for p['result'], or guard with `en(p['absent']) if isinstance(p.get('absent'), dict) else ''`."
+     }
+    },
+    {
+     "id": "TAKEN-3",
+     "severity": "nit",
+     "file": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/BOUNDARY-FIELD.md",
+     "line": 277,
+     "claim": "SPEC-4 is only partly taken. §3.4 still says that beside a reading 'the page and the data show: the rule's label, where it differs; F5's verified items for the row; the grammar laws the row reaches; where balance enters'. The page shows the laws reached, or balance, only as the reason for a rule label that differs. A reading equal to the rule, such as U4's two connected readings, says only 'the rule gives the same'. Neither the code nor §3.4 was brought to the other.",
+     "evidence": "Test fixtures: a reading 'connected' on Becoming.Flow.proof_balance (reached ['Becoming.«所闭之界»'], proof_only ['Becoming.balance_over_stretch_on']) renders '*Standing of `Becoming.Flow.proof_balance`:* connected, a reading: Why it stands so ([review.md](…)); the rule gives the same.'. The section line is '(a reading; the rule gives the same)'.",
+     "fix": "Narrow §3.4 to 'the data shows these; the page shows the rule's label where it differs, with its reason' (§5's wording). Or add the laws reached and where balance enters to a reading's line.",
+     "verdict": {
+      "id": "TAKEN-3",
+      "real": true,
+      "severity": "nit",
+      "reason": "Reproduced. A reading equal to the rule renders only '; the rule gives the same', and its section line only '(a reading; the rule gives the same)'. This holds for `connected` on Becoming.Flow.proof_balance (reached ['Becoming.«所闭之界»'], proof_only ['Becoming.balance_over_stretch_on']), and for 'balance in its statement' on Flow.written (written out) and Flow.balanced (anchor Flow.Balances). §3.4 still says that beside every reading 'the page and the data show … the grammar laws the row reaches; where balance enters'. The master-law note gives master-law anchors, not these «» laws, and nothing on the page gives where balance enters. The SPEC-4 verdict found that the spec contradicts itself, and offered narrowing §3.4 as an alternative fix. The take added only the label and reason where they differ, so §3.4 and §5 still disagree.",
+      "fix": "Narrow §3.4 to: 'the data shows these; the page shows the rule's label where it differs, with its reason (§5)'."
+     }
+    },
+    {
+     "id": "TAKEN-4",
+     "severity": "nit",
+     "file": "tools/research/registry.py",
+     "line": 1310,
+     "claim": "The SPEC-4 fix puts the rule's reason into a reading's line, including F5-derived reasons ('F5's verified items at the occurrence model'). But cites() gates only rule-placed lines on the cited F5 laws being matched. While an F5 carrier's law is not matched, the reading's line keeps stating F5's verified items, though the rule-placed line for the same facts is hidden (§3.6).",
+     "evidence": "Repro: reading 'amounts' on Becoming.Flow.modelled (rule: at a represented model, from m:2), attach_standings with matched_at_model=set(). The line still reads '…amounts, a reading: …; the rule gives at a represented model (F5's verified items at the occurrence model).'. The same line shows with m:2 matched.",
+     "fix": "In cites(), apply the F5 test also to a reading whose rule label differs and is 'at a represented model' or 'own carrier'. Or drop the F5 reason from the reading's line unless each cited F5 law is matched.",
+     "verdict": {
+      "id": "TAKEN-4",
+      "real": true,
+      "severity": "nit",
+      "reason": "Reproduced. A reading 'amounts' on Becoming.Flow.modelled (rule 'at a represented model' from m:2), with matched_at_model empty, still renders '…; the rule gives at a represented model (F5's verified items at the occurrence model).'. In the same state the rule-placed line for that row is hidden, because cites() (registry.py, attach_standings) gates only rows with placed == 'the rule'. The SPEC-4 fix put the rule's F5-derived reason into reading lines, but the §3.6 gate (F5 text shown only while each F5 law it cites is matched) was not extended to it. So in that transient state a line states F5 items that F5's own lines withhold.",
+      "fix": "In cites(), also apply the F5 test to a reading whose rule label differs and is 'at a represented model' or 'own carrier'. Or, for such a reading, drop the parenthesised F5 reason unless each cited F5 law is matched. Add the unmatched case to test_lines_hidden_when_not_matched."
+     }
+    },
+    {
+     "id": "TAKEN-5",
+     "severity": "nit",
+     "file": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/BOUNDARY-FIELD.md",
+     "line": 324,
+     "claim": "§3.6 'The imports' still says the check imports `Becoming`, the periphery joins 'and the module of each standing-2 form'. Since the LEAN-6 take, the code imports the module of every name sent: each derived and standing-2 entry's declaration and given names (boundary.py:565-566). §8 already says 'the module of every name sent', so §3.6 no longer states what the code does.",
+     "evidence": "boundary.py:565: `sent = [d for s in lean_entries + derived_ok for d in [s['declaration'], *given_names(s)[0]]]`, passed as `sorted({C[x]['m'] for x in sent})`. TheReport.test_the_lean_check asserts modules ['Becoming.Flow', 'Becoming.Grammar', 'Becoming.Leaf'].",
+     "fix": "Change §3.6 to 'and the module of every name it sends (each entry's declaration and names)'.",
+     "verdict": {
+      "id": "TAKEN-5",
+      "real": true,
+      "severity": "nit",
+      "reason": "Confirmed by reading. boundary.py:565-566 sends the module of every name sent (each derived and standing-2 entry's declaration and given names). lean_check (boundary.py:511) imports those, filtered to the core run's modules. §8 already says 'the module of every name sent'. §3.6 (BOUNDARY-FIELD.md:324) still says the imports are `Becoming`, the periphery joins 'and the module of each standing-2 form', so it no longer states what the code does.",
+      "fix": "In §3.6, write: 'and the module of every name it sends (each derived and standing-2 entry's declaration and names)'."
+     }
+    },
+    {
+     "id": "TAKEN-6",
+     "severity": "nit",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 171,
+     "claim": "TESTS-11 (taken) and §8's 'a review that … does not name each name …, for every kind of name' leave out the `law` kind. No test fails when the review check skips a derived entry's law names.",
+     "evidence": "In-process mutant (nothing on disk changed): field_findings' `reviewed(where, s.get('review'), [d, *given])` with law names filtered out leaves FieldRules (13 tests) green. The support-skipping mutant, by contrast, is killed. Script: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/recheck-taken/mutants.py ('TESTS-11 review skips law': SURVIVED). The other 37 mutants of the taken findings are killed.",
+     "fix": "Add 'Becoming.«所闭之界»' (the law) to the key loop in test_the_review.",
+     "verdict": {
+      "id": "TAKEN-6",
+      "real": true,
+      "severity": "nit",
+      "reason": "Reproduced with an in-process mutant (/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/recheck-refute-taken/mutant_law.py). Making field_findings' review call skip a derived entry's `law` names leaves FieldRules green (13 run, 0 failures). The matching support-skipping mutant is killed, which shows the patch takes effect. test_the_review's key loop (test_boundary.py:171-174) leaves out 'Becoming.«所闭之界»', and the line-168 case asserts only bridge_iff. §8 claims the test covers a review that 'does not name each name …, for every kind of name', so the test does not test the law kind it claims.",
+      "fix": "Add 'Becoming.«所闭之界»' to the key tuple in test_the_review."
+     }
+    },
+    {
+     "id": "TAKEN-7",
+     "severity": "nit",
+     "file": "tools/research/master_laws.py",
+     "line": 391,
+     "claim": "TESTS-3 is only partly taken. Its verdict's fix asked for 'Two carriers must give {error, records}', and the finding named main's data['boundary'] (the report for one carrier, the error for two) as never run. law_entries now tests the counting with one and two carriers, but the branch that writes data['boundary'] is still in main and reached by no test.",
+     "evidence": "No test calls master_laws.main or covers master_laws.py:391-394 (grep finds none). Deleting the `if len(carrying) > 1:` branch would leave the suite green. §9 says only '`law_entries`, with one carrier and two'.",
+     "fix": "Factor the boundary branch out of main (for example a function returning data['boundary'] from carrying, by_id and the report's inputs). Test that one carrier gives the report and two give {error, records}. Or say in §9 that this branch stays untested.",
+     "verdict": {
+      "id": "TAKEN-7",
+      "real": true,
+      "severity": "nit",
+      "reason": "Confirmed. TESTS-3 was confirmed (minor), and its verdict's fix includes 'Two carriers must give {error, records}'. law_entries is now tested with one and two carriers. The branch that builds data['boundary'] in master_laws.main (master_laws.py:391-394: the error for two carriers, the report for one) is still in main. No test calls master_laws.main: grep finds only blocked, shape_failures and verify called from the tests. Deleting the `len(carrying) > 1` branch would leave the suite green, so a confirmed finding is only partly taken.",
+      "fix": "Factor the branch into a function, e.g. boundary_data(carrying, by_id, C, central, at_model, f5_class, anchors), which main calls. Test that two carriers give {'error': …, 'records': [...]} without calling report, and that one carrier gives the report. Or record in §9 that this branch stays untested."
+     }
+    },
+    {
+     "id": "TAKEN-8",
+     "severity": "nit",
+     "file": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/e2e_report.py",
+     "line": 73,
+     "claim": "TESTS-18 (taken): §8's end-to-end item says the harness asserts these outcomes, including 'the counts are 8 derived, 24 connected, 32 …, 16 …, 7 … and 31 unplaced'. The harness asserts only that the counts and groups sum to the central declarations, so a drift in any figure passes.",
+     "evidence": "e2e_report.py:73: `assert sum(rep['counts'].values()) == sum(rep['groups'].values()) == len(central)`. No assert names 24, 32, 16, 7 or 31. The rerun prints 'the expected outcomes hold', and its output equals the committed e2e-report.json.",
+     "fix": "Assert `{k: rep['counts'][k] for k in ('derived','connected','balance in its statement','at a represented model','own carrier','unplaced')} == {…8, 24, 32, 16, 7, 31}`. Or drop the counts from §8's 'asserts' sentence.",
+     "verdict": {
+      "id": "TAKEN-8",
+      "real": true,
+      "severity": "nit",
+      "reason": "Confirmed by reading e2e_report.py. Its asserts cover the Lean check run, the eight derived rows, the readings, act_courses_unselected failing D2/D3/D5 and the premises. For the counts it asserts only `sum(rep['counts'].values()) == sum(rep['groups'].values()) == len(central)`. §8 (BOUNDARY-FIELD.md:514) says the harness asserts that 'the counts are 8 derived, 24 connected, 32 …, 16 …, 7 … and 31 unplaced', so a drift in any figure would pass. The committed e2e-report.json does hold those figures, so the missing assert would pass today.",
+      "fix": "Add `assert {k: rep['counts'][k] for k in ('derived','connected','balance in its statement','at a represented model','own carrier','unplaced')} == {'derived': 8, 'connected': 24, 'balance in its statement': 32, 'at a represented model': 16, 'own carrier': 7, 'unplaced': 31}, rep['counts']`. Or drop the counts from §8's 'asserts' sentence."
+     }
+    },
+    {
+     "id": "TAKEN-9",
+     "severity": "nit",
+     "file": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/BOUNDARY-FIELD.md",
+     "line": 556,
+     "claim": "§9's count '15 of the 17 nits taken … and two in part' is not consistent with its own table. (a) LEAN-6 is taken 'without its Lean-side report of an absent name', which is in part by the same measure as TESTS-16. (b) ROBUSTNESS-7 is counted as taken, but its take is a landing step not done at ffccb515d and not listed in §8 step 1's 'What lands'. The other counts hold: 46 findings, 29 real (SPEC 12, ROBUSTNESS 8, LEAN 2, TESTS 7) and 17 not real, all nits.",
+     "evidence": "§9 table: 'the module of every name sent (LEAN-6, without its Lean-side report of an absent name)'; 'ROBUSTNESS-7 … the generator rerun at landing'. At ffccb515d, registry.master_laws_status(load_records()[0]) gives current False, inputs_changed ['tools/research/master_laws.py']. §8 step 1 lists no rerun of master_laws.py; only U4's step 2 does.",
+     "fix": "Write '14 taken and three in part (LEAN-6, TESTS-16, TESTS-17)', and mark ROBUSTNESS-7 as pending the landing. Add 'master-laws.json regenerated' to §8 step 1's 'What lands'.",
+     "verdict": {
+      "id": "TAKEN-9",
+      "real": true,
+      "severity": "nit",
+      "reason": "Part (a) holds. LEAN-6's fix had two parts: import the module of every name sent, and report an absent name apart. §9 itself says LEAN-6 was taken 'without its Lean-side report of an absent name'. By §9's own measure for TESTS-16 (one of two parts left out), that is 'in part'. The headline '15 of the 17 nits taken … and two in part' therefore miscounts its own table. Part (b) is weaker. ROBUSTNESS-7's cure is a landing step. I confirmed it is still pending at ffccb515d: master_laws_status gives current False, inputs_changed ['tools/research/master_laws.py']. §9 states it openly as 'the generator rerun at landing', but §8 step 1's 'What lands' does not list it.",
+      "fix": "Write '14 taken and three in part (LEAN-6, TESTS-16, TESTS-17)'. Mark ROBUSTNESS-7 as a landing step and add 'master-laws.json regenerated (python3 -B tools/research/master_laws.py)' to §8 step 1's 'What lands'."
+     }
+    },
+    {
+     "id": "TAKEN-10",
+     "severity": "nit",
+     "file": "tools/research/boundary.py",
+     "line": 574,
+     "claim": "The LEAN-3 defence (§8: 'output of another shape') checks only the top-level and entry types. An entry whose `row` is not hashable crashes the report. A non-boolean `admitted` or `equivalence` value is taken as admitted, so the fix does not fail closed. Only the repository's own boundary_check.lean produces this output, so this is reachable only through a changed check.",
+     "evidence": "A stub runner setting entries[0]['row'] to a list gives TypeError: unhashable type: 'list' at boundary.py:574 (`results.setdefault(x.get('row'), x)`). A stub with admitted {LAW: 'no'} leaves Becoming.Flow.row 'checked entry' with unverified [], because line 581 tests truthiness.",
+     "fix": "In the shape check, require isinstance(x.get('row'), str) for every entry. At lines 581-582, use `is not True` for admitted and equivalence.",
+     "verdict": {
+      "id": "TAKEN-10",
+      "real": false,
+      "severity": "nit",
+      "reason": "Reproduced with a fabricated runner. A list `row` raises TypeError at boundary.py:574, and admitted {LAW: 'no'} leaves Becoming.Flow.row a checked derived entry, because lines 581-582 test truthiness. The only producer of this output is boundary_check.lean, which always writes `row` as toJson (toString …), and `admitted` and `equivalence` as toJson of a Bool. LEAN-3, the finding this defence answers, was judged not real for the same reason: the case cannot arise. A gap in a defence-in-depth check against impossible output produces no reachable wrong output, so it is not a defect by the task's definition.",
+      "fix": "Optional: require isinstance(x.get('row'), str) for every entry in the shape check, and use `is not True` for admitted and equivalence at lines 581-582."
+     }
+    }
+   ]
+  },
+  "regressions": {
+   "covered": "Read the whole diff 36d4b0fae..ffccb515d, BOUNDARY-FIELD.md §3.0, §3.2, §3.6, §4, §5 and §9's last table, and LEAN-1 with its verdict in boundary-code-review.json.\n\nLean (three runs of about 20 s on stub modules, the installed toolchain run directly; scripts and outputs in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/recheck-regressions/):\n- run_stubs.py → out1.json: the test's STUBS plus a well-founded model relation, a derived DecidableEq, and an Init lemma carried by model data.\n- run_stubs2.py → out2.json: a two-hypothesis form over a root definition that holds a root theorem.\n- run_old.py: the 36d4b0fae check on the same oleans. It passes the WF, DecidableEq and two-hypothesis cases that ffccb515d fails.\n- A probe file (s1/Probe.lean) confirms what Lean 4.29.1 generates: `_proof_N` for termination, decide, deriving and structure-default proofs, and theorem projections for Prop fields.\n\nEmulating the new walk on GW's dump: 19 of 118 central rows' statements reach package proofs through definitions. Walking generated auxiliaries through, as §3.0 says, would leave 8. The walk is small (at most 51 definitions per row), so it cannot loop or blow up.\n\nReruns:\n- U4's controls (run_controls.py on U4's build): exit 0, output identical to controls-run.log. Row 17 passes and row 5 fails only the discharge condition, so test 5 agrees on U4's forms.\n- The e2e harness: assertions hold, output identical to e2e-report.json.\n\nlaw_entries against 36d4b0fae's main loop, extracted verbatim, on the real 480 records with GW's constants, an `above` built as main builds it, and F5's checked items: byte-identical JSON for no carrier, one carrier, two carriers and a carrier with laws. No leaked loop variables are used afterwards.\n\nRegistry checks:\n- context(): records loaded by registry carry the same fields as master_laws' raw JSON, so matching holds.\n- attach_standings: unchanged with no carrier; with the data error it returns before rendering anything; an unread carrier gets its not-matched section; a former carrier gets none.\n- affected_ids: unchanged with no carrier; `changed` is always a set.\n- _rule_reason and the reading lines match §5.\n\nBoundary checks:\n- The module list sent to Lean: every sent name is already checked to be in C, and modules outside `order` are filtered.\n- `item`, `context` and local() are deterministic.\n- The output-shape guard covers the non-dict cases except an unhashable row.\n\nTests read for wrong-reason passes:\n- The new stub entries 4 and 5 fail for the stated reasons.\n- TheStatus now makes `current` turn on the field.\n- test_the_record_around_the_field and test_a_carrier_the_data_has_not_read test what they claim.\n- No new test passes for the wrong reason. No test covers a generated proof inside a definition, which is how REGRESSIONS-1 went unseen.\n\nNot run: the full suite and check_becoming.py.",
+   "findings": [
+    {
+     "id": "REGRESSIONS-1",
+     "severity": "major",
+     "file": "tools/research/boundary_check.lean",
+     "line": 211,
+     "claim": "The new walk in theoremsUsed counts the proofs Lean generates inside package definitions as proofs the recovery uses. These are termination proofs (`f._proof_N`, `f._unary._proof_N`), derived `DecidableEq` proofs (`instDecidableEqX._proof_N`), `by decide` and structure-default proofs, and proof fields of model data that the recovery never projects. So correct forms that passed test 9 at 36d4b0fae now fail it. This breaks three things that say otherwise: the spec (§3.2 test 9: Init's proofs inside a definition, its termination lemmas, are not counted), the function's own docstring (lines 193-196), and LEAN-1's verifier fix, which asked that termination or decide proofs raise no spurious use. It also breaks §3.0, which is normative: generated auxiliaries are never theorems a proof names, and every walk goes through them. Lean 4.29.1 abstracts these proofs into auxiliary theorems of the package's own module, so `packaged env m` holds and they are collected. The same walk feeds the bridges' closed set (line 380), so a bridge whose statement names such a model definition fails as 'outside the closed set'.",
+     "evidence": "Stub run (/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/recheck-regressions/run_stubs.py, output out1.json): the test's STUBS plus `def Model.half (n) := if h : n < 2 then 0 else Model.half (n/2) + 1 termination_by n decreasing_by omega` and `Model.relH := fun a b => b = Model.half a`, with recovery `total_form (fun x => ⟨Model.half x, rfl⟩)`, which is by definitions alone. ffccb515d gives ['the discharge condition fails: the recovery uses [Becoming.Model.half._proof_1]']. With `inductive Model.Tone … deriving DecidableEq` and `Model.relT := fun a b => b = b ∧ decide (a = a) = decide (a = a)`, recovery `total_form (fun x => ⟨x, rfl, rfl⟩)` gives 'the recovery uses [Becoming.Model.instDecidableEqTone._proof_1, Becoming.Model.instDecidableEqTone._proof_2]'. The 36d4b0fae check (run_old.py, same oleans) passes both. A probe file also shows `three : Fin 3 := ⟨2, by decide⟩` → `three._proof_1`, and a structure default `pos : 0 < n := by decide` → `wd._proof_1`. On GW's dump (probe-main/constants.pickle), emulating the walk from each central row's statement: in 19 of 118 rows the statement alone reaches a package theorem through package definitions, so no recovery stating the row can pass test 9. Twelve of these come through `Becoming.Law.run._proof_1`, the generated proof field of `Law.run : Run process`, whose dump body names only `Law.orbit`. Seven come through amount lemmas (`Naturals.le_of_add_le_add_right`, `add_sub_of_le`, `sub_eq_zero_of_le`), for example inside `Amounts.whole`. Nine of the 19 rows are 'connected' and eight 'unplaced' in e2e-report.json. U4's rows 17 and 5 reach none, which is why the controls are unaffected.",
+     "fix": "In theoremsUsed, treat §3.0's generated auxiliaries (boundary.AUX on any name component after the first) as §3.0 prescribes: walk into them and collect what they name, never the auxiliary itself. Emulated on GW's dump, this frees 11 of the 19 rows; the 8 left are amount lemmas carried by data, which is the spec's intended case. `Model.step`-style data, `⟨Model.next, by …; exact Model.next_rel x⟩`, is still caught, because its `_proof_1` names `Model.next_rel`. Apply the same change to the bridges. Add stub controls: a well-founded model relation and a `deriving DecidableEq` model type whose recoveries must pass. Rerun U4's controls.",
+     "verdict": {
+      "id": "REGRESSIONS-1",
+      "real": true,
+      "severity": "major",
+      "reason": "Reproduced on my own stubs (test STUBS plus Becoming/Probe.lean), running the check at ffccb515d and at 36d4b0fae on the same oleans. Script: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/recheck-refute-regressions/stubs.py; output: stubs-out.json in the same folder. Each of these recoveries is by definitions alone and certified by rfl, and each now fails test 9, though every one passes at 36d4b0fae:\n- a well-founded `Model.half` (decreasing_by omega) with recovery `total_form (fun x => ⟨Model.half x, rfl⟩)` gives 'the recovery uses [Becoming.Model.half._proof_1]';\n- `deriving DecidableEq` reached through an `if` gives `instDecidableEqTone._proof_1/_2`;\n- `Model.three : Fin 3 := ⟨2, by decide⟩` gives `Model.three._proof_1`.\nStructural recursion still passes, and the base test entry is unchanged. The mechanism is in theoremsUsed (boundary_check.lean:209-213). namesOf includes the declaration's type, so the walk enters every package definition the row's statement or the recovery names. Lean puts termination, decide and structure-field proofs into package `_proof_N` theorems, and isProof then collects them. LEAN-1's verifier asked for exactly the opposite: 'so termination or decide proofs raise no spurious use'. The spec's test 9 (BOUNDARY-FIELD.md §3.2: 'its termination lemmas, say, are not counted') and the docstring at lines 193-196 promise the same. Neither holds, because the Init exemption never reaches a `_proof_N` theorem: it is collected, not entered. On GW's dump, the emulation in gw_walk.py (same folder) finds that 19 of the 118 central rows' statements alone reach a package theorem through package definitions. 13 of them reach `Becoming.Law.run._proof_1`, whose dump body names only `Law.orbit`. So no recovery stating those rows could pass test 9. GW's dump also holds 335 `instDecidableEq*._proof_N` theorems. U4's rows 17 and 5 reach none of these, which is why the controls are unchanged. The check fails closed, so nothing is accepted wrongly, but valid entries for about one central row in six are refused with a misleading reason, and no test covers it.",
+      "fix": "In theoremsUsed (boundary_check.lean:209-213), handle a proof that is a generated auxiliary (boundary.AUX on any component after the first) the way §3.0 does: walk into it with own=false and collect only the package proofs it names, never the auxiliary itself. I emulated this in fix_check.lean (scratch folder above). The WF and `by decide` cases then pass, and the controls that must fail still fail: a fact held in a def, a model theorem carried as data, and data whose field is given by a tactic. The derived DecidableEq case still fails, now on `Becoming.Model.Tone.ofNat_ctorIdx`. That is a generated theorem boundary.AUX does not match, and GW's dump has 16 of them. So also walk through `ofNat_ctorIdx`, or stop at Decidable-valued instances. Give bridges the same walk. Add stub controls that must pass: a WF model function, a derived DecidableEq, a `Fin` built by decide, and a structure whose proof field is generated by rfl, like `Law.run`. Then rerun U4's controls."
+     }
+    },
+    {
+     "id": "REGRESSIONS-2",
+     "severity": "minor",
+     "file": "tools/research/boundary_check.lean",
+     "line": 337,
+     "claim": "Test 5's facts now come from the walk through every definition named in the fit's and the countermodel's types and binder types. These differ by construction: `¬ H w` names H, while `¬ (F without H)` names the other hypotheses and F's conclusion. A proof held in a definition reached through one hypothesis or through the conclusion therefore appears on one side only, and a correct form fails 'the countermodel … uses …, the fit … uses …' on every hypothesis. For the same reason test 9 (line 373) fails a recovery that names such a definition only in a binder type. On the real package three root definitions hold root proofs: `«一一对应».prod`, `.symm` and `.trans`. Any form whose hypotheses or conclusion use them is affected.",
+     "evidence": "run_stubs2.py (output out2.json), module Becoming.Pair. The grammar stub gains `theorem «同之自» (X) (x : X) : x = x := rfl` and `def «同» (X) : {r : «际» X // ∀ x, r x x} := ⟨fun a b => a = b, «同之自» X⟩`. Hypotheses: `Total r` and `Refl s := ∀ x, («同» X).1 x x → s x x`. Form: `pair_form (total : Total r) (refl : Refl s) : ¬ ∃ x, ¬ ((∃ y, r x y) ∧ s x x)`, with countermodels and fits at Unit that share named facts, and recovery `pair_form (fun x => ⟨Model.next x, rfl⟩) (fun _ _ => rfl)`. ffccb515d gives exactly three failures: 'the countermodel Becoming.Pair.pair_form.needs_total uses [refl_all, pair_fails_total, Becoming.«同之自»], the fit … total_needed uses [refl_all, pair_fails_total]'; the mirror failure for needs_refl/refl_needed; and 'the discharge condition fails: the recovery uses [Becoming.«同之自»]'. The 36d4b0fae check passes the entry (run_old.py).",
+     "fix": "Compute the facts and the recovery's uses from term positions of the value, not from the declaration's type or lambda binder types: a proof inside a definition named only in a type cannot flow into the proof. Alternatively, leave out of both sides of test 5's comparison the proofs found only inside F's hypothesis definitions and admitted root definitions, which are F's vocabulary. Add this two-hypothesis stub as a passing control.",
+     "verdict": {
+      "id": "REGRESSIONS-2",
+      "real": true,
+      "severity": "minor",
+      "reason": "Reproduced in the same stubs.py run (case 'two hyps, grammar def with proof'). The grammar stub gains `«同之自»` and `«同» : {r // ∀ x, r x x}`, and the hypothesis `Refl s := ∀ x, («同» X).1 x x → s x x`. At ffccb515d test 5 fails for both hypotheses: 'the countermodel …needs_total uses [refl_all, pair_fails_total, Becoming.«同之自»], the fit …total_needed uses [refl_all, pair_fails_total]', and the mirror for needs_refl/refl_needed. Test 9 fails with 'the discharge condition fails: the recovery uses [Becoming.«同之自»]', reached only through the binder type of `fun _ _ => rfl`. The 36d4b0fae check gives neither failure. My other failures come from placing the form in a different module than Total, and they appear under both versions. The cause is that test 5's facts now come from theoremsUsed (boundary_check.lean:337, 341), which walks the declaration's type and binder types. `¬ H w` and `¬ (F without H)` name different definitions by construction, so a proof inside a definition one side names makes correct forms fail. This works against test 5's own purpose: one set of facts for both idioms. On GW's dump only three root definitions hold proofs (`«一一对应».prod`, `.symm`, `.trans`; script gw_rootdefs.py), so it is narrow. Still, it is a new spurious failure of a correct form.",
+      "fix": "Collect facts and the recovery's uses from the value only, skipping the declaration's type and the binder types of lambdas and foralls. A proof inside a definition named only in a type cannot flow into the proof. A more precise version counts a proof inside a definition only where a Prop-valued projection is applied to a term naming that definition. Alternatively, leave admitted root proofs and proofs found only inside F's hypothesis definitions out of both sides of test 5's comparison. Add the two-hypothesis stub, with every declaration in one module, as a control that must pass."
+     }
+    },
+    {
+     "id": "REGRESSIONS-3",
+     "severity": "minor",
+     "file": "tools/research/boundary_check.lean",
+     "line": 212,
+     "claim": "LEAN-1 is only partly taken. A model fact carried by model data still passes the discharge condition when its proof field is an Init theorem: Init theorems count when the recovery names them directly but not inside a package definition (`own || packaged env m`). The stated reason for the exemption, that termination lemmas are not counted, does not hold. Termination proofs are package `_proof_N` theorems (REGRESSIONS-1), whose bodies the walk never enters, so the exemption keeps no spurious use away and leaves an evasion open.",
+     "evidence": "In run_stubs.py: `structure Model.Data where f : Nat → Nat; comm : ∀ a b : Nat, a + b = b + a`, `def Model.data : Model.Data := ⟨fun x => x, Nat.add_comm⟩`, `Model.relS := fun a b => a + b = b + a`. The recovery `total_form (fun x => ⟨0, Model.data.comm x 0⟩)` passes: failures [], recovery_uses [total_form, Model.Data.comm], the projection being exempt. The same recovery written `total_form (fun x => ⟨0, Nat.add_comm x 0⟩)` fails with 'the recovery uses [Nat.add_comm]'.",
+     "fix": "Count every proof inside a package data definition, Init's included, where the recovery can extract it, for example through a Prop-valued projection or a recursor into Prop applied to a term naming the definition. That separates facts from termination proofs by position rather than by module. Once REGRESSIONS-1's fix walks through the generated auxiliaries, counting Init proofs in package definitions has to exclude the decreasing proofs passed to `WellFounded.fix`. Correct §3.2 test 9 and the docstring to match.",
+     "verdict": {
+      "id": "REGRESSIONS-3",
+      "real": false,
+      "severity": "nit",
+      "reason": "The behaviour reproduces (stubs.py): `Model.data : Model.Data := ⟨fun x => x, Nat.add_comm⟩` with recovery `total_form (fun x => ⟨0, Model.data.comm x 0⟩)` passes, and the same recovery naming `Nat.add_comm` directly fails. But this is no defect of the fix. The check at 36d4b0fae gives the same two outcomes, so nothing regressed. The exemption is what both requirements ask for: §3.2 test 9 says 'Init's proofs inside a definition … are not counted', and LEAN-1's verifier wrote 'Do not collect Init theorems inside model definitions'. LEAN-1's confirmed scope, a package model theorem held in a definition or carried by data, is caught (the held and data controls fail). The claim that the exemption serves no purpose does not hold. Once REGRESSIONS-1 is fixed by walking into `_proof_N`, the exemption is exactly what lets the WF and `by decide` cases pass: in my fix_check.lean emulation, `Model.half._proof_1` names only Init lemmas. What is left is a gap in the spec's design, an Init lemma carried atomically in a model's data and reached by a projection. The finding definition does not cover that.",
+      "fix": "None required. If the spec should close the gap: in test 9, count the proof behind a Prop-field projection applied to a package data definition, whatever its module. Keep Init exempt elsewhere inside definitions. Reword the parenthetical in §3.2 and the docstring, since termination proofs are package `_proof_N` theorems, not Init's."
+     }
+    },
+    {
+     "id": "REGRESSIONS-4",
+     "severity": "minor",
+     "file": "tools/research/registry.py",
+     "line": 817,
+     "claim": "In the new context branch of boundary_matching, a change around the field (a review reference, the status, the laws' declarations, the field's keys) returns `shown = set()`, so every standing line is hidden. That includes rule-placed lines for rows the field does not name, whose verdicts come from U4's rule and do not depend on the record around the field. The status's not_matched lists only the field's own declarations, so pages hide lines the status never names. The boundary record's section then says 'the data read another version of this field (…)'. The field is unchanged, and the item 'the field' sorts after the declarations, so `[:5]` drops it and the page never gives the cause.",
+     "evidence": "With ThePages' fixture and a review reference appended to the carrier, records(['Becoming.Flow.forwarder', 'Becoming.Flow.written'], now=now)[0] gets no `_standings`. When matched, both lines show. boundary_matching's not_matched is ['Becoming.Flow.absent', 'Becoming.Flow.balanced', 'Becoming.Flow.counted', 'Becoming.Flow.row', 'Becoming.Flow.steps', 'Becoming.Flow.two', 'Becoming.Flow.via_helper', 'premises_of_the_ethics', 'the field'], without forwarder or written. The section reads: '*Not matched:* the data read another version of this field (Becoming.Flow.absent, Becoming.Flow.balanced, Becoming.Flow.counted, Becoming.Flow.row and Becoming.Flow.steps and others); rerun …'.",
+     "fix": "In the context branch, return as shown the rows outside {*read, *declared}, whose absence from the field is unchanged, or else list every hidden row in not_matched. Put 'the field' first, or give the section a message of its own for a change around the field, such as 'the record around this field changed since the data read it'.",
+     "verdict": {
+      "id": "REGRESSIONS-4",
+      "real": true,
+      "severity": "minor",
+      "reason": "Reproduced (script r4.py in my scratch folder) with ThePages' fixture and a review reference appended to the carrier. records(['Becoming.Flow.forwarder', 'Becoming.Flow.written'], now=now)[0] has no `_standings`; when matched, both lines show. boundary_matching returns shown=set(), and not_matched = [absent, balanced, counted, row, steps, two, via_helper, premises_of_the_ethics, the field]. That list omits forwarder, written, modelled, own and proof_balance, so the pages hide lines the status never names. §3.6 says a line hides only while its declaration is not matched, so pages and status disagree whichever way 'every declaration is listed' is read. The rule-placed rows outside the field do not depend on the context: they come from statements and F5's items. The section also reads '*Not matched:* the data read another version of this field (Becoming.Flow.absent, …, Becoming.Flow.steps and others)'. That is misleading, since the field is unchanged, and the sort order with `[:5]` drops 'the field', the only item that names the cause. The state is transient (current is false), but the page line is wrong.",
+      "fix": "In boundary_matching's context branch (registry.py:817-819), return as shown the rows outside {*read, *declared}, or else list every row of b['rows'] in not_matched, so that pages and status agree. In boundary_section (registry.py:751-754), give a context change its own sentence, such as 'the record around this field changed since the data read it', or put 'the field' first. Extend test_the_record_around_the_field to assert the lines of rule-placed rows outside the field."
+     }
+    },
+    {
+     "id": "REGRESSIONS-5",
+     "severity": "nit",
+     "file": "tools/research/boundary.py",
+     "line": 574,
+     "claim": "The new output-shape guard accepts an entry whose `row` is a list or an object. `results.setdefault(x.get('row'), x)` then raises TypeError, so the generator stops on the malformed output the guard is there to absorb.",
+     "evidence": "boundary.report(test_boundary.CONSTANTS, …, carrier(at_hypothesis(), derived row), lean=lambda q, m: ({'entries': [{'row': ['Becoming.Flow.two'], 'passed': True, 'failures': []}]}, {'ran': True})) raises TypeError: unhashable type: 'list'.",
+     "fix": "Add `isinstance(x.get('row'), str)` for every entry to the guard, or skip entries whose row is not a string when building `results`.",
+     "verdict": {
+      "id": "REGRESSIONS-5",
+      "real": true,
+      "severity": "nit",
+      "reason": "Reproduced (script r56.py in my scratch folder). boundary.report with lean returning {'entries': [{'row': ['Becoming.Flow.two'], 'passed': True, 'failures': []}], 'admitted': {}, 'equivalence': {}} raises TypeError: unhashable type: 'list' at `results.setdefault(x.get('row'), x)` (boundary.py:575). A dict row does the same, while 7 or None degrade to 'gave no result'. boundary_check.lean always writes the row as a string, so this output cannot arise. But the guard at boundary.py:567-570 was added (LEAN-3, §9 'output of another shape') precisely to turn malformed output into 'not run', and for this shape it crashes instead.",
+      "fix": "Add `isinstance(x.get('row'), str)` for every entry to the shape guard at boundary.py:567-570, or skip non-string rows when building `results`."
+     }
+    },
+    {
+     "id": "REGRESSIONS-6",
+     "severity": "nit",
+     "file": "tools/research/registry.py",
+     "line": 1393,
+     "claim": "The new F5-carrier line in affected_ids calls `b.get('rows', {}).items()` and `i.get('record')` on every run with a changed path. Where 36d4b0fae only did `set(b.get('rows', {}))`, and only when the boundary record changed, a data file whose `rows` is a list, or whose `at_model` holds a non-object, now crashes research-check whenever any record changes.",
+     "evidence": "With registry.master_laws patched to {'boundary': {'record': 'edge', 'rows': ['Becoming.Flow.row']}}, affected_ids(records, {'theories/becoming/results/records/naming.json'}) raises AttributeError: 'list' object has no attribute 'items'. With rows {'Becoming.Flow.row': {'at_model': [None]}} it raises AttributeError: 'NoneType' object has no attribute 'get'.",
+     "fix": "Guard the comprehension: `rows = b.get('rows') if isinstance(b.get('rows'), dict) else {}`, and `isinstance(i, dict)` for each at_model item, as attach_standings already guards `rows`.",
+     "verdict": {
+      "id": "REGRESSIONS-6",
+      "real": false,
+      "severity": "nit",
+      "reason": "The crash reproduces (script r56.py): with master_laws patched to rows as a list, affected_ids raises AttributeError, and with at_model [None] it raises on i.get. But the input is master-laws.json, which only master_laws.py writes, always with rows a dict of dicts. The code at both commits does not guard this shape elsewhere either. boundary_status's `b.get('rows', {}).items()` is unchanged since 36d4b0fae and crashes on the same rows-as-list data (reproduced), so research-check already failed on it. standing_line and _rule_reason index x['models'] on at_model items at both commits. The fix's diff makes no claim to guard generated data. So this is a robustness preference, not a defect by the review's definition.",
+      "fix": "None required. If wanted, guard `rows = b.get('rows') if isinstance(b.get('rows'), dict) else {}` and `isinstance(i, dict)` in affected_ids, together with boundary_status, for consistency."
+     }
+    }
+   ]
+  }
+ }
+}

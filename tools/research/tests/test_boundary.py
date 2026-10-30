@@ -168,7 +168,7 @@ class FieldRules(unittest.TestCase):
         found = self.errors(carrier(*WELL_FORMED), text='`Becoming.Flow.row` and the rest unnamed.')
         self.assertTrue(any('does not name' in e and 'Becoming.Flow.bridge_iff' in e for e in found), found)
         self.assertTrue(any('does not name Becoming.Unrestricted, Becoming.ReadsOnlyDynamics.not_entails' in e for e in found), found)
-        for key in ('Becoming.Flow.support', 'Becoming.Leaf.form.needs_H', 'Becoming.Leaf.form.H_needed', 'Becoming.Leaf.recovery',
+        for key in ('Becoming.«所闭之界»', 'Becoming.Flow.bridge_iff', 'Becoming.Flow.support', 'Becoming.Leaf.form.needs_H', 'Becoming.Leaf.form.H_needed', 'Becoming.Leaf.recovery',
                     'Becoming.Leaf.certified', 'Becoming.Leaf.bridge', 'Becoming.Leaf.part', 'Becoming.Leaf.H', 'Becoming.Leaf.form'):
             found = self.errors(carrier(*WELL_FORMED), text=review(*(n for n in NAMED if n != key)))
             self.assertEqual([e.rsplit(' ', 1)[-1] for e in found if 'does not name' in e], [key], key)
@@ -464,10 +464,16 @@ class TheReport(unittest.TestCase):
             return out, info
         rep = self.report(*entries, lean=silent)
         self.assertEqual({x['declaration']: x['failed'] for x in rep['unverified']}, {'Becoming.Flow.two': ['the Lean check did not pass it']})
-        for bad in ([], {'entries': [1]}, {'entries': [], 'admitted': []}):
+        for bad in ([], {'entries': [1]}, {'entries': [], 'admitted': []}, {'entries': [{'row': ['Becoming.Flow.two'], 'passed': True}]},
+                    {'entries': [{'row': {}, 'passed': True}]}):
             rep = self.report(*entries, lean=lambda q, m, bad=bad: (bad, {'ran': True}))
             self.assertEqual(len(rep['unverified']), 2, bad)
             self.assertEqual(rep['lean_check'], {'ran': False, 'reason': 'the Lean check gave malformed output'})
+        def saying(query, modules):  # an admission or an equivalence given as something other than true
+            out, info = lean_passing(query, modules)
+            return {**out, 'admitted': {k: 'yes' for k in out['admitted']}, 'equivalence': {k: 1 for k in out['equivalence']}}, info
+        rep = self.report(*entries, lean=saying)
+        self.assertTrue(any(f.startswith('D1: the Lean check does not admit') for x in rep['unverified'] for f in x['failed']), rep['unverified'])
         seen.clear()
         self.report(*entries, standing('Becoming.Flow.steps', 'derived', law=[LAW2]), lean=recording)
         self.assertEqual(seen[0][0]['names'], [LAW])  # the failing entry's law is not sent
@@ -574,6 +580,11 @@ class TheReport(unittest.TestCase):
         _, two = master_laws.law_entries(loaded, CONSTANTS, above, {}, set(), checked, {}, ['edge', 'm'])
         self.assertEqual([two[k]['laws'] for k in master_laws.COUNTED], [0, 0, 4])  # with two carriers, both records' laws apart
         self.assertEqual(records['edge'][1]['statements_at_model'], checked['edge', 2])
+        # the data's boundary: the report for one carrier, an error naming both for two, nothing for none
+        self.assertEqual(master_laws.boundary_data(['edge'], lambda rid: {'record': rid}), {'record': 'edge'})
+        self.assertEqual(master_laws.boundary_data(['edge', 'm'], lambda rid: self.fail('no report for two carriers')),
+                         {'error': 'the boundary field is carried by more than one record', 'records': ['edge', 'm']})
+        self.assertIsNone(master_laws.boundary_data([], lambda rid: self.fail('no report without a carrier')))
         ec = type('EC', (), {'__file__': str(master_laws.MEASURE), 'COVERAGE': master_laws.MEASURE})
         self.assertLessEqual({'tools/research/boundary.py', 'tools/research/boundary_check.lean'}, set(master_laws.hashed_inputs(ec)))
 
@@ -715,6 +726,12 @@ class ThePages(unittest.TestCase):
         self.assertIn('_standings', self.records(['Becoming.Flow.modelled'])[0])
         moved = {**copy.deepcopy(self.declared), 'id': 'elsewhere'}
         self.assertNotIn('_standings', self.records(['Becoming.Flow.row'], now=moved)[0])  # the data read another record
+        # a reading beside the rule's F5 label states F5's items too, so it waits for the F5 law as the rule's line does
+        self.declared = carrier(standing('Becoming.Flow.modelled', 'amounts'))
+        self.data = {'boundary': boundary.report(CONSTANTS, CENTRAL, AT_MODEL, F5, self.declared, ANCHORS, lean=lean_passing)}
+        self.assertEqual(self.data['boundary']['rows']['Becoming.Flow.modelled']['rule'], 'at a represented model')
+        self.assertNotIn('_standings', self.records(['Becoming.Flow.modelled'], matched_at_model=())[0])
+        self.assertIn('_standings', self.records(['Becoming.Flow.modelled'])[0])
 
     def test_the_record_around_the_field(self):
         # what the rules read besides the field: a change there leaves every verdict in doubt
@@ -724,9 +741,16 @@ class ThePages(unittest.TestCase):
             now = copy.deepcopy(self.declared)
             change(now)
             shown, not_matched = registry.boundary_matching([now], self.data)
-            self.assertEqual(shown, set())
-            self.assertIn('the field', not_matched)
-            self.assertIn('Becoming.Flow.row', not_matched)
+            named = set(registry._grouped(self.declared['boundary'])) | set(registry._grouped(now['boundary']))
+            self.assertEqual(shown, set(self.data['boundary']['rows']) - named)  # the rule's rows outside the field stay
+            self.assertIn('Becoming.Flow.forwarder', shown)
+            self.assertEqual(not_matched, ['the field', *sorted(named), 'premises_of_the_ethics'])
+            records = [now, {'id': 'p', 'laws': [{'declarations': ['Becoming.Flow.forwarder', 'Becoming.Flow.row']}]}]
+            registry.attach_standings(records, self.data, {'m:2', 'm:3'})
+            self.assertEqual(list(records[1]['_standings']['rows']), ['Becoming.Flow.forwarder'])
+            section = '\n'.join(x for x in registry.boundary_section(now, registry.ROOT) if isinstance(x, str))
+            self.assertIn("*Not matched:* the record around this field (its status, schema, reviews or laws) or the field's own keys "
+                          'changed since the data read it, so no entry of the field is matched (Becoming.Flow.', section)
         self.assertEqual(registry.boundary_matching([copy.deepcopy(self.declared)], self.data)[1], [])
 
     def test_a_carrier_the_data_has_not_read(self):
@@ -779,6 +803,11 @@ class ThePages(unittest.TestCase):
         edge = self.records(now=now)[-1]
         self.assertIn('*Not matched:* the data read another version of this field (premises_of_the_ethics)',
                       '\n'.join(x for x in registry.boundary_section(edge, registry.ROOT) if isinstance(x, str)))
+        edge = self.records()[-1]  # a premise's absent of another shape is left out of its line, not a crash
+        for bad in ('No theorem shows it.', ['x'], 1.5):
+            edge['_boundary']['premises_of_the_ethics'][1]['absent'] = bad
+            text = '\n'.join(x for x in registry.boundary_section(edge, registry.ROOT) if isinstance(x, str))
+            self.assertIn('- **For order**, C: `Becoming.Comparison`; no theorem shows it unentailed by the dynamics.', text)
 
     def test_what_re_renders_after_a_change_to_the_boundary_record(self):
         records = [{'id': 'edge', '_record_path': 'theories/becoming/results/records/edge.json', 'boundary': {}, 'references': [],
@@ -891,6 +920,8 @@ end Becoming
 namespace Becoming
 def «际» (X : Type) : Type := X → X → Prop
 theorem «际之自» {X : Type} (r : «际» X) : r = r := rfl
+theorem «同之自» (X : Type) (x : X) : x = x := rfl
+def «同» (X : Type) : {r : «际» X // ∀ x, r x x} := ⟨fun a b => a = b, «同之自» X⟩
 end Becoming
 ''',
     'Becoming/Model.lean': '''import Becoming.Grammar
@@ -905,6 +936,25 @@ theorem Model.eq_props {a : Prop} : (a ∧ True) = a := propext ⟨And.left, fun
 theorem Model.eq_predicates : (fun x : Nat => Model.rel x x) = (fun x => Model.rel x x) := rfl
 theorem Model.next_rel : ∀ x, Model.rel x (Model.next x) := fun _ => rfl
 def Model.step : {f : Nat → Nat // ∀ x, Model.rel x (f x)} := ⟨Model.next, Model.next_rel⟩
+def Model.step_tactic : {f : Nat → Nat // ∀ x, Model.rel x (f x)} := ⟨Model.next, by intro x; exact Model.next_rel x⟩
+structure Model.Onward where
+  f : Nat → Nat
+  ok : ∀ x, Model.rel x (f x)
+def Model.onward : Model.Onward := ⟨Model.next, fun _ => rfl⟩
+def Model.half (n : Nat) : Nat := if n < 2 then 0 else Model.half (n / 2) + 1
+termination_by n
+decreasing_by omega
+def Model.relH : «际» Nat := fun a b => b = Model.half a
+theorem Model.relH_total : ¬ ∃ x, ∀ y, ¬ Model.relH x y := fun ⟨x, h⟩ => h (Model.half x) rfl
+inductive Model.Tone where | low | high deriving DecidableEq
+def Model.pick (a b : Model.Tone) : Model.Tone := if a = b then a else b
+def Model.relT : «际» Model.Tone := fun a b => b = Model.pick a a
+theorem Model.relT_total : ¬ ∃ x, ∀ y, ¬ Model.relT x y := fun ⟨x, h⟩ => h (Model.pick x x) rfl
+def Model.three : Fin 3 := ⟨2, by decide⟩
+def Model.relF : «际» Nat := fun a b => b = a + Model.three.val
+theorem Model.relF_total : ¬ ∃ x, ∀ y, ¬ Model.relF x y := fun ⟨x, h⟩ => h (x + Model.three.val) rfl
+def Model.relR : «际» Nat := fun a b => a = b
+theorem Model.pair_row : ¬ ∃ x, ¬ ((∃ y, Model.rel x y) ∧ Model.relR x x) := fun ⟨x, h⟩ => h ⟨⟨Model.next x, rfl⟩, rfl⟩
 end Becoming
 ''',
     'Becoming/Leaf.lean': '''import Becoming.Model
@@ -929,6 +979,34 @@ theorem rel_total_through_data : ¬ ∃ x, ∀ y, ¬ Model.rel x y := total_form
 theorem rel_total_through_data_certified : @Model.rel_total = @rel_total_through_data := rfl
 theorem small_form {X : Type} {r : «际» X} {q : X → Nat} (small : SmallAll r q) : ¬ ∃ x, ∀ y, ¬ r x y :=
   fun ⟨x, h⟩ => match (small x).2 with | ⟨y, hy⟩ => h y hy
+theorem rel_total_through_tactic : ¬ ∃ x, ∀ y, ¬ Model.rel x y :=
+  total_form (fun x => ⟨Model.step_tactic.1 x, Model.step_tactic.2 x⟩)
+theorem rel_total_through_tactic_certified : @Model.rel_total = @rel_total_through_tactic := rfl
+theorem rel_total_through_rfl : ¬ ∃ x, ∀ y, ¬ Model.rel x y := total_form (fun x => ⟨Model.onward.f x, Model.onward.ok x⟩)
+theorem rel_total_through_rfl_certified : @Model.rel_total = @rel_total_through_rfl := rfl
+theorem relH_at_model : ¬ ∃ x, ∀ y, ¬ Model.relH x y := total_form (fun x => ⟨Model.half x, rfl⟩)
+theorem relH_certified : @Model.relH_total = @relH_at_model := rfl
+theorem relT_at_model : ¬ ∃ x, ∀ y, ¬ Model.relT x y := total_form (fun x => ⟨Model.pick x x, rfl⟩)
+theorem relT_certified : @Model.relT_total = @relT_at_model := rfl
+theorem relF_at_model : ¬ ∃ x, ∀ y, ¬ Model.relF x y := total_form (fun x => ⟨x + Model.three.val, rfl⟩)
+theorem relF_certified : @Model.relF_total = @relF_at_model := rfl
+def Refl {X : Type} (s : «际» X) : Prop := ∀ x, («同» X).1 x x → s x x
+def allRel : «际» Unit := fun _ _ => True
+theorem pair_form {X : Type} {r s : «际» X} (total : Total r) (refl : Refl s) : ¬ ∃ x, ¬ ((∃ y, r x y) ∧ s x x) :=
+  fun ⟨x, h⟩ => h ⟨total x, refl x rfl⟩
+theorem refl_all : Refl allRel := fun _ _ => trivial
+theorem total_all : Total allRel := fun _ => ⟨(), trivial⟩
+theorem pair_fails_total : ∃ x, ¬ ((∃ y, noneRel x y) ∧ allRel x x) := ⟨(), fun ⟨⟨_, f⟩, _⟩ => f⟩
+theorem pair_fails_refl : ∃ x, ¬ ((∃ y, allRel x y) ∧ noneRel x x) := ⟨(), fun ⟨_, f⟩ => f⟩
+theorem pair_form.needs_total : ¬ ∀ {X : Type} {r s : «际» X}, Refl s → ¬ ∃ x, ¬ ((∃ y, r x y) ∧ s x x) :=
+  fun h => @h Unit noneRel allRel refl_all pair_fails_total
+theorem pair_form.total_needed : ¬ Total noneRel := fun total => @pair_form Unit noneRel allRel total refl_all pair_fails_total
+theorem pair_form.needs_refl : ¬ ∀ {X : Type} {r s : «际» X}, Total r → ¬ ∃ x, ¬ ((∃ y, r x y) ∧ s x x) :=
+  fun h => @h Unit allRel noneRel total_all pair_fails_refl
+theorem pair_form.refl_needed : ¬ Refl noneRel := fun refl => @pair_form Unit allRel noneRel total_all refl pair_fails_refl
+theorem pair_at_model : ¬ ∃ x, ¬ ((∃ y, Model.rel x y) ∧ Model.relR x x) :=
+  pair_form (fun x => ⟨Model.next x, rfl⟩) (fun _ _ => rfl)
+theorem pair_certified : @Model.pair_row = @pair_at_model := rfl
 end Becoming.Leaf
 ''',
     'Becoming/GrammarCourse.lean': '''import Becoming.Model
@@ -937,14 +1015,31 @@ theorem GrammarCourse.built_on_model : ∀ x, ∃ y, Model.rel x y := Model.rel_
 end Becoming
 ''',
 }
+GENERATED = ['Becoming.Model.half._proof_1', 'Becoming.Model.f.match_1', 'Becoming.Model.f.match_1_3', 'Becoming.Model.f.proof_2',
+             'Becoming.Model.f.eq_1', 'Becoming.Model.f.eq_def', 'Becoming.Model.T.mk.sizeOf_spec', 'Becoming.Model.T._sizeOf_1',
+             'Becoming.Model.T._sizeOf_inst', 'Becoming.Model.T.mk.injEq', 'Becoming.Model.T.mk.inj', 'Becoming.Model.T.brecOn',
+             'Becoming.Model.T.below', 'Becoming.«同族».below.refl', 'Becoming.Model.T.brecOn.eq', 'Becoming.Model.T.binductionOn',
+             'Becoming.Model.T.casesOn', 'Becoming.Model.T.recOn', 'Becoming.Model.T.rec', 'Becoming.Model.T.elim',
+             'Becoming.Model.T.noConfusion', 'Becoming.Model.T.noConfusionType', 'Becoming.Model.T.ctorIdx',
+             'Becoming.Model.T.toCtorIdx', 'Becoming.Model.Tone.ofNat_ctorIdx', 'Becoming.Model.T.ctorElim',
+             'Becoming.Model.T.ctorElimType', 'Becoming.Model.f.match_1.splitter', 'Becoming.Model.f._unsafe_rec',
+             'Becoming.Model.f._sunfold', 'Becoming.Model.T._flat_ctor', 'Becoming.Model.f._aux_3', 'Becoming.Model.T.x._default',
+             # not generated: the first component alone, and near misses of each pattern
+             'match_1', 'Becoming.f.match_', 'Becoming.f.match_1_', 'Becoming.f.match_1__2', 'Becoming.f.match_a', 'Becoming.f.proof_',
+             'Becoming.f._proof_', 'Becoming.f.proof_1a', 'Becoming.f.eq_x', 'Becoming.f.ofNat', 'Becoming.f.recursion',
+             'Becoming.f.elim_of', 'Becoming.f.injective', 'Becoming.f.below_one', 'Becoming.«match_1»x']
+NOT_GENERATED = GENERATED[GENERATED.index('match_1'):]
 SPINE = registry.ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
 
 
 class TheLeanCheck(unittest.TestCase):
-    """boundary_check.lean on stub modules: a form passing every test, a recovery through a model fact, a hypothesis
-    with an amount behind a prelude definition, an absent certificate, the name test (by module and by content) and the
-    equivalence test (an Iff, an Eq of propositions, an Eq at a type of values). Skipped without the installed toolchain,
-    which the test runs directly, so that nothing is downloaded."""
+    """boundary_check.lean on stub modules: a form passing every test; recoveries through a model fact, a fact held in
+    a definition, one a model's data carries and one through a tactic's proof, which fail; recoveries through the proofs
+    Lean generates (an rfl in a model's data, a termination proof, a derived DecidableEq, a decide), which pass; a form
+    with two hypotheses whose definitions hold proofs only in types; a hypothesis with an amount behind a prelude
+    definition; an absent certificate; the name test (by module and by content); the equivalence test (an Iff, an Eq of
+    propositions, an Eq at a type of values); and the check's copy of §3.0's pattern. Skipped without the installed
+    toolchain, which the test runs directly, so that nothing is downloaded."""
     @classmethod
     def setUpClass(cls):
         toolchain = (SPINE / 'lean-toolchain').read_text().strip() if (SPINE / 'lean-toolchain').is_file() else ''
@@ -962,20 +1057,30 @@ class TheLeanCheck(unittest.TestCase):
             if p.returncode != 0:
                 raise AssertionError(p.stdout + p.stderr)
         L = 'Becoming.Leaf.'
-        def entry(form, hyp, recovery, certificate):
-            return {'row': 'Becoming.Model.rel_total', 'form': L + form, 'recovery': L + recovery, 'certificate': L + certificate,
+        def entry(form, hyp, recovery, certificate, row='Becoming.Model.rel_total'):
+            return {'row': row, 'form': L + form, 'recovery': L + recovery, 'certificate': L + certificate,
                     'hypotheses': [{'hypothesis': L + hyp, 'countermodel': L + 'total_form.needs_total', 'fit': L + 'total_form.total_needed'}]}
+        pair = {'row': 'Becoming.Model.pair_row', 'form': L + 'pair_form', 'recovery': L + 'pair_at_model', 'certificate': L + 'pair_certified',
+                'hypotheses': [{'hypothesis': L + h, 'countermodel': L + f'pair_form.needs_{n}', 'fit': L + f'pair_form.{n}_needed'}
+                               for h, n in (('Total', 'total'), ('Refl', 'refl'))]}
         cls.out = boundary.run_check(work, ['Becoming.Leaf', 'Becoming.GrammarCourse'], {
             'entries': [entry('total_form', 'Total', 'rel_total_at_model', 'rel_total_certified'),
                         entry('total_form', 'Total', 'rel_total_through_fact', 'rel_total_through_fact_certified'),
                         entry('small_form', 'SmallAll', 'rel_total_at_model', 'rel_total_certified'),
                         entry('total_form', 'Total', 'rel_total_at_model', 'absent_certificate'),
                         entry('total_form', 'Total', 'rel_total_through_held', 'rel_total_through_held_certified'),
-                        entry('total_form', 'Total', 'rel_total_through_data', 'rel_total_through_data_certified')],
+                        entry('total_form', 'Total', 'rel_total_through_data', 'rel_total_through_data_certified'),
+                        entry('total_form', 'Total', 'rel_total_through_tactic', 'rel_total_through_tactic_certified'),
+                        entry('total_form', 'Total', 'rel_total_through_rfl', 'rel_total_through_rfl_certified'),
+                        entry('total_form', 'Total', 'relH_at_model', 'relH_certified', 'Becoming.Model.relH_total'),
+                        entry('total_form', 'Total', 'relT_at_model', 'relT_certified', 'Becoming.Model.relT_total'),
+                        entry('total_form', 'Total', 'relF_at_model', 'relF_certified', 'Becoming.Model.relF_total'),
+                        pair],
             'names': ['Becoming.«际之自»', 'Becoming.Model.rel_total', 'Becoming.Small', 'Becoming.Absent',
                       'Becoming.GrammarCourse.built_on_model'],
             'equivalences': ['Becoming.Model.and_swap', 'Becoming.Model.size_zero', 'Becoming.Model.rel_total',
-                             'Becoming.Model.eq_props', 'Becoming.Model.eq_predicates']}, cls.lean, 600)
+                             'Becoming.Model.eq_props', 'Becoming.Model.eq_predicates'],
+            'generated': GENERATED}, cls.lean, 600)
 
     @classmethod
     def tearDownClass(cls):
@@ -994,6 +1099,30 @@ class TheLeanCheck(unittest.TestCase):
                          ['the discharge condition fails: the recovery uses [Becoming.Leaf.onward_held]'])
         self.assertEqual(self.out['entries'][5]['failures'],  # and so is one a model's data carries
                          ['the discharge condition fails: the recovery uses [Becoming.Model.next_rel]'])
+        self.assertEqual(self.out['entries'][6]['failures'],  # through the auxiliary Lean makes of a tactic proof
+                         ['the discharge condition fails: the recovery uses [Becoming.Model.next_rel]'])
+
+    def test_generated_proofs_are_walked_through(self):
+        # rfl in a model's data, a termination proof, a derived DecidableEq and a decide: Lean makes each a package
+        # theorem `_proof_N` (or `ofNat_ctorIdx`), walked through, so none is a proof the recovery uses
+        for i, row, projected in zip(range(7, 11), ('rel_total', 'relH_total', 'relT_total', 'relF_total'),
+                                     (['Becoming.Model.Onward.ok'], [], [], [])):
+            x = self.out['entries'][i]
+            self.assertEqual((x['row'], x['passed'], x['failures']), ('Becoming.Model.' + row, True, []))
+            self.assertEqual(x['recovery_uses'], ['Becoming.Leaf.total_form', *projected])
+
+    def test_types_are_not_walked(self):
+        # a proof inside a definition named only in a type (a hypothesis, F's conclusion, a binder's type) is no fact
+        x = self.out['entries'][11]
+        self.assertEqual((x['passed'], x['failures']), (True, []))
+        self.assertEqual(x['facts'], {'Becoming.Leaf.pair_form.total_needed': ['Becoming.Leaf.refl_all', 'Becoming.Leaf.pair_fails_total'],
+                                      'Becoming.Leaf.pair_form.refl_needed': ['Becoming.Leaf.total_all', 'Becoming.Leaf.pair_fails_refl']})
+        self.assertEqual(x['recovery_uses'], ['Becoming.Leaf.pair_form'])
+
+    def test_the_pattern_of_generated_auxiliaries(self):
+        # this file's copy of AUX is boundary.py's, on any component after the first
+        self.assertEqual(self.out['generated'], {n: boundary.Terms.aux(None, n) for n in GENERATED})
+        self.assertEqual({n for n, g in self.out['generated'].items() if not g}, set(NOT_GENERATED))
 
     def test_the_name_and_equivalence_tests(self):
         # a grammar module's theorem built on a model is refused by its content

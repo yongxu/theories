@@ -6,7 +6,8 @@ U4_BUILD is the .build folder of U4's boundary-scratch, built by its run_check.s
 compiles BoundaryCheckControls.lean (beside it) against that build into WORK (default: a temporary folder), runs the
 check on row 17, row 5 and the controls, and exits non-zero unless each case fails exactly as expected
 (controls-run.log is its output on 31 October 2026, after the discharge condition counted a package's
-definitions of propositions as proofs and test 3's message named the hypotheses)."""
+definitions of propositions as proofs and test 3's message named the hypotheses; the same output again after the walk
+read term positions only and went through generated auxiliaries)."""
 import copy, json, os, subprocess, sys, tempfile
 from pathlib import Path
 

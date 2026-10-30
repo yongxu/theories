@@ -18,15 +18,17 @@ object:
 {"entries": [{"row": "…", "form": "…",
               "hypotheses": [{"hypothesis": "…", "countermodel": "…", "fit": "…"}],
               "recovery": "…", "certificate": "…", "bridges": ["…"]}],
- "names": ["…"], "equivalences": ["…"]}
+ "names": ["…"], "equivalences": ["…"], "generated": ["…"]}
 ```
 
-`bridges`, `names` and `equivalences` may be left out. Names are written as Lean prints them (`Becoming.«际»`). The
-output, written to `BOUNDARY_CHECK_OUT`, gives for each entry its row, form, whether it passed, its failures, and what
-the review reads: the names F's statement and each hypothesis use, each fit's facts, and the theorems the recovery
-uses. For each of `names`, it gives whether the name test admits it (`admitted`), and for each of `equivalences`,
-whether it is a theorem stating an equivalence (`equivalence`, as test 9 reads it): the derived rows' bridges are
-checked there. Malformed input is an error; a failed test never is.
+`bridges`, `names`, `equivalences` and `generated` may be left out. Names are written as Lean prints them
+(`Becoming.«际»`). The output, written to `BOUNDARY_CHECK_OUT`, gives for each entry its row, form, whether it passed,
+its failures, and what the review reads: the names F's statement and each hypothesis use, each fit's facts, and the
+theorems the recovery uses. For each of `names`, it gives whether the name test admits it (`admitted`), and for each of
+`equivalences`, whether it is a theorem stating an equivalence (`equivalence`, as test 9 reads it): the derived rows'
+bridges are checked there. For each of `generated`, it gives whether the walk takes it for a generated auxiliary
+(`generated`), so that the tests can hold this file's copy of boundary.py's pattern to it. Malformed input is an error;
+a failed test never is.
 
 **The name test.** A constant is admitted when:
 - it is of `Init` (module `Init` or `Init.*`); `Lean.*` and `Std.*` are not admitted; or
@@ -57,8 +59,8 @@ checked there. Malformed input is an error; a failed test never is.
    - Its type is `¬ H w`. Every constant of `w` is admitted, or a witness: a definition of F's module naming only
      admitted constants.
    - Its proof is `fun h => …`, and applies F with `h` among F's arguments.
-   - Its facts are the package's proofs its proof uses besides F, found as in test 9. No fact reaches F or the
-     row. The countermodel's proof uses the same facts.
+   - Its facts are the package's proofs its proof uses besides F, found as in test 9, so from its value alone and
+     not from `¬ H w`. No fact reaches F or the row. The countermodel's proof uses the same facts.
 6. **F's proof.** It reaches only constants of `Init`, the prelude, `Grammar*` modules and F's own module. It
    does not reach the row.
 7. **The certificate.** Its type is `@Row = @Recovery`, in either order. The row is at distinct universe
@@ -67,9 +69,12 @@ checked there. Malformed input is an error; a failed test never is.
 9. **The discharge condition.** The recovery meets F's hypotheses from the row's own by definitions alone.
    - Its proof uses no proof but F, the declared bridges and projections (`And.left`, `Iff.mp`, …). A proof is a
      theorem, or a definition or opaque of the package whose type is a proposition. The proofs it uses are those
-     it and its own auxiliary definitions name, and the package's proofs inside every definition of the package
-     they reach, so a fact held in a definition, or carried by a model's data, counts. Constructors and `rfl` are
-     not proofs, and `Init`'s proofs inside a definition are not counted.
+     its value and its own auxiliary definitions name at term positions, outside binder types and `∀`, and the
+     package's proofs inside every definition of the package they reach, so a fact held in a definition, or
+     carried by a model's data, counts. A generated auxiliary (BOUNDARY-FIELD §3.0, such as the `_proof_N` of a
+     termination proof, a `decide` or a derived instance) is walked through, never collected. Constructors and
+     `rfl` are not proofs, and `Init`'s proofs inside a definition are not counted, so an `Init` proof carried by
+     a model's data is left to the review.
    - Each bridge the recovery uses is an equivalence: under its binders, an `Iff`, or an `Eq` between
      propositions, predicates or relations (an `Eq` at a type of values, `size = 0`, is not one).
    - The bridges are a closed set: each bridge's proof uses no theorem but admitted ones, other bridges and
@@ -124,6 +129,59 @@ def namesOf (env : Environment) (c : Name) : List Name :=
   | some ci => ci.type.getUsedConstants.toList ++
       ((ci.value? (allowOpaque := true)).map (·.getUsedConstants.toList)).getD []
   | none => []
+
+/-- The constants an expression names at its term positions: not in a binder's type or a `∀`, which are types, so
+that no proof inside a definition they name can flow into the term. Each distinct subterm is read once. -/
+def termNames (e : Expr) : List Name := Id.run do
+  let mut seen : Std.HashSet Expr := {}
+  let mut found : NameSet := {}
+  let mut out : Array Name := #[]
+  let mut stack := [e]
+  repeat
+    match stack with
+    | [] => break
+    | x :: rest =>
+      stack := rest
+      if seen.contains x then continue
+      seen := seen.insert x
+      match x with
+      | .const c _ => unless found.contains c do found := found.insert c; out := out.push c
+      | .app f a => stack := f :: a :: stack
+      | .lam _ _ b _ => stack := b :: stack
+      | .letE _ _ v b _ => stack := v :: b :: stack
+      | .mdata _ b => stack := b :: stack
+      | .proj _ _ b => stack := b :: stack
+      | _ => pure ()
+  return out.toList
+
+/-- The constants a declaration's value names at its term positions (`termNames`); none for a declaration with no
+value. -/
+def valueNames (env : Environment) (c : Name) : List Name :=
+  match env.find? c with
+  | some ci => ((ci.value? (allowOpaque := true)).map termNames).getD []
+  | none => []
+
+/-- Digits only, at least one. -/
+def digits (l : List Char) : Bool := !l.isEmpty && l.all Char.isDigit
+
+/-- One name component of a generated auxiliary: boundary.py's `AUX`, which is normative (BOUNDARY-FIELD §3.0). -/
+def auxComponent (s : String) : Bool :=
+  let l := s.toList
+  let after (p : String) : Option (List Char) := if p.toList.isPrefixOf l then some (l.drop p.length) else none
+  (match after "match_" with
+   | some r => r.head?.any Char.isDigit && r.getLast?.any Char.isDigit && r.all (fun c => c.isDigit || c == '_') &&
+       !(r.zip r.tail).any (fun p => p.1 == '_' && p.2 == '_')
+   | none => false) ||
+  ["_proof_", "proof_", "eq_", "_sizeOf_", "_aux_"].any (fun p => (after p).any digits) ||
+  ["eq_def", "sizeOf_spec", "_sizeOf_inst", "injEq", "inj", "brecOn", "below", "binductionOn", "casesOn", "recOn",
+   "rec", "elim", "noConfusion", "noConfusionType", "ctorIdx", "toCtorIdx", "ofNat_ctorIdx", "ctorElim",
+   "ctorElimType", "splitter", "_unsafe_rec", "_sunfold", "_flat_ctor", "_default"].contains s
+
+/-- A generated auxiliary (§3.0): `auxComponent` holds of a name component after the first. -/
+def generated (c : Name) : Bool :=
+  c.components.drop 1 |>.any fun
+    | .str _ s => auxComponent s
+    | _ => false
 
 /-- Everything the constants `start` reach through types and values, not expanding `Init`. -/
 partial def closureOf (env : Environment) (start : List Name) : NameSet := Id.run do
@@ -190,10 +248,12 @@ def isDefOrOpaque (env : Environment) (c : Name) : Bool :=
   | some (.defnInfo _) | some (.opaqueInfo _) => true
   | _ => false
 
-/-- The proofs a proof uses: every proof it and its own auxiliary definitions (those under its name) name, and the
-package's proofs inside every definition of the package they reach, all the way down. So a fact held in a
-definition, or carried by a model's data (`⟨f, f_rel⟩ : {f // …}`), counts. `Init`'s proofs inside a definition, such
-as its termination proofs' lemmas, do not. -/
+/-- The proofs a proof uses: every proof its value and its own auxiliary definitions (those under its name) name at
+term positions (`termNames`), and the package's proofs inside every definition of the package they reach, all the way
+down. So a fact held in a definition, or carried by a model's data (`⟨f, f_rel⟩ : {f // …}`), counts. A generated
+auxiliary (§3.0), such as the `_proof_N` Lean makes of a termination proof, a `decide` or a derived instance's proof,
+is walked through like a definition, never collected. `Init`'s proofs inside a definition or an auxiliary are not
+counted. -/
 partial def theoremsUsed (owner : Name) : MetaM (List Name) := do
   let env ← getEnv
   let mut seen : NameSet := {}
@@ -206,10 +266,11 @@ partial def theoremsUsed (owner : Name) : MetaM (List Name) := do
       stack := rest
       if seen.contains n then continue
       seen := seen.insert n
-      for m in namesOf env n do
+      for m in valueNames env n do
         if own && owner.isPrefixOf m && m != owner then stack := (m, true) :: stack
         else if ← isProof m then
-          if (own || packaged env m) && !found.contains m then found := found ++ [m]
+          if generated m then stack := (m, false) :: stack
+          else if (own || packaged env m) && !found.contains m then found := found ++ [m]
         else if packaged env m && isDefOrOpaque env m then stack := (m, false) :: stack
   return found
 
@@ -419,7 +480,9 @@ def parseEntry (j : Json) : Except String Entry := do
   let mut equivalences := #[]
   for s in ((j.getObjValAs? (Array String) "equivalences").toOption.getD #[]).toList do
     equivalences := equivalences.push (s, toJson (← isEquivalence s.toName))
+  let auxiliaries := ((j.getObjValAs? (Array String) "generated").toOption.getD #[]).toList.map fun s =>
+    (s, toJson (generated s.toName))
   IO.FS.writeFile output ((Json.mkObj [("entries", toJson results), ("admitted", Json.mkObj admits),
-    ("equivalence", Json.mkObj equivalences.toList)]).pretty ++ "\n")
+    ("equivalence", Json.mkObj equivalences.toList), ("generated", Json.mkObj auxiliaries)]).pretty ++ "\n")
 
 end BoundaryCheck

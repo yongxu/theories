@@ -57,7 +57,7 @@ FULL = re.compile(r'(?:Becoming|Generative)\.\S+')  # a full Lean name: a module
 # Lean's generated auxiliaries, by any name component after the first (§3.0; normative): an auxiliary's own
 # auxiliaries, such as `match_1.eq_1` or `_proof_1.splitter`, are generated too.
 AUX = re.compile(r'^(match_\d+(_\d+)*|_proof_\d+|proof_\d+|eq_\d+|eq_def|sizeOf_spec|_sizeOf_\d+|_sizeOf_inst|injEq|inj|'
-                 r'brecOn|below|binductionOn|casesOn|recOn|rec|noConfusion|noConfusionType|ctorIdx|toCtorIdx|'
+                 r'brecOn|below|binductionOn|casesOn|recOn|rec|noConfusion|noConfusionType|ctorIdx|toCtorIdx|ofNat_ctorIdx|'
                  r'ctorElim|ctorElimType|splitter|_unsafe_rec|_sunfold|_flat_ctor|_aux_\d+|_default|elim)$')
 FLOW = ('Becoming.Flow.Balances', 'Becoming.Flow.BalancesOn', 'Becoming.Flow.BalancesBetween')  # rule 1's anchors
 WRITTEN_OUT = {'Becoming.Dependence.level', 'Becoming.Flow.taken', 'Becoming.Flow.given'}  # balance written out
@@ -565,7 +565,7 @@ def report(C, central, at_model, f5_class, carrier, balance_anchors, lean=lean_c
         sent = [d for s in lean_entries + derived_ok for d in [s['declaration'], *given_names(s)[0]]]
         output, info = lean(query, sorted({C[x]['m'] for x in sent}))
     if output is not None and not (isinstance(output, dict) and isinstance(output.get('entries', []), list)
-                                   and all(isinstance(x, dict) for x in output.get('entries', []))
+                                   and all(isinstance(x, dict) and isinstance(x.get('row'), str) for x in output.get('entries', []))
                                    and all(isinstance(output.get(k, {}), dict) for k in ('admitted', 'equivalence'))):
         output, info = None, {**info, 'ran': False, 'reason': 'the Lean check gave malformed output'}
     results = {}
@@ -578,8 +578,8 @@ def report(C, central, at_model, f5_class, carrier, balance_anchors, lean=lean_c
         if output is None:
             failed.append('the Lean check did not run: ' + info.get('reason', ''))
         elif s['standing'] == 'derived':
-            failed += [f'D1: the Lean check does not admit {y}' for y in s['law'] if not output.get('admitted', {}).get(y)]
-            failed += [f'D6: the bridge {x} is not an equivalence' for x in s.get('bridges', []) if not output.get('equivalence', {}).get(x)]
+            failed += [f'D1: the Lean check does not admit {y}' for y in s['law'] if output.get('admitted', {}).get(y) is not True]
+            failed += [f'D6: the bridge {x} is not an equivalence' for x in s.get('bridges', []) if output.get('equivalence', {}).get(x) is not True]
         else:
             x = results.get(s['declaration'])
             if x is None:
