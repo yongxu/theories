@@ -4923,6 +4923,7 @@
         "sources/15-codex-theory-conversations/2026-10-23-continuity-as-root/minimum-grammar-of-becoming.md",
         "theories/becoming/chapters/02-MAP.md",
         "theories/becoming/chapters/03-KNOWING.md",
+        "theories/becoming/chapters/05-COLLECTIVES.md",
         "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
         "theories/becoming/chapters/07-SIGNIFICANCE.md",
         "theories/becoming/chapters/08-METHOD.md"
@@ -5134,6 +5135,7 @@
         "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/n1-migration/RENAME-TABLE.json",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-TWENTIETH-REVIEW.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-TWENTY-FIRST-REVIEW.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/DECIDABILITY-INVENTORY.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/GENERATIVITY-CHAIN-INDEX-RECORD.md",
@@ -5179,6 +5181,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/reflective-identity-verification.json",
         "experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean",
         "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/FiniteBranchingCorrespondence.lean",
+        "experiments/self-rewarding-lock/README.md",
         "theories/becoming/FREE-ENERGY-PRINCIPLE.md",
         "theories/becoming/OPENING.md",
         "theories/becoming/chapters/01-ROOT.md",
