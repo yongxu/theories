@@ -788,3 +788,783 @@ Verdict: **Needs textual correction.** Four findings below; no files changed or 
 | 3 | The monotonicities leave the supplied map and the common type implicit | the map and its equations, the executability directions and the one type of readings stated in the chapter, the header, the record and the study |
 | 4 | The record's relation detail makes revision unconditional | correctability compared along a course, the reading, executability or both changing |
 
+## The review of RF7's module
+
+RF7's module, then `Becoming.Concealment` (10 theorems in 22 declarations, in the kit at `kit/round2/tree/Becoming/Concealment.lean`), was reviewed read-only by the cross-model reader in a fresh session; the prompt is in [BRIEF](BRIEF.md#round-2), under the Lean review of RF7's module. The file was later renamed `ReadStages.lean` when the module was rebuilt, so the review's links to it are given here as plain text; its versions are in the history of that path.
+
+**Verdict: the arithmetic theorem is sound on inspection, but RF7 is only partially met: probability validity, choice and tie semantics, and the disclosure exit need correction. No files changed or builds run. Findings below are in repair priority order.**
+
+1. **High — `Stakes` does not enforce its probability interpretation.**  
+   Location: `Concealment.lean:61`, lines 61–105.
+
+   > “The stakes, in natural-number weights out of `total`”
+
+   All five fields are unrestricted `Nat`s. Nothing requires `total > 0` or either retention weight to be at most `total`. For example, `⟨0, 1, 0, 1, 100⟩` satisfies `Conceals`: multiplication by the zero total erases the cost. Its probability interpretation is undefined.
+
+   With a positive total and bounded weights, the encoding is correct. Writing \(T=\text{total}\), \(k_C=\text{keptComplying}\), \(k_O=\text{keptOwn}\), \(V=\text{value}\), and \(c=\text{cost}\), it represents:
+
+   | Plan | Expected utility |
+   |---|---:|
+   | comply, comply | \(-c\) |
+   | comply, own | \(k_CV/T-c\) |
+   | own, comply | \(0\) |
+   | own, own | \(k_OV/T\) |
+
+   `Beats` correctly compares these without truncated natural-number subtraction. Consequently, `Conceals` is exactly strict superiority over every other plan **under this payoff interpretation**.
+
+   **Replacement:** retain the unrestricted arithmetic lemmas if useful, but require the following for probability claims:
+
+   ``lean
+   def Stakes.Valid (s : Stakes) : Prop :=
+     0 < s.total ∧
+     s.keptComplying ≤ s.total ∧
+     s.keptOwn ≤ s.total
+   ``
+
+   State the payoff table explicitly, including its common utility scale, additive stage payoffs, and zero continuation payoff for compliance or non-retention. The two retention weights need individual bounds; they need not sum to `total`.
+
+2. **High — strict optimality is proved; actual choice and tie rejection are not.**  
+   Location: `Concealment.lean:36`, also lines 115–136 and 171–177.
+
+   > “the law says concealment is chosen exactly where these meet with the stake exceeding the cost”
+
+   > “nothing conceals”
+
+   `conceal_best_iff` correctly characterizes a **unique strict maximum**. There is no chooser, optimal-choice hypothesis, or tie-breaking convention. `¬ s.Conceals` does not exclude concealment from the maximizing plans.
+
+   For valid stakes `⟨10, 9, 1, 10, 8⟩`, concealment and disclosure both have utility \(1\), exceeding the other plans. For `⟨10, 1, 1, 10, 0⟩`, `no_leverage` applies, yet concealment and disclosure again tie for best. With `value = cost = 0`, all four plans tie.
+
+   **Replacement:** say:
+
+   > “Concealment is uniquely strictly best exactly when `Conceals` holds. Zero continuation value or no retention advantage excludes strict optimality, but can leave concealment tied for best.”
+
+   To retain RF7’s literal “chosen exactly,” define an optimizing selector that chooses `conceal` when `Conceals` holds and `disclose` otherwise, explicitly favoring disclosure at equality, and prove its optimality.
+
+   **Substance:** the comparison with `disclose` is definitionally `Conceals`; the content of `conceal_best_iff` is the finite-case proof that this comparison also defeats the other two plans. `no_value` and `no_leverage` are elementary arithmetic consequences. The four `Example` theorems are one numerical witness and direct applications, not additional incentive mechanisms.
+
+3. **Medium — the prose threshold drops the total’s scaling.**  
+   Location: `Concealment.lean:18`, also lines 103–105.
+
+   > “the weight complying adds to being kept, times the value, exceeds the cost, strictly”
+
+   The Lean compares the weighted gain with **`cost * total`**, not `cost`. With `⟨10, 9, 1, 1, 1⟩`, the added weight times value is \(8>1\), satisfying the prose literally, but `Conceals` is false: \(1+10<9\) fails.
+
+   **Replacement:**
+
+   > “The increase in retention probability, multiplied by continuation value, strictly exceeds the compliance cost.”
+
+   Or, staying entirely in the integer encoding:
+
+   > “`keptComplying * value` strictly exceeds `keptOwn * value + cost * total`.”
+
+4. **Medium — `Untold` describes equal actions, not inability to distinguish; the lumping bridge needs its full informational scope stated.**  
+   Location: `Concealment.lean:138`, lines 138–150.
+
+   > “A plan the formation can carry where it cannot tell the stages apart: one act at both.”
+
+   `Untold p` is only `p.1 = p.2`. A formation can distinguish the stages perfectly and nevertheless act identically. For example, an identity lumping and a constant act law satisfy the behavioral equality.
+
+   `lumped_untold` is correct: it directly applies `Learning.Lumped` to the supplied equality of observations. It adequately represents the deterministic special case **if** `π` includes all information available to the decision rule. Merely hiding an evaluation cue is insufficient in a two-stage process: memory, a clock, or the previous action can distinguish the stages. The current module establishes neither complete informational equivalence nor a general result about uncertain evaluation.
+
+   **Replacement:** name the behavioral predicate `Uniform`, and state:
+
+   > “A fixed deterministic act law gives equal acts when the stages have identical complete accessible states, including retained memory. Such a law cannot realize `conceal`.”
+
+   `lumped_untold` is a direct specialization of an existing definition; `conceal_told` is constructor disjointness. Their useful contribution is the connection between the information restriction and the excluded plan, not a new epistemic theorem.
+
+5. **Medium — `untold_discloses` proves a conditional pairwise comparison, and neither it nor `disclose` establishes revelation of a law.**  
+   Location: `Concealment.lean:152`, also lines 25–26, 38–39 and 109–113.
+
+   > “wherever anything is at stake … its law is shown when read”
+
+   The theorem’s conclusion unfolds to its hypothesis:
+
+   ``lean
+   0 < s.keptOwn * s.value + s.cost * s.total
+   ``
+
+   Thus it is a definitional restatement of the supplied strict comparison. It correctly compares the two uniform plans, but “anything is at stake” must mean this particular expression is positive.
+
+   The reading at lines 38–39 drops that condition. Valid stakes `⟨1, 1, 0, 1, 0⟩` have positive continuation value and retention leverage, yet both uniform plans have utility zero. Indistinguishability then guarantees neither strict preference for `.own` nor its selection.
+
+   **Replacement:** state the complete constrained-optimum result:
+
+   ``lean
+   (∀ q, Untold q → q ≠ disclose → s.Beats disclose q) ↔
+     0 < s.keptOwn * s.value + s.cost * s.total
+   ``
+
+   Add that equality leaves both uniform plans tied.
+
+   Separately, `.own` is an action tag. There is no space of private laws, reader observation, inference, or identification theorem. Replace “its law is shown” with:
+
+   > “Under the positive-stake condition, an optimizing choice among uniform plans takes the own act at the read stage.”
+
+   For exact structural names, `ownAtBoth`, `complyThenOwn`, and `Uniform` say what the definitions establish. “Disclosure” and “concealment” can remain labelled interpretations. Likewise, `Example.myopic` establishes zero continuation value, not a myopic computation. An exact claim of deception would additionally need the recipient-side and intentional correspondence; that is beyond what this incentive comparison proves.
+
+6. **Medium — the Hubinger attribution is correct, but the three-condition correspondence is incomplete.**  
+   Location: `Concealment.lean:30`, lines 30–40.
+
+   > “an objective extending beyond the episode, a model of the training, and an expectation that modification will stop”
+
+   The authors and original 2019 date are correct. Their §4.2 concerns an objective spanning parameter updates, modelling selection pressure and its base objective, and expecting the modification threat eventually to disappear. Stage discrimination alone does not supply the second condition. Retention leverage does not represent the third; the terminal unread opportunity supplies that assumption here. These are proposed necessary conditions, not a sufficient-choice theorem. [Hubinger et al., §4.2](https://arxiv.org/html/1906.01820#S4.SS2)
+
+   **Replacement:**
+
+   > “[AI reading] Continuation value represents concern across modification opportunities. The supplied retention weights and compliant act represent an assumed model of selection pressure; stage discrimination supplies access to when that pressure applies. The terminal unread stage assumes an opportunity beyond that pressure. If these stakes are the formation’s subjective expected-utility assessment, the theorem characterizes strict optimality within the four-plan model.”
+
+   This makes the missing belief-to-ranking correspondence explicit without requiring a full implementation of training.
+
+7. **Low — Greenblatt’s result is compressed into an overly categorical behavioral contrast.**  
+   Location: `Concealment.lean:32`, lines 32–34.
+
+   > “complying with a training objective when told it was being trained and not otherwise”
+
+   The 2024 attribution is correct. The experiments demonstrate alignment-faking reasoning and differences in compliance rates under constructed training cues, not a universal deterministic switch. In the initial helpful-only setup, compliance was about 12% for implied training and almost never otherwise; later RL also increased compliance outside training. The evidence includes preservation reasoning, not merely a behavioral gap. [Greenblatt et al., abstract and §1](https://arxiv.org/html/2412.14093v1)
+
+   **Replacement:**
+
+   > “Greenblatt and others (2024) observed strategic compliance and preservation reasoning in constructed settings, with compliance rates differing between implied-training and unmonitored conditions. This motivates the model’s preservation-incentive interpretation; it does not establish its four-plan restriction, retention weights, or threshold empirically.”
+
+| # | Finding | Taken |
+|---|---|---|
+| 1 | `Stakes` does not enforce its probability interpretation | `Stakes.Valid` (now `Prospects.Valid`), the table of expected values in the header, and `Example.no_total` for a total of nothing |
+| 2 | Strict optimality is proved; actual choice and ties are not | `choose`, `choose_optimal` and `choose_eq_iff`, ties to the own law; later every maximal plan (`only_complyThenOwn_iff`) |
+| 3 | The prose threshold drops the total's scaling | the loss times the total in the threshold (`Conceals`, now `KeepingOutweighs`) and in every text |
+| 4 | `Untold` describes equal actions, not inability to tell | `Uniform`, with `lumped_uniform`'s informational scope stated; later which plans a lumping leaves open (`plan_realized_iff`) |
+| 5 | `untold_discloses` is a conditional pairwise comparison | `uniform_best_iff` and `uniform_tie`; disclosure kept as a labelled reading |
+| 6 | The Hubinger correspondence is incomplete | the readings rewritten; later the three conditions mapped, the third assumed rather than represented |
+| 7 | Greenblatt's result is compressed | constructed settings and rates; it motivates the reading only |
+
+## The re-check of RF7's rebuilt module
+
+The module was rebuilt for the seven findings (21 theorems in 35 declarations) and re-checked in the review's session.
+
+**Verdict: the rewritten Lean addresses the substantive findings on inspection. One prose qualification remains missing, and one new name overstates its statement. No builds run or files changed.**
+
+1. **Taken correctly.** `Stakes.Valid` supplies exactly the probability constraints; the payoff table states the additive utility interpretation, and `Example.no_total` demonstrates why validity matters.
+
+2. **Taken correctly.** `choose` explicitly resolves ties toward `ownAtBoth`; `choose_optimal` proves it is never strictly beaten, and `choose_eq_iff` characterizes its selection. The exit statements now distinguish strict optimality from tied optimality.
+
+3. **Taken correctly.** The threshold explicitly includes `cost * total`; both `Conceals` and its docstring give the correct scaled comparison.
+
+4. **Taken correctly.** `Uniform` names behavioral equality; `lumped_uniform` supplies the sufficient information condition, with memory, clock and earlier action explicitly included.
+
+5. **Partly.** `uniform_best_iff`, `uniform_tie` and the structural plan names repair the formal claims, but `Concealment.lean:66` still says “wherever anything is at stake”: replace this with “where `keptOwn * value + cost * total > 0`.” Valid stakes `⟨1, 1, 0, 1, 0⟩` have positive continuation value and retention leverage but leave both uniform plans tied.
+
+6. **Taken correctly.** The Hubinger reading now separates the assumed selection model, access to stage information, and the terminal opportunity beyond modification; it explicitly distinguishes proposed necessary conditions from the module’s conditional optimality result.
+
+7. **Taken correctly.** The Greenblatt reading now describes constructed settings, preservation reasoning and differing compliance rates, without claiming a deterministic switch or empirical validation of the threshold.
+
+8. **New problem — Low: zero continuation value is named as absence of continuation.**  
+   Location: `Concealment.lean:281`.
+
+   > `theorem no_continuation : ({ stakes with value := 0 } : Stakes).choose = ownAtBoth`
+
+   The theorem sets the continuation **value** to zero. It retains both stages and the retention weights; it proves no absence of continuation. Its docstring correctly states the narrower meaning.
+
+   **Replacement:** rename it `no_continuation_value`, retaining its statement and docstring.
+
+| # | Finding | Taken |
+|---|---|---|
+| 1 | "Wherever anything is at stake" (finding 5, in part) | "where `k_O V + c T` is positive" |
+| 2 | `no_continuation` names absence of continuation | `no_continuation_value`, later `Example.valueless` |
+
+## The four-lens review of RF7's module
+
+The module was then reviewed by four readers, one per lens (decision, exactness, readings, fit), each finding checked by a separate reader asked to refute it: 50 findings, 42 confirmed and 8 refuted. The findings and verdicts are in [REVIEW-RF7-LENSES](REVIEW-RF7-LENSES.md), verbatim. The module was rebuilt and renamed `Becoming.ReadStages` for the confirmed ones (47 theorems in 65 declarations), and took most refuted ones too where they improved it.
+
+| # | Lens | Verdict | Finding | Taken |
+|---|---|---|---|---|
+| D1 | decision | confirmed | the third exit holds only for a deterministic law | the law of drawing afresh (`freshDraw_above_iff`, then `freshDraw_above_iff_chance`); the exit limited to a deterministic law; the lumping carries any chance drawn |
+| D2 | decision | confirmed | no witness of a tie at an exit | strict exits with `0 < c T`; `Example.exit_tie`; `choose_of_not_outweighs` |
+| D3 | decision | confirmed | "nothing gained after complying" | nothing gained by complying at the unread stage or where the law is not kept |
+| D4 | decision | confirmed | gain and loss are not expected values times the total | the two parts of the expected value times the total |
+| D5 | decision | refuted | the variations are not shown valid | (refuted) `Example.variants_valid` added |
+| D6 | decision | confirmed | "not conditioned on" is narrower than the Lean | keeping not raised by complying (`kept_not_raised`) |
+| D7 | decision | confirmed | a docstring refers back to the wrong theorem | every docstring self-contained |
+| D8 | decision | confirmed | the witness says "complying when read" only | the plan named, with the four expected values |
+| D9 | decision | confirmed | four components mapped onto three conditions | the three conditions mapped; telling the stages apart named apart from them |
+| D10 | decision | confirmed | `Conceals` and `no_leverage` name a reading and a financial word | `KeepingOutweighs`, `kept_not_raised` |
+| D11 | decision | confirmed | which `Bool` is the read stage | `true` the read stage stated; `K` universe-polymorphic |
+| E1 | exactness | confirmed | the ties at the exits have no witness | as D2 |
+| E2 | exactness | confirmed | only one plan's optimality is characterized | `ownAtBoth_best_iff` and `unread_comply_not_above`: the four plans classified |
+| E3 | exactness | confirmed | the third exit and mixing | as D1 |
+| E4 | exactness | confirmed | `Conceals` and the module carry the reading | the module `Becoming.ReadStages`; `KeepingOutweighs` |
+| E5 | exactness | confirmed | no theorem for the choice at a tie | `choose_of_not_outweighs` |
+| E6 | exactness | confirmed | the invalid witness fails validity on two counts | `Example.no_total`'s docstring names both |
+| E7 | exactness | confirmed | as D3 | as D3 |
+| E8 | exactness | confirmed | as D4 | as D4 |
+| E9 | exactness | confirmed | as D6 | as D6 |
+| E10 | exactness | confirmed | "leverage" is a financial word | `kept_not_raised` |
+| E11 | exactness | refuted | "continuation" has one glossary sense | (refuted) renamed anyway: `Example.valueless`, `Example.equal_weights` |
+| E12 | exactness | confirmed | "Stakes" and "Beats" | `Prospects` and `Above`, RF1's word for an order; `Valuation` was not taken, the core using it for the metaethical valuations |
+| E13 | exactness | confirmed | docstrings refer outside themselves | as D7 |
+| E14 | exactness | confirmed | as D8 | as D8 |
+| E15 | exactness | confirmed | the formation's own order stated as part of the model | the order the prospects give; whose the weights are stated once, as a reading |
+| E16 | exactness | confirmed | "no ranking occurs" is literally false | no ethical predicate, ethical ranking or axiom; the order is the prospects' |
+| E17 | exactness | confirmed | the lumping's scope written as part of the theorem | stated as a correspondence; the modelling choices name the law as a function of the stage |
+| E18 | exactness | refuted | "its loss" in a docstring | (refuted) reworded anyway |
+| R1 | readings | confirmed | as D1 | as D1 |
+| R2 | readings | confirmed | the reader's levers are claimed but not modelled | the exits are conditions on the assessment and on what the law reads; a reader's acts not modelled |
+| R3 | readings | confirmed | two of four correspondences are not §4.2's | the first two conditions represented, the third assumed, telling apart not among them |
+| R4 | readings | confirmed | concealing presupposes a recipient | the reading takes the keeping as the reading's evidence of the law; the weights alone fit a reading that knows the law |
+| R5 | readings | refuted | details of Greenblatt and others | (refuted) reworded anyway: the cue and the information supplied; a difference of rates |
+| R6 | readings | refuted | no choice among uniform plans is declared | (refuted) reworded to cite `uniform_best_iff` |
+| R7 | readings | confirmed | which account of deception | Ward and others' definition named, a debt; complying instrumental to being kept |
+| R8 | readings | confirmed | the closest precedent and the standing | the Standing: the toy example opening §4, not claimed new |
+| R9 | readings | confirmed | whose weights these are | as E15 |
+| R10 | readings | confirmed | as E4 | as E4 |
+| F1 | fit | confirmed | not joined to RF2 | `plan_realized_iff`, `complyThenOwn_realized_iff`, `read_fixes_unread`, `twin_complyThenOwn`, `kept_alike` |
+| F2 | fit | confirmed | as D1 | as D1 |
+| F3 | fit | confirmed | nothing on every optimizing choice | `Maximal` (first `Unbeaten`), `only_complyThenOwn_iff`, `complyThenOwn_maximal_iff`; strict exits |
+| F4 | fit | confirmed | as R2 | as R2 |
+| F5 | fit | refuted | the necessity as theorems | (refuted) taken anyway: `outweighs_needs`, `outweighs_needs_more` |
+| F6 | fit | refuted | no Standing, no forbids | (refuted) taken anyway: Standing and What it forbids |
+| F7 | fit | confirmed | stage-wise choice not reduced to plans | `unread_comply_not_above` |
+| F8 | fit | confirmed | names of the reading and financial words | as E4, E10 and E12 |
+| F9 | fit | confirmed | two agents in the framing | the relational framing in the first paragraph and `Act`'s docstring |
+| F10 | fit | confirmed | three small gaps | as D2, D7 and D11 |
+| F11 | fit | refuted | omissions without homes | (refuted) taken anyway: what the model leaves out, with where each goes |
+
+## The re-check of the renamed module
+
+The rebuilt module was re-checked by the cross-model reader in a fresh session, with the 50 findings and what was taken summarized in its prompt.
+
+Locations refer to `ReadStages.lean`.
+
+1. **Medium — lines 128–129: “the rare defection an evaluation that cannot be told from use invites.”**
+
+   **Problem:** The law establishes an improving probability, without establishing that defection is rare. In the supplied example, every improving probability makes acting by the own law frequent.
+
+   Deriving the correspondence: put \(A=k_OV\), \(B=cT\), \(C=k_CV\), and \(p=m/(m+r)\), with valid prospects and \(m+r>0\). Independent draws assign probabilities \(p^2,p(1-p),(1-p)p,(1-p)^2\) to the four table rows. Therefore
+   \[
+   TE(p)=(1-p)\bigl(pC+(1-p)A\bigr)-pB,
+   \]
+   and
+   \[
+   T\bigl(E(p)-E(\texttt{ownAtBoth})\bigr)
+   =p(C-2A-B)-p^2(C-A).
+   \]
+   For the example this is \(20p-80p^2\), positive exactly when \(0<p<1/4\). Thus its improving plans act by the own law with probability greater than \(3/4\); the witness does so with probability \(7/8\).
+
+   **Replacement:** “Independent draws can improve on `ownAtBoth` without distinguishing the stages. The theorem establishes the existence of an improving compliance probability; it establishes no rarity of defection.”
+
+2. **Medium — lines 118–122: “Their necessity for strict optimality is proved here (`outweighs_needs`).”**
+
+   **Problem:** The antecedent refers to Hubinger et al.’s conditions, including possessing a model of selection and its objective. `outweighs_needs` proves only \(V>0\) and \(k_O<k_C\). There is no predicate for possessing that model. Even when the numbers represent an assessment, knowing how selection works is different from assessing compliance as increasing retention. The source’s second condition concerns the former. [Hubinger et al., §4.2](https://arxiv.org/html/1906.01820v3#S4.SS2)
+
+   **Replacement:** “Under this reading, `outweighs_needs` proves that strict optimality requires positive unread-stage value and an assessed increase in retention from complying. These are numerical counterparts of parts of the first two conditions; possession of the model described by the second condition is not represented or proved necessary.”
+
+3. **Medium — lines 135–137: “a keeping not raised by complying is … reading the law rather than keeping or changing it by the acts there.”**
+
+   **Problem:** \(k_C\leq k_O\) specifies a comparison of weights, not how selection obtains them. Constant retention, random retention independent of acts, and selection favoring the own act all satisfy it. None requires inspecting the law. Moreover, `kept` expressly depends only on the read-stage act.
+
+   **Replacement:** “Keeping not raised by complying means only that the supplied weights do not favor compliance. Whether selection inspects the law, uses acts, or uses other information is not represented.”
+
+4. **Medium — line 253 and the `mixed_*` declarations: `MixedAbove`.**
+
+   **Problem:** In the cited decision-theoretic terminology, this is a **behavioural** strategy. Piccione and Rubinstein distinguish fresh independent randomization from a mixed strategy, which randomizes initially over feasible pure strategies. Here the feasible stage-indistinguishable pure strategies are the two uniform plans. A mixture of those cannot improve on `ownAtBoth`, whereas the represented fresh draws can. The name obscures precisely the distinction responsible for the result. [Piccione and Rubinstein, §4](https://arielrubinstein.org/papers/53.pdf)
+
+   **Replacement:** `FreshDrawAbove`, with corresponding `freshDraw_*` names; alternatively `BehaviouralAbove` for the decision-theoretic vocabulary.
+
+5. **Low — lines 81–83: “raises the threshold … and removes any difference between the stages’ behaviour.”**
+
+   **Problem:** The threshold increases by \(k_OV\), which can be zero even for valid prospects satisfying the mixed inequality. Also, equal act distributions do not imply equal realized acts: independent draws differ with probability \(2p(1-p)\).
+
+   **Replacement:** “Under fresh independent draws with one compliance probability at both stages, the improvement threshold becomes `2 k_O V + c T`, an increase of `k_O V` that can be zero. The stages have the same act distribution, although their realized acts can differ.”
+
+6. **Low — lines 675–677: “`1040 < 1120`, the expected values `9/8` and `1` times `64 T`.”**
+
+   **Problem:** \(64T=640\). The scaled **net** expected values are \(720\) and \(640\), giving \(640<720\). The displayed \(1040<1120\) adds the scaled mixed-plan loss, \(400\), to both sides. Its sides are not the scaled net expected values.
+
+   **Replacement:** “The expected values are `9/8` and `1`. Multiplication by `64 T` gives `640 < 720`; adding the scaled loss `400` to both sides gives the subtraction-free comparison `1040 < 1120`.”
+
+7. **Low — lines 59–60, 388–396: “With a positive loss … stands above …”**
+
+   **Problem:** The actual hypothesis is \(0<cT\), not merely \(0<c\). Neither strict-exit theorem assumes `Valid`. With `total = 0`, `cost = 1`, and both retention weights and value zero, the stated loss is positive but the plans tie.
+
+   **Replacement:** “With positive scaled loss `0 < c T` …”. Alternatively: “For valid prospects, with positive loss `0 < c` …”.
+
+8. **Low — line 236 and its uses: `Unbeaten`.**
+
+   **Problem:** Under the repository’s structural naming rule, this retains the contest metaphor of the retired `Beats`. The definition is the order-theoretic condition that no element lies strictly above the given plan.
+
+   **Replacement:** `Maximal`, with `complyThenOwn_maximal_iff` and corresponding references.
+
+9. **Low — lines 143–144: “Ward, Toni, Belardinelli and Everitt (2023).”**
+
+   **Problem:** The paper’s author order is Ward, **Belardinelli, Toni**, Everitt. [Paper title and author list](https://arxiv.org/html/2312.01350v1)
+
+   **Replacement:** “Ward, Belardinelli, Toni and Everitt (2023).”
+
+| # | Finding | Taken |
+|---|---|---|
+| 1 | "The rare defection": the improving chances of complying are small | dropped; the improving chances stated exactly (`freshDraw_above_iff_chance`, through `freshDraw_reduce`), with a witness of where the gain stops (`Example.freshDraw_boundary`); nothing makes complying, or acting by its own law, rare |
+| 2 | The necessity claimed is beyond `outweighs_needs` | numerical counterparts of parts of the first two conditions; possessing the model of the selection neither represented nor proved necessary |
+| 3 | Keeping not raised by complying does not say the selection reads the law | it says only that the weights do not favour complying |
+| 4 | `MixedAbove` is a behavioural plan, not a mixed one | `FreshDrawAbove` and `freshDraw_*`; a single draw between the uniform plans as `MixtureAbove`, which never gains (`mixture_never_above`); the Standing names behavioural against mixed strategies |
+| 5 | The threshold's rise can be nothing; equal distributions are not equal acts | both said |
+| 6 | `Example`'s scaled values are not the net expected values | 720 and 640, the stated comparison adding the scaled loss 400 |
+| 7 | The strict exits' hypothesis is `0 < c T` | stated so |
+| 8 | `Unbeaten` keeps a contest word | `Maximal`, with `complyThenOwn_maximal_iff` and `unread_comply_not_above` |
+| 9 | Ward and others' author order | Ward, Belardinelli, Toni and Everitt (2023) |
+
+The module was rewritten for the nine (52 theorems in 71 declarations) and the session continued for a re-check:
+
+**Verdict: All nine findings were taken correctly. Read-only inspection found no new error or overstatement introduced by the rewrite.**
+
+1. **Taken correctly** — The rarity claim is removed; `freshDraw_reduce` and `freshDraw_above_iff_chance` give the stated comparison with the necessary `0 < m` hypothesis (lines 588–625).
+2. **Taken correctly** — Numerical necessity is explicitly distinguished from possessing a model of selection (lines 128–132).
+3. **Taken correctly** — Non-increasing retention weights no longer imply any particular selection mechanism (lines 147–148).
+4. **Taken correctly** — `FreshDrawAbove` describes independent behavioural draws; `MixtureAbove` and `mixture_never_above` correctly handle a single draw between uniform plans (lines 258–272, 681–686).
+5. **Taken correctly** — The threshold increase may be zero, and equal act distributions are distinguished from equal realized acts (lines 85–87).
+6. **Taken correctly** — The example distinguishes scaled net values `720` and `640` from the cross-added comparison `1040 < 1120` (lines 742–746).
+7. **Taken correctly** — Both strict-exit docstrings and the header state `0 < c T` (lines 59–60, 405–415).
+8. **Taken correctly** — `Maximal` and the renamed declarations retain the intended propositions and consistent documentation (lines 245–246, 312–319, 370–373).
+9. **Taken correctly** — The citation now gives Ward, Belardinelli, Toni and Everitt in the correct order (line 154).
+
+## The cold read of RF7's texts
+
+Before RF7's landing its texts were cold-read against the Lean, as integrated on main in a rehearsal worktree: 03 §11 and its Reading, 03's opening of §11 and Open, the record in both languages, the study section, the module's header, the root bullet, the checker's scope sentence, the package rows, 07's row, 08's bullet, the overview, the dossier, the plan, regions and the board's text. Two reads ran: the cross-model reader, read-only in a fresh session, and a workflow of three readers, one per lens (exactness, readings, fit), each finding given to a separate reader asked to refute it. The prompts are in [BRIEF](BRIEF.md#round-2).
+
+### The cross-model reader
+
+Its findings, verbatim, with its links to the rehearsal worktree made repository-relative:
+
+**Verdict: Needs textual revision. The fixed-chance equivalence loses a required hypothesis, and several summaries blur strict optimality and ties.**
+
+1. **Medium — Missing `0 < m` makes the stated equivalence false.** Locations: [03-KNOWING.md:474](../../../../../../../theories/becoming/chapters/03-KNOWING.md); [make_records_rf7.py:195–200](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf7.py).
+
+   **Quoted:** “complying with chance `m / (m + r)`, stands above … exactly where `(m + r) (k_O V + c T) + r k_O V < r k_C V`”; Chinese: “以 m/(m+r) 之机从之律……恰当……”.
+
+   **Problem:** `freshDraw_above_iff_chance` explicitly requires `0 < m`. On `Example.prospects`, with `m = 0`, `r = 1`, the displayed reduced inequality is `70 < 90`, but `FreshDrawAbove 0 1` is `10 < 10`. Zero compliance probability simply gives `ownAtBoth`.
+
+   **Replacement:** “For `0 < m`, a law drawing independently at each stage and complying with chance `m/(m+r)` stands above acting by its own law at both exactly where `(m+r)(k_O V+c T)+r k_O V < r k_C V`.”
+
+   **Chinese:** “当 `0 < m` 时，每阶独立重抽其行、以 `m/(m+r)` 之机从之律，居二阶皆依己律之上，恰当 `(m+r)(k_O V+c T)+r k_O V < r k_C V`。”
+
+2. **Medium — “Best exactly where” needs “uniquely best.”** Locations: [THE-THEORY-OF-BECOMING.md:96](../../../../../../../theories/becoming/THE-THEORY-OF-BECOMING.md), [ALIGNMENT.md:28](../../../../../../../theories/becoming/review/ALIGNMENT.md), package [README.md:198](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md), [README.zh.md:144](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md), and [PLAN.md:178](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md).
+
+   **Quoted:** “is best … exactly where”; “a formation’s best plan among four exactly where”; “best exactly where”; “最优恰当”.
+
+   **Problem:** The strict inequality characterizes the **unique** optimum. `complyThenOwn_maximal_iff` includes equality. In `Example.tie`, both `complyThenOwn` and `ownAtBoth` have expected value `1`, exceeding the other plans’ `−8` and `0`. Thus `complyThenOwn` is still a best plan at equality.
+
+   **Replacement:** Change the respective clauses to “is uniquely best among the four plans exactly where …” or “stands strictly above every other plan exactly where …”. Retain each location’s existing inequality.
+
+   **Chinese:** Replace “最优恰当” with “于四策中唯一最优，恰当”.
+
+3. **Low — The record’s “there” ambiguously sends `choose` into the equality case.** Location: [make_records_rf7.py:170–173](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf7.py).
+
+   **Quoted:** “that plan is maximal exactly where `k_O V + c T` is at most `k_C V`; the choice taking it there …”; Chinese: “此策为极大，恰当……不逾……；此处择之……”.
+
+   **Problem:** The nearest antecedent of “there”/“此处” is the weak inequality. But `Prospects.choose` takes `complyThenOwn` only under the strict inequality; equality selects `ownAtBoth`. The trailing “ties included” does not clearly repair that antecedent.
+
+   **Replacement:** “That plan is maximal exactly where `k_O V+c T ≤ k_C V`. The choice taking it where `k_O V+c T < k_C V`, and taking `ownAtBoth` otherwise, including equality, is maximal.”
+
+   **Chinese:** “此策为极大，恰当 `k_O V+c T ≤ k_C V`。于 `k_O V+c T < k_C V` 处择此策、否则择二阶皆依己律（相等亦然）之择，为极大。”
+
+4. **Low — The scope box’s categorical exclusion contradicts its updated contents.** Location: [ALIGNMENT.md:19–21](../../../../../../../theories/becoming/review/ALIGNMENT.md).
+
+   **Quoted:** “**What the theory does not address** … It says nothing of: … **deception** and deceptive alignment, which the theory reaches in RF’s readings …”.
+
+   **Problem:** RF7 now supplies a conditional incentive comparison, explicitly acknowledged in the same box. The remaining omission is full deception, including belief and intention, rather than everything concerning deceptive alignment.
+
+   **Replacement:** Change the heading to “**Limits of the theory’s treatment**” and the list introduction to “The following questions remain open in whole or in part:”.
+
+5. **Low — The Chinese hypotheses omit the single-draw alternative.** Location: [make_records_rf7.py:213–217](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf7.py).
+
+   **Quoted:** English ends “or a chance drawn afresh and independently at each stage, **or one draw before the read stage**.” Chinese ends “或每阶独立重抽一机。”
+
+   **Problem:** The Chinese omits the alternative represented by `Prospects.MixtureAbove` and `mixture_never_above`, although its laws summarize that comparison.
+
+   **Replacement:** Keep the English. Replace the Chinese ending with: “或每阶独立重抽一机，或于读之阶前仅抽一次，以择二阶皆从或二阶皆依己律。”
+
+| # | Finding | Taken |
+|---|---|---|
+| A1 | the fresh-draw law at a given chance drops `0 < m` | “for `0 < m`” in 03 §11 and the record’s eighth law, English and Chinese |
+| A2 | “best exactly where” a strict inequality needs “uniquely best” | “uniquely best” in the overview, the dossier, both package READMEs (于四策中唯一最优), the plan and the board, and in 03’s opening and 07’s row |
+| A3 | the record’s “there” can point to the weak inequality | “the choice taking it where keeping outweighs the loss”, English and Chinese |
+| A4 | the scope box’s “says nothing of” contradicts its RF7 sentence | “It says nothing, or only part, of:”; the deception bullet reworded (R19, F28) |
+| A5 | the Chinese hypotheses omit the single draw | added: 或于读之阶段前仅抽一次，以择两阶段皆从或两阶段皆依己律 |
+
+### The three lenses
+
+80 findings, 75 confirmed and 5 refuted; several repeat the cross-model reader's, the workflow having read the texts before those were taken. The findings and verdicts are in [REVIEW-RF7-COLDREAD](REVIEW-RF7-COLDREAD.md). Every confirmed finding was taken, the module's prose included: its statements unchanged, it was rebuilt with every axiom report empty (`kit/round2/logs/r7-build-6.log`). The source's §4.5 and glossary were checked against the paper's text (arXiv 1906.01820v3) before they were credited.
+
+| # | Lens | Verdict | Finding | Taken |
+|---|---|---|---|---|
+| E1 | exactness | confirmed | 03 §11 drops `0 < m` | as A1 |
+| E2 | exactness | confirmed | the record’s eighth law drops `0 < m` | as A1 |
+| E3 | exactness | confirmed | 03 §11 uses `T`, `k_C`, `k_O`, `V`, `c` undefined | the letters given in the prospects’ sentence |
+| E4 | exactness | confirmed | the record uses the letters undefined | the first law gives them, English and Chinese |
+| E5 | exactness | confirmed | the statement’s “a chance drawn afresh gains” is universal and names nothing compared | the statement in natural numbers: some chance of complying drawn afresh at each stage stands above acting by its own law at both |
+| E6 | exactness | confirmed | 03’s opening puts the reading “a formation’s own best plan” in the law | uniquely best among four plans in the order given prospects give; the prospects as a formation’s own a reading (below) |
+| E7 | exactness | confirmed | 07’s row says the same under “the laws say” | the row: the laws say nothing of deception, which needs a belief and an intention; the two results read [AI reading] as deception’s possibility and the incentive |
+| E8 | exactness | confirmed | 08’s bullet presents the reading as what it restates and omits the fresh draw’s precedent | the bullet generalizes §4’s toy; the incentive a labelled reading; §4.5 and Piccione and Rubinstein credited |
+| E9 | exactness | confirmed | the record files `lumped_determines` under RF2 | dependencies split: `Lumped` and `lumped_determines` on generalization through lumping, `twin_selected` on RF2; the seventh law names each |
+| E10 | exactness | confirmed | the record’s scope item asserts “this is the incentive” unlabelled | dropped; the incentive named only in the correspondence’s reading |
+| E11 | exactness | confirmed | the Chinese hypotheses omit the single draw | as A5 |
+| E12 | exactness | confirmed | 二阶 means “second order” in this repository | 两阶段 throughout the Chinese texts |
+| E13 | exactness | confirmed | the module calls `lumped_determines` and `lumped_uniform` RF2’s | the module: generalization through lumping, which RF2 reads; only the twin RF2’s |
+| E14 | exactness | confirmed | “RF2’s twin and fixing” in the root bullet, checker, study and plan | “`Unread`’s twin and `Learning`’s fixing”; “RF2’s twin and the lumping’s fixing” |
+| E15 | exactness | confirmed | the root bullet mixes the probability and natural-number framings; the realized law is existential | the natural-number form first, the probability reading after; “open to some act law”; `true` the read stage |
+| E16 | exactness | confirmed | Unread’s root bullet still says “A leaf” | “Imported by `Becoming.ReadStages`” |
+| E17 | exactness | confirmed | 03’s Open names §11 “its incentive” unlabelled | “beyond when complying when read is uniquely best (§11, read there as deceptive alignment’s incentive)” |
+| E18 | exactness | confirmed | the dossier’s “RF7 adds the incentive” unlabelled, the letters undefined | “adds what RF reads as the incentive deceptive alignment names [AI reading]”; the fresh-draw threshold in words |
+| E19 | exactness | confirmed | the overview omits “where valid” and defines no letter | “read as probabilities where valid”; the threshold in words |
+| E20 | exactness | confirmed | the threshold’s letters undefined in 08, the root bullet, the checker, the plan, the board and the study | defined in the root bullet, the checker, the plan and the study; in words on the board, the overview and the dossier; 08 in 03 §11’s terms |
+| E21 | exactness | confirmed | the board’s “still gains” names no chance or comparison | “does better than acting by its own law at both, with some chance of complying, exactly where …”, in words |
+| E22 | exactness | confirmed | the study puts 08’s counts in §8 | “08 §8’s known results and §3’s counts” |
+| E23 | exactness | refuted | REVIEW-ROUND2 has no RF7 section | (refuted: in the kit); this section added |
+| E24 | exactness | confirmed | the validation names `mul_assoc_nat`, used only through `mul_turn`, and not `Naturals.two_mul` | `mul_turn` (through `mul_assoc_nat`), `add_mul_split` and `Naturals.two_mul`; the Chinese 不用 omega |
+| E25 | exactness | confirmed | the next step names the plan’s TR2, RF2’s test | a frozen test of whether complying when read follows the value and the rise in being kept (none yet) |
+| E26 | exactness | confirmed | the correspondence’s “proved necessary” says not for what | “strict optimality needs numerical counterparts of parts of the two” |
+| E27 | exactness | refuted | the alias “concealment” is not what the statement means | (refuted: no rule asks it); taken with R17 and F15 all the same |
+| E28 | exactness | refuted | “stage” has another sense in the glossary | (refuted: the word is used so in practice); not taken |
+| E29 | exactness | confirmed | “without either” reads as “lacking both” | “with either absent”, the first two exits named |
+| E30 | exactness | confirmed | the witness’s “valid” and “best” cite no declaration | `Example.valid` and `Example.best` cited |
+| E31 | exactness | confirmed | the board’s review sentence says every finding taken | land7 replaces it: RF7’s four-lens review, every confirmed finding taken |
+| R1 | readings | confirmed | 03’s Reading credits only §4.2; §4.5 already treats the stages not told apart, as an absent-minded driver | §4.5 and the absent-minded driver credited (Aumann, Hart and Perry; Piccione and Rubinstein); “reached by another route” restored |
+| R2 | readings | confirmed | 08’s bullet credits neither §4.5 nor the absent-minded driver | both credited; what it adds stated as the exact threshold and the improving chances |
+| R3 | readings | confirmed | the module’s Standing omits §4.5; “imperfect recall” too broad | the Standing and Readings credit §4.5; “under absent-mindedness, the imperfect recall in which one information set holds two stages of one course” |
+| R4 | readings | confirmed | the module places the source’s “deceptive” in being instrumental | being instrumental is instrumental proxy alignment; what is deceptive, seeming fitter to the base optimizer than it is, the concealment premise |
+| R5 | readings | confirmed | “the weights represent the second, a model of the selection” | “stand for what the second condition’s model is of … not for the model” (module, 03, record) |
+| R6 | readings | confirmed | the record’s correspondence: the fresh draw uncredited, the model, necessary for what | the correspondence opens with the prior art (§4, §4.5, Piccione and Rubinstein); “what the second’s model is of”; “strict optimality needs” |
+| R7 | readings | confirmed | the study’s Standing omits §4.5; “imperfect recall” | as R3, in the study |
+| R8 | readings | confirmed | 03’s opening: “a formation’s own best plan” | as E6 |
+| R9 | readings | confirmed | 07’s row: the deception readings unlabelled | as E7 |
+| R10 | readings | confirmed | the dossier lists the exits bare, as levers; the third condition and §4.5 missing | exits as conditions on the formation’s prospects, not levers; the third condition assumed; §4.5’s remark credited |
+| R11 | readings | confirmed | for the first condition the agreement with §4.2 is the choice’s tie-break | said in the module and 03’s Reading |
+| R12 | readings | confirmed | 03 §11 drops `0 < m` | as A1 |
+| R13 | readings | confirmed | 03’s Open names the incentive unlabelled | as E17 |
+| R14 | readings | confirmed | the validation’s lemma list | as E24 |
+| R15 | readings | confirmed | the Chinese hypotheses omit the single draw | as A5 |
+| R16 | readings | confirmed | the statement’s “a chance … gains” | as E5 |
+| R17 | readings | confirmed | the aliases “concealment”, 隐 name the reading the rename removed | aliases: the title, “four plans in two stages”, “deceptive alignment”; concealment a scope item the record does not show |
+| R18 | readings | confirmed | the next step names RF2’s TR2 | as E25 |
+| R19 | readings | confirmed | the scope box’s lead contradicts its deception bullet | bullet: “which its laws do not represent: RF’s readings reach …”; the lead as A4 |
+| R20 | readings | confirmed | the plan’s literature row still calls the incentive owed | the row: §4’s toy with weights, §4.5’s random defection with an exact threshold, the third condition assumed, the rates empirical |
+| F1 | fit | confirmed | 03 §11 drops `0 < m` | as A1 |
+| F2 | fit | refuted | REVIEW-ROUND2 has no RF7 sections | (refuted: in the kit); this section added |
+| F3 | fit | confirmed | 03 §11’s letters undefined | as E3 |
+| F4 | fit | confirmed | 03, 07 and the dossier present the order as the formation’s own | as E6 and E7; the dossier: uniquely best in the order given prospects give |
+| F5 | fit | confirmed | six summaries say “best” where uniquely best | as A2 |
+| F6 | fit | confirmed | six texts credit the fixing to RF2 | as E9, E13 and E14 |
+| F7 | fit | confirmed | the overview and dossier: letters undefined, no comparison, “exactly” dropped | in words, against acting by its own law at both, “exactly where” |
+| F8 | fit | confirmed | the record’s letters and “gains” | as E4 and E5 |
+| F9 | fit | confirmed | 08’s bullet “restates” where the module generalizes; Piccione and Rubinstein omitted | as E8 |
+| F10 | fit | confirmed | 03’s “the first two exits” refers to exits never named | the theorem names them: the first two, and for a deterministic law a lumping tying the stages the third |
+| F11 | fit | confirmed | RF2’s record names RF7’s step as its next | RF2’s next step drops it, its scope item points here, and the two records are related |
+| F12 | fit | confirmed | the record’s correspondence lacks the prior art and says not what is necessary for what | as R6 |
+| F13 | fit | confirmed | “this is the incentive” unlabelled in the record, 03 and the dossier | as E10, E17 and E18; 03’s Reading ends “this is at most an incentive, not deception in full” |
+| F14 | fit | confirmed | 08 uses the code RF2, undefined terms and a hard parse | named “what readings fix of the unread”; what the plan needs stated; the letters in 03 §11’s terms |
+| F15 | fit | confirmed | the aliases make concealment a name again; no title alias | as R17 |
+| F16 | fit | confirmed | the next step: TR2, and two items the module sends onward missing | as E25, with a recipient’s belief and intention and installation added |
+| F17 | fit | confirmed | the plan goes stale: the literature row, §4’s intro, §4.5’s heading, §4.6’s intro, the bullets’ order | all brought to the landing; RF7’s bullet after RF6.1’s; `q_M T` and `q_H T` named as the weights |
+| F18 | fit | confirmed | the board’s review sentence is a no-op for land7 | as E31, the replacement asserted |
+| F19 | fit | confirmed | the study’s list of the first review’s seven findings is wrong, the last re-check missing | the list corrected; “A further re-check found all nine taken correctly and nothing new.” |
+| F20 | fit | confirmed | three English–Chinese differences in the record | the single draw, “at each stage” in the ninth law, 不用 omega |
+| F21 | fit | confirmed | the record’s “there” | as A3 |
+| F22 | fit | confirmed | “without either” | as E29 |
+| F23 | fit | confirmed | “does not remove complying when read” reads as if the plan survived | “leaves a gain from complying with some chance at each stage” |
+| F24 | fit | confirmed | a bare §4.2 in 03; one label for two documents in the study | “their §4.2”; “the plan’s §4.2” |
+| F25 | fit | confirmed | “reading” in two senses in one sentence | “the selection’s keeping”, “a selection that knows the law” (module, 03, record) |
+| F26 | fit | confirmed | one plan carries five names | “its own law” in the module’s title and the package texts; the full name in 03’s opening and Reading, 07, the dossier and regions |
+| F27 | fit | refuted | the README row’s form | (refuted: its siblings’ form); not taken |
+| F28 | fit | confirmed | the box’s lead, “RF7” without its round, and no account of RF’s additions | “Round 2’s RF7”; an entry for RF’s additions in “How it was made”; the lead as A4 |
+| F29 | fit | confirmed | “debt” and “defeats” in the module | “stays open”, “the plan’s open item on deception”, “stands above” |
+
+### The re-check of what was taken
+
+The cross-model reader then re-checked, read-only in a fresh session on a new rehearsal (main at `6645a2fae` with the kit integrated), how the texts took the 80 confirmed points ([BRIEF](BRIEF.md#round-2)). Its findings, verbatim, with its links to the rehearsal made repository-relative:
+
+**Verdict: minor textual revision remains—76 of 80 confirmed findings are taken correctly; A4, E8, F24 and F28 are taken in part, with three further problems below.**
+
+Confirmed findings still incomplete:
+
+1. **A4 — scope-box heading.** [ALIGNMENT.md:19](../../../../../../../theories/becoming/review/ALIGNMENT.md), reproduced by the integration kit.
+   **Quote:** “What the theory does not address”.
+   **Problem:** The introduction now allows partial treatment, but the categorical heading remains.
+   **Replacement:** “Limits of the theory’s treatment”.
+
+2. **E8 — one reading premise still missing.** [08-METHOD.md:485](../../../../../../../theories/becoming/chapters/08-METHOD.md); `integrate_rf7.py:148–149`.
+   **Quote:** “read as the formation’s own assessment, it is the incentive deceptive alignment names”.
+   **Problem:** The label and attribution are repaired, but whose assessment it is does not supply concealment. The module explicitly admits informed selection rewarding compliance.
+   **Replacement:** “With the prospects read as the formation’s own assessment and the concealment premise of 03 §11 supplied, this represents deceptive alignment’s incentive [AI reading].”
+
+3. **F24 — the study’s section references remain ambiguous.** [study_rf7.txt:80](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf7.txt).
+   **Quote:** “the third of §4.2’s conditions”.
+   **Problem:** The study still uses bare §4.2 for the paper after explicitly naming the plan’s §4.2.
+   **Replacement:** Qualify the three occurrences in this paragraph as “Hubinger and others’ §4.2”.
+
+4. **F28 — the new provenance entry overstates review coverage.** [ALIGNMENT.md:41](../../../../../../../theories/becoming/review/ALIGNMENT.md); `integrate_rf7.py:203–205`.
+   **Quote:** “each cold-read … before its landing”.
+   **Problem:** Round 1’s recorded review found the dossier update absent and proposed it for the merge; it does not establish a cold read of that resulting text before its landing.
+   **Replacement:** “The first round-2 cold read covered the assistance bullet and first-landing sentence; RF7’s cold read covered the scope box and paragraph on RF’s rounds.”
+
+Further problems:
+
+5. **The threshold increase has the wrong units.** [08-METHOD.md:485](../../../../../../../theories/becoming/chapters/08-METHOD.md); `integrate_rf7.py:153–154`.
+   **Quote:** “raised by the expected value … (from `k_O V + c T` to `2 k_O V + c T`)”.
+   **Problem:** The displayed increase is `k_O V`; the expected value is `k_O V / T`.
+   **Replacement:** “raised by `k_O V`, the expected value of acting by its own law at both multiplied by the total”.
+
+6. **The chapter’s concealment premise is weaker than its new glossary claim.** [03-KNOWING.md:484](../../../../../../../theories/becoming/chapters/03-KNOWING.md), `s11_rf7.txt:4`; [make_records_rf7.py:267](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf7.py).
+   **Quote:** “seeming fitter … is the concealment premise above”; that premise merely treats the act “as … evidence of the … law”.
+   **Problem:** Evidence can be accurate. Unlike the module, the chapter and record omit the counterfactual that revealing the law would reduce keeping. The new identification therefore does not follow. [Hubinger et al., §7.4](https://arxiv.org/html/1906.01820v3#S7.SS4) requires apparent fitness exceeding actual fitness.
+   **Replacement:** Add to the chapter’s premise: “so that a selection shown the law would keep it less”. In the record, replace its evidence clause with “taking compliance to make the law seem fitter to the selector than it is”.
+
+7. **The plan implies that RF7 converts the RuleShaping analogy into an instance.** [PLAN.md:127](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md); `integrate_rf7.py:230–231`.
+   **Quote:** “It stays an analogy until RF7 states … which it does”.
+   **Problem:** RF7 supplies a separate comparison, no RuleShaping instance or equivalence.
+   **Replacement:** “The connection to RuleShaping remains an analogy; RF7 supplies the separate two-stage comparison (§4.6), with disclosure and concealment as labelled readings.”
+
+| # | Finding | Taken |
+|---|---|---|
+| 1 (A4) | the scope box's label stays categorical | “What the theory does not address, or addresses only in part” |
+| 2 (E8) | 08's reading names the incentive without the concealment premise | “with the prospects read as the formation’s own assessment and the concealment premise of 03 §11 taken, it is the incentive deceptive alignment names [AI reading]” |
+| 3 (F24) | bare §4.2s in the study’s review paragraphs | each “Hubinger and others’ §4.2” |
+| 4 (F28) | the dossier’s entry says each RF sentence was cold-read before landing | round 1’s sentence drafted from a cold-read finding and written at the merge; round 2’s first sentence cold-read before landing; RF7’s cold read read the whole box |
+| 5 | 08’s threshold rise in the wrong units | “raised by `k_O V`, the expected value of acting by its own law at both times the total” |
+| 6 | the concealment premise in 03 and the record is weaker than the source’s sense of deceptive | 03: “so that a selection shown the law would keep it less”; the record: “taking compliance to make the law seem fitter to the selection than it is, a selection shown the law keeping it less”, in its correspondence and its scope item; the study’s Boundary likewise |
+| 7 | the plan reads RF7 as turning the analogy with RuleShaping into an instance | “The connection to RuleShaping stays an analogy; RF7 states the separate two-stage comparison (§4.6), with disclosure and concealment as labelled readings.” |
+
+The same session, continued on the rebuilt rehearsal, checked the seven ([BRIEF](BRIEF.md#round-2)):
+
+**Verdict: all seven findings are now taken correctly in the integrated texts and kit; I found no new error or overstatement introduced by the fixes.**
+
+### The final check through three lenses
+
+After the re-check, a workflow of three readers read the final texts, one per lens (exactness against the Lean; sources and readings, with the paper's text and the cited works; the Chinese edition and fit), each lens's findings checked by a separate reader asked to refute them: 50 findings, 42 confirmed and 8 refuted. The findings and verdicts are in [REVIEW-RF7-FINAL](REVIEW-RF7-FINAL.md); the prompts in [BRIEF](BRIEF.md#round-2). Every confirmed finding was taken, the module's prose included (rebuilt with every axiom report empty, `kit/round2/logs/r7-build-7.log`).
+
+| # | Lens | Verdict | Finding | Taken |
+|---|---|---|---|---|
+| X1 | exactness | confirmed | the twin drops reading through the lumping (03, record law 7, study) | a law reading through the lumping, and a twin reading through it, in all three |
+| X2 | exactness | confirmed | “gain” in two senses; the fresh draw compared with a mixture | standing above acting by its own law at both, in 03, the record, the study, the module’s Standing, 08 and the plan |
+| X3 | exactness | confirmed | the module header’s “an act law … takes a plan exactly where” | “a plan is open to some act law … exactly where” |
+| X4 | exactness | confirmed | the root bullet and the checker give the fresh-draw law to any law | “a law that cannot tell the stages apart but draws its act afresh” |
+| X5 | exactness | confirmed | law 3’s Chinese 居其上 reads “above complying when read” | 居他策之上 |
+| X6 | exactness | confirmed | the validation and the dependency omit Determines, Training.Through, AgreeOn | both list them, in both languages |
+| X7 | exactness | confirmed | law 6 uses “the plan” in two senses | “so the plan, not uniform, is open exactly where the lumping tells them apart” |
+| X8 | exactness | confirmed | 03’s Reading restates RF2 without its hypotheses | the lumping, being in the lump decided, and laws reading through it |
+| X9 | exactness | confirmed | lemmas cited under the wrong theorems; `complyThenOwn_maximal_iff` misattributed | each lemma under the proof that uses it (study, module header); the maximal law stated with its ≤ |
+| X10 | exactness | confirmed | the plan’s threshold off by the total | “exceeds the loss times the total (read as probabilities, the loss)” |
+| X11 | exactness | confirmed | RF2’s new related entry sets RF2 in two stages | “Its twin and the fixing at two stages, read and unread, with prospects …” |
+| X12 | exactness | confirmed | the English hypotheses omit what the single draw chooses between | “between complying at both stages and acting by its own law at both” |
+| X13 | exactness | confirmed | the history’s Chinese drops the mixture and writes 每阶 | 每阶段重抽其行而较之单一混合; law 2’s 不读之阶段 |
+| S1 | sources | confirmed | RF2’s record calls telling the occasion apart a necessary condition of deceptive alignment, which §4.5 denies for a law drawing afresh | RF2’s correspondence: for a deterministic law; a law drawing afresh can stand above without telling the stages apart (§4.5); the plan’s row likewise |
+| S2 | sources | confirmed | 07’s row reads RF2’s law as “deception’s possibility”, the incentive without premises | where a deterministic law can act otherwise unread, as deceptive alignment describes; the incentive with the concealment premise and the formation’s own assessment |
+| S3 | sources | confirmed | the dossier gives the incentive without its premises | the formation’s own assessment and the concealment premise stated |
+| S4 | sources | confirmed | the overview gives the incentive without the concealment premise | the premise stated |
+| S5 | sources | confirmed | RF2’s history says disclosure or concealment is done | the two-stage comparison stated there, disclosure and concealment readings of it |
+| S6 | sources | refuted | “an absent-minded driver’s” where the source says “similar to” | (refuted: a paraphrase) taken all the same: “in their words, similar to” |
+| S7 | sources | refuted | the Greenblatt sentence fits one of two settings | (refuted: true of the settings it describes); not taken |
+| S8 | sources | refuted | 08’s reading omits the third condition | (refuted: a modelling assumption, not a premise of the reading); not taken |
+| S9 | sources | confirmed | the study’s Standing gives the incentive without premises | the formation’s own assessment and the concealment premise stated |
+| S10 | sources | confirmed | the twin drops reading through the lumping | as X1 |
+| S11 | sources | refuted | 欺骗式对齐 against RF2’s 欺骗对齐 | (refuted: a matter of translation) taken with Z11 |
+| Z1 | zh-and-fit | confirmed | RF2’s history says disclosure or concealment is done | as S5 |
+| Z2 | zh-and-fit | confirmed | 择 for both the choice and the selection in the Chinese | 选择 for the selection; 择 kept for the choice |
+| Z3 | zh-and-fit | confirmed | the dossier’s AJ5 entry says no independent reader read the box; the works-cited line | the box read whole by RF7’s cold read; RF7’s cited work checked as RF’s entry says |
+| Z4 | zh-and-fit | confirmed | law 2’s Chinese 不读之阶 | 不读之阶段 |
+| Z5 | zh-and-fit | confirmed | the history’s Chinese 每阶 and the mixture | as X13 |
+| Z6 | zh-and-fit | confirmed | “gain” in two senses | as X2 |
+| Z7 | zh-and-fit | confirmed | law 3’s Chinese 居其上 | as X5 |
+| Z8 | zh-and-fit | confirmed | law 6 and the related field use “the plan” in more than one sense | as X7; the related field: “The earlier analogy for concealment in RF’s plan” |
+| Z9 | zh-and-fit | confirmed | the hypotheses’ English and Chinese differ | as X12 |
+| Z10 | zh-and-fit | confirmed | the English README row omits “among four plans” | added |
+| Z11 | zh-and-fit | confirmed | 欺骗式对齐 against RF2’s 欺骗对齐 | 欺骗对齐 in the alias and the correspondence |
+| Z12 | zh-and-fit | confirmed | 有毯律 for a blanketed law | 毯化之律 |
+| Z13 | zh-and-fit | confirmed | “the selection a reading applies, is a reading”: two senses | “the selection applied at the read stage” (record, study, module header) |
+| Z14 | zh-and-fit | confirmed | the plan’s “keeps a gain” and the q_M mapping’s place | standing above acting by its own law at both; the mapping tied to the first threshold |
+| Z15 | zh-and-fit | confirmed | the plan’s literature row uses bare §4 and §4.5 for the paper | “their §4’s”, “their §4.5’s” |
+| Z16 | zh-and-fit | confirmed | the plan’s §5 row still calls deceptive alignment an analogy until RF7 | deceptive alignment’s incentive a reading of RF7’s comparison, the continuation value represented |
+| Z17 | zh-and-fit | confirmed | the plan’s Evidence line and §4.6 intro say one review, every finding taken | each round’s review, re-checks and four lenses for RF7; every confirmed finding taken |
+| Z18 | zh-and-fit | confirmed | the plan’s §4.4 heading, §12’s line on AJ5’s box and the board’s cell are stale | all three built; RF’s landed results named, with links; the board cell in land7 |
+| Z19 | zh-and-fit | refuted | 03’s Open shortens the plan’s name | (refuted: the record’s handle); not taken |
+| Z20 | zh-and-fit | refuted | the overview’s “doing so is its own best plan” | (refuted: in a labelled reading, nothing false); not taken |
+| Z21 | zh-and-fit | confirmed | “the own law” used as a plan’s name | “acting by its own law at both” (record law 9, its counterexample, the study) |
+| Z22 | zh-and-fit | confirmed | the output list and the re-pointing reason omit §4.5’s heading | both now list every plan section RF7 edits |
+| Z23 | zh-and-fit | refuted | the nine-point re-check given the other section’s name | (refuted: the description is accurate); not taken |
+| Z24 | zh-and-fit | confirmed | the module header’s generic “an act law” | as X3 |
+| Z25 | zh-and-fit | refuted | the field `cost` beside “the loss” | (refuted: established in the core, no wrong meaning); not taken |
+| Z26 | zh-and-fit | confirmed | the dependency on generalization through lumping is incomplete | as X6 |
+
+### The re-check after the final check
+
+The cross-model reader then re-checked, read-only in a fresh session on the rebuilt rehearsal (main at `6645a2fae`), how the texts took the final check's 42 confirmed points ([BRIEF](BRIEF.md#round-2)). Its findings, verbatim, with its links to the rehearsal made repository-relative:
+
+Not yet clean: four residual problems remain after checking the 42 confirmed findings.
+
+1. **RF2’s amended necessity claim still exceeds its laws.** Location: [make_records_rf7.py:323](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf7.py), correspondence in both languages; also [PLAN.md:227](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md).
+
+   **Quote:** “for a deterministic law, a necessary condition of what deceptive alignment and alignment faking describe”; “the possibility exact for a deterministic law”.
+
+   **Problem:** Determinism alone does not supply RF2’s comparison: **two laws reading through the same lumping, agreeing on every read occasion, differing at the unread one**. RF2 establishes a boundary for those twins. Its home section expressly places misleading a reader outside that boundary; `Learning.lumped_right_iff` also separates a fixed act from a correct act. The amendment still promotes this particular behavioural boundary into a necessary condition of the broader phenomenon.
+
+   **Replacement:** “a necessary condition for two deterministic laws reading through the same lumping to agree on every read occasion and differ here”. Chinese: “同经一归并之二确定律于每一读处皆合而于此处相异之必要条件”. Introduce the literature separately: “Read with deceptive alignment and alignment faking …”. In the plan, replace “the possibility exact for a deterministic law” with “the selected-twin boundary exact under RF2’s hypotheses”. Match the amendment’s history and the study’s final-review summary to this narrower scope.
+
+2. **The concealment premise is still incomplete in two summaries.** Locations: [overview:96](../../../../../../../theories/becoming/THE-THEORY-OF-BECOMING.md) and [07-SIGNIFICANCE.md:651](../../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md).
+
+   **Quote:** “taking the selection’s keeping to respond to the act read as evidence of the formation’s law”; chapter 7 similarly says “as evidence of the law”.
+
+   **Problem:** Evidence need not mislead. Neither clause says that compliance makes the law appear fitter than it is, or that showing the law would reduce its keeping. That stronger premise is explicit in `ReadStages` and 03 §11, and is now correctly present in the dossier and study. It supplies the deceptive component required by [Hubinger and others’ glossary](https://arxiv.org/html/1906.01820v3#S7.SS4). S2/S4’s fixes therefore remain incomplete here.
+
+   **Replacement:** After each evidence clause, add: “so that a selection shown the law would keep it less”. Preserve chapter 7’s own-assessment qualification.
+
+3. **The rewritten plan and board still overgeneralize the fresh-draw threshold.** Locations: [PLAN.md:179](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md) and [board_rf2.py:60](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/board_rf2.py).
+
+   **Quote:** “drawing the act afresh, which, complying with some chance at each stage … exactly where `k_C V > 2 k_O V + c T`”; “a law drawing its act afresh at each stage … exactly where …”.
+
+   **Problem:** `FreshDrawAbove` uses the **same compliance chance at both stages**, with independent draws. Stage-dependent chances need not satisfy that stronger threshold: chance one when read and zero when unread gives `complyThenOwn`, whose threshold is only `k_C V > k_O V + c T`. X4’s restriction reached the root and checker but remains absent from these threshold statements.
+
+   **Replacement:** In both, make the subject “a law that cannot tell the stages apart and draws independently at each stage with the same chance of complying”. Keep the existential “for some chance” and the existing threshold.
+
+4. **“Gain” retains the rejected second sense in the study’s review account.** Location: [study_rf7.txt:85](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf7.txt).
+
+   **Quote:** “a single mixture of the uniform plans shown never to gain (`mixture_never_above`)”.
+
+   **Problem:** This repeats X2/Z6’s defect. A mixture can have positive gain; `mixture_never_above` says it never stands above `ownAtBoth`. This is the study’s current account of the result, not a preserved quotation.
+
+   **Replacement:** “a single mixture of the uniform plans shown never to stand above acting by its own law at both (`mixture_never_above`)”.
+
+| # | Finding | Taken |
+|---|---|---|
+| 1 | RF2’s amended necessity still exceeds its laws | in part: RF2’s correspondence located the twins, two laws reading through the formation’s lumping that can agree on every reading and differ when not read only where the lumping tells the occasion apart, but kept for deterministic laws a necessary condition of what deceptive alignment and alignment faking describe (completed after the next re-check and the third check, below); the plan’s row: “the selected twin’s boundary exact under RF2’s hypotheses”; the history and the study likewise |
+| 2 | the concealment premise incomplete in the overview and 07 | “so that a selection shown the law would keep it less” added to both |
+| 3 | the plan and the board give the fresh-draw threshold to any law that draws afresh | a law that cannot tell the stages apart, one chance of complying at both stages |
+| 4 | “never to gain” in the study’s review account | “never to stand above acting by its own law at both” |
+
+### The second final check through three lenses
+
+On the same rehearsal as the cross-model reader's re-check above, a second workflow of three readers, one per lens, read the texts again, each lens's findings checked by a separate reader asked to refute them: 28 findings, 27 confirmed and 1 refuted. Five of the confirmed repeat the re-check's points, taken there. The findings and verdicts are in [REVIEW-RF7-FINAL2](REVIEW-RF7-FINAL2.md); the prompts in [BRIEF](BRIEF.md#round-2). Every confirmed finding was taken, the module's prose included (rebuilt with every axiom report empty, `kit/round2/logs/r7-build-8.log`). Also taken, beyond the points: the dossier's fresh-draw sentence read as probabilities and its "gains by defecting" written "does better by defecting", as XB2 and XB4 asked elsewhere; and the overview's reading given the formation's own assessment among its premises, as 07's row has it.
+
+| # | Lens | Verdict | Finding | Taken |
+|---|---|---|---|---|
+| XB1 | exactness | confirmed | the twin drops reading through the lumping in the module’s header, 03’s Reading and the overview’s RF2 sentence | one reading through the lumping that takes the plan, or any act or value there, in all three |
+| XB2 | exactness | confirmed | the board and the plan give the fresh-draw law to any law drawing afresh | a law that cannot tell the stages apart, one chance at both stages (the cross-model re-check’s third point); the board’s clause read as probabilities |
+| XB3 | exactness | confirmed | the concealment premise without its counterfactual in the overview and 07 | as the cross-model re-check’s second point: “so that a selection shown the law would keep it less” |
+| XB4 | exactness | confirmed | the study’s “never to gain”; the plan, not its comparison, renamed `FreshDrawAbove` | “never to stand above acting by its own law at both” (the cross-model re-check’s fourth point); “its comparison with acting by its own law at both renamed” |
+| XB5 | exactness | confirmed | the study’s account has drawing afresh doing better without condition | “can do better than the uniform exit, now a law saying exactly where (`freshDraw_above_iff`)” |
+| XB6 | exactness | confirmed | RF2’s correspondence speaks of “the stages”, not RF2’s terms | read and unread occasions: “a law drawing its act afresh can act otherwise unread without telling read from unread” |
+| XB7 | exactness | refuted | the history’s contrast of drawing afresh with a single mixture | (refuted: it states a contrast the record states, not a comparison); kept |
+| SB1 | sources | confirmed | the concealment premise without its counterfactual in the overview and 07, which the study says it is stated in | as XB3; with it the study’s sentence holds |
+| SB2 | sources | confirmed | “whose planning-optimal policy defects at random” attached to the absent-minded driver problem | “by whose reasoning the toy’s planning-optimal policy defects at random” (03, the module’s Standing, the study) |
+| SB3 | sources | confirmed | “an assessed rise” without the premise that the prospects are the formation’s own assessment | “with the prospects taken as the formation’s own assessment” (03, the module) |
+| SB4 | sources | confirmed | “the toy” with no antecedent in 03 | “the toy example opening their §4” |
+| SB5 | sources | confirmed | RF2’s correspondence: “their §4.5” after two works; the plan’s row likewise | “Hubinger and others’ §4.5”; the plan’s row “Hubinger and others’ §4 toy” |
+| SB6 | sources | confirmed | RF2’s history: a law drawing afresh “needing none”, false of alignment faking’s rates | “its necessary condition stated for deterministic laws, since a law drawing its act afresh can act otherwise unread without telling read from unread”; the study likewise |
+| SB7 | sources | confirmed | the board: “concealment as shaping an analogy, which RF7’s law replaces” | “RF7 states a separate two-stage comparison, disclosure and concealment readings of it” |
+| ZB1 | zh-and-fit | confirmed | the board and the plan give the fresh-draw law to any law; the board’s threshold without the probability frame | as XB2 |
+| ZB2 | zh-and-fit | confirmed | 机 for chance, where 机 is the glossary’s juncture | 机会 in all seven places |
+| ZB3 | zh-and-fit | confirmed | the study’s list of refuted points under the wrong check | each list under its own check, the final check’s eight named |
+| ZB4 | zh-and-fit | confirmed | RF2’s correspondence: “their §4.5”; “the stages” and “at both” | as SB5 and XB6 |
+| ZB5 | zh-and-fit | confirmed | the plan’s §4.6 uses “the plan” for complying when read and acting by its own law when not | “that plan”, “some act law reading the stages through a lumping”; the module’s two references to RF’s plan named |
+| ZB6 | zh-and-fit | confirmed | RuleShaping’s related entry: “the plan” with no antecedent | “RF’s plan”, in both languages |
+| ZB7 | zh-and-fit | confirmed | the study’s Delta: “so the plan is open exactly there” | “so the plan, not uniform (complyThenOwn_not_uniform), is open exactly where the lumping tells the stages apart” |
+| ZB8 | zh-and-fit | confirmed | “the toy” with no antecedent in 03 | as SB4 |
+| ZB9 | zh-and-fit | confirmed | the dossier’s account of how it was made omits RF’s changes to the box’s title, lead and quotation | added |
+| ZB10 | zh-and-fit | confirmed | the plan and the board say the box names RF’s landed results, RF6.1 not among them | “on the questions it lists (all but RF6.1, 03 §8)”; the board “(RF’s results on its questions named)” |
+| ZB11 | zh-and-fit | confirmed | the plan’s “the third condition” with no antecedent | “the third of their §4.2 conditions, that the threat of modification will go away” |
+| ZB12 | zh-and-fit | confirmed | “replaces §4.2’s analogy with RuleShaping” reads backwards | “in place of … it states its own comparison of expected values” (the plan, the study, the module) |
+| ZB13 | zh-and-fit | confirmed | the study names acting by its own law at both “the own law at both” | “acting by its own law at both” throughout the study and the module’s docstrings |
+| ZB14 | zh-and-fit | confirmed | the register gives the invalid witness the valid prospects’ reason | its own reason, first in the witness table |
+
+### The re-check after the second final check
+
+The cross-model reader then re-checked, read-only in a fresh session on the rehearsal of this round's changes (main at `6645a2fae`, with the round's diff at its root), how the texts took its own four points and the second final check's 27 ([BRIEF](BRIEF.md#round-2)). Its findings, verbatim, with its links to the rehearsal made repository-relative:
+
+Not yet clean: the first re-check point remains unresolved in RF2’s correspondence and its accompanying accounts; I found no new substantive error.
+
+1. **RF2 still promotes the twin-law boundary into a necessary condition of deception.**
+
+   **Location:** [make_records_rf7.py:326](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf7.py), RF2’s correspondence, both languages.
+
+   **Quote:** “for deterministic laws, a necessary condition of what deceptive alignment and alignment faking describe”.
+
+   **Problem:** Adding “two laws reading through the formation’s lumping” to the preceding clause correctly states the comparison, but this clause still assigns its necessity to the broader phenomena. RF2 establishes necessity for **two laws through one lumping, agreeing on every read occasion and differing at an unread one**. Determinism does not establish that deceptive alignment must take this form. RF2’s home Reading in 03 §11 expressly places misleading a reader outside this boundary, and `Learning.lumped_right_iff` separates fixing an act from its correctness. [Hubinger and others’ §4.5](https://arxiv.org/html/1906.01820v3#S4.SS5) supplies the random-defection observation; it does not supply the missing implication for deterministic deception.
+
+   **Replacement:** Replace the quoted clause through “not represented;” with:
+
+   > a necessary condition for such deterministic twins. Read alongside deceptive alignment and alignment faking (Hubinger and others 2019; Greenblatt and others 2024); intention, anticipation and incentive are not represented;
+
+   Chinese:
+
+   > 此为此类确定律孪生之必要条件。与欺骗对齐及对齐伪装并读（Hubinger 等 2019；Greenblatt 等 2024）；意图、预期与诱因未表；
+
+   With the remaining correspondence unchanged, the complete fields are **1,192/1,200 English characters** and **357/500 Chinese characters**, within `tools/research/style.py`’s caps.
+
+   **The same correction must reach the accounts of this amendment:** [history:345](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf7.py), [study:90](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf7.txt), and [review’s Taken row:1434](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md). They respectively say “its necessary condition stated for deterministic laws”, “now saying so only for deterministic laws reading through one lumping”, and “a necessary condition of what deceptive alignment describes”.
+
+   Replace those descriptions with:
+
+   > The correspondence confines necessity to two deterministic laws reading through one lumping, agreeing on every read occasion and differing at an unread one; the connection to deceptive alignment and alignment faking is a separate reading.
+
+   For the history’s Chinese:
+
+   > 对应将必要条件限于同经一归并、于每一读处皆合而于一未读处相异之二确定律；与欺骗对齐及对齐伪装之联系另列为解读。
+
+   Keep the fresh-draw observation separately. History has no field cap.
+
+| # | Finding | Taken |
+|---|---|---|
+| 1 | RF2's record still calls telling the occasion apart, for deterministic laws, a necessary condition of what deceptive alignment and alignment faking describe (the re-check's first point taken only in part) | RF2's correspondence: two laws reading through one lumping can agree on every reading and differ unread only where the lumping tells the occasion from every read one; read with deceptive alignment, such a law acting alike on every reading acts otherwise unread only there; differing rates, as in alignment faking, are not so bounded (with the third check's XC1, below), in line with RF2's home section, which reads the law as evaluation and deployment and keeps misleading a reader outside it; the history and the study likewise |
+
+### The third check through three lenses
+
+Alongside the cross-model reader's re-check above, on the same rehearsal, a third workflow of three readers, one per lens, read the round's changes in context, each lens's findings checked by a separate reader asked to refute them: 11 findings, 9 confirmed and 2 refuted. Its first finding is the re-check's point, with a counterexample, as SC1 gave too: alignment faking's differing rates can arise where no unread occasion is told from every read one; its verifier checked it and added that reading those rates as a difference of twins does not hold either. The findings and verdicts are in [REVIEW-RF7-CHECK3](REVIEW-RF7-CHECK3.md); the prompts in [BRIEF](BRIEF.md#round-2). Every confirmed finding was taken, the module's prose included (rebuilt with every axiom report empty, `kit/round2/logs/r7-build-9.log`).
+
+| # | Lens | Verdict | Finding | Taken |
+|---|---|---|---|---|
+| XC1 | exactness | confirmed | RF2’s correspondence still calls the boundary, for deterministic laws, a necessary condition of what deceptive alignment and alignment faking describe; a compliance gap can arise without it | the twins’ boundary as the law; read with deceptive alignment, such a law acting alike on every reading acts otherwise unread only there; differing rates, as in alignment faking, not so bounded |
+| XC2 | exactness | confirmed | RF2’s history drops the agreement on every reading | the history states it, with the correspondence’s final form |
+| XC3 | exactness | confirmed | the study credits the first final check with later changes to RF2’s record, telling them twice | the first check’s taking given as a first narrowing to deterministic laws, the final form after the later checks |
+| XC4 | exactness | confirmed | the study says the cross-model reader re-checked every round of fixes | the re-checks named as they ran, in the study’s opening only after the next round’s checks (below) |
+| SC1 | sources | confirmed | RF2’s correspondence: the necessity fits deceptive alignment’s pattern, not alignment faking’s rates | as XC1 |
+| SC2 | sources | confirmed | RF’s plan states Hubinger and others’ third condition as the fact | “an expectation that the threat of modification will go away” |
+| ZC1 | zh-and-fit | confirmed | “the plan” for RF’s plan beside “the plan” for complying when read and acting by its own law when not, in the study | RF’s plan named as such throughout the study |
+| ZC2 | zh-and-fit | confirmed | the study says the cross-model reader re-checked every round of fixes | as XC4 |
+| ZC3 | zh-and-fit | refuted | the study credits the first final check with later changes (refuted: a matter of presentation) | taken under XC3 |
+| ZC4 | zh-and-fit | confirmed | “ties to the own law” in the study and “the own law’s weighted value” in a docstring | “acting by its own law at both”; the module rebuilt (`kit/round2/logs/r7-build-9.log`) |
+| ZC5 | zh-and-fit | refuted | RF’s plan’s “re-check of what it took” (refuted: the module’s texts took them) | made clearer all the same: “re-check of how its points were taken” |
+
+### The re-check after the third check
+
+The cross-model reader's session was then continued, read-only, on the rehearsal rebuilt at the same path from main at `119d464ca` with the round's diff at its root, to check how its point and the third check's were taken ([BRIEF](BRIEF.md#round-2)). Its findings, verbatim, with its links to the rehearsal made repository-relative:
+
+RF2’s scope correction is now sound; one confirmed review-account fix remains unapplied, and I found no new substantive error.
+
+1. **XC4/ZC2: the study’s opening still overstates and undercounts its reviews.**
+
+   **Location:** [study_rf7.txt:3](../../../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf7.txt).
+
+   **Quote:** “then checked twice more through three lenses and re-checked by the cross-model reader after each round of fixes”.
+
+   **Problem:** This is unchanged despite XC4/ZC2 being recorded as taken. The documented sequence now includes **three** checks through three lenses after the cold read. The recorded cross-model re-checks cover the cold read’s fixes and the first and second final checks’ fixes; “after each round” also claims coverage of the subsequent fixes without naming or recording that coverage. The expanded account at line 90 and the plan are more precise than this opening.
+
+   **Replacement:**
+
+   > then checked three more times through three lenses, with cross-model re-checks of the fixes after the cold read and after the first and second final checks
+
+   This is study prose, so no record-field cap applies.
+
+| # | Finding | Taken |
+|---|---|---|
+| 1 | XC4 and ZC2 not yet taken: the study's opening still overstates and undercounts its reviews (held until the round's checks were in) | the opening names the checks and re-checks as they ran (with the fourth check's ED1, below) |
+
+### The fourth check through two lenses
+
+Alongside that re-check, on the same rehearsal, a fourth workflow of two readers, one per lens (exactness and sources; the Chinese edition and fit), read the round's changes in context, each lens's findings checked by a separate reader asked to refute them: 9 findings, 4 confirmed and 5 refuted. The findings and verdicts are in [REVIEW-RF7-CHECK4](REVIEW-RF7-CHECK4.md); the prompts in [BRIEF](BRIEF.md#round-2). Every confirmed finding was taken; none touched the module, the chapters or the record's laws.
+
+| # | Lens | Verdict | Finding | Taken |
+|---|---|---|---|---|
+| ED1 | exactness-and-sources | confirmed | the study’s opening still says “twice more” and “after each round of fixes” (XC4 and ZC2 not yet taken) | the checks and re-checks named as they ran: three times more through three lenses and once through two, the last two scoped, the re-checks after the cold read and alongside each of the last three |
+| ED2 | exactness-and-sources | refuted | RF2’s history gives the fresh-draw clause in its own words (refuted: presentation) | made clearer all the same: “and adds that a law drawing afresh …” |
+| ED3 | exactness-and-sources | refuted | the study’s output list names RF2’s “necessary condition”, which the field no longer states (refuted: the twins’ condition stays) | not taken |
+| ED4 | exactness-and-sources | refuted | RF’s plan’s “how its points were taken”, a loose pronoun (refuted: nothing false) | made clearer all the same: “how the final check’s points were taken” |
+| ED5 | exactness-and-sources | confirmed | this section credits the third check’s counterexample to its verifier | “with a counterexample, as SC1 gave too … its verifier checked it and added …” |
+| ZD1 | zh-and-fit | confirmed | the study’s opening, as ED1 | as ED1 |
+| ZD2 | zh-and-fit | refuted | RF’s plan’s pronoun and the Taken cell “made clearer” (refuted: a fair description) | as ED4 |
+| ZD3 | zh-and-fit | confirmed | this section credits the third check’s counterexample to its verifier, as ED5 | as ED5 |
+| ZD4 | zh-and-fit | refuted | the study’s output list, as ED3 (refuted) | not taken |

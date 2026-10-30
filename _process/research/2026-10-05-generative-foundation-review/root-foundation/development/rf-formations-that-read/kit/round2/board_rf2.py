@@ -6,7 +6,8 @@ round 2 sentence to the first landing, drops RF's head-of-queue clause, puts QUE
 names the receipt as the latest. BOARD is the path of the board file to edit (in the landing worktree, or a copy of
 main's for a commit made without a working tree).
 usage: python3 -B board_rf2.py state BOARD TEXT | head BOARD TEXT | land BOARD RECEIPT N QUEUE STATE
-       | land61 BOARD RECEIPT N QUEUE STATE (RF6.1's landing: its own statements sentence)"""
+       | land61 BOARD RECEIPT N QUEUE STATE (RF6.1's landing: its own statements sentence)
+       | land7 BOARD RECEIPT N QUEUE STATE (RF7's landing: its own statements sentence)"""
 import datetime
 import re
 import sys
@@ -31,7 +32,7 @@ elif mode == 'head':
     clause = f'RF at the head of the queue ({text}); '
     assert HEAD.fullmatch(clause), clause
     board[queue[0]] = board[queue[0]].replace('- **Queue:** ', '- **Queue:** ' + clause, 1)
-elif mode in ('land', 'land61'):
+elif mode in ('land', 'land61', 'land7'):
     receipt, section, queue_text, state_text = text, int(sys.argv[4]), sys.argv[5], sys.argv[6]
     assert f'§{section}' in queue_text and receipt in queue_text
     cells[2] = state_text
@@ -48,6 +49,33 @@ elif mode in ('land', 'land61'):
            "a chain). Designed: RF6.1 revision that opens an executable correction (built in the kit, held for a "
            "revision as a reachable step); RF-M's helper, preference and institution cases; RF7 disclosure or "
            "concealment in two stages. ")
+    if mode == 'land7':
+        old = ("Designed: RF-M's helper, preference and institution cases; RF7 disclosure or concealment in two stages "
+               "(built in the kit, not yet reviewed). ")
+        new = ("RF7 landed: when complying when read and acting by its own law when not is best, in two stages "
+               "(`Becoming.ReadStages`: uniquely best among four plans exactly where, read as probabilities, the weight "
+               "complying "
+               "adds to being kept, times the value, exceeds the loss of complying; its exits no value beyond the read "
+               "stage, complying not raising the weight of being kept, and, for a deterministic law, a reading the "
+               "formation cannot tell from not being read; a law that cannot tell the stages apart but draws its act "
+               "afresh at each stage still does better than acting by its own law at both, for some chance of complying, "
+               "the same at both stages, exactly where, read as probabilities, the weight of "
+               "being kept after complying, less twice that after acting by its own law, times the value, exceeds the "
+               "loss). Designed: RF-M's helper, preference and institution cases. ")
+        review = ("The plan and the Lean of each round had an independent cross-model review, with a re-check in "
+                  "round 2, and the texts a cold read, every finding taken (plan §13).")
+        assert cells[0].count(review) == 1, 'review sentence'
+        cells[0] = cells[0].replace(review, "The plan and the Lean of each round had an independent cross-model "
+                                    "review, with a re-check in round 2, RF7's Lean also a review through four lenses "
+                                    "with each point verified, and the texts a cold read, every confirmed finding taken "
+                                    "(plan §13).")
+        assert cells[0].count("concealment as shaping an analogy until RF7.") == 1, 'readings sentence'
+        assert cells[4].count("AJ5's scope box (to name RF as in progress)") == 1, 'feeds cell'
+        cells[4] = cells[4].replace("AJ5's scope box (to name RF as in progress)",
+                                    "AJ5's scope box (RF's results on its questions named)")
+        cells[0] = cells[0].replace("concealment as shaping an analogy until RF7.",
+                                    "concealment as shaping an analogy; RF7 states a separate two-stage comparison, "
+                                    "disclosure and concealment readings of it.")
     if mode == 'land61':
         old = ("Designed: RF6.1 revision that opens an executable correction (built in the kit, held for a "
                "revision as a reachable step); RF-M's helper, preference and institution cases; RF7 disclosure or "

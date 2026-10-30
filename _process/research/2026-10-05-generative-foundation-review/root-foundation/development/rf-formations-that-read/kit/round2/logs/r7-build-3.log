@@ -1,0 +1,29 @@
+Becoming/ReadStages.lean:346:65: error: Missing cases:
+Eq.refl
+Becoming/ReadStages.lean:349:65: error: Missing cases:
+Eq.refl
+Becoming/ReadStages.lean:351:65: error: Missing cases:
+Eq.refl
+Becoming/ReadStages.lean:351:80: error: Application type mismatch: The argument
+  unbeaten ?m.143
+has type
+  ¬s.Above ?m.143 (Act.own, Act.own)
+but is expected to have type
+  ¬s.Above complyThenOwn complyThenOwn
+in the application
+  absurd ((complyThenOwn_best_iff s).mpr outweighs complyThenOwn fun same => nomatch same) (unbeaten ?m.143)
+Becoming/ReadStages.lean:446:8: warning: unused variable `g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/rf-landing/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/tree",
+  "modules": 38,
+  "ran": [
+    "Becoming.ReadStages"
+  ],
+  "reused": 37,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.ReadStages"
+}

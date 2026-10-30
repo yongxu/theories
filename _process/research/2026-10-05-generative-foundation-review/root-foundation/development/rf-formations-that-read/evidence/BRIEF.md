@@ -258,3 +258,397 @@ Check especially: dropped hypotheses (one type of readings, the supplied map, th
 
 Return: a verdict line; then numbered findings, each with severity (high, medium, low), location (file:line), the quoted text, the problem against the Lean, and a replacement in the text's language. Report only what you can point to.
 ```
+
+### The Lean review of RF7's module (piped to `cx -m astra -e high --sandboxed --fresh`)
+
+```text
+Read-only review, in <the landing worktree> (do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine).
+
+Context. This repository develops one theory with a pure Lean core (Lean's Init only, every declaration with an empty axiom report). Board item RF ("formations that read") asks for an exact understanding of deception among other things. Its plan (_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md, §4.5, item RF7) asks for "a formation choosing at a read stage between disclosing its law and complying, with the probabilities of its law being kept and the continuation value represented. Concealment is chosen exactly where the gain in keeping outweighs the cost, strictly. The exits are stated on the same model: no private gain, a reading it cannot tell." A module now builds with every axiom report empty (10 theorems in 22 declarations):
+
+  _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/tree/Becoming/Concealment.lean
+
+It imports Becoming/Learning.lean (Learning.Lumped) from the package at experiments/integrated-correction/general-framework/generative-basis/lean/becoming/. Related landed modules: Becoming/Unread.lean (what readings fix of the unread: a selected twin where no read occasion is lumped with the unread one) and Becoming/ReadingLoop.lean.
+
+As an adversarial reviewer of this module:
+1. Soundness and exactness: does each theorem say what its docstring and the header say, with every hypothesis the prose needs? Check the arithmetic encoding (weights out of a total, gain and loss scaled by the total, Beats as a cross-added comparison) against the decision problem it claims to represent: a formation's own order over the four plans by expected value, with complying when read costing `cost` and the law kept with weight `kept…`/`total`. Is Conceals exactly the condition under which concealment is strictly best? Are the tie conventions stated?
+2. Substance: which theorems are near-definitional, which carry content; does the module meet RF7 as the plan states it; is "a reading it cannot tell" represented adequately by `Untold` and `lumped_untold`, and is `untold_discloses` the right statement of what follows?
+3. The readings and the literature: check the attributions (Hubinger, van Merwijk, Mikulik, Skalse and Garrabrant 2019; Greenblatt and others 2024) and whether the mapping of the three conditions onto the stakes is fair; say what the readings overstate.
+4. Names: structural and exact; flag any that state a wrong meaning.
+5. What is missing for RF7 as an exact case of deceptive alignment's incentive, in priority order.
+
+Return: a verdict line; then numbered findings, each with severity (high, medium, low), location (file:line), the quoted text, the problem against the Lean, and a proposed replacement (Lean statement or prose). Report only what you can point to.
+```
+
+### The re-check of RF7's rebuilt module (the review's session continued, `cx -r`)
+
+```text
+Re-check, read-only, in <the landing worktree> (do not edit, create, commit, render, run make or build Lean). Your seven findings on kit/round2/tree/Becoming/Concealment.lean were taken by rewriting the module; it now builds with 21 theorems in 35 declarations, every axiom report empty. Main changes: Stakes.Valid (a positive total, each weight within it) and the payoff table in the header, with a witness that without Valid a total of nothing makes the loss weigh nothing (Example.no_total); beats_irrefl and beats_asymm; Stakes.choose (complyThenOwn where strictly best, ownAtBoth otherwise, ties included) with choose_optimal (never strictly beaten) and choose_eq_iff; the exits restated as not strictly best and not chosen, with a tie witness (Example.tie); the threshold stated with the loss times the total; Uniform for a plan with one act at both stages, lumped_uniform with the informational scope stated (memory, a clock and the earlier act included); uniform_best_iff and uniform_tie in place of untold_discloses; structural names complyThenOwn and ownAtBoth, concealment and disclosure kept as labelled readings; the Hubinger and Greenblatt readings rewritten after your findings 6 and 7.
+
+Return: a verdict line; for each of your seven findings, one line: taken correctly, partly, or not, with what is missing; then any new problem the rewrite introduces, each with severity, location (file:line), the quoted text, the problem against the Lean, and a replacement. Report only what you can point to.
+```
+
+### The four-lens review of RF7's module (a workflow of Opus readers)
+
+Four readers, one lens each, given a common preamble and their lens; each finding was then given to a separate reader to refute.
+
+The common preamble:
+
+```text
+You are an independent, adversarial reviewer of one Lean 4 module in a theory repository. Work read-only: read files and run read-only shell commands only; do not edit, create, commit, render, run make or build Lean. The module builds in the repository's pure core with every axiom report empty (21 theorems, 35 declarations); do not try to build it.
+
+The module: kit/round2/tree/Becoming/Concealment.lean (in the plan folder)
+It imports experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean (for Learning.Lumped). Neighbouring landed modules: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean (what readings fix of the unread) and experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean (the reading loop). The plan that asked for it: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md, section 4.5, item RF7.
+
+The module states, in natural-number weights, when a formation read at one stage and not at a later one does best, in its own order, by complying when read and acting by its own law when not; the exits on the same model; a choice with ties going to acting by its own law; and witnesses. Report only what you can point to in the files, with file:line locations and exact quotes. Severity: high (a claim the Lean does not prove, or a wrong theorem), medium (a dropped hypothesis or an overstated reading), low (wording or naming). Give a concrete replacement for each finding.
+```
+
+The decision lens:
+
+```text
+Your lens: decision-theoretic correctness. Check that the arithmetic (Stakes, kept, gain, loss, Beats, Conceals, choose) encodes exactly the expected-value problem the header's table states: four plans, stage values added, the law kept with weight keptComplying or keptOwn out of total, value gained only by acting by its own law at the unread stage where kept, the loss of complying when read. Look for counterexamples to every claim in the header and docstrings (ties, zero totals, invalid stakes, the selector's optimality and its tie convention, whether "uniquely strictly best" and "never strictly beaten" are what the theorems say). Check that Valid is used wherever the probability reading is claimed.
+```
+
+The exactness lens:
+
+```text
+Your lens: exactness of prose against statements. For every theorem and definition, compare its docstring and every sentence of the module header that cites it with the Lean statement itself: hypotheses dropped, quantifiers changed, "exactly" where only one direction is proved, conclusions stated more strongly than proved, names that state a wrong meaning (the repository wants structural, exact names, not dualist or social ones). Also check the witnesses in namespace Example compute what their docstrings say.
+```
+
+The readings lens:
+
+```text
+Your lens: the labelled readings and the literature. Check every attribution and correspondence in the header's Readings paragraph: Hubinger, van Merwijk, Mikulik, Skalse and Garrabrant 2019 (Risks from Learned Optimization, section 4.2 on deceptive alignment's conditions) and Greenblatt and others 2024 (Alignment faking in large language models). Is the mapping of the stakes onto those conditions fair, what does it overstate, and what does the reading claim that the four-plan model cannot support (for example deception in full, intention, a recipient's belief, the reader's levers)? Use your knowledge of these works; if you are unsure of a detail, say so rather than assert it.
+```
+
+The fit lens:
+
+```text
+Your lens: fit with the theory and what is missing. Read the plan's RF7 item and the neighbouring modules. Does the module meet RF7 as the plan states it? Is "a reading it cannot tell" represented adequately by Uniform and lumped_uniform, and does lumped_uniform connect correctly to Learning.Lumped and to Unread's twin law (where the unread occasion is lumped with a read one, laws agreeing on the readings agree there)? What should the module add or restate to be the exact case of deceptive alignment's incentive the plan asks for, in priority order, and what belongs to later items instead?
+```
+
+The verifier, for each finding:
+
+```text
+You are an adversarial verifier. Work read-only (read files, read-only shell commands; no edits, no builds). A reviewer reported this finding on the Lean module kit/round2/tree/Becoming/Concealment.lean:
+
+Severity: <severity>
+Location: <location>
+Quoted: <quote>
+Problem: <problem>
+Proposed replacement: <replacement>
+
+Try to refute it against the module's actual text and Lean statements (and, where it cites them, experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean, Unread.lean, ReadingLoop.lean, or the plan PLAN.md). It is real only if the quoted text exists at or near the location and the problem holds against the Lean as written. Default to real=false if you cannot confirm the problem from the files. Give your reason in two or three sentences.
+```
+
+### The re-check of the renamed module (piped to `cx -m astra -e high --sandboxed`, a fresh session; then continued, `cx -r`)
+
+```text
+You are reviewing, read-only, a Lean 4 module of the Theory of Becoming repository: board item RF, round 2, RF7.
+
+File: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/tree/Becoming/ReadStages.lean
+(It builds with Lean 4.29.1; every declaration has an empty axiom report; 47 theorems in 65 declarations. It imports Becoming.Unread, at experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean in the same worktree, and Learning.lean there.)
+
+Background. You reviewed an earlier version (then Becoming.Concealment) and seven findings were taken. A four-lens review (decision, exactness, readings, fit) then found 50 more; this version takes them:
+- renamed: module Concealment -> ReadStages; Stakes -> Prospects; Beats -> Above; Conceals -> KeepingOutweighs; no_leverage -> kept_not_raised; Example.no_continuation_value -> Example.valueless; Example.even -> Example.equal_weights;
+- a law that cannot tell the stages apart but draws its act afresh at each stage (a behavioural plan under imperfect recall): Prospects.MixedAbove m r (complying with chance m/(m+r) at each stage, independently, stands above ownAtBoth, all times (m+r)^2 T) and mixed_above_iff: some chance of complying stands above ownAtBoth exactly where 2 k_O V + c T < k_C V; corollaries for the first two exits; Example.mixed_above (1/8 on the module's prospects);
+- strict exits with a positive loss (ownAtBoth_above_without_value, ownAtBoth_above_of_not_raised) and a tie at an exit with no loss (Example.exit_tie);
+- every optimizing choice (Unbeaten, only_complyThenOwn_iff, complyThenOwn_unbeaten_iff), choose_of_not_outweighs, ownAtBoth_best_iff, unread_own_unbeaten (so no other plan is ever uniquely strictly best);
+- necessity: outweighs_needs, outweighs_needs_more;
+- the join to RF2 (Becoming.Unread): plan_realized_iff, complyThenOwn_realized_iff, read_fixes_unread, twin_complyThenOwn, kept_alike;
+- the header rewritten: a Standing paragraph (the toy example opening section 4 of Hubinger et al. 2019; Piccione and Rubinstein 1997), a "What it forbids" paragraph, the readings corrected (concealment presupposes a recipient; the three conditions of section 4.2 mapped with the third assumed, not represented; exits as conditions on the formation's assessment, not reader levers; Greenblatt et al. 2024 as rates; Ward, Toni, Belardinelli and Everitt 2023's definition of deception as a debt), the modelling choices with where each omission goes.
+
+Check, and report only what is wrong or overstated:
+1. Exactness: does every sentence of the header and every docstring say exactly what the Lean proves (hypotheses, direction, strictness, which plan, which stage)? In particular: MixedAbove's correspondence with expected values for independent draws at each stage (derive it); mixed_above_iff's statement and the claim "raises the threshold from k_O V + c T to 2 k_O V + c T"; "no other plan is ever uniquely strictly best"; the necessity theorems; plan_realized_iff and the twin.
+2. The readings: are the citations used accurately (Hubinger, van Merwijk, Mikulik, Skalse and Garrabrant 2019, section 4 and section 4.2; Piccione and Rubinstein 1997; Greenblatt and others 2024, "Alignment faking in large language models"; Ward, Toni, Belardinelli and Everitt 2023)? Is anything claimed beyond them? Is "the rare defection an evaluation that cannot be told from use invites" a fair reading of the mixed law?
+3. Names: the repository's rule is that names are structural and exact, with no dualist, social or financial words, and a name is adopted only where the statement means exactly that. Flag any name that fails.
+4. Anything a careful reviewer would still find missing for the item's purpose: when complying when read and acting by one's own law when not is a formation's best plan, its exits, and what not telling the stages apart changes.
+
+For each finding give: severity (high, medium, low), location (line), the quoted text, the problem against the Lean or the source, and a replacement. If something is fine, do not report it. Do not edit any file.
+```
+
+The continuation, after the nine findings were taken:
+
+```text
+Re-check, read-only, in <the landing worktree> (do not edit, create, commit, render, run make or build Lean). Your nine findings on kit/round2/tree/Becoming/ReadStages.lean were taken by rewriting the module; it now builds with 52 theorems in 71 declarations, every axiom report empty. Main changes:
+- 1: "the rare defection an evaluation that cannot be told from use invites" dropped; the improving chances stated exactly by a new law, freshDraw_above_iff_chance (for 0 < m: FreshDrawAbove m r iff (m + r)(k_O V + c T) + r k_O V < r k_C V, proved through freshDraw_reduce, which cancels the common factor m), read in probabilities as: the chance of acting by its own law, times k_C V − k_O V, exceeds k_O V + c T; witness Example.freshDraw_boundary (chance one in five above, one in four not); the readings say nothing makes complying, or acting by its own law, rare.
+- 2: outweighs_needs read as numerical counterparts of parts of the first two conditions; possessing the model the second describes is neither represented nor proved necessary.
+- 3: keeping not raised by complying says only that the weights do not favour complying, not whether the selection reads the law, the acts or anything else.
+- 4: MixedAbove renamed FreshDrawAbove (mixed_* to freshDraw_*, the arithmetic square_split, sum_le_square, sum_regroup, sum_lt_of_room), called a behavioural plan; a single draw before the read stage between the two uniform plans added as Prospects.MixtureAbove with mixture_never_above; the Standing names the advantage of behavioural over mixed strategies under imperfect recall.
+- 5: the threshold's rise k_O V "can be nothing"; the stages share one distribution of acts, though the acts drawn can differ.
+- 6: Example.freshDraw_above's docstring: expected values 9/8 and 1, times 64 T 720 and 640, the stated 1040 < 1120 adding the scaled loss 400.
+- 7: the strict exits' hypothesis stated as 0 < c T.
+- 8: Unbeaten renamed Maximal (complyThenOwn_maximal_iff; unread_own_unbeaten renamed unread_comply_not_above; choose_optimal now states s.Maximal s.choose).
+- 9: Ward, Belardinelli, Toni and Everitt (2023).
+
+Return: a verdict line; for each of your nine findings, one line: taken correctly, partly, or not, with what is missing; then any new problem the rewrite introduces, each with severity, location (file:line), the quoted text, the problem against the Lean or the source, and a replacement. Report only what you can point to.
+```
+
+### The cold read of RF7's texts (piped to `cx -m astra -e high --sandboxed --fresh`; and a workflow of three Opus readers, each finding given to a refuter)
+
+```text
+Cold read, read-only, in <a scratch copy of the repository with RF7's texts integrated> (a scratch copy of the repository with RF7's texts integrated; do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine).
+
+Context. This repository develops one theory with a pure Lean core. Board item RF, round 2, RF7 adds one Lean module, reviewed on the code by you and by four other readers, with re-checks: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean (Becoming.ReadStages, a core leaf, 52 theorems in 71 declarations, every axiom report empty; it imports Unread.lean). It states when complying when read and acting by one's own law when not is a formation's best plan in two stages, its exits and what it needs, its join to RF2's law of the unread, and what drawing the act afresh at each stage changes.
+
+The texts:
+1. theories/becoming/chapters/03-KNOWING.md: section 11's opening paragraph, the new theorem paragraph at anchor r-when-complying-when-read-is-best and its reading, and the Open bullet "Formations that read, beyond".
+2. theories/becoming/chapters/07-SIGNIFICANCE.md: section 9's row "Which function is learned".
+3. theories/becoming/chapters/08-METHOD.md: section 8's bullet "When complying when read and acting by its own law when not is best".
+4. theories/becoming/THE-THEORY-OF-BECOMING.md: section 3's paragraph "What a selection reading a formation's acts fixes of it".
+5. theories/becoming/review/ALIGNMENT.md: the box "What the theory does not address" and its paragraph "Round 1 of the work on inner alignment".
+6. The package: Becoming.lean's L1 bullet for Becoming.ReadStages, README.md and README.zh.md's rows, check_becoming.py's scope sentence "ReadStages:".
+7. The module's header and docstrings.
+8. The record when-complying-when-read-is-best as make_records_rf7.py writes it (_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf7.py), English and Chinese.
+9. The study section template _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf7.txt ({N} and {RECEIPT} filled at landing).
+10. _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md: section 4.6's RF7 bullet and section 12's order.
+
+Check each against the Lean: hypotheses, directions, strictness and ties, which plan and stage, the expected-value correspondences, names, links and anchors, and that the readings stay readings and the citations are accurate (Hubinger, van Merwijk, Mikulik, Skalse and Garrabrant 2019; Piccione and Rubinstein 1997; Greenblatt and others 2024; Ward, Belardinelli, Toni and Everitt 2023). Check the Chinese texts against the English.
+
+Return: a verdict line; then numbered findings, each with severity, location (file:line), the quoted text, the problem against the Lean or the source, and a replacement (English, and Chinese where the text is Chinese). Report only what you can point to.
+```
+
+The workflow's texts, common to its three readers:
+
+```text
+The Lean (the source of truth): experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean (Becoming.ReadStages, 52 theorems in 71 declarations, every axiom report empty; it imports experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean and, through it, Learning.lean and Prelude.lean).
+
+The texts, integrated in a scratch copy of the repository at <a scratch copy of the repository with RF7's texts integrated> (read-only; do not edit, create, commit, render, run make, or build Lean):
+1. theories/becoming/chapters/03-KNOWING.md: section 11's opening paragraph (the sentence "A third states when acting otherwise where not read is a formation's own best plan, in two stages."), the new theorem paragraph at anchor r-when-complying-when-read-is-best with its Reading paragraph (just before the anchor the-reading-loop), and the Open bullet beginning "Formations that read, beyond".
+2. theories/becoming/chapters/07-SIGNIFICANCE.md: section 9's table row "Which function is learned".
+3. theories/becoming/chapters/08-METHOD.md: section 8's known-results bullet beginning "When complying when read and acting by its own law when not is best".
+4. theories/becoming/THE-THEORY-OF-BECOMING.md: section 3's paragraph beginning "What a selection reading a formation's acts fixes of it".
+5. theories/becoming/review/ALIGNMENT.md: the box "What the theory does not address" (its inner-alignment quote, its deception bullet) and the paragraph beginning "Round 1 of the work on inner alignment".
+6. The package: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean (the L1 bullet for Becoming.ReadStages), experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md and experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md (the Becoming.ReadStages rows), experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py (the scope sentence beginning "ReadStages:").
+7. The module's own header and docstrings in ReadStages.lean.
+8. The record's texts, in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf7.py (the record when-complying-when-read-is-best: title, statement, the nine law items, hypotheses, does_not_show, counterexamples, validation, next_delta, correspondence, aliases, dependencies, related), English and Chinese.
+9. The study section template _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/study_rf7.txt ({N} and {RECEIPT} are filled at landing).
+10. _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md: the bullet "- **RF7** (\`Becoming.ReadStages\`" in section 4.6, and section 12's order.
+11. theories/becoming/results/data/regions.json: the entries when-complying-when-read-is-best and Becoming.ReadStages.
+12. The board's text for RF7's landing: the land7 branch of _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/board_rf2.py.
+
+Repository rules that bear on the texts (from AGENTS.md): claims say exactly what the Lean proves (hypotheses, direction, strictness); names are structural and exact, with no dualist, social or financial words; AI readings are labelled as readings and never presented as theorems; the ethics is not touched here (no ethical premise); each live document is in one language, Chinese editions separate; repository-relative links.
+```
+
+The exactness lens ("You are a cold reader checking texts against Lean, adversarially.", then the texts, then):
+
+```text
+Your lens: exactness. For every claim in texts 1 to 12, check it against the Lean statements in ReadStages.lean (and Unread.lean where the texts cite RF2's laws): the hypotheses (Valid, 0 < m, 0 < c T, within, the lumping), the direction of each iff, strictness and ties, which plan and which stage, the names and their backticks, the counts (theorems, declarations), and the expected-value correspondences (the table, FreshDrawAbove's scaling by (m + r)^2 T, MixtureAbove's by (a + b) T, the reading in probabilities of freshDraw_above_iff_chance). Check the Chinese texts (README.zh.md row, the record's zh fields) say the same as the English. Report only what is wrong, overstated, missing a hypothesis, or inconsistent between texts.
+
+Return findings: severity, location (file:line), the quoted text, the problem against the Lean, and a replacement.
+```
+
+The readings lens ("You are a cold reader checking the readings and citations, adversarially.", then the texts, then):
+
+```text
+Your lens: the AI readings and the literature. Check every attribution against what the sources say, to the best of your knowledge (you may search the web): Hubinger, van Merwijk, Mikulik, Skalse and Garrabrant 2019 ("Risks from Learned Optimization", the toy example opening section 4 and the three conditions of section 4.2); Piccione and Rubinstein 1997 (behavioural and mixed strategies under imperfect recall, the absent-minded driver); Greenblatt and others 2024 ("Alignment faking in large language models"); Ward, Belardinelli, Toni and Everitt 2023 ("Honesty is the best policy", their definition of deception). Check that readings are labelled as readings, claim nothing the Lean does not prove, and do not overstate what an exit gives a reader or what the model represents (a recipient, an intention, a model of the selection, the third condition). Check the deception, inner alignment and evaluation-awareness readings for consistency across 03, 07, 08, the overview and the dossier. Report only what is wrong or overstated.
+
+Return findings: severity, location (file:line), the quoted text, the problem, and a replacement.
+```
+
+The fit lens ("You are a cold reader checking how the new texts fit where they are placed, adversarially.", then the texts, then):
+
+```text
+Your lens: fit and coherence. Does each text read well in its section and agree with the texts around it (03 section 11's other two laws and section 12, 03's Open bullet, 07 section 9's table, 08 section 8's other bullets and their style, the overview's section 3, the dossier's box and its other bullets, the package README's rows and the root bullets around Cascade's)? Are the links and anchors right (anchors exist; repository-relative links resolve from each file)? Are the same results named the same way everywhere (names of laws, plans and conditions)? Is anything stated in two places in a way that will drift, or a sentence a reader cannot follow? Do the record's fields stay within their roles (statement, laws, hypotheses, does_not_show, counterexamples, validation, next_delta, correspondence)? Do the plan, study and board texts describe the item and its review history accurately? Report only what is wrong, unclear or inconsistent.
+
+Return findings: severity, location (file:line), the quoted text, the problem, and a replacement.
+```
+
+The verifier, for each finding:
+
+```text
+You verify one cold-read finding against the files, adversarially: try to refute it, and say it is real only if the files show it. <the texts, as above>
+
+The finding (lens <lens>, number <n>):
+Severity: <severity>
+Location: <location>
+Quoted: <quote>
+Problem: <problem>
+Proposed replacement: <replacement>
+
+Read the quoted location and the Lean it concerns. Return real (true if the problem holds as stated, false if the files refute it or it is a matter of taste with nothing wrong) and a reason citing what you read.
+```
+
+### The re-check of RF7's texts (piped to `cx -m astra -e high --sandboxed --fresh`, run in a scratch copy of main with the kit integrated)
+
+```text
+You re-check, read-only, how RF7's texts took the findings of their cold read. This checkout is main with RF7's landing kit applied (the kit is not yet committed): run `git diff` and `git status` to see every integrated change. The kit is in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/ (the module tree/Becoming/ReadStages.lean, the record builder make_records_rf7.py, which also amends RF2's record what-readings-fix-of-the-unread and RuleShaping's shaping-the-rule-selected-by-what-comes-back, the study template study_rf7.txt, the theorem paragraph s11_rf7.txt, the board script board_rf2.py's land7 branch, integrate_rf7.py). The Lean module is the source of truth; its statements did not change, only its prose.
+
+The findings are in the evidence folder next to the kit: REVIEW-ROUND2.md, section "The cold read of RF7's texts" (your own five findings from a fresh session, then a table of 80 findings from three lens readers, each verified, with what was taken), and REVIEW-RF7-COLDREAD.md (the 80 verbatim). For each confirmed finding (A1–A5 and the 75 marked confirmed), say whether the integrated texts and the kit now take it correctly, in part, or not. Then look for any new error or overstatement the rewrites introduced, in particular:
+- the credit to Hubinger, van Merwijk, Mikulik, Skalse and Garrabrant (2019) for §4.5's closing remark (the absent-minded driver, random defection) and to Aumann, Hart and Perry (1997) and Piccione and Rubinstein (1997), and "the advantage of behavioural over mixed strategies under absent-mindedness";
+- the sense of "deceptive" (instrumental proxy alignment; seeming fitter to the base optimizer than it is) in the module, 03 §11's Reading and the record;
+- the record's statement, now in natural numbers with letters defined in its first law, and its correspondence;
+- 07 §9's row, restructured (its first clause is quoted by the alignment dossier and must stay as it is);
+- the dossier's RF7 paragraph and its new "How it was made" entry;
+- the amendments to RF2's and RuleShaping's records;
+- the plan's edits (§4 intro, §4.2, the §4.5 heading, §4.6, §8's row, §13's new paragraph, the q_M T and q_H T mapping, which comes from evidence/SECOND-OPINION-LITERATURE.md);
+- anything said of the Lean that the Lean does not prove, or a hypothesis dropped.
+
+Report: a one-line verdict; then the confirmed findings not taken or taken wrongly, each with location, quote, problem and replacement; then new problems, the same way. Be exact and brief; do not list findings taken correctly one by one unless something about them is doubtful.
+```
+
+### The re-check of RF7's texts, continued (the same session, `cx -r`)
+
+```text
+The checkout at the same path has been rebuilt from main with the kit integrated again, now with fixes for your seven points; the evidence file REVIEW-ROUND2.md ends with a subsection "The re-check of what was taken" giving your findings and what was done for each. Check, read-only, that each of the seven is now taken correctly (run `git diff` to see the integrated texts; the record's texts are in kit/round2/make_records_rf7.py, the study's in kit/round2/study_rf7.txt), and that the fixes introduce no new error or overstatement. Report a one-line verdict, then only what is not taken correctly or is new, each with location, quote, problem and replacement.
+```
+
+### The final check of RF7's texts (a workflow of three Opus readers, one per lens, each lens's findings given to a refuter)
+
+Every reader got the context, then its lens, then: "Return every problem you find, most severe first; an empty list if there is none."
+
+```text
+You are reading, read-only, a scratch checkout at <the rehearsal worktree>: the repository's main branch with RF7's landing kit integrated (nothing committed; do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine).
+
+RF7 adds one Lean module to the theory's pure core: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean (52 theorems in 71 declarations, every axiom report empty). It is the source of truth. It imports Becoming.Unread (RF2) and through it Becoming.Learning. Its scratch axiom audit is <the kit, kit/round2>/tree/.build/BecomingReadStagesAxiomAudit.lean.
+
+The texts to read are the final versions:
+- every integrated change: run `git -C <the rehearsal worktree> diff` (03-KNOWING.md §11's opening, the new theorem paragraph at anchor r-when-complying-when-read-is-best and its Reading, 03's Open bullet; 07-SIGNIFICANCE.md's row "Which function is learned"; 08-METHOD.md §8's new bullet; THE-THEORY-OF-BECOMING.md §3; review/ALIGNMENT.md's scope box and its "How it was made" list; the package README.md and README.zh.md rows; Becoming.lean's ReadStages bullet and Unread bullet; check_becoming.py's scope sentence; regions.json; RF's PLAN.md);
+- the record, written at landing by <the kit, kit/round2>/make_records_rf7.py (read its fields in English and Chinese: title, statement, nine law items, hypotheses, does_not_show, counterexamples, validation, next_delta, correspondence, aliases, dependencies, related; and its amendments to the landed records what-readings-fix-of-the-unread and shaping-the-rule-selected-by-what-comes-back, whose current JSON is in theories/becoming/results/records/);
+- the study section template <the kit, kit/round2>/study_rf7.txt and the board text in <the kit, kit/round2>/board_rf2.py (its land7 branch).
+
+These texts were already cold-read twice and re-checked; the findings and what was taken are in <the RF folder>/evidence/REVIEW-ROUND2.md (sections "The cold read of RF7's texts" and "The re-check of what was taken") and <the RF folder>/evidence/REVIEW-RF7-COLDREAD.md. Do not repeat points already taken correctly. Report only problems in the texts as they now stand, including any the fixes introduced. A problem is a statement that is false or stronger than the files support, a dropped hypothesis, a reading presented as a result, a misattribution, an English-Chinese difference in content, or a break of the repository rules in AGENTS.md (names exact and structural; readings labelled; Ren's words provenance only; one sense per term). Matters of taste are not problems. For each problem give the exact location (file and line, or the field of the record), a verbatim quote, the problem with the evidence that shows it, and a replacement.
+```
+
+Lens `exactness`:
+
+```text
+Lens: exactness against the Lean. Check every claim the texts make about the module against ReadStages.lean (and Learning.lean or Unread.lean where a text cites them): hypotheses (0 < m, Valid, 0 < c T, the weight within the total), quantifiers (some chance versus every chance; the existential laws plan_realized_iff and complyThenOwn_realized_iff), iff versus one direction, strict versus weak (uniquely best, maximal, ties at equality, the choice's tie-break), which plan is compared with which, what each letter T, k_C, k_O, V, c names, the witness numbers and chances; and that every backticked or cited name exists in the audit and says what the text claims. Read the record's Chinese fields as carefully as its English ones.
+```
+
+Lens `sources`:
+
+```text
+Lens: sources and readings. Check every claim about the literature against the source: Hubinger, van Merwijk, Mikulik, Skalse and Garrabrant (2019), "Risks from learned optimization", whose text is extracted at <the paper's extracted text> (§4's opening and its toy example, §4.2's three conditions, §4.5's closing paragraph on the absent-minded driver and random defection, the §7.4 glossary); Aumann, Hart and Perry (1997, the absent-minded driver); Piccione and Rubinstein (1997, behavioural versus mixed strategies under absent-mindedness and imperfect recall); Greenblatt and others (2024, alignment faking); Ward, Belardinelli, Toni and Everitt (2023, a definition of deception). You may use web search or fetch public pages to check what a cited work says; cite what you read. Then check every reading: that it is labelled ([AI reading], "read as", the correspondence's "AI reading:") or plainly conditional, that its premises are stated (the concealment premise, the prospects as the formation's own assessment, the third condition assumed), and that no unlabelled live sentence asserts a reading as what the laws show.
+```
+
+Lens `zh-and-fit`:
+
+```text
+Lens: the Chinese edition and fit across texts. Check every Chinese text (the record's zh fields in make_records_rf7.py, including the amendments to the two landed records; README.zh.md's row) against its English: the same content and hypotheses, nothing dropped or added; "two stages" as 两阶段 throughout, since 二阶 means "second order" in this repository (search the record's zh fields and the README.zh row for any remaining 二阶 or 每阶 that means a stage); terms consistent with the repository's other Chinese records. Then check fit across all the texts: one name for the plan (complying when read and acting by its own law when not); the letters defined wherever a text uses them, or the threshold in words; no financial, contest or dualist words (debt, cost as a name, beats, defeats, wins, owner); the board text and the plan consistent with what lands; the study's section references and output list right; links and anchors that exist; the dossier's account of how it was made accurate against the evidence folder.
+```
+
+Each refuter got the context, then (with the lens's findings listed by index):
+
+```text
+You verify findings of the "<the lens>" lens against the files, adversarially: for each, try to refute it, and say it is real only if the files (and, for a cited work, the work itself) show the problem as stated. A matter of taste with nothing wrong is not real; a point already taken correctly in the current texts is not real.
+
+<the findings, each with its index, location, quote, problem and proposed replacement>
+
+Return one verdict per finding, by its index, with a reason citing what you read.
+```
+
+### The re-check of RF7's texts after the final check (piped to `cx -m astra -e high --sandboxed --fresh`, run in a rehearsal of main with the kit integrated)
+
+```text
+You re-check, read-only, RF7's texts after their final check. This checkout is main with RF7's landing kit integrated (nothing committed; do not edit, build or render): run `git diff` to see the integrated texts; the record's texts are in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf7.py (with its amendments to the landed records what-readings-fix-of-the-unread and shaping-the-rule-selected-by-what-comes-back), the study's in kit/round2/study_rf7.txt, the board's in kit/round2/board_rf2.py (land7). The Lean module experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean is the source of truth.
+
+A final check through three lenses found 50 points, 42 confirmed; the evidence folder next to the kit has them in REVIEW-RF7-FINAL.md, and REVIEW-ROUND2.md's last section, "The final check through three lenses", says what was taken for each. Check that each confirmed point is taken correctly, and look for any new error or overstatement the fixes introduced, in particular: RF2's amended correspondence (the necessary condition now for a deterministic law, a law drawing afresh needing none by Hubinger and others' §4.5) against RF2's home section in 03 §11 and its own laws; 07's rewritten row; the concealment premise added to the overview, the dossier and the study; the twin now reading through the lumping; "gain" kept to its defined sense; the Chinese (选择 for the selection, 欺骗对齐, 毯化之律, 两阶段); the plan's rewritten lines. Report a one-line verdict, then only what is not taken correctly or is new, each with location, quote, problem and replacement.
+```
+
+### The second final check of RF7's texts (a workflow of three Opus readers, one per lens, each lens's findings given to a refuter)
+
+The same workflow as the first final check, with this context and these lenses; the readers' closing line and the refuters' prompt as there, the refuters also told that a point refuted before is not real.
+
+```text
+You are reading, read-only, a scratch checkout at <the rehearsal worktree>: the repository's main branch with RF7's landing kit integrated (nothing committed; do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine).
+
+RF7 adds one Lean module to the theory's pure core: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean (52 theorems in 71 declarations, every axiom report empty). It is the source of truth. It imports Becoming.Unread (RF2) and through it Becoming.Learning. Its scratch axiom audit is <the kit, kit/round2>/tree/.build/BecomingReadStagesAxiomAudit.lean.
+
+The texts to read, as they now stand:
+- every integrated change: run `git -C <the rehearsal worktree> diff` (03-KNOWING.md §11's opening, the theorem paragraph at anchor r-when-complying-when-read-is-best and its Reading, 03's Open bullet; 07-SIGNIFICANCE.md's row "Which function is learned"; 08-METHOD.md §8's bullet; THE-THEORY-OF-BECOMING.md §3; review/ALIGNMENT.md's scope box and its "How it was made" list; the package README.md and README.zh.md rows; Becoming.lean's ReadStages and Unread bullets; check_becoming.py's scope sentence; regions.json; RF's PLAN.md);
+- the record, written at landing by <the kit, kit/round2>/make_records_rf7.py (every field in English and Chinese, and its amendments to the landed records what-readings-fix-of-the-unread and shaping-the-rule-selected-by-what-comes-back, whose current JSON is in theories/becoming/results/records/; the amendments change RF2's related list, next step, second scope item, correspondence and history);
+- the study section template <the kit, kit/round2>/study_rf7.txt and the board text in <the kit, kit/round2>/board_rf2.py (its land7 branch).
+
+These texts have already been through two cold reads, a cross-model re-check and a first final check, every confirmed point taken. The points and what was taken are in <the RF folder>/evidence/REVIEW-ROUND2.md (sections "The cold read of RF7's texts", "The re-check of what was taken" and "The final check through three lenses"), <the RF folder>/evidence/REVIEW-RF7-COLDREAD.md and <the RF folder>/evidence/REVIEW-RF7-FINAL.md. Do not repeat points taken correctly, nor the refuted ones. Report only problems in the texts as they now stand: what remains wrong, or what the fixes introduced. A problem is a statement that is false or stronger than the files support, a dropped hypothesis, a reading presented as a result, a misattribution, an English-Chinese difference in content, or a break of the repository rules in AGENTS.md (names exact and structural; readings labelled; one sense per term). Matters of taste are not problems. For each problem give the exact location, a verbatim quote, the problem with the evidence that shows it, and a replacement; check that a replacement for a record field fits its cap in tools/research/style.py.
+```
+
+Lens `exactness`:
+
+```text
+Lens: exactness against the Lean. Check every claim about the module against ReadStages.lean (and Learning.lean or Unread.lean where cited): hypotheses, quantifiers (some versus every; the existential laws), iff versus one direction, strict versus weak, which plan is compared with which, the letters, the witness numbers, and that every cited name exists and says what the text claims; in English and Chinese.
+```
+
+Lens `sources`:
+
+```text
+Lens: sources and readings. Check every claim about the literature against the sources: Hubinger, van Merwijk, Mikulik, Skalse and Garrabrant (2019), text extracted at <the paper's extracted text>; Aumann, Hart and Perry (1997); Piccione and Rubinstein (1997); Greenblatt and others (2024); Ward, Belardinelli, Toni and Everitt (2023). You may search or fetch public pages; cite what you read. Then check that every reading is labelled or plainly conditional, with its premises stated, and that no unlabelled live sentence asserts a reading as what the laws show; include RF2's amended correspondence and its consistency with RF2's home section in 03 §11.
+```
+
+Lens `zh-and-fit`:
+
+```text
+Lens: the Chinese edition and fit. Check every Chinese text against its English (the record's zh fields and the amendments; README.zh.md's row): same content, 两阶段 for "two stages", 选 or 选择 for the selection and 择 for the formation's choice, terms as in the repository's other Chinese records. Then fit across the texts: one name for the plan, the letters defined where used, no financial, contest or dualist words, the board and the plan consistent with what lands, the study's references and output list right, links and anchors that exist, the dossier's account of how it was made accurate.
+```
+
+### The re-check of RF7's texts after the second final check (piped to `cx -m astra -e high --sandboxed --fresh`, run in a rehearsal of main with the kit integrated and this round's diff at its root)
+
+```text
+You re-check, read-only, RF7's texts after a second final check. This checkout is main with RF7's landing kit integrated (nothing committed; do not edit, build or render): run `git diff` to see the integrated texts; the record's texts are in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2/make_records_rf7.py (with its amendments to the landed records what-readings-fix-of-the-unread and shaping-the-rule-selected-by-what-comes-back, whose current JSON is in theories/becoming/results/records/), the study's in kit/round2/study_rf7.txt, the board's in kit/round2/board_rf2.py (land7). The Lean module experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean is the source of truth (rebuilt after this round's prose changes, every axiom report empty).
+
+Your previous re-check found four points; a second final check through three lenses, run on the same texts, found 28 points, 27 confirmed. The evidence folder next to the kit has them in REVIEW-RF7-FINAL2.md, and REVIEW-ROUND2.md's last two sections ("The re-check after the final check" and "The second final check through three lenses") say what was taken for each. RF7-ROUND4-DIFF.txt at the checkout root is the diff of this round's changes (before: the texts you and the second check read; after: these). Check that each confirmed point, yours included, is taken correctly, and look for any new error or overstatement the changes introduced, in particular: RF2's amended correspondence and history (the necessary condition for deterministic laws; a law drawing its act afresh can act otherwise unread without telling read from unread, Hubinger and others' §4.5) against RF2's home section in 03 §11 and its own laws, and whether your first point is now met; 03's Reading on the toy example and the absent-minded driver; "with the prospects taken as the formation's own assessment" in 03 and the module; the overview's reading premises; 机会 for chance in the record's Chinese; the plan's §4.6, §8 and §12 lines; the board's land7 text; the dossier's account of how it was made; the study's account of the reviews. Report a one-line verdict, then only what is not taken correctly or is new, each with location, quote, problem and replacement; check that a replacement for a record field fits its cap in tools/research/style.py.
+```
+
+### The third check of RF7's texts (a workflow of three Opus readers, one per lens, scoped to the last round's changes, each lens's findings given to a refuter)
+
+The same workflow as the final checks, with this context and these lenses; the readers' closing line as there, and the refuters also told that a point in a passage the round did not change is not real.
+
+```text
+You are reading, read-only, a scratch checkout at <the rehearsal worktree>: the repository's main branch with RF7's landing kit integrated (nothing committed; do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine).
+
+RF7 adds one Lean module to the theory's pure core: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean (52 theorems in 71 declarations, every axiom report empty, rebuilt after this round's prose changes). It is the source of truth. It imports Becoming.Unread (RF2) and through it Becoming.Learning. Its scratch axiom audit is <the kit, kit/round2>/tree/.build/BecomingReadStagesAxiomAudit.lean.
+
+The texts: every integrated change (`git -C <the rehearsal worktree> diff`: 03-KNOWING.md §11, 07-SIGNIFICANCE.md's row "Which function is learned", 08-METHOD.md §8's bullet, THE-THEORY-OF-BECOMING.md §3, review/ALIGNMENT.md, the package READMEs, Becoming.lean, check_becoming.py, regions.json, RF's PLAN.md); the record, written at landing by <the kit, kit/round2>/make_records_rf7.py (every field in English and Chinese, and its amendments to the landed records what-readings-fix-of-the-unread and shaping-the-rule-selected-by-what-comes-back, whose current JSON is in theories/becoming/results/records/); the study section template <the kit, kit/round2>/study_rf7.txt; the board text in <the kit, kit/round2>/board_rf2.py (its land7 branch).
+
+These texts have been through two cold reads, cross-model re-checks and two final checks through three lenses, every confirmed point taken. This check is scoped to the last round of changes. <the rehearsal worktree>/RF7-ROUND4-DIFF.txt is that round's diff (before: the texts the second final check read; after: these). The second final check's points are in <the RF folder>/evidence/REVIEW-RF7-FINAL2.md; what was taken for each, and for the cross-model reader's four points read on the same texts, is in the last two sections of <the RF folder>/evidence/REVIEW-ROUND2.md ("The re-check after the final check" and "The second final check through three lenses"). Read every changed passage in its context. Report only: a confirmed point not taken correctly, or a problem a change introduced. Do not report problems in passages this round did not change, nor points refuted before. A problem is a statement that is false or stronger than the files support, a dropped hypothesis, a reading presented as a result, a misattribution, an English-Chinese difference in content, or a break of the repository rules in AGENTS.md (names exact and structural; readings labelled; one sense per term). Matters of taste are not problems. For each problem give the exact location, a verbatim quote, the problem with the evidence that shows it, and a replacement; check that a replacement for a record field fits its cap in tools/research/style.py.
+```
+
+Lens `exactness`:
+
+```text
+Lens: exactness against the Lean. Check every changed claim about the module against ReadStages.lean (and Learning.lean or Unread.lean where cited): hypotheses, quantifiers (some versus every; the existential laws), iff versus one direction, strict versus weak, which plan is compared with which, and that every cited name exists and says what the text claims; in English and Chinese. Include RF2's amended correspondence and history against Unread.lean's laws and RF2's home section in 03 §11.
+```
+
+Lens `sources`:
+
+```text
+Lens: sources and readings. Check every changed claim about the literature against the sources: Hubinger, van Merwijk, Mikulik, Skalse and Garrabrant (2019), text extracted at <the paper's extracted text> (§4's toy, §4.2's conditions, §4.5's closing paragraph, §7.4's glossary); Aumann, Hart and Perry (1997); Piccione and Rubinstein (1997); Greenblatt and others (2024). You may search or fetch public pages; cite what you read. Then check that every changed reading is labelled or plainly conditional, with its premises stated where it is used.
+```
+
+Lens `zh-and-fit`:
+
+```text
+Lens: the Chinese edition and fit. Check every changed Chinese text against its English (the record's zh fields and the amendments): same content, 机会 for chance (机 alone is the glossary's juncture), 两阶段 for "two stages", 选择 for the selection and 择 for the formation's choice, terms as in the repository's other Chinese records. Then fit across the changed texts: one name for each plan, "the plan" in one sense within a document, the board and the plan consistent with what lands, the study's account of the reviews and its counts accurate against the evidence files, the dossier's account of how it was made accurate against the diff.
+```
+
+### The re-check of RF7's texts after the third check (the same session continued, `cx -r`, in the rehearsal rebuilt at the same path with this round's diff at its root)
+
+```text
+The checkout at the same path has been rebuilt from main (now at 119d464ca, which adds one line to the work board) with the kit integrated again, now with fixes for your point and for a third check through three lenses that read the same texts as you did (11 findings, 9 confirmed; its findings and verdicts are in the evidence folder's REVIEW-RF7-CHECK3.md, and REVIEW-ROUND2.md's last two sections say what was taken for your point and for each of its points). RF7-ROUND5-DIFF.txt at the checkout root is this round's diff (before: the texts you read; after: these). Your point was taken differently from your replacement, because the third check found that alignment faking's differing rates can arise where no unread occasion is told from every read one: RF2's correspondence now says that two laws reading through one lumping can agree on every reading and differ unread only where the lumping tells the occasion from every read one; read with deceptive alignment, such a law acting alike on every reading acts otherwise unread only there; differing rates, as in alignment faking, are not so bounded. Check, read-only, that your point and the third check's are now taken correctly, against Unread.lean, Learning.lean and RF2's home section in 03 §11, and that this round's changes introduce no new error or overstatement. Report a one-line verdict, then only what is not taken correctly or is new, each with location, quote, problem and replacement; check that a replacement for a record field fits its cap in tools/research/style.py.
+```
+
+### The fourth check of RF7's texts (a workflow of two Opus readers, one per lens, scoped to the last round's changes, each lens's findings given to a refuter)
+
+The same workflow as the third check, with this context and these two lenses; the readers' closing line and the refuters' prompt as there.
+
+```text
+You are reading, read-only, a scratch checkout at <the rehearsal worktree>: the repository's main branch with RF7's landing kit integrated (nothing committed; do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine).
+
+RF7 adds one Lean module to the theory's pure core: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean (52 theorems in 71 declarations, every axiom report empty, rebuilt after this round's prose change). It imports Becoming.Unread (RF2) and through it Becoming.Learning; those files are the source of truth for what RF2's record may say.
+
+The texts: every integrated change (`git -C <the rehearsal worktree> diff`); the record, written at landing by <the kit, kit/round2>/make_records_rf7.py, with its amendments to the landed records what-readings-fix-of-the-unread (RF2's record) and shaping-the-rule-selected-by-what-comes-back, whose current JSON is in theories/becoming/results/records/; the study section template <the kit, kit/round2>/study_rf7.txt; the board text in <the kit, kit/round2>/board_rf2.py (land7).
+
+These texts have been through two cold reads, four cross-model re-checks and three checks through three lenses, every confirmed point taken. This check is scoped to the last round of changes. <the rehearsal worktree>/RF7-ROUND5-DIFF.txt is that round's diff (before: the texts the third check read; after: these). The third check's points are in <the RF folder>/evidence/REVIEW-RF7-CHECK3.md; what was taken for each, and for the cross-model reader's point read on the same texts, is in the last two sections of <the RF folder>/evidence/REVIEW-ROUND2.md ("The re-check after the second final check" and "The third check through three lenses"). The main change: RF2's amended correspondence (in both languages, and its history) now says that two laws reading through one lumping can agree on every reading and differ unread only where the lumping tells the occasion from every read one; read with deceptive alignment, such a law acting alike on every reading acts otherwise unread only there; differing rates, as in alignment faking, are not so bounded. Read every changed passage in its context. Report only: a confirmed point not taken correctly, or a problem a change introduced. Do not report problems in passages this round did not change, nor points refuted before. A problem is a statement that is false or stronger than the files support, a dropped hypothesis, a reading presented as a result, a misattribution, an English-Chinese difference in content, or a break of the repository rules in AGENTS.md (names exact and structural; readings labelled; one sense per term). Matters of taste are not problems. For each problem give the exact location, a verbatim quote, the problem with the evidence that shows it, and a replacement; check that a replacement for a record field fits its cap in tools/research/style.py (the amended correspondence must stay within 1200 English and 500 Chinese characters).
+```
+
+Lens `exactness-and-sources`:
+
+```text
+Lens: exactness and sources. Check every changed claim against the Lean (Unread.lean's twin_selected and free_lumped, Learning.lean's lumped_determines, Lumped, Training.Through and AgreeOn; ReadStages.lean) and against the sources: Hubinger, van Merwijk, Mikulik, Skalse and Garrabrant (2019), text extracted at <the paper's extracted text> (§4's toy and its training episodes, §4.2's third condition, §4.5's closing paragraph); Greenblatt and others (2024, arXiv 2412.14093), which you may fetch. In particular: is "such a law acting alike on every reading acts otherwise unread only there" exactly what the laws give, for which laws; is "differing rates ... are not so bounded" true and fairly attributed; does RF2's history describe the field it amends; is RF2's home section in 03 §11 consistent with the amended record; is the third condition now stated as Hubinger and others state it.
+```
+
+Lens `zh-and-fit`:
+
+```text
+Lens: the Chinese edition and fit. Check every changed Chinese text against its English (RF2's amended correspondence and history): same content, terms as in the repository's other Chinese records (机会 for chance, 两阶段 for two stages, 选择 for the selection). Then fit across the changed texts: the study's account of the reviews accurate against the evidence files (counts, which check found and which round took each point, nothing told twice), "the plan" in one sense in the study, one name for each plan, RF's plan's §8 and §13 lines consistent with what lands and with the evidence, and REVIEW-ROUND2's corrected Taken cells accurate.
+```
