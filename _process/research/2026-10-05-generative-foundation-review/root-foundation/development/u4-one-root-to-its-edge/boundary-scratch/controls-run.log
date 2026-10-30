@@ -1,0 +1,24 @@
+control 'a row checked as a form' fails as expected: the form Becoming.GroupEnding.Flow.all_end names [Becoming.Flow,
+ Becoming.Web,
+ Becoming.Flow.Acting,
+ Becoming.SelectionTerm.Generations,
+ Becoming.SelectionTerm.Flow.Descended,
+ Becoming.SelectionTerm.Generations.family,
+ Becoming.Dependence.active,
+ Becoming.SelectionTerm.Generations.size]
+control 'a repeated countermodel' fails as expected: the countermodel Becoming.U4Boundary.outside_leaves_no_offspring.needs_descent is not ¬ Becoming.U4Boundary.outside_leaves_no_offspring without Becoming.U4Boundary.GivesFrom
+control 'a countermodel reaching the form' fails as expected: the countermodel Becoming.U4BoundaryControls.needs_gate_through_form reaches Becoming.U4Boundary.outside_leaves_no_offspring
+control 'the prelude's total as a hypothesis' fails as expected: the hypothesis Becoming.total names amounts: [Nat, HAdd.hAdd]
+control 'a vacuous countermodel' fails as expected: the countermodel Becoming.U4BoundaryControls.needs_given_vacuous is not ¬ Becoming.U4Boundary.descent_forms_no_dependence without Becoming.U4Boundary.GivenTo
+control 'a form with an inline amount hypothesis' fails as expected: Becoming.U4BoundaryControls.bounded_form: the binder _bound : ∀ (x : X), comes x → q x ≤ 0 is not a listed hypothesis
+control 'a fact reaching the form' fails as expected: the fact Becoming.U4BoundaryControls.one_offspring_through_form reaches Becoming.U4Boundary.outside_leaves_no_offspring or Becoming.GroupEnding.Flow.all_end
+control 'row 5's recovery claimed to discharge by definitions' fails as expected: the recovery Becoming.U4Boundary.no_new_dependence_at_model: the discharge condition fails, the record expects it to hold (other theorems: [Becoming.Flow.descends_of_comes])
+control 'a degenerate form, its one hypothesis its conclusion' fails as expected: the recovery Becoming.U4BoundaryControls.all_end_by_holds: the discharge condition fails, the record expects it to hold (other theorems: [Becoming.GroupEnding.Flow.all_end])
+the name test admits Nat, as expected
+the name test admits Becoming.total, as expected
+the name test admits Becoming.«际», as expected
+the name test admits Becoming.«则», as expected
+the name test refuses Generative.Process, as expected
+the name test refuses Becoming.Flow.taken, as expected
+the name test refuses Becoming.U4Boundary.GivenTo, as expected
+the name test refuses Becoming.U4BoundaryControls.«不在文法», as expected
