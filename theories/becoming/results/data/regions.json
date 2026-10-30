@@ -4033,6 +4033,11 @@
    "base": "old-base",
    "note": "continuation condition §6.15, not asserted"
   },
+  "Becoming.SignificanceStatements": {
+   "region": "significance",
+   "base": "grammar",
+   "note": "U3: the significance rows stated on the root, rows 5, 7 and 10 on their own carrier and rows 1, 8 and 9 at the own-closure reading (each record's law on the root)"
+  },
   "Becoming.SituationTraces": {
    "region": "root",
    "base": "frame",

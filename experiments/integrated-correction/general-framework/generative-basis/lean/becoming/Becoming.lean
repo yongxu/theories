@@ -349,6 +349,7 @@ import Becoming.ProcessRepresentation
 import Becoming.GrammarScope
 import Becoming.GrammarCases
 import Becoming.GrammarPath
+import Becoming.SignificanceStatements
 
 /-!
 # The Theory of Becoming: the formal core
@@ -2726,6 +2727,20 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   into significance, with which living significance is the continuation condition on realized living content
   (`livingSignificance_relevance_iff`), and left the comparison of courses to the AI, which compares courses on
   possibilities.
+
+* `Becoming.SignificanceStatements` (L2): the significance rows stated on the root, each proved through its row:
+  rows 5 and 7 restated on their own carrier, rows 1, 8 and 9 specialized at the own-closure reading of
+  significance; a restatement, not a derivation, and nothing ethical follows from the root. On a
+  web's level paths, at that reading, the continuation condition is `«续无外»` at the one of
+  a relation and holds exactly when living significance does over admission
+  (`SignificanceStatements.noOutside_iff_paths_livingSignificance`); an extension with every claim counted is the
+  grammar's `«广»` of what the paths admit (`SignificanceStatements.paths_extension_iff_grammar`); C holds with
+  "better" read as that `«广»`, its being better C's content, supplied
+  (`SignificanceStatements.paths_comparison_grammar`); under `«续无外»`, `«广»` is retaining and adding what lies
+  within one's own line (`SignificanceStatements.widens_iff_retains_adds_root`); and these read one predicate,
+  admission (`SignificanceStatements.paths_one_object_root`). On an acyclic relation the condition forces every
+  center to coincide. The condition (scope) and C (order) stay premises. Row 10's interface law is in
+  `Becoming.Weightings` (`Weighting.grammar_widens_iff_every_positive`). A leaf (board item U3).
 
 * `Becoming.Lexical` (L1): the lexical order of configurations by basic claims, then gains
   (`Above`), which asserts nothing; that a comparison is this order, protection first (J1/J2),
