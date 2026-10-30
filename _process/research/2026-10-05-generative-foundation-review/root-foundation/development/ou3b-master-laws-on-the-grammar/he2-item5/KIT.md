@@ -30,7 +30,7 @@ GrammarMap imports only `Becoming.Grammar`, and every module using the copies im
 
 **The check.** `--apply lean --to` a scratch tree, then the package's `scratch_build.py` on GrammarMap, MapRegions, WideningOnTheMap and HeldPossible ([log](scratch-build-script.log)). The first check, [tree/Becoming/HE2Item5Check.lean](tree/Becoming/HE2Item5Check.lean) ([log](scratch-build.log)), stays as evidence of the reading at `Steps.next`; its `reach_of_le` is the law `Map.step_reaches_of_le` already states.
 
-**Records.** No name changes, so no record is rebound. `Map.step_reached_le` changes module, and the indexes regenerate at render.
+**Records.** No name changes, so no name is rebound. One record cites the moved laws, by module: generation-and-degeneration-at-two-grains (law 6's declarations, and its MapRegions.lean reference, which lists `Map.step_reached_le`, `Map.step_reaches` and `Map.step_reaches_of_le`). At HE2's records step the three move from that reference to its GrammarMap.lean reference, where item 5 states them, the receipt rebinds both references' hashes as for every changed module, and the record's HE2 note says the successor's reach laws are now cited from GrammarMap (HE2's lander scripts it; the record is GrammarMap's owner's, who agreed it on 31 October 2026). `Map.step_*` change module, so the indexes regenerate at render and the theorem graph at THEOREM-CONNECTIVITY.py; no register entry names them.
 
 ## 2. GrammarMap's "is not stated" sentence
 
