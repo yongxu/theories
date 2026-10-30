@@ -117,13 +117,13 @@
       "kind": "non-implication"
     },
     {
-      "en": "Expected free energy itself, the softmax over policies, precision, multi-step policies with transitions, or novelty and structure learning.",
-      "zh": "期望自由能本身、策略之 softmax、精度、具转移之多步策略，或新奇与结构之学习。",
+      "en": "Precision, multi-step policies with transitions, or novelty and structure learning; expected free energy enters in the periphery (efe_seeking_keeps_order with natural weights; the softmax over the reals, softmax_order_kept).",
+      "zh": "精度、具转移之多步策略，或新奇与结构之学习；期望自由能于外围而入（自然数权重者 efe_seeking_keeps_order；softmax 于实数，softmax_order_kept）。",
       "kind": "scope"
     },
     {
-      "en": "A theorem joining it to the periphery's expected free energy through the share given the record.",
-      "zh": "经记录下之份额与外围之期望自由能相接之定理。",
+      "en": "Whether, or how often, an agent choosing by expected free energy chooses an experiment that separates: that turns on its preferences, its posterior and the experiments' information.",
+      "zh": "依期望自由能而选之主体是否、或多常选取能分之实验：此取决于其偏好、其后验与诸实验之信息。",
       "kind": "scope"
     },
     {
@@ -153,8 +153,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T164943.729811Z）：Becoming.LumpedSeeking 之全部 27 项声明，公理报告皆空。由一 AI 代理起草；另一 AI 代理作独立只读审查（REVIEW-UE19）并复查（RECHECK-UE19），见研究第 453 节；未经人审。"
   },
   "next_delta": {
-    "en": "A many-step form with lumpable transitions; the join to the periphery's expected free energy through givenShare_eq_posterior; novelty and structure learning as conditioning in a larger model; review by a person.",
-    "zh": "具可归并转移之多步形式；经 givenShare_eq_posterior 与外围之期望自由能相接；新奇与结构之学习作为更大模型中之条件化；人之审查。"
+    "en": "A many-step form with lumpable transitions; novelty and structure learning as conditioning in a larger model; review by a person.",
+    "zh": "具可归并转移之多步形式；新奇与结构之学习作为更大模型中之条件化；人之审查。"
   },
   "correspondence": {
     "en": "Identification (Rothenberg 1971, Econometrica 39) in its Bayesian form (Poirier 1998, Econometric Theory 14): a likelihood flat across parameters leaves their prior ratio unchanged by any data. In active inference the epistemic term draws an agent to the cue of the T-maze, where seeking corrects (Friston, Rigoli, Ognibene, Mathys, FitzGerald and Pezzulo 2015); one proposal reads it as inherent self-verification and self-correction (Wen 2025, arXiv:2508.05766; candidate 7 of UE1's search, graded (b), weak). The law forbids that wording unqualified, not active inference's account, which adds novelty and structure learning (Friston, Lin, Frith, Pezzulo, Hobson and Ondobaka 2017; Da Costa and others 2020). The posterior laws are corollaries of posterior_single and posterior_le_iff; new is the seeking form. Graded in UE19's NOTE.",
@@ -184,8 +184,8 @@
     {
       "id": "expected-free-energy-and-its-terms",
       "detail": {
-        "en": "Expected free energy and its terms: the epistemic value over the reals, read only through the lumping the likelihood makes.",
-        "zh": "期望自由能及其诸项：实数上之认知价值，唯经似然所成之归并而读。"
+        "en": "Expected free energy and its terms: over the reals, read only through the lumping the likelihood makes; seeking by it with natural weights is among this law's policies (an instance), and where the agent's model is the core's, its posterior is the core's share given the course (givenCourse_eq_coursePosterior).",
+        "zh": "期望自由能及其诸项：于实数，唯经似然所成之归并而读；依之以自然数权重探求为此律之一策略（一实例），主体之模型即核心之模型时，其后验即核心于历程下之份额（givenCourse_eq_coursePosterior）。"
       }
     }
   ],
@@ -237,7 +237,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "9e197668e4c87c4ace407a86693dfccf530fb5d9ec81a056ced2dcbb7a6dfd73"
+      "sha256": "a9f62575313222b5c7375cbde76b62b23e10a8c9dcf7a93bb20430a90d169ecc"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue19-expected-free-energy/NOTE.md",
@@ -257,7 +257,12 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "fb52f044256608a41faf11728a17d5a5c971ead1b8dafffbc675122e452321a6"
+      "sha256": "e10ec490ab793eb224d00568a3195690d3a51c4f23938843d1a0ba315441e849"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue23-seeking-by-expected-free-energy/NOTE.md",
+      "role": "integration",
+      "sha256": "b252bc0fab2612fe6b69aa1f3efb24621ee0e20aa49bc635b676db38449dc50f"
     }
   ],
   "proof_bindings": [
@@ -273,6 +278,10 @@
     {
       "en": "29 October 2026: added (UE19), what seeking cannot separate: a tied pair keeps its prior order given every record, and a pair every experiment ties over every course of seeking, whatever the policy of choice; in the witness, seeking turns the order once an experiment separating it is chosen; after a review and a re-check; study section 453.",
       "zh": "2026年10月29日：新增（UE19），探求所不能分者：受并之二假设于每一记录下保其先验之序，每一实验皆并之二假设于每一探求历程下亦然，无论择取之策略；于例，一旦择取能分之实验，探求即转其序；经审查与复查；研究第 453 节。"
+    },
+    {
+      "en": "30 October 2026, board item UE23 (study section 464): the theorem joining this law to the periphery's expected free energy is proved there (givenCourse_eq_coursePosterior, givenCourse_le_iff, efe_seeking_keeps_order, in expected-free-energy-and-its-terms); the second and third does-not-show items, the next step and the related entry name the join. No statement, law or declaration changed.",
+      "zh": "2026年10月30日，工作板条目 UE23（研究第 464 节）：此律与外围之期望自由能相接之定理证于彼处（efe_seeking_keeps_order、givenCourse_eq_coursePosterior、givenCourse_le_iff，见 expected-free-energy-and-its-terms）；所不示之第二与第三项、下一步与关联条目指明此相接。无一陈述、律或声明改变。"
     }
   ]
 }

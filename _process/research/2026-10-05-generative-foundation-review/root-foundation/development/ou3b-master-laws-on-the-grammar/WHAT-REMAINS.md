@@ -196,7 +196,7 @@ Before the account goes to readers outside the work (the review packet, a note f
 **What a release must be able to say.**
 
 1. **The ethics on the root** (全四: U3's documents, then its Lean items 1 and 2). Readers from alignment read the ethics first. Today none of the five significance rows reaches the root, and 全四 is designed, not met. It is met when the five rows are stated in the root's terms in the package, with the condition and C still named premises.
-2. **Generation and widening** (全三: GW1 and GW2 on GW's line). The account's direction, 生生 compared by widening, needs the map's generation and the ethics' widening joined both ways, or their split stated as a central result. Today they are joined one way: keeping widening gives 全生成, and the converse does not hold. Either outcome meets the item. It is new mathematics, not restatement.
+2. **Generation and widening** (全三: GW6 on GW's line, claimed with GW1 and GW2 at `6376f0da3`). The account's direction, 生生 compared by widening, needs the map's generation and the ethics' widening joined both ways, or their split stated as a central result. Today they are joined one way: keeping widening gives 全生成, and the converse does not hold. Either outcome meets the item. It is new mathematics, not restatement.
 3. **Every central declaration placed** (全二). Of the 118 distinct central declarations, 44 reach the grammar, 16 are stated at a represented model, 4 hold on their own carrier and 54 are the rest. The item is met when each of the 54 is lifted, or its not entering is written with its reason. U1's seven interface laws for amounts must also be in the package (its §6 leaf), not only in scratch.
 4. **Plan §八 step 5** (丙一与验). Each conditional law is written as "Y 当且仅当 Z", with Z in the grammar and a counterexample where Z fails. That is what lets a reader check a law's hypotheses against a situation without reading the Lean.
 
@@ -287,7 +287,7 @@ The gate rows, "premise of the account" in U1 §4's table, become hypotheses on 
 - Their laws join the record generation-and-degeneration-at-two-grains, which is OU4's record, so this is its owner's yes.
 - GW1's calibration by excluded middle stays a lemma of GW1, not a result, as GW's note says.
 - The item is offered to the session that studied them (Join generation to widening), which claims it on the board with a design already reviewed and rechecked (REVIEW-GW, RECHECK-GW).
-- GW1 and GW2 are the release gate's item 2.
+- GW1 and GW2 close chapter 02's open question on the map's regions: coverage, and the split of a beginning on the root. They do not by themselves join generation and widening both ways; GW4's kind relay and GW5's one-way law with its failed converse already stand. The release gate's item 2 is met by **GW6**, claimed with them (`6376f0da3`): on the course's moments, keeping widening is exactly 全生成 at two grains under stated premises of deciding, and what separates generation under the one from widening is exactly loss, with an alternating chain as the witness. GW6's review checks that the two grains are fixed independently of widening, so that the join is not a verdict built into the choice of classes, and that each premise of deciding states what the need says about the course (AGENTS.md, the pure core).
 
 ## What this note does not do
 

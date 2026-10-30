@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-499 registered results: 468 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1155 curated edges join 427 results to the results they draw on.
+499 registered results: 468 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1156 curated edges join 427 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -129,7 +129,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [evolution-on-descent][] ← <a id="evolution-on-descent--living-on-and-descent"></a>[living-on-and-descent][] · <a id="evolution-on-descent--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="evolution-on-descent--more-needs-renewers"></a>[more-needs-renewers][] · <a id="evolution-on-descent--generation-is-replenishment"></a>[generation-is-replenishment][]
 - [exchanges-commute-unless-joined][] ← <a id="exchanges-commute-unless-joined--only-the-order-of-change-shows"></a>[only-the-order-of-change-shows][]
 - [exit-from-a-margin][] ← <a id="exit-from-a-margin--typicality-by-counting"></a>[typicality-by-counting][] · <a id="exit-from-a-margin--fulfillment-chance-floor"></a>[fulfillment-chance-floor][] · <a id="exit-from-a-margin--conditioning-by-restriction"></a>[conditioning-by-restriction][]
-- [expected-free-energy-and-its-terms][] ← <a id="expected-free-energy-and-its-terms--free-energy-bounds-surprisal"></a>[free-energy-bounds-surprisal][]
+- [expected-free-energy-and-its-terms][] ← <a id="expected-free-energy-and-its-terms--free-energy-bounds-surprisal"></a>[free-energy-bounds-surprisal][] · <a id="expected-free-energy-and-its-terms--what-seeking-cannot-separate"></a>[what-seeking-cannot-separate][]
 - [experiment-needs-return][] ← <a id="experiment-needs-return--joint-difference-making"></a>[joint-difference-making][] · <a id="experiment-needs-return--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="experiment-needs-return--testing-within-couplings"></a>[testing-within-couplings][]
 - [far-conveying-runs-the-family-down][] ← <a id="far-conveying-runs-the-family-down--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][]
 - [feedback-and-reach][] ← <a id="feedback-and-reach--closing-needs-net-draw"></a>[closing-needs-net-draw][] · <a id="feedback-and-reach--levels-of-closure"></a>[levels-of-closure][] · <a id="feedback-and-reach--four-cases-of-a-part"></a>[four-cases-of-a-part][]

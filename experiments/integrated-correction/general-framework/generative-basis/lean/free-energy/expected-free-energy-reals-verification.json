@@ -1,9 +1,9 @@
 {
   "status": "passed",
-  "utc": "20261030T043340.180184Z",
+  "utc": "20261030T101649.229011Z",
   "toolchain": "leanprover/lean4:v4.30.0-rc2",
   "mathlib_revision": "ea11ccc0c5c7c4c562742e918fe2e0b2814a58aa",
-  "retained_run": "expected-free-energy-reals-checks/20261030T043340.180184Z",
+  "retained_run": "expected-free-energy-reals-checks/20261030T101649.229011Z",
   "bridge_module": "ExpectedFreeEnergyReals",
   "compile_order": [
     "Becoming.Prelude",
@@ -64,6 +64,7 @@
     "Becoming.ConditionalWeights",
     "Becoming.FreeEnergyCounting",
     "FreeEnergyReals",
+    "Becoming.LumpedSeeking",
     "ExpectedFreeEnergyReals"
   ],
   "source_paths": {
@@ -125,6 +126,7 @@
     "Becoming.ConditionalWeights": "becoming/Becoming/ConditionalWeights.lean",
     "Becoming.FreeEnergyCounting": "becoming/Becoming/FreeEnergyCounting.lean",
     "FreeEnergyReals": "free-energy/FreeEnergyReals.lean",
+    "Becoming.LumpedSeeking": "becoming/Becoming/LumpedSeeking.lean",
     "ExpectedFreeEnergyReals": "free-energy/ExpectedFreeEnergyReals.lean"
   },
   "source_sha256": {
@@ -186,19 +188,21 @@
     "Becoming.ConditionalWeights": "479c8401487664728e63fd6d247dcfb89b2fd578185097251bcf2055cac0361f",
     "Becoming.FreeEnergyCounting": "f9087252c4c7d2d74e7f2288f4c3b089ac3fbe3da4c98af7126da9a16002d42c",
     "FreeEnergyReals": "829be4a72850ec218e919547c2bec124b8d13a78b14a0c34c891a4a0903f16d5",
-    "ExpectedFreeEnergyReals": "5e39061898c33c668d97f6bb6099bc88517dbc34ebc17ac0b6142a892262719a"
+    "Becoming.LumpedSeeking": "2dd8f4c21db56595f934b8939bc58cd2921e08bcce54cdceae9d6e31dcb3aced",
+    "ExpectedFreeEnergyReals": "c0f9c343586af9d6b379a53eaecd870836a6aa4448894d5fc46e45666b96f54b"
   },
   "checker_sha256": {
-    "check_expected_free_energy_reals.py": "fc48266dbef080763cf41e98b154601b1766ff672909c4f0694da3f2342fd303",
-    "check_becoming.py": "251c45a618edcb7157c275729c7a14db8a8ef8d5d2467d3aee611823903aa2e2"
+    "check_expected_free_energy_reals.py": "1b01d97ae07b8f38838c646b02a436f07d7384c6036d12d579829fb34e78a0e1",
+    "check_becoming.py": "553be792169b017e389dc102e84e8afdf4551471cf4206e7f0932caefed0e89e"
   },
   "source_commit": {
-    "main": "f27b3387f6e0b6460bde0c8f274d87e82e491ff8",
+    "main": "fda5416bed8a4cadd26690dce310d54bea14e019",
     "copied": [
-      "FreeEnergyReals.lean"
+      "ExpectedFreeEnergyReals.lean",
+      "check_expected_free_energy_reals.py"
     ]
   },
-  "scope": "On FreeEnergyReals, over Mathlib's reals, finite states and outcomes, and one policy with its predicted distribution over states given: expected free energy, risk (the divergence of the predicted outcomes from the preferred ones) plus ambiguity (the expected entropy of the likelihood), is the negative of the epistemic value less the pragmatic value (the expected log preference), with no hypothesis. The epistemic value is the divergence of the joint weights of states and outcomes from the product of the states' weights and the predicted outcomes, nonnegative where these are distributions, and the predicted outcomes' average of the divergence of FreeEnergyReals' posterior given each outcome from the states' weights. Where the likelihood reads a state only through its class, the epistemic value and the expected free energy are the classes', with their total weights, so two beliefs alike on the classes have one expected free energy; one likelihood for every state the policy may reach gives epistemic value nothing, and two states of one likelihood keep their prior ratio in the posterior under every outcome. Mathlib's conventions log 0 = 0 and x / 0 = 0 hold: where the predicted outcomes weigh an outcome of preference nothing, risk and pragmatic value are finite here though infinite as usually defined. That the weights are probabilities and the likelihood an agent's generative model are correspondences, not checked.",
+  "scope": "On FreeEnergyReals, over Mathlib's reals, finite states and outcomes, and one policy with its predicted distribution over states given: expected free energy, risk (the divergence of the predicted outcomes from the preferred ones) plus ambiguity (the expected entropy of the likelihood), is the negative of the epistemic value less the pragmatic value (the expected log preference), with no hypothesis. The epistemic value is the divergence of the joint weights of states and outcomes from the product of the states' weights and the predicted outcomes, nonnegative where these are distributions, and the predicted outcomes' average of the divergence of FreeEnergyReals' posterior given each outcome from the states' weights. Where the likelihood reads a state only through its class, the epistemic value and the expected free energy are the classes', with their total weights, so two beliefs alike on the classes have one expected free energy; one likelihood for every state the policy may reach gives epistemic value nothing, and two states of one likelihood keep their prior ratio in the posterior under every outcome. On Becoming.LumpedSeeking, for courses of experiments each chosen from the course so far, the hidden state fixed: the posterior after a course, FreeEnergyReals' posterior of the prior times the course's likelihood, is, with a nonnegative prior and likelihoods and where the course weighs something, the belief of least free energy among those zero wherever the joint weights are; choice weights reading the course drop out of it wherever they weigh something; with natural weights and the hypotheses listed once it is the core's share given a listed course whose choices weigh something, and the core's order of two shares given it is the order of the posterior. Choosing by a rule with natural weights reading the experiments' expected free energies is one of the core's policies, so the core's law holds at it (an instance, whatever the agent's model); over the reals a pair every experiment ties keeps its prior ratio in the posterior after every course, and its strict order where the course is possible under it and weighs something, so also under every policy whose choices weigh something, the softmax among them. Where every experiment's likelihood reads a state only through its class, conditioning commutes with the lumping: at the posterior after every course every experiment's expected free energy and epistemic value are the classes', and two priors alike on the classes choose alike under every rule and give every course one predictive weight, so for any likelihoods seeking by expected free energy reads the prior only through the weight it gives each likelihood profile. Mathlib's conventions log 0 = 0 and x / 0 = 0 hold: where the predicted outcomes weigh an outcome of preference nothing, risk and pragmatic value are finite here though infinite as usually defined. That the weights are probabilities and the likelihood an agent's generative model are correspondences, not checked.",
   "lean_steps": {
     "cache": "/Users/ren/.cache/becoming-lean",
     "fresh": false,
@@ -438,17 +442,21 @@
         "utc": "20261030T041128.406403Z",
         "retained": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue22/experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261030T041128.406403Z"
       },
+      "Becoming.LumpedSeeking.log": {
+        "utc": "20261030T083430.201599Z",
+        "retained": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue23/experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T083430.201599Z"
+      },
       "ExpectedFreeEnergyReals.log": {
-        "utc": "20261030T041201.476668Z",
-        "retained": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue22/experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T041201.476668Z"
+        "utc": "20261030T094242.922407Z",
+        "retained": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue23/experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T094242.922407Z"
       },
       "ExpectedFreeEnergyRealsAxiomAudit.log": {
-        "utc": "20261030T041201.476668Z",
-        "retained": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue22/experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T041201.476668Z"
+        "utc": "20261030T094242.922407Z",
+        "retained": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue23/experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T094242.922407Z"
       },
       "ExpectedFreeEnergyRealsSignatures.log": {
-        "utc": "20261030T041201.476668Z",
-        "retained": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue22/experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T041201.476668Z"
+        "utc": "20261030T094242.922407Z",
+        "retained": "/private/tmp/claude-501/-Users-ren-theories/7e73c253-c642-4ddd-ad8f-cc6d011978ec/scratchpad/wt-ue23/experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T094242.922407Z"
       }
     },
     "keys": {
@@ -510,9 +518,10 @@
       "Becoming.ConditionalWeights.log": "d5e2c8df43e0be0a30deda716cdff05b402ce9c7861faa67ec608251348361fd",
       "Becoming.FreeEnergyCounting.log": "52d27dfb4505fba26aa8e6c076a1498b81eafc95ea6154299c7c2fa88848888b",
       "FreeEnergyReals.log": "ecb17c6a746c99f5f2e8d9749354fc7b64ff82f9d5c63216107a9f9a1410e728",
-      "ExpectedFreeEnergyReals.log": "d024b3503736031a9f4aed69fbdcf505a510c703de55b9027b9f93b0a0f492db",
-      "ExpectedFreeEnergyRealsAxiomAudit.log": "2b987471519daad998cc5333413966a9c95b5426931b70616cc9dfae17f295c0",
-      "ExpectedFreeEnergyRealsSignatures.log": "243188a3e1c4b336e5286a850d13fa9c64337195f4776dfae6f17363c163b586"
+      "Becoming.LumpedSeeking.log": "ee3ab90cd1d348e7c1407c619f9cf7394f967ab39578c8e23e3489946034f601",
+      "ExpectedFreeEnergyReals.log": "6e20a6e03b30481a7ba7387f24684747e2990ecb48adb5104d895647f0747a67",
+      "ExpectedFreeEnergyRealsAxiomAudit.log": "4509e6217316e6b31188472bf245c49109680557426ba0f0b200091b6e03b7b7",
+      "ExpectedFreeEnergyRealsSignatures.log": "80fd5f04b4ddaa854063bdf7a38c0dab259289952804b36e5651f1683a147471"
     }
   },
   "inherited_receipts": {
@@ -640,6 +649,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -713,6 +723,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -777,6 +788,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -794,6 +806,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
       "free-energy/free-energy-reals-verification.json"
@@ -1254,6 +1267,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "becoming/fallible-inquiry-checks/20261013T110231.056199Z/verification.json",
       "becoming/fallible-inquiry-checks/20261013T113924.930862Z/verification.json",
@@ -1788,6 +1802,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -1836,6 +1851,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -2299,6 +2315,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "becoming/fallible-inquiry-checks/20261013T110231.056199Z/verification.json",
       "becoming/fallible-inquiry-checks/20261013T113924.930862Z/verification.json",
@@ -2519,6 +2536,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -2732,6 +2750,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
       "becoming/fallible-inquiry-verification.json",
@@ -2964,6 +2983,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
       "becoming/fallible-inquiry-verification.json",
@@ -3198,6 +3218,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
       "becoming/fallible-inquiry-verification.json",
@@ -3432,6 +3453,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
       "becoming/fallible-inquiry-verification.json",
@@ -3674,6 +3696,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
       "becoming/fallible-inquiry-verification.json",
@@ -3793,6 +3816,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -3823,6 +3847,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -3867,6 +3892,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -4074,6 +4100,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "deeper/judging-correspondence-checks/20261020T161948.968917Z/verification.json",
       "deeper/judging-correspondence-verification.json",
@@ -4291,6 +4318,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "deeper/judging-correspondence-checks/20261020T161948.968917Z/verification.json",
       "deeper/judging-correspondence-verification.json",
@@ -4318,6 +4346,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
       "free-energy/free-energy-reals-verification.json"
@@ -4345,6 +4374,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -4430,6 +4460,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -4539,6 +4570,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -4593,6 +4625,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -4608,6 +4641,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
       "free-energy/free-energy-reals-verification.json"
@@ -4902,6 +4936,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "becoming/fallible-inquiry-checks/20261018T063731.167536Z/verification.json",
       "becoming/fallible-inquiry-checks/20261018T095146.390681Z/verification.json",
@@ -5142,6 +5177,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
       "becoming/fallible-inquiry-verification.json",
@@ -5187,6 +5223,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
       "free-energy/free-energy-reals-verification.json"
@@ -5229,6 +5266,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -5276,6 +5314,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -5488,6 +5527,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -5536,6 +5576,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -5739,6 +5780,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "deeper/judging-correspondence-checks/20261020T161948.968917Z/verification.json",
       "deeper/judging-correspondence-verification.json",
@@ -5951,6 +5993,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -6157,6 +6200,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -6366,6 +6410,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -6410,6 +6455,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -6518,6 +6564,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -6569,6 +6616,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -6582,6 +6630,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
       "free-energy/free-energy-reals-verification.json"
@@ -6778,6 +6827,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
       "becoming/fallible-inquiry-verification.json",
@@ -6937,6 +6987,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -7080,6 +7131,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -7285,6 +7337,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
       "becoming/fallible-inquiry-verification.json",
@@ -7444,6 +7497,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -7475,6 +7529,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -7678,6 +7733,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -7710,6 +7766,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -7908,6 +7965,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -8110,6 +8168,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -8239,6 +8298,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -8369,6 +8429,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -8575,6 +8636,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
       "becoming/fallible-inquiry-verification.json",
@@ -8783,6 +8845,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -8833,6 +8896,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -8881,6 +8945,7 @@
       "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261029T134610.999747Z/verification.json",
       "free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
@@ -8890,6 +8955,7 @@
     "Becoming.FreeEnergyCounting": [
       "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
       "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
       "becoming/becoming-verification.json",
       "free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
       "free-energy/free-energy-reals-verification.json"
@@ -8897,6 +8963,17 @@
     "FreeEnergyReals": [
       "free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
       "free-energy/free-energy-reals-verification.json"
+    ],
+    "Becoming.LumpedSeeking": [
+      "becoming/becoming-checks/20261029T164943.729811Z/verification.json",
+      "becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "becoming/becoming-checks/20261029T191748.070149Z/verification.json",
+      "becoming/becoming-checks/20261029T200440.502813Z/verification.json",
+      "becoming/becoming-checks/20261029T204932.343754Z/verification.json",
+      "becoming/becoming-checks/20261029T210603.495422Z/verification.json",
+      "becoming/becoming-checks/20261029T213154.508889Z/verification.json",
+      "becoming/becoming-checks/20261030T075728.527064Z/verification.json",
+      "becoming/becoming-verification.json"
     ]
   },
   "lean_binary_sha256": "b48bc5ab229bd8b320a224b87e20fc428dba6fa8a1c054bd4fa6def846e19997",
@@ -8906,7 +8983,7 @@
     {
       "module": "ExpectedFreeEnergyReals",
       "layer": "periphery",
-      "theorems": 12,
+      "theorems": 49,
       "declarations": [
         {
           "kind": "def",
@@ -8991,6 +9068,194 @@
         {
           "kind": "theorem",
           "name": "Becoming.ExpectedFreeEnergy.epistemic_eq_expected_gain"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ExpectedFreeEnergy.courseLik"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ExpectedFreeEnergy.choiceWeight"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ExpectedFreeEnergy.coursePosterior"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ExpectedFreeEnergy.courseWeight"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ExpectedFreeEnergy.efeChoice"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ExpectedFreeEnergy.softmax"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.courseLik_nonneg"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.courseLik_pos"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.coursePosterior_minimizes"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.posterior_choice_eq_coursePosterior"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.choiceWeight_ne_zero"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.courseLik_rescale"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.coursePosterior_rescale"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.softmax_pos"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.sum_softmax"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.softmax_choiceWeight_pos"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.cast_seekWeight"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.mass_count"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.givenCourse_eq_coursePosterior"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.unchosen_share_zero"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.share_le_iff_toReal_le"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.givenCourse_le_iff"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.courseLik_tied"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.coursePosterior_ratio_kept"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.coursePosterior_order_kept"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.softmax_order_kept"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.courseLik_through"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.coarse_div"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.coarse_coursePosterior"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.efe_through_course"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.epistemic_through_course"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.courseWeight_through"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.efeChoice_same_of_coarse"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.seeking_blind_to_split"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.softmax_blind_to_split"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.seeking_reads_profiles"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.Witness.agreeing_pos"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.Witness.separating_turns"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.Witness.unchosen_course"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ExpectedFreeEnergy.Witness.biasClass"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothingByClass"
+        },
+        {
+          "kind": "def",
+          "name": "Becoming.ExpectedFreeEnergy.Witness.swappedPrior"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing_through"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.Witness.priors_alike"
+        },
+        {
+          "kind": "theorem",
+          "name": "Becoming.ExpectedFreeEnergy.Witness.split_unseen"
         }
       ],
       "axiom_dependencies": {
@@ -9098,13 +9363,239 @@
           "Classical.choice",
           "Quot.sound",
           "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.courseLik": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.choiceWeight": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.coursePosterior": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.courseWeight": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.efeChoice": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.softmax": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.courseLik_nonneg": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.courseLik_pos": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.coursePosterior_minimizes": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.posterior_choice_eq_coursePosterior": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.choiceWeight_ne_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.courseLik_rescale": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.coursePosterior_rescale": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.softmax_pos": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.sum_softmax": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.softmax_choiceWeight_pos": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.cast_seekWeight": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.mass_count": [
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.givenCourse_eq_coursePosterior": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.unchosen_share_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.share_le_iff_toReal_le": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.givenCourse_le_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.courseLik_tied": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.coursePosterior_ratio_kept": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.coursePosterior_order_kept": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.softmax_order_kept": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.courseLik_through": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.coarse_div": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.coarse_coursePosterior": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.efe_through_course": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.epistemic_through_course": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.courseWeight_through": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.efeChoice_same_of_coarse": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.seeking_blind_to_split": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.softmax_blind_to_split": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.seeking_reads_profiles": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.Witness.agreeing_pos": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.Witness.separating_turns": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.Witness.unchosen_course": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.Witness.biasClass": [],
+        "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothingByClass": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.Witness.swappedPrior": [],
+        "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing_through": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.Witness.priors_alike": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Becoming.ExpectedFreeEnergy.Witness.split_unseen": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
         ]
       },
       "kernel_checked": true
     }
   ],
   "artifact_sha256": {
-    "FreeEnergyReals.lean": "829be4a72850ec218e919547c2bec124b8d13a78b14a0c34c891a4a0903f16d5",
+    "ExpectedFreeEnergyReals.lean": "c0f9c343586af9d6b379a53eaecd870836a6aa4448894d5fc46e45666b96f54b",
+    "check_expected_free_energy_reals.py": "1b01d97ae07b8f38838c646b02a436f07d7384c6036d12d579829fb34e78a0e1",
     "version.log": "6b38d6160c0223bc189f88caad3d56588b06ca7af2b81d19cb4dbcef5024f387"
   }
 }

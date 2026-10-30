@@ -56,9 +56,9 @@
   ]
  },
  "counts": {
-  "laws": 3817,
+  "laws": 3822,
   "no_declarations": 9,
-  "outside": 361,
+  "outside": 366,
   "grammar": 749,
   "balance, represented": 645,
   "anchor, not reached": 134,
@@ -15106,6 +15106,135 @@
     "outside": [
      "Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped",
      "Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped"
+    ]
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.courseLik",
+     "Becoming.ExpectedFreeEnergy.choiceWeight",
+     "Becoming.ExpectedFreeEnergy.coursePosterior",
+     "Becoming.ExpectedFreeEnergy.courseLik_nonneg",
+     "Becoming.ExpectedFreeEnergy.courseLik_pos",
+     "Becoming.ExpectedFreeEnergy.coursePosterior_minimizes",
+     "Becoming.ExpectedFreeEnergy.posterior_choice_eq_coursePosterior",
+     "Becoming.ExpectedFreeEnergy.choiceWeight_ne_zero",
+     "Becoming.ExpectedFreeEnergy.courseLik_rescale",
+     "Becoming.ExpectedFreeEnergy.coursePosterior_rescale"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.courseLik",
+     "Becoming.ExpectedFreeEnergy.choiceWeight",
+     "Becoming.ExpectedFreeEnergy.coursePosterior",
+     "Becoming.ExpectedFreeEnergy.courseLik_nonneg",
+     "Becoming.ExpectedFreeEnergy.courseLik_pos",
+     "Becoming.ExpectedFreeEnergy.coursePosterior_minimizes",
+     "Becoming.ExpectedFreeEnergy.posterior_choice_eq_coursePosterior",
+     "Becoming.ExpectedFreeEnergy.choiceWeight_ne_zero",
+     "Becoming.ExpectedFreeEnergy.courseLik_rescale",
+     "Becoming.ExpectedFreeEnergy.coursePosterior_rescale"
+    ]
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.cast_seekWeight",
+     "Becoming.ExpectedFreeEnergy.mass_count",
+     "Becoming.ExpectedFreeEnergy.givenCourse_eq_coursePosterior",
+     "Becoming.ExpectedFreeEnergy.unchosen_share_zero",
+     "Becoming.ExpectedFreeEnergy.share_le_iff_toReal_le",
+     "Becoming.ExpectedFreeEnergy.givenCourse_le_iff",
+     "Becoming.ExpectedFreeEnergy.Witness.unchosen_course"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.cast_seekWeight",
+     "Becoming.ExpectedFreeEnergy.mass_count",
+     "Becoming.ExpectedFreeEnergy.givenCourse_eq_coursePosterior",
+     "Becoming.ExpectedFreeEnergy.unchosen_share_zero",
+     "Becoming.ExpectedFreeEnergy.share_le_iff_toReal_le",
+     "Becoming.ExpectedFreeEnergy.givenCourse_le_iff",
+     "Becoming.ExpectedFreeEnergy.Witness.unchosen_course"
+    ]
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.courseWeight",
+     "Becoming.ExpectedFreeEnergy.efeChoice",
+     "Becoming.ExpectedFreeEnergy.softmax",
+     "Becoming.ExpectedFreeEnergy.softmax_pos",
+     "Becoming.ExpectedFreeEnergy.sum_softmax",
+     "Becoming.ExpectedFreeEnergy.softmax_choiceWeight_pos",
+     "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order",
+     "Becoming.ExpectedFreeEnergy.courseLik_tied",
+     "Becoming.ExpectedFreeEnergy.coursePosterior_ratio_kept",
+     "Becoming.ExpectedFreeEnergy.coursePosterior_order_kept",
+     "Becoming.ExpectedFreeEnergy.softmax_order_kept",
+     "Becoming.ExpectedFreeEnergy.Witness.agreeing_pos",
+     "Becoming.ExpectedFreeEnergy.Witness.separating_turns"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.courseWeight",
+     "Becoming.ExpectedFreeEnergy.efeChoice",
+     "Becoming.ExpectedFreeEnergy.softmax",
+     "Becoming.ExpectedFreeEnergy.softmax_pos",
+     "Becoming.ExpectedFreeEnergy.sum_softmax",
+     "Becoming.ExpectedFreeEnergy.softmax_choiceWeight_pos",
+     "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order",
+     "Becoming.ExpectedFreeEnergy.courseLik_tied",
+     "Becoming.ExpectedFreeEnergy.coursePosterior_ratio_kept",
+     "Becoming.ExpectedFreeEnergy.coursePosterior_order_kept",
+     "Becoming.ExpectedFreeEnergy.softmax_order_kept",
+     "Becoming.ExpectedFreeEnergy.Witness.agreeing_pos",
+     "Becoming.ExpectedFreeEnergy.Witness.separating_turns"
+    ]
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.courseLik_through",
+     "Becoming.ExpectedFreeEnergy.coarse_div",
+     "Becoming.ExpectedFreeEnergy.coarse_coursePosterior",
+     "Becoming.ExpectedFreeEnergy.efe_through_course",
+     "Becoming.ExpectedFreeEnergy.epistemic_through_course",
+     "Becoming.ExpectedFreeEnergy.courseWeight_through",
+     "Becoming.ExpectedFreeEnergy.efeChoice_same_of_coarse",
+     "Becoming.ExpectedFreeEnergy.seeking_blind_to_split",
+     "Becoming.ExpectedFreeEnergy.softmax_blind_to_split",
+     "Becoming.ExpectedFreeEnergy.seeking_reads_profiles"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.courseLik_through",
+     "Becoming.ExpectedFreeEnergy.coarse_div",
+     "Becoming.ExpectedFreeEnergy.coarse_coursePosterior",
+     "Becoming.ExpectedFreeEnergy.efe_through_course",
+     "Becoming.ExpectedFreeEnergy.epistemic_through_course",
+     "Becoming.ExpectedFreeEnergy.courseWeight_through",
+     "Becoming.ExpectedFreeEnergy.efeChoice_same_of_coarse",
+     "Becoming.ExpectedFreeEnergy.seeking_blind_to_split",
+     "Becoming.ExpectedFreeEnergy.softmax_blind_to_split",
+     "Becoming.ExpectedFreeEnergy.seeking_reads_profiles"
+    ]
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.Witness.biasClass",
+     "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing",
+     "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothingByClass",
+     "Becoming.ExpectedFreeEnergy.Witness.swappedPrior",
+     "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing_through",
+     "Becoming.ExpectedFreeEnergy.Witness.priors_alike",
+     "Becoming.ExpectedFreeEnergy.Witness.split_unseen"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.Witness.biasClass",
+     "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing",
+     "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothingByClass",
+     "Becoming.ExpectedFreeEnergy.Witness.swappedPrior",
+     "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing_through",
+     "Becoming.ExpectedFreeEnergy.Witness.priors_alike",
+     "Becoming.ExpectedFreeEnergy.Witness.split_unseen"
     ]
    }
   ],

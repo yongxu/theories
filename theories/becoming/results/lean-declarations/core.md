@@ -5091,40 +5091,87 @@ Contains 9 textual `#print axioms` commands; their results belong to the origina
 <a id="module-08914cd7e653"></a>
 
 <details>
-<summary>ExpectedFreeEnergyReals.lean — 21 explicit declarations</summary>
+<summary>ExpectedFreeEnergyReals.lean — 68 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean) · [Theory](../../chapters/03-KNOWING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean`
 
-Imports: `FreeEnergyReals`
+Imports: `FreeEnergyReals`, `Becoming.LumpedSeeking`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L84) | 84 |
-| [Becoming.ExpectedFreeEnergy.epistemic_eq_divergence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L134) | 134 |
-| [Becoming.ExpectedFreeEnergy.epistemic_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L155) | 155 |
-| [Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L201) | 201 |
-| [Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L219) | 219 |
-| [Becoming.ExpectedFreeEnergy.sum_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L238) | 238 |
-| [Becoming.ExpectedFreeEnergy.predicted_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L248) | 248 |
-| [Becoming.ExpectedFreeEnergy.epistemic_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L255) | 255 |
-| [Becoming.ExpectedFreeEnergy.expectedFreeEnergy_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L277) | 277 |
-| [Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L289) | 289 |
-| [Becoming.ExpectedFreeEnergy.gain_term](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L301) | 301 |
-| [Becoming.ExpectedFreeEnergy.epistemic_eq_expected_gain](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L315) | 315 |
+| [Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L139) | 139 |
+| [Becoming.ExpectedFreeEnergy.epistemic_eq_divergence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L189) | 189 |
+| [Becoming.ExpectedFreeEnergy.epistemic_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L210) | 210 |
+| [Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L256) | 256 |
+| [Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L274) | 274 |
+| [Becoming.ExpectedFreeEnergy.sum_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L293) | 293 |
+| [Becoming.ExpectedFreeEnergy.predicted_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L303) | 303 |
+| [Becoming.ExpectedFreeEnergy.epistemic_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L310) | 310 |
+| [Becoming.ExpectedFreeEnergy.expectedFreeEnergy_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L332) | 332 |
+| [Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L344) | 344 |
+| [Becoming.ExpectedFreeEnergy.gain_term](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L356) | 356 |
+| [Becoming.ExpectedFreeEnergy.epistemic_eq_expected_gain](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L370) | 370 |
+| [Becoming.ExpectedFreeEnergy.courseLik_nonneg](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L435) | 435 |
+| [Becoming.ExpectedFreeEnergy.courseLik_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L441) | 441 |
+| [Becoming.ExpectedFreeEnergy.coursePosterior_minimizes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L451) | 451 |
+| [Becoming.ExpectedFreeEnergy.posterior_choice_eq_coursePosterior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L466) | 466 |
+| [Becoming.ExpectedFreeEnergy.choiceWeight_ne_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L478) | 478 |
+| [Becoming.ExpectedFreeEnergy.courseLik_rescale](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L485) | 485 |
+| [Becoming.ExpectedFreeEnergy.coursePosterior_rescale](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L497) | 497 |
+| [Becoming.ExpectedFreeEnergy.softmax_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L506) | 506 |
+| [Becoming.ExpectedFreeEnergy.sum_softmax](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L510) | 510 |
+| [Becoming.ExpectedFreeEnergy.softmax_choiceWeight_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L516) | 516 |
+| [Becoming.ExpectedFreeEnergy.cast_seekWeight](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L525) | 525 |
+| [Becoming.ExpectedFreeEnergy.mass_count](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L536) | 536 |
+| [Becoming.ExpectedFreeEnergy.givenCourse_eq_coursePosterior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L554) | 554 |
+| [Becoming.ExpectedFreeEnergy.unchosen_share_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L590) | 590 |
+| [Becoming.ExpectedFreeEnergy.share_le_iff_toReal_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L605) | 605 |
+| [Becoming.ExpectedFreeEnergy.givenCourse_le_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L624) | 624 |
+| [Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L653) | 653 |
+| [Becoming.ExpectedFreeEnergy.courseLik_tied](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L674) | 674 |
+| [Becoming.ExpectedFreeEnergy.coursePosterior_ratio_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L683) | 683 |
+| [Becoming.ExpectedFreeEnergy.coursePosterior_order_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L695) | 695 |
+| [Becoming.ExpectedFreeEnergy.softmax_order_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L709) | 709 |
+| [Becoming.ExpectedFreeEnergy.courseLik_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L730) | 730 |
+| [Becoming.ExpectedFreeEnergy.coarse_div](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L735) | 735 |
+| [Becoming.ExpectedFreeEnergy.coarse_coursePosterior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L743) | 743 |
+| [Becoming.ExpectedFreeEnergy.efe_through_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L766) | 766 |
+| [Becoming.ExpectedFreeEnergy.epistemic_through_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L776) | 776 |
+| [Becoming.ExpectedFreeEnergy.courseWeight_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L783) | 783 |
+| [Becoming.ExpectedFreeEnergy.efeChoice_same_of_coarse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L793) | 793 |
+| [Becoming.ExpectedFreeEnergy.seeking_blind_to_split](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L809) | 809 |
+| [Becoming.ExpectedFreeEnergy.softmax_blind_to_split](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L829) | 829 |
+| [Becoming.ExpectedFreeEnergy.seeking_reads_profiles](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L847) | 847 |
+| [Becoming.ExpectedFreeEnergy.Witness.agreeing_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L866) | 866 |
+| [Becoming.ExpectedFreeEnergy.Witness.separating_turns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L875) | 875 |
+| [Becoming.ExpectedFreeEnergy.Witness.unchosen_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L901) | 901 |
+| [Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L941) | 941 |
+| [Becoming.ExpectedFreeEnergy.Witness.priors_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L953) | 953 |
+| [Becoming.ExpectedFreeEnergy.Witness.split_unseen](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L971) | 971 |
 
 Definitions and types:
 
-- `def` [Becoming.ExpectedFreeEnergy.predicted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L54) (L54)
-- `def` [Becoming.ExpectedFreeEnergy.risk](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L59) (L59)
-- `def` [Becoming.ExpectedFreeEnergy.ambiguity](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L63) (L63)
-- `def` [Becoming.ExpectedFreeEnergy.expectedFreeEnergy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L67) (L67)
-- `def` [Becoming.ExpectedFreeEnergy.pragmatic](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L73) (L73)
-- `def` [Becoming.ExpectedFreeEnergy.epistemic](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L79) (L79)
-- `def` [Becoming.ExpectedFreeEnergy.joint](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L124) (L124)
-- `def` [Becoming.ExpectedFreeEnergy.product](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L127) (L127)
-- `def` [Becoming.ExpectedFreeEnergy.coarse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L235) (L235)
+- `def` [Becoming.ExpectedFreeEnergy.predicted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L109) (L109)
+- `def` [Becoming.ExpectedFreeEnergy.risk](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L114) (L114)
+- `def` [Becoming.ExpectedFreeEnergy.ambiguity](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L118) (L118)
+- `def` [Becoming.ExpectedFreeEnergy.expectedFreeEnergy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L122) (L122)
+- `def` [Becoming.ExpectedFreeEnergy.pragmatic](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L128) (L128)
+- `def` [Becoming.ExpectedFreeEnergy.epistemic](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L134) (L134)
+- `def` [Becoming.ExpectedFreeEnergy.joint](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L179) (L179)
+- `def` [Becoming.ExpectedFreeEnergy.product](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L182) (L182)
+- `def` [Becoming.ExpectedFreeEnergy.coarse](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L290) (L290)
+- `def` [Becoming.ExpectedFreeEnergy.courseLik](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L393) (L393)
+- `def` [Becoming.ExpectedFreeEnergy.choiceWeight](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L399) (L399)
+- `def` [Becoming.ExpectedFreeEnergy.coursePosterior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L408) (L408)
+- `def` [Becoming.ExpectedFreeEnergy.courseWeight](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L415) (L415)
+- `def` [Becoming.ExpectedFreeEnergy.efeChoice](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L423) (L423)
+- `def` [Becoming.ExpectedFreeEnergy.softmax](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L429) (L429)
+- `def` [Becoming.ExpectedFreeEnergy.Witness.biasClass](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L922) (L922)
+- `def` [Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L926) (L926)
+- `def` [Becoming.ExpectedFreeEnergy.Witness.agreeOrNothingByClass](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L930) (L930)
+- `def` [Becoming.ExpectedFreeEnergy.Witness.swappedPrior](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean#L935) (L935)
 
 </details>
 
