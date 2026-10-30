@@ -2,8 +2,8 @@
   "schema_version": 1,
   "id": "universal-intelligence-session",
   "title": {
-    "en": "Universal metaethics of all intelligence",
-    "zh": "所有智能的普遍元伦理"
+    "en": "The ethics for life, and every intelligence formed within it",
+    "zh": "生命之伦理，及在其中形成的一切智能"
   },
   "scope_type": "authorized-session",
   "state": "unmarked",
@@ -12,8 +12,8 @@
     "en": "The original universal-intelligence session and explicitly authorized continuations; not automatically every repository task’s objective."
   },
   "objective": {
-    "zh": "证明所有智能的普遍元伦理，说明在整体之内形成的相互联系与分化的能动性。10 月 8 日的延续以生命的意义，从已形成的关系位置与受支承的可见未来，建立正面的生成根据与可修订的实践方向。这项工作现属生成／变化之论（第七章，意义、比较与实践判断）；公开 README 以已确立的结论及其有范围的证据开头。",
-    "en": "Prove a universal metaethics of all intelligence, explaining interconnection and differentiated agency formed within the whole. The 8 October continuation uses living significance to establish positive generative warrant and revisable practical direction from formed relational positions and supported visible futures. The work is now part of the Theory of Becoming (chapter 7, significance, comparison and practical judgment); the public README leads with established conclusions and their scoped evidence."
+    "zh": "把伦理表述为生命之伦理：其律对一切关系、一切类皆有证明；其立场是生命自身的立场，并如实言明；凡自身之线经由生命的智能，皆在其所及之内（第七章 §4.6，在 P1–P4 之下）；不主张约束一切可能之心。是否存在更强的普遍根据，仍是开放的问题，伦理不待其解决。这项工作属生成／变化之论（第七章，意义、比较与实践判断）；公开 README 以已确立的结论及其有范围的证据开头。",
+    "en": "State the ethics as life's: its laws proved for every relation and every class, its stance life's own and said to be so, reaching every intelligence whose own line runs through life (chapter 7 §4.6, under P1–P4), with no claim to bind every possible mind. Whether a stronger, universal warrant exists stays an open question the ethics does not wait on. The work is part of the Theory of Becoming (chapter 7, significance, comparison and practical judgment); the public README leads with established conclusions and their scoped evidence."
   },
   "premises": {
     "zh": "规范普遍性、实际遵循和当前表述的唯一必要性必须分别论证。 保留真实生成可能与新证据纠正判断两层开放；完整积分、全知和整体严格改善不是正面根据的前提。",
@@ -31,7 +31,9 @@
     "sources/15-codex-theory-conversations/2026-10-08-readme-research-progress-and-push.md",
     "sources/15-codex-theory-conversations/2026-10-09-theory-of-becoming-name.md",
     "sources/15-codex-theory-conversations/2026-10-09-monist-evaluator-grounding.md",
-    "sources/15-codex-theory-conversations/2026-10-09-one-theory-unification.md"
+    "sources/15-codex-theory-conversations/2026-10-09-one-theory-unification.md",
+    "sources/15-codex-theory-conversations/2026-10-30-no-absolute-good-the-way-for-life.md",
+    "sources/15-codex-theory-conversations/2026-10-30-goal-the-ethics-for-life-approved.md"
   ],
   "result_ids": [
     "universal-practical-warrant",
