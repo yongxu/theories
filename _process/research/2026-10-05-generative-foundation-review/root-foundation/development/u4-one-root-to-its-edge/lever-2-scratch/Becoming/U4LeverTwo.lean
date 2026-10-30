@@ -2,6 +2,7 @@ import Becoming.Grammar
 import Becoming.SelectionLevels
 import Becoming.GroupEnding
 import Becoming.Transmission
+import Becoming.WorldRepresentation
 
 /-!
 # U4, lever 2 (scratch): evolution's rows read on the root
@@ -34,6 +35,11 @@ review (`../REVIEW-U4-L2.md`). It checks the readings the audit leans on.
 * **Coming to stand is given to.** `no_new_dependence_of_given` is `Flow.no_new_dependence` with
   balance weakened to that inclusion; balance is one way to meet it
   (`no_new_dependence_from_balance`), and `Ungiven` shows it cannot be dropped.
+* **After the review: witnesses and two statements.** "Transmission never lowers" is descent
+  within the trait's order (`unlowered_iff_within`, `unlowered_at_iff`). The gate's first part
+  on occurrences, as U2 reads the second (`acting_iff_occurrences`). Each part of the gate cannot
+  be dropped from rows 1–3 (`NeedOverLevel`) or rows 7 and 8 (`LowGives`); row 14's gate and
+  `inactive` hypothesis (`EndsAmong`) and its cancellation (`Lifted`) cannot be dropped.
 
 The modelling choices are listed in the audit's §8.
 -/
@@ -618,6 +624,400 @@ theorem not_given : ¬ (web.ComesToStand 0 true → ∃ g, flow.DescendsAt web 0
     | ⟨g, descends⟩ => nomatch (descends.1 : g ∈ ([] : List Bool))
 
 end Ungiven
+
+/-! ## Never lowering as descent within the trait's order -/
+
+/-- Keeping or rising under a reading: an order (reflexive, transitive), not a class. -/
+def rising (f : Occ α → Nat) : «际» (Occ α) := fun u v => f u ≤ f v
+
+/-- **"Transmission never lowers" is descent within the trait's order**: what transmission lowered
+is nothing exactly where every step of descent keeps or raises the trait. -/
+theorem unlowered_iff_within (ps : List α) (kids : α → List α) (a b : α → Nat) :
+    lowered ps kids a b = 0 ↔ «则» (descent ps kids) (rising (trait a b)) :=
+  ⟨fun none u v ⟨p, k, hu, hv, mp, mk⟩ => by
+      subst hu
+      subst hv
+      exact le_of_excess_zero
+        (zero_of_total_zero _ (kids p) (zero_of_total_zero _ ps none p mp) k mk),
+   fun within => SelectionTerm.total_zero_of fun p mp => SelectionTerm.total_zero_of fun k mk =>
+     SelectionTerm.excess_of_le (within (false, p) (true, k) ⟨p, k, rfl, rfl, mp, mk⟩)⟩
+
+/-- Row 7's hypothesis at a generation: `loweredAt t = 0` is listed descent within the trait's
+order. -/
+theorem unlowered_at_iff (G : SelectionTerm.Generations α) (t : Nat) :
+    G.loweredAt t = 0 ↔
+      «则» (descent (G.family t) (G.kids t)) (rising (trait (G.amount t) (G.amount (t + 1)))) :=
+  unlowered_iff_within _ _ _ _
+
+/-! ## The gate's first part on occurrences, as U2 reads the second -/
+
+/-- Giving on occurrences, within a step, read by its sign (as U2 reads requiring). -/
+def givingOcc (L : Flow X X) : «际» (Nat × X) :=
+  World.withinStep fun t g x => g ∈ L.present t ∧ 0 < L.give t g x
+
+/-- The occurrences active at their step. -/
+def activeOcc (W : Web X X) (o : Nat × X) : Prop := W.active o.1 o.2
+
+/-- **"Only active formations give", on occurrences**: giving lies within giving from an active
+occurrence, the form of U2's `ModelStatements.dependent_iff` for the gate's second part. -/
+theorem acting_iff_occurrences {L : Flow X X} {W : Web X X} :
+    L.Acting W ↔ «则» (givingOcc L) («而» (Web.partialIdentity (activeOcc W)) (givingOcc L)) :=
+  ⟨fun acting o z gz => ⟨o, ⟨rfl, acting o.1 o.2 z.2 gz.2.1 gz.2.2⟩, gz⟩,
+   fun incl t f c present pos => match incl (t, f) (t, c) ⟨rfl, present, pos⟩ with
+     | ⟨_, ⟨rfl, act⟩, _⟩ => act⟩
+
+/-! ## Membership in short lists -/
+
+theorem not_mem_nil {β : Type} {x : β} : ¬ x ∈ ([] : List β) := fun m => nomatch m
+
+theorem mem_single {β : Type} {x y : β} : x ∈ [y] → x = y
+  | .head _ => rfl
+  | .tail _ m => nomatch m
+
+theorem mem_pair {β : Type} {x y z : β} : x ∈ [y, z] → x = y ∨ x = z
+  | .head _ => .inl rfl
+  | .tail _ m => .inr (mem_single m)
+
+theorem mem_three {β : Type} {x a b c : β} : x ∈ [a, b, c] → x = a ∨ x = b ∨ x = c
+  | .head _ => .inl rfl
+  | .tail _ m => .inr (mem_pair m)
+
+/-! ## The gate cannot be dropped from rows 1–3
+
+One parent `0` depends on the condition `2` at a need of 2, against a level of none, and gives to
+one offspring `1`, which comes to stand and depends on `2` at the same need. With every formation
+active (`act = true`), only active formations give and activity does not need support. With none
+active (`act = false`), activity needs support and an inactive formation gives. Either way every
+other hypothesis of rows 1–3 holds and each row's conclusion fails. -/
+
+namespace NeedOverLevel
+
+def web (act : Bool) : Web Nat Nat where
+  level t _ := t
+  active _ _ := act = true
+  requires _ _ c := c = 2
+  need _ _ _ := 2
+  draws _ _ _ := False
+
+def flow : Flow Nat Nat where
+  present _ := [0]
+  take _ _ _ := 0
+  give _ _ _ := 1
+
+def ps : List Nat := [0]
+
+def kids : Nat → List Nat := fun _ => [1]
+
+theorem acting : flow.Acting (web true) := fun _ _ _ _ _ => rfl
+
+theorem not_dependent : ¬ (web true).Dependent := fun dependent =>
+  absurd (dependent 0 0 rfl 2 rfl) (by decide)
+
+theorem not_acting : ¬ flow.Acting (web false) := fun acting =>
+  Bool.noConfusion (acting 0 0 1 (.head _) Nat.zero_lt_one)
+
+theorem dependent : (web false).Dependent := fun _ _ active => Bool.noConfusion active
+
+/-- Each part of the gate fails in one of the two webs and holds in the other. -/
+theorem gate_parts : (flow.Acting (web true) ∧ ¬ (web true).Dependent) ∧
+    (¬ flow.Acting (web false) ∧ (web false).Dependent) :=
+  ⟨⟨acting, not_dependent⟩, ⟨not_acting, dependent⟩⟩
+
+theorem descend (act : Bool) : ∀ p k, p ∈ ps → k ∈ kids p → flow.DescendsAt (web act) 0 k p :=
+  fun _ _ mp _ => ⟨mp, Nat.zero_lt_one, Nat.lt_irrefl 0, Nat.zero_lt_one⟩
+
+theorem depends (act : Bool) : ∀ p, p ∈ ps → (web act).requires 0 p 2 := fun _ _ => rfl
+
+theorem transmits (act : Bool) : flow.TransmitsWithin (web act) 2 0 :=
+  fun _ _ _ _ _ => ⟨rfl, Nat.le_refl _⟩
+
+/-- Row 1's conclusion fails, read with the trait at none. -/
+theorem selection_fails (act : Bool) :
+    ¬ offspring ps kids (fun _ => 0) + lowered ps kids (fun p => (web act).need 0 p 2) (fun _ => 0) ≤
+      selected ps kids (fun _ => (web act).level 0 2) +
+        raised ps kids (fun p => (web act).need 0 p 2) (fun _ => 0) := by
+  cases act <;> decide
+
+/-- Row 2's conclusion fails at the one descent. -/
+theorem transmitted_fails (act : Bool) : ¬ (web act).need (0 + 1) 1 2 ≤ (web act).level 0 2 + 0 := by
+  cases act <;> decide
+
+/-- Row 3's conclusion fails. -/
+theorem selected_fails (act : Bool) :
+    ¬ selected ps kids (fun p => (web act).need 0 p 2) ≤ selected ps kids (fun _ => (web act).level 0 2) := by
+  cases act <;> decide
+
+end NeedOverLevel
+
+/-! ## The gate cannot be dropped from rows 7 and 8
+
+Two members: `0`, with the amount at one and depending on nothing, and `1`, with the amount at
+none and depending on the condition `9` at a need above its level, so not supported. The
+supported member has the highest amount, transmission is exact, and `1` gives to two offspring
+that come to stand. Its activity breaks the gate's second part (`act = true`); without activity,
+its giving breaks the first (`act = false`). The mean falls from one half to none. -/
+
+namespace LowGives
+
+def web (act : Bool) : Web Nat Nat where
+  level t _ := t
+  active _ _ := act = true
+  requires _ x c := x = 1 ∧ c = 9
+  need _ _ _ := 2
+  draws _ _ _ := False
+
+def flow : Flow Nat Nat where
+  present _ := [0, 1]
+  take _ _ _ := 0
+  give _ _ _ := 1
+
+def gens : SelectionTerm.Generations Nat where
+  first := [0, 1]
+  kids t := match t with
+    | 0 => fun p => match p with
+      | 1 => [2, 3]
+      | _ => []
+    | _ + 1 => fun _ => []
+  amount t := match t with
+    | 0 => fun p => match p with
+      | 0 => 1
+      | _ => 0
+    | _ + 1 => fun _ => 0
+
+theorem acting : flow.Acting (web true) := fun _ _ _ _ _ => rfl
+
+theorem not_dependent : ¬ (web true).Dependent := fun dependent =>
+  absurd (dependent 0 1 rfl 9 ⟨rfl, rfl⟩) (by decide)
+
+theorem not_acting : ¬ flow.Acting (web false) := fun acting =>
+  Bool.noConfusion (acting 0 1 2 (.tail _ (.head _)) Nat.zero_lt_one)
+
+theorem dependent : (web false).Dependent := fun _ _ active => Bool.noConfusion active
+
+theorem gate_parts : (flow.Acting (web true) ∧ ¬ (web true).Dependent) ∧
+    (¬ flow.Acting (web false) ∧ (web false).Dependent) :=
+  ⟨⟨acting, not_dependent⟩, ⟨not_acting, dependent⟩⟩
+
+theorem descended (act : Bool) : SelectionTerm.Flow.Descended flow (web act) gens := by
+  intro t p k mp mk
+  cases t with
+  | zero => exact ⟨mp, Nat.zero_lt_one, Nat.lt_irrefl 0, Nat.zero_lt_one⟩
+  | succ n => exact absurd (mk : k ∈ ([] : List Nat)) not_mem_nil
+
+theorem top (act : Bool) : ∀ t p, p ∈ gens.family t → (web act).Supported t p →
+    ∀ q, q ∈ gens.family t → gens.amount t q ≤ gens.amount t p := by
+  intro t p mp supported q mq
+  cases t with
+  | zero =>
+    cases mem_pair (mp : p ∈ [0, 1]) with
+    | inl e =>
+      subst e
+      cases mem_pair (mq : q ∈ [0, 1]) with
+      | inl e' => subst e'; decide
+      | inr e' => subst e'; decide
+    | inr e =>
+      subst e
+      exact absurd (supported 9 ⟨rfl, rfl⟩) (by cases act <;> decide)
+  | succ n => exact Nat.le_refl 0
+
+theorem below_one : ∀ {t : Nat}, t < 1 → t = 0
+  | 0, _ => rfl
+  | _ + 1, lt => absurd (Nat.le_of_succ_le_succ lt) (Nat.not_succ_le_zero _)
+
+theorem unlowered : ∀ t, t < 1 → gens.loweredAt t = 0 := fun _ lt => by
+  rw [below_one lt]
+  decide
+
+theorem exact : ∀ t, t < 1 →
+    SelectionTerm.Exact (gens.family t) (gens.kids t) (gens.amount t) (gens.amount (t + 1)) :=
+  fun _ lt => by
+    rw [below_one lt]
+    exact (exact_iff_terms_vanish _ _ _ _).mpr ⟨by decide, by decide⟩
+
+theorem moved : gens.size 0 * gens.sum 1 ≠ gens.size 1 * gens.sum 0 := by decide
+
+/-- Row 7's conclusion fails: the mean falls. -/
+theorem falls : ¬ gens.size 1 * gens.sum 0 ≤ gens.size 0 * gens.sum 1 := by decide
+
+/-- Row 8's conclusion fails. -/
+theorem not_rises :
+    ¬ (gens.size 1 * gens.sum 0 < gens.size 0 * gens.sum 1 ∧
+      ∃ t, t < 1 ∧ gens.discordAt t < gens.concordAt t) :=
+  fun rises => falls (Nat.le_of_lt rises.1)
+
+end LowGives
+
+/-! ## Row 14's gate and its `inactive` hypothesis cannot be dropped
+
+Three members in groups of one: `0` with the amount at two and one offspring, `1` at one with
+none, and `2` at none with five. Transmission is exact. Only `0` active (`act = false`): the
+groups with less are inactive, and `2` gives anyway, so the gate fails. Every member active
+(`act = true`): the gate holds, and `2` has less and is active, so `inactive` fails. Either way the
+discordance among the groups (thirteen) outweighs their concordance (one): the mean falls while
+the row's right side holds. -/
+
+namespace EndsAmong
+
+def web (act : Bool) : Web Nat Nat where
+  level t _ := t
+  active _ x := x = 0 ∨ act = true
+  requires _ _ _ := False
+  need _ _ _ := 0
+  draws _ _ _ := False
+
+def flow : Flow Nat Nat where
+  present _ := [0, 1, 2]
+  take _ _ _ := 0
+  give _ _ _ := 1
+
+def gens : SelectionTerm.Generations Nat where
+  first := [0, 1, 2]
+  kids t := match t with
+    | 0 => fun p => match p with
+      | 0 => [10]
+      | 2 => [20, 21, 22, 23, 24]
+      | _ => []
+    | _ + 1 => fun _ => []
+  amount t := match t with
+    | 0 => fun p => match p with
+      | 0 => 2
+      | 1 => 1
+      | _ => 0
+    | _ + 1 => fun p => match p with
+      | 10 => 2
+      | _ => 0
+
+def groups : List (List Nat) := [[0], [1], [2]]
+
+theorem descended (act : Bool) : SelectionTerm.Flow.Descended flow (web act) gens := by
+  intro t p k mp mk
+  cases t with
+  | zero => exact ⟨mp, Nat.zero_lt_one, Nat.lt_irrefl 0, Nat.zero_lt_one⟩
+  | succ n => exact absurd (mk : k ∈ ([] : List Nat)) not_mem_nil
+
+theorem listed : SelectionLevels.whole groups = gens.family 0 := rfl
+
+theorem equal : ∀ g, g ∈ groups → g.length = 1 := by
+  intro g mg
+  cases mem_three (mg : g ∈ [[0], [1], [2]]) with
+  | inl e => subst e; rfl
+  | inr e => cases e with
+    | inl e' => subst e'; rfl
+    | inr e' => subst e'; rfl
+
+theorem exact : SelectionTerm.Exact (gens.family 0) (gens.kids 0) (gens.amount 0) (gens.amount 1) :=
+  (exact_iff_terms_vanish _ _ _ _).mpr ⟨by decide, by decide⟩
+
+theorem acting : flow.Acting (web true) := fun _ _ _ _ _ => .inr rfl
+
+theorem not_acting : ¬ flow.Acting (web false) := fun acting =>
+  (acting 0 2 20 (.tail _ (.tail _ (.head _))) Nat.zero_lt_one).elim
+    (fun e => absurd e (by decide)) (fun e => absurd e (by decide))
+
+theorem inactive : ∀ g h, g ∈ groups → h ∈ groups →
+    total h (gens.amount 0) < total g (gens.amount 0) → ∀ p, p ∈ h → ¬ (web false).active 0 p := by
+  intro g h mg mh less p mp active
+  cases mem_three (mh : h ∈ [[0], [1], [2]]) with
+  | inl e =>
+    subst e
+    cases mem_three (mg : g ∈ [[0], [1], [2]]) with
+    | inl e' => subst e'; exact absurd less (by decide)
+    | inr e' => cases e' with
+      | inl e'' => subst e''; exact absurd less (by decide)
+      | inr e'' => subst e''; exact absurd less (by decide)
+  | inr e => cases e with
+    | inl e' =>
+      subst e'
+      have hp := mem_single mp
+      subst hp
+      exact active.elim (fun z => absurd z (by decide)) (fun z => absurd z (by decide))
+    | inr e' =>
+      subst e'
+      have hp := mem_single mp
+      subst hp
+      exact active.elim (fun z => absurd z (by decide)) (fun z => absurd z (by decide))
+
+theorem not_inactive : ¬ (∀ g h, g ∈ groups → h ∈ groups →
+    total h (gens.amount 0) < total g (gens.amount 0) → ∀ p, p ∈ h → ¬ (web true).active 0 p) :=
+  fun inactive => inactive [0] [2] (.head _) (.tail _ (.tail _ (.head _))) (by decide) 2 (.head _)
+    (.inr rfl)
+
+/-- Row 14's equivalence fails: the mean falls while the right side holds. -/
+theorem fails :
+    ¬ (gens.Raises 0 ↔
+      groups.length * SelectionLevels.discordWithin groups (gens.offspringNumber 0) (gens.amount 0) <
+        groups.length * SelectionLevels.concordWithin groups (gens.offspringNumber 0) (gens.amount 0) +
+          SelectionLevels.concordAmong groups (gens.offspringNumber 0) (gens.amount 0)) := by
+  decide
+
+end EndsAmong
+
+/-! ## Row 14's cancellation cannot be dropped
+
+One parent at none gives to one offspring carrying one: every formation is active, the one
+group leaves `inactive` empty, and transmission raised one and lowered none. The mean rises while
+the row's right side fails. -/
+
+namespace Lifted
+
+def web : Web Nat Nat where
+  level t _ := t
+  active _ _ := True
+  requires _ _ _ := False
+  need _ _ _ := 0
+  draws _ _ _ := False
+
+def flow : Flow Nat Nat where
+  present _ := [0]
+  take _ _ _ := 0
+  give _ _ _ := 1
+
+def gens : SelectionTerm.Generations Nat where
+  first := [0]
+  kids t := match t with
+    | 0 => fun _ => [1]
+    | _ + 1 => fun _ => []
+  amount t := match t with
+    | 0 => fun _ => 0
+    | _ + 1 => fun _ => 1
+
+def groups : List (List Nat) := [[0]]
+
+theorem acting : flow.Acting web := fun _ _ _ _ _ => trivial
+
+theorem descended : SelectionTerm.Flow.Descended flow web gens := by
+  intro t p k mp mk
+  cases t with
+  | zero => exact ⟨mp, Nat.zero_lt_one, Nat.lt_irrefl 0, Nat.zero_lt_one⟩
+  | succ n => exact absurd (mk : k ∈ ([] : List Nat)) not_mem_nil
+
+theorem listed : SelectionLevels.whole groups = gens.family 0 := rfl
+
+theorem equal : ∀ g, g ∈ groups → g.length = 1 := fun _ mg => by
+  have e := mem_single (mg : _ ∈ [[0]])
+  subst e
+  rfl
+
+theorem inactive : ∀ g h, g ∈ groups → h ∈ groups →
+    total h (gens.amount 0) < total g (gens.amount 0) → ∀ p, p ∈ h → ¬ web.active 0 p := by
+  intro g h mg mh less
+  have eg := mem_single (mg : g ∈ [[0]])
+  have eh := mem_single (mh : h ∈ [[0]])
+  subst eg
+  subst eh
+  exact absurd less (Nat.lt_irrefl _)
+
+theorem not_cancel : gens.raisedAt 0 ≠ gens.loweredAt 0 := by decide
+
+/-- Row 14's equivalence fails: the mean rises while the right side does not hold. -/
+theorem fails :
+    ¬ (gens.Raises 0 ↔
+      groups.length * SelectionLevels.discordWithin groups (gens.offspringNumber 0) (gens.amount 0) <
+        groups.length * SelectionLevels.concordWithin groups (gens.offspringNumber 0) (gens.amount 0) +
+          SelectionLevels.concordAmong groups (gens.offspringNumber 0) (gens.amount 0)) := by
+  decide
+
+end Lifted
 
 end U4LeverTwo
 

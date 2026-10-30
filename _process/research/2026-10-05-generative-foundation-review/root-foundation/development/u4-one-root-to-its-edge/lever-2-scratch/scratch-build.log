@@ -1,16 +1,16 @@
 {
   "tree": "/private/tmp/claude-501/-Users-ren-theories/73addb12-2fff-41e8-a771-e60ba41c2833/scratchpad/wt-l2/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/lever-2-scratch",
-  "modules": 34,
+  "modules": 51,
   "ran": [
     "Becoming.U4LeverTwo",
     "BecomingU4LeverTwoAxiomAudit"
   ],
-  "reused": 33,
+  "reused": 50,
   "unclean": [],
   "audits": {
     "Becoming.U4LeverTwo": {
-      "theorems": 65,
-      "declarations": 90,
+      "theorems": 112,
+      "declarations": 155,
       "with_axioms": {}
     }
   }
