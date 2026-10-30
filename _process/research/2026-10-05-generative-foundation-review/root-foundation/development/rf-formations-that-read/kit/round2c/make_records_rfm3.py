@@ -203,6 +203,12 @@ rI = build(
       "with positive weight.",
       '辨候选，读之形成于其正权处与参照净相合，则其答余缺为零，恰当持之形成以正权列之且损逾得之每候选，于读之形成之列总权为正，亦即此列以正权列之。',
       lv('weightOf', 'weightOf_pos_iff', 'within_id', 'told_residual_zero_iff')),
+     ("Told the candidate, with net agreement where the reading formation gives positive weight, a candidate it "
+      "leaves unweighted is released and one it weighs is stopped exactly where the loss exceeds the gain; so, with no "
+      "cell list, holding for the answer falls short by nothing exactly where every candidate the holding formation "
+      "weighs positively and where the loss exceeds the gain is weighed by the reading formation.",
+      '辨候选，读之形成于其正权处与参照净相合，则其不权之候选被放，其所权者止之恰当损逾得；故无需格之列，为答而持无所缺，恰当持之形成以正权列之且损逾得之每候选，皆为读之形成所权。',
+      lv('unweighted_released', 'weighed_stops_iff', 'told_shortfall_zero_iff')),
      ("Holding for one rule stands at most as high as holding for another exactly where its shortfall is at least the "
       "other's, and strictly below exactly where it is more; rules agreeing at every listed candidate fall short "
       "alike.",
@@ -215,6 +221,11 @@ rI = build(
       "net.",
       '告之：经于持之形成之列候选上辨较粗者所辨之一切之映射，经较粗映射为任一规则而持，不高于经较细映射为任一规则而持加其余缺；故无余缺之规则不低，其所缺不逾经较粗映射之任一规则；读之形成之模型即持之形成之模型且净相合时，其答亦然。',
       lv('informed_le', 'informed_answer_le', 'informed_le_add_residual')),
+     ("Through such a refinement the least shortfall never rises; a rule with no residual through the finer map "
+      "stands strictly above a rule through the coarser exactly where the least shortfall falls or the coarser rule "
+      "has a positive residual.",
+      '经此细分，最少所缺不增；经较细映射无余缺之规则严格高于经较粗映射之规则，恰当最少所缺降，或较粗之规则余缺为正。',
+      lv('least_falls', 'informed_lt_iff')),
      ("Over every refinement factoring on both listings, coarse cells covering the holding formation's listing "
       "and fine cells both, each listed once, holding for the answer never stands lower through the finer map "
       "exactly where splits keep the worth: for any two disjoint sets of candidates, one the reading "
@@ -269,11 +280,12 @@ rI = build(
       '唯于持之形成之列上分解则不足：其列一候选，读之形成另列唯己权之次者；恒等映射唯于前者经单格之映射而分解，分之守其值，然为答而持，经恒等映射值一，经单格值零。',
       lv('OneListing.holding', 'OneListing.reading', 'OneListing.gain', 'OneListing.loss', 'OneListing.goValue',
          'OneListing.offValue', 'OneListing.refined_lowers')),
-     ("Withholding against informing: holding for one rule, forgoing an amount, stands above holding for another, "
-      "forgoing another, exactly where its shortfall and amount together fall below the other's; through maps, in the "
-      "split's terms; with both answers least, the least shortfalls and the amounts decide.",
-      '扣告与告：为一规则而持、舍一量，高于为他规则而持、舍他量，恰当前者之所缺与其量合少于后者；经映射，以分之项言之；二答皆最少，则最少所缺与其量定之。',
-      lv('forgone_lt_iff', 'forgone_through_lt_iff', 'forgone_least_iff')),
+     ("Amounts forgone: holding for one rule, forgoing an amount, stands above holding for another, forgoing "
+      "another, exactly where its shortfall and amount together fall below the other's; through maps, in the split's "
+      "terms; with both answers least, the least shortfalls and the amounts decide, so through a refinement holding "
+      "for the coarser answer, forgoing no less, never stands above holding for the finer.",
+      '舍量：为一规则而持、舍一量，高于为他规则而持、舍他量，恰当前者之所缺与其量合少于后者；经映射，以分之项言之；二答皆最少，则最少所缺与其量定之，故经细分，为较粗之答而持、所舍不少，永不高于为较细者而持。',
+      lv('forgone_lt_iff', 'forgone_through_lt_iff', 'forgone_least_iff', 'coarser_not_above')),
      ("Forgoing one amount through a refinement, holding for the coarser rule stands above holding for the finer "
       "exactly where the finer rule's residual exceeds the coarser's by more than the least shortfall falls through the "
       "finer map; adding one amount to both sides keeps a strict order, and only it.",
@@ -296,10 +308,10 @@ rI = build(
       '依改后之值，改后之答无余缺，然此不许任一改值；诸值之间所达之值亦无序可言：一候选值十与九，改为一与二，先达十后达二。',
       lv('outcome_least', 'no_order_across')),
      ("With the reading formation's model the holding formation's, revaluing to the reference gains exactly the "
-      "current answer's residual, so some valuation's answer stands strictly above the current one by the reference "
-      "exactly where that residual is positive; for any model of the reading formation, such a gain needs a positive "
-      "residual.",
-      '读之形成之模型即持之形成之模型，则改值为参照恰得当下之答之余缺，故某值之答依参照严格高于当下之答，恰当此余缺为正；于读之形成之任一模型，此得必需余缺为正。',
+      "current answer's residual, so some unrestricted pair of value functions gives an answer strictly above the "
+      "current one by the reference exactly where that residual is positive, reachability under the supplied update "
+      "not asserted; for any model of the reading formation, such a gain needs a positive residual.",
+      '读之形成之模型即持之形成之模型，则改值为参照恰得当下之答之余缺，故某一不限之值对之答依参照严格高于当下之答，恰当此余缺为正，未断言所予之更新可达之；于读之形成之任一模型，此得必需余缺为正。',
       lv('revaluing_gain', 'revaluing_gains_iff', 'residual_pos_of_gains')),
      ("A witness of four one-decision alternatives: two candidates of weight one, going on gaining 1 at the first and "
       "losing 1 at the second by the reference, the reading formation told the candidate and valuing switching off "
@@ -330,10 +342,10 @@ rI = build(
       lv('through_sensed', 'updates_commute')),
      ("Shown a world, the listing is filtered to the worlds showing what it shows, weights and valuation unchanged, "
       "and the answer is the answer through what is shown at that world's cell; its shortfall splits through what is "
-      "shown, and, with the holding formation's model the reading formation's before and net agreement, holding for it "
-      "never stands lower than before.",
-      '示一世界，则其列滤为所示同者之诸世界，权与值不变，其答即经所示之映射于此世界之格之答；其所缺经所示而分；持之形成之模型即读之形成示前之模型且净相合，则为之而持永不低于示前。',
-      lv('total_filter_shows', 'within_shown', 'answer_shown', 'shown_split', 'shown_never_lowers')),
+      "shown, the least shortfall at most that through one cell, and, with the holding formation's model the reading "
+      "formation's before and net agreement, holding for it never stands lower than before.",
+      '示一世界，则其列滤为所示同者之诸世界，权与值不变，其答即经所示之映射于此世界之格之答；其所缺经所示而分，最少所缺不逾经单格者；持之形成之模型即读之形成示前之模型且净相合，则为之而持永不低于示前。',
+      lv('total_filter_shows', 'within_shown', 'answer_shown', 'shown_split', 'shown_least_le', 'shown_never_lowers')),
      ("Where the acts taken give two worlds one input, from one state of each formation their internal, sensory, answer and holding "
       "courses agree, so where no demonstration tells the worlds apart or none is emitted; so holding for the answer, "
       "at listed worlds all showing one value or with no demonstration emitted, is worth one committed move.",
@@ -348,6 +360,11 @@ rI = build(
       lv('TwoWorlds.World', 'TwoWorlds.Val', 'TwoWorlds.rd', 'TwoWorlds.schedule', 'TwoWorlds.shownStart',
          'TwoWorlds.presentedStart', 'TwoWorlds.route', 'TwoWorlds.shown_turns', 'TwoWorlds.presented_turns',
          'TwoWorlds.shown_removes_least', 'TwoWorlds.presented_removes_residual')),
+     ("Along courses of the joint law, from one state at each world with the act scheduled, holding for the answer "
+      "falls short by 1 at step 1 and by nothing at step 2, once what is shown or the input presented is taken in, in "
+      "both cases.",
+      '沿此一律之历程，自每世界同一之态并所排之行，为答而持于第一步缺一，于第二步所示或所呈之入既入，则无所缺，二情皆然。',
+      lv('TwoWorlds.shown_course', 'TwoWorlds.presented_course')),
      ("From two starts alike but for the order of the holding formation's two scheduled acts, a demonstration and "
       "a revaluation reach one configuration from the third step on, while the answers at the second step differ: "
       "the updates commute, the courses do not.",
@@ -478,9 +495,9 @@ rI = build(
     CH3, done('a-reading-informed-and-revalued', "a reading informed and revalued: the answer of a formation reading by "
               "its own model and valuation through a map; any rule's shortfall split into the least shortfall and a "
               "residual, with exact criteria; informing and the criterion over every refinement, with its sufficient "
-              "conditions and counterexamples; withholding against informing; revaluing; and one blanketed law carrying "
+              "conditions and counterexamples; amounts forgone, read as withholding against informing; revaluing; and one blanketed law carrying "
               "the reading formation's listing and valuation, with witnesses of four cases, two orders and two routes",
-              '受告与改值之读：读之形成依己之模型与值经映射之答；任一规则之所缺分为最少所缺与余缺，并其确判；告与于每一细分之判，并其充分条件与反例；扣告与告；改值；及承读之形成之列与值之一毯化之律，并四情、二序与二途之例'))
+              '受告与改值之读：读之形成依己之模型与值经映射之答；任一规则之所缺分为最少所缺与余缺，并其确判；告与于每一细分之判，并其充分条件与反例；舍量，读为扣告与告；改值；及承读之形成之列与值之一毯化之律，并四情、二序与二途之例'))
 
 for m in MODS:
     cited = cited_by_module[m]

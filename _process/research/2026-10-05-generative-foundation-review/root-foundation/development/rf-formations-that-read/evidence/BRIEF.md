@@ -990,3 +990,33 @@ For every finding, in id order, judge from the files alone how the revised modul
 - superseded: the place no longer exists or the finding no longer applies, for a reason you state.
 For a finding the verifier judged not real, report its verdict as "not real" and say whether the module changed at that place anyway. Check the Lean statements themselves, not only the prose: where a finding asked for a new law, find it and say whether its statement does what was asked; where it asked for a hypothesis to be named, check the docstring and header say it. Be exact and skeptical: a renamed declaration whose docstring still overstates is "taken in part". Quote at most a few words of the module where it helps. Return one row per finding.
 ```
+
+### The check of the delta after the taken check (the cross-model reader's session continued, `cx -r`, read-only, in the landing worktree with the delta uncommitted)
+
+```text
+Read-only check, continuing your re-check of `Becoming.ListingValuation` (the kit module at
+_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/tree/Becoming/ListingValuation.lean).
+
+Since your re-check, a check of how the three lenses' findings were taken found seven taken only in part. The module now:
+
+1. Adds `unweighted_released` and `weighed_stops_iff` (the two `have`s of `told_residual_zero_iff`, factored) and
+   `told_shortfall_zero_iff` (the shortfall form with no cell list), lens finding F9.
+2. Adds `least_falls` (through a refinement the least shortfall never rises; `refined_lt_iff` now uses it),
+   `informed_lt_iff` (the strict form of `informed_le`), F17, and `coarser_not_above` (with both answers least,
+   through a refinement, the coarser answer forgoing no less never stands above the finer), F20.
+3. Adds `shown_least_le` and the course forms `TwoWorlds.shown_course` and `TwoWorlds.presented_course`, F8.
+4. Cites `undemonstrated_worth` beside `answer_constant` in the off-switch Readings, F4.
+5. Retitles the docstrings of `refined_lt_iff` and `forgone_least_iff` and the header bullet structurally,
+   the reading marked, L13.
+6. Keeps your R2: the clause calling `answer_constant` failed effectiveness stays withdrawn (lens finding L8 asked
+   for it; your counterexample stands).
+
+The diff against the commit you re-checked is at
+/private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/rfm3-lv-delta.diff.
+The module builds: 138 theorems in 186 declarations, every axiom report empty, no warnings.
+
+Check only the delta: does each new statement say what its docstring and the header say it says (hypotheses,
+direction, which formation's model, which amounts)? Is any new claim in the header, the Standing or the Readings
+stronger than the Lean? Is the course-form arithmetic right? Report findings as a numbered list with severity,
+location, the problem and an exact replacement; say plainly if there are none. Do not edit any file.
+```

@@ -3,10 +3,11 @@
 
 Inputs (the review outputs, saved where the reviews ran): the cross-model reader's review (markdown); the three lenses'
 findings (the workflow's JSON result); the three verifiers' verdicts (JSON, one per lens); the taken check's rows (JSON:
-a list of {lens, rows}); and the cross-model reader's re-check (markdown). Usage, from the repository root:
+a list of {lens, rows}); the cross-model reader's re-check (markdown); and its check of the delta made after the taken
+check (markdown). Usage, from the repository root:
 
     python3 -B <this file> <review .md> <lenses .json> <verdicts exactness .json> <verdicts structure .json> \
-        <verdicts sources .json> <taken rows .json> <re-check .md>
+        <verdicts sources .json> <taken rows .json> <re-check .md> <delta check .md>
 """
 import json
 import sys
@@ -19,7 +20,7 @@ sys.path.insert(0, str(HERE.parent / 'round2b'))
 from relink_rfm2 import relink  # noqa: E402
 
 ROOT = '/Users/ren/theories/.claude/worktrees/rf-landing/'
-review_md, lenses_json, ve_json, vf_json, vl_json, rows_json, recheck_md = (Path(x) for x in sys.argv[1:8])
+review_md, lenses_json, ve_json, vf_json, vl_json, rows_json, recheck_md, delta_md = (Path(x) for x in sys.argv[1:9])
 
 
 def relinked(text):
@@ -36,9 +37,11 @@ INTRO = """# The review of `Becoming.ListingValuation`
 
 RF round 2, third part, RF-M.3: the valuation as state; informing and revaluing (plan §4.8). The module as first built on the reviewed design (`kit/round2c/tree/Becoming/ListingValuation.lean` at the kit's commit `801f74681`: 105 theorems in 145 declarations, every axiom report empty, [build-1](../kit/round2c/logs/build-1.log)) was reviewed on the Lean on 30 October 2026 in two independent ways: by the cross-model reader (GPT astra, high effort, read-only, a fresh session `01a18d75-3522-7a52-87a0-f551210adf5d`), and through three lenses (exactness, structure, sources), each an Opus reader working read-only, with one verifier per lens asked to refute that lens's findings. The prompts are in [the brief](BRIEF.md#round-2-third-part). The reviews follow verbatim; their line numbers are those of the reviewed version, their paths are made relative to the checkout, and their links are made to resolve from this folder, since it is link-checked as live: a line number kept in a link's text and dropped from its target, and a link that does not resolve here shown as its text with its target as code.
 
-**What was verified, and how.** Each lens's verifier judged every finding of its lens: exactness, sixteen of seventeen real (E10 not); structure, nineteen of twenty real (F16 not); sources, all fourteen real. The module was revised on the forty-nine real findings and the cross-model reader's fifteen, and rebuilt at the kit's commit `4843dd795`, 129 theorems in 177 declarations, every axiom report empty ([build-2](../kit/round2c/logs/build-2.log)). Three read-only Opus readers, one per lens, then checked from the files alone how each lens finding is reflected in the revised module ([the table](#what-was-taken), with the rows that later changes completed marked as updated after the check); the cross-model reader's own findings were checked by its re-check.
+**What was verified, and how.** Each lens's verifier judged every finding of its lens: exactness, sixteen of seventeen real (E10 not); structure, nineteen of twenty real (F16 not); sources, all fourteen real. The module was revised on the forty-nine real findings and the cross-model reader's fifteen, and rebuilt at the kit's commit `4843dd795`, 129 theorems in 177 declarations, every axiom report empty ([build-2](../kit/round2c/logs/build-2.log)). Three read-only Opus readers, one per lens, then checked from the files alone how each lens finding is reflected in the revised module: forty-four taken and seven in part (F4, F8, F9, F17, F20, L8, L13). Six of the seven were then completed, with nine more declarations, and L8 stays in part for the re-check's R2 ([the table](#what-was-taken), each row completed after the check saying so); the cross-model reader's own findings were checked by its re-check.
 
-**The re-check.** The revised module was re-checked by the cross-model reader in the session of its review, read-only ([below](#the-re-check)): no new mathematical error; of its fifteen findings ten resolved and five in part, and nine points, all in prose, every one taken ([its table](#what-was-taken-from-the-re-check)). The module's statements did not change for them; its prose was revised and it was rebuilt, 129 theorems in 177 declarations, every axiom report empty ([build-3](../kit/round2c/logs/build-3.log))."""
+**The re-check.** The revised module was re-checked by the cross-model reader in the session of its review, read-only ([below](#the-re-check)): no new mathematical error; of its fifteen findings ten resolved and five in part, and nine points, all in prose, every one taken ([its table](#what-was-taken-from-the-re-check)). The module's statements did not change for them; its prose was revised and it was rebuilt, 129 theorems in 177 declarations, every axiom report empty ([build-3](../kit/round2c/logs/build-3.log)).
+
+**The check of the delta.** The changes made after the taken check (the nine declarations, the retitled docstrings, the off-switch paragraph citing `undemonstrated_worth`) were rebuilt, 138 theorems in 186 declarations, every axiom report empty, with no warning ([build-4](../kit/round2c/logs/build-4.log)), and checked by the cross-model reader in the session of its review, read-only ([below](#the-check-of-the-delta-1)): DELTA_SUMMARY"""
 
 # The cross-model reader's findings: (status, how), its re-check's status first.
 TAKEN_A = {
@@ -97,8 +100,48 @@ TAKEN_A = {
                     "its two starts alike but for the order of the holding formation's schedule."),
 }
 
-# Lens rows that later changes completed: (status, how).
-AFTER = {}
+# Lens rows that later changes completed, or that stay in part with a reason: (status, how).
+AFTER = {
+    'F4': ('taken', "`inputs_alike_before` takes agreement only at the acts emitted on the course before `n`; "
+                    "`undemonstrated_alike` and `undemonstrated_worth` need only that no demonstration is emitted "
+                    "before `n` at `w₀`, stronger than the proposed `answer_constant_unshown`; `inputs_alike` is its "
+                    "corollary. Completed after the check: the off-switch Readings cite `undemonstrated_worth` beside "
+                    "`answer_constant`, the case where no demonstration is emitted at worlds a demonstration would "
+                    "tell apart."),
+    'F8': ('taken', "`shown_split` and `shown_never_lowers` are added with the proposed statements and cited in the "
+                    "header; the TwoWorlds bullet labels the four cases 'as updates of one state'. Completed after the "
+                    "check: `shown_least_le` (the least shortfall through what is shown at most that through one "
+                    "cell) and the course forms `TwoWorlds.shown_course` and `TwoWorlds.presented_course`: along "
+                    "courses of `joint`, holding for the answer falls short by 1 at step 1 and by nothing at step 2 "
+                    "in both cases."),
+    'F9': ('taken', "The bold title now says the answer has a residual exactly where a candidate the holding formation "
+                    "weighs, unweighted by the reading formation, is one to stop. Completed after the check: the two "
+                    "`have`s are factored into `unweighted_released` and `weighed_stops_iff`, and "
+                    "`told_shortfall_zero_iff` states the proposed shortfall form, with no cell list."),
+    'F17': ('taken', "`informed_le_add_residual` is the proposed graded bound, cited in the header with `informed_le` "
+                     "its consequence. Completed after the check: `informed_lt_iff`, the strict form (with the finer "
+                     "rule's residual nothing, the coarser rule stands strictly lower exactly where the least "
+                     "shortfall falls or its own residual is positive), through `least_falls`."),
+    'F20': ('taken', "`forgone_least_iff` is the proposed `withhold_net_iff`. Completed after the check: "
+                     "`coarser_not_above`, the corollary (through a refinement, with both answers least, holding for "
+                     "the coarser answer, forgoing no less, never stands above holding for the finer), cited in the "
+                     "header and in the Readings: none against informing where informing forgoes no more."),
+    'L8': ('taken in part', "The Readings cite Equation 1 for any policy of the human (a deterministic constant "
+                            "policy giving waiting the value of its move, a randomized one a mixture), Theorem 1 as "
+                            "the rational, informative case, Remark 1's two sources, and the observation difference. "
+                            "The link asked for, `answer_constant` as the failure of Remark 1's second source, was "
+                            "made and then withdrawn under the re-check's R2: a constant answer can give the better "
+                            "move (gain 1 and loss 0 everywhere, a constant release is optimal), so constancy is not "
+                            "failed effectiveness; the Readings say a constant answer gives holding no strict "
+                            "advantage whether or not its move is the better one."),
+    'L13': ('taken', "(a) `Act.present` replaces `press` at every use. (b) The two laws are renamed `forgone_lt_iff` "
+                     "and `forgone_through_lt_iff`, the first titled structurally with 'read as withholding against "
+                     "informing' marked. (c) 'an optimal signal chosen by the holding formation'. (d) 'an input "
+                     "presented revises the valuation'. Completed after the check: the docstring titles of "
+                     "`refined_lt_iff` and `forgone_least_iff` and the header's bullet are structural, the reading "
+                     "marked, `forgone_least_iff`'s saying that no refinement is assumed; the record's law and the "
+                     "study's bullet say 'amounts forgone'."),
+}
 
 # What was taken from the re-check: (point, status, how).
 RECHECK = (
@@ -136,6 +179,12 @@ RECHECK = (
                     "value functions and reachability not asserted; the other items brought to the Lean "
                     "(`kit/round2c/plan_rfm3.py`)."),
 )
+
+# The check of the delta: its summary for the opening, and what was taken from it: (point, status, how).
+DELTA_SUMMARY = 'DELTA_SUMMARY'
+DELTA = ()
+INTRO = INTRO.replace('DELTA_SUMMARY', DELTA_SUMMARY)
+assert 'DELTA_SUMMARY' not in INTRO, 'the summary of the check of the delta is not written'
 
 review = relinked(cx_body(review_md))
 lenses = {r['lens']: r['findings'] for r in json.loads(lenses_json.read_text(encoding='utf-8'))['result']}
@@ -200,6 +249,16 @@ rtable = ['### What was taken from the re-check', '', '| Point | Status | How |'
 for point, status, how in RECHECK:
     rtable.append(f"| {point} | {status} | {how.replace('|', chr(92) + '|')} |")
 parts.append('\n'.join(rtable) + '\n')
+
+parts.append('## The check of the delta\n\nThe cross-model reader, in the session of its review, read the changes made '
+             'after the taken check and the diff from the re-checked commit, read-only (its prompt is in [the '
+             'brief](BRIEF.md#round-2-third-part)). Verbatim.\n')
+parts.append(relinked(cx_body(delta_md)) + '\n')
+if DELTA:
+    dtable = ['### What was taken from the check of the delta', '', '| Point | Status | How |', '|---|---|---|']
+    for point, status, how in DELTA:
+        dtable.append(f"| {point} | {status} | {how.replace('|', chr(92) + '|')} |")
+    parts.append('\n'.join(dtable) + '\n')
 
 text = '\n'.join(parts)
 assert '](/' not in text and ROOT not in text
