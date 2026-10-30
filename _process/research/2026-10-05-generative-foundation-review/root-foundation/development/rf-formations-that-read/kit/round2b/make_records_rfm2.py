@@ -326,10 +326,10 @@ rW = build(
     [{'en': "A misspecified listing: listing only that going on gains, where it loses, and going on from the start, "
             "the formation never senses the stop (SignLoop.rests_unread, SignLoop.never_senses_stop).",
       'zh': '误设之列：唯列续得而实续损，自始即续，形成永不感止（SignLoop.rests_unread、SignLoop.never_senses_stop）。'},
-     {'en': "The stop sensed and disregarded: holding first, the same listing senses the stop, which refutes its only "
-            "candidate, and with none kept the formation goes on (SignLoop.refuted_senses_stop, "
-            "SignLoop.refuted_goes_on).",
-      'zh': '感止而不从：先持，同一之列感止，此止驳其唯一候选，无所留则形成续（SignLoop.refuted_senses_stop、SignLoop.refuted_goes_on）。'},
+     {'en': "The stop sensed and not followed: holding first, the same listing, where going on loses, senses the stop, "
+            "which refutes its only candidate, and with none kept the formation goes on by the witness's default "
+            "(SignLoop.refuted_senses_stop, SignLoop.refuted_drops, SignLoop.refuted_goes_on).",
+      'zh': '感止而不从：先持，同一之列而续实损，则感止，此止驳其唯一候选，无所留则形成依此例之默认而续（SignLoop.refuted_senses_stop、SignLoop.refuted_drops、SignLoop.refuted_goes_on）。'},
      {'en': "Holding only ties: where the formation goes on or switches off, holding for the reading stands as high as "
             "the move taken and no higher (SignLoop.choose_go_ties, SignLoop.choose_off_ties).",
       'zh': '持仅相等：形成续或止处，为读而持与所取之行等高而不更高（SignLoop.choose_go_ties、SignLoop.choose_off_ties）。'}],

@@ -22,7 +22,6 @@ HERE = Path(__file__).resolve().parent
 PKG = ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
 CH = ROOT / 'theories/becoming/chapters'
 PLAN = HERE.parent.parent / 'PLAN.md'
-assert '{' not in (HERE / 'plan13_rfm2.txt').read_text(encoding='utf-8'), "plan13_rfm2.txt: a placeholder left"
 NAMES = set(re.findall(r'^#print axioms Becoming\.(\S+)$',
                        (HERE / 'tree/.build/BecomingHeldForReadingAxiomAudit.lean').read_text(encoding='utf-8'), re.M))
 SOURCES = '\n'.join(p.read_text(encoding='utf-8') for p in (PKG / 'Becoming').glob('*.lean'))
@@ -65,15 +64,14 @@ edit(checker, '''    "alike. "
     "HeldForReading: in natural numbers, a policy choosing open acts falls short of one best at every listed "
     "candidate by the weighted total of what its acts lose, so choosing best after a reading telling the candidate "
     "gains over every open act exactly where none is valued best at every listed candidate of positive weight; "
-    "holding for the reading that stops "
-    "where the "
-    "loss exceeds the gain stands above going on and switching off exactly where both strict signs have positive "
-    "weight, and holding for any rule of stopping, forgoing an amount, stands at least as high as going on exactly "
-    "where its shortfall and the amount are at most the weighted excess of switching off; through a map of the "
-    "candidates, the least shortfall totals the smaller excess within each cell, never increasing through a finer "
-    "map; within ShownOrder's reach, holding a pick gains nothing; on ReadingLoop's loop, a formation choosing so on "
-    "its own model, listing only that going on gains and going on from the start, rests at once and never senses the "
-    "stop. "
+    "holding for the reading that stops where the loss exceeds the gain stands above going on and switching off "
+    "exactly where both strict signs have positive weight, and holding for any rule of stopping, forgoing an amount, "
+    "stands at least as high as going on exactly where its shortfall and the amount are at most the weighted excess "
+    "of switching off; through a map of the candidates, the least shortfall totals the smaller excess within each "
+    "cell, never increasing through a finer map; where every listed candidate of positive weight has transitive "
+    "comparisons according with the choices, holding a pick gains nothing within ShownOrder's reach; on "
+    "ReadingLoop's loop, a formation choosing so on its own model, listing only that going on gains and going on "
+    "from the start, rests at once and never senses the stop. "
     "NarrowingRuns: the answer is the greatest safe answer of the belief narrowed by After on the "''')
 
 root = PKG / 'Becoming.lean'
@@ -86,15 +84,17 @@ BULLET = """* `Becoming.HeldForReading` (L1): what holding an act for a reading 
   counts. A policy choosing open acts falls short of one best at every listed candidate by the
   weighted total of what its acts lose (`HeldForReading.after_add_gap`), so choosing best after a
   reading telling the candidate gains over every open act exactly where none is valued best at every
-  listed candidate of positive weight (`HeldForReading.reading_gains_iff`); holding for the reading that stops where the loss exceeds
-  the gain stands above going on and switching off exactly where both strict signs have positive
-  weight (`HeldForReading.held_gains_iff`), and holding for any rule of stopping, forgoing an
-  amount, stands at least as high as going on exactly where its shortfall and the amount are at
-  most the weighted excess of switching off (`HeldForReading.threshold_go_iff`); through a map of
-  the candidates the least shortfall totals the smaller excess within each cell, never increasing
-  through a finer map (`HeldForReading.least_through`, `HeldForReading.finer_least_le`); within
-  `ShownOrder`'s reach holding a pick gains nothing (`HeldForReading.reach_fixes`); on
-  `ReadingLoop`'s loop, a formation choosing so on its own model
+  listed candidate of positive weight (`HeldForReading.reading_gains_iff`); holding for the reading
+  that stops where the loss exceeds the gain stands above going on and switching off exactly where
+  both strict signs have positive weight (`HeldForReading.held_gains_iff`), and holding for any rule
+  of stopping, forgoing an amount, stands at least as high as going on exactly where its shortfall
+  and the amount are at most the weighted excess of switching off
+  (`HeldForReading.threshold_go_iff`); through a map of the candidates the least shortfall totals
+  the smaller excess within each cell, never increasing through a finer map
+  (`HeldForReading.least_through`, `HeldForReading.finer_least_le`); where every listed candidate of
+  positive weight has transitive comparisons according with the choices, holding a pick gains
+  nothing within `ShownOrder`'s reach (`HeldForReading.reach_fixes`); on `ReadingLoop`'s loop, a
+  formation choosing so on its own model
   (`HeldForReading.SignLoop.choose_hold_iff`), listing only that going on gains and going on from
   the start, rests at once and never senses the stop (`HeldForReading.SignLoop.never_senses_stop`). A
   leaf (board item RF).
@@ -117,7 +117,7 @@ readme_row(PKG / 'README.md', '| L1 | [`Becoming.ReadingLoop`]',
            "| L1 | [`Becoming.HeldForReading`](Becoming/HeldForReading.lean) | what holding an act for a reading is worth, "
            "in natural-number counts (every axiom report empty; each result under the hypotheses its theorem states): "
            "the gap to a policy best at every candidate (`HeldForReading.after_add_gap`, "
-           "`HeldForReading.reading_gains_iff`), holding for a reading that stops or releases "
+           "`HeldForReading.reading_gains_iff`), holding for the reading that stops where the loss exceeds the gain "
            "(`HeldForReading.after_byReading`, `HeldForReading.held_gains_iff`), any rule's shortfall and what holding "
            "forgoes (`HeldForReading.after_add_shortfall`, `HeldForReading.threshold_go_iff`, "
            "`HeldForReading.threshold_off_iff`), a reading that tells only a cell (`HeldForReading.least_through`, "
@@ -128,7 +128,7 @@ readme_row(PKG / 'README.md', '| L1 | [`Becoming.ReadingLoop`]',
 readme_row(PKG / 'README.zh.md', '| L1 | [`Becoming.ReadingLoop`]',
            "| L1 | [`Becoming.HeldForReading`](Becoming/HeldForReading.lean) | 为读而持其行之值，以自然数计（每项公理报告皆空；"
            "各结果以各定理所列条件为前提）：较于每候选皆最优之策之缺（`HeldForReading.after_add_gap`、"
-           "`HeldForReading.reading_gains_iff`），为止或放之读而持（`HeldForReading.after_byReading`、"
+           "`HeldForReading.reading_gains_iff`），为损逾得处即止之读而持（`HeldForReading.after_byReading`、"
            "`HeldForReading.held_gains_iff`），任一规则之所缺与持之所舍（`HeldForReading.after_add_shortfall`、"
            "`HeldForReading.threshold_go_iff`、`HeldForReading.threshold_off_iff`），唯辨其格之读"
            "（`HeldForReading.least_through`、`HeldForReading.finer_least_le`），与所示之及之接"
@@ -137,6 +137,7 @@ readme_row(PKG / 'README.zh.md', '| L1 | [`Becoming.ReadingLoop`]',
            '[`Becoming.HeldForReading`]')
 
 ch3 = CH / '03-KNOWING.md'
+edit(ch3, "Four laws state that loop under their premises:", "Five laws state that loop under their premises:")
 edit(ch3, "what acts cannot tell of a model and an order; and when a prediction read by what it predicts is right.",
      "what acts cannot tell of a model and an order; when a prediction read by what it predicts is right; and what "
      "holding an act for a reading is worth on the formation's own model.")
@@ -184,12 +185,14 @@ edit(overview, "Read as self-confirmation, the trade between keeping a task and 
      "Read as self-confirmation, the trade between keeping a task and learning, why a helper must read more than "
      "acts, and self-fulfilling prediction [AI reading] ([the reading loop](chapters/03-KNOWING.md#the-reading-"
      "loop)).\n\nHolding an act for another's reading is worth what the reading tells, on the formation's own model. "
-     "Proved with natural-number weights and values, read as probabilities where valid: any policy falls short of one "
-     "best at every listed candidate by the weighted total of what its acts lose, so choosing best after a reading "
+     "Proved with natural-number weights and values, read as probabilities where valid: a policy choosing open acts "
+     "falls short of one best at every listed candidate by the weighted total of what its acts lose, so choosing "
+     "best after a reading "
      "that tells the candidate stands above committing to any open act exactly where no open act is valued best at "
      "every listed candidate of positive weight; "
-     "holding for a reading that stops or releases stands above both going on and switching off exactly where the "
-     "model gives positive weight to both signs of going on; holding for any rule of stopping, forgoing an amount, "
+     "holding for the reading that stops where the loss exceeds the gain stands above both going on and switching "
+     "off exactly where the model gives positive weight to both strict signs of going on; holding for any rule of "
+     "stopping, forgoing an amount, "
      "stands at least as high as going on exactly where the rule's shortfall and the amount are at most the weighted "
      "excess of switching off; and through a reading that tells only a cell no rule falls short by less than the "
      "total, over the cells, of the smaller excess within each, a total never increasing through a finer reading. On "
@@ -223,9 +226,9 @@ edit(dossier, "and a prediction read by what it predicts; a helper's acts within
 edit(dossier, "does better by defecting at random, here with weights and an exact threshold.\n",
      "does better by defecting at random, here with weights and an exact threshold. Round 2's RF-M.2 restates in "
      "counts the off-switch game's waiting with a rational human and Good's value of evidence (Hadfield-Menell, "
-     "Dragan, Abbeel and Russell 2017; Good 1967): holding an act for a reading that stops or releases stands above "
-     "both going on and switching off exactly where the formation's model gives positive weight to both signs of "
-     "going on, and holding for any rule of stopping, forgoing an amount, stands at least as high as going on exactly "
+     "Dragan, Abbeel and Russell 2017; Good 1967): holding an act for the reading that stops where going on loses "
+     "stands above both going on and switching off exactly where the formation's model gives positive weight to both "
+     "strict signs of going on, and holding for any rule of stopping, forgoing an amount, stands at least as high as going on exactly "
      "where the rule's shortfall and the amount are at most the weighted excess of switching off over going on ([03 "
      "§12](../chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth)). Read [AI reading], a formation sure of "
      "the sign has no strict reason to be read, and one choosing so on a listing that misses the true sign can rest "
@@ -243,18 +246,10 @@ edit(dossier, "was checked against the paper's text (arXiv 1906.01820).\n",
 edit(dossier, "the one RF7's sentences add was checked as RF's entry above says.",
      "the ones RF's sentences add were checked as RF's entry above says.")
 
-edit(PLAN, "then RF-M's second part: an act held for a reading (§4.7, built and reviewed in design), then the valuation as "
-           "state once its carrier is designed;",
+edit(PLAN, "then RF-M's second part: an act held for a reading (§4.7, built in the kit, its design and its Lean reviewed "
+           "and its texts cold-read), then the valuation as state once its carrier is designed;",
      "then RF-M's second part: an act held for a reading (§4.7, landed), then the valuation as state once its carrier "
      "is designed;")
-edit(PLAN, "turned the join with RF1 into a conditional composition with an explicit valuation of picks, and held the "
-           "order as state until its carrier is designed.\n",
-     "turned the join with RF1 into a conditional composition with an explicit valuation of picks, and held the "
-     "order as state until its carrier is designed.\n\n" + (HERE / 'plan13_rfm2.txt').read_text(encoding='utf-8'))
-edit(PLAN, "[kit/round2b/tree/Becoming/](kit/round2b/tree/Becoming/): the second part's, with the design's review in "
-           "[REVIEW-RFM2](evidence/REVIEW-RFM2.md).",
-     "[kit/round2b/tree/Becoming/](kit/round2b/tree/Becoming/): the second part's, with the design's review in "
-     "[REVIEW-RFM2](evidence/REVIEW-RFM2.md) and the Lean's in [REVIEW-RFM2-LEAN](evidence/REVIEW-RFM2-LEAN.md).")
 
 regions = ROOT / 'theories/becoming/results/data/regions.json'
 d = json.loads(regions.read_text(encoding='utf-8'))

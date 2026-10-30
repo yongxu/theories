@@ -40,7 +40,7 @@ Each point the sources lens raised, checked against the paper's text: the off-sw
 
 | Work and place | What it says | How the module reads it |
 |---|---|---|
-| Off-switch game, Equation 1 | the robot's incentive to wait, for any policy of the human, is the smaller of two expectations, of the utility's negative part where the human would switch it off and of its positive part where the human would let it act | `after_add_shortfall_go` and `after_add_shortfall_off`: `T` times its two terms, as balances, for a rule that is a function of the candidate; a rule treating alike-valued candidates differently is, on the utility alone, the paper's policy releasing at each value with the share of weight it releases there |
+| Off-switch game, Equation 1 | the robot's incentive to wait, for any policy of the human, is the smaller of two signed expectations, of the negated utility times the chance that the human switches it off and of the utility times the chance that the human lets it act; for a policy other than the rational one either can be negative | `after_add_shortfall_go` and `after_add_shortfall_off`: `T` times its two terms, as balances, for a rule that is a function of the candidate; a rule treating alike-valued candidates differently is, on the utility alone, the paper's policy releasing at each value with the share of weight it releases there |
 | Equation 2 | the rational human lets the robot act exactly where the utility is at least zero | `byReading`, going on where gain and loss are equal |
 | Theorem 1 | for a rational human: (1) the incentive is never negative, and is Equation 3, the smaller of the expected positive part and the expected negative part, the second printed with the probability that the utility is at most zero; (2) if the belief gives positive probability to both strict signs, the incentive is strictly positive (one direction) | `committed_le_held` (part 1); `after_byReading` (Equation 3 as `T` times the smaller of waiting's two differences, read with the probability that the utility is below zero); `held_gains_iff` (part 2 as an equivalence, for a belief of finite support) |
 | Corollary 1 | for a belief putting all its mass on one utility, waiting is optimal exactly where the human is rational | widened to any model fixing the sign (`threshold_go_iff`, `threshold_off_iff` with `excess_pos_iff`), with the exception where gain and loss are equal, which the corollary leaves unstated |
@@ -113,6 +113,39 @@ AFTER = {
     'L7': ('taken', "Updated after the check: the Standing says 'the paper's Equation 1, which holds for any policy of "
                     "the human', and reads a rule treating alike-valued candidates differently as, on the utility "
                     "alone, the paper's policy releasing at each value with the share of weight it releases there."),
+    'E3': ('taken', "Updated after the check: the empty-list default is kept and stated in `choose`'s docstring ('go on "
+                    "... where none is kept; switch off where some are kept and every one predicts that it loses'), the "
+                    "header, the modelling choices and the record's law and hypothesis, the switch-off clause now saying "
+                    "'where some are kept'. `SignLoop.refuted_senses_stop`, `SignLoop.refuted_drops` and "
+                    "`SignLoop.refuted_goes_on` (the finding's `held_start_disregards` configuration, from step 3) "
+                    "witness the held start, which the header, the Readings and record counterexample 2 describe; "
+                    "`rests_unread`/`never_senses_stop` are stated from the going-on start."),
+    'E5': ('taken', "Updated after the check: the header is the replacement nearly word for word: no cycle shown, two "
+                    "different alternatives neither of which reaches the other, 'as relations, not decided comparisons', "
+                    "and 'whether the model lists decided candidates of both rankings with positive weight is not "
+                    "fixed'. The record's does_not_show item makes no existence claim, and PLAN §4.7 item 6, which the "
+                    "finding does not name, now states the same conditions (as for A3)."),
+    'E14': ('taken', "Updated after the check: the Standing lists `committed_eq_after_iff` and `below_iff` as short "
+                     "compositions ('`after_eq_after_iff` and `after_lt_after_iff` at a constant policy'), places "
+                     "`forgone_within_excess_iff` (formerly `cost_within_margins_iff`) and `total_by_cells` among them, "
+                     "and calls `held_gains_iff` and `pair_gains_iff` each 'two instances of `below_iff`'. Unlike the "
+                     "replacement, `threshold_go_iff`/`threshold_off_iff` are listed as short compositions."),
+    'F11': ('taken', "Updated after the re-check (its point 7): `pair_gains_unreached` is added, taking `trans` and "
+                     "`accords` alone on listed candidates of positive weight in place of `StrictAccording`, and "
+                     "concluding `¬ «及» ch.Shown x y ∧ ¬ «及» ch.Shown y x`; `asymm` stays a hypothesis of "
+                     "`pair_gains_iff` only. The header ('with comparisons transitive and according with the choices "
+                     "alone, it gains over both only where neither alternative reaches the other'), the record's law "
+                     "and the amended related entry of what-choices-show-of-an-order carry it."),
+    'L1': ('taken', "Updated after the check: the Standing gives `held_gains_iff` as the off-switch Theorem 1 for a "
+                    "belief of finite support with natural-number weights and values ('deterministic' dropped), with "
+                    "`byReading` its rational human and the strict condition stated as an equivalence. It names "
+                    "`committed_le_held` (was `held_le`) as its inequality, attaches Equation 3 to `after_byReading` "
+                    "(T times the smaller of waiting's two differences, read with Pr(Ua < 0) where Pr(Ua ≤ 0) is "
+                    "printed) and Equation 1 to `after_add_shortfall_go`/`after_add_shortfall_off`, and lists "
+                    "`forgone_within_excess_iff` (was `cost_within_margins_iff`) and `threshold_go_iff`/"
+                    "`threshold_off_iff` (were `held_above_*`) as short compositions; the Readings credit Remark 1 and "
+                    "Theorem 2, and the record's correspondence matches. `byReading`'s docstring now names Equation 2, "
+                    "and 'shortfall' replaces 'the reading's accuracy' (as for L11)."),
     'L11': ('taken', "Updated after the check: `byReading`'s docstring says it stops by the supplied values and is the "
                      "paper's rational human, its Equation 2; 'accuracy' is replaced by 'shortfall' in the Readings, the "
                      "record's correspondence and PLAN."),

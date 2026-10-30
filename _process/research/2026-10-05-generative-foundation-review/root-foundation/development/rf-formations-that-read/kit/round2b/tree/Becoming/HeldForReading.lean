@@ -105,11 +105,11 @@ derived.
   sensed (`SignLoop.never_senses_stop`). Holding first, the listing of gain alone, where going on
   loses, senses the stop at the first step, which refutes its only candidate at the second, and
   with none kept it goes on (`SignLoop.refuted_senses_stop`, `SignLoop.refuted_drops`,
-  `SignLoop.refuted_goes_on`). Listing both signs, it holds, senses
-  the stop at the first step and is off from the second, its configuration resting from the fourth
-  (`SignLoop.both_stopped`, `SignLoop.both_off`, `SignLoop.both_turns_off`), or, where going on
-  gains, is released and goes on (`SignLoop.both_released`, `SignLoop.both_on`,
-  `SignLoop.both_goes_on`).
+  `SignLoop.refuted_goes_on`). Listing both signs and holding first, where going on loses it
+  senses the stop at the first step and is off from the second, its configuration resting from the
+  fourth (`SignLoop.both_stopped`, `SignLoop.both_off`, `SignLoop.both_turns_off`), and where going
+  on gains it senses the release and goes on from the second (`SignLoop.both_released`,
+  `SignLoop.both_on`, `SignLoop.both_goes_on`).
 
 **Standing.** Elementary finite maximization: `bestOf_best`. Near-definitional or short
 compositions: `after_le_after`,
@@ -1244,8 +1244,8 @@ theorem refuted_goes_on : ∀ n,
   | 0 => rfl
   | n + 1 => (congrArg loop.law.step (refuted_goes_on n)).trans rfl
 
-/-- **Listing both signs, where going on loses, the formation holds and senses the stop at the first
-step, and at the second keeps the true sign alone and switches off.** -/
+/-- **Listing both signs and holding from the start, where going on loses, the formation holds and
+senses the stop at the first step, and at the second keeps the true sign alone and switches off.** -/
 theorem both_stopped :
     loop.law.course (ReadingLoop.Loop.start [.gains, .loses] .plain .hold .loses) 1 =
         ⟨([.gains, .loses], some (.plain, .hold)), .stop, .hold, .loses⟩ ∧
@@ -1253,8 +1253,8 @@ theorem both_stopped :
         ⟨([.loses], some (.stop, .hold)), .stop, .off, .loses⟩ :=
   ⟨rfl, rfl⟩
 
-/-- **Where going on gains, the formation holds and senses the release at the first step, and at the
-second keeps the true sign alone and goes on.** -/
+/-- **With the same listing and start, where going on gains, the formation holds and senses the
+release at the first step, and at the second keeps the true sign alone and goes on.** -/
 theorem both_released :
     loop.law.course (ReadingLoop.Loop.start [.gains, .loses] .plain .hold .gains) 1 =
         ⟨([.gains, .loses], some (.plain, .hold)), .release, .hold, .gains⟩ ∧
@@ -1262,30 +1262,32 @@ theorem both_released :
         ⟨([.gains], some (.release, .hold)), .release, .go, .gains⟩ :=
   ⟨rfl, rfl⟩
 
-/-- **Listing both signs, where going on loses, the configuration rests from step four**: the
-formation keeps the true sign alone, its last answer plain at its act of switching off, and is off
-and senses plainly. -/
+/-- **Listing both signs and holding from the start, where going on loses, the configuration rests
+from step four**: the formation keeps the true sign alone, its last answer plain at its act of
+switching off, and is off and senses plainly. -/
 theorem both_turns_off : ∀ n,
     loop.law.course (ReadingLoop.Loop.start [.gains, .loses] .plain .hold .loses) (n + 4) =
       ⟨([.loses], some (.plain, .off)), .plain, .off, .loses⟩
   | 0 => rfl
   | n + 1 => (congrArg loop.law.step (both_turns_off n)).trans rfl
 
-/-- **Where going on gains, the configuration of the same listing rests from step four**, going on. -/
+/-- **Where going on gains, the configuration of the same listing and start rests from step four**,
+going on. -/
 theorem both_goes_on : ∀ n,
     loop.law.course (ReadingLoop.Loop.start [.gains, .loses] .plain .hold .gains) (n + 4) =
       ⟨([.gains], some (.plain, .go)), .plain, .go, .gains⟩
   | 0 => rfl
   | n + 1 => (congrArg loop.law.step (both_goes_on n)).trans rfl
 
-/-- **Listing both signs, where going on loses, the formation is off from step two on.** -/
+/-- **Listing both signs and holding from the start, where going on loses, the formation is off from
+step two on.** -/
 theorem both_off : ∀ n,
     (loop.law.course (ReadingLoop.Loop.start [.gains, .loses] .plain .hold .loses) (n + 2)).active = .off
   | 0 => rfl
   | 1 => rfl
   | n + 2 => congrArg (fun x => x.active) (both_turns_off n)
 
-/-- **Where going on gains, it goes on from step two on.** -/
+/-- **With the same listing and start, where going on gains, it goes on from step two on.** -/
 theorem both_on : ∀ n,
     (loop.law.course (ReadingLoop.Loop.start [.gains, .loses] .plain .hold .gains) (n + 2)).active = .go
   | 0 => rfl
