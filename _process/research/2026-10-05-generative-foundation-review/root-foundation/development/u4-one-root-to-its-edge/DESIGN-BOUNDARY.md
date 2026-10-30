@@ -4,11 +4,11 @@ AI-written design for the last step of U4, "one root to its edge" ([proposal](..
 
 - **Status.** This is a draft, revised after two independent reviews ([first](REVIEW-U4-BOUNDARY.md), [second](REVIEW-U4-BOUNDARY-SECOND.md)) and MV's owner's reading of the field it needs. Both reviews found it sound with fixes, four blocking findings in the first and three in the second. Every finding is taken (§7).
   - The connected rows have been read independently (§3).
-  - OU's owner has answered where a derived row's law sits, and has put two laws on HE2's list (§1.1, §3).
+  - OU's owner has answered where a derived row's law sits, and has put two laws on HE2's list (§1.1, §3). OU's owner has read this revision's §0–§6, taken the discharge condition and declined the weaker standing (§1.2, §7).
   - Row 17's strict form passes a Lean check of every test in §1.5, and nine negative controls fail as they should (§4). Row 5's strict form records the relational part of a row that stays at "balance in its statement" (§1.2).
   - No package Lean is claimed, and no record is written.
 - **Order.** The record lands last, after GW1, GW2 and GW6 (landed, main `e077583c6`), in OU's order. MV's field for the standings lands before it, as F5's field landed before U2's Lean (§5).
-- **The table.** [boundary_table.py](boundary_table.py) produces [boundary-table.json](boundary-table.json). It ran on the constants of main `4ac8cf27e`, after U3's Lean landed. The script runs the master-law measure from the checker cache and compiles nothing.
+- **The table.** [boundary_table.py](boundary_table.py) produces [boundary-table.json](boundary-table.json). It ran on the constants of main `4ac8cf27e`, after U3's Lean landed, and again on main `37dda72a4`, after GW1, GW2 and GW6 landed: the two outputs are byte-identical, so GW added no central declaration. The script runs the master-law measure from the checker cache and compiles nothing.
 
 ## 0. Where it stands
 
@@ -112,7 +112,10 @@ The root countermodels over `Unit` show only that no hypothesis is redundant in 
 
 **The loose reading, not adopted.** On it, the root form may keep the model's own structures, a `Flow`, a `Web` or `Generations`, and state its hypotheses as grammar inclusions over relations the model defines. The design does not take it, because under it every model whose relations can be named would be "on the root".
 
-**An alternative OU's owner may take instead.** If a weaker sense of standing 2 is wanted, it can be named as a standing of its own, "under a stated hypothesis, met through ⟨lemma⟩", and applied to every row by a scan, `renewedBy` included. The design does not propose it.
+**A weaker standing, declined.** The second review offered one alternative: a standing of its own, "under a stated hypothesis, met through ⟨lemma⟩", applied to every row by a scan, `renewedBy` included. OU's owner declined it, for three reasons:
+- such a standing would report which lemmas a proof uses, and reach already measures that;
+- it would let amount reasoning pass as relational, and put `renewedBy` and row 5 on the edge by their proofs while their statements take balance;
+- it would add a count without adding a claim, whereas the strict form says something a reader can check.
 
 **Lever 2's four rows on this line.**
 - **Row 17 is "witnessed at its model".** The hypotheses of its lever 2 form are the gate and descent as two inclusions at one step, and a generation wholly inactive, each witnessed. That form keeps the model's terms. Its strict form passes every test of §1.5, its recovery meeting the discharge condition, so the row reaches standing 2 when the leaf lands (§4).
@@ -295,7 +298,7 @@ The rows in each group are in the reading's table, and each row's `reading` fiel
     The name test is controlled as well. It admits `Nat`, the prelude's `total`, `«际»` and `«则»`. It refuses `Generative.Process`, `Flow.taken`, `U4Boundary.GivenTo` (a hypothesis, admitted only in its own form's items), and a «» name declared off the grammar.
   - **Names.** Lever 2's scratch names `*_on_root` stated a wrong meaning under the strict reading. The new forms are named for what they state, and the leaf takes the core's vocabulary at its claim.
 - **Rows 13 and 14** stay at amounts, with rows 1–3, 7 and 8. A relational restatement of cancellation is not proposed, since cancellation is an equation of sums.
-- **`Branching.loss_passes_juncture`** moves to derived if the grammar gains a law of junctures. The leaf's design weighs whether it should: the law must be one the grammar lacks, not a restatement of the row.
+- **`Branching.loss_passes_juncture`** moves to derived if the grammar gains a law of junctures. The leaf's design weighs whether it should. It takes the law only if rule 9 holds: the law must be one of the grammar that more than this row uses, generalized below, not one set beside it. Otherwise the row keeps its distance, with its reason. OU's owner reads that decision in the leaf's design.
 - **F5's items, the definitional rows and the counting rows** need nothing for the record. A strict root form for an F5 item is further work, not this record's.
 - **The rows that stay** are those at balance in their statements, at amounts, and at free significance, and the other steps rows. They stay where lever 1, lever 2, U3 and the reading left them, with their witnesses and reasons:
   - for balance, `pairs_without_one_to_one` and `repeated_unit`, and for row 5 its relational part;
@@ -328,13 +331,14 @@ The rows in each group are in the reading's table, and each row's `reading` fiel
    - the two halves of `Flow.withinCoupling_reads_iff`, as `«借步之所闭在二所闭»` and `«二所闭在借步之所闭»`, re-proved by SelectionPool's owner.
 3. **The core leaf**, claimed on U4's row, with an independent review, landing through the queue.
 4. **The record.** GW has landed; the record does not wait on HE2's rebuild. Its home section is 08 §7, beside the master laws, since it reads every central declaration through them. MV counts the standings, and the record prints them beside F5's four counts.
+   - **The release gate's item 3.** Once the record has landed with no row unplaced, it writes the reason for each of the 51 rows that do not reach the grammar. That meets the second branch of [the gate's](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gate-30-october-2026) item 3: "its not entering is written with its reason". The record says so, and OU's owner then marks the gate.
+   - Item 3's other part, U1's seven interface laws for amounts in the package and not only in scratch, stays open. This record does not meet it.
 
 ## 6. Not done
 
 - The strict forms are scratch, not package Lean. The leaf is not claimed, and no reviewer has read this revision of the forms or the check.
 - The juncture law is not weighed yet.
 - MV's field is drafted, not landed. The dump fields `eq` and `x` wait for the coordinator.
-- The table ran on main `4ac8cf27e`. GW1, GW2 and GW6 have since landed (`e077583c6`). Whether they add central declarations is checked when the table is rerun on main.
 
 ## 7. The reviews, and what was taken
 
@@ -379,3 +383,12 @@ The rows in each group are in the reading's table, and each row's `reading` fiel
 | `kept_onward`'s wording; the walk | The walk is the measure's, stopping only at «» names. `kept_onward` is described neutrally, and the table's list of unnamed laws is dropped (§0, §2) |
 | Standing 2's fields | `{hypothesis, countermodel, fit}`, `recovery`, `certificate`; the counts in `counts_at_boundary` (§1.5) |
 | Dump fields | `eq` and `x` are proposed, and wait for the coordinator (§1.5) |
+
+### OU's owner's reading of this revision
+
+| Point | Taken |
+|---|---|
+| The discharge condition is taken; the weaker standing is declined | §1.2 gives the reasons. Row 5 keeps "balance in its statement", with its relational part in its basis |
+| The juncture law joins the leaf only under rule 9 | §4 |
+| The record meets the release gate's item 3 by its second branch, and says so only once it has landed | §5. U1's interface laws stay open |
+| The table is rerun on main after GW | Done: byte-identical output, no new central declaration (status) |
