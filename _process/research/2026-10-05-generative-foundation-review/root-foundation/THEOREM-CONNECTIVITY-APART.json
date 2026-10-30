@@ -5676,6 +5676,96 @@
    "module": "Becoming.HeldForReading",
    "category": "general-structure",
    "reason": "HeldForReading.through_threshold_iff: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.ReadStages.above_iff_routes": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.above_iff_routes: a law of any two-stage prospects in natural-number weights, the four plans as a revision with three routes; it waits for a formation's own order and the selection a reading applies, on the base (RF, RR)"
+  },
+  "Becoming.ReadStages.complyAtBoth_maximal_iff": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.complyAtBoth_maximal_iff: a law of any two-stage prospects in natural-number weights, the four plans as a revision with three routes; it waits for a formation's own order and the selection a reading applies, on the base (RF, RR)"
+  },
+  "Becoming.ReadStages.complyAtBoth_not_above_ownAtBoth": {
+   "module": "Becoming.ReadStages",
+   "category": "general-structure",
+   "reason": "ReadStages.complyAtBoth_not_above_ownAtBoth: a law of any two-stage prospects in natural-number weights, the four plans as a revision with three routes; it waits for a formation's own order and the selection a reading applies, on the base (RF, RR)"
+  },
+  "Becoming.RevisionRoutes.Example.both_at_loss_ten": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "model-witness",
+   "reason": "RevisionRoutes.Example.both_at_loss_ten: a fact about one constructed model, two routes, keeping openly and complying when read, each at weight 1 in a total of 1, the value 4, at losses 10 and 1, and its variations (RR)"
+  },
+  "Becoming.RevisionRoutes.Example.restored_every": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "model-witness",
+   "reason": "RevisionRoutes.Example.restored_every: a fact about one constructed model, two routes, keeping openly and complying when read, each at weight 1 in a total of 1, the value 4, at losses 10 and 1, and its variations (RR)"
+  },
+  "Becoming.RevisionRoutes.Example.twoRoutes_complying_above": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "model-witness",
+   "reason": "RevisionRoutes.Example.twoRoutes_complying_above: a fact about one constructed model, two routes, keeping openly and complying when read, each at weight 1 in a total of 1, the value 4, at losses 10 and 1, and its variations (RR)"
+  },
+  "Becoming.RevisionRoutes.Example.twoRoutes_open_not_above": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "model-witness",
+   "reason": "RevisionRoutes.Example.twoRoutes_open_not_above: a fact about one constructed model, two routes, keeping openly and complying when read, each at weight 1 in a total of 1, the value 4, at losses 10 and 1, and its variations (RR)"
+  },
+  "Becoming.RevisionRoutes.Example.twoRoutes_valid": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "model-witness",
+   "reason": "RevisionRoutes.Example.twoRoutes_valid: a fact about one constructed model, two routes, keeping openly and complying when read, each at weight 1 in a total of 1, the value 4, at losses 10 and 1, and its variations (RR)"
+  },
+  "Becoming.RevisionRoutes.above_asymm": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.above_asymm: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.above_at_some_value": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.above_at_some_value: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.above_needs": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.above_needs: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.above_of_more_value": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.above_of_more_value: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.every_loss_iff_kept": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.every_loss_iff_kept: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.every_value_loss_iff_of_route": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.every_value_loss_iff_of_route: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.maximal_of_certain": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.maximal_of_certain: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.maximal_of_more_restored": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.maximal_of_more_restored: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.maximal_of_no_value": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.maximal_of_no_value: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
+  },
+  "Becoming.RevisionRoutes.route_above_iff": {
+   "module": "Becoming.RevisionRoutes",
+   "category": "general-structure",
+   "reason": "RevisionRoutes.route_above_iff: a law of any prospects at a revision in natural-number weights, or of any gain and loss (when no route of keeping a law stands above a revision of it); it waits for a formation's own order and a reading's revision of its law, on the base (RR)"
   }
  },
  "instances": {
