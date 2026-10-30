@@ -59,3 +59,21 @@ I took the 31 rows of `boundary-table.json` with `"standing": "connected"`, loca
 2. **`Learnable.learnable_iff` and `LearnableRuns.learnable_iff_tracks`** list `GrammarLaws.gap_of_lt`, `le_succ_cases`, `revisits_within`, `skipAt_le`, `skipAt_lt` and `skipAt_ne` (and the definition `GrammarLaws.skipAt`) as grammar theorems. `GrammarLaws.lean:258–264` says these are "Lemmas on numbers and lists, not statements of the grammar" (pigeonhole and its index surgery). Of the eight constants listed, only `«迭之定»` and `«迭之接»` are grammar laws; they enter through `lasso_of_held` (`Learning.lean:495`). A walk that counts every constant of a `Grammar*` module overstates these rows' reach. Their standing (steps) does not change.
 3. **Misleading, not wrong.** In the rows that use the closure to carry a closed region along a run, the walk reports `«所闭之传递»`, `«所闭之自反»` and `«缘在所闭»`: `ClosedCapture.lock_outlives_loss`, `Pace.rule_until_reading`, both `RuleCapture` rows, four `RegimeMargin` rows (through `orbit_mono`) and `Valuation.significant_iff`. These enter only through `reach_iff_withinClosure`/`withinClosure_of_trace`, which turn a run's reach into `«所闭»`. In `Coupled.Indexed.ends_downstream` they enter through `downstream_within`, which reads the model's chain as `«所闭»`. The law the rows actually rely on is the content of `«闭含所闭»`, that a closed region holds what lies within the closure. It never appears as a constant, because it is used by applying `«所闭»`'s definition to the region (`Frame.lean:255–257`; `RegimeMargin.lean:2242`).
 4. Every other row's reported grammar theorems match the proof text I read. I did not trace every leaf of `Identification` for `le_succ_cases`; it is plausibly reached through `Identification.lean:1025`.
+
+## Correction (30 October 2026, from the boundary review)
+
+*Added by the design's author after [the review](REVIEW-U4-BOUNDARY.md); the reading above is unchanged.*
+
+- **Bridges by recursion (review B3).** The tally says the two `Law` rows are the one place where bridges are proved by induction. In fact five of the eight cases use bridges proved by recursion:
+  - the two `Law` rows, through `reaches_iff_orbit` and `returns_iff_reaches`;
+  - `Tolerance.answers_restores_iff` and `Withholding.withholding_spreads`, through `chain_iff_steps`, which recurses through `«迭之末步»`;
+  - `WithinMoves.after_course`, through `trace_steps` and `trace_iff_steps`.
+
+  The review checked all eight. Each applies Y directly. Each bridge is an equivalence that holds for every instance of the model's parameters and adds no hypothesis. The design's test now says exactly that ([DESIGN-BOUNDARY.md](DESIGN-BOUNDARY.md) §1.1), and all eight stay cases.
+- **`Flow.withinCoupling_reads_iff` (review M2).** Its two halves are not a form no declaration states. They are `WithinClosure.of_reads` and `WithinClosureOf.to_reads` (`SelectionPool.lean:559`, `:570`), general closure laws declared off the grammar. Like `WithinClosure.converse`, they go on HE2's list to be declared in GrammarLaws.
+- **`presupposition_scopes` and `onLoop_of_closing` (review M3).** Neither form is one the grammar lacks:
+  - `presupposition_scopes`'s form is the closure's definition read through `«闭含所闭»`, `«所闭之闭»` and `«所闭之自反»`;
+  - `onLoop_of_closing`'s form is a corollary of the three laws named above.
+
+  Of the four forms, only the juncture law is weighed.
+- **`«所闭之逆»` (review M4).** Declaring it in GrammarLaws does not make `Flow.mutuallyDependent_iff_reach` reach it. `WithinClosure.converse` must also be re-proved through it, in the same rebuild.

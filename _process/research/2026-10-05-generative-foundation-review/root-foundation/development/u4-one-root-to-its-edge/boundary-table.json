@@ -4,19 +4,67 @@
   "derived": 8,
   "under a stated hypothesis": 0,
   "premise": 0,
-  "logic": 12,
-  "counting": 4,
-  "connected": 23,
-  "balance, represented": 32,
+  "counting": 6,
+  "connected": 24,
+  "witnessed at its model": 2,
+  "balance, represented": 31,
   "amounts": 18,
-  "at a represented model": 7,
-  "own carrier": 4,
-  "at its model": 7,
-  "free significance": 3
+  "at a represented model": 16,
+  "own carrier": 7,
+  "at its model": 3,
+  "free significance": 3,
+  "unplaced": 0
  },
  "on_the_edge": 8,
- "below_the_grammar": 16,
- "distances": 94,
+ "below_the_grammar": 6,
+ "distances": 104,
+ "unplaced": [],
+ "definitional": 12,
+ "f5_counts": {
+  "reaches the grammar": 44,
+  "at a represented model": 16,
+  "own carrier": 7,
+  "the rest": 51
+ },
+ "f5_counts_published": {
+  "reaching the grammar": 44,
+  "stated at a represented model": 16,
+  "stated on its own carrier only": 7,
+  "the rest": 51
+ },
+ "standing_against_f5": {
+  "derived": {
+   "reaches the grammar": 8
+  },
+  "counting": {
+   "the rest": 6
+  },
+  "connected": {
+   "reaches the grammar": 24
+  },
+  "witnessed at its model": {
+   "the rest": 2
+  },
+  "balance, represented": {
+   "reaches the grammar": 12,
+   "the rest": 19
+  },
+  "amounts": {
+   "the rest": 18
+  },
+  "at a represented model": {
+   "at a represented model": 16
+  },
+  "own carrier": {
+   "own carrier": 7
+  },
+  "at its model": {
+   "the rest": 3
+  },
+  "free significance": {
+   "the rest": 3
+  }
+ },
  "hand_rows_not_central": [],
  "rows": [
   {
@@ -49,7 +97,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "Y itself is the root form. Restated with the `«尽»` hypothesis in place of `within`, the row *is* `«尽则不或屡»` at the model. The m·ε bound is amounts and stays off the grammar."
@@ -87,7 +137,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "Yes in principle. At R = `Steps P`, Reach is `«所闭» R`, returning is `«及» R s s`, a path is a line of R steps, and a juncture is a place with two R-successors, one back within `«所闭»` of s and one not. No amounts, and only the hypothesis `«及» R s s`. It would be a new grammar law."
@@ -114,11 +166,13 @@
    "grammar_theorems": [],
    "grammar_definitions": [],
    "f5": [],
-   "standing": "amounts",
-   "basis": "as Listed.coming_of_ceasing",
+   "standing": "counting",
+   "basis": "the counting law CountsAcross.keep_pace, for any predicate, at a web's arising and ceasing over a listing",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": null
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "ClosedCapture.lock_outlives_loss",
@@ -147,7 +201,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "Partly. Persistence of the lock is the content of `«闭含所闭»` at the two-level step relation, given closedness. Closedness needs the model's preorders and monotonicity. `b + t ≤ loss` is an amount."
@@ -180,11 +236,13 @@
      "record": "joint-difference-making"
     }
    ],
-   "standing": "logic",
-   "basis": "one line from the definitions (U2, process model)",
+   "standing": "at a represented model",
+   "basis": "F5: process; definitional (one line from the definitions)",
+   "definitional": true,
+   "f5_class": "at a represented model",
    "reading": null,
-   "by": "reading",
-   "rule_would_give": "at a represented model"
+   "by": "rule",
+   "rule_would_give": null
   },
   {
    "declaration": "Dependence.differenceOnlyTogether_iff",
@@ -213,6 +271,8 @@
    ],
    "standing": "at a represented model",
    "basis": "F5: process",
+   "definitional": false,
+   "f5_class": "at a represented model",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -238,9 +298,11 @@
    "f5": [],
    "standing": "at its model",
    "basis": "C's extension on the moves' frame (Web.paths_extension_iff_widens)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": null
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Direction.widening_selected_by_pool",
@@ -274,7 +336,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "basis": "takes Flow's balance in its statement; reaches grammar laws among its reasons",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -301,9 +365,11 @@
    "f5": [],
    "standing": "counting",
    "basis": "row 18: courses of n binary draws, weighted; reading them as drift is the model's hypothesis (LEVER-2-AUDIT.md §2)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": "at its model"
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "ExchangeLaw.response_not_fixed_by_coupling",
@@ -330,11 +396,13 @@
      "record": "what-a-pools-acts-respond-to"
     }
    ],
-   "standing": "logic",
-   "basis": "two laws through one coupling (U2, own carrier)",
+   "standing": "own carrier",
+   "basis": "F5: stated in grammar terms on its own carrier; definitional (two exchange laws, ofClass and zero, through one coupling)",
+   "definitional": true,
+   "f5_class": "own carrier",
    "reading": null,
-   "by": "reading",
-   "rule_would_give": "own carrier"
+   "by": "rule",
+   "rule_would_give": null
   },
   {
    "declaration": "Flow.Balances.comparison_within_response",
@@ -368,7 +436,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "basis": "takes Flow's balance in its statement; reaches grammar laws among its reasons",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -397,7 +467,9 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -426,7 +498,9 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -457,7 +531,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -490,7 +566,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -530,7 +608,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "basis": "takes Flow's balance in its statement; reaches grammar laws among its reasons",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -570,7 +650,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "basis": "takes Flow's balance in its statement; reaches grammar laws among its reasons",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -606,7 +688,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "basis": "takes Flow's balance in its statement; reaches grammar laws among its reasons",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -642,7 +726,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "basis": "takes Flow's balance in its statement; reaches grammar laws among its reasons",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -671,7 +757,9 @@
    ],
    "f5": [],
    "standing": "derived",
-   "basis": "a case of «所闭之界» at R = L.FedFrom W; bridges exist (FedFrom and FedBy unfolded; one prelude step, ¬ 0 < n → n = 0) (CONNECTED-ROWS-READING.md)",
+   "basis": "a case of «所闭之界» at R = L.FedFrom W; bridges: FedFrom and FedBy unfolded, and one prelude step, ¬ 0 < n → n = 0 (CONNECTED-ROWS-READING.md)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "case",
     "root_form": "— (it is the law at the model)"
@@ -701,7 +789,9 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -730,7 +820,9 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -762,6 +854,8 @@
    ],
    "standing": "at a represented model",
    "basis": "F5: occurrence",
+   "definitional": false,
+   "f5_class": "at a represented model",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -792,7 +886,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "exactly WithinClosure.converse, «所闭» («逆» R) f g ↔ «所闭» R g f, grammar-only in content but declared off the grammar; a case once that law is declared in GrammarLaws (CONNECTED-ROWS-READING.md)",
+   "basis": "exactly WithinClosure.converse, «所闭» («逆» R) f g ↔ «所闭» R g f, grammar-only in content but declared off the grammar; a case once «所闭之逆» is declared in GrammarLaws and WithinClosure.converse is re-proved through it (HE2; CONNECTED-ROWS-READING.md)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "case, Y not in the grammar",
     "root_form": "—"
@@ -822,10 +918,12 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "amounts",
-   "basis": "balance only in its proof; its statement is on its model's amounts",
+   "basis": "endless novelty concludes that a family gives more than it takes or is open, an imbalance; balance enters only the proof",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
-   "by": "rule",
-   "rule_would_give": null
+   "by": "reading",
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Flow.no_new_dependence",
@@ -848,11 +946,13 @@
    "grammar_theorems": [],
    "grammar_definitions": [],
    "f5": [],
-   "standing": "at its model",
-   "basis": "row 5: \"coming to stand is given to\" (no_new_dependence_of_given); every hypothesis witnessed (Ungiven); the statement keeps the model's terms, so standing 2 waits for a form over every relation and amount (LEVER-2-AUDIT.md §5)",
+   "standing": "witnessed at its model",
+   "basis": "row 5: \"coming to stand is given to\", an implication from ComesToStand to DescendsAt, with inheritance at the descents and nothing taking part depending (no_new_dependence_of_given); witnesses Ungiven, Uninherited, Held, Standing; balance enters only the proof, as one way to meet the implication (LEVER-2-AUDIT.md §5, §10)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": "amounts"
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Flow.outrun_below",
@@ -878,7 +978,9 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -907,7 +1009,9 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -930,10 +1034,12 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "amounts",
-   "basis": "row 3: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis witnessed; the conclusion compares amounts (LEVER-2-AUDIT.md §4, §10)",
+   "basis": "row 3: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis that is not counting witnessed; the conclusion compares sums of amounts over generations (LEVER-2-AUDIT.md §4, §10)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": "at its model"
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Flow.selection_within",
@@ -955,10 +1061,12 @@
    ],
    "f5": [],
    "standing": "amounts",
-   "basis": "row 1: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis witnessed; the conclusion compares amounts (LEVER-2-AUDIT.md §4, §10)",
+   "basis": "row 1: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis that is not counting witnessed; the conclusion compares sums of amounts over generations (LEVER-2-AUDIT.md §4, §10)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": "at its model"
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Flow.transmitted_supported",
@@ -978,10 +1086,12 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "amounts",
-   "basis": "row 2: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis witnessed; the conclusion compares amounts (LEVER-2-AUDIT.md §4, §10)",
+   "basis": "row 2: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis that is not counting witnessed; the conclusion compares sums of amounts over generations (LEVER-2-AUDIT.md §4, §10)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": "at its model"
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Flow.unexcluded_beyond_coupling",
@@ -1011,7 +1121,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "basis": "takes Flow's balance in its statement; reaches grammar laws among its reasons",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -1044,7 +1156,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "basis": "takes Flow's balance in its statement; reaches grammar laws among its reasons",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -1077,7 +1191,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "basis": "takes Flow's balance in its statement; reaches grammar laws among its reasons",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -1117,7 +1233,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "basis": "takes Flow's balance in its statement; reaches grammar laws among its reasons",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -1150,12 +1268,14 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "its two halves are WithinClosure.of_reads and WithinClosureOf.to_reads, grammar-only in content but declared off the grammar, with their hypotheses met by case splits on the model; on HE2's list beside «所闭之逆» (CONNECTED-ROWS-READING.md, with its correction)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "Yes: R ⊆ R′, R′ ⊆ R ∪ {(o,h) : R a h} and R′ o a give `«所闭» R′ o g ↔ «所闭» R o g ∨ «所闭» R a g`. Once declared in the grammar, the row is a case with the existing bridges, all definitional case splits."
    },
-   "by": "rule",
+   "by": "reading",
    "rule_would_give": null
   },
   {
@@ -1182,7 +1302,9 @@
    ],
    "f5": [],
    "standing": "derived",
-   "basis": "a case of «所闭之单调» at R = AffectedBy, S = Shares; bridges exist (shares_of_affectedBy, an unfolding) (CONNECTED-ROWS-READING.md)",
+   "basis": "a case of «所闭之单调» at R = AffectedBy, S = Shares; bridges: shares_of_affectedBy, an unfolding (CONNECTED-ROWS-READING.md)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "case",
     "root_form": "—"
@@ -1209,11 +1331,13 @@
     "GrammarLaws.total_congr"
    ],
    "f5": [],
-   "standing": "at its model",
-   "basis": "row 17: the gate as two inclusions (all_end_on_root, size_zero_of_within); every hypothesis witnessed (Ungated, Lifted.inactive_needed); the statement keeps the model's terms, so standing 2 waits for a form over every relation and amount (LEVER-2-AUDIT.md §10)",
+   "standing": "witnessed at its model",
+   "basis": "row 17: the gate and descent as two inclusions at one step, and a generation wholly inactive (all_end_on_root, size_zero_of_within); witnesses Ungated (gate), Ungated.silent (descent), Lifted.inactive_needed (inactivity); the conclusion is a count (LEVER-2-AUDIT.md §10)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": null
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "GroupEnding.Flow.coupled_end_together",
@@ -1239,7 +1363,9 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -1268,7 +1394,9 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -1292,11 +1420,13 @@
     "GrammarLaws.total_congr"
    ],
    "f5": [],
-   "standing": "at its model",
-   "basis": "row 14: the gate as two inclusions, cancellation and inactivity (rises_iff_inactive_on_root); every hypothesis witnessed (Ungated, EndsAmong, Lifted); the statement keeps the model's terms, so standing 2 waits for a form over every relation and amount (LEVER-2-AUDIT.md §10)",
+   "standing": "amounts",
+   "basis": "row 14: the gate and descent as two inclusions (rises_iff_inactive_on_root), but cancellation and inactivity, which compares sums of the trait, constrain amounts; witnesses EndsAmong (gate, inactivity), EndsAmong.silent (descent), Lifted (cancellation); the list facts are counting and not witnessed (LEVER-2-AUDIT.md §10)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": null
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Ideals.verifiableBy_iff_interior",
@@ -1323,11 +1453,13 @@
      "record": "what-a-finite-stretch-verifies"
     }
    ],
-   "standing": "logic",
-   "basis": "Iff.rfl (U2, own carrier)",
+   "standing": "own carrier",
+   "basis": "F5: stated in grammar terms on its own carrier; definitional (Iff.rfl)",
+   "definitional": true,
+   "f5_class": "own carrier",
    "reading": null,
-   "by": "reading",
-   "rule_would_give": "own carrier"
+   "by": "rule",
+   "rule_would_give": null
   },
   {
    "declaration": "Law.drawn_iff_not_returns",
@@ -1363,7 +1495,9 @@
    ],
    "f5": [],
    "standing": "derived",
-   "basis": "a case of «定后有后则入当且仅当不返» at R = next x = y; bridges exist (drawn_iff_drawnIn, absorbing_iff_closed, reaches_iff_orbit; the orbit read as «及» by induction) (CONNECTED-ROWS-READING.md)",
+   "basis": "a case of «定后有后则入当且仅当不返» at R = next x = y; bridges: drawn_iff_drawnIn, absorbing_iff_closed, reaches_iff_orbit and returns_iff_reaches (the orbit read as «及», by recursion) (CONNECTED-ROWS-READING.md)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "case",
     "root_form": "—"
@@ -1404,7 +1538,9 @@
    ],
    "f5": [],
    "standing": "derived",
-   "basis": "a case of «有限遍后定后则定前当且仅当皆返» at R = next x = y; bridges exist (lossless_iff_fixedBefore, returns_iff_reaches; the orbit read as «及» by induction) (CONNECTED-ROWS-READING.md)",
+   "basis": "a case of «有限遍后定后则定前当且仅当皆返» at R = next x = y; bridges: lossless_iff_fixedBefore, an unfolding, and returns_iff_reaches (by recursion) (CONNECTED-ROWS-READING.md)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "case",
     "root_form": "—"
@@ -1450,7 +1586,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "l\\"
@@ -1495,7 +1633,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "No, for the same reasons."
@@ -1530,6 +1670,8 @@
    ],
    "standing": "own carrier",
    "basis": "F5: stated in grammar terms on its own carrier",
+   "definitional": false,
+   "f5_class": "own carrier",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -1564,7 +1706,9 @@
    ],
    "f5": [],
    "standing": "derived",
-   "basis": "a case of «像定后当且仅当同行» at the law's step along π; bridges exist (goAlikeUnder_iff_alike, lumped_iff_fixed_image) (CONNECTED-ROWS-READING.md)",
+   "basis": "a case of «像定后当且仅当同行» at the law's step, along π; bridges: goAlikeUnder_iff_alike and lumped_iff_fixed_image, unfoldings (CONNECTED-ROWS-READING.md)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "case",
     "root_form": "—"
@@ -1597,11 +1741,13 @@
      "record": "learning-through-a-map-is-tracking-in-the-limit"
     }
    ],
-   "standing": "logic",
-   "basis": "Iff.rfl (U2, process model)",
+   "standing": "at a represented model",
+   "basis": "F5: process; definitional (Iff.rfl)",
+   "definitional": true,
+   "f5_class": "at a represented model",
    "reading": null,
-   "by": "reading",
-   "rule_would_give": "at a represented model"
+   "by": "rule",
+   "rule_would_give": null
   },
   {
    "declaration": "Listed.coming_of_ceasing",
@@ -1622,11 +1768,13 @@
    "grammar_theorems": [],
    "grammar_definitions": [],
    "f5": [],
-   "standing": "amounts",
-   "basis": "counts of arising and ceasing over a listing; the census pairing with «计» is lever 1's candidate",
+   "standing": "counting",
+   "basis": "for any carrier, predicate and exact listing, ceasing without end needs coming to be without end; the statement unfolds to the prelude's Distinct and Init and names no amount",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": null
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Optimum.mutual_beyond",
@@ -1652,7 +1800,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -1681,7 +1831,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -1713,7 +1865,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "No as stated: the content concerns step indices up to the first reading step. Persistence alone is `«闭含所闭»`."
@@ -1742,9 +1896,11 @@
    "f5": [],
    "standing": "at its model",
    "basis": "a law of its model; the image law only reads it (OU3d's review)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": null
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "RegimeMargin.Adjusted.comes_to_rest",
@@ -1781,7 +1937,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1); counting by the prelude's law",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1); the prelude's counting law in its proof",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "No: amounts and numeric bounds."
@@ -1809,10 +1967,12 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "amounts",
-   "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "basis": "as RegimeMargin.ends_iff_below, with recent giving adjusted",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
-   "by": "rule",
-   "rule_would_give": null
+   "by": "reading",
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "RegimeMargin.Adjusted.falls_iff_below",
@@ -1849,7 +2009,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1); counting by the prelude's law",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1); the prelude's counting law in its proof",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "No: amounts."
@@ -1883,7 +2045,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "Partly. Given \"ended is `«闭»` under the converse of dependence\" as a hypothesis, the row is `«闭含所闭»` (`GrammarLaws.lean:206`) at that relation. The closedness is amounts (draining) and cannot be on the grammar."
@@ -1919,7 +2083,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1); counting by the prelude's law",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1); the prelude's counting law in its proof",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "No: amounts."
@@ -1954,7 +2120,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "No: amounts."
@@ -1982,10 +2150,12 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "amounts",
-   "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "basis": "a run of Nat margins ends exactly below H + y",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
-   "by": "rule",
-   "rule_would_give": null
+   "by": "reading",
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "RelativePosition.rise_needs_fall",
@@ -2008,9 +2178,11 @@
    "f5": [],
    "standing": "counting",
    "basis": "a rise and fall count over a list, by commutativity (EC6: law of its model)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": "at its model"
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Renewable.no_exact_finite_reading",
@@ -2048,6 +2220,8 @@
    ],
    "standing": "at a represented model",
    "basis": "F5: occurrence, process",
+   "definitional": false,
+   "f5_class": "at a represented model",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -2076,7 +2250,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -2105,7 +2281,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -2129,9 +2307,11 @@
    "f5": [],
    "standing": "amounts",
    "basis": "row 9: dissipation on a family and an injection from births to given units, a count within a take; dissipation is kept as a premise of the account with no proof of independence (LEVER-2-AUDIT.md §1)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": "at its model"
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "RuleCapture.favouring_locks",
@@ -2160,7 +2340,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "Partly. \"Favouring persists\" is `«闭含所闭»` at the turn relation, given `turn_favours`. The preorders and the reading schedule are the model's."
@@ -2195,7 +2377,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "As `favouring_locks`: partly."
@@ -2230,6 +2414,8 @@
    ],
    "standing": "at a represented model",
    "basis": "F5: process",
+   "definitional": false,
+   "f5_class": "at a represented model",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -2255,9 +2441,11 @@
    "f5": [],
    "standing": "counting",
    "basis": "row 12: Price's partition (LEVER-2-AUDIT.md §2)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": "at its model"
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "SelectionLevels.rises_exact_iff_levels",
@@ -2278,11 +2466,13 @@
     "GrammarLaws.total_congr"
    ],
    "f5": [],
-   "standing": "at its model",
-   "basis": "row 13: cancellation (rises_cancel_iff_levels); every hypothesis witnessed (Raised); the statement keeps the model's terms, so standing 2 waits for a form over every relation and amount (LEVER-2-AUDIT.md §1)",
+   "standing": "amounts",
+   "basis": "row 13: cancellation, G.raisedAt t = G.loweredAt t, constrains amounts (rises_cancel_iff_levels); witness Raised; the list facts are counting and not witnessed (LEVER-2-AUDIT.md §1)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": null
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "SelectionTerm.Flow.support_moved_rises",
@@ -2304,10 +2494,12 @@
    ],
    "f5": [],
    "standing": "amounts",
-   "basis": "row 8: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis witnessed; the conclusion compares amounts (LEVER-2-AUDIT.md §4, §10)",
+   "basis": "row 8: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis that is not counting witnessed; the conclusion compares sums of amounts over generations (LEVER-2-AUDIT.md §4, §10)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": "at its model"
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "SelectionTerm.Flow.support_not_lower",
@@ -2329,10 +2521,12 @@
    ],
    "f5": [],
    "standing": "amounts",
-   "basis": "row 7: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis witnessed; the conclusion compares amounts (LEVER-2-AUDIT.md §4, §10)",
+   "basis": "row 7: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis that is not counting witnessed; the conclusion compares sums of amounts over generations (LEVER-2-AUDIT.md §4, §10)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": "at its model"
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "SelectionTerm.covariation",
@@ -2355,9 +2549,11 @@
    "f5": [],
    "standing": "counting",
    "basis": "row 6: Price's covariance (LEVER-2-AUDIT.md §2)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": "at its model"
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "SharedCodes.run_agrees_every_start_iff",
@@ -2387,6 +2583,8 @@
    ],
    "standing": "at a represented model",
    "basis": "F5: own, process",
+   "definitional": false,
+   "f5_class": "at a represented model",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -2415,7 +2613,9 @@
    ],
    "f5": [],
    "standing": "derived",
-   "basis": "a case of «承之迭» at R = up; bridges exist (answers is «承» up by definition; chain_iff_steps) (CONNECTED-ROWS-READING.md)",
+   "basis": "a case of «承之迭» at R = up; bridges: answers is «承» up by definition; chain_iff_steps (the model's Chain as «迭», by recursion through «迭之末步»); the start instantiated at allWithheld (CONNECTED-ROWS-READING.md)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "case",
     "root_form": "—"
@@ -2450,7 +2650,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "Partly. Transmission is `«闭含所闭»` at the related-living relation (`transmits_iff_closed` shows N_rel is `«闭»`), with `Connected` read as `«所闭»` over living pairs. N_std and the seed are the valuation's, two-place over standpoints."
@@ -2483,11 +2685,13 @@
      "record": "living-significance-on-held-lives"
     }
    ],
-   "standing": "logic",
-   "basis": "S0 and N_std unpacked (U2, own carrier)",
+   "standing": "own carrier",
+   "basis": "F5: stated in grammar terms on its own carrier; definitional (S0 and N_std unpacked)",
+   "definitional": true,
+   "f5_class": "own carrier",
    "reading": null,
-   "by": "reading",
-   "rule_would_give": "own carrier"
+   "by": "rule",
+   "rule_would_give": null
   },
   {
    "declaration": "Viability.kernel_and_iff",
@@ -2514,11 +2718,13 @@
      "record": "conditions-kept-together"
     }
    ],
-   "standing": "logic",
-   "basis": "for all reached, and (U2, process model)",
+   "standing": "at a represented model",
+   "basis": "F5: process; definitional (for all reached, and)",
+   "definitional": true,
+   "f5_class": "at a represented model",
    "reading": null,
-   "by": "reading",
-   "rule_would_give": "at a represented model"
+   "by": "rule",
+   "rule_would_give": null
   },
   {
    "declaration": "Web.Carries.active_not_recurring",
@@ -2550,7 +2756,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "No: the reserve is an amount. Its grammar-only core is `«尽则不或屡»`, as in `Amounts.rests`."
@@ -2582,7 +2790,9 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -2608,10 +2818,12 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "amounts",
-   "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "basis": "optima end the condition drawn first, in Nat levels and weighted sums",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
-   "by": "rule",
-   "rule_would_give": null
+   "by": "reading",
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Web.Unceasing.activeRenewer_recurs",
@@ -2643,7 +2855,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "No: it goes through the stock (a Nat sum)."
@@ -2681,7 +2895,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "No: amounts (a sum over a family)."
@@ -2710,13 +2926,15 @@
     ],
     "prelude_only": false
    },
-   "grammar_theorems": [],
-   "grammar_definitions": [
+   "grammar_theorems": [
     "kept_onward"
    ],
+   "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "basis": "takes Flow's balance in its statement; reaches grammar laws among its reasons",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -2746,7 +2964,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -2772,10 +2992,12 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "amounts",
-   "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "basis": "a coupling below what keeping forgoes, in Nat worths and draws, breaks a dependence",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
-   "by": "rule",
-   "rule_would_give": null
+   "by": "reading",
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Web.frontier_broken",
@@ -2798,10 +3020,12 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "amounts",
-   "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "basis": "optima of orders on Nat levels and weighted draws break a dependence",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
-   "by": "rule",
-   "rule_would_give": null
+   "by": "reading",
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Web.frontier_exhausts",
@@ -2824,10 +3048,12 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "amounts",
-   "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "basis": "a weighting falling faster than levels rise leaves the level at nothing",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
-   "by": "rule",
-   "rule_would_give": null
+   "by": "reading",
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Web.frontier_keeps_stepwise",
@@ -2850,10 +3076,12 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "amounts",
-   "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "basis": "optima keep a level stepwise, in Nat levels and weighted sums",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
-   "by": "rule",
-   "rule_would_give": null
+   "by": "reading",
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Web.frontier_rebuilds",
@@ -2876,10 +3104,12 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "amounts",
-   "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "basis": "a level rising faster than the weighting falls is rebuilt, in Nat levels and weights",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
-   "by": "rule",
-   "rule_would_give": null
+   "by": "reading",
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Web.living_on_reaches",
@@ -2908,6 +3138,8 @@
    ],
    "standing": "at a represented model",
    "basis": "F5: occurrence",
+   "definitional": false,
+   "f5_class": "at a represented model",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -2940,6 +3172,8 @@
    ],
    "standing": "at a represented model",
    "basis": "F5: occurrence, own",
+   "definitional": false,
+   "f5_class": "at a represented model",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -2973,6 +3207,8 @@
    ],
    "standing": "own carrier",
    "basis": "F5: stated in grammar terms on its own carrier",
+   "definitional": false,
+   "f5_class": "own carrier",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -3006,6 +3242,8 @@
    ],
    "standing": "own carrier",
    "basis": "F5: stated in grammar terms on its own carrier",
+   "definitional": false,
+   "f5_class": "own carrier",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -3031,9 +3269,11 @@
    "f5": [],
    "standing": "free significance",
    "basis": "row 9: root form paths_one_object_root at the structural reading only (U3)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": "at its model"
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Web.renewingAt_iff_over_all",
@@ -3060,11 +3300,13 @@
      "record": "represented-boundary-against-dependence"
     }
    ],
-   "standing": "logic",
-   "basis": "a one-line unpacking (U2, occurrence model)",
+   "standing": "at a represented model",
+   "basis": "F5: occurrence; definitional (a one-line unpacking)",
+   "definitional": true,
+   "f5_class": "at a represented model",
    "reading": null,
-   "by": "reading",
-   "rule_would_give": "at a represented model"
+   "by": "rule",
+   "rule_would_give": null
   },
   {
    "declaration": "Web.roles_alive",
@@ -3091,11 +3333,13 @@
      "record": "life-as-condition-of-life"
     }
    ],
-   "standing": "logic",
-   "basis": "the one-kind reading keeps living (U2, occurrence model)",
+   "standing": "at a represented model",
+   "basis": "F5: occurrence; definitional (a representation lemma of the one-kind construction roles)",
+   "definitional": true,
+   "f5_class": "at a represented model",
    "reading": null,
-   "by": "reading",
-   "rule_would_give": "at a represented model"
+   "by": "rule",
+   "rule_would_give": null
   },
   {
    "declaration": "Web.roles_dependent",
@@ -3122,11 +3366,13 @@
      "record": "life-as-condition-of-life"
     }
    ],
-   "standing": "logic",
-   "basis": "the one-kind reading keeps dependence (U2, occurrence model)",
+   "standing": "at a represented model",
+   "basis": "F5: occurrence; definitional (a representation lemma of the one-kind construction roles)",
+   "definitional": true,
+   "f5_class": "at a represented model",
    "reading": null,
-   "by": "reading",
-   "rule_would_give": "at a represented model"
+   "by": "rule",
+   "rule_would_give": null
   },
   {
    "declaration": "Web.roles_supported",
@@ -3153,11 +3399,13 @@
      "record": "life-as-condition-of-life"
     }
    ],
-   "standing": "logic",
-   "basis": "the one-kind reading keeps support (U2 states it at the occurrence model)",
+   "standing": "at a represented model",
+   "basis": "F5: occurrence; definitional (a representation lemma of the one-kind construction roles)",
+   "definitional": true,
+   "f5_class": "at a represented model",
    "reading": null,
-   "by": "reading",
-   "rule_would_give": "at a represented model"
+   "by": "rule",
+   "rule_would_give": null
   },
   {
    "declaration": "Web.selfValuation_significant_iff",
@@ -3183,7 +3431,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "No meaningful one: the content is the valuation's logic over a free `sig`, and the grammar's part is reflexivity alone."
@@ -3217,11 +3467,13 @@
      "record": "continuation-condition-yields-living-significance"
     }
    ],
-   "standing": "logic",
-   "basis": "a free slot shown free (U2, occurrence model and own carrier)",
+   "standing": "at a represented model",
+   "basis": "F5: occurrence, own; definitional (a not-entailment by two constant significances)",
+   "definitional": true,
+   "f5_class": "at a represented model",
    "reading": null,
-   "by": "reading",
-   "rule_would_give": "at a represented model"
+   "by": "rule",
+   "rule_would_give": null
   },
   {
    "declaration": "Web.transmits_at_iff",
@@ -3248,11 +3500,13 @@
      "record": "transmission-is-inheritance-and-need"
     }
    ],
-   "standing": "logic",
-   "basis": "row 4: (A → B ∧ C) ↔ (A → B) ∧ (A → B → C) (U2, occurrence model; LEVER-2-AUDIT.md §1)",
+   "standing": "at a represented model",
+   "basis": "F5: occurrence; definitional (row 4: (A → B ∧ C) ↔ (A → B) ∧ (A → B → C) (LEVER-2-AUDIT.md §1))",
+   "definitional": true,
+   "f5_class": "at a represented model",
    "reading": null,
-   "by": "reading",
-   "rule_would_give": "at a represented model"
+   "by": "rule",
+   "rule_would_give": null
   },
   {
    "declaration": "Web.widens_iff_retains_adds",
@@ -3275,9 +3529,11 @@
    "f5": [],
    "standing": "free significance",
    "basis": "row 8: root form widens_iff_retains_adds_root at the structural reading only (U3)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": "at its model"
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "Weighting.widens_iff_every_positive",
@@ -3310,6 +3566,8 @@
    ],
    "standing": "own carrier",
    "basis": "F5: stated in grammar terms on its own carrier",
+   "definitional": false,
+   "f5_class": "own carrier",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -3339,7 +3597,9 @@
    ],
    "f5": [],
    "standing": "derived",
-   "basis": "a case of «存承之迭» at R = up; bridges exist (waitsAll by definition; within_iff_withinSteps) (CONNECTED-ROWS-READING.md)",
+   "basis": "a case of «存承之迭» at R = up; bridges: waitsAll by definition; within_iff_withinSteps through chain_iff_steps (by recursion) (CONNECTED-ROWS-READING.md)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "case",
     "root_form": "—"
@@ -3370,7 +3630,9 @@
    ],
    "f5": [],
    "standing": "derived",
-   "basis": "a case of «迭内之接» at R = Steps P; bridges exist (trace_steps, withinMoves_iff_withinSteps) (CONNECTED-ROWS-READING.md)",
+   "basis": "a case of «迭内之接» at R = Steps P; bridges: trace_steps and trace_iff_steps (by recursion), withinMoves_iff_withinSteps (CONNECTED-ROWS-READING.md)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "case",
     "root_form": "—"
@@ -3400,7 +3662,9 @@
    "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -3440,7 +3704,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "basis": "takes Flow's balance in its statement; reaches grammar laws among its reasons",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -3474,8 +3740,10 @@
     "«闭»"
    ],
    "f5": [],
-   "standing": "balance, represented",
-   "basis": "reaches the grammar through another law; balance only in its proof",
+   "standing": "connected",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1); Flow's balance only in its proof",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -3504,7 +3772,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -3528,9 +3798,11 @@
    "f5": [],
    "standing": "at its model",
    "basis": "an exchange law carries exactly where the reading rises; support is inside the existential, not kept",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": null
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "counterfactual_is_course",
@@ -3556,7 +3828,9 @@
    ],
    "f5": [],
    "standing": "balance, represented",
-   "basis": "takes balance in its statement",
+   "basis": "takes Flow's balance in its statement",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "rule",
    "rule_would_give": null
@@ -3587,7 +3861,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "No meaningful one. The closure used is degenerate (the empty relation), and the content is standpoint invariance."
@@ -3630,7 +3906,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "Yes: R d c → `«所闭»` R c e → `«所闭»` R e d → `«及»` R e e, grammar-only with no hypothesis. It is not declared anywhere. Once declared, the row is a case with the two existing bridges."
@@ -3664,7 +3942,9 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "basis": "reaches grammar laws among its reasons; derived only where it is a case of a declared law (DESIGN-BOUNDARY.md §1.1)",
+   "definitional": false,
+   "f5_class": "reaches the grammar",
    "reading": {
     "verdict": "steps",
     "root_form": "Yes, with `sig` as a free predicate Q: (∀ g, `«所闭»` R f g → Q g) ↔ ∃ P, `«闭»` R P ∧ P f ∧ ∀ g, P g → Q g (the closure is the least closed region), and the wide scope ↔ ∀ g, Q g. Neither is a declared grammar theorem."
@@ -3693,9 +3973,11 @@
    "f5": [],
    "standing": "amounts",
    "basis": "a bound of propagation on amounts (EC6: law of its model)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": "at its model"
+   "rule_would_give": "unplaced"
   },
   {
    "declaration": "unrestricted_iff_livingSignificance",
@@ -3716,9 +3998,11 @@
    "f5": [],
    "standing": "free significance",
    "basis": "row 1: the continuation condition as living significance; root form noOutside_iff_paths_livingSignificance at the structural reading only; the condition is a premise proved not entailed (ReadsOnlyDynamics.not_entails)",
+   "definitional": false,
+   "f5_class": "the rest",
    "reading": null,
    "by": "reading",
-   "rule_would_give": "at its model"
+   "rule_would_give": "unplaced"
   }
  ]
 }
