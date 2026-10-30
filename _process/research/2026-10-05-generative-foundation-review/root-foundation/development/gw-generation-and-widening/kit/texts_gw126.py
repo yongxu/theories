@@ -80,13 +80,13 @@ landed = (f'- **Queue:** GW1, GW2 and GW6 landed (§{N}, core receipt `{RECEIPT}
           'Markov\'s principle on decided chains; by name, each admitted formation kept on the occurrences while the '
           f'course\'s moments are 全生成, two carriers. {COUNTS}, every axiom report empty; two records, 02 §1, 07 §2, '
           "01 §6, the overview, D1, D65, the glossary and 08's counts; the review packet's L-10 brought up to the Lean; one independent review, every finding taken; "
-          "row in the history file). Then, in the coordinator's order: UE24, RV21b, AJ6b; ask the coordinator for a slot; ")
+          "row in the history file). Then, in the coordinator's order: UE24, RV21b, AJ6b; ask the coordinator for a slot. ")
 text = text.replace(head.group(0), landed)
 # the earlier clause's order sentence is superseded by this one: drop it, printed for review
 qline = [l for l in text.split('\n') if l.startswith('- **Queue:**')]
 assert len(qline) == 1
 rest = qline[0][len(landed):]
-stale = re.findall(r"\)\. Then, in the coordinator's order: [^;]*; ask the coordinator for a slot; ", rest)
+stale = re.findall(r"\)\. Then, in the coordinator's order: [^;]*; ask the coordinator for a slot[;.] ", rest)
 assert len(stale) <= 1, stale
 if stale:
     print('dropped the earlier order sentence:', stale[0])
