@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3113 nodes, 5864 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3115 nodes, 5869 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -10,7 +10,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | The map: generation, keeping, degeneration, orders | 5 | 91 | 75 | 0 |
 | Knowing and testing | 0 | 104 | 82 | 0 |
 | Life and evolution | 0 | 42 | 17 | 0 |
-| Collectives and selection | 0 | 62 | 18 | 0 |
+| Collectives and selection | 0 | 63 | 18 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
 | Significance and alignment | 0 | 78 | 58 | 0 |
 | Method and the formal core | 0 | 19 | 23 | 0 |
@@ -403,7 +403,7 @@ Modules (17, 1 stated on the grammar): `ContinuingRevision`, `CopyCourses`, `Cop
 
 ## Collectives and selection
 
-Results (62):
+Results (63):
 
 - [A code formed between formations](records/a-code-formed-between-formations.md) (recorded-checked)
 - [A coupling a step keeps a dependence at every horizon](records/a-step-coupling-keeps-at-every-horizon.md) (recorded-checked)
@@ -427,6 +427,7 @@ Results (62):
 - [Exact arrival boundary under partial correction](records/market-partial-correction-boundary.md) (recorded-checked)
 - [Giving that waits on giving](records/giving-that-waits-on-giving.md) (recorded-checked)
 - [Identical cells under a descent that treats them alike](records/identical-cells-under-a-descent-treating-them-alike.md) (recorded-checked)
+- [Identical cells under noise](records/identical-cells-under-noise.md) (recorded-checked)
 - [Imposing a code breaks the symmetry of forms](records/imposing-a-code-breaks-the-symmetry.md) (recorded-checked)
 - [Joint continuation of local plans](records/joint-plan-composition.md) (recorded-checked)
 - [Joint plans from a supported start](records/joint-plans-from-a-supported-start.md) (recorded-checked)

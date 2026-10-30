@@ -56,9 +56,9 @@
   ]
  },
  "counts": {
-  "laws": 3854,
+  "laws": 3865,
   "no_declarations": 9,
-  "outside": 366,
+  "outside": 377,
   "grammar": 762,
   "balance, represented": 645,
   "anchor, not reached": 134,
@@ -21959,6 +21959,237 @@
     "master_laws": [],
     "grammar": false,
     "dependence": "no master law"
+   }
+  ],
+  "identical-cells-under-noise": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.CellsUnderNoise.rearrange",
+     "Becoming.CellsUnderNoise.Invariant",
+     "Becoming.CellsUnderNoise.Exchangeable",
+     "Becoming.CellsUnderNoise.KernelCommutes",
+     "Becoming.CellsUnderNoise.step",
+     "Becoming.CellsUnderNoise.weightsAt",
+     "Becoming.CellsUnderNoise.step_invariant",
+     "Becoming.CellsUnderNoise.weightsAt_invariant",
+     "Becoming.CellsUnderNoise.weightsAt_exchangeable",
+     "Becoming.CellsUnderNoise.step_nonneg",
+     "Becoming.CellsUnderNoise.step_total",
+     "Becoming.CellsUnderNoise.weightsAt_law"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.rearrange",
+     "Becoming.CellsUnderNoise.Invariant",
+     "Becoming.CellsUnderNoise.Exchangeable",
+     "Becoming.CellsUnderNoise.KernelCommutes",
+     "Becoming.CellsUnderNoise.step",
+     "Becoming.CellsUnderNoise.weightsAt",
+     "Becoming.CellsUnderNoise.step_invariant",
+     "Becoming.CellsUnderNoise.weightsAt_invariant",
+     "Becoming.CellsUnderNoise.weightsAt_exchangeable",
+     "Becoming.CellsUnderNoise.step_nonneg",
+     "Becoming.CellsUnderNoise.step_total",
+     "Becoming.CellsUnderNoise.weightsAt_law"
+    ]
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.CellsUnderNoise.pointMass",
+     "Becoming.CellsUnderNoise.pointMass_invariant_iff",
+     "Becoming.CellsUnderNoise.pointMass_exchangeable_alike",
+     "Becoming.CellsUnderNoise.alike_fixed",
+     "Becoming.CellsUnderNoise.alike_exchangeable",
+     "Becoming.CellsUnderNoise.independent_exchangeable",
+     "Becoming.CellsUnderNoise.independent_law",
+     "Becoming.CellsUnderNoise.pointMass_law"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.pointMass",
+     "Becoming.CellsUnderNoise.pointMass_invariant_iff",
+     "Becoming.CellsUnderNoise.pointMass_exchangeable_alike",
+     "Becoming.CellsUnderNoise.alike_fixed",
+     "Becoming.CellsUnderNoise.alike_exchangeable",
+     "Becoming.CellsUnderNoise.independent_exchangeable",
+     "Becoming.CellsUnderNoise.independent_law",
+     "Becoming.CellsUnderNoise.pointMass_law"
+    ]
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.CellsUnderNoise.marginal",
+     "Becoming.CellsUnderNoise.marginal_eq",
+     "Becoming.CellsUnderNoise.distinct_le"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.marginal",
+     "Becoming.CellsUnderNoise.marginal_eq",
+     "Becoming.CellsUnderNoise.distinct_le"
+    ]
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.CellsUnderNoise.Stationary",
+     "Becoming.CellsUnderNoise.stationary_rearranged",
+     "Becoming.CellsUnderNoise.unique_stationary_exchangeable",
+     "Becoming.CellsUnderNoise.gibbs_exchangeable"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.Stationary",
+     "Becoming.CellsUnderNoise.stationary_rearranged",
+     "Becoming.CellsUnderNoise.unique_stationary_exchangeable",
+     "Becoming.CellsUnderNoise.gibbs_exchangeable"
+    ]
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.CellsUnderNoise.noisy",
+     "Becoming.CellsUnderNoise.noisy_commutes",
+     "Becoming.CellsUnderNoise.noiseless",
+     "Becoming.CellsUnderNoise.step_noiseless",
+     "Becoming.CellsUnderNoise.weightsAt_noiseless"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.noisy",
+     "Becoming.CellsUnderNoise.noisy_commutes",
+     "Becoming.CellsUnderNoise.noiseless",
+     "Becoming.CellsUnderNoise.step_noiseless",
+     "Becoming.CellsUnderNoise.weightsAt_noiseless"
+    ]
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.CellsUnderNoise.cellwise",
+     "Becoming.CellsUnderNoise.ofFn_cellwise",
+     "Becoming.CellsUnderNoise.ofFn_iterate_cellwise",
+     "Becoming.CellsUnderNoise.cellwise_alike",
+     "Becoming.CellsUnderNoise.noiseless_run"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.cellwise",
+     "Becoming.CellsUnderNoise.ofFn_cellwise",
+     "Becoming.CellsUnderNoise.ofFn_iterate_cellwise",
+     "Becoming.CellsUnderNoise.cellwise_alike",
+     "Becoming.CellsUnderNoise.noiseless_run"
+    ]
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.CellsUnderNoise.ofFn_swap",
+     "Becoming.CellsUnderNoise.ofFn_rearranged",
+     "Becoming.CellsUnderNoise.cellwise_commutes",
+     "Becoming.CellsUnderNoise.run_rearranged",
+     "Becoming.CellsUnderNoise.symmetric_rearranged",
+     "Becoming.CellsUnderNoise.gibbs_symmetric_exchangeable"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.ofFn_swap",
+     "Becoming.CellsUnderNoise.ofFn_rearranged",
+     "Becoming.CellsUnderNoise.cellwise_commutes",
+     "Becoming.CellsUnderNoise.run_rearranged",
+     "Becoming.CellsUnderNoise.symmetric_rearranged",
+     "Becoming.CellsUnderNoise.gibbs_symmetric_exchangeable"
+    ]
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.CellsUnderNoise.noisyDescent",
+     "Becoming.CellsUnderNoise.noisy_eq_noisyDescent",
+     "Becoming.CellsUnderNoise.noisyDescent_commutes",
+     "Becoming.CellsUnderNoise.noisyDescent_nonneg",
+     "Becoming.CellsUnderNoise.noisyDescent_rows",
+     "Becoming.CellsUnderNoise.noisyDescent_exchangeable",
+     "Becoming.CellsUnderNoise.noisyDescent_distinct_le",
+     "Becoming.CellsUnderNoise.noisyDescent_from_alike",
+     "Becoming.CellsUnderNoise.noisyDescent_from_independent"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.noisyDescent",
+     "Becoming.CellsUnderNoise.noisy_eq_noisyDescent",
+     "Becoming.CellsUnderNoise.noisyDescent_commutes",
+     "Becoming.CellsUnderNoise.noisyDescent_nonneg",
+     "Becoming.CellsUnderNoise.noisyDescent_rows",
+     "Becoming.CellsUnderNoise.noisyDescent_exchangeable",
+     "Becoming.CellsUnderNoise.noisyDescent_distinct_le",
+     "Becoming.CellsUnderNoise.noisyDescent_from_alike",
+     "Becoming.CellsUnderNoise.noisyDescent_from_independent"
+    ]
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.CellsUnderNoise.alike_positive",
+     "Becoming.CellsUnderNoise.Witness.independentNoise_parts"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.alike_positive",
+     "Becoming.CellsUnderNoise.Witness.independentNoise_parts"
+    ]
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.CellsUnderNoise.Witness.Two",
+     "Becoming.CellsUnderNoise.Witness.sum_two",
+     "Becoming.CellsUnderNoise.Witness.partedUniform",
+     "Becoming.CellsUnderNoise.Witness.partedUniform_law",
+     "Becoming.CellsUnderNoise.Witness.partedUniform_not_product",
+     "Becoming.CellsUnderNoise.Witness.parted_rearranged",
+     "Becoming.CellsUnderNoise.Witness.toParted",
+     "Becoming.CellsUnderNoise.Witness.toParted_commutes",
+     "Becoming.CellsUnderNoise.Witness.toParted_not_noisy",
+     "Becoming.CellsUnderNoise.Witness.toParted_not_noisyDescent",
+     "Becoming.CellsUnderNoise.Witness.toParted_once",
+     "Becoming.CellsUnderNoise.Witness.alike_none",
+     "Becoming.CellsUnderNoise.Witness.each_half",
+     "Becoming.CellsUnderNoise.Witness.toParted_stationary_iff",
+     "Becoming.CellsUnderNoise.Witness.partedUniform_exchangeable",
+     "Becoming.CellsUnderNoise.Witness.assign",
+     "Becoming.CellsUnderNoise.Witness.assign_not_commutes",
+     "Becoming.CellsUnderNoise.Witness.toParted_eq_mixture"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.Witness.Two",
+     "Becoming.CellsUnderNoise.Witness.sum_two",
+     "Becoming.CellsUnderNoise.Witness.partedUniform",
+     "Becoming.CellsUnderNoise.Witness.partedUniform_law",
+     "Becoming.CellsUnderNoise.Witness.partedUniform_not_product",
+     "Becoming.CellsUnderNoise.Witness.parted_rearranged",
+     "Becoming.CellsUnderNoise.Witness.toParted",
+     "Becoming.CellsUnderNoise.Witness.toParted_commutes",
+     "Becoming.CellsUnderNoise.Witness.toParted_not_noisy",
+     "Becoming.CellsUnderNoise.Witness.toParted_not_noisyDescent",
+     "Becoming.CellsUnderNoise.Witness.toParted_once",
+     "Becoming.CellsUnderNoise.Witness.alike_none",
+     "Becoming.CellsUnderNoise.Witness.each_half",
+     "Becoming.CellsUnderNoise.Witness.toParted_stationary_iff",
+     "Becoming.CellsUnderNoise.Witness.partedUniform_exchangeable",
+     "Becoming.CellsUnderNoise.Witness.assign",
+     "Becoming.CellsUnderNoise.Witness.assign_not_commutes",
+     "Becoming.CellsUnderNoise.Witness.toParted_eq_mixture"
+    ]
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.CellsUnderNoise.Witness.firstCell",
+     "Becoming.CellsUnderNoise.Witness.flipBy",
+     "Becoming.CellsUnderNoise.Witness.firstCell_not_exchangeable",
+     "Becoming.CellsUnderNoise.Witness.firstCell_assigns"
+    ],
+    "outside": [
+     "Becoming.CellsUnderNoise.Witness.firstCell",
+     "Becoming.CellsUnderNoise.Witness.flipBy",
+     "Becoming.CellsUnderNoise.Witness.firstCell_not_exchangeable",
+     "Becoming.CellsUnderNoise.Witness.firstCell_assigns"
+    ]
    }
   ],
   "identification-where-bounded": [

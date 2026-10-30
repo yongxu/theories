@@ -2696,6 +2696,18 @@
    "page": "theories/becoming/results/records/identical-cells-under-a-descent-treating-them-alike.md"
   },
   {
+   "id": "record:identical-cells-under-noise",
+   "type": "result",
+   "record": "identical-cells-under-noise",
+   "title": "Identical cells under noise",
+   "title_zh": "噪声下之同一细胞",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/identical-cells-under-noise.md"
+  },
+  {
    "id": "record:identification-where-bounded",
    "type": "result",
    "record": "identification-where-bounded",
@@ -29681,6 +29693,12 @@
    "anchor": "r-identical-cells-under-a-descent-treating-them-alike"
   },
   {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-identical-cells-under-noise",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-identical-cells-under-noise"
+  },
+  {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms",
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
@@ -42731,6 +42749,11 @@
   },
   {
    "from": "record:identical-cells-under-a-descent-treating-them-alike",
+   "to": "record:identical-cells-under-noise",
+   "type": "related"
+  },
+  {
+   "from": "record:identical-cells-under-a-descent-treating-them-alike",
    "to": "record:risk-minimization-on-a-shared-renewal",
    "type": "related"
   },
@@ -42738,6 +42761,21 @@
    "from": "record:identical-cells-under-a-descent-treating-them-alike",
    "to": "record:what-a-commuting-law-keeps-apart",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:identical-cells-under-noise",
+   "to": "module:Becoming.FreeEnergyGuarantees",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:identical-cells-under-noise",
+   "to": "record:identical-cells-under-a-descent-treating-them-alike",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:identical-cells-under-noise",
+   "to": "record:selection-through-a-model-of-the-options",
+   "type": "related"
   },
   {
    "from": "record:identification-where-bounded",
@@ -58862,6 +58900,11 @@
   {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-identical-cells-under-a-descent-treating-them-alike",
    "to": "record:identical-cells-under-a-descent-treating-them-alike",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-identical-cells-under-noise",
+   "to": "record:identical-cells-under-noise",
    "type": "states"
   },
   {

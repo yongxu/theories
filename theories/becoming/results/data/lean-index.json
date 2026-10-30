@@ -19,24 +19,24 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2158,
-    "distinct_byte_contents": 1703,
+    "lean_paths": 2159,
+    "distinct_byte_contents": 1704,
     "byte_identical_duplicate_groups": 188,
     "roles": {
       "audit-driver": 13,
       "development-attempt": 1186,
       "historical-draft": 3,
       "imported-archive": 23,
-      "working-source": 933
+      "working-source": 934
     },
-    "working_named_theorem_lemma_occurrences": 28960,
-    "working_explicit_named_declaration_occurrences": 42426,
+    "working_named_theorem_lemma_occurrences": 29017,
+    "working_explicit_named_declaration_occurrences": 42502,
     "working_groups": {
       "abstraction": 45,
       "becoming-core": 343,
       "becoming-ring": 14,
       "concern": 15,
-      "core": 142,
+      "core": 143,
       "ethics": 139,
       "inquiry": 71,
       "learning": 51,
@@ -15307,6 +15307,17 @@
       "direct_documentation_links_from": [
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/README.md",
         "theories/becoming/history/ARGUMENTS-M-Z-2026-10-08.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean",
+      "sha256": "7d34111181f8b8a4d8458e67137a3b3c22926db46d3bc79e7c307e0992d9902d",
+      "role": "working-source",
+      "group": "core",
+      "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/README.md",
+      "direct_documentation_links_from": [
+        "RESULTS.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -270117,6 +270128,487 @@
       "declaration_counts": {
         "def": 5,
         "theorem": 19
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "7d34111181f8b8a4d8458e67137a3b3c22926db46d3bc79e7c307e0992d9902d": {
+      "byte_size": 46098,
+      "line_count": 791,
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Exp",
+        "Mathlib.Algebra.BigOperators.Field",
+        "Mathlib.GroupTheory.Perm.Sign",
+        "Becoming.FreeEnergyGuarantees"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "rearrange",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.rearrange",
+          "line": 124
+        },
+        {
+          "kind": "def",
+          "name": "Invariant",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Invariant",
+          "line": 131
+        },
+        {
+          "kind": "def",
+          "name": "Exchangeable",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Exchangeable",
+          "line": 137
+        },
+        {
+          "kind": "def",
+          "name": "KernelCommutes",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.KernelCommutes",
+          "line": 141
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.step",
+          "line": 146
+        },
+        {
+          "kind": "def",
+          "name": "weightsAt",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.weightsAt",
+          "line": 151
+        },
+        {
+          "kind": "theorem",
+          "name": "step_invariant",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.step_invariant",
+          "line": 157
+        },
+        {
+          "kind": "theorem",
+          "name": "weightsAt_invariant",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.weightsAt_invariant",
+          "line": 164
+        },
+        {
+          "kind": "theorem",
+          "name": "weightsAt_exchangeable",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.weightsAt_exchangeable",
+          "line": 172
+        },
+        {
+          "kind": "theorem",
+          "name": "step_nonneg",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.step_nonneg",
+          "line": 178
+        },
+        {
+          "kind": "theorem",
+          "name": "step_total",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.step_total",
+          "line": 183
+        },
+        {
+          "kind": "theorem",
+          "name": "weightsAt_law",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.weightsAt_law",
+          "line": 190
+        },
+        {
+          "kind": "def",
+          "name": "pointMass",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.pointMass",
+          "line": 200
+        },
+        {
+          "kind": "theorem",
+          "name": "pointMass_invariant_iff",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.pointMass_invariant_iff",
+          "line": 205
+        },
+        {
+          "kind": "theorem",
+          "name": "pointMass_exchangeable_alike",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.pointMass_exchangeable_alike",
+          "line": 226
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_fixed",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.alike_fixed",
+          "line": 232
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_exchangeable",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.alike_exchangeable",
+          "line": 236
+        },
+        {
+          "kind": "theorem",
+          "name": "independent_exchangeable",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.independent_exchangeable",
+          "line": 242
+        },
+        {
+          "kind": "theorem",
+          "name": "independent_law",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.independent_law",
+          "line": 247
+        },
+        {
+          "kind": "theorem",
+          "name": "pointMass_law",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.pointMass_law",
+          "line": 254
+        },
+        {
+          "kind": "def",
+          "name": "marginal",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.marginal",
+          "line": 262
+        },
+        {
+          "kind": "theorem",
+          "name": "marginal_eq",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.marginal_eq",
+          "line": 267
+        },
+        {
+          "kind": "theorem",
+          "name": "distinct_le",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.distinct_le",
+          "line": 277
+        },
+        {
+          "kind": "def",
+          "name": "Stationary",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Stationary",
+          "line": 294
+        },
+        {
+          "kind": "theorem",
+          "name": "stationary_rearranged",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.stationary_rearranged",
+          "line": 300
+        },
+        {
+          "kind": "theorem",
+          "name": "unique_stationary_exchangeable",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.unique_stationary_exchangeable",
+          "line": 312
+        },
+        {
+          "kind": "theorem",
+          "name": "gibbs_exchangeable",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.gibbs_exchangeable",
+          "line": 323
+        },
+        {
+          "kind": "def",
+          "name": "noisy",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.noisy",
+          "line": 332
+        },
+        {
+          "kind": "theorem",
+          "name": "noisy_commutes",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.noisy_commutes",
+          "line": 337
+        },
+        {
+          "kind": "def",
+          "name": "noiseless",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.noiseless",
+          "line": 343
+        },
+        {
+          "kind": "theorem",
+          "name": "step_noiseless",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.step_noiseless",
+          "line": 346
+        },
+        {
+          "kind": "theorem",
+          "name": "weightsAt_noiseless",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.weightsAt_noiseless",
+          "line": 360
+        },
+        {
+          "kind": "theorem",
+          "name": "ofFn_swap",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.ofFn_swap",
+          "line": 380
+        },
+        {
+          "kind": "theorem",
+          "name": "ofFn_rearranged",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.ofFn_rearranged",
+          "line": 405
+        },
+        {
+          "kind": "def",
+          "name": "cellwise",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.cellwise",
+          "line": 427
+        },
+        {
+          "kind": "theorem",
+          "name": "ofFn_cellwise",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.ofFn_cellwise",
+          "line": 432
+        },
+        {
+          "kind": "theorem",
+          "name": "ofFn_iterate_cellwise",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.ofFn_iterate_cellwise",
+          "line": 437
+        },
+        {
+          "kind": "theorem",
+          "name": "cellwise_alike",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.cellwise_alike",
+          "line": 447
+        },
+        {
+          "kind": "theorem",
+          "name": "noiseless_run",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.noiseless_run",
+          "line": 457
+        },
+        {
+          "kind": "theorem",
+          "name": "cellwise_commutes",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.cellwise_commutes",
+          "line": 465
+        },
+        {
+          "kind": "theorem",
+          "name": "run_rearranged",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.run_rearranged",
+          "line": 473
+        },
+        {
+          "kind": "theorem",
+          "name": "symmetric_rearranged",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.symmetric_rearranged",
+          "line": 487
+        },
+        {
+          "kind": "theorem",
+          "name": "gibbs_symmetric_exchangeable",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.gibbs_symmetric_exchangeable",
+          "line": 495
+        },
+        {
+          "kind": "def",
+          "name": "noisyDescent",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.noisyDescent",
+          "line": 505
+        },
+        {
+          "kind": "theorem",
+          "name": "noisy_eq_noisyDescent",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.noisy_eq_noisyDescent",
+          "line": 509
+        },
+        {
+          "kind": "theorem",
+          "name": "noisyDescent_commutes",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.noisyDescent_commutes",
+          "line": 516
+        },
+        {
+          "kind": "theorem",
+          "name": "noisyDescent_nonneg",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.noisyDescent_nonneg",
+          "line": 526
+        },
+        {
+          "kind": "theorem",
+          "name": "noisyDescent_rows",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.noisyDescent_rows",
+          "line": 532
+        },
+        {
+          "kind": "theorem",
+          "name": "noisyDescent_exchangeable",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.noisyDescent_exchangeable",
+          "line": 542
+        },
+        {
+          "kind": "theorem",
+          "name": "noisyDescent_distinct_le",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.noisyDescent_distinct_le",
+          "line": 551
+        },
+        {
+          "kind": "theorem",
+          "name": "noisyDescent_from_alike",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.noisyDescent_from_alike",
+          "line": 566
+        },
+        {
+          "kind": "theorem",
+          "name": "noisyDescent_from_independent",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.noisyDescent_from_independent",
+          "line": 577
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_positive",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.alike_positive",
+          "line": 590
+        },
+        {
+          "kind": "abbrev",
+          "name": "Two",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.Two",
+          "line": 631
+        },
+        {
+          "kind": "theorem",
+          "name": "sum_two",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.sum_two",
+          "line": 634
+        },
+        {
+          "kind": "def",
+          "name": "partedUniform",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.partedUniform",
+          "line": 644
+        },
+        {
+          "kind": "theorem",
+          "name": "partedUniform_law",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.partedUniform_law",
+          "line": 647
+        },
+        {
+          "kind": "theorem",
+          "name": "partedUniform_not_product",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.partedUniform_not_product",
+          "line": 653
+        },
+        {
+          "kind": "theorem",
+          "name": "parted_rearranged",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.parted_rearranged",
+          "line": 665
+        },
+        {
+          "kind": "def",
+          "name": "toParted",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.toParted",
+          "line": 672
+        },
+        {
+          "kind": "theorem",
+          "name": "toParted_commutes",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.toParted_commutes",
+          "line": 675
+        },
+        {
+          "kind": "theorem",
+          "name": "toParted_not_noisy",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.toParted_not_noisy",
+          "line": 679
+        },
+        {
+          "kind": "theorem",
+          "name": "toParted_not_noisyDescent",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.toParted_not_noisyDescent",
+          "line": 686
+        },
+        {
+          "kind": "def",
+          "name": "assign",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.assign",
+          "line": 696
+        },
+        {
+          "kind": "theorem",
+          "name": "assign_not_commutes",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.assign_not_commutes",
+          "line": 699
+        },
+        {
+          "kind": "theorem",
+          "name": "toParted_eq_mixture",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.toParted_eq_mixture",
+          "line": 706
+        },
+        {
+          "kind": "theorem",
+          "name": "independentNoise_parts",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.independentNoise_parts",
+          "line": 717
+        },
+        {
+          "kind": "theorem",
+          "name": "toParted_once",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.toParted_once",
+          "line": 725
+        },
+        {
+          "kind": "theorem",
+          "name": "alike_none",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.alike_none",
+          "line": 732
+        },
+        {
+          "kind": "theorem",
+          "name": "each_half",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.each_half",
+          "line": 738
+        },
+        {
+          "kind": "theorem",
+          "name": "toParted_stationary_iff",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.toParted_stationary_iff",
+          "line": 745
+        },
+        {
+          "kind": "theorem",
+          "name": "partedUniform_exchangeable",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.partedUniform_exchangeable",
+          "line": 756
+        },
+        {
+          "kind": "def",
+          "name": "firstCell",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.firstCell",
+          "line": 763
+        },
+        {
+          "kind": "def",
+          "name": "flipBy",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.flipBy",
+          "line": 766
+        },
+        {
+          "kind": "theorem",
+          "name": "firstCell_not_exchangeable",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.firstCell_not_exchangeable",
+          "line": 769
+        },
+        {
+          "kind": "theorem",
+          "name": "firstCell_assigns",
+          "qualified_name_hint": "Becoming.CellsUnderNoise.Witness.firstCell_assigns",
+          "line": 778
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 18,
+        "theorem": 57
       },
       "textual_markers": {
         "sorry": [],

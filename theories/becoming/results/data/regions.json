@@ -979,7 +979,7 @@
   "identical-cells-under-a-descent-treating-them-alike": {
    "region": "collective",
    "base": "general",
-   "note": "FreeEnergyGuarantees UE16: under a descent reading no cell's number alike cells stay alike; with an exchangeable field, minima within one size come in exchanged pairs; against guaranteed differentiation (Friston and others 2015)"
+   "note": "FreeEnergyGuarantees UE16: under a descent reading no cell's number alike cells stay alike; with an exchangeable field, minima within one size come in exchanged pairs; against guaranteed differentiation (Friston and others 2015); UE24: under noise, in the periphery, the law stays exchangeable (identical-cells-under-noise)"
   },
   "identification-where-bounded": {
    "region": "knowing",
@@ -2505,6 +2505,11 @@
    "region": "root",
    "base": "old-base",
    "note": "World = run of its law"
+  },
+  "identical-cells-under-noise": {
+   "region": "collective",
+   "base": "periphery",
+   "note": "CellsUnderNoise UE24: under kernels commuting with every rearrangement an exchangeable law stays exchangeable; the core's descent with an exchangeable field and noise of one law at every cell keeps it, which cell takes which place undecided (periphery)"
   }
  },
  "modules": {

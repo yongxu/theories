@@ -22,7 +22,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 | [Abstraction, applicability and constitution](lean-declarations/abstraction.md) | 45 | 981 |
 | [Concern and shared activity](lean-declarations/concern.md) | 15 | 246 |
 | [Organizational formation through revisable evaluation](lean-declarations/shared.md) | 66 | 1,480 |
-| [Generative core and relational structure](lean-declarations/core.md) | 142 | 2,129 |
+| [Generative core and relational structure](lean-declarations/core.md) | 143 | 2,186 |
 | [Other formal studies](lean-declarations/other.md) | 29 | 873 |
 
 <a id="按名称查找--find-by-name"></a>
@@ -110,6 +110,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Cascade.lean](lean-declarations/becoming-core.md#module-8a990367ee47) | Becoming pure core |
 | [Cases.lean](lean-declarations/concern.md#module-5fd22deccdc6) | Concern and shared activity |
 | [CausalGrowth.lean](lean-declarations/becoming-core.md#module-29529544b0e3) | Becoming pure core |
+| [CellsUnderNoise.lean](lean-declarations/core.md#module-f20bca7415be) | Generative core and relational structure |
 | [CensusBinding.lean](lean-declarations/becoming-core.md#module-970a8214feea) | Becoming pure core |
 | [CensusCounts.lean](lean-declarations/becoming-core.md#module-85b456df5b23) | Becoming pure core |
 | [CensusTable.lean](lean-declarations/becoming-core.md#module-2990dae75c25) | Becoming pure core |
