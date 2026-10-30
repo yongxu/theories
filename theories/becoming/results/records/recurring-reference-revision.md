@@ -50,7 +50,7 @@
 - Continuing is not warrant: the laws give no normative warrant for the revision they describe.
 - **Counterexample:** cut_return/cut_stops_next compare the return relation in P 9 and P 0; reserve_consumed and frozen_plan_no_return are genuine alternatives within P 9; retired_choice proves a lost distinction. no_run_without_return states the cut as a law: at yield 0 no controller runs without end. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Stated for discrete steps. · Premise-free (zero-substantive-axiom) grounding is a separate open target; completed results on the conditional alignment route keep their scope.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Stated for discrete steps. · The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
 
 <a id="evidence--证据"></a>
 ## Evidence

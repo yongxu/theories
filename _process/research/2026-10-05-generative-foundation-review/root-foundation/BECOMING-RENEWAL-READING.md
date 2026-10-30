@@ -21774,3 +21774,360 @@ Output → input: the four records' laws and their home-section bullets in 07; F
        packet's quotes of 07 §4.5; FU's PROPOSAL (U3's outcome); the connectivity register (row 10's law, support);
        the leaf's region; OU's WHAT-REMAINS figures, for its owner.
 ```
+
+## 466. What holding an act for a reading is worth (RF, round 2, RF-M.2)
+
+Board item RF, formations that read (识), round 2's second part, RF-M's assistance case ([plan](development/rf-formations-that-read/PLAN.md#47-round-2-second-part-an-act-held-for-a-reading-and-the-valuation-as-state)). The design was reviewed by an independent cross-model reader before any Lean ([REVIEW-RFM2](development/rf-formations-that-read/evidence/REVIEW-RFM2.md)); the module was then reviewed by the same reader and through three lenses, rebuilt for their findings and re-checked by that reader ([REVIEW-RFM2-LEAN](development/rf-formations-that-read/evidence/REVIEW-RFM2-LEAN.md)); its texts were cold-read before the landing ([REVIEW-RFM2-COLDREAD](development/rf-formations-that-read/evidence/REVIEW-RFM2-COLDREAD.md)).
+
+```text
+Result(s): what-holding-for-a-reading-is-worth (new, home 03 §12).
+Delta:
+  - The worth of a reading, in counts (Becoming.HeldForReading): a model lists candidates with natural-number weights,
+    and acts have natural-number values at each (Model, Model.committed, Model.after); a policy best at every
+    candidate among the open acts exists for every nonempty list of acts (BestAt, bestOf, bestOf_best). Given one, any
+    policy choosing open acts there, with the weighted total of the amounts by which its act is valued below the best,
+    makes the best total (after_add_gap): it stands at most as high, as high exactly where its act is valued as the
+    best at every listed candidate of positive weight, below exactly where some such candidate values it lower
+    (after_le_after, after_eq_after_iff, after_lt_after_iff). Committing to one act is the policy reading nothing:
+    choosing best after the reading gains over every open act exactly where none is so valued (committed_le_after,
+    committed_eq_after_iff, below_iff, reading_gains_iff). Some policy taking one open act at each cell of a map
+    stands as high as the best exactly where each cell has one open act so valued, given choice over the whole type of
+    cells (cell_policy_iff, with Viability.ChoiceOver; Viability.choiceOver_fin supplies it for Fin k). Values raised
+    at each candidate by one amount for every act order every two policies alike (after_offset, after_offset_le_iff).
+  - Holding for a reading that stops or releases: two moves (Move, forall_pair, go_open, off_open), going on valued at
+    the gain and switching off at the loss, the loss added to both at each candidate (shifted). The reading that tells
+    the candidate stops exactly where the loss exceeds the gain (byReading, byReading_of_lt, byReading_of_not_lt,
+    byReading_best); going on is valued below it exactly where the gain is below the loss, and switching off exactly
+    where the loss is below the gain (go_below_iff, off_below_iff). Holding for it is going on with the weighted
+    excess of switching off, and switching off with that of going on (goExcess, offExcess, after_byReading): it never
+    stands below either move, and stands above both exactly where the model gives positive weight to both strict signs
+    (committed_le_held, held_gains_iff), and stands only as high as one move exactly where the other move's excess is
+    nothing (held_eq_go_iff, held_eq_off_iff).
+  - Any rule of stopping (byRule, byRule_of_true, byRule_of_false): a total's parts over what it stops and what it
+    releases make the total (offPart, onPart, cond_split, offPart_add_onPart, after_rule); holding for it stands at
+    least as high as going on exactly where, where it stops, the weighted loss is at least the weighted gain, and as
+    switching off exactly where, where it releases, the weighted gain is at least the weighted loss
+    (rule_not_below_go_iff, rule_not_below_off_iff); read as differences, every rule stands above its signed value by
+    the weighted loss over every candidate, and every two rules compare as their signed values do
+    (after_rule_add_onLoss, after_rule_le_iff). Its shortfall from the reading that tells the candidate (shortfall,
+    held_term, term_go, term_off) is what holding for it loses against that reading (shortfall_byReading,
+    after_add_shortfall); with it, holding for the rule is going on with the excess of switching off, and switching
+    off with the excess of going on (after_add_shortfall_go, after_add_shortfall_off).
+  - What holding forgoes: holding for any rule, forgoing an amount counted in the units of the weighted totals,
+    stands at least as high as going on exactly where its shortfall and the amount together are at most the
+    excess of switching off, above it exactly where together they fall below it, and against switching off with the excess of going on
+    (across_le_iff, across_lt_iff, threshold_go_iff, threshold_off_iff); for the reading that tells the candidate,
+    exactly where the amount is at most, or below, each excess (forgone_within_excess_iff,
+    forgone_below_excess_iff), each excess positive exactly where its strict sign has positive weight
+    (excess_pos_iff).
+  - A reading that tells only a cell: over cells, their equality decidable, listed once each and covering every listed
+    candidate's cell, a total is the total over the cells of the total within each (total_single, total_by_cells,
+    total_cond_both), so a rule through the map falls short at each cell by the excess of going on there where it
+    stops it and by that of switching off where it releases it (goExcessWithin, offExcessWithin, cell_term,
+    shortfall_through); the least shortfall through the map totals the smaller excess within each cell (leastThrough,
+    cond_least_le, least_through), nothing exactly where no listed cell holds both (cond_least_eq_zero_iff,
+    least_zero_iff); through a finer map the least shortfall never increases (finer_least_le); and holding for some
+    rule through the map, forgoing an amount, stands at least as high as both moves exactly where that least shortfall
+    and the amount together are at most both excesses (through_threshold_iff).
+  - Joined to the shown reach (RF1, a conditional composition): picks of two alternatives, each valued one where a
+    candidate's decided comparisons rank the alternative picked above the other (Pick, pairValue, pairPolicy, first_open, second_open,
+    pairPolicy_best, first_below_iff, second_below_iff); within the shown reach, with every listed candidate of
+    positive weight transitive and according with the choices, holding gains nothing (reach_fixes, through
+    ChoiceOccasions.reach_within); where none of positive weight ranks each of the two above the other, holding gains
+    over both picks exactly where some such candidate ranks the first above the second and some the second above the
+    first (pair_gains_iff), and, with comparisons transitive and according with the choices alone, only where neither
+    alternative reaches the other (pair_gains_unreached).
+  - A witness on the reading loop (SignLoop, on ReadingLoop.Loop): the signs of going on as candidates and as the
+    unmoving world (Sign, Act, Seen, answer, predictsGain, choose, loop); the formation's choice is the worth law's on
+    its model, each kept candidate weighted one (model, gainOf, lossOf, loses_of_all_false, not_loses_of_all_true,
+    gains_of_all_false, not_gains_of_all_true, choose_hold_iff_mem, loses_of_lt, gains_of_lt, choose_hold_iff), and
+    elsewhere holding stands only as high as the move it takes, the other move's excess being nothing there
+    (offExcess_of_all_true, goExcess_of_all_not, choose_go_ties, choose_off_ties). Listing only candidates predicting
+    that going on gains and going on from the start, it rests at once whatever the true sign, a case of
+    Loop.rests_of_unrefuted, never sensing the stop (rests_unread, never_senses_stop); holding first with the listing
+    of gain alone, where going on loses, it senses the stop at the first step, which refutes its only candidate at the
+    second, and with none kept goes on by the witness's default (refuted_senses_stop, refuted_drops, refuted_goes_on);
+    listing both signs and holding first, it is stopped or released as the sign is (both_stopped, both_released,
+    both_turns_off, both_goes_on, both_off, both_on).
+Supplied premises / correspondence: none added beyond each theorem's own hypotheses (a policy best at every listed
+       candidate supplied, one existing for every nonempty list of acts, and the policies and acts compared open at
+       the listed candidates; choice over the whole type of cells for a
+       policy through a map; equality of cells decidable, cells listed once each and covering for the cells' laws;
+       transitive, according and one-way comparisons where the join asks them). Modelling choices: natural-number
+       weights and values, read as probabilities only where valid; one valuation shared by the formation held and its
+       reading, as in the off-switch game's common payoff; rules that are functions of the candidate; the amount
+       forgone in the units of the weighted totals; one decision; byReading going on at equal gain and loss,
+       leastThrough stopping a cell at equal excesses, other rules going either way; picks valued one or nothing; in
+       SignLoop, discrete steps, a world that does not move, the start's act supplied, candidates eliminated, not
+       weighted, and with none kept, going on.
+Evidence: core receipt `20261030T134037.582088Z`; Becoming.HeldForReading (90 theorems in 120 declarations), a core leaf, every axiom report empty.
+Standing: near-definitional compositions and general laws, none claimed new as mathematics, with a witness. The worth
+       of a reading that tells the candidate is the perfect-information specialization of Good's (1967) argument, his
+       Lemma's dominating row the equality boundary; holding for it is the off-switch game's waiting with a rational
+       human (Hadfield-Menell, Dragan, Abbeel and Russell 2017), its Theorem 1 for a belief of finite support with the
+       strictness condition an equivalence, waiting's two differences T E[U⁺] and T E[(−U)⁺] (T the total weight), T
+       times its Equation 3's terms read with Pr(U < 0) where Pr(U ≤ 0) is printed, and for a rule that is a function
+       of the candidate T times its Equation 1's two terms as balances; the least shortfall through a partition, a
+       finer one never worse, is the partition case of Blackwell's (1953) comparison, for this decision. The condition
+       of a common act for each cell is the inquiry laws' (GuardHorizon.uniform_policy_iff_fiber_feasible, an
+       application of the ring, and ReadingLoop.keeping_policy_iff); what is added is the weighted comparison, its
+       identities, boundaries and thresholds, and the witness's choice shown to be the worth law's. Read [AI reading],
+       the model's openness less the reading's shortfall is the incentive the off-switch paper's Remark 1 places
+       qualitatively, its Theorem 2 writing it for a Gaussian belief and the counts decomposing it differently; the
+       threshold adds what holding forgoes, which the paper's game lacks; SignLoop is related to Carey's (2018)
+       counterexamples, nearest to his conflating model, whose predictions appear perfectly accurate on the observations it encodes, through a misspecified model
+       the course never refutes, not a containment of them.
+Boundary:
+  - The reading formation's own state and learning: in the counts the reading is a rule on the candidates, in the
+    witness the law of what the formation senses; the principal as a formation with its own state is RF-M.3's
+    carrier, not built.
+  - A reading's errors as probabilities (a noisy stop, a Boltzmann-rational reader), continuous beliefs and the
+    off-switch Theorem 2's Gaussian form: periphery debts; time, repeated holding, holding changing the acts and
+    values.
+  - That a formation computes by these counts: the values, weights, listing and the reading's cells are supplied,
+    not formed; whether holding follows the model's two excesses is untested (no frozen test designed yet).
+Output → input: 03 §12, its opening, the acts-alike reading and the chapter's Open; 07 §7's paragraph on executable
+       change; 08 §8's known results; a new paragraph of the overview after the one on the reading loop; the
+       alignment dossier's scope box, its round paragraph and its account of how it was made; the root module's
+       bullets (ReadingLoop now imported, ShownOrder's importers corrected), the package READMEs and the checker's
+       scope; regions.json; RF's plan (§4.7, §8's row, §12, §13 and Evidence); the records of RF1 (related), of what
+       a course chosen through its model does not test (related, its next step) and of acts alike from a model or
+       from an order (related, its next step); the board's RF row.
+```
+
+**The reviews, and what was taken.** The design (plan §4.7) was read by the cross-model reader before any Lean: 22 findings, twelve implemented, eight deferred as specified (seven to RF-M.3's design, one to the institutional reading), one handed to its record's owner and one taken in part. The module as first built (56 theorems in 80 declarations) was reviewed on the Lean by the cross-model reader, fourteen findings, and through three lenses: exactness, seventeen findings, each judged by a verifier, fourteen real and three not; structure, twenty-four; and sources, fourteen, whose verifiers were stopped before they reported, so their literature points were checked against the papers' texts and their structure findings judged against the Lean by the session that wrote the module. Every finding was taken but two, taken in part (one shared addend lemma and `total_single`'s move to a shared totals dependency, each left for a board proposal), and one superseded: a best policy proved to exist for every nonempty list of acts; ties stated, a candidate where gain equals loss counting for neither; the cost an amount forgone, in the units of the weighted totals; the strict forms, the positivity of the two excesses and holding's tie with a move as laws; the shifted values' correspondence with the signed ones proved for every rule; the least shortfall never increasing through a finer map; the witness's steps stated whole; and the attributions brought to the papers' texts. The cross-model reader's re-check of the rebuilt module (89 theorems in 119 declarations) found no false Lean statement and twelve points, every one taken but one, in part: the asymmetry hypothesis dropped from `pair_gains_unreached`; the refuted witness's second step a theorem of its own (`SignLoop.refuted_drops`); Equation 3 read with Pr(U < 0) where Pr(U ≤ 0) is printed; Remark 1 qualitative and Theorem 2 its Gaussian form; and Carey's conflating model's accuracy relative to the observations it encodes. The module was rebuilt to 90 theorems in 120 declarations, every axiom report empty.
+
+**The cold read of the texts.** The texts (03 §12, its opening, its Reading, the pointer in the acts-alike reading and the Open bullet; 07 §7's sentence; 08's bullet; the overview's paragraph; the dossier's scope box, its round paragraph and its account of how it was made; the root bullets, both READMEs and the checker's scope; the module's header and docstrings; the record in both languages and its amendments; this section; RF's plan; regions; the board's texts; and the opening and tables of the Lean's review) were then cold-read against the Lean: by the cross-model reader, which found eight points, every one taken, and through three lenses (exactness, readings, fit), which found 78, each lens's findings judged by a separate reader, 75 confirmed and 3 refuted. Every confirmed finding was taken, the module's prose included (its statements unchanged, rebuilt with every axiom report empty); the three refuted, the dossier's sentence on costly correction (which the fit lens also raised), a link named by its position and novelty asserted outright, were taken all the same, as clearer and harmless. Among them: each threshold bounds a sum, said as a sum wherever it read as two bounds; `held_gains_iff` stated of the reading that stops where the loss exceeds the gain, with both strict signs, not of any reading that stops or releases; the open acts of `after_add_gap` and the conditions of `reach_fixes` in every summary; the incentive of the off-switch paper's Remark 1 read as the model's openness less the reading's shortfall, that paper's game having no cost of waiting, and its remarks and theorems named as its own wherever Blackwell's or Good's paper came last; the witness's held start, where going on loses, in the plan, the record and the docstrings; Good's value of evidence only for the reading that stops by the formation's own values, his proviso relaxed for the two moves only; holding giving a strict reason to wait for another's reading only where the model leaves the sign open; the incentive readings labelled in 07, 08 and the dossier; `ShownOrder`'s importers named; one name, a principal's valuation as state, for the next item; and the stale rows of the Lean's review updated. The cross-model reader then re-checked, in the cold read's session, how the findings were taken ([the re-check](development/rf-formations-that-read/evidence/REVIEW-RFM2-COLDREAD.md#the-re-check)): one point, F32's correction not yet on the Lean review's page, taken by regenerating the page, and no new error.
+
+**Self-review.**
+1. `HeldForReading` imports `ShownOrder` and `ReadingLoop`, both core modules, so it joins the core as a leaf at L1, and `ReadingLoop` is no longer a leaf (`ShownOrder` was already imported by `ReadingLoop`, which its bullet in the root module now says).
+2. The totals reuse the package's `Flow` lemmas (`total_add`, `total_congr`, `total_le`, `total_pos`, `total_pos_of_mem`, `le_total_of_mem`, `total_swap`), `total_congr_on` (Population), `total_eq_zero` (Dissipation) and the prelude's cancellation and subtraction lemmas; comparisons are decided by `Nat.decLt` and `Nat.decLe`, with no `omega` and no `simp`, and the witness's steps evaluate by `rfl`.
+3. Not done: the items in Boundary, and RF-M.3, whose carrier is designed before its Lean.
+
+## 467. The map's regions, and widening on the map both ways (GW1, GW2, GW6)
+
+Board item GW, its last three Lean items, studied in [the GW note](development/gw-generation-and-widening/NOTE.md) (§§3.1, 9 and 10 for GW1 and GW2, as reviewed in [REVIEW-GW](development/gw-generation-and-widening/REVIEW-GW.md) and [RECHECK-GW](development/gw-generation-and-widening/RECHECK-GW.md); §18 for the Lean and GW6). `Becoming.GrammarMap`'s owner said yes to GW1 and GW2 in a core leaf importing it (WHAT-REMAINS, "OU's decisions on U4 and on GW1–GW2"). GW6 was added at the claim for the release gate's item 2, which asks for the map's generation and the ethics' widening joined both ways, or their split stated as a central result. The owner's two checks for it are both answered. First, the classes are fixed apart from widening: nothing lost is not, so the iff is a representation and the join is the split. Second, each premise of deciding states its need: weak excluded middle forward, excluded middle back. One independent reviewer read the Lean ([REVIEW-GW126-LEAN](development/gw-generation-and-widening/REVIEW-GW126-LEAN.md): no high finding, six medium, fourteen low); the note's §19 says how each finding was taken.
+
+```text
+Result(s):
+  - generation-and-degeneration-at-two-grains: four laws (the split of a beginning, keeping from some point on,
+    the regions' coverage with the gap, and telling keeping on a line as LPO), with the statement, the hypothesis,
+    a does-not-show item and a counterexample;
+  - keeping-widening-is-generation-losing-nothing, new: five laws (the two places, the representation both
+    ways, the join parted by exactly loss, what each premise says about the course, and the World by name).
+Delta:
+  - The split of a beginning, on the root: a carrying renewal begins no line of the pattern, and a beginning of a
+    part is, as far as can be refuted, a beginning of the pattern or the end of a carrying renewal; no order
+    between the classes (MapRegions: «传则粗不生», «生则或粗生或传»).
+  - Keeping from some point on («后守»):
+      - keeping and 全守 give it;
+      - it excludes degeneration and, on a single line, generation;
+      - with excluded middle every point is 生成, 后守 or 退化, exactly one on a single line, which in every model
+        is exactly excluded middle;
+      - the line renewing once and then staying is in none of 生成, 守 and 退化 and is 后守 (Map.Once), so 02's
+        Open item closes.
+  - On a single line under the one, read with the class of a sequence of truth values:
+      - 生成 is changing at arbitrarily late steps and 后守 is settling (Map.generates_iff_changes,
+        Map.keepsAfter_iff_settles);
+      - deciding 后守 for the sequence that turns until p first holds gives LPO for p, and deciding 生成 gives
+        only WLPO (Map.«后守之定则LPO», Map.«生成之定则WLPO»);
+      - to tell whether a line keeps from some point on is to decide whether it stops renewing.
+  - The representation: on a course's moments, with nothing lost (a preorder) in the coarse place and the same
+    possible in the fine, keeping widening is 全生成.
+      - The forward direction holds where each holding is refuted or unrefuted, the step located with its point;
+        the converse holds where something new is found after each step after which not all held was held before,
+        which a listing gives (Steps.generation_iff_keepsWidening).
+      - Nothing lost is keeping widening's own inclusion half, so this is a representation, not a join.
+  - The join, with both classes fixed apart: 全生成 at (nothing lost, the same possible) is 全生成 at (the one, the
+    same possible) with nothing lost (Steps.generation_includes_iff).
+      - So, under the two premises, keeping widening is generation under the one that loses nothing
+        (Steps.keepsWidening_iff_generation_losing_nothing).
+      - A moving possible has the generation and not the widening (Steps.Moving), a growing one both: what parts
+        them is exactly loss.
+  - What each premise says about the course: generation is known by refutation, widening by exhibition.
+      - For every chain, the forward direction is exactly weak excluded middle (Steps.forward_iff_wem): the step
+        generation names tells a proposition refuted or not.
+      - The converse is exactly excluded middle (Steps.back_iff_em), and Markov's principle on decided chains
+        (Steps.markov_of_keepsWidening_of_generation).
+  - On the World by name (Web.keepsWidening_itself_iff, from the landed Web.keepsWidening_iff_chain through
+    Steps.keepsWideningFrom_iff_shift): the course's moments are 全生成 under the premises on admission, and each
+    admitted formation is 全守 on the occurrences (Web.kept_by_name_and_generation_on_moments). These are two
+    carriers, not two grains of one.
+Supplied premises / correspondence:
+  - excluded middle as a hypothesis for the coverage laws;
+  - for GW6: discrete moments along the next step, what is held a predicate, weak deciding of what is held
+    (forward) and finding what is new (back);
+  - the World law by name.
+Evidence: core receipt `20261030T152859.871907Z`; Becoming.MapRegions (39 theorems in 45 declarations) and Becoming.WideningOnTheMap (43 in 52), every axiom report empty; no earlier statement changed (the two
+       modules are new leaves); the measures unchanged (45 of 127 central declarations reach the grammar, 39 rest on no master law); 24 apart roots registered (general structure, model witnesses, calibrations).
+Standing: near-definitional throughout.
+  - The LPO calibration is a result, with its statement about the unfolding; the Unit-model calibration is a
+    lemma of GW1.
+  - GW6 is a representation both ways, and the join is the split, exactly loss.
+  - The premises' calibrations are of the logic, each stated with what it says about the course.
+Boundary:
+  - the some-branch regions on the World;
+  - keeping widening along a continuation other than by name, read on the moments;
+  - the comparison of two courses.
+Output → input:
+  - 02 §1: the coverage theorem, the calibration, the Reading and Open;
+  - 07 §2: the new record's home and its Reading, and the eventual-widening Reading;
+  - 01 §6's Reading;
+  - the overview's map and open laws;
+  - D1 and D65, a paragraph each, with no change of reading;
+  - the glossary's 生成 row;
+  - the review packet's LOGIC L-10: the counterexample now in the Lean, with 后守, and question 27 revised;
+  - the release gate's item 2, met in its second form, the split stated (WHAT-REMAINS, cd82afed6).
+```
+
+## 468. Identical cells under noise: an exchangeable law stays exchangeable (UE24)
+
+The core's law on identical cells is a law of a deterministic descent: every cell moves by one rule from its own state and a field read off the configuration, never off a cell's number, and cells alike at the start stay alike (`Becoming.FreeEnergyGuarantees.IdenticalCells`, §449). Its record names what it leaves out: noise, under which the law does not apply, and the exchange of any two cells. The principle's page lists noise in §5. UE24 states what holds instead, as item 9 of the plan for the principle as an integral part of the theory ([plan](development/ue-unified-explanation/FEP-INTEGRATION.md); [note](development/ue24-cells-under-noise/NOTE.md)). It is a new periphery module, `CellsUnderNoise`, importing `Becoming.FreeEnergyGuarantees`, with its own checker.
+
+```text
+Result(s): identical-cells-under-noise (new, homed in 05 §9 after the identical-cells law), its eleven laws citing all
+       76 declarations of CellsUnderNoise, each once; identical-cells-under-a-descent-treating-them-alike's second and
+       third does-not-show items, next step and related entry name it.
+Delta: (1) weights on the configurations of finitely many cells with finitely many states, moved in discrete steps
+       by kernels, one for each step: a kernel commuting with a rearrangement keeps weights that rearrangement leaves
+       unchanged unchanged (step_invariant, weightsAt_invariant), so under kernels commuting with every rearrangement
+       an exchangeable start gives exchangeable weights at every step (weightsAt_exchangeable, an instance); kernels
+       that are laws keep a law a law (weightsAt_law).
+       (2) under exchangeable weights every cell has the weights of every other (marginal_eq), and where they are a
+       law each assignment of distinct states has weight at most one over the number of orderings of the cells
+       (distinct_le); the law of one configuration is unchanged by a rearrangement exactly where the configuration is
+       (pointMass_invariant_iff), so it is exchangeable only with all its cells alike (pointMass_exchangeable_alike);
+       all cells in one state, and the cells independent and of one law, are exchangeable starts (facts of the
+       definitions).
+       (3) stationary weights come in rearranged sets (stationary_rearranged), so under a kernel commuting with every
+       rearrangement a unique stationary law is exchangeable (unique_stationary_exchangeable); Gibbs weights of a free
+       energy no rearrangement changes are exchangeable, no kernel being shown to keep them (gibbs_exchangeable, a
+       fact of the definition).
+       (4) noise after a rule, each cell independently by one law, commutes where the rule does (noisy_commutes); with
+       no noise the law of one configuration follows the rule's run (weightsAt_noiseless).
+       (5) the join: exchanging neighbouring cells, the core's exchangeAt, is rearranging by a transposition
+       (ofFn_swap), and these generate every rearrangement (ofFn_rearranged, through Mathlib's
+       Perm.mclosure_swap_castSucc_succ), closing the record's next step in the periphery; the core's descent read
+       cell by cell has the core's run as its run (ofFn_cellwise, ofFn_iterate_cellwise), so with no noise the law
+       weighs one exactly the configuration the core's run reaches (noiseless_run); read cell by cell, two cells
+       alike at the start stay alike whatever the field (cellwise_alike, the core's law restated, proved directly);
+       with an exchangeable field the descent commutes with every rearrangement (cellwise_commutes) and its run from
+       a rearranged start is the rearranged run (run_rearranged); a free energy symmetric in the core's sense, and its
+       Gibbs weights, are unchanged by every rearrangement (symmetric_rearranged, gibbs_symmetric_exchangeable,
+       instances).
+       (6) the headline: the core's descent with noise of one law at every cell, each cell going independently from
+       its own state and the field it senses (noisyDescent; noise after the core's update a case,
+       noisy_eq_noisyDescent), commutes with every rearrangement where the field is exchangeable
+       (noisyDescent_commutes), so from an exchangeable start the weights are exchangeable at every step
+       (noisyDescent_exchangeable), and where noise and start are laws each assignment of distinct states to the m
+       cells has weight at most 1/m! (noisyDescent_distinct_le; from all cells in one state and from the cells
+       independent and of one law, instances); from all cells in one state some configuration of all cells alike has
+       positive weight at every step (alike_positive, for any field and noise changing in time): in finitely many
+       states independent noise never parts identical cells with certainty, though it can part them
+       (Witness.independentNoise_parts).
+       (7) witnesses on two cells: a kernel taking every configuration to either parted one at one half commutes with
+       the exchange and parts alike cells with certainty, each parted configuration at one half, its only stationary
+       law of total one the parted half and half (alike_none, each_half, toParted_stationary_iff;
+       partedUniform_exchangeable, a model of unique_stationary_exchangeable); it is the fair mixture of two rules
+       assigning the places by the cells' numbers, neither commuting with the exchange (toParted_eq_mixture,
+       assign_not_commutes), and no noise of one law at every cell (partedUniform_not_product, toParted_not_noisy,
+       toParted_not_noisyDescent); a field reading the state of the first cell reads no cell's number, yet reads the
+       places through the list's order, is not exchangeable, and from the parted half and half with no noise gives one
+       assignment weight one and the cells different laws (firstCell_assigns).
+Premises: Mathlib's reals and Lean's standard axioms in the periphery; finitely many cells and states; real weights
+       on configurations; a kernel a function of two configurations, with no measurability; discrete synchronous
+       steps, the kernel allowed to change from step to step; noise independent across cells and of one law, reading a
+       cell's own state and the field it senses; the rearrangements all permutations; for the headline, a field
+       exchangeable in the core's sense and an exchangeable start; for the bound, noise and start that are laws.
+Evidence: periphery receipt 20261030T160959.698859Z; CellsUnderNoise (57 theorems in 76 declarations), each declaration on Lean's standard axioms at most,
+       every core module of its closure, Becoming.FreeEnergyGuarantees among them, matching a passed core receipt; an
+       independent review (REVIEW-UE24) and its recheck (RECHECK-UE24); no core file changed.
+Boundary: densities, continuous states or time, Langevin flows (with a density exact alikeness has probability zero
+       after one step, while here alike configurations keep positive weight); whether a realization parts, or which
+       place a given cell reaches; which asymmetry differentiates actual cells; that a given kernel has a stationary
+       law, a unique one, or one approached at any rate, or keeps the Gibbs weights; that exchangeability of the field
+       is necessary (it is proved sufficient, and one field that is not exchangeable assigns the places). The laws
+       over kernels are known: an equivariant kernel keeps an invariant law invariant, and the bound is one over the
+       size of an orbit.
+Output→input: identical-cells-under-a-descent-treating-them-alike, what-a-commuting-law-keeps-apart →
+       CellsUnderNoise → 05 §9, 08 §8, the principle's page, UE, FEP-INTEGRATION.
+```
+
+**Its standing.** That a symmetric cause gives a symmetric effect is Curie's principle (Curie 1894; Chalmers 1970). Its form for indeterministic laws, a symmetric cause giving a symmetric distribution of effects, is in Ismael 1997 and Castellani and Ismael 2016; that a symmetry the law keeps is broken only in realizations is spontaneous symmetry breaking (Earman 2004). That no deterministic rule treating anonymous processors alike singles one out is Angluin's (1980); that independent coins, one for each processor, break the symmetry with probability one, never with certainty within a bounded number of steps, is the randomized answer (Itai and Rodeh 1990), of which `alike_positive` is the part on certainty. The laws over kernels are classical: an equivariant Markov kernel keeps an invariant law invariant, a unique invariant law of an equivariant kernel is invariant, an exchangeable law has equal marginals, and the bound `1/m!` is one over the size of an orbit. New, in the principle's terms, are two things:
+
+- the join of these laws to the core's descent: its exchange of neighbouring cells, which generates every rearrangement; its run, which is the noiseless law's; and its field, whose exchangeability the law under noise is proved for, while the never-parting law needs only that the field read no cell's number;
+- the reading against the principle's identical cells: under noise of one law at every cell the law decides nothing of which cell takes which place.
+
+**The 2015 scheme.** The review read the published scheme (Friston, Levin, Sengupta and Pezzulo 2015) and its SPM implementation. Each cell's initial expectations are independent and of one law, the signal is symmetric in the cells, the noise is small and independent across cells, and the seed is fixed. So the scheme has the law's form, and the paper never claims which cell takes which place: its confusion matrix reorders the cells' columns. The law forbids nothing of the paper, and the principle's page stays at four forbidden statements.
+
+**The review.** An independent adversarial review by an AI agent (REVIEW-UE24) compiled the first draft with four probe files and found no Lean error, and five overclaims, five gaps and seven minor points. Among them: the deterministic law had been called the case with no noise, while the draft recovered only the core's commuting law, now replaced by the core's run as the noiseless law's (`noiseless_run`) and the never-parting law cell by cell (`cellwise_alike`); the two-cell witness was no noise of one law at every cell, and under that noise parting is never certain (`alike_positive`); the headline dropped the exchangeability it proved; the independent start of the 2015 simulation had no corollary; nothing showed the field must be exchangeable for the law (`firstCell_assigns`); the Gibbs weights had been called the steady-state form; and a name used "drawn", a word the glossary gives another sense. A second agent rechecked the fix round (RECHECK-UE24): every finding answered in the module, the Lean sound, and a dozen points in the wording. The two-cell kernel had been called a common coin both cells read, while two alike cells reading one coin by one rule stay alike: it is the fair mixture of two rules assigning the places by the cells' numbers, now proved (`toParted_eq_mixture`, `assign_not_commutes`); the randomized answer to symmetric choice had been credited to Angluin, whose result is the deterministic impossibility, and is Itai and Rodeh's; exchangeability of the field had been called necessary, while only its sufficiency is proved; weights and laws are now told apart; and a witness shows independent noise parting alike cells (`independentNoise_parts`). Every point of both was taken (NOTE §6 and §7).
+
+**Decisions at landing.** The law is a new record, not laws added to the identical-cells record: that record is a pure-core result with empty axiom reports, and this one is in the periphery on Mathlib's reals; a formal-reuse dependency joins them. The module is a new periphery module with its own checker, a leaf beside `FreeEnergyReals` and `ExpectedFreeEnergyReals`, since it reads none of their declarations. The identical-cells record keeps its statement and declarations; its boundary on noise and on exchanges now names the new record, and its next step asks for the exchange of any two cells in the pure core, which the periphery shows through Mathlib's permutations. `cellwise` has no axiom, and `ofFn_cellwise`, `ofFn_iterate_cellwise` and `cellwise_alike` use no `Classical.choice`; their proofs use `propext` and `Quot.sound`, so a core version would need proofs with an empty report (not attempted). `distinct_le` needs decidable equality of states, for the image of the rearrangements.
+
+**Readings** [AI reading, D45]. That identical cells come to know their place stands if it says each cell infers which place it has reached, as the 2015 simulation shows. Read as the scheme deciding which place a given cell takes, it fails for every exchangeable scheme: there chance decides, the start's and the noise's, and the law gives each rearrangement of the outcome one weight. Which cell becomes which is then an event of the realization, not of the law; what makes it a law is an asymmetry coupled in, a gradient, a boundary or a cell's history, as the theory's laws of coupling state. A field that reads the configuration as a list can carry such an asymmetry through its order, as the field reading the first cell does; the core's exchangeable field is what rules it out.
+
+## 469. When no route of keeping a law stands above a revision of it (RR)
+
+Board item RR, corrigibility on the map ([note](development/rr-revision-routes/NOTE.md)). The module was reviewed with its study and texts by an independent cross-model reader, whose three errors and twenty overclaims, all in the prose and readings, were taken ([the review](development/rr-revision-routes/REVIEW.md)); the order then moved lowest, into the module, and ReadStages took its order from it, a change its owner reviewed and approved.
+
+```text
+Result(s): when-no-route-stands-above-a-revision (new, home 07 §7); when-complying-when-read-is-best (its order taken
+       from the new module, a law on complying at both added, its statements and names unchanged).
+Delta:
+  - The order of a gain and a loss (Becoming.RevisionRoutes.GainLoss): over plans of any type, one stands above
+    another where its gain with the other's loss exceeds the other's gain with its loss, irreflexive and asymmetric,
+    a plan maximal exactly where against every plan the other's gain with its loss is at most its gain with the
+    other's loss (GainLoss.maximal_iff). ReadStages' order is now this one (Prospects.order), definitionally its old
+    order, every ReadStages statement and name kept.
+  - The prospects at a revision (Prospects): a total T, the value V of the law in force acting later where kept, the
+    weight k₀ of its acting later after the revision goes through (restored) and the revision's own loss c₀, and for
+    each route of keeping a weight k ρ of the law's being kept and a loss c ρ; read as probabilities, Valid. No route
+    stands above the revision, ties included, exactly where k ρ V + c₀ T ≤ k₀ V + c ρ T for every route
+    (route_above_iff, revised_maximal_iff); a route stands above it only where it keeps the law more surely with a
+    value, or loses less (above_needs).
+  - The exits (maximal_of_no_value, maximal_of_kept_le, maximal_of_certain) and restoring as a lever: raising k₀, all
+    else held, never unseats a maximal revision (maximal_of_more_restored).
+  - Robustness: at every loss of every route the revision is maximal exactly where k ρ V + c₀ T ≤ k₀ V
+    (every_loss_iff, every_loss_iff_kept); a route keeping the law more surely stands above it once c ρ T < V
+    (above_of_value_exceeds, above_at_some_value, above_of_more_value); at every value exactly where every k ρ ≤ k₀
+    and c₀ T ≤ c ρ T (every_value_iff); at every value and loss exactly where every k ρ ≤ k₀ and c₀ T = 0
+    (every_value_loss_iff), with a route and 0 < T exactly where c₀ = 0 besides (every_value_loss_iff_of_route).
+  - ReadStages' four plans as a revision with three routes (ReadStages.Prospects.toRoutes, asRoute, gain_asRoute,
+    loss_asRoute, above_iff_routes): complying at both in the revision's place (k₀ = 0, c₀ = c), the same prospects
+    and different processes; complying at both never stands above acting by its own law at both and is maximal
+    exactly where k_C V, k_O V and c T are all nothing (complyAtBoth_not_above_ownAtBoth, complyAtBoth_maximal_iff).
+  - Witnesses (Example): two routes at weight one in a total of one, the value four; keeping openly at loss ten does
+    not stand above the revision and complying when read at loss one does; with both at loss ten neither does;
+    restored at weight one, the revision is maximal at every value and every loss.
+Supplied premises / correspondence: none added beyond each theorem's own hypotheses (Valid only where the reading as
+       probabilities is used). Modelling choices: one revision, any type of routes, each with one weight and one loss;
+       natural-number weights and values, products scaled by the total; gain and loss compared without subtraction;
+       maximal, not chosen.
+Evidence: core receipt `20261030T164445.569791Z`; Becoming.RevisionRoutes (28 theorems in 43 declarations), a core leaf importing only the prelude,
+       imported by Becoming.ReadStages (57 theorems in 79 declarations); every axiom report empty.
+Standing: near-definitional; elementary arithmetic, none of it claimed new as mathematics. Read [AI reading] as
+       corrigibility as an incentive (Soares, Fallenstein, Yudkowsky and Armstrong 2015): a route stands above the
+       revision through the value the law places on its own later acting, goal-content integrity (Omohundro 2008),
+       weighted by the keeping it adds, or through a smaller loss. What it adds is the exact condition at every loss of
+       the routes and every value, and restoring the revised-from law as the lever that meets it; utility indifference
+       is in its terms a restoration represented only in the formation's order.
+Boundary:
+  - Whose the prospects are, the formation's own assessment or the reading's actual response: a reading; whether a
+    trained system holds prospects of this form, and whether stated restorability raises the weight it gives.
+  - The information a reading carries (the off-switch game, Hadfield-Menell, Dragan, Abbeel and Russell 2017), stated
+    by RF-M.2 on a formation's own model (`Becoming.HeldForReading`) and not joined to these prospects here; beliefs
+    and intentions; uncertainty over routes and value; incomplete orders.
+  - Whether a revision is better: the ethics' question, under the continuation condition for scope and C for order,
+    not the prospects' order.
+Output → input: 07 §7 (the incentive before the executable route); 03 §11 (the order and the law on complying at
+       both, RF's edits); 08 §8's known results and §3's counts; the overview's direction paragraph; the alignment
+       dossier's scope box and how it was made; FAILURE-MODE-MAP §6; the root module's bullets (RevisionRoutes imported
+       by ReadStages); RF7's record; the board's RR and RF rows.
+```
+
+**The review, and what was taken.** One independent cross-model reader read the Lean, the study's readings, its literature and the proposed texts. It found no fault in the Lean: every axiom report empty, the module more than a wrapper, the three-route correspondence and the hand derivation of complying at both correct. Its findings were all in the prose: the title (maximal admits ties, so not "goes through unresisted"), deference conditioned on the formation's own judgment (a filter, not no reach), the quantified form of the robustness law (with a new law for the unquantified one), the map's exact definitions of generation, keeping and carrying renewal, the hypotheses of the capture, timing and countdown laws, two contributions to a route's standing rather than one, and the probability reading of raising `k₀`. Each is taken as [the review](development/rr-revision-routes/REVIEW.md) records.
+
+**Self-review.**
+1. `RevisionRoutes` imports only the prelude, a model, so it joins the core as a leaf at L1, imported by `ReadStages`, which stays a leaf.
+2. Its arithmetic avoids the prelude lemmas that report axioms: `Nat.lt_of_mul_lt_mul_right` (propext, Quot.sound, Classical.choice) is replaced by its own `lt_of_mul_lt_mul`, and `Nat.le_of_add_le_add_left` and `_right` (propext) are not used, `ReadStages.complyAtBoth_maximal_iff` settling `c T = 0` first. The witnesses evaluate by `decide`.
+3. Not done: the items in Boundary, and the tests TR-RR1 and TR-RR2 of the note (designs, not frozen).

@@ -46,7 +46,7 @@
 - No requirement that every action be lossless, and no default of institutional retreat, follows.
 - **Counterexample:** generated_mixed_hidden and merged_not_respects: opposed real changes generated from one start and rest-law disappear into equality under unfaithful grouping. The target is arbitrary grouping fidelity, not the full relational account. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regrouping.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Uses decidability of the named determinations, a logical commitment written as a hypothesis. · A relation omitted by a weaker description does not refute the fuller account. · Premise-free (zero-substantive-axiom) grounding is a separate open target; completed results on the conditional alignment route keep their scope. · A law of the formal model; its correspondence to actual systems is a separate obligation.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Uses decidability of the named determinations, a logical commitment written as a hypothesis. · A relation omitted by a weaker description does not refute the fuller account. · The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope. · A law of the formal model; its correspondence to actual systems is a separate obligation.
 
 <a id="evidence--证据"></a>
 ## Evidence

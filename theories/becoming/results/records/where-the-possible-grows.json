@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-29T15:01:33+00:00",
+  "reviewed_at_utc": "2026-10-30T17:41:46+00:00",
   "statement": {
     "en": "The possible relative to what is held grows only across steps changing what is held, and keeps widening only where what is held changes without end. Along a course of a stated process nothing is added to the whole possible, a rule changing its own rule and a tower of rules with no top included.",
     "zh": "相对于所持守者之可能，仅于改变所持守者之步上增长，仅当所持守者无尽地改变时持续扩大。沿一陈述之过程之进程，全部可能无所增，改变自身规则之规则与无顶之规则塔亦然。"
@@ -120,7 +120,7 @@
     },
     {
       "en": "Witnesses on the map. Every moment of the raised rule is 全生成 under the rule held while every moment ceases: generation without renewal without end. On the rule raised every other step, every moment is 全生成 beside renewal without end and keeping widening. On the oscillating rule every moment is 全生成 while the held possible does not keep widening.",
-      "zh": "图谱上之见证。提升规则之每一时刻于持守规则时全生成，而每一时刻皆息：生成而无生生。隔步提升之规则上，每一时刻全生成，与生生及持续扩大并存。振荡之规则上每一时刻全生成，而持守时之可能不持续扩大。",
+      "zh": "图谱上之见证。提升规则之每一时刻于持守规则时全生成，而每一时刻皆息：生成而无 «生生»。隔步提升之规则上，每一时刻全生成，与 «生生» 及持续扩大并存。振荡之规则上每一时刻全生成，而持守时之可能不持续扩大。",
       "declarations": [
         "Becoming.RaisedRule.generation",
         "Becoming.RaisedEveryOther.begins_after_even",
@@ -255,7 +255,7 @@
     },
     {
       "en": "Witness: growth relative to what is held with renewal without end. On the raised rule's process, along the course raising the rule across every even step and keeping it across every odd one, the possible with the rule held keeps widening, every formation stays possible, and, read on the moments under the rule held, renewal without end «生生» holds at every even moment, so moment 0 does not cease «生生不息».",
-      "zh": "见证：相对于所持守者之增长与生生并存。于提升规则之过程上，沿偶数步提升规则、奇数步保持之进程，持守规则时之可能持续扩大，自每一构型每一构成皆可能；读于持守规则时之时刻，每一偶数时刻皆生生，故时刻 0 不息（生生不息）。",
+      "zh": "见证：相对于所持守者之增长与 «生生» 并存。于提升规则之过程上，沿偶数步提升规则、奇数步保持之进程，持守规则时之可能持续扩大，自每一构型每一构成皆可能；读于持守规则时之时刻，每一偶数时刻皆 «生生»，故时刻 0 不息（«生生不息»）。",
       "declarations": [
         "Becoming.RaisedEveryOther.odd",
         "Becoming.RaisedEveryOther.rule",
@@ -462,7 +462,7 @@
       "relation": "formal-reuse",
       "detail": {
         "en": "«续», «相续», «及», «类», «粗化», «及之单调», «线内同类», «不穷», «生», «复生», «息», «生生», «自不复生则息», «生生不息» and Steps.next: the held moves as continuations, what they reach as a line, and the course read on its moments, where they renew, cease or renew without end.",
-        "zh": "«续»、«相续»、«及»、«类»、«粗化»、«及之单调»、«线内同类»、«不穷»、«生»、«复生»、«息»、«生生»、«自不复生则息»、«生生不息» 与 Steps.next：持守之步即续，其所达即线，进程读于其时刻，于彼复生、息或生生。"
+        "zh": "«续»、«相续»、«及»、«类»、«粗化»、«及之单调»、«线内同类»、«不穷»、«生»、«复生»、«息»、«生生»、«自不复生则息»、«生生不息» 与 Steps.next：持守之步即续，其所达即线，进程读于其时刻，于彼复生、息或 «生生»。"
       }
     },
     {
@@ -734,7 +734,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/NOTE.md",
       "role": "integration",
-      "sha256": "f07197b7af066d405f34cd27ca8ffc1d67c13eabfc222a74d9b5f09e21de3cfb"
+      "sha256": "11d6903c36d635a640a40e38262dd106315490df0d3b8fca3fa2ececa675dbd3"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/REVIEW-GW-LEAN.md",
@@ -767,6 +767,10 @@
     {
       "en": "29 October 2026, board item GW (study section 448): the held possible read on the map: 全生成 at (the one, what is held) exactly where a line under the part begins after every moment, so wherever the held possible keeps widening with holding decided; the witnesses read so. A law added; statement and next step unchanged.",
       "zh": "2026年10月29日，工作板条目 GW（研究第 448 节）：持守时之可能读于图谱：于（一，所持守者）全生成，恰当该部分下之线于每一时刻之后皆有所起，故凡持守可判定而持守时之可能持续扩大处皆然；诸见证如此读之。增一律；陈述与下一步不变。"
+    },
+    {
+      "en": "30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the grammar's «生生» and the theorem «生生不息» marked in the Chinese of laws 13 and 24 and of the dependency detail listing the grammar's names, as the English writes them; nothing the record states changed.",
+      "zh": "2026年10月30日：仅措辞，依第二十一次审查第 13 项（生生一义）：律 13、24 与列出文法诸名之依赖说明之中文中，文法之 «生生» 与定理 «生生不息» 加标，如英文；记录所述无改变。"
     }
   ]
 }

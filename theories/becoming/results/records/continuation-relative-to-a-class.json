@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
+  "reviewed_at_utc": "2026-10-30T17:41:46+00:00",
   "statement": {
     "en": "For every carrier and relation, continuation is 缘 met with a class; its positions depend on the class, a class constant under 缘 never lets a continuation end, a line's own regularity is the class's core, and the World model's arising, ceasing, lineage and passing are its instances.",
     "zh": "对每个载体与关系，续是缘与类之合；其诸位依于类，对缘有常之类其续永不终了，一条线之理是其类之核；World 模型之生起、终止、世系与传是其实例。"
@@ -106,7 +106,7 @@
     },
     {
       "en": "Renewal: an occurrence renews where it is a condition of a beginning that goes on; renewal at the grain of a class reads the same relation at that grain, and every renewal is one at every grain. Renewal without end is the greatest family each member of which renews into a line reaching the family again; it renews. Under the one there is neither.",
-      "zh": "复生：一事为一个继续下去之生之缘，谓之复生；以一个类之粒度读同一关系，为粗复生，凡复生皆是各粒度之复生。生生是最大之族，其每一员都复生出一条再到此族之线；生生必复生。在“一”之下二者皆无。",
+      "zh": "复生：一事为一个继续下去之生之缘，谓之复生；以一个类之粒度读同一关系，为粗复生，凡复生皆是各粒度之复生。«生生» 是最大之族，其每一员都复生出一条再到此族之线；«生生» 必复生。在“一”之下二者皆无。",
       "declarations": [
         "Becoming.«复生»",
         "Becoming.«粗复生»",
@@ -177,8 +177,8 @@
       ]
     },
     {
-      "en": "Renewing into: an occurrence conditions a beginning whose line reaches another. Ceasing, defined positively and inductively along renewing into: an occurrence ceases where everything it renews into ceases, the least property so closed. Renewal without end, the greatest family each member of which renews into a member, does not cease (生生不息). Ceasing concerns what an occurrence renews into, not its line: one that does not itself renew ceases, so one on whose line nothing renews ceases; under the one everything ceases.",
-      "zh": "复生至：一事为一始之缘，而此始之线达于另一事。息，正面而沿复生至以归纳定义：一事所复生至者皆息，则此事息；息是如此封闭之最小之性。生生是每一员皆复生至族中一员之最大之族，在此族中者不息（生生不息）。息所论是一事所复生至者，不是其线：自身不复生之事息，故其线上无物复生之事息；在“一”之下皆息。",
+      "en": "Renewing into: an occurrence conditions a beginning whose line reaches another. Ceasing, defined positively and inductively along renewing into: an occurrence ceases where everything it renews into ceases, the least property so closed. Renewal without end, the greatest family each member of which renews into a member, does not cease («生生不息»). Ceasing concerns what an occurrence renews into, not its line: one that does not itself renew ceases, so one on whose line nothing renews ceases; under the one everything ceases.",
+      "zh": "复生至：一事为一始之缘，而此始之线达于另一事。息，正面而沿复生至以归纳定义：一事所复生至者皆息，则此事息；息是如此封闭之最小之性。«生生» 是每一员皆复生至族中一员之最大之族，在此族中者不息（«生生不息»）。息所论是一事所复生至者，不是其线：自身不复生之事息，故其线上无物复生之事息；在“一”之下皆息。",
       "declarations": [
         "Becoming.«复生至»",
         "Becoming.«息»",
@@ -269,7 +269,7 @@
     },
     {
       "en": "That renewal without end tells renewal that sustains life from turnover that destroys it.",
-      "zh": "生生分开维持生命之更新与毁灭之更替。",
+      "zh": "«生生» 分开维持生命之更新与毁灭之更替。",
       "kind": "non-implication"
     },
     {
@@ -828,6 +828,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired 'old base' named in current vocabulary, the World model, in the statement, two laws, a boundary and a related detail; the merge worded as the Lean states it, each of two conditions alike to the occurrence they condition (not to each other), in the ninth law and a boundary. No law changed in content.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役的“旧基底”按现行词汇称为 World 模型（陈述、两条规律、一条界限与一条相关说明）；合按 Lean 的陈述改写：两个缘各与其所缘之事相同（而非彼此相同），见第九条规律与一条界限。规律内容未变。"
+    },
+    {
+      "en": "30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the theorem's name written «生生不息» in law 12, in English and Chinese, and the grammar's word «生生» in the Chinese of laws 8 and 12 and of the third item it does not show; nothing the record states changed.",
+      "zh": "2026年10月30日：仅措辞，依第二十一次审查第 13 项（生生一义）：律 12 之定理名写作 «生生不息»，中英文皆然；律 8、12 与所不表明之第三项之中文中，文法之词写作 «生生»；记录所述无改变。"
     }
   ]
 }

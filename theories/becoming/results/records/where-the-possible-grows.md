@@ -124,7 +124,7 @@ The held law restates open-ended novelty's innovation, novelty that changes the 
 - related, not a proved adapter: [tasks-and-what-performs-them](tasks-and-what-performs-them.md). Tasks and what performs them: holding the performing part throughout is sufficient for constructor theory's performance and not needed, and the held possible gives the premise of composition.
 - related, not a proved adapter: [what-can-be-born-next](what-can-be-born-next.md). What can be born next against what continues: internal temporality is holding the past, so on causal-set growth the held possible is the whole possible.
 
-**Used by:** [tasks-and-what-performs-them](tasks-and-what-performs-them.md) · [what-can-be-born-next](what-can-be-born-next.md)
+**Used by:** [keeping-widening-is-generation-losing-nothing](keeping-widening-is-generation-losing-nothing.md) · [tasks-and-what-performs-them](tasks-and-what-performs-them.md) · [what-can-be-born-next](what-can-be-born-next.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -161,7 +161,8 @@ Aliases: `Where the possible grows`, `可能者于何处增长`, `the held possi
 - 28 October 2026, board item UE12 (study section 430): related to tasks-and-what-performs-them; no statement, next step or declaration changed.
 - 28 October 2026, board item UE13 (study section 431): related to what-can-be-born-next; no statement, next step or declaration changed.
 - 29 October 2026, board item GW (study section 448): the held possible read on the map: 全生成 at (the one, what is held) exactly where a line under the part begins after every moment, so wherever the held possible keeps widening with holding decided; the witnesses read so. A law added; statement and next step unchanged.
+- 30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the grammar's «生生» and the theorem «生生不息» marked in the Chinese of laws 13 and 24 and of the dependency detail listing the grammar's names, as the English writes them; nothing the record states changed.
 
 </details>
 
-Documentary review UTC: `2026-10-29T15:01:33+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-30T17:41:46+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

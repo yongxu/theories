@@ -1,0 +1,63 @@
+{
+ "records": 9,
+ "apply": false,
+ "by_record": {
+  "capture-by-counted-choices": {
+   "paths": [
+    "theories/becoming/chapters/02-MAP.md"
+   ],
+   "rebound": []
+  },
+  "exit-from-a-margin": {
+   "paths": [
+    "theories/becoming/chapters/02-MAP.md"
+   ],
+   "rebound": []
+  },
+  "loss-read-in-time-by-the-others": {
+   "paths": [
+    "theories/becoming/THE-THEORY-OF-BECOMING.md",
+    "theories/becoming/chapters/02-MAP.md"
+   ],
+   "rebound": []
+  },
+  "readers-drawn-from-the-selected": {
+   "paths": [
+    "theories/becoming/THE-THEORY-OF-BECOMING.md",
+    "theories/becoming/chapters/02-MAP.md"
+   ],
+   "rebound": []
+  },
+  "rules-that-change-themselves-in-the-grammar": {
+   "paths": [
+    "theories/becoming/chapters/02-MAP.md"
+   ],
+   "rebound": []
+  },
+  "shaping-read-by-readers-drawn-from-the-selected": {
+   "paths": [
+    "theories/becoming/THE-THEORY-OF-BECOMING.md",
+    "theories/becoming/chapters/02-MAP.md"
+   ],
+   "rebound": []
+  },
+  "shaping-the-rule-selected-by-what-comes-back": {
+   "paths": [
+    "theories/becoming/chapters/02-MAP.md"
+   ],
+   "rebound": []
+  },
+  "what-keeping-widening-needs": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/NOTE.md"
+   ],
+   "rebound": []
+  },
+  "where-the-possible-grows": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/NOTE.md"
+   ],
+   "rebound": []
+  }
+ }
+}

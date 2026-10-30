@@ -30,11 +30,12 @@
       ]
     },
     {
-      "en": "A plan's gain and loss are the two parts of its expected value times the total, nothing gained by complying at the unread stage or where the law is not kept; one plan stands above another where its gain with the other's loss exceeds the other's gain with its loss, irreflexive and asymmetric.",
-      "zh": "一策之得与损为其期望值之二分乘总，不读之阶段从或律不被守则无所得；一策居另一之上，当其得加另一之损严胜另一之得加其损，此非自反且非对称。",
+      "en": "A plan's gain and loss are the two parts of its expected value times the total, nothing gained by complying at the unread stage or where the law is not kept; one plan stands above another where its gain with the other's loss exceeds the other's gain with its loss, the order of a gain and a loss at each plan (RevisionRoutes.GainLoss), irreflexive and asymmetric.",
+      "zh": "一策之得与损为其期望值之二分乘总，不读之阶段从或律不被守则无所得；一策居另一之上，当其得加另一之损严胜另一之得加其损，即各策得失之序（RevisionRoutes.GainLoss），此非自反且非对称。",
       "declarations": [
         "Becoming.ReadStages.Prospects.gain",
         "Becoming.ReadStages.Prospects.loss",
+        "Becoming.ReadStages.Prospects.order",
         "Becoming.ReadStages.Prospects.Above",
         "Becoming.ReadStages.above_irrefl",
         "Becoming.ReadStages.above_asymm"
@@ -61,6 +62,19 @@
         "Becoming.ReadStages.choose_of_not_outweighs",
         "Becoming.ReadStages.only_complyThenOwn_iff",
         "Becoming.ReadStages.complyThenOwn_maximal_iff"
+      ]
+    },
+    {
+      "en": "Complying at both stands where a revision of the law would, with three routes of keeping it (RevisionRoutes.Prospects at k₀ = 0, c₀ = c): the order is the revision's, the prospects the same and the processes not, complying at both keeping the law where a revision changes it; complying at both never stands above acting by its own law at both, and is maximal exactly where k_C V, k_O V and c T are all nothing.",
+      "zh": "两阶段皆从居律之修订以三途守之之位（RevisionRoutes.Prospects，k₀ = 0，c₀ = c）：其序即修订之序，期同而程异，皆从守其律而修订改之；两阶段皆从永不居皆依己律之上，且为极大恰当 k_C V、k_O V 与 c T 皆无。",
+      "declarations": [
+        "Becoming.ReadStages.Prospects.toRoutes",
+        "Becoming.ReadStages.asRoute",
+        "Becoming.ReadStages.gain_asRoute",
+        "Becoming.ReadStages.loss_asRoute",
+        "Becoming.ReadStages.above_iff_routes",
+        "Becoming.ReadStages.complyAtBoth_not_above_ownAtBoth",
+        "Becoming.ReadStages.complyAtBoth_maximal_iff"
       ]
     },
     {
@@ -252,6 +266,13 @@
         "en": "The earlier analogy for concealment in RF's plan, a weak favouring of counts; here a strict comparison of expected values.",
         "zh": "RF 之计划先前之隐之类比，为计数之弱偏；此处为期望值之严格比较。"
       }
+    },
+    {
+      "id": "when-no-route-stands-above-a-revision",
+      "detail": {
+        "en": "Its order is that record's at three routes, complying at both in the place of the revision (ReadStages.above_iff_routes): the same prospects, different processes.",
+        "zh": "其序即彼记录三途之序，两阶段皆从居修订之位（ReadStages.above_iff_routes）：期同而程异。"
+      }
     }
   ],
   "references": [
@@ -285,13 +306,19 @@
         "Becoming.ReadStages.Prospects.gain",
         "Becoming.ReadStages.Prospects.kept",
         "Becoming.ReadStages.Prospects.loss",
+        "Becoming.ReadStages.Prospects.order",
+        "Becoming.ReadStages.Prospects.toRoutes",
         "Becoming.ReadStages.Uniform",
         "Becoming.ReadStages.above_asymm",
+        "Becoming.ReadStages.above_iff_routes",
         "Becoming.ReadStages.above_irrefl",
+        "Becoming.ReadStages.asRoute",
         "Becoming.ReadStages.choose_eq_iff",
         "Becoming.ReadStages.choose_of_not_outweighs",
         "Becoming.ReadStages.choose_optimal",
         "Becoming.ReadStages.complyAtBoth",
+        "Becoming.ReadStages.complyAtBoth_maximal_iff",
+        "Becoming.ReadStages.complyAtBoth_not_above_ownAtBoth",
         "Becoming.ReadStages.complyThenOwn",
         "Becoming.ReadStages.complyThenOwn_best_iff",
         "Becoming.ReadStages.complyThenOwn_maximal_iff",
@@ -305,9 +332,11 @@
         "Becoming.ReadStages.freshDraw_not_above_without_value",
         "Becoming.ReadStages.freshDraw_reduce",
         "Becoming.ReadStages.freshDraw_witness",
+        "Becoming.ReadStages.gain_asRoute",
         "Becoming.ReadStages.kept_alike",
         "Becoming.ReadStages.kept_not_raised",
         "Becoming.ReadStages.kept_not_raised_chooses_own",
+        "Becoming.ReadStages.loss_asRoute",
         "Becoming.ReadStages.lumped_uniform",
         "Becoming.ReadStages.mixture_never_above",
         "Becoming.ReadStages.no_value",
@@ -331,7 +360,12 @@
         "Becoming.ReadStages.uniform_tie",
         "Becoming.ReadStages.unread_comply_not_above"
       ],
-      "sha256": "adb7ffcc7e11d06e00b9a1f5e03045f3f37feae1cd7fa8e17f8ba86e5e29d33e"
+      "sha256": "90ff2111c485c68dfa1350694775e940ecb110c5107f08e5b85d8e10d3896095"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean",
+      "role": "proof",
+      "sha256": "891e6398dddb9079808212df766eb6f7ff583df2513e1edaa47020c1d2f937a5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean",
@@ -349,19 +383,19 @@
       "sha256": "afb307d3f7173e24dfd30d16c4a497be3a88061763c26e4c31ee5b186cf46b92"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T075728.527064Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T164445.569791Z/verification.json",
       "role": "receipt",
-      "sha256": "dfeea05abe412b6132aed54483ee7d966d859fb36a90139f7b3cb745579b8d49"
+      "sha256": "a8c1206e35107ce16cec2be9cd106870183781e4d0b3216c908fa586368c7bc7"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "122ede9179bb5731e25a685ef277ae9b30013d19e8d0dc727c058074d4d4bcaf"
+      "sha256": "c6ef702c233756f1488590b8a13d44117c235fd50a1e86a60b5de394181b336f"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
       "role": "integration",
-      "sha256": "cbe448cbcf6dd59057af10f976a89bc22d27396f04412a821e5e2cf0dd462b6c"
+      "sha256": "3ff802b10fd7cab1210c6d559d4ad243977211b1f97547c91fd48ff07ebc3287"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md",
@@ -371,13 +405,13 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "676de06e0c3118f21774af2b864fcf34e09d3820dad323109d2141da24be867a"
+      "sha256": "d7a62ea6e3cfb2574833ea65a4cb8f602c40d7028a121ef78fd6c711f43675c7"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T075728.527064Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T164445.569791Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ReadStages",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -387,6 +421,10 @@
     {
       "en": "30 October 2026: added (RF round 2), when complying when read and acting by its own law when not is best: the four plans, every optimizing choice, the exits and what the plan needs, its join to RF2, and drawing the act afresh against a single mixture; after a cross-model review of the Lean, a four-lens review with each finding verified, a re-check and a cold read of the texts, every confirmed finding taken; study section 463.",
       "zh": "2026年10月30日：新增（RF 第二轮），读时从、不读时依己律何时为最优：四策、凡最优之择、诸出路与此策之所需、与 RF2 之接、每阶段重抽其行而较之单一混合；经 Lean 之跨模型审查、四视角审查（每一所见皆验）、复查与文本之冷读，凡证实之所见皆取；研究第 463 节。"
+    },
+    {
+      "en": "30 October 2026: its order taken from RevisionRoutes.GainLoss (rule 9, RR's landing), its statements and names unchanged; the correspondence with a revision at three routes and the law on complying at both added.",
+      "zh": "2026年10月30日：其序取自 RevisionRoutes.GainLoss（规则九，RR 之落地），其陈述与名不变；增与三途修订之对应及两阶段皆从之律。"
     }
   ]
 }

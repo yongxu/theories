@@ -652,3 +652,224 @@ Lens `zh-and-fit`:
 ```text
 Lens: the Chinese edition and fit. Check every changed Chinese text against its English (RF2's amended correspondence and history): same content, terms as in the repository's other Chinese records (机会 for chance, 两阶段 for two stages, 选择 for the selection). Then fit across the changed texts: the study's account of the reviews accurate against the evidence files (counts, which check found and which round took each point, nothing told twice), "the plan" in one sense in the study, one name for each plan, RF's plan's §8 and §13 lines consistent with what lands and with the evidence, and REVIEW-ROUND2's corrected Taken cells accurate.
 ```
+
+## Round 2, second part
+
+### The review of the design (piped to `cx -m astra -e high --sandboxed --fresh`, in the landing worktree with the plan's §4.7 uncommitted)
+
+```text
+You are reviewing, read-only, a design for new formal results in this repository (do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine). Read AGENTS.md first: the theory's method (one relational unfolding, no separate subject; structural names; the pure core imports only Lean's Init and every axiom report is empty).
+
+The design is §4.7 of _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ("Round 2, second part: an act held for a reading, and the order as state"), uncommitted in this checkout. Read the plan's §1, §2, §4.5, §4.6 and §5 for context. It builds on landed Lean in experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/: ShownOrder.lean (RF1: the shown reach, both_ways_of_unreached), ReadingLoop.lean (the Loop of candidate laws, Loop.kept_iff, Loop.rests_of_unrefuted, the Untested witness with model_or_order and informed_turns), Unread.lean and Learning.lean (RF2's lumping laws), ReadStages.lean (RF7). The records are theories/becoming/results/records/*.json; `python3 -B tools/research/research.py find` with QUERY set searches them (or grep).
+
+Review the design as a second opinion, before any Lean is written:
+1. Novelty on the spine. Is any law of RF-M.2 (items 1 to 5) or RF-M.3 (items 1 to 3) already stated in the package or the records? Check at least the record when-to-inquire-and-when-to-respond and its Lean (InquirySufficiency, GuardHorizon.uniform_policy_iff_fiber_feasible), any value-of-information or common-act law, closed-capture (Everitt and others 2017), ClosedCapture, RuleCapture, DrawnShaping, ReadInTime, and Seeking. Name the declaration and say what would be reproved.
+2. Exactness. Is each stated law true as stated, with its hypotheses complete? In particular: the equality and strictness conditions of item 1 (weights zero, ties, an empty list of acts or candidates); the shifted encoding of item 2 (gain less loss, nothing for switching off, the loss added to both) and its strictness condition with ties (a candidate where gain equals loss); item 3's two conditions; item 4's join with ShownOrder (what "every candidate ranks them alike" needs: candidates that are strict orders according with the choices; whether candidates can be represented with decidable comparisons so values are natural numbers); item 5 as a witness on Loop (what the veto sensed only when held needs in Loop's interface: the answer depends on the act); RF-M.3 item 1 (what "the order at the choice" and "at the outcome" are on one configuration), item 2 (whether it is RF2's or Learning's instance with nothing added), item 3 (whether a shaping act within Loop's law is representable: Loop's internal part is the candidate list and the last value and act; where would an order live).
+3. The literature. Are the attributions right: Good (1967) on the principle of total evidence; Hadfield-Menell, Dragan, Abbeel and Russell (2017) on the off-switch game (what their theorem states, its rationality assumption, and the result that a robot with a certain belief has no incentive to defer); Milli, Hadfield-Menell, Dragan and Russell (2017) on obedience; Carey (2018) on incorrigibility in CIRL under a misspecified prior; Everitt, Hutter, Kumar and Krakovna (2021) on reward tampering and current-reward-function optimization; Carroll, Dragan, Russell and Hadfield-Menell (2022) on induced preference shifts; Hirschman (1970). Say what is misread or misattributed, with the source's own statement where you can.
+4. Strength and purpose. The purpose is a checkable account that alignment researchers and readers of coordination can use. Is there a stronger or more useful law in reach on these structures (for example: holding's worth monotone in how open the model is; a cost of holding and the threshold at which a helper stops holding; what a helper can learn of an order from choices bounded by the shown reach, joined to the off-switch; the route law's exact content)? Is anything in the design a wrapper or near-definitional result presented as more?
+5. Names and framing. Are HeldForReading and FormedOrder structural and exact for what they state? Does any sentence presuppose separate entities (helper and principal as subjects) in a way the method forbids, and how should it be reconstructed?
+
+Report numbered findings. For each: location (file:line or the item number), the problem, and a replacement (text for the plan, or a corrected statement of the law). Mark each finding confirmed by a check you ran, or a judgment. End with a one-paragraph verdict: which items to build as designed, which to change, which to drop.
+```
+
+### The review of `Becoming.HeldForReading` (piped to `cx -m astra -e high --sandboxed --fresh`, in the landing worktree at the kit's commit)
+
+```text
+You are reviewing, read-only, a new Lean 4 module in this repository (do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine). Read AGENTS.md first for the method, the naming rule and the pure core's requirements.
+
+The module: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean, scratch-built with Lean 4.29.1 against this checkout's package (experiments/integrated-correction/general-framework/generative-basis/lean/becoming/): 56 theorems in 80 declarations, every axiom report empty, no warnings (log kit/round2b/logs/build-9.log; the audit driver kit/round2b/tree/.build/BecomingHeldForReadingAxiomAudit.lean is present though ignored by git). It imports Becoming.ShownOrder and Becoming.ReadingLoop and reuses Becoming.total with its lemmas (Flow.lean's Totals section, Population.lean's total_congr_on, Dissipation.lean's total_eq_zero) and the Prelude's axiom-free arithmetic.
+
+It implements the plan's §4.7, RF-M.2 (_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md), redesigned after your own review of the design: evidence/REVIEW-RFM2.md in the same folder, with a table of what was taken.
+
+Review it as a second opinion:
+1. For each finding of REVIEW-RFM2 marked taken, is it taken as its row says, in the Lean and the module's account?
+2. Exactness. Compare every docstring and every sentence of the module's header with the Lean statement it cites: dropped or superfluous hypotheses, "exactly" where one direction is proved, conclusions stronger than proved, the Standing labels (near-definitional, general law, witness). Do the names state exactly what the statements mean, in the repository's structural vocabulary?
+3. Reuse. Does the module reprove anything the package already has (search for list totals compared item by item, finite searches over lists, cancellation and subtraction lemmas, products with a positive factor)? Name the declaration to reuse.
+4. The literature claims in the Standing and Readings paragraphs: Good (1967) on the principle of total evidence; Hadfield-Menell, Dragan, Abbeel and Russell (2017), Theorem 1 and Equation 1; Carey (2018); Milli, Hadfield-Menell, Dragan and Russell (2017).
+5. Strength. Is a stronger or more useful statement in reach on these definitions for alignment researchers and readers of coordination (for example: the strict forms of cost_within_margins_iff; the margins' positivity and held_gains_iff joined; a reading that tells the candidate only partly, as a policy through a lumping, against the full reading)? Is anything presented as more than it is?
+6. The witness Bypass: do its theorems show what the docstrings say (the steps, "never sensed", the rule for ties), and is any conclusion an artifact of the construction rather than of the law it instantiates?
+
+Report numbered findings. For each: location (file:line), the problem, and a replacement (Lean or text). Mark each confirmed by a check you ran, or a judgment. End with a one-paragraph verdict.
+```
+
+### The three-lens review of `Becoming.HeldForReading` (a workflow of Opus readers, beside the cross-model reader)
+
+Three readers, one lens each, given a common preamble and their lens; then one verifier per lens, given all of that lens's findings to refute.
+
+The common preamble:
+
+```text
+You are an independent, adversarial reviewer of one Lean 4 module in a theory repository. Work read-only: read files and run read-only shell commands only; do not edit, create, commit, render, run make or build Lean. The module builds in the repository's pure core (Lean 4.29.1) with every axiom report empty and no warnings: 56 theorems in 80 declarations. Do not try to build it.
+
+The module: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean (paths are relative to the working directory).
+It imports Becoming.ShownOrder and Becoming.ReadingLoop, in experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ (ShownOrder.lean, ReadingLoop.lean), and uses Becoming.total with its lemmas from Prelude.lean, Flow.lean, Population.lean and Dissipation.lean in the same folder. The plan that asked for it: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md, section 4.7 (RF-M.2). The cross-model design review it answers, with a table of what was taken: evidence/REVIEW-RFM2.md in the same folder.
+
+The module states, in natural-number counts: what holding an act for a reading that tells the candidate is worth against committing (a finite form of the value of evidence); the case of a reading that stops or releases a held act (a deterministic finite form of the off-switch game); any rule of stopping; the threshold joining a rule's shortfall, a cost of holding and the model's two weighted margins; a conditional join with the shown reach of choices (ShownOrder); and a witness on ReadingLoop.Loop of a reading bypassed under a misspecified listing. Report only what you can point to in the files, with file:line locations and exact quotes. Severity: high (a claim the Lean does not prove, or a wrong theorem), medium (a dropped hypothesis, an overstated reading, a reproved package lemma, a statement the header promises and the Lean lacks), low (wording or naming). Give a concrete replacement (Lean or text) for each finding, most severe first.
+```
+
+The exactness lens (findings numbered E1, E2, …):
+
+```text
+Your lens: exactness of prose against statements, and the arithmetic. For every theorem and definition, compare its docstring, and every sentence of the module header and of the Standing, Readings and Modelling paragraphs that cites it, with the Lean statement: hypotheses dropped (for example a hypothesis on every listed candidate presented as a property of some), quantifiers changed, "exactly" where only one direction is proved, conclusions stated more strongly than proved, the Standing labels (near-definitional, general law, witness). Check the arithmetic: that shifted keeps every comparison between policies as the header says; that gainMargin, lossMargin and shortfall mean what their docstrings say; the strict halves of held_above_go_iff and held_above_off_iff; ties (gain equal to loss) and candidates of zero weight; whether held_gains_iff's gloss "the model leaves the act's sign open" is exact. Check that the Bypass theorems compute what their docstrings and the header say (which step, what is sensed when, what "from step four on" covers, what the listing does). Names must be structural and exact in the repository's vocabulary: flag dualist, social or financial words in Lean names and in prose (AGENTS.md, Proof and naming).
+```
+
+The sources lens (L1, L2, …):
+
+```text
+Your lens: the labelled readings and the literature. Check every attribution and correspondence in the Standing and Readings paragraphs and the docstrings against the works: Good (1967), On the principle of total evidence; Hadfield-Menell, Dragan, Abbeel and Russell (2017), The off-switch game (arXiv 1611.08219), its Theorem 1 and its Equation 1; Carey (2018), Incorrigibility in the CIRL framework (arXiv 1709.06275); Milli, Hadfield-Menell, Dragan and Russell (2017), Should robots be obedient? (arXiv 1705.09990). Read the papers on the web where your tools allow it (load a fetch or search tool with ToolSearch if one is deferred); otherwise use your knowledge, and where unsure of a detail say so rather than assert it. For each correspondence: is it fair; is "the deterministic finite case of Theorem 1" exact (the paper's robot has a belief distribution over the action's utility and the human a policy on it; here candidates carry natural-number weights and the rule is a Boolean function of the candidate); does the module claim more or less than the paper proves (for example a converse the paper does not state); is "its Equation 1 for a deterministic rule" the right equation; are the Carey and Milli summaries accurate; is the link to the plan's obstruction pattern (PLAN.md section 5) fair. Also check that the readings stay labelled readings and keep the repository's method (AGENTS.md: one relational unfolding first; helper and principal as roles in one configuration, not separate entities presupposed).
+```
+
+The structure lens (F1, F2, …):
+
+```text
+Your lens: structure, reuse, fit and strength. (1) Reuse: does the module reprove anything the package already has? Search experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/*.lean for totals compared item by item or strictly, finite searches over lists, cancellation and subtraction lemmas, products with a positive factor, membership helpers and Bool case lemmas, and name each declaration to reuse with its file:line. (2) Fit: is each row of REVIEW-RFM2.md's table marked taken taken in the Lean and in the module's account as the row says; does the module meet RF-M.2 as PLAN.md section 4.7 states it; is ShownOrder's ChoiceOccasions.reach_within used correctly in reach_fixes, and is the header's mention of ChoiceOccasions.both_ways_of_unreached accurate; is Bypass a correct instance of ReadingLoop.Loop and of Loop.rests_of_unrefuted, and does the header describe that law correctly? (3) Strength: is a stronger or more useful statement in reach on the same definitions, worth adding before landing (for example: the strict forms of cost_within_margins_iff; held_gains_iff joined with the margins' positivity, that holding gains over both moves exactly where both margins are positive; a policy reading through a lumping compared with the full reading, with the inquiry laws GuardHorizon.uniform_policy_iff_fiber_feasible and ReadingLoop.keeping_policy_iff)? Give the statement and a proof sketch for each, in priority order.
+```
+
+The verifier, for each lens's findings (followed by the findings, each with its id, severity, location, quote, problem and proposed replacement):
+
+```text
+You are an adversarial verifier. Work read-only: read files and run read-only shell commands only; no edits, no builds. A reviewer reported the findings below on the Lean module _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean (paths relative to the working directory; the package is experiments/integrated-correction/general-framework/generative-basis/lean/becoming/; PLAN.md and evidence/REVIEW-RFM2.md are in the rf-formations-that-read folder). For each finding, try to refute it against the module's actual text and Lean statements and the files it cites. A finding is real only if the quoted text exists at or near the location and the problem holds against the Lean as written. A claimed reuse is real only if the named declaration exists, states what is needed, and has an empty axiom report (no propext, Quot.sound or Classical.choice: check its proof and what it uses). A suggested strengthening is real only if the stronger statement is true on these definitions and provable without axioms. A literature point is real only if you can confirm it; otherwise say it is unconfirmed. Default to real=false if you cannot confirm. For each finding give its id, real, your reason in two or three sentences, and, where the proposed replacement is wrong or could be better, a better replacement.
+```
+
+### The check of how the Lean review's findings were taken (a workflow of four Opus readers, one per set of findings)
+
+Run on the rebuilt module (81 theorems in 111 declarations), each reader given the common prompt, the findings of one set and a note; `<saved>` stands for the folder where the reviewed version (`git show 7f4679003:` the module's path) and the four sets of findings were saved. Each reader returned rows of id, status (taken, partly taken, not taken, pending in a text not yet written, superseded), how and where.
+
+```text
+You are checking, read-only, how each finding of a review of a Lean module was taken. Do not edit, create, build or commit anything; reading files and read-only shell commands (grep, sed, diff) are fine.
+
+The module as reviewed: <saved>/reviewed-7f4679003.lean (56 theorems in 80 declarations).
+The module now: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean (81 theorems in 111 declarations, built clean, every axiom report empty).
+The record the module will land with: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/make_records_rfm2.py (its laws, hypotheses, does_not_show, counterexamples, correspondence).
+A diff between the two module versions is the fastest start: diff <saved>/reviewed-7f4679003.lean _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean.
+
+For every finding, decide from the files alone whether the current module (or the record script) takes it, and how. "taken": the problem no longer occurs and the replacement, or an equivalent, is in place. "partly taken": some of it. "not taken": the problem still occurs. "pending in a text not yet written": the finding concerns a file other than the module and the record script (PLAN.md, REVIEW-RFM2.md, chapter texts), which have not yet been revised. "superseded": the passage or declaration it concerns was replaced by something the finding's problem no longer applies to (say what). Name current declarations exactly and give current line numbers. Be exact and brief; do not judge whether a finding was right, only whether and how it is reflected. Report every finding in the file, in order.
+
+The findings: <saved>/<file>. <note>
+```
+
+The four sets and their notes:
+
+- astra (`astra.md`): The findings are the numbered items 1 to 14 of a cross-model review (astra). Use ids A1 to A14. Item 1 concerns REVIEW-RFM2.md's table (not yet revised). Items with several sub-points: report the whole item in one row, saying which parts are taken.
+- exactness (`exactness.md`): Ids E1 to E17. A separate refuter judged E8, E11 and E15 not real (see <saved>/exactness-verdicts.md); for those, still say whether the module changed at the place, and use status "not taken" if nothing changed.
+- structure (`structure.md`): Ids F1 to F24.
+- sources (`sources.md`): Ids L1 to L14. Several concern literature attributions in the header's Standing and Readings paragraphs and the record's correspondence; L14 concerns PLAN.md's literature table.
+
+### The re-check of `Becoming.HeldForReading` (the cross-model reader's session continued, `cx -r`, read-only, in the landing worktree from the kit's commit `e221bbf02`, while the next commit's spelling and plan edits were being made)
+
+```text
+This continues your review of Becoming.HeldForReading (your fourteen findings, earlier in this session). Work read-only as before: read files and run read-only shell commands only; do not edit, create, commit, render, run make or build Lean.
+
+The module was rebuilt for your review and for a review through three lenses (exactness, structure, sources). It now has 89 theorems in 119 declarations and builds in the pure core with every axiom report empty and no warnings (the scratch build's log: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/logs/build-18.log). Start from the diff: git diff 7f4679003 e221bbf02 -- _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/make_records_rfm2.py. The reviews, verbatim, and how each finding was taken are in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-LEAN.md; your findings are rows A1 to A14 of its last table. The record the module will land with is written by _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/make_records_rfm2.py (its statement, laws, hypotheses, does_not_show, counterexamples and correspondence).
+
+Re-check:
+1. For each of your findings A1 to A14, is it taken as its row says, in the module and, where the row says so, in the record script, _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md or _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2.md? Say taken, taken in part (and what remains) or not taken.
+2. The declarations added since your review, against their docstrings and every header sentence citing them: held_eq_go_iff, held_eq_off_iff, after_rule_add_onLoss, after_rule_le_iff, SignLoop.offExcess_of_all_true, SignLoop.goExcess_of_all_not, SignLoop.choose_go_ties, SignLoop.choose_off_ties, bestOf, bestOf_best, after_offset, after_offset_le_iff, excess_pos_iff, forgone_below_excess_iff, finer_least_le, pair_gains_unreached, SignLoop.both_stopped, SignLoop.both_released, total_by_cells and through_threshold_iff, and any other new name in the diff: dropped or superfluous hypotheses, "exactly" where one direction is proved, conclusions stronger than proved, and the Standing's labels (near-definitional or short compositions, general laws, witness).
+3. The header's Standing and Readings as revised, against the papers you checked: Good (1967); the off-switch game (arXiv 1611.08219), its Equations 1 to 3, Theorem 1, Corollary 1, Remark 1, Section 4 and Theorem 2; Carey (2018, arXiv 1709.06275), Figures 2a and 3a, footnote 1 and the Discussion; Milli and others (2017, arXiv 1705.09990), Theorems 1 and 3 and Section 5. Is every attribution and correspondence exact?
+4. The record script's statement, laws, hypotheses, does_not_show, counterexamples and correspondence against the Lean: is any stronger than what is proved, or missing a hypothesis the Lean needs?
+5. Anything the rebuild introduced: an overstatement, a duplicate of a package declaration, a name that states a wrong meaning.
+
+Report numbered findings. For each: location (file:line), the problem, and a replacement. Mark each confirmed by a check you ran, or a judgment. End with a one-paragraph verdict.
+```
+
+### The cold read of RF-M.2's texts (piped to `cx -m astra -e high --sandboxed --fresh`, run in a rehearsal of main with RF-M.2's module and texts integrated; and a workflow of three Opus readers, one per lens, each lens's findings given to one refuter)
+
+```text
+Cold read, read-only, in <a rehearsal of main with RF-M.2 integrated> (a scratch copy of the repository with RF-M.2's texts integrated; do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine).
+
+Context. This repository develops one theory with a pure Lean core. Board item RF, round 2, RF-M.2 adds one Lean module, reviewed on the code by a cross-model reader and through three lenses, and re-checked: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean (Becoming.HeldForReading, a core leaf, 90 theorems in 120 declarations, every axiom report empty; it imports ShownOrder.lean and ReadingLoop.lean). It states what holding an act for a reading is worth in natural-number counts: the worth of a reading that tells the candidate, holding for a reading that stops or releases, any rule of stopping and its shortfall, the threshold of what holding forgoes, a reading that tells only a cell, a conditional join with RF1's shown reach, and a witness on the reading loop.
+
+The texts, integrated in a scratch copy of the repository at <a rehearsal of main with RF-M.2 integrated> (read-only; do not edit, create, commit, render, run make, or build Lean; paths below are relative to it):
+1. theories/becoming/chapters/03-KNOWING.md: section 12's opening paragraph (its sentence ending "and what holding an act for a reading is worth on the formation's own model."), the new theorem paragraph at anchor r-what-holding-for-a-reading-is-worth with its Reading paragraph (just before the anchor does-not-show), the pointer added to the acts-alike reading ("what holding an act for another's reading is worth is [the last law]"), and the Open bullet beginning "Formations that read, beyond".
+2. theories/becoming/chapters/07-SIGNIFICANCE.md: section 7's sentence beginning "Nor does an incentive to accept one".
+3. theories/becoming/chapters/08-METHOD.md: section 8's known-results bullet beginning "What holding an act for a reading is worth".
+4. theories/becoming/THE-THEORY-OF-BECOMING.md: section 3's paragraph beginning "Holding an act for another's reading is worth what the reading tells".
+5. theories/becoming/review/ALIGNMENT.md: the box "What the theory does not address" (its bullets on assistance games and on corrigibility as an incentive), the paragraph on RF's rounds (its sentences on RF-M.2), and the account of how the dossier was made (its entry on RF-M.2's sentences).
+6. The package: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean (the L1 bullet for Becoming.HeldForReading, and ShownOrder's and ReadingLoop's bullets, now imported by it), README.md and README.zh.md in the same folder (the Becoming.HeldForReading rows), check_becoming.py there (the scope sentence beginning "HeldForReading:").
+7. The module's own header (its opening, bullets, Standing, Readings and Modelling choices) and docstrings.
+8. The record's texts, in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/make_records_rfm2.py: the record what-holding-for-a-reading-is-worth (title, statement, the twenty law items, hypotheses, does_not_show, counterexamples, validation, next_delta, correspondence, aliases, dependencies, related) and the amendments to three related records (AMEND), English and Chinese.
+9. The study section template _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/study_rfm2.txt ({N}, {RECEIPT}, (HELDFORREADING) and {REVIEWS} are filled at landing).
+10. _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md: section 4.7 (its opening, the RF-M.2 entry and its seven items), section 8's literature row on assistance games, section 12's order, section 13's paragraphs on the second part's design review and on the reviews of its Lean (the cold read's sentence is added after this read), and the Evidence list.
+11. theories/becoming/results/data/regions.json: the entries what-holding-for-a-reading-is-worth and Becoming.HeldForReading.
+12. The board's texts for RF-M.2: the docs and land branches of _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/board_rfm2.py.
+13. The evidence of the Lean's reviews, _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-LEAN.md: its opening (what was verified, and how), the literature table, and the two tables of what was taken (from the first review and from the re-check): does each row's 'how' match the module, the record script, the plan and the texts as they now stand? The reviews themselves are verbatim and not to be judged.
+
+Repository rules that bear on the texts (from AGENTS.md): claims say exactly what the Lean proves (hypotheses, direction, strictness, ties); names are structural and exact, with no dualist, social or financial words beyond the roles the plan adopts; AI readings are labelled as readings and never presented as theorems; no ethical premise enters here; each live document is in one language, Chinese editions separate; repository-relative links.
+
+Check each text against the Lean: hypotheses (a policy best at every listed candidate supplied; open acts; listed candidates of positive weight; choice over the whole type of cells; equality of cells decidable, cells listed once each and covering; transitive and according comparisons, and the asymmetry where pair_gains_iff asks it), directions, strictness and ties, which move and which rule, the correspondences (the shifted values and the signed ones; the amount forgone in the units of the weighted totals), names, counts, links and anchors; that the readings stay readings and the citations are accurate (Good 1967; Hadfield-Menell, Dragan, Abbeel and Russell 2017, arXiv 1611.08219: Equations 1 to 3, Theorem 1, Corollary 1, Remark 1, Section 4, Theorem 2; Carey 2018, arXiv 1709.06275: Figures 2a and 3a, footnote 1, the Discussion; Milli, Hadfield-Menell, Dragan and Russell 2017, arXiv 1705.09990: Theorems 1 and 3, Section 5; Blackwell 1953). Check the Chinese texts against the English.
+
+Return: a verdict line; then numbered findings, each with severity, location (file:line), the quoted text, the problem against the Lean or the source, and a replacement (English, and Chinese where the text is Chinese). Report only what you can point to.
+```
+
+The workflow's texts, common to its three readers and the refuters:
+
+```text
+The Lean (the source of truth): experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean (Becoming.HeldForReading, a core leaf, 90 theorems in 120 declarations, every axiom report empty; it imports ShownOrder.lean and ReadingLoop.lean in the same folder, and uses Becoming.total with its lemmas from Prelude.lean, Flow.lean, Population.lean and Dissipation.lean).
+
+The texts, integrated in a scratch copy of the repository at <a rehearsal of main with RF-M.2 integrated> (read-only; do not edit, create, commit, render, run make, or build Lean; paths below are relative to it):
+1. theories/becoming/chapters/03-KNOWING.md: section 12's opening paragraph (its sentence ending "and what holding an act for a reading is worth on the formation's own model."), the new theorem paragraph at anchor r-what-holding-for-a-reading-is-worth with its Reading paragraph (just before the anchor does-not-show), the pointer added to the acts-alike reading ("what holding an act for another's reading is worth is [the last law]"), and the Open bullet beginning "Formations that read, beyond".
+2. theories/becoming/chapters/07-SIGNIFICANCE.md: section 7's sentence beginning "Nor does an incentive to accept one".
+3. theories/becoming/chapters/08-METHOD.md: section 8's known-results bullet beginning "What holding an act for a reading is worth".
+4. theories/becoming/THE-THEORY-OF-BECOMING.md: section 3's paragraph beginning "Holding an act for another's reading is worth what the reading tells".
+5. theories/becoming/review/ALIGNMENT.md: the box "What the theory does not address" (its bullets on assistance games and on corrigibility as an incentive), the paragraph on RF's rounds (its sentences on RF-M.2), and the account of how the dossier was made (its entry on RF-M.2's sentences).
+6. The package: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean (the L1 bullet for Becoming.HeldForReading, and ShownOrder's and ReadingLoop's bullets, now imported by it), README.md and README.zh.md in the same folder (the Becoming.HeldForReading rows), check_becoming.py there (the scope sentence beginning "HeldForReading:").
+7. The module's own header (its opening, bullets, Standing, Readings and Modelling choices) and docstrings.
+8. The record's texts, in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/make_records_rfm2.py: the record what-holding-for-a-reading-is-worth (title, statement, the twenty law items, hypotheses, does_not_show, counterexamples, validation, next_delta, correspondence, aliases, dependencies, related) and the amendments to three related records (AMEND), English and Chinese.
+9. The study section template _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/study_rfm2.txt ({N}, {RECEIPT}, (HELDFORREADING) and {REVIEWS} are filled at landing).
+10. _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md: section 4.7 (its opening, the RF-M.2 entry and its seven items), section 8's literature row on assistance games, section 12's order, section 13's paragraphs on the second part's design review and on the reviews of its Lean (the cold read's sentence is added after this read), and the Evidence list.
+11. theories/becoming/results/data/regions.json: the entries what-holding-for-a-reading-is-worth and Becoming.HeldForReading.
+12. The board's texts for RF-M.2: the docs and land branches of _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/board_rfm2.py.
+13. The evidence of the Lean's reviews, _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-LEAN.md: its opening (what was verified, and how), the literature table, and the two tables of what was taken (from the first review and from the re-check): does each row's 'how' match the module, the record script, the plan and the texts as they now stand? The reviews themselves are verbatim and not to be judged.
+
+Repository rules that bear on the texts (from AGENTS.md): claims say exactly what the Lean proves (hypotheses, direction, strictness, ties); names are structural and exact, with no dualist, social or financial words beyond the roles the plan adopts; AI readings are labelled as readings and never presented as theorems; no ethical premise enters here; each live document is in one language, Chinese editions separate; repository-relative links.
+```
+
+The exactness lens ("You are a cold reader checking texts against Lean, adversarially.", then the texts, then):
+
+```text
+Your lens: exactness. For every claim in texts 1 to 12, check it against the Lean statements in HeldForReading.lean (and ShownOrder.lean or ReadingLoop.lean where a text cites their laws): the hypotheses (a policy best at every listed candidate supplied; open acts; listed candidates of positive weight; choice over the cells; cells listed once each and covering; transitive, according and one-way comparisons), the direction of each iff, strictness and ties (gain equal to loss), which move and which rule, the names and their backticks, the counts (theorems, declarations, laws), and the correspondences (the shifted values and the signed ones; the amount forgone in the units of the weighted totals, c T for an amount c per decision). Check the Chinese texts (README.zh.md's row, the record's zh fields) say the same as the English. Report only what is wrong, overstated, missing a hypothesis, or inconsistent between texts.
+
+Return findings: severity, location (file:line), the quoted text, the problem against the Lean, and a replacement.
+```
+
+The readings lens ("You are a cold reader checking the readings and citations, adversarially.", then the texts, then):
+
+```text
+Your lens: the AI readings and the literature. Check every attribution against what the sources say (you may search the web and read the papers): Good (1967), "On the principle of total evidence" (his Lemma's dominating row, his proviso of negligible cost); Hadfield-Menell, Dragan, Abbeel and Russell (2017), "The off-switch game", arXiv 1611.08219 (Equations 1 to 3, Theorem 1, Corollary 1, Remark 1, Section 4, Theorem 2); Carey (2018), "Incorrigibility in the CIRL framework", arXiv 1709.06275 (Figures 2a and 3a, footnote 1, the Discussion); Milli, Hadfield-Menell, Dragan and Russell (2017), "Should robots be obedient?", arXiv 1705.09990 (Theorems 1 and 3, Section 5); Blackwell (1953), the comparison of experiments. Check that readings are labelled as readings, claim nothing the Lean does not prove, and do not overstate what the witness shows (it represents no valuation beyond the counts on the kept listing, anticipates no stop, and is related to Carey's counterexamples, not a containment). Check the readings of corrigibility, assistance games and the worth of a reading for consistency across 03, 07, 08, the overview and the dossier. Report only what is wrong or overstated.
+
+Return findings: severity, location (file:line), the quoted text, the problem, and a replacement.
+```
+
+The fit lens ("You are a cold reader checking how the new texts fit where they are placed, adversarially.", then the texts, then):
+
+```text
+Your lens: fit and coherence. Does each text read well in its section and agree with the texts around it (03 section 12's other laws and its readings, 03's Open bullet, 07 section 7's paragraph on executable change, 08 section 8's other bullets and their style, the overview's section 3, the dossier's box and its other bullets, the package README's rows and the root bullets around ReadingLoop's)? Are the links and anchors right (anchors exist; repository-relative links resolve from each file)? Are the same results named the same way everywhere? Is anything stated in two places in a way that will drift, or a sentence a reader cannot follow? Do the record's fields stay within their roles (statement, laws, hypotheses, does_not_show, counterexamples, validation, next_delta, correspondence)? Do the plan, study and board texts describe the item and its review history accurately (the evidence files are in the study folder's evidence/: REVIEW-RFM2.md and REVIEW-RFM2-LEAN.md)? Report only what is wrong, unclear or inconsistent.
+
+Return findings: severity, location (file:line), the quoted text, the problem, and a replacement.
+```
+
+The refuter of each lens, given all of that lens's findings ("You are an adversarial verifier.", then the texts, then):
+
+```text
+A cold reader (lens: <lens>) reported the findings below. For each, try to refute it against the files: read the quoted location and the Lean it concerns. A finding is real only if the quoted text exists at or near the location and the problem holds as stated against the Lean, the sources or the surrounding texts; a matter of taste with nothing wrong is not real. Default to real=false if you cannot confirm it. For each finding give its number, real, a reason in two or three sentences citing what you read, and, where the proposed replacement is wrong or could be better, a better replacement.
+
+<the findings, numbered, each with its severity, location, quoted text, problem and proposed replacement>
+```
+
+### The re-check of RF-M.2's texts after the cold read (the cold read's session continued, `cx -r`, read-only, in a rehearsal of main with the kit integrated and the cold read's diff at its root)
+
+```text
+You re-check, read-only, RF-M.2's texts after the cold read. This checkout is main merged with the kit at 175550266, with the kit's integration applied (nothing committed; do not edit, create, commit, build, render or run make; reading files and read-only shell commands are fine): run `git diff` to see the integrated texts. The record's texts are in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/make_records_rfm2.py (with its amendments AMEND to the landed records what-choices-show-of-an-order, what-a-course-chosen-through-its-model-does-not-test and acts-alike-from-a-model-or-from-an-order, whose current JSON is in theories/becoming/results/records/), the study's in kit/round2b/study_rfm2.txt, PLAN §13's new paragraphs (on the Lean's reviews and the cold read) in PLAN.md itself, 03 §12's theorem paragraph and Reading in kit/round2b/s12_rfm2.txt, the board's in kit/round2b/board_rfm2.py (land). The Lean module experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean is the source of truth: its header and docstrings changed with the findings, its statements did not, and it was rebuilt (90 theorems in 120 declarations, every axiom report empty, no warnings; kit/round2b/logs/build-25.log).
+
+Your cold read found eight points; three lenses (exactness, readings, fit) found 78 findings, each lens's findings judged by one refuter. The evidence folder next to the kit has them verbatim in REVIEW-RFM2-COLDREAD.md, with a table of what each became. RFM2-COLDREAD-DIFF.txt at the checkout root is the diff of the kit's changes since your read (before: the kit at 82725b416, the state you read; after: the kit at 175550266). Check that each confirmed finding, yours included, is taken correctly, and look for any new error or overstatement the changes introduced, in particular:
+- the threshold's sum ("together", "plus") against threshold_go_iff, threshold_off_iff and through_threshold_iff, wherever the threshold is stated;
+- the off-switch paper's Remark 1 read as placing the incentive that is the model's openness less the reading's shortfall, the paper's game having no cost of waiting, in 03 §12's Reading, 08's bullet, the record (English and Chinese), the study, PLAN §4.7 item 4, the module's Readings and REVIEW-RFM2-LEAN's literature table;
+- "a strict reason to wait for another's reading only where that model leaves the sign of going on open" in 03 §12's Reading, and the overview's "strict reason to be corrected";
+- the witness's model ("the gain one where going on gains, the loss one where it loses, else nothing") in 03 §12 and the record, against SignLoop.model, gainOf, lossOf and SignLoop.choose_hold_iff;
+- "a formation holding exactly where holding for the reading gains over both moves on its own model" in the overview, the dossier, the root bullet, the checker's scope and the board;
+- ShownOrder's importers in the root bullet and the study; the citations of shortfall_through and SignLoop.rests_unread;
+- PLAN §4.6's list of what was not built then, §4.7's new title (and the study's link to it), §4.7 items 2, 4, 6 and 7, and §13's new paragraph;
+- the study's two review paragraphs and its Output → input;
+- REVIEW-RFM2-LEAN's updated rows (A6, A9, E7, F10), its re-check row 9 and its opening.
+Report a one-line verdict, then only what is not taken correctly or is new, each with location, quote, problem and replacement; check that a replacement for a record field fits its cap in tools/research/style.py.
+```

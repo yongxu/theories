@@ -27,11 +27,11 @@ Target: the deductive necessity of Becoming as a whole, with no added substantiv
 
 `open` · [record](theories/becoming/results/records/theory-of-becoming-foundation.md) · [canonical source](theories/becoming/history/BECOMING-FOUNDATION.md)
 
-### Stronger universal practical warrant target
+### Whether a universal practical warrant exists
 
-Target: universal practical warrant with zero substantive axioms, developed as one account of ends, selection, knowing, normativity and revision within becoming.
+Question: whether practical reasons have a warrant binding every possible mind, with zero substantive premises. It stays open, and the ethics, life's stance, does not wait on it.
 
-**Next:** Directly explain how actual affected living supports judgments to retain, change or end arrangements, preserving substantive contrary grounds and implementation barriers.
+**Next:** An argument either way: a warrant binding every possible mind that, where it grounds the condition, says where it comes from beyond logic alone and the represented dynamics alone; or a showing that none exists for a stated class of minds. The practical judgment the ethics for life needs is the work of the goal of practical judgment for life, and does not wait on this question.
 
 `open` · [record](theories/becoming/results/records/universal-practical-warrant.md) · [canonical source](theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md)
 

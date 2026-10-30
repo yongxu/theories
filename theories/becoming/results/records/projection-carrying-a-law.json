@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F11",
-  "reviewed_at_utc": "2026-10-14T14:57:40+00:00",
+  "reviewed_at_utc": "2026-10-30T17:41:46+00:00",
   "statement": {
     "zh": "投影恰在经它相同的配置同去之处承载确定的规律；所不依者一步之内被重新吸收；改变自身规则的系统的规律在联合配置上。",
     "en": "A projection carries a determined law exactly where configurations alike under it go alike; what the step does not depend on is re-absorbed in one step; a system changing its own rule has its law on the joint configuration."
@@ -222,8 +222,8 @@
     "zh": "规则缓慢改变时状态在长段上的规律。"
   },
   "correspondence": {
-    "zh": "Ren 2026-10-12 问：“hows cause–effect system comparing to our theory?”，贴入一段作者未注明的说明（不是 Ren 的话，不是前提），又写“think for one more round, what can we learn, being inspired, and improve?”；对 AI 的五项提议答：“Great, let's finish all of them, you can spawn sub agents in a wise order if needed”。这是第三项（机制是一种分解，不是另一种规律）。读法（AI 的，依 Ren 的交托采用）：机制是承载规律的投影，“关于何者无关的模型”（Becoming.Experiment）由相同者同去精确刻画；配置的投影是时间读法与更细的量的单位之外的第三种东西；较粗描述上的规律（涌现）就是那里的相同者同去，不分任何东西的描述总承载规律，所以内容在于哪个描述；规则持有结果（Becoming.Capture）是只依于规则；改变自身因果的系统的规律在状态与规则的联合配置上，不需要另一种规律；读 理 为投影（Becoming.Experiment），它何时承载规律由此给出。",
-    "en": "On 12 October 2026 Ren asked “hows cause–effect system comparing to our theory?”, pasted an explanation whose author is not stated (not Ren's wording, not a premise), asked “think for one more round, what can we learn, being inspired, and improve?”, and to the AI's five proposals answered “Great, let's finish all of them, you can spawn sub agents in a wise order if needed”. This is the third proposal (a mechanism is a factoring, not a further kind of law). Readings (the AI's, adopted on Ren's delegation): a mechanism is a projection that carries a law, and the model of what is irrelevant (Becoming.Experiment) is characterized exactly by going alike; a projection of configuration is a third thing beside readings of time and finer units of amount; a law at a coarser description (emergence) is going alike there, and since the description that distinguishes nothing always carries one, the content lies in which description carries it; the rule holding the outcome (Becoming.Capture) is dependence on the rule only; a system that changes its own causality has its law on the joint configuration of state and rule, and needs no further kind of law; reading 理 as a projection (Becoming.Experiment), this says when 理 carries a law."
+    "zh": "Ren 2026-10-12 问：“hows cause–effect system comparing to our theory?”，贴入一段作者未注明的说明（不是 Ren 的话，不是前提），又写“think for one more round, what can we learn, being inspired, and improve?”；对 AI 的五项提议答：“Great, let's finish all of them, you can spawn sub agents in a wise order if needed”。这是第三项（机制是一种分解，不是另一种规律）。读法（AI 的，依 Ren 的交托采用）：机制是承载规律的投影，“关于何者无关的模型”（Becoming.Experiment）由相同者同去精确刻画；配置的投影是时间读法与更细的量的单位之外的第三种东西；较粗描述上的规律（涌现）就是那里的相同者同去，不分任何东西的描述总承载规律，所以内容在于哪个描述；规则持有结果（Becoming.Capture）是只依于规则；改变自身因果的系统的规律在状态与规则的联合配置上，不需要另一种规律；读模型为投影（Becoming.Experiment），它何时承载规律、即何时为理，由此给出。",
+    "en": "On 12 October 2026 Ren asked “hows cause–effect system comparing to our theory?”, pasted an explanation whose author is not stated (not Ren's wording, not a premise), asked “think for one more round, what can we learn, being inspired, and improve?”, and to the AI's five proposals answered “Great, let's finish all of them, you can spawn sub agents in a wise order if needed”. This is the third proposal (a mechanism is a factoring, not a further kind of law). Readings (the AI's, adopted on Ren's delegation): a mechanism is a projection that carries a law, and the model of what is irrelevant (Becoming.Experiment) is characterized exactly by going alike; a projection of configuration is a third thing beside readings of time and finer units of amount; a law at a coarser description (emergence) is going alike there, and since the description that distinguishes nothing always carries one, the content lies in which description carries it; the rule holding the outcome (Becoming.Capture) is dependence on the rule only; a system that changes its own causality has its law on the joint configuration of state and rule, and needs no further kind of law; reading a model as a projection (Becoming.Experiment), this says when it carries a law: when it is a 理."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Mechanism.lean",
   "aliases": [
@@ -721,6 +721,10 @@
     {
       "en": "24 October 2026, GS1: read in the grammar (record rules-that-change-themselves-in-the-grammar, study section 390); no statement of this record changed.",
       "zh": "2026年10月24日，GS1：于文法中读（记录 rules-that-change-themselves-in-the-grammar，研究第 390 节）；本记录之陈述未变。"
+    },
+    {
+      "en": "30 October 2026: wording only, for the twenty-first review's item 13 (理 in one sense): the correspondence reads a model, not 理, as a projection, since a 理 is a lumping the step goes alike across; nothing the record states changed.",
+      "zh": "2026年10月30日：仅措辞，依第二十一次审查第 13 项（理一义）：对应改为读模型（而非理）为投影，因理是步于其上同行之归并；记录所述无改变。"
     }
   ],
   "text_versions": [

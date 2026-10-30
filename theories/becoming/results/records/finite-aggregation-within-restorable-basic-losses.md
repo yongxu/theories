@@ -63,7 +63,7 @@ Strict loss matching obeys the laws below on every frame (Becoming.LossMatching)
 - **Counterexample:** Two disconnections within one sustained task do not automatically become two whole losses; equal endpoints and brief restoration do not erase aftereffects. Filling the repair instance’s recovery gap can supply worsening for its insufficient anchor, but cannot automatically preserve three-protection sufficiency. [source](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/CROSSED-CLAIMS-ARGUMENT.md)
 - **Counterexample:** EndlessLosses: with infinitely many losses a configuration strictly matches itself (EndlessLosses.self_match), and the sufficiency commitment is inconsistent there (EndlessLosses.no_sufficient_matching), so finitely many complete episodes are needed. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean)
 
-**Standard boundaries:** Premise-free (zero-substantive-axiom) grounding is a separate open target; completed results on the conditional alignment route keep their scope.
+**Standard boundaries:** The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
 
 <a id="progress--已接通"></a>
 ## Progress
