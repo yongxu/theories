@@ -224,7 +224,7 @@ Before the account goes to readers outside the work (the review packet, a note f
 
 1. **Derived:** it follows from the grammar's laws, for every relation and class.
 2. **On the root under a stated hypothesis:** the hypothesis is written in the grammar's terms, and a countermodel on the root shows it cannot be dropped.
-3. **A premise:** stated on the root, with a proof that no statement about the dynamics entails it. The continuation condition and C stand here already (`ReadsOnlyDynamics.not_entails`).
+3. **A premise:** stated on the root, with a proof that no statement about the dynamics entails it. (Corrected 31 October 2026, from MV's boundary-field spec: this said the continuation condition and C already stand here. Neither does, and standing 3 is empty among the central declarations. The condition has its not-entailed theorem, `ReadsOnlyDynamics.not_entails`, but it is not stated on the root: its root form «续无外» has no such theorem, and its free significance stays off the root, 07 §4.5. C is stated, `Comparison`, with no not-entailed theorem, its reason open apart.)
 
 Any other standing is a distance from the edge, not a place on it. "Balance, represented" and the root's second sort are such distances, and so is a statement at a represented model whose model no stated hypothesis cuts out. Where an item stops short, its failure is written down with witnesses, as item 13 allows. At §461, of the 118 distinct central declarations, 44 reach the grammar, 16 are stated at a represented model, 4 hold on their own carrier only, and 54 are the rest, 31 of them balance, represented. Three levers would cover most of that distance.
 
@@ -261,7 +261,7 @@ The gate rows, "premise of the account" in U1 §4's table, become hypotheses on 
 
 **Where the edge stays.**
 
-- The continuation condition and C are premises, proved not entailed by the dynamics.
+- The continuation condition and C are premises of the account. Only the condition has a proof that the dynamics does not entail it, and neither is stated on the root (corrected 31 October 2026; see item 3 above).
 - Amounts are whole units. The pure core is discrete; continuous amounts belong to the periphery.
 - A law of a particular model is stated at a represented model, the model cut out by a stated hypothesis, with a countermodel on the root.
 
@@ -372,7 +372,7 @@ HE2's list now has five items. `14c7c0cdf` added «所闭之逆» and the two ha
 
 U4's taker asked for these decisions on the boundary design (`u4-one-root-to-its-edge/DESIGN-BOUNDARY.md` on branch `u4-edge`, `fd31e64bb`, not yet on main).
 
-- **Derived means the law is in the package.** A row is derived when it is a case of a declaration in a `Becoming.Grammar*` module, stated in the grammar's terms. A list kept beside the package would be metadata, and metadata settles no standing. The «» name is the vocabulary, not the standing. `kept_onward` qualifies: it is in GrammarLaws and proved from «闭含所闭» and «线则所闭», and no rename is due.
+- **Derived means the law is in the package.** A row is derived when it is a case of a declaration in a `Becoming.Grammar*` module, stated in the grammar's terms. A list kept beside the package would be metadata, and metadata settles no standing. The «» name is the vocabulary, not the standing. (Corrected 31 October 2026.) This bullet said `kept_onward` qualifies. Under MV's content test it does not: its statement is about `Nat` and a predicate on it and reaches no «» term, so it is a law of the steps of time kept in GrammarLaws, not a grammar law. MV's test admits a theorem of a `Becoming.Grammar*` module, not a generated auxiliary, that is a root constant by content and whose statement reaches «际» or another «» term and no closed value. Its proof applies «闭含所闭» and «线则所闭», so what reaches it reaches those (reach), and no row's standing changes.
 - **Reach and derived are two figures.** Reach says a grammar law is among a declaration's reasons; derived says the row is a case of one. Of the 44 that reach the grammar, 8 are derived.
 - **Standing 2 is the strict reading, with the discharge condition.** The recovery meets each hypothesis of the root form from the row's own by definitions alone. The weaker standing the second review offered, "under a stated hypothesis, met through ⟨lemma⟩", is not taken. It would report which lemmas a proof uses, which reach already measures. It would also let amount reasoning pass as relational. So row 5 and `Flow.Balances.renewedBy` stay at "balance in their statements", and row 5's relational part is recorded in its basis.
 - **The juncture law** enters the leaf only if rule 9 holds: it must be a law of the grammar that more than this row uses. Otherwise `Branching.loss_passes_juncture` keeps its distance with its reason.
