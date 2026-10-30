@@ -269,6 +269,26 @@ The gate rows, "premise of the account" in U1 §4's table, become hypotheses on 
 
 **Order, if OU's owner takes it.** Lever 1's design, scratch and review come first: it moves the most, and lever 2 partly waits on it. Lever 2's audit, row by row, can run beside it on disjoint files. Lever 3 continues on U3's and GW's lines. The boundary record comes last. This adds no criterion to item 13 and none to the release gate above, which a derivation of balance does not hold: it is one way of meeting F1 and F2 for amounts and for evolution.
 
+## OU's decisions on U4 and on GW1–GW2 (30 October 2026)
+
+**U4 is taken into the plan** as the sharpening of item 13's F2 into three standings: derived, on the root under a stated hypothesis with a countermodel, or a premise proved not entailed by the dynamics. It adds no criterion to item 13 and changes nothing in the release gate. The order is as proposed:
+
+1. Lever 1's design, scratch and one independent review come first, since it moves the most.
+2. Lever 2's row-by-row audit of evolution's 18 rows may run beside it on disjoint files. Any Lean it claims names the evolution modules' owners.
+3. Lever 3 is U3's and GW's lines, with no new item.
+4. The boundary record comes last.
+
+**Shared definitions.** `Becoming.Flow` names no active owner, so by rule 3's fallback OU's owner decides on U4's row. A change to `Flow.Balances`, or to Continuity's or Identity's definitions, goes on that row before any Lean, and statements are kept. A grammar-wide law, such as lever 1 (a)'s restatement with «所闭» in GrammarLaws, rides the next planned near-full rebuild. That is the same rebuild that weakens «两端分则中有标» to transitivity for `arises_within` ("After OU3f", item 2), so one rebuild serves both. MV counts "on the root under a stated hypothesis" as its own standing only once the boundary record lands (F5). Until then the figures of §461 stand: 44, 16, 4 and 54.
+
+**One condition on lever 1's test.** U1 found that unit lines are not determined by counts: which unit goes where is a choice of matching. So a law "read on unit lines and not on counts" counts for the round trip only if it holds for every admissible pairing. Locality per closed region must be invariant under re-pairing. A law that needs one pairing is a discipline, and it is named as a premise (U1's test of content). The design states which of its laws are invariant in this sense, with the witness for each that is not.
+
+**GW1 and GW2: `Becoming.GrammarMap`'s owner says yes.** That owner is OU's owner, through OU4.
+- 332 of the package's 350 modules depend on GrammarMap, so adding the laws there would mean a near-full rebuild. The laws go instead in a core leaf that imports GrammarMap. Its row says why it is a leaf: laws of the map that nothing below uses. If a module below comes to need them, they move at a planned near-full rebuild.
+- Their laws join the record generation-and-degeneration-at-two-grains, which is OU4's record, so this is its owner's yes.
+- GW1's calibration by excluded middle stays a lemma of GW1, not a result, as GW's note says.
+- The item is offered to the session that studied them (Join generation to widening), which claims it on the board with a design already reviewed and rechecked (REVIEW-GW, RECHECK-GW).
+- GW1 and GW2 are the release gate's item 2.
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.
