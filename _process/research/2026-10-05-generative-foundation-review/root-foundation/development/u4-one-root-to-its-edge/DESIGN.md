@@ -2,7 +2,7 @@
 
 AI-written design for U4, "one root to its edge" ([proposal](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#one-root-to-its-edge-a-proposal-30-october-2026), [board row](../../../../../BECOMING-WORKBOARD.md)), lever 1: balance joined to the root.
 
-- **Inputs.** It reads U1's reviewed verdict (U1's design, §0, §2 and §7, in U1's workspace `development/u1-balance-under-units/`, not yet on main). It applies the proposal's round-trip test, with the condition OU's owner set on that test.
+- **Inputs.** It reads U1's reviewed verdict ([U1's design](../u1-balance-under-units/DESIGN.md), §0, §2 and §7). It applies the proposal's round-trip test, with the condition OU's owner set on that test.
 - **Review.** It was reviewed once, independently ([REVIEW-U4-L1.md](REVIEW-U4-L1.md)): sound with fixes, two findings blocking. Every finding is taken (§7).
 - **Lever 2.** [Lever 2's audit](LEVER-2-AUDIT.md), of the 18 evolution rows, sits beside this design.
 - **No package Lean is claimed.**
