@@ -11,6 +11,9 @@ fails:
   each hypothesis's definition names in its type or body, is a grammar constant (a «» name or a constant of a `Becoming.Grammar*` module), a
   constant of `Becoming.Prelude`, a constant outside `Becoming`, or, for a form and its
   countermodels, one of the form's own hypotheses.
+* **No amounts in a hypothesis.** `Init` holds the numbers, so the name test alone would admit a
+  hypothesis on amounts. No hypothesis's definition names `Nat` or its order and arithmetic
+  (`LE.le`, `LT.lt`, `HAdd.hAdd`, `HSub.hSub`, `HMul.hMul`) in its type or body.
 * **The countermodels' shape, as far as names show it.** Each countermodel's statement names
   every hypothesis of its form but one, and a different one for each.
 * **Reach.** Each form's proof does not reach its row; no countermodel's proof reaches its form;
@@ -96,6 +99,10 @@ partial def reaches (env : Environment) (start target : Name) : Bool := Id.run d
       let bad := ns.filter fun c => !grammarOrPrelude env c && !f.hypotheses.contains c
       out := out ++ s!"{item}: {ns}\n"
       unless bad.isEmpty do throwError "{item} names {bad}"
+    for h in f.hypotheses do
+      let ns ← named env h
+      let amounts := ns.filter fun c => [``Nat, ``LE.le, ``LT.lt, ``HAdd.hAdd, ``HSub.hSub, ``HMul.hMul].contains c
+      unless amounts.isEmpty do throwError "{h} names amounts: {amounts}"
     let mut dropped : List Name := []
     for cm in f.countermodels do
       let ns ← named env cm

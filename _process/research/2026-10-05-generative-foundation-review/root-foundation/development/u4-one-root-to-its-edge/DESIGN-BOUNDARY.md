@@ -48,7 +48,7 @@ Three findings shape the record.
    - 43 reach a «» law;
    - `Web.Whole.family_excess_ends` reaches only `kept_onward`, the closure at the successor. GrammarLaws' header names it among its laws without a «» name, and the table counts it as a law.
 
-   Many reach only closure's elementary laws, used as steps: `«所闭之传递»`, `«所闭之自反»`, `«缘在所闭»`, `«所闭之闭»` and `«所闭之单调»`. So "44 reach the grammar" says that a grammar law is among their reasons. It does not say the row is a grammar law at its model. Of the 32 with no balance in their statements, 8 are cases (§3).
+   Many reach only closure's elementary laws, used as steps: `«所闭之传递»`, `«所闭之自反»`, `«缘在所闭»`, `«所闭之闭»` and `«所闭之单调»`. **Reach says a grammar law is among a declaration's reasons; derived says the row is a case of one.** So the 44 and the derived count are two figures, not one. `Web.Whole.family_excess_ends`, for example, reaches the grammar through `kept_onward`, but its statement takes `Flow.Balances` and is not a case of a grammar law, so it stands at "balance, represented". Of the 32 with no balance in their statements, 8 are cases (§3).
 3. **Balance enters by the statement or by the proof, and the edge needs that split.** `Flow`'s balance enters 31 rows' statements. Three rows take it only in their proofs:
    - `act_courses_unselected` uses the balance `course_balances_iff` proves from `Feasible`, which bounds what a course takes by what stands and is given: connected;
    - `Flow.no_new_dependence`: witnessed at its model. Its statement does carry balance, at its one relatum and step, but written out as an equation of levels and flows rather than through `Flow.Balances`, so the anchor test does not see it. Its one use is to meet "coming to stand is given to" (§1.2). A scan of every statement, through its definitions, for `Flow`'s `taken` and `given` without a balance anchor finds only these three rows;
@@ -142,6 +142,7 @@ F5's `verify` requires at least one grammar term in a statement (master_laws.py,
   - for F and its countermodels, one of F's own hypothesis definitions.
 
   For Y, F and a countermodel, the item is its statement, read directly with no unfolding. For a hypothesis's definition, it is the type and the body, since the type alone names only `«际»`.
+- **No amounts in a hypothesis.** `Init` holds the numbers, so the name test alone would admit a hypothesis on amounts. No hypothesis definition may name `Nat` or its order and arithmetic (`LE.le`, `LT.lt`, `HAdd.hAdd`, `HSub.hSub`, `HMul.hMul`) in its type or body. List facts stay admissible through membership. Such a list fact is counting, and a count belongs in the conclusion.
 - **The countermodels' shape, as far as names show it.** Each countermodel's statement names every hypothesis definition of F but one, and each countermodel leaves out a different one.
 - **Reach.** For a derived row, the row's proof reaches Y and each named bridge. For standing 2, the certificate's bridge reaches F, F does not reach the row, and no countermodel reaches F.
 - **Shapes, checked by Lean.**
@@ -237,12 +238,13 @@ A law is a theorem whose own name is a «» name, or `kept_onward`, which Gramma
     - The certificates `no_new_dependence_certified` and `all_end_certified` are `@Row = @Bridge := rfl`.
   - **The check.** [U4BoundaryCheck.lean](boundary-scratch/Becoming/U4BoundaryCheck.lean), a periphery check that imports `Lean` and is run with Lean directly ([its output](boundary-scratch/check-run.log)), runs §1.5's tests on both forms:
     - the name test;
+    - no amounts in a hypothesis;
     - each countermodel names all hypotheses but a different one;
     - no form reaches its row;
     - no countermodel reaches its form;
     - each bridge reaches its form.
 
-    Three negative controls each fail as they should: a row checked as a form, a repeated countermodel, and a reach the check forbids.
+    Four negative controls each fail as they should: a row checked as a form, a repeated countermodel, a reach the check forbids, and the prelude's `total` checked as a hypothesis.
   - **Names.** Lever 2's scratch names `*_on_root` stated a wrong meaning under the strict reading. The new forms are named for what they state, and the leaf takes the core's vocabulary at its claim.
 - **Rows 13 and 14** stay at amounts, with rows 1–3, 7 and 8. A relational restatement of cancellation is not proposed, since cancellation is an equation of sums.
 - **`Branching.loss_passes_juncture`** moves to derived if the grammar gains a law of junctures. The leaf's design weighs whether it should: the law must be one the grammar lacks, not a restatement of the row.
