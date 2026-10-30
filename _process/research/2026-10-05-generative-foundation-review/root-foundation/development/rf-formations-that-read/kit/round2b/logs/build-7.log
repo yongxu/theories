@@ -1,0 +1,18 @@
+Becoming/HeldForReading.lean:553:19: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `Iff.intro` has 2 explicit field, but only 1 was provided
+Becoming/HeldForReading.lean:565:10: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `Iff.intro` has 2 explicit field, but only 1 was provided
+Becoming/HeldForReading.lean:571:21: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `Iff.intro` has 2 explicit field, but only 1 was provided
+Becoming/HeldForReading.lean:659:59: warning: unused variable `h`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/rf-landing/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree",
+  "modules": 65,
+  "ran": [
+    "Becoming.HeldForReading"
+  ],
+  "reused": 64,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.HeldForReading"
+}

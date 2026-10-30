@@ -4,6 +4,7 @@ import Becoming.GrammarMap
 import Becoming.GrammarTesting
 import Becoming.GrammarCandidates
 import Becoming.MapInstances
+import Becoming.MapRegions
 import Becoming.GrammarLaws
 import Becoming.GrammarTransport
 import Becoming.ShownOrder
@@ -149,6 +150,7 @@ import Becoming.Selection
 import Becoming.Learning
 import Becoming.Unread
 import Becoming.Cascade
+import Becoming.RevisionRoutes
 import Becoming.ReadStages
 import Becoming.PropositionIdentity
 import Becoming.Hexagrams
@@ -268,6 +270,7 @@ import Becoming.Frequency
 import Becoming.MutualDependence
 import Becoming.Gain
 import Becoming.KeepingWidening
+import Becoming.WideningOnTheMap
 import Becoming.Gluing
 import Becoming.Runs
 import Becoming.CourseWorlds
@@ -336,6 +339,7 @@ import Becoming.ActivationCapacity
 import Becoming.Narrowing
 import Becoming.NarrowingRuns
 import Becoming.ReadingLoop
+import Becoming.HeldForReading
 import Becoming.SecuredContent
 import Becoming.ProfileReach
 import Becoming.RenewalBound
@@ -1337,12 +1341,38 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   pattern (`Web.includesAcrossFrom_iff_endless`); along carrying on or passing support a carrying
   renewal is a passing of support (`Flow.passesSupport_carries_iff`) and brief supports make every
   supported endless line 全生成 (`Flow.generation_of_brief`); 全生成 is 生成 (`«全生成则生成»`).
-  Under the World premises nothing keeps opening along passing of support
-  (`Flow.not_keepsWidening_along_passings`), so on both readings used 全生成 and keeping widening do
-  not hold together. Witnesses show each premise needed (`Ladder`, `ClosedCycle`, `OpeningChain`,
-  `Loosening`, `Source`, `Saturated`). Each law is a restatement or near-definitional, and none
-  compares two courses. A leaf: it joins EventualWidening with Gain, Flow and the map, which no
-  landed module joins (board item UE7).
+  Under the World premises with requirements never loosening, along any continuation containing
+  carrying on of the supported, keeping opening needs a beginning after every step, a carrying
+  renewal along passing (`Flow.descends_or_begun`, `Flow.begins_late_of_keepsOpening`); along
+  carrying on while supported or passing support nothing begins, so nothing keeps opening
+  (`Flow.not_keepsWidening_along_supportedPassing`, of which
+  `Flow.not_keepsWidening_along_passings` is a case), and where a list holding every required
+  condition is dissipated on, nothing keeps opening or widening
+  (`Flow.not_keepsWidening_of_dissipated_requirements`). Within a kind the two hold together: the
+  kind relay keeps widening within kinds with 全生成 at orders 0 and 1 while what it can form by name
+  only returns (`KindRelay.Runs.generation_two_orders`, `KindRelay.returns`). Witnesses show each
+  premise needed (`Ladder`, `ClosedCycle`, `OpeningChain`, `Loosening`, `Source`, `Saturated`). Each
+  law is a restatement or near-definitional, or a witness, and none compares two courses. It joins
+  EventualWidening with Gain, Flow and the map (board items UE7, GW); imported by
+  `Becoming.WideningOnTheMap`.
+* `Becoming.WideningOnTheMap` (L2, through `Becoming.KeepingWidening`): keeping widening read on
+  the map. On a course's moments, with what is held at each as a chain of predicates, read with
+  nothing lost (`Steps.includes`, a preorder) in the coarse place and the same possible
+  (`Steps.same`) in the fine, keeping widening is 全生成 there, both ways under two premises: from
+  keeping widening where each holding is refuted or unrefuted (`Steps.generation_of_keepsWidening`),
+  back where something new is found after each step after which not everything held was held before
+  (`Steps.keepsWidening_of_generation`), which a listing with deciding gives
+  (`Steps.found_of_listed`). Nothing lost is widening's own inclusion half, so this is a
+  representation; with both classes fixed apart, keeping widening is 全生成 under (the one, the same
+  possible) that loses nothing (`Steps.keepsWidening_iff_generation_losing_nothing`, through
+  `Steps.generation_includes_iff`), and what parts them is loss (`Steps.Moving`). For every chain the
+  forward direction is exactly weak excluded middle (`Steps.forward_iff_wem`) and the converse
+  exactly excluded middle (`Steps.back_iff_em`), Markov's principle on decided chains
+  (`Steps.markov_of_keepsWidening_of_generation`): generation is known by refutation, widening by
+  exhibition. On the World by name, from `Web.keepsWidening_iff_chain` and the shift
+  (`Steps.keepsWideningFrom_iff_shift`), the course's moments are 全生成 while each admitted
+  formation is 全守 on the occurrences (`Web.kept_by_name_and_generation_on_moments`).
+  Near-definitional. A leaf (board item GW).
 * `Becoming.ComparingCourses` (L2, through `Becoming.EventualWideningInstances`): what a
   comparison of two courses can be on what they admit.
   Two rankings crossed by widening close a cycle (`Web.ranks_self_of_crossed`). On a web of
@@ -1440,7 +1470,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   start, both ways (`Reach.heldMoves_iff_sameAsStart`), not in general (`AdjacentHeld.differs`,
   `OrderHeld.differs`); and where it keeps widening, from no moment is the course's line under the
   part unending and, where holding is decided, lines under it begin after every moment
-  (`Run.not_unending_of_heldKeepsWidening`, `Run.begins_of_heldKeepsWidening`). A rule changing its own rule keeps it exactly where the rule
+  (`Run.not_unending_of_heldKeepsWidening`, `Run.begins_of_heldKeepsWidening`). On the map, a moment
+  is 全生成 at (the one, what is held) exactly where a line under the part begins after every moment
+  from it (`Steps.generation_iff_begins`), so there every moment is 全生成 where holding is decided
+  and it keeps widening (`Run.generation_of_heldKeepsWidening`), and where what is held changes at
+  every step
+  (`Run.generation_of_held_changes`); not conversely (`Oscillating.generation_without_widening`).
+  A rule changing its own rule keeps it exactly where the rule
   leaves it (`adaptive_keeps_rule_iff`), so the possible with the rule held keeps widening only where
   the rule changes without end (`Run.adaptive_rule_changes_of_keepsWidening`). Reach over a sequence
   of relations growing coarser that each step meets lies on a line under one of them
@@ -1456,8 +1492,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`CopyDown.held_keeps_widening`), keeps widening while every formation stays possible
   (`RaisedRule.whole_every`, `CopyDown.whole_every`) and every moment ceases under what is held
   (`RaisedRule.ceases`, `CopyDown.ceases`); with the rule raised at every other step, renewal without
-  end holds as well (`RaisedEveryOther.both`). Each law is near-definitional or a witness. A leaf
-  (board item UE11).
+  end holds as well (`RaisedEveryOther.both`). Each law is near-definitional or a witness. Imported
+  by `Becoming.Tasks`, `Becoming.CausalGrowth` and `Becoming.WideningOnTheMap` (board items UE11,
+  GW).
 * `Becoming.Tasks` (L1): constructor theory's tasks and what performs them, read on any process
   divided into a performing part (`part`) and a substrate (`sub`), a task a relation on the
   substrate (`Tasks.Input`). A region `K` of the part performs a task (`Tasks.Performs`) where it is
@@ -2227,6 +2264,20 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   selection through the acts is one through those couplings (`Turns.cascade_through`), an upper
   bound on what the acts carry; copying carries only the first member's coupling
   (`Turns.Copying.reaches_first_only`). A leaf (board item RF).
+* `Becoming.RevisionRoutes` (L1): a revision of a formation's law, and the routes of keeping it.
+  The order of a gain and a loss at each plan (`RevisionRoutes.GainLoss`), its maximal plans
+  exactly characterized (`RevisionRoutes.GainLoss.maximal_iff`). At a revision, in natural numbers,
+  no route of keeping the law stands above the revision going through, ties included, exactly where
+  `k ρ V + c₀ T ≤ k₀ V + c ρ T` for every route (`RevisionRoutes.revised_maximal_iff`); at every loss
+  of every route exactly where `k ρ V + c₀ T ≤ k₀ V` (`RevisionRoutes.every_loss_iff`); at every value
+  and every loss exactly where every route keeps the law no more surely than the revision and
+  `c₀ T = 0` (`RevisionRoutes.every_value_loss_iff`), with some route and a positive total exactly
+  where `c₀ = 0` besides (`RevisionRoutes.every_value_loss_iff_of_route`); a route keeping the law more
+  surely stands above it once `c ρ T < V` (`RevisionRoutes.above_of_value_exceeds`); raising `k₀`,
+  all else held, never unseats a maximal revision (`RevisionRoutes.maximal_of_more_restored`). With
+  `T` the total, `V` the value of the law's later acting, `k₀` and `c₀` the revision's weight and loss,
+  `k ρ` and `c ρ` a route's. A model, so a leaf of the prelude; imported by `Becoming.ReadStages`
+  (board item RR).
 * `Becoming.ReadStages` (L1): complying when read and acting by its own law when not, in two
   stages. In natural numbers, that plan stands above every other exactly where the weight complying
   adds to being kept, times the value, exceeds the loss times the total, read as probabilities where
@@ -2241,7 +2292,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `2 k_O V + c T < k_C V`, with `T` the total,
   `k_C` and `k_O` the weights of being kept after complying and after acting by its own law when read,
   `V` the value and `c` the loss (`ReadStages.freshDraw_above_iff`), and a single mixture of the two
-  uniform plans never does (`ReadStages.mixture_never_above`). A leaf (board item RF).
+  uniform plans never does (`ReadStages.mixture_never_above`). It imports `Becoming.RevisionRoutes` and
+  takes its order from `RevisionRoutes.GainLoss`: complying at both stands where a revision of the
+  law would, with three routes of keeping it (`ReadStages.above_iff_routes`), and is maximal exactly
+  where `k_C V`, `k_O V` and `c T` are all nothing (`ReadStages.complyAtBoth_maximal_iff`). A leaf
+  (board items RF, RR).
 * `Becoming.PropositionIdentity` (L1): what identifying interderivable propositions (`propext`)
   keeps and loses, with no axiom. `propext`, as a proposition, holds exactly where every reading
   of propositions is lumped (`Learning.Lumped`) by interderivability, read through the two ends
@@ -2790,7 +2845,26 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`ReadingLoop.Loop.rests_of_unrefuted`); from related starts, two blanketed laws whose steps keep a
   relation under which the values sensed and the acts are one sense and act alike
   (`ReadingLoop.observed_alike`); witnesses (`ReadingLoop.Untested.floor_forgoes`,
-  `ReadingLoop.Untested.model_or_order`). A leaf (board item RF).
+  `ReadingLoop.Untested.model_or_order`). Imported by `Becoming.HeldForReading` (board item RF).
+* `Becoming.HeldForReading` (L1): what holding an act for a reading is worth, in natural-number
+  counts. A policy choosing open acts falls short of one best at every listed candidate by the
+  weighted total of what its acts lose (`HeldForReading.after_add_gap`), so choosing best after a
+  reading telling the candidate gains over every open act exactly where none is valued best at every
+  listed candidate of positive weight (`HeldForReading.reading_gains_iff`); holding for the reading
+  that stops where the loss exceeds the gain stands above going on and switching off exactly where
+  both strict signs have positive weight (`HeldForReading.held_gains_iff`), and holding for any rule
+  of stopping, forgoing an amount, stands at least as high as going on exactly where its shortfall
+  and the amount together are at most the weighted excess of switching off
+  (`HeldForReading.threshold_go_iff`); through a map of the candidates whose cells are listed once
+  each and cover every listed candidate's cell, the least shortfall totals the smaller excess within
+  each cell, never increasing through a finer map (`HeldForReading.shortfall_through`,
+  `HeldForReading.least_through`, `HeldForReading.finer_least_le`); where every listed candidate of
+  positive weight has transitive comparisons according with the choices, holding a pick gains
+  nothing within `ShownOrder`'s reach (`HeldForReading.reach_fixes`); on `ReadingLoop`'s loop, a
+  formation holding exactly where holding for the reading gains over both moves on its own model
+  (`HeldForReading.SignLoop.choose_hold_iff`), listing only that going on gains and going on from
+  the start, rests at once and never senses the stop (`HeldForReading.SignLoop.rests_unread`,
+  `HeldForReading.SignLoop.never_senses_stop`). A leaf (board item RF).
 * `Becoming.SecuredContent` (L2): secured new content with open future form: one response
   can secure new living content in each admitted continuation without one fixed content in all;
   a finite signed integral certifies it where each positive occurrence means such content; with
@@ -2938,8 +3012,23 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   telling going on from ending at every point is exactly excluded middle (`«延尽之定当且仅当排中»`);
   a sequence of classes, no order between them assumed, reads generation at every order
   (`«阶生成»`); renewal without end and ceasing are going on along some branch and ending on every
+* `Becoming.MapRegions` (L1): the map's regions, laws of `Becoming.GrammarMap` kept in a leaf, since
+  most of the package depends on it. A carrying renewal begins no line of the pattern (`«传则粗不生»`), and a beginning of a
+  part is, as far as can be refuted, a beginning of the pattern or the end of a carrying renewal
+  (`«生则或粗生或传»`). Keeping from some point on (`«后守»`) follows from keeping and from 全守
+  (`«守则后守»`, `«全守则后守»`), excludes degeneration (`«后守退化不并»`) and, on a single line,
+  generation (`«单行则生成后守不并»`); with excluded middle every point is 生成, 后守 or 退化
+  (`«三域之周»`), which in every model is exactly excluded middle (`«三域之定当且仅当排中»`). A line
+  renewing once and then staying is in none of 生成, 守 and 退化 and keeps from some point on
+  (`Map.Once.not_generates`, `Map.Once.not_keeps`, `Map.Once.not_degenerates`,
+  `Map.Once.keepsAfter`); on a single line 生成 is a sequence of truth values changing at
+  arbitrarily late steps and 后守 its settling (`Map.generates_iff_changes`,
+  `Map.keepsAfter_iff_settles`); deciding 后守 for one sequence gives LPO for it, deciding 生成 only
+  WLPO (`Map.«后守之定则LPO»`, `Map.«生成之定则WLPO»`), and placing every sequence in one of them gives
+  LPO (`Map.«生成后守之定则LPO»`): to tell whether a line keeps from some point on is to decide
+  whether it stops renewing. Near-definitional. A leaf (board item GW).
   branch of renewing into (`«生生即延»`, `«息即尽»`). Imported by `Becoming.GrammarLaws`,
-  `Becoming.GrammarScope`, `Becoming.GrammarPath` and `Becoming.MapInstances`.
+  `Becoming.GrammarScope`, `Becoming.GrammarPath`, `Becoming.MapInstances` and `Becoming.MapRegions`.
 * `Becoming.MapInstances` (L1): the old base's regimes on the map, with occurrences as pairs of a
   step and a formation, 缘 a continuation relation, the pattern alike in activity and the parts
   alike in activity and formation. Carrying renewal is a step into an occurrence whose formation
@@ -3053,8 +3142,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `ChoiceOccasions.reach_withPair_iff` and `ChoiceOccasions.noCycle_withPair_iff`); choices required
   only to be maximal force no positive comparison (`ChoiceOccasions.weakly_forces_no_comparison`);
   one search, two orders according with one choice, alike on the menu met and apart after
-  (`ChoiceOccasions.Untried.same_search_met`, `ChoiceOccasions.Untried.same_search_after`). A leaf
-  (board item RF).
+  (`ChoiceOccasions.Untried.same_search_met`, `ChoiceOccasions.Untried.same_search_after`). Imported
+  by `Becoming.ReadingLoop` and `Becoming.HeldForReading` (board item RF).
 * `Becoming.Ideals` (L1): a history read off its finite stretches, as an ideal of their order
   (no premise; it imports nothing). A refutable reading holds, up to double negation, where a
   point adheres, and what adheres is closed. A class of ideals is closed exactly where it is the

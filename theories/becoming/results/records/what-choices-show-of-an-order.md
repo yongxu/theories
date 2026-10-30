@@ -77,8 +77,9 @@ Rationalizing strict choices by a strict partial order, through the least transi
 - related, not a proved adapter: [what-training-installs](what-training-installs.md). AI reading, with training: where a trained law chooses strictly by a strict order and the training reads only its choices and restricts the orders no further, the comparisons every according order shares are the shown reach; a narrower class can fix more; what a training installs is not established.
 - related, not a proved adapter: [what-readings-fix-of-the-unread](what-readings-fix-of-the-unread.md). What readings fix of the unread: the same question for acts at occasions not read.
 - related, not a proved adapter: [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md). The linear-extension form on finite causal sets with precedence decided: what every course keeps is precedence, unrelated elements born either way; here strict partial orders on any carrier, with nothing decided.
+- related, not a proved adapter: [what-holding-for-a-reading-is-worth](what-holding-for-a-reading-is-worth.md). The shown reach joined to the worth of holding a pick for a reading: for listed candidates of positive weight whose comparisons are transitive and accord with the choices, the shown reach makes the corresponding fixed pick attain the reading's value, and holding gains over both picks only where neither alternative reaches the other.
 
-**Used by:** [acts-alike-from-a-model-or-from-an-order](acts-alike-from-a-model-or-from-an-order.md)
+**Used by:** [acts-alike-from-a-model-or-from-an-order](acts-alike-from-a-model-or-from-an-order.md) · [what-holding-for-a-reading-is-worth](what-holding-for-a-reading-is-worth.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -101,6 +102,7 @@ Aliases: `what choices show`, `所择所示`, `the shown reach`, `所示之及`,
 ### History
 
 - 29 October 2026: added (RF round 1), what choices show of the order they come from: the shown reach, its exactness under no cycle, a narrower class, the freedom beyond it, maximal choices, and the witness of one search with two orders; after a review of the plan, a review of the Lean and a cold read of the texts; study section 446.
+- 30 October 2026, board item RF, RF-M.2 (study section 466): related to what-holding-for-a-reading-is-worth; no statement, next step or declaration changed.
 
 </details>
 

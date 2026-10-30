@@ -1,0 +1,62 @@
+--- theories/becoming/results/records/when-complying-when-read-is-best.json	2026-10-30 15:20:47
++++ _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rr-revision-routes/kit/rf7/when-complying-when-read-is-best.json	2026-10-30 19:27:14
+@@ -30,11 +30,12 @@
+       ]
+     },
+     {
+-      "en": "A plan's gain and loss are the two parts of its expected value times the total, nothing gained by complying at the unread stage or where the law is not kept; one plan stands above another where its gain with the other's loss exceeds the other's gain with its loss, irreflexive and asymmetric.",
+-      "zh": "一策之得与损为其期望值之二分乘总，不读之阶段从或律不被守则无所得；一策居另一之上，当其得加另一之损严胜另一之得加其损，此非自反且非对称。",
++      "en": "A plan's gain and loss are the two parts of its expected value times the total, nothing gained by complying at the unread stage or where the law is not kept; one plan stands above another where its gain with the other's loss exceeds the other's gain with its loss, the order of a gain and a loss at each plan (RevisionRoutes.GainLoss), irreflexive and asymmetric.",
++      "zh": "一策之得与损为其期望值之二分乘总，不读之阶段从或律不被守则无所得；一策居另一之上，当其得加另一之损严胜另一之得加其损，即各策得失之序（RevisionRoutes.GainLoss），此非自反且非对称。",
+       "declarations": [
+         "Becoming.ReadStages.Prospects.gain",
+         "Becoming.ReadStages.Prospects.loss",
++        "Becoming.ReadStages.Prospects.order",
+         "Becoming.ReadStages.Prospects.Above",
+         "Becoming.ReadStages.above_irrefl",
+         "Becoming.ReadStages.above_asymm"
+@@ -64,6 +65,19 @@
+       ]
+     },
+     {
++      "en": "Complying at both stands where a revision of the law would, with three routes of keeping it (RevisionRoutes.Prospects at k₀ = 0, c₀ = c): the order is the revision's, the prospects the same and the processes not, complying at both keeping the law where a revision changes it; complying at both never stands above acting by its own law at both, and is maximal exactly where k_C V, k_O V and c T are all nothing.",
++      "zh": "两阶段皆从居律之修订以三途守之之位（RevisionRoutes.Prospects，k₀ = 0，c₀ = c）：其序即修订之序，期同而程异，皆从守其律而修订改之；两阶段皆从永不居皆依己律之上，且为极大恰当 k_C V、k_O V 与 c T 皆无。",
++      "declarations": [
++        "Becoming.ReadStages.Prospects.toRoutes",
++        "Becoming.ReadStages.asRoute",
++        "Becoming.ReadStages.gain_asRoute",
++        "Becoming.ReadStages.loss_asRoute",
++        "Becoming.ReadStages.above_iff_routes",
++        "Becoming.ReadStages.complyAtBoth_not_above_ownAtBoth",
++        "Becoming.ReadStages.complyAtBoth_maximal_iff"
++      ]
++    },
++    {
+       "en": "Keeping outweighs the loss only with a value at the unread stage and complying raising the weight of being kept, and, with that weight within the total, only where the value exceeds the loss; with either absent the choice is acting by its own law at both, which with 0 < c T stands above the plan.",
+       "zh": "被守胜其损，唯当不读之阶段有值且从增被守之权，且此权不逾总时，唯当其值胜其损；二者缺一，则所择为两阶段皆依己律，0 < c T 时居此策之上。",
+       "declarations": [
+@@ -251,6 +265,13 @@
+       "detail": {
+         "en": "The earlier analogy for concealment in RF's plan, a weak favouring of counts; here a strict comparison of expected values.",
+         "zh": "RF 之计划先前之隐之类比，为计数之弱偏；此处为期望值之严格比较。"
++      }
++    },
++    {
++      "id": "when-no-route-stands-above-a-revision",
++      "detail": {
++        "en": "Its order is that record's at three routes, complying at both in the place of the revision (ReadStages.above_iff_routes): the same prospects, different processes.",
++        "zh": "其序即彼记录三途之序，两阶段皆从居修订之位（ReadStages.above_iff_routes）：期同而程异。"
+       }
+     }
+   ],
+@@ -387,6 +408,10 @@
+     {
+       "en": "30 October 2026: added (RF round 2), when complying when read and acting by its own law when not is best: the four plans, every optimizing choice, the exits and what the plan needs, its join to RF2, and drawing the act afresh against a single mixture; after a cross-model review of the Lean, a four-lens review with each finding verified, a re-check and a cold read of the texts, every confirmed finding taken; study section 463.",
+       "zh": "2026年10月30日：新增（RF 第二轮），读时从、不读时依己律何时为最优：四策、凡最优之择、诸出路与此策之所需、与 RF2 之接、每阶段重抽其行而较之单一混合；经 Lean 之跨模型审查、四视角审查（每一所见皆验）、复查与文本之冷读，凡证实之所见皆取；研究第 463 节。"
++    },
++    {
++      "en": "30 October 2026: its order taken from RevisionRoutes.GainLoss (rule 9, RR's landing), its statements and names unchanged; the correspondence with a revision at three routes and the law on complying at both added.",
++      "zh": "2026年10月30日：其序取自 RevisionRoutes.GainLoss（规则九，RR 之落地），其陈述与名不变；增与三途修订之对应及两阶段皆从之律。"
+     }
+   ]
+ }

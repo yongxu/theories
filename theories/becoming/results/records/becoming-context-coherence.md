@@ -39,7 +39,7 @@
 - Support by some context is not quantum control coherence, and no operational correspondence to the quantum switch comparison is shown.
 - **Counterexample:** Pooling 0→1 from one context and 1→2 from another runs 0→2, which no single context runs, so pooling is not exact there. A context changing with the step joins the two in one course, which ends at 2. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContextArrivalTraces.lean)
 
-**Standard boundaries:** A law of the formal model; its correspondence to actual systems is a separate obligation. · No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Premise-free (zero-substantive-axiom) grounding is a separate open target; completed results on the conditional alignment route keep their scope.
+**Standard boundaries:** A law of the formal model; its correspondence to actual systems is a separate obligation. · No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
 
 <a id="evidence--证据"></a>
 ## Evidence

@@ -128,7 +128,7 @@ Covering is the lower (Hoare) preorder of the families of course ranges, exactly
 - related, not a proved adapter: [tasks-and-what-performs-them](tasks-and-what-performs-them.md). Tasks and what performs them: lagged covering extended from a step to reach, so a delivery adds nothing to the whole possible, and on what a configuration reaches the lagged order is same-offset widening, which follows deliveries in neither direction.
 - related, not a proved adapter: [what-can-be-born-next](what-can-be-born-next.md). What can be born next against what continues: on causal-set growth, including what can be born next at the same offsets is having precedence included, and every course from a causal set keeps widening it.
 
-**Used by:** [tasks-and-what-performs-them](tasks-and-what-performs-them.md) · [what-can-be-born-next](what-can-be-born-next.md) · [where-the-possible-grows](where-the-possible-grows.md)
+**Used by:** [keeping-widening-is-generation-losing-nothing](keeping-widening-is-generation-losing-nothing.md) · [tasks-and-what-performs-them](tasks-and-what-performs-them.md) · [what-can-be-born-next](what-can-be-born-next.md) · [where-the-possible-grows](where-the-possible-grows.md)
 
 <a id="sources--来源"></a>
 ### Sources

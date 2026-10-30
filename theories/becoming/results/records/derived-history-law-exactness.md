@@ -35,7 +35,7 @@
 - **Counterexample:** Every word from every history, read through the summary marking only [false]: all continuations are carried, yet one step under false ends at false while the extended history's code is true. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SummaryFutures.lean)
 - **Counterexample:** Periphery (superseded module): merging histories with distinct continuation profiles produces a witnessed false continuation. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/DerivedHistoryLaw.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Premise-free (zero-substantive-axiom) grounding is a separate open target; completed results on the conditional alignment route keep their scope.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
 
 <a id="evidence--证据"></a>
 ## Evidence

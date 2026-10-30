@@ -39,7 +39,7 @@
 - Keeping every bundle possible leaves probability, reliability, burdens and past losses open, and joint realizability does not settle ethical quality.
 - **Counterexample:** retainedLeft is an admissible left-only history under the same law; joint possibility does not force actual joint realization. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RelationalGrounding.lean)
 
-**Standard boundaries:** Premise-free (zero-substantive-axiom) grounding is a separate open target; completed results on the conditional alignment route keep their scope.
+**Standard boundaries:** The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
 
 <a id="evidence--证据"></a>
 ## Evidence

@@ -5,7 +5,7 @@
 
 `what-the-dynamics-leave-open` · **recorded-checked** · theorem · F01 · [record](what-the-dynamics-leave-open.json) · [register](../../../../RESULTS.md)
 
-> No statement that reads only the dynamics excludes a rival or, given a standpoint and a formation, entails the continuation condition. A rival is exactly a point lacking significance; a premise excludes every rival exactly where no point lacks significance, the condition where each point is decided.
+> No satisfiable statement reading only the dynamics excludes a rival or, with a standpoint and a formation, entails the continuation condition. A rival is exactly a point lacking significance; a premise excludes every rival exactly where no point lacks it, the condition where each point is decided.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -71,7 +71,13 @@ Aliases: `Becoming.ReadsOnlyDynamics`, `Becoming.readsOnlyDynamics_of`, `Becomin
 ### History
 
 - 22 October 2026: added (SD1), for README note [^ethics], which had stated outside Lean that a rival is consistent with every law of the dynamics; study section 347.
+- 30 October 2026: the statement made exact, with no change to what is proved: a satisfiable statement, as the home section and ReadsOnlyDynamics.not_entails have it, since an unsatisfiable one entails the condition vacuously; the earlier bytes are in text_versions.
+
+<a id="earlier-text--早期文本"></a>
+### Earlier text
+
+- [what-the-dynamics-leave-open.json](../../../../_process/architecture/history/dc1cc614c5286568/what-the-dynamics-leave-open.json) (sha256 `dc1cc614c5286568…`): Exact record bytes before its statement was made exact (30 October 2026).
 
 </details>
 
-Documentary review UTC: `2026-10-22T10:39:27+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-30T17:41:46+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

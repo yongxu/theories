@@ -1,6 +1,6 @@
-# GW: generation and widening, joined or kept apart (study note; the Lean of GW3–GW5 in §15)
+# GW: generation and widening, joined or kept apart (study note; the Lean of GW3–GW5 in §15, of GW1, GW2 and GW6 in §18)
 
-AI-written, 29 October 2026, for board item GW, and revised the same day after the [independent review](REVIEW-GW.md). §13 says how each finding was taken. §15 records the Lean of GW3, GW3b, GW4 and GW5, built the same day; §§1–14 are the study as reviewed, and the marks **[planned Lean]** in them refer to the plan of §10, which §15 says how the Lean met.
+AI-written, 29 October 2026, for board item GW, and revised the same day after the [independent review](REVIEW-GW.md). §13 says how each finding was taken. §15 records the Lean of GW3, GW3b, GW4 and GW5, built the same day; §§1–14 are the study as reviewed, and the marks **[planned Lean]** in them refer to the plan of §10, which §15 says how the Lean met. §18 records the Lean of GW1, GW2 and GW6, built on 30 October, with GW6 added at the claim, and §19 its review.
 
 The [twenty-first review](../../BECOMING-TWENTY-FIRST-REVIEW.md) (§2.3 item 3, §2.5, §7) names this the most consequential open link. No law joins the map's generation (生成, `Becoming.GrammarMap`) to the ethics' widening (07 §2), and on the two readings studied, 全生成 and keeping widening do not hold together.
 
@@ -15,7 +15,7 @@ Purpose (board, "Purpose first"): the step argued where the theory bears on it, 
 
 ## 1. The verdict
 
-The link exists, and it runs one way. The negative results stay, and they become the formal content of a distinction the account already draws: generation (生成) is not 生生 (D65 item 4, 01 §6). 生生, as D1 reads it, includes changing what can form. The law of this note says that keeping what can form widening always rides on the map's renewals one grain up, and that those renewals, even generation at two orders, do not by themselves give it.
+The link exists. On readings of formations it runs one way; read on a course's moments, keeping widening is generation under the one that loses nothing, both ways under premises of deciding (item 7, §18). The negative results stay, and they become the formal content of a distinction the account already draws: generation (生成) is not 生生 (D65 item 4, 01 §6). 生生, as D1 reads it, includes changing what can form. The law of this note says that keeping what can form widening always rides on the map's renewals one grain up, and that those renewals, even generation at two orders, do not by themselves give it.
 
 1. **The law, one way** [Lean, §15].
    - **The World.** Along any reading of the World containing carrying on of the supported, keeping opening needs, up to double negation, a *beginning* after every step: a passing of support that the reading leaves out, into a formation that the reading continues from nothing supported (§3). Each beginning is a carrying renewal (传) along "carry on, or pass support". Where the reading is "within a kind", it is a carrying renewal of the whole at the grain of kinds, the map's order-1 event (§3.3). So keeping widening needs the map's events one grain up to recur. It does not need the map's regions: the law places no renewal ahead of every point of one line.
@@ -47,11 +47,15 @@ The link exists, and it runs one way. The negative results stay, and they become
    - **What the witness shows.** On those witnesses the map's generation goes on at two orders, and so do the grammar's 生生 at the kind grain and keeping widening along the lineage reading. All the while, what the part can form (D3: the formations whose requirements its levels meet) only returns, with period 2, and by name over its formations nothing keeps widening. With D5's exclusion of return ("not a return into copies of existing forms") as the premise, that is the treatise's "普通生成改变接下来的状态" without "生生还改变接下来能够形成哪些状态".
    - **What it illustrates.** D65 item 4 ("[生成] is not 生生"), 01 §6 ("That asks more than renewal of lines") and the first does-not-show item of the two-grains record. The witness is a model consistent with them, with generation at two orders, not one.
    - **Proposal.** Nothing in the reading of 生生 is redrawn. 01 §6, 02 §1 and D1 gain the law and the witness: wherever what can form keeps widening, the map's renewals one grain up carry it, and those renewals do not give it.
-6. **The map's three regions do not partition** [hand check; planned Lean, §9].
+6. **The map's three regions do not partition** [Lean, §18].
    - 生成 and 守 overlap where lines branch, by design (`Map.«生守相杂»`).
    - The line that renews once and then stays still lies in none of 生成, 守, 退化 at its start.
    - Keeping read as keeping from some point on (`«后守»`, the some-branch form of 全守) closes the gap. With excluded middle, every point lies in 生成, 后守 or 退化, and on a single line the three partition.
-   - Telling 生成 from 后守 on a single line is deciding whether the line renews again, which gives LPO.
+   - Telling 生成 from 后守 on a single line gives LPO. Deciding 后守 alone already gives LPO, and deciding 生成 gives only WLPO: to tell whether a line keeps from some point on is to decide whether it stops renewing (§18).
+7. **Read on a course's moments, both ways** [Lean, §18]. Take what is held at each moment as a chain of predicates, with nothing lost in the coarse place and the same possible in the fine. Then keeping widening is 全生成, both ways, under two premises of deciding.
+   - Nothing lost is keeping widening's own inclusion half, so that iff is a representation.
+   - With both classes fixed apart, keeping widening is generation under (the one, the same possible) that loses nothing, and what parts the two is exactly loss (`Steps.Moving`).
+   - The premises are exactly weak excluded middle forward and excluded middle back. Generation is known by refutation, widening by exhibition.
 
 ## 2. What the landed results say
 
@@ -344,6 +348,7 @@ Every module named is in the pure core (`check_becoming.py`'s `CORE` list includ
 | **GW3b** dissipation | same | `Flow.not_keepsOpening_of_dissipative`, `Flow.not_generation_of_dissipative`, through `Amounts.rests_unrefuted` and `DissipatesOn.takes_of_gives` | World; argued, and its constructive route checked by the re-check |
 | **GW4** witnesses | a leaf instance module importing `Becoming.KeepingWidening` (rule 9: an instance), registered in `check_becoming.py`'s `CORE` list and its module descriptions and imported by `Becoming.lean`; or in `Becoming.KeepingWidening` itself | `KindRelay.web`, `.flow`; `.balances`, `.acting`, `.dependent`, `.unloosened`, `.conserving`, `.gainless`, `.requiresWithin`; `.keeps_widening` (along `withinKind`), `.generation` (order 0, at every supported occurrence), `.generation_one_up` (order 1), `.renews_without_end` (`«生生»` at the kind class), `.not_keepsWidening_byName`, `.not_keepsWidening_supportedPassing`, `.not_keepsWidening_dormant` (the kind reading with dormant carrying on), `.returns` (period 2); `KindRelay.Fed` with `.dissipative`, `.balances`, `.gainless` and the same items 1–4 | witness |
 | **GW5** held | `Becoming.HeldPossible` (core) | `«全生成» Steps.next «一» E N ↔ …` (the equivalence); `Run.generation_of_heldKeepsWidening`; `RaisedRule.generation`, `RaisedEveryOther.generation`, `Oscillating.generation_without_widening` | core; a restatement on the map |
+| **GW6** both ways on the moments (added at the claim, 30 October; §18) | `Becoming.WideningOnTheMap`, a core leaf | `Steps.includes`, `Steps.same`, `Steps.KeepsWideningFrom`; the representation both ways under two premises; the split `Steps.generation_includes_iff`; `Moving`, `Growing`; the premises' calibrations; the World by name | core; near-definitional; a representation, and the join as the split by loss |
 
 `Becoming.HeldPossible` imports `Becoming.GrammarMap` and `Becoming.Change` transitively (checked), so GW5 needs no new import.
 
@@ -511,3 +516,71 @@ The same reviewer re-checked the fixes ([RECHECK-GW-LEAN.md](RECHECK-GW-LEAN.md)
 | 6 premises | §1 item 3 names the descent law's premises for the opening half and balance for the 全生成 half. |
 | 7 §3.3's identity | Marked argued in general. |
 | 8 the pending move | Recorded on GW's board row; the docstring states only the lemma; `inside` named in §16. |
+
+## 18. The Lean of GW1, GW2 and GW6
+
+Built on 30 October 2026 on the `gw-lean` branch from main at `6376f0da3`, the claim. `Becoming.GrammarMap`'s owner (OU's owner, through OU4) said yes to GW1 and GW2 at `16548a09c`, placed in a core leaf that imports `Becoming.GrammarMap` rather than in that module itself, since 332 of the package's 350 modules depend on it. GW6 is new at the claim. It answers the release gate's item 2, which asks for the map's generation and the ethics' widening joined both ways, or their split stated as a central result. GW1 and GW2 as designed (§§3.1, 9) close 02's Open item and do neither, and GW4's kind relay had already shown the two holding together on one reading. Two things revised the Lean after the build:
+- the review (§19);
+- OU's owner's two checks for GW6 (WHAT-REMAINS at `cd82afed6`): that the classes are fixed apart from widening, and that each premise of deciding says what its need means for the course.
+
+**GW1 and GW2, in `Becoming.MapRegions`** (a core leaf importing `Becoming.GrammarMap` only; L1). Everything in §10's rows is there:
+- the split of a beginning: `«传则粗不生»`, `«粗有前则生为传»`, `«生则或粗生或传»`;
+- `«后守»`, with `«守则后守»`, `«全守则后守»`, `«后守则延»`, `«后守退化不并»` and `«单行则生成后守不并»`;
+- `«三域之周»` and its calibration `«三域之定当且仅当排中»`, a lemma of GW1;
+- `Map.Once` (`Map.once` on `Map.Stage`) with `.not_generates`, `.not_keeps`, `.not_degenerates`, `.keepsAfter` and `.keeping`;
+- the single-line readings, after the review: 生成 at the first step is the sequence changing at arbitrarily late steps (`Map.generates_iff_changes`), and 后守 there is its being constant from some step on (`Map.keepsAfter_iff_settles`);
+- the calibration on a line, in its strongest form. Deciding 后守 for the sequence that turns until `p` first holds (`Map.Settles.sequence`) gives LPO for `p` (`Map.«后守之定则LPO»`), and deciding 生成 gives only WLPO (`Map.«生成之定则WLPO»`). §10's form follows (`Map.«生成后守之定则LPO»`). Its hypothesis is the Σ⁰₂ decision, for each sequence, whether it changes without end or settles. LPO is the part derived, and without countable choice the core does not give that decision back from LPO. In terms of the unfolding: to tell whether a line keeps from some point on is to decide whether it stops renewing.
+
+**GW6, in `Becoming.WideningOnTheMap`** (a core leaf importing `Becoming.KeepingWidening` and `Becoming.HeldPossible`; L2 through KeepingWidening). Read a course's moments along `Steps.next`, with what is held at each moment as a chain of predicates `Q`. The fine class is the same possible (`Steps.same`). In the coarse place stands nothing lost (`Steps.includes`), a preorder: a symmetric relation there could not tell loss from gain.
+- **OU's check (1): the classes and widening.** The fine class is fixed apart from widening. The coarse relation is not: it is keeping widening's own inclusion half, defined from `Q` and not through `Widens`. So `Steps.generation_iff_keepsWidening`, the iff at (nothing lost, the same possible), represents keeping widening on the map; it does not join two notions fixed apart. The join with both classes fixed apart, the one and the same possible, is the split:
+  - 全生成 at (nothing lost, the same possible) is 全生成 at (the one, the same possible) together with nothing lost, with no premise (`Steps.generation_includes_iff`);
+  - so, under both premises, keeping widening is generation under (the one, the same possible) that loses nothing (`Steps.keepsWidening_iff_generation_losing_nothing`);
+  - `Steps.Moving` has the generation and not the widening, and `Steps.Growing` has both.
+
+  That what separates them is exactly loss is the informative content. The release gate's item 2 is met in its second form, the split stated.
+- **The representation.**
+  - Where each holding is refuted or unrefuted, keeping widening gives 全生成 (`Steps.generation_of_keepsWidening`), through `Steps.change_located`, which locates the step together with its point.
+  - Where something new is found after each step after which not everything held was held before, 全生成 gives keeping widening (`Steps.keepsWidening_of_generation`). A listing of each moment's holding, with deciding, gives that premise (`Steps.found_of_listed`).
+  - With neither premise, `Steps.includes_not_back_of_generation`.
+- **OU's check (2): what each premise says about the course.** Generation is known by refutation: a line begins where no predecessor is alike. Widening is known by exhibition: something is held that was not.
+  - **Forward:** exactly weak excluded middle, for every chain (`Steps.forward_iff_wem`). In the coding `Steps.arriving`, each point arrives at one of two moments as a proposition decides, and the step that generation names tells whether the proposition is refuted. Locating where something new arrives needs each moment's holding to be refuted or not.
+  - **Back:** exactly excluded middle (`Steps.back_iff_em`). In `Steps.dawning`, each point is held from the next moment where a proposition holds. The course is 全生成 wherever the proposition is unrefuted, and keeps widening only where it holds. Exhibiting what a step adds, from the step's not being alike, needs what is unrefuted to be found. Even on decided chains it is Markov's principle, an unbounded search (`Steps.markov_of_keepsWidening_of_generation`).
+
+  These calibrate the logic, not an omniscience principle about a course's run, and each is stated with what it says about the course.
+- **On the World, by name.**
+  - `Web.keepsWidening_itself_iff` now comes from the landed `Web.keepsWidening_iff_chain`, through the shift `Steps.keepsWideningFrom_iff_shift`.
+  - `Web.generation_of_keepsWidening_byName` and `Web.keepsWidening_byName_iff_generation` hold under the premises on admission.
+  - `Web.kept_by_name_and_generation_on_moments`, a corollary, pairs it with `Web.kept_of_includes_by_name`. On the occurrences, each admitted formation is 全守, from nothing lost alone, and the course's moments are 全生成. The two halves sit on two carriers, so this is not the map's two grains of one carrier, and the earlier headline "keeps each formation, generates the whole" is dropped.
+
+What changes in the verdict (§1). The link is one way on the readings of formations (§§3–4) and on the held possible under the one (§5). Read on the moments it is both ways under the two premises, as a representation; as a join with classes fixed apart, it is the split by loss. At (the one, the same possible) the join is one way because the one does not count loss (`Steps.Moving`). The held class of §5 is a further fine class, and its converse fails on `Oscillating`.
+
+The core checker passed at landing, at receipt `20261030T152859.871907Z` (study §467); the two modules are new leaves, so no earlier statement changed. Figures at the build (`scratch_build.py`): `Becoming.MapRegions` has 39 theorems in 45 declarations and `Becoming.WideningOnTheMap` 43 theorems in 52; every axiom report is empty and there are no warnings. No earlier module's statement changed. Besides the two leaves, two files changed:
+- `Becoming.lean`: the imports, the two new bullets, and the bullets of KeepingWidening and HeldPossible brought up to GW3–GW5;
+- `check_becoming.py`: the core list and the scope.
+
+## 19. The review of the Lean, and how each finding was taken
+
+The review is [REVIEW-GW126-LEAN.md](REVIEW-GW126-LEAN.md) (Claude Opus 5.5, read-only, 30 October 2026, of the two modules as first built on `6376f0da3`). It found every theorem proving what its own statement says, with no hidden hypothesis and no high finding. It made six medium findings and fourteen low ones, and its scratch Lean is in its appendix. Every finding was taken, one of them in part.
+
+| Finding | Taken as |
+|---|---|
+| 1 `dec` stronger than needed | `wdec : ∀ n x, ¬ Q n x ∨ ¬¬ Q n x` throughout. `Steps.forward_iff_wem` uses hand arithmetic (`Steps.arriving`, `Steps.twice`), with an empty report. The Standing states the need. |
+| 2 LPO not strongest | `Map.«后守之定则LPO»` (pointwise, on 后守) and `Map.«生成之定则WLPO»`; §10's form is now a corollary. The docstring states the Σ⁰₂ decision, with LPO as the part derived. |
+| 3 the single-line readings | `Map.generates_iff_changes` and `Map.keepsAfter_iff_settles`, with `Map.step_reaches_of_le` and `Map.step_family`. |
+| 4 exactly loss needs the premises | `Steps.keepsWidening_iff_generation_losing_nothing`. The bullet, the record and the documents name the premises. |
+| 5 "keeps each, generates the whole" | Renamed `Web.kept_by_name_and_generation_on_moments`, with the reviewer's docstring, and recorded as a corollary in the record's World law. "Generates the whole" is dropped from the module, the record, 07 and D65's paragraph (now titled "on a course's moments"), and the board's history row says "two carriers". |
+| 6 `kept` | `Steps.includes`, `buqiong_includes_iff`, `includesFrom_iff`, `same_includes`, `includes_refl`, `includes_trans` and `Arriving.includes`. |
+| 7 twin of the landed chain law | `Steps.keepsWideningFrom_iff_shift`, from which `Web.keepsWidening_itself_iff` is derived through `Web.keepsWidening_iff_chain`. `keepsWidening_iff_from_zero` keeps its own proof: through the shift, the zero case needs `fun n => Q (0 + n)` read as `Q`, which takes function extensionality. |
+| 8 wording | "in none of". |
+| 9 wording | The leaf's reason is stated. |
+| 10 `located` | `Steps.change_located` returns `n < S + d`, `¬ Q n x` and `¬¬ Q (n + 1) x`. |
+| 11 name | `Steps.includes_not_back_of_generation`. |
+| 12 `found` | Worded as asked, and the listing clause says "with what is held decided". Added `Steps.back_iff_em`, and `Steps.markov_of_keepsWidening_of_generation` from the reviewer's `rv_markov_of_converse`. Not taken: restricting `wdec` and `found` to `N ≤ n`. A course read from `N` is the chain shifted by `N` (`Steps.keepsWideningFrom_iff_shift`), where the premises already start at `N`. |
+| 13 a preorder in the coarse place | Said so, with the reason, in the module, the record and 07. |
+| 14 the held class | The Standing's last sentence as suggested. |
+| 15 the instance claim | The clause is dropped from the module, the record and 07. |
+| 16 `Growing` at 0 | Now takes `(N : Nat)`. |
+| 17 duplicated lemmas | The docstring cites `Settling.OneWay.lpo_of_settles` and `Becoming.LPO`, and says the coding repeats Settling's first-hit search. The reach twins (`Map.step_reached_le`, `Steps.reached_le`, HeldPossible's local lemmas) are noted for the next rebuild of GrammarMap or Arising, on the board's history row. |
+| 18 generic names | `Steps.reaches_of_buqiong`, `Steps.generation_includes_iff`, `Steps.change_located` and `Steps.new_in_list_or_none`; the LPO coding moved to `Map.Settles` (`seen`, `turning`, `sequence`). |
+| 19 GrammarMap's stale sentence | Recorded on the history row for GrammarMap's next rebuild; GrammarMap is not changed. |
+| 20 后守's docstring | "From a point of that branch reached from `x`", in the module, 02 and the record. |
