@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "files": {
-    "README.md": "a098cfe49eec33767514d402a56cb7169ec2ec555115d60d7ac258cf531b83fa",
+    "README.md": "9ec6ad116e006840a940c54e8b9b7e9e3e98fc9e351276a5e3553854f7bc6ea2",
     "RESEARCH.md": "f75adb57c11bab500a8ade7d34827e36b6372438220465e229aff2b89ad56bd6",
     "RESULTS.md": "33a7396bbb716eaceec2f21bd63eeea81706e95f7ce07382b9cbfa3b70e03f5e",
-    "GOALS.md": "fc6b27e80c596a32b18f6d598f33c1feaa83b444f6ca09dc63ff376a56d04086",
+    "GOALS.md": "4ae2f22d0234e5ab5a8ff63c5a8a9ccac8d1ae713d9e6610e6d2638267b67f2c",
     "DEPENDENCIES.md": "db9f1e20de0648637cfd94a4f863400fb44c70e91bd3cfc292c74513d94e5f94",
     "_process/BRIEF.md": "386505a702fc12b2a938eaee1a39c11392629efe9204d845b50b114e6fbc7efa",
     "theories/becoming/README.md": "e996dd3d2edff265cb294f173690f66c90dd2ab08aef02da0f5dc1e4ee8302e2",
@@ -253,7 +253,7 @@
     "theories/becoming/results/ARGUMENTS-A-L.md": "9104da86efbffbbd24287ad57f93c5e41972578788e0167d69c627bea8b38759",
     "theories/becoming/results/ARGUMENTS-M-Z.md": "c173e1b2bb39737f52c5fd357019bffc0d7737d688c8e596b2d11ffeaa61170e",
     "theories/becoming/results/data/lean-index.json": "70734e5194ddcf903559d53974d6abed69de96afd8b84092581e882a33f2c31c",
-    "theories/becoming/results/data/source-index.json": "9529e5826def9014b6934c27446496fe85aefe42e0fedd538d2721105a957d0c",
+    "theories/becoming/results/data/source-index.json": "a1092706e7c0c8a0a0d0b2aefca1dbae417b633debcad138164fa110de810ebc",
     "theories/becoming/results/LEAN-INDEX.md": "5913c799d4960e8796d5c51f4ace96b98a6b24d5a6508c0b3324b2d8064c9229",
     "theories/becoming/results/LEAN-DECLARATIONS.md": "62716daae908e80c435309bf66b097955c7b42e1a95a4932e8058fef73c26f7d",
     "theories/becoming/results/lean-declarations/becoming-core.md": "5e0ccb89f9da054bd44f9fc90415b028d6cdaf387260242d92c140329ab4bd77",

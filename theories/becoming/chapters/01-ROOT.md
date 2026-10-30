@@ -579,7 +579,8 @@ Each is stated where a law depends on it ([08](08-METHOD.md)).
 |---|---|
 | Equality on the carrier | identity as a class; the two-block class of a single condition; fission; the flame (§§2–5) |
 | Discrete steps, one shared index | every World and process law; the index derived where exchanges share relata (§9.6) |
-| Natural-number amounts | least loss, unrecurring falls, loop doubling; in any amounts rest needs the census's total to stop falling ([02](02-MAP.md#r-rest-theorem-in-any-amounts)) |
+| Natural-number amounts | least loss, unrecurring falls, loop doubling, joint excess ending a gated renewal within `n` steps from below `n + m` ([05](05-COLLECTIVES.md#r-own-count-misses-joint-excess)); in any amounts rest needs the census's total to stop falling ([02](02-MAP.md#r-rest-theorem-in-any-amounts)) |
+| Finite presence at each step | what is taken and given across a step is totalled over the finitely many formations a flow lists as present (`Flow.present`) |
 | Prop-valued activity | counting and naming a step need it decided (§8.2) |
 | One kind of relatum, two roles | formations and conditions (§8.1) |
 | Requirements as thresholds | support is meeting every requirement; off an exchange, necessary response (§8.3) |
