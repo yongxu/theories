@@ -69,7 +69,7 @@ Contains 18 textual `#print axioms` commands; their results belong to the origin
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean`
 
-Imports: `Becoming.Grammar`, `Becoming.GrammarReadings`, `Becoming.GrammarMap`, `Becoming.GrammarTesting`, `Becoming.GrammarCandidates`, `Becoming.MapInstances`, `Becoming.GrammarLaws`, `Becoming.GrammarTransport`, `Becoming.ShownOrder`, `Becoming.World`, `Becoming.Witnesses`, `Becoming.Frame`, `Becoming.Laws`, `Becoming.Labelled`, `Becoming.Inquiry`, `Becoming.Derivation`, `Becoming.ClassifiedBeliefProcesses`, `Becoming.MoveOutcomeProcesses`, `Becoming.Recurrence`, `Becoming.Diagonal`, `Becoming.Context`, `Becoming.ContextArrivalTraces`, `Becoming.Quantum`, `Becoming.Renewal`, `Becoming.Dependence`, `Becoming.Restoration`, `Becoming.Horizon`, `Becoming.Joint`, `Becoming.Experiment`, `Becoming.Mechanism`, `Becoming.Unfolding`, `Becoming.LawAlongRun`, `Becoming.Irreversibility`, `Becoming.Histories`, `Becoming.Branching`, `Becoming.Listing`, `Becoming.Stuttering`, `Becoming.Reordering`, `Becoming.IdleRemoval`, `Becoming.OrderNormal`, `Becoming.OneStep`, `Becoming.Weighted`, `Becoming.Transmission`, `Becoming.Succession`, `Becoming.Attraction`, `Becoming.Substitution`, `Becoming.Arising`, `Becoming.Flow`, `Becoming.Stock`, `Becoming.Change`, `Becoming.Population`, `Becoming.Identity`, `Becoming.Persistence`, `Becoming.ContinuedClasses`, `Becoming.WorldRepresentation`, `Becoming.Wholes`, `Becoming.Dissipation`, `Becoming.Locality`, `Becoming.Seeking`, `Becoming.Roles`, `Becoming.LabelledRoles`, `Becoming.Reserve`, `Becoming.Evolution`, `Becoming.Capture`, `Becoming.SelectionTerm`, `Becoming.Reproduction`, `Becoming.SelectionLevels`, `Becoming.GroupEnding`, `Becoming.Founding`, `Becoming.Drift`, `Becoming.Space`, `Becoming.Premises`, `Becoming.Sampling`, `Becoming.Tower`, `Becoming.Openness`, `Becoming.Decidedness`, `Becoming.Refinement`, `Becoming.CensusTable`, `Becoming.Counting`, `Becoming.Standing`, `Becoming.Resolution`, `Becoming.Amounts`, `Becoming.LeastLoss`, `Becoming.WholeAmounts`, `Becoming.InAmounts`, `Becoming.Entropy`, `Becoming.SelectionPace`, `Becoming.Units`, `Becoming.Imbalance`, `Becoming.Continuity`, `Becoming.Continuation`, `Becoming.RenewalFlow`, `Becoming.Admission`, `Becoming.Exclusion`, `Becoming.Exhaustion`, `Becoming.Regions`, `Becoming.EventualWidening`, `Becoming.EventualWideningInstances`, `Becoming.ComparingCourses`, `Becoming.ReachableRanges`, `Becoming.HeldPossible`, `Becoming.Tasks`, `Becoming.CausalGrowth`, `Becoming.Presence`, `Becoming.ReorderingGrowth`, `Becoming.FreeEnergyGuarantees`, `Becoming.Blanket`, `Becoming.LumpedSeeking`, `Becoming.FreeEnergyCounting`, `Becoming.ModelStatements`, `Becoming.Growth`, `Becoming.Retaining`, `Becoming.OwnWidening`, `Becoming.Clearing`, `Becoming.Extension`, `Becoming.Metaethics`, `Becoming.Lifting`, `Becoming.Ranking`, `Becoming.ActiveReading`, `Becoming.LossMatching`, `Becoming.StrictTransport`, `Becoming.MatchedCourses`, `Becoming.Correspondence`, `Becoming.Descent`, `Becoming.Standpoints`, `Becoming.Significance`, `Becoming.ValuationFrames`, `Becoming.RelativePosition`, `Becoming.Interdependence`, `Becoming.Feeding`, `Becoming.Feedback`, `Becoming.BoundedSignificance`, `Becoming.Cuts`, `Becoming.EdgeClosure`, `Becoming.SeedReach`, `Becoming.ScopedReach`, `Becoming.Boundaries`, `Becoming.Weightings`, `Becoming.Relevance`, `Becoming.Testing`, `Becoming.Runaway`, `Becoming.Response`, `Becoming.TimedResponse`, `Becoming.Latency`, `Becoming.Centers`, `Becoming.Counterfactual`, `Becoming.Regrouping`, `Becoming.Selection`, `Becoming.Learning`, `Becoming.Unread`, `Becoming.Cascade`, `Becoming.ReadStages`, `Becoming.PropositionIdentity`, `Becoming.Hexagrams`, `Becoming.HexagramPlaces`, `Becoming.HexagramLaws`, `Becoming.HexagramSites`, `Becoming.HexagramSequences`, `Becoming.Withholding`, `Becoming.LoopReturn`, `Becoming.Pace`, `Becoming.RuleCapture`, `Becoming.ClosedCapture`, `Becoming.RuleShaping`, `Becoming.ChoiceCountCapture`, `Becoming.DrawnShaping`, `Becoming.ReadInTime`, `Becoming.PatternPassing`, `Becoming.JointKeeping`, `Becoming.Undecided`, `Becoming.Junctures`, `Becoming.Commuting`, `Becoming.HexagramCommuting`, `Becoming.Tolerance`, `Becoming.Revision`, `Becoming.Contacts`, `Becoming.RegroupingSelection`, `Becoming.ReferencePlan`, `Becoming.ContinuingRevision`, `Becoming.Description`, `Becoming.Identification`, `Becoming.Learnable`, `Becoming.Assurance`, `Becoming.AssurancePlans`, `Becoming.Integers`, `Becoming.Segmentation`, `Becoming.Readout`, `Becoming.Dephasing`, `Becoming.ProjectedLaws`, `Becoming.JointPhase`, `Becoming.SummaryFutures`, `Becoming.Gated`, `Becoming.Viability`, `Becoming.Keeping`, `Becoming.ReflexivePrediction`, `Becoming.Prelude`, `Becoming.Ideals`, `Becoming.ContingentPlans`, `Becoming.Actuation`, `Becoming.TreeSearch`, `Becoming.Dispatch`, `Becoming.FaultEnvelopes`, `Becoming.Transactions`, `Becoming.Reconfiguration`, `Becoming.PooledEnvelopes`, `Becoming.WitnessRefinement`, `Becoming.WitnessRefinementRuns`, `Becoming.ChanceFloors`, `Becoming.IntegerOrder`, `Becoming.Acceptance`, `Becoming.GuardHorizon`, `Becoming.OpenedCorrection`, `Becoming.Countdown`, `Becoming.Lasting`, `Becoming.Copying`, `Becoming.Retrodiction`, `Becoming.CrossSituational`, `Becoming.Likeness`, `Becoming.Distinguishing`, `Becoming.JointPlans`, `Becoming.Composition`, `Becoming.Joining`, `Becoming.Granularity`, `Becoming.HistoryLanguages`, `Becoming.HistoryIdeals`, `Becoming.HistoryIdealsTraces`, `Becoming.Verification`, `Becoming.Coverage`, `Becoming.Presentations`, `Becoming.Carriers`, `Becoming.BranchingCorrespondence`, `Becoming.JointCorrespondence`, `Becoming.ListFootprints`, `Becoming.Fragments`, `Becoming.LocalUnits`, `Becoming.JoiningContexts`, `Becoming.JoiningCodes`, `Becoming.JoiningRoles`, `Becoming.Postponement`, `Becoming.Novelty`, `Becoming.Reading`, `Becoming.PlaceTransitionNets`, `Becoming.SharedCodes`, `Becoming.ExchangePremises`, `Becoming.OverExchange`, `Becoming.Readings`, `Becoming.MoveFormation`, `Becoming.Sensitivity`, `Becoming.Tail`, `Becoming.Courses`, `Becoming.Parting`, `Becoming.Onward`, `Becoming.Typicality`, `Becoming.ConditionalWeights`, `Becoming.Situations`, `Becoming.Propagation`, `Becoming.Regulation`, `Becoming.ReadingSchedule`, `Becoming.RegimeMargin`, `Becoming.ListingRefutations`, `Becoming.Loops`, `Becoming.Remainder`, `Becoming.Routes`, `Becoming.Closing`, `Becoming.Thresholds`, `Becoming.Observation`, `Becoming.Frequency`, `Becoming.MutualDependence`, `Becoming.Gain`, `Becoming.KeepingWidening`, `Becoming.Gluing`, `Becoming.Runs`, `Becoming.CourseWorlds`, `Becoming.LearnableRuns`, `Becoming.PartialReadout`, `Becoming.CodeAcquisition`, `Becoming.RouteFormation`, `Becoming.ResponseLearning`, `Becoming.LearnedGrouping`, `Becoming.ParityReadings`, `Becoming.FinerTraces`, `Becoming.HistorySums`, `Becoming.FormedLoops`, `Becoming.AttractionRuns`, `Becoming.ContactCourses`, `Becoming.ContextualRuns`, `Becoming.ContinuingRuns`, `Becoming.CopyCourses`, `Becoming.CounterfactualRuns`, `Becoming.CouplingTraces`, `Becoming.CourseRoles`, `Becoming.HorizonWebs`, `Becoming.IdentificationRuns`, `Becoming.LastingRuns`, `Becoming.LearningRuns`, `Becoming.ListedWebs`, `Becoming.ReferencePlanTraces`, `Becoming.RouteTraces`, `Becoming.SeekingRuns`, `Becoming.SelectionRuns`, `Becoming.SensitivityWebs`, `Becoming.SituationTraces`, `Becoming.StrengthFlows`, `Becoming.TypicalRuns`, `Becoming.WeightedTraces`, `Becoming.LevelCoupling`, `Becoming.Interleavings`, `Becoming.CensusCounts`, `Becoming.CensusBinding`, `Becoming.Unrolling`, `Becoming.Labels`, `Becoming.Enough`, `Becoming.Settling`, `Becoming.LastChange`, `Becoming.LimitVerification`, `Becoming.SelectionGap`, `Becoming.SelectionReach`, `Becoming.DrawnBeyond`, `Becoming.JointDraw`, `Becoming.Optimum`, `Becoming.SetPointOptimum`, `Becoming.SelectionPool`, `Becoming.PoolResponse`, `Becoming.Training`, `Becoming.PoolCourse`, `Becoming.Rejoining`, `Becoming.Lexical`, `Becoming.Frontier`, `Becoming.FrontierFrames`, `Becoming.FrontierWorlds`, `Becoming.Direction`, `Becoming.ScoreRepresentation`, `Becoming.Alternatives`, `Becoming.Bundles`, `Becoming.ActivationCapacity`, `Becoming.Narrowing`, `Becoming.NarrowingRuns`, `Becoming.ReadingLoop`, `Becoming.HeldForReading`, `Becoming.SecuredContent`, `Becoming.ProfileReach`, `Becoming.RenewalBound`, `Becoming.Handoff`, `Becoming.RuleHandoff`, `Becoming.GrammarCourse`, `Becoming.GrammarRegularity`, `Becoming.ProcessRepresentation`, `Becoming.GrammarScope`, `Becoming.GrammarCases`, `Becoming.GrammarPath`, `Becoming.SignificanceStatements`
+Imports: `Becoming.Grammar`, `Becoming.GrammarReadings`, `Becoming.GrammarMap`, `Becoming.GrammarTesting`, `Becoming.GrammarCandidates`, `Becoming.MapInstances`, `Becoming.MapRegions`, `Becoming.GrammarLaws`, `Becoming.GrammarTransport`, `Becoming.ShownOrder`, `Becoming.World`, `Becoming.Witnesses`, `Becoming.Frame`, `Becoming.Laws`, `Becoming.Labelled`, `Becoming.Inquiry`, `Becoming.Derivation`, `Becoming.ClassifiedBeliefProcesses`, `Becoming.MoveOutcomeProcesses`, `Becoming.Recurrence`, `Becoming.Diagonal`, `Becoming.Context`, `Becoming.ContextArrivalTraces`, `Becoming.Quantum`, `Becoming.Renewal`, `Becoming.Dependence`, `Becoming.Restoration`, `Becoming.Horizon`, `Becoming.Joint`, `Becoming.Experiment`, `Becoming.Mechanism`, `Becoming.Unfolding`, `Becoming.LawAlongRun`, `Becoming.Irreversibility`, `Becoming.Histories`, `Becoming.Branching`, `Becoming.Listing`, `Becoming.Stuttering`, `Becoming.Reordering`, `Becoming.IdleRemoval`, `Becoming.OrderNormal`, `Becoming.OneStep`, `Becoming.Weighted`, `Becoming.Transmission`, `Becoming.Succession`, `Becoming.Attraction`, `Becoming.Substitution`, `Becoming.Arising`, `Becoming.Flow`, `Becoming.Stock`, `Becoming.Change`, `Becoming.Population`, `Becoming.Identity`, `Becoming.Persistence`, `Becoming.ContinuedClasses`, `Becoming.WorldRepresentation`, `Becoming.Wholes`, `Becoming.Dissipation`, `Becoming.Locality`, `Becoming.Seeking`, `Becoming.Roles`, `Becoming.LabelledRoles`, `Becoming.Reserve`, `Becoming.Evolution`, `Becoming.Capture`, `Becoming.SelectionTerm`, `Becoming.Reproduction`, `Becoming.SelectionLevels`, `Becoming.GroupEnding`, `Becoming.Founding`, `Becoming.Drift`, `Becoming.Space`, `Becoming.Premises`, `Becoming.Sampling`, `Becoming.Tower`, `Becoming.Openness`, `Becoming.Decidedness`, `Becoming.Refinement`, `Becoming.CensusTable`, `Becoming.Counting`, `Becoming.Standing`, `Becoming.Resolution`, `Becoming.Amounts`, `Becoming.LeastLoss`, `Becoming.WholeAmounts`, `Becoming.InAmounts`, `Becoming.Entropy`, `Becoming.SelectionPace`, `Becoming.Units`, `Becoming.Imbalance`, `Becoming.Continuity`, `Becoming.Continuation`, `Becoming.RenewalFlow`, `Becoming.Admission`, `Becoming.Exclusion`, `Becoming.Exhaustion`, `Becoming.Regions`, `Becoming.EventualWidening`, `Becoming.EventualWideningInstances`, `Becoming.ComparingCourses`, `Becoming.ReachableRanges`, `Becoming.HeldPossible`, `Becoming.Tasks`, `Becoming.CausalGrowth`, `Becoming.Presence`, `Becoming.ReorderingGrowth`, `Becoming.FreeEnergyGuarantees`, `Becoming.Blanket`, `Becoming.LumpedSeeking`, `Becoming.FreeEnergyCounting`, `Becoming.ModelStatements`, `Becoming.Growth`, `Becoming.Retaining`, `Becoming.OwnWidening`, `Becoming.Clearing`, `Becoming.Extension`, `Becoming.Metaethics`, `Becoming.Lifting`, `Becoming.Ranking`, `Becoming.ActiveReading`, `Becoming.LossMatching`, `Becoming.StrictTransport`, `Becoming.MatchedCourses`, `Becoming.Correspondence`, `Becoming.Descent`, `Becoming.Standpoints`, `Becoming.Significance`, `Becoming.ValuationFrames`, `Becoming.RelativePosition`, `Becoming.Interdependence`, `Becoming.Feeding`, `Becoming.Feedback`, `Becoming.BoundedSignificance`, `Becoming.Cuts`, `Becoming.EdgeClosure`, `Becoming.SeedReach`, `Becoming.ScopedReach`, `Becoming.Boundaries`, `Becoming.Weightings`, `Becoming.Relevance`, `Becoming.Testing`, `Becoming.Runaway`, `Becoming.Response`, `Becoming.TimedResponse`, `Becoming.Latency`, `Becoming.Centers`, `Becoming.Counterfactual`, `Becoming.Regrouping`, `Becoming.Selection`, `Becoming.Learning`, `Becoming.Unread`, `Becoming.Cascade`, `Becoming.RevisionRoutes`, `Becoming.ReadStages`, `Becoming.PropositionIdentity`, `Becoming.Hexagrams`, `Becoming.HexagramPlaces`, `Becoming.HexagramLaws`, `Becoming.HexagramSites`, `Becoming.HexagramSequences`, `Becoming.Withholding`, `Becoming.LoopReturn`, `Becoming.Pace`, `Becoming.RuleCapture`, `Becoming.ClosedCapture`, `Becoming.RuleShaping`, `Becoming.ChoiceCountCapture`, `Becoming.DrawnShaping`, `Becoming.ReadInTime`, `Becoming.PatternPassing`, `Becoming.JointKeeping`, `Becoming.Undecided`, `Becoming.Junctures`, `Becoming.Commuting`, `Becoming.WeightedCommuting`, `Becoming.HexagramCommuting`, `Becoming.Tolerance`, `Becoming.Revision`, `Becoming.Contacts`, `Becoming.RegroupingSelection`, `Becoming.ReferencePlan`, `Becoming.ContinuingRevision`, `Becoming.Description`, `Becoming.Identification`, `Becoming.Learnable`, `Becoming.Assurance`, `Becoming.AssurancePlans`, `Becoming.Integers`, `Becoming.Segmentation`, `Becoming.Readout`, `Becoming.Dephasing`, `Becoming.ProjectedLaws`, `Becoming.JointPhase`, `Becoming.SummaryFutures`, `Becoming.Gated`, `Becoming.Viability`, `Becoming.Keeping`, `Becoming.ReflexivePrediction`, `Becoming.Prelude`, `Becoming.Ideals`, `Becoming.ContingentPlans`, `Becoming.Actuation`, `Becoming.TreeSearch`, `Becoming.Dispatch`, `Becoming.FaultEnvelopes`, `Becoming.Transactions`, `Becoming.Reconfiguration`, `Becoming.PooledEnvelopes`, `Becoming.WitnessRefinement`, `Becoming.WitnessRefinementRuns`, `Becoming.ChanceFloors`, `Becoming.IntegerOrder`, `Becoming.Acceptance`, `Becoming.GuardHorizon`, `Becoming.OpenedCorrection`, `Becoming.Countdown`, `Becoming.Lasting`, `Becoming.Copying`, `Becoming.Retrodiction`, `Becoming.CrossSituational`, `Becoming.Likeness`, `Becoming.Distinguishing`, `Becoming.JointPlans`, `Becoming.Composition`, `Becoming.Joining`, `Becoming.Granularity`, `Becoming.HistoryLanguages`, `Becoming.HistoryIdeals`, `Becoming.HistoryIdealsTraces`, `Becoming.Verification`, `Becoming.Coverage`, `Becoming.Presentations`, `Becoming.Carriers`, `Becoming.BranchingCorrespondence`, `Becoming.JointCorrespondence`, `Becoming.ListFootprints`, `Becoming.Fragments`, `Becoming.LocalUnits`, `Becoming.JoiningContexts`, `Becoming.JoiningCodes`, `Becoming.JoiningRoles`, `Becoming.Postponement`, `Becoming.Novelty`, `Becoming.Reading`, `Becoming.PlaceTransitionNets`, `Becoming.SharedCodes`, `Becoming.ExchangePremises`, `Becoming.OverExchange`, `Becoming.Readings`, `Becoming.MoveFormation`, `Becoming.Sensitivity`, `Becoming.Tail`, `Becoming.Courses`, `Becoming.Parting`, `Becoming.Onward`, `Becoming.Typicality`, `Becoming.ConditionalWeights`, `Becoming.Situations`, `Becoming.Propagation`, `Becoming.Regulation`, `Becoming.ReadingSchedule`, `Becoming.RegimeMargin`, `Becoming.ListingRefutations`, `Becoming.Loops`, `Becoming.Remainder`, `Becoming.Routes`, `Becoming.Closing`, `Becoming.Thresholds`, `Becoming.Observation`, `Becoming.Frequency`, `Becoming.MutualDependence`, `Becoming.Gain`, `Becoming.KeepingWidening`, `Becoming.WideningOnTheMap`, `Becoming.Gluing`, `Becoming.Runs`, `Becoming.CourseWorlds`, `Becoming.LearnableRuns`, `Becoming.PartialReadout`, `Becoming.CodeAcquisition`, `Becoming.RouteFormation`, `Becoming.ResponseLearning`, `Becoming.LearnedGrouping`, `Becoming.ParityReadings`, `Becoming.FinerTraces`, `Becoming.HistorySums`, `Becoming.FormedLoops`, `Becoming.AttractionRuns`, `Becoming.ContactCourses`, `Becoming.ContextualRuns`, `Becoming.ContinuingRuns`, `Becoming.CopyCourses`, `Becoming.CounterfactualRuns`, `Becoming.CouplingTraces`, `Becoming.CourseRoles`, `Becoming.HorizonWebs`, `Becoming.IdentificationRuns`, `Becoming.LastingRuns`, `Becoming.LearningRuns`, `Becoming.ListedWebs`, `Becoming.ReferencePlanTraces`, `Becoming.RouteTraces`, `Becoming.SeekingRuns`, `Becoming.SelectionRuns`, `Becoming.SensitivityWebs`, `Becoming.SituationTraces`, `Becoming.StrengthFlows`, `Becoming.TypicalRuns`, `Becoming.WeightedTraces`, `Becoming.LevelCoupling`, `Becoming.Interleavings`, `Becoming.CensusCounts`, `Becoming.CensusBinding`, `Becoming.Unrolling`, `Becoming.Labels`, `Becoming.Enough`, `Becoming.Settling`, `Becoming.LastChange`, `Becoming.LimitVerification`, `Becoming.SelectionGap`, `Becoming.SelectionReach`, `Becoming.DrawnBeyond`, `Becoming.JointDraw`, `Becoming.Optimum`, `Becoming.OptimumSeason`, `Becoming.SetPointOptimum`, `Becoming.SelectionPool`, `Becoming.PoolResponse`, `Becoming.Training`, `Becoming.PoolCourse`, `Becoming.Rejoining`, `Becoming.Lexical`, `Becoming.Frontier`, `Becoming.FrontierFrames`, `Becoming.FrontierWorlds`, `Becoming.Direction`, `Becoming.ScoreRepresentation`, `Becoming.Alternatives`, `Becoming.Bundles`, `Becoming.ActivationCapacity`, `Becoming.Narrowing`, `Becoming.NarrowingRuns`, `Becoming.ReadingLoop`, `Becoming.HeldForReading`, `Becoming.SecuredContent`, `Becoming.ProfileReach`, `Becoming.RenewalBound`, `Becoming.Handoff`, `Becoming.RuleHandoff`, `Becoming.GrammarCourse`, `Becoming.GrammarRegularity`, `Becoming.ProcessRepresentation`, `Becoming.GrammarScope`, `Becoming.GrammarCases`, `Becoming.GrammarPath`, `Becoming.SignificanceStatements`
 
 No explicit theorem/lemma scanned; this may be an import, audit or definition module.
 
@@ -14922,6 +14922,70 @@ Imports: `Becoming.GrammarMap`, `Becoming.ContinuedClasses`, `Becoming.PatternPa
 
 </details>
 
+<a id="module-ad1c7a3013eb"></a>
+
+<details>
+<summary>MapRegions.lean — 45 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean`
+
+Imports: `Becoming.GrammarMap`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.«传则粗不生»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L61) | 61 |
+| [Becoming.«粗有前则生为传»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L65) | 65 |
+| [Becoming.«生则或粗生或传»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L72) | 72 |
+| [Becoming.«守则后守»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L86) | 86 |
+| [Becoming.«全守则后守»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L91) | 91 |
+| [Becoming.«后守则延»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L100) | 100 |
+| [Becoming.«后守退化不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L105) | 105 |
+| [Becoming.«单行则生成后守不并»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L111) | 111 |
+| [Becoming.«三域之周»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L128) | 128 |
+| [Becoming.«三域之定当且仅当排中»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L152) | 152 |
+| [Becoming.Map.Once.func](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L191) | 191 |
+| [Becoming.Map.Once.renews](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L197) | 197 |
+| [Becoming.Map.Once.third_not_renews](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L201) | 201 |
+| [Becoming.Map.Once.third_next](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L209) | 209 |
+| [Becoming.Map.Once.stays_third](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L216) | 216 |
+| [Becoming.Map.Once.family](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L223) | 223 |
+| [Becoming.Map.Once.endless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L240) | 240 |
+| [Becoming.Map.Once.not_generates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L248) | 248 |
+| [Becoming.Map.Once.not_keeps](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L258) | 258 |
+| [Becoming.Map.Once.not_degenerates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L263) | 263 |
+| [Becoming.Map.Once.keeping](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L268) | 268 |
+| [Becoming.Map.Once.keepsAfter](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L278) | 278 |
+| [Becoming.Map.step_func](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L284) | 284 |
+| [Becoming.Map.step_reached_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L288) | 288 |
+| [Becoming.Map.step_reaches](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L301) | 301 |
+| [Becoming.Map.step_reaches_of_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L306) | 306 |
+| [Becoming.Map.step_family](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L313) | 313 |
+| [Becoming.Map.generates_iff_changes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L321) | 321 |
+| [Becoming.Map.keepsAfter_iff_settles](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L334) | 334 |
+| [Becoming.Map.Settles.seen_succ](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L363) | 363 |
+| [Becoming.Map.Settles.seen_of_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L366) | 366 |
+| [Becoming.Map.Settles.seen_of](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L372) | 372 |
+| [Becoming.Map.Settles.seen_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L376) | 376 |
+| [Becoming.Map.Settles.sequence_seen](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L382) | 382 |
+| [Becoming.Map.Settles.sequence_unseen](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L385) | 385 |
+| [Becoming.Map.Settles.turning_turns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L389) | 389 |
+| [Becoming.Map.«后守之定则LPO»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L401) | 401 |
+| [Becoming.Map.«生成之定则WLPO»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L424) | 424 |
+| [Becoming.Map.«生成后守之定则LPO»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L445) | 445 |
+
+Definitions and types:
+
+- `def` [Becoming.«后守»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L81) (L81)
+- `inductive` [Becoming.Map.Stage](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L176) (L176)
+- `def` [Becoming.Map.once](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L179) (L179)
+- `def` [Becoming.Map.Settles.seen](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L351) (L351)
+- `def` [Becoming.Map.Settles.turning](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L356) (L356)
+- `def` [Becoming.Map.Settles.sequence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean#L361) (L361)
+
+</details>
+
 <a id="module-7e62abf919a9"></a>
 
 <details>
@@ -16946,6 +17010,123 @@ Definitions and types:
 - `def` [Becoming.Optimum.Holding.halfMore](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean#L9327) (L9327)
 - `def` [Becoming.Optimum.Holding.halves](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean#L9330) (L9330)
 - `def` [Becoming.Optimum.Holding.leavesAllButOne](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean#L9335) (L9335)
+
+</details>
+
+<a id="module-0116411bbe45"></a>
+
+<details>
+<summary>OptimumSeason.lean — 98 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean`
+
+Imports: `Becoming.Optimum`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.Optimum.Season.least_le_left](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L76) | 76 |
+| [Becoming.Optimum.Season.least_le_right](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L81) | 81 |
+| [Becoming.Optimum.Season.least_of_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L86) | 86 |
+| [Becoming.Optimum.Season.least_of_ge](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L91) | 91 |
+| [Becoming.Optimum.Season.least_zero_right](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L97) | 97 |
+| [Becoming.Optimum.Season.renew_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L112) | 112 |
+| [Becoming.Optimum.Season.run_caught](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L174) | 174 |
+| [Becoming.Optimum.Season.run_taken](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L178) | 178 |
+| [Becoming.Optimum.Season.run_landed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L182) | 182 |
+| [Becoming.Optimum.Season.run_bay](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L187) | 187 |
+| [Becoming.Optimum.Season.takes_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L192) | 192 |
+| [Becoming.Optimum.Season.landings_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L201) | 201 |
+| [Becoming.Optimum.Season.flagged_length](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L219) | 219 |
+| [Becoming.Optimum.Season.flagged_caught](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L223) | 223 |
+| [Becoming.Optimum.Season.flagged_asked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L227) | 227 |
+| [Becoming.Optimum.Season.flagged_landings](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L232) | 232 |
+| [Becoming.Optimum.Season.outcome_ground](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L279) | 279 |
+| [Becoming.Optimum.Season.outcome_catch](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L282) | 282 |
+| [Becoming.Optimum.Season.outcome_bay](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L287) | 287 |
+| [Becoming.Optimum.Season.outcome_site](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L290) | 290 |
+| [Becoming.Optimum.Season.eligible_of](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L295) | 295 |
+| [Becoming.Optimum.Season.bellman](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L345) | 345 |
+| [Becoming.Optimum.Season.cap_lt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L348) | 348 |
+| [Becoming.Optimum.Season.caught_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L351) | 351 |
+| [Becoming.Optimum.Season.best_ten](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L362) | 362 |
+| [Becoming.Optimum.Season.ground_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L365) | 365 |
+| [Becoming.Optimum.Season.top_caught](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L376) | 376 |
+| [Becoming.Optimum.Season.topTakes_length](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L378) | 378 |
+| [Becoming.Optimum.Season.eligible_parts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L383) | 383 |
+| [Becoming.Optimum.Season.catch_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L393) | 393 |
+| [Becoming.Optimum.Season.bay_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L398) | 398 |
+| [Becoming.Optimum.Season.bay_catch](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L403) | 403 |
+| [Becoming.Optimum.Season.bay_catch_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L409) | 409 |
+| [Becoming.Optimum.Season.kept_catch_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L414) | 414 |
+| [Becoming.Optimum.Season.shared](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L427) | 427 |
+| [Becoming.Optimum.Season.drained_eligible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L447) | 447 |
+| [Becoming.Optimum.Season.bay_drained](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L456) | 456 |
+| [Becoming.Optimum.Season.catch_rising](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L471) | 471 |
+| [Becoming.Optimum.Season.top_frontier](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L477) | 477 |
+| [Becoming.Optimum.Season.topSiteKept_eligible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L495) | 495 |
+| [Becoming.Optimum.Season.topSiteFull_eligible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L497) | 497 |
+| [Becoming.Optimum.Season.site_optima](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L503) | 503 |
+| [Becoming.Optimum.Season.site_no_room](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L508) | 508 |
+| [Becoming.Optimum.Season.site_not_least](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L517) | 517 |
+| [Becoming.Optimum.Season.ground_rising](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L526) | 526 |
+| [Becoming.Optimum.Season.ground_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L531) | 531 |
+| [Becoming.Optimum.Season.topBayKept_eligible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L542) | 542 |
+| [Becoming.Optimum.Season.ground_frontier](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L546) | 546 |
+| [Becoming.Optimum.Season.unshared_optima](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L552) | 552 |
+| [Becoming.Optimum.Season.unshared_no_room](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L557) | 557 |
+| [Becoming.Optimum.Season.lex_rising](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L578) | 578 |
+| [Becoming.Optimum.Season.seven_lt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L581) | 581 |
+| [Becoming.Optimum.Season.after_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L588) | 588 |
+| [Becoming.Optimum.Season.after_drained](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L613) | 613 |
+| [Becoming.Optimum.Season.plateau_not_rising](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L624) | 624 |
+| [Becoming.Optimum.Season.plateau_frontier](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L630) | 630 |
+| [Becoming.Optimum.Season.plateau_optima](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L636) | 636 |
+| [Becoming.Optimum.Season.mass_add](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L648) | 648 |
+| [Becoming.Optimum.Season.mass_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L657) | 657 |
+| [Becoming.Optimum.Season.mass_const](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L665) | 665 |
+| [Becoming.Optimum.Season.mix_bay_catch](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L675) | 675 |
+| [Becoming.Optimum.Season.catch_kept_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L684) | 684 |
+| [Becoming.Optimum.Season.mix_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L692) | 692 |
+
+Definitions and types:
+
+- `def` [Becoming.Optimum.Season.least](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L71) (L71)
+- `def` [Becoming.Optimum.Season.bit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L102) (L102)
+- `def` [Becoming.Optimum.Season.renew](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L110) (L110)
+- `structure` [Becoming.Optimum.Season.Act](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L116) (L116)
+- `structure` [Becoming.Optimum.Season.Tally](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L123) (L123)
+- `def` [Becoming.Optimum.Season.cap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L131) (L131)
+- `def` [Becoming.Optimum.Season.bayTake](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L134) (L134)
+- `def` [Becoming.Optimum.Season.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L140) (L140)
+- `def` [Becoming.Optimum.Season.run](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L145) (L145)
+- `def` [Becoming.Optimum.Season.start](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L150) (L150)
+- `def` [Becoming.Optimum.Season.caught](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L155) (L155)
+- `def` [Becoming.Optimum.Season.takes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L160) (L160)
+- `def` [Becoming.Optimum.Season.asked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L165) (L165)
+- `def` [Becoming.Optimum.Season.landings](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L170) (L170)
+- `def` [Becoming.Optimum.Season.mark](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L209) (L209)
+- `def` [Becoming.Optimum.Season.flagged](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L215) (L215)
+- `inductive` [Becoming.Optimum.Season.Cond](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L241) (L241)
+- `def` [Becoming.Optimum.Season.outcome](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L268) (L268)
+- `def` [Becoming.Optimum.Season.Eligible](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L275) (L275)
+- `def` [Becoming.Optimum.Season.ceiling](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L315) (L315)
+- `def` [Becoming.Optimum.Season.entry](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L329) (L329)
+- `def` [Becoming.Optimum.Season.row](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L335) (L335)
+- `def` [Becoming.Optimum.Season.best](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L341) (L341)
+- `def` [Becoming.Optimum.Season.topTakes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L370) (L370)
+- `def` [Becoming.Optimum.Season.catchOrder](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L469) (L469)
+- `def` [Becoming.Optimum.Season.topSiteKept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L482) (L482)
+- `def` [Becoming.Optimum.Season.topSiteFull](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L489) (L489)
+- `def` [Becoming.Optimum.Season.groundOrder](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L524) (L524)
+- `def` [Becoming.Optimum.Season.topBayKept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L536) (L536)
+- `def` [Becoming.Optimum.Season.afterScore](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L568) (L568)
+- `def` [Becoming.Optimum.Season.afterOrder](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L571) (L571)
+- `def` [Becoming.Optimum.Season.lexOrder](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L574) (L574)
+- `def` [Becoming.Optimum.Season.plateauOrder](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L621) (L621)
+- `def` [Becoming.Optimum.Season.mass](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L644) (L644)
+- `def` [Becoming.Optimum.Season.keptMark](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean#L682) (L682)
 
 </details>
 
@@ -19405,90 +19586,98 @@ Definitions and types:
 <a id="module-a7e31c4a8f40"></a>
 
 <details>
-<summary>ReadStages.lean — 71 explicit declarations</summary>
+<summary>ReadStages.lean — 79 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean`
 
-Imports: `Becoming.Unread`
+Imports: `Becoming.Unread`, `Becoming.RevisionRoutes`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.ReadStages.above_irrefl](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L292) | 292 |
-| [Becoming.ReadStages.above_asymm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L296) | 296 |
-| [Becoming.ReadStages.complyThenOwn_best_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L301) | 301 |
-| [Becoming.ReadStages.ownAtBoth_best_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L315) | 315 |
-| [Becoming.ReadStages.unread_comply_not_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L329) | 329 |
-| [Becoming.ReadStages.choose_optimal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L334) | 334 |
-| [Becoming.ReadStages.choose_eq_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L358) | 358 |
-| [Becoming.ReadStages.choose_of_not_outweighs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L367) | 367 |
-| [Becoming.ReadStages.only_complyThenOwn_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L373) | 373 |
-| [Becoming.ReadStages.complyThenOwn_maximal_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L387) | 387 |
-| [Becoming.ReadStages.no_value](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L398) | 398 |
-| [Becoming.ReadStages.kept_not_raised](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L405) | 405 |
-| [Becoming.ReadStages.no_value_chooses_own](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L411) | 411 |
-| [Becoming.ReadStages.kept_not_raised_chooses_own](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L416) | 416 |
-| [Becoming.ReadStages.ownAtBoth_above_without_value](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L422) | 422 |
-| [Becoming.ReadStages.ownAtBoth_above_of_not_raised](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L429) | 429 |
-| [Becoming.ReadStages.outweighs_needs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L436) | 436 |
-| [Becoming.ReadStages.outweighs_needs_more](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L447) | 447 |
-| [Becoming.ReadStages.lumped_uniform](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L465) | 465 |
-| [Becoming.ReadStages.complyThenOwn_not_uniform](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L470) | 470 |
-| [Becoming.ReadStages.plan_realized_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L475) | 475 |
-| [Becoming.ReadStages.complyThenOwn_realized_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L502) | 502 |
-| [Becoming.ReadStages.read_fixes_unread](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L513) | 513 |
-| [Becoming.ReadStages.twin_complyThenOwn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L521) | 521 |
-| [Becoming.ReadStages.kept_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L541) | 541 |
-| [Becoming.ReadStages.uniform_best_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L548) | 548 |
-| [Becoming.ReadStages.uniform_tie](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L559) | 559 |
-| [Becoming.ReadStages.square_split](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L568) | 568 |
-| [Becoming.ReadStages.sum_le_square](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L575) | 575 |
-| [Becoming.ReadStages.sum_regroup](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L583) | 583 |
-| [Becoming.ReadStages.freshDraw_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L588) | 588 |
-| [Becoming.ReadStages.freshDraw_gap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L601) | 601 |
-| [Becoming.ReadStages.freshDraw_reduce](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L608) | 608 |
-| [Becoming.ReadStages.freshDraw_above_iff_chance](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L638) | 638 |
-| [Becoming.ReadStages.sum_lt_of_room](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L646) | 646 |
-| [Becoming.ReadStages.freshDraw_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L659) | 659 |
-| [Becoming.ReadStages.freshDraw_above_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L677) | 677 |
-| [Becoming.ReadStages.freshDraw_not_above_without_value](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L685) | 685 |
-| [Becoming.ReadStages.freshDraw_not_above_of_not_raised](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L692) | 692 |
-| [Becoming.ReadStages.mixture_never_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L701) | 701 |
-| [Becoming.ReadStages.Example.valid](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L715) | 715 |
-| [Becoming.ReadStages.Example.outweighs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L718) | 718 |
-| [Becoming.ReadStages.Example.best](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L720) | 720 |
-| [Becoming.ReadStages.Example.chosen](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L723) | 723 |
-| [Becoming.ReadStages.Example.variants_valid](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L727) | 727 |
-| [Becoming.ReadStages.Example.valueless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L736) | 736 |
-| [Becoming.ReadStages.Example.equal_weights](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L740) | 740 |
-| [Becoming.ReadStages.Example.tie](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L746) | 746 |
-| [Becoming.ReadStages.Example.exit_tie](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L755) | 755 |
-| [Becoming.ReadStages.Example.freshDraw_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L765) | 765 |
-| [Becoming.ReadStages.Example.freshDraw_boundary](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L772) | 772 |
-| [Becoming.ReadStages.Example.no_total](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L781) | 781 |
+| [Becoming.ReadStages.above_irrefl](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L314) | 314 |
+| [Becoming.ReadStages.above_asymm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L318) | 318 |
+| [Becoming.ReadStages.complyThenOwn_best_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L323) | 323 |
+| [Becoming.ReadStages.ownAtBoth_best_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L337) | 337 |
+| [Becoming.ReadStages.unread_comply_not_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L351) | 351 |
+| [Becoming.ReadStages.choose_optimal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L356) | 356 |
+| [Becoming.ReadStages.choose_eq_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L380) | 380 |
+| [Becoming.ReadStages.choose_of_not_outweighs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L389) | 389 |
+| [Becoming.ReadStages.only_complyThenOwn_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L395) | 395 |
+| [Becoming.ReadStages.complyThenOwn_maximal_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L409) | 409 |
+| [Becoming.ReadStages.no_value](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L420) | 420 |
+| [Becoming.ReadStages.kept_not_raised](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L427) | 427 |
+| [Becoming.ReadStages.no_value_chooses_own](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L433) | 433 |
+| [Becoming.ReadStages.kept_not_raised_chooses_own](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L438) | 438 |
+| [Becoming.ReadStages.ownAtBoth_above_without_value](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L444) | 444 |
+| [Becoming.ReadStages.ownAtBoth_above_of_not_raised](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L451) | 451 |
+| [Becoming.ReadStages.outweighs_needs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L458) | 458 |
+| [Becoming.ReadStages.outweighs_needs_more](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L469) | 469 |
+| [Becoming.ReadStages.lumped_uniform](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L487) | 487 |
+| [Becoming.ReadStages.complyThenOwn_not_uniform](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L492) | 492 |
+| [Becoming.ReadStages.plan_realized_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L497) | 497 |
+| [Becoming.ReadStages.complyThenOwn_realized_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L524) | 524 |
+| [Becoming.ReadStages.read_fixes_unread](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L535) | 535 |
+| [Becoming.ReadStages.twin_complyThenOwn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L543) | 543 |
+| [Becoming.ReadStages.kept_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L563) | 563 |
+| [Becoming.ReadStages.uniform_best_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L570) | 570 |
+| [Becoming.ReadStages.uniform_tie](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L581) | 581 |
+| [Becoming.ReadStages.gain_asRoute](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L613) | 613 |
+| [Becoming.ReadStages.loss_asRoute](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L621) | 621 |
+| [Becoming.ReadStages.above_iff_routes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L630) | 630 |
+| [Becoming.ReadStages.complyAtBoth_not_above_ownAtBoth](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L638) | 638 |
+| [Becoming.ReadStages.complyAtBoth_maximal_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L643) | 643 |
+| [Becoming.ReadStages.square_split](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L666) | 666 |
+| [Becoming.ReadStages.sum_le_square](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L673) | 673 |
+| [Becoming.ReadStages.sum_regroup](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L681) | 681 |
+| [Becoming.ReadStages.freshDraw_bound](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L686) | 686 |
+| [Becoming.ReadStages.freshDraw_gap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L699) | 699 |
+| [Becoming.ReadStages.freshDraw_reduce](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L706) | 706 |
+| [Becoming.ReadStages.freshDraw_above_iff_chance](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L736) | 736 |
+| [Becoming.ReadStages.sum_lt_of_room](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L744) | 744 |
+| [Becoming.ReadStages.freshDraw_witness](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L757) | 757 |
+| [Becoming.ReadStages.freshDraw_above_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L775) | 775 |
+| [Becoming.ReadStages.freshDraw_not_above_without_value](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L783) | 783 |
+| [Becoming.ReadStages.freshDraw_not_above_of_not_raised](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L790) | 790 |
+| [Becoming.ReadStages.mixture_never_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L799) | 799 |
+| [Becoming.ReadStages.Example.valid](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L813) | 813 |
+| [Becoming.ReadStages.Example.outweighs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L816) | 816 |
+| [Becoming.ReadStages.Example.best](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L818) | 818 |
+| [Becoming.ReadStages.Example.chosen](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L821) | 821 |
+| [Becoming.ReadStages.Example.variants_valid](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L825) | 825 |
+| [Becoming.ReadStages.Example.valueless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L834) | 834 |
+| [Becoming.ReadStages.Example.equal_weights](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L838) | 838 |
+| [Becoming.ReadStages.Example.tie](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L844) | 844 |
+| [Becoming.ReadStages.Example.exit_tie](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L853) | 853 |
+| [Becoming.ReadStages.Example.freshDraw_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L863) | 863 |
+| [Becoming.ReadStages.Example.freshDraw_boundary](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L870) | 870 |
+| [Becoming.ReadStages.Example.no_total](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L879) | 879 |
 
 Definitions and types:
 
-- `inductive` [Becoming.ReadStages.Act](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L195) (L195)
-- `abbrev` [Becoming.ReadStages.Plan](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L200) (L200)
-- `def` [Becoming.ReadStages.complyAtBoth](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L203) (L203)
-- `def` [Becoming.ReadStages.complyThenOwn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L206) (L206)
-- `def` [Becoming.ReadStages.ownThenComply](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L209) (L209)
-- `def` [Becoming.ReadStages.ownAtBoth](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L212) (L212)
-- `structure` [Becoming.ReadStages.Prospects](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L217) (L217)
-- `def` [Becoming.ReadStages.Prospects.Valid](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L234) (L234)
-- `def` [Becoming.ReadStages.Prospects.kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L237) (L237)
-- `def` [Becoming.ReadStages.Prospects.gain](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L244) (L244)
-- `def` [Becoming.ReadStages.Prospects.loss](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L250) (L250)
-- `def` [Becoming.ReadStages.Prospects.Above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L257) (L257)
-- `def` [Becoming.ReadStages.Prospects.Maximal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L260) (L260)
-- `def` [Becoming.ReadStages.Prospects.KeepingOutweighs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L264) (L264)
-- `def` [Becoming.ReadStages.Prospects.choose](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L268) (L268)
-- `def` [Becoming.ReadStages.Prospects.FreshDrawAbove](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L278) (L278)
-- `def` [Becoming.ReadStages.Prospects.MixtureAbove](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L286) (L286)
-- `def` [Becoming.ReadStages.Uniform](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L458) (L458)
-- `def` [Becoming.ReadStages.Example.prospects](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L713) (L713)
+- `inductive` [Becoming.ReadStages.Act](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L214) (L214)
+- `abbrev` [Becoming.ReadStages.Plan](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L219) (L219)
+- `def` [Becoming.ReadStages.complyAtBoth](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L222) (L222)
+- `def` [Becoming.ReadStages.complyThenOwn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L225) (L225)
+- `def` [Becoming.ReadStages.ownThenComply](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L228) (L228)
+- `def` [Becoming.ReadStages.ownAtBoth](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L231) (L231)
+- `structure` [Becoming.ReadStages.Prospects](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L236) (L236)
+- `def` [Becoming.ReadStages.Prospects.Valid](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L253) (L253)
+- `def` [Becoming.ReadStages.Prospects.kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L256) (L256)
+- `def` [Becoming.ReadStages.Prospects.gain](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L263) (L263)
+- `def` [Becoming.ReadStages.Prospects.loss](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L269) (L269)
+- `def` [Becoming.ReadStages.Prospects.order](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L275) (L275)
+- `def` [Becoming.ReadStages.Prospects.Above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L279) (L279)
+- `def` [Becoming.ReadStages.Prospects.Maximal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L282) (L282)
+- `def` [Becoming.ReadStages.Prospects.KeepingOutweighs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L286) (L286)
+- `def` [Becoming.ReadStages.Prospects.choose](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L290) (L290)
+- `def` [Becoming.ReadStages.Prospects.FreshDrawAbove](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L300) (L300)
+- `def` [Becoming.ReadStages.Prospects.MixtureAbove](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L308) (L308)
+- `def` [Becoming.ReadStages.Uniform](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L480) (L480)
+- `def` [Becoming.ReadStages.Prospects.toRoutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L593) (L593)
+- `def` [Becoming.ReadStages.asRoute](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L606) (L606)
+- `def` [Becoming.ReadStages.Example.prospects](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean#L811) (L811)
 
 </details>
 
@@ -22616,6 +22805,66 @@ Definitions and types:
 - `def` [Becoming.Revising.linkProcess](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean#L270) (L270)
 - `def` [Becoming.Revising.draw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean#L276) (L276)
 - `def` [Becoming.Revising.restore](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean#L282) (L282)
+
+</details>
+
+<a id="module-6052ceac7a14"></a>
+
+<details>
+<summary>RevisionRoutes.lean — 43 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.RevisionRoutes.GainLoss.above_irrefl](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L106) | 106 |
+| [Becoming.RevisionRoutes.GainLoss.above_asymm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L110) | 110 |
+| [Becoming.RevisionRoutes.GainLoss.maximal_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L115) | 115 |
+| [Becoming.RevisionRoutes.above_irrefl](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L180) | 180 |
+| [Becoming.RevisionRoutes.above_asymm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L184) | 184 |
+| [Becoming.RevisionRoutes.route_above_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L188) | 188 |
+| [Becoming.RevisionRoutes.revised_maximal_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L195) | 195 |
+| [Becoming.RevisionRoutes.pos_of_mul_lt_mul](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L205) | 205 |
+| [Becoming.RevisionRoutes.lt_of_mul_lt_mul](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L212) | 212 |
+| [Becoming.RevisionRoutes.above_needs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L220) | 220 |
+| [Becoming.RevisionRoutes.maximal_of_no_value](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L231) | 231 |
+| [Becoming.RevisionRoutes.maximal_of_kept_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L239) | 239 |
+| [Becoming.RevisionRoutes.maximal_of_certain](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L245) | 245 |
+| [Becoming.RevisionRoutes.maximal_of_more_restored](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L251) | 251 |
+| [Becoming.RevisionRoutes.every_loss_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L259) | 259 |
+| [Becoming.RevisionRoutes.every_loss_iff_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L273) | 273 |
+| [Becoming.RevisionRoutes.above_of_value_exceeds](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L284) | 284 |
+| [Becoming.RevisionRoutes.above_at_some_value](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L291) | 291 |
+| [Becoming.RevisionRoutes.above_of_more_value](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L297) | 297 |
+| [Becoming.RevisionRoutes.every_value_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L309) | 309 |
+| [Becoming.RevisionRoutes.every_value_loss_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L328) | 328 |
+| [Becoming.RevisionRoutes.eq_zero_of_mul_eq_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L349) | 349 |
+| [Becoming.RevisionRoutes.every_value_loss_iff_of_route](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L359) | 359 |
+| [Becoming.RevisionRoutes.Example.twoRoutes_valid](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L385) | 385 |
+| [Becoming.RevisionRoutes.Example.twoRoutes_open_not_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L391) | 391 |
+| [Becoming.RevisionRoutes.Example.twoRoutes_complying_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L395) | 395 |
+| [Becoming.RevisionRoutes.Example.both_at_loss_ten](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L399) | 399 |
+| [Becoming.RevisionRoutes.Example.restored_every](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L409) | 409 |
+
+Definitions and types:
+
+- `structure` [Becoming.RevisionRoutes.GainLoss](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L89) (L89)
+- `def` [Becoming.RevisionRoutes.GainLoss.Above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L100) (L100)
+- `def` [Becoming.RevisionRoutes.GainLoss.Maximal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L103) (L103)
+- `structure` [Becoming.RevisionRoutes.Prospects](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L124) (L124)
+- `def` [Becoming.RevisionRoutes.Prospects.Valid](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L143) (L143)
+- `def` [Becoming.RevisionRoutes.Prospects.gain](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L147) (L147)
+- `def` [Becoming.RevisionRoutes.Prospects.loss](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L152) (L152)
+- `def` [Becoming.RevisionRoutes.Prospects.order](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L157) (L157)
+- `def` [Becoming.RevisionRoutes.Prospects.Above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L161) (L161)
+- `def` [Becoming.RevisionRoutes.Prospects.Maximal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L164) (L164)
+- `def` [Becoming.RevisionRoutes.Prospects.withLosses](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L167) (L167)
+- `def` [Becoming.RevisionRoutes.Prospects.withValue](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L170) (L170)
+- `def` [Becoming.RevisionRoutes.Prospects.withKeptRevised](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L173) (L173)
+- `def` [Becoming.RevisionRoutes.Example.twoRoutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L374) (L374)
+- `def` [Becoming.RevisionRoutes.Example.restored](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean#L405) (L405)
 
 </details>
 
@@ -27685,6 +27934,54 @@ Definitions and types:
 
 </details>
 
+<a id="module-f0e802abd0ee"></a>
+
+<details>
+<summary>WeightedCommuting.lean — 29 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean`
+
+Imports: `Becoming.Commuting`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.Weighted.add_congr](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L61) | 61 |
+| [Becoming.Weighted.total_congr](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L70) | 70 |
+| [Becoming.Weighted.Commutes.carried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L90) | 90 |
+| [Becoming.Weighted.Commutes.fixed_expect](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L97) | 97 |
+| [Becoming.Weighted.Commutes.start_expect](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L107) | 107 |
+| [Becoming.Weighted.law_commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L120) | 120 |
+| [Becoming.Weighted.total_map](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L136) | 136 |
+| [Becoming.Weighted.over_congr](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L142) | 142 |
+| [Becoming.Weighted.Commutes.of_samples](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L150) | 150 |
+| [Becoming.Weighted.Reinforcing.commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L173) | 173 |
+| [Becoming.Weighted.Reinforcing.expect_equal](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L180) | 180 |
+| [Becoming.Weighted.Reinforcing.oneSidedRun_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L194) | 194 |
+| [Becoming.Weighted.Reinforcing.oneSidedWeight_pos](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L198) | 198 |
+| [Becoming.Weighted.Reinforcing.oneSided](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L204) | 204 |
+| [Becoming.Weighted.Pooling.commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L215) | 215 |
+| [Becoming.Weighted.Pooling.run_counts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L218) | 218 |
+| [Becoming.Weighted.Pooling.share_rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L225) | 225 |
+| [Becoming.Weighted.Pooling.share_below_half](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L237) | 237 |
+
+Definitions and types:
+
+- `def` [Becoming.Weighted.total](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L64) (L64)
+- `def` [Becoming.Weighted.expect](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L78) (L78)
+- `def` [Becoming.Weighted.Commutes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L84) (L84)
+- `def` [Becoming.Weighted.Unchanged](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L102) (L102)
+- `def` [Becoming.Weighted.law](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L116) (L116)
+- `def` [Becoming.Weighted.over](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L131) (L131)
+- `def` [Becoming.Weighted.swap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L165) (L165)
+- `def` [Becoming.Weighted.Reinforcing.law](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L170) (L170)
+- `def` [Becoming.Weighted.Reinforcing.oneSidedRun](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L185) (L185)
+- `def` [Becoming.Weighted.Reinforcing.oneSidedWeight](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L190) (L190)
+- `def` [Becoming.Weighted.Pooling.step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean#L212) (L212)
+
+</details>
+
 <a id="module-1855e5878d07"></a>
 
 <details>
@@ -28448,6 +28745,77 @@ Definitions and types:
 - `inductive` [Becoming.Rafters.Formation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean#L1276) (L1276)
 - `def` [Becoming.Rafters.rafters](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean#L1282) (L1282)
 - `def` [Becoming.Rafters.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean#L1286) (L1286)
+
+</details>
+
+<a id="module-4c62d912982c"></a>
+
+<details>
+<summary>WideningOnTheMap.lean — 52 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean`
+
+Imports: `Becoming.KeepingWidening`, `Becoming.HeldPossible`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.Steps.same_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L106) | 106 |
+| [Becoming.Steps.same_includes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L110) | 110 |
+| [Becoming.Steps.includes_refl](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L113) | 113 |
+| [Becoming.Steps.includes_trans](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L115) | 115 |
+| [Becoming.Steps.begins_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L120) | 120 |
+| [Becoming.Steps.reached_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L124) | 124 |
+| [Becoming.Steps.reaches_of_buqiong](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L132) | 132 |
+| [Becoming.Steps.buqiong_includes_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L140) | 140 |
+| [Becoming.Steps.includesFrom_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L147) | 147 |
+| [Becoming.Steps.generation_includes_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L160) | 160 |
+| [Becoming.Steps.change_located](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L176) | 176 |
+| [Becoming.Steps.generation_of_keepsWidening](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L187) | 187 |
+| [Becoming.Steps.includes_not_back_of_generation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L200) | 200 |
+| [Becoming.Steps.keepsWidening_of_generation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L211) | 211 |
+| [Becoming.Steps.generation_iff_keepsWidening](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L223) | 223 |
+| [Becoming.Steps.keepsWidening_iff_generation_losing_nothing](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L231) | 231 |
+| [Becoming.Steps.new_in_list_or_none](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L240) | 240 |
+| [Becoming.Steps.found_of_listed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L258) | 258 |
+| [Becoming.Steps.keepsWidening_iff_from_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L266) | 266 |
+| [Becoming.Steps.keepsWideningFrom_iff_shift](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L279) | 279 |
+| [Becoming.Steps.generation_of_reachingKeepsWidening](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L304) | 304 |
+| [Becoming.Steps.Moving.generation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L314) | 314 |
+| [Becoming.Steps.Moving.not_generation_includes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L319) | 319 |
+| [Becoming.Steps.Moving.not_keepsWidening](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L324) | 324 |
+| [Becoming.Steps.Growing.keepsWidening](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L331) | 331 |
+| [Becoming.Steps.Growing.generation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L336) | 336 |
+| [Becoming.Steps.found_of_em](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L347) | 347 |
+| [Becoming.Steps.le_twice](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L360) | 360 |
+| [Becoming.Steps.Arriving.includes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L373) | 373 |
+| [Becoming.Steps.Arriving.early](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L380) | 380 |
+| [Becoming.Steps.Arriving.late](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L387) | 387 |
+| [Becoming.Steps.Arriving.keepsWidening](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L392) | 392 |
+| [Becoming.Steps.Arriving.tells](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L397) | 397 |
+| [Becoming.Steps.wem_of_generation_of_keepsWidening](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L410) | 410 |
+| [Becoming.Steps.forward_iff_wem](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L419) | 419 |
+| [Becoming.Steps.Dawning.generation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L430) | 430 |
+| [Becoming.Steps.dne_of_keepsWidening_of_generation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L438) | 438 |
+| [Becoming.Steps.back_iff_em](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L446) | 446 |
+| [Becoming.Steps.markov_of_keepsWidening_of_generation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L459) | 459 |
+| [Becoming.Web.keepsWidening_itself_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L485) | 485 |
+| [Becoming.Web.generation_of_keepsWidening_byName](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L492) | 492 |
+| [Becoming.Web.keepsWidening_byName_iff_generation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L502) | 502 |
+| [Becoming.Web.kept_by_name_and_generation_on_moments](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L516) | 516 |
+
+Definitions and types:
+
+- `def` [Becoming.Steps.includes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L93) (L93)
+- `def` [Becoming.Steps.same](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L96) (L96)
+- `def` [Becoming.Steps.KeepsWideningFrom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L100) (L100)
+- `def` [Becoming.Steps.moving](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L311) (L311)
+- `def` [Becoming.Steps.growing](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L328) (L328)
+- `def` [Becoming.Steps.twice](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L356) (L356)
+- `def` [Becoming.Steps.arriving](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L366) (L366)
+- `def` [Becoming.Steps.dawning](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L426) (L426)
+- `def` [Becoming.Steps.marked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean#L454) (L454)
 
 </details>
 

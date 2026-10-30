@@ -224,7 +224,7 @@ Before the account goes to readers outside the work (the review packet, a note f
 
 1. **Derived:** it follows from the grammar's laws, for every relation and class.
 2. **On the root under a stated hypothesis:** the hypothesis is written in the grammar's terms, and a countermodel on the root shows it cannot be dropped.
-3. **A premise:** stated on the root, with a proof that no statement about the dynamics entails it. The continuation condition and C stand here already (`ReadsOnlyDynamics.not_entails`).
+3. **A premise:** stated on the root, with a proof that no statement about the dynamics entails it. (Corrected 31 October 2026, from MV's boundary-field spec: this said the continuation condition and C already stand here. Neither does, and standing 3 is empty among the central declarations. The condition has its not-entailed theorem, `ReadsOnlyDynamics.not_entails`, but it is not stated on the root: its root form «续无外» has no such theorem, and its free significance stays off the root, 07 §4.5. C is stated, `Comparison`, with no not-entailed theorem, its reason open apart.)
 
 Any other standing is a distance from the edge, not a place on it. "Balance, represented" and the root's second sort are such distances, and so is a statement at a represented model whose model no stated hypothesis cuts out. Where an item stops short, its failure is written down with witnesses, as item 13 allows. At §461, of the 118 distinct central declarations, 44 reach the grammar, 16 are stated at a represented model, 4 hold on their own carrier only, and 54 are the rest, 31 of them balance, represented. Three levers would cover most of that distance.
 
@@ -261,7 +261,7 @@ The gate rows, "premise of the account" in U1 §4's table, become hypotheses on 
 
 **Where the edge stays.**
 
-- The continuation condition and C are premises, proved not entailed by the dynamics.
+- The continuation condition and C are premises of the account. Only the condition has a proof that the dynamics does not entail it, and neither is stated on the root (corrected 31 October 2026; see item 3 above).
 - Amounts are whole units. The pure core is discrete; continuous amounts belong to the periphery.
 - A law of a particular model is stated at a represented model, the model cut out by a stated hypothesis, with a countermodel on the root.
 
@@ -351,6 +351,67 @@ The two census rows, `Listed.coming_of_ceasing` and `CensusWebs.keep_pace`, are 
 - **What is unchanged.** HE2's edits, held for the next near-full rebuild, are untouched, as are «广之对应» (still waiting, with no reader) and the free significance of 07 §1, which stays unlifted on purpose.
 
 **Next, in the coordinator's order:** RF-M.2; then GW (GW1 and GW2 in a core leaf importing GrammarMap, and GW6, the gate's item 2, with L-10's fix and a core run); then UE24, RV21b and AJ6b. After GW, the gate's open items are 2 if GW6 has not met it, 3 (the 51), 4 (§八 step 5), 5 (a fresh receipt) and 6 (the front pages).
+
+## GW landed: the release gate's item 2 (30 October 2026)
+
+**GW1, GW2 and GW6 are on main** (study §467, core receipt `20261030T152859.871907Z`). They add two core leaves, `Becoming.MapRegions` and `Becoming.WideningOnTheMap`, and every axiom report is empty.
+
+- **The gate's item 2 is met by the split stated**, one of the two outcomes the item allows. On a course's moments, under two premises, keeping widening is 全生成 at (nothing lost, the same possible), both ways. That half is a representation, since nothing lost is widening's own inclusion half. With the classes fixed apart from widening, keeping widening is generation under (the one, the same possible) that loses nothing. So what parts the two is exactly loss ([07](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing)).
+- **What the premises say about the unfolding.** Generation is known by refutation (no predecessor alike), and widening by exhibition (something held that was not). The forward direction is exactly weak excluded middle and the converse exactly excluded middle; exhibiting the point is Markov's principle. The record calls these calibrations of the logic. By the pure core's rule they are lemmas of the item, not results of their own, and none is a gap in the core.
+- **What it does not do.** No law compares two courses, so the second-order direction of 生生 stays open, as chapter 7 says. The occurrences and the moments are two carriers, not two grains of one.
+- **GW1 and GW2.** `Becoming.MapRegions` is a core leaf importing GrammarMap, as "OU's decisions on U4 and on GW1–GW2" placed it. 02's open item on the gap that strict keeping leaves closes with `Map.Once`.
+
+**The gate after GW.** Items 1 and 2 are met. Still open:
+- item 3, the 51 central declarations, each to be lifted or given its reason;
+- item 4, §八 step 5;
+- item 5, a fresh core receipt with its logs;
+- item 6, the front pages current.
+HE2's list now has five items. `14c7c0cdf` added «所闭之逆» and the two halves of `Flow.withinCoupling_reads_iff` on «所闭». This commit adds GrammarMap's two edits from GW's history row: the "is not stated" sentence, which MapRegions now answers, and the reach lemmas stated twice over. Its rebuild is still not due.
+
+## OU's decisions on U4's boundary record (30 October 2026)
+
+U4's taker asked for these decisions on the boundary design (`u4-one-root-to-its-edge/DESIGN-BOUNDARY.md` on branch `u4-edge`, `fd31e64bb`, not yet on main).
+
+- **Derived means the law is in the package.** A row is derived when it is a case of a declaration in a `Becoming.Grammar*` module, stated in the grammar's terms. A list kept beside the package would be metadata, and metadata settles no standing. The «» name is the vocabulary, not the standing. (Corrected 31 October 2026.) This bullet said `kept_onward` qualifies. Under MV's content test it does not: its statement is about `Nat` and a predicate on it and reaches no «» term, so it is a law of the steps of time kept in GrammarLaws, not a grammar law. MV's test admits a theorem of a `Becoming.Grammar*` module, not a generated auxiliary, that is a root constant by content and whose statement reaches «际» or another «» term and no closed value. Its proof applies «闭含所闭» and «线则所闭», so what reaches it reaches those (reach), and no row's standing changes.
+- **Reach and derived are two figures.** Reach says a grammar law is among a declaration's reasons; derived says the row is a case of one. Of the 44 that reach the grammar, 8 are derived.
+- **Standing 2 is the strict reading, with the discharge condition.** The recovery meets each hypothesis of the root form from the row's own by definitions alone. The weaker standing the second review offered, "under a stated hypothesis, met through ⟨lemma⟩", is not taken. It would report which lemmas a proof uses, which reach already measures. It would also let amount reasoning pass as relational. So row 5 and `Flow.Balances.renewedBy` stay at "balance in their statements", and row 5's relational part is recorded in its basis.
+- **The juncture law** enters the leaf only if rule 9 holds: it must be a law of the grammar that more than this row uses. Otherwise `Branching.loss_passes_juncture` keeps its distance with its reason.
+- **The release gate's item 3.** Once the record lands with no row unplaced, every one of the 51 has its reason written, which meets the item's second branch. U1's seven interface laws for amounts, in the package and not only in scratch, stay open.
+
+## The release gate's item 6, sized for a person (31 October 2026)
+
+AJ4's owner proposed reading budgets for each layer a person meets (READING-BUDGETS.md and its measure `kit/measure_layers.py`, in `development/aj4-alignment-readers/` on branch `aj4-human`; they land with AJ4). The request came on 31 October, and its source record lands with them. The reason: a person who cannot finish a layer either judges it unread or puts it down. Much of the length carries checks a machine can run instead.
+
+**Adopted, with four amendments.** Item 6 now reads: "The front pages current, and sized so a person can finish them." Its two sentences above stand. Added to them: each layer states its reading time where it begins, and keeps within its budget by the measure.
+
+- **The budgets.** A screen is 150 words, ten minutes 1,100 and an hour 6,000, with a Chinese character counting half. The rate is 100 to 130 words a minute for English and 200 to 260 characters a minute for Chinese. A person's reported time replaces the estimate. The README's first screen gets one screen; the one page, the cover and each dossier's front get ten minutes; the overview gets an hour; each of the opening's notes gets three minutes. Chapters, records and studies have no budget.
+- **Amendment 1: the budget yields to what cannot be cut.** The never-cut list stands: a deciding hypothesis, the two premises with their roles (the condition for scope, C for order), a failure as it fell, a frozen rule's caveat, a post hoc label, an AI label on a reading, and what is not claimed. Two items are added to it:
+  - each claim's standing (proved, premise, reading or conjecture);
+  - where an empty axiom report is cited, what it shows and what it does not (logic only, not the modelling choices).
+
+  Where a never-cut item would put a layer over its budget, the layer keeps it and records the excess. Detail moves down a layer instead. A correction is never held back to stay within budget.
+- **Amendment 2: the measure warns and never blocks.** If it joins `research.py check`, it warns. A landing that adds a failure or a premise is never refused for length.
+- **Amendment 3: counts are read, not copied.** Every figure a shortened layer keeps is either rendered from its generated source or checked against it at landing (RESULTS, master-laws.json and F5's counts). A summary that copies its source drifts, so one text is kept and the other moved to history, as the proposal says.
+- **Amendment 4: order.** The cuts that depend on no pending content go now: each dossier's front, the README's generated first screen, the opening's notes, and the failure-mode map table-first, in fm-cond1's landing. The one page and the overview go in one pass after U4's boundary record and §八 step 5 have landed, since both change what those pages say about standings and conditional laws. The same pass carries item 6's counts and the twenty-first review's remaining §6 fixes. That way each page is cut once.
+
+**Owners, as the coordinator routes them:**
+- OU's owner, also RP's: the one page and the overview (each with its Chinese edition), and the fronts of the logic, classical-texts and Buddhist-thought dossiers, the last two already within budget;
+- RP2's owner: PHILOSOPHY and the reader edition;
+- RA's line: the README's first screen, generated with its times computed at render, with the opening's body untouched;
+- AJ4: the alignment dossier, in its own landing;
+- FM's holder: the failure-mode map, in fm-cond1's landing.
+
+**Where the layers stand** (the proposal's measure, main `1ec20513d`):
+- over budget: the one page (16.5 to 21.5 minutes against ten), the overview (103.5 to 134.5 against sixty), the logic dossier's front (13.5 to 17.5) and the alignment dossier's front (24 to 31; the new edition's front is within ten);
+- within budget: the cover and the fronts of classical texts, Buddhist thought and philosophy.
+
+## OU's decisions on item 13's proposals (31 October 2026)
+
+Item 13 (生生 and 理 each in one sense, `b4cec4c71`) proposed two Lean changes to the grammar's owner (NOTE §2 ([note](../rv21-one-sense/NOTE.md))). Both are taken and held for HE2's rebuild, as its items 6 and 7, so that they need no core run of their own.
+
+- **The composition goes into GrammarLaws.** It shows the core of a class is a 理 in 03's sense where the successor is fixed. It is the coarsest such 理 where every occurrence also has a successor. Off a fixed successor it need not be one. 01 §4 states this as a theorem, so it belongs in the package, not in a review folder. It goes beside «有常定后则同行», whose law it composes. It gets «» names and no record of its own, since it is a composition of laws the grammar has. Until the rebuild, 01 §4 cites the check outside the package, as it does now.
+- **The names that write 理 for a core are renamed toward 核.** By the naming rule, a rename after landing needs a name that states a wrong meaning. These do: where `E` is not a class, or the successor is not fixed, the core is not a 理 in the one sense item 13 adopted. «从缘生非文法之理» uses 理 for law, and becomes «从缘生非文法之律». No aliases are kept: a name that states a wrong meaning does not stay live beside the right one. The records citing the old names are rebound, and the residue sentence leaves 01 §4, the glossary row and 06.
+- **Item 13's wording in my two records** (continuation-relative-to-a-class and generation-and-degeneration-at-two-grains) writes the grammar's 生生 as «生生». Each change carries a history note, and nothing either record states changed. Taken as landed.
 
 ## What this note does not do
 

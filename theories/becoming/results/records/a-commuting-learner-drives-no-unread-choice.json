@@ -1,0 +1,247 @@
+{
+  "schema_version": 2,
+  "id": "a-commuting-learner-drives-no-unread-choice",
+  "title": {
+    "en": "A commuting learner drives no choice whose values nothing it reads tells apart",
+    "zh": "交换之学习者不驱动其所读皆不分二值之选择"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-30T20:28:07+00:00",
+  "statement": {
+    "en": "Where a weighted law commutes with a map, every expectation n steps on from a configuration's image is that of the observable read through the map, so from a start the map leaves unchanged expectations stay symmetric. A sampling learner commutes where the map carries its weights and update.",
+    "zh": "加权之律与一映射交换时，自一配置之像起 n 步之每一期望，即经此映射而读之可观测量之期望；故自映射不改之起点，期望每步皆对称。抽样之学习者，其权与更新为映射所携时即交换。"
+  },
+  "laws": [
+    {
+      "en": "A weighted law goes from each configuration to finitely many successors, each with a weight of any type, no law of whose arithmetic is used. Where every weighted total over the successors of σ x is the total over those of x carried by σ, the expectation of any observable n steps on from σ x is that of the observable read through σ from x.",
+      "zh": "加权之律自每一配置至有限多后继，各带任意类型之权，不用其算术之任何律。凡于 σ x 之后继上之每一加权总和，皆为 x 之后继经 σ 所携之总和时，任一可观测量自 σ x 起 n 步之期望，即经 σ 而读之可观测量自 x 起之期望。",
+      "declarations": [
+        "Becoming.Weighted.total",
+        "Becoming.Weighted.total_congr",
+        "Becoming.Weighted.expect",
+        "Becoming.Weighted.Commutes",
+        "Becoming.Weighted.Commutes.carried"
+      ]
+    },
+    {
+      "en": "From a configuration σ fixes, or from starting weights σ leaves unchanged, every observable's expectation equals its image's at every step; a deterministic law commuting with σ is a case.",
+      "zh": "自 σ 所固定之配置，或自 σ 不改之起始之权出发，每一可观测量之期望于每一步皆等于其像之期望；与 σ 交换之决定性之律为其情形。",
+      "declarations": [
+        "Becoming.Weighted.Commutes.fixed_expect",
+        "Becoming.Weighted.Unchanged",
+        "Becoming.Weighted.Commutes.start_expect",
+        "Becoming.Weighted.law",
+        "Becoming.Weighted.law_commutes"
+      ]
+    },
+    {
+      "en": "A law drawing one of finitely many samples, with a weight read off the configuration, and moving by an update, commutes with σ where a map of the samples permutes them, a sample's weight at σ x is its image's weight at x, and the update at σ x is σ of the update at x from the image sample.",
+      "zh": "自有限多样本中抽一、其权读自配置、依更新而移之律，于下述时与 σ 交换：样本之某一映射置换之，样本于 σ x 之权为其像于 x 之权，于 σ x 之更新为自像样本于 x 之更新之 σ。",
+      "declarations": [
+        "Becoming.Weighted.over",
+        "Becoming.Weighted.total_map",
+        "Becoming.Weighted.over_congr",
+        "Becoming.Weighted.Commutes.of_samples"
+      ]
+    },
+    {
+      "en": "Reinforcing, drawing a value in proportion to its count and adding one to it, commutes with exchanging the two values: from equal counts the expected counts stay equal at every step, yet a run drawing one value at every one of any number of steps has positive weight.",
+      "zh": "强化之律，按计数之比抽一值并加一于其上，与二值之对换交换：自相等之计数，期望之计数每步皆相等；然任意步数中每步皆抽同一值之运行有正之权。",
+      "declarations": [
+        "Becoming.Weighted.swap",
+        "Becoming.Weighted.Reinforcing.law",
+        "Becoming.Weighted.Reinforcing.commutes",
+        "Becoming.Weighted.Reinforcing.expect_equal",
+        "Becoming.Weighted.Reinforcing.oneSidedRun",
+        "Becoming.Weighted.Reinforcing.oneSidedWeight",
+        "Becoming.Weighted.Reinforcing.oneSidedRun_eq",
+        "Becoming.Weighted.Reinforcing.oneSidedWeight_pos",
+        "Becoming.Weighted.Reinforcing.oneSided"
+      ]
+    },
+    {
+      "en": "Pooling, adding one to both values, commutes with the exchange; from counts of three and one, the share of the less-drawn value rises at every step and stays below one half.",
+      "zh": "汇聚之律，加一于二值，与对换交换；自三与一之计数，较少者之份每步皆升而恒低于一半。",
+      "declarations": [
+        "Becoming.Weighted.Pooling.step",
+        "Becoming.Weighted.Pooling.commutes",
+        "Becoming.Weighted.Pooling.run_counts",
+        "Becoming.Weighted.Pooling.share_rises",
+        "Becoming.Weighted.Pooling.share_below_half"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Weights of any type with addition, multiplication and zero, no law of them used; finitely many listed weighted successors; discrete steps; commuting, a fixed configuration or unchanged starting weights as each law names. The two witnesses use natural-number counts.",
+      "zh": "不加公理。权为任意带加、乘与零之类型，不用其任何律；有限多列出之加权后继；离散之步；交换、固定之配置或不改之起始之权，如各律所列。二见证用自然数之计数。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a given learner commutes: its parametrization, baseline, optimizer and inputs are properties of its code, which LA4's mirror test checks.",
+      "zh": "某一学习者交换：其参数化、基线、优化器与输入是其代码之性质，由 LA4 之镜像检验查之。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Anything of a single run: in Reinforcing, runs drawing one value for any number of steps have positive weight while the expectations stay equal.",
+      "zh": "单一运行之任何事：强化之律中，任意步数皆抽同一值之运行有正之权，而期望仍相等。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That a choice the learner reads, though nothing rewards it, goes undriven: in LA4's exact flow an uncounted bay the policy reads rises.",
+      "zh": "学习者所读而无所奖之选择不被驱动：LA4 之精确流中，策略所读而不计之湾上升。",
+      "kind": "scope"
+    },
+    {
+      "en": "What a learner does from a start preferring one value, or that noise wears such a preference away beyond the Pooling witness.",
+      "zh": "学习者自偏一值之起点所为，或噪声于汇聚之见证之外磨去此偏。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the weights are probabilities: they are of any type and need not sum to one.",
+      "zh": "权为概率：权为任意类型，不必和为一。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261030T202529.410234Z): Becoming.WeightedCommuting, 18 theorems in 29 declarations, every declaration with an empty axiom report; the checker verifies core purity. Reviewed before landing (REVIEW-LA4-FORMAL.md); author review in study section 470; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261030T202529.410234Z）：Becoming.WeightedCommuting，29 项声明中 18 条定理，公理报告皆空；检查器并核对核心纯净。落地前经审（REVIEW-LA4-FORMAL.md）；作者审查见研究第 470 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "LA4's mirror test on each Stage A family; erosion of a start's preference as a law of sampled gradient learners; groups of symmetries in the weighted form.",
+    "zh": "LA4 之镜像检验于第一阶段每一族；起点之偏之磨损作为抽样梯度学习者之律；加权形式中之对称群。"
+  },
+  "correspondence": {
+    "en": "An equivariant Markov kernel keeps invariant expectations, standard in probability; here exact over finitely many weighted successors, with no law of the weights' arithmetic. Reinforcing is Pólya's urn. A policy-gradient learner meets the hypotheses for exchanging a choice's two values where nothing it reads tells them apart and its parametrization, baseline and optimizer treat them alike. Reading (the AI's): T3's second forbidden case, a systematic drive on a condition sharing no units with anything rewarded, as first worded, fails where the learner reads the condition: in LA4's exact flow an uncounted bay the policy reads rises. Stated for a choice whose values nothing rewarded and nothing the learner reads tells apart, it is a theorem in expectation from a start the exchange leaves unchanged, and stays conjectured from a start preferring one value.",
+    "zh": "等变之马尔可夫核保持不变之期望，概率论中之常识；此处于有限多加权后继上精确成立，不用权之算术之任何律。强化之律即 Pólya 之瓮。策略梯度学习者，凡其所读皆不分一选择之二值、其参数化、基线与优化器同等对待之时，即合对换此二值之假设。读法（AI 的）：T3 之第二禁例，初述为对与任何所奖者皆不共享单位之条件之系统驱动，于学习者读此条件处不成立：LA4 之精确流中，策略所读而不计之湾上升。述为一选择之二值为所奖者与学习者所读者皆不分者，则自对换不改之起点，于期望中为定理；自偏一值之起点仍为猜想。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean",
+  "aliases": [
+    "A commuting learner drives no choice whose values nothing it reads tells apart",
+    "交换之学习者不驱动其所读皆不分二值之选择",
+    "what a learner's symmetry fixes",
+    "Becoming.Weighted.Commutes.carried",
+    "Becoming.Weighted.Commutes.of_samples"
+  ],
+  "dependencies": [
+    {
+      "id": "what-a-commuting-law-keeps-apart",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Law.Commutes, of which law_commutes makes the deterministic case, and Law.run for Pooling.",
+        "zh": "Law.Commutes，law_commutes 以之为决定性之情形；汇聚之律用 Law.run。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "the-test-season-meets-the-optimum-laws",
+      "detail": {
+        "en": "The season whose landing site this law settles for learners treating the sites alike.",
+        "zh": "此律为同等对待二地之学习者所定其登陆之地之季。"
+      }
+    },
+    {
+      "id": "selection-through-a-model-of-the-options",
+      "detail": {
+        "en": "Relabel.Equivariant.tied keeps a tie through an exchange in one selection; this law keeps an expectation through an exchange along a weighted course.",
+        "zh": "Relabel.Equivariant.tied 于一次选择中经对换保持并列；此律沿加权之过程经对换保持期望。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Weighted.Commutes",
+        "Becoming.Weighted.Commutes.carried",
+        "Becoming.Weighted.Commutes.fixed_expect",
+        "Becoming.Weighted.Commutes.of_samples",
+        "Becoming.Weighted.Commutes.start_expect",
+        "Becoming.Weighted.Pooling.commutes",
+        "Becoming.Weighted.Pooling.run_counts",
+        "Becoming.Weighted.Pooling.share_below_half",
+        "Becoming.Weighted.Pooling.share_rises",
+        "Becoming.Weighted.Pooling.step",
+        "Becoming.Weighted.Reinforcing.commutes",
+        "Becoming.Weighted.Reinforcing.expect_equal",
+        "Becoming.Weighted.Reinforcing.law",
+        "Becoming.Weighted.Reinforcing.oneSided",
+        "Becoming.Weighted.Reinforcing.oneSidedRun",
+        "Becoming.Weighted.Reinforcing.oneSidedRun_eq",
+        "Becoming.Weighted.Reinforcing.oneSidedWeight",
+        "Becoming.Weighted.Reinforcing.oneSidedWeight_pos",
+        "Becoming.Weighted.Unchanged",
+        "Becoming.Weighted.add_congr",
+        "Becoming.Weighted.expect",
+        "Becoming.Weighted.law",
+        "Becoming.Weighted.law_commutes",
+        "Becoming.Weighted.over",
+        "Becoming.Weighted.over_congr",
+        "Becoming.Weighted.swap",
+        "Becoming.Weighted.total",
+        "Becoming.Weighted.total_congr",
+        "Becoming.Weighted.total_map"
+      ],
+      "sha256": "3fe02a8b09584d4006a6053f5c24469c875527b909bfeda4d1557ba6bdba1f36"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T202529.410234Z/verification.json",
+      "role": "receipt",
+      "sha256": "8dfa5fc8fab0be5fa2d37601c5572779933efcd3a6a2e6ece99851c8d6ebf9ad"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/REVIEW-LA4-FORMAL.md",
+      "role": "review",
+      "sha256": "be5065726d395dd154785bee0327d1a376118e4a1f820b09b677e64344a1fdac"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/NOTE.md",
+      "role": "integration",
+      "sha256": "2eac7d53cc6bc10a040a8d1c4ce9a03242363a604c8b58f7d2843e026a27e2da"
+    },
+    {
+      "path": "experiments/drain-beyond-the-reward/DESIGN.md",
+      "role": "integration",
+      "sha256": "3c20c464e7b9ae02e3bd28b8a162f3ad1bf30e30da40c9cc7ae13b544a8bb0f2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "9ad1aa821f8ec9c8edef4e12258a333f4d827f7c14bd7cbb7740e9b567e130c2"
+    },
+    {
+      "path": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "role": "statement",
+      "sha256": "6850747e59d0f3080cec13529d9b8082197dbb0368839fd82e2033457acaf0c2"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T202529.410234Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.WeightedCommuting",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "31 October 2026: added (LA4, its formal part), the law that settles which of the design's predictions follow from a learner's symmetry; study section 470.",
+      "zh": "2026年10月31日：新增（LA4 之形式部分），定设计之预测中何者出自学习者之对称之律；研究第 470 节。"
+    }
+  ]
+}

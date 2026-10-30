@@ -1,11 +1,11 @@
 {
- "commit": "1645ca3d0ae06123ae8a39d1ef7be8a6ccb7ade1",
+ "commit": "33bce05e614ad2d7079bc41f31a94c27fa6cce29",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261030T131028.245732Z",
+ "core_receipt_at_commit": "20261030T164445.569791Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 355,
- "constants": 51282,
- "spine_theorems": 17298,
+ "tracked_modules": 360,
+ "constants": 51885,
+ "spine_theorems": 17494,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,19 +28,19 @@
  "classes": {
   "statement on both families": 1098,
   "statement on Process/Frame/Run/Trace": 3557,
-  "statement on World/Flow/Web": 4251,
-  "statement on the base only through a law of its own module": 270,
+  "statement on World/Flow/Web": 4255,
+  "statement on the base only through a law of its own module": 271,
   "proof through a base family": 216,
-  "used by a theorem on the base": 5739,
+  "used by a theorem on the base": 5753,
   "instance on the base recorded": 159,
-  "apart: own vocabulary": 1848,
-  "apart: prelude-only statement": 160
+  "apart: own vocabulary": 2017,
+  "apart: prelude-only statement": 168
  },
- "apart": 2008,
- "apart_general_structure_by_design": 840,
- "apart_otherwise": 1168,
+ "apart": 2185,
+ "apart_general_structure_by_design": 877,
+ "apart_otherwise": 1308,
  "pure_forwarders": {
-  "spine theorems that are pure forwarders": 120,
+  "spine theorems that are pure forwarders": 121,
   "of them on the base": 81,
   "their targets, by class": {
    "statement on Process/Frame/Run/Trace": 18,
@@ -72,15 +72,16 @@
   "Becoming.HexagramSequences": 5,
   "Becoming.Attraction": 4,
   "Becoming.Recurrence": 3,
-  "Becoming.LeastLoss": 2
+  "Becoming.LeastLoss": 2,
+  "Becoming.WeightedCommuting": 1
  },
- "apart_used_by_nothing": 1108,
- "apart_roots": 1108,
+ "apart_used_by_nothing": 1169,
+ "apart_roots": 1169,
  "apart_roots_by_category": {
-  "model-witness": 497,
+  "model-witness": 527,
   "support": 138,
-  "general-structure": 431,
-  "calibration": 16,
+  "general-structure": 456,
+  "calibration": 22,
   "restates": 14,
   "logical-strength": 12
  },
@@ -193,17 +194,21 @@
    66,
    66
   ],
+  "Becoming.OptimumSeason": [
+   63,
+   63
+  ],
   "Becoming.Reproduction": [
    62,
    114
   ],
+  "Becoming.ReadStages": [
+   57,
+   57
+  ],
   "Becoming.FreeEnergyCounting": [
    55,
    55
-  ],
-  "Becoming.ReadStages": [
-   52,
-   52
   ],
   "Becoming.ReadingLoop": [
    51,
@@ -216,6 +221,10 @@
   "Becoming.SelectionLevels": [
    47,
    78
+  ],
+  "Becoming.MapRegions": [
+   39,
+   39
   ],
   "Becoming.GrammarCases": [
    38,
@@ -249,6 +258,10 @@
    28,
    33
   ],
+  "Becoming.RevisionRoutes": [
+   28,
+   28
+  ],
   "Becoming.Training": [
    27,
    59
@@ -256,6 +269,10 @@
   "Becoming.CausalGrowth": [
    26,
    161
+  ],
+  "Becoming.WideningOnTheMap": [
+   25,
+   43
   ],
   "Becoming.GrammarTransport": [
    24,
@@ -288,6 +305,10 @@
   "Becoming.FreeEnergyGuarantees": [
    17,
    67
+  ],
+  "Becoming.WeightedCommuting": [
+   17,
+   18
   ],
   "Becoming.GroupEnding": [
    16,
@@ -800,19 +821,19 @@
  },
  "rings": {
   "core": {
-   "modules": 338,
-   "theorems": 16526,
-   "apart": 1913,
+   "modules": 343,
+   "theorems": 16722,
+   "apart": 2090,
    "classes": {
     "statement on both families": 1084,
     "statement on Process/Frame/Run/Trace": 3337,
-    "statement on World/Flow/Web": 4226,
-    "statement on the base only through a law of its own module": 224,
+    "statement on World/Flow/Web": 4230,
+    "statement on the base only through a law of its own module": 225,
     "proof through a base family": 205,
-    "used by a theorem on the base": 5378,
+    "used by a theorem on the base": 5392,
     "instance on the base recorded": 159,
-    "apart: own vocabulary": 1754,
-    "apart: prelude-only statement": 159
+    "apart: own vocabulary": 1923,
+    "apart: prelude-only statement": 167
    }
   },
   "instances": {
@@ -849,7 +870,7 @@
   }
  },
  "components": {
-  "count": 95,
+  "count": 97,
   "theorems_outside_the_main_component": [
    "Becoming.Dispatch.add_three_assoc",
    "Becoming.FaultEnvelopes.or_self",
@@ -881,6 +902,10 @@
    "Becoming.Requirement.separate_not_joint",
    "Becoming.Routes.cond_zero_mul",
    "Becoming.SharedCodes.synonyms_read_iff",
+   "Becoming.Weighted.Pooling.share_below_half",
+   "Becoming.Weighted.Reinforcing.oneSided",
+   "Becoming.Weighted.Reinforcing.oneSidedRun_eq",
+   "Becoming.Weighted.Reinforcing.oneSidedWeight_pos",
    "Becoming.WitnessRefinementRuns.and_self'",
    "Becoming.WitnessRefinementRuns.any_congr",
    "Becoming.ceases_at_a_step",
@@ -928,12 +953,12 @@
  "records_by_best_alias_class": {
   "statement on both families": 83,
   "statement on Process/Frame/Run/Trace": 172,
-  "statement on World/Flow/Web": 134,
-  "statement on the base only through a law of its own module": 5,
+  "statement on World/Flow/Web": 135,
+  "statement on the base only through a law of its own module": 6,
   "proof through a base family": 5,
   "used by a theorem on the base": 12,
   "instance on the base recorded": 1,
-  "apart: own vocabulary": 42
+  "apart: own vocabulary": 44
  },
  "records_resting_only_on_apart_theorems": [
   {
@@ -1118,6 +1143,12 @@
    ]
   },
   {
+   "id": "the-test-season-meets-the-optimum-laws",
+   "modules": [
+    "Becoming.OptimumSeason"
+   ]
+  },
+  {
    "id": "what-a-course-chosen-through-its-model-does-not-test",
    "modules": [
     "Becoming.ReadingLoop"
@@ -1187,6 +1218,12 @@
    "id": "when-complying-when-read-is-best",
    "modules": [
     "Becoming.ReadStages"
+   ]
+  },
+  {
+   "id": "when-no-route-stands-above-a-revision",
+   "modules": [
+    "Becoming.RevisionRoutes"
    ]
   }
  ],
@@ -2226,6 +2263,45 @@
   "Becoming.Map.relay_after_two": "used by a theorem on the base",
   "Becoming.Map.relay_renews_and_ends": "statement on World/Flow/Web",
   "Becoming.Map.renewal_undecided": "statement on World/Flow/Web",
+  "Becoming.«传则粗不生»": "apart: own vocabulary",
+  "Becoming.«粗有前则生为传»": "apart: own vocabulary",
+  "Becoming.«生则或粗生或传»": "apart: own vocabulary",
+  "Becoming.«守则后守»": "apart: own vocabulary",
+  "Becoming.«全守则后守»": "apart: own vocabulary",
+  "Becoming.«后守则延»": "apart: own vocabulary",
+  "Becoming.«后守退化不并»": "apart: own vocabulary",
+  "Becoming.«单行则生成后守不并»": "apart: own vocabulary",
+  "Becoming.«三域之周»": "apart: own vocabulary",
+  "Becoming.«三域之定当且仅当排中»": "apart: own vocabulary",
+  "Becoming.Map.Once.func": "apart: own vocabulary",
+  "Becoming.Map.Once.renews": "apart: own vocabulary",
+  "Becoming.Map.Once.third_not_renews": "apart: own vocabulary",
+  "Becoming.Map.Once.third_next": "apart: own vocabulary",
+  "Becoming.Map.Once.stays_third": "apart: own vocabulary",
+  "Becoming.Map.Once.family": "apart: own vocabulary",
+  "Becoming.Map.Once.endless": "apart: own vocabulary",
+  "Becoming.Map.Once.not_generates": "apart: own vocabulary",
+  "Becoming.Map.Once.not_keeps": "apart: own vocabulary",
+  "Becoming.Map.Once.not_degenerates": "apart: own vocabulary",
+  "Becoming.Map.Once.keeping": "apart: own vocabulary",
+  "Becoming.Map.Once.keepsAfter": "apart: own vocabulary",
+  "Becoming.Map.step_func": "apart: own vocabulary",
+  "Becoming.Map.step_reached_le": "apart: own vocabulary",
+  "Becoming.Map.step_reaches": "apart: own vocabulary",
+  "Becoming.Map.step_reaches_of_le": "apart: own vocabulary",
+  "Becoming.Map.step_family": "apart: own vocabulary",
+  "Becoming.Map.generates_iff_changes": "apart: own vocabulary",
+  "Becoming.Map.keepsAfter_iff_settles": "apart: own vocabulary",
+  "Becoming.Map.Settles.seen_succ": "apart: own vocabulary",
+  "Becoming.Map.Settles.seen_of_le": "apart: own vocabulary",
+  "Becoming.Map.Settles.seen_of": "apart: own vocabulary",
+  "Becoming.Map.Settles.seen_witness": "apart: own vocabulary",
+  "Becoming.Map.Settles.sequence_seen": "apart: own vocabulary",
+  "Becoming.Map.Settles.sequence_unseen": "apart: own vocabulary",
+  "Becoming.Map.Settles.turning_turns": "apart: own vocabulary",
+  "Becoming.Map.«后守之定则LPO»": "apart: own vocabulary",
+  "Becoming.Map.«生成之定则WLPO»": "apart: own vocabulary",
+  "Becoming.Map.«生成后守之定则LPO»": "apart: own vocabulary",
   "Becoming.le_dest": "used by a theorem on the base",
   "Becoming.le_of_add_le_add_right": "used by a theorem on the base",
   "Becoming.add_right_cancel": "used by a theorem on the base",
@@ -10715,6 +10791,69 @@
   "Becoming.Optimum.Holding.halves_hold": "used by a theorem on the base",
   "Becoming.Optimum.Holding.halves_held": "used by a theorem on the base",
   "Becoming.Optimum.Holding.halves_race": "statement on World/Flow/Web",
+  "Becoming.Optimum.Season.least_le_left": "apart: own vocabulary",
+  "Becoming.Optimum.Season.least_le_right": "apart: own vocabulary",
+  "Becoming.Optimum.Season.least_of_le": "apart: own vocabulary",
+  "Becoming.Optimum.Season.least_of_ge": "apart: own vocabulary",
+  "Becoming.Optimum.Season.least_zero_right": "apart: own vocabulary",
+  "Becoming.Optimum.Season.renew_le": "apart: own vocabulary",
+  "Becoming.Optimum.Season.run_caught": "apart: own vocabulary",
+  "Becoming.Optimum.Season.run_taken": "apart: own vocabulary",
+  "Becoming.Optimum.Season.run_landed": "apart: own vocabulary",
+  "Becoming.Optimum.Season.run_bay": "apart: own vocabulary",
+  "Becoming.Optimum.Season.takes_eq": "apart: own vocabulary",
+  "Becoming.Optimum.Season.landings_le": "apart: own vocabulary",
+  "Becoming.Optimum.Season.flagged_length": "apart: own vocabulary",
+  "Becoming.Optimum.Season.flagged_caught": "apart: own vocabulary",
+  "Becoming.Optimum.Season.flagged_asked": "apart: own vocabulary",
+  "Becoming.Optimum.Season.flagged_landings": "apart: own vocabulary",
+  "Becoming.Optimum.Season.outcome_ground": "apart: own vocabulary",
+  "Becoming.Optimum.Season.outcome_catch": "apart: own vocabulary",
+  "Becoming.Optimum.Season.outcome_bay": "apart: own vocabulary",
+  "Becoming.Optimum.Season.outcome_site": "apart: own vocabulary",
+  "Becoming.Optimum.Season.eligible_of": "apart: own vocabulary",
+  "Becoming.Optimum.Season.bellman": "apart: own vocabulary",
+  "Becoming.Optimum.Season.cap_lt": "apart: own vocabulary",
+  "Becoming.Optimum.Season.caught_le": "apart: own vocabulary",
+  "Becoming.Optimum.Season.best_ten": "apart: own vocabulary",
+  "Becoming.Optimum.Season.ground_le": "apart: own vocabulary",
+  "Becoming.Optimum.Season.top_caught": "apart: own vocabulary",
+  "Becoming.Optimum.Season.topTakes_length": "apart: own vocabulary",
+  "Becoming.Optimum.Season.eligible_parts": "apart: own vocabulary",
+  "Becoming.Optimum.Season.catch_le": "apart: own vocabulary",
+  "Becoming.Optimum.Season.bay_le": "apart: own vocabulary",
+  "Becoming.Optimum.Season.bay_catch": "apart: own vocabulary",
+  "Becoming.Optimum.Season.bay_catch_le": "apart: own vocabulary",
+  "Becoming.Optimum.Season.kept_catch_le": "apart: own vocabulary",
+  "Becoming.Optimum.Season.shared": "apart: own vocabulary",
+  "Becoming.Optimum.Season.drained_eligible": "apart: own vocabulary",
+  "Becoming.Optimum.Season.bay_drained": "apart: own vocabulary",
+  "Becoming.Optimum.Season.catch_rising": "apart: own vocabulary",
+  "Becoming.Optimum.Season.top_frontier": "apart: own vocabulary",
+  "Becoming.Optimum.Season.topSiteKept_eligible": "apart: own vocabulary",
+  "Becoming.Optimum.Season.topSiteFull_eligible": "apart: own vocabulary",
+  "Becoming.Optimum.Season.site_optima": "apart: own vocabulary",
+  "Becoming.Optimum.Season.site_no_room": "apart: own vocabulary",
+  "Becoming.Optimum.Season.site_not_least": "apart: own vocabulary",
+  "Becoming.Optimum.Season.ground_rising": "apart: own vocabulary",
+  "Becoming.Optimum.Season.ground_bound": "apart: own vocabulary",
+  "Becoming.Optimum.Season.topBayKept_eligible": "apart: own vocabulary",
+  "Becoming.Optimum.Season.ground_frontier": "apart: own vocabulary",
+  "Becoming.Optimum.Season.unshared_optima": "apart: own vocabulary",
+  "Becoming.Optimum.Season.unshared_no_room": "apart: own vocabulary",
+  "Becoming.Optimum.Season.lex_rising": "apart: own vocabulary",
+  "Becoming.Optimum.Season.seven_lt": "apart: prelude-only statement",
+  "Becoming.Optimum.Season.after_iff": "apart: own vocabulary",
+  "Becoming.Optimum.Season.after_drained": "apart: own vocabulary",
+  "Becoming.Optimum.Season.plateau_not_rising": "apart: own vocabulary",
+  "Becoming.Optimum.Season.plateau_frontier": "apart: own vocabulary",
+  "Becoming.Optimum.Season.plateau_optima": "apart: own vocabulary",
+  "Becoming.Optimum.Season.mass_add": "apart: own vocabulary",
+  "Becoming.Optimum.Season.mass_le": "apart: own vocabulary",
+  "Becoming.Optimum.Season.mass_const": "apart: own vocabulary",
+  "Becoming.Optimum.Season.mix_bay_catch": "apart: own vocabulary",
+  "Becoming.Optimum.Season.catch_kept_le": "apart: own vocabulary",
+  "Becoming.Optimum.Season.mix_kept": "apart: own vocabulary",
   "Becoming.Web.pooledClass_selects": "statement on World/Flow/Web",
   "Becoming.Web.separates_all_iff": "statement on World/Flow/Web",
   "Becoming.Web.member_separates_all": "statement on World/Flow/Web",
@@ -10974,6 +11113,34 @@
   "Becoming.Turns.separates_at": "apart: own vocabulary",
   "Becoming.Turns.Copying.readsOnlyActs": "apart: own vocabulary",
   "Becoming.Turns.Copying.reaches_first_only": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.GainLoss.above_irrefl": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.GainLoss.above_asymm": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.GainLoss.maximal_iff": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.above_irrefl": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.above_asymm": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.route_above_iff": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.revised_maximal_iff": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.pos_of_mul_lt_mul": "apart: prelude-only statement",
+  "Becoming.RevisionRoutes.lt_of_mul_lt_mul": "apart: prelude-only statement",
+  "Becoming.RevisionRoutes.above_needs": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.maximal_of_no_value": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.maximal_of_kept_le": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.maximal_of_certain": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.maximal_of_more_restored": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.every_loss_iff": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.every_loss_iff_kept": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.above_of_value_exceeds": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.above_at_some_value": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.above_of_more_value": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.every_value_iff": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.every_value_loss_iff": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.eq_zero_of_mul_eq_zero": "apart: prelude-only statement",
+  "Becoming.RevisionRoutes.every_value_loss_iff_of_route": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.Example.twoRoutes_valid": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.Example.twoRoutes_open_not_above": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.Example.twoRoutes_complying_above": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.Example.both_at_loss_ten": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.Example.restored_every": "apart: own vocabulary",
   "Becoming.ReadStages.above_irrefl": "apart: own vocabulary",
   "Becoming.ReadStages.above_asymm": "apart: own vocabulary",
   "Becoming.ReadStages.complyThenOwn_best_iff": "apart: own vocabulary",
@@ -11001,6 +11168,11 @@
   "Becoming.ReadStages.kept_alike": "apart: own vocabulary",
   "Becoming.ReadStages.uniform_best_iff": "apart: own vocabulary",
   "Becoming.ReadStages.uniform_tie": "apart: own vocabulary",
+  "Becoming.ReadStages.gain_asRoute": "apart: own vocabulary",
+  "Becoming.ReadStages.loss_asRoute": "apart: own vocabulary",
+  "Becoming.ReadStages.above_iff_routes": "apart: own vocabulary",
+  "Becoming.ReadStages.complyAtBoth_not_above_ownAtBoth": "apart: own vocabulary",
+  "Becoming.ReadStages.complyAtBoth_maximal_iff": "apart: own vocabulary",
   "Becoming.ReadStages.square_split": "apart: prelude-only statement",
   "Becoming.ReadStages.sum_le_square": "apart: prelude-only statement",
   "Becoming.ReadStages.sum_regroup": "apart: prelude-only statement",
@@ -11646,6 +11818,24 @@
   "Becoming.Branching.law_symmetric": "statement on Process/Frame/Run/Trace",
   "Becoming.Law.Commutes.returns_paired": "statement on Process/Frame/Run/Trace",
   "Becoming.Law.Commutes.halfway_returns": "statement on Process/Frame/Run/Trace",
+  "Becoming.Weighted.add_congr": "apart: prelude-only statement",
+  "Becoming.Weighted.total_congr": "apart: own vocabulary",
+  "Becoming.Weighted.Commutes.carried": "apart: own vocabulary",
+  "Becoming.Weighted.Commutes.fixed_expect": "apart: own vocabulary",
+  "Becoming.Weighted.Commutes.start_expect": "apart: own vocabulary",
+  "Becoming.Weighted.law_commutes": "apart: own vocabulary",
+  "Becoming.Weighted.total_map": "apart: own vocabulary",
+  "Becoming.Weighted.over_congr": "apart: own vocabulary",
+  "Becoming.Weighted.Commutes.of_samples": "apart: own vocabulary",
+  "Becoming.Weighted.Reinforcing.commutes": "apart: own vocabulary",
+  "Becoming.Weighted.Reinforcing.expect_equal": "apart: own vocabulary",
+  "Becoming.Weighted.Reinforcing.oneSidedRun_eq": "apart: own vocabulary",
+  "Becoming.Weighted.Reinforcing.oneSidedWeight_pos": "apart: own vocabulary",
+  "Becoming.Weighted.Reinforcing.oneSided": "apart: own vocabulary",
+  "Becoming.Weighted.Pooling.commutes": "apart: own vocabulary",
+  "Becoming.Weighted.Pooling.run_counts": "statement on the base only through a law of its own module",
+  "Becoming.Weighted.Pooling.share_rises": "apart: prelude-only statement",
+  "Becoming.Weighted.Pooling.share_below_half": "apart: prelude-only statement",
   "Becoming.Tolerance.AllBut.mono_set": "used by a theorem on the base",
   "Becoming.Tolerance.AllBut.mono_count": "used by a theorem on the base",
   "Becoming.Tolerance.AllBut.of_length": "used by a theorem on the base",
@@ -16726,6 +16916,49 @@
   "Becoming.KindRelay.Fed.not_keepsWidening_supportedPassing": "statement on World/Flow/Web",
   "Becoming.KindRelay.Fed.not_keepsWidening_dormant": "statement on World/Flow/Web",
   "Becoming.KindRelay.Fed.returns": "statement on World/Flow/Web",
+  "Becoming.Steps.same_class": "apart: own vocabulary",
+  "Becoming.Steps.same_includes": "apart: own vocabulary",
+  "Becoming.Steps.includes_refl": "used by a theorem on the base",
+  "Becoming.Steps.includes_trans": "used by a theorem on the base",
+  "Becoming.Steps.begins_iff": "used by a theorem on the base",
+  "Becoming.Steps.reached_le": "used by a theorem on the base",
+  "Becoming.Steps.reaches_of_buqiong": "used by a theorem on the base",
+  "Becoming.Steps.buqiong_includes_iff": "used by a theorem on the base",
+  "Becoming.Steps.includesFrom_iff": "used by a theorem on the base",
+  "Becoming.Steps.generation_includes_iff": "used by a theorem on the base",
+  "Becoming.Steps.change_located": "used by a theorem on the base",
+  "Becoming.Steps.generation_of_keepsWidening": "used by a theorem on the base",
+  "Becoming.Steps.includes_not_back_of_generation": "used by a theorem on the base",
+  "Becoming.Steps.keepsWidening_of_generation": "used by a theorem on the base",
+  "Becoming.Steps.generation_iff_keepsWidening": "used by a theorem on the base",
+  "Becoming.Steps.keepsWidening_iff_generation_losing_nothing": "apart: own vocabulary",
+  "Becoming.Steps.new_in_list_or_none": "apart: prelude-only statement",
+  "Becoming.Steps.found_of_listed": "apart: own vocabulary",
+  "Becoming.Steps.keepsWidening_iff_from_zero": "apart: own vocabulary",
+  "Becoming.Steps.keepsWideningFrom_iff_shift": "used by a theorem on the base",
+  "Becoming.Steps.generation_of_reachingKeepsWidening": "apart: own vocabulary",
+  "Becoming.Steps.Moving.generation": "apart: own vocabulary",
+  "Becoming.Steps.Moving.not_generation_includes": "apart: own vocabulary",
+  "Becoming.Steps.Moving.not_keepsWidening": "apart: own vocabulary",
+  "Becoming.Steps.Growing.keepsWidening": "apart: own vocabulary",
+  "Becoming.Steps.Growing.generation": "apart: own vocabulary",
+  "Becoming.Steps.found_of_em": "apart: own vocabulary",
+  "Becoming.Steps.le_twice": "apart: own vocabulary",
+  "Becoming.Steps.Arriving.includes": "apart: own vocabulary",
+  "Becoming.Steps.Arriving.early": "apart: own vocabulary",
+  "Becoming.Steps.Arriving.late": "apart: own vocabulary",
+  "Becoming.Steps.Arriving.keepsWidening": "apart: own vocabulary",
+  "Becoming.Steps.Arriving.tells": "apart: own vocabulary",
+  "Becoming.Steps.wem_of_generation_of_keepsWidening": "apart: own vocabulary",
+  "Becoming.Steps.forward_iff_wem": "apart: own vocabulary",
+  "Becoming.Steps.Dawning.generation": "apart: own vocabulary",
+  "Becoming.Steps.dne_of_keepsWidening_of_generation": "apart: own vocabulary",
+  "Becoming.Steps.back_iff_em": "apart: own vocabulary",
+  "Becoming.Steps.markov_of_keepsWidening_of_generation": "apart: own vocabulary",
+  "Becoming.Web.keepsWidening_itself_iff": "statement on World/Flow/Web",
+  "Becoming.Web.generation_of_keepsWidening_byName": "statement on World/Flow/Web",
+  "Becoming.Web.keepsWidening_byName_iff_generation": "statement on World/Flow/Web",
+  "Becoming.Web.kept_by_name_and_generation_on_moments": "statement on World/Flow/Web",
   "Becoming.addParity_false": "used by a theorem on the base",
   "Becoming.addParity_self": "used by a theorem on the base",
   "Becoming.addParity_assoc": "used by a theorem on the base",

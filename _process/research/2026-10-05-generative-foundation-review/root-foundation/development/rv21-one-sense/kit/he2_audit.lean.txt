@@ -1,0 +1,41 @@
+import Becoming.GrammarLaws
+import Becoming.GrammarScope
+import Becoming.GrammarCandidates
+open Becoming
+#print axioms Becoming.«定后则类之核同行»
+#print axioms Becoming.«遍后则其内同行之类含于核»
+#print axioms Becoming.«定后遍后则核为其内最粗同行之类»
+#print axioms Becoming.«后不定则核可不同行»
+#print axioms Becoming.«守核则不穷»
+#print axioms Becoming.«守核之线不亡»
+#print axioms Becoming.«亡前核变»
+#print axioms Becoming.«有亡之线两端核异»
+#print axioms Becoming.«足以定核»
+#print axioms Becoming.«合有常则足以定核»
+#print axioms Becoming.«从缘生非文法之律»
+#check @Becoming.«后不定则核可不同行»
+
+-- The kept flame names: on both models the successor is fixed and the alike relation is a class, so the core
+-- there is a class the step goes alike across (a 理), by «定后则类之核同行» (not package declarations).
+theorem he2_flame_fixed : «定后» Flame.step := by
+  intro y z ⟨x, h1, h2⟩
+  cases x <;> cases y <;> cases z <;> first | rfl | exact False.elim h1 | exact False.elim h2
+
+theorem he2_twoFlames_fixed : «定后» TwoFlames.step := by
+  intro y z ⟨x, ⟨e1, h1⟩, ⟨e2, h2⟩⟩
+  exact Prod.ext (e1.symm.trans e2) (he2_flame_fixed y.2 z.2 ⟨x.2, h1, h2⟩)
+
+theorem he2_twoFlames_alike_class : «类» TwoFlames.alike :=
+  ⟨fun _ => rfl, fun h => Eq.symm h, fun h k => Eq.trans h k⟩
+
+theorem he2_flame_core_li : «类» («核» Flame.step Flame.alike) ∧ «则» («核» Flame.step Flame.alike) Flame.alike ∧
+    «同行» Flame.step («核» Flame.step Flame.alike) :=
+  «定后则类之核同行» Flame.alike_class he2_flame_fixed
+theorem he2_twoFlames_core_li : «类» («核» TwoFlames.step TwoFlames.alike) ∧
+    «则» («核» TwoFlames.step TwoFlames.alike) TwoFlames.alike ∧ «同行» TwoFlames.step («核» TwoFlames.step TwoFlames.alike) :=
+  «定后则类之核同行» he2_twoFlames_alike_class he2_twoFlames_fixed
+#print axioms he2_flame_fixed
+#print axioms he2_twoFlames_fixed
+#print axioms he2_twoFlames_alike_class
+#print axioms he2_flame_core_li
+#print axioms he2_twoFlames_core_li

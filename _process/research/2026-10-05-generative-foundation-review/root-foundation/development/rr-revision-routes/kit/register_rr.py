@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+"""RR's landing (register_rf7.py's pattern): register the apart roots the connectivity check lists without a reason
+that are RR's, each with a category and a reason; stop on any other root, which belongs to its owner.
+
+* RevisionRoutes' laws hold of any prospects at a revision in natural-number weights, and GainLoss of any gain and
+  loss: the base supplies no reading of their vocabulary yet (general structure). They wait for a formation's own
+  order and a reading's revision of its law, on the base. ReadStages' new laws (its four plans as a revision with
+  three routes, complying at both) are of the same kind.
+* The witnesses (RevisionRoutes.Example) are facts about one constructed model (model witness).
+
+Textual edits, the rest of the file byte for byte (register_wrt2.py's pattern).
+usage (from the checkout root): python3 -B register_rr.py CONNECTIVITY_LOG"""
+import json
+import re
+import sys
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+F = Path('_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-APART.json')
+log = Path(sys.argv[1]).read_text(encoding='utf-8')
+m = re.search(r"apart roots without a reason in [^:]+: (\[[^\]]*\])", log)
+unclassified = [] if not m else [s.strip().strip("'\"") for s in m.group(1).strip('[]').split(',') if s.strip()]
+stale = re.search(r"register entries no longer apart roots: (\[[^\]]*\])", log)
+assert not (stale and stale.group(1).strip('[]').strip()), ('stale entries: read them; RR\'s change may have made one', stale.group(1))
+NAMES = {}
+for mod in ('RevisionRoutes', 'ReadStages'):
+    audit = (HERE / f'tree/.build/Becoming{mod}AxiomAudit.lean').read_text(encoding='utf-8')
+    for name in re.findall(r'^#print axioms (\S+)$', audit, re.M):
+        NAMES[name] = f'Becoming.{mod}'
+WAIT = {
+    'Becoming.RevisionRoutes': ('a law of any prospects at a revision in natural-number weights, or of any gain and loss '
+                                '(when no route of keeping a law stands above a revision of it); it waits for a '
+                                'formation\'s own order and a reading\'s revision of its law, on the base (RR)'),
+    'Becoming.ReadStages': ('a law of any two-stage prospects in natural-number weights, the four plans as a revision '
+                            'with three routes; it waits for a formation\'s own order and the selection a reading '
+                            'applies, on the base (RF, RR)'),
+}
+WITNESS = {  # the first key a name contains gives its reason
+    'RevisionRoutes.Example.': ('two routes, keeping openly and complying when read, each at weight 1 in a total of 1, '
+                                'the value 4, at losses 10 and 1, and its variations (RR)'),
+}
+reasons = {}
+for name in unclassified:
+    mod = NAMES.get(name)
+    if mod is None:
+        continue
+    witness = next((w for part, w in WITNESS.items() if part in name), None)
+    if witness is not None:
+        reasons[name] = (mod, 'model-witness', f"{name.replace('Becoming.', '')}: a fact about one constructed model, "
+                                               f'{witness}')
+    else:
+        reasons[name] = (mod, 'general-structure', f"{name.replace('Becoming.', '')}: {WAIT[mod]}")
+others = [n for n in unclassified if n not in reasons]
+assert not others, ("apart roots not registered here: read them; another session's belong to their owners", others)
+t = F.read_text(encoding='utf-8')
+block = ''
+for name in unclassified:
+    assert json.dumps(name, ensure_ascii=False) not in t, name
+    mod, cat, reason = reasons[name]
+    block += ('  ' + json.dumps(name, ensure_ascii=False) + ': {\n   "module": "' + mod + '",\n   "category": "' + cat
+              + '",\n   "reason": ' + json.dumps(reason, ensure_ascii=False) + '\n  },\n')
+if block:
+    anchor = '  }\n },\n "instances": {'
+    assert t.count(anchor) == 1
+    t = t.replace(anchor, '  },\n' + block.rstrip(',\n') + '\n },\n "instances": {')
+    json.loads(t)
+    F.write_text(t, encoding='utf-8')
+print('register: added', len(unclassified), unclassified)

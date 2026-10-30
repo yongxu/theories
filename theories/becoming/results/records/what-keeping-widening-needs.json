@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-29T15:01:33+00:00",
+  "reviewed_at_utc": "2026-10-30T17:41:46+00:00",
   "statement": {
     "en": "A course keeping widening by name with fixed finite requirements needs unbounded stock, fed from beyond; under upkeep, renewers multiply; passing support makes opened by the opened a recency bound; along a reading, keeping opening needs new beginnings, and 全生成 and keeping widening can hold together.",
     "zh": "按名持续扩大、需求有限而固定的进程超出一切界并由外而喂；有维持时其更新者增多；支撑之传递把由已开者所开定为近期之界；沿任一读法，持续开出需其新的起始；于一读法上全生成与持续扩大并立。"
@@ -177,7 +177,7 @@
     },
     {
       "en": "Witness: both together. On the kind relay, six formations of two kinds passing units within and across kinds with period two, the kind chosen so that passings across kinds begin, the levels keep widening within kinds from step 0, every supported occurrence is 全生成 within kinds and at orders 0 and 1 along passing (one formation, kind, activity), and renewal without end holds at the kind grain.",
-      "zh": "见证：二者并立。种类接力：两种类之六构成，单位于种类内外以周期二传递，种类之选使跨种类之传递为起始；水平自第 0 步起于种类内持续扩大，每一受支撑出现于种类内及沿传递于阶 0 与阶 1（一构成、种类、活跃）全生成，生生于种类粒度成立。",
+      "zh": "见证：二者并立。种类接力：两种类之六构成，单位于种类内外以周期二传递，种类之选使跨种类之传递为起始；水平自第 0 步起于种类内持续扩大，每一受支撑出现于种类内及沿传递于阶 0 与阶 1（一构成、种类、活跃）全生成，«生生» 于种类粒度成立。",
       "declarations": [
         "Becoming.KindRelay.Form",
         "Becoming.KindRelay.memDecidable",
@@ -483,7 +483,7 @@
     },
     {
       "en": "That renewal gives widening: on the kind relay 全生成 at two orders and renewal without end hold while what it can form by name only returns, and beginnings recur on a reading that opens nothing.",
-      "zh": "更新给出扩大：于种类接力上，二阶之全生成与生生成立，而其按名所能成者只回返；起始复现于一无所开出之读法上。",
+      "zh": "更新给出扩大：于种类接力上，二阶之全生成与 «生生» 成立，而其按名所能成者只回返；起始复现于一无所开出之读法上。",
       "kind": "non-implication",
       "witness": "Becoming.KindRelay.Runs.beginnings_without_opening"
     },
@@ -1090,7 +1090,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/NOTE.md",
       "role": "integration",
-      "sha256": "f07197b7af066d405f34cd27ca8ffc1d67c13eabfc222a74d9b5f09e21de3cfb"
+      "sha256": "11d6903c36d635a640a40e38262dd106315490df0d3b8fca3fa2ececa675dbd3"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/REVIEW-GW-LEAN.md",
@@ -1169,6 +1169,10 @@
     {
       "en": "30 October 2026 (HE, study section 455): total_eq_of_supports moved from KeepingWidening to beside total_le_of_support in Dissipation, statement and name unchanged; its reference, binding and the validation scope follow; reviewed in REVIEW-HE.",
       "zh": "2026年10月30日（HE，研究第 455 节）：total_eq_of_supports 自 KeepingWidening 移至 Dissipation 中 total_le_of_support 之旁，陈述与名不变；其引用、绑定与验证范围随之。"
+    },
+    {
+      "en": "30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the grammar's «生生» marked in the Chinese of law 15 and of the second item it does not show, as the English and KindRelay.renews_without_end state; nothing the record states changed.",
+      "zh": "2026年10月30日：仅措辞，依第二十一次审查第 13 项（生生一义）：律 15 与所不表明之第二项之中文中文法之 «生生» 加标，如英文与 KindRelay.renews_without_end 所述；记录所述无改变。"
     }
   ]
 }

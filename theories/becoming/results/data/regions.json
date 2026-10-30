@@ -6,6 +6,11 @@
    "base": "general",
    "note": "SharedCodes: hearing-only code change keeps agreement; 约定俗成"
   },
+  "a-commuting-learner-drives-no-unread-choice": {
+   "region": "collective",
+   "base": "general",
+   "note": "LA4; a weighted law commuting with a map keeps expectations"
+  },
   "a-coupling-saturated-by-what-it-has-carried": {
    "region": "map",
    "base": "frame",
@@ -979,7 +984,12 @@
   "identical-cells-under-a-descent-treating-them-alike": {
    "region": "collective",
    "base": "general",
-   "note": "FreeEnergyGuarantees UE16: under a descent reading no cell's number alike cells stay alike; with an exchangeable field, minima within one size come in exchanged pairs; against guaranteed differentiation (Friston and others 2015)"
+   "note": "FreeEnergyGuarantees UE16: under a descent reading no cell's number alike cells stay alike; with an exchangeable field, minima within one size come in exchanged pairs; against guaranteed differentiation (Friston and others 2015); UE24: under noise, in the periphery, the law stays exchangeable (identical-cells-under-noise)"
+  },
+  "identical-cells-under-noise": {
+   "region": "collective",
+   "base": "periphery",
+   "note": "CellsUnderNoise UE24: under kernels commuting with every rearrangement an exchangeable law stays exchangeable; the core's descent with an exchangeable field and noise of one law at every cell keeps it, which cell takes which place undecided (periphery)"
   },
   "identification-where-bounded": {
    "region": "knowing",
@@ -1070,6 +1080,11 @@
    "region": "collective",
    "base": "old-base",
    "note": "Optimum SG6: keeping forgoes renewal"
+  },
+  "keeping-widening-is-generation-losing-nothing": {
+   "region": "significance",
+   "base": "general",
+   "note": "WideningOnTheMap GW6: keeping widening is 全生成 at (nothing lost, the same possible) on a course's moments, both ways under premises of deciding; loss parts it from generation under the one; the World by name"
   },
   "laws-at-coarser-steps": {
    "region": "root",
@@ -2051,6 +2066,11 @@
    "base": "old-base",
    "note": "R1 Interleavings"
   },
+  "the-test-season-meets-the-optimum-laws": {
+   "region": "collective",
+   "base": "general",
+   "note": "LA4's season; the optimum laws met"
+  },
   "the-updater-line": {
    "region": "life",
    "base": "periphery",
@@ -2390,6 +2410,11 @@
    "region": "knowing",
    "base": "general",
    "note": "ReadStages RF7: when complying when read and acting by its own law when not is best, in two stages; the exits; drawing afresh"
+  },
+  "when-no-route-stands-above-a-revision": {
+   "region": "significance",
+   "base": "general",
+   "note": "RR: when no route of keeping a law stands above a revision of it (07 §7); corrigibility as an incentive"
   },
   "when-the-runs-of-a-process-settle": {
    "region": "method",
@@ -3478,6 +3503,11 @@
    "base": "old-base",
    "note": "old base's regimes on the map"
   },
+  "Becoming.MapRegions": {
+   "region": "map",
+   "base": "grammar",
+   "note": "GW1/GW2 the map's regions: keeping from some point on, coverage with excluded middle, the gap, LPO on a line; the split of a beginning"
+  },
   "Becoming.MatchedCourses": {
    "region": "significance",
    "base": "frame",
@@ -3557,6 +3587,11 @@
    "region": "collective",
    "base": "old-base",
    "note": "SG1-SG17 optima at least level beyond; 506 thms (UE1b: one law of the exchange)"
+  },
+  "Becoming.OptimumSeason": {
+   "region": "collective",
+   "base": "general",
+   "note": "LA4: the season season.py runs, the optimum laws it meets (record the-test-season-meets-the-optimum-laws)"
   },
   "Becoming.OrderNormal": {
    "region": "root",
@@ -3872,6 +3907,11 @@
    "region": "knowing",
    "base": "frame",
    "note": "registration history selects"
+  },
+  "Becoming.RevisionRoutes": {
+   "region": "significance",
+   "base": "general",
+   "note": "RR: a revision and the routes of keeping a law; GainLoss, the order ReadStages takes"
   },
   "Becoming.Roles": {
    "region": "root",
@@ -4208,6 +4248,11 @@
    "base": "general",
    "note": "P82 weighted histories, sum over courses = stepwise transfer"
   },
+  "Becoming.WeightedCommuting": {
+   "region": "collective",
+   "base": "general",
+   "note": "LA4: the weighted commuting law and the sampling learner (record a-commuting-learner-drives-no-unread-choice)"
+  },
   "Becoming.WeightedTraces": {
    "region": "knowing",
    "base": "frame",
@@ -4227,6 +4272,11 @@
    "region": "map",
    "base": "old-base",
    "note": "whole active while some part is; persisting whole only through generation; WE1"
+  },
+  "Becoming.WideningOnTheMap": {
+   "region": "significance",
+   "base": "general",
+   "note": "GW6 keeping widening read on the map: 全生成 at (nothing lost, the same possible) both ways; loss parts it from generation under the one; by name each kept, the whole generating"
   },
   "Becoming.Withholding": {
    "region": "collective",
