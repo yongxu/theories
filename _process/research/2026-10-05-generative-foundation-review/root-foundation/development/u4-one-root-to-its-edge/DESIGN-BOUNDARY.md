@@ -2,7 +2,7 @@
 
 AI-written design for the last step of U4, "one root to its edge" ([proposal](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#one-root-to-its-edge-a-proposal-30-october-2026), [OU's decisions](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#ous-decisions-on-u4-and-on-gw1gw2-30-october-2026)). The step is one record stating where every central declaration stands: derived, on the root under a stated hypothesis with a countermodel, a premise proved not entailed, or at a named distance whose failure is written down.
 
-- **Status.** This is a draft, revised after two independent reviews ([first](REVIEW-U4-BOUNDARY.md), [second](REVIEW-U4-BOUNDARY-SECOND.md)) and MV's owner's reading of the field it needs. Both reviews found it sound with fixes, four blocking findings in the first and three in the second. Every finding is taken (§7).
+- **Status.** This is a draft, revised after two independent reviews ([first](REVIEW-U4-BOUNDARY.md), [second](REVIEW-U4-BOUNDARY-SECOND.md)) and after drafts 2 and 3 of MV's field, which this record needs. Draft 3 brings the Lean check into MV, splits a derived row's lemmas into bridges and support, and finds standing 3 empty. Both reviews found it sound with fixes, four blocking findings in the first and three in the second. Every finding is taken (§7).
   - The connected rows have been read independently (§3).
   - OU's owner has answered where a derived row's law sits, and has put two laws on HE2's list (§1.1, §3). OU's owner has read this revision's §0–§6, taken the discharge condition and declined the weaker standing (§1.2, §7).
   - Row 17's strict form passes a Lean check of every test in §1.5, and nine negative controls fail as they should (§4). Row 5's strict form records the relational part of a row that stays at "balance in its statement" (§1.2).
@@ -46,7 +46,7 @@ Three findings shape the record.
    - With structures unbundled as well, 105 pass, since every model is made of relations, numbers and lists.
 
    A standing is therefore carried by a declared item, as F5's statements at a model are: a grammar law the row is a case of, or a root form the row is an instance of. The name test applies to those items.
-2. **Reaching the grammar is connection, not derivation.** All 44 declarations that reach the grammar reach a grammar law, by MV's walk (§2). `Web.Whole.family_excess_ends` reaches `«线则所闭»` and `«闭含所闭»` through the proof of `kept_onward`, GrammarLaws' closure along the successor on `Nat`, which has no «» name.
+2. **Reaching the grammar is connection, not derivation.** All 44 declarations that reach the grammar reach a grammar law, by MV's walk (§2). `Web.Whole.family_excess_ends` reaches `«线则所闭»` and `«闭含所闭»` through the proof of `kept_onward`, GrammarLaws' closure along the successor on `Nat`. `kept_onward` has no «» name and is not itself a grammar law: its statement is about `Nat` alone and reaches no «» term (MV's content test, which OU's owner accepts). The walk enters it, so what its proof applies counts.
 
    Many rows reach only closure's elementary laws, used as steps: `«所闭之传递»`, `«所闭之自反»`, `«缘在所闭»`, `«所闭之闭»` and `«所闭之单调»`. **Reach says a grammar law is among a declaration's reasons; derived says the row is a case of one.** So the 44 and the derived count are two figures, not one. `Web.Whole.family_excess_ends`, for example, reaches the grammar, but its statement takes `Flow.Balances` and is not a case of a grammar law, so it stands at "balance in its statement". Of the 32 with no balance in their statements, 8 are cases (§3).
 3. **Balance enters by the statement or by the proof, and the edge needs that split.** Balance enters 32 rows' statements.
@@ -65,15 +65,18 @@ Three findings shape the record.
 
 ### 1.1 Derived
 
-A row is **derived** when it is a case of a declared grammar law Y. Three things must hold:
-- **Y is declared on the grammar.** It is a theorem of a `Becoming.Grammar*` module whose statement passes the name test (§1.5). OU's owner has decided that the law sits in the package only: a list kept beside it would be metadata, and metadata settles no standing. The «» name is the vocabulary, not the standing.
-- **The row is Y at the model's relation, through bridges each named in the record.**
-  - The bridges are the closed set of lemmas between the row and Y, as MV's probe computes it: every lemma the row's proof uses on its way to Y.
-  - Each bridge holds at every instance of the model's parameters and adds no hypothesis the row lacks.
-  - The principal bridges are equivalences, proved by unfolding the model's definitions or by recursion. §3's table names them; the others are their steps.
-- **The row's proof reaches Y and every named bridge.**
+A row is **derived** when it is a case of a declared grammar law Y. The record may declare more than one law, where the row is a case of them together. Four things must hold:
+- **Y is a grammar law.** OU's owner has decided that the law sits in the package only: a list kept beside it would be metadata, and metadata settles no standing. The «» name is the vocabulary, not the standing. MV's predicate states the law's content (BOUNDARY-FIELD.md §3.0). Y is:
+  - a theorem of a `Becoming.Grammar*` module;
+  - a root constant: its closure, proof included, lies in the grammar modules and the prelude;
+  - stated so that its statement reaches `«际»` or another «» term, and no value the run constructs.
+- **The row is Y at the model's relation, through a closed set of lemmas, each named in the record.** The closed set is every lemma the row's proof uses on its way to Y, as MV's probe computes it. It splits in two:
+  - **bridges**, the equivalences: under their binders, an `Iff`, or an `Eq` between propositions, predicates or relations. MV's Lean check verifies this on terms;
+  - **support**, the rest. The review reads each support lemma: it must hold at every instance of the model's parameters and add no hypothesis the row lacks.
+- **The row's proof reaches Y and every named lemma.**
+- **No balance anchor is in the row's closure,** its statement and its proof all the way down, definitions included (MV's D5).
 
-Reaching a grammar law used as one step among the model's own reasoning does not make a row derived. The record declares Y and the bridges. MV checks that each declared law passes the name test and that the row reaches it and its bridges. The constants dump holds names, not terms, so the review confirms that each principal bridge is an equivalence adding no hypothesis.
+Reaching a grammar law used as one step among the model's own reasoning does not make a row derived. The checks cannot tell a case from steps. Declared with their whole closed sets, 28 of the 32 connected rows would pass every check MV can run on names; the other four (`act_courses_unselected` and the three RegimeMargin rows) fail D5. So "derived" rests on the review, which reads that the row applies Y as the case, and the checks bound it (§3).
 
 ### 1.2 Under a stated hypothesis
 
@@ -81,6 +84,7 @@ The proposal states standing 2 as "the hypothesis is written in the grammar's te
 
 **The strict reading, which this design adopts.** A row stands under a stated hypothesis when it is an instance of a root form F, declared in U4's core leaf, such that:
 - **F's statement passes the name test.** The model's relations and amount functions are variables in it, bound implicitly.
+- **F names `«际»` or another «» term, and no value the run constructs** (MV's additions). So a pure-logic form over propositional variables cannot be one. `«际»` is an abbreviation for `α → α → Prop` (Grammar.lean:47), so this excludes forms with no relation at all, and nothing stronger.
 - **F's hypotheses are named definitions of F's module, each used once.** Every propositional binder of F's type is an application of one of them.
   - Each names grammar terms only: relations, regions, classes and «» notions, with `Becoming.Prelude` and `Init`.
   - None names an amount. List facts may appear through membership, as counting, which quantifies over every map.
@@ -136,14 +140,14 @@ The root countermodels over `Unit` show only that no hypothesis is redundant in 
 
 ### 1.3 Premise
 
-A premise is stated on the root, with a proof that no statement about the dynamics entails it.
-- **The continuation condition stands here.** `ReadsOnlyDynamics.not_entails` (Significance.lean:296) proves it of `Unrestricted`.
-- **C does not.** `not_entails` says nothing of C, calling widening better, whose reason is open apart (07).
+A premise is stated on the root, with a proof that no statement about the dynamics entails it. **Standing 3 is empty today.** Neither premise of the ethics meets both conditions (MV's field, §3.3):
+- **The continuation condition** has its not-entailed theorem, `ReadsOnlyDynamics.not_entails` (Significance.lean:296), which concerns `Unrestricted` with significance free. But 07 §4.5 keeps that free significance off the root. The condition's root form at the own-closure reading, `«续无外»`, has no not-entailed theorem.
+- **C**, calling widening better, has its statement, `Comparison`, and no not-entailed theorem. A reason for C is open apart (07).
 - **K3's premises** (balance, dissipation, a census and the rest) are hypotheses of the account, with witnesses that meet and fail them. They have no proof of not-entailment.
 
-None of these is a central declaration.
+None of these is a central declaration. The record lists the two premises of the ethics apart, with each one's relation to the root as a reading.
 
-Three central declarations keep `sig` free in their general statements: row 1, `unrestricted_iff_livingSignificance`, which is the condition read as living significance, and rows 8 and 9. U3 gave each a root form at the structural reading of `sig` only, and F5 keeps all three among the rest (U3's standing, WHAT-REMAINS). Their label is "free significance". It is a distance kept on purpose by 07 §1, not a gap. `not_entails` does not have the shape of a standing-2 countermodel, so a row whose only kept hypotheses are the condition is not counted under standing 2.
+Three central declarations keep `sig` free in their general statements: row 1, `unrestricted_iff_livingSignificance`, which is the condition read as living significance, and rows 8 and 9. U3 gave each a root form at the structural reading of `sig` only, and F5 keeps all three among the rest (U3's standing, WHAT-REMAINS). Their label is "free significance". It is a distance kept on purpose by 07 §1, not a gap. `not_entails` does not have the shape of a standing-2 countermodel: it shows that no law of the dynamics gives the premise, not that a row needs it. So a row whose only kept hypotheses are the condition is not counted under standing 2. A form keeping `Unrestricted sig` would fail the name test anyway, since `Unrestricted` is not admitted.
 
 ### 1.4 Below the grammar
 
@@ -176,21 +180,30 @@ These are not admitted:
 
 For Y, F and a countermodel, the item is its statement, read directly with no unfolding. For a hypothesis's or witness's definition, it is the type and the body, since the type alone names only `«际»`.
 
-**The tests on a standing-2 form**, all run by the Lean check (§4):
+**The tests on a standing-2 form**, all run in Lean (§4):
 - the name test on F's statement and on each hypothesis;
-- no amounts in a hypothesis: no `Nat`, and none of its order and arithmetic (`LE.le`, `LT.lt`, `HAdd.hAdd`, `HSub.hSub`, `HMul.hMul`), in its type or body;
+- no amounts in a hypothesis: nothing it reaches, through the package's definitions, is `Nat` or its order and arithmetic (`LE.le`, `LT.lt`, `HAdd.hAdd`, `HSub.hSub`, `HMul.hMul`). An amount behind a prelude definition is caught (MV's strengthening; the scratch check reads the hypothesis's own type and body only);
 - F's telescope, as §1.2 states it;
 - each countermodel against F's telescope with one binder removed (defeq at reducible transparency, binder names and infos aside);
 - each fit's shape, witness and facts, and the countermodel naming the same facts;
 - F's proof and what it reaches;
-- the certificate's type, and the recovery applying F;
-- the discharge condition, against the flag the record declares for the row.
+- the certificate's type, in either order, with the row's side at full universe generality; the recovery's head, under its binders, being F;
+- the discharge condition, required of every standing-2 entry. The scratch check takes a flag per form only because it also checks row 5's form, which is no entry.
 
-**Where the tests run.** The dump drops `Init`'s constants, so from the dump the amounts test cannot run and "names only `Init`" cannot be told from "names nothing". MV has proposed two dump fields, `eq` and `x`, that would carry what these tests read; they need the coordinator's yes. Until then the Lean check runs the tests, and MV records its result.
+**Where the tests run.** The dump drops `Init`'s constants, so from the dump the amounts test cannot run, and "names only `Init`" cannot be told from "names nothing". So MV runs the check itself: `tools/research/boundary_check.lean`, on MV's branch (`mv-status`), the scratch check generalized.
+- It reads the record's standing-2 entries from JSON and reports every failure of every entry.
+- master_laws.py runs it in the core run's environment, restored from the checker cache.
+- No dump field is needed.
 
-**For a derived row**, MV checks from the cache that Y passes the name test and that the row reaches Y and each named bridge.
+The scratch check stays as this study's evidence. The record cites MV's check once it lands.
 
-**MV's field.** MV's owner's draft keys a standing-2 row by `{hypothesis, countermodel, fit}` for each hypothesis, with `recovery` and `certificate`, and counts the standings in `counts_at_boundary`.
+**For a derived row**, MV checks D1–D5 from the cache, and the bridges' shape in Lean (§1.1).
+
+**MV's field.** All names are full Lean names. The keys are:
+- for a derived row: `law` (a list), `bridges` and `support`;
+- for a standing-2 row: one `{hypothesis, countermodel, fit}` per hypothesis, with `recovery`, `certificate` and optional `bridges`;
+- for a reading: optional `relational_part`, which places nothing;
+- for the counts: the standings in `boundary.counts`, and the master-law dependence of the record's own laws in `counts_at_boundary_record`.
 
 **Axioms.** Every declared item is in the core, so its axiom report is empty. The check itself imports `Lean`, so it is periphery: it lands with this study or with MV's tools, outside the package's `Becoming/`.
 
@@ -199,10 +212,12 @@ For Y, F and a countermodel, the item is its statement, read directly with no un
 [boundary_table.py](boundary_table.py) joins four sources for each distinct central declaration:
 - **The measure's row:** dependence, category, master laws and EC6's reason.
 - **Where balance enters:** `Flow`'s anchors in the statement (the type and the definitions it unfolds), or only in the proof; whether the prelude's counting law is the only balance anchor; and whether the statement writes balance out, its own type naming `Dependence.level`, `Flow.taken` and `Flow.given`.
-- **Grammar reach, by MV's walk** (master_laws.py), the measure's: from the declaration through every constant its type and proof use, stopping only at a «» name.
-  - A grammar law is a «» theorem of a `Becoming.Grammar*` module; any other «» constant of one is a grammar term.
+- **Grammar reach, by MV's walk** (master_laws.py), the measure's: from the declaration through every constant its type and proof use, stopping only at a «» name. Lean's generated auxiliaries, such as `«及».brecOn`, are walked through and never counted, by MV's pattern.
+  - A grammar law, here, is a «» theorem of a `Becoming.Grammar*` module; any other «» constant of one is a grammar term. MV's predicate adds content tests (§1.1). The record takes MV's, and the reach figure is the same, 44.
   - A «» name declared elsewhere is listed apart and not counted. No central row reaches one.
   - A `Grammar*` constant without a «» name, such as GrammarLaws' list and number helpers or `kept_onward`, is walked through, so what it reaches counts.
+
+  Rule 1, with balance written out, agrees with MV's on all 118 rows (MV's probe, on GW's core run).
 - **F5's items:** with F5's class for the row.
 
 Every rule reads the statement or a fact recorded apart, namely the measure's reach or F5's verified items. The rules, in order:
@@ -213,7 +228,7 @@ Every rule reads the statement or a fact recorded apart, namely the measure's re
 
 **Proof-only facts.** Where only the proof reaches balance or the prelude's counting law, the table records that in the row's `balance` field and does not place the row by it.
 
-**The readings.** `HAND` gives the readings, each with the result that places it. The table shows what the rule would give beside each one (`rule_would_give`). Forty-one rows carry a reading. For 39 of them it differs from the rule: 31 are rows that rule 4 leaves unplaced and their statements place, and 8 move from connected to derived. `NOTES` adds to a rule's basis without changing the standing; row 5's note names its relational part.
+**The readings.** `HAND` gives the readings, each with the result that places it. The table shows what the rule would give beside each one (`rule_would_give`). Forty-two rows carry a reading. For 39 of them it differs from the rule: 31 are rows that rule 4 leaves unplaced and their statements place, and 8 move from connected to derived. Readings equal to the rule are allowed. Row 5's is one: it keeps "balance in its statement" and names its relational part (`relational_part`).
 
 ## 3. The connected rows
 
@@ -223,27 +238,25 @@ An independent reader checked against its Lean each of the 31 rows that then rea
 
 The first review rechecked the eight cases (REVIEW-U4-BOUNDARY, B3).
 
-**Eight are cases, and need no new Lean.** Each proof already is the law at the model's relation. It goes through bridges that hold for every instance of the model's parameters and add no hypothesis. The record declares the law and names the bridges, and the rows are derived.
+**Eight are cases, and need no new Lean.** Each proof already is the law at the model's relation. The record declares the law and names the closed set, and the rows are derived. The split into bridges and support is MV's, from the Lean (BOUNDARY-FIELD.md §6).
 
-| Row | The law it is a case of | At | Principal bridges |
-|---|---|---|---|
-| `Flow.beyond_gives_nothing` | `«所闭之界»` | R = `L.FedFrom W` | `FedFrom` and `FedBy` unfolded; one prelude step, ¬ 0 < n → n = 0 |
-| `Flow.withinSystem_of_withinInfluence` | `«所闭之单调»` | R = `AffectedBy`, S = `Shares` | `shares_of_affectedBy`, an unfolding |
-| `Law.drawn_iff_not_returns` | `«定后有后则入当且仅当不返»` | R = `next x = y` | `drawn_iff_drawnIn` and `absorbing_iff_closed`; `reaches_iff_orbit` and `returns_iff_reaches`, by recursion |
-| `Law.lossless_iff_returns` | `«有限遍后定后则定前当且仅当皆返»` | R = `next x = y` | `lossless_iff_fixedBefore`, an unfolding; `returns_iff_reaches`, by recursion |
-| `Learning.goAlike_iff_lumped` | `«像定后当且仅当同行»` | the law's step, along π | `goAlikeUnder_iff_alike` and `lumped_iff_fixed_image`, unfoldings |
-| `Tolerance.answers_restores_iff` | `«承之迭»` | R = `up` | `answers` is `«承» up` by definition; `chain_iff_steps`, by recursion through `«迭之末步»`; the start instantiated at `allWithheld` |
-| `Withholding.withholding_spreads` | `«存承之迭»` | R = `up` | `waitsAll` by definition; `within_iff_withinSteps` through `chain_iff_steps`, by recursion |
-| `WithinMoves.after_course` | `«迭内之接»` | R = `Steps P` | `trace_steps` and `trace_iff_steps`, by recursion; `withinMoves_iff_withinSteps` |
+| Row | The law it is a case of | At | Bridges (equivalences) | Support |
+|---|---|---|---|---|
+| `Flow.beyond_gives_nothing` | `«所闭之界»` | R = `L.FedFrom W` | none: `FedFrom` and `FedBy` unfold | `eq_zero_of_not_pos`, the prelude's ¬ 0 < n → n = 0 |
+| `Flow.withinSystem_of_withinInfluence` | `«所闭之单调»` | R = `AffectedBy`, S = `Shares` | none | `Flow.shares_of_affectedBy`; `WithinClosure.mono`, the law at Frame's closure |
+| `Law.drawn_iff_not_returns` | `«定后有后则入当且仅当不返»` | R = `next x = y` | `Law.drawn_iff_drawnIn`, `Law.absorbing_iff_closed`, `Law.reaches_iff_orbit`, `Law.returns_iff_reaches`, `Law.returns_iff`, `Branching.law_reach_iff`, `Branching.law_trace_iff` | `Law.reaches_of_orbit`, `Law.orbit_add`, `Law.orbit_shift`, `Law.next_fixed`, `Law.next_total`, `Branching.law_trace_of`, `Branching.units_length` |
+| `Law.lossless_iff_returns` | `«有限遍后定后则定前当且仅当皆返»` | R = `next x = y` | `Law.lossless_iff_fixedBefore`, `Law.lossless_iff`, and the five after `Law.absorbing_iff_closed` above | the same seven |
+| `Learning.goAlike_iff_lumped` | `«像定后当且仅当同行»`, using `«同行之逐点»` too | the law's step, along π | `goAlikeUnder_iff_alike`, `Learning.lumped_iff_fixed_image` | none |
+| `Tolerance.answers_restores_iff` | `«承之迭»`, using `«迭之末步»` too | R = `up`; `answers` is `«承» up` by definition; the start at `allWithheld` | `Withholding.chain_iff_steps`, `Withholding.answers_closed`, `Tolerance.worst_start` | `Tolerance.KeepsInclusion.course`, `Tolerance.KeepsInclusionInto.course`, `Tolerance.answers_keeps`, `Withholding.Chain.last`, `Withholding.Chain.last_of_eq`, `Withholding.Chain.zero_eq` |
+| `Withholding.withholding_spreads` | `«存承之迭»`, using `«迭之末步»` too | R = `up`; `waitsAll` by definition | `Withholding.within_iff_withinSteps`, `Withholding.chain_iff_steps`, `Withholding.waitsAll_closed` | `Withholding.Chain.last`, `Withholding.Chain.last_of_eq`, `Withholding.Chain.zero_eq` |
+| `WithinMoves.after_course` | `«迭内之接»` | R = `Steps P` | `trace_iff_steps`, `withinMoves_iff_withinSteps` | `trace_steps` |
 
-**The closed sets.** MV's probe adds these steps of the principal bridges, which the record names with them:
-- `withinSystem_of_withinInfluence`: `WithinClosure.mono`.
-- `drawn_iff_not_returns`: `Law.returns_iff`, `reaches_of_orbit`, `orbit_add`, `orbit_shift`, `next_fixed`, `next_total`, `Branching.law_reach_iff`, `law_trace_iff`, `law_trace_of` and `units_length`.
-- `lossless_iff_returns`: `Law.lossless_iff`, `reaches_iff_orbit`, and the same ten.
-- `answers_restores_iff`: `Tolerance.KeepsInclusion.course`, `KeepsInclusionInto.course`, `answers_keeps`, `worst_start`, `Withholding.answers_closed`, `Chain.last`, `Chain.last_of_eq` and `Chain.zero_eq`.
-- `withholding_spreads`: `Withholding.waitsAll_closed`, `Chain.last`, `Chain.last_of_eq` and `Chain.zero_eq`.
+**What changed from the earlier tables.**
+- Three lemmas this design called principal bridges are implications, so they go to support: `eq_zero_of_not_pos`, `shares_of_affectedBy` and `trace_steps`.
+- The review reads each support lemma as §1.1 asks. A row whose support adds a hypothesis the row lacks stays connected.
+- None of the eight is a forwarder of its law, none has a central declaration among its lemmas, and none has a balance anchor in its closure.
 
-Five of the eight use bridges proved by recursion. The test of §1.1 admits all five, since each bridge holds at every instance of the model's parameters and adds no hypothesis.
+Five of the eight use bridges proved by recursion. The test of §1.1 admits all five, since each holds at every instance of the model's parameters and adds no hypothesis.
 
 **Two rows are cases of laws not yet on the grammar.**
 - **`Flow.mutuallyDependent_iff_reach`** is exactly `WithinClosure.converse`, `«所闭» («逆» R) f g ↔ «所闭» R g f` (Response.lean:91).
@@ -296,6 +309,10 @@ The rows in each group are in the reading's table, and each row's `reading` fiel
     9. a degenerate form whose one hypothesis is its conclusion.
 
     The name test is controlled as well. It admits `Nat`, the prelude's `total`, `«际»` and `«则»`. It refuses `Generative.Process`, `Flow.taken`, `U4Boundary.GivenTo` (a hypothesis, admitted only in its own form's items), and a «» name declared off the grammar.
+  - **MV's run of its generalization**, read-only, on this scratch build:
+    - row 17 passes, its recovery using only `outside_leaves_no_offspring`, `And.left` and `And.right`;
+    - row 5's form fails only the discharge condition, through `Flow.descends_of_comes`;
+    - the nine controls, adapted, fail as they should, with 12 more controls and 10 name-test queries.
   - **Names.** Lever 2's scratch names `*_on_root` stated a wrong meaning under the strict reading. The new forms are named for what they state, and the leaf takes the core's vocabulary at its claim.
 - **Rows 13 and 14** stay at amounts, with rows 1–3, 7 and 8. A relational restatement of cancellation is not proposed, since cancellation is an equation of sums.
 - **`Branching.loss_passes_juncture`** moves to derived if the grammar gains a law of junctures. The leaf's design weighs whether it should. It takes the law only if rule 9 holds: the law must be one of the grammar that more than this row uses, generalized below, not one set beside it. Otherwise the row keeps its distance, with its reason. OU's owner reads that decision in the leaf's design.
@@ -320,12 +337,12 @@ The rows in each group are in the reading's table, and each row's `reading` fiel
 
 ## 5. Order and owners
 
-1. **MV's field and verification.** MV's owner has drafted the spec on the tests of §1.5 (draft 3). Per declaration it carries a standing or a distance label, and:
-   - for derived, the declared law and the bridges' closed set;
-   - for standing 2, F, each hypothesis with its countermodel and fit, the recovery, and the certificate;
-   - for standing 3, the not-entailed theorem.
+1. **MV's field and verification.** MV's owner has drafted the spec (draft 3, `mv-status` `0a9e3a351`, taking every finding of draft 2's re-check), and has written and run the Lean check. Per declaration the field carries a standing or a distance label, and:
+   - for derived, the laws, bridges and support;
+   - for standing 2, F, each `{hypothesis, countermodel, fit}`, the recovery, the certificate and any bridges;
+   - for the premises of the ethics, listed apart, the premise and its not-entailed theorem, if any.
 
-   MV verifies from the cache what the cache can show (§1.5), and records the Lean check's result for the rest. The spec is reviewed and lands first.
+   MV verifies from the cache what the cache shows, and runs the Lean check for the rest (§1.5). The spec is reviewed and lands first, after AJ6b's clause.
 2. **HE2's list**, for the next near-full rebuild. OU's owner has put both items on the board (`14c7c0cdf`):
    - `«所闭之逆»`, with `WithinClosure.converse` re-proved through it by Response's owner;
    - the two halves of `Flow.withinCoupling_reads_iff`, as `«借步之所闭在二所闭»` and `«二所闭在借步之所闭»`, re-proved by SelectionPool's owner.
@@ -338,7 +355,7 @@ The rows in each group are in the reading's table, and each row's `reading` fiel
 
 - The strict forms are scratch, not package Lean. The leaf is not claimed, and no reviewer has read this revision of the forms or the check.
 - The juncture law is not weighed yet.
-- MV's field is drafted, not landed. The dump fields `eq` and `x` wait for the coordinator.
+- MV's field (draft 3) and its Lean check are not landed.
 
 ## 7. The reviews, and what was taken
 
@@ -373,7 +390,7 @@ The rows in each group are in the reading's table, and each row's `reading` fiel
 | 6: what the forms establish | §1.2 says it in those terms. Lever 2's model witnesses stay beside the root countermodels, and §0 says the edge is not nearness to the grammar |
 | 7: smaller points | The prelude's `Naturals.succ_ne_zero` is used. The leaf imports `Becoming.Grammar`, not GrammarLaws. "In the core", not "in the core leaf". The check tests the certificates and F's proof. The check lands outside the package's `Becoming/` (§1.5, §4) |
 
-### MV's owner's reading (draft 3 of MV's field)
+### MV's owner's reading (drafts 2 and 3 of MV's field)
 
 | Point | Taken |
 |---|---|
@@ -382,7 +399,15 @@ The rows in each group are in the reading's table, and each row's `reading` fiel
 | "balance, represented" names the measure's category, not this standing | The standing is "balance in its statement" |
 | `kept_onward`'s wording; the walk | The walk is the measure's, stopping only at «» names. `kept_onward` is described neutrally, and the table's list of unnamed laws is dropped (§0, §2) |
 | Standing 2's fields | `{hypothesis, countermodel, fit}`, `recovery`, `certificate`; the counts in `counts_at_boundary` (§1.5) |
-| Dump fields | `eq` and `x` are proposed, and wait for the coordinator (§1.5) |
+| Dump fields | Withdrawn in draft 3: MV runs the Lean check itself, so the coordinator's yes is not needed (§1.5) |
+| Draft 3: the closed set splits into bridges, equivalences checked in Lean, and support, which the review reads; `law` is a list | §1.1. §3's table is MV's split; three of the earlier "principal bridges" are implications and go to support |
+| Draft 3: D5 reads the row's whole closure for balance anchors | §1.1; the eight pass, and the four connected rows that fail it stay connected |
+| Draft 3: standing 3 is empty, since the condition is not stated on the root and C has no not-entailed theorem | §1.3 is corrected; it no longer says the condition "stands here" |
+| Draft 3: `«及».brecOn` is a generated auxiliary, never a law | The table walks through auxiliaries by MV's pattern; no label changes (§2) |
+| Draft 3: `kept_onward` is not a grammar law by content | §0 says so; reach is unchanged |
+| Draft 3: the amounts test reads through the package's definitions | Confirmed, and §1.5 says so; every hypothesis of the two forms still passes |
+| Draft 3: F names a «» term and no closed value; the recovery's head is F; the certificate at full universe generality, in either order | §1.2 and §1.5 |
+| Draft 3: a reading equal to the rule, with `relational_part` | Row 5's reading (§2), naming its relational part |
 
 ### OU's owner's reading of this revision
 
@@ -392,3 +417,5 @@ The rows in each group are in the reading's table, and each row's `reading` fiel
 | The juncture law joins the leaf only under rule 9 | §4 |
 | The record meets the release gate's item 3 by its second branch, and says so only once it has landed | §5. U1's interface laws stay open |
 | The table is rerun on main after GW | Done: byte-identical output, no new central declaration (status) |
+| `kept_onward` is not a grammar law under MV's content test; the earlier "qualifies" is withdrawn | §0, finding 2; reach is unchanged |
+| Nothing should say the condition is stated on the root, or that C stands at standing 3 | §1.3 |

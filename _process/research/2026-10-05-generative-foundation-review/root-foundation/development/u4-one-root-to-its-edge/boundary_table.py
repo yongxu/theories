@@ -23,7 +23,7 @@ distinct central declarations of COVERAGE.json:
 
 A measurement of Lean dependency joined to readings; the readings are the design's, for review.
 """
-import json, pickle, subprocess, sys, tempfile
+import json, pickle, re, subprocess, sys, tempfile
 from pathlib import Path
 
 DEV = '_process/research/2026-10-05-generative-foundation-review/root-foundation/development'
@@ -39,11 +39,23 @@ BELOW = ['counting']
 DISTANCES = ['connected', 'witnessed at its model', 'balance in its statement', 'amounts', 'at a represented model',
              'own carrier', 'at its model', 'free significance']
 UNPLACED = ['unplaced']
+# Lean's generated auxiliaries, matched on the last name component: MV's pattern (BOUNDARY-FIELD.md §3.0, probe.py's
+# AUX), which is normative. Every walk goes through them; none is a law.
+AUX = re.compile(r'^(match_\d+(_\d+)*|_proof_\d+|proof_\d+|eq_\d+|eq_def|sizeOf_spec|_sizeOf_\d+|_sizeOf_inst|injEq|inj|'
+                 r'brecOn|below|binductionOn|casesOn|recOn|rec|noConfusion|noConfusionType|ctorIdx|toCtorIdx|'
+                 r'ctorElim|ctorElimType|splitter|_unsafe_rec|_sunfold|_flat_ctor|_aux_\d+|_default|elim)$')
 # Balance written out as an equation: a statement naming all three directly.
 WRITTEN = ['Becoming.Dependence.level', 'Becoming.Flow.taken', 'Becoming.Flow.given']
 
 # Rows the rules leave to a reading: declaration -> (standing, basis).
 HAND = {
+    # Lever 2's row 5: a reading equal to the rule's label (MV's field allows it), naming its relational part.
+    'Flow.no_new_dependence': ('balance in its statement',
+        'writes balance out in its statement, as an equation; row 5: its relational part is the strict root form '
+        'descent_forms_no_dependence (boundary-scratch), with lever 2\'s form no_new_dependence_of_given and its '
+        'witnesses Ungiven, Uninherited, Held, Standing; the recovery meets "given to" from the balance only through '
+        'Flow.descends_of_comes, amount reasoning, so it fails the discharge condition '
+        f'(DESIGN-BOUNDARY.md §1.2; {L2} §5, §10)'),
     # Lever 2's row 17: its strict root form, outside_leaves_no_offspring (boundary-scratch), passes the Lean check,
     # its recovery meeting the discharge condition; standing 2 when the leaf lands (DESIGN-BOUNDARY.md §1.2, §4).
     'GroupEnding.Flow.all_end': ('witnessed at its model',
@@ -138,13 +150,8 @@ HAND = {
 }
 
 # Rows EC6 calls definitional or representational: they keep the standing F5's items give them (U2), flagged.
-# What a row's basis adds to the rule that places it.
-NOTES = {
-    'Flow.no_new_dependence': 'row 5: its relational part is the strict root form descent_forms_no_dependence '
-        '(boundary-scratch), with lever 2\'s form no_new_dependence_of_given and its witnesses Ungiven, Uninherited, '
-        'Held, Standing; the recovery meets "given to" from the balance only through Flow.descends_of_comes, amount '
-        f'reasoning, so it fails the discharge condition (DESIGN-BOUNDARY.md §1.2; {L2} §5, §10)',
-}
+# A reading's relational part (MV's optional key): a strict root form recorded in the row's basis, placing nothing.
+RELATIONAL = {'Flow.no_new_dependence': 'Becoming.U4Boundary.descent_forms_no_dependence'}
 
 DEFINITIONAL = {
     'Web.roles_supported': 'a representation lemma of the one-kind construction roles',
@@ -198,7 +205,8 @@ def proof_closure(C, deps, n):
 
 def grammar_reach(C, deps, n):
     """MV's walk (master_laws.py): from a declaration through the constants its type and proof use, every constant
-    expanded except a «» name, where the walk stops. A grammar law is a «» theorem of a Becoming.Grammar* module; a
+    expanded except a «» name, where the walk stops; Lean's generated auxiliaries (AUX, such as `«及».brecOn`) are walked
+    through, never stopped at or counted. A grammar law is a «» theorem of a Becoming.Grammar* module; a
     grammar term, any other «» constant of one; a «» name declared elsewhere is listed apart, not counted. A Grammar*
     constant without a «» name (GrammarLaws' list and number helpers, kept_onward) is walked through, so what it
     reaches counts."""
@@ -207,7 +215,7 @@ def grammar_reach(C, deps, n):
         for b in deps.get(stack.pop(), ()):
             if b in C and b not in seen:
                 seen.add(b)
-                if '«' in b:
+                if '«' in b and not AUX.match(b.rsplit('.', 1)[-1]):
                     if not C[b]['m'].startswith('Becoming.Grammar'):
                         off.add(b)
                     else:
@@ -276,8 +284,6 @@ def main():
         short = n.removeprefix('Becoming.')
         rule = standing(r, bal, items)
         st, basis = HAND.get(short, rule)
-        if short in NOTES:
-            basis += '; ' + NOTES[short]
         if short in DEFINITIONAL:
             basis += f'; definitional ({DEFINITIONAL[short]})'
         gthm, gdef, goff = grammar_reach(C, deps, n)
@@ -286,14 +292,14 @@ def main():
                       'grammar_laws': gthm, 'grammar_terms': gdef, 'named_off_the_grammar': goff,
                       'f5': [{'item': it['declaration'].removeprefix('Becoming.'), 'models': it['models'], 'record': it['record']}
                              for it in items],
-                      'standing': st, 'basis': basis, 'definitional': short in DEFINITIONAL, 'f5_class': f5_class(r, items), 'reading': read.get(short), 'by': 'reading' if short in HAND else 'rule',
+                      'standing': st, 'basis': basis, 'relational_part': RELATIONAL.get(short), 'definitional': short in DEFINITIONAL, 'f5_class': f5_class(r, items), 'reading': read.get(short), 'by': 'reading' if short in HAND else 'rule',
                       'rule_would_give': rule[0] if short in HAND and rule[0] != st else None})
     order = ON_EDGE + BELOW + DISTANCES + UNPLACED
     unknown = sorted({x['standing'] for x in table} - set(order))
     if unknown:
         sys.exit(f'standings outside the design: {unknown}')
     counts = {s: sum(x['standing'] == s for x in table) for s in order}
-    stale = sorted((set(HAND) | set(NOTES) | set(DEFINITIONAL)) - {x['declaration'] for x in table})
+    stale = sorted((set(HAND) | set(DEFINITIONAL)) - {x['declaration'] for x in table})
     f5_order = ['reaches the grammar', 'at a represented model', 'own carrier', 'the rest']
     f5 = {c: sum(x['f5_class'] == c for x in table) for c in f5_order}
     against = {s: {c: n for c in f5_order if (n := sum(x['standing'] == s and x['f5_class'] == c for x in table))}
