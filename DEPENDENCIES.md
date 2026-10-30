@@ -5,13 +5,14 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-505 registered results: 474 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1166 curated edges join 432 results to the results they draw on.
+506 registered results: 475 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1168 curated edges join 433 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
 ## Edges
 
 - [a-code-formed-between-formations][] ← <a id="a-code-formed-between-formations--what-a-commuting-law-keeps-apart"></a>[what-a-commuting-law-keeps-apart][] · <a id="a-code-formed-between-formations--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="a-code-formed-between-formations--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="a-code-formed-between-formations--acquired-binding-compositional-use"></a>[acquired-binding-compositional-use][]
+- [a-code-held-as-counts][] ← <a id="a-code-held-as-counts--a-code-formed-between-formations"></a>[a-code-formed-between-formations][] · <a id="a-code-held-as-counts--free-energy-bound-in-counts"></a>[free-energy-bound-in-counts][]
 - [a-commuting-learner-drives-no-unread-choice][] ← <a id="a-commuting-learner-drives-no-unread-choice--what-a-commuting-law-keeps-apart"></a>[what-a-commuting-law-keeps-apart][]
 - [a-coupling-saturated-by-what-it-has-carried][] ← <a id="a-coupling-saturated-by-what-it-has-carried--how-often-couplings-act"></a>[how-often-couplings-act][] · <a id="a-coupling-saturated-by-what-it-has-carried--what-a-cut-loses"></a>[what-a-cut-loses][] · <a id="a-coupling-saturated-by-what-it-has-carried--how-loops-form"></a>[how-loops-form][]
 - [a-formations-own-course][] ← <a id="a-formations-own-course--selection-through-couplings"></a>[selection-through-couplings][] · <a id="a-formations-own-course--identification-where-bounded"></a>[identification-where-bounded][]
@@ -445,6 +446,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [worlds-are-runs][] ← <a id="worlds-are-runs--process-and-frame-as-readings"></a>[process-and-frame-as-readings][] · <a id="worlds-are-runs--premises-read-off-the-exchange"></a>[premises-read-off-the-exchange][] · <a id="worlds-are-runs--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="worlds-are-runs--how-much-difference-arrives"></a>[how-much-difference-arrives][] · <a id="worlds-are-runs--space-and-its-parts"></a>[space-and-its-parts][] · <a id="worlds-are-runs--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="worlds-are-runs--necessarily-drawn-is-not-returning"></a>[necessarily-drawn-is-not-returning][]
 
 [a-code-formed-between-formations]: theories/becoming/results/records/a-code-formed-between-formations.md
+[a-code-held-as-counts]: theories/becoming/results/records/a-code-held-as-counts.md
 [a-commuting-learner-drives-no-unread-choice]: theories/becoming/results/records/a-commuting-learner-drives-no-unread-choice.md
 [a-coupling-saturated-by-what-it-has-carried]: theories/becoming/results/records/a-coupling-saturated-by-what-it-has-carried.md
 [a-formations-own-course]: theories/becoming/results/records/a-formations-own-course.md

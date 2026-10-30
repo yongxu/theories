@@ -6,6 +6,11 @@
    "base": "general",
    "note": "SharedCodes: hearing-only code change keeps agreement; 约定俗成"
   },
+  "a-code-held-as-counts": {
+   "region": "collective",
+   "base": "general",
+   "note": "CountedCodes UE25: the code law for beliefs held as counts; under a law keeping the exchange of agents with a renaming of the words, two exchanged agents never share a uniquely greatest word where the renaming moves every word; learning from what is heard keeps the symmetry; the free-energy bound in counts is unchanged by a renaming permuting the words"
+  },
   "a-commuting-learner-drives-no-unread-choice": {
    "region": "collective",
    "base": "general",
@@ -2792,6 +2797,11 @@
    "region": "map",
    "base": "frame",
    "note": "counted work, kept properties, reserved exit"
+  },
+  "Becoming.CountedCodes": {
+   "region": "collective",
+   "base": "general",
+   "note": "UE25 the code law for beliefs held as counts (05 §9)"
   },
   "Becoming.Counterfactual": {
    "region": "knowing",

@@ -244,6 +244,7 @@ import Becoming.Novelty
 import Becoming.Reading
 import Becoming.PlaceTransitionNets
 import Becoming.SharedCodes
+import Becoming.CountedCodes
 import Becoming.ExchangePremises
 import Becoming.OverExchange
 import Becoming.Readings
@@ -3343,6 +3344,29 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   the course of senses is, exactly where the code tells the senses apart; where resolution reads
   every encoded sequence, it reads the course of forms of every course of words as its course of
   meanings, step by step.
+* `Becoming.CountedCodes` (L1): the law of a code formed between formations for beliefs held as
+  counts, as the principle's agents hold a likelihood of words given meanings. A belief state gives
+  each agent, for each meaning, a count of each word; `CountedCodes.UniqueGreatest c w` says `w`
+  alone has the greatest count. In any strict order, two words are never both uniquely greatest
+  (`CountedCodes.unique_greatest_not_two`), and counts a renaming moving every word fixes have none
+  (`CountedCodes.fixed_no_unique_greatest`). Under a law keeping the exchange of agents together
+  with a renaming of the words (`CountedCodes.Renamed`), from a start related to itself, where the
+  renaming at a meaning is onto, an agent's uniquely greatest word, renamed, is that of the agent
+  the exchange gives it at every step (`CountedCodes.unique_greatest_exchanged_run`); so where the
+  renaming moves every word and is onto, or the exchange is an involution, two exchanged agents
+  never hold one word as each one's uniquely greatest (`CountedCodes.never_shared`,
+  `CountedCodes.never_shared_of_involution`). Learning from what is heard, the hearer given the
+  meaning, keeps the relation where the speaker map commutes with the exchange and the rule reads
+  count by count and commutes with renaming (`CountedCodes.hear_keeps`); adding what is heard is
+  such a rule where what is heard is (`CountedCodes.addHeard_keeps`); a weight on what is heard read
+  off the hearer's whole model keeps it where the renaming leaves the weight unchanged
+  (`CountedCodes.gatedHear_keeps`). In natural counts, over a listing a renaming permutes, a count
+  belief reaches the free-energy bound exactly where its renaming does for the renamed weights
+  (`CountedCodes.bound_invariant`), and under weights a renaming moving every word fixes, with a
+  positive total, a belief at the bound over a listing of every word has no uniquely greatest word
+  (`CountedCodes.minimizer_no_unique_greatest`). Witnesses: a preferred word in the order of
+  speaking, and an asymmetric start, each bring a shared uniquely greatest word. A leaf importing
+  `Becoming.SharedCodes` and `Becoming.FreeEnergyCounting` (board item UE25).
 * `Becoming.Likeness` (L1): the laws stated with equality, completed up to likeness, with no
   premise. A description carries a law up to likeness exactly where some equivalence
   registering the claims makes configurations go alike, the law stated with equality being the
