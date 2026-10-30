@@ -243,7 +243,7 @@ rI = build(
       "elsewhere; a coarse cell splits into the part the finer answer releases and the part it stops, each a total of "
       "whole fine cells; a total at most another term by term and below it at a member is below it; deciding a whole "
       "cell is worth at most splitting it where the part moved gains.",
-      '充分，依粗格：为一规则而持，为其止处加权之损与余处加权之得之总；一粗格分为细答所放之部与所止之部，各为整细格之总；逐项不逾而于一员居下之总居下；整断一格不逊于分之，当所移之部有得。',
+      '充分，依粗格：为一规则而持，为其止处加权之损与余处加权之得之总；一粗格分为细答所放之部与所止之部，各为整细格之总；逐项不逾而于一员居下之总居下；整断一格之值不高于分之，当所移之部有得。',
       lv('after_rule_total', 'total_cond_by_cells', 'ite_split_rule', 'ite_cond_split', 'within_split',
          'within_rule_split', 'weightedOn_by_cells', 'total_lt_of_mem', 'cond_zero_le', 'split_cell_le',
          'cell_refined_le', 'refined_le_of_splitsKeep')),
@@ -390,11 +390,16 @@ rI = build(
             "on that scale; the reference valuation and the holding formation's model supplied; values read as "
             "probabilities and differences only where valid.",
       'zh': '权与值为自然数，值之尺度为所予，故诸值之比依此尺度；参照之值与持之形成之模型为所予；唯于有效处读为概率与差。'},
-     {'en': "For the split and its criteria, equality of cells decidable and cells listed once each, covering every "
-            "listed candidate's cell; for informing, the coarser map factoring through the finer on the holding "
-            "formation's listed candidates, and for the criterion over every refinement on both listings, the fine "
-            "cells covering both.",
-      'zh': '分与其判需格之等可判、诸格各列一次且覆每列候选之格；告之需较粗之映射于持之形成之列候选上经较细者而分解；于每一细分之判，于二列皆然，细格覆二列。'},
+     {'en': "Equality of cells decidable. The split needs the cells listed once each, covering every listed "
+            "candidate's cell; the residual's criteria need neither, and the told criterion only its cell list "
+            "covering the holding formation's listing.",
+      'zh': '格之等可判。分需诸格各列一次且覆每列候选之格；余缺之判二者皆不需，辨候选之判唯需其格之列覆持之形成之列。'},
+     {'en': "Informing needs the coarser map factoring through the finer on "
+            "the holding formation's listed candidates and the finer map's cells listed once each and covering, the "
+            "strict comparison the coarser map's as well; the criterion over every refinement needs the factoring on "
+            "both listings, the coarse cells listed once each and covering the holding formation's listing, and the "
+            "fine cells listed once each and covering both.",
+      'zh': '告需较粗之映射于持之形成之列候选上经较细者而分解，且较细映射之格各列一次而覆之，严格之比较需较粗者亦然；于每一细分之判，需二列皆分解，粗格各列一次且覆持之形成之列，细格各列一次且覆二列。'},
      {'en': "For the answer's sufficient conditions, its model the holding formation's and its valuation agreeing with "
             "the reference on one positive scale, net agreement the scale one, at every listed candidate of positive "
             "weight; own_least, revalued_lowers_iff, revaluing_gain and revaluing_gains_iff take its model to be the "
@@ -410,9 +415,9 @@ rI = build(
             "schedule.",
       'zh': '于载体：离散之步；候选之世界不为所论之行所改；示依其所示真滤之，其等可判；所呈之入依所予之更新改值，于诸例中即取所呈之态；答每步皆示，问与否皆然；持之形成之律唯读己态与答，于诸例中为固定之序。'},
      {'en': "Worth for one decision before any amount forgone; costs enter only as amounts forgone, counted in the "
-            "units of the weighted totals; the holding formation's moves change neither the world nor the reading "
-            "formation, so the worth of holding is counted on the answer as a rule, not along the courses.",
-      'zh': '一次抉择、未舍任何量前之值；费唯以所舍之量计入，以加权之总为单位；持之形成之行不改世界亦不改读之形成，故持之值以答为规则计之，非沿历程计之。'}],
+            "units of the weighted totals; the holding formation's going on, switching off and holding change neither "
+            "the candidate world nor the reading formation, so the worth of holding is counted on the answer as a rule, not along the courses.",
+      'zh': '一次抉择、未舍任何量前之值；费唯以所舍之量计入，以加权之总为单位；持之形成之续、止与持不改候选世界亦不改读之形成，故持之值以答为规则计之，非沿历程计之。'}],
     [{'en': "That a formation computes by these counts, or that its listing, weights and valuation are formed as "
             "supplied: they are supplied, their formation and warrant outside these counts.",
       'zh': '形成依此诸计而算，或其列、权与值如所予而成：皆为所予，其成与其据在此诸计之外。', 'kind': 'non-implication'},
@@ -466,11 +471,12 @@ rI = build(
            "differs from, incentives to withhold and to revise, before costs; coarse equilibrium communication "
            "(Crawford and Sobel 1982) differs. own_least with revalued_lowers_iff is a one-decision counterpart of "
            "current-reward-function evaluation's preservation incentive (Everitt et al. 2021, Claim 2): a reason to "
-           "keep the valuation from a decision-changing revision; no path-specific objective (Farquhar, Carey and "
+           "keep the valuation from a revision deciding a listed cell against its strict weighted preference; no "
+           "path-specific objective (Farquhar, Carey and "
            "Everitt 2022); answer_constant is the off-switch game's Equation 1 for a constant policy (Hadfield-Menell "
            "et al. 2017); the routes relate to induced preference shifts (Carroll et al. 2022). Readings, not "
            "containments.",
-     'zh': '以计：informed_le 于此抉择为 Blackwell（1953）比较之确定性细分、定抉择之一向；共模型时，SplitsKeep 沿列之分割之格，对应贝叶斯劝说中全然披露之凸性条件（Kamenica 与 Gentzkow 2011），最优之信号与均衡未表。AI 解读：参照与值相异时，读为扣告与改之诱因，未计其费；偏好相异下之粗略均衡通信（Crawford 与 Sobel 1982）与此不同。own_least 与 revalued_lowers_iff 为以当下奖励函数评估之保存之诱因（Everitt 等 2021，Claim 2）于一次抉择之对应：有护值免于改断之由；未构路径特定之目标（Farquhar 等 2022）；answer_constant 为关机博弈之 Equation 1 于恒定之策（Hadfield-Menell 等 2017）；二途与诱发之偏好之移（Carroll 等 2022）相关。皆为读，非包含。'},
+     'zh': '以计：informed_le 于此抉择为 Blackwell（1953）比较之确定性细分、定抉择之一向；共模型时，SplitsKeep 沿列之分割之格，对应贝叶斯劝说中全然披露之凸性条件（Kamenica 与 Gentzkow 2011），最优之信号与均衡未表。AI 解读：参照与值相异时，读为扣告与改之诱因，未计其费；偏好相异下之粗略均衡通信（Crawford 与 Sobel 1982）与此不同。own_least 与 revalued_lowers_iff 为以当下奖励函数评估之保存之诱因（Everitt 等 2021，Claim 2）于一次抉择之对应：有护值免于使某列格之断逆当下严格加权之偏之改值之由；未构路径特定之目标（Farquhar 等 2022）；answer_constant 为关机博弈之 Equation 1 于恒定之策（Hadfield-Menell 等 2017）；二途与诱发之偏好之移（Carroll 等 2022）相关。皆为读，非包含。'},
     ['a reading informed and revalued', '受告与改值之读', 'informing and revaluing a reading formation',
      '告与改读之形成之值', 'the valuation as state', '值为态', 'Becoming.ListingValuation.shortfall_split',
      'Becoming.ListingValuation.refining_never_lowers_iff'],

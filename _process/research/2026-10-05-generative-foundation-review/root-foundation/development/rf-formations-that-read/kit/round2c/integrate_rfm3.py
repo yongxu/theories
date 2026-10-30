@@ -12,12 +12,14 @@ Becoming name against the package's sources. Each edit is asserted to apply exac
 landing by plan_rfm3.py.
 integrate_rfm2.py, for RF-M.3.
 usage (from the checkout root of the landing worktree, clean): python3 -B <kit>/round2c/integrate_rfm3.py"""
+import datetime
 import json
 import re
 import shutil
 from pathlib import Path
 
 ROOT = Path.cwd()
+TODAY = datetime.date.today()
 HERE = Path(__file__).resolve().parent
 PKG = ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
 CH = ROOT / 'theories/becoming/chapters'
@@ -159,8 +161,8 @@ edit(ch7, "and a model that misses the true sign can rest without meeting the st
      "[AI reading]: on a shared model, by a reference other than the reading formation's current valuation, revaluing "
      "it to that reference, a valuation the supplied update need not reach, gains exactly where its answer decides a "
      "cell against that reference, while by its own current valuation no "
-     "revaluation gains and one that changes a decision loses, a reason to keep the valuation from revision, wanted "
-     "or not; and from different starts a route informing it and one revaluing it can give the same answers and end "
+     "revaluation gains and one that decides a listed cell against that valuation's strict weighted preference "
+     "loses, a reason to keep the valuation from such a revision, wanted or not; and from different starts a route informing it and one revaluing it can give the same answers and end "
      "in the same state ([03 §12](03-KNOWING.md#r-a-reading-informed-and-revalued)). Each result below holds for a "
      "stated protocol;")
 
@@ -179,7 +181,8 @@ edit(ch8, "counterexamples under a misspecified reward and contains none of them
      "thresholds of withholding against informing and of revaluing, and executable courses of informing and "
      "revaluing in one blanketed law with the valuation in state. Read [AI reading], evaluating by the reading "
      "formation's current valuation is a one-decision counterpart of current-reward-function evaluation (Everitt, "
-     "Hutter, Kumar and Krakovna 2021): no revaluation gains, and one that changes a decision loses, the preservation "
+     "Hutter, Kumar and Krakovna 2021): no revaluation gains, and one that decides a listed cell against the "
+     "current strict weighted preference loses, the preservation "
      "incentive their Claim 2 permits; no path-specific objective is constructed (Farquhar, Carey and Everitt 2022), "
      "and the routes are related to induced preference shifts (Carroll, Dragan, Russell and Hadfield-Menell 2022), "
      "with no criterion of legitimate change supplied. Compositions and general laws, with witnesses.\n")
@@ -203,7 +206,8 @@ edit(overview, "that a model missing the true sign can rest without meeting the 
      "revalued answer alike at every step and end in one state, so the answers and the final state do not tell "
      "whether the valuation changed. Read [AI reading]: under a reference the reading formation does not share, "
      "incentives to withhold and to revise, beside Bayesian persuasion; by its own current valuation, a reason to "
-     "keep that valuation from any revision that changes a decision, the counts form of current-reward-function "
+     "keep that valuation from any revision that decides a listed cell against its strict weighted preference, "
+     "the counts form of current-reward-function "
      "evaluation's preservation incentive ([a reading informed and "
      "revalued](chapters/03-KNOWING.md#r-a-reading-informed-and-revalued)).\n")
 
@@ -225,15 +229,16 @@ edit(dossier, "The reading formation's own state, a noisy reading and continuous
      "raises it exactly where the residual is positive. Read [AI "
      "reading], these are incentives to withhold and to revise, in counts and before costs, related to Bayesian "
      "persuasion (Kamenica and Gentzkow 2011); by the reading formation's current valuation, no revaluation gains and "
-     "one that changes a decision loses, a one-decision counterpart of current-reward-function evaluation's "
+     "one that decides a listed cell against its strict weighted preference loses, a one-decision counterpart of current-reward-function evaluation's "
      "preservation incentive (Everitt, Hutter, Kumar and Krakovna 2021, Claim 2), a reason to keep the valuation from "
      "revision, wanted or not. From different starts a route informing the reading formation and one revaluing it can "
      "answer alike and end in one state, so the answers do not tell which happened, and no criterion of legitimate "
      "change of a valuation is supplied (Carroll, Dragan, Russell and Hadfield-Menell 2022).\n")
 edit(dossier, "and Good's note in the British Journal for the Philosophy of Science, 1967).\n",
-     "and Good's note in the British Journal for the Philosophy of Science, 1967). RF-M.3's sentences, added on 30 "
-     "October 2026, were cold-read before its landing, and the works they cite were checked against their texts "
-     "(WORKS_CHECKED).\n")
+     "and Good's note in the British Journal for the Philosophy of Science, 1967). RF-M.3's sentences, added on "
+     f"{TODAY.day} {TODAY:%B} {TODAY.year}, were cold-read before its landing, and the works they cite were checked "
+     "against their texts (Kamenica and Gentzkow's paper in the American Economic Review, 2011, and arXiv 1908.04734 "
+     "and 2204.11966).\n")
 
 regions = ROOT / 'theories/becoming/results/data/regions.json'
 d = json.loads(regions.read_text(encoding='utf-8'))
