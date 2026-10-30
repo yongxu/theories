@@ -146,7 +146,7 @@ thresholds.
 
 **Readings** [AI reading]. To a model giving no positive weight to one strict sign, that sign's
 excess is nothing (`excess_pos_iff`), so holding for any rule stands at least as high as the move
-the model favors exactly where the rule falls short nowhere, and below it exactly where it falls
+the model favours exactly where the rule falls short nowhere, and below it exactly where it falls
 short (`threshold_go_iff`, `threshold_off_iff`, nothing forgone); under the reading that tells the
 candidate, holding and that move tie (`held_eq_go_iff`, `held_eq_off_iff`), and which is taken needs
 a rule for ties. For rules that are functions of the candidate, this is the off-switch paper's
