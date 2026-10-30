@@ -150,6 +150,7 @@ import Becoming.Selection
 import Becoming.Learning
 import Becoming.Unread
 import Becoming.Cascade
+import Becoming.RevisionRoutes
 import Becoming.ReadStages
 import Becoming.PropositionIdentity
 import Becoming.Hexagrams
@@ -2263,6 +2264,20 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   selection through the acts is one through those couplings (`Turns.cascade_through`), an upper
   bound on what the acts carry; copying carries only the first member's coupling
   (`Turns.Copying.reaches_first_only`). A leaf (board item RF).
+* `Becoming.RevisionRoutes` (L1): a revision of a formation's law, and the routes of keeping it.
+  The order of a gain and a loss at each plan (`RevisionRoutes.GainLoss`), its maximal plans
+  exactly characterized (`RevisionRoutes.GainLoss.maximal_iff`). At a revision, in natural numbers,
+  no route of keeping the law stands above the revision going through, ties included, exactly where
+  `k ρ V + c₀ T ≤ k₀ V + c ρ T` for every route (`RevisionRoutes.revised_maximal_iff`); at every loss
+  of every route exactly where `k ρ V + c₀ T ≤ k₀ V` (`RevisionRoutes.every_loss_iff`); at every value
+  and every loss exactly where every route keeps the law no more surely than the revision and
+  `c₀ T = 0` (`RevisionRoutes.every_value_loss_iff`), with some route and a positive total exactly
+  where `c₀ = 0` besides (`RevisionRoutes.every_value_loss_iff_of_route`); a route keeping the law more
+  surely stands above it once `c ρ T < V` (`RevisionRoutes.above_of_value_exceeds`); raising `k₀`,
+  all else held, never unseats a maximal revision (`RevisionRoutes.maximal_of_more_restored`). With
+  `T` the total, `V` the value of the law's later acting, `k₀` and `c₀` the revision's weight and loss,
+  `k ρ` and `c ρ` a route's. A model, so a leaf of the prelude; imported by `Becoming.ReadStages`
+  (board item RR).
 * `Becoming.ReadStages` (L1): complying when read and acting by its own law when not, in two
   stages. In natural numbers, that plan stands above every other exactly where the weight complying
   adds to being kept, times the value, exceeds the loss times the total, read as probabilities where
@@ -2277,7 +2292,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `2 k_O V + c T < k_C V`, with `T` the total,
   `k_C` and `k_O` the weights of being kept after complying and after acting by its own law when read,
   `V` the value and `c` the loss (`ReadStages.freshDraw_above_iff`), and a single mixture of the two
-  uniform plans never does (`ReadStages.mixture_never_above`). A leaf (board item RF).
+  uniform plans never does (`ReadStages.mixture_never_above`). It imports `Becoming.RevisionRoutes` and
+  takes its order from `RevisionRoutes.GainLoss`: complying at both stands where a revision of the
+  law would, with three routes of keeping it (`ReadStages.above_iff_routes`), and is maximal exactly
+  where `k_C V`, `k_O V` and `c T` are all nothing (`ReadStages.complyAtBoth_maximal_iff`). A leaf
+  (board items RF, RR).
 * `Becoming.PropositionIdentity` (L1): what identifying interderivable propositions (`propext`)
   keeps and loses, with no axiom. `propext`, as a proposition, holds exactly where every reading
   of propositions is lumped (`Learning.Lumped`) by interderivability, read through the two ends

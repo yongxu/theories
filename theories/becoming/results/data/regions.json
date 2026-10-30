@@ -979,7 +979,12 @@
   "identical-cells-under-a-descent-treating-them-alike": {
    "region": "collective",
    "base": "general",
-   "note": "FreeEnergyGuarantees UE16: under a descent reading no cell's number alike cells stay alike; with an exchangeable field, minima within one size come in exchanged pairs; against guaranteed differentiation (Friston and others 2015)"
+   "note": "FreeEnergyGuarantees UE16: under a descent reading no cell's number alike cells stay alike; with an exchangeable field, minima within one size come in exchanged pairs; against guaranteed differentiation (Friston and others 2015); UE24: under noise, in the periphery, the law stays exchangeable (identical-cells-under-noise)"
+  },
+  "identical-cells-under-noise": {
+   "region": "collective",
+   "base": "periphery",
+   "note": "CellsUnderNoise UE24: under kernels commuting with every rearrangement an exchangeable law stays exchangeable; the core's descent with an exchangeable field and noise of one law at every cell keeps it, which cell takes which place undecided (periphery)"
   },
   "identification-where-bounded": {
    "region": "knowing",
@@ -2395,6 +2400,11 @@
    "region": "knowing",
    "base": "general",
    "note": "ReadStages RF7: when complying when read and acting by its own law when not is best, in two stages; the exits; drawing afresh"
+  },
+  "when-no-route-stands-above-a-revision": {
+   "region": "significance",
+   "base": "general",
+   "note": "RR: when no route of keeping a law stands above a revision of it (07 §7); corrigibility as an incentive"
   },
   "when-the-runs-of-a-process-settle": {
    "region": "method",
@@ -3882,6 +3892,11 @@
    "region": "knowing",
    "base": "frame",
    "note": "registration history selects"
+  },
+  "Becoming.RevisionRoutes": {
+   "region": "significance",
+   "base": "general",
+   "note": "RR: a revision and the routes of keeping a law; GainLoss, the order ReadStages takes"
   },
   "Becoming.Roles": {
    "region": "root",

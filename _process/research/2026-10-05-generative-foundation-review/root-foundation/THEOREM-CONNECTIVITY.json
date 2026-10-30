@@ -1,11 +1,11 @@
 {
- "commit": "8284ae2154a583e93bb1d60d2dd5a005f5541617",
- "sources_match_commit": true,
+ "commit": "e332ae87a31ea39771bbdadaa08e659a2ef7c772",
+ "sources_match_commit": false,
  "core_receipt_at_commit": "20261030T152859.871907Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 357,
- "constants": 51515,
- "spine_theorems": 17380,
+ "tracked_modules": 358,
+ "constants": 51618,
+ "spine_theorems": 17413,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -33,12 +33,12 @@
   "proof through a base family": 216,
   "used by a theorem on the base": 5753,
   "instance on the base recorded": 159,
-  "apart: own vocabulary": 1911,
-  "apart: prelude-only statement": 161
+  "apart: own vocabulary": 1941,
+  "apart: prelude-only statement": 164
  },
- "apart": 2072,
- "apart_general_structure_by_design": 850,
- "apart_otherwise": 1222,
+ "apart": 2105,
+ "apart_general_structure_by_design": 872,
+ "apart_otherwise": 1233,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 120,
   "of them on the base": 81,
@@ -74,12 +74,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 1132,
- "apart_roots": 1132,
+ "apart_used_by_nothing": 1150,
+ "apart_roots": 1150,
  "apart_roots_by_category": {
-  "model-witness": 506,
+  "model-witness": 511,
   "support": 138,
-  "general-structure": 440,
+  "general-structure": 453,
   "calibration": 22,
   "restates": 14,
   "logical-strength": 12
@@ -197,13 +197,13 @@
    62,
    114
   ],
+  "Becoming.ReadStages": [
+   57,
+   57
+  ],
   "Becoming.FreeEnergyCounting": [
    55,
    55
-  ],
-  "Becoming.ReadStages": [
-   52,
-   52
   ],
   "Becoming.ReadingLoop": [
    51,
@@ -252,6 +252,10 @@
   "Becoming.Blanket": [
    28,
    33
+  ],
+  "Becoming.RevisionRoutes": [
+   28,
+   28
   ],
   "Becoming.Training": [
    27,
@@ -808,9 +812,9 @@
  },
  "rings": {
   "core": {
-   "modules": 340,
-   "theorems": 16608,
-   "apart": 1977,
+   "modules": 341,
+   "theorems": 16641,
+   "apart": 2010,
    "classes": {
     "statement on both families": 1084,
     "statement on Process/Frame/Run/Trace": 3337,
@@ -819,8 +823,8 @@
     "proof through a base family": 205,
     "used by a theorem on the base": 5392,
     "instance on the base recorded": 159,
-    "apart: own vocabulary": 1817,
-    "apart: prelude-only statement": 160
+    "apart: own vocabulary": 1847,
+    "apart: prelude-only statement": 163
    }
   },
   "instances": {
@@ -941,7 +945,7 @@
   "proof through a base family": 5,
   "used by a theorem on the base": 12,
   "instance on the base recorded": 1,
-  "apart: own vocabulary": 42
+  "apart: own vocabulary": 43
  },
  "records_resting_only_on_apart_theorems": [
   {
@@ -1195,6 +1199,12 @@
    "id": "when-complying-when-read-is-best",
    "modules": [
     "Becoming.ReadStages"
+   ]
+  },
+  {
+   "id": "when-no-route-stands-above-a-revision",
+   "modules": [
+    "Becoming.RevisionRoutes"
    ]
   }
  ],
@@ -11021,6 +11031,34 @@
   "Becoming.Turns.separates_at": "apart: own vocabulary",
   "Becoming.Turns.Copying.readsOnlyActs": "apart: own vocabulary",
   "Becoming.Turns.Copying.reaches_first_only": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.GainLoss.above_irrefl": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.GainLoss.above_asymm": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.GainLoss.maximal_iff": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.above_irrefl": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.above_asymm": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.route_above_iff": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.revised_maximal_iff": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.pos_of_mul_lt_mul": "apart: prelude-only statement",
+  "Becoming.RevisionRoutes.lt_of_mul_lt_mul": "apart: prelude-only statement",
+  "Becoming.RevisionRoutes.above_needs": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.maximal_of_no_value": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.maximal_of_kept_le": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.maximal_of_certain": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.maximal_of_more_restored": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.every_loss_iff": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.every_loss_iff_kept": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.above_of_value_exceeds": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.above_at_some_value": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.above_of_more_value": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.every_value_iff": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.every_value_loss_iff": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.eq_zero_of_mul_eq_zero": "apart: prelude-only statement",
+  "Becoming.RevisionRoutes.every_value_loss_iff_of_route": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.Example.twoRoutes_valid": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.Example.twoRoutes_open_not_above": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.Example.twoRoutes_complying_above": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.Example.both_at_loss_ten": "apart: own vocabulary",
+  "Becoming.RevisionRoutes.Example.restored_every": "apart: own vocabulary",
   "Becoming.ReadStages.above_irrefl": "apart: own vocabulary",
   "Becoming.ReadStages.above_asymm": "apart: own vocabulary",
   "Becoming.ReadStages.complyThenOwn_best_iff": "apart: own vocabulary",
@@ -11048,6 +11086,11 @@
   "Becoming.ReadStages.kept_alike": "apart: own vocabulary",
   "Becoming.ReadStages.uniform_best_iff": "apart: own vocabulary",
   "Becoming.ReadStages.uniform_tie": "apart: own vocabulary",
+  "Becoming.ReadStages.gain_asRoute": "apart: own vocabulary",
+  "Becoming.ReadStages.loss_asRoute": "apart: own vocabulary",
+  "Becoming.ReadStages.above_iff_routes": "apart: own vocabulary",
+  "Becoming.ReadStages.complyAtBoth_not_above_ownAtBoth": "apart: own vocabulary",
+  "Becoming.ReadStages.complyAtBoth_maximal_iff": "apart: own vocabulary",
   "Becoming.ReadStages.square_split": "apart: prelude-only statement",
   "Becoming.ReadStages.sum_le_square": "apart: prelude-only statement",
   "Becoming.ReadStages.sum_regroup": "apart: prelude-only statement",

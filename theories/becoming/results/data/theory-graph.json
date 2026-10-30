@@ -2696,6 +2696,18 @@
    "page": "theories/becoming/results/records/identical-cells-under-a-descent-treating-them-alike.md"
   },
   {
+   "id": "record:identical-cells-under-noise",
+   "type": "result",
+   "record": "identical-cells-under-noise",
+   "title": "Identical cells under noise",
+   "title_zh": "噪声下之同一细胞",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "periphery",
+   "page": "theories/becoming/results/records/identical-cells-under-noise.md"
+  },
+  {
    "id": "record:identification-where-bounded",
    "type": "result",
    "record": "identification-where-bounded",
@@ -6092,6 +6104,18 @@
    "page": "theories/becoming/results/records/when-complying-when-read-is-best.md"
   },
   {
+   "id": "record:when-no-route-stands-above-a-revision",
+   "type": "result",
+   "record": "when-no-route-stands-above-a-revision",
+   "title": "When no route of keeping a law stands above a revision of it",
+   "title_zh": "守律之途何时皆不居其律之修订之上",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "general",
+   "page": "theories/becoming/results/records/when-no-route-stands-above-a-revision.md"
+  },
+  {
    "id": "record:when-the-runs-of-a-process-settle",
    "type": "result",
    "record": "when-the-runs-of-a-process-settle",
@@ -8028,11 +8052,22 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.RevisionRoutes",
+   "type": "module",
+   "name": "Becoming.RevisionRoutes",
+   "level": "L1",
+   "theorems": 29,
+   "region": "significance",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": false
+  },
+  {
    "id": "module:Becoming.ReadStages",
    "type": "module",
    "name": "Becoming.ReadStages",
    "level": "L1",
-   "theorems": 52,
+   "theorems": 57,
    "region": "knowing",
    "base": "general",
    "on_grammar": false,
@@ -29681,6 +29716,12 @@
    "anchor": "r-identical-cells-under-a-descent-treating-them-alike"
   },
   {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-identical-cells-under-noise",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-identical-cells-under-noise"
+  },
+  {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms",
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
@@ -30279,6 +30320,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
    "anchor": "r-alignment-direction-under-widening"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-no-route-stands-above-a-revision",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-when-no-route-stands-above-a-revision"
   },
   {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-reserved-shutdown-during-recovery",
@@ -33152,6 +33199,11 @@
   {
    "from": "module:Becoming.ReadInTime",
    "to": "module:Becoming.DrawnShaping",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReadStages",
+   "to": "module:Becoming.RevisionRoutes",
    "type": "imports"
   },
   {
@@ -42731,6 +42783,11 @@
   },
   {
    "from": "record:identical-cells-under-a-descent-treating-them-alike",
+   "to": "record:identical-cells-under-noise",
+   "type": "related"
+  },
+  {
+   "from": "record:identical-cells-under-a-descent-treating-them-alike",
    "to": "record:risk-minimization-on-a-shared-renewal",
    "type": "related"
   },
@@ -42738,6 +42795,21 @@
    "from": "record:identical-cells-under-a-descent-treating-them-alike",
    "to": "record:what-a-commuting-law-keeps-apart",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:identical-cells-under-noise",
+   "to": "module:Becoming.FreeEnergyGuarantees",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:identical-cells-under-noise",
+   "to": "record:identical-cells-under-a-descent-treating-them-alike",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:identical-cells-under-noise",
+   "to": "record:selection-through-a-model-of-the-options",
+   "type": "related"
   },
   {
    "from": "record:identification-where-bounded",
@@ -55481,6 +55553,11 @@
   },
   {
    "from": "record:when-complying-when-read-is-best",
+   "to": "module:Becoming.RevisionRoutes",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:when-complying-when-read-is-best",
    "to": "module:Becoming.Unread",
    "type": "proved-in"
   },
@@ -55498,6 +55575,31 @@
    "from": "record:when-complying-when-read-is-best",
    "to": "record:what-readings-fix-of-the-unread",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:when-complying-when-read-is-best",
+   "to": "record:when-no-route-stands-above-a-revision",
+   "type": "related"
+  },
+  {
+   "from": "record:when-no-route-stands-above-a-revision",
+   "to": "module:Becoming.RevisionRoutes",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:when-no-route-stands-above-a-revision",
+   "to": "record:becoming-spine-instances",
+   "type": "related"
+  },
+  {
+   "from": "record:when-no-route-stands-above-a-revision",
+   "to": "record:reserved-shutdown-during-recovery",
+   "type": "related"
+  },
+  {
+   "from": "record:when-no-route-stands-above-a-revision",
+   "to": "record:when-complying-when-read-is-best",
+   "type": "related"
   },
   {
    "from": "record:when-the-runs-of-a-process-settle",
@@ -58865,6 +58967,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-identical-cells-under-noise",
+   "to": "record:identical-cells-under-noise",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-imposing-a-code-breaks-the-symmetry",
    "to": "record:imposing-a-code-breaks-the-symmetry",
    "type": "states"
@@ -59532,6 +59639,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
    "to": "record:what-training-installs",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-no-route-stands-above-a-revision",
+   "to": "record:when-no-route-stands-above-a-revision",
    "type": "states"
   },
   {
