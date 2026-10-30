@@ -2321,6 +2321,11 @@
    "base": "general",
    "note": "Labels"
   },
+  "what-holding-for-a-reading-is-worth": {
+   "region": "knowing",
+   "base": "general",
+   "note": "HeldForReading RF-M.2: what holding an act for a reading is worth, in counts; any rule of stopping; a witness on the loop"
+  },
   "what-keeping-widening-needs": {
    "region": "significance",
    "base": "old-base",
@@ -3117,6 +3122,11 @@
    "region": "significance",
    "base": "frame",
    "note": "remaining-step certificate across revised rules; OpenFutureRevision port"
+  },
+  "Becoming.HeldForReading": {
+   "region": "knowing",
+   "base": "general",
+   "note": "RF-M.2 what holding an act for a reading is worth (03 §12)"
   },
   "Becoming.HeldPossible": {
    "region": "significance",

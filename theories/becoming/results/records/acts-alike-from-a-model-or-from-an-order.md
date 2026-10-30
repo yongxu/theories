@@ -44,7 +44,7 @@ Canonical source: [ReadingLoop.lean](../../../../experiments/integrated-correcti
 <a id="next--下一步"></a>
 ## Next
 
-A helper's act within the law that informs, and a principal's order as state the helper's acts can move (RF round 2's later items); a frozen test separating a model that does not separate from an order that ranks otherwise by informing; review by a person.
+The reading formation's own state and learning, and a principal's valuation as state the helper's acts can move (RF round 2's later item, RF-M.3's carrier); a frozen test separating a model that does not separate from an order that ranks otherwise by informing; review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -58,6 +58,7 @@ One observed course can leave an unresolved model and a reversed ranking indisti
 
 - **formal-reuse**: [what-choices-show-of-an-order](what-choices-show-of-an-order.md). ChoiceOccasions and ChoiceOccasions.Accords, for the training occasion.
 - related, not a proved adapter: [what-a-course-chosen-through-its-model-does-not-test](what-a-course-chosen-through-its-model-does-not-test.md). The loop and the worlds of the untried act on which the two formations are stated.
+- related, not a proved adapter: [what-holding-for-a-reading-is-worth](what-holding-for-a-reading-is-worth.md). Informing within the law: a held act answered by the reading of the true sign, which refutes the candidates predicting otherwise, where here informing changes the start; the reading formation's own state is not represented there.
 
 <a id="sources--来源"></a>
 ### Sources
@@ -78,6 +79,7 @@ Aliases: `not knowing or not wanting`, `不知或不欲`, `a model or an order`,
 ### History
 
 - 30 October 2026: added (RF round 2), acts alike from a model or from an order: formations related by a relation their steps keep, an unresolved model and a reversed ranking, informing turning the first; after a cross-model review of the Lean with a re-check, every finding taken; study section 456.
+- 30 October 2026, board item RF, RF-M.2 (study section 466): related to what-holding-for-a-reading-is-worth, where a held act is answered within the law; the next step keeps the reading formation's own state and the principal's valuation as state; no statement or declaration changed.
 
 </details>
 

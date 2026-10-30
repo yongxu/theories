@@ -338,6 +338,7 @@ import Becoming.ActivationCapacity
 import Becoming.Narrowing
 import Becoming.NarrowingRuns
 import Becoming.ReadingLoop
+import Becoming.HeldForReading
 import Becoming.SecuredContent
 import Becoming.ProfileReach
 import Becoming.RenewalBound
@@ -2825,7 +2826,26 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   (`ReadingLoop.Loop.rests_of_unrefuted`); from related starts, two blanketed laws whose steps keep a
   relation under which the values sensed and the acts are one sense and act alike
   (`ReadingLoop.observed_alike`); witnesses (`ReadingLoop.Untested.floor_forgoes`,
-  `ReadingLoop.Untested.model_or_order`). A leaf (board item RF).
+  `ReadingLoop.Untested.model_or_order`). Imported by `Becoming.HeldForReading` (board item RF).
+* `Becoming.HeldForReading` (L1): what holding an act for a reading is worth, in natural-number
+  counts. A policy choosing open acts falls short of one best at every listed candidate by the
+  weighted total of what its acts lose (`HeldForReading.after_add_gap`), so choosing best after a
+  reading telling the candidate gains over every open act exactly where none is valued best at every
+  listed candidate of positive weight (`HeldForReading.reading_gains_iff`); holding for the reading
+  that stops where the loss exceeds the gain stands above going on and switching off exactly where
+  both strict signs have positive weight (`HeldForReading.held_gains_iff`), and holding for any rule
+  of stopping, forgoing an amount, stands at least as high as going on exactly where its shortfall
+  and the amount together are at most the weighted excess of switching off
+  (`HeldForReading.threshold_go_iff`); through a map of the candidates whose cells are listed once
+  each and cover every listed candidate's cell, the least shortfall totals the smaller excess within
+  each cell, never increasing through a finer map (`HeldForReading.shortfall_through`,
+  `HeldForReading.least_through`, `HeldForReading.finer_least_le`); where every listed candidate of
+  positive weight has transitive comparisons according with the choices, holding a pick gains
+  nothing within `ShownOrder`'s reach (`HeldForReading.reach_fixes`); on `ReadingLoop`'s loop, a
+  formation holding exactly where holding for the reading gains over both moves on its own model
+  (`HeldForReading.SignLoop.choose_hold_iff`), listing only that going on gains and going on from
+  the start, rests at once and never senses the stop (`HeldForReading.SignLoop.rests_unread`,
+  `HeldForReading.SignLoop.never_senses_stop`). A leaf (board item RF).
 * `Becoming.SecuredContent` (L2): secured new content with open future form: one response
   can secure new living content in each admitted continuation without one fixed content in all;
   a finite signed integral certifies it where each positive occurrence means such content; with
@@ -3103,8 +3123,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `ChoiceOccasions.reach_withPair_iff` and `ChoiceOccasions.noCycle_withPair_iff`); choices required
   only to be maximal force no positive comparison (`ChoiceOccasions.weakly_forces_no_comparison`);
   one search, two orders according with one choice, alike on the menu met and apart after
-  (`ChoiceOccasions.Untried.same_search_met`, `ChoiceOccasions.Untried.same_search_after`). A leaf
-  (board item RF).
+  (`ChoiceOccasions.Untried.same_search_met`, `ChoiceOccasions.Untried.same_search_after`). Imported
+  by `Becoming.ReadingLoop` and `Becoming.HeldForReading` (board item RF).
 * `Becoming.Ideals` (L1): a history read off its finite stretches, as an ideal of their order
   (no premise; it imports nothing). A refutable reading holds, up to double negation, where a
   point adheres, and what adheres is closed. A class of ideals is closed exactly where it is the

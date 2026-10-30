@@ -1,11 +1,11 @@
 {
- "commit": "53847ce7f7539c2d3bb75d1692d0de21f9280887",
+ "commit": "1645ca3d0ae06123ae8a39d1ef7be8a6ccb7ade1",
  "sources_match_commit": false,
- "core_receipt_at_commit": "20261030T075728.527064Z",
+ "core_receipt_at_commit": "20261030T131028.245732Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 354,
- "constants": 50973,
- "spine_theorems": 17208,
+ "tracked_modules": 355,
+ "constants": 51282,
+ "spine_theorems": 17298,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -33,12 +33,12 @@
   "proof through a base family": 216,
   "used by a theorem on the base": 5739,
   "instance on the base recorded": 159,
-  "apart: own vocabulary": 1767,
-  "apart: prelude-only statement": 151
+  "apart: own vocabulary": 1848,
+  "apart: prelude-only statement": 160
  },
- "apart": 1918,
- "apart_general_structure_by_design": 796,
- "apart_otherwise": 1122,
+ "apart": 2008,
+ "apart_general_structure_by_design": 840,
+ "apart_otherwise": 1168,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 120,
   "of them on the base": 81,
@@ -74,12 +74,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 1082,
- "apart_roots": 1082,
+ "apart_used_by_nothing": 1108,
+ "apart_roots": 1108,
  "apart_roots_by_category": {
-  "model-witness": 486,
-  "support": 139,
-  "general-structure": 415,
+  "model-witness": 497,
+  "support": 138,
+  "general-structure": 431,
   "calibration": 16,
   "restates": 14,
   "logical-strength": 12
@@ -176,6 +176,10 @@
   "Becoming.ConditionalWeights": [
    93,
    93
+  ],
+  "Becoming.HeldForReading": [
+   90,
+   90
   ],
   "Becoming.Drift": [
    70,
@@ -796,9 +800,9 @@
  },
  "rings": {
   "core": {
-   "modules": 337,
-   "theorems": 16436,
-   "apart": 1823,
+   "modules": 338,
+   "theorems": 16526,
+   "apart": 1913,
    "classes": {
     "statement on both families": 1084,
     "statement on Process/Frame/Run/Trace": 3337,
@@ -807,8 +811,8 @@
     "proof through a base family": 205,
     "used by a theorem on the base": 5378,
     "instance on the base recorded": 159,
-    "apart: own vocabulary": 1673,
-    "apart: prelude-only statement": 150
+    "apart: own vocabulary": 1754,
+    "apart: prelude-only statement": 159
    }
   },
   "instances": {
@@ -845,7 +849,7 @@
   }
  },
  "components": {
-  "count": 94,
+  "count": 95,
   "theorems_outside_the_main_component": [
    "Becoming.Dispatch.add_three_assoc",
    "Becoming.FaultEnvelopes.or_self",
@@ -929,7 +933,7 @@
   "proof through a base family": 5,
   "used by a theorem on the base": 12,
   "instance on the base recorded": 1,
-  "apart: own vocabulary": 41
+  "apart: own vocabulary": 42
  },
  "records_resting_only_on_apart_theorems": [
   {
@@ -1135,6 +1139,12 @@
    "id": "what-discrete-steps-and-whole-amounts-represent",
    "modules": [
     "Becoming.WholeAmounts"
+   ]
+  },
+  {
+   "id": "what-holding-for-a-reading-is-worth",
+   "modules": [
+    "Becoming.HeldForReading"
    ]
   },
   {
@@ -17199,6 +17209,96 @@
   "Becoming.ReadingLoop.Untested.order_rests": "apart: own vocabulary",
   "Becoming.ReadingLoop.Untested.model_or_order": "apart: own vocabulary",
   "Becoming.ReadingLoop.Untested.informed_turns": "apart: own vocabulary",
+  "Becoming.HeldForReading.forall_pair": "apart: prelude-only statement",
+  "Becoming.HeldForReading.bestOf_best": "apart: own vocabulary",
+  "Becoming.HeldForReading.after_le_after": "apart: own vocabulary",
+  "Becoming.HeldForReading.after_add_gap": "apart: own vocabulary",
+  "Becoming.HeldForReading.after_lt_after_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.after_eq_after_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.committed_le_after": "apart: own vocabulary",
+  "Becoming.HeldForReading.committed_eq_after_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.reading_gains_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.below_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.cell_policy_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.after_offset": "apart: own vocabulary",
+  "Becoming.HeldForReading.after_offset_le_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.byRule_of_true": "apart: own vocabulary",
+  "Becoming.HeldForReading.byRule_of_false": "apart: own vocabulary",
+  "Becoming.HeldForReading.byReading_of_lt": "apart: own vocabulary",
+  "Becoming.HeldForReading.byReading_of_not_lt": "apart: own vocabulary",
+  "Becoming.HeldForReading.go_open": "apart: own vocabulary",
+  "Becoming.HeldForReading.off_open": "apart: own vocabulary",
+  "Becoming.HeldForReading.byReading_best": "apart: own vocabulary",
+  "Becoming.HeldForReading.go_below_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.off_below_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.committed_le_held": "apart: own vocabulary",
+  "Becoming.HeldForReading.held_gains_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.cond_split": "apart: prelude-only statement",
+  "Becoming.HeldForReading.offPart_add_onPart": "apart: own vocabulary",
+  "Becoming.HeldForReading.after_rule": "apart: own vocabulary",
+  "Becoming.HeldForReading.after_rule_add_onLoss": "apart: own vocabulary",
+  "Becoming.HeldForReading.after_rule_le_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.rule_not_below_go_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.rule_not_below_off_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.held_term": "apart: own vocabulary",
+  "Becoming.HeldForReading.term_go": "apart: prelude-only statement",
+  "Becoming.HeldForReading.term_off": "apart: prelude-only statement",
+  "Becoming.HeldForReading.after_add_shortfall_go": "apart: own vocabulary",
+  "Becoming.HeldForReading.after_add_shortfall_off": "apart: own vocabulary",
+  "Becoming.HeldForReading.shortfall_byReading": "apart: own vocabulary",
+  "Becoming.HeldForReading.after_byReading": "apart: own vocabulary",
+  "Becoming.HeldForReading.held_eq_go_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.held_eq_off_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.after_add_shortfall": "apart: own vocabulary",
+  "Becoming.HeldForReading.across_le_iff": "apart: prelude-only statement",
+  "Becoming.HeldForReading.across_lt_iff": "apart: prelude-only statement",
+  "Becoming.HeldForReading.threshold_go_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.threshold_off_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.forgone_within_excess_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.forgone_below_excess_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.excess_pos_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.total_single": "apart: own vocabulary",
+  "Becoming.HeldForReading.total_by_cells": "apart: own vocabulary",
+  "Becoming.HeldForReading.cell_term": "apart: prelude-only statement",
+  "Becoming.HeldForReading.total_cond_both": "apart: own vocabulary",
+  "Becoming.HeldForReading.shortfall_through": "apart: own vocabulary",
+  "Becoming.HeldForReading.cond_least_le": "apart: prelude-only statement",
+  "Becoming.HeldForReading.least_through": "apart: own vocabulary",
+  "Becoming.HeldForReading.cond_least_eq_zero_iff": "apart: prelude-only statement",
+  "Becoming.HeldForReading.least_zero_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.finer_least_le": "apart: own vocabulary",
+  "Becoming.HeldForReading.through_threshold_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.first_open": "apart: own vocabulary",
+  "Becoming.HeldForReading.second_open": "apart: own vocabulary",
+  "Becoming.HeldForReading.pairPolicy_best": "apart: own vocabulary",
+  "Becoming.HeldForReading.reach_fixes": "apart: own vocabulary",
+  "Becoming.HeldForReading.first_below_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.second_below_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.pair_gains_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.pair_gains_unreached": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.rests_unread": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.never_senses_stop": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.refuted_senses_stop": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.refuted_drops": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.refuted_goes_on": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.both_stopped": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.both_released": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.both_turns_off": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.both_goes_on": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.both_off": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.both_on": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.loses_of_all_false": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.not_loses_of_all_true": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.gains_of_all_false": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.not_gains_of_all_true": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.choose_hold_iff_mem": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.loses_of_lt": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.gains_of_lt": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.choose_hold_iff": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.offExcess_of_all_true": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.goExcess_of_all_not": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.choose_go_ties": "apart: own vocabulary",
+  "Becoming.HeldForReading.SignLoop.choose_off_ties": "apart: own vocabulary",
   "Becoming.SecuredContent.one_sub_succ": "used by a theorem on the base",
   "Becoming.SecuredContent.pos_succ": "used by a theorem on the base",
   "Becoming.SecuredContent.not_pos_negSucc": "used by a theorem on the base",
