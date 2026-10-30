@@ -1,0 +1,14 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/he2-item5/tree",
+  "modules": 115,
+  "ran": [],
+  "reused": 116,
+  "unclean": [],
+  "audits": {
+    "Becoming.HE2Item5Check": {
+      "theorems": 3,
+      "declarations": 3,
+      "with_axioms": {}
+    }
+  }
+}

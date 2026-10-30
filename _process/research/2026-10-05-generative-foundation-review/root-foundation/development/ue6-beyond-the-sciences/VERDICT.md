@@ -16,7 +16,7 @@ UE0's audit concluded that the theory reaches farther than each framework it con
 
 ## The verdict
 
-**No result was found that no neighbouring field states.** UE0's verdict stands and is now checked three ways: the theory reaches farther than each framework alone, not farther than the sciences together. Its contribution is the joining, one account with its premises in one place, together with its generality (every order rising with what couples in, every relation, every renewal law) and its exactness (necessary and sufficient, with witnesses on both sides). Neither makes a forbidden statement new.
+**No result was found that no neighbouring field states.** The half of UE0's verdict this search tests stands and is now checked three ways: the theory does not reach farther than the sciences together. Its other half, "farther than each framework alone", the twenty-first review corrected (§5, 30 October 2026): the theory reaches farther only than the few frameworks that lack conservation, renewal over time or a threshold, by joining them to its premises, and is level with or behind the rest. Its contribution is the joining, one account with its premises in one place, together with its generality (every order rising with what couples in, every relation, every renewal law) and its exactness (necessary and sufficient, with witnesses on both sides). Neither makes a forbidden statement new.
 
 Of the other two routes of 08 §8:
 

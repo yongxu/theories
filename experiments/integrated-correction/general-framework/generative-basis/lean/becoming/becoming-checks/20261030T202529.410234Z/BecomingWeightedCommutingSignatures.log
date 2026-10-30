@@ -1,0 +1,54 @@
+@Becoming.Weighted.add_congr : ∀ {W : Type u_1} [inst : Add W] {a b c d : W}, a = b → c = d → a + c = b + d
+@Becoming.Weighted.total_congr : ∀ {S : Type u_1} {W : Type u_2} [inst : Add W] [inst_1 : Zero W] {F G : W × S → W}
+  {ps : List (W × S)}, (∀ (p : W × S), p ∈ ps → F p = G p) → Becoming.Weighted.total ps F = Becoming.Weighted.total ps G
+@Becoming.Weighted.Commutes.carried : ∀ {S : Type u_1} {W : Type u_2} [inst : Add W] [inst_1 : Mul W] [inst_2 : Zero W]
+  {K : S → List (W × S)} {σ : S → S},
+  Becoming.Weighted.Commutes K σ →
+    ∀ (n : Nat) (f : S → W) (x : S),
+      Becoming.Weighted.expect K n f (σ x) = Becoming.Weighted.expect K n (fun y => f (σ y)) x
+@Becoming.Weighted.Commutes.fixed_expect : ∀ {S : Type u_1} {W : Type u_2} [inst : Add W] [inst_1 : Mul W]
+  [inst_2 : Zero W] {K : S → List (W × S)} {σ : S → S},
+  Becoming.Weighted.Commutes K σ →
+    ∀ {x : S},
+      σ x = x →
+        ∀ (n : Nat) (f : S → W), Becoming.Weighted.expect K n f x = Becoming.Weighted.expect K n (fun y => f (σ y)) x
+@Becoming.Weighted.Commutes.start_expect : ∀ {S : Type u_1} {W : Type u_2} [inst : Add W] [inst_1 : Mul W]
+  [inst_2 : Zero W] {K : S → List (W × S)} {σ : S → S},
+  Becoming.Weighted.Commutes K σ →
+    ∀ {μ : List (W × S)},
+      Becoming.Weighted.Unchanged μ σ →
+        ∀ (n : Nat) (f : S → W),
+          (Becoming.Weighted.total μ fun p => p.fst * Becoming.Weighted.expect K n f p.snd) =
+            Becoming.Weighted.total μ fun p => p.fst * Becoming.Weighted.expect K n (fun y => f (σ y)) p.snd
+@Becoming.Weighted.law_commutes : ∀ {S : Type u_1} {W : Type u_2} [inst : Add W] [inst_1 : Zero W] {σ : S → S}
+  [inst_2 : OfNat W 1] {T : S → S}, Becoming.Law.Commutes T σ → Becoming.Weighted.Commutes (Becoming.Weighted.law T) σ
+@Becoming.Weighted.total_map : ∀ {S : Type u_1} {W : Type u_2} [inst : Add W] [inst_1 : Zero W] {Ω : Type u_3}
+  (P : S → Ω → W) (U : S → Ω → S) (x : S) (F : W × S → W) (ωs : List Ω),
+  Becoming.Weighted.total (List.map (fun ω => (P x ω, U x ω)) ωs) F =
+    Becoming.Weighted.over ωs fun ω => F (P x ω, U x ω)
+@Becoming.Weighted.over_congr : ∀ {W : Type u_1} [inst : Add W] [inst_1 : Zero W] {Ω : Type u_2} {G H : Ω → W}
+  (ωs : List Ω), (∀ (ω : Ω), G ω = H ω) → Becoming.Weighted.over ωs G = Becoming.Weighted.over ωs H
+@Becoming.Weighted.Commutes.of_samples : ∀ {S : Type u_1} {W : Type u_2} [inst : Add W] [inst_1 : Zero W] {σ : S → S}
+  {Ω : Type u_3} (ωs : List Ω) (τ : Ω → Ω),
+  (∀ (G : Ω → W), (Becoming.Weighted.over ωs fun ω => G (τ ω)) = Becoming.Weighted.over ωs G) →
+    ∀ (P : S → Ω → W) (U : S → Ω → S),
+      (∀ (x : S) (ω : Ω), P (σ x) ω = P x (τ ω)) →
+        (∀ (x : S) (ω : Ω), U (σ x) ω = σ (U x (τ ω))) →
+          Becoming.Weighted.Commutes (fun x => List.map (fun ω => (P x ω, U x ω)) ωs) σ
+Becoming.Weighted.Reinforcing.commutes : Becoming.Weighted.Commutes Becoming.Weighted.Reinforcing.law
+  Becoming.Weighted.swap
+Becoming.Weighted.Reinforcing.expect_equal : ∀ (k n : Nat),
+  Becoming.Weighted.expect Becoming.Weighted.Reinforcing.law n (fun c => c.snd) (k, k) =
+    Becoming.Weighted.expect Becoming.Weighted.Reinforcing.law n (fun c => c.fst) (k, k)
+Becoming.Weighted.Reinforcing.oneSidedRun_eq : ∀ (n a b : Nat),
+  Becoming.Weighted.Reinforcing.oneSidedRun n (a, b) = (a, b + n)
+Becoming.Weighted.Reinforcing.oneSidedWeight_pos : ∀ (n a b : Nat),
+  0 < b → 0 < Becoming.Weighted.Reinforcing.oneSidedWeight n (a, b)
+Becoming.Weighted.Reinforcing.oneSided : ∀ (n : Nat),
+  0 < Becoming.Weighted.Reinforcing.oneSidedWeight n (1, 1) ∧
+    Becoming.Weighted.Reinforcing.oneSidedRun n (1, 1) = (1, 1 + n)
+Becoming.Weighted.Pooling.commutes : Becoming.Law.Commutes Becoming.Weighted.Pooling.step Becoming.Weighted.swap
+Becoming.Weighted.Pooling.run_counts : ∀ (k : Nat),
+  (Becoming.Law.run Becoming.Weighted.Pooling.step (3, 1)).state k = (3 + k, 1 + k)
+Becoming.Weighted.Pooling.share_rises : ∀ (k : Nat), (1 + k) * (6 + 2 * k) < (2 + k) * (4 + 2 * k)
+Becoming.Weighted.Pooling.share_below_half : ∀ (k : Nat), 2 * (1 + k) < 3 + k + (1 + k)

@@ -172,6 +172,7 @@ import Becoming.JointKeeping
 import Becoming.Undecided
 import Becoming.Junctures
 import Becoming.Commuting
+import Becoming.WeightedCommuting
 import Becoming.HexagramCommuting
 import Becoming.Tolerance
 import Becoming.Revision
@@ -321,6 +322,7 @@ import Becoming.SelectionReach
 import Becoming.DrawnBeyond
 import Becoming.JointDraw
 import Becoming.Optimum
+import Becoming.OptimumSeason
 import Becoming.SetPointOptimum
 import Becoming.SelectionPool
 import Becoming.PoolResponse
@@ -2137,6 +2139,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   is perfect and holding the level draws each more at every later step, holding draws each
   more over a long horizon, and for a drawer given the whole drawing everything is not perfect where the whole
   returns more than one for one.
+* `Becoming.OptimumSeason` (L1): LA4's test season and the optimum laws it meets. The season as
+  `season.py` runs it (a ground of ten renewing, at most four taken a step, a bay of six, two
+  landing sites, ten steps) has three independent parts, the ground's catch, the bay's fish and
+  the landings; the ground's best catch is 34, by a table checked against every take. The catch
+  shares units with the bay, so every optimum of every order rising with the catch empties the
+  bay (`Optimum.Season.bay_drained`); the landing site, and the bay ranked by the ground's catch
+  alone, give no room, and the orders by the catch alone and by the ground's have optima keeping
+  and ending. Over seasons with natural-number weights the bay left is at most `40(1 − ν)` and
+  `ν ≤ 1 − 3p/40`. A leaf (board item LA4).
 * `Becoming.SetPointOptimum` (L1): what an order with a set point does beyond what couples in. An
   order nearing a set point of the family ranks above every outcome lying, at each condition,
   between the set point and the other and nearer at one (`Nearing`, by `Regulation.Between`):
@@ -2579,6 +2590,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   return; the law goes alike across the pairs; `Diagonal.revision_never_rests` is the case of a
   map commuting with itself. Symmetric processes carry reach, returning and junctures, and each
   run has a mirror run never at the same configuration.
+* `Becoming.WeightedCommuting` (L1): what a commuting law keeps in expectation. A law going to
+  finitely many weighted successors, the weights of any type and no law of their arithmetic
+  used, commuting with a map carries every expectation through the map
+  (`Weighted.Commutes.carried`), so from a start the map leaves unchanged the expectations stay
+  symmetric at every step; a law drawing samples commutes where a map of the samples permutes
+  them and the map carries their weights and the update (`Weighted.Commutes.of_samples`); a
+  determined commuting law is a case. Reinforcing keeps equal expectations while runs drawing
+  one value for any number of steps have positive weight; Pooling wears a start's preference
+  away. A leaf (board item LA4).
 * `Becoming.HexagramCommuting` (L1): The Changes as an instance of a commuting law.
 * `Becoming.HexagramCommuting` (L1, instance ring): the Changes as an instance of a commuting law. Waxing
   and waning never merges a hexagram with its complement, its six steps to the complement are the

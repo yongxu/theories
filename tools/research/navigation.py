@@ -330,7 +330,7 @@ WHERE_TO_LOOK = [
     '- Same theorem under two names: `trace-law-equivalence`, `derivation-soundness`. Preserve historical names and receipts; count the underlying result once.',
     '- Similar statements with different semantics: `branching-target-uniqueness`, `joint-target-uniqueness`. Their local test languages differ.',
     '- Three shared-support results: `draws-on-a-shared-stock`, `exclusive-footprint-support`, `joint-plan-composition`. Their common obstruction does not establish a verified translation between them.',
-    '- Completed conditional alignment argument and its AI application: `practical-judgment-under-living-significance`, `alignment-direction-under-widening`. The independent targets `universal-practical-warrant` and `wisdom-root` remain open.']
+    '- Completed conditional alignment argument and its AI application: `practical-judgment-under-living-significance`, `alignment-direction-under-widening`. The question `universal-practical-warrant` and the independent target `wisdom-root` remain open.']
 
 
 def stub_lines(path, kind, goal_records):

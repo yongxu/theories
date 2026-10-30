@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-28T05:21:42+00:00",
+  "reviewed_at_utc": "2026-10-30T17:41:46+00:00",
   "statement": {
     "en": "On a connected whole with a living claim and a standpoint, living significance is equivalent to a seed with relational and standpoint neutrality; with these and A, a sound inquiry for new living content gives each position with access a contributory reason. Each premise is needed.",
     "zh": "已形成关系把活的主张连在一起、且有一个活的主张与一个立场时，生生之意义等价于种子加关系中立与立场中立；有了这些与 A，以新的活的内容为目标的 sound 探究给每个有通达的位置一项支持理由。每个前提都不可少。"
@@ -263,8 +263,8 @@
     {
       "id": "universal-practical-warrant",
       "detail": {
-        "zh": "推进而未完成：把普遍理由所需的规范内容精确定位为种子、两条中立与 A；不及于拒绝它们的立场。",
-        "en": "Advances without completing it: locates the normative content universal reasons need exactly in a seed, two neutralities and A; positions rejecting them are not bound."
+        "zh": "关涉而未回答：把普遍理由所需的规范内容精确定位为种子、两条中立与 A；不及于拒绝它们的立场。",
+        "en": "Bears on it without answering it: locates the normative content universal reasons need exactly in a seed, two neutralities and A; positions rejecting them are not bound."
       }
     },
     {
@@ -658,6 +658,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): a statement written from the home section; the claim split into eleven laws, each read against its declarations in Becoming.Metaethics, Becoming.ValuationFrames, Becoming.Extension, Becoming.Inquiry and Becoming.Frame (the lifting rule's transitivity stated, as the Lean proves it, where the middle move has an outcome: that it fails otherwise is not a theorem, so \"only\" is not kept); the limitations and the run-relative correspondence to six does-not-show items and the standard boundaries significance-related-not-asserted and names-provisional; in the second hypothesis \"positive content\" became \"new content significant from one's own standpoint\", as the definition (SecuresNewContent with significance from the standpoint) has it since the R30 rename, the other hypotheses kept; nineteen definitions (Within, Neutral, Valuation and its parts, articulates, the model's parts, Valuation.relations, Valuation.Connected, LiftBetter, Scope, Novel) added to the references of their files; no premise's content, status or source hash changed. Every earlier sentence is mapped in [metaethical-core-characterization.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/metaethical-core-characterization.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, laws, the correspondence, each read against the Lean it cites. A cold read of the applied record was taken in laws, the references.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：依主章写出陈述；主张拆为十一条规律，各条对照其在 Becoming.Metaethics、ValuationFrames、Extension、Inquiry 与 Frame 中的声明核读（提升规则的传递按 Lean 所证写为中间动作有结果时成立：否则不传递不是定理，故不保留“只有”）；限制与对应中相对于运行的一句分入六条“未表明”与通用边界 significance-related-not-asserted、names-provisional；第二条前提中“正面内容”改为“从自身立场有意义的新内容”，与 R30 改名以来的定义（SecuresNewContent，意义取自该立场）一致，其余前提保留；十九个定义（Within、Neutral、Valuation 及其部分、articulates、模型的部分、Valuation.relations、Valuation.Connected、LiftBetter、Scope、Novel）加入其文件的引用；前提内容、状态与来源哈希均未改变。每句旧文本的去向见 [metaethical-core-characterization.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/metaethical-core-characterization.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、规律、对应，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及规律、引用。"
+    },
+    {
+      "en": "30 October 2026: the related detail on universal-practical-warrant reworded for its restatement as a question; nothing else changed.",
+      "zh": "2026年10月30日：关于 universal-practical-warrant 的相关说明因其重述为问题而改写；其余无改变。"
     }
   ],
   "text_versions": [
