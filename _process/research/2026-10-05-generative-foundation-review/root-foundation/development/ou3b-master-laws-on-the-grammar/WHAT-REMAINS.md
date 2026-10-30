@@ -289,6 +289,59 @@ The gate rows, "premise of the account" in U1 §4's table, become hypotheses on 
 - The item is offered to the session that studied them (Join generation to widening), which claims it on the board with a design already reviewed and rechecked (REVIEW-GW, RECHECK-GW).
 - GW1 and GW2 close chapter 02's open question on the map's regions: coverage, and the split of a beginning on the root. They do not by themselves join generation and widening both ways; GW4's kind relay and GW5's one-way law with its failed converse already stand. The release gate's item 2 is met by **GW6**, claimed with them (`6376f0da3`): on the course's moments, keeping widening is exactly 全生成 at two grains under stated premises of deciding, and what separates generation under the one from widening is exactly loss, with an alternating chain as the witness. GW6's review checks that the two grains are fixed independently of widening, so that the join is not a verdict built into the choice of classes, and that each premise of deciding states what the need says about the course (AGENTS.md, the pure core).
 
+## U3's standing, and what 全四 counts (30 October 2026)
+
+**U3's design is on main** (landing 1, `ffefcda8d`), and its Lean items 1 and 2 are claimed. They land after LW's texts and RF-M.2's documents. The review of its Lean and kit (REVIEW-U3-LEAN, §1.1) found one thing that bears on the counts.
+
+- **F5 takes no specialization as an item.** An instance of a row states less than the row (MV's F5 specification, §4). Three of U3's root forms fix the free predicate `sig` to its structural reading, `selfAscribed (ownClosure rel) center`: rows 1, 8 and 9 (`noOutside_iff_paths_livingSignificance`, `widens_iff_retains_adds_root`, `paths_one_object_root`). They land as laws in their rows' records with no statements_at_model item, and F5 keeps them among the rest. Rows 5, 7 and 10 carry items, stated in the grammar's terms on their own carrier.
+- **What 全四 then means.** F4 asks that the significance rows be stated on the root "with the free predicate still the general form". That is met once items 1 and 2 land: each row has its root form, the condition and C stay named premises, and `sig` stays free in the general statement (SD1). F5's count is a different and stricter measure. It does not count rows 1, 8 and 9 as stated on the root, because their general statement keeps `sig` free, and a root reading of free significance is what 07 §1 keeps open on purpose. Both are stated wherever 全四 is summarized. Neither is reported alone: "met" without F5's count would read the structural reading as the row.
+- **Row 10's interface law**, `Weighting.grammar_widens_iff_every_positive`, goes into `Becoming.Weightings` beside `widensOn_iff`. It is one theorem, with no definition changed, registered apart as support like `mixedOn_iff`.
+- **«广之对应»** (U3's design §4, item 3) waits for GrammarTransport's owner until something reads it. U3 does not need it. It is listed here, not on the board, since no item uses it.
+
+## U4's levers 1 and 2, reviewed (30 October 2026)
+
+This section was added by U4's taker. It edits no earlier section, but it supersedes one sentence of the proposal's lever 2 paragraph: "Rows that read amounts … wait on lever 1".
+
+**Lever 1: the round trip fails its second test, so U1's verdict stands.** The [design](../u4-one-root-to-its-edge/DESIGN.md) was independently reviewed, and every finding is taken.
+- **The test.** Under the condition above, a law of unit lines counts only if it holds over every pairing the counts admit and reads what the counts do not. None was found.
+  - What lines read beyond counts is whether a pairing under continuation exists.
+  - One-to-one continuation is sufficient for that pairing, not necessary.
+  - The counts fix neither.
+- **Balance is represented both ways as a one-to-one census,** at a step and across a run.
+  - Across a run, the one-step models glue with no relabelling, because each time has one list.
+  - The census is built from the numbers. So this is a representation, not a derivation.
+- **One-to-one continuation is U1's atomism in the root's words.** It is not a second premise.
+- **No row moves, and F13's reason stands.** The open bridge is a World's own occurrences under `«续» R E` as the census model.
+- **Laws for `GrammarLaws`.** These ride the near-full rebuild and stay in U4's kit until then:
+  - `«对则闭域守数»`;
+  - the class law, with its count `«计»`, `List.countP`'s structural twin proved equal with no axiom;
+  - the census pairing on `«续» R E`, whose arising and ceasing are `«生»` and `«亡»` on a closed listing.
+- **The 31 "balance, represented" declarations, recounted by anchor:**
+  - 18 read `Flow.Balances` or `Flow.BalancesOn`;
+  - 10 rest only on the prelude's `balance_over_stretch_on`;
+  - 3 read `Flow.BalancesBetween`.
+
+**Lever 2: no evolution row waits on lever 1.** The [audit](../u4-one-root-to-its-edge/LEVER-2-AUDIT.md) was independently reviewed, and every finding is taken.
+- **The gate.** Both of its parts are inclusions: `acting_iff`, and U2's `dependent_iff`.
+- **Rows 1–3, 7 and 8.** The gate is fully stated as inclusions. These rows conclude comparisons of the model's amounts, so they are statements at the represented model.
+- **Rows 5, 13, 14 and 17** stand on the root under stated hypotheses. Witnesses are built for rows 5, 13 and 17.
+- **Rows 6, 12 and 18** are laws of counting, labelled and counted apart.
+- **Row 4** is a law of logic, already stated at the model by U2.
+- **Row 9** stays a premise of the account.
+- **Rows 10, 11, 15 and 16** keep "balance, represented".
+
+**Lever 2's follow-up: every witness checked against its row.** A second independent read found two hypotheses unwitnessed, `moved` in row 8 and `inactive` in row 17; both now have witnesses (`Kept`, `Lifted.inactive_needed`), and a recheck found the fixes sound. Every hypothesis of rows 1–3, 5, 7, 8, 13, 14 and 17 that is not a list fact now has a witness, and a check module applies each package row, or its form on the root, to its witness, so each failure is the row's own. Scratch: 190 theorems in 253 declarations, and 2 in 2, every axiom report empty.
+
+**The master-law counts agree** (the twenty-first review's §6 item 2). 08 §7's column read 16, 52, 14, 1 and 9 against its prose's 41, 55, 14, 2 and 9, and the coverage report counted 41 central declarations on no master law against the prose's 39. The cause: COVERAGE.json's anchors lagged the measure's, without the laws' statements on the grammar or `Flow.BalancesBetween`. With them set to the measure's anchors, the column, the prose and the report agree.
+
+**What this changes in the figures.** MV's figures stand at 44, 16, 4 and 54 until the boundary record lands (F5).
+
+**What comes next for U4:**
+- lever 3, on U3's and GW's lines;
+- the boundary record, last.
+
+The two census rows, `Listed.coming_of_ceasing` and `CensusWebs.keep_pace`, are where the census pairing reaches most directly. They are a candidate item of their own.
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.

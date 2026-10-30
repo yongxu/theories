@@ -1019,7 +1019,9 @@
       "name": "Closure",
       "statement": "what a relation carries reaches exactly its closure, and nothing within a closure bears the relation to what lies beyond it",
       "anchors": [
-        "Becoming.WithinClosure"
+        "Becoming.WithinClosure",
+        "Becoming.«所闭当且仅当同一或及»",
+        "Becoming.«所闭»"
       ]
     },
     {
@@ -1029,7 +1031,10 @@
       "anchors": [
         "Becoming.Flow.Balances",
         "Becoming.Flow.BalancesOn",
-        "Becoming.balance_over_stretch_on"
+        "Becoming.Flow.BalancesBetween",
+        "Becoming.balance_over_stretch_on",
+        "Becoming.«守数当且仅当可对»",
+        "Becoming.«程守数当且仅当可对»"
       ]
     },
     {
@@ -1041,7 +1046,10 @@
         "Becoming.Branching.Lossless",
         "Becoming.revisits_within",
         "Becoming.Amounts.rests",
-        "Becoming.Amounts.FallsStop"
+        "Becoming.Amounts.FallsStop",
+        "Becoming.«入当且仅当有不返»",
+        "Becoming.«有限遍后定后则定前当且仅当皆返»",
+        "Becoming.«尽则不或屡»"
       ]
     },
     {
@@ -1049,7 +1057,9 @@
       "name": "Lumping",
       "statement": "a part read alone carries a law exactly where the rest makes no difference to its next value",
       "anchors": [
-        "Becoming.GoAlikeUnder"
+        "Becoming.GoAlikeUnder",
+        "Becoming.«像定后当且仅当同行»",
+        "Becoming.«同行»"
       ]
     },
     {
@@ -1058,7 +1068,10 @@
       "statement": "widening is retaining and adding; the ethics adds two premises, the continuation condition for scope and C for order",
       "anchors": [
         "Becoming.Web.Widens",
-        "Becoming.Weighting.WidensOn"
+        "Becoming.Weighting.WidensOn",
+        "Becoming.«广不可逆»",
+        "Becoming.«广之传递»",
+        "Becoming.«广»"
       ]
     }
   ]
