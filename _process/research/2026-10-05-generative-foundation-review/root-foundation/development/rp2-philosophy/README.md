@@ -80,9 +80,9 @@ This is board item RP2b: the release gate's item 6 as amended on 31 October ([WH
   The 27 items are unchanged, except that P-26 now carries the AI label on the gloss of 生生 (D1). 07 §8 also omits that label; its owner was told.
 - **Measures.** These use the counting in AJ4's `kit/measure_layers.py`, ending the part at the alignment dossier's pattern `^(## The items|###? P-01)`.
   - The part: 1,114 words, 8.6 to 11.2 minutes, and it states its time. That is 15 words over the budget of 1,100. The excess is items that may not be cut, restored by the review (amendment 1).
-  - The one-hour path (the part with P-04, P-05, P-07, P-10, P-11 and P-20): 4,386 words, 34 to 44 minutes.
+  - The one-hour path (the part with P-04, P-05, P-07, P-10, P-11 and P-20): 4,386 words and 177 characters, 34.4 to 44.7 minutes.
   - The whole dossier: 13,141 words and 263 characters, 102 to 133 minutes, "about two hours" as the cover says.
-  - With the kit's old pattern for philosophy (`^###? P-01`), the front would also count the item list and the terms: 1,843 words. AJ4's owner was told on 31 October.
+  - With the kit's old pattern for philosophy (`^###? P-01`), the front would also count the item list and the terms: 1,843 words. AJ4's owner was told on 31 October, and the measure (on `aj4-human` at `9e128d30e`) now reads every dossier's front as alignment's, with a row for this hour; its readings at `3ae441d97` agree with these.
 - **Checks.** `check_dossiers.py` reports 0 problems. All seven parts of the reader edition build (`tools/publishing/build_review_packet.py`). In PHILOSOPHY's edition every in-document link resolves (95) and no checker markup is left. In the LOGIC and CLASSICAL-TEXTS editions, the markup itself is converted, but the sentences explaining it (Source [ID], 原文〔ID〕, 引〔路径〕) remain, a small mismatch for those dossiers' owner.
 - **Review.** One independent AI reader, read-only and with no part in the writing, checked the part against the items, chapter 7 and AGENTS.md. It found 2 errors:
   - the free-parameter hypothesis was dropped from P-01's sentence, which then contradicted the de se reading before it;
