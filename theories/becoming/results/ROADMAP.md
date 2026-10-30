@@ -22,7 +22,7 @@ This page earlier repeated the scope list. Directions, their authorization and t
 - <a id="theory-of-evolution"></a><a id="the-theory-of-evolution"></a><a id="演化理论--the-theory-of-evolution"></a>[The Theory of Evolution](../../../GOALS.md#theory-of-evolution) (`unmarked`)
 - <a id="universal-intelligence-session"></a><a id="the-ethics-for-life-and-every-intelligence-formed-within-it"></a><a id="生命之伦理及在其中形成的一切智能--the-ethics-for-life-and-every-intelligence-formed-within-it"></a>[The ethics for life, and every intelligence formed within it](../../../GOALS.md#universal-intelligence-session) (`unmarked`)
 - <a id="wisdom-root-session"></a><a id="constitution-and-formation-of-wisdom"></a><a id="慧根会话的构成与形成目标--constitution-and-formation-of-wisdom"></a>[Constitution and formation of wisdom](../../../GOALS.md#wisdom-root-session) (`unmarked`)
-- <a id="zero-axiom-session"></a><a id="independent-axiom-free-practical-judgment"></a><a id="无公理实践判断的独立接续--independent-axiom-free-practical-judgment"></a>[Independent axiom-free practical judgment](../../../GOALS.md#zero-axiom-session) (`unmarked`)
+- <a id="zero-axiom-session"></a><a id="practical-judgment-for-life-on-the-fewest-premises"></a><a id="生命的实践判断立于最少的前提--practical-judgment-for-life-on-the-fewest-premises"></a>[Practical judgment for life, on the fewest premises](../../../GOALS.md#zero-axiom-session) (`unmarked`)
 
 <a id="discovery-and-evidence--检索与证据"></a>
 ## Discovery and evidence
