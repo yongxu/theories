@@ -232,6 +232,13 @@
         "en": "The linear-extension form on finite causal sets with precedence decided: what every course keeps is precedence, unrelated elements born either way; here strict partial orders on any carrier, with nothing decided.",
         "zh": "有限因果集上之线性扩张之形，先后可判定：每一程所存者为先后，无关之元两向而生；此处为任一载体上之严偏序，无所判定。"
       }
+    },
+    {
+      "id": "what-holding-for-a-reading-is-worth",
+      "detail": {
+        "en": "The shown reach joined to the worth of holding a pick for a reading: for listed candidates of positive weight whose comparisons are transitive and accord with the choices, the shown reach makes the corresponding fixed pick attain the reading's value, and holding gains over both picks only where neither alternative reaches the other.",
+        "zh": "所示之及接于为读而持其择之值：于正权之列候选其较传递且合于所择者，所示之及使相应之定择达读之值；唯在二者互不相及处，持方胜于二择。"
+      }
     }
   ],
   "references": [
@@ -300,7 +307,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
       "role": "integration",
-      "sha256": "cbe448cbcf6dd59057af10f976a89bc22d27396f04412a821e5e2cf0dd462b6c"
+      "sha256": "3ff802b10fd7cab1210c6d559d4ad243977211b1f97547c91fd48ff07ebc3287"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
@@ -336,6 +343,10 @@
     {
       "en": "29 October 2026: added (RF round 1), what choices show of the order they come from: the shown reach, its exactness under no cycle, a narrower class, the freedom beyond it, maximal choices, and the witness of one search with two orders; after a review of the plan, a review of the Lean and a cold read of the texts; study section 446.",
       "zh": "2026年10月29日：新增（RF 第一轮），所择所示之序：所示之及，无环时之确，较窄之类，及外之自由，极大之择，一搜二序之例；经计划之审、Lean 之审与文之冷读；研究第 446 节。"
+    },
+    {
+      "en": "30 October 2026, board item RF, RF-M.2 (study section 466): related to what-holding-for-a-reading-is-worth; no statement, next step or declaration changed.",
+      "zh": "2026年10月30日，工作板条目 RF，RF-M.2（研究第 466 节）：与 what-holding-for-a-reading-is-worth 相关联；无一陈述、下一步或声明改变。"
     }
   ]
 }

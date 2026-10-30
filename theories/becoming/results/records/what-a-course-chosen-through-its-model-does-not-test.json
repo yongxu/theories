@@ -175,8 +175,8 @@
     "zh": "纯核，公理报告皆空：此环为一 Blanket.Blanketed 之律，通用 Blanket 之 agent_through_sensory；候选之列以 Narrowing.mem_filter 筛之；例以 rfl 计算，其于每一形成之律为 alike_of_kept 之一例。"
   },
   "next_delta": {
-    "en": "Probabilistic candidates and the value of information in the periphery; an intervention moving the world; a frozen test predicting when a learner stops trying what its model ranks low; review by a person.",
-    "zh": "外围之概率候选与信息之值；移世之干预；预测学者何时止试其模型所低估者之冻结检验；人之审查。"
+    "en": "Probabilistic candidates and the value of a noisy reading in the periphery; an intervention moving the world; a frozen test predicting when a learner stops trying what its model ranks low; review by a person.",
+    "zh": "外围之概率候选与有噪之读之值；移世之干预；预测学者何时止试其模型所低估者之冻结检验；人之审查。"
   },
   "correspondence": {
     "en": "A deterministic case of a model right along the course its own choices take and wrong off it, never refuted there, related to self-confirming equilibrium (Fudenberg and Levine 1993) and incomplete learning (Rothschild 1974); the choice is a specified one-step worst case, the special case of maxmin over candidates (Gilboa and Schmeidler 1989). Beside what-seeking-cannot-separate, where no experiment the formation can choose separates two hypotheses, here one does, and a formation choosing through its model need not choose it. AI reading: where every separating answer breaks a task, no formation keeping the task learns which world holds, a deterministic two-run obstruction beside safe-exploration methods that guarantee exploration under regularity and reachability assumptions (Sui, Gotovos, Burdick and Krause 2015; Turchetta, Berkenkamp and Krause 2016). These are readings, not containments.",
@@ -225,6 +225,13 @@
       "detail": {
         "en": "The kept reading on one carrier of world and state; here the reading that a candidate is kept, on the loop.",
         "zh": "于世与态之一载体之所守之读；此处为环上「某候选被守」之读。"
+      }
+    },
+    {
+      "id": "what-holding-for-a-reading-is-worth",
+      "detail": {
+        "en": "The worth of a reading in counts, of one telling the candidate and of one telling only a cell; and a witness on the same loop, a listing right along its course and wrong off it, there with a stopping reading never sensed.",
+        "zh": "读之值之计，辨候选之读与唯辨其格之读；及同一读环上之例，所列合于其历程而离之则误，彼处止之读永不被感。"
       }
     }
   ],
@@ -295,7 +302,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
       "role": "integration",
-      "sha256": "cbe448cbcf6dd59057af10f976a89bc22d27396f04412a821e5e2cf0dd462b6c"
+      "sha256": "3ff802b10fd7cab1210c6d559d4ad243977211b1f97547c91fd48ff07ebc3287"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md",
@@ -321,6 +328,10 @@
     {
       "en": "30 October 2026: added (RF round 2), what a course chosen through its model does not test: two worlds and one formation, a formation keeping candidate laws, keeping a task as not telling worlds apart; after a cross-model review of the Lean with a re-check, every finding taken; study section 456.",
       "zh": "2026年10月30日：新增（RF 第二轮），依其模型而择之历程所不验者：二世一形成、守候选律之形成、守务即不分二世；经 Lean 之跨模型审查与复查，凡所见皆取；研究第 456 节。"
+    },
+    {
+      "en": "30 October 2026, board item RF, RF-M.2 (study section 466): related to what-holding-for-a-reading-is-worth, where the value of a reading in counts is stated; the next step keeps the value of a noisy reading in the periphery; no statement or declaration changed.",
+      "zh": "2026年10月30日，工作板条目 RF，RF-M.2（研究第 466 节）：与 what-holding-for-a-reading-is-worth 相关联，读之值之计于彼陈述；下一步留有噪之读之值于外围；无一陈述或声明改变。"
     }
   ]
 }

@@ -342,6 +342,16 @@ This section was added by U4's taker. It edits no earlier section, but it supers
 
 The two census rows, `Listed.coming_of_ceasing` and `CensusWebs.keep_pace`, are where the census pairing reaches most directly. They are a candidate item of their own.
 
+## U3 landed: the release gate's item 1, and the figures (30 October 2026)
+
+**U3's Lean is on main** (`5b3b5ba8a`, core receipt `20261030T131028.245732Z`, every axiom report empty; study §465). The core leaf `Becoming.SignificanceStatements` restates rows 5 and 7 on their own carrier and specializes rows 1, 8 and 9 at the own-closure reading. Row 10's interface law, `Weighting.grammar_widens_iff_every_positive`, joined `Becoming.Weightings`. It is a restatement, not a derivation: the condition (scope) and C (order) stay premises, and `sig` keeps its general form.
+
+- **The gate's item 1 is met as F4 defines it.** Each of the five significance rows has its form in the root's terms in the package, with the two premises named. F5's stricter count is stated beside it, as "U3's standing" above asks: rows 5, 7 and 10 are F5 items with model own, and rows 1, 8 and 9 are specializations that carry none. 08 §7, the board's clause and §465 give both. The one page and the overview count by law rather than by declaration: of significance's five central laws, two are restated on their own carrier (rows 5 and 7 are two declarations of C's extension and comparison, and row 10 is the other law) and three are specialized, none derived from the root.
+- **The figures.** Over the 118 distinct central declarations, F5 now counts 44 reaching the grammar, 16 stated at a represented model, 7 on their own carrier only (U2's 4 and U3's 3) and 51 the rest. `statements_at_model` has 24 entries, none unverified. The gate's item 3 now reads against these: it is met when each of the 51 is lifted, or its not entering is written with its reason. The figure in "U4's levers 1 and 2, reviewed" (44, 16, 4, 54) is U4's taker's and dates from before U3. It is left as written.
+- **What is unchanged.** HE2's edits, held for the next near-full rebuild, are untouched, as are «广之对应» (still waiting, with no reader) and the free significance of 07 §1, which stays unlifted on purpose.
+
+**Next, in the coordinator's order:** RF-M.2; then GW (GW1 and GW2 in a core leaf importing GrammarMap, and GW6, the gate's item 2, with L-10's fix and a core run); then UE24, RV21b and AJ6b. After GW, the gate's open items are 2 if GW6 has not met it, 3 (the 51), 4 (§八 step 5), 5 (a fresh receipt) and 6 (the front pages).
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.
