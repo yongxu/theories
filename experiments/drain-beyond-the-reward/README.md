@@ -2,7 +2,7 @@
 
 Board item LA4, 30 October 2026. AI-written (a Claude Code session). **No prediction is frozen and no learner has run.** The design, the season's laws (proved in Lean) and the separable family's exact flow are done. The learner runs wait for a machine suited to them.
 
-Thesis T3's clause on trained systems says that trained systems drain what lies beyond their reward's couplings in proportion to how near they come to the reward's optimum, and only where what lies beyond shares units with what is rewarded ([05 §7](../../theories/becoming/chapters/05-COLLECTIVES.md#t3)). The LA1 series tested the bridge to a stated reward, in context. No test yet reaches the clause itself ([A-18](../../theories/becoming/review/ALIGNMENT.md#a-18)).
+Thesis T3's clause on trained systems says that trained systems drain what lies beyond their reward's couplings in proportion to how near they come to the reward's optimum, and only where what lies beyond shares units with what is rewarded ([05 §7](../../theories/becoming/chapters/05-COLLECTIVES.md#t3)). CG1 and IN1 tested a drain beyond the reward's couplings, and the LA1 series the bridge to a stated reward, in context ([A-18](../../theories/becoming/review/ALIGNMENT.md#a-18)). No test yet varies how near a trained system comes to its reward's optimum, which is what the clause adds.
 
 LA4 tests the clause on systems trained by gradient:
 - **The learners.** Stage A uses three families of small policies: separable, feedforward and recurrent. Stage B uses two families of open-weight language models.

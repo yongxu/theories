@@ -86,7 +86,8 @@ edit(CH5, '- *Standing.* The law for optima is proved; the clause on trained sys
      'fish uncounted, the bay rises (the evidence below). [AI reading] Units do not exhaust couplings: a learner '
      'couples into its return what it reads, through its own uneven training.')
 edit(CH5, '  - Outside: optimizing against a learned proxy raises it while the true reward rises, then falls',
-     '  - LA4\'s design, the first test of the clause under training by gradient, is not yet run ([design]('
+     '  - LA4\'s design, the first test to vary how near a system trained by gradient comes to its reward\'s '
+     'optimum, is not yet run ([design]('
      + LA4 + '/DESIGN.md)). Its season meets the law\'s hypotheses where the design says it does ([the case]'
      '(#r-the-test-season-meets-the-optimum-laws)). The separable family\'s exact flow on that season computes the '
      'expected update; it is not a frozen test. From a start keeping the colony in 98.7% of seasons, it drains the '

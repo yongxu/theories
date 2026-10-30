@@ -28,6 +28,15 @@ assert row.count(OLD_TAIL) == 1, 'the status cell has changed: read the row'
 i = row.index(OLD_TAIL)
 rest = row[i + len(OLD_TAIL):]
 assert rest.startswith(' `experiments/drain-beyond-the-reward/`'), rest[:60]
-lines[hits[0]] = row[:i] + NEW_TAIL + rest
+row = row[:i] + NEW_TAIL + rest
+# the row's opening named the clause as untested; CG1 and IN1 tested a drain beyond the couplings, and what no test
+# yet varies is nearness to the optimum
+OLD_OPEN = ("T3's clause on trained systems, which no test yet reaches (the LA1 series tested the bridge to a stated "
+            "reward, in context).")
+NEW_OPEN = ("T3's clause on trained systems, whose dependence on how near a trained system comes to its reward's "
+            "optimum no test yet varies (CG1 and IN1 tested a drain beyond the reward's couplings, the LA1 series the "
+            "bridge to a stated reward, in context).")
+assert row.count(OLD_OPEN) == 1, 'the row\'s opening has changed: read the row'
+lines[hits[0]] = row.replace(OLD_OPEN, NEW_OPEN)
 BOARD.write_text('\n'.join(lines), encoding='utf-8')
 print('LA4 row: formal part landed')
