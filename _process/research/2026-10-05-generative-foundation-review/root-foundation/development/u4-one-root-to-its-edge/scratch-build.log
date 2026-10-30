@@ -1,13 +1,13 @@
 {
   "tree": "/private/tmp/claude-501/-Users-ren-theories/a1748b36-1177-4857-afe2-0d9f0c541556/scratchpad/wt-u4/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/scratch",
-  "modules": 22,
+  "modules": 23,
   "ran": [],
-  "reused": 25,
+  "reused": 27,
   "unclean": [],
   "audits": {
-    "Becoming.U4Bridge": {
-      "theorems": 6,
-      "declarations": 7,
+    "Becoming.U4Scratch": {
+      "theorems": 43,
+      "declarations": 51,
       "with_axioms": {}
     },
     "Becoming.U4Repairing": {
@@ -15,9 +15,14 @@
       "declarations": 18,
       "with_axioms": {}
     },
-    "Becoming.U4Scratch": {
-      "theorems": 43,
-      "declarations": 51,
+    "Becoming.U4Bridge": {
+      "theorems": 6,
+      "declarations": 7,
+      "with_axioms": {}
+    },
+    "Becoming.U4Across": {
+      "theorems": 15,
+      "declarations": 19,
       "with_axioms": {}
     }
   }

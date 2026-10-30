@@ -7,7 +7,7 @@ OU's owner asked which of lever 1's laws hold for every admissible pairing and w
 pairing chosen. Counts do not fix unit lines (U1), so a law about lines counts only where it holds
 whatever lines the counts admit.
 
-* **Not invariant: one-to-one continuation.** The compensation's units and a one-to-one model of the
+* **Not invariant: one-to-one continuation.** The split-and-merge model's units and a one-to-one model of the
   same units have the same counts, nothing arising or ceasing in either, and only the second admits
   the census pairing (`same_counts_other_lines`). That a unit model continues one to one is a choice
   among the models the counts admit: a premise, not a law read on counts.
@@ -31,12 +31,12 @@ def oneToOne (g f : Nat) : Bool :=
 three after, with nothing arising or ceasing in either: one continues one to one and admits the census
 pairing, the other splits one unit and merges two and admits none. -/
 theorem same_counts_other_lines :
-    arising oneToOne [0, 1, 2] [3, 4, 5] = arising compensating [0, 1, 2] [3, 4, 5] ∧
-      ceasing oneToOne [0, 1, 2] [3, 4, 5] = ceasing compensating [0, 1, 2] [3, 4, 5] ∧
+    arising oneToOne [0, 1, 2] [3, 4, 5] = arising splitAndMerge [0, 1, 2] [3, 4, 5] ∧
+      ceasing oneToOne [0, 1, 2] [3, 4, 5] = ceasing splitAndMerge [0, 1, 2] [3, 4, 5] ∧
       «对» (fun x y => oneToOne x y = true ∨ x = y) [0, 1, 2] [3, 4, 5] ∧
-      ¬ «对» (fun x y => compensating x y = true ∨ x = y) [0, 1, 2] [3, 4, 5] :=
+      ¬ «对» (fun x y => splitAndMerge x y = true ∨ x = y) [0, 1, 2] [3, 4, 5] :=
   ⟨rfl, rfl, .cons (b₁ := []) (Or.inl rfl) (.cons (b₁ := []) (Or.inl rfl)
-    (.cons (b₁ := []) (Or.inl rfl) .nil)), compensation.2.2.2⟩
+    (.cons (b₁ := []) (Or.inl rfl) .nil)), split_and_merge.2.2.2⟩
 
 /-! ## A one-to-one model for every balanced count -/
 

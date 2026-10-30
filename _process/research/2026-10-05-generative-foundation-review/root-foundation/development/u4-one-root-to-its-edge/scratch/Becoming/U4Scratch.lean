@@ -517,18 +517,18 @@ theorem and_true_cases {a b : Bool} (h : (a && b) = true) : a = true ∧ b = tru
 arises or ceases and the count balances, so the lists are paired under the one, yet no pairing
 under continuation or sameness holds, since the region of the unit that split and its two
 continuations, closed under that relation both ways, holds one unit before and two after. -/
-def compensating (g f : Nat) : Bool :=
+def splitAndMerge (g f : Nat) : Bool :=
   (Nat.beq g 0 && (Nat.beq f 3 || Nat.beq f 4)) || ((Nat.beq g 1 || Nat.beq g 2) && Nat.beq f 5)
 
 /-- The region of the unit that split and its two continuations. -/
 def splitRegion (z : Nat) : Bool := Nat.beq z 0 || Nat.beq z 3 || Nat.beq z 4
 
-theorem compensation :
-    arising compensating [0, 1, 2] [3, 4, 5] = [] ∧ ceasing compensating [0, 1, 2] [3, 4, 5] = [] ∧
+theorem split_and_merge :
+    arising splitAndMerge [0, 1, 2] [3, 4, 5] = [] ∧ ceasing splitAndMerge [0, 1, 2] [3, 4, 5] = [] ∧
       «对» «一» [0, 1, 2] [3, 4, 5] ∧
-      ¬ «对» (fun x y => compensating x y = true ∨ x = y) [0, 1, 2] [3, 4, 5] := by
+      ¬ «对» (fun x y => splitAndMerge x y = true ∨ x = y) [0, 1, 2] [3, 4, 5] := by
   refine ⟨rfl, rfl, «等长则一对» _ _ rfl, fun h => ?_⟩
-  have closed : ∀ x y : Nat, (compensating x y = true ∨ x = y) → splitRegion x = splitRegion y := by
+  have closed : ∀ x y : Nat, (splitAndMerge x y = true ∨ x = y) → splitRegion x = splitRegion y := by
     intro x y r
     cases r with
     | inr same => exact congrArg splitRegion same
