@@ -648,7 +648,7 @@ Where: Parts [C](../history/root-foundation/READINGS-PENDING-REN.md#c-the-regist
 
 **What would change it.** For each reading, what its decision lists. For the account, a reading it cannot place without contradiction, or a theorem showing one of its joins wrong. A further text of Ren's on any of his terms is evidence for a revision, argued from the work.
 
-**Narrowed** (30 October 2026, board item AJ6, from RF's plan §9 item 2). 07 §6 now reads pooled coupling across intelligences as a route to alignment for all, not the whole of it. A pool's acts respond to a difference only through members that couple it apart, and coupling bounds that response without fixing it. That a member coupled into a loss acts on it where the member itself is not read, that what is read tells the loss apart, that mixed courses are ordered (beyond C; a commitment such as J1 does it in part) and that a revision completes are further conditions, which pooling does not give. The rest of the reading is kept.
+**Narrowed** (30 October 2026, board item AJ6, from RF's plan §9 item 2). 07 §6 now reads pooled coupling across intelligences as a route to alignment for all, not the whole of it. A pool's acts respond to a difference only through members that couple it apart, and coupling bounds that response without fixing it. That a member coupled into a loss acts on it where the member itself is not read, that what is read tells the loss apart, that mixed courses are ordered (which C alone does not do; a commitment such as J1 does it in part) and that a revision completes are further conditions, which pooling does not give. The rest of the reading is kept.
 
 <a id="d46-多于此刻的取用终于何处--where-a-rising-take-ends"></a>
 ### Where a rising take ends
