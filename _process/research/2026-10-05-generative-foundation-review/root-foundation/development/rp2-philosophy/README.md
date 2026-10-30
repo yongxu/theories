@@ -56,3 +56,49 @@ Each against a publisher, catalogue, PhilPapers or proceedings record found by w
 | Turner, Hadfield-Menell and Tadepalli 2019 | arXiv 1902.09725 | venue beyond arXiv not confirmed, so not given |
 | Voorhoeve 2014 | LSE repository and PhilArchive: *Ethics* 125(1):64–87, doi 10.1086/677022 | |
 | Williams 1981 | catalogue records and the reprint in *Moral Luck*, pp. 101–113 | first published in Harrison (ed.), *Rational Action*; its year is given as 1979 or 1980 |
+
+## The front sized for a person (RP2b, 31 October 2026)
+
+This is board item RP2b: the release gate's item 6 as amended on 31 October ([WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gates-item-6-sized-for-a-person-31-october-2026)). The coordinator routed it to RP2's owner together with the reader edition. The worked examples were AJ4's alignment dossier (branch `aj4-human`) and FM's map (branch `fm-readers`).
+
+- **Why.** The old front was 1,067 words, within ten minutes by count. It gave the question, the times, how the dossier was made and the conventions. It did not give the two premises' roles, what is proved, what failed or what is asked, so a person had to read the items to learn them.
+- **What changed.** The dossier now opens with `## The dossier in ten minutes`. It gives:
+  - the question;
+  - the two premises with their roles, and what the warrant does not reach;
+  - what is proved, each result with its base and deciding premises;
+  - the open question, with §4.6's P1 to P4 and the standing of each;
+  - T8, and T5 with its two tests as they fell;
+  - what is not claimed, and what is asked;
+  - the times.
+
+  Then come:
+  - `## The items`: the parts with item links, and how to read each item's fields;
+  - `## Terms`: the old conventions, whole;
+  - the items, the references, and the response form, now anchored;
+  - `## How this dossier was made`: the old paragraph, whole, in bullets, with this change recorded.
+
+  The 27 items are unchanged, except that P-26 now carries the AI label on the gloss of 生生 (D1). 07 §8 also omits that label; its owner was told.
+- **Measures.** These use the counting in AJ4's `kit/measure_layers.py`, ending the part at the alignment dossier's pattern `^(## The items|###? P-01)`.
+  - The part: 1,114 words, 8.6 to 11.2 minutes, and it states its time. That is 15 words over the budget of 1,100. The excess is items that may not be cut, restored by the review (amendment 1).
+  - The one-hour path (the part with P-04, P-05, P-07, P-10, P-11 and P-20): 4,386 words, 34 to 44 minutes.
+  - The whole dossier: 13,141 words and 263 characters, 102 to 133 minutes, "about two hours" as the cover says.
+  - With the kit's old pattern for philosophy (`^###? P-01`), the front would also count the item list and the terms: 1,843 words. AJ4's owner was told on 31 October.
+- **Checks.** `check_dossiers.py` reports 0 problems. All seven parts of the reader edition build (`tools/publishing/build_review_packet.py`). In PHILOSOPHY's edition every in-document link resolves (95) and no checker markup is left. In the LOGIC and CLASSICAL-TEXTS editions, the markup itself is converted, but the sentences explaining it (Source [ID], 原文〔ID〕, 引〔路径〕) remain, a small mismatch for those dossiers' owner.
+- **Review.** One independent AI reader, read-only and with no part in the writing, checked the part against the items, chapter 7 and AGENTS.md. It found 2 errors:
+  - the free-parameter hypothesis was dropped from P-01's sentence, which then contradicted the de se reading before it;
+  - an AI label was cut.
+
+  It also found 11 imprecisions or clarity problems:
+  - P2 lacked "at oneself", and its gloss was weaker than the condition;
+  - the path's support was overstated;
+  - P1 was said to be shown by a witness;
+  - the closing's "nothing dropped" was false, and neither the packet nor P-11's form of the question was named;
+  - the step of invariance was undefined;
+  - T8 was truncated, and the gloss of 生生 was unlabelled;
+  - the standing of P2 and P4 was merged with P3's;
+  - the path's conclusion was not said to be a law;
+  - three hypotheses were missing from the results on self-concern;
+  - several terms were undefined;
+  - the provenance named the release gate.
+
+  Every finding was taken. Cuts elsewhere kept the part near its budget: a repetition, and the population-ethics clause of question 2, which P-07 keeps in full.
