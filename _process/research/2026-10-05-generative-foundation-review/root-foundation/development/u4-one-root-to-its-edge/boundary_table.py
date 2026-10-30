@@ -47,6 +47,23 @@ HAND = {
             'Ungated, EndsAmong, Lifted', '§10'),
            ('GroupEnding.Flow.all_end', 17, 'the gate as two inclusions (all_end_on_root, size_zero_of_within)',
             'Ungated, Lifted.inactive_needed', '§10')]},
+    # The connected rows read as cases of a grammar law (CONNECTED-ROWS-READING.md): the proof already is the law
+    # applied with existing bridges, so the record declares the law and adds no Lean.
+    **{d: ('derived', f'a case of {y} at {at}; bridges exist ({why}) (CONNECTED-ROWS-READING.md)')
+       for d, y, at, why in [
+           ('Flow.beyond_gives_nothing', '«所闭之界»', 'R = L.FedFrom W', 'FedFrom and FedBy unfolded; one prelude step, ¬ 0 < n → n = 0'),
+           ('Flow.withinSystem_of_withinInfluence', '«所闭之单调»', 'R = AffectedBy, S = Shares', 'shares_of_affectedBy, an unfolding'),
+           ('Law.drawn_iff_not_returns', '«定后有后则入当且仅当不返»', 'R = next x = y',
+            'drawn_iff_drawnIn, absorbing_iff_closed, reaches_iff_orbit; the orbit read as «及» by induction'),
+           ('Law.lossless_iff_returns', '«有限遍后定后则定前当且仅当皆返»', 'R = next x = y',
+            'lossless_iff_fixedBefore, returns_iff_reaches; the orbit read as «及» by induction'),
+           ('Learning.goAlike_iff_lumped', '«像定后当且仅当同行»', "the law's step along π", 'goAlikeUnder_iff_alike, lumped_iff_fixed_image'),
+           ('Tolerance.answers_restores_iff', '«承之迭»', 'R = up', 'answers is «承» up by definition; chain_iff_steps'),
+           ('Withholding.withholding_spreads', '«存承之迭»', 'R = up', 'waitsAll by definition; within_iff_withinSteps'),
+           ('WithinMoves.after_course', '«迭内之接»', 'R = Steps P', 'trace_steps, withinMoves_iff_withinSteps')]},
+    'Flow.mutuallyDependent_iff_reach': ('connected',
+        'exactly WithinClosure.converse, «所闭» («逆» R) f g ↔ «所闭» R g f, grammar-only in content but declared off the '
+        'grammar; a case once that law is declared in GrammarLaws (CONNECTED-ROWS-READING.md)'),
     # Lever 2's gate rows: every hypothesis an inclusion on the root and witnessed; the conclusion compares amounts.
     **{d: ('amounts', f'row {r}: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis witnessed; '
                       f'the conclusion compares amounts ({L2} §4, §10)')
@@ -91,6 +108,18 @@ HAND = {
 }
 
 
+def reading(path):
+    """The reader's table: declaration -> (verdict, root form possible?)."""
+    out = {}
+    if not path.is_file():
+        return out
+    for line in path.read_text().splitlines():
+        cells = [c.strip() for c in line.strip().strip('|').split('|')]
+        if len(cells) >= 7 and cells[0].startswith('`') and cells[0].endswith('`'):
+            out[cells[0].strip('`')] = {'verdict': cells[1].replace('**', ''), 'root_form': cells[5]}
+    return out
+
+
 def statement_closure(C, n):
     """The constants a declaration's statement names, with the definitions those unfold to (not theorems' proofs)."""
     seen, stack = set(), list(C[n]['t'])
@@ -114,15 +143,18 @@ def proof_closure(C, deps, n):
 
 
 def grammar_reach(C, deps, n):
-    """The grammar theorems and definitions a declaration's type and proof reach, grammar constants not expanded.
-    A grammar constant is a «» name or a constant of a Becoming.Grammar* module."""
+    """The grammar laws and other grammar constants a declaration's type and proof reach, grammar constants not
+    expanded. A grammar constant is a «» name or a constant of a Becoming.Grammar* module; a grammar law is a theorem
+    whose own name is a «» name. Lean's generated auxiliaries (`«及».brecOn`) and GrammarLaws' list and number helpers,
+    which its own text says are not statements of the grammar, are counted with the definitions (the reading,
+    CONNECTED-ROWS-READING.md)."""
     seen, stack, thm, dfn = {n}, [n], set(), set()
     while stack:
         for b in deps.get(stack.pop(), ()):
             if b in C and b not in seen:
                 seen.add(b)
                 if '«' in b or C[b]['m'].startswith('Becoming.Grammar'):
-                    (thm if C[b]['k'] == 'thm' else dfn).add(b)
+                    (thm if C[b]['k'] == 'thm' and '«' in b.rsplit('.', 1)[-1] else dfn).add(b)
                     continue
                 stack.append(b)
     return sorted(x.removeprefix('Becoming.') for x in thm), sorted(x.removeprefix('Becoming.') for x in dfn)
@@ -162,6 +194,7 @@ def main():
         measure = json.loads(out.read_text())
     reach = json.loads((root / 'theories/becoming/results/data/master-laws.json').read_text())['central_reach']['rows']
     deps = {n: set(x['t']) | set(x['v']) for n, x in C.items()}
+    read = reading(Path(__file__).resolve().with_name('CONNECTED-ROWS-READING.md'))
     rows = {}
     for r in measure['rows']:
         rows.setdefault(r['declaration'], {**r, 'rows': []})['rows'].append(r['row'])
@@ -181,7 +214,7 @@ def main():
                       'grammar_theorems': gthm, 'grammar_definitions': gdef,
                       'f5': [{'item': it['declaration'].removeprefix('Becoming.'), 'models': it['models'], 'record': it['record']}
                              for it in items],
-                      'standing': st, 'basis': basis, 'by': 'reading' if short in HAND else 'rule',
+                      'standing': st, 'basis': basis, 'reading': read.get(short), 'by': 'reading' if short in HAND else 'rule',
                       'rule_would_give': rule[0] if short in HAND and rule[0] != st else None})
     order = ON_EDGE + BELOW + DISTANCES
     unknown = sorted({x['standing'] for x in table} - set(order))

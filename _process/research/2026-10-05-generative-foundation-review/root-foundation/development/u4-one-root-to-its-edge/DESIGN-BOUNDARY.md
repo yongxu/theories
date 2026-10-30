@@ -2,22 +2,22 @@
 
 AI-written design for the last step of U4, "one root to its edge" ([proposal](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#one-root-to-its-edge-a-proposal-30-october-2026), [OU's decisions](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#ous-decisions-on-u4-and-on-gw1gw2-30-october-2026)). The step is one record stating where every central declaration stands: derived, on the root under a stated hypothesis with a countermodel, a premise proved not entailed, or at a named distance whose failure is written down.
 
-- **Status.** A draft, not yet reviewed. No package Lean is claimed and no record is written.
+- **Status.** A draft, not yet reviewed. The connected rows have been read independently (§3). No package Lean is claimed and no record is written.
 - **Order.** The record lands last, after GW1, GW2 and GW6, in OU's order. MV's field for the standings lands before it, as F5's field landed before U2's Lean. MV's owner has offered to draft that field (§5).
 - **The table.** [boundary_table.py](boundary_table.py) produces [boundary-table.json](boundary-table.json). It ran on main `4ac8cf27e`, after U3's Lean landed. The script runs the master-law measure from the checker cache and compiles nothing.
 
 ## 0. Where it stands
 
-On the strict reading this design recommends (§1.2), **no central declaration is on the edge yet**: 0 derived, 0 under a stated hypothesis, 0 premise. 16 stand below the grammar, as laws of logic or of counting. The other 102 sit at named distances, each with its reason:
+On the strict reading this design recommends (§1.2), **8 central declarations are on the edge, all derived**: each is a case of a grammar law, and its proof already applies that law through existing bridges (§3). None is yet under a stated hypothesis, and none is a premise. 16 stand below the grammar, as laws of logic or of counting. The other 94 sit at named distances, each with its reason:
 
 | Standing | Count | What it is |
 |---|---:|---|
-| derived | 0 | a case of a declared grammar law (§1.1) |
+| derived | 8 | a case of a declared grammar law (§1.1, §3) |
 | under a stated hypothesis | 0 | a case of a declared root form, each hypothesis with its countermodel (§1.2) |
 | premise | 0 | none of the central declarations is a premise; the continuation condition and C are not central declarations (§1.3) |
 | logic | 12 | definitions unpacked; most are stated at a model by U2 |
 | counting | 4 | laws over lists and maps to `Nat`: lever 2's rows 6, 12 and 18, and `RelativePosition.rise_needs_fall` |
-| connected | 31 | reaches grammar theorems among its reasons, with no balance; derived only once a grammar law it is a case of is declared (§3) |
+| connected | 23 | reaches grammar laws among its reasons, with no balance, and uses them as steps among its model's facts (§3) |
 | balance, represented | 32 | takes `Flow`'s balance in its statement (31) or its proof (1); lever 1's verdict |
 | amounts | 18 | its statement compares amounts the grammar has no terms for |
 | at a represented model | 7 | F5's items at a World's occurrence model or a process's model |
@@ -28,7 +28,7 @@ On the strict reading this design recommends (§1.2), **no central declaration i
 Three findings shape the record.
 
 1. **No central declaration states itself in the grammar's terms.** Under F5's own test (`stated`, `is_grammar_term` in tools/research/master_laws.py), all 118 statements name their model's terms. A standing is therefore carried by a declared item, as F5's statements at a model are: a grammar law the row is a case of, or a root form the row is an instance of.
-2. **Reaching the grammar is connection, not derivation.** All 44 declarations that reach the grammar reach grammar theorems. Most reach only closure's elementary laws, used as steps: `«所闭之传递»`, `«所闭之自反»`, `«缘在所闭»`, `«所闭之闭»` and `«所闭之单调»`. Some reach finite runs' `«尽则不或屡»`, and a few reach a master form itself. So the figure "44 reach the grammar" says a grammar law is among their reasons. It does not say the row is a grammar law at its model. Which rows are cases is read in §3.
+2. **Reaching the grammar is connection, not derivation.** All 44 declarations that reach the grammar reach grammar laws. Many reach only closure's elementary laws, used as steps: `«所闭之传递»`, `«所闭之自反»`, `«缘在所闭»`, `«所闭之闭»` and `«所闭之单调»`. Some reach finite runs' `«尽则不或屡»`, and a few reach a master form itself. So the figure "44 reach the grammar" says a grammar law is among their reasons. It does not say the row is a grammar law at its model. Of the 31 that take no balance, 8 are cases (§3).
 3. **Balance enters 31 rows' statements and one row's proof. Ten of the "balance, represented" rows are about amounts instead.** The measure counts `balance_over_stretch_on` as a balance anchor. It is the prelude's law of counting over a stretch.
    - Ten rows reach only that law, and balance appears in none of their statements: the RegimeMargin and frontier rows, and the two census rows. Their distance is amounts.
    - Two more rows have balance only in their proofs. `Flow.no_new_dependence` uses it to find a giver, and lever 2 places it under "coming to stand is given to". `Flow.new_beyond_every` concludes on imbalance, which is an amount.
@@ -88,15 +88,40 @@ The readings cover lever 2's rows (its audit's table), the definitional rows (EC
 
 ## 3. The connected rows
 
-An independent reader is checking each of the 31 connected rows against its Lean. Each row gets one verdict:
-- **case:** it is one grammar law at its model; the reader names the law and the bridge needed.
-- **steps:** it uses grammar laws among facts of its model; the reader names those facts, and whether a root form seems possible.
+An independent reader checked each of the 31 rows that reach the grammar with no balance against its Lean ([CONNECTED-ROWS-READING.md](CONNECTED-ROWS-READING.md)). The reader read proofs only and built nothing. Each row got one verdict: a **case** of one grammar law at its model, or **steps**, using grammar laws among its model's facts.
 
-The rows judged cases become the record's derived rows, each with its declared law and any bridge. The rest stay connected, with the model's facts named. This section is filled in from the reading.
+**Eight are cases, and need no new Lean.** Each proof already is the law applied, with bridges that exist. The record declares the law, and the rows are derived.
+
+| Row | The law it is a case of | At |
+|---|---|---|
+| `Flow.beyond_gives_nothing` | `«所闭之界»` | R = `L.FedFrom W` (plus one prelude step: ¬ 0 < n → n = 0) |
+| `Flow.withinSystem_of_withinInfluence` | `«所闭之单调»` | R = `AffectedBy`, S = `Shares` |
+| `Law.drawn_iff_not_returns` | `«定后有后则入当且仅当不返»` | R = `next x = y` |
+| `Law.lossless_iff_returns` | `«有限遍后定后则定前当且仅当皆返»` | R = `next x = y` |
+| `Learning.goAlike_iff_lumped` | `«像定后当且仅当同行»` | the law's step, along π |
+| `Tolerance.answers_restores_iff` | `«承之迭»` | R = `up` |
+| `Withholding.withholding_spreads` | `«存承之迭»` | R = `up` |
+| `WithinMoves.after_course` | `«迭内之接»` | R = `Steps P` |
+
+The two `Law` rows are the weakest of the eight. Their bridges read an orbit as `«及»` by a short induction, not by unfolding alone. A stricter reading of "unfolding only" could object there, so the review decides.
+
+**One row is a case of a law not yet on the grammar.** `Flow.mutuallyDependent_iff_reach` is exactly `WithinClosure.converse`: `«所闭» («逆» R) f g ↔ «所闭» R g f`. That statement is grammar-only in content but declared off the grammar, and the grammar's `«所闭之对称»` needs R symmetric. Declaring it in `GrammarLaws` as `«所闭之逆»`, with the same proof, makes the row a case and changes nothing else. A grammar-wide law rides the next planned near-full rebuild, so this goes on HE2's list through OU's owner (§5).
+
+**Twenty-two use grammar laws as steps.**
+- **Four could have a grammar-only form that no declaration states yet:** `Branching.loss_passes_juncture`, `Flow.withinCoupling_reads_iff`, `onLoop_of_closing` and `presupposition_scopes`. Each form would be a new law, and the row its case through a bridge. That is new Lean.
+- **`Amounts.rests`** rests on `«尽则不或屡»`, which is already its grammar form. The row adds amounts: it proves the law's ending hypothesis from "m copies of ε are not within s T".
+- **Six carry a closed region along a run**, which is `«闭含所闭»` applied through `«所闭»`'s definition, so the walk does not show it. Their closedness itself needs their model's facts, so only that part has a grammar form: `Pace.rule_until_reading`, the two `RuleCapture` rows, `Valuation.significant_iff`, `ClosedCapture.lock_outlives_loss` and `RegimeMargin.Coupled.Indexed.ends_downstream`.
+- **Eleven have no grammar form.** Their content is amounts, counting, prediction from prefixes, or the valuation's own logic.
+
+The rows in each group are in the reading's table and in each row's `reading` field of the table.
+
+**The walk, corrected by the reading.** Lean's generated auxiliaries, such as `«及».brecOn`, and GrammarLaws' list and number helpers, which that file says are "not statements of the grammar", are no longer counted as grammar laws. The table counts as a law only a theorem whose own name is a «» name.
 
 ## 4. What would move, and the work
 
-- **Cases** (§3) move to derived, with Y declared and, where needed, a bridge theorem.
+- **The eight cases** (§3) are derived once the record declares their laws. They need no Lean.
+- **`Flow.mutuallyDependent_iff_reach`** becomes a case once `«所闭之逆»` is in `GrammarLaws`, at the next near-full rebuild.
+- **The four steps rows with a possible grammar-only form** each need the form stated as a law and a bridge from it to the row. This is new Lean, and each one is weighed against what it adds. The form must be a law the grammar lacks, not a restatement of the row.
 - **Lever 2's four rows** move to standing 2 once each is restated on the strict reading:
   - relations become variables for gives, descent, activity and requiring;
   - amounts become functions to `Nat`;
@@ -105,20 +130,21 @@ The rows judged cases become the record's derived rows, each with its declared l
 
   Row 5 looks easiest, since its content is relational. Rows 13 and 14 carry Price's partition, a law of counting. That is prelude, so a strict form is in reach.
 - **F5's items, the logic rows and the counting rows** need nothing for the record. A strict root form for an F5 item is further work, not this record's.
-- **Balance, represented; amounts; free significance.** These stay where lever 1, lever 2 and U3 left them, with their witnesses: `pairs_without_one_to_one` and `repeated_unit` for balance; lever 2 §6 for amounts; 07 §1 for free significance. The two census rows remain lever 1's candidate through `«计»`.
+- **Balance, represented; amounts; free significance; the other steps rows.** These stay where lever 1, lever 2, U3 and the reading left them, with their witnesses and reasons: `pairs_without_one_to_one` and `repeated_unit` for balance; lever 2 §6 for amounts; 07 §1 for free significance; the model's facts named row by row in the reading. The two census rows remain lever 1's candidate through `«计»`.
 
 Every new theorem the record cites goes into one core leaf, as U2's `ModelStatements` and U3's `SignificanceStatements` did. The leaf holds the bridges for the cases, lever 2's strict root forms, and the countermodels as named theorems. It imports the rows' modules and `GrammarLaws`, and nothing below it uses it. It needs a claim on the board and a slot in the queue, with one incremental core run.
 
 ## 5. Order and owners
 
 1. **MV's field and verification.** MV's owner drafts the spec in the shape this design needs: per declaration, a standing or a distance label; for standing 2, each hypothesis and its countermodel; for standing 3, the not-entailed theorem; for derived, the declared law. MV verifies these from the checker cache, and the spec is reviewed and lands first.
-2. **The connected rows' reading** (§3), then this design's independent review.
-3. **The core leaf**, claimed on U4's row: bridges, strict root forms and countermodels. It gets an independent review and lands through the queue.
-4. **The record**, after GW's landing. Its home section is 08 §7, beside the master laws, since it reads every central declaration through them. MV counts the standings.
+2. **This design's independent review.** The connected rows' reading (§3) is done.
+3. **`«所闭之逆»` on HE2's list**, through OU's owner, for the next near-full rebuild.
+4. **The core leaf**, claimed on U4's row: lever 2's strict root forms and countermodels, and any of the four grammar-only forms the review keeps, with their bridges. It gets an independent review and lands through the queue.
+5. **The record**, after GW's landing. Its home section is 08 §7, beside the master laws, since it reads every central declaration through them. MV counts the standings.
 
 ## 6. Not done
 
-- The connected rows' reading (§3) is under way.
+- The four possible grammar-only forms (§3) are not weighed yet.
 - No strict root form is written yet.
 - MV's field is not drafted.
 - The table's readings in `HAND` are this design's and have not been reviewed.

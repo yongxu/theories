@@ -1,12 +1,12 @@
 {
  "distinct_central_declarations": 118,
  "counts": {
-  "derived": 0,
+  "derived": 8,
   "under a stated hypothesis": 0,
   "premise": 0,
   "logic": 12,
   "counting": 4,
-  "connected": 31,
+  "connected": 23,
   "balance, represented": 32,
   "amounts": 18,
   "at a represented model": 7,
@@ -14,9 +14,9 @@
   "at its model": 7,
   "free significance": 3
  },
- "on_the_edge": 0,
+ "on_the_edge": 8,
  "below_the_grammar": 16,
- "distances": 102,
+ "distances": 94,
  "hand_rows_not_central": [],
  "rows": [
   {
@@ -50,6 +50,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "Y itself is the root form. Restated with the `«尽»` hypothesis in place of `within`, the row *is* `«尽则不或屡»` at the model. The m·ε bound is amounts and stays off the grammar."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -84,6 +88,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "Yes in principle. At R = `Steps P`, Reach is `«所闭» R`, returning is `«及» R s s`, a path is a line of R steps, and a juncture is a place with two R-successors, one back within `«所闭»` of s and one not. No amounts, and only the hypothesis `«及» R s s`. It would be a new grammar law."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -108,6 +116,7 @@
    "f5": [],
    "standing": "amounts",
    "basis": "as Listed.coming_of_ceasing",
+   "reading": null,
    "by": "reading",
    "rule_would_give": null
   },
@@ -139,6 +148,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "Partly. Persistence of the lock is the content of `«闭含所闭»` at the two-level step relation, given closedness. Closedness needs the model's preorders and monotonicity. `b + t ≤ loss` is an amount."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -169,6 +182,7 @@
    ],
    "standing": "logic",
    "basis": "one line from the definitions (U2, process model)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at a represented model"
   },
@@ -199,6 +213,7 @@
    ],
    "standing": "at a represented model",
    "basis": "F5: process",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -223,6 +238,7 @@
    "f5": [],
    "standing": "at its model",
    "basis": "C's extension on the moves' frame (Web.paths_extension_iff_widens)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": null
   },
@@ -259,6 +275,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -276,14 +293,15 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.mem_cons_split",
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "counting",
    "basis": "row 18: courses of n binary draws, weighted; reading them as drift is the model's hypothesis (LEVER-2-AUDIT.md §2)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at its model"
   },
@@ -314,6 +332,7 @@
    ],
    "standing": "logic",
    "basis": "two laws through one coupling (U2, own carrier)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "own carrier"
   },
@@ -350,6 +369,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -378,6 +398,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -406,6 +427,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -429,13 +451,14 @@
     ],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -461,13 +484,14 @@
     ],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -507,6 +531,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -546,6 +571,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -581,6 +607,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -616,6 +643,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -642,10 +670,14 @@
     "«所闭»"
    ],
    "f5": [],
-   "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
-   "by": "rule",
-   "rule_would_give": null
+   "standing": "derived",
+   "basis": "a case of «所闭之界» at R = L.FedFrom W; bridges exist (FedFrom and FedBy unfolded; one prelude step, ¬ 0 < n → n = 0) (CONNECTED-ROWS-READING.md)",
+   "reading": {
+    "verdict": "case",
+    "root_form": "— (it is the law at the model)"
+   },
+   "by": "reading",
+   "rule_would_give": "connected"
   },
   {
    "declaration": "Flow.change_recurs_iff",
@@ -670,6 +702,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -698,6 +731,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -728,6 +762,7 @@
    ],
    "standing": "at a represented model",
    "basis": "F5: occurrence",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -757,8 +792,12 @@
    ],
    "f5": [],
    "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
-   "by": "rule",
+   "basis": "exactly WithinClosure.converse, «所闭» («逆» R) f g ↔ «所闭» R g f, grammar-only in content but declared off the grammar; a case once that law is declared in GrammarLaws (CONNECTED-ROWS-READING.md)",
+   "reading": {
+    "verdict": "case, Y not in the grammar",
+    "root_form": "—"
+   },
+   "by": "reading",
    "rule_would_give": null
   },
   {
@@ -784,6 +823,7 @@
    "f5": [],
    "standing": "amounts",
    "basis": "balance only in its proof; its statement is on its model's amounts",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -810,6 +850,7 @@
    "f5": [],
    "standing": "at its model",
    "basis": "row 5: \"coming to stand is given to\" (no_new_dependence_of_given); every hypothesis witnessed (Ungiven); the statement keeps the model's terms, so standing 2 waits for a form over every relation and amount (LEVER-2-AUDIT.md §5)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "amounts"
   },
@@ -838,6 +879,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -866,6 +908,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -888,6 +931,7 @@
    "f5": [],
    "standing": "amounts",
    "basis": "row 3: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis witnessed; the conclusion compares amounts (LEVER-2-AUDIT.md §4, §10)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at its model"
   },
@@ -905,13 +949,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "amounts",
    "basis": "row 1: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis witnessed; the conclusion compares amounts (LEVER-2-AUDIT.md §4, §10)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at its model"
   },
@@ -934,6 +979,7 @@
    "f5": [],
    "standing": "amounts",
    "basis": "row 2: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis witnessed; the conclusion compares amounts (LEVER-2-AUDIT.md §4, §10)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at its model"
   },
@@ -966,6 +1012,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -998,6 +1045,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -1030,6 +1078,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -1069,6 +1118,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -1101,6 +1151,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "Yes: R ⊆ R′, R′ ⊆ R ∪ {(o,h) : R a h} and R′ o a give `«所闭» R′ o g ↔ «所闭» R o g ∨ «所闭» R a g`. Once declared in the grammar, the row is a case with the existing bridges, all definitional case splits."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -1127,10 +1181,14 @@
     "«所闭»"
    ],
    "f5": [],
-   "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
-   "by": "rule",
-   "rule_would_give": null
+   "standing": "derived",
+   "basis": "a case of «所闭之单调» at R = AffectedBy, S = Shares; bridges exist (shares_of_affectedBy, an unfolding) (CONNECTED-ROWS-READING.md)",
+   "reading": {
+    "verdict": "case",
+    "root_form": "—"
+   },
+   "by": "reading",
+   "rule_would_give": "connected"
   },
   {
    "declaration": "GroupEnding.Flow.all_end",
@@ -1146,13 +1204,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "at its model",
    "basis": "row 17: the gate as two inclusions (all_end_on_root, size_zero_of_within); every hypothesis witnessed (Ungated, Lifted.inactive_needed); the statement keeps the model's terms, so standing 2 waits for a form over every relation and amount (LEVER-2-AUDIT.md §10)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": null
   },
@@ -1181,6 +1240,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -1209,6 +1269,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -1226,13 +1287,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "at its model",
    "basis": "row 14: the gate as two inclusions, cancellation and inactivity (rises_iff_inactive_on_root); every hypothesis witnessed (Ungated, EndsAmong, Lifted); the statement keeps the model's terms, so standing 2 waits for a form over every relation and amount (LEVER-2-AUDIT.md §10)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": null
   },
@@ -1263,6 +1325,7 @@
    ],
    "standing": "logic",
    "basis": "Iff.rfl (U2, own carrier)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "own carrier"
   },
@@ -1299,10 +1362,14 @@
     "«静»"
    ],
    "f5": [],
-   "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
-   "by": "rule",
-   "rule_would_give": null
+   "standing": "derived",
+   "basis": "a case of «定后有后则入当且仅当不返» at R = next x = y; bridges exist (drawn_iff_drawnIn, absorbing_iff_closed, reaches_iff_orbit; the orbit read as «及» by induction) (CONNECTED-ROWS-READING.md)",
+   "reading": {
+    "verdict": "case",
+    "root_form": "—"
+   },
+   "by": "reading",
+   "rule_would_give": "connected"
   },
   {
    "declaration": "Law.lossless_iff_returns",
@@ -1336,10 +1403,14 @@
     "«静»"
    ],
    "f5": [],
-   "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
-   "by": "rule",
-   "rule_would_give": null
+   "standing": "derived",
+   "basis": "a case of «有限遍后定后则定前当且仅当皆返» at R = next x = y; bridges exist (lossless_iff_fixedBefore, returns_iff_reaches; the orbit read as «及» by induction) (CONNECTED-ROWS-READING.md)",
+   "reading": {
+    "verdict": "case",
+    "root_form": "—"
+   },
+   "by": "reading",
+   "rule_would_give": "connected"
   },
   {
    "declaration": "Learnable.learnable_iff",
@@ -1360,17 +1431,17 @@
     "prelude_only": false
    },
    "grammar_theorems": [
-    "GrammarLaws.gap_of_lt",
-    "GrammarLaws.le_succ_cases",
-    "GrammarLaws.revisits_within",
-    "GrammarLaws.skipAt_le",
-    "GrammarLaws.skipAt_lt",
-    "GrammarLaws.skipAt_ne",
     "«迭之定»",
     "«迭之接»"
    ],
    "grammar_definitions": [
+    "GrammarLaws.gap_of_lt",
+    "GrammarLaws.le_succ_cases",
+    "GrammarLaws.revisits_within",
     "GrammarLaws.skipAt",
+    "GrammarLaws.skipAt_le",
+    "GrammarLaws.skipAt_lt",
+    "GrammarLaws.skipAt_ne",
     "«定后»",
     "«而»",
     "«迭»",
@@ -1380,6 +1451,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "l\\"
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -1401,17 +1476,17 @@
     "prelude_only": false
    },
    "grammar_theorems": [
-    "GrammarLaws.gap_of_lt",
-    "GrammarLaws.le_succ_cases",
-    "GrammarLaws.revisits_within",
-    "GrammarLaws.skipAt_le",
-    "GrammarLaws.skipAt_lt",
-    "GrammarLaws.skipAt_ne",
     "«迭之定»",
     "«迭之接»"
    ],
    "grammar_definitions": [
+    "GrammarLaws.gap_of_lt",
+    "GrammarLaws.le_succ_cases",
+    "GrammarLaws.revisits_within",
     "GrammarLaws.skipAt",
+    "GrammarLaws.skipAt_le",
+    "GrammarLaws.skipAt_lt",
+    "GrammarLaws.skipAt_ne",
     "«定后»",
     "«而»",
     "«迭»",
@@ -1421,6 +1496,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "No, for the same reasons."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -1451,6 +1530,7 @@
    ],
    "standing": "own carrier",
    "basis": "F5: stated in grammar terms on its own carrier",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -1483,10 +1563,14 @@
     "«静»"
    ],
    "f5": [],
-   "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
-   "by": "rule",
-   "rule_would_give": null
+   "standing": "derived",
+   "basis": "a case of «像定后当且仅当同行» at the law's step along π; bridges exist (goAlikeUnder_iff_alike, lumped_iff_fixed_image) (CONNECTED-ROWS-READING.md)",
+   "reading": {
+    "verdict": "case",
+    "root_form": "—"
+   },
+   "by": "reading",
+   "rule_would_give": "connected"
   },
   {
    "declaration": "Limit.identifies_iff_tracks",
@@ -1515,6 +1599,7 @@
    ],
    "standing": "logic",
    "basis": "Iff.rfl (U2, process model)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at a represented model"
   },
@@ -1539,6 +1624,7 @@
    "f5": [],
    "standing": "amounts",
    "basis": "counts of arising and ceasing over a listing; the census pairing with «计» is lever 1's candidate",
+   "reading": null,
    "by": "reading",
    "rule_would_give": null
   },
@@ -1560,13 +1646,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -1588,13 +1675,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -1626,6 +1714,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "No as stated: the content concerns step indices up to the first reading step. Persistence alone is `«闭含所闭»`."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -1650,6 +1742,7 @@
    "f5": [],
    "standing": "at its model",
    "basis": "a law of its model; the image law only reads it (OU3d's review)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": null
   },
@@ -1689,6 +1782,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1); counting by the prelude's law",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "No: amounts and numeric bounds."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -1713,6 +1810,7 @@
    "f5": [],
    "standing": "amounts",
    "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -1752,6 +1850,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1); counting by the prelude's law",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "No: amounts."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -1782,6 +1884,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "Partly. Given \"ended is `«闭»` under the converse of dependence\" as a hypothesis, the row is `«闭含所闭»` (`GrammarLaws.lean:206`) at that relation. The closedness is amounts (draining) and cannot be on the grammar."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -1814,6 +1920,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1); counting by the prelude's law",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "No: amounts."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -1845,6 +1955,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "No: amounts."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -1869,6 +1983,7 @@
    "f5": [],
    "standing": "amounts",
    "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -1886,13 +2001,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "counting",
    "basis": "a rise and fall count over a list, by commutativity (EC6: law of its model)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at its model"
   },
@@ -1932,6 +2048,7 @@
    ],
    "standing": "at a represented model",
    "basis": "F5: occurrence, process",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -1953,13 +2070,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -1981,13 +2099,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -2010,6 +2129,7 @@
    "f5": [],
    "standing": "amounts",
    "basis": "row 9: dissipation on a family and an injection from births to given units, a count within a take; dissipation is kept as a premise of the account with no proof of independence (LEVER-2-AUDIT.md §1)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at its model"
   },
@@ -2041,6 +2161,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "Partly. \"Favouring persists\" is `«闭含所闭»` at the turn relation, given `turn_favours`. The preorders and the reading schedule are the model's."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -2072,6 +2196,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "As `favouring_locks`: partly."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -2102,6 +2230,7 @@
    ],
    "standing": "at a represented model",
    "basis": "F5: process",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -2119,13 +2248,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "counting",
    "basis": "row 12: Price's partition (LEVER-2-AUDIT.md §2)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at its model"
   },
@@ -2143,13 +2273,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "at its model",
    "basis": "row 13: cancellation (rises_cancel_iff_levels); every hypothesis witnessed (Raised); the statement keeps the model's terms, so standing 2 waits for a form over every relation and amount (LEVER-2-AUDIT.md §1)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": null
   },
@@ -2167,13 +2298,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "amounts",
    "basis": "row 8: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis witnessed; the conclusion compares amounts (LEVER-2-AUDIT.md §4, §10)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at its model"
   },
@@ -2191,13 +2323,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "amounts",
    "basis": "row 7: the gate as inclusions (gate_iff_occurrences, dependent_iff), every hypothesis witnessed; the conclusion compares amounts (LEVER-2-AUDIT.md §4, §10)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at its model"
   },
@@ -2215,13 +2348,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "counting",
    "basis": "row 6: Price's covariance (LEVER-2-AUDIT.md §2)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at its model"
   },
@@ -2253,6 +2387,7 @@
    ],
    "standing": "at a represented model",
    "basis": "F5: own, process",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -2279,10 +2414,14 @@
     "«迭»"
    ],
    "f5": [],
-   "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
-   "by": "rule",
-   "rule_would_give": null
+   "standing": "derived",
+   "basis": "a case of «承之迭» at R = up; bridges exist (answers is «承» up by definition; chain_iff_steps) (CONNECTED-ROWS-READING.md)",
+   "reading": {
+    "verdict": "case",
+    "root_form": "—"
+   },
+   "by": "reading",
+   "rule_would_give": "connected"
   },
   {
    "declaration": "Valuation.significant_iff",
@@ -2312,6 +2451,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "Partly. Transmission is `«闭含所闭»` at the related-living relation (`transmits_iff_closed` shows N_rel is `«闭»`), with `Connected` read as `«所闭»` over living pairs. N_std and the seed are the valuation's, two-place over standpoints."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -2342,6 +2485,7 @@
    ],
    "standing": "logic",
    "basis": "S0 and N_std unpacked (U2, own carrier)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "own carrier"
   },
@@ -2372,6 +2516,7 @@
    ],
    "standing": "logic",
    "basis": "for all reached, and (U2, process model)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at a represented model"
   },
@@ -2406,6 +2551,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "No: the reserve is an amount. Its grammar-only core is `«尽则不或屡»`, as in `Amounts.rests`."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -2434,6 +2583,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -2459,6 +2609,7 @@
    "f5": [],
    "standing": "amounts",
    "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -2493,6 +2644,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "No: it goes through the stock (a Nat sum)."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -2527,6 +2682,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "No: amounts (a sum over a family)."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -2551,13 +2710,14 @@
     ],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "kept_onward"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
    "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -2580,13 +2740,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -2612,6 +2773,7 @@
    "f5": [],
    "standing": "amounts",
    "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -2637,6 +2799,7 @@
    "f5": [],
    "standing": "amounts",
    "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -2662,6 +2825,7 @@
    "f5": [],
    "standing": "amounts",
    "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -2687,6 +2851,7 @@
    "f5": [],
    "standing": "amounts",
    "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -2712,6 +2877,7 @@
    "f5": [],
    "standing": "amounts",
    "basis": "the prelude's counting law in its proof; its statement is on its model's amounts",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -2742,6 +2908,7 @@
    ],
    "standing": "at a represented model",
    "basis": "F5: occurrence",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -2773,6 +2940,7 @@
    ],
    "standing": "at a represented model",
    "basis": "F5: occurrence, own",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -2805,6 +2973,7 @@
    ],
    "standing": "own carrier",
    "basis": "F5: stated in grammar terms on its own carrier",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -2837,6 +3006,7 @@
    ],
    "standing": "own carrier",
    "basis": "F5: stated in grammar terms on its own carrier",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -2861,6 +3031,7 @@
    "f5": [],
    "standing": "free significance",
    "basis": "row 9: root form paths_one_object_root at the structural reading only (U3)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at its model"
   },
@@ -2891,6 +3062,7 @@
    ],
    "standing": "logic",
    "basis": "a one-line unpacking (U2, occurrence model)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at a represented model"
   },
@@ -2921,6 +3093,7 @@
    ],
    "standing": "logic",
    "basis": "the one-kind reading keeps living (U2, occurrence model)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at a represented model"
   },
@@ -2951,6 +3124,7 @@
    ],
    "standing": "logic",
    "basis": "the one-kind reading keeps dependence (U2, occurrence model)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at a represented model"
   },
@@ -2981,6 +3155,7 @@
    ],
    "standing": "logic",
    "basis": "the one-kind reading keeps support (U2 states it at the occurrence model)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at a represented model"
   },
@@ -3009,6 +3184,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "No meaningful one: the content is the valuation's logic over a free `sig`, and the grammar's part is reflexivity alone."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -3040,6 +3219,7 @@
    ],
    "standing": "logic",
    "basis": "a free slot shown free (U2, occurrence model and own carrier)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at a represented model"
   },
@@ -3070,6 +3250,7 @@
    ],
    "standing": "logic",
    "basis": "row 4: (A → B ∧ C) ↔ (A → B) ∧ (A → B → C) (U2, occurrence model; LEVER-2-AUDIT.md §1)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at a represented model"
   },
@@ -3094,6 +3275,7 @@
    "f5": [],
    "standing": "free significance",
    "basis": "row 8: root form widens_iff_retains_adds_root at the structural reading only (U3)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at its model"
   },
@@ -3113,10 +3295,10 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [
     {
      "item": "Weighting.grammar_widens_iff_every_positive",
@@ -3128,6 +3310,7 @@
    ],
    "standing": "own carrier",
    "basis": "F5: stated in grammar terms on its own carrier",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -3155,10 +3338,14 @@
     "«迭内»"
    ],
    "f5": [],
-   "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
-   "by": "rule",
-   "rule_would_give": null
+   "standing": "derived",
+   "basis": "a case of «存承之迭» at R = up; bridges exist (waitsAll by definition; within_iff_withinSteps) (CONNECTED-ROWS-READING.md)",
+   "reading": {
+    "verdict": "case",
+    "root_form": "—"
+   },
+   "by": "reading",
+   "rule_would_give": "connected"
   },
   {
    "declaration": "WithinMoves.after_course",
@@ -3182,10 +3369,14 @@
     "«迭内»"
    ],
    "f5": [],
-   "standing": "connected",
-   "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
-   "by": "rule",
-   "rule_would_give": null
+   "standing": "derived",
+   "basis": "a case of «迭内之接» at R = Steps P; bridges exist (trace_steps, withinMoves_iff_withinSteps) (CONNECTED-ROWS-READING.md)",
+   "reading": {
+    "verdict": "case",
+    "root_form": "—"
+   },
+   "by": "reading",
+   "rule_would_give": "connected"
   },
   {
    "declaration": "World.balanced_reidentify_iff",
@@ -3210,6 +3401,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -3249,6 +3441,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "reaches the grammar through another law, and takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -3283,6 +3476,7 @@
    "f5": [],
    "standing": "balance, represented",
    "basis": "reaches the grammar through another law; balance only in its proof",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -3304,13 +3498,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.le_succ_cases"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -3333,6 +3528,7 @@
    "f5": [],
    "standing": "at its model",
    "basis": "an exchange law carries exactly where the reading rises; support is inside the existential, not kept",
+   "reading": null,
    "by": "reading",
    "rule_would_give": null
   },
@@ -3354,13 +3550,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.le_succ_cases"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "balance, represented",
    "basis": "takes balance in its statement",
+   "reading": null,
    "by": "rule",
    "rule_would_give": null
   },
@@ -3391,6 +3588,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "No meaningful one. The closure used is degenerate (the empty relation), and the content is standpoint invariance."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -3411,7 +3612,6 @@
     "prelude_only": false
    },
    "grammar_theorems": [
-    "«及».brecOn",
     "«及之传递»",
     "«及当且仅当一步而所闭»",
     "«所闭当且仅当同一或及»",
@@ -3423,6 +3623,7 @@
     "«及».below.casesOn",
     "«及».below.more",
     "«及».below.one",
+    "«及».brecOn",
     "«及».more",
     "«及».one",
     "«所闭»"
@@ -3430,6 +3631,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "Yes: R d c → `«所闭»` R c e → `«所闭»` R e d → `«及»` R e e, grammar-only with no hypothesis. It is not declared anywhere. Once declared, the row is a case with the two existing bridges."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -3460,6 +3665,10 @@
    "f5": [],
    "standing": "connected",
    "basis": "reaches grammar theorems among its reasons; derived only once a grammar law it is a case of is declared (DESIGN-BOUNDARY.md §1)",
+   "reading": {
+    "verdict": "steps",
+    "root_form": "Yes, with `sig` as a free predicate Q: (∀ g, `«所闭»` R f g → Q g) ↔ ∃ P, `«闭»` R P ∧ P f ∧ ∀ g, P g → Q g (the closure is the least closed region), and the wide scope ↔ ∀ g, Q g. Neither is a declared grammar theorem."
+   },
    "by": "rule",
    "rule_would_give": null
   },
@@ -3477,13 +3686,14 @@
     "flow_proof": [],
     "prelude_only": false
    },
-   "grammar_theorems": [
+   "grammar_theorems": [],
+   "grammar_definitions": [
     "GrammarLaws.total_congr"
    ],
-   "grammar_definitions": [],
    "f5": [],
    "standing": "amounts",
    "basis": "a bound of propagation on amounts (EC6: law of its model)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at its model"
   },
@@ -3506,6 +3716,7 @@
    "f5": [],
    "standing": "free significance",
    "basis": "row 1: the continuation condition as living significance; root form noOutside_iff_paths_livingSignificance at the structural reading only; the condition is a premise proved not entailed (ReadsOnlyDynamics.not_entails)",
+   "reading": null,
    "by": "reading",
    "rule_would_give": "at its model"
   }
