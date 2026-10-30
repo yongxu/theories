@@ -34,27 +34,28 @@ cells is decidable wherever cells are compared or listings filtered.
   positive weight adds nothing (`unweighted_cell`).
 * **When the answer is least** (`answer_residual_zero_iff`, for any model of the reading formation:
   the exact cell criterion). Where its model is the holding formation's and its valuation agrees
-  with the reference on one positive scale at every listed candidate of positive weight, `q * g c +
-  p * loss c = q * l c + p * gain c`, the answer has no residual (`answer_least_of_scaled`); net
-  agreement is the scale `p = q = 1` (`answer_least_of_net`). Scales differing by candidate do not
-  suffice (`scales_by_candidate`). Told the candidate, with net agreement where the reading
-  formation gives positive weight, the residual is nothing exactly where every candidate the holding
-  formation weighs positively and where the loss exceeds the gain has positive total weight in the
-  reading formation's listing (`told_residual_zero_iff`, `weightOf`; witness `unweighted_told`).
+  with the reference on one positive scale at every listed candidate of positive weight,
+  `q * g c + p * loss c = q * l c + p * gain c`, the answer has no residual
+  (`answer_least_of_scaled`); net agreement is the scale `p = q = 1` (`answer_least_of_net`). Scales
+  differing by candidate do not suffice (`scales_by_candidate`). Told the candidate, with net
+  agreement where the reading formation gives positive weight, the residual is nothing exactly where
+  every candidate the holding formation weighs positively and where the loss exceeds the gain has
+  positive total weight in the reading formation's listing (`told_residual_zero_iff`, `weightOf`;
+  witness `unweighted_told`).
 * **Informing** (a map `π'` telling apart all a coarser map `π` does, `π c = f (π' c)` on the
-  holding formation's listed candidates, both maps' cells listed once each and covering the
-  listing). A finer map never raises the least shortfall (`finer_least_le`) and can move a rule's
-  residual either way (`WeightsApart.weights_split`). Holding for any rule through `π` stands at
-  most as high as holding for any rule through `π'` with that rule's residual added
-  (`informed_le_add_residual`), so a rule with no residual through the finer map falls short by at
-  most what any rule through the coarser does, and holding for it stands at least as high
-  (`informed_le`). Where the reading formation's model is the holding formation's and its valuation
-  agrees in net, its answer is such a rule (`answer_least_of_net`), and holding for it through the
-  finer map stands at least as high as for any rule through the coarser (`informed_answer_le`): the
-  deterministic-refinement, fixed-decision direction of Blackwell (1953). Over every refinement on
-  both listings (`π c = f (π' c)` at every candidate either formation lists; both maps' cells listed
-  once each, the finer's covering both listings and the coarser's the holding formation's), with no
-  shared model or valuation assumed, holding for the answer never stands lower through the finer map
+  holding formation's listed candidates, `π'`'s cells listed once each and covering that listing). A
+  finer map never raises the least shortfall (`finer_least_le`) and can move a rule's residual
+  either way (`WeightsApart.weights_split`). Holding for any rule through `π` stands at most as high
+  as holding for any rule through `π'` with that rule's residual added (`informed_le_add_residual`),
+  so a rule with no residual through the finer map falls short by at most what any rule through the
+  coarser does, and holding for it stands at least as high (`informed_le`). Where the reading
+  formation's model is the holding formation's and its valuation agrees in net, its answer is such a
+  rule (`answer_least_of_net`), and holding for it through the finer map stands at least as high as
+  for any rule through the coarser (`informed_answer_le`): the deterministic-refinement,
+  fixed-decision direction of Blackwell (1953). Over every refinement on both listings
+  (`π c = f (π' c)` at every candidate either formation lists; both maps' cells listed once each,
+  the finer's covering both listings and the coarser's the holding formation's), with no shared
+  model or valuation assumed, holding for the answer never stands lower through the finer map
   exactly where splits keep the worth (`SplitsKeep`, `refining_never_lowers_iff`): a criterion of
   monotonicity under refinement, not of agreement with the reference. Factoring on the holding
   formation's listing alone does not suffice (`OneListing.refined_lowers`). Splits keep the worth
@@ -87,11 +88,11 @@ cells is decidable wherever cells are compared or listings filtered.
   valuation's answer, any pair of value functions, stands strictly higher by the reference exactly
   where that residual is positive (`revaluing_gains_iff`). For any model of the reading formation
   such a gain needs a positive residual (`residual_pos_of_gains`); with the models apart, a positive
-  residual need not be removable by any revaluation (`unweighted_told`). Whether such a valuation is
-  reachable by the supplied update is a separate condition, which `presented_forgone_lt_iff` states
-  for one presented input. Of four one-decision alternatives at no cost, the revising one alone
-  falls short by nothing (`Revaluing.revaluing_best`). An answer constant over the listed candidates
-  is worth one committed move (`const_worth`, `const_below_iff`, `one_cell_worth`).
+  residual need not be removable by any revaluation (`unweighted_told`). `revaluing_gains_iff`
+  asserts no reachability under the supplied update; `presented_forgone_lt_iff` compares only a
+  given input presented. Of four one-decision alternatives at no cost, the revising one alone falls
+  short by nothing (`Revaluing.revaluing_best`). An answer constant over the listed candidates is
+  worth one committed move (`const_worth`, `const_below_iff`, `one_cell_worth`).
 * **The carrier** (`Input`, `Act`, `Reader`, `Holder`, `joint`, on `Blanket.Blanketed`). One law
   with two roles' parts: the internal part is the reading formation's listing and valuation state,
   the sensory part what it senses, the active part its answer, the external part the candidate world
@@ -103,17 +104,18 @@ cells is decidable wherever cells are compared or listings filtered.
   `sensory_step`, `external_step` and `active_answer`); the candidate world is unchanged along the
   course (`world_fixed`). The state and the answer are changed only through what is sensed
   (`through_sensed`, an instance of `Blanketed.agent_through_sensory`). A filter and a revaluation
-  commute as updates (`updates_commute`), not as courses: from one start, taken in either order,
-  they give different answers between and one course after (`TwoWorlds.orders_apart`). Shown, the
-  answer is the answer through what is shown (`answer_shown`), empty and unweighted cells included
-  (read as a decision on a conditional distribution, it needs positive weight in the cell), its
-  shortfall splits through what is shown (`shown_split`), and, with the holding formation's model
-  the reading formation's before the demonstration and its valuation agreeing in net, holding for it
-  never stands lower than before (`shown_never_lowers`). Where the act emitted along the course
-  gives one input at two worlds, from one start the courses are alike (`inputs_alike_before`), so
-  wherever no demonstration is emitted (`undemonstrated_alike`) or none tells the worlds apart
-  (`inputs_alike`); then holding for the answer is worth one committed move (`undemonstrated_worth`,
-  `answer_constant`).
+  commute as updates (`updates_commute`), not as courses: from two starts alike but for the order of
+  the holding formation's two scheduled acts, a demonstration and an input presented, the answers
+  differ at step 2 and the configurations are one from step 3 on (`TwoWorlds.orders_apart`). Shown,
+  the answer is the answer through what is shown (`answer_shown`), empty and unweighted cells
+  included (read as a decision on a conditional distribution, it needs positive weight in the cell),
+  its shortfall splits through what is shown (`shown_split`), and, with the holding formation's
+  model the reading formation's before the demonstration and its valuation agreeing in net, holding
+  for it never stands lower than before (`shown_never_lowers`). Where the act emitted along the
+  course gives one input at two worlds, from one state of each formation the courses are alike
+  (`inputs_alike_before`), so wherever no demonstration is emitted (`undemonstrated_alike`) or none
+  tells the worlds apart (`inputs_alike`); then holding for the answer is worth one committed move
+  (`undemonstrated_worth`, `answer_constant`).
 * **The four cases and two routes** (`TwoWorlds`). Two worlds, weights 1 and 2, valuation states
   agreeing with the reference, raised and reversed. As updates of one state: from both worlds listed
   and agreeing, the answer stops, is turned by being shown and left by a revaluation
@@ -125,12 +127,13 @@ cells is decidable wherever cells are compared or listings filtered.
   courses: the route shown and the route presented start from different internal states
   (`TwoWorlds.starts_apart`), answer alike at every step, stopping at steps 0 and 1 and releasing
   from 2 on (`TwoWorlds.route_answers`), and are one configuration from step 2 on
-  (`TwoWorlds.routes_alike`), while the valuation changes on the second alone
+  (`TwoWorlds.routes_rest`), while the valuation changes on the second alone
   (`TwoWorlds.changed_apart`). So for every `T` from 2 on the record of the answers before `T` and
-  the state at `T` does not determine that route property: it is not `Learning.Lumped` through it
-  (`TwoWorlds.not_lumped`). The record leaves out the start and the inputs, in which the routes
-  differ; with the start added, it determines the property (`TwoWorlds.lumped_with_start`). Neither
-  an ambiguity from one start nor a test of legitimate change is shown.
+  the state at `T`, alike on both routes (`TwoWorlds.routes_alike`), does not determine that route
+  property: it is not `Learning.Lumped` through it (`TwoWorlds.not_lumped`). The record leaves out
+  the start and the inputs, in which the routes differ; with the start added, it determines the
+  property (`TwoWorlds.lumped_with_start`). Neither an ambiguity from one start nor a test of
+  legitimate change is shown.
 
 **Standing.** None is claimed new as mathematics. The contribution is the split of a rule's
 shortfall into the least shortfall and its residual (`shortfall_split`) with its exact criteria
@@ -168,10 +171,11 @@ holding for it uninformed or revalued can be worth more by that reference than h
 informed (`Informing.informing_lowers`, `Revaluing.revaluing_best`), and, with a shared model, some
 replacement valuation gains exactly where its current answer decides a listed cell against the
 reference's strict weighted preference (`revaluing_gains_iff`): read as incentives to withhold and
-to revise, in counts and before costs, the second only as far as the supplied update reaches such a
-valuation (`presented_forgone_lt_iff`). The holding formation's choice among these is represented
-only by the comparisons of `forgone_lt_iff`, `refined_lt_iff` and `revalued_forgone_lt_iff` and the
-four alternatives of `Revaluing.revaluing_best`.
+to revise, in counts and before costs, the second only where the supplied update reaches such a
+valuation, which is not asserted (for a given input, `presented_forgone_lt_iff`). The holding
+formation's choice among these is represented only by the comparisons of `forgone_lt_iff`,
+`refined_lt_iff` and `revalued_forgone_lt_iff` and the four alternatives of
+`Revaluing.revaluing_best`.
 
 Read so, this is a deterministic-partition comparison related to Bayesian persuasion (Kamenica and
 Gentzkow 2011), the weights read as a prior once a positive total weight is normalized. There full
@@ -192,31 +196,32 @@ It differs from coarse equilibrium communication under preference differences (C
 1982). There a better-informed sender, unable to commit, reports only a cell of an equilibrium
 partition, and under their further assumptions the equilibrium with the most cells is better for
 both before the state is observed: coarseness is the cost of credibility, not a gain from
-withholding. Here the holding formation's law reads only its own state and the answer, its
-demonstration is the same at every world, as a committed experiment is, the map is supplied, and a
-coarser map can stand higher by the reference (`Informing.informing_lowers`). No cheap-talk
-equilibrium, credibility of messages or endogenous partition is represented.
+withholding. Here the holding formation's law reads only its own state and the answer, not the
+world; a demonstration shows the world through the supplied map `reveal`, fixed in advance as a
+committed experiment is and not chosen by the holding formation; and a coarser map can stand higher
+by the reference (`Informing.informing_lowers`). No cheap-talk equilibrium, credibility of messages
+or endogenous partition is represented.
 
 `own_least` and `revalued_lowers_iff` are a one-decision counterpart, in counts, of evaluating by
 the current reward function (Everitt, Hutter, Kumar and Krakovna 2021), with the holding formation
 in the evaluating agent's place. The valuation evaluated by is the reading formation's current one
 and the answer held for is the revised valuation's, as their agent that anticipates time
-inconsistency anticipates its later self. The revision carries no information (one listing, weights
-and map), as their reward functions are uninformative. As in the preservation incentive their Claim
-2 permits that agent, revising gains nothing, and a revision that changes a decision against the
-current strict preference loses. Not represented: their causal influence diagrams and other
-assumptions (private, state-based reward functions), the agent that ignores time inconsistency
-(their Claim 3), several steps, and the reward input. Evaluating by the current valuation is the
-frozen initial-preferences baseline that Carroll, Dragan, Russell and Hadfield-Menell (2022) call
-very crude: by it, a revision that changes a decision against the current strict preference counts
-as a loss, wanted or not; no criterion of a wanted revision is represented. No path-specific
-objective is constructed (Farquhar, Carey and Everitt 2022): their evaluation fixes the delicate
-state at its value under a baseline action, a nested counterfactual. In `own_least` only the
-evaluation is fixed; the answer held for is the revised valuation's, so the path from the valuation
-through the answer to the worth stays live, and `own_least` is not such an intervention. Under one,
-a revaluation would leave the worth unchanged, giving no reason to revise the valuation or to keep
-it, whereas `revalued_lowers_iff` gives a reason to keep it. `outcome_least` uses the actual changed
-valuation.
+inconsistency anticipates its later self. The comparison holds the listing, weights and map fixed,
+so the revision teaches the reading formation nothing of the world. As in the preservation incentive
+their Claim 2 permits that agent, revising gains nothing, and a revision that changes a decision
+against the current strict preference loses. Not represented: their causal influence diagrams and
+their assumptions (reward functions conditionally uninformative about state transitions, private and
+state-based), the agent that ignores time inconsistency (their Claim 3), several steps, and the
+reward input. Evaluating by the current valuation is the frozen initial-preferences baseline that
+Carroll, Dragan, Russell and Hadfield-Menell (2022) call very crude: by it, a revision that changes
+a decision against the current strict preference counts as a loss, wanted or not; no criterion of a
+wanted revision is represented. No path-specific objective is constructed (Farquhar, Carey and
+Everitt 2022): their evaluation fixes the delicate state at its value under a baseline action, a
+nested counterfactual. In `own_least` only the evaluation is fixed; the answer held for is the
+revised valuation's, so the path from the valuation through the answer to the worth stays live, and
+`own_least` is not such an intervention. Under one, a revaluation would leave the worth unchanged,
+giving no reason to revise the valuation or to keep it, whereas `revalued_lowers_iff` gives a reason
+to keep it. `outcome_least` uses the actual changed valuation.
 
 `answer_constant` joins the off-switch reading (Hadfield-Menell, Dragan, Abbeel and Russell 2017).
 By their Equation 1, which holds for any policy of the human, a deterministic policy constant in the
@@ -224,9 +229,11 @@ utility gives waiting the value of the move it takes (a randomized one a mixture
 so no strict advantage over the better committed move before any amount forgone. Their Theorem 1 is
 the rational, informative case, and their Remark 1 places the incentive to defer in uncertainty
 about the other's preferences and in its effectiveness at acting on them. Their human observes the
-utility; here the reading formation knows the candidate world only through what is shown, so
-`answer_constant` is that effectiveness failing for want of access to the preference-relevant
-parameter. An informative answer can give a strict advantage, under `HeldForReading`'s threshold.
+utility; here the reading formation senses the candidate world only through what is shown.
+`answer_constant` takes one state of each formation at every world, nothing shown telling the listed
+worlds apart: the answer is then constant, and holding for it gives no strict advantage over the
+better committed move, whether or not the move it gives is the better one. An informative answer can
+give a strict advantage, under `HeldForReading`'s threshold.
 
 `TwoWorlds.not_lumped` is related to induced preference shifts (Carroll, Dragan, Russell and
 Hadfield-Menell 2022), who compare predicted shifts with supplied safe shifts: the witness
@@ -252,9 +259,10 @@ answer, in the witnesses a fixed schedule of acts; worth for one decision before
 costs entering as amounts forgone.
 
 **Not in this module.** A holding formation planning over several steps among informing, revaluing
-and holding, so any multistep incentive or a sender's optimal signal; its learning about the reading
-formation; a misleading demonstration, belief and intention, so deception; a noisy answer; the
-reading formation's own act on the world; an institution's rule of reading.
+and holding, so any multistep incentive or an optimal signal chosen by the holding formation; its
+learning about the reading formation; a misleading demonstration, belief and intention, so
+deception; a noisy answer; the reading formation's own act on the world; an institution's rule of
+reading.
 -/
 
 namespace Becoming
@@ -795,9 +803,10 @@ theorem refined_lt_iff {K L : Type} [DecidableEq K] [DecidableEq L] (m : Model C
 
 /-- **Withholding against informing, both answers least**: with the reading formation's model the
 holding formation's and its valuation agreeing in net with the reference at every listed candidate
-of positive weight, holding for its answer through one map, forgoing `k'`, stands above holding for
-its answer through another, forgoing `k`, exactly where the least shortfall through the first and
-`k'` together fall below the least shortfall through the second and `k`. -/
+of positive weight, over each map's cells listed once each and covering the listing, holding for its
+answer through `π`, forgoing `k`, stands above holding for its answer through `π'`, forgoing `k'`,
+exactly where the least shortfall through `π` and `k` together fall below the least shortfall
+through `π'` and `k'`. -/
 theorem forgone_least_iff {K L : Type} [DecidableEq K] [DecidableEq L] (m : Model C)
     (gain loss g l : C → Nat) (net : ∀ c, c ∈ m.listed → 0 < m.weight c → g c + loss c = l c + gain c)
     (π : C → K) (π' : C → L) {zs : List K} {zs' : List L}
@@ -902,9 +911,9 @@ theorem residual_pos_of_gains (m pm : Model C) (gain loss g l : C → Nat) (π :
 /-- **Some replacement valuation gains exactly where the current answer decides a cell against the
 reference** (item 13): with the reading formation's model the holding formation's, some pair of value
 functions, unrestricted, gives an answer through `π` standing strictly above the current answer by
-the reference exactly where the current answer's residual is positive. Whether such a valuation is
-reachable by a supplied update is a separate condition (`presented_forgone_lt_iff`). With the
-models apart, only the forward direction holds (`residual_pos_of_gains`; `unweighted_told`). -/
+the reference exactly where the current answer's residual is positive. Reachability under a supplied
+update is not asserted; `presented_forgone_lt_iff` compares a given input presented. With the models
+apart, only the forward direction holds (`residual_pos_of_gains`; `unweighted_told`). -/
 theorem revaluing_gains_iff (m : Model C) (gain loss g l : C → Nat) (π : C → K) {zs : List K}
     (once : List.Pairwise (fun a b => a ≠ b) zs) (covers : ∀ c, c ∈ m.listed → π c ∈ zs) :
     (∃ g' l' : C → Nat, m.after (shifted gain loss) (byRule fun c => answer m g l π (π c)) <
@@ -1901,8 +1910,8 @@ theorem inputs_alike_before [DecidableEq O] (rd : Reader W V O X) (hd : Holder H
        (congrArg (fun e => hd.next e ((joint rd hd).course ⟨i, s, a, (w, h)⟩ n).active) holding).trans
          (congrArg (hd.next ((joint rd hd).course ⟨i, s, a, (w', h)⟩ n).external.2) active)⟩
 
-/-- **Where no demonstration tells two worlds apart, the course is alike**: from one start, the
-internal, sensory, answer and holding courses at the two worlds agree at every step. -/
+/-- **Where no demonstration tells two worlds apart, the course is alike**: from one state of each
+formation, the internal, sensory, answer and holding courses at the two worlds agree at every step. -/
 theorem inputs_alike [DecidableEq O] (rd : Reader W V O X) (hd : Holder H X) (i : List W × V)
     (s : Input O X) (a : Bool) (h : H) {w w' : W} (same : rd.reveal w = rd.reveal w') (n : Nat) :
     ((joint rd hd).course ⟨i, s, a, (w, h)⟩ n).internal =
@@ -1924,7 +1933,8 @@ theorem input_eq_of_ne_demonstrate (rd : Reader W V O X) (w w' : W) :
   | .demonstrate, no => absurd rfl no
   | .present _, _ => rfl
 
-/-- **Undemonstrated, the course is alike at every two worlds**: from one start, where the holding
+/-- **Undemonstrated, the course is alike at every two worlds**: from one state of each formation,
+where the holding
 formation emits no demonstration before step `n` on the course at the first world, the internal,
 sensory, answer and holding courses at the two worlds agree at `n`, whatever a demonstration would
 show. -/
@@ -1941,7 +1951,8 @@ theorem undemonstrated_alike [DecidableEq O] (rd : Reader W V O X) (hd : Holder 
           ((joint rd hd).course ⟨i, s, a, (w', h)⟩ n).external.2 :=
   inputs_alike_before rd hd i s a h w w' n fun k lt => input_eq_of_ne_demonstrate rd w w' _ (none k lt)
 
-/-- **Undemonstrated, holding for the answer is worth one committed move**: from one start, where the
+/-- **Undemonstrated, holding for the answer is worth one committed move**: from one state of each
+formation, where the
 holding formation emits no demonstration before step `n` on the course at a world `w₀`, the answer at
 `n`, as a rule on the listed worlds, is the answer at `w₀`, and holding for it stands exactly as high
 as committing to the move it gives there (`const_worth`). -/
@@ -1955,7 +1966,8 @@ theorem undemonstrated_worth [DecidableEq O] (rd : Reader W V O X) (hd : Holder 
     ((joint rd hd).course ⟨i, s, a, (w₀, h)⟩ n).active
     fun w _ => (undemonstrated_alike rd hd i s a h w₀ w n none).2.2.1.symm
 
-/-- **An answer alike at the candidate worlds is worth one committed move**: from one start, where
+/-- **An answer alike at the candidate worlds is worth one committed move**: from one state of each
+formation, where
 every world the holding formation lists shows what a world `w₀` shows, the answer at each step, as a
 rule on the listed worlds, is the answer at `w₀`, and holding for it stands exactly as high as
 committing to the move it gives there (`const_worth`): before any amount forgone, no strict
@@ -2262,9 +2274,10 @@ theorem orders_rest (first : Bool) :
     | true => rfl
   | n + 1 => (congrArg (joint rd schedule).step (orders_rest first n)).trans orderEnd_rests
 
-/-- **A filter and a revaluation commute as updates, not as courses**: from one start, demonstrating
-and then presenting `raised`, the answer at step 2 releases; presenting and then demonstrating, it
-stops; from step 3 on the two courses are one. -/
+/-- **A filter and a revaluation commute as updates, not as courses**: from two starts alike but for
+the order of the holding formation's two scheduled acts, demonstrating and then presenting `raised`,
+the answer at step 2 releases; presenting and then demonstrating, it stops; from step 3 on the two
+configurations are one. -/
 theorem orders_apart :
     ((joint rd schedule).course (orderStart true) 2).active = false ∧
       ((joint rd schedule).course (orderStart false) 2).active = true ∧
