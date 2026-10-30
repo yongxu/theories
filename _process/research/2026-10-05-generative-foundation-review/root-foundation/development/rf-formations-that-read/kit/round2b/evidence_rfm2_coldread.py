@@ -28,7 +28,7 @@ def unlink(text):
 
 INTRO = """# The cold read of RF-M.2's texts
 
-RF round 2, second part, RF-M.2: an act held for a reading (plan §4.7). Before the landing of RF-M.2's documents, its texts were cold-read against the Lean of `Becoming.HeldForReading` (`kit/round2b/tree/Becoming/HeldForReading.lean`, 90 theorems in 120 declarations, every axiom report empty), as the kit's integration applied them to main in a rehearsal worktree (the kit at `6d5f244be`, main at `59ca8c812`): 03 §12's opening, its new theorem paragraph with its Reading, the pointer in the acts-alike reading and the Open bullet; 07 §7's sentence on an incentive to accept a correction; 08 §8's bullet; the overview's paragraph; the dossier's scope box, its paragraph on RF's rounds and its account of how it was made; the package's root bullets, both READMEs and the checker's scope sentence; the module's header and docstrings; the record in both languages and the amendments to three related records; the study section's template; PLAN §4.7, §8's row on assistance games, §12, §13 and the Evidence list; regions; the board's texts; and the opening, the literature table and the two tables of what was taken in [REVIEW-RFM2-LEAN](REVIEW-RFM2-LEAN.md). Two reads ran: the cross-model reader (GPT astra, high effort, read-only, a fresh session) and a workflow of three Opus readers, one per lens (exactness, readings, fit), each lens's findings given to one reader asked to refute them against the files. The prompts are in [the brief](BRIEF.md#round-2-second-part). The findings and verdicts are verbatim, with the rehearsal worktree's absolute paths made repository-relative and links shown unlinked (`]\\(`), their targets being relative to the texts' own folders.
+RF round 2, second part, RF-M.2: an act held for a reading (plan §4.7). Before RF-M.2's landing, its texts were cold-read against the Lean of `Becoming.HeldForReading` (`kit/round2b/tree/Becoming/HeldForReading.lean`, 90 theorems in 120 declarations, every axiom report empty), as the kit's integration applied them to main in a rehearsal worktree (the kit at `6d5f244be`, main at `59ca8c812`): 03 §12's opening, its new theorem paragraph with its Reading, the pointer in the acts-alike reading and the Open bullet; 07 §7's sentence on an incentive to accept a correction; 08 §8's bullet; the overview's paragraph; the dossier's scope box, its paragraph on RF's rounds and its account of how it was made; the package's root bullets, both READMEs and the checker's scope sentence; the module's header and docstrings; the record in both languages and the amendments to three related records; the study section's template; PLAN §4.7, §8's row on assistance games, §12, §13 and the Evidence list; regions; the board's texts; and the opening, the literature table and the two tables of what was taken in [REVIEW-RFM2-LEAN](REVIEW-RFM2-LEAN.md). Two reads ran: the cross-model reader (GPT astra, high effort, read-only, a fresh session) and a workflow of three Opus readers, one per lens (exactness, readings, fit), each lens's findings given to one reader asked to refute them against the files. The prompts are in [the brief](BRIEF.md#round-2-second-part). The findings and verdicts are verbatim, with the rehearsal worktree's absolute paths made repository-relative and links shown unlinked (`]\\(`), their targets being relative to the texts' own folders.
 
 {SUMMARY} The module's statements are unchanged; its header and docstrings changed with the findings, and it was rebuilt after each change, last at 90 theorems in 120 declarations, every axiom report empty and no warnings ([build-25](../kit/round2b/logs/build-25.log)).
 """
@@ -193,8 +193,8 @@ TAKEN_LENS = {
     'F17': ("the record's second counterexample omits where going on loses and `refuted_drops`", AS + "A4"),
     'F18': ("PLAN's held start", AS + "A4"),
     'F19': ("one planned item under three names",
-            "“a principal's valuation as state” throughout: the acts-alike amendment (en, zh 受助者之值为态, its next "
-            "items plural), the dossier, PLAN §4.6's list of what was not built then, §13 and §4.7's title (the "
+            "“a principal's valuation as state” throughout: the acts-alike amendment (en, zh 受助者之值为态, with the "
+            "verifier's “RF round 2's later item, RF-M.3's carrier”), the dossier, PLAN §4.6's list of what was not built then, §13 and §4.7's title (the "
             "re-point script's expected sections updated)"),
     'F20': ("PLAN's design-review count reads as thirty", "the split of the eight in parentheses"),
     'F21': ("“its carrier first” reads as already designed",
@@ -204,8 +204,12 @@ TAKEN_LENS = {
             "the overview's new paragraph, the three records' related entries, the package READMEs, the checker's "
             "scope and regions.json named"),
     'F23': ("lemma names in the study", "as E24"),
-    'F24': ("“the last law” names a position", "“has [its own law]”"),
-    'F25': ("the chapters assert non-novelty outright", "“none claimed new as mathematics” in 03 §12 and 08"),
+    'F24': ("“the last law” names a position",
+            "refuted: the position is accurate and the anchor does not drift; “has [its own law]” kept all the same, "
+            "as harmless"),
+    'F25': ("the chapters assert non-novelty outright",
+            "refuted: 08 §8's verdict says none of the central results is new mathematics; “none claimed new as "
+            "mathematics” kept all the same in 03 §12 and 08, the module's and the study's form"),
     'F26': ("“correctable” is a defined term of the chapter", "avoided, as R3"),
     'F27': ("“the paper's Theorem 1” follows Good", "“the off-switch paper's Theorem 1”, and its Corollary 1 likewise"),
     'F28': ("03 §12 leaves the witness's model unstated",

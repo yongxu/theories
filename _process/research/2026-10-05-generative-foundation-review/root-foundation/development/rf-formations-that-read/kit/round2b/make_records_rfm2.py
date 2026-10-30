@@ -429,9 +429,9 @@ AMEND = {
             'next_delta': ("A helper's act within the law that informs, and a principal's order as state the helper's "
                            "acts can move (RF round 2's later items)",
                            "The reading formation's own state and learning, and a principal's valuation as state the "
-                           "helper's acts can move (RF round 2's later items)",
+                           "helper's acts can move (RF round 2's later item, RF-M.3's carrier)",
                            '律内能告之助者之行，与助者之行可移之受助者之序为态（RF 第二轮之后项）',
-                           '读之形成己之态与学，与助者之行可移之受助者之值为态（RF 第二轮之后项）'),
+                           '读之形成己之态与学，与助者之行可移之受助者之值为态（RF 第二轮之后项，RF-M.3 之载体）'),
             'history': ("related to what-holding-for-a-reading-is-worth, where a held act is answered within the law; "
                         "the next step keeps the reading formation's own state and the principal's valuation as state; no "
                         "statement or declaration changed.",
