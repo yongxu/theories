@@ -3,10 +3,11 @@
 
 Inputs (saved where the reads ran): the cross-model reader's cold read (markdown); the workflow's result, the three
 lenses' findings with their refuters' verdicts (JSON: a list of {lens, found: {verdict, findings}, verdicts:
-{verdicts}}); and the cross-model reader's re-check of how they were taken (markdown, or `-` while it has not run);
-what was taken from the re-check is RECHECK. Usage, from the repository root:
+{verdicts}}); and the cross-model reader's two re-checks (markdown, or `-` while one has not run): the first of how
+its own points were taken and of the texts cut or added since, before the lenses ran; the second of how the lenses'
+findings were taken. What was taken from each re-check is in RECHECKS. Usage, from the repository root:
 
-    python3 -B <this file> <cross-model cold read .md> <lens results .json> <re-check .md | ->
+    python3 -B <this file> <cold read .md> <lens results .json> <first re-check .md | -> <second re-check .md | ->
 """
 import json
 import sys
@@ -22,7 +23,7 @@ ROOTS = ('/private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-84
          '/Users/ren/theories/.claude/worktrees/rf-landing/')
 
 reader_md, lens_json = Path(sys.argv[1]), Path(sys.argv[2])
-recheck_md = None if sys.argv[3] == '-' else Path(sys.argv[3])
+recheck_mds = [None if a == '-' else Path(a) for a in sys.argv[3:5]]
 
 
 def relinked(text):
@@ -90,8 +91,25 @@ AS = "as the cross-model reader's "
 TAKEN_LENS = {
 }
 
-# What was taken from the re-check: (point, status, how).
-RECHECK = ()
+# The two re-checks: (heading, what was read, what was taken: (point, status, how)).
+RECHECKS = (
+    ("The re-check of the cross-model reader's points",
+     "The cross-model reader, in the session of its cold read, read how its six points were taken and, as new text, "
+     "the overview's paragraph and the dossier's sentences cut for reading budgets, the plan's §5 and §8 rows and the "
+     "study's paragraph on the reviews, read-only, in a rehearsal rebuilt at the same path on the kit at `18001d918` "
+     "with main at `8a8b0df82`. Verbatim; its line numbers are those of the version it read.",
+     (('1', 'taken',
+       "the two rows as it gives them (§5's “by the reading formation's current valuation on a shared model a reason "
+       "to keep it from a revision deciding a listed cell against its strict weighted preference”, §8's corrigibility "
+       "row the same); and, where the same claim is stated without the shared model, 08 §8's bullet (“evaluating by "
+       "the reading formation's current valuation on a shared model”), the study's standing (“by the current "
+       "valuation on a shared model no revaluation gains”) and the record's correspondence (“on a shared model, a "
+       "reason to keep the valuation”, zh 共模型时), `own_least` and `revalued_lowers_iff` both evaluating on the "
+       "holding formation's model; kit `6837be33a`, the record's caps passing"),)),
+    ("The re-check of what was taken from the lenses",
+     "RECHECK2_READ",
+     ()),
+)
 
 reader = cx_body(reader_md)
 results = json.loads(lens_json.read_text(encoding='utf-8'))
@@ -127,7 +145,7 @@ summary = (f"The cross-model reader reported {len(TAKEN_READER)} points, every o
            + (f", {counts['unverified']} not verified" if counts['unverified'] else '')
            + "; what each became is in [the table](#what-was-taken-from-the-lenses).")
 intro = INTRO.replace('{SUMMARY}', summary).replace('BUILD_SENTENCE', BUILD_SENTENCE)
-intro = intro.replace('RECHECK_SENTENCE', RECHECK_SENTENCE if recheck_md else '')
+intro = intro.replace('RECHECK_SENTENCE', RECHECK_SENTENCE if any(recheck_mds) else '')
 assert 'BUILD_SENTENCE' not in intro and 'RECHECK_SENTENCE' not in intro, 'a sentence of the opening is not written'
 parts = [intro.rstrip('\n') + '\n', '## The cross-model reader\n', relinked(reader) + '\n',
          '### What was taken from the cross-model reader\n', '| # | Finding | Taken |', '|---|---|---|']
@@ -136,12 +154,14 @@ parts.append('\n## The three lenses\n')
 parts += blocks
 parts += ['### What was taken from the lenses\n', '| # | Lens | Verdict | Finding | Taken |', '|---|---|---|---|---|']
 parts += rows
-if recheck_md:
-    parts += ['\n## The re-check\n', 'The cross-model reader, in the session of its cold read, read how the findings '
-              'were taken, read-only. Verbatim; its line numbers are those of the version it read.\n',
-              relinked(cx_body(recheck_md)) + '\n', '### What was taken from the re-check\n', '| Point | Status | How |',
-              '|---|---|---|']
-    parts += [f'| {p} | {s} | {cell(h)} |' for p, s, h in RECHECK]
+for md, (heading, read, taken) in zip(recheck_mds, RECHECKS):
+    if md is None:
+        continue
+    assert 'RECHECK2_READ' not in read, 'the second re-check is not described'
+    parts += [f'\n## {heading}\n', read + '\n', relinked(cx_body(md)) + '\n',
+              f'### What was taken from {heading[0].lower()}{heading[1:]}\n',
+              '| Point | Status | How |', '|---|---|---|']
+    parts += [f'| {p} | {s} | {cell(h)} |' for p, s, h in taken]
 text = '\n'.join(parts) + '\n'
 assert '](/' not in text and not any(root in text for root in ROOTS)
 OUT.write_text(text, encoding='utf-8')
