@@ -19,12 +19,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2143,
-    "distinct_byte_contents": 1691,
+    "lean_paths": 2145,
+    "distinct_byte_contents": 1693,
     "byte_identical_duplicate_groups": 185,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1175,
+      "development-attempt": 1177,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 929
@@ -6331,6 +6331,19 @@
       "proof_status": "not_assessed_by_catalogue"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/scratch/Becoming/UnitScratch.lean",
+      "sha256": "d43d8187d34bf1061c6cebbfc9e0bdfe55d7e65dad240d6583e65bcd297da1cd",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1-2.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/check/tree/Becoming/U2Check.lean",
       "sha256": "4ce3e5fe1370598839bc51588dda2b6fbda34c693548105aca439ffeaa9713df",
       "role": "development-attempt",
@@ -6360,6 +6373,18 @@
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
       "direct_documentation_links_from": [
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md"
+      ],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/scratch/Becoming/SignificanceRootScratch.lean",
+      "sha256": "fe7ea1e9db177f88b8e262023bc5b7f2628941a14f02f1de641b4985c24a57f1",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -9088,6 +9113,7 @@
         "RESULTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.zh.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/twenty-first-review/X3-SCIENCES-AND-TEXTS-CROSS-MODEL.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
@@ -9823,6 +9849,7 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
         "theories/becoming/chapters/07-SIGNIFICANCE.md"
@@ -12364,6 +12391,7 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/twenty-first-review/X3-SCIENCES-AND-TEXTS-CROSS-MODEL.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
@@ -12909,6 +12937,7 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "theories/becoming/chapters/05-COLLECTIVES.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.md",
@@ -13824,6 +13853,7 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
       ],
@@ -434208,6 +434238,452 @@
       },
       "print_axioms_commands": 0
     },
+    "d43d8187d34bf1061c6cebbfc9e0bdfe55d7e65dad240d6583e65bcd297da1cd": {
+      "byte_size": 31173,
+      "line_count": 650,
+      "imports": [
+        "Becoming.GrammarLaws",
+        "Becoming.Flow",
+        "Becoming.SelectionReach"
+      ],
+      "declarations": [
+        {
+          "kind": "structure",
+          "name": "Tokens",
+          "qualified_name_hint": "Becoming.UnitScratch.Tokens",
+          "line": 21
+        },
+        {
+          "kind": "def",
+          "name": "same",
+          "qualified_name_hint": "Becoming.UnitScratch.same",
+          "line": 27
+        },
+        {
+          "kind": "def",
+          "name": "Tokens.Abides",
+          "qualified_name_hint": "Becoming.UnitScratch.Tokens.Abides",
+          "line": 31
+        },
+        {
+          "kind": "theorem",
+          "name": "Tokens.counts",
+          "qualified_name_hint": "Becoming.UnitScratch.Tokens.counts",
+          "line": 35
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_cons_head",
+          "qualified_name_hint": "Becoming.UnitScratch.mem_cons_head",
+          "line": 40
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_insert_cases",
+          "qualified_name_hint": "Becoming.UnitScratch.mem_insert_cases",
+          "line": 42
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_of_pair",
+          "qualified_name_hint": "Becoming.UnitScratch.mem_of_pair",
+          "line": 60
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_append_left'",
+          "qualified_name_hint": "Becoming.UnitScratch.mem_append_left'",
+          "line": 72
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_append_cases",
+          "qualified_name_hint": "Becoming.UnitScratch.mem_append_cases",
+          "line": 80
+        },
+        {
+          "kind": "theorem",
+          "name": "Tokens.came",
+          "qualified_name_hint": "Becoming.UnitScratch.Tokens.came",
+          "line": 94
+        },
+        {
+          "kind": "theorem",
+          "name": "one_abides_of_counts",
+          "qualified_name_hint": "Becoming.UnitScratch.one_abides_of_counts",
+          "line": 109
+        },
+        {
+          "kind": "def",
+          "name": "upto",
+          "qualified_name_hint": "Becoming.UnitScratch.upto",
+          "line": 119
+        },
+        {
+          "kind": "theorem",
+          "name": "length_upto",
+          "qualified_name_hint": "Becoming.UnitScratch.length_upto",
+          "line": 123
+        },
+        {
+          "kind": "structure",
+          "name": "Units",
+          "qualified_name_hint": "Becoming.UnitScratch.Units",
+          "line": 133
+        },
+        {
+          "kind": "theorem",
+          "name": "Units.balances",
+          "qualified_name_hint": "Becoming.UnitScratch.Units.balances",
+          "line": 139
+        },
+        {
+          "kind": "def",
+          "name": "Units.canonical",
+          "qualified_name_hint": "Becoming.UnitScratch.Units.canonical",
+          "line": 145
+        },
+        {
+          "kind": "theorem",
+          "name": "units_iff_balances",
+          "qualified_name_hint": "Becoming.UnitScratch.units_iff_balances",
+          "line": 154
+        },
+        {
+          "kind": "theorem",
+          "name": "repairing_moves_lines",
+          "qualified_name_hint": "Becoming.UnitScratch.repairing_moves_lines",
+          "line": 162
+        },
+        {
+          "kind": "inductive",
+          "name": "Kind",
+          "qualified_name_hint": "Becoming.UnitScratch.Kind",
+          "line": 179
+        },
+        {
+          "kind": "abbrev",
+          "name": "Occ",
+          "qualified_name_hint": "Becoming.UnitScratch.Occ",
+          "line": 182
+        },
+        {
+          "kind": "def",
+          "name": "label",
+          "qualified_name_hint": "Becoming.UnitScratch.label",
+          "line": 184
+        },
+        {
+          "kind": "theorem",
+          "name": "length_label",
+          "qualified_name_hint": "Becoming.UnitScratch.length_label",
+          "line": 188
+        },
+        {
+          "kind": "def",
+          "name": "standL",
+          "qualified_name_hint": "Becoming.UnitScratch.standL",
+          "line": 195
+        },
+        {
+          "kind": "def",
+          "name": "givenL",
+          "qualified_name_hint": "Becoming.UnitScratch.givenL",
+          "line": 196
+        },
+        {
+          "kind": "def",
+          "name": "takenL",
+          "qualified_name_hint": "Becoming.UnitScratch.takenL",
+          "line": 197
+        },
+        {
+          "kind": "theorem",
+          "name": "stretch_of_units",
+          "qualified_name_hint": "Becoming.UnitScratch.stretch_of_units",
+          "line": 203
+        },
+        {
+          "kind": "theorem",
+          "name": "length_givenL",
+          "qualified_name_hint": "Becoming.UnitScratch.length_givenL",
+          "line": 210
+        },
+        {
+          "kind": "theorem",
+          "name": "length_takenL",
+          "qualified_name_hint": "Becoming.UnitScratch.length_takenL",
+          "line": 213
+        },
+        {
+          "kind": "theorem",
+          "name": "length_standL",
+          "qualified_name_hint": "Becoming.UnitScratch.length_standL",
+          "line": 216
+        },
+        {
+          "kind": "theorem",
+          "name": "stretch_count_of_units",
+          "qualified_name_hint": "Becoming.UnitScratch.stretch_count_of_units",
+          "line": 222
+        },
+        {
+          "kind": "theorem",
+          "name": "one_paired_iff",
+          "qualified_name_hint": "Becoming.UnitScratch.one_paired_iff",
+          "line": 235
+        },
+        {
+          "kind": "def",
+          "name": "ExchangeMatched",
+          "qualified_name_hint": "Becoming.UnitScratch.ExchangeMatched",
+          "line": 260
+        },
+        {
+          "kind": "theorem",
+          "name": "give_le_take_of_matched",
+          "qualified_name_hint": "Becoming.UnitScratch.give_le_take_of_matched",
+          "line": 265
+        },
+        {
+          "kind": "theorem",
+          "name": "one_matched_iff",
+          "qualified_name_hint": "Becoming.UnitScratch.one_matched_iff",
+          "line": 275
+        },
+        {
+          "kind": "theorem",
+          "name": "dissipates_of_ending",
+          "qualified_name_hint": "Becoming.UnitScratch.dissipates_of_ending",
+          "line": 284
+        },
+        {
+          "kind": "theorem",
+          "name": "no_matching_of_giving_without_taking",
+          "qualified_name_hint": "Becoming.UnitScratch.no_matching_of_giving_without_taking",
+          "line": 305
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_append_right'",
+          "qualified_name_hint": "Becoming.UnitScratch.mem_append_right'",
+          "line": 315
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_insert'",
+          "qualified_name_hint": "Becoming.UnitScratch.mem_insert'",
+          "line": 319
+        },
+        {
+          "kind": "theorem",
+          "name": "crossing_edge",
+          "qualified_name_hint": "Becoming.UnitScratch.crossing_edge",
+          "line": 328
+        },
+        {
+          "kind": "theorem",
+          "name": "crossing_line",
+          "qualified_name_hint": "Becoming.UnitScratch.crossing_line",
+          "line": 357
+        },
+        {
+          "kind": "inductive",
+          "name": "Ex",
+          "qualified_name_hint": "Becoming.UnitScratch.Ex",
+          "line": 373
+        },
+        {
+          "kind": "def",
+          "name": "tag",
+          "qualified_name_hint": "Becoming.UnitScratch.tag",
+          "line": 379
+        },
+        {
+          "kind": "theorem",
+          "name": "length_tag",
+          "qualified_name_hint": "Becoming.UnitScratch.length_tag",
+          "line": 383
+        },
+        {
+          "kind": "def",
+          "name": "takeL",
+          "qualified_name_hint": "Becoming.UnitScratch.takeL",
+          "line": 390
+        },
+        {
+          "kind": "def",
+          "name": "giveL",
+          "qualified_name_hint": "Becoming.UnitScratch.giveL",
+          "line": 394
+        },
+        {
+          "kind": "theorem",
+          "name": "length_takeL",
+          "qualified_name_hint": "Becoming.UnitScratch.length_takeL",
+          "line": 397
+        },
+        {
+          "kind": "theorem",
+          "name": "length_giveL",
+          "qualified_name_hint": "Becoming.UnitScratch.length_giveL",
+          "line": 402
+        },
+        {
+          "kind": "theorem",
+          "name": "rise_crossing_weak",
+          "qualified_name_hint": "Becoming.UnitScratch.rise_crossing_weak",
+          "line": 412
+        },
+        {
+          "kind": "theorem",
+          "name": "rise_crossing_strong",
+          "qualified_name_hint": "Becoming.UnitScratch.rise_crossing_strong",
+          "line": 428
+        },
+        {
+          "kind": "theorem",
+          "name": "endings_count",
+          "qualified_name_hint": "Becoming.UnitScratch.endings_count",
+          "line": 447
+        },
+        {
+          "kind": "theorem",
+          "name": "source_free_of_dissipates",
+          "qualified_name_hint": "Becoming.UnitScratch.source_free_of_dissipates",
+          "line": 459
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_of_dissipates",
+          "qualified_name_hint": "Becoming.UnitScratch.ends_of_dissipates",
+          "line": 466
+        },
+        {
+          "kind": "structure",
+          "name": "FrameMatch",
+          "qualified_name_hint": "Becoming.UnitScratch.FrameMatch",
+          "line": 490
+        },
+        {
+          "kind": "theorem",
+          "name": "mem_upto",
+          "qualified_name_hint": "Becoming.UnitScratch.mem_upto",
+          "line": 498
+        },
+        {
+          "kind": "theorem",
+          "name": "length_upto'",
+          "qualified_name_hint": "Becoming.UnitScratch.length_upto'",
+          "line": 505
+        },
+        {
+          "kind": "theorem",
+          "name": "upto_lt",
+          "qualified_name_hint": "Becoming.UnitScratch.upto_lt",
+          "line": 507
+        },
+        {
+          "kind": "theorem",
+          "name": "FrameMatch.le",
+          "qualified_name_hint": "Becoming.UnitScratch.FrameMatch.le",
+          "line": 516
+        },
+        {
+          "kind": "def",
+          "name": "FrameMatch.symm",
+          "qualified_name_hint": "Becoming.UnitScratch.FrameMatch.symm",
+          "line": 528
+        },
+        {
+          "kind": "theorem",
+          "name": "FrameMatch.eq",
+          "qualified_name_hint": "Becoming.UnitScratch.FrameMatch.eq",
+          "line": 536
+        },
+        {
+          "kind": "def",
+          "name": "FrameMatch.id",
+          "qualified_name_hint": "Becoming.UnitScratch.FrameMatch.id",
+          "line": 540
+        },
+        {
+          "kind": "theorem",
+          "name": "FrameMatch.predecessor_unique",
+          "qualified_name_hint": "Becoming.UnitScratch.FrameMatch.predecessor_unique",
+          "line": 550
+        },
+        {
+          "kind": "structure",
+          "name": "KUnits",
+          "qualified_name_hint": "Becoming.UnitScratch.KUnits",
+          "line": 559
+        },
+        {
+          "kind": "theorem",
+          "name": "KUnits.balances",
+          "qualified_name_hint": "Becoming.UnitScratch.KUnits.balances",
+          "line": 562
+        },
+        {
+          "kind": "def",
+          "name": "KUnits.canonical",
+          "qualified_name_hint": "Becoming.UnitScratch.KUnits.canonical",
+          "line": 566
+        },
+        {
+          "kind": "theorem",
+          "name": "kunits_iff_balances",
+          "qualified_name_hint": "Becoming.UnitScratch.kunits_iff_balances",
+          "line": 572
+        },
+        {
+          "kind": "theorem",
+          "name": "KUnits.next",
+          "qualified_name_hint": "Becoming.UnitScratch.KUnits.next",
+          "line": 579
+        },
+        {
+          "kind": "theorem",
+          "name": "lossless_not_dissipative",
+          "qualified_name_hint": "Becoming.UnitScratch.lossless_not_dissipative",
+          "line": 600
+        },
+        {
+          "kind": "theorem",
+          "name": "KUnits.projects_along",
+          "qualified_name_hint": "Becoming.UnitScratch.KUnits.projects_along",
+          "line": 613
+        },
+        {
+          "kind": "theorem",
+          "name": "leaving_and_endings_count",
+          "qualified_name_hint": "Becoming.UnitScratch.leaving_and_endings_count",
+          "line": 630
+        },
+        {
+          "kind": "theorem",
+          "name": "endings_count_closed",
+          "qualified_name_hint": "Becoming.UnitScratch.endings_count_closed",
+          "line": 642
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 15,
+        "inductive": 2,
+        "structure": 4,
+        "theorem": 48
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
     "d43eb4f9e68871c9120b9c98812ee2a93c8b39cd7b9b444844d580c577e0cc33": {
       "byte_size": 23022,
       "line_count": 419,
@@ -513323,6 +513799,73 @@
         "unsafe": []
       },
       "print_axioms_commands": 25
+    },
+    "fe7ea1e9db177f88b8e262023bc5b7f2628941a14f02f1de641b4985c24a57f1": {
+      "byte_size": 7161,
+      "line_count": 115,
+      "imports": [
+        "Becoming.Relevance",
+        "Becoming.Extension",
+        "Becoming.GrammarScope",
+        "Becoming.Regions",
+        "Becoming.Weightings",
+        "Becoming.GrammarTransport"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "noOutside_iff_paths_livingSignificance",
+          "qualified_name_hint": "Becoming.SignificanceRootScratch.noOutside_iff_paths_livingSignificance",
+          "line": 29
+        },
+        {
+          "kind": "theorem",
+          "name": "widens_iff_retains_adds_root",
+          "qualified_name_hint": "Becoming.SignificanceRootScratch.widens_iff_retains_adds_root",
+          "line": 43
+        },
+        {
+          "kind": "theorem",
+          "name": "paths_extension_iff_grammar",
+          "qualified_name_hint": "Becoming.SignificanceRootScratch.paths_extension_iff_grammar",
+          "line": 54
+        },
+        {
+          "kind": "theorem",
+          "name": "paths_comparison_grammar",
+          "qualified_name_hint": "Becoming.SignificanceRootScratch.paths_comparison_grammar",
+          "line": 62
+        },
+        {
+          "kind": "theorem",
+          "name": "paths_one_object_root",
+          "qualified_name_hint": "Becoming.SignificanceRootScratch.paths_one_object_root",
+          "line": 70
+        },
+        {
+          "kind": "theorem",
+          "name": "grammar_widens_iff_every_positive",
+          "qualified_name_hint": "Becoming.SignificanceRootScratch.grammar_widens_iff_every_positive",
+          "line": 89
+        },
+        {
+          "kind": "theorem",
+          "name": "guang_correspondence",
+          "qualified_name_hint": "Becoming.SignificanceRootScratch.guang_correspondence",
+          "line": 99
+        }
+      ],
+      "declaration_counts": {
+        "theorem": 7
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
     },
     "fee4bdd9a38f65bb5c75a828138c442628b245bc98ed345a43110ff95f132f12": {
       "byte_size": 4008,
