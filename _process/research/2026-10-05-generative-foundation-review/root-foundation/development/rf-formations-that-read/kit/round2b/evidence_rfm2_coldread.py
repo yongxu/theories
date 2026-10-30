@@ -11,6 +11,9 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+from relink_rfm2 import relink  # noqa: E402
+
 STUDY = HERE.parents[1]
 OUT = STUDY / 'evidence' / 'REVIEW-RFM2-COLDREAD.md'
 ROOTS = ('/private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/wt-rfm2-rehearse/',
@@ -19,16 +22,16 @@ ROOTS = ('/private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-84
 reader_md, lens_json, recheck_md = (Path(x) for x in sys.argv[1:4])
 
 
-def unlink(text):
-    """Links unlinked, since this folder is link-checked as live; paths made relative to the checkout."""
+def relinked(text):
+    """Paths made relative to the checkout, and links made to resolve from this folder (relink_rfm2.py)."""
     for root in ROOTS:
         text = text.replace(root, '')
-    return text.replace('](', '\\](')
+    return relink(text)
 
 
 INTRO = """# The cold read of RF-M.2's texts
 
-RF round 2, second part, RF-M.2: an act held for a reading (plan §4.7). Before RF-M.2's landing, its texts were cold-read against the Lean of `Becoming.HeldForReading` (`kit/round2b/tree/Becoming/HeldForReading.lean`, 90 theorems in 120 declarations, every axiom report empty), as the kit's integration applied them to main in a rehearsal worktree (the kit at `6d5f244be`, main at `59ca8c812`): 03 §12's opening, its new theorem paragraph with its Reading, the pointer in the acts-alike reading and the Open bullet; 07 §7's sentence on an incentive to accept a correction; 08 §8's bullet; the overview's paragraph; the dossier's scope box, its paragraph on RF's rounds and its account of how it was made; the package's root bullets, both READMEs and the checker's scope sentence; the module's header and docstrings; the record in both languages and the amendments to three related records; the study section's template; PLAN §4.7, §8's row on assistance games, §12, §13 and the Evidence list; regions; the board's texts; and the opening, the literature table and the two tables of what was taken in [REVIEW-RFM2-LEAN](REVIEW-RFM2-LEAN.md). Two reads ran: the cross-model reader (GPT astra, high effort, read-only, a fresh session) and a workflow of three Opus readers, one per lens (exactness, readings, fit), each lens's findings given to one reader asked to refute them against the files. The prompts are in [the brief](BRIEF.md#round-2-second-part). The findings and verdicts are verbatim, with the rehearsal worktree's absolute paths made repository-relative and links shown unlinked (`]\\(`), their targets being relative to the texts' own folders.
+RF round 2, second part, RF-M.2: an act held for a reading (plan §4.7). Before RF-M.2's landing, its texts were cold-read against the Lean of `Becoming.HeldForReading` (`kit/round2b/tree/Becoming/HeldForReading.lean`, 90 theorems in 120 declarations, every axiom report empty), as the kit's integration applied them to main in a rehearsal worktree (the kit at `6d5f244be`, main at `59ca8c812`): 03 §12's opening, its new theorem paragraph with its Reading, the pointer in the acts-alike reading and the Open bullet; 07 §7's sentence on an incentive to accept a correction; 08 §8's bullet; the overview's paragraph; the dossier's scope box, its paragraph on RF's rounds and its account of how it was made; the package's root bullets, both READMEs and the checker's scope sentence; the module's header and docstrings; the record in both languages and the amendments to three related records; the study section's template; PLAN §4.7, §8's row on assistance games, §12, §13 and the Evidence list; regions; the board's texts; and the opening, the literature table and the two tables of what was taken in [REVIEW-RFM2-LEAN](REVIEW-RFM2-LEAN.md). Two reads ran: the cross-model reader (GPT astra, high effort, read-only, a fresh session) and a workflow of three Opus readers, one per lens (exactness, readings, fit), each lens's findings given to one reader asked to refute them against the files. The prompts are in [the brief](BRIEF.md#round-2-second-part). The findings and verdicts are verbatim, with the rehearsal worktree's absolute paths made repository-relative and links made to resolve from this folder, since it is link-checked as live: a line number kept in a link's text and dropped from its target, and a link that does not resolve here (an anchor of the page a quotation came from, a path of the rehearsal alone) shown as its text with its target as code.
 
 {SUMMARY} The module's statements are unchanged; its header and docstrings changed with the findings, and it was rebuilt after each change, last at 90 theorems in 120 declarations, every axiom report empty and no warnings ([build-25](../kit/round2b/logs/build-25.log)).
 
@@ -247,15 +250,15 @@ for lens in lenses:
         state = ('confirmed' if v['real'] else 'refuted') if v else 'unverified'
         counts[state] += 1
         block = [f"### {fid} ({key}, {f['severity']}, {state})", '',
-                 f"**Location.** {unlink(f['location'])}", '',
-                 f"**Quoted.** {unlink(f['quote'])}", '',
-                 f"**Problem.** {unlink(f['problem'])}", '',
-                 f"**Replacement.** {unlink(f['replacement'])}", '']
+                 f"**Location.** {relinked(f['location'])}", '',
+                 f"**Quoted.** {relinked(f['quote'])}", '',
+                 f"**Problem.** {relinked(f['problem'])}", '',
+                 f"**Replacement.** {relinked(f['replacement'])}", '']
         if v:
-            block += [f"**Verdict: {'real' if v['real'] else 'not real'}.** {unlink(v['reason'])}", '']
+            block += [f"**Verdict: {'real' if v['real'] else 'not real'}.** {relinked(v['reason'])}", '']
             better = (v.get('better_replacement') or '').strip()
             if better:
-                block += [f'**Better replacement.** {unlink(better)}', '']
+                block += [f'**Better replacement.** {relinked(better)}', '']
         blocks.append('\n'.join(block))
         assert fid in TAKEN_LENS, f'{fid}: no entry in TAKEN_LENS'
         short, taken = TAKEN_LENS[fid]
@@ -267,7 +270,7 @@ summary = (f"The cross-model reader reported {len(TAKEN_READER)} points, every o
            f"findings, {counts['confirmed']} confirmed and {counts['refuted']} refuted by their refuters"
            + (f", {counts['unverified']} not verified" if counts['unverified'] else '')
            + "; what each became is in [the table](#what-was-taken-from-the-lenses).")
-parts = [INTRO.replace('{SUMMARY}', summary), '## The cross-model reader\n', unlink(reader) + '\n',
+parts = [INTRO.replace('{SUMMARY}', summary), '## The cross-model reader\n', relinked(reader) + '\n',
          '### What was taken from the cross-model reader\n', '| # | Finding | Taken |', '|---|---|---|']
 parts += [f'| {p} | {f} | {t} |' for p, f, t in TAKEN_READER]
 parts.append('\n## The three lenses\n')
@@ -278,7 +281,7 @@ recheck = recheck_md.read_text(encoding='utf-8')
 recheck = recheck[:recheck.index('\n── cx ·')].rstrip('\n')
 parts += ['\n## The re-check\n', 'The cross-model reader, in the session of its cold read, read how the findings were '
           'taken, read-only. Verbatim; its line numbers are those of the version it read (the kit at `175550266`).\n',
-          unlink(recheck) + '\n', '### What was taken from the re-check\n', '| Point | Status | How |', '|---|---|---|']
+          relinked(recheck) + '\n', '### What was taken from the re-check\n', '| Point | Status | How |', '|---|---|---|']
 parts += [f'| {p} | {s} | {h} |' for p, s, h in RECHECK]
 text = '\n'.join(parts) + '\n'
 assert '](/' not in text and not any(root in text for root in ROOTS)

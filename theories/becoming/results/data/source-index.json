@@ -1747,6 +1747,32 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WitnessRefinementRuns.lean"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-COLDREAD.md": {
+      "title": "The cold read of RF-M.2's texts",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/BRIEF.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-LEAN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/board_rfm2.py",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/logs/build-18.log",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/logs/build-25.log",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+        "theories/becoming/THE-THEORY-OF-BECOMING.md",
+        "theories/becoming/chapters/03-KNOWING.md"
+      ]
+    },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2.md": {
+      "title": "The review of the design of RF's round 2, second part",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/BRIEF.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-LEAN.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean"
+      ]
+    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md": {
       "title": "RF round 2: the review of the Lean, and what was taken",
       "local_links": [

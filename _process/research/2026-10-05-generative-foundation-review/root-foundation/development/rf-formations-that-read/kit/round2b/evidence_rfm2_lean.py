@@ -13,6 +13,9 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+from relink_rfm2 import relink  # noqa: E402
+
 STUDY = HERE.parents[1]
 OUT = STUDY / 'evidence' / 'REVIEW-RFM2-LEAN.md'
 ROOT = '/Users/ren/theories/.claude/worktrees/rf-landing/'
@@ -20,14 +23,14 @@ ROOT = '/Users/ren/theories/.claude/worktrees/rf-landing/'
 reader_md, lens_json, rows_json, recheck_md = (Path(x) for x in sys.argv[1:5])
 
 
-def unlink(text):
-    """Links unlinked, since this folder is link-checked as live; paths made relative to the checkout."""
-    return text.replace(ROOT, '').replace('](', '\\](')
+def relinked(text):
+    """Paths made relative to the checkout, and links made to resolve from this folder (relink_rfm2.py)."""
+    return relink(text.replace(ROOT, ''))
 
 
 INTRO = """# The review of `Becoming.HeldForReading`
 
-RF round 2, second part, RF-M.2: an act held for a reading (plan §4.7). The module as first built on the reviewed design (`kit/round2b/tree/Becoming/HeldForReading.lean` at the kit's commit `7f4679003`: 56 theorems in 80 declarations, every axiom report empty) was reviewed on the Lean on 30 October 2026 in two independent ways: by the cross-model reader (GPT astra, high effort, read-only, a fresh session `01a18c02-6b30-79a3-acff-297bd8cf6b60`), and through three lenses (exactness, structure, sources), each an Opus reader working read-only, with one verifier per lens asked to refute that lens's findings. The prompts are in [the brief](BRIEF.md#round-2-second-part). The reviews follow verbatim; their line numbers are those of the reviewed version, the reader's links are unlinked (`\\](`), since this folder is link-checked as live, and its paths are made relative to the checkout.
+RF round 2, second part, RF-M.2: an act held for a reading (plan §4.7). The module as first built on the reviewed design (`kit/round2b/tree/Becoming/HeldForReading.lean` at the kit's commit `7f4679003`: 56 theorems in 80 declarations, every axiom report empty) was reviewed on the Lean on 30 October 2026 in two independent ways: by the cross-model reader (GPT astra, high effort, read-only, a fresh session `01a18c02-6b30-79a3-acff-297bd8cf6b60`), and through three lenses (exactness, structure, sources), each an Opus reader working read-only, with one verifier per lens asked to refute that lens's findings. The prompts are in [the brief](BRIEF.md#round-2-second-part). The reviews follow verbatim; their line numbers are those of the reviewed version, their paths are made relative to the checkout, and their links are made to resolve from this folder, since it is link-checked as live: a line number kept in a link's text and dropped from its target, and a link that does not resolve here shown as its text with its target as code.
 
 **What was verified, and how.** The exactness verifier judged all seventeen of its lens's findings: fourteen real and three not (E8, E11, E15); the module changed at those three places anyway, as the table says. The verifiers of the structure and sources lenses were stopped before they reported, so those findings carry no independent verdict. In their place, every literature point the sources lens raised was checked against the papers' own texts by the session that wrote the module ([below](#the-literature-checked-against-the-papers)), and each structure finding was judged against the Lean by that session before it was taken; neither check is independent. The module was then rebuilt, and at 81 theorems in 111 declarations four read-only Opus readers, one per set of findings, checked from the files alone how each finding is reflected in it; [the table](#what-was-taken) gives their rows, with the rows that later changes completed marked as updated after the check. Later changes brought the module to 89 theorems in 119 declarations, every axiom report empty ([build-18](../kit/round2b/logs/build-18.log)).
 
@@ -190,7 +193,7 @@ lenses = json.loads(lens_json.read_text(encoding='utf-8'))
 verdicts = {v['id']: v for v in lenses['refute:exactness']['verdicts']}
 rows = json.loads(rows_json.read_text(encoding='utf-8'))
 
-parts = [INTRO, '## The cross-model review\n', unlink(reader) + '\n']
+parts = [INTRO, '## The cross-model review\n', relinked(reader) + '\n']
 NAMES = (('exactness', 'The exactness lens'), ('structure', 'The structure lens'), ('sources', 'The sources lens'))
 for key, title in NAMES:
     found = lenses[f'lens:{key}']['findings']
@@ -203,15 +206,15 @@ for key, title in NAMES:
         v = verdicts.get(f['id']) if key == 'exactness' else None
         state = ('confirmed' if v['real'] else 'refuted') if v else 'not verified'
         block = [f"### {f['id']} ({key}, {f['severity']}, {state})", '',
-                 f"**Location.** {unlink(f['location'])}", '',
-                 f"**Quoted.** {unlink(f['quote'])}", '',
-                 f"**Problem.** {unlink(f['problem'])}", '',
-                 f"**Replacement.** {unlink(f['replacement'])}", '']
+                 f"**Location.** {relinked(f['location'])}", '',
+                 f"**Quoted.** {relinked(f['quote'])}", '',
+                 f"**Problem.** {relinked(f['problem'])}", '',
+                 f"**Replacement.** {relinked(f['replacement'])}", '']
         if v:
-            block += [f"**Verdict: {'real' if v['real'] else 'not real'}.** {unlink(v['reason'])}", '']
+            block += [f"**Verdict: {'real' if v['real'] else 'not real'}.** {relinked(v['reason'])}", '']
             better = (v.get('better_replacement') or '').strip()
             if better:
-                block += [f'**Better replacement.** {unlink(better)}', '']
+                block += [f'**Better replacement.** {relinked(better)}', '']
         parts.append('\n'.join(block))
 parts.append(LITERATURE)
 
@@ -228,7 +231,7 @@ for key, _ in ORDER:
         rid = row['id']
         seen.append(rid)
         status, how = AFTER.get(rid, (row['status'], row['how']))
-        how = unlink(how).replace('|', '\\|').replace('\n', ' ')
+        how = relinked(how).replace('|', '\\|').replace('\n', ' ')
         table.append(f'| {rid} | {status} | {how} |')
 assert set(AFTER) <= set(seen), set(AFTER) - set(seen)
 assert len(seen) == 14 + 17 + 24 + 14, len(seen)
@@ -291,7 +294,7 @@ recheck = recheck[:recheck.index('\n── cx ·')].rstrip('\n')
 parts.append('## The re-check\n\nThe cross-model reader, in the session of its review, read the rebuilt module, its '
              'record script and the plan, read-only (its prompt is in [the brief](BRIEF.md#round-2-second-part)). '
              'Verbatim; its line numbers are those of the version it read (89 theorems in 119 declarations).\n')
-parts.append(unlink(recheck) + '\n')
+parts.append(relinked(recheck) + '\n')
 rtable = ['### What was taken from the re-check', '', '| Point | Status | How |', '|---|---|---|']
 for point, status, how in RECHECK:
     rtable.append(f"| {point} | {status} | {how.replace('|', chr(92) + '|')} |")

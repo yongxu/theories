@@ -1,6 +1,6 @@
 # The cold read of RF-M.2's texts
 
-RF round 2, second part, RF-M.2: an act held for a reading (plan §4.7). Before RF-M.2's landing, its texts were cold-read against the Lean of `Becoming.HeldForReading` (`kit/round2b/tree/Becoming/HeldForReading.lean`, 90 theorems in 120 declarations, every axiom report empty), as the kit's integration applied them to main in a rehearsal worktree (the kit at `6d5f244be`, main at `59ca8c812`): 03 §12's opening, its new theorem paragraph with its Reading, the pointer in the acts-alike reading and the Open bullet; 07 §7's sentence on an incentive to accept a correction; 08 §8's bullet; the overview's paragraph; the dossier's scope box, its paragraph on RF's rounds and its account of how it was made; the package's root bullets, both READMEs and the checker's scope sentence; the module's header and docstrings; the record in both languages and the amendments to three related records; the study section's template; PLAN §4.7, §8's row on assistance games, §12, §13 and the Evidence list; regions; the board's texts; and the opening, the literature table and the two tables of what was taken in [REVIEW-RFM2-LEAN](REVIEW-RFM2-LEAN.md). Two reads ran: the cross-model reader (GPT astra, high effort, read-only, a fresh session) and a workflow of three Opus readers, one per lens (exactness, readings, fit), each lens's findings given to one reader asked to refute them against the files. The prompts are in [the brief](BRIEF.md#round-2-second-part). The findings and verdicts are verbatim, with the rehearsal worktree's absolute paths made repository-relative and links shown unlinked (`]\(`), their targets being relative to the texts' own folders.
+RF round 2, second part, RF-M.2: an act held for a reading (plan §4.7). Before RF-M.2's landing, its texts were cold-read against the Lean of `Becoming.HeldForReading` (`kit/round2b/tree/Becoming/HeldForReading.lean`, 90 theorems in 120 declarations, every axiom report empty), as the kit's integration applied them to main in a rehearsal worktree (the kit at `6d5f244be`, main at `59ca8c812`): 03 §12's opening, its new theorem paragraph with its Reading, the pointer in the acts-alike reading and the Open bullet; 07 §7's sentence on an incentive to accept a correction; 08 §8's bullet; the overview's paragraph; the dossier's scope box, its paragraph on RF's rounds and its account of how it was made; the package's root bullets, both READMEs and the checker's scope sentence; the module's header and docstrings; the record in both languages and the amendments to three related records; the study section's template; PLAN §4.7, §8's row on assistance games, §12, §13 and the Evidence list; regions; the board's texts; and the opening, the literature table and the two tables of what was taken in [REVIEW-RFM2-LEAN](REVIEW-RFM2-LEAN.md). Two reads ran: the cross-model reader (GPT astra, high effort, read-only, a fresh session) and a workflow of three Opus readers, one per lens (exactness, readings, fit), each lens's findings given to one reader asked to refute them against the files. The prompts are in [the brief](BRIEF.md#round-2-second-part). The findings and verdicts are verbatim, with the rehearsal worktree's absolute paths made repository-relative and links made to resolve from this folder, since it is link-checked as live: a line number kept in a link's text and dropped from its target, and a link that does not resolve here (an anchor of the page a quotation came from, a path of the rehearsal alone) shown as its text with its target as code.
 
 The cross-model reader reported 8 points, every one taken. The lenses reported 78 findings, 75 confirmed and 3 refuted by their refuters; what each became is in [the table](#what-was-taken-from-the-lenses). The module's statements are unchanged; its header and docstrings changed with the findings, and it was rebuilt after each change, last at 90 theorems in 120 declarations, every axiom report empty and no warnings ([build-25](../kit/round2b/logs/build-25.log)).
 
@@ -11,7 +11,7 @@ The cross-model reader reported 8 points, every one taken. The lenses reported 7
 Verdict: corrections needed. The findings below concern the texts and their correspondence to the declarations; no files were changed and no build was run.
 
 1. **Medium — the overview drops the open-policy hypothesis.**  
-   Location: [THE-THEORY-OF-BECOMING.md:100\](theories/becoming/THE-THEORY-OF-BECOMING.md:100).
+   Location: [THE-THEORY-OF-BECOMING.md:100](../../../../../../../theories/becoming/THE-THEORY-OF-BECOMING.md).
 
    **Quoted:** “any policy falls short of one best at every listed candidate by the weighted total of what its acts lose”
 
@@ -20,7 +20,7 @@ Verdict: corrections needed. The findings below concern the texts and their corr
    **Replacement:** “given a policy best among the open acts at every listed candidate, any policy choosing open acts there falls short of it by the weighted total of what its acts lose”
 
 2. **Medium — the strict-gain summary does not identify the required stopping rule.**  
-   Locations: [THE-THEORY-OF-BECOMING.md:100\](theories/becoming/THE-THEORY-OF-BECOMING.md:100), [board_rfm2.py:58\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/board_rfm2.py:58).
+   Locations: [THE-THEORY-OF-BECOMING.md:100](../../../../../../../theories/becoming/THE-THEORY-OF-BECOMING.md), [board_rfm2.py:58](../kit/round2b/board_rfm2.py).
 
    **Quoted:** “holding for a reading that stops or releases stands above both…”
 
@@ -29,7 +29,7 @@ Verdict: corrections needed. The findings below concern the texts and their corr
    **Replacement:** “holding for the reading that stops exactly where the supplied loss exceeds the supplied gain stands above both going on and switching off exactly where the model gives positive weight to both strict signs”
 
 3. **Medium — the package summaries omit the shown-reach composition’s conditions.**  
-   Locations: [Becoming.lean:2789\](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean:2789), [check_becoming.py:2929\](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py:2929).
+   Locations: [Becoming.lean:2789](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean), [check_becoming.py:2929](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py).
 
    **Quoted:** “within `ShownOrder`’s reach holding a pick gains nothing”; “within ShownOrder’s reach, holding a pick gains nothing”
 
@@ -38,7 +38,7 @@ Verdict: corrections needed. The findings below concern the texts and their corr
    **Replacement:** “where every listed candidate of positive weight has transitive comparisons according with the choices, holding gains nothing over picking the first alternative when it reaches the second in the shown relation”
 
 4. **Medium — the plan’s held-start witness omits the losing true sign.**  
-   Location: [PLAN.md:192\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md:192).
+   Location: [PLAN.md:192](../PLAN.md).
 
    **Quoted:** “holding first, it senses the stop, which refutes its only candidate, and with none kept it goes on”
 
@@ -47,7 +47,7 @@ Verdict: corrections needed. The findings below concern the texts and their corr
    **Replacement:** “holding first with the singleton listing of gain, where going on actually loses, it senses the stop, which refutes its only candidate, and with none kept it goes on”
 
 5. **Medium — the witness docstrings omit the supplied initial held act.**  
-   Locations: [HeldForReading.lean:1247\](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean:1247), and the corresponding summaries at lines 1256, 1265, 1274, 1281 and 1288.
+   Locations: [HeldForReading.lean:1247](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean), and the corresponding summaries at lines 1256, 1265, 1274, 1281 and 1288.
 
    **Quoted:** “Listing both signs, where going on loses, the formation holds and senses the stop at the first step”; “the formation is off from step two on”
 
@@ -56,16 +56,16 @@ Verdict: corrections needed. The findings below concern the texts and their corr
    **Replacement:** Begin the paired descriptions with: “Listing both signs and holding from the start, with the initial sensed value plain, …” Retain their existing distinction between the true signs and their stated step numbers.
 
 6. **Medium — the literature table misstates Equation 1 using positive and negative parts.**  
-   Location: [REVIEW-RFM2-LEAN.md:1093\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-LEAN.md:1093).
+   Location: [REVIEW-RFM2-LEAN.md:1093](REVIEW-RFM2-LEAN.md).
 
    **Quoted:** “for any policy of the human, … the utility’s negative part where the human would switch it off and … its positive part where the human would let it act”
 
-   **Problem:** Equation 1 uses signed terms, `E[−U(1−πH(U))]` and `E[UπH(U)]`. Either can be negative for an arbitrary policy. Positive-part expressions apply to the rational policy specialization. This distinction is also what the module’s shortfall balances preserve. [The Off-Switch Game, Equation 1\](https://arxiv.org/html/1611.08219)
+   **Problem:** Equation 1 uses signed terms, `E[−U(1−πH(U))]` and `E[UπH(U)]`. Either can be negative for an arbitrary policy. Positive-part expressions apply to the rational policy specialization. This distinction is also what the module’s shortfall balances preserve. [The Off-Switch Game, Equation 1](https://arxiv.org/html/1611.08219)
 
    **Replacement:** “for any policy of the human, the robot’s incentive to wait is `min(E[−U(1−πH(U))], E[UπH(U)])`, where `πH(U)` is the probability of release; these are signed expectations and need not be nonnegative”
 
 7. **Low — §12’s opening counts four laws but enumerates five.**  
-   Location: [03-KNOWING.md:489\](theories/becoming/chapters/03-KNOWING.md:489).
+   Location: [03-KNOWING.md:489](../../../../../../../theories/becoming/chapters/03-KNOWING.md).
 
    **Quoted:** “Four laws state that loop under their premises”
 
@@ -74,7 +74,7 @@ Verdict: corrections needed. The findings below concern the texts and their corr
    **Replacement:** “Five laws state that loop under their premises”
 
 8. **Low — several “How” entries describe superseded states without marking the subsequent correction.**  
-   Location: [REVIEW-RFM2-LEAN.md:1132\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-LEAN.md:1132), with the additional rows located below.
+   Location: [REVIEW-RFM2-LEAN.md:1132](REVIEW-RFM2-LEAN.md), with the additional rows located below.
 
    **Problem:** The table explicitly preserves an earlier check, so these are stale reconciliation statements, not faults in the verbatim reviews. They do not describe the integrated files now:
 
@@ -844,13 +844,13 @@ E7's count is weaker, since the preamble frames counts at 81/111, but its PLAN.m
 
 **Location.** theories/becoming/chapters/03-KNOWING.md:514
 
-**Quoted.** (the structure of [the previous witness\](#r-what-a-course-chosen-through-its-model-does-not-test))
+**Quoted.** (the structure of the previous witness (`#r-what-a-course-chosen-through-its-model-does-not-test`))
 
 **Problem.** This link and 'the previous laws' later in the paragraph both point to §12's second law. The law just before this one is the fourth, a prediction read by what it predicts, so 'previous' sends the reader to the wrong paragraph. The text comes from s12_rfm2.txt. Unchanged at 82725b416.
 
-**Replacement.** (the structure of [the untested model's witness\](#r-what-a-course-chosen-through-its-model-does-not-test), `ReadingLoop.Untested`); later: '([what a course chosen through its model does not test\](#r-what-a-course-chosen-through-its-model-does-not-test))'
+**Replacement.** (the structure of the untested model's witness (`#r-what-a-course-chosen-through-its-model-does-not-test`), `ReadingLoop.Untested`); later: '(what a course chosen through its model does not test (`#r-what-a-course-chosen-through-its-model-does-not-test`))'
 
-**Verdict: real.** In the scratch §12, the law just before the holding law is the prediction law, with its ThresholdResponse, Negating and Reflecting witnesses. Before that comes acts alike, with its own witness. So '[the previous witness\](#r-what-a-course-chosen-through-its-model-does-not-test)' names a position that is not the linked second law. 'The previous laws' is looser but points the same way. Unchanged at 82725b416; the working tree's s12 now says 'the untested model's witness'.
+**Verdict: real.** In the scratch §12, the law just before the holding law is the prediction law, with its ThresholdResponse, Negating and Reflecting witnesses. Before that comes acts alike, with its own witness. So 'the previous witness (`#r-what-a-course-chosen-through-its-model-does-not-test`)' names a position that is not the linked second law. 'The previous laws' is looser but points the same way. Unchanged at 82725b416; the working tree's s12 now says 'the untested model's witness'.
 
 ### F12 (fit, medium, confirmed)
 
@@ -1004,13 +1004,13 @@ E7's count is weaker, since the preamble frames counts at 81/111, but its PLAN.m
 
 **Location.** theories/becoming/chapters/03-KNOWING.md:504
 
-**Quoted.** what holding an act for another's reading is worth is [the last law\](#r-what-holding-for-a-reading-is-worth)
+**Quoted.** what holding an act for another's reading is worth is the last law (`#r-what-holding-for-a-reading-is-worth`)
 
 **Problem.** The link text gives a position, which drifts when §12 gains a law; the section otherwise names its laws by what they state. integrate_rfm2.py writes it. Unchanged at 82725b416.
 
-**Replacement.** what holding an act for another's reading is worth has [its own law\](#r-what-holding-for-a-reading-is-worth)
+**Replacement.** what holding an act for another's reading is worth has its own law (`#r-what-holding-for-a-reading-is-worth`)
 
-**Verdict: not real.** '[the last law\](#r-what-holding-for-a-reading-is-worth)' is accurate: the holding law is §12's fifth and last, and the anchor does not drift. §12 itself refers by position too ('On the worlds of the previous law' in the acts-alike theorem). The drift is hypothetical, so this is taste; the working tree's 'has its own law' is harmless.
+**Verdict: not real.** 'the last law (`#r-what-holding-for-a-reading-is-worth`)' is accurate: the holding law is §12's fifth and last, and the anchor does not drift. §12 itself refers by position too ('On the worlds of the previous law' in the acts-alike theorem). The drift is hypothetical, so this is taste; the working tree's 'has its own law' is harmless.
 
 ### F25 (fit, low, refuted)
 
@@ -1104,11 +1104,11 @@ E7's count is weaker, since the preamble frames counts at 81/111, but its PLAN.m
 
 **Location.** _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-LEAN.md:5
 
-**Quoted.** The module was then rebuilt to 89 theorems in 119 declarations, every axiom report empty (the build logs are in [kit/round2b/logs/\](../kit/round2b/logs/build-18.log)). How each finding is reflected in the rebuilt module was checked from the files alone by four read-only Opus readers, one per set of findings, at 81 theorems in 111 declarations
+**Quoted.** The module was then rebuilt to 89 theorems in 119 declarations, every axiom report empty (the build logs are in [kit/round2b/logs/](../kit/round2b/logs/build-18.log)). How each finding is reflected in the rebuilt module was checked from the files alone by four read-only Opus readers, one per set of findings, at 81 theorems in 111 declarations
 
 **Problem.** The order misleads. The check was made at 81/111, before the module reached 89/119, yet the sentence about 'the rebuilt module' it checked comes after the 89/119 sentence. The link text names the logs folder but opens build-18.log. Unchanged at 82725b416.
 
-**Replacement.** The module was rebuilt, and at 81 theorems in 111 declarations four read-only Opus readers, one per set of findings, checked from the files alone how each finding is reflected in it; later changes brought it to 89 theorems in 119 declarations, every axiom report empty ([build-18\](../kit/round2b/logs/build-18.log)).
+**Replacement.** The module was rebuilt, and at 81 theorems in 111 declarations four read-only Opus readers, one per set of findings, checked from the files alone how each finding is reflected in it; later changes brought it to 89 theorems in 119 declarations, every axiom report empty ([build-18](../kit/round2b/logs/build-18.log)).
 
 **Verdict: real.** Line 5 says 'The module was then rebuilt to 89 theorems in 119 declarations…' and then 'How each finding is reflected in the rebuilt module was checked … at 81 theorems in 111 declarations'. 'The rebuilt module' therefore first reads as the 89/119 one, although the check came earlier. The link text names the logs folder but opens build-18.log, the 89/119 audit. Unchanged at 82725b416.
 
@@ -1202,7 +1202,7 @@ The cross-model reader, in the session of its cold read, read how the findings w
 Verdict: one confirmed finding remains partly taken—F32; I found no new substantive discrepancy in the revised texts.
 
 1. **Low — F32’s corrected opening is in the kit script but not in the evidence document.**  
-   Location: [REVIEW-RFM2-LEAN.md:5\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-LEAN.md:5).
+   Location: [REVIEW-RFM2-LEAN.md:5](REVIEW-RFM2-LEAN.md).
 
    **Quote:** “The module was then rebuilt to 89 theorems in 119 declarations … How each finding is reflected in the rebuilt module was checked … at 81 theorems in 111 declarations”
 
@@ -1210,7 +1210,7 @@ Verdict: one confirmed finding remains partly taken—F32; I found no new substa
 
    **Replacement** for the paragraph’s final two sentences:
 
-   > The module was then rebuilt, and at 81 theorems in 111 declarations four read-only Opus readers, one per set of findings, checked from the files alone how each finding is reflected in it; [the table\](#what-was-taken) gives their rows, with the rows that later changes completed marked as updated after the check. Later changes brought the module to 89 theorems in 119 declarations, every axiom report empty ([build-18\](../kit/round2b/logs/build-18.log)).
+   > The module was then rebuilt, and at 81 theorems in 111 declarations four read-only Opus readers, one per set of findings, checked from the files alone how each finding is reflected in it; the table (`#what-was-taken`) gives their rows, with the rows that later changes completed marked as updated after the check. Later changes brought the module to 89 theorems in 119 declarations, every axiom report empty ([build-18](../kit/round2b/logs/build-18.log)).
 
 ### What was taken from the re-check
 

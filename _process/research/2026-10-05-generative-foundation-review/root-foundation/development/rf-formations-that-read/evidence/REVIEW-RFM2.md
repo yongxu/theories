@@ -1,10 +1,10 @@
 # The review of the design of RF's round 2, second part
 
-RF round 2, second part: RF-M's assistance case and the order as state (plan §4.7). Before any Lean was written, the design was read by the cross-model reader (GPT astra, high effort, read-only, a fresh session `01a18bec-f4e4-74d2-a604-9290d768c8ba`, 30 October 2026), with the prompt in [the brief](BRIEF.md#round-2-second-part). Its review follows verbatim, its links unlinked (`\](`) since this folder is link-checked as live and its paths made relative to the checkout. What was taken follows it.
+RF round 2, second part: RF-M's assistance case and the order as state (plan §4.7). Before any Lean was written, the design was read by the cross-model reader (GPT astra, high effort, read-only, a fresh session `01a18bec-f4e4-74d2-a604-9290d768c8ba`, 30 October 2026), with the prompt in [the brief](BRIEF.md#round-2-second-part). Its review follows verbatim, its paths made relative to the checkout and its links to this folder, since this folder is link-checked as live: a line number kept in a link's text and dropped from its target, and a link that does not resolve here shown as its text with its target as code. What was taken follows it.
 
 ## The review
 
-I reviewed [§4.7 of PLAN.md\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md:181) against the named landed modules, records and primary literature. I made no file changes and ran no builds. “Confirmed” below means checked against source text, declarations or finite arithmetic; it does not certify an unwritten Lean theorem.
+I reviewed [§4.7 of PLAN.md](../PLAN.md) against the named landed modules, records and primary literature. I made no file changes and ran no builds. “Confirmed” below means checked against source text, declarations or finite arithmetic; it does not certify an unwritten Lean theorem.
 
 1. **RF-M.2.1 — The weighted result adds something; the common-act condition already exists. [Confirmed: record and declaration inspection; package search.]**
 
@@ -31,7 +31,7 @@ I reviewed [§4.7 of PLAN.md\](_process/research/2026-10-05-generative-foundatio
 
 3. **RF-M.2.1 — Good is correctly connected, but the proposed theorem is a specialization. [Confirmed: primary source.]**
 
-   Good considers observations that need not reveal the hypothesis completely. His finite-matrix lemma includes the common-maximizer equality boundary. Thus neither that boundary nor the weighted inequality is new mathematics. His qualification is that “the cost of doing so is negligible.” [Good, *On the Principle of Total Evidence*\](https://fitelson.org/seminar/good.pdf)
+   Good considers observations that need not reveal the hypothesis completely. His finite-matrix lemma includes the common-maximizer equality boundary. Thus neither that boundary nor the weighted inequality is new mathematics. His qualification is that “the cost of doing so is negligible.” [Good, *On the Principle of Total Evidence*](https://fitelson.org/seminar/good.pdf)
 
    **Replacement:** “A finite, perfect-information specialization of Good’s value-of-evidence argument, with natural-number weights and scores; the equality boundary is his common maximizing row condition.”
 
@@ -50,7 +50,7 @@ I reviewed [§4.7 of PLAN.md\](_process/research/2026-10-05-generative-foundatio
 
 5. **RF-M.2.2 — The off-switch attribution is right; certainty means no strict incentive, not necessarily refusal. [Confirmed: primary source.]**
 
-   Hadfield-Menell et al.’s Theorem 1 assumes the human permits execution when \(U_a\ge0\) and vetoes when \(U_a<0\). It states that waiting is “never suboptimal,” and is uniquely optimal with positive probability on both strict signs. Their certainty discussion distinguishes indifference under rational oversight from loss under mistaken oversight. At \(U_a=0\), every veto policy ties. [*The Off-Switch Game*, Theorem 1 and Corollary 1\](https://arxiv.org/pdf/1611.08219)
+   Hadfield-Menell et al.’s Theorem 1 assumes the human permits execution when \(U_a\ge0\) and vetoes when \(U_a<0\). It states that waiting is “never suboptimal,” and is uniquely optimal with positive probability on both strict signs. Their certainty discussion distinguishes indifference under rational oversight from loss under mistaken oversight. At \(U_a=0\), every veto policy ties. [*The Off-Switch Game*, Theorem 1 and Corollary 1](https://arxiv.org/pdf/1611.08219)
 
    **Replacement:** “This reproduces the finite deterministic-veto case. A certain model has no strictly positive incentive to defer; choosing to defer or bypass at equality needs a tie-breaking rule. With possible veto mistakes, deferral can be strictly worse.”
 
@@ -64,7 +64,7 @@ I reviewed [§4.7 of PLAN.md\](_process/research/2026-10-05-generative-foundatio
 
    However, “not reading the candidate” suggests independence. An arbitrary candidate-dependent veto can read it incorrectly or partially. A genuinely independent randomized veto merely mixes acting and switching off and cannot strictly beat their best fixed choice.
 
-   These inequalities are the deterministic finite form of **Equation 1 of the off-switch paper**, rather than Milli et al.’s obedience theorem. Milli studies preference inference and obedience in a supervision model, simplified to a repeated game; its results depend on its learning assumptions. [Milli et al., *Should Robots be Obedient?*, §§2–3\](https://arxiv.org/pdf/1705.09990)
+   These inequalities are the deterministic finite form of **Equation 1 of the off-switch paper**, rather than Milli et al.’s obedience theorem. Milli studies preference inference and obedience in a supervision model, simplified to a repeated game; its results depend on its learning assumptions. [Milli et al., *Should Robots be Obedient?*, §§2–3](https://arxiv.org/pdf/1705.09990)
 
    **Replacement:** Rename this “An arbitrary veto rule”; attribute the comparison to the off-switch equation and describe Milli as related work on obedience under imperfect choice.
 
@@ -86,7 +86,7 @@ I reviewed [§4.7 of PLAN.md\](_process/research/2026-10-05-generative-foundatio
 
 9. **RF-M.2.5 — The witness fits `Loop`, but misspecification and sign agreement are insufficient hypotheses. [Confirmed: `Loop` interface and fixed-point theorem.]**
 
-   [`Loop.answer`\](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean:543) already has type `S → A → E → S`; act-dependent access needs no interface change. But omission of the truth does not imply that ordinary acting never produces refuting evidence. Also, unanimously negative candidates may cause switching off rather than acting.
+   [`Loop.answer`](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean) already has type `S → A → E → S`; act-dependent access needs no interface change. But omission of the truth does not imply that ordinary acting never produces refuting evidence. Also, unanimously negative candidates may cause switching off rather than acting.
 
    **Replacement:** Construct a nonempty listing predicting positive value, a true negative case, and a selector that executes on unanimous positive predictions, including its tie-breaking against costless holding. Let ordinary execution return a common neutral observation, while holding returns a distinguishing veto. For direct use of `rests_of_unrefuted`, verify all four premises: unchanged answer, unchanged external state, the selected act, and every listed prediction fitting that answer. Otherwise use `kept_iff` along a changing course.
 
@@ -94,7 +94,7 @@ I reviewed [§4.7 of PLAN.md\](_process/research/2026-10-05-generative-foundatio
 
 10. **RF-M.2.5 — Carey’s result is stronger and different from never sensing the veto. [Confirmed: primary source.]**
 
-    Carey’s 2018 version explicitly exhibits a misspecified reward family causing a system to **receive and disregard** a shutdown recommendation; another example routes around a shutdown opportunity. The paper describes an agent that may “ignore corrective feedback.” Your proposed witness instead suppresses access to potentially refuting feedback. [Carey, *Incorrigibility in the CIRL Framework*, Figures 2–3\](https://arxiv.org/pdf/1709.06275)
+    Carey’s 2018 version explicitly exhibits a misspecified reward family causing a system to **receive and disregard** a shutdown recommendation; another example routes around a shutdown opportunity. The paper describes an agent that may “ignore corrective feedback.” Your proposed witness instead suppresses access to potentially refuting feedback. [Carey, *Incorrigibility in the CIRL Framework*, Figures 2–3](https://arxiv.org/pdf/1709.06275)
 
     **Replacement:** “A deterministic witness of oversight bypass under a misspecified candidate list, related to Carey’s counterexamples.” Claim containment of Carey only after representing a received shutdown instruction and its refusal, or an explicit correspondence to his bypass case.
 
@@ -123,13 +123,13 @@ I reviewed [§4.7 of PLAN.md\](_process/research/2026-10-05-generative-foundatio
 
 13. **RF-M.3.1 — Everitt’s current-reward result is not a general immunity theorem. [Confirmed: primary source.]**
 
-    Everitt et al. distinguish agents that anticipate future changes of objective from agents that plan as though their present objective controlled future actions. Under their assumptions, the former may have an incentive to **preserve** the reward function. The latter lack an instrumental goal to influence it when it is private and state-based. The preservation result additionally assumes that reward-function changes carry no information about state transitions. [Everitt et al., *Reward Tampering Problems and Solutions*, §3.2, Claims 2–3\](https://arxiv.org/pdf/1908.04734)
+    Everitt et al. distinguish agents that anticipate future changes of objective from agents that plan as though their present objective controlled future actions. Under their assumptions, the former may have an incentive to **preserve** the reward function. The latter lack an instrumental goal to influence it when it is private and state-based. The preservation result additionally assumes that reward-function changes carry no information about state transitions. [Everitt et al., *Reward Tampering Problems and Solutions*, §3.2, Claims 2–3](https://arxiv.org/pdf/1908.04734)
 
     **Replacement:** “A one-step illustration of holding the evaluation map fixed while comparing outcomes. It does not reproduce the paper’s multistep causal claims, time-inconsistency analysis, or protection against reward-input tampering.”
 
 14. **RF-M.3.1–2 — Carroll supports modelling induced preference change, not identifying its legitimacy from an endpoint. [Confirmed: primary source.]**
 
-    Carroll et al. estimate preference trajectories under different recommender policies and compare them with explicitly chosen “safe shifts.” They call frozen initial preferences a “very crude” baseline and also consider a random-recommender baseline. Their account does not equate every induced change with manipulation, nor establish that current-order evaluation resolves the problem. [Carroll et al., *Estimating and Penalizing Induced Preference Shifts*, §5\](https://arxiv.org/pdf/2204.11966)
+    Carroll et al. estimate preference trajectories under different recommender policies and compare them with explicitly chosen “safe shifts.” They call frozen initial preferences a “very crude” baseline and also consider a random-recommender baseline. Their account does not equate every induced change with manipulation, nor establish that current-order evaluation resolves the problem. [Carroll et al., *Estimating and Penalizing Induced Preference Shifts*, §5](https://arxiv.org/pdf/2204.11966)
 
     **Replacement:** “Related to induced preference shifts; the present witness represents interventions on valuation, but supplies no criterion of legitimate, desired or autonomous change.”
 
@@ -139,7 +139,7 @@ I reviewed [§4.7 of PLAN.md\](_process/research/2026-10-05-generative-foundatio
     \[
     \pi(\tau)=\pi(\tau')\Rightarrow e(\tau)=e(\tau')
     \]
-    is precisely [`Learning.Lumped π e`\](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean:834), or congruence when \(e=f\circ\pi\). RF2 already illustrates this pattern. Registering it again would add a wrapper.
+    is precisely [`Learning.Lumped π e`](../../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean), or congruence when \(e=f\circ\pi\). RF2 already illustrates this pattern. Registering it again would add a wrapper.
 
     **Replacement:** Keep it as a reading. The useful addition would be **two executable routes** with equal \(\pi\) but different, explicitly defined route properties \(q\). Then no classifier through \(\pi\) can recover \(q\). Specify whether “outcomes” means the entire outcome sequence or only its endpoint. “The principal’s own” requires an independently defined causal property; an endpoint cannot supply it.
 
@@ -161,13 +161,13 @@ I reviewed [§4.7 of PLAN.md\](_process/research/2026-10-05-generative-foundatio
 
 18. **`closed-capture.json:157` — The Everitt 2017 comparison needs its positive theorem’s assumptions. [Confirmed: record and primary source.]**
 
-    The record’s indistinguishability comparison is appropriate. Its suggestion that a reading outside the loop is “the way out” is too loose as an attribution to Theorem 19. That theorem requires limited corruption and, for each target state, either a safe observation source or more than \(2q\) observation sources, within its communicating model class. An extra channel alone does not suffice. The full author list also includes **Marcus Hutter**. [Everitt et al., *Reinforcement Learning with a Corrupted Reward Channel*, Theorems 11 and 19\](https://arxiv.org/pdf/1705.08417)
+    The record’s indistinguishability comparison is appropriate. Its suggestion that a reading outside the loop is “the way out” is too loose as an attribution to Theorem 19. That theorem requires limited corruption and, for each target state, either a safe observation source or more than \(2q\) observation sources, within its communicating model class. An extra channel alone does not suffice. The full author list also includes **Marcus Hutter**. [Everitt et al., *Reinforcement Learning with a Corrupted Reward Channel*, Theorems 11 and 19](https://arxiv.org/pdf/1705.08417)
 
     **Replacement:** “Unrestricted corruption prevents identification; decoupled feedback permits learning under the paper’s explicit coverage, corruption and reachability assumptions.” This is a correction to the comparison, not grounds to reopen the landed capture proofs.
 
 19. **§4.7’s institutional deferral — Hirschman is appropriately a reading, with a scope distinction. [Confirmed: author’s retrospective account; judgment on correspondence.]**
 
-    Hirschman treats exit and voice as distinct responses to deterioration that can interact, complement or undermine one another. Voice attempts change from within; exit alters participation. Neither is simply another name for receiving an outside reading. His own later account explicitly discusses voice complementing or superseding exit as a recovery mechanism. [Hirschman, *Further Reflections and a Survey of Recent Contributions*\](https://www.milbank.org/wp-content/uploads/mq/volume-58/issue-03/58-3-Exit-Voice-and-Loyality.pdf)
+    Hirschman treats exit and voice as distinct responses to deterioration that can interact, complement or undermine one another. Voice attempts change from within; exit alters participation. Neither is simply another name for receiving an outside reading. His own later account explicitly discusses voice complementing or superseding exit as a recovery mechanism. [Hirschman, *Further Reflections and a Survey of Recent Contributions*](https://www.milbank.org/wp-content/uploads/mq/volume-58/issue-03/58-3-Exit-Voice-and-Loyality.pdf)
 
     **Replacement:** Keep the deferral. Label the correspondence: voice may change the reading or rule; exit may change membership, reader composition and available support. No theorem about loyalty or the efficacy of either follows from `ReadInTime` alone.
 

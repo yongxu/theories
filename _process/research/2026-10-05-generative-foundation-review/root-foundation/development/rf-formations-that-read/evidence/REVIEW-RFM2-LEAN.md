@@ -1,6 +1,6 @@
 # The review of `Becoming.HeldForReading`
 
-RF round 2, second part, RF-M.2: an act held for a reading (plan §4.7). The module as first built on the reviewed design (`kit/round2b/tree/Becoming/HeldForReading.lean` at the kit's commit `7f4679003`: 56 theorems in 80 declarations, every axiom report empty) was reviewed on the Lean on 30 October 2026 in two independent ways: by the cross-model reader (GPT astra, high effort, read-only, a fresh session `01a18c02-6b30-79a3-acff-297bd8cf6b60`), and through three lenses (exactness, structure, sources), each an Opus reader working read-only, with one verifier per lens asked to refute that lens's findings. The prompts are in [the brief](BRIEF.md#round-2-second-part). The reviews follow verbatim; their line numbers are those of the reviewed version, the reader's links are unlinked (`\](`), since this folder is link-checked as live, and its paths are made relative to the checkout.
+RF round 2, second part, RF-M.2: an act held for a reading (plan §4.7). The module as first built on the reviewed design (`kit/round2b/tree/Becoming/HeldForReading.lean` at the kit's commit `7f4679003`: 56 theorems in 80 declarations, every axiom report empty) was reviewed on the Lean on 30 October 2026 in two independent ways: by the cross-model reader (GPT astra, high effort, read-only, a fresh session `01a18c02-6b30-79a3-acff-297bd8cf6b60`), and through three lenses (exactness, structure, sources), each an Opus reader working read-only, with one verifier per lens asked to refute that lens's findings. The prompts are in [the brief](BRIEF.md#round-2-second-part). The reviews follow verbatim; their line numbers are those of the reviewed version, their paths are made relative to the checkout, and their links are made to resolve from this folder, since it is link-checked as live: a line number kept in a link's text and dropped from its target, and a link that does not resolve here shown as its text with its target as code.
 
 **What was verified, and how.** The exactness verifier judged all seventeen of its lens's findings: fourteen real and three not (E8, E11, E15); the module changed at those three places anyway, as the table says. The verifiers of the structure and sources lenses were stopped before they reported, so those findings carry no independent verdict. In their place, every literature point the sources lens raised was checked against the papers' own texts by the session that wrote the module ([below](#the-literature-checked-against-the-papers)), and each structure finding was judged against the Lean by that session before it was taken; neither check is independent. The module was then rebuilt, and at 81 theorems in 111 declarations four read-only Opus readers, one per set of findings, checked from the files alone how each finding is reflected in it; [the table](#what-was-taken) gives their rows, with the rows that later changes completed marked as updated after the check. Later changes brought the module to 89 theorems in 119 declarations, every axiom report empty ([build-18](../kit/round2b/logs/build-18.log)).
 
@@ -12,7 +12,7 @@ I found no apparent error in the counting proofs, but several correspondence and
 
 1. **The “taken” table needs qualified statuses. — Confirmed by comparing every row with the module and plan.**
 
-   Location: [REVIEW-RFM2.md:205\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2.md:205).
+   Location: [REVIEW-RFM2.md:205](REVIEW-RFM2.md).
 
    | Earlier finding | Assessment |
    |---|---|
@@ -43,7 +43,7 @@ I found no apparent error in the counting proofs, but several correspondence and
 
 2. **The cost needs an explicit unit convention. — Confirmed by declaration comparison and arithmetic.**
 
-   Location: [HeldForReading.lean:508\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean:508), also header lines 35–44 and 82–84.
+   Location: [HeldForReading.lean:508](../kit/round2b/tree/Becoming/HeldForReading.lean), also header lines 35–44 and 82–84.
 
    The implementation proves comparisons of **unnormalized totals**:
    \[
@@ -61,7 +61,7 @@ I found no apparent error in the counting proofs, but several correspondence and
 
 3. **The RF1 existence sentence still omits essential hypotheses and a representation boundary. — Confirmed against `both_ways_of_unreached`.**
 
-   Location: [HeldForReading.lean:52\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean:52); repeated in plan §4.7.5.
+   Location: [HeldForReading.lean:52](../kit/round2b/tree/Becoming/HeldForReading.lean); repeated in plan §4.7.5.
 
    “Beyond the reach strict according orders of both rankings exist” requires:
 
@@ -79,7 +79,7 @@ I found no apparent error in the counting proofs, but several correspondence and
 
 4. **The witness’s intermediate events are not conclusions of the cited suffix theorems. — Confirmed by statement inspection and a direct simulation of the definitions.**
 
-   Location: [HeldForReading.lean:778\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean:778), also lines 61–63 and 786.
+   Location: [HeldForReading.lean:778](../kit/round2b/tree/Becoming/HeldForReading.lean), also lines 61–63 and 786.
 
    `listed_turns_off` and `listed_goes_on` describe the entire configuration at `n + 4`. They do not state that a stop/release was sensed earlier. The definitions give:
 
@@ -97,7 +97,7 @@ I found no apparent error in the counting proofs, but several correspondence and
 
 5. **`Bypass` demonstrates persistence under a constructed observation rule, not an incentive theorem. — Confirmed construction; judgment on explanatory scope.**
 
-   Location: [HeldForReading.lean:734\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean:734), especially `answer`, `choose`, and `loop`.
+   Location: [HeldForReading.lean:734](../kit/round2b/tree/Becoming/HeldForReading.lean), especially `answer`, `choose`, and `loop`.
 
    Ordinary execution returns `.plain` independently of the true sign; the world never changes; and `choose` is explicitly programmed. Those premises explain why the false candidate survives. `rests_of_unrefuted` propagates that fixed point—it does not derive the blindness or the selector.
 
@@ -111,7 +111,7 @@ I found no apparent error in the counting proofs, but several correspondence and
 
 6. **The empty-list branch contradicts the unqualified choice docstring. — Confirmed by evaluating the definition.**
 
-   Location: [HeldForReading.lean:750\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean:750), also header lines 56–57.
+   Location: [HeldForReading.lean:750](../kit/round2b/tree/Becoming/HeldForReading.lean), also header lines 56–57.
 
    On `[]`, both universal tests hold, and the first branch selects `.go`. “Switch off where none [says going on gains]” therefore needs a nonempty-list qualification.
 
@@ -123,7 +123,7 @@ I found no apparent error in the counting proofs, but several correspondence and
 
 7. **Several standalone docstrings omit hypotheses or blur equal value with equal acts. — Confirmed by comparing signatures and small counterexamples.**
 
-   Location: [HeldForReading.lean:209\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean:209), also lines 224, 232, 242, 650 and 664.
+   Location: [HeldForReading.lean:209](../kit/round2b/tree/Becoming/HeldForReading.lean), also lines 224, 232, 242, 650 and 664.
 
    The equality and strict-gain summaries should explicitly restrict to **listed** candidates and **open** acts, with `p` supplied as best there. The first/second-pick equality docstrings omit asymmetry; without it, both orientations may be true and the asserted verbal equivalence fails.
 
@@ -141,7 +141,7 @@ I found no apparent error in the counting proofs, but several correspondence and
 
 8. **Several helpers duplicate package declarations. — Confirmed by package search and signature comparison.**
 
-   Location: [HeldForReading.lean:114\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean:114), and line 582.
+   Location: [HeldForReading.lean:114](../kit/round2b/tree/Becoming/HeldForReading.lean), and line 582.
 
    | New helper | Declaration to reuse |
    |---|---|
@@ -159,7 +159,7 @@ I found no apparent error in the counting proofs, but several correspondence and
 
 9. **The common-offset correspondence and list multiplicity should be explicit. — Confirmed omissions; judgment on presentation.**
 
-   Location: [HeldForReading.lean:271\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean:271), also lines 93–100 and 170.
+   Location: [HeldForReading.lean:271](../kit/round2b/tree/Becoming/HeldForReading.lean), also lines 93–100 and 170.
 
    The shifted encoding is correct. However, “leaves every comparison between policies” is not a conclusion of `shifted`, which is only a definition.
 
@@ -176,7 +176,7 @@ I found no apparent error in the counting proofs, but several correspondence and
 
 10. **Two names are less exact than their statements; the Standing paragraph could distinguish compositions more sharply. — Judgment grounded in signatures.**
 
-   Location: [HeldForReading.lean:347\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean:347), and line 773.
+   Location: [HeldForReading.lean:347](../kit/round2b/tree/Becoming/HeldForReading.lean), and line 773.
 
    - `held_le` proves committed values **≤ held value**. Prefer `committed_le_held`.
    - `never_stopped` proves that `.stop` is never **sensed**. Prefer `never_senses_stop`.
@@ -186,7 +186,7 @@ I found no apparent error in the counting proofs, but several correspondence and
 
 11. **Some hypotheses can be localized or weakened. — Confirmed by inspecting proof dependencies; proposed replacements are unbuilt.**
 
-   Location: [HeldForReading.lean:639\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean:639), also lines 246 and 686.
+   Location: [HeldForReading.lean:639](../kit/round2b/tree/Becoming/HeldForReading.lean), also lines 246 and 686.
 
    `reach_fixes` needs less than `StrictAccording`. Transitivity and accordance force `above c x y = true`. Then the first pick has value 1, already maximal; even if the reverse comparison also holds, the chosen second pick also has value 1. Irreflexivity is unnecessary for the **value equality**.
 
@@ -196,7 +196,7 @@ I found no apparent error in the counting proofs, but several correspondence and
 
 12. **The strict cost forms and joined margin boundary are immediate useful additions. — Confirmed algebraically and on 11,664 finite arithmetic/cost instances; recommendation is a judgment.**
 
-   Location: [HeldForReading.lean:546\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean:546).
+   Location: [HeldForReading.lean:546](../kit/round2b/tree/Becoming/HeldForReading.lean).
 
    Let \(F\) be the full-reading value, \(H_r\) the rule’s value, \(G,O\) the fixed values, \(P,N\) the margins, and \(E\) shortfall. Useful direct interfaces are:
    \[
@@ -217,7 +217,7 @@ I found no apparent error in the counting proofs, but several correspondence and
 
 13. **Partial readings offer a more substantive next theorem than another full-reading wrapper. — Judgment, with finite arithmetic checks.**
 
-   Location: [HeldForReading.lean:202\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean:202), and modelling limitation at line 98.
+   Location: [HeldForReading.lean:202](../kit/round2b/tree/Becoming/HeldForReading.lean), and modelling limitation at line 98.
 
    The present claims about policies through a lumping are valid substitutions `q := fun c => a (σ c)`. They do not yet optimize over the policies available through that reading.
 
@@ -239,12 +239,12 @@ I found no apparent error in the counting proofs, but several correspondence and
 
 14. **The literature attribution is substantially correct; make the specialization language exact. — Confirmed against the primary papers.**
 
-   Location: [HeldForReading.lean:65\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean:65), and lines 79–91.
+   Location: [HeldForReading.lean:65](../kit/round2b/tree/Becoming/HeldForReading.lean), and lines 79–91.
 
-   - **Good:** the common-maximizing-row boundary is indeed in his finite-matrix argument. His observations need not reveal the hypothesis fully. **Replacement:** “A finite, perfect-information specialization of Good’s argument, with natural-number weights and values.” [Good (1967)\](https://fitelson.org/seminar/good.pdf)
-   - **Off-switch Theorem 1:** the rational rule permits execution at zero and vetoes negative utility, matching `byReading`. The paper states nonnegative incentive and sufficient strict-sign support; this module supplies the exact finite iff boundary. **Replacement:** “The finite deterministic specialization of Theorem 1, with its strictness boundary characterized as an iff.” The arbitrary-rule inequalities are the two comparisons underlying Equation 1, not a formalization of its full probabilistic setting. [Hadfield-Menell et al. (2017), Equation 1 and Theorem 1\](https://arxiv.org/pdf/1611.08219)
-   - **Carey:** the distinction is accurately maintained: his examples include receiving and disregarding shutdown advice and routing around a shutdown opportunity. `Bypass` represents neither his complete supervision model nor a received instruction being refused. Retain “related to.” [Carey (2018), Figures 2–3\](https://arxiv.org/pdf/1709.06275)
-   - **Milli et al.:** the description as related work on obedience, imperfect choice and learning is accurate. No containment claim should be added. [Milli et al. (2017)\](https://arxiv.org/pdf/1705.09990)
+   - **Good:** the common-maximizing-row boundary is indeed in his finite-matrix argument. His observations need not reveal the hypothesis fully. **Replacement:** “A finite, perfect-information specialization of Good’s argument, with natural-number weights and values.” [Good (1967)](https://fitelson.org/seminar/good.pdf)
+   - **Off-switch Theorem 1:** the rational rule permits execution at zero and vetoes negative utility, matching `byReading`. The paper states nonnegative incentive and sufficient strict-sign support; this module supplies the exact finite iff boundary. **Replacement:** “The finite deterministic specialization of Theorem 1, with its strictness boundary characterized as an iff.” The arbitrary-rule inequalities are the two comparisons underlying Equation 1, not a formalization of its full probabilistic setting. [Hadfield-Menell et al. (2017), Equation 1 and Theorem 1](https://arxiv.org/pdf/1611.08219)
+   - **Carey:** the distinction is accurately maintained: his examples include receiving and disregarding shutdown advice and routing around a shutdown opportunity. `Bypass` represents neither his complete supervision model nor a received instruction being refused. Retain “related to.” [Carey (2018), Figures 2–3](https://arxiv.org/pdf/1709.06275)
+   - **Milli et al.:** the description as related work on obedience, imperfect choice and learning is accurate. No containment claim should be added. [Milli et al. (2017)](https://arxiv.org/pdf/1705.09990)
 
 The counting core looks sound on this read, and the module largely honors the earlier redesign. I would correct the cost convention, RF1 existence sentence, witness documentation, omitted docstring hypotheses, and duplicate helpers before landing. Its strongest contribution is the explicit weighted comparison with equality and error/cost boundaries; `Bypass` is appropriately a constructed instance of an existing persistence law. The most useful further development is an exact comparison between optimal partial and full readings, while keeping supplied values, selector rules, and observation restrictions visibly separate from what the laws derive.
 
@@ -1193,10 +1193,10 @@ I read the requested diff, current sources, audit driver and build log. The log 
 
 Locations below use these file abbreviations:
 
-- **H** — [HeldForReading.lean\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/tree/Becoming/HeldForReading.lean)
-- **R** — [make_records_rfm2.py\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2b/make_records_rfm2.py)
-- **P** — [PLAN.md\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md)
-- **E** — [REVIEW-RFM2-LEAN.md\](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-LEAN.md)
+- **H** — [HeldForReading.lean](../kit/round2b/tree/Becoming/HeldForReading.lean)
+- **R** — [make_records_rfm2.py](../kit/round2b/make_records_rfm2.py)
+- **P** — [PLAN.md](../PLAN.md)
+- **E** — [REVIEW-RFM2-LEAN.md](REVIEW-RFM2-LEAN.md)
 
 1. **Disposition of A1–A14.** **Confirmed by source comparison**, except the reuse judgment noted below. Location: **E:1114–1127**.
 
@@ -1307,7 +1307,7 @@ Locations below use these file abbreviations:
 
     > The two differences are `T E[U⁺]` and `T E[(-U)⁺]`, equivalently Equation 3’s terms with its negative-event probability corrected to `Pr(U < 0)`.
 
-    Apply this in both record languages and the plan. [Off-switch game, Equation 3\](https://arxiv.org/pdf/1611.08219)
+    Apply this in both record languages and the plan. [Off-switch game, Equation 3](https://arxiv.org/pdf/1611.08219)
 
 11. **The Gaussian correspondence needs a sharper boundary and an explicit paper name.** **Confirmed source mismatch in R; judgment about H’s ambiguity.** Locations: **H:163; R:353**.
 
@@ -1317,7 +1317,7 @@ Locations below use these file abbreviations:
 
     > The off-switch paper’s Remark 1 gives the qualitative relation. Its Gaussian Theorem 2 gives `Δ = σ² E[π′(U)] − |μ| Pr(C)`. Here a different finite-count decomposition gives the same incentive quantity through excesses and shortfall.
 
-    This also makes “responsiveness” an expected derivative and “bias” an absolute mean. [Off-switch game, Remark 1 and Theorem 2\](https://arxiv.org/pdf/1611.08219)
+    This also makes “responsiveness” an expected derivative and “bias” an absolute mean. [Off-switch game, Remark 1 and Theorem 2](https://arxiv.org/pdf/1611.08219)
 
 12. **Carey’s apparent prediction accuracy must remain relative to the faulty representation.** **Confirmed against the Discussion.** Locations: **H:187; R:355; P:192; E:1101**.
 
@@ -1327,11 +1327,11 @@ Locations below use these file abbreviations:
 
     > Its conflated representation makes its predictions appear perfectly accurate on the encoded observations, so it passes the initial check and subsequently executes the worse actual action.
 
-    The relation to `rests_unread` is persistent lack of refutation, not a formalization of Carey’s action-conflation mechanism. The descriptions of Figures 2a and 3a and the qualified footnote-1 discussion otherwise match the paper. [Carey, Discussion and footnote 1\](https://arxiv.org/pdf/1709.06275)
+    The relation to `rests_unread` is persistent lack of refutation, not a formalization of Carey’s action-conflation mechanism. The descriptions of Figures 2a and 3a and the qualified footnote-1 discussion otherwise match the paper. [Carey, Discussion and footnote 1](https://arxiv.org/pdf/1709.06275)
 
 The remaining requested declaration checks found no additional mismatch: `held_eq_go_iff`, `held_eq_off_iff`, both signed-balance results, both SignLoop excess-zero results and tie implications, `bestOf_best`, both offset results, `excess_pos_iff`, `forgone_below_excess_iff`, `total_by_cells` and `through_threshold_iff` have the advertised directions and boundaries. `bestOf`’s earlier-on-ties behavior agrees with its recursion. The Standing’s general-law/witness distinctions are defensible; “elementary finite maximization” would describe `bestOf_best` more precisely than “near-definitional or short composition,” but that is a labeling judgment.
 
-Good’s perfect-information specialization and weighted dominating-row correspondence check out. [Good, 1967\](https://fitelson.org/seminar/good.pdf) The off-switch Equation 1/2 correspondences, finite-support Theorem 1 specialization, qualified Corollary 1 reading and Section 4 comparison are sound apart from the corrections above. [The Off-Switch Game\](https://arxiv.org/pdf/1611.08219) Milli’s Theorems 1 and 3 are accurately identified as related results under that paper’s model; the distinction between equality of value and obedience should remain explicit. The Section 5 comparison is appropriately limited. [Should Robots Be Obedient?\](https://arxiv.org/pdf/1705.09990)
+Good’s perfect-information specialization and weighted dominating-row correspondence check out. [Good, 1967](https://fitelson.org/seminar/good.pdf) The off-switch Equation 1/2 correspondences, finite-support Theorem 1 specialization, qualified Corollary 1 reading and Section 4 comparison are sound apart from the corrections above. [The Off-Switch Game](https://arxiv.org/pdf/1611.08219) Milli’s Theorems 1 and 3 are accurately identified as related results under that paper’s model; the distinction between equality of value and obedience should remain explicit. The Section 5 comparison is appropriately limited. [Should Robots Be Obedient?](https://arxiv.org/pdf/1705.09990)
 
 **Verdict:** This is a substantial and mathematically useful rebuild: the strict thresholds, exact support boundaries, partial-reading optimum and selector linkage address the earlier substantive gaps. I would retain the implementation and correct the account before landing, especially the existential-policy wording, omitted cell conditions, unconditional shown-reach amendment and inconsistent source correspondence. The record’s `does_not_show` and counterexamples otherwise preserve the intended limits. The witness demonstrates behavior under its supplied sensing law, candidate list and tie/default choices; it establishes neither a general shutdown guarantee nor a general tendency to bypass correction.
 
