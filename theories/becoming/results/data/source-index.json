@@ -1808,6 +1808,18 @@
         "theories/becoming/chapters/07-SIGNIFICANCE.md"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1.md": {
+      "title": "Independent review of U1's design (GPT astra, high effort, read-only)",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fu-full-unification/PROPOSAL.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/scratch/Becoming/UnitScratch.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionReach.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean"
+      ]
+    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/REVIEW-UE1.md": {
       "title": "UE1 review: the free-energy principle as a case (25 October 2026)",
       "local_links": [

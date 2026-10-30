@@ -61,12 +61,12 @@ New, proposed, not claimed:
 - **The test of content.** Does any central law become a statement about unit lines? Two candidates: "what a rise draws from beyond" as units whose lines cross the coupling boundary (`Flow.Balances.rise_draws_beyond_inflow`), and joint excess as more lines ending than beginning in a gated renewal (`Flow.joint_excess_ends`).
 - **Form.** A design first, on WRT's pattern: the model, forward, converse, failures with witnesses, the smallest Lean items. Statements are checked in scratch, then one independent review, before any Lean is claimed. It uses WRT2's occurrence model and `Becoming.GrammarTransport`, and edits neither.
 
-*U1's design* (`development/u1-balance-under-units/DESIGN.md`, 29 October 2026, in progress, to land after its review) is drafted with WRT's designer's three constraints. Checked in scratch, 19 theorems in 31 declarations, every axiom report empty:
-- a unit model exists exactly where the flow balances, by canonical pairing with no choice;
-- re-pairing moves lines and not the World;
-- for every unit pairing, the flow's stretch balance follows from `«对之程»`, amounts entering only at the counting step.
-
-The test of content is WRT's designer's: the World's amount laws are exactly the laws of unit lines that every re-pairing keeps. A law needing one pairing is a discipline, to be named as a premise.
+*U1's outcome* ([DESIGN.md](../u1-balance-under-units/DESIGN.md), 29 October 2026, read twice by WRT's designer, reviewed independently and read a second time, scratch 48 theorems in 70 declarations, every axiom report empty).
+- Balance is represented by selected finite frame bijections at every condition, both ways, with no choice.
+- The conditional crossing laws, joined to `Balances.rise_draws_beyond_inflow`, and the normalized residual-count laws hold at their list selections.
+- This does not derive balance. No number-stated consumer is rerouted, and F13's reason stands.
+- Residual endpoints are not actual losses once actual boundary traffic is kept. The projection does not recover WRT's conservation, and correspondence orbits do not exhaust the matching fibre.
+- Amounts are the root's second sort with that **limited** interface. Exchange attachment and the line laws remain outside it, proposed.
 
 **U2. The remaining rows as grammar readings or as statements at a represented model** (after WRP lands). The 13 definitional rows (`Web.roles_supported`, `Web.roles_alive`, `Web.transmits_at_iff`, `Valuation.significant_iff_held` and others) are stated as the grammar terms they read. The 11 laws of their model and single applications are stated at the World's or a process's grammar model through the transport. Support, a relation premise by WRT's §3, is stated as a grammar statement at the model. Taken module by module with each module's owner.
 
