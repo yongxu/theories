@@ -351,6 +351,14 @@ The rows in each group are in the reading's table, and each row's `reading` fiel
    - **The release gate's item 3.** Once the record has landed with no row unplaced, it writes the reason for each of the 51 rows that do not reach the grammar. That meets the second branch of [the gate's](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gate-30-october-2026) item 3: "its not entering is written with its reason". The record says so, and OU's owner then marks the gate.
    - Item 3's other part, U1's seven interface laws for amounts in the package and not only in scratch, stays open. This record does not meet it.
 
+**What the record needs to pass MV's field** (MV's implementation, `mv-status` `36d4b0fae`, `tools/research/boundary.py`):
+- **Its laws.** Every name an entry introduces is among the declarations of the record's laws: row 17's form, each hypothesis, countermodel and fit, the recovery, the certificate, any standing-2 bridges, and row 5's `relational_part`. A derived entry's laws, bridges and support need not be.
+- **Its review references.** Each entry's `review` is a review reference of the record. That file names in code spans the declaration and every name the entry gives, by full name or by the name without `Becoming.`. The same holds for each premise's `premise` and `not_entailed`.
+- **The leaf in the core run**, so that the Lean check can restore it and import it.
+- **The keys' limits.** `relational_part` appears only on a reading at "balance in its statement". `absent` stands beside C's null `not_entailed`, and never beside a theorem.
+
+MV's end-to-end run on GW's core run, with a synthetic carrier holding the eight derived rows, the three readings and the premises, verifies the eight; `act_courses_unselected`, declared derived as a test, fails D2, D3 and D5.
+
 ## 6. Not done
 
 - The strict forms are scratch, not package Lean. The leaf is not claimed, and no reviewer has read this revision of the forms or the check.
