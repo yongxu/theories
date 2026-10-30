@@ -1127,11 +1127,6 @@
    "category": "support",
    "reason": "an arithmetic lemma of `Int`: `a + -b + b = a` (F3C's constructive support for the family)"
   },
-  "Becoming.ListTests.all_mem": {
-   "module": "Becoming.Prelude",
-   "category": "support",
-   "reason": "a list lemma proved without `propext`: every member passes a test `all` passes (F3C's constructive support for the family)"
-  },
   "Becoming.ListTests.filter_of_all": {
    "module": "Becoming.Prelude",
    "category": "support",
@@ -5426,6 +5421,141 @@
    "module": "Becoming.Weightings",
    "category": "support",
    "reason": "the grammar's «广» of what one course admits over another, over a listing with two-valued admission, is exactly what every additive natural-number weighting positive on the listed items ranks higher: row 10 stated on its own carrier, the representation of the order every positive weighting shares over a listing; the weights are amounts, a second sort the grammar has none of (U3)"
+  },
+  "Becoming.HeldForReading.SignLoop.both_off": {
+   "module": "Becoming.HeldForReading",
+   "category": "model-witness",
+   "reason": "HeldForReading.SignLoop.both_off: a fact about one constructed model, the reading loop whose candidates are the signs of going on, a held act answered by the true sign, in an unmoving world (RF)"
+  },
+  "Becoming.HeldForReading.SignLoop.both_on": {
+   "module": "Becoming.HeldForReading",
+   "category": "model-witness",
+   "reason": "HeldForReading.SignLoop.both_on: a fact about one constructed model, the reading loop whose candidates are the signs of going on, a held act answered by the true sign, in an unmoving world (RF)"
+  },
+  "Becoming.HeldForReading.SignLoop.both_released": {
+   "module": "Becoming.HeldForReading",
+   "category": "model-witness",
+   "reason": "HeldForReading.SignLoop.both_released: a fact about one constructed model, the reading loop whose candidates are the signs of going on, a held act answered by the true sign, in an unmoving world (RF)"
+  },
+  "Becoming.HeldForReading.SignLoop.both_stopped": {
+   "module": "Becoming.HeldForReading",
+   "category": "model-witness",
+   "reason": "HeldForReading.SignLoop.both_stopped: a fact about one constructed model, the reading loop whose candidates are the signs of going on, a held act answered by the true sign, in an unmoving world (RF)"
+  },
+  "Becoming.HeldForReading.SignLoop.choose_go_ties": {
+   "module": "Becoming.HeldForReading",
+   "category": "model-witness",
+   "reason": "HeldForReading.SignLoop.choose_go_ties: a fact about one constructed model, the reading loop whose candidates are the signs of going on, a held act answered by the true sign, in an unmoving world (RF)"
+  },
+  "Becoming.HeldForReading.SignLoop.choose_hold_iff": {
+   "module": "Becoming.HeldForReading",
+   "category": "model-witness",
+   "reason": "HeldForReading.SignLoop.choose_hold_iff: a fact about one constructed model, the reading loop whose candidates are the signs of going on, a held act answered by the true sign, in an unmoving world (RF)"
+  },
+  "Becoming.HeldForReading.SignLoop.choose_off_ties": {
+   "module": "Becoming.HeldForReading",
+   "category": "model-witness",
+   "reason": "HeldForReading.SignLoop.choose_off_ties: a fact about one constructed model, the reading loop whose candidates are the signs of going on, a held act answered by the true sign, in an unmoving world (RF)"
+  },
+  "Becoming.HeldForReading.SignLoop.never_senses_stop": {
+   "module": "Becoming.HeldForReading",
+   "category": "model-witness",
+   "reason": "HeldForReading.SignLoop.never_senses_stop: a fact about one constructed model, the reading loop whose candidates are the signs of going on, a held act answered by the true sign, in an unmoving world (RF)"
+  },
+  "Becoming.HeldForReading.SignLoop.refuted_drops": {
+   "module": "Becoming.HeldForReading",
+   "category": "model-witness",
+   "reason": "HeldForReading.SignLoop.refuted_drops: a fact about one constructed model, the reading loop whose candidates are the signs of going on, a held act answered by the true sign, in an unmoving world (RF)"
+  },
+  "Becoming.HeldForReading.SignLoop.refuted_goes_on": {
+   "module": "Becoming.HeldForReading",
+   "category": "model-witness",
+   "reason": "HeldForReading.SignLoop.refuted_goes_on: a fact about one constructed model, the reading loop whose candidates are the signs of going on, a held act answered by the true sign, in an unmoving world (RF)"
+  },
+  "Becoming.HeldForReading.SignLoop.refuted_senses_stop": {
+   "module": "Becoming.HeldForReading",
+   "category": "model-witness",
+   "reason": "HeldForReading.SignLoop.refuted_senses_stop: a fact about one constructed model, the reading loop whose candidates are the signs of going on, a held act answered by the true sign, in an unmoving world (RF)"
+  },
+  "Becoming.HeldForReading.after_add_shortfall": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.after_add_shortfall: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.HeldForReading.after_offset_le_iff": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.after_offset_le_iff: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.HeldForReading.after_rule_le_iff": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.after_rule_le_iff: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.HeldForReading.bestOf_best": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.bestOf_best: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.HeldForReading.cell_policy_iff": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.cell_policy_iff: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.HeldForReading.committed_le_held": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.committed_le_held: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.HeldForReading.excess_pos_iff": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.excess_pos_iff: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.HeldForReading.finer_least_le": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.finer_least_le: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.HeldForReading.forgone_within_excess_iff": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.forgone_within_excess_iff: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.HeldForReading.least_zero_iff": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.least_zero_iff: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.HeldForReading.pair_gains_iff": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.pair_gains_iff: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.HeldForReading.pair_gains_unreached": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.pair_gains_unreached: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.HeldForReading.reading_gains_iff": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.reading_gains_iff: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.HeldForReading.rule_not_below_go_iff": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.rule_not_below_go_iff: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.HeldForReading.rule_not_below_off_iff": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.rule_not_below_off_iff: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
+  },
+  "Becoming.HeldForReading.through_threshold_iff": {
+   "module": "Becoming.HeldForReading",
+   "category": "general-structure",
+   "reason": "HeldForReading.through_threshold_iff: a law of any finite model of candidates with natural-number weights, acts and values (what holding an act for a reading is worth); it waits for a formation's own valuation and the reading formation's state, on the base (RF)"
   }
  },
  "instances": {

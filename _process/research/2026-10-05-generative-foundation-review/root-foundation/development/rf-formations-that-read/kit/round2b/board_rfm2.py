@@ -92,8 +92,14 @@ elif mode == 'land':
     board[queue[0]] = HEAD.sub('', board[queue[0]], count=1)
     board[queue[0]] = board[queue[0]].replace('- **Queue:** ', '- **Queue:** ' + queue_text + '; ', 1)
     order = re.search(r"Then, in the coordinator's order: ([^;]*);", board[queue[0]])
-    if order:
-        items = order.group(1).split(', ')
+    if order:  # split at the commas outside parentheses: an item may read "RF-M.2 (whole, ready)"
+        listed, items, depth, start = order.group(1), [], 0, 0
+        for i, ch in enumerate(listed):
+            depth += (ch == '(') - (ch == ')')
+            if depth == 0 and listed.startswith(', ', i):
+                items.append(listed[start:i])
+                start = i + 2
+        items.append(listed[start:])
         kept = [item for item in items if not item.startswith('RF-M.2')]
         assert len(items) - len(kept) <= 1, items
         board[queue[0]] = board[queue[0]].replace(order.group(0), (

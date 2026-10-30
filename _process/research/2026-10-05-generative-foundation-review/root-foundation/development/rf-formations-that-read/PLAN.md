@@ -297,7 +297,7 @@ Each design is frozen in the repository's form, predictions fixed before scoring
 
 **Order** (pace rule: a few lines landed before many open):
 1. Round 1, RF1, RF2 and RF4, after an independent review of the Lean. Records, the home sections (03 §11 for RF1 and RF2, 05 §8 for RF4) and the study section; then the queue.
-2. Round 2, each landing reviewed before it: first RF3, RF-M's mechanism and RF6.3 (§4.6, landed); then RF6.1 (landed, §4.6); then RF7 (landed, §4.6); then RF-M's second part: an act held for a reading (§4.7, built in the kit, its design and its Lean reviewed and its texts cold-read), then the valuation as state once its carrier is designed; an institution's rule of reading with members' acts a reading until a law beyond the existing ones is found.
+2. Round 2, each landing reviewed before it: first RF3, RF-M's mechanism and RF6.3 (§4.6, landed); then RF6.1 (landed, §4.6); then RF7 (landed, §4.6); then RF-M's second part: an act held for a reading (§4.7, landed), then the valuation as state once its carrier is designed; an institution's rule of reading with members' acts a reading until a law beyond the existing ones is found.
 3. The tests' designs, frozen; runs on Ren's yes.
 
 **Coordination.**

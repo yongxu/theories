@@ -20,7 +20,11 @@ log = Path(sys.argv[1]).read_text(encoding='utf-8')
 m = re.search(r"apart roots without a reason in [^:]+: (\[[^\]]*\])", log)
 unclassified = [] if not m else [s.strip().strip("'\"") for s in m.group(1).strip('[]').split(',') if s.strip()]
 stale = re.search(r"register entries no longer apart roots: (\[[^\]]*\])", log)
-assert not (stale and stale.group(1).strip('[]').strip()), ('stale entries are their owners\', not RF\'s', stale.group(1))
+stale = [] if not stale else [s.strip().strip("'\"") for s in stale.group(1).strip('[]').split(',') if s.strip()]
+# An entry no longer apart because HeldForReading now uses it is RF's to remove; any other stays with its owner.
+HELD = (HERE / 'tree/Becoming/HeldForReading.lean').read_text(encoding='utf-8')
+USED = {'Becoming.ListTests.all_mem': 'ListTests.all_mem'}
+assert all(name in USED and USED[name] in HELD for name in stale), ("stale entries are their owners', not RF's", stale)
 NAMES = {}
 for mod in ('HeldForReading',):
     audit = (HERE / f'tree/.build/Becoming{mod}AxiomAudit.lean').read_text(encoding='utf-8')
@@ -55,10 +59,23 @@ for name in unclassified:
     mod, cat, reason = reasons[name]
     block += ('  ' + json.dumps(name, ensure_ascii=False) + ': {\n   "module": "' + mod + '",\n   "category": "' + cat
               + '",\n   "reason": ' + json.dumps(reason, ensure_ascii=False) + '\n  },\n')
+for name in stale:
+    d = json.loads(t)
+    assert name in d['roots'], name
+    entry = '  ' + json.dumps(name, ensure_ascii=False) + ': ' + json.dumps(d['roots'][name], ensure_ascii=False, indent=1).replace('\n', '\n  ')
+    assert t.count(entry) == 1, ('entry text', name)
+    after = t.index(entry) + len(entry)
+    if t.startswith(',\n', after):
+        t = t[:t.index(entry)] + t[after + 2:]
+    else:
+        before = t.rindex(',\n', 0, t.index(entry))
+        t = t[:before] + t[after:]
+    d2 = json.loads(t)
+    assert name not in d2['roots'] and len(d2['roots']) == len(d['roots']) - 1
 if block:
     anchor = '  }\n },\n "instances": {'
     assert t.count(anchor) == 1
     t = t.replace(anchor, '  },\n' + block.rstrip(',\n') + '\n },\n "instances": {')
     json.loads(t)
     F.write_text(t, encoding='utf-8')
-print('register: added', len(unclassified), unclassified)
+print('register: added', len(unclassified), unclassified, '; removed, now used by HeldForReading:', stale)
