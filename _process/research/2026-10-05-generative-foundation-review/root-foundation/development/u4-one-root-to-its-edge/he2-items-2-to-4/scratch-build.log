@@ -1,0 +1,31 @@
+{
+  "tree": "/private/tmp/claude-501/-Users-ren-theories/a1748b36-1177-4857-afe2-0d9f0c541556/scratchpad/wt-he2/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/he2-items-2-to-4/tree",
+  "modules": 360,
+  "ran": [
+    "Becoming.HE2U4Laws",
+    "Becoming.HE2U4Check",
+    "Becoming.HE2U4Names",
+    "BecomingHE2U4LawsAxiomAudit",
+    "BecomingHE2U4CheckAxiomAudit",
+    "BecomingHE2U4NamesAxiomAudit"
+  ],
+  "reused": 357,
+  "unclean": [],
+  "audits": {
+    "Becoming.HE2U4Laws": {
+      "theorems": 34,
+      "declarations": 38,
+      "with_axioms": {}
+    },
+    "Becoming.HE2U4Check": {
+      "theorems": 6,
+      "declarations": 6,
+      "with_axioms": {}
+    },
+    "Becoming.HE2U4Names": {
+      "theorems": 34,
+      "declarations": 38,
+      "with_axioms": {}
+    }
+  }
+}
