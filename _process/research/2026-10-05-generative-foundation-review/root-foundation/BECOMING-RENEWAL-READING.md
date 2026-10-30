@@ -21646,3 +21646,131 @@ Output → input: 03 §11, its opening and Open; 07 §9's row on deception; 08 �
 1. `ReadStages` imports `Unread`, a core module, so it joins the core as a leaf at L1; `Unread` is no longer a leaf.
 2. The witnesses evaluate concrete natural-number prospects: comparisons of literals by `decide`, which reduces with no axiom, and `Valid` by `And.intro`. The general laws match on the four plans; the products use the prelude's `mul_turn` (through `mul_assoc_nat`), `add_mul_split` and `Naturals.two_mul`, since Lean's own `Nat.mul_assoc` and `Nat.add_mul` report `propext`, and `omega`, which reports `propext` and `Quot.sound`, is not used.
 3. Not done: the items in Boundary.
+
+## 464. Seeking by expected free energy, joined to the core's seeking law (UE23)
+
+The core states what no seeking corrects, in counting form and for an abstract policy of choice: a pair every experiment ties keeps its prior order under every course of seeking, each experiment chosen from the course so far (`Becoming.LumpedSeeking`, §453). The periphery states expected free energy for one step and one policy, read through the lumping its likelihood makes (`ExpectedFreeEnergyReals`, §453). Both records named the theorem joining them as missing, and the principle's page listed it in §5. UE23 proves it as item 8 of the plan for the principle as an integral part of the theory ([plan](development/ue-unified-explanation/FEP-INTEGRATION.md); [note](development/ue23-seeking-by-expected-free-energy/NOTE.md)). It is a new section of `ExpectedFreeEnergyReals`, which now imports `Becoming.LumpedSeeking`.
+
+```text
+Result(s): no new record; expected-free-energy-and-its-terms's statement extended to the course form, with five laws
+       citing the 47 new declarations of ExpectedFreeEnergyReals, each once; what-seeking-cannot-separate's boundary,
+       next step and related entry name the join.
+Delta: (1) the posterior after a course, UE17's posterior of the prior times the course's likelihood, is, with
+       nonnegative weights and where the course weighs something, the belief of least free energy among those zero
+       wherever the joint weights are (coursePosterior_minimizes, an instance); choice weights reading the course drop
+       out of it wherever they weigh something, and so does each experiment's nonzero scale
+       (posterior_choice_eq_coursePosterior; coursePosterior_rescale, an instance).
+       (2) the join: where the agent's model is the core's, with natural weights and the hypotheses listed once, the
+       core's share given a listed course whose choices weigh something is that posterior, however often the course is
+       listed (givenCourse_eq_coursePosterior, through cast_seekWeight and mass_count); the core's order of two shares
+       given the course is the posterior's order (givenCourse_le_iff, through share_le_iff_toReal_le); where the
+       choices weigh nothing the share is 0 (unchosen_share_zero; Witness.unchosen_course).
+       (3) choosing each experiment by a rule with natural weights reading the experiments' expected free energies
+       reads only the course, so it is one of the core's policies, whatever the agent's model, and the core's law holds
+       at it (efe_seeking_keeps_order, an instance of seeking_keeps_order; no join is used).
+       (4) over the reals a tied pair keeps its prior ratio in the posterior after every course, and its strict order
+       where the course is possible under it and weighs something (coursePosterior_ratio_kept,
+       coursePosterior_order_kept), so also under every policy whose choices weigh something; the softmax over all the
+       experiments, not one of the core's policies, is among these (softmax_choiceWeight_pos; softmax_order_kept, an
+       instance).
+       (5) where every experiment's likelihood reads a state only through its class, conditioning commutes with the
+       lumping (coarse_coursePosterior): at every step every experiment's expected free energy and epistemic value are
+       the classes' (efe_through_course, epistemic_through_course), every course's predictive weight is the classes'
+       under any policy (courseWeight_through), and two priors alike on the classes choose alike at every course under
+       every rule and give every course one predictive weight (efeChoice_same_of_coarse, seeking_blind_to_split;
+       softmax_blind_to_split, an instance).
+       (6) for any likelihoods, a state's class taken as its likelihood profile, seeking by expected free energy reads
+       the prior only through the weight it gives each profile (seeking_reads_profiles, an instance).
+       (7) witnesses in the coin of LumpedSeeking over the reals: an outcome of a separating experiment turns the
+       posterior, and no course turns an order every experiment ties (Witness.separating_turns); with an experiment
+       reading agreement and one telling nothing, two priors whose posteriors differ weigh both experiments alike at
+       every course under every rule (Witness.split_unseen).
+Premises: Mathlib's reals and Lean's standard axioms in the periphery, classical equality of likelihood profiles;
+       finite states and outcomes, and finite experiments for the softmax; the hidden state fixed over a course; a
+       policy one experiment; one preference for every experiment; a rule reading the expected free energies and the
+       experiment, with natural weights for the core's law; for the join, natural weights, the hypotheses listed once,
+       the hypothesis and the course listed, a course chosen with some weight; Mathlib's x / 0 = 0 and log 0 = 0.
+Evidence: periphery receipt 20261030T101649.229011Z; ExpectedFreeEnergyReals (49 theorems in 68 declarations), each declaration on Lean's standard axioms
+       only, FreeEnergyReals and every core module of its closure, Becoming.LumpedSeeking among them, matching a
+       passed receipt; an independent review (REVIEW-UE23) and its recheck (RECHECK-UE23); no earlier statement or
+       proof of the module changed.
+Boundary: whether, or how often, an agent choosing by expected free energy chooses an experiment that separates,
+       which turns on its preferences, its posterior and the experiments' information; multi-step policies with
+       transitions, precision as a belief, habits learned from the course, learning of the likelihood, novelty and
+       structure learning; the data-processing bound for the epistemic value. The identities are near-definitional,
+       and the blindness a corollary of Bayesian non-identification (Kadane 1974, Poirier 1998) for designs whose
+       criterion reads the posterior only through the classes.
+Output→input: what-seeking-cannot-separate, expected-free-energy-and-its-terms, free-energy-bounds-surprisal → the
+       seeking section of ExpectedFreeEnergyReals → 03 §6, 08 §8, the principle's page, UE, FEP-INTEGRATION.
+```
+
+**Its standing.** The identities are near-definitional. Data leave a prior's split within a class of observationally equivalent states unchanged: this is Bayesian non-identification (Rothenberg 1971 for identification; Kadane 1974, Dawid 1979 and Poirier 1998 for the Bayesian form). Conditioning commuting with a lumping every likelihood respects is the same fact. The expected free energy enters the blindness only through its reading through the lumping (`expectedFreeEnergy_through`): any criterion computed from the posterior and a likelihood that reads through the classes would do, so the blindness is a corollary of non-identification for adaptive designs whose criterion reads the posterior only through the classes. The softmax over expected free energy is the principle's rule of choice (Friston and others 2015; Da Costa and others 2020). New, in the principle's terms, are two things:
+
+- the join of the core's counting form of seeking, an abstract policy of choice over natural weights, to the periphery's agent, which holds the posterior by free-energy minimization and chooses by expected free energy over courses: where the agent's model is the core's, the share given a chosen course is its posterior, and the core's order given the course and the posterior's order are one;
+- the restatement, for that agent, that its whole course of seeking, its choices and the predictive weight of every course, reads the prior only through the weight it gives each likelihood profile.
+
+Neither is a new inequality. That the core's law holds at choice by expected free energy is not the join's work: every rule with natural weights is one of the core's policies, whatever the agent's model, and the softmax keeps a tied order over the reals.
+
+**The review.** An independent adversarial review by an AI agent (REVIEW-UE23) compiled the first draft with three probe files and found no Lean error, and four overclaims, two gaps and eight minor points. Among them: the posterior's least free energy holds only among beliefs zero wherever the joint weights are, now stated in the Lean (`coursePosterior_minimizes`); real choice weights drop out of the posterior by a theorem (`posterior_choice_eq_coursePosterior`); a theorem whose conclusion read no policy gave way to one joining the core's order given a course to the posterior's (`givenCourse_le_iff`); the courses need not be listed once; instances are marked as instances; the blindness is stated as the corollary of non-identification it is; and a witness shows two priors whose posteriors differ seeking alike (`Witness.split_unseen`). A second agent rechecked the fix round (RECHECK-UE23): the Lean sound, and ten new points in the prose. The core's law had been said to hold at real-valued rules, the softmax among them, and the join had been credited with that instance; summaries had dropped conditions the Lean needs (choice weights weighing something, the course possible under the pair, a positive total); and witnesses had been stated as laws. Every point of both was taken (NOTE §6 and §7): rules with natural weights for the core's law, the softmax over the reals (`softmax_order_kept`), the join stated apart, the conditions restored, the share of a course never chosen stated in general (`unchosen_share_zero`), and the witness of blindness given two experiments.
+
+**Decisions at landing.** The join is a section of `ExpectedFreeEnergyReals`, not a new module. Both records asked for it, and the module already reads beliefs through the lumping; a new module would be a leaf beside it (board rule 9).
+
+There is no new record. The join connects two recorded results; its laws go to the record of expected free energy, with a formal-reuse dependency on the seeking law's, and its boundary goes to the seeking law's. The statement of expected free energy's record is extended to the course form, and its home section in 03 §6 states it.
+
+Only the periphery checker of `ExpectedFreeEnergyReals` reran. `FreeEnergyReals` is unchanged, and its UE22 receipt stands. For that reason the lemmas `mass_count` and `share_le_iff_toReal_le`, whose home is beside `Share.toReal` in `FreeEnergyReals`, stay in the seeking section until that module's next change; moving them repoints the second law of the record of expected free energy, which cites them.
+
+**Readings** [AI reading, D45]. An agent that seeks by expected free energy is moved by what its experiments can tell apart, and only by that: its choices and the predictive weights of its courses read its prior only through the weight it gives each class of states no experiment tells apart. An error inside such a class is never corrected and never even acted on. What changes it is what couples in from beyond the model, a new experiment or a new hypothesis, as the theory's laws of registration revision state. That the epistemic drive corrects within its model and not beyond is the core's law; it holds for the agent the principle describes, at every rule with natural weights by the core's law and under the softmax over the reals, and where that agent's model is the core's, its posterior is the core's share and the two orders are one.
+
+## 465. The significance rows on the root, stated or specialized (U3)
+
+Board item U3 ([design](development/u3-significance-on-the-root/DESIGN.md), reviewed in [REVIEW-U3](development/u3-significance-on-the-root/REVIEW-U3.md); the Lean and the records kit reviewed before the queue in [REVIEW-U3-LEAN](development/u3-significance-on-the-root/REVIEW-U3-LEAN.md); the landing texts read through three lenses in [REVIEW-U3-TEXTS](development/u3-significance-on-the-root/REVIEW-U3-TEXTS.md)). It takes up full unification's 全四 for the significance rows (OU plan §十三 item 13, D25; FU's U3), items 1 and 2 of the design. Rows 5 to 10 are those of OU3c's audit table; "row 1" is this item's label for `unrestricted_iff_livingSignificance`, which that table does not number (its row 1 is `Learning.goAlike_iff_lumped`). Each row has a statement in the grammar's terms, proved through the row: rows 5, 7 and 10 restated on their own carrier, a web's level paths or a finite list, and rows 1, 8 and 9 specialized at the own-closure reading of significance. These are restatements or specializations, not derivations from the root. Nothing ethical follows from the root. The condition (scope) and C (order) stay premises, named where they are used.
+
+```text
+Result(s): no new record. Six laws on the root, each in its row's own record (four records), reviewed in
+       REVIEW-U3-LEAN: rows 5, 7 and 10 carrying F5's statements_at_model items (three, model own); rows 1, 8 and 9
+       specializations with no item, since F5 takes none; the core leaf Becoming.SignificanceStatements, and row
+       10's interface law in Becoming.Weightings.
+Delta:
+  - Row 1, a specialization, on a web's level paths: with significance read at the own-closure reading (a claim's
+    significance from a standpoint is that its formation lies within the standpoint's center's closure under a
+    relation), the continuation condition is «续无外» at the one of that relation, and holds exactly when living
+    significance does over admission (noOutside_iff_paths_livingSignificance, through unrestricted_iff_livingSignificance
+    and GS2's ownClosure_unrestricted_iff_noOutside).
+  - Rows 5 and 7: an extension with every claim counted is the grammar's «广» of what the level paths admit
+    (paths_extension_iff_grammar); for every reading of living, C holds on level paths with "better" read as that
+    «广» (paths_comparison_grammar), its being better C's content, supplied.
+  - Row 8, a specialization, conditional on «续无外»: under «续无外», «广» of what the paths admit is retaining and
+    adding what lies within one's own line, from any standpoint (widens_iff_retains_adds_root); the closure law
+    converts the supplied condition.
+  - Row 9, a specialization: the condition, living significance over admission and an extension with every claim
+    counted read one predicate, admission, with widening the grammar's «广»; and under «续无外», «广» is retaining
+    and adding from each standpoint (paths_one_object_root), proved through Web.paths_one_object.
+  - Row 10, an interface law: on a finite list with two-valued admission and additive natural-number weights positive
+    on every listed item, «广» of what one course admits over another is exactly what every such weighting ranks
+    higher (Weighting.grammar_widens_iff_every_positive); the weights are amounts, a second sort the grammar has none of.
+  - F5's report (central_reach): 44 reaching the grammar, 16 stated at a represented model, 7 stated on their own carrier only, 51 the rest (from 44, 16, 4 and 54).
+Supplied premises / correspondence: none added. The own-closure reading of significance
+       (`selfAscribed (ownClosure rel) center`) is a reading the design supplies, not shown to be the right one: which
+       relation a center's own line runs along, held de se, is the step of invariance's question (07 §4), open
+       (DESIGN §2). On an acyclic relation the condition forces every center to coincide (GS2's
+       «续无外则同一中心», cited by the three specializations' laws), so with distinct centers there the laws that
+       take it remain valid, their condition side false.
+Evidence: core receipt `20261030T131028.245732Z`; Becoming.SignificanceStatements (5 theorems) and Becoming.Weightings
+       (398 theorems, one of them new), every axiom report empty; F5's verification of the three items from the checker cache;
+       the connectivity check, row 10's law registered apart (support).
+Standing: restatements or specializations, not derivations. F5 counts rows 5, 7 and 10 in its third count, stated in
+       the grammar's terms on their own carrier, not as representations at a model; rows 1, 8 and 9 stay among the
+       rest, a specialization stating less than its row. 全四 for the significance rows is met as F4 defines it: each
+       row has its root form, the condition and C stay named premises, and `sig` stays free in the general statement
+       (SD1). F5's stricter count takes two of the five, rows 7 and 10 (with row 5, which is capacity's),
+       and keeps rows 1, 8 and 9 among the rest (OU's note, WHAT-REMAINS, "U3's standing, and what 全四 counts").
+Boundary:
+  - Row 6 (Direction.extension_iff_widens, row 5 on the moves' frame) stays outside (DESIGN §1).
+  - Item 3, «广之对应», waits for GrammarTransport's owner until something reads it.
+  - The free significance of 07 §1 is not lifted onto the root; the condition and C are not asserted.
+Output → input: the four records' laws and their home-section bullets in 07; F5's report (MV); 08 §7's counts; 07's
+       thesis, §4.5 and open item, and 01's open item; the one page's and the overview's line on the root and the
+       ethics (English and Chinese); the record the-continuation-condition-on-the-root's next step; the review
+       packet's quotes of 07 §4.5; FU's PROPOSAL (U3's outcome); the connectivity register (row 10's law, support);
+       the leaf's region; OU's WHAT-REMAINS figures, for its owner.
+```

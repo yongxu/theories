@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 339 | 16,504 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 340 | 16,510 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 14 | 772 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -22,7 +22,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 | [Abstraction, applicability and constitution](lean-declarations/abstraction.md) | 45 | 981 |
 | [Concern and shared activity](lean-declarations/concern.md) | 15 | 246 |
 | [Organizational formation through revisable evaluation](lean-declarations/shared.md) | 66 | 1,480 |
-| [Generative core and relational structure](lean-declarations/core.md) | 142 | 2,092 |
+| [Generative core and relational structure](lean-declarations/core.md) | 142 | 2,129 |
 | [Other formal studies](lean-declarations/other.md) | 29 | 873 |
 
 <a id="按名称查找--find-by-name"></a>
@@ -879,6 +879,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ShrinkingGain.lean](lean-declarations/learning.md#module-59ffcfa61113) | Learning, prediction and dynamics |
 | [SignatureTruth.lean](lean-declarations/abstraction.md#module-aacdf65172d8) | Abstraction, applicability and constitution |
 | [Significance.lean](lean-declarations/becoming-core.md#module-892ef63d2e69) | Becoming pure core |
+| [SignificanceStatements.lean](lean-declarations/becoming-core.md#module-35300d43c3ed) | Becoming pure core |
 | [SituatedContinuation.lean](lean-declarations/ethics.md#module-4199e2843e06) | Normative grounding and generative direction |
 | [SituatedKitchen.lean](lean-declarations/ethics.md#module-60d7e6c8c57d) | Normative grounding and generative direction |
 | [SituatedPractice.lean](lean-declarations/concern.md#module-618b534f95cf) | Concern and shared activity |

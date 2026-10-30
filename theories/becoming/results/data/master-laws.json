@@ -1,12 +1,12 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261030T075728.527064Z",
- "core_sources_sha256": "2260101e4a98c17d102a606528ed2432d4f3660ad3550e98e6ad8a2c3404a77f",
+ "core_receipt": "20261030T131028.245732Z",
+ "core_sources_sha256": "ceb615dbc4fe831153d174d31e8fea7c4cc5e75873e413549d2d3e45a26c9370",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/measure.py": "00db800294bdab201e680cf7a9b11d341359a3a5cf0710e20ce2215be6670e7a",
-  "theories/becoming/results/completion/COVERAGE.json": "022ae0fc28b40f798c02823be35d7463afac2a92a0ada74bfbd3789e160d9749",
+  "theories/becoming/results/completion/COVERAGE.json": "2a59618842611323b12b1daed569f6b37d7fdaee729bebc7fd0b1280922286b9",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "c8e349f57adecd7bd8d25bd0fde850c9f813919cdbf0e4a3734005c43340043a",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
   "tools/research/master_laws.py": "f7e423e8630df318b18b5fc2b48d0c8f2941953053af4561ac49b83390d82f23"
@@ -56,34 +56,34 @@
   ]
  },
  "counts": {
-  "laws": 3817,
+  "laws": 3825,
   "no_declarations": 9,
-  "outside": 361,
-  "grammar": 749,
+  "outside": 366,
+  "grammar": 752,
   "balance, represented": 645,
   "anchor, not reached": 134,
   "no master law": 1919,
   "vocabulary_only": 65,
-  "closure": 476,
+  "closure": 479,
   "balance": 815,
   "return": 252,
   "lumping": 83,
-  "order": 78
+  "order": 80
  },
  "counts_at_model": {
-  "laws": 20,
+  "laws": 23,
   "no_declarations": 0,
   "outside": 0,
-  "grammar": 20,
+  "grammar": 23,
   "balance, represented": 0,
   "anchor, not reached": 0,
   "no master law": 0,
-  "vocabulary_only": 16,
+  "vocabulary_only": 19,
   "closure": 3,
   "balance": 0,
   "return": 0,
   "lumping": 0,
-  "order": 0
+  "order": 3
  },
  "model_relations": {
   "occurrence": [
@@ -112,8 +112,8 @@
   "counts": {
    "reaching the grammar": 44,
    "stated at a represented model": 16,
-   "stated on its own carrier only": 4,
-   "the rest": 54
+   "stated on its own carrier only": 7,
+   "the rest": 51
   },
   "rows": {
    "Becoming.Dependence.Overdetermined.only_together": [
@@ -298,6 +298,30 @@
      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
     }
    ],
+   "Becoming.Web.paths_comparison_widens": [
+    {
+     "of": "Becoming.Web.paths_comparison_widens",
+     "record": "comparison-by-widening",
+     "law": 10,
+     "declaration": "Becoming.SignificanceStatements.paths_comparison_grammar",
+     "models": [
+      "own"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md"
+    }
+   ],
+   "Becoming.Web.paths_extension_iff_widens": [
+    {
+     "of": "Becoming.Web.paths_extension_iff_widens",
+     "record": "comparison-by-widening",
+     "law": 9,
+     "declaration": "Becoming.SignificanceStatements.paths_extension_iff_grammar",
+     "models": [
+      "own"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md"
+    }
+   ],
    "Becoming.Web.renewingAt_iff_over_all": [
     {
      "of": "Becoming.Web.renewingAt_iff_over_all",
@@ -369,6 +393,18 @@
       "occurrence"
      ],
      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
+    }
+   ],
+   "Becoming.Weighting.widens_iff_every_positive": [
+    {
+     "of": "Becoming.Weighting.widens_iff_every_positive",
+     "record": "widening-as-what-every-weighting-ranks",
+     "law": 10,
+     "declaration": "Becoming.Weighting.grammar_widens_iff_every_positive",
+     "models": [
+      "own"
+     ],
+     "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md"
     }
    ]
   }
@@ -7716,6 +7752,18 @@
       ],
       "reason": "C's extension on a web's paths: a reindexing of claims (formation, step) to admissions (step, formation), every claim counted; widening enters by its definition, its order laws already from the grammar"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Web.paths_extension_iff_widens",
+      "record": "comparison-by-widening",
+      "law": 9,
+      "declaration": "Becoming.SignificanceStatements.paths_extension_iff_grammar",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md"
+     }
     ]
    },
    {
@@ -7738,6 +7786,18 @@
        "order"
       ],
       "reason": "C's extension on paths, one direction, for every reading of living"
+     }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Web.paths_comparison_widens",
+      "record": "comparison-by-widening",
+      "law": 10,
+      "declaration": "Becoming.SignificanceStatements.paths_comparison_grammar",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md"
      }
     ]
    },
@@ -7819,6 +7879,84 @@
     "master_laws": [],
     "grammar": false,
     "dependence": "no master law"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.SignificanceStatements.paths_extension_iff_grammar"
+    ],
+    "master_laws": [
+     "order"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.SignificanceStatements.paths_extension_iff_grammar",
+      "of": "Becoming.Web.paths_extension_iff_widens",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«广»"
+      ],
+      "other_terms": [
+       "Becoming.Extension",
+       "Becoming.Web",
+       "Becoming.Web.paths"
+      ],
+      "row_dependence": "anchor, not reached"
+     }
+    ]
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.SignificanceStatements.paths_comparison_grammar"
+    ],
+    "master_laws": [
+     "order"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.SignificanceStatements.paths_comparison_grammar",
+      "of": "Becoming.Web.paths_comparison_widens",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«广»"
+      ],
+      "other_terms": [
+       "Becoming.Comparison",
+       "Becoming.Web",
+       "Becoming.Web.paths"
+      ],
+      "row_dependence": "anchor, not reached"
+     }
+    ]
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.SignificanceStatements.paths_one_object_root",
+     "Becoming.ownClosure_unrestricted_iff_noOutside",
+     "Becoming.«续无外则同一中心»"
+    ],
+    "master_laws": [
+     "closure",
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "comparison-content-under-regrouping": [
@@ -7902,6 +8040,18 @@
        "order"
       ],
       "reason": "C's extension on a web's paths: a reindexing of claims (formation, step) to admissions (step, formation), every claim counted; widening enters by its definition, its order laws already from the grammar"
+     }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Web.paths_extension_iff_widens",
+      "record": "comparison-by-widening",
+      "law": 9,
+      "declaration": "Becoming.SignificanceStatements.paths_extension_iff_grammar",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md"
      }
     ]
    },
@@ -9892,6 +10042,19 @@
       "row_dependence": "no master law"
      }
     ]
+   },
+   {
+    "law": 16,
+    "declarations": [
+     "Becoming.SignificanceStatements.noOutside_iff_paths_livingSignificance",
+     "Becoming.ownClosure_unrestricted_iff_noOutside",
+     "Becoming.«续无外则同一中心»"
+    ],
+    "master_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "continuation-relative-to-a-class": [
@@ -15106,6 +15269,135 @@
     "outside": [
      "Becoming.ExpectedFreeEnergy.epistemic_eq_zero_of_lumped",
      "Becoming.ExpectedFreeEnergy.posterior_ratio_of_lumped"
+    ]
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.courseLik",
+     "Becoming.ExpectedFreeEnergy.choiceWeight",
+     "Becoming.ExpectedFreeEnergy.coursePosterior",
+     "Becoming.ExpectedFreeEnergy.courseLik_nonneg",
+     "Becoming.ExpectedFreeEnergy.courseLik_pos",
+     "Becoming.ExpectedFreeEnergy.coursePosterior_minimizes",
+     "Becoming.ExpectedFreeEnergy.posterior_choice_eq_coursePosterior",
+     "Becoming.ExpectedFreeEnergy.choiceWeight_ne_zero",
+     "Becoming.ExpectedFreeEnergy.courseLik_rescale",
+     "Becoming.ExpectedFreeEnergy.coursePosterior_rescale"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.courseLik",
+     "Becoming.ExpectedFreeEnergy.choiceWeight",
+     "Becoming.ExpectedFreeEnergy.coursePosterior",
+     "Becoming.ExpectedFreeEnergy.courseLik_nonneg",
+     "Becoming.ExpectedFreeEnergy.courseLik_pos",
+     "Becoming.ExpectedFreeEnergy.coursePosterior_minimizes",
+     "Becoming.ExpectedFreeEnergy.posterior_choice_eq_coursePosterior",
+     "Becoming.ExpectedFreeEnergy.choiceWeight_ne_zero",
+     "Becoming.ExpectedFreeEnergy.courseLik_rescale",
+     "Becoming.ExpectedFreeEnergy.coursePosterior_rescale"
+    ]
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.cast_seekWeight",
+     "Becoming.ExpectedFreeEnergy.mass_count",
+     "Becoming.ExpectedFreeEnergy.givenCourse_eq_coursePosterior",
+     "Becoming.ExpectedFreeEnergy.unchosen_share_zero",
+     "Becoming.ExpectedFreeEnergy.share_le_iff_toReal_le",
+     "Becoming.ExpectedFreeEnergy.givenCourse_le_iff",
+     "Becoming.ExpectedFreeEnergy.Witness.unchosen_course"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.cast_seekWeight",
+     "Becoming.ExpectedFreeEnergy.mass_count",
+     "Becoming.ExpectedFreeEnergy.givenCourse_eq_coursePosterior",
+     "Becoming.ExpectedFreeEnergy.unchosen_share_zero",
+     "Becoming.ExpectedFreeEnergy.share_le_iff_toReal_le",
+     "Becoming.ExpectedFreeEnergy.givenCourse_le_iff",
+     "Becoming.ExpectedFreeEnergy.Witness.unchosen_course"
+    ]
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.courseWeight",
+     "Becoming.ExpectedFreeEnergy.efeChoice",
+     "Becoming.ExpectedFreeEnergy.softmax",
+     "Becoming.ExpectedFreeEnergy.softmax_pos",
+     "Becoming.ExpectedFreeEnergy.sum_softmax",
+     "Becoming.ExpectedFreeEnergy.softmax_choiceWeight_pos",
+     "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order",
+     "Becoming.ExpectedFreeEnergy.courseLik_tied",
+     "Becoming.ExpectedFreeEnergy.coursePosterior_ratio_kept",
+     "Becoming.ExpectedFreeEnergy.coursePosterior_order_kept",
+     "Becoming.ExpectedFreeEnergy.softmax_order_kept",
+     "Becoming.ExpectedFreeEnergy.Witness.agreeing_pos",
+     "Becoming.ExpectedFreeEnergy.Witness.separating_turns"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.courseWeight",
+     "Becoming.ExpectedFreeEnergy.efeChoice",
+     "Becoming.ExpectedFreeEnergy.softmax",
+     "Becoming.ExpectedFreeEnergy.softmax_pos",
+     "Becoming.ExpectedFreeEnergy.sum_softmax",
+     "Becoming.ExpectedFreeEnergy.softmax_choiceWeight_pos",
+     "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order",
+     "Becoming.ExpectedFreeEnergy.courseLik_tied",
+     "Becoming.ExpectedFreeEnergy.coursePosterior_ratio_kept",
+     "Becoming.ExpectedFreeEnergy.coursePosterior_order_kept",
+     "Becoming.ExpectedFreeEnergy.softmax_order_kept",
+     "Becoming.ExpectedFreeEnergy.Witness.agreeing_pos",
+     "Becoming.ExpectedFreeEnergy.Witness.separating_turns"
+    ]
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.courseLik_through",
+     "Becoming.ExpectedFreeEnergy.coarse_div",
+     "Becoming.ExpectedFreeEnergy.coarse_coursePosterior",
+     "Becoming.ExpectedFreeEnergy.efe_through_course",
+     "Becoming.ExpectedFreeEnergy.epistemic_through_course",
+     "Becoming.ExpectedFreeEnergy.courseWeight_through",
+     "Becoming.ExpectedFreeEnergy.efeChoice_same_of_coarse",
+     "Becoming.ExpectedFreeEnergy.seeking_blind_to_split",
+     "Becoming.ExpectedFreeEnergy.softmax_blind_to_split",
+     "Becoming.ExpectedFreeEnergy.seeking_reads_profiles"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.courseLik_through",
+     "Becoming.ExpectedFreeEnergy.coarse_div",
+     "Becoming.ExpectedFreeEnergy.coarse_coursePosterior",
+     "Becoming.ExpectedFreeEnergy.efe_through_course",
+     "Becoming.ExpectedFreeEnergy.epistemic_through_course",
+     "Becoming.ExpectedFreeEnergy.courseWeight_through",
+     "Becoming.ExpectedFreeEnergy.efeChoice_same_of_coarse",
+     "Becoming.ExpectedFreeEnergy.seeking_blind_to_split",
+     "Becoming.ExpectedFreeEnergy.softmax_blind_to_split",
+     "Becoming.ExpectedFreeEnergy.seeking_reads_profiles"
+    ]
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.ExpectedFreeEnergy.Witness.biasClass",
+     "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing",
+     "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothingByClass",
+     "Becoming.ExpectedFreeEnergy.Witness.swappedPrior",
+     "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing_through",
+     "Becoming.ExpectedFreeEnergy.Witness.priors_alike",
+     "Becoming.ExpectedFreeEnergy.Witness.split_unseen"
+    ],
+    "outside": [
+     "Becoming.ExpectedFreeEnergy.Witness.biasClass",
+     "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing",
+     "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothingByClass",
+     "Becoming.ExpectedFreeEnergy.Witness.swappedPrior",
+     "Becoming.ExpectedFreeEnergy.Witness.agreeOrNothing_through",
+     "Becoming.ExpectedFreeEnergy.Witness.priors_alike",
+     "Becoming.ExpectedFreeEnergy.Witness.split_unseen"
     ]
    }
   ],
@@ -42593,6 +42885,19 @@
     ],
     "grammar": false,
     "dependence": "balance, represented"
+   },
+   {
+    "law": 15,
+    "declarations": [
+     "Becoming.SignificanceStatements.widens_iff_retains_adds_root",
+     "Becoming.«续无外则同一中心»"
+    ],
+    "master_laws": [
+     "closure",
+     "order"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "significance-through-a-common-condition": [
@@ -57081,6 +57386,18 @@
       ],
       "reason": "weights: widening is what every positive weighting ranks higher; the grammar has no weights"
      }
+    ],
+    "stated_at_model": [
+     {
+      "of": "Becoming.Weighting.widens_iff_every_positive",
+      "record": "widening-as-what-every-weighting-ranks",
+      "law": 10,
+      "declaration": "Becoming.Weighting.grammar_widens_iff_every_positive",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md"
+     }
     ]
    },
    {
@@ -57157,6 +57474,34 @@
     ],
     "grammar": false,
     "dependence": "anchor, not reached"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.Weighting.grammar_widens_iff_every_positive"
+    ],
+    "master_laws": [
+     "order"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar",
+    "statements_at_model": [
+     {
+      "declaration": "Becoming.Weighting.grammar_widens_iff_every_positive",
+      "of": "Becoming.Weighting.widens_iff_every_positive",
+      "models": [
+       "own"
+      ],
+      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md",
+      "verified": true,
+      "grammar_terms": [
+       "Becoming.«广»"
+      ],
+      "other_terms": [],
+      "row_dependence": "anchor, not reached"
+     }
+    ]
    }
   ],
   "wisdom-root-without-axiom": [

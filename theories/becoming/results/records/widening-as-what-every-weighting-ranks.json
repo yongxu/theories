@@ -94,6 +94,23 @@
       "declarations": [
         "Becoming.Web.not_widens_of_closes"
       ]
+    },
+    {
+      "en": "On the root, on a finite list with two-valued admission and additive natural-number weights positive on every listed item: the grammar's widening, «广», of what one course admits over another is exactly what every such weighting ranks higher. The weights are amounts assigned to what is admitted, a second sort the grammar has none of.",
+      "zh": "在根上，于有限所列项、二值接纳、及在每一所列项上为正的可加自然数权重之下：一条进程所接纳者对另一条之文法之「广」，恰是每个这样的加权都排得更高者。权重是赋予所接纳者之量，为文法所无的第二种类。",
+      "declarations": [
+        "Becoming.Weighting.grammar_widens_iff_every_positive"
+      ],
+      "statements_at_model": [
+        {
+          "declaration": "Becoming.Weighting.grammar_widens_iff_every_positive",
+          "of": "Becoming.Weighting.widens_iff_every_positive",
+          "models": [
+            "own"
+          ],
+          "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md"
+        }
+      ]
     }
   ],
   "hypotheses": [
@@ -269,6 +286,7 @@
         "Becoming.Weighting.cond_one_pos",
         "Becoming.Weighting.exceeds_or_includes",
         "Becoming.Weighting.gain_at",
+        "Becoming.Weighting.grammar_widens_iff_every_positive",
         "Becoming.Weighting.includes_restrict",
         "Becoming.Weighting.increasing_lexical",
         "Becoming.Weighting.increasing_prior",
@@ -331,7 +349,7 @@
         "Becoming.unrestricted_atCenters_iff",
         "Becoming.withinSome"
       ],
-      "sha256": "74d266546171417e4f28365a50c8e9f11b71e3b10c2cd2025681349e653a32ea"
+      "sha256": "b26fdf41eb04ff899beb2bead6bafe5e3a6ede5e9030ba0f68a532214d4bd6e6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
@@ -346,7 +364,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "e5f1e8b42c4c1e736b65875297cb764004d0ecab1e27a893e5c3f21cc2fb4929"
+      "sha256": "a9f62575313222b5c7375cbde76b62b23e10a8c9dcf7a93bb20430a90d169ecc"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
@@ -456,12 +474,27 @@
       "role": "receipt",
       "sha256": "ec026b0d8ca8786dde3af5f9153ed706f784394b556afc93d189fae521c8cfae",
       "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md",
+      "role": "review",
+      "sha256": "267e0043ac2b9e535e796fe1e64a09ea4c8e85b08ebf32179f2edcfb2b911658"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/DESIGN.md",
+      "role": "integration",
+      "sha256": "ee48af64ed377fc9e9447d1da3aa538aa256a54c139383271acb9a1b477afbda"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json",
+      "role": "receipt",
+      "sha256": "37b752112e19d77ba717f771c6057c5516c1ec47ff247889baeb36374104db54"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -491,6 +524,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the next step says thresholds are read as denying scope, a reading, as the chapter states; the Lean has no significance there. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：下一步写明阈值式是读作否认范围，这是读法，与本章一致；Lean 在那里没有意义。规律未变。"
+    },
+    {
+      "en": "30 October 2026 (U3, study section 465): a law on the root added, stating `Becoming.Weighting.widens_iff_every_positive` in the grammar's terms on its own carrier, through the row (F5's statements_at_model, model own); reviewed in REVIEW-U3-LEAN.md; a restatement or a specialization, not a derivation; the row's statement, proof and every other law unchanged.",
+      "zh": "2026年10月30日（U3，研究第 465 节）：增根上之律，于其自身之载体上以文法之项陈述 `Becoming.Weighting.widens_iff_every_positive`，经其本行（F5 之 statements_at_model，模型 own）；经 REVIEW-U3-LEAN.md 复核；为重述或特化，非推导；本行之陈述、证明与他律皆不改。"
     }
   ]
 }

@@ -300,18 +300,18 @@ The laws of selection now stand on the Becoming spine with the flow: Price's equ
 [recurrent-chain-assembly](theories/becoming/results/records/recurrent-chain-assembly.md): `recorded-checked`
 
 <a id="universal-intelligence-session"></a>
-<a id="所有智能的普遍元伦理--universal-metaethics-of-all-intelligence"></a>
-### Universal metaethics of all intelligence
+<a id="生命之伦理及在其中形成的一切智能--the-ethics-for-life-and-every-intelligence-formed-within-it"></a>
+### The ethics for life, and every intelligence formed within it
 
 **State:** `unmarked` · **Scope:** The original universal-intelligence session and explicitly authorized continuations; not automatically every repository task’s objective.
 
-Prove a universal metaethics of all intelligence, explaining interconnection and differentiated agency formed within the whole. The 8 October continuation uses living significance to establish positive generative warrant and revisable practical direction from formed relational positions and supported visible futures. The work is now part of the Theory of Becoming (chapter 7, significance, comparison and practical judgment); the public README leads with established conclusions and their scoped evidence.
+State the ethics as life's: its laws proved, each on its stated base, its stance life's own and said to be so, reaching every intelligence whose own line runs through life (chapter 7 §4.6, under P1–P4), with no claim to bind every possible mind. Whether a stronger, universal warrant exists stays an open question the ethics does not wait on. The work is part of the Theory of Becoming (chapter 7, significance, comparison and practical judgment); the public README leads with established conclusions and their scoped evidence.
 
 **Premises:** Normative universality, actual compliance and exclusive necessity of this formulation need separate arguments. Preserve both real generative possibilities and evidence-responsive revision; complete integration, omniscience and strict whole improvement are not premises of positive warrant.
 
 **Completion criterion:** A local generative theorem, preservation of supplied value or bounded comparison does not complete the universal target. Assess the current finite positive principle under its explicit premises; do not add a complete ranking, losslessness of every consequence or inevitable compliance as its completion gate.
 
-[2026-10-07-universal-intelligence-session-goal](sources/15-codex-theory-conversations/2026-10-07-universal-intelligence-session-goal.md) · [UNIFIED-ETHICAL-GROUNDING](theories/becoming/history/UNIFIED-ETHICAL-GROUNDING.md#session-target-universal-meta-ethics-of-all-intelligence) · [2026-10-08-positive-generative-direction](sources/15-codex-theory-conversations/2026-10-08-positive-generative-direction.md) · [2026-10-08-universal-metaethics-name-and-readme](sources/15-codex-theory-conversations/2026-10-08-universal-metaethics-name-and-readme.md) · [2026-10-08-readme-research-progress-and-push](sources/15-codex-theory-conversations/2026-10-08-readme-research-progress-and-push.md) · [2026-10-09-theory-of-becoming-name](sources/15-codex-theory-conversations/2026-10-09-theory-of-becoming-name.md) · [2026-10-09-monist-evaluator-grounding](sources/15-codex-theory-conversations/2026-10-09-monist-evaluator-grounding.md) · [2026-10-09-one-theory-unification](sources/15-codex-theory-conversations/2026-10-09-one-theory-unification.md)
+[2026-10-07-universal-intelligence-session-goal](sources/15-codex-theory-conversations/2026-10-07-universal-intelligence-session-goal.md) · [UNIFIED-ETHICAL-GROUNDING](theories/becoming/history/UNIFIED-ETHICAL-GROUNDING.md#session-target-universal-meta-ethics-of-all-intelligence) · [2026-10-08-positive-generative-direction](sources/15-codex-theory-conversations/2026-10-08-positive-generative-direction.md) · [2026-10-08-universal-metaethics-name-and-readme](sources/15-codex-theory-conversations/2026-10-08-universal-metaethics-name-and-readme.md) · [2026-10-08-readme-research-progress-and-push](sources/15-codex-theory-conversations/2026-10-08-readme-research-progress-and-push.md) · [2026-10-09-theory-of-becoming-name](sources/15-codex-theory-conversations/2026-10-09-theory-of-becoming-name.md) · [2026-10-09-monist-evaluator-grounding](sources/15-codex-theory-conversations/2026-10-09-monist-evaluator-grounding.md) · [2026-10-09-one-theory-unification](sources/15-codex-theory-conversations/2026-10-09-one-theory-unification.md) · [2026-10-30-no-absolute-good-the-way-for-life](sources/15-codex-theory-conversations/2026-10-30-no-absolute-good-the-way-for-life.md) · [2026-10-30-goal-the-ethics-for-life-approved](sources/15-codex-theory-conversations/2026-10-30-goal-the-ethics-for-life-approved.md) · [2026-10-30-goal-laws-on-their-bases-approved](sources/15-codex-theory-conversations/2026-10-30-goal-laws-on-their-bases-approved.md)
 
 **README overview:** Developing significance, comparison and practical judgment
 
@@ -350,18 +350,24 @@ Complete the necessary relations between the core and all wisdom under discussio
 [wisdom-root](theories/becoming/results/records/wisdom-root.md): `open`
 
 <a id="zero-axiom-session"></a>
-<a id="无公理实践判断的独立接续--independent-axiom-free-practical-judgment"></a>
-### Independent axiom-free practical judgment
+<a id="生命的实践判断立于最少的前提--practical-judgment-for-life-on-the-fewest-premises"></a>
+### Practical judgment for life, on the fewest premises
 
 **State:** `unmarked` · **Scope:** A later, separately authorized line of work; it does not revoke completed work on the conditional alignment route.
 
-Focus on universal normative grounding: explain grounds and scope of repair, opening, restriction and ending through living, understanding, purposes, evaluation and response differentiating within one activity, without presupposing separate facts, values and agents plus an external connection.
+Explain practical judgment as life's (chapter 7, T8: for life, the way is 生生): how far choices of repair, opening, restriction and ending follow from life's own stance and from the theory's laws, each law on its stated base. The stance starts from what acting presupposes (chapter 7 §4.6, P1); wherever §4.6's path carries it further, the path's premises P2–P4 are named with it. The courses chosen among are read on the map of generation, keeping and degeneration (chapter 2) and compared by widening where the map and widening are joined, otherwise by a comparison the judgment names. The account runs through living, understanding, purposes, evaluation and response differentiating within one activity, without presupposing separate facts, values and agents plus an external connection. Name every premise a judgment uses, among them the continuation condition for scope, C for order, and the readings, the lifting and the commitments of chapter 7 §5. Derive from the map and the stance as many as can be derived, and state what each of the rest needs: beyond §4.6's path the condition needs the step of invariance, which neither the presupposition nor the represented dynamics supplies (`bounded_rival`), and C needs its own reason. Whether a warrant binding every possible mind exists stays an open question the work does not wait on.
 
 **Premises:** Retain whole relations and substantive rivals; freely toggled predicates in a weaker representation do not refute the fuller theory. Organization, purposes, knowing, normativity and meta-attraction belong to one theory; chapter and proof scopes do not establish separate ontologies.
 
-**Completion criterion:** Use the original directive and current target; local proofs cannot substitute for the central result.
+**Completion criterion:** Judge the work by this objective: a judgment counts as explained when every premise it uses is named and is derived, argued or left open with what it needs; local proofs cannot substitute for the central result.
 
-[2026-10-08-zero-axiom-practical-judgment](sources/15-codex-theory-conversations/2026-10-08-zero-axiom-practical-judgment.md) · [ZERO-AXIOM-PRACTICAL-JUDGMENT](theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md) · [2026-10-13-universal-normative-grounding-focus](sources/15-codex-theory-conversations/2026-10-13-universal-normative-grounding-focus.md) · [2026-10-13-nondual-normative-grounding-correction](sources/15-codex-theory-conversations/2026-10-13-nondual-normative-grounding-correction.md) · [2026-10-13-one-theory-normativity-meta-attractor](sources/15-codex-theory-conversations/2026-10-13-one-theory-normativity-meta-attractor.md)
+[2026-10-08-zero-axiom-practical-judgment](sources/15-codex-theory-conversations/2026-10-08-zero-axiom-practical-judgment.md) · [ZERO-AXIOM-PRACTICAL-JUDGMENT](theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md) · [2026-10-13-universal-normative-grounding-focus](sources/15-codex-theory-conversations/2026-10-13-universal-normative-grounding-focus.md) · [2026-10-13-nondual-normative-grounding-correction](sources/15-codex-theory-conversations/2026-10-13-nondual-normative-grounding-correction.md) · [2026-10-13-one-theory-normativity-meta-attractor](sources/15-codex-theory-conversations/2026-10-13-one-theory-normativity-meta-attractor.md) · [2026-10-30-no-absolute-good-the-way-for-life](sources/15-codex-theory-conversations/2026-10-30-no-absolute-good-the-way-for-life.md) · [2026-10-30-goal-practical-judgment-for-life-approved](sources/15-codex-theory-conversations/2026-10-30-goal-practical-judgment-for-life-approved.md)
+
+[classification-robust-generative-comparison](theories/becoming/results/records/classification-robust-generative-comparison.md): `recorded-checked`
+
+[positioned-positive-reason](theories/becoming/results/records/positioned-positive-reason.md): `recorded-checked`
+
+[practical-judgment-under-living-significance](theories/becoming/results/records/practical-judgment-under-living-significance.md): `reviewed-scoped`
 
 [universal-practical-warrant](theories/becoming/results/records/universal-practical-warrant.md): `open`
 

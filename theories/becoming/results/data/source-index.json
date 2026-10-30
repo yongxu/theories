@@ -655,6 +655,10 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/REVIEW-U2.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-TEXTS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue-unified-explanation/FEP-INTEGRATION.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue-unified-explanation/PLAN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md",
@@ -706,6 +710,7 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/RECHECK-UE22.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/REVIEW-UE22.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue23-seeking-by-expected-free-energy/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/LANDING.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/REVIEW-UE4.md",
@@ -1808,6 +1813,25 @@
         "theories/becoming/chapters/07-SIGNIFICANCE.md"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1.md": {
+      "title": "Independent review of U1's design (GPT astra, high effort, read-only)",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fu-full-unification/PROPOSAL.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/scratch/Becoming/UnitScratch.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionReach.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean"
+      ]
+    },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md": {
+      "title": "U3: the review of the Lean and the records kit",
+      "local_links": [
+        "_process/research/2026-10-05-repository-reconciliation/architecture/mv/F5-MODEL-STATEMENTS.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean"
+      ]
+    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue1-fep-bridge/REVIEW-UE1.md": {
       "title": "UE1 review: the free-energy principle as a case (25 October 2026)",
       "local_links": [
@@ -2435,6 +2459,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SignificanceStatements.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SituationTraces.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Situations.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
@@ -2651,6 +2676,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SetPointOptimum.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SignificanceStatements.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Situations.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standing.lean",
@@ -5072,6 +5098,7 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3d-step-indexed-reaching/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/r30-names/RENAME-TABLE.json",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue0-third-parts/AUDIT.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue6-beyond-the-sciences/VERDICT.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
