@@ -1,0 +1,1425 @@
+{
+ "chain": [
+  "experiments/shared-renewal-capability/regulation/retention/formation/formal/verification.json",
+  "experiments/shared-renewal-capability/regulation/retention/formation/evolution/verification.json",
+  "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/verification.json"
+ ],
+ "planned_stale": [
+  "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/verification.json",
+  "experiments/shared-renewal-capability/regulation/retention/formation/evolution/verification.json"
+ ],
+ "receipts": {
+  "experiments/shared-renewal-capability/regulation/retention/formation/formal/verification.json": {
+   "records": [],
+   "old_sha256": "9f5f1469aa6ced6c1bdd249963f703cdadcff98cc6af2d61ac2717d1418d199c",
+   "old_checked_at_utc": "2026-10-31T08:10:01.147187+00:00",
+   "exit": 0,
+   "status": "passed",
+   "seconds": 12,
+   "passed": true,
+   "differ": [],
+   "tail": "{\n  \"status\": \"passed\",\n  \"modules\": 6,\n  \"new_audited_declarations\": 68,\n  \"record\": \"/private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/shared-renewal-capability/regulation/retention/formation/formal/verification.json\"\n}\n",
+   "changed": [
+    "experiments/shared-renewal-capability/regulation/retention/formation/formal/verification.json"
+   ],
+   "new_sha256": "20bc0692f37a36373711711ce193203da44dc64e70ba46fec50d18ad66211c6c",
+   "new_checked_at_utc": "2026-10-31T13:43:45.919179+00:00",
+   "modules_added": [],
+   "modules_removed": [],
+   "axioms_changed": {},
+   "audits": [
+    135,
+    135
+   ],
+   "bound_modules": {}
+  },
+  "experiments/shared-renewal-capability/regulation/retention/formation/evolution/verification.json": {
+   "records": [
+    "a-selected-template-need-not-raise-structure"
+   ],
+   "old_sha256": "1798cc32373a8b032996d36194f6c29e616ea17ffd7e58938be860796f013f5c",
+   "old_checked_at_utc": "2026-10-07T11:52:00.987698+00:00",
+   "exit": 0,
+   "status": "passed",
+   "seconds": 7,
+   "passed": true,
+   "differ": [],
+   "tail": "{\"module\": \"GenerativeCore\", \"passed\": true, \"audits\": 18}\n{\"module\": \"FormedSelection\", \"passed\": true, \"audits\": 43}\n{\"module\": \"FormationRoot\", \"passed\": true, \"audits\": 10}\n{\"module\": \"ConsequenceTransmission\", \"passed\": true, \"audits\": 19}\nRECEIPT /private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/shared-renewal-capability/regulation/retention/formation/evolution/checks/1793454226354494000/receipt.json\n",
+   "changed": [
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/checks/1793454226354494000/ConsequenceTransmission.lean",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/checks/1793454226354494000/ConsequenceTransmission.txt",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/checks/1793454226354494000/FormationRoot.lean",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/checks/1793454226354494000/FormationRoot.txt",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/checks/1793454226354494000/FormedSelection.lean",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/checks/1793454226354494000/FormedSelection.txt",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/checks/1793454226354494000/GenerativeCore.lean",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/checks/1793454226354494000/GenerativeCore.txt",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/checks/1793454226354494000/check.py",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/checks/1793454226354494000/inputs.json",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/checks/1793454226354494000/receipt.json",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/verification.json"
+   ],
+   "new_sha256": "45287dbb7af165fa278b14fee811b882f5479d78adfa745ca01a0a5553cff3cf",
+   "new_checked_at_utc": "2026-10-31T13:43:53.401830+00:00",
+   "modules_added": [],
+   "modules_removed": [],
+   "axioms_changed": {
+    "ConsequenceTransmission": {
+     "old": {
+      "ConsequenceTransmission.numerator_balance": [
+       "propext"
+      ],
+      "ConsequenceTransmission.strict_increase_iff": [
+       "propext"
+      ],
+      "ConsequenceTransmission.neutral_iff": [
+       "propext"
+      ],
+      "ConsequenceTransmission.strict_decrease_iff": [
+       "propext"
+      ],
+      "ConsequenceTransmission.denominator_positive": [],
+      "ConsequenceTransmission.shared_access_is_neutral": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.positive_a_weight_has_native_event": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.positive_h_weight_has_native_event": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.native_copy_transmits_its_response_structure": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.actual_capture_changes_copy_access": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.actual_transfer_with_both_structures_present": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.same_composition_opposite_access": [
+       "propext"
+      ],
+      "ConsequenceTransmission.transmission_preserves_total_event_weight": [],
+      "ConsequenceTransmission.transmitted_structure_increase_iff": [
+       "propext"
+      ],
+      "ConsequenceTransmission.faithful_transmission_matches_template": [],
+      "ConsequenceTransmission.faithful_increase_iff_template_increase": [],
+      "ConsequenceTransmission.positive_template_advantage_can_reverse_in_transmission": [],
+      "ConsequenceTransmission.Native.reached_neutral_event_is_native": [
+       "propext"
+      ],
+      "ConsequenceTransmission.balanced_transfer_matches_template": []
+     },
+     "new": {
+      "ConsequenceTransmission.numerator_balance": [
+       "propext"
+      ],
+      "ConsequenceTransmission.strict_increase_iff": [
+       "propext"
+      ],
+      "ConsequenceTransmission.neutral_iff": [
+       "propext"
+      ],
+      "ConsequenceTransmission.strict_decrease_iff": [
+       "propext"
+      ],
+      "ConsequenceTransmission.denominator_positive": [],
+      "ConsequenceTransmission.shared_access_is_neutral": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.positive_a_weight_has_native_event": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.positive_h_weight_has_native_event": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.native_copy_transmits_its_response_structure": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.actual_capture_changes_copy_access": [],
+      "ConsequenceTransmission.Native.actual_transfer_with_both_structures_present": [],
+      "ConsequenceTransmission.Native.same_composition_opposite_access": [],
+      "ConsequenceTransmission.transmission_preserves_total_event_weight": [],
+      "ConsequenceTransmission.transmitted_structure_increase_iff": [
+       "propext"
+      ],
+      "ConsequenceTransmission.faithful_transmission_matches_template": [],
+      "ConsequenceTransmission.faithful_increase_iff_template_increase": [],
+      "ConsequenceTransmission.positive_template_advantage_can_reverse_in_transmission": [],
+      "ConsequenceTransmission.Native.reached_neutral_event_is_native": [],
+      "ConsequenceTransmission.balanced_transfer_matches_template": []
+     }
+    },
+    "FormationRoot": {
+     "old": {
+      "FormedSelection.trace_to_root": [
+       "propext"
+      ],
+      "FormedSelection.trace_from_root": [
+       "propext"
+      ],
+      "FormedSelection.trace_iff_root": [
+       "propext"
+      ],
+      "FormedSelection.root_energy_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.root_three_unit_bootstrap": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.root_four_unit_mixed_bootstrap": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.root_formation_to_copy": [
+       "propext"
+      ],
+      "FormedSelection.root_no_h_local_copy_before_resident_wear": [
+       "propext"
+      ],
+      "FormedSelection.root_repaired_site_inheritance": [
+       "propext"
+      ],
+      "FormedSelection.trace_append_iff": [
+       "propext"
+      ]
+     },
+     "new": {
+      "FormedSelection.trace_to_root": [],
+      "FormedSelection.trace_from_root": [],
+      "FormedSelection.trace_iff_root": [],
+      "FormedSelection.root_energy_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.root_three_unit_bootstrap": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.root_four_unit_mixed_bootstrap": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.root_formation_to_copy": [],
+      "FormedSelection.root_no_h_local_copy_before_resident_wear": [
+       "propext"
+      ],
+      "FormedSelection.root_repaired_site_inheritance": [],
+      "FormedSelection.trace_append_iff": []
+     }
+    },
+    "FormedSelection": {
+     "old": {
+      "FormedSelection.population_type_sum": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_valid": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_valid": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.material_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_material_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_energy_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_energy_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_common_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_common_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.copy_increment_le_spent": [
+       "propext"
+      ],
+      "FormedSelection.copy_tally_le_spent": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_copy_budget": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.exact_step_rank_drop": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_strict_rank": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_event_bound": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.no_infinite_event_path": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_paid_phase": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_paid_phase": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.repair_needs_three_initial_common_units": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.low_fuel_cannot_restore_site": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_paid_mixed_phase": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_paid_mixed_phase": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.restored_site_and_alternative_need_four_initial_common_units": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.a_absence_step": [
+       "propext"
+      ],
+      "FormedSelection.h_absence_step": [
+       "propext"
+      ],
+      "FormedSelection.a_absence_trace": [
+       "propext"
+      ],
+      "FormedSelection.h_absence_trace": [
+       "propext"
+      ],
+      "FormedSelection.a_appearance_requires_formation": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.h_appearance_requires_formation": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.a_copy_has_template": [
+       "propext"
+      ],
+      "FormedSelection.h_copy_has_template": [
+       "propext"
+      ],
+      "FormedSelection.owned_support_step": [
+       "propext"
+      ],
+      "FormedSelection.owned_support_trace": [
+       "propext"
+      ],
+      "FormedSelection.owned_support_forbids_h_local_copy": [
+       "propext"
+      ],
+      "FormedSelection.no_h_local_copies_without_resident_wear": [
+       "propext"
+      ],
+      "FormedSelection.paid_formation_to_copy": [
+       "propext"
+      ],
+      "FormedSelection.witness_accounting": [
+       "propext"
+      ],
+      "FormedSelection.repair_enables_capture": [
+       "propext"
+      ],
+      "FormedSelection.capture_enables_copy": [
+       "propext"
+      ],
+      "FormedSelection.initial_owned_support": [
+       "propext"
+      ],
+      "FormedSelection.no_h_local_copies_from_absence_without_resident_wear": [
+       "propext"
+      ],
+      "FormedSelection.repaired_site_can_pass_to_alternative": [
+       "propext"
+      ],
+      "FormedSelection.inheritance_accounting": [
+       "propext"
+      ]
+     },
+     "new": {
+      "FormedSelection.population_type_sum": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_valid": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_valid": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.material_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_material_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_energy_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_energy_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_common_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_common_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.copy_increment_le_spent": [],
+      "FormedSelection.copy_tally_le_spent": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_copy_budget": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.exact_step_rank_drop": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_strict_rank": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_event_bound": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.no_infinite_event_path": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_paid_phase": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_paid_phase": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.repair_needs_three_initial_common_units": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.low_fuel_cannot_restore_site": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_paid_mixed_phase": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_paid_mixed_phase": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.restored_site_and_alternative_need_four_initial_common_units": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.a_absence_step": [
+       "propext"
+      ],
+      "FormedSelection.h_absence_step": [
+       "propext"
+      ],
+      "FormedSelection.a_absence_trace": [
+       "propext"
+      ],
+      "FormedSelection.h_absence_trace": [
+       "propext"
+      ],
+      "FormedSelection.a_appearance_requires_formation": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.h_appearance_requires_formation": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.a_copy_has_template": [
+       "propext"
+      ],
+      "FormedSelection.h_copy_has_template": [
+       "propext"
+      ],
+      "FormedSelection.owned_support_step": [
+       "propext"
+      ],
+      "FormedSelection.owned_support_trace": [
+       "propext"
+      ],
+      "FormedSelection.owned_support_forbids_h_local_copy": [
+       "propext"
+      ],
+      "FormedSelection.no_h_local_copies_without_resident_wear": [
+       "propext"
+      ],
+      "FormedSelection.paid_formation_to_copy": [],
+      "FormedSelection.witness_accounting": [],
+      "FormedSelection.repair_enables_capture": [],
+      "FormedSelection.capture_enables_copy": [],
+      "FormedSelection.initial_owned_support": [
+       "propext"
+      ],
+      "FormedSelection.no_h_local_copies_from_absence_without_resident_wear": [
+       "propext"
+      ],
+      "FormedSelection.repaired_site_can_pass_to_alternative": [],
+      "FormedSelection.inheritance_accounting": []
+     }
+    }
+   },
+   "audits": [
+    90,
+    90
+   ],
+   "bound_modules": {
+    "a-selected-template-need-not-raise-structure": [
+     "ConsequenceTransmission"
+    ]
+   }
+  },
+  "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/verification.json": {
+   "records": [
+    "same-carrier-need-not-fix-the-response"
+   ],
+   "old_sha256": "9a87242192dccd915372b6fdc19a8c5a9a41ce4b9753c43b45ab816717659339",
+   "old_checked_at_utc": "2026-10-07T12:15:42.806840+00:00",
+   "exit": 0,
+   "status": "passed",
+   "seconds": 19,
+   "passed": true,
+   "differ": [],
+   "tail": "{\"module\": \"GenerativeCore\", \"passed\": true, \"audits\": 18}\n{\"module\": \"FormedSelection\", \"passed\": true, \"audits\": 43}\n{\"module\": \"FormationRoot\", \"passed\": true, \"audits\": 10}\n{\"module\": \"ConsequenceTransmission\", \"passed\": true, \"audits\": 19}\n{\"module\": \"DevelopedResponse\", \"passed\": true, \"audits\": 17}\nRECEIPT /private/tmp/claude-501/-Users-ren-theories/ca0b7536-63a9-4eb2-96fc-5c18a12d2016/scratchpad/wt-rv21c/experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/receipt.json\n",
+   "changed": [
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/ConsequenceTransmission.lean",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/ConsequenceTransmission.txt",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/DevelopedResponse.lean",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/DevelopedResponse.txt",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/FormationRoot.lean",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/FormationRoot.txt",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/FormedSelection.lean",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/FormedSelection.txt",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/GenerativeCore.lean",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/GenerativeCore.txt",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/check.py",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/inputs.json",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/receipt.json",
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/verification.json"
+   ],
+   "new_sha256": "6542465ac984a6e9324e250529cb38020460b895aa15a6c01b3559d5c14d380e",
+   "new_checked_at_utc": "2026-10-31T13:44:12.427128+00:00",
+   "modules_added": [],
+   "modules_removed": [],
+   "axioms_changed": {
+    "ConsequenceTransmission": {
+     "old": {
+      "ConsequenceTransmission.numerator_balance": [
+       "propext"
+      ],
+      "ConsequenceTransmission.strict_increase_iff": [
+       "propext"
+      ],
+      "ConsequenceTransmission.neutral_iff": [
+       "propext"
+      ],
+      "ConsequenceTransmission.strict_decrease_iff": [
+       "propext"
+      ],
+      "ConsequenceTransmission.denominator_positive": [],
+      "ConsequenceTransmission.shared_access_is_neutral": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.positive_a_weight_has_native_event": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.positive_h_weight_has_native_event": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.native_copy_transmits_its_response_structure": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.actual_capture_changes_copy_access": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.actual_transfer_with_both_structures_present": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.same_composition_opposite_access": [
+       "propext"
+      ],
+      "ConsequenceTransmission.transmission_preserves_total_event_weight": [],
+      "ConsequenceTransmission.transmitted_structure_increase_iff": [
+       "propext"
+      ],
+      "ConsequenceTransmission.faithful_transmission_matches_template": [],
+      "ConsequenceTransmission.faithful_increase_iff_template_increase": [],
+      "ConsequenceTransmission.positive_template_advantage_can_reverse_in_transmission": [],
+      "ConsequenceTransmission.Native.reached_neutral_event_is_native": [
+       "propext"
+      ],
+      "ConsequenceTransmission.balanced_transfer_matches_template": []
+     },
+     "new": {
+      "ConsequenceTransmission.numerator_balance": [
+       "propext"
+      ],
+      "ConsequenceTransmission.strict_increase_iff": [
+       "propext"
+      ],
+      "ConsequenceTransmission.neutral_iff": [
+       "propext"
+      ],
+      "ConsequenceTransmission.strict_decrease_iff": [
+       "propext"
+      ],
+      "ConsequenceTransmission.denominator_positive": [],
+      "ConsequenceTransmission.shared_access_is_neutral": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.positive_a_weight_has_native_event": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.positive_h_weight_has_native_event": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.native_copy_transmits_its_response_structure": [
+       "propext"
+      ],
+      "ConsequenceTransmission.Native.actual_capture_changes_copy_access": [],
+      "ConsequenceTransmission.Native.actual_transfer_with_both_structures_present": [],
+      "ConsequenceTransmission.Native.same_composition_opposite_access": [],
+      "ConsequenceTransmission.transmission_preserves_total_event_weight": [],
+      "ConsequenceTransmission.transmitted_structure_increase_iff": [
+       "propext"
+      ],
+      "ConsequenceTransmission.faithful_transmission_matches_template": [],
+      "ConsequenceTransmission.faithful_increase_iff_template_increase": [],
+      "ConsequenceTransmission.positive_template_advantage_can_reverse_in_transmission": [],
+      "ConsequenceTransmission.Native.reached_neutral_event_is_native": [],
+      "ConsequenceTransmission.balanced_transfer_matches_template": []
+     }
+    },
+    "DevelopedResponse": {
+     "old": {
+      "DevelopedResponse.runnable_trace": [
+       "propext"
+      ],
+      "DevelopedResponse.native_runnable_trace": [
+       "propext"
+      ],
+      "DevelopedResponse.command_uses_gate_and_reading": [
+       "propext"
+      ],
+      "DevelopedResponse.same_carrier_different_developmental_record": [
+       "propext"
+      ],
+      "DevelopedResponse.equal_cost_development_reconstructs_different_gates": [
+       "propext"
+      ],
+      "DevelopedResponse.same_assay_enacts_developed_difference": [
+       "propext"
+      ],
+      "DevelopedResponse.consequence_reformation_reaches_operating_grandchild": [
+       "propext"
+      ],
+      "DevelopedResponse.supplied_assistance_can_rescue_development": [
+       "propext"
+      ],
+      "DevelopedResponse.carrier_is_not_already_a_developed_response": [
+       "propext"
+      ],
+      "DevelopedResponse.operational_response_without_next_capture": [
+       "propext"
+      ],
+      "DevelopedResponse.developed_table_comes_from_operating_assays": [
+       "propext"
+      ],
+      "DevelopedResponse.transmission_formula_applies_to_developed_table": [
+       "propext"
+      ],
+      "DevelopedResponse.advance_core": [
+       "propext"
+      ],
+      "DevelopedResponse.enabled_energy_balance": [
+       "Quot.sound",
+       "propext"
+      ],
+      "DevelopedResponse.runnable_energy_balance": [
+       "Quot.sound",
+       "propext"
+      ],
+      "DevelopedResponse.whole_timely_history_with_material_and_energy": [
+       "propext"
+      ],
+      "DevelopedResponse.whole_rescued_history_with_material_and_energy": [
+       "propext"
+      ]
+     },
+     "new": {
+      "DevelopedResponse.runnable_trace": [
+       "propext"
+      ],
+      "DevelopedResponse.native_runnable_trace": [],
+      "DevelopedResponse.command_uses_gate_and_reading": [
+       "propext"
+      ],
+      "DevelopedResponse.same_carrier_different_developmental_record": [
+       "propext"
+      ],
+      "DevelopedResponse.equal_cost_development_reconstructs_different_gates": [
+       "propext"
+      ],
+      "DevelopedResponse.same_assay_enacts_developed_difference": [
+       "propext"
+      ],
+      "DevelopedResponse.consequence_reformation_reaches_operating_grandchild": [
+       "propext"
+      ],
+      "DevelopedResponse.supplied_assistance_can_rescue_development": [
+       "propext"
+      ],
+      "DevelopedResponse.carrier_is_not_already_a_developed_response": [
+       "propext"
+      ],
+      "DevelopedResponse.operational_response_without_next_capture": [
+       "propext"
+      ],
+      "DevelopedResponse.developed_table_comes_from_operating_assays": [
+       "propext"
+      ],
+      "DevelopedResponse.transmission_formula_applies_to_developed_table": [
+       "propext"
+      ],
+      "DevelopedResponse.advance_core": [
+       "propext"
+      ],
+      "DevelopedResponse.enabled_energy_balance": [
+       "Quot.sound",
+       "propext"
+      ],
+      "DevelopedResponse.runnable_energy_balance": [
+       "Quot.sound",
+       "propext"
+      ],
+      "DevelopedResponse.whole_timely_history_with_material_and_energy": [
+       "propext"
+      ],
+      "DevelopedResponse.whole_rescued_history_with_material_and_energy": [
+       "propext"
+      ]
+     }
+    },
+    "FormationRoot": {
+     "old": {
+      "FormedSelection.trace_to_root": [
+       "propext"
+      ],
+      "FormedSelection.trace_from_root": [
+       "propext"
+      ],
+      "FormedSelection.trace_iff_root": [
+       "propext"
+      ],
+      "FormedSelection.root_energy_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.root_three_unit_bootstrap": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.root_four_unit_mixed_bootstrap": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.root_formation_to_copy": [
+       "propext"
+      ],
+      "FormedSelection.root_no_h_local_copy_before_resident_wear": [
+       "propext"
+      ],
+      "FormedSelection.root_repaired_site_inheritance": [
+       "propext"
+      ],
+      "FormedSelection.trace_append_iff": [
+       "propext"
+      ]
+     },
+     "new": {
+      "FormedSelection.trace_to_root": [],
+      "FormedSelection.trace_from_root": [],
+      "FormedSelection.trace_iff_root": [],
+      "FormedSelection.root_energy_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.root_three_unit_bootstrap": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.root_four_unit_mixed_bootstrap": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.root_formation_to_copy": [],
+      "FormedSelection.root_no_h_local_copy_before_resident_wear": [
+       "propext"
+      ],
+      "FormedSelection.root_repaired_site_inheritance": [],
+      "FormedSelection.trace_append_iff": []
+     }
+    },
+    "FormedSelection": {
+     "old": {
+      "FormedSelection.population_type_sum": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_valid": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_valid": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.material_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_material_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_energy_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_energy_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_common_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_common_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.copy_increment_le_spent": [
+       "propext"
+      ],
+      "FormedSelection.copy_tally_le_spent": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_copy_budget": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.exact_step_rank_drop": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_strict_rank": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_event_bound": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.no_infinite_event_path": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_paid_phase": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_paid_phase": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.repair_needs_three_initial_common_units": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.low_fuel_cannot_restore_site": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_paid_mixed_phase": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_paid_mixed_phase": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.restored_site_and_alternative_need_four_initial_common_units": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.a_absence_step": [
+       "propext"
+      ],
+      "FormedSelection.h_absence_step": [
+       "propext"
+      ],
+      "FormedSelection.a_absence_trace": [
+       "propext"
+      ],
+      "FormedSelection.h_absence_trace": [
+       "propext"
+      ],
+      "FormedSelection.a_appearance_requires_formation": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.h_appearance_requires_formation": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.a_copy_has_template": [
+       "propext"
+      ],
+      "FormedSelection.h_copy_has_template": [
+       "propext"
+      ],
+      "FormedSelection.owned_support_step": [
+       "propext"
+      ],
+      "FormedSelection.owned_support_trace": [
+       "propext"
+      ],
+      "FormedSelection.owned_support_forbids_h_local_copy": [
+       "propext"
+      ],
+      "FormedSelection.no_h_local_copies_without_resident_wear": [
+       "propext"
+      ],
+      "FormedSelection.paid_formation_to_copy": [
+       "propext"
+      ],
+      "FormedSelection.witness_accounting": [
+       "propext"
+      ],
+      "FormedSelection.repair_enables_capture": [
+       "propext"
+      ],
+      "FormedSelection.capture_enables_copy": [
+       "propext"
+      ],
+      "FormedSelection.initial_owned_support": [
+       "propext"
+      ],
+      "FormedSelection.no_h_local_copies_from_absence_without_resident_wear": [
+       "propext"
+      ],
+      "FormedSelection.repaired_site_can_pass_to_alternative": [
+       "propext"
+      ],
+      "FormedSelection.inheritance_accounting": [
+       "propext"
+      ]
+     },
+     "new": {
+      "FormedSelection.population_type_sum": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_valid": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_valid": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.material_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_material_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_energy_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_energy_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_common_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_common_ledger": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.copy_increment_le_spent": [],
+      "FormedSelection.copy_tally_le_spent": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_copy_budget": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.exact_step_rank_drop": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_strict_rank": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_event_bound": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.no_infinite_event_path": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_paid_phase": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_paid_phase": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.repair_needs_three_initial_common_units": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.low_fuel_cannot_restore_site": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.step_paid_mixed_phase": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.trace_paid_mixed_phase": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.restored_site_and_alternative_need_four_initial_common_units": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.a_absence_step": [
+       "propext"
+      ],
+      "FormedSelection.h_absence_step": [
+       "propext"
+      ],
+      "FormedSelection.a_absence_trace": [
+       "propext"
+      ],
+      "FormedSelection.h_absence_trace": [
+       "propext"
+      ],
+      "FormedSelection.a_appearance_requires_formation": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.h_appearance_requires_formation": [
+       "Quot.sound",
+       "propext"
+      ],
+      "FormedSelection.a_copy_has_template": [
+       "propext"
+      ],
+      "FormedSelection.h_copy_has_template": [
+       "propext"
+      ],
+      "FormedSelection.owned_support_step": [
+       "propext"
+      ],
+      "FormedSelection.owned_support_trace": [
+       "propext"
+      ],
+      "FormedSelection.owned_support_forbids_h_local_copy": [
+       "propext"
+      ],
+      "FormedSelection.no_h_local_copies_without_resident_wear": [
+       "propext"
+      ],
+      "FormedSelection.paid_formation_to_copy": [],
+      "FormedSelection.witness_accounting": [],
+      "FormedSelection.repair_enables_capture": [],
+      "FormedSelection.capture_enables_copy": [],
+      "FormedSelection.initial_owned_support": [
+       "propext"
+      ],
+      "FormedSelection.no_h_local_copies_from_absence_without_resident_wear": [
+       "propext"
+      ],
+      "FormedSelection.repaired_site_can_pass_to_alternative": [],
+      "FormedSelection.inheritance_accounting": []
+     }
+    }
+   },
+   "audits": [
+    107,
+    107
+   ],
+   "bound_modules": {
+    "same-carrier-need-not-fix-the-response": [
+     "DevelopedResponse"
+    ]
+   }
+  }
+ },
+ "not_renewed": [
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/acquired-perspective/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/core-tree-verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/inquiry-repair-verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/learning/construction/prediction/acquired-record-verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/learning/construction/prediction/receipt-identification-verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/learning/construction/prediction/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/learning/construction/updater/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/learning/construction/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/learning/stochastic-prediction/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/learning/verification.json",
+   "stale": [
+    "FormationSupport",
+    "FormedSelection",
+    "ResourceContinuation"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/adaptive-verification.json",
+   "stale": [
+    "ResourceContinuation"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/coformation-verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/criterion-verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/initiation-verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/nondual-verification.json",
+   "stale": [
+    "ResourceContinuation"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/purpose-verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/root-verification.json",
+   "stale": [
+    "ResourceContinuation"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/scope-verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/integrated-correction/general-framework/generative-basis/noninstrumental-concern/verification.json",
+   "stale": [
+    "ResourceContinuation"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/learning-interface/recording/formal/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/learning-interface/recording/reason-replay/formal/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/learning-interface/recording/reason-replay/protection/claims/formal/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/learning-interface/recording/reason-replay/protection/formal/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/formal/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/formal/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/formal/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/formal/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/formal/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/inquiry-revision/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/pretraining-evidence/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/succession/application/formal/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/succession/formal/history-interface/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/succession/formal/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/succession/review-history/independent-final-formal-audit/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/formal/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/formal/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/publication-safety/formal/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/transport/calibration/pre-import/formal/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  }
+ ],
+ "kept_copies": [
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/development/formal-correspondence-before-binding-fix/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": true
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/succession/application/formal/review/first-attempt-name-resolution/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": false
+  },
+  {
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/succession/application/formal/review/verification.json",
+   "stale": [
+    "FormedSelection"
+   ],
+   "checker": false
+  }
+ ]
+}

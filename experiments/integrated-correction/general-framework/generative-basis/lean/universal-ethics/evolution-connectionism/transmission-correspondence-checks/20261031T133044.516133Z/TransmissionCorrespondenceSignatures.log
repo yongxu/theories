@@ -1,0 +1,95 @@
+Becoming.TransmissionCorrespondence.countOf_replicate : ∀ (k : ℕ), Becoming.Copying.countOf () (List.replicate k ()) = k
+Becoming.TransmissionCorrespondence.use_kitWord : Becoming.Copying.use Becoming.TransmissionCorrespondence.attach none
+    Becoming.TransmissionCorrespondence.kitWord =
+  0
+Becoming.TransmissionCorrespondence.lineage_released_iff : ∀ (s : LearnedProcedureTransmission.State) (used n : ℕ),
+  Becoming.Copying.Every
+      (Becoming.Copying.batch Becoming.TransmissionCorrespondence.attach 20
+          (List.replicate n Becoming.TransmissionCorrespondence.kitWord) (Becoming.TransmissionCorrespondence.pool s)
+          s.available used).1 ↔
+    n ≤ LearnedProcedureTransmission.capacity s
+@Becoming.TransmissionCorrespondence.reconstruction_builds_longest_lineage : ∀
+  {channels : Fin 3 → CalibratedUpdater.Channel} {t : LearnedProcedureTransmission.Transfer}
+  {s out : LearnedProcedureTransmission.State},
+  LearnedProcedureTransmission.reconstruct channels t s = some out →
+    ∀ (used : ℕ),
+      Becoming.Copying.Every
+          (Becoming.Copying.batch Becoming.TransmissionCorrespondence.attach 20
+              (List.replicate out.active Becoming.TransmissionCorrespondence.kitWord)
+              (Becoming.TransmissionCorrespondence.pool s) s.available used).1 ∧
+        ∀ (n : ℕ),
+          Becoming.Copying.Every
+              (Becoming.Copying.batch Becoming.TransmissionCorrespondence.attach 20
+                  (List.replicate n Becoming.TransmissionCorrespondence.kitWord)
+                  (Becoming.TransmissionCorrespondence.pool s) s.available used).1 →
+            n ≤ out.active
+Becoming.TransmissionCorrespondence.material_balanced : ∀ (channels : Fin 3 → CalibratedUpdater.Channel),
+  Becoming.Stock.Balanced (Becoming.TransmissionCorrespondence.process channels) LearnedProcedureTransmission.material
+    (fun x => 0) fun x => 0
+Becoming.TransmissionCorrespondence.support_balanced : ∀ (channels : Fin 3 → CalibratedUpdater.Channel),
+  Becoming.Stock.Balanced (Becoming.TransmissionCorrespondence.process channels) LearnedProcedureTransmission.support
+    (fun x => 0) fun x => 0
+@Becoming.TransmissionCorrespondence.course_conserves : ∀ {channels : Fin 3 → CalibratedUpdater.Channel}
+  {s t : LearnedProcedureTransmission.State} {moves : List Becoming.TransmissionCorrespondence.Move},
+  Generative.Trace (Becoming.TransmissionCorrespondence.process channels) s moves t →
+    LearnedProcedureTransmission.material t = LearnedProcedureTransmission.material s ∧
+      LearnedProcedureTransmission.support t = LearnedProcedureTransmission.support s
+@Becoming.TransmissionCorrespondence.total_replicate : ∀ {α : Type} (f : α → ℕ) (x : α) (c : ℕ),
+  Becoming.total (List.replicate c x) f = c * f x
+@Becoming.TransmissionCorrespondence.faithful_procedure : ∀ {channels : Fin 3 → CalibratedUpdater.Channel}
+  {s out : LearnedProcedureTransmission.State},
+  LearnedProcedureTransmission.reconstruct channels LearnedProcedureTransmission.Transfer.faithful s = some out →
+    Becoming.TransmissionCorrespondence.procedure out = Becoming.TransmissionCorrespondence.procedure s
+@Becoming.TransmissionCorrespondence.family_unchanged : ∀ {channels : Fin 3 → CalibratedUpdater.Channel}
+  {out : LearnedProcedureTransmission.State → LearnedProcedureTransmission.State}
+  (families : List LearnedProcedureTransmission.State),
+  (∀ s ∈ families,
+      LearnedProcedureTransmission.reconstruct channels LearnedProcedureTransmission.Transfer.faithful s =
+        some (out s)) →
+    (Becoming.total families fun p =>
+          Becoming.total (Becoming.TransmissionCorrespondence.successors out p) fun k =>
+            Becoming.excess (Becoming.TransmissionCorrespondence.procedure k)
+              (Becoming.TransmissionCorrespondence.procedure p)) =
+        0 ∧
+      (Becoming.total families fun p =>
+          Becoming.total (Becoming.TransmissionCorrespondence.successors out p) fun k =>
+            Becoming.excess (Becoming.TransmissionCorrespondence.procedure p)
+              (Becoming.TransmissionCorrespondence.procedure k)) =
+        0
+@Becoming.TransmissionCorrespondence.faithful_selects : ∀ {channels : Fin 3 → CalibratedUpdater.Channel}
+  (families : List LearnedProcedureTransmission.State)
+  (out : LearnedProcedureTransmission.State → LearnedProcedureTransmission.State),
+  (∀ s ∈ families,
+      LearnedProcedureTransmission.reconstruct channels LearnedProcedureTransmission.Transfer.faithful s =
+        some (out s)) →
+    Becoming.raised families (Becoming.TransmissionCorrespondence.successors out)
+          Becoming.TransmissionCorrespondence.procedure Becoming.TransmissionCorrespondence.procedure =
+        0 ∧
+      Becoming.lowered families (Becoming.TransmissionCorrespondence.successors out)
+            Becoming.TransmissionCorrespondence.procedure Becoming.TransmissionCorrespondence.procedure =
+          0 ∧
+        Becoming.offspring families (Becoming.TransmissionCorrespondence.successors out)
+              Becoming.TransmissionCorrespondence.procedure =
+            Becoming.selected families (Becoming.TransmissionCorrespondence.successors out)
+              Becoming.TransmissionCorrespondence.procedure ∧
+          ∀ s ∈ families,
+            (Becoming.TransmissionCorrespondence.successors out s).length = LearnedProcedureTransmission.capacity s
+Becoming.TransmissionCorrespondence.history_selects : Becoming.offspring
+      [LearnedProcedureTransmission.parentAfter true, LearnedProcedureTransmission.parentAfter false]
+      (Becoming.TransmissionCorrespondence.successors Becoming.TransmissionCorrespondence.historyOut)
+      Becoming.TransmissionCorrespondence.procedure =
+    2 ∧
+  (Becoming.total [LearnedProcedureTransmission.parentAfter true, LearnedProcedureTransmission.parentAfter false]
+        fun p =>
+        (Becoming.TransmissionCorrespondence.successors Becoming.TransmissionCorrespondence.historyOut p).length) =
+      3 ∧
+    Becoming.total [LearnedProcedureTransmission.parentAfter true, LearnedProcedureTransmission.parentAfter false]
+          Becoming.TransmissionCorrespondence.procedure =
+        1 ∧
+      Becoming.offspring [LearnedProcedureTransmission.parentAfter true, LearnedProcedureTransmission.parentAfter false]
+          (Becoming.TransmissionCorrespondence.successors Becoming.TransmissionCorrespondence.historyOut)
+          Becoming.TransmissionCorrespondence.procedure =
+        Becoming.selected
+          [LearnedProcedureTransmission.parentAfter true, LearnedProcedureTransmission.parentAfter false]
+          (Becoming.TransmissionCorrespondence.successors Becoming.TransmissionCorrespondence.historyOut)
+          Becoming.TransmissionCorrespondence.procedure

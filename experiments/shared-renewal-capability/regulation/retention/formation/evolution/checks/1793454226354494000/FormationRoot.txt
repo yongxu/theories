@@ -1,0 +1,10 @@
+'FormedSelection.trace_to_root' does not depend on any axioms
+'FormedSelection.trace_from_root' does not depend on any axioms
+'FormedSelection.trace_iff_root' does not depend on any axioms
+'FormedSelection.root_energy_ledger' depends on axioms: [propext, Quot.sound]
+'FormedSelection.root_three_unit_bootstrap' depends on axioms: [propext, Quot.sound]
+'FormedSelection.root_four_unit_mixed_bootstrap' depends on axioms: [propext, Quot.sound]
+'FormedSelection.root_formation_to_copy' does not depend on any axioms
+'FormedSelection.root_no_h_local_copy_before_resident_wear' depends on axioms: [propext]
+'FormedSelection.root_repaired_site_inheritance' does not depend on any axioms
+'FormedSelection.trace_append_iff' does not depend on any axioms

@@ -1,0 +1,21 @@
+import TransmissionCorrespondence
+#print axioms Becoming.TransmissionCorrespondence.kitWord
+#print axioms Becoming.TransmissionCorrespondence.pool
+#print axioms Becoming.TransmissionCorrespondence.attach
+#print axioms Becoming.TransmissionCorrespondence.countOf_replicate
+#print axioms Becoming.TransmissionCorrespondence.use_kitWord
+#print axioms Becoming.TransmissionCorrespondence.lineage_released_iff
+#print axioms Becoming.TransmissionCorrespondence.reconstruction_builds_longest_lineage
+#print axioms Becoming.TransmissionCorrespondence.Move
+#print axioms Becoming.TransmissionCorrespondence.process
+#print axioms Becoming.TransmissionCorrespondence.material_balanced
+#print axioms Becoming.TransmissionCorrespondence.support_balanced
+#print axioms Becoming.TransmissionCorrespondence.course_conserves
+#print axioms Becoming.TransmissionCorrespondence.procedure
+#print axioms Becoming.TransmissionCorrespondence.successors
+#print axioms Becoming.TransmissionCorrespondence.total_replicate
+#print axioms Becoming.TransmissionCorrespondence.faithful_procedure
+#print axioms Becoming.TransmissionCorrespondence.family_unchanged
+#print axioms Becoming.TransmissionCorrespondence.faithful_selects
+#print axioms Becoming.TransmissionCorrespondence.historyOut
+#print axioms Becoming.TransmissionCorrespondence.history_selects

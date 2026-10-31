@@ -1,0 +1,30 @@
+@Becoming.JudgingCorrespondence.mem_realizations : ∀ {laws : List (List Generative.WisdomResponseStructure.Mode)}
+  {law : List Generative.WisdomResponseStructure.Mode} {m : Generative.WisdomResponseStructure.Mode},
+  (law, m) ∈ Becoming.JudgingCorrespondence.realizations laws ↔ law ∈ laws ∧ m ∈ law
+Becoming.JudgingCorrespondence.judges_iff : ∀ (laws : List (List Generative.WisdomResponseStructure.Mode))
+  (judge : Generative.WisdomResponseStructure.State → Bool),
+  (∀ (law : List Generative.WisdomResponseStructure.Mode),
+      law ∈ laws →
+        ∀ (m : Generative.WisdomResponseStructure.Mode),
+          m ∈ law →
+            judge (Generative.WisdomResponseStructure.advance (m, false) 0) =
+              decide (Generative.WisdomFallibleJudgment.WithinThird law 0)) ↔
+    Becoming.Readout.Judges (Becoming.JudgingCorrespondence.realizations laws) Becoming.JudgingCorrespondence.endpoint
+      Becoming.JudgingCorrespondence.certificate judge
+Becoming.JudgingCorrespondence.endpoint_judge_iff : ∀ (laws : List (List Generative.WisdomResponseStructure.Mode)),
+  (∃ judge,
+      ∀ (law : List Generative.WisdomResponseStructure.Mode),
+        law ∈ laws →
+          ∀ (m : Generative.WisdomResponseStructure.Mode),
+            m ∈ law →
+              judge (Generative.WisdomResponseStructure.advance (m, false) 0) =
+                decide (Generative.WisdomFallibleJudgment.WithinThird law 0)) ↔
+    Becoming.Readout.LumpedOn (Becoming.JudgingCorrespondence.realizations laws) Becoming.JudgingCorrespondence.endpoint
+      Becoming.JudgingCorrespondence.certificate
+Becoming.JudgingCorrespondence.no_endpoint_only_prior_certificate_by_core : ¬∃ judge,
+    ∀ (law : List Generative.WisdomResponseStructure.Mode),
+      law ∈ [Generative.WisdomFallibleJudgment.uniformLaw, Generative.WisdomFallibleJudgment.biasedLaw] →
+        ∀ (m : Generative.WisdomResponseStructure.Mode),
+          m ∈ law →
+            judge (Generative.WisdomResponseStructure.advance (m, false) 0) =
+              decide (Generative.WisdomFallibleJudgment.WithinThird law 0)

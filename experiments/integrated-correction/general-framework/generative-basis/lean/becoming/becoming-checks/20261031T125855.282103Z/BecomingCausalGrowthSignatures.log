@@ -1,0 +1,528 @@
+@Becoming.CausalGrowth.links_le : ∀ {α : Type u_1} (O : Becoming.«际» α), Becoming.«则» (Becoming.CausalGrowth.links O) O
+@Becoming.CausalGrowth.link_of_reach : ∀ {α : Type u_1} {R : Becoming.«际» α} {x y : α},
+  Becoming.CausalGrowth.links (Becoming.«及» R) x y → R x y
+@Becoming.CausalGrowth.reach_links_le : ∀ {α : Type u_1} {O : Becoming.«际» α},
+  (∀ {i j k : α}, O i j → O j k → O i k) → ∀ {i j : α}, Becoming.«及» (Becoming.CausalGrowth.links O) i j → O i j
+@Becoming.CausalGrowth.links_least : ∀ {α : Type u_1} {O R : Becoming.«际» α},
+  (∀ (i j : α), Becoming.«及» R i j ↔ O i j) → ∀ {i j : α}, Becoming.CausalGrowth.links O i j → R i j
+@Becoming.CausalGrowth.links_of_iff : ∀ {α : Type u_1} {O O' : Becoming.«际» α},
+  (∀ (i j : α), O i j ↔ O' i j) → ∀ {i j : α}, Becoming.CausalGrowth.links O i j → Becoming.CausalGrowth.links O' i j
+@Becoming.CausalGrowth.reach_links_within : ∀ {O : Becoming.«际» Nat} [(i j : Nat) → Decidable (O i j)],
+  (∀ {i j : Nat}, O i j → i < j) →
+    ∀ (n : Nat) {i j : Nat}, j ≤ i + n → O i j → Becoming.«及» (Becoming.CausalGrowth.links O) i j
+@Becoming.CausalGrowth.reach_links : ∀ {O : Becoming.«际» Nat} [(i j : Nat) → Decidable (O i j)],
+  (∀ {i j : Nat}, O i j → i < j) → ∀ {i j : Nat}, O i j → Becoming.«及» (Becoming.CausalGrowth.links O) i j
+@Becoming.CausalGrowth.reach_links_iff : ∀ {O : Becoming.«际» Nat} [(i j : Nat) → Decidable (O i j)],
+  (∀ {i j k : Nat}, O i j → O j k → O i k) →
+    (∀ {i j : Nat}, O i j → i < j) → ∀ {i j : Nat}, Becoming.«及» (Becoming.CausalGrowth.links O) i j ↔ O i j
+@Becoming.CausalGrowth.nat_reach_links : ∀ {i j : Nat},
+  i < j → Becoming.«及» (Becoming.CausalGrowth.links fun a b => a < b) i j
+Becoming.CausalGrowth.path_not_reach_of_links : Becoming.«及» (Becoming.CausalGrowth.links Becoming.CausalGrowth.path) 0
+    2 ∧
+  ¬Becoming.CausalGrowth.path 0 2
+Becoming.CausalGrowth.searchBelow_or : ∀ (p : Nat → Prop),
+  (∀ (z : Nat), p z ∨ ¬p z) → ∀ (n : Nat), (∃ z, z < n ∧ p z) ∨ ¬∃ z, z < n ∧ p z
+@Becoming.CausalGrowth.reach_links_within_of_decided : ∀ {O : Becoming.«际» Nat},
+  (∀ (i z j : Nat), O i z ∧ O z j ∨ ¬(O i z ∧ O z j)) →
+    (∀ {i j : Nat}, O i j → i < j) →
+      ∀ (n : Nat) {i j : Nat}, j ≤ i + n → O i j → Becoming.«及» (Becoming.CausalGrowth.links O) i j
+@Becoming.CausalGrowth.reach_links_of_decided : ∀ {O : Becoming.«际» Nat},
+  (∀ (i z j : Nat), O i z ∧ O z j ∨ ¬(O i z ∧ O z j)) →
+    (∀ {i j : Nat}, O i j → i < j) → ∀ {i j : Nat}, O i j → Becoming.«及» (Becoming.CausalGrowth.links O) i j
+Becoming.CausalGrowth.OmegaPlusOne.prec_irrefl : ∀ (x : Option Nat), ¬Becoming.CausalGrowth.OmegaPlusOne.prec x x
+@Becoming.CausalGrowth.OmegaPlusOne.prec_trans : ∀ {x y z : Option Nat},
+  Becoming.CausalGrowth.OmegaPlusOne.prec x y →
+    Becoming.CausalGrowth.OmegaPlusOne.prec y z → Becoming.CausalGrowth.OmegaPlusOne.prec x z
+Becoming.CausalGrowth.OmegaPlusOne.between : ∀ (k : Nat),
+  Becoming.CausalGrowth.OmegaPlusOne.prec (some 0) (some (k + 1)) ∧
+    Becoming.CausalGrowth.OmegaPlusOne.prec (some (k + 1)) none
+Becoming.CausalGrowth.OmegaPlusOne.no_link_into_top : ∀ (x : Option Nat),
+  ¬Becoming.CausalGrowth.links Becoming.CausalGrowth.OmegaPlusOne.prec x none
+@Becoming.CausalGrowth.OmegaPlusOne.link_lands : ∀ {x z : Option Nat},
+  Becoming.CausalGrowth.links Becoming.CausalGrowth.OmegaPlusOne.prec x z → ∃ b, z = some b
+@Becoming.CausalGrowth.OmegaPlusOne.reach_lands : ∀ {x z : Option Nat},
+  Becoming.«及» (Becoming.CausalGrowth.links Becoming.CausalGrowth.OmegaPlusOne.prec) x z → ∃ b, z = some b
+Becoming.CausalGrowth.OmegaPlusOne.not_reach_top : Becoming.CausalGrowth.OmegaPlusOne.prec (some 0) none ∧
+  ¬Becoming.«及» (Becoming.CausalGrowth.links Becoming.CausalGrowth.OmegaPlusOne.prec) (some 0) none
+@Becoming.CausalGrowth.Causet.Ordered.irrefl : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered → ∀ (i : Nat), ¬c.prec i i
+@Becoming.CausalGrowth.labelled_of_reach : ∀ {O : Becoming.«际» Nat},
+  (∀ {i j : Nat}, O i j → i < j) → ∀ {i j : Nat}, Becoming.«及» O i j → i < j
+@Becoming.CausalGrowth.Causet.Ordered.acyclic : ∀ {c : Becoming.CausalGrowth.Causet}, c.Ordered → Becoming.«无环» c.prec
+@Becoming.CausalGrowth.ordered_reach_links_iff : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ [(i j : Nat) → Decidable (c.prec i j)] {i j : Nat},
+      Becoming.«及» (Becoming.CausalGrowth.links c.prec) i j ↔ c.prec i j
+Becoming.CausalGrowth.empty_ordered : Becoming.CausalGrowth.empty.Ordered
+@Becoming.CausalGrowth.birth_ordered : ∀ {c : Becoming.CausalGrowth.Causet} {D : Nat → Prop},
+  c.Ordered → Becoming.CausalGrowth.Stem c D → (Becoming.CausalGrowth.birth c D).Ordered
+@Becoming.CausalGrowth.birth_holds : ∀ {c : Becoming.CausalGrowth.Causet} {D : Nat → Prop} {i j : Nat},
+  j < c.size → ((Becoming.CausalGrowth.birth c D).prec i j ↔ c.prec i j)
+@Becoming.CausalGrowth.birth_maximal : ∀ {c : Becoming.CausalGrowth.Causet} {D : Nat → Prop},
+  c.Ordered → Becoming.CausalGrowth.Stem c D → ∀ (j : Nat), ¬(Becoming.CausalGrowth.birth c D).prec c.size j
+@Becoming.CausalGrowth.step_holdsPast : ∀ {c c' : Becoming.CausalGrowth.Causet} {D : Nat → Prop},
+  Becoming.CausalGrowth.process.step c D c' → Becoming.CausalGrowth.HoldsPast c c'
+@Becoming.CausalGrowth.possibleHeld_iff : ∀ {X : Type} {adm : Becoming.CausalGrowth.Causet → X → Prop}
+  {s : Becoming.CausalGrowth.Causet} {x : X},
+  Becoming.Reaching.PossibleHeld Becoming.CausalGrowth.process Becoming.CausalGrowth.HoldsPast adm s x ↔
+    Becoming.Reaching.Possible Becoming.CausalGrowth.process adm s x
+@Becoming.CausalGrowth.Stem.after : ∀ {c : Becoming.CausalGrowth.Causet} {D D' : Nat → Prop},
+  Becoming.CausalGrowth.Stem c D → Becoming.CausalGrowth.Stem (Becoming.CausalGrowth.birth c D') D
+@Becoming.CausalGrowth.stem_all : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered → Becoming.CausalGrowth.Stem c (Becoming.CausalGrowth.all c)
+@Becoming.CausalGrowth.not_stem_all_birth : ∀ {c : Becoming.CausalGrowth.Causet} {D : Nat → Prop},
+  ¬Becoming.CausalGrowth.Stem c (Becoming.CausalGrowth.all (Becoming.CausalGrowth.birth c D))
+@Becoming.CausalGrowth.ordered_of_run : ∀ {r : Becoming.Run Becoming.CausalGrowth.process},
+  (r.state 0).Ordered → ∀ (t : Nat), (r.state t).Ordered
+Becoming.CausalGrowth.keepsWidening : ∀ (r : Becoming.Run Becoming.CausalGrowth.process),
+  (r.state 0).Ordered → Becoming.Reaching.KeepsWidening fun t => Becoming.CausalGrowth.Stem (r.state t)
+Becoming.CausalGrowth.stem_possible_from_start : ∀ (r : Becoming.Run Becoming.CausalGrowth.process) (n : Nat)
+  {D : Nat → Prop},
+  Becoming.CausalGrowth.Stem (r.state n) D →
+    Becoming.Reaching.Possible Becoming.CausalGrowth.process Becoming.CausalGrowth.Stem (r.state 0) D
+Becoming.CausalGrowth.Undecided.third_ordered : ∀ (P : Prop), (Becoming.CausalGrowth.Undecided.third P).Ordered
+@Becoming.CausalGrowth.Undecided.third_not_from_two : ∀ {P : Prop} {y : Nat},
+  ¬(Becoming.CausalGrowth.Undecided.third P).prec 2 y
+@Becoming.CausalGrowth.Undecided.third_no_reach_from_two : ∀ {P : Prop} {y : Nat},
+  ¬Becoming.«及» (Becoming.CausalGrowth.links (Becoming.CausalGrowth.Undecided.third P).prec) 2 y
+@Becoming.CausalGrowth.Undecided.em_of_reach_third : ∀ {P : Prop},
+  Becoming.«及» (Becoming.CausalGrowth.links (Becoming.CausalGrowth.Undecided.third P).prec) 0 2 → P ∨ ¬P
+Becoming.CausalGrowth.reach_links_all_iff_em : (∀ (c : Becoming.CausalGrowth.Causet),
+    c.Ordered → ∀ (i j : Nat), c.prec i j → Becoming.«及» (Becoming.CausalGrowth.links c.prec) i j) ↔
+  ∀ (P : Prop), P ∨ ¬P
+@Becoming.CausalGrowth.stem_principal : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered → ∀ {j : Nat}, j < c.size → Becoming.CausalGrowth.Stem c (Becoming.CausalGrowth.principal c j)
+@Becoming.CausalGrowth.stems_included_iff : ∀ {c c' : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    c'.Ordered →
+      c.size = c'.size →
+        ((∀ (D : Nat → Prop), Becoming.CausalGrowth.Stem c D → Becoming.CausalGrowth.Stem c' D) ↔
+          ∀ (i j : Nat), c'.prec i j → c.prec i j)
+@Becoming.CausalGrowth.size_of_run : ∀ {r : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty → ∀ (t : Nat), (r.state t).size = t
+@Becoming.CausalGrowth.ordered_of_empty : ∀ {r : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty → ∀ (t : Nat), (r.state t).Ordered
+@Becoming.CausalGrowth.rangeIncludes_iff : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    r'.state 0 = Becoming.CausalGrowth.empty →
+      (Becoming.Run.RangeIncludes Becoming.CausalGrowth.Stem r r' ↔
+        ∀ (t i j : Nat), (r.state t).prec i j → (r'.state t).prec i j)
+@Becoming.CausalGrowth.rangeIncludes_strict_iff : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    r'.state 0 = Becoming.CausalGrowth.empty →
+      (Becoming.Run.RangeIncludes Becoming.CausalGrowth.Stem r r' ∧
+          ¬Becoming.Run.RangeIncludes Becoming.CausalGrowth.Stem r' r ↔
+        (∀ (t i j : Nat), (r.state t).prec i j → (r'.state t).prec i j) ∧
+          ¬∀ (t i j : Nat), (r'.state t).prec i j → (r.state t).prec i j)
+@Becoming.CausalGrowth.rangeExceeds_of_pair : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    r'.state 0 = Becoming.CausalGrowth.empty →
+      ∀ {t i j : Nat},
+        (r'.state t).prec i j → ¬(r.state t).prec i j → Becoming.Run.RangeExceeds Becoming.CausalGrowth.Stem r r'
+@Becoming.CausalGrowth.not_included_of_rangeExceeds : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    r'.state 0 = Becoming.CausalGrowth.empty →
+      Becoming.Run.RangeExceeds Becoming.CausalGrowth.Stem r r' →
+        ∃ t, ¬∀ (i j : Nat), (r'.state t).prec i j → (r.state t).prec i j
+@Becoming.CausalGrowth.rangeWidens_of : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    r'.state 0 = Becoming.CausalGrowth.empty →
+      (∀ (t i j : Nat), (r.state t).prec i j → (r'.state t).prec i j) →
+        ∀ {t i j : Nat},
+          (r'.state t).prec i j → ¬(r.state t).prec i j → Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem r r'
+@Becoming.CausalGrowth.rangeWidens_strict : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    r'.state 0 = Becoming.CausalGrowth.empty →
+      Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem r r' →
+        (∀ (t i j : Nat), (r.state t).prec i j → (r'.state t).prec i j) ∧
+          ¬∀ (t i j : Nat), (r'.state t).prec i j → (r.state t).prec i j
+@Becoming.CausalGrowth.pair_of_not_included : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r'.state 0 = Becoming.CausalGrowth.empty →
+    ∀ {t : Nat} [(i j : Nat) → Decidable ((r.state t).prec i j)] [(i j : Nat) → Decidable ((r'.state t).prec i j)],
+      (¬∀ (i j : Nat), (r'.state t).prec i j → (r.state t).prec i j) →
+        ∃ i j, (r'.state t).prec i j ∧ ¬(r.state t).prec i j
+@Becoming.CausalGrowth.rangeExceeds_iff_pair : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    r'.state 0 = Becoming.CausalGrowth.empty →
+      ∀ [(t i j : Nat) → Decidable ((r.state t).prec i j)] [(t i j : Nat) → Decidable ((r'.state t).prec i j)],
+        Becoming.Run.RangeExceeds Becoming.CausalGrowth.Stem r r' ↔
+          ∃ t i j, (r'.state t).prec i j ∧ ¬(r.state t).prec i j
+@Becoming.CausalGrowth.continuation_of_rangeIncludes : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    r'.state 0 = Becoming.CausalGrowth.empty →
+      Becoming.Run.RangeIncludes Becoming.CausalGrowth.Stem r r' →
+        ∀ (E : Becoming.«际» Nat) (t : Nat),
+          Becoming.«则» (Becoming.«相续» (r.state t).prec E) (Becoming.«相续» (r'.state t).prec E)
+@Becoming.CausalGrowth.continuation_one_iff : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered → ∀ {i j : Nat}, Becoming.«相续» c.prec Becoming.«一» i j ↔ c.prec i j
+@Becoming.CausalGrowth.continuation_links_one_iff : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ [(i j : Nat) → Decidable (c.prec i j)] {i j : Nat},
+      Becoming.«相续» (Becoming.CausalGrowth.links c.prec) Becoming.«一» i j ↔ c.prec i j
+@Becoming.CausalGrowth.continuation_links_one_of_rangeIncludes : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    r'.state 0 = Becoming.CausalGrowth.empty →
+      ∀ [(t i j : Nat) → Decidable ((r.state t).prec i j)] [(t i j : Nat) → Decidable ((r'.state t).prec i j)],
+        Becoming.Run.RangeIncludes Becoming.CausalGrowth.Stem r r' →
+          ∀ (t : Nat),
+            Becoming.«则» (Becoming.«相续» (Becoming.CausalGrowth.links (r.state t).prec) Becoming.«一»)
+              (Becoming.«相续» (Becoming.CausalGrowth.links (r'.state t).prec) Becoming.«一»)
+@Becoming.CausalGrowth.prec_iff_of_both : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    r'.state 0 = Becoming.CausalGrowth.empty →
+      Becoming.Run.RangeIncludes Becoming.CausalGrowth.Stem r r' →
+        (∀ (t : Nat),
+            Becoming.«则» (Becoming.«相续» (r'.state t).prec Becoming.«一») (Becoming.«相续» (r.state t).prec Becoming.«一»)) →
+          ∀ (t i j : Nat), (r.state t).prec i j ↔ (r'.state t).prec i j
+@Becoming.CausalGrowth.not_widens_and_continues : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    r'.state 0 = Becoming.CausalGrowth.empty →
+      Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem r r' →
+        ¬∀ (t : Nat),
+            Becoming.«则» (Becoming.«相续» (r'.state t).prec Becoming.«一») (Becoming.«相续» (r.state t).prec Becoming.«一»)
+Becoming.CausalGrowth.grown_size : ∀ (past : Nat → Nat → Prop) (t : Nat), (Becoming.CausalGrowth.grown past t).size = t
+Becoming.CausalGrowth.grown_prec_iff : ∀ (past : Nat → Nat → Prop) (t : Nat) {i j : Nat},
+  (Becoming.CausalGrowth.grown past t).prec i j ↔ j < t ∧ past j i
+Becoming.CausalGrowth.course_start : ∀ (past : Nat → Nat → Prop)
+  (stems : ∀ (t : Nat), Becoming.CausalGrowth.Stem (Becoming.CausalGrowth.grown past t) (past t)),
+  (Becoming.CausalGrowth.course past stems).state 0 = Becoming.CausalGrowth.empty
+Becoming.CausalGrowth.antichain_prec : ∀ (t i j : Nat), ¬(Becoming.CausalGrowth.antichain.state t).prec i j
+Becoming.CausalGrowth.chain_prec_iff : ∀ (t : Nat) {i j : Nat},
+  (Becoming.CausalGrowth.chain.state t).prec i j ↔ j < t ∧ i < j
+@Becoming.CausalGrowth.antichain_rangeIncludes : ∀ {r : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    Becoming.Run.RangeIncludes Becoming.CausalGrowth.Stem Becoming.CausalGrowth.antichain r
+@Becoming.CausalGrowth.antichain_rangeWidens : ∀ {r : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    ∀ {t i j : Nat},
+      (r.state t).prec i j → Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem Becoming.CausalGrowth.antichain r
+Becoming.CausalGrowth.antichain_begins_ends : ∀ (E : Becoming.«际» Nat) (t x : Nat),
+  Becoming.«生» (Becoming.CausalGrowth.antichain.state t).prec E x ∧
+    Becoming.«亡» (Becoming.CausalGrowth.antichain.state t).prec E x ∧
+      Becoming.«生» (Becoming.CausalGrowth.links (Becoming.CausalGrowth.antichain.state t).prec) E x ∧
+        Becoming.«亡» (Becoming.CausalGrowth.links (Becoming.CausalGrowth.antichain.state t).prec) E x
+@Becoming.CausalGrowth.rangeIncludes_chain : ∀ {r : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    Becoming.Run.RangeIncludes Becoming.CausalGrowth.Stem r Becoming.CausalGrowth.chain
+@Becoming.CausalGrowth.rangeWidens_chain : ∀ {r : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    ∀ {t i j : Nat},
+      j < t →
+        i < j →
+          ¬(r.state t).prec i j → Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem r Becoming.CausalGrowth.chain
+@Becoming.CausalGrowth.continuation_le_chain : ∀ {r : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    ∀ (E : Becoming.«际» Nat) (t : Nat),
+      Becoming.«则» (Becoming.«相续» (r.state t).prec E) (Becoming.«相续» (Becoming.CausalGrowth.chain.state t).prec E)
+@Becoming.CausalGrowth.chain_link : ∀ {t k : Nat},
+  k + 1 < t → Becoming.CausalGrowth.links (Becoming.CausalGrowth.chain.state t).prec k (k + 1)
+@Becoming.CausalGrowth.chain_abides : ∀ {t k : Nat},
+  k + 2 < t → Becoming.«住» (Becoming.CausalGrowth.links (Becoming.CausalGrowth.chain.state t).prec) Becoming.«一» (k + 1)
+Becoming.CausalGrowth.chain_last_ends : ∀ (t : Nat),
+  Becoming.«亡» (Becoming.CausalGrowth.chain.state (t + 1)).prec Becoming.«一» t ∧
+    Becoming.«亡» (Becoming.CausalGrowth.links (Becoming.CausalGrowth.chain.state (t + 1)).prec) Becoming.«一» t
+@Becoming.CausalGrowth.stems_of_two : ∀ {past : Nat → Nat → Prop},
+  (∀ {t i : Nat}, past t i → t = 2 ∧ i < 2) →
+    ∀ (t : Nat), Becoming.CausalGrowth.Stem (Becoming.CausalGrowth.grown past t) (past t)
+Becoming.CausalGrowth.Undecided.thirdPast_stems : ∀ (P : Prop) (t : Nat),
+  Becoming.CausalGrowth.Stem (Becoming.CausalGrowth.grown (Becoming.CausalGrowth.Undecided.thirdPast P) t)
+    (Becoming.CausalGrowth.Undecided.thirdPast P t)
+Becoming.CausalGrowth.Undecided.thirdCourse_prec_iff : ∀ (P : Prop) {i j : Nat},
+  ((Becoming.CausalGrowth.Undecided.thirdCourse P).state 3).prec i j ↔
+    (Becoming.CausalGrowth.Undecided.third P).prec i j
+@Becoming.CausalGrowth.Undecided.onlyIf_two : ∀ {P : Prop} {t i : Nat},
+  Becoming.CausalGrowth.Undecided.onlyIfPast P t i → t = 2 ∧ i < 2
+@Becoming.CausalGrowth.Undecided.onlyIf_prec : ∀ {P : Prop} {t i j : Nat},
+  ((Becoming.CausalGrowth.Undecided.onlyIf P).state t).prec i j → P
+@Becoming.CausalGrowth.Undecided.antichain_exceeds_onlyIf : ∀ {P : Prop},
+  ¬¬P →
+    Becoming.Run.RangeExceeds Becoming.CausalGrowth.Stem Becoming.CausalGrowth.antichain
+      (Becoming.CausalGrowth.Undecided.onlyIf P)
+Becoming.CausalGrowth.Undecided.notNot_em : ∀ (P : Prop), ¬¬(P ∨ ¬P)
+Becoming.CausalGrowth.reach_links_courses_iff_em : (∀ (r : Becoming.Run Becoming.CausalGrowth.process),
+    r.state 0 = Becoming.CausalGrowth.empty →
+      ∀ (t i j : Nat), (r.state t).prec i j → Becoming.«及» (Becoming.CausalGrowth.links (r.state t).prec) i j) ↔
+  ∀ (P : Prop), P ∨ ¬P
+Becoming.CausalGrowth.em_of_pair_converse : (∀ (r r' : Becoming.Run Becoming.CausalGrowth.process),
+    r.state 0 = Becoming.CausalGrowth.empty →
+      r'.state 0 = Becoming.CausalGrowth.empty →
+        Becoming.Run.RangeExceeds Becoming.CausalGrowth.Stem r r' →
+          ∃ t i j, (r'.state t).prec i j ∧ ¬(r.state t).prec i j) →
+  ∀ (P : Prop), P ∨ ¬P
+Becoming.CausalGrowth.em_of_widening_pair_converse : (∀ (r r' : Becoming.Run Becoming.CausalGrowth.process),
+    r.state 0 = Becoming.CausalGrowth.empty →
+      r'.state 0 = Becoming.CausalGrowth.empty →
+        Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem r r' →
+          ∃ t i j, (r'.state t).prec i j ∧ ¬(r.state t).prec i j) →
+  ∀ (P : Prop), P ∨ ¬P
+Becoming.CausalGrowth.pair_converse_of_em : (∀ (P : Prop), P ∨ ¬P) →
+  ∀ (r r' : Becoming.Run Becoming.CausalGrowth.process),
+    r.state 0 = Becoming.CausalGrowth.empty →
+      r'.state 0 = Becoming.CausalGrowth.empty →
+        Becoming.Run.RangeExceeds Becoming.CausalGrowth.Stem r r' →
+          ∃ t i j, (r'.state t).prec i j ∧ ¬(r.state t).prec i j
+Becoming.CausalGrowth.pair_converse_iff_em : (∀ (r r' : Becoming.Run Becoming.CausalGrowth.process),
+    r.state 0 = Becoming.CausalGrowth.empty →
+      r'.state 0 = Becoming.CausalGrowth.empty →
+        Becoming.Run.RangeExceeds Becoming.CausalGrowth.Stem r r' →
+          ∃ t i j, (r'.state t).prec i j ∧ ¬(r.state t).prec i j) ↔
+  ∀ (P : Prop), P ∨ ¬P
+@Becoming.CausalGrowth.rangeIncludes_continuing_iff : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    r'.state 0 = Becoming.CausalGrowth.empty →
+      (Becoming.Run.RangeIncludes Becoming.CausalGrowth.continuing r r' ↔
+        Becoming.Run.RangeIncludes Becoming.CausalGrowth.Stem r' r)
+@Becoming.CausalGrowth.rangeWidens_continuing_iff : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    r'.state 0 = Becoming.CausalGrowth.empty →
+      (Becoming.Run.RangeWidens Becoming.CausalGrowth.continuing r r' ↔
+        (∀ (t i j : Nat), (r'.state t).prec i j → (r.state t).prec i j) ∧
+          ∃ t i j, (r.state t).prec i j ∧ ¬(r'.state t).prec i j)
+@Becoming.CausalGrowth.rangeWidens_stems_of_continuing : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    r'.state 0 = Becoming.CausalGrowth.empty →
+      Becoming.Run.RangeWidens Becoming.CausalGrowth.continuing r r' →
+        Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem r' r
+@Becoming.CausalGrowth.chain_rangeWidens_continuing : ∀ {r : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    ∀ {t i j : Nat},
+      j < t →
+        i < j →
+          ¬(r.state t).prec i j →
+            Becoming.Run.RangeWidens Becoming.CausalGrowth.continuing Becoming.CausalGrowth.chain r
+Becoming.CausalGrowth.em_of_stems_converse : (∀ (r r' : Becoming.Run Becoming.CausalGrowth.process),
+    r.state 0 = Becoming.CausalGrowth.empty →
+      r'.state 0 = Becoming.CausalGrowth.empty →
+        Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem r r' →
+          Becoming.Run.RangeWidens Becoming.CausalGrowth.continuing r' r) →
+  ∀ (P : Prop), P ∨ ¬P
+Becoming.CausalGrowth.stems_converse_of_em : (∀ (P : Prop), P ∨ ¬P) →
+  ∀ (r r' : Becoming.Run Becoming.CausalGrowth.process),
+    r.state 0 = Becoming.CausalGrowth.empty →
+      r'.state 0 = Becoming.CausalGrowth.empty →
+        Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem r r' →
+          Becoming.Run.RangeWidens Becoming.CausalGrowth.continuing r' r
+Becoming.CausalGrowth.stems_converse_iff_em : (∀ (r r' : Becoming.Run Becoming.CausalGrowth.process),
+    r.state 0 = Becoming.CausalGrowth.empty →
+      r'.state 0 = Becoming.CausalGrowth.empty →
+        Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem r r' →
+          Becoming.Run.RangeWidens Becoming.CausalGrowth.continuing r' r) ↔
+  ∀ (P : Prop), P ∨ ¬P
+Becoming.CausalGrowth.no_order_contains_both : ¬∃ above,
+    (∀ (r : Becoming.Run Becoming.CausalGrowth.process), ¬above r r) ∧
+      (∀ {r r' r'' : Becoming.Run Becoming.CausalGrowth.process}, above r r' → above r' r'' → above r r'') ∧
+        (∀ (r r' : Becoming.Run Becoming.CausalGrowth.process),
+            Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem r r' → above r r') ∧
+          ∀ (r r' : Becoming.Run Becoming.CausalGrowth.process),
+            Becoming.Run.RangeWidens Becoming.CausalGrowth.continuing r r' → above r r'
+@Becoming.CausalGrowth.not_above_antichain : ∀ {r : Becoming.Run Becoming.CausalGrowth.process}
+  (above : Becoming.Run Becoming.CausalGrowth.process → Becoming.Run Becoming.CausalGrowth.process → Prop),
+  (∀ (r r' : Becoming.Run Becoming.CausalGrowth.process),
+      Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem r r' → ¬above r' r) →
+    r.state 0 = Becoming.CausalGrowth.empty →
+      ∀ {t i j : Nat}, (r.state t).prec i j → ¬above r Becoming.CausalGrowth.antichain
+@Becoming.CausalGrowth.chain_not_above : ∀ {r : Becoming.Run Becoming.CausalGrowth.process}
+  (above : Becoming.Run Becoming.CausalGrowth.process → Becoming.Run Becoming.CausalGrowth.process → Prop),
+  (∀ (r r' : Becoming.Run Becoming.CausalGrowth.process),
+      Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem r r' → ¬above r' r) →
+    r.state 0 = Becoming.CausalGrowth.empty →
+      ∀ {t i j : Nat}, j < t → i < j → ¬(r.state t).prec i j → ¬above Becoming.CausalGrowth.chain r
+@Becoming.CausalGrowth.not_rangeWidens_formsOrContinues : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    r'.state 0 = Becoming.CausalGrowth.empty → ¬Becoming.Run.RangeWidens Becoming.CausalGrowth.formsOrContinues r r'
+@Becoming.CausalGrowth.mixed_of_pair : ∀ {r r' : Becoming.Run Becoming.CausalGrowth.process},
+  r.state 0 = Becoming.CausalGrowth.empty →
+    r'.state 0 = Becoming.CausalGrowth.empty →
+      ∀ {t i j : Nat},
+        (r'.state t).prec i j →
+          ¬(r.state t).prec i j →
+            Becoming.Run.RangeExceeds Becoming.CausalGrowth.formsOrContinues r r' ∧
+              Becoming.Run.RangeExceeds Becoming.CausalGrowth.formsOrContinues r' r
+Becoming.CausalGrowth.Starts.grownFrom_size : ∀ (c : Becoming.CausalGrowth.Causet) (past : Nat → Nat → Prop) (t : Nat),
+  (Becoming.CausalGrowth.Starts.grownFrom c past t).size = c.size + t
+Becoming.CausalGrowth.Starts.grownFrom_prec_iff : ∀ (c : Becoming.CausalGrowth.Causet) (past : Nat → Nat → Prop)
+  (t : Nat) {i j : Nat},
+  (Becoming.CausalGrowth.Starts.grownFrom c past t).prec i j ↔ c.prec i j ∨ ∃ k, k < t ∧ j = c.size + k ∧ past k i
+Becoming.CausalGrowth.Starts.grownFrom_empty_prec : ∀ (c : Becoming.CausalGrowth.Causet) (t : Nat) {i j : Nat},
+  (Becoming.CausalGrowth.Starts.grownFrom c (fun x x_1 => False) t).prec i j ↔ c.prec i j
+Becoming.CausalGrowth.Starts.fromOne_prec : ∀ (t : Nat) {i j : Nat},
+  ¬(Becoming.CausalGrowth.Starts.fromOne.state t).prec i j
+Becoming.CausalGrowth.Starts.fromOne_size : ∀ (t : Nat), (Becoming.CausalGrowth.Starts.fromOne.state t).size = 1 + t
+@Becoming.CausalGrowth.Starts.fromOne_stem_of_antichain : ∀ {t : Nat} {D : Nat → Prop},
+  Becoming.CausalGrowth.Stem (Becoming.CausalGrowth.antichain.state t) D →
+    Becoming.CausalGrowth.Stem (Becoming.CausalGrowth.Starts.fromOne.state t) D
+Becoming.CausalGrowth.Starts.fromOne_stem_zero : Becoming.CausalGrowth.Stem
+  (Becoming.CausalGrowth.Starts.fromOne.state 0) fun x => x = 0
+Becoming.CausalGrowth.Starts.not_stem_antichain_zero : ¬Becoming.CausalGrowth.Stem
+    (Becoming.CausalGrowth.antichain.state 0) fun x => x = 0
+Becoming.CausalGrowth.Starts.fromOne_widens : Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem
+  Becoming.CausalGrowth.Starts.fromOne Becoming.CausalGrowth.antichain
+Becoming.CausalGrowth.Starts.antichain_not_continuing : ∀ (t : Nat) (p : Nat × Nat),
+  ¬Becoming.CausalGrowth.continuing (Becoming.CausalGrowth.antichain.state t) p
+Becoming.CausalGrowth.Starts.fromOne_widens_formsOrContinues : Becoming.Run.RangeWidens
+  Becoming.CausalGrowth.formsOrContinues Becoming.CausalGrowth.Starts.fromOne Becoming.CausalGrowth.antichain
+Becoming.CausalGrowth.Starts.not_rangeWidens_formsOrContinues_needs_starts : ¬∀
+    (r r' : Becoming.Run Becoming.CausalGrowth.process),
+    ¬Becoming.Run.RangeWidens Becoming.CausalGrowth.formsOrContinues r r'
+Becoming.CausalGrowth.Starts.rangeIncludes_continuing_iff_needs_starts : Becoming.Run.RangeIncludes
+    Becoming.CausalGrowth.continuing Becoming.CausalGrowth.Starts.fromOne Becoming.CausalGrowth.antichain ∧
+  ¬Becoming.Run.RangeIncludes Becoming.CausalGrowth.Stem Becoming.CausalGrowth.antichain
+      Becoming.CausalGrowth.Starts.fromOne
+Becoming.CausalGrowth.Starts.not_widens_and_continues_needs_starts : Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem
+    Becoming.CausalGrowth.Starts.fromOne Becoming.CausalGrowth.antichain ∧
+  ∀ (t : Nat),
+    Becoming.«则» (Becoming.«相续» (Becoming.CausalGrowth.antichain.state t).prec Becoming.«一»)
+      (Becoming.«相续» (Becoming.CausalGrowth.Starts.fromOne.state t).prec Becoming.«一»)
+Becoming.CausalGrowth.Starts.fromTwo_prec_iff : ∀ (t : Nat) {i j : Nat},
+  (Becoming.CausalGrowth.Starts.fromTwo.state t).prec i j ↔ i = 0 ∧ j = 1
+Becoming.CausalGrowth.Starts.onePast_stems : ∀ (t : Nat),
+  Becoming.CausalGrowth.Stem (Becoming.CausalGrowth.grown Becoming.CausalGrowth.Starts.onePast t)
+    (Becoming.CausalGrowth.Starts.onePast t)
+@Becoming.CausalGrowth.Starts.oneAbove_prec : ∀ {t i j : Nat},
+  (Becoming.CausalGrowth.Starts.oneAbove.state t).prec i j → i = 0 ∧ j = 1
+Becoming.CausalGrowth.Starts.mixed_of_pair_needs_starts : (Becoming.CausalGrowth.Starts.fromTwo.state 0).prec 0 1 ∧
+  ¬(Becoming.CausalGrowth.Starts.oneAbove.state 0).prec 0 1 ∧
+    ¬Becoming.Run.RangeExceeds Becoming.CausalGrowth.formsOrContinues Becoming.CausalGrowth.Starts.oneAbove
+        Becoming.CausalGrowth.Starts.fromTwo
+Becoming.CausalGrowth.Starts.fromTwo_stem_all : Becoming.CausalGrowth.Stem
+  (Becoming.CausalGrowth.Starts.fromTwo.state 0) fun x => x < 2
+Becoming.CausalGrowth.Starts.not_stem_antichain_all : ¬Becoming.CausalGrowth.Stem
+    (Becoming.CausalGrowth.antichain.state 0) fun x => x < 2
+Becoming.CausalGrowth.Starts.not_above_antichain_needs_start : ∃ above,
+  (∀ (r r' : Becoming.Run Becoming.CausalGrowth.process),
+      Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem r r' → ¬above r' r) ∧
+    (Becoming.CausalGrowth.Starts.fromTwo.state 0).prec 0 1 ∧
+      above Becoming.CausalGrowth.Starts.fromTwo Becoming.CausalGrowth.antichain
+Becoming.CausalGrowth.Starts.chainFromOne_prec_iff : ∀ (t : Nat) {i j : Nat},
+  (Becoming.CausalGrowth.Starts.grownFrom Becoming.CausalGrowth.Starts.one Becoming.CausalGrowth.Starts.chainFromOnePast
+          t).prec
+      i j ↔
+    ∃ k, k < t ∧ j = 1 + k ∧ i < 1 + k
+@Becoming.CausalGrowth.Starts.chainFromOne_labelled : ∀ {t i j : Nat},
+  (Becoming.CausalGrowth.Starts.grownFrom Becoming.CausalGrowth.Starts.one Becoming.CausalGrowth.Starts.chainFromOnePast
+          t).prec
+      i j →
+    i < j
+Becoming.CausalGrowth.Starts.not_continuing_chain_one : ¬Becoming.CausalGrowth.continuing
+    (Becoming.CausalGrowth.chain.state 1) (0, 1)
+Becoming.CausalGrowth.Starts.rangeWidens_stems_of_continuing_needs_starts : Becoming.Run.RangeWidens
+    Becoming.CausalGrowth.continuing Becoming.CausalGrowth.Starts.chainFromOne Becoming.CausalGrowth.chain ∧
+  ¬Becoming.Run.RangeIncludes Becoming.CausalGrowth.Stem Becoming.CausalGrowth.chain
+      Becoming.CausalGrowth.Starts.chainFromOne
+Becoming.CausalGrowth.Starts.prec_iff_of_both_needs_starts : Becoming.Run.RangeIncludes Becoming.CausalGrowth.Stem
+    Becoming.CausalGrowth.Starts.chainFromOne Becoming.CausalGrowth.chain ∧
+  (∀ (t : Nat),
+      Becoming.«则» (Becoming.«相续» (Becoming.CausalGrowth.chain.state t).prec Becoming.«一»)
+        (Becoming.«相续» (Becoming.CausalGrowth.Starts.chainFromOne.state t).prec Becoming.«一»)) ∧
+    (Becoming.CausalGrowth.Starts.chainFromOne.state 1).prec 0 1 ∧ ¬(Becoming.CausalGrowth.chain.state 1).prec 0 1
+Becoming.CausalGrowth.Starts.strict_needs_starts : (Becoming.Run.RangeIncludes Becoming.CausalGrowth.Stem
+      Becoming.CausalGrowth.Starts.fromOne Becoming.CausalGrowth.antichain ∧
+    ¬Becoming.Run.RangeIncludes Becoming.CausalGrowth.Stem Becoming.CausalGrowth.antichain
+        Becoming.CausalGrowth.Starts.fromOne) ∧
+  Becoming.Run.RangeExceeds Becoming.CausalGrowth.Stem Becoming.CausalGrowth.Starts.fromOne
+      Becoming.CausalGrowth.antichain ∧
+    (∀ (t i j : Nat),
+        (Becoming.CausalGrowth.antichain.state t).prec i j → (Becoming.CausalGrowth.Starts.fromOne.state t).prec i j) ∧
+      ∀ (t i j : Nat),
+        (Becoming.CausalGrowth.Starts.fromOne.state t).prec i j → (Becoming.CausalGrowth.antichain.state t).prec i j
+Becoming.CausalGrowth.Starts.rangeWidens_of_needs_starts : (∀ (t i j : Nat),
+    (Becoming.CausalGrowth.Starts.oneAbove.state t).prec i j →
+      (Becoming.CausalGrowth.Starts.fromTwo.state t).prec i j) ∧
+  (Becoming.CausalGrowth.Starts.fromTwo.state 0).prec 0 1 ∧
+    ¬(Becoming.CausalGrowth.Starts.oneAbove.state 0).prec 0 1 ∧
+      ¬Becoming.Run.RangeExceeds Becoming.CausalGrowth.Stem Becoming.CausalGrowth.Starts.oneAbove
+          Becoming.CausalGrowth.Starts.fromTwo
+Becoming.CausalGrowth.Starts.continuation_of_rangeIncludes_needs_starts : Becoming.Run.RangeIncludes
+    Becoming.CausalGrowth.Stem Becoming.CausalGrowth.Starts.chainFromOne Becoming.CausalGrowth.chain ∧
+  Becoming.«相续» (Becoming.CausalGrowth.Starts.chainFromOne.state 1).prec Becoming.«一» 0 1 ∧
+    ¬Becoming.«相续» (Becoming.CausalGrowth.chain.state 1).prec Becoming.«一» 0 1
+@Becoming.CausalGrowth.Starts.full_stem_empty : ∀ {t : Nat} {D : Nat → Prop},
+  Becoming.CausalGrowth.Stem ((Becoming.CausalGrowth.Starts.fromEmptyPasts Becoming.CausalGrowth.Starts.full).state t)
+      D →
+    ∀ {i : Nat}, D i → False
+Becoming.CausalGrowth.Starts.keepsWidening_needs_start : ¬Becoming.Reaching.KeepsWidening fun t =>
+    Becoming.CausalGrowth.Stem ((Becoming.CausalGrowth.Starts.fromEmptyPasts Becoming.CausalGrowth.Starts.full).state t)
+@Becoming.CausalGrowth.ceases_of_bounded : ∀ {O : Becoming.«际» Nat} (E : Becoming.«际» Nat),
+  (∀ {i j : Nat}, O i j → i < j) →
+    ∀ {n : Nat}, (∀ {i j : Nat}, O i j → j < n) → ∀ (k x : Nat), n ≤ x + k → Becoming.«息» O E x
+@Becoming.CausalGrowth.ordered_ceases : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ (E : Becoming.«际» Nat) (x : Nat), Becoming.«息» c.prec E x ∧ Becoming.«息» (Becoming.CausalGrowth.links c.prec) E x
+@Becoming.CausalGrowth.ordered_not_renews : ∀ {c : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    ∀ (E : Becoming.«际» Nat) (x : Nat),
+      ¬Becoming.«生生» c.prec E x ∧ ¬Becoming.«生生» (Becoming.CausalGrowth.links c.prec) E x
+@Becoming.CausalGrowth.chainLimit_iff : ∀ {i j : Nat}, Becoming.CausalGrowth.chainLimit i j ↔ i < j
+Becoming.CausalGrowth.antichainLimit_not_renews : ∀ (E : Becoming.«际» Nat) (x : Nat),
+  ¬Becoming.«生生» Becoming.CausalGrowth.antichainLimit E x
+Becoming.CausalGrowth.Halves.pairs_class : Becoming.«类» Becoming.CausalGrowth.Halves.pairs
+Becoming.CausalGrowth.Halves.double_succ : ∀ (m : Nat), m + 1 + (m + 1) = m + m + 2
+Becoming.CausalGrowth.Halves.half_double : ∀ (m : Nat), Becoming.CausalGrowth.Halves.half (m + m) = m
+Becoming.CausalGrowth.Halves.half_double_succ : ∀ (m : Nat), Becoming.CausalGrowth.Halves.half (m + m + 1) = m
+Becoming.CausalGrowth.Halves.half_lt : ∀ (x m : Nat), x < m + m → Becoming.CausalGrowth.Halves.half x < m
+Becoming.CausalGrowth.chainLimit_renews : Becoming.«生生» Becoming.CausalGrowth.chainLimit
+  Becoming.CausalGrowth.Halves.pairs 1
+Becoming.CausalGrowth.Finer.classOf_class : Becoming.«类» Becoming.CausalGrowth.Finer.classOf
+Becoming.CausalGrowth.Finer.wide_stems : ∀ (t : Nat),
+  Becoming.CausalGrowth.Stem (Becoming.CausalGrowth.grown Becoming.CausalGrowth.Finer.widePast t)
+    (Becoming.CausalGrowth.Finer.widePast t)
+Becoming.CausalGrowth.Finer.narrow_stems : ∀ (t : Nat),
+  Becoming.CausalGrowth.Stem (Becoming.CausalGrowth.grown Becoming.CausalGrowth.Finer.narrowPast t)
+    (Becoming.CausalGrowth.Finer.narrowPast t)
+Becoming.CausalGrowth.Finer.widens : Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem
+  Becoming.CausalGrowth.Finer.wide Becoming.CausalGrowth.Finer.narrow
+Becoming.CausalGrowth.Finer.continues : Becoming.«相续»
+  (Becoming.CausalGrowth.links (Becoming.CausalGrowth.Finer.wide.state 3).prec) Becoming.CausalGrowth.Finer.classOf 0 2
+Becoming.CausalGrowth.Finer.not_continues : ¬Becoming.«相续»
+    (Becoming.CausalGrowth.links (Becoming.CausalGrowth.Finer.narrow.state 3).prec) Becoming.CausalGrowth.Finer.classOf
+    0 2
+Becoming.CausalGrowth.Finer.loses : Becoming.Run.RangeWidens Becoming.CausalGrowth.Stem Becoming.CausalGrowth.antichain
+    Becoming.CausalGrowth.Finer.wide ∧
+  Becoming.«相续» (Becoming.CausalGrowth.links (Becoming.CausalGrowth.Finer.wide.state 3).prec)
+      Becoming.CausalGrowth.Finer.classOf 0 2 ∧
+    ¬Becoming.«相续» (Becoming.CausalGrowth.links (Becoming.CausalGrowth.antichain.state 3).prec)
+        Becoming.CausalGrowth.Finer.classOf 0 2
+@Becoming.CausalGrowth.Kinds.stems_carried_iff : ∀ {c c' : Becoming.CausalGrowth.Causet},
+  c.Ordered →
+    c'.Ordered →
+      ∀ {σ τ : Nat → Nat},
+        (∀ (j : Nat), j < c.size → τ j < c'.size ∧ σ (τ j) = j) →
+          ((∀ (D : Nat → Prop),
+              Becoming.CausalGrowth.Stem c' D → Becoming.CausalGrowth.Stem c fun j => j < c.size ∧ D (τ j)) ↔
+            ∀ (i j : Nat), c.prec i j → c'.prec (τ i) (τ j))
+Becoming.CausalGrowth.Kinds.stems_carried_unequal : ∀ (D : Nat → Prop),
+  Becoming.CausalGrowth.Stem (Becoming.CausalGrowth.antichain.state 2) D →
+    Becoming.CausalGrowth.Stem (Becoming.CausalGrowth.antichain.state 1) fun j =>
+      j < (Becoming.CausalGrowth.antichain.state 1).size ∧ D (j + 1)
+@Becoming.CausalGrowth.Kinds.swap_fixed : ∀ {i : Nat}, ¬i = 0 → ¬i = 1 → Becoming.CausalGrowth.Kinds.swap i = i
+Becoming.CausalGrowth.Kinds.swap_swap : ∀ (i : Nat),
+  Becoming.CausalGrowth.Kinds.swap (Becoming.CausalGrowth.Kinds.swap i) = i
+@Becoming.CausalGrowth.Kinds.swap_below : ∀ {n : Nat},
+  2 ≤ n → ∀ {i : Nat}, i < n → Becoming.CausalGrowth.Kinds.swap i < n
+Becoming.CausalGrowth.Kinds.swap_eq_two_iff : ∀ (j : Nat), Becoming.CausalGrowth.Kinds.swap j = 2 ↔ j = 2
+Becoming.CausalGrowth.Kinds.swap_eq_one_iff : ∀ (i : Nat), Becoming.CausalGrowth.Kinds.swap i = 1 ↔ i = 0
+Becoming.CausalGrowth.Kinds.antichain_two_stems_one_kind : (Becoming.CausalGrowth.Stem
+    (Becoming.CausalGrowth.antichain.state 2) fun x => x = 0) ∧
+  (Becoming.CausalGrowth.Stem (Becoming.CausalGrowth.antichain.state 2) fun x => x = 1) ∧
+    Becoming.CausalGrowth.Kinds.Isomorphic
+      (Becoming.CausalGrowth.birth (Becoming.CausalGrowth.antichain.state 2) fun x => x = 0)
+      (Becoming.CausalGrowth.birth (Becoming.CausalGrowth.antichain.state 2) fun x => x = 1)
+Becoming.CausalGrowth.Kinds.not_included_antichain_chain : ¬Becoming.CausalGrowth.Kinds.Included
+    (Becoming.CausalGrowth.antichain.state 2) (Becoming.CausalGrowth.chain.state 2)
+Becoming.CausalGrowth.Kinds.not_included_chain_antichain : ¬Becoming.CausalGrowth.Kinds.Included
+    (Becoming.CausalGrowth.chain.state 2) (Becoming.CausalGrowth.antichain.state 2)
+Becoming.CausalGrowth.Kinds.included_at_zero : Becoming.CausalGrowth.Kinds.Included
+    (Becoming.CausalGrowth.antichain.state 0) (Becoming.CausalGrowth.chain.state 0) ∧
+  Becoming.CausalGrowth.Kinds.Included (Becoming.CausalGrowth.chain.state 0) (Becoming.CausalGrowth.antichain.state 0)
+@Becoming.CausalGrowth.Kinds.swapped_two : ∀ {t i : Nat}, Becoming.CausalGrowth.Kinds.swappedPast t i → t = 2 ∧ i < 2
+Becoming.CausalGrowth.Kinds.wide_prec_iff_swapped : ∀ (t : Nat) {i j : Nat},
+  (Becoming.CausalGrowth.Finer.wide.state t).prec i j ↔
+    (Becoming.CausalGrowth.Kinds.swapped.state t).prec (Becoming.CausalGrowth.Kinds.swap i)
+      (Becoming.CausalGrowth.Kinds.swap j)
+Becoming.CausalGrowth.Kinds.wide_swapped_isomorphic : ∀ (k : Nat),
+  Becoming.CausalGrowth.Kinds.Isomorphic (Becoming.CausalGrowth.Finer.wide.state (k + 2))
+    (Becoming.CausalGrowth.Kinds.swapped.state (k + 2))
+Becoming.CausalGrowth.Kinds.wide_swapped_mixed : Becoming.Run.RangeExceeds Becoming.CausalGrowth.Stem
+    Becoming.CausalGrowth.Finer.wide Becoming.CausalGrowth.Kinds.swapped ∧
+  Becoming.Run.RangeExceeds Becoming.CausalGrowth.Stem Becoming.CausalGrowth.Kinds.swapped
+    Becoming.CausalGrowth.Finer.wide

@@ -106,6 +106,7 @@ Actual change, retained recovery grounds and access to action differentiate with
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261020T161923.157515Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261031T132145.271099Z/verification.json) | — |
 
 Aliases: `RecoverableControl.interrupted_history_preserves_safety`, `RecoverableControl.funded_suffix_publishes`, `RecoverableControl.published_history_to_current_certificate`, `Becoming.Countdown.completes_iff`, `Becoming.ProtocolInstances.safety_along`, `Becoming.ProtocolInstances.publishes_iff`, `Becoming.ProtocolInstances.pending_until_published`
 

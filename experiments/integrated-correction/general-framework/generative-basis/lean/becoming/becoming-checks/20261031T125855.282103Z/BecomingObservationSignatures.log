@@ -1,0 +1,182 @@
+@Becoming.Upstream.single : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {d c : C}, Becoming.Couples cs part k present d c → Becoming.Upstream cs part k present d c
+@Becoming.Upstream.trans : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {c d e : C},
+  Becoming.Upstream cs part k present c d →
+    Becoming.Upstream cs part k present d e → Becoming.Upstream cs part k present c e
+@Becoming.Upstream.snoc : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {c d e : C},
+  Becoming.Upstream cs part k present c d →
+    Becoming.Couples cs part k present d e → Becoming.Upstream cs part k present c e
+@Becoming.Upstream.before_mono : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {T T' : Nat},
+  T ≤ T' →
+    ∀ {c e : C},
+      Becoming.Upstream cs part (Becoming.strengthsBefore T k) present c e →
+        Becoming.Upstream cs part (Becoming.strengthsBefore T' k) present c e
+@Becoming.conveyed_upstream : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {σ : Nat → F → C → Nat} {δ : C → Nat} {c : C},
+  (∀ (e : C), 0 < δ e → e = c) →
+    (∀ (t : Nat) (h : F) (e : C), h ∈ present t → part h = true → σ t h e = 0) →
+      ∀ {t : Nat} {e : C},
+        Becoming.Conveyed cs part σ k present δ t e →
+          Becoming.Upstream cs part (Becoming.strengthsBefore t k) present c e
+@Becoming.carried_zero_off_downstream : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {σ : Nat → F → C → Nat} {δ : C → Nat} {c : C},
+  (∀ (e : C), 0 < δ e → e = c) →
+    (∀ (t : Nat) (h : F) (e : C), h ∈ present t → part h = true → σ t h e = 0) →
+      ∀ {t : Nat} {e : C},
+        ¬Becoming.Upstream cs part (Becoming.strengthsBefore t k) present c e →
+          Becoming.carried cs part σ k present δ t e = 0
+@Becoming.upstream_succ_iff : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {T : Nat} {c e : C},
+  Becoming.Upstream cs part (Becoming.strengthsBefore (T + 1) k) present c e ↔
+    Becoming.Upstream cs part (Becoming.strengthsBefore T k) present c e ∨
+      ∃ d d' s,
+        Becoming.CouplesAt cs part k present T s d d' ∧
+          Becoming.Upstream cs part (Becoming.strengthsBefore (T + 1) k) present c d ∧
+            Becoming.Upstream cs part (Becoming.strengthsBefore (T + 1) k) present d' e
+@Becoming.route_forms_by_closing : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {T : Nat} {c e : C},
+  Becoming.Upstream cs part (Becoming.strengthsBefore (T + 1) k) present c e →
+    ¬Becoming.Upstream cs part (Becoming.strengthsBefore T k) present c e →
+      ∃ d d' s,
+        Becoming.CouplesAt cs part k present T s d d' ∧
+          Becoming.Upstream cs part (Becoming.strengthsBefore (T + 1) k) present c d ∧
+            Becoming.Upstream cs part (Becoming.strengthsBefore (T + 1) k) present d' e
+@Becoming.ExchangeLaw.ReadsAt.readsInto : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {reads : Nat → F → C → Bool}, law.ReadsAt part reads → law.ReadsInto part fun t h x x_1 d => reads t h d
+@Becoming.ExchangeLaw.Through.readsInto : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {reads : Nat → F → C → Bool},
+  law.Through W obs part →
+    (∀ (t : Nat) (h : F) (d : C), part h = false → W.CoupledInto obs h d → reads t h d = true) →
+      law.ReadsInto part fun t h x x_1 d => reads t h d
+@Becoming.ExchangeLaw.ReadsInto.respondsWithin_unread : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {part : F → Bool} {reads : Nat → F → C → Nat → C → Bool},
+  law.ReadsInto part reads →
+    ∀ {h : F},
+      part h = false → ∀ {t : Nat} {c : C} {s : Nat} {d : C}, reads t h c s d = false → law.RespondsWithin t h c s d 0
+@Becoming.ExchangeLaw.ReadsInto.restrict : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {reads : Nat → F → C → Nat → C → Bool},
+  law.ReadsInto part reads →
+    ∀ {k : Nat → F → C → Nat → C → Nat},
+      (∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C),
+          part h = false → s ≤ t → law.RespondsWithin t h c s d (k t h c s d)) →
+        ∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C),
+          part h = false → s ≤ t → law.RespondsWithin t h c s d (Becoming.restrictInto reads k t h c s d)
+@Becoming.couplesAt_readCouplings : ∀ {F C : Type} {part : F → Bool} {reads : Nat → F → C → Nat → C → Bool}
+  {cs : List C} {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {u s : Nat} {d c : C},
+  Becoming.CouplesAt cs part (Becoming.restrictInto reads k) present u s d c →
+    Becoming.CouplesAt cs part (Becoming.readCouplings reads) present u s d c
+@Becoming.upstream_readCouplings : ∀ {F C : Type} {part : F → Bool} {reads : Nat → F → C → Nat → C → Bool} {cs : List C}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {T : Nat} {c e : C},
+  Becoming.Upstream cs part (Becoming.strengthsBefore T (Becoming.restrictInto reads k)) present c e →
+    Becoming.Upstream cs part (Becoming.strengthsBefore T (Becoming.readCouplings reads)) present c e
+@Becoming.apart_only_downstream : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {cs : List C} {reads : Nat → F → C → Nat → C → Bool},
+  law.ReadsInto part reads →
+    (∀ (t : Nat) (h : F) (e : C) (s : Nat) (d : C), reads t h e s d = true → d ∈ cs) →
+      L.Balances W →
+        L'.Balances W' →
+          (∀ (t : Nat), L.present t = L'.present t) →
+            L.ActsAlike L' part →
+              L.Follows law part W.level →
+                L'.Follows law part W'.level →
+                  ∀ {c : C},
+                    (∀ (e : C), e ≠ c → W.level 0 e = W'.level 0 e) →
+                      ∀ (t : Nat) (e : C),
+                        ¬Becoming.Upstream cs part (Becoming.strengthsBefore t (Becoming.readCouplings reads)) L.present
+                              c e →
+                          W.level t e = W'.level t e
+@Becoming.exchange_alike_off_downstream : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {cs : List C} {reads : Nat → F → C → Nat → C → Bool},
+  law.ReadsInto part reads →
+    (∀ (t : Nat) (h : F) (e : C) (s : Nat) (d : C), reads t h e s d = true → d ∈ cs) →
+      L.Balances W →
+        L'.Balances W' →
+          (∀ (t : Nat), L.present t = L'.present t) →
+            L.ActsAlike L' part →
+              L.Follows law part W.level →
+                L'.Follows law part W'.level →
+                  ∀ {c : C},
+                    (∀ (e : C), e ≠ c → W.level 0 e = W'.level 0 e) →
+                      ∀ {g : F},
+                        part g = false →
+                          ∀ {t : Nat} {e : C},
+                            (∀ (s : Nat) (d : C),
+                                s ≤ t →
+                                  reads t g e s d = true →
+                                    ¬Becoming.Upstream cs part
+                                        (Becoming.strengthsBefore s (Becoming.readCouplings reads)) L.present c d) →
+                              L.take t g e = L'.take t g e ∧ L.give t g e = L'.give t g e
+@Becoming.ExchangeLaw.Through.alike_off_downstream : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {cs : List C} {obs : F → C → Prop} {regs : Nat → F → C → Bool},
+  law.Through W obs part →
+    (∀ (t : Nat) (h : F) (d : C), part h = false → W.CoupledInto obs h d → regs t h d = true) →
+      (∀ (t : Nat) (h : F) (d : C), regs t h d = true → d ∈ cs) →
+        L.Balances W →
+          L'.Balances W' →
+            (∀ (t : Nat), L.present t = L'.present t) →
+              L.ActsAlike L' part →
+                L.Follows law part W.level →
+                  L'.Follows law part W'.level →
+                    ∀ {c : C},
+                      (∀ (e : C), e ≠ c → W.level 0 e = W'.level 0 e) →
+                        ∀ {g : F},
+                          part g = false →
+                            ∀ {t : Nat} {e : C},
+                              (∀ (s : Nat) (d : C),
+                                  s ≤ t →
+                                    regs t g d = true →
+                                      ¬Becoming.Upstream cs part
+                                          (Becoming.strengthsBefore s
+                                            (Becoming.readCouplings fun t h x x_1 d => regs t h d))
+                                          L.present c d) →
+                                L.take t g e = L'.take t g e ∧ L.give t g e = L'.give t g e
+Becoming.Observation.Measure.readsInto : ∀ (T N : Nat),
+  (Becoming.Observation.Measure.law T N).ReadsInto (fun x => false) (Becoming.Observation.Measure.reads T)
+@Becoming.Observation.Measure.listed : ∀ {T : Nat} (t : Nat) (h : Unit) (e : Bool) (s : Nat) (d : Bool),
+  Becoming.Observation.Measure.reads T t h e s d = true → d ∈ [true, false]
+@Becoming.Observation.Measure.no_coupling_from_stock : ∀ {T u s : Nat} {e : Bool},
+  u < T →
+    ¬Becoming.CouplesAt [true, false] (fun x => false) (Becoming.readCouplings (Becoming.Observation.Measure.reads T))
+        (fun x => [()]) u s true e
+@Becoming.Observation.Measure.downstream_before : ∀ {T T' : Nat},
+  T' ≤ T →
+    ∀ {e : Bool},
+      Becoming.Upstream [true, false] (fun x => false)
+          (Becoming.strengthsBefore T' (Becoming.readCouplings (Becoming.Observation.Measure.reads T))) (fun x => [()])
+          true e →
+        e = true
+@Becoming.Observation.Measure.no_loop_before : ∀ {T : Nat},
+  ¬Becoming.OnLoop [true, false] (fun x => false)
+      (Becoming.strengthsBefore T (Becoming.readCouplings (Becoming.Observation.Measure.reads T))) (fun x => [()]) true
+Becoming.Observation.Measure.route_at : ∀ (T : Nat),
+  Becoming.Couples [true, false] (fun x => false)
+    (Becoming.strengthsBefore (T + 1) (Becoming.readCouplings (Becoming.Observation.Measure.reads T))) (fun x => [()])
+    true false
+Becoming.Observation.Measure.record_into_stock : ∀ (T u : Nat),
+  Becoming.Couples [true, false] (fun x => false)
+    (Becoming.strengthsBefore (u + 1) (Becoming.readCouplings (Becoming.Observation.Measure.reads T))) (fun x => [()])
+    false true
+Becoming.Observation.Measure.loop_at : ∀ (T : Nat),
+  Becoming.OnLoop [true, false] (fun x => false)
+    (Becoming.strengthsBefore (T + 1) (Becoming.readCouplings (Becoming.Observation.Measure.reads T))) (fun x => [()])
+    true
+@Becoming.Observation.Measure.couples_after : ∀ {T N d : Nat} {L L' : Becoming.Flow Unit Bool}
+  {W W' : Becoming.Web Unit Bool},
+  L.Balances W →
+    L'.Balances W' →
+      (∀ (t : Nat), L.present t = [()]) →
+        (∀ (t : Nat), L'.present t = [()]) →
+          L.Follows (Becoming.Observation.Measure.law T N) (fun x => false) W.level →
+            L'.Follows (Becoming.Observation.Measure.law T N) (fun x => false) W'.level →
+              W.level 0 false = W'.level 0 false →
+                W'.level 0 true = W.level 0 true + d →
+                  (∀ (t : Nat), t ≤ T → W.level t false = W'.level t false ∧ W'.level t true = W.level t true + d) ∧
+                    W'.level (T + 1) false = W.level (T + 1) false + d
+@Becoming.Observation.Measure.draw_responds : ∀ {T N t : Nat} {L L' : Becoming.Flow Unit Bool}
+  {W W' : Becoming.Web Unit Bool},
+  L.Follows (Becoming.Observation.Measure.law T N) (fun x => false) W.level →
+    L'.Follows (Becoming.Observation.Measure.law T N) (fun x => false) W'.level →
+      W.level t false < N → N ≤ W'.level t false → L.take t () true = 0 ∧ L'.take t () true = 1

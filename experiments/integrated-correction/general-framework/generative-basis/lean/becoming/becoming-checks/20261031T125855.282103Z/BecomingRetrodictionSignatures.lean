@@ -1,0 +1,17 @@
+import Becoming.Retrodiction
+#check @Becoming.Retrodiction.actual_candidate
+#check @Becoming.Retrodiction.fits_iff_same
+#check @Becoming.Retrodiction.not_fits_of_separated
+#check @Becoming.Retrodiction.fits_or_separated
+#check @Becoming.Retrodiction.reading_right_iff
+#check @Becoming.Retrodiction.agreed_reading_actual
+#check @Becoming.Retrodiction.look_right_iff
+#check @Becoming.Retrodiction.changes_split
+#check @Becoming.Retrodiction.changes_le
+#check @Becoming.Retrodiction.moved_changes
+#check @Becoming.Retrodiction.changes_const
+#check @Becoming.Retrodiction.bracket
+#check @Becoming.Retrodiction.excursion_changes
+#check @Becoming.Retrodiction.bracket_settles_iff
+#check @Becoming.Retrodiction.step_changes
+#check @Becoming.Retrodiction.change_unlocated

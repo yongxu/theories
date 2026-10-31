@@ -43,7 +43,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Core: the current bytes of Becoming.Readout and Becoming.Courses are bound to receipts becoming-checks/20261019T185632.962707Z and 20261020T051144.879480Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for every cited declaration. Periphery: WisdomFallibleJudgment is bound to its receipt under wisdom-fallible-judgment-checks (Lean 4.29.1; its five theorems use propext only), JudgingCorrespondence to judging-correspondence-checks/20261020T161948.968917Z (Lean 4.30.0-rc2; at most propext and Quot.sound).
+Core: the current bytes of Becoming.Readout and Becoming.Courses are bound to receipts becoming-checks/20261019T185632.962707Z and 20261020T051144.879480Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for every cited declaration. Periphery: WisdomFallibleJudgment is bound to its receipt under wisdom-fallible-judgment-checks (Lean 4.29.1; its five theorems use propext only), JudgingCorrespondence to judging-correspondence-checks/20261031T133748.088094Z (Lean 4.30.0-rc2; at most propext and Quot.sound).
 
 Canonical source: [WisdomFallibleJudgment.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/WisdomFallibleJudgment.lean)
 
@@ -94,6 +94,7 @@ Inherited assured_route_iff connects counted failures with failed arrival. A pro
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261020T161948.968917Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261031T133748.088094Z/verification.json) | — |
 
 Aliases: `Generative.WisdomFallibleJudgment.no_endpoint_only_prior_certificate`, `Becoming.Readout.judges_iff_lumpedOn`, `Becoming.Readout.no_judge_of_merged`, `Becoming.Courses.run_judges_iff`, `Becoming.Courses.no_run_judge_of_merged`
 

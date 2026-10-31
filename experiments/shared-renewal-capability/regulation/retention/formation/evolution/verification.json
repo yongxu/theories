@@ -1,11 +1,11 @@
 {
   "status": "passed",
-  "checked_at_utc": "2026-10-07T11:52:00.987698+00:00",
+  "checked_at_utc": "2026-10-31T13:43:53.401830+00:00",
   "compiler": "/Users/ren/.elan/toolchains/leanprover--lean4---v4.29.1/bin/lean",
   "compiler_sha256": "b48bc5ab229bd8b320a224b87e20fc428dba6fa8a1c054bd4fa6def846e19997",
   "version": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
   "checker_sha256": "3a74008597db2701bea4b8a9db9c76c2c56abd375187bb49e3c0ea8a471c1782",
-  "inherited_receipt_sha256": "c956842920c9fb747f84a3996771cc79362cee585ae2d9ad76a0a0cf3f363d13",
+  "inherited_receipt_sha256": "20bc0692f37a36373711711ce193203da44dc64e70ba46fec50d18ad66211c6c",
   "fresh_temporary_build": true,
   "inputs_unchanged": true,
   "modules": [
@@ -36,13 +36,13 @@
         "Generative.feasible_difference_implies_projection_difference": [],
         "Generative.trace_faithful_iff": []
       },
-      "log": "checks/1791373894116817000/GenerativeCore.txt",
+      "log": "checks/1793454226354494000/GenerativeCore.txt",
       "log_sha256": "eae342f61e22744208cddbc5144ff1f5b58b3849a5a827563fb58e65833a3257"
     },
     {
       "module": "FormedSelection",
       "source": "experiments/shared-renewal-capability/regulation/retention/formation/formal/FormedSelection.lean",
-      "sha256": "a7bdce34f00ab07edd8b234eb1a7abd435a0cfe8034257ff3928209d0966bf37",
+      "sha256": "8b083de5abc94ae933b2874b16bf0edf85dd899cf3e4eaf3d251523fd994c43f",
       "new": false,
       "passed": true,
       "exit_code": 0,
@@ -83,9 +83,7 @@
           "Quot.sound",
           "propext"
         ],
-        "FormedSelection.copy_increment_le_spent": [
-          "propext"
-        ],
+        "FormedSelection.copy_increment_le_spent": [],
         "FormedSelection.copy_tally_le_spent": [
           "Quot.sound",
           "propext"
@@ -176,33 +174,21 @@
         "FormedSelection.no_h_local_copies_without_resident_wear": [
           "propext"
         ],
-        "FormedSelection.paid_formation_to_copy": [
-          "propext"
-        ],
-        "FormedSelection.witness_accounting": [
-          "propext"
-        ],
-        "FormedSelection.repair_enables_capture": [
-          "propext"
-        ],
-        "FormedSelection.capture_enables_copy": [
-          "propext"
-        ],
+        "FormedSelection.paid_formation_to_copy": [],
+        "FormedSelection.witness_accounting": [],
+        "FormedSelection.repair_enables_capture": [],
+        "FormedSelection.capture_enables_copy": [],
         "FormedSelection.initial_owned_support": [
           "propext"
         ],
         "FormedSelection.no_h_local_copies_from_absence_without_resident_wear": [
           "propext"
         ],
-        "FormedSelection.repaired_site_can_pass_to_alternative": [
-          "propext"
-        ],
-        "FormedSelection.inheritance_accounting": [
-          "propext"
-        ]
+        "FormedSelection.repaired_site_can_pass_to_alternative": [],
+        "FormedSelection.inheritance_accounting": []
       },
-      "log": "checks/1791373894116817000/FormedSelection.txt",
-      "log_sha256": "bc40309a6c1a1107769f5ba127164fb16e53dc9dd85949d57285d63a6eaa8686"
+      "log": "checks/1793454226354494000/FormedSelection.txt",
+      "log_sha256": "ae84b75f37c602427a7fa0e766183eb4228d96047abcc75d813c1ba6f08ff216"
     },
     {
       "module": "FormationRoot",
@@ -212,15 +198,9 @@
       "passed": true,
       "exit_code": 0,
       "axioms_by_declaration": {
-        "FormedSelection.trace_to_root": [
-          "propext"
-        ],
-        "FormedSelection.trace_from_root": [
-          "propext"
-        ],
-        "FormedSelection.trace_iff_root": [
-          "propext"
-        ],
+        "FormedSelection.trace_to_root": [],
+        "FormedSelection.trace_from_root": [],
+        "FormedSelection.trace_iff_root": [],
         "FormedSelection.root_energy_ledger": [
           "Quot.sound",
           "propext"
@@ -233,21 +213,15 @@
           "Quot.sound",
           "propext"
         ],
-        "FormedSelection.root_formation_to_copy": [
-          "propext"
-        ],
+        "FormedSelection.root_formation_to_copy": [],
         "FormedSelection.root_no_h_local_copy_before_resident_wear": [
           "propext"
         ],
-        "FormedSelection.root_repaired_site_inheritance": [
-          "propext"
-        ],
-        "FormedSelection.trace_append_iff": [
-          "propext"
-        ]
+        "FormedSelection.root_repaired_site_inheritance": [],
+        "FormedSelection.trace_append_iff": []
       },
-      "log": "checks/1791373894116817000/FormationRoot.txt",
-      "log_sha256": "b1072e71ef599875b5e26b9fff52bf220bc96e3f0731b0663eaad34de8687404"
+      "log": "checks/1793454226354494000/FormationRoot.txt",
+      "log_sha256": "dfe1db8fb12e06000447db9dcbf5b56efc62b7df6e69e938e5dcd299d17c3d53"
     },
     {
       "module": "ConsequenceTransmission",
@@ -282,15 +256,9 @@
         "ConsequenceTransmission.Native.native_copy_transmits_its_response_structure": [
           "propext"
         ],
-        "ConsequenceTransmission.Native.actual_capture_changes_copy_access": [
-          "propext"
-        ],
-        "ConsequenceTransmission.Native.actual_transfer_with_both_structures_present": [
-          "propext"
-        ],
-        "ConsequenceTransmission.Native.same_composition_opposite_access": [
-          "propext"
-        ],
+        "ConsequenceTransmission.Native.actual_capture_changes_copy_access": [],
+        "ConsequenceTransmission.Native.actual_transfer_with_both_structures_present": [],
+        "ConsequenceTransmission.Native.same_composition_opposite_access": [],
         "ConsequenceTransmission.transmission_preserves_total_event_weight": [],
         "ConsequenceTransmission.transmitted_structure_increase_iff": [
           "propext"
@@ -298,13 +266,11 @@
         "ConsequenceTransmission.faithful_transmission_matches_template": [],
         "ConsequenceTransmission.faithful_increase_iff_template_increase": [],
         "ConsequenceTransmission.positive_template_advantage_can_reverse_in_transmission": [],
-        "ConsequenceTransmission.Native.reached_neutral_event_is_native": [
-          "propext"
-        ],
+        "ConsequenceTransmission.Native.reached_neutral_event_is_native": [],
         "ConsequenceTransmission.balanced_transfer_matches_template": []
       },
-      "log": "checks/1791373894116817000/ConsequenceTransmission.txt",
-      "log_sha256": "bbf26f90e8ba48f79ed96734bc7bd8887650f06ff99b2fce7bba7300454d598e"
+      "log": "checks/1793454226354494000/ConsequenceTransmission.txt",
+      "log_sha256": "068fd2fb91a4c3056b8f96c42a4479a7d3e5055af25199fffe08484c4d710f7b"
     }
   ],
   "new_audits": 19,

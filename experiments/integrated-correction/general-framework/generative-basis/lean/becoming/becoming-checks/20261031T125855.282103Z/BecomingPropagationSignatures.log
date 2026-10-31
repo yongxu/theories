@@ -1,0 +1,281 @@
+@Becoming.Propagation.sub_le_of_le_add : ∀ {b : Nat} (a : Nat) {m : Nat}, b ≤ a + m → b - a ≤ m
+Becoming.Propagation.rearrange : ∀ (b x u v w : Nat), b + (x + u) + (v + w) = b + (v + (u + w)) + x
+Becoming.gap_comm : ∀ (a b : Nat), Becoming.gap a b = Becoming.gap b a
+Becoming.gap_self : ∀ (a : Nat), Becoming.gap a a = 0
+Becoming.gap_zero : ∀ (a : Nat), Becoming.gap a 0 = a
+Becoming.gap_add_self : ∀ (a m : Nat), Becoming.gap (a + m) a = m
+Becoming.le_add_gap : ∀ (a b : Nat), a ≤ b + Becoming.gap a b
+@Becoming.gap_le_of : ∀ {a b m : Nat}, a ≤ b + m → b ≤ a + m → Becoming.gap a b ≤ m
+@Becoming.gap_le_iff : ∀ {a b m : Nat}, Becoming.gap a b ≤ m ↔ a ≤ b + m ∧ b ≤ a + m
+@Becoming.gap_eq_zero_iff : ∀ {a b : Nat}, Becoming.gap a b = 0 ↔ a = b
+Becoming.gap_triangle : ∀ (a b c : Nat), Becoming.gap a c ≤ Becoming.gap a b + Becoming.gap b c
+Becoming.gap_add : ∀ (a b c d : Nat), Becoming.gap (a + b) (c + d) ≤ Becoming.gap a c + Becoming.gap b d
+Becoming.gap_mul_le : ∀ (k a b : Nat), Becoming.gap (k * a) (k * b) ≤ k * Becoming.gap a b
+@Becoming.gap_total : ∀ {α : Type} (p q : α → Nat) (as : List α),
+  Becoming.gap (Becoming.total as p) (Becoming.total as q) ≤ Becoming.total as fun a => Becoming.gap (p a) (q a)
+@Becoming.gap_of_balances : ∀ {a₀ a₁ x y b₀ b₁ x' y' : Nat},
+  a₁ + x = a₀ + y →
+    b₁ + x' = b₀ + y' → Becoming.gap a₁ b₁ ≤ Becoming.gap a₀ b₀ + (Becoming.gap x x' + Becoming.gap y y')
+@Becoming.levels_step_exact : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C},
+  L.Balances W →
+    L'.Balances W' →
+      ∀ (t : Nat) (c : C),
+        W.level (t + 1) c + W'.level t c + (L.taken t c + L'.given t c) =
+          W'.level (t + 1) c + W.level t c + (L'.taken t c + L.given t c)
+@Becoming.gap_step : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C},
+  L.Balances W →
+    L'.Balances W' →
+      ∀ {t : Nat},
+        L.present t = L'.present t →
+          ∀ (c : C),
+            Becoming.gap (W.level (t + 1) c) (W'.level (t + 1) c) ≤
+              Becoming.gap (W.level t c) (W'.level t c) + Becoming.total (L.present t) fun h => L.exchangeGap L' t h c
+@Becoming.Flow.exchangeGap_of_alike : ∀ {F C : Type} {L L' : Becoming.Flow F C} {t : Nat} {h : F} {c : C},
+  L.take t h c = L'.take t h c → L.give t h c = L'.give t h c → L.exchangeGap L' t h c = 0
+@Becoming.gap_step_of_alike : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C},
+  L.Balances W →
+    L'.Balances W' →
+      ∀ {t : Nat},
+        L.present t = L'.present t →
+          ∀ {c : C},
+            (∀ (h : F), h ∈ L.present t → L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+              Becoming.gap (W.level (t + 1) c) (W'.level (t + 1) c) ≤ Becoming.gap (W.level t c) (W'.level t c)
+@Becoming.ExchangeLaw.exchangeGap_self : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} (t : Nat) (h : F) (c : C)
+  (l : Nat → C → Nat), law.exchangeGap t h c l l = 0
+@Becoming.ExchangeLaw.exchangeGap_triangle : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} (t : Nat) (h : F) (c : C)
+  (l l' l'' : Nat → C → Nat), law.exchangeGap t h c l l'' ≤ law.exchangeGap t h c l l' + law.exchangeGap t h c l' l''
+@Becoming.ExchangeLaw.exchangeGap_of_alike : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {t : Nat} {h : F}
+  {l l' : Nat → C → Nat}, law.GivesAlike t h l l' → ∀ (c : C), law.exchangeGap t h c l l' = 0
+@Becoming.ExchangeLaw.alike_of_exchangeGap : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {t : Nat} {h : F}
+  {l l' : Nat → C → Nat}, (∀ (c : C), law.exchangeGap t h c l l' = 0) → law.GivesAlike t h l l'
+@Becoming.ExchangeLaw.RespondsWithin.mono : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {t : Nat} {h : F} {c : C}
+  {s : Nat} {d : C} {k k' : Nat}, law.RespondsWithin t h c s d k → k ≤ k' → law.RespondsWithin t h c s d k'
+@Becoming.ExchangeLaw.Nonanticipating.respondsWithin_later : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C},
+  law.Nonanticipating → ∀ {t s : Nat}, t < s → ∀ (h : F) (c d : C) (k : Nat), law.RespondsWithin t h c s d k
+@Becoming.Propagation.mem_steps_upto : ∀ {s t : Nat}, s ≤ t → s ∈ Becoming.steps 0 (t + 1)
+@Becoming.Propagation.le_of_mem_steps_upto : ∀ {s t : Nat}, s ∈ Becoming.steps 0 (t + 1) → s ≤ t
+@Becoming.Propagation.mem_map_pair : ∀ {C : Type} {s : Nat} {d : C} {ds : List C},
+  d ∈ ds → (s, d) ∈ List.map (fun e => (s, e)) ds
+@Becoming.Propagation.of_mem_map_pair : ∀ {C : Type} {s : Nat} {x : Nat × C} {ds : List C},
+  x ∈ List.map (fun e => (s, e)) ds → x.fst = s ∧ x.snd ∈ ds
+@Becoming.mem_cellsOf : ∀ {C : Type} {ds : List C} {s : Nat} {d : C},
+  d ∈ ds → ∀ {ss : List Nat}, s ∈ ss → (s, d) ∈ Becoming.cellsOf ds ss
+@Becoming.of_mem_cellsOf : ∀ {C : Type} {ds : List C} {x : Nat × C} {ss : List Nat},
+  x ∈ Becoming.cellsOf ds ss → x.fst ∈ ss ∧ x.snd ∈ ds
+@Becoming.total_cellsOf : ∀ {C : Type} (q : Nat × C → Nat) (ds : List C) (ss : List Nat),
+  Becoming.total (Becoming.cellsOf ds ss) q = Becoming.total ss fun s => Becoming.total ds fun d => q (s, d)
+@Becoming.mixCells_either : ∀ {C : Type} [inst : DecidableEq C] (l l' : Nat → C → Nat) (cells : List (Nat × C))
+  (s : Nat) (e : C), Becoming.mixCells l l' cells s e = l s e ∨ Becoming.mixCells l l' cells s e = l' s e
+@Becoming.mixCells_listed : ∀ {C : Type} [inst : DecidableEq C] (l l' : Nat → C → Nat) {cells : List (Nat × C)}
+  {s : Nat} {e : C}, (s, e) ∈ cells → Becoming.mixCells l l' cells s e = l' s e
+@Becoming.ExchangeLaw.exchangeGap_le_mixCells : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} [inst : DecidableEq C]
+  {t : Nat} {h : F} {c : C} (k l l' : Nat → C → Nat) (cells : List (Nat × C)),
+  (∀ (x : Nat × C), x ∈ cells → law.RespondsWithin t h c x.fst x.snd (k x.fst x.snd)) →
+    law.exchangeGap t h c l (Becoming.mixCells l l' cells) ≤
+      Becoming.total cells fun x => k x.fst x.snd * Becoming.gap (l x.fst x.snd) (l' x.fst x.snd)
+@Becoming.ExchangeLaw.exchangeGap_le_strengths : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} [DecidableEq C],
+  law.Nonanticipating →
+    ∀ {t : Nat} {h : F} {c : C} {ds : List C} (k : Nat → C → Nat),
+      (∀ (s : Nat) (d : C), s ≤ t → d ∈ ds → law.RespondsWithin t h c s d (k s d)) →
+        ∀ {l l' : Nat → C → Nat},
+          (∀ (s : Nat), s ≤ t → ∀ (e : C), l s e ≠ l' s e → e ∈ ds) →
+            law.exchangeGap t h c l l' ≤
+              Becoming.total (Becoming.steps 0 (t + 1)) fun s =>
+                Becoming.total ds fun d => k s d * Becoming.gap (l s d) (l' s d)
+@Becoming.ExchangeLaw.exchangeGap_le_strengths_listed : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} [DecidableEq C],
+  law.Nonanticipating →
+    ∀ {t : Nat} {h : F} {c : C} {cs : List C},
+      (∀ (e : C), e ∈ cs) →
+        ∀ (k : Nat → C → Nat),
+          (∀ (s : Nat) (d : C), s ≤ t → law.RespondsWithin t h c s d (k s d)) →
+            ∀ (l l' : Nat → C → Nat),
+              law.exchangeGap t h c l l' ≤
+                Becoming.total (Becoming.steps 0 (t + 1)) fun s =>
+                  Becoming.total cs fun d => k s d * Becoming.gap (l s d) (l' s d)
+@Becoming.ExchangeLaw.exchangeGap_le_shares : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} [DecidableEq C],
+  law.Nonanticipating →
+    ∀ {t : Nat} {h : F} {c : C} {ps rs : List C},
+      (∀ (e : C), e ∈ ps ∨ e ∈ rs) →
+        ∀ (k : Nat → C → Nat),
+          (∀ (s : Nat) (d : C), s ≤ t → law.RespondsWithin t h c s d (k s d)) →
+            ∀ (l l' : Nat → C → Nat),
+              law.exchangeGap t h c l l' ≤
+                (Becoming.total (Becoming.steps 0 (t + 1)) fun s =>
+                    Becoming.total ps fun d => k s d * Becoming.gap (l s d) (l' s d)) +
+                  Becoming.total (Becoming.steps 0 (t + 1)) fun s =>
+                    Becoming.total rs fun d => k s d * Becoming.gap (l s d) (l' s d)
+@Becoming.ExchangeLaw.insensitiveAt_iff_strength_zero : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} [DecidableEq C],
+  law.Nonanticipating →
+    ∀ {t : Nat} {h : F} {d : C}, law.InsensitiveAt t h d ↔ ∀ (c : C) (s : Nat), s ≤ t → law.RespondsWithin t h c s d 0
+@Becoming.ExchangeLaw.carrying_nonanticipating : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat}, (Becoming.ExchangeLaw.carrying cs part σ k).Nonanticipating
+@Becoming.carried_zero : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (c : C),
+  Becoming.carried cs part σ k present δ 0 c = δ c
+@Becoming.carried_succ : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (t : Nat) (c : C),
+  Becoming.carried cs part σ k present δ (t + 1) c =
+    Becoming.carried cs part σ k present δ t c +
+      Becoming.total (present t) fun h =>
+        Becoming.carriedGive cs part σ k t h c (Becoming.carried cs part σ k present δ)
+@Becoming.carried_le_succ : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (t : Nat) (c : C),
+  Becoming.carried cs part σ k present δ t c ≤ Becoming.carried cs part σ k present δ (t + 1) c
+@Becoming.gap_le_carried : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} [DecidableEq C] {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {δ : C → Nat},
+  law.Nonanticipating →
+    (∀ (c : C), c ∈ cs) →
+      L.Balances W →
+        L'.Balances W' →
+          (∀ (t : Nat), L.present t = present t) →
+            (∀ (t : Nat), L'.present t = present t) →
+              L.Follows law part W.level →
+                L'.Follows law part W'.level →
+                  (∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C),
+                      part h = false → s ≤ t → law.RespondsWithin t h c s d (k t h c s d)) →
+                    (∀ (t : Nat) (h : F) (c : C), part h = true → L.exchangeGap L' t h c ≤ σ t h c) →
+                      (∀ (c : C), Becoming.gap (W.level 0 c) (W'.level 0 c) ≤ δ c) →
+                        ∀ (t : Nat) (c : C),
+                          Becoming.gap (W.level t c) (W'.level t c) ≤ Becoming.carried cs part σ k present δ t c
+Becoming.Propagation.cond_same : ∀ (b : Bool) (x : Nat), (bif b then x else x) = x
+@Becoming.carried_quiet : ∀ {F C : Type} (cs : List C) (part : F → Bool) (k : Nat → F → C → Nat → C → Nat)
+  (present : Nat → List F) (t : Nat) (c : C),
+  Becoming.carried cs part (fun x x_1 x_2 => 0) k present (fun x => 0) t c = 0
+@Becoming.carrying_balances : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat},
+  ((Becoming.ExchangeLaw.carrying cs part σ k).course present δ).Balances
+    (Becoming.Propagation.webOf (Becoming.carried cs part σ k present δ))
+@Becoming.carried_attained : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (t : Nat) (c : C),
+  Becoming.gap (Becoming.carried cs part σ k present δ t c)
+      (Becoming.carried cs part (fun x x_1 x_2 => 0) k present (fun x => 0) t c) =
+    Becoming.carried cs part σ k present δ t c
+@Becoming.ExchangeLaw.carrying_respondsWithin : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} [DecidableEq C],
+  Becoming.Distinct cs →
+    ∀ {t : Nat} {h : F},
+      part h = false →
+        ∀ (c : C) (s : Nat) (d : C), (Becoming.ExchangeLaw.carrying cs part σ k).RespondsWithin t h c s d (k t h c s d)
+@Becoming.most_difference_arrives : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} [DecidableEq C],
+  (∀ (c : C), c ∈ cs) →
+    Becoming.Distinct cs →
+      ∀ (T : Nat) (c : C) (a : Nat),
+        (∀ (law : Becoming.ExchangeLaw F C) (L L' : Becoming.Flow F C) (W W' : Becoming.Web F C),
+            law.Nonanticipating →
+              L.Balances W →
+                L'.Balances W' →
+                  (∀ (t : Nat), L.present t = present t) →
+                    (∀ (t : Nat), L'.present t = present t) →
+                      L.Follows law part W.level →
+                        L'.Follows law part W'.level →
+                          (∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C),
+                              part h = false → s ≤ t → law.RespondsWithin t h c s d (k t h c s d)) →
+                            (∀ (t : Nat) (h : F) (c : C), part h = true → L.exchangeGap L' t h c ≤ σ t h c) →
+                              (∀ (c : C), Becoming.gap (W.level 0 c) (W'.level 0 c) ≤ δ c) →
+                                Becoming.gap (W.level T c) (W'.level T c) ≤ a) ↔
+          Becoming.carried cs part σ k present δ T c ≤ a
+@Becoming.Propagation.pos_of_mul_pos : ∀ {a b : Nat}, 0 < a * b → 0 < a ∧ 0 < b
+@Becoming.carriedGive_le : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {t : Nat} {h : F},
+  h ∈ present t →
+    ∀ (c : C),
+      Becoming.carriedGive cs part σ k t h c (Becoming.carried cs part σ k present δ) ≤
+        Becoming.carried cs part σ k present δ (t + 1) c
+@Becoming.carried_pos_iff : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (t : Nat) (c : C),
+  0 < Becoming.carried cs part σ k present δ t c ↔ Becoming.Conveyed cs part σ k present δ t c
+@Becoming.Conveyed.spread : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {L L' : Becoming.Flow F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {source : Nat → F → Prop},
+  (∀ (c : C), δ c = 0) →
+    (∀ (t : Nat) (h : F) (c : C),
+        h ∈ present t → part h = true → 0 < σ t h c → source t h ∧ Becoming.TimedResponse.TouchesAt L L' t h c) →
+      (∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C),
+          h ∈ present t →
+            part h = false →
+              s ≤ t →
+                d ∈ cs →
+                  0 < k t h c s d →
+                    Becoming.TimedResponse.CoupledIntoAt W obs h s d ∧ Becoming.TimedResponse.TouchesAt L L' t h c) →
+        ∀ {t : Nat} {c : C},
+          Becoming.Conveyed cs part σ k present δ t c → Becoming.TimedResponse.Spread L L' W obs source t c
+@Becoming.levels_alike_of_not_conveyed : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} [DecidableEq C]
+  {law : Becoming.ExchangeLaw F C} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C},
+  law.Nonanticipating →
+    (∀ (c : C), c ∈ cs) →
+      L.Balances W →
+        L'.Balances W' →
+          (∀ (t : Nat), L.present t = present t) →
+            (∀ (t : Nat), L'.present t = present t) →
+              L.Follows law part W.level →
+                L'.Follows law part W'.level →
+                  (∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C),
+                      part h = false → s ≤ t → law.RespondsWithin t h c s d (k t h c s d)) →
+                    (∀ (t : Nat) (h : F) (c : C), part h = true → L.exchangeGap L' t h c ≤ σ t h c) →
+                      (∀ (c : C), Becoming.gap (W.level 0 c) (W'.level 0 c) ≤ δ c) →
+                        ∀ {t : Nat} {c : C}, ¬Becoming.Conveyed cs part σ k present δ t c → W.level t c = W'.level t c
+Becoming.Propagation.cond_add : ∀ (b : Bool) (x y u v : Nat),
+  (bif b then x + y else u + v) = (bif b then x else u) + bif b then y else v
+Becoming.Propagation.cond_le_cond : ∀ (b : Bool) {x y u v : Nat},
+  x ≤ y → u ≤ v → (bif b then x else u) ≤ bif b then y else v
+@Becoming.carried_add : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} (σ₁ σ₂ : Nat → F → C → Nat) (δ₁ δ₂ : C → Nat) (t : Nat) (c : C),
+  Becoming.carried cs part (fun t h c => σ₁ t h c + σ₂ t h c) k present (fun c => δ₁ c + δ₂ c) t c =
+    Becoming.carried cs part σ₁ k present δ₁ t c + Becoming.carried cs part σ₂ k present δ₂ t c
+@Becoming.carried_mono : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {σ σ' : Nat → F → C → Nat} {δ δ' : C → Nat} {k' : Nat → F → C → Nat → C → Nat},
+  (∀ (t : Nat) (h : F) (c : C), σ t h c ≤ σ' t h c) →
+    (∀ (c : C), δ c ≤ δ' c) →
+      (∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C), k t h c s d ≤ k' t h c s d) →
+        ∀ (t : Nat) (c : C), Becoming.carried cs part σ k present δ t c ≤ Becoming.carried cs part σ' k' present δ' t c
+@Becoming.ExchangeLaw.sensitive_iff_strength : ∀ {F C : Type} [DecidableEq C] {law : Becoming.ExchangeLaw F C},
+  law.Nonanticipating →
+    ∀ {h : F} {d : C}, law.Sensitive h d ↔ ∃ t, ¬∀ (c : C) (s : Nat), s ≤ t → law.RespondsWithin t h c s d 0
+@Becoming.Propagation.total_steps_at : ∀ {q : Nat → Nat} {t : Nat},
+  (∀ (s : Nat), s ≠ t → q s = 0) → Becoming.total (Becoming.steps 0 (t + 1)) q = q t
+Becoming.Propagation.every_two : ∀ (c : Bool), c ∈ Becoming.Propagation.two
+Becoming.Propagation.distinct_two : Becoming.Distinct Becoming.Propagation.two
+Becoming.Propagation.carried_two_succ : ∀ (k : Nat → Bool → Bool → Nat → Bool → Nat) (t : Nat) (c : Bool),
+  Becoming.carried Becoming.Propagation.two (fun h => h) Becoming.Propagation.unitAct k Becoming.Propagation.both
+      (fun x => 0) (t + 1) c =
+    Becoming.carried Becoming.Propagation.two (fun h => h) Becoming.Propagation.unitAct k Becoming.Propagation.both
+        (fun x => 0) t c +
+      (Becoming.Propagation.unitAct t true c +
+        Becoming.total (Becoming.steps 0 (t + 1)) fun s =>
+          Becoming.total Becoming.Propagation.two fun d =>
+            k t false c s d *
+              Becoming.carried Becoming.Propagation.two (fun h => h) Becoming.Propagation.unitAct k
+                Becoming.Propagation.both (fun x => 0) s d)
+Becoming.Propagation.Chain.first : ∀ (t : Nat), Becoming.Propagation.Chain.amount (t + 1) true = 1
+Becoming.Propagation.Chain.relayed : ∀ (t : Nat),
+  (Becoming.total (Becoming.steps 0 (t + 1)) fun s =>
+      Becoming.total Becoming.Propagation.two fun d =>
+        Becoming.Propagation.Chain.relay t false false s d * Becoming.Propagation.Chain.amount s d) =
+    2 * Becoming.Propagation.Chain.amount t true
+Becoming.Propagation.Chain.keeps_arriving : ∀ (t : Nat), Becoming.Propagation.Chain.amount (t + 1) false = 2 * t
+Becoming.Propagation.Chain.gap_arrives : ∀ (t : Nat),
+  Becoming.gap (Becoming.Propagation.Chain.amount (t + 1) false)
+      (Becoming.carried Becoming.Propagation.two (fun h => h) (fun x x_1 x_2 => 0) Becoming.Propagation.Chain.relay
+        Becoming.Propagation.both (fun x => 0) (t + 1) false) =
+    2 * t
+Becoming.Propagation.Loop.returned : ∀ (t : Nat),
+  (Becoming.total (Becoming.steps 0 (t + 1)) fun s =>
+      Becoming.total Becoming.Propagation.two fun d =>
+        Becoming.Propagation.Loop.loop t false true s d * Becoming.Propagation.Loop.amount s d) =
+    Becoming.Propagation.Loop.amount t true
+Becoming.Propagation.Loop.runaway : ∀ (t : Nat), Becoming.Propagation.Loop.amount (t + 1) true = 2 ^ t
+Becoming.Propagation.Square.succ_square : ∀ (k : Nat), (k + 1) * (k + 1) = k * k + (k + (k + 1))
+Becoming.Propagation.Square.not_respondsWithin : ∀ (k : Nat),
+  ¬Becoming.Propagation.Square.law.RespondsWithin 0 () () 0 () k
+@Becoming.ExchangeLaw.courseWorld_balanced_iff : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {present : Nat → List F} {start : C → Nat} {W : Becoming.Web F C},
+  law.Nonanticipating → ((law.courseWorld present start W).Balanced ↔ law.Feasible present start)
+@Becoming.carriedWorld_level : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (t : Nat) (c : C),
+  (Becoming.carriedWorld cs part σ k present δ).web.level t (Sum.inr c) = Becoming.carried cs part σ k present δ t c
+@Becoming.carriedWorld_balanced : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat},
+  (Becoming.carriedWorld cs part σ k present δ).Balanced
