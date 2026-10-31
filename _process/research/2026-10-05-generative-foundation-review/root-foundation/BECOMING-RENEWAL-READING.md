@@ -23441,8 +23441,12 @@ Boundary:
   - Part 2, in OU7's rebuild: ReadingLoop.Good and GoodEnabled (successor safety under a value name) become
     LeadsInto and LeadsIntoEnabled; the …Obey… names of CensusTable, Standing and their uses …Hold…;
     RegimeMargin.harms_superadditive rises_superadditive; Pool.difference_belongs_to_the_joint
-    difference_only_together; GrammarLaws', Amounts', ModelStatements' and Becoming.lean's docstrings. Then the
-    record id, by research.py rename-id, last.
+    difference_only_together; GrammarLaws', Amounts', ModelStatements' and Becoming.lean's docstrings.
+  - The final stage, after OU7's landing: the record id by research.py rename-id (shared-laws-on-the-grammar,
+    with a redirect and former_ids), the category values ('master law', 'no master law'), master-laws.json's and
+    master_laws.py's names, MV's input hash re-pointed with its reason, so that no live "master law" remains but as
+    an alias or in history. Until then the id, anchors, data keys and tool keep the old name: a key is matched, not
+    read, and renaming it while four items edit the record would send each round a rename.
   - Passed to their owners, not edited: the one page and the overview's "the condition is a law of the root" (DU);
     the one page's short form of the condition (the front pages kit); the collective page's title (its owner);
     AGENTS.md's short form.
