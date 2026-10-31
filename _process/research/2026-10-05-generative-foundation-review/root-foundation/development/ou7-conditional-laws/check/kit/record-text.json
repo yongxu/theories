@@ -37,8 +37,8 @@
       ]
     },
     {
-      "en": "At a margin of three, where the heater gives more than the window takes, the room at its set level generates along the window's branch and keeps along the shut one, and is 全生成; the unheated room keeps and reaches an end, and once its window opens degenerates while renewing. At every positive margin the matched thermostat is 全守; so, at every margin, is every room while no window opens, and the unheated room once cold.",
-      "zh": "余量为三时，给过所取者，其室于设定水平沿窗之枝生成、沿闭之枝守，且全生成；无给之室守而有终，开窗之后新而尽（退化）。于每一正余量，给如所取之恒温器全守；于每一余量，不开窗时诸室皆全守，无给之室既冷亦全守。",
+      "en": "At a margin of three, the overshooting thermostat at its set level generates along the window's branch and keeps along the shut one, and is 全生成; the unheated room keeps and reaches an end, and once its window opens degenerates while renewing. At every positive margin the matched thermostat is 全守; so, at every margin, is every room while no window opens, and the unheated room once cold.",
+      "zh": "余量为三时，给过所取之恒温器于设定水平沿窗之枝生成、沿闭之枝守，且全生成；无给之室守而有终，开窗之后新而尽（退化）。于每一正余量，给如所取之恒温器全守；于每一余量，不开窗时诸室皆全守，无给之室既冷亦全守。",
       "declarations": [
         "Becoming.Rooms.«给过所取则生守相杂»",
         "Becoming.Rooms.Overshooting.generation_strong",
@@ -54,8 +54,8 @@
       ]
     },
     {
-      "en": "The single-line law tested both ways: where the window is open the net is a single line, and the overshooting thermostat generating there does not keep from some point on; at its set level the net branches, and it generates and keeps from some point on together, so the law's condition is needed.",
-      "zh": "单行之律两向验之：开窗处网为单行，给过所取之恒温器于彼生成而不后守；于其设定水平网有分枝，生成与后守并存，故此律之条件不可去。",
+      "en": "The single-line law tested both ways at a margin of three: where the window is open the net is a single line, and the overshooting thermostat generating there does not keep from some point on; at its set level the net branches, and it generates and keeps from some point on together, so the law's condition is needed.",
+      "zh": "余量为三时，单行之律两向验之：开窗处网为单行，给过所取之恒温器于彼生成而不后守；于其设定水平网有分枝，生成与后守并存，故此律之条件不可去。",
       "declarations": [
         "Becoming.Rooms.Overshooting.single_line_tested",
         "Becoming.Rooms.Overshooting.not_keepsAfter_open"
@@ -74,8 +74,8 @@
       ]
     },
     {
-      "en": "With the window open the rule is the regime's step, a draw of one then the heater's giving, and the window's branch is the regime's run. The unheated room is cold from its margin's step on; the matched thermostat holds its set level; at a margin of three the overshooting one alternates 3 and 4, the regime's alternation shifted by two, though the regime's holding law does not apply. No window course keeps widening.",
-      "zh": "开窗时，此则即体制之步：汲取一份，然后热源之所给；窗自设定水平之枝即体制之进程。无给之室自其余量之步起皆冷，给如所取之恒温器守其设定水平；余量为三时，给过所取者于 3 与 4 间交替，即体制交替之例移二，虽体制之守律不适用于它。窗之进程无一持续扩大。",
+      "en": "With the window open the rule is the regime's step, a draw of one then the heater's giving, and the window's branch the regime's run. The unheated room is cold from its margin's step on; the matched thermostat holds its set level; at a margin of three the overshooting one alternates 3 and 4, the regime's alternation shifted by two, though its holding law does not apply. None of these courses keeps widening.",
+      "zh": "开窗时，此则即体制之步：汲取一份，然后热源之所给；窗自设定水平之枝即体制之进程。无给之室自其余量之步起皆冷，给如所取之恒温器守其设定水平；余量为三时，给过所取者于 3 与 4 间交替，即体制交替之例移二，虽体制之守律不适用于它。此诸进程无一持续扩大。",
       "declarations": [
         "Becoming.Rooms.next_open",
         "Becoming.Rooms.window_line",
@@ -91,8 +91,8 @@
       ]
     },
     {
-      "en": "Read on its moments, the overshooting course at a margin of three is 全生成 at the level, which changes at every step, and no moment of the matched or the unheated course is. A room's coarse line is its possible with warmth held: from a warm occurrence all that a heated room makes possible is possible with warmth held, while at a margin of three the unheated room's cold occurrence is possible but not with warmth held.",
-      "zh": "就其时刻读之，余量为三时给过所取者之进程于水平下全生成，水平每步皆变；给如所取者与无给之室之进程无一时刻如是。室之粗线即其持温之可能：自温之出现，有给之室所可能者皆持温而可能；余量为三时，无给之室之冷之出现可能，而非持温而可能。",
+      "en": "On its moments the overshooting course at a margin of three is 全生成 at the level, which changes every step; no moment of the matched or the unheated course is. A room's coarse line is its possible with warmth held; at a positive margin, all a heated room makes possible from a warm occurrence is possible with warmth held, while at a margin of three the unheated room's cold occurrence is possible, not with warmth held.",
+      "zh": "就其时刻读之，余量为三时给过所取者之进程于水平下全生成，水平每步皆变；给如所取者与无给之室之进程无一时刻如是。室之粗线即其持温之可能：于正余量，自温之出现，有给之室所可能者皆持温而可能；余量为三时，无给之室之冷之出现可能，而非持温而可能。",
       "declarations": [
         "Becoming.Rooms.Overshooting.generation_at_moments",
         "Becoming.Rooms.Matched.no_generation_at_moments",
@@ -103,8 +103,8 @@
       ]
     },
     {
-      "en": "Read before the exchange, at a margin of three the window moves both heated rooms' levels, and at a margin of one it takes a heated room out of warmth. Every step of a heated room lands warm, read after the exchange at every positive margin and read before it from a margin of two on; without a heater the two orders are one rule.",
-      "zh": "热源于交换之前读水平，则余量为三时窗移二有给之室之水平，余量为一时窗使有给之室失温。有给之室之每一步皆落于温：交换后读，于每一正余量；交换前读，于余量二以上。无给则二序为一则。",
+      "en": "Read before the exchange, at a margin of three the window moves both thermostats' levels, and at a margin of one it takes a heated room out of warmth. Every step of a heated room lands warm, read after the exchange at every positive margin and read before it from a margin of two on; without a heater the two orders are one rule.",
+      "zh": "热源于交换之前读水平，则余量为三时窗移二恒温器之水平，余量为一时窗使有给之室失温。有给之室之每一步皆落于温：交换后读，于每一正余量；交换前读，于余量二以上。无给则二序为一则。",
       "declarations": [
         "Becoming.Rooms.nextBefore",
         "Becoming.Rooms.before_window_moves",
@@ -117,8 +117,8 @@
   ],
   "hypotheses": [
     {
-      "en": "Levels in whole units. The surroundings are a supplied constant switched only by the window, at the set level while it is shut and at 0 once it opens; the exchange moves the level one unit a step toward them; the heater's supply is unlimited.",
-      "zh": "水平以整单位计。环境为所予之常量，唯窗转之：闭时在设定水平，开后为 0；交换每步使水平向之移一单位；热源之供无限。"
+      "en": "Levels in whole units. The surroundings are a supplied constant switched only by the window, at the set level while it is shut and at 0 once it opens; the exchange moves the level one unit a step toward them; then a heater gives c wherever the level is below the set level, its supply unlimited. A heated room has c ≥ 1, the matched thermostat c = 1 and the overshooting one c = 2.",
+      "zh": "水平以整单位计。环境为所予之常量，唯窗转之：闭时在设定水平，开后为 0；交换每步使水平向之移一单位；然后热源于水平低于设定水平处给 c，其供无限。有给之室 c ≥ 1，给如所取之恒温器 c = 1，给过所取者 c = 2。"
     },
     {
       "en": "The window never closes once open; warm means a level of at least 1; the heater reads the level after the exchange, and the order before it is a second rule; the set level is the shut surroundings' level.",
