@@ -65,7 +65,7 @@ Until the layers are within budget, the template states their measured times.
 
 | | On main | New edition |
 |---|---|---|
-| Whole | 13,467 words, 104 to 135 minutes | 13,365 words, 103 to 134 ("about two hours") |
+| Whole | 13,467 words, 104 to 135 minutes | 13,369 words, 103 to 134 ("about two hours") |
 | Before the first item | 3,077 words, 24 to 31 minutes | The dossier in ten minutes, 1,100 words with the title (8.5 to 11 minutes), then the tests, 358 words (2.8 to 3.6) |
 | An hour's path | none | Those ten minutes, the tests and seven items, 5,331 words, 41 to 53.3 minutes |
 | A separate "one page" | 5,503 words, called ten minutes | Retired to the kit's history |

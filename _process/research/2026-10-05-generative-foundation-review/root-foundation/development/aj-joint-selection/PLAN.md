@@ -1,6 +1,6 @@
 # AJ: alignment of the joint selection (plan)
 
-24 October 2026, brought up to date on 26 October 2026; condition 1 restated and two neighbouring lines corrected on 29 October 2026 (board item AJ5); steps 6 and 7's standings brought to the restatement on 30 October 2026 (board item MA4c). AI-authored plan for the coordination of this line ([source of the goal](../../../../../../sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md)). It states the goal in the account's terms, argues for that representation, lists what is on main and what is missing, and orders the path. The board shows the path and holds the claims ([board](../../../../../BECOMING-WORKBOARD.md)); results are stated in their records and home sections, not here.
+24 October 2026, brought up to date on 26 October 2026; condition 1 restated and two neighbouring lines corrected on 29 October 2026 (board item AJ5); steps 6 and 7's standings brought to the restatement on 30 October 2026 (board item MA4c); the one page's place given on 31 October 2026 (board item AJ4). AI-authored plan for the coordination of this line ([source of the goal](../../../../../../sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md)). It states the goal in the account's terms, argues for that representation, lists what is on main and what is missing, and orders the path. The board shows the path and holds the claims ([board](../../../../../BECOMING-WORKBOARD.md)); results are stated in their records and home sections, not here.
 
 ## 1. The goal
 
@@ -70,7 +70,7 @@ Whose losses count is the continuation condition, and that widening is better is
 - **AJ5**, the collective question on one page ([COLLECTIVE-DIRECTION](../../../../../../theories/becoming/COLLECTIVE-DIRECTION.md), 29 October 2026; docs only): whether a collective can always move the world toward generation, answered in the account's terms. No guarantee, by the theory's own laws; a direction as a criterion; exits under stated conditions; six conditions for "enough situationality"; and, from `Becoming.HeldPossible`, that a course making only the moves of one fixed process from some step on does not keep the possible under it widening. With it, condition 1 restated (§1), the dossier's scope box and the LA1 series' standing (§3, and where T3 cites it).
 
 **Missing:**
-1. The one page for alignment readers (AJ4's draft, `development/aj4-alignment-readers/DRAFT-ONE-PAGE.md`).
+1. A person's reading of the one page for alignment readers, now the dossier's opening section ([The dossier in ten minutes](../../../../../../theories/becoming/review/ALIGNMENT.md#the-dossier-in-ten-minutes), 31 October 2026; AJ4's earlier draft is in its kit's history): §5 asks for one page that a reader finishes, and no person has read it yet.
 2. A test of T3's distinctive claim on trained systems: a dependent outside the stated reward that the agent can keep, room open, nearness to the optimum varied, on more than one model family (§3, LA1b).
 
 ## 4. The path
@@ -89,7 +89,7 @@ Pace, as the board's *Now* section and [08 §12](../../../../../../theories/beco
 - **LA1c**, whether the model finds the best threshold itself: run (above). With no round assigned, its selection prediction passed on both sides; the model ended at the best threshold in 29 of 30 locked seeds and 8 of 10 open ones, and its open misses never reached the thresholds where restraint pays. Designed, frozen and run by AJ3's holder.
 - **LA2** (a lock in a self-rewarding loop, testing T7) and **LA3** (what comes back decides the sign, testing whether in-context selection follows the agent's own scores, on MA3's classes): run. LA2's frozen verdicts passed and its bridge failed; LA3 failed two of its four contrasts (above). Designed and frozen by AJ3's holder (a side session of AJ4's holder), as LA1's lesson asks: verdicts only on differences the feedback resolves.
 
-**Step 5. AJ4: the dossier landed** (`bccbac9f8`); the one page is in draft with AJ4's holder. It is not a paper.
+**Step 5. AJ4: the dossier landed** (`bccbac9f8`); its opening section, [The dossier in ten minutes](../../../../../../theories/becoming/review/ALIGNMENT.md#the-dossier-in-ten-minutes), is the one page (31 October 2026), and the earlier draft is in AJ4's kit's history. It is not a paper.
 
 **Step 6. MA4: what comes back to the shapers, read by readers drawn from the selected** (landed 26 October 2026, core receipt `20261025T165537.368039Z`, study §414; claimed, drafted and landed by this plan's session, reviewed once by an independent reader, every finding taken but one left to RuleCapture's owner). MA3's rule after shaping is read by readers drawn from the population as it counts them, each shaper among them reading what comes back to the shapers alone as `hi` and each other as `lo` (MA2's pool of two of MA3's rules; `Becoming.DrawnShaping`, kit `development/ma4-drawn-shaping/`). What it proves:
 - the rule read reads the share monotonically exactly where `lo ≤ hi`, so MA3's premise on the loop is moved to who reads, not removed; where `hi ≤ lo` it reads against the share;
@@ -130,7 +130,7 @@ Two further conditions: one page that a reader finishes, and positioning against
 |---|---|---|
 | MA2 | its 22 October owner session; landing taken over on Ren's yes by this plan's session | landed 25 October 2026 (`7bdacfc28`) |
 | MA3, MA3a | the fork of the unification-and-coherence conversation that claimed MA3 | landed 25 October 2026 (`b68a7040e`, `4e3059af8`) |
-| AJ2, AJ4 | the third fork of the same conversation | AJ2 landed (`5f3e932d3`); AJ4's dossier landed (`bccbac9f8`), the one page in draft |
+| AJ2, AJ4 | the third fork of the same conversation | AJ2 landed (`5f3e932d3`); AJ4's dossier landed (`bccbac9f8`), the one page its opening section (31 October 2026) |
 | AJ3 (LA2, LA3), LA1b, LA1c | a side session of the third fork | LA2 run (`1e2b99d26`); LA3 run (`f8c163cce`); both in their places, AJ3 landed (`d054b3245`); LA1b run (`9d87cde1a`) and in its places; LA1c run (`ee8bea48a`) and in its places |
 | LA1 | the session that froze and ran it | scored (`0c2163ae3`) |
 | AJ (this plan), MA4, MA4b | the coordinating session of this plan (fork 2 of the same conversation) | plan current; MA4 landed 26 October 2026 (core receipt `20261025T165537.368039Z`); MA4b landed 26 October 2026 (`8ab22de82`, core receipt `20261025T200926.001323Z`) |
