@@ -20,3 +20,7 @@ On a request to take care of unmerged work (outdated work removed, partly useful
 - **Removed, branch already on main, clean, no process inside:** `wt-fm` (fm-ten), `front-pages-land`, `mv-land`, `rf-landing` (rf-round2) and `u1b`.
 - **Removed after its leftovers were committed** to `refs/salvage/wt-u1b-reh1-leftovers`: `u1b-reh1`, U1b's rehearsal. Its script was byte-identical to main's; the rest was rehearsal output and core receipt `20261031T143141.041218Z`, superseded by U1b's landing `9651f5829`.
 - **Kept for their owners:** the BD2 rehearsals (`bd2-reh2`, `bd2-reh3`), AJ4's rehearsal, the check worktrees `wt-check` and `wt-check2`, and the worktrees of the items in hand.
+
+## Checked again, 1 November 2026, on main `3d1528b36`
+
+None of the 95 is the branch of a live worktree: no branch in `git worktree list` is under `refs/salvage/branches/`, and each of the 15 worktree branches is still a head. The work board does not name any of the 95. No further heads are moved until the coordinator has audited the remaining leftovers.
