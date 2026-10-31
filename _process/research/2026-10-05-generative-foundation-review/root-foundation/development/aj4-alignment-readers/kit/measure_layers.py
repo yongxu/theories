@@ -131,7 +131,9 @@ def main(ref=None):
         within = 'yes' if en + zh / 2 <= HOUR else 'no'
         print(f'| {name[:-3].lower()}: its hour | {en:,} | {zh:,} | {minutes(en, zh)} | {HOUR} | {within} | |')
     text = read(ref, 'README.md')
-    notes = [n for n in re.split(r'\n(?=\d+\. <a id="note-)', part(text, r'^### Notes', r'^## ')) if 'note-' in n]
+    # The notes end at the rule after their list, and a note's own number is a note marker, not counted.
+    listed = re.split(r'\n---\n', part(text, r'^### Notes', r'^## '))[0]
+    notes = [re.sub(r'^\d+\.\s+', '', n) for n in re.split(r'\n(?=\d+\. <a id="note-)', listed) if 'note-' in n]
     sizes = [count(n)[0] for n in notes]
     if sizes:
         print(f'\nThe opening\'s notes: {len(sizes)}, {sum(sizes):,} words; median {statistics.median(sizes):.0f}, '
