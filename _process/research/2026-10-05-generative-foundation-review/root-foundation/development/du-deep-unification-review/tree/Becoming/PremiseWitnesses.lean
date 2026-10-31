@@ -7,7 +7,8 @@ import Becoming.Lifting
 Board item DU. The ethics asserts no premise; each premise it names is a hypothesis of proved
 conditionals. This module completes, for three of them, what the premise card asks: a model
 meeting it and one failing it, or a theorem that no statement of a stated kind entails it. Most
-of the models already exist; this module states the pairs. It adds one law of widening.
+of the models already exist; this module states the pairs. It adds one law of widening, joins
+self-concern to the condition on the root, and joins it, one way, to C on a web's level paths.
 
 * **The condition on the root varies with the net.** At the one, the endless line of descent meets
   `«续无外»` at its first birth (`LineOfDescent.Endless.descent_no_outside`), and two family lines
@@ -15,11 +16,11 @@ of the models already exist; this module states the pairs. It adds one law of wi
   (`TwoLines.other_center_outside`): `«续无外随网»`. In families, the line of descent meets
   `«族无外»` and a third thing apart from two joined families fails it (`«族无外随网»`). So no law
   holding of every net settles either; on one net they vary with the class as well
-  (`LineOfDescent.Endless.member_outside`).
-* **No statement reading no order, and holding at a datum with an extension, entails C**
-  (`ReadsNoOrder.not_entails`), the pattern of `ReadsOnlyDynamics.not_entails` for the condition,
-  with the order in the place of the significance. Immediate, since "better" is free: it shows that
-  a frame fixes no order.
+  (`LineOfDescent.Endless.member_outside`), and with the direction the net is read in (below).
+* **A statement reading no order fails, for every order, at a datum where it entails C on a frame
+  with an extension** (`ReadsNoOrder.not_entails`), the pattern of `ReadsOnlyDynamics.not_entails`
+  for the condition, with the order in the place of the significance. Immediate, since "better" is
+  free: it shows that a frame fixes no order.
 * **L, lifting, is met and failed on `LiftModel`'s frame**: the move reaching 3 is lifted above the
   move reaching 1, and not the reverse (`LiftModel.met_and_failed`). That the choice of the rule is
   substantive is `LiftModel.some_outcome_does_not_lift`.
@@ -28,13 +29,64 @@ of the models already exist; this module states the pairs. It adds one law of wi
   widenings, each by one listed item alone, leads from `b` up to `a`
   (`Weighting.widensOn_iff_reach`). So an order transitive on courses is increasing in admission
   exactly when it ranks every widening by one item above what it widens
-  (`Weighting.increasing_iff_by_one`). Read on a web's level paths, where an extension is a
-  widening (`Web.paths_extension_iff_widens`), this is what C asks of a transitive order, asked
-  item by item.
+  (`Weighting.increasing_iff_by_one`).
+* **Self-concern and being increasing in admission, joined to the condition on the root.** An order
+  is self-concerned, increasing in its own continuation (`Weighting.IncreasingInOwn`), when it ranks
+  above what it widens every widening that adds to the items `own` marks. On a listing,
+  self-concern and being increasing in admission (`Weighting.Increasing`) coincide for every order
+  exactly when `own` marks every listed item (`Weighting.increasingInOwn_iff_increasing_iff_marks`).
+  Its "if" half is the existing `Weighting.increasingInOwn_iff_increasing`; what this module adds is
+  the witness: a listed item left unmarked gives a self-concerned order that is not increasing in
+  admission (`Weighting.exists_increasingInOwn_not_increasing`). Read from standpoints, with
+  `own p` marking exactly the `x` with `Q p x` for any relation `Q`, the two coincide from every
+  standpoint, on every listing and for every order, exactly when `Q p x` holds for every `p` and
+  `x` (`Weighting.increasingInOwn_iff_increasing_iff_all`). The root supplies only what the
+  marking reads. With `Q p := «所及» R E (center p)`, what the line under `E` from `p`'s center
+  reaches along `R`, that totality is `«续无外» R E center` by definition
+  (`Weighting.increasingInOwn_iff_increasing_iff_noOutside`), and, composing the existing
+  `withinClosure_iff_reached` and `ownClosure_unrestricted_iff_noOutside`, it is the continuation
+  condition held de se along the relation
+  (`Weighting.increasingInOwn_iff_increasing_iff_unrestricted`). The join is near-definitional: it
+  locates where self-concern and being increasing in admission coincide, and proves no property of
+  reach.
+* **To C on level paths, one way.** Where admission is decided and what two level paths admit is
+  listed, as (step, formation) items, an order increasing in admission ranks the second above the
+  first whenever the second extends the first with every claim counted as living
+  (`Web.extension_ranked_of_increasing`, through `Web.paths_extension_iff_widens` and
+  `Web.widens_iff_every_weighting`). So where the continuation condition held de se along a
+  relation on formations holds, with the item `(t, f)` marked by the marking of `f`, and what every
+  level path admits is listed, every order increasing in that own continuation, read on level paths
+  through the decided admission, meets C (`Comparison`) with every claim counted as living
+  (`Web.comparison_of_increasingInOwn`). The other half, self-concern failing C where the condition
+  fails, is proved on listings only: on a web, the courses of the witness need level paths
+  admitting them.
+* **The direction.** The marking runs from the center along `R`, as `ownClosure` draws the own
+  continuation. With `R` read as 缘, as in the models of `Becoming.GrammarScope` and
+  `Becoming.GrammarCases`, it marks what the center conditions; along `«逆» R`, the direction of the
+  relations a self is drawn along in `Becoming.Weightings` (feeding, influence: from what is fed to
+  what feeds it), it marks the center's conditions. Along 缘 (`«续无外随网»`), self-concern and being
+  increasing in admission coincide on the endless line of descent and part on two family lines
+  (`increasingInOwn_with_net`). Along the converse of 缘 (`«逆缘续无外随网»`), the last occurrence of
+  descent that ends reaches all four occurrences (`LineOfDescent.Last.converse_no_outside`), and the
+  endless line fails from every center, since a line along the converse never reaches a later
+  member (`LineOfDescent.Endless.converse_outside`); self-concern and being increasing in admission
+  coincide on the first and part on the second (`increasingInOwn_with_net_converse`). So the
+  endless line meets the condition along 缘 and fails it along the converse.
+
+This does not derive C, and does not equate C with self-concern. It shows that self-concern and
+being increasing in admission, the order C asks on a web's level paths, coincide on every listing
+exactly where the condition on the root holds for the marking's direction, and part where it fails;
+and that, where the de se condition holds and admission is decided and listed, self-concern meets
+C. Self-concern and the condition on the root both remain hypotheses, and the condition is
+contingent: it varies with the net, the class and the direction.
 
 No definition of an earlier module changes. A leaf: its witnesses belong beside the models they
-use, and its laws of widening in `Becoming.Weightings`, after `Weighting.widensOn_of_widensBy`
-and `Weighting.widens_iff_every_increasing`, where they move at that module's next change.
+use (the converse ones beside `LineOfDescent` in `Becoming.GrammarScope`), its laws of widening and
+of self-concern in `Becoming.Weightings`, after `Weighting.widensOn_of_widensBy`,
+`Weighting.widens_iff_every_increasing` and `Weighting.widensOwn_iff_every_increasingInOwn`, its
+two laws on level paths there after `Web.widens_iff_every_of_class`, and its joins to the root in
+`Becoming.GrammarScope`, after `ownClosure_unrestricted_iff_noOutside`, where they move at those
+modules' next change.
 -/
 
 namespace Becoming
@@ -84,15 +136,16 @@ significance. -/
 def ReadsNoOrder {D : Type} (law : D → (S → S → Prop) → Prop) : Prop :=
   ∀ d better better', law d better → law d better'
 
-/-- **No statement reading no order, and holding at a datum with an extension, entails C.** Where
-the frame a datum gives has an extension, a statement reading no order that entails C there fails at
-that datum for every order. -/
+/-- **A statement reading no order fails, for every order, at a datum where it entails C on a frame
+with an extension.** Let a statement read no order, and at a datum `d` entail C (`Comparison`) on a frame
+that has an extension. Then it fails at `d` for every order: holding at one order, it would hold at
+the order relating nothing, and C there fails at the extension. Only the datum `d` is used. -/
 theorem ReadsNoOrder.not_entails {D : Type} {law : D → (S → S → Prop) → Prop}
-    (reads : ReadsNoOrder law) {frame : D → Frame S A C} {living : D → C → Prop}
-    (entails : ∀ d better, law d better → Comparison (frame d) (living d) better)
-    {d : D} {s t : S} (extension : Extension (frame d) (living d) s t)
+    (reads : ReadsNoOrder law) {frame : Frame S A C} {living : C → Prop} {d : D}
+    (entails : ∀ better, law d better → Comparison frame living better)
+    {s t : S} (extension : Extension frame living s t)
     {better : S → S → Prop} : ¬ law d better :=
-  fun holds => entails d _ (reads d better (fun _ _ => False) holds) s t extension
+  fun holds => entails _ (reads d better (fun _ _ => False) holds) s t extension
 
 end Frames
 
@@ -209,5 +262,332 @@ theorem increasing_iff_by_one {items : List X} {O : (X → Bool) → (X → Bool
 end Chains
 
 end Weighting
+
+/-! ## Self-concern and being increasing in admission, joined to the root -/
+
+namespace Weighting
+
+variable {X : Type}
+
+/-- **Where an item is listed and not marked, self-concern asks less than being increasing in
+admission.** Let `x` be listed and not marked by `own`. The order ranking `a` above `b` exactly
+when `a` widens `b` and adds to what `own` marks (the order every order increasing in its own
+continuation contains, by `widensOwn_iff_every_increasingInOwn`) is increasing in its own
+continuation and not increasing in admission: the course admitting exactly the unmarked items
+widens the course admitting nothing, at `x`, and adds nothing marked, so it is not ranked above
+it. No decidable equality of items is used. -/
+theorem exists_increasingInOwn_not_increasing {items : List X} {own : X → Bool} {x : X}
+    (listed : x ∈ items) (unmarked : own x = false) :
+    ∃ O, IncreasingInOwn items own O ∧ ¬ Increasing items O :=
+  ⟨fun b a => WidensOn items a b ∧ AddsOwn items own a b,
+   fun _ _ widens adds => ⟨widens, adds⟩,
+   fun increasing =>
+    (increasing (fun y => !own y) (fun _ => false)
+      ⟨fun _ _ held => Bool.noConfusion held, x, listed,
+        congrArg (fun v => !v) unmarked, rfl⟩).2.elim
+      fun _ ⟨_, marked, admits, _⟩ =>
+        Bool.noConfusion ((congrArg (fun v => !v) marked).symm.trans admits)⟩
+
+/-- **Self-concern is being increasing in admission, for every order, exactly where its own
+continuation marks every listed item.** For a listing `items` and a marking `own`, every order is
+increasing in its own continuation exactly when it is increasing in admission if and only if `own`
+marks every listed item. The "if" half is the existing `increasingInOwn_iff_increasing`; the "only
+if" half is `exists_increasingInOwn_not_increasing`. -/
+theorem increasingInOwn_iff_increasing_iff_marks {items : List X} {own : X → Bool} :
+    (∀ O, IncreasingInOwn items own O ↔ Increasing items O) ↔ ∀ x, x ∈ items → own x = true :=
+  ⟨fun same x listed => match h : own x with
+    | true => rfl
+    | false => match exists_increasingInOwn_not_increasing listed h with
+      | ⟨O, own_, not⟩ => absurd ((same O).mp own_) not,
+   fun all _ => increasingInOwn_iff_increasing all⟩
+
+section Root
+
+variable {α Pos : Type}
+
+/-- **Self-concern is being increasing in admission, from every standpoint, on every listing and for
+every order, exactly where each standpoint's marking is total.** For any relation `Q`, with `own p`
+marking exactly the `x` with `Q p x`, the two coincide everywhere if and only if `Q p x` holds for
+every `p` and `x`. The "only if" half reads each `x` on the listing holding it alone
+(`increasingInOwn_iff_increasing_iff_marks`); the "if" half is `increasingInOwn_iff_increasing`.
+Nothing about `Q` is used: the joins to the root below are this schema at what the marking reads. -/
+theorem increasingInOwn_iff_increasing_iff_all {Q : Pos → α → Prop} {own : Pos → α → Bool}
+    (reads : ∀ p x, own p x = true ↔ Q p x) :
+    (∀ p items O, IncreasingInOwn items (own p) O ↔ Increasing items O) ↔ ∀ p x, Q p x :=
+  ⟨fun same p x => (reads p x).mp
+      (increasingInOwn_iff_increasing_iff_marks.mp (same p [x]) x (.head [])),
+   fun all p _ _ => increasingInOwn_iff_increasing fun x _ => (reads p x).mpr (all p x)⟩
+
+/-- **Where the condition on the root holds, self-concern is being increasing in admission, on every
+listing.** Let `«续无外» R E center` hold, and let `own` mark whatever the line under `E` from `p`'s
+center reaches along `R` (only that half of a reading is used). Then for every listing and every
+order, being increasing in its own continuation is being increasing in admission: `own` marks
+everything, and `increasingInOwn_iff_increasing` applies.
+
+Direction: the reach runs from the center along `R`, as the own continuation is drawn in
+`Becoming.Weightings`: `ownClosure rel c _ g` is `WithinClosure rel c g`, which is
+`«所及» rel «一» c g` (`withinClosure_iff_reached`). With `R` read as 缘 it runs to what the center
+conditions; along `«逆» R`, the direction of the relations of `Becoming.Weightings` (feeding,
+influence), it runs to the center's conditions. Stated at every class `E`; the de se reading is the
+one (`increasingInOwn_iff_increasing_of_unrestricted`). -/
+theorem increasingInOwn_iff_increasing_of_noOutside {R E : «际» α} {center : Pos → α}
+    (none : «续无外» R E center) {p : Pos} {own : α → Bool}
+    (marks : ∀ x, «所及» R E (center p) x → own x = true) (items : List α)
+    (O : (α → Bool) → (α → Bool) → Prop) :
+    IncreasingInOwn items own O ↔ Increasing items O :=
+  increasingInOwn_iff_increasing fun x _ => marks x (none p x)
+
+/-- **Where a listed item lies outside a center's continuing, some order increasing in that center's
+own continuation is not increasing in admission.** With `own` marking only what the line under `E`
+from `p`'s center reaches along `R` (only that half of a reading is used), a listed `x` that line
+does not reach is unmarked, and gives such an order (`exists_increasingInOwn_not_increasing`). -/
+theorem exists_increasingInOwn_not_increasing_of_outside {R E : «际» α} {center : Pos → α}
+    {p : Pos} {own : α → Bool} (within : ∀ x, own x = true → «所及» R E (center p) x)
+    {items : List α} {x : α} (listed : x ∈ items) (outside : ¬ «所及» R E (center p) x) :
+    ∃ O, IncreasingInOwn items own O ∧ ¬ Increasing items O :=
+  exists_increasingInOwn_not_increasing listed (match h : own x with
+    | true => absurd (within x h) outside
+    | false => rfl)
+
+/-- **Self-concern is being increasing in admission, from every standpoint, on every listing and for
+every order, exactly where the condition on the root holds.** With `own p` marking exactly what the
+line under `E` from `p`'s center reaches along `R`, the two coincide everywhere if and only if
+`«续无外» R E center`. Near-definitional: `«续无外» R E center` is by definition that every such line
+reaches everything, so this is `increasingInOwn_iff_increasing_iff_all` at
+`Q p := «所及» R E (center p)`, and no property of reach is used. Its content is the witness
+`exists_increasingInOwn_not_increasing`; the "if" half is `increasingInOwn_iff_increasing`. -/
+theorem increasingInOwn_iff_increasing_iff_noOutside {R E : «际» α} {center : Pos → α}
+    {own : Pos → α → Bool} (reads : ∀ p x, own p x = true ↔ «所及» R E (center p) x) :
+    (∀ p items O, IncreasingInOwn items (own p) O ↔ Increasing items O) ↔ «续无外» R E center :=
+  increasingInOwn_iff_increasing_iff_all reads
+
+end Root
+
+section DeSe
+
+variable {F Pos : Type}
+
+/-- **Self-concern is being increasing in admission, from every standpoint, on every listing and for
+every order, exactly where the continuation condition held de se along the relation holds.** With
+`own p` marking exactly what lies within `p`'s center's closure along `rel` (what
+`selfAscribed (ownClosure rel) center p t` holds at every step `t`, by definition), the two coincide
+everywhere if and only if `Unrestricted (selfAscribed (ownClosure rel) center)`. A composition of
+existing equivalences: `increasingInOwn_iff_increasing_iff_noOutside` with `withinClosure_iff_reached`,
+then `ownClosure_unrestricted_iff_noOutside`. -/
+theorem increasingInOwn_iff_increasing_iff_unrestricted {rel : F → F → Prop} {center : Pos → F}
+    {own : Pos → F → Bool} (reads : ∀ p x, own p x = true ↔ WithinClosure rel (center p) x) :
+    (∀ p items O, IncreasingInOwn items (own p) O ↔ Increasing items O) ↔
+      Unrestricted (selfAscribed (ownClosure rel) center) :=
+  (increasingInOwn_iff_increasing_iff_noOutside
+    fun p x => (reads p x).trans withinClosure_iff_reached).trans
+    ownClosure_unrestricted_iff_noOutside.symm
+
+/-- **Where the continuation condition held de se holds, self-concern is being increasing in
+admission on any listing.** With `own` marking whatever lies within `p`'s center's closure along
+`rel` (only that half of a reading is used), an order is increasing in `p`'s own continuation
+exactly when it is increasing in admission: by `ownClosure_unrestricted_iff`, `own` marks
+everything. -/
+theorem increasingInOwn_iff_increasing_of_unrestricted {rel : F → F → Prop} {center : Pos → F}
+    (unrestricted : Unrestricted (selfAscribed (ownClosure rel) center)) {p : Pos} {own : F → Bool}
+    (marks : ∀ x, WithinClosure rel (center p) x → own x = true) (items : List F)
+    (O : (F → Bool) → (F → Bool) → Prop) :
+    IncreasingInOwn items own O ↔ Increasing items O :=
+  increasingInOwn_iff_increasing fun x _ => marks x (ownClosure_unrestricted_iff.mp unrestricted p x)
+
+end DeSe
+
+end Weighting
+
+/-! ## To C on a web's level paths, one way -/
+
+section Paths
+
+variable {F C : Type} {W : Web F C}
+
+/-- **An order increasing in admission ranks every extension between listed level paths.** Let
+admission be decided (`admitted l (t, f)` is true exactly when `l` admits `f` at `t`), and let what
+`l'` and `l` admit be listed in `items`. If `l` extends `l'` with every claim counted as living
+(`Extension W.paths (fun _ => True) l' l`), every order on courses over `items` increasing in
+admission ranks what `l` admits above what `l'` admits: the extension is a widening
+(`Web.paths_extension_iff_widens`), and on the listed items it is a widening of what is admitted
+(`Web.widens_iff_every_weighting`, `Weighting.widens_iff_every_positive`). -/
+theorem Web.extension_ranked_of_increasing {admitted : (Nat → C → Nat) → Nat × F → Bool}
+    (decides : W.DecidesAdmission admitted) {items : List (Nat × F)}
+    {O : (Nat × F → Bool) → (Nat × F → Bool) → Prop} (increasing : Weighting.Increasing items O)
+    {l l' : Nat → C → Nat} (listed : W.ListsAdmitted items l) (listed' : W.ListsAdmitted items l')
+    (extension : Extension W.paths (fun _ => True) l' l) : O (admitted l') (admitted l) :=
+  increasing (admitted l) (admitted l')
+    (((Web.widens_iff_every_weighting decides listed listed').trans
+      Weighting.widens_iff_every_positive.symm).mp (W.paths_extension_iff_widens.mp extension))
+
+/-- **Where the continuation condition held de se holds, self-concern meets C on level paths.** Let
+`Unrestricted (selfAscribed (ownClosure rel) center)` hold for a relation `rel` on the web's
+formations, let `own` mark whatever formation lies within `p`'s center's closure along `rel`, and
+mark each (step, formation) item by the marking of its formation. Let admission be decided, and let
+`items` list what every level path admits. Then every order increasing in that own continuation on
+`items`, read on level paths through the decided admission (`l` better than `l'` when the order
+ranks what `l` admits above what `l'` admits), meets C (`Comparison`) on the web's level paths with
+every claim counted as living. The hypothesis that every level path's admissions are listed asks
+that only finitely many (step, formation) pairs can be admitted; `Web.extension_ranked_of_increasing`
+needs it only of the two paths compared. -/
+theorem Web.comparison_of_increasingInOwn {Pos : Type} {rel : F → F → Prop} {center : Pos → F}
+    (unrestricted : Unrestricted (selfAscribed (ownClosure rel) center)) {p : Pos} {own : F → Bool}
+    (marks : ∀ f, WithinClosure rel (center p) f → own f = true)
+    {admitted : (Nat → C → Nat) → Nat × F → Bool} (decides : W.DecidesAdmission admitted)
+    {items : List (Nat × F)} (listed : ∀ l, W.ListsAdmitted items l)
+    {O : (Nat × F → Bool) → (Nat × F → Bool) → Prop}
+    (concerned : Weighting.IncreasingInOwn items (fun i => own i.2) O) :
+    Comparison W.paths (fun _ => True) fun l' l => O (admitted l') (admitted l) :=
+  fun l' l extension => Web.extension_ranked_of_increasing decides
+    ((Weighting.increasingInOwn_iff_increasing fun i _ =>
+      marks i.2 (ownClosure_unrestricted_iff.mp unrestricted p i.2)).mp concerned)
+    (listed l) (listed l') extension
+
+end Paths
+
+/-! ## The nets, along 缘 and along its converse -/
+
+namespace TwoLines
+
+/-- The line under the one from the first family's first birth reaches each of that family's members,
+young and old. -/
+theorem first_line_reaches_both : ∀ n,
+    «所及» step «一» (true, 0, false) (true, n, false) ∧ «所及» step «一» (true, 0, false) (true, n, true)
+  | 0 => ⟨.inl rfl, .inr (.one ⟨⟨rfl, .inl ⟨rfl, rfl⟩⟩, trivial⟩)⟩
+  | n + 1 =>
+    have old := (first_line_reaches_both n).2
+    have young : «所及» step «一» (true, 0, false) (true, n + 1, false) :=
+      .inr (match old with
+        | .inl e => absurd (congrArg (fun x : Occ => x.2.2) e) Bool.noConfusion
+        | .inr line => «相续之续» line ⟨⟨rfl, .inr ⟨rfl, rfl⟩⟩, trivial⟩)
+    ⟨young, .inr (match young with
+      | .inl e => absurd (congrArg (fun x : Occ => x.2.1) e) (fun h => Nat.noConfusion h)
+      | .inr line => «相续之续» line ⟨⟨rfl, .inl ⟨rfl, rfl⟩⟩, trivial⟩)⟩
+
+/-- **The first family's first birth reaches exactly its own family**: the line under the one from it,
+along 缘, reaches an occurrence exactly when the occurrence is of the first family. So marking by
+family (`fun x => x.1`) reads that birth's continuation along 缘. -/
+theorem first_line_reach_iff (x : Occ) : «所及» step «一» (true, 0, false) x ↔ x.1 = true :=
+  ⟨fun reached => match reached with
+    | .inl e => (congrArg Prod.fst e).symm
+    | .inr line => line_in_family line,
+   fun first => match x, first with
+    | (true, n, false), _ => (first_line_reaches_both n).1
+    | (true, n, true), _ => (first_line_reaches_both n).2⟩
+
+end TwoLines
+
+namespace LineOfDescent
+
+namespace Last
+
+/-- **Along the converse of 缘, descent that ends meets the condition on the root at the one, at its
+last occurrence**: the line under the one along `«逆» step` from the second member's old age reaches
+all four occurrences, back to the first member's birth. -/
+theorem converse_no_outside : «续无外» («逆» step) «一» (fun (_ : Unit) => ((true, true) : Occ)) :=
+  fun _ x =>
+    have third : «续» («逆» step) «一» (true, true) (true, false) := ⟨.inr (.inr ⟨rfl, rfl⟩), trivial⟩
+    have second : «续» («逆» step) «一» (true, false) (false, true) := ⟨.inr (.inl ⟨rfl, rfl⟩), trivial⟩
+    have first : «续» («逆» step) «一» (false, true) (false, false) := ⟨.inl ⟨rfl, rfl⟩, trivial⟩
+    match x with
+    | (true, true) => .inl rfl
+    | (true, false) => .inr (.one third)
+    | (false, true) => .inr (.more third (.one second))
+    | (false, false) => .inr (.more third (.more second (.one first)))
+
+end Last
+
+namespace Endless
+
+/-- 缘 never lowers the member: a step's target is the same member or the next. -/
+theorem step_member_le {x y : Occ} (h : step x y) : x.1 ≤ y.1 :=
+  match h with
+  | .inl ⟨_, e⟩ => Nat.le_of_eq (congrArg Prod.fst e).symm
+  | .inr ⟨_, e⟩ => Nat.le_trans (Nat.le_succ x.1) (Nat.le_of_eq (congrArg Prod.fst e).symm)
+
+/-- Along the converse of 缘, a line under any relation `E` never reaches a later member. -/
+theorem converse_line_le {E : «际» Occ} {c x : Occ} (line : «相续» («逆» step) E c x) :
+    x.1 ≤ c.1 := by
+  induction line with
+  | one h => exact step_member_le h.1
+  | more h _ ih => exact Nat.le_trans ih (step_member_le h.1)
+
+/-- From any occurrence, the line under the one along the converse of 缘 does not reach the birth of
+the next member. -/
+theorem converse_later_outside (c : Occ) : ¬ «所及» («逆» step) «一» c (c.1 + 1, false) :=
+  fun reached => match reached with
+    | .inl e => Nat.succ_ne_self c.1 (congrArg Prod.fst e).symm
+    | .inr line => Nat.not_succ_le_self c.1 (converse_line_le line)
+
+/-- **Along the converse of 缘, endless descent fails the condition on the root at the one, from every
+center**: a line along the converse runs back to earlier members and never reaches the next member's
+birth. Along 缘 it meets it at the first birth (`descent_no_outside`). -/
+theorem converse_outside (c : Occ) : ¬ «续无外» («逆» step) «一» (fun (_ : Unit) => c) :=
+  fun none => converse_later_outside c (none () (c.1 + 1, false))
+
+end Endless
+
+end LineOfDescent
+
+/-- **The condition on the root, along the converse of 缘, varies with the net (逆缘续无外随网).** At
+the one, descent that ends meets it at its last occurrence, and endless descent fails it from every
+center. -/
+theorem «逆缘续无外随网» :
+    «续无外» («逆» LineOfDescent.Last.step) «一»
+        (fun (_ : Unit) => ((true, true) : LineOfDescent.Last.Occ)) ∧
+      ∀ c : LineOfDescent.Endless.Occ,
+        ¬ «续无外» («逆» LineOfDescent.Endless.step) «一» (fun (_ : Unit) => c) :=
+  ⟨LineOfDescent.Last.converse_no_outside, LineOfDescent.Endless.converse_outside⟩
+
+/-- **Self-concern and being increasing in admission, along 缘, coincide or part with the net, as the
+condition on the root does** (`«续无外随网»`). Here `R` is 缘 (`step`), so a marking reading the
+line from a center marks what the center conditions. On the endless line of descent, for every
+marking `own` that marks whatever the line under the one from the first birth reaches, being
+increasing in that own continuation is being increasing in admission, on every listing and for
+every order. On two family lines with no condition between them, for every marking that marks only
+what the line under the one from the first family's first birth reaches, on every listing holding
+the other family's first birth `(false, 0, false)` (the item of `TwoLines.other_line_outside`), some
+order increasing in that own continuation is not increasing in admission. Each half uses only one
+direction of a reading; the exact readings exist: `fun _ => true` on the endless line
+(`LineOfDescent.Endless.descent_reaches`), and `fun x => x.1` on the two lines
+(`TwoLines.first_line_reach_iff`). Along the converse of 缘, the direction of `Becoming.Weightings`'
+relations, the endless line parts instead (`increasingInOwn_with_net_converse`). -/
+theorem increasingInOwn_with_net :
+    (∀ own : LineOfDescent.Endless.Occ → Bool,
+      (∀ x, «所及» LineOfDescent.Endless.step «一» (0, false) x → own x = true) →
+        ∀ items O, Weighting.IncreasingInOwn items own O ↔ Weighting.Increasing items O) ∧
+      ∀ own : TwoLines.Occ → Bool,
+        (∀ x, own x = true → «所及» TwoLines.step «一» (true, 0, false) x) →
+          ∀ items, ((false, 0, false) : TwoLines.Occ) ∈ items →
+            ∃ O, Weighting.IncreasingInOwn items own O ∧ ¬ Weighting.Increasing items O :=
+  ⟨fun _ marks => Weighting.increasingInOwn_iff_increasing_of_noOutside
+      LineOfDescent.Endless.descent_no_outside (p := ()) marks,
+   fun _ within _ listed => Weighting.exists_increasingInOwn_not_increasing_of_outside
+      (center := fun (_ : Unit) => ((true, 0, false) : TwoLines.Occ)) (p := ()) within listed
+      TwoLines.other_line_outside⟩
+
+/-- **Self-concern and being increasing in admission, along the converse of 缘, coincide or part with
+the net** (`«逆缘续无外随网»`). Here the line from a center runs along `«逆» step`, the direction of
+the relations of `Becoming.Weightings`, so a marking reading it marks the center's conditions. In
+descent that ends, for every marking that marks whatever the line under the one along the converse
+from the last occurrence reaches, being increasing in that own continuation is being increasing in
+admission, on every listing and for every order. In endless descent, for every center `c` and every
+marking that marks only what the line under the one along the converse from `c` reaches, on every
+listing holding the next member's birth `(c.1 + 1, false)`, some order increasing in that own
+continuation is not increasing in admission. The endless line coincides along 缘
+(`increasingInOwn_with_net`) and parts along its converse. -/
+theorem increasingInOwn_with_net_converse :
+    (∀ own : LineOfDescent.Last.Occ → Bool,
+      (∀ x, «所及» («逆» LineOfDescent.Last.step) «一» (true, true) x → own x = true) →
+        ∀ items O, Weighting.IncreasingInOwn items own O ↔ Weighting.Increasing items O) ∧
+      ∀ (c : LineOfDescent.Endless.Occ) (own : LineOfDescent.Endless.Occ → Bool),
+        (∀ x, own x = true → «所及» («逆» LineOfDescent.Endless.step) «一» c x) →
+          ∀ items, ((c.1 + 1, false) : LineOfDescent.Endless.Occ) ∈ items →
+            ∃ O, Weighting.IncreasingInOwn items own O ∧ ¬ Weighting.Increasing items O :=
+  ⟨fun _ marks => Weighting.increasingInOwn_iff_increasing_of_noOutside
+      LineOfDescent.Last.converse_no_outside (p := ()) marks,
+   fun c _ within _ listed => Weighting.exists_increasingInOwn_not_increasing_of_outside
+      (center := fun (_ : Unit) => c) (p := ()) within listed
+      (LineOfDescent.Endless.converse_later_outside c)⟩
 
 end Becoming
