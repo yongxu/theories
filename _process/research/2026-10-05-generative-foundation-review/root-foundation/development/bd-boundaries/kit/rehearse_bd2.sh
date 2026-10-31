@@ -33,6 +33,9 @@ make research-render > "$ASIDE/render1.log" 2>&1; echo "== render before re-poin
 python3 -B "$K/repoint_bd2.py" "$ID" > "$ASIDE/repoint-dry.log" 2>&1; step repoint-dry $?
 python3 -B "$K/repoint_bd2.py" "$ID" --apply > "$ASIDE/repoint.log" 2>&1; step repoint $?
 python3 -B "$K/board_bd2.py" head > "$ASIDE/board-head.log" 2>&1; step board-head $?
+# the coordinator's order sentence for the landed clause, verbatim (its message of 31 October); board_bd2.py writes
+# "Then, in the coordinator's order: $BD2_ORDER; ask the coordinator for a slot."
+export BD2_ORDER="documents only, by readiness: AJ4's reading budgets once more, TR-RR's designs; core items, by readiness: EL's core Lean, UE27, then OU7's rebuild last"
 python3 -B "$K/board_bd2.py" landed "$ID" "$N" > "$ASIDE/board.log" 2>&1; step board-landed $?
 make research-render > "$ASIDE/render2.log" 2>&1; step render $?
 for t in research-check-strict research-links research-test; do make $t > "$ASIDE/$t.log" 2>&1; step $t $?; done
