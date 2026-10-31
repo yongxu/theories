@@ -1,12 +1,12 @@
 diff --git a/theories/becoming/chapters/01-ROOT.md b/theories/becoming/chapters/01-ROOT.md
-index 055522c4f..60e881397 100644
+index 055522c4f..509a860b1 100644
 --- a/theories/becoming/chapters/01-ROOT.md
 +++ b/theories/becoming/chapters/01-ROOT.md
 @@ -80,5 +80,5 @@ An occurrence in a line either continues something or not, and is either continu
  **Theorem** (root). *Coarsening.* What ends under a coarser class ends under the finer, and what abides under the finer abides under the coarser (`«亡于粗则亡于细»`, `«住于细则住于粗»`); what begins under the coarser begins under the finer (`«生于粗则生于细»`), and a beginning under the finer continued under the coarser is an alteration (`«生于细而续于粗则异»`). The converse fails (a witness): an occurrence can end under the finer class and not end under the coarser (`«亡于细者不必亡于粗»`). This is the shape of a fire passed on: the wood ends, the fire goes on.
  
 -**Theorem** (root). *A change between the ends has a place.* For a class `K`, where every step of continuation either keeps `K` or carries a mark `P`, a line whose ends `K` tells apart has a step carrying the mark, placed on the line between them (`«两端分则中有标»`); the proof uses only the transitivity of `K`.
-+**Theorem** (root). *A change between the ends has a place.* For a relation `K` that composes (a class is one), where every step of continuation either keeps `K` or carries a mark `P`, a line whose ends `K` tells apart (`K` fails from its start to its end) has a step carrying the mark, placed on the line between them (`«两端分则中有标»`).
++**Theorem** (root). *A change between the ends has a place.* For a transitive relation `K` (a class is one), where every step of continuation either keeps `K` or carries a mark `P`, a line whose ends `K` tells apart (`K` fails from its start to its end) has a step carrying the mark, placed on the line between them (`«两端分则中有标»`).
  
  **Calibration** (root). That every occurrence, in every model, either begins or has a predecessor is exactly excluded middle (`«四相之定当且仅当排中»`): whether an occurrence has a predecessor under a class, and so begins, is decided only where going on is. The marks are not a partition even where this is decided: a flash begins and ends, and alteration relates two occurrences under two classes. On the steps, what holds and ceases at no later step holds on wherever each later step's position is decided (`persists_of_positions`).
 diff --git a/theories/becoming/review/LOGIC.md b/theories/becoming/review/LOGIC.md

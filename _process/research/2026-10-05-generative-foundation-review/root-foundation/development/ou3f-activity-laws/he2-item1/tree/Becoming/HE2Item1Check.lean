@@ -2,7 +2,7 @@ import Becoming.Sampling
 import Becoming.PatternPassing
 
 /-!
-HE2's item 1, checked outside the package before the rebuild: «两端分则中有标» with `K` only composing, and
+HE2's item 1, checked outside the package before the rebuild: «两端分则中有标» with `K` only transitive, and
 Sampling's `arises_within` and `ceases_within` read from it. The earlier form of the law, with `K` a class, is
 one application of the new one, and the earlier statements of Sampling's two theorems, written out, are the new
 theorems.
