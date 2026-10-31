@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "open",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-31T01:01:37+00:00",
+  "reviewed_at_utc": "2026-10-31T01:34:31+00:00",
   "statement": {
-    "en": "Each central declaration stands in one place on the edge of one root: derived from grammar laws; under a stated hypothesis, each needed; counting; or at a named distance, with its reason. None is a premise: the ethics' two, the condition for scope and C for order, are listed apart.",
-    "zh": "每一中心声明立于一根之边上之一处：推出，为文法之律之例；在所述假设之下，为一根形，其每一假设皆必要；计数；或在有名之距，各有其理。无一为前提：伦理之二前提，条件定范围、C 定序，另列。"
+    "en": "Each central declaration has one standing against the edge of one root: on it, derived from grammar laws or under a stated hypothesis; counting, below the grammar; or a named distance with its reason. None is a premise: the ethics' two, the condition for scope and C for order, are listed apart.",
+    "zh": "于一根之边各有一所立：在边上，或推出为文法之律之例，或在所述假设之下为一根形之例而其每一假设皆必要；在文法之下，计数；或在有名之距，各有其理。无一为前提：伦理之二前提，条件定范围、C 定序，另列。"
   },
   "laws": [
     {
@@ -96,7 +96,7 @@
     },
     {
       "kind": "non-implication",
-      "en": "That either premise of the ethics is warranted: the continuation condition is not entailed by the dynamics, and C has no such theorem; the warrant of each is open.",
+      "en": "That either premise of the ethics is warranted: the condition is not entailed by statements of the dynamics (given a standpoint and a formation), C has no such theorem, and each warrant is open.",
       "zh": "伦理之二前提有其据：延续之条件不为动力所蕴涵，C 无此定理；二者之据皆开放。"
     },
     {
@@ -129,8 +129,8 @@
     "zh": "清点诸行之根形；无一仅读动力之陈述蕴涵 C 之定理；第七章所留之意义根读，为保意义自由之三行；于更多相连之行读 HE2 之律为其例。"
   },
   "correspondence": {
-    "en": "Reverse mathematics in kind: each theorem placed by what it needs, with countermodels showing each hypothesis needed (Friedman 1975; Simpson 2009). Here the base is a grammar of relations and the measure is dependence in the compiled terms, not provability over a base system.",
-    "zh": "类于逆数学：每一定理依其所需而置，以反模型示各假设之必要（Friedman 1975；Simpson 2009）。此处之基为关系之文法，度量为编译项中之依赖，非于一基系统上之可证。"
+    "en": "Reverse mathematics in spirit only: a theorem placed by what it needs (Friedman 1975; Simpson 2009). Here the base is a grammar of relations, one row is placed by a form whose hypotheses are each shown non-redundant (no reversal is proved), and the measure is dependence in the compiled terms.",
+    "zh": "仅在精神上类于逆数学：一定理依其所需而置（Friedman 1975；Simpson 2009）。此处之基为关系之文法，一行由一根形而置，其假设各示为非冗余（未证逆推），度量为编译项中之依赖。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RootForms.lean",
   "aliases": [
@@ -155,15 +155,15 @@
     {
       "id": "selection-among-groups-by-ending",
       "detail": {
-        "en": "GroupEnding.Flow.all_end, row 17, under a stated hypothesis here.",
-        "zh": "GroupEnding.Flow.all_end，第 17 行，此处在所述假设之下。"
+        "en": "GroupEnding.Flow.all_end, row 17 of lever 2's table, under a stated hypothesis here.",
+        "zh": "GroupEnding.Flow.all_end，第二杠杆表之第 17 行，此处在所述假设之下。"
       }
     },
     {
       "id": "transmission-is-inheritance-and-need",
       "detail": {
-        "en": "Flow.no_new_dependence, row 5, at balance in its statement, with its relational part here.",
-        "zh": "Flow.no_new_dependence，第 5 行，于其陈述中有平衡，其关系之部在此。"
+        "en": "Flow.no_new_dependence, row 5 of lever 2's table, at balance in its statement, with its relational part here.",
+        "zh": "Flow.no_new_dependence，第二杠杆表之第 5 行，于其陈述中有平衡，其关系之部在此。"
       }
     }
   ],
@@ -216,6 +216,12 @@
         "Becoming.RootForms.all_end_certified"
       ],
       "sha256": "f7a7188312c125cd7f0f4e1811773a7f27df2055a43665276915965489318f39"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
+      "role": "review",
+      "sha256": "762643a526373cea15f74890c19d59ff3fe2faae7deb06cb0e2c94d6b8bc9d65",
+      "declarations": []
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-BOUNDARY.md",
@@ -273,7 +279,7 @@
         "declaration": "Becoming.Flow.beyond_gives_nothing",
         "standing": "derived",
         "basis": {
-          "en": "A case of «所闭之界» at feeding from (FedFrom): what lies beyond a formation's closure is given nothing by it. FedFrom and FedBy unfold to the closure, and the support, eq_zero_of_not_pos, is one step of the prelude, a natural number not above nothing being nothing."
+          "en": "A case of «所闭之界» at feeding from: what lies beyond a formation's closure is given nothing by it. WithinFeeding is the closure of FedFrom, which unfolds through FedBy to a positive giving to a required condition; the support, eq_zero_of_not_pos, is Flow's lemma that a natural number not above nothing is nothing."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
         "law": [
@@ -287,7 +293,7 @@
         "declaration": "Becoming.Flow.withinSystem_of_withinInfluence",
         "standing": "derived",
         "basis": {
-          "en": "A case of «所闭之单调» at being affected within sharing: Flow.shares_of_affectedBy, an unfolding, meets the law's inclusion, and WithinClosure.mono is the law at the frame's closure, applied past its conclusion."
+          "en": "A case of «所闭之单调» at being affected within sharing: Flow.shares_of_affectedBy, an unfolding, meets the law's inclusion, and WithinClosure.mono is the law at the frame's closure, applied past its conclusion. WithinClosure.mono is listed as support only because the dump's forwarder test does not recognize a law applied past its «则» conclusion (BOUNDARY-FIELD §3.0); it leaves the support when the test does."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
         "law": [
@@ -302,7 +308,7 @@
         "declaration": "Becoming.Law.drawn_iff_not_returns",
         "standing": "derived",
         "basis": {
-          "en": "A case of «定后有后则入当且仅当不返» at the relation of the law's next configuration, its successor fixed and total. The bridges read the model's drawn, absorbing, orbit and return as the grammar's «入», closure, «及» and return, the orbit by recursion; the support is the orbit's arithmetic of steps, the trace's length and the successor's being fixed and total."
+          "en": "A case of «定后有后则入当且仅当不返» at the relation of the law's next configuration, its successor fixed and total. The bridges read the model's drawn, absorbing, orbit and return as the grammar's «入», closed region («闭», Law.absorbing_iff_closed), «及» and return, the orbit by recursion; the support is the orbit's arithmetic of steps, the trace's length and the successor's being fixed and total."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
         "law": [
@@ -331,7 +337,7 @@
         "declaration": "Becoming.Law.lossless_iff_returns",
         "standing": "derived",
         "basis": {
-          "en": "A case of «有限遍后定后则定前当且仅当皆返» at the law's next configuration over the listed ones: lossless is the predecessor fixed (two bridges), and the other bridges and the support are those of Law.drawn_iff_not_returns."
+          "en": "A case of «有限遍后定后则定前当且仅当皆返» at the law's next configuration over the listed ones: lossless is the predecessor fixed (two bridges), the other five bridges are among those of Law.drawn_iff_not_returns, and the support is its support."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
         "law": [
@@ -375,7 +381,7 @@
         "declaration": "Becoming.Tolerance.answers_restores_iff",
         "standing": "derived",
         "basis": {
-          "en": "A case of «承之迭» at the relation up: answering is «承» of up by definition, the model's chain is «迭» by recursion through «迭之末步», and the worst start instantiates the law's start; the support keeps inclusion along a course and takes the chain's last step."
+          "en": "A case of «承之迭» at the relation up: answering is «承» of up by definition, the model's chain is «迭» by recursion through «迭之末步», and the worst start reduces every start to total withholding, the answering step keeping inclusion (Tolerance.answers_keeps); the support keeps inclusion along a course and takes the chain's last step."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
         "law": [
@@ -399,7 +405,7 @@
         "declaration": "Becoming.Withholding.withholding_spreads",
         "standing": "derived",
         "basis": {
-          "en": "A case of «存承之迭» at up: waiting on all is closed by definition, and within n steps is the grammar's, through the chain read as «迭» by recursion; the support takes the chain's last step."
+          "en": "A case of «存承之迭» at up: waiting on all meets the law's round by unfolding (Withholding.waitsAll_closed), and within n steps is the grammar's, through the chain read as «迭» by recursion; the support takes the chain's last step."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
         "law": [
@@ -454,7 +460,7 @@
         "declaration": "Becoming.GroupEnding.Flow.all_end",
         "standing": "under a stated hypothesis",
         "basis": {
-          "en": "The row is the root form at one step: giving is a member present at the step giving a positive amount, the region is activity at the step, and the listing is the generation with its offspring lists. That only active formations give meets the first hypothesis, and that descent is giving meets the second, each by definitions alone; the next generation's size is the length of the offspring lists' join, by the family's definition. The row carries nothing beyond the three hypotheses but these readings. Lever 2's witnesses at the model show that the model does not meet each hypothesis automatically."
+          "en": "The row is the root form at one step: giving is a member present at the step giving a positive amount, the region is activity at the step, and the listing is the generation with its offspring lists. That only active formations give (K3's premise \"only active relata give\") meets the first hypothesis, and that descent is giving meets the second, each by definitions alone; the next generation's size is the length of the offspring lists' join, by the family's definition. Beyond the form's hypotheses at the one step, the row carries the gate and descent at every step, and descent's third part, that each offspring comes to stand, which the recovery does not use; neither places the row. Lever 2's witnesses at the model show that the model does not meet each hypothesis automatically."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
         "form": "Becoming.RootForms.outside_leaves_no_offspring",
@@ -539,7 +545,7 @@
         "declaration": "Becoming.Flow.new_beyond_every",
         "standing": "amounts",
         "basis": {
-          "en": "Endless novelty concludes that a family gives more than it takes or is open, an imbalance of amounts; balance enters only the proof."
+          "en": "Endless novelty concludes that a family is given more than it takes, by the rest or across its boundary, an imbalance of amounts; balance enters only the proof."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
@@ -547,7 +553,7 @@
         "declaration": "Becoming.Flow.selected_le",
         "standing": "amounts",
         "basis": {
-          "en": "The gate is stated on the root as inclusions, and each hypothesis that is not counting is witnessed at the model (lever 2); the conclusion compares sums of amounts over generations, which the grammar has no terms for."
+          "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares the parents' needs, weighted by their offspring, with the level, at one step of descent."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
@@ -555,7 +561,7 @@
         "declaration": "Becoming.Flow.selection_within",
         "standing": "amounts",
         "basis": {
-          "en": "The gate is stated on the root as inclusions, and each hypothesis that is not counting is witnessed at the model (lever 2); the conclusion compares sums of amounts over generations, which the grammar has no terms for."
+          "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares the offspring's totals with the lowered and raised terms, at one step."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
@@ -563,7 +569,7 @@
         "declaration": "Becoming.Flow.transmitted_supported",
         "standing": "amounts",
         "basis": {
-          "en": "The gate is stated on the root as inclusions, and each hypothesis that is not counting is witnessed at the model (lever 2); the conclusion compares sums of amounts over generations, which the grammar has no terms for."
+          "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion bounds a descendant's need by the level plus δ, and the hypothesis that transmission stays within δ (TransmitsWithin) constrains amounts."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
@@ -571,7 +577,7 @@
         "declaration": "Becoming.SelectionTerm.Flow.support_moved_rises",
         "standing": "amounts",
         "basis": {
-          "en": "The gate is stated on the root as inclusions, and each hypothesis that is not counting is witnessed at the model (lever 2); the conclusion compares sums of amounts over generations, which the grammar has no terms for."
+          "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of amounts over generations."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
@@ -579,7 +585,7 @@
         "declaration": "Becoming.SelectionTerm.Flow.support_not_lower",
         "standing": "amounts",
         "basis": {
-          "en": "The gate is stated on the root as inclusions, and each hypothesis that is not counting is witnessed at the model (lever 2); the conclusion compares sums of amounts over generations, which the grammar has no terms for."
+          "en": "The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; the conclusion compares sums of amounts over generations."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
@@ -587,7 +593,7 @@
         "declaration": "Becoming.GroupEnding.Flow.rises_iff_inactive",
         "standing": "amounts",
         "basis": {
-          "en": "The gate and descent are stated on the root as two inclusions, but cancellation, and inactivity compared on sums of the trait, constrain amounts; its list facts are counting."
+          "en": "The gate and descent stand as two inclusions in lever 2's weakening; exact transmission at the step, each offspring's amount its parent's, and inactivity compared on sums of the trait, constrain amounts; its list facts are counting."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
@@ -595,7 +601,7 @@
         "declaration": "Becoming.SelectionLevels.rises_exact_iff_levels",
         "standing": "amounts",
         "basis": {
-          "en": "Cancellation, what transmission raises equal to what it lowers at each step, constrains amounts; its list facts are counting."
+          "en": "Exact transmission at the step, each offspring's amount its parent's, constrains amounts (the proof needs only its cancellation, lever 2); its list facts are counting."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
@@ -611,7 +617,7 @@
         "declaration": "Becoming.RegimeMargin.ends_iff_below",
         "standing": "amounts",
         "basis": {
-          "en": "A run of natural-number margins ends exactly below H + y: a comparison of amounts."
+          "en": "A run of natural-number levels ends exactly below H + y: a comparison of amounts."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
@@ -643,7 +649,7 @@
         "declaration": "Becoming.Web.frontier_broken",
         "standing": "amounts",
         "basis": {
-          "en": "Optima of orders on natural-number levels and weighted draws break a dependence."
+          "en": "Optima of orders on natural-number levels and what is drawn break a dependence."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
@@ -659,7 +665,7 @@
         "declaration": "Becoming.Web.frontier_keeps_stepwise",
         "standing": "amounts",
         "basis": {
-          "en": "Optima keep a level stepwise, in natural-number levels and weighted sums."
+          "en": "Optima keep a level stepwise, in natural-number levels and draws with a per-step coupling w."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
@@ -680,10 +686,18 @@
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
       {
+        "declaration": "Becoming.carried_iff_rising",
+        "standing": "amounts",
+        "basis": {
+          "en": "An exchange law carries exactly where the reading rises: the statement compares responses (r x ≤ r (x + 1) below N, the levels bounded by N), and the support is inside the existential, not kept. A law of its model, placed by its amounts, as responses_le_missBound is."
+        },
+        "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
+      },
+      {
         "declaration": "Becoming.Direction.extension_iff_widens",
         "standing": "at its model",
         "basis": {
-          "en": "C's extension on the moves' frame, a law of that model; its statement on a web's level paths is U3's, on its own carrier, and states another row."
+          "en": "C's extension on the moves' frame, proved as Web.paths_extension_iff_widens (another central row, on its own carrier) read at that frame; a law of that model."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
@@ -696,18 +710,10 @@
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
       {
-        "declaration": "Becoming.carried_iff_rising",
-        "standing": "at its model",
-        "basis": {
-          "en": "An exchange law carries exactly where the reading rises; the support is inside the existential, not kept."
-        },
-        "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
-      },
-      {
         "declaration": "Becoming.Web.paths_one_object",
         "standing": "free significance",
         "basis": {
-          "en": "It keeps significance free, as 07 §1 intends; its root form, paths_one_object_root, holds at the own-closure reading only (U3) and states less than the row."
+          "en": "It keeps significance free, as chapter 7 intends; its root form, SignificanceStatements.paths_one_object_root, holds at the own-closure reading only (U3) and states less than the row."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
@@ -715,7 +721,7 @@
         "declaration": "Becoming.Web.widens_iff_retains_adds",
         "standing": "free significance",
         "basis": {
-          "en": "It keeps significance free, as 07 §1 intends; its root form, widens_iff_retains_adds_root, holds at the own-closure reading only (U3) and states less than the row."
+          "en": "It takes the condition as a hypothesis with significance free, as chapter 7 intends; its root form, SignificanceStatements.widens_iff_retains_adds_root, holds at the own-closure reading only (U3) and states less than the row."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
@@ -723,7 +729,7 @@
         "declaration": "Becoming.unrestricted_iff_livingSignificance",
         "standing": "free significance",
         "basis": {
-          "en": "The continuation condition read as living significance, significance free; its root form, noOutside_iff_paths_livingSignificance, holds at the own-closure reading only (U3). The condition itself is a premise of the ethics, listed apart."
+          "en": "The continuation condition read as living significance, significance free; its root form, SignificanceStatements.noOutside_iff_paths_livingSignificance, holds at the own-closure reading on a web's level paths only, so it states less than the row, which is on any frame (U3). The condition itself is a premise of the ethics, listed apart."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       }
@@ -738,7 +744,7 @@
         "premise": "Becoming.Unrestricted",
         "not_entailed": "Becoming.ReadsOnlyDynamics.not_entails",
         "basis": {
-          "en": "For anything, its continuation into the future has significance: the condition fixes scope, whose losses count. No statement reading only the dynamics entails it. Its warrant is open, and no warrant binding every possible mind is claimed (07 §3)."
+          "en": "For anything, its continuation into the future has significance: the condition fixes scope, whose losses count, and its content beyond the self's presupposition, the step of invariance, extends that scope to losses that return to no one. Where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it. Its warrant is open, and no warrant binding every possible mind is claimed (chapter 7: its §3 for the condition, T8 in its §8 for the warrant)."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },

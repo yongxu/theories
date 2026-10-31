@@ -64,31 +64,36 @@ HE2 = os.environ.get('U4_HE2') == '1' or 'theorem «所闭之逆»' in (ROOT / (
 PROBE = json.loads((ROOT / (MV + 'boundary/probe.json')).read_text(encoding='utf-8'))['summary']['eight']
 DERIVED_BASIS = {
     'Flow.beyond_gives_nothing':
-        'A case of «所闭之界» at feeding from (FedFrom): what lies beyond a formation\'s closure is given nothing by '
-        'it. FedFrom and FedBy unfold to the closure, and the support, eq_zero_of_not_pos, is one step of the '
-        'prelude, a natural number not above nothing being nothing.',
+        'A case of «所闭之界» at feeding from: what lies beyond a formation\'s closure is given nothing by it. '
+        'WithinFeeding is the closure of FedFrom, which unfolds through FedBy to a positive giving to a required '
+        'condition; the support, eq_zero_of_not_pos, is Flow\'s lemma that a natural number not above nothing is '
+        'nothing.',
     'Flow.withinSystem_of_withinInfluence':
         'A case of «所闭之单调» at being affected within sharing: Flow.shares_of_affectedBy, an unfolding, meets the '
-        'law\'s inclusion, and WithinClosure.mono is the law at the frame\'s closure, applied past its conclusion.',
+        'law\'s inclusion, and WithinClosure.mono is the law at the frame\'s closure, applied past its conclusion. '
+        'WithinClosure.mono is listed as support only because the dump\'s forwarder test does not recognize a law '
+        'applied past its «则» conclusion (BOUNDARY-FIELD §3.0); it leaves the support when the test does.',
     'Law.drawn_iff_not_returns':
         'A case of «定后有后则入当且仅当不返» at the relation of the law\'s next configuration, its successor fixed '
-        'and total. The bridges read the model\'s drawn, absorbing, orbit and return as the grammar\'s «入», closure, '
-        '«及» and return, the orbit by recursion; the support is the orbit\'s arithmetic of steps, the trace\'s '
-        'length and the successor\'s being fixed and total.',
+        'and total. The bridges read the model\'s drawn, absorbing, orbit and return as the grammar\'s «入», closed '
+        'region («闭», Law.absorbing_iff_closed), «及» and return, the orbit by recursion; the support is the orbit\'s '
+        'arithmetic of steps, the trace\'s length and the successor\'s being fixed and total.',
     'Law.lossless_iff_returns':
         'A case of «有限遍后定后则定前当且仅当皆返» at the law\'s next configuration over the listed ones: lossless is '
-        'the predecessor fixed (two bridges), and the other bridges and the support are those of '
-        'Law.drawn_iff_not_returns.',
+        'the predecessor fixed (two bridges), the other five bridges are among those of Law.drawn_iff_not_returns, '
+        'and the support is its support.',
     'Learning.goAlike_iff_lumped':
         'A case of «像定后当且仅当同行» at the law\'s step along the projection, with «同行之逐点»: going alike under '
         'the projection is the grammar\'s «同行», and lumped is a fixed successor of the image, both unfoldings.',
     'Tolerance.answers_restores_iff':
         'A case of «承之迭» at the relation up: answering is «承» of up by definition, the model\'s chain is «迭» by '
-        'recursion through «迭之末步», and the worst start instantiates the law\'s start; the support keeps inclusion '
-        'along a course and takes the chain\'s last step.',
+        'recursion through «迭之末步», and the worst start reduces every start to total withholding, the answering '
+        'step keeping inclusion (Tolerance.answers_keeps); the support keeps inclusion along a course and takes the '
+        'chain\'s last step.',
     'Withholding.withholding_spreads':
-        'A case of «存承之迭» at up: waiting on all is closed by definition, and within n steps is the grammar\'s, '
-        'through the chain read as «迭» by recursion; the support takes the chain\'s last step.',
+        'A case of «存承之迭» at up: waiting on all meets the law\'s round by unfolding (Withholding.waitsAll_closed), '
+        'and within n steps is the grammar\'s, through the chain read as «迭» by recursion; the support takes the '
+        'chain\'s last step.',
     'WithinMoves.after_course':
         'A case of «迭内之接» at the moves\' steps: a trace and being within moves are the grammar\'s steps (two '
         'bridges), and that a trace gives steps is support.',
@@ -121,12 +126,15 @@ if HE2:
                 'influence closure, being within reach is that closure read backward, and WithinClosure.converse, '
                 'through which the row is proved, is the law at the frame (HE2, item 3).'),
         derived('Flow.withinCoupling_reads_iff', ['«借步之所闭在二所闭»', '«二所闭在借步之所闭»'], [],
-                ['Flow.withinCoupling_reads', 'WithinClosure.of_reads', 'Flow.CoupledFrom.of_reads'],
+                ['Flow.withinCoupling_reads', 'WithinClosure.of_reads', 'Flow.CoupledFrom.of_reads',
+                 'WithinClosureOf.to_reads'],
                 'A case of «借步之所闭在二所闭» one way and «二所闭在借步之所闭» the other: the coupling closure of o '
                 'reading a\'s couplings is the closure through borrowed steps. Flow.CoupledFrom.of_reads splits a '
                 'step of it into a step of the pool or one from a taken at o, which meets the first law\'s '
                 'hypothesis; the row\'s hypothesis that a acts on a condition coupled into it puts a within o\'s '
-                'closure, which meets the second\'s (HE2, item 4).'),
+                'closure, which meets the second\'s. WithinClosureOf.to_reads is the second law with the pool\'s '
+                'two-member closure read as a disjunction, its inclusion met inline by the pool\'s couplings lying '
+                'within the reader\'s, and its reach by WithinClosure.of_rel (HE2, item 4).'),
     ]
 else:
     STANDINGS += [
@@ -145,11 +153,13 @@ STANDINGS.append({
     'declaration': 'Becoming.GroupEnding.Flow.all_end', 'standing': 'under a stated hypothesis',
     'basis': {'en': 'The row is the root form at one step: giving is a member present at the step giving a positive '
                     'amount, the region is activity at the step, and the listing is the generation with its '
-                    'offspring lists. That only active formations give meets the first hypothesis, and that descent '
-                    'is giving meets the second, each by definitions alone; the next generation\'s size is the '
-                    'length of the offspring lists\' join, by the family\'s definition. The row carries nothing '
-                    'beyond the three hypotheses but these readings. Lever 2\'s witnesses at the model show that '
-                    'the model does not meet each hypothesis automatically.'},
+                    'offspring lists. That only active formations give (K3\'s premise "only active relata give") '
+                    'meets the first hypothesis, and that descent is giving meets the second, each by definitions '
+                    'alone; the next generation\'s size is the length of the offspring lists\' join, by the family\'s '
+                    'definition. Beyond the form\'s hypotheses at the one step, the row carries the gate and descent '
+                    'at every step, and descent\'s third part, that each offspring comes to stand, which the recovery '
+                    'does not use; neither places the row. Lever 2\'s witnesses at the model show that the model does '
+                    'not meet each hypothesis automatically.'},
     'review': REVIEW,
     'form': R('outside_leaves_no_offspring'),
     'hypotheses': [
@@ -174,9 +184,8 @@ STANDINGS.append(reading(
     'positive giving), so its recovery fails the discharge condition and the row keeps its distance.',
     relational_part=R('descent_forms_no_dependence')))
 
-GATE = ('The gate is stated on the root as inclusions, and each hypothesis that is not counting is witnessed at the '
-        'model (lever 2); the conclusion compares sums of amounts over generations, which the grammar has no terms '
-        'for.')
+GATE = 'The gate is stated as inclusions at the represented model (lever 2), its relations read off amounts; '
+FREE = ('It keeps significance free, as chapter 7 intends; ')
 READINGS = [
     # below the grammar: laws of counting (lever 2's review, S2)
     ('CensusWebs.keep_pace', 'counting',
@@ -194,24 +203,32 @@ READINGS = [
     ('SelectionTerm.covariation', 'counting', 'Price\'s covariance: an identity of counting.'),
     # amounts
     ('Flow.new_beyond_every', 'amounts',
-     'Endless novelty concludes that a family gives more than it takes or is open, an imbalance of amounts; balance '
-     'enters only the proof.'),
-    ('Flow.selected_le', 'amounts', GATE),
-    ('Flow.selection_within', 'amounts', GATE),
-    ('Flow.transmitted_supported', 'amounts', GATE),
-    ('SelectionTerm.Flow.support_moved_rises', 'amounts', GATE),
-    ('SelectionTerm.Flow.support_not_lower', 'amounts', GATE),
+     'Endless novelty concludes that a family is given more than it takes, by the rest or across its boundary, an '
+     'imbalance of amounts; balance enters only the proof.'),
+    ('Flow.selected_le', 'amounts',
+     GATE + 'the conclusion compares the parents\' needs, weighted by their offspring, with the level, at one step '
+     'of descent.'),
+    ('Flow.selection_within', 'amounts',
+     GATE + 'the conclusion compares the offspring\'s totals with the lowered and raised terms, at one step.'),
+    ('Flow.transmitted_supported', 'amounts',
+     GATE + 'the conclusion bounds a descendant\'s need by the level plus δ, and the hypothesis that transmission '
+     'stays within δ (TransmitsWithin) constrains amounts.'),
+    ('SelectionTerm.Flow.support_moved_rises', 'amounts',
+     GATE + 'the conclusion compares sums of amounts over generations.'),
+    ('SelectionTerm.Flow.support_not_lower', 'amounts',
+     GATE + 'the conclusion compares sums of amounts over generations.'),
     ('GroupEnding.Flow.rises_iff_inactive', 'amounts',
-     'The gate and descent are stated on the root as two inclusions, but cancellation, and inactivity compared on '
-     'sums of the trait, constrain amounts; its list facts are counting.'),
-    ('SelectionLevels.rises_exact_iff_levels', 'amounts',
-     'Cancellation, what transmission raises equal to what it lowers at each step, constrains amounts; its list '
+     'The gate and descent stand as two inclusions in lever 2\'s weakening; exact transmission at the step, each '
+     'offspring\'s amount its parent\'s, and inactivity compared on sums of the trait, constrain amounts; its list '
      'facts are counting.'),
+    ('SelectionLevels.rises_exact_iff_levels', 'amounts',
+     'Exact transmission at the step, each offspring\'s amount its parent\'s, constrains amounts (the proof needs '
+     'only its cancellation, lever 2); its list facts are counting.'),
     ('Reproduction.Flow.number_within_take', 'amounts',
      'Dissipation on a family and an injection from births to given units bound a count within a take, an amount; '
      'dissipation is kept as a premise of the account.'),
     ('RegimeMargin.ends_iff_below', 'amounts',
-     'A run of natural-number margins ends exactly below H + y: a comparison of amounts.'),
+     'A run of natural-number levels ends exactly below H + y: a comparison of amounts.'),
     ('RegimeMargin.Adjusted.ends_iff_below', 'amounts',
      'As RegimeMargin.ends_iff_below, with recent giving adjusted: a comparison of amounts.'),
     ('Web.Next.frontier_ends_drawn_first', 'amounts',
@@ -219,32 +236,36 @@ READINGS = [
     ('Web.frontier_breaks_below', 'amounts',
      'A coupling below what keeping forgoes, in natural-number worths and draws, breaks a dependence.'),
     ('Web.frontier_broken', 'amounts',
-     'Optima of orders on natural-number levels and weighted draws break a dependence.'),
+     'Optima of orders on natural-number levels and what is drawn break a dependence.'),
     ('Web.frontier_exhausts', 'amounts',
      'A weighting falling faster than levels rise leaves the level at nothing.'),
     ('Web.frontier_keeps_stepwise', 'amounts',
-     'Optima keep a level stepwise, in natural-number levels and weighted sums.'),
+     'Optima keep a level stepwise, in natural-number levels and draws with a per-step coupling w.'),
     ('Web.frontier_rebuilds', 'amounts',
      'A level rising faster than the weighting falls is rebuilt, in natural-number levels and weights.'),
     ('responses_le_missBound', 'amounts', 'A bound of propagation on amounts, a law of its model.'),
+    ('carried_iff_rising', 'amounts',
+     'An exchange law carries exactly where the reading rises: the statement compares responses (r x ≤ r (x + 1) '
+     'below N, the levels bounded by N), and the support is inside the existential, not kept. A law of its model, '
+     'placed by its amounts, as responses_le_missBound is.'),
     # laws of their models
     ('Direction.extension_iff_widens', 'at its model',
-     'C\'s extension on the moves\' frame, a law of that model; its statement on a web\'s level paths is U3\'s, on '
-     'its own carrier, and states another row.'),
+     'C\'s extension on the moves\' frame, proved as Web.paths_extension_iff_widens (another central row, on its '
+     'own carrier) read at that frame; a law of that model.'),
     ('PartForms.goAlike', 'at its model',
      'A law of its model, the part carrying a law of its own; the image law only reads it.'),
-    ('carried_iff_rising', 'at its model',
-     'An exchange law carries exactly where the reading rises; the support is inside the existential, not kept.'),
-    # free significance (07 §1)
+    # free significance (chapter 7)
     ('Web.paths_one_object', 'free significance',
-     'It keeps significance free, as 07 §1 intends; its root form, paths_one_object_root, holds at the own-closure '
-     'reading only (U3) and states less than the row.'),
+     FREE + 'its root form, SignificanceStatements.paths_one_object_root, holds at the own-closure reading only '
+     '(U3) and states less than the row.'),
     ('Web.widens_iff_retains_adds', 'free significance',
-     'It keeps significance free, as 07 §1 intends; its root form, widens_iff_retains_adds_root, holds at the '
-     'own-closure reading only (U3) and states less than the row.'),
+     'It takes the condition as a hypothesis with significance free, as chapter 7 intends; its root form, '
+     'SignificanceStatements.widens_iff_retains_adds_root, holds at the own-closure reading only (U3) and states '
+     'less than the row.'),
     ('unrestricted_iff_livingSignificance', 'free significance',
      'The continuation condition read as living significance, significance free; its root form, '
-     'noOutside_iff_paths_livingSignificance, holds at the own-closure reading only (U3). The condition itself is a '
+     'SignificanceStatements.noOutside_iff_paths_livingSignificance, holds at the own-closure reading on a web\'s '
+     'level paths only, so it states less than the row, which is on any frame (U3). The condition itself is a '
      'premise of the ethics, listed apart.'),
 ]
 STANDINGS += [reading(d, s, b) for d, s, b in READINGS]
@@ -254,8 +275,11 @@ PREMISES = [
     {'role': 'scope', 'name': {'en': 'the continuation condition', 'zh': '延续之条件'},
      'premise': 'Becoming.Unrestricted', 'not_entailed': 'Becoming.ReadsOnlyDynamics.not_entails',
      'basis': {'en': 'For anything, its continuation into the future has significance: the condition fixes scope, '
-                     'whose losses count. No statement reading only the dynamics entails it. Its warrant is open, '
-                     'and no warrant binding every possible mind is claimed (07 §3).'},
+                     'whose losses count, and its content beyond the self\'s presupposition, the step of '
+                     'invariance, extends that scope to losses that return to no one. Where there is a standpoint '
+                     'and a formation, no statement reading only the dynamics and holding of some dynamics entails '
+                     'it. Its warrant is open, and no warrant binding every possible mind is claimed (chapter 7: its '
+                     '§3 for the condition, T8 in its §8 for the warrant).'},
      'review': REVIEW},
     {'role': 'order', 'name': {'en': 'C, calling widening better', 'zh': 'C，谓扩大为更好'},
      'premise': 'Becoming.Comparison', 'not_entailed': None,
@@ -283,11 +307,12 @@ def counts():
 
 def statement(c):
     """Short, as the record's style asks; the counts are in the home section and the generated standings section."""
-    return {'en': 'Each central declaration stands in one place on the edge of one root: derived from grammar laws; '
-                  'under a stated hypothesis, each needed; counting; or at a named distance, with its reason. None is '
-                  'a premise: the ethics\' two, the condition for scope and C for order, are listed apart.',
-            'zh': '每一中心声明立于一根之边上之一处：推出，为文法之律之例；在所述假设之下，为一根形，其每一假设皆必要；计数；'
-                  '或在有名之距，各有其理。无一为前提：伦理之二前提，条件定范围、C 定序，另列。'}
+    return {'en': 'Each central declaration has one standing against the edge of one root: on it, derived from grammar '
+                  'laws or under a stated hypothesis; counting, below the grammar; or a named distance '
+                  'with its reason. None is a premise: the ethics\' two, the condition for scope and C for order, are '
+                  'listed apart.',
+            'zh': '于一根之边各有一所立：在边上，或推出为文法之律之例，或在所述假设之下为一根形之例而其每一假设皆必要；'
+                  '在文法之下，计数；或在有名之距，各有其理。无一为前提：伦理之二前提，条件定范围、C 定序，另列。'}
 
 
 def home(c):
@@ -300,9 +325,10 @@ def home(c):
                       'Twelve'][n] if n <= 12 else str(n)
     return ('<a id="r-one-root-to-its-edge"></a>\n'
             f"**Standings on the edge** (the central declarations). Each of the {sum(c.values())} distinct central "
-            f"declarations stands in one place on the edge of one root. {word(c['derived'])} are derived, each a case of "
-            'grammar laws through bridges checked in Lean as equivalences and support the review reads: the eight '
-            'connected rows the reading took (`Flow.beyond_gives_nothing`, `Law.drawn_iff_not_returns`, '
+            f"declarations has one standing against the edge of one root. {word(c['derived'])} are derived, each a "
+            'case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where '
+            'a row has them: the eight connected rows that the reading of connected rows took as derived '
+            '(`Flow.beyond_gives_nothing`, `Law.drawn_iff_not_returns`, '
             f'`Learning.goAlike_iff_lumped` and five more){two}. One, `GroupEnding.Flow.all_end`, is under a stated '
             'hypothesis: it is the root form `RootForms.outside_leaves_no_offspring` at one step, each of the form\'s '
             'three hypotheses needed by a countermodel over one point and met at the model by definitions alone, the '
@@ -315,9 +341,14 @@ def home(c):
             f"on their own carrier, by F5's verified items; {c['at its model']} laws of their models; and "
             f"{c['free significance']} keeping significance free, as chapter 7 intends. None is a premise. The ethics "
             'rests on two premises with two roles, listed apart: the continuation condition (`Unrestricted`) for '
-            'scope, which no statement reading only the dynamics entails (`ReadsOnlyDynamics.not_entails`), and C '
-            '(`Comparison`) for order, with no such theorem. Neither is shown stated on the root, so no premise stands '
-            'on the edge. `master_laws.py` checks every entry on the core run '
+            'scope, which, where there is a standpoint and a formation, no statement reading only the dynamics and '
+            'holding of some dynamics entails (`ReadsOnlyDynamics.not_entails`), and C '
+            '(`Comparison`) for order, with no such theorem. Neither stands on the edge: the condition\'s not-entailed '
+            'theorem concerns its free form, which chapter 7 keeps off the root, and its root form at the own-closure '
+            'reading, `«续无外»`, has none; C has neither. `master_laws.py` checks on the core run what the Lean can '
+            'show of each entry (the derived entries by D1 to D6, the entry under a stated hypothesis by the Lean '
+            'check, the premises by Q1, readings of computed labels against the rule); the other readings and the '
+            'case of each derived row rest on the review '
             f'([record](../results/records/{RID}.md); [Becoming.RootForms]({lean})).\n')
 
 
@@ -387,8 +418,9 @@ def record(receipt=None, study=None, reviewed=None):
                    'point. Lever 2\'s witnesses at the model stay beside them.',
              'zh': '反模型示根形之假设无一冗余以上之事：其在单点之上。第二杠杆于模型处之见证并存。'},
             {'kind': 'non-implication',
-             'en': 'That either premise of the ethics is warranted: the continuation condition is not entailed by '
-                   'the dynamics, and C has no such theorem; the warrant of each is open.',
+             'en': 'That either premise of the ethics is warranted: the condition is not entailed by statements of '
+                   'the dynamics (given a standpoint and a formation), C has no such theorem, and each warrant is '
+                   'open.',
              'zh': '伦理之二前提有其据：延续之条件不为动力所蕴涵，C 无此定理；二者之据皆开放。'},
             {'kind': 'scope',
              'en': 'That a distance is a gap or a failure: each row at a distance has its reason, and the measure '
@@ -419,11 +451,12 @@ def record(receipt=None, study=None, reviewed=None):
                   'HE2\'s laws read as cases at more connected rows.',
             'zh': '清点诸行之根形；无一仅读动力之陈述蕴涵 C 之定理；第七章所留之意义根读，为保意义自由之三行；于更多相连之行读 HE2 之律为其例。'},
         'correspondence': {
-            'en': 'Reverse mathematics in kind: each theorem placed by what it needs, with countermodels showing each '
-                  'hypothesis needed (Friedman 1975; Simpson 2009). Here the base is a grammar of relations and the '
-                  'measure is dependence in the compiled terms, not provability over a base system.',
-            'zh': '类于逆数学：每一定理依其所需而置，以反模型示各假设之必要（Friedman 1975；Simpson 2009）。此处之基为关系之文法，'
-                  '度量为编译项中之依赖，非于一基系统上之可证。'},
+            'en': 'Reverse mathematics in spirit only: a theorem placed by what it needs (Friedman 1975; Simpson '
+                  '2009). Here the base is a grammar of relations, one row is placed by a form whose hypotheses are '
+                  'each shown non-redundant (no reversal is proved), and the measure is dependence in the compiled '
+                  'terms.',
+            'zh': '仅在精神上类于逆数学：一定理依其所需而置（Friedman 1975；Simpson 2009）。此处之基为关系之文法，一行由一根形而置，'
+                  '其假设各示为非冗余（未证逆推），度量为编译项中之依赖。'},
         'canonical_source': SOURCE,
         'aliases': ['one root to its edge', '一根至其边', 'standings on the edge', '边上之所立',
                     'Becoming.RootForms.outside_leaves_no_offspring', 'Becoming.RootForms.descent_forms_no_dependence'],
@@ -434,12 +467,12 @@ def record(receipt=None, study=None, reviewed=None):
                         'zh': '推出之行所为其例之文法之律，及予规则以所及之度量。'}}],
         'related': [
             {'id': 'selection-among-groups-by-ending',
-             'detail': {'en': 'GroupEnding.Flow.all_end, row 17, under a stated hypothesis here.',
-                        'zh': 'GroupEnding.Flow.all_end，第 17 行，此处在所述假设之下。'}},
+             'detail': {'en': 'GroupEnding.Flow.all_end, row 17 of lever 2\'s table, under a stated hypothesis here.',
+                        'zh': 'GroupEnding.Flow.all_end，第二杠杆表之第 17 行，此处在所述假设之下。'}},
             {'id': 'transmission-is-inheritance-and-need',
-             'detail': {'en': 'Flow.no_new_dependence, row 5, at balance in its statement, with its relational part '
-                              'here.',
-                        'zh': 'Flow.no_new_dependence，第 5 行，于其陈述中有平衡，其关系之部在此。'}}],
+             'detail': {'en': 'Flow.no_new_dependence, row 5 of lever 2\'s table, at balance in its statement, with '
+                              'its relational part here.',
+                        'zh': 'Flow.no_new_dependence，第二杠杆表之第 5 行，于其陈述中有平衡，其关系之部在此。'}}],
         'references': refs,
         'proof_bindings': ([{'source': SOURCE, 'receipt': receipt, 'sha256_pointer': '/source_sha256/Becoming.RootForms',
                              'success_pointer': '/status', 'success_value': 'passed'}] if receipt else []),

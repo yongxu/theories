@@ -6,6 +6,11 @@ module paragraph, its README rows and its place in the checker's core list):
                                                           receipt; 08 §7's home section; regions.json's two entries
   python3 -B <dir>/integrate_u4.py register LOG           the apart register, from THEOREM-CONNECTIVITY.py --check's log:
                                                           the leaf's roots with their reasons; others printed
+  python3 -B <dir>/integrate_u4.py check                  after master_laws.py: the data reads this record, nothing is
+                                                          unverified or unplaced, and its counts are the home section's
+
+Before `record`, rerun boundary_table.py on the landing's core run (the rule's labels and the counts come from
+boundary-table.json, computed before HE2), and keep `check` as the gate.
 
 Run from the checkout root of the landing worktree. Each edit asserts that it applies exactly once, or that it is
 already applied. After it: master_laws.py (its four boundary lists must be empty), render, check, links, tests.
@@ -102,10 +107,40 @@ def register(log_path):
         print("roots not the leaf's, for their owners:", ', '.join(others))
 
 
+def check():
+    data = json.loads((ROOT / 'theories/becoming/results/data/master-laws.json').read_text(encoding='utf-8'))
+    b = data.get('boundary') or {}
+    assert b.get('record') == mr.RID, ('the data has not read the record', b.get('record'), b.get('error'))
+    problems = []
+    if b.get('field_failures'):
+        problems.append(('field failures', b['field_failures']))
+    if b.get('unverified'):
+        problems.append(('unverified', [(x.get('declaration'), x.get('failed')) for x in b['unverified']]))
+    unplaced = [d for d, row in (b.get('rows') or {}).items() if row.get('label') == 'unplaced']
+    if unplaced:
+        problems.append(('unplaced', unplaced))
+    bad_premises = [p for p in b.get('premises_of_the_ethics', []) if p.get('result') not in ('not entailed', 'not shown')]
+    if bad_premises:
+        problems.append(('premises', bad_premises))
+    mine = mr.counts()
+    theirs = {k: v for k, v in (b.get('counts') or {}).items() if k in mine}
+    if theirs != mine:
+        problems.append(('counts differ: rerun boundary_table.py and the record', {k: (mine[k], theirs.get(k))
+                                                                                   for k in mine if mine[k] != theirs.get(k)}))
+    if not b.get('lean_check', {}).get('ran'):
+        problems.append(('the Lean check did not run', b.get('lean_check')))
+    for p in problems:
+        print('PROBLEM', p)
+    assert not problems
+    print('boundary report matches: counts', mine, '; premises', [p.get('result') for p in b['premises_of_the_ethics']])
+
+
 if __name__ == '__main__':
     if sys.argv[1] == 'record':
         record(sys.argv[2], sys.argv[3])
     elif sys.argv[1] == 'register':
         register(sys.argv[2])
+    elif sys.argv[1] == 'check':
+        check()
     else:
         sys.exit(__doc__)
