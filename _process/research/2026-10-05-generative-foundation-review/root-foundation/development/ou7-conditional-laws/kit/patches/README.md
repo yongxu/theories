@@ -1,8 +1,8 @@
 # Two patches below the leaf
 
-OU7's leaf (`Becoming.GrammarConditionals`, [scratch](../../tree/Becoming/GrammarConditionals.lean)) uses two laws that generalize laws already in the core. A generalizing law goes below, in the module that holds the law it generalizes, and the old law becomes its case. These two patches do that, for OU's owner to apply in the rebuild slot. The leaf imports both laws and does not restate them. A third patch, [PLAN.patch](PLAN.patch), edits the OU plan's line that the Grammar patch makes inexact ([below](#texts-that-name-the-two-laws)).
+OU7's leaf (`Becoming.GrammarConditionals`, [in the kit](../Becoming/GrammarConditionals.lean)) uses two laws that generalize laws already in the core. A generalizing law goes below, in the module that holds the law it generalizes, and the old law becomes its case. These two patches do that, for OU's owner to apply in the rebuild slot. The leaf imports both laws and does not restate them. A third patch, [PLAN.patch](PLAN.patch), edits the OU plan's line that the Grammar patch makes inexact ([below](#texts-that-name-the-two-laws)).
 
-**Base.** Both are unified diffs against main at 248122055. There `Becoming/Grammar.lean` is blob `cd2010958b77c371f7cff7e7f9ab02e04be233ed` and `Becoming/GrammarReadings.lean` is blob `0db54ab469b3e952e62c609b4213af7d5a808aae`. Both files are unchanged since a85edc40c and since OU7's claim (40b3a1692), and still at bac7bf779, after RV21c landed. From the repository root, `git apply --check` passes for both.
+**Base.** Both are unified diffs against main at 248122055. There `Becoming/Grammar.lean` is blob `cd2010958b77c371f7cff7e7f9ab02e04be233ed` and `Becoming/GrammarReadings.lean` is blob `0db54ab469b3e952e62c609b4213af7d5a808aae`. Both files are unchanged since a85edc40c and since OU7's claim (40b3a1692), still at bac7bf779 (after RV21c landed), and still at 8a1b06a3a. From the repository root, `git apply --check` passes for both.
 
 ## Grammar.patch
 
@@ -54,7 +54,7 @@ T=$(mktemp -d)/tree && mkdir -p $T/Becoming
 cp $PKG/Becoming/Grammar.lean $PKG/Becoming/GrammarReadings.lean $T/Becoming/
 patch -p7 -d $T < $S/kit/patches/Grammar.patch
 patch -p7 -d $T < $S/kit/patches/GrammarReadings.patch
-cp $S/tree/Becoming/GrammarConditionals.lean $S/tree/Becoming/GrammarConditionalsChecks.lean $T/Becoming/
+cp $S/kit/Becoming/GrammarConditionals.lean $S/tree/Becoming/GrammarConditionalsChecks.lean $T/Becoming/
 cd $PKG && python3 -B scratch_build.py $T Becoming.Grammar Becoming.GrammarReadings Becoming.GrammarConditionals Becoming.GrammarConditionalsChecks
 ```
 

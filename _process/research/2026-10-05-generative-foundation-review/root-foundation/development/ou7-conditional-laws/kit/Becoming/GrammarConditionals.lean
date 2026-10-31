@@ -2,18 +2,25 @@ import Becoming.GrammarCandidates
 import Becoming.GrammarLaws
 
 /-!
-# The corpus's conditional laws in the grammar (丙一之律) — OU7 scratch
+# The corpus's conditional laws in the grammar (丙一之律)
 
-Board item OU7 (OU plan §八 step 5), part A (`development/ou7-conditional-laws/DESIGN.md`). The units
-classed 丙一 are placed in families of laws. This file proves, outside the package, what the design
-proposes for the core leaf: the new laws, the definitional lemmas that a family's "Y 当且仅当 Z" needs
-in order to be stated exactly, and a counterexample where Z fails for each family whose package
-declarations give none. It builds on the two patches in `kit/patches/`, which put the general laws
-below, in Grammar (`«生于逆核下不变»`) and in GrammarReadings (`«两向有常有前则通»`); it does not restate
-them. Each docstring says what kind of law it is. A general law's name states its statement in the
-grammar's words. Which unit states which law is an AI reconstruction (`data/groups.tsv`), so a law's
-reading stands in its docstring, marked [AI reading], and not in its name; the classical text
-decides nothing, and Lean checks only the derivation.
+The corpus's units classed 丙一 (OU plan §八 step 5) state conditional laws, Y given Z. Each family of them
+is written in the grammar as "Y 当且仅当 Z" or "Z 则 Y", with a net where Z fails and Y fails with it. Twelve
+families' laws stand in the grammar's modules and the corpus's candidate theorems already. This module holds
+the rest:
+- the new laws: 相推 gives 全生成 (`«皆有后而步皆分则全生成»`); bounded room on a line
+  (`«线不返则短于所列»`, `«不返而有限则非不穷»`); what the core puts together never ends alike
+  (`«核同则同不穷»`); and dependence (`«依»`, `«所依无则依者无»`, `«依之传»`);
+- the definitional lemmas a family needs in order to be stated exactly;
+- a witness (`…之例`) for every family whose net where Z fails the other modules do not give.
+
+The general laws below it are cited, not restated: `«生于逆核下不变»` (Grammar), with `«生于位核下不变»` as
+its case, and `«两向有常有前则通»` (GrammarReadings), with `«两向有常则通»` as its case.
+
+Which unit states which law is an AI reconstruction. Each unit's family, disposition and labelled reading
+are kept in the OU7 study's `data/groups.tsv`. A law's reading therefore stands in its docstring, marked
+[AI reading], and not in its name. The classical text decides nothing, and Lean checks only the
+derivation. The home section is 06 §四, with the record `conditional-laws-of-the-corpus`.
 -/
 
 namespace Becoming

@@ -1,6 +1,12 @@
 {
-  "tree": "development/ou7-conditional-laws/tree with kit/patches applied to fresh copies of main's Grammar.lean and GrammarReadings.lean (built from the session scratchpad copy; the patched modules' steps were reused from the first build of the same bytes)",
-  "base": "main 248122055 (Becoming/Grammar.lean cd2010958b77, Becoming/GrammarReadings.lean 0db54ab469b3, unchanged since a85edc40c)",
+  "tree": "kit/patches applied to fresh copies of main's Grammar.lean and GrammarReadings.lean, with kit/Becoming/GrammarConditionals.lean and tree/Becoming/GrammarConditionalsChecks.lean, built from the session scratchpad copy (build 3, 31 October 2026). Only the leaf and the checks re-ran, after the leaf's module doc was rewritten for the package; every other step was reused from build 2 of the same bytes",
+  "base": "main 8a1b06a3a (Becoming/Grammar.lean cd2010958b77, Becoming/GrammarReadings.lean 0db54ab469b3, unchanged since a85edc40c)",
+  "sources_sha256": {
+    "Becoming/Grammar.lean (patched)": "0052020d3cb699d79ff953af85d43535fbfa6b652e23c152cbac00723b83463c",
+    "Becoming/GrammarReadings.lean (patched)": "23bff2015b58fb271f207b917be41e1b9b3a68a234d9af60d4b66804be5e0cc8",
+    "kit/Becoming/GrammarConditionals.lean": "b32c6bf806acbf670f5bc8786f647ecae9f1155d29712cfa6ca073bb5bd5f729",
+    "tree/Becoming/GrammarConditionalsChecks.lean": "faa8a7abea0b53efa939d4277ad4c8c2f4795fea3f4da5bfc5f2a342a7a5bc17"
+  },
   "modules": 9,
   "ran": [
     "Becoming.GrammarConditionals",

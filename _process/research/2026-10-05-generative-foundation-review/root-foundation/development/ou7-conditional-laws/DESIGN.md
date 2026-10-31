@@ -2,7 +2,7 @@
 
 Board item OU7: OU plan §八 step 5 and §十三 item 4; the release gate's item 4 in [WHAT-REMAINS](../ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md). It was claimed as OU5 (40b3a1692), an id that already named an item landed on 23 October (706b80293, "OU4, OU5 and OU2c landed", which brought GrammarTesting). On 31 October OU's owner gave it the id OU7, and the workspace moved here from `development/ou5-conditional-laws/`.
 
-This is a design for OU's owner. Nothing here is in the package. The laws and witnesses it proposes for the core are proved in scratch Lean outside the package ([proposal module](tree/Becoming/GrammarConditionals.lean)). They stand on two patches that put the general laws below, in Grammar and GrammarReadings ([patches](kit/patches/README.md)). The checks it cites stay in a second scratch module ([checks](tree/Becoming/GrammarConditionalsChecks.lean)). The build of the patched modules and both scratch modules is recorded in [BUILD.json](tree/BUILD.json). Part B, 验's model examples, belongs to another session and is not touched here.
+This is a design for OU's owner. Nothing here is in the package. The laws and witnesses it proposes for the core are proved in Lean outside the package, in the landing kit ([the leaf](kit/Becoming/GrammarConditionals.lean); [the kit](kit/README.md)). They stand on two patches that put the general laws below, in Grammar and GrammarReadings ([patches](kit/patches/README.md)). The checks it cites stay in a second scratch module ([checks](tree/Becoming/GrammarConditionalsChecks.lean)). The build of the patched modules and both scratch modules is recorded in [BUILD.json](tree/BUILD.json). Part B, 验's model examples, belongs to another session and is not touched here.
 
 Every reading of which unit states which law is an AI reconstruction, as the classification itself is. Each reading in [groups.tsv](data/groups.tsv) carries its own label. The classical text decides nothing, and Lean checks only the derivation. Every count below counts readings, not facts about the historical texts. One independent review of an earlier draft found 24 problems, and all of them have been taken ([Review](#review)). OU's owner's decisions on the reviewed design, and what changed for them, are in [Decisions](#decisions-31-october).
 
@@ -516,6 +516,13 @@ OU's owner decided on the reviewed design:
   - a land script in stages, on the pattern of U1b's (`development/u1-balance-under-units/u1b/land_u1b.sh`, on branch u1b).
 - The grammar's owner's held items from BD2 and HE2 join the same rebuild, as its own patch in the kit once BD2 has landed: `«不出»` into GrammarLaws, `Flow.Cut`, and the GrammarLaws header.
 - The near-full rebuild comes last in the core round, after UE26, BD2, EL's core Lean and U1b. No Lean is run for it until OU's owner says.
+- Part A's pieces of the kit are drafted ([kit](kit/README.md)). They are:
+  - the leaf, moved into the kit;
+  - 06's home section in Chinese;
+  - the record's text and its maker;
+  - an integrate script and a land script in stages, on U1b's pattern, with HE2's re-point.
+
+  They were checked in Python only, on main at 8a1b06a3a. Part B's pieces and the owner's held items join later.
 
 ## Open
 
@@ -588,7 +595,7 @@ Each is listed in [groups.tsv](data/groups.tsv). The kit's earlier output is in 
 - [data/groups.tsv](data/groups.tsv): each unit's family, disposition and labelled reading.
 - [kit/assign.py](kit/assign.py): writes groups.tsv from units.tsv, states the dispositions and rules, and checks that every unit is placed once.
 - [kit/patches/](kit/patches/README.md): the patches for Grammar and GrammarReadings and the OU plan's edit, what each changes, and how to check them.
-- [tree/Becoming/GrammarConditionals.lean](tree/Becoming/GrammarConditionals.lean): the proposal module, for the core.
+- [kit/](kit/README.md): the landing kit. It holds the core leaf ([kit/Becoming/GrammarConditionals.lean](kit/Becoming/GrammarConditionals.lean)), the patches, 06's home section, the record's text and maker, and the integrate and land scripts. It says what has been checked and what waits.
 - [tree/Becoming/GrammarConditionalsChecks.lean](tree/Becoming/GrammarConditionalsChecks.lean): the checks, which stay in scratch.
 - [tree/BUILD.json](tree/BUILD.json): the build of the patched modules with both scratch modules.
 - [review/](review/): the independent review's report and its scratch Lean.
