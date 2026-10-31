@@ -12,7 +12,7 @@ Edits in the paragraph that opens "The column *On the grammar*":
 
 Edits in **Standings on the edge**, after the leaf lands, replacing "and C (`Comparison`) for order, with no such theorem. Neither stands on the edge: the condition's not-entailed theorem concerns its free form, which chapter 7 keeps off the root, and its root form at the own-closure reading, `«续无外»`, has none; C has neither.":
 
-> and C (`Comparison`) for order, which no statement reading no order entails, on any frame with an extension (`ReadsNoOrder.not_entails`, immediate, since "better" is free). Neither stands on the edge. The condition's not-entailed theorem concerns its free form, which chapter 7 keeps off the root. Its root form at the own-closure reading, `«续无外»`, varies with the net: at the one, the endless line of descent meets it and two family lines with no condition between them fail it (`«续无外随网»`, and `«族无外随网»` in families), so no law holding of every net settles it.
+> and C (`Comparison`) for order, which no statement reading no order entails, on any frame with an extension (`ReadsNoOrder.not_entails`, immediate, since "better" is free). Neither stands on the edge. The condition's not-entailed theorem concerns its free form, which chapter 7 keeps off the root. Its root form at the own-closure reading, `«续无外»`, varies with the net: the endless line of descent meets it, and two family lines with no condition between them fail it (`«续无外随网»`, and `«族无外随网»` in families), so no law that holds of every net settles it.
 
 The lead order stays as it is (OU's owner declined the move). "Standings on the edge" is the home section of `one-root-to-its-edge`, and the connectivity paragraph is that of `master-laws-on-the-grammar`; moving either would re-hash every record that cites it, for no gain in content. The edits above stand alone.
 
@@ -54,6 +54,5 @@ Open: replace "Lifting these laws onto the grammar ([08](08-METHOD.md))." with:
 ## Also touched by the leaf (the record's owner)
 
 If the record's text changes, its home section in 08 §7 changes with it; edit (a) already covers that.
-
 
 The boundary record `one-root-to-its-edge` says, for order: "no theorem shows it unentailed by the dynamics". Once the leaf lands, `ReadsNoOrder.not_entails` is that theorem for frames (immediate). Whether `boundary.py`'s Q1 computes it as such (a theorem whose type names `Comparison`), or the record's premise entry needs a reading, is checked at the rehearsal.
