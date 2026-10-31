@@ -1,0 +1,27 @@
+@Becoming.SubstitutionCorrespondence.through : ∀ {Ground : Nat → Type u_1}
+  {context : List Generative.InferentialGrounds.Form},
+  Becoming.Readout.ThroughParts Becoming.SubstitutionCorrespondence.part Becoming.SubstitutionCorrespondence.read
+@Becoming.SubstitutionCorrespondence.direct : ∀ {Ground : Nat → Type u_1}
+  {context : List Generative.InferentialGrounds.Form},
+  Becoming.Readout.ReadsDirectly Becoming.SubstitutionCorrespondence.part Becoming.SubstitutionCorrespondence.read
+    Becoming.SubstitutionCorrespondence.use
+@Becoming.SubstitutionCorrespondence.supplies : ∀ {Ground : Nat → Type u_1}
+  {context target : List Generative.InferentialGrounds.Form}
+  (s : Generative.InferentialSubstitution.Substitution Ground context target)
+  (c : Becoming.SubstitutionCorrespondence.Consumer Ground context)
+  (right : Generative.InferentialGrounds.ContextGround Ground target),
+  (Generative.InferentialGrounds.extract (Generative.InferentialSubstitution.substitute (fun {a} => s) c.snd) fun {a} =>
+      right) =
+    Becoming.SubstitutionCorrespondence.read c fun {a} =>
+      Becoming.SubstitutionCorrespondence.supplied (fun {a} => s) fun {a} => right
+@Becoming.SubstitutionCorrespondence.all_terms_agree_iff_positions_by_core : ∀ {Ground : Nat → Type u_1}
+  {context target : List Generative.InferentialGrounds.Form}
+  (s : Generative.InferentialSubstitution.Substitution Ground context target)
+  (left : Generative.InferentialGrounds.ContextGround Ground context)
+  (right : Generative.InferentialGrounds.ContextGround Ground target),
+  (∀ {a : Generative.InferentialGrounds.Form} (term : Generative.InferentialGrounds.Term Ground context a),
+      (Generative.InferentialGrounds.extract (Generative.InferentialSubstitution.substitute (fun {a} => s) term)
+          fun {a} => right) =
+        Generative.InferentialGrounds.extract term fun {a} => left) ↔
+    ∀ {b : Generative.InferentialGrounds.Form} (p : Generative.InferentialGrounds.Position context b),
+      (Generative.InferentialGrounds.extract (s p) fun {a} => right) = left p

@@ -1,0 +1,170 @@
+@Becoming.moveRel_mk : ∀ {S : Type u_1} {A : Type u_2} (F : A → Becoming.«际» S),
+  Becoming.moveRel { step := fun s a t => F a s t } = F
+@Becoming.mk_moveRel : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A),
+  { step := fun s a t => Becoming.moveRel P a s t } = P
+@Becoming.steps_iff_moveRel : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A) (s t : S),
+  Becoming.Steps P s t ↔ ∃ a, Becoming.moveRel P a s t
+@Becoming.steps_one_move : ∀ {S : Type u_1} (P : Generative.Process S PUnit),
+  Becoming.«谓» (Becoming.Steps P) (Becoming.moveRel P PUnit.unit)
+@Becoming.steps_edgeProcess : ∀ {S : Type u_1} (R : Becoming.«际» S) (s t : S),
+  Becoming.Steps (Becoming.edgeProcess R) s t ↔ R s t
+@Becoming.steps_unlabelled : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A) (s t : S),
+  Becoming.Steps (Becoming.unlabelled P) s t ↔ Becoming.Steps P s t
+@Becoming.steps_lawProcess : ∀ {S : Type u_1} (next : S → S),
+  Becoming.«谓» (Becoming.Steps (Becoming.Law.process next)) (Becoming.Law.step next)
+@Becoming.enabled_iff_neng : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A) (s : S) (a : A),
+  Generative.Enabled P s a ↔ Becoming.«能» (Becoming.moveRel P a) s
+Becoming.forall_steps_iff : ∀ (T : (α : Type u_1) → Becoming.«际» α → Prop),
+  (∀ (α : Type u_1) (R R' : Becoming.«际» α), Becoming.«谓» R R' → (T α R ↔ T α R')) →
+    ((∀ (S : Type u_1) (A : Type u_2) (P : Generative.Process S A), T S (Becoming.Steps P)) ↔
+      ∀ (α : Type u_1) (R : Becoming.«际» α), T α R)
+Becoming.forall_moveRel_iff : ∀ (T : (S : Type u_1) → (A : Type u_2) → (A → Becoming.«际» S) → Prop),
+  (∀ (S : Type u_1) (A : Type u_2) (P : Generative.Process S A), T S A (Becoming.moveRel P)) ↔
+    ∀ (S : Type u_1) (A : Type u_2) (F : A → Becoming.«际» S), T S A F
+@Becoming.class_is_claims : ∀ {α : Type u_1} {E : Becoming.«际» α},
+  Becoming.«类» E →
+    ∀ (R : Becoming.«际» α),
+      Becoming.«谓»
+        (Becoming.AlikeTo { P := Becoming.edgeProcess R, realized := fun s c => E s c }
+          { P := Becoming.edgeProcess R, realized := fun s c => E s c } 0)
+        E
+@Becoming.step_iff_withMove : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A) (s : S) (a : A) (t : S),
+  P.step s a t ↔ Becoming.Steps (Becoming.withMove P) (s, a) (t, a)
+@Becoming.withMove_image_iff : ∀ {S : Type u_1} {A : Type u_2} (R : Becoming.«际» (S × A)),
+  (∃ P, Becoming.«谓» (Becoming.Steps (Becoming.withMove P)) R) ↔
+    ∀ (x : S × A) (t : S) (b b' : A), R x (t, b) ↔ R x (t, b')
+Becoming.reading_next_move_not_withMove : ¬∃ P,
+    Becoming.«谓» (Becoming.Steps (Becoming.withMove P)) fun x y => y.snd = true
+@Becoming.withMove_of_renaming : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4}
+  {P : Generative.Process S A} {P' : Generative.Process S' A'} (φ : Becoming.«一一对应» S S') (ψ : Becoming.«一一对应» A A'),
+  (∀ (s : S) (a : A) (t : S), P.step s a t ↔ P'.step (φ.to s) (ψ.to a) (φ.to t)) →
+    Becoming.«谓» (Becoming.«像» (φ.prod ψ).to (Becoming.Steps (Becoming.withMove P)))
+        (Becoming.Steps (Becoming.withMove P')) ∧
+      Becoming.«谓» (Becoming.«像» (φ.prod ψ).to (Becoming.sameValue Prod.snd)) (Becoming.sameValue Prod.snd) ∧
+        Becoming.«谓» (Becoming.«像» (φ.prod ψ).to (Becoming.sameValue Prod.fst)) (Becoming.sameValue Prod.fst)
+@Becoming.renaming_of_withMove : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4}
+  {P : Generative.Process S A} {P' : Generative.Process S' A'} (s₀ : S) (a₀ : A)
+  (e : Becoming.«一一对应» (S × A) (S' × A')),
+  Becoming.«谓» (Becoming.«像» e.to (Becoming.Steps (Becoming.withMove P))) (Becoming.Steps (Becoming.withMove P')) →
+    Becoming.«谓» (Becoming.«像» e.to (Becoming.sameValue Prod.snd)) (Becoming.sameValue Prod.snd) →
+      Becoming.«谓» (Becoming.«像» e.to (Becoming.sameValue Prod.fst)) (Becoming.sameValue Prod.fst) →
+        ∃ φ ψ,
+          (∀ (x : S × A), e.to x = (φ.to x.fst, ψ.to x.snd)) ∧
+            ∀ (s : S) (a : A) (t : S), P.step s a t ↔ P'.step (φ.to s) (ψ.to a) (φ.to t)
+Becoming.NoMoves.models_correspond : Becoming.«谓»
+    (Becoming.«像» Becoming.NoMoves.e.to (Becoming.Steps (Becoming.withMove Becoming.NoMoves.P)))
+    (Becoming.Steps (Becoming.withMove Becoming.NoMoves.P')) ∧
+  Becoming.«谓» (Becoming.«像» Becoming.NoMoves.e.to (Becoming.sameValue Prod.snd)) (Becoming.sameValue Prod.snd) ∧
+    Becoming.«谓» (Becoming.«像» Becoming.NoMoves.e.to (Becoming.sameValue Prod.fst)) (Becoming.sameValue Prod.fst)
+Becoming.NoMoves.not_renamed : ¬∃ φ ψ,
+    ∀ (s : Unit) (a : Empty) (t : Unit),
+      Becoming.NoMoves.P.step s a t ↔ Becoming.NoMoves.P'.step (φ.to s) (ψ.to a) (φ.to t)
+Becoming.NoConfigurations.models_correspond : Becoming.«谓»
+    (Becoming.«像» Becoming.NoConfigurations.e.to (Becoming.Steps (Becoming.withMove Becoming.NoConfigurations.P)))
+    (Becoming.Steps (Becoming.withMove Becoming.NoConfigurations.P')) ∧
+  Becoming.«谓» (Becoming.«像» Becoming.NoConfigurations.e.to (Becoming.sameValue Prod.snd))
+      (Becoming.sameValue Prod.snd) ∧
+    Becoming.«谓» (Becoming.«像» Becoming.NoConfigurations.e.to (Becoming.sameValue Prod.fst))
+      (Becoming.sameValue Prod.fst)
+Becoming.NoConfigurations.not_renamed : ¬∃ φ ψ,
+    ∀ (s : Empty) (a : Unit) (t : Empty),
+      Becoming.NoConfigurations.P.step s a t ↔ Becoming.NoConfigurations.P'.step (φ.to s) (ψ.to a) (φ.to t)
+Becoming.Twist.flipConfiguration_twice : ∀ (x : Bool × Bool),
+  Becoming.Twist.flipConfiguration (Becoming.Twist.flipConfiguration x) = x
+Becoming.Twist.steps_carried : ∀ (x y : Bool × Bool),
+  Becoming.Steps (Becoming.withMove Becoming.Twist.P₁) x y ↔
+    Becoming.Steps (Becoming.withMove Becoming.Twist.P₂) (Becoming.Twist.flipConfiguration x)
+      (Becoming.Twist.flipConfiguration y)
+Becoming.Twist.models_correspond : Becoming.«谓»
+    (Becoming.«像» Becoming.Twist.e.to (Becoming.Steps (Becoming.withMove Becoming.Twist.P₁)))
+    (Becoming.Steps (Becoming.withMove Becoming.Twist.P₂)) ∧
+  Becoming.«谓» (Becoming.«像» Becoming.Twist.e.to (Becoming.sameValue Prod.snd)) (Becoming.sameValue Prod.snd)
+Becoming.Twist.P₂_not_both : ∀ (u : Bool), Becoming.Twist.P₂.step u true u → Becoming.Twist.P₂.step u false u → False
+Becoming.Twist.P₂_loops_by_one_move : ∀ (u b b' : Bool),
+  Becoming.Twist.P₂.step u b u → Becoming.Twist.P₂.step u b' u → b ≠ b' → False
+Becoming.Twist.not_renamed : ¬∃ φ ψ,
+    ∀ (s a t : Bool), Becoming.Twist.P₁.step s a t ↔ Becoming.Twist.P₂.step (φ.to s) (ψ.to a) (φ.to t)
+Becoming.Flip.flipMove_twice : ∀ (x : Bool × Bool), Becoming.Flip.flipMove (Becoming.Flip.flipMove x) = x
+Becoming.Flip.steps_carried : ∀ (x y : Bool × Bool),
+  Becoming.Steps (Becoming.withMove Becoming.Flip.P₃) x y ↔
+    Becoming.Steps (Becoming.withMove Becoming.Flip.P₄) (Becoming.Flip.flipMove x) (Becoming.Flip.flipMove y)
+Becoming.Flip.models_correspond : Becoming.«谓»
+    (Becoming.«像» Becoming.Flip.e.to (Becoming.Steps (Becoming.withMove Becoming.Flip.P₃)))
+    (Becoming.Steps (Becoming.withMove Becoming.Flip.P₄)) ∧
+  Becoming.«谓» (Becoming.«像» Becoming.Flip.e.to (Becoming.sameValue Prod.fst)) (Becoming.sameValue Prod.fst)
+Becoming.Flip.P₄_apart : ∀ (b b' : Bool),
+  Becoming.Flip.P₄.step true b true → Becoming.Flip.P₄.step false b' false → b = b' → False
+Becoming.Flip.not_renamed : ¬∃ φ ψ,
+    ∀ (s a t : Bool), Becoming.Flip.P₃.step s a t ↔ Becoming.Flip.P₄.step (φ.to s) (ψ.to a) (φ.to t)
+@Becoming.trace_iff_li : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {as : List A} {s t : S},
+  Generative.Trace P s as t ↔ Becoming.«历» (Becoming.moveRel P) as s t
+@Becoming.feasible_iff_li : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S} {as : List A},
+  Generative.Feasible P s as ↔ ∃ t, Becoming.«历» (Becoming.moveRel P) as s t
+@Becoming.factorsThrough_iff_image : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  {π : S → K} {Q : Generative.Process K A},
+  Becoming.FactorsThrough P π Q ↔ ∀ (a : A), Becoming.«则» (Becoming.«像» π (Becoming.moveRel P a)) (Becoming.moveRel Q a)
+@Becoming.run_image : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P),
+  Becoming.«则» (Becoming.«像» r.state Becoming.Steps.next) (Becoming.Steps P)
+@Becoming.run_iff_image : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A) (g : Nat → S × A),
+  (∃ r, ∀ (n : Nat), (r.state n, r.act n) = g n) ↔
+    Becoming.«则» (Becoming.«像» g Becoming.Steps.next) (Becoming.Steps (Becoming.withMove P))
+@Becoming.yan_iff_keepsMoving : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {x : S},
+  Becoming.«延» (Becoming.Steps P) Becoming.«一» x ↔ ∃ K, K x ∧ Becoming.Onward.KeepsMoving P K
+@Becoming.run_yan : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P),
+  Becoming.«延» (Becoming.Steps P) Becoming.«一» (r.state 0)
+Becoming.yan_line_iff_dependentChoice : (∀ (α : Type) (R : Becoming.«际» α) (x : α),
+    Becoming.«延» R Becoming.«一» x → ∃ f, f 0 = x ∧ ∀ (n : Nat), R (f n) (f (n + 1))) ↔
+  Becoming.Onward.DependentChoice
+@Becoming.yan_line_of_list : ∀ {α : Type u_1} {R : Becoming.«际» α} {all : List α},
+  (∀ (x : α), x ∈ all) → ∀ {x : α}, Becoming.«延» R Becoming.«一» x → ∃ f, f 0 = x ∧ ∀ (n : Nat), R (f n) (f (n + 1))
+@Becoming.renaming_moveRel : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4}
+  {P : Generative.Process S A} {P' : Generative.Process S' A'} {φ : Becoming.«一一对应» S S'} {ψ : Becoming.«一一对应» A A'},
+  (∀ (s : S) (a : A) (t : S), P.step s a t ↔ P'.step (φ.to s) (ψ.to a) (φ.to t)) →
+    ∀ (a : A), Becoming.«谓» (Becoming.«像» φ.to (Becoming.moveRel P a)) (Becoming.moveRel P' (ψ.to a))
+@Becoming.renaming_steps : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4} {P : Generative.Process S A}
+  {P' : Generative.Process S' A'} {φ : Becoming.«一一对应» S S'} {ψ : Becoming.«一一对应» A A'},
+  (∀ (s : S) (a : A) (t : S), P.step s a t ↔ P'.step (φ.to s) (ψ.to a) (φ.to t)) →
+    Becoming.«谓» (Becoming.«像» φ.to (Becoming.Steps P)) (Becoming.Steps P')
+@Becoming.renaming_trace : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4} {P : Generative.Process S A}
+  {P' : Generative.Process S' A'} {φ : Becoming.«一一对应» S S'} {ψ : Becoming.«一一对应» A A'},
+  (∀ (s : S) (a : A) (t : S), P.step s a t ↔ P'.step (φ.to s) (ψ.to a) (φ.to t)) →
+    ∀ (as : List A) (s t : S), Generative.Trace P s as t ↔ Generative.Trace P' (φ.to s) (List.map ψ.to as) (φ.to t)
+@Becoming.renaming_iterate : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4}
+  {P : Generative.Process S A} {P' : Generative.Process S' A'} {φ : Becoming.«一一对应» S S'} {ψ : Becoming.«一一对应» A A'},
+  (∀ (s : S) (a : A) (t : S), P.step s a t ↔ P'.step (φ.to s) (ψ.to a) (φ.to t)) →
+    ∀ (n : Nat) (s t : S),
+      (Becoming.«迭» (Becoming.Steps P) n s t ↔ Becoming.«迭» (Becoming.Steps P') n (φ.to s) (φ.to t)) ∧
+        (Becoming.«迭内» (Becoming.Steps P) n s t ↔ Becoming.«迭内» (Becoming.Steps P') n (φ.to s) (φ.to t))
+@Becoming.renaming_reach : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4} {P : Generative.Process S A}
+  {P' : Generative.Process S' A'} {φ : Becoming.«一一对应» S S'} {ψ : Becoming.«一一对应» A A'},
+  (∀ (s : S) (a : A) (t : S), P.step s a t ↔ P'.step (φ.to s) (ψ.to a) (φ.to t)) →
+    ∀ (s t : S), Becoming.Reach P s t ↔ Becoming.Reach P' (φ.to s) (φ.to t)
+@Becoming.renaming_returns : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4}
+  {P : Generative.Process S A} {P' : Generative.Process S' A'} {φ : Becoming.«一一对应» S S'} {ψ : Becoming.«一一对应» A A'},
+  (∀ (s : S) (a : A) (t : S), P.step s a t ↔ P'.step (φ.to s) (ψ.to a) (φ.to t)) →
+    ∀ (s : S), Becoming.Branching.Returns P s ↔ Becoming.Branching.Returns P' (φ.to s)
+@Becoming.renaming_invariant : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4}
+  {P : Generative.Process S A} {P' : Generative.Process S' A'} {φ : Becoming.«一一对应» S S'} {ψ : Becoming.«一一对应» A A'},
+  (∀ (s : S) (a : A) (t : S), P.step s a t ↔ P'.step (φ.to s) (ψ.to a) (φ.to t)) →
+    ∀ {I : S → Prop} {I' : S' → Prop},
+      (∀ (s : S), I s ↔ I' (φ.to s)) → (Becoming.Invariant P I ↔ Becoming.Invariant P' I')
+@Becoming.renaming_determined : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4}
+  {P : Generative.Process S A} {P' : Generative.Process S' A'} {φ : Becoming.«一一对应» S S'} {ψ : Becoming.«一一对应» A A'},
+  (∀ (s : S) (a : A) (t : S), P.step s a t ↔ P'.step (φ.to s) (ψ.to a) (φ.to t)) →
+    (Becoming.Determined P ↔ Becoming.Determined P')
+@Becoming.renaming_lossless : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4}
+  {P : Generative.Process S A} {P' : Generative.Process S' A'} {φ : Becoming.«一一对应» S S'} {ψ : Becoming.«一一对应» A A'},
+  (∀ (s : S) (a : A) (t : S), P.step s a t ↔ P'.step (φ.to s) (ψ.to a) (φ.to t)) →
+    (Becoming.Branching.Lossless P ↔ Becoming.Branching.Lossless P')
+@Becoming.renaming_goAlike : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4}
+  {P : Generative.Process S A} {P' : Generative.Process S' A'} {φ : Becoming.«一一对应» S S'} {ψ : Becoming.«一一对应» A A'},
+  (∀ (s : S) (a : A) (t : S), P.step s a t ↔ P'.step (φ.to s) (ψ.to a) (φ.to t)) →
+    ∀ {K : Type u_3} {π : S → K} {E : K → K → Prop},
+      Becoming.GoAlikeUnder P π E ↔ Becoming.GoAlikeUnder P' (fun s' => π (φ.back s')) E
+@Becoming.renaming_yan : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4} {P : Generative.Process S A}
+  {P' : Generative.Process S' A'} {φ : Becoming.«一一对应» S S'} {ψ : Becoming.«一一对应» A A'},
+  (∀ (s : S) (a : A) (t : S), P.step s a t ↔ P'.step (φ.to s) (ψ.to a) (φ.to t)) →
+    ∀ (x : S), Becoming.«延» (Becoming.Steps P) Becoming.«一» x ↔ Becoming.«延» (Becoming.Steps P') Becoming.«一» (φ.to x)
+Becoming.Forgotten.moves_forgotten : (∀ (s t : Unit),
+    Becoming.Steps Becoming.Forgotten.byTrue s t ↔ Becoming.Steps Becoming.Forgotten.byFalse s t) ∧
+  Generative.Enabled Becoming.Forgotten.byTrue () true ∧ ¬Generative.Enabled Becoming.Forgotten.byFalse () true

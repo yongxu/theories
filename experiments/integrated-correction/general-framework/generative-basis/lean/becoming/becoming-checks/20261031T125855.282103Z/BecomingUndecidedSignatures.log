@@ -1,0 +1,171 @@
+@Becoming.Undecided.Le.trans : ∀ {a b c : Becoming.Undecided.Value},
+  Becoming.Undecided.Le a b → Becoming.Undecided.Le b c → Becoming.Undecided.Le a c
+@Becoming.Undecided.Le.decided : ∀ {a b : Becoming.Undecided.Value},
+  Becoming.Undecided.Le a b → a.decided = true → b = a
+@Becoming.Undecided.Le.same_or_rises : ∀ {a b : Becoming.Undecided.Value},
+  Becoming.Undecided.Le a b → b = a ∨ a.decided = false ∧ b.decided = true
+@Becoming.Undecided.neg_mono : ∀ {a b : Becoming.Undecided.Value},
+  Becoming.Undecided.Le a b → Becoming.Undecided.Le a.neg b.neg
+@Becoming.Undecided.conj_mono : ∀ {a b c d : Becoming.Undecided.Value},
+  Becoming.Undecided.Le a b → Becoming.Undecided.Le c d → Becoming.Undecided.Le (a.conj c) (b.conj d)
+@Becoming.Undecided.disj_mono : ∀ {a b c d : Becoming.Undecided.Value},
+  Becoming.Undecided.Le a b → Becoming.Undecided.Le c d → Becoming.Undecided.Le (a.disj c) (b.disj d)
+@Becoming.Undecided.embed_inj : ∀ {a b : Bool},
+  Becoming.Undecided.Value.embed a = Becoming.Undecided.Value.embed b → a = b
+@Becoming.Undecided.eval_undecided : ∀ {v : Nat → Becoming.Undecided.Value},
+  (∀ (i : Nat), v i = Becoming.Undecided.Value.u) →
+    ∀ (p : Becoming.Undecided.Term),
+      Becoming.Undecided.ConstantFree p → Becoming.Undecided.eval v p = Becoming.Undecided.Value.u
+@Becoming.Undecided.eval_mono : ∀ {v w : Nat → Becoming.Undecided.Value},
+  (∀ (i : Nat), Becoming.Undecided.Le (v i) (w i)) →
+    ∀ (p : Becoming.Undecided.Term), Becoming.Undecided.Le (Becoming.Undecided.eval v p) (Becoming.Undecided.eval w p)
+@Becoming.Undecided.eval_mono_below : ∀ {N : Nat} {v w : Nat → Becoming.Undecided.Value},
+  (∀ (i : Nat), i < N → Becoming.Undecided.Le (v i) (w i)) →
+    ∀ (p : Becoming.Undecided.Term),
+      Becoming.Undecided.Bounded N p → Becoming.Undecided.Le (Becoming.Undecided.eval v p) (Becoming.Undecided.eval w p)
+@Becoming.Undecided.eval_congr : ∀ {N : Nat} {v w : Nat → Becoming.Undecided.Value},
+  (∀ (i : Nat), i < N → v i = w i) →
+    ∀ (p : Becoming.Undecided.Term),
+      Becoming.Undecided.Bounded N p → Becoming.Undecided.eval v p = Becoming.Undecided.eval w p
+Becoming.Undecided.neg_embed : ∀ (a : Bool), (Becoming.Undecided.Value.embed a).neg = Becoming.Undecided.Value.embed !a
+Becoming.Undecided.conj_embed : ∀ (a b : Bool),
+  (Becoming.Undecided.Value.embed a).conj (Becoming.Undecided.Value.embed b) = Becoming.Undecided.Value.embed (a && b)
+Becoming.Undecided.disj_embed : ∀ (a b : Bool),
+  (Becoming.Undecided.Value.embed a).disj (Becoming.Undecided.Value.embed b) = Becoming.Undecided.Value.embed (a || b)
+Becoming.Undecided.eval_embed : ∀ (b : Nat → Bool) (p : Becoming.Undecided.Term),
+  Becoming.Undecided.eval (fun i => Becoming.Undecided.Value.embed (b i)) p =
+    Becoming.Undecided.Value.embed (Becoming.Undecided.eval₂ b p)
+@Becoming.Undecided.marked_le : ∀ {X : Type u_1} (c : X → Bool) (l : List X), Becoming.Undecided.marked c l ≤ l.length
+@Becoming.Undecided.marked_mono : ∀ {X : Type u_1} {c c' : X → Bool} {l : List X},
+  (∀ (x : X), x ∈ l → c x = true → c' x = true) → Becoming.Undecided.marked c l ≤ Becoming.Undecided.marked c' l
+@Becoming.Undecided.marked_rises : ∀ {X : Type u_1} {c c' : X → Bool} {l : List X},
+  (∀ (x : X), x ∈ l → c x = true → c' x = true) →
+    (∃ x, x ∈ l ∧ c x = false ∧ c' x = true) → Becoming.Undecided.marked c l + 1 ≤ Becoming.Undecided.marked c' l
+@Becoming.Undecided.each_or_some : ∀ {X : Type u_1} {A B : X → Prop} {l : List X},
+  (∀ (x : X), x ∈ l → A x ∨ B x) → (∀ (x : X), x ∈ l → A x) ∨ ∃ x, x ∈ l ∧ B x
+@Becoming.Undecided.kept_from : ∀ {Q : Nat → Prop},
+  (∀ (k : Nat), Q k → Q (k + 1)) → ∀ {j : Nat}, Q j → ∀ {k : Nat}, j ≤ k → Q k
+@Becoming.Undecided.settles_within : ∀ {X : Type u_1} (l : List X) (c : Nat → X → Bool) {Steady : Nat → Prop},
+  (∀ (k : Nat) (x : X), x ∈ l → c k x = true → c (k + 1) x = true) →
+    (∀ (k : Nat), Steady k → Steady (k + 1)) →
+      (∀ (k : Nat), Steady k ∨ ∃ x, x ∈ l ∧ c k x = false ∧ c (k + 1) x = true) → Steady l.length
+Becoming.Undecided.upto_length : ∀ (n : Nat), (Becoming.Undecided.upto n).length = n
+Becoming.Undecided.stage_up : ∀ (sys : Nat → Becoming.Undecided.Term) (n i : Nat),
+  Becoming.Undecided.Le (Becoming.Undecided.stage sys n i) (Becoming.Undecided.stage sys (n + 1) i)
+Becoming.Undecided.stage_mono : ∀ (sys : Nat → Becoming.Undecided.Term) (i : Nat) {m n : Nat},
+  m ≤ n → Becoming.Undecided.Le (Becoming.Undecided.stage sys m i) (Becoming.Undecided.stage sys n i)
+@Becoming.Undecided.stays_undecided : ∀ {sys : Nat → Becoming.Undecided.Term},
+  (∀ (i : Nat), Becoming.Undecided.ConstantFree (sys i)) →
+    ∀ (n i : Nat), Becoming.Undecided.stage sys n i = Becoming.Undecided.Value.u
+@Becoming.Undecided.Steady.next : ∀ {sys : Nat → Becoming.Undecided.Term} {N : Nat},
+  Becoming.Undecided.Closed sys N →
+    ∀ {n : Nat}, Becoming.Undecided.Steady sys N n → Becoming.Undecided.Steady sys N (n + 1)
+Becoming.Undecided.steady_or_rises : ∀ (sys : Nat → Becoming.Undecided.Term) (N n : Nat),
+  Becoming.Undecided.Steady sys N n ∨
+    ∃ i,
+      i ∈ Becoming.Undecided.upto N ∧
+        (Becoming.Undecided.stage sys n i).decided = false ∧ (Becoming.Undecided.stage sys (n + 1) i).decided = true
+@Becoming.Undecided.settles : ∀ {sys : Nat → Becoming.Undecided.Term} {N : Nat},
+  Becoming.Undecided.Closed sys N → Becoming.Undecided.Steady sys N N
+@Becoming.Undecided.settled_from : ∀ {sys : Nat → Becoming.Undecided.Term} {N : Nat},
+  Becoming.Undecided.Closed sys N →
+    ∀ {m : Nat}, N ≤ m → ∀ (i : Nat), i < N → Becoming.Undecided.stage sys m i = Becoming.Undecided.stage sys N i
+@Becoming.Undecided.stage_fixed : ∀ {sys : Nat → Becoming.Undecided.Term} {N : Nat},
+  Becoming.Undecided.Closed sys N →
+    ∀ (i : Nat),
+      i < N → Becoming.Undecided.revise sys (Becoming.Undecided.stage sys N) i = Becoming.Undecided.stage sys N i
+@Becoming.Undecided.stage_le_fixed : ∀ {sys : Nat → Becoming.Undecided.Term} {N : Nat},
+  Becoming.Undecided.Closed sys N →
+    ∀ {w : Nat → Becoming.Undecided.Value},
+      (∀ (i : Nat), i < N → Becoming.Undecided.eval w (sys i) = w i) →
+        ∀ (n i : Nat), i < N → Becoming.Undecided.Le (Becoming.Undecided.stage sys n i) (w i)
+@Becoming.Undecided.least_fixed : ∀ {sys : Nat → Becoming.Undecided.Term} {N : Nat},
+  Becoming.Undecided.Closed sys N →
+    (∀ (i : Nat),
+        i < N → Becoming.Undecided.revise sys (Becoming.Undecided.stage sys N) i = Becoming.Undecided.stage sys N i) ∧
+      ∀ (w : Nat → Becoming.Undecided.Value),
+        (∀ (i : Nat), i < N → Becoming.Undecided.eval w (sys i) = w i) →
+          ∀ (i : Nat), i < N → Becoming.Undecided.Le (Becoming.Undecided.stage sys N i) (w i)
+Becoming.Undecided.chain_closed : ∀ (N : Nat), Becoming.Undecided.Closed Becoming.Undecided.chain N
+@Becoming.Undecided.neg_decided : ∀ {v : Becoming.Undecided.Value}, v.decided = true → v.neg.decided = true
+Becoming.Undecided.chain_undecided : ∀ (n k : Nat),
+  n ≤ k → Becoming.Undecided.stage Becoming.Undecided.chain n k = Becoming.Undecided.Value.u
+Becoming.Undecided.chain_decided : ∀ (n k : Nat),
+  k < n → (Becoming.Undecided.stage Becoming.Undecided.chain n k).decided = true
+Becoming.Undecided.chain_exact : ∀ (N : Nat),
+  Becoming.Undecided.Steady Becoming.Undecided.chain (N + 1) (N + 1) ∧
+    ¬Becoming.Undecided.Steady Becoming.Undecided.chain (N + 1) N
+Becoming.Undecided.liar_closed : Becoming.Undecided.Closed Becoming.Undecided.liar 1
+Becoming.Undecided.liar_rests : ∀ (n i : Nat),
+  Becoming.Undecided.stage Becoming.Undecided.liar n i = Becoming.Undecided.Value.u
+Becoming.Undecided.neg_fixed_iff : ∀ (v : Becoming.Undecided.Value), v.neg = v ↔ v = Becoming.Undecided.Value.u
+Becoming.Undecided.liar_rests_iff : ∀ (v : Nat → Becoming.Undecided.Value) (n : Nat),
+  (Becoming.Law.run (Becoming.Undecided.revise Becoming.Undecided.liar) v).state (n + 1) 0 =
+      (Becoming.Law.run (Becoming.Undecided.revise Becoming.Undecided.liar) v).state n 0 ↔
+    (Becoming.Law.run (Becoming.Undecided.revise Becoming.Undecided.liar) v).state n 0 = Becoming.Undecided.Value.u
+Becoming.Undecided.truthTeller_keeps : ∀ (v : Nat → Becoming.Undecided.Value) (n : Nat),
+  (Becoming.Law.run (Becoming.Undecided.revise Becoming.Undecided.truthTeller) v).state n 0 = v 0
+Becoming.Undecided.truthTeller_rests : ∀ (n i : Nat),
+  Becoming.Undecided.stage Becoming.Undecided.truthTeller n i = Becoming.Undecided.Value.u
+Becoming.Undecided.some_undecided_or_none : ∀ (w : Nat → Becoming.Undecided.Value) (N : Nat),
+  (∃ i, i < N ∧ w i = Becoming.Undecided.Value.u) ∨ ∀ (i : Nat), i < N → (w i).decided = true
+@Becoming.Undecided.embed_asBool : ∀ {v : Becoming.Undecided.Value},
+  v.decided = true → Becoming.Undecided.Value.embed (Becoming.Undecided.asBool v) = v
+@Becoming.Undecided.undecided_of_moves : ∀ {sys : Nat → Becoming.Undecided.Term} {N : Nat},
+  Becoming.Undecided.Closed sys N →
+    (∀ (b : Nat → Bool), ∃ i, i < N ∧ Becoming.Undecided.eval₂ b (sys i) ≠ b i) →
+      ∀ {w : Nat → Becoming.Undecided.Value},
+        (∀ (i : Nat), i < N → Becoming.Undecided.eval w (sys i) = w i) → ∃ i, i < N ∧ w i = Becoming.Undecided.Value.u
+@Becoming.Undecided.least_undecided : ∀ {sys : Nat → Becoming.Undecided.Term} {N : Nat},
+  Becoming.Undecided.Closed sys N →
+    (∀ (b : Nat → Bool), ∃ i, i < N ∧ Becoming.Undecided.eval₂ b (sys i) ≠ b i) →
+      ∃ i, i < N ∧ Becoming.Undecided.stage sys N i = Becoming.Undecided.Value.u
+@Becoming.Undecided.rest_undecided : ∀ {sys : Nat → Becoming.Undecided.Term} {N : Nat},
+  Becoming.Undecided.Closed sys N →
+    (∀ (b : Nat → Bool), ∃ i, i < N ∧ Becoming.Undecided.eval₂ b (sys i) ≠ b i) →
+      ∀ (v : Nat → Becoming.Undecided.Value) (n : Nat),
+        (∀ (i : Nat),
+            i < N →
+              (Becoming.Law.run (Becoming.Undecided.revise sys) v).state (n + 1) i =
+                (Becoming.Law.run (Becoming.Undecided.revise sys) v).state n i) →
+          ∃ i, i < N ∧ (Becoming.Law.run (Becoming.Undecided.revise sys) v).state n i = Becoming.Undecided.Value.u
+Becoming.Undecided.liar_two_valued_moves : ∀ (b : Nat → Bool),
+  ∃ i, i < 1 ∧ Becoming.Undecided.eval₂ b (Becoming.Undecided.liar i) ≠ b i
+Becoming.Undecided.liar_two_valued_run : ∀ (b : Nat → Bool) (n : Nat),
+  (Becoming.Law.run (Becoming.Undecided.revise₂ Becoming.Undecided.liar) b).state n 0 =
+    (Becoming.Law.run (fun x => !x) (b 0)).state n
+Becoming.Undecided.liar_two_valued_never_rests : ∀ (b : Nat → Bool) (n : Nat),
+  (Becoming.Law.run (Becoming.Undecided.revise₂ Becoming.Undecided.liar) b).state (n + 1) 0 ≠
+    (Becoming.Law.run (Becoming.Undecided.revise₂ Becoming.Undecided.liar) b).state n 0
+Becoming.Undecided.liar_undecided : ∀ (v : Nat → Becoming.Undecided.Value) (n : Nat),
+  (Becoming.Law.run (Becoming.Undecided.revise Becoming.Undecided.liar) v).state (n + 1) 0 =
+      (Becoming.Law.run (Becoming.Undecided.revise Becoming.Undecided.liar) v).state n 0 →
+    (Becoming.Law.run (Becoming.Undecided.revise Becoming.Undecided.liar) v).state n 0 = Becoming.Undecided.Value.u
+Becoming.Undecided.neg_monotone : Becoming.Undecided.Monotone Becoming.Undecided.Value.neg
+@Becoming.Undecided.monotone_settles : ∀ {g : Becoming.Undecided.Value → Becoming.Undecided.Value},
+  Becoming.Undecided.Monotone g → ∃ v, g Becoming.Undecided.Value.u = v ∧ g v = v
+@Becoming.Undecided.monotone_fixed : ∀ {g : Becoming.Undecided.Value → Becoming.Undecided.Value},
+  Becoming.Undecided.Monotone g → ∃ v, v = g v
+@Becoming.Undecided.monotone_not_moves : ∀ {g : Becoming.Undecided.Value → Becoming.Undecided.Value},
+  Becoming.Undecided.Monotone g → ¬Becoming.Diagonal.Moves Eq g
+Becoming.Undecided.neg_not_moves : ¬Becoming.Diagonal.Moves Eq Becoming.Undecided.Value.neg
+@Becoming.Undecided.monotone_run_rests : ∀ {g : Becoming.Undecided.Value → Becoming.Undecided.Value},
+  Becoming.Undecided.Monotone g → ∃ v, ∀ (n : Nat), (Becoming.Law.run g Becoming.Undecided.Value.u).state (n + 1) = v
+@Becoming.Undecided.never_rests_not_monotone : ∀ {g : Becoming.Undecided.Value → Becoming.Undecided.Value},
+  (∀ (n : Nat),
+      (Becoming.Law.run g Becoming.Undecided.Value.u).state (n + 1) ≠
+        (Becoming.Law.run g Becoming.Undecided.Value.u).state n) →
+    ¬Becoming.Undecided.Monotone g
+@Becoming.Undecided.moves_not_monotone : ∀ {g : Becoming.Undecided.Value → Becoming.Undecided.Value},
+  Becoming.Diagonal.Moves Eq g →
+    (∀ (v : Becoming.Undecided.Value) (n : Nat),
+        (Becoming.Law.run g v).state (n + 1) ≠ (Becoming.Law.run g v).state n) ∧
+      ¬Becoming.Undecided.Monotone g
+Becoming.Undecided.liar_both_sides : ∀ (b : Nat → Bool) (n : Nat),
+  (Becoming.Law.run (Becoming.Undecided.revise₂ Becoming.Undecided.liar) b).state (n + 1) 0 ≠
+      (Becoming.Law.run (Becoming.Undecided.revise₂ Becoming.Undecided.liar) b).state n 0 ∧
+    Becoming.Undecided.stage Becoming.Undecided.liar n 0 = Becoming.Undecided.Value.u ∧
+      ¬Becoming.Diagonal.Moves Eq Becoming.Undecided.Value.neg
+Becoming.Undecided.rotate_moves : Becoming.Diagonal.Moves Eq Becoming.Undecided.rotate
+@Becoming.Undecided.incomplete : ∀ {A : Type u_1} (ψ : A → A → Becoming.Undecided.Value),
+  ¬∀ (g : A → Becoming.Undecided.Value), Becoming.Diagonal.Says Eq ψ g

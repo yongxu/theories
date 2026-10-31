@@ -19,12 +19,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 2214,
+    "lean_paths": 2219,
     "distinct_byte_contents": 1757,
-    "byte_identical_duplicate_groups": 189,
+    "byte_identical_duplicate_groups": 190,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 1233,
+      "development-attempt": 1238,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 942
@@ -20766,6 +20766,51 @@
     },
     {
       "path": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1791375322294089000/GenerativeCore.lean",
+      "sha256": "e3daca1b729118fc309585a5d3ba1af60ac99cd80bab41e477aed204177069e8",
+      "role": "development-attempt",
+      "group": "shared",
+      "package_readme": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/ConsequenceTransmission.lean",
+      "sha256": "6d0cc231a53f910afa0fa9d056aa23be244a800c666f1c51f4f6b50d78c39c07",
+      "role": "development-attempt",
+      "group": "shared",
+      "package_readme": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/DevelopedResponse.lean",
+      "sha256": "6f53d92de64a31f515df7f128e2c31ebb08a9df6d66627141df5eb258f58c1a7",
+      "role": "development-attempt",
+      "group": "shared",
+      "package_readme": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/FormationRoot.lean",
+      "sha256": "2ef3a84db441945ae20057041e1ccab668ea4fff320c78882929e4f42cfa09e8",
+      "role": "development-attempt",
+      "group": "shared",
+      "package_readme": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/FormedSelection.lean",
+      "sha256": "8b083de5abc94ae933b2874b16bf0edf85dd899cf3e4eaf3d251523fd994c43f",
+      "role": "development-attempt",
+      "group": "shared",
+      "package_readme": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/GenerativeCore.lean",
       "sha256": "e3daca1b729118fc309585a5d3ba1af60ac99cd80bab41e477aed204177069e8",
       "role": "development-attempt",
       "group": "shared",
@@ -533283,6 +533328,7 @@
       "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1791375037098271000/FormationRoot.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1791375135188720000/FormationRoot.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1791375322294089000/FormationRoot.lean",
+      "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/FormationRoot.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/formal/FormationRoot.lean"
     ],
     "2f2575d664a5436ee341a37488146b84e94a18414a911e1b13385057df6b831f": [
@@ -533543,11 +533589,13 @@
       "experiments/shared-renewal-capability/regulation/retention/formation/evolution/ConsequenceTransmission.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1791375037098271000/ConsequenceTransmission.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1791375135188720000/ConsequenceTransmission.lean",
-      "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1791375322294089000/ConsequenceTransmission.lean"
+      "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1791375322294089000/ConsequenceTransmission.lean",
+      "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/ConsequenceTransmission.lean"
     ],
     "6f53d92de64a31f515df7f128e2c31ebb08a9df6d66627141df5eb258f58c1a7": [
       "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/DevelopedResponse.lean",
-      "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1791375322294089000/DevelopedResponse.lean"
+      "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1791375322294089000/DevelopedResponse.lean",
+      "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/DevelopedResponse.lean"
     ],
     "6f80291124914c32ad379e25853eea9bb56cf46138b870b7ef06988579ec1c72": [
       "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/tree/Becoming/Boundaries.lean",
@@ -533652,6 +533700,10 @@
     "8acf104ecbda2eca805054d361c6dc8620acf276e3d485836976e3fa1868e7f0": [
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/development/1791254828863310000/PlasticityWitness.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/development/1791254910305351000/PlasticityWitness.lean"
+    ],
+    "8b083de5abc94ae933b2874b16bf0edf85dd899cf3e4eaf3d251523fd994c43f": [
+      "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/FormedSelection.lean",
+      "experiments/shared-renewal-capability/regulation/retention/formation/formal/FormedSelection.lean"
     ],
     "8b49c0b9b29c5d07a5734998dcee0f5ae1ef72fcf18c512c846f225be71785dd": [
       "experiments/integrated-correction/general-framework/generative-basis/lean/history/learning/protocol-completion-development/20261006T010510742012Z/ProtocolCompletionExamples.lean",
@@ -534002,6 +534054,7 @@
       "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1791375037098271000/GenerativeCore.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1791375135188720000/GenerativeCore.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1791375322294089000/GenerativeCore.lean",
+      "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/checks/1793454233657017000/GenerativeCore.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/development/1791254295824849000/GenerativeCore.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/development/1791254333566156000/GenerativeCore.lean",
       "experiments/shared-renewal-capability/regulation/retention/formation/selectors/updaters/prediction/recipient-correction/identification/recording/reason-consumer/action/revision/evaluation/plasticity/formal/development/1791254437728380000/GenerativeCore.lean",

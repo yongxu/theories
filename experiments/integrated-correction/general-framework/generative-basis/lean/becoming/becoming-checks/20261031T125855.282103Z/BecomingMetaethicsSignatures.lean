@@ -1,0 +1,12 @@
+import Becoming.Metaethics
+#check @Becoming.Neutral.within
+#check @Becoming.Valuation.seed_of_selfSignificance
+#check @Becoming.positioned_articulation_of_articulates
+#check @Becoming.Separate.stays
+#check @Becoming.Web.breaking_relates
+#check @Becoming.Web.valuing_breaking_reaches
+#check @Becoming.Web.living_iff_relations
+#check @Becoming.Mixed.dependent
+#check @Becoming.Mixed.one_event_two_relations
+#check @Becoming.Model.no_relation_into_beyond
+#check @Becoming.Model.articulation_neutrality_is_needed

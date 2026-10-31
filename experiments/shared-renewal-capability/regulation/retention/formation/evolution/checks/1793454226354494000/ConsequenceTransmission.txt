@@ -1,0 +1,19 @@
+'ConsequenceTransmission.numerator_balance' depends on axioms: [propext]
+'ConsequenceTransmission.strict_increase_iff' depends on axioms: [propext]
+'ConsequenceTransmission.neutral_iff' depends on axioms: [propext]
+'ConsequenceTransmission.strict_decrease_iff' depends on axioms: [propext]
+'ConsequenceTransmission.denominator_positive' does not depend on any axioms
+'ConsequenceTransmission.shared_access_is_neutral' depends on axioms: [propext]
+'ConsequenceTransmission.Native.positive_a_weight_has_native_event' depends on axioms: [propext]
+'ConsequenceTransmission.Native.positive_h_weight_has_native_event' depends on axioms: [propext]
+'ConsequenceTransmission.Native.native_copy_transmits_its_response_structure' depends on axioms: [propext]
+'ConsequenceTransmission.Native.actual_capture_changes_copy_access' does not depend on any axioms
+'ConsequenceTransmission.Native.actual_transfer_with_both_structures_present' does not depend on any axioms
+'ConsequenceTransmission.Native.same_composition_opposite_access' does not depend on any axioms
+'ConsequenceTransmission.transmission_preserves_total_event_weight' does not depend on any axioms
+'ConsequenceTransmission.transmitted_structure_increase_iff' depends on axioms: [propext]
+'ConsequenceTransmission.faithful_transmission_matches_template' does not depend on any axioms
+'ConsequenceTransmission.faithful_increase_iff_template_increase' does not depend on any axioms
+'ConsequenceTransmission.positive_template_advantage_can_reverse_in_transmission' does not depend on any axioms
+'ConsequenceTransmission.Native.reached_neutral_event_is_native' does not depend on any axioms
+'ConsequenceTransmission.balanced_transfer_matches_template' does not depend on any axioms

@@ -1,0 +1,33 @@
+@Becoming.SelectionRelabelCorrespondence.transpose_eq_swap : ∀ {n : Nat} (a b k : Fin n),
+  PluralRecords.transpose a b k = Becoming.Relabel.swap a b k
+@Becoming.SelectionRelabelCorrespondence.treatsAlike_iff : ∀ {n : Nat} (rule : PluralRecords.Rule n),
+  PluralRecords.TreatsAlike rule ↔ Becoming.Relabel.EquivariantChoice rule
+@Becoming.SelectionRelabelCorrespondence.lotteryAlike_iff : ∀ {n : Nat} (lot : TieBreaking.Lottery n),
+  TieBreaking.LotteryAlike lot ↔
+    (Becoming.Relabel.EquivariantValue fun r i => (lot r).serve i) ∧
+      ∀ (r r' : PluralRecords.Record n) (a b : Fin n),
+        (∀ (k : Fin n), r' k = r (PluralRecords.transpose a b k)) → (lot r').withhold = (lot r).withhold
+@Becoming.SelectionRelabelCorrespondence.alone_iff : ∀ {n : Nat} (v : Nat) (r : PluralRecords.Record n) (i : Fin n),
+  PluralRecords.Alone v r i ↔ Becoming.Relabel.Alone v r i
+@Becoming.SelectionRelabelCorrespondence.tied_not_served_by_core : ∀ {n : Nat} (rule : PluralRecords.Rule n),
+  PluralRecords.TreatsAlike rule → ∀ (r : PluralRecords.Record n) (k j : Fin n), j ≠ k → r j = r k → rule r ≠ some k
+@Becoming.SelectionRelabelCorrespondence.first_lt : ∀ {n : Nat}, 2 ≤ n → 0 < n
+@Becoming.SelectionRelabelCorrespondence.all_tied_forces_withholding_by_core : ∀ {n : Nat}
+  (rule : PluralRecords.Rule n),
+  PluralRecords.TreatsAlike rule → ∀ (r : PluralRecords.Record n), 2 ≤ n → (∀ (i j : Fin n), r i = r j) → rule r = none
+@Becoming.SelectionRelabelCorrespondence.servable_iff_untied_by_core : ∀ {n : Nat} (r : PluralRecords.Record n)
+  (k : Fin n), (∃ rule, PluralRecords.TreatsAlike rule ∧ rule r = some k) ↔ ∀ (j : Fin n), j ≠ k → r j ≠ r k
+@Becoming.SelectionRelabelCorrespondence.tied_equal_weight_by_core : ∀ {n : Nat} (lot : TieBreaking.Lottery n),
+  TieBreaking.LotteryAlike lot →
+    ∀ (r : PluralRecords.Record n) (a b : Fin n), r a = r b → (lot r).serve a = (lot r).serve b
+@Becoming.SelectionRelabelCorrespondence.full_tie_equal_weights_by_core : ∀ {n : Nat} (lot : TieBreaking.Lottery n),
+  TieBreaking.LotteryAlike lot →
+    ∀ (r : PluralRecords.Record n), (∀ (i j : Fin n), r i = r j) → ∀ (i j : Fin n), (lot r).serve i = (lot r).serve j
+Becoming.SelectionRelabelCorrespondence.uniform_alike_by_core : ∀ (n : Nat),
+  TieBreaking.LotteryAlike (TieBreaking.uniform n)
+@Becoming.SelectionRelabelCorrespondence.pointMass_one : ∀ {n : Nat} {rule : PluralRecords.Rule n}
+  {r : PluralRecords.Record n} {i : Fin n}, (TieBreaking.pointMass rule r).serve i = 1 → rule r = some i
+@Becoming.SelectionRelabelCorrespondence.point_mass_not_alike_at_tie_by_core : ∀ {n : Nat}
+  (rule : PluralRecords.Rule n),
+  TieBreaking.LotteryAlike (TieBreaking.pointMass rule) →
+    2 ≤ n → ∀ (r : PluralRecords.Record n), (∀ (i j : Fin n), r i = r j) → rule r = none

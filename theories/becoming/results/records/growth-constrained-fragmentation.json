@@ -424,6 +424,12 @@
       "role": "receipt",
       "sha256": "2b986ea3e3de748b2a20f9973fbbcd4e6fd8dec8b40e9997fac3c29dd0d9cb1d",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261031T133608.754102Z/verification.json",
+      "role": "receipt",
+      "sha256": "88fad48e64d70b51be823bdb32c46cf8c7bfd0ff4d6f146b5105cc0e94808d23",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -443,7 +449,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/PreparationCorrespondence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261020T161943.503298Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261031T133608.754102Z/verification.json",
       "sha256_pointer": "/source_sha256/PreparationCorrespondence",
       "success_pointer": "/status",
       "success_value": "passed"

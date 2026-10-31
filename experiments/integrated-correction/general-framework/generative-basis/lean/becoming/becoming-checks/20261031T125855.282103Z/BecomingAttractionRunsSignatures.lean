@@ -1,0 +1,16 @@
+import Becoming.AttractionRuns
+#check @Becoming.AttractionRuns.returning_invariant
+#check @Becoming.AttractionRuns.drawnInto_returning
+#check @Becoming.AttractionRuns.drawn_iff_lost
+#check @Becoming.AttractionRuns.drawn_not_keeps
+#check @Becoming.AttractionRuns.lossless_iff_none_drawn
+#check @Becoming.AttractionRuns.merges_draws
+#check @Becoming.AttractionRuns.succ_drawn_lossless
+#check @Becoming.AttractionRuns.pred_drawn_keeps
+#check @Becoming.AttractionRuns.ratchet_merges
+#check @Becoming.AttractionRuns.ratchet_false_never_returns
+#check @Becoming.AttractionRuns.ratchet_false_lost
+#check @Becoming.AttractionRuns.ratchet_true_not_drawn
+#check @Becoming.AttractionRuns.captured_rule_invariant
+#check @Becoming.AttractionRuns.captured_state_drawn
+#check @Becoming.AttractionRuns.captured_rule_drawn

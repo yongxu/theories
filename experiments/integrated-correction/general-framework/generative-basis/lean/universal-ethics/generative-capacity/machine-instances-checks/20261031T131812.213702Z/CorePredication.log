@@ -1,0 +1,12 @@
+'Generative.CorePredication.may_append_iff' does not depend on any axioms
+'Generative.CorePredication.must_append_iff' does not depend on any axioms
+'Generative.CorePredication.trace_invariant' does not depend on any axioms
+'Generative.CorePredication.reach_invariant' does not depend on any axioms
+'Generative.CorePredication.invariant_excludes_endpoint' does not depend on any axioms
+'Generative.CorePredication.feasible_and_must_implies_may' does not depend on any axioms
+'Generative.CorePredication.deterministic_trace_endpoint' does not depend on any axioms
+'Generative.CorePredication.deterministic_may_implies_must' does not depend on any axioms
+'Generative.CorePredication.possible_not_guaranteed' does not depend on any axioms
+'Generative.CorePredication.blocked_word_not_feasible' does not depend on any axioms
+'Generative.CorePredication.blocked_must_is_vacuous' does not depend on any axioms
+'Generative.CorePredication.blocked_may_is_false' does not depend on any axioms

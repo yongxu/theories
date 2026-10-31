@@ -57,7 +57,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the periphery checker check_cells_under_noise.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261030T160959.698859Z): all 76 declarations of CellsUnderNoise, each on Lean's standard axioms only, every core module of its closure, Becoming.FreeEnergyGuarantees among them, matching a passed core receipt. An independent review by another AI agent (REVIEW-UE24) and its recheck (RECHECK-UE24), study section 468; not reviewed by a person.
+Machine-checked by the periphery checker check_cells_under_noise.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134056.109386Z): all 76 declarations of CellsUnderNoise, each on Lean's standard axioms only, every core module of its closure, Becoming.FreeEnergyGuarantees among them, matching a passed core receipt. An independent review by another AI agent (REVIEW-UE24) and its recheck (RECHECK-UE24), study section 468; not reviewed by a person.
 
 Canonical source: [CellsUnderNoise.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean)
 
@@ -94,6 +94,7 @@ Curie's principle (Curie 1894; Chalmers 1970, British Journal for the Philosophy
 | integration | [REVIEW-UE24.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue24-cells-under-noise/REVIEW-UE24.md) | — |
 | integration | [RECHECK-UE24.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue24-cells-under-noise/RECHECK-UE24.md) | — |
 | statement | [05-COLLECTIVES.md](../../chapters/05-COLLECTIVES.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/cells-under-noise-checks/20261031T134056.109386Z/verification.json) | — |
 
 Aliases: `Identical cells under noise`, `噪声下之同一细胞`, `exchangeable law`, `Curie's principle with noise`, `symmetric distribution of effects`, `Becoming.CellsUnderNoise.noisyDescent_exchangeable`, `Becoming.CellsUnderNoise.noisyDescent_distinct_le`
 

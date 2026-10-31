@@ -1,0 +1,466 @@
+@Becoming.Web.strictJoin_order : ∀ {F C : Type} {W : Becoming.Web F C} {P : (Nat → C → Nat) → (Nat → C → Nat) → Prop},
+  (∀ {a b c : Nat → C → Nat}, P a b → P b c → P a c) →
+    (∀ {a b : Nat → C → Nat}, W.Includes a b → P a b) →
+      (∀ (a : Nat → C → Nat), ¬(W.Widens a a ∨ P a a ∧ ¬P a a)) ∧
+        (∀ {a b c : Nat → C → Nat},
+            W.Widens a b ∨ P a b ∧ ¬P b a → W.Widens b c ∨ P b c ∧ ¬P c b → W.Widens a c ∨ P a c ∧ ¬P c a) ∧
+          ∀ {a b : Nat → C → Nat}, W.Widens a b → W.Widens a b ∨ P a b ∧ ¬P b a
+@Becoming.Web.ranks_self_of_crossed : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  {R : (Nat → C → Nat) → (Nat → C → Nat) → Prop},
+  (∀ {a b c : Nat → C → Nat}, R a b → R b c → R a c) →
+    (∀ {a b : Nat → C → Nat}, W.Widens a b → R a b) →
+      ∀ {k k' : Nat → C → Nat}, W.Widens l' k → W.Widens k' l → R l l' → R k k' → R l l
+@Becoming.Web.IncludesLater.of_includes : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.Includes l l' → W.IncludesLater 0 l l'
+@Becoming.Web.IncludesLater.trans : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat} {d e : Nat},
+  W.IncludesLater d l l' → W.IncludesLater e l' l'' → W.IncludesLater (e + d) l l''
+@Becoming.Web.IncludesWithLag.refl : ∀ {F C : Type} {W : Becoming.Web F C} (l : Nat → C → Nat), W.IncludesWithLag l l
+@Becoming.Web.IncludesWithLag.trans : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat},
+  W.IncludesWithLag l l' → W.IncludesWithLag l' l'' → W.IncludesWithLag l l''
+@Becoming.Web.IncludesWithLag.of_includes : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.Includes l l' → W.IncludesWithLag l l'
+@Becoming.Web.WidensWithLag.irrefl : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat}, ¬W.WidensWithLag l l
+@Becoming.Web.WidensWithLag.trans : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat},
+  W.WidensWithLag l l' → W.WidensWithLag l' l'' → W.WidensWithLag l l''
+@Becoming.Web.Widens.trans_withLag : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat},
+  W.Widens l l' → W.WidensWithLag l' l'' → W.WidensWithLag l l''
+@Becoming.Web.WidensWithLag.trans_widens : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat},
+  W.WidensWithLag l l' → W.Widens l' l'' → W.WidensWithLag l l''
+@Becoming.Web.WidensOrWithLag.of_widens : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.Widens l l' → W.WidensOrWithLag l l'
+@Becoming.Web.WidensOrWithLag.irrefl : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat}, ¬W.WidensOrWithLag l l
+@Becoming.Web.WidensOrWithLag.trans : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat},
+  W.WidensOrWithLag l l' → W.WidensOrWithLag l' l'' → W.WidensOrWithLag l l''
+@Becoming.Web.Widens.not_reversed_withLag : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.Widens l l' → ¬W.WidensOrWithLag l' l
+@Becoming.Web.not_listed_includes_keeping : ∀ {F C : Type} {W : Becoming.Web F C} {k s : Nat → C → Nat},
+  W.KeepsWidening Becoming.Web.itself k 0 →
+    W.AdmitsAlikeFrom s 0 → (∃ xs, ∀ (f : F), W.Admits (s 0) 0 f → f ∈ xs) → W.Includes s k → False
+@Becoming.Web.ListedOrder.irrefl : ∀ {F C : Type} {W : Becoming.Web F C} {a : Nat → C → Nat}, ¬W.ListedOrder a a
+@Becoming.Web.ListedOrder.trans : ∀ {F C : Type} {W : Becoming.Web F C} {a b c : Nat → C → Nat},
+  W.ListedOrder a b → W.ListedOrder b c → W.ListedOrder a c
+@Becoming.Web.ListedOrder.ranks : ∀ {F C : Type} {W : Becoming.Web F C} {k s : Nat → C → Nat},
+  W.KeepingOverListedAlike k s → W.ListedOrder k s
+@Becoming.Web.IncludesWithFormationLag.trans : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat},
+  W.IncludesWithFormationLag l l' → W.IncludesWithFormationLag l' l'' → W.IncludesWithFormationLag l l''
+@Becoming.Web.IncludesWithFormationLag.of_includes : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.Includes l l' → W.IncludesWithFormationLag l l'
+@Becoming.Web.IncludesEachLater.trans : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat},
+  W.IncludesEachLater l l' → W.IncludesEachLater l' l'' → W.IncludesEachLater l l''
+@Becoming.Web.IncludesEachLater.of_includes : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.Includes l l' → W.IncludesEachLater l l'
+@Becoming.Web.widensOrWithFormationLag_order : ∀ {F C : Type} {W : Becoming.Web F C},
+  (∀ (a : Nat → C → Nat), ¬W.WidensOrWithFormationLag a a) ∧
+    (∀ {a b c : Nat → C → Nat},
+        W.WidensOrWithFormationLag a b → W.WidensOrWithFormationLag b c → W.WidensOrWithFormationLag a c) ∧
+      ∀ {a b : Nat → C → Nat}, W.Widens a b → W.WidensOrWithFormationLag a b
+@Becoming.Web.widensOrEachLater_order : ∀ {F C : Type} {W : Becoming.Web F C},
+  (∀ (a : Nat → C → Nat), ¬W.WidensOrEachLater a a) ∧
+    (∀ {a b c : Nat → C → Nat}, W.WidensOrEachLater a b → W.WidensOrEachLater b c → W.WidensOrEachLater a c) ∧
+      ∀ {a b : Nat → C → Nat}, W.Widens a b → W.WidensOrEachLater a b
+@Becoming.Web.WidensOrWithLag.includesEachLater : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.WidensOrWithLag l l' → W.IncludesEachLater l l'
+@Becoming.Web.includes_reidentify : ∀ {F F' C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  (σ : Becoming.Reidentify F F'), (W.reidentify σ).Includes l l' ↔ W.Includes l l'
+@Becoming.Web.exceeds_reidentify : ∀ {F F' C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  (σ : Becoming.Reidentify F F'), (W.reidentify σ).Exceeds l l' ↔ W.Exceeds l l'
+@Becoming.Web.widens_reidentify : ∀ {F F' C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  (σ : Becoming.Reidentify F F'), (W.reidentify σ).Widens l l' ↔ W.Widens l l'
+@Becoming.Web.includesLater_rename : ∀ {F F' C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat} {old : F' → F}
+  {new : F → F'} {old_new : ∀ (f : F), old (new f) = f} {new_old : ∀ (x : F'), new (old x) = x} {d : Nat},
+  (W.reidentify (Becoming.Reidentify.rename old new old_new new_old)).IncludesLater d l l' ↔ W.IncludesLater d l l'
+@Becoming.Web.widensOrWithLag_rename : ∀ {F F' C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat} {old : F' → F}
+  {new : F → F'} {old_new : ∀ (f : F), old (new f) = f} {new_old : ∀ (x : F'), new (old x) = x},
+  (W.reidentify (Becoming.Reidentify.rename old new old_new new_old)).WidensOrWithLag l l' ↔ W.WidensOrWithLag l l'
+@Becoming.Web.Linked.append : ∀ {F : Type} {R : Nat → F → F → Prop} {t : Nat} {g : F} {u : Nat} {h : F} {v : Nat}
+  {k : F}, Becoming.Web.Linked R t g u h → Becoming.Web.Linked R u h v k → Becoming.Web.Linked R t g v k
+@Becoming.Web.IncludesLaterAlong.of_includes : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  {R : Nat → F → F → Prop}, W.Includes l l' → W.IncludesLaterAlong R 0 l l'
+@Becoming.Web.IncludesLaterAlong.trans : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat}
+  {R : Nat → F → F → Prop} {d e : Nat},
+  W.IncludesLaterAlong R d l l' → W.IncludesLaterAlong R e l' l'' → W.IncludesLaterAlong R (e + d) l l''
+@Becoming.Web.includesLaterAlong_itself_iff : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat} {d : Nat},
+  W.IncludesLaterAlong Becoming.Web.itself d l l' ↔ W.IncludesLater d l l'
+@Becoming.Web.includesLaterAlong_reidentify : ∀ {F F' C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  {R : Nat → F → F → Prop} (σ : Becoming.Reidentify F F') {d : Nat},
+  (W.reidentify σ).IncludesLaterAlong (σ.carry R) d l l' ↔ W.IncludesLaterAlong R d l l'
+@Becoming.Web.widensOrWithLagAlong_order : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop},
+  (∀ (a : Nat → C → Nat), ¬W.WidensOrWithLagAlong R a a) ∧
+    (∀ {a b c : Nat → C → Nat},
+        W.WidensOrWithLagAlong R a b → W.WidensOrWithLagAlong R b c → W.WidensOrWithLagAlong R a c) ∧
+      ∀ {a b : Nat → C → Nat}, W.Widens a b → W.WidensOrWithLagAlong R a b
+@Becoming.Web.widensOrWithLagAlong_itself_iff : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.WidensOrWithLagAlong Becoming.Web.itself l l' ↔ W.WidensOrWithLag l l'
+@Becoming.Web.widensOrWithLagAlong_reidentify : ∀ {F F' C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  {R : Nat → F → F → Prop} (σ : Becoming.Reidentify F F'),
+  (W.reidentify σ).WidensOrWithLagAlong (σ.carry R) l l' ↔ W.WidensOrWithLagAlong R l l'
+@Becoming.Web.TailLag.trans : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat},
+  W.TailLag l l' → W.TailLag l' l'' → W.TailLag l l''
+@Becoming.Web.TailLag.of_widensOrEventually : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.WidensOrEventually l l' → W.TailLag l l'
+@Becoming.Web.TailOrder.irrefl : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat}, ¬W.TailOrder l l
+@Becoming.Web.TailOrder.trans : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat},
+  W.TailOrder l l' → W.TailOrder l' l'' → W.TailOrder l l''
+@Becoming.Web.tailOrder_order : ∀ {F C : Type} {W : Becoming.Web F C},
+  (∀ (a : Nat → C → Nat), ¬W.TailOrder a a) ∧
+    (∀ {a b c : Nat → C → Nat}, W.TailOrder a b → W.TailOrder b c → W.TailOrder a c) ∧
+      (∀ {a b : Nat → C → Nat}, W.Widens a b → W.TailOrder a b) ∧
+        ∀ {a b : Nat → C → Nat}, W.EventuallyWidens a b → W.TailOrder a b
+@Becoming.Web.KeepsWhatKept.of_includesFrom : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat} {T₀ : Nat},
+  W.IncludesFrom T₀ l l' → W.KeepsWhatKept l l'
+@Becoming.Web.KeepsWhatKept.of_includesLaterFrom : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat}
+  {T₀ d : Nat}, W.IncludesLaterFrom T₀ d l l' → W.KeepsWhatKept l l'
+@Becoming.Web.TailOrder.keepsWhatKept : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.TailOrder l l' → W.KeepsWhatKept l l'
+@Becoming.Web.WidensOrWithLag.keepsWhatKept : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.WidensOrWithLag l l' → W.KeepsWhatKept l l'
+@Becoming.Web.IncludesWithFormationLag.keepsWhatKept : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.IncludesWithFormationLag l l' → W.KeepsWhatKept l l'
+@Becoming.Web.WidensOrWithFormationLag.keepsWhatKept : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.WidensOrWithFormationLag l l' → W.KeepsWhatKept l l'
+@Becoming.Sides.admits_iff : ∀ {m : Bool × Nat → Nat} {t : Nat} {f : Bool × Nat},
+  Becoming.Sides.web.Admits m t f ↔ 0 < m f
+@Becoming.Sides.growing_true : ∀ {t n : Nat}, Becoming.Sides.web.Admits (Becoming.Sides.growing t) t (true, n) ↔ n ≤ t
+@Becoming.Sides.not_growing_false : ∀ {t n : Nat}, ¬Becoming.Sides.web.Admits (Becoming.Sides.growing t) t (false, n)
+@Becoming.Sides.firstAndOther_true : ∀ {t n : Nat},
+  Becoming.Sides.web.Admits (Becoming.Sides.firstAndOther t) t (true, n) ↔ n ≤ 0
+@Becoming.Sides.firstAndOther_false : ∀ {t n : Nat},
+  Becoming.Sides.web.Admits (Becoming.Sides.firstAndOther t) t (false, n)
+Becoming.Sides.growing_keepsWidening : Becoming.Sides.web.KeepsWidening Becoming.Web.itself Becoming.Sides.growing 0
+Becoming.Sides.firstAndOther_alike : Becoming.Sides.web.AdmitsAlikeFrom Becoming.Sides.firstAndOther 0
+Becoming.Sides.firstAndOther_wider_first : Becoming.Sides.web.WidensUpTo 0 Becoming.Sides.firstAndOther
+  Becoming.Sides.growing
+Becoming.Sides.growing_mixed : Becoming.Sides.web.Mixed Becoming.Sides.growing Becoming.Sides.firstAndOther
+Becoming.Sides.firstAndOther_widens_swapped : Becoming.Sides.web.Widens Becoming.Sides.firstAndOther
+  (Becoming.Sides.swap Becoming.Sides.growing)
+Becoming.Sides.swapped_widens_growing : Becoming.Sides.web.Widens (Becoming.Sides.swap Becoming.Sides.firstAndOther)
+  Becoming.Sides.growing
+@Becoming.Sides.swap_admits : ∀ {l : Nat → Bool × Nat → Nat} {t : Nat} {f : Bool × Nat},
+  Becoming.Sides.web.Admits (Becoming.Sides.swap l t) t f ↔ Becoming.Sides.web.Admits (l t) t (!f.fst, f.snd)
+@Becoming.Sides.swap_admits_back : ∀ {l : Nat → Bool × Nat → Nat} {t : Nat} {f : Bool × Nat},
+  Becoming.Sides.web.Admits (Becoming.Sides.swap l t) t (!f.fst, f.snd) ↔ Becoming.Sides.web.Admits (l t) t f
+@Becoming.Sides.swap_false : ∀ {l : Nat → Bool × Nat → Nat} {t n : Nat},
+  Becoming.Sides.web.Admits (Becoming.Sides.swap l t) t (false, n) ↔ Becoming.Sides.web.Admits (l t) t (true, n)
+@Becoming.Sides.swap_true : ∀ {l : Nat → Bool × Nat → Nat} {t n : Nat},
+  Becoming.Sides.web.Admits (Becoming.Sides.swap l t) t (true, n) ↔ Becoming.Sides.web.Admits (l t) t (false, n)
+@Becoming.Sides.swap_growing_false : ∀ {t n : Nat},
+  Becoming.Sides.web.Admits (Becoming.Sides.swap Becoming.Sides.growing t) t (false, n) ↔ n ≤ t
+@Becoming.Sides.not_swap_growing_true : ∀ {t n : Nat},
+  ¬Becoming.Sides.web.Admits (Becoming.Sides.swap Becoming.Sides.growing t) t (true, n)
+@Becoming.Sides.swap_firstAndOther_true : ∀ {t n : Nat},
+  Becoming.Sides.web.Admits (Becoming.Sides.swap Becoming.Sides.firstAndOther t) t (true, n)
+@Becoming.Sides.swap_firstAndOther_false : ∀ {t n : Nat},
+  Becoming.Sides.web.Admits (Becoming.Sides.swap Becoming.Sides.firstAndOther t) t (false, n) ↔ n ≤ 0
+Becoming.Sides.not_growing_widens_swapped : ¬Becoming.Sides.web.Widens Becoming.Sides.growing
+    (Becoming.Sides.swap Becoming.Sides.firstAndOther)
+Becoming.Sides.not_swapped_growing_widens : ¬Becoming.Sides.web.Widens (Becoming.Sides.swap Becoming.Sides.growing)
+    Becoming.Sides.firstAndOther
+Becoming.Sides.swap_growing_keepsWidening : Becoming.Sides.web.KeepsWidening Becoming.Web.itself
+  (Becoming.Sides.swap Becoming.Sides.growing) 0
+Becoming.Sides.swap_firstAndOther_alike : Becoming.Sides.web.AdmitsAlikeFrom
+  (Becoming.Sides.swap Becoming.Sides.firstAndOther) 0
+Becoming.Sides.swap_wider_first : Becoming.Sides.web.WidensUpTo 0 (Becoming.Sides.swap Becoming.Sides.firstAndOther)
+  (Becoming.Sides.swap Becoming.Sides.growing)
+Becoming.Sides.swap_mixed : Becoming.Sides.web.Mixed (Becoming.Sides.swap Becoming.Sides.growing)
+  (Becoming.Sides.swap Becoming.Sides.firstAndOther)
+@Becoming.Sides.no_order_ranks_keeping_over_alike : ∀ {R : (Nat → Bool × Nat → Nat) → (Nat → Bool × Nat → Nat) → Prop},
+  (∀ (a : Nat → Bool × Nat → Nat), ¬R a a) →
+    (∀ {a b c : Nat → Bool × Nat → Nat}, R a b → R b c → R a c) →
+      (∀ {a b : Nat → Bool × Nat → Nat}, Becoming.Sides.web.Widens a b → R a b) →
+        ¬Becoming.Sides.web.RanksKeepingOverAlike R
+@Becoming.Sides.keeping_over_alike_cycles : ∀ {R : (Nat → Bool × Nat → Nat) → (Nat → Bool × Nat → Nat) → Prop},
+  (∀ {a b c : Nat → Bool × Nat → Nat}, R a b → R b c → R a c) →
+    (∀ {a b : Nat → Bool × Nat → Nat}, Becoming.Sides.web.Widens a b → R a b) →
+      (∀ {a b : Nat → Bool × Nat → Nat}, R a b → R (Becoming.Sides.swap a) (Becoming.Sides.swap b)) →
+        R Becoming.Sides.growing Becoming.Sides.firstAndOther → R Becoming.Sides.growing Becoming.Sides.growing
+Becoming.Sides.not_firstAndOther_includes : ¬Becoming.Sides.web.Includes Becoming.Sides.firstAndOther
+    Becoming.Sides.growing
+Becoming.Sides.exchange_needed : (∀ (a : Nat → Bool × Nat → Nat), ¬Becoming.Sides.onePair a a) ∧
+  (∀ {a b c : Nat → Bool × Nat → Nat},
+      Becoming.Sides.onePair a b → Becoming.Sides.onePair b c → Becoming.Sides.onePair a c) ∧
+    (∀ {a b : Nat → Bool × Nat → Nat}, Becoming.Sides.web.Widens a b → Becoming.Sides.onePair a b) ∧
+      Becoming.Sides.onePair Becoming.Sides.growing Becoming.Sides.firstAndOther
+@Becoming.Sides.includesLater_swap : ∀ {d : Nat} {l l' : Nat → Bool × Nat → Nat},
+  Becoming.Sides.web.IncludesLater d l l' →
+    Becoming.Sides.web.IncludesLater d (Becoming.Sides.swap l) (Becoming.Sides.swap l')
+@Becoming.Sides.includesLater_of_swap : ∀ {d : Nat} {l l' : Nat → Bool × Nat → Nat},
+  Becoming.Sides.web.IncludesLater d (Becoming.Sides.swap l) (Becoming.Sides.swap l') →
+    Becoming.Sides.web.IncludesLater d l l'
+@Becoming.Sides.includes_swap : ∀ {l l' : Nat → Bool × Nat → Nat},
+  Becoming.Sides.web.Includes l l' → Becoming.Sides.web.Includes (Becoming.Sides.swap l) (Becoming.Sides.swap l')
+@Becoming.Sides.exceeds_swap : ∀ {l l' : Nat → Bool × Nat → Nat},
+  Becoming.Sides.web.Exceeds l l' → Becoming.Sides.web.Exceeds (Becoming.Sides.swap l) (Becoming.Sides.swap l')
+@Becoming.Sides.widensOrWithLag_swap : ∀ {l l' : Nat → Bool × Nat → Nat},
+  Becoming.Sides.web.WidensOrWithLag l l' →
+    Becoming.Sides.web.WidensOrWithLag (Becoming.Sides.swap l) (Becoming.Sides.swap l')
+Becoming.Sides.silent : ¬Becoming.Sides.web.WidensOrWithLag Becoming.Sides.growing Becoming.Sides.firstAndOther ∧
+  ¬Becoming.Sides.web.WidensOrWithLag Becoming.Sides.firstAndOther Becoming.Sides.growing
+Becoming.Sides.swap_swap_includes : ∀ (l : Nat → Bool × Nat → Nat),
+  Becoming.Sides.web.Includes (Becoming.Sides.swap (Becoming.Sides.swap l)) l
+Becoming.Sides.includes_swap_swap : ∀ (l : Nat → Bool × Nat → Nat),
+  Becoming.Sides.web.Includes l (Becoming.Sides.swap (Becoming.Sides.swap l))
+@Becoming.Sides.not_below_above : ∀ {a : Nat → Bool × Nat → Nat},
+  Becoming.Sides.Above a → Becoming.Sides.Below a → False
+Becoming.Sides.reverseOrder_irrefl : ∀ (a : Nat → Bool × Nat → Nat), ¬Becoming.Sides.reverseOrder a a
+@Becoming.Sides.Above.of_includes : ∀ {a b : Nat → Bool × Nat → Nat},
+  Becoming.Sides.web.Includes a b → Becoming.Sides.Above b → Becoming.Sides.Above a
+@Becoming.Sides.Below.of_includes : ∀ {a b : Nat → Bool × Nat → Nat},
+  Becoming.Sides.web.Includes a b → Becoming.Sides.Below a → Becoming.Sides.Below b
+@Becoming.Sides.reverseOrder_trans : ∀ {a b c : Nat → Bool × Nat → Nat},
+  Becoming.Sides.reverseOrder a b → Becoming.Sides.reverseOrder b c → Becoming.Sides.reverseOrder a c
+@Becoming.Sides.Above.mirror : ∀ {a : Nat → Bool × Nat → Nat},
+  Becoming.Sides.Above a → Becoming.Sides.Above (Becoming.Sides.swap a)
+@Becoming.Sides.Below.mirror : ∀ {b : Nat → Bool × Nat → Nat},
+  Becoming.Sides.Below b → Becoming.Sides.Below (Becoming.Sides.swap b)
+@Becoming.Sides.reverseOrder_exchanged : ∀ {a b : Nat → Bool × Nat → Nat},
+  Becoming.Sides.reverseOrder a b → Becoming.Sides.reverseOrder (Becoming.Sides.swap a) (Becoming.Sides.swap b)
+Becoming.Sides.reverse_consistent : (∀ (a : Nat → Bool × Nat → Nat), ¬Becoming.Sides.reverseOrder a a) ∧
+  (∀ {a b c : Nat → Bool × Nat → Nat},
+      Becoming.Sides.reverseOrder a b → Becoming.Sides.reverseOrder b c → Becoming.Sides.reverseOrder a c) ∧
+    (∀ {a b : Nat → Bool × Nat → Nat}, Becoming.Sides.web.Widens a b → Becoming.Sides.reverseOrder a b) ∧
+      (∀ {a b : Nat → Bool × Nat → Nat},
+          Becoming.Sides.reverseOrder a b →
+            Becoming.Sides.reverseOrder (Becoming.Sides.swap a) (Becoming.Sides.swap b)) ∧
+        Becoming.Sides.reverseOrder Becoming.Sides.firstAndOther Becoming.Sides.growing
+@Becoming.Sides.firsts_zero : ∀ {t : Nat} {b : Bool}, Becoming.Sides.web.Admits (Becoming.Sides.firsts t) t (b, 0)
+@Becoming.Sides.not_firsts_succ : ∀ {t n : Nat} {b : Bool},
+  ¬Becoming.Sides.web.Admits (Becoming.Sides.firsts t) t (b, n + 1)
+Becoming.Sides.growing_over_firsts : Becoming.Sides.web.KeepingOverListedAlike Becoming.Sides.growing
+  Becoming.Sides.firsts
+Becoming.Sides.listed_consistent : (∀ (a : Nat → Bool × Nat → Nat), ¬Becoming.Sides.web.ListedOrder a a) ∧
+  (∀ {a b c : Nat → Bool × Nat → Nat},
+      Becoming.Sides.web.ListedOrder a b → Becoming.Sides.web.ListedOrder b c → Becoming.Sides.web.ListedOrder a c) ∧
+    (∀ {a b : Nat → Bool × Nat → Nat}, Becoming.Sides.web.Widens a b → Becoming.Sides.web.ListedOrder a b) ∧
+      (∀ {k s : Nat → Bool × Nat → Nat},
+          Becoming.Sides.web.KeepingOverListedAlike k s → Becoming.Sides.web.ListedOrder k s) ∧
+        Becoming.Sides.web.ListedOrder Becoming.Sides.growing Becoming.Sides.firsts ∧
+          ¬Becoming.Sides.web.WidensOrEventually Becoming.Sides.growing Becoming.Sides.firsts ∧
+            ¬Becoming.Sides.web.WidensOrEventually Becoming.Sides.firsts Becoming.Sides.growing
+Becoming.Sides.not_keepsWhatKept_growing : ¬Becoming.Sides.web.KeepsWhatKept Becoming.Sides.growing
+    Becoming.Sides.firstAndOther
+Becoming.Sides.not_keepsWhatKept_firstAndOther : ¬Becoming.Sides.web.KeepsWhatKept Becoming.Sides.firstAndOther
+    Becoming.Sides.growing
+Becoming.Sides.not_keepsWhatKept_firsts : ¬Becoming.Sides.web.KeepsWhatKept Becoming.Sides.growing Becoming.Sides.firsts
+Becoming.Sides.keeping_reading : ¬Becoming.Sides.web.KeepsWhatKept Becoming.Sides.growing Becoming.Sides.firstAndOther ∧
+  ¬Becoming.Sides.web.KeepsWhatKept Becoming.Sides.firstAndOther Becoming.Sides.growing ∧
+    ¬Becoming.Sides.web.KeepsWhatKept Becoming.Sides.growing Becoming.Sides.firsts
+Becoming.Sides.flip_flip : ∀ (f : Bool × Nat), Becoming.Sides.flip (Becoming.Sides.flip f) = f
+@Becoming.Sides.ScaleAtLeast.of_includes : ∀ {a b : Nat → Bool × Nat → Nat},
+  Becoming.Sides.web.Includes a b → Becoming.Sides.ScaleAtLeast a b
+@Becoming.Sides.ScaleAtLeast.trans : ∀ {a b c : Nat → Bool × Nat → Nat},
+  Becoming.Sides.ScaleAtLeast a b → Becoming.Sides.ScaleAtLeast b c → Becoming.Sides.ScaleAtLeast a c
+@Becoming.Sides.ScaleAtLeast.exchanged : ∀ {a b : Nat → Bool × Nat → Nat},
+  Becoming.Sides.ScaleAtLeast a b → Becoming.Sides.ScaleAtLeast (Becoming.Sides.swap a) (Becoming.Sides.swap b)
+@Becoming.Sides.growing_zero_eq : ∀ {f : Bool × Nat},
+  Becoming.Sides.web.Admits (Becoming.Sides.growing 0) 0 f → f = (true, 0)
+Becoming.Sides.scale_firstAndOther_growing : Becoming.Sides.ScaleAtLeast Becoming.Sides.firstAndOther
+  Becoming.Sides.growing
+Becoming.Sides.not_scale_growing_firstAndOther : ¬Becoming.Sides.ScaleAtLeast Becoming.Sides.growing
+    Becoming.Sides.firstAndOther
+Becoming.Sides.scale_counts : (∀ (a : Nat → Bool × Nat → Nat), ¬Becoming.Sides.scaleOrder a a) ∧
+  (∀ {a b c : Nat → Bool × Nat → Nat},
+      Becoming.Sides.scaleOrder a b → Becoming.Sides.scaleOrder b c → Becoming.Sides.scaleOrder a c) ∧
+    (∀ {a b : Nat → Bool × Nat → Nat}, Becoming.Sides.web.Widens a b → Becoming.Sides.scaleOrder a b) ∧
+      (∀ {a b : Nat → Bool × Nat → Nat},
+          Becoming.Sides.scaleOrder a b → Becoming.Sides.scaleOrder (Becoming.Sides.swap a) (Becoming.Sides.swap b)) ∧
+        Becoming.Sides.scaleOrder Becoming.Sides.firstAndOther Becoming.Sides.growing
+@Becoming.AllOrSegment.admits_iff : ∀ {m : Bool → Nat} {t : Nat} {f : Bool × Nat},
+  Becoming.AllOrSegment.web.Admits m t f ↔ Becoming.AllOrSegment.needOf f ≤ m f.fst
+@Becoming.AllOrSegment.firstSide_all : ∀ {m : Bool → Nat} {t n n' : Nat},
+  Becoming.AllOrSegment.web.Admits m t (true, n) → Becoming.AllOrSegment.web.Admits m t (true, n')
+@Becoming.AllOrSegment.secondSide_opening : ∀ {k : Nat → Bool → Nat},
+  Becoming.AllOrSegment.web.KeepsWidening Becoming.Web.itself k 0 →
+    ∀ (S : Nat),
+      ∃ U,
+        S ≤ U ∧
+          ∃ m,
+            Becoming.AllOrSegment.web.Admits (k U) U (false, m) ∧ ¬Becoming.AllOrSegment.web.Admits (k S) S (false, m)
+@Becoming.AllOrSegment.reaches_secondSide : ∀ {k : Nat → Bool → Nat},
+  Becoming.AllOrSegment.web.KeepsWidening Becoming.Web.itself k 0 →
+    ∀ (n : Nat), ∃ S, Becoming.AllOrSegment.web.Admits (k S) S (false, n)
+@Becoming.AllOrSegment.not_static_includes : ∀ {k s : Nat → Bool → Nat},
+  Becoming.AllOrSegment.web.KeepsWidening Becoming.Web.itself k 0 →
+    Becoming.AllOrSegment.web.AdmitsAlikeFrom s 0 → Becoming.AllOrSegment.web.Includes s k → False
+Becoming.AllOrSegment.ClassOrder.irrefl : ∀ (a : Nat → Bool → Nat), ¬Becoming.AllOrSegment.ClassOrder a a
+@Becoming.AllOrSegment.ClassOrder.trans : ∀ {a b c : Nat → Bool → Nat},
+  Becoming.AllOrSegment.ClassOrder a b → Becoming.AllOrSegment.ClassOrder b c → Becoming.AllOrSegment.ClassOrder a c
+Becoming.AllOrSegment.rising_keeps : Becoming.AllOrSegment.web.KeepsWidening Becoming.Web.itself
+  Becoming.AllOrSegment.rising 0
+Becoming.AllOrSegment.rising_over_wide : Becoming.AllOrSegment.KeepingOverAlike Becoming.AllOrSegment.rising
+  Becoming.AllOrSegment.wide
+@Becoming.AllOrSegment.firstSide_below : ∀ {n : Nat} {f : Bool × Nat}, f ∈ Becoming.AllOrSegment.firstSide n → f.snd < n
+Becoming.AllOrSegment.firstSide_distinct : ∀ (n : Nat), Becoming.Distinct (Becoming.AllOrSegment.firstSide n)
+Becoming.AllOrSegment.firstSide_length : ∀ (n : Nat), (Becoming.AllOrSegment.firstSide n).length = n
+@Becoming.AllOrSegment.firstSide_fst : ∀ {n : Nat} {f : Bool × Nat},
+  f ∈ Becoming.AllOrSegment.firstSide n → f.fst = true
+Becoming.AllOrSegment.wide_not_listed : ¬∃ xs,
+    ∀ (f : Bool × Nat), Becoming.AllOrSegment.web.Admits (Becoming.AllOrSegment.wide 0) 0 f → f ∈ xs
+Becoming.AllOrSegment.unlisted_consistent : Becoming.AllOrSegment.KeepingOverAlike Becoming.AllOrSegment.rising
+    Becoming.AllOrSegment.wide ∧
+  (¬∃ xs, ∀ (f : Bool × Nat), Becoming.AllOrSegment.web.Admits (Becoming.AllOrSegment.wide 0) 0 f → f ∈ xs) ∧
+    (∀ (a : Nat → Bool → Nat), ¬Becoming.AllOrSegment.ClassOrder a a) ∧
+      (∀ {a b c : Nat → Bool → Nat},
+          Becoming.AllOrSegment.ClassOrder a b →
+            Becoming.AllOrSegment.ClassOrder b c → Becoming.AllOrSegment.ClassOrder a c) ∧
+        (∀ {a b : Nat → Bool → Nat}, Becoming.AllOrSegment.web.Widens a b → Becoming.AllOrSegment.ClassOrder a b) ∧
+          Becoming.AllOrSegment.web.RanksKeepingOverAlike Becoming.AllOrSegment.ClassOrder
+@Becoming.AlongMerging.linked_cases : ∀ {s g u h : Nat},
+  Becoming.Web.Linked Becoming.AlongMerging.intoZero s g u h → s = u ∧ g = h ∨ s < u ∧ h = 0
+Becoming.AlongMerging.linked_to_zero : ∀ (s g k : Nat),
+  Becoming.Web.Linked Becoming.AlongMerging.intoZero s g (s + (k + 1)) 0
+@Becoming.AlongMerging.not_linked_succ : ∀ {s f g : Nat},
+  Becoming.Web.Linked Becoming.AlongMerging.intoZero s f (s + 1) (g + 1) → False
+@Becoming.AlongMerging.includesAcross_of_zero : ∀ {l : Nat → Nat → Nat},
+  (∀ (t : Nat), 0 < l t 0) → Becoming.OwnCondition.web.IncludesAcrossFrom Becoming.AlongMerging.intoZero l 0
+@Becoming.AlongMerging.not_admits_of_zero : ∀ {m : Nat → Nat} {t f : Nat},
+  m f = 0 → ¬Becoming.OwnCondition.web.Admits m t f
+@Becoming.AlongMerging.admits_of_one : ∀ {m : Nat → Nat} {t f : Nat}, m f = 1 → Becoming.OwnCondition.web.Admits m t f
+Becoming.AlongMerging.keepingA_keeps : Becoming.OwnCondition.web.KeepsWidening Becoming.AlongMerging.intoZero
+  Becoming.AlongMerging.keepingA 0
+Becoming.AlongMerging.keepingB_keeps : Becoming.OwnCondition.web.KeepsWidening Becoming.AlongMerging.intoZero
+  Becoming.AlongMerging.keepingB 0
+Becoming.AlongMerging.staticA_wider_first : Becoming.OwnCondition.web.WidensUpTo 0 Becoming.AlongMerging.staticA
+  Becoming.AlongMerging.keepingA
+Becoming.AlongMerging.staticB_wider_first : Becoming.OwnCondition.web.WidensUpTo 0 Becoming.AlongMerging.staticB
+  Becoming.AlongMerging.keepingB
+Becoming.AlongMerging.mixedA : Becoming.OwnCondition.web.Mixed Becoming.AlongMerging.keepingA
+  Becoming.AlongMerging.staticA
+Becoming.AlongMerging.mixedB : Becoming.OwnCondition.web.Mixed Becoming.AlongMerging.keepingB
+  Becoming.AlongMerging.staticB
+Becoming.AlongMerging.listedA : ∃ xs,
+  ∀ (f : Nat), Becoming.OwnCondition.web.Admits (Becoming.AlongMerging.staticA 0) 0 f → f ∈ xs
+Becoming.AlongMerging.listedB : ∃ xs,
+  ∀ (f : Nat), Becoming.OwnCondition.web.Admits (Becoming.AlongMerging.staticB 0) 0 f → f ∈ xs
+Becoming.AlongMerging.staticA_widens_keepingB : Becoming.OwnCondition.web.Widens Becoming.AlongMerging.staticA
+  Becoming.AlongMerging.keepingB
+Becoming.AlongMerging.staticB_widens_keepingA : Becoming.OwnCondition.web.Widens Becoming.AlongMerging.staticB
+  Becoming.AlongMerging.keepingA
+Becoming.AlongMerging.pairA : Becoming.AlongMerging.KeepingAlongOverListedAlike Becoming.AlongMerging.keepingA
+  Becoming.AlongMerging.staticA
+Becoming.AlongMerging.pairB : Becoming.AlongMerging.KeepingAlongOverListedAlike Becoming.AlongMerging.keepingB
+  Becoming.AlongMerging.staticB
+@Becoming.AlongMerging.no_order_ranks_along_listed : ∀ {R : (Nat → Nat → Nat) → (Nat → Nat → Nat) → Prop},
+  (∀ (a : Nat → Nat → Nat), ¬R a a) →
+    (∀ {a b c : Nat → Nat → Nat}, R a b → R b c → R a c) →
+      (∀ {a b : Nat → Nat → Nat}, Becoming.OwnCondition.web.Widens a b → R a b) →
+        (∀ (k s : Nat → Nat → Nat), Becoming.AlongMerging.KeepingAlongOverListedAlike k s → R k s) → False
+Becoming.LagWitness.includesLater_one : Becoming.OwnCondition.web.IncludesLater 1 Becoming.LagWitness.lagging
+  Becoming.LagWitness.travelling
+Becoming.LagWitness.not_travelling_includes : ¬Becoming.OwnCondition.web.IncludesWithLag Becoming.LagWitness.travelling
+    Becoming.LagWitness.lagging
+Becoming.LagWitness.widensWithLag : Becoming.OwnCondition.web.WidensWithLag Becoming.LagWitness.lagging
+  Becoming.LagWitness.travelling
+Becoming.LagWitness.decided : Becoming.OwnCondition.web.WidensOrWithLag Becoming.LagWitness.lagging
+    Becoming.LagWitness.travelling ∧
+  ¬Becoming.OwnCondition.web.EventuallyWidens Becoming.LagWitness.lagging Becoming.LagWitness.travelling ∧
+    ¬Becoming.OwnCondition.web.EventuallyWidens Becoming.LagWitness.travelling Becoming.LagWitness.lagging
+Becoming.LagWitness.formationLag_decides : Becoming.OwnCondition.web.IncludesWithFormationLag
+    Becoming.LagWitness.lagging Becoming.LagWitness.travelling ∧
+  ¬Becoming.OwnCondition.web.IncludesWithFormationLag Becoming.LagWitness.travelling Becoming.LagWitness.lagging
+Becoming.LagWitness.eachLag_decides : Becoming.OwnCondition.web.IncludesEachLater Becoming.LagWitness.lagging
+    Becoming.LagWitness.travelling ∧
+  ¬Becoming.OwnCondition.web.IncludesEachLater Becoming.LagWitness.travelling Becoming.LagWitness.lagging
+Becoming.LagWitness.tailOrder_decides : Becoming.OwnCondition.web.TailOrder Becoming.LagWitness.lagging
+    Becoming.LagWitness.travelling ∧
+  ¬Becoming.OwnCondition.web.EventuallyWidens Becoming.LagWitness.lagging Becoming.LagWitness.travelling ∧
+    ¬Becoming.OwnCondition.web.EventuallyWidens Becoming.LagWitness.travelling Becoming.LagWitness.lagging
+Becoming.Delayed.rising_widens : Becoming.OwnCondition.web.Widens Becoming.OwnCondition.rising
+  Becoming.LagWitness.lagging
+Becoming.Delayed.lagging_includes : Becoming.OwnCondition.web.IncludesLater 1 Becoming.LagWitness.lagging
+  Becoming.OwnCondition.rising
+Becoming.Delayed.widens_not_withLag : Becoming.OwnCondition.web.Widens Becoming.OwnCondition.rising
+    Becoming.LagWitness.lagging ∧
+  ¬Becoming.OwnCondition.web.WidensWithLag Becoming.OwnCondition.rising Becoming.LagWitness.lagging
+Becoming.EachLagDrops.even_or_next : ∀ (t : Nat),
+  0 < Becoming.EachLagDrops.evenLevel t ∨ 0 < Becoming.EachLagDrops.evenLevel (t + 1)
+Becoming.EachLagDrops.odd_or_next : ∀ (t : Nat),
+  Becoming.EachLagDrops.evenLevel t = 0 ∨ Becoming.EachLagDrops.evenLevel (t + 1) = 0
+@Becoming.EachLagDrops.steady_zero : ∀ {t : Nat}, Becoming.OwnCondition.web.Admits (Becoming.EachLagDrops.steady t) t 0
+@Becoming.EachLagDrops.steady_only : ∀ {t f : Nat},
+  Becoming.OwnCondition.web.Admits (Becoming.EachLagDrops.steady t) t f → f = 0
+@Becoming.EachLagDrops.not_steady_one : ∀ {t : Nat},
+  ¬Becoming.OwnCondition.web.Admits (Becoming.EachLagDrops.steady t) t 1
+Becoming.EachLagDrops.alternate_one : Becoming.OwnCondition.web.Admits (Becoming.EachLagDrops.alternate 0) 0 1
+Becoming.EachLagDrops.alternate_includesEachLater : Becoming.OwnCondition.web.IncludesEachLater
+  Becoming.EachLagDrops.alternate Becoming.EachLagDrops.steady
+Becoming.EachLagDrops.not_steady_includesEachLater : ¬Becoming.OwnCondition.web.IncludesEachLater
+    Becoming.EachLagDrops.steady Becoming.EachLagDrops.alternate
+Becoming.EachLagDrops.not_keeps : ¬Becoming.OwnCondition.web.KeepsWhatKept Becoming.EachLagDrops.alternate
+    Becoming.EachLagDrops.steady
+Becoming.EachLagDrops.eachLag_not_keeping : Becoming.OwnCondition.web.WidensOrEachLater Becoming.EachLagDrops.alternate
+    Becoming.EachLagDrops.steady ∧
+  ¬Becoming.OwnCondition.web.KeepsWhatKept Becoming.EachLagDrops.alternate Becoming.EachLagDrops.steady ∧
+    ¬Becoming.OwnCondition.web.WidensOrWithLag Becoming.EachLagDrops.alternate Becoming.EachLagDrops.steady ∧
+      ¬Becoming.OwnCondition.web.WidensOrWithFormationLag Becoming.EachLagDrops.alternate Becoming.EachLagDrops.steady
+@Becoming.TailAndLag.not_ahead_zero : ∀ {t : Nat}, ¬Becoming.OwnCondition.web.Admits (Becoming.TailAndLag.ahead t) t 0
+@Becoming.TailAndLag.ahead_succ : ∀ {t c : Nat},
+  Becoming.OwnCondition.web.Admits (Becoming.TailAndLag.ahead t) t (c + 1) ↔ c ≤ t
+Becoming.TailAndLag.early_zero : Becoming.OwnCondition.web.Admits (Becoming.TailAndLag.early 0) 0 0
+@Becoming.TailAndLag.early_succ : ∀ {t c : Nat},
+  Becoming.OwnCondition.web.Admits (Becoming.TailAndLag.early (t + 1)) (t + 1) (c + 1) ↔ c ≤ t
+@Becoming.TailAndLag.not_early_zero_succ : ∀ {c : Nat},
+  ¬Becoming.OwnCondition.web.Admits (Becoming.TailAndLag.early 0) 0 (c + 1)
+@Becoming.TailAndLag.not_early_succ_zero : ∀ {t : Nat},
+  ¬Becoming.OwnCondition.web.Admits (Becoming.TailAndLag.early (t + 1)) (t + 1) 0
+Becoming.TailAndLag.includesFrom : Becoming.OwnCondition.web.IncludesFrom 1 Becoming.TailAndLag.ahead
+  Becoming.TailAndLag.early
+Becoming.TailAndLag.exceedsLate : Becoming.OwnCondition.web.ExceedsLate Becoming.TailAndLag.ahead
+  Becoming.TailAndLag.early
+Becoming.TailAndLag.eventually : Becoming.OwnCondition.web.EventuallyWidens Becoming.TailAndLag.ahead
+  Becoming.TailAndLag.early
+Becoming.TailAndLag.early_includes : Becoming.OwnCondition.web.IncludesLater 1 Becoming.TailAndLag.early
+  Becoming.TailAndLag.ahead
+Becoming.TailAndLag.not_ahead_includes : ¬Becoming.OwnCondition.web.IncludesWithLag Becoming.TailAndLag.ahead
+    Becoming.TailAndLag.early
+Becoming.TailAndLag.disagree : Becoming.OwnCondition.web.EventuallyWidens Becoming.TailAndLag.ahead
+    Becoming.TailAndLag.early ∧
+  Becoming.OwnCondition.web.WidensWithLag Becoming.TailAndLag.early Becoming.TailAndLag.ahead
+@Becoming.TailAndLag.no_order_contains_both : ∀ {R : (Nat → Nat → Nat) → (Nat → Nat → Nat) → Prop},
+  (∀ (a : Nat → Nat → Nat), ¬R a a) →
+    (∀ {a b c : Nat → Nat → Nat}, R a b → R b c → R a c) →
+      (∀ {a b : Nat → Nat → Nat}, Becoming.OwnCondition.web.EventuallyWidens a b → R a b) →
+        (∀ {a b : Nat → Nat → Nat}, Becoming.OwnCondition.web.WidensWithLag a b → R a b) → False
+Becoming.TailAndLag.tailOrder_loses : Becoming.OwnCondition.web.TailOrder Becoming.TailAndLag.ahead
+    Becoming.TailAndLag.early ∧
+  Becoming.OwnCondition.web.Admits (Becoming.TailAndLag.early 0) 0 0 ∧
+    (∀ (t : Nat), ¬Becoming.OwnCondition.web.Admits (Becoming.TailAndLag.ahead t) t 0) ∧
+      ¬Becoming.OwnCondition.web.WidensOrWithLag Becoming.TailAndLag.ahead Becoming.TailAndLag.early
+@Becoming.TailAndLag.formationLag_conflict : ∀ {R : (Nat → Nat → Nat) → (Nat → Nat → Nat) → Prop},
+  (∀ (a : Nat → Nat → Nat), ¬R a a) →
+    (∀ {a b c : Nat → Nat → Nat}, R a b → R b c → R a c) →
+      (∀ {a b : Nat → Nat → Nat}, Becoming.OwnCondition.web.EventuallyWidens a b → R a b) →
+        (∀ {a b : Nat → Nat → Nat},
+            Becoming.OwnCondition.web.IncludesWithFormationLag a b →
+              ¬Becoming.OwnCondition.web.IncludesWithFormationLag b a → R a b) →
+          False
+@Becoming.TailAndLag.eachLag_conflict : ∀ {R : (Nat → Nat → Nat) → (Nat → Nat → Nat) → Prop},
+  (∀ (a : Nat → Nat → Nat), ¬R a a) →
+    (∀ {a b c : Nat → Nat → Nat}, R a b → R b c → R a c) →
+      (∀ {a b : Nat → Nat → Nat}, Becoming.OwnCondition.web.EventuallyWidens a b → R a b) →
+        (∀ {a b : Nat → Nat → Nat},
+            Becoming.OwnCondition.web.IncludesEachLater a b →
+              ¬Becoming.OwnCondition.web.IncludesEachLater b a → R a b) →
+          False
+Becoming.NamesAcrossSteps.flip_flip : ∀ (t : Nat) (b : Bool),
+  Becoming.NamesAcrossSteps.flip t (Becoming.NamesAcrossSteps.flip t b) = b
+@Becoming.NamesAcrossSteps.admits_iff : ∀ {m : Bool → Nat} {t : Nat} {f : Bool},
+  Becoming.NamesAcrossSteps.web.Admits m t f ↔ 0 < m f
+@Becoming.NamesAcrossSteps.re_admits_iff : ∀ {m : Bool → Nat} {t : Nat} {x : Bool},
+  (Becoming.NamesAcrossSteps.web.reidentify Becoming.NamesAcrossSteps.exchange).Admits m t x ↔
+    0 < m (Becoming.NamesAcrossSteps.flip t x)
+Becoming.NamesAcrossSteps.later_withLag : Becoming.NamesAcrossSteps.web.WidensWithLag Becoming.NamesAcrossSteps.later
+  Becoming.NamesAcrossSteps.once
+Becoming.NamesAcrossSteps.not_later_withLag_renamed : ¬(Becoming.NamesAcrossSteps.web.reidentify
+        Becoming.NamesAcrossSteps.exchange).IncludesWithLag
+    Becoming.NamesAcrossSteps.later Becoming.NamesAcrossSteps.once
+Becoming.NamesAcrossSteps.lag_reads_names : Becoming.NamesAcrossSteps.web.WidensWithLag Becoming.NamesAcrossSteps.later
+    Becoming.NamesAcrossSteps.once ∧
+  ¬(Becoming.NamesAcrossSteps.web.reidentify Becoming.NamesAcrossSteps.exchange).WidensWithLag
+        Becoming.NamesAcrossSteps.later Becoming.NamesAcrossSteps.once ∧
+    ((Becoming.NamesAcrossSteps.web.reidentify Becoming.NamesAcrossSteps.exchange).Widens
+        Becoming.NamesAcrossSteps.later Becoming.NamesAcrossSteps.once ↔
+      Becoming.NamesAcrossSteps.web.Widens Becoming.NamesAcrossSteps.later Becoming.NamesAcrossSteps.once)
+Becoming.NamesAcrossSteps.along_restores : (Becoming.NamesAcrossSteps.web.reidentify
+      Becoming.NamesAcrossSteps.exchange).WidensOrWithLagAlong
+  (Becoming.NamesAcrossSteps.exchange.carry Becoming.Web.itself) Becoming.NamesAcrossSteps.later
+  Becoming.NamesAcrossSteps.once

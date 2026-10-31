@@ -1,0 +1,10 @@
+import FiniteBranchingCorrespondence
+#check @Becoming.FiniteBranchingCorrespondence.reach_iff_continues
+#check @Becoming.FiniteBranchingCorrespondence.unbounded_iff
+#check @Becoming.FiniteBranchingCorrespondence.finitelyBranching
+#check @Becoming.FiniteBranchingCorrespondence.either_classical
+#check @Becoming.FiniteBranchingCorrespondence.finite_unbounded_by_core
+#check @Becoming.FiniteBranchingCorrespondence.unbounded_child_by_core
+#check @Becoming.FiniteBranchingCorrespondence.infinite_from_unbounded_by_core
+#check @Becoming.FiniteBranchingCorrespondence.finite_initial_lifting_by_core
+#check @Becoming.FiniteBranchingCorrespondence.labelled_lifting_by_core

@@ -1,0 +1,4 @@
+import OrganizationCorrespondence
+#print axioms Becoming.OrganizationCorrespondence.frontier_iff_undominated
+#print axioms Becoming.OrganizationCorrespondence.formation_required_by_core
+#print axioms Becoming.OrganizationCorrespondence.coordination_is_required_by_core

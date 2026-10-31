@@ -1,0 +1,19 @@
+import Becoming.Assurance
+#print axioms Becoming.Assurance.free
+#print axioms Becoming.Assurance.runs_of_completes
+#print axioms Becoming.Assurance.safeTrace_head
+#print axioms Becoming.Assurance.completes_of_runs
+#print axioms Becoming.Assurance.completes_iff_of_determined
+#print axioms Becoming.Assurance.safeTrace_free
+#print axioms Becoming.Assurance.completes_iff_runs
+#print axioms Becoming.Assurance.Branch.process
+#print axioms Becoming.Assurance.Branch.two_ne_zero
+#print axioms Becoming.Assurance.Branch.two_ne_one
+#print axioms Becoming.Assurance.Branch.one_ne_zero
+#print axioms Becoming.Assurance.Branch.stuck
+#print axioms Becoming.Assurance.Branch.ends_three
+#print axioms Becoming.Assurance.Branch.runs_not_completes
+#print axioms Becoming.Assurance.Branch.not_determined
+#print axioms Becoming.Assurance.completes_ofMap_iff
+#print axioms Becoming.Assurance.completes_ofMap_single
+#print axioms Becoming.Assurance.completes_ofPartial_iff

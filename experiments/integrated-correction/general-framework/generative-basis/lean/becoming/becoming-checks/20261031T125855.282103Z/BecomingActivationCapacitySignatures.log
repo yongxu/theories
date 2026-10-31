@@ -1,0 +1,37 @@
+Becoming.ActivationCapacity.joint_iff : ∀ (s : Becoming.Activation.Configuration),
+  (∀ (c : Becoming.Activation.Claim), Becoming.ActivationCapacity.both c → Becoming.Activation.realizedAt s c) ↔
+    s = Becoming.Activation.Configuration.bothActive
+Becoming.ActivationCapacity.coupled_within_one : Becoming.WithinMoves Becoming.Activation.law
+  Becoming.Activation.realizedAt Becoming.Activation.Configuration.coupled 1 Becoming.ActivationCapacity.both
+Becoming.ActivationCapacity.initial_not_within_one : ¬Becoming.WithinMoves Becoming.Activation.law
+    Becoming.Activation.realizedAt Becoming.Activation.Configuration.initial 1 Becoming.ActivationCapacity.both
+Becoming.ActivationCapacity.preparation_changes_capacity : Generative.Trace Becoming.Activation.law
+    Becoming.Activation.Configuration.initial [Becoming.Activation.Event.retain]
+    Becoming.Activation.Configuration.coupled ∧
+  ¬Becoming.WithinMoves Becoming.Activation.law Becoming.Activation.realizedAt Becoming.Activation.Configuration.initial
+        1 Becoming.ActivationCapacity.both ∧
+    Becoming.WithinMoves Becoming.Activation.law Becoming.Activation.realizedAt
+        Becoming.Activation.Configuration.coupled 1 Becoming.ActivationCapacity.both ∧
+      Becoming.WithinMoves Becoming.Activation.law Becoming.Activation.realizedAt
+        Becoming.Activation.Configuration.initial 2 Becoming.ActivationCapacity.both
+Becoming.ActivationCapacity.released_not_joint : ¬∃ n,
+    Becoming.WithinMoves Becoming.Activation.law Becoming.Activation.realizedAt
+      Becoming.Activation.Configuration.released n Becoming.ActivationCapacity.both
+Becoming.ActivationCapacity.release_loses_joint : Generative.Trace Becoming.Activation.law
+    Becoming.Activation.Configuration.initial [Becoming.Activation.Event.release]
+    Becoming.Activation.Configuration.released ∧
+  (∃ n,
+      Becoming.WithinMoves Becoming.Activation.law Becoming.Activation.realizedAt
+        Becoming.Activation.Configuration.initial n Becoming.ActivationCapacity.both) ∧
+    ¬∃ n,
+        Becoming.WithinMoves Becoming.Activation.law Becoming.Activation.realizedAt
+          Becoming.Activation.Configuration.released n Becoming.ActivationCapacity.both
+Becoming.ActivationCapacity.prepared_can_end_one_sided : Generative.Trace Becoming.Activation.law
+    Becoming.Activation.Configuration.initial [Becoming.Activation.Event.retain, Becoming.Activation.Event.activateLeft]
+    Becoming.Activation.Configuration.leftActive ∧
+  Becoming.WithinMoves Becoming.Activation.law Becoming.Activation.realizedAt Becoming.Activation.Configuration.coupled
+      1 Becoming.ActivationCapacity.both ∧
+    ¬Becoming.Activation.realizedAt Becoming.Activation.Configuration.leftActive
+          Becoming.Activation.Claim.rightRealized ∧
+      ∀ (a : Becoming.Activation.Event),
+        ¬Generative.Enabled Becoming.Activation.law Becoming.Activation.Configuration.leftActive a

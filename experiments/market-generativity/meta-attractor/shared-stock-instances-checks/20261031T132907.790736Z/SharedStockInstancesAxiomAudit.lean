@@ -1,0 +1,6 @@
+import SharedStockInstances
+#print axioms SharedStockInstances.firstDraws
+#print axioms SharedStockInstances.selectedTotal_eq_mass
+#print axioms SharedStockInstances.total_eq_mass
+#print axioms SharedStockInstances.every_selection_within_iff_total_within
+#print axioms SharedStockInstances.each_within_alone_not_together

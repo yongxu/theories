@@ -1,0 +1,51 @@
+@Becoming.Web.active_along : ∀ {X : Type} {W : Becoming.Web X X},
+  W.Dependent → ∀ (t : Nat), Becoming.Invariant (W.bearing t) (W.active t)
+@Becoming.Web.coextinct : ∀ {X : Type} {W : Becoming.Web X X},
+  W.Dependent → ∀ {t : Nat} {g y : X}, Becoming.Reach (W.bearing t) g y → ¬W.active t y → ¬W.active t g
+Becoming.Predation.fox_ends : ∀ (t : Nat), 2 < t → ¬Becoming.Predation.web.active t Becoming.Predation.Relatum.fox
+Becoming.Sequences.recurs_iff : ∀ (r : Becoming.Run (Becoming.Sequences.process Bool)),
+  Becoming.Sequences.Recurs r ↔ Becoming.Recurs [()] fun x m => r.act m = true
+@Becoming.sees_narrow : ∀ {X : Type} {B B' : X → Prop},
+  (∀ (x : X), B' x → B x) → ∀ (s : Option X), Becoming.sees B' s → Becoming.sees B s
+@Becoming.Web.class_judge_iff : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F} {l : Nat → C → Nat}
+  {H : Type} {admissible : (Nat → C → Nat) → H → Prop} {a : H} {t : Nat},
+  Generative.InquirySufficiency.CommonResponse (Becoming.judgeProcess admissible) (fun x x_1 x_2 => True)
+      (fun x => True) (fun a => [a]) (Becoming.sees (W.ClassThrough obs g l t)) a ↔
+    ∀ (l' : Nat → C → Nat), W.AlikeThroughUpTo obs g l l' t → admissible l' a
+@Becoming.Web.class_judge_later : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F} {l : Nat → C → Nat}
+  {H : Type} {admissible : (Nat → C → Nat) → H → Prop} {a : H} {t t' : Nat},
+  t ≤ t' →
+    Generative.InquirySufficiency.CommonResponse (Becoming.judgeProcess admissible) (fun x x_1 x_2 => True)
+        (fun x => True) (fun a => [a]) (Becoming.sees (W.ClassThrough obs g l t)) a →
+      Generative.InquirySufficiency.CommonResponse (Becoming.judgeProcess admissible) (fun x x_1 x_2 => True)
+        (fun x => True) (fun a => [a]) (Becoming.sees (W.ClassThrough obs g l t')) a
+@Becoming.Web.class_judge_widen : ∀ {F C : Type} {W : Becoming.Web F C} {obs obs' : F → C → Prop} {g : F}
+  {l : Nat → C → Nat} {H : Type} {admissible : (Nat → C → Nat) → H → Prop} {a : H},
+  (∀ (g : F) (c : C), obs g c → obs' g c) →
+    ∀ {t : Nat},
+      Generative.InquirySufficiency.CommonResponse (Becoming.judgeProcess admissible) (fun x x_1 x_2 => True)
+          (fun x => True) (fun a => [a]) (Becoming.sees (W.ClassThrough obs g l t)) a →
+        Generative.InquirySufficiency.CommonResponse (Becoming.judgeProcess admissible) (fun x x_1 x_2 => True)
+          (fun x => True) (fun a => [a]) (Becoming.sees (W.ClassThrough obs' g l t)) a
+@Becoming.Flow.class_judge_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {part : F → Bool} {g : F} {H : Type} {admissible : (Nat → C → Nat) → H → Prop} {a : H} {l₀ : Nat → C → Nat},
+  L.WithheldLevels part W l₀ →
+    ∀ {f : F},
+      (∀ (t : Nat) (g : F) (c : C), L.WithinCoupling W obs f g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+        (∀ (h : F), part h = true → ¬L.WithinCoupling W obs f h) →
+          L.WithinCoupling W obs f g →
+            ∀ {t : Nat},
+              Generative.InquirySufficiency.CommonResponse (Becoming.judgeProcess admissible) (fun x x_1 x_2 => True)
+                  (fun x => True) (fun a => [a]) (Becoming.sees (W.ClassThrough obs g W.level t)) a →
+                admissible W.level a ∧ admissible l₀ a
+Becoming.Renewable.finite_reading_withholds_renewal : ∀ (h : Nat)
+  (reading : Becoming.Run Becoming.Renewable.process → Prop),
+  (∀ (r r' : Becoming.Run Becoming.Renewable.process), Becoming.Run.AgreeUpTo h r r' → reading r → reading r') →
+    (∀ (r : Becoming.Run Becoming.Renewable.process),
+        reading r →
+          ¬(Becoming.Renewable.conditions.dependence.along r).ConsumingIn Becoming.Renewable.Formation.focal) →
+      ∃ r, (Becoming.Renewable.conditions.dependence.along r).RenewingIn Becoming.Renewable.Formation.focal ∧ ¬reading r
+Becoming.Renewable.no_exact_finite_reading : ∀ (h : Nat) (reading : Becoming.Run Becoming.Renewable.process → Prop),
+  (∀ (r r' : Becoming.Run Becoming.Renewable.process), Becoming.Run.AgreeUpTo h r r' → reading r → reading r') →
+    ¬∀ (r : Becoming.Run Becoming.Renewable.process),
+        reading r ↔ (Becoming.Renewable.conditions.dependence.along r).RenewingIn Becoming.Renewable.Formation.focal

@@ -490,6 +490,12 @@
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-checks/20261031T133811.050699Z/verification.json",
+      "role": "receipt",
+      "sha256": "6f7e431dbab391b298370725978f13957cffd0c27d0284edd017b9c3b6775291",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -509,7 +515,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingCorrespondence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-checks/20261020T161953.940017Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-checks/20261031T133811.050699Z/verification.json",
       "sha256_pointer": "/source_sha256/RenewingCorrespondence",
       "success_pointer": "/status",
       "success_value": "passed"

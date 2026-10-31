@@ -70,8 +70,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Core: Lean 4.29.1 checker, receipt 20261022T151214.034215Z, empty axiom reports. Periphery: Lean 4.30.0-rc2 with Mathlib, receipt 20261022T151119.678274Z, Lean's standard axioms only. Author review in study section 369; not independently reviewed.",
-    "zh": "核心：Lean 4.29.1 检查器，回执 20261022T151214.034215Z，公理报告为空。外围：Lean 4.30.0-rc2 与 Mathlib，回执 20261022T151119.678274Z，只用 Lean 的标准公理。作者审查见研究第 369 节；未经独立审查。"
+    "en": "Core: Lean 4.29.1 checker, receipt 20261022T151214.034215Z, empty axiom reports. Periphery: Lean 4.30.0-rc2 with Mathlib, receipt 20261031T134302.467521Z, Lean's standard axioms only. Author review in study section 369; not independently reviewed.",
+    "zh": "核心：Lean 4.29.1 检查器，回执 20261022T151214.034215Z，公理报告为空。外围：Lean 4.30.0-rc2 与 Mathlib，回执 20261031T134302.467521Z，只用 Lean 的标准公理。作者审查见研究第 369 节；未经独立审查。"
   },
   "next_delta": {
     "en": "Laws of the distribution of courses (variance, the seen half of T6 is one); an independent review.",
@@ -158,7 +158,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-verification.json",
       "role": "receipt",
-      "sha256": "dc0dfb8237a022fb036736f5c32a930b36dd5612e37a4694d0ee78ea1906d711"
+      "sha256": "065823ec25ad7a9dccf93998540ae0e58ee88aae805ae53cbcae811fea733e2d"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
@@ -169,6 +169,12 @@
       "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
       "sha256": "0f0af9391df4c30ece1f642d21665f06f7128b83663fa60632e58477e6d20878"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-checks/20261031T134302.467521Z/verification.json",
+      "role": "receipt",
+      "sha256": "065823ec25ad7a9dccf93998540ae0e58ee88aae805ae53cbcae811fea733e2d",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -181,7 +187,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-checks/20261031T134302.467521Z/verification.json",
       "sha256_pointer": "/source_sha256/Representation",
       "success_pointer": "/status",
       "success_value": "passed"

@@ -1,0 +1,34 @@
+@Becoming.LivingOrganizationCorrespondence.presence_reflected : ∀ {Species : Type u_1} {Reaction : Type u_2}
+  [inst : DecidableEq Species] (recipes : Reaction → Generative.LivingOrganization.Recipe Species)
+  (allowed : Reaction → Prop) (pool : Species → Prop) [inst_1 : DecidablePred pool],
+  Becoming.Gated.ReflectedBy (Generative.LivingOrganization.process recipes allowed)
+    (Becoming.LivingOrganizationCorrespondence.entryGate recipes pool) (Generative.LivingOrganization.Present pool)
+@Becoming.LivingOrganizationCorrespondence.trace_pool_origin_by_core : ∀ {Species : Type u_1} {Reaction : Type u_2}
+  [inst : DecidableEq Species] (recipes : Reaction → Generative.LivingOrganization.Recipe Species)
+  (allowed : Reaction → Prop) (pool : Species → Prop) [DecidablePred pool]
+  {initial finalState : Generative.LivingOrganization.Inventory Species} {word : List Reaction},
+  Generative.Trace (Generative.LivingOrganization.process recipes allowed) initial word finalState →
+    Generative.LivingOrganization.Present pool finalState →
+      Generative.LivingOrganization.Present pool initial ∨
+        Generative.LivingOrganization.EntryOccurs recipes allowed pool initial word finalState
+@Becoming.LivingOrganizationCorrespondence.entry_then_present : ∀ {Species : Type u_1} {Reaction : Type u_2}
+  [inst : DecidableEq Species] (recipes : Reaction → Generative.LivingOrganization.Recipe Species)
+  (allowed : Reaction → Prop) (pool : Species → Prop) [DecidablePred pool]
+  {initial finalState : Generative.LivingOrganization.Inventory Species} {word : List Reaction},
+  Generative.Trace (Generative.LivingOrganization.process recipes allowed) initial word finalState →
+    Generative.LivingOrganization.Present pool finalState →
+      Generative.LivingOrganization.Present pool initial ∨
+        ∃ pre r post before after,
+          word = pre ++ r :: post ∧
+            Generative.Trace (Generative.LivingOrganization.process recipes allowed) initial pre before ∧
+              (Generative.LivingOrganization.process recipes allowed).step before r after ∧
+                Generative.LivingOrganization.Entry pool (recipes r) ∧
+                  Generative.LivingOrganization.Present pool after ∧
+                    Generative.Trace (Generative.LivingOrganization.process recipes allowed) after post finalState
+@Becoming.LivingOrganizationCorrespondence.empty_pool_preserved_by_core : ∀ {Species : Type u_1} {Reaction : Type u_2}
+  [inst : DecidableEq Species] (recipes : Reaction → Generative.LivingOrganization.Recipe Species)
+  (allowed : Reaction → Prop) (pool : Species → Prop),
+  (∀ (r : Reaction), allowed r → Generative.LivingOrganization.Closed pool (recipes r)) →
+    ∀ {initial finalState : Generative.LivingOrganization.Inventory Species} {word : List Reaction},
+      Generative.Trace (Generative.LivingOrganization.process recipes allowed) initial word finalState →
+        ¬Generative.LivingOrganization.Present pool initial → ¬Generative.LivingOrganization.Present pool finalState
