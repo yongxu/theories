@@ -377,7 +377,7 @@
  "lean_check": {
   "toolchain": "leanprover/lean4:v4.29.1",
   "modules_sha256": "4aa713a853453d066a43f81adddef8428132e544975bf6167e750714420817ff",
-  "check_sha256": "52e10747ed52668667765c8a21eae3463fdc12f51dec113fd5041f24cfbcc6a9",
+  "check_sha256": "d1867fd5abc360be2ba03d09fa95d583b8546600a0fa53362c1fe595c581a52a",
   "ran": true
  },
  "unverified": [

@@ -57,18 +57,21 @@ FULL = re.compile(r'(?:Becoming|Generative)\.\S+')  # a full Lean name: a module
 
 # Lean's generated auxiliaries (§3.0; normative), each by the kinds of declaration (the dump's `k`) Lean generates it
 # for. A name is generated when its last component is one of these under a declaration of such a kind, or when it is a
-# constructor of a generated inductive (`below.cons`) or a part of a generated `brecOn` that is a definition (`go`,
-# `eq`). So an auxiliary's own auxiliaries, such as `match_1.eq_1`, are generated, and a declaration written by hand
-# under a name Lean also uses, such as `next.inj` on a definition `next`, `comm.elim` on a theorem or `op.eq_1` on an
-# opaque, is not.
+# constructor of a generated inductive (`below.cons`) or a part of a generated `brecOn` (or a nested type's `brecOn_N`)
+# that is a definition (`go`, `eq`). So an auxiliary's own auxiliaries, such as `match_1.eq_1`, are generated, and a
+# declaration written by hand under a name Lean also uses, such as `next.inj` on a definition `next`, `comm.elim` on a
+# theorem or `op.eq_1` on an opaque, is not. A definition's names include those Lean realizes on use (its unfolding
+# lemma, functional induction and cases, a matcher's congruence equations), and an inductive's those of a nested type.
 AUX = ((re.compile(r'(_proof|proof)_\d+(_\d+)*'), ('def', 'opaque', 'thm', 'ind')),
        (re.compile(r'match_\d+(_\d+)*'), ('def', 'opaque', 'thm')),
        (re.compile(r'_unsafe_rec'), ('def', 'opaque')),
-       (re.compile(r'eq_\d+|eq_def|splitter|_sunfold|_aux_\d+|_default|_arg_pusher'), ('def',)),
+       (re.compile(r'eq_\d+|eq_def|eq_unfold|congr_eq_\d+|splitter|_sunfold|_aux_\d+|_default|_arg_pusher|'
+                   r'(mutual_)?induct(_unfolding)?|fun_cases(_unfolding)?'), ('def',)),
        (re.compile(r'inj|injEq|sizeOf_spec|elim|_flat_ctor'), ('ctor',)),
        (re.compile(r'noConfusion'), ('ctor', 'ind')),
-       (re.compile(r'_sizeOf_\d+|_sizeOf_inst|brecOn|below|binductionOn|casesOn|recOn|rec|noConfusionType|ctorIdx|'
-                   r'toCtorIdx|ofNat_ctorIdx|ctorElim|ctorElimType'), ('ind',)))
+       (re.compile(r'_sizeOf_\d+(_eq)?|_sizeOf_inst|brecOn(_\d+)?|below(_\d+)?|binductionOn|casesOn|recOn|rec(_\d+)?|'
+                   r'noConfusionType|ctorIdx|toCtorIdx|ofNat_ctorIdx|ctorElim|ctorElimType'), ('ind',)))
+BRECON = re.compile(r'brecOn(_\d+)?')
 FLOW = ('Becoming.Flow.Balances', 'Becoming.Flow.BalancesOn', 'Becoming.Flow.BalancesBetween')  # rule 1's anchors
 WRITTEN_OUT = {'Becoming.Dependence.level', 'Becoming.Flow.taken', 'Becoming.Flow.given'}  # balance written out
 REPRESENTED = {'occurrence', 'process'}
@@ -291,6 +294,18 @@ def hygienic(n):
     return base, scopes
 
 
+def printed(c):
+    """Components joined as the dump prints the name: a name with macro scopes (its last component `_hyg`, then
+    numbers) unescaped, since Lean escapes none of its components (`halve._@.M._hyg.3`, the name before
+    `halve.«_@».M._hyg.3.eq_1`)."""
+    i = len(c)
+    while i and c[i - 1].isdigit():
+        i -= 1
+    if i and c[i - 1] == '_hyg':
+        c = [x[1:-1] if x[:1] == '«' and x[-1:] == '»' else x for x in c]
+    return '.'.join(c)
+
+
 def user_name(n):
     """A private name's user name (`_private.M.0.X.match_1`: `X.match_1`); any other name itself."""
     c = components(n)
@@ -300,8 +315,9 @@ def user_name(n):
 def outside(C):
     """The dump's theorems whose standing as generated auxiliaries turns on the kind of a name the dump lacks, read as a
     private name's user name too: an auxiliary of a declaration of Init that Lean realizes in the package module that
-    needs it (`Nat.fold.eq_def`, `_private.M.0.PSigma.casesOn._arg_pusher`). A hygienic name is left out: the Lean
-    check cannot read one listed."""
+    needs it (`Nat.fold.eq_def`, `_private.M.0.PSigma.casesOn._arg_pusher`). The name before it is read as the dump
+    prints it (printed). A hygienic name with its macro scopes last is left out: the Lean check cannot read one listed,
+    since `String.toName` does not read macro scopes (one with them before its last component it reads)."""
     def known(p):
         return p in C or user_name(p) in C
     out = set()
@@ -309,8 +325,8 @@ def outside(C):
         c = components(n)
         if x['k'] != 'thm' or len(c) < 2 or '._@.' in n:
             continue
-        if (any(p.fullmatch(c[-1]) for p, _ in AUX) and not known('.'.join(c[:-1])) or
-                c[-1] in ('go', 'eq') and len(c) > 2 and c[-2] == 'brecOn' and not known('.'.join(c[:-2]))):
+        if (any(p.fullmatch(c[-1]) for p, _ in AUX) and not known(printed(c[:-1])) or
+                c[-1] in ('go', 'eq') and len(c) > 2 and BRECON.fullmatch(c[-2]) and not known(printed(c[:-2]))):
             out.add(n)
     return out
 
@@ -360,15 +376,16 @@ class Terms:
     def aux(self, n):
         """A generated auxiliary (AUX): its last component attaches to the kind of the declaration before it, or it
         is a constructor of a generated inductive or a part of a generated `brecOn` that is a definition. A hygienic
-        name is read without its macro scopes, and the name before it with them."""
+        name is read without its macro scopes, and the name before it with them; a name whose macro scopes come before
+        its last component (`halve.«_@».M._hyg.3.eq_1`) is read under the name before it as the dump prints it."""
         if n not in self._aux:
             base, scopes = hygienic(n)
             c = components(base)
-            prefix = '.'.join(c[:-1]) + (f'._@.{scopes}' if scopes else '')
+            prefix = printed(c[:-1]) + (f'._@.{scopes}' if scopes else '')
             self._aux[n] = len(c) > 1 and (
                 any(p.fullmatch(c[-1]) and self.kind_of(prefix) in kinds for p, kinds in AUX) or
                 self.aux(prefix) and (self.kind_of(n) == 'ctor' and self.kind_of(prefix) == 'ind' or
-                                      c[-2] == 'brecOn' and self.kind_of(prefix) == 'def' and c[-1] in ('go', 'eq')))
+                                      bool(BRECON.fullmatch(c[-2])) and self.kind_of(prefix) == 'def' and c[-1] in ('go', 'eq')))
         return self._aux[n]
 
     def closure(self, names):
@@ -464,6 +481,9 @@ def has_fact(label, reached, balance, items):
             'at a represented model': bool(models & REPRESENTED), 'own carrier': bool(items) and not models & REPRESENTED}[label]
 
 
+D2_UNDECLARED = 'D2: the proofs name theorems that are neither grammar laws, root theorems nor declared lemmas: '
+
+
 def derived(T, row, e, central):
     """D1 to D5 of a derived entry on the dump. Returns (failures, report): the other grammar laws used, the root
     theorems named, and whether the row is a forwarder of one of its laws."""
@@ -488,8 +508,7 @@ def derived(T, row, e, central):
             else:
                 undeclared.add(b)
     if undeclared:
-        failed.append('D2: the proofs name theorems that are neither grammar laws, root theorems nor declared lemmas: '
-                      + ', '.join(sorted(undeclared)))
+        failed.append(D2_UNDECLARED + ', '.join(sorted(undeclared)))
     failed += [f'D3: the walk does not reach {y}' for y in laws if y in T.laws and y not in used]
     failed += [f'D4: the lemma {x} is not reached' + (' as a lemma: it is a grammar law or a forwarder of one' if T.law_of(x) else '')
                for x in sorted(lemmas - reached)]
@@ -635,11 +654,17 @@ def report(C, central, at_model, f5_class, carrier, balance_anchors, lean=lean_c
                                    and all(isinstance(output.get(k, {}), dict) for k in ('admitted', 'equivalence', 'kinds'))):
         output, info = None, {**info, 'ran': False, 'reason': 'the Lean check gave malformed output'}
     S = T.supplied(output.get('kinds', {}) if output is not None else {})
+    lacking = set(query['generated'])
     for _, s, failed, rep in checks:
         if not failed and s['standing'] == 'derived':
             more, found = derived(S, s['declaration'], s, central)
             failed += more
             rep.update(found)
+            # D2 refuses a theorem of outside(C) when the check, which gives the kind before it, did not run: say so
+            if output is None and any(f.startswith(D2_UNDECLARED) and lacking & set(f[len(D2_UNDECLARED):].split(', '))
+                                      for f in more):
+                failed.append('the Lean check did not run, so the kinds of names the dump lacks are not known: '
+                              + info.get('reason', ''))
     results = {}
     if output is not None:
         for x in output.get('entries', []):

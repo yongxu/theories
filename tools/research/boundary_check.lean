@@ -30,7 +30,8 @@ bridges are checked there. For each of `generated`, it gives whether the walk ta
 (`generated`), and the kind of it and of each name before it (`kinds`, `""` for none, `opaque` apart from `def`, as the
 dump writes them). boundary.py takes from these the kinds of names the dump lacks (a declaration of `Init`, whose
 equation lemma Lean realizes in the package module that needs it), and the tests hold this file's copy of boundary.py's
-rule to it on the dump's kinds. A hygienic name cannot be listed, since `String.toName` does not read macro scopes.
+rule to it on the dump's kinds. A hygienic name with its macro scopes last cannot be listed, since `String.toName` does
+not read macro scopes; one with them before its last component (`halve.«_@».M._hyg.3.eq_1`) it reads.
 Malformed input is an error; a failed test never is.
 
 **The name test.** A constant is admitted when:
@@ -195,23 +196,28 @@ def attaches (s k : String) : Bool :=
   let l := s.toList
   let after (p : String) : Option (List Char) := if p.toList.isPrefixOf l then some (l.drop p.length) else none
   let numbered (p : String) : Bool := (after p).any digits
+  let sizeOfEq : Bool := (after "_sizeOf_").any (fun r => r.length > 3 && r.drop (r.length - 3) == "_eq".toList &&
+    digits (r.take (r.length - 3)))
   if ["_proof_", "proof_"].any (fun p => (after p).any numerals) then ["def", "opaque", "thm", "ind"].contains k
   else if (after "match_").any numerals then ["def", "opaque", "thm"].contains k
   else if s == "_unsafe_rec" then k == "def" || k == "opaque"
-  else if numbered "eq_" || numbered "_aux_" ||
-      ["eq_def", "splitter", "_sunfold", "_default", "_arg_pusher"].contains s then k == "def"
+  else if numbered "eq_" || numbered "congr_eq_" || numbered "_aux_" ||
+      ["eq_def", "eq_unfold", "splitter", "_sunfold", "_default", "_arg_pusher", "induct", "induct_unfolding",
+       "mutual_induct", "mutual_induct_unfolding", "fun_cases", "fun_cases_unfolding"].contains s then k == "def"
   else if ["inj", "injEq", "sizeOf_spec", "elim", "_flat_ctor"].contains s then k == "ctor"
   else if s == "noConfusion" then k == "ctor" || k == "ind"
-  else if numbered "_sizeOf_" || ["_sizeOf_inst", "brecOn", "below", "binductionOn", "casesOn", "recOn", "rec",
-      "noConfusionType", "ctorIdx", "toCtorIdx", "ofNat_ctorIdx", "ctorElim", "ctorElimType"].contains s then
+  else if numbered "_sizeOf_" || sizeOfEq || numbered "brecOn_" || numbered "below_" || numbered "rec_" ||
+      ["_sizeOf_inst", "brecOn", "below", "binductionOn", "casesOn", "recOn", "rec", "noConfusionType", "ctorIdx",
+       "toCtorIdx", "ofNat_ctorIdx", "ctorElim", "ctorElimType"].contains s then
     k == "ind"
   else false
 
 /-- A generated auxiliary (§3.0): its last component attaches to the kind of the declaration before it, or it is a
-constructor of a generated inductive (`below.cons`) or a part of a generated `brecOn` that is a definition (`go`,
-`eq`). So `match_1.eq_1` is generated, and a theorem written by hand as `next.inj` on a definition `next` is not. A
-hygienic name is read without its macro scopes, and the name before it with them (a declaration a macro makes,
-`aux._proof_1._@.M._hyg.3` under `aux._@.M._hyg.3`). -/
+constructor of a generated inductive (`below.cons`) or a part of a generated `brecOn` (or a nested type's `brecOn_N`)
+that is a definition (`go`, `eq`). So `match_1.eq_1` is generated, and a theorem written by hand as `next.inj` on a
+definition `next` is not. A hygienic name is read without its macro scopes, and the name before it with them (a
+declaration a macro makes, `aux._proof_1._@.M._hyg.3` under `aux._@.M._hyg.3`); a name whose macro scopes come before
+its last component (`halve.«_@».M._hyg.3.eq_1`) is read under the name before it, which carries them. -/
 partial def generated (env : Environment) (n : Name) : Bool :=
   let v := extractMacroScopes n
   let sc (m : Name) : Name := if n.hasMacroScopes then { v with name := m }.review else m
@@ -220,7 +226,10 @@ partial def generated (env : Environment) (n : Name) : Bool :=
     let p' := sc p
     !p.isAnonymous && (attaches s (kindOf env p') || generated env p' &&
       ((kindOf env n == "ctor" && kindOf env p' == "ind") ||
-       (match p with | .str _ "brecOn" => kindOf env p' == "def" && (s == "go" || s == "eq") | _ => false)))
+       (match p with
+        | .str _ b => (b == "brecOn" || ("brecOn_".toList.isPrefixOf b.toList && digits (b.toList.drop 7))) &&
+            kindOf env p' == "def" && (s == "go" || s == "eq")
+        | _ => false)))
   | _ => false
 
 /-- An abstracted proof, `_proof_N` or `proof_N` (`_proof_1_1`): Lean's name for a proof it lifts out of a

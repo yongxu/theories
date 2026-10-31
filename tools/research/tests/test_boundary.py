@@ -242,6 +242,8 @@ CONSTANTS = {
     'Becoming.Flow.op.eq_1': const(F, 'thm'),  # written by hand: Lean gives an opaque no equation lemma
     'Becoming.Flow.Chain.brecOn': const(F, 'thm'), 'Becoming.Flow.Chain.brecOn.go': const(F, 'thm'),  # a Prop inductive's: no go
     'Becoming.aux._@.Becoming.Flow._hyg.3': const(F, 'def'), 'Becoming.aux._proof_1._@.Becoming.Flow._hyg.3': const(F, 'thm'),
+    'Becoming.halve._@.Becoming.Flow.42._hygCtx._hyg.3': const(F, 'def'),  # its equation lemmas come after the macro scopes
+    'Becoming.Flow.Nest': const(F, 'ind'), 'Becoming.Flow.Nest.brecOn_1': const(F, 'def', ['Becoming.Flow.Nest']),  # a nested type's
     'Nat.fold.eq_def': const(F, 'thm'),  # an equation lemma of Init's definition, realized in a package module
     '_private.Becoming.Flow.0.PSigma.casesOn._arg_pusher': const(F, 'thm'),
     '_private.Becoming.Flow.0.Becoming.Flow.X.match_1._arg_pusher': const(F, 'thm'),
@@ -293,7 +295,12 @@ class TheTerms(unittest.TestCase):
                   'Becoming.Flow.Tree.brecOn.go', 'Becoming.Flow.X.match_1.eq_1', 'Becoming.Flow.Tree._proof_1',
                   'Becoming.Flow.op._proof_1', 'Becoming.Flow.op._unsafe_rec', 'Becoming.Flow.op.match_1',
                   'Becoming.aux._proof_1._@.Becoming.Flow._hyg.3', '_private.Becoming.Flow.0.Becoming.Flow.X.match_1.eq_1',
-                  '_private.Becoming.Flow.0.Becoming.Flow.X.match_1._arg_pusher'):
+                  '_private.Becoming.Flow.0.Becoming.Flow.X.match_1._arg_pusher',
+                  'Becoming.halve.«_@».Becoming.Flow.42._hygCtx._hyg.3.eq_1', 'Becoming.halve.«_@».Becoming.Flow.42._hygCtx._hyg.3.eq_def',
+                  'Becoming.halve.«_@».Becoming.Flow.42._hygCtx._hyg.3._unsafe_rec', 'Becoming.Flow.Nest._sizeOf_2_eq',
+                  'Becoming.Flow.Nest.below_1', 'Becoming.Flow.Nest.brecOn_1', 'Becoming.Flow.Nest.rec_1', 'Becoming.Flow.Nest.brecOn_1.go',
+                  'Becoming.Flow.X.induct', 'Becoming.Flow.X.fun_cases_unfolding', 'Becoming.Flow.X.eq_unfold',
+                  'Becoming.Flow.X.match_1.congr_eq_1', 'Becoming.Flow.X.mutual_induct_unfolding'):
             self.assertTrue(self.T.aux(n), n)
         for n in ('Becoming.Flow.row', 'Becoming.«a.rec».b', 'Becoming.Flow.recording', 'Becoming.Flow.row.inj',
                   'Becoming.Flow.X.casesOn', 'Becoming.Flow.Tree.eq_def', 'Becoming.Flow.row.brecOn.go', 'Becoming.Flow.Chain.below.other',
@@ -302,6 +309,9 @@ class TheTerms(unittest.TestCase):
                   'Becoming.Flow.Tree.match_1', 'Becoming.Flow.Chain.below.refl._proof_1', 'Becoming.Flow.Chain.below.refl.eq_1',
                   'Becoming.Flow.X.noConfusion', 'Becoming.Flow.Tree.noConfusion2', 'Becoming.Flow.X._aux_x', 'Becoming.Flow.Tree._sizeOf_',
                   'Becoming.aux._proof_1._@.Becoming.Other._hyg.3', 'Becoming.aux._@.Becoming.Flow._hyg.3',
+                  'Becoming.halve.«_@».Becoming.Other.42._hygCtx._hyg.3.eq_1', 'Becoming.Flow.Tree.brecOn_1.go', 'Becoming.Flow.op.induct',
+                  'Becoming.Flow.Tree.induct', 'Becoming.Flow.X.below_1', 'Becoming.Flow.Nest._sizeOf_2_eqx', 'Becoming.Flow.X.induct_',
+                  'Becoming.Flow.X.congr_eq_',
                   # of a declaration the dump lacks: not generated until the Lean check gives its kind
                   'Nat.fold.eq_def', '_private.Becoming.Flow.0.PSigma.casesOn._arg_pusher'):
             self.assertFalse(self.T.aux(n), n)
@@ -314,8 +324,12 @@ class TheTerms(unittest.TestCase):
         # theorems whose standing turns on the kind of a declaration the dump lacks; one written under a namespace too
         self.assertEqual(boundary.outside(CONSTANTS), {'Nat.fold.eq_def', '_private.Becoming.Flow.0.PSigma.casesOn._arg_pusher'})
         self.assertEqual(boundary.outside({**CONSTANTS, 'Becoming.Space.inj': const(F, 'thm'), 'Becoming.Space.brecOn.eq': const(F, 'thm'),
-                                           'Becoming.Space.brecOn': const(F, 'def'), 'Becoming.Space.eq_1': const(F, 'def')})
-                         - boundary.outside(CONSTANTS), {'Becoming.Space.inj', 'Becoming.Space.brecOn.eq'})
+                                           'Becoming.Space.brecOn': const(F, 'def'), 'Becoming.Space.eq_1': const(F, 'def'),
+                                           'Becoming.Space.brecOn_1.go': const(F, 'thm'),
+                                           'Becoming.halve.«_@».Becoming.Other.42._hygCtx._hyg.3.eq_1': const(F, 'thm'),
+                                           'Becoming.halve.«_@».Becoming.Flow.42._hygCtx._hyg.3.eq_1': const(F, 'thm')})
+                         - boundary.outside(CONSTANTS), {'Becoming.Space.inj', 'Becoming.Space.brecOn.eq', 'Becoming.Space.brecOn_1.go',
+                                                         'Becoming.halve.«_@».Becoming.Other.42._hygCtx._hyg.3.eq_1'})
 
     def test_forwarders(self):
         # a proof naming another theorem is no forwarder; a forwarder of a forwarder forwards to its law
@@ -557,8 +571,11 @@ class TheReport(unittest.TestCase):
         self.assertEqual(unverified(kinds({'Nat.fold': 'def', 'Nat.fold.eq_def': 'thm'})), {})
         self.assertEqual(unverified(lean_passing), {'Becoming.Flow.unfolds': d2})  # no kinds: it fails closed
         self.assertEqual(unverified(kinds({'Nat.fold': 'ind'})), {'Becoming.Flow.unfolds': d2})
-        self.assertEqual(unverified(lambda q, m: (None, {'ran': False, 'reason': 'x'})), {'Becoming.Flow.unfolds': d2})
-        self.assertEqual(unverified(kinds([])), {'Becoming.Flow.unfolds': d2})  # malformed kinds: the check's output is refused
+        self.assertEqual(unverified(lambda q, m: (None, {'ran': False, 'reason': 'x'})),  # and says the check did not run
+                         {'Becoming.Flow.unfolds': d2 + ['the Lean check did not run, so the kinds of names the dump lacks are not known: x']})
+        self.assertEqual(unverified(kinds([])),  # malformed kinds: the check's output is refused
+                         {'Becoming.Flow.unfolds': d2 + ['the Lean check did not run, so the kinds of names the dump lacks are not known: '
+                                                         'the Lean check gave malformed output']})
 
     def test_the_lean_check_when_the_checker_cannot_be_set_up(self):
         def missing():
@@ -1212,6 +1229,32 @@ def Edge.Tree.size : Edge.Tree → Nat
 -- an equation lemma of Init's definition, which Lean realizes here
 theorem Edge.init_row (r : «际» Nat) : r = r ∧ Nat.fold 0 (fun i _ a => a + i) 0 = 0 :=
   ⟨«际之自» r, by unfold Nat.fold; rfl⟩
+-- a nested inductive type, with the auxiliaries Lean adds for it (`_sizeOf_2_eq`, `below_1`, `brecOn_1` and its parts,
+-- `rec_1`), and a definition over it by well-founded recursion, whose equation lemma reaches `_sizeOf_2_eq`
+inductive Edge.Nest where
+  | node : List Edge.Nest → Edge.Nest
+def Edge.Nest.count : Edge.Nest → Nat
+  | .node ts => 1 + (ts.attach.map (fun ⟨t, _⟩ => Edge.Nest.count t)).sum
+termination_by t => sizeOf t
+def Edge.relN : «际» Nat := fun _ b => (Edge.Nest.node []).count = b
+theorem Edge.relN_total : ¬ ∃ x, ∀ y, ¬ Edge.relN x y := fun ⟨_, h⟩ => h _ rfl
+theorem Edge.relN_eq : ¬ ∃ x, ∀ y, ¬ Edge.relN x y := Leaf.total_form (fun _ => ⟨_, Edge.Nest.count.eq_1 []⟩)
+theorem Edge.relN_certified : @Edge.relN_total = @Edge.relN_eq := rfl
+theorem Edge.nest_row (r : «际» Nat) : r = r ∧ (Edge.Nest.node []).count = 1 :=
+  ⟨«际之自» r, by rw [Edge.Nest.count.eq_1]; rfl⟩
+-- a declaration a macro makes by well-founded recursion: Lean names its equation lemmas after the macro scopes
+-- (`halve.«_@».M._hyg.3.eq_def`, under `halve._@.M._hyg.3`); a row through one (a recovery through one needs a tactic,
+-- since the macro cannot name the lemma, and the tactic's `congrArg` is a fact)
+macro "edge_halve" row:ident : command => `(def halve (n : Nat) : Nat := if n < 2 then 0 else halve (n / 2) + 1
+  termination_by n
+  decreasing_by omega
+  theorem $row (r : «际» Nat) : r = r ∧ halve 1 = 0 := ⟨«际之自» r, by unfold halve; rfl⟩)
+edge_halve Edge.mac_row
+-- what Lean realizes on use: a definition's functional induction and cases, its unfolding lemma
+theorem Edge.realized : True := by
+  have := @Model.half.induct; have := @Model.half.induct_unfolding; have := @Model.half.fun_cases
+  have := @Model.half.fun_cases_unfolding; have := @Model.half.eq_unfold; have := @Edge.evW.mutual_induct
+  have := @Edge.evW.mutual_induct_unfolding; have := @Edge.Tree.size.fun_cases; trivial
 end Becoming
 ''',
 }
@@ -1222,10 +1265,12 @@ GENERATED = [M + n for n in (  # each under a declaration of the kind Lean gener
     'next.proof_2', 'next._aux_3', 'Onward.f._default', 'Onward._sizeOf_1', 'Onward._sizeOf_inst', 'Onward.casesOn',
     'Onward.ctorIdx', 'Onward.noConfusion', 'Onward.noConfusionType', 'Onward.rec', 'Onward.recOn', 'Onward.mk._flat_ctor',
     'Onward.mk.inj', 'Onward.mk.injEq', 'Onward.mk.noConfusion', 'Onward.mk.sizeOf_spec', 'Tone.ctorElim', 'Tone.ctorElimType',
-    'Tone.toCtorIdx', 'Tone.ofNat_ctorIdx', 'Tone.high.elim', 'Reach.below', 'Reach.below.refl')] + [E + n for n in (
+    'Tone.toCtorIdx', 'Tone.ofNat_ctorIdx', 'Tone.high.elim', 'Reach.below', 'Reach.below.refl', 'half.induct',
+    'half.induct_unfolding', 'half.fun_cases', 'half.fun_cases_unfolding', 'half.eq_unfold')] + [E + n for n in (
     'Cfg._proof_1', 'Big._proof_1', 'Foo._proof_1', 'Cfg.bound._default', 'ack.eq_1', 'ack._unary._proof_1', 'ack._unary.eq_def',
     'evW._mutual.eq_def', 'seven._proof_1', 'loop._unsafe_rec', 'Tree.below', 'Tree.brecOn', 'Tree.brecOn.go', 'Tree.brecOn.eq',
-    'Tree.leaf.elim', 'Tree.size._sunfold')] + [
+    'Tree.leaf.elim', 'Tree.size._sunfold', 'Tree.size.fun_cases', 'evW.mutual_induct', 'evW.mutual_induct_unfolding',
+    'Nest._sizeOf_2', 'Nest._sizeOf_2_eq', 'Nest.below_1', 'Nest.brecOn_1', 'Nest.brecOn_1.go', 'Nest.brecOn_1.eq', 'Nest.rec_1')] + [
     '_private.Becoming.Leaf.0.Becoming.Model.rel_total.match_1_1.eq_1',  # read by its user name
     '_private.Becoming.Edge.0.Becoming.Edge.ack.match_1._arg_pusher', '_private.Becoming.Edge.0.PSigma.casesOn._arg_pusher',
     'Nat.fold.eq_def']  # of a declaration of Init, realized in a package module
@@ -1236,8 +1281,12 @@ NOT_GENERATED = [M + n for n in (
     'Reach.brecOn.go', 'Reach.brecOn.eq', 'rel_total.match_1_1.eq_1.mine', 'next.match_1.eq_1', 'next.match_', 'next.match_1_',
     'next.match_1__2', 'next.match_a', 'next.proof_', 'next._proof_', 'next.proof_1a', 'next.eq_x', 'next.ofNat', 'next.recursion',
     'next.elim_of', 'next.injective', 'next.below_one', 'Tone.low._proof_1', 'Tone.low.match_1', 'Tone.match_1', 'Tone.low.eq_1',
-    'next.noConfusion', 'Onward.noConfusion2', 'next._aux_x', 'Onward._sizeOf_x', 'Onward._sizeOf_', 'Onward.mk.brecOn')] + [E + n for n in (
-    'op.eq_1', 'op.eq_def', 'Rp.brecOn.go', 'Rp.brecOn.eq', 'Cfg.elim', 'Foo.inj', 'seven.eq_1', 'loop.eq_1', 'loop._sunfold')] + [
+    'next.noConfusion', 'Onward.noConfusion2', 'next._aux_x', 'Onward._sizeOf_x', 'Onward._sizeOf_', 'Onward.mk.brecOn',
+    'comm._unsafe_rec', 'Tone._unsafe_rec', 'Tone.low._unsafe_rec', 'comm._arg_pusher', 'comm.fun_cases', 'Tone.induct',
+    'half.below_1', 'half.brecOn_1', 'half.rec_1', 'Onward.mk.rec_1', 'half._sizeOf_2_eq', 'half.induct_', 'half.congr_eq_',
+    'Reach.brecOn_1.go')] + [E + n for n in (
+    'op.eq_1', 'op.eq_def', 'Rp.brecOn.go', 'Rp.brecOn.eq', 'Cfg.elim', 'Foo.inj', 'seven.eq_1', 'loop.eq_1', 'loop._sunfold',
+    'seven._arg_pusher', 'seven.induct', 'op.eq_unfold', 'Nest._sizeOf_2_eqx', 'Nest.brecOn_1.other', 'Nest.below_1a')] + [
     'match_1', '_private.Becoming.Leaf.0.Becoming.Model.next.inj']
 SPINE = registry.ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
 
@@ -1271,6 +1320,17 @@ class TheLeanCheck(unittest.TestCase):
                                env={**os.environ, 'LEAN_PATH': str(work)}, capture_output=True, text=True)
             if p.returncode != 0:
                 raise AssertionError(p.stdout + p.stderr)
+        # THEOREM-CONNECTIVITY-DUMP.lean on the stubs, its imports replaced: the constants as the generator reads them
+        dump = re.sub(r'\A(import .*\n)+', 'import Lean\n' + ''.join(f'import Becoming.{m}\n' for m in ('Leaf', 'GrammarCourse', 'Edge')),
+                      boundary.TC.with_name('THEOREM-CONNECTIVITY-DUMP.lean').read_text())
+        (work / 'Dump.lean').write_text(dump)
+        p = subprocess.run(cls.lean + ['Dump.lean'], cwd=work, capture_output=True, text=True,
+                           env={**os.environ, 'LEAN_PATH': str(work), 'THEOREM_CONNECTIVITY_OUT': str(work / 'dump.jsonl')})
+        if p.returncode != 0:
+            raise AssertionError(p.stdout + p.stderr)
+        cls.C = {x['n']: x for x in map(json.loads, (work / 'dump.jsonl').read_text().splitlines())}
+        # its theorems with macro scopes before the last component, which the check reads listed
+        cls.scoped = sorted(n for n in cls.C if '«_@»' in boundary.components(n) and cls.C[n]['k'] == 'thm')
         L = 'Becoming.Leaf.'
         def entry(form, hyp, recovery, certificate, row='Becoming.Model.rel_total'):
             return {'row': row, 'form': L + form, 'recovery': L + recovery, 'certificate': L + certificate,
@@ -1302,21 +1362,13 @@ class TheLeanCheck(unittest.TestCase):
                         entry('total_form', 'Total', 'relU_through_eq_def', 'relU_certified', 'Becoming.Model.relU_total'),
                         edge('relC', 'relC_at'), edge('relW', 'relW_at'), edge('relO', 'relO_at'), edge('relA', 'relA_eq'),
                         edge('relE', 'relE_eq'), edge('relB', 'relB_at'),
-                        *(edge(r, r, 'Becoming.Model.relS_total') for r in ('relS_eq1', 'relS_go', 'relS_data', 'relS_elim'))],
+                        *(edge(r, r, 'Becoming.Model.relS_total') for r in ('relS_eq1', 'relS_go', 'relS_data', 'relS_elim')),
+                        edge('relN', 'relN_eq')],
             'names': ['Becoming.«际之自»', 'Becoming.Model.rel_total', 'Becoming.Small', 'Becoming.Absent',
                       'Becoming.GrammarCourse.built_on_model'],
             'equivalences': ['Becoming.Model.and_swap', 'Becoming.Model.size_zero', 'Becoming.Model.rel_total',
                              'Becoming.Model.eq_props', 'Becoming.Model.eq_predicates'],
-            'generated': GENERATED + NOT_GENERATED}, cls.lean, 600)
-        # THEOREM-CONNECTIVITY-DUMP.lean on the stubs, its imports replaced: the constants as the generator reads them
-        dump = re.sub(r'\A(import .*\n)+', 'import Lean\n' + ''.join(f'import Becoming.{m}\n' for m in ('Leaf', 'GrammarCourse', 'Edge')),
-                      boundary.TC.with_name('THEOREM-CONNECTIVITY-DUMP.lean').read_text())
-        (work / 'Dump.lean').write_text(dump)
-        p = subprocess.run(cls.lean + ['Dump.lean'], cwd=work, capture_output=True, text=True,
-                           env={**os.environ, 'LEAN_PATH': str(work), 'THEOREM_CONNECTIVITY_OUT': str(work / 'dump.jsonl')})
-        if p.returncode != 0:
-            raise AssertionError(p.stdout + p.stderr)
-        cls.C = {x['n']: x for x in map(json.loads, (work / 'dump.jsonl').read_text().splitlines())}
+            'generated': GENERATED + NOT_GENERATED + cls.scoped}, cls.lean, 600)
 
     @classmethod
     def tearDownClass(cls):
@@ -1368,6 +1420,11 @@ class TheLeanCheck(unittest.TestCase):
                         (27, 'Becoming.Edge.Cfg.elim')):
             self.assertEqual((self.out['entries'][i]['passed'], self.out['entries'][i]['failures']),
                              (False, [f'the discharge condition fails: the recovery uses [{used}]']), i)
+        # a recovery through the equation lemma of a definition over a nested type, which reaches `_sizeOf_2_eq`:
+        # walked through
+        x = self.out['entries'][28]
+        self.assertEqual((x['row'], x['passed'], x['failures']), ('Becoming.Edge.relN_total', True, []))
+        self.assertEqual(x['recovery_uses'], ['Becoming.Leaf.total_form'])
 
     def test_types_are_not_walked(self):
         # a proof inside a definition named only in a type (a hypothesis, F's conclusion, a binder's type) is no fact
@@ -1382,10 +1439,12 @@ class TheLeanCheck(unittest.TestCase):
         self.assertEqual({n: k for n, k in self.out['kinds'].items() if n in self.C}, {n: self.C[n]['k'] for n in self.out['kinds'] if n in self.C})
         self.assertEqual(self.C[E + 'seven']['k'], 'opaque')
         terms = boundary.Terms(self.C, []).supplied(self.out['kinds'])
-        self.assertEqual(self.out['generated'], {n: terms.aux(n) for n in GENERATED + NOT_GENERATED})
+        self.assertEqual(self.out['generated'], {n: terms.aux(n) for n in GENERATED + NOT_GENERATED + self.scoped})
+        self.assertTrue(self.scoped)  # the dump's theorems with macro scopes before the last component, listed
         self.assertEqual({n for n, g in self.out['generated'].items() if not g}, set(NOT_GENERATED))
-        hygienic = [n for n in self.C if '._@.' in n and self.C[n]['k'] == 'thm']
-        self.assertTrue(hygienic and all(terms.aux(n) for n in hygienic), hygienic)  # a macro's lifted proof
+        hygienic = [n for n in self.C if ('._@.' in n or '«_@»' in boundary.components(n)) and self.C[n]['k'] == 'thm']
+        self.assertTrue(any('«_@»' in boundary.components(n) for n in hygienic))  # the scopes before the last component
+        self.assertTrue(hygienic and all(terms.aux(n) for n in hygienic), hygienic)  # a macro's lifted proof and lemmas
         # the theorems whose kind before them the dump lacks, and D2 on the dump: through Init's equation lemma
         self.assertEqual(boundary.outside(self.C), {'Nat.fold.eq_def', '_private.Becoming.Edge.0.PSigma.casesOn._arg_pusher',
                                                     '_private.Becoming.Edge.0.PSum.casesOn._arg_pusher'})
@@ -1393,6 +1452,10 @@ class TheLeanCheck(unittest.TestCase):
         self.assertEqual(boundary.derived(terms, *row)[0], [])
         self.assertEqual(boundary.derived(boundary.Terms(self.C, []), *row)[0],
                          ['D2: the proofs name theorems that are neither grammar laws, root theorems nor declared lemmas: Nat.fold.eq_def'])
+        # through a macro's equation lemma (its scopes before the last component), and one reaching a nested type's
+        # `_sizeOf_2_eq`
+        for name in ('mac_row', 'nest_row'):
+            self.assertEqual(boundary.derived(terms, E + name, {'law': ['Becoming.«际之自»']}, set())[0], [], name)
 
     def test_the_name_and_equivalence_tests(self):
         # a grammar module's theorem built on a model is refused by its content
