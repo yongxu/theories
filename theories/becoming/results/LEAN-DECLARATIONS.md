@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 352 | 17,137 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 354 | 17,156 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 14 | 772 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -184,6 +184,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ContractionMechanisms.lean](lean-declarations/core.md#module-94b24f64f928) | Generative core and relational structure |
 | [ControlledRefinement.lean](lean-declarations/learning.md#module-8fa0f7430ad8) | Learning, prediction and dynamics |
 | [ControllerRevision.lean](lean-declarations/learning.md#module-8763b069f801) | Learning, prediction and dynamics |
+| [ConveyanceBoundaries.lean](lean-declarations/becoming-core.md#module-12698b9ab223) | Becoming pure core |
 | [CopyCourses.lean](lean-declarations/becoming-core.md#module-d577db0a900d) | Becoming pure core |
 | [Copying.lean](lean-declarations/becoming-core.md#module-a6ef1448b15d) | Becoming pure core |
 | [CopyingCorrection.lean](lean-declarations/ethics.md#module-3f41827ba132) | Normative grounding and generative direction |
@@ -427,6 +428,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [GrammarCandidates.lean](lean-declarations/becoming-core.md#module-6e15a912d51f) | Becoming pure core |
 | [GrammarCases.lean](lean-declarations/becoming-core.md#module-eb5da91cd5d4) | Becoming pure core |
 | [GrammarCourse.lean](lean-declarations/becoming-core.md#module-cc6fc7f03b4e) | Becoming pure core |
+| [GrammarCrossing.lean](lean-declarations/becoming-core.md#module-e861b9c79f9d) | Becoming pure core |
 | [GrammarLaws.lean](lean-declarations/becoming-core.md#module-9ff25be30275) | Becoming pure core |
 | [GrammarMap.lean](lean-declarations/becoming-core.md#module-3c1996315d3a) | Becoming pure core |
 | [GrammarPath.lean](lean-declarations/becoming-core.md#module-f9c8cd7b5a1a) | Becoming pure core |

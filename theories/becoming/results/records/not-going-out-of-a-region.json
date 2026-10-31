@@ -111,8 +111,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt PENDING): Becoming.GrammarCrossing, 12 declarations (11 theorems), in the core, with empty axiom reports, every one cited. Read against the Lean for this record and by an independent AI reader, every finding taken.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 PENDING）：Becoming.GrammarCrossing 12 项声明（11 条定理），属核心，公理报告皆空，本记录全引。为本记录对照 Lean 审读，并经一独立 AI 读者审读，所见皆采纳。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261031T202201.956842Z): Becoming.GrammarCrossing, 12 declarations (11 theorems), in the core, with empty axiom reports, every one cited. Read against the Lean for this record and by an independent AI reader, every finding taken.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261031T202201.956842Z）：Becoming.GrammarCrossing 12 项声明（11 条定理），属核心，公理报告皆空，本记录全引。为本记录对照 Lean 审读，并经一独立 AI 读者审读，所见皆采纳。"
   },
   "next_delta": {
     "en": "State a graded boundary on the grammar: nested regions along one relation, the steps by which one line goes out of each, and how they lie along it.",
@@ -185,7 +185,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean",
       "role": "proof",
-      "sha256": "48b5a793f18781ce6e2627ad3970483a23a7b3e458f00e9d2e91d5c636593d1a",
+      "sha256": "5dcb69c0e35669e3183a2e124e94f8f066a9f4eeecc7b93a185aa0d3428e87cb",
       "declarations": [
         "Becoming.«不出»",
         "Becoming.«闭则不出»",
@@ -204,23 +204,29 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/bd-boundaries/NOTE.md",
       "role": "integration",
-      "sha256": "b871fc1a2ec17976e4b688e964489c4a10a0fab7d03d4e1f302deb109d99485c"
+      "sha256": "5289d3d00340c431cd44ae541e2b3a2fb227fcb55bd52c2430eb393a5ec3f146"
     },
     {
       "path": "theories/becoming/chapters/01-ROOT.md",
       "role": "statement",
-      "sha256": "e76d068bda4082024a858e8e26e68184bfb745859c6c0da4f30edda232b3263b"
+      "sha256": "0d57149056795b5edeaa14946f0be060c2246547b652ccd1c302cfbcdc2486c5"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-31-close-the-formal-gap.md",
       "role": "provenance",
       "sha256": "43c4a8b1428c312d1cbe0ff13708a3a5a1b72e2d0c3bfca4ed19f3655742dec6"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json",
+      "role": "receipt",
+      "sha256": "40ef6bb6514661fbb3ed7b705b45d28871fe14f6a9c1c5162c385ac7ff506117",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/PENDING/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarCrossing",
       "success_pointer": "/status",
       "success_value": "passed"
