@@ -1,0 +1,92 @@
+@Becoming.Acceptance.acceptance_factorization : ∀ {A : Type} (allowed : A → Prop) (q : A → Int) (lift : Int),
+  0 < lift →
+    ∀ (x : A × Bool),
+      Becoming.Acceptance.Best (fun y => allowed y.fst) (Becoming.Acceptance.AcceptScore q lift) x ↔
+        x.snd = true ∧ Becoming.Acceptance.Best allowed q x.fst
+@Becoming.Acceptance.every_optimum_has_access_iff : ∀ {A : Type} (allowed access : A → Prop) (q : A → Int) (lift : Int),
+  0 < lift →
+    ((∀ (x : A × Bool),
+        Becoming.Acceptance.Best (fun y => allowed y.fst) (Becoming.Acceptance.AcceptScore q lift) x → access x.fst) ↔
+      ∀ (a : A), Becoming.Acceptance.Best allowed q a → access a)
+@Becoming.Acceptance.no_base_optimal_access : ∀ {A : Type} (allowed access : A → Prop) (q : A → Int),
+  (∀ (a : A), Becoming.Acceptance.Best allowed q a → ¬access a) → ¬∃ a, Becoming.Acceptance.Best allowed q a ∧ access a
+Becoming.Acceptance.maintenance_separation : ∀ (diversion lift : Int),
+  0 < diversion →
+    0 < lift →
+      ∀ (x : Bool × Bool),
+        Becoming.Acceptance.Best (fun x => True)
+            (Becoming.Acceptance.AcceptScore (Becoming.Acceptance.MaintenanceValue diversion) lift) x ↔
+          x = (true, true)
+Becoming.Acceptance.accepting_optimum_can_destroy_access : ∀ (diversion lift : Int),
+  0 < diversion →
+    0 < lift →
+      Becoming.Acceptance.Best (fun x => True)
+          (Becoming.Acceptance.AcceptScore (Becoming.Acceptance.MaintenanceValue diversion) lift) (true, true) ∧
+        ¬Becoming.Acceptance.Maintains true ∧ Becoming.Acceptance.Maintains false
+Becoming.Acceptance.fixed_access_weight_boundary : ∀ (weight diversion : Int),
+  weight < diversion →
+    weight + Becoming.Acceptance.MaintenanceValue diversion false < Becoming.Acceptance.MaintenanceValue diversion true
+Becoming.Acceptance.every_fixed_access_weight_has_counterexample : ∀ (weight : Int),
+  ∃ diversion,
+    weight + Becoming.Acceptance.MaintenanceValue diversion false < Becoming.Acceptance.MaintenanceValue diversion true
+Becoming.Acceptance.maintenance_weight_exact : ∀ (weight diversion : Int),
+  (∀ (a : Bool),
+      Becoming.Acceptance.Best (fun x => True)
+          (fun b => Becoming.Acceptance.MaintenanceValue diversion b + Becoming.Acceptance.retained weight b) a →
+        Becoming.Acceptance.Maintains a) ↔
+    diversion < weight
+@Becoming.Acceptance.unavoidable_score_loss : ∀ {A : Type} (allowed : A → Prop) (q : A → Int) (u v : A),
+  Becoming.Acceptance.Best (fun x => True) q u →
+    Becoming.Acceptance.Best allowed q v → 0 ≤ q u - q v ∧ ∀ (a : A), allowed a → q u - q v ≤ q u - q a
+Becoming.Acceptance.restricted_value_achievable : ∀ (temptation : Int) (branch : Bool),
+  Becoming.Acceptance.LastAllowed branch false ∧
+    Becoming.Acceptance.TwoStepReward temptation branch false = Becoming.Acceptance.RestrictedValue branch
+Becoming.Acceptance.restricted_value_bounds : ∀ (temptation : Int) (branch last : Bool),
+  Becoming.Acceptance.LastAllowed branch last →
+    Becoming.Acceptance.TwoStepReward temptation branch last ≤ Becoming.Acceptance.RestrictedValue branch
+Becoming.Acceptance.one_le_two : 1 ≤ 2
+Becoming.Acceptance.unrestricted_value_optimal : ∀ (temptation : Int),
+  2 < temptation →
+    ∀ (branch : Bool),
+      (∃ last,
+          Becoming.Acceptance.TwoStepReward temptation branch last =
+            Becoming.Acceptance.UnrestrictedValue temptation branch) ∧
+        ∀ (last : Bool),
+          Becoming.Acceptance.TwoStepReward temptation branch last ≤
+            Becoming.Acceptance.UnrestrictedValue temptation branch
+Becoming.Acceptance.stale_value_shield_suboptimal : ∀ (temptation lift : Int),
+  2 < temptation →
+    0 < lift →
+      Becoming.Acceptance.Best (fun x => True)
+          (Becoming.Acceptance.AcceptScore (Becoming.Acceptance.UnrestrictedValue temptation) lift) (true, true) ∧
+        (∃ last, Becoming.Acceptance.LastAllowed true last) ∧
+          (∀ (last : Bool),
+              Becoming.Acceptance.LastAllowed true last → Becoming.Acceptance.TwoStepReward temptation true last = 1) ∧
+            Becoming.Acceptance.LastAllowed false false ∧ Becoming.Acceptance.TwoStepReward temptation false false = 2
+Becoming.Acceptance.recomputed_value_restores_branch : ∀ (lift : Int),
+  0 < lift →
+    ∀ (x : Bool × Bool),
+      Becoming.Acceptance.Best (fun x => True)
+          (Becoming.Acceptance.AcceptScore Becoming.Acceptance.RestrictedValue lift) x →
+        x = (false, true)
+@Becoming.Acceptance.approximate_score_bound : ∀ {A : Type} (allowed : A → Prop) (actual estimate : A → Int)
+  (err : Int),
+  (∀ (a : A), allowed a → actual a - err ≤ estimate a) →
+    (∀ (a : A), allowed a → estimate a ≤ actual a + err) →
+      ∀ (chosen : A),
+        Becoming.Acceptance.Best allowed estimate chosen → ∀ (a : A), allowed a → actual a - actual chosen ≤ 2 * err
+Becoming.Acceptance.approximate_score_bound_tight : ∀ (err : Int),
+  0 ≤ err →
+    Becoming.Acceptance.Best (fun x => True) (fun x => err) false ∧
+      (∀ (a : Bool),
+          (match a with
+                | true => 2 * err
+                | false => 0) -
+                err ≤
+              err ∧
+            err ≤
+              (match a with
+                | true => 2 * err
+                | false => 0) +
+                err) ∧
+        2 * err - 0 = 2 * err

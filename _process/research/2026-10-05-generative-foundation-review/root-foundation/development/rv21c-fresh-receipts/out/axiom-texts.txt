@@ -1,0 +1,10 @@
+a-selected-template-need-not-raise-structure (ConsequenceTransmission: 4 declarations report fewer axioms):
+  /hypotheses/3/en: 'e library and Std: propext in 13 of its 19 declarations, the other 6' -> 'e library and Std: propext in 9 of its 19 declarations, the other 10'
+  /hypotheses/3/zh: '模块，基于 Lean 核心库与 Std：其 19 项声明中 13 项用 propext，其余 6' -> '模块，基于 Lean 核心库与 Std：其 19 项声明中 9 项用 propext，其余 10'
+  /validation_scope/en: 'ion, 19 declarations audited, 13 with propext only and 6' -> 'ion, 19 declarations audited, 9 with propext only and 10'
+  /validation_scope/zh: 'equenceTransmission 审计 19 项声明，13 项只用 propext，6' -> 'equenceTransmission 审计 19 项声明，9 项只用 propext，10'
+  theories/becoming/chapters/04-LIFE.md (3. Descent): '**Theorem** (periphery, `propext` in 13 of 19 declarations, the rest none; pre-spine module)' -> '**Theorem** (periphery, `propext` in 9 of 19 declarations, the rest none; pre-spine module)'
+same-carrier-need-not-fix-the-response (DevelopedResponse: 1 declaration reports fewer axioms):
+  /validation_scope/en: 'se, 17 declarations audited, 15 with propext only' -> 'se, 17 declarations audited, 14 with propext only, 1 with an empty report'
+  /validation_scope/zh: '：DevelopedResponse 审计 17 项声明，15 项只用 propext' -> '：DevelopedResponse 审计 17 项声明，14 项只用 propext，1 项报告为空'
+records rewritten: 2; specs not used this run: none; problems: 0

@@ -109,7 +109,7 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Core: Becoming.Copying and Becoming.Courses (becoming-checks/20261022T054058.112616Z, 20261020T051144.879480Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: MaterialMaturation by its folder's check (material-maturation-verification/, Lean 4.29.1: 28 new theorems, 44 new audits, 267 in the import closure) and PreparationCorrespondence by check_preparation_correspondence.py (preparation-correspondence-checks/20261020T161943.503298Z, Lean 4.30.0-rc2), at most propext, Quot.sound and Classical.choice, some none. Inference and biological correspondence are kept apart.",
+    "en": "Core: Becoming.Copying and Becoming.Courses (becoming-checks/20261022T054058.112616Z, 20261020T051144.879480Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: MaterialMaturation by its folder's check (material-maturation-verification/, Lean 4.29.1: 28 new theorems, 44 new audits, 267 in the import closure) and PreparationCorrespondence by check_preparation_correspondence.py (preparation-correspondence-checks/20261031T133608.754102Z, Lean 4.30.0-rc2), at most propext, Quot.sound and Classical.choice, some none. Inference and biological correspondence are kept apart.",
     "zh": "核心 Copying、Courses：4.29.1 合并检查器，公理报告为空。外围 MaterialMaturation：目录检查（material-maturation-verification/，4.29.1，新定理28、审计44、闭包267）；PreparationCorrespondence：其检查器（preparation-correspondence-checks/，4.30.0-rc2）；至多 propext、Quot.sound、Classical.choice，有的为空。推论与生物对应分列。"
   },
   "next_delta": {
@@ -304,6 +304,12 @@
       "role": "receipt",
       "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261031T133608.754102Z/verification.json",
+      "role": "receipt",
+      "sha256": "88fad48e64d70b51be823bdb32c46cf8c7bfd0ff4d6f146b5105cc0e94808d23",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -323,7 +329,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/PreparationCorrespondence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261020T161943.503298Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261031T133608.754102Z/verification.json",
       "sha256_pointer": "/source_sha256/PreparationCorrespondence",
       "success_pointer": "/status",
       "success_value": "passed"

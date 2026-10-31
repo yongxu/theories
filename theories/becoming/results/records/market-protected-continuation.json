@@ -260,6 +260,12 @@
       "role": "receipt",
       "sha256": "30a00db7380ac78007cb1a025d44e47a5ea219588e3e2c9616d8a15eabda7a72",
       "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json",
+      "role": "receipt",
+      "sha256": "a5da4e52ede5b4a0449a862f0ca96a414d1cc7ee780e5f73b0493abddfd17aa2",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -279,7 +285,7 @@
     },
     {
       "source": "experiments/market-generativity/formal/MarketInstances.lean",
-      "receipt": "experiments/market-generativity/formal/market-instances-checks/20261020T161917.735916Z/verification.json",
+      "receipt": "experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json",
       "sha256_pointer": "/source_sha256/MarketInstances",
       "success_pointer": "/status",
       "success_value": "passed"

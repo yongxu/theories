@@ -1,0 +1,54 @@
+@Becoming.ScoreRepresentation.extension_shape : ∀ {a b : Nat},
+  Becoming.Extension Becoming.ScoreRepresentation.frame Becoming.ScoreRepresentation.living a b → 1 ≤ a ∧ a < b
+Becoming.ScoreRepresentation.successor_extends : ∀ (k : Nat),
+  Becoming.Extension Becoming.ScoreRepresentation.frame Becoming.ScoreRepresentation.living (k + 1) (k + 1 + 1)
+Becoming.ScoreRepresentation.livingSignificance_recognizes_gains : ∀
+  (relevance : Nat → Becoming.ScoreRepresentation.Claim → Prop),
+  Becoming.LivingSignificance Becoming.ScoreRepresentation.frame Becoming.ScoreRepresentation.living relevance →
+    ∀ (k i : Nat), i < k → relevance k (Becoming.ScoreRepresentation.Claim.gain i)
+Becoming.ScoreRepresentation.above_iff : ∀ (a b : Nat),
+  Becoming.Lexical.Above Becoming.ScoreRepresentation.protect Becoming.ScoreRepresentation.gain a b ↔
+    a = 0 ∧ b ≠ 0 ∨ b ≠ 0 ∧ b < a
+Becoming.ScoreRepresentation.above_satisfies_comparison : Becoming.Comparison Becoming.ScoreRepresentation.frame
+  Becoming.ScoreRepresentation.living fun s t =>
+  Becoming.Lexical.Above Becoming.ScoreRepresentation.protect Becoming.ScoreRepresentation.gain t s
+Becoming.ScoreRepresentation.never_outranked : ∀ (k : Nat),
+  0 < k → ¬Becoming.Lexical.Above Becoming.ScoreRepresentation.protect Becoming.ScoreRepresentation.gain k 0
+Becoming.ScoreRepresentation.weighted_satisfies_comparison : ∀ (w : Nat),
+  Becoming.Comparison Becoming.ScoreRepresentation.frame Becoming.ScoreRepresentation.living fun s t =>
+    Becoming.ScoreRepresentation.weighted w s < Becoming.ScoreRepresentation.weighted w t
+Becoming.ScoreRepresentation.weighted_outranks : ∀ (w : Nat),
+  Becoming.ScoreRepresentation.weighted w 0 < Becoming.ScoreRepresentation.weighted w (w + 1)
+Becoming.ScoreRepresentation.comparison_does_not_yield_priority : ∃ score,
+  (Becoming.Comparison Becoming.ScoreRepresentation.frame Becoming.ScoreRepresentation.living fun s t =>
+      score s < score t) ∧
+    ∃ k,
+      0 < k ∧
+        score 0 < score k ∧
+          ¬Becoming.Lexical.Above Becoming.ScoreRepresentation.protect Becoming.ScoreRepresentation.gain k 0
+Becoming.ScoreRepresentation.every_nat_score_outranks : ∀ (score : Nat → Nat),
+  (Becoming.Comparison Becoming.ScoreRepresentation.frame Becoming.ScoreRepresentation.living fun s t =>
+      score s < score t) →
+    0 < score 0 + 2 ∧ score 0 < score (score 0 + 2)
+Becoming.ScoreRepresentation.no_nat_score_represents : ¬∃ score,
+    (Becoming.Comparison Becoming.ScoreRepresentation.frame Becoming.ScoreRepresentation.living fun s t =>
+        score s < score t) ∧
+      ∀ (k : Nat), 0 < k → score k ≤ score 0
+Becoming.ScoreRepresentation.livingSignificance_leaves_ordering_open : (Becoming.LivingSignificance
+    Becoming.ScoreRepresentation.frame Becoming.ScoreRepresentation.living fun x x_1 => True) ∧
+  (Becoming.Comparison Becoming.ScoreRepresentation.frame Becoming.ScoreRepresentation.living fun s t =>
+      Becoming.Lexical.Above Becoming.ScoreRepresentation.protect Becoming.ScoreRepresentation.gain t s) ∧
+    (∀ (k : Nat),
+        0 < k → ¬Becoming.Lexical.Above Becoming.ScoreRepresentation.protect Becoming.ScoreRepresentation.gain k 0) ∧
+      (Becoming.Comparison Becoming.ScoreRepresentation.frame Becoming.ScoreRepresentation.living fun s t =>
+          Becoming.ScoreRepresentation.weighted 0 s < Becoming.ScoreRepresentation.weighted 0 t) ∧
+        Becoming.ScoreRepresentation.weighted 0 0 < Becoming.ScoreRepresentation.weighted 0 1
+Becoming.ScoreRepresentation.ratio_bounded : ∀ (k : Nat),
+  Becoming.ScoreRepresentation.num k ≤ Becoming.ScoreRepresentation.den k
+Becoming.ScoreRepresentation.cross_iff : ∀ (k m : Nat), (k + 1) * (m + 1 + 1) < (m + 1) * (k + 1 + 1) ↔ k + 1 < m + 1
+Becoming.ScoreRepresentation.ratio_agrees : ∀ (a b : Nat),
+  Becoming.ScoreRepresentation.ratioBetter b a ↔
+    Becoming.Lexical.Above Becoming.ScoreRepresentation.protect Becoming.ScoreRepresentation.gain a b
+Becoming.ScoreRepresentation.bounded_score_represents : Becoming.Comparison Becoming.ScoreRepresentation.frame
+    Becoming.ScoreRepresentation.living Becoming.ScoreRepresentation.ratioBetter ∧
+  ∀ (k : Nat), 0 < k → ¬Becoming.ScoreRepresentation.ratioBetter 0 k

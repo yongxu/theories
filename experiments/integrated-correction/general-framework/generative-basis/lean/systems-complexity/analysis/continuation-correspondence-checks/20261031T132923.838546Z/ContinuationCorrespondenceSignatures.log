@@ -1,0 +1,66 @@
+@Becoming.ContinuationCorrespondence.post_eq_seen : ∀ {X U O : Type} (step : X → U → X → Prop) (obs : X → O)
+  (B : X → Prop) (u : U) (o : O),
+  ContinuationAdequacy.post step obs B u o =
+    Becoming.Viability.Seen (Becoming.ContinuationCorrespondence.processOf step)
+      (Becoming.ContinuationCorrespondence.successor obs) B u o
+@Becoming.ContinuationCorrespondence.usable_iff : ∀ {X U : Type} (step : X → U → X → Prop) (allowed : X → U → Prop)
+  (B : X → Prop) (u : U),
+  ContinuationAdequacy.usable step allowed B u ↔
+    Becoming.Viability.Usable (Becoming.ContinuationCorrespondence.processOf step) allowed B u
+@Becoming.ContinuationCorrespondence.viable_iff_keptFor : ∀ {X U O : Type} (step : X → U → X → Prop) (obs : X → O)
+  (good : X → Prop) (allowed : X → U → Prop) (n : ℕ) (B : X → Prop),
+  ContinuationAdequacy.viable step obs good allowed n B ↔
+    Becoming.Viability.KeptFor (Becoming.ContinuationCorrespondence.processOf step)
+      (Becoming.ContinuationCorrespondence.successor obs) good allowed n B
+@Becoming.ContinuationCorrespondence.works_iff_keeps : ∀ {X U O : Type} (step : X → U → X → Prop) (obs : X → O)
+  (good : X → Prop) (allowed : X → U → Prop) {n : ℕ} (p : ContinuationAdequacy.Plan U O n) (B : X → Prop),
+  ContinuationAdequacy.works step obs good allowed p B ↔
+    Becoming.Viability.Plan.Keeps (Becoming.ContinuationCorrespondence.processOf step)
+      (Becoming.ContinuationCorrespondence.successor obs) good allowed (Becoming.ContinuationCorrespondence.toPlan p) B
+@Becoming.ContinuationCorrespondence.keeps_iff_works : ∀ {X U O : Type} (step : X → U → X → Prop) (obs : X → O)
+  (good : X → Prop) (allowed : X → U → Prop) {n : ℕ} (p : Becoming.Viability.Plan U O n) (B : X → Prop),
+  Becoming.Viability.Plan.Keeps (Becoming.ContinuationCorrespondence.processOf step)
+      (Becoming.ContinuationCorrespondence.successor obs) good allowed p B ↔
+    ContinuationAdequacy.works step obs good allowed (Becoming.ContinuationCorrespondence.ofPlan p) B
+@Becoming.ContinuationCorrespondence.works_exists_iff : ∀ {X U O : Type} (step : X → U → X → Prop) (obs : X → O)
+  (good : X → Prop) (allowed : X → U → Prop) (n : ℕ) (B : X → Prop),
+  (∃ p,
+      Becoming.Viability.Plan.Keeps (Becoming.ContinuationCorrespondence.processOf step)
+        (Becoming.ContinuationCorrespondence.successor obs) good allowed p B) ↔
+    ∃ p, ContinuationAdequacy.works step obs good allowed p B
+@Becoming.ContinuationCorrespondence.classicalChoice : ∀ {O α : Type}, Becoming.Viability.ChoiceOver O α
+@Becoming.ContinuationCorrespondence.viable_iff_plan_by_core : ∀ {X U O : Type} (step : X → U → X → Prop) (obs : X → O)
+  (good : X → Prop) (allowed : X → U → Prop) (n : ℕ) (B : X → Prop),
+  ContinuationAdequacy.viable step obs good allowed n B ↔ ∃ p, ContinuationAdequacy.works step obs good allowed p B
+@Becoming.ContinuationCorrespondence.viable_iff_plan_listed : ∀ {X U : Type} {k : ℕ} (step : X → U → X → Prop)
+  (obs : X → Fin k) (good : X → Prop) (allowed : X → U → Prop) (n : ℕ) (B : X → Prop),
+  ContinuationAdequacy.viable step obs good allowed n B ↔ ∃ p, ContinuationAdequacy.works step obs good allowed p B
+@Becoming.ContinuationCorrespondence.toPlan_zip : ∀ {U V O Q : Type} {n : ℕ} (p : ContinuationAdequacy.Plan U O n)
+  (q : ContinuationAdequacy.Plan V Q n),
+  Becoming.ContinuationCorrespondence.toPlan (JointContinuation.zipPlan p q) =
+    (Becoming.ContinuationCorrespondence.toPlan p).zip (Becoming.ContinuationCorrespondence.toPlan q)
+@Becoming.ContinuationCorrespondence.compatible_iff : ∀ {X U V O Q : Type} (joint : X → U × V → X → Prop)
+  (obs : X → O × Q) (allow : X → U × V → Prop) {n : ℕ} (p : ContinuationAdequacy.Plan U O n)
+  (q : ContinuationAdequacy.Plan V Q n) (C : X → Prop),
+  JointContinuation.compatible joint obs allow p q C ↔
+    Becoming.Viability.Plan.Compatible (Becoming.ContinuationCorrespondence.processOf joint)
+      (Becoming.ContinuationCorrespondence.successor obs) allow (Becoming.ContinuationCorrespondence.toPlan p)
+      (Becoming.ContinuationCorrespondence.toPlan q) C
+@Becoming.ContinuationCorrespondence.joint_plan_composition_by_core : ∀ {X Y Z U V O Q : Type}
+  (joint : X → U × V → X → Prop) (left : Y → U → Y → Prop) (right : Z → V → Z → Prop) (pa : X → Y) (pb : X → Z)
+  (oa : Y → O) (ob : Z → Q) (ga : Y → Prop) (gb : Z → Prop) (la : Y → U → Prop) (lb : Z → V → Prop)
+  (lj : X → U × V → Prop),
+  (∀ (x : X) (uv : U × V) (y : X), joint x uv y → left (pa x) uv.1 (pa y) ∧ right (pb x) uv.2 (pb y)) →
+    ∀ {n : ℕ} (p : ContinuationAdequacy.Plan U O n) (q : ContinuationAdequacy.Plan V Q n) (C : X → Prop) (Ca : Y → Prop)
+      (Cb : Z → Prop),
+      (∀ (x : X), C x → Ca (pa x) ∧ Cb (pb x)) →
+        ContinuationAdequacy.works left oa ga la p Ca →
+          ContinuationAdequacy.works right ob gb lb q Cb →
+            JointContinuation.compatible joint (fun x => (oa (pa x), ob (pb x))) lj p q C →
+              ContinuationAdequacy.works joint (fun x => (oa (pa x), ob (pb x))) (fun x => ga (pa x) ∧ gb (pb x)) lj
+                (JointContinuation.zipPlan p q) C
+@Becoming.ContinuationCorrespondence.compatibility_necessary_by_core : ∀ {X U V O Q : Type}
+  (joint : X → U × V → X → Prop) (obs : X → O × Q) (good : X → Prop) (allow : X → U × V → Prop) {n : ℕ}
+  (p : ContinuationAdequacy.Plan U O n) (q : ContinuationAdequacy.Plan V Q n) (C : X → Prop),
+  ContinuationAdequacy.works joint obs good allow (JointContinuation.zipPlan p q) C →
+    JointContinuation.compatible joint obs allow p q C

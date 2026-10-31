@@ -58,7 +58,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Core: the current bytes of Becoming.CrossSituational and Becoming.Courses are bound to receipt becoming-checks/20261020T051144.879480Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for every cited declaration. Periphery: MachineInstances is bound to machine-instances-checks/20261020T161859.257200Z and EnactedScene to enacted-scene-verification.json, both Lean 4.29.1, their cited declarations using propext and some Quot.sound. Author counterreview and a comparison with primary sources; no new experiment or independent acceptance.
+Core: the current bytes of Becoming.CrossSituational and Becoming.Courses are bound to receipt becoming-checks/20261020T051144.879480Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for every cited declaration. Periphery: MachineInstances is bound to machine-instances-checks/20261031T131812.213702Z and EnactedScene to enacted-scene-verification.json, both Lean 4.29.1, their cited declarations using propext and some Quot.sound. Author counterreview and a comparison with primary sources; no new experiment or independent acceptance.
 
 Canonical source: [EnactedScene.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EnactedScene.lean)
 
@@ -110,6 +110,7 @@ Receiving and named positions are relational roles within one local arrangement.
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json) | — |
 
 Aliases: `Generative.EnactedScene.enacted_access_enters_all_sequence_interpretation`, `Becoming.MachineInstances.coordinated_interprets_every`, `Becoming.CrossSituational.resolves_iff`, `Becoming.MachineInstances.scene_interprets_every_iff`, `Becoming.Courses.run_resolves_iff`, `Becoming.Courses.course_resolves_every_iff`
 

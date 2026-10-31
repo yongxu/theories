@@ -1,0 +1,10 @@
+import PrefixSafetyCorrespondence
+#print axioms Becoming.PrefixSafetyCorrespondence.samePrefix_iff_agree
+#print axioms Becoming.PrefixSafetyCorrespondence.finiteRefutable_iff_refutable
+#print axioms Becoming.PrefixSafetyCorrespondence.prefixClosure_iff_adheres
+#print axioms Becoming.PrefixSafetyCorrespondence.holds_of_prefixClosure_by_core
+#print axioms Becoming.PrefixSafetyCorrespondence.prefixClosure_least_by_core
+#print axioms Becoming.PrefixSafetyCorrespondence.recurrence_not_finiteRefutable_by_core
+#print axioms Becoming.PrefixSafetyCorrespondence.terminationEvent_not_finiteRefutable_by_core
+#print axioms Becoming.PrefixSafetyCorrespondence.markov_classical
+#print axioms Becoming.PrefixSafetyCorrespondence.boundary_closed_by_core

@@ -1,0 +1,104 @@
+{
+ "_about": "axiom_texts.py's entries: in each record bound to a receipt whose reports changed, every sentence that states a module's reports, as a template over the counts (rendered with the earlier receipt's reports it must read the sentence as written) or as a reports entry checked against both receipts; see its docstring for the syntax.",
+ "a-selected-template-need-not-raise-structure": {
+  "module": "ConsequenceTransmission",
+  "note": {
+   "en": "axiom reports from the renewed receipt; fewer, the same declarations, none gained, from FormedSelection's set_option line of 8 October.",
+   "zh": "公理报告取自更新的回执；更少，声明相同，无一增加，出自 FormedSelection 10月8日的 set_option 一行。"
+  },
+  "entries": [
+   {
+    "path": "/hypotheses/3/en",
+    "decls": "module",
+    "template": "propext in {P} of its {total} declarations, the other {N} none<<assert:P>><<assert:N>>"
+   },
+   {
+    "path": "/hypotheses/3/zh",
+    "decls": "module",
+    "template": "其 {total} 项声明中 {P} 项用 propext，其余 {N} 项不用公理<<assert:P>><<assert:N>>"
+   },
+   {
+    "path": "/validation_scope/en",
+    "decls": "module",
+    "template": "ConsequenceTransmission, {total} declarations audited, {P} with propext only and {N} with empty reports<<assert:P>><<assert:N>1>>"
+   },
+   {
+    "path": "/validation_scope/zh",
+    "decls": "module",
+    "template": "ConsequenceTransmission 审计 {total} 项声明，{P} 项只用 propext，{N} 项报告为空<<assert:P>><<assert:N>>"
+   },
+   {
+    "chapter": "theories/becoming/chapters/04-LIFE.md",
+    "decls": "module",
+    "template": "**Theorem** (periphery, `propext` in {P} of {total} declarations, the rest none<<assert:P>>; pre-spine module)",
+    "covers": [
+     "N"
+    ]
+   }
+  ]
+ },
+ "same-carrier-need-not-fix-the-response": {
+  "module": "DevelopedResponse",
+  "note": {
+   "en": "axiom reports from the renewed receipt; fewer, the same declarations, none gained, from FormedSelection's set_option line of 8 October.",
+   "zh": "公理报告取自更新的回执；更少，声明相同，无一增加，出自 FormedSelection 10月8日的 set_option 一行。"
+  },
+  "entries": [
+   {
+    "path": "/hypotheses/1/en",
+    "decls": "cited",
+    "template": "propext in every cited declaration<<assert:!N>>, Quot.sound also in the {PQ:en} energy laws, as the receipt reports",
+    "covers": [
+     "P"
+    ]
+   },
+   {
+    "path": "/hypotheses/1/zh",
+    "decls": "cited",
+    "template": "所引每项声明用 propext<<assert:!N>>，{PQ:zh}条能量律另用 Quot.sound，如回执所报",
+    "covers": [
+     "P"
+    ]
+   },
+   {
+    "path": "/validation_scope/en",
+    "decls": "module",
+    "template": "DevelopedResponse, {total} declarations audited, {P} with propext only<<N=1|, 1 with an empty report>><<N>1|, {N} with empty reports>> and the {PQ:en} energy laws with Quot.sound too<<assert:PQ>>"
+   },
+   {
+    "path": "/validation_scope/zh",
+    "decls": "module",
+    "template": "DevelopedResponse 审计 {total} 项声明，{P} 项只用 propext，<<N|{N} 项报告为空，>>{PQ:zh}条能量律另用 Quot.sound<<assert:PQ>>"
+   },
+   {
+    "chapter": "theories/becoming/chapters/04-LIFE.md",
+    "decls": "cited",
+    "template": "**Theorem** (periphery, `propext`<<assert:!N>>, and `Quot.sound` in {PQ:en} declarations; pre-spine module; witness)",
+    "covers": [
+     "P"
+    ]
+   },
+   {
+    "chapter": "theories/becoming/chapters/04-LIFE.md",
+    "text": "(`DevelopedResponse.same_carrier_different_developmental_record`, `equal_cost_development_reconstructs_different_gates`, `same_assay_enacts_developed_difference`, each with `propext` only; `Quot.sound` enters only the two energy laws, `enabled_energy_balance` and `runnable_energy_balance`)",
+    "reports": {
+     "DevelopedResponse.same_carrier_different_developmental_record": [
+      "propext"
+     ],
+     "equal_cost_development_reconstructs_different_gates": [
+      "propext"
+     ],
+     "same_assay_enacts_developed_difference": [
+      "propext"
+     ]
+    },
+    "only": {
+     "Quot.sound": [
+      "enabled_energy_balance",
+      "runnable_energy_balance"
+     ]
+    }
+   }
+  ]
+ }
+}

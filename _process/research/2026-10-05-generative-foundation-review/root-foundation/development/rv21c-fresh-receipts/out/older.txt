@@ -1,0 +1,4 @@
+experiments/shared-renewal-capability/regulation/retention/formation/formal/verification.json passed 0 passed 12s
+experiments/shared-renewal-capability/regulation/retention/formation/evolution/verification.json passed 0 passed 7s
+experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/verification.json passed 0 passed 19s
+older layout: 3 of 3 renewed; 39 unbound live receipts and 3 kept copies stale in the same files, not renewed

@@ -1,0 +1,18 @@
+re-pointing 1 pairs in 1 records:
+   a-selected-template-need-not-raise-structure theories/becoming/chapters/04-LIFE.md ['## 3. Descent']
+left to their owners: []
+{
+ "records": 1,
+ "apply": true,
+ "by_record": {
+  "a-selected-template-need-not-raise-structure": {
+   "paths": [
+    "theories/becoming/chapters/04-LIFE.md"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}
+ 
+repoint (texts): 1 records written

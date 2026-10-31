@@ -1,0 +1,47 @@
+Becoming.LearningCorrespondence.acquire_exact : ∀ (c : Generative.CompositionalAcquisition.Code),
+  c.first ≠ c.second → Generative.CompositionalAcquisition.acquire (Generative.CompositionalAcquisition.observe c) = c
+@Becoming.LearningCorrespondence.agree_at : ∀ {g g' : Generative.CompositionalAcquisition.Expr → List Bool}
+  {c c' : Generative.CompositionalAcquisition.Code},
+  g = Generative.CompositionalAcquisition.eval c →
+    g' = Generative.CompositionalAcquisition.eval c' →
+      ∀ {e : Generative.CompositionalAcquisition.Expr},
+        g e = g' e → Generative.CompositionalAcquisition.eval c e = Generative.CompositionalAcquisition.eval c' e
+Becoming.LearningCorrespondence.uniform_determines : ∀ (e : Generative.CompositionalAcquisition.Expr),
+  Becoming.Learning.Determines Becoming.LearningCorrespondence.Uniform
+    (fun x => x ∈ Becoming.LearningCorrespondence.encounters) e
+Becoming.LearningCorrespondence.nonuniform_not_determined : ¬Becoming.Learning.Determines
+    (fun g => Becoming.LearningCorrespondence.Uniform g ∨ g = Generative.CompositionalAcquisition.nonuniform)
+    (fun x => x ∈ Becoming.LearningCorrespondence.encounters) Generative.CompositionalAcquisition.novel
+@Becoming.LearningCorrespondence.develop_orbit : ∀ {n : ℕ} (σ : ℝ → ℝ) (τ δ : ℝ) (B : ConnectionistRecovery.Network n)
+  (g : ConnectionistRecovery.Profile n) (t : ℕ),
+  ConnectionistRecovery.develop σ τ δ B g t = Becoming.Law.orbit (ConnectionistRecovery.step σ τ δ B) g t
+@Becoming.LearningCorrespondence.hebbian_determined : ∀ {n : ℕ} (σ : ℝ → ℝ) (τ δ η : ℝ),
+  Becoming.Determined (Becoming.LearningCorrespondence.hebbian σ τ δ η)
+@Becoming.LearningCorrespondence.hebbian_activity_law_iff : ∀ {n : ℕ} {σ : ℝ → ℝ} {τ δ η : ℝ},
+  Becoming.GoAlike (Becoming.LearningCorrespondence.hebbian σ τ δ η) Prod.fst ↔
+    ∀ (B B' : ConnectionistRecovery.Network n) (p : ConnectionistRecovery.Profile n),
+      ConnectionistRecovery.step σ τ δ B p = ConnectionistRecovery.step σ τ δ B' p
+Becoming.LearningCorrespondence.weights_matter : ConnectionistRecovery.step Real.tanh 1 1
+    (UpdaterConsequences.weighted 1 1) DevelopmentalMemory.first ≠
+  ConnectionistRecovery.step Real.tanh 1 1 (UpdaterConsequences.weighted 0 0) DevelopmentalMemory.first
+Becoming.LearningCorrespondence.hebbian_no_activity_law : ∀ (η : ℝ),
+  ¬Becoming.GoAlike (Becoming.LearningCorrespondence.hebbian Real.tanh 1 1 η) Prod.fst
+Becoming.LearningCorrespondence.updating_determined : Becoming.Determined Becoming.LearningCorrespondence.updating
+Becoming.LearningCorrespondence.updating_network_law_iff : Becoming.GoAlike Becoming.LearningCorrespondence.updating
+    Prod.fst ↔
+  ∀ (r r' : UpdaterConsequences.Route) (B : ConnectionistRecovery.Network 3) (task : UpdaterConsequences.Task),
+    UpdaterConsequences.update r B task = UpdaterConsequences.update r' B task
+@Becoming.LearningCorrespondence.responsive_kept : ∀ {B : ConnectionistRecovery.Network 3}
+  {task : UpdaterConsequences.Task},
+  UpdaterConsequences.succeeds B task → UpdaterConsequences.update UpdaterConsequences.Route.responsive B task = B
+@Becoming.LearningCorrespondence.responsive_learns : ∀ {B : ConnectionistRecovery.Network 3}
+  {task : UpdaterConsequences.Task},
+  ¬UpdaterConsequences.succeeds B task →
+    UpdaterConsequences.update UpdaterConsequences.Route.responsive B task =
+      DevelopmentalMemory.learn 1 (UpdaterConsequences.profile task) B
+Becoming.LearningCorrespondence.route_matters : UpdaterConsequences.update UpdaterConsequences.Route.continual
+    (UpdaterConsequences.weighted 1 1) UpdaterConsequences.Task.a ≠
+  UpdaterConsequences.update UpdaterConsequences.Route.responsive (UpdaterConsequences.weighted 1 1)
+    UpdaterConsequences.Task.a
+Becoming.LearningCorrespondence.updating_no_network_law : ¬Becoming.GoAlike Becoming.LearningCorrespondence.updating
+    Prod.fst

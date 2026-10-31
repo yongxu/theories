@@ -65,7 +65,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Core: Becoming.Copying (becoming-checks/20261022T054058.112616Z) and Becoming.Courses (becoming-checks/20261020T051144.879480Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: StructuralCopying by its folder's check (structural-copying-verification/, Lean 4.29.1: 34 new theorems, 57 new audits, 430 in the import closure) and CopyingInstances by its instance checker (copying-instances-checks/20261020T161910.956874Z, Lean 4.29.1), at most propext, Quot.sound and Classical.choice. The primary paper gives mechanism and comparison context; no new reanalysis of data.
+Core: Becoming.Copying (becoming-checks/20261022T054058.112616Z) and Becoming.Courses (becoming-checks/20261020T051144.879480Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: StructuralCopying by its folder's check (structural-copying-verification/, Lean 4.29.1: 34 new theorems, 57 new audits, 430 in the import closure) and CopyingInstances by its instance checker (copying-instances-checks/20261031T131950.855717Z, Lean 4.29.1), at most propext, Quot.sound and Classical.choice. The primary paper gives mechanism and comparison context; no new reanalysis of data.
 
 Canonical source: [StructuralCopying.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/StructuralCopying.lean)
 
@@ -119,6 +119,7 @@ The previous actual ABAB fragment meets the new structural template input; this 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261020T161910.956874Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z/verification.json) | — |
 
 Aliases: `StructuralCopying.exact_reproduction_budget`, `Becoming.Copying.built_iff`, `Becoming.Copying.batch_all_iff`, `Becoming.CopyingInstances.reproduce_iff`, `Becoming.Copying.lineage_all_iff`, `Becoming.CopyingInstances.lineage_released_iff`, `Becoming.CopyingInstances.lineage_used_iff`, `Becoming.Courses.copy_built_iff`, `Becoming.Courses.release_course_iff`, `Becoming.Courses.lineage_course_iff`, `Becoming.Courses.every_released_iff_course`
 

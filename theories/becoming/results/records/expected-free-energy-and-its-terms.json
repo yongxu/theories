@@ -238,8 +238,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the periphery checker check_expected_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261030T101649.229011Z): all 68 declarations of ExpectedFreeEnergyReals, each on Lean's standard axioms only, FreeEnergyReals and every core module of its closure, Becoming.LumpedSeeking among them, matching a passed receipt. Independent reviews by other AI agents (REVIEW-UE19; REVIEW-UE23 and RECHECK-UE23 for seeking), study sections 453 and 464; not reviewed by a person.",
-    "zh": "外围检查器 check_expected_free_energy_reals.py 以 Lean 4.30.0-rc2 与定版 Mathlib 实查（回执 20261030T101649.229011Z）：ExpectedFreeEnergyReals 全部 68 项声明只依标准公理，FreeEnergyReals 与闭包之核心模块（含 LumpedSeeking）合于已通过之回执。AI 独立审查（REVIEW-UE19；REVIEW-UE23、RECHECK-UE23），研究第 453 与 464 节；未经人审。"
+    "en": "Machine-checked by the periphery checker check_expected_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134130.030892Z): all 68 declarations of ExpectedFreeEnergyReals, each on Lean's standard axioms only, FreeEnergyReals and every core module of its closure, Becoming.LumpedSeeking among them, matching a passed receipt. Independent reviews by other AI agents (REVIEW-UE19; REVIEW-UE23 and RECHECK-UE23 for seeking), study sections 453 and 464; not reviewed by a person.",
+    "zh": "外围检查器 check_expected_free_energy_reals.py 以 Lean 4.30.0-rc2 与定版 Mathlib 实查（回执 20261031T134130.030892Z）：ExpectedFreeEnergyReals 全部 68 项声明只依标准公理，FreeEnergyReals 与闭包之核心模块（含 LumpedSeeking）合于已通过之回执。AI 独立审查（REVIEW-UE19；REVIEW-UE23、RECHECK-UE23），研究第 453 与 464 节；未经人审。"
   },
   "next_delta": {
     "en": "The data-processing bound; a many-step form with lumpable transitions; review by a person.",
@@ -444,19 +444,31 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue23-seeking-by-expected-free-energy/RECHECK-UE23.md",
       "role": "integration",
       "sha256": "ad58101a35833a4e68e8815421f90601de2f93d6ada7c03e84f0b8d59f456549"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261031T134130.030892Z/verification.json",
+      "role": "receipt",
+      "sha256": "e60e73fe0c207d3ee9340db5955f5eade94a163a48e6e6e119149cb958781e6c",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261031T134204.303683Z/verification.json",
+      "role": "receipt",
+      "sha256": "fd2eaac4db131cff1dc110b19cff002bbc1ca4e57fd69a4a9a9134696d09b507",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261031T134204.303683Z/verification.json",
       "sha256_pointer": "/source_sha256/FreeEnergyReals",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T101649.229011Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261031T134130.030892Z/verification.json",
       "sha256_pointer": "/source_sha256/ExpectedFreeEnergyReals",
       "success_pointer": "/status",
       "success_value": "passed"

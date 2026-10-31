@@ -1,0 +1,49 @@
+'CompletionWarrant.Ideal.ext' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.Ideal.le_refl' does not depend on any axioms
+'CompletionWarrant.Ideal.le_trans' does not depend on any axioms
+'CompletionWarrant.Ideal.le_antisymm' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.principal_mem' does not depend on any axioms
+'CompletionWarrant.principal_le_iff' does not depend on any axioms
+'CompletionWarrant.principal_mono' does not depend on any axioms
+'CompletionWarrant.le_familyUnion' does not depend on any axioms
+'CompletionWarrant.familyUnion_le' does not depend on any axioms
+'CompletionWarrant.principalFamily_directed' does not depend on any axioms
+'CompletionWarrant.union_principalFamily' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.admits_principal_iff' does not depend on any axioms
+'CompletionWarrant.refutable_scottClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.permitted_lower' does not depend on any axioms
+'CompletionWarrant.scottClosed_iff_admits_permitted' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.admits_refutable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.admits_scottClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.scottClosed_refutable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.finiteRefutable_iff_scottClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.scottClosed_iff_lower_basis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.finiteRefutable_iff_lower_basis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.basis_eq_permitted' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.lower_basis_unique' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.permitted_eq_content' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.basis_eq_content' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.admits_empty' does not depend on any axioms
+'CompletionWarrant.empty_scottClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.empty_finiteRefutable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.empty_content' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.content_lower' does not depend on any axioms
+'CompletionWarrant.hull_scottClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.hull_contains' does not depend on any axioms
+'CompletionWarrant.hull_least' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.hull_preserves_content' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.hull_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.avoiding_lower' does not depend on any axioms
+'CompletionWarrant.respects_iff_admits_avoiding' does not depend on any axioms
+'CompletionWarrant.respects_scottClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.respects_finiteRefutable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.respects_maximal' does not depend on any axioms
+'CompletionWarrant.respects_principal' does not depend on any axioms
+'CompletionWarrant.respects_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.refutable_eq_admits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.hull_joint_content' does not depend on any axioms
+'CompletionWarrant.lift_admits' depends on axioms: [Classical.choice]
+'CompletionWarrant.lift_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.restrict_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.lift_order_iff' does not depend on any axioms
+'CompletionWarrant.empty_lower_no_ideal' does not depend on any axioms

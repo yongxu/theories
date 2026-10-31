@@ -1,0 +1,7 @@
+'Becoming.JudgingCorrespondence.realizations' does not depend on any axioms
+'Becoming.JudgingCorrespondence.endpoint' depends on axioms: [propext]
+'Becoming.JudgingCorrespondence.certificate' depends on axioms: [propext]
+'Becoming.JudgingCorrespondence.mem_realizations' depends on axioms: [propext, Quot.sound]
+'Becoming.JudgingCorrespondence.judges_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.JudgingCorrespondence.endpoint_judge_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.JudgingCorrespondence.no_endpoint_only_prior_certificate_by_core' depends on axioms: [propext, Quot.sound]

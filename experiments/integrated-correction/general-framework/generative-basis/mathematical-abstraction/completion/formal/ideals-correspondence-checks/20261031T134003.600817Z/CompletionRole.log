@@ -1,0 +1,30 @@
+'CompletionRole.image_directed' does not depend on any axioms
+'CompletionRole.sup_congr' does not depend on any axioms
+'CompletionRole.sup_mono' does not depend on any axioms
+'CompletionRole.toDirectedFamily' depends on axioms: [propext, Quot.sound]
+'CompletionRole.fromDirectedFamily' depends on axioms: [propext, Quot.sound]
+'CompletionRole.principal_embedding' does not depend on any axioms
+'CompletionRole.principal_compact' depends on axioms: [propext, Quot.sound]
+'CompletionRole.principal_generation' depends on axioms: [propext, Quot.sound]
+'CompletionRole.compact_iff_principal' depends on axioms: [propext, Quot.sound]
+'CompletionRole.ideal_directed' does not depend on any axioms
+'CompletionRole.extend_upper' does not depend on any axioms
+'CompletionRole.extend_least' does not depend on any axioms
+'CompletionRole.extend_monotone' depends on axioms: [propext, Quot.sound]
+'CompletionRole.extend_principal' does not depend on any axioms
+'CompletionRole.extend_continuous' depends on axioms: [propext, Quot.sound]
+'CompletionRole.extend_unique' depends on axioms: [propext, Quot.sound]
+'CompletionRole.unique_continuous_extension' depends on axioms: [propext, Quot.sound]
+'CompletionRole.basis_monotone' does not depend on any axioms
+'CompletionRole.profile_monotone' depends on axioms: [propext, Quot.sound]
+'CompletionRole.profile_extend' depends on axioms: [propext, Quot.sound]
+'CompletionRole.extend_profile' does not depend on any axioms
+'CompletionRole.orderIso_continuous' does not depend on any axioms
+'CompletionRole.basisIso_preserves' depends on axioms: [propext, Quot.sound]
+'CompletionRole.basisIso_unique' depends on axioms: [propext, Quot.sound]
+'CompletionRole.basisIso_backward_unique' depends on axioms: [propext, Quot.sound]
+'CompletionRole.ideal_basis_role' depends on axioms: [propext, Quot.sound]
+'CompletionRole.unique_basis_representation' depends on axioms: [propext, Quot.sound]
+'CompletionRole.positive_reading_monotone' depends on axioms: [propext]
+'CompletionRole.positive_reading_membership' depends on axioms: [propext]
+'CompletionRole.positive_readings_separate' depends on axioms: [propext, Quot.sound]

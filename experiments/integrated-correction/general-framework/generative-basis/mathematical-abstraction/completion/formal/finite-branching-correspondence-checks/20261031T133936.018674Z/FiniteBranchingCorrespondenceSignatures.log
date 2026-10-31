@@ -1,0 +1,28 @@
+@Becoming.FiniteBranchingCorrespondence.reach_iff_continues : ∀ {α : Type u_1} (R : α → α → Prop) (n : Nat) (a : α),
+  CompletionLifting.Reach R a n ↔ Becoming.Lasting.Continues (Becoming.FiniteBranchingCorrespondence.process R) n a
+@Becoming.FiniteBranchingCorrespondence.unbounded_iff : ∀ {α : Type u_1} (R : α → α → Prop) (a : α),
+  CompletionLifting.Unbounded R a ↔ Becoming.Lasting.Unbounded (Becoming.FiniteBranchingCorrespondence.process R) a
+@Becoming.FiniteBranchingCorrespondence.finitelyBranching : ∀ {α : Type u_1} (R : α → α → Prop) (children : α → List α),
+  (∀ (a b : α), R a b ↔ b ∈ children a) →
+    Becoming.Lasting.FinitelyBranching (Becoming.FiniteBranchingCorrespondence.process R)
+Becoming.FiniteBranchingCorrespondence.either_classical : Becoming.EitherThroughout
+@Becoming.FiniteBranchingCorrespondence.finite_unbounded_by_core : ∀ {α : Type u_1} (L : List α) (F : α → Nat → Prop),
+  (∀ (a : α) (m n : Nat), m ≤ n → F a n → F a m) → (∀ (n : Nat), ∃ a, a ∈ L ∧ F a n) → ∃ a, a ∈ L ∧ ∀ (n : Nat), F a n
+@Becoming.FiniteBranchingCorrespondence.unbounded_child_by_core : ∀ {α : Type u_1} (R : α → α → Prop)
+  (children : α → List α),
+  (∀ (a b : α), R a b ↔ b ∈ children a) →
+    ∀ (a : α), CompletionLifting.Unbounded R a → ∃ b, R a b ∧ CompletionLifting.Unbounded R b
+@Becoming.FiniteBranchingCorrespondence.infinite_from_unbounded_by_core : ∀ {α : Type u_1} (R : α → α → Prop)
+  (children : α → List α),
+  (∀ (a b : α), R a b ↔ b ∈ children a) →
+    ∀ (a : α), CompletionLifting.Unbounded R a → ∃ path, path 0 = a ∧ ∀ (n : Nat), R (path n) (path (n + 1))
+@Becoming.FiniteBranchingCorrespondence.finite_initial_lifting_by_core : ∀ {α : Type u_1} (R : α → α → Prop)
+  (initial : List α) (children : α → List α),
+  (∀ (a b : α), R a b ↔ b ∈ children a) →
+    (∀ (n : Nat), ∃ a, a ∈ initial ∧ CompletionLifting.Reach R a n) →
+      ∃ path, path 0 ∈ initial ∧ ∀ (n : Nat), R (path n) (path (n + 1))
+@Becoming.FiniteBranchingCorrespondence.labelled_lifting_by_core : ∀ {α : Type u_1} {σ : Type u_2}
+  (step : α → σ → α → Prop) (word : Nat → σ) (initial : List α) (children : α → σ → List α),
+  (∀ (a : α) (label : σ) (b : α), step a label b ↔ b ∈ children a label) →
+    (∀ (n : Nat), ∃ a, a ∈ initial ∧ CompletionLifting.Reach (CompletionLifting.RequestedStep step word) (0, a) n) →
+      ∃ path, path 0 ∈ initial ∧ ∀ (n : Nat), step (path n) (word n) (path (n + 1))

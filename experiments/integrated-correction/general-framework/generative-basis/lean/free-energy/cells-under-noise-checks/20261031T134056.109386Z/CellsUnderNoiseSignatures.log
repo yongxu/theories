@@ -1,0 +1,288 @@
+@Becoming.CellsUnderNoise.step_invariant : ∀ {ι S : Type} {p : (ι → S) → ℝ} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : Fintype S] {σ : Equiv.Perm ι} {K : (ι → S) → (ι → S) → ℝ},
+  Becoming.CellsUnderNoise.KernelCommutes σ K →
+    Becoming.CellsUnderNoise.Invariant σ p → Becoming.CellsUnderNoise.Invariant σ (Becoming.CellsUnderNoise.step K p)
+@Becoming.CellsUnderNoise.weightsAt_invariant : ∀ {ι S : Type} {p : (ι → S) → ℝ} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [inst_2 : Fintype S] {σ : Equiv.Perm ι} {K : ℕ → (ι → S) → (ι → S) → ℝ},
+  (∀ (k : ℕ), Becoming.CellsUnderNoise.KernelCommutes σ (K k)) →
+    Becoming.CellsUnderNoise.Invariant σ p →
+      ∀ (n : ℕ), Becoming.CellsUnderNoise.Invariant σ (Becoming.CellsUnderNoise.weightsAt K p n)
+@Becoming.CellsUnderNoise.weightsAt_exchangeable : ∀ {ι S : Type} {p : (ι → S) → ℝ} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [inst_2 : Fintype S] {K : ℕ → (ι → S) → (ι → S) → ℝ},
+  (∀ (k : ℕ) (σ : Equiv.Perm ι), Becoming.CellsUnderNoise.KernelCommutes σ (K k)) →
+    Becoming.CellsUnderNoise.Exchangeable p →
+      ∀ (n : ℕ), Becoming.CellsUnderNoise.Exchangeable (Becoming.CellsUnderNoise.weightsAt K p n)
+@Becoming.CellsUnderNoise.step_nonneg : ∀ {ι S : Type} {p : (ι → S) → ℝ} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : Fintype S] {K : (ι → S) → (ι → S) → ℝ},
+  (∀ (c c' : ι → S), 0 ≤ K c c') → (∀ (c : ι → S), 0 ≤ p c) → ∀ (c' : ι → S), 0 ≤ Becoming.CellsUnderNoise.step K p c'
+@Becoming.CellsUnderNoise.step_total : ∀ {ι S : Type} {p : (ι → S) → ℝ} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : Fintype S] {K : (ι → S) → (ι → S) → ℝ},
+  (∀ (c : ι → S), ∑ c', K c c' = 1) → ∑ c', Becoming.CellsUnderNoise.step K p c' = ∑ c, p c
+@Becoming.CellsUnderNoise.weightsAt_law : ∀ {ι S : Type} {p : (ι → S) → ℝ} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : Fintype S] {K : ℕ → (ι → S) → (ι → S) → ℝ},
+  (∀ (k : ℕ) (c c' : ι → S), 0 ≤ K k c c') →
+    (∀ (k : ℕ) (c : ι → S), ∑ c', K k c c' = 1) →
+      (∀ (c : ι → S), 0 ≤ p c) →
+        ∑ c, p c = 1 →
+          ∀ (n : ℕ),
+            (∀ (c : ι → S), 0 ≤ Becoming.CellsUnderNoise.weightsAt K p n c) ∧
+              ∑ c, Becoming.CellsUnderNoise.weightsAt K p n c = 1
+@Becoming.CellsUnderNoise.pointMass_invariant_iff : ∀ {ι S : Type} [inst : Fintype ι] [inst_1 : DecidableEq S]
+  (σ : Equiv.Perm ι) (c₀ : ι → S),
+  Becoming.CellsUnderNoise.Invariant σ (Becoming.CellsUnderNoise.pointMass c₀) ↔ c₀ ∘ ⇑σ = c₀
+@Becoming.CellsUnderNoise.pointMass_exchangeable_alike : ∀ {ι S : Type} [inst : Fintype ι] [DecidableEq ι]
+  [inst_2 : DecidableEq S] {c₀ : ι → S},
+  Becoming.CellsUnderNoise.Exchangeable (Becoming.CellsUnderNoise.pointMass c₀) → ∀ (i j : ι), c₀ i = c₀ j
+@Becoming.CellsUnderNoise.alike_fixed : ∀ {ι S : Type} (a : S) (σ : Equiv.Perm ι), (fun x => a) ∘ ⇑σ = fun x => a
+@Becoming.CellsUnderNoise.alike_exchangeable : ∀ {ι S : Type} [inst : Fintype ι] [inst_1 : DecidableEq S] (a : S),
+  Becoming.CellsUnderNoise.Exchangeable (Becoming.CellsUnderNoise.pointMass fun x => a)
+@Becoming.CellsUnderNoise.independent_exchangeable : ∀ {ι S : Type} [inst : Fintype ι] (q₀ : S → ℝ),
+  Becoming.CellsUnderNoise.Exchangeable fun c => ∏ i, q₀ (c i)
+@Becoming.CellsUnderNoise.independent_law : ∀ {ι S : Type} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : Fintype S] {q₀ : S → ℝ},
+  (∀ (s : S), 0 ≤ q₀ s) → ∑ s, q₀ s = 1 → (∀ (c : ι → S), 0 ≤ ∏ i, q₀ (c i)) ∧ ∑ c, ∏ i, q₀ (c i) = 1
+@Becoming.CellsUnderNoise.pointMass_law : ∀ {ι S : Type} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : Fintype S] [inst_3 : DecidableEq S] (c₀ : ι → S),
+  (∀ (c : ι → S), 0 ≤ Becoming.CellsUnderNoise.pointMass c₀ c) ∧ ∑ c, Becoming.CellsUnderNoise.pointMass c₀ c = 1
+@Becoming.CellsUnderNoise.marginal_eq : ∀ {ι S : Type} {p : (ι → S) → ℝ} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : Fintype S] [inst_3 : DecidableEq S],
+  Becoming.CellsUnderNoise.Exchangeable p →
+    ∀ (i j : ι) (s : S), Becoming.CellsUnderNoise.marginal p i s = Becoming.CellsUnderNoise.marginal p j s
+@Becoming.CellsUnderNoise.distinct_le : ∀ {ι S : Type} {p : (ι → S) → ℝ} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : Fintype S] [DecidableEq S],
+  Becoming.CellsUnderNoise.Exchangeable p →
+    (∀ (c : ι → S), 0 ≤ p c) →
+      ∑ c, p c = 1 → ∀ {c : ι → S}, Function.Injective c → p c ≤ 1 / ↑(Fintype.card ι).factorial
+@Becoming.CellsUnderNoise.stationary_rearranged : ∀ {ι S : Type} {p : (ι → S) → ℝ} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [inst_2 : Fintype S] {σ : Equiv.Perm ι} {K : (ι → S) → (ι → S) → ℝ},
+  Becoming.CellsUnderNoise.KernelCommutes σ K →
+    Becoming.CellsUnderNoise.Stationary K p → Becoming.CellsUnderNoise.Stationary K fun c => p (c ∘ ⇑σ)
+@Becoming.CellsUnderNoise.unique_stationary_exchangeable : ∀ {ι S : Type} {p : (ι → S) → ℝ} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [inst_2 : Fintype S] {K : (ι → S) → (ι → S) → ℝ},
+  (∀ (σ : Equiv.Perm ι), Becoming.CellsUnderNoise.KernelCommutes σ K) →
+    (∀ (c : ι → S), 0 ≤ p c) →
+      ∑ c, p c = 1 →
+        Becoming.CellsUnderNoise.Stationary K p →
+          (∀ (q : (ι → S) → ℝ),
+              (∀ (c : ι → S), 0 ≤ q c) → ∑ c, q c = 1 → Becoming.CellsUnderNoise.Stationary K q → q = p) →
+            Becoming.CellsUnderNoise.Exchangeable p
+@Becoming.CellsUnderNoise.gibbs_exchangeable : ∀ {ι S : Type} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : Fintype S] (κ : ℝ) {F : (ι → S) → ℝ},
+  (∀ (σ : Equiv.Perm ι) (c : ι → S), F (c ∘ ⇑σ) = F c) →
+    Becoming.CellsUnderNoise.Exchangeable fun c => Real.exp (-κ * F c) / ∑ c', Real.exp (-κ * F c')
+@Becoming.CellsUnderNoise.noisy_commutes : ∀ {ι S : Type} [inst : Fintype ι] {σ : Equiv.Perm ι} {f : (ι → S) → ι → S}
+  (q : S → S → ℝ),
+  (∀ (c : ι → S), f (c ∘ ⇑σ) = f c ∘ ⇑σ) →
+    Becoming.CellsUnderNoise.KernelCommutes σ (Becoming.CellsUnderNoise.noisy f q)
+@Becoming.CellsUnderNoise.step_noiseless : ∀ {ι S : Type} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : Fintype S] [inst_3 : DecidableEq S] (f : (ι → S) → ι → S) (c₀ : ι → S),
+  Becoming.CellsUnderNoise.step (Becoming.CellsUnderNoise.noisy f Becoming.CellsUnderNoise.noiseless)
+      (Becoming.CellsUnderNoise.pointMass c₀) =
+    Becoming.CellsUnderNoise.pointMass (f c₀)
+@Becoming.CellsUnderNoise.weightsAt_noiseless : ∀ {ι S : Type} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : Fintype S] [inst_3 : DecidableEq S] (f : (ι → S) → ι → S) (c₀ : ι → S) (n : ℕ),
+  Becoming.CellsUnderNoise.weightsAt (fun x => Becoming.CellsUnderNoise.noisy f Becoming.CellsUnderNoise.noiseless)
+      (Becoming.CellsUnderNoise.pointMass c₀) n =
+    Becoming.CellsUnderNoise.pointMass (f^[n] c₀)
+@Becoming.CellsUnderNoise.ofFn_swap : ∀ {S : Type} {m : ℕ} (c : Fin (m + 1) → S) (k : Fin m),
+  List.ofFn (c ∘ ⇑(Equiv.swap k.castSucc k.succ)) =
+    Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt (↑k) (List.ofFn c)
+@Becoming.CellsUnderNoise.ofFn_rearranged : ∀ {S β : Type} {g : List S → β},
+  (∀ (k : ℕ) (l : List S), g (Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k l) = g l) →
+    ∀ {m : ℕ} (σ : Equiv.Perm (Fin m)) (c : Fin m → S), g (List.ofFn (c ∘ ⇑σ)) = g (List.ofFn c)
+@Becoming.CellsUnderNoise.ofFn_cellwise : ∀ {S γ : Type} {m : ℕ} (update : S → γ → S) (field : S → List S → γ)
+  (c : Fin m → S),
+  List.ofFn (Becoming.CellsUnderNoise.cellwise update field c) =
+    Becoming.FreeEnergyGuarantees.IdenticalCells.descent update field (List.ofFn c)
+@Becoming.CellsUnderNoise.ofFn_iterate_cellwise : ∀ {S γ : Type} {m : ℕ} (update : S → γ → S) (field : S → List S → γ)
+  (c : Fin m → S) (n : ℕ),
+  List.ofFn ((Becoming.CellsUnderNoise.cellwise update field)^[n] c) =
+    (Becoming.Law.run (Becoming.FreeEnergyGuarantees.IdenticalCells.descent update field) (List.ofFn c)).state n
+@Becoming.CellsUnderNoise.cellwise_alike : ∀ {S γ : Type} {m : ℕ} (update : S → γ → S) (field : S → List S → γ)
+  {c₀ : Fin m → S} {i j : Fin m},
+  c₀ i = c₀ j →
+    ∀ (n : ℕ),
+      (Becoming.CellsUnderNoise.cellwise update field)^[n] c₀ i =
+        (Becoming.CellsUnderNoise.cellwise update field)^[n] c₀ j
+@Becoming.CellsUnderNoise.noiseless_run : ∀ {S γ : Type} [inst : Fintype S] [inst_1 : DecidableEq S] {m : ℕ}
+  (update : S → γ → S) (field : S → List S → γ) (c₀ c : Fin m → S) (n : ℕ),
+  Becoming.CellsUnderNoise.weightsAt
+        (fun x =>
+          Becoming.CellsUnderNoise.noisy (Becoming.CellsUnderNoise.cellwise update field)
+            Becoming.CellsUnderNoise.noiseless)
+        (Becoming.CellsUnderNoise.pointMass c₀) n c =
+      1 ↔
+    List.ofFn c =
+      (Becoming.Law.run (Becoming.FreeEnergyGuarantees.IdenticalCells.descent update field) (List.ofFn c₀)).state n
+@Becoming.CellsUnderNoise.cellwise_commutes : ∀ {S γ : Type} {m : ℕ} {update : S → γ → S} {field : S → List S → γ},
+  Becoming.FreeEnergyGuarantees.IdenticalCells.Exchangeable field →
+    ∀ (σ : Equiv.Perm (Fin m)) (c : Fin m → S),
+      Becoming.CellsUnderNoise.cellwise update field (c ∘ ⇑σ) = Becoming.CellsUnderNoise.cellwise update field c ∘ ⇑σ
+@Becoming.CellsUnderNoise.run_rearranged : ∀ {S γ : Type} {m : ℕ} {update : S → γ → S} {field : S → List S → γ},
+  Becoming.FreeEnergyGuarantees.IdenticalCells.Exchangeable field →
+    ∀ (σ : Equiv.Perm (Fin m)) (c : Fin m → S) (n : ℕ),
+      (Becoming.Law.run (Becoming.FreeEnergyGuarantees.IdenticalCells.descent update field) (List.ofFn (c ∘ ⇑σ))).state
+          n =
+        List.ofFn ((Becoming.CellsUnderNoise.cellwise update field)^[n] c ∘ ⇑σ)
+@Becoming.CellsUnderNoise.symmetric_rearranged : ∀ {S : Type} {m : ℕ} {F : List S → ℕ},
+  Becoming.FreeEnergyGuarantees.IdenticalCells.Symmetric F →
+    ∀ (σ : Equiv.Perm (Fin m)) (c : Fin m → S), F (List.ofFn (c ∘ ⇑σ)) = F (List.ofFn c)
+@Becoming.CellsUnderNoise.gibbs_symmetric_exchangeable : ∀ {S : Type} [inst : Fintype S] {m : ℕ} (κ : ℝ)
+  {F : List S → ℕ},
+  Becoming.FreeEnergyGuarantees.IdenticalCells.Symmetric F →
+    Becoming.CellsUnderNoise.Exchangeable fun c =>
+      Real.exp (-κ * ↑(F (List.ofFn c))) / ∑ c', Real.exp (-κ * ↑(F (List.ofFn c')))
+@Becoming.CellsUnderNoise.noisy_eq_noisyDescent : ∀ {S γ : Type} {m : ℕ} (update : S → γ → S) (field : S → List S → γ)
+  (q : S → S → ℝ),
+  Becoming.CellsUnderNoise.noisy (Becoming.CellsUnderNoise.cellwise update field) q =
+    Becoming.CellsUnderNoise.noisyDescent (fun x z s' => q (update x z) s') field
+@Becoming.CellsUnderNoise.noisyDescent_commutes : ∀ {S γ : Type} {m : ℕ} {field : S → List S → γ},
+  Becoming.FreeEnergyGuarantees.IdenticalCells.Exchangeable field →
+    ∀ (r : S → γ → S → ℝ) (σ : Equiv.Perm (Fin m)),
+      Becoming.CellsUnderNoise.KernelCommutes σ (Becoming.CellsUnderNoise.noisyDescent r field)
+@Becoming.CellsUnderNoise.noisyDescent_nonneg : ∀ {S γ : Type} {m : ℕ} {r : S → γ → S → ℝ} {field : S → List S → γ},
+  (∀ (x : S) (z : γ) (s' : S), 0 ≤ r x z s') →
+    ∀ (c c' : Fin m → S), 0 ≤ Becoming.CellsUnderNoise.noisyDescent r field c c'
+@Becoming.CellsUnderNoise.noisyDescent_rows : ∀ {S γ : Type} [inst : Fintype S] {m : ℕ} {r : S → γ → S → ℝ}
+  {field : S → List S → γ},
+  (∀ (x : S) (z : γ), ∑ s', r x z s' = 1) →
+    ∀ (c : Fin m → S), ∑ c', Becoming.CellsUnderNoise.noisyDescent r field c c' = 1
+@Becoming.CellsUnderNoise.noisyDescent_exchangeable : ∀ {S γ : Type} [inst : Fintype S] {m : ℕ}
+  {field : S → List S → γ},
+  Becoming.FreeEnergyGuarantees.IdenticalCells.Exchangeable field →
+    ∀ (r : ℕ → S → γ → S → ℝ) {p : (Fin m → S) → ℝ},
+      Becoming.CellsUnderNoise.Exchangeable p →
+        ∀ (n : ℕ),
+          Becoming.CellsUnderNoise.Exchangeable
+            (Becoming.CellsUnderNoise.weightsAt (fun k => Becoming.CellsUnderNoise.noisyDescent (r k) field) p n)
+@Becoming.CellsUnderNoise.noisyDescent_distinct_le : ∀ {S γ : Type} [inst : Fintype S] [DecidableEq S] {m : ℕ}
+  {field : S → List S → γ},
+  Becoming.FreeEnergyGuarantees.IdenticalCells.Exchangeable field →
+    ∀ {r : ℕ → S → γ → S → ℝ},
+      (∀ (k : ℕ) (x : S) (z : γ) (s' : S), 0 ≤ r k x z s') →
+        (∀ (k : ℕ) (x : S) (z : γ), ∑ s', r k x z s' = 1) →
+          ∀ {p : (Fin m → S) → ℝ},
+            Becoming.CellsUnderNoise.Exchangeable p →
+              (∀ (c : Fin m → S), 0 ≤ p c) →
+                ∑ c, p c = 1 →
+                  ∀ (n : ℕ) {c : Fin m → S},
+                    Function.Injective c →
+                      Becoming.CellsUnderNoise.weightsAt (fun k => Becoming.CellsUnderNoise.noisyDescent (r k) field) p
+                          n c ≤
+                        1 / ↑m.factorial
+@Becoming.CellsUnderNoise.noisyDescent_from_alike : ∀ {S γ : Type} [inst : Fintype S] [inst_1 : DecidableEq S] {m : ℕ}
+  {field : S → List S → γ},
+  Becoming.FreeEnergyGuarantees.IdenticalCells.Exchangeable field →
+    ∀ {r : ℕ → S → γ → S → ℝ},
+      (∀ (k : ℕ) (x : S) (z : γ) (s' : S), 0 ≤ r k x z s') →
+        (∀ (k : ℕ) (x : S) (z : γ), ∑ s', r k x z s' = 1) →
+          ∀ (a : S) (n : ℕ) {c : Fin m → S},
+            Function.Injective c →
+              Becoming.CellsUnderNoise.weightsAt (fun k => Becoming.CellsUnderNoise.noisyDescent (r k) field)
+                  (Becoming.CellsUnderNoise.pointMass fun x => a) n c ≤
+                1 / ↑m.factorial
+@Becoming.CellsUnderNoise.noisyDescent_from_independent : ∀ {S γ : Type} [inst : Fintype S] [DecidableEq S] {m : ℕ}
+  {field : S → List S → γ},
+  Becoming.FreeEnergyGuarantees.IdenticalCells.Exchangeable field →
+    ∀ {r : ℕ → S → γ → S → ℝ},
+      (∀ (k : ℕ) (x : S) (z : γ) (s' : S), 0 ≤ r k x z s') →
+        (∀ (k : ℕ) (x : S) (z : γ), ∑ s', r k x z s' = 1) →
+          ∀ {q₀ : S → ℝ},
+            (∀ (s : S), 0 ≤ q₀ s) →
+              ∑ s, q₀ s = 1 →
+                ∀ (n : ℕ) {c : Fin m → S},
+                  Function.Injective c →
+                    Becoming.CellsUnderNoise.weightsAt (fun k => Becoming.CellsUnderNoise.noisyDescent (r k) field)
+                        (fun c => ∏ i, q₀ (c i)) n c ≤
+                      1 / ↑m.factorial
+@Becoming.CellsUnderNoise.alike_positive : ∀ {S γ : Type} [inst : Fintype S] [inst_1 : DecidableEq S] {m : ℕ}
+  {field : S → List S → γ} {r : ℕ → S → γ → S → ℝ},
+  (∀ (k : ℕ) (x : S) (z : γ) (s' : S), 0 ≤ r k x z s') →
+    (∀ (k : ℕ) (x : S) (z : γ), ∑ s', r k x z s' = 1) →
+      ∀ (a : S) (n : ℕ),
+        ∃ b,
+          0 <
+            Becoming.CellsUnderNoise.weightsAt (fun k => Becoming.CellsUnderNoise.noisyDescent (r k) field)
+              (Becoming.CellsUnderNoise.pointMass fun x => a) n fun x => b
+Becoming.CellsUnderNoise.Witness.sum_two : ∀ (g : Becoming.CellsUnderNoise.Witness.Two → ℝ),
+  ∑ c, g c = g ![false, false] + g ![false, true] + g ![true, false] + g ![true, true]
+Becoming.CellsUnderNoise.Witness.partedUniform_law : (∀ (c : Becoming.CellsUnderNoise.Witness.Two),
+    0 ≤ Becoming.CellsUnderNoise.Witness.partedUniform c) ∧
+  ∑ c, Becoming.CellsUnderNoise.Witness.partedUniform c = 1
+Becoming.CellsUnderNoise.Witness.partedUniform_not_product : ¬∃ w,
+    ∀ (c : Becoming.CellsUnderNoise.Witness.Two),
+      Becoming.CellsUnderNoise.Witness.partedUniform c = w 0 (c 0) * w 1 (c 1)
+Becoming.CellsUnderNoise.Witness.parted_rearranged : ∀ (σ : Equiv.Perm (Fin 2))
+  (c : Becoming.CellsUnderNoise.Witness.Two), c (σ 0) ≠ c (σ 1) ↔ c 0 ≠ c 1
+Becoming.CellsUnderNoise.Witness.toParted_commutes : ∀ (σ : Equiv.Perm (Fin 2)),
+  Becoming.CellsUnderNoise.KernelCommutes σ Becoming.CellsUnderNoise.Witness.toParted
+Becoming.CellsUnderNoise.Witness.toParted_not_noisy : ∀ (f : Becoming.CellsUnderNoise.Witness.Two → Fin 2 → Bool)
+  (q : Bool → Bool → ℝ), Becoming.CellsUnderNoise.Witness.toParted ≠ Becoming.CellsUnderNoise.noisy f q
+@Becoming.CellsUnderNoise.Witness.toParted_not_noisyDescent : ∀ {γ : Type} (r : Bool → γ → Bool → ℝ)
+  (field : Bool → List Bool → γ),
+  Becoming.CellsUnderNoise.Witness.toParted ≠ Becoming.CellsUnderNoise.noisyDescent r field
+Becoming.CellsUnderNoise.Witness.assign_not_commutes : ¬∀ (c : Becoming.CellsUnderNoise.Witness.Two),
+    Becoming.CellsUnderNoise.Witness.assign (c ∘ ⇑(Equiv.swap 0 1)) =
+      Becoming.CellsUnderNoise.Witness.assign c ∘ ⇑(Equiv.swap 0 1)
+Becoming.CellsUnderNoise.Witness.toParted_eq_mixture : ∀ (c c' : Becoming.CellsUnderNoise.Witness.Two),
+  Becoming.CellsUnderNoise.Witness.toParted c c' =
+    1 / 2 *
+        Becoming.CellsUnderNoise.noisy Becoming.CellsUnderNoise.Witness.assign Becoming.CellsUnderNoise.noiseless c c' +
+      1 / 2 *
+        Becoming.CellsUnderNoise.noisy (fun c => Becoming.CellsUnderNoise.Witness.assign c ∘ ⇑(Equiv.swap 0 1))
+          Becoming.CellsUnderNoise.noiseless c c'
+Becoming.CellsUnderNoise.Witness.independentNoise_parts : Becoming.CellsUnderNoise.weightsAt
+    (fun x => Becoming.CellsUnderNoise.noisyDescent (fun x x_1 x_2 => 1 / 2) fun x x_1 => ())
+    (Becoming.CellsUnderNoise.pointMass fun x => false) 1 ![false, true] =
+  1 / 4
+Becoming.CellsUnderNoise.Witness.toParted_once : ∀ (b : Bool),
+  Becoming.CellsUnderNoise.weightsAt (fun x => Becoming.CellsUnderNoise.Witness.toParted)
+      (Becoming.CellsUnderNoise.pointMass fun x => b) 1 =
+    Becoming.CellsUnderNoise.Witness.partedUniform
+Becoming.CellsUnderNoise.Witness.alike_none : ∀ (b b' : Bool),
+  (Becoming.CellsUnderNoise.weightsAt (fun x => Becoming.CellsUnderNoise.Witness.toParted)
+      (Becoming.CellsUnderNoise.pointMass fun x => b) 1 fun x => b') =
+    0
+Becoming.CellsUnderNoise.Witness.each_half : ∀ (b : Bool),
+  Becoming.CellsUnderNoise.weightsAt (fun x => Becoming.CellsUnderNoise.Witness.toParted)
+        (Becoming.CellsUnderNoise.pointMass fun x => b) 1 ![true, false] =
+      1 / 2 ∧
+    Becoming.CellsUnderNoise.weightsAt (fun x => Becoming.CellsUnderNoise.Witness.toParted)
+        (Becoming.CellsUnderNoise.pointMass fun x => b) 1 ![false, true] =
+      1 / 2
+Becoming.CellsUnderNoise.Witness.toParted_stationary_iff : ∀ (p : Becoming.CellsUnderNoise.Witness.Two → ℝ),
+  ∑ c, p c = 1 →
+    (Becoming.CellsUnderNoise.Stationary Becoming.CellsUnderNoise.Witness.toParted p ↔
+      p = Becoming.CellsUnderNoise.Witness.partedUniform)
+Becoming.CellsUnderNoise.Witness.partedUniform_exchangeable : Becoming.CellsUnderNoise.Exchangeable
+  Becoming.CellsUnderNoise.Witness.partedUniform
+Becoming.CellsUnderNoise.Witness.firstCell_not_exchangeable : ¬Becoming.FreeEnergyGuarantees.IdenticalCells.Exchangeable
+    Becoming.CellsUnderNoise.Witness.firstCell
+Becoming.CellsUnderNoise.Witness.firstCell_assigns : Becoming.CellsUnderNoise.weightsAt
+      (fun x =>
+        Becoming.CellsUnderNoise.noisy
+          (Becoming.CellsUnderNoise.cellwise Becoming.CellsUnderNoise.Witness.flipBy
+            Becoming.CellsUnderNoise.Witness.firstCell)
+          Becoming.CellsUnderNoise.noiseless)
+      Becoming.CellsUnderNoise.Witness.partedUniform 1 ![false, true] =
+    1 ∧
+  Becoming.CellsUnderNoise.marginal
+        (Becoming.CellsUnderNoise.weightsAt
+          (fun x =>
+            Becoming.CellsUnderNoise.noisy
+              (Becoming.CellsUnderNoise.cellwise Becoming.CellsUnderNoise.Witness.flipBy
+                Becoming.CellsUnderNoise.Witness.firstCell)
+              Becoming.CellsUnderNoise.noiseless)
+          Becoming.CellsUnderNoise.Witness.partedUniform 1)
+        0 false =
+      1 ∧
+    Becoming.CellsUnderNoise.marginal
+        (Becoming.CellsUnderNoise.weightsAt
+          (fun x =>
+            Becoming.CellsUnderNoise.noisy
+              (Becoming.CellsUnderNoise.cellwise Becoming.CellsUnderNoise.Witness.flipBy
+                Becoming.CellsUnderNoise.Witness.firstCell)
+              Becoming.CellsUnderNoise.noiseless)
+          Becoming.CellsUnderNoise.Witness.partedUniform 1)
+        1 false =
+      0

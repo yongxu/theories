@@ -1,0 +1,288 @@
+@Becoming.MarketInstances.history_eq : ∀ {n : Nat} (p : MarketGenerativity.Parameters n)
+  (s : MarketGenerativity.State n) (d : Nat → MarketGenerativity.Disturbance n) (t : Nat),
+  MarketGenerativity.history p s d t = Becoming.Viability.history (MarketGenerativity.operatingStep p) s d t
+@Becoming.MarketInstances.guardedStep_eq : ∀ {n : Nat} (p : MarketGenerativity.Parameters n)
+  (b : MarketGenerativity.Bounds n) (e : MarketGenerativity.Disturbance n) (o : Option (MarketGenerativity.State n)),
+  MarketGenerativity.guardedStep p b e o =
+    Becoming.Viability.guardedStep (MarketGenerativity.operatingStep p) (MarketGenerativity.essentialReady p b) e o
+@Becoming.MarketInstances.guardedHistory_eq : ∀ {n : Nat} (p : MarketGenerativity.Parameters n)
+  (b : MarketGenerativity.Bounds n) (s : MarketGenerativity.State n) (d : Nat → MarketGenerativity.Disturbance n)
+  (t : Nat),
+  MarketGenerativity.guardedHistory p b s d t =
+    Becoming.Viability.guardedHistory (MarketGenerativity.operatingStep p) (MarketGenerativity.essentialReady p b) s d t
+@Becoming.MarketInstances.worst_admissible : ∀ {n : Nat} (b : MarketGenerativity.Bounds n),
+  MarketGenerativity.Admissible b { error := b.epsilon, shock := b.nu }
+@Becoming.MarketInstances.never_fails_iff : ∀ {n : Nat} (p : MarketGenerativity.Parameters n)
+  (b : MarketGenerativity.Bounds n) (s : MarketGenerativity.State n),
+  (∀ (d : Nat → MarketGenerativity.Disturbance n),
+      (∀ (t : Nat), MarketGenerativity.Admissible b (d t)) →
+        ∀ (t : Nat), MarketGenerativity.guardedHistory p b s d t = some (MarketGenerativity.history p s d t)) ↔
+    ∃ K,
+      K s ∧
+        (∀ (x : MarketGenerativity.State n), K x → MarketGenerativity.essentialReady p b x) ∧
+          ∀ (x : MarketGenerativity.State n) (e : MarketGenerativity.Disturbance n),
+            MarketGenerativity.Admissible b e → K x → K (MarketGenerativity.operatingStep p x e)
+@Becoming.MarketInstances.safe_closed : ∀ {n : Nat} {p : MarketGenerativity.Parameters n}
+  {b : MarketGenerativity.Bounds n},
+  MarketGenerativity.Certificate p b →
+    (∀ (x : MarketGenerativity.State n), MarketGenerativity.Safe p b x → MarketGenerativity.essentialReady p b x) ∧
+      ∀ (x : MarketGenerativity.State n) (e : MarketGenerativity.Disturbance n),
+        MarketGenerativity.Admissible b e →
+          MarketGenerativity.Safe p b x → MarketGenerativity.Safe p b (MarketGenerativity.operatingStep p x e)
+@Becoming.MarketInstances.safe_never_fails : ∀ {n : Nat} {p : MarketGenerativity.Parameters n}
+  {b : MarketGenerativity.Bounds n} {s : MarketGenerativity.State n},
+  MarketGenerativity.Certificate p b →
+    MarketGenerativity.Safe p b s →
+      ∀ (d : Nat → MarketGenerativity.Disturbance n),
+        (∀ (t : Nat), MarketGenerativity.Admissible b (d t)) →
+          ∀ (t : Nat), MarketGenerativity.guardedHistory p b s d t = some (MarketGenerativity.history p s d t)
+@Becoming.MarketInstances.safe_within_kernel : ∀ {n : Nat} {p : MarketGenerativity.Parameters n}
+  {b : MarketGenerativity.Bounds n},
+  MarketGenerativity.Certificate p b →
+    ∀ {s : MarketGenerativity.State n},
+      MarketGenerativity.Safe p b s →
+        Becoming.Viability.Kernel
+          (Becoming.Viability.disturbed (MarketGenerativity.operatingStep p) (MarketGenerativity.Admissible b))
+          (MarketGenerativity.essentialReady p b) s
+Becoming.MarketInstances.example_never_fails : ∀ (d : Nat → MarketGenerativity.Disturbance 1),
+  (∀ (t : Nat), MarketGenerativity.Admissible MarketGenerativity.exampleBounds (d t)) →
+    ∀ (t : Nat),
+      MarketGenerativity.guardedHistory MarketGenerativity.exampleParameters MarketGenerativity.exampleBounds
+          MarketGenerativity.exampleState d t =
+        some (MarketGenerativity.history MarketGenerativity.exampleParameters MarketGenerativity.exampleState d t)
+@Becoming.MarketInstances.floor_of_stock : ∀ {x : MarketGenerativity.State 1},
+  5 ≤ x.stock 0 → Becoming.MarketInstances.floor x
+@Becoming.MarketInstances.stock_of_floor : ∀ {x : MarketGenerativity.State 1},
+  Becoming.MarketInstances.floor x → 5 ≤ x.stock 0
+Becoming.MarketInstances.run_eq : ∀ (beta : Nat → Rat) (d : Nat → MarketGenerativity.Disturbance 1)
+  (initial : MarketGenerativity.State 1) (n : Nat),
+  FiniteSupportObstruction.run beta d initial n =
+    Becoming.Viability.history Becoming.MarketInstances.scheduled initial (fun k => (beta k, d k)) n
+Becoming.MarketInstances.guarded_eq : ∀ (beta : Nat → Rat) (d : Nat → MarketGenerativity.Disturbance 1)
+  (initial : MarketGenerativity.State 1) (n : Nat),
+  FiniteSupportObstruction.guarded beta d initial n =
+    Becoming.Viability.guardedHistory Becoming.MarketInstances.scheduled Becoming.MarketInstances.floor initial
+      (fun k => (beta k, d k)) n
+Becoming.MarketInstances.orbit_growth : ∀ (v : Rat) (n : Nat),
+  Becoming.Law.orbit Becoming.MarketInstances.growth v n = v * RegimeAttraction.radius (3 / 2) 1 n
+Becoming.MarketInstances.forces_failure_instance : ∀ (beta : Nat → Rat) (d : Nat → MarketGenerativity.Disturbance 1)
+  (initial : MarketGenerativity.State 1) (N : Nat),
+  FiniteSupportObstruction.PairPhysical initial →
+    5 ≤ initial.stock 0 →
+      (∀ (n : Nat), 0 ≤ (d n).shock 0) →
+        initial.x * RegimeAttraction.radius (3 / 2) 1 N ≤ 1 / 6 →
+          initial.stock 0 < 5 + ↑N → FiniteSupportObstruction.guarded beta d initial N = none
+Becoming.MarketInstances.support_antitone : ∀ (stock x shock cost : Rat),
+  shock ≤ cost →
+    MarketGenerativity.supportStep stock (1 / 10) 2 1 x 0 cost ≤
+      MarketGenerativity.supportStep stock (1 / 10) 2 1 x 0 shock
+Becoming.MarketInstances.cover_ladder : ∀ (cost : Rat),
+  0 ≤ cost →
+    Becoming.Lasting.Ladder Becoming.MarketInstances.scheduled (fun a => a.snd.shock 0 ≤ cost)
+      Becoming.MarketInstances.floor (Becoming.MarketInstances.covered cost)
+Becoming.MarketInstances.history_scheduled : ∀ (b : Rat) (s : MarketGenerativity.State 1)
+  (d : Nat → MarketGenerativity.Disturbance 1) (n : Nat),
+  MarketGenerativity.history (FiniteSupportObstruction.parameters b) s d n =
+    Becoming.Viability.history Becoming.MarketInstances.scheduled s (fun k => (b, d k)) n
+Becoming.MarketInstances.guardedHistory_scheduled : ∀ (b : Rat) (s : MarketGenerativity.State 1)
+  (d : Nat → MarketGenerativity.Disturbance 1) (n : Nat),
+  MarketGenerativity.guardedHistory (FiniteSupportObstruction.parameters b) MarketGenerativity.exampleBounds s d n =
+    Becoming.Viability.guardedHistory Becoming.MarketInstances.scheduled Becoming.MarketInstances.floor s
+      (fun k => (b, d k)) n
+Becoming.MarketInstances.supported_prefix_instance : ∀ (b cost initial : Rat) (s : RegimeBoundary.OperatingState)
+  (N : Nat),
+  0 ≤ cost →
+    RegimeAttraction.physical s →
+      RegimeTransition.cover cost N ≤ initial →
+        ∀ (t : Nat),
+          t ≤ N →
+            MarketGenerativity.guardedHistory (FiniteSupportObstruction.parameters b) MarketGenerativity.exampleBounds
+                (RegimeAttraction.lift s initial) (fun x => RegimeTransition.pulseDisturbance cost) t =
+              some
+                (MarketGenerativity.history (FiniteSupportObstruction.parameters b) (RegimeAttraction.lift s initial)
+                  (fun x => RegimeTransition.pulseDisturbance cost) t)
+Becoming.MarketInstances.pulse_prefix_instance : ∀ (cost initial : Rat) (s : RegimeBoundary.OperatingState) (N : Nat),
+  0 ≤ cost →
+    RegimeAttraction.physical s →
+      RegimeTransition.cover cost N ≤ initial →
+        ∀ (t : Nat),
+          t ≤ N →
+            MarketGenerativity.guardedHistory RegimeTransition.pulseParameters MarketGenerativity.exampleBounds
+                (RegimeAttraction.lift s initial) (fun x => RegimeTransition.pulseDisturbance cost) t =
+              some
+                (MarketGenerativity.history RegimeTransition.pulseParameters (RegimeAttraction.lift s initial)
+                  (fun x => RegimeTransition.pulseDisturbance cost) t)
+Becoming.MarketInstances.partial_prefix_instance : ∀ (b cost initial : Rat) (s : RegimeBoundary.OperatingState)
+  (N : Nat),
+  0 ≤ cost →
+    RegimeAttraction.physical s →
+      RegimeTransition.cover cost N ≤ initial →
+        ∀ (t : Nat),
+          t ≤ N →
+            MarketGenerativity.guardedHistory (PartialRegimeTransition.partialParameters b)
+                MarketGenerativity.exampleBounds (RegimeAttraction.lift s initial)
+                (fun x => RegimeTransition.pulseDisturbance cost) t =
+              some
+                (MarketGenerativity.history (PartialRegimeTransition.partialParameters b)
+                  (RegimeAttraction.lift s initial) (fun x => RegimeTransition.pulseDisturbance cost) t)
+Becoming.MarketInstances.cover_exact : ∀ (cost : Rat),
+  0 ≤ cost →
+    ∀ (n : Nat) (stock : Rat),
+      Becoming.Lasting.Lasts (Becoming.MarketInstances.worstSupport cost) (fun x => True) (fun x => 5 ≤ x) n stock ↔
+        RegimeTransition.cover cost n ≤ stock
+Becoming.MarketInstances.path_eq : ∀ (b : Rat) (s : RegimeBoundary.OperatingState) (n : Nat),
+  PartialRegimeTransition.path b s n = Becoming.Law.orbit (RegimeAttraction.family b) s n
+Becoming.MarketInstances.never_lands_iff : ∀ (b : Rat),
+  (∃ s,
+      (RegimeAttraction.physical s ∧ 0 < s.fst) ∧
+        ∀ (n : Nat), ¬RegimeTransition.Landing (PartialRegimeTransition.path b s n)) ↔
+    ∃ K,
+      (∃ s, (RegimeAttraction.physical s ∧ 0 < s.fst) ∧ K s) ∧
+        (∀ (x : RegimeBoundary.OperatingState), K x → ¬RegimeTransition.Landing x) ∧
+          ∀ (x : RegimeBoundary.OperatingState), K x → K (RegimeAttraction.family b x)
+Becoming.MarketInstances.margin_iff : ∀ (b : Rat), 0 ≤ RegimeBoundary.margin (1 / 4) b 1 (3 / 8) ↔ b ≤ 5 / 12
+Becoming.MarketInstances.lands_iff_margin : ∀ (b : Rat),
+  0 ≤ b →
+    b ≤ 3 / 4 →
+      ((∀ (s : RegimeBoundary.OperatingState),
+          RegimeAttraction.physical s →
+            0 < s.fst → ∃ n, RegimeTransition.Landing (PartialRegimeTransition.path b s n)) ↔
+        0 ≤ RegimeBoundary.margin (1 / 4) b 1 (3 / 8))
+Becoming.MarketInstances.lands_iff_no_closed : ∀ (b : Rat),
+  0 ≤ b →
+    b ≤ 3 / 4 →
+      ((∀ (s : RegimeBoundary.OperatingState),
+          RegimeAttraction.physical s →
+            0 < s.fst → ∃ n, RegimeTransition.Landing (PartialRegimeTransition.path b s n)) ↔
+        ¬∃ K,
+            (∃ s, (RegimeAttraction.physical s ∧ 0 < s.fst) ∧ K s) ∧
+              (∀ (x : RegimeBoundary.OperatingState), K x → ¬RegimeTransition.Landing x) ∧
+                ∀ (x : RegimeBoundary.OperatingState), K x → K (RegimeAttraction.family b x))
+Becoming.MarketInstances.fixed_point_instance : ∀ (b : Rat),
+  5 / 12 < b →
+    b ≤ 3 / 4 →
+      RegimeAttraction.physical (RegimeAttraction.middle b) ∧
+        0 < (RegimeAttraction.middle b).fst ∧
+          ∀ (n : Nat), ¬RegimeTransition.Landing (PartialRegimeTransition.path b (RegimeAttraction.middle b) n)
+@Becoming.MarketInstances.rising_funnel : ∀ {S : Type} (next : S → S) (target R : S → Prop) (q : S → Rat)
+  (top gain : Rat),
+  (∀ (x : S), R x → ¬target x → R (next x)) →
+    (∀ (x : S), R x → ¬target x → q x ≤ top) →
+      (∀ (x : S), R x → ¬target x → q x + gain ≤ q (next x)) →
+        Becoming.Lasting.Funnel (Becoming.Lasting.determined next) (fun x => True) target fun k x =>
+          R x ∧ top - q x < ↑k * gain
+@Becoming.MarketInstances.rising_reaches : ∀ {S : Type} {next : S → S} {target R : S → Prop} {q : S → Rat}
+  {top gain : Rat},
+  (∀ (x : S), R x → ¬target x → R (next x)) →
+    (∀ (x : S), R x → ¬target x → q x ≤ top) →
+      (∀ (x : S), R x → ¬target x → q x + gain ≤ q (next x)) →
+        ∀ {n : Nat},
+          (∀ (x : S), R x → top - q x < ↑n * gain) →
+            ∀ (x : S), R x → Becoming.Lasting.Reaches (Becoming.Lasting.determined next) (fun x => True) target n x
+Becoming.MarketInstances.share_kept : ∀ (b : Rat) (x : RegimeBoundary.OperatingState),
+  RegimeAttraction.physical x → 3 / 8 ≤ x.snd.fst → x.fst ≤ (RegimeAttraction.family b x).fst
+Becoming.MarketInstances.influence_le : ∀ (b w0 : Rat) (x : RegimeBoundary.OperatingState),
+  x.snd.snd ≤ w0 → (RegimeAttraction.family b x).snd.snd ≤ 3 / 4 * w0 + 1 / 4 * (1 - x.fst)
+Becoming.MarketInstances.settled_kept : ∀ (b a : Rat),
+  0 ≤ b →
+    b ≤ 5 / 12 →
+      0 ≤ a →
+        a ≤ 1 / 2 →
+          ∀ (x : RegimeBoundary.OperatingState),
+            Becoming.MarketInstances.Settled a x → Becoming.MarketInstances.Settled a (RegimeAttraction.family b x)
+Becoming.MarketInstances.settled_reaches_share : ∀ (b a : Rat),
+  0 ≤ b →
+    b ≤ 5 / 12 →
+      0 ≤ a →
+        a ≤ 1 / 2 →
+          ∀ {n : Nat},
+            7 / 8 < ↑n * (a * (a / 16) / 10) →
+              ∀ (x : RegimeBoundary.OperatingState),
+                Becoming.MarketInstances.Settled a x →
+                  Becoming.Lasting.Reaches (Becoming.Lasting.determined (RegimeAttraction.family b)) (fun x => True)
+                    (Becoming.MarketInstances.ShareHigh a) n x
+Becoming.MarketInstances.share_reaches_influence : ∀ (b a : Rat),
+  0 ≤ b →
+    b ≤ 5 / 12 →
+      0 ≤ a →
+        a ≤ 1 / 2 →
+          ∀ (x : RegimeBoundary.OperatingState),
+            Becoming.MarketInstances.ShareHigh a x →
+              Becoming.Lasting.Reaches (Becoming.Lasting.determined (RegimeAttraction.family b)) (fun x => True)
+                (Becoming.MarketInstances.InfluenceLow a) 25 x
+Becoming.MarketInstances.influence_reaches_landing : ∀ (b a : Rat),
+  0 ≤ b →
+    b ≤ 5 / 12 →
+      0 ≤ a →
+        a ≤ 1 / 2 →
+          ∀ (x : RegimeBoundary.OperatingState),
+            Becoming.MarketInstances.InfluenceLow a x →
+              Becoming.Lasting.Reaches (Becoming.Lasting.determined (RegimeAttraction.family b)) (fun x => True)
+                RegimeTransition.Landing 3 x
+Becoming.MarketInstances.settled_reaches_landing : ∀ (b a : Rat),
+  0 ≤ b →
+    b ≤ 5 / 12 →
+      0 ≤ a →
+        a ≤ 1 / 2 →
+          ∀ {n : Nat},
+            7 / 8 < ↑n * (a * (a / 16) / 10) →
+              ∀ (x : RegimeBoundary.OperatingState),
+                Becoming.MarketInstances.Settled a x →
+                  Becoming.Lasting.Reaches (Becoming.Lasting.determined (RegimeAttraction.family b)) (fun x => True)
+                    RegimeTransition.Landing (3 + 25 + n) x
+Becoming.MarketInstances.seed_reaches_settled : ∀ (b : Rat),
+  0 ≤ b →
+    b ≤ 5 / 12 →
+      ∀ (s : RegimeBoundary.OperatingState),
+        RegimeAttraction.physical s →
+          0 < s.fst →
+            ∃ M,
+              Becoming.Lasting.Reaches (Becoming.Lasting.determined (RegimeAttraction.family b)) (fun x => True)
+                (Becoming.MarketInstances.Settled (s.fst / 2)) M s
+Becoming.MarketInstances.seed_reaches_landing : ∀ (b : Rat),
+  0 ≤ b →
+    b ≤ 5 / 12 →
+      ∀ (s : RegimeBoundary.OperatingState),
+        RegimeAttraction.physical s →
+          0 < s.fst →
+            ∃ n,
+              Becoming.Lasting.Reaches (Becoming.Lasting.determined (RegimeAttraction.family b)) (fun x => True)
+                RegimeTransition.Landing n s
+Becoming.MarketInstances.landing_side_instance : ∀ (b : Rat),
+  0 ≤ b →
+    b ≤ 5 / 12 →
+      ∀ (s : RegimeBoundary.OperatingState),
+        RegimeAttraction.physical s → 0 < s.fst → ∃ n, RegimeTransition.Landing (PartialRegimeTransition.path b s n)
+Becoming.MarketInstances.rescue_landing_instance : ∀ (s : RegimeBoundary.OperatingState),
+  RegimeAttraction.physical s → 0 < s.fst → ∃ n, RegimeTransition.Landing (RegimeTransition.trajectory s n)
+Becoming.MarketInstances.landing_boundary_instance : ∀ (b : Rat),
+  0 ≤ b →
+    b ≤ 3 / 4 →
+      ((∀ (s : RegimeBoundary.OperatingState),
+          RegimeAttraction.physical s →
+            0 < s.fst → ∃ n, RegimeTransition.Landing (PartialRegimeTransition.path b s n)) ↔
+        b ≤ 5 / 12)
+Becoming.MarketInstances.lands_iff_funnel : ∀ (b : Rat),
+  (∀ (s : RegimeBoundary.OperatingState),
+      RegimeAttraction.physical s → 0 < s.fst → ∃ n, RegimeTransition.Landing (PartialRegimeTransition.path b s n)) ↔
+    ∀ (s : RegimeBoundary.OperatingState),
+      RegimeAttraction.physical s →
+        0 < s.fst →
+          ∃ n F,
+            F n s ∧
+              (∀ (x : RegimeBoundary.OperatingState), F 0 x → RegimeTransition.Landing x) ∧
+                ∀ (k : Nat) (x : RegimeBoundary.OperatingState),
+                  F (k + 1) x → RegimeTransition.Landing x ∨ F k (RegimeAttraction.family b x)
+Becoming.MarketInstances.obstructed_seeds_instance : ∀ (stock : Rat),
+  5 ≤ stock →
+    ∃ N,
+      0 < N ∧
+        0 < FiniteSupportObstruction.seedLimit N ∧
+          ∀ (x q w : Rat),
+            0 < x →
+              x ≤ FiniteSupportObstruction.seedLimit N →
+                0 ≤ q →
+                  q ≤ 1 →
+                    ∀ (beta : Nat → Rat) (d : Nat → MarketGenerativity.Disturbance 1),
+                      (∀ (n : Nat), 0 ≤ (d n).shock 0) →
+                        FiniteSupportObstruction.guarded beta d (RegimeAttraction.lift (x, q, w) stock) N = none

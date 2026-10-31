@@ -1,0 +1,30 @@
+fallible-inquiry-verification 20261020T161546.707477Z differs (21): Becoming.Prelude Becoming.Amounts Becoming.Frame Becoming.Arising Becoming.Flow Becoming.Change Becoming.Evolution Becoming.Population
+correction-inquiry-verification 20261020T161757.201244Z differs (91): Becoming.Prelude Becoming.Frame Becoming.Laws Becoming.Amounts Becoming.Arising Becoming.Recurrence Becoming.Labelled Becoming.Mechanism
+machine-instances-verification 20261020T161859.257200Z differs (23): Becoming.Prelude Becoming.Frame Becoming.Laws Becoming.Amounts Becoming.Arising Becoming.Flow Becoming.Change Becoming.Evolution
+learning-correspondence-verification 20261020T161905.961078Z differs (23): Becoming.Prelude Becoming.Amounts Becoming.Frame Becoming.Arising Becoming.Flow Becoming.Change Becoming.Evolution Becoming.Population
+copying-instances-verification 20261020T161910.956874Z differs (4): Becoming.Prelude Becoming.Frame Becoming.Copying Becoming.Laws
+retrodiction-instances-verification 20261020T161914.501944Z differs (1): Becoming.Prelude
+market-instances-verification 20261020T161917.735916Z differs (18): Becoming.Prelude Becoming.Frame Becoming.Recurrence Becoming.Amounts Becoming.Arising Becoming.Labelled Becoming.Laws Becoming.Mechanism
+protocol-instances-verification 20261020T161923.157515Z differs (3): Becoming.Prelude Becoming.Frame Becoming.Laws
+versioned-task-instances-verification 20261020T161926.448088Z differs (6): Becoming.Prelude Becoming.Frame Becoming.Laws Becoming.Amounts Becoming.Arising Becoming.Flow
+shared-stock-instances-verification 20261020T161930.665727Z differs (14): Becoming.Prelude Becoming.Amounts Becoming.Frame Becoming.Arising Becoming.Flow Becoming.Change Becoming.Evolution Becoming.Population
+continuation-correspondence-verification 20261020T161935.181496Z differs (2): Becoming.Prelude Becoming.Frame
+transmission-correspondence-verification 20261020T161938.520043Z differs (14): Becoming.Prelude Becoming.Frame Becoming.Copying Becoming.Amounts Becoming.Arising Becoming.Flow Becoming.Change Becoming.Evolution
+preparation-correspondence-verification 20261020T161943.503298Z differs (24): Becoming.Prelude Becoming.Frame Becoming.Copying Becoming.Amounts Becoming.Arising Becoming.Flow Becoming.Change Becoming.Evolution
+judging-correspondence-verification 20261020T161948.968917Z differs (23): Becoming.Prelude Becoming.Amounts Becoming.Frame Becoming.Arising Becoming.Flow Becoming.Change Becoming.Evolution Becoming.Population
+renewing-correspondence-verification 20261020T161953.940017Z differs (5): Becoming.Prelude Becoming.Amounts Becoming.Frame Becoming.Arising Becoming.Flow
+substitution-correspondence-verification 20261020T161957.579185Z differs (23): Becoming.Prelude Becoming.Amounts Becoming.Frame Becoming.Arising Becoming.Flow Becoming.Change Becoming.Evolution Becoming.Population
+organization-correspondence-verification 20261025T185035.252368Z differs (8): Becoming.Grammar Becoming.GrammarMap Becoming.GrammarLaws Becoming.Flow Becoming.Population Becoming.Dissipation Becoming.Reserve Becoming.Decidedness
+living-organization-correspondence-verification 20261020T162006.335470Z differs (2): Becoming.Prelude Becoming.Frame
+prefix-safety-correspondence-verification 20261020T162009.405485Z differs (6): Becoming.Prelude Becoming.Frame Becoming.Amounts Becoming.Arising Becoming.Recurrence Becoming.Labelled
+finite-branching-correspondence-verification 20261020T162012.952848Z differs (18): Becoming.Prelude Becoming.Frame Becoming.Recurrence Becoming.Amounts Becoming.Arising Becoming.Labelled Becoming.Laws Becoming.Mechanism
+selection-relabel-correspondence-verification 20261020T162018.010437Z differs (19): Becoming.Prelude Becoming.Amounts Becoming.Frame Becoming.Arising Becoming.Flow Becoming.Change Becoming.Evolution Becoming.Population
+ideals-correspondence-verification 20261020T162022.465111Z differs (15): Becoming.Prelude Becoming.Frame Becoming.Amounts Becoming.Arising Becoming.Recurrence Becoming.Labelled Becoming.Laws Becoming.Mechanism
+entropy-production-verification 20261027T042508.827829Z differs (6): Becoming.Grammar Becoming.GrammarMap Becoming.GrammarLaws Becoming.Flow Becoming.Dissipation Becoming.Reserve
+cells-under-noise-verification 20261030T160959.698859Z differs (4): Becoming.Grammar Becoming.GrammarMap Becoming.GrammarLaws Becoming.Response
+expected-free-energy-reals-verification 20261030T101649.229011Z differs (3): Becoming.Grammar Becoming.GrammarMap Becoming.GrammarLaws
+free-energy-reals-verification 20261030T043328.214810Z differs (3): Becoming.Grammar Becoming.GrammarMap Becoming.GrammarLaws
+regime-reals-verification 20261021T102713.696033Z differs (34): Becoming.Prelude Becoming.Frame Becoming.Recurrence Becoming.Amounts Becoming.Arising Becoming.Labelled Becoming.Laws Becoming.Mechanism
+slowing-down-verification 20261022T104044.892409Z matches 
+representation-verification 20261022T151119.678274Z differs (16): Becoming.Amounts Becoming.Frame Becoming.Arising Becoming.Flow Becoming.Change Becoming.Population Becoming.Dissipation Becoming.Reserve
+STALE 28 of 29: fallible-inquiry-verification correction-inquiry-verification machine-instances-verification learning-correspondence-verification copying-instances-verification retrodiction-instances-verification market-instances-verification protocol-instances-verification versioned-task-instances-verification shared-stock-instances-verification continuation-correspondence-verification transmission-correspondence-verification preparation-correspondence-verification judging-correspondence-verification renewing-correspondence-verification substitution-correspondence-verification organization-correspondence-verification living-organization-correspondence-verification prefix-safety-correspondence-verification finite-branching-correspondence-verification selection-relabel-correspondence-verification ideals-correspondence-verification entropy-production-verification cells-under-noise-verification expected-free-energy-reals-verification free-energy-reals-verification regime-reals-verification representation-verification

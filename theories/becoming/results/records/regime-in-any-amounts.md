@@ -46,7 +46,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked: the core's 25 new declarations of Becoming.RegimeMargin by the consolidated Lean 4.29.1 checker (receipt 20261021T102032.314972Z), with empty axiom reports; the periphery module RegimeReals's 17 declarations by its own checker with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261021T102713.696033Z), each on Lean's standard axioms only, its core modules matching passed receipts. Built and reviewed in one session, with no separate reviewer; author review in study section 302; not independently reviewed by a person.
+Machine-checked: the core's 25 new declarations of Becoming.RegimeMargin by the consolidated Lean 4.29.1 checker (receipt 20261021T102032.314972Z), with empty axiom reports; the periphery module RegimeReals's 17 declarations by its own checker with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134231.224593Z), each on Lean's standard axioms only, its core modules matching passed receipts. Built and reviewed in one session, with no separate reviewer; author review in study section 302; not independently reviewed by a person.
 
 Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
 
@@ -106,6 +106,7 @@ Orbits of planar cooperative (order-preserving) maps are eventually componentwis
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261023T055339.893510Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T070053.995027Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/regime-reals-checks/20261031T134231.224593Z/verification.json) | — |
 
 Aliases: `the regime in any amounts`, `the shape of a run of the adjusted step`, `runs of the regime over the reals`, `任何量中的体制`, `Becoming.RegimeMargin.Drawn.run_shape`, `Becoming.RegimeMargin.Drawn.converges`, `Becoming.RegimeMargin.Drawn.Relaxation.never_rests`
 

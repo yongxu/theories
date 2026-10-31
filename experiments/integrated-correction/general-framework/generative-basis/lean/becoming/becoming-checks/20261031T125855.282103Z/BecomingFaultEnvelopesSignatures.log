@@ -1,0 +1,83 @@
+@Becoming.FaultEnvelopes.supports_outside_iff : ∀ {supports : Becoming.FaultEnvelopes.Domain → Bool}
+  {bad : List Becoming.FaultEnvelopes.Domain} {d : Becoming.FaultEnvelopes.Domain},
+  (supports d && !bad.contains d) = true ↔ supports d = true ∧ ¬d ∈ bad
+@Becoming.FaultEnvelopes.certificate_iff : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : Becoming.FaultEnvelopes.Envelope} {supports : Becoming.FaultEnvelopes.Domain → Bool},
+  Becoming.FaultEnvelopes.certificate roster faults supports = true ↔
+    faults ≠ [] ∧
+      ∀ (bad : List Becoming.FaultEnvelopes.Domain), bad ∈ faults → ∃ d, d ∈ roster ∧ supports d = true ∧ ¬d ∈ bad
+Becoming.FaultEnvelopes.certificate_witness : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (faults : Becoming.FaultEnvelopes.Envelope) (supports : Becoming.FaultEnvelopes.Domain → Bool),
+  Becoming.FaultEnvelopes.certificate roster faults supports = true →
+    ∀ (bad : List Becoming.FaultEnvelopes.Domain), bad ∈ faults → ∃ d, d ∈ roster ∧ supports d = true ∧ ¬d ∈ bad
+Becoming.FaultEnvelopes.certificate_sound : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (faults : Becoming.FaultEnvelopes.Envelope) (supports : Becoming.FaultEnvelopes.Domain → Bool)
+  (bad : List Becoming.FaultEnvelopes.Domain),
+  bad ∈ faults →
+    ∀ (P : Prop),
+      (∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → ¬d ∈ bad → supports d = true → P) →
+        Becoming.FaultEnvelopes.certificate roster faults supports = true → P
+Becoming.FaultEnvelopes.certificate_available : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (faults : Becoming.FaultEnvelopes.Envelope) (bad : List Becoming.FaultEnvelopes.Domain),
+  bad ∈ faults →
+    Becoming.FaultEnvelopes.separated roster faults →
+      ∀ (supports : Becoming.FaultEnvelopes.Domain → Bool),
+        (∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → ¬d ∈ bad → supports d = true) →
+          Becoming.FaultEnvelopes.certificate roster faults supports = true
+Becoming.FaultEnvelopes.support_inside_fault_rejected : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (faults : Becoming.FaultEnvelopes.Envelope) (supports : Becoming.FaultEnvelopes.Domain → Bool)
+  (bad : List Becoming.FaultEnvelopes.Domain),
+  bad ∈ faults →
+    (∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → supports d = true → d ∈ bad) →
+      Becoming.FaultEnvelopes.certificate roster faults supports = false
+Becoming.FaultEnvelopes.covering_faults_reject : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (faults : Becoming.FaultEnvelopes.Envelope) (actual possible : List Becoming.FaultEnvelopes.Domain),
+  possible ∈ faults →
+    (∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → d ∈ actual ∨ d ∈ possible) →
+      (Becoming.FaultEnvelopes.certificate roster faults fun d => !actual.contains d) = false
+Becoming.FaultEnvelopes.availability_iff_separated : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (faults : Becoming.FaultEnvelopes.Envelope),
+  (∀ (actual : List Becoming.FaultEnvelopes.Domain),
+      actual ∈ faults → (Becoming.FaultEnvelopes.certificate roster faults fun d => !actual.contains d) = true) ↔
+    Becoming.FaultEnvelopes.separated roster faults
+@Becoming.FaultEnvelopes.any_append : ∀ {α : Type} {p : α → Bool} (l m : List α), (l ++ m).any p = (l.any p || m.any p)
+Becoming.FaultEnvelopes.or_self : ∀ (b : Bool), (b || b) = b
+@Becoming.FaultEnvelopes.all_congr : ∀ {α : Type} {p q : α → Bool} {l : List α},
+  (∀ (x : α), x ∈ l → p x = q x) → l.all p = l.all q
+@Becoming.FaultEnvelopes.or_absorbed : ∀ {a b : Bool}, (a = true → b = true) → (a || b) = b
+@Becoming.FaultEnvelopes.copied_roster_same : ∀ {roster extra : List Becoming.FaultEnvelopes.Domain}
+  {faults : Becoming.FaultEnvelopes.Envelope} {supports : Becoming.FaultEnvelopes.Domain → Bool},
+  (∀ (e : Becoming.FaultEnvelopes.Domain),
+      e ∈ extra →
+        ∃ d,
+          d ∈ roster ∧
+            supports e = supports d ∧
+              ∀ (bad : List Becoming.FaultEnvelopes.Domain), bad ∈ faults → (e ∈ bad ↔ d ∈ bad)) →
+    Becoming.FaultEnvelopes.certificate (extra ++ roster) faults supports =
+      Becoming.FaultEnvelopes.certificate roster faults supports
+Becoming.FaultEnvelopes.duplicated_roster_same : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (faults : Becoming.FaultEnvelopes.Envelope) (supports : Becoming.FaultEnvelopes.Domain → Bool),
+  Becoming.FaultEnvelopes.certificate (roster ++ roster) faults supports =
+    Becoming.FaultEnvelopes.certificate roster faults supports
+Becoming.FaultEnvelopes.empty_envelope_rejects : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (supports : Becoming.FaultEnvelopes.Domain → Bool), Becoming.FaultEnvelopes.certificate roster [] supports = false
+Becoming.FaultEnvelopes.total_fault_rejects : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (faults : Becoming.FaultEnvelopes.Envelope) (supports : Becoming.FaultEnvelopes.Domain → Bool),
+  roster ∈ faults → Becoming.FaultEnvelopes.certificate roster faults supports = false
+Becoming.FaultEnvelopes.stronger_envelope_no_new_acceptance : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (old new : Becoming.FaultEnvelopes.Envelope) (supports : Becoming.FaultEnvelopes.Domain → Bool),
+  old ≠ [] →
+    (∀ (b : List Becoming.FaultEnvelopes.Domain),
+        b ∈ old → ∃ c, c ∈ new ∧ ∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ b → d ∈ c) →
+      Becoming.FaultEnvelopes.certificate roster new supports = true →
+        Becoming.FaultEnvelopes.certificate roster old supports = true
+@Becoming.FaultEnvelopes.separated_of_test : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : Becoming.FaultEnvelopes.Envelope},
+  Becoming.FaultEnvelopes.separatedTest roster faults = true → Becoming.FaultEnvelopes.separated roster faults
+Becoming.FaultEnvelopes.one_fault_separation : Becoming.FaultEnvelopes.separated Becoming.FaultEnvelopes.roster3
+  Becoming.FaultEnvelopes.singleFault
+Becoming.FaultEnvelopes.correlated_four_separation : Becoming.FaultEnvelopes.separated Becoming.FaultEnvelopes.roster4
+  Becoming.FaultEnvelopes.correlated4
+Becoming.FaultEnvelopes.correlated_three_blocks : (Becoming.FaultEnvelopes.certificate Becoming.FaultEnvelopes.roster3
+    Becoming.FaultEnvelopes.correlated3 fun d => d == 2) =
+  false

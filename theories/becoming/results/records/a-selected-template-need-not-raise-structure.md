@@ -25,7 +25,7 @@
 - The stated finite event law: one next event, weighted by supplied natural numbers that are event weights, not fitness or rates, each event copying one kind or changing no count; formation and loss are outside it.
 - The share reading needs positive denominators, a + h > 0 and a positive total weight; the identities hold on the numerators without them.
 - The transfer cells AH and HA extend the event law; they are not mutation in the native copying, which keeps the template's kind. No instance theorem joins the table to Price's equation in counting form.
-- Periphery, a module before the spine on Lean's core library and Std: propext in 13 of its 19 declarations, the other 6 none, as the receipt reports.
+- Periphery, a module before the spine on Lean's core library and Std: propext in 9 of its 19 declarations, the other 10 none, as the receipt reports.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -40,7 +40,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the module's checker with Lean 4.29.1 (receipt evolution/verification.json, passed 7 October 2026, fresh temporary build; it binds the current bytes): ConsequenceTransmission, 19 declarations audited, 13 with propext only and 6 with empty reports, 19 cited here; the developmental extension's receipt re-checks the same bytes. An internal counter-review read the source and the receipt hashes, without recompiling; not reviewed by a person.
+Checked by the module's checker with Lean 4.29.1 (receipt evolution/verification.json, passed 31 October 2026, fresh temporary build; it binds the current bytes): ConsequenceTransmission, 19 declarations audited, 9 with propext only and 10 with empty reports, 19 cited here; the developmental extension's receipt re-checks the same bytes. An internal counter-review read the source and the receipt hashes, without recompiling; not reviewed by a person.
 
 Canonical source: [ConsequenceTransmission.lean](../../../../experiments/shared-renewal-capability/regulation/retention/formation/evolution/ConsequenceTransmission.lean)
 
@@ -80,6 +80,7 @@ Aliases: `A selected template need not increase the successor's structure`, `被
 ### History
 
 - 27 October 2026: added (DF2), a selected template need not raise the successors' structure: the share criterion on successor columns, its agreement with template rows under faithful or balanced transfer, native copying faithful, and the reversal and opposite-access witnesses; from DEFECTS-FOUND (triage row 145); study section 426.
+- 31 October 2026, RV21c (study section 480): axiom reports from the renewed receipt; fewer, the same declarations, none gained, from FormedSelection's set_option line of 8 October.
 
 </details>
 

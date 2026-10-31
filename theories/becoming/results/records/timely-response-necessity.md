@@ -50,7 +50,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked. The current bytes of the core module Becoming.TimedResponse are bound to the consolidated core checker's receipt becoming-checks/20261019T160413.543456Z (check_becoming.py, Lean 4.29.1), every cited declaration with an empty axiom report; those of the periphery bridge Becoming.FallibleInquiry to fallible-inquiry-checks/20261020T161546.707477Z (check_fallible_inquiry.py, Lean 4.29.1), where the three cited theorems use propext and Quot.sound. No empirical experiment or independent review.
+Machine-checked. The current bytes of the core module Becoming.TimedResponse are bound to the consolidated core checker's receipt becoming-checks/20261019T160413.543456Z (check_becoming.py, Lean 4.29.1), every cited declaration with an empty axiom report; those of the periphery bridge Becoming.FallibleInquiry to fallible-inquiry-checks/20261031T130828.999853Z (check_fallible_inquiry.py, Lean 4.29.1), where the three cited theorems use propext and Quot.sound. No empirical experiment or independent review.
 
 Canonical source: [TimedResponse.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean)
 
@@ -105,6 +105,7 @@ Command formation, exchange, coupling and response differentiate within one unfo
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261019T000109.055377Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261031T130828.999853Z/verification.json) | — |
 
 Aliases: `Becoming.TimedResponse.levels_alike_before`, `Becoming.TimedResponse.answer_alike_before`, `Becoming.TimedResponse.different_answers_require_reached`, `Becoming.TimedResponse.reachedBy_within_response`, `Becoming.FallibleInquiry.coverage_le_errors_add_timed_reach`, `Becoming.FallibleInquiry.error_bounds_require_timed_reach`, `Becoming.FallibleInquiry.unreached_in_time_coverage_eq_errors`
 

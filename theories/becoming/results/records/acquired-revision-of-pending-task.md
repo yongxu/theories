@@ -44,7 +44,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Core: the current bytes of Becoming.Countdown are bound to receipt becoming-checks/20261019T231053.882924Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for the cited declarations. Periphery: VersionedTaskInstances is bound to versioned-task-instances-checks/20261020T161926.448088Z (Lean 4.30.0-rc2; the head laws use propext, the continuation laws propext, Quot.sound and Classical.choice), CommonTaskRevision to common-task-revision-verification.json (Lean 4.30.0-rc2, import closure rebuilt; at most propext and Quot.sound).
+Core: the current bytes of Becoming.Countdown are bound to receipt becoming-checks/20261019T231053.882924Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for the cited declarations. Periphery: VersionedTaskInstances is bound to versioned-task-instances-checks/20261031T132223.713396Z (Lean 4.30.0-rc2; the head laws use propext, the continuation laws propext, Quot.sound and Classical.choice), CommonTaskRevision to common-task-revision-verification.json (Lean 4.30.0-rc2, import closure rebuilt; at most propext and Quot.sound).
 
 Canonical source: [CommonTaskRevision.lean](../../../../experiments/market-generativity/meta-attractor/CommonTaskRevision.lean)
 
@@ -94,6 +94,7 @@ Learning, instruction and effect are differentiated relations in one activity, n
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261031T132223.713396Z/verification.json) | — |
 
 Aliases: `CommonTaskRevision.warranted_revision_and_pending_delivery`, `CommonTaskRevision.revised_head_completes`, `Becoming.VersionedTaskInstances.retarget_pending`, `Becoming.VersionedTaskInstances.revised_head_instance`, `Becoming.VersionedTaskInstances.continuation_eq`
 
