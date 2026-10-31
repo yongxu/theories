@@ -1,8 +1,8 @@
 # Two patches below the leaf
 
-OU7's leaf (`Becoming.GrammarConditionals`, [scratch](../../tree/Becoming/GrammarConditionals.lean)) uses two laws that generalize laws already in the core. A generalizing law goes below, in the module that holds the law it generalizes, and the old law becomes its case. These two patches do that, for OU's owner to apply in the rebuild slot. The leaf imports both laws and does not restate them.
+OU7's leaf (`Becoming.GrammarConditionals`, [scratch](../../tree/Becoming/GrammarConditionals.lean)) uses two laws that generalize laws already in the core. A generalizing law goes below, in the module that holds the law it generalizes, and the old law becomes its case. These two patches do that, for OU's owner to apply in the rebuild slot. The leaf imports both laws and does not restate them. A third patch, [PLAN.patch](PLAN.patch), edits the OU plan's line that the Grammar patch makes inexact ([below](#texts-that-name-the-two-laws)).
 
-**Base.** Both are unified diffs against main at 248122055. There `Becoming/Grammar.lean` is blob `cd2010958b77c371f7cff7e7f9ab02e04be233ed` and `Becoming/GrammarReadings.lean` is blob `0db54ab469b3e952e62c609b4213af7d5a808aae`. Both files are unchanged since a85edc40c and since OU7's claim (40b3a1692). From the repository root, `git apply --check` passes for both.
+**Base.** Both are unified diffs against main at 248122055. There `Becoming/Grammar.lean` is blob `cd2010958b77c371f7cff7e7f9ab02e04be233ed` and `Becoming/GrammarReadings.lean` is blob `0db54ab469b3e952e62c609b4213af7d5a808aae`. Both files are unchanged since a85edc40c and since OU7's claim (40b3a1692), and still at bac7bf779, after RV21c landed. From the repository root, `git apply --check` passes for both.
 
 ## Grammar.patch
 
@@ -60,11 +60,11 @@ cd $PKG && python3 -B scratch_build.py $T Becoming.Grammar Becoming.GrammarReadi
 
 ## Texts that name the two laws
 
-These are for OU's owner. None of them is in a patch.
+These are for OU's owner. Only the OU plan's line is patched.
 
 - **The root module's summary** (`Becoming.lean`, the GrammarReadings entry) says "what abides passes through where a class is constant both ways (`«两向有常则通»`)". That stays true. A sentence naming the general law could replace it: "what has a predecessor passes through where a class is constant both ways (`«两向有常有前则通»`; what abides, `«两向有常则通»`)".
-- **The OU plan** ([one-unfolding-root/PLAN.md](../../../one-unfolding-root/PLAN.md), under 双向之核) says 「生只在双向之核下不变（`«生于位核下不变»`）。」 Once the Grammar patch lands, that is no longer exact. 生 is kept along the core of the converse net. That core holds the two-way core, and it also joins pairs the forward core does not (`«逆核不含于核之例»`). A replacement for its owner:
+- **The OU plan** ([one-unfolding-root/PLAN.md](../../../one-unfolding-root/PLAN.md), under 双向之核) says 「生只在双向之核下不变（`«生于位核下不变»`）。」 Once the Grammar patch lands, that is no longer exact. 生 is kept along the core of the converse net. That core holds the two-way core, and it also joins pairs the forward core does not (`«逆核不含于核之例»`). OU's owner accepted this replacement on 31 October. It goes into the same landing as the Grammar patch, as [PLAN.patch](PLAN.patch):
   > 生在逆缘之核下不变（`«生于逆核下不变»`）；双向之核在其中（`«位核含于逆核»`），故生亦在双向之核下不变（`«生于位核下不变»`）；前向之核下生可变（`«生于核下可变之例»`）。
 
-  The plan's next line, `«位同则生亡同»`, stays.
+  The plan's next line, `«位同则生亡同»`, stays. From the repository root, `git apply --check` passes for PLAN.patch on main at bac7bf779.
 - **The connectivity maps** (`THEOREM-CONNECTIVITY.json` and `THEOREM-CONNECTIVITY-APART.json`, in root-foundation) list both old laws. They are tool output and change only when their tool runs.

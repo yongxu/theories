@@ -421,7 +421,7 @@ A definitional or corollary law is a lemma here only where a family's "Y 当且�
 | `«类内有常则线相随»` | for `«类» E`, `S` within `E` and constant under 缘: a line under `E` from `u'` is matched from any `u` with `S u' u`, its end `S`-related to the matched end | new (helper) | G15 |
 | `«核同则同不穷»` | `«类» E`, `«核» R E y y'` and `«不穷» R E y` give `«不穷» R E y'` | new | G15 |
 
-**Witnesses** (27), so that every family has a net in the core where Z fails. Thirteen were in the reviewed design. The other fourteen were added after the decisions: twelve replace checks, and two are instances of checks that stay. Their names wait on OU's owner's word.
+**Witnesses** (27), so that every family has a net in the core where Z fails. Thirteen were in the reviewed design. The other fourteen were added after the decisions: twelve replace checks, and two are instances of checks that stay. OU's owner confirmed their names on 31 October.
 
 | witness | statement | family | from |
 |---|---|---|---|
@@ -469,12 +469,12 @@ A general law's name states its statement in the grammar's words. Which corpus u
 | `«不返而有限则非不穷»` | the same | `«无环有限则非不穷»` |
 | `«无异当且仅当不分续»` | `F` need not be a class (finding 23) | `«无异当且仅当类不分续»` |
 | `«皆不生当且仅当皆非无缘»` | the statement is `¬¬ ∃` (finding 23) | `«皆不生当且仅当皆有缘»` |
-| `«生于逆核下不变»` | new (finding 1); by OU's owner's decision it generalizes `«生于位核下不变»` in Grammar, by the patch, and its name there waits on its word | — |
+| `«生于逆核下不变»` | new (finding 1); by OU's owner's decision it generalizes `«生于位核下不变»` in Grammar, by the patch, under this name | — |
 | `«核同则同不穷»` | waited already; carries `«类» E` as `«亡于核下不变»` does | — |
 | `«类内有常则线相随»` | waited already; it holds for any relation within the class constant under 缘, not only along the core, and needs no symmetry (finding 13) | `«核下线相随»` |
 | `«异而不通之例»` | dropped: it repeated `«有常而不通»` (finding 14) | — |
 
-**Waiting on OU's owner's word**: the 14 witnesses added after the decisions ([New Lean](#new-lean-in-scratch)), and the patches' `«位核含于逆核»` (beside `«位核含于核»`) and `«两向有常有前则通»` (the design's name, now in GrammarReadings).
+**Confirmed later on 31 October**: the 14 witnesses added after the decisions ([New Lean](#new-lean-in-scratch)), and the patches' names: `«位核含于逆核»` (the twin of `«位核含于核»`), `«生于逆核下不变»` with `«生于位核下不变»` as its case, and `«两向有常有前则通»` with `«两向有常则通»` as its case. 并 keeps the grammar's sense of "together", as in `«…不并»`.
 
 ## Decisions (31 October)
 
@@ -502,6 +502,20 @@ OU's owner decided on the reviewed design:
 - Fourteen witnesses were added, so that no family's net where Z fails is only a scratch check. The checks module went from 31 to 17.
 - G02's standing now reads "sufficient; the converse is not claimed". The design gave no net for "not necessary".
 - Once the Grammar patch lands, the OU plan's line 「生只在双向之核下不变」 is no longer exact. A replacement is in the [patches' README](kit/patches/README.md#texts-that-name-the-two-laws), for the plan's owner.
+
+**Later on 31 October.**
+
+- Every name is confirmed: the patches' and the 14 witnesses'.
+- The OU plan's replacement line is accepted. It goes into the same landing as the Grammar patch, as [PLAN.patch](kit/patches/PLAN.patch).
+- Once part B's review is in, the two parts go on one branch as one landing kit. It holds:
+  - the leaves;
+  - the Grammar and GrammarReadings patches;
+  - the record or records, with the home table in 06;
+  - the PLAN.md edit;
+  - the study section;
+  - a land script in stages, on the pattern of U1b's (`development/u1-balance-under-units/u1b/land_u1b.sh`, on branch u1b).
+- The grammar's owner's held items from BD2 and HE2 join the same rebuild, as its own patch in the kit once BD2 has landed: `«不出»` into GrammarLaws, `Flow.Cut`, and the GrammarLaws header.
+- The near-full rebuild comes last in the core round, after UE26, BD2, EL's core Lean and U1b. No Lean is run for it until OU's owner says.
 
 ## Open
 
@@ -573,7 +587,7 @@ Each is listed in [groups.tsv](data/groups.tsv). The kit's earlier output is in 
 - [data/units.tsv](data/units.tsv): the 219 丙一 rows, with their classification fields.
 - [data/groups.tsv](data/groups.tsv): each unit's family, disposition and labelled reading.
 - [kit/assign.py](kit/assign.py): writes groups.tsv from units.tsv, states the dispositions and rules, and checks that every unit is placed once.
-- [kit/patches/](kit/patches/README.md): the two patches for Grammar and GrammarReadings, what each changes, and how to check them.
+- [kit/patches/](kit/patches/README.md): the patches for Grammar and GrammarReadings and the OU plan's edit, what each changes, and how to check them.
 - [tree/Becoming/GrammarConditionals.lean](tree/Becoming/GrammarConditionals.lean): the proposal module, for the core.
 - [tree/Becoming/GrammarConditionalsChecks.lean](tree/Becoming/GrammarConditionalsChecks.lean): the checks, which stay in scratch.
 - [tree/BUILD.json](tree/BUILD.json): the build of the patched modules with both scratch modules.
