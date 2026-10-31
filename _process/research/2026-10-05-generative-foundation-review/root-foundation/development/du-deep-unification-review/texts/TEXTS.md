@@ -22,6 +22,7 @@ The landing also reruns `master_laws.py` after COVERAGE's change (b) and fills t
 
 - Significance row: `Becoming.Web.paths_comparison_widens` leaves `declarations`. Reason, added to the row's note: "an unfolding of C with better read as widening (Extension.lean, `paths_comparison_widens`); kept as C's meets witness, a trivial model (consistency only)".
 - Premise "C, the widening comparison": its witnesses add `Becoming.ReadsNoOrder.not_entails`. Its note adds: "no statement reading no order, and holding at a datum with an extension, entails it (immediate: better is free)". Its existing witnesses stand (`Web.paths_comparison_widens`, relabelled trivial; `Regimes.no_comparison_through_marginals`).
+- Premise "finite": its witnesses become `Becoming.World.strained_finite` (meets) and `Becoming.World.throughput_world` (fails: its last conjunct, `¬ throughput.Finite`), both on main already, and its note drops "not listed here" (added 31 October, on Ren's "close all gaps": the card's last premise listed without witnesses besides L).
 - Premise "L, lifting": its witnesses become `Becoming.LiftModel.met_and_failed` and `Becoming.LiftModel.some_outcome_does_not_lift`, and its note becomes "met and failed on `LiftModel`'s frame (the move reaching 3 lifted above the move reaching 1, not the reverse); the choice of the rule is substantive (a response with a better and a worse outcome is comparable by neither direction)".
 
 ## (c) WHAT-REMAINS: a new section (OU's owner applies it)
