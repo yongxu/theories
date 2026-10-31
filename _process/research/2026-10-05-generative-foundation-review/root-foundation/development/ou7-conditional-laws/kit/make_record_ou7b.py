@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """OU7's record, part B, `rooms-tested-by-a-window`: 验's model examples, one rule of rooms (an unheated room and two
-thermostats) tested by a window on the net of the possible (Becoming.RoomNet on the grammar, Becoming.RoomRuns joining
-it to RegimeMargin's runs and HeldPossible, both in the instance ring: they read the core's laws on one named carrier),
-home 03 §3 after testing-within-the-net.
+thermostats) tested by a window on the net of the possible (Becoming.RoomNet on the grammar and Becoming.RoomRuns
+joining it to RegimeMargin's runs and HeldPossible; RoomNet and RoomRuns are in the instance ring: they read the core's
+laws on one named carrier), home 03 §3 after testing-within-the-net.
 
 From the checkout root:
   python3 -B <dir>/make_record_ou7b.py --draft OUT        the record without receipt or binding (status open), for review

@@ -504,8 +504,9 @@ def receipt_sentence(receipt):
     print('08 §3:', counts[:160], '…')
 
 
-# 08 §3 names the ring's members. The rooms join the instances, and the applications are counted from the checker's
-# list: main says six, though APPLICATIONS has held seven since RF6.1 added OpenedCorrection (30 October).
+# 08 §3 names the ring's members. The rooms join the instances where part B is in the ring (B_LIST, as for the ring's
+# other texts), and the applications are counted from the checker's list either way: main says six, though
+# APPLICATIONS has held seven since RF6.1 added OpenedCorrection (30 October).
 RING_SENTENCE = re.compile(r'The instance and application ring \(the Changes and place/transition nets; \w+ leaf applications\)')
 NUMBERS = ('no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve')
 
@@ -514,8 +515,9 @@ def ring_sentence():
     """08 §3's sentence naming the ring's members: the rooms among the instances, the applications counted."""
     listed = re.search(r'^APPLICATIONS = \[(.*)\]$', CHECKER.read_text(encoding='utf-8'), re.M).group(1)
     n = len(re.findall(r'"Becoming\.[^"]+"', listed))
-    new = ('The instance and application ring (the Changes, place/transition nets and rooms tested by a window; '
-           f'{NUMBERS[n]} leaf applications)')
+    members = ('the Changes, place/transition nets and rooms tested by a window' if B_LIST == 'INSTANCES'
+               else 'the Changes and place/transition nets')
+    new = f'The instance and application ring ({members}; {NUMBERS[n]} leaf applications)'
     text = METHOD.read_text(encoding='utf-8')
     if new in text:
         print('08 §3: the sentence naming the ring is already in place')
@@ -1038,7 +1040,7 @@ def study(n, receipt):
         "other statement unchanged.", width=118, subsequent_indent=' ' * 7, break_on_hyphens=False))
     section = f"""{title.format(n)}
 
-Board item OU7 (claimed as OU5), the OU plan's §八 step 5 and the release gate's item 4, in two parts. Part A writes each conditional law of the corpus (丙一) in the grammar as "Y 当且仅当 Z" or "Z 则 Y", with a net where Z fails and Y fails with it ([the design]({DEVLINK}DESIGN.md)); it reads the 219 units, and one independent AI review of its design found 24 problems, every one taken ([the review]({DEVLINK}review/FINDINGS.md)). Part B gives 验's model examples: one rule of rooms, an unheated room and two thermostats, tested by a window on the net of the possible ([the design]({DEVLINK}check/DESIGN.md)); one independent AI review found 18 problems, and its re-check took every point ([the review and re-check]({DEVLINK}check/review/FINDINGS.md)). OU's owner decided what lands and confirmed every name; the kit's last revision settled where the two general laws are stated (GrammarReadings' note and scope sentence with them), part B's place in the instance ring, MapRegions' wording (its doc, its notes and one record's validation scope) and the toy's pointer to its derivation.
+Board item OU7 (claimed as OU5), the OU plan's §八 step 5 and the release gate's item 4, in two parts. Part A writes each conditional law of the corpus (丙一) in the grammar as "Y 当且仅当 Z" or "Z 则 Y", with a net where Z fails and Y fails with it ([the design]({DEVLINK}DESIGN.md)); it reads the 219 units, and one independent AI review of its design found 24 problems, every one taken ([the review]({DEVLINK}review/FINDINGS.md)). Part B gives 验's model examples: one rule of rooms, an unheated room and two thermostats, tested by a window on the net of the possible ([the design]({DEVLINK}check/DESIGN.md)); one independent AI review found 18 problems, and its re-check took every point ([the review and re-check]({DEVLINK}check/review/FINDINGS.md)). OU's owner decided what lands and confirmed every name; the kit's last revision settled where the two general laws are stated (GrammarReadings' note and scope sentence with them), part B's place in the instance ring, MapRegions' wording (its doc, its notes and one record's validation scope) and the toy's pointer to its derivation. Every text that lists the ring's members names the rooms; 08 §3's count of leaf applications, six there though the checker has listed seven since RF6.1 added OpenedCorrection (30 October), is now counted from the checker's list.
 
 ```text
 Result(s): conditional-laws-of-the-corpus (new, home 06 §四 at its end); continuation-relative-to-a-class (law 5,
