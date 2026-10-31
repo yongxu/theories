@@ -8,10 +8,10 @@ Fifteen of the 24 notes of [the opening](../../../../../../theories/becoming/OPE
 
 | Note | Before | After |
 |---|---:|---:|
-| law | 698 | 300 |
+| law | 698 | 298 |
 | conditions | 1,093 | 358 |
 | proof | 407 | 287 |
-| axiom | 612 | 300 |
+| axiom | 612 | 299 |
 | ethics | 420 | 297 |
 | good-evil | 651 | 325 |
 | alignment | 753 | 382 |
@@ -21,11 +21,11 @@ Fifteen of the 24 notes of [the opening](../../../../../../theories/becoming/OPE
 | present | 1,062 | 382 |
 | aligned | 654 | 324 |
 | race | 400 | 305 |
-| transitions | 406 | 300 |
-| collective | 378 | 300 |
-| all 24 notes | 10,239 | 6,076 |
+| transitions | 406 | 299 |
+| collective | 378 | 295 |
+| all 24 notes | 10,239 | 6,067 |
 
-Counted by AJ4's rule (visible prose, link targets not counted), on the notes as they stand in OPENING.md. AJ4's [measure](../aj4-alignment-readers/kit/measure_layers.py) reads the rendered README instead. There it counts each note's list number, one word more per note, and it counts the README's closing list as part of the last note, `collective` (490 words there before the read's fixes, against 298 counted alone). That count is the measure's split, not the note's length.
+Counted by AJ4's rule (visible prose, link targets not counted), on the notes as they stand in OPENING.md. AJ4's [measure](../aj4-alignment-readers/kit/measure_layers.py) reads the rendered README instead. There it counts each note's list number, one word more per note, and it counts the README's closing list as part of the last note, `collective` (487 words there, against 295 counted alone). That count is the measure's split, not the note's length. So it reports 10 over 300: the nine below, and `collective`.
 
 ## Method
 
