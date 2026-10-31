@@ -20681,7 +20681,7 @@
     },
     {
       "path": "experiments/shared-renewal-capability/regulation/retention/formation/formal/FormationAccounts.lean",
-      "sha256": "ca314ce9c800ca1f8e74adfa49deb97c0471131cef7ada5f75c834c0cd96a5cf",
+      "sha256": "cbe0e1b07d0f9e62a83387a2f68415548dfc56d30bf7f128394ee36ccbbc86f8",
       "role": "working-source",
       "group": "shared",
       "package_readme": "experiments/shared-renewal-capability/regulation/retention/formation/formal/README.md",
@@ -432081,166 +432081,6 @@
       },
       "print_axioms_commands": 6
     },
-    "ca314ce9c800ca1f8e74adfa49deb97c0471131cef7ada5f75c834c0cd96a5cf": {
-      "byte_size": 8753,
-      "line_count": 204,
-      "imports": [
-        "FormationSupport"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "reactionExpenditure",
-          "qualified_name_hint": "FormedSelection.Accounts.reactionExpenditure",
-          "line": 19
-        },
-        {
-          "kind": "def",
-          "name": "fuelLoss",
-          "qualified_name_hint": "FormedSelection.Accounts.fuelLoss",
-          "line": 24
-        },
-        {
-          "kind": "inductive",
-          "name": "Boundary",
-          "qualified_name_hint": "FormedSelection.Accounts.Boundary",
-          "line": 28
-        },
-        {
-          "kind": "def",
-          "name": "reserve",
-          "qualified_name_hint": "FormedSelection.Accounts.reserve",
-          "line": 32
-        },
-        {
-          "kind": "def",
-          "name": "demandWeight",
-          "qualified_name_hint": "FormedSelection.Accounts.demandWeight",
-          "line": 38
-        },
-        {
-          "kind": "def",
-          "name": "creditWeight",
-          "qualified_name_hint": "FormedSelection.Accounts.creditWeight",
-          "line": 43
-        },
-        {
-          "kind": "def",
-          "name": "demand",
-          "qualified_name_hint": "FormedSelection.Accounts.demand",
-          "line": 47
-        },
-        {
-          "kind": "def",
-          "name": "credit",
-          "qualified_name_hint": "FormedSelection.Accounts.credit",
-          "line": 50
-        },
-        {
-          "kind": "theorem",
-          "name": "spending_split",
-          "qualified_name_hint": "FormedSelection.Accounts.spending_split",
-          "line": 55
-        },
-        {
-          "kind": "theorem",
-          "name": "tally_spending_split",
-          "qualified_name_hint": "FormedSelection.Accounts.tally_spending_split",
-          "line": 59
-        },
-        {
-          "kind": "theorem",
-          "name": "step_account_exact",
-          "qualified_name_hint": "FormedSelection.Accounts.step_account_exact",
-          "line": 69
-        },
-        {
-          "kind": "theorem",
-          "name": "identified_account_laws",
-          "qualified_name_hint": "FormedSelection.Accounts.identified_account_laws",
-          "line": 78
-        },
-        {
-          "kind": "theorem",
-          "name": "root_account_balance",
-          "qualified_name_hint": "FormedSelection.Accounts.root_account_balance",
-          "line": 89
-        },
-        {
-          "kind": "theorem",
-          "name": "root_account_exact",
-          "qualified_name_hint": "FormedSelection.Accounts.root_account_exact",
-          "line": 96
-        },
-        {
-          "kind": "theorem",
-          "name": "root_open_closed_consistency",
-          "qualified_name_hint": "FormedSelection.Accounts.root_open_closed_consistency",
-          "line": 108
-        },
-        {
-          "kind": "theorem",
-          "name": "root_reaction_loss_budget",
-          "qualified_name_hint": "FormedSelection.Accounts.root_reaction_loss_budget",
-          "line": 121
-        },
-        {
-          "kind": "theorem",
-          "name": "root_common_budget",
-          "qualified_name_hint": "FormedSelection.Accounts.root_common_budget",
-          "line": 126
-        },
-        {
-          "kind": "theorem",
-          "name": "root_exhausted_accounts",
-          "qualified_name_hint": "FormedSelection.Accounts.root_exhausted_accounts",
-          "line": 134
-        },
-        {
-          "kind": "theorem",
-          "name": "root_append_account",
-          "qualified_name_hint": "FormedSelection.Accounts.root_append_account",
-          "line": 143
-        },
-        {
-          "kind": "theorem",
-          "name": "root_shared_boundary_budget",
-          "qualified_name_hint": "FormedSelection.Accounts.root_shared_boundary_budget",
-          "line": 155
-        },
-        {
-          "kind": "theorem",
-          "name": "zero_fuel_cost_damage",
-          "qualified_name_hint": "FormedSelection.Accounts.zero_fuel_cost_damage",
-          "line": 164
-        },
-        {
-          "kind": "theorem",
-          "name": "fuel_demand_is_not_unit",
-          "qualified_name_hint": "FormedSelection.Accounts.fuel_demand_is_not_unit",
-          "line": 168
-        },
-        {
-          "kind": "theorem",
-          "name": "mixed_witness_account",
-          "qualified_name_hint": "FormedSelection.Accounts.mixed_witness_account",
-          "line": 177
-        }
-      ],
-      "declaration_counts": {
-        "def": 7,
-        "inductive": 1,
-        "theorem": 15
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 15
-    },
     "ca86bd879e469dff052ef6134789cc4755d64132c769e4db77b5889fa574b59d": {
       "byte_size": 6494,
       "line_count": 161,
@@ -436038,6 +435878,166 @@
         "unsafe": []
       },
       "print_axioms_commands": 0
+    },
+    "cbe0e1b07d0f9e62a83387a2f68415548dfc56d30bf7f128394ee36ccbbc86f8": {
+      "byte_size": 8759,
+      "line_count": 204,
+      "imports": [
+        "FormationSupport"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "reactionExpenditure",
+          "qualified_name_hint": "FormedSelection.Accounts.reactionExpenditure",
+          "line": 19
+        },
+        {
+          "kind": "def",
+          "name": "fuelLoss",
+          "qualified_name_hint": "FormedSelection.Accounts.fuelLoss",
+          "line": 24
+        },
+        {
+          "kind": "inductive",
+          "name": "Boundary",
+          "qualified_name_hint": "FormedSelection.Accounts.Boundary",
+          "line": 28
+        },
+        {
+          "kind": "def",
+          "name": "reserve",
+          "qualified_name_hint": "FormedSelection.Accounts.reserve",
+          "line": 32
+        },
+        {
+          "kind": "def",
+          "name": "demandWeight",
+          "qualified_name_hint": "FormedSelection.Accounts.demandWeight",
+          "line": 38
+        },
+        {
+          "kind": "def",
+          "name": "creditWeight",
+          "qualified_name_hint": "FormedSelection.Accounts.creditWeight",
+          "line": 43
+        },
+        {
+          "kind": "def",
+          "name": "demand",
+          "qualified_name_hint": "FormedSelection.Accounts.demand",
+          "line": 47
+        },
+        {
+          "kind": "def",
+          "name": "credit",
+          "qualified_name_hint": "FormedSelection.Accounts.credit",
+          "line": 50
+        },
+        {
+          "kind": "theorem",
+          "name": "spending_split",
+          "qualified_name_hint": "FormedSelection.Accounts.spending_split",
+          "line": 55
+        },
+        {
+          "kind": "theorem",
+          "name": "tally_spending_split",
+          "qualified_name_hint": "FormedSelection.Accounts.tally_spending_split",
+          "line": 59
+        },
+        {
+          "kind": "theorem",
+          "name": "step_account_exact",
+          "qualified_name_hint": "FormedSelection.Accounts.step_account_exact",
+          "line": 69
+        },
+        {
+          "kind": "theorem",
+          "name": "identified_account_laws",
+          "qualified_name_hint": "FormedSelection.Accounts.identified_account_laws",
+          "line": 78
+        },
+        {
+          "kind": "theorem",
+          "name": "root_account_balance",
+          "qualified_name_hint": "FormedSelection.Accounts.root_account_balance",
+          "line": 89
+        },
+        {
+          "kind": "theorem",
+          "name": "root_account_exact",
+          "qualified_name_hint": "FormedSelection.Accounts.root_account_exact",
+          "line": 96
+        },
+        {
+          "kind": "theorem",
+          "name": "root_open_closed_consistency",
+          "qualified_name_hint": "FormedSelection.Accounts.root_open_closed_consistency",
+          "line": 108
+        },
+        {
+          "kind": "theorem",
+          "name": "root_reaction_loss_budget",
+          "qualified_name_hint": "FormedSelection.Accounts.root_reaction_loss_budget",
+          "line": 121
+        },
+        {
+          "kind": "theorem",
+          "name": "root_common_budget",
+          "qualified_name_hint": "FormedSelection.Accounts.root_common_budget",
+          "line": 126
+        },
+        {
+          "kind": "theorem",
+          "name": "root_exhausted_accounts",
+          "qualified_name_hint": "FormedSelection.Accounts.root_exhausted_accounts",
+          "line": 134
+        },
+        {
+          "kind": "theorem",
+          "name": "root_append_account",
+          "qualified_name_hint": "FormedSelection.Accounts.root_append_account",
+          "line": 143
+        },
+        {
+          "kind": "theorem",
+          "name": "root_shared_boundary_budget",
+          "qualified_name_hint": "FormedSelection.Accounts.root_shared_boundary_budget",
+          "line": 155
+        },
+        {
+          "kind": "theorem",
+          "name": "zero_fuel_cost_damage",
+          "qualified_name_hint": "FormedSelection.Accounts.zero_fuel_cost_damage",
+          "line": 164
+        },
+        {
+          "kind": "theorem",
+          "name": "fuel_demand_is_not_unit",
+          "qualified_name_hint": "FormedSelection.Accounts.fuel_demand_is_not_unit",
+          "line": 168
+        },
+        {
+          "kind": "theorem",
+          "name": "mixed_witness_account",
+          "qualified_name_hint": "FormedSelection.Accounts.mixed_witness_account",
+          "line": 177
+        }
+      ],
+      "declaration_counts": {
+        "def": 7,
+        "inductive": 1,
+        "theorem": 15
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 15
     },
     "cbf671297c49eae41879ef9d3448dec67320b1ddb6bdc6a2614ce4261b320312": {
       "byte_size": 26391,
