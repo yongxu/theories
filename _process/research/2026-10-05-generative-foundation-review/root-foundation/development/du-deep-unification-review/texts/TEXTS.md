@@ -12,9 +12,9 @@ Edits in the paragraph that opens "The column *On the grammar*":
 
 Edits in **Standings on the edge**, after the leaf lands, replacing "and C (`Comparison`) for order, with no such theorem. Neither stands on the edge: the condition's not-entailed theorem concerns its free form, which chapter 7 keeps off the root, and its root form at the own-closure reading, `«续无外»`, has none; C has neither.":
 
-> and C (`Comparison`) for order, which, on a frame with an extension, no statement whose truth does not change with the order entails (`ReadsNoOrder.not_entails`, immediate, since "better" is free). Neither stands on the edge. The condition's not-entailed theorem concerns its free form, which chapter 7 keeps off the root. Its root form at the own-closure reading, `«续无外»`, is decided by the net, not by the grammar: wherever an occurrence lies apart from a center, the full net meets it and the empty net fails it (`«续无外由网定»`, and `«族无外由网定»` in families).
+> and C (`Comparison`) for order, which no statement reading no order entails, on any frame with an extension (`ReadsNoOrder.not_entails`, immediate, since "better" is free). Neither stands on the edge. The condition's not-entailed theorem concerns its free form, which chapter 7 keeps off the root. Its root form at the own-closure reading, `«续无外»`, is decided by the net, not by the grammar: wherever an occurrence lies apart from a center, the full net meets it and the empty net fails it (`«续无外由网定»`, and `«族无外由网定»` in families).
 
-The lead order: the "Standings on the edge" paragraph already states what is derived (ten), the one under a stated hypothesis, and the distances. Proposed: move it before the connectivity paragraph, so that §7 leads with standings and puts the reach count after them, as the dependence measure. Nothing in either paragraph is cut. If the move is not wanted, the two edits above stand alone.
+The lead order stays as it is (OU's owner declined the move). "Standings on the edge" is the home section of `one-root-to-its-edge`, and the connectivity paragraph is that of `master-laws-on-the-grammar`; moving either would re-hash every record that cites it, for no gain in content. The edits above stand alone.
 
 The landing also reruns `master_laws.py` after COVERAGE's change (b) and fills the new F5 figures here and in (c)'s section.
 
@@ -29,12 +29,12 @@ The landing also reruns `master_laws.py` after COVERAGE's change (b) and fills t
 ```markdown
 ## The unit grain is balance, not atomism (DU, 31 October 2026)
 
-One-to-one continuation of units is balance at the unit grain, not atomism. Balance holds exactly where some selection of one-to-one unit matchings exists at every frame (U1b's record `amounts-by-unit-matchings`: `FrameMatchings` and balance, `Becoming.UnitMatchings`). The matchings represent balance and do not derive it. Atomism is the modelling choice of natural-number amounts: integrality, which makes a positive loss at least one unit. Integrality is a separate choice, and balance needs no more of it than counting does. U4's design (§1, the sentence calling one-to-one continuation "U1's atomism") and the line in the section *U4's verdict* above conflate the two. Both stay as written, since they are cited; this section is the correction. Nothing in a record or a figure changes.
+One-to-one continuation of units is balance at the unit grain, not atomism. Balance holds exactly where some selection of one-to-one unit matchings exists at every frame (U1b's record `amounts-by-unit-matchings`: `FrameMatchings` and balance, `Becoming.UnitMatchings`). The matchings represent balance and do not derive it. Atomism is integrality, the modelling choice of natural-number amounts, which makes a positive loss at least one unit. The matchings presuppose it, since they match the units of such amounts, but it does not give them: the world `World.unbalanced` has natural-number amounts and fails balance while meeting every other premise (`World.unbalanced_but`, part of `World.independent`). So one-to-one continuation adds balance to integrality and is not integrality itself. U4's design (§0, *The verdict (reviewed)*, the sentence calling one-to-one continuation "U1's atomism") and the line in the section *U4's levers 1 and 2, reviewed (30 October 2026)* above conflate the two. Both stay as written, since they are cited; this section is the correction. Nothing in a record or a figure changes.
 ```
 
 ## (d) 04: Bases and Open (OU's owner; the rows' records unchanged)
 
-Standings read from the boundary record `one-root-to-its-edge` on `852985f8a`: 1 under a stated hypothesis, 3 counting, 1 at a represented model, **5** with balance in the statement and **8** at amounts. The split "6 and 7" in the review's attack and in OU's owner's note does not match the record, which places `Flow.no_new_dependence`, `Reproduction.Flow.lineage_ends`, `Reproduction.Flow.closed_lineage_lowered`, `GroupEnding.Flow.family_childless` and `GroupEnding.Flow.coupled_end_together` with balance in the statement, and the other eight at amounts. The figures are checked against the record again at the landing.
+Standings read from the boundary record `one-root-to-its-edge` on `852985f8a` (taken by OU's owner): 1 under a stated hypothesis, 3 counting, 1 at a represented model, **5** with balance in the statement and **8** at amounts. The split "6 and 7" in the review's attack and in OU's owner's note does not match the record, which places `Flow.no_new_dependence`, `Reproduction.Flow.lineage_ends`, `Reproduction.Flow.closed_lineage_lowered`, `GroupEnding.Flow.family_childless` and `GroupEnding.Flow.coupled_end_together` with balance in the statement, and the other eight at amounts. The figures are checked against the record again at the landing.
 
 §Bases: replace "None is yet lifted onto the grammar; only the law of passing is read on it, in part ([below](#r-a-pattern-lasts-through-passing))." with:
 
@@ -45,12 +45,15 @@ Standings read from the boundary record `one-root-to-its-edge` on `852985f8a`: 1
 > - five with balance in their statements;
 > - eight at amounts.
 >
-> The law of passing is read on the grammar, in part ([below](#r-a-pattern-lasts-through-passing)). None of the 18 is proved from the root's laws alone. Each is proved from the World premises its statement names (balance, only active formations giving, activity needing support, dissipation, transmission), and no one of those premises follows from the others (`World.independent`, `World.none_follows`).
+> The law of passing is read on the grammar, in part ([below](#r-a-pattern-lasts-through-passing)). None of the 18 is proved from the root's laws alone. Each is proved from the World premises it takes as hypotheses (balance, only active relata give, activity needing support, dissipation, bounded transmission, in 08's premise card's wording), and no one of those premises follows from the others (`World.independent`, `World.none_follows`).
 
 Open: replace "Lifting these laws onto the grammar ([08](08-METHOD.md))." with:
 
-> A row's standing beyond the boundary record's. A row at amounts or with balance in its statement moves only through a root form whose hypotheses its model meets by definitions alone, as `GroupEnding.Flow.all_end` does ([08 §7](08-METHOD.md#r-one-root-to-its-edge)). The World premises stay hypotheses.
+> Moving a row past its standing in the boundary record: a row at amounts or with balance in its statement moves only through a root form whose hypotheses its model meets by definitions alone, as `GroupEnding.Flow.all_end` does ([08 §7](08-METHOD.md#r-one-root-to-its-edge)). The World premises stay hypotheses.
 
 ## Also touched by the leaf (the record's owner)
+
+If the record's text changes, its home section in 08 §7 changes with it; edit (a) already covers that.
+
 
 The boundary record `one-root-to-its-edge` says, for order: "no theorem shows it unentailed by the dynamics". Once the leaf lands, `ReadsNoOrder.not_entails` is that theorem for frames. Whether `boundary.py`'s Q1 computes it as such (a theorem whose type names `Comparison`), or the record's premise entry needs a reading, is checked at the rehearsal.
