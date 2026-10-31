@@ -537,7 +537,12 @@ OU's owner decided on the reviewed design:
 - GrammarReadings' note and scope sentence state the general law;
 - the toy's line in 03 §3 points to its derivation.
 
-The grammar's owner's three items that wait for BD2 are held in [kit/patches/HELD.md](kit/patches/HELD.md), BD2's two equivalences among them. A dry run of the whole kit passed on main at 89243dd5a.
+BD2 landed the same day (f1ea9546d). The grammar's owner's three items held for it are now patches in the kit ([kit/patches/README.md](kit/patches/README.md#the-grammars-owners-patches)); what was held is kept in [kit/patches/history/HELD.md](kit/patches/history/HELD.md):
+- `«不出»` is stated in GrammarLaws with `«所闭不出»`, and `«所闭之界»` is proved as `«所闭不出»`'s case;
+- `Flow.Cut` is written as `«不出»` at the valuation's relation, its old body unfolded;
+- BD2's two equivalences read a region not crossed as one not gone out of either way and as one closed both ways, so the two count laws read as one law (master-laws-on-the-grammar's law 4 and 01 §7, with a history note).
+
+The rehearsal's Lean step ran in a copy of the package outside the repository: the nine patches with the three leaves, 145 modules built, nothing unclean, every axiom report empty ([kit/REHEARSAL.json](kit/REHEARSAL.json)). A dry run of the whole kit passed on main at b6c8bedd8. The rebuild still comes last in the core round, now after EL's core Lean, DU and UE27.
 
 ## Open
 

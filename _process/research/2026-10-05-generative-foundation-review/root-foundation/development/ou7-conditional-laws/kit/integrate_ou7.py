@@ -5,25 +5,36 @@ GrammarReadings by patch and stated where the laws they generalize are (01 §4 a
 continuation-relative-to-a-class; 06 §三 and law 4 of classical-definitions-in-the-grammar); the OU plan's line. Part B:
 验's model examples (Becoming.RoomNet and Becoming.RoomRuns, two modules of the instance ring, their pieces in check/kit/
 beside this folder), a clause in GrammarTesting's header and MapRegions' module doc, 03 §3's home section and record.
+The grammar's owner's items, by patch in patches/owner/: GrammarLaws' header; «不出» stated in GrammarLaws with «所闭不出»,
+«所闭之界» its case; Flow.Cut written as «不出»; a region not crossed read as one not gone out of either way and as one
+closed both ways, so the two count laws read as one (01 §7 and master-laws-on-the-grammar's law 4).
 
   python3 -B <dir>/integrate_ou7.py anchors                every edit of apply and of the two home sections tried on
                                                            the texts as they stand, nothing written: each anchor is
                                                            found once or its edit is already in place (prepare)
   python3 -B <dir>/integrate_ou7.py apply                  the Grammar, GrammarReadings, MapRegions, PLAN and
                                                            GrammarTesting patches, then every patch in patches/owner/
-                                                           in name order (the grammar's owner's held items); the three
+                                                           in name order (the grammar's owner's items: GrammarLaws'
+                                                           header, «不出» moved into GrammarLaws, Flow.Cut written as
+                                                           «不出», a region not crossed read two ways); the three
                                                            leaves copied into the package; their joins: the root
                                                            module's imports and notes (part A's after GrammarLaws',
                                                            part B's after RegimeMargin's), the notes and rows saying
                                                            what imports a module the leaves import, the checker's lists
                                                            and scope sentences (GrammarReadings' naming the general
                                                            law), the README rows EN and ZH, the Lean catalogue's
-                                                           description of the ring
+                                                           description of the ring; what the notes, rows and scope
+                                                           sentences say of the modules the owner's patches change
   python3 -B <dir>/integrate_ou7.py audit                  every Lean source the patches changed, against HEAD with
                                                            comments blanked: Grammar and GrammarReadings gain exactly
                                                            their three laws, none removed, every other statement kept,
-                                                           the two old laws proved as cases; every other changed source
-                                                           keeps its code; the leaves' imports; the plan line
+                                                           the two old laws proved as cases; GrammarLaws gains «不出»
+                                                           and «所闭不出» from GrammarCrossing unchanged, «所闭之界»
+                                                           proved as the latter's case, and the two readings of a
+                                                           region not crossed;
+                                                           Flow.Cut's new body unfolds to its old one; no other
+                                                           definition changes; every other changed source keeps its
+                                                           code; the leaves' imports; the plan line
   python3 -B <dir>/integrate_ou7.py record RECEIPT STUDY   08 §3's receipt sentence, every count read from the receipt,
                                                            and its sentence naming the ring's members;
                                                            06's home section (home-06-section.txt, at the end of §四)
@@ -33,13 +44,17 @@ beside this folder), a clause in GrammarTesting's header and MapRegions' module 
                                                            (01 §4, 06 §三, and the two records': law, declarations,
                                                            counts from the receipt, history note); the words the
                                                            joins make false in one record (MapRegions no longer a
-                                                           leaf); then OU7's two records, bound to the receipt
+                                                           leaf); the owner's two records (master-laws-on-the-grammar's
+                                                           laws 1 and 4 and 01 §7, not-going-out-of-a-region's
+                                                           references, each with a history note); then OU7's two
+                                                           records, bound to the receipt
   python3 -B <dir>/integrate_ou7.py register LOG           the apart register, from THEOREM-CONNECTIVITY.py --check's
                                                            log: the leaves' roots with their reasons (part A's from
                                                            reasons() below, part B's from its apart-reasons.json, whose
-                                                           roots must be exactly the log's); register entries the
-                                                           leaves now use dropped (part B's six among them); any other
-                                                           stops it
+                                                           roots must be exactly the log's), and the owner's two
+                                                           readings of a region not crossed; register entries the
+                                                           leaves and patches now use dropped (part B's six and
+                                                           «所闭不出» among them); any other stops it
   python3 -B <dir>/integrate_ou7.py check                  after master_laws.py: the data is the landing run's, reads
                                                            both records' laws as they stand, and U4's boundary report
                                                            and the central figures are unchanged from the merged main
@@ -253,6 +268,64 @@ IMPORTS = {mr.SOURCE: ['Becoming.GrammarCandidates', 'Becoming.GrammarLaws'],
                                             'Becoming.MapRegions'],
            mb.MODULES['Becoming.RoomRuns']: ['Becoming.RoomNet', 'Becoming.RegimeMargin', 'Becoming.HeldPossible']}
 
+# The grammar's owner's three items, held until BD2 landed (patches/owner/02-04): «不出» and «所闭不出» stated in
+# GrammarLaws beside «闭», «所闭之界» «所闭不出»'s case at two occurrences; Flow.Cut written as «不出» at a valuation's
+# relation
+# (Standpoints), the old body once unfolded; a region not crossed read two ways, so that the two count laws read as one
+# law on regions not gone out of either way. What the root module's notes, the README rows and the checker's scope
+# sentences say of the modules they change.
+OWNER_NOTES = [
+    ('GrammarLaws', '  (board items OU3f, HE). Under the converse the closure is the closure read backward\n',
+     '  (board items OU3f, HE). An occurrence\'s closure is not gone out of (`«不出»`, `«所闭不出»`, with\n'
+     '  `«所闭之界»` its case; board items BD2, OU7). Under the converse the closure is the closure read backward\n'),
+    ('GrammarLaws', '  (`«计»`, the region read as a test), a pairing keeps the count on every region the relation does\n'
+                    '  not cross (`«对则不越域守数»`), and under a class decided by a test it is exactly equal count in\n',
+     '  (`«计»`, the region read as a test), a pairing keeps the count on every region not gone out of\n'
+     '  either way, which is exactly one the relation does not cross and one closed both ways\n'
+     '  (`«对则不越域守数»`, `GrammarLaws.uncrossed_iff_notGoingOut`, `GrammarLaws.uncrossed_iff_closed`;\n'
+     '  board items BD2, OU7), and under a class decided by a test it is exactly equal count in\n'),
+    ('GrammarCrossing', '* `Becoming.GrammarCrossing` (L1): not going out of a region (`«不出»`), for every carrier, relation\n'
+                        '  and region (board item BD2). A closed region is not gone out of (`«闭则不出»`), an occurrence\'s '
+                        'closure\n  among them (`«所闭不出»`, the closure law `«所闭之界»` read through `«不出»`); not going '
+                        'out of a\n',
+     '* `Becoming.GrammarCrossing` (L1): not going out of a region (the grammar\'s `«不出»`, in\n'
+     '  `Becoming.GrammarLaws`), for every carrier, relation and region (board item BD2). A closed region is\n'
+     '  not gone out of (`«闭则不出»`), an occurrence\'s closure among them (`«所闭不出»`, a law of closure in\n'
+     '  `Becoming.GrammarLaws`); not going out of a\n'),
+    ('ConveyanceBoundaries', 'the cut keeps its definition in `Becoming.Standpoints`.',
+     'the cut is defined in `Becoming.Standpoints` as `«不出»` at the valuation\'s relation.')]
+OWNER_ROW_NOTES = [
+    ('README.md', 'GrammarLaws', 'from where it holds on (`kept_onward`), the closure under the converse',
+     'from where it holds on (`kept_onward`), an occurrence\'s closure not gone out of (`«不出»`, `«所闭不出»`), the '
+     'closure under the converse'),
+    ('README.md', 'GrammarLaws', 'a pairing keeps the count on every region the relation does not cross (`«对则不越域守数»`) '
+                                 'and,',
+     'a pairing keeps the count on every region not gone out of either way, which is one the relation does not cross '
+     'and one closed both ways (`«对则不越域守数»`, `GrammarLaws.uncrossed_iff_notGoingOut`, '
+     '`GrammarLaws.uncrossed_iff_closed`) and,'),
+    ('README.md', 'GrammarCrossing', '| not going out of a region, for every carrier,',
+     '| not going out of a region (the grammar\'s `«不出»`, in `Becoming.GrammarLaws`), for every carrier,'),
+    ('README.md', 'GrammarCrossing', 'a closure among them (`«所闭不出»`, the closure law read through `«不出»`);',
+     'a closure among them (`«所闭不出»`, a law of closure in `Becoming.GrammarLaws`);'),
+    ('README.zh.md', 'GrammarLaws', '（`kept_onward`），逆关系下之闭包为闭包之逆读',
+     '（`kept_onward`），一发生之闭包不出（`«不出»`、`«所闭不出»`），逆关系下之闭包为闭包之逆读'),
+    ('README.zh.md', 'GrammarLaws', '配对守其关系所不越之每一域之数（`«对则不越域守数»`），',
+     '配对守两向皆不出之每一域之数，此域即关系所不越者，亦即两向皆闭者（`«对则不越域守数»`、'
+     '`GrammarLaws.uncrossed_iff_notGoingOut`、`GrammarLaws.uncrossed_iff_closed`），'),
+    ('README.zh.md', 'GrammarCrossing', '| 不出一域，于每一载体、',
+     '| 不出一域（文法之 `«不出»`，在 `Becoming.GrammarLaws`），于每一载体、'),
+    ('README.zh.md', 'GrammarCrossing', '所闭亦然（`«所闭不出»`，即闭包之律经不出读之）；',
+     '所闭亦然（`«所闭不出»`，`Becoming.GrammarLaws` 中闭包之一律）；')]
+OWNER_SCOPES = [
+    ('    "on, the closure under the converse is the closure read backward, a closure through borrowed steps lies "\n',
+     '    "on, an occurrence\'s closure is not gone out of, the closure under the converse is the closure read "\n'
+     '    "backward, a closure through borrowed steps lies "\n'),
+    ('    "region, a pairing keeps the count on every region the relation does not cross and under a class decided by "\n',
+     '    "region, a pairing keeps the count on every region not gone out of either way, which is one the relation "\n'
+     '    "does not cross and one closed both ways, and under a class decided by "\n'),
+    ('    "of, an occurrence\'s closure among them; the two coincide where membership is stable, and that they coincide "\n',
+     '    "of; the two coincide where membership is stable, and that they coincide "\n')]
+
 
 def git(*args, check=True):
     return subprocess.run(['git', *args], cwd=ROOT, capture_output=True, text=True, check=check)
@@ -335,7 +408,7 @@ def join():
     t = once(t, *IMPORTS_B, 'root module, imports (B)')
     t = after_note(t, 'GrammarLaws', ENTRY, 'GrammarConditionals', 'root module, note (A)')
     t = after_note(t, 'RegimeMargin', BULLETS_B, 'RoomNet', 'root module, notes (B)')
-    for module, old, new in NOTES:
+    for module, old, new in NOTES + OWNER_NOTES:
         t = note_once(t, module, old, new)
     c = CHECKER.read_text(encoding='utf-8')
     c = once(c, '"Becoming.GrammarLaws", ', '"Becoming.GrammarLaws", "Becoming.GrammarConditionals", ',
@@ -347,12 +420,14 @@ def join():
     c = once(c, SCOPE_BEFORE, SCOPE + SCOPE_BEFORE, 'checker, scope sentence (A)')
     c = once(c, SCOPE_B_BEFORE, SCOPE_B + SCOPE_B_BEFORE, 'checker, scope sentences (B)')
     c = once(c, *SCOPE_READINGS, 'checker, GrammarReadings\' scope sentence (the general law)')
+    for old, new in OWNER_SCOPES:
+        c = once(c, old, new, 'checker, a scope sentence of a module the owner\'s patches change')
     readmes = {}
     for path, row_a, rows_b in [(README_EN, ROW_EN, ROWS_B_EN), (README_ZH, ROW_ZH, ROWS_B_ZH)]:
         r = path.read_text(encoding='utf-8')
         r = after_row(r, 'GrammarLaws', row_a, 'GrammarConditionals', f'{path.name}, row (A)')
         r = after_row(r, 'RegimeMargin', rows_b, 'RoomNet', f'{path.name}, rows (B)')
-        for name, module, old, new in ROW_NOTES:
+        for name, module, old, new in ROW_NOTES + OWNER_ROW_NOTES:
             if name == path.name:
                 r = row_once(r, module, old, new, f'{path.name}, {module}\'s row')
         if B_LIST == 'INSTANCES':
@@ -383,6 +458,9 @@ def anchors():
     home_root()
     home_b()
     ring_sentence()
+    owner_texts(*(json.loads((ROOT / f'theories/becoming/results/records/{rid}.json').read_text(encoding='utf-8'))
+                  for rid in (MASTER_REC, CROSSING_REC)))
+    print('the owner\'s record words: found once or already in place in', MASTER_REC, 'and', CROSSING_REC)
     assert len(SENTENCE.findall(METHOD.read_text(encoding='utf-8'))) == 1, '08 §3: the receipt sentence is not there once'
     print('08 §3: the receipt sentence found once')
     print('anchors: every edit applies exactly once or is already in place; nothing written')
@@ -408,17 +486,45 @@ def statements(text):
 EXPECTED = {'Becoming.Grammar': ({'Becoming.«位核含于逆核»', 'Becoming.«生于逆核下不变»'},
                                  {'Becoming.«生于位核下不变»': '«生于逆核下不变» hE («位核含于逆核» R E y y\' hk) hy'}),
             'Becoming.GrammarReadings': ({'Becoming.«两向有常有前则通»'},
-                                         {'Becoming.«两向有常则通»': '«两向有常有前则通» hE hc hc\' hx.1'})}
+                                         {'Becoming.«两向有常则通»': '«两向有常有前则通» hE hc hc\' hx.1'}),
+            # The owner's patches: GrammarLaws gains «不出» and «所闭不出» (MOVED) and the two readings of a region not
+            # crossed, and proves «所闭之界» as «所闭不出»'s case; GrammarCrossing loses the two; Standpoints writes
+            # Flow.Cut anew (REDEFINED).
+            'Becoming.GrammarLaws': ({'Becoming.«不出»', 'Becoming.«所闭不出»',
+                                      'Becoming.GrammarLaws.uncrossed_iff_notGoingOut',
+                                      'Becoming.GrammarLaws.uncrossed_iff_closed'},
+                                     {'Becoming.«所闭之界»': '«所闭不出» R x y z within beyond'}),
+            'Becoming.GrammarCrossing': (set(), {}),
+            'Becoming.Standpoints': (set(), {})}
+# Declarations an owner's patch moves, each keeping its statement (a definition its body too): name: (from, to).
+MOVED = {'Becoming.«不出»': ('Becoming.GrammarCrossing', 'Becoming.GrammarLaws'),
+         'Becoming.«所闭不出»': ('Becoming.GrammarCrossing', 'Becoming.GrammarLaws')}
+# A definition an owner's patch writes anew: its old body, its new one, and the definition the new one unfolds with
+# the names it reads at: Flow.Cut as «不出» at the valuation's relation, which unfolds to the old body word for word.
+REDEFINED = {'Becoming.Cut': ("∀ e e', region e → ¬ region e' → ¬ V.related e e'", '«不出» V.related region',
+                              'Becoming.«不出»', {'R': 'V.related', 'P': 'region', 'x': 'e', 'y': "e'"})}
+
+
+def source_of(module):
+    return mr.PKG + 'Becoming/' + module[len('Becoming.'):].replace('.', '/') + '.lean'
+
+
+def unfold(body, names):
+    """A definition's body read at given arguments: each of its bound names replaced."""
+    return re.sub(r"(?<![\w'.])(" + '|'.join(map(re.escape, names)) + r")(?![\w'.])", lambda m: names[m.group(1)], body)
 
 
 def audit():
-    """The Lean sources the patches changed, against HEAD. The two whose code a patch of the kit changes are held to
-    EXPECTED; every other (GrammarTesting's header clause, the owner's GrammarLaws header) keeps its code, comments
-    blanked. An owner's patch that changes code adds its own expectation to EXPECTED."""
+    """The Lean sources the patches changed, against HEAD. Those whose code a patch changes are held to EXPECTED (the
+    kit's Grammar and GrammarReadings, the owner's GrammarLaws, GrammarCrossing and Standpoints): their declarations
+    added and removed, MOVED's moved with nothing changed, every other statement kept, no definition's body changed but
+    REDEFINED's, which must unfold to its old body. Every other changed source (GrammarTesting's header clause,
+    MapRegions' doc, the owner's GrammarLaws header and ConveyanceBoundaries' doc) keeps its code, comments blanked."""
     problems = []
     changed = [p for p in git('diff', '--name-only', 'HEAD', '--', mr.PKG + 'Becoming/').stdout.split()
                if p.endswith('.lean')]
-    expected = {mr.BELOW[m]: m for m in EXPECTED}
+    expected = {source_of(m): m for m in EXPECTED}
+    seen = {}       # module: its statements and whole declarations, before and after
     for path in sorted(set(changed) | set(expected)):
         if path not in changed:
             problems.append((path, 'unchanged: its patch is not applied'))
@@ -433,19 +539,39 @@ def audit():
             continue
         module = expected[path]
         added, cases = EXPECTED[module]
-        before, _ = statements(before_text)
+        before, whole_before = statements(before_text)
         after, whole = statements(after_text)
+        seen[module] = (before, after, whole_before, whole)
         if set(after) - set(before) != added:
             problems.append((module, 'added', sorted(set(after) - set(before))))
-        if set(before) - set(after):
+        if set(before) - set(after) != {n for n, (source, _) in MOVED.items() if source == module}:
             problems.append((module, 'removed', sorted(set(before) - set(after))))
-        moved = [n for n in before if n in after and before[n] != after[n]]
-        if moved:
-            problems.append((module, 'statements changed', moved))
+        kept = [n for n in before if n in after]
+        restated = [n for n in kept if before[n] != after[n]]
+        if restated:
+            problems.append((module, 'statements changed', restated))
+        rewritten = [n for n in kept if not whole_before[n].startswith('theorem ') and whole_before[n] != whole[n]
+                     and n not in REDEFINED]
+        if rewritten:
+            problems.append((module, 'definitions changed', rewritten))
         for name, proof in cases.items():
             if ' '.join(proof.split()) not in whole.get(name, ''):
                 problems.append((module, 'not proved as a case', name))
-        print(module, len(before), '->', len(after), 'declarations; added', sorted(set(after) - set(before)))
+        print(module, len(before), '->', len(after), 'declarations; added', sorted(set(after) - set(before)),
+              'removed', sorted(set(before) - set(after)))
+    for name, (source, target) in MOVED.items():
+        if source not in seen or target not in seen:
+            problems.append(('moved, but a module is unchanged', name, source, target))
+            continue
+        old, new = seen[source][2].get(name, ''), seen[target][3].get(name, '')
+        if seen[source][0].get(name) != seen[target][1].get(name) or (not old.startswith('theorem ') and old != new):
+            problems.append(('moved, not unchanged', name))
+    for name, (old, new, by, names) in REDEFINED.items():
+        bodies = [(s[2][name].split(':=', 1)[1].strip(), s[3][name].split(':=', 1)[1].strip())
+                  for s in seen.values() if name in s[2] and name in s[3]]
+        unfolded = [unfold(s[3][by].split(':=', 1)[1].strip(), names) for s in seen.values() if by in s[3]]
+        if bodies != [(old, new)] or unfolded != [old]:
+            problems.append(('redefined, not as its old body unfolded', name, bodies, unfolded))
     for path, wanted in IMPORTS.items():
         imports = re.findall(r'^import (\S+)', (ROOT / path).read_text(encoding='utf-8'), re.M)
         if imports != wanted:
@@ -456,8 +582,10 @@ def audit():
     for p in problems:
         print('PROBLEM', p)
     assert not problems
-    print('audit: the patches add only their three laws and keep every other statement, the two old laws are their '
-          'cases, every other changed source keeps its code; the leaves import what their notes say; the plan line is '
+    print('audit: the kit\'s patches add only their three laws, the two old laws their cases; the owner\'s move «不出» '
+          'and «所闭不出» into GrammarLaws unchanged, prove «所闭之界» as the latter\'s case, add the two readings of a '
+          'region not crossed, and write Flow.Cut as what unfolds to its old body; every other statement is kept and '
+          'every other changed source keeps its code; the leaves import what their notes say; the plan line is '
           'replaced')
 
 
@@ -566,7 +694,8 @@ LINES = [
 
 # The two general laws are stated where the laws they generalize are, as a change to a result's statement goes to its
 # record and its home section: 01 §4 with law 5 of continuation-relative-to-a-class, and 06 §三 (LINES above) with law 4
-# of classical-definitions-in-the-grammar. OU7's record names them in its prose and depends on both records.
+# of classical-definitions-in-the-grammar. OU7's record names them in its prose and depends on both records. 01 §7 is
+# the home of master-laws-on-the-grammar, whose law 4 the owner's item 3 reads as one law (OWNER_RECORDS below).
 ROOT_CHAPTER = ROOT / 'theories/becoming/chapters/01-ROOT.md'
 ROOT_LINES = [(
     '§4, beginning kept along the converse net\'s core',
@@ -580,7 +709,14 @@ ROOT_LINES = [(
     '(`«生于逆核下不变»`), so neither by the two-way core (`«生于位核下不变»`): what shares a position under the two-way '
     'core shares beginning and ending (`«位同则生亡同»`), and abiding too (`«位同则住同»`). The forward core can tell '
     'beginnings apart, and the core of the converse net relates pairs that neither the core nor the two-way core '
-    'relates ([06](06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus)).')]
+    'relates ([06](06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus)).'), (
+    '§7, balance on every region not gone out of either way',
+    'a pairing keeps the count on every region the relation does not cross (`«对则不越域守数»`), so on every region '
+    'closed under it and its converse (`«对则双闭域守数»`), closed one way not being enough (`«对而单闭域不守数之例»`);',
+    'a pairing keeps the count on every region not gone out of either way, which is exactly a region the relation '
+    'does not cross (`GrammarLaws.uncrossed_iff_notGoingOut`) and a region closed under it and its converse '
+    '(`GrammarLaws.uncrossed_iff_closed`): one law, read either way (`«对则不越域守数»`, `«对则双闭域守数»`), closed '
+    'one way not being enough (`«对而单闭域不守数之例»`);')]
 GENERAL = [
     {'rid': 'continuation-relative-to-a-class', 'module': 'Becoming.Grammar', 'law': 5,
      'en': ('Read both ways, constant under 缘 and under its converse, the core carries beginning, abiding and ending: '
@@ -629,7 +765,8 @@ def home():
 
 
 def home_root():
-    """01 §4: the home of law 5 of continuation-relative-to-a-class, generalized."""
+    """01 §4, the home of law 5 of continuation-relative-to-a-class, generalized; 01 §7, the home of
+    master-laws-on-the-grammar, whose law 4 reads its two count laws as one."""
     text = ROOT_CHAPTER.read_text(encoding='utf-8')
     for where, old, new in ROOT_LINES:
         text = once(text, old, new, '01, ' + where)
@@ -734,6 +871,148 @@ def record_words(study):
         print(f'{rid}: {len(edits)} words corrected; history note in place')
 
 
+# The two records the owner's patches change. master-laws-on-the-grammar: law 1 and the GrammarLaws reference gain
+# «不出» and «所闭不出»; law 4 reads its two count laws as one law on regions not gone out of either way (its home, 01 §7,
+# in ROOT_LINES) and, with the reference, gains the two readings of a region not crossed. not-going-out-of-a-region:
+# «不出» and «所闭不出» are GrammarLaws' now, so a GrammarLaws reference and proof binding hold them and its reuse of the
+# closure law says so. Each validation scope names the landing receipt and its counts.
+MASTER_REC, CROSSING_REC = 'master-laws-on-the-grammar', 'not-going-out-of-a-region'
+NOT_CROSSED = ['Becoming.GrammarLaws.uncrossed_iff_notGoingOut', 'Becoming.GrammarLaws.uncrossed_iff_closed']
+LAW4 = {'en': ('a pairing keeps the count on every region the relation does not cross, so on every region closed under '
+               'it and its converse, closed one way not being enough',
+               'a pairing keeps the count on every region not gone out of either way, which is exactly a region the '
+               'relation does not cross and one closed under it and its converse, closed one way not being enough'),
+        'zh': ('配对守其关系所不越之每一域之数，故守对关系及其逆皆封闭之每一域之数，单向封闭不足',
+               '配对守两向皆不出之每一域之数，此域恰是关系所不越者，亦恰是对关系及其逆皆封闭者，单向封闭不足')}
+REUSE = {'en': ('«闭», «所闭», «闭之及» and «所闭之界» from the closure law, «所闭不出» being «所闭之界» read through «不出».',
+                '«闭», «所闭», «闭之及» and «所闭之界» from the closure law, which GrammarLaws states through «不出» as '
+                '«所闭不出», «所闭之界» its case at two occurrences.'),
+         'zh': ('«闭»、«所闭»、«闭之及» 与 «所闭之界» 出自闭包之律；«所闭不出» 即经 «不出» 所读之 «所闭之界»。',
+                '«闭»、«所闭»、«闭之及» 与 «所闭之界» 出自闭包之律；GrammarLaws 经 «不出» 陈此律为 «所闭不出»，'
+                '«所闭之界» 为其于二发生处之例。')}
+COUNTS = {MASTER_REC: ('Becoming.GrammarLaws', r'Becoming\.GrammarLaws, (\d+) theorems in (\d+) declarations',
+                       r'GrammarLaws (\d+) 项声明中 (\d+) 条定理',
+                       'Becoming.GrammarLaws, {t} theorems in {d} declarations', 'GrammarLaws {d} 项声明中 {t} 条定理'),
+          CROSSING_REC: ('Becoming.GrammarCrossing',
+                         r'Becoming\.GrammarCrossing, (\d+) declarations \((\d+) theorems\)'
+                         r'(?:, with «不出» and «所闭不出» in Becoming\.GrammarLaws)?',
+                         r'Becoming\.GrammarCrossing (\d+) 项声明（(\d+) 条定理）(?:及 Becoming\.GrammarLaws 之 «不出»、«所闭不出»)?',
+                         'Becoming.GrammarCrossing, {d} declarations ({t} theorems), with «不出» and «所闭不出» in '
+                         'Becoming.GrammarLaws',
+                         'Becoming.GrammarCrossing {d} 项声明（{t} 条定理）及 Becoming.GrammarLaws 之 «不出»、«所闭不出»')}
+
+
+def owner_texts(master, crossing):
+    """The words and declaration lists the owner's patches change in the two records, each step skipped where it is
+    already in place (anchors() tries them on the records as they stand)."""
+    law1, law4 = master['laws'][0], master['laws'][3]
+    for lang, (old, new) in LAW4.items():
+        if new not in law4[lang]:
+            assert law4[lang].count(old) == 1, (MASTER_REC, 'law 4', lang, 'the words moved')
+            law4[lang] = law4[lang].replace(old, new)
+    moved = sorted(MOVED)
+    law1['declarations'] = insert_after(law1['declarations'], [('Becoming.«闭»', 'Becoming.«不出»'),
+                                                                ('Becoming.«所闭之对称»', 'Becoming.«所闭不出»')],
+                                        MASTER_REC + ' law 1')
+    law4['declarations'] = insert_after(law4['declarations'], [('Becoming.«对则双闭域守数»', NOT_CROSSED[0]),
+                                                                (NOT_CROSSED[0], NOT_CROSSED[1])], MASTER_REC + ' law 4')
+    ref = next(x for x in master['references'] if x['path'] == source_of('Becoming.GrammarLaws'))
+    ref['declarations'] = insert_after(ref['declarations'], [('Becoming.«闭»', 'Becoming.«不出»'),
+                                                              ('Becoming.«所闭之对称»', 'Becoming.«所闭不出»'),
+                                                              ('Becoming.GrammarLaws.uncrossed_of_closed', NOT_CROSSED[0]),
+                                                              (NOT_CROSSED[0], NOT_CROSSED[1])],
+                                       MASTER_REC + ' GrammarLaws reference')
+    reuse = next(d for d in crossing['dependencies'] if d['id'] == MASTER_REC)['detail']
+    for lang, (old, new) in REUSE.items():
+        if reuse[lang] != new:
+            assert reuse[lang] == old, (CROSSING_REC, 'its reuse of the closure law', lang, 'the words moved')
+            reuse[lang] = new
+    assert set(moved) <= set(law1['declarations']) and set(moved) <= {d for law in crossing['laws']
+                                                                      for d in law['declarations']}
+
+
+def owner_records(receipt, study):
+    """The two records the owner's patches change: owner_texts, then not-going-out-of-a-region's references and proof
+    binding, each validation scope's receipt and counts (each the old count with what the patches add or move, checked
+    against the receipt), reviewed_at_utc and a history note. Each step is skipped where it is already in place."""
+    from datetime import datetime, timezone
+    data = json.loads((ROOT / receipt).read_text(encoding='utf-8'))
+    mods = {m['module']: m for m in data['modules']}
+    stamp = Path(receipt).parent.name
+    day = datetime.now(timezone.utc).replace(microsecond=0)
+    laws_source, crossing_source = source_of('Becoming.GrammarLaws'), source_of('Becoming.GrammarCrossing')
+    after, whole = statements((ROOT / laws_source).read_text(encoding='utf-8'))
+    held = {d['name'] for d in mods['Becoming.GrammarLaws']['declarations']}
+    named = set(MOVED) | set(NOT_CROSSED)
+    assert named <= held, ('the receipt\'s GrammarLaws lacks', named - held)
+    theorem = {n: whole[n].startswith('theorem ') for n in list(MOVED) + NOT_CROSSED}
+    # What each module's count changes by: GrammarLaws gains the moved and the new, GrammarCrossing loses the moved.
+    delta = {MASTER_REC: (sum(theorem.values()), len(theorem)),
+             CROSSING_REC: (-sum(theorem[n] for n in MOVED), -len(MOVED))}
+    paths = {rid: ROOT / f'theories/becoming/results/records/{rid}.json' for rid in (MASTER_REC, CROSSING_REC)}
+    recs = {rid: json.loads(path.read_text(encoding='utf-8')) for rid, path in paths.items()}
+    owner_texts(recs[MASTER_REC], recs[CROSSING_REC])
+    crossing = recs[CROSSING_REC]
+    ref = next(x for x in crossing['references'] if x['path'] == crossing_source)
+    ref['declarations'] = [d for d in ref['declarations'] if d not in MOVED]
+    if not any(x['path'] == laws_source for x in crossing['references']):
+        crossing['references'].insert(crossing['references'].index(ref) + 1, {
+            'path': laws_source, 'role': 'proof', 'sha256': mr.digest(laws_source), 'declarations': sorted(MOVED)})
+    if not any(b['source'] == laws_source for b in crossing['proof_bindings']):
+        crossing['proof_bindings'].append({'source': laws_source, 'receipt': receipt,
+                                           'sha256_pointer': '/source_sha256/Becoming.GrammarLaws',
+                                           'success_pointer': '/status', 'success_value': 'passed'})
+    notes = {MASTER_REC: (
+        "the grammar's owner's items held from BD2 (patches/owner/02-04). «不出» and «所闭不出» are stated in "
+        "GrammarLaws beside «闭», moved from GrammarCrossing with their statements unchanged, and «所闭之界» is proved "
+        "as «所闭不出» at two occurrences, its statement unchanged: law 1 and the GrammarLaws reference gain the two. "
+        "A region not crossed is exactly one not gone out of either way and one closed both ways "
+        "(GrammarLaws.uncrossed_iff_notGoingOut, GrammarLaws.uncrossed_iff_closed, BD2's text), so law 4 reads its "
+        "two count laws as one law on regions not gone out of either way, and its home in 01 §7 says the same: law 4 "
+        f"and the reference gain the two. The validation scope's receipt and counts are receipt {stamp}'s.",
+        "文法之主人于 BD2 所留之项（patches/owner/02-04）。«不出» 与 «所闭不出» 陈于 GrammarLaws，在 «闭» 旁，自 "
+        "GrammarCrossing 移来，陈述不变；«所闭之界» 证为 «所闭不出» 于二发生处之例，陈述不变：律 1 与 GrammarLaws 之引用"
+        "增此二者。关系所不越之域恰是两向皆不出者，亦恰是两向皆闭者（GrammarLaws.uncrossed_iff_notGoingOut、"
+        "GrammarLaws.uncrossed_iff_closed，BD2 之文），故律 4 读其二守数之律为两向皆不出之域上之一律，其归处 01 §7 亦如是"
+        f"言：律 4 与其引用增此二者。验证范围之回执与数目为收据 {stamp} 者。"),
+        CROSSING_REC: (
+        "«不出» and «所闭不出» are now stated in GrammarLaws beside «闭» (the grammar's owner's item held from BD2, "
+        "patches/owner/02), their statements unchanged: they move from the GrammarCrossing reference to a GrammarLaws "
+        "reference and proof binding, the reuse of the closure law says that GrammarLaws states it through «不出», and "
+        f"the validation scope's receipt and GrammarCrossing's counts are receipt {stamp}'s.",
+        "«不出» 与 «所闭不出» 今陈于 GrammarLaws，在 «闭» 旁（文法之主人于 BD2 所留之项，patches/owner/02），陈述不变："
+        "二者自 GrammarCrossing 之引用移至 GrammarLaws 之引用与证明绑定，闭包之律之复用言 GrammarLaws 经 «不出» 陈之，"
+        f"验证范围之回执与 GrammarCrossing 之数目为收据 {stamp} 者。")}
+    for rid, r in recs.items():
+        module, en, zh, form_en, form_zh = COUNTS[rid]
+        theorems, declarations = mods[module]['theorems'], len(mods[module]['declarations'])
+        scope = r['validation_scope']
+        for lang, pattern, form in (('en', en, form_en), ('zh', zh, form_zh)):
+            found = re.findall(pattern, scope[lang])
+            assert len(found) == 1, (rid, lang, 'the counts are not there once')
+            a, b = map(int, found[0])
+            # Only master-laws-on-the-grammar's English names the theorems first.
+            t_old, d_old = (a, b) if lang == 'en' and rid == MASTER_REC else (b, a)
+            if form.format(t=theorems, d=declarations) not in scope[lang]:
+                assert (t_old + delta[rid][0], d_old + delta[rid][1]) == (theorems, declarations), \
+                    (rid, lang, 'the old counts with what the patches add or move are not the receipt\'s',
+                     (t_old, d_old), (theorems, declarations))
+                scope[lang] = re.sub(pattern, form.format(t=theorems, d=declarations), scope[lang])
+        for lang, pattern, form in (('en', r'\(receipt \d{8}T\d{6}\.\d{6}Z\)', f'(receipt {stamp})'),
+                                    ('zh', r'（回执 \d{8}T\d{6}\.\d{6}Z）', f'（回执 {stamp}）')):
+            assert len(re.findall(pattern, scope[lang])) == 1, (rid, lang, 'the receipt is not named once')
+            scope[lang] = re.sub(pattern, form, scope[lang])
+        if not any('board item OU7' in h.get('en', '') for h in r['history']):
+            r['history'].append({
+                'en': f"{day.day} {day:%B %Y}, board item OU7 (study section {study}): {notes[rid][0]} Nothing else "
+                      "the record states changed.",
+                'zh': f"{day.year}年{day.month}月{day.day}日，工作板条目 OU7（研究第 {study} 节）：{notes[rid][1]}记录所述余无改变。"})
+            r['reviewed_at_utc'] = day.isoformat()
+        paths[rid].write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        print(f'{rid}: the owner\'s items in place; {module} {theorems} theorems in {declarations} declarations at '
+              f'receipt {stamp}; history note in place')
+
+
 SECTION_B = (PART_B / 'home-03-section-3.txt').read_text(encoding='utf-8')
 BEFORE_B = '<a id="r-testing-within-couplings"></a>\n'
 # testing-within-the-net's toy stipulates its branches; RoomNet derives them at a margin of one (Rooms.toy_branches).
@@ -801,6 +1080,7 @@ def record(receipt, study):
     regions()
     general_records(receipt, study)
     record_words(study)
+    owner_records(receipt, study)
     for maker in (mr, mb):
         r = maker.record(receipt, study)
         (ROOT / maker.REC).write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
@@ -810,13 +1090,27 @@ def record(receipt, study):
 # ---------------------------------------------------------------------------------------------------------- register
 
 APART_B = json.loads((PART_B / 'apart-reasons.json').read_text(encoding='utf-8'))
+# The owner's patches in the register: the two readings of a region not crossed, should the connectivity tool list them
+# as apart roots, and «所闭不出», an apart root on main that «所闭之界» now uses.
+OWNER_ROOTS = {
+    'Becoming.GrammarLaws.uncrossed_iff_notGoingOut': (
+        'general-structure', 'GrammarLaws.uncrossed_iff_notGoingOut: a region a relation does not cross is one not gone '
+                             'out of either way, for every relation on any carrier and every region read as a test; '
+                             'master-laws-on-the-grammar\'s law 4 reads its two count laws on it as one law'),
+    'Becoming.GrammarLaws.uncrossed_iff_closed': (
+        'general-structure', 'GrammarLaws.uncrossed_iff_closed: a region a relation does not cross is one closed under '
+                             'it and under its converse, for every relation on any carrier, the converse of '
+                             'GrammarLaws.uncrossed_of_closed; master-laws-on-the-grammar, law 4')}
+OWNER_NOW_USED = ['Becoming.«所闭不出»']
 
 
 def ours(name):
-    return name in mr.LEAF or name in mr.PATCHED or name in mb.NAMES
+    return name in mr.LEAF or name in mr.PATCHED or name in mb.NAMES or name in OWNER_ROOTS
 
 
 def module_of(name):
+    if name in OWNER_ROOTS:
+        return 'Becoming.GrammarLaws'
     if name in mr.LEAF:
         return mr.MODULE
     for m in mb.MODULES:
@@ -831,7 +1125,7 @@ def reasons():
     constructed model; counting_reach_lt and the line-matching law support others; every other law is a law of every
     relation on any carrier, its unit's reading in the OU7 study. The patches' three laws are listed too, in case one
     stands apart: on the expected reading each is used by the old law that is its case. Part B: its apart-reasons.json,
-    each root a fact about the rooms' rule, one constructed family of models."""
+    each root a fact about the rooms' rule, one constructed family of models. The owner's: OWNER_ROOTS."""
     out = {}
     for name in mr.LEAF:
         short = name[len('Becoming.'):]
@@ -853,6 +1147,7 @@ def reasons():
                                           'general form of an older law of the grammar that is now its case (OU7)')
     for name, (category, why) in APART_B['roots'].items():
         out[name] = (category, why)
+    out.update(OWNER_ROOTS)
     return out
 
 
@@ -868,8 +1163,10 @@ def used_by_ou7(names):
 
 
 def leaf_uses():
-    """The register roots OU7's code names (the entries the register step expects to drop)."""
-    return used_by_ou7(json.loads(APART.read_text(encoding='utf-8'))['roots'])
+    """The register roots OU7's code names and the owner's patches now use (the entries the register step expects to
+    drop)."""
+    roots = json.loads(APART.read_text(encoding='utf-8'))['roots']
+    return used_by_ou7(roots) | {n for n in OWNER_NOW_USED if n in roots}
 
 
 def listed_in(log, label):
@@ -913,9 +1210,10 @@ def register(log_path):
                                             'not predicted', sorted(found - set(APART_B['roots'])),
                                             'predicted, not roots', sorted(set(APART_B['roots']) - found))
     # A register root the leaves or the patches now use is no longer an apart root: its entry goes. Only the roots
-    # their code names may go this way; any other stops for its owner's reading. Part B's six must be among them.
+    # their code names, and OWNER_NOW_USED, may go this way; any other stops for its owner's reading. Part B's six must
+    # be among them.
     gone = listed_in(log, 'register entries no longer apart roots')
-    unexpected = [g for g in gone if g not in used_by_ou7(gone)]
+    unexpected = [g for g in gone if g not in used_by_ou7(gone) and g not in OWNER_NOW_USED]
     assert not unexpected, ('register entries no longer apart roots that OU7 does not use', unexpected)
     dropped = [g for g in gone if g in d['roots']]
     kept = [n for n in APART_B['now_used'] if n in d['roots'] and n not in dropped]
@@ -932,7 +1230,7 @@ def register(log_path):
     assert set(json.loads(t)['roots']) == (set(d['roots']) | set(new)) - set(dropped)
     if new or dropped:
         APART.write_text(t, encoding='utf-8')
-    print('dropped', len(dropped), 'register entries the leaves now use:', ', '.join(dropped) or 'none')
+    print('dropped', len(dropped), 'register entries the leaves and the patches now use:', ', '.join(dropped) or 'none')
     print('registered', len(new), 'roots of the leaves and the patches; part B\'s', len(APART_B['roots']),
           'as predicted')
     if others:
@@ -994,7 +1292,7 @@ def check():
     for p in problems:
         print('PROBLEM', p)
     assert not problems
-    print('master laws read both records; the boundary report and the central figures are as on main:',
+    print('shared laws read both records; the boundary report and the central figures are as on main:',
           b.get('counts'), (data.get('central_reach') or {}).get('counts'))
 
 
@@ -1033,18 +1331,24 @@ def study(n, receipt):
     leaf = m[mr.MODULE]
     stamp = Path(receipt).parent.name
     below = ', '.join(f"{k.split('.')[-1]} {len(m[k]['declarations'])} declarations" for k in mr.BELOW)
+    data = {x['module']: x for x in json.loads((ROOT / receipt).read_text(encoding='utf-8'))['modules']}
+    owner = ', '.join(f"{k} {data['Becoming.' + k]['theorems']} theorems in {len(data['Becoming.' + k]['declarations'])} "
+                      "declarations" for k in ('GrammarLaws', 'GrammarCrossing'))
     evidence = '\n'.join(textwrap.wrap(
         f"Evidence: core receipt `{stamp}`; Becoming.GrammarConditionals ({leaf['theorems']} theorems in "
         f"{len(leaf['declarations'])} declarations), a core leaf importing GrammarCandidates and GrammarLaws, nothing "
-        f"importing it; {below}; every axiom report empty. The patches' audit: only their three laws added, every "
-        "other statement unchanged.", width=118, subsequent_indent=' ' * 7, break_on_hyphens=False))
+        f"importing it; {below}; {owner}; every axiom report empty. The patches' audit: the kit's add only their "
+        "three laws, every other statement unchanged; the owner's move two declarations unchanged, add two and write "
+        "Flow.Cut as what unfolds to its old body.", width=118, subsequent_indent=' ' * 7, break_on_hyphens=False))
     section = f"""{title.format(n)}
 
-Board item OU7 (claimed as OU5), the OU plan's §八 step 5 and the release gate's item 4, in two parts. Part A writes each conditional law of the corpus (丙一) in the grammar as "Y 当且仅当 Z" or "Z 则 Y", with a net where Z fails and Y fails with it ([the design]({DEVLINK}DESIGN.md)); it reads the 219 units, and one independent AI review of its design found 24 problems, every one taken ([the review]({DEVLINK}review/FINDINGS.md)). Part B gives 验's model examples: one rule of rooms, an unheated room and two thermostats, tested by a window on the net of the possible ([the design]({DEVLINK}check/DESIGN.md)); one independent AI review found 18 problems, and its re-check took every point ([the review and re-check]({DEVLINK}check/review/FINDINGS.md)). OU's owner decided what lands and confirmed every name; the kit's last revision settled where the two general laws are stated (GrammarReadings' note and scope sentence with them), part B's place in the instance ring, MapRegions' wording (its doc, its notes and one record's validation scope) and the toy's pointer to its derivation. Every text that lists the ring's members names the rooms; 08 §3's count of leaf applications, six there though the checker has listed seven since RF6.1 added OpenedCorrection (30 October), is now counted from the checker's list.
+Board item OU7 (claimed as OU5), the OU plan's §八 step 5 and the release gate's item 4, in two parts. Part A writes each conditional law of the corpus (丙一) in the grammar as "Y 当且仅当 Z" or "Z 则 Y", with a net where Z fails and Y fails with it ([the design]({DEVLINK}DESIGN.md)); it reads the 219 units, and one independent AI review of its design found 24 problems, every one taken ([the review]({DEVLINK}review/FINDINGS.md)). Part B gives 验's model examples: one rule of rooms, an unheated room and two thermostats, tested by a window on the net of the possible ([the design]({DEVLINK}check/DESIGN.md)); one independent AI review found 18 problems, and its re-check took every point ([the review and re-check]({DEVLINK}check/review/FINDINGS.md)). OU's owner decided what lands and confirmed every name; the kit's last revision settled where the two general laws are stated (GrammarReadings' note and scope sentence with them), part B's place in the instance ring, MapRegions' wording (its doc, its notes and one record's validation scope) and the toy's pointer to its derivation. Every text that lists the ring's members names the rooms; 08 §3's count of leaf applications, six there though the checker has listed seven since RF6.1 added OpenedCorrection (30 October), is now counted from the checker's list. The grammar's owner's three items held from BD2 land with it ([the patches]({DEVLINK}kit/patches/README.md)): «不出» and «所闭不出» stated in GrammarLaws beside «闭», «所闭之界» their case; `Flow.Cut` written as «不出» at a valuation's relation, the old definition by `Iff.rfl`; and a region not crossed read two ways (BD2's two equivalences), so that master-laws-on-the-grammar's two count laws read as one law on regions not gone out of either way.
 
 ```text
 Result(s): conditional-laws-of-the-corpus (new, home 06 §四 at its end); continuation-relative-to-a-class (law 5,
-       home 01 §4) and classical-definitions-in-the-grammar (law 4, home 06 §三), each generalized. Reused:
+       home 01 §4) and classical-definitions-in-the-grammar (law 4, home 06 §三), each generalized;
+       master-laws-on-the-grammar (law 4 read as one law, home 01 §7; laws 1 and 4 gain the owner's declarations)
+       and not-going-out-of-a-region («不出» and «所闭不出» now GrammarLaws'). Reused:
        candidate-theorems-of-the-corpus, master-laws-on-the-grammar, generation-and-degeneration-at-two-grains,
        testing-within-the-net.
 Delta:
@@ -1060,6 +1364,11 @@ Delta:
     («两向有常有前则通»; «两向有常则通» its case), in GrammarReadings, law 4 of the classical definitions and 06 §三.
     Every old statement kept. 前際 and 後際 mirror each other under the converse; constancy is sufficient for 通,
     not necessary.
+  - The grammar's owner's items held from BD2 (patches/owner/02-04): «不出» and «所闭不出» stated in GrammarLaws
+    beside «闭», moved from GrammarCrossing unchanged, «所闭之界» «所闭不出»'s case at two occurrences; Flow.Cut written as
+    «不出» at a valuation's relation, which unfolds to its old body; a region not crossed is exactly one not gone
+    out of either way and one closed both ways (BD2's two equivalences), so master-laws-on-the-grammar's law 4
+    reads its two count laws as one law.
   - 穷 → 变 → 通 is a conjunction where 變 is one alteration, not an order; G01's conjunction is text in 06, and
     06's open item is restated as which 變 the text means.
   - 27 witnesses, so that every family's net where Z fails is in the core; the 17 compositions the home section
@@ -1076,8 +1385,8 @@ Boundary:
   - The three open readings (G22's 衡不正, JS-326's 相應, JS-318's 無明), each with its AI label in 06's open items.
   - The 181 乙 candidates of the three added texts.
 Output → input: 06 §四's home section, its thesis, §三's 通 (its table row and reading) and two open items; 01 §4's
-       paragraph on the two-way core; the OU plan's line on beginning; the record's next step (review by a person;
-       the open readings).
+       paragraph on the two-way core; 01 §7's sentence on balance on a region; the OU plan's line on beginning; the
+       record's next step (review by a person; the open readings).
 ```
 
 {part_b_block(stamp, mb.receipt_modules(receipt))}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "root": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/patches/history",
+  "entries": [
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/patches/HELD.md",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/patches/history/HELD.md",
+      "sha256": "24e68fd896c67f50e0a92e652d0109ee547cd02d72684b506562a5e6a8e933f1",
+      "blob": "501fbf5731b9b606467cbe89cd888321b842f649",
+      "batch": "moves-2026-11-01-ou7-held",
+      "reason": "superseded on 1 November 2026 by patches/owner/02-04, written against main once BD2 landed (f1ea9546d); item 3's text and BD2's check are stated in the patches README",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/patches/HELD.md"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+diff --git a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
+index ff9b79d..dbf128e 100644
+--- a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
++++ b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean
+@@ -75,9 +75,11 @@ their consumers' stay arithmetic, since each needs only the count.
+   pairing of units (`«程守数当且仅当可对»`). This is an exact cardinality representation of
+   natural-number balance, near-definitional under the one: the pairing is supplied, not derived from
+   the unfolding, and it establishes no trajectory of units. Counting a region's units (`«计»`, the
+-  region read as a test), a pairing keeps the count on every region the relation does not cross
+-  (`«对则不越域守数»`), so on every region closed under the relation and under its converse
+-  (`«对则双闭域守数»`); closed one way is not enough (`«对而单闭域不守数之例»`). Under a class decided
++  region read as a test), a pairing keeps the count on every region not gone out of either way, which
++  is exactly a region the relation does not cross (`GrammarLaws.uncrossed_iff_notGoingOut`) and a
++  region closed under the relation and under its converse (`GrammarLaws.uncrossed_iff_closed`): one
++  law, read either way (`«对则不越域守数»`, `«对则双闭域守数»`); closed one way is not enough
++  (`«对而单闭域不守数之例»`). Under a class decided
+   by a test, a pairing is exactly equal count in every class (`«类之对当且仅当类类等数»`), and the
+   class does work: equal count pairs under the one and not under sameness (`«一对而静不对之例»`). So
+   a pairing under continuation relative to such a class keeps the count in every class
+@@ -947,8 +949,36 @@ theorem GrammarLaws.uncrossed_of_closed {R : «际» α} {p : α → Bool}
+   · exact Bool.noConfusion (hy.symm.trans (forward x y hx r))
+   · rfl
+ 
++/-- **A region the relation does not cross is one not gone out of either way.** Related units lie
++both in a region read as a test or both outside it exactly where nothing in it bears the relation to
++something outside it and nothing outside it bears the relation to something in it. -/
++theorem GrammarLaws.uncrossed_iff_notGoingOut {R : «际» α} {p : α → Bool} :
++    (∀ x y, R x y → p x = p y) ↔
++      «不出» R (fun x => p x = true) ∧ «不出» («逆» R) (fun x => p x = true) :=
++  ⟨fun uncrossed =>
++    ⟨fun x y inside outside related => outside ((uncrossed x y related).symm.trans inside),
++     fun x y inside outside related => outside ((uncrossed y x related).trans inside)⟩,
++   fun ⟨forward, backward⟩ x y related => by
++    cases hx : p x <;> cases hy : p y
++    · rfl
++    · exact (backward y x hy (fun inside => Bool.noConfusion (hx.symm.trans inside)) related).elim
++    · exact (forward x y hx (fun inside => Bool.noConfusion (hy.symm.trans inside)) related).elim
++    · rfl⟩
++
++/-- **A region the relation does not cross is one closed under it and under its converse.** The
++converse of `GrammarLaws.uncrossed_of_closed`. -/
++theorem GrammarLaws.uncrossed_iff_closed {R : «际» α} {p : α → Bool} :
++    (∀ x y, R x y → p x = p y) ↔
++      «闭» R (fun x => p x = true) ∧ «闭» («逆» R) (fun x => p x = true) :=
++  ⟨fun uncrossed =>
++    ⟨fun x y inside related => (uncrossed x y related).symm.trans inside,
++     fun x y inside related => (uncrossed y x related).trans inside⟩,
++   fun ⟨forward, backward⟩ => GrammarLaws.uncrossed_of_closed forward backward⟩
++
+ /-- **A pairing keeps the count on every region the relation does not cross.** Each pair lies both
+-in the region or both outside it. -/
++in the region or both outside it. A region not crossed is one not gone out of either way
++(`GrammarLaws.uncrossed_iff_notGoingOut`) and one closed both ways (`GrammarLaws.uncrossed_iff_closed`),
++so this law and `«对则双闭域守数»` read as one law on regions not gone out of either way. -/
+ theorem «对则不越域守数» {R : «际» α} {p : α → Bool} (uncrossed : ∀ x y, R x y → p x = p y)
+     {a b : List α} (h : «对» R a b) : «计» p a = «计» p b := by
+   induction h with
+@@ -958,7 +988,9 @@ theorem «对则不越域守数» {R : «际» α} {p : α → Bool} (uncrossed
+     rw [GrammarLaws.count_insert, uncrossed x y r, ih]
+ 
+ /-- **A pairing keeps the count on every region closed both ways**: closed under the relation and
+-under its converse. Closed one way is not enough (`«对而单闭域不守数之例»`). -/
++under its converse, which is not being crossed by it (`GrammarLaws.uncrossed_iff_closed`), so this law
++and `«对则不越域守数»` read as one law on regions not gone out of either way. Closed one way is not
++enough (`«对而单闭域不守数之例»`). -/
+ theorem «对则双闭域守数» {R : «际» α} {p : α → Bool}
+     (forward : «闭» R (fun x => p x = true)) (backward : «闭» («逆» R) (fun x => p x = true))
+     {a b : List α} (h : «对» R a b) : «计» p a = «计» p b :=

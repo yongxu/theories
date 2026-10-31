@@ -2,20 +2,21 @@
 """A dry run of OU7's landing in a throwaway git tree, with no Lean. The tree holds main's files that the kit reads or
 writes, and the study folder as this checkout has it. The run takes the land script's prepare stage and its apply
 stage twice. It then takes the post stage's own steps against a synthetic receipt and connectivity log:
-  - record, twice (the two general laws in the two records of the laws they generalize, and the one record whose words
-    the joins make false, included);
-  - the re-point of those three records, as the post stage makes it from the drift;
+  - record, twice (the two general laws in the two records of the laws they generalize, the one record whose words
+    the joins make false, and the two records the owner's patches change, included);
+  - the re-point of those five records and of the one whose cut the owner's patches write anew, as the post stage
+    makes it from the drift;
   - register, after a refused log, then once more;
   - study, twice.
-Last, OU7's two records and those three go through the registry's own validation and the lint. Nothing in the
+Last, OU7's two records and those six go through the registry's own validation and the lint. Nothing in the
 repository is written.
 
   python3 -B <kit>/dry_run.py OUT [MAIN]     OUT: a new folder outside the repository; MAIN: the commit, by default
                                              refs/heads/main
 
-The synthetic receipt is MAIN's latest receipt with the patched sources' hashes, the patches' three laws and the
-three leaves added as they would be checked (every axiom report empty; part A's leaf in the core, part B's two in the
-instance ring). It stands in for the core run, which only the rehearsal and the landing make. The steps that need the run itself (master laws, the re-point, render and the
+The synthetic receipt is MAIN's latest receipt with the patched sources' hashes, the patches' three laws, the owner's
+moved and added declarations and the three leaves as they would be checked (every axiom report empty; part A's leaf in
+the core, part B's two in the instance ring). It stands in for the core run, which only the rehearsal and the landing make. The steps that need the run itself (master laws, the re-point, render and the
 checks) are left to them.
 """
 import hashlib
@@ -42,6 +43,8 @@ KIT = STUDY + 'kit/'
 STAMP = '20261101T000000.000000Z'
 GENERALIZED = ('continuation-relative-to-a-class', 'classical-definitions-in-the-grammar')
 WORDS = ('generation-and-degeneration-at-two-grains',)     # pins MapRegions; the record stage corrects its words
+OWNER = ('master-laws-on-the-grammar', 'not-going-out-of-a-region')   # the record stage applies the owner's items
+CUT = ('conveyance-crosses-the-boundary',)                 # pins Standpoints, whose cut the owner's patch writes anew
 RECEIPT = PKG + f'becoming-checks/{STAMP}/verification.json'
 
 
@@ -62,16 +65,18 @@ def show(title, p, lines=40):
 latest = json.loads(run('git', 'show', f'{MAIN}:{PKG}becoming-verification.json', cwd=REPO).stdout)['utc']
 paths = [PKG + n for n in ('Becoming.lean', 'check_becoming.py', 'README.md', 'README.zh.md', 'becoming-verification.json',
                            'Becoming/Grammar.lean', 'Becoming/GrammarReadings.lean', 'Becoming/GrammarTesting.lean',
-                           'Becoming/GrammarLaws.lean', 'Becoming/MapRegions.lean',
+                           'Becoming/GrammarLaws.lean', 'Becoming/MapRegions.lean', 'Becoming/GrammarCrossing.lean',
+                           'Becoming/Standpoints.lean', 'Becoming/ConveyanceBoundaries.lean',
                            f'becoming-checks/{latest}/verification.json')]
 paths += ['_process/research-config.json', RF + 'development/one-unfolding-root/PLAN.md',
           RF + 'THEOREM-CONNECTIVITY-APART.json', RF + 'BECOMING-RENEWAL-READING.md', 'theories/becoming/chapters',
           'theories/becoming/results/records', 'theories/becoming/results/data', 'theories/becoming/results/completion',
           'tools/research', '_process/architecture/rebinds.jsonl']
-# Every file the records the kit changes reference, so that they validate in the tree as in the checkout.
-for rid in GENERALIZED + WORDS:
+# Every file the records the kit changes reference or keep a text version in, so that they validate in the tree as in
+# the checkout.
+for rid in GENERALIZED + WORDS + OWNER + CUT:
     rec = json.loads(run('git', 'show', f'{MAIN}:theories/becoming/results/records/{rid}.json', cwd=REPO).stdout)
-    paths += [x['path'] for x in rec['references'] if x['path'] not in paths]
+    paths += [x['path'] for x in rec['references'] + rec.get('text_versions', []) if x['path'] not in paths]
 TREE.mkdir(parents=True)
 LOG.mkdir()
 archive = subprocess.run(['git', 'archive', MAIN, '--', *paths], cwd=REPO, capture_output=True, check=True).stdout
@@ -98,28 +103,44 @@ show('apply, a second time: nothing applied again', again, 3)
 
 
 def synthetic_receipt():
-    """MAIN's latest receipt with the patched sources' hashes, the patches' three laws and the three leaves."""
+    """MAIN's latest receipt with the patched sources' hashes, the patches' three laws, the owner's declarations and
+    the three leaves."""
     mods, cwd = {}, Path.cwd()
     os.chdir(TREE)      # the record makers read the tree from the working folder
     try:
-        for name in ('make_record_ou7', 'make_record_ou7b'):
+        for name in ('make_record_ou7', 'make_record_ou7b', 'integrate_ou7'):
             spec = importlib.util.spec_from_file_location(name, TREE / KIT / f'{name}.py')
             mods[name] = sys.modules[name] = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(mods[name])
     finally:
         os.chdir(cwd)
-    mr, mb = mods['make_record_ou7'], mods['make_record_ou7b']
+    mr, mb, kit = mods['make_record_ou7'], mods['make_record_ou7b'], mods['integrate_ou7']
     r = json.loads((TREE / PKG / f'becoming-checks/{latest}/verification.json').read_text(encoding='utf-8'))
     r['utc'], r['status'], r['retained_run'] = STAMP, 'passed', f'becoming-checks/{STAMP}'
     by = {m['module']: m for m in r['modules']}
     for module in ('Becoming.Grammar', 'Becoming.GrammarReadings', 'Becoming.GrammarTesting', 'Becoming.GrammarLaws',
-                   'Becoming.MapRegions'):
+                   'Becoming.MapRegions', 'Becoming.GrammarCrossing', 'Becoming.Standpoints',
+                   'Becoming.ConveyanceBoundaries'):
         r['source_sha256'][module] = hashlib.sha256((TREE / PKG / f'Becoming/{module[9:]}.lean').read_bytes()).hexdigest()
     for module in mr.BELOW:     # exactly the declarations the patches add, as the audit checks
         for name in sorted((mr.PATCHED & mr.BELOW_NAMES[module]) - {d['name'] for d in by[module]['declarations']}):
             by[module]['declarations'].append({'kind': 'theorem', 'name': name})
             by[module]['axiom_dependencies'][name] = []
             by[module]['theorems'] += 1
+    # The owner's: MOVED leave GrammarCrossing for GrammarLaws, which gains the two readings of a region not crossed.
+    for name, (source, target) in kit.MOVED.items():
+        entry = next(d for d in by[source]['declarations'] if d['name'] == name)
+        by[source]['declarations'].remove(entry)
+        del by[source]['axiom_dependencies'][name]
+        by[target]['declarations'].append(entry)
+        by[target]['axiom_dependencies'][name] = []
+        if entry['kind'] == 'theorem':
+            by[source]['theorems'] -= 1
+            by[target]['theorems'] += 1
+    for name in kit.NOT_CROSSED:
+        by['Becoming.GrammarLaws']['declarations'].append({'kind': 'theorem', 'name': name})
+        by['Becoming.GrammarLaws']['axiom_dependencies'][name] = []
+        by['Becoming.GrammarLaws']['theorems'] += 1
     leaves = [(mr.MODULE, mr.SOURCE, mr.LEAF, mr.THEOREMS, 'core', 'core_modules')] + \
              [(m, p, mb.LEAVES[m], mb.THEOREMS[m], 'instance', 'instance_modules') for m, p in mb.MODULES.items()]
     for module, path, names, theorems, layer, listed in leaves:
@@ -136,10 +157,10 @@ def synthetic_receipt():
     top = json.loads((TREE / PKG / 'becoming-verification.json').read_text(encoding='utf-8'))
     top.update(utc=STAMP, retained_run=f'becoming-checks/{STAMP}')
     (TREE / PKG / 'becoming-verification.json').write_text(json.dumps(top, ensure_ascii=False, indent=1), encoding='utf-8')
-    return mr, mb
+    return mr, mb, kit
 
 
-mr, mb = synthetic_receipt()
+mr, mb, kit = synthetic_receipt()
 print('== synthetic receipt', RECEIPT)
 
 # ------------------------------------------------------------------------------------------------- post's own steps
@@ -153,12 +174,15 @@ assert 'applied' not in second.stdout.replace('already in place', ''), second.st
 show('record, a second time', second, 6)
 
 # The post stage re-points the records whose pinned sources the patches changed, from the drift; here, the two
-# generalized records and the one whose words changed, bound to the synthetic receipt as the landing binds them to
-# the run's.
-lean = [mr.BELOW[m] for m in ('Becoming.Grammar', 'Becoming.GrammarReadings')] + [PKG + 'Becoming/MapRegions.lean']
-show('re-point of the three records the record stage changed', run(
-    'python3', '-B', 'tools/research/repoint.py', '--reason', 'OU7 dry run', '--ids', *GENERALIZED, *WORDS,
-    '--paths', *lean, RF + 'development/one-unfolding-root/PLAN.md', '--receipt', RECEIPT, '--lean', *lean, '--apply'), 8)
+# generalized records, the one whose words changed, the owner's two and the one pinning Standpoints, bound to the
+# synthetic receipt as the landing binds them to the run's.
+lean = [mr.BELOW[m] for m in ('Becoming.Grammar', 'Becoming.GrammarReadings')] + \
+       [PKG + f'Becoming/{n}.lean' for n in ('MapRegions', 'GrammarLaws', 'GrammarCrossing', 'Standpoints',
+                                            'ConveyanceBoundaries')]
+show('re-point of the six records the record stage changed or whose sources the patches changed', run(
+    'python3', '-B', 'tools/research/repoint.py', '--reason', 'OU7 dry run', '--ids', *GENERALIZED, *WORDS, *OWNER,
+    *CUT, '--paths', *lean, RF + 'development/one-unfolding-root/PLAN.md', '--receipt', RECEIPT, '--lean', *lean,
+    '--apply'), 8)
 
 APART = RF + 'THEOREM-CONNECTIVITY-APART.json'
 part_b = json.loads((TREE / STUDY / 'check/kit/apart-reasons.json').read_text(encoding='utf-8'))
@@ -183,7 +207,7 @@ refused = run(*integrate, 'register', log('conn-refused.log', short + witnesses,
 assert refused.returncode and 'part B\'s roots differ' in refused.stderr, refused.stderr[-800:]
 assert not run('git', 'status', '--porcelain', '--', APART).stdout, 'a refused log changed the register'
 show('register refuses a log missing a predicted root of part B, the register untouched', refused, 2)
-listed = sorted(part_b['roots']) + witnesses + ['Becoming.SomeoneElse.root']
+listed = sorted(part_b['roots']) + witnesses + sorted(kit.OWNER_ROOTS) + ['Becoming.SomeoneElse.root']
 show('register', run(*integrate, 'register', log('conn.log', listed, used)), 6)
 show('register, a second time', run(*integrate, 'register', log('conn-again.log', [], [])), 6)
 
@@ -206,6 +230,6 @@ validate = ('import sys, json; from pathlib import Path; sys.path.insert(0, ".")
             'print(len(mine), "findings on the", len(ids), "records;", len(findings) - len(mine), "elsewhere (this tree holds "'
             '"only the files the kit touches)")')
 show('the records through the registry and the lint', run('python3', '-B', '-c', validate, mr.RID, mb.RID,
-                                                          *GENERALIZED, *WORDS), 30)
+                                                          *GENERALIZED, *WORDS, *OWNER, *CUT), 40)
 show('what the dry run changed in the tree', run('git', 'status', '--short'), 40)
 print('dry run done:', TREE)

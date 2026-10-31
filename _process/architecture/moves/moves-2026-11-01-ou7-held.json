@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "batch": "moves-2026-11-01-ou7-held",
+  "date": "2026-10-31T22:15:46+00:00",
+  "base_commit": "03e2c6c8eda40923ca113595a15c83a62314b780",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/patches/HELD.md",
+      "new_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/patches/history/HELD.md",
+      "sha256": "24e68fd896c67f50e0a92e652d0109ee547cd02d72684b506562a5e6a8e933f1",
+      "blob": "501fbf5731b9b606467cbe89cd888321b842f649",
+      "reason": "superseded on 1 November 2026 by patches/owner/02-04, written against main once BD2 landed (f1ea9546d); item 3's text and BD2's check are stated in the patches README",
+      "plan_entry": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/patches/HELD.md"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/DESIGN.md",
+      "old_sha256": "a1659443bcfcc115487485fc9f74ba56a6a143b6f740fc960e85d44d5cc7ae78",
+      "new_sha256": "757be312335bfb2a750e5d8314374cf829fde80d21b5b6c0f9e04cf81c9e482c",
+      "references": 1
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/README.md",
+      "old_sha256": "bf2b0cce77842c74df33f7996bbb5609b384ff2afc7b14bb2ae10fdee3f81715",
+      "new_sha256": "73b459ba6bbb69b1866e4be271e9541eacaa2060006b6f07179904683930960c",
+      "references": 2
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/patches/README.md",
+      "old_sha256": "f909b3f70ccc772fd84fd4a88ce29deccb870cbd8bc45c72e53cfeb397ea9ae4",
+      "new_sha256": "2194ac7dfa30a4b60b69893334dcdce2cdfe16d6ff1cb2ab2ae95cd42aad7168",
+      "references": 1
+    }
+  ],
+  "history_roots": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/kit/patches/history"
+  ],
+  "generated_pages_to_rerender": [],
+  "verification_errors": []
+}

@@ -6,9 +6,9 @@ Two more patches go with them:
 - [PLAN.patch](PLAN.patch) edits the OU plan's line that the Grammar patch makes inexact ([below](#texts-that-name-the-two-laws)).
 - [MapRegions.patch](MapRegions.patch) changes MapRegions' module doc, comments only, once part B's RoomNet imports it ([below](#mapregionspatch)).
 
-The grammar's owner's patches are in [owner/](owner/), and the items held until BD2 lands are in [HELD.md](HELD.md).
+The grammar's owner's patches are in [owner/](owner/), applied after these in name order ([below](#the-grammars-owners-patches)).
 
-**Base.** The patches are unified diffs. Grammar's and GrammarReadings' were made against main at 248122055, where `Becoming/Grammar.lean` is blob `cd2010958b77c371f7cff7e7f9ab02e04be233ed` and `Becoming/GrammarReadings.lean` is blob `0db54ab469b3e952e62c609b4213af7d5a808aae`. MapRegions' was made against blob `1980d3903`, the file as HE2 left it (467f075ec). None of the files the patches change has changed since HE2, and all of them are the same on main at 89243dd5a. From the repository root, `git apply --check` passes for the series.
+**Base.** The patches are unified diffs. Grammar's and GrammarReadings' were made against main at 248122055, where `Becoming/Grammar.lean` is blob `cd2010958b77c371f7cff7e7f9ab02e04be233ed` and `Becoming/GrammarReadings.lean` is blob `0db54ab469b3e952e62c609b4213af7d5a808aae`. MapRegions' was made against blob `1980d3903`, the file as HE2 left it (467f075ec). None of the files the patches change has changed since HE2, and all of them are the same on main at b6c8bedd8. From the repository root, `git apply --check` passes for the series.
 
 ## Grammar.patch
 
@@ -48,20 +48,60 @@ The same change reaches every other place that calls MapRegions a leaf:
 
 GW's history note keeps "a core leaf", which was true when it was written.
 
+## The grammar's owner's patches
+
+`01-GrammarLaws-header.patch` holds the header items held from HE2, comments only (the kit's [README](../README.md#what-the-kit-holds)). The other three are the items held until BD2 landed. They were made in series against main once BD2 had landed (f1ea9546d), where GrammarLaws is blob `0482974`, GrammarCrossing `53933e9`, Standpoints `cb7e18e` and ConveyanceBoundaries `3858e34`. Main at b6c8bedd8 has the same four. What was held is kept in [history/HELD.md](history/HELD.md).
+
+- **02-GrammarLaws-not-going-out.patch.** `«不出»` (nothing in a region goes out of it along a relation) and `«所闭不出»` (an occurrence's closure is not gone out of) move from GrammarCrossing into GrammarLaws, beside `«闭»` and the closure law. Their statements do not change. `«所闭之界»` keeps its statement and is proved as `«所闭不出»` at two occurrences, so the closure law is stated once.
+  - GrammarLaws' table and its bullet on closure name `«不出»`.
+  - GrammarCrossing's table goes, and its module doc says the module adds no definition. GrammarCrossing already imports GrammarLaws, so every use of the two names still resolves.
+- **03-Standpoints-cut.patch.** `Flow.Cut V region` becomes `«不出» V.related region`. The old body is `«不出»`'s, unfolded at `V.related`, so the two are equal by `Iff.rfl`. `Flow.cut_iff_notGoingOut` is kept, with its proof. ConveyanceBoundaries' module doc says where the cut is now defined, comments only.
+- **04-GrammarLaws-uncrossed.patch.** BD2's two equivalences, as BD2 sent them on 1 November, go after `GrammarLaws.uncrossed_of_closed`:
+  - `GrammarLaws.uncrossed_iff_notGoingOut`: a region, read as a test, that the relation does not cross is exactly one not gone out of either way;
+  - `GrammarLaws.uncrossed_iff_closed`: it is exactly one closed under the relation and under its converse. This is the converse of `uncrossed_of_closed`.
+
+  `«对则不越域守数»` and `«对则双闭域守数»` keep their names and statements. Their docstrings and the module doc's bullet on balance say that the two read as one law on regions not gone out of either way.
+
+  BD2 checked the two theorems on `bd2-crossing` at 7647ea36e, in a scratch module importing GrammarCrossing: 2 theorems in 2 declarations, every axiom report empty, no warning, 5 steps reused. The proofs use only case analysis on `Bool`.
+
+The kit carries each change to what it touches:
+- **The audit** holds the code. GrammarLaws gains exactly `«不出»`, `«所闭不出»` and the two equivalences, and `«所闭之界»` changes only its proof. GrammarCrossing loses exactly the two moved, which arrive unchanged. Standpoints changes only `Cut`'s body, which must unfold to the old one. No other definition changes.
+- **The joins** change the root module's notes on GrammarLaws, GrammarCrossing and ConveyanceBoundaries, the README rows of GrammarLaws and GrammarCrossing, EN and ZH, and those two modules' scope sentences in the checker.
+- **The record stage** changes two records, each with a history note:
+  - master-laws-on-the-grammar: law 4 reads the two count laws as one, and so does its home section, 01 §7. Laws 1 and 4 and the GrammarLaws reference gain the declarations.
+  - not-going-out-of-a-region: its references move the two to a GrammarLaws reference, with a proof binding.
+
+  Both validation scopes take the receipt's counts.
+- **The register** takes the two equivalences as roots of general structure and drops `«所闭不出»`, which `«所闭之界»` now uses.
+
 ## Checked
 
-Each patch was applied with `patch -p7` to a fresh copy of main's file, in a scratch tree, beside the leaf and the checks module. The tree was built from the package folder with the commands below. Nothing was unclean, and every axiom report was empty ([BUILD.json](../../tree/BUILD.json)):
+**The rehearsal** ran on 1 November ([REHEARSAL.json](../REHEARSAL.json)). The nine patches were applied in series to a copy of the package outside the repository, and the three leaves were added.
+- The copy was made at 3d1528b36, and main's package is the same at b6c8bedd8. On b6c8bedd8 the dry run's apply stage makes each of the eleven changed or new files, byte for byte.
+- `scratch_build.py` built fifteen modules and their import closure, 145 of the package's 365 modules. Nothing was unclean, and every axiom report was empty.
 
-| module | declarations |
-|---|---|
-| Grammar | 120, two more than main |
-| GrammarReadings | 18, one more |
-| GrammarConditionals | 41 |
-| GrammarConditionalsChecks | 17 |
+| module | rehearsal: theorems in declarations | main, receipt 20261031T202201.956842Z |
+|---|---|---|
+| Grammar | 72 in 120 | 70 in 118 |
+| GrammarReadings | 13 in 18 | 12 in 17 |
+| GrammarLaws | 178 in 207 | 175 in 203 |
+| GrammarCrossing | 10 in 10 | 11 in 12 |
+| Standpoints, ConveyanceBoundaries, GrammarTesting, MapRegions | 21 in 34, 8 in 8, 6 in 13, 36 in 42 | the same |
+| GrammarConditionals, RoomNet, RoomRuns | 40 in 41, 94 in 120, 24 in 27 | new |
 
-The build compiles only the closure of the leaf and the checks: Grammar, GrammarReadings, GrammarCandidates, GrammarMap, GrammarLaws, GrammarTesting and Prelude. The rest of the package meets the patches in the rebuild slot.
+The other four modules built each import one of the changed modules: Frame, GrammarPath, GrammarCases and ListingRefutations. Each kept its counts.
 
-Both old laws keep their statements, so a downstream module could break only through a clash with one of the three new names. On main at 248122055, `git grep` finds `«位核含于逆核»`, `«生于逆核下不变»` and `«两向有常有前则通»` nowhere in the package.
+A scratch module built from the same copy checks that the new `Flow.Cut` is the old definition. It has 1 theorem, and its axiom report is empty:
+
+```lean
+theorem cut_as_before {Pos Q : Type} (V : Valuation Pos Q) (region : Q → Prop) :
+    Cut V region ↔ ∀ e e', region e → ¬ region e' → ¬ V.related e e' :=
+  Iff.rfl
+```
+
+The other 220 modules meet the patches in the rebuild slot. Every old statement is kept, so a module could break only through a clash with one of the new names, or with the two moved into GrammarLaws. On main at b6c8bedd8, `git grep` finds the names of the three new laws and of the two equivalences nowhere in the package. It finds `«不出»` and `«所闭不出»` defined only in GrammarCrossing, which imports GrammarLaws.
+
+**Part A's earlier build**, build 3, applied Grammar's and GrammarReadings' patches to fresh copies of main's files at 8a1b06a3a, the blobs named under **Base**, beside the leaf and its checks module, which stays in scratch. Nothing was unclean, and every axiom report was empty ([BUILD.json](../../tree/BUILD.json)): Grammar 120 declarations, GrammarReadings 18, GrammarConditionals 41 and the checks 17. These commands reproduce it:
 
 ```bash
 W=/Users/ren/theories        # a checkout at the base
@@ -88,5 +128,5 @@ The kit changes each text that states one of the old laws, so that it states the
 - **The OU plan** ([one-unfolding-root/PLAN.md](../../../one-unfolding-root/PLAN.md), under 双向之核) says 「生只在双向之核下不变（`«生于位核下不变»`）。」 Once the Grammar patch lands, that is no longer exact. 生 is kept along the core of the converse net. That core holds the two-way core, and it also joins pairs the forward core does not (`«逆核不含于核之例»`). OU's owner accepted this replacement on 31 October. It goes into the same landing as the Grammar patch, as [PLAN.patch](PLAN.patch):
   > 生在逆缘之核下不变（`«生于逆核下不变»`）；双向之核在其中（`«位核含于逆核»`），故生亦在双向之核下不变（`«生于位核下不变»`）；前向之核下生可变（`«生于核下可变之例»`）。
 
-  The plan's next line, `«位同则生亡同»`, stays. From the repository root, `git apply --check` passes for PLAN.patch on main at 89243dd5a, in the series.
+  The plan's next line, `«位同则生亡同»`, stays. From the repository root, `git apply --check` passes for PLAN.patch on main at b6c8bedd8, in the series.
 - **The connectivity maps** (`THEOREM-CONNECTIVITY.json` and `THEOREM-CONNECTIVITY-APART.json`, in root-foundation) list both old laws. They are tool output and change only when their tool runs.
