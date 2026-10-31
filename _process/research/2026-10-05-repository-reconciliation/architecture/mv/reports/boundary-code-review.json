@@ -1,0 +1,762 @@
+{
+ "about": "The code review of MV's boundary field at 36d4b0fae (branch mv-status): four lenses (spec conformance, robustness and regressions, the Lean integration, the tests), each followed by one adversarial verifier of that lens's findings. The verdicts' `real` is the verifier's; BOUNDARY-FIELD.md §9 says what was taken.",
+ "commit": "36d4b0fae",
+ "lenses": {
+  "spec": {
+   "covered": "I checked the code against the spec section by section (§2, §3.0–§3.6, §4, §5, §8) and compared boundary.Terms with probe.py on GW's run. To do so, I wrote a script that runs Terms and probe.py on the run's constants.pickle and measure.json and compares every result. The two agree on:\n- 2,258 root constants and 406 grammar laws, including the same 15 laws without a «» name;\n- the 14 forwarders with their kinds;\n- the balance anchors (4, the «» forms filtered out);\n- for all 118 central rows, the grammar laws reached, where balance enters and the rule's label (0 differences);\n- D2's walk for U4's eight rows, including the laws used beyond the declared ones and the root theorems named.\n\nThe spec's figures also hold: kept_onward is not a law but is a root constant, WithinClosure.mono is not a forwarder, and the two balance forms are grammar laws. No central declaration is a root constant, a grammar law or a forwarder.\n\nWhat I found sound:\n- **§2's rules:** closed keys at every level, required and forbidden keys per standing, full names, uniqueness, pairwise disjoint law/bridges/support, no name equal to its declaration, introduced names among the record's laws, the review match on the full name or the name less its root, schema 2, superseded/withdrawn, the second record, and premises of one scope and one order with `absent`.\n- **D1–D6 and Q1.**\n- **§3.0–§3.6:** precedence (a checked entry, then a reading, then the rule; a failing entry falls to the rule), the facts a reading of a computed label needs, rule branches 1–4, the Lean query (entries, names, equivalences), the imports (Becoming, the joins, which are empty, and the forms' modules; Becoming imports the dump's three extra modules), the cache restore with TC's keys, unverified entries when Lean fails or the cache misses, and nothing run with nothing to check.\n- **The report's keys**, and counts_at_boundary_record routing, which puts a law with both fields in the boundary record only.\n- **Status:** the four lists, the error, and `current`.\n- **Pages:** the matched/F5-cited hiding of lines, one line per declaration per law, the derived and standing-2 sentences, the rule sentences, the section's counts, premises and groups, and affected_ids on a change to the boundary record.\n- **boundary_check.lean**, tests 1–9, against the spec apart from SPEC-8.\n- **The RESULT-WORKFLOW paragraph.**\n- **No change without a carrier:** attach_standings and boundary_section do nothing, so pages are unchanged; counts are unchanged; affected_ids is unchanged.\n\nThe boundary tests pass (45, 1 skipped: TheRepositoryFile with no carrier; the Lean stub test ran). The e2e report's counts match §8. The repro scripts are in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-spec/: compare.py, crash.py, nolean.py, lines.py, lines2.py, nondict.py, affected.py and central_root.py.",
+   "findings": [
+    {
+     "id": "SPEC-1",
+     "severity": "minor",
+     "file": "tools/research/boundary.py",
+     "line": 128,
+     "claim": "The registry check (§2's review rule, applied with the review's text) crashes with TypeError when a standing's declaration, a premise's `premise` or its `not_entailed` is a list or object. It should refuse the record with a message. `reviewed` builds `dict.fromkeys(names)` before filtering the names with `full`.",
+     "evidence": "Script /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-spec/crash.py, with `_review_text` patched to return text. `registry.boundary_errors(carrier(standing(['Becoming.Flow.counted'], 'counting')))` gives TypeError: unhashable type: 'list'. A premise of `'premise': ['Becoming.Unrestricted']` gives the same error, and `not_entailed` of `{'x': 1}` gives unhashable type: 'dict'. The other rules already report these values ('its declaration must be a full Lean name', 'premise must be a full Lean name'). The crash comes first and takes down `research.py check` for every record. The generator escapes it only because it passes review_text=None, which skips the elif.",
+     "fix": "Filter before deduplicating: `unnamed = [n for n in dict.fromkeys(x for x in names if full(x)) if not names_in(t, n)]`. Add a malformed declaration to FieldRules.test_the_review.",
+     "verdict": {
+      "id": "SPEC-1",
+      "real": true,
+      "severity": "minor",
+      "reason": "Reproduced. The other reviewer patched `_review_text`; I also used a real review file (AGENTS.md as the review reference). A standing whose declaration is a list or dict, a premise whose `premise` is a list, or a `not_entailed` that is a dict all make registry.boundary_errors raise TypeError (unhashable type) at boundary.py:128, `dict.fromkeys(names)`. The `full(n)` filter runs only after the dedupe. The generator path (review_text=None) and boundary.report handle the same inputs and report the per-item finding. The check is meant to refuse these records with a message ('its declaration must be a full Lean name'), but the uncaught exception stops validate for every record instead.",
+      "fix": "boundary.py:128: `unnamed = [n for n in dict.fromkeys(x for x in names if full(x)) if not names_in(t, n)]`. Add a list-valued declaration and a dict-valued not_entailed to FieldRules.test_the_review, run with review text present."
+     }
+    },
+    {
+     "id": "SPEC-2",
+     "severity": "minor",
+     "file": "tools/research/boundary.py",
+     "line": 460,
+     "claim": "§3.6 says the generator never refuses to run, and that when Lean fails the entries are written unverified with the reason. But `lean_check` computes the module keys outside any try, and `report` calls `lean(...)` unguarded. A missing toolchain binary, or a THEOREM-CONNECTIVITY/check_becoming load error, raises and stops master_laws.py.",
+     "evidence": "Script /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-spec/nolean.py sets cb.DEFAULT_LEAN to a path that does not exist. `boundary.lean_check({...}, [])` then gives FileNotFoundError at `Path(binary).read_bytes()` (line 461). Only the `run_check` call (478-480) is inside try/except. This path is reachable with `master_laws.py --dump` on a machine without the v4.29.1 toolchain: the dump read needs no Lean, but the boundary check then crashes the whole run.",
+     "fix": "Wrap the setup in lean_check (checker(), module_index, source reads, the binary digest, module_keys) in try/except (OSError, ImportError, AttributeError, KeyError, ValueError). Return (None, {..., 'ran': False, 'reason': 'Lean check could not start: ...'}). Or guard the `lean(query, modules)` call in report the same way.",
+     "verdict": {
+      "id": "SPEC-2",
+      "real": true,
+      "severity": "minor",
+      "reason": "Reproduced. check_becoming has no DEFAULT_LEAN, so lean_check falls back to ~/.elan/toolchains/leanprover--lean4---v4.29.1/bin/lean and reads it at boundary.py:461, outside any try. With that binary missing, lean_check raises FileNotFoundError. report calls `lean(query, modules)` (line 529) without a guard, and so does master_laws.main. `master_laws.py --dump` needs no Lean for F5 or the measure, so on a machine without v4.29.1 it ran before this change and now crashes whenever a carrier has a derived or standing-2 entry. §3.6 says the generator never refuses to run and that when Lean fails the entries are written unverified with the reason.",
+      "fix": "In lean_check, wrap the setup (checker(), module_index, the source reads, the binary digest, module_keys) in try/except (OSError, ImportError, AttributeError, KeyError, ValueError) and return (None, {'ran': False, 'reason': 'Lean check could not start: ' + str(e)}). report's existing path then marks the entries unverified."
+     }
+    },
+    {
+     "id": "SPEC-3",
+     "severity": "minor",
+     "file": "tools/research/registry.py",
+     "line": 728,
+     "claim": "When an entry fails, its row's line by the rule contradicts itself. It joins the rule's reason, 'no standing declared' (unplaced) or 'not declared a case of one' (connected), with '; the declared standing, X, is unverified'. The page then says that nothing was declared and that something was declared.",
+     "evidence": "From the e2e report: '*Standing of `Becoming.act_courses_unselected`, by the rule:* connected (it reaches `Becoming.«所闭之传递»` and `Becoming.«缘在所闭»` among its reasons; not declared a case of one; the declared standing, derived, is unverified: D2: …)'. A standing-2 entry whose Lean check did not run (script lines.py) gives '*Standing of `Becoming.Flow.two`, by the rule:* unplaced (no standing declared, and none of the rule's tests holds; the declared standing, under a stated hypothesis, is unverified: the Lean check did not run: not in the cache)'. Row 17, `GroupEnding.Flow.all_end`, is unplaced by the rule, so U4's own standing-2 row would read this way whenever its check fails.",
+     "fix": "When `e` is present, drop the 'no standing declared' and 'not declared a case of one' clauses, or replace them with 'no standing verified' and 'not verified as a case of one'. Change §5's two sentences to match, and add the unplaced-with-entry case to ThePages.test_each_standings_sentence.",
+     "verdict": {
+      "id": "SPEC-3",
+      "real": true,
+      "severity": "minor",
+      "reason": "Reproduced with the test fixtures. With the Lean check not run, a standing-2 entry on a row the rule leaves unplaced renders as 'unplaced (no standing declared, and none of the rule's tests holds; the declared standing, under a stated hypothesis, is unverified: the Lean check did not run: not in the cache)'. A failing derived entry on a connected row renders as '…; not declared a case of one; the declared standing, derived, is unverified: D2…'. Each line states that nothing was declared and that something was declared. The spec gives the two clauses separately, and the code joins them. This shows on every page under the row's laws whenever a later rerun leaves an entry unverified, not only before U4's landing.",
+      "fix": "In standing_line, when `e` is present, use 'no standing verified, and none of the rule's tests holds' for unplaced and 'not verified as a case of one' for connected. Bring §5's two sentences to match, and add the unplaced-with-a-failed-entry case to ThePages.test_each_standings_sentence."
+     }
+    },
+    {
+     "id": "SPEC-4",
+     "severity": "minor",
+     "file": "tools/research/registry.py",
+     "line": 714,
+     "claim": "§3.4 says that beside a reading 'the page and the data show: the rule's label, where it differs; F5's verified items for the row; the grammar laws the row reaches; where balance enters'. The data does this. Neither page does: the reading line under a law and the boundary record's section line only say '; the rule gives the same' when the labels match, and say nothing when they differ.",
+     "evidence": "Script lines.py: a reading at 'amounts' of `Becoming.Flow.via_helper`, whose rule label is 'connected' and which reaches `Becoming.«所闭之界»`, renders as '*Standing of `Becoming.Flow.via_helper`:* amounts, a reading: Why it stands so ([review.md](…)).' The rule's label and the laws reached are not shown. Row 5 (`Flow.no_new_dependence`) renders as '…balance in its statement, a reading: …; the rule gives the same.', without saying that its balance is written out and that `Flow.BalancesOn` enters only through the proof. In boundary_section line 775, `how` is just 'a reading' when the labels differ.",
+     "fix": "In the reading branch of standing_line, and in boundary_section's `how`, add '; the rule gives {row['rule']}' when it differs. Where the row reaches grammar laws or balance enters, add those too, in the rule branch's wording (\"it reaches … among its reasons\", \"balance written out in its statement\", \"`Flow.BalancesOn` only in its proof\"). Otherwise, if §5's sentence is meant to be the whole of it, narrow §3.4 to 'the data shows'.",
+     "verdict": {
+      "id": "SPEC-4",
+      "real": true,
+      "severity": "nit",
+      "reason": "Confirmed. §3.4 says that beside a reading 'the page and the data show' the rule's label where it differs, F5's items, the grammar laws reached and where balance enters. The data has all four (row['rule'], at_model, grammar_laws_reached, balance). The reading line under a law adds only '; the rule gives the same' when the labels agree. The section line says only '(a reading)'. A reading at 'amounts' on a row the rule calls 'connected' renders with no hint that it reaches «所闭之界». §5 gives exactly the sentence the code writes, so the spec contradicts itself and the code follows §5. F5's items already appear through at_model_notes under the row's law. In practice U4's readings sit only on rows the rule leaves unplaced, or equal the rule, so what goes missing is 'the rule gives unplaced'. Downgraded to nit.",
+      "fix": "In standing_line's reading branch and in boundary_section's `how`, add `; the rule gives {row['rule']}` when it differs from the reading. Alternatively, narrow §3.4 to 'the data shows' so that it agrees with §5."
+     }
+    },
+    {
+     "id": "SPEC-5",
+     "severity": "minor",
+     "file": "tools/research/boundary.py",
+     "line": 500,
+     "claim": "§3.6 says 'An entry the registry would refuse is written the same way' (unverified). A standings item that is not an object is refused by field_findings at ('standing', k), but report skips it: it does not appear in `unverified`, there is no field failure, and the status's four lists stay empty. The U4 landing gate would then pass while the check refuses the record.",
+     "evidence": "Script nondict.py: a carrier with standings [counting entry, 5]. field_findings gives [(('standing', 1), 'a standing must be an object')]. report gives unverified [] and field_failures None. boundary_status gives boundary_unverified [] and boundary_not_matched [].",
+     "fix": "In report, for a non-dict standing, append {'declaration': None, 'standing': None, 'failed': per[('standing', k)]} to `unverified`. Do the same for a non-dict premise in boundary_premises_unverified, or move per-item findings on non-objects to `whole`.",
+     "verdict": {
+      "id": "SPEC-5",
+      "real": true,
+      "severity": "nit",
+      "reason": "Reproduced. With standings [counting entry, 5], field_findings gives only (('standing', 1), 'a standing must be an object'), a per-item finding. report skips non-dict standings (line 500), so `unverified` is [] and there is no field_failures, and boundary_status's four lists stay empty. §3.6 says such an entry is written unverified. For premises the claim does not hold: a non-dict premise always breaks the whole-field 'exactly two items, scope and order' rule, so every entry is then unverified. Nit, because the registry check still refuses the record, so research-check blocks landing anyway.",
+      "fix": "In report's standings loop, for a non-dict item, append {'declaration': None, 'standing': None, 'failed': per[('standing', k)]} to `unverified` before `continue`. Premises need no change."
+     }
+    },
+    {
+     "id": "SPEC-6",
+     "severity": "minor",
+     "file": "tools/research/registry.py",
+     "line": 1369,
+     "claim": "The boundary record's section is rendered from master-laws.json whether or not the record has laws, but affected_ids selects records on a master-laws.json change only through `(measured and r.get('laws'))`. A carrier without laws (readings and derived entries introduce no names, so §2 allows one) is not re-rendered when the data changes. Its section goes stale under an incremental render.",
+     "evidence": "Script affected.py: a carrier with `laws: []` and one counting reading, data from report. `registry.affected_ids(records, {registry.MASTER_LAWS})` gives set(), while `boundary_section` for that record renders 28 lines from the data.",
+     "fix": "Add `or (measured and (r.get('laws') or 'boundary' in r or r['id'] == b.get('record')))` to the selection, or always add `holders` to `selected` when MASTER_LAWS is in `changed`.",
+     "verdict": {
+      "id": "SPEC-6",
+      "real": true,
+      "severity": "nit",
+      "reason": "Reproduced. A carrier with `laws: []` and one counting reading passes field_findings (schema 2 does not require laws, and readings introduce no names). registry.affected_ids(records, {MASTER_LAWS}) returns set(), yet boundary_section renders 28 lines for that record from master-laws.json. An incremental render or check (research.py with a base) therefore leaves the boundary record's section stale. U4's planned record has laws, so the case is hypothetical.",
+      "fix": "In affected_ids, select `(measured and (r.get('laws') or r['id'] in holders))`, using the `holders` set already computed above."
+     }
+    },
+    {
+     "id": "SPEC-7",
+     "severity": "nit",
+     "file": "tools/research/registry.py",
+     "line": 1280,
+     "claim": "§5 says that while the data read another version of the field, the boundary record's section says so and shows nothing else. attach_standings attaches `_boundary` only to the record the data read. A carrier the data has not read gets no section at all, either because the data has no boundary key yet or because the data read a different record. A record that no longer carries the field gets a 'Standings on the edge' heading with a 'Not matched' note.",
+     "evidence": "Script lines.py: a record carrying the field, with data `{}`, gives `boundary_section(...) == []`, while boundary_status lists every declaration as not matched. Code: the early return at `if not isinstance(b, dict) or not isinstance(b.get('rows'), dict): return`, and `if r.get('id') == b.get('record'): r['_boundary'] = ...`.",
+     "fix": "In attach_standings, give every current carrier `_boundary = {'not_matched': not_matched}` when the data has no report or read another id, so that boundary_section prints the Not-matched line. Give `_boundary` to the data's record only while it still carries the field.",
+     "verdict": {
+      "id": "SPEC-7",
+      "real": true,
+      "severity": "nit",
+      "reason": "Reproduced. When the field has moved to another record and the data still reads the old one, the new carrier (now the boundary record) gets no section. The old record, which no longer carries the field, gets 'Standings on the edge' with '*Not matched:* the data read another version of this field'. With data that has no boundary key yet, the carrier gets no section either, while the status lists every declaration as not matched. This contradicts §5's 'While the data read another version of the field, the section says so'. These states are transitional and `current` is false while they last.",
+      "fix": "In attach_standings, outside the two-carrier error case, give every current carrier `_boundary = {'not_matched': not_matched}` whenever the data has no report or read another id. Give the data's report to its record only while that record still carries the field."
+     }
+    },
+    {
+     "id": "SPEC-8",
+     "severity": "nit",
+     "file": "tools/research/boundary_check.lean",
+     "line": 262,
+     "claim": "§3.2 test 3 and the module docstring say F's statement names «际» or another «» term of the root. The code also accepts a «» term named only in the type or body of a hypothesis definition (`stated ++ hyps.flatMap (namesOf env)`). A form whose statement names no «» term passes when its hypotheses do.",
+     "evidence": "Line 262: `unless (stated ++ hyps.flatMap (namesOf env)).any (grammarTerm env) do fail \"the form's statement names no «» term of the root\"`. The failure message itself says 'statement'.",
+     "fix": "Either check `stated` alone, or reword §3.2 test 3 and the docstring to 'its statement, or a hypothesis it applies, names …'.",
+     "verdict": {
+      "id": "SPEC-8",
+      "real": true,
+      "severity": "nit",
+      "reason": "Confirmed at boundary_check.lean:262. Test 3 accepts a «» term named in a hypothesis's type or body (`stated ++ hyps.flatMap (namesOf env)`). The docstring and §3.2 test 3 say F's statement names one, and the bullet before it uses 'names' for the statement's own constants. The wider test still serves the stated purpose, since hypotheses written in the grammar's terms are not 'free of relations'. Row 17's form names «际» directly in its binders anyway. So only the wording is wrong, not the behaviour.",
+      "fix": "Keep the code. Reword the docstring's test 3 and §3.2 test 3 to 'its statement, or a hypothesis it applies, names «际» or another «» term of the root', and change the failure message to match."
+     }
+    },
+    {
+     "id": "SPEC-9",
+     "severity": "nit",
+     "file": "tools/research/boundary.py",
+     "line": 527,
+     "claim": "§4 says `lean_check` gives the toolchain, the module keys' hash, the check's hash and whether it ran. When nothing is to be checked, the info is only {'ran': False, 'reason': 'nothing to check'}, without the toolchain or either hash.",
+     "evidence": "lean_check's report on a carrier of readings only (script lines.py, last line) is {'ran': False, 'reason': 'nothing to check'}. TheReport.test_the_lean_check asserts exactly this.",
+     "fix": "Fill in at least `check_sha256` (and the toolchain) when Lean is not run, or state the exception in §4.",
+     "verdict": {
+      "id": "SPEC-9",
+      "real": true,
+      "severity": "nit",
+      "reason": "Confirmed at boundary.py:527. With nothing to check, lean_check's report is {'ran': False, 'reason': 'nothing to check'}, without the toolchain or either hash, and TheReport.test_the_lean_check asserts exactly that. §4 lists the toolchain, the module keys' hash and the check's hash, along with 'whether it ran (with the reason where it did not)'. The not-in-cache path does include them. Nothing reads these fields, so the gap is cosmetic.",
+      "fix": "State in §4 that when nothing is to be checked, lean_check gives only `ran` and `reason`. Alternatively, add check_sha256 (sha256 of CHECK) to the default info."
+     }
+    },
+    {
+     "id": "SPEC-10",
+     "severity": "nit",
+     "file": "tools/research/boundary.py",
+     "line": 592,
+     "claim": "§4 says `against_f5` gives each label against F5's four classes. The code drops every label whose four counts are all zero, so `against_f5['derived']` is missing (a KeyError for a reader) whenever nothing is derived. `counts` keeps every label.",
+     "evidence": "Script lines.py prints the against_f5 keys as ['amounts', 'at a represented model', 'balance in its statement', 'connected', 'own carrier', 'unplaced']: 'derived', 'counting' and the other zero labels are absent.",
+     "fix": "Use `'against_f5': against` (all twelve labels), as `counts` does, or say in §4 that zero labels are omitted.",
+     "verdict": {
+      "id": "SPEC-10",
+      "real": true,
+      "severity": "nit",
+      "reason": "Confirmed at boundary.py:592. `against_f5` keeps only labels with a nonzero count. The committed e2e report's against_f5 lacks 'counting', 'under a stated hypothesis' and the other zero labels, while `counts` keeps all twelve. §4 says each label against F5's four classes, and a reader indexing a label that does not occur gets a KeyError. No page reads it.",
+      "fix": "Write `'against_f5': against` (all labels), as `counts` does."
+     }
+    },
+    {
+     "id": "SPEC-11",
+     "severity": "nit",
+     "file": "tools/research/boundary.py",
+     "line": 230,
+     "claim": "The check refuses `absent` beside a non-null `not_entailed`. §2's rules do not include this: the premises table only says `absent` is required when `not_entailed` is null, and §8 lists only the missing-`absent` test.",
+     "evidence": "field_findings line 229-230: `if ne is not None and 'absent' in p: out.append((where, 'absent is allowed only beside a null not_entailed'))`. FieldRules.test_premises asserts it.",
+     "fix": "State the rule in §2's premises table ('only when `not_entailed` is null'), or drop it.",
+     "verdict": {
+      "id": "SPEC-11",
+      "real": true,
+      "severity": "nit",
+      "reason": "Confirmed at boundary.py:229-230. The check refuses `absent` beside a non-null `not_entailed`. §2's premises table lists `absent` as a key, required when `not_entailed` is null, and forbids it nowhere, so the code adds a rule that §2's rules and §8's test list leave out. The rule is sensible (absent says why there is no theorem) and affects no intended record, so this is a wording gap in the spec.",
+      "fix": "Add to §2's premises table: '`absent`: required when, and allowed only when, `not_entailed` is `null`'. List the test in §8."
+     }
+    },
+    {
+     "id": "SPEC-12",
+     "severity": "nit",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 510,
+     "claim": "Two of §8's test claims are covered only by proxies. §8 step 1 says no figure changes, 'which a test asserts', and the Pages list says 'pages byte-identical when no record carries the field'. No test renders a page or runs the counting without a carrier. test_nothing_without_the_field checks only that attach_standings is a no-op and that boundary_section returns []. test_the_counts_of_the_boundary_record checks only counted_in, and never the F5 route with no carrier. TheRepositoryFile skips when no record carries the field.",
+     "evidence": "Searching the tests for 'byte'/'identical' finds nothing. TheRepositoryFile.test_the_boundary_report_when_present calls skipTest('no record carries the boundary field').",
+     "fix": "Add a test that renders a schema-2 record with laws, through render_record_v2, before and after attach_standings with data that has no boundary, and asserts equal output. Add `counted_in('m', 2, [], {('m', 2)}) == 'counts_at_model'`. Or weaken §8's wording to what the tests check.",
+     "verdict": {
+      "id": "SPEC-12",
+      "real": true,
+      "severity": "nit",
+      "reason": "Confirmed. No test renders a page without the field, or runs the counting without a carrier. test_nothing_without_the_field checks only that attach_standings is a no-op and that boundary_section returns []. test_the_counts_of_the_boundary_record checks only counted_in, and TheRepositoryFile skips. So §8's 'pages byte-identical when no record carries the field' and 'no figure changes, which a test asserts' are covered by proxies. The behaviour itself holds: rendering all 499 records with the new code gives 0 differences from the generated pages, and render_record_v2 adds lines only through _standings and _boundary. The defect is only in what §8 claims the tests cover.",
+      "fix": "Either add a test that renders a schema-2 record with laws through render_record_v2 before and after attach_standings with boundary-less data and asserts equal output, or weaken §8's wording to what the tests check: no standing attached and no section without the field, and the carrier's laws routed apart by counted_in."
+     }
+    }
+   ]
+  },
+  "robustness": {
+   "covered": "Ran test_boundary (45 tests, 1 skipped: the repository-file test, since no record carries the field) and test_master_laws (25 tests). Both pass.\n\nWith no carrier, nothing visible changes: load_records takes 0.22 s on 499 records and attaches nothing, all 499 record pages and RESULT-REGISTER render byte-identical to the files on disk, and registry.validate gives 0 errors and 0 drift. master_laws main changes no count when no record carries the field (counted_in returns what the old code did). It now writes counts_at_boundary_record and two more hashed inputs only on rerun.\n\nI reran the end-to-end harness against the mv-probe worktree and GW's constants. Its output is identical to the committed e2e-report.json (8 derived; act_courses_unselected fails D2, D3 and D5).\n\nI also loaded the real records and the real master-laws.json, adding the e2e report and a synthetic carrier. 105 record pages got 161 standing lines and the carrier got its section, with no crash. attach took 2 ms, rendering those pages 1.9 s, and affected_ids 20 ms (397 records selected).\n\nA fuzz of 1,760 hostile shapes covered every path of the field and the carrier's references, laws, status and schema_version (null, numbers, booleans, strings, lists and objects in place of each value, and deleted keys). Each case ran through boundary.report, registry.boundary_errors with review text, attach_standings, standing_line, boundary_section, master_laws_status and affected_ids. The only new crashes are those reported above.\n\nThe following hold as the spec says:\n- Pages: lines are hidden when an entry differs, when the data read another record, or when a cited F5 law is not matched.\n- Status: the error case when two records carry the field.\n- The schema-1 branch of validate.\n- The generator's whole-field failures: a field that is not an object, has the wrong keys, or comes from a superseded or withdrawn record.\n- Precedence, and an unverified entry falling to the rule's label.\n- The Lean check: passed is equivalent to an empty failure list (boundary_check.lean:223 and :388).\n- affected_ids when the boundary record itself changes.\n\nWhat is not checked: master_laws.py main itself, which writes into the checkout, and the Lean check's failure branches beyond a missing binary.",
+   "findings": [
+    {
+     "id": "ROBUSTNESS-1",
+     "severity": "major",
+     "file": "tools/research/boundary.py",
+     "line": 128,
+     "claim": "The registry check crashes with a TypeError (unhashable type) when a standing's `declaration`, or a premise's `premise` or `not_entailed`, is a list or an object. `reviewed()` calls `dict.fromkeys(names)` on names that have not been filtered. The generator does not crash here because it passes no review text. So `validate` and `make research-check` stop with a traceback instead of refusing the record.",
+     "evidence": "A real schema-2 record (a-code-formed-between-formations) given `boundary.standings[0].declaration = ['Becoming.Flow.counted']` and a valid review reference: `registry.validate_v2_fields(r)` raises `TypeError: unhashable type: 'list'` at boundary.py:128 in reviewed. The same happens with declaration `{'n': ...}`, premise `['Becoming.Unrestricted']` and not_entailed `{'n': 1}`. `boundary.field_findings(r)` without review text does not crash on any of these. Repro: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-robustness/crash_check.py. Nothing earlier in `validate` reads the field, so this crash path is new. FieldRules has no malformed-name case run with review text.",
+     "fix": "Filter before deduplicating: `unnamed = [n for n in dict.fromkeys(x for x in names if full(x)) if not names_in(t, n)]`. Add a FieldRules test that runs `boundary_errors` with review text on a list or object declaration, premise and not_entailed, and expects messages, not an exception.",
+     "verdict": {
+      "id": "ROBUSTNESS-1",
+      "real": true,
+      "severity": "minor",
+      "reason": "Reproduced. A schema-2 record (a-code-formed-between-formations, with its RECHECK-U2 review reference) given a boundary field whose standing's declaration is ['Becoming.Flow.counted'], or whose premise is a list, or whose not_entailed is {'n':1}, makes registry.validate_v2_fields raise TypeError: unhashable type at boundary.py:128 (reviewed). The whole registry.validate(records) crashes the same way. The cause is that dict.fromkeys(names) runs before the full() filter. field_findings without review text does not crash. The check still fails, so no bad record gets through, but it fails with a traceback instead of the refusal messages §2 calls for. So the severity is minor, not major.",
+      "fix": "boundary.py:128: `unnamed = [n for n in dict.fromkeys(x for x in names if full(x)) if not names_in(t, n)]`. Add a FieldRules case that runs boundary_errors with review text on a list declaration, a list premise and an object not_entailed, and expects messages."
+     }
+    },
+    {
+     "id": "ROBUSTNESS-2",
+     "severity": "minor",
+     "file": "tools/research/boundary.py",
+     "line": 500,
+     "claim": "The generator silently drops a standing that is not an object. `report()` skips it with `continue`, so it appears neither in `unverified` nor in `field_failures`. The status's `boundary_unverified` is then empty even though the check would refuse the entry. Spec §3.6 says such an entry is written unverified.",
+     "evidence": "A carrier with standings `[valid counting entry, 1, ['Becoming.Flow.row','derived']]` and valid premises gives `field_findings` = [(('standing',1),'a standing must be an object'), (('standing',2),...)]. Yet `report(...)['unverified']` is [], with no `field_failures`, and `registry.boundary_status` gives `boundary_unverified: []`. Repro: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-robustness/dropped.py. test_robustness passes only because its malformed field also has whole-field failures.",
+     "fix": "In report(), for a standing that is not an object, append `{'declaration': None, 'standing': None, 'failed': whole + per[('standing', k)]}` to `unverified` instead of `continue`. The premises loop needs no change: a non-object premise always produces a whole-field failure.",
+     "verdict": {
+      "id": "ROBUSTNESS-2",
+      "real": true,
+      "severity": "nit",
+      "reason": "Reproduced. A carrier with one valid counting standing plus the standing `1` gives field_findings [(('standing',1),'a standing must be an object')] and no whole-field failure. report() skips it at boundary.py:500-501, so unverified is [], there are no field_failures, and boundary_status gives boundary_unverified []. §3.6 says an entry the registry would refuse is written unverified. The impact is small because the registry check refuses the record anyway, so U4's gate stays closed by the check.",
+      "fix": "In report(), for a non-object standing, add `checks.append(({}, whole + per[('standing', k)], {}))`, or append `{'declaration': None, 'standing': None, 'failed': whole + per[('standing', k)]}` to unverified, instead of `continue`. The premises loop needs nothing, since a non-object premise always breaks the two-roles rule as a whole."
+     }
+    },
+    {
+     "id": "ROBUSTNESS-3",
+     "severity": "minor",
+     "file": "tools/research/boundary.py",
+     "line": 111,
+     "claim": "The generator crashes on a carrier record whose `status` is a list or object (line 111, `in {'superseded','withdrawn'}`), or whose review reference has a `path` that is a list or object (line 119, set comprehension). `master_laws.py` then stops, although spec §3.6 says the generator never refuses to run. Before this commit, master_laws main did not read these keys for a record without statements_at_model, so the crash path is new. The registry check already crashes on such records in its own pre-existing code.",
+     "evidence": "The fuzz harness (/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-robustness/fuzz.py, 1,760 hostile cases on the field and the carrier's references, laws, status and schema_version) found these crashes: `report` TypeError unhashable at boundary.py:111 with status=[], and at boundary.py:119 with references[0].path=[]. Neither the report nor the page, status or affected_ids functions showed any other crash on these inputs, apart from ROBUSTNESS-1 and pre-existing registry code.",
+     "fix": "Use `isinstance(r.get('status'), str) and r['status'] in {...}`. Build the set as `reviews = {x['path'] for x in refs if isinstance(x, dict) and x.get('role') == 'review' and isinstance(x.get('path'), str)}`.",
+     "verdict": {
+      "id": "ROBUSTNESS-3",
+      "real": true,
+      "severity": "nit",
+      "reason": "Reproduced. report() on a carrier with status [] or {} raises TypeError at boundary.py:111, and with a review reference whose path is [] it raises at boundary.py:119. The constructs are copied from F5's shape_failures (master_laws.py:150-151), which crashes the same way on such a record. registry.validate (registry.py:893, `r.get('status') not in STATUSES`) and affected_ids (`x['path'] in changed`) also crash on it in pre-existing code. So the record can never pass the check. It is a real crash but outside any state the toolchain supports.",
+      "fix": "Optional hardening: `isinstance(r.get('status'), str) and r['status'] in {...}`, and `reviews = {x['path'] for x in refs if isinstance(x, dict) and x.get('role') == 'review' and isinstance(x.get('path'), str)}`."
+     }
+    },
+    {
+     "id": "ROBUSTNESS-4",
+     "severity": "minor",
+     "file": "tools/research/boundary.py",
+     "line": 461,
+     "claim": "`lean_check` crashes with FileNotFoundError when the pinned toolchain binary is absent. The module-key computation (`Path(binary).read_bytes()`, together with module_index and the source reads) sits outside the try. One case is `master_laws.py --dump` on a machine without Lean 4.29.1: the measure runs from a saved dump, but the boundary report kills the generator. Spec §3.6 says the entries should instead be unverified with the reason.",
+     "evidence": "Patching `checker()` to return the real cb with `DEFAULT_LEAN = /nonexistent/...` makes `boundary.lean_check({'entries': [], 'names': ['Becoming.X'], 'equivalences': []}, [])` raise `FileNotFoundError: No such file or directory: '/nonexistent/toolchain/bin/lean'`. Repro: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-robustness/nolean.py. No test exercises lean_check's own failure branches; the tests stub `lean`.",
+     "fix": "Wrap the setup in `try ... except (OSError, ValueError, AssertionError) as e: return None, {'ran': False, 'reason': 'cannot restore the core run: ' + str(e)[:500]}`. Add a test that patches DEFAULT_LEAN to a missing path.",
+     "verdict": {
+      "id": "ROBUSTNESS-4",
+      "real": true,
+      "severity": "minor",
+      "reason": "Reproduced. With checker() returning the real cb and DEFAULT_LEAN set to /nonexistent/toolchain/bin/lean, lean_check({'entries':[],'names':['Becoming.X'],'equivalences':[]}, []) raises FileNotFoundError. The binary read (boundary.py:460-461), module_index and the source reads sit outside the try. This path is reachable through `master_laws.py --dump` on a machine without 4.29.1, which builds the constants from the pickle and never reads the binary before this. §3.6 says that where Lean fails the entries are unverified with the reason, and that the generator never refuses to run.",
+      "fix": "Wrap lines 456-464 (checker() through info) in `try: ... except (OSError, AssertionError, KeyError, ValueError) as e: return None, {'ran': False, 'reason': 'cannot restore the core run: ' + ' '.join(str(e).split())[:500]}`. Add a test that patches DEFAULT_LEAN to a missing path."
+     }
+    },
+    {
+     "id": "ROBUSTNESS-5",
+     "severity": "minor",
+     "file": "tools/research/registry.py",
+     "line": 806,
+     "claim": "`boundary_matching` compares only each declaration's entries and the premises list. The data's verdicts also depend on the record's review references, its schema_version and status, and the boundary object's other keys: a whole-field failure is stamped onto every entry. If such a part is fixed without rerunning the generator, `boundary_not_matched` stays empty and `current` can be true. Meanwhile `boundary_unverified` and the standing line on every page keep the stale failure, and U4's landing gate reads stale lists.",
+     "evidence": "Data read a carrier with no review reference, or with an extra key `note` in `boundary`, or with schema_version 1. The record is then fixed without a rerun, its standings and premises unchanged. `boundary_status` gives `boundary_not_matched: []` and `boundary_unverified` with both entries failing \"its review _process/review.md is not a reference of role review\" (or \"boundary has exactly the keys ...\", or \"needs schema_version 2\"). attach_standings still shows both rows' lines with the stale 'unverified' text. Repro: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-robustness/stale.py.",
+     "fix": "In boundary_matching, also compare the generator's view of the field: store `boundary.field_findings(carrier)` in the report (or a digest of schema_version, status, the review-reference paths, the law declarations and the whole boundary object). When `boundary.field_findings(now)` differs, or `b['declared'] != now['boundary']`, report every row and 'the field' as not matched.",
+     "verdict": {
+      "id": "ROBUSTNESS-5",
+      "real": true,
+      "severity": "minor",
+      "reason": "Reproduced with the test fixtures. First the data reads a carrier with an extra key `note` in boundary, or with no review reference, or with schema_version 1; then the record is fixed without a rerun. boundary_matching gives not_matched [], while boundary_unverified and the standing lines still carry the stale failure. For example: '...the declared standing, counting, is unverified: its record breaks the check's rules: boundary has exactly the keys standings and premises_of_the_ethics'. Nothing marks the data stale. §4 says the check compares `declared`, the field, with the record's field now, but boundary_matching (registry.py:805-809) compares only the per-declaration entries and the premises. The review-reference and schema cases lie outside the field, and F5 shares that gap, but the extra-key case breaks §4 directly. All three give wrong page lines.",
+      "fix": "In report(), store the generator's findings, e.g. `'findings': [[list(w) if w else None, m] for w, m in findings]`. In boundary_matching, when now matches the record and `[[list(w) if w else None, m] for w, m in boundary.field_findings(now)] != b.get('findings')`, return (set(), all declarations of both versions plus 'the field'), so lines hide and current goes false."
+     }
+    },
+    {
+     "id": "ROBUSTNESS-6",
+     "severity": "minor",
+     "file": "tools/research/registry.py",
+     "line": 728,
+     "claim": "A row whose declared standing fails, and whose rule label is 'unplaced', gets a self-contradictory page line. It says \"no standing declared\" and then \"the declared standing … is unverified\".",
+     "evidence": "A record declares `Becoming.Flow.counted` as counting, and the entry fails (any per-entry or whole-field failure). standing_line renders: \"*Standing of `Becoming.Flow.counted`, by the rule:* unplaced (no standing declared, and none of the rule's tests holds; the declared standing, counting, is unverified: its record breaks the check's rules: …)\". This comes from stale.py's output. It is realistic: U4's 31 unplaced rows will carry readings, and a single whole-field failure turns all 31 lines into this sentence.",
+     "fix": "When `e` is present, use \"none of the rule's tests holds\" for unplaced, without \"no standing declared, and \". For example: `why = \"none of the rule's tests holds\" if e and row['label'] == 'unplaced' else why` before appending the unverified clause.",
+     "verdict": {
+      "id": "ROBUSTNESS-6",
+      "real": true,
+      "severity": "minor",
+      "reason": "Reproduced. A failing counting entry whose row the rule leaves unplaced renders: '*Standing of `Becoming.Flow.counted`, by the rule:* unplaced (no standing declared, and none of the rule's tests holds; the declared standing, counting, is unverified: ...)'. That sentence contradicts itself on a page. The case is realistic: a standing-2 entry failing its Lean check, or a reading of a computed label lacking its fact, falls to unplaced (the tests test_the_lean_check and test_a_reading_of_a_computed_label_needs_the_rules_fact build exactly this row). registry.py:728-730 joins §5's two phrases literally.",
+      "fix": "At registry.py:728, when `e` is present and the label is unplaced, use \"none of the rule's tests holds\" without \"no standing declared, and \", e.g. `if e and row['label'] == 'unplaced': why = \"none of the rule's tests holds\"` before the unverified clause is appended."
+     }
+    },
+    {
+     "id": "ROBUSTNESS-7",
+     "severity": "minor",
+     "file": "tools/research/master_laws.py",
+     "line": 205,
+     "claim": "This commit changes the status even though no record carries the field. master-laws.json hashes `tools/research/master_laws.py` among its inputs. This commit changes that file without regenerating the data, so after landing `master_laws_status` reports `inputs_changed: ['tools/research/master_laws.py']` and `current: false`. At cfabae38d the same worktree reports current true. The task's bar is that only new empty keys change in the status.",
+     "evidence": "The worktree's master-laws.json has `inputs_sha256['tools/research/master_laws.py'] = f7e423e8…`, which is the sha256 of master_laws.py at cfabae38d. At 36d4b0fae it is cef7393a…. `registry.master_laws_status(load_records()[0])` now gives core_sources_current true, inputs_changed ['tools/research/master_laws.py'], current false, and the four boundary lists empty. Main's master-laws.json carries the same f7e423e8 hash. All 499 record pages and RESULT-REGISTER render byte-identical to disk, and validate gives 0 errors and 0 drift, so pages and the check are unchanged. Only the status differs.",
+     "fix": "In the landing, rerun `python3 -B tools/research/master_laws.py` on the current core. It changes no figure; the data gains `counts_at_boundary_record` (all zero) and the two new hashed inputs. Alternatively, state in the landing that the data must be refreshed.",
+     "verdict": {
+      "id": "ROBUSTNESS-7",
+      "real": false,
+      "severity": "nit",
+      "reason": "The fact is right: master-laws.json hashes master_laws.py as f7e423e8 (its cfabae38d bytes), and the file at 36d4b0fae hashes to cef7393a, so after landing the status gives inputs_changed [master_laws.py] and current false. But that is the hashed-input staleness doing what it is built to do. It is not a code defect. The status is only reported (research.py:333) and fails no check. It is not a page or a figure. The cure is a landing step, not a code change.",
+      "fix": "No code change. In the landing, rerun `python3 -B tools/research/master_laws.py` on the current core, as earlier landings that touched master_laws.py did. The data then gains counts_at_boundary_record (all zero) and the two new hashed inputs, and no figure changes."
+     }
+    },
+    {
+     "id": "ROBUSTNESS-8",
+     "severity": "minor",
+     "file": "tools/research/registry.py",
+     "line": 1361,
+     "claim": "`affected_ids` misses pages whose boundary content changes: (a) when the boundary record is deleted or renamed, since its holder is no longer among the records and `edge` stays empty; (b) when an F5 carrier changes, which shows or hides the rule-placed standing lines that cite its law on other records' pages (F5's own stated_at_model lines have the same pre-existing gap); (c) when master-laws.json changes and the carrier has no laws, since `measured and r.get('laws')` skips it and its section goes stale. This only affects a check or render run with --base.",
+     "evidence": "With data read from carrier 'edge' (repro: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-robustness/affected.py): `affected_ids([naming, modelpage, m], {'.../edge.json'})` gives set(), though naming's line must disappear. `affected_ids([...edge, naming, modelpage, m], {'.../m.json'})` gives {'m'}, though modelpage's rule line, which cites m:2, is shown only while m:2 is matched (True with {'m:2'}, False with set()). The record schema does not require `laws`, and the field allows a carrier with no laws (test_introduced_names_are_the_records_own passes with own=[]).",
+     "fix": "(a) Test the data's record path directly: `str((RECORDS / (b['record'] + '.json')).relative_to(ROOT)) in changed` when b has 'record'. (b) Also select records whose law names meet a row whose `at_model` cites a record among the changed ones. (c) Add `or (measured and ('boundary' in r or r['id'] == b.get('record')))`.",
+     "verdict": {
+      "id": "ROBUSTNESS-8",
+      "real": true,
+      "severity": "nit",
+      "reason": "Partly confirmed. (c) is reproduced: a carrier with laws [] passes field_findings, and its boundary section renders outside the laws block. Yet affected_ids(records, {master-laws.json}) gives {'naming'} and skips the carrier, because `measured and r.get('laws')` is false for it. (a) is reproduced too: with edge.json deleted, affected_ids gives set(). But records are never deleted under the repository's rules, and the deleted record's page would raise an orphan error anyway. (b) lies outside §5's re-rendering rule and repeats a pre-existing gap: F5's own stated_at_model lines on other records' pages depend on matched_at_model in the same way. All of this matters only for check or render with --changed-since; the full render and check see every page.",
+      "fix": "(c): add `or (measured and ('boundary' in r or r['id'] == b.get('record')))` to the selection. (a): set edge as well when `b.get('record')` and `str((RECORDS / (b['record'] + '.json')).relative_to(ROOT)) in changed`. Leave (b) to F5's owner together with the existing gap."
+     }
+    },
+    {
+     "id": "ROBUSTNESS-9",
+     "severity": "minor",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 586,
+     "claim": "Some tests do not test what they or the spec claim. (a) TheStatus asserts `current` is False after a mismatch and with two carriers. In that harness `current` is always False, because core_sources_sha256 is '' and the real receipt is read, so nothing shows that boundary_not_matched or boundary_error drive `current`, or that a matched field leaves it true. (b) §8 claims 'pages byte-identical when no record carries the field' and '`counts` unchanged by the boundary record's laws … which a test asserts'. test_nothing_without_the_field renders no page. test_the_counts_of_the_boundary_record calls only `counted_in` and never exercises main's counting with a carrier.",
+     "evidence": "Using TheStatus's own `status()` and `base()`, a matched field gives boundary_not_matched [], current False and core_sources_current False. With no field at all, current is still False. Repro: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-robustness/vacuous.py. So the asserts at lines 586 and 606 hold whatever boundary_status returns. The behaviour itself is right: I rendered all 499 real pages with no carrier and they match the disk byte for byte (/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-robustness/pages.py).",
+     "fix": "In TheStatus, patch `registry.ROOT` and `CORE_RECEIPT` as test_master_laws.MasterLawsStatus does. Assert current True for a matched field and False for a mismatch or the error. Add a page test that renders a real record with `attach_standings` applied to its data with no boundary and compares the result with the plain render. Add a counting test that runs main's per-law loop, or a factored helper, with and without a carrier and asserts `counts` and `counts_at_model` are equal.",
+     "verdict": {
+      "id": "ROBUSTNESS-9",
+      "real": true,
+      "severity": "minor",
+      "reason": "(a) is confirmed. In TheStatus, base() sets core_sources_sha256 '' against the real receipt, and the carrier's laws have no _master_laws, so `same` is False and laws_not_matched is 1. A matched field already gives current False, and so does no field at all. The assertFalse(status['current']) at test_boundary.py:586 and 606 therefore holds whatever boundary_status returns. §8 claims the status tests cover `current`, and nothing shows that boundary_not_matched or boundary_error drive it. (b) is not a defect. test_nothing_without_the_field checks that attach_standings leaves records unchanged and that boundary_section returns []. render_record_v2's only changes depend on those two, so byte-identity follows. test_the_counts_of_the_boundary_record tests counted_in, the one decision main's loop uses to choose the dict.",
+      "fix": "In TheStatus, patch registry.ROOT and CORE_RECEIPT with a passed receipt and a matching core_sources_sha256, as test_master_laws.MasterLawsStatus does, and give the carrier a matching _master_laws, or pass records without laws. Then assert current True for a matched field, and False after a mismatch and with two carriers."
+     }
+    }
+   ]
+  },
+  "lean": {
+   "covered": "I compared boundary.lean_check with THEOREM-CONNECTIVITY.py's dump_constants. The module index and closure (cb.module_index, cb.closure with roots CHECKED) match. The key context matches: TOOLCHAIN plus the digest of cb.DEFAULT_LEAN, which is the same path the dump hard-codes, through cb.module_keys. Restoring only the .olean through cb.reuse into a fresh temp folder matches, and so does running `~/.elan/bin/lean +toolchain` with LEAN_PATH=work and cb.TIMEOUT. The periphery joins are deduplicated, and form modules are kept only when they are in order. Missing modules yield ran false with a reason rather than an exit. The imports are sufficient today: every module of the run (354 of 354) is reached from `Becoming`.\n\nFailure handling works for these cases:\n- Lean's nonzero return code and `error:` in its output (a malformed query gives RuntimeError \"expected JSON array\"), a missing output file, a timeout (SubprocessError) and malformed JSON (ValueError) are all caught.\n- Nothing is run when there is nothing to check.\n- When the check does not run, every edge entry that would have been checked becomes unverified with the reason.\n\nWhat the generator sends is right. Only entries that pass every other check are sent: the standing-2 entries with their bridges, the derived laws as names, and the derived bridges as equivalences. The forms' modules are the import list. Results map back by row, and the row round-trips: Lean 4.29.1's String.toName parses «» components, including «a.b», and toString inverts it. admitted and equivalence are keyed by the string sent and fail closed. D1's Lean name test is redundant with the Python grammar-law test, and on this run it agrees with the Python root set: 0 differences across all grammar and prelude constants, inductives and constructors included. D6's isEquivalence (an Iff, or an Eq whose type telescopes to Prop) matches the spec, and I checked it on Iff, Eq at Prop, Eq at predicates and relations, Eq at Nat, axioms and funext.\n\nrun_check's import insertion replaces only the first `import Lean\\n` (line 1), placing the imports before the module docstring. The check file has LF endings, and the later mention of `import Lean` in its docstring is not matched.\n\nThe hermetic TheLeanCheck test runs the repository's boundary_check.lean through run_check, not lean_check. Its passing case and its discharge-condition and amounts failures discriminate: the expected [Nat, LE.le] proves the amounts test sees through the prelude definition Small, and «际之自» exercises «» parsing. I ran the 45 tests once: all pass, with TheRepositoryFile skipped because no record carries the field. I also ran the end-to-end harness against mv-probe (output in my scratch folder, /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-lean/e2e-out.json). The Lean check ran; the eight derived rows verify; act_courses_unselected fails D2, D3 and D5; the counts are 8/24/32/16/7/31.",
+   "findings": [
+    {
+     "id": "LEAN-1",
+     "severity": "major",
+     "file": "tools/research/boundary_check.lean",
+     "line": 174,
+     "claim": "Test 9 (the discharge condition) misses a model theorem that the recovery reaches through a definition. theoremsUsed enters only the owner's own auxiliaries (`owner.isPrefixOf m`) and collects only constants that are themselves theorems. A model fact held in a Prop-typed def, in an instance of a Prop class, or in a data def holding a proof is never seen. So such a recovery passes, and the page line says \"checked in Lean: … the discharge condition\". §3.0 of the spec defines \"the theorems a proof names\" as a walk through definitions, instances and auxiliaries, and the Python D2 walk (Terms.walk; the Flow.holder test) does that, so the two checks disagree. The same direct-names-only reading weakens test 5's facts (namesOf env h.fit, lines 311 and 315) and the bridges' closed set (theoremsUsed env b, line 354).",
+     "evidence": "I added a stub module Becoming/Extra.lean on top of the test's STUBS: `def onward_holder : Total Model.rel := Model.rel_onward`, `theorem rel_total_via_def : ¬ ∃ x, ∀ y, ¬ Model.rel x y := total_form onward_holder`, and `theorem rel_total_via_def_certified : @Model.rel_total = @rel_total_via_def := rfl`. I ran boundary.run_check on the entry {row Model.rel_total, form total_form, hypothesis Total with needs_total and total_needed, recovery rel_total_via_def, certificate rel_total_via_def_certified}. Output: passed true, failures [], recovery_uses [\"Becoming.Leaf.total_form\"]. The same recovery that names Model.rel_onward directly (the test's entry 1) fails the discharge condition. No field rule catches it, because onward_holder is not among the entry's given names, so report() would place the row 'under a stated hypothesis'. Scripts: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-lean/stubs_run2.py with extra2.json and q2.json.",
+     "fix": "In theoremsUsed, walk package definitions too, as §3.0's walk does: enter any packaged non-theorem constant, and collect the package theorems found inside (Init stays unexpanded, so Init instances raise no spurious uses). At minimum, collect a definition or opaque whose type is a proposition as a theorem. Apply the same walk to the fit's facts and to each bridge's theoremsUsed. Add a control in which a fact held in a definition must fail, and rerun U4's controls to confirm row 17 still passes.",
+     "verdict": {
+      "id": "LEAN-1",
+      "real": true,
+      "severity": "major",
+      "reason": "Reproduced on the test's stubs plus an extra module (scratch: /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-adv-lean/run_stubs.py, extra.json, q.json, out1.txt). theoremsUsed (boundary_check.lean:174-188) enters only constants under the owner's own name and collects only constants that are theorems. So a model theorem reached through any other definition is never seen. Three results show this. (1) `def onward_holder : Total Model.rel := Model.rel_onward` with recovery `total_form onward_holder`: passed true, failures [], recovery_uses [total_form]. (2) A model's data carrying a proof, `def Model.step2 : {f // ∀ x, Model.rel x (f x)} := ⟨Model.next, Model.next_rel⟩`, with recovery `total_form (fun x => ⟨Model.step2.1 x, Model.step2.2 x⟩)`: passed true, recovery_uses [total_form, Subtype.property]. This is an ordinary Lean idiom, not a contrived one. (3) Control: the same recovery naming Model.rel_onward directly fails, as the test expects. Spec §3.2 test 9 says 'Its proof uses no theorem but F, the entry's bridges and projections'. U4's discharge condition exists so that a recovery cannot meet F's hypotheses through any lemma. Yet a wrapper definition defeats it, and the row's page line would still say 'checked in Lean: … the discharge condition'. The §3.2 list of what the review reads does not include this, so it is not a matter left to review. The Python D2 walk enters definitions (Terms.walk; the Flow.holder test), so the two checks disagree. One sub-claim is wrong: an instance of a Prop class is caught. In Lean 4.29 such an instance is compiled as a theorem: `instance Model.onwardInst : Model.Onward := ⟨Model.rel_onward⟩` fails with 'the recovery uses [Becoming.Model.onwardInst]'. Bridges, whose closed set uses the same theoremsUsed, and test 5's facts (namesOf, direct names only) have the same blind spot.",
+      "fix": "In theoremsUsed, enter every packaged non-theorem constant (definitions and opaques) that the recovery's value reaches, not only the owner's auxiliaries. Collect the package theorems found inside entered definitions, and keep collecting every theorem the recovery and its own auxiliaries name directly. Do not collect Init theorems inside model definitions, so termination or decide proofs raise no spurious use. Bridges then get the same walk. Give the fit's and the countermodel's facts the same walk. Add two controls: a Prop-valued def holding a model theorem, and a Subtype-valued model def carrying one; both must fail test 9. Rerun U4's controls (run_controls.py) to confirm row 17 still passes."
+     }
+    },
+    {
+     "id": "LEAN-2",
+     "severity": "minor",
+     "file": "tools/research/boundary.py",
+     "line": 461,
+     "claim": "Several steps of lean_check run outside its try. These are checker(), cb.module_index(), cb.closure() (which asserts), reading every source, Path(binary).read_bytes() and cb.module_keys() (which asserts on an import without a key). Any failure there propagates out of boundary.report and crashes master_laws.py. The spec says the generator never refuses to run, and that when Lean cannot run the entries it would check are unverified with the reason. In normal mode dump_constants would fail first, but under --dump (constants from a pickle) nothing guards it.",
+     "evidence": "With checker() wrapped so that DEFAULT_LEAN = /nonexistent/lean, boundary.lean_check({'entries': [], 'names': [], 'equivalences': []}, []) raised FileNotFoundError: [Errno 2] No such file or directory: '/nonexistent/lean'. It did not return (None, {'ran': False, 'reason': …}).",
+     "fix": "Put the whole body of lean_check (checker load, index, closure, key computation, restore, run) under one try that catches Exception. Return (None, {**info_so_far, 'ran': False, 'reason': …}) so every edge entry becomes unverified with the reason.",
+     "verdict": {
+      "id": "LEAN-2",
+      "real": true,
+      "severity": "minor",
+      "reason": "Reproduced (scratch review-adv-lean/missing_binary.py): with cb.DEFAULT_LEAN pointed at a missing path, lean_check raises FileNotFoundError from Path(binary).read_bytes() at boundary.py:461, which is outside the try (lines 477-480). report() calls lean without a guard (line 529), so master_laws.py crashes. §3.6 says that when the check cannot run, the entries it would check are unverified with the reason, and that the generator never refuses to run. Compare: a missing ~/.elan/bin/lean (OSError inside run_check) is handled, and a module missing from the cache is handled; a missing toolchain binary crashes instead. It is reachable only under --dump, since without it dump_constants reads the same binary first. So it is minor.",
+      "fix": "Wrap the body of lean_check, from checker() through the key computation, restore and run, in one try ... except Exception as e. Return (None, {**info_so_far, 'ran': False, 'reason': f'the Lean check could not run: {type(e).__name__}: {e}'}), with info_so_far being whatever of toolchain, modules_sha256 and check_sha256 was computed."
+     }
+    },
+    {
+     "id": "LEAN-3",
+     "severity": "minor",
+     "file": "tools/research/boundary.py",
+     "line": 543,
+     "claim": "When the report maps the Lean output back, it trusts a missing `failures` key instead of `passed`. An output entry with passed false and no failures key verifies, so the check fails open on malformed output. An output that is not an object, or an entry that is not an object, crashes the report with an AttributeError (output.get, x.get) instead of making the entries unverified. The admitted and equivalence maps fail closed, which is correct.",
+     "evidence": "With lean returning ({'entries': [{'row': e['row'], 'passed': False} for e in q['entries']], 'admitted': {}, 'equivalence': {}}, {'ran': True}), report(...) on carrier(at_hypothesis()) gave rows['Becoming.Flow.two'] the label 'under a stated hypothesis' with verified True and unverified []. With lean returning ([], {'ran': True}), it raised AttributeError: 'list' object has no attribute 'get'.",
+     "fix": "Check the output's shape: a dict whose entries are a list of dicts, each with a boolean passed and a list of failures. Treat any other shape as the check not running ('the Lean check gave malformed output'). For each entry, fail it when `x.get('passed') is not True` even if failures is empty.",
+     "verdict": {
+      "id": "LEAN-3",
+      "real": false,
+      "severity": "nit",
+      "reason": "The case cannot arise. The only producer of the output is boundary_check.lean, and every entry object it writes carries both 'passed' and 'failures' with passed = failures.isEmpty: finish at lines 220-223, and the catch branch at lines 386-388. The output file is always a JSON object with entries, admitted and equivalence. Truncated or unparsable output raises ValueError in run_check, which lean_check catches as 'ran: False'. The reviewer's reproduction used a fabricated runner that no code path supplies. The spec asks for no validation of the check's own output shape.",
+      "fix": "None needed. Optionally, for defence in depth, fail an entry when x.get('passed') is not True."
+     }
+    },
+    {
+     "id": "LEAN-4",
+     "severity": "minor",
+     "file": "tools/research/boundary.py",
+     "line": 702,
+     "claim": "In test_the_failures, the case of a certificate not in the environment asserts only that passed is False. That assertion passes for any failure, including 'the check raised: unknown constant …', which getConstInfo would produce if test 1's missing-name branch were removed or broken. The spec (§8) lists this case as a tested behaviour, but test 1's report is not checked. The file is tools/research/tests/test_boundary.py, lines 702-704.",
+     "evidence": "The actual output for entries[3] is failures ['not in the environment: [Becoming.Leaf.absent_certificate]']. The test reads only `self.assertFalse(self.out['entries'][3]['passed'])`.",
+     "fix": "Assert `self.out['entries'][3]['failures'] == ['not in the environment: [Becoming.Leaf.absent_certificate]']`.",
+     "verdict": {
+      "id": "LEAN-4",
+      "real": false,
+      "severity": "nit",
+      "reason": "§8 lists 'a certificate not in the environment' as a case to run, and the expected outcome is that the entry fails; the test asserts exactly that. Even if test 1's missing-name branch were removed, the entry would still fail: first by 'is not a theorem', then by getConstInfo throwing, which the catch turns into passed false. The report's outcome, unverified with the rule's label, is the same either way. Only the failure message would differ, and the test does not claim to check the message.",
+      "fix": "None needed. Optionally assert failures == ['not in the environment: [Becoming.Leaf.absent_certificate]'] to pin the message."
+     }
+    },
+    {
+     "id": "LEAN-5",
+     "severity": "minor",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 706,
+     "claim": "test_the_name_and_equivalence_tests skips the branches that set each test apart from a simpler one. For the name test there is no grammar-module constant off the root, so a check that admitted every Becoming.Grammar* constant by module would still pass. For the equivalence test the only positive case is an Iff; there is no positive Eq between propositions, predicates or relations, so a check whose Eq branch always returned false would still pass. These are exactly the semantics D1 and D6 rely on.",
+     "evidence": "The names are «际之自» (grammar, on the root, True), Model.rel_total (model, False), Small (prelude, True) and Absent (False). The equivalences are and_swap (Iff, True), size_zero (Eq at Nat, False) and rel_total (False). Extra stubs I ran show both missing branches behave correctly today: a stub Becoming/GrammarX.lean with `theorem «际之模» : Model.rel 0 1 := rfl` is admitted false; `theorem prop_eq {a b : Prop} : (a ∧ b) = (b ∧ a)` and `theorem pred_eq : (fun n : Nat => n = n) = (fun n => True)` are equivalences, true. The test exercises neither.",
+     "fix": "Add a stub Becoming/GrammarX.lean (importing Becoming.Model) holding a «» theorem that reaches Model, with expected admitted False. Add an Eq-at-Prop theorem and an Eq-at-predicate theorem to the Model stub, with expected equivalence True.",
+     "verdict": {
+      "id": "LEAN-5",
+      "real": false,
+      "severity": "nit",
+      "reason": "This is a coverage gap, not a test that claims what it does not test. §8 asks for a passing and a failing case of each check and for 'the name test and the equivalence test'. The test has both for each: admitted True for a grammar root constant and the prelude, False for a model constant and an absent name; Iff True, and Eq at Nat and a non-equivalence False. The reviewer confirmed that both missing branches (a grammar-module constant off the root, Eq at Prop or at a predicate) behave correctly today. D1's grammar-law test by content is also covered on the Python side (TheTerms: lockedAlike, core_iff).",
+      "fix": "None needed. Optionally add a GrammarX stub with a «» theorem reaching Model (expected admitted False) and an Eq-at-Prop theorem (expected equivalence True)."
+     }
+    },
+    {
+     "id": "LEAN-6",
+     "severity": "nit",
+     "file": "tools/research/boundary.py",
+     "line": 476,
+     "claim": "The check's environment is `Becoming` plus the periphery joins plus the forms' modules. The dump's environment also includes the dump's own import list, and dump_constants' assertion (SPINE ⊆ dump imports ∪ Becoming.lean imports) explicitly allows spine modules that Becoming.lean does not import. Names in a derived entry's laws or bridges, or a standing-2 recovery, certificate or fit in another module, would then be absent from the check. They would be reported misleadingly as 'D1: the Lean check does not admit …', 'D6: … is not an equivalence' or 'not in the environment', although the dump holds them. Nothing goes wrong today: all 354 modules of the run are reached from Becoming, and core leaves such as SignificanceStatements are imported by Becoming.lean.",
+     "evidence": "In the mv-status worktree, cb.closure(index) gives 354 modules and cb.closure(index, ['Becoming']) gives the same 354. THEOREM-CONNECTIVITY.py:147-149 imports imports_of(DUMP) besides Becoming; lean_check imports only ['Becoming', *PERIPHERY_JOINS, *form modules].",
+     "fix": "Import the module C[x]['m'] of every name sent (laws, bridges, and every standing-2 name), or the dump's import list as well. Have the Lean side report a name absent from the environment as such (for example admitted: null), separately from a refusal.",
+     "verdict": {
+      "id": "LEAN-6",
+      "real": false,
+      "severity": "nit",
+      "reason": "The code follows §3.6 exactly ('It writes the check's imports: Becoming, the periphery joins, and the module of each standing-2 form'). On the current run, nothing differs: cb.closure(index) and cb.closure(index, ['Becoming']) are both 354 modules with an empty difference. The dump's imports (Becoming, MoveOutcomeProcesses, ClassifiedBeliefProcesses, ContextArrivalTraces) all lie in Becoming's closure, and PERIPHERY_JOINS is empty. The finding concedes that nothing goes wrong today, so it is a hypothetical future divergence.",
+      "fix": "None needed now. If the dump ever imports a module outside Becoming's closure, add the dump's import list to the check's imports."
+     }
+    },
+    {
+     "id": "LEAN-7",
+     "severity": "nit",
+     "file": "tools/research/boundary.py",
+     "line": 480,
+     "claim": "When Lean fails, the reason recorded is the first 500 characters of Lean's output, or str() of a TimeoutExpired. It is copied into every edge entry's `failed`, and from there into master-laws.json and the page lines (\"… is unverified: [failures]\"). Lean's messages can carry the absolute path of the random TemporaryDirectory, and the timeout message carries the user's home path. A rerun in the same failing state then changes the generated data and pages, and puts local paths into published text.",
+     "evidence": "I ran boundary.run_check on a work folder with an import whose olean is absent. The recorded reason was: \"Lean failed: BoundaryCheck.lean:1:0: error: object file '/private/tmp/…/review-lean/w1/Becoming/Nope.olean' of module Becoming.Nope does not exist\". In lean_check the folder is boundary-check-XXXX, random per run. The timeout reason is \"Command '['/Users/ren/.elan/bin/lean', …]' timed out after 600 seconds\".",
+     "fix": "Replace str(work) with a fixed token (and the home path with ~) before recording the reason. For a timeout, record a fixed message ('Lean timed out after N s'). Keep the full output in the generator's stdout, not in the data.",
+     "verdict": {
+      "id": "LEAN-7",
+      "real": false,
+      "severity": "nit",
+      "reason": "The reviewer's reproduction called run_check directly with an import whose olean was absent. lean_check rules that out: it returns early with 'not in the cache' whenever any module's olean is not restored (lines 468-475), and it imports only modules in `order` (line 476). So Lean's 'object file … does not exist' message with the random boundary-check-XXXX path cannot occur there. The check's own errors are reported relative to BoundaryCheck.lean, since cwd is the work folder, and per-entry exceptions are caught inside Lean. The timeout message contains the elan binary's home path, which is stable on a given machine, so reruns are deterministic. It also appears only in a failure state that U4's landing gate excludes. No reachable nondeterminism is shown.",
+      "fix": "None needed. Optionally record a fixed message for a timeout ('Lean timed out after N s')."
+     }
+    }
+   ]
+  },
+  "tests": {
+   "covered": "I ran the file once: 45 tests, 44 passed and 1 skipped (TheRepositoryFile, since no record carries the field), in about 16 s with the Lean stub run. I reran e2e_report.py once on GW's run. It reproduces the committed e2e-report.json in every key and the spec's figures: eight derived; act_courses_unselected fails D2, D3 and D5; the condition is not entailed and C not shown; 8/24/32/16/7/31.\n\nTo find tests that pass for the wrong reason, I applied in-process mutants to the 42 non-Lean tests (nothing on disk changed). A control mutant fails as it should; the surviving mutants are cited in the findings. All scratch files are in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-tests/.\n\nSpec §8, item by item:\n\nRegistry\n- Schema-1, superseded, withdrawn and second record: test_the_record_carrying_it, but only through boundary_errors and boundary_across directly (TESTS-2).\n- Unknown keys at every level: test_unknown_keys_at_every_level covers the boundary object, a standing, a hypothesis, a premise and a basis.\n- Required and forbidden keys, and relational_part outside a balance reading: test_each_standings_required_and_forbidden_keys, partly; of standing 2's required keys only `certificate` is tested (TESTS-11).\n- A name that is not full, or equals the declaration: test_names_full_and_not_the_declaration.\n- Empty lists: test_empty_lists.\n- Duplicate declarations, roles, hypotheses, countermodels and fits: test_duplicates.\n- bridges meeting support: test_law_bridges_and_support_are_disjoint.\n- Premises other than one scope and one order: test_duplicates.\n- absent missing beside a null: test_premises.\n- The review, by full name and without the root: test_the_review, partly (TESTS-11).\n- Introduced names outside the record's laws: test_introduced_names_are_the_records_own, form and relational_part only (TESTS-11).\n- One hypothesis shared by two entries: test_one_hypothesis_definition_may_serve_two_entries (TESTS-17).\n\nGenerator\n- D1 to D5, passing and failing: TheDerivedChecks. This includes act_courses_unselected's shape for D5, a central lemma (D2) and law with two laws. D3 and D4 through a forwarder are missing (TESTS-8).\n- D6: passing and failing with the stubbed Lean in test_the_lean_check, and in real Lean on the stubs, but with no passing Eq case (TESTS-12).\n- Q1: test_the_premises, partly (TESTS-10).\n- Terms: test_grammar_laws, test_root_constants_by_content and test_forwarders cover every case §8 names. The anchors' «» exclusion is vacuous (TESTS-5) and the forwarder negatives are missing (TESTS-7).\n- Walks: test_the_walks covers the definition holding a theorem and reach through a root helper; there is no auxiliary in any walk (TESTS-9).\n- The rule: test_every_branch, every branch. The facts readings need are one-sided (TESTS-6).\n- Precedence: test_precedence and test_a_reading_of_a_computed_label_needs_the_rules_fact.\n- The Lean check: test_the_lean_check covers a failing check and the check not running, and lean=None shows Lean is not run when there is nothing to check.\n- Robustness: test_robustness, for the generator only (TESTS-4).\n- The report: test_counts_groups_and_f5 covers counts, groups, against_f5, derived_by_forwarder and proof-only balance. Counts unchanged by the boundary record's laws, and a law with both fields counted once, are checked only on the counted_in helper (TESTS-3).\n\nPages\n- One line per declaration, under a law naming it twice: test_one_line_per_central_declaration_and_record, through the real render.\n- Each standing's sentence: test_each_standings_sentence, with variants missing (TESTS-14).\n- The section and its counts line: test_the_boundary_records_section, which calls boundary_section directly (TESTS-13).\n- Hidden lines (entry changed, cited F5 law not matched, another record): test_lines_hidden_when_not_matched.\n- Pages byte-identical without the field: weak (TESTS-13).\n- affected_ids after a change to the boundary record: test_what_re_renders_after_a_change_to_the_boundary_record, with one path missing (TESTS-15).\n\nStatus\n- The four lists and premises \"not shown\" kept out of the unverified list: tested and sound.\n- current, and the two-record error: `current` is vacuous (TESTS-1).\n\nThe Lean check on stubs: TheLeanCheck covers every case §8 names, with loose assertions (TESTS-16).\n\nEnd to end: a harness without assertions (TESTS-18).\n\nChecked and sound: test_each_standings_sentence's exact strings match §5's wording. The lines-hidden logic and the F5-cite rule are exercised. Malformed fields never crash the generator. The stub Lean run's amounts test sees through the prelude definition (LE.le comes only via Small). The precedence and unverified-entry paths are exercised.",
+   "findings": [
+    {
+     "id": "TESTS-1",
+     "severity": "major",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 586,
+     "claim": "The status tests' assertions on `current` pass for the wrong reason. `current` is False in every TheStatus case because the fixture's `core_sources_sha256` is '' and matches no receipt, so the boundary's part of `current` is never tested.",
+     "evidence": "With the field fully matched (`boundary_not_matched == []`), `registry.master_laws_status` still returns `current False` and `core_sources_current False` (scratch probe1.py). I deleted `and not edge['boundary_not_matched'] and 'boundary_error' not in edge` from registry.py:848-849 in-process (mutants4.py) and all 42 non-Lean tests still pass. The same vacuous assertion is at line 606 (the two-record error case).",
+     "fix": "Use test_master_laws.MasterLawsStatus's harness: patch registry.ROOT and CORE_RECEIPT to a temp receipt whose sources hash matches `core_sources_sha256`. Then assert `current` is True when the field is matched, False when one entry differs, and False for the two-record error.",
+     "verdict": {
+      "id": "TESTS-1",
+      "real": true,
+      "severity": "minor",
+      "reason": "Reproduced. TheStatus.base sets core_sources_sha256 to '' and patches no receipt, so `same` is False and `current` is False whatever the field does. With a fully matched field (boundary_not_matched == []), master_laws_status returns current False and core_sources_current False. I exec'd master_laws_status with `and not edge['boundary_not_matched'] and 'boundary_error' not in edge` removed, and TheStatus still passes 4/4. So the `current` assertions at test_boundary.py:586 and :606 cannot fail, and §8's 'The four lists and current' is not tested. The code itself is correct (registry.py:848-849), so this is minor, not major.",
+      "fix": "In TheStatus, reuse test_master_laws.MasterLawsStatus's harness: patch registry.ROOT and CORE_RECEIPT to a temp receipt with status 'passed' whose source_sha256 hashes to base()'s core_sources_sha256, with inputs_sha256 left empty. Then assert current is True for the matched field, False after the standing is popped (line 586), and False for the two-record error (line 606)."
+     }
+    },
+    {
+     "id": "TESTS-2",
+     "severity": "major",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 71,
+     "claim": "No test reaches the registry's wiring. The schema-1 case tests a message the registry never shows for a schema-1 record. `validate` calls `validate_v2_fields`, and so `boundary_errors`, only when `v2`. A schema-1 record is refused by the `later` list (registry.py:916), which no test reaches.",
+     "evidence": "Every FieldRules test calls `registry.boundary_errors` or `registry.boundary_across` directly, and no test in the file calls `validate`. In-process mutants that drop `errors += boundary_errors(r)` (registry.py:468) or `errors += boundary_across(records)` (registry.py:882) leave the suite at 42 passed, 0 failed (mutants3.py M16, M17). Removing 'boundary' from `later` would also pass, since that line is never run. So the registry could stop checking the field entirely and the suite would stay green.",
+     "fix": "Add tests through `registry.validate` using test_schema2.TemporaryRoot. A schema-2 record with a malformed field gets the `boundary ...` messages. A schema-1 record with `boundary` gets 'schema-2 fields need schema_version 2: boundary'. Two carriers get the boundary_across message.",
+     "verdict": {
+      "id": "TESTS-2",
+      "real": true,
+      "severity": "minor",
+      "reason": "Confirmed. registry.validate calls validate_v2_fields, and so boundary_errors, only when schema_version == 2. A schema-1 record with `boundary` is refused by the `later` line (registry.py:916), which says 'schema-2 fields need schema_version 2: boundary'. field_findings' 'the boundary field needs schema_version 2' is never shown by the registry; only the generator uses it. test_the_record_carrying_it therefore tests the generator's message for §8's registry case 'the field on a schema-1 record'. No test calls validate: exec'ing validate_v2_fields without `errors += boundary_errors(r)` leaves all 41 non-Lean tests green. Leaving the wiring untested follows F5's own tests (StatementsAtModelRules also calls statements_at_model_errors directly), so the real gap is the schema-1 path.",
+      "fix": "Add one test through registry.validate (test_schema2's TemporaryRoot or an equivalent minimal record): a schema-1 record carrying `boundary` gives 'schema-2 fields need schema_version 2: boundary'. Optionally add a schema-2 record with a malformed field (a `boundary ...` message) and two carriers (the boundary_across message)."
+     }
+    },
+    {
+     "id": "TESTS-3",
+     "severity": "major",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 440,
+     "claim": "Spec §4 says 'U4's landing then changes no existing count, which a test asserts', and §8 step 1 says no figure changes, 'which a test asserts'. No test does. `test_the_counts_of_the_boundary_record` checks only the pure helper `counted_in`, not `main()`'s use of it.",
+     "evidence": "master_laws.py:324 (picking the counter through counted_in) and 381-384 (data['boundary'] for one carrier, the error for two) are never run by a test. Restoring the old `c = counts_at_model if (r['id'], i) in checked else counts` would leave every test green. 'A law with both fields counted once' is true of counted_in by construction (it returns one string), so the test cannot fail. TheRepositoryFile skips while no record carries the field, and when one does it compares only the key sets of `counts_at_boundary_record` and `counts`. `hashed_inputs` gaining boundary.py and boundary_check.lean (§3.6) is also untested.",
+     "fix": "Factor the per-law counting loop out of `main()` into a function that takes the loaded records, the measure rows and `checked`. Test it on synthetic records: adding a carrying record (one of whose laws also has statements_at_model) leaves `counts` and `counts_at_model` byte-equal and raises only `counts_at_boundary_record`. Two carriers give `{error, records}` with both records' laws in `counts_at_boundary_record`. Also assert that `hashed_inputs` lists boundary.py and boundary_check.lean.",
+     "verdict": {
+      "id": "TESTS-3",
+      "real": true,
+      "severity": "minor",
+      "reason": "Confirmed in part. §4 says the no-count-change property is asserted by a test, and §8 says the same of 'counts unchanged by the boundary record's laws'. The only test checks the pure helper counted_in. main()'s choice of counter (master_laws.py:323-324) and data['boundary'] for one carrier or the error for two (:381-384) are never run by a test, so reverting main() to the old `c = counts_at_model if ... else counts` keeps the suite green. TheRepositoryFile skips while no record carries the field. One part of the claim is wrong: the 'both fields' case of counted_in can fail, since it checks that the boundary record wins over checked. hashed_inputs is untested, but §8 does not list a test for it.",
+      "fix": "Factor the per-law counting loop of main() into a function taking the loaded records, the measure rows, `checked` and `carrying`, and test it on synthetic records. Adding a carrying record, one of whose laws also has statements_at_model, must leave `counts` and `counts_at_model` equal and raise only counts_at_boundary_record. Two carriers must give {error, records}. If that refactor is not wanted, narrow §4/§8's wording to say the test asserts counted_in's routing."
+     }
+    },
+    {
+     "id": "TESTS-4",
+     "severity": "major",
+     "file": "tools/research/boundary.py",
+     "line": 128,
+     "claim": "The registry check crashes with a TypeError on a malformed name when the item's review is a valid reference. No registry test feeds the check malformed shapes; test_robustness tries them on the generator only.",
+     "evidence": "The check's review step calls `dict.fromkeys(names)`, where `names` holds the raw `declaration`, `premise` and `not_entailed`. Running `registry.boundary_errors` with `_review_text` patched to return text (probe2.py) gives: `standing(['Becoming.Flow.x'], 'counting')` -> TypeError unhashable type: 'list'; premise `{'a': 1}` -> TypeError unhashable type: 'dict'; `not_entailed: ['x']` -> TypeError. `validate` has no try around `validate_v2_fields`, so `research.py check` would abort with a traceback instead of reporting. The generator (no review text) handles all three.",
+     "fix": "In `reviewed`, keep only strings: `[n for n in dict.fromkeys(x for x in names if isinstance(x, str)) if full(n) and ...]`. Add a FieldRules test that runs test_robustness's malformed fields, plus a list declaration and a dict premise, through `registry.boundary_errors` with a readable review, and asserts messages and no exception.",
+     "verdict": {
+      "id": "TESTS-4",
+      "real": true,
+      "severity": "minor",
+      "reason": "Reproduced (crash.py). When _review_text returns text, registry.boundary_errors raises TypeError in field_findings' `reviewed`: `dict.fromkeys(names)` gets the raw declaration, premise or not_entailed. A list declaration gives 'unhashable type: list', a dict premise 'unhashable type: dict', a list not_entailed 'unhashable type: list'. With no review text (the generator's path) the same records give the proper messages. validate does not catch the exception, so the check aborts with a traceback instead of listing the refusal. The record would be refused anyway and nothing malformed is accepted, so minor rather than major.",
+      "fix": "In boundary.py:128, filter to strings before hashing: `unnamed = [n for n in dict.fromkeys(x for x in names if isinstance(x, str)) if full(n) and not names_in(t, n)]`. Add a FieldRules test that runs a list declaration, a dict premise and a list not_entailed through registry.boundary_errors with a readable review, and asserts messages and no exception."
+     }
+    },
+    {
+     "id": "TESTS-5",
+     "severity": "minor",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 231,
+     "claim": "The assertion that the grammar's «» balance forms are not balance anchors is vacuous. ANCHORS lists 'Becoming.«守数当且仅当可对»' but CONSTANTS does not hold it, so the `a in C` filter drops it before the «» test is reached.",
+     "evidence": "'Becoming.«守数当且仅当可对»' in CONSTANTS -> False (probe1.py). I replaced `self.anchors` with `{a for a in anchors if a in C}`, dropping `'«' not in a` (boundary.py:260), and the suite still passes (mutants.py M3). On the real run, the measure's anchors include «守数当且仅当可对» and «程守数当且仅当可对» (§3.0). Without the filter, D5 would fail every derived row that reaches them, and they would show under `proof_only`.",
+     "fix": "Add 'Becoming.«守数当且仅当可对»': const(G, 'thm', ['Becoming.«际»']) to CONSTANTS, and update test_grammar_laws's expected set, which would now include it. Add a derived row whose proof uses it, and assert that D5 passes and `proof_only` is empty.",
+     "verdict": {
+      "id": "TESTS-5",
+      "real": true,
+      "severity": "minor",
+      "reason": "Confirmed. 'Becoming.«守数当且仅当可对»' is in ANCHORS but not in CONSTANTS, so `a in C` drops it before the `'«' not in a` clause is reached. ANCHORS includes it only to show the §3.0 exclusion of the grammar's own balance forms, so test_root_constants_by_content's anchors assertion is true for the wrong reason. A mutant without the «» filter passes all 41 non-Lean tests.",
+      "fix": "Add 'Becoming.«守数当且仅当可对»': const(G, 'thm', ['Becoming.«际»']) to CONSTANTS. Add it to test_grammar_laws' expected set, since it is then a grammar law. Optionally assert that a derived row whose proof names it passes D5 and that its proof_only is empty."
+     }
+    },
+    {
+     "id": "TESTS-6",
+     "severity": "minor",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 305,
+     "claim": "Two of the four facts a reading needs (§3.4) are tested on one side only: 'balance in its statement' only where it holds, 'own carrier' only where it fails. The written-out test of rule 1 is tested only with all three names present.",
+     "evidence": "Each in-process mutant passes the suite: `has_fact('own carrier', ...)` always False (M1); `has_fact('balance in its statement', ...)` always True (M2); `written_out` as any one of Dependence.level/taken/given instead of all three (boundary.py:353, M12). A control mutant (connected always True) does fail two tests, so the harness detects real changes.",
+     "fix": "In test_the_facts, add `has_fact('own carrier', set(), NONE, [{'models': ['own']}])` is True and `has_fact('balance in its statement', set(), NONE, [])` is False. In the report test, add a balance reading on a row with no anchor (expected unverified) and an own-carrier reading on Flow.own (expected to pass). Add a constant naming only two of the three written-out names and assert `written_out` is False.",
+     "verdict": {
+      "id": "TESTS-6",
+      "real": false,
+      "severity": "nit",
+      "reason": "The mutants do survive (own carrier never true, balance always true, written_out from any one name), but the code is correct against §3.4/§3.5. §8's listed cases are present: every rule branch including written-out balance, and a reading of a computed label without its fact. Each assertion in test_the_facts tests what it asserts. This is an untested side of a branch, not a test that claims something it does not test.",
+      "fix": "Optional hardening: add has_fact('own carrier', set(), NONE, [{'models': ['own']}]) is True, has_fact('balance in its statement', set(), NONE, []) is False, and a constant naming two of the three written-out names with written_out False."
+     }
+    },
+    {
+     "id": "TESTS-7",
+     "severity": "minor",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 233,
+     "claim": "The forwarder term (§3.0) is tested only on its positive cases. Two parts are never exercised: the clause 'whose proof names no other theorem of the run', and forwarding through another forwarder.",
+     "evidence": "I removed `self.walk(n) <= {g}` from `_forwarder` (boundary.py:325) and the suite passes (M4). A constant with f=LAW whose proof also names Flow.fact is correctly not a forwarder (probe2.py `not_fw` -> False), but no test holds such a constant. There is no fixture of a forwarder whose f is another forwarder.",
+     "fix": "Add to CONSTANTS a theorem with f=LAW, fk='pure' whose proof names LAW and Becoming.Flow.fact, and assert it is not in `T.forwarders`. Add a theorem with f='Becoming.Flow.forwarder' and assert it forwards to LAW.",
+     "verdict": {
+      "id": "TESTS-7",
+      "real": false,
+      "severity": "nit",
+      "reason": "Code is correct: the reviewer's own probe shows a theorem with f=LAW whose proof also names Flow.fact is not a forwarder. §8 asks for 'a pure forwarder row and a projection', and both are tested. No test claims the negative clause or forwarding through a forwarder, so this is a coverage suggestion, not a defect.",
+      "fix": "Optional: add a non-forwarder with f=LAW whose proof names another theorem, and a forwarder of a forwarder, to CONSTANTS and test_forwarders."
+     }
+    },
+    {
+     "id": "TESTS-8",
+     "severity": "minor",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 275,
+     "claim": "No fixture's proof names a forwarder, so two cases go untested: D3's 'directly or through a forwarder' and D4's 'a forwarder listed as a lemma is collected as a law'. The D4 fixture's support lemma Flow.projection is not named by Flow.forwarder's proof at all. Its suffix comes from `T.law_of(x)` alone, not from the walk collecting it as a law.",
+     "evidence": "No theorem in CONSTANTS has a walk naming a forwarder (probe1.py), and Flow.forwarder's walk is {«所闭之界»}. I made derived() collect only laws proper, replacing `if T.law_of(b)` with `if b in T.laws` (boundary.py:390), and the suite passes (M5). The code is right: a row whose proof names Flow.forwarder passes D3 for LAW, and with the forwarder in support it fails D4 with the suffix (probe2.py).",
+     "fix": "Add `Becoming.Flow.via_fw = const(F, 'thm', [F], ['Becoming.Flow.forwarder'])` to CENTRAL and CONSTANTS. Assert derived(..., law=[LAW]) passes, and that support=['Becoming.Flow.forwarder'] fails D4 'as a lemma'.",
+     "verdict": {
+      "id": "TESTS-8",
+      "real": true,
+      "severity": "minor",
+      "reason": "Confirmed. test_each_failure's D4 case (line 275) lists Flow.projection as support of Flow.forwarder and asserts the suffix 'it is a grammar law or a forwarder of one'. Flow.forwarder's walk is {«所闭之界»}, so projection is unreached because it is unused. The suffix comes from T.law_of alone, and D4's clause that a forwarder named by the proof 'is collected as a law, so listed as a lemma it is not reached' is never exercised. I exec'd derived() collecting only laws proper (`if b in T.laws`), and all 41 non-Lean tests pass. The code is right: a row whose proof names Flow.forwarder passes D3, and with the forwarder as support fails D4 with the suffix.",
+      "fix": "Add 'Becoming.Flow.via_fw': const(F, 'thm', [F], ['Becoming.Flow.forwarder']) to CONSTANTS. Assert that derived(T, 'Becoming.Flow.via_fw', {'law': [LAW]}, set()) has no failures (D3 through a forwarder), and that with support=['Becoming.Flow.forwarder'] it fails exactly with the D4 'as a lemma' message."
+     }
+    },
+    {
+     "id": "TESTS-9",
+     "severity": "minor",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 237,
+     "claim": "No unit test reaches the walk through generated auxiliaries ('every walk goes through them', §3.0). No fixture's value names an auxiliary: «所闭之界»._proof_1 exists but nothing uses it.",
+     "evidence": "I removed `and not self.aux(b)` from `Terms.walk` (boundary.py:312), so auxiliary theorems are collected as named theorems, and the suite passes (M11). On the real run, most proofs go through `_proof_N` or `match_N`, and this mutant would fail D2 for every derived row. Only the end-to-end harness, which has no assertions, would show it.",
+     "fix": "Give Flow.row's value an auxiliary, e.g. 'Becoming.Flow.row._proof_1' = const(F, 'thm', [F], ['Becoming.Flow.support']). Assert that the walk collects Flow.support and not the auxiliary, and that D4 is met through it.",
+     "verdict": {
+      "id": "TESTS-9",
+      "real": false,
+      "severity": "nit",
+      "reason": "Code is correct: a probe row whose value goes through 'Flow.r2._proof_1' collects LAW and Flow.support and passes D2-D4. §8's walk cases (through a definition holding a theorem; reach through a root helper) are tested, and no test claims auxiliaries are walked through. The mutant survives, but that is a coverage gap, not a defect by the criteria.",
+      "fix": "Optional: give a row a value through an auxiliary (e.g. 'Becoming.Flow.row._proof_1') and assert the walk collects its theorems and not the auxiliary."
+     }
+    },
+    {
+     "id": "TESTS-10",
+     "severity": "minor",
+     "file": "tools/research/boundary.py",
+     "line": 545,
+     "claim": "Several failure branches of the report are untested: (a) a standing-2 entry the Lean output omits; (b) Q1's 'not a theorem of the run'; (c) entries that failed other checks being kept out of the Lean query.",
+     "evidence": "(a) I turned `failed.append('the Lean check gave no result')` into `pass` and the suite passes (M14). That entry would then verify without any Lean result. This matters whenever Lean prints a row name differently from the declaration, since results are keyed by `x.get('row')`. (b) Weakening boundary.py:420 to `if ne not in C` passes (M13). (c) Building `lean_entries`/`derived_ok` without the `not failed` filter (boundary.py:521-522) passes (M10), because test_the_lean_check's recording run has only passing entries.",
+     "fix": "In test_the_lean_check, add a stub whose output drops entries[0] and assert 'the Lean check gave no result'. Add a recording run with a failing derived entry (Flow.steps) and assert its law is not in `names`. In test_the_premises, add `not_entailed: 'Becoming.Unrestricted'` (a def) and assert '... is not a theorem of the run'.",
+     "verdict": {
+      "id": "TESTS-10",
+      "real": false,
+      "severity": "nit",
+      "reason": "All three branches are correct in the code: 'the Lean check gave no result', Q1's 'not a theorem of the run', and the `not failed` filter on the Lean query. §8 asks for a standing-2 entry whose check fails, the check not running, and a passing and a failing case of Q1, and all are tested. Untested branches of correct code are not defects here.",
+      "fix": "Optional: stub output dropping entries[0] and assert 'the Lean check gave no result'; add not_entailed 'Becoming.Unrestricted' (a def) to test_the_premises; add a failing derived entry to the recording run and assert its law is not in `names`."
+     }
+    },
+    {
+     "id": "TESTS-11",
+     "severity": "minor",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 50,
+     "claim": "The review rule and the record's-own rule (§2) are each tested on one name kind. The FieldRules helper also builds its 'review names everything' text from `boundary.given_names`, the code under test, so a name kind the code forgets is left out of the fixture too.",
+     "evidence": "test_the_review's negative case checks only a bridge (bridge_iff) and the premises. A `given_names` that drops `support` passes the suite (M6). test_introduced_names_are_the_records_own refuses only an outside `form` and an outside `relational_part`. Restricting `introduced` to those two keys passes the suite (M7), so an outside hypothesis, countermodel, fit, recovery, certificate or standing-2 bridge is never tested. The required keys of standing 2 are tested only for `certificate`.",
+     "fix": "Write the helper's review text from a hand-written list of names. Add negative cases: review text missing a support lemma, the law, a form, a countermodel; `own=` lacking each of hypothesis, countermodel, fit, recovery, certificate and the standing-2 bridge; standing 2 missing form, hypotheses and recovery.",
+     "verdict": {
+      "id": "TESTS-11",
+      "real": false,
+      "severity": "nit",
+      "reason": "The code is correct, and §8's review and introduced-name cases each have a refusing test: a review that is not a review reference, a review missing a name (bridge_iff and the premises), the root-less match, and an outside form and relational_part. Building the passing text from given_names makes the positive test unable to see an omission in given_names, but the test still checks what it says: a well-formed field passes. The broader per-kind negatives are hardening, not a test claiming more than it checks.",
+      "fix": "Optional: write the helper's review text from a hand-written name list, and add negatives for a missing support lemma, an outside hypothesis or countermodel, and standing 2 missing form, hypotheses or recovery."
+     }
+    },
+    {
+     "id": "TESTS-12",
+     "severity": "minor",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 709,
+     "claim": "D6's Eq branch ('an Eq between propositions, predicates or relations', boundary_check.lean:209-210) has no passing case anywhere. The stub's positive equivalence is an Iff (and_swap), and its only Eq is the refused `size = 0`.",
+     "evidence": "In STUBS, Model.and_swap (Iff) -> True, Model.size_zero (Eq at Nat) -> False, Model.rel_total -> False. The controls (boundary/check/BoundaryCheckControls.lean) have only `swap_bridge`, also an Iff. All bridges of the eight derived rows are Iffs (e.g. Withholding.answers_closed, Tolerance.worst_start). If `c.appFn!.appFn!.appArg!` picked the wrong argument, every test would still pass, and every Eq bridge would be refused or admitted wrongly.",
+     "fix": "Add `theorem Model.and_swap_eq {a b : Prop} : (a ∧ b) = (b ∧ a)` (via propext, in the stub only) and a predicate equality, e.g. `(fun x : Nat => Model.rel x x) = (fun x => Model.rel x x)` by rfl. Assert `equivalence` is True for both.",
+     "verdict": {
+      "id": "TESTS-12",
+      "real": false,
+      "severity": "nit",
+      "reason": "D6 has a passing case (and_swap, an Iff) and failing cases (size_zero, rel_total), as §8 asks. By reading boundary_check.lean:209-210, the Eq branch is correct: for @Eq α a b, c.appFn!.appFn!.appArg! is α, and forallTelescopeReducing α ending in Prop is the predicate/relation test, with «际» unfolded by whnf. The claim that a wrong argument would go unnoticed is speculative; nothing shows the code is wrong.",
+      "fix": "Optional: add an Eq-between-propositions and a predicate-equality theorem to the stub and assert equivalence True."
+     }
+    },
+    {
+     "id": "TESTS-13",
+     "severity": "minor",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 519,
+     "claim": "Spec §8 lists 'pages byte-identical when no record carries the field', but `test_nothing_without_the_field` renders no page. It checks only that `attach_standings` is a no-op and that `boundary_section` returns [] for a record without `_boundary`. The section's place in the real page ('follows its laws') is also untested.",
+     "evidence": "I removed `lines += boundary_section(r, base)` from `render_record_v2` (registry.py:1171) and the suite passes (M18). Only test_one_line_per_central_declaration_and_record calls render_record_v2, and only for standing lines.",
+     "fix": "Render a real schema-2 record with `render_record_v2` before and after `attach_standings(records, data_without_boundary, ...)` and assert byte equality. Render the boundary record with `_boundary` attached and assert '## Standings on the edge' comes after the laws and before '## Conditions'.",
+     "verdict": {
+      "id": "TESTS-13",
+      "real": true,
+      "severity": "minor",
+      "reason": "Confirmed. §8 says the page tests go 'through the real render' and lists 'pages byte-identical when no record carries the field'. test_nothing_without_the_field renders nothing: it checks only that attach_standings is a no-op and that boundary_section returns []. test_the_boundary_records_section calls boundary_section directly. I exec'd render_record_v2 without `lines += boundary_section(r, base)`, and all 41 non-Lean tests pass, so neither the section's presence nor its place in the page ('follows its laws', before Conditions) is tested. The code currently places it correctly.",
+      "fix": "Render a real schema-2 record with render_record_v2 before and after attach_standings(records, {}, set()) and assert byte equality. Render a record with `_boundary` attached and assert that '## Standings on the edge' comes after the laws and before '## Conditions'."
+     }
+    },
+    {
+     "id": "TESTS-14",
+     "severity": "minor",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 467,
+     "claim": "Several sentence variants of §5 are never rendered by a test: the derived forwarder clause, standing 2 with several hypotheses or with bridges, the rule's anchor sentence, and two represented models.",
+     "evidence": "In ThePages, Flow.balanced is a reading and no other central row has an anchor, so the anchor sentence is never produced. No derived entry in ThePages is a forwarder (registry.py:692), and the standing-2 entry has one hypothesis and no bridges (registry.py:708, 710). No row has both occurrence and process items, so 'at the occurrence and process models' is never produced.",
+     "fix": "In ThePages.setUp, declare Flow.forwarder derived and give a standing-2 entry two hypotheses and a bridge. Leave a row with an anchor undeclared, and give AT_MODEL a row with occurrence and process items. Assert each sentence exactly.",
+     "verdict": {
+      "id": "TESTS-14",
+      "real": false,
+      "severity": "nit",
+      "reason": "I rendered every named variant (variants.py): a derived forwarder, standing 2 with two hypotheses and a bridge, the rule's anchor sentence, and two represented models. Each comes out as §5 gives it, e.g. '(`Becoming.Flow.Balances` in its statement)' and 'at the occurrence and process models'. §8's 'each standing's sentence' is met with one sentence per standing. No line is wrong, so this is coverage only.",
+      "fix": "Optional: assert those variant sentences in ThePages."
+     }
+    },
+    {
+     "id": "TESTS-15",
+     "severity": "minor",
+     "file": "tools/research/registry.py",
+     "line": 1364,
+     "claim": "`affected_ids` has a path for a boundary-record change made before the data holds `boundary`: U4's first landing, where the declarations come from data['records'][...]['central']. No test reaches it, because the test's data has no 'records' key.",
+     "evidence": "test_what_re_renders_after_a_change_to_the_boundary_record patches master_laws to `{'boundary': report}`. So `edge` comes only from `b['rows']`, and the `data.get('records')` comprehension never runs.",
+     "fix": "Add a case with data `{'records': {'naming': [{'law': 1, 'central': [{'declaration': 'Becoming.Flow.row'}]}]}}` and no 'boundary'. A carrier record whose path changed should then select 'naming'.",
+     "verdict": {
+      "id": "TESTS-15",
+      "real": false,
+      "severity": "nit",
+      "reason": "The path is correct: real master-laws.json entries carry 'central' as a list of objects with 'declaration' (139 entries), which is what the comprehension at registry.py:1364 reads. §8's 'affected_ids after a change to the boundary record' is tested. An untested branch of correct code is not a defect.",
+      "fix": "Optional: add a case with data {'records': {'naming': [{'law': 1, 'central': [{'declaration': 'Becoming.Flow.row'}]}]}} and no 'boundary'."
+     }
+    },
+    {
+     "id": "TESTS-16",
+     "severity": "nit",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 702,
+     "claim": "Two Lean-stub assertions are looser than what they name. Entry 1 (a recovery through a model fact) uses assertIn, but spec §3.2 says such a recovery fails only the discharge condition. Entry 3 asserts only `passed` False, not that the certificate is reported missing.",
+     "evidence": "Actual outputs from one stub run (stubs.py): entry 1 failures == ['the discharge condition fails: the recovery uses [Becoming.Model.rel_onward]']; entry 3 failures == ['not in the environment: [Becoming.Leaf.absent_certificate]']. A wrong extra failure on entry 1, or a 'the check raised' failure on entry 3, would pass today.",
+     "fix": "Use assertEqual with these exact lists.",
+     "verdict": {
+      "id": "TESTS-16",
+      "real": false,
+      "severity": "nit",
+      "reason": "Entry 1: §8 asks for 'a recovery through a model fact (the discharge condition fails)', which assertIn checks. 'Fails only the discharge condition' in §3.2 is about row 5 on U4's build, not the stub, so the claim misreads it. Entry 3 differs from passing entry 0 only in the certificate, so passed False does show that a missing certificate fails the entry. An exact message would be stronger but is not required.",
+      "fix": "Optional: assertEqual on the exact failure lists for entries 1 and 3."
+     }
+    },
+    {
+     "id": "TESTS-17",
+     "severity": "nit",
+     "file": "tools/research/tests/test_boundary.py",
+     "line": 65,
+     "claim": "The 'one hypothesis definition shared by two entries' fixture also shares the countermodel, fit, recovery and certificate. So it does not show §2's 'each entry gives its own countermodels and fits'.",
+     "evidence": "`other` repeats HYP's countermodel and fit exactly, and at_hypothesis gives both entries the same recovery and certificate.",
+     "fix": "Give the second entry its own form, countermodel, fit, recovery and certificate, declared in `own`, sharing only 'Becoming.Leaf.H'.",
+     "verdict": {
+      "id": "TESTS-17",
+      "real": false,
+      "severity": "nit",
+      "reason": "The test does what its name says: one hypothesis definition shared by two entries passes the rules. §2's 'each entry gives its own countermodels and fits' means each entry lists them. Since F.needs_H depends on F, entries with the same form legitimately share them, and no rule forbids it.",
+      "fix": "None needed."
+     }
+    },
+    {
+     "id": "TESTS-18",
+     "severity": "nit",
+     "file": "_process/research/2026-10-05-repository-reconciliation/architecture/mv/boundary/e2e_report.py",
+     "line": 55,
+     "claim": "Spec §8 lists the end-to-end run among the tests with stated outcomes, but the harness only prints and asserts nothing. TheRepositoryFile also returns silently when the data holds the two-record error (test_boundary.py:720).",
+     "evidence": "I reran it once: the output matches the committed e2e-report.json in every key. The eight rows verify; act_courses_unselected fails D2, D3 and D5; the counts are 8/24/32/16/7/31. A regression would show only to someone reading the printout.",
+     "fix": "Have e2e_report.py assert the outcomes §8 lists (exit nonzero otherwise). In TheRepositoryFile, assert the error's shape (`records` with two or more ids) instead of returning.",
+     "verdict": {
+      "id": "TESTS-18",
+      "real": false,
+      "severity": "nit",
+      "reason": "e2e_report.py is a study harness. It needs GW's scratch constants and a worktree at that run's commit, so it cannot be in the suite. Its outcomes are recorded in the committed e2e-report.json, which the reviewer's rerun matched. TheRepositoryFile returning on the two-record error is a silent pass in a state where the status already reports the error and current is False. Neither is wrong output or a false claim of the automated suite.",
+      "fix": "Optional: have e2e_report.py exit nonzero unless §8's stated outcomes hold, and in TheRepositoryFile assert the error's shape (records with two or more ids) instead of returning."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,461 @@
+[
+ {
+  "lens": "lean",
+  "verdict": "The design is right to compute what it can and to declare the rest, but several of its checks are much weaker than the claims beside them. Most of the problems come from one thing, which §0 itself notes: the dump records only names, and nothing of Init. Four checks pass things they should refuse. (1) D1 takes every theorem of a `Becoming.Grammar*` module as a grammar law. Because Init is invisible, its \"names nothing but grammar constants and the prelude\" also passes a statement about Nat or List alone. So `GrammarLaws.gap_of_lt`, `total_congr` and `kept_onward` qualify as grammar laws: 151 such theorems in the run, and 9 of the 17 forwarders §6 counts. U4's own code already narrows grammar laws to theorems with «» names. (2) D2 and D3 test how a proof is split into lemmas, not what it proves. A bridge that copies the row's model lemmas into its own proof and names any grammar law, even one it never uses, passes D1–D5 with an empty axiom report. I ran this on a row that has balance in its statement. (3) S1–S5 check the loose reading of standing 2, which U4's design rejects: F's statement is never checked. S2 as written reads a definition's type, not its body, so a real «则» hypothesis fails it. Meanwhile `def Cancel (a b : Nat) := a = b`, or a wrapper that names «则» around a count equation, passes. (4) D4 and P1 check only names. A certificate whose type is a conjunction of two `rfl`s passes D4; `(@Row).1` and `@Row` applied to an argument pass P1; a universe-polymorphic row gets certified at universe 1 only. The forwarder-strength claim (\"hypotheses included\", \"nothing else enters\") is also overstated. D2 and D3 look only one level deep, so model theorems can enter through definitions' values; the run has 438 lemmas that pass the spec's \"from definitions alone\" this way. The tested certificate idiom doesn't match D2 and D4. S3's rule against using F rules out the strongest Lean-checkable countermodel idiom, the one U4's check module uses. And C has no not-entailed theorem in the run. All of this can be fixed with small changes: a few added fields in THEOREM-CONNECTIVITY-DUMP.lean (shape of a certificate's type and value, universe parameters, which binders are used, the head of a proof, the Init theorems a proof names), D1 and S2 rebuilt on F5's grammar-term test, and \"verified derived\" limited to the forwarder strength, with the lemma path reported as a reading that names the theorems it uses. As written, the field would certify \"derived\", \"under a stated hypothesis\" and \"premise\" for rows that do not have those standings. I checked these findings by running Lean 4.29.1 on scratch files (the dump's own forwarder code copied in) and Python against the dump pickle; the scratch files are in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-bf/.",
+  "findings": [
+   {
+    "id": "BF-L1",
+    "severity": "high",
+    "section": "§3 preamble (grammar constant, grammar law), D1, §6",
+    "problem": "A \"grammar law\" is any theorem of a Becoming.Grammar* module or with a «» name. D1 only asks that its statement closure name nothing outside grammar constants and the prelude. Init is invisible, so a statement about Nat or List alone passes trivially. The GrammarLaws helpers are therefore grammar laws by the spec's definition, and a row that is a case of `GrammarLaws.gap_of_lt` (i < j → ∃ d, j = i + (d+1)) or `GrammarLaws.total_congr` (equal summands give equal totals) would be certified \"derived\", though U4 labels such rows counting or logic. U4's boundary_table.py defines a grammar law more narrowly: a theorem whose own name has «», with GrammarLaws' list and number helpers counted as definitions. Separately, Grammar* modules that import model modules (GrammarCourse, GrammarRegularity, GrammarScope) hold definitions built on models, such as `Becoming.moveRel`, whose closure reaches GenerativeCore, and `ClosedCapture.lockedAlike`. The closure stops at them, because it does not enter grammar constants; probe.py, by contrast, does enter them.",
+    "evidence": "Python on bd-constants.pickle (review-bf/leaky2.py and inline scripts): 151 theorems that are grammar constants have a statement closure naming no «» term (GrammarCases 57, GrammarPath 47, GrammarLaws 20, …), among them `Becoming.GrammarLaws.gap_of_lt` (t=[]), `mem_cons_split` (t=[]), `total_congr` (closure = {Becoming.total, total.match_1}, both prelude), and `kept_onward` (t=[]). Of the 17 forwarders §6 counts, 9 forward helpers like these (gap_of_lt, le_succ_cases, mem_cons_split, revisits_within, skipAt_le/lt/ne, split_at_head, total_congr), not «» laws. In probe.json, `SelectionTerm.covariation` and `Drift.falls_back` list `Becoming.total_congr` under 'grammar laws, statement grammar-only', and `apart_only_downstream` lists `le_succ_cases`. `Web.Whole.family_excess_ends`, one of the 44 grammar rows, reaches only `kept_onward`, so §6's 'all 44 reach a grammar theorem' depends on this definition. GrammarLaws.lean:285 (gap_of_lt). boundary_table.py `grammar_reach` docstring. review-bf/leaky.py: 17 definitions in GrammarCourse and GrammarRegularity whose full closure reaches model modules.",
+    "proposed_fix": "Define a grammar law as a theorem whose last name component has «», whose statement closure names at least one «» term other than «际» (F5's `is_grammar_term`), and whose closure, entered all the way down (as probe.py does), names nothing but grammar constants of the grammar's own modules and the prelude. Count the GrammarLaws helpers as definitions, as U4 does. Correct §6's '17 forwarders of a grammar law' to 8, and note that `family_excess_ends` reaches only `kept_onward`, whose statement is about Nat alone.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-L2",
+    "severity": "high",
+    "section": "§3.1 D2, D3, 'with lemmas from definitions alone'",
+    "problem": "D2 and D3 test which theorems a proof names, so they measure how the proof is split into lemmas, not whether the row is a case of the law. §0 itself says such tests 'cannot tell a translation lemma from a law of a model, since every theorem bottoms out in definitions and logic'. Copying the row's model lemmas into one bridge term, with Init arithmetic invisible, and naming any grammar law (`have _ := @law`, or a match on a helper law's result) passes D1–D5 for any core row. The row then gets 'derived, verified', which by §1's precedence overrides the rule's 'balance, represented' or 'amounts'. The linter safeguard in 'What this does not show' does not apply: no unused-variable warning fires for a constant, an `_`-named have, or a match. U4's six HAND rows that do not meet §3.1 as they stand (drawn_iff_not_returns and others) would be pushed toward exactly this kind of copying to pass D3.",
+    "evidence": "review-bf/lean/T3.lean (Lean 4.29.1): row `M.row` has `Flow.Balances` in its statement and is proved by the model law `Flow.level_le`. Bridge `M.bridge` copies that proof and adds `have _unused := @G.«所闭之自反»`. Dump fields: M.bridge v=[M.Flow, M.Flow.Balances, M.Flow.give, G.Clo, G.«所闭之自反», M.Flow.level, M.Flow.take], so the only run theorem it names is the law. `#print axioms M.bridge`: no axioms. `M.cert : @row = @bridge := rfl` checks, with v=[…, M.row]. D1 passes (law t=[G.Clo]), D2 passes (exactly the law, no lemmas), D3 is vacuous, D4 passes, D5 passes. No linter warning appeared. The spec's own example lemma `eq_zero_of_not_pos` (Flow.lean:109, proved with Init's `Nat.succ_pos` and `absurd`) passes D3 as 'from definitions alone' though it is a fact about Nat's order.",
+    "proposed_fix": "Count 'derived' as verified only at the forwarder strength: B, or a bridge tied to the row by certificate, has f ∈ laws and names no other run theorem. Report the lemma path as 'derived, declared and reviewed (names checked)', a reading, and show it apart in the counts. If the lemma path is kept as verified, add dump fields (1) for the head of B's proof under lambdas and Iff.trans/Iff.mp chains, requiring it to be a law or a lemma whose head is a law, and (2) for the Init theorems B and its lemmas name (Nat.*, List.*), shown on the page. Rename the strength 'from definitions and Lean's Init', or 'from definitions alone, up to Init'.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-L3",
+    "severity": "high",
+    "section": "§3.2 S1–S5; §2 `form`; §7 point 5",
+    "problem": "S1–S5 never check F's own statement, only that F's type names each hypothesis and that the hypotheses pass S2. So a form that keeps the model's structures (Flow, Web, Generations) and only rewrites its hypotheses as grammar inclusions is certified 'on the root under a stated hypothesis'. This is the 'loose reading' that U4's DESIGN-BOUNDARY §1.2 rejects. U4 recommends the strict reading, a root form whose statement names only grammar terms and the prelude, quantified over every relation and amount function, because 'only it gives MV a check that reads the Lean'. U4's table on that basis keeps rows 5, 13, 14 and 17 'at its model'. The spec neither adopts nor addresses that choice. S1 also passes when the hypothesis appears in F only in a disjunction or in the conclusion.",
+    "evidence": "U4 DESIGN-BOUNDARY.md lines 49–58 (strict versus loose; 'This design recommends the strict reading'). boundary_table.py HAND: rows 5/13/14/17 'at its model … the statement keeps the model's terms'. U4LeverTwo.lean:494 `all_end_on_root` concludes `G.size (t + 1) = 0` over `Flow X X`/`Web X X`, and :591 `no_new_dependence_of_given` is stated over Flow and Web: S1–S5 would accept both as forms. review-bf/lean/T5.lean: `theorem F3 (L : Flow) (t : Nat) : Gate L t ∨ True` has t=[H.Flow, H.Gate], so S1 is satisfied though Gate is not a hypothesis.",
+    "proposed_fix": "Add a check S0: F's statement closure, not entering the declared hypothesis definitions, names only grammar constants and the prelude, so F's binders range over types, relations («际» _) and maps to Nat. The hypotheses are checked separately, as in BF-L4. The row is then F's instance through R′ and its certificate. Require each hypothesis to occur in F's type as the domain of a leading binder (a dump field recording each leading forall's head constant would show this). If OU's owner wants the loose reading instead, say so, label the standing so that a reader can tell, and give U4's objection its answer.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-L4",
+    "severity": "high",
+    "section": "§3 preamble (statement closure), §3.2 S2, §7 'Rows 13 and 14'",
+    "problem": "S2 is wrong in both directions. (a) A declaration's statement closure is defined as starting from the constants 'its type names', which is also how probe.py and U4's statement_closure compute it. A hypothesis definition's content is in its value, so a genuine grammar hypothesis `def Gate (L : Flow) t : Prop := «则» (gives L t) (…)` has a closure starting from `Flow → Nat → Prop`, with no «» term, and fails S2. (b) The second disjunct ('names nothing outside grammar constants and the prelude') passes any predicate parameterized over Nat. So `def Cancel (a b : Nat) : Prop := a = b`, used in F as `Cancel (G.raisedAt t) (G.loweredAt t)`, passes, and §7's verdict that rows 13 and 14 fail S2 depends only on how the definition is written. (c) The first disjunct passes a model equation wrapped in «则» (`«则» (fun _ _ => True) (fun _ _ => G.raisedAt t = G.loweredAt t)`). §7 also misses that row 5's `given` and rows 14 and 17's `inactive` name no grammar term.",
+    "evidence": "review-bf/lean/T5.lean dump: H.Gate t=[H.Flow] v=[H.Flow, H.«则», H.gives]; H.Cancel t=[] v=[]; H.CancelW t=[H.Gen] v=[H.Gen, H.«则», …]. Pickle: the closures of `Becoming.Web.ComesToStand`, `Flow.DescendsAt`, `Flow.Acting`, `SelectionTerm.Flow.Descended` and `Generations.raisedAt/loweredAt` name no «» term (row 5's `given` at U4LeverTwo.lean:592; row 14's `inactive` compares sums of the trait, docstring at :566; row 17's `inactive` at :496).",
+    "proposed_fix": "Define the closure of a definition to start from its type and its value. Drop S2's second disjunct. Require each hypothesis to be a definition whose own closure is grammar-only (D1's test, with at least one «» term other than «际»), taking the model's relations and amounts as arguments. Have the page report the arguments F applies it to: these are the model's terms. State that a relation that ignores its relata can still carry a Prop, so the review reads the arguments. Correct §7 to list every kept hypothesis that names no grammar term (rows 5, 13, 14, 17), not only cancellation.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-L5",
+    "severity": "high",
+    "section": "§3.1 D4, §3.3 P1, §6 'Row 1', §7 point 6",
+    "problem": "The certificate guarantees ('Lean accepts it exactly when the two state the same thing'; 'the row's statement is then P, definitionally') hold only for the exact idioms. The checks compare name sets, so they cannot tell whether the idiom was used. D4 passes a certificate whose type names both the row and B without equating them. P1 passes `(@Row).1` for a row of type P ∧ Q, and `fun n => @Row … n` for a row more general than P. Row 1 (an iff) could therefore pass P1 with `fun … h => (@unrestricted_iff_livingSignificance …).mpr h`, against §6 and §7's claim that P1 keeps it from being a premise. Universes are also unchecked: `theorem c : @Row = @B := rfl` checks with Row at universe 1 when B is at Type, so a `Type u` row (LearningRuns' rows; U4's scratch is `variable {α X : Type}`) is certified at Type only.",
+    "evidence": "review-bf/lean/T1.lean (Lean 4.29.1). fake1 `@rowE = @rowE ∧ @bT = @bT := ⟨rfl, rfl⟩`: t=[Clo, rowE, bT], v=[Clo, rowE, bT], no axioms, so D4 passes. fake2 `@bT = @bT → @rowE = @rowE` passes the same way. certP1 `P := (@rowPQ).1` has v=[P, rowPQ]; certP2 `P := fun n => @rowGen Nat n` has v=[rowGen]; certP3 (Q, with an extra hypothesis) has v=[rowGen]: all pass P1. review-bf/lean/T2.lean: `#check` with pp.universes gives `certU : Eq.{0} @rowU.{1} @bT`; stating `.{w}` fails. LearningRuns.lean:76 `variable {S : Type u} … {K : Type w}` covers `goAlike_iff_lumped`.",
+    "proposed_fix": "Add dump fields for each theorem: (a) `eq`, the pair [A, B], when its type is exactly `@Eq _ (const A us) (const B vs)`; (b) `alias`, c, when its value is exactly `const c us` after mdata; (c) its level parameters, and the universe arguments of A, B and c. D4 then requires eq = {Row, B} with us and vs equal to the certificate's own level parameters in order. P1 requires the type to be exactly `const P` (or P applied to bvars, recorded) and alias = Row. Until then, call D4 and P1 'certificate declared, names checked'.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-L6",
+    "severity": "medium",
+    "section": "§3.1 D2/D4 versus boundary/certificate-idiom.lean",
+    "problem": "The idiom the spec checked is not the one D2 and D4 specify. In the file, `bridge` takes the law's statement as a hypothesis and the certificate is `@row = @bridge @law`. Under D2 that bridge names no run theorem, so it fails 'at least one' law. D4 describes `@Row = @B`. The linter safeguard cited in §3.1 holds only for the hypothesis idiom: the wrong-idiom file shows 'unused variable y', and no such warning exists when B names the law as a constant.",
+    "evidence": "review-bf/lean/T4.lean dumps the spec's idiom: I.bridge v=[I.Clo, I.step] (no theorem); I.cert t=[I.reached, I.row, I.bridge, I.law] v=[I.reached, I.row]. Running certificate-idiom-wrong.lean prints 'unused variable `y`' at 6:15.",
+    "proposed_fix": "Pick one idiom and fit D2 and D4 to it. The hypothesis idiom is the better choice: B : LawStatement → RowStatement, B's proof names no run theorem except declared lemmas, certificate `@Row = @B @law`. The kernel then checks that the row follows from the law's statement. Make 'B uses the law' checkable with a dump field listing which leading lambda binders of a theorem's value occur in its body (loose-bvar test), and require the law's binder to be used.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-L7",
+    "severity": "medium",
+    "section": "§3.1 'Strength: a forwarder of the law'",
+    "problem": "'B's f is one of laws, so the row's statement, hypotheses included, is the law's at the model's terms … and nothing else enters' overstates what the dump's `f` shows. forwardTarget only requires explicit arguments to be bound variables. (a) The row may carry extra binders the law never receives, so its statement is weaker and 'hypotheses included' fails. (b) Implicit and instance-implicit arguments may be any term without literals or closed values, including model theorems and definitions that carry proofs, and f is still set. (c) The `projection` kind gives one direction of an iff law. D2 also never inspects a forwarder W's own v, and the strength label does not require `lemmas` to be empty.",
+    "evidence": "review-bf/lean/T1.lean dump: fwdExtra (an unused extra hypothesis) has f=T.law/pure. fwdImp (the law's implicit hypothesis discharged by theorem T.modelFact) has f=T.lawImp/pure with v=[T.lawImp, T.step, T.modelFact]. fwdInst (an instance from run definition T.myInst) has f=T.lawInst/pure. fwdMp has f=T.lawIff/projection. No current grammar law has implicit hypothesis or instance binders (grep of the theorem lines in Grammar*.lean), so (b) is latent for laws, but D2's 'pure forwarders of them' covers any model forwarder.",
+    "proposed_fix": "Word the strength as 'an instance of the law at the model's terms (possibly with additional hypotheses, or one direction of an iff)'. Require for it that B's v names no run theorem other than the law, and that every leading binder of B is used (the dump field from BF-L6), or report the unused binders. Apply D2 to each forwarder W named, by checking W's v the same way.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-L8",
+    "severity": "medium",
+    "section": "§3 'from definitions alone', D2, D3",
+    "problem": "'Names' looks one level deep. A bridge or lemma can depend on model theorems through a definition whose value contains them: a structure built with a proof field, a Decidable instance used by `decide`, or an abstracted `_proof_N`. D2's 'nothing is left out of the entry' and D3's 'from definitions alone' then hold literally but not in substance.",
+    "evidence": "review-bf/hidden.py on the pickle: 311 run definitions (auxiliaries aside) name a theorem in their value (e.g. `Becoming.Law.run`, `Run.onward`, `decideMem`, `World.attrition_decided`). 7,269 theorems are 'level 0' (from definitions alone in the spec's sense), and 438 of those reach model theorems through definitions, e.g. `TideFlip.arises` → `TideFlip.swap_swap`, and `Run.toWithMove_ofWithMove` → `Run.ofWithMove._proof_1`, `Run.step`. 14 central rows name such definitions.",
+    "proposed_fix": "For D2 and D3, take the theorems B and its lemmas name through the closure over non-theorem constants (definitions, instances, `_proof_N`), stopping at theorems and grammar constants. Require them to be laws, prelude theorems or lemmas, or at least report them on the row's page and in the data.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-L9",
+    "severity": "medium",
+    "section": "§3.1 D2/D3 versus §3.5",
+    "problem": "D2 and D3 allow prelude theorems freely, but the prelude contains the counting laws: `balance_over_stretch_on`, which §3.5 treats as a balance anchor and whose sole use makes a row 'amounts', and also `balance_over_stretch`, `le_over_stretch`, `ge_over_stretch`, and Naturals.* arithmetic. A derived bridge can do its counting through them, and the verified edge entry then overrides the rule's 'amounts' or 'balance, represented'. The standing 'counting', which U4 places below the grammar, is not kept apart from 'derived'.",
+    "evidence": "Pickle: Becoming.Prelude has 123 theorems, including `Becoming.balance_over_stretch_on`, `balance_over_stretch`, `le_over_stretch`, `Naturals.*`. Prelude.lean header: 'the one stretch balance, of which a flow's levels, an amount's rises and falls … are cases'. 12 run theorems name `balance_over_stretch_on` directly. Spec §3.5 names it 'the prelude's counting law'.",
+    "proposed_fix": "Remove the counting laws from D2's and D3's free prelude theorems. Leave 'derived' unverified when B's proof closure reaches a balance anchor other than through a declared law, or show the conflict with the rule's label as an error. List every prelude theorem B uses on the page.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-L10",
+    "severity": "medium",
+    "section": "§3.2 S3 and 'What this does not show'",
+    "problem": "S3 requires the countermodel's proof not to reach F. That rules out the one Lean-checked way to tie a countermodel to F's own hypotheses: U4's check module applies the row or form at the witness to the theorems for the other hypotheses and contradicts the witness's failing conclusion. Done that way, the kernel checks that the other hypotheses are F's exactly, which is the gap the spec leaves to review. U4 writes most of those checks as `example`s, which leave nothing in the environment, so MV could not see them anyway.",
+    "evidence": "U4LeverTwoCheck.lean header: 'Each `example` derives the named hypothesis's negation by applying the package row (or its on-root form) to the witness's other-hypothesis theorems …'; only `moved_needed` and `inactive_needed` are named theorems (lines 115, 173). `Ungated.gate_needed` (U4LeverTwo.lean:539) states the conjunction but names `Flow.Acting`, the model's form, not a named root hypothesis.",
+    "proposed_fix": "For each hypothesis, require a named theorem `H_needed : ¬ H w := fun h => fails (F o₁ … h …)` whose v names F, the theorems for the other hypotheses and a failure theorem `¬ C w`, together with each `oᵢ` as a named theorem. Allow it to reach F, and keep the 'does not reach F' requirement for the failure theorem only. This closes the countermodel-shape gap in Lean. Tell U4 that `example`s are invisible to the dump.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-L11",
+    "severity": "medium",
+    "section": "§2 `premises`, §3.3 Q1",
+    "problem": "The spec lists C as a premise with a `not_entailed` theorem, but the run has no such theorem for C. The only one is `ReadsOnlyDynamics.not_entails`, which concerns `Unrestricted`. C's Lean form (`Becoming.Comparison`, Extension) is not named. Q1 would mark C unverified, and §3.6 does not say whether an unverified premise blocks the landing.",
+    "evidence": "Pickle: the only theorem whose name contains 'not_entail' is `Becoming.ReadsOnlyDynamics.not_entails` (Significance.lean:296, t=[ReadsOnlyDynamics, Unrestricted]). `Becoming.Comparison` is a def in Becoming.Extension. U4 DESIGN-BOUNDARY §1.3 repeats 'The continuation condition and C stand here (`ReadsOnlyDynamics.not_entails`)'.",
+    "proposed_fix": "Name C's definition. State that its non-entailment is not yet proved, so the premise is reported 'unverified: no theorem' until it is. Say whether the landing requires premises verified, and correct the inherited sentence in WHAT-REMAINS and DESIGN-BOUNDARY through their owners.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-L12",
+    "severity": "low",
+    "section": "§3.4 readings; §3 preamble 'Every check below holds up to it'",
+    "problem": "The page shows 'the theorems of the run the row's own proof names: none' for logic and counting readings, and 'from definitions alone' for lemmas. Init's arithmetic is invisible, so a proof that counts with Nat.* or List.* or `omega` shows the same 'none' as pure logic. The data then supports neither label and can mislead. The disclaimer is stated once, as a general limit, but it is not carried into the labels.",
+    "evidence": "`Becoming.eq_zero_of_not_pos` (Flow.lean:109–111: `absurd (Nat.succ_pos n) not`) has v=[eq_zero_of_not_pos.match_1_1] in the pickle, so it counts as 'from definitions alone'. probe.py's 'Init constants in level-0 lemmas' is always empty because the dump filters Init out (probe.json summary: []).",
+    "proposed_fix": "Have the dump record the Init and Std theorems each value names in a separate field. Show them beside readings and lemmas, and treat Nat.* and List.* lemmas as counting. Until then, label the data 'run theorems named (Init not shown)'.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-L13",
+    "severity": "low",
+    "section": "§3 'from definitions alone', D3",
+    "problem": "Lean adds theorems of its own to the run: equation lemmas (`.eq_N`, `.eq_def`) from `unfold`, `simp [f]` and `rw [f]`; injectivity lemmas (`.inj`, `.injEq`); `sizeOf_spec`; and abstracted `_proof_N`. D3 would reject a translation lemma that uses them, though they are definitional or auxiliary. An implementer will meet this.",
+    "evidence": "Pickle: 238 `.injEq`, 238 `.inj`, 33 `.eq_N`, 4 `.eq_def` theorems. 19 run theorems name them, e.g. `Slowing.unmet_before_return` → `Slowing.level.eq_1`, `RouteFormation.search_stock` → `search.eq_def`, `OneStep.Chain.distinct_family` → `Site.node.inj`. T5 dump shows `H.Flow.mk.inj`/`injEq` are generated as theorems (k=thm).",
+    "proposed_fix": "Treat auto-generated equation, unfolding, injectivity and sizeOf lemmas as definitions in D2 and D3, and see through `_proof_N` to the theorems it names, as in BF-L8.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-L14",
+    "severity": "low",
+    "section": "§3.1 D4 ('the same thing'), the forwarder field",
+    "problem": "Definitional equality includes evaluation, so the certificate can tie a row to a statement that names none of its terms. The certificate also fails when the binder order differs, for example from section `variable`s. Separately, the forwarder detection compares binders syntactically, so a row whose type is a definition, or one that applies a law past the law's syntactic foralls (a law concluding «则», applied pointwise), is never a forwarder. Those rows are wrongly sent down the weaker lemma path. All of this is minor, but U4 will meet it.",
+    "evidence": "T1.lean: `certC : @rowC = @bC := rfl` checks with rowC : isEven 10 = true and bC : true = true (t of certC = [isEven, rowC, bC]). certI and certO (instance-implicit versus explicit, optParam) check. forwardTarget's `k > (binderInfos type #[]).size` and `args.size > infos.size` tests (THEOREM-CONNECTIVITY-DUMP.lean:72, :92).",
+    "proposed_fix": "Write 'up to definitional equality, including evaluation and universe instantiation', and show B's statement constants beside the row's. Tell U4 to restate the row's binders in the same order. Note the forwarder field's false negatives, or extend it to unfold the type with whnfR before counting binders.",
+    "verified_by_running": true
+   }
+  ]
+ },
+ {
+  "lens": "edge",
+  "verdict": "The spec gets several things right. It follows F5's principle of separating what is declared from what is computed. It reproduces U4's rule faithfully (boundary_table.py standing(): same order, same anchors, same split between statement and proof). Using \"unplaced\" as the fallback costs nothing: with U4's current HAND, all 20 rows the rule's fallback would place have readings, so none are left unplaced. The rfl certificate idiom works, including when binder kinds differ (I checked this on Lean 4.29.1). The two rows the probe passes as derived (Flow.beyond_gives_nothing: «所闭之界» at FedFrom, plus Nat's ¬0<n→n=0; Learning.goAlike_iff_lumped: «像定后当且仅当同行» on the law's one move, through two translation lemmas) are genuine cases of their laws. The verification, however, certifies less than WHAT-REMAINS's wording on all three standings, and in places it would certify things that are false.\n\n(1) Standing 2's checks S1–S5 implement the \"loose reading\" that U4's own current design rejects. They never require the form or the countermodels to be on the root. S2 passes a hypothesis that merely names one «» term, or that names nothing outside Init. A vacuous grammar-worded hypothesis, with a \"countermodel\" that proves it, passes every name-level check; a standalone Lean model of this compiles.\n\n(2) \"Grammar law\" is defined by name or module. That definition admits GrammarLaws' list and number helpers (which GrammarLaws.lean:259 says are \"not statements of the grammar\"), Lean's generated auxiliaries, and witnesses about one constructed net. The probe itself classes GrammarLaws.total_congr as a grammar-only law reached by two counting rows. §6's \"seventeen forwarders\" is really 8.\n\n(3) The premise machinery cannot be filled as written. C has no Lean definition and no not-entailed theorem: the formal C with \"better\" read as widening is a theorem (Web.paths_comparison_widens), and not_entails is about Unrestricted only. Unrestricted is not \"stated on the root\". P1 can never be met by a central declaration: all 118 are theorems, and the idiom does not even typecheck for a premise that takes an argument.\n\nIt also diverges from U4's current DESIGN-BOUNDARY without saying so: eight derived readings become two, and the strict reading is never mentioned. It undercounts the S2 failures among lever 2's rows (rows 5 and 17 fail too). And it over-claims in §0, §6 and §7: \"a case of\" is shown in Lean's terms only for the forwarder strength, which no row has; and the stated remedies for balance and amounts are already closed avenues. The spec needs a revision before implementation, on S2–S3, the grammar-law definition, premises and P1, before the field lands.",
+  "findings": [
+   {
+    "id": "E1",
+    "severity": "high",
+    "section": "§3.2 (S1–S5), §7 point 5",
+    "problem": "Standing 2 asks that the hypothesis be written in the grammar's terms and that a countermodel on the root show it cannot be dropped. S1–S5 check neither half.\n- Nothing requires the form F's statement to be on the root. F may keep the row's model terms (Flow, Web, Generations) and only add named hypotheses.\n- Nothing requires the countermodels to be on the root. S3 checks only that the countermodel's type names the hypothesis, not that it refutes the form without it.\n- S2 accepts any definition whose closure names one «» term other than «际». Its second disjunct also accepts, vacuously, anything stated in Init alone.\n\nThis is exactly the loose reading that U4's current design rejects: under it \"every model whose relations can be named would be on the root\". The spec never mentions the strict and loose readings. Its own suggested remedy for rows 13 and 14 (restate cancellation as «对») would get Price's-partition forms over SelectionLevels and Generations certified at standing 2.",
+    "evidence": "- Spec lines 116–128: S1–S5, and \"What this does not show\".\n- DESIGN-BOUNDARY.md lines 53–56 (U4's worktree): the strict and loose readings, with \"This design recommends the strict reading\".\n- WHAT-REMAINS lines 226 and 266: \"a countermodel on the root\".\n- Ran S2 on the pickle (/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-bf/edge/s2.py):\n  - 753 of 9598 non-grammar model definitions pass, reading the value;\n  - Flow.WithinFeeding passes;\n  - a cancellation stated over Nat functions passes vacuously.\n- Built a standalone Lean model (/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-bf/edge/lean/s_gaming.lean). It has:\n  - a model row;\n  - a vacuous hypothesis H R := Incl R R (stands in for «则» R R);\n  - F := ∀ R, H R → row-statement, proved without the row;\n  - a \"countermodel\" cm : ∀ R, H R that proves H;\n  - a recovery through F, with the certificate @row = @recovery := rfl.\n  It compiles, and cert depends on no axioms. Every name-level condition of S1–S5 holds.",
+    "proposed_fix": "Add S0, the strict reading.\n- F's statement closure, apart from the named hypotheses, names only «» constants other than vocabulary-only ones, plus the prelude.\n- It names at least one such term.\n- Each hypothesis's closure obeys the same rule, non-vacuously.\n- Each countermodel's closure obeys the same rule, so the countermodel is on the root.\n\nDecide in the spec whether amount functions X → Nat count as \"the grammar's terms\". This must agree with §7's \"amounts are a distance\".\n\nMake S3 checkable from the dump:\n- name the rest of the form as a definition Rest, so that F : ∀ x, H x → Rest x;\n- require the countermodel's type to be ¬ ∀ x, Rest x, naming Rest and not H. It then states exactly that F without H fails.\n\nRewrite §7 point 5 accordingly and cite U4 §1.2.",
+    "verified_by_running": true
+   },
+   {
+    "id": "E2",
+    "severity": "high",
+    "section": "§3 (definitions), §3.1 D1–D3, §6",
+    "problem": "§3 defines a grammar constant as a name containing «» or any constant of a Becoming.Grammar* module, and a grammar law as any such theorem. That admits, as grammar laws:\n- GrammarLaws' list and number helpers;\n- Lean-generated auxiliaries (`«及».brecOn`, `.sizeOf_spec`);\n- witnesses about one constructed system (`«薪尽火传»`, `«两火以薪定理»`, which names TwoFlames and Flame; `«昼夜往来不穷»`);\n- 47 theorems in GrammarCourse, GrammarRegularity, GrammarScope and GrammarCases whose types name model modules.\n\nD1's grammar-only test does not exclude them. It passes helpers whose statements name nothing of the run, and it passes witnesses. So D1 does not capture \"for every relation and class\".\n\nD3 lets a lemma use any of these theorems and still count as \"from definitions alone\".\n\nThe definition also diverges from:\n- the measure's grammar test (is_grammar = '«' in name), on which the rule's \"dependence: grammar\" rests;\n- master_laws.py's docstring, which says the number and list lemmas of GrammarLaws do not count;\n- U4's corrected walk.",
+    "evidence": "- GrammarLaws.lean:259: \"Lemmas on numbers and lists, not statements of the grammar\".\n- measure_grammar.py:138–139: is_grammar is '«' in name.\n- master_laws.py, docstring lines 21–24: the GrammarLaws number and list lemmas do not count.\n- boundary_table.py:146–157 (U4): a law is a theorem whose own name is a «» name.\n- Pickle runs:\n  - 337 theorems are grammar laws by the spec but not by U4's test;\n  - GrammarLaws.length_replicate, le_succ_cases, strictJoin_trans and kept_onward have an empty t, so D1 passes vacuously;\n  - «薪尽火传», «两火以薪定理» and «昼夜往来不穷» pass D1;\n  - of the 17 forwarders in §6, 9 forward helpers (gap_of_lt, le_succ_cases, mem_cons_split, revisits_within, skipAt_le/lt/ne, split_at_head, total_congr); only 8 forward «» laws.\n- probe.json's \"grammar laws, statement grammar-only\" lists GrammarLaws.total_congr for Drift.falls_back and SelectionTerm.covariation. Both are laws of counting, which LEVER-2-AUDIT §2 says \"follow from no grammar law\". It lists GrammarLaws.le_succ_cases for apart_only_downstream.",
+    "proposed_fix": "Define a grammar law by a curated list: the laws of GrammarLaws and Grammar as registered in the master-law records, or LEAN-INDEX's law entries. Failing that, a grammar law is a theorem that meets all of these:\n- its own last name component is a «» name;\n- it is not a generated auxiliary;\n- its type names «际» (it quantifies over a relation);\n- its type names at least one other «» term.\n\nDrop the Grammar*-module clause, so the definition matches the measure's test.\n\nRestate §6:\n- 8 forwarders, not 17;\n- all 44 grammar rows still reach a «»-named law under the measure's walk (checked).",
+    "verified_by_running": true
+   },
+   {
+    "id": "E3",
+    "severity": "high",
+    "section": "§2 premises, §3.3 Q1, §7 point 6",
+    "problem": "The `premises` list cannot be filled as specified.\n\nC:\n- No Lean definition captures C's normative content (calling widening better), and no not-entailed theorem exists for it.\n- `Comparison F living Better` has Better free. With Better read as widening, C holds as a theorem with no axiom (`Web.paths_comparison_widens`). The formal C is therefore entailed by the dynamics; what is not entailed is not a Lean statement.\n- `ReadsOnlyDynamics.not_entails` concerns `Unrestricted` only. Q1 will report C unverified, or someone will pair it with a theorem that does not name it.\n\nThe continuation condition:\n- Standing 3 requires the premise to be \"stated on the root\". Q1 never checks this.\n- `Unrestricted` (free sig) is not on the root: 07 §4.5 says \"the free significance of §1 is not lifted onto the root\", and it fails S2 because its closure names Metaethics.Neutral.\n- Its root form «续无外» R E center is fixed once the net, class and centers are given, and has no not-entailed theorem.\n\n§7's claim that each premise is listed \"with its not-entailed theorem\" is therefore false for C. For the condition, it covers only one of the two halves.",
+    "evidence": "- Significance.lean:181 (`def Unrestricted`) and :296 (`not_entails`, whose type names Unrestricted only).\n- Extension.lean:57 (`def Comparison … Better`) and :151 (`Web.paths_comparison_widens`).\n- 07-SIGNIFICANCE.md:312: \"C's normative content having moved into calling widening better\".\n- 07-SIGNIFICANCE.md:333 (§4.5): \"is not lifted onto the root\".\n- GrammarScope.lean:86: `def «续无外»`.\n- Grep of the package: the only non-entailment theorem is ReadsOnlyDynamics.not_entails.\n- S2 on the pickle: Becoming.Unrestricted gives (False, no «» term, closure names Becoming.Neutral in Becoming.Metaethics).\n- AGENTS.md: the condition fixes scope, C fixes order, and a reason for C is open apart.",
+    "proposed_fix": "Let `not_entailed` be absent with a stated reason. For C: \"none in Lean; C's content is the order, and the Lean holds C with better read as widening\".\n\nReport each premise in two parts:\n- non-entailment: verified for Unrestricted only;\n- on the root: not met for the free-sig form; «续无外» is the root form at the own-closure reading, with no non-entailment theorem.\n\nRequire each premise's basis to state its role (scope or order), as AGENTS.md asks.\n\nIf a C analogue is wanted (no dynamics-reading law fixes Better), name it as new Lean to claim on U4's board row. Do not let `boundary_unverified` block landing on C.\n\nCorrect §2 and §7 point 6. Note to OU's owner that WHAT-REMAINS line 227 (\"The continuation condition and C stand here already (`ReadsOnlyDynamics.not_entails`)\") overstates the case for C.",
+    "verified_by_running": true
+   },
+   {
+    "id": "E4",
+    "severity": "medium",
+    "section": "§3.3 P1, §1 table, §6 last bullet, §7 point 6",
+    "problem": "No central declaration can ever have the standing \"premise\".\n- All 118 central declarations are theorems.\n- A theorem whose statement is a premise would prove that premise.\n- The idiom `theorem c : P := @Row` does not typecheck when P takes an argument, as `Unrestricted` takes sig.\n- The alternative, ∀ sig, Unrestricted sig, is refutable wherever there is a standpoint and a formation (take sig = fun _ _ _ => False).\n\nThe label is therefore empty by construction. §6's reason for row 1 (\"its statement is the condition's reading at a model\") is beside the point.",
+    "evidence": "- Pickle: the kinds of the 118 central declarations are all 'thm'.\n- Lean 4.29.1 on /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-bf/edge/lean/idiom.lean: `theorem certP1 : Unr := @rowU` fails with \"type expected, got (Unr : (Nat → Prop) → Prop)\".\n- Significance.lean:181 and 296.",
+    "proposed_fix": "Say in §1 and §7 that standing 3 holds only of the `premises` list, which are definitions, never of a central theorem.\n\nThen do one of the following:\n- remove \"premise\" from `standing` values; or\n- keep it for central definitions only, should COVERAGE ever list any.\n\nAnswer U4's point 6 on that ground.",
+    "verified_by_running": true
+   },
+   {
+    "id": "E5",
+    "severity": "medium",
+    "section": "§7 point 6, §3.2 S2/S5",
+    "problem": "The answer to U4's point 6 is unreachable under the spec's own checks. A row is said to stand under a stated hypothesis when each kept premise has a countermodel. But such rows cannot get there:\n- A form keeping `Unrestricted sig` as a hypothesis fails S2 (no «» term; the closure names Metaethics.Neutral).\n- A form using the root reading (sig fixed to selfAscribed (ownClosure rel) center, or «续无外») is a specialization. It cannot recover the free-sig row (S5). F5 and U3 decided that specializations are not counted as the row.\n\nSo rows under the condition with sig free cannot reach standing 2 by construction. AGENTS.md adds that such theorems are instantiations of a universal statement, and that counting them measures no further dependence.",
+    "evidence": "- S2 run on Becoming.Unrestricted: fails.\n- WHAT-REMAINS lines 296–297: no statements_at_model item for rows 1, 8 and 9, because the structural reading is a specialization.\n- F5-MODEL-STATEMENTS.md §4: an instance or specialization states less than the row.\n- AGENTS.md, \"Those theorems are instantiations…\".",
+    "proposed_fix": "Answer point 6 this way: a row whose only kept hypotheses are the premises stays at \"free significance\" until 07 §1's open root reading exists. not_entails is recorded once, with the premise, and is never a countermodel. Add that S2 is not waived for premises, or say explicitly that it is, and why.",
+    "verified_by_running": true
+   },
+   {
+    "id": "E6",
+    "severity": "medium",
+    "section": "§3.1 D2–D3, strengths, §0 bullet 3, §7 point 1",
+    "problem": "\"Derived with lemmas from definitions alone\" is both too weak and too strong.\n\nToo weak:\n- D2's allowed \"prelude theorems\" include `balance_over_stretch_on`. That is the prelude's counting law, a balance anchor that §3.5 reads as a mark of \"amounts\". A bridge using it could be certified derived.\n- A lemma may carry model content through Init arithmetic or induction (the spec admits this).\n- A law that is named but decorative passes (the spec admits this too).\n\nToo strong:\n- The dump's forwarder field misses wrappers that only reorder arguments. `WithinClosure.mono` is `«所闭之单调» larger f g within`, and I found 11 such wrappers.\n- So `Flow.withinSystem_of_withinInfluence`, a case of «所闭之单调» in U4's reading, fails D2: its proof names mono and shares_of_affectedBy, both level 0, and no law directly.\n- D3 depends on lemma depth in the run, so inlining a proof changes the verdict.\n\nOver-claim: §0 says \"a case of\" must be shown \"in Lean's own terms: a certificate theorem or the dump's forwarder field\". Only the forwarder strength shows that, and §6 says no row has it.",
+    "evidence": "- Pickle: balance_over_stretch_on is a 'thm' in Becoming.Prelude.\n- Frame.lean:117–119 (mono).\n- Pickle: WithinClosure.mono has no 'f'; its v is [WithinClosure, «所闭之单调»].\n- probe.json for Flow.withinSystem_of_withinInfluence: grammar [], L0 [shares_of_affectedBy, WithinClosure.mono].\n- My scan found 11 wrappers whose value is one «» law plus constants of their own type (WithinClosure.mono, WithinClosure.symm, goAlikeUnder_iff_alike, Flow.balances_iff_units, …).\n- Spec lines 23, 106–111 and 206.",
+    "proposed_fix": "- Exclude the balance anchors from D2's allowed prelude theorems, or report them under the strength.\n- Accept a law reached through a wrapper: a theorem whose value names that law and no other theorem of the run. Alternatively, certify such wrappers as forwarders.\n- Add a strength \"by unfolding\": each lemma is accompanied by a Prop-equality certificate `theorem c : (ModelProp) = («GrammarProp» …) := rfl`. Lean then shows the translation itself, which matches U4 §1.1's \"unfolding only\".\n- Reword §0 bullet 3 and §7 point 1: the lemma strength is a dependency check plus a reviewed reading, not a Lean-shown case.",
+    "verified_by_running": true
+   },
+   {
+    "id": "E7",
+    "severity": "medium",
+    "section": "§1 (\"MV adopts them unchanged, apart from the fallback\"), §6, §7 point 1",
+    "problem": "The spec does not engage U4's current design. DESIGN-BOUNDARY §3 and §4 declare eight connected rows derived by reading, saying they \"need no new Lean\", and declare Flow.mutuallyDependent_iff_reach \"connected\" by reading. The spec allows neither \"derived\" nor \"connected\" as a reading. Only 2 of the 8 pass §3.1.\n\nThe others fail for different reasons, none of which the spec names row by row:\n- withinSystem_of_withinInfluence: the undetected wrapper (E6);\n- Law.drawn_iff_not_returns and lossless_iff_returns: lemmas at level 1 or above;\n- Tolerance.answers_restores_iff and Withholding.withholding_spreads: their own proofs name no grammar law at all;\n- WithinMoves.after_course: a lemma at level 1 or above.\n\nSo \"unchanged apart from the fallback\" understates the change: U4's on-edge count drops from 8 to 2 unless bridges are written.",
+    "evidence": "- DESIGN-BOUNDARY.md §0 (8 derived) and §3 (\"Eight are cases, and need no new Lean\").\n- boundary_table.py:52–66 (HAND, 'derived' and 'connected').\n- probe.json for those rows, e.g.:\n  - Tolerance.answers_restores_iff: grammar [], above [worst_start, answers_closed];\n  - Withholding.withholding_spreads: above [waitsAll_closed];\n  - WithinMoves.after_course: L1 [trace_steps], above [withinMoves_iff_withinSteps].",
+    "proposed_fix": "Add a table to §6 or §7 giving, for each of U4's eight cases, the D-check it fails and the bridge or lemma certificate that would pass it. Say plainly that \"derived\" and \"connected\" cannot be readings, and that U4's design §4 (\"need no Lean\") is superseded for six rows. Correct the \"unchanged\" sentence.",
+    "verified_by_running": true
+   },
+   {
+    "id": "E8",
+    "severity": "medium",
+    "section": "§7 point 5 (rows 13 and 14)",
+    "problem": "The S2 verdict is incomplete and sits badly with S2's own wording.\n\nIncomplete. As U4 writes them, rows 5 and 17 fail S2 as well:\n- row 5: all three hypotheses of no_new_dependence_of_given (`given`, `inherits`, `none`) are in Web and Flow terms only;\n- row 17: `inactive` fails, and all_end_on_root takes the package's L.Acting W and Descended. Only size_zero_of_within's two inclusions pass;\n- row 14: `inactive` (a comparison of sums) fails besides cancellation.\n\nInconsistent. S2's second disjunct passes cancellation stated over amount functions r t = l t, which is U4's strict-reading plan (\"Price's sums become the prelude's\"). §7's \"amounts are a distance\" is therefore not what S2 implements.\n\nImprecise. \"The countermodel would change\" under «对» seems not to hold: Raised (one parent at 0, one offspring at 1) also fails the pairing under the trait's class, so the same world serves. This last point is reasoned from the definitions and was not run.",
+    "evidence": "- S2 on the pickle (/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-bf/edge/s2b.py):\n  - row 5's given, inherits and none: False;\n  - row 17's inactive, L.Acting W and Descended: False;\n  - row 17's acting as an inclusion: True;\n  - cancellation over Nat functions: True (vacuous);\n  - G.raisedAt t = G.loweredAt t: False.\n- U4LeverTwo.lean:361–410 (Raised), 484–499 and 569–600.\n- LEVER-2-AUDIT.md §3: the three strengths, with Unexact having (3) without (2).\n- DESIGN-BOUNDARY.md §4: \"Rows 13 and 14 carry Price's partition… a strict form is in reach\".",
+    "proposed_fix": "Give S2's verdict for each kept hypothesis of rows 5, 13, 14 and 17. Settle whether hypotheses on amounts in Nat pass, and make S2 say so. Replace \"the countermodel would change\" with the actual cost: a «对» form no longer covers Unexact-type generations, while Raised still witnesses.",
+    "verified_by_running": true
+   },
+   {
+    "id": "E9",
+    "severity": "medium",
+    "section": "§2 (check rules), §4",
+    "problem": "Every bridge, form, hypothesis, countermodel, certificate and recovery must be among the declarations of the boundary record's own laws. master_laws.py counts every law of every record in `counts`, by dependence. Landing the record would therefore change the master-law counts (08 §7's column), and certificates naming rows would add to their dependences. §4 says the counts are unchanged.",
+    "evidence": "- master_laws.py:281–300: every law of every loaded record goes to counts, or to counts_at_model only when it carries statements_at_model.\n- Spec lines 77 and 176.",
+    "proposed_fix": "Count the boundary record's laws apart, as F5's laws are counted in counts_at_model, with a `counts_boundary` key. Alternatively, register them as support declarations. Say in §4 what the record's landing changes.",
+    "verified_by_running": false
+   },
+   {
+    "id": "E10",
+    "severity": "medium",
+    "section": "§1 groups, §3.4 readings",
+    "problem": "\"Below the grammar\" (logic, counting) is a fourth group, outside WHAT-REMAINS's three standings and their distances. A row enters it by unverified reading.\n\nIn U4's table, readings move 16 rows out of the distances, 12 of which carry F5-verified items (9 at a represented model, 3 on their own carrier). The boundary report would then show \"at a represented model: 7\" beside F5's 16.\n\nLogic and counting are partly checkable, by lever 2's constant check and by the run theorems a proof names, but they are only reported. \"A law of a model\" in boundary_readings_to_reread is undefined. Six of the 12 logic rows name model theorems at level 0, and two name lemmas at level 1 or above.",
+    "evidence": "- WHAT-REMAINS line 223: \"three standings, and only three\"; line 229: \"Any other standing is a distance\".\n- boundary-table.json:\n  - readings over rules: 9 rows (logic over \"at a represented model\") and 3 rows (logic over \"own carrier\").\n- probe.json, own proofs of the logic rows:\n  - Dependence.Overdetermined.only_together: L1 [of_breaks];\n  - ExchangeLaw.response_not_fixed_by_coupling: above [ofClass_take_iff, ofClass_through].",
+    "proposed_fix": "Ask OU's owner to decide whether \"below the grammar\" counts as a distance in the groups. Verify logic and counting mechanically:\n- the proof names no theorem of the run but prelude theorems and lemmas from definitions alone, and no grammar law;\n- for counting, the statement closure names no constant of Flow, Web, World, Dependence, WebAt or Exchange, as lever 2's constant check does.\n\nDefine \"a law of a model\". Explain in the report how the boundary counts relate to F5's.",
+    "verified_by_running": true
+   },
+   {
+    "id": "E11",
+    "severity": "medium",
+    "section": "§0 (\"takes over … the premise value\")",
+    "problem": "F5 §4's \"third value, a named premise on the grammar\" is a different thing from this field's premises:\n- F5's value concerns COVERAGE.json K3's model premises (balance, dissipation, activity needing support, only active relata give, …) with grammar forms such as supported_iff and dependent_iff, to sit beside K3.\n- This spec's `premises` are the two premises of the ethics.\n\nOn top of that, \"premise\" is already used for COVERAGE's category \"premise of the account\" (lever 2's rows 1–3, 7, 8, 9, 14 and 17). The field's data would carry three meanings of one word.",
+    "evidence": "- F5-MODEL-STATEMENTS.md §4, \"F5's third value…\".\n- COVERAGE.json `premises.items`: balance, dissipation, embodiment, activity needing support, …\n- LEVER-2-AUDIT.md §1: the category column.",
+    "proposed_fix": "Say that F5's premise value becomes the named hypotheses of standing 2 (their grammar forms) or stays open, rather than this field's `premises`. Rename the list, for example `premises_of_the_ethics`, and keep standing 3's wording to those.",
+    "verified_by_running": false
+   },
+   {
+    "id": "E12",
+    "severity": "medium",
+    "section": "§3 statement closure, S2",
+    "problem": "The statement closure starts from the constants a declaration's type names. For a hypothesis definition, the content is in its value. Read literally, as U4's statement_closure() does (it starts from C[n]['t']), S2 checks only the type, for example Generations → Nat → Prop. That passes many definitions vacuously and misses the body.",
+    "evidence": "- boundary_table.py:123–132: the closure starts at C[n]['t'].\n- Pickle: reading the type only, 1813 of 9598 non-grammar definitions pass S2; reading the value, 753.\n- Flow.WithinFeeding fails on the type and passes on the value.",
+    "proposed_fix": "Define a hypothesis's closure from the definition itself, its type and its value, and say so in §3.",
+    "verified_by_running": true
+   },
+   {
+    "id": "E13",
+    "severity": "low",
+    "section": "§7 point 4",
+    "problem": "The remedies given to keep the labels apart are stale. \"Balance: lever 1\" and \"amounts: units\" name avenues that WHAT-REMAINS and lever 2 report as closed: the round trip failed, U1's verdict stands, and no amounts come onto the root.",
+    "evidence": "- WHAT-REMAINS lines 305–314.\n- LEVER-2-AUDIT.md §0: \"no amounts come onto the root\".",
+    "proposed_fix": "Name what each label records rather than a remedy:\n- balance: represented, with witnesses pairs_without_one_to_one and repeated_unit;\n- amounts: the root's second sort.",
+    "verified_by_running": false
+   },
+   {
+    "id": "E14",
+    "severity": "low",
+    "section": "§3.5, §6",
+    "problem": "\"Balance, represented\" names two different sets. The rule's label covers 32 rows: 19 non-grammar rows with Flow's balance in their statement, plus 13 grammar rows. The measure's EC6 category covers 31 rows, 10 of them prelude-only and 2 proof-only, which the rule sends to amounts. §6 uses both in adjacent bullets.",
+    "evidence": "- boundary-table.json: balance, represented = 32.\n- probe.json: balance among balance-represented rows = 19 / 2 / 10.",
+    "proposed_fix": "Rename the rule's label (for example \"balance in statement\") or always say \"the measure's category\" when meaning the 31.",
+    "verified_by_running": true
+   },
+   {
+    "id": "E15",
+    "severity": "low",
+    "section": "§3.1 D2, §3.2 S5",
+    "problem": "Two smaller implementation traps.\n- D2's \"exactly these\" trips on Lean-generated auxiliary theorems (`._proof_n`, `.injEq`, `.brecOn`): 134 theorems' proofs name them, including the central row RelativePosition.rise_needs_fall.\n- S5's option \"R′ is the row\" is unreachable, since the row's proof cannot reach a form in a leaf that imports the row's module.",
+    "evidence": "- Pickle: 2169 auxiliary-named theorems; 134 non-auxiliary theorems whose v names them.\n- DESIGN-BOUNDARY.md §4: the leaf imports the rows' modules.",
+    "proposed_fix": "Fold auxiliaries into their parent declaration before D2. Drop \"R′ is the row\" from S5, or say when it can occur.",
+    "verified_by_running": true
+   },
+   {
+    "id": "E16",
+    "severity": "low",
+    "section": "§3.1 D4, §0",
+    "problem": "The certificate test files check a bridge that takes the law as a binder, `@row = @bridge @law`. The specified idiom is `@Row = @B`, with B naming the law in its proof. Separately, finding 1 of §0 (no row's statement is grammar-only) is not computed by the probe, although §0 says the probe confirms all three findings.",
+    "evidence": "- boundary/certificate-idiom.lean:10–12.\n- My test of the specified idiom, including different binder kinds ({n} against (n)), passes on Lean 4.29.1 (/private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/review-bf/edge/lean/idiom.lean, certSpec).\n- My pickle run finds 0 of 118 rows with a grammar-only statement closure.\n- probe.py computes grammar_only only for laws.",
+    "proposed_fix": "Add the specified idiom to the test file. Add finding 1 to the probe, or cite F5's `stated` test as its source.",
+    "verified_by_running": true
+   }
+  ]
+ },
+ {
+  "lens": "tooling",
+  "verdict": "The spec can be built in registry.py and master_laws.py in the same pattern as F5. Every figure in §6 reproduces: I reran probe.py with byte-identical output, and my own script, written from the spec's definitions (review-bf/schema/mine.py), gets 44 of 44 grammar rows reaching a grammar theorem, the balance splits 19/2/10 and 12/1/3 with act_courses_unselected as the proof-only row, and the same two candidates that are derived as they stand. probe.py computes what the spec says, except that its statement closure enters grammar constants, which changes no figure. But as written, the verification would certify false standings in five places. (1) The definition of 'grammar law' (§3) is too broad. It admits GrammarLaws' number and list helpers: 9 of the 'seventeen' forwarders in §6 forward these, including the pigeonhole revisits_within. It admits Init-only and logic statements, which pass D1 vacuously, models defined in Grammar* modules, and 117 auto-generated theorems. The measure, RESULT-WORKFLOW and U4's own table all use narrower rules. (2) D4 and P1 test sets of constants. Lean-checked theorems that tie nothing, such as `@row = @row ∧ @other = @other` and `P ∨ True`, have dump sets that pass them. (3) S1–S5 implement the loose reading of standing 2, which U4's design rejects: nothing checks that the form is stated on the root. (4) S2 reads a hypothesis definition's type, not its body. So `Unrestricted` passes S2 vacuously, while a gate stated with «则» over Flow and Web fails it. (5) No central declaration can hold the premise standing. All 118 are theorems, P1's certificate does not typecheck for a predicate premise, and a proof of the premise would contradict its own not-entailed theorem. Separately, C has no not-entailed theorem in the run at all. Beyond these, the design has real gaps. The boundary record's own laws would raise MV's `counts`, the same problem F5 solved by counting such laws in `counts_at_model`. D3 fails ordinary translation lemmas because their proofs name auto-generated `brecOn` theorems. The certificate tested in Lean is not the shape the spec checks. Membership in COVERAGE.json is made a registry error, although that file has no active owner, and the spec ignores COVERAGE.json's existing `premises`. Staleness and gating are under-specified, and the page clauses collide with the measure's wording. The key rules leave several cases open. The design is right in shape: declared items, everything else computed, failures written as unverified, and no figure changed by MV's own landing. It needs another draft before implementation: one shared grammar-law predicate, an `eq` field in the dump for certificates, a stated check that forms are on the root, the premise standing removed for central rows, and a plan for C.",
+  "findings": [
+   {
+    "id": "BF-S1",
+    "severity": "high",
+    "section": "§3 terms (grammar constant, grammar law), D1, D2, §3.5 connected, §6",
+    "problem": "A 'grammar law' is defined as any theorem whose name contains «» or that lives in a Becoming.Grammar* module, plus pure forwarders of one. This admits theorems that are not laws of the grammar. First, GrammarLaws' number and list helpers, which GrammarLaws.lean itself calls 'not statements of the grammar'. Second, Init-only statements: their statement closure is empty, so D1's 'names nothing but grammar constants and the prelude' holds vacuously, and logic laws with «» names, such as «非真则假», are 'grammar-only' too. Third, particular models defined in Grammar* modules (Flame, Map, Room). Fourth, auto-generated theorems (sizeOf_spec, injEq, «及».brecOn, «一一对应».prod._proof_1). A row that is a case of the pigeonhole, of Nat induction or of a logic law would verify as 'derived from the grammar's laws'. Those standings belong below the grammar (logic or counting). This contradicts the measure, RESULT-WORKFLOW and U4's own table. The spec also adds a third grammar test alongside the measure's (any «» name, «际» included) and F5's (`is_grammar_term` with `stated`).",
+    "evidence": "Run against bd-constants.pickle. 947 non-«» constants live in Grammar* modules. Of the 17 'model theorems that are pure forwarders of a grammar law' (§6, line 201), 9 forward GrammarLaws helpers: gap_of_lt, le_succ_cases, mem_cons_split, revisits_within (the pigeonhole), skipAt_le, skipAt_lt, skipAt_ne, split_at_head and total_congr; only 8 forward a «» law. 23 Grammar* theorems have an empty `t`, among them «非真则假», «必或不当当且仅当弱排中», kept_onward and GrammarLaws.length_replicate. 117 auto-generated theorems count as grammar constants under §3. Under §3's definition the only grammar theorem Web.Whole.family_excess_ends reaches is kept_onward. GrammarLaws.lean:260 says these are 'Lemmas on numbers and lists, not statements of the grammar'. RESULT-WORKFLOW.md:131 says 'The number and list lemmas of GrammarLaws do not count'. The docstring of master_laws.py says revisits_within 'does not reach' the grammar. U4's boundary_table.py:147-149 and DESIGN-BOUNDARY.md:118 count as a law only a theorem whose own name is «», excluding generated auxiliaries. Script: review-bf/schema/mine.py, plus inline queries.",
+    "proposed_fix": "Define one predicate in master_laws.py, used by the rule, D1, D2 and the page, and hash it among the inputs. A grammar law is a theorem whose last name component is a «» name, is not a generated auxiliary (brecOn, below, sizeOf_spec, injEq, inj, eq_N, eq_def, _proof_N, match_N), and lives in a module the measure counts. A pure forwarder counts only if it forwards such a law, possibly through a chain of forwarders. Add to D1 that the law's statement names at least one grammar term other than «际». A law with an Init-only or logic statement then makes the row logic or counting, never derived. Correct §6's 'seventeen' to 8.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-S2",
+    "severity": "high",
+    "section": "§3.1 D4, §3.3 P1, §0 ('Lean checks')",
+    "problem": "D4 and P1 see only the sets `t` and `v` of the certificate. The dump does not record the shape of the type. Any Lean-checked theorem whose type names Row and B, and whose proof names nothing beyond them, passes D4, even one stating nothing, or one tying Row to a theorem with a different statement. P1 passes for any theorem whose type names P and whose proof names no other theorem of the run. So the claim that Lean checks the tie is not what the generator verifies, and the generator would certify ties that do not hold.",
+    "evidence": "review-bf/schema/cert-gaming.lean and cert-consts.lean, run on Lean 4.29.1, exit 0, every axiom report empty. `theorem certVacuousWrong : @row = @row ∧ @other = @other := ⟨rfl, rfl⟩`, where `other : reached n n` states something different from `row : reached n (n+1)`. Its dump-style sets are t=[reached,row,other] and v=[reached,row,other], so it passes D4 as written. `theorem certPvac : P ∨ True := Or.inr trivial` has t=[P] and v=[P], so it passes P1. The genuine `certNamed : @row = @bridgeNamed := rfl` has t=[reached,row,bridgeNamed] and v=[reached,row], which cannot be told apart from the vacuous case on these sets.",
+    "proposed_fix": "Extend THEOREM-CONNECTIVITY-DUMP.lean (an R32 field; a hashed input; plan it in §8 step 1) with `eq: [a, b]` for any theorem whose type is literally `@Eq _ (.const a _) (.const b _)`. If certificates of the form `@Row = @B @law` are kept, record the head constant and the argument constants of each side. D4 then requires eq == [Row, B]. Until the field exists, write that the certificate's shape is declared and read by the review, not verified.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-S3",
+    "severity": "high",
+    "section": "§3.2 S1–S5; §2 `form`; §7 point 5",
+    "problem": "Standing 2 is defined in WHAT-REMAINS as being 'on the root', and §2 calls `form` 'the statement on the root'. Yet no check reads where F's statement lives, and none reads whether the countermodels are on the root. S1–S5 check only that each hypothesis names a grammar term (S2) plus reach conditions. A form that keeps the model's structures (Flow, Web, Generations) and concludes on model amounts would therefore verify once its hypotheses are wrapped as definitions naming «则». This is the loose reading, which U4's design rejects explicitly. The spec does not say it has chosen a reading.",
+    "evidence": "DESIGN-BOUNDARY.md:56 says 'This design recommends the strict reading. Only it gives MV a check that reads the Lean: the statement names grammar terms and the prelude and nothing else.' The scratch U4LeverTwo.lean:494 `all_end_on_root` concludes `G.size (t + 1) = 0` over Flow and Web, and rises_iff_inactive_on_root concludes `G.Raises t ↔ …` over Price's sums. Neither would be stopped by any of S1–S5. BOUNDARY-FIELD.md lines 115-120 contain no test of F's statement.",
+    "proposed_fix": "Add S0: F's statement closure names only grammar constants and the prelude, and at least one grammar term other than «际». Relations and amounts are then variables, and the row's model enters only through R′'s arguments. Add to S3 that each countermodel's statement closure is on the root as well, or say explicitly that countermodels may live at a model. If MV chooses the loose reading instead, state that choice, name it on the page, and say why it departs from U4's design.",
+    "verified_by_running": false
+   },
+   {
+    "id": "BF-S4",
+    "severity": "high",
+    "section": "§3.2 S2; §3 'statement closure'; §3.2 last line; §7 point 6",
+    "problem": "S2 applies the 'statement closure' of a hypothesis definition. By §3's definition that closure starts from the definition's type, so the definition's own body is never read. The results are wrong both ways. A definition whose type uses only Init passes the second disjunct of S2 vacuously, and `Becoming.Unrestricted` is one: its `t` is empty. A gate written with «则» over `Flow` and `Web` fails, because its type names Flow and Web and the «» terms sit only in its body. If S2 reads the body instead, `Unrestricted` fails, since its body names `Neutral`. A premise could then never be a standing-2 hypothesis, which contradicts §3.2's 'A hypothesis listed under premises is marked as a premise' and §7's answer on point 6.",
+    "evidence": "review-bf/schema/s2.py and inline query. Becoming.Unrestricted: k=def, t=[], v=[Becoming.Neutral]. Its closure from the type is empty (passes vacuously); from the value it is {Neutral, Unrestricted} (fails). The closures of Becoming.Flow and Becoming.Web contain no «» term. Rows 13 and 14: the closures of SelectionTerm.Generations.raisedAt and loweredAt name no «» term, which confirms the spec's claim that cancellation fails S2. Only 15 of the 118 central statements reach any «» term through their closures.",
+    "proposed_fix": "Define S2 on the closure of the definition's type and value, so that its body is read, not entering grammar constants. Drop the vacuous disjunct, or require the closure to be nonempty. Decide premises explicitly. Either a hypothesis listed under `premises` is exempt from S2 and marked as a premise, or premises cannot be hypotheses of standing 2. Then make §7 point 6 match the decision.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-S5",
+    "severity": "high",
+    "section": "§1 (premise), §2 `premise`/`certificate`, §3.3 P1, §7 point 6",
+    "problem": "No central declaration can ever hold the premise standing, so the standing, its keys and P1 are dead or dangerous. All 118 central declarations are theorems. The certificate `theorem c : P := @Row` does not typecheck when the premise is a predicate, as Unrestricted is. When the premise is a Prop, a central theorem proving it outright would let the premise's own not-entailed theorem derive False, so P1 and Q1 cannot both verify in a consistent core. And because of BF-S2, P1 can be passed by a vacuous `P ∨ True` certificate, so the only way this standing could ever be filled is falsely.",
+    "evidence": "Pickle query: all 118 central declarations have k=thm. review-bf/schema/premise-p1.lean, on Lean 4.29.1, is a miniature of Significance.lean:181/276/296. With `theorem c : Unr := @row1` uncommented, Lean reports 'error: type expected, got (Unr : (Nat → Prop) → Prop)'. `theorem clash (proved : ∀ sig, Unr sig) : False` checks via not_entails with an empty axiom report.",
+    "proposed_fix": "Remove `premise` from the per-declaration standings, along with its `premise` and `certificate` keys and P1. State that premises live only under `premises`. A central row reaches a premise only as a hypothesis (standing 2, once BF-S4 is settled) or as a reading such as free significance. Rewrite §7 point 6 accordingly: 'no central declaration can be a premise, since each is a theorem of the core'.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-S6",
+    "severity": "high",
+    "section": "§2 `premises`; §3.3 Q1; §0",
+    "problem": "The spec says the continuation condition and C both go under `premises`, and that each premise needs a `not_entailed` theorem. No such theorem exists for C. `ReadsOnlyDynamics.not_entails` names only `Unrestricted`. `ReadsOnlyDynamics` is typed over `sig : Pos → Nat → F → Prop`, so it cannot express a statement about C's `Better`. The spec also does not name C's definition; `Comparison` and `ComparisonUnder` are both candidates. As written, C cannot pass Q1. U4's landing requires nothing unverified. AGENTS.md requires both premises to be named wherever the ethics is summarized, so dropping C is not an option either.",
+    "evidence": "Pickle query: Becoming.ReadsOnlyDynamics.not_entails has t=[ReadsOnlyDynamics, Unrestricted]. No theorem of the run has both Becoming.Comparison and ReadsOnlyDynamics in its type. Only Significance.lean and SignificanceStatements.lean mention not_entails. Extension.lean:57 defines `Comparison`, Ranking.lean:115 `ComparisonUnder`, Significance.lean:296 `not_entails`. WHAT-REMAINS 'One root to its edge' makes the same claim the spec repeats: 'The continuation condition and C stand here already (ReadsOnlyDynamics.not_entails)'.",
+    "proposed_fix": "Name C's Lean definition in §2. Choose one of two routes. (a) Make a claimed Lean item, with its owner named on the board, for a not-entailed theorem for C, such as a ReadsOnlyDynamics-style predicate over `Better`. (b) Allow `not_entailed` to be absent, reported as 'not shown' and named on the page, and exclude unverified premises from the landing gate. Correct WHAT-REMAINS' sentence through OU's owner.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-M1",
+    "severity": "medium",
+    "section": "§2 check rules ('every theorem or definition an entry introduces is among the declarations of the record's own laws'); §4; §0 ('changes no figure')",
+    "problem": "Because each bridge, form, hypothesis, countermodel, recovery and certificate must be a declaration of the boundary record's own laws, MV measures those laws like any other and counts them in `counts`. Bridges and recoveries reach the grammar and master-law anchors through their laws and forms, and certificates through the row. So U4's landing raises the laws, grammar, closure, lumping and other counts. This is the same problem F5's schema review raised (finding 2), which F5 solved with `counts_at_model`. §4's 'A boundary standing never moves a law between them' does not cover it.",
+    "evidence": "master_laws.py:300: `c = counts_at_model if (r['id'], i) in checked else counts`, so only laws carrying F5 items are counted apart. F5-MODEL-STATEMENTS.md §3 'Counted apart' and §7 row 'F5 2, schema 2'. BOUNDARY-FIELD.md lines 77 and 176.",
+    "proposed_fix": "Count the laws of the record carrying `boundary` apart, in a new `counts_at_boundary`. Alternatively, keep the introduced names out of `laws` and bind them through references alone. State in §4 that U4's landing then changes no existing count, and add a test for it.",
+    "verified_by_running": false
+   },
+   {
+    "id": "BF-M2",
+    "severity": "medium",
+    "section": "§3 'from definitions alone'; D2; D3",
+    "problem": "'Theorems of the run' includes generated auxiliaries. A translation lemma proved by structural recursion names the auxiliary `X.brecOn` theorem, so D3 fails for a lemma that is pure unfolding. Meanwhile `«及».brecOn` and similar count as grammar laws, so D2 would require them to be listed in `laws`, which is absurd. D3 also allows only one level: a lemma may not use another listed lemma, so legitimate chains of translation lemmas are refused. And D3 reads only the theorems a proof names directly, so a model theorem used through a definition's value goes unseen. In the dump, 338 definitions name a theorem in their value.",
+    "evidence": "review-bf/schema/eight.py. Becoming.trace_steps (Labelled.lean:936, a pattern match) names Generative.Trace.brecOn (k=thm), so it is not from definitions alone, and WithinMoves.after_course's lemmas fail D3. 26 brecOn, 922 sizeOf_spec, 238 injEq and roughly 600 _proof_N theorems are in the dump; 102 theorems name an auto-generated theorem in their proof.",
+    "proposed_fix": "Treat auto-generated auxiliaries as part of their parent, neither theorems for D2/D3 nor grammar laws. Allow a closed set of lemmas: each lemma's proof names only grammar laws, prelude theorems and other listed lemmas, with no cycles. Walk through definition values, without entering grammar constants, when reading 'names no theorem'. Say whether Prop-typed definitions count as theorems.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-M3",
+    "severity": "medium",
+    "section": "§3.1 D2/D4 and the idiom files in boundary/",
+    "problem": "The certificate tested in Lean is not the shape the spec checks. In certificate-idiom.lean the bridge takes the law as a hypothesis (`bridge (y : ∀ …)`), its proof names no law, and the certificate is `@row = @bridge @law`. Under D2 that bridge fails, since its proof names no law. The shape the spec intends is `@Row = @B := rfl`, with B naming the law, and that shape is never tested. 'Up to definitional unfolding' is also wider than the spec suggests: it includes evaluation, so a certificate can tie a computational row to a trivial B.",
+    "evidence": "certificate-idiom.lean:9 and :12. Run on Lean 4.29.1: the idiom files behave as the spec says (cert passes; certificate-idiom-wrong.lean fails with 'Type mismatch'). My cert-gaming.lean shows `certNamed : @row = @bridgeNamed := rfl` checks; binder kinds are ignored (`@row = @rowExplicit` with an implicit and an explicit binder checks); and `@rowNum = @trivialB` (`twice 3 = 6` against `6 = 6`) checks.",
+    "proposed_fix": "Choose one shape. Then make D2 read the right object: B's proof for `@Row = @B`, or the certificate's application for `@Row = @B @law`. Replace the idiom files with tests of the chosen shape, a failing case, and a binder-kind case. Note that definitional equality includes computation, and that the review reads B.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-M4",
+    "severity": "medium",
+    "section": "§2 check rules ('declaration is in COVERAGE.json's rows'); §2 `premises`",
+    "problem": "First, making membership in COVERAGE.json a registry error couples research-check to a file with no active owner. Any rename or removal of a COVERAGE row would make U4's record fail the check for every lander until U4 edits it. Second, COVERAGE.json already has a top-level `premises` (K3). It lists model premises (balance, dissipation, embodiment, Dependent, Acting, Taking, Census and others) with witnesses that meet and fail them, which are the countermodels standing 2 needs. The spec neither mentions nor reconciles it, although F5 §4 placed the premise value 'beside the premises the measure already holds in COVERAGE.json', with OU's owner deciding. Third, 'premise' now has three senses: the measure's category 'premise of the account' (9 rows), standing 3, and the field's `premises`.",
+    "evidence": "theories/becoming/results/completion/COVERAGE.json has keys about, statuses, rows, premises, representation, …; premises.items includes 'activity needing support' (pattern \\bDependent\\b) and 'only active relata give' (\\bActing\\b), with witnesses World.contingent and World.independent. F5-MODEL-STATEMENTS.md §4 'F5's third value'. The measure's distinct_by_category: 'premise of the account': 9.",
+    "proposed_fix": "Move COVERAGE membership to the generator, where a declaration outside COVERAGE is written unverified with the reason 'not a central declaration' and listed in the status, and keep only the shape in the registry. Rename the field's list (for example `premises_of_the_account`). Cross-reference K3: a standing-2 hypothesis matching a K3 premise could cite its witnesses. Have OU's owner confirm where the premise value lives, as F5 §4 required.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-M5",
+    "severity": "medium",
+    "section": "§3.6, §5 ('appears only while the record's entries equal the data's'), §4",
+    "problem": "Staleness is not defined well enough to implement. (a) Matching should be per declaration, comparing the record's entry, or its absence, with the data's. A row the data placed by the rule must hide once the record adds an entry for it, and the premises list must be compared too. (b) A clause placed by the rule depends on F5's verified items and on the measure. If an F5 law no longer matches, its F5 line hides but the boundary clause that cites it would still render. (c) Nothing says whether `master_laws_status.current` turns false when the boundary data no longer matches, or what the generator writes when two records carry the field. The check refuses that case, but the generator would 'mirror' it in an undefined way. (d) It is not said whether boundary_unverified includes premises that fail Q1.",
+    "evidence": "registry.py load_records() builds matched_at_model from laws only; master_laws_status() sets `current = same and not changed and not unmatched and not from_dump`. Spec §4 gives `record` as a single value.",
+    "proposed_fix": "Define `boundary_matched` for each declaration (entry or absence, equal to the data) and for the premises list. Gate rule-placed clauses also on every F5 law for that row being matched. Set `current` false when boundary_not_matched is nonempty. When n ≠ 1 records carry the field, have the generator write `boundary: {error: 'carried by n records', records: […]}` and render nothing. List premises failing Q1 under `boundary_premises_unverified` and say whether landing requires it empty.",
+    "verified_by_running": false
+   },
+   {
+    "id": "BF-M6",
+    "severity": "medium",
+    "section": "§5 (clause in the master-law note); §1 labels",
+    "problem": "Adding the standing as a clause of the existing master-law note puts contradictory words in one sentence. For a grammar row the note already says 'the measure counts central declaration X … as following from a master law (by reaching the grammar)', and the clause would add 'Standing, by the rule: connected'. The boundary label 'balance, represented' names a different set from the measure's dependence of the same name, and both render on the same page: the rule's set of 32 includes 13 rows that reach the grammar and drops 12 measure-balance rows. 'Premise of the account' would also sit beside 'premise'. Putting a partly declared standing inside the computed line also departs from F5 §5's principle that declared items get their own line.",
+    "evidence": "registry.py master_law_note(): `if c['category'] == 'master law' and c.get('dependence') == 'grammar' and not why: why = 'by reaching the grammar'`; FOLLOWS['premise of the account'] = 'a premise of the account'. review-bf/schema/rule.py gives the spec's rule labels on current data as balance 32, connected 31, unplaced 20, at a represented model 16, amounts 12, own carrier 7. The measure has 31 'balance, represented' rows.",
+    "proposed_fix": "Render the standing as its own line under the law, as F5's at_model_notes do, with one line for each central declaration of the law; laws in several records each get it. Rename the boundary label, for example 'balance in the statement or proof', or have the line say how it differs from the measure's 'balance, represented'. Say whether the measure's 'following from a master law' clause stays once the standings exist.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-M7",
+    "severity": "medium",
+    "section": "§6 'Derived, as the rows stand'; §7 point 1",
+    "problem": "U4's draft treats eight rows as derived and says they 'need no new Lean'. Under §3.1, six of them fail as they stand, and §7 only says 'Point 1, agreed' without telling U4. U4's table also uses 'connected' as a reading (Flow.mutuallyDependent_iff_reach), which §2's `standing` values do not allow.",
+    "evidence": "review-bf/schema/eight.py, using the row as its own bridge. Flow.withinSystem_of_withinInfluence's proof names no grammar law. Law.drawn_iff_not_returns' lemmas drawn_iff_drawnIn and returns_iff_reaches name absorbing_iff_closed, reaches_iff_orbit and returns_iff. Law.lossless_iff_returns names lossless_iff. Tolerance.answers_restores_iff names KeepsInclusion.course and chain_iff_steps. Withholding.withholding_spreads names within_iff_withinSteps. WithinMoves.after_course names Generative.Trace.brecOn and trace_iff_steps. DESIGN-BOUNDARY.md:93 and :122. boundary_table.py HAND gives mutuallyDependent_iff_reach the reading 'connected'.",
+    "proposed_fix": "In §7, list each of the six with the check it fails and what would fix it: a bridge in the leaf, or accepting 'connected'. Say that a basis for a rule-placed row has no place in the field (or add an optional `note` to the rule's rows).",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-M8",
+    "severity": "medium",
+    "section": "§8 order; tests",
+    "problem": "§8 says 'tests through the real render' but lists no tests. On real data MV's landing exercises only the empty case, so D1–S5 and Q1 would land untested; F5's code review found crashes on malformed items for exactly this reason. The order has further risks. The dump field for certificates (BF-S2) changes a hashed input that belongs to R32. U4's landing changes the counts (BF-M1). A core leaf importing the rows' modules makes S5's 'R′ is the row' impossible, since a row cannot import the leaf. Any landing that renames a row between MV's and U4's landings breaks the check (BF-M4). And a third set of figures enters the prose: WHAT-REMAINS still says 44/16/4/54, F5 now reads 44/16/7/51, and the boundary counts would be a third set.",
+    "evidence": "F5-MODEL-STATEMENTS.md §7: 'Code review: a malformed item crashed or miscounted the generator'. WHAT-REMAINS 'OU's decisions on U4': 'Until then the figures of §461 stand: 44, 16, 4 and 54'. On current data the rule leaves 20 rows unplaced; U4's readings cover all of them (checked against boundary-table.json).",
+    "proposed_fix": "Write the tests into §8, all against a synthetic pickle fixture plus a scratch-worktree render. Registry: the field on a schema-1, superseded, withdrawn or second record; unknown keys at every level; each standing's required and forbidden keys; certificate absent or extra; bridge or recovery equal to the declaration; empty or absent lists; duplicate declarations and premises; a declaration not central; a review that is not a review reference or does not name each introduced name; an introduced name not among the law declarations. Generator: a positive and a negative case for each of D1–D5, S0–S5 and Q1; forwarder and projection strength; every branch of the rule, including unplaced; precedence (a verified edge entry over a reading over the rule; a failing edge entry falling to the rule); readings_to_reread; malformed entries never crashing; counts summing to the distinct declarations; a declaration not in the run; counts unchanged by the boundary record's laws. Pages: per-law lines for laws with several central declarations, and for a declaration under laws in several records; lines hidden when the data does not match; byte-identical pages when no record carries the field. Status: the three lists and `current`. Lean: the idiom, its failure, binder kinds, and the vacuous certificate rejected once `eq` exists. Also put the dump change and the R32 owner's yes into step 1, and decide S5's 'R′ is the row' given the leaf.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-L1",
+    "severity": "low",
+    "section": "§2 keys and check rules",
+    "problem": "The key rules leave several cases open. (a) A bridge or recovery equal to the declaration: the rule on introduced names would put a central declaration among the boundary record's laws. (b) A certificate given when none is needed is not refused. (c) Whether lists may be empty or must be absent is unstated; F5 required nonempty lists. (d) `lemmas` 'where its bridge names any' should read 'where B's proof names any', since B can be the row. (e) The inner objects (`hypotheses` items, `premises` items) have no closed key sets. (f) Whether one hypothesis definition may serve two entries (rows 13 and 14), and whether one countermodel may serve two hypotheses, is unstated. (g) A `premises` entry naming a central declaration is not refused. (h) It is unstated whether `standings` and `premises` are both required. (i) `basis` requires `en`, while law items require English or Chinese. (j) A typo in the record-level key, such as `boundry`, is silently ignored, because record keys are open. (k) A bridge that is itself a central declaration is not addressed.",
+    "evidence": "BOUNDARY-FIELD.md lines 51-79; registry.py validate_v2_fields() leaves top-level keys open; F5's statements_at_model_errors() requires 'a nonempty list'.",
+    "proposed_fix": "Add one rule each. Refuse bridge or recovery equal to the declaration; when the row is its own bridge or recovery, omit the key. Require `certificate` exactly when it is needed. Lists must be nonempty when present. Close the inner key sets. Allow a hypothesis shared across entries, with countermodels per entry. Refuse a premise that is a central declaration. Require both lists, empty allowed. Accept `basis` in English or Chinese, or say why English is required. Have the status report when no record carries `boundary` while COVERAGE has rows.",
+    "verified_by_running": false
+   },
+   {
+    "id": "BF-L2",
+    "severity": "low",
+    "section": "§3.1 'Strength: a forwarder of the law'",
+    "problem": "The claim that the row's statement, hypotheses included, is the law's at the model's terms definitionally is too strong for the dump's `f`. A forwarder may have unused leading binders (extra hypotheses). It may pass the same bound variable twice, giving a diagonal specialization, and it may set implicit arguments to any term that is not a closed value. A projection forwarder (`Iff.mp` or `Iff.mpr`) states only one direction of the law. Chains, where f is itself a forwarder, are not covered by 'B's f is one of laws'.",
+    "evidence": "THEOREM-CONNECTIVITY-DUMP.lean:90 `if k > (binderInfos type #[]).size then none` bounds the binders but does not require them all used; :79 `(!infos[i]!.isExplicit || a.isBVar)` allows any bound variable, repeats included; the docstring at :19-24 defines projection.",
+    "proposed_fix": "Reword: 'a case of the law, or one direction of it (projection), at the model's terms; it may add unused hypotheses or identify variables'. Follow `f` transitively.",
+    "verified_by_running": false
+   },
+   {
+    "id": "BF-L3",
+    "severity": "low",
+    "section": "§2 `review` rule",
+    "problem": "The review only has to name the central declaration. What the review must actually read, by §3.1 and §3.2's 'What this does not show', is the bridge, its lemmas, the form, the hypotheses, the countermodels and the certificate. The rule also inherits F5's matching on the last name component, which a same-named declaration elsewhere can satisfy.",
+    "evidence": "BOUNDARY-FIELD.md line 79 and lines 109-128; registry.py:397, the regex on `d.rsplit('.', 1)[-1]`.",
+    "proposed_fix": "Require the review to name each introduced name in code (bridge, form, each hypothesis and countermodel, recovery, certificate), plus each listed law.",
+    "verified_by_running": false
+   },
+   {
+    "id": "BF-L4",
+    "severity": "low",
+    "section": "§3.1 D2 (prelude theorems allowed) versus §3.5 (prelude counting law gives 'amounts')",
+    "problem": "D2 and D3 allow any prelude theorem. Those include the balance anchor balance_over_stretch_on, the prelude's counting law, along with about 297 prelude constants such as Naturals.*, ListTests.* and Hexagram.and_false_of_true. A bridge resting on the counting law plus one grammar law would be 'derived', while §3.5's rule calls a non-grammar row that rests on that law 'amounts'.",
+    "evidence": "Pickle: Becoming.balance_over_stretch_on is in module Becoming.Prelude, k=thm; the measure's anchors_reach_grammar gives balance_over_stretch_on: false.",
+    "proposed_fix": "Either exclude the measure's balance anchors from the prelude theorems D2 and D3 allow, or state that a derivation may use the prelude's counting law, and say why that is not a distance.",
+    "verified_by_running": true
+   },
+   {
+    "id": "BF-L5",
+    "severity": "low",
+    "section": "§3 vs boundary/probe.py; §2 laws vs RESULT-WORKFLOW",
+    "problem": "Two smaller mismatches. First, probe.py's `statement_closure` enters grammar constants and `grammar` follows only one level of forwarder, both contrary to §3's definitions. Rerunning gives the same figures, so nothing in §6 changes. Second, a `derived` entry writes grammar laws, some of them master-law anchors such as «像定后当且仅当同行» (lumping's anchor), into a record. RESULT-WORKFLOW:131 says 'Nothing about master laws is written into a record'.",
+    "evidence": "Reran probe.py (output identical to probe.json). My definition-faithful mine.py gives the same 44/44, 19/2/10, 12/1/3 and the same two candidates; the check 'balance-in-statement differs when entering grammar constants' returns []. Measure anchors: lumping includes Becoming.«像定后当且仅当同行».",
+    "proposed_fix": "Align probe.py with §3, or note the difference. In the RESULT-WORKFLOW paragraph, say that `laws` declares a correspondence (the row is a case of a law), as F5 §6 did, and that it records nothing about which master laws the row rests on.",
+    "verified_by_running": true
+   }
+  ]
+ }
+]

@@ -23,7 +23,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 | [Concern and shared activity](lean-declarations/concern.md) | 15 | 246 |
 | [Organizational formation through revisable evaluation](lean-declarations/shared.md) | 66 | 1,480 |
 | [Generative core and relational structure](lean-declarations/core.md) | 143 | 2,186 |
-| [Other formal studies](lean-declarations/other.md) | 29 | 873 |
+| [Other formal studies](lean-declarations/other.md) | 30 | 873 |
 
 <a id="按名称查找--find-by-name"></a>
 ## Find by name
@@ -990,3 +990,4 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Witnesses.lean](lean-declarations/becoming-core.md#module-a2a40d448b25) | Becoming pure core |
 | [World.lean](lean-declarations/becoming-core.md#module-7d8b73829c63) | Becoming pure core |
 | [WorldRepresentation.lean](lean-declarations/becoming-core.md#module-9ee3e643d082) | Becoming pure core |
+| [boundary_check.lean](lean-declarations/other.md#module-9c753b6e9d67) | Other formal studies |
