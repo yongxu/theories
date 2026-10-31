@@ -276,6 +276,10 @@ import Becoming.Frequency
 import Becoming.MutualDependence
 import Becoming.Gain
 import Becoming.KeepingWidening
+import Becoming.LineDegeneration
+import Becoming.SelectionShift
+import Becoming.LineageRegions
+import Becoming.LineageRegimes
 import Becoming.WideningOnTheMap
 import Becoming.Gluing
 import Becoming.Runs
@@ -326,6 +330,8 @@ import Becoming.SelectionGap
 import Becoming.SelectionReach
 import Becoming.UnitMatchings
 import Becoming.DrawnBeyond
+import Becoming.WindowedWaiting
+import Becoming.PairSelection
 import Becoming.JointDraw
 import Becoming.Optimum
 import Becoming.OptimumSeason
@@ -893,6 +899,54 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   the assortment the share of the spread among groups). Witnesses: two groups of two with one
   member holding back, the whole going either way; the same returns either way by how the groups
   are founded; assortment below one losing where assortment one would win.
+* `Becoming.SelectionShift` (L1): what the selection term proper does and does not decide, the
+  counting layer of EL1 (no ethical predicate). A common shift of offspring numbers leaves
+  concordance and discordance unchanged and enlarges the next generation by the shift for each
+  member (`SelectionShift.Generations.shift_step`), so the term does not fix the next generation's
+  size; a positive term makes the next generation nonempty, and at a step whose next generation is
+  empty both terms are zero (`SelectionShift.Generations.next_of_selection`,
+  `SelectionShift.Generations.last_term_zero`). A term positive at unboundedly many steps keeps
+  every generation nonempty (`SelectionShift.Generations.never_empties_of_unbounded`); with exact
+  transmission of offspring number at every step from `t`, a positive term at `t` does
+  (`SelectionShift.Generations.goes_on`), and exactness at `t` alone does not
+  (`SelectionShift.ExactOnce.exact_once_ends`). Within any horizon a course's terms are shared by
+  a course that goes on and one that ends (`SelectionShift.Horizon.same_terms_two_fates`,
+  `SelectionShift.Horizon.two_fates_of_nonempty`), and terms zero after some step by a course
+  nonempty at every generation and one that ends (`SelectionShift.Horizon.eventually_zero_two_fates`);
+  a term can be positive at every step but the last while the family ends
+  (`SelectionShift.Shrinking.positive_then_empty`). A leaf.
+* `Becoming.LineageRegions` (L2, through `Becoming.KeepingWidening`): generations of descent read
+  on the map's regions, EL1's join (no ethical predicate). Descent within a kind is a lineage
+  continuation (`LineageRegions.continuation`), the carrier the fine class and a kind the coarse
+  one, activity read by the web's own activity or by support. Where only active formations give,
+  every listed offspring born within the kind and embodied is a carrying renewal from its parent
+  (`LineageRegions.descended_carries`; at the grain of support, with offspring unsupported the step
+  before, `LineageRegions.descended_carries_supported`); a revival counts as a birth at both grains,
+  and the grain decides a region where support does not track standing
+  (`LineageRegions.StandingRelay.grain_decides_region`). Where listed offspring continue their
+  parents, a whole generation degenerating makes some later generation empty
+  (`LineageRegions.empty_of_degenerates`), and with the census holding every continuation exactly
+  so (`LineageRegions.generation_degenerates_iff`); so a term positive at every nonempty generation
+  leaves not every member of a generation degenerating (`LineageRegions.not_all_degenerate_while`),
+  while at a kind grain separating offspring from parents the term is positive at every step and
+  every member degenerates (`LineageRegions.Courses.positive_and_degenerate_at_own_kind`). For every
+  horizon, two courses with the same terms through it, the marked line generating in one and the
+  lineage degenerating in the other (`LineageRegions.Courses.same_terms_two_fates`); the census
+  premise of ending cannot be dropped (`LineageRegions.Lasting.lasting`). A leaf importing
+  `Becoming.SelectionShift` and `Becoming.LineDegeneration`.
+* `Becoming.LineageRegimes` (L2, through `Becoming.LineageRegions`): regime, not level, EL2 (no
+  ethical predicate). Each of three landed ending laws, read as a decider of a lineage's region
+  under a premise on the line's reach, is a regime whose horizon the stock sets: renewal gated on
+  what it renews, run past what it gives (`LineageRegimes.degeneration_of_family_excess`; at need
+  one the horizon is the stock, `LineageRegimes.degeneration_at_stock_horizon`), dissipation within
+  the family (`LineageRegimes.dissipation_degenerates_every_member`), and a draw on a condition
+  given nothing (`LineageRegimes.draw_doubling_needs`, of which `Flow.Balances.doubling_needs` is a
+  case; takers at least doubling, each drawing a unit, stop within `log₂ (level + 1)` generations,
+  `LineageRegimes.multiplying_takers_stop`). The stock decides neither fate: from every stock a
+  handover relay generates and a run-down degenerates (`LineageRegimes.Handover.both_fates`,
+  `LineageRegimes.stock_forces_neither`); under renewal from outside no gated premise holds
+  (`LineageRegimes.FromOutside.not_gated`). A leaf; that every decider of a lineage's region is one
+  of the three is not shown.
 * `Becoming.GroupEnding` (L1): selection among groups through conditions of their own. Where
   every group with less of an amount than another leaves no offspring, nothing is discordant
   among the groups, so the whole selects for the amount exactly where k times the within-group
@@ -2598,6 +2652,40 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   upstream less `k` (`web_tolerating`), and with `k` all upstream it is `Becoming.Withholding`'s
   law without memory (`web_answers`).
   More tolerance gives no less at every step, for every structure of waiting.
+* `Becoming.WindowedWaiting` (L1): answering within a window, and the one-step laws of a pair, EL4a
+  (no ethical predicate). Of the eight decided one-step laws keeping mutual giving, five keep
+  inclusion (`WindowedWaiting.pairKeepsInclusion_table_iff`), and each of these either never
+  restores after one withholding or never answers a constant withholder
+  (`WindowedWaiting.keeps_split`); restoring and answering hold together exactly for agreement,
+  which does not keep inclusion (`WindowedWaiting.restores_and_answers_iff`,
+  `WindowedWaiting.agreement_not_keeps`), while answering within a window of two, on the pair's last
+  two steps, keeps inclusion and does both (`WindowedWaiting.windowTwo_keeps`,
+  `WindowedWaiting.windowTwo_restores`, `WindowedWaiting.windowTwo_answers`). Under `answers` a pair
+  echoes one withholding at every step (`WindowedWaiting.Pair.echo`). On configurations over
+  `α × Nat`, a window of one is `answers` (`WindowedWaiting.window_one`), windowed laws keep
+  inclusion (`WindowedWaiting.answersWithin_keeps`), a constant withholder is answered within the
+  window (`WindowedWaiting.withholder_answered`), errors never `w` in a row are absorbed and `w + 1`
+  in a row are answered (`WindowedWaiting.gives_unless_errs`, `WindowedWaiting.errs_answered`), and
+  no window both absorbs one error and answers a formation withholding at no two consecutive steps
+  (`WindowedWaiting.Pair.not_absorbs_and_answers_spaced`). A leaf; the readings as tit-for-tat and
+  its kin are the chapter's.
+* `Becoming.PairSelection` (L1): offspring read from what a pair's run gives, and where a gift's
+  surplus comes from, EL4b and EL4c (no ethical predicate). The counts a pair's run gives each
+  place, steps received and steps withheld, are theorems of the runs at every length, with and
+  without errors (`PairSelection.counts_windowed_error`, `PairSelection.counts_answering_error`,
+  `PairSelection.counts_windowed_spaced`). With offspring `a + β · received + γ · withheld` and
+  `β ≤ γ`, no kind rises against withholders in a cohort listed as pairs, whatever its laws and
+  errors (`PairSelection.never_rises_in_pairs`); under complete assortment answering and the window
+  are weakly favoured exactly where `γ ≤ β` (`PairSelection.assorted_favours_iff`,
+  `PairSelection.window_echo_favours_iff`), and after one error a window pair leaves more than an
+  answerer pair exactly there (`PairSelection.window_echo_lt_iff`); without withholding nothing is
+  selected (`PairSelection.neutral`). On the World's webs, need asymmetry within a pair is the slack
+  bound read with the pair split into family and beyond (`PairSelection.Needs.asymmetric_within_slack`,
+  `PairSelection.Needs.symmetric_breaks`), a gift may be carried by an inflow
+  (`PairSelection.Renewed.renewal_carried`), and a factor read as a line's rise is bounded by the
+  slack beyond and the inflow (`PairSelection.Place.received_factor_le`, a bound under a supplied
+  reading). A leaf; a model of the pair's run as a flow on a web, from which the factors would
+  follow, is not shown.
 * `Becoming.Revision` (L1): Selection when the lumping itself changes.
 * `Becoming.Undecided` (L1): the third value and revision, with no premise. With values true,
   undecided and false, undecided below the decided ones in information, a term with no constant
@@ -3172,6 +3260,23 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   still held, a family drawn beyond renewal and passing that stops refute going on every branch
   (`Web.consumed_held_not_endless`, `Web.family_excess_not_endless`, `Web.stopped_not_endless`);
   the relay renews and still ends (`Map.relay_renews_and_ends`). A leaf.
+* `Becoming.LineDegeneration` (L2, through `Becoming.KeepingWidening`): degeneration on the base,
+  constructively (board item EL, its part EL3; no ethical predicate). Along any class, where
+  everything the line from an occurrence reaches at a step `N` not before it ends on every branch,
+  the line ends on every branch (`Web.ends_of_ends_at`, by induction on the steps left, with no
+  excluded middle and no premise of one continuation); so at every class within activity, from an
+  active occurrence where nothing the line reaches at `N` is active, the pattern degenerates
+  (`«退化»`, `Web.every_branch_ends_of_gone`), activity and the kind grain of
+  `Becoming.KeepingWidening` being instances (`Web.kind_every_branch_ends_of_gone`). The three
+  regimes of `Becoming.MapInstances` degenerate through one step each
+  (`Web.consumed_held_degenerates`, `Web.family_excess_degenerates`, `Web.stopped_degenerates`),
+  with witnesses whose lines take a step first. Ending on every branch reaches an end where going
+  on is decided at the points of the line (`Map.end_of_ends_decided`), and that every line meeting
+  the law's premise reaches an end is exactly excluded middle
+  (`Map.end_of_gone_iff_excluded_middle`; on the grammar, `Map.end_of_ends_iff_excluded_middle`):
+  the decision premise of `Web.degenerates_of_gone`, which concludes an end (`«有终»`), is as
+  strong as excluded middle. A leaf; `Web.Restated` derives the landed laws from degeneration and
+  is no result.
 * `Becoming.GrammarTesting` (L1): testing within the net (验). The core of a class is approximated
   by stages (`«层»`), and the core lies in every stage (`«核在每层之内»`), so what a finite stage tells
   apart is not in the core (`«可分则不在核»`); the converse, the Hennessy–Milner direction, is a

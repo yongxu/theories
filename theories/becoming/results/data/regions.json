@@ -3513,6 +3513,21 @@
    "base": "frame",
    "note": "limit verification; Markov's principle named (O2)"
   },
+  "Becoming.LineDegeneration": {
+   "region": "map",
+   "base": "old-base",
+   "note": "EL3 a horizon ends the line on every branch (尽, 退化) constructively; an end (有终) needs the decision, as strong as excluded middle (02 §1)"
+  },
+  "Becoming.LineageRegimes": {
+   "region": "life",
+   "base": "old-base",
+   "note": "EL2 regime, not level: three ending laws as regimes, the stock their horizon; the stock decides neither fate (04 §4)"
+  },
+  "Becoming.LineageRegions": {
+   "region": "life",
+   "base": "old-base",
+   "note": "EL1 join: descent read on the map; a whole generation degenerating is extinction where offspring continue their parents; same terms, two fates (04 §3, §4)"
+  },
   "Becoming.ListFootprints": {
    "region": "collective",
    "base": "general",
@@ -3682,6 +3697,11 @@
    "region": "map",
    "base": "general",
    "note": "V how fast a rule may change; two-level course"
+  },
+  "Becoming.PairSelection": {
+   "region": "collective",
+   "base": "general",
+   "note": "EL4b/c offspring from a pair's run; with beta <= gamma no kind rises against withholders; where a gift's surplus comes from (05 §5, §6)"
   },
   "Becoming.ParityReadings": {
    "region": "root",
@@ -4113,6 +4133,11 @@
    "base": "frame",
    "note": "selection through registered course"
   },
+  "Becoming.SelectionShift": {
+   "region": "life",
+   "base": "general",
+   "note": "EL1 counting: a common shift of offspring numbers leaves the selection term; what a positive term forces; same terms, two fates within a horizon (04 §3)"
+  },
   "Becoming.SelectionTerm": {
    "region": "life",
    "base": "old-base",
@@ -4362,6 +4387,11 @@
    "region": "significance",
    "base": "general",
    "note": "GW6 keeping widening read on the map: 全生成 at (nothing lost, the same possible) both ways; loss parts it from generation under the one; by name each kept, the whole generating"
+  },
+  "Becoming.WindowedWaiting": {
+   "region": "collective",
+   "base": "general",
+   "note": "EL4a windowed waiting: keeping inclusion splits restoring from answering; the window of two; errors absorbed and answered (05 §5)"
   },
   "Becoming.Withholding": {
    "region": "collective",
