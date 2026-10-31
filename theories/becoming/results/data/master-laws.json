@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261030T232750.486801Z",
- "core_sources_sha256": "1eda48f29a2e7ee933abb621ba86a69fd8fd472d208bf227231d9d8d7bf080ca",
+ "core_receipt": "20261031T013649.265381Z",
+ "core_sources_sha256": "787db9babdbe321bbb6dd2bb20a30de2d184a8b212907891f6bc5d1cbdb199ae",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -58,13 +58,13 @@
   ]
  },
  "counts": {
-  "laws": 3899,
+  "laws": 3936,
   "no_declarations": 9,
   "outside": 377,
   "grammar": 762,
   "balance, represented": 645,
   "anchor, not reached": 134,
-  "no master law": 1972,
+  "no master law": 2009,
   "vocabulary_only": 66,
   "closure": 479,
   "balance": 815,
@@ -2149,6 +2149,490 @@
     "declarations": [
      "Becoming.RuleCapture.share_kept_along",
      "Becoming.RuleCapture.against_not_rising"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   }
+  ],
+  "a-reading-informed-and-revalued": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.ListingValuation.within",
+     "Becoming.ListingValuation.answer",
+     "Becoming.ListingValuation.answer_true_iff",
+     "Becoming.ListingValuation.answer_false_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.ListingValuation.ite_mul_add",
+     "Becoming.ListingValuation.ite_mul_left",
+     "Becoming.ListingValuation.within_add",
+     "Becoming.ListingValuation.within_mul",
+     "Becoming.ListingValuation.within_congr_weighted",
+     "Becoming.ListingValuation.within_one_cell",
+     "Becoming.ListingValuation.goExcessWithin_eq",
+     "Becoming.ListingValuation.offExcessWithin_eq",
+     "Becoming.ListingValuation.within_turn"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.ListingValuation.residual",
+     "Becoming.ListingValuation.shortfall_split",
+     "Becoming.ListingValuation.cond_split_least"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.ListingValuation.residual_zero_iff",
+     "Becoming.ListingValuation.residual_pos_iff",
+     "Becoming.ListingValuation.unweighted_cell",
+     "Becoming.ListingValuation.cond_sub_eq_zero_iff",
+     "Becoming.ListingValuation.cond_sub_pos_iff",
+     "Becoming.ListingValuation.lt_of_sub_pos_core"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.ListingValuation.answer_residual_zero_iff",
+     "Becoming.ListingValuation.answer_least_of_scaled",
+     "Becoming.ListingValuation.answer_least_of_net",
+     "Becoming.ListingValuation.answer_shortfall_least"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.ListingValuation.scales_by_candidate",
+     "Becoming.ListingValuation.unweighted_told"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.ListingValuation.weightOf",
+     "Becoming.ListingValuation.weightOf_pos_iff",
+     "Becoming.ListingValuation.within_id",
+     "Becoming.ListingValuation.told_residual_zero_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.ListingValuation.unweighted_released",
+     "Becoming.ListingValuation.weighed_stops_iff",
+     "Becoming.ListingValuation.told_shortfall_zero_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.ListingValuation.after_le_iff_shortfall",
+     "Becoming.ListingValuation.after_lt_iff_shortfall",
+     "Becoming.ListingValuation.shortfall_congr_on"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.ListingValuation.informed_le",
+     "Becoming.ListingValuation.informed_answer_le",
+     "Becoming.ListingValuation.informed_le_add_residual"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.ListingValuation.least_falls",
+     "Becoming.ListingValuation.informed_lt_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.ListingValuation.weightedOn",
+     "Becoming.ListingValuation.SplitsKeep",
+     "Becoming.ListingValuation.refining_never_lowers_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 13,
+    "declarations": [
+     "Becoming.ListingValuation.splitsKeep_of_net",
+     "Becoming.ListingValuation.splitsKeep_of_off_le_go",
+     "Becoming.ListingValuation.release_keeps"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 14,
+    "declarations": [
+     "Becoming.ListingValuation.after_rule_total",
+     "Becoming.ListingValuation.total_cond_by_cells",
+     "Becoming.ListingValuation.ite_split_rule",
+     "Becoming.ListingValuation.ite_cond_split",
+     "Becoming.ListingValuation.within_split",
+     "Becoming.ListingValuation.within_rule_split",
+     "Becoming.ListingValuation.weightedOn_by_cells",
+     "Becoming.ListingValuation.total_lt_of_mem",
+     "Becoming.ListingValuation.cond_zero_le",
+     "Becoming.ListingValuation.split_cell_le",
+     "Becoming.ListingValuation.cell_refined_le",
+     "Becoming.ListingValuation.refined_le_of_splitsKeep"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 15,
+    "declarations": [
+     "Becoming.ListingValuation.eitherCell",
+     "Becoming.ListingValuation.whichCell",
+     "Becoming.ListingValuation.either_which",
+     "Becoming.ListingValuation.either_mem",
+     "Becoming.ListingValuation.which_mem",
+     "Becoming.ListingValuation.which_first",
+     "Becoming.ListingValuation.which_second",
+     "Becoming.ListingValuation.either_both",
+     "Becoming.ListingValuation.either_neither",
+     "Becoming.ListingValuation.split_released_term",
+     "Becoming.ListingValuation.split_stopped_term",
+     "Becoming.ListingValuation.worth_split_released",
+     "Becoming.ListingValuation.worth_split_stopped",
+     "Becoming.ListingValuation.splitsKeep_of_refined_le"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 16,
+    "declarations": [
+     "Becoming.ListingValuation.Informing.model",
+     "Becoming.ListingValuation.Informing.gain",
+     "Becoming.ListingValuation.Informing.loss",
+     "Becoming.ListingValuation.Informing.goValue",
+     "Becoming.ListingValuation.Informing.offValue",
+     "Becoming.ListingValuation.Informing.informing_lowers"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 17,
+    "declarations": [
+     "Becoming.ListingValuation.WeightsApart.holding",
+     "Becoming.ListingValuation.WeightsApart.reading",
+     "Becoming.ListingValuation.WeightsApart.gain",
+     "Becoming.ListingValuation.WeightsApart.loss",
+     "Becoming.ListingValuation.WeightsApart.weights_matter",
+     "Becoming.ListingValuation.WeightsApart.weights_split"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 18,
+    "declarations": [
+     "Becoming.ListingValuation.WeightsApart.not_splitsKeep"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 19,
+    "declarations": [
+     "Becoming.ListingValuation.OneListing.holding",
+     "Becoming.ListingValuation.OneListing.reading",
+     "Becoming.ListingValuation.OneListing.gain",
+     "Becoming.ListingValuation.OneListing.loss",
+     "Becoming.ListingValuation.OneListing.goValue",
+     "Becoming.ListingValuation.OneListing.offValue",
+     "Becoming.ListingValuation.OneListing.refined_lowers"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 20,
+    "declarations": [
+     "Becoming.ListingValuation.forgone_lt_iff",
+     "Becoming.ListingValuation.forgone_through_lt_iff",
+     "Becoming.ListingValuation.forgone_least_iff",
+     "Becoming.ListingValuation.coarser_not_above"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 21,
+    "declarations": [
+     "Becoming.ListingValuation.refined_lt_iff",
+     "Becoming.ListingValuation.add_lt_iff_sub_add_lt",
+     "Becoming.ListingValuation.add_lt_add_left_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 22,
+    "declarations": [
+     "Becoming.ListingValuation.revalued_split",
+     "Becoming.ListingValuation.revalued_forgone_lt_iff",
+     "Becoming.ListingValuation.presented_forgone_lt_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 23,
+    "declarations": [
+     "Becoming.ListingValuation.own_least",
+     "Becoming.ListingValuation.revalued_lowers_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 24,
+    "declarations": [
+     "Becoming.ListingValuation.outcome_least",
+     "Becoming.ListingValuation.no_order_across"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 25,
+    "declarations": [
+     "Becoming.ListingValuation.revaluing_gain",
+     "Becoming.ListingValuation.revaluing_gains_iff",
+     "Becoming.ListingValuation.residual_pos_of_gains"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 26,
+    "declarations": [
+     "Becoming.ListingValuation.Revaluing.model",
+     "Becoming.ListingValuation.Revaluing.gain",
+     "Becoming.ListingValuation.Revaluing.loss",
+     "Becoming.ListingValuation.Revaluing.revaluing_best"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 27,
+    "declarations": [
+     "Becoming.ListingValuation.const_worth",
+     "Becoming.ListingValuation.const_below_iff",
+     "Becoming.ListingValuation.one_cell_worth"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 28,
+    "declarations": [
+     "Becoming.ListingValuation.Input",
+     "Becoming.ListingValuation.Act",
+     "Becoming.ListingValuation.Reader",
+     "Becoming.ListingValuation.Reader.update",
+     "Becoming.ListingValuation.Reader.answerOf",
+     "Becoming.ListingValuation.Reader.input",
+     "Becoming.ListingValuation.Holder",
+     "Becoming.ListingValuation.joint"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 29,
+    "declarations": [
+     "Becoming.ListingValuation.internal_step",
+     "Becoming.ListingValuation.active_step",
+     "Becoming.ListingValuation.sensory_step",
+     "Becoming.ListingValuation.external_step",
+     "Becoming.ListingValuation.active_answer",
+     "Becoming.ListingValuation.world_fixed",
+     "Becoming.ListingValuation.timing"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 30,
+    "declarations": [
+     "Becoming.ListingValuation.through_sensed",
+     "Becoming.ListingValuation.updates_commute"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 31,
+    "declarations": [
+     "Becoming.ListingValuation.total_filter_shows",
+     "Becoming.ListingValuation.within_shown",
+     "Becoming.ListingValuation.answer_shown",
+     "Becoming.ListingValuation.shown_split",
+     "Becoming.ListingValuation.shown_least_le",
+     "Becoming.ListingValuation.shown_never_lowers"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 32,
+    "declarations": [
+     "Becoming.ListingValuation.input_eq_of_reveal_eq",
+     "Becoming.ListingValuation.inputs_alike_before",
+     "Becoming.ListingValuation.inputs_alike",
+     "Becoming.ListingValuation.input_eq_of_ne_demonstrate",
+     "Becoming.ListingValuation.undemonstrated_alike",
+     "Becoming.ListingValuation.undemonstrated_worth",
+     "Becoming.ListingValuation.answer_constant"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 33,
+    "declarations": [
+     "Becoming.ListingValuation.TwoWorlds.World",
+     "Becoming.ListingValuation.TwoWorlds.Val",
+     "Becoming.ListingValuation.TwoWorlds.rd",
+     "Becoming.ListingValuation.TwoWorlds.schedule",
+     "Becoming.ListingValuation.TwoWorlds.shownStart",
+     "Becoming.ListingValuation.TwoWorlds.presentedStart",
+     "Becoming.ListingValuation.TwoWorlds.route",
+     "Becoming.ListingValuation.TwoWorlds.shown_turns",
+     "Becoming.ListingValuation.TwoWorlds.presented_turns",
+     "Becoming.ListingValuation.TwoWorlds.shown_removes_least",
+     "Becoming.ListingValuation.TwoWorlds.presented_removes_residual"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 34,
+    "declarations": [
+     "Becoming.ListingValuation.TwoWorlds.shown_course",
+     "Becoming.ListingValuation.TwoWorlds.presented_course"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 35,
+    "declarations": [
+     "Becoming.ListingValuation.TwoWorlds.orderStart",
+     "Becoming.ListingValuation.TwoWorlds.orderEnd",
+     "Becoming.ListingValuation.TwoWorlds.orderEnd_rests",
+     "Becoming.ListingValuation.TwoWorlds.orders_rest",
+     "Becoming.ListingValuation.TwoWorlds.orders_apart"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 36,
+    "declarations": [
+     "Becoming.ListingValuation.TwoWorlds.changedBefore",
+     "Becoming.ListingValuation.TwoWorlds.answersBefore",
+     "Becoming.ListingValuation.TwoWorlds.record",
+     "Becoming.ListingValuation.TwoWorlds.changed",
+     "Becoming.ListingValuation.TwoWorlds.reached",
+     "Becoming.ListingValuation.TwoWorlds.reached_rests",
+     "Becoming.ListingValuation.TwoWorlds.routes_rest",
+     "Becoming.ListingValuation.TwoWorlds.answers_alike",
+     "Becoming.ListingValuation.TwoWorlds.route_answers",
+     "Becoming.ListingValuation.TwoWorlds.answersBefore_congr",
+     "Becoming.ListingValuation.TwoWorlds.shown_keeps_agree",
+     "Becoming.ListingValuation.TwoWorlds.changedBefore_of_constant",
+     "Becoming.ListingValuation.TwoWorlds.changedBefore_succ_of_true",
+     "Becoming.ListingValuation.TwoWorlds.presented_changed",
+     "Becoming.ListingValuation.TwoWorlds.routes_alike",
+     "Becoming.ListingValuation.TwoWorlds.changed_apart",
+     "Becoming.ListingValuation.TwoWorlds.not_lumped"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 37,
+    "declarations": [
+     "Becoming.ListingValuation.TwoWorlds.starts_apart",
+     "Becoming.ListingValuation.TwoWorlds.lumped_with_start"
     ],
     "master_laws": [],
     "grammar": false,

@@ -91,6 +91,11 @@
    "base": "general",
    "note": "RuleCapture: no ratchet when rule read against share"
   },
+  "a-reading-informed-and-revalued": {
+   "region": "knowing",
+   "base": "general",
+   "note": "ListingValuation RF-M.3: the valuation as state; any rule's shortfall split; informing and revaluing in one law"
+  },
   "a-reading-kept-by-its-update": {
    "region": "knowing",
    "base": "general",
@@ -3477,6 +3482,11 @@
    "region": "method",
    "base": "old-base",
    "note": "refutation laws without Distinct or DecidableEq"
+  },
+  "Becoming.ListingValuation": {
+   "region": "knowing",
+   "base": "general",
+   "note": "RF-M.3 a reading informed and revalued (03 §12)"
   },
   "Becoming.LocalUnits": {
    "region": "root",

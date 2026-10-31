@@ -5,14 +5,16 @@ Inputs (saved where the reads ran): the cross-model reader's cold read (markdown
 lenses' findings with their refuters' verdicts (JSON: a list of {lens, found: {verdict, findings}, verdicts:
 {verdicts}}); the cross-model reader's re-checks (markdown, or `-` while one has not run): the first of how its own
 points were taken and of the texts cut or added since, before the lenses ran; the second of how the lenses' findings
-were taken; the third of how the second's point and the check's gaps were taken; the check beside the second, a
-workflow's result (JSON: a list of {lens, check: {summary, items}, verdicts}, or `-` while it has not run); and the
-last check, beside the third, a workflow's result (JSON: a list of {reader, check: {summary, items}, verdicts}, or `-`).
-What was taken from each re-check is in RECHECKS, from the check in CHECK, and from the last check in FINAL. Usage,
-from the repository root:
+were taken; the third of how the second's point and the check's gaps were taken; the fourth of how the second
+check's gaps were taken; the check beside the second, a workflow's result (JSON: a list of {lens, check: {summary,
+items}, verdicts}, or `-` while it has not run); the second check, beside the third, and the final check, beside the
+fourth, workflows' results (JSON: a list of {reader, check: {summary, items}, verdicts}, or `-`). What was taken from
+each re-check is in RECHECKS, from the check in CHECK, from the second check in FINAL and from the final check in
+LAST. Usage, from the repository root:
 
     python3 -B <this file> <cold read .md> <lens results .json> <first re-check .md | -> <second re-check .md | ->
-        <check .json | -> <third re-check .md | -> <last check .json | ->
+        <check .json | -> <third re-check .md | -> <second check .json | -> <fourth re-check .md | ->
+        <final check .json | ->
 """
 import json
 import re
@@ -35,16 +37,20 @@ def arg(k):
     return None if len(sys.argv) <= k or sys.argv[k] == '-' else Path(sys.argv[k])
 
 
-recheck_mds = [arg(3), arg(4), arg(6)]
-check_json, final_json = arg(5), arg(7)
+recheck_mds = [arg(3), arg(4), arg(6), arg(8)]
+check_json, final_json, last_json = arg(5), arg(7), arg(9)
 
 
 def relinked(text):
     """Paths made relative to the checkout, and links made to resolve from this folder (relink_rfm2.py); a link whose
     target is a placeholder (`#<…>`, which relink's pattern skips for its spaces) shown, as relink shows one that does
-    not resolve, as its text with its target as code."""
+    not resolve, as its text with its target as code. A root with no path after it (a reader naming where it read) is
+    dropped with the "at" before it, and any other shown as a placeholder. The page's guard, `'](/'`, quoted as a
+    string outside code, has its parenthesis escaped, which renders the same and is not read as a link."""
     for root in ROOTS:
-        text = text.replace(root, '')
+        bare = root.rstrip('/')
+        text = text.replace(root, '').replace(' at ' + bare, '').replace(bare, '<the checkout>')
+    text = text.replace("'](/'", "']\\(/'")
     return re.sub(r'\[([^\]\n]*)\]\((#<[^>\n]*>)\)', r'\1 (`\2`)', relink(text))
 
 
@@ -59,7 +65,7 @@ def cell(text):
 
 INTRO = """# The cold read of RF-M.3's texts
 
-RF round 2, third part, RF-M.3: the valuation as state; informing and revaluing (plan §4.8). Before RF-M.3's landing, its texts were cold-read against the Lean of `Becoming.ListingValuation` (`kit/round2c/tree/Becoming/ListingValuation.lean`, 138 theorems in 186 declarations, every axiom report empty), as the kit's integration applied them to main in a rehearsal worktree (for the cross-model reader the kit at `07a24e169` with main at `1ec20513d`; for the lenses, after its points and its first re-check were taken, the kit at `3f43eefcf` with main at `8a8b0df82`): 03 §12's opening, its new theorem paragraph with its Reading, the pointer in the acts-alike reading and the Open bullet; 07 §7's sentences on moving the reading that gives the stop; 08 §8's bullet; the overview's paragraph; the dossier's scope box, its paragraph on RF's rounds and its account of how it was made; the package's root bullets, both READMEs and the checker's scope sentence; the module's header and docstrings; the record in both languages and the amendments to two related records; the study section's template; PLAN §4.8, §12, §13 and the Evidence list, and for the lenses also its §5 and §8 rows; regions; and the opening and the tables of what was taken in [REVIEW-RFM3-LEAN](REVIEW-RFM3-LEAN.md). Two reads ran on 31 October 2026: the cross-model reader (GPT astra, high effort, read-only, a fresh session `01a18ddb-e3da-78a0-ab08-f6fec1f4bf57`) and a workflow of three Opus readers, one per lens (exactness, readings, fit), each lens's findings given to one reader asked to refute them against the files. The prompts are in [the brief](BRIEF.md#round-2-third-part). The findings and verdicts are verbatim, with the rehearsal worktree's absolute paths made repository-relative and links made to resolve from this folder, since it is link-checked as live: a line number kept in a link's text and dropped from its target, and a link that does not resolve here (an anchor of the page a quotation came from, a path of the rehearsal alone) shown as its text with its target as code.
+RF round 2, third part, RF-M.3: the valuation as state; informing and revaluing (plan §4.8). Before RF-M.3's landing, its texts were cold-read against the Lean of `Becoming.ListingValuation` (`kit/round2c/tree/Becoming/ListingValuation.lean`, 138 theorems in 186 declarations, every axiom report empty), as the kit's integration applied them to main in a rehearsal worktree (for the cross-model reader the kit at `07a24e169` with main at `1ec20513d`; for the lenses, after its points and its first re-check were taken, the kit at `3f43eefcf` with main at `8a8b0df82`): 03 §12's opening, its new theorem paragraph with its Reading, the pointer in the acts-alike reading and the Open bullet; 07 §7's sentences on moving the reading that gives the stop; 08 §8's bullet; the overview's paragraph; the dossier's scope box, its paragraph on RF's rounds and its account of how it was made; the package's root bullets, both READMEs and the checker's scope sentence; the module's header and docstrings; the record in both languages and the amendments to two related records; the study section's template; PLAN §4.8, §12, §13 and the Evidence list, and for the lenses also its §5 and §8 rows; regions; and the opening and the tables of what was taken in [REVIEW-RFM3-LEAN](REVIEW-RFM3-LEAN.md). Two reads ran on 31 October 2026: the cross-model reader (GPT astra, high effort, read-only, a fresh session `01a18ddb-e3da-78a0-ab08-f6fec1f4bf57`) and a workflow of three Opus readers, one per lens (exactness, readings, fit), each lens's findings given to one reader asked to refute them against the files. The prompts are in [the brief](BRIEF.md#round-2-third-part). The findings and verdicts are verbatim, with the rehearsal worktree's absolute paths made repository-relative and links made to resolve from this folder, since it is link-checked as live: a line number kept in a link's text and dropped from its target, and a link that does not resolve here (an anchor of the page a quotation came from, a path of the rehearsal alone) shown as its text with its target as code; the rehearsal's root with no path after it is dropped with the “at” before it, and a reader's quotation, outside code, of the page's guard against links to absolute paths has its parenthesis escaped, which renders the same.
 
 {SUMMARY} BUILD_SENTENCE
 
@@ -72,7 +78,7 @@ BUILD_SENTENCE = ("For the lenses' findings the module's statements did not chan
                   "in 186 declarations, every axiom report empty "
                   "([build-6](../kit/round2c/logs/build-6.log)). For the check of how they were taken, the header's "
                   "bullet on the carrier and its Readings were revised again, and it was rebuilt, the same counts, every "
-                  "axiom report empty ([build-7](../kit/round2c/logs/build-7.log)). For the last check, the header's bullets on "
+                  "axiom report empty ([build-7](../kit/round2c/logs/build-7.log)). For the second check, the header's bullets on "
                   "amounts forgone and revaluing and on the carrier, its Readings and the docstring of `outcome_least` "
                   "were revised, and it was rebuilt again, the same counts, every axiom report empty "
                   "([build-8](../kit/round2c/logs/build-8.log)).")
@@ -90,8 +96,12 @@ RECHECK_SENTENCE = ("Before the lenses ran, the cross-model reader re-checked, i
                     "it re-checked them in the same session, finding nothing ([the third "
                     "re-check](#the-third-re-check)). Beside it, two Opus readers, one checking how every point was "
                     "taken and one reading the changed passages cold, each reader's gaps given to a refuter, found 11 "
-                    "gaps, every one judged real: 9 distinct points, all taken ([the last "
-                    "check](#the-check-of-the-checks-changes)).")
+                    "gaps, every one judged real: 9 distinct points, all taken ([the second "
+                    "check](#the-check-of-the-checks-changes)). After those were taken, it re-checked them once more, "
+                    "finding nothing ([the fourth re-check](#the-fourth-re-check)); beside it, one Opus reader, "
+                    "checking how every gap was taken and reading the changed passages cold, found every gap taken and "
+                    "one absolute path left on this page, which its refuter, run again after its connection first "
+                    "failed, judged real; the path is now made relative ([the final check](#the-final-check)).")
 
 # What was taken from the cross-model reader: (point, finding, taken).
 TAKEN_READER = (
@@ -361,6 +371,11 @@ RECHECKS = (
      "on the kit at `539078292` with main at `485c6f87c`, the diff of the study folder since `22a113c0c` at its root. "
      "Verbatim.",
      ()),
+    ("The fourth re-check",
+     "The cross-model reader, in the session of its cold read, read how the second check's gaps were taken and, as new "
+     "text, the passages they changed, read-only, in a rehearsal rebuilt at the same path on the kit at `bd5277f14` "
+     "with main at `c3a2f0fc4`, the diff of the study folder since `539078292` at its root. Verbatim.",
+     ()),
 )
 
 
@@ -494,6 +509,25 @@ FINAL = {
             "linking the check's table and this one"),
 }
 
+# The final check, beside the fourth re-check: one reader and one refuter, run again after its connection failed.
+LAST_HEADING = 'The final check'
+LAST_READ = ("Beside the fourth re-check, a workflow of one Opus reader, read-only in the same rehearsal, checked each of "
+             "the second check's 11 gaps against its table, the texts and the Lean, giving each id a status, and read "
+             "the passages they changed cold; its gap was given to one refuter asked to refute it against the files, "
+             "whose first run failed on its connection and which was run again, the reader's result replayed. The "
+             "prompts are in [the brief](BRIEF.md#round-2-third-part). Verbatim: the reader's summary, the ids it found "
+             "taken, and its gap with the refuter's verdict, numbered LC1; the line numbers are those of the rehearsal. "
+             "The rehearsal's root, which LC1 concerns, is dropped here wherever it is quoted, by the rule LC1 takes, "
+             "so the quotations of the rehearsal's line 1340 read as this page now renders it.")
+LAST_TITLE = {'last': ("The reader of how the second check's gaps were taken", 'LC')}
+LAST = {
+    'LC1': ('new', "an absolute path of the rehearsal left on this page, in the second check's first summary, where "
+                   "`relinked` removed a root only with a slash after it",
+            "`relinked` drops a root with no path after it together with the “at” before it, and shows any other as "
+            "a placeholder, and the page's guard checks for either form of the root; the page regenerated, no absolute "
+            "path left on it"),
+}
+
 reader = cx_body(reader_md)
 results = json.loads(lens_json.read_text(encoding='utf-8'))
 blocks, rows, counts = [], [], {'confirmed': 0, 'refuted': 0, 'unverified': 0}
@@ -529,7 +563,7 @@ summary = (f"The cross-model reader reported {len(TAKEN_READER)} points, every o
            + "; what each became is in [the table](#what-was-taken-from-the-lenses)")
 CHECK_TABLE = '#what-was-taken-from-the-check-of-how-the-lenses-findings-were-taken'
 if final_json is not None:
-    summary += (f", and what the checks after it changed, in theirs ([the check's]({CHECK_TABLE}), [the last "
+    summary += (f", and what the checks after it changed, in theirs ([the check's]({CHECK_TABLE}), [the second "
                 "check's](#what-was-taken-from-the-check-of-the-checks-changes)).")
 elif check_json is not None:
     summary += f", and what the check of how they were taken changed since, in [its table]({CHECK_TABLE})."
@@ -603,7 +637,11 @@ if recheck_mds[2] is not None:
     parts += recheck_section(recheck_mds[2], *RECHECKS[2])
 if final_json is not None:
     parts += check_section(final_json, FINAL_HEADING, FINAL_READ, 'reader', FINAL_TITLE, FINAL)
+if recheck_mds[3] is not None:
+    parts += recheck_section(recheck_mds[3], *RECHECKS[3])
+if last_json is not None:
+    parts += check_section(last_json, LAST_HEADING, LAST_READ, 'reader', LAST_TITLE, LAST)
 text = '\n'.join(parts) + '\n'
-assert '](/' not in text and not any(root in text for root in ROOTS)
+assert '](/' not in text and not any(root.rstrip('/') in text for root in ROOTS)
 OUT.write_text(text, encoding='utf-8')
 print(OUT.relative_to(STUDY.parents[0]), len(text), 'characters;', len(TAKEN_READER), 'points,', total, 'findings', counts)

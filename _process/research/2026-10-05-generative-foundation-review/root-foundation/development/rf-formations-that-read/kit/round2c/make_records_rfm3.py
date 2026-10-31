@@ -93,6 +93,8 @@ def rel(rid, en, zh):
 
 def build(rid, module, title, statement, groups, hypotheses, does_not_show, counterexamples, validation, next_delta,
           correspondence, aliases, dependencies, related, refs, home, history):
+    # a counterexample's scope is a text field, English alone where no Chinese is given (registry.pair)
+    counterexamples = [x if isinstance(x, dict) else {'en': x} for x in counterexamples]
     laws = [capped('laws', {'en': en, 'zh': zh, 'declarations': ds}, item=True) for en, zh, ds in groups]
     cited = [d for _, _, ds in groups for d in ds]
     cited_by_module[module] += cited
