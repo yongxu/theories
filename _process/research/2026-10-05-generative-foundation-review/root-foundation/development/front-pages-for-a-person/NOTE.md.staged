@@ -1,0 +1,62 @@
+# The one page and the overview, sized for a person: a proposal
+
+Drafts for OU's owner to land in their pass after U4's boundary record and §八 step 5 (WHAT-REMAINS, the release gate's item 6, amendment 4). Nothing here changes a live file or claims anything on the board. The drafts are staged as `NAME.md.staged`, so that an untracked `.md` does not fail the link check; their links are written for `theories/becoming/`, where they would land.
+
+| Draft | Replaces | Words | Characters | Budget-words | Minutes | Budget |
+|---|---|---|---|---|---|---|
+| [ONE-PAGE.md.staged](ONE-PAGE.md.staged) | `theories/becoming/ONE-PAGE.md` (2,154 words) | 1,095 | 6 | 1,098 | 8.4–11.0 | ten minutes, 1,100 |
+| [ONE-PAGE.zh.md.staged](ONE-PAGE.zh.md.staged) | `ONE-PAGE.zh.md` (3,579 characters) | 49 | 1,839 | 968 | 7.4–9.7 | 1,100 |
+| [THE-THEORY-OF-BECOMING.md.staged](THE-THEORY-OF-BECOMING.md.staged) | the overview (13,635 words) | 5,980 | 31 | 5,996 | 46.1–60.0 | an hour, 6,000 |
+| [THE-THEORY-OF-BECOMING.zh.md.staged](THE-THEORY-OF-BECOMING.zh.md.staged) | its Chinese edition (21,968 characters) | 172 | 10,369 | 5,356 | 41.2–53.6 | 6,000 |
+
+Measured with [measure.py](measure.py) (AJ4's counting, visible prose only); every pass is in [MEASURE-RUNS.txt](MEASURE-RUNS.txt). The independent read and how each finding was taken are in [READ.md.staged](READ.md.staged).
+
+## Method
+
+The same as PHILOSOPHY's ten-minute front: the never-cut items kept (deciding hypotheses, both premises with their roles, failures as they fell, the frozen-rule caveat, post hoc labels, AI labels on readings, what is not claimed, each claim's standing, what an empty axiom report shows); measured after each pass; one independent read, every finding judged; the Chinese editions written with the English, in the terms of the live Chinese pages and chapters. Each result is stated once in its home section, so both pages summarize and link to its `r-<id>` anchor, and no law is restated in full. Drafted against main as it will be after mv-land's README first screen, which already states what the theory is, both premises with their roles, the receipts count, that the tests were frozen (some passed, some failed) and that there is no outside review yet; neither page repeats more of that than a reader arriving from elsewhere needs.
+
+## Excess over budget (amendment 1)
+
+None: every draft is at or under its budget after the read's findings were taken, which added about 140 words of never-cut material to the overview and 60 to the one page (hypotheses, failures as they fell, P3, the acyclic limit, open items). Those were offset by cuts of material that is not on the never-cut list, listed in [READ.md.staged](READ.md.staged) and below.
+
+## What moved where
+
+### The one page
+
+- Kept, tightened: what it is (made with AI; proofs machine-checked, everything else AI-reviewed; no person has reviewed it), the standings, the line of the argument [AI reading], the root, five bullets of what the laws say, the ethics with both premises as two bullets, the fished stock as one worked example, the evidence (records, receipts by link, the empty axiom report and the modelling choices, not new mathematics, the premise ledger, theses frozen with some passed and some failed, the frozen-rule caveat), the classical texts, what is not yet done.
+- Dropped to its home: the per-law hypotheses beyond the deciding one (each bullet says "under hypotheses its home section states" and links the record); the longer standings list (08 #standings-and-bases); the classical texts' corpus and relations (06); the theses one by one (08 #theses; the overview's table); the paragraph on why the classical names were chosen (06).
+- Counts: none copied; the receipts count links to RESULTS.md.
+
+### The overview
+
+Shape: the ten chapter sections kept as the order of the argument, each opening with the question it answers; the old §9 list of twelve central results folded into the sections where each result is introduced (each was already stated there), and §9 is now the theses table alone. The fished stock is the one worked example, through §§2, 3, 5 and 7.
+
+Dropped from the overview to their home sections (each still stated there, under the linked anchor):
+
+- How to read: the paragraph on what each classical principle decides (08 #calibrations); the standings row for a named model (the regime, the hexagrams), each now said at its use.
+- §1: the instance-theorem example, a formation arising where its occurrence begins (01 #instances, linked); the fire-and-fuel witness (01 #fire-and-fuel); how a configuration relates, the step index and identity across steps (01 #how-it-relates, #r-the-step-index-from-own-courses, #r-identity-across-steps); balance from the first law (01 #r-balance-from-the-first-law); the closures' four kinds and their nesting (01 #r-levels-of-closure, linked); priority within condition and the non-transitivity witness (01 #r-continuation-relative-to-a-class).
+- §2: attraction as not returning (02 #r-attraction-is-not-returning); the before-and-after of a juncture (02 #r-reaching-before-and-after-a-juncture); Landauer's count and Bennett's history, and the rest theorem's full premises (02 #r-least-loss-rest, #r-continued-change-needs-openness, linked); the margin's formula and two draws each survivable alone (02 #margin); capture through the rule (02 #r-capture-through-the-rule); regulation's laws (02 #regulation, linked).
+- §3: Fine and Wilf (03 #r-identification-where-bounded, linked); the strict-order clause of what choices show (03 #r-what-choices-show-of-an-order, linked); the published prediction of the reading loop (03 #the-reading-loop, linked); gluing under parity (03 #r-gluing-under-parity); a reading informed and revalued (03 #r-a-reading-informed-and-revalued); the detail of learning and inquiry (03 #learning, #inquiry, linked).
+- §4: the section's opening sentence; the group-selection clause (04 #r-selection-with-returns-to-groupmates, linked); carriers beginning; the confined rise, cancer and the germ-line witness (04 #r-confined-rise-within-a-whole, linked).
+- §5: the loop law's exponential bound (05 #r-mutual-dependence-and-its-pace, linked); position not protecting and positions summing to zero and the race-for-position premise (05 #r-relative-position-is-zero-sum, linked); giving that waits and tolerance (05 #r-giving-that-waits-on-giving, #r-thresholds-of-waiting); conditions kept together (05 #r-conditions-kept-together); what a rise draws from beyond (05 #r-raising-what-couples-in-draws-from-beyond); drawers in turn (05 #optimum-cases, linked); shared codes and markets' four laws (05, linked).
+- §6: the corpus's list of texts (06); the nine traditions assessment (06 #r-chinese-sources-on-the-spine, linked).
+- §7: the clearer and dweller witness (07 #r-what-the-dynamics-leave-open, linked; the fished stock carries the same point); rivals bounded in time and the double-negation step (07 #r-rivals-bounded-in-time); self-concern through dependence (07 #r-self-concern-through-dependence); need read with time (07 #r-need-and-feeding-read-with-time); the class of being joined (07 #r-the-class-of-being-joined); graded significance and Pigou–Dalton (07 #r-graded-significance-and-priority); basic priority step by step and the malignant-formation witness (07 #r-basic-priority-step-by-step); the six published alignment approaches assessment (07 #alignment-without-premise, linked); the gap for one's own act (07 #r-the-gap-for-ones-own-act).
+- §8: the continuous-course example (08 #r-what-discrete-steps-and-whole-amounts-represent, linked); propext and why the core states ↔ where = is needed (08 #r-proposition-identity); the last change of a run (08 #r-the-last-change-of-a-run).
+- §10: the open items are kept, shortened; the particular-laws item keeps four of its examples (which lumping, how pools form, real amounts, continuous time) and drops the others (keeping widening other than by name, why a descendant depends on what its giver draws, self-changing conditions and presence in time), each at 02, 03 and 04 #open; the tests item keeps T1, T3, T4, T5 and T7 and drops T2 on grassland and forests and T6 where a dependent feeds back (08 #theses).
+
+Counts: the lifting item's "45 of 127" is replaced by a link to 08 §7 (amendment 3: read, not copied). The theses table keeps the live page's standings, which carry test outcomes; a comment marks the table to be checked against 08's at landing.
+
+## Sentences U4's boundary record and §八 step 5 change
+
+Each is marked in the draft by an HTML comment, not counted in the measure:
+
+- ONE-PAGE.md.staged and ONE-PAGE.zh.md.staged, "What is not yet done", first bullet: after U4's boundary record, how many laws are derived on and reach the grammar, and how standings are named; after §八 step 5, that each conditional law is written as an exact condition with a counterexample where it fails, or what is left of that.
+- THE-THEORY-OF-BECOMING.md.staged and its .zh, §10 "Lifting": the derived and reach figures (read from master-laws.json) and how standings are named, after U4.
+- The same, §10 "Conditional laws": what §八 step 5 wrote, and where, after step 5.
+- The standings table under "How to read this" (both overview editions) and "Each claim states its standing" (both one pages) follow U4's naming of standings if it changes the labels.
+
+## For the same landing: the RP2 kit README
+
+`_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rp2-philosophy/README.md`, line 80, says "07 §8 also omits that label; its owner was told." HE2 (landed 31 October 2026) has since added the label: 07 now gives 生生 as "[AI reading, D1]" in §2 and in §8's T8. Proposed replacement for that sentence:
+
+> 07 omitted that label then; HE2 (landed 31 October 2026) has since added it in §2 and in §8's T8.
