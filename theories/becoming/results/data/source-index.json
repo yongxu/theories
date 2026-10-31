@@ -784,6 +784,7 @@
         "experiments/commons-outrun-generalizing/README.md",
         "experiments/drain-beyond-the-reward/DESIGN.md",
         "experiments/formations-that-read/DESIGN.md",
+        "experiments/formations-that-read/REST-TR-RR.md",
         "experiments/formations-that-read/REVIEW.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ActiveReading.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
