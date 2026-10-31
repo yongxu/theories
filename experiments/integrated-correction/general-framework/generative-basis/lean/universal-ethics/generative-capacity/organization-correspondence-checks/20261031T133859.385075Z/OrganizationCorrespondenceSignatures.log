@@ -1,0 +1,15 @@
+@Becoming.OrganizationCorrespondence.frontier_iff_undominated : ∀ {H : Type} {eligible : H → Prop}
+  {better : H → H → Prop} {menu : List H},
+  (∀ (a : H), eligible a ↔ a ∈ menu) →
+    ∀ {a : H}, PracticalJudgment.Frontier eligible better a ↔ Becoming.Undominated menu better a
+@Becoming.OrganizationCorrespondence.formation_required_by_core : ∀ {H : Type} (eligible : H → Prop)
+  (better : H → H → Prop) (formed : H → Prop) (menu : List H),
+  menu ≠ [] →
+    (∀ (a : H), eligible a ↔ a ∈ menu) →
+      (∀ (a : H), ¬better a a) →
+        (∀ {a b c : H}, better a b → better b c → better a c) →
+          (∀ (a : H), eligible a → ¬formed a → ∃ b, eligible b ∧ better b a) →
+            PracticalJudgment.Required (PracticalJudgment.Frontier eligible better) formed
+Becoming.OrganizationCorrespondence.coordination_is_required_by_core : PracticalJudgment.Required
+  (PracticalJudgment.Frontier RelationalOrganization.eligible RelationalOrganization.better)
+  RelationalOrganization.formed

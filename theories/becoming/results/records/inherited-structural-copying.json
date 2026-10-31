@@ -210,7 +210,7 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Core: Becoming.Copying (becoming-checks/20261022T054058.112616Z) and Becoming.Courses (becoming-checks/20261020T051144.879480Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: StructuralCopying by its folder's check (structural-copying-verification/, Lean 4.29.1: 34 new theorems, 57 new audits, 430 in the import closure) and CopyingInstances by its instance checker (copying-instances-checks/20261020T161910.956874Z, Lean 4.29.1), at most propext, Quot.sound and Classical.choice. The primary paper gives mechanism and comparison context; no new reanalysis of data.",
+    "en": "Core: Becoming.Copying (becoming-checks/20261022T054058.112616Z) and Becoming.Courses (becoming-checks/20261020T051144.879480Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: StructuralCopying by its folder's check (structural-copying-verification/, Lean 4.29.1: 34 new theorems, 57 new audits, 430 in the import closure) and CopyingInstances by its instance checker (copying-instances-checks/20261031T131950.855717Z, Lean 4.29.1), at most propext, Quot.sound and Classical.choice. The primary paper gives mechanism and comparison context; no new reanalysis of data.",
     "zh": "核心 Copying、Courses：4.29.1 合并检查器（becoming-checks/），公理报告为空。外围 StructuralCopying：其目录的检查（structural-copying-verification/，4.29.1，新定理34、审计57、闭包430）；CopyingInstances：实例检查器（copying-instances-checks/，4.29.1）；至多 propext、Quot.sound、Classical.choice。论文只作机制与比较背景，无新复算。"
   },
   "next_delta": {
@@ -450,6 +450,12 @@
       "role": "receipt",
       "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z/verification.json",
+      "role": "receipt",
+      "sha256": "1714d686be952c87cf3753951a201e5755d18b2d3a3762dc816abd2d7ef9813f",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -469,7 +475,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261020T161910.956874Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z/verification.json",
       "sha256_pointer": "/source_sha256/CopyingInstances",
       "success_pointer": "/status",
       "success_value": "passed"

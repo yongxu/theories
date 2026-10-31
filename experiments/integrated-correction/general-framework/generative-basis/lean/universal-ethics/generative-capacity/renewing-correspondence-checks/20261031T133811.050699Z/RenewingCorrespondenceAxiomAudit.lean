@@ -1,0 +1,14 @@
+import RenewingCorrespondence
+#print axioms Becoming.RenewingCorrespondence.beyond
+#print axioms Becoming.RenewingCorrespondence.formedOf
+#print axioms Becoming.RenewingCorrespondence.remaining_falls
+#print axioms Becoming.RenewingCorrespondence.forms_while_held
+#print axioms Becoming.RenewingCorrespondence.moves
+#print axioms Becoming.RenewingCorrespondence.moves_length
+#print axioms Becoming.RenewingCorrespondence.moves_succ
+#print axioms Becoming.RenewingCorrespondence.total_append
+#print axioms Becoming.RenewingCorrespondence.total_moves
+#print axioms Becoming.RenewingCorrespondence.path_trace
+#print axioms Becoming.RenewingCorrespondence.beyond_current_bounded_by_core
+#print axioms Becoming.RenewingCorrespondence.beyond_current_ceases_by_core
+#print axioms Becoming.RenewingCorrespondence.shared_formation_ends_by_core

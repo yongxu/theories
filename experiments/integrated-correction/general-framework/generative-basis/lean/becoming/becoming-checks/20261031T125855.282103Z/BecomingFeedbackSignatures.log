@@ -1,0 +1,363 @@
+@Becoming.Flow.affectedBy_of_fedFrom : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {g h : F},
+  L.FedFrom W g h → L.AffectedBy W g h
+@Becoming.Flow.shares_of_affectedBy : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {g h : F},
+  L.AffectedBy W g h → L.Shares W g h
+@Becoming.Flow.withinInfluence_of_withinFeeding : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {f g : F}, L.WithinFeeding W f g → L.WithinInfluence W f g
+@Becoming.Flow.withinSystem_of_withinInfluence : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {f g : F}, L.WithinInfluence W f g → L.WithinSystem W f g
+@Becoming.Flow.shares_symm : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {g h : F},
+  L.Shares W g h → L.Shares W h g
+@Becoming.Flow.WithinSystem.symm : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f g : F},
+  L.WithinSystem W f g → L.WithinSystem W g f
+@Becoming.Flow.withinSystem_of_withinReach : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f g : F},
+  L.WithinReach W f g → L.WithinSystem W f g
+@Becoming.Flow.ReachesBefore.reaches : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {part : F → Bool}
+  {t : Nat} {g : F}, L.ReachesBefore W part t g → L.Reaches W part g
+@Becoming.Flow.system_whole_of_common : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C},
+  (∀ (g : F), L.TakesPart W g c) → ∀ (f g : F), L.WithinSystem W f g
+@Becoming.Flow.reach_whole_of_common : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C},
+  (∀ (g : F), W.DependsOn g c ∧ L.Exchanges g c) → ∀ (f g : F), L.WithinReach W f g
+@Becoming.Flow.feeding_whole_of_common : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {c : C}, (∀ (g : F), g ∈ L.present t ∧ W.requires t g c ∧ 0 < L.give t g c) → ∀ (f g : F), L.WithinFeeding W f g
+@Becoming.Flow.beyond_influence : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f g h : F},
+  L.WithinInfluence W f g → ¬L.WithinInfluence W f h → ∀ {c : C}, W.DependsOn g c → ¬L.Exchanges h c
+@Becoming.Flow.Balances.levels_agree : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {L' : Becoming.Flow F C} {W' : Becoming.Web F C},
+  L.Balances W →
+    L'.Balances W' →
+      ∀ {c : C},
+        W.level 0 c = W'.level 0 c →
+          (∀ (t : Nat), L.taken t c = L'.taken t c) →
+            (∀ (t : Nat), L.given t c = L'.given t c) → ∀ (t : Nat), W.level t c = W'.level t c
+@Becoming.Flow.Balances.support_agrees : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {L' : Becoming.Flow F C} {W' : Becoming.Web F C},
+  L.Balances W →
+    L'.Balances W' →
+      ∀ {g : F},
+        (∀ (t : Nat) (c : C), W.requires t g c ↔ W'.requires t g c) →
+          (∀ (t : Nat) (c : C), W.need t g c = W'.need t g c) →
+            (∀ (c : C), W.DependsOn g c → W.level 0 c = W'.level 0 c) →
+              (∀ (t : Nat) (c : C), W.DependsOn g c → L.taken t c = L'.taken t c) →
+                (∀ (t : Nat) (c : C), W.DependsOn g c → L.given t c = L'.given t c) →
+                  ∀ (t : Nat), W.Supported t g ↔ W'.Supported t g
+@Becoming.Flow.Balances.agrees_iff_even : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ (t : Nat) (c : C),
+          W.level t c = l t c ↔
+            (Becoming.total (Becoming.steps 0 t) fun s => L.partTaken part s c) =
+              Becoming.total (Becoming.steps 0 t) fun s => L.partGiven part s c
+@Becoming.Flow.Balances.le_withheld : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {part : F → Bool},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l → ∀ {c : C}, (∀ (s : Nat), L.partGiven part s c = 0) → ∀ (t : Nat), W.level t c ≤ l t c
+@Becoming.Flow.Balances.admits_without_taker : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {t : Nat} {g : F},
+          (∀ (c : C), W.requires t g c → ∀ (s : Nat), L.partGiven part s c = 0) → W.Supported t g → W.Admits (l t) t g
+@Becoming.Flow.ite_part_zero : ∀ {F : Type} {part : F → Bool} {f : F} {q : Nat},
+  (part f = true → q = 0) → (if part f = true then q else 0) = 0
+@Becoming.Flow.part_of_ite_pos : ∀ {F : Type} {part : F → Bool} {f : F} {q : Nat},
+  (0 < if part f = true then q else 0) → part f = true ∧ 0 < q
+@Becoming.Flow.Balances.agrees_of_quiet : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {c : C}, (∀ (h : F), part h = true → ¬L.Exchanges h c) → ∀ (t : Nat), W.level t c = l t c
+@Becoming.Flow.Balances.exchanges_before_of_differs : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {t : Nat} {c : C},
+          ¬W.level t c = l t c → ∃ h s, part h = true ∧ s < t ∧ h ∈ L.present s ∧ (0 < L.take s h c ∨ 0 < L.give s h c)
+@Becoming.Flow.Balances.exchanges_of_differs : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l → ∀ {t : Nat} {c : C}, ¬W.level t c = l t c → ∃ h, part h = true ∧ L.Exchanges h c
+@Becoming.Flow.Balances.agrees_or_reaches_before : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {t : Nat} {g : F} {c : C}, W.requires t g c → W.level t c = l t c ∨ L.ReachesBefore W part t g
+@Becoming.Flow.Balances.agrees_or_reaches : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {t : Nat} {g : F} {c : C}, W.requires t g c → W.level t c = l t c ∨ L.Reaches W part g
+@Becoming.Flow.Balances.admits_unreached_before : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {t : Nat} {g : F}, ¬L.ReachesBefore W part t g → (W.Supported t g ↔ W.Admits (l t) t g)
+@Becoming.Flow.Balances.admits_unreached : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l → ∀ {g : F}, ¬L.Reaches W part g → ∀ (t : Nat), W.Supported t g ↔ W.Admits (l t) t g
+@Becoming.Flow.unreached_within_influence : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool} {f : F},
+  (∀ (h : F), part h = true → ¬L.WithinInfluence W f h) → ∀ {g : F}, L.WithinInfluence W f g → ¬L.Reaches W part g
+@Becoming.Flow.Balances.uncoupled_beyond_influence : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {f : F},
+          (∀ (h : F), part h = true → ¬L.WithinInfluence W f h) →
+            ∀ (t : Nat) (g : F), L.WithinInfluence W f g → (W.Supported t g ↔ W.Admits (l t) t g)
+@Becoming.Flow.Balances.retains_transfer : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool} {Pos : Type},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {sig sig' : Pos → Nat → F → Prop} {p : Pos},
+          (∀ (t : Nat) (g : F), L.ReachesBefore W part t g → sig' p t g → sig p t g) →
+            (W.Retains sig p W.level l → W.Retains sig' p W.level l) ∧
+              (W.Retains sig p l W.level → W.Retains sig' p l W.level)
+@Becoming.Flow.Balances.not_adds_transfer : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool} {Pos : Type},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {sig sig' : Pos → Nat → F → Prop} {p : Pos},
+          (∀ (t : Nat) (g : F), L.ReachesBefore W part t g → sig' p t g → sig p t g) →
+            (¬W.Adds sig p W.level l → ¬W.Adds sig' p W.level l) ∧ (¬W.Adds sig p l W.level → ¬W.Adds sig' p l W.level)
+@Becoming.Flow.Balances.comparison_local : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool} {Pos : Type},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {sig sig' : Pos → Nat → F → Prop} {p : Pos},
+          (∀ (t : Nat) (g : F), L.ReachesBefore W part t g → (sig p t g ↔ sig' p t g)) →
+            (W.Retains sig p W.level l ↔ W.Retains sig' p W.level l) ∧
+              (W.Retains sig p l W.level ↔ W.Retains sig' p l W.level) ∧
+                (¬W.Adds sig p W.level l ↔ ¬W.Adds sig' p W.level l) ∧
+                  (¬W.Adds sig p l W.level ↔ ¬W.Adds sig' p l W.level)
+@Becoming.Flow.Balances.comparison_within_reach : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool} {Pos : Type},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {sig : Pos → Nat → F → Prop} {p : Pos},
+          (∀ (t : Nat) (g : F), L.ReachesBefore W part t g → sig p t g) →
+            (W.Retains sig p W.level l ↔ W.Includes W.level l) ∧
+              (W.Retains sig p l W.level ↔ W.Includes l W.level) ∧
+                (¬W.Adds sig p W.level l ↔ ¬W.Exceeds W.level l) ∧ (¬W.Adds sig p l W.level ↔ ¬W.Exceeds l W.level)
+@Becoming.Flow.Balances.adds_iff_exceeds_of_decidable : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool} {Pos : Type},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {sig : Pos → Nat → F → Prop} {p : Pos},
+          (∀ (t : Nat) (g : F), L.ReachesBefore W part t g → sig p t g) →
+            ∀ (decided : (t : Nat) → (g : F) → Decidable (sig p t g)),
+              (W.Adds sig p W.level l ↔ W.Exceeds W.level l) ∧ (W.Adds sig p l W.level ↔ W.Exceeds l W.level)
+@Becoming.Flow.Balances.not_not_adds_of_exceeds : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool} {Pos : Type},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {sig : Pos → Nat → F → Prop} {p : Pos},
+          (∀ (t : Nat) (g : F), L.ReachesBefore W part t g → sig p t g) →
+            (W.Exceeds W.level l → ¬¬W.Adds sig p W.level l) ∧ (W.Exceeds l W.level → ¬¬W.Adds sig p l W.level)
+@Becoming.Flow.Balances.differs_before : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {L' : Becoming.Flow F C} {W' : Becoming.Web F C},
+  L.Balances W →
+    L'.Balances W' →
+      (∀ (c : C), W.level 0 c = W'.level 0 c) →
+        ∀ {c : C} (t : Nat),
+          ¬W.level t c = W'.level t c → ∃ s, s < t ∧ (¬L.taken s c = L'.taken s c ∨ ¬L.given s c = L'.given s c)
+@Becoming.Flow.Balances.comparison_within_difference : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {Pos : Type} {L' : Becoming.Flow F C} {W' : Becoming.Web F C},
+  L.Balances W →
+    L'.Balances W' →
+      (∀ (c : C), W.level 0 c = W'.level 0 c) →
+        ∀ {sig : Pos → Nat → F → Prop} {p : Pos},
+          (∀ (t : Nat) (g : F), L.DiffersBefore L' W t g → sig p t g) →
+            (W.Retains sig p W.level W'.level ↔ W.Includes W.level W'.level) ∧
+              (W.Retains sig p W'.level W.level ↔ W.Includes W'.level W.level) ∧
+                (¬W.Adds sig p W.level W'.level ↔ ¬W.Exceeds W.level W'.level) ∧
+                  (¬W.Adds sig p W'.level W.level ↔ ¬W.Exceeds W'.level W.level)
+@Becoming.Flow.reaches_within_closed : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {part : F → Bool}
+  {region : F → Prop},
+  Becoming.ClosedUnder (L.Affects W) region →
+    (∀ (h : F), part h = true → region h) → ∀ {g : F}, L.Reaches W part g → region g
+@Becoming.Flow.reaches_withinReach : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {part : F → Bool}
+  {f : F}, (∀ (h : F), part h = true → L.WithinReach W f h) → ∀ {g : F}, L.Reaches W part g → L.WithinReach W f g
+@Becoming.Flow.reaches_withinSystem : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {part : F → Bool}
+  {f : F}, (∀ (h : F), part h = true → L.WithinSystem W f h) → ∀ {g : F}, L.Reaches W part g → L.WithinSystem W f g
+@Becoming.Flow.unreached_within_system : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {part : F → Bool}
+  {f : F}, (∀ (h : F), part h = true → ¬L.WithinSystem W f h) → ∀ {g : F}, L.WithinSystem W f g → ¬L.Reaches W part g
+@Becoming.Flow.own_within_reach : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {part : F → Bool}
+  {f : F}, (∀ (h : F), part h = true → h = f) → ∀ (h : F), part h = true → L.WithinReach W f h
+@Becoming.Flow.own_within_system : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {part : F → Bool}
+  {f : F}, (∀ (h : F), part h = true → h = f) → ∀ (h : F), part h = true → L.WithinSystem W f h
+@Becoming.Flow.withinSystem_closed : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (f : F),
+  Becoming.ClosedUnder (L.Affects W) (L.WithinSystem W f)
+@Becoming.Flow.Balances.closed_comparison : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {part : F → Bool} {Pos : Type},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {region : Pos → F → Prop} {p : Pos},
+          Becoming.ClosedUnder (L.Affects W) (region p) →
+            (∀ (h : F), part h = true → region p h) →
+              (W.Retains (Becoming.bounded region) p W.level l ↔ W.Includes W.level l) ∧
+                (W.Retains (Becoming.bounded region) p l W.level ↔ W.Includes l W.level) ∧
+                  (¬W.Adds (Becoming.bounded region) p W.level l ↔ ¬W.Exceeds W.level l) ∧
+                    (¬W.Adds (Becoming.bounded region) p l W.level ↔ ¬W.Exceeds l W.level)
+Becoming.Trophic.balances : Becoming.Trophic.flow.Balances Becoming.Trophic.web
+Becoming.Trophic.acting : Becoming.Trophic.flow.Acting Becoming.Trophic.web
+Becoming.Trophic.taking : Becoming.Trophic.flow.Taking Becoming.Trophic.web
+Becoming.Trophic.dependent : Becoming.Trophic.web.Dependent
+Becoming.Trophic.responsive_balances : Becoming.Trophic.responsiveFlow.Balances Becoming.Trophic.responsiveWeb
+Becoming.Trophic.responsive_acting : Becoming.Trophic.responsiveFlow.Acting Becoming.Trophic.responsiveWeb
+Becoming.Trophic.responsive_taking : Becoming.Trophic.responsiveFlow.Taking Becoming.Trophic.responsiveWeb
+Becoming.Trophic.responsive_dependent : Becoming.Trophic.responsiveWeb.Dependent
+Becoming.Trophic.fed_closed : Becoming.Trophic.flow.FedClosed Becoming.Trophic.web Becoming.Trophic.fed
+@Becoming.Trophic.den_of_far : ∀ {c : Becoming.Trophic.Place},
+  Becoming.Trophic.flow.TakesPart Becoming.Trophic.web Becoming.Trophic.Formation.far c → c = Becoming.Trophic.Place.den
+@Becoming.Trophic.far_of_den : ∀ {g : Becoming.Trophic.Formation},
+  Becoming.Trophic.flow.TakesPart Becoming.Trophic.web g Becoming.Trophic.Place.den → g = Becoming.Trophic.Formation.far
+Becoming.Trophic.near_closed : Becoming.ClosedUnder (Becoming.Trophic.flow.Shares Becoming.Trophic.web)
+  Becoming.Trophic.near
+Becoming.Trophic.mediates : Becoming.Trophic.flow.Balances Becoming.Trophic.web ∧
+  Becoming.Trophic.flow.Acting Becoming.Trophic.web ∧
+    Becoming.Trophic.flow.Taking Becoming.Trophic.web ∧
+      Becoming.Trophic.web.Dependent ∧
+        Becoming.Trophic.responsiveFlow.Balances Becoming.Trophic.responsiveWeb ∧
+          Becoming.Trophic.responsiveFlow.Acting Becoming.Trophic.responsiveWeb ∧
+            Becoming.Trophic.responsiveFlow.Taking Becoming.Trophic.responsiveWeb ∧
+              Becoming.Trophic.responsiveWeb.Dependent ∧
+                (∀ (t : Nat),
+                    Becoming.Trophic.flow.give t Becoming.Trophic.Formation.sun Becoming.Trophic.Place.growth = 1 ∧
+                      Becoming.Trophic.responsiveFlow.give t Becoming.Trophic.Formation.sun
+                          Becoming.Trophic.Place.growth =
+                        1) ∧
+                  (∀ (t : Nat),
+                      Becoming.Trophic.web.active t Becoming.Trophic.Formation.deer →
+                        0 <
+                          Becoming.Trophic.flow.take t Becoming.Trophic.Formation.deer Becoming.Trophic.Place.growth) ∧
+                    (∀ (t : Nat),
+                        Becoming.Trophic.responsiveWeb.active t Becoming.Trophic.Formation.deer →
+                          0 <
+                            Becoming.Trophic.responsiveFlow.take t Becoming.Trophic.Formation.deer
+                              Becoming.Trophic.Place.growth) ∧
+                      (∀ (t : Nat),
+                          Becoming.Trophic.web.active t Becoming.Trophic.Formation.forest ∧
+                            Becoming.Trophic.web.Supported t Becoming.Trophic.Formation.forest) ∧
+                        (∀ (n : Nat),
+                            ¬Becoming.Trophic.responsiveWeb.Supported (n + 2) Becoming.Trophic.Formation.forest) ∧
+                          (∀ (t : Nat) (c : Becoming.Trophic.Place),
+                              Becoming.Trophic.flow.give t Becoming.Trophic.Formation.wolves c = 0) ∧
+                            ¬Becoming.Trophic.flow.WithinFeeding Becoming.Trophic.web Becoming.Trophic.Formation.forest
+                                  Becoming.Trophic.Formation.wolves ∧
+                              Becoming.Trophic.flow.WithinInfluence Becoming.Trophic.web
+                                  Becoming.Trophic.Formation.forest Becoming.Trophic.Formation.wolves ∧
+                                ¬Becoming.Trophic.flow.WithinSystem Becoming.Trophic.web
+                                    Becoming.Trophic.Formation.forest Becoming.Trophic.Formation.far
+Becoming.Trophic.wolves_withheld : Becoming.Trophic.flow.WithheldLevels Becoming.Trophic.wolvesPart Becoming.Trophic.web
+  Becoming.Trophic.withoutWolves
+@Becoming.Trophic.deer_without_wolves : ∀ {l : Nat → Becoming.Trophic.Place → Nat},
+  Becoming.Trophic.flow.WithheldLevels Becoming.Trophic.wolvesPart Becoming.Trophic.web l →
+    Becoming.Trophic.web.Admits (l 1) 1 Becoming.Trophic.Formation.deer ∧
+      ¬Becoming.Trophic.web.Admits (Becoming.Trophic.web.level 1) 1 Becoming.Trophic.Formation.deer
+Becoming.Trophic.wolves_unreached : ¬Becoming.Trophic.flow.Reaches Becoming.Trophic.web Becoming.Trophic.wolvesPart
+    Becoming.Trophic.Formation.forest
+Becoming.Trophic.difference_reaches_forest : ¬Becoming.Trophic.flow.Reaches Becoming.Trophic.web
+      Becoming.Trophic.wolvesPart Becoming.Trophic.Formation.forest ∧
+  Becoming.Trophic.flow.DiffersBefore Becoming.Trophic.responsiveFlow Becoming.Trophic.web 2
+    Becoming.Trophic.Formation.forest
+Becoming.Trophic.farWolves_withheld : Becoming.Trophic.flow.WithheldLevels Becoming.Trophic.farWolvesPart
+  Becoming.Trophic.web Becoming.Trophic.withoutWolves
+@Becoming.Trophic.far_system : ∀ {g : Becoming.Trophic.Formation},
+  Becoming.Trophic.flow.WithinSystem Becoming.Trophic.web Becoming.Trophic.Formation.far g →
+    g = Becoming.Trophic.Formation.far
+Becoming.Static.shares_unaffected : Becoming.Static.flow.Balances Becoming.Static.web ∧
+  Becoming.Static.web.Dependent ∧
+    Becoming.Static.flow.WithinSystem Becoming.Static.web true false ∧
+      ¬Becoming.Static.flow.AffectedBy Becoming.Static.web true false ∧
+        ¬Becoming.Static.flow.WithinInfluence Becoming.Static.web true false
+Becoming.Clearing.alongDependence_closed : Becoming.ClosedUnder
+  (Becoming.Clearing.flow.AffectedBy Becoming.Clearing.web) Becoming.Clearing.alongDependence
+Becoming.Clearing.levels : Becoming.Clearing.flow.WithinFeeding Becoming.Clearing.web
+    Becoming.Clearing.Formation.clearer Becoming.Clearing.Formation.source ∧
+  ¬Becoming.Clearing.flow.WithinInfluence Becoming.Clearing.web Becoming.Clearing.Formation.clearer
+        Becoming.Clearing.Formation.dweller ∧
+    Becoming.Clearing.flow.WithinSystem Becoming.Clearing.web Becoming.Clearing.Formation.clearer
+      Becoming.Clearing.Formation.dweller
+Becoming.Clearing.clearer_system : ∀ (g : Becoming.Clearing.Formation),
+  Becoming.Clearing.flow.WithinSystem Becoming.Clearing.web Becoming.Clearing.Formation.clearer g
+Becoming.Clearing.spared_balances : Becoming.Clearing.sparedFlow.Balances Becoming.Clearing.sparedWeb
+Becoming.Clearing.spared_dependent : Becoming.Clearing.sparedWeb.Dependent
+@Becoming.Clearing.resource_of_clearer : ∀ {c : Becoming.Clearing.Place},
+  Becoming.Clearing.web.DependsOn Becoming.Clearing.Formation.clearer c → c = Becoming.Clearing.Place.resource
+Becoming.Clearing.uncoupled : Becoming.Clearing.sparedFlow.Balances Becoming.Clearing.sparedWeb ∧
+  Becoming.Clearing.sparedWeb.Dependent ∧
+    (∀ (t : Nat),
+        Becoming.Clearing.web.Supported t Becoming.Clearing.Formation.clearer ↔
+          Becoming.Clearing.sparedWeb.Supported t Becoming.Clearing.Formation.clearer) ∧
+      (∀ (t : Nat),
+          Becoming.Clearing.web.active t Becoming.Clearing.Formation.clearer ∧
+            Becoming.Clearing.web.Supported t Becoming.Clearing.Formation.clearer) ∧
+        (∀ (t : Nat),
+            Becoming.Clearing.sparedWeb.active t Becoming.Clearing.Formation.dweller ∧
+              Becoming.Clearing.sparedWeb.Supported t Becoming.Clearing.Formation.dweller) ∧
+          ∀ (n : Nat), ¬Becoming.Clearing.web.active (n + 2) Becoming.Clearing.Formation.dweller
+Becoming.Clearing.reaches_dweller : Becoming.Clearing.flow.Reaches Becoming.Clearing.web Becoming.Clearing.clearerPart
+  Becoming.Clearing.Formation.dweller
+@Becoming.Clearing.system_counts_dweller : ∀ {l : Nat → Becoming.Clearing.Place → Nat},
+  Becoming.Clearing.flow.WithheldLevels Becoming.Clearing.clearerPart Becoming.Clearing.web l →
+    Becoming.Clearing.web.Adds (Becoming.bounded (Becoming.Clearing.flow.WithinSystem Becoming.Clearing.web))
+        Becoming.Clearing.Formation.clearer l Becoming.Clearing.web.level ∧
+      ¬Becoming.Clearing.web.Retains (Becoming.bounded (Becoming.Clearing.flow.WithinSystem Becoming.Clearing.web))
+            Becoming.Clearing.Formation.clearer Becoming.Clearing.web.level l ∧
+        Becoming.Clearing.web.Retains (Becoming.bounded (Becoming.Clearing.flow.WithinInfluence Becoming.Clearing.web))
+          Becoming.Clearing.Formation.clearer Becoming.Clearing.web.level l
+Becoming.Clearing.clearerReach_closed : Becoming.ClosedUnder (Becoming.Clearing.flow.Affects Becoming.Clearing.web)
+  Becoming.Clearing.clearerReach
+Becoming.Clearing.reach_middle : Becoming.Clearing.flow.WithinReach Becoming.Clearing.web
+    Becoming.Clearing.Formation.clearer Becoming.Clearing.Formation.dweller ∧
+  ¬Becoming.Clearing.flow.WithinReach Becoming.Clearing.web Becoming.Clearing.Formation.clearer
+        Becoming.Clearing.Formation.source ∧
+    Becoming.Clearing.flow.WithinInfluence Becoming.Clearing.web Becoming.Clearing.Formation.clearer
+        Becoming.Clearing.Formation.source ∧
+      ¬Becoming.Clearing.flow.WithinInfluence Becoming.Clearing.web Becoming.Clearing.Formation.clearer
+            Becoming.Clearing.Formation.dweller ∧
+        Becoming.Clearing.flow.WithinSystem Becoming.Clearing.web Becoming.Clearing.Formation.clearer
+          Becoming.Clearing.Formation.source
+Becoming.Clearing.reach_centred : ¬Becoming.Clearing.flow.WithinReach Becoming.Clearing.web
+    Becoming.Clearing.Formation.dweller Becoming.Clearing.Formation.clearer
+Becoming.Clearing.clearer_own : ∀ (h : Becoming.Clearing.Formation),
+  Becoming.Clearing.clearerPart h = true → h = Becoming.Clearing.Formation.clearer
+Becoming.Clearing.no_levels_without_source : ¬∃ l,
+    Becoming.Clearing.flow.WithheldLevels Becoming.Clearing.sourcePart Becoming.Clearing.web l
+Becoming.Margin.balances : Becoming.Margin.flow.Balances Becoming.Margin.web
+Becoming.Margin.withheld : Becoming.Margin.flow.WithheldLevels Becoming.Margin.takerPart Becoming.Margin.web
+  fun x x_1 => 3
+@Becoming.Margin.reach_without_misjudgment : ∀ {l : Nat → Unit → Nat},
+  Becoming.Margin.flow.WithheldLevels Becoming.Margin.takerPart Becoming.Margin.web l →
+    Becoming.Margin.flow.Reaches Becoming.Margin.web Becoming.Margin.takerPart false ∧
+      ¬Becoming.Margin.flow.WithinInfluence Becoming.Margin.web true false ∧
+        Becoming.Margin.web.Includes Becoming.Margin.web.level l ∧
+          Becoming.Margin.web.Includes l Becoming.Margin.web.level
+Becoming.Late.balances : Becoming.Late.flow.Balances Becoming.Late.web
+Becoming.Late.withheld : Becoming.Late.flow.WithheldLevels Becoming.Late.latePart Becoming.Late.web fun x x_1 => 2
+@Becoming.Late.affected_without_effect : ∀ {l : Nat → Unit → Nat},
+  Becoming.Late.flow.WithheldLevels Becoming.Late.latePart Becoming.Late.web l →
+    Becoming.Late.flow.AffectedBy Becoming.Late.web true false ∧
+      Becoming.Late.flow.Reaches Becoming.Late.web Becoming.Late.latePart true ∧
+        (∀ (t : Nat), ¬Becoming.Late.flow.ReachesBefore Becoming.Late.web Becoming.Late.latePart t true) ∧
+          ∀ (t : Nat), Becoming.Late.web.Supported t true ∧ Becoming.Late.web.Admits (l t) t true

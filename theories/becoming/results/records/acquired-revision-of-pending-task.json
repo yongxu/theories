@@ -120,8 +120,8 @@
     }
   ],
   "validation_scope": {
-    "en": "Core: the current bytes of Becoming.Countdown are bound to receipt becoming-checks/20261019T231053.882924Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for the cited declarations. Periphery: VersionedTaskInstances is bound to versioned-task-instances-checks/20261020T161926.448088Z (Lean 4.30.0-rc2; the head laws use propext, the continuation laws propext, Quot.sound and Classical.choice), CommonTaskRevision to common-task-revision-verification.json (Lean 4.30.0-rc2, import closure rebuilt; at most propext and Quot.sound).",
-    "zh": "核心：Countdown 绑定合并核心检查器回执 becoming-checks/20261019T231053.882924Z（Lean 4.29.1），公理报告皆空。外围（Lean 4.30.0-rc2）：VersionedTaskInstances 绑定 20261020T161926.448088Z，队首律用 propext，接续律另用 Quot.sound、Classical.choice；CommonTaskRevision 绑定其回执（导入闭包重建），至多 propext、Quot.sound。"
+    "en": "Core: the current bytes of Becoming.Countdown are bound to receipt becoming-checks/20261019T231053.882924Z of the consolidated core checker (Lean 4.29.1), with empty axiom reports for the cited declarations. Periphery: VersionedTaskInstances is bound to versioned-task-instances-checks/20261031T132223.713396Z (Lean 4.30.0-rc2; the head laws use propext, the continuation laws propext, Quot.sound and Classical.choice), CommonTaskRevision to common-task-revision-verification.json (Lean 4.30.0-rc2, import closure rebuilt; at most propext and Quot.sound).",
+    "zh": "核心：Countdown 绑定合并核心检查器回执 becoming-checks/20261019T231053.882924Z（Lean 4.29.1），公理报告皆空。外围（Lean 4.30.0-rc2）：VersionedTaskInstances 绑定 20261031T132223.713396Z，队首律用 propext，接续律另用 Quot.sound、Classical.choice；CommonTaskRevision 绑定其回执（导入闭包重建），至多 propext、Quot.sound。"
   },
   "next_delta": {
     "en": "Acquire which conditions are relevant to a pending task, and continue to support the actual need when the old method no longer applies.",
@@ -303,6 +303,12 @@
       "role": "receipt",
       "sha256": "04603eb9a2886e68a09da9ad1e3015350cd41e5b40d2ea35f2fecfcc1b2f5b3e",
       "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261031T132223.713396Z/verification.json",
+      "role": "receipt",
+      "sha256": "0ff2356fbb5a97de4a3d89e30c76960ae23f3e9694a92e376cf30c9dfa585b45",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -322,7 +328,7 @@
     },
     {
       "source": "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean",
-      "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json",
+      "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261031T132223.713396Z/verification.json",
       "sha256_pointer": "/source_sha256/VersionedTaskInstances",
       "success_pointer": "/status",
       "success_value": "passed"

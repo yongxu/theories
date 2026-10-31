@@ -249,8 +249,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the periphery checker check_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261030T043328.214810Z): all 76 declarations of FreeEnergyReals, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. Independent reviews by other AI agents (REVIEW-UE17; REVIEW-UE22 and RECHECK-UE22 for the counting form), study sections 450 and 462; not reviewed by a person.",
-    "zh": "外围检查器 check_free_energy_reals.py 以 Lean 4.30.0-rc2 与固定之 Mathlib 实查（回执 20261030T043328.214810Z）：FreeEnergyReals 之全部 76 项声明，皆只依 Lean 之标准公理，其闭包之每一核心模块皆合于已通过之核心回执。另有 AI 代理作独立审查（REVIEW-UE17；计数形式见 REVIEW-UE22 与 RECHECK-UE22），见研究第 450 与 462 节；未经人审。"
+    "en": "Machine-checked by the periphery checker check_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134204.303683Z): all 76 declarations of FreeEnergyReals, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. Independent reviews by other AI agents (REVIEW-UE17; REVIEW-UE22 and RECHECK-UE22 for the counting form), study sections 450 and 462; not reviewed by a person.",
+    "zh": "外围检查器 check_free_energy_reals.py 以 Lean 4.30.0-rc2 与固定之 Mathlib 实查（回执 20261031T134204.303683Z）：FreeEnergyReals 之全部 76 项声明，皆只依 Lean 之标准公理，其闭包之每一核心模块皆合于已通过之核心回执。另有 AI 代理作独立审查（REVIEW-UE17；计数形式见 REVIEW-UE22 与 RECHECK-UE22），见研究第 450 与 462 节；未经人审。"
   },
   "next_delta": {
     "en": "Complexity and accuracy from the core's own shares; review by a person.",
@@ -461,6 +461,12 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue22-counting-and-real-forms/RECHECK-UE22.md",
       "role": "integration",
       "sha256": "fba7f509dbf9532507e35c42d47628a79580ad88899bdc87125dacd07fdfdf79"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261031T134204.303683Z/verification.json",
+      "role": "receipt",
+      "sha256": "fd2eaac4db131cff1dc110b19cff002bbc1ca4e57fd69a4a9a9134696d09b507",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -473,7 +479,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261031T134204.303683Z/verification.json",
       "sha256_pointer": "/source_sha256/FreeEnergyReals",
       "success_pointer": "/status",
       "success_value": "passed"

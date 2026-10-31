@@ -1,0 +1,100 @@
+Becoming.PreparationCorrespondence.use_unit : ∀ (prev : Option Bool) (word : List Bool),
+  Becoming.Copying.use Becoming.PreparationCorrespondence.unit prev word = word.length
+Becoming.PreparationCorrespondence.countOf_eq_count : ∀ (a : Bool) (l : List Bool),
+  Becoming.Copying.countOf a l = List.count a l
+Becoming.PreparationCorrespondence.mem_iff_countOf_pos : ∀ (x : Bool) (pool : List Bool),
+  x ∈ pool ↔ 0 < Becoming.Copying.countOf x pool
+Becoming.PreparationCorrespondence.erase_eq_remove : ∀ (x : Bool) (pool : List Bool),
+  pool.erase x = Becoming.Copying.remove x pool
+Becoming.PreparationCorrespondence.route_some_iff : ∀ (target pool : List Bool) (fuel : Nat) (rest : List Bool)
+  (left : Nat) (prev : Option Bool) (built : List Bool) (used : Nat),
+  MaterialMaturation.route target pool fuel = some (rest, left) ↔
+    (Becoming.Copying.steps Becoming.PreparationCorrespondence.unit target.length
+            { previous := prev, pending := target, built := built, pool := pool, free := fuel, used := used }).pending =
+        [] ∧
+      (Becoming.Copying.steps Becoming.PreparationCorrespondence.unit target.length
+              { previous := prev, pending := target, built := built, pool := pool, free := fuel, used := used }).pool =
+          rest ∧
+        (Becoming.Copying.steps Becoming.PreparationCorrespondence.unit target.length
+              { previous := prev, pending := target, built := built, pool := pool, free := fuel, used := used }).free =
+          left
+Becoming.PreparationCorrespondence.preparation_empties_iff : ∀ (target pool : List Bool) (fuel : Nat),
+  (∃ left, MaterialMaturation.route target pool fuel = some ([], left)) ↔ pool.Perm target ∧ target.length ≤ fuel
+Becoming.PreparationCorrespondence.preparation_leaves : ∀ (target pool : List Bool) (fuel : Nat),
+  pool.Perm target → target.length ≤ fuel → MaterialMaturation.route target pool fuel = some ([], fuel - target.length)
+@Becoming.PreparationCorrespondence.connected_of_adjacent : ∀ {bonds : List GrownFragmentation.Edge} {a b : Nat},
+  Becoming.PreparationCorrespondence.adjacent bonds a b → DevelopmentalAssociation.Connected bonds a b
+Becoming.PreparationCorrespondence.connected_iff_within : ∀ (bonds : List GrownFragmentation.Edge) (a b : Nat),
+  DevelopmentalAssociation.Connected bonds a b ↔
+    Becoming.WithinClosure (Becoming.PreparationCorrespondence.adjacent bonds) a b
+@Becoming.PreparationCorrespondence.component_is_closure : ∀ {count : Nat} {es : List GrownFragmentation.Edge}
+  {r : Nat},
+  r ∈ GrownFragmentation.component count es r →
+    GrownFragmentation.closed es (GrownFragmentation.component count es r) = true →
+      ∀ (v : Nat),
+        v ∈ GrownFragmentation.component count es r ↔
+          Becoming.WithinClosure (Becoming.PreparationCorrespondence.adjacent es) r v
+@Becoming.PreparationCorrespondence.certificate_exact_split_by_core : ∀ {s : GrownFragmentation.Growing}
+  {e : GrownFragmentation.Edge},
+  GrownFragmentation.cutCertificate s e = true →
+    (∀ (v : Nat),
+        v ∈ GrownFragmentation.component s.body.count (GrownFragmentation.cutEdges s.body.bonds e) e.fst ↔
+          DevelopmentalAssociation.Connected (GrownFragmentation.cutEdges s.body.bonds e) e.fst v) ∧
+      (∀ (v : Nat),
+          v ∈ GrownFragmentation.component s.body.count (GrownFragmentation.cutEdges s.body.bonds e) e.snd ↔
+            DevelopmentalAssociation.Connected (GrownFragmentation.cutEdges s.body.bonds e) e.snd v) ∧
+        ∀ (v : Nat),
+          v < s.body.count →
+            (v ∈ GrownFragmentation.component s.body.count (GrownFragmentation.cutEdges s.body.bonds e) e.fst ↔
+              ¬v ∈ GrownFragmentation.component s.body.count (GrownFragmentation.cutEdges s.body.bonds e) e.snd)
+@Becoming.PreparationCorrespondence.cut_separates : ∀ {s : GrownFragmentation.Growing} {e : GrownFragmentation.Edge},
+  GrownFragmentation.cutCertificate s e = true →
+    ¬Becoming.WithinClosure (Becoming.PreparationCorrespondence.adjacent (GrownFragmentation.cutEdges s.body.bonds e))
+        e.fst e.snd
+Becoming.PreparationCorrespondence.returns_differ : GrownFragmentation.meanCutReturn GrownFragmentation.chain ≠
+  GrownFragmentation.meanCutReturn GrownFragmentation.branched
+Becoming.PreparationCorrespondence.no_parent_summary_predictor_by_core : ¬∃ f,
+    GrownFragmentation.meanCutReturn GrownFragmentation.chain =
+        f (GrownFragmentation.parentSummary GrownFragmentation.chain) ∧
+      GrownFragmentation.meanCutReturn GrownFragmentation.branched =
+        f (GrownFragmentation.parentSummary GrownFragmentation.branched)
+Becoming.PreparationCorrespondence.adjacent_iff_links : ∀ (bonds : List GrownFragmentation.Edge) (a b : Nat),
+  Becoming.PreparationCorrespondence.adjacent bonds a b ↔ Becoming.Cuts.Links bonds a b
+Becoming.PreparationCorrespondence.connected_iff_links : ∀ (bonds : List GrownFragmentation.Edge) (a b : Nat),
+  DevelopmentalAssociation.Connected bonds a b ↔ Becoming.WithinClosure (Becoming.Cuts.Links bonds) a b
+@Becoming.PreparationCorrespondence.divide_attached : ∀ {s t : DevelopmentalAssociation.State} {p : Nat},
+  Becoming.PreparationCorrespondence.AttachedBelow s →
+    DevelopmentalAssociation.divide s p = some t → Becoming.PreparationCorrespondence.AttachedBelow t
+Becoming.PreparationCorrespondence.develop_attached : ∀ (ps : List Nat) {s : GrownFragmentation.Growing},
+  Becoming.PreparationCorrespondence.AttachedBelow s.body →
+    Becoming.PreparationCorrespondence.AttachedBelow (GrownFragmentation.develop ps s).body
+Becoming.PreparationCorrespondence.initial_attached : Becoming.PreparationCorrespondence.AttachedBelow
+  GrownFragmentation.initial.body
+@Becoming.PreparationCorrespondence.cut_attached : ∀ {newer older : List GrownFragmentation.Edge} {p n : Nat},
+  Becoming.Cuts.Attaches (newer ++ (p, n) :: older) →
+    GrownFragmentation.cutEdges (newer ++ (p, n) :: older) (p, n) = newer ++ older
+@Becoming.PreparationCorrespondence.bond_cut_separates : ∀ {s : DevelopmentalAssociation.State},
+  Becoming.PreparationCorrespondence.AttachedBelow s →
+    ∀ {e : GrownFragmentation.Edge},
+      e ∈ s.bonds → ¬DevelopmentalAssociation.Connected (GrownFragmentation.cutEdges s.bonds e) e.fst e.snd
+Becoming.PreparationCorrespondence.every_grown_bond_separates : ∀ (ps : List Nat) {e : GrownFragmentation.Edge},
+  e ∈ (GrownFragmentation.develop ps GrownFragmentation.initial).body.bonds →
+    ¬DevelopmentalAssociation.Connected
+        (GrownFragmentation.cutEdges (GrownFragmentation.develop ps GrownFragmentation.initial).body.bonds e) e.fst
+        e.snd
+@Becoming.PreparationCorrespondence.aggregate_cut_unchanged_iff : ∀ {s t : DevelopmentalAssociation.State},
+  Becoming.PreparationCorrespondence.AttachedBelow s →
+    ∀ {a b p n : Nat},
+      (p, n) ∈ s.bonds →
+        (a, b) ≠ (p, n) →
+          DevelopmentalAssociation.aggregate s a b = some t →
+            ((∀ (f g : Nat),
+                DevelopmentalAssociation.Connected t.bonds f g ↔
+                  DevelopmentalAssociation.Connected (GrownFragmentation.cutEdges t.bonds (p, n)) f g) ↔
+              DevelopmentalAssociation.Connected (GrownFragmentation.cutEdges s.bonds (p, n)) p a ∧
+                  DevelopmentalAssociation.Connected (GrownFragmentation.cutEdges s.bonds (p, n)) b n ∨
+                DevelopmentalAssociation.Connected (GrownFragmentation.cutEdges s.bonds (p, n)) p b ∧
+                  DevelopmentalAssociation.Connected (GrownFragmentation.cutEdges s.bonds (p, n)) a n)
+Becoming.PreparationCorrespondence.reinforced_cut_unchanged : ∀ (f g : Nat),
+  DevelopmentalAssociation.Connected GrownFragmentation.reinforced.body.bonds f g ↔
+    DevelopmentalAssociation.Connected (GrownFragmentation.cutEdges GrownFragmentation.reinforced.body.bonds (3, 4)) f g

@@ -146,8 +146,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked: the core's 25 new declarations of Becoming.RegimeMargin by the consolidated Lean 4.29.1 checker (receipt 20261021T102032.314972Z), with empty axiom reports; the periphery module RegimeReals's 17 declarations by its own checker with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261021T102713.696033Z), each on Lean's standard axioms only, its core modules matching passed receipts. Built and reviewed in one session, with no separate reviewer; author review in study section 302; not independently reviewed by a person.",
-    "zh": "机器检查：核心 Becoming.RegimeMargin 新增的 25 项声明由 Lean 4.29.1 合并检查器实查（回执 20261021T102032.314972Z），公理报告为空；外围模块 RegimeReals 的 17 项声明由其自身检查器以 Lean 4.30.0-rc2 与固定的 Mathlib 实查（回执 20261021T102713.696033Z），只用 Lean 标准公理，核心模块与已通过回执相符。一个会话中构建并审查，无另设审查者；作者审查见研究第 302 节；未经人的独立审查。"
+    "en": "Machine-checked: the core's 25 new declarations of Becoming.RegimeMargin by the consolidated Lean 4.29.1 checker (receipt 20261021T102032.314972Z), with empty axiom reports; the periphery module RegimeReals's 17 declarations by its own checker with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134231.224593Z), each on Lean's standard axioms only, its core modules matching passed receipts. Built and reviewed in one session, with no separate reviewer; author review in study section 302; not independently reviewed by a person.",
+    "zh": "机器检查：核心 Becoming.RegimeMargin 新增的 25 项声明由 Lean 4.29.1 合并检查器实查（回执 20261021T102032.314972Z），公理报告为空；外围模块 RegimeReals 的 17 项声明由其自身检查器以 Lean 4.30.0-rc2 与固定的 Mathlib 实查（回执 20261031T134231.224593Z），只用 Lean 标准公理，核心模块与已通过回执相符。一个会话中构建并审查，无另设审查者；作者审查见研究第 302 节；未经人的独立审查。"
   },
   "next_delta": {
     "en": "A computed threshold and the regime's case H + y over the reals; continuous time; a state with a further lag; coupled conditions with a recent giving; the order of fates above the level law's peak, where measured giving falls as the level rises; an independent review.",
@@ -429,6 +429,12 @@
       "role": "receipt",
       "sha256": "d5900bc8b613124282a1b19105136d6be2334131768151b24783f9206f1a54e0",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/regime/regime-reals-checks/20261031T134231.224593Z/verification.json",
+      "role": "receipt",
+      "sha256": "0f0fa8999db9e5ccd45b841d03ab879745de97643f519c2675591a5a65419db6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -476,7 +482,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/regime/regime-reals-checks/20261021T102713.696033Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/regime/regime-reals-checks/20261031T134231.224593Z/verification.json",
       "sha256_pointer": "/source_sha256/RegimeReals",
       "success_pointer": "/status",
       "success_value": "passed"

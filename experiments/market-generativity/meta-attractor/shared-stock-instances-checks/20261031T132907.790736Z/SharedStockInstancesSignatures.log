@@ -1,0 +1,9 @@
+SharedStockInstances.selectedTotal_eq_mass : ∀ (chosen : Nat → Bool) (draws : Nat → Nat) (n : Nat),
+  CorrectionDependence.selectedTotal n chosen draws = Becoming.mass (SharedStockInstances.firstDraws n) draws chosen
+SharedStockInstances.total_eq_mass : ∀ (draws : Nat → Nat) (n : Nat),
+  CorrectionDependence.total n draws = Becoming.mass (SharedStockInstances.firstDraws n) draws fun x => true
+SharedStockInstances.every_selection_within_iff_total_within : ∀ (n stock : Nat) (draws : Nat → Nat),
+  (∀ (chosen : Nat → Bool), CorrectionDependence.selectedTotal n chosen draws ≤ stock) ↔
+    CorrectionDependence.total n draws ≤ stock
+SharedStockInstances.each_within_alone_not_together : (∀ (i : Nat), i < 2 → (fun x => 2) i ≤ 2) ∧
+  ¬∀ (chosen : Nat → Bool), (CorrectionDependence.selectedTotal 2 chosen fun x => 2) ≤ 2

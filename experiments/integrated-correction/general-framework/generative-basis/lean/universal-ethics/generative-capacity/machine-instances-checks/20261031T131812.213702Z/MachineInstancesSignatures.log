@@ -1,0 +1,544 @@
+Becoming.MachineInstances.chunks_eq : ∀
+  (r : Generative.AcquiredSegmentation.Sound → Generative.AcquiredSegmentation.Sound → Bool)
+  (xs : List Generative.AcquiredSegmentation.Sound),
+  Generative.AcquiredSegmentation.chunks r xs = Becoming.Segmentation.chunks r xs
+@Becoming.MachineInstances.flatten_eq_join : ∀ {α : Type} (L : List (List α)), L.flatten = Becoming.Segmentation.join L
+Becoming.MachineInstances.encode_eq : ∀ (ws : List Bool),
+  Generative.AcquiredSegmentation.encode ws = Becoming.Segmentation.encode Generative.AcquiredSegmentation.word ws
+Becoming.MachineInstances.spelled : Becoming.Segmentation.Spelled Generative.AcquiredSegmentation.word
+  Becoming.MachineInstances.wordFirst Becoming.MachineInstances.wordRest
+Becoming.MachineInstances.two_word_iff : ∀
+  (r : Generative.AcquiredSegmentation.Sound → Generative.AcquiredSegmentation.Sound → Bool),
+  (∀ (ws : List Bool),
+      Generative.AcquiredSegmentation.chunks r (Generative.AcquiredSegmentation.encode ws) =
+        List.map Generative.AcquiredSegmentation.word ws) ↔
+    r Generative.AcquiredSegmentation.Sound.a Generative.AcquiredSegmentation.Sound.b = true ∧
+      r Generative.AcquiredSegmentation.Sound.c Generative.AcquiredSegmentation.Sound.d = true ∧
+        r Generative.AcquiredSegmentation.Sound.b Generative.AcquiredSegmentation.Sound.a = false ∧
+          r Generative.AcquiredSegmentation.Sound.b Generative.AcquiredSegmentation.Sound.c = false ∧
+            r Generative.AcquiredSegmentation.Sound.d Generative.AcquiredSegmentation.Sound.a = false ∧
+              r Generative.AcquiredSegmentation.Sound.d Generative.AcquiredSegmentation.Sound.c = false
+@Becoming.MachineInstances.ite_some : ∀ {β : Type} {c : Prop} {d : Decidable c} {x t : β},
+  (if c then some x else none) = some t → x = t
+Becoming.MachineInstances.rule_kept : Becoming.Gated.KeptBy OrganizationalRuleInheritance.process
+  Becoming.MachineInstances.adopts OrganizationalRuleInheritance.State.rule
+@Becoming.MachineInstances.segments_of_groups : ∀ {log : List (Option Generative.AcquiredSegmentation.Sound)},
+  Becoming.MachineInstances.Groups log →
+    ∀ (ws : List Bool),
+      Generative.AcquiredSegmentation.chunks (Generative.AcquiredSegmentation.bond log)
+          (Generative.AcquiredSegmentation.encode ws) =
+        List.map Generative.AcquiredSegmentation.word ws
+Becoming.MachineInstances.readForms_eq : ∀ (s : Generative.AcquiredBinding.Lexicon)
+  (fs : List (List Generative.AcquiredSegmentation.Sound)),
+  Generative.AcquiredBinding.readForms s fs = Becoming.Segmentation.readAll (Generative.AcquiredBinding.resolve s) fs
+Becoming.MachineInstances.interprets_every_iff : ∀ (s : Generative.AcquiredBinding.Lexicon),
+  Becoming.MachineInstances.Groups s.percept.log →
+    ((∀ (ws : List Bool),
+        Generative.AcquiredBinding.interpret s (Generative.AcquiredSegmentation.encode ws) =
+          Generative.AcquiredSegmentation.assembleMessage (List.map Generative.CompositionalAcquisition.Expr.atom ws)) ↔
+      ∀ (b : Bool),
+        Generative.AcquiredBinding.resolve s (Generative.AcquiredSegmentation.word b) =
+          some (Generative.CompositionalAcquisition.Expr.atom b))
+Becoming.MachineInstances.learned_groups : Becoming.MachineInstances.Groups
+  (Generative.AcquiredBinding.learned 32).percept.log
+Becoming.MachineInstances.learned_interprets_every : ∀ (ws : List Bool),
+  Generative.AcquiredBinding.interpret (Generative.AcquiredBinding.learned 32)
+      (Generative.AcquiredSegmentation.encode ws) =
+    Generative.AcquiredSegmentation.assembleMessage (List.map Generative.CompositionalAcquisition.Expr.atom ws)
+Becoming.MachineInstances.coordinated_groups : Becoming.MachineInstances.Groups
+  (Generative.EnactedScene.coordinated 37).lexicon.percept.log
+Becoming.MachineInstances.coordinated_resolves : ∀ (b : Bool),
+  Generative.AcquiredBinding.resolve (Generative.EnactedScene.coordinated 37).lexicon
+      (Generative.AcquiredSegmentation.word b) =
+    some (Generative.CompositionalAcquisition.Expr.atom b)
+Becoming.MachineInstances.coordinated_interprets_every : ∀ (ws : List Bool),
+  Generative.AcquiredBinding.interpret (Generative.EnactedScene.coordinated 37).lexicon
+      (Generative.AcquiredSegmentation.encode ws) =
+    Generative.AcquiredSegmentation.assembleMessage (List.map Generative.CompositionalAcquisition.Expr.atom ws)
+Becoming.MachineInstances.acquired_groups : Becoming.MachineInstances.Groups
+  (Generative.EncounterChoice.acquired 51).situation.lexicon.percept.log
+Becoming.MachineInstances.acquired_resolves : ∀ (b : Bool),
+  Generative.AcquiredBinding.resolve (Generative.EncounterChoice.acquired 51).situation.lexicon
+      (Generative.AcquiredSegmentation.word b) =
+    some (Generative.CompositionalAcquisition.Expr.atom b)
+Becoming.MachineInstances.acquired_interprets_every : ∀ (ws : List Bool),
+  Generative.AcquiredBinding.interpret (Generative.EncounterChoice.acquired 51).situation.lexicon
+      (Generative.AcquiredSegmentation.encode ws) =
+    Generative.AcquiredSegmentation.assembleMessage (List.map Generative.CompositionalAcquisition.Expr.atom ws)
+Becoming.MachineInstances.retrospective_groups : Becoming.MachineInstances.Groups
+  (Generative.RetrospectiveBinding.bindingView (Generative.RetrospectiveBinding.retrospective 36)
+        Generative.SourceReliance.allFaults).percept.log
+Becoming.MachineInstances.retrospective_interprets_every : ∀ (ws : List Bool),
+  Generative.AcquiredBinding.interpret
+      (Generative.RetrospectiveBinding.bindingView (Generative.RetrospectiveBinding.retrospective 36)
+        Generative.SourceReliance.allFaults)
+      (Generative.AcquiredSegmentation.encode ws) =
+    Generative.AcquiredSegmentation.assembleMessage (List.map Generative.CompositionalAcquisition.Expr.atom ws)
+Becoming.MachineInstances.experienced_groups : Becoming.MachineInstances.Groups
+  (Generative.AcquiredSegmentation.experienced 28).log
+Becoming.MachineInstances.experienced_parses_every : ∀ (ws : List Bool),
+  Generative.AcquiredSegmentation.parse (Generative.AcquiredSegmentation.experienced 28)
+      (Generative.AcquiredSegmentation.encode ws) =
+    Generative.AcquiredSegmentation.assembleMessage (List.map Generative.CompositionalAcquisition.Expr.atom ws)
+Becoming.MachineInstances.edges_eq : ∀ (x : Option Generative.AcquiredSegmentation.Sound)
+  (rest : List (Option Generative.AcquiredSegmentation.Sound)),
+  Generative.AcquiredSegmentation.edges (x :: rest) = Becoming.Segmentation.edges.edgesFrom x rest
+Becoming.MachineInstances.edges_all_eq : ∀ (log : List (Option Generative.AcquiredSegmentation.Sound)),
+  Generative.AcquiredSegmentation.edges log = Becoming.Segmentation.edges log
+@Becoming.MachineInstances.countP_eq : ∀ {β : Type} (p q : β → Bool),
+  (∀ (b : β), p b = q b) → ∀ (l : List β), List.countP p l = Becoming.Segmentation.countIf q l
+Becoming.MachineInstances.beq_sound : ∀ (x y : Generative.AcquiredSegmentation.Sound), (x == y) = decide (x = y)
+Becoming.MachineInstances.beq_pair : ∀
+  (e : Generative.AcquiredSegmentation.Sound × Generative.AcquiredSegmentation.Sound)
+  (x y : Generative.AcquiredSegmentation.Sound), (e == (x, y)) = decide (e = (x, y))
+Becoming.MachineInstances.bond_eq : ∀ (log : List (Option Generative.AcquiredSegmentation.Sound))
+  (x y : Generative.AcquiredSegmentation.Sound),
+  Generative.AcquiredSegmentation.bond log x y = Becoming.Segmentation.bond log x y
+Becoming.MachineInstances.bond_functional : ∀ (log : List (Option Generative.AcquiredSegmentation.Sound))
+  {x y z : Generative.AcquiredSegmentation.Sound},
+  Generative.AcquiredSegmentation.bond log x y = true → Generative.AcquiredSegmentation.bond log x z = true → y = z
+Becoming.MachineInstances.summary_carries_law : ∃ Q,
+  Becoming.Determined Q ∧
+    Becoming.FactorsThrough (Becoming.Assurance.ofMap Generative.RelationalReduction.next)
+      Generative.RelationalReduction.summarize Q
+Becoming.MachineInstances.summary_every_word : ∀ (v : Generative.OperativeCoherence.Joint)
+  (word : List Generative.RelationalReduction.Event),
+  Generative.RelationalReduction.summarize (List.foldl Generative.RelationalReduction.next v word) =
+    List.foldl Generative.RelationalReduction.reducedNext (Generative.RelationalReduction.summarize v) word
+Becoming.MachineInstances.cycle_eq : ∀ (r : GoalFormationRevision.Selection) (p : GoalFormationRevision.Practice)
+  (w q z : Nat),
+  GoalFormationRevision.cycle r p { work := w, reserve := q, spent := z } =
+    if 2 ≤ w then
+      some
+        (if GoalFormationRevision.feedback r p = 2 ∧ 2 ≤ q then { work := w, reserve := q - 2, spent := z + 2 }
+        else { work := w - 2, reserve := q, spent := z + 2 })
+    else none
+Becoming.MachineInstances.cycles_iff : ∀ (r : GoalFormationRevision.Selection) (p : GoalFormationRevision.Practice)
+  (n w q z : Nat),
+  (GoalFormationRevision.cycles r p n { work := w, reserve := q, spent := z }).isSome = true ↔
+    n = 0 ∨ 2 ≤ w ∧ 2 * (n - if GoalFormationRevision.feedback r p = 2 then q / 2 else 0) ≤ w
+Becoming.MachineInstances.cycles_learning_iff : ∀ (n w q z : Nat),
+  (GoalFormationRevision.cycles GoalFormationRevision.Selection.learning GoalFormationRevision.Practice.learning n
+          { work := w, reserve := q, spent := z }).isSome =
+      true ↔
+    n = 0 ∨ 2 ≤ w ∧ 2 * (n - q / 2) ≤ w
+Becoming.MachineInstances.cycles_unselected_iff : ∀ (n w q z : Nat),
+  (GoalFormationRevision.cycles GoalFormationRevision.Selection.attendance GoalFormationRevision.Practice.learning n
+          { work := w, reserve := q, spent := z }).isSome =
+      true ↔
+    2 * n ≤ w
+Becoming.MachineInstances.learning_loss : ∀ (c : GoalFormationRevision.Conditions),
+  (if
+        ((GoalFormationRevision.perform c GoalFormationRevision.Practice.learning).access &&
+            (GoalFormationRevision.perform c GoalFormationRevision.Practice.learning).maintenance) =
+          true then
+      0
+    else 1) =
+    Becoming.MachineInstances.lossPer c
+Becoming.MachineInstances.operateMany_learning : ∀ (c : GoalFormationRevision.Conditions) (n : Nat)
+  (s : GoalFormationRevision.State),
+  s.goal = some GoalFormationRevision.Goal.learning →
+    (GoalFormationRevision.operateMany c n s).isSome =
+        (GoalFormationRevision.cycles s.selector GoalFormationRevision.Practice.learning n s.account).isSome ∧
+      ∀ (t : GoalFormationRevision.State),
+        GoalFormationRevision.operateMany c n s = some t →
+          t.goal = s.goal ∧
+            t.selector = s.selector ∧
+              t.losses = s.losses + n * Becoming.MachineInstances.lossPer c ∧ t.archive.length = s.archive.length + n
+Becoming.MachineInstances.completed_isSome_iff : ∀ (c : GoalFormationRevision.Conditions),
+  (GoalFormationRevision.completed c).isSome = true ↔ c.accessLoss = true ∧ c.transitionLoss = false
+Becoming.MachineInstances.revised_class : ∀ (c : GoalFormationRevision.Conditions),
+  c.accessLoss = true →
+    c.transitionLoss = false →
+      Option.map (fun s => (s.goal, s.selector, s.losses, s.account, s.archive.length))
+            (GoalFormationRevision.revised c) =
+          some
+            (some GoalFormationRevision.Goal.learning, GoalFormationRevision.Selection.attendance, 1,
+              { work := 5, reserve := 8, spent := 5 }, 2) ∧
+        Option.map (fun s => (s.goal, s.selector, s.losses, s.account, s.archive.length))
+            (GoalFormationRevision.completed c) =
+          some
+            (some GoalFormationRevision.Goal.learning, GoalFormationRevision.Selection.learning, 1,
+              { work := 3, reserve := 8, spent := 7 }, 2)
+@Becoming.MachineInstances.fields_of : ∀ {o : Option GoalFormationRevision.State}
+  {g : Option GoalFormationRevision.Goal} {r : GoalFormationRevision.Selection} {l : Nat}
+  {acc : GoalFormationRevision.Account} {k : Nat},
+  Option.map (fun s => (s.goal, s.selector, s.losses, s.account, s.archive.length)) o = some (g, r, l, acc, k) →
+    ∃ s, o = some s ∧ s.goal = g ∧ s.selector = r ∧ s.losses = l ∧ s.account = acc ∧ s.archive.length = k
+Becoming.MachineInstances.revision_continues : ∀ (c : GoalFormationRevision.Conditions),
+  c.accessLoss = true →
+    c.transitionLoss = false →
+      ∀ (n : Nat),
+        ((GoalFormationRevision.completed c >>= GoalFormationRevision.operateMany c n).isSome = true ↔ n ≤ 5) ∧
+          (∀ (t : GoalFormationRevision.State),
+              GoalFormationRevision.completed c >>= GoalFormationRevision.operateMany c n = some t →
+                t.goal = some GoalFormationRevision.Goal.learning ∧ t.losses = 1 ∧ t.archive.length = 2 + n) ∧
+            ((GoalFormationRevision.revised c >>= GoalFormationRevision.operateMany c n).isSome = true ↔ n ≤ 2)
+Becoming.MachineInstances.harmful_instance : PracticalJudgment.Better
+    (GoalFormationRevision.protects GoalFormationRevision.harmful)
+    (GoalFormationRevision.gains GoalFormationRevision.harmful) GoalFormationRevision.Practice.learning
+    GoalFormationRevision.Practice.attendance ∧
+  Option.map GoalFormationRevision.State.goal
+        (GoalFormationRevision.acquire GoalFormationRevision.harmful GoalFormationRevision.Selection.attendance) =
+      some (some GoalFormationRevision.Goal.attendance) ∧
+    Option.map GoalFormationRevision.State.goal
+          (GoalFormationRevision.completed GoalFormationRevision.harmful >>=
+            GoalFormationRevision.operateMany GoalFormationRevision.harmful 5) =
+        some (some GoalFormationRevision.Goal.learning) ∧
+      Option.map GoalFormationRevision.State.losses
+          (GoalFormationRevision.completed GoalFormationRevision.harmful >>=
+            GoalFormationRevision.operateMany GoalFormationRevision.harmful 5) =
+        some 1
+Becoming.MachineInstances.harmful_bounds : GoalFormationRevision.completed GoalFormationRevision.harmful >>=
+      GoalFormationRevision.operateMany GoalFormationRevision.harmful 6 =
+    none ∧
+  GoalFormationRevision.revised GoalFormationRevision.harmful >>=
+      GoalFormationRevision.operateMany GoalFormationRevision.harmful 3 =
+    none
+Becoming.MachineInstances.practice_process_eq : JointPracticeContinuation.process =
+  Becoming.Assurance.ofPartial JointPracticeContinuation.step
+Becoming.MachineInstances.practice_run_eq : ∀ (s : JointPracticeContinuation.State)
+  (es : List JointPracticeContinuation.Event),
+  JointPracticeContinuation.run s es = Becoming.Assurance.runPartial JointPracticeContinuation.step s es
+@Becoming.MachineInstances.practice_trace_iff_run : ∀ {s t : JointPracticeContinuation.State}
+  {es : List JointPracticeContinuation.Event},
+  Generative.Trace JointPracticeContinuation.process s es t ↔ JointPracticeContinuation.run s es = some t
+Becoming.MachineInstances.methods_kept : Becoming.Gated.KeptBy JointPracticeContinuation.process
+  Becoming.MachineInstances.revises JointPracticeContinuation.State.methods
+@Becoming.MachineInstances.methods_inherited : ∀ {s t : JointPracticeContinuation.State}
+  {es : List JointPracticeContinuation.Event},
+  Generative.Trace JointPracticeContinuation.process s es t →
+    (∀ (e : JointPracticeContinuation.Event), e ∈ es → Becoming.MachineInstances.revises e = false) →
+      t.methods = s.methods
+Becoming.MachineInstances.practice_rule_kept : Becoming.Gated.KeptBy JointPracticeContinuation.process
+  Becoming.MachineInstances.adoptsRule fun s => s.org.rule
+@Becoming.MachineInstances.practice_rule_inherited : ∀ {s t : JointPracticeContinuation.State}
+  {es : List JointPracticeContinuation.Event},
+  Generative.Trace JointPracticeContinuation.process s es t →
+    (∀ (e : JointPracticeContinuation.Event), e ∈ es → Becoming.MachineInstances.adoptsRule e = false) →
+      t.org.rule = s.org.rule
+Becoming.MachineInstances.complete_history_instance : Generative.Trace JointPracticeContinuation.process
+  JointPracticeContinuation.initial
+  (JointPracticeContinuation.firstHistory ++ JointPracticeContinuation.secondHistory ++
+    JointPracticeContinuation.continuationHistory)
+  JointPracticeContinuation.continued
+Becoming.MachineInstances.compatible_eq : ∀ (s : Generative.AcquiredBinding.Lexicon)
+  (form : List Generative.AcquiredSegmentation.Sound) (e : Generative.CompositionalAcquisition.Expr),
+  Generative.AcquiredBinding.compatible s form e =
+    Becoming.CrossSituational.stands (Becoming.MachineInstances.bearsOn s.excluded form)
+      Becoming.MachineInstances.offersOf s.records e
+Becoming.MachineInstances.candidates_eq : ∀ (s : Generative.AcquiredBinding.Lexicon)
+  (form : List Generative.AcquiredSegmentation.Sound),
+  Generative.AcquiredBinding.candidates s form =
+    Becoming.CrossSituational.candidates (Becoming.MachineInstances.bearsOn s.excluded form)
+      Becoming.MachineInstances.offersOf s.repertoire s.records
+Becoming.MachineInstances.resolve_eq : ∀ (s : Generative.AcquiredBinding.Lexicon)
+  (form : List Generative.AcquiredSegmentation.Sound),
+  Generative.AcquiredBinding.resolve s form =
+    Becoming.CrossSituational.unique (Generative.AcquiredBinding.candidates s form)
+Becoming.MachineInstances.resolve_iff : ∀ (s : Generative.AcquiredBinding.Lexicon),
+  Becoming.Distinct s.repertoire →
+    ∀ (b : Bool),
+      Generative.AcquiredBinding.resolve s (Generative.AcquiredSegmentation.word b) =
+          some (Generative.CompositionalAcquisition.Expr.atom b) ↔
+        Becoming.MachineInstances.Separated s.repertoire s.excluded s.records b
+Becoming.MachineInstances.interprets_every_iff_separated : ∀ (s : Generative.AcquiredBinding.Lexicon),
+  Becoming.MachineInstances.Groups s.percept.log →
+    Becoming.Distinct s.repertoire →
+      ((∀ (ws : List Bool),
+          Generative.AcquiredBinding.interpret s (Generative.AcquiredSegmentation.encode ws) =
+            Generative.AcquiredSegmentation.assembleMessage
+              (List.map Generative.CompositionalAcquisition.Expr.atom ws)) ↔
+        ∀ (b : Bool), Becoming.MachineInstances.Separated s.repertoire s.excluded s.records b)
+Becoming.MachineInstances.encounter_inputs : ∀ (raw : List Generative.AcquiredSegmentation.Sound)
+  (offered : List Generative.CompositionalAcquisition.Expr) (origin : Nat) (s : Generative.AcquiredBinding.Lexicon),
+  (Generative.AcquiredBinding.encounter raw offered origin s).percept.log = s.percept.log ∧
+    (Generative.AcquiredBinding.encounter raw offered origin s).repertoire = s.repertoire ∧
+      (Generative.AcquiredBinding.encounter raw offered origin s).excluded = s.excluded
+@Becoming.MachineInstances.single_word : ∀ {log : List (Option Generative.AcquiredSegmentation.Sound)},
+  Becoming.MachineInstances.Groups log →
+    ∀ (b : Bool),
+      Generative.AcquiredSegmentation.chunks (Generative.AcquiredSegmentation.bond log)
+          (Generative.AcquiredSegmentation.word b) =
+        [Generative.AcquiredSegmentation.word b]
+@Becoming.MachineInstances.encounter_records : ∀ {s : Generative.AcquiredBinding.Lexicon},
+  Becoming.MachineInstances.Groups s.percept.log →
+    ∀ (b : Bool) (offered : List Generative.CompositionalAcquisition.Expr) (origin : Nat),
+      (Generative.AcquiredBinding.encounter (Generative.AcquiredSegmentation.word b) offered origin s).records =
+        if 1 ≤ s.percept.machine.support then
+          s.records ++ [{ form := Generative.AcquiredSegmentation.word b, offered := offered, origin := origin }]
+        else s.records
+Becoming.MachineInstances.step_inputs : ∀ (s : Generative.EnactedScene.Situation)
+  (a : Becoming.MachineInstances.SceneMove),
+  (Becoming.MachineInstances.sceneStep s a).lexicon.percept.log = s.lexicon.percept.log ∧
+    (Becoming.MachineInstances.sceneStep s a).lexicon.repertoire = s.lexicon.repertoire ∧
+      (Becoming.MachineInstances.sceneStep s a).lexicon.excluded = s.lexicon.excluded
+Becoming.MachineInstances.step_records : ∀ (s : Generative.EnactedScene.Situation),
+  Becoming.MachineInstances.Groups s.lexicon.percept.log →
+    ∀ (a : Becoming.MachineInstances.SceneMove),
+      (Becoming.MachineInstances.sceneStep s a).lexicon.records =
+        s.lexicon.records ++ Becoming.MachineInstances.heard s a
+Becoming.MachineInstances.enact_inputs : ∀ (h : List Becoming.MachineInstances.SceneMove)
+  (s : Generative.EnactedScene.Situation),
+  (Becoming.MachineInstances.enact s h).lexicon.percept.log = s.lexicon.percept.log ∧
+    (Becoming.MachineInstances.enact s h).lexicon.repertoire = s.lexicon.repertoire ∧
+      (Becoming.MachineInstances.enact s h).lexicon.excluded = s.lexicon.excluded
+Becoming.MachineInstances.enact_records : ∀ (h : List Becoming.MachineInstances.SceneMove)
+  (s : Generative.EnactedScene.Situation),
+  Becoming.MachineInstances.Groups s.lexicon.percept.log →
+    (Becoming.MachineInstances.enact s h).lexicon.records =
+      s.lexicon.records ++ Becoming.MachineInstances.heardAlong s h
+Becoming.MachineInstances.scene_interprets_every_iff : ∀ (s : Generative.EnactedScene.Situation),
+  Becoming.MachineInstances.Groups s.lexicon.percept.log →
+    Becoming.Distinct s.lexicon.repertoire →
+      ∀ (h : List Becoming.MachineInstances.SceneMove),
+        (∀ (ws : List Bool),
+            Generative.AcquiredBinding.interpret (Becoming.MachineInstances.enact s h).lexicon
+                (Generative.AcquiredSegmentation.encode ws) =
+              Generative.AcquiredSegmentation.assembleMessage
+                (List.map Generative.CompositionalAcquisition.Expr.atom ws)) ↔
+          ∀ (b : Bool),
+            Becoming.MachineInstances.Separated s.lexicon.repertoire s.lexicon.excluded
+              (s.lexicon.records ++ Becoming.MachineInstances.heardAlong s h) b
+Becoming.MachineInstances.coordinated_enacts : ∀ (n : Nat),
+  Generative.EnactedScene.coordinated n =
+    Becoming.MachineInstances.enact (Generative.EnactedScene.start n) Becoming.MachineInstances.coordinatedMoves
+Becoming.MachineInstances.start_groups : Becoming.MachineInstances.Groups
+  (Generative.EnactedScene.start 37).lexicon.percept.log
+Becoming.MachineInstances.start_distinct : ∀ (n : Nat),
+  Becoming.Distinct (Generative.EnactedScene.start n).lexicon.repertoire
+Becoming.MachineInstances.coordinated_heard : Becoming.MachineInstances.heardAlong (Generative.EnactedScene.start 37)
+    Becoming.MachineInstances.coordinatedMoves =
+  [{ form := Generative.AcquiredSegmentation.word false,
+      offered := [Generative.CompositionalAcquisition.p0, Generative.CompositionalAcquisition.p1], origin := 0 },
+    { form := Generative.AcquiredSegmentation.word true,
+      offered := [Generative.CompositionalAcquisition.p0, Generative.CompositionalAcquisition.p1], origin := 0 },
+    { form := Generative.AcquiredSegmentation.word false,
+      offered := [Generative.CompositionalAcquisition.p0, Generative.AcquiredBinding.extra], origin := 0 },
+    { form := Generative.AcquiredSegmentation.word true,
+      offered := [Generative.CompositionalAcquisition.p1, Generative.AcquiredBinding.extra], origin := 0 }]
+Becoming.MachineInstances.coordinated_separated : ∀ (b : Bool),
+  Becoming.MachineInstances.Separated (Generative.EnactedScene.start 37).lexicon.repertoire
+    (Generative.EnactedScene.start 37).lexicon.excluded
+    ((Generative.EnactedScene.start 37).lexicon.records ++
+      Becoming.MachineInstances.heardAlong (Generative.EnactedScene.start 37)
+        Becoming.MachineInstances.coordinatedMoves)
+    b
+Becoming.MachineInstances.coordinated_from_history : ∀ (ws : List Bool),
+  Generative.AcquiredBinding.interpret (Generative.EnactedScene.coordinated 37).lexicon
+      (Generative.AcquiredSegmentation.encode ws) =
+    Generative.AcquiredSegmentation.assembleMessage (List.map Generative.CompositionalAcquisition.Expr.atom ws)
+Becoming.MachineInstances.stationary_enacts : ∀ (n : Nat),
+  Generative.EnactedScene.stationary n =
+    Becoming.MachineInstances.enact (Generative.EnactedScene.start n) Becoming.MachineInstances.stationaryMoves
+Becoming.MachineInstances.stationary_fails : ¬∀ (ws : List Bool),
+    Generative.AcquiredBinding.interpret (Generative.EnactedScene.stationary 37).lexicon
+        (Generative.AcquiredSegmentation.encode ws) =
+      Generative.AcquiredSegmentation.assembleMessage (List.map Generative.CompositionalAcquisition.Expr.atom ws)
+Becoming.MachineInstances.mistimed_enacts : ∀ (n : Nat),
+  Generative.EnactedScene.mistimed n =
+    Becoming.MachineInstances.enact (Generative.EnactedScene.start n) Becoming.MachineInstances.mistimedMoves
+Becoming.MachineInstances.mistimed_fails : ¬∀ (ws : List Bool),
+    Generative.AcquiredBinding.interpret (Generative.EnactedScene.mistimed 37).lexicon
+        (Generative.AcquiredSegmentation.encode ws) =
+      Generative.AcquiredSegmentation.assembleMessage (List.map Generative.CompositionalAcquisition.Expr.atom ws)
+Becoming.MachineInstances.encounter_support : ∀ (raw : List Generative.AcquiredSegmentation.Sound)
+  (offered : List Generative.CompositionalAcquisition.Expr) (origin : Nat) (s : Generative.AcquiredBinding.Lexicon),
+  (Generative.AcquiredBinding.encounter raw offered origin s).percept.machine.support = s.percept.machine.support - 1
+Becoming.MachineInstances.speak_records : ∀ (offered es : List Generative.CompositionalAcquisition.Expr)
+  (s : Generative.AcquiredBinding.Lexicon),
+  Becoming.MachineInstances.Groups s.percept.log →
+    es.length ≤ s.percept.machine.support →
+      (Generative.EncounterChoice.speak es offered s).records =
+          s.records ++ Becoming.MachineInstances.namedRecords offered es ∧
+        (Generative.EncounterChoice.speak es offered s).percept.log = s.percept.log ∧
+          (Generative.EncounterChoice.speak es offered s).repertoire = s.repertoire ∧
+            (Generative.EncounterChoice.speak es offered s).excluded = s.excluded
+Becoming.MachineInstances.word_eq_iff : ∀ (c b : Bool),
+  Generative.AcquiredSegmentation.word c = Generative.AcquiredSegmentation.word b ↔ c = b
+Becoming.MachineInstances.stands_named : ∀ (excluded : List Nat),
+  ¬0 ∈ excluded →
+    ∀ (b : Bool) (offered : List Generative.CompositionalAcquisition.Expr)
+      (e : Generative.CompositionalAcquisition.Expr) (es : List Generative.CompositionalAcquisition.Expr),
+      Becoming.CrossSituational.stands
+          (Becoming.MachineInstances.bearsOn excluded (Generative.AcquiredSegmentation.word b))
+          Becoming.MachineInstances.offersOf (Becoming.MachineInstances.namedRecords offered es) e =
+        (!decide (Generative.CompositionalAcquisition.Expr.atom b ∈ es) || decide (e ∈ offered))
+@Becoming.MachineInstances.naming_narrows : ∀ {s : Generative.AcquiredBinding.Lexicon},
+  Becoming.MachineInstances.Groups s.percept.log →
+    ¬0 ∈ s.excluded →
+      ∀ {offered : List Generative.CompositionalAcquisition.Expr},
+        offered.length ≤ s.percept.machine.support →
+          ∀ (b : Bool),
+            Generative.AcquiredBinding.candidates (Generative.EncounterChoice.speak offered offered s)
+                (Generative.AcquiredSegmentation.word b) =
+              if Generative.CompositionalAcquisition.Expr.atom b ∈ offered then
+                List.filter (fun e => decide (e ∈ offered))
+                  (Generative.AcquiredBinding.candidates s (Generative.AcquiredSegmentation.word b))
+              else Generative.AcquiredBinding.candidates s (Generative.AcquiredSegmentation.word b)
+Becoming.MachineInstances.local_naming_narrows : ∀ (a : Generative.EncounterChoice.Activity),
+  Becoming.MachineInstances.Groups a.situation.lexicon.percept.log →
+    ¬0 ∈ a.situation.lexicon.excluded →
+      (Generative.EnactedScene.visible a.situation).length ≤ a.situation.lexicon.percept.machine.support →
+        ∀ (b : Bool),
+          Generative.AcquiredBinding.candidates (Generative.EncounterChoice.localNaming a).situation.lexicon
+              (Generative.AcquiredSegmentation.word b) =
+            if Generative.CompositionalAcquisition.Expr.atom b ∈ Generative.EnactedScene.visible a.situation then
+              List.filter (fun e => decide (e ∈ Generative.EnactedScene.visible a.situation))
+                (Generative.AcquiredBinding.candidates a.situation.lexicon (Generative.AcquiredSegmentation.word b))
+            else Generative.AcquiredBinding.candidates a.situation.lexicon (Generative.AcquiredSegmentation.word b)
+Becoming.MachineInstances.acquired_repertoire : (Generative.EncounterChoice.acquired 51).situation.lexicon.repertoire =
+  [Generative.CompositionalAcquisition.p0, Generative.CompositionalAcquisition.p1, Generative.AcquiredBinding.extra]
+Becoming.MachineInstances.acquired_distinct : Becoming.Distinct
+  (Generative.EncounterChoice.acquired 51).situation.lexicon.repertoire
+Becoming.MachineInstances.acquired_separated : ∀ (b : Bool),
+  Becoming.MachineInstances.Separated (Generative.EncounterChoice.acquired 51).situation.lexicon.repertoire
+    (Generative.EncounterChoice.acquired 51).situation.lexicon.excluded
+    (Generative.EncounterChoice.acquired 51).situation.lexicon.records b
+Becoming.MachineInstances.acquired_from_separation : ∀ (ws : List Bool),
+  Generative.AcquiredBinding.interpret (Generative.EncounterChoice.acquired 51).situation.lexicon
+      (Generative.AcquiredSegmentation.encode ws) =
+    Generative.AcquiredSegmentation.assembleMessage (List.map Generative.CompositionalAcquisition.Expr.atom ws)
+Becoming.MachineInstances.mem_alternatives : ∀ (rs : List Generative.SourceReliance.Route)
+  (faults : List Generative.SourceReliance.Faults) (reports : Generative.SourceReliance.Reports)
+  (e : Generative.CompositionalAcquisition.Expr),
+  e ∈ Generative.RetrospectiveBinding.alternatives rs faults reports ↔
+    ∃ w,
+      (w.route ∈ rs ∧ w.faults ∈ faults) ∧
+        Generative.CompositionalAcquisition.Expr.atom w.target = e ∧ Generative.SourceReliance.view w = reports
+Becoming.MachineInstances.view_candidates : ∀ (s : Generative.RetrospectiveBinding.Memory)
+  (faults : List Generative.SourceReliance.Faults) (form : List Generative.AcquiredSegmentation.Sound),
+  Generative.AcquiredBinding.candidates (Generative.RetrospectiveBinding.bindingView s faults) form =
+    Becoming.CrossSituational.candidates (fun p => decide (p.form = form))
+      (fun p e =>
+        decide
+          (e ∈
+            Generative.RetrospectiveBinding.alternatives (Generative.RetrospectiveBinding.routes s) faults p.reports))
+      s.base.repertoire s.packets
+Becoming.MachineInstances.retrospective_resolves_iff : ∀ (s : Generative.RetrospectiveBinding.Memory)
+  (faults : List Generative.SourceReliance.Faults),
+  Becoming.Distinct s.base.repertoire →
+    ∀ (form : List Generative.AcquiredSegmentation.Sound) (b : Bool),
+      Generative.CompositionalAcquisition.Expr.atom b ∈ s.base.repertoire →
+        (∀ (p : Generative.RetrospectiveBinding.Packet),
+            p ∈ s.packets →
+              p.form = form →
+                ∃ w,
+                  (w.route ∈ Generative.RetrospectiveBinding.routes s ∧ w.faults ∈ faults) ∧
+                    w.target = b ∧ Generative.SourceReliance.view w = p.reports) →
+          (Generative.AcquiredBinding.resolve (Generative.RetrospectiveBinding.bindingView s faults) form =
+              some (Generative.CompositionalAcquisition.Expr.atom b) ↔
+            ∀ (m : Generative.CompositionalAcquisition.Expr),
+              m ∈ s.base.repertoire →
+                m ≠ Generative.CompositionalAcquisition.Expr.atom b →
+                  ∃ p,
+                    p ∈ s.packets ∧
+                      p.form = form ∧
+                        ∀ (w : Generative.SourceReliance.World),
+                          w.route ∈ Generative.RetrospectiveBinding.routes s ∧ w.faults ∈ faults →
+                            Generative.CompositionalAcquisition.Expr.atom w.target = m →
+                              Generative.SourceReliance.view w ≠ p.reports)
+Becoming.MachineInstances.produced_of_calibration : ∀ (s : Generative.RetrospectiveBinding.Memory)
+  (r : Generative.SourceReliance.Route) (reversed : Bool) (ps : List Generative.SourceReliance.Probe)
+  (faults : List Generative.SourceReliance.Faults) (form : List Generative.AcquiredSegmentation.Sound) (target : Bool),
+  s.calibration = Generative.SourceReliance.acquire r reversed ps →
+    (∀ (p : Generative.RetrospectiveBinding.Packet),
+        p ∈ s.packets →
+          p.form = form →
+            ∃ f,
+              f ∈ faults ∧
+                p.reports =
+                  Generative.SourceReliance.emit r { target := target, localFault := f.fst, commonFault := f.snd }) →
+      ∀ (p : Generative.RetrospectiveBinding.Packet),
+        p ∈ s.packets →
+          p.form = form →
+            ∃ w,
+              (w.route ∈ Generative.RetrospectiveBinding.routes s ∧ w.faults ∈ faults) ∧
+                w.target = target ∧ Generative.SourceReliance.view w = p.reports
+Becoming.MachineInstances.coverage_from_law : ∀ (s : Generative.RetrospectiveBinding.Memory)
+  (r : Generative.SourceReliance.Route) (reversed : Bool) (ps : List Generative.SourceReliance.Probe)
+  (faults : List Generative.SourceReliance.Faults) (form : List Generative.AcquiredSegmentation.Sound) (target : Bool)
+  (answer : Generative.CompositionalAcquisition.Expr),
+  s.calibration = Generative.SourceReliance.acquire r reversed ps →
+    Generative.CompositionalAcquisition.Expr.atom target ∈ s.base.repertoire →
+      (∀ (p : Generative.RetrospectiveBinding.Packet),
+          p ∈ s.packets →
+            p.form = form →
+              ∃ f,
+                f ∈ faults ∧
+                  p.reports =
+                    Generative.SourceReliance.emit r { target := target, localFault := f.fst, commonFault := f.snd }) →
+        Generative.AcquiredBinding.resolve (Generative.RetrospectiveBinding.bindingView s faults) form = some answer →
+          answer = Generative.CompositionalAcquisition.Expr.atom target
+Becoming.MachineInstances.retrospective_repertoire : (Generative.RetrospectiveBinding.bindingView
+      (Generative.RetrospectiveBinding.retrospective 36) Generative.SourceReliance.allFaults).repertoire =
+  [Generative.CompositionalAcquisition.p0, Generative.CompositionalAcquisition.p1, Generative.AcquiredBinding.extra]
+Becoming.MachineInstances.retrospective_distinct : Becoming.Distinct
+  (Generative.RetrospectiveBinding.bindingView (Generative.RetrospectiveBinding.retrospective 36)
+      Generative.SourceReliance.allFaults).repertoire
+Becoming.MachineInstances.retrospective_separated : ∀ (b : Bool),
+  Becoming.MachineInstances.Separated
+    (Generative.RetrospectiveBinding.bindingView (Generative.RetrospectiveBinding.retrospective 36)
+        Generative.SourceReliance.allFaults).repertoire
+    (Generative.RetrospectiveBinding.bindingView (Generative.RetrospectiveBinding.retrospective 36)
+        Generative.SourceReliance.allFaults).excluded
+    (Generative.RetrospectiveBinding.bindingView (Generative.RetrospectiveBinding.retrospective 36)
+        Generative.SourceReliance.allFaults).records
+    b
+Becoming.MachineInstances.retrospective_from_separation : ∀ (ws : List Bool),
+  Generative.AcquiredBinding.interpret
+      (Generative.RetrospectiveBinding.bindingView (Generative.RetrospectiveBinding.retrospective 36)
+        Generative.SourceReliance.allFaults)
+      (Generative.AcquiredSegmentation.encode ws) =
+    Generative.AcquiredSegmentation.assembleMessage (List.map Generative.CompositionalAcquisition.Expr.atom ws)
+Becoming.MachineInstances.changed_route_unproduced : ¬Generative.CompositionalAcquisition.Expr.atom true ∈
+    Generative.RetrospectiveBinding.alternatives
+      (Generative.RetrospectiveBinding.routes Generative.RetrospectiveBinding.changedRouteHistory)
+      Generative.SourceReliance.allFaults
+      (Generative.SourceReliance.emit { copiesFirst := false, sharesDisturbance := true }
+        { target := true, localFault := false, commonFault := true })
+Becoming.MachineInstances.better_iff : ∀ (c : GoalFormationRevision.Conditions),
+  PracticalJudgment.Better (GoalFormationRevision.protects c) (GoalFormationRevision.gains c)
+      GoalFormationRevision.Practice.learning GoalFormationRevision.Practice.attendance ↔
+    c.accessLoss = true ∧ c.transitionLoss = false
+Becoming.MachineInstances.completed_iff_better : ∀ (c : GoalFormationRevision.Conditions),
+  (GoalFormationRevision.completed c).isSome = true ↔
+    PracticalJudgment.Better (GoalFormationRevision.protects c) (GoalFormationRevision.gains c)
+      GoalFormationRevision.Practice.learning GoalFormationRevision.Practice.attendance
+Becoming.MachineInstances.apply_false : ∀ (m : Bool), JointPracticeContinuation.applyMethod m false = m
+Becoming.MachineInstances.infer_false : ∀ (m : Bool), JointPracticeContinuation.inferMethod false m = m
+Becoming.MachineInstances.round_iff : ∀ (s t : JointPracticeContinuation.State) (r w : Nat),
+  JointPracticeContinuation.run s (JointPracticeContinuation.practice r w) = some t ↔
+    (w ∈ s.org.present ∧
+        r ∈ s.org.roster ∧ r ∈ s.org.present ∧ r ≠ w ∧ JointPracticeContinuation.methodAt s r = s.context) ∧
+      t = Becoming.MachineInstances.afterRound s r w
+@Becoming.MachineInstances.round_trains : ∀ {s t : JointPracticeContinuation.State} {r w : Nat},
+  JointPracticeContinuation.run s (JointPracticeContinuation.practice r w) = some t →
+    JointPracticeContinuation.methodAt t w = t.context
+Becoming.MachineInstances.trained_round_iff : ∀ (u x : JointPracticeContinuation.State) (w v : Nat),
+  JointPracticeContinuation.methodAt u w = u.context →
+    (JointPracticeContinuation.run u (JointPracticeContinuation.practice w v) = some x ↔
+      (v ∈ u.org.present ∧ w ∈ u.org.roster ∧ w ∈ u.org.present ∧ w ≠ v) ∧
+        x = Becoming.MachineInstances.afterRound u w v)
+@Becoming.MachineInstances.trained_along : ∀ {s t : JointPracticeContinuation.State}
+  {es : List JointPracticeContinuation.Event} {w : Nat},
+  Generative.Trace JointPracticeContinuation.process s es t →
+    (∀ (e : JointPracticeContinuation.Event), e ∈ es → Becoming.MachineInstances.revises e = false) →
+      t.context = s.context →
+        JointPracticeContinuation.methodAt s w = s.context → JointPracticeContinuation.methodAt t w = t.context
+Becoming.MachineInstances.complete_history_rounds : JointPracticeContinuation.run JointPracticeContinuation.initial
+      (JointPracticeContinuation.practice 0 1) =
+    some (Becoming.MachineInstances.afterRound JointPracticeContinuation.initial 0 1) ∧
+  JointPracticeContinuation.run JointPracticeContinuation.first (JointPracticeContinuation.practice 1 2) =
+      some (Becoming.MachineInstances.afterRound JointPracticeContinuation.first 1 2) ∧
+    JointPracticeContinuation.run
+        (JointPracticeContinuation.after JointPracticeContinuation.second
+          [JointPracticeContinuation.Event.organizational
+              (OrganizationalRuleInheritance.Event.handoff [1, 2, 3, 4, 5])])
+        (JointPracticeContinuation.practice 1 3) =
+      some
+        (Becoming.MachineInstances.afterRound
+          (JointPracticeContinuation.after JointPracticeContinuation.second
+            [JointPracticeContinuation.Event.organizational
+                (OrganizationalRuleInheritance.Event.handoff [1, 2, 3, 4, 5])])
+          1 3)

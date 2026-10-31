@@ -61,7 +61,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the periphery checker check_expected_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261030T101649.229011Z): all 68 declarations of ExpectedFreeEnergyReals, each on Lean's standard axioms only, FreeEnergyReals and every core module of its closure, Becoming.LumpedSeeking among them, matching a passed receipt. Independent reviews by other AI agents (REVIEW-UE19; REVIEW-UE23 and RECHECK-UE23 for seeking), study sections 453 and 464; not reviewed by a person.
+Machine-checked by the periphery checker check_expected_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134130.030892Z): all 68 declarations of ExpectedFreeEnergyReals, each on Lean's standard axioms only, FreeEnergyReals and every core module of its closure, Becoming.LumpedSeeking among them, matching a passed receipt. Independent reviews by other AI agents (REVIEW-UE19; REVIEW-UE23 and RECHECK-UE23 for seeking), study sections 453 and 464; not reviewed by a person.
 
 Canonical source: [ExpectedFreeEnergyReals.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean)
 
@@ -106,6 +106,8 @@ Expected free energy as defined by Parr and Friston (2019, Biological Cybernetic
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue23-seeking-by-expected-free-energy/NOTE.md) | — |
 | integration | [REVIEW-UE23.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue23-seeking-by-expected-free-energy/REVIEW-UE23.md) | — |
 | integration | [RECHECK-UE23.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue23-seeking-by-expected-free-energy/RECHECK-UE23.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261031T134130.030892Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261031T134204.303683Z/verification.json) | — |
 
 Aliases: `Expected free energy and its terms`, `期望自由能及其诸项`, `expected free energy`, `risk and ambiguity`, `epistemic and pragmatic value`, `expected information gain`, `Becoming.ExpectedFreeEnergy.expectedFreeEnergy_eq_neg_epistemic_sub_pragmatic`, `Becoming.ExpectedFreeEnergy.expectedFreeEnergy_same_of_coarse`, `Becoming.ExpectedFreeEnergy.seeking_reads_profiles`
 

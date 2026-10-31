@@ -1,0 +1,25 @@
+import Becoming.ScopedReach
+#print axioms Becoming.ScopedReach.only
+#print axioms Becoming.ScopedReach.only_reach
+#print axioms Becoming.ScopedReach.invariant_iff_only
+#print axioms Becoming.ScopedReach.Agree
+#print axioms Becoming.ScopedReach.Glued
+#print axioms Becoming.ScopedReach.glued_iff_local
+#print axioms Becoming.ScopedReach.glued_invariant
+#print axioms Becoming.ScopedReach.glued_on_reach
+#print axioms Becoming.ScopedReach.WithinStep
+#print axioms Becoming.ScopedReach.within
+#print axioms Becoming.ScopedReach.within_keeps
+#print axioms Becoming.ScopedReach.fromSeed_within_iff
+#print axioms Becoming.ScopedReach.invariant_on_within_reach
+#print axioms Becoming.ScopedReach.Place
+#print axioms Becoming.ScopedReach.domain
+#print axioms Becoming.ScopedReach.alternating
+#print axioms Becoming.ScopedReach.domain_covers
+#print axioms Becoming.ScopedReach.alternating_inside
+#print axioms Becoming.ScopedReach.alternating_steps
+#print axioms Becoming.ScopedReach.first_scope_stays_inside
+#print axioms Becoming.ScopedReach.second_scope_stays_at_seed
+#print axioms Becoming.ScopedReach.alternating_beyond_scopes
+#print axioms Becoming.ScopedReach.halted
+#print axioms Becoming.ScopedReach.halted_coverage_insufficient

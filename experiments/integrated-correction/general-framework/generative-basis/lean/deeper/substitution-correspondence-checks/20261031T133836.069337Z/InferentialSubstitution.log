@@ -1,0 +1,9 @@
+'Generative.InferentialSubstitution.extract_rename' depends on axioms: [Quot.sound]
+'Generative.InferentialSubstitution.extract_substitute' depends on axioms: [Quot.sound]
+'Generative.InferentialSubstitution.all_terms_agree_iff_positions' depends on axioms: [Quot.sound]
+'Generative.InferentialSubstitution.discharge_matches_supply' depends on axioms: [Quot.sound]
+'Generative.InferentialSubstitution.discharge_preserves_assessment' depends on axioms: [Quot.sound]
+'Generative.InferentialSubstitution.successive_substitution' depends on axioms: [Quot.sound]
+'Generative.InferentialSubstitution.nested_substitution_retains_outer' does not depend on any axioms
+'Generative.InferentialSubstitution.typed_capture_changes_answer' does not depend on any axioms
+'Generative.InferentialSubstitution.matching_values_hide_capture' does not depend on any axioms

@@ -1,0 +1,20 @@
+import LearningCorrespondence
+#print axioms Becoming.LearningCorrespondence.Uniform
+#print axioms Becoming.LearningCorrespondence.encounters
+#print axioms Becoming.LearningCorrespondence.acquire_exact
+#print axioms Becoming.LearningCorrespondence.agree_at
+#print axioms Becoming.LearningCorrespondence.uniform_determines
+#print axioms Becoming.LearningCorrespondence.nonuniform_not_determined
+#print axioms Becoming.LearningCorrespondence.develop_orbit
+#print axioms Becoming.LearningCorrespondence.hebbian
+#print axioms Becoming.LearningCorrespondence.hebbian_determined
+#print axioms Becoming.LearningCorrespondence.hebbian_activity_law_iff
+#print axioms Becoming.LearningCorrespondence.weights_matter
+#print axioms Becoming.LearningCorrespondence.hebbian_no_activity_law
+#print axioms Becoming.LearningCorrespondence.updating
+#print axioms Becoming.LearningCorrespondence.updating_determined
+#print axioms Becoming.LearningCorrespondence.updating_network_law_iff
+#print axioms Becoming.LearningCorrespondence.responsive_kept
+#print axioms Becoming.LearningCorrespondence.responsive_learns
+#print axioms Becoming.LearningCorrespondence.route_matters
+#print axioms Becoming.LearningCorrespondence.updating_no_network_law

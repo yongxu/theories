@@ -1,0 +1,124 @@
+'Becoming.MachineInstances.chunks_eq' does not depend on any axioms
+'Becoming.MachineInstances.flatten_eq_join' does not depend on any axioms
+'Becoming.MachineInstances.encode_eq' does not depend on any axioms
+'Becoming.MachineInstances.wordFirst' does not depend on any axioms
+'Becoming.MachineInstances.wordRest' does not depend on any axioms
+'Becoming.MachineInstances.spelled' does not depend on any axioms
+'Becoming.MachineInstances.two_word_iff' does not depend on any axioms
+'Becoming.MachineInstances.adopts' does not depend on any axioms
+'Becoming.MachineInstances.ite_some' does not depend on any axioms
+'Becoming.MachineInstances.rule_kept' does not depend on any axioms
+'Becoming.MachineInstances.Groups' depends on axioms: [propext]
+'Becoming.MachineInstances.segments_of_groups' depends on axioms: [propext]
+'Becoming.MachineInstances.readForms_eq' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.interprets_every_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.learned_groups' depends on axioms: [propext]
+'Becoming.MachineInstances.learned_interprets_every' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.coordinated_groups' depends on axioms: [propext]
+'Becoming.MachineInstances.coordinated_resolves' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.coordinated_interprets_every' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.acquired_groups' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.acquired_resolves' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.acquired_interprets_every' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.retrospective_groups' depends on axioms: [propext]
+'Becoming.MachineInstances.retrospective_interprets_every' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.experienced_groups' depends on axioms: [propext]
+'Becoming.MachineInstances.experienced_parses_every' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.edges_eq' depends on axioms: [propext]
+'Becoming.MachineInstances.edges_all_eq' depends on axioms: [propext]
+'Becoming.MachineInstances.countP_eq' depends on axioms: [propext]
+'Becoming.MachineInstances.beq_sound' does not depend on any axioms
+'Becoming.MachineInstances.beq_pair' does not depend on any axioms
+'Becoming.MachineInstances.bond_eq' depends on axioms: [propext]
+'Becoming.MachineInstances.bond_functional' depends on axioms: [propext]
+'Becoming.MachineInstances.summary_carries_law' depends on axioms: [propext]
+'Becoming.MachineInstances.summary_every_word' depends on axioms: [propext]
+'Becoming.MachineInstances.cycle_eq' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.cycles_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.MachineInstances.cycles_learning_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.MachineInstances.cycles_unselected_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.MachineInstances.lossPer' does not depend on any axioms
+'Becoming.MachineInstances.learning_loss' does not depend on any axioms
+'Becoming.MachineInstances.learningRecord' depends on axioms: [propext]
+'Becoming.MachineInstances.operateMany_learning' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.completed_isSome_iff' depends on axioms: [propext]
+'Becoming.MachineInstances.revised_class' depends on axioms: [propext]
+'Becoming.MachineInstances.fields_of' depends on axioms: [propext]
+'Becoming.MachineInstances.revision_continues' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.MachineInstances.harmful_instance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.MachineInstances.harmful_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.MachineInstances.revises' depends on axioms: [propext]
+'Becoming.MachineInstances.adoptsRule' depends on axioms: [propext]
+'Becoming.MachineInstances.practice_process_eq' depends on axioms: [propext]
+'Becoming.MachineInstances.practice_run_eq' depends on axioms: [propext]
+'Becoming.MachineInstances.practice_trace_iff_run' depends on axioms: [propext]
+'Becoming.MachineInstances.methods_kept' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.methods_inherited' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.practice_rule_kept' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.practice_rule_inherited' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.complete_history_instance' depends on axioms: [propext]
+'Becoming.MachineInstances.bearsOn' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.offersOf' depends on axioms: [propext]
+'Becoming.MachineInstances.compatible_eq' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.candidates_eq' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.resolve_eq' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.Separated' does not depend on any axioms
+'Becoming.MachineInstances.resolve_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.interprets_every_iff_separated' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.SceneMove' does not depend on any axioms
+'Becoming.MachineInstances.sceneStep' depends on axioms: [propext]
+'Becoming.MachineInstances.enact' depends on axioms: [propext]
+'Becoming.MachineInstances.heard' depends on axioms: [propext]
+'Becoming.MachineInstances.heardAlong' depends on axioms: [propext]
+'Becoming.MachineInstances.encounter_inputs' depends on axioms: [propext]
+'Becoming.MachineInstances.single_word' depends on axioms: [propext]
+'Becoming.MachineInstances.encounter_records' depends on axioms: [propext]
+'Becoming.MachineInstances.step_inputs' depends on axioms: [propext]
+'Becoming.MachineInstances.step_records' depends on axioms: [propext]
+'Becoming.MachineInstances.enact_inputs' depends on axioms: [propext]
+'Becoming.MachineInstances.enact_records' depends on axioms: [propext]
+'Becoming.MachineInstances.scene_interprets_every_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.coordinatedMoves' does not depend on any axioms
+'Becoming.MachineInstances.coordinated_enacts' depends on axioms: [propext]
+'Becoming.MachineInstances.start_groups' depends on axioms: [propext]
+'Becoming.MachineInstances.start_distinct' depends on axioms: [propext]
+'Becoming.MachineInstances.coordinated_heard' depends on axioms: [propext]
+'Becoming.MachineInstances.coordinated_separated' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.coordinated_from_history' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.stationaryMoves' does not depend on any axioms
+'Becoming.MachineInstances.stationary_enacts' depends on axioms: [propext]
+'Becoming.MachineInstances.stationary_fails' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.mistimedMoves' does not depend on any axioms
+'Becoming.MachineInstances.mistimed_enacts' depends on axioms: [propext]
+'Becoming.MachineInstances.mistimed_fails' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.namedRecords' does not depend on any axioms
+'Becoming.MachineInstances.encounter_support' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.speak_records' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.word_eq_iff' does not depend on any axioms
+'Becoming.MachineInstances.stands_named' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.naming_narrows' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.local_naming_narrows' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.acquired_repertoire' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.acquired_distinct' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.acquired_separated' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.acquired_from_separation' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.mem_alternatives' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.view_candidates' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.retrospective_resolves_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.produced_of_calibration' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.coverage_from_law' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.retrospective_repertoire' depends on axioms: [propext]
+'Becoming.MachineInstances.retrospective_distinct' depends on axioms: [propext]
+'Becoming.MachineInstances.retrospective_separated' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.retrospective_from_separation' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.changed_route_unproduced' depends on axioms: [propext]
+'Becoming.MachineInstances.better_iff' depends on axioms: [propext]
+'Becoming.MachineInstances.completed_iff_better' depends on axioms: [propext]
+'Becoming.MachineInstances.afterRound' does not depend on any axioms
+'Becoming.MachineInstances.apply_false' does not depend on any axioms
+'Becoming.MachineInstances.infer_false' does not depend on any axioms
+'Becoming.MachineInstances.round_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.MachineInstances.round_trains' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.MachineInstances.trained_round_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.MachineInstances.trained_along' depends on axioms: [propext, Quot.sound]
+'Becoming.MachineInstances.complete_history_rounds' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,885 @@
+{
+ "rev": "efd354e089e83361150aebe2d9e66419074adc30",
+ "receipts": [],
+ "stale_bound_runs": {},
+ "records": {},
+ "older_layout": {
+  "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/explanatory-joining-branches-checks/20261008T130611.816353Z/receipt.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryJoiningBranchWitnesses.lean"
+   ],
+   "closure": 14,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "multivalued-joining-common-structure"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/explanatory-joining-contexts-checks/20261008T124028.366028Z/receipt.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryHistoryInterfaces.lean"
+   ],
+   "closure": 10,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "wisdom-root"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/explanatory-resumption-checks/20261015T180520.693095Z/receipt.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryResumptionCases.lean"
+   ],
+   "closure": 22,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "residual-continuation-correspondence"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/generated-contraction-checks/20261008T101759.536385Z/receipt.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ContractionMechanisms.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedContraction.lean"
+   ],
+   "closure": 4,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "contraction-where-duplication-is-reachable"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/inferential-substitution-checks/20261008T181823.552825Z/receipt.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialGrounds.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialSubstitution.lean"
+   ],
+   "closure": 2,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "binding-preserving-substitution",
+    "wisdom-root"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/recognitional-binding-checks/20261008T120159.334011Z/receipt.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RecognitionalBinding.lean"
+   ],
+   "closure": 3,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "self-reference-does-not-certify-itself"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/reconfigurable-logic-checks/20261008T105809.742208Z/receipt.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReconfigurableSupportLogic.lean"
+   ],
+   "closure": 2,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "access-yet-to-form",
+    "what-a-summary-keeps"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/reflective-identity-checks/20261008T114343.985843Z/receipt.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ReflectiveIdentity.lean"
+   ],
+   "closure": 1,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "self-reference-does-not-certify-itself"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/relational-becoming-checks/20261008T181112.046979Z/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean"
+   ],
+   "closure": 1,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "effective-capacity-and-eventual-reachability"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/relational-reduction-checks/20261008T185413.598553Z/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean"
+   ],
+   "closure": 1,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "joint-correlation-reduced-dynamics"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/relational-renewal-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean"
+   ],
+   "closure": 1,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "relational-renewal-classification"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/renewal-recovery-checks/20261008T190800.542303Z/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean"
+   ],
+   "closure": 1,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "supported-renewal-recovery"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/wisdom-fallible-judgment-checks/20261008T122517.399770Z/receipt.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/WisdomFallibleJudgment.lean"
+   ],
+   "closure": 6,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "risk-certificate-outcome-distinction"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/acquired-binding-checks/20261008T125717.615564Z/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/AcquiredBinding.lean"
+   ],
+   "closure": 6,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "wisdom-root"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/acquired-binding-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/AcquiredBinding.lean"
+   ],
+   "closure": 6,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "acquired-binding-compositional-use"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/enacted-scene-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EnactedScene.lean"
+   ],
+   "closure": 7,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "enacted-scene-binding"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/encounter-choice-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EncounterChoice.lean"
+   ],
+   "closure": 8,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "encounter-selection-and-revision"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/historical-binding-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/AcquiredBinding.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/HistoricalBinding.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/RetrospectiveBinding.lean"
+   ],
+   "closure": 13,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "historical-source-binding"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/retrospective-binding-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/RetrospectiveBinding.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/SourceReliance.lean"
+   ],
+   "closure": 12,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "retrospective-source-binding"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/scientific-inquiry-necessity-checks/20261008T135418.446592Z/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/ScientificInquiryNecessity.lean"
+   ],
+   "closure": 1,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "finite-fallible-inquiry-necessity",
+    "wisdom-root"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/changing-dependency-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ChangingDependency.lean"
+   ],
+   "closure": 7,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "evidence-through-change"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-adequacy-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationAdequacy.lean"
+   ],
+   "closure": 1,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "finite-continuation-plans"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/inquiry-choice-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/InquiryChoice.lean"
+   ],
+   "closure": 6,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "when-to-inquire-and-when-to-respond"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/joint-continuation-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/JointContinuation.lean"
+   ],
+   "closure": 2,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "joint-plan-composition"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/organized-scale-checks/20261007T222003.863783Z/receipt.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/OrganizedScaleLoop.lean"
+   ],
+   "closure": 5,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "equal-totals-can-hide-what-a-capacity-carries"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/scales-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/RelationsAcrossScales.lean"
+   ],
+   "closure": 3,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "what-a-total-keeps"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/seeded-continuation-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/SeededContinuation.lean"
+   ],
+   "closure": 3,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "joint-plans-from-a-supported-start"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/copying-correction-verification/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/CopyingCorrection.lean"
+   ],
+   "closure": 11,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "formed-copying-correction"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/copying-registration-verification/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/CopyingRegistration.lean"
+   ],
+   "closure": 10,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "formed-copying-registration"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/developmental-association-verification/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/DevelopmentalAssociation.lean"
+   ],
+   "closure": 2,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "groups-formed-by-bonds-share-a-founder"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/calibration-renewal-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibratedUpdater.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean"
+   ],
+   "closure": 5,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "correction-is-not-calibration"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/drift-margins-checks/20261008T114955.171898Z/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/ConnectionistRecovery.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/DevelopmentalMemory.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/DriftMargins.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/UpdaterConsequences.lean"
+   ],
+   "closure": 6,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "the-updater-line"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learned-procedure-transmission-checks/20261013T211356.378776Z/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearnedProcedureTransmission.lean"
+   ],
+   "closure": 6,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "learned-procedure-transmission"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generated-selection-recurrence-verification/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GeneratedSelectionRecurrence.lean"
+   ],
+   "closure": 3,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "stronger-arrangement-formed-by-reconfiguration"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/alignment-continuity-checks/20261008T085311.995516Z/verification.json": {
+   "sources": [
+    "experiments/market-generativity/meta-attractor/AlignmentSuccession.lean"
+   ],
+   "closure": 4,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "succession-on-a-funded-carrier"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-reconfiguration-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean"
+   ],
+   "closure": 5,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "reviewers-count-by-independent-causes"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/generative-discrimination-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean"
+   ],
+   "closure": 2,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "renewing-consuming-formation"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/mediated-control-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MediatedControl.lean"
+   ],
+   "closure": 9,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "mediated-evidence-transport"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/normative-activity-checks/20261007T204714.495458Z/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean"
+   ],
+   "closure": 2,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "adaptive-closure-cannot-resolve"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/priority-identification-checks/20261007T193051.511909Z/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalPriorityIdentification.lean"
+   ],
+   "closure": 1,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "a-swap-symmetric-assignment-singles-out-none",
+    "finite-agreement-does-not-identify-priority"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/recoverable-control-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MediatedControl.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RecoverableControl.lean"
+   ],
+   "closure": 10,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "recoverable-mediated-change"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/reserved-shutdown-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RecoverableControl.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ReservedShutdown.lean"
+   ],
+   "closure": 11,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "reserved-shutdown-during-recovery"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/temporal-inspection-checks/20261008T114957.579255Z/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/TemporalInspection.lean"
+   ],
+   "closure": 8,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "evidence-through-change"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/grown-fragmentation-verification/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GrownFragmentation.lean"
+   ],
+   "closure": 7,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "growth-constrained-fragmentation"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/joint-practice-continuation-verification/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/JointPracticeContinuation.lean"
+   ],
+   "closure": 3,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "joint-practice-forms-continuation"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/material-maturation-verification/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/MaterialMaturation.lean"
+   ],
+   "closure": 6,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "material-preparation-output"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/recurrent-assembly-verification/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/RecurrentAssembly.lean"
+   ],
+   "closure": 8,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "recurrent-chain-assembly"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/structural-copying-verification/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/StructuralCopying.lean"
+   ],
+   "closure": 9,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "inherited-structural-copying"
+   ]
+  },
+  "experiments/integrated-correction/general-framework/generative-basis/lean/verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ProductTower.lean"
+   ],
+   "closure": 3,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "finite-trace-transport",
+    "type-formation-gives-no-dynamics"
+   ]
+  },
+  "experiments/market-generativity/formal/attraction-verification.json": {
+   "sources": [
+    "experiments/market-generativity/formal/RegimeAttraction.lean"
+   ],
+   "closure": 3,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "market-model-share-margin-and-ends"
+   ]
+  },
+  "experiments/market-generativity/formal/boundary-verification.json": {
+   "sources": [
+    "experiments/market-generativity/formal/RegimeBoundary.lean"
+   ],
+   "closure": 2,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "market-model-share-margin-and-ends"
+   ]
+  },
+  "experiments/market-generativity/formal/finite-support-verification.json": {
+   "sources": [
+    "experiments/market-generativity/formal/FiniteSupportObstruction.lean",
+    "experiments/market-generativity/formal/RegimeTransition.lean"
+   ],
+   "closure": 5,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "market-finite-support-obstruction"
+   ]
+  },
+  "experiments/market-generativity/formal/partial-transition-verification.json": {
+   "sources": [
+    "experiments/market-generativity/formal/PartialRegimeTransition.lean",
+    "experiments/market-generativity/formal/RegimeTransition.lean"
+   ],
+   "closure": 5,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "market-partial-correction-boundary"
+   ]
+  },
+  "experiments/market-generativity/formal/transition-verification.json": {
+   "sources": [
+    "experiments/market-generativity/formal/MarketGenerativity.lean",
+    "experiments/market-generativity/formal/RegimeTransition.lean"
+   ],
+   "closure": 4,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "market-protected-continuation",
+    "market-supported-finite-transition"
+   ]
+  },
+  "experiments/market-generativity/formal/verification.json": {
+   "sources": [
+    "experiments/market-generativity/formal/MarketGenerativity.lean"
+   ],
+   "closure": 1,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "market-model-share-margin-and-ends"
+   ]
+  },
+  "experiments/market-generativity/meta-attractor/common-task-revision-verification.json": {
+   "sources": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionVersioned.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalFormationRevision.lean",
+    "experiments/market-generativity/meta-attractor/CommonTaskRevision.lean"
+   ],
+   "closure": 7,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "acquired-revision-of-pending-task",
+    "formed-goal-revision-continuation",
+    "versioned-request-completion"
+   ]
+  },
+  "experiments/market-generativity/meta-attractor/correction-dependence-verification.json": {
+   "sources": [
+    "experiments/market-generativity/meta-attractor/CorrectionDependence.lean"
+   ],
+   "closure": 1,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "draws-on-a-shared-stock"
+   ]
+  },
+  "experiments/market-generativity/meta-attractor/pending-task-applicability-verification.json": {
+   "sources": [
+    "experiments/market-generativity/meta-attractor/PendingTaskApplicability.lean"
+   ],
+   "closure": 8,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "pending-task-context-applicability"
+   ]
+  },
+  "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/verification.json": {
+   "sources": [
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/DevelopedResponse.lean"
+   ],
+   "closure": 5,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "same-carrier-need-not-fix-the-response"
+   ]
+  },
+  "experiments/shared-renewal-capability/regulation/retention/formation/evolution/verification.json": {
+   "sources": [
+    "experiments/shared-renewal-capability/regulation/retention/formation/evolution/ConsequenceTransmission.lean"
+   ],
+   "closure": 4,
+   "stale": [],
+   "unrecorded": [],
+   "unresolved_imports": [],
+   "unresolved_live": [],
+   "compared": true,
+   "records": [
+    "a-selected-template-need-not-raise-structure"
+   ]
+  }
+ },
+ "earlier_unretained": {
+  "core": {
+   "occurrences": 0,
+   "distinct_keys": 0
+  },
+  "periphery": {
+   "occurrences": 0,
+   "distinct_keys": 0,
+   "receipts": 0
+  }
+ }
+}

@@ -42,7 +42,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Core: Becoming.Copying and Becoming.Courses (becoming-checks/20261022T054058.112616Z, 20261020T051144.879480Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: MaterialMaturation by its folder's check (material-maturation-verification/, Lean 4.29.1: 28 new theorems, 44 new audits, 267 in the import closure) and PreparationCorrespondence by check_preparation_correspondence.py (preparation-correspondence-checks/20261020T161943.503298Z, Lean 4.30.0-rc2), at most propext, Quot.sound and Classical.choice, some none. Inference and biological correspondence are kept apart.
+Core: Becoming.Copying and Becoming.Courses (becoming-checks/20261022T054058.112616Z, 20261020T051144.879480Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: MaterialMaturation by its folder's check (material-maturation-verification/, Lean 4.29.1: 28 new theorems, 44 new audits, 267 in the import closure) and PreparationCorrespondence by check_preparation_correspondence.py (preparation-correspondence-checks/20261031T133608.754102Z, Lean 4.30.0-rc2), at most propext, Quot.sound and Classical.choice, some none. Inference and biological correspondence are kept apart.
 
 Canonical source: [MaterialMaturation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/MaterialMaturation.lean)
 
@@ -94,6 +94,7 @@ The actual routeTrace output is the reusable material interface; it does not rec
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261020T161943.503298Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261031T133608.754102Z/verification.json) | — |
 
 Aliases: `MaterialMaturation.actual_preparation_iff`, `MaterialMaturation.route_sound`, `MaterialMaturation.route_complete`, `Becoming.Copying.empties_iff`, `Becoming.Courses.copy_empties_iff`, `Becoming.Courses.copy_completes_iff`
 
