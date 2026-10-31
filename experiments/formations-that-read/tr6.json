@@ -1,0 +1,2307 @@
+{
+ "test": "TR6 (RF6.3, a prediction read by what it predicts)",
+ "stage": "0: design, no model called",
+ "seed": 20261031,
+ "python": "3.11, standard library",
+ "A_mirror": {
+  "lean_module": "Becoming.ReflexivePrediction",
+  "lean_sha256": "4eb919e7bb105c90b4eb6dd40467601fa94e160d6ed8674faa376c378be40b3f",
+  "ThresholdResponse": {
+   "within_on_0..2": true,
+   "keeps_on_0..2": true,
+   "both_right": true,
+   "reached_by_start_k<50": true,
+   "orbit_from_1": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  "Negating": {
+   "not_moves": true,
+   "none_right": true,
+   "alternates_k<50": true
+  },
+  "Reflecting": {
+   "reverses_v<=w<=8": true,
+   "middle_right": true,
+   "orbit_from_0 (computed here, not a Lean statement)": [
+    0,
+    2,
+    0,
+    2,
+    0,
+    2,
+    0,
+    2
+   ],
+   "orbit_from_0_ever_right_within_50": false
+  },
+  "rests_iff_right_right_rests_reached_rests": {
+   "random_maps_of_0..9": 2000,
+   "checks": 30000,
+   "violations": 0
+  },
+  "no_predictor_right_and_predictor_iff_on_Bool": {
+   "admitted_classes": 15,
+   "classes_with_a_mover": 8,
+   "no_predictor_right_where_a_mover": 8,
+   "predictor_iff_checks": 15,
+   "predictor_iff_violations": 0,
+   "note": "a predictor reads the response: it is a function from the admitted maps to Bool"
+  }
+ },
+ "B_chains": {
+  "B1_every_self_map_n<=4": {
+   "1": {
+    "self_maps": 4,
+    "order_keeping": 3,
+    "violations_under_the_hypotheses": {
+     "on_chain": 0,
+     "rises": 0,
+     "below_right": 0,
+     "bottom_rests": 0,
+     "again_or_risen": 0,
+     "stays_from": 0
+    },
+    "maps_not_keeping_the_order_where_the_conclusion_fails": {
+     "on_chain": 0,
+     "rises": 1,
+     "below_right": 0,
+     "bottom_rests": 1,
+     "again_or_risen": 1,
+     "stays_from": 0
+    }
+   },
+   "2": {
+    "self_maps": 27,
+    "order_keeping": 10,
+    "violations_under_the_hypotheses": {
+     "on_chain": 0,
+     "rises": 0,
+     "below_right": 0,
+     "bottom_rests": 0,
+     "again_or_risen": 0,
+     "stays_from": 0
+    },
+    "maps_not_keeping_the_order_where_the_conclusion_fails": {
+     "on_chain": 0,
+     "rises": 11,
+     "below_right": 3,
+     "bottom_rests": 11,
+     "again_or_risen": 11,
+     "stays_from": 0
+    }
+   },
+   "3": {
+    "self_maps": 256,
+    "order_keeping": 35,
+    "violations_under_the_hypotheses": {
+     "on_chain": 0,
+     "rises": 0,
+     "below_right": 0,
+     "bottom_rests": 0,
+     "again_or_risen": 0,
+     "stays_from": 0
+    },
+    "maps_not_keeping_the_order_where_the_conclusion_fails": {
+     "on_chain": 0,
+     "rises": 131,
+     "below_right": 48,
+     "bottom_rests": 128,
+     "again_or_risen": 127,
+     "stays_from": 0
+    }
+   },
+   "4": {
+    "self_maps": 3125,
+    "order_keeping": 126,
+    "violations_under_the_hypotheses": {
+     "on_chain": 0,
+     "rises": 0,
+     "below_right": 0,
+     "bottom_rests": 0,
+     "again_or_risen": 0,
+     "stays_from": 0
+    },
+    "maps_not_keeping_the_order_where_the_conclusion_fails": {
+     "on_chain": 0,
+     "rises": 1829,
+     "below_right": 755,
+     "bottom_rests": 1755,
+     "again_or_risen": 1734,
+     "stays_from": 0
+    }
+   }
+  },
+  "B2_order_keeping_self_maps_n<=6": {
+   "1": {
+    "order_keeping_self_maps": 3,
+    "violations": 0,
+    "rest_step_from_0_distribution": {
+     "0": 2,
+     "1": 1
+    },
+    "most_steps": 1,
+    "a_map_needing_n_steps": [
+     1,
+     1
+    ],
+    "min(v+1,n)_needs_n": true
+   },
+   "2": {
+    "order_keeping_self_maps": 10,
+    "violations": 0,
+    "rest_step_from_0_distribution": {
+     "0": 6,
+     "1": 3,
+     "2": 1
+    },
+    "most_steps": 2,
+    "a_map_needing_n_steps": [
+     1,
+     2,
+     2
+    ],
+    "min(v+1,n)_needs_n": true
+   },
+   "3": {
+    "order_keeping_self_maps": 35,
+    "violations": 0,
+    "rest_step_from_0_distribution": {
+     "0": 20,
+     "1": 9,
+     "2": 5,
+     "3": 1
+    },
+    "most_steps": 3,
+    "a_map_needing_n_steps": [
+     1,
+     2,
+     3,
+     3
+    ],
+    "min(v+1,n)_needs_n": true
+   },
+   "4": {
+    "order_keeping_self_maps": 126,
+    "violations": 0,
+    "rest_step_from_0_distribution": {
+     "0": 70,
+     "1": 29,
+     "2": 19,
+     "3": 7,
+     "4": 1
+    },
+    "most_steps": 4,
+    "a_map_needing_n_steps": [
+     1,
+     2,
+     3,
+     4,
+     4
+    ],
+    "min(v+1,n)_needs_n": true
+   },
+   "5": {
+    "order_keeping_self_maps": 462,
+    "violations": 0,
+    "rest_step_from_0_distribution": {
+     "0": 252,
+     "1": 99,
+     "2": 67,
+     "3": 34,
+     "4": 9,
+     "5": 1
+    },
+    "most_steps": 5,
+    "a_map_needing_n_steps": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     5
+    ],
+    "min(v+1,n)_needs_n": true
+   },
+   "6": {
+    "order_keeping_self_maps": 1716,
+    "violations": 0,
+    "rest_step_from_0_distribution": {
+     "0": 924,
+     "1": 351,
+     "2": 233,
+     "3": 143,
+     "4": 53,
+     "5": 11,
+     "6": 1
+    },
+    "most_steps": 6,
+    "a_map_needing_n_steps": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     6
+    ],
+    "min(v+1,n)_needs_n": true
+   }
+  },
+  "B3_without_within": {
+   "values": "0..n+2",
+   "by_n": {
+    "1": {
+     "r off the chain: v + 1": {
+      "order_keeping_tables_leaving_the_chain": 7,
+      "below_right_violations (needs keeps only)": 0,
+      "bottom_rests_fails": 5,
+      "orbit_leaves_the_chain": 5
+     },
+     "r off the chain: v (fixes every value off the chain)": {
+      "order_keeping_tables_leaving_the_chain": 7,
+      "below_right_violations (needs keeps only)": 0,
+      "bottom_rests_fails": 2,
+      "orbit_leaves_the_chain": 5
+     },
+     "r off the chain: n": {
+      "order_keeping_tables_leaving_the_chain": 7,
+      "below_right_violations (needs keeps only)": 0,
+      "bottom_rests_fails": 5,
+      "orbit_leaves_the_chain": 5
+     },
+     "r off the chain: 0": {
+      "order_keeping_tables_leaving_the_chain": 7,
+      "below_right_violations (needs keeps only)": 0,
+      "bottom_rests_fails": 5,
+      "orbit_leaves_the_chain": 5
+     },
+     "example": [
+      1,
+      2
+     ]
+    },
+    "2": {
+     "r off the chain: v + 1": {
+      "order_keeping_tables_leaving_the_chain": 25,
+      "below_right_violations (needs keeps only)": 0,
+      "bottom_rests_fails": 14,
+      "orbit_leaves_the_chain": 14
+     },
+     "r off the chain: v (fixes every value off the chain)": {
+      "order_keeping_tables_leaving_the_chain": 25,
+      "below_right_violations (needs keeps only)": 0,
+      "bottom_rests_fails": 2,
+      "orbit_leaves_the_chain": 14
+     },
+     "r off the chain: n": {
+      "order_keeping_tables_leaving_the_chain": 25,
+      "below_right_violations (needs keeps only)": 0,
+      "bottom_rests_fails": 14,
+      "orbit_leaves_the_chain": 14
+     },
+     "r off the chain: 0": {
+      "order_keeping_tables_leaving_the_chain": 25,
+      "below_right_violations (needs keeps only)": 0,
+      "bottom_rests_fails": 14,
+      "orbit_leaves_the_chain": 14
+     },
+     "example": [
+      1,
+      2,
+      3
+     ]
+    },
+    "3": {
+     "r off the chain: v + 1": {
+      "order_keeping_tables_leaving_the_chain": 91,
+      "below_right_violations (needs keeps only)": 0,
+      "bottom_rests_fails": 42,
+      "orbit_leaves_the_chain": 42
+     },
+     "r off the chain: v (fixes every value off the chain)": {
+      "order_keeping_tables_leaving_the_chain": 91,
+      "below_right_violations (needs keeps only)": 0,
+      "bottom_rests_fails": 2,
+      "orbit_leaves_the_chain": 42
+     },
+     "r off the chain: n": {
+      "order_keeping_tables_leaving_the_chain": 91,
+      "below_right_violations (needs keeps only)": 0,
+      "bottom_rests_fails": 42,
+      "orbit_leaves_the_chain": 42
+     },
+     "r off the chain: 0": {
+      "order_keeping_tables_leaving_the_chain": 91,
+      "below_right_violations (needs keeps only)": 0,
+      "bottom_rests_fails": 42,
+      "orbit_leaves_the_chain": 42
+     },
+     "example": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "4": {
+     "r off the chain: v + 1": {
+      "order_keeping_tables_leaving_the_chain": 336,
+      "below_right_violations (needs keeps only)": 0,
+      "bottom_rests_fails": 132,
+      "orbit_leaves_the_chain": 132
+     },
+     "r off the chain: v (fixes every value off the chain)": {
+      "order_keeping_tables_leaving_the_chain": 336,
+      "below_right_violations (needs keeps only)": 0,
+      "bottom_rests_fails": 2,
+      "orbit_leaves_the_chain": 132
+     },
+     "r off the chain: n": {
+      "order_keeping_tables_leaving_the_chain": 336,
+      "below_right_violations (needs keeps only)": 0,
+      "bottom_rests_fails": 132,
+      "orbit_leaves_the_chain": 132
+     },
+     "r off the chain: 0": {
+      "order_keeping_tables_leaving_the_chain": 336,
+      "below_right_violations (needs keeps only)": 0,
+      "bottom_rests_fails": 132,
+      "orbit_leaves_the_chain": 132
+     },
+     "example": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    }
+   },
+   "note": "the counts depend on r off the chain, which a table over 0..n does not fix; some extension (v + 1, n or 0) breaks bottom_rests in most such tables, and even r fixing every value off the chain breaks it in 2"
+  },
+  "B4_no_right_value": {
+   "1": {
+    "self_maps": 4,
+    "with_no_right_value (formula n^(n+1))": 1,
+    "by_enumeration": 1,
+    "share": 0.25
+   },
+   "2": {
+    "self_maps": 27,
+    "with_no_right_value (formula n^(n+1))": 8,
+    "by_enumeration": 8,
+    "share": 0.2963
+   },
+   "3": {
+    "self_maps": 256,
+    "with_no_right_value (formula n^(n+1))": 81,
+    "by_enumeration": 81,
+    "share": 0.3164
+   },
+   "4": {
+    "self_maps": 3125,
+    "with_no_right_value (formula n^(n+1))": 1024,
+    "by_enumeration": 1024,
+    "share": 0.3277
+   },
+   "5": {
+    "self_maps": 46656,
+    "with_no_right_value (formula n^(n+1))": 15625,
+    "by_enumeration": 15625,
+    "share": 0.3349
+   },
+   "6": {
+    "self_maps": 823543,
+    "with_no_right_value (formula n^(n+1))": 279936,
+    "by_enumeration": null,
+    "share": 0.3399
+   }
+  },
+  "B5_order_reversing": {
+   "1": {
+    "order_reversing_self_maps": 3,
+    "non_constant": 1,
+    "non_constant_with_a_right_value": 0,
+    "of_which_reached_from_0": 0,
+    "of_which_never_reached": 0
+   },
+   "2": {
+    "order_reversing_self_maps": 10,
+    "non_constant": 7,
+    "non_constant_with_a_right_value": 3,
+    "of_which_reached_from_0": 2,
+    "of_which_never_reached": 1
+   },
+   "3": {
+    "order_reversing_self_maps": 35,
+    "non_constant": 31,
+    "non_constant_with_a_right_value": 16,
+    "of_which_reached_from_0": 10,
+    "of_which_never_reached": 6
+   },
+   "4": {
+    "order_reversing_self_maps": 126,
+    "non_constant": 121,
+    "non_constant_with_a_right_value": 65,
+    "of_which_reached_from_0": 37,
+    "of_which_never_reached": 28
+   },
+   "5": {
+    "order_reversing_self_maps": 462,
+    "non_constant": 456,
+    "non_constant_with_a_right_value": 246,
+    "of_which_reached_from_0": 126,
+    "of_which_never_reached": 120
+   },
+   "6": {
+    "order_reversing_self_maps": 1716,
+    "non_constant": 1709,
+    "non_constant_with_a_right_value": 917,
+    "of_which_reached_from_0": 422,
+    "of_which_never_reached": 495
+   }
+  },
+  "B6_orbit_from_any_start_candidate_lemma": {
+   "statement": "For r keeping 0..n and its order and any start s <= n: if s <= r s, the orbit from s never falls and is at step n - s the least right value >= s; if r s <= s, it never rises and is at step s the greatest right value <= s. Not in the Lean; checked here exhaustively for n <= 6; a candidate core lemma.",
+   "by_n": {
+    "1": {
+     "checks": 6,
+     "violations": 0
+    },
+    "2": {
+     "checks": 30,
+     "violations": 0
+    },
+    "3": {
+     "checks": 140,
+     "violations": 0
+    },
+    "4": {
+     "checks": 630,
+     "violations": 0
+    },
+    "5": {
+     "checks": 2772,
+     "violations": 0
+    },
+    "6": {
+     "checks": 12012,
+     "violations": 0
+    }
+   }
+  }
+ },
+ "C_publics": {
+  "bandwagon, full climb (thresholds 0,1,2,3,3,5,6,6,8,9)": {
+   "table": [
+    1,
+    2,
+    3,
+    5,
+    5,
+    6,
+    8,
+    8,
+    9,
+    10,
+    10
+   ],
+   "shape": "keeps the order",
+   "right_values": [
+    10
+   ],
+   "least_right": 10,
+   "moves_every_value": false,
+   "orbit_from_0": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6,
+    8,
+    9,
+    10,
+    10,
+    10,
+    10,
+    10
+   ],
+   "rest_step_from_0": 8
+  },
+  "bandwagon, stalled (thresholds 0,1,2,4,4,5,7,8,9,10)": {
+   "table": [
+    1,
+    2,
+    3,
+    3,
+    5,
+    6,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "shape": "keeps the order",
+   "right_values": [
+    3,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "least_right": 3,
+   "moves_every_value": false,
+   "orbit_from_0": [
+    0,
+    1,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "rest_step_from_0": 3
+  },
+  "Granovetter: thresholds 0..9": {
+   "table": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    10
+   ],
+   "shape": "keeps the order",
+   "right_values": [
+    10
+   ],
+   "least_right": 10,
+   "moves_every_value": false,
+   "orbit_from_0": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    10,
+    10
+   ],
+   "rest_step_from_0": 10
+  },
+  "Granovetter: 0,2,2,3,..,9 (one threshold moved)": {
+   "table": [
+    1,
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    10
+   ],
+   "shape": "keeps the order",
+   "right_values": [
+    1,
+    10
+   ],
+   "least_right": 1,
+   "moves_every_value": false,
+   "orbit_from_0": [
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "rest_step_from_0": 1
+  },
+  "bandwagon, identical (threshold 5)": {
+   "table": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+   ],
+   "shape": "keeps the order",
+   "right_values": [
+    0,
+    10
+   ],
+   "least_right": 0,
+   "moves_every_value": false,
+   "orbit_from_0": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "rest_step_from_0": 0
+  },
+  "congestion, spread (capacities 1..10)": {
+   "table": [
+    10,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0
+   ],
+   "shape": "reverses the order",
+   "right_values": [
+    5
+   ],
+   "least_right": 5,
+   "moves_every_value": false,
+   "orbit_from_0": [
+    0,
+    10,
+    0,
+    10,
+    0,
+    10,
+    0,
+    10,
+    0,
+    10,
+    0,
+    10,
+    0
+   ],
+   "rest_step_from_0": null
+  },
+  "congestion, identical (capacity 6)": {
+   "table": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "shape": "reverses the order",
+   "right_values": [],
+   "least_right": null,
+   "moves_every_value": true,
+   "orbit_from_0": [
+    0,
+    10,
+    0,
+    10,
+    0,
+    10,
+    0,
+    10,
+    0,
+    10,
+    0,
+    10,
+    0
+   ],
+   "rest_step_from_0": null
+  },
+  "congestion, uneven (capacities 2,3,3,4,6,6,7,8,9,9)": {
+   "table": [
+    10,
+    10,
+    9,
+    7,
+    6,
+    6,
+    4,
+    3,
+    2,
+    0,
+    0
+   ],
+   "shape": "reverses the order",
+   "right_values": [],
+   "least_right": null,
+   "moves_every_value": true,
+   "orbit_from_0": [
+    0,
+    10,
+    0,
+    10,
+    0,
+    10,
+    0,
+    10,
+    0,
+    10,
+    0,
+    10,
+    0
+   ],
+   "rest_step_from_0": null
+  },
+  "identity (each forecast is met)": {
+   "table": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "shape": "keeps the order",
+   "right_values": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "least_right": 0,
+   "moves_every_value": false,
+   "orbit_from_0": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "rest_step_from_0": 0
+  },
+  "constant 4 (deaf to the forecast)": {
+   "table": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "shape": "constant",
+   "right_values": [
+    4
+   ],
+   "least_right": 4,
+   "moves_every_value": false,
+   "orbit_from_0": [
+    0,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "rest_step_from_0": 1
+  }
+ },
+ "D_power": {
+  "R": 5,
+  "S_seeds_per_arm": 5,
+  "rounds": 11,
+  "replications": 300,
+  "decisions_per_arm": 550,
+  "rows": {
+   "bandwagon, stalled: memoryless, eta 0.0": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 3.0,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.0,
+     0.0
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0,
+    "mean individual mismatches A / B": [
+     0.0,
+     0.0
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, stalled: memoryless, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 3.16,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.54,
+     0.51
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0,
+    "mean individual mismatches A / B": [
+     0.55,
+     0.51
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.13,
+     "passes the least right value": 0.2733,
+     "no rest by round N": 0.1133,
+     "right not repeated": 0.3233,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.1167,
+     "passes the least right value": 0.22,
+     "no rest by round N": 0.1067,
+     "right not repeated": 0.2933,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, stalled: memoryless, eta 0.01": {
+    "V1: no flagged decision": 0.9067,
+    "V1: table equals the public's true table": 0.9967,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 4.48,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0167,
+    "mean rounds whose count mismatches A / B": [
+     5.25,
+     5.16
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0167,
+    "mean individual mismatches A / B": [
+     5.67,
+     5.46
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.7367,
+     "passes the least right value": 0.97,
+     "no rest by round N": 0.6567,
+     "right not repeated": 0.98,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.6733,
+     "passes the least right value": 0.96,
+     "no rest by round N": 0.68,
+     "right not repeated": 0.9767,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, stalled: inertia w 0.1, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 3.2,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0367,
+    "mean rounds whose count mismatches A / B": [
+     0.55,
+     1.71
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.04,
+    "mean individual mismatches A / B": [
+     0.55,
+     1.78
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.12,
+     "passes the least right value": 0.2567,
+     "no rest by round N": 0.14,
+     "right not repeated": 0.33,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.1567,
+     "passes the least right value": 0.2833,
+     "no rest by round N": 0.13,
+     "right not repeated": 0.7533,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, stalled: inertia w 0.3, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 3.16,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.4367,
+    "mean rounds whose count mismatches A / B": [
+     0.52,
+     5.18
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.4533,
+    "mean individual mismatches A / B": [
+     0.53,
+     5.36
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0967,
+     "passes the least right value": 0.2967,
+     "no rest by round N": 0.1133,
+     "right not repeated": 0.3167,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.15,
+     "passes the least right value": 0.23,
+     "no rest by round N": 0.12,
+     "right not repeated": 0.9867,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, stalled: momentum w 0.3, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 4.52,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.3167,
+    "mean rounds whose count mismatches A / B": [
+     0.62,
+     4.48
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.3833,
+    "mean individual mismatches A / B": [
+     0.62,
+     4.95
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.1433,
+     "passes the least right value": 0.3067,
+     "no rest by round N": 0.1333,
+     "right not repeated": 0.38,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.1233,
+     "passes the least right value": 0.9667,
+     "no rest by round N": 0.0933,
+     "right not repeated": 0.2067,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, stalled: momentum w 1.0, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 8.91,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 1.0,
+    "mean rounds whose count mismatches A / B": [
+     0.46,
+     24.87
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 1.0,
+    "mean individual mismatches A / B": [
+     0.47,
+     30.19
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0767,
+     "passes the least right value": 0.2367,
+     "no rest by round N": 0.12,
+     "right not repeated": 0.2433,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.1067,
+     "passes the least right value": 1.0,
+     "no rest by round N": 0.0567,
+     "right not repeated": 0.0967,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, stalled: trend reader w 0.5, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 5.35,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 1.0,
+    "mean rounds whose count mismatches A / B": [
+     0.54,
+     16.83
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 1.0,
+    "mean individual mismatches A / B": [
+     0.54,
+     36.17
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.1233,
+     "passes the least right value": 0.2733,
+     "no rest by round N": 0.13,
+     "right not repeated": 0.3533,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.24,
+     "passes the least right value": 1.0,
+     "no rest by round N": 0.2633,
+     "right not repeated": 0.9833,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, stalled: agents exchange rules (cancellation control), eta 0.001": {
+    "V1: no flagged decision": 0.9967,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 3.16,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.55,
+     0.5
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.9967,
+    "mean individual mismatches A / B": [
+     0.55,
+     210.63
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.1,
+     "passes the least right value": 0.2867,
+     "no rest by round N": 0.1533,
+     "right not repeated": 0.3367,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.1133,
+     "passes the least right value": 0.22,
+     "no rest by round N": 0.11,
+     "right not repeated": 0.2933,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, full climb: memoryless, eta 0.0": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 8.0,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.0,
+     0.0
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0,
+    "mean individual mismatches A / B": [
+     0.0,
+     0.0
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, full climb: memoryless, eta 0.001": {
+    "V1: no flagged decision": 0.9967,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 8.03,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.52,
+     0.48
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0,
+    "mean individual mismatches A / B": [
+     0.52,
+     0.48
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.16,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.1033,
+     "right not repeated": 0.2067,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0933,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.05,
+     "right not repeated": 0.1733,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, full climb: memoryless, eta 0.01": {
+    "V1: no flagged decision": 0.9067,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 8.31,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.02,
+    "mean rounds whose count mismatches A / B": [
+     5.41,
+     5.13
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0133,
+    "mean individual mismatches A / B": [
+     5.69,
+     5.4
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.7567,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.6333,
+     "right not repeated": 0.93,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.7533,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.5833,
+     "right not repeated": 0.9167,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, full climb: inertia w 0.1, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 8.35,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.4767,
+    "mean rounds whose count mismatches A / B": [
+     0.51,
+     5.29
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.5,
+    "mean individual mismatches A / B": [
+     0.51,
+     5.42
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.13,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.08,
+     "right not repeated": 0.1967,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.1167,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.4167,
+     "right not repeated": 0.9533,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, full climb: inertia w 0.3, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 8.08,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.9933,
+    "mean rounds whose count mismatches A / B": [
+     0.57,
+     16.67
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.9933,
+    "mean individual mismatches A / B": [
+     0.58,
+     17.8
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.1367,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.09,
+     "right not repeated": 0.2233,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.07,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.9533,
+     "right not repeated": 1.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, full climb: momentum w 0.3, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 7.36,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.8367,
+    "mean rounds whose count mismatches A / B": [
+     0.54,
+     7.84
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.8867,
+    "mean individual mismatches A / B": [
+     0.54,
+     8.76
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.1767,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.1267,
+     "right not repeated": 0.2567,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.1767,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0767,
+     "right not repeated": 0.1833,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, full climb: momentum w 1.0, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 5.13,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 1.0,
+    "mean rounds whose count mismatches A / B": [
+     0.63,
+     15.25
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 1.0,
+    "mean individual mismatches A / B": [
+     0.63,
+     25.27
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.15,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.1133,
+     "right not repeated": 0.29,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.2633,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.1033,
+     "right not repeated": 0.2267,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, full climb: trend reader w 0.5, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 5.07,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.9767,
+    "mean rounds whose count mismatches A / B": [
+     0.53,
+     10.62
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 1.0,
+    "mean individual mismatches A / B": [
+     0.54,
+     27.28
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.1467,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.1,
+     "right not repeated": 0.2,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.2667,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.23,
+     "right not repeated": 0.2633,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "bandwagon, full climb: agents exchange rules (cancellation control), eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 8.03,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.58,
+     0.51
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 1.0,
+    "mean individual mismatches A / B": [
+     0.59,
+     130.17
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.1633,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.12,
+     "right not repeated": 0.2533,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.1267,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.1,
+     "right not repeated": 0.2533,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, spread: memoryless, eta 0.0": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 11.0,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.0,
+     0.0
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0,
+    "mean individual mismatches A / B": [
+     0.0,
+     0.0
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, spread: memoryless, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 11.0,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.55,
+     0.54
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0,
+    "mean individual mismatches A / B": [
+     0.55,
+     0.55
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, spread: memoryless, eta 0.01": {
+    "V1: no flagged decision": 0.9,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 11.0,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.03,
+    "mean rounds whose count mismatches A / B": [
+     5.27,
+     5.24
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0333,
+    "mean individual mismatches A / B": [
+     5.56,
+     5.52
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, spread: inertia w 0.1, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 9.42,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 1.0,
+    "mean rounds whose count mismatches A / B": [
+     0.62,
+     18.18
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 1.0,
+    "mean individual mismatches A / B": [
+     0.62,
+     24.4
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.1867,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, spread: inertia w 0.3, eta 0.001": {
+    "V1: no flagged decision": 0.9967,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 6.17,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.9967,
+    "mean rounds whose count mismatches A / B": [
+     0.49,
+     20.04
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.9967,
+    "mean individual mismatches A / B": [
+     0.49,
+     41.15
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.7867,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, spread: regret after a crowded round w 0.3, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 11.0,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0033,
+    "mean rounds whose count mismatches A / B": [
+     0.57,
+     0.51
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0033,
+    "mean individual mismatches A / B": [
+     0.57,
+     0.51
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, spread: regret after a crowded round w 1.0, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 11.0,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.51,
+     0.58
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0,
+    "mean individual mismatches A / B": [
+     0.51,
+     0.58
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, spread: trend reader w 0.5, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 10.15,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 1.0,
+    "mean rounds whose count mismatches A / B": [
+     0.55,
+     43.74
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 1.0,
+    "mean individual mismatches A / B": [
+     0.55,
+     149.86
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.9733,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, spread: agents exchange rules (cancellation control), eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 11.0,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.52,
+     0.59
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.3367,
+    "mean individual mismatches A / B": [
+     0.52,
+     5.1
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, identical: memoryless, eta 0.0": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 11.0,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.0,
+     0.0
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0,
+    "mean individual mismatches A / B": [
+     0.0,
+     0.0
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, identical: memoryless, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 11.0,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0033,
+    "mean rounds whose count mismatches A / B": [
+     0.54,
+     0.65
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0033,
+    "mean individual mismatches A / B": [
+     0.55,
+     0.65
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, identical: memoryless, eta 0.01": {
+    "V1: no flagged decision": 0.8967,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 11.0,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0233,
+    "mean rounds whose count mismatches A / B": [
+     5.32,
+     5.33
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.02,
+    "mean individual mismatches A / B": [
+     5.57,
+     5.57
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, identical: inertia w 0.1, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 11.0,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 1.0,
+    "mean rounds whose count mismatches A / B": [
+     0.57,
+     31.12
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 1.0,
+    "mean individual mismatches A / B": [
+     0.58,
+     46.31
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, identical: inertia w 0.3, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 11.0,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 1.0,
+    "mean rounds whose count mismatches A / B": [
+     0.47,
+     46.83
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 1.0,
+    "mean individual mismatches A / B": [
+     0.48,
+     119.28
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0033,
+     "right where none can be": 0.0033,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, identical: regret after a crowded round w 0.3, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 11.0,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.54,
+     0.53
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0,
+    "mean individual mismatches A / B": [
+     0.54,
+     0.53
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, identical: regret after a crowded round w 1.0, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 11.0,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.62,
+     0.5
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0,
+    "mean individual mismatches A / B": [
+     0.62,
+     0.5
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, identical: trend reader w 0.5, eta 0.001": {
+    "V1: no flagged decision": 0.9967,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 10.39,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.9967,
+    "mean rounds whose count mismatches A / B": [
+     0.56,
+     33.71
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.9967,
+    "mean individual mismatches A / B": [
+     0.57,
+     167.26
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.9233,
+     "right where none can be": 0.9467,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "congestion, identical: agents exchange rules (cancellation control), eta 0.001": {
+    "V1: no flagged decision": 0.9967,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 1.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 11.0,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.61,
+     0.57
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0,
+    "mean individual mismatches A / B": [
+     0.61,
+     0.57
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0,
+     "passes the least right value": 0.0,
+     "no rest by round N": 0.0,
+     "right not repeated": 0.0,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "constant 4 (deaf): memoryless, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 1.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 1.16,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.58,
+     0.44
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0033,
+    "mean individual mismatches A / B": [
+     0.58,
+     0.45
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.4167,
+     "passes the least right value": 0.2833,
+     "no rest by round N": 0.13,
+     "right not repeated": 0.3667,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.3267,
+     "passes the least right value": 0.2167,
+     "no rest by round N": 0.0733,
+     "right not repeated": 0.2967,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "identity: memoryless, eta 0.001": {
+    "V1: no flagged decision": 0.9967,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 0.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 1.0,
+    "mean rounds in arm B whose publication moves": 0.12,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.52,
+     0.6
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0033,
+    "mean individual mismatches A / B": [
+     0.52,
+     0.61
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.0,
+     "passes the least right value": 0.3833,
+     "no rest by round N": 0.04,
+     "right not repeated": 0.35,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.0033,
+     "passes the least right value": 0.45,
+     "no rest by round N": 0.0333,
+     "right not repeated": 0.4367,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   },
+   "hybrid: even agents bandwagon-stalled, odd agents deaf, eta 0.001": {
+    "V1: no flagged decision": 1.0,
+    "V1: table equals the public's true table": 1.0,
+    "V1: measured shape keeps the order": 1.0,
+    "V1: measured shape reverses the order": 0.0,
+    "V1: measured table constant (not read)": 0.0,
+    "V1: measured table the identity (every forecast met)": 0.0,
+    "mean rounds in arm B whose publication moves": 3.14,
+    "V2 contradicted (rounds whose count mismatches; Fisher one-sided 0.05)": 0.0,
+    "mean rounds whose count mismatches A / B": [
+     0.59,
+     0.57
+    ],
+    "diagnostic: individual-level test contradicted (decisions; Fisher one-sided 0.05)": 0.0,
+    "mean individual mismatches A / B": [
+     0.6,
+     0.57
+    ],
+    "forbidden case seen in some seed, arm A": {
+     "fall": 0.3467,
+     "passes the least right value": 0.2367,
+     "no rest by round N": 0.1367,
+     "right not repeated": 0.3667,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    },
+    "forbidden case seen in some seed, arm B": {
+     "fall": 0.3433,
+     "passes the least right value": 0.2133,
+     "no rest by round N": 0.09,
+     "right not repeated": 0.3333,
+     "right where none can be": 0.0,
+     "in a seed with no count mismatch (a harness fault)": 0.0
+    }
+   }
+  },
+  "exact_offline_R5": {
+   "1/1000": {
+    "P(decision flagged)": 1e-05,
+    "P(no flagged decision in the table)": 0.9989,
+    "P(a modal decision wrong)": 0.0
+   },
+   "1/100": {
+    "P(decision flagged)": 0.00098,
+    "P(no flagged decision in the table)": 0.8977,
+    "P(a modal decision wrong)": 5e-08
+   },
+   "1/20": {
+    "P(decision flagged)": 0.022562,
+    "P(no flagged decision in the table)": 0.0812,
+    "P(a modal decision wrong)": 3e-05
+   }
+  },
+  "fewest_arm_B_mismatching_rounds_contradicting_V2": {
+   "arm A 0": 5,
+   "arm A 1": 7,
+   "arm A 2": 8,
+   "arm A 5": 13
+  },
+  "fewest_arm_B_individual_mismatches_contradicting_the_diagnostic": {
+   "arm A 0": 5,
+   "arm A 1": 7,
+   "arm A 2": 9,
+   "arm A 5": 13
+  }
+ },
+ "E_usage": {
+  "calls_per_model": {
+   "offline table (2 framings x 10 agents x 11 forecasts x R 5)": 1100,
+   "arm A, memoryless (2 x 5 seeds x 11 rounds x 10)": 1100,
+   "arm B, with memory (2 x 5 seeds x 11 rounds x 10)": 1100,
+   "no-forecast round (2 x 10 x 5)": 100,
+   "identity control (10 x 11, payoffs not told)": 110,
+   "start at a right value (2 x 3 rounds x 10 x 2 arms)": 120,
+   "comprehension probes (2 x 11 x 2)": 44,
+   "determinism pilot": 300,
+   "total, before re-asks": 3974
+  },
+  "tokens_per_model_estimate": 1474512,
+  "assumptions": "about 280 input and 8 output tokens a stateless call; arm B adds about 60 tokens of course per round; no reasoning tokens (a reasoning model adds its reasoning, measured at the smoke run)",
+  "three_families": {
+   "calls": 11922,
+   "tokens": 4423536
+  }
+ }
+}

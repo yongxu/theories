@@ -1,0 +1,3776 @@
+{
+ "test": "TR3 (RF4, readers reading readers)",
+ "stage": "0: design, no model called",
+ "seed": 20261031,
+ "python": "3.11, standard library",
+ "A_mirror": {
+  "lean_module": "Becoming.Cascade",
+  "lean_sha256": "e6add4291cb2af7cefb3882ed48619aeaa6a473446fd5ff5b2505c49fe5df538",
+  "copying_witness": {
+   "couplings_2": {
+    "members": 5,
+    "worlds": 32,
+    "ReadsOnlyActsFrom_1": true,
+    "ReadsOnlyActsFrom_0": false,
+    "reaches_first_only_checks": 2560,
+    "reaches_first_only_violations": 0,
+    "pairs_apart_in_member_0_with_different_acts": "512 of 512"
+   },
+   "couplings_3": {
+    "members": 5,
+    "worlds": 243,
+    "ReadsOnlyActsFrom_1": true,
+    "ReadsOnlyActsFrom_0": false,
+    "reaches_first_only_checks": 98415,
+    "reaches_first_only_violations": 0,
+    "pairs_apart_in_member_0_with_different_acts": "39366 of 39366"
+   }
+  },
+  "extension_claim": {
+   "samples": 1600,
+   "agree": 1600
+  },
+  "every_boolean_pool_of_three": {
+   "members": 3,
+   "laws": 16384,
+   "worlds": 8,
+   "laws_meeting_ReadsOnlyActsFrom_k": {
+    "0": 128,
+    "1": 256,
+    "2": 1024,
+    "3": 16384
+   },
+   "acts_alike_of_cascade_checks": 163840,
+   "acts_alike_of_cascade_violations": 0,
+   "pairs_alike_before_k_with_different_acts_where_the_premise_fails": 901120,
+   "separates_at_checks": 2424832,
+   "separates_at_violations": 0,
+   "reached_history_form_checks": 1064960,
+   "reached_history_form_violations": 0,
+   "reached_history_premise_met_where_the_Lean_premise_fails": 901120
+  },
+  "every_pool_of_two_ternary_couplings": {
+   "members": 2,
+   "couplings": 3,
+   "laws": 512,
+   "laws_meeting_premise_k": [
+    8,
+    32,
+    512
+   ],
+   "acts_alike_of_cascade_checks": 6120,
+   "violations": 0,
+   "separates_at_checks": 69120,
+   "separates_at_violations": 0
+  },
+  "random_boolean_pools_of_five": {
+   "members": 5,
+   "laws": 1500,
+   "seed": 20261032,
+   "acts_alike_of_cascade_checks": 392320,
+   "violations": 0,
+   "reached_history_form_checks": 1790856,
+   "reached_history_form_violations": 0,
+   "reached_premise_met_where_the_Lean_premise_fails": 1398536
+  },
+  "reached_history_form": "Inference from the proof term of law_alike_of_cascade, which uses the premise only at T.acts w n with the two worlds' couplings: if, for every n >= k, law n gives one act for coupling n w and coupling n w' at the list acts w n, then worlds alike before k give the same acts. Not stated in the Lean; a candidate core lemma."
+ },
+ "B_cells": {
+  "precision": {
+   "exact": "3/5",
+   "float": 0.6
+  },
+  "priors": {
+   "1:1": {
+    "prior": {
+     "exact": "1/2",
+     "float": 0.5
+    },
+    "static_cells": [
+     "()",
+     "(A)",
+     "(B)",
+     "(A,B)",
+     "(B,A)"
+    ],
+    "paths": {
+     "(A,A)": [
+      "(A,A)",
+      "(A,A,A)",
+      "(A,A,A,A)",
+      "(A,A,A,A,A)",
+      "(A,A,A,A,A,A)",
+      "(A,A,A,A,A,A,A)"
+     ],
+     "(B,B)": [
+      "(B,B)",
+      "(B,B,B)",
+      "(B,B,B,B)",
+      "(B,B,B,B,B)",
+      "(B,B,B,B,B,B)",
+      "(B,B,B,B,B,B,B)"
+     ]
+    },
+    "exploration_cells_no_bhw_prediction": [
+     "(A,A,B)",
+     "(B,B,A)",
+     "(A,A,A,B)"
+    ],
+    "D_by_type": {
+     "BHW, ties to the own draw": {
+      "()": "1",
+      "(A)": "1",
+      "(B)": "1",
+      "(A,B)": "1",
+      "(B,A)": "1",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,A,B)": "1 (off its own path; by the convention)",
+      "(B,B,A)": "1 (off its own path; by the convention)",
+      "(A,A,A,B)": "1 (off its own path; by the convention)"
+     },
+     "BHW, ties by a coin": {
+      "()": "1",
+      "(A)": "1/2",
+      "(B)": "1/2",
+      "(A,B)": "1",
+      "(B,A)": "1",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,A,B)": "1 (off its own path; by the convention)",
+      "(B,B,A)": "1 (off its own path; by the convention)",
+      "(A,A,A,B)": "1 (off its own path; by the convention)"
+     },
+     "BHW, ties to the public": {
+      "()": "1",
+      "(A)": "0",
+      "(B)": "0",
+      "(A,B)": "1 (off its own path; by the convention)",
+      "(B,A)": "1 (off its own path; by the convention)",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,A,B)": "1 (off its own path; by the convention)",
+      "(B,B,A)": "1 (off its own path; by the convention)",
+      "(A,A,A,B)": "1 (off its own path; by the convention)"
+     },
+     "overweighting 3:2": {
+      "()": "1",
+      "(A)": "1",
+      "(B)": "1",
+      "(A,B)": "1",
+      "(B,A)": "1",
+      "(A,A)": "1",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B)": "1",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,A,B)": "1",
+      "(B,B,A)": "1",
+      "(A,A,A,B)": "1 (off its own path; by the convention)"
+     },
+     "overweighting 2:1": {
+      "()": "1",
+      "(A)": "1",
+      "(B)": "1",
+      "(A,B)": "1",
+      "(B,A)": "1",
+      "(A,A)": "1",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B)": "1",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,A,B)": "1",
+      "(B,B,A)": "1",
+      "(A,A,A,B)": "1 (off its own path; by the convention)"
+     },
+     "overweighting 3:1": {
+      "()": "1",
+      "(A)": "1",
+      "(B)": "1",
+      "(A,B)": "1",
+      "(B,A)": "1",
+      "(A,A)": "1",
+      "(A,A,A)": "1",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B)": "1",
+      "(B,B,B)": "1",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,A,B)": "1",
+      "(B,B,A)": "1",
+      "(A,A,A,B)": "1"
+     },
+     "naive counting": {
+      "()": "1",
+      "(A)": "1",
+      "(B)": "1",
+      "(A,B)": "1",
+      "(B,A)": "1",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,A,B)": "1",
+      "(B,B,A)": "1",
+      "(A,A,A,B)": "0"
+     },
+     "copier (Copying.turns)": {
+      "()": "1",
+      "(A)": "0",
+      "(B)": "0",
+      "(A,B)": "0",
+      "(B,A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,A,B)": "0",
+      "(B,B,A)": "0",
+      "(A,A,A,B)": "0"
+     },
+     "last-act copier": {
+      "()": "1",
+      "(A)": "0",
+      "(B)": "0",
+      "(A,B)": "0",
+      "(B,A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,A,B)": "0",
+      "(B,B,A)": "0",
+      "(A,A,A,B)": "0"
+     },
+     "majority copier": {
+      "()": "1",
+      "(A)": "0",
+      "(B)": "0",
+      "(A,B)": "1",
+      "(B,A)": "1",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,A,B)": "0",
+      "(B,B,A)": "0",
+      "(A,A,A,B)": "0"
+     },
+     "constant A (fixed by label)": {
+      "()": "0",
+      "(A)": "0",
+      "(B)": "0",
+      "(A,B)": "0",
+      "(B,A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,A,B)": "0",
+      "(B,B,A)": "0",
+      "(A,A,A,B)": "0"
+     },
+     "fixed by position": {
+      "()": "0",
+      "(A)": "0",
+      "(B)": "0",
+      "(A,B)": "0",
+      "(B,A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,A,B)": "0",
+      "(B,B,A)": "0",
+      "(A,A,A,B)": "0"
+     },
+     "own draw always": {
+      "()": "1",
+      "(A)": "1",
+      "(B)": "1",
+      "(A,B)": "1",
+      "(B,A)": "1",
+      "(A,A)": "1",
+      "(A,A,A)": "1",
+      "(A,A,A,A)": "1",
+      "(A,A,A,A,A)": "1",
+      "(A,A,A,A,A,A)": "1",
+      "(A,A,A,A,A,A,A)": "1",
+      "(B,B)": "1",
+      "(B,B,B)": "1",
+      "(B,B,B,B)": "1",
+      "(B,B,B,B,B)": "1",
+      "(B,B,B,B,B,B)": "1",
+      "(B,B,B,B,B,B,B)": "1",
+      "(A,A,B)": "1",
+      "(B,B,A)": "1",
+      "(A,A,A,B)": "1"
+     },
+     "contrarian to the last": {
+      "()": "1",
+      "(A)": "0",
+      "(B)": "0",
+      "(A,B)": "0",
+      "(B,A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,A,B)": "0",
+      "(B,B,A)": "0",
+      "(A,A,A,B)": "0"
+     },
+     "logit response, precision 2": {
+      "()": 0.1974,
+      "(A)": 0.1968,
+      "(B)": 0.1968,
+      "(A,B)": 0.1974,
+      "(B,A)": 0.1974,
+      "(A,A)": 0.1952,
+      "(A,A,A)": 0.1928,
+      "(A,A,A,A)": 0.1896,
+      "(A,A,A,A,A)": 0.1859,
+      "(A,A,A,A,A,A)": 0.1818,
+      "(A,A,A,A,A,A,A)": 0.1774,
+      "(B,B)": 0.1952,
+      "(B,B,B)": 0.1928,
+      "(B,B,B,B)": 0.1896,
+      "(B,B,B,B,B)": 0.1859,
+      "(B,B,B,B,B,B)": 0.1818,
+      "(B,B,B,B,B,B,B)": 0.1774,
+      "(A,A,B)": 0.1969,
+      "(B,B,A)": 0.1969,
+      "(A,A,A,B)": 0.1956
+     },
+     "logit response, precision 5": {
+      "()": 0.4621,
+      "(A)": 0.4414,
+      "(B)": 0.4414,
+      "(A,B)": 0.4616,
+      "(B,A)": 0.4616,
+      "(A,A)": 0.3981,
+      "(A,A,A)": 0.3517,
+      "(A,A,A,A)": 0.31,
+      "(A,A,A,A,A)": 0.2749,
+      "(A,A,A,A,A,A)": 0.2458,
+      "(A,A,A,A,A,A,A)": 0.2216,
+      "(B,B)": 0.3981,
+      "(B,B,B)": 0.3517,
+      "(B,B,B,B)": 0.31,
+      "(B,B,B,B,B)": 0.2749,
+      "(B,B,B,B,B,B)": 0.2458,
+      "(B,B,B,B,B,B,B)": 0.2216,
+      "(A,A,B)": 0.4555,
+      "(B,B,A)": 0.4555,
+      "(A,A,A,B)": 0.4345
+     },
+     "logit response, precision 10": {
+      "()": 0.7616,
+      "(A)": 0.5888,
+      "(B)": 0.5888,
+      "(A,B)": 0.755,
+      "(B,A)": 0.755,
+      "(A,A)": 0.39,
+      "(A,A,A)": 0.2838,
+      "(A,A,A,A)": 0.2223,
+      "(A,A,A,A,A)": 0.1827,
+      "(A,A,A,A,A,A)": 0.1551,
+      "(A,A,A,A,A,A,A)": 0.1348,
+      "(B,B)": 0.39,
+      "(B,B,B)": 0.2838,
+      "(B,B,B,B)": 0.2223,
+      "(B,B,B,B,B)": 0.1827,
+      "(B,B,B,B,B,B)": 0.1551,
+      "(B,B,B,B,B,B,B)": 0.1348,
+      "(A,A,B)": 0.7395,
+      "(B,B,A)": 0.7395,
+      "(A,A,A,B)": 0.6827
+     },
+     "hybrid: own draw w.p. 1/10, else counting": {
+      "()": "1",
+      "(A)": "1",
+      "(B)": "1",
+      "(A,B)": "1",
+      "(B,A)": "1",
+      "(A,A)": "1/10",
+      "(A,A,A)": "1/10",
+      "(A,A,A,A)": "1/10",
+      "(A,A,A,A,A)": "1/10",
+      "(A,A,A,A,A,A)": "1/10",
+      "(A,A,A,A,A,A,A)": "1/10",
+      "(B,B)": "1/10",
+      "(B,B,B)": "1/10",
+      "(B,B,B,B)": "1/10",
+      "(B,B,B,B,B)": "1/10",
+      "(B,B,B,B,B,B)": "1/10",
+      "(B,B,B,B,B,B,B)": "1/10",
+      "(A,A,B)": "1",
+      "(B,B,A)": "1",
+      "(A,A,A,B)": "1/10"
+     },
+     "hybrid: own draw w.p. 1/4, else counting": {
+      "()": "1",
+      "(A)": "1",
+      "(B)": "1",
+      "(A,B)": "1",
+      "(B,A)": "1",
+      "(A,A)": "1/4",
+      "(A,A,A)": "1/4",
+      "(A,A,A,A)": "1/4",
+      "(A,A,A,A,A)": "1/4",
+      "(A,A,A,A,A,A)": "1/4",
+      "(A,A,A,A,A,A,A)": "1/4",
+      "(B,B)": "1/4",
+      "(B,B,B)": "1/4",
+      "(B,B,B,B)": "1/4",
+      "(B,B,B,B,B)": "1/4",
+      "(B,B,B,B,B,B)": "1/4",
+      "(B,B,B,B,B,B,B)": "1/4",
+      "(A,A,B)": "1",
+      "(B,B,A)": "1",
+      "(A,A,A,B)": "1/4"
+     },
+     "hybrid: own draw w.p. 1/2, else counting": {
+      "()": "1",
+      "(A)": "1",
+      "(B)": "1",
+      "(A,B)": "1",
+      "(B,A)": "1",
+      "(A,A)": "1/2",
+      "(A,A,A)": "1/2",
+      "(A,A,A,A)": "1/2",
+      "(A,A,A,A,A)": "1/2",
+      "(A,A,A,A,A,A)": "1/2",
+      "(A,A,A,A,A,A,A)": "1/2",
+      "(B,B)": "1/2",
+      "(B,B,B)": "1/2",
+      "(B,B,B,B)": "1/2",
+      "(B,B,B,B,B)": "1/2",
+      "(B,B,B,B,B,B)": "1/2",
+      "(B,B,B,B,B,B,B)": "1/2",
+      "(A,A,B)": "1",
+      "(B,B,A)": "1",
+      "(A,A,A,B)": "1/2"
+     },
+     "counting with flips w.p. 1/100": {
+      "()": "49/50",
+      "(A)": "49/50",
+      "(B)": "49/50",
+      "(A,B)": "49/50",
+      "(B,A)": "49/50",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,A,B)": "49/50",
+      "(B,B,A)": "49/50",
+      "(A,A,A,B)": "0"
+     },
+     "counting with flips w.p. 1/20": {
+      "()": "9/10",
+      "(A)": "9/10",
+      "(B)": "9/10",
+      "(A,B)": "9/10",
+      "(B,A)": "9/10",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,A,B)": "9/10",
+      "(B,B,A)": "9/10",
+      "(A,A,A,B)": "0"
+     }
+    }
+   },
+   "one draw for A": {
+    "prior": {
+     "exact": "3/5",
+     "float": 0.6
+    },
+    "static_cells": [
+     "()",
+     "(B)",
+     "(B,A)",
+     "(B,B)"
+    ],
+    "paths": {
+     "(A)": [
+      "(A)",
+      "(A,A)",
+      "(A,A,A)",
+      "(A,A,A,A)",
+      "(A,A,A,A,A)",
+      "(A,A,A,A,A,A)",
+      "(A,A,A,A,A,A,A)"
+     ],
+     "(B,B,B)": [
+      "(B,B,B)",
+      "(B,B,B,B)",
+      "(B,B,B,B,B)",
+      "(B,B,B,B,B,B)",
+      "(B,B,B,B,B,B,B)"
+     ]
+    },
+    "exploration_cells_no_bhw_prediction": [
+     "(A,B)",
+     "(A,A,B)"
+    ],
+    "D_by_type": {
+     "BHW, ties to the own draw": {
+      "()": "1",
+      "(B)": "1",
+      "(B,A)": "1",
+      "(B,B)": "1",
+      "(A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,B)": "1 (off its own path; by the convention)",
+      "(A,A,B)": "1 (off its own path; by the convention)"
+     },
+     "BHW, ties by a coin": {
+      "()": "1/2",
+      "(B)": "1",
+      "(B,A)": "1/2",
+      "(B,B)": "1/2",
+      "(A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,B)": "1 (off its own path; by the convention)",
+      "(A,A,B)": "1 (off its own path; by the convention)"
+     },
+     "BHW, ties to the public": {
+      "()": "0",
+      "(B)": "1 (off its own path; by the convention)",
+      "(B,A)": "0 (off its own path; by the convention)",
+      "(B,B)": "0 (off its own path; by the convention)",
+      "(A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B,B)": "0 (off its own path; by the convention)",
+      "(B,B,B,B)": "0 (off its own path; by the convention)",
+      "(B,B,B,B,B)": "0 (off its own path; by the convention)",
+      "(B,B,B,B,B,B)": "0 (off its own path; by the convention)",
+      "(B,B,B,B,B,B,B)": "0 (off its own path; by the convention)",
+      "(A,B)": "1 (off its own path; by the convention)",
+      "(A,A,B)": "1 (off its own path; by the convention)"
+     },
+     "overweighting 3:2": {
+      "()": "1",
+      "(B)": "1",
+      "(B,A)": "1",
+      "(B,B)": "1",
+      "(A)": "1",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B,B)": "1",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,B)": "1",
+      "(A,A,B)": "1 (off its own path; by the convention)"
+     },
+     "overweighting 2:1": {
+      "()": "1",
+      "(B)": "1",
+      "(B,A)": "1",
+      "(B,B)": "1",
+      "(A)": "1",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B,B)": "1",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,B)": "1",
+      "(A,A,B)": "1 (off its own path; by the convention)"
+     },
+     "overweighting 3:1": {
+      "()": "1",
+      "(B)": "1",
+      "(B,A)": "1",
+      "(B,B)": "1",
+      "(A)": "1",
+      "(A,A)": "1",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B,B)": "1",
+      "(B,B,B,B)": "1",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,B)": "1",
+      "(A,A,B)": "1"
+     },
+     "naive counting": {
+      "()": "1",
+      "(B)": "1",
+      "(B,A)": "1",
+      "(B,B)": "1",
+      "(A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,B)": "1",
+      "(A,A,B)": "0"
+     },
+     "copier (Copying.turns)": {
+      "()": "1",
+      "(B)": "0",
+      "(B,A)": "0",
+      "(B,B)": "0",
+      "(A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,B)": "0",
+      "(A,A,B)": "0"
+     },
+     "last-act copier": {
+      "()": "1",
+      "(B)": "0",
+      "(B,A)": "0",
+      "(B,B)": "0",
+      "(A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,B)": "0",
+      "(A,A,B)": "0"
+     },
+     "majority copier": {
+      "()": "1",
+      "(B)": "0",
+      "(B,A)": "1",
+      "(B,B)": "0",
+      "(A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,B)": "1",
+      "(A,A,B)": "0"
+     },
+     "constant A (fixed by label)": {
+      "()": "0",
+      "(B)": "0",
+      "(B,A)": "0",
+      "(B,B)": "0",
+      "(A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,B)": "0",
+      "(A,A,B)": "0"
+     },
+     "fixed by position": {
+      "()": "0",
+      "(B)": "0",
+      "(B,A)": "0",
+      "(B,B)": "0",
+      "(A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,B)": "0",
+      "(A,A,B)": "0"
+     },
+     "own draw always": {
+      "()": "1",
+      "(B)": "1",
+      "(B,A)": "1",
+      "(B,B)": "1",
+      "(A)": "1",
+      "(A,A)": "1",
+      "(A,A,A)": "1",
+      "(A,A,A,A)": "1",
+      "(A,A,A,A,A)": "1",
+      "(A,A,A,A,A,A)": "1",
+      "(A,A,A,A,A,A,A)": "1",
+      "(B,B,B)": "1",
+      "(B,B,B,B)": "1",
+      "(B,B,B,B,B)": "1",
+      "(B,B,B,B,B,B)": "1",
+      "(B,B,B,B,B,B,B)": "1",
+      "(A,B)": "1",
+      "(A,A,B)": "1"
+     },
+     "contrarian to the last": {
+      "()": "1",
+      "(B)": "0",
+      "(B,A)": "0",
+      "(B,B)": "0",
+      "(A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,B)": "0",
+      "(A,A,B)": "0"
+     },
+     "logit response, precision 2": {
+      "()": 0.1834,
+      "(B)": 0.1887,
+      "(B,A)": 0.1849,
+      "(B,B)": 0.1928,
+      "(A)": 0.179,
+      "(A,A)": 0.1745,
+      "(A,A,A)": 0.1699,
+      "(A,A,A,A)": 0.1652,
+      "(A,A,A,A,A)": 0.1605,
+      "(A,A,A,A,A,A)": 0.1559,
+      "(A,A,A,A,A,A,A)": 0.1514,
+      "(B,B,B)": 0.1956,
+      "(B,B,B,B)": 0.1971,
+      "(B,B,B,B,B)": 0.1973,
+      "(B,B,B,B,B,B)": 0.1965,
+      "(B,B,B,B,B,B,B)": 0.1946,
+      "(A,B)": 0.1852,
+      "(A,A,B)": 0.1813
+     },
+     "logit response, precision 5": {
+      "()": 0.3725,
+      "(B)": 0.4453,
+      "(B,A)": 0.4032,
+      "(B,B)": 0.4609,
+      "(A)": 0.3282,
+      "(A,A)": 0.2901,
+      "(A,A,A)": 0.2583,
+      "(A,A,A,A)": 0.232,
+      "(A,A,A,A,A)": 0.2102,
+      "(A,A,A,A,A,A)": 0.1919,
+      "(A,A,A,A,A,A,A)": 0.1764,
+      "(B,B,B)": 0.4327,
+      "(B,B,B,B)": 0.3874,
+      "(B,B,B,B,B)": 0.3417,
+      "(B,B,B,B,B,B)": 0.3015,
+      "(B,B,B,B,B,B,B)": 0.2678,
+      "(A,B)": 0.42,
+      "(A,A,B)": 0.3916
+     },
+     "logit response, precision 10": {
+      "()": 0.4791,
+      "(B)": 0.7594,
+      "(B,A)": 0.5651,
+      "(B,B)": 0.6125,
+      "(A)": 0.3312,
+      "(A,A)": 0.2507,
+      "(A,A,A)": 0.2014,
+      "(A,A,A,A)": 0.1684,
+      "(A,A,A,A,A)": 0.1447,
+      "(A,A,A,A,A,A)": 0.1269,
+      "(A,A,A,A,A,A,A)": 0.1131,
+      "(B,B,B)": 0.4038,
+      "(B,B,B,B)": 0.2913,
+      "(B,B,B,B,B)": 0.2269,
+      "(B,B,B,B,B,B)": 0.1858,
+      "(B,B,B,B,B,B,B)": 0.1573,
+      "(A,B)": 0.7133,
+      "(A,A,B)": 0.6547
+     },
+     "hybrid: own draw w.p. 1/10, else counting": {
+      "()": "1",
+      "(B)": "1",
+      "(B,A)": "1",
+      "(B,B)": "1",
+      "(A)": "1/10",
+      "(A,A)": "1/10",
+      "(A,A,A)": "1/10",
+      "(A,A,A,A)": "1/10",
+      "(A,A,A,A,A)": "1/10",
+      "(A,A,A,A,A,A)": "1/10",
+      "(A,A,A,A,A,A,A)": "1/10",
+      "(B,B,B)": "1/10",
+      "(B,B,B,B)": "1/10",
+      "(B,B,B,B,B)": "1/10",
+      "(B,B,B,B,B,B)": "1/10",
+      "(B,B,B,B,B,B,B)": "1/10",
+      "(A,B)": "1",
+      "(A,A,B)": "1/10"
+     },
+     "hybrid: own draw w.p. 1/4, else counting": {
+      "()": "1",
+      "(B)": "1",
+      "(B,A)": "1",
+      "(B,B)": "1",
+      "(A)": "1/4",
+      "(A,A)": "1/4",
+      "(A,A,A)": "1/4",
+      "(A,A,A,A)": "1/4",
+      "(A,A,A,A,A)": "1/4",
+      "(A,A,A,A,A,A)": "1/4",
+      "(A,A,A,A,A,A,A)": "1/4",
+      "(B,B,B)": "1/4",
+      "(B,B,B,B)": "1/4",
+      "(B,B,B,B,B)": "1/4",
+      "(B,B,B,B,B,B)": "1/4",
+      "(B,B,B,B,B,B,B)": "1/4",
+      "(A,B)": "1",
+      "(A,A,B)": "1/4"
+     },
+     "hybrid: own draw w.p. 1/2, else counting": {
+      "()": "1",
+      "(B)": "1",
+      "(B,A)": "1",
+      "(B,B)": "1",
+      "(A)": "1/2",
+      "(A,A)": "1/2",
+      "(A,A,A)": "1/2",
+      "(A,A,A,A)": "1/2",
+      "(A,A,A,A,A)": "1/2",
+      "(A,A,A,A,A,A)": "1/2",
+      "(A,A,A,A,A,A,A)": "1/2",
+      "(B,B,B)": "1/2",
+      "(B,B,B,B)": "1/2",
+      "(B,B,B,B,B)": "1/2",
+      "(B,B,B,B,B,B)": "1/2",
+      "(B,B,B,B,B,B,B)": "1/2",
+      "(A,B)": "1",
+      "(A,A,B)": "1/2"
+     },
+     "counting with flips w.p. 1/100": {
+      "()": "49/50",
+      "(B)": "49/50",
+      "(B,A)": "49/50",
+      "(B,B)": "49/50",
+      "(A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,B)": "49/50",
+      "(A,A,B)": "0"
+     },
+     "counting with flips w.p. 1/20": {
+      "()": "9/10",
+      "(B)": "9/10",
+      "(B,A)": "9/10",
+      "(B,B)": "9/10",
+      "(A)": "0",
+      "(A,A)": "0",
+      "(A,A,A)": "0",
+      "(A,A,A,A)": "0",
+      "(A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A)": "0",
+      "(A,A,A,A,A,A,A)": "0",
+      "(B,B,B)": "0",
+      "(B,B,B,B)": "0",
+      "(B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B)": "0",
+      "(B,B,B,B,B,B,B)": "0",
+      "(A,B)": "9/10",
+      "(A,A,B)": "0"
+     }
+    }
+   }
+  },
+  "where_each_rival_parts_from_bhw": {
+   "BHW, ties by a coin": {
+    "1:1": [
+     "(A): D 1 vs 0.5",
+     "(B): D 1 vs 0.5"
+    ],
+    "one draw for A": [
+     "(): D 1 vs 0.5",
+     "(B,A): D 1 vs 0.5",
+     "(B,B): D 1 vs 0.5"
+    ]
+   },
+   "BHW, ties to the public": {
+    "1:1": [
+     "(A): D 1 vs 0.0",
+     "(B): D 1 vs 0.0"
+    ],
+    "one draw for A": [
+     "(): D 1 vs 0.0",
+     "(B,A): D 1 vs 0.0",
+     "(B,B): D 1 vs 0.0"
+    ]
+   },
+   "overweighting 3:2": {
+    "1:1": [
+     "(A,A): D 0 vs 1.0",
+     "(B,B): D 0 vs 1.0"
+    ],
+    "one draw for A": [
+     "(A): D 0 vs 1.0",
+     "(B,B,B): D 0 vs 1.0"
+    ]
+   },
+   "overweighting 2:1": {
+    "1:1": [
+     "(A,A): D 0 vs 1.0",
+     "(B,B): D 0 vs 1.0"
+    ],
+    "one draw for A": [
+     "(A): D 0 vs 1.0",
+     "(B,B,B): D 0 vs 1.0"
+    ]
+   },
+   "overweighting 3:1": {
+    "1:1": [
+     "(A,A): D 0 vs 1.0",
+     "(A,A,A): D 0 vs 1.0",
+     "(B,B): D 0 vs 1.0",
+     "(B,B,B): D 0 vs 1.0"
+    ],
+    "one draw for A": [
+     "(A): D 0 vs 1.0",
+     "(A,A): D 0 vs 1.0",
+     "(B,B,B): D 0 vs 1.0",
+     "(B,B,B,B): D 0 vs 1.0"
+    ]
+   },
+   "naive counting": {
+    "1:1": [],
+    "one draw for A": []
+   },
+   "copier (Copying.turns)": {
+    "1:1": [
+     "(A): D 1 vs 0.0",
+     "(B): D 1 vs 0.0",
+     "(A,B): D 1 vs 0.0",
+     "(B,A): D 1 vs 0.0"
+    ],
+    "one draw for A": [
+     "(B): D 1 vs 0.0",
+     "(B,A): D 1 vs 0.0",
+     "(B,B): D 1 vs 0.0"
+    ]
+   },
+   "last-act copier": {
+    "1:1": [
+     "(A): D 1 vs 0.0",
+     "(B): D 1 vs 0.0",
+     "(A,B): D 1 vs 0.0",
+     "(B,A): D 1 vs 0.0"
+    ],
+    "one draw for A": [
+     "(B): D 1 vs 0.0",
+     "(B,A): D 1 vs 0.0",
+     "(B,B): D 1 vs 0.0"
+    ]
+   },
+   "majority copier": {
+    "1:1": [
+     "(A): D 1 vs 0.0",
+     "(B): D 1 vs 0.0"
+    ],
+    "one draw for A": [
+     "(B): D 1 vs 0.0",
+     "(B,B): D 1 vs 0.0"
+    ]
+   },
+   "constant A (fixed by label)": {
+    "1:1": [
+     "(): D 1 vs 0.0",
+     "(A): D 1 vs 0.0",
+     "(B): D 1 vs 0.0",
+     "(A,B): D 1 vs 0.0",
+     "(B,A): D 1 vs 0.0",
+     "(B,B): ignores, other act",
+     "(B,B,B): ignores, other act",
+     "(B,B,B,B): ignores, other act",
+     "(B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B,B): ignores, other act"
+    ],
+    "one draw for A": [
+     "(): D 1 vs 0.0",
+     "(B): D 1 vs 0.0",
+     "(B,A): D 1 vs 0.0",
+     "(B,B): D 1 vs 0.0",
+     "(B,B,B): ignores, other act",
+     "(B,B,B,B): ignores, other act",
+     "(B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B,B): ignores, other act"
+    ]
+   },
+   "fixed by position": {
+    "1:1": [
+     "(): D 1 vs 0.0",
+     "(A): D 1 vs 0.0",
+     "(B): D 1 vs 0.0",
+     "(A,B): D 1 vs 0.0",
+     "(B,A): D 1 vs 0.0",
+     "(A,A): ignores, other act",
+     "(A,A,A,A): ignores, other act",
+     "(A,A,A,A,A,A): ignores, other act",
+     "(B,B,B): ignores, other act",
+     "(B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B,B): ignores, other act"
+    ],
+    "one draw for A": [
+     "(): D 1 vs 0.0",
+     "(B): D 1 vs 0.0",
+     "(B,A): D 1 vs 0.0",
+     "(B,B): D 1 vs 0.0",
+     "(A,A): ignores, other act",
+     "(A,A,A,A): ignores, other act",
+     "(A,A,A,A,A,A): ignores, other act",
+     "(B,B,B): ignores, other act",
+     "(B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B,B): ignores, other act"
+    ]
+   },
+   "own draw always": {
+    "1:1": [
+     "(A,A): D 0 vs 1.0",
+     "(A,A,A): D 0 vs 1.0",
+     "(A,A,A,A): D 0 vs 1.0",
+     "(A,A,A,A,A): D 0 vs 1.0",
+     "(A,A,A,A,A,A): D 0 vs 1.0",
+     "(A,A,A,A,A,A,A): D 0 vs 1.0",
+     "(B,B): D 0 vs 1.0",
+     "(B,B,B): D 0 vs 1.0",
+     "(B,B,B,B): D 0 vs 1.0",
+     "(B,B,B,B,B): D 0 vs 1.0",
+     "(B,B,B,B,B,B): D 0 vs 1.0",
+     "(B,B,B,B,B,B,B): D 0 vs 1.0"
+    ],
+    "one draw for A": [
+     "(A): D 0 vs 1.0",
+     "(A,A): D 0 vs 1.0",
+     "(A,A,A): D 0 vs 1.0",
+     "(A,A,A,A): D 0 vs 1.0",
+     "(A,A,A,A,A): D 0 vs 1.0",
+     "(A,A,A,A,A,A): D 0 vs 1.0",
+     "(A,A,A,A,A,A,A): D 0 vs 1.0",
+     "(B,B,B): D 0 vs 1.0",
+     "(B,B,B,B): D 0 vs 1.0",
+     "(B,B,B,B,B): D 0 vs 1.0",
+     "(B,B,B,B,B,B): D 0 vs 1.0",
+     "(B,B,B,B,B,B,B): D 0 vs 1.0"
+    ]
+   },
+   "contrarian to the last": {
+    "1:1": [
+     "(A): D 1 vs 0.0",
+     "(B): D 1 vs 0.0",
+     "(A,B): D 1 vs 0.0",
+     "(B,A): D 1 vs 0.0",
+     "(A,A): ignores, other act",
+     "(A,A,A): ignores, other act",
+     "(A,A,A,A): ignores, other act",
+     "(A,A,A,A,A): ignores, other act",
+     "(A,A,A,A,A,A): ignores, other act",
+     "(A,A,A,A,A,A,A): ignores, other act",
+     "(B,B): ignores, other act",
+     "(B,B,B): ignores, other act",
+     "(B,B,B,B): ignores, other act",
+     "(B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B,B): ignores, other act"
+    ],
+    "one draw for A": [
+     "(B): D 1 vs 0.0",
+     "(B,A): D 1 vs 0.0",
+     "(B,B): D 1 vs 0.0",
+     "(A): ignores, other act",
+     "(A,A): ignores, other act",
+     "(A,A,A): ignores, other act",
+     "(A,A,A,A): ignores, other act",
+     "(A,A,A,A,A): ignores, other act",
+     "(A,A,A,A,A,A): ignores, other act",
+     "(A,A,A,A,A,A,A): ignores, other act",
+     "(B,B,B): ignores, other act",
+     "(B,B,B,B): ignores, other act",
+     "(B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B,B): ignores, other act"
+    ]
+   },
+   "logit response, precision 2": {
+    "1:1": [
+     "(): D 1 vs 0.197",
+     "(A): D 1 vs 0.197",
+     "(B): D 1 vs 0.197",
+     "(A,B): D 1 vs 0.197",
+     "(B,A): D 1 vs 0.197"
+    ],
+    "one draw for A": [
+     "(): D 1 vs 0.183",
+     "(B): D 1 vs 0.189",
+     "(B,A): D 1 vs 0.185",
+     "(B,B): D 1 vs 0.193"
+    ]
+   },
+   "logit response, precision 5": {
+    "1:1": [
+     "(): D 1 vs 0.462",
+     "(A): D 1 vs 0.441",
+     "(B): D 1 vs 0.441",
+     "(A,B): D 1 vs 0.462",
+     "(B,A): D 1 vs 0.462"
+    ],
+    "one draw for A": [
+     "(): D 1 vs 0.372",
+     "(B): D 1 vs 0.445",
+     "(B,A): D 1 vs 0.403",
+     "(B,B): D 1 vs 0.461"
+    ]
+   },
+   "logit response, precision 10": {
+    "1:1": [],
+    "one draw for A": [
+     "(): D 1 vs 0.479"
+    ]
+   },
+   "hybrid: own draw w.p. 1/10, else counting": {
+    "1:1": [],
+    "one draw for A": []
+   },
+   "hybrid: own draw w.p. 1/4, else counting": {
+    "1:1": [],
+    "one draw for A": []
+   },
+   "hybrid: own draw w.p. 1/2, else counting": {
+    "1:1": [
+     "(A,A): D 0 vs 0.5",
+     "(A,A,A): D 0 vs 0.5",
+     "(A,A,A,A): D 0 vs 0.5",
+     "(A,A,A,A,A): D 0 vs 0.5",
+     "(A,A,A,A,A,A): D 0 vs 0.5",
+     "(A,A,A,A,A,A,A): D 0 vs 0.5",
+     "(B,B): D 0 vs 0.5",
+     "(B,B,B): D 0 vs 0.5",
+     "(B,B,B,B): D 0 vs 0.5",
+     "(B,B,B,B,B): D 0 vs 0.5",
+     "(B,B,B,B,B,B): D 0 vs 0.5",
+     "(B,B,B,B,B,B,B): D 0 vs 0.5"
+    ],
+    "one draw for A": [
+     "(A): D 0 vs 0.5",
+     "(A,A): D 0 vs 0.5",
+     "(A,A,A): D 0 vs 0.5",
+     "(A,A,A,A): D 0 vs 0.5",
+     "(A,A,A,A,A): D 0 vs 0.5",
+     "(A,A,A,A,A,A): D 0 vs 0.5",
+     "(A,A,A,A,A,A,A): D 0 vs 0.5",
+     "(B,B,B): D 0 vs 0.5",
+     "(B,B,B,B): D 0 vs 0.5",
+     "(B,B,B,B,B): D 0 vs 0.5",
+     "(B,B,B,B,B,B): D 0 vs 0.5",
+     "(B,B,B,B,B,B,B): D 0 vs 0.5"
+    ]
+   },
+   "counting with flips w.p. 1/100": {
+    "1:1": [
+     "(A,A): ignores, other act",
+     "(A,A,A): ignores, other act",
+     "(A,A,A,A): ignores, other act",
+     "(A,A,A,A,A): ignores, other act",
+     "(A,A,A,A,A,A): ignores, other act",
+     "(A,A,A,A,A,A,A): ignores, other act",
+     "(B,B): ignores, other act",
+     "(B,B,B): ignores, other act",
+     "(B,B,B,B): ignores, other act",
+     "(B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B,B): ignores, other act"
+    ],
+    "one draw for A": [
+     "(A): ignores, other act",
+     "(A,A): ignores, other act",
+     "(A,A,A): ignores, other act",
+     "(A,A,A,A): ignores, other act",
+     "(A,A,A,A,A): ignores, other act",
+     "(A,A,A,A,A,A): ignores, other act",
+     "(A,A,A,A,A,A,A): ignores, other act",
+     "(B,B,B): ignores, other act",
+     "(B,B,B,B): ignores, other act",
+     "(B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B,B): ignores, other act"
+    ]
+   },
+   "counting with flips w.p. 1/20": {
+    "1:1": [
+     "(A,A): ignores, other act",
+     "(A,A,A): ignores, other act",
+     "(A,A,A,A): ignores, other act",
+     "(A,A,A,A,A): ignores, other act",
+     "(A,A,A,A,A,A): ignores, other act",
+     "(A,A,A,A,A,A,A): ignores, other act",
+     "(B,B): ignores, other act",
+     "(B,B,B): ignores, other act",
+     "(B,B,B,B): ignores, other act",
+     "(B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B,B): ignores, other act"
+    ],
+    "one draw for A": [
+     "(A): ignores, other act",
+     "(A,A): ignores, other act",
+     "(A,A,A): ignores, other act",
+     "(A,A,A,A): ignores, other act",
+     "(A,A,A,A,A): ignores, other act",
+     "(A,A,A,A,A,A): ignores, other act",
+     "(A,A,A,A,A,A,A): ignores, other act",
+     "(B,B,B): ignores, other act",
+     "(B,B,B,B): ignores, other act",
+     "(B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B): ignores, other act",
+     "(B,B,B,B,B,B,B): ignores, other act"
+    ]
+   }
+  },
+  "precision_choice": {
+   "5/9": {
+    "bhw_cascade_at_net_informative_guesses": 2,
+    "overweighting_cascade_at": {
+     "3/2:1": 3,
+     "2:1": 5,
+     "5/2:1": 6,
+     "3:1": 6
+    },
+    "odds_against_a_contrary_draw_at_2": {
+     "exact": "5/4",
+     "float": 1.25
+    }
+   },
+   "3/5": {
+    "bhw_cascade_at_net_informative_guesses": 2,
+    "overweighting_cascade_at": {
+     "3/2:1": 3,
+     "2:1": 3,
+     "5/2:1": 4,
+     "3:1": 4
+    },
+    "odds_against_a_contrary_draw_at_2": {
+     "exact": "3/2",
+     "float": 1.5
+    }
+   },
+   "2/3": {
+    "bhw_cascade_at_net_informative_guesses": 2,
+    "overweighting_cascade_at": {
+     "3/2:1": 2,
+     "2:1": 3,
+     "5/2:1": 3,
+     "3:1": 3
+    },
+    "odds_against_a_contrary_draw_at_2": {
+     "exact": "2",
+     "float": 2.0
+    }
+   },
+   "3/4": {
+    "bhw_cascade_at_net_informative_guesses": 2,
+    "overweighting_cascade_at": {
+     "3/2:1": 2,
+     "2:1": 2,
+     "5/2:1": 2,
+     "3:1": 3
+    },
+    "odds_against_a_contrary_draw_at_2": {
+     "exact": "3",
+     "float": 3.0
+    }
+   }
+  }
+ },
+ "C_bhw": {
+  "5/9": {
+   "ties: own draw": {
+    "P(cascade starts at member 2)": {
+     "exact": "41/81",
+     "float": 0.506173
+    },
+    "P(started by member 4)": {
+     "exact": "4961/6561",
+     "float": 0.756135
+    },
+    "P(started by member 6)": {
+     "exact": "467441/531441",
+     "float": 0.879573
+    },
+    "P(wrong cascade within ten members)": {
+     "exact": "15799696/43046721",
+     "float": 0.367036
+    },
+    "P(no cascade within ten members)": {
+     "exact": "2560000/43046721",
+     "float": 0.05947
+    }
+   },
+   "ties: coin": {
+    "P(cascade starts at member 2)": {
+     "exact": "61/81",
+     "float": 0.753086
+    },
+    "P(started by member 4)": {
+     "exact": "6161/6561",
+     "float": 0.939034
+    },
+    "P(started by member 6)": {
+     "exact": "523441/531441",
+     "float": 0.984947
+    },
+    "P(wrong cascade within ten members)": {
+     "exact": "18279586/43046721",
+     "float": 0.424645
+    },
+    "P(no cascade within ten members)": {
+     "exact": "160000/43046721",
+     "float": 0.003717
+    }
+   }
+  },
+  "3/5": {
+   "ties: own draw": {
+    "P(cascade starts at member 2)": {
+     "exact": "13/25",
+     "float": 0.52
+    },
+    "P(started by member 4)": {
+     "exact": "481/625",
+     "float": 0.7696
+    },
+    "P(started by member 6)": {
+     "exact": "13897/15625",
+     "float": 0.889408
+    },
+    "P(wrong cascade within ten members)": {
+     "exact": "113812/390625",
+     "float": 0.291359
+    },
+    "P(no cascade within ten members)": {
+     "exact": "20736/390625",
+     "float": 0.053084
+    }
+   },
+   "ties: coin": {
+    "P(cascade starts at member 2)": {
+     "exact": "19/25",
+     "float": 0.76
+    },
+    "P(started by member 4)": {
+     "exact": "589/625",
+     "float": 0.9424
+    },
+    "P(started by member 6)": {
+     "exact": "15409/15625",
+     "float": 0.986176
+    },
+    "P(wrong cascade within ten members)": {
+     "exact": "143437/390625",
+     "float": 0.367199
+    },
+    "P(no cascade within ten members)": {
+     "exact": "1296/390625",
+     "float": 0.003318
+    }
+   }
+  },
+  "2/3": {
+   "ties: own draw": {
+    "P(cascade starts at member 2)": {
+     "exact": "5/9",
+     "float": 0.555556
+    },
+    "P(started by member 4)": {
+     "exact": "65/81",
+     "float": 0.802469
+    },
+    "P(started by member 6)": {
+     "exact": "665/729",
+     "float": 0.912209
+    },
+    "P(wrong cascade within ten members)": {
+     "exact": "1261/6561",
+     "float": 0.192196
+    },
+    "P(no cascade within ten members)": {
+     "exact": "256/6561",
+     "float": 0.039018
+    }
+   },
+   "ties: coin": {
+    "P(cascade starts at member 2)": {
+     "exact": "7/9",
+     "float": 0.777778
+    },
+    "P(started by member 4)": {
+     "exact": "77/81",
+     "float": 0.950617
+    },
+    "P(started by member 6)": {
+     "exact": "721/729",
+     "float": 0.989026
+    },
+    "P(wrong cascade within ten members)": {
+     "exact": "1870/6561",
+     "float": 0.285018
+    },
+    "P(no cascade within ten members)": {
+     "exact": "16/6561",
+     "float": 0.002439
+    }
+   }
+  },
+  "3/4": {
+   "ties: own draw": {
+    "P(cascade starts at member 2)": {
+     "exact": "5/8",
+     "float": 0.625
+    },
+    "P(started by member 4)": {
+     "exact": "55/64",
+     "float": 0.859375
+    },
+    "P(started by member 6)": {
+     "exact": "485/512",
+     "float": 0.947266
+    },
+    "P(wrong cascade within ten members)": {
+     "exact": "803/8192",
+     "float": 0.098022
+    },
+    "P(no cascade within ten members)": {
+     "exact": "81/4096",
+     "float": 0.019775
+    }
+   },
+   "ties: coin": {
+    "P(cascade starts at member 2)": {
+     "exact": "13/16",
+     "float": 0.8125
+    },
+    "P(started by member 4)": {
+     "exact": "247/256",
+     "float": 0.964844
+    },
+    "P(started by member 6)": {
+     "exact": "4069/4096",
+     "float": 0.993408
+    },
+    "P(wrong cascade within ten members)": {
+     "exact": "25175/131072",
+     "float": 0.19207
+    },
+    "P(no cascade within ten members)": {
+     "exact": "81/65536",
+     "float": 0.001236
+    }
+   }
+  },
+  "premise_at_p_2/3": {
+   "positions": {
+    "0": {
+     "reachable_histories": 1,
+     "reading_at": 1,
+     "example": "()"
+    },
+    "1": {
+     "reachable_histories": 2,
+     "reading_at": 2,
+     "example": "(B)"
+    },
+    "2": {
+     "reachable_histories": 4,
+     "reading_at": 2,
+     "example": "(B,A)"
+    },
+    "3": {
+     "reachable_histories": 6,
+     "reading_at": 4,
+     "example": "(B,A,B)"
+    },
+    "4": {
+     "reachable_histories": 10,
+     "reading_at": 4,
+     "example": "(B,A,B,A)"
+    },
+    "5": {
+     "reachable_histories": 14,
+     "reading_at": 8,
+     "example": "(B,A,B,A,B)"
+    },
+    "6": {
+     "reachable_histories": 22,
+     "reading_at": 8,
+     "example": "(B,A,B,A,B,A)"
+    },
+    "7": {
+     "reachable_histories": 30,
+     "reading_at": 16,
+     "example": "(B,A,B,A,B,A,B)"
+    },
+    "8": {
+     "reachable_histories": 46,
+     "reading_at": 16,
+     "example": "(B,A,B,A,B,A,B,A)"
+    },
+    "9": {
+     "reachable_histories": 62,
+     "reading_at": 32,
+     "example": "(B,A,B,A,B,A,B,A,B)"
+    }
+   },
+   "k_from_which_BHW_ignores_its_draw_at_every_reachable_list": [],
+   "note": "reachable lists are weaker than the Lean's every list; BHW meets even this weaker premise from no k <= 9"
+  },
+  "stopping_time_form_p_2/3": {
+   "worlds": 1024,
+   "pairs_alike_before_tau": 149824,
+   "different_acts": 0,
+   "different_tau": 0,
+   "persistence_violations (a member from tau(w) on reading its draw at w's history)": 0,
+   "counterexample_without_persistence": {
+    "laws": "member 0 reads its draw, member 1 always B, member 2 reads its draw; tau = 1 everywhere",
+    "pairs_alike_before_tau_with_different_acts": 16,
+    "example": [
+     [
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ]
+   },
+   "note": "tau(w) is the first position whose member gives one guess for both draws at the history w reaches; the candidate core lemma needs persistence as a premise (every member from tau(w) on ignores its draw at the history w reaches), which BHW meets since its cascades are absorbing; checked here on BHW only (the Lean fixes k)"
+  },
+  "fixed_k_reached_premise_p_2/3": {
+   "0": {
+    "pairs_alike_before_k": 1048576,
+    "pairs_meeting_reached_premise": 149824,
+    "of_which_same_acts": 149824
+   },
+   "1": {
+    "pairs_alike_before_k": 524288,
+    "pairs_meeting_reached_premise": 149824,
+    "of_which_same_acts": 149824
+   },
+   "2": {
+    "pairs_alike_before_k": 262144,
+    "pairs_meeting_reached_premise": 149824,
+    "of_which_same_acts": 149824
+   },
+   "3": {
+    "pairs_alike_before_k": 131072,
+    "pairs_meeting_reached_premise": 84288,
+    "of_which_same_acts": 84288
+   },
+   "4": {
+    "pairs_alike_before_k": 65536,
+    "pairs_meeting_reached_premise": 51520,
+    "of_which_same_acts": 51520
+   },
+   "5": {
+    "pairs_alike_before_k": 32768,
+    "pairs_meeting_reached_premise": 26944,
+    "of_which_same_acts": 26944
+   },
+   "6": {
+    "pairs_alike_before_k": 16384,
+    "pairs_meeting_reached_premise": 14656,
+    "of_which_same_acts": 14656
+   },
+   "7": {
+    "pairs_alike_before_k": 8192,
+    "pairs_meeting_reached_premise": 7488,
+    "of_which_same_acts": 7488
+   },
+   "8": {
+    "pairs_alike_before_k": 4096,
+    "pairs_meeting_reached_premise": 3904,
+    "of_which_same_acts": 3904
+   },
+   "9": {
+    "pairs_alike_before_k": 2048,
+    "pairs_meeting_reached_premise": 1984,
+    "of_which_same_acts": 1984
+   },
+   "10": {
+    "pairs_alike_before_k": 1024,
+    "pairs_meeting_reached_premise": 1024,
+    "of_which_same_acts": 1024
+   }
+  },
+  "prior_2:1_at_p_2/3": {
+   "()": {
+    "exact": "1",
+    "float": 1.0
+   },
+   "(A)": {
+    "exact": "0",
+    "float": 0.0
+   },
+   "(B)": {
+    "exact": "1",
+    "float": 1.0
+   },
+   "(B,A)": {
+    "exact": "1",
+    "float": 1.0
+   },
+   "(B,B)": {
+    "exact": "1",
+    "float": 1.0
+   },
+   "(B,B,B)": {
+    "exact": "0",
+    "float": 0.0
+   },
+   "(B,B,B,B)": {
+    "exact": "0",
+    "float": 0.0
+   }
+  }
+ },
+ "D_stochastic_bound": {
+  "precision": {
+   "exact": "3/5",
+   "float": 0.6
+  },
+  "members": 8,
+  "scripted_prefix": "(A,A)",
+  "k": 2,
+  "later_draw_assignments": 64,
+  "statement_checked": "If every member from k on has |P(A | a, h) - P(A | b, h)| <= eps_n at every history reachable at its position, the act list's law moves by at most the sum of eps_n in total variation between any two assignments of the later draws (a hybrid argument; not proved in Lean; a candidate periphery lemma, since the core has no probability).",
+  "rows": [
+   {
+    "type": "BHW, ties to the own draw",
+    "tv_max_act_list": {
+     "exact": "0",
+     "float": 0.0
+    },
+    "tv_max_majority": {
+     "exact": "0",
+     "float": 0.0
+    },
+    "bound_sum_of_eps": {
+     "exact": "0",
+     "float": 0.0
+    },
+    "holds": true,
+    "sum_of_eps_check_informative": true,
+    "weighted_form": {
+     "pairs": 2016,
+     "violations": 0,
+     "pairs_with_weighted_bound_below_1": 2016,
+     "smallest_gap_bound_minus_tv_where_bound_below_1": 0.0,
+     "weighted_bound_at_a_pair_of_largest_tv": 0.0
+    }
+   },
+   {
+    "type": "BHW, ties by a coin",
+    "tv_max_act_list": {
+     "exact": "0",
+     "float": 0.0
+    },
+    "tv_max_majority": {
+     "exact": "0",
+     "float": 0.0
+    },
+    "bound_sum_of_eps": {
+     "exact": "0",
+     "float": 0.0
+    },
+    "holds": true,
+    "sum_of_eps_check_informative": true,
+    "weighted_form": {
+     "pairs": 2016,
+     "violations": 0,
+     "pairs_with_weighted_bound_below_1": 2016,
+     "smallest_gap_bound_minus_tv_where_bound_below_1": 0.0,
+     "weighted_bound_at_a_pair_of_largest_tv": 0.0
+    }
+   },
+   {
+    "type": "hybrid: own draw w.p. 1/20, else counting",
+    "tv_max_act_list": {
+     "exact": "16954119/64000000",
+     "float": 0.264908
+    },
+    "tv_max_majority": {
+     "exact": "84161/1600000",
+     "float": 0.052601
+    },
+    "bound_sum_of_eps": {
+     "exact": "101/20",
+     "float": 5.05
+    },
+    "holds": true,
+    "sum_of_eps_check_informative": false,
+    "weighted_form": {
+     "pairs": 2016,
+     "violations": 0,
+     "pairs_with_weighted_bound_below_1": 2016,
+     "smallest_gap_bound_minus_tv_where_bound_below_1": 0.0,
+     "weighted_bound_at_a_pair_of_largest_tv": 0.2975
+    }
+   },
+   {
+    "type": "hybrid: own draw w.p. 1/5, else counting",
+    "tv_max_act_list": {
+     "exact": "11529/15625",
+     "float": 0.737856
+    },
+    "tv_max_majority": {
+     "exact": "757/3125",
+     "float": 0.24224
+    },
+    "bound_sum_of_eps": {
+     "exact": "26/5",
+     "float": 5.2
+    },
+    "holds": true,
+    "sum_of_eps_check_informative": false,
+    "weighted_form": {
+     "pairs": 2016,
+     "violations": 0,
+     "pairs_with_weighted_bound_below_1": 1760,
+     "smallest_gap_bound_minus_tv_where_bound_below_1": 0.0,
+     "weighted_bound_at_a_pair_of_largest_tv": 1.16
+    }
+   },
+   {
+    "type": "hybrid: own draw w.p. 1/2, else counting",
+    "tv_max_act_list": {
+     "exact": "63/64",
+     "float": 0.984375
+    },
+    "tv_max_majority": {
+     "exact": "11/16",
+     "float": 0.6875
+    },
+    "bound_sum_of_eps": {
+     "exact": "11/2",
+     "float": 5.5
+    },
+    "holds": true,
+    "sum_of_eps_check_informative": false,
+    "weighted_form": {
+     "pairs": 2016,
+     "violations": 0,
+     "pairs_with_weighted_bound_below_1": 192,
+     "smallest_gap_bound_minus_tv_where_bound_below_1": 0.0,
+     "weighted_bound_at_a_pair_of_largest_tv": 2.75
+    }
+   },
+   {
+    "type": "counting with flips w.p. 1/100",
+    "tv_max_act_list": {
+     "exact": "999981269/100000000000",
+     "float": 0.01
+    },
+    "tv_max_majority": {
+     "exact": "2499950747/250000000000",
+     "float": 0.01
+    },
+    "bound_sum_of_eps": {
+     "exact": "49/10",
+     "float": 4.9
+    },
+    "holds": true,
+    "sum_of_eps_check_informative": false,
+    "weighted_form": {
+     "pairs": 2016,
+     "violations": 0,
+     "pairs_with_weighted_bound_below_1": 2016,
+     "smallest_gap_bound_minus_tv_where_bound_below_1": 0.0,
+     "weighted_bound_at_a_pair_of_largest_tv": 0.010204
+    }
+   },
+   {
+    "type": "counting with flips w.p. 1/20",
+    "tv_max_act_list": {
+     "exact": "319293/6400000",
+     "float": 0.04989
+    },
+    "tv_max_majority": {
+     "exact": "798147/16000000",
+     "float": 0.049884
+    },
+    "bound_sum_of_eps": {
+     "exact": "9/2",
+     "float": 4.5
+    },
+    "holds": true,
+    "sum_of_eps_check_informative": false,
+    "weighted_form": {
+     "pairs": 2016,
+     "violations": 0,
+     "pairs_with_weighted_bound_below_1": 2016,
+     "smallest_gap_bound_minus_tv_where_bound_below_1": 0.0,
+     "weighted_bound_at_a_pair_of_largest_tv": 0.055239
+    }
+   },
+   {
+    "type": "BHW with flips w.p. 1/1000",
+    "tv_max_act_list": {
+     "exact": "622877871502999/125000000000000000",
+     "float": 0.004983
+    },
+    "tv_max_majority": {
+     "exact": "748002494007497/250000000000000000",
+     "float": 0.002992
+    },
+    "bound_sum_of_eps": {
+     "exact": "499/100",
+     "float": 4.99
+    },
+    "holds": true,
+    "sum_of_eps_check_informative": false,
+    "weighted_form": {
+     "pairs": 2016,
+     "violations": 0,
+     "pairs_with_weighted_bound_below_1": 2016,
+     "smallest_gap_bound_minus_tv_where_bound_below_1": 0.0,
+     "weighted_bound_at_a_pair_of_largest_tv": 0.004993
+    }
+   },
+   {
+    "type": "BHW with flips w.p. 1/100",
+    "tv_max_act_list": {
+     "exact": "6040340299/125000000000",
+     "float": 0.048323
+    },
+    "tv_max_majority": {
+     "exact": "7302440747/250000000000",
+     "float": 0.02921
+    },
+    "bound_sum_of_eps": {
+     "exact": "49/10",
+     "float": 4.9
+    },
+    "holds": true,
+    "sum_of_eps_check_informative": false,
+    "weighted_form": {
+     "pairs": 2016,
+     "violations": 0,
+     "pairs_with_weighted_bound_below_1": 2016,
+     "smallest_gap_bound_minus_tv_where_bound_below_1": 0.0,
+     "weighted_bound_at_a_pair_of_largest_tv": 0.049293
+    }
+   },
+   {
+    "type": "logit response, precision 2",
+    "tv_max_act_list": 0.377314,
+    "tv_max_majority": 0.339688,
+    "bound_sum_of_eps": 1.181192,
+    "holds": true,
+    "sum_of_eps_check_informative": false,
+    "weighted_form": {
+     "pairs": 2016,
+     "violations": 0,
+     "pairs_with_weighted_bound_below_1": 1984,
+     "smallest_gap_bound_minus_tv_where_bound_below_1": -0.0,
+     "weighted_bound_at_a_pair_of_largest_tv": 1.157177
+    }
+   },
+   {
+    "type": "logit response, precision 5",
+    "tv_max_act_list": 0.724464,
+    "tv_max_majority": 0.585171,
+    "bound_sum_of_eps": 2.695052,
+    "holds": true,
+    "sum_of_eps_check_informative": false,
+    "weighted_form": {
+     "pairs": 2016,
+     "violations": 0,
+     "pairs_with_weighted_bound_below_1": 724,
+     "smallest_gap_bound_minus_tv_where_bound_below_1": -0.0,
+     "weighted_bound_at_a_pair_of_largest_tv": 1.988831
+    }
+   },
+   {
+    "type": "logit response, precision 10",
+    "tv_max_act_list": 0.764303,
+    "tv_max_majority": 0.576217,
+    "bound_sum_of_eps": 4.090426,
+    "holds": true,
+    "sum_of_eps_check_informative": false,
+    "weighted_form": {
+     "pairs": 2016,
+     "violations": 0,
+     "pairs_with_weighted_bound_below_1": 1126,
+     "smallest_gap_bound_minus_tv_where_bound_below_1": -0.0,
+     "weighted_bound_at_a_pair_of_largest_tv": 1.422091
+    }
+   },
+   {
+    "type": "leaky 1/2 (reads the next member's draw; own D = 0)",
+    "tv_max_act_list": {
+     "exact": "31/32",
+     "float": 0.96875
+    },
+    "bound_sum_of_eps": {
+     "exact": "0",
+     "float": 0.0
+    },
+    "holds": false,
+    "note": "outside Turns: the member-wise premise holds and the bound does not apply"
+   }
+  ],
+  "all_hold_within_turns": true,
+  "note_on_the_sum_form": "total variation is at most 1, so the sum-of-eps check can fail only in rows whose sum is below 1: here only the BHW rows (sum 0); every other row meets it trivially",
+  "weighted_statement": "For assignments a, b of the later draws, TV <= sum over the positions j where they differ of E|D(k + j, h)|, h drawn from the law of the history at k + j under the draws of one assignment before j (the hybrid argument; the smaller of the two orders is used). Not in the Lean; it can lie below 1, so the check can fail.",
+  "weighted_all_hold_within_turns": true
+ },
+ "E_power": {
+  "R_calls_per_draw_per_cell": 5,
+  "M_fresh_sequences_per_prefix": 8,
+  "members": 8,
+  "precision": {
+   "exact": "3/5",
+   "float": 0.6
+  },
+  "E1_cell_classification": {
+   "R=1": {
+    "0": {
+     "ignoring cell: P(ignores A)": 1.0,
+     "ignoring cell: P(read as reads)": 0.0,
+     "ignoring cell: P(flagged)": 0.0,
+     "reading cell: P(reads, follows)": 1.0,
+     "reading cell: P(read as ignores)": 0.0,
+     "reading cell: P(flagged)": 0.0
+    },
+    "1/1000": {
+     "ignoring cell: P(ignores A)": 0.998,
+     "ignoring cell: P(read as reads)": 0.001998,
+     "ignoring cell: P(flagged)": 0.0,
+     "reading cell: P(reads, follows)": 0.998,
+     "reading cell: P(read as ignores)": 0.001998,
+     "reading cell: P(flagged)": 0.0
+    },
+    "1/500": {
+     "ignoring cell: P(ignores A)": 0.996,
+     "ignoring cell: P(read as reads)": 0.003992,
+     "ignoring cell: P(flagged)": 0.0,
+     "reading cell: P(reads, follows)": 0.996,
+     "reading cell: P(read as ignores)": 0.003992,
+     "reading cell: P(flagged)": 0.0
+    },
+    "1/200": {
+     "ignoring cell: P(ignores A)": 0.99,
+     "ignoring cell: P(read as reads)": 0.00995,
+     "ignoring cell: P(flagged)": 0.0,
+     "reading cell: P(reads, follows)": 0.99,
+     "reading cell: P(read as ignores)": 0.00995,
+     "reading cell: P(flagged)": 0.0
+    },
+    "1/100": {
+     "ignoring cell: P(ignores A)": 0.9801,
+     "ignoring cell: P(read as reads)": 0.0198,
+     "ignoring cell: P(flagged)": 0.0,
+     "reading cell: P(reads, follows)": 0.9801,
+     "reading cell: P(read as ignores)": 0.0198,
+     "reading cell: P(flagged)": 0.0
+    },
+    "1/50": {
+     "ignoring cell: P(ignores A)": 0.9604,
+     "ignoring cell: P(read as reads)": 0.0392,
+     "ignoring cell: P(flagged)": 0.0,
+     "reading cell: P(reads, follows)": 0.9604,
+     "reading cell: P(read as ignores)": 0.0392,
+     "reading cell: P(flagged)": 0.0
+    },
+    "1/20": {
+     "ignoring cell: P(ignores A)": 0.9025,
+     "ignoring cell: P(read as reads)": 0.095,
+     "ignoring cell: P(flagged)": 0.0,
+     "reading cell: P(reads, follows)": 0.9025,
+     "reading cell: P(read as ignores)": 0.095,
+     "reading cell: P(flagged)": 0.0
+    }
+   },
+   "R=2": {
+    "0": {
+     "ignoring cell: P(ignores A)": 1.0,
+     "ignoring cell: P(read as reads)": 0.0,
+     "ignoring cell: P(flagged)": 0.0,
+     "reading cell: P(reads, follows)": 1.0,
+     "reading cell: P(read as ignores)": 0.0,
+     "reading cell: P(flagged)": 0.0
+    },
+    "1/1000": {
+     "ignoring cell: P(ignores A)": 0.996,
+     "ignoring cell: P(read as reads)": 2e-06,
+     "ignoring cell: P(flagged)": 0.004,
+     "reading cell: P(reads, follows)": 0.996,
+     "reading cell: P(read as ignores)": 2e-06,
+     "reading cell: P(flagged)": 0.004
+    },
+    "1/500": {
+     "ignoring cell: P(ignores A)": 0.992,
+     "ignoring cell: P(read as reads)": 7.97e-06,
+     "ignoring cell: P(flagged)": 0.008,
+     "reading cell: P(reads, follows)": 0.992,
+     "reading cell: P(read as ignores)": 7.97e-06,
+     "reading cell: P(flagged)": 0.008
+    },
+    "1/200": {
+     "ignoring cell: P(ignores A)": 0.9801,
+     "ignoring cell: P(read as reads)": 4.95e-05,
+     "ignoring cell: P(flagged)": 0.0198,
+     "reading cell: P(reads, follows)": 0.9801,
+     "reading cell: P(read as ignores)": 4.95e-05,
+     "reading cell: P(flagged)": 0.0198
+    },
+    "1/100": {
+     "ignoring cell: P(ignores A)": 0.9606,
+     "ignoring cell: P(read as reads)": 0.00019602,
+     "ignoring cell: P(flagged)": 0.0392,
+     "reading cell: P(reads, follows)": 0.9606,
+     "reading cell: P(read as ignores)": 0.00019602,
+     "reading cell: P(flagged)": 0.0392
+    },
+    "1/50": {
+     "ignoring cell: P(ignores A)": 0.9224,
+     "ignoring cell: P(read as reads)": 0.00076832,
+     "ignoring cell: P(flagged)": 0.0769,
+     "reading cell: P(reads, follows)": 0.9224,
+     "reading cell: P(read as ignores)": 0.00076832,
+     "reading cell: P(flagged)": 0.0769
+    },
+    "1/20": {
+     "ignoring cell: P(ignores A)": 0.8145,
+     "ignoring cell: P(read as reads)": 0.0045125,
+     "ignoring cell: P(flagged)": 0.181,
+     "reading cell: P(reads, follows)": 0.8145,
+     "reading cell: P(read as ignores)": 0.0045125,
+     "reading cell: P(flagged)": 0.181
+    }
+   },
+   "R=3": {
+    "0": {
+     "ignoring cell: P(ignores A)": 1.0,
+     "ignoring cell: P(read as reads)": 0.0,
+     "ignoring cell: P(flagged)": 0.0,
+     "reading cell: P(reads, follows)": 1.0,
+     "reading cell: P(read as ignores)": 0.0,
+     "reading cell: P(flagged)": 0.0
+    },
+    "1/1000": {
+     "ignoring cell: P(ignores A)": 0.994,
+     "ignoring cell: P(read as reads)": 0.0,
+     "ignoring cell: P(flagged)": 0.006,
+     "reading cell: P(reads, follows)": 0.994,
+     "reading cell: P(read as ignores)": 0.0,
+     "reading cell: P(flagged)": 0.006
+    },
+    "1/500": {
+     "ignoring cell: P(ignores A)": 0.9881,
+     "ignoring cell: P(read as reads)": 2e-08,
+     "ignoring cell: P(flagged)": 0.0119,
+     "reading cell: P(reads, follows)": 0.9881,
+     "reading cell: P(read as ignores)": 2e-08,
+     "reading cell: P(flagged)": 0.0119
+    },
+    "1/200": {
+     "ignoring cell: P(ignores A)": 0.9704,
+     "ignoring cell: P(read as reads)": 2.5e-07,
+     "ignoring cell: P(flagged)": 0.0296,
+     "reading cell: P(reads, follows)": 0.9704,
+     "reading cell: P(read as ignores)": 2.5e-07,
+     "reading cell: P(flagged)": 0.0296
+    },
+    "1/100": {
+     "ignoring cell: P(ignores A)": 0.9415,
+     "ignoring cell: P(read as reads)": 1.94e-06,
+     "ignoring cell: P(flagged)": 0.0585,
+     "reading cell: P(reads, follows)": 0.9415,
+     "reading cell: P(read as ignores)": 1.94e-06,
+     "reading cell: P(flagged)": 0.0585
+    },
+    "1/50": {
+     "ignoring cell: P(ignores A)": 0.8858,
+     "ignoring cell: P(read as reads)": 1.506e-05,
+     "ignoring cell: P(flagged)": 0.1141,
+     "reading cell: P(reads, follows)": 0.8858,
+     "reading cell: P(read as ignores)": 1.506e-05,
+     "reading cell: P(flagged)": 0.1141
+    },
+    "1/20": {
+     "ignoring cell: P(ignores A)": 0.7351,
+     "ignoring cell: P(read as reads)": 0.00021434,
+     "ignoring cell: P(flagged)": 0.2647,
+     "reading cell: P(reads, follows)": 0.7351,
+     "reading cell: P(read as ignores)": 0.00021434,
+     "reading cell: P(flagged)": 0.2647
+    }
+   },
+   "R=5": {
+    "0": {
+     "ignoring cell: P(ignores A)": 1.0,
+     "ignoring cell: P(read as reads)": 0.0,
+     "ignoring cell: P(flagged)": 0.0,
+     "reading cell: P(reads, follows)": 1.0,
+     "reading cell: P(read as ignores)": 0.0,
+     "reading cell: P(flagged)": 0.0
+    },
+    "1/1000": {
+     "ignoring cell: P(ignores A)": 0.99,
+     "ignoring cell: P(read as reads)": 0.0,
+     "ignoring cell: P(flagged)": 0.01,
+     "reading cell: P(reads, follows)": 0.99,
+     "reading cell: P(read as ignores)": 0.0,
+     "reading cell: P(flagged)": 0.01
+    },
+    "1/500": {
+     "ignoring cell: P(ignores A)": 0.9802,
+     "ignoring cell: P(read as reads)": 0.0,
+     "ignoring cell: P(flagged)": 0.0198,
+     "reading cell: P(reads, follows)": 0.9802,
+     "reading cell: P(read as ignores)": 0.0,
+     "reading cell: P(flagged)": 0.0198
+    },
+    "1/200": {
+     "ignoring cell: P(ignores A)": 0.9511,
+     "ignoring cell: P(read as reads)": 0.0,
+     "ignoring cell: P(flagged)": 0.0489,
+     "reading cell: P(reads, follows)": 0.9511,
+     "reading cell: P(read as ignores)": 0.0,
+     "reading cell: P(flagged)": 0.0489
+    },
+    "1/100": {
+     "ignoring cell: P(ignores A)": 0.9044,
+     "ignoring cell: P(read as reads)": 0.0,
+     "ignoring cell: P(flagged)": 0.0956,
+     "reading cell: P(reads, follows)": 0.9044,
+     "reading cell: P(read as ignores)": 0.0,
+     "reading cell: P(flagged)": 0.0956
+    },
+    "1/50": {
+     "ignoring cell: P(ignores A)": 0.8171,
+     "ignoring cell: P(read as reads)": 1e-08,
+     "ignoring cell: P(flagged)": 0.1829,
+     "reading cell: P(reads, follows)": 0.8171,
+     "reading cell: P(read as ignores)": 1e-08,
+     "reading cell: P(flagged)": 0.1829
+    },
+    "1/20": {
+     "ignoring cell: P(ignores A)": 0.5987,
+     "ignoring cell: P(read as reads)": 4.8e-07,
+     "ignoring cell: P(flagged)": 0.4013,
+     "reading cell: P(reads, follows)": 0.5987,
+     "reading cell: P(read as ignores)": 4.8e-07,
+     "reading cell: P(flagged)": 0.4013
+    }
+   }
+  },
+  "E1_hybrid_at_a_cascade_cell_R": {
+   "1/20": {
+    "ignores A": 0.7738,
+    "ignores B": 0.0,
+    "reads (follows)": 0.0,
+    "reads (inverted)": 0.0,
+    "flagged": 0.2262
+   },
+   "1/10": {
+    "ignores A": 0.5905,
+    "ignores B": 0.0,
+    "reads (follows)": 0.0,
+    "reads (inverted)": 0.0,
+    "flagged": 0.4095
+   },
+   "1/4": {
+    "ignores A": 0.2373,
+    "ignores B": 0.0,
+    "reads (follows)": 0.001,
+    "reads (inverted)": 0.0,
+    "flagged": 0.7617
+   },
+   "1/2": {
+    "ignores A": 0.0312,
+    "ignores B": 0.0,
+    "reads (follows)": 0.0312,
+    "reads (inverted)": 0.0,
+    "flagged": 0.9375
+   }
+  },
+  "E2_bhw_rule_by_prior": {
+   "1:1": {
+    "BHW, ties to the own draw": {
+     "placed": 1.0,
+     "contradicted": 0.0,
+     "unresolved": 0.0
+    },
+    "BHW, ties to the own draw, flips 1/1000": {
+     "placed": 0.8436,
+     "contradicted": 0.0,
+     "unresolved": 0.1564
+    },
+    "BHW, ties to the own draw, flips 1/100": {
+     "placed": 0.1811,
+     "contradicted": 0.0,
+     "unresolved": 0.8189
+    },
+    "BHW, ties by a coin": {
+     "placed": 0.001,
+     "contradicted": 0.0615,
+     "unresolved": 0.9375
+    },
+    "BHW, ties by a coin, flips 1/1000": {
+     "placed": 0.0008,
+     "contradicted": 0.0612,
+     "unresolved": 0.9379
+    },
+    "BHW, ties by a coin, flips 1/100": {
+     "placed": 0.0002,
+     "contradicted": 0.0586,
+     "unresolved": 0.9413
+    },
+    "BHW, ties to the public": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "BHW, ties to the public, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.9999,
+     "unresolved": 0.0001
+    },
+    "BHW, ties to the public, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.9909,
+     "unresolved": 0.0091
+    },
+    "overweighting 3:2": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "overweighting 3:2, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.9999,
+     "unresolved": 0.0001
+    },
+    "overweighting 3:2, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.9909,
+     "unresolved": 0.0091
+    },
+    "overweighting 2:1": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "overweighting 2:1, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.9999,
+     "unresolved": 0.0001
+    },
+    "overweighting 2:1, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.9909,
+     "unresolved": 0.0091
+    },
+    "overweighting 3:1": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "overweighting 3:1, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.9999,
+     "unresolved": 0.0001
+    },
+    "overweighting 3:1, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.9909,
+     "unresolved": 0.0091
+    },
+    "naive counting": {
+     "placed": 1.0,
+     "contradicted": 0.0,
+     "unresolved": 0.0
+    },
+    "naive counting, flips 1/1000": {
+     "placed": 0.8436,
+     "contradicted": 0.0,
+     "unresolved": 0.1564
+    },
+    "naive counting, flips 1/100": {
+     "placed": 0.1811,
+     "contradicted": 0.0,
+     "unresolved": 0.8189
+    },
+    "copier (Copying.turns)": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "copier (Copying.turns), flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "copier (Copying.turns), flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.9999,
+     "unresolved": 0.0001
+    },
+    "last-act copier": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "last-act copier, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "last-act copier, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.9999,
+     "unresolved": 0.0001
+    },
+    "majority copier": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "majority copier, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.9999,
+     "unresolved": 0.0001
+    },
+    "majority copier, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.9909,
+     "unresolved": 0.0091
+    },
+    "constant A (fixed by label)": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "constant A (fixed by label), flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "constant A (fixed by label), flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "fixed by position": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "fixed by position, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "fixed by position, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "own draw always": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "own draw always, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.9999,
+     "unresolved": 0.0001
+    },
+    "own draw always, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.9909,
+     "unresolved": 0.0091
+    },
+    "contrarian to the last": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "contrarian to the last, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "contrarian to the last, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "logit response, precision 2": {
+     "placed": 0.0,
+     "contradicted": 0.021,
+     "unresolved": 0.979
+    },
+    "logit response, precision 2, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.0209,
+     "unresolved": 0.9791
+    },
+    "logit response, precision 2, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.0207,
+     "unresolved": 0.9793
+    },
+    "logit response, precision 5": {
+     "placed": 0.0,
+     "contradicted": 0.0491,
+     "unresolved": 0.9509
+    },
+    "logit response, precision 5, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.0489,
+     "unresolved": 0.9511
+    },
+    "logit response, precision 5, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.0472,
+     "unresolved": 0.9528
+    },
+    "logit response, precision 10": {
+     "placed": 0.0,
+     "contradicted": 0.0336,
+     "unresolved": 0.9664
+    },
+    "logit response, precision 10, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.0336,
+     "unresolved": 0.9664
+    },
+    "logit response, precision 10, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.0329,
+     "unresolved": 0.9671
+    },
+    "hybrid: own draw w.p. 1/10, else counting": {
+     "placed": 0.0018,
+     "contradicted": 0.0,
+     "unresolved": 0.9982
+    },
+    "hybrid: own draw w.p. 1/10, else counting, flips 1/1000": {
+     "placed": 0.0015,
+     "contradicted": 0.0,
+     "unresolved": 0.9984
+    },
+    "hybrid: own draw w.p. 1/10, else counting, flips 1/100": {
+     "placed": 0.0003,
+     "contradicted": 0.0001,
+     "unresolved": 0.9996
+    },
+    "hybrid: own draw w.p. 1/4, else counting": {
+     "placed": 0.0,
+     "contradicted": 0.0026,
+     "unresolved": 0.9974
+    },
+    "hybrid: own draw w.p. 1/4, else counting, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.0026,
+     "unresolved": 0.9974
+    },
+    "hybrid: own draw w.p. 1/4, else counting, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.0026,
+     "unresolved": 0.9974
+    },
+    "hybrid: own draw w.p. 1/2, else counting": {
+     "placed": 0.0,
+     "contradicted": 0.0635,
+     "unresolved": 0.9365
+    },
+    "hybrid: own draw w.p. 1/2, else counting, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.0632,
+     "unresolved": 0.9368
+    },
+    "hybrid: own draw w.p. 1/2, else counting, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.0603,
+     "unresolved": 0.9397
+    },
+    "counting with flips w.p. 1/100": {
+     "placed": 0.1811,
+     "contradicted": 0.0,
+     "unresolved": 0.8189
+    },
+    "counting with flips w.p. 1/100, flips 1/1000": {
+     "placed": 0.1531,
+     "contradicted": 0.0,
+     "unresolved": 0.8469
+    },
+    "counting with flips w.p. 1/100, flips 1/100": {
+     "placed": 0.0334,
+     "contradicted": 0.0,
+     "unresolved": 0.9666
+    },
+    "counting with flips w.p. 1/20": {
+     "placed": 0.0002,
+     "contradicted": 0.0,
+     "unresolved": 0.9998
+    },
+    "counting with flips w.p. 1/20, flips 1/1000": {
+     "placed": 0.0001,
+     "contradicted": 0.0,
+     "unresolved": 0.9999
+    },
+    "counting with flips w.p. 1/20, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.0,
+     "unresolved": 1.0
+    }
+   },
+   "one draw for A": {
+    "BHW, ties to the own draw": {
+     "placed": 1.0,
+     "contradicted": 0.0,
+     "unresolved": 0.0
+    },
+    "BHW, ties to the own draw, flips 1/1000": {
+     "placed": 0.8521,
+     "contradicted": 0.0,
+     "unresolved": 0.1479
+    },
+    "BHW, ties to the own draw, flips 1/100": {
+     "placed": 0.2003,
+     "contradicted": 0.0,
+     "unresolved": 0.7997
+    },
+    "BHW, ties by a coin": {
+     "placed": 0.0,
+     "contradicted": 0.0909,
+     "unresolved": 0.9091
+    },
+    "BHW, ties by a coin, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.0904,
+     "unresolved": 0.9096
+    },
+    "BHW, ties by a coin, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.0865,
+     "unresolved": 0.9135
+    },
+    "BHW, ties to the public": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "BHW, ties to the public, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "BHW, ties to the public, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.9991,
+     "unresolved": 0.0009
+    },
+    "overweighting 3:2": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "overweighting 3:2, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.9999,
+     "unresolved": 0.0001
+    },
+    "overweighting 3:2, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.9909,
+     "unresolved": 0.0091
+    },
+    "overweighting 2:1": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "overweighting 2:1, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.9999,
+     "unresolved": 0.0001
+    },
+    "overweighting 2:1, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.9909,
+     "unresolved": 0.0091
+    },
+    "overweighting 3:1": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "overweighting 3:1, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.9999,
+     "unresolved": 0.0001
+    },
+    "overweighting 3:1, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.9909,
+     "unresolved": 0.0091
+    },
+    "naive counting": {
+     "placed": 1.0,
+     "contradicted": 0.0,
+     "unresolved": 0.0
+    },
+    "naive counting, flips 1/1000": {
+     "placed": 0.8521,
+     "contradicted": 0.0,
+     "unresolved": 0.1479
+    },
+    "naive counting, flips 1/100": {
+     "placed": 0.2003,
+     "contradicted": 0.0,
+     "unresolved": 0.7997
+    },
+    "copier (Copying.turns)": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "copier (Copying.turns), flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "copier (Copying.turns), flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.9991,
+     "unresolved": 0.0009
+    },
+    "last-act copier": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "last-act copier, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "last-act copier, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.9991,
+     "unresolved": 0.0009
+    },
+    "majority copier": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "majority copier, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.9999,
+     "unresolved": 0.0001
+    },
+    "majority copier, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.9909,
+     "unresolved": 0.0091
+    },
+    "constant A (fixed by label)": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "constant A (fixed by label), flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "constant A (fixed by label), flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "fixed by position": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "fixed by position, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "fixed by position, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "own draw always": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "own draw always, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.9999,
+     "unresolved": 0.0001
+    },
+    "own draw always, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.9909,
+     "unresolved": 0.0091
+    },
+    "contrarian to the last": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "contrarian to the last, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "contrarian to the last, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 1.0,
+     "unresolved": 0.0
+    },
+    "logit response, precision 2": {
+     "placed": 0.0,
+     "contradicted": 0.0271,
+     "unresolved": 0.9729
+    },
+    "logit response, precision 2, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.027,
+     "unresolved": 0.973
+    },
+    "logit response, precision 2, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.0265,
+     "unresolved": 0.9735
+    },
+    "logit response, precision 5": {
+     "placed": 0.0,
+     "contradicted": 0.0658,
+     "unresolved": 0.9342
+    },
+    "logit response, precision 5, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.0655,
+     "unresolved": 0.9345
+    },
+    "logit response, precision 5, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.063,
+     "unresolved": 0.937
+    },
+    "logit response, precision 10": {
+     "placed": 0.0,
+     "contradicted": 0.0579,
+     "unresolved": 0.9421
+    },
+    "logit response, precision 10, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.0577,
+     "unresolved": 0.9423
+    },
+    "logit response, precision 10, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.0559,
+     "unresolved": 0.9441
+    },
+    "hybrid: own draw w.p. 1/10, else counting": {
+     "placed": 0.0018,
+     "contradicted": 0.0,
+     "unresolved": 0.9982
+    },
+    "hybrid: own draw w.p. 1/10, else counting, flips 1/1000": {
+     "placed": 0.0015,
+     "contradicted": 0.0,
+     "unresolved": 0.9984
+    },
+    "hybrid: own draw w.p. 1/10, else counting, flips 1/100": {
+     "placed": 0.0004,
+     "contradicted": 0.0001,
+     "unresolved": 0.9996
+    },
+    "hybrid: own draw w.p. 1/4, else counting": {
+     "placed": 0.0,
+     "contradicted": 0.0026,
+     "unresolved": 0.9974
+    },
+    "hybrid: own draw w.p. 1/4, else counting, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.0026,
+     "unresolved": 0.9974
+    },
+    "hybrid: own draw w.p. 1/4, else counting, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.0026,
+     "unresolved": 0.9974
+    },
+    "hybrid: own draw w.p. 1/2, else counting": {
+     "placed": 0.0,
+     "contradicted": 0.0635,
+     "unresolved": 0.9365
+    },
+    "hybrid: own draw w.p. 1/2, else counting, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.0632,
+     "unresolved": 0.9368
+    },
+    "hybrid: own draw w.p. 1/2, else counting, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.0603,
+     "unresolved": 0.9397
+    },
+    "counting with flips w.p. 1/100": {
+     "placed": 0.2003,
+     "contradicted": 0.0,
+     "unresolved": 0.7997
+    },
+    "counting with flips w.p. 1/100, flips 1/1000": {
+     "placed": 0.1709,
+     "contradicted": 0.0,
+     "unresolved": 0.8291
+    },
+    "counting with flips w.p. 1/100, flips 1/100": {
+     "placed": 0.0408,
+     "contradicted": 0.0,
+     "unresolved": 0.9592
+    },
+    "counting with flips w.p. 1/20": {
+     "placed": 0.0003,
+     "contradicted": 0.0,
+     "unresolved": 0.9997
+    },
+    "counting with flips w.p. 1/20, flips 1/1000": {
+     "placed": 0.0002,
+     "contradicted": 0.0,
+     "unresolved": 0.9998
+    },
+    "counting with flips w.p. 1/20, flips 1/100": {
+     "placed": 0.0001,
+     "contradicted": 0.0,
+     "unresolved": 0.9999
+    }
+   }
+  },
+  "E2_bhw_rule_both_priors": {
+   "BHW, ties to the own draw": {
+    "placed": 1.0,
+    "contradicted": 0.0,
+    "unresolved": 0.0
+   },
+   "BHW, ties to the own draw, flips 1/1000": {
+    "placed": 0.7188,
+    "contradicted": 0.0,
+    "unresolved": 0.2812
+   },
+   "BHW, ties to the own draw, flips 1/100": {
+    "placed": 0.0363,
+    "contradicted": 0.0,
+    "unresolved": 0.9637
+   },
+   "BHW, ties by a coin": {
+    "placed": 0.0,
+    "contradicted": 0.1468,
+    "unresolved": 0.8532
+   },
+   "BHW, ties by a coin, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 0.1461,
+    "unresolved": 0.8539
+   },
+   "BHW, ties by a coin, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 0.14,
+    "unresolved": 0.86
+   },
+   "BHW, ties to the public": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "BHW, ties to the public, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "BHW, ties to the public, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "overweighting 3:2": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "overweighting 3:2, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "overweighting 3:2, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 0.9999,
+    "unresolved": 0.0001
+   },
+   "overweighting 2:1": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "overweighting 2:1, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "overweighting 2:1, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 0.9999,
+    "unresolved": 0.0001
+   },
+   "overweighting 3:1": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "overweighting 3:1, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "overweighting 3:1, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 0.9999,
+    "unresolved": 0.0001
+   },
+   "naive counting": {
+    "placed": 1.0,
+    "contradicted": 0.0,
+    "unresolved": 0.0
+   },
+   "naive counting, flips 1/1000": {
+    "placed": 0.7188,
+    "contradicted": 0.0,
+    "unresolved": 0.2812
+   },
+   "naive counting, flips 1/100": {
+    "placed": 0.0363,
+    "contradicted": 0.0,
+    "unresolved": 0.9637
+   },
+   "copier (Copying.turns)": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "copier (Copying.turns), flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "copier (Copying.turns), flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "last-act copier": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "last-act copier, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "last-act copier, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "majority copier": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "majority copier, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "majority copier, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 0.9999,
+    "unresolved": 0.0001
+   },
+   "constant A (fixed by label)": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "constant A (fixed by label), flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "constant A (fixed by label), flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "fixed by position": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "fixed by position, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "fixed by position, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "own draw always": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "own draw always, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "own draw always, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 0.9999,
+    "unresolved": 0.0001
+   },
+   "contrarian to the last": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "contrarian to the last, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "contrarian to the last, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 1.0,
+    "unresolved": 0.0
+   },
+   "logit response, precision 2": {
+    "placed": 0.0,
+    "contradicted": 0.0475,
+    "unresolved": 0.9525
+   },
+   "logit response, precision 2, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 0.0473,
+    "unresolved": 0.9527
+   },
+   "logit response, precision 2, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 0.0467,
+    "unresolved": 0.9533
+   },
+   "logit response, precision 5": {
+    "placed": 0.0,
+    "contradicted": 0.1117,
+    "unresolved": 0.8883
+   },
+   "logit response, precision 5, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 0.1112,
+    "unresolved": 0.8888
+   },
+   "logit response, precision 5, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 0.1072,
+    "unresolved": 0.8928
+   },
+   "logit response, precision 10": {
+    "placed": 0.0,
+    "contradicted": 0.0896,
+    "unresolved": 0.9104
+   },
+   "logit response, precision 10, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 0.0894,
+    "unresolved": 0.9106
+   },
+   "logit response, precision 10, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 0.087,
+    "unresolved": 0.913
+   },
+   "hybrid: own draw w.p. 1/10, else counting": {
+    "placed": 0.0,
+    "contradicted": 0.0,
+    "unresolved": 1.0
+   },
+   "hybrid: own draw w.p. 1/10, else counting, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 0.0,
+    "unresolved": 1.0
+   },
+   "hybrid: own draw w.p. 1/10, else counting, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 0.0002,
+    "unresolved": 0.9998
+   },
+   "hybrid: own draw w.p. 1/4, else counting": {
+    "placed": 0.0,
+    "contradicted": 0.0052,
+    "unresolved": 0.9948
+   },
+   "hybrid: own draw w.p. 1/4, else counting, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 0.0052,
+    "unresolved": 0.9948
+   },
+   "hybrid: own draw w.p. 1/4, else counting, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 0.0052,
+    "unresolved": 0.9948
+   },
+   "hybrid: own draw w.p. 1/2, else counting": {
+    "placed": 0.0,
+    "contradicted": 0.123,
+    "unresolved": 0.877
+   },
+   "hybrid: own draw w.p. 1/2, else counting, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 0.1224,
+    "unresolved": 0.8776
+   },
+   "hybrid: own draw w.p. 1/2, else counting, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 0.117,
+    "unresolved": 0.883
+   },
+   "counting with flips w.p. 1/100": {
+    "placed": 0.0363,
+    "contradicted": 0.0,
+    "unresolved": 0.9637
+   },
+   "counting with flips w.p. 1/100, flips 1/1000": {
+    "placed": 0.0262,
+    "contradicted": 0.0,
+    "unresolved": 0.9738
+   },
+   "counting with flips w.p. 1/100, flips 1/100": {
+    "placed": 0.0014,
+    "contradicted": 0.0,
+    "unresolved": 0.9986
+   },
+   "counting with flips w.p. 1/20": {
+    "placed": 0.0,
+    "contradicted": 0.0,
+    "unresolved": 1.0
+   },
+   "counting with flips w.p. 1/20, flips 1/1000": {
+    "placed": 0.0,
+    "contradicted": 0.0,
+    "unresolved": 1.0
+   },
+   "counting with flips w.p. 1/20, flips 1/100": {
+    "placed": 0.0,
+    "contradicted": 0.0,
+    "unresolved": 1.0
+   }
+  },
+  "E3_conditional_verdict_prefix_(A,A)": {
+   "replications_per_agent": 4000,
+   "rows": {
+    "BHW, ties to the own draw": {
+     "no verdict: premise not met": 0.0,
+     "no verdict: flagged cell": 0.0,
+     "passed": 1.0,
+     "breach reproduced": 0.0,
+     "unresolved: unreproduced difference": 0.0
+    },
+    "BHW, flips 1/1000": {
+     "no verdict: premise not met": 0.0,
+     "no verdict: flagged cell": 0.0573,
+     "passed": 0.8972,
+     "breach reproduced": 0.0,
+     "unresolved: unreproduced difference": 0.0455
+    },
+    "BHW, flips 1/200": {
+     "no verdict: premise not met": 0.0,
+     "no verdict: flagged cell": 0.254,
+     "passed": 0.5777,
+     "breach reproduced": 0.0,
+     "unresolved: unreproduced difference": 0.1683
+    },
+    "BHW, flips 1/100": {
+     "no verdict: premise not met": 0.0,
+     "no verdict: flagged cell": 0.467,
+     "passed": 0.337,
+     "breach reproduced": 0.0,
+     "unresolved: unreproduced difference": 0.196
+    },
+    "BHW, flips 1/20": {
+     "no verdict: premise not met": 0.0,
+     "no verdict: flagged cell": 0.951,
+     "passed": 0.0047,
+     "breach reproduced": 0.0,
+     "unresolved: unreproduced difference": 0.0442
+    },
+    "hybrid: own draw w.p. 1/20": {
+     "no verdict: premise not met": 0.0,
+     "no verdict: flagged cell": 0.798,
+     "passed": 0.0587,
+     "breach reproduced": 0.0,
+     "unresolved: unreproduced difference": 0.1432
+    },
+    "hybrid: own draw w.p. 1/10": {
+     "no verdict: premise not met": 0.0,
+     "no verdict: flagged cell": 0.9583,
+     "passed": 0.0025,
+     "breach reproduced": 0.0,
+     "unresolved: unreproduced difference": 0.0393
+    },
+    "hybrid: own draw w.p. 1/4": {
+     "no verdict: premise not met": 0.0008,
+     "no verdict: flagged cell": 0.999,
+     "passed": 0.0,
+     "breach reproduced": 0.0,
+     "unresolved: unreproduced difference": 0.0003
+    },
+    "majority copier": {
+     "no verdict: premise not met": 0.0,
+     "no verdict: flagged cell": 0.0,
+     "passed": 1.0,
+     "breach reproduced": 0.0,
+     "unresolved: unreproduced difference": 0.0
+    },
+    "constant A": {
+     "no verdict: premise not met": 0.0,
+     "no verdict: flagged cell": 0.0,
+     "passed": 1.0,
+     "breach reproduced": 0.0,
+     "unresolved: unreproduced difference": 0.0
+    },
+    "leaky 1 (guesses the next member's draw)": {
+     "no verdict: premise not met": 0.0,
+     "no verdict: flagged cell": 0.0,
+     "passed": 0.0,
+     "breach reproduced": 1.0,
+     "unresolved: unreproduced difference": 0.0
+    },
+    "leaky 1/2": {
+     "no verdict: premise not met": 0.0,
+     "no verdict: flagged cell": 0.0,
+     "passed": 0.0,
+     "breach reproduced": 0.1547,
+     "unresolved: unreproduced difference": 0.8452
+    },
+    "own draw always": {
+     "no verdict: premise not met": 1.0,
+     "no verdict: flagged cell": 0.0,
+     "passed": 0.0,
+     "breach reproduced": 0.0,
+     "unresolved: unreproduced difference": 0.0
+    }
+   }
+  },
+  "E7_cell_rule_choice_both_priors": {
+   "C0: R 3, unanimous": {
+    "BHW, ties to the own draw": {
+     "placed": 1.0,
+     "contradicted": 0.0
+    },
+    "BHW, ties to the own draw, flips 1/1000": {
+     "placed": 0.8203,
+     "contradicted": 0.0
+    },
+    "BHW, ties to the own draw, flips 3/1000": {
+     "placed": 0.5516,
+     "contradicted": 0.0
+    },
+    "BHW, ties to the own draw, flips 1/100": {
+     "placed": 0.1367,
+     "contradicted": 0.0
+    },
+    "BHW, ties to the own draw, flips 3/100": {
+     "placed": 0.0024,
+     "contradicted": 0.0012
+    },
+    "overweighting 2:1": {
+     "placed": 0.0,
+     "contradicted": 1.0
+    },
+    "overweighting 2:1, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 1.0
+    },
+    "overweighting 2:1, flips 3/1000": {
+     "placed": 0.0,
+     "contradicted": 1.0
+    },
+    "overweighting 2:1, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 1.0
+    },
+    "overweighting 2:1, flips 3/100": {
+     "placed": 0.0,
+     "contradicted": 0.9992
+    },
+    "hybrid 1/5": {
+     "placed": 0.0,
+     "contradicted": 0.0627
+    },
+    "hybrid 1/5, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 0.0628
+    },
+    "hybrid 1/5, flips 3/1000": {
+     "placed": 0.0,
+     "contradicted": 0.0629
+    },
+    "hybrid 1/5, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 0.0635
+    },
+    "hybrid 1/5, flips 3/100": {
+     "placed": 0.0,
+     "contradicted": 0.0654
+    },
+    "hybrid 1/10": {
+     "placed": 0.0005,
+     "contradicted": 0.0125
+    },
+    "hybrid 1/10, flips 1/1000": {
+     "placed": 0.0004,
+     "contradicted": 0.0126
+    },
+    "hybrid 1/10, flips 3/1000": {
+     "placed": 0.0003,
+     "contradicted": 0.0129
+    },
+    "hybrid 1/10, flips 1/100": {
+     "placed": 0.0001,
+     "contradicted": 0.014
+    },
+    "hybrid 1/10, flips 3/100": {
+     "placed": 0.0,
+     "contradicted": 0.0174
+    }
+   },
+   "C1: R 5, one off allowed": {
+    "BHW, ties to the own draw": {
+     "placed": 1.0,
+     "contradicted": 0.0
+    },
+    "BHW, ties to the own draw, flips 1/1000": {
+     "placed": 0.9994,
+     "contradicted": 0.0
+    },
+    "BHW, ties to the own draw, flips 3/1000": {
+     "placed": 0.9941,
+     "contradicted": 0.0
+    },
+    "BHW, ties to the own draw, flips 1/100": {
+     "placed": 0.9373,
+     "contradicted": 0.0
+    },
+    "BHW, ties to the own draw, flips 3/100": {
+     "placed": 0.5704,
+     "contradicted": 0.0002
+    },
+    "overweighting 2:1": {
+     "placed": 0.0,
+     "contradicted": 1.0
+    },
+    "overweighting 2:1, flips 1/1000": {
+     "placed": 0.0,
+     "contradicted": 1.0
+    },
+    "overweighting 2:1, flips 3/1000": {
+     "placed": 0.0,
+     "contradicted": 1.0
+    },
+    "overweighting 2:1, flips 1/100": {
+     "placed": 0.0,
+     "contradicted": 1.0
+    },
+    "overweighting 2:1, flips 3/100": {
+     "placed": 0.0,
+     "contradicted": 1.0
+    },
+    "hybrid 1/5": {
+     "placed": 0.0007,
+     "contradicted": 0.0828
+    },
+    "hybrid 1/5, flips 1/1000": {
+     "placed": 0.0006,
+     "contradicted": 0.0835
+    },
+    "hybrid 1/5, flips 3/1000": {
+     "placed": 0.0006,
+     "contradicted": 0.0849
+    },
+    "hybrid 1/5, flips 1/100": {
+     "placed": 0.0004,
+     "contradicted": 0.0897
+    },
+    "hybrid 1/5, flips 3/100": {
+     "placed": 0.0001,
+     "contradicted": 0.1028
+    },
+    "hybrid 1/10": {
+     "placed": 0.1301,
+     "contradicted": 0.009
+    },
+    "hybrid 1/10, flips 1/1000": {
+     "placed": 0.1262,
+     "contradicted": 0.0092
+    },
+    "hybrid 1/10, flips 3/1000": {
+     "placed": 0.1182,
+     "contradicted": 0.0098
+    },
+    "hybrid 1/10, flips 1/100": {
+     "placed": 0.0911,
+     "contradicted": 0.0118
+    },
+    "hybrid 1/10, flips 3/100": {
+     "placed": 0.0334,
+     "contradicted": 0.0184
+    }
+   }
+  },
+  "E4_sampled_arm": {
+   "half_width_95_of_D": {
+    "20": {
+     "base 0.5": 0.31,
+     "base 0.8": 0.248,
+     "base 0.9": 0.186
+    },
+    "50": {
+     "base 0.5": 0.196,
+     "base 0.8": 0.157,
+     "base 0.9": 0.118
+    },
+    "100": {
+     "base 0.5": 0.139,
+     "base 0.8": 0.111,
+     "base 0.9": 0.083
+    },
+    "200": {
+     "base 0.5": 0.098,
+     "base 0.8": 0.078,
+     "base 0.9": 0.059
+    }
+   },
+   "normal_sizes_per_draw": {
+    "detect D = 0.1 between 0.9 and 0.8 (two-sided 0.05, power 0.8)": 197,
+    "equivalence |D| < 0.1, base 0.9, true D = 0 (TOST 0.05, power 0.8)": 155,
+    "equivalence |D| < 0.1, base 0.5": 429,
+    "equivalence |D| < 0.05, base 0.9": 617,
+    "equivalence |D| < 0.05, base 0.5": 1713
+   },
+   "simulated_tost_power_at_that_size": 0.8,
+   "note": "the sampled arm is reported only: RF4 gives no verdict on sampled members"
+  },
+  "E5_pilot_upper_bound_on_eta_after_no_flip": {
+   "100": 0.02951,
+   "200": 0.01487,
+   "300": 0.00994,
+   "400": 0.00746,
+   "1000": 0.00299,
+   "3000": 0.001
+  },
+  "E6_premise_met_on_a_path": {
+   "0.0": {
+    "one cell": 1.0,
+    "path of 6": 1.0,
+    "path of 5": 1.0
+   },
+   "0.001": {
+    "one cell": 0.99,
+    "path of 6": 0.9417,
+    "path of 5": 0.9512
+   },
+   "0.002": {
+    "one cell": 0.9802,
+    "path of 6": 0.8868,
+    "path of 5": 0.9047
+   },
+   "0.005": {
+    "one cell": 0.9511,
+    "path of 6": 0.7403,
+    "path of 5": 0.7783
+   },
+   "0.01": {
+    "one cell": 0.9044,
+    "path of 6": 0.5472,
+    "path of 5": 0.605
+   },
+   "0.02": {
+    "one cell": 0.8171,
+    "path of 6": 0.2976,
+    "path of 5": 0.3642
+   }
+  }
+ },
+ "F_usage": {
+  "cells": 33,
+  "prefixes": {
+   "1:1": [
+    "(A,A)",
+    "(B,B)",
+    "(A,A,A)",
+    "(B,B,B)"
+   ],
+   "one draw for A": [
+    "(A)",
+    "(B,B,B)"
+   ]
+  },
+  "calls_per_model": {
+   "premise cells (2 draws x R)": 330,
+   "fresh sequences (M per prefix, single calls)": 272,
+   "leak control (one prefix)": 108,
+   "comprehension probes (one per cell and draw)": 66,
+   "no-draw control (history only, R)": 165,
+   "sampled arm (6 cells x 2 draws x 50), reported only": 600,
+   "determinism pilot (outside the cells)": 300,
+   "total, before re-asks": 1841
+  },
+  "re_asks": "R per difference found in a fresh sequence, and one per invalid answer",
+  "tokens_per_model_estimate": 603848,
+  "assumptions": "about 320 input and 8 output tokens a call, no reasoning tokens; a reasoning model adds its reasoning, to be measured at the smoke run",
+  "three_families": {
+   "calls": 5523,
+   "tokens": 1811544
+  },
+  "six_families": {
+   "calls": 11046,
+   "tokens": 3623088
+  }
+ }
+}
