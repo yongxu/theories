@@ -7,6 +7,7 @@ landed RECEIPT N: replace BD2's head clause with the landed one, followed by the
       (BD2_ORDER, if set, gives the coordinator's sentence instead), and move BD2's row to the history file (titled
       done, its status the landing, its links rebased there), after the last landed row.
 usage (from the checkout root): python3 -B board_bd2.py head | landed RECEIPT N"""
+import datetime
 import os
 import re
 import sys
@@ -59,8 +60,8 @@ def landed(receipt, n):
               "what-a-line-holds-and-a-regularity-takes-in; 01 §9.9 (BD's reading citing the Lean), 04 §1, 07, the "
               "glossary row, the root module's bullets, the checker's core list and scope and both package READMEs, "
               "the Chinese Boundaries row brought to the English and the checker's Boundaries scope to the "
-              "continuation condition; an independent AI review and its re-check and the grammar owner's notes, every "
-              "finding taken; the connectivity register's new apart roots each with a reason, and Frame's "
+              "continuation condition; an independent AI review, its re-check and a third look, and the grammar owner's "
+              "notes, every finding taken; the connectivity register's new apart roots each with a reason, and Frame's "
               "`closedUnder_iff_closed` no longer apart, the World's cut laws using it; the records citing the "
               "changed sections re-pointed, nothing they say changed; BD2's row "
               "in the history file; render, strict check, links and tests pass). ")
@@ -96,10 +97,10 @@ def landed(receipt, n):
                       '| **BD2: not going out of a region, on the root, done**', 1)
     cells = row.split(' | ')
     assert len(cells) == 5, len(cells)
-    cells[2] = (f'landed 2026-10-31 at core receipt `{receipt}`, study §{n}: `Becoming.GrammarCrossing` and '
+    cells[2] = (f'landed {datetime.date.today().isoformat()} at core receipt `{receipt}`, study §{n}: `Becoming.GrammarCrossing` and '
                 '`Becoming.ConveyanceBoundaries` in the core, `«所经必同»` proved from the step going out, every axiom '
                 'report empty; the record not-going-out-of-a-region, conveyance-crosses-the-boundary and '
-                'what-a-line-holds-and-a-regularity-takes-in amended; the independent review and its re-check '
+                'what-a-line-holds-and-a-regularity-takes-in amended; the independent review, its re-check and a third look '
                 '([REVIEW](../../research/2026-10-05-generative-foundation-review/root-foundation/development/'
                 'bd-boundaries/REVIEW.md)), every finding taken')
     row = ' | '.join(cells)
