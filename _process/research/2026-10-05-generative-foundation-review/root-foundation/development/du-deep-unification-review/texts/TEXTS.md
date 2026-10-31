@@ -56,3 +56,10 @@ Open: replace "Lifting these laws onto the grammar ([08](08-METHOD.md))." with:
 If the record's text changes, its home section in 08 §7 changes with it; edit (a) already covers that.
 
 The boundary record `one-root-to-its-edge` says, for order: "no theorem shows it unentailed by the dynamics". Once the leaf lands, `ReadsNoOrder.not_entails` is that theorem for frames (immediate). Whether `boundary.py`'s Q1 computes it as such (a theorem whose type names `Comparison`), or the record's premise entry needs a reading, is checked at the rehearsal.
+
+## Order with U4b (agreed with U4's owner, 31 October 2026)
+
+U4b (claimed `753460b81`) moves `SelectionLevels.rises_exact_iff_levels` from amounts to counting. It is expected to land first.
+- In 08 §7 it changes only the edge paragraph's three count phrases. DU's edits there are the labels in the connectivity paragraph and the C / `«续无外»` sentence, so the two do not collide.
+- DU's landing edits `home()` in `development/u4-one-root-to-its-edge/make_record_u4.py` to carry the C / `«续无外»` sentence, so that the generator keeps matching 08. The sentence names declarations that exist only once the leaf lands.
+- At DU's landing, 04's figures are read from the record as it then stands. After U4b they are 1 / 4 / 1 / 5 / 7.
