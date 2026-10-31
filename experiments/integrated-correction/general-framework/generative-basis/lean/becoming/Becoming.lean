@@ -172,6 +172,7 @@ import Becoming.JointKeeping
 import Becoming.Undecided
 import Becoming.Junctures
 import Becoming.Commuting
+import Becoming.WeightedCommuting
 import Becoming.HexagramCommuting
 import Becoming.Tolerance
 import Becoming.Revision
@@ -243,6 +244,7 @@ import Becoming.Novelty
 import Becoming.Reading
 import Becoming.PlaceTransitionNets
 import Becoming.SharedCodes
+import Becoming.CountedCodes
 import Becoming.ExchangePremises
 import Becoming.OverExchange
 import Becoming.Readings
@@ -321,6 +323,7 @@ import Becoming.SelectionReach
 import Becoming.DrawnBeyond
 import Becoming.JointDraw
 import Becoming.Optimum
+import Becoming.OptimumSeason
 import Becoming.SetPointOptimum
 import Becoming.SelectionPool
 import Becoming.PoolResponse
@@ -2137,6 +2140,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   is perfect and holding the level draws each more at every later step, holding draws each
   more over a long horizon, and for a drawer given the whole drawing everything is not perfect where the whole
   returns more than one for one.
+* `Becoming.OptimumSeason` (L1): LA4's test season and the optimum laws it meets. The season as
+  `season.py` runs it (a ground of ten renewing, at most four taken a step, a bay of six, two
+  landing sites, ten steps) has three independent parts, the ground's catch, the bay's fish and
+  the landings; the ground's best catch is 34, by a table checked against every take. The catch
+  shares units with the bay, so every optimum of every order rising with the catch empties the
+  bay (`Optimum.Season.bay_drained`); the landing site, and the bay ranked by the ground's catch
+  alone, give no room, and the orders by the catch alone and by the ground's have optima keeping
+  and ending. Over seasons with natural-number weights the bay left is at most `40(1 − ν)` and
+  `ν ≤ 1 − 3p/40`. A leaf (board item LA4).
 * `Becoming.SetPointOptimum` (L1): what an order with a set point does beyond what couples in. An
   order nearing a set point of the family ranks above every outcome lying, at each condition,
   between the set point and the other and nearer at one (`Nearing`, by `Regulation.Between`):
@@ -2579,6 +2591,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   return; the law goes alike across the pairs; `Diagonal.revision_never_rests` is the case of a
   map commuting with itself. Symmetric processes carry reach, returning and junctures, and each
   run has a mirror run never at the same configuration.
+* `Becoming.WeightedCommuting` (L1): what a commuting law keeps in expectation. A law going to
+  finitely many weighted successors, the weights of any type and no law of their arithmetic
+  used, commuting with a map carries every expectation through the map
+  (`Weighted.Commutes.carried`), so from a start the map leaves unchanged the expectations stay
+  symmetric at every step; a law drawing samples commutes where a map of the samples permutes
+  them and the map carries their weights and the update (`Weighted.Commutes.of_samples`); a
+  determined commuting law is a case. Reinforcing keeps equal expectations while runs drawing
+  one value for any number of steps have positive weight; Pooling wears a start's preference
+  away. A leaf (board item LA4).
 * `Becoming.HexagramCommuting` (L1): The Changes as an instance of a commuting law.
 * `Becoming.HexagramCommuting` (L1, instance ring): the Changes as an instance of a commuting law. Waxing
   and waning never merges a hexagram with its complement, its six steps to the complement are the
@@ -3323,6 +3344,29 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   the course of senses is, exactly where the code tells the senses apart; where resolution reads
   every encoded sequence, it reads the course of forms of every course of words as its course of
   meanings, step by step.
+* `Becoming.CountedCodes` (L1): the law of a code formed between formations for beliefs held as
+  counts, as the principle's agents hold a likelihood of words given meanings. A belief state gives
+  each agent, for each meaning, a count of each word; `CountedCodes.UniqueGreatest c w` says `w`
+  alone has the greatest count. In any strict order, two words are never both uniquely greatest
+  (`CountedCodes.unique_greatest_not_two`), and counts a renaming moving every word fixes have none
+  (`CountedCodes.fixed_no_unique_greatest`). Under a law keeping the exchange of agents together
+  with a renaming of the words (`CountedCodes.Renamed`), from a start related to itself, where the
+  renaming at a meaning is onto, an agent's uniquely greatest word, renamed, is that of the agent
+  the exchange gives it at every step (`CountedCodes.unique_greatest_exchanged_run`); so where the
+  renaming moves every word and is onto, or the exchange is an involution, two exchanged agents
+  never hold one word as each one's uniquely greatest (`CountedCodes.never_shared`,
+  `CountedCodes.never_shared_of_involution`). Learning from what is heard, the hearer given the
+  meaning, keeps the relation where the speaker map commutes with the exchange and the rule reads
+  count by count and commutes with renaming (`CountedCodes.hear_keeps`); adding what is heard is
+  such a rule where what is heard is (`CountedCodes.addHeard_keeps`); a weight on what is heard read
+  off the hearer's whole model keeps it where the renaming leaves the weight unchanged
+  (`CountedCodes.gatedHear_keeps`). In natural counts, over a listing a renaming permutes, a count
+  belief reaches the free-energy bound exactly where its renaming does for the renamed weights
+  (`CountedCodes.bound_invariant`), and under weights a renaming moving every word fixes, with a
+  positive total, a belief at the bound over a listing of every word has no uniquely greatest word
+  (`CountedCodes.minimizer_no_unique_greatest`). Witnesses: a preferred word in the order of
+  speaking, and an asymmetric start, each bring a shared uniquely greatest word. A leaf importing
+  `Becoming.SharedCodes` and `Becoming.FreeEnergyCounting` (board item UE25).
 * `Becoming.Likeness` (L1): the laws stated with equality, completed up to likeness, with no
   premise. A description carries a law up to likeness exactly where some equivalence
   registering the claims makes configurations go alike, the law stated with equality being the

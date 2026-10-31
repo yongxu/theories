@@ -356,6 +356,30 @@
    "page": "theories/becoming/results/records/a-code-formed-between-formations.md"
   },
   {
+   "id": "record:a-code-held-as-counts",
+   "type": "result",
+   "record": "a-code-held-as-counts",
+   "title": "A code held as counts, learned from what is heard",
+   "title_zh": "以计数持之码，由所闻而学",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "general",
+   "page": "theories/becoming/results/records/a-code-held-as-counts.md"
+  },
+  {
+   "id": "record:a-commuting-learner-drives-no-unread-choice",
+   "type": "result",
+   "record": "a-commuting-learner-drives-no-unread-choice",
+   "title": "A commuting learner drives no choice whose values nothing it reads tells apart",
+   "title_zh": "交换之学习者不驱动其所读皆不分二值之选择",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "general",
+   "page": "theories/becoming/results/records/a-commuting-learner-drives-no-unread-choice.md"
+  },
+  {
    "id": "record:a-coupling-saturated-by-what-it-has-carried",
    "type": "result",
    "record": "a-coupling-saturated-by-what-it-has-carried",
@@ -5288,6 +5312,18 @@
    "page": "theories/becoming/results/records/the-step-index-from-own-courses.md"
   },
   {
+   "id": "record:the-test-season-meets-the-optimum-laws",
+   "type": "result",
+   "record": "the-test-season-meets-the-optimum-laws",
+   "title": "LA4's test season meets the optimum laws",
+   "title_zh": "LA4 之检验季合于最优之律",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "collective",
+   "base": "general",
+   "page": "theories/becoming/results/records/the-test-season-meets-the-optimum-laws.md"
+  },
+  {
    "id": "record:the-updater-line",
    "type": "result",
    "record": "the-updater-line",
@@ -8294,6 +8330,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.WeightedCommuting",
+   "type": "module",
+   "name": "Becoming.WeightedCommuting",
+   "level": "L1",
+   "theorems": 18,
+   "region": "collective",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.HexagramCommuting",
    "type": "module",
    "name": "Becoming.HexagramCommuting",
@@ -9069,6 +9116,17 @@
    "name": "Becoming.SharedCodes",
    "level": "L1",
    "theorems": 125,
+   "region": "collective",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.CountedCodes",
+   "type": "module",
+   "name": "Becoming.CountedCodes",
+   "level": "L1",
+   "theorems": 34,
    "region": "collective",
    "base": "general",
    "on_grammar": false,
@@ -9929,6 +9987,17 @@
    "theorems": 506,
    "region": "collective",
    "base": "old-base",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.OptimumSeason",
+   "type": "module",
+   "name": "Becoming.OptimumSeason",
+   "level": "L1",
+   "theorems": 63,
+   "region": "collective",
+   "base": "general",
    "on_grammar": false,
    "reaches_grammar": true
   },
@@ -29650,6 +29719,18 @@
    "anchor": "r-optima-rebuild-a-depleted-base"
   },
   {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-the-test-season-meets-the-optimum-laws",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-the-test-season-meets-the-optimum-laws"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-commuting-learner-drives-no-unread-choice",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-a-commuting-learner-drives-no-unread-choice"
+  },
+  {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches",
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
@@ -29702,6 +29783,12 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
    "anchor": "r-imposing-a-code-breaks-the-symmetry"
+  },
+  {
+   "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-held-as-counts",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "anchor": "r-a-code-held-as-counts"
   },
   {
    "id": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-swap-symmetric-assignment-singles-out-none",
@@ -31039,6 +31126,16 @@
   {
    "from": "module:Becoming.Countdown",
    "to": "module:Becoming.Assurance",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.CountedCodes",
+   "to": "module:Becoming.FreeEnergyCounting",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.CountedCodes",
+   "to": "module:Becoming.SharedCodes",
    "type": "imports"
   },
   {
@@ -32837,6 +32934,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.OptimumSeason",
+   "to": "module:Becoming.Optimum",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.OrderNormal",
    "to": "module:Becoming.IdleRemoval",
    "type": "imports"
@@ -34252,6 +34354,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.WeightedCommuting",
+   "to": "module:Becoming.Commuting",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.WeightedTraces",
    "to": "module:Becoming.Weighted",
    "type": "imports"
@@ -34425,6 +34532,61 @@
    "from": "record:a-code-formed-between-formations",
    "to": "record:what-finitely-many-labels-fix",
    "type": "related"
+  },
+  {
+   "from": "record:a-code-held-as-counts",
+   "to": "module:Becoming.CountedCodes",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-code-held-as-counts",
+   "to": "record:a-code-formed-between-formations",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-code-held-as-counts",
+   "to": "record:capture-by-counted-choices",
+   "type": "related"
+  },
+  {
+   "from": "record:a-code-held-as-counts",
+   "to": "record:free-energy-bound-in-counts",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-code-held-as-counts",
+   "to": "record:identical-cells-under-a-descent-treating-them-alike",
+   "type": "related"
+  },
+  {
+   "from": "record:a-code-held-as-counts",
+   "to": "record:identical-cells-under-noise",
+   "type": "related"
+  },
+  {
+   "from": "record:a-code-held-as-counts",
+   "to": "record:imposing-a-code-breaks-the-symmetry",
+   "type": "related"
+  },
+  {
+   "from": "record:a-commuting-learner-drives-no-unread-choice",
+   "to": "module:Becoming.WeightedCommuting",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-commuting-learner-drives-no-unread-choice",
+   "to": "record:selection-through-a-model-of-the-options",
+   "type": "related"
+  },
+  {
+   "from": "record:a-commuting-learner-drives-no-unread-choice",
+   "to": "record:the-test-season-meets-the-optimum-laws",
+   "type": "related"
+  },
+  {
+   "from": "record:a-commuting-learner-drives-no-unread-choice",
+   "to": "record:what-a-commuting-law-keeps-apart",
+   "type": "formal-reuse"
   },
   {
    "from": "record:a-coupling-saturated-by-what-it-has-carried",
@@ -36415,6 +36577,11 @@
    "from": "record:capture-by-counted-choices",
    "to": "module:Becoming.Selection",
    "type": "proved-in"
+  },
+  {
+   "from": "record:capture-by-counted-choices",
+   "to": "record:a-code-held-as-counts",
+   "type": "related"
   },
   {
    "from": "record:capture-by-counted-choices",
@@ -52522,6 +52689,21 @@
    "type": "related"
   },
   {
+   "from": "record:the-test-season-meets-the-optimum-laws",
+   "to": "module:Becoming.OptimumSeason",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-test-season-meets-the-optimum-laws",
+   "to": "record:a-commuting-learner-drives-no-unread-choice",
+   "type": "related"
+  },
+  {
+   "from": "record:the-test-season-meets-the-optimum-laws",
+   "to": "record:what-an-optimum-does-beyond-what-couples-in",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:the-updater-line",
    "to": "record:correction-is-not-calibration",
    "type": "related"
@@ -58892,6 +59074,16 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-held-as-counts",
+   "to": "record:a-code-held-as-counts",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-commuting-learner-drives-no-unread-choice",
+   "to": "record:a-commuting-learner-drives-no-unread-choice",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-read-by-its-majority",
    "to": "record:a-pool-read-by-its-majority",
    "type": "states"
@@ -59139,6 +59331,11 @@
   {
    "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
    "to": "record:the-rest-outruns-the-renewal",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/05-COLLECTIVES.md#r-the-test-season-meets-the-optimum-laws",
+   "to": "record:the-test-season-meets-the-optimum-laws",
    "type": "states"
   },
   {

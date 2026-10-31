@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261030T164445.569791Z",
- "core_sources_sha256": "7495d67b161e42b9bd1f016a1db6bd73062897973b3322e46999dee7116a07a2",
+ "core_receipt": "20261030T232750.486801Z",
+ "core_sources_sha256": "1eda48f29a2e7ee933abb621ba86a69fd8fd472d208bf227231d9d8d7bf080ca",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -9,7 +9,9 @@
   "theories/becoming/results/completion/COVERAGE.json": "0dc05776e9e19df1f4846623890bc421a44b6b422e87f3bf8ce738596afa8a49",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "c8e349f57adecd7bd8d25bd0fde850c9f813919cdbf0e4a3734005c43340043a",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
-  "tools/research/master_laws.py": "f7e423e8630df318b18b5fc2b48d0c8f2941953053af4561ac49b83390d82f23"
+  "tools/research/boundary.py": "e6cccd46c3ebc706fea5976cb2b4375f2c80d0f0158450e6c951708f7dc9726d",
+  "tools/research/boundary_check.lean": "b4d3a1133ea6990c642db099072b4a45592ae29f70792f85005e4032d37cfcdd",
+  "tools/research/master_laws.py": "95e8ec09142c59b3d45d19e6ac8ca8e63104e80c5d9e222d10cc67c2d4058997"
  },
  "names": {
   "closure": "closure",
@@ -56,13 +58,13 @@
   ]
  },
  "counts": {
-  "laws": 3873,
+  "laws": 3899,
   "no_declarations": 9,
   "outside": 377,
   "grammar": 762,
   "balance, represented": 645,
   "anchor, not reached": 134,
-  "no master law": 1946,
+  "no master law": 1972,
   "vocabulary_only": 66,
   "closure": 479,
   "balance": 815,
@@ -84,6 +86,21 @@
   "return": 0,
   "lumping": 0,
   "order": 3
+ },
+ "counts_at_boundary_record": {
+  "laws": 0,
+  "no_declarations": 0,
+  "outside": 0,
+  "grammar": 0,
+  "balance, represented": 0,
+  "anchor, not reached": 0,
+  "no master law": 0,
+  "vocabulary_only": 0,
+  "closure": 0,
+  "balance": 0,
+  "return": 0,
+  "lumping": 0,
+  "order": 0
  },
  "model_relations": {
   "occurrence": [
@@ -634,6 +651,237 @@
       "row_dependence": "no master law"
      }
     ]
+   }
+  ],
+  "a-code-held-as-counts": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.CountedCodes.rename",
+     "Becoming.CountedCodes.UniqueGreatest",
+     "Becoming.CountedCodes.unique_greatest_not_two",
+     "Becoming.CountedCodes.unique_greatest_eq",
+     "Becoming.CountedCodes.unique_greatest_rename",
+     "Becoming.CountedCodes.fixed_no_unique_greatest"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.CountedCodes.Renamed",
+     "Becoming.CountedCodes.keeps_both",
+     "Becoming.CountedCodes.unique_greatest_exchanged",
+     "Becoming.CountedCodes.unique_greatest_exchanged_run"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.CountedCodes.never_shared",
+     "Becoming.CountedCodes.never_shared_of_involution",
+     "Becoming.CountedCodes.shared_no_unique_greatest"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.CountedCodes.read_relabels"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.CountedCodes.hear",
+     "Becoming.CountedCodes.ReadsCountByCount",
+     "Becoming.CountedCodes.CommutesWithRenaming",
+     "Becoming.CountedCodes.hear_keeps",
+     "Becoming.CountedCodes.tied_hears_tied"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.CountedCodes.addHeard",
+     "Becoming.CountedCodes.addHeard_keeps"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.CountedCodes.addSpeaker",
+     "Becoming.CountedCodes.addSpeaker_keeps",
+     "Becoming.CountedCodes.addSpeaker_shares",
+     "Becoming.CountedCodes.addSpeaker_shares_run",
+     "Becoming.CountedCodes.addSpeaker_tied"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.CountedCodes.gatedHear",
+     "Becoming.CountedCodes.gatedHear_keeps"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.CountedCodes.powerProduct_map",
+     "Becoming.CountedCodes.total_perm",
+     "Becoming.CountedCodes.powerProduct_perm",
+     "Becoming.CountedCodes.bound_invariant"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.CountedCodes.minimizer_no_unique_greatest"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.CountedCodes.shared_minimizer_no_unique_greatest"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.CountedCodes.Witness.swap_involution",
+     "Becoming.CountedCodes.Witness.swap_moves",
+     "Becoming.CountedCodes.Witness.opposite",
+     "Becoming.CountedCodes.Witness.opposite_symmetric",
+     "Becoming.CountedCodes.Witness.added_tie"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 13,
+    "declarations": [
+     "Becoming.CountedCodes.Witness.zero",
+     "Becoming.CountedCodes.Witness.zero_symmetric",
+     "Becoming.CountedCodes.Witness.sayFirst",
+     "Becoming.CountedCodes.Witness.sayFirst_shared",
+     "Becoming.CountedCodes.Witness.sayFirst_not_alike"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 14,
+    "declarations": [
+     "Becoming.CountedCodes.Witness.lead",
+     "Becoming.CountedCodes.Witness.lead_not_symmetric",
+     "Becoming.CountedCodes.Witness.asymmetric_shared"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   }
+  ],
+  "a-commuting-learner-drives-no-unread-choice": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Weighted.total",
+     "Becoming.Weighted.total_congr",
+     "Becoming.Weighted.expect",
+     "Becoming.Weighted.Commutes",
+     "Becoming.Weighted.Commutes.carried"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Weighted.Commutes.fixed_expect",
+     "Becoming.Weighted.Unchanged",
+     "Becoming.Weighted.Commutes.start_expect",
+     "Becoming.Weighted.law",
+     "Becoming.Weighted.law_commutes"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Weighted.over",
+     "Becoming.Weighted.total_map",
+     "Becoming.Weighted.over_congr",
+     "Becoming.Weighted.Commutes.of_samples"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Weighted.swap",
+     "Becoming.Weighted.Reinforcing.law",
+     "Becoming.Weighted.Reinforcing.commutes",
+     "Becoming.Weighted.Reinforcing.expect_equal",
+     "Becoming.Weighted.Reinforcing.oneSidedRun",
+     "Becoming.Weighted.Reinforcing.oneSidedWeight",
+     "Becoming.Weighted.Reinforcing.oneSidedRun_eq",
+     "Becoming.Weighted.Reinforcing.oneSidedWeight_pos",
+     "Becoming.Weighted.Reinforcing.oneSided"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.Weighted.Pooling.step",
+     "Becoming.Weighted.Pooling.commutes",
+     "Becoming.Weighted.Pooling.run_counts",
+     "Becoming.Weighted.Pooling.share_rises",
+     "Becoming.Weighted.Pooling.share_below_half"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
    }
   ],
   "a-coupling-saturated-by-what-it-has-carried": [
@@ -47023,6 +47271,130 @@
      "Becoming.Interleavings.LocalLaw.eq_of_courses",
      "Becoming.Interleavings.LocalLaw.unique_iff",
      "Becoming.Interleavings.LocalLaw.traced_unique_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   }
+  ],
+  "the-test-season-meets-the-optimum-laws": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Optimum.Season.step",
+     "Becoming.Optimum.Season.run",
+     "Becoming.Optimum.Season.outcome",
+     "Becoming.Optimum.Season.Eligible",
+     "Becoming.Optimum.Season.run_caught",
+     "Becoming.Optimum.Season.run_taken",
+     "Becoming.Optimum.Season.run_landed",
+     "Becoming.Optimum.Season.run_bay",
+     "Becoming.Optimum.Season.takes_eq",
+     "Becoming.Optimum.Season.flagged",
+     "Becoming.Optimum.Season.flagged_caught",
+     "Becoming.Optimum.Season.flagged_asked",
+     "Becoming.Optimum.Season.flagged_landings",
+     "Becoming.Optimum.Season.outcome_ground",
+     "Becoming.Optimum.Season.outcome_catch",
+     "Becoming.Optimum.Season.outcome_bay",
+     "Becoming.Optimum.Season.outcome_site",
+     "Becoming.Optimum.Season.eligible_of",
+     "Becoming.Optimum.Season.eligible_parts"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Optimum.Season.ceiling",
+     "Becoming.Optimum.Season.best",
+     "Becoming.Optimum.Season.bellman",
+     "Becoming.Optimum.Season.caught_le",
+     "Becoming.Optimum.Season.best_ten",
+     "Becoming.Optimum.Season.ground_le",
+     "Becoming.Optimum.Season.topTakes",
+     "Becoming.Optimum.Season.top_caught",
+     "Becoming.Optimum.Season.catch_le",
+     "Becoming.Optimum.Season.bay_le",
+     "Becoming.Optimum.Season.bay_catch",
+     "Becoming.Optimum.Season.bay_catch_le",
+     "Becoming.Optimum.Season.kept_catch_le"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Optimum.Season.shared",
+     "Becoming.Optimum.Season.drained_eligible",
+     "Becoming.Optimum.Season.bay_drained",
+     "Becoming.Optimum.Season.catchOrder",
+     "Becoming.Optimum.Season.catch_rising",
+     "Becoming.Optimum.Season.top_frontier",
+     "Becoming.Optimum.Season.site_optima",
+     "Becoming.Optimum.Season.site_no_room",
+     "Becoming.Optimum.Season.site_not_least"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Optimum.Season.groundOrder",
+     "Becoming.Optimum.Season.ground_rising",
+     "Becoming.Optimum.Season.ground_bound",
+     "Becoming.Optimum.Season.ground_frontier",
+     "Becoming.Optimum.Season.unshared_optima",
+     "Becoming.Optimum.Season.unshared_no_room"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.Optimum.Season.afterScore",
+     "Becoming.Optimum.Season.afterOrder",
+     "Becoming.Optimum.Season.lexOrder",
+     "Becoming.Optimum.Season.lex_rising",
+     "Becoming.Optimum.Season.seven_lt",
+     "Becoming.Optimum.Season.after_iff",
+     "Becoming.Optimum.Season.after_drained"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.Optimum.Season.plateauOrder",
+     "Becoming.Optimum.Season.plateau_not_rising",
+     "Becoming.Optimum.Season.plateau_frontier",
+     "Becoming.Optimum.Season.plateau_optima"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.Optimum.Season.mass",
+     "Becoming.Optimum.Season.mass_add",
+     "Becoming.Optimum.Season.mass_le",
+     "Becoming.Optimum.Season.mass_const",
+     "Becoming.Optimum.Season.mix_bay_catch",
+     "Becoming.Optimum.Season.keptMark",
+     "Becoming.Optimum.Season.catch_kept_le",
+     "Becoming.Optimum.Season.mix_kept"
     ],
     "master_laws": [],
     "grammar": false,
