@@ -1,0 +1,8 @@
+AccountLaw -> SustainLaw: statement same before, at and after the rename; body same
+  now: def SustainLaw (P : Process State Action) (held : State → Nat) (enacted arrived : State → Action → State → Nat) : Prop := ∀ s a t, P.step s a t → held t + enacted s a t ≤ held s + arrived s a t
+credited -> arrivalEvent: statement same before, at and after the rename; body same
+  now: def arrivalEvent (amount : Nat) : Nat := if amount = 0 then 0 else 1
+support_trace_balance -> support_trace_bound: statement same before, at and after the rename
+  now: theorem support_trace_bound (held : State → Nat) {enacted arrived : State → Action → State → Nat} (law : SustainLaw P held enacted arrived) {s t : State} {as : List Action} {enactedTotal arrivedTotal count : Nat} (h : SupportTrace P enacted arrived s as t enactedTotal arrivedTotal count) : enactedTotal + held t ≤ held s + arrivedTotal
+SupportTrace -> SupportTrace: statement same before, at and after the rename; body same
+  now: inductive SupportTrace (P : Process State Action) (enacted arrived : State → Action → State → Nat) : State → List Action → State → Nat → Nat → Nat → Prop where | nil (s : State) : SupportTrace P enacted arrived s [] s 0 0 0 | cons {s m t : State} {a : Action} {as : List Action} {enactedTotal arrivedTotal count : Nat} : P.step s a m → SupportTrace P enacted arrived m as t enactedTotal arrivedTotal count → SupportTrace P enacted arrived s (a :: as) t (enacted s a m + enactedTotal) (arrived s a m + arrivedTotal) (arrivalEvent (arrived s a m) + count)

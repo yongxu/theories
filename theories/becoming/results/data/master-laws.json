@@ -1,7 +1,7 @@
 {
  "about": "MV: the master laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/master_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261031T054654.692180Z",
- "core_sources_sha256": "78b98f7b1d994228a93265350a7da159bd4e60093584ac46a5066044410133bd",
+ "core_receipt": "20261031T085229.010243Z",
+ "core_sources_sha256": "9886b80dd9d34a9aa6231f200662521294add400f733e83af3722ab9dfb05b0b",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "2ef34975a7e46e530b72a9fa756483fcb2c3bd12ee6295f2dc0b349d4e5c1232",
@@ -58,13 +58,13 @@
   ]
  },
  "counts": {
-  "laws": 3936,
+  "laws": 3945,
   "no_declarations": 9,
   "outside": 377,
   "grammar": 764,
   "balance, represented": 645,
   "anchor, not reached": 134,
-  "no master law": 2007,
+  "no master law": 2016,
   "vocabulary_only": 66,
   "closure": 479,
   "balance": 815,
@@ -54645,8 +54645,6 @@
      "Becoming.HeldForReading.offExcess",
      "Becoming.HeldForReading.shortfall",
      "Becoming.HeldForReading.held_term",
-     "Becoming.HeldForReading.term_go",
-     "Becoming.HeldForReading.term_off",
      "Becoming.HeldForReading.after_add_shortfall_go",
      "Becoming.HeldForReading.after_add_shortfall_off"
     ],
@@ -54656,6 +54654,23 @@
    },
    {
     "law": 10,
+    "declarations": [
+     "Becoming.HeldForReading.gainOf_goOn",
+     "Becoming.HeldForReading.gainOf_off",
+     "Becoming.HeldForReading.gainOf_held",
+     "Becoming.HeldForReading.excess_goOn",
+     "Becoming.HeldForReading.excess_off",
+     "Becoming.HeldForReading.excess_held",
+     "Becoming.HeldForReading.moves_not_below_iff",
+     "Becoming.HeldForReading.held_above_moves_iff",
+     "Becoming.HeldForReading.held_above_held_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 11,
     "declarations": [
      "Becoming.HeldForReading.shortfall_byReading",
      "Becoming.HeldForReading.after_byReading",
@@ -54668,7 +54683,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 11,
+    "law": 12,
     "declarations": [
      "Becoming.HeldForReading.across_le_iff",
      "Becoming.HeldForReading.across_lt_iff",
@@ -54680,7 +54695,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 12,
+    "law": 13,
     "declarations": [
      "Becoming.HeldForReading.forgone_within_excess_iff",
      "Becoming.HeldForReading.forgone_below_excess_iff",
@@ -54691,7 +54706,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 13,
+    "law": 14,
     "declarations": [
      "Becoming.HeldForReading.total_single",
      "Becoming.HeldForReading.total_by_cells",
@@ -54706,7 +54721,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 14,
+    "law": 15,
     "declarations": [
      "Becoming.HeldForReading.leastThrough",
      "Becoming.HeldForReading.cond_least_le",
@@ -54721,7 +54736,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 15,
+    "law": 16,
     "declarations": [
      "Becoming.HeldForReading.Pick",
      "Becoming.HeldForReading.pairValue",
@@ -54737,7 +54752,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 16,
+    "law": 17,
     "declarations": [
      "Becoming.HeldForReading.reach_fixes",
      "Becoming.HeldForReading.pair_gains_iff",
@@ -54749,7 +54764,7 @@
     "dependence": "grammar"
    },
    {
-    "law": 17,
+    "law": 18,
     "declarations": [
      "Becoming.HeldForReading.SignLoop.Sign",
      "Becoming.HeldForReading.SignLoop.Act",
@@ -54764,7 +54779,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 18,
+    "law": 19,
     "declarations": [
      "Becoming.HeldForReading.SignLoop.rests_unread",
      "Becoming.HeldForReading.SignLoop.never_senses_stop",
@@ -54777,7 +54792,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 19,
+    "law": 20,
     "declarations": [
      "Becoming.HeldForReading.SignLoop.both_stopped",
      "Becoming.HeldForReading.SignLoop.both_released",
@@ -54791,7 +54806,7 @@
     "dependence": "no master law"
    },
    {
-    "law": 20,
+    "law": 21,
     "declarations": [
      "Becoming.HeldForReading.SignLoop.model",
      "Becoming.HeldForReading.SignLoop.gainOf",
@@ -56556,6 +56571,120 @@
      "Becoming.ReadStages.Example.freshDraw_above",
      "Becoming.ReadStages.Example.freshDraw_boundary",
      "Becoming.ReadStages.Example.no_total"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   }
+  ],
+  "when-holding-for-a-reading-stands-above-a-route": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.RevisionPlans.KeepStop",
+     "Becoming.RevisionPlans.gainOf",
+     "Becoming.RevisionPlans.order",
+     "Becoming.RevisionPlans.Splits",
+     "Becoming.RevisionPlans.goOn",
+     "Becoming.RevisionPlans.off",
+     "Becoming.RevisionPlans.held",
+     "Becoming.RevisionPlans.reading",
+     "Becoming.RevisionPlans.splits_goOn",
+     "Becoming.RevisionPlans.splits_off",
+     "Becoming.RevisionPlans.cond_turn_split",
+     "Becoming.RevisionPlans.splits_held",
+     "Becoming.RevisionPlans.held_plan_term"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.RevisionPlans.excess",
+     "Becoming.RevisionPlans.excess_zero_iff",
+     "Becoming.RevisionPlans.eq_zero_of_add_eq_zero_left",
+     "Becoming.RevisionPlans.eq_zero_of_add_eq_zero_right",
+     "Becoming.RevisionPlans.total_eq_zero_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.RevisionPlans.reading_term",
+     "Becoming.RevisionPlans.gainOf_reading",
+     "Becoming.RevisionPlans.excess_reading",
+     "Becoming.RevisionPlans.balance"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.RevisionPlans.above_iff",
+     "Becoming.RevisionPlans.not_above_iff",
+     "Becoming.RevisionPlans.le_iff_of_balance",
+     "Becoming.RevisionPlans.reading_not_below_iff",
+     "Becoming.RevisionPlans.reading_above_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.RevisionPlans.move_term",
+     "Becoming.RevisionPlans.gainOf_move",
+     "Becoming.RevisionPlans.move_le_of",
+     "Becoming.RevisionPlans.move_ge_of"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.RevisionPlans.gainOf_reading_eq_iff"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.RevisionPlans.ofRoutes",
+     "Becoming.RevisionPlans.gainOf_ofRoutes",
+     "Becoming.RevisionPlans.loss_ofRoutes",
+     "Becoming.RevisionPlans.above_iff_routes",
+     "Becoming.RevisionPlans.splits_ofRoutes",
+     "Becoming.RevisionPlans.excess_ofRoutes",
+     "Becoming.RevisionPlans.routes_above_iff",
+     "Becoming.RevisionPlans.ofRoutes_goOn_excess"
+    ],
+    "master_laws": [],
+    "grammar": false,
+    "dependence": "no master law"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.RevisionPlans.Example.listed",
+     "Becoming.RevisionPlans.Example.weight",
+     "Becoming.RevisionPlans.Example.gain",
+     "Becoming.RevisionPlans.Example.loss",
+     "Becoming.RevisionPlans.Example.evade",
+     "Becoming.RevisionPlans.Example.hold_three_not_below",
+     "Becoming.RevisionPlans.Example.hold_four_below",
+     "Becoming.RevisionPlans.Example.no_excess_reading_gain_eq_goOn"
     ],
     "master_laws": [],
     "grammar": false,

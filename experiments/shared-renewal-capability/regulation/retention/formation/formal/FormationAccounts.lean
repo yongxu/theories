@@ -76,7 +76,7 @@ theorem step_account_exact (boundary : Boundary) (h : Step material s a t) :
   | common => exact (step_common_ledger h).trans (Nat.add_zero _).symm
 
 theorem identified_account_laws (boundary : Boundary) :
-    AccountLaw (rootProcess material) (reserve boundary) (demand boundary) (credit boundary) := by
+    SustainLaw (rootProcess material) (reserve boundary) (demand boundary) (credit boundary) := by
   cases boundary with
   | closed => exact Support.closed_account material
   | usable => exact Support.usable_account material
@@ -146,8 +146,8 @@ theorem root_append_account (boundary : Boundary)
     SupportTrace (rootProcess material) (demand boundary) (credit boundary) s (as ++ bs) t
       (tally (demandWeight boundary) as + tally (demandWeight boundary) bs)
       (tally (creditWeight boundary) as + tally (creditWeight boundary) bs)
-      (tally (fun a => credited (creditWeight boundary a)) as +
-        tally (fun a => credited (creditWeight boundary a)) bs) :=
+      (tally (fun a => arrivalEvent (creditWeight boundary a)) as +
+        tally (fun a => arrivalEvent (creditWeight boundary a)) bs) :=
   support_trace_append
     (Support.root_trace_account (demandWeight boundary) (creditWeight boundary) left)
     (Support.root_trace_account (demandWeight boundary) (creditWeight boundary) right)
@@ -157,7 +157,7 @@ theorem root_shared_boundary_budget
     (right : Generative.Trace (rootProcess material) m bs t) :
     tally expenditure as + tally expenditure bs + usable t ≤
       usable s + (tally captureAmount as + tally captureAmount bs) :=
-  support_trace_balance (reserve .usable) (identified_account_laws .usable)
+  support_trace_bound (reserve .usable) (identified_account_laws .usable)
     (root_append_account .usable left right)
 
 /-- Site damage is a real enabled state change with zero declared fuel demand. -/

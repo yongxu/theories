@@ -1,5 +1,6 @@
 import Becoming.ShownOrder
 import Becoming.ReadingLoop
+import Becoming.RevisionPlans
 
 /-!
 # An act held for a reading
@@ -135,7 +136,17 @@ Equation 3, read with `Pr(Ua < 0)` where `Pr(Ua ≤ 0)` is printed); `after_add_
 excess: `T` times the two terms of the paper's Equation 1, which holds for any policy of the human,
 here for a rule that is a function of the candidate, a rule treating alike-valued candidates
 differently being, on the utility alone, the paper's policy releasing at each value with the share
-of weight it releases there; their signs are `rule_not_below_go_iff` and `rule_not_below_off_iff`);
+of weight it releases there; their signs are `rule_not_below_go_iff` and `rule_not_below_off_iff`;
+the two balances are `RevisionPlans.balance` at holding for the rule with going on and with switching
+off, the three being plans by the near-definitional `gainOf_goOn`, `gainOf_off`, `gainOf_held`, `excess_goOn`,
+`excess_off` and `excess_held`, with `moves_not_below_iff`, `held_above_moves_iff` and
+`held_above_held_iff` comparing as their values do; from the same module, which this one imports,
+`shortfall_byReading` is `RevisionPlans.excess_reading`, `after_byReading` is
+`RevisionPlans.gainOf_reading`, `held_eq_go_iff` and `held_eq_off_iff` are
+`RevisionPlans.gainOf_reading_eq_iff`, `threshold_go_iff` and `threshold_off_iff` are the order of
+plans, `RevisionPlans.not_above_iff` and `RevisionPlans.above_iff`, `forgone_within_excess_iff` and
+`forgone_below_excess_iff` are `RevisionPlans.reading_not_below_iff` and
+`RevisionPlans.reading_above_iff`, and `across_le_iff` is `RevisionPlans.le_iff_of_balance`);
 `shortfall_through`, `least_through` and `least_zero_iff` (the least shortfall through a partition,
 the total over its cells of the smaller excess within each, with `finer_least_le` the partition case
 of Blackwell's (1953) comparison of experiments, from finer to worth at least as much, for this
@@ -653,100 +664,156 @@ theorem held_term (m : Model C) (gain loss : C → Nat) (r : C → Bool) (c : C)
   unfold byRule
   cases r c <;> rfl
 
-theorem term_go (w g l : Nat) : ∀ b : Bool,
-    cond b (w * l) (w * g) + cond b (w * (g - l)) (w * (l - g)) = w * g + w * (l - g)
-  | true => by
-    show w * l + w * (g - l) = w * g + w * (l - g)
-    rw [← Nat.left_distrib, ← Nat.left_distrib, add_sub_turn g l]
-  | false => rfl
+/-! ### Going on, switching off and holding for a rule as plans (`RevisionPlans`) -/
 
-theorem term_off (w g l : Nat) : ∀ b : Bool,
-    cond b (w * l) (w * g) + cond b (w * (g - l)) (w * (l - g)) = w * l + w * (g - l)
-  | true => rfl
-  | false => by
-    show w * g + w * (l - g) = w * l + w * (g - l)
-    rw [← Nat.left_distrib, ← Nat.left_distrib, add_sub_turn l g]
+/-- **Going on is a plan**: its gain is what going on is valued at. -/
+theorem gainOf_goOn (m : Model C) (gain loss : C → Nat) (a : Nat) :
+    RevisionPlans.gainOf m.listed gain loss (RevisionPlans.goOn m.weight a) =
+      m.committed (shifted gain loss) .go :=
+  total_congr (fun c => show m.weight c * gain c + 0 * loss c = m.weight c * gain c from
+    (congrArg (m.weight c * gain c + ·) (Nat.zero_mul _)).trans (Nat.add_zero _)) m.listed
 
-/-- **Holding for a rule, with its shortfall, is going on with the excess of switching off.** -/
+/-- **Switching off is a plan**: its gain is what switching off is valued at. -/
+theorem gainOf_off (m : Model C) (gain loss : C → Nat) (a : Nat) :
+    RevisionPlans.gainOf m.listed gain loss (RevisionPlans.off m.weight a) =
+      m.committed (shifted gain loss) .off :=
+  total_congr (fun c => show 0 * gain c + m.weight c * loss c = m.weight c * loss c from
+    (congrArg (· + m.weight c * loss c) (Nat.zero_mul _)).trans (Nat.zero_add _)) m.listed
+
+/-- **Holding for a rule is a plan**: its gain is what holding for the rule is valued at. -/
+theorem gainOf_held (m : Model C) (gain loss : C → Nat) (r : C → Bool) (a : Nat) :
+    RevisionPlans.gainOf m.listed gain loss (RevisionPlans.held m.weight r a) =
+      m.after (shifted gain loss) (byRule r) :=
+  total_congr (fun c => (RevisionPlans.held_plan_term (m.weight c) (gain c) (loss c) (r c)).trans
+    (held_term m gain loss r c).symm) m.listed
+
+/-- **Going on's excess, as a plan, is the weighted excess of switching off.** -/
+theorem excess_goOn (m : Model C) (gain loss : C → Nat) (a : Nat) :
+    RevisionPlans.excess m.listed gain loss (RevisionPlans.goOn m.weight a) = offExcess m gain loss :=
+  total_congr (fun c => show m.weight c * (loss c - gain c) + 0 * (gain c - loss c) = _ from
+    (congrArg (m.weight c * (loss c - gain c) + ·) (Nat.zero_mul _)).trans (Nat.add_zero _)) m.listed
+
+/-- **Switching off's excess, as a plan, is the weighted excess of going on.** -/
+theorem excess_off (m : Model C) (gain loss : C → Nat) (a : Nat) :
+    RevisionPlans.excess m.listed gain loss (RevisionPlans.off m.weight a) = goExcess m gain loss :=
+  total_congr (fun c => show 0 * (loss c - gain c) + m.weight c * (gain c - loss c) = _ from
+    (congrArg (· + m.weight c * (gain c - loss c)) (Nat.zero_mul _)).trans (Nat.zero_add _)) m.listed
+
+/-- **Holding for a rule's excess, as a plan, is the rule's shortfall.** -/
+theorem excess_held (m : Model C) (gain loss : C → Nat) (r : C → Bool) (a : Nat) :
+    RevisionPlans.excess m.listed gain loss (RevisionPlans.held m.weight r a) = shortfall m gain loss r :=
+  total_congr (fun c =>
+    RevisionPlans.held_plan_term (m.weight c) (loss c - gain c) (gain c - loss c) (r c)) m.listed
+
+/-- **At no loss of their own, the order of plans compares holding for a rule with going on and with
+switching off as their values do**: holding, forgoing an amount, stands at least as high as the move
+exactly where the move's value with the amount is at most holding's. -/
+theorem moves_not_below_iff (m : Model C) (gain loss : C → Nat) (r : C → Bool) (a : Nat) :
+    (¬ (RevisionPlans.order m.listed gain loss).Above (RevisionPlans.goOn m.weight 0)
+        (RevisionPlans.held m.weight r a) ↔
+      m.committed (shifted gain loss) .go + a ≤ m.after (shifted gain loss) (byRule r)) ∧
+    (¬ (RevisionPlans.order m.listed gain loss).Above (RevisionPlans.off m.weight 0)
+        (RevisionPlans.held m.weight r a) ↔
+      m.committed (shifted gain loss) .off + a ≤ m.after (shifted gain loss) (byRule r)) :=
+  ⟨by
+    show ¬ (RevisionPlans.gainOf m.listed gain loss (RevisionPlans.held m.weight r a) + 0 <
+      RevisionPlans.gainOf m.listed gain loss (RevisionPlans.goOn m.weight 0) + a) ↔ _
+    rw [gainOf_held, gainOf_goOn, Nat.add_zero]
+    exact ⟨Nat.ge_of_not_lt, fun le lt => Nat.not_lt_of_le le lt⟩,
+   by
+    show ¬ (RevisionPlans.gainOf m.listed gain loss (RevisionPlans.held m.weight r a) + 0 <
+      RevisionPlans.gainOf m.listed gain loss (RevisionPlans.off m.weight 0) + a) ↔ _
+    rw [gainOf_held, gainOf_off, Nat.add_zero]
+    exact ⟨Nat.ge_of_not_lt, fun le lt => Nat.not_lt_of_le le lt⟩⟩
+
+/-- **Strictly, at no loss of the move's own, the order of plans puts holding for a rule above going
+on and above switching off as their values do**: holding, forgoing an amount, stands above the move
+exactly where the move's value with the amount is below holding's. -/
+theorem held_above_moves_iff (m : Model C) (gain loss : C → Nat) (r : C → Bool) (a : Nat) :
+    ((RevisionPlans.order m.listed gain loss).Above (RevisionPlans.held m.weight r a)
+        (RevisionPlans.goOn m.weight 0) ↔
+      m.committed (shifted gain loss) .go + a < m.after (shifted gain loss) (byRule r)) ∧
+    ((RevisionPlans.order m.listed gain loss).Above (RevisionPlans.held m.weight r a)
+        (RevisionPlans.off m.weight 0) ↔
+      m.committed (shifted gain loss) .off + a < m.after (shifted gain loss) (byRule r)) :=
+  ⟨by
+    show RevisionPlans.gainOf m.listed gain loss (RevisionPlans.goOn m.weight 0) + a <
+      RevisionPlans.gainOf m.listed gain loss (RevisionPlans.held m.weight r a) + 0 ↔ _
+    rw [gainOf_held, gainOf_goOn, Nat.add_zero],
+   by
+    show RevisionPlans.gainOf m.listed gain loss (RevisionPlans.off m.weight 0) + a <
+      RevisionPlans.gainOf m.listed gain loss (RevisionPlans.held m.weight r a) + 0 ↔ _
+    rw [gainOf_held, gainOf_off, Nat.add_zero]⟩
+
+/-- **Between holding for two rules, the order of plans compares as their values do**: holding for
+one rule, forgoing an amount, stands above holding for another, forgoing its own, exactly where the
+other's value with the first amount is below the first's value with the other amount. -/
+theorem held_above_held_iff (m : Model C) (gain loss : C → Nat) (r r' : C → Bool) (k k' : Nat) :
+    (RevisionPlans.order m.listed gain loss).Above (RevisionPlans.held m.weight r k)
+        (RevisionPlans.held m.weight r' k') ↔
+      m.after (shifted gain loss) (byRule r') + k < m.after (shifted gain loss) (byRule r) + k' := by
+  show RevisionPlans.gainOf m.listed gain loss (RevisionPlans.held m.weight r' k') + k <
+    RevisionPlans.gainOf m.listed gain loss (RevisionPlans.held m.weight r k) + k' ↔ _
+  rw [gainOf_held, gainOf_held]
+
+/-- **Holding for a rule, with its shortfall, is going on with the excess of switching off**: the
+balance of plans (`RevisionPlans.balance`) at holding for the rule and going on. -/
 theorem after_add_shortfall_go (m : Model C) (gain loss : C → Nat) (r : C → Bool) :
     m.after (shifted gain loss) (byRule r) + shortfall m gain loss r =
-      m.committed (shifted gain loss) .go + offExcess m gain loss :=
-  calc m.after (shifted gain loss) (byRule r) + shortfall m gain loss r
-      = total m.listed (fun c => cond (r c) (m.weight c * loss c) (m.weight c * gain c) +
-          cond (r c) (m.weight c * (gain c - loss c)) (m.weight c * (loss c - gain c))) := by
-        rw [show m.after (shifted gain loss) (byRule r) = total m.listed
-            (fun c => cond (r c) (m.weight c * loss c) (m.weight c * gain c)) from
-          total_congr (held_term m gain loss r) m.listed]
-        exact (total_add _ _ m.listed).symm
-    _ = total m.listed (fun c => m.weight c * gain c + m.weight c * (loss c - gain c)) :=
-        total_congr (fun c => term_go (m.weight c) (gain c) (loss c) (r c)) m.listed
-    _ = m.committed (shifted gain loss) .go + offExcess m gain loss := total_add _ _ m.listed
+      m.committed (shifted gain loss) .go + offExcess m gain loss := by
+  rw [← gainOf_held m gain loss r 0, ← excess_held m gain loss r 0, ← gainOf_goOn m gain loss 0,
+    ← excess_goOn m gain loss 0]
+  exact RevisionPlans.balance m.listed m.weight gain loss
+    (RevisionPlans.splits_held m.listed m.weight r 0) (RevisionPlans.splits_goOn m.listed m.weight 0)
 
-/-- **Holding for a rule, with its shortfall, is switching off with the excess of going on.** -/
+/-- **Holding for a rule, with its shortfall, is switching off with the excess of going on**: the
+balance of plans at holding for the rule and switching off. -/
 theorem after_add_shortfall_off (m : Model C) (gain loss : C → Nat) (r : C → Bool) :
     m.after (shifted gain loss) (byRule r) + shortfall m gain loss r =
-      m.committed (shifted gain loss) .off + goExcess m gain loss :=
-  calc m.after (shifted gain loss) (byRule r) + shortfall m gain loss r
-      = total m.listed (fun c => cond (r c) (m.weight c * loss c) (m.weight c * gain c) +
-          cond (r c) (m.weight c * (gain c - loss c)) (m.weight c * (loss c - gain c))) := by
-        rw [show m.after (shifted gain loss) (byRule r) = total m.listed
-            (fun c => cond (r c) (m.weight c * loss c) (m.weight c * gain c)) from
-          total_congr (held_term m gain loss r) m.listed]
-        exact (total_add _ _ m.listed).symm
-    _ = total m.listed (fun c => m.weight c * loss c + m.weight c * (gain c - loss c)) :=
-        total_congr (fun c => term_off (m.weight c) (gain c) (loss c) (r c)) m.listed
-    _ = m.committed (shifted gain loss) .off + goExcess m gain loss := total_add _ _ m.listed
+      m.committed (shifted gain loss) .off + goExcess m gain loss := by
+  rw [← gainOf_held m gain loss r 0, ← excess_held m gain loss r 0, ← gainOf_off m gain loss 0,
+    ← excess_off m gain loss 0]
+  exact RevisionPlans.balance m.listed m.weight gain loss
+    (RevisionPlans.splits_held m.listed m.weight r 0) (RevisionPlans.splits_off m.listed m.weight 0)
 
 /-- **The reading that tells the candidate falls short nowhere.** -/
 theorem shortfall_byReading (m : Model C) (gain loss : C → Nat) :
     shortfall m gain loss (fun c => decide (gain c < loss c)) = 0 :=
-  total_eq_zero fun c _ => by
-    show cond (decide (gain c < loss c)) (m.weight c * (gain c - loss c))
-      (m.weight c * (loss c - gain c)) = 0
-    cases h : decide (gain c < loss c) with
-    | true =>
-      show m.weight c * (gain c - loss c) = 0
-      rw [sub_eq_zero_of_le (Nat.le_of_lt (of_decide_eq_true h))]
-      rfl
-    | false =>
-      show m.weight c * (loss c - gain c) = 0
-      rw [sub_eq_zero_of_le (Nat.ge_of_not_lt (of_decide_eq_false h))]
-      rfl
+  (excess_held m gain loss _ 0).symm.trans (RevisionPlans.excess_reading m.listed m.weight gain loss 0)
 
 /-- **Holding for the reading that tells the candidate is going on with the excess of switching off,
-and switching off with the excess of going on.** -/
+and switching off with the excess of going on**: `RevisionPlans.gainOf_reading` at going on and at
+switching off. -/
 theorem after_byReading (m : Model C) (gain loss : C → Nat) :
     m.after (shifted gain loss) (byReading gain loss) =
         m.committed (shifted gain loss) .go + offExcess m gain loss ∧
       m.after (shifted gain loss) (byReading gain loss) =
         m.committed (shifted gain loss) .off + goExcess m gain loss :=
-  have none : m.after (shifted gain loss) (byReading gain loss) =
-      m.after (shifted gain loss) (byReading gain loss) +
-        shortfall m gain loss (fun c => decide (gain c < loss c)) :=
-    (congrArg (m.after (shifted gain loss) (byReading gain loss) + ·)
-      (shortfall_byReading m gain loss)).symm
-  ⟨none.trans (after_add_shortfall_go m gain loss _),
-   none.trans (after_add_shortfall_off m gain loss _)⟩
+  have held := (gainOf_held m gain loss (RevisionPlans.reading gain loss) 0).symm
+  ⟨held.trans ((RevisionPlans.gainOf_reading m.listed m.weight gain loss
+      (RevisionPlans.splits_goOn m.listed m.weight 0) 0).trans (by rw [gainOf_goOn, excess_goOn])),
+   held.trans ((RevisionPlans.gainOf_reading m.listed m.weight gain loss
+      (RevisionPlans.splits_off m.listed m.weight 0) 0).trans (by rw [gainOf_off, excess_off]))⟩
 
 /-- **Holding for the reading that tells the candidate stands only as high as going on exactly where
 the weighted excess of switching off is nothing.** -/
 theorem held_eq_go_iff (m : Model C) (gain loss : C → Nat) :
     m.after (shifted gain loss) (byReading gain loss) = m.committed (shifted gain loss) .go ↔
-      offExcess m gain loss = 0 :=
-  ⟨fun same => Naturals.add_left_cancel ((after_byReading m gain loss).1.symm.trans
-      (same.trans (Nat.add_zero _).symm)),
-   fun none => (after_byReading m gain loss).1.trans
-      ((congrArg (m.committed (shifted gain loss) .go + ·) none).trans (Nat.add_zero _))⟩
+      offExcess m gain loss = 0 := by
+  have iff := RevisionPlans.gainOf_reading_eq_iff m.listed m.weight gain loss
+    (RevisionPlans.splits_goOn m.listed m.weight 0) 0
+  rw [gainOf_held, gainOf_goOn, excess_goOn] at iff
+  exact iff
 
 /-- **Holding for the reading that tells the candidate stands only as high as switching off exactly
 where the weighted excess of going on is nothing.** -/
 theorem held_eq_off_iff (m : Model C) (gain loss : C → Nat) :
     m.after (shifted gain loss) (byReading gain loss) = m.committed (shifted gain loss) .off ↔
-      goExcess m gain loss = 0 :=
-  ⟨fun same => Naturals.add_left_cancel ((after_byReading m gain loss).2.symm.trans
-      (same.trans (Nat.add_zero _).symm)),
-   fun none => (after_byReading m gain loss).2.trans
-      ((congrArg (m.committed (shifted gain loss) .off + ·) none).trans (Nat.add_zero _))⟩
+      goExcess m gain loss = 0 := by
+  have iff := RevisionPlans.gainOf_reading_eq_iff m.listed m.weight gain loss
+    (RevisionPlans.splits_off m.listed m.weight 0) 0
+  rw [gainOf_held, gainOf_off, excess_off] at iff
+  exact iff
 
 /-- **A rule's shortfall is what holding for it loses against the reading that tells the
 candidate.** -/
@@ -756,19 +823,13 @@ theorem after_add_shortfall (m : Model C) (gain loss : C → Nat) (r : C → Boo
   (after_add_shortfall_go m gain loss r).trans (after_byReading m gain loss).1.symm
 
 /-- Moving an addend across: with `H + S = G + N`, `G + k` is at most `H` exactly where `S + k` is
-at most `N` (`Optimum.le_iff_of_add_eq` with `k` added to both sums, outside this module's imports).
--/
-theorem across_le_iff {G H S N k : Nat} (eq : H + S = G + N) : G + k ≤ H ↔ S + k ≤ N :=
-  have turn : G + k + S = G + (S + k) := by rw [Nat.add_assoc, Nat.add_comm k S]
-  ⟨fun le => le_of_add_le_add_left_core (calc G + (S + k) = G + k + S := turn.symm
-      _ ≤ H + S := Nat.add_le_add_right le S
-      _ = G + N := eq),
-   fun le => le_of_add_le_add_right S (calc G + k + S = G + (S + k) := turn
-      _ ≤ G + N := Nat.add_le_add_left le G
-      _ = H + S := eq.symm)⟩
+at most `N` (`RevisionPlans.le_iff_of_balance` with nothing added on one side). -/
+theorem across_le_iff {G H S N k : Nat} (eq : H + S = G + N) : G + k ≤ H ↔ S + k ≤ N := by
+  have iff := RevisionPlans.le_iff_of_balance (L := k) (M := 0) eq
+  rw [Nat.add_zero, Nat.zero_add, Nat.add_comm k S] at iff
+  exact iff
 
-/-- Moving an addend across, strictly (`SelectionTerm.lt_iff_of_balance` with `k` added to both
-sums, outside this module's imports). -/
+/-- Moving an addend across, strictly (`across_le_iff` at `k + 1`). -/
 theorem across_lt_iff {G H S N k : Nat} (eq : H + S = G + N) : G + k < H ↔ S + k < N :=
   across_le_iff (k := k + 1) eq
 
@@ -782,8 +843,18 @@ theorem threshold_go_iff (m : Model C) (gain loss : C → Nat) (r : C → Bool) 
       shortfall m gain loss r + forgone ≤ offExcess m gain loss) ∧
     (m.committed (shifted gain loss) .go + forgone < m.after (shifted gain loss) (byRule r) ↔
       shortfall m gain loss r + forgone < offExcess m gain loss) :=
-  ⟨across_le_iff (after_add_shortfall_go m gain loss r),
-   across_lt_iff (after_add_shortfall_go m gain loss r)⟩
+  have sp := RevisionPlans.splits_held m.listed m.weight r forgone
+  have sq := RevisionPlans.splits_goOn m.listed m.weight 0
+  ⟨(moves_not_below_iff m gain loss r forgone).1.symm.trans
+      ((RevisionPlans.not_above_iff m.listed m.weight gain loss sp sq).trans (by
+        show forgone + RevisionPlans.excess m.listed gain loss (RevisionPlans.held m.weight r forgone) ≤
+          0 + RevisionPlans.excess m.listed gain loss (RevisionPlans.goOn m.weight 0) ↔ _
+        rw [excess_held, excess_goOn, Nat.zero_add, Nat.add_comm forgone])),
+   (held_above_moves_iff m gain loss r forgone).1.symm.trans
+      ((RevisionPlans.above_iff m.listed m.weight gain loss sq sp).trans (by
+        show forgone + RevisionPlans.excess m.listed gain loss (RevisionPlans.held m.weight r forgone) <
+          0 + RevisionPlans.excess m.listed gain loss (RevisionPlans.goOn m.weight 0) ↔ _
+        rw [excess_held, excess_goOn, Nat.zero_add, Nat.add_comm forgone]))⟩
 
 /-- **Holding for any rule, forgoing an amount, stands at least as high as switching off exactly where
 the rule's shortfall and the amount together are at most the weighted excess of going on over
@@ -794,8 +865,18 @@ theorem threshold_off_iff (m : Model C) (gain loss : C → Nat) (r : C → Bool)
       shortfall m gain loss r + forgone ≤ goExcess m gain loss) ∧
     (m.committed (shifted gain loss) .off + forgone < m.after (shifted gain loss) (byRule r) ↔
       shortfall m gain loss r + forgone < goExcess m gain loss) :=
-  ⟨across_le_iff (after_add_shortfall_off m gain loss r),
-   across_lt_iff (after_add_shortfall_off m gain loss r)⟩
+  have sp := RevisionPlans.splits_held m.listed m.weight r forgone
+  have sq := RevisionPlans.splits_off m.listed m.weight 0
+  ⟨(moves_not_below_iff m gain loss r forgone).2.symm.trans
+      ((RevisionPlans.not_above_iff m.listed m.weight gain loss sp sq).trans (by
+        show forgone + RevisionPlans.excess m.listed gain loss (RevisionPlans.held m.weight r forgone) ≤
+          0 + RevisionPlans.excess m.listed gain loss (RevisionPlans.off m.weight 0) ↔ _
+        rw [excess_held, excess_off, Nat.zero_add, Nat.add_comm forgone])),
+   (held_above_moves_iff m gain loss r forgone).2.symm.trans
+      ((RevisionPlans.above_iff m.listed m.weight gain loss sq sp).trans (by
+        show forgone + RevisionPlans.excess m.listed gain loss (RevisionPlans.held m.weight r forgone) <
+          0 + RevisionPlans.excess m.listed gain loss (RevisionPlans.off m.weight 0) ↔ _
+        rw [excess_held, excess_off, Nat.zero_add, Nat.add_comm forgone]))⟩
 
 /-- **Holding for the reading that tells the candidate, forgoing an amount, stands at least as high
 as going on exactly where the amount is at most the weighted excess of switching off, and as
@@ -805,11 +886,16 @@ theorem forgone_within_excess_iff (m : Model C) (gain loss : C → Nat) (forgone
       forgone ≤ offExcess m gain loss) ∧
     (m.committed (shifted gain loss) .off + forgone ≤ m.after (shifted gain loss) (byReading gain loss) ↔
       forgone ≤ goExcess m gain loss) :=
-  have zero := shortfall_byReading m gain loss
-  ⟨(threshold_go_iff m gain loss (fun c => decide (gain c < loss c)) forgone).1.trans
-      (by rw [zero, Nat.zero_add]),
-   (threshold_off_iff m gain loss (fun c => decide (gain c < loss c)) forgone).1.trans
-      (by rw [zero, Nat.zero_add])⟩
+  ⟨(moves_not_below_iff m gain loss (RevisionPlans.reading gain loss) forgone).1.symm.trans
+      ((RevisionPlans.reading_not_below_iff m.listed m.weight gain loss
+        (RevisionPlans.splits_goOn m.listed m.weight 0) forgone).trans (by
+          show forgone ≤ 0 + RevisionPlans.excess m.listed gain loss (RevisionPlans.goOn m.weight 0) ↔ _
+          rw [excess_goOn, Nat.zero_add])),
+   (moves_not_below_iff m gain loss (RevisionPlans.reading gain loss) forgone).2.symm.trans
+      ((RevisionPlans.reading_not_below_iff m.listed m.weight gain loss
+        (RevisionPlans.splits_off m.listed m.weight 0) forgone).trans (by
+          show forgone ≤ 0 + RevisionPlans.excess m.listed gain loss (RevisionPlans.off m.weight 0) ↔ _
+          rw [excess_off, Nat.zero_add]))⟩
 
 /-- **Strictly: holding for the reading that tells the candidate, forgoing an amount, stands above
 going on exactly where the amount is below the weighted excess of switching off, and above switching
@@ -819,11 +905,16 @@ theorem forgone_below_excess_iff (m : Model C) (gain loss : C → Nat) (forgone 
       forgone < offExcess m gain loss) ∧
     (m.committed (shifted gain loss) .off + forgone < m.after (shifted gain loss) (byReading gain loss) ↔
       forgone < goExcess m gain loss) :=
-  have zero := shortfall_byReading m gain loss
-  ⟨(threshold_go_iff m gain loss (fun c => decide (gain c < loss c)) forgone).2.trans
-      (by rw [zero, Nat.zero_add]),
-   (threshold_off_iff m gain loss (fun c => decide (gain c < loss c)) forgone).2.trans
-      (by rw [zero, Nat.zero_add])⟩
+  ⟨(held_above_moves_iff m gain loss (RevisionPlans.reading gain loss) forgone).1.symm.trans
+      ((RevisionPlans.reading_above_iff m.listed m.weight gain loss
+        (RevisionPlans.splits_goOn m.listed m.weight 0) forgone).trans (by
+          show forgone < 0 + RevisionPlans.excess m.listed gain loss (RevisionPlans.goOn m.weight 0) ↔ _
+          rw [excess_goOn, Nat.zero_add])),
+   (held_above_moves_iff m gain loss (RevisionPlans.reading gain loss) forgone).2.symm.trans
+      ((RevisionPlans.reading_above_iff m.listed m.weight gain loss
+        (RevisionPlans.splits_off m.listed m.weight 0) forgone).trans (by
+          show forgone < 0 + RevisionPlans.excess m.listed gain loss (RevisionPlans.off m.weight 0) ↔ _
+          rw [excess_off, Nat.zero_add]))⟩
 
 /-- **Each excess is positive exactly where the model gives positive weight to its strict sign**: the
 weighted excess of switching off is positive exactly where some candidate of positive weight has

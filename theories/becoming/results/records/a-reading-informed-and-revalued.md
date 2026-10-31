@@ -141,6 +141,7 @@ In counts: informed_le is, for this decision, the deterministic-refinement, fixe
 - **formal-reuse**: [the-markov-blanket-as-a-coupling-structure](the-markov-blanket-as-a-coupling-structure.md). Blanket.Blanketed, its course and Blanketed.agent_through_sensory: the carrier joint and the instance through_sensed.
 - **formal-reuse**: [generalization-through-lumping](generalization-through-lumping.md). Learning.Lumped: the route property not lumped through the record of the answers and the final state, and lumped with the start added (TwoWorlds.not_lumped, TwoWorlds.lumped_with_start).
 - related, not a proved adapter: [acts-alike-from-a-model-or-from-an-order](acts-alike-from-a-model-or-from-an-order.md). Informing and revaluing within one law: a demonstration filtering the reading formation's listing and an input presented revising its valuation, beside courses alike from an unresolved model and a reversed ranking, informing there represented by a changed start.
+- related, not a proved adapter: [when-holding-for-a-reading-stands-above-a-route](when-holding-for-a-reading-stands-above-a-route.md). Its comparison of two rules held for, each forgoing an amount (ListingValuation.forgone_lt_iff), is the order of plans at two rules held for (RevisionPlans.above_iff, HeldForReading.held_above_held_iff).
 
 <a id="sources--来源"></a>
 ### Sources
@@ -157,7 +158,7 @@ In counts: informed_le is, for this decision, the deterministic-refinement, fixe
 | proof | [Population.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean) | — |
 | proof | [Dissipation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean) | — |
 | proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | — |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T013649.265381Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T085229.010243Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [PLAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md) | — |
 | integration | [REVIEW-RFM3.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3.md) | — |
@@ -172,6 +173,7 @@ Aliases: `a reading informed and revalued`, `受告与改值之读`, `informing 
 ### History
 
 - 31 October 2026: added (RF round 2), a reading informed and revalued: the answer of a formation reading by its own model and valuation through a map; any rule's shortfall split into the least shortfall and a residual, with exact criteria; informing and the criterion over every refinement, with its sufficient conditions and counterexamples; amounts forgone, read as withholding against informing; revaluing; and one blanketed law carrying the reading formation's listing and valuation, with witnesses of four cases, two orders and two routes; the design reviewed by a cross-model reader before the Lean (its first draft kept beside the review), the Lean by the same reader and through three lenses, the texts cold-read, what was taken listed in the review evidence; study section 473.
+- 31 October 2026: forgone_lt_iff, and with it forgone_through_lt_iff, revalued_forgone_lt_iff and presented_forgone_lt_iff, proved from the order of plans (rule 9, RR2's landing); no statement or name changed.
 
 </details>
 

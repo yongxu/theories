@@ -1,0 +1,13 @@
+{
+ "base": "RF-M.3 landed, 8dd9ce3d9",
+ "edits": [
+  {
+   "old": "forgoing `k'`, exactly where the first's shortfall and `k` together fall below the second's and `k'`\n(the amounts counted as in `threshold_go_iff`, in the units of the weighted totals). -/\ntheorem forgone_lt_iff (m : Model C) (gain loss : C → Nat) (r r' : C → Bool) (k k' : Nat) :",
+   "new": "forgoing `k'`, exactly where the first's shortfall and `k` together fall below the second's and `k'`\n(the amounts counted as in `threshold_go_iff`, in the units of the weighted totals): the order of\nplans at two rules held for (`RevisionPlans.above_iff`, `HeldForReading.held_above_held_iff`). -/\ntheorem forgone_lt_iff (m : Model C) (gain loss : C → Nat) (r r' : C → Bool) (k k' : Nat) :"
+  },
+  {
+   "old": "      shortfall m gain loss r + k < shortfall m gain loss r' + k' :=\n  across_lt_iff (G := m.after (shifted gain loss) (byRule r'))\n    (H := m.after (shifted gain loss) (byRule r) + k') (S := shortfall m gain loss r)\n    (N := shortfall m gain loss r' + k') (k := k)\n    ((Nat.add_right_comm _ _ _).trans ((congrArg (· + k')\n      ((after_add_shortfall m gain loss r).trans (after_add_shortfall m gain loss r').symm)).trans\n        (Nat.add_assoc _ _ _)))\n",
+   "new": "      shortfall m gain loss r + k < shortfall m gain loss r' + k' :=\n  (held_above_held_iff m gain loss r r' k k').symm.trans\n    ((RevisionPlans.above_iff m.listed m.weight gain loss (RevisionPlans.splits_held m.listed m.weight r' k')\n      (RevisionPlans.splits_held m.listed m.weight r k)).trans (by\n        show k + RevisionPlans.excess m.listed gain loss (RevisionPlans.held m.weight r k) <\n          k' + RevisionPlans.excess m.listed gain loss (RevisionPlans.held m.weight r' k') ↔ _\n        rw [excess_held, excess_held, Nat.add_comm k, Nat.add_comm k']))\n"
+  }
+ ]
+}

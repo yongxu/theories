@@ -1,0 +1,7 @@
+GenerativeCore: 18 kept, 0 added, 0 dropped, 0 gained an axiom, 0 with fewer axioms
+ResourceContinuation: 21 kept, 3 added, 0 dropped, 0 gained an axiom, 16 with fewer axioms
+FormedSelection: 43 kept, 0 added, 0 dropped, 0 gained an axiom, 7 with fewer axioms
+FormationRoot: 10 kept, 0 added, 0 dropped, 0 gained an axiom, 6 with fewer axioms
+FormationSupport: 25 kept, 0 added, 0 dropped, 0 gained an axiom, 4 with fewer axioms
+FormationAccounts: 15 kept, 0 added, 0 dropped, 0 gained an axiom, 1 with fewer axioms
+every axiom report the same or smaller

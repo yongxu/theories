@@ -5,8 +5,8 @@
 'FormedSelection.Support.local_account' depends on axioms: [propext, Quot.sound]
 'FormedSelection.Support.source_account' depends on axioms: [propext, Quot.sound]
 'FormedSelection.Support.closed_account' depends on axioms: [propext, Quot.sound]
-'FormedSelection.Support.root_trace_account' depends on axioms: [propext]
-'FormedSelection.Support.root_account_bound' depends on axioms: [propext, Quot.sound]
+'FormedSelection.Support.root_trace_account' does not depend on any axioms
+'FormedSelection.Support.root_account_bound' does not depend on any axioms
 'FormedSelection.Support.tally_zero' depends on axioms: [propext]
 'FormedSelection.Support.root_usable_bound' depends on axioms: [propext, Quot.sound]
 'FormedSelection.Support.root_local_bound' depends on axioms: [propext, Quot.sound]
@@ -20,6 +20,6 @@
 'FormedSelection.Support.local_expenditure_requires_capture' depends on axioms: [propext, Quot.sound]
 'FormedSelection.Support.root_prefix_continuation_bound' depends on axioms: [propext, Quot.sound]
 'FormedSelection.Support.paid_witness_account' depends on axioms: [propext]
-'FormedSelection.Support.paid_witness_saturates' depends on axioms: [propext]
-'FormedSelection.Support.paid_witness_handoff' depends on axioms: [propext]
+'FormedSelection.Support.paid_witness_saturates' does not depend on any axioms
+'FormedSelection.Support.paid_witness_handoff' does not depend on any axioms
 'FormedSelection.Support.copied_cannot_pay_more' depends on axioms: [propext, Quot.sound]

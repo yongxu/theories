@@ -1,0 +1,277 @@
+{
+ "base": "d3a5028806de55757dbc0357f53c1fa755e17d4b",
+ "modules": {
+  "GenerativeCore": {
+   "kept": 18,
+   "added": {},
+   "dropped": [],
+   "gained_an_axiom": {},
+   "fewer_axioms": {}
+  },
+  "ResourceContinuation": {
+   "kept": 21,
+   "added": {
+    "Generative.Conditional.le_cancel_left": [],
+    "Generative.Conditional.rest_then_step": [],
+    "Generative.Conditional.step_then_rest": []
+   },
+   "dropped": [],
+   "gained_an_axiom": {},
+   "fewer_axioms": {
+    "Generative.Conditional.amount_le_cap_times_arrival_events": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    },
+    "Generative.Conditional.componentwise_execution_bound": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    },
+    "Generative.Conditional.execution_interval_bound": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    },
+    "Generative.Conditional.execution_interval_frequency_bound": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    },
+    "Generative.Conditional.infinite_unit_execution_arrival_window": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    },
+    "Generative.Conditional.infinite_unit_execution_unbounded_arrival": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    },
+    "Generative.Conditional.interval_total_cap_bound": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    },
+    "Generative.Conditional.interval_total_le_of_pointwise": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    },
+    "Generative.Conditional.interval_total_positive_witness": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    },
+    "Generative.Conditional.interval_total_unit_bound": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    },
+    "Generative.Conditional.support_cycle_arrival_covers_enactment": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    },
+    "Generative.Conditional.support_trace_arrival_cap": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    },
+    "Generative.Conditional.support_trace_bound": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    },
+    "Generative.Conditional.support_trace_length_bound": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    },
+    "Generative.Conditional.support_trace_unit_enactment": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    },
+    "Generative.Conditional.unbounded_enactment_requires_unbounded_arrival": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    }
+   }
+  },
+  "FormedSelection": {
+   "kept": 43,
+   "added": {},
+   "dropped": [],
+   "gained_an_axiom": {},
+   "fewer_axioms": {
+    "FormedSelection.capture_enables_copy": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    },
+    "FormedSelection.copy_increment_le_spent": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    },
+    "FormedSelection.inheritance_accounting": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    },
+    "FormedSelection.paid_formation_to_copy": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    },
+    "FormedSelection.repair_enables_capture": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    },
+    "FormedSelection.repaired_site_can_pass_to_alternative": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    },
+    "FormedSelection.witness_accounting": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    }
+   }
+  },
+  "FormationRoot": {
+   "kept": 10,
+   "added": {},
+   "dropped": [],
+   "gained_an_axiom": {},
+   "fewer_axioms": {
+    "FormedSelection.root_formation_to_copy": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    },
+    "FormedSelection.root_repaired_site_inheritance": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    },
+    "FormedSelection.trace_append_iff": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    },
+    "FormedSelection.trace_from_root": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    },
+    "FormedSelection.trace_iff_root": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    },
+    "FormedSelection.trace_to_root": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    }
+   }
+  },
+  "FormationSupport": {
+   "kept": 25,
+   "added": {},
+   "dropped": [],
+   "gained_an_axiom": {},
+   "fewer_axioms": {
+    "FormedSelection.Support.paid_witness_handoff": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    },
+    "FormedSelection.Support.paid_witness_saturates": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    },
+    "FormedSelection.Support.root_account_bound": {
+     "old": [
+      "Quot.sound",
+      "propext"
+     ],
+     "new": []
+    },
+    "FormedSelection.Support.root_trace_account": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    }
+   }
+  },
+  "FormationAccounts": {
+   "kept": 15,
+   "added": {},
+   "dropped": [],
+   "gained_an_axiom": {},
+   "fewer_axioms": {
+    "FormedSelection.Accounts.zero_fuel_cost_damage": {
+     "old": [
+      "propext"
+     ],
+     "new": []
+    }
+   }
+  }
+ }
+}

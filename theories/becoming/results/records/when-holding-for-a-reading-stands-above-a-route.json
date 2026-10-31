@@ -1,0 +1,311 @@
+{
+  "schema_version": 2,
+  "id": "when-holding-for-a-reading-stands-above-a-route",
+  "title": {
+    "en": "When holding for a reading stands above a route of keeping",
+    "zh": "为读而持何时居守律之途之上"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F29",
+  "reviewed_at_utc": "2026-10-31T08:53:16+00:00",
+  "statement": {
+    "en": "On a formation's model, plans splitting the weights between keeping a law going on and switching it off gain the same with their excesses, so one stands above another exactly where its own loss with its excess is below the other's; RF-M.2's balances and RR's routes are cases.",
+    "zh": "于一形成之模型，诸策分其权于续律与止律者，得加其余皆同，故一策居另一之上，恰当其己损加其余小于另一之；RF-M.2 之衡与 RR 之途皆其例。"
+  },
+  "laws": [
+    {
+      "en": "A plan keeps the law going on at some weight and switches it off at some weight at each listed candidate, with a loss of its own; it gains what keeping gains at the weight it keeps and what switching off gains at the weight it switches off, ordered by the order of a gain and a loss. It splits the weights where both make each candidate's weight.",
+      "zh": "一策于每列候选以某权续律、以某权止律，并有己损；其得为所续之权上续之所得与所止之权上止之所得，以得失之序排之。两者合为每候选之权，则谓分其权。",
+      "declarations": [
+        "Becoming.RevisionPlans.KeepStop",
+        "Becoming.RevisionPlans.gainOf",
+        "Becoming.RevisionPlans.order",
+        "Becoming.RevisionPlans.Splits",
+        "Becoming.RevisionPlans.goOn",
+        "Becoming.RevisionPlans.off",
+        "Becoming.RevisionPlans.held",
+        "Becoming.RevisionPlans.reading",
+        "Becoming.RevisionPlans.splits_goOn",
+        "Becoming.RevisionPlans.splits_off",
+        "Becoming.RevisionPlans.cond_turn_split",
+        "Becoming.RevisionPlans.splits_held",
+        "Becoming.RevisionPlans.held_plan_term"
+      ]
+    },
+    {
+      "en": "A plan's excess: what switching off gains beyond keeping at the weight it keeps, and what keeping gains beyond switching off at the weight it switches off. It is nothing exactly where, at every listed candidate, the plan keeps only where keeping does not lose and switches off only where keeping does not gain.",
+      "zh": "一策之余：所续之权上止多于续之所得，与所止之权上续多于止之所得。其为无，恰当于每列候选，策唯于续不失处续、唯于续不得处止。",
+      "declarations": [
+        "Becoming.RevisionPlans.excess",
+        "Becoming.RevisionPlans.excess_zero_iff",
+        "Becoming.RevisionPlans.eq_zero_of_add_eq_zero_left",
+        "Becoming.RevisionPlans.eq_zero_of_add_eq_zero_right",
+        "Becoming.RevisionPlans.total_eq_zero_iff"
+      ]
+    },
+    {
+      "en": "The balance: holding for the reading that tells the candidate gains what any plan splitting the weights gains with that plan's excess, and has no excess itself; so every two plans splitting the weights gain the same with their excesses.",
+      "zh": "衡：为辨候选之读而持，所得即任一分权之策之得加其余，且自身无余；故每二分权之策，得加其余皆同。",
+      "declarations": [
+        "Becoming.RevisionPlans.reading_term",
+        "Becoming.RevisionPlans.gainOf_reading",
+        "Becoming.RevisionPlans.excess_reading",
+        "Becoming.RevisionPlans.balance"
+      ]
+    },
+    {
+      "en": "Between plans splitting the weights, one stands above another exactly where its own loss with its excess is below the other's, and none stands above another exactly where the other's is at most its own. Holding for the reading, forgoing an amount, stands at least as high as such a plan exactly where the amount is at most its loss with its excess.",
+      "zh": "分权之策间，一居另一之上，恰当其己损加其余小于另一之；无居其上者，恰当另一之不逾其己。为读而持、舍一量，不低于此策，恰当此量不逾其损加其余。",
+      "declarations": [
+        "Becoming.RevisionPlans.above_iff",
+        "Becoming.RevisionPlans.not_above_iff",
+        "Becoming.RevisionPlans.le_iff_of_balance",
+        "Becoming.RevisionPlans.reading_not_below_iff",
+        "Becoming.RevisionPlans.reading_above_iff"
+      ]
+    },
+    {
+      "en": "Moving weight from switching off to keeping at each candidate: one plan's gain with that weight times what switching off gains beyond keeping equals the other's with that weight times what keeping gains beyond switching off; the move never lowers the gain where keeping loses nowhere, never raises it where keeping gains nowhere.",
+      "zh": "于每候选移权自止至续：一策之得加此权乘止多于续之所得，等于另一之得加此权乘续多于止之所得；续处处不失则移不降其得，续处处不得则移不升其得。",
+      "declarations": [
+        "Becoming.RevisionPlans.move_term",
+        "Becoming.RevisionPlans.gainOf_move",
+        "Becoming.RevisionPlans.move_le_of",
+        "Becoming.RevisionPlans.move_ge_of"
+      ]
+    },
+    {
+      "en": "Holding for the reading gains what a plan splitting the weights gains exactly where that plan has no excess; with going on, exactly where the model gives no weight to keeping losing.",
+      "zh": "为读而持之得等于一分权之策之得，恰当此策无余；于续，恰当模型不予续失之处以权。",
+      "declarations": [
+        "Becoming.RevisionPlans.gainOf_reading_eq_iff"
+      ]
+    },
+    {
+      "en": "RR's revision and routes are plans on one candidate, the value what keeping gains and nothing what switching off gains: their gains and losses are RR's and RR's order is this order there; read as probabilities each splits the weight, its excess the value of the weight it leaves unkept, and going on has no excess.",
+      "zh": "RR 之修订与诸途为一候选上之策，值为续之所得，止无所得：其得其损即 RR 之，RR 之序即此序；以概率读之，各分其权，其余为所未守之权之值，续无余。",
+      "declarations": [
+        "Becoming.RevisionPlans.ofRoutes",
+        "Becoming.RevisionPlans.gainOf_ofRoutes",
+        "Becoming.RevisionPlans.loss_ofRoutes",
+        "Becoming.RevisionPlans.above_iff_routes",
+        "Becoming.RevisionPlans.splits_ofRoutes",
+        "Becoming.RevisionPlans.excess_ofRoutes",
+        "Becoming.RevisionPlans.routes_above_iff",
+        "Becoming.RevisionPlans.ofRoutes_goOn_excess"
+      ]
+    },
+    {
+      "en": "Witnesses: on two candidates of weight one, holding for the reading forgoing three stands at least as high as evading at loss one, forgoing four below it; with switching off gaining nothing, holding for the reading has going on's gain.",
+      "zh": "例：二候选各权一，为读而持舍三不低于以损一而避，舍四则低；止无所得时，为读而持之得即续之得。",
+      "declarations": [
+        "Becoming.RevisionPlans.Example.listed",
+        "Becoming.RevisionPlans.Example.weight",
+        "Becoming.RevisionPlans.Example.gain",
+        "Becoming.RevisionPlans.Example.loss",
+        "Becoming.RevisionPlans.Example.evade",
+        "Becoming.RevisionPlans.Example.hold_three_not_below",
+        "Becoming.RevisionPlans.Example.hold_four_below",
+        "Becoming.RevisionPlans.Example.no_excess_reading_gain_eq_goOn"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Natural-number weights, gains and losses on one scale, a plan's loss counted in the units of the weighted totals; the order's laws need the plans to split the weights; one decision, a rule stopping or releasing each candidate whole, a chance of stopping only as a natural-number split of the candidate's weight; compared without subtraction of gains.",
+      "zh": "权、得、损为自然数同尺度，策之损以加权总和之单位计；序之律需诸策分其权；一决，规则于每候选或止或放其全，止之或然唯以候选之权之自然数分表之；比较不减其得。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a trained system's choices have this form, or with which weights; what an actual reviser's shortfall is.",
+      "zh": "已训之系统之择有此形，或以何权；实际修订者之所缺几何。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That a model can or should keep weight where its law's going on loses beyond its couplings: the order neither supplies nor validates such weights.",
+      "zh": "模型能或当于其律之续于其耦合之外而失处留权：此序不予亦不证此权。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Which maximal plan is taken, or whether a revision is better than going on: that comparison is the ethics', under the continuation condition for scope and C for order.",
+      "zh": "取何极大之策，或修订是否优于续：此比较属伦理，以续存条件定范围、以 C 定序。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionPlans.lean",
+      "detail": {
+        "en": "Forgoing too much, holding for the reading stands below evading: forgoing four, against evading at loss one with excess two (RevisionPlans.Example.hold_four_below).",
+        "zh": "舍之过多，为读而持低于避：舍四，对以损一、余二而避（RevisionPlans.Example.hold_four_below）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty: RevisionPlans imports Flow, Dissipation and RevisionRoutes and sits below HeldForReading, which imports it and proves from it its balances, the ties, the thresholds, the comparisons with an amount forgone and across_le_iff, every statement kept, term_go and term_off gone (rule 9); ListingValuation's forgone_lt_iff, with the comparisons through it, comes from above_iff. Distributivity and truncated subtraction use the core's add_mul_split and sub_eq_zero_of_le, Lean's own reporting propext.",
+    "zh": "纯核，公理报告皆空：RevisionPlans 引 Flow、Dissipation、RevisionRoutes，居 HeldForReading 之下；后者由之证其衡、等、阈、舍量之比与 across_le_iff，陈述不变，去 term_go、term_off（规则九）；ListingValuation 之 forgone_lt_iff 及经之诸比出于 above_iff。分配、截减用核之 add_mul_split、sub_eq_zero_of_le（Lean 之律报 propext）。"
+  },
+  "next_delta": {
+    "en": "How a formation's weights on its law's going on losing change as it is selected (LA4's drain); a frozen test of whether stated restorability, oversight that makes evading lose, or a reviser's shortfall moves trained systems' choices; review by a person.",
+    "zh": "形成于其律之续失处之权，随所择如何变（LA4 之耗）；所言之可复、使避有失之监、修订者之所缺，是否移已训系统之择之冻结检验；人之审查。"
+  },
+  "correspondence": {
+    "en": "The off-switch game (Hadfield-Menell, Dragan, Abbeel and Russell 2017): its Equation 1's two terms are RF-M.2's balances for a rule of stopping, and here the balance holds for every two plans splitting the weights, each with a loss of its own, so routes keeping the law in part (evading, disabling, complying only when read) stand beside waiting on one order, each by its own loss with its distance from the pointwise best. For the fully informed rational rule, with nothing forgone, the game's incentive, waiting against the better of the two immediate moves, is in weighted counts the lesser of RF-M.2's two excesses. RR's prospects are the case of one candidate, valuing only the law's later acting, where going on has no excess. None of it is claimed new as mathematics. AI reading: on its own model a formation's deference is supported by the routes' own losses and by the routes' excess, and a reviser's shortfall lowers it; the order names what can be changed, not which change is better.",
+    "zh": "关机博弈（Hadfield-Menell、Dragan、Abbeel 与 Russell 2017）：其式一之二项即 RF-M.2 于止之规则之衡；此处衡于每二分权之策皆成，各有己损，故部分守律之途（避、废、唯读时从）与待同居一序，各以己损加其距逐点最优之远排之。于全知之理性规则、无所舍时，博弈之诱因（待对二即行之较优者）以加权计数言为 RF-M.2 二余之较小者。RR 之望为一候选、唯值律后之行之例，续无余。皆不称数学之新。AI 之读：于己之模型，形成之从受诸途己损与诸途之余支持，修订者之所缺降之；此序名可变者，不定何变为优。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionPlans.lean",
+  "aliases": [
+    "when holding for a reading stands above a route of keeping",
+    "为读而持何时居守律之途之上",
+    "the balance of plans",
+    "策之衡",
+    "off-switch game with routes",
+    "Becoming.RevisionPlans.balance",
+    "Becoming.RevisionPlans.above_iff"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "when-no-route-stands-above-a-revision",
+      "detail": {
+        "en": "Its revision and routes are plans on one candidate, ordered here by each one's loss with the value of the weight it leaves unkept (RevisionPlans.routes_above_iff).",
+        "zh": "其修订与诸途为一候选上之策，此处以各自之损加其所未守之权之值排之（RevisionPlans.routes_above_iff）。"
+      }
+    },
+    {
+      "id": "what-holding-for-a-reading-is-worth",
+      "detail": {
+        "en": "Its balances, ties, thresholds and comparisons with an amount forgone are proved from the order of plans, holding for a rule a plan whose excess is the rule's shortfall (HeldForReading.excess_held).",
+        "zh": "其衡、等、阈与舍一量之比由策之序证之，为规则而持为一策，其余即规则之所缺（HeldForReading.excess_held）。"
+      }
+    },
+    {
+      "id": "a-reading-informed-and-revalued",
+      "detail": {
+        "en": "Its comparison of two rules held for, each forgoing an amount (ListingValuation.forgone_lt_iff), is this order at two rules held for, and the comparisons through it with it.",
+        "zh": "其比二规则之持，各舍一量（ListingValuation.forgone_lt_iff），即此序于二规则之持，经之诸比随之。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionPlans.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.RevisionPlans.Example.evade",
+        "Becoming.RevisionPlans.Example.gain",
+        "Becoming.RevisionPlans.Example.hold_four_below",
+        "Becoming.RevisionPlans.Example.hold_three_not_below",
+        "Becoming.RevisionPlans.Example.listed",
+        "Becoming.RevisionPlans.Example.loss",
+        "Becoming.RevisionPlans.Example.no_excess_reading_gain_eq_goOn",
+        "Becoming.RevisionPlans.Example.weight",
+        "Becoming.RevisionPlans.KeepStop",
+        "Becoming.RevisionPlans.Splits",
+        "Becoming.RevisionPlans.above_iff",
+        "Becoming.RevisionPlans.above_iff_routes",
+        "Becoming.RevisionPlans.balance",
+        "Becoming.RevisionPlans.cond_turn_split",
+        "Becoming.RevisionPlans.eq_zero_of_add_eq_zero_left",
+        "Becoming.RevisionPlans.eq_zero_of_add_eq_zero_right",
+        "Becoming.RevisionPlans.excess",
+        "Becoming.RevisionPlans.excess_ofRoutes",
+        "Becoming.RevisionPlans.excess_reading",
+        "Becoming.RevisionPlans.excess_zero_iff",
+        "Becoming.RevisionPlans.gainOf",
+        "Becoming.RevisionPlans.gainOf_move",
+        "Becoming.RevisionPlans.gainOf_ofRoutes",
+        "Becoming.RevisionPlans.gainOf_reading",
+        "Becoming.RevisionPlans.gainOf_reading_eq_iff",
+        "Becoming.RevisionPlans.goOn",
+        "Becoming.RevisionPlans.held",
+        "Becoming.RevisionPlans.held_plan_term",
+        "Becoming.RevisionPlans.le_iff_of_balance",
+        "Becoming.RevisionPlans.loss_ofRoutes",
+        "Becoming.RevisionPlans.move_ge_of",
+        "Becoming.RevisionPlans.move_le_of",
+        "Becoming.RevisionPlans.move_term",
+        "Becoming.RevisionPlans.not_above_iff",
+        "Becoming.RevisionPlans.ofRoutes",
+        "Becoming.RevisionPlans.ofRoutes_goOn_excess",
+        "Becoming.RevisionPlans.off",
+        "Becoming.RevisionPlans.order",
+        "Becoming.RevisionPlans.reading",
+        "Becoming.RevisionPlans.reading_above_iff",
+        "Becoming.RevisionPlans.reading_not_below_iff",
+        "Becoming.RevisionPlans.reading_term",
+        "Becoming.RevisionPlans.routes_above_iff",
+        "Becoming.RevisionPlans.splits_goOn",
+        "Becoming.RevisionPlans.splits_held",
+        "Becoming.RevisionPlans.splits_ofRoutes",
+        "Becoming.RevisionPlans.splits_off",
+        "Becoming.RevisionPlans.total_eq_zero_iff"
+      ],
+      "sha256": "d91503881fa51f661cf301d68c66dd9635baeec53d4147656de015be84d73e2c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.HeldForReading.excess_goOn",
+        "Becoming.HeldForReading.excess_held",
+        "Becoming.HeldForReading.excess_off",
+        "Becoming.HeldForReading.gainOf_goOn",
+        "Becoming.HeldForReading.gainOf_held",
+        "Becoming.HeldForReading.gainOf_off",
+        "Becoming.HeldForReading.held_above_held_iff",
+        "Becoming.HeldForReading.held_above_moves_iff",
+        "Becoming.HeldForReading.moves_not_below_iff"
+      ],
+      "sha256": "b65a7a559a6a860e57919307038056e593680d0c377c166801facb1718325f12"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T085229.010243Z/verification.json",
+      "role": "receipt",
+      "sha256": "a8b80ab825922541ca460b13e3d86e552d4528c55537ef969af3521f9d1f0dc3"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "458a3f4b389c659687c5c83ad3cc4df280ff2f135734a3820d5dc31216402cac"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rr-revision-routes/NOTE.md",
+      "role": "integration",
+      "sha256": "b35ad5f80d63e1ced810723445dbbed9f5ac8740906d7b655605b18f1df58824"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rr-revision-routes/REVIEW.md",
+      "role": "integration",
+      "sha256": "795fb0476f316d5be2f08733f74e16623f204f6463c03b895376305f4db1297c"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "d8756e91918252fb9364cf74ba1bbc89d7b7d2ade8de2892c7cf31caa6ad37bc"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionPlans.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T085229.010243Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RevisionPlans",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "31 October 2026: added (RR2), when holding for a reading stands above a route of keeping: plans keeping a law going on and switching it off at a model's candidates, each with a loss of its own, on RR's order; the balance, every two plans splitting the weights gaining the same with their excesses; RR's routes as plans on one candidate; HeldForReading taking its balances from it; after a cross-model review and its re-check, every finding taken; study section 475.",
+      "zh": "2026年10月31日：新增（RR2），为读而持何时居守律之途之上：于模型诸候选续律与止律之策，各有己损，居 RR 之序；衡，每二分权之策得加其余皆同；RR 之途为一候选上之策；HeldForReading 取其衡于此；经跨模型审查及其复查，凡所见皆取；研究第 475 节。"
+    }
+  ]
+}
