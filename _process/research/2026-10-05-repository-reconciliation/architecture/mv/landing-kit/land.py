@@ -74,7 +74,7 @@ row = ("| **MV's follow-up and README's first screen** (RA's line: the attachmen
        "package, no record statement, no core run "
        "| Claude Code desktop session \"Theory status and claims\" (31 October 2026) "
        f"| landed 2026-10-31 (study §{N} and §{N + 1}; on the coordinator's order, after RR2, the front pages' correction, "
-       "fm-rf3 and BD): the third re-check's eight findings and the fourth's four taken, 157 names (70 generated, 87 not) "
+       "fm-rf3, BD and RF's tests' designs): the third re-check's eight findings and the fourth's four taken, 157 names (70 generated, 87 not) "
        "and 32 mutations each caught; the screen's two front-page requests (no person or AI named, a tightening pass from "
        "205 to 172 words) and the coordinator's condition for [^transitions]'s plain label (the line before the notes); "
        "three checks of the study drafts and the notes, 54 findings, 39 confirmed and taken, 15 refuted; eight records "
