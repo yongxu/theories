@@ -11,13 +11,13 @@
 ## Laws
 
 1. Nothing in a region goes out of it along a relation where no member bears the relation to something outside. A closed region is not gone out of, an occurrence's closure among them, the closure law read through not going out; not going out is exactly the closedness of what is not outside the region, with no decision; and where membership is stable, whatever is not outside lying inside, not going out is being closed. (`Becoming.«不出»`, `Becoming.«闭则不出»`, `Becoming.«所闭不出»`, `Becoming.«不出当且仅当不外者闭»`, `Becoming.«不外者内则不出当且仅当闭»`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 2. Nothing comes into a region along a relation, nothing outside bearing it to a member, exactly where nothing goes out of what lies outside the region, with no decision. Along a symmetric relation nothing goes out of a region exactly where nothing comes in; some relation that is not symmetric has a closed region something outside comes into. (`Becoming.«逆之不出当且仅当外者不出»`, `Becoming.«对称则不出当且仅当逆不出»`, `Becoming.«闭而有入之例»`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 3. A line of continuation under any class from a member of a region to something outside it makes it false that nothing in the region goes out of it, with no decision; it names no step going out. (`Becoming.«内至外之线则非不出»`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 4. Where every step of continuation keeps to the region, its end a member wherever its start is, or goes from a member to something outside, a line from a member to something outside has a step going out, reached from the start and reaching the end: the mark law, with keeping to the region as what the ends fail. Where membership is decided every step is of one kind or the other. (`Becoming.«内至外之线有出步»`, `Becoming.«定则内至外之线有出步»`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

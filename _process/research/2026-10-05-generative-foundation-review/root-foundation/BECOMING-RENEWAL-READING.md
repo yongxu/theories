@@ -23403,3 +23403,47 @@ Output → input: 01 §9.9 (the theorem paragraph before BD's reading, the readi
 2. The laws use no classical principle: stability («不外者内则不出当且仅当闭», closedUnder_of_cut) and decision («定则内至外之线有出步») enter only as hypotheses, and «不出皆闭当且仅当排中» states exactly what dropping stability for every relation and region needs.
 3. Two names changed before landing: «内至外之线则出» became «内至外之线则非不出», the law refuting not going out and naming no step (the review's finding 1), and «闭而有入» became «闭而有入之例», the grammar's naming of witnesses.
 4. Not done: the items in Boundary.
+
+## 486. Names that state relations, not rule: documents (ND, part 1)
+
+Board item ND, asked in conversation on 1 November 2026: "what are master laws? why should laws be master? or why laws? are we being too dualistic?", then "make sure our repo doesn't have wrong non-dual concepts" ([design](development/nd-nondual-names/DESIGN.md)). A sweep of the live texts for 45 loaded words, each hit outside a technical sense read in its sentence, and one independent cold read in both directions (dualist smuggling, and nondualism erasing a real difference), each finding checked against the text by the owner ([cold read](development/nd-nondual-names/COLD-READ.md)). The account was relational where it matters already (08 §1's distinctions with their basis, nonduality a method and not a proof, no cosmic subject); what was wrong was in names and a few sentences.
+
+```text
+Result(s): no new result. master-laws-on-the-grammar retitled "The shared laws on the grammar" (文法上的共律), its
+       statement "the five shared laws", the old names kept as aliases, a history note; continuation-relative-to-
+       a-class's next step and groups-formed-by-bonds-share-a-founder's related note reworded.
+Delta:
+  - "Master law" (主律) becomes "shared law" (共律): 08 §7's heading and definition ("it ranks no law above another
+    and rules nothing"), 01 §7, the overview and 《总览》, 01 and 07's open lists, the renderer's labels on every
+    record page, COMPLETION's section. 04 §2's "the master law" of selection levels becomes "the general law".
+  - Law's three senses get a home, 08 §10 (a statement of the theory, read off what it holds of, with content only
+    through its hypotheses; `Law`, a determined step, one relation; a science's law, named with its science), and
+    the glossary rows law and shared law; 08 §10 records the renaming beside "couples into".
+  - Command words: "obeys" read as "satisfies" (01 §9, twice), "obey Chebyshev's bound" as "stay within" (02 §5),
+    "the history it governs" as "the history it holds of" and "a law outside what it governs" as "a law standing
+    outside what it holds of" (08 §9).
+  - From the cold read: 08 §9's thesis states why Twins.retarget_breaks is no refutation (the intervention needs
+    equality on the carrier, a commitment of the model); 07 §1 reads a standpoint as a center, and "some relation
+    of the unfolding"; 07 §2's withheld part is a region, the rest's response left out; 07 §4 and the overview
+    "at some admissible region" for "the boundary is drawn somewhere"; 02 §5's "harms" read as rises superadditive
+    up to one; the glossary's view as 08's reading, and the condition with "from every standpoint"; on the
+    collective page, "made by no part alone", "adds to the question … who restrains stays contested", "the
+    widening course".
+  - Kept, with reasons: record id, anchors, data fields and category values, master_laws.py (its bytes are an
+    input of MV's view), dated history entries, and Chinese 主律 where it means a record's main law. New anchors
+    beside the old: shared-laws-and-connectivity, COMPLETION's shared-laws.
+Supplied premises / correspondence: none; no statement's content changed.
+Evidence: render, check, check --strict-fresh, links (0 broken) and the 305 tests pass on the merged tree; MV's
+       view current against core receipt 20261031T202201.956842Z; five records re-pointed (one rebinds line),
+       each read against the new text, nothing it says changed.
+Standing: naming and wording only.
+Boundary:
+  - Part 2, in OU7's rebuild: ReadingLoop.Good and GoodEnabled (successor safety under a value name) become
+    LeadsInto and LeadsIntoEnabled; the …Obey… names of CensusTable, Standing and their uses …Hold…;
+    RegimeMargin.harms_superadditive rises_superadditive; Pool.difference_belongs_to_the_joint
+    difference_only_together; GrammarLaws', Amounts', ModelStatements' and Becoming.lean's docstrings. Then the
+    record id, by research.py rename-id, last.
+  - Passed to their owners, not edited: the one page and the overview's "the condition is a law of the root" (DU);
+    the one page's short form of the condition (the front pages kit); the collective page's title (its owner);
+    AGENTS.md's short form.
+```
