@@ -513,16 +513,22 @@ OU's owner decided on the reviewed design:
   - the record or records, with the home table in 06;
   - the PLAN.md edit;
   - the study section;
-  - a land script in stages, on the pattern of U1b's (`development/u1-balance-under-units/u1b/land_u1b.sh`, on branch u1b).
-- The grammar's owner's held items from BD2 and HE2 join the same rebuild, as its own patch in the kit once BD2 has landed: `«不出»` into GrammarLaws, `Flow.Cut`, and the GrammarLaws header.
-- The near-full rebuild comes last in the core round, after UE26, BD2, EL's core Lean and U1b. No Lean is run for it until OU's owner says.
+  - a land script in stages, on the pattern of U1b's (`development/u1-balance-under-units/u1b/land_u1b.sh`, landed with U1b).
+- The grammar's owner's held items from HE2 and BD2 join the same rebuild, as patches in the kit: the GrammarLaws header now ([01-GrammarLaws-header.patch](kit/patches/owner/01-GrammarLaws-header.patch), comments only); `«不出»` into GrammarLaws and `Flow.Cut` once BD2 has landed.
+- The near-full rebuild comes last in the core round, after UE26, BD2, EL and UE27. No Lean is run for it until OU's owner says, and a rehearsal stays in a scratch tree.
 - Part A's pieces of the kit are drafted ([kit](kit/README.md)). They are:
   - the leaf, moved into the kit;
   - 06's home section in Chinese;
   - the record's text and its maker;
   - an integrate script and a land script in stages, on U1b's pattern, with HE2's re-point.
 
-  They were checked in Python only, on main at 8a1b06a3a. Part B's pieces and the owner's held items join later.
+  They were checked in Python only, on main at 8a1b06a3a.
+- Part B's pieces are joined to the kit's scripts and read where its review left them (`check/kit/`, `check/scratch/Becoming/`). They are:
+  - its two leaves and their joins, after RegimeMargin's, with Chinese README rows and scope sentences written for them;
+  - its record's maker, [make_record_ou7b.py](kit/make_record_ou7b.py);
+  - its home section in 03 §3, its GrammarTesting clause and its register entries.
+
+  The notes saying what imports MapRegions, GrammarTesting, GrammarReadings and HeldPossible change with the leaves' imports. A dry run of both parts ([dry_run.py](kit/dry_run.py)), in Python only, passed on main at 753460b81.
 
 ## Open
 

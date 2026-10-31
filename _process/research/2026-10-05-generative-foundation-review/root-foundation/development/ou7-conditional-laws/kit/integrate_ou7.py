@@ -1,34 +1,43 @@
 #!/usr/bin/env python3
-"""OU7's landing, part A: the corpus's conditional laws (Becoming.GrammarConditionals, a core leaf) with the two
-general laws put below it in Grammar and GrammarReadings, the OU plan's line, 06's home section and record.
+"""OU7's landing, parts A and B in one kit. Part A: the corpus's conditional laws (Becoming.GrammarConditionals, a core
+leaf) with the two general laws put below it in Grammar and GrammarReadings, the OU plan's line, 06's home section and
+record. Part B: 验's model examples (Becoming.RoomNet and Becoming.RoomRuns, two core leaves, their pieces in
+check/kit/ beside this folder), one clause in GrammarTesting's header, 03 §3's home section and record.
 
-  python3 -B <dir>/integrate_ou7.py apply                  the Grammar, GrammarReadings and PLAN patches, then every
-                                                           patch in patches/owner/ in name order (the grammar's
-                                                           owner's held items); the leaf copied into the package; its
-                                                           joins: the root module's import and note (after
-                                                           GrammarLaws'), GrammarCandidates' note ("A leaf." becomes
-                                                           "Imported by"), the checker's core list and scope sentence,
-                                                           the README rows EN and ZH
-  python3 -B <dir>/integrate_ou7.py audit                  the statements of Grammar and GrammarReadings against HEAD:
-                                                           exactly the three new declarations added, none removed,
-                                                           every other statement unchanged (comments blanked), the two
-                                                           old laws proved as cases; the leaf's imports; the plan line
+  python3 -B <dir>/integrate_ou7.py anchors                every edit of apply and of the two home sections tried on
+                                                           the texts as they stand, nothing written: each anchor is
+                                                           found once or its edit is already in place (prepare)
+  python3 -B <dir>/integrate_ou7.py apply                  the Grammar, GrammarReadings, PLAN and GrammarTesting
+                                                           patches, then every patch in patches/owner/ in name order
+                                                           (the grammar's owner's held items); the three leaves copied
+                                                           into the package; their joins: the root module's imports and
+                                                           notes (part A's after GrammarLaws', part B's after
+                                                           RegimeMargin's), the notes and rows saying what imports a
+                                                           module the leaves import, the checker's lists and scope
+                                                           sentences, the README rows EN and ZH
+  python3 -B <dir>/integrate_ou7.py audit                  every Lean source the patches changed, against HEAD with
+                                                           comments blanked: Grammar and GrammarReadings gain exactly
+                                                           their three laws, none removed, every other statement kept,
+                                                           the two old laws proved as cases; every other changed source
+                                                           keeps its code; the leaves' imports; the plan line
   python3 -B <dir>/integrate_ou7.py record RECEIPT STUDY   08 §3's receipt sentence, every count read from the receipt;
                                                            06's home section (home-06-section.txt, at the end of §四)
-                                                           and its four lines (thesis, §三's 通, two open items);
-                                                           regions.json's two entries; then the record
-                                                           conditional-laws-of-the-corpus, bound to the receipt
+                                                           and its four lines; 03 §3's (part B's home-03-section-3.txt,
+                                                           after testing-within-the-net); regions.json's five entries;
+                                                           then the two records, bound to the receipt
   python3 -B <dir>/integrate_ou7.py register LOG           the apart register, from THEOREM-CONNECTIVITY.py --check's
-                                                           log: the leaf's roots with their reasons (reasons() below);
-                                                           register entries the leaf now uses dropped; others stop it
+                                                           log: the leaves' roots with their reasons (part A's from
+                                                           reasons() below, part B's from its apart-reasons.json, whose
+                                                           roots must be exactly the log's); register entries the
+                                                           leaves now use dropped (part B's six among them); any other
+                                                           stops it
   python3 -B <dir>/integrate_ou7.py check                  after master_laws.py: the data is the landing run's, reads
-                                                           the record's laws as they stand, and U4's boundary report
+                                                           both records' laws as they stand, and U4's boundary report
                                                            and the central figures are unchanged from the merged main
   python3 -B <dir>/integrate_ou7.py study N RECEIPT        the study's section N (the next free one), from the receipt
 
 Run from the checkout root of the landing worktree, in the order land_ou7.sh gives. Each edit asserts that it applies
-exactly once, or that it is already applied, so a stage can be rerun after main moves. Part B's pieces join when OU's
-owner has decided them (README.md).
+exactly once, or that it is already applied, so a stage can be rerun after main moves.
 """
 import importlib.util
 import json
@@ -36,13 +45,23 @@ import re
 import shutil
 import subprocess
 import sys
+import textwrap
 from pathlib import Path
 
 ROOT = Path.cwd()
 HERE = Path(__file__).resolve().parent
-spec = importlib.util.spec_from_file_location('make_record_ou7', HERE / 'make_record_ou7.py')
-mr = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(mr)
+PART_B = HERE.parent / 'check/kit'
+
+
+def load(name):
+    spec = importlib.util.spec_from_file_location(name, HERE / f'{name}.py')
+    module = sys.modules[name] = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+mr = load('make_record_ou7')    # part A's record, the corpus's conditional laws
+mb = load('make_record_ou7b')   # part B's record, rooms tested by a window
 
 PKG = ROOT / mr.PKG
 LEAF = ROOT / mr.SOURCE
@@ -52,15 +71,18 @@ README_EN, README_ZH = PKG / 'README.md', PKG / 'README.zh.md'
 RF = '_process/research/2026-10-05-generative-foundation-review/root-foundation/'
 PLAN = ROOT / (RF + 'development/one-unfolding-root/PLAN.md')
 HOME = ROOT / mr.CHAPTER
+HOME_B = ROOT / mb.CHAPTER
 METHOD = ROOT / 'theories/becoming/chapters/08-METHOD.md'
 REGIONS = ROOT / 'theories/becoming/results/data/regions.json'
 MASTER = 'theories/becoming/results/data/master-laws.json'
 COVERAGE = ROOT / 'theories/becoming/results/completion/COVERAGE.json'
 APART = ROOT / (RF + 'THEOREM-CONNECTIVITY-APART.json')
 STUDY = ROOT / (RF + 'BECOMING-RENEWAL-READING.md')
-PATCHES = [HERE / 'patches' / n for n in ('Grammar.patch', 'GrammarReadings.patch', 'PLAN.patch')]
+PATCHES = [HERE / 'patches' / n for n in ('Grammar.patch', 'GrammarReadings.patch', 'PLAN.patch')] + \
+          [PART_B / 'GrammarTesting.patch']
 OWNER = sorted((HERE / 'patches/owner').glob('*.patch')) if (HERE / 'patches/owner').is_dir() else []
 DEVLINK = 'development/ou7-conditional-laws/'
+WRITE = True    # False under `anchors`: every edit is tried and nothing is written
 
 
 def once(text, old, new, where):
@@ -70,7 +92,7 @@ def once(text, old, new, where):
         print(f'{where}: already in place')
         return text
     assert text.count(old) == 1, (where, 'expected once', text.count(old))
-    print(f'{where}: applied')
+    print(f'{where}: {"applied" if WRITE else "applies"}')
     return text.replace(old, new)
 
 
@@ -95,6 +117,7 @@ SCOPE = ('    "GrammarConditionals: the corpus\'s conditional laws in the gramma
          '    "to itself is shorter than any list holding them, so in bounded room it is not endless; what a class\'s "\n'
          '    "core puts with an occurrence whose line never ends has a line that never ends; where nothing is "\n'
          '    "depended on nothing depends, and dependences compose. "\n')
+SCOPE_BEFORE = '    "GrammarTesting: the core of a class lies in every stage of its approximation, so what a finite "\n'
 ROW_EN = ('| L1 | [`Becoming.GrammarConditionals`](Becoming/GrammarConditionals.lean) | the corpus\'s conditional laws '
           '(丙一) in the grammar, each family with a net where its condition fails (no premise): 相推 gives 全生成 '
           '(`«皆有后而步皆分则全生成»`); a line that does not come back is shorter than any list holding it, so in '
@@ -105,6 +128,78 @@ ROW_ZH = ('| L1 | [`Becoming.GrammarConditionals`](Becoming/GrammarConditionals.
           '条件不成立之网（无前提）：相推而全生成（`«皆有后而步皆分则全生成»`）；不返之线短于任一列其处之表，故有界之室'
           '中非不穷（`«线不返则短于所列»`、`«不返而有限则非不穷»`）；核所合于不穷之线者亦不穷（`«核同则同不穷»`）；'
           '所依无则依者无（`«所依无则依者无»`）；见证 27 |\n')
+
+# Part B's joins, beside RegimeMargin's (check/kit/README.md): its bullets and EN rows are part B's; its ZH rows and
+# scope sentences are written here, from those and its record's Chinese.
+B_LIST = 'CORE'   # OU's owner's decision: 'CORE', as UnitMatchings, or 'INSTANCES', the ring, as PlaceTransitionNets
+B_LISTS = {'CORE': ('"Becoming.RegimeMargin", ', '"Becoming.RegimeMargin", "Becoming.RoomNet", "Becoming.RoomRuns", '),
+           'INSTANCES': ('"Becoming.PlaceTransitionNets"]',
+                         '"Becoming.PlaceTransitionNets", "Becoming.RoomNet", "Becoming.RoomRuns"]')}
+IMPORTS_B = ('import Becoming.RegimeMargin\n', 'import Becoming.RegimeMargin\nimport Becoming.RoomNet\nimport Becoming.RoomRuns\n')
+BULLETS_B = (PART_B / 'becoming-lean-bullets.txt').read_text(encoding='utf-8')
+ROWS_B_EN = (PART_B / 'package-readme-rows.txt').read_text(encoding='utf-8')
+ROWS_B_ZH = (
+    '| L1 | [`Becoming.RoomNet`](Becoming/RoomNet.lean) | 以窗验室，验之模型之例（无伦理谓词；水平以整单位计，开窗作为'
+    '可选之枝入网）：一则生成无给之室与二恒温器之网，诸室作为规则并列相较；不开窗时，诸室于其设定水平同属一核类'
+    '（`Rooms.«不开窗则同核»`）；窗入网后，水平之第一层分无给之室与每一有给之室（`Rooms.«开窗则一层可分»`），以温与否，'
+    '至层数等于余量之层始分之（`Rooms.«开窗以温层如其余乃分»`），二有给之室仍同属一类（`Rooms.«有给之室以温不可分»`）；'
+    '余量为三时，给过所取之恒温器为相杂之域之模型之例（`Rooms.«给过所取则生守相杂»`），无给之室守而有终'
+    '（`Rooms.«平衡守而有终»`），开窗之后新而尽（`Rooms.«开窗则平衡新而尽»`）；于每一正余量，给如所取之恒温器全守'
+    '（`Rooms.«给如所取则全守»`）；温有常恰在有给之处（`Rooms.«温有常当且仅当有给»`），余量二以上，温之线不穷亦恰在'
+    '彼处（`Rooms.«温不穷当且仅当有给»`），须此余量（`Rooms.unended_at_one`），跨诸室其逆不成立（`Rooms.joint_converse`）；'
+    '`«恒温与平衡»` 之枝与判语于余量一推出（`Rooms.toy_branches`、`Rooms.toy_verdict`）；交换之前读水平，余量为三时窗移'
+    '二恒温器之水平（`Rooms.before_window_moves`）。`Becoming.RoomRuns` 导入之（工作板条目 OU7） |\n'
+    '| L1 | [`Becoming.RoomRuns`](Becoming/RoomRuns.lean) | 诸室开窗之进程作为运行（无伦理谓词）：开窗时，此则即 '
+    '`RegimeMargin.step`，热源之所给为其所给（`Rooms.next_open`、`Rooms.window_line`），故无给之室自其余量之步起皆冷'
+    '（`Rooms.Unheated.window_cold`，由 `RegimeMargin.stays_ended`），给如所取之恒温器守其设定水平'
+    '（`Rooms.Matched.window_held`，由 `RegimeMargin.holds`），余量为三时给过所取者之进程于 `3, 4` 间交替，即 '
+    '`RegimeMargin.Alternation` 之进程移二（`Rooms.Overshooting.alternation_shifted`），虽 `holds` 之条件于它不成立'
+    '（`Rooms.Overshooting.holds_one_way`）；此诸进程无一持续扩大（`Rooms.Unheated.not_widening`、'
+    '`Rooms.Matched.not_widening`、`Rooms.Overshooting.not_widening`）；就其时刻读之，给过所取者之进程全生成，其余二者'
+    '无一时刻如是（`Rooms.Overshooting.generation_at_moments`、`Rooms.Matched.no_generation_at_moments`、'
+    '`Rooms.Unheated.no_generation_at_moments`）；粗线即持温之可能（`Rooms.line_iff_held`、'
+    '`Rooms.heated_possible_held`、`Rooms.Unheated.cold_not_held`）。叶（工作板条目 OU7） |\n')
+SCOPE_B = (
+    '    "RoomNet: one rule makes the nets of an unheated room and two thermostats: a level in whole units moves "\n'
+    '    "one unit a step toward its surroundings, at the set level m while the window is shut and at 0 once it "\n'
+    '    "opens, and a heater reading the level after that exchange gives c below m; the window\'s opening is in "\n'
+    '    "the net as an alternative, and the rooms are compared as rules side by side. While no window opens "\n'
+    '    "every room at its set level is one core class at the level, at every margin; with the window in the "\n'
+    '    "net, at every positive margin, the level\'s first stage tells the unheated room from every heated one, "\n'
+    '    "under warm or not at a margin of n + 1 draws stage n holds and stage n + 1 tells them apart, and two "\n'
+    '    "heated rooms stay one core class; the branches the toy of testing stipulates are the rule\'s at a "\n'
+    '    "margin of one, and its verdict follows. At a margin of three the overshooting thermostat is a model "\n'
+    '    "case of the mixed region, and the unheated room keeps and reaches an end and, once open, degenerates "\n'
+    '    "while renewing; at every positive margin the matched thermostat is 全守, as every room is while no "\n'
+    '    "window opens, and warmth is constant exactly where the heater gives and, from a margin of two, "\n'
+    '    "unended exactly there; across rooms the converse fails. "\n'
+    '    "RoomRuns: with the window open the rooms\' rule is RegimeMargin\'s step with the heater\'s giving, so "\n'
+    '    "the unheated room is cold from its margin\'s step on, the matched thermostat holds its set level, and "\n'
+    '    "at a margin of three the overshooting course is Alternation\'s run shifted by two though holds\'s "\n'
+    '    "condition fails for it; no window course keeps widening; read on its moments the overshooting course "\n'
+    '    "is 全生成 and no moment of the other two is; a coarse line is the possible with warmth held. "\n')
+SCOPE_B_BEFORE = '    "Regulation: with balance, the joint exchange is within the gap to m on both sides exactly "\n'
+
+# What imports a module, where its note in the root module or its README row says so: the modules the leaves import
+# (GrammarConditionals imports GrammarCandidates and GrammarLaws; RoomNet GrammarTesting, GrammarLaws, GrammarReadings
+# and MapRegions; RoomRuns RoomNet, RegimeMargin and HeldPossible; the audit checks these imports).
+NOTES = [('GrammarCandidates', ' A leaf.', ' Imported by `Becoming.GrammarConditionals`.'),
+         ('GrammarReadings', 'Imported by\n  `Becoming.GrammarCandidates`.',
+          'Imported by\n  `Becoming.GrammarCandidates` and `Becoming.RoomNet`.'),
+         ('GrammarTesting', 'Imported by `Becoming.GrammarCases`.',
+          'Imported by\n  `Becoming.GrammarCases` and `Becoming.RoomNet`.'),
+         ('MapRegions', 'kept in a leaf, since', 'kept apart, since'),
+         ('MapRegions', 'A leaf (board item GW).', 'Imported by `Becoming.RoomNet` (board items GW, OU7).'),
+         ('HeldPossible', 'Imported\n  by `Becoming.Tasks`, `Becoming.CausalGrowth` and `Becoming.WideningOnTheMap` '
+                          '(board items UE11,\n  GW).',
+          'Imported\n  by `Becoming.Tasks`, `Becoming.CausalGrowth`, `Becoming.WideningOnTheMap` and `Becoming.RoomRuns`'
+          '\n  (board items UE11, GW, OU7).')]
+ROW_NOTES = [('README.md', 'MapRegions', 'A leaf (board item GW) |', 'Imported by `Becoming.RoomNet` (board items GW, OU7) |'),
+             ('README.zh.md', 'MapRegions', '叶（工作板条目 GW） |', '`Becoming.RoomNet` 导入之（工作板条目 GW、OU7） |')]
+IMPORTS = {mr.SOURCE: ['Becoming.GrammarCandidates', 'Becoming.GrammarLaws'],
+           mb.MODULES['Becoming.RoomNet']: ['Becoming.GrammarTesting', 'Becoming.GrammarLaws', 'Becoming.GrammarReadings',
+                                            'Becoming.MapRegions'],
+           mb.MODULES['Becoming.RoomRuns']: ['Becoming.RoomNet', 'Becoming.RegimeMargin', 'Becoming.HeldPossible']}
 
 
 def git(*args, check=True):
@@ -122,56 +217,112 @@ def apply_patches():
             sys.exit(f'{p.name} neither applies nor is in place: main moved under it; rebase the patch and rerun')
 
 
+def leaves():
+    """The three leaves: each kit copy (part B's in its scratch tree) and its place in the package."""
+    return [(HERE / 'Becoming/GrammarConditionals.lean', LEAF)] + \
+           [(kit, ROOT / mb.MODULES[m]) for m, kit in mb.KIT_LEAVES.items()]
+
+
+def span(t, module):
+    """Where `module`'s note in the root module's doc starts and ends."""
+    head = f'* `Becoming.{module}` ('
+    assert t.count(head) == 1, ('the root module has not one note for', module)
+    s = t.index(head)
+    return s, t.index('\n* `Becoming.', s)
+
+
+def note_once(t, module, old, new):
+    s, e = span(t, module)
+    return t[:s] + once(t[s:e], old, new, f'root module, {module}\'s note') + t[e:]
+
+
+def after_note(t, module, block, name, where):
+    """`block`, the notes of new modules, after `module`'s note, or confirm it is in place."""
+    if block in t:
+        print(f'{where}: already in place')
+        return t
+    assert f'* `Becoming.{name}`' not in t, f'a different note for {name} is in place'
+    nxt = span(t, module)[1] + 1
+    print(f'{where}: {"applied" if WRITE else "applies"}')
+    return t[:nxt] + block + t[nxt:]
+
+
+def row(r, module):
+    found = list(re.finditer(r'^\| L\d \| \[`Becoming\.' + re.escape(module) + r'`\][^\n]*\n', r, re.M))
+    assert len(found) == 1, ('README rows for', module, len(found))
+    return found[0].span()
+
+
+def after_row(r, module, rows, name, where):
+    if rows in r:
+        print(f'{where}: already in place')
+        return r
+    assert f'[`Becoming.{name}`]' not in r, (where, f'a different row for {name} is in place')
+    end = row(r, module)[1]
+    print(f'{where}: {"applied" if WRITE else "applies"}')
+    return r[:end] + rows + r[end:]
+
+
+def row_once(r, module, old, new, where):
+    s, e = row(r, module)
+    return r[:s] + once(r[s:e], old, new, where) + r[e:]
+
+
 def join():
-    kit = HERE / 'Becoming/GrammarConditionals.lean'
-    if LEAF.exists():
-        assert LEAF.read_bytes() == kit.read_bytes(), 'the package has a different GrammarConditionals.lean'
-        print('leaf: already in place')
-    else:
-        shutil.copyfile(kit, LEAF)
-        print('leaf: copied into the package')
+    for kit, leaf in leaves():
+        if leaf.exists():
+            assert leaf.read_bytes() == kit.read_bytes(), ('the package has a different', leaf.name)
+            print(f'{leaf.name}: already in place')
+        else:
+            if WRITE:
+                shutil.copyfile(kit, leaf)
+            print(f'{leaf.name}: {"copied into the package" if WRITE else "to be copied into the package"}')
     t = ROOTMOD.read_text(encoding='utf-8')
     t = once(t, 'import Becoming.GrammarLaws\n', 'import Becoming.GrammarLaws\nimport Becoming.GrammarConditionals\n',
-             'root module, import')
-    start = t.index('* `Becoming.GrammarLaws` (L0):')
-    nxt = t.index('\n* `Becoming.', start) + 1
-    if ENTRY not in t:
-        assert '* `Becoming.GrammarConditionals`' not in t, 'a different note for the leaf is in place'
-        t = t[:nxt] + ENTRY + t[nxt:]
-        print('root module, note: applied after GrammarLaws\'')
-    else:
-        print('root module, note: already in place')
-    cs = t.index('* `Becoming.GrammarCandidates` (L1):')
-    ce = t.index('\n* `Becoming.', cs)
-    note = t[cs:ce]
-    if note.endswith(' A leaf.'):
-        t = t[:cs] + note[:-len('A leaf.')] + 'Imported by `Becoming.GrammarConditionals`.' + t[ce:]
-        print('root module, GrammarCandidates\' note: applied')
-    else:
-        assert note.rstrip().endswith('Imported by `Becoming.GrammarConditionals`.'), note[-120:]
-        print('root module, GrammarCandidates\' note: already in place')
-    ROOTMOD.write_text(t, encoding='utf-8')
+             'root module, import (A)')
+    t = once(t, *IMPORTS_B, 'root module, imports (B)')
+    t = after_note(t, 'GrammarLaws', ENTRY, 'GrammarConditionals', 'root module, note (A)')
+    t = after_note(t, 'RegimeMargin', BULLETS_B, 'RoomNet', 'root module, notes (B)')
+    for module, old, new in NOTES:
+        t = note_once(t, module, old, new)
     c = CHECKER.read_text(encoding='utf-8')
     c = once(c, '"Becoming.GrammarLaws", ', '"Becoming.GrammarLaws", "Becoming.GrammarConditionals", ',
-             'checker, core list')
-    anchor = '    "GrammarTesting: the core of a class lies in every stage of its approximation, so what a finite "\n'
-    c = once(c, anchor, SCOPE + anchor, 'checker, scope sentence')
-    CHECKER.write_text(c, encoding='utf-8')
-    for path, row in [(README_EN, ROW_EN), (README_ZH, ROW_ZH)]:
+             'checker, core list (A)')
+    c = once(c, *B_LISTS[B_LIST], f'checker, {B_LIST} list (B)')
+    assert c.count('"Becoming.RoomNet"') == c.count('"Becoming.RoomRuns"') == 1, 'part B\'s leaves in more than one list'
+    c = once(c, SCOPE_BEFORE, SCOPE + SCOPE_BEFORE, 'checker, scope sentence (A)')
+    c = once(c, SCOPE_B_BEFORE, SCOPE_B + SCOPE_B_BEFORE, 'checker, scope sentences (B)')
+    readmes = {}
+    for path, row_a, rows_b in [(README_EN, ROW_EN, ROWS_B_EN), (README_ZH, ROW_ZH, ROWS_B_ZH)]:
         r = path.read_text(encoding='utf-8')
-        if row in r:
-            print(path.name, 'row: already in place')
-            continue
-        assert '[`Becoming.GrammarConditionals`]' not in r, (path.name, 'a different row for the leaf is in place')
-        m = re.search(r'^\| L0 \| \[`Becoming\.GrammarLaws`\][^\n]*\n', r, re.M)
-        assert m and len(re.findall(r'^\| L0 \| \[`Becoming\.GrammarLaws`\]', r, re.M)) == 1, path.name
-        path.write_text(r[:m.end()] + row + r[m.end():], encoding='utf-8')
-        print(path.name, 'row: applied after GrammarLaws\'')
+        r = after_row(r, 'GrammarLaws', row_a, 'GrammarConditionals', f'{path.name}, row (A)')
+        r = after_row(r, 'RegimeMargin', rows_b, 'RoomNet', f'{path.name}, rows (B)')
+        for name, module, old, new in ROW_NOTES:
+            if name == path.name:
+                r = row_once(r, module, old, new, f'{path.name}, {module}\'s row')
+        readmes[path] = r
+    if WRITE:
+        ROOTMOD.write_text(t, encoding='utf-8')
+        CHECKER.write_text(c, encoding='utf-8')
+        for path, r in readmes.items():
+            path.write_text(r, encoding='utf-8')
 
 
 def apply():
     apply_patches()
     join()
+
+
+def anchors():
+    """Every edit of apply and of the two home sections, tried on the texts as they stand, nothing written."""
+    global WRITE
+    WRITE = False
+    join()
+    home()
+    home_b()
+    assert len(SENTENCE.findall(METHOD.read_text(encoding='utf-8'))) == 1, '08 §3: the receipt sentence is not there once'
+    print('08 §3: the receipt sentence found once')
+    print('anchors: every edit applies exactly once or is already in place; nothing written')
 
 
 # ---------------------------------------------------------------------------------------------------------- audit
@@ -198,33 +349,53 @@ EXPECTED = {'Becoming.Grammar': ({'Becoming.«位核含于逆核»', 'Becoming.�
 
 
 def audit():
+    """The Lean sources the patches changed, against HEAD. The two whose code a patch of the kit changes are held to
+    EXPECTED; every other (GrammarTesting's header clause, the owner's GrammarLaws header) keeps its code, comments
+    blanked. An owner's patch that changes code adds its own expectation to EXPECTED."""
     problems = []
-    for module, (added, cases) in EXPECTED.items():
-        path = mr.BELOW[module]
-        before, _ = statements(git('show', 'HEAD:' + path).stdout)
-        after, whole = statements((ROOT / path).read_text(encoding='utf-8'))
+    changed = [p for p in git('diff', '--name-only', 'HEAD', '--', mr.PKG + 'Becoming/').stdout.split()
+               if p.endswith('.lean')]
+    expected = {mr.BELOW[m]: m for m in EXPECTED}
+    for path in sorted(set(changed) | set(expected)):
+        if path not in changed:
+            problems.append((path, 'unchanged: its patch is not applied'))
+            continue
+        before_text = git('show', 'HEAD:' + path).stdout
+        after_text = (ROOT / path).read_text(encoding='utf-8')
+        if path not in expected:
+            if mr.code(before_text) != mr.code(after_text):
+                problems.append((path, 'its code changed and EXPECTED does not cover it'))
+            print(path.rsplit('/', 1)[-1], 'changed in its comments only' if mr.code(before_text) == mr.code(after_text)
+                  else 'CHANGED IN ITS CODE')
+            continue
+        module = expected[path]
+        added, cases = EXPECTED[module]
+        before, _ = statements(before_text)
+        after, whole = statements(after_text)
         if set(after) - set(before) != added:
             problems.append((module, 'added', sorted(set(after) - set(before))))
         if set(before) - set(after):
             problems.append((module, 'removed', sorted(set(before) - set(after))))
-        changed = [n for n in before if n in after and before[n] != after[n]]
-        if changed:
-            problems.append((module, 'statements changed', changed))
+        moved = [n for n in before if n in after and before[n] != after[n]]
+        if moved:
+            problems.append((module, 'statements changed', moved))
         for name, proof in cases.items():
             if ' '.join(proof.split()) not in whole.get(name, ''):
                 problems.append((module, 'not proved as a case', name))
         print(module, len(before), '->', len(after), 'declarations; added', sorted(set(after) - set(before)))
-    imports = re.findall(r'^import (\S+)', LEAF.read_text(encoding='utf-8'), re.M)
-    if imports != ['Becoming.GrammarCandidates', 'Becoming.GrammarLaws']:
-        problems.append(('the leaf imports', imports))
+    for path, wanted in IMPORTS.items():
+        imports = re.findall(r'^import (\S+)', (ROOT / path).read_text(encoding='utf-8'), re.M)
+        if imports != wanted:
+            problems.append(('the imports of', path, imports))
     plan = PLAN.read_text(encoding='utf-8')
     if '生只在双向之核下不变' in plan or '生在逆缘之核下不变（`«生于逆核下不变»`）' not in plan:
         problems.append(('the OU plan line',))
     for p in problems:
         print('PROBLEM', p)
     assert not problems
-    print('audit: the patches add only their three laws, keep every other statement, and the two old laws are their '
-          'cases; the leaf imports GrammarCandidates and GrammarLaws; the plan line is replaced')
+    print('audit: the patches add only their three laws and keep every other statement, the two old laws are their '
+          'cases, every other changed source keeps its code; the leaves import what their notes say; the plan line is '
+          'replaced')
 
 
 # ---------------------------------------------------------------------------------------------------------- record
@@ -241,6 +412,7 @@ def receipt_sentence(receipt):
     r = json.loads((ROOT / receipt).read_text(encoding='utf-8'))
     assert r['status'] == 'passed'
     mr.receipt_modules(receipt)
+    mb.receipt_modules(receipt)
     stamp = Path(receipt).parent.name
     layers = {}
     for m in r['modules']:
@@ -308,15 +480,40 @@ def home():
         start, end = text.index('<a id="grammar-theorems"></a>'), text.index('<a id="the-changes"></a>')
         assert start < text.index(OLD_SENTENCE) < end, 'the sentence is no longer in §四'
         text = text.replace(OLD_SENTENCE, SECTION + '\n' + NEW_SENTENCE)
-        print('06 §四: the home section in place of the sentence on the 丙一 laws')
+        print(f'06 §四: the home section in place of the sentence on the 丙一 laws{"" if WRITE else " (applies)"}')
     for where, old, new in LINES:
         text = once(text, old, new, '06, ' + where)
-    HOME.write_text(text, encoding='utf-8')
+    if WRITE:
+        HOME.write_text(text, encoding='utf-8')
+
+
+SECTION_B = (PART_B / 'home-03-section-3.txt').read_text(encoding='utf-8')
+BEFORE_B = '<a id="r-testing-within-couplings"></a>\n'
+
+
+def home_b():
+    """Part B's home section in 03 §3, after testing-within-the-net's open note on the converse and before
+    testing-within-couplings."""
+    text = HOME_B.read_text(encoding='utf-8')
+    if mb.ANCHOR in text:
+        assert SECTION_B in text, 'a different home section for part B is in 03: remove it and rerun'
+        print('03 §3: the home section is already in place')
+    else:
+        assert text.count(BEFORE_B) == 1, '03 §3: the anchor of testing-within-couplings is not there once'
+        i = text.index(BEFORE_B)
+        last = text[:i].rstrip('\n')
+        last = last[last.rindex('\n\n') + 2:]
+        assert last.startswith('**Open.** That this converse'), ('03 §3: the paragraph before testing-within-couplings '
+                                                                 'is no longer the converse\'s open note', last[:80])
+        text = text[:i] + SECTION_B.rstrip('\n') + '\n\n' + text[i:]
+        print(f'03 §3: the home section after testing-within-the-net\'s open note{"" if WRITE else " (applies)"}')
+    if WRITE:
+        HOME_B.write_text(text, encoding='utf-8')
 
 
 def regions():
     data = json.loads(REGIONS.read_text(encoding='utf-8'))
-    # Region: the chapter of the home section (06, the classical texts). Base: the grammar, as for the corpus's
+    # Part A. Region: the chapter of the home section (06, the classical texts). Base: the grammar, as for the corpus's
     # candidate theorems and definitions.
     data['records'][mr.RID] = {
         'region': 'classical', 'base': 'grammar',
@@ -326,29 +523,58 @@ def regions():
         'region': 'classical', 'base': 'grammar',
         'note': 'the corpus\'s conditional laws (丙一): 相推 gives 全生成, bounded room on a line, the core keeps never '
                 'ending, dependence; 27 witnesses (OU7)'}
+    # Part B's three entries, as its kit gives them: region knowing (03), RoomNet on the grammar, RoomRuns on the frame.
+    data['records'][mb.RID] = {
+        'region': 'knowing', 'base': 'grammar',
+        'note': 'RoomNet, RoomRuns OU7: rooms tested by a window, regulation and equilibrium on the net of the possible'}
+    data['modules']['Becoming.RoomNet'] = {
+        'region': 'knowing', 'base': 'grammar',
+        'note': 'rooms on the net of the possible: one rule, testing, regions, a conditional law, the toy derived'}
+    data['modules']['Becoming.RoomRuns'] = {
+        'region': 'knowing', 'base': 'frame',
+        'note': 'the rooms\' window courses as RegimeMargin runs; the possible with warmth held'}
     for key in ('records', 'modules'):
         data[key] = dict(sorted(data[key].items()))
     REGIONS.write_text(json.dumps(data, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
-    print('regions: the record and the module, region classical, base grammar')
+    print('regions: two records and three modules')
 
 
 def record(receipt, study):
     receipt_sentence(receipt)
     home()
+    home_b()
     regions()
-    r = mr.record(receipt, study)
-    (ROOT / mr.REC).write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    print('record', mr.REC, 'bound to', receipt)
+    for maker in (mr, mb):
+        r = maker.record(receipt, study)
+        (ROOT / maker.REC).write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        print('record', maker.REC, 'bound to', receipt)
 
 
 # ---------------------------------------------------------------------------------------------------------- register
 
+APART_B = json.loads((PART_B / 'apart-reasons.json').read_text(encoding='utf-8'))
+
+
+def ours(name):
+    return name in mr.LEAF or name in mr.PATCHED or name in mb.NAMES
+
+
+def module_of(name):
+    if name in mr.LEAF:
+        return mr.MODULE
+    for m in mb.MODULES:
+        if name in mb.LEAVES[m]:
+            return m
+    return next(k for k in mr.BELOW if name in mr.BELOW_NAMES[k])
+
+
 def reasons():
-    """The category and reason of each theorem of the leaf, should the connectivity tool list it as an apart root
-    (used by no other apart theorem): the witnesses and the day-and-night instance are facts about one constructed
-    model; counting_reach_lt and the line-matching law support others; every other law is a law of every relation on
-    any carrier, its unit's reading in the OU7 study. The patches' three laws are listed too, in case one stands
-    apart: on the expected reading each is used by the old law that is its case."""
+    """The category and reason of each theorem of the leaves, should the connectivity tool list it as an apart root
+    (used by no other apart theorem). Part A: the witnesses and the day-and-night instance are facts about one
+    constructed model; counting_reach_lt and the line-matching law support others; every other law is a law of every
+    relation on any carrier, its unit's reading in the OU7 study. The patches' three laws are listed too, in case one
+    stands apart: on the expected reading each is used by the old law that is its case. Part B: its apart-reasons.json,
+    each root a fact about the rooms' rule, one constructed family of models."""
     out = {}
     for name in mr.LEAF:
         short = name[len('Becoming.'):]
@@ -368,16 +594,19 @@ def reasons():
     for name in sorted(mr.PATCHED):
         out[name] = ('general-structure', f'{name[len("Becoming."):]}: a law of every relation on any carrier, the '
                                           'general form of an older law of the grammar that is now its case (OU7)')
+    for name, (category, why) in APART_B['roots'].items():
+        out[name] = (category, why)
     return out
 
 
 def used_by_ou7(names):
-    """Of `names`, those the leaf's code or the patches' added code names: once these use a register root it is no
-    longer an apart root. Read from the code, not the register, so a rerun after the entries went still knows them."""
+    """Of `names`, those the leaves' code or the Grammar and GrammarReadings patches' added code names: once these use
+    a register root it is no longer an apart root. Read from the code, not the register, so a rerun after the entries
+    went still knows them."""
     added = '\n'.join(l[1:] for p in PATCHES[:2] for l in p.read_text(encoding='utf-8').splitlines()
                       if l.startswith('+') and not l.startswith('+++'))
-    code = mr.code(LEAF.read_text(encoding='utf-8')) + '\n' + mr.code(added)
-    return {n for n in names if n.startswith('Becoming.') and n not in mr.LEAF
+    code = '\n'.join(mr.code(kit.read_text(encoding='utf-8')) for kit, _ in leaves()) + '\n' + mr.code(added)
+    return {n for n in names if n.startswith('Becoming.') and not ours(n)
             and re.search(re.escape(n[len('Becoming.'):]) + r'(?![^\s()\]⟩,])', code)}
 
 
@@ -386,53 +615,69 @@ def leaf_uses():
     return used_by_ou7(json.loads(APART.read_text(encoding='utf-8'))['roots'])
 
 
+def listed_in(log, label):
+    m = re.search(label + r"[^:]*: (\[[^\]]*\])", log)
+    return [] if not m else [s.strip().strip("'\"") for s in m.group(1).strip('[]').split(',') if s.strip()]
+
+
+def cut(t, name):
+    """The register's text without `name`'s entry (an entry holds no nested object, so its first closing brace at
+    two spaces is its own)."""
+    key = '  ' + json.dumps(name, ensure_ascii=False) + ': {\n'
+    assert t.count(key) == 1, name
+    start = t.index(key)
+    close = t.index('\n  }', start)
+    if t.startswith('\n  },\n', close):
+        return t[:start] + t[close + len('\n  },\n'):]
+    assert t.startswith('\n  }\n', close), name
+    return t[:t.rindex(',\n', 0, start)] + '\n' + t[close + len('\n  }\n'):]
+
+
 def register(log_path):
-    t = APART.read_text(encoding='utf-8')
-    log = Path(log_path).read_text(encoding='utf-8')
-    m = re.search(r"apart roots without a reason in [^:]+: (\[[^\]]*\])", log)
-    listed = [] if not m else [s.strip().strip("'\"") for s in m.group(1).strip('[]').split(',') if s.strip()]
-    known = reasons()
-    block, others, unknown = '', [], []
-    for name in listed:
-        if name not in mr.LEAF and name not in mr.PATCHED:
-            others.append(name)
-            continue
-        if name not in known:
-            unknown.append(name)
-            continue
-        if json.dumps(name, ensure_ascii=False) in t:
-            continue
-        cat, why = known[name]
-        module = mr.MODULE if name in mr.LEAF else next(k for k in mr.BELOW if name in mr.BELOW_NAMES[k])
-        block += ('  ' + json.dumps(name, ensure_ascii=False) + ': {\n   "module": "' + module + '",\n'
-                  '   "category": "' + cat + '",\n   "reason": ' + json.dumps(why, ensure_ascii=False) + '\n  },\n')
-    assert not unknown, ('roots with no reason: add each to reasons(), read from its statement', unknown)
-    if block:
-        anchor = '  }\n },\n "instances": {'
-        assert t.count(anchor) == 1
-        t = t.replace(anchor, '  },\n' + block.rstrip(',\n') + '\n },\n "instances": {')
-        json.loads(t)
-        APART.write_text(t, encoding='utf-8')
-    # A register root the leaf or the patches now use is no longer an apart root: its entry goes. Only the roots
-    # their code names may go this way; any other stops for its owner's reading.
-    m = re.search(r"register entries no longer apart roots: (\[[^\]]*\])", log)
-    gone = [] if not m else [s.strip().strip("'\"") for s in m.group(1).strip('[]').split(',') if s.strip()]
-    used = used_by_ou7(gone)
-    unexpected = [g for g in gone if g not in used]
-    assert not unexpected, ('register entries no longer apart roots that OU7 does not use', unexpected)
+    """Every check first, then one write: a refused log leaves the register as it was."""
     t = APART.read_text(encoding='utf-8')
     d = json.loads(t)
+    log = Path(log_path).read_text(encoding='utf-8')
+    listed = listed_in(log, 'apart roots without a reason in')
+    known = reasons()
+    new, others, unknown = [], [], []
+    for name in listed:
+        if not ours(name):
+            others.append(name)
+        elif name not in known:
+            unknown.append(name)
+        elif name not in d['roots']:
+            new.append(name)
+    assert not unknown, ('roots with no reason: add each to reasons() or part B\'s apart-reasons.json, read from its '
+                         'statement', unknown)
+    # Part B's roots were predicted from its sources: the log's must be exactly these, or the stage stops for reading.
+    found = {n for n in listed if n in mb.NAMES} | {n for n, e in d['roots'].items() if e.get('module') in mb.MODULES}
+    assert found == set(APART_B['roots']), ('part B\'s roots differ from its apart-reasons.json',
+                                            'not predicted', sorted(found - set(APART_B['roots'])),
+                                            'predicted, not roots', sorted(set(APART_B['roots']) - found))
+    # A register root the leaves or the patches now use is no longer an apart root: its entry goes. Only the roots
+    # their code names may go this way; any other stops for its owner's reading. Part B's six must be among them.
+    gone = listed_in(log, 'register entries no longer apart roots')
+    unexpected = [g for g in gone if g not in used_by_ou7(gone)]
+    assert not unexpected, ('register entries no longer apart roots that OU7 does not use', unexpected)
     dropped = [g for g in gone if g in d['roots']]
+    kept = [n for n in APART_B['now_used'] if n in d['roots'] and n not in dropped]
+    assert not kept, ('part B\'s now-used roots the log does not list as no longer apart roots', kept)
+    if new:
+        anchor = '  }\n },\n "instances": {'
+        assert t.count(anchor) == 1
+        block = ',\n'.join('  ' + json.dumps(n, ensure_ascii=False) + ': {\n   "module": "' + module_of(n) + '",\n'
+                           '   "category": "' + known[n][0] + '",\n   "reason": '
+                           + json.dumps(known[n][1], ensure_ascii=False) + '\n  }' for n in new)
+        t = t.replace(anchor, '  },\n' + block + '\n },\n "instances": {')
     for g in dropped:
-        start = t.index('  ' + json.dumps(g, ensure_ascii=False) + ': {\n')
-        end = t.index('\n  },\n', start) + len('\n  },\n')
-        t = t[:start] + t[end:]
-    if dropped:
-        after = json.loads(t)
-        assert all(g not in after['roots'] for g in dropped) and len(after['roots']) == len(d['roots']) - len(dropped)
+        t = cut(t, g)
+    assert set(json.loads(t)['roots']) == (set(d['roots']) | set(new)) - set(dropped)
+    if new or dropped:
         APART.write_text(t, encoding='utf-8')
-    print('dropped', len(dropped), 'register entries the leaf now uses:', ', '.join(dropped) or 'none')
-    print('registered', block.count('"module"'), 'roots of the leaf and the patches')
+    print('dropped', len(dropped), 'register entries the leaves now use:', ', '.join(dropped) or 'none')
+    print('registered', len(new), 'roots of the leaves and the patches; part B\'s', len(APART_B['roots']),
+          'as predicted')
     if others:
         print("roots not OU7's, for their owners:", ', '.join(others))
 
@@ -451,23 +696,24 @@ def check():
     verification = json.loads((PKG / 'becoming-verification.json').read_text(encoding='utf-8'))
     if data.get('from_dump') or data.get('core_receipt') != verification.get('utc'):
         problems.append(('the data is not the landing run\'s', data.get('core_receipt'), verification.get('utc')))
-    rec = json.loads((ROOT / mr.REC).read_text(encoding='utf-8'))
-    laws = data.get('records', {}).get(mr.RID)
-    if not laws:
-        problems.append(('the data has no entry for the record', mr.RID))
-    else:
+    records = {maker.RID: json.loads((ROOT / maker.REC).read_text(encoding='utf-8')) for maker in (mr, mb)}
+    for rid, rec in records.items():
+        laws = data.get('records', {}).get(rid)
+        if not laws:
+            problems.append(('the data has no entry for the record', rid))
+            continue
         mine = [law['declarations'] for law in rec['laws']]
         theirs = [law.get('declarations') for law in laws]
         if mine != theirs:
-            problems.append(('the data does not match the record\'s laws', len(mine), len(theirs)))
+            problems.append(('the data does not match the record\'s laws', rid, len(mine), len(theirs)))
         for i, law in enumerate(laws, 1):
-            print(f"law {i}: master laws {law.get('master_laws')}, grammar {law.get('grammar')}, "
+            print(f"{rid} law {i}: master laws {law.get('master_laws')}, grammar {law.get('grammar')}, "
                   f"dependence {law.get('dependence')}")
-    # No central declaration is the leaf's or one the patches add, so U4's boundary record needs no new entry.
+    # No central declaration is a leaf's or one the patches add, so U4's boundary record needs no new entry.
     central = {d for row in json.loads(COVERAGE.read_text(encoding='utf-8'))['rows'] for d in row.get('declarations', [])}
-    if central & (set(mr.LEAF) | mr.PATCHED):
-        problems.append(('a declaration of OU7 is central: U4\'s boundary record must place it',
-                         central & (set(mr.LEAF) | mr.PATCHED)))
+    new = set(mr.LEAF) | mr.PATCHED | mb.NAMES
+    if central & new:
+        problems.append(('a declaration of OU7 is central: U4\'s boundary record must place it', central & new))
     b = data.get('boundary') or {}
     if b.get('record') != 'one-root-to-its-edge' or b.get('field_failures') or b.get('unverified'):
         problems.append(('the boundary report', b.get('record'), b.get('field_failures'), b.get('unverified')))
@@ -485,23 +731,42 @@ def check():
         if now != then:
             problems.append((key + ' changed', then, now))
     grown = {k: (before['counts'].get(k), v) for k, v in data['counts'].items() if before['counts'].get(k) != v}
-    print('record-law counts, main -> landing (only the new record\'s laws should add):', grown)
-    if data['counts']['laws'] != before['counts']['laws'] + len(rec['laws']):
+    print('record-law counts, main -> landing (only the new records\' laws should add):', grown)
+    if data['counts']['laws'] != before['counts']['laws'] + sum(len(rec['laws']) for rec in records.values()):
         problems.append(('law count', before['counts']['laws'], data['counts']['laws']))
     for p in problems:
         print('PROBLEM', p)
     assert not problems
-    print('master laws read the record; the boundary report and the central figures are as on main:',
+    print('master laws read both records; the boundary report and the central figures are as on main:',
           b.get('counts'), (data.get('central_reach') or {}).get('counts'))
 
 
 # ---------------------------------------------------------------------------------------------------------- study
 
+def part_b_block(stamp, mods):
+    """Part B's lines (check/kit/study-lines-b.md's text block), with the receipt and its counts filled and the
+    results it reuses named."""
+    md = (PART_B / 'study-lines-b.md').read_text(encoding='utf-8')
+    block = md[md.index('```text\n'):md.rindex('```') + 3]
+    net, runs = mods['Becoming.RoomNet'], mods['Becoming.RoomRuns']
+    old = ('Evidence: core receipt (filled at landing); Becoming.RoomNet (94 theorems in 120 declarations) and\n'
+           '       Becoming.RoomRuns (24 in 27)')
+    new = (f'Evidence: core receipt `{stamp}`; Becoming.RoomNet ({net["theorems"]} theorems in '
+           f'{len(net["declarations"])} declarations) and\n       Becoming.RoomRuns ({runs["theorems"]} in '
+           f'{len(runs["declarations"])})')
+    assert block.count(old) == 1, 'part B\'s evidence line moved'
+    block = block.replace(old, new)
+    first = 'Result(s): rooms-tested-by-a-window (new, home 03 §3, after testing-within-the-net).'
+    assert block.count(first + '\n') == 1, 'part B\'s first line moved'
+    reused = '\n'.join(textwrap.wrap(first + ' Reused: ' + ', '.join(d['id'] for d in mb.TEXT['dependencies']) + '.',
+                                     width=118, subsequent_indent=' ' * 7, break_on_hyphens=False))
+    return block.replace(first, reused)
+
+
 def study(n, receipt):
-    """The study's section N (the next free one), from the landing's receipt. Part B's text, once OU's owner has
-    decided its pieces, is kit/study-part-b.txt and follows part A's block."""
+    """The study's section N (the next free one), from the landing's receipt: part A's block, then part B's."""
     text = STUDY.read_text(encoding='utf-8')
-    title = '## {}. The corpus\'s conditional laws, family by family (OU7)'
+    title = '## {}. The corpus\'s conditional laws, family by family, and rooms tested by a window (OU7)'
     if title.format(n) in text:
         print('study §', n, 'already in place')
         return
@@ -511,10 +776,14 @@ def study(n, receipt):
     leaf = m[mr.MODULE]
     stamp = Path(receipt).parent.name
     below = ', '.join(f"{k.split('.')[-1]} {len(m[k]['declarations'])} declarations" for k in mr.BELOW)
-    part_b = HERE / 'study-part-b.txt'
+    evidence = '\n'.join(textwrap.wrap(
+        f"Evidence: core receipt `{stamp}`; Becoming.GrammarConditionals ({leaf['theorems']} theorems in "
+        f"{len(leaf['declarations'])} declarations), a core leaf importing GrammarCandidates and GrammarLaws, nothing "
+        f"importing it; {below}; every axiom report empty. The patches' audit: only their three laws added, every "
+        "other statement unchanged.", width=118, subsequent_indent=' ' * 7, break_on_hyphens=False))
     section = f"""{title.format(n)}
 
-Board item OU7 (claimed as OU5), the OU plan's §八 step 5 and the release gate's item 4: each conditional law of the corpus (丙一) written in the grammar as "Y 当且仅当 Z" or "Z 则 Y", with a net where Z fails and Y fails with it ([the design]({DEVLINK}DESIGN.md)). Part A reads the 219 units; one independent AI review of its design found 24 problems, every one taken ([the review]({DEVLINK}review/FINDINGS.md)); OU's owner decided what lands and confirmed every name.
+Board item OU7 (claimed as OU5), the OU plan's §八 step 5 and the release gate's item 4, in two parts. Part A writes each conditional law of the corpus (丙一) in the grammar as "Y 当且仅当 Z" or "Z 则 Y", with a net where Z fails and Y fails with it ([the design]({DEVLINK}DESIGN.md)); it reads the 219 units, and one independent AI review of its design found 24 problems, every one taken ([the review]({DEVLINK}review/FINDINGS.md)). Part B gives 验's model examples: one rule of rooms, an unheated room and two thermostats, tested by a window on the net of the possible ([the design]({DEVLINK}check/DESIGN.md)); one independent AI review found 18 problems, and its re-check took every point ([the review and re-check]({DEVLINK}check/review/FINDINGS.md)). OU's owner decided what lands and confirmed every name.
 
 ```text
 Result(s): conditional-laws-of-the-corpus (new, home 06 §四 at its end). Reused: candidate-theorems-of-the-corpus,
@@ -537,10 +806,7 @@ Delta:
 Supplied premises / correspondence: the readings (AI reconstructions); G03's and G04's bound; G08 and G20 premises
        of the model; G13's not its own condition; G21's converse under its premise. Modelling choices: one carrier,
        缘 a necessary relation with no predicate of presence, discrete steps.
-Evidence: core receipt `{stamp}`; Becoming.GrammarConditionals ({leaf['theorems']} theorems in
-       {len(leaf['declarations'])} declarations), a core leaf importing GrammarCandidates and GrammarLaws, nothing
-       importing it; {below}; every axiom report empty. The patches' audit: only their three laws added, every other
-       statement unchanged.
+{evidence}
 Standing: three families new (G02, G03, G15), dependence definitional; the rest are existing laws given exact form
        and nets. None of it says what a text means.
 Boundary:
@@ -548,12 +814,12 @@ Boundary:
   - An order 穷 → 变 → 通; production and sufficiency (not expressible); constancy as necessary.
   - The three open readings (G22's 衡不正, JS-326's 相應, JS-318's 無明), each with its AI label in 06's open items.
   - The 181 乙 candidates of the three added texts.
-Output -> input: 06 §四's home section, its thesis, §三's 通 and two open items; the OU plan's line on beginning;
+Output → input: 06 §四's home section, its thesis, §三's 通 and two open items; the OU plan's line on beginning;
        the record's next step (review by a person; the open readings).
 ```
+
+{part_b_block(stamp, mb.receipt_modules(receipt))}
 """
-    if part_b.is_file():
-        section += '\n' + part_b.read_text(encoding='utf-8').rstrip('\n') + '\n'
     STUDY.write_text(text.rstrip('\n') + '\n\n' + section, encoding='utf-8')
     print('study §', n, 'written')
 
@@ -561,7 +827,9 @@ Output -> input: 06 §四's home section, its thesis, §三's 通 and two open i
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         sys.exit(__doc__)
-    if sys.argv[1] == 'apply':
+    if sys.argv[1] == 'anchors':
+        anchors()
+    elif sys.argv[1] == 'apply':
         apply()
     elif sys.argv[1] == 'audit':
         audit()

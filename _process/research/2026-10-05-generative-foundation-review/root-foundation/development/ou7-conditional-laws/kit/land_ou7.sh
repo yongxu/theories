@@ -1,22 +1,26 @@
 #!/bin/zsh
-# OU7's landing, in stages, from the checkout root of the landing worktree (the branch holding parts A and B). The head
-# claim, the board's landed clause and the fast-forward are run by hand, each with its guard (re-read the Queue line
-# before --ff-only). The near-full rebuild comes last in the core round: no stage runs before OU's owner says.
-#   LOG=DIR zsh land_ou7.sh prepare    merge main (refs/heads/main), with no tracked change left before it; every patch
-#                                      of the kit checked against the merged tree
-#   LOG=DIR zsh land_ou7.sh apply      the Grammar, GrammarReadings and OU plan patches, then patches/owner/ in name
-#                                      order; the leaf and its joins; the patches' audit
+# OU7's landing, parts A and B, in stages, from the checkout root of the landing worktree (the branch holding both
+# parts). The head claim, the board's landed clause and the fast-forward are run by hand, each with its guard (re-read
+# the Queue line before --ff-only). The near-full rebuild comes last in the core round: no stage runs before OU's owner
+# says.
+#   LOG=DIR zsh land_ou7.sh prepare    merge main (refs/heads/main), with no tracked change left before it; the kit's
+#                                      patches checked against the merged tree as one series, in the order apply takes
+#                                      them; no leaf yet in the package; every anchor of the joins and the two home
+#                                      sections found once (integrate_ou7.py anchors, nothing written)
+#   LOG=DIR zsh land_ou7.sh apply      the Grammar, GrammarReadings, OU plan and GrammarTesting patches, then
+#                                      patches/owner/ in name order; the three leaves and their joins; the audit
 #   LOG=DIR zsh land_ou7.sh run        the checker in place (OUT=DIR writes the run outside the repository instead)
-#   LOG=DIR zsh land_ou7.sh post [N]   08 §3's sentence, 06's home section and lines, regions and the record; MV's data
-#                                      and OU7's check; the apart register; the study's section N (the next free one,
-#                                      read after main is merged; a given N must match); the re-point of the records
-#                                      whose sources the patches changed; render, checks, links, lint, tests
+#   LOG=DIR zsh land_ou7.sh post [N]   08 §3's sentence, 06's and 03's home sections, 06's lines, regions and the two
+#                                      records; MV's data and OU7's check; the apart register; the study's section N
+#                                      (the next free one, read after main is merged; a given N must match); the
+#                                      re-point of the records whose sources the patches changed; render, checks,
+#                                      links, lint, tests
 # LOG holds every log (outside the repository). Each stage stops at the first failure and says where. No stage commits.
 set -u
 LOG=${LOG:?}; mkdir -p $LOG
 PKG=experiments/integrated-correction/general-framework/generative-basis/lean/becoming
 RF=_process/research/2026-10-05-generative-foundation-review/root-foundation; K=$RF/development/ou7-conditional-laws/kit
-RID=conditional-laws-of-the-corpus
+RID=conditional-laws-of-the-corpus; RIDB=rooms-tested-by-a-window
 [ -e $K/land_ou7.sh ] || { echo "run from the landing worktree's root"; exit 2; }
 fail() { echo "FAILED: $1 (see $LOG)"; exit 1; }
 step() { echo "== $1"; }
@@ -26,11 +30,13 @@ prepare)
   step merge; git merge --no-edit refs/heads/main > $LOG/merge.log 2>&1 || fail "merge (resolve, then rerun prepare)"
   tail -1 $LOG/merge.log
   step patches
-  for p in $K/patches/*.patch $K/patches/owner/*.patch(N); do
-    git apply --check $p > $LOG/check-${p:t}.log 2>&1 || fail "${p:t} does not apply to the merged tree"
+  P=($K/patches/*.patch $K/../check/kit/GrammarTesting.patch $K/patches/owner/*.patch(N))
+  git apply --check $P > $LOG/check-patches.log 2>&1 || fail "the patches do not apply to the merged tree, in order"
+  echo "${#P} patches apply to the merged tree, in order:" ${P:t}
+  for f in GrammarConditionals RoomNet RoomRuns; do
+    [ ! -e $PKG/Becoming/$f.lean ] || fail "the package already has a $f.lean"
   done
-  [ ! -e $PKG/Becoming/GrammarConditionals.lean ] || fail "the package already has a GrammarConditionals.lean"
-  echo "every patch applies to the merged tree" ;;
+  step anchors; python3 -B $K/integrate_ou7.py anchors > $LOG/anchors.log 2>&1 || fail anchors; tail -1 $LOG/anchors.log ;;
 apply)
   step apply; python3 -B $K/integrate_ou7.py apply > $LOG/apply.log 2>&1 || fail apply; cat $LOG/apply.log
   step audit; python3 -B $K/integrate_ou7.py audit > $LOG/audit.log 2>&1 || fail audit; tail -3 $LOG/audit.log
@@ -59,10 +65,11 @@ v = json.load(open(sys.argv[1])); assert v['status'] == 'passed'
 bad = [(m['module'], n) for m in v['modules'] for n, a in m['axiom_dependencies'].items() if a]
 assert not bad, bad[:5]
 m = {x['module']: x for x in v['modules']}
-c = m['Becoming.GrammarConditionals']
-print('receipt', sys.argv[1].split('/')[-2], len(v['modules']), 'modules, every axiom report empty; GrammarConditionals',
-      c['theorems'], 'theorems in', len(c['declarations']), 'declarations; Grammar', len(m['Becoming.Grammar']['declarations']),
-      'and GrammarReadings', len(m['Becoming.GrammarReadings']['declarations']), 'declarations')
+print('receipt', sys.argv[1].split('/')[-2], len(v['modules']), 'modules, every axiom report empty;',
+      '; '.join(f"{n} {m['Becoming.' + n]['theorems']} theorems in {len(m['Becoming.' + n]['declarations'])} declarations"
+                for n in ('GrammarConditionals', 'RoomNet', 'RoomRuns')) + '; Grammar',
+      len(m['Becoming.Grammar']['declarations']), 'and GrammarReadings', len(m['Becoming.GrammarReadings']['declarations']),
+      'declarations')
 EOF
   step record; python3 -B $K/integrate_ou7.py record $V $N > $LOG/record.log 2>&1 || fail record; cut -c1-200 $LOG/record.log
   step mv; python3 -B tools/research/master_laws.py > $LOG/mv.log 2>&1 || fail mv
@@ -73,9 +80,9 @@ EOF
   python3 -B $M --write > $LOG/conn-write.log 2>&1 || fail "connectivity write"
   python3 -B $M --check > $LOG/conn.log 2>&1 || fail "connectivity check"
   step study; python3 -B $K/integrate_ou7.py study $N $V > $LOG/study.log 2>&1 || fail study; cat $LOG/study.log
-  # The records pinning a source the patches changed (Grammar, GrammarReadings, the OU plan, and whatever the owner's
-  # patches change): read with each source before this stage, then re-pointed as bookkeeping, the Lean files' proof
-  # bindings rebound to this receipt. Owner patches add their own reason to repoint_reason.txt.
+  # The records pinning a source the patches changed (Grammar, GrammarReadings, GrammarTesting, the OU plan, and
+  # whatever the owner's patches change): read with each source before this stage, then re-pointed as bookkeeping, the
+  # Lean files' proof bindings rebound to this receipt. Owner patches add their own reason to repoint_reason.txt.
   step repoint; python3 -B tools/research/research.py check > $LOG/rc.log 2>&1
   python3 - $LOG/rc.log $LOG/drift.json <<'EOF' || fail drift
 import sys, json
@@ -97,9 +104,9 @@ assert not d.get('source_drift') and not d.get('unrelated_source_drift'), (d.get
 print('no source drift')
 EOF
   step links; python3 -B tools/research/research.py links > $LOG/links.log 2>&1 || fail links; grep '"broken"' $LOG/links.log
-  # The record's lint: no error; its warnings are listed (record-text.json's prose, OU's owner's to shorten or keep).
-  step lint; python3 -B tools/research/research.py lint --ids $RID > $LOG/lint.log 2>&1 || fail lint
-  python3 - $LOG/lint.log <<'EOF' || fail "the record's lint"
+  # The records' lint: no error; their warnings are listed (the record texts' prose, OU's owner's to shorten or keep).
+  step lint; python3 -B tools/research/research.py lint --ids $RID $RIDB > $LOG/lint.log 2>&1 || fail lint
+  python3 - $LOG/lint.log <<'EOF' || fail "the records' lint"
 import json, sys
 d = json.load(open(sys.argv[1]))
 errors = [f for f in d['findings'] if f['severity'] == 'error'] + d.get('errors', [])
