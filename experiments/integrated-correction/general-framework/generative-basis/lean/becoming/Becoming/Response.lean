@@ -87,16 +87,11 @@ namespace Becoming
 variable {F C : Type}
 
 /-- A closure under the converse of a relation is the converse of the closure: `g` lies within
-`f`'s closure under the converse exactly when `f` lies within `g`'s closure under the relation. -/
+`f`'s closure under the converse exactly when `f` lies within `g`'s closure under the relation: the
+grammar's `«所闭之逆»` at the relation. -/
 theorem WithinClosure.converse {rel : F → F → Prop} {f g : F} :
     WithinClosure (fun a b => rel b a) f g ↔ WithinClosure rel g f :=
-  ⟨fun within => within (fun x => WithinClosure rel x f)
-      (fun _ _ back related => (WithinClosure.of_rel (rel := rel) related).trans back)
-      (WithinClosure.refl f),
-   fun within => within (fun x => WithinClosure (fun a b => rel b a) x g)
-      (fun _ _ back related =>
-        (WithinClosure.of_rel (rel := fun a b => rel b a) related).trans back)
-      (WithinClosure.refl g)⟩
+  «所闭之逆»
 
 namespace Flow
 

@@ -8,15 +8,15 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T18:27:10+00:00",
+  "reviewed_at_utc": "2026-10-31T05:47:56+00:00",
   "statement": {
     "en": "The five master laws hold on the grammar for every carrier and relation: closure, finite runs (return, being drawn, rest), lumping and order, with the models' laws proved from them. Balance is represented both ways as pairings of unit lists, near-definitional, and not derived.",
     "zh": "五条主律对每一载体与关系在文法上成立：闭包、有限运行（返、入、止）、归并与序，模型之律由之证出。平衡以单位列表之配对两向表示，近乎定义，不推出。"
   },
   "laws": [
     {
-      "en": "Closure. Lying within a relation's closure (every region closed under it that holds x holds y) is being x or reached from x. The closure is reflexive, transitive, holds every step, grows with the relation, is symmetric for a symmetric one and closed, nothing within it bears the relation beyond it, and a region is x's closure exactly where it holds x, is closed and lies within it. A region of the steps of time that every step keeps holds from where it holds on: the closure at the successor along a line.",
-      "zh": "闭包：在一关系之闭包内（凡对其封闭而含 x 之域皆含 y），即是 x 本身或为 x 所及。闭包自反、可传递、含每一步、随关系增大、对称关系下对称、自身封闭，其内者不以此关系及于其外；一域恰在含 x、封闭且在闭包内时为 x 之闭包。每步皆守之时步之域，自其所守处以后皆守：即闭包于后继沿线。",
+      "en": "Closure. Lying within a relation's closure (every region closed under it that holds x holds y) is being x or reached from x. The closure is reflexive, transitive, holds every step, grows with the relation, is symmetric for a symmetric one and closed, nothing within it bears the relation beyond it, and a region is x's closure exactly where it holds x, is closed and lies within it. Under the converse it is the closure read backward; a closure through borrowed steps (each step of R′ a step of R, or a step of R from a taken at o) lies within o's or a's closure under R, and where R′ holds R and a lies within o's closure under R′, the two lie within o's closure under R′. A region of the steps of time that every step keeps holds from where it holds on: the closure at the successor along a line.",
+      "zh": "闭包：在一关系之闭包内（凡对其封闭而含 x 之域皆含 y），即是 x 本身或为 x 所及。闭包自反、可传递、含每一步、随关系增大、对称关系下对称、自身封闭，其内者不以此关系及于其外；一域恰在含 x、封闭且在闭包内时为 x 之闭包。逆关系下之闭包即闭包之逆读；借步之闭包（R′ 之每一步或为 R 之步，或为在 o 处所取、自 a 起之 R 之步）在 o 或 a 于 R 下之闭包内，而 R′ 含 R 且 a 在 o 于 R′ 下之闭包内时，二者在 o 于 R′ 下之闭包内。每步皆守之时步之域，自其所守处以后皆守：即闭包于后继沿线。",
       "declarations": [
         "Becoming.«闭»",
         "Becoming.«所闭»",
@@ -34,7 +34,10 @@
         "Becoming.«及之所闭»",
         "Becoming.«所闭当且仅当同一或及»",
         "Becoming.«及当且仅当一步而所闭»",
-        "Becoming.kept_onward"
+        "Becoming.kept_onward",
+        "Becoming.«所闭之逆»",
+        "Becoming.«借步之所闭在二所闭»",
+        "Becoming.«二所闭在借步之所闭»"
       ]
     },
     {
@@ -47,8 +50,8 @@
       ]
     },
     {
-      "en": "Lemmas on numbers and lists that the line laws use, each proved once here, below the frame: pigeonhole with no decidability (a list holding the first l.length + 1 values of a sequence holds two at one place), the numbers other than a given one, splitting a joined list, a value put in front of a sequence, and totals that agree pointwise.",
-      "zh": "诸线律所用的数与列表之引理，各于此（框架之下）证一次：无须可判定的鸽笼（持一序列前 l.length + 1 个值之列表在同一位持其二）、异于某一给定数之诸数、拆分相接之列表、置于序列之前的一值、逐点相同之总和。",
+      "en": "Lemmas on numbers and lists that the line laws use, each proved once here, below the frame: pigeonhole with no decidability (a list holding the first l.length + 1 values of a sequence holds two at one place), the numbers other than a given one, splitting a joined list, a value put in front of a sequence, totals that agree pointwise, and the filters, searches and counts the census of a step and the count laws need.",
+      "zh": "诸线律所用的数与列表之引理，各于此（框架之下）证一次：无须可判定的鸽笼（持一序列前 l.length + 1 个值之列表在同一位持其二）、异于某一给定数之诸数、拆分相接之列表、置于序列之前的一值、逐点相同之总和，及步之清点与计数之律所需之筛、查与计。",
       "declarations": [
         "Becoming.GrammarLaws.length_insert",
         "Becoming.GrammarLaws.length_replicate",
@@ -63,12 +66,32 @@
         "Becoming.GrammarLaws.revisits_within",
         "Becoming.GrammarLaws.split_append",
         "Becoming.GrammarLaws.prepend",
-        "Becoming.GrammarLaws.total_congr"
+        "Becoming.GrammarLaws.total_congr",
+        "Becoming.GrammarLaws.keep",
+        "Becoming.GrammarLaws.keep_append",
+        "Becoming.GrammarLaws.keep_congr",
+        "Becoming.GrammarLaws.keep_all",
+        "Becoming.GrammarLaws.mem_keep",
+        "Becoming.GrammarLaws.any_false_mem",
+        "Becoming.GrammarLaws.any_split",
+        "Becoming.GrammarLaws.any_remove",
+        "Becoming.GrammarLaws.any_true_of_mem",
+        "Becoming.GrammarLaws.any_false_of",
+        "Becoming.GrammarLaws.mem_middle",
+        "Becoming.GrammarLaws.mem_of_removed",
+        "Becoming.GrammarLaws.distinct_removed",
+        "Becoming.GrammarLaws.not_eq_true_iff",
+        "Becoming.GrammarLaws.count_insert",
+        "Becoming.GrammarLaws.split_of_count_pos",
+        "Becoming.GrammarLaws.count_go",
+        "Becoming.GrammarLaws.count_eq_countP",
+        "Becoming.GrammarLaws.uncrossed_of_closed",
+        "Becoming.GrammarLaws.class_test_congr"
       ]
     },
     {
-      "en": "Balance at one step. A perfect pairing of two finite lists under a relation conserves count; under the one it is exactly equal count, and under the empty relation equal count gives none. Lists paired from what comes in (before, given) to what goes on (after, taken) have after + taken = before + given, and every four numbers with that equation are lengths of unit lists so paired under the one. Near-definitional.",
-      "zh": "一步之平衡：一关系下两有限列表之完全配对守其数；在「一」之下恰是等长，在空关系下等长不给配对。自所入（先前、所给）至所续（其后、所取）配对之列表有 后 + 取 = 先 + 给，凡合此式之四数皆为「一」下如此配对的单位列表之长。近乎定义。",
+      "en": "Balance at one step. A perfect pairing of two finite lists under a relation conserves count; under the one it is exactly equal count, and under the empty relation equal count gives none. Lists paired from what comes in (before, given) to what goes on (after, taken) have after + taken = before + given, and every four numbers with that equation are lengths of unit lists so paired under the one. Near-definitional. Counting a region's units (a region read as a test, a modelling choice), a pairing keeps the count on every region the relation does not cross, so on every region closed under it and its converse, closed one way not being enough; under a class decided by a test a pairing is exactly equal count in every class, and the class does work (equal count pairs under the one, not under sameness), so a pairing under continuation relative to such a class keeps the count in every class. The census of a step: units listed once before and after it, under a continuation fixing successors and predecessors, pair those before with those arising to those after with those ceasing, each pair a continuation or the same unit, and where the predecessors of the units after stand before and the successors of the units before stand after, arising and ceasing are beginning and ending. The listing and the test are supplied.",
+      "zh": "一步之平衡：一关系下两有限列表之完全配对守其数；在「一」之下恰是等长，在空关系下等长不给配对。自所入（先前、所给）至所续（其后、所取）配对之列表有 后 + 取 = 先 + 给，凡合此式之四数皆为「一」下如此配对的单位列表之长。近乎定义。计一域之单位（域读作一判别，此为建模之择），配对守其关系所不越之每一域之数，故守对关系及其逆皆封闭之每一域之数，单向封闭不足；在由一判别所定之类下，配对恰是每一类中等数，而类有其用（等长者在「一」下配对，在「静」下不配对），故相对于此类之续下之配对守每一类之数。一步之清点：一步前后各列一次之单位，在定后定前之续下，前者并所生者与后者并所亡者一一配对，每对或为续或为同一单位；后列诸单位之前者皆在前列、前列诸单位之后者皆在后列之处，所列之生与亡恰是生与亡。列表与判别皆为所给。",
       "declarations": [
         "Becoming.«对»",
         "Becoming.«对之长»",
@@ -79,7 +102,21 @@
         "Becoming.«对之左插»",
         "Becoming.«对则守数»",
         "Becoming.«守数当且仅当可对»",
-        "Becoming.«等长而不对之例»"
+        "Becoming.«等长而不对之例»",
+        "Becoming.«计»",
+        "Becoming.«对则不越域守数»",
+        "Becoming.«对则双闭域守数»",
+        "Becoming.«对而单闭域不守数之例»",
+        "Becoming.«类之对当且仅当类类等数»",
+        "Becoming.«续之对则类类等数»",
+        "Becoming.«一对而静不对之例»",
+        "Becoming.«定后定前则前并生对后并亡»",
+        "Becoming.«前者在前则所列生者生»",
+        "Becoming.«后者在后则所列亡者亡»",
+        "Becoming.GrammarLaws.arising",
+        "Becoming.GrammarLaws.ceasing",
+        "Becoming.GrammarLaws.census_pairs",
+        "Becoming.GrammarLaws.pair_of_class_counts"
       ]
     },
     {
@@ -251,8 +288,8 @@
       ]
     },
     {
-      "en": "Lumping. E goes alike under R (R˘;E;R ⊆ E) where E-alike places go to E-alike ones. With the successor fixed where E leads, constancy is exactly going alike with a successor available there; the global forms are corollaries. A class going alike lies in its core, going alike keeps lines of every length alike, and a map's image has a fixed successor exactly where sameness under the map goes alike. A map preserves a relation exactly where its image lies within the other.",
-      "zh": "归并：E 在 R 下同行（R˘;E;R ⊆ E），即 E 下相同者去往 E 下相同者。于 E 所至处定后，有常恰是同行而彼处有后可续；全局之形为推论。同行之类含于其核；同行使每一长度之线保持相同；映射之像定后，恰在其下之同同行。映射保一关系，恰当该关系沿之之像在另一关系之内。",
+      "en": "Lumping. E goes alike under R (R˘;E;R ⊆ E) where E-alike places go to E-alike ones. With the successor fixed where E leads, constancy is exactly going alike with a successor available there; the global forms are corollaries. With a successor everywhere, a class that goes alike inside a relation lies in the relation's core, and a class going alike in its own; with a fixed successor a class's core goes alike, so with both it is the coarsest class inside the class that does, and off a fixed successor it need not; going alike keeps lines of every length alike, and a map's image has a fixed successor exactly where sameness under the map goes alike. A map preserves a relation exactly where its image lies within the other.",
+      "zh": "归并：E 在 R 下同行（R˘;E;R ⊆ E），即 E 下相同者去往 E 下相同者。于 E 所至处定后，有常恰是同行而彼处有后可续；全局之形为推论。遍后，一关系内同行之类含于该关系之核，同行之类含于其己之核；定后，类之核同行，二者兼则为类内最粗之同行之类，后不定则未必；同行使每一长度之线保持相同；映射之像定后，恰在其下之同同行。映射保一关系，恰当该关系沿之之像在另一关系之内。",
       "declarations": [
         "Becoming.«同行»",
         "Becoming.«同行之逐点»",
@@ -264,6 +301,10 @@
         "Becoming.«局定后则有常当且仅当同行可续»",
         "Becoming.«同行当且仅当有常»",
         "Becoming.«类同行遍后则含于核»",
+        "Becoming.«定后则类之核同行»",
+        "Becoming.«遍后则其内同行之类含于核»",
+        "Becoming.«定后遍后则核为其内最粗同行之类»",
+        "Becoming.«后不定则核可不同行»",
         "Becoming.«同行之迭»",
         "Becoming.«同行于迭»",
         "Becoming.«像»",
@@ -380,12 +421,15 @@
         "Becoming.Withholding.chain_iff_steps",
         "Becoming.Withholding.waitsAll_closed",
         "Becoming.Withholding.within_iff_withinSteps",
+        "Becoming.WithinClosure.converse",
         "Becoming.WithinClosure.mono",
         "Becoming.WithinClosure.not_rel",
+        "Becoming.WithinClosure.of_reads",
         "Becoming.WithinClosure.of_rel",
         "Becoming.WithinClosure.refl",
         "Becoming.WithinClosure.symm",
         "Becoming.WithinClosure.trans",
+        "Becoming.WithinClosureOf.to_reads",
         "Becoming.WithinMoves.after_course",
         "Becoming.closedUnder_withinClosure",
         "Becoming.closure_iff_certified",
@@ -420,6 +464,10 @@
     {
       "en": "The bridges read each anchor at its model's relation: a process's steps, a law's map, what a level path or a listed course admits as a coreflexive relation, a flow's levels, takes and gives as lists of units, and an amount's no rise and least fall as steps.",
       "zh": "诸桥于其模型之关系上读每一锚：过程之步、律之映射、水平路径或所列进程之所纳（作为余自反关系）、流之水平与取给（作为单位列表）、量之不升与最小之降（作为步）。"
+    },
+    {
+      "en": "Counting reads a region, the class counted in and a continuation each as a test to Bool (a modelling choice; a proposition enters by decide), and the census of a step lists the units before and after once each.",
+      "zh": "计数读所计之域、所计之类与续各为取真假值之测（建模之择；命题经判定而入），一步之清点所列前后之单位各只一次。"
     }
   ],
   "does_not_show": [
@@ -446,8 +494,8 @@
       "witness": "Becoming.«止而不入之例»"
     },
     {
-      "en": "That a pairing under continuation adds anything to equal count, or the n-step law for lines of different lengths.",
-      "zh": "续之下之配对于等长之外有所增益，或不同长度之线的 n 步之律。",
+      "en": "That a pairing under continuation adds anything to equal count beyond what is now stated, the count on every region it does not cross and, under a class decided by a test, in every class; or the n-step law for lines of different lengths.",
+      "zh": "续之下之配对于等长之外、于今所述（其所不越之每一域守数，及一测所定之类下每一类守数）之外有所增益，或不同长度之线的 n 步之律。",
       "kind": "scope"
     },
     {
@@ -511,8 +559,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the Lean 4.29.1 checker (receipt 20261029T184601.050950Z): Becoming.GrammarLaws, 138 theorems in 162 declarations, 40 representation and bridge declarations in fourteen model modules, the derivations of OU3c, OU3e and OU3f in fourteen more and of HE in Mechanism, every axiom report empty, all cited; every changed module's statements print as before, but for the two relation laws moved into the grammar at any universe. Read-only AI reviews, every finding taken: three of OU3b, one each of OU3c to OU3e and HE, three of OU3f, three with a second pass; not reviewed by a person.",
-    "zh": "Lean 4.29.1 检查器实查（回执 20261029T184601.050950Z）：Becoming.GrammarLaws，162 项声明中 138 条定理，十四个模型模块中 40 项表示与桥接声明，另十四模块中 OU3c、OU3e、OU3f 之推导及 Mechanism 中 HE 之推导，公理报告皆空，本记录全引；诸改动模块之陈述所印如前，唯移入文法之二关系律推广至任一宇宙。只读 AI 审查，所见皆采：OU3b 三次，OU3c 至 OU3e 与 HE 各一次，OU3f 三次，其中三次复审一遍；未经人审。"
+    "en": "Lean 4.29.1 core run (receipt 20261031T054654.692180Z): Becoming.GrammarLaws, 175 theorems in 203 declarations; 40 representation and bridge declarations in 14 models; the derivations of OU3c, OU3e and OU3f in 14 more, of HE in Mechanism and of HE2 in Response and SelectionPool; every axiom report empty, all cited. Changed modules' statements as before but for OU3b's two relation laws at any universe, HE2's renames and one law widened. Read-only AI reviews, every finding taken: OU3b and OU3f three each, HE2 two, OU3c to OU3e and HE one each, three with a second pass; no person's review.",
+    "zh": "Lean 4.29.1（回执 20261031T054654.692180Z）：GrammarLaws 203 项声明中 175 条定理；十四模型 40 项表示桥接声明；另十四模块 OU3c、OU3e、OU3f 之推导，Mechanism 之 HE 与 Response、SelectionPool 之 HE2 推导；公理报告皆空，皆引。改动模块陈述如前，唯 OU3b 二关系律推至任一宇宙、HE2 改名与一律之设放宽。只读 AI 审查，所见皆采：OU3b、OU3f 各三，HE2 二，余各一，三项经复审；未经人审。"
   },
   "next_delta": {
     "en": "A derivation of balance where a model's balance is read under a relation other than the one, pairings composing along a supplied conditioning; the models' other central laws restated on the grammar; a converse of the law of rest with the step relations it compares and its logic stated; review by a person.",
@@ -831,9 +879,50 @@
         "Becoming.«齐则非杂»",
         "Becoming.«齐即谓»",
         "Becoming.kept_onward",
-        "Becoming.«保之像»"
+        "Becoming.«保之像»",
+        "Becoming.«所闭之逆»",
+        "Becoming.«借步之所闭在二所闭»",
+        "Becoming.«二所闭在借步之所闭»",
+        "Becoming.GrammarLaws.keep",
+        "Becoming.GrammarLaws.keep_append",
+        "Becoming.GrammarLaws.keep_congr",
+        "Becoming.GrammarLaws.keep_all",
+        "Becoming.GrammarLaws.mem_keep",
+        "Becoming.GrammarLaws.any_false_mem",
+        "Becoming.GrammarLaws.any_split",
+        "Becoming.GrammarLaws.any_remove",
+        "Becoming.GrammarLaws.any_true_of_mem",
+        "Becoming.GrammarLaws.any_false_of",
+        "Becoming.GrammarLaws.mem_middle",
+        "Becoming.GrammarLaws.mem_of_removed",
+        "Becoming.GrammarLaws.distinct_removed",
+        "Becoming.GrammarLaws.not_eq_true_iff",
+        "Becoming.GrammarLaws.count_insert",
+        "Becoming.GrammarLaws.split_of_count_pos",
+        "Becoming.GrammarLaws.count_go",
+        "Becoming.GrammarLaws.count_eq_countP",
+        "Becoming.GrammarLaws.uncrossed_of_closed",
+        "Becoming.GrammarLaws.class_test_congr",
+        "Becoming.«计»",
+        "Becoming.«对则不越域守数»",
+        "Becoming.«对则双闭域守数»",
+        "Becoming.«对而单闭域不守数之例»",
+        "Becoming.«类之对当且仅当类类等数»",
+        "Becoming.«续之对则类类等数»",
+        "Becoming.«一对而静不对之例»",
+        "Becoming.«定后定前则前并生对后并亡»",
+        "Becoming.«前者在前则所列生者生»",
+        "Becoming.«后者在后则所列亡者亡»",
+        "Becoming.GrammarLaws.arising",
+        "Becoming.GrammarLaws.ceasing",
+        "Becoming.GrammarLaws.census_pairs",
+        "Becoming.GrammarLaws.pair_of_class_counts",
+        "Becoming.«定后则类之核同行»",
+        "Becoming.«遍后则其内同行之类含于核»",
+        "Becoming.«定后遍后则核为其内最粗同行之类»",
+        "Becoming.«后不定则核可不同行»"
       ],
-      "sha256": "7ae07b1d9b7bc91f417cd2afa6f547b9b9671cac83321c00185222df11752163"
+      "sha256": "c0d3b94cd4f95b5602cd69be45b65f655010cfa4c279a259ba148e52b72a5f2d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
@@ -935,7 +1024,7 @@
         "Becoming.constant_of_goAlike",
         "Becoming.goAlike_of_constant"
       ],
-      "sha256": "b24f3482898c95886d483c1eeb868ccb7412459eafa24d0dce70646a3884d79f"
+      "sha256": "ef1c1a74433469f0d7fbe5dfcc2fed54ddecbeaf935ccb684afe481b306041bd"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
@@ -945,7 +1034,7 @@
         "Becoming.withinClosure_iff_reached",
         "Becoming.withinClosure_of_line"
       ],
-      "sha256": "12a3171a69cb11fdab9140c2dd20791eb2792e34f176fa83063b1104ea7f2919"
+      "sha256": "44c11fcbfb993b7b8b8c10d3e9d11647a1b554a7d8b66791281d4cfa7640b8fc"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
@@ -1126,7 +1215,7 @@
         "Becoming.Web.ByPassing.trace",
         "Becoming.Web.ByPassing.line_back"
       ],
-      "sha256": "83a965c7cb00e455d9f7ffabde6936934af58f084c974d1916c2a98d725167b9"
+      "sha256": "7b2322a0249ebfa1c75b298907ffe6f2948217ec42625a4d6a71428a770e9b9d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
@@ -1155,6 +1244,23 @@
         "Becoming.Web.line_lineage"
       ],
       "sha256": "9733fcf3858f3cd9b52cc1bd9e147cefc11dd6b6ea3ebcefb2f95f26d4212de4"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Response.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.WithinClosure.converse"
+      ],
+      "sha256": "4cde6ed0d047d5bfbb031bed6c65ea04492d29327780a564eb9e68adfdffcaf8"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.WithinClosure.of_reads",
+        "Becoming.WithinClosureOf.to_reads"
+      ],
+      "sha256": "4c6bb2cdd4d71fc30e59def6c5e1493e6f0e5b5b5b13e36eb0e2d5ec0c7906d0"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
@@ -1342,12 +1448,38 @@
       "role": "receipt",
       "sha256": "37b752112e19d77ba717f771c6057c5516c1ec47ff247889baeb36374104db54",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "role": "receipt",
+      "sha256": "a5cb4731b0f3b56beb3a500867a344c56542b5091315b81fcd6184adbd46c4ad",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rv21-one-sense/NOTE.md",
+      "role": "integration",
+      "sha256": "830c17418ddbcfd0267199e8de60bfe6cba1a56e98da15a09f097400e316fcb1"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rv21-one-sense/review/REVIEW-HE2-KIT.md",
+      "role": "review",
+      "sha256": "da5090ad9a150d8a52f844b1952d704f6c496f2d002518a781428ac58c35c832"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he2-held-edits/DESIGN.md",
+      "role": "integration",
+      "sha256": "4956539bf819878939791d88102a406931dbd7823025d93369cfb5fbe249af64"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he2-held-edits/review/REVIEW-HE2.md",
+      "role": "review",
+      "sha256": "6fa1a390da3a57be93c12c61c2872bb4bfe1e91902d76bc50c44cefb6ec913ba"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarLaws",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1396,14 +1528,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarRegularity.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarRegularity",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1529,7 +1661,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.PatternPassing",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1545,6 +1677,20 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T162632.074811Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Identity",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Response.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Response",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SelectionPool",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -1585,6 +1731,10 @@
     {
       "en": "30 October 2026 (HE, study section 455): kept_onward moved to its home beside «线则所闭» in GrammarLaws, and Becoming.KeptOnward went to the Lean history folder with its bytes (research.py move, batch HE-history); «保之像» moved from GrammarTransport to beside «像» in GrammarLaws, and Mechanism's factors_image and Image.least are proved as its cases, statements and names unchanged; GrammarLaws' module doc says the lineage laws are proved from the laws of steps.",
       "zh": "2026年10月30日（HE，研究第 455 节）：kept_onward 移至其所居，GrammarLaws 中「线则所闭」之旁，Becoming.KeptOnward 连其字节移入 Lean 历史目录（research.py move，批次 HE-history）；「保之像」自 GrammarTransport 移至 GrammarLaws 中「像」之旁，Mechanism 之 factors_image 与 Image.least 证为其例，陈述与名不变；GrammarLaws 之模块说明言谱系诸律由计步之律证出。"
+    },
+    {
+      "en": "31 October 2026, board item HE2 (study section 474). Items 2 to 4: the closure law gains «所闭之逆» and the two laws of a closure through borrowed steps («借步之所闭在二所闭», «二所闭在借步之所闭»), which Response's WithinClosure.converse and SelectionPool's WithinClosure.of_reads and WithinClosureOf.to_reads are now proved as; balance at one step gains counting on a region («计»), the count kept where the relation does not cross, the count law of a class, what a pairing under continuation adds to equal count and the census of a step, with two witnesses (U4's lever 1, checked outside the package before); the list lemmas gain the helpers these use; the models' laws proved from these gain the three model lemmas, with Response.lean and SelectionPool.lean as proof sources. Item 6: the lumping law gains four laws on a class's core and going alike in GrammarLaws («定后则类之核同行», «遍后则其内同行之类含于核», «定后遍后则核为其内最粗同行之类», and the witness «后不定则核可不同行»), the composition 01 §4 states under \"The core and 理\", checked outside the package before; and a correction: the clause \"a class going alike lies in its core\" was false without the successor everywhere that «类同行遍后则含于核» takes, and now carries it. The landing: the validation scope gives HE2's receipt and GrammarLaws' counts, every declaration cited; the does-not-show item on a pairing under continuation is narrowed to what is not stated, as GrammarLaws' module doc is; a hypothesis names what counting reads as a test to Bool and the census's lists without repeats; the balance law's last sentence no longer says the pairing is supplied, since the census constructs its own; the home section, 01 §7, now states the closure and balance laws items 2 to 4 add; HE2's design, review and receipt are referenced. No other law changes.",
+      "zh": "2026年10月31日，工作板条目 HE2（研究第 474 节）。第 2 至 4 项：闭包之律增入 «所闭之逆» 及借步之闭包二律（«借步之所闭在二所闭»、«二所闭在借步之所闭»），Response 之 WithinClosure.converse 与 SelectionPool 之 WithinClosure.of_reads、WithinClosureOf.to_reads 今即由之证出；一步之平衡增入计一域之数（«计»）、关系所不越之域守数、类之数律、续下配对于等数之所增与一步之清点，并二见证（U4 之第一杠杆，此前在包外核验）；列表引理增入其所用之辅助；由此证出之诸模型之律增入此三模型引理，以 Response.lean 与 SelectionPool.lean 为证明来源。第 6 项：归并之律增入 GrammarLaws 中言类之核与同行之四律（«定后则类之核同行»、«遍后则其内同行之类含于核»、«定后遍后则核为其内最粗同行之类»，及见证 «后不定则核可不同行»），即第一章 §4「核与理」所述之组合，此前在包外核验；并更正：「同行之类含于其核」一句无「类同行遍后则含于核」所设之遍后则不真，今带之。落地：验证范围言 HE2 之回执与 GrammarLaws 之数，声明皆引；续下配对之「未示」一项收窄至未述者，如 GrammarLaws 之模块说明；增一前提，言计数所读之取真假值之测与一步之清点所列无重；平衡之律末句不再言配对为所给，因清点自造其配对；其所在之节第一章 §7 今述第 2 至 4 项所增之闭包与平衡之律；HE2 之设计、审查与回执已引。其余之律不变。"
     }
   ]
 }

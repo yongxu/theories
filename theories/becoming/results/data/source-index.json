@@ -151,6 +151,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LimitVerification.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Listing.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LoopReturn.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Loops.lean",
@@ -527,6 +528,7 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/REVIEW-GW126-LEAN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he-held-edits/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he-held-edits/review/REVIEW-HE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he2-held-edits/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/iv3-dependence/REVIEW-PF2.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/REVIEW-LA4-FORMAL.md",
@@ -657,6 +659,9 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-COLDREAD.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-LEAN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-COLDREAD.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/build_passages.py",
@@ -1788,6 +1793,27 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md": {
+      "title": "The review of `Becoming.ListingValuation`",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/BRIEF.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/logs/build-1.log",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/logs/build-2.log",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/logs/build-3.log",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/logs/build-4.log",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/logs/build-5.log",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/tree/Becoming/ListingValuation.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Loops.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regulation.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T134037.582088Z/verification.json"
+      ]
+    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md": {
       "title": "RF round 2: the review of the Lean, and what was taken",
       "local_links": [
@@ -2445,6 +2471,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListedWebs.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Listing.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingRefutations.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LocalUnits.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LoopReturn.lean",
@@ -2718,6 +2745,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LevelCoupling.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Listing.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Loops.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean",
@@ -4985,7 +5013,6 @@
     "theories/becoming/chapters/01-ROOT.md": {
       "title": "The root: continuation relative to a class",
       "local_links": [
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rv21-one-sense/review/CoreAndLi.lean",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue14-the-present/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue15-reorderings-as-growth/NOTE.md",
@@ -5238,7 +5265,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Settling.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tail.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T232750.486801Z/verification.json",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedContraction.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean",

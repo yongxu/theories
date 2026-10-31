@@ -873,3 +873,435 @@ Your cold read found eight points; three lenses (exactness, readings, fit) found
 - REVIEW-RFM2-LEAN's updated rows (A6, A9, E7, F10), its re-check row 9 and its opening.
 Report a one-line verdict, then only what is not taken correctly or is new, each with location, quote, problem and replacement; check that a replacement for a record field fits its cap in tools/research/style.py.
 ```
+
+## Round 2, third part
+
+### The review of the design (piped to `cx -m astra -e high --sandboxed --fresh`, in a rehearsal of main with RF-M.2 integrated and the draft at its root as `RFM3-DESIGN.md`)
+
+```text
+You are reviewing, read-only, a design for new formal results in this repository (do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine). Read AGENTS.md first: the theory's method (one relational unfolding, no separate subject; structural names; the pure core imports only Lean's Init and every axiom report is empty).
+
+The design is RFM3-DESIGN.md at the checkout root, to become §4.8 of _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md ("Round 2, third part: the valuation as state; informing and shaping"). Read the plan's §4.7 (RF-M.2, built, and RF-M.3's paragraph, the redesign this design carries out) and the review of the second part's design, evidence/REVIEW-RFM2.md in the same folder (its findings 11 to 17 are what this design answers). It builds on Lean in experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/: HeldForReading.lean (RF-M.2, integrated in this checkout, not yet landed: Model, after, committed, shifted, byRule, byReading, shortfall, goExcess, offExcess, after_add_shortfall, shortfall_through, leastThrough, least_through, least_zero_iff, finer_least_le, through_threshold_iff, goExcessWithin, offExcessWithin, after_offset), Blanket.lean (Blanketed, Parts, step, course, agent_through_sensory), ReadingLoop.lean (Loop, the Untested witness with model_or_order and informed_turns), Learning.lean (Lumped). The records are theories/becoming/results/records/*.json (grep them).
+
+Review the design as a second opinion, before any Lean is written:
+1. Novelty on the spine. Is any law already stated in the package or the records (in particular in HeldForReading, ReadingLoop's Untested, ClosedCapture, RuleCapture, DrawnShaping, ReadInTime, ReadStages)? Name the declaration and say what would be reproved.
+2. Exactness. Is each stated law true as stated, with its hypotheses complete? In particular: item 2's split (the term for each cell, what "decides the cell against the least rule" means at ties, cells listed but holding no listed candidate); item 3's agreement condition (net agreement per candidate; whether a common positive scale, or weaker, suffices; the reading formation's weights and listing equal to the holding formation's); item 4 (the finer map's hypotheses, and whether informing can still lower the worth where the weights differ but the valuation agrees); the numbers of items 5, 8 and 13 (check them); item 6's "lower exactly where"; item 7 (what "costs nothing through disagreement" says and does not); item 12's two halves (what the answer after a demonstration is on the holding formation's candidate worlds; whether "unshown" needs the start state not to depend on the world); item 10's carrier on Blanketed (whether the internal part can be the reading formation's listing and valuation with the update reading only the internal and sensory parts; the delays; the holding formation's state in the external part reading the answer); item 14 against the review's finding 15 (equal whole answer sequences and endpoints, different route properties, differing starts; whether the route property is defined independently of the endpoint).
+3. The literature. Are the attributions right: Blackwell (1953); Kamenica and Gentzkow (2011) on Bayesian persuasion (the convexity condition for full disclosure, and whether a sender whose preferences coincide with the receiver's discloses fully); Crawford and Sobel (1982); Everitt, Hutter, Kumar and Krakovna (2021) on current-reward-function evaluation; Farquhar, Carey and Everitt (2022) on path-specific objectives; Carroll, Dragan, Russell and Hadfield-Menell (2022) on induced preference shifts; Hadfield-Menell, Dragan, Abbeel and Russell (2017) on the off-switch game. Say what is misread or misattributed, with the source's own statement where you can.
+4. Strength and purpose. The purpose is a checkable account that alignment researchers and readers of coordination can use: what informing and shaping another formation do to the worth of deferring to its reading. Is there a stronger or more useful law in reach on these structures (for example: an exact condition on the valuation for informing never to lower the worth, over every refinement; the holding formation's choice among informing, shaping, holding and the two moves by the worth law, as a witness or a law; an iff for when withholding is worth more)? Is anything a wrapper or near-definitional result presented as more?
+5. Names and framing. Is InformingShaping structural and exact? Are "reading formation", "holding formation", "measure", "valuation", "disagreement" right, or does any presuppose separate entities in a way the method forbids, and how should it be reconstructed?
+
+Report numbered findings. For each: location (item number or line), the problem, and a replacement (text for the design, or a corrected statement of the law). Mark each finding confirmed by a check you ran, or a judgment. End with a one-paragraph verdict: which items to build as designed, which to change, which to drop.
+```
+
+### The review of `Becoming.ListingValuation` (piped to `cx -m astra -e high --sandboxed --fresh`, in the landing worktree at the kit's commit `801f74681`)
+
+```text
+You are reviewing, read-only, a new Lean 4 module in this repository (do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine). Read AGENTS.md first for the method, the naming rule and the pure core's requirements.
+
+The module: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/tree/Becoming/ListingValuation.lean, scratch-built with Lean 4.29.1 against this checkout's package (experiments/integrated-correction/general-framework/generative-basis/lean/becoming/): 105 theorems in 145 declarations, every axiom report empty, no warnings (log kit/round2c/logs/build-1.log; the audit driver kit/round2c/tree/.build/BecomingListingValuationAxiomAudit.lean is present though ignored by git). It imports Becoming.HeldForReading (landed on main as 03 §12's law r-what-holding-for-a-reading-is-worth, record theories/becoming/results/records/what-holding-for-a-reading-is-worth.json) and, through it, Becoming.ReadingLoop, Becoming.Blanket and Becoming.Learning; it reuses Becoming.total with its lemmas (Flow.lean's Totals section, Population.lean's total_congr_on, Dissipation.lean's total_eq_zero) and the Prelude's axiom-free arithmetic.
+
+It implements the plan's §4.8, RF-M.3 (_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md), designed after your own review of the design's first draft: evidence/REVIEW-RFM3.md in the same folder, with a table saying where each of its 25 findings went.
+
+Review it as a second opinion:
+1. For each row of REVIEW-RFM3's table, is the finding taken in the Lean and in the module's header as the row says? Does the module meet §4.8's items 1 to 21 (statement by statement), and where it departs (a statement narrowed, widened or split, a helper added), is the departure right?
+2. Exactness. Compare every docstring and every sentence of the module's header with the Lean statement it cites: dropped or superfluous hypotheses (cells listed once and covering; factoring on which listing; positive weight; the reading formation's model the holding formation's or not), "exactly" where one direction is proved, conclusions stronger than proved, and the Standing paragraph's labels. In particular: shortfall_split and the residual's criteria (ties, unweighted cells, truncated subtraction); answer_residual_zero_iff and the two sufficient conditions; told_residual_zero_iff and weightOf (a listing that repeats a candidate); informed_le (the coarse map's cells: are any hypotheses on them needed, or superfluous?); the definition SplitsKeep and refining_never_lowers_iff (is SplitsKeep the right condition, stated at the right generality, is the universally quantified side the property §4.8 item 6 describes, is the iff a genuine criterion or vacuous on some class of models); withhold_iff and withhold_through_iff; revalued_split, own_least, revalued_lowers_iff, outcome_least and revaluing_gains_iff (which model and which reference each uses); const_worth and the three witnesses of Part 1 (do the numbers in the docstrings match the statements). Do the names state exactly what the statements mean, in the repository's structural vocabulary?
+3. The carrier (Part 2). Is `joint` a faithful Blanket.Blanketed law for what §4.8 items 16 to 19 describe: the four maps, the timing of an act sensed, taken in and read, the answer read from the updated state, the world unchanged? Do internal_step, active_step, sensory_step, external_step, active_answer, world_fixed, through_sensed (an instance of Blanketed.agent_through_sensory), updates_commute, answer_shown, inputs_alike and answer_constant state what their docstrings say, and is any conclusion an artifact of the construction (for example of `asked` and `hold` carrying nothing, or of the Holder reading only the answer)?
+4. The witnesses Routes (§4.8 items 20 and 21): do shown_turns, presented_turns, shown_removes_least and presented_removes_residual show the four cases as stated (the step at which each answer is read, which intervention turns which start); do routes_alike, changed_apart and not_lumped show that the answers and the final reading state do not determine whether the valuation changed, without an artifact (the record's definition, the bound T ≥ 2, the starts differing)?
+5. Reuse. Does the module reprove anything the package already has (list totals compared item by item, totals split by cells, cancellation and subtraction lemmas, filter lemmas, Bool case lemmas)? Name the declaration to reuse with its file:line, and check that it has an empty axiom report.
+6. The literature claims in the header's Standing and Readings paragraphs: Blackwell (1953); Kamenica and Gentzkow (2011); Crawford and Sobel (1982); Everitt, Hutter, Kumar and Krakovna (2021); Farquhar, Carey and Everitt (2022); Hadfield-Menell, Dragan, Abbeel and Russell (2017), Theorem 1 and Remark 1; Carroll, Dragan, Russell and Hadfield-Menell (2022). Is each correspondence fair and no stronger than the Lean and the paper support?
+7. Strength. Is a stronger or more useful statement in reach on these definitions for readers of alignment (assistance, informing a principal, preference change) and of coordination in institutions and networks, worth adding before landing? Is anything presented as more than it is?
+
+Report numbered findings. For each: location (file:line), the problem, and a replacement (Lean or text). Mark each confirmed by a check you ran, or a judgment. End with a one-paragraph verdict.
+```
+
+### The three-lens review of `Becoming.ListingValuation` (a workflow of Opus readers, beside the cross-model reader)
+
+Three readers, one lens each, given a common preamble and their lens, each asked to number its findings with the lens's letter; then one verifier per lens, given all of that lens's findings to refute. The proofs themselves were filled before these reviews by four Opus provers, one per group of declarations, from a skeleton whose statements they could not change; each built and audited its group in its own scratch tree.
+
+The common preamble:
+
+```text
+You are an independent, adversarial reviewer of one Lean 4 module in a theory repository. Work read-only: read files and run read-only shell commands only; do not edit, create, commit, render, run make or build Lean. The module builds in the repository's pure core (Lean 4.29.1) with every axiom report empty and no warnings: 105 theorems in 145 declarations. Do not try to build it. The working directory is the checkout /Users/ren/theories/.claude/worktrees/rf-landing; paths below are relative to it.
+
+The module: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/tree/Becoming/ListingValuation.lean.
+It imports Becoming.HeldForReading (experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean, landed: chapter 3 section 12's law "what holding an act for a reading is worth", record theories/becoming/results/records/what-holding-for-a-reading-is-worth.json) and through it Becoming.ReadingLoop, Becoming.Blanket and Becoming.Learning, and uses Becoming.total with its lemmas from Prelude.lean, Flow.lean, Population.lean and Dissipation.lean in experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/. The plan that asked for it: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md, section 4.8 (RF-M.3, items 1 to 21). The cross-model review of the design's first draft, with a table saying where each finding went: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3.md.
+
+The module states, in natural-number counts on HeldForReading's models: the answer of a reading formation reading through a map by its own model and valuation; the split of any rule's shortfall (against a supplied reference valuation on the holding formation's model) into the least shortfall through the map and a residual, with exact criteria for the residual and for the answer's residual; informing (a finer map) and an exact criterion over every refinement (SplitsKeep); withholding against informing; revaluing (the answer by another valuation); answers constant over the listing; and witnesses. Then a carrier: one Blanket.Blanketed law whose internal part is the reading formation's listing and valuation state, with laws of timing, sensory dependence, the answer when shown and courses alike; and witnesses Routes of four cases and two routes not told apart by their answers and final state. Report only what you can point to in the files, with file:line locations and exact quotes. Severity: high (a claim the Lean does not prove, or a wrong or vacuous theorem), medium (a dropped hypothesis, an overstated reading, a reproved package lemma, a statement the header promises and the Lean lacks), low (wording or naming). Give a concrete replacement (Lean or text) for each finding, most severe first.
+```
+
+The exactness lens (findings E1, E2, …):
+
+```text
+Your lens: exactness of prose against statements, and the arithmetic. For every theorem and definition, compare its docstring, and every sentence of the module header (its bullets and its Standing, Readings, Modelling choices and Not in this module paragraphs) that cites it, with the Lean statement: hypotheses dropped or superfluous (cells listed once and covering; factoring on which listing; positive weight; the reading formation's model the holding formation's or not; net or scaled agreement where), quantifiers changed, "exactly" where only one direction is proved, conclusions stated more strongly than proved. Check the arithmetic: truncated subtraction in residual and its criteria; ties (the answer releases at ties, leastThrough stops at ties); candidates and cells of zero weight; a listing that repeats a candidate (weightOf); that SplitsKeep says what refining_never_lowers_iff's docstring and the header say, and that its two sides are not vacuous; that withhold_iff's amounts are in the units of the weighted totals; that every number in the witnesses' docstrings (scales_by_candidate, unweighted_told, Informing, Weights, no_order_across, Revaluing, Routes) matches the statement proved. Check the carrier's timing claims (an act emitted at t is sensed at t + 1, taken into the state and the answer at t + 2, read at t + 3) against joint and the step lemmas. Names must be structural and exact in the repository's vocabulary: flag dualist, social or financial words in Lean names and in prose (AGENTS.md, Proof and naming).
+```
+
+The sources lens (L1, L2, …):
+
+```text
+Your lens: the labelled readings and the literature. Check every attribution and correspondence in the header's Standing and Readings paragraphs and the docstrings against the works: Blackwell (1953), Equivalent comparisons of experiments; Kamenica and Gentzkow (2011), Bayesian persuasion; Crawford and Sobel (1982), Strategic information transmission; Everitt, Hutter, Kumar and Krakovna (2021), Reward tampering problems and solutions in reinforcement learning (current-reward-function evaluation); Farquhar, Carey and Everitt (2022), Path-specific objectives for safer agent incentives; Hadfield-Menell, Dragan, Abbeel and Russell (2017), The off-switch game, its Theorem 1 and Remark 1; Carroll, Dragan, Russell and Hadfield-Menell (2022), Estimating and penalizing induced preference shifts in recommender systems. Read the papers on the web where your tools allow it (load a fetch or search tool with ToolSearch if one is deferred); otherwise use your knowledge, and where unsure of a detail say so rather than assert it. For each correspondence: is it fair; does the module claim more or less than the paper proves; are the stated differences (no sender commitment or equilibrium, no cheap-talk equilibrium, an analogy of evaluation only, no path-specific objective constructed, no criterion of legitimate change) accurate and sufficient; is any reading presented as a theorem? Also check that the readings stay labelled readings and keep the repository's method (AGENTS.md: one relational unfolding first; the reading and the holding formation as roles in one law told apart by paths of sensing and control, not separate entities presupposed; no dualist words such as "agent", "user", "manipulation" used as if defined).
+```
+
+The structure lens (F1, F2, …):
+
+```text
+Your lens: structure, reuse, fit and strength. (1) Reuse: does the module reprove anything the package already has? Search experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/*.lean (HeldForReading.lean first) for totals split by cells or by a Boolean, totals compared item by item or strictly, filter lemmas, cancellation and subtraction lemmas (core forms without propext), products with a positive factor, Bool case lemmas; name each declaration to reuse with its file:line, and check its axiom report is empty (its proof uses no propext, Quot.sound or Classical.choice, including through omega, simp or funext). (2) Fit: is each row of REVIEW-RFM3.md's table taken in the Lean and in the module's account as the row says; does the module meet PLAN.md section 4.8 items 1 to 21, and where it departs (a statement narrowed, widened or split, a helper added, a hypothesis dropped), is the departure right; is joint a faithful Blanket.Blanketed law for items 16 to 19, and is through_sensed a correct instance of Blanketed.agent_through_sensory; is not_lumped a correct use of Learning.Lumped? (3) Strength: is a stronger or more useful statement in reach on the same definitions, worth adding before landing (for example: refining_never_lowers_iff specialized to a shared model and net agreement; a strict form of informed_le; the demonstration's effect on the least shortfall stated for every listing, joining answer_shown with finer_least_le; withhold_through_iff with the answer's residual zero)? Give the statement and a proof sketch for each, in priority order.
+```
+
+The verifier, for each lens's findings (followed by the findings as JSON, each with its id, severity, location, quote, problem and replacement):
+
+```text
+You are an adversarial verifier. Work read-only: read files and run read-only shell commands only; no edits, no builds. The working directory is the checkout /Users/ren/theories/.claude/worktrees/rf-landing. A reviewer reported the findings below on the Lean module _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/tree/Becoming/ListingValuation.lean (the package is experiments/integrated-correction/general-framework/generative-basis/lean/becoming/; PLAN.md and evidence/REVIEW-RFM3.md are in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/). For each finding, try to refute it against the module's actual text and Lean statements and the files it cites. A finding is real only if the quoted text exists at or near the location and the problem holds against the Lean as written. A claimed reuse is real only if the named declaration exists, states what is needed, and has an empty axiom report (no propext, Quot.sound or Classical.choice: check its proof and what it uses). A suggested strengthening is real only if the stronger statement is true on these definitions and provable without axioms. A literature point is real only if you can confirm it; otherwise say it is unconfirmed. Default to real=false if you cannot confirm. For each finding give its id, real, your reason in two or three sentences, and, where the proposed replacement is wrong or could be better, a better replacement (else an empty string).
+```
+
+### The re-check of `Becoming.ListingValuation` (the cross-model reader's session continued, `cx -r`, read-only, in the landing worktree at the kit's commit `4843dd795`)
+
+```text
+The module you reviewed has been revised on your fifteen findings and on three further review lenses
+(exactness, structure, literature), each verified. The revised file is
+
+_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/tree/Becoming/ListingValuation.lean
+
+(commit 4843dd795; the version you reviewed is at commit 801f74681, so `git diff 801f74681 4843dd795 -- <that path>` shows every change). It builds against the package with every axiom report empty (129 theorems in 177 declarations, kit logs/build-2.log).
+
+Please do two things, reading the file and the diff yourself.
+
+1. For each of your fifteen findings, say whether the revision resolves it: resolved, partly, or not, with one line of reason. Where it is partly or not, give the exact replacement text or Lean you would want.
+
+2. Review what is new or changed for exactness: every docstring and header sentence must say exactly what its Lean states, no more and no other; every literature sentence in the Readings must be accurate to the cited paper (Kamenica and Gentzkow 2011; Crawford and Sobel 1982; Everitt, Hutter, Kumar and Krakovna 2021, Claims 2 and 3; Farquhar, Carey and Everitt 2022; Hadfield-Menell, Dragan, Abbeel and Russell 2017, Equation 1, Theorem 1, Remark 1; Carroll, Dragan, Russell and Hadfield-Menell 2022; Alonso and Câmara 2016; Blackwell 1953). New declarations include residual_pos_of_gains, revaluing_gain, informed_le_add_residual, refined_lt_iff, add_lt_iff_sub_add_lt, forgone_least_iff, splitsKeep_of_net, splitsKeep_of_off_le_go, release_keeps, OneListing.refined_lowers, WeightsApart.weights_split, WeightsApart.not_splitsKeep, shown_split, shown_never_lowers, timing, inputs_alike_before, undemonstrated_alike, undemonstrated_worth, presented_forgone_lt_iff, revalued_forgone_lt_iff, TwoWorlds.route_answers, TwoWorlds.starts_apart, TwoWorlds.lumped_with_start, TwoWorlds.orders_apart.
+
+Report each finding as: id, severity (high/medium/low), file:line, a short quote, the problem, and the exact replacement. Only real problems; say "none" where there are none. Do not edit any file.
+```
+
+### The check of how the lenses' findings were taken (a workflow of three Opus readers, one per lens, read-only)
+
+Each reader was given its lens's findings with the verifier's verdicts as JSON (the lens named in the prompt as exactness, structure or sources), the reviewed commit and the working file:
+
+```text
+You are checking, read-only, how a set of review findings is reflected in a revised Lean module. Do not edit any file and do not run Lean or any build.
+
+The module is Becoming.ListingValuation, a pure-core Lean 4 module in the repository at the landing worktree. The version that was reviewed is at commit 801f74681; read it with `git show 801f74681:<the kit path>`. The revised version is the working file (read it directly; it differs from commit 4843dd795 only in prose). `git diff 801f74681 -- <the kit path>` shows every change since the review, the working file included.
+
+The findings are those of the <lens> lens, in a JSON file: each has an id, a severity, a location and quote in the reviewed version, the problem, a proposed replacement, and a verifier's verdict (real or not, with its reason).
+
+For every finding, in id order, judge from the files alone how the revised module reflects it:
+- taken: the revised module does what the finding asked, or fixes the problem another way that removes it (say which);
+- taken in part: part of the problem remains (say exactly what, in gap);
+- not taken: the problem remains as reviewed;
+- superseded: the place no longer exists or the finding no longer applies, for a reason you state.
+For a finding the verifier judged not real, report its verdict as "not real" and say whether the module changed at that place anyway. Check the Lean statements themselves, not only the prose: where a finding asked for a new law, find it and say whether its statement does what was asked; where it asked for a hypothesis to be named, check the docstring and header say it. Be exact and skeptical: a renamed declaration whose docstring still overstates is "taken in part". Quote at most a few words of the module where it helps. Return one row per finding.
+```
+
+### The check of the delta after the taken check (the cross-model reader's session continued, `cx -r`, read-only, in the landing worktree with the delta uncommitted)
+
+```text
+Read-only check, continuing your re-check of `Becoming.ListingValuation` (the kit module at
+_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/tree/Becoming/ListingValuation.lean).
+
+Since your re-check, a check of how the three lenses' findings were taken found seven taken only in part. The module now:
+
+1. Adds `unweighted_released` and `weighed_stops_iff` (the two `have`s of `told_residual_zero_iff`, factored) and
+   `told_shortfall_zero_iff` (the shortfall form with no cell list), lens finding F9.
+2. Adds `least_falls` (through a refinement the least shortfall never rises; `refined_lt_iff` now uses it),
+   `informed_lt_iff` (the strict form of `informed_le`), F17, and `coarser_not_above` (with both answers least,
+   through a refinement, the coarser answer forgoing no less never stands above the finer), F20.
+3. Adds `shown_least_le` and the course forms `TwoWorlds.shown_course` and `TwoWorlds.presented_course`, F8.
+4. Cites `undemonstrated_worth` beside `answer_constant` in the off-switch Readings, F4.
+5. Retitles the docstrings of `refined_lt_iff` and `forgone_least_iff` and the header bullet structurally,
+   the reading marked, L13.
+6. Keeps your R2: the clause calling `answer_constant` failed effectiveness stays withdrawn (lens finding L8 asked
+   for it; your counterexample stands).
+
+The diff against the commit you re-checked is at
+/private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/rfm3-lv-delta.diff.
+The module builds: 138 theorems in 186 declarations, every axiom report empty, no warnings.
+
+Check only the delta: does each new statement say what its docstring and the header say it says (hypotheses,
+direction, which formation's model, which amounts)? Is any new claim in the header, the Standing or the Readings
+stronger than the Lean? Is the course-form arithmetic right? Report findings as a numbered list with severity,
+location, the problem and an exact replacement; say plainly if there are none. Do not edit any file.
+```
+
+### The cold read of RF-M.3's texts (piped to `cx -m astra -e high --sandboxed --fresh`, run in a rehearsal of main with RF-M.3's module and texts integrated; and a workflow of three Opus readers, one per lens, each lens's findings given to one refuter)
+
+The cross-model reader's cold read, on the rehearsal with the kit at `07a24e169`:
+
+```text
+Cold read, read-only, in <a rehearsal of main with RF-M.3 integrated> (a scratch copy of the repository with RF-M.3's module and texts integrated; do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine).
+
+Context. This repository develops one theory with a pure Lean core. Board item RF, round 2, third part, RF-M.3 adds one Lean module, reviewed on the code by a cross-model reader and through three lenses (each lens's findings judged by a verifier), and re-checked: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean (Becoming.ListingValuation, a core leaf, 138 theorems in 186 declarations, every axiom report empty; it imports HeldForReading.lean). In natural-number counts it states the answer of a reading formation reading through a map by its own model and valuation; the split of any rule's shortfall, by a supplied reference on a holding formation's model, into the least shortfall through the map and a residual, with exact criteria (for the answer, told the candidate, and over every refinement); informing (a finer map) and revaluing, with their thresholds against amounts forgone and witnesses; and, on one blanketed law carrying the reading formation's listing and valuation, informing and revaluing executed, with two routes from different starts whose answers and final state do not determine whether the valuation changed.
+
+The texts, integrated in <a rehearsal of main with RF-M.3 integrated> (paths relative to it):
+1. theories/becoming/chapters/03-KNOWING.md: section 12's opening paragraph (its sentence ending "and what informing the reading formation and revaluing it do to that worth."), the new theorem paragraph at anchor r-a-reading-informed-and-revalued with its Reading paragraph (just before the anchor does-not-show), the pointer added to the acts-alike reading ("and informing and revaluing as acts within one law [another]"), and the Open bullet beginning "Formations that read, beyond".
+2. theories/becoming/chapters/07-SIGNIFICANCE.md: section 7's sentences beginning "The reading that gives the stop can itself be moved".
+3. theories/becoming/chapters/08-METHOD.md: section 8's known-results bullet on a reading informed and revalued.
+4. theories/becoming/THE-THEORY-OF-BECOMING.md: section 3's paragraph on informing and revaluing, after the paragraph on holding for a reading.
+5. theories/becoming/review/ALIGNMENT.md: the box "What the theory does not address" (its bullet on assistance games), the paragraph on RF's rounds (its sentences on RF-M.3), and the account of how the dossier was made (its entry on RF-M.3's sentences).
+6. The package: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean (the L1 bullet for Becoming.ListingValuation, and HeldForReading's bullet, now imported by it), README.md and README.zh.md in the same folder (the Becoming.ListingValuation rows), check_becoming.py there (the scope sentence beginning "ListingValuation:").
+7. The module's own header (its opening, bullets, Standing, Readings, Modelling choices and Not in this module) and docstrings.
+8. The record's texts, in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py: the record a-reading-informed-and-revalued (title, statement, the 37 law items, hypotheses, does_not_show, counterexamples, validation, next_delta, correspondence, aliases, dependencies, related) and the amendments to related records (AMEND), English and Chinese.
+9. The study section template _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/study_rfm3.txt ({N}, {RECEIPT}, (LISTINGVALUATION), {REVIEWS} and {COLDREAD} are filled at landing).
+10. _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md: section 4.8 (its opening, Part 1's items 1 to 15, Part 2's items 16 to 21, Standing, Readings, Modelling choices, Not in this part), section 12's order, section 13's paragraphs on the third part's design review and on the reviews of its Lean, and the Evidence list.
+11. theories/becoming/results/data/regions.json: the entries a-reading-informed-and-revalued and Becoming.ListingValuation.
+12. The evidence of the Lean's reviews, _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md: its opening (what was verified, and how), and the three tables of what was taken (from the first review and the lenses, from the re-check, and from the check of the delta): does each row's 'how' match the module, the record script, the plan and the texts as they now stand? The reviews themselves are verbatim and not to be judged.
+
+Repository rules that bear on the texts (from AGENTS.md): claims say exactly what the Lean proves (hypotheses, direction, strictness, ties); names are structural and exact, with no dualist, social or financial words beyond the roles the plan adopts (the reading formation and the holding formation, told apart by the paths of sensing and control); AI readings are labelled as readings and never presented as theorems; no ethical premise enters here; each live document is in one language, Chinese editions separate; repository-relative links.
+
+Check each text against the Lean: hypotheses (the reading formation's model the holding formation's or not; agreement in net or on one positive scale at listed candidates of positive weight; cells listed once each and covering which listing; factoring on which listings; equality of cells decidable; the shared start of two courses and what differs), directions, strictness and ties (the answer releases at ties; the residual counts only decisions against the strict weighted preference), which formation's model, valuation or reference evaluates which answer, what is quantified (an unrestricted pair of value functions, not a reachable valuation; a given input presented), the amounts forgone in the units of the weighted totals, names, counts, links and anchors; that the readings stay readings and the citations are accurate (Kamenica and Gentzkow 2011; Alonso and Câmara 2016; Crawford and Sobel 1982; Everitt, Hutter, Kumar and Krakovna 2021, Claims 2 and 3; Farquhar, Carey and Everitt 2022; Hadfield-Menell, Dragan, Abbeel and Russell 2017, Equation 1, Theorem 1, Remark 1; Carroll, Dragan, Russell and Hadfield-Menell 2022; Blackwell 1953). Check the Chinese texts against the English.
+
+Report numbered findings. For each: file:line, a short quote, the problem, and the exact replacement text. Only real problems; say "none" where a text has none. End with a one-paragraph verdict.
+```
+
+Its first re-check (the same session continued, `cx -r`, read-only, in a rehearsal rebuilt at the same path on the kit at `18001d918` with main at `8a8b0df82`):
+
+```text
+You re-check, read-only, RF-M.3's texts after your cold read. Your working directory is now <a rehearsal of main with RF-M.3 integrated>: main at 8a8b0df82 (after RV21's item 13 landed) merged with the kit at 18001d918, with the kit's integration applied (nothing committed; do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine). The rehearsal you read before was rebuilt at the same path; paths below are relative to it. The diff of the kit since the commit you read (07a24e169) is at the checkout's root as rfm3-coldread-delta.diff; the integrated texts are in place.
+
+Your cold read found six points. Check how each was taken:
+1. the loss of a revision qualified as deciding a listed cell against the current valuation's strict weighted preference: 03 §12's Reading, 07 §7, 08 §8's bullet, the overview, the dossier, the study, PLAN §4.8 and the record's correspondence (English and Chinese, in kit/round2c/make_records_rfm3.py);
+2. the record's Chinese law on deciding a whole cell, against split_cell_le;
+3. going on, switching off and holding, not every act of the holding formation, change neither the candidate world nor the reading formation (the record's premise, English and Chinese; the study);
+4. the record's hypotheses on cell lists, now two items, against shortfall_split, residual_zero_iff, residual_pos_iff, answer_residual_zero_iff, told_residual_zero_iff, least_falls, informed_le, informed_lt_iff and refining_never_lowers_iff;
+5. REVIEW-RFM3-LEAN's row R5;
+6. the dossier's entry on how it was made (the works named; its date is written by the integration at landing, today's here).
+
+Also read, as text new since your cold read:
+- the overview §3's paragraph on informing and revaluing, cut to about 105 words for a reading budget, linking down to 03 §12;
+- the dossier's RF-M.3 sentences in the paragraph on RF's rounds, cut to about 140 words;
+- RF's PLAN §5's table row on preference shaping, and §8's rows on preference shifts (Carroll and others 2022), Blackwell and Bayesian persuasion, corrigibility as an incentive (placed through RR's RevisionRoutes in 07 §7, RF-M.2 and RF-M.3), reward tampering and path-specific objectives, and Crawford and Sobel;
+- the study template's paragraph "The reviews, and what was taken" (kit/round2c/study_rfm3.txt).
+Check each against the Lean (Becoming/ListingValuation.lean; Becoming/RevisionRoutes.lean and 07 §7's record when-no-route-stands-above-a-revision for RR's clause; Becoming/HeldForReading.lean) and against the cited works as your cold read and the reviews read them.
+
+Report a one-line verdict, then only what is not taken correctly or is new, each with location, the quoted text, the problem and an exact replacement (English, and Chinese where the text is Chinese); a replacement for a record field must fit its cap in tools/research/style.py (ITEM_CAPS_V2: 420 characters in English and 190 in Chinese per item). Say plainly if there is nothing. Do not edit any file.
+```
+
+The workflow's first run, on the first rehearsal, stopped at a usage limit before any reader returned. It ran again after the cross-model reader's points and its first re-check were taken, on a rehearsal rebuilt at the same path on the kit at `3f43eefcf` with main at `8a8b0df82`, with these texts, common to its three readers and the refuters:
+
+```text
+The Lean (the source of truth): experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean (Becoming.ListingValuation, a core leaf, 138 theorems in 186 declarations, every axiom report empty; it imports HeldForReading.lean in the same folder, which brings Blanket.lean and Learning.lean through ReadingLoop.lean, and uses Becoming.total with its lemmas from Prelude.lean, Flow.lean, Population.lean and Dissipation.lean). RR's Becoming/RevisionRoutes.lean, with 07 section 7's record when-no-route-stands-above-a-revision, is cited by the plan's row on corrigibility as an incentive.
+
+The texts, integrated in a scratch copy of the repository at <a rehearsal of main with RF-M.3 integrated> (read-only; do not edit, create, commit, render, run make, or build Lean; paths below are relative to it):
+1. theories/becoming/chapters/03-KNOWING.md: section 12's opening paragraph (its sentence ending "and what informing the reading formation and revaluing it do to that worth."), the new theorem paragraph at anchor r-a-reading-informed-and-revalued with its Reading paragraph (just before the anchor does-not-show), the pointer added to the acts-alike reading ("and informing and revaluing as acts within one law [another]"), and the Open bullet beginning "Formations that read, beyond".
+2. theories/becoming/chapters/07-SIGNIFICANCE.md: section 7's sentences beginning "The reading that gives the stop can itself be moved".
+3. theories/becoming/chapters/08-METHOD.md: section 8's known-results bullet on a reading informed and revalued.
+4. theories/becoming/THE-THEORY-OF-BECOMING.md: section 3's paragraph on informing and revaluing (about 105 words, cut for a reading budget and linking down to 03 section 12), after the paragraph on holding for a reading.
+5. theories/becoming/review/ALIGNMENT.md: the box "What the theory does not address" (its bullet on assistance games), the paragraph on RF's rounds (its sentences on RF-M.3, about 140 words, cut for a reading budget), and the account of how the dossier was made (its entry on RF-M.3's sentences).
+6. The package: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean (the L1 bullet for Becoming.ListingValuation, and HeldForReading's bullet, now imported by it), README.md and README.zh.md in the same folder (the Becoming.ListingValuation rows), check_becoming.py there (the scope sentence beginning "ListingValuation:").
+7. The module's own header (its opening, bullets, Standing, Readings, Modelling choices and Not in this module) and docstrings.
+8. The record's texts, in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py: the record a-reading-informed-and-revalued (title, statement, the 37 law items, hypotheses, does_not_show, counterexamples, validation, next_delta, correspondence, aliases, dependencies, related) and the amendments to related records (AMEND), English and Chinese.
+9. The study section template _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/study_rfm3.txt ({N}, {RECEIPT}, (LISTINGVALUATION) and {COLDREAD} are filled at landing; its paragraph "The reviews, and what was taken" is written).
+10. _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md: section 4.8 (its opening, Part 1's items 1 to 15, Part 2's items 16 to 21, Standing, Readings, Modelling choices, Not in this part), section 5's table row on preference shaping, section 8's literature rows on preference shifts, Blackwell and Bayesian persuasion, corrigibility as an incentive (placed through RR's RevisionRoutes, RF-M.2 and RF-M.3), reward tampering and path-specific objectives, and Crawford and Sobel, section 12's order, section 13's paragraphs on the third part's design review and on the reviews of its Lean, and the Evidence list.
+11. theories/becoming/results/data/regions.json: the entries a-reading-informed-and-revalued and Becoming.ListingValuation.
+12. The evidence of the Lean's reviews, _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md: its opening (what was verified, and how) and the three tables of what was taken (from the first review and the lenses, from the re-check, and from the check of the delta): does each row's 'how' match the module, the record script, the plan and the texts as they now stand? The reviews themselves are verbatim and not to be judged.
+
+Repository rules that bear on the texts (from AGENTS.md): claims say exactly what the Lean proves (hypotheses, direction, strictness, ties); names are structural and exact, with no dualist, social or financial words beyond the roles the plan adopts (the reading formation and the holding formation, told apart by the paths of sensing and control); AI readings are labelled as readings and never presented as theorems; no ethical premise enters here; each live document is in one language, Chinese editions separate; repository-relative links.
+```
+
+The exactness lens ("You are a cold reader checking texts against Lean, adversarially. Work read-only: read files and run read-only shell commands only (you may search the web where your lens asks); do not edit, create, commit, render, run make or build Lean. The working directory for paths below is <a rehearsal of main with RF-M.3 integrated>.", then the texts, then):
+
+```text
+Your lens: exactness. For every claim in texts 1 to 12, check it against the Lean statements in ListingValuation.lean (and HeldForReading.lean, Blanket.lean, Learning.lean or RevisionRoutes.lean where a text cites their laws): the hypotheses (the reading formation's model the holding formation's or not; agreement in net, or on one positive scale, at listed candidates of positive weight; cells listed once each and covering which listing, for which map; factoring on which listings; equality of cells decidable; what two courses share at the start and what differs), the direction of each iff, strictness and ties (the answer releases at ties; the residual counts only decisions against the strict weighted preference), which formation's model, valuation or reference evaluates which answer, what is quantified (an unrestricted pair of value functions, not a reachable valuation; a given input presented), the amounts forgone (in the units of the weighted totals, on which side each is added), the names and their backticks, and the counts (theorems, declarations, laws). Check the Chinese texts (README.zh.md's row, the record's zh fields) say the same as the English. Report only what is wrong, overstated, missing a hypothesis, or inconsistent between texts.
+
+Return findings: severity, location (file:line), the quoted text, the problem against the Lean, and a replacement.
+
+Number your findings <X, R or T>1, <X, R or T>2, … in your ids.
+```
+
+The readings lens ("You are a cold reader checking the readings and citations, adversarially. Work read-only: read files and run read-only shell commands only (you may search the web where your lens asks); do not edit, create, commit, render, run make or build Lean. The working directory for paths below is <a rehearsal of main with RF-M.3 integrated>.", then the texts, then):
+
+```text
+Your lens: the AI readings and the literature. Check every attribution against what the sources say (you may search the web and read the papers): Kamenica and Gentzkow (2011), "Bayesian persuasion" (full disclosure and the convexity of the sender's value in the posterior; the receiver's tie-breaking; the common prior); Alonso and Câmara (2016), "Bayesian persuasion with heterogeneous priors"; Crawford and Sobel (1982), "Strategic information transmission" (partition equilibria, the most informative equilibrium's welfare before the state is observed); Everitt, Hutter, Kumar and Krakovna (2021), "Reward tampering problems and solutions in reinforcement learning", arXiv 1908.04734 (current-reward-function evaluation, the agent anticipating time inconsistency, Claims 2 and 3, their assumptions); Farquhar, Carey and Everitt (2022), "Path-specific objectives for safer agent incentives" (the delicate state under a baseline action, Proposition 1); Hadfield-Menell, Dragan, Abbeel and Russell (2017), "The off-switch game", arXiv 1611.08219 (Equation 1, Theorem 1, Remark 1); Carroll, Dragan, Russell and Hadfield-Menell (2022), "Estimating and penalizing induced preference shifts in recommender systems", arXiv 2204.11966 (frozen initial preferences as a crude baseline; safe shifts); Blackwell (1953), the comparison of experiments; Soares, Fallenstein, Yudkowsky and Armstrong (2015), "Corrigibility" (corrigibility as an incentive), for the plan's row. Check that readings are labelled as readings, claim nothing the Lean does not prove, and do not overstate what the witnesses show (the routes start apart; with the start added the record determines the property; the four cases are single updates; the four alternatives are one decision with no choice represented). Check the readings of withholding, revaluing, keeping the valuation, corrigibility and assistance for consistency across 03, 07, 08, the overview, the dossier, the module, the record and the plan. Report only what is wrong or overstated.
+
+Return findings: severity, location (file:line), the quoted text, the problem, and a replacement.
+
+Number your findings <X, R or T>1, <X, R or T>2, … in your ids.
+```
+
+The fit lens ("You are a cold reader checking how the new texts fit where they are placed, adversarially. Work read-only: read files and run read-only shell commands only (you may search the web where your lens asks); do not edit, create, commit, render, run make or build Lean. The working directory for paths below is <a rehearsal of main with RF-M.3 integrated>.", then the texts, then):
+
+```text
+Your lens: fit and coherence. Does each text read well in its section and agree with the texts around it (03 section 12's other laws and their readings, notably what holding for a reading is worth just before; 03's Open bullet; 07 section 7's paragraph on executable change; 08 section 8's other bullets and their style; the overview's section 3; the dossier's box and its other bullets; the package README's rows and the root bullets around HeldForReading's)? Are the links and anchors right (anchors exist; repository-relative links resolve from each file)? Are the same results named the same way everywhere (the reading formation and the holding formation, the least shortfall and the residual, informing and revaluing, splits keep the worth)? Is anything stated in two places in a way that will drift, or a sentence a reader cannot follow? Do the record's fields stay within their roles (statement, laws, hypotheses, does_not_show, counterexamples, validation, next_delta, correspondence)? Is each text as short as its place allows? The overview's paragraph and the dossier's sentences were cut for reading budgets: flag a lost deciding hypothesis or a sentence a reader cannot follow, not needed length. Do the plan, study and evidence texts describe the item and its review history accurately (the evidence files are in the study folder's evidence/: REVIEW-RFM3.md and REVIEW-RFM3-LEAN.md)? Report only what is wrong, unclear or inconsistent.
+
+Return findings: severity, location (file:line), the quoted text, the problem, and a replacement.
+
+Number your findings <X, R or T>1, <X, R or T>2, … in your ids.
+```
+
+The refuter of each lens, given all of that lens's findings ("You are an adversarial verifier. Work read-only: read files and run read-only shell commands only; no edits, no builds. The working directory for paths below is <a rehearsal of main with RF-M.3 integrated>.", then the texts, then):
+
+```text
+A cold reader (lens: <lens>) reported the findings below. For each, try to refute it against the files: read the quoted location and the Lean it concerns. A finding is real only if the quoted text exists at or near the location and the problem holds as stated against the Lean, the sources or the surrounding texts; a matter of taste with nothing wrong is not real. Default to real=false if you cannot confirm it. For each finding give its id, real, a reason in two or three sentences citing what you read, and, where the proposed replacement is wrong or could be better, a better replacement.
+
+<the findings, each with its id, severity, location, quoted text, problem and proposed replacement>
+```
+
+Its second re-check, of how the lenses' findings were taken (the same session continued, `cx -r`, read-only, in a rehearsal rebuilt at the same path on the kit at `22a113c0c` with main at `2f4a5bd96`, the diff of the study folder since `18001d918` at its root as `rfm3-coldread2-delta.diff`):
+
+```text
+You re-check, read-only, how RF-M.3's texts took the cold read's lens findings. Your working directory is again <a rehearsal of main with RF-M.3 integrated>: main at 2f4a5bd96 merged with the kit at 22a113c0c, with the kit's integration applied (nothing committed; do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine). The rehearsal you read before was rebuilt at the same path; paths below are relative to it. The diff of the kit's study folder since the commit your first re-check read (18001d918) is at the checkout's root as rfm3-coldread2-delta.diff, the generated cold-read page and the brief left out; the integrated texts are in place.
+
+After your first re-check was taken, three Opus readers read the texts through three lenses, exactness (X1 to X19), readings (R1 to R14) and fit (T1 to T31), each lens's findings given to a separate reader asked to refute them: 64 findings, 54 confirmed and 10 refuted. Each finding with its verdict, and what was taken for each, is in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-COLDREAD.md (the section "The three lenses" and the table "What was taken from the lenses"). X19 is RR's sentence in 08 §8, already on main: it is handed to RR's second item, which lands after RF-M.3, and is not changed here.
+
+Check, against the Lean (Becoming/ListingValuation.lean in the package folder: its header, the docstring of WeightsApart.not_splitsKeep and one section heading were revised, its statements unchanged, rebuilt at 138 theorems in 186 declarations with every axiom report empty) and against the cited works as your cold read and the reviews read them:
+1. that each confirmed finding was taken as that table says, in every place it names, and that the change is right: no new error, and no claim wider or narrower than the Lean;
+2. that each refuted finding left unchanged is fine as it stands, and that those taken all the same are harmless;
+3. as text new since your first re-check: the overview's paragraph on informing and revaluing (now opening "Proved in natural-number counts"); the dossier's clause on assistance games in its scope box, its RF-M.3 sentences in the paragraph on RF's rounds, and its entry on how it was made; 07 §7's sentence on moving the reading that gives the stop; 08 §8's bullet; the root module's L1 bullet and the checker's scope sentence; both README rows; in RF's PLAN, §4.7's paragraph on RF-M.3, §4.8's items 4, 6, 7, 8 and 10, its Standing and Readings, §5's row on preference shaping, §8's row on preference shifts, §12's entry, §13's new paragraph "The cold read of the third part's texts" and the Evidence list; the study template (kit/round2c/study_rfm3.txt), its Delta's bullets on informing, amounts forgone, revaluing and the carrier, its Standing, its paragraphs "The reviews, and what was taken" and "The cold read of the texts", and its self-review item 2; the record's texts in kit/round2c/make_records_rfm3.py (the laws, hypotheses, next_delta, correspondence, aliases, related and the amendments, AMEND), English and Chinese; and the opening and the tables of REVIEW-RFM3-COLDREAD.md, and the opening and the rows A10, E10, F14, F16, F20, L9, R1 and R5 of REVIEW-RFM3-LEAN.md.
+
+Report a one-line verdict, then only what is not taken correctly or is new, each with location, the quoted text, the problem and an exact replacement (English, and Chinese where the text is Chinese); a replacement for a record field must fit its cap in tools/research/style.py (ITEM_CAPS_V2: 420 characters in English and 190 in Chinese per law item; correspondence 1200 and 500; next_delta 400 and 180). Say plainly if there is nothing. Do not edit any file.
+```
+
+Beside it, the check of how the lenses' findings were taken (a workflow of three Opus readers, one per lens, read-only, in the same rehearsal; each reader's gaps given to one refuter). Each reader (with `<lens>` and `<ids>` exactness and X1 to X19, readings and R1 to R14, or fit and T1 to T31):
+
+```text
+You check, read-only, how one lens's findings from a cold read were taken into the texts of RF-M.3 (the module Becoming.ListingValuation and its texts) in a theory repository.
+
+The checkout is <a rehearsal of main with RF-M.3 integrated>: the theory repository's main merged with RF-M.3's kit, the kit's integration applied, nothing committed. Do not edit, create or delete any file, commit, render, run make or build Lean; reading files and read-only shell commands (cat, sed -n, grep, git diff, git show) are fine. Paths below are relative to the checkout.
+
+Where things are:
+- The Lean, the authority for what is proved: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean. Its statements were not changed by the cold read; its header, the docstring of WeightsApart.not_splitsKeep and one section heading were revised.
+- The cold read's page: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-COLDREAD.md. The section "The three lenses" gives each finding (id, lens, severity, verdict, the finding, the judge's reasoning); the table "What was taken from the lenses" says, for each id, what was done.
+- The texts as integrated: theories/becoming/THE-THEORY-OF-BECOMING.md (the overview), theories/becoming/chapters/03-KNOWING.md §12, 07-SIGNIFICANCE.md §7, 08-METHOD.md §8, theories/becoming/review/ALIGNMENT.md (the dossier), the package's Becoming.lean (the root module's bullet on ListingValuation) and check_becoming.py (its scope sentence), the package's README.md and README.zh.md, and _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md.
+- The kit's templates, written at the landing and not yet applied: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/study_rfm3.txt (the study's section), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py (the new record's texts in English and Chinese, and AMEND, its amendments of existing records), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/s12_rfm3.txt (03 §12's paragraph, applied), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/integrate_rfm3.py (the integration's edits, applied), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/evidence_rfm3_lean.py and the page it wrote, _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md.
+- rfm3-coldread2-delta.diff at the checkout's root: the diff of the study folder from before the lens changes to now (generated pages left out); `git diff` shows the integration against the merged head.
+
+Record fields have caps (tools/research/style.py, ITEM_CAPS_V2): a law item 420 characters in English and 190 in Chinese; correspondence 1200 and 500; next_delta 400 and 180. A replacement for a record field must fit its cap.
+
+Your lens is <lens> (ids <ids>). For each of its findings, read the finding and its row in the table "What was taken from the lenses". Then check, in every place the finding or the row names, and wherever else the same claim recurs across these texts (a claim summarized in several places must say the same thing everywhere), that it was taken as the row says and that the change is right against the Lean: no new error, no claim wider or narrower than the Lean proves. For a finding refuted and left unchanged, check that leaving it is fine. For one taken all the same, that the change is harmless. X19 is another item's sentence in 08 §8 already on main, handed to that item's landing: do not count it as not taken. Check also that the table's own description of what was done matches the files.
+
+Report every id of your lens with its status: taken (fully and correctly), in_part, not_taken, or problem (taken, but the change introduced an error). For each not fully right, give the location (file and nearest heading or line), the quoted text as it stands, the problem, and an exact replacement (English, and Chinese where the text is Chinese). Add entries with id "new" for any new problem you meet in the passages the lens's findings touch. Be exact: where a claim's scope is at issue, quote the Lean statement. Do not report style preferences that do not change what a sentence says.
+```
+
+The refuter of each reader's gaps:
+
+```text
+A checker read how a cold read's <lens> findings were taken into RF-M.3's texts and reported the gaps below. Try to refute each one. Is it real: does the text as it stands say what the checker claims, and does the Lean (quote the statement) make the text wrong, or the claim wider or narrower than proved? Is it already met elsewhere, or was it decided otherwise for a stated reason in the table "What was taken from the lenses"? If real, is the replacement right, within its cap, and consistent with the other places that summarize the same claim? Correct it where it is not. Default to real=false where the checker's case does not hold on the files.
+
+The checkout is <a rehearsal of main with RF-M.3 integrated>: the theory repository's main merged with RF-M.3's kit, the kit's integration applied, nothing committed. Do not edit, create or delete any file, commit, render, run make or build Lean; reading files and read-only shell commands (cat, sed -n, grep, git diff, git show) are fine. Paths below are relative to the checkout.
+
+Where things are:
+- The Lean, the authority for what is proved: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean. Its statements were not changed by the cold read; its header, the docstring of WeightsApart.not_splitsKeep and one section heading were revised.
+- The cold read's page: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-COLDREAD.md. The section "The three lenses" gives each finding (id, lens, severity, verdict, the finding, the judge's reasoning); the table "What was taken from the lenses" says, for each id, what was done.
+- The texts as integrated: theories/becoming/THE-THEORY-OF-BECOMING.md (the overview), theories/becoming/chapters/03-KNOWING.md §12, 07-SIGNIFICANCE.md §7, 08-METHOD.md §8, theories/becoming/review/ALIGNMENT.md (the dossier), the package's Becoming.lean (the root module's bullet on ListingValuation) and check_becoming.py (its scope sentence), the package's README.md and README.zh.md, and _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md.
+- The kit's templates, written at the landing and not yet applied: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/study_rfm3.txt (the study's section), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py (the new record's texts in English and Chinese, and AMEND, its amendments of existing records), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/s12_rfm3.txt (03 §12's paragraph, applied), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/integrate_rfm3.py (the integration's edits, applied), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/evidence_rfm3_lean.py and the page it wrote, _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md.
+- rfm3-coldread2-delta.diff at the checkout's root: the diff of the study folder from before the lens changes to now (generated pages left out); `git diff` shows the integration against the merged head.
+
+Record fields have caps (tools/research/style.py, ITEM_CAPS_V2): a law item 420 characters in English and 190 in Chinese; correspondence 1200 and 500; next_delta 400 and 180. A replacement for a record field must fit its cap.
+
+The gaps (JSON):
+<the gaps, each with its id, status, location, quoted text, problem and replacement>
+```
+
+Its third re-check, of how the second re-check's point and the check's gaps were taken (the same session continued, `cx -r`, read-only, in a rehearsal rebuilt at the same path on the kit at `539078292` with main at `485c6f87c`, the diff of the study folder since `22a113c0c` at its root as `rfm3-check-delta.diff`):
+
+```text
+You re-check, read-only, how RF-M.3's texts took your second re-check's point and the check beside it. Your working directory is again <a rehearsal of main with RF-M.3 integrated>, rebuilt at the same path: main at 485c6f87c (LA4's formal part, fm-cond1 and MA4c landed since) merged with the kit at 539078292, with the kit's integration applied (nothing committed; do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine). The diff of the kit's study folder since the commit your second re-check read (22a113c0c) is at the checkout's root as rfm3-check-delta.diff, the generated cold-read page and the brief left out; the integrated texts are in place.
+
+Beside your second re-check, three Opus readers, one per lens, checked how every lens finding was taken, each reader's gaps given to a refuter: 14 gaps, every one judged real; with your point, 12 distinct points. Each gap, its verdict and what was taken are in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-COLDREAD.md, the section "The check of how the lenses' findings were taken" and its table; your point's row is in the table after your second re-check.
+
+Check, against the Lean (Becoming/ListingValuation.lean in the package folder: only its header changed, the bullet on the carrier and the Readings paragraph, its statements unchanged, rebuilt at 138 theorems in 186 declarations with every axiom report empty) and against the cited works as your cold read and the reviews read them:
+1. that your point and each gap were taken as those tables say, in every place they name, and that each change is right: no new error, and no claim wider or narrower than the Lean;
+2. as text new since your second re-check: PLAN §5's row on preference shaping, §4.8's item 12 and Readings, and §13's paragraph "The cold read of the third part's texts"; 03 §12's Reading; the overview's paragraph on informing and revaluing; the dossier's entry on how it was made; the root module's L1 bullet and the checker's scope sentence; the module header's bullet on the carrier and its Readings; the study template's bullet on the carrier, its Output → input and its paragraph "The cold read of the texts"; the record's law on a demonstration, its Chinese law on amounts forgone and its correspondence, English and Chinese, in kit/round2c/make_records_rfm3.py; the board's landing text in kit/round2c/board_rfm3.py and the re-point's reason in kit/round2c/repoint_rfm3.py; the cold-read page's opening, its new section and tables, and the Lean review page's row R5.
+
+Report a one-line verdict, then only what is not taken correctly or is new, each with location, the quoted text, the problem and an exact replacement (English, and Chinese where the text is Chinese); a replacement for a record field must fit its cap in tools/research/style.py (ITEM_CAPS_V2: 420 characters in English and 190 in Chinese per law item; correspondence 1200 and 500; next_delta 400 and 180). Say plainly if there is nothing. Do not edit any file.
+```
+
+Beside it, the check of the check's changes (a workflow of two Opus readers, read-only, in the same rehearsal; each reader's gaps given to one refuter). The context given to both readers and both refuters, in place of `<context>` below:
+
+```text
+The checkout is <a rehearsal of main with RF-M.3 integrated>: the theory repository's main merged with RF-M.3's kit (commit 539078292), the kit's integration applied, nothing committed. Do not edit, create or delete any file, commit, render, run make or build Lean; reading files and read-only shell commands (cat, sed -n, grep, git diff, git show) are fine. Paths below are relative to the checkout.
+
+Where things are:
+- The Lean, the authority for what is proved: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean (its statements unchanged in this round; its header's bullet on the carrier and its Readings paragraph revised).
+- _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-COLDREAD.md: the cold read of RF-M.3's texts and its re-checks. Its last sections, "The re-check of the lenses' findings" and "The check of how the lenses' findings were taken", give the latest 15 reports (one from the cross-model reader, 14 from three Opus readers, every one judged real by a refuter), 12 distinct points, and the tables of what was taken for each.
+- rfm3-check-delta.diff at the checkout's root: the diff of the study folder for this round (the kit's templates and scripts, the plan, the Lean review's page; the cold-read page and the brief left out). `git diff` shows the integration against the merged head.
+- The integrated texts: theories/becoming/THE-THEORY-OF-BECOMING.md (the overview), theories/becoming/chapters/03-KNOWING.md §12, 07-SIGNIFICANCE.md §7, 08-METHOD.md §8, theories/becoming/review/ALIGNMENT.md (the dossier), the package's Becoming.lean (the root module's L1 bullet) and check_becoming.py (the scope sentence), the package's README.md and README.zh.md, _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md.
+- The kit's templates, written at the landing: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/study_rfm3.txt (the study's section), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py (the new record a-reading-informed-and-revalued in English and Chinese, and AMEND), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/board_rfm3.py (the board's landing text), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/repoint_rfm3.py (the re-point's reason), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md (the Lean review's page, its row R5).
+
+Record fields have caps (tools/research/style.py, ITEM_CAPS_V2): a law item 420 characters in English and 190 in Chinese; correspondence 1200 and 500; next_delta 400 and 180. A replacement for a record field must fit its cap.
+```
+
+The reader of how the last round was taken:
+
+```text
+You check, read-only, how RF-M.3's texts took the last round of review: 12 distinct points (the cross-model reader's second re-check, point 1; and the Opus check's gaps XC1 to XC5, RC1 to RC4 and TC1 to TC5), each with what was taken in the tables at the end of the cold-read page.
+
+<context>
+
+For each point: read it and its row; then check, in every place it names and wherever else the same claim recurs across these texts, that it was taken as the row says, and that the change is right against the Lean: no new error, no claim wider or narrower than the Lean proves, consistent across places, and within the record caps. Report every point with its status (taken, in_part, not_taken, or problem: taken but the change introduced an error); for each not fully right, the location, the quoted text, the problem and an exact replacement (English, and Chinese where the text is Chinese). Where a claim's scope is at issue, quote the Lean statement. Do not report style preferences that do not change what a sentence says.
+```
+
+The cold reader of the changed passages:
+
+```text
+You read cold, adversarially and read-only, the passages of RF-M.3's texts changed in its last round of review, as text in its place: is each exact against the Lean (hypotheses: the reading formation's model the holding formation's or not; net agreement; cells listed once each and covering; which listed worlds are told apart; what is a reading and what is proved), does it read well and agree with the sentences around it and with the other places that summarize the same claim, and are its citations right?
+
+<context>
+
+The passages: PLAN §5's row on preference shaping, §4.8's item 12 and its Readings, and §13's paragraph "The cold read of the third part's texts"; 03 §12's Reading after the theorem on informing and revaluing; the overview's paragraph on informing and revaluing ("What another's reading answers can be moved…"); the dossier's entry on how it was made (its sentence on RF-M.3); the root module's L1 bullet on ListingValuation and the checker's scope sentence on it; the module header's bullet on the carrier and its Readings paragraph (the one on own_least and revalued_lowers_iff); the study template's bullet on the carrier, its Output → input and its paragraph "The cold read of the texts"; the record's law on a demonstration, its Chinese law on amounts forgone and its correspondence, English and Chinese; the board's landing text (board_rfm3.py) and the re-point's reason (repoint_rfm3.py); the cold-read page's opening paragraphs and its section "The check of how the lenses' findings were taken" with its table; the Lean review page's row R5. rfm3-check-delta.diff shows what changed in the kit's files; the integrated texts show the rest in place.
+
+Report only real problems, each with the id "new", the location, the quoted text, the problem and an exact replacement (English, and Chinese where the text is Chinese); a summary line first. Quote the Lean statement where a claim's scope is at issue. Do not report style preferences that do not change what a sentence says. Say plainly in the summary if there is nothing.
+```
+
+The refuter of each reader's gaps (with `<reader>` “of how the last round of review was taken” for the first and “reading the changed passages cold” for the second):
+
+```text
+A reader (<reader>) reported the gaps below in RF-M.3's texts. Try to refute each one. Is it real: does the text as it stands say what the reader claims, and does the Lean (quote the statement) make it wrong, or the claim wider or narrower than proved, or does it disagree with the other places that state the same claim? Was it decided otherwise for a stated reason in the cold-read page's tables? If real, is the replacement right, within its cap, and consistent with the other places? Correct it where it is not. Default to real=false where the reader's case does not hold on the files.
+
+<context>
+
+The gaps (JSON):
+<the gaps, each with its id, status, location, quoted text, problem and replacement>
+```
+
+Its fourth re-check, of how the second check's gaps were taken (the same session continued, `cx -r`, read-only, in a rehearsal rebuilt at the same path on the kit at `bd5277f14` with main at `c3a2f0fc4`, one board commit after the `3bc356d1b` the prompt names, the diff of the study folder since `539078292` at its root as `rfm3-final-delta.diff`):
+
+```text
+You re-check, read-only, how RF-M.3's texts took the last check beside your third re-check. Your working directory is again <a rehearsal of main with RF-M.3 integrated>, rebuilt at the same path: main at 3bc356d1b (MV's landing, study §472, and board lines since 485c6f87c) merged with the kit at bd5277f14, with the kit's integration applied (nothing committed; do not edit, create, commit, render, run make or build Lean; reading files and read-only shell commands are fine). The diff of the kit's study folder since the commit your third re-check read (539078292) is at the checkout's root as rfm3-final-delta.diff, the generated cold-read page and the brief left out; the integrated texts are in place.
+
+Beside your third re-check, two Opus readers checked the same texts, one how the 12 points were taken and one reading the changed passages cold, each reader's gaps given to a refuter: 11 gaps, every one judged real, 9 distinct points. Each gap, its verdict and what was taken are in _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-COLDREAD.md, the section "The check of the check's changes" and its table.
+
+Check, against the Lean (Becoming/ListingValuation.lean in the package folder: only docstrings changed, the header's bullets on amounts forgone and revaluing and on the carrier, its Readings paragraph on the off-switch game and the docstring of outcome_least, its statements unchanged, rebuilt at 138 theorems in 186 declarations with every axiom report empty) and against the cited works as your cold read and the reviews read them:
+1. that each gap was taken as that table says, in every place it names, and that each change is right: no new error, and no claim wider or narrower than the Lean;
+2. as text new since your third re-check: the record's law on courses alike and its correspondence, English and Chinese, in kit/round2c/make_records_rfm3.py; 03 §12's sentence on courses alike; the module header's two bullets, its Readings paragraph and outcome_least's docstring; in RF's PLAN, §8's row on reward tampering and current-reward-function evaluation, §4.8's item 19 and §13's paragraph "The cold read of the third part's texts"; the study template's bullet on the carrier and its paragraph "The cold read of the texts"; the lead of the dossier's entry on how it was made; the cold-read page's opening and its two new sections with their tables; and the Lean review page's row R2.
+
+Report a one-line verdict, then only what is not taken correctly or is new, each with location, the quoted text, the problem and an exact replacement (English, and Chinese where the text is Chinese); a replacement for a record field must fit its cap in tools/research/style.py (ITEM_CAPS_V2: 420 characters in English and 190 in Chinese per law item; correspondence 1200 and 500; next_delta 400 and 180). Say plainly if there is nothing. Do not edit any file.
+```
+
+Beside it, the final check (a workflow of one Opus reader, read-only, in the same rehearsal; its gaps given to one refuter, whose first run failed on its connection and which was run again, the reader's result replayed). The context given to the reader and the refuter, in place of `<context>` below:
+
+```text
+The checkout is <a rehearsal of main with RF-M.3 integrated>: the theory repository's main merged with RF-M.3's kit (commit bd5277f14), the kit's integration applied, nothing committed. Do not edit, create or delete any file, commit, render, run make or build Lean; reading files and read-only shell commands (cat, sed -n, grep, git diff, git show) are fine. Paths below are relative to the checkout.
+
+Where things are:
+- The Lean, the authority for what is proved: experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean (its statements unchanged in this round; docstrings revised: the header's bullets on amounts forgone and revaluing and on the carrier, its Readings paragraph on the off-switch game, and outcome_least's docstring).
+- _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-COLDREAD.md: the cold read of RF-M.3's texts and its re-checks. Its last section, "The check of the check's changes", gives the 11 gaps of the last check (FT1 to FT4 from a reader of how the previous points were taken, FC1 to FC7 from a cold reader), each with its refuter's verdict, and the table "What was taken from the check of the check's changes" says what was done for each.
+- rfm3-final-delta.diff at the checkout's root: the diff of the study folder for this round (the kit's templates and scripts, the plan, the module, the Lean review's page; the cold-read page and the brief left out). `git diff` shows the integration against the merged head.
+- The integrated texts: theories/becoming/THE-THEORY-OF-BECOMING.md (the overview), theories/becoming/chapters/03-KNOWING.md §12, 07-SIGNIFICANCE.md §7, 08-METHOD.md §8, theories/becoming/review/ALIGNMENT.md (the dossier), the package's Becoming.lean (the root module's L1 bullet) and check_becoming.py (the scope sentence), the package's README.md and README.zh.md, _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md.
+- The kit's templates, written at the landing: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/study_rfm3.txt (the study's section), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/make_records_rfm3.py (the new record a-reading-informed-and-revalued in English and Chinese, and AMEND), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/board_rfm3.py (the board's landing text), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/round2c/repoint_rfm3.py (the re-point's reason), _process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md (the Lean review's page, its rows R1 to R5).
+
+Record fields have caps (tools/research/style.py, ITEM_CAPS_V2): a law item 420 characters in English and 190 in Chinese; correspondence 1200 and 500; next_delta 400 and 180. A replacement for a record field must fit its cap.
+```
+
+The reader:
+
+```text
+You check, read-only, how RF-M.3's texts took its last check (11 gaps, 9 distinct points: FT1 to FT4 and FC1 to FC7), and you read the passages that round changed cold.
+
+<context>
+
+First, for each gap: read it, its refuter's verdict and its row in the table "What was taken from the check of the check's changes"; then check, in every place it names and wherever else the same claim recurs across these texts, that it was taken as the row says, and that the change is right against the Lean: no new error, no claim wider or narrower than the Lean proves, consistent across places, and within the record caps. Where a refuter judged part of a gap not real and that part was left unchanged, say whether leaving it is right.
+
+Then read the passages this round changed as text in their place (rfm3-final-delta.diff shows them in the kit's files; the integrated texts show 03 §12 and the dossier's lead in place): is each exact against the Lean (whose listing a condition is on, the holding formation's model or the reading formation's; whether the reading formation's model is the holding formation's; what is a reading and what is proved), does it read well and agree with the sentences around it and with the other places that summarize the same claim? The cold-read page's opening and its sections "The third re-check" and "The check of the check's changes" are new text too.
+
+Report every gap id with its status (taken, in_part, not_taken, or problem: taken but the change introduced an error); for each not fully right, and for each new problem (id "new", status "new"), the location, the quoted text, the problem and an exact replacement (English, and Chinese where the text is Chinese). Quote the Lean statement where a claim's scope is at issue. Do not report style preferences that do not change what a sentence says. Say plainly in the summary if there is nothing.
+```
+
+The refuter of the reader's gaps:
+
+```text
+A reader of how RF-M.3's texts took their last check, who also read the changed passages cold, reported the gaps below. Try to refute each one. Is it real: does the text as it stands say what the reader claims, and does the Lean (quote the statement) make it wrong, or the claim wider or narrower than proved, or does it disagree with the other places that state the same claim? Was it decided otherwise for a stated reason in the cold-read page's tables? If real, is the replacement right, within its cap, and consistent with the other places? Correct it where it is not. Default to real=false where the reader's case does not hold on the files.
+
+<context>
+
+The gaps (JSON):
+<the gaps, each with its id, status, location, quoted text, problem and replacement>
+```

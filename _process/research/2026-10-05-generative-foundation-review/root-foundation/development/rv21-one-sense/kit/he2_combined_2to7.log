@@ -1,0 +1,64 @@
+HE2 items 2-4 (he2-item2 at 4ca8098e2) and 6-7 (this kit) applied together on main c05f4eab8 by text, each kit's --check passing after both: lean parts, then records parts (--no-notes, study 999; the GrammarLaws reference 204 declarations, no duplicates), 2026-10-30T23:33:31Z.
+Compile of the upstream closure of Grammar, GrammarCandidates, GrammarLaws, GrammarRegularity, GrammarScope, Response and SelectionPool (116 modules, lean -o into a flat folder, LEAN_PATH there): compiled 116 of 116; failed [] (no error or warning).
+Axiom audit: the 42 new GrammarLaws declarations, Response's WithinClosure.converse, SelectionPool's WithinClosure.of_reads and WithinClosureOf.to_reads, and the seven renamed declarations:
+'Becoming.«所闭之逆»' does not depend on any axioms
+'Becoming.«借步之所闭在二所闭»' does not depend on any axioms
+'Becoming.«二所闭在借步之所闭»' does not depend on any axioms
+'Becoming.GrammarLaws.keep' does not depend on any axioms
+'Becoming.GrammarLaws.keep_append' does not depend on any axioms
+'Becoming.GrammarLaws.keep_congr' does not depend on any axioms
+'Becoming.GrammarLaws.keep_all' does not depend on any axioms
+'Becoming.GrammarLaws.mem_keep' does not depend on any axioms
+'Becoming.GrammarLaws.any_false_mem' does not depend on any axioms
+'Becoming.GrammarLaws.any_split' does not depend on any axioms
+'Becoming.GrammarLaws.any_remove' does not depend on any axioms
+'Becoming.GrammarLaws.any_true_of_mem' does not depend on any axioms
+'Becoming.GrammarLaws.any_false_of' does not depend on any axioms
+'Becoming.GrammarLaws.mem_middle' does not depend on any axioms
+'Becoming.GrammarLaws.mem_of_removed' does not depend on any axioms
+'Becoming.GrammarLaws.distinct_removed' does not depend on any axioms
+'Becoming.GrammarLaws.not_eq_true_iff' does not depend on any axioms
+'Becoming.«计»' does not depend on any axioms
+'Becoming.GrammarLaws.count_append' does not depend on any axioms
+'Becoming.GrammarLaws.count_insert' does not depend on any axioms
+'Becoming.GrammarLaws.split_of_count_pos' does not depend on any axioms
+'Becoming.GrammarLaws.count_go' does not depend on any axioms
+'Becoming.GrammarLaws.count_eq_countP' does not depend on any axioms
+'Becoming.GrammarLaws.uncrossed_of_closed' does not depend on any axioms
+'Becoming.«对则不越域守数»' does not depend on any axioms
+'Becoming.«对则双闭域守数»' does not depend on any axioms
+'Becoming.«对而单闭域不守数之例»' does not depend on any axioms
+'Becoming.GrammarLaws.class_test_congr' does not depend on any axioms
+'Becoming.GrammarLaws.pair_of_class_counts' does not depend on any axioms
+'Becoming.«类之对当且仅当类类等数»' does not depend on any axioms
+'Becoming.«续之对则类类等数»' does not depend on any axioms
+'Becoming.«一对而静不对之例»' does not depend on any axioms
+'Becoming.GrammarLaws.ceasing' does not depend on any axioms
+'Becoming.GrammarLaws.arising' does not depend on any axioms
+'Becoming.GrammarLaws.census_pairs' does not depend on any axioms
+'Becoming.«定后定前则前并生对后并亡»' does not depend on any axioms
+'Becoming.«前者在前则所列生者生»' does not depend on any axioms
+'Becoming.«后者在后则所列亡者亡»' does not depend on any axioms
+'Becoming.«定后则类之核同行»' does not depend on any axioms
+'Becoming.«遍后则其内同行之类含于核»' does not depend on any axioms
+'Becoming.«定后遍后则核为其内最粗同行之类»' does not depend on any axioms
+'Becoming.«后不定则核可不同行»' does not depend on any axioms
+'Becoming.WithinClosure.converse' does not depend on any axioms
+'Becoming.WithinClosure.of_reads' does not depend on any axioms
+'Becoming.WithinClosureOf.to_reads' does not depend on any axioms
+'Becoming.«守核则不穷»' does not depend on any axioms
+'Becoming.«守核之线不亡»' does not depend on any axioms
+'Becoming.«亡前核变»' does not depend on any axioms
+'Becoming.«有亡之线两端核异»' does not depend on any axioms
+'Becoming.«足以定核»' does not depend on any axioms
+'Becoming.«合有常则足以定核»' does not depend on any axioms
+'Becoming.«从缘生非文法之律»' does not depend on any axioms
+
+Then item 1's weakening (cf6bc2c71, apply_he2_item1.py --weakening-only: Grammar and PatternPassing) applied on top, every kit's --check passing after all three: the upstream closure with PatternPassing and Sampling added (120 modules) compiled 120 of 120; failed [] (no error or warning). Axiom audit:
+'Becoming.«两端分则中有标»' does not depend on any axioms
+@«两端分则中有标» : ∀ {α : Type u_1} {R E K P : «际» α},
+  (∀ (x y : α), «续» R E x y → K x y ∨ P x y) →
+    (∀ {a b c : α}, K a b → K b c → K a c) →
+      ∀ {x y : α}, «相续» R E x y → ¬K x y → ∃ u v, «续» R E u v ∧ P u v ∧ (x = u ∨ «相续» R E x u) ∧ (v = y ∨ «相续» R E v y)
+'Becoming.Web.ByPassing.passes_within' does not depend on any axioms
+'Becoming.Web.ByPassing.ends_within' does not depend on any axioms

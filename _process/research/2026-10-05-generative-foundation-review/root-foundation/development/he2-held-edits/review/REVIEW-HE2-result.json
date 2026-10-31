@@ -1,0 +1,815 @@
+{
+ "reviews": [
+  {
+   "lens": "lean",
+   "checked_sound": [
+    "The Lean diff touches 14 .lean files (the 13 modules, plus Becoming.lean where the change is docstring renames only) and the two package READMEs. I traced every hunk to an item.",
+    "The kits' --check runs on my copy of W (/private/tmp/claude-501/-Users-ren-theories/9aba857c-ddb0-4120-8fd6-1280d56ef976/scratchpad/he2-review/rv-lean/wcopy) all pass: items 2-4 as in W ('38 new declarations'), items 6-7, item 5 (every edit 'done'), and item 1's revised kit at 884753120 (every edit 'already applied').",
+    "Item 1: the new printed statement of «两端分则中有标» is split first, then `∀ {a b c}, K a b → K b c → K a c`, and the rest is unchanged. The proof changes only `hK.trans` to `trans`. PatternPassing's two calls pass `(carrierClass_class V).trans`. Sampling's arises_within and ceases_within print unchanged, and their proofs are the kit's text: no recursion, the law plus the two reach laws, and ceases_within is arises_within at ¬p.",
+    "Item 5: the three reach laws moved byte for byte (918 characters) into GrammarMap's `namespace Map` under the same `variable {α : Type u}`, and their printed statements are identical. WideningOnTheMap's Steps.reached_le and HeldPossible's two local facts are now one application each. Nothing is added.",
+    "Items 2-4: the 38 declarations (34 theorems, 4 definitions) match KIT.md's list. Response and SelectionPool now hold exactly KIT.md's three proofs, and their statements print unchanged. The docstrings of «所闭之逆», «借步之所闭在二所闭», «对则不越域守数», «对则双闭域守数», «对而单闭域不守数之例», «类之对当且仅当类类等数», «一对而静不对之例», the census laws and the helpers match their statements, with the exceptions reported below.",
+    "Items 6-7: the four laws, «定后则类之核同行», «遍后则其内同行之类含于核», «定后遍后则核为其内最粗同行之类» and «后不定则核可不同行», are stated exactly as their docstrings say, and the 其内 names say what the statements say. None of the 7 old names occurs anywhere in the package, with or without «». The flame names are kept. Three theorem statements and two definitions («因于核», «相须核») change only by the renames.",
+    "Source-level comparison over all 13 modules, with comments blanked and renames applied: every theorem statement and every other declaration (def, abbrev, inductive, structure, and Sampling's 3 instances) matches HEAD, except «两端分则中有标». So nothing slipped past the audit in this tree.",
+    "The receipt 20261030T234558.400678Z passed, with 360 modules and every axiom report empty. In the 13 modules' AxiomAudit logs every line reads 'does not depend on any axioms'. Counts by module: Grammar 118, GrammarLaws 204 (176 theorems), GrammarRegularity 29, GrammarScope 45, GrammarCandidates 90, GrammarMap 61, MapRegions 42, WideningOnTheMap 52, HeldPossible 118, PatternPassing 46, Sampling 117, Response 46, SelectionPool 55. kernel_checked is true everywhere. The receipt's source_sha256 matches W's files (357 compared, 0 differ). Generated axiom dependencies are 243 injEq lemmas with propext, as at HEAD.",
+    "Audit logic: theorem statements come from both receipts' Signatures logs, read from the cache, and definitions come from HEAD's and the working tree's sources. Renames are checked for both theorems and definitions, and moves by module. An alias left inside the 13 modules would fail the GONE check. signatures.log agrees with the tree: 747 to 785, 6+1 renames, 38+4 added, 3 moved, 1 changed, 3+2 changed by renames only.",
+    "The «计» docstring says Init's `List.countP_cons` and `countP_append` report propext. Confirmed with Lean 4.29.1."
+   ],
+   "findings": [
+    {
+     "id": "F1",
+     "severity": "blocker",
+     "where": "Scratch tree W (GrammarLaws.lean, receipt 20261030T234558.400678Z, he2-pre2/signatures.log, records/master-laws-on-the-grammar.json lines 84 and 894) and /Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he2-held-edits/DESIGN.md lines 12, 28 and 56; he2_signatures.py line 7",
+     "what": "The tree under review is built from item kits that he2-land no longer carries. W holds items 2-4 at 4ca8098e2: 38 declarations, with GrammarLaws.count_append. W's item-1 study files are cf6bc2c71's: KIT.md and apply_he2_item1.py still gate on `Map.step_reach_of_le`, a name that does not exist. The landing branch he2-land (2a085bcbf) merged he2-item2 at 01ca4779f, which drops count_append (37 declarations; he2_u4.py asserts `== 37`), and ou3f-laws at 884753120. DESIGN still pins `he2-item2` at `4ca8098e2` and gives 38 declarations, '42 laws', '747 to 785' and '38 theorems and 4 definitions'.",
+     "consequence": "Checks fail on W: the tip's he2_u4.py --check stops with 'applied in part'. With the tip's NEW, the signature audit on W's Lean would fail with ('added', ['Becoming.GrammarLaws.count_append']). W's own item-1 kit --check also fails ('Sampling: 0 copies ... 0 of its replacement'). If the Lean is re-applied from he2-land instead, the receipt, the audit log, the records written in W and DESIGN's counts describe Lean that will not land. The landed figures would be 37 declarations from items 2-4, 41 added to GrammarLaws (37 theorems and 4 definitions), 784 statements and GrammarLaws 203/175. The pre-rehearsal's steps from GrammarLaws upward would not be reused.",
+     "fix": "Regather W from he2-land (items 2-4 at 01ca4779f, item 1 at 884753120). Re-apply, rerun every kit's --check, the checker (GrammarLaws and everything above it rebuild), the audit, the records and the register. Update DESIGN's row-2 pin and counts (38→37, 42→41, 785→784, '38 theorems'→'37 theorems') and he2_signatures.py's docstring.",
+     "evidence": "`git show -s --format=%P 9060437dd` gives b148d8f98 01ca4779f. `git show he2-land:.../he2_u4.py | grep '== 3[78]'` gives line 88, `== 37`. In wcopy with 01ca4779f's he2_u4.py and tree, `python3 -B -I he2_u4.py --check` gives AssertionError (... GrammarLaws.lean, 'item 2, counting before end Balance', 'applied in part'). W's apply_he2_item1.py --check gives 'nothing written: Sampling: 0 copies'. cmp of W's item-1 files against cf6bc2c71 shows them equal. `grep -n count_append` on W's master-laws-on-the-grammar.json gives lines 84 and 894."
+    },
+    {
+     "id": "F2",
+     "severity": "should-fix",
+     "where": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he2-held-edits/kit/he2_signatures.py lines 64-79 (statements compared as `#check @name` output; the checker writes these drivers with default pp options, check_becoming.py lines 4064-4065)",
+     "what": "The audit compares statements as they print by default. Default printing drops binder types in ∃ and λ, universe levels, implicit arguments and instance arguments, so two different statements can print the same. The 13 modules have theorems of exactly this shape: «从缘生非文法之律» prints as `(∃ β R x, ∀ (w : β), ¬R w x) ∧ ∃ β R x, R x x`, and «后不定则核可不同行» and «入而屡之例» are `∃ (R E : «际» Nat) …` forms.",
+     "consequence": "A real change to a kept statement can pass as 'prints as before', for example a binder's type or universe changed inside an ∃. DESIGN's 'every statement ... as the items say' is then claimed on weaker evidence than it states. In this tree nothing slipped: I compared the source statements directly.",
+     "fix": "Make the signature drivers the audit reads print with `set_option pp.funBinderTypes true`, `pp.universes true` and `pp.explicit true`, or compare the elaborated types (for example `#eval` of `(← getConstInfo n).type` printed with pp.all). Alternatively, add a source-level statement comparison like the one for definitions (comments blanked, renames applied).",
+     "evidence": "With Lean 4.29.1 in my scratch folder, `#check @a1` and `#check @a2` (for `∃ (β : Type) ...` and `∃ (β : Type 1) ...`) both print `(∃ β R x, R x x) ∨ True`. `∃ R : Rel Nat, R 0 1` and `∃ R : Rel Int, R 0 1` both print `∃ R, R 0 1`, and `∃ n : Nat, n + 1 = 1` and `∃ n : Int, n + 1 = 1` both print `∃ n, n + 1 = 1`. GrammarCandidates.new.log line 57 shows the elided form."
+    },
+    {
+     "id": "F3",
+     "severity": "should-fix",
+     "where": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he2-held-edits/kit/he2_signatures.py lines 36-37, 44-46, 64-72, 98-103; signatures_ou3b.py DEF_RE (line 59)",
+     "what": "Five things the audit does not check. (a) It reads only the 13 listed modules and never checks that no other package source changed; Becoming.lean did change. (b) Declarations that are neither theorems nor def/abbrev/structure/inductive/class are not compared at all, for example Sampling's 3 instances, `active_decided` among them, which gives the decidability that arises_within's callers use; nor are `variable`, `open` or `attribute` lines. (c) For «两端分则中有标» it requires only that the statement changed, not that it changed as item 1 says. (d) It does not check that the added names sit in GrammarLaws: `where_new` is computed but unused, and definitions from all modules are pooled. (e) It reads definitions from the working tree and theorems from the receipt, without checking that the tree's sources are the receipt's.",
+     "consequence": "Each gap lets a real change pass the audit: an edit in a 14th module, a changed instance or section variable, a different weakening of «两端分则中有标», a law placed in the wrong module, or a source edited after the run. In this tree none occurred. Becoming.lean's diff is docstring renames only, the instances are unchanged, and the 357 source hashes match.",
+     "fix": "(a) Assert that the package's `git diff --name-only HEAD` Lean files are the 13 plus Becoming.lean, and that Becoming.lean's imports and code are unchanged. (b) Compare the full blanked source of every non-theorem command, or extend DEF_RE to instance, opaque, variable and attribute. (c) Compare «两端分则中有标»'s new printed statement with the expected text. (d) Check `where_new[n] == 'GrammarLaws'` for every added theorem and track the modules of definitions. (e) Assert that the sha256 of each of the 13 sources equals the receipt's `source_sha256`.",
+     "evidence": "I read he2_signatures.py and signatures_ou3b.py (DEF_RE: `(def|abbrev|structure|inductive|class)`). `grep -nE '^instance'` on Sampling.lean finds lines 259, 818 and 906. `git diff HEAD --stat` lists Becoming.lean among the changed Lean files. My source comparison with stmts.py found no change beyond «两端分则中有标», and the hash comparison found 357 files with 0 mismatches."
+    },
+    {
+     "id": "F4",
+     "severity": "should-fix",
+     "where": "W: experiments/.../lean/becoming/Becoming/GrammarMap.lean lines 199-207 (the docstring of 'Some branch and every branch')",
+     "what": "Item 5's new sentence reads 'How they stand to the regions below (`«生成»`, `«守»`, `«退化»`) is stated in leaves that import this module'. Here 'they' covers all three whole-line forms, «全生成», «全守» and «有终», but only the first two are stated. No declaration in the package relates «有终» to «退化» or «尽». The laws and witnesses the sentence names do exist and state what it says: «全生成则生成» in KeepingWidening, «全守则后守» in MapRegions, Map.Once.keeping and Map.Once.not_keeps. KeepingWidening is not a leaf, since WideningOnTheMap imports it.",
+     "consequence": "The docstring claims more than the package proves. A reader will look for «有终»'s standing to degeneration and find nothing. The sentence it replaces ('is not stated') was true of «有终».",
+     "fix": "Write: 'How «全生成» and «全守» stand to generation and keeping is stated in modules that import this one: strong generation gives generation (…), strong keeping gives keeping from some point on (…) but not strict keeping (…); how «有终» stands to «退化» is not stated.' Use 'modules' in place of 'leaves'.",
+     "evidence": "A python scan of every `theorem` statement in W's Becoming/*.lean finds none containing both «有终» and «退化» or «尽». `grep import Becoming.KeepingWidening` finds WideningOnTheMap.lean line 1 and Becoming.lean. MapRegions.new.log shows Becoming.Map.Once.keeping, Becoming.Map.Once.not_keeps and «全守则后守», and KeepingWidening.lean line 231 is «全生成则生成» with no hypothesis beyond «全生成»."
+    },
+    {
+     "id": "F5",
+     "severity": "should-fix",
+     "where": "W: theories/becoming/chapters/01-ROOT.md line 82 (home section r-continuation-relative-to-a-class, anchor line 58); theories/becoming/review/LOGIC.md lines 126-128 (L-04 block); experiments/.../Becoming/PatternPassing.lean line 307; item 1 KIT.md 'One claim widened' ('No chapter states the law's hypothesis (searched)')",
+     "what": "Item 1 widens «两端分则中有标» to any relation that composes. The record continuation-relative-to-a-class laws[9] is widened in W, but the home section still reads 'For a class `K`, ... a line whose ends `K` tells apart ... the proof uses only the transitivity of `K`'. Item 1's KIT, in both versions, says no chapter states the law's hypothesis. LOGIC.md's L-04 quotes the old Lean signature, `(hK : «类» K)` before `split`, under its claim that every block was compared again with the current sources. check_dossiers.py checks names only, so it passes. PatternPassing's module doc glosses the law as 'a line whose ends a class tells apart'.",
+     "consequence": "One result is stated two ways, in its record and in its home section, against the rule that a change to a result's statement goes to both. The logic dossier shows reviewers a signature that no longer exists, and its compared-with-sources claim becomes false at landing.",
+     "fix": "Widen 01-ROOT.md line 82 in the record's words ('a relation that composes (a class is one)') and its zh edition if there is one. Re-copy LOGIC.md L-04's block from Grammar.lean. Correct the KIT's search sentence. Optionally, PatternPassing line 307: '(a line whose ends a transitive relation tells apart …, here the carrier class)'.",
+     "evidence": "`sed -n 82p 01-ROOT.md` shows 'For a class `K` ...'. The anchors from `grep -n 'id=\"r-' 01-ROOT.md` are 58 and then 86. In `git diff HEAD` of continuation-relative-to-a-class.json, laws[9] en and zh are changed. LOGIC.md line 126 reads `theorem «两端分则中有标» {R E K P : «际» α} (hK : «类» K)`. check_dossiers.py's docstring says 'every Lean name exists' (names only)."
+    },
+    {
+     "id": "F6",
+     "severity": "minor",
+     "where": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/he2-held-edits/kit/he2_signatures.py lines 4-5 and 38-43; DESIGN.md lines 28-29",
+     "what": "The audit's docstring says 'Each expectation is read from the item's own kit, so a kit revised before the landing is followed'. Item 1's expectation (ITEM1_CHANGED) and item 5's (ITEM5_ADDED, ITEM5_MOVED) are hard-coded, and item 5's kit has already been revised once. DESIGN step 4 says '42 laws added to GrammarLaws, and item 5's added to GrammarMap', but item 5 adds nothing and 4 of the 42 are definitions. It also says '`Map.step_reached_le` moved', but three laws move.",
+     "consequence": "The design and the tool describe the check inexactly. A further revision of item 1's or item 5's kit would not be followed. The audit fails closed in that case rather than letting the change slip.",
+     "fix": "Read item 5's moved names from he2_item5.py and item 1's changed name and expected statement from apply_he2_item1.py. Otherwise say they are fixed in the audit. In DESIGN, write '… declarations added to GrammarLaws; item 5's three reach laws moved to GrammarMap, nothing added'.",
+     "evidence": "I read he2_signatures.py lines 4-13 and 38-46, and DESIGN.md lines 26-31. Item 5's KIT says it was 'corrected 31 October 2026 ... the kit now moves the existing laws and adds none'."
+    },
+    {
+     "id": "F7",
+     "severity": "minor",
+     "where": "W: experiments/.../Becoming/HeldPossible.lean lines 398-403 (docstring of Steps.generation_iff_begins)",
+     "what": "Item 5 added a clause to this docstring but kept the citation 'reaches every later moment (`Steps.reached_of_buqiong`)'. The proof no longer uses that law: reach_to is now `Map.step_reaches_of_le`, which the same sentence cites again.",
+     "consequence": "The docstring points the reader to a law the proof does not use, and the reaching fact is cited twice, to two different laws.",
+     "fix": "Drop '(`Steps.reached_of_buqiong`)', or replace it with `Map.step_reaches_of_le` and delete the duplicate clause.",
+     "evidence": "`grep -n reached_of_buqiong HeldPossible.lean` finds only line 401, the docstring. The proof at lines 404-414 uses Map.step_reaches_of_le and Map.step_reached_le."
+    },
+    {
+     "id": "F8",
+     "severity": "minor",
+     "where": "W: experiments/.../Becoming/GrammarMap.lean lines 359-360",
+     "what": "Item 5's section comment lists the modules that read the reach laws as '(`MapRegions`, `WideningOnTheMap`'s `Steps.reached_le`, `HeldPossible`)'. After item 1, Sampling's arises_within reads both Map.step_reaches_of_le and Map.step_reached_le, and it is not listed.",
+     "consequence": "The list of the laws' readers is incomplete after HE2.",
+     "fix": "Add Sampling's `arises_within`, or write 'every module that reads a line along it, such as …'.",
+     "evidence": "Sampling.lean lines 172-179 use Map.step_reaches_of_le and Map.step_reached_le. GrammarMap.lean line 359 has the list."
+    },
+    {
+     "id": "F9",
+     "severity": "minor",
+     "where": "W: experiments/.../Becoming/GrammarLaws.lean lines 1020-1025 («续之对则类类等数»)",
+     "what": "The docstring ('Continuation relative to a class lies within the class, so a pairing under it keeps the count in every class') leaves out the hypothesis `dec : ∀ x y, E x y ↔ e x y = true`. That hypothesis says the class is decided by the test the count uses. The sibling «类之对当且仅当类类等数» says 'Under a class decided by a test'.",
+     "consequence": "The docstring does not state the law's hypotheses exactly, as the rule for touched docstrings requires.",
+     "fix": "Write 'Where `E` is a class decided by the test `e`, continuation relative to it lies within it, so a pairing under continuation keeps the count (by `e`) in every class.'",
+     "evidence": "I read the statement at lines 1022-1025: (cls : «类» E) (dec : ∀ x y, E x y ↔ e x y = true) … «计» (e z) a = «计» (e z) b."
+    },
+    {
+     "id": "F10",
+     "severity": "minor",
+     "where": "W: experiments/.../Becoming/GrammarLaws.lean line 945 («对则不越域守数»), and lines 304-311 («二所闭在借步之所闭»)",
+     "what": "In «对则不越域守数», the hypothesis `∀ x y, R x y → p x = p y` (not crossed, both ways) is bound as `closed`. That is the reading of «闭» that KIT.md gives as the reason the law was renamed from «对则闭域守数». In «二所闭在借步之所闭», the name and the docstring heading speak of 'the closure through borrowed steps', but the hypotheses are only `«则» R R'` and `«所闭» R' o a`, so R' need not be built from borrowed steps. The docstring's 'o reaches a under R'' is also stronger than `«所闭» R' o a`, which allows o = a; GrammarLaws itself reads «所闭» as 'itself or what x reaches'.",
+     "consequence": "A binder name and one law name and heading state a narrower or different meaning than the statement has, against the rule that a name is adopted only where the statement means exactly that.",
+     "fix": "Rename the binder to `uncrossed`. For the second law, state its scope in the docstring ('Where `R` lies within `R'` and `a` lies within `o`'s closure under `R'` (as for a closure through borrowed steps) …') or ask OU's owner for a name without 借步.",
+     "evidence": "GrammarLaws.lean line 945 reads `(closed : ∀ x y, R x y → p x = p y)`; lines 304-311 hold the docstring and statement. KIT.md, 'Changes from lever 1's scratch': '«闭» is closure one way … so the old name stated a wrong meaning'."
+    }
+   ]
+  },
+  {
+   "lens": "records",
+   "checked_sound": [
+    "Each of the six records has exactly one HE2 history note, and its earlier history is byte-identical to HEAD. Checked with a python comparison of history[:len(old)] against git show HEAD.",
+    "continuation-relative-to-a-class: the HE2 note covers every field that changed: statement.zh, laws.3.zh, laws.9 en/zh, laws.10.zh, laws.10's declarations, aliases, and the Grammar reference's renamed names. Its laws.N indices are 0-based, matching the diff (3, 9, 10).",
+    "Item 1's widening: laws[9] en/zh now say 'a relation that composes (a class is one)'. This matches the new Lean signature (split, then trans : ∀ {a b c}, K a b → K b c → K a c, conclusion from ¬K x y). The declarations are unchanged, as the clause says.",
+    "Item 5 in the Lean: the three Map.step_* proofs are moved whole from MapRegions to GrammarMap. WideningOnTheMap's and HeldPossible's copies become single applications.",
+    "Item 5 in generation-and-degeneration-at-two-grains: the three declarations are removed from the MapRegions reference and inserted into the GrammarMap reference in sorted order. GrammarMap 42 theorems in 61 declarations and MapRegions 36 in 42 match the receipt, and the references cite all 61 and all 42. The scope is 572/253 characters, the laws are untouched, and no other record cites the three.",
+    "master-laws-on-the-grammar: the GrammarLaws reference lists exactly the receipt's 204 names. Every new declaration sits in a law: law 0 has 3, law 2 has 23, law 3 has 12 and law 14 has 4, which makes 42. The scope's 176 theorems in 204 declarations matches the receipt, at 600/260 characters (the cap is n > cap in style.py, so exactly 600 passes).",
+    "master-laws law 14 states the four item-6 laws exactly («定后则类之核同行», «遍后则其内同行之类含于核», «定后遍后则核为其内最粗同行之类», «后不定则核可不同行»). The correction note is true: on {0,1} with R = {(1,1)} and E the full class, E goes alike but is not constant, so it does not lie in its core.",
+    "master-laws law 3's count and class laws match the Lean hypotheses: a region that is not crossed; closed both ways; one-way closure not enough; a class decided by a test; equal count paired under the one and not under sameness; a pairing under continuation keeps class counts. The two «前者在前…» and «后者在后…» laws need neither fixed successors nor distinct lists, and the text does not claim they do.",
+    "The added references exist in W with matching sha256: DESIGN.md, review/REVIEW-HE2.md (the dry-run placeholder), the receipt, rv21-one-sense/NOTE.md and REVIEW-HE2-KIT.md. The receipt passed, and all 13 changed modules have empty axiom reports.",
+    "a-regularity-kept-and-changed, candidate-theorems-of-the-corpus and reach-past-ones-own-end: renames are complete. No old name is left in records, chapters, the glossary, the Lean package or the register, except inside the HE2 notes and lean-index.json's historical contents_by_sha256. GrammarCandidates' 66 theorems in 90 declarations matches the receipt. The ARKC and RPOE scopes name their own receipts, and their counts were true there (25/29 citing 9; 30/37 citing 23).",
+    "Apart register, categories and reasons: all 10 new entries are true against the Lean (8 from items 2–4, 2 from item 6). Two keys are re-keyed with their reasons kept. «核为类» is dropped, and «定后则类之核同行» uses it («核为类» R hE). conn-check.log after the edits lists only GrammarLaws.count_append unclassified (known) and no stale entries. Category counts move as expected (model-witness 526→530, support 138→139, general-structure 454→461), and every register entry's module matches the receipt.",
+    "kit/he2_records.py matches its docstring and DESIGN step 5. The kits' records parts run without notes, and the clauses are merged in item order. The 'No other law changes' tails are folded into one, so the ML note ends with a single 'No other law changes.'. The receipt status, source hashes and empty axiom reports are asserted. --check runs every anchor and clause assert before an apply run, and an already-applied tree exits early.",
+    "strict.log: errors 0 and source_drift 0. Re-pointed records with old receipts in their scopes (keeping-widening, where-the-possible-grows, RPOE, the-continuation-condition-on-the-root) state counts at those named receipts that are still true there. laws-at-coarser-steps is the exception, reported as a finding."
+   ],
+   "findings": [
+    {
+     "id": "R1",
+     "severity": "blocker",
+     "where": "W/theories/becoming/results/records/master-laws-on-the-grammar.json lines 491-492, does_not_show[4]",
+     "what": "The record still says it does not show 'That a pairing under continuation adds anything to equal count, or the n-step law for lines of different lengths' (zh: 续之下之配对于等长之外有所增益…). HE2 adds «续之对则类类等数» to law 3 ('so a pairing under continuation relative to such a class keeps the count in every class'), and «对则不越域守数». Its own HE2 note says balance 'gains … what a pairing under continuation adds to equal count'. GrammarLaws' module doc was narrowed the same way ('adds anything to equal count beyond what is now stated: …'). Neither he2_u4.py's records part nor he2_records.py touches does_not_show.",
+     "consequence": "The landed record contradicts itself: law 3 and the history note state a result that does_not_show says is not shown. The rendered page (master-laws-on-the-grammar.md line 65) prints the false limitation.",
+     "fix": "Narrow the item as the module doc does. Suggested en: 'That a pairing under continuation adds anything to equal count beyond the count on every region it does not cross and, under a class decided by a test, in every class; or the n-step law for lines of different lengths.' (217 characters, under the 240 item cap.) Give zh to match. Add it to the items 2–4 clause of the HE2 note, e.g. 'the does-not-show item on a pairing under continuation narrowed to what is not stated'; OU3f's §451 note did the same when it dropped a does-not-show item. Do it in he2_u4.py's records part, or in he2_records.py's ML step with an anchor assert.",
+     "evidence": "grep -n 'adds anything to equal count' W/theories/becoming/results/records/master-laws-on-the-grammar.json → 491. Python field diff: ML's changed fields are history, laws, proof_bindings, references, reviewed_at_utc and validation_scope; does_not_show is unchanged. lean.diff GrammarLaws hunks: «续之对则类类等数» and the 'What is not shown' edit."
+    },
+    {
+     "id": "R2",
+     "severity": "should-fix",
+     "where": "W/theories/becoming/results/records/master-laws-on-the-grammar.json line 555, validation_scope en/zh (written by he2_records.py ml_scope, lines 157-166)",
+     "what": "Two inexact phrases. (1) 'one each of OU3c to OU3e, HE and HE2' (zh 'OU3c 至 OU3e、HE 与 HE2 各一次') counts one HE2 review, but the record now references two: rv21-one-sense/review/REVIEW-HE2-KIT.md (a read-only AI review of items 6–7's kit, added by he2_core_li.py's ML_REFS) and he2-held-edits/review/REVIEW-HE2.md. (2) 'one weakened law' describes «两端分则中有标», whose hypothesis is weakened, so the law itself is widened, not weakened. The zh '一律设宽' is right. Also, the HE2 history note does not mention that the scope and references changed, although item 5's clause does so for its own record.",
+     "consequence": "The review count is wrong. 'Weakened law' reads as a claim having been weakened, the opposite of what item 1 does.",
+     "fix": "Suggested en, 598 characters: 'Checked by the Lean 4.29.1 checker (receipt {R}): Becoming.GrammarLaws, {t} theorems in {d} declarations, 40 representation and bridge declarations in 14 model modules, the derivations of OU3c, OU3e and OU3f in 14 more and of HE in Mechanism, every axiom report empty, all cited; changed modules' statements print as before but for two relation laws at any universe (OU3b), HE2's renames and one law widened. Read-only AI reviews, every finding taken: three of OU3b, one each of OU3c to OU3e and HE, two of HE2, three of OU3f, three with a second pass; not reviewed by a person.' zh: '…OU3c 至 OU3e 与 HE 各一次，HE2 二次…', trimmed to 260 elsewhere (for example 实查→查, 其中三次复审→三次复审). Add a clause to the ML note: 'the validation scope gives HE2's receipt and GrammarLaws' counts'.",
+     "evidence": "Python reference listing of ML: review entries include rv21-one-sense/review/REVIEW-HE2-KIT.md and he2-held-edits/review/REVIEW-HE2.md. Header of REVIEW-HE2-KIT.md: 'An AI review, read-only, of kit/he2_core_li.py'. Scope lengths are 600/260."
+    },
+    {
+     "id": "R3",
+     "severity": "should-fix",
+     "where": "W/theories/becoming/results/records/master-laws-on-the-grammar.json line 459, hypotheses[0]",
+     "what": "The field still reads 'None beyond the grammar and the models' representation: every carrier and relation, counting entering only through finite lists as in the models. Each global form takes a fixed successor, merging nothing, a successor everywhere or a list of the carrier…'. HE2's laws add hypotheses that are not named here. A counted region is a Boolean test (p : α → Bool, a modelling choice). The class law and «续之对则类类等数» take dec : ∀ x y, E x y ↔ e x y = true. The census takes «续» R E decided by a test (dec), with lists without repeats (Distinct).",
+     "consequence": "The record's premises field under-states what the new laws assume. AGENTS asks that modelling choices be stated wherever a law depends on them, and law 3 states the test while the hypotheses field contradicts it ('only through finite lists').",
+     "fix": "Add a clause to hypotheses[0], en and zh: 'a region counted, a class or a continuation is read as a Boolean test (a modelling choice), and the census takes lists without repeats'. Name the change in the HE2 note.",
+     "evidence": "Hypotheses read from W's ML record. Lean signatures in lean.diff: «对则不越域守数» (p : α → Bool), «类之对当且仅当类类等数» (dec), «定后定前则前并生对后并亡» (dec, dB dA : Distinct)."
+    },
+    {
+     "id": "R4",
+     "severity": "should-fix",
+     "where": "W/theories/becoming/results/records/continuation-relative-to-a-class.json line 307, validation_scope",
+     "what": "The scope says 'Becoming.Grammar, 68 theorems in 116 declarations' (zh '116 个声明中 68 条定理'). The HE2 receipt has 70 theorems in 118 declarations, and the record cites all 118. This was already stale before HE2: the receipt it was bound to, 20261025T043938.655037Z, also has 70/118, and the string dates from OU6 (024986cf1). HE2 edits this record, rebinds Grammar to its receipt and adds an HE2 note, but leaves the count.",
+     "consequence": "After HE2 the record's count contradicts the receipt it is bound to.",
+     "fix": "Set '70 theorems in 118 declarations' and zh '118 个声明中 70 条定理' (the scope is 554/251, so it fits). Add a clause to the HE2 note, or do it in he2_records.py with an anchor assert.",
+     "evidence": "Python: receipt Becoming.Grammar is (70, 118). CRC's Grammar reference has 118 declarations, equal to the receipt's names. git log -S'68 theorems in 116' gives 024986cf1."
+    },
+    {
+     "id": "R5",
+     "severity": "should-fix",
+     "where": "W/theories/becoming/results/records/generation-and-degeneration-at-two-grains.json line 267, validation_scope.en (the sentence he2_records.py item5() rewrites)",
+     "what": "The rewritten first sentence reads 'Becoming.GrammarMap, 42 theorems in 61 declarations at receipt 20261030T234558.400678Z, and Becoming.MapInstances, 28 theorems, each with an empty axiom report.' MapInstances has 27 theorems in 27 declarations, both at its bound receipt 20261029T162632.074811Z and at HE2's receipt, and the record cites 27. The count was stale before HE2: it had been 28 at 20261029T145758.",
+     "consequence": "One sentence that HE2 rewrites, and ties to a receipt, gives a count no receipt binding this record supports.",
+     "fix": "Change 28 to 27 in the en (the zh gives no MapInstances count). Mention it in item 5's clause ('and MapInstances' count corrected to 27'), or extend GDG_VS_EN's anchor to include it.",
+     "evidence": "Python across receipts: MapInstances (28, 28) at 20261029T145758, then (27, 27) from 20261029T162632 on. GDG's MapInstances reference cites 27 declarations, and its binding is 20261029T162632.074811Z."
+    },
+    {
+     "id": "R6",
+     "severity": "should-fix",
+     "where": "W/theories/becoming/results/records/laws-at-coarser-steps.json line 211, validation_scope en/zh",
+     "what": "The scope says 'the current bytes of the core modules Becoming.Sampling, … are bound to core receipts under becoming-checks/ (Sampling to 20261020T051144.879480Z)' (zh 'Sampling 绑定 20261020T051144.879480Z'). HE2's re-point rebinds Sampling to 20261030T234558.400678Z, because item 1 changes Sampling's arises_within and ceases_within.",
+     "consequence": "After HE2 the scope states a current binding that is false. It is the only re-pointed record whose scope claims a current receipt rather than a count at a named receipt.",
+     "fix": "At landing, after the re-point, set the parenthetical to HE2's receipt id in en and zh, or drop it. This is a scope re-point, so no history note is needed (RESULT-WORKFLOW). Add it to he2_records.py or the landing's step 8.",
+     "evidence": "git diff HEAD on laws-at-coarser-steps.json: the proof_bindings receipt for Sampling goes from 20261020T051144.879480Z to 20261030T234558.400678Z. The scan of re-pointed records for an old receipt id in the scope found this record, plus keeping-widening and where-the-possible-grows, which state counts at their named receipts and are still true."
+    },
+    {
+     "id": "R7",
+     "severity": "should-fix",
+     "where": "W/theories/becoming/chapters/01-ROOT.md line 82; W/theories/becoming/review/LOGIC.md lines 126-128; ou3f-activity-laws/he2-item1/KIT.md ('No chapter states the law's hypothesis (searched)')",
+     "what": "Item 1's KIT says the record is the only prose statement of «两端分则中有标»'s hypothesis, but two pages HE2 leaves unchanged still state the old form. 01 §3 line 82 says 'For a class `K`, where every step of continuation either keeps `K` or carries a mark `P`, a line whose ends `K` tells apart has a step carrying the mark … the proof uses only the transitivity of `K`.' LOGIC.md L-04 quotes the old Lean signature: `(hK : «类» K)` before `split`.",
+     "consequence": "After HE2 the record (laws[9], 'a relation that composes') and the chapter's statement of the same theorem differ. The review page's quoted Lean is no longer the package's signature, with different hypotheses and order.",
+     "fix": "01 line 82: 'For a relation `K` that composes (a class is one), where every step … either keeps `K` or carries a mark `P`, a line from `x` to `y` with `K` failing from `x` to `y` has a step carrying the mark…'. Update LOGIC.md's code block to `{R E K P : «际» α} (split : …) (trans : ∀ {a b c}, K a b → K b c → K a c) {x y : α} (line : …)` and its Meaning sentence. Correct the KIT's 'searched' claim.",
+     "evidence": "grep -rln '两端分则中有标' over theories: 01-ROOT.md:82 and review/LOGIC.md:126 (grep 'hK : «类» K'). git diff HEAD on 01-ROOT.md touches only lines 107-166."
+    },
+    {
+     "id": "R8",
+     "severity": "minor",
+     "where": "W/theories/becoming/results/records/master-laws-on-the-grammar.json laws[0] (line 18), laws[2] (line 53), laws[3] (line 96)",
+     "what": "Three law texts are inexact. (a) Law 0 says 'where R′ holds R and o reaches a under it' (zh 'o 于其下及 a'), but «二所闭在借步之所闭» takes `reaches : «所闭» R' o a`: a lies within o's closure, and a = o is allowed. The same law's first sentence uses 'reached' for «及», so the text asks for more than the Lean does. (b) Law 3's census says 'pair those before with those arising to those after with those ceasing' without naming the relation. In the Lean each pair is a continuation or the same unit (`fun x y => «续» R E x y ∨ x = y`), so reading it as a pairing under continuation would be false. (c) Law 2 files census_pairs, pair_of_class_counts, class_test_congr and uncrossed_of_closed as list lemmas, 'the filters, searches and counts…'. census_pairs is the census for any test-decided relation, needing no split or merge only among the listed units: it is the local form that hypotheses[0] promises for the global census law, hidden here as a helper. HE2 also takes law 3 from 414 to 1298 en characters and law 0 from 507 to 784 (lint soft cap 420/190).",
+     "consequence": "Records should say exactly what the Lean proves. These texts state a stronger hypothesis (a), leave out the pairing relation (b), and hide the census's local form (c).",
+     "fix": "(a) 'and a lies within o's closure under it' / 'a 在 o 于其下之闭包内时'. (b) Add 'each pair a continuation or the same unit'. (c) Move census_pairs (and pair_of_class_counts) into law 3, or name them in law 2's text. Consider splitting law 3's census into its own law to bring it nearer the cap; that renumbers laws, so rerun MV.",
+     "evidence": "lean.diff GrammarLaws: the signatures of «二所闭在借步之所闭», GrammarLaws.census_pairs and «定后定前则前并生对后并亡». research.py lint (read-only) on ML: laws[3] 1298/349 and laws[0] 784/258. Old lengths from git show HEAD."
+    },
+    {
+     "id": "R9",
+     "severity": "minor",
+     "where": "W/theories/becoming/results/records/continuation-relative-to-a-class.json line 843, HE2 note (built by he2_records.py history())",
+     "what": "The merged note puts item 1's clause first (laws.9 widened), then items 6–7's clause, which ends '; no statement's content changes.' (zh '所述之义皆不变'). history() strips only 'No other law changes' tails, so this tail stays. It now reads as covering the whole note, which contradicts item 1's widening.",
+     "consequence": "The note can be read as saying nothing in the record changed content, when law 9 was widened.",
+     "fix": "In history(), when several clauses merge, rephrase items 6–7's tail, e.g. '; these renames and wordings change no statement's content'. Or have he2_core_li.note() say so.",
+     "evidence": "W's CRC history[-1].en; he2_records.py lines 179 and 201-215 (NO_OTHER handles only 'no other law changes')."
+    },
+    {
+     "id": "R10",
+     "severity": "minor",
+     "where": "kit/he2_records.py lines 251-261 (main checkout, he2-held-edits/kit)",
+     "what": "In --check mode `writes[ML] = r` (line 254) binds the generation-and-degeneration record, the `r` left from line 247, because the `r = read(ML); ml_scope(r)` above it runs only when not CHECK. The loop at 255-261 then appends ML's note to the GDG object (writes[GDG] is the same object) and prints it.",
+     "consequence": "The printed notes are right and nothing is written, so the output is harmless. But --check does not hold ML's record as it would be written (only the separate copy at line 232-234 is checked), and a later edit that prints or validates writes[ML] in check mode would read the wrong record.",
+     "fix": "Keep the line-232 copy in a variable, e.g. `ml_copy`, and in check mode set `writes[ML] = ml_copy`. Or move `writes[ML] = r` inside `if not CHECK:` and use the copy otherwise.",
+     "evidence": "Read of he2_records.py lines 228-261: r is reassigned at 243 (CRC) and 247 (GDG) before line 254."
+    },
+    {
+     "id": "R11",
+     "severity": "minor",
+     "where": "he2-held-edits/DESIGN.md line 50 (outside this lens; seen in the run outputs)",
+     "what": "links.log fails with one broken link: DESIGN.md line 50 → ../rv21-one-sense/kit/he2_combined_2to7.log. That log is untracked in the main checkout and absent from W.",
+     "consequence": "make research-links fails at landing unless the log is committed with HE2.",
+     "fix": "Commit rv21-one-sense/kit/he2_combined_2to7.log in HE2's landing, or drop the link.",
+     "evidence": "he2-pre2/links.log: 'broken': 1, missing-path, target ../rv21-one-sense/kit/he2_combined_2to7.log. git ls-files --error-unmatch on that path in main: not tracked. ls of W's rv21-one-sense/kit: not present."
+    }
+   ]
+  },
+  {
+   "lens": "repoint",
+   "findings": [
+    {
+     "id": "F1",
+     "severity": "blocker",
+     "where": "W/theories/becoming/results/records/master-laws-on-the-grammar.json, does_not_show[4] (lines 491–492; rendered .md line 65)",
+     "what": "The item still reads \"That a pairing under continuation adds anything to equal count, or the n-step law for lines of different lengths\" (zh 续之下之配对于等长之外有所增益…). After items 2–4 the same record's law 3 says \"a pairing under continuation relative to such a class keeps the count in every class\" and cites «续之对则类类等数». The Lean docstring says that law is \"What a pairing under continuation adds to equal count\". The record's own HE2 note says balance gains \"what a pairing under continuation adds to equal count\". GrammarLaws.lean:175–178 was reworded to \"beyond what is now stated\", but the record was not.",
+     "consequence": "The record contradicts itself. It denies, as not shown, the law it now states and cites, and the rendered page puts both in front of a reader.",
+     "fix": "Restate en/zh as the Lean's What is not shown now reads: \"That a pairing under continuation adds anything to equal count beyond the count on every region it does not cross («对则不越域守数») and, where E is a class decided by a test, in every class («续之对则类类等数»); or the n-step law for lines of different lengths.\" Add the change to the record's one HE2 note. The note should also mention the validation_scope rewrite (receipt, 138/162→176/204, renames and the weakened law, HE2's review) and the references added, as generation-and-degeneration's note does.",
+     "evidence": "python3 read of does_not_show (index 4); git -C W grep 'adds anything to equal count'; GrammarLaws.lean:81, 175–178, 1020; the record's history[-1] text"
+    },
+    {
+     "id": "F2",
+     "severity": "should-fix",
+     "where": "W/theories/becoming/chapters/01-ROOT.md:82 (§3, the four marks)",
+     "what": "\"For a class `K`, where every step of continuation either keeps `K` or carries a mark `P`, a line whose ends `K` tells apart has a step carrying the mark … (`«两端分则中有标»`); the proof uses only the transitivity of `K`.\" After item 1 the law asks no class (`split`, then `trans`). The record continuation-relative-to-a-class laws[9] now reads \"a relation that composes (a class is one)\". Item 1's KIT.md says \"No chapter states the law's hypothesis (searched)\", which this line contradicts. No HE2 part edits it.",
+     "consequence": "The chapter states the law at its old, weaker hypothesis and disagrees with its record. The case that motivated the weakening, a property's not arising (Sampling), is not a class, so the chapter's statement does not cover the use HE2 adds.",
+     "fix": "Reword to \"For a relation `K` that composes (a class does, and so does a property's not arising from one end to the other), where every step … (`«两端分则中有标»`)\" and drop the trailing clause. Do it in the texts step before the re-point, so the records citing 01 §3 are re-pointed with it. Correct item 1's KIT.md sentence.",
+     "evidence": "git -C W grep -n '两端分则中有标' -- theories (01-ROOT.md:82); lean.diff Grammar.lean @@ -661 (new signature); continuation-relative-to-a-class.json laws[9]; he2-item1/KIT.md 'No chapter states the law's hypothesis (searched)'"
+    },
+    {
+     "id": "F3",
+     "severity": "should-fix",
+     "where": "W/theories/becoming/review/LOGIC.md:126–128 (L-04 Lean block); Meaning paragraph at :131",
+     "what": "The review dossier copies `theorem «两端分则中有标» {R E K P : «际» α} (hK : «类» K) (split : …)`, a statement the source no longer has. The dossier says every block \"was compared again with the current sources for this version\". check_dossiers.py checks only quotations and backticked names, not ```lean blocks, so the tests pass. A script comparing every dossier Lean block with Becoming/*.lean finds this as the only HE2 mismatch.",
+     "consequence": "Human reviewers of the pinned packet (owner RP) are asked to judge a statement whose hypothesis HE2 removes. Question 11's \"discrete intermediate-value form\" is about the old form.",
+     "fix": "Replace the block with the current statement (`(split : ∀ x y, «续» R E x y → K x y ∨ P x y) (trans : ∀ {a b c}, K a b → K b c → K a c) {x y : α} (line : «相续» R E x y) : ¬ K x y → …`). Say in the Meaning that K need only compose, a class's being one case. Tell RP's owner on the board, as items 6–7 did for BUDDHIST-THOUGHT.",
+     "evidence": "sed -n 110,145p LOGIC.md; python block-vs-source comparison over theories/becoming/review/*.md (only LOGIC.md:118 block from Becoming/ fails); check_dossiers.py source (no code-block check)"
+    },
+    {
+     "id": "F4",
+     "severity": "should-fix",
+     "where": "W/theories/becoming/results/records/laws-at-coarser-steps.json validation_scope.en and .zh",
+     "what": "The scope says \"the current bytes of the core modules Becoming.Sampling, … are bound to core receipts under becoming-checks/ (Sampling to 20261020T051144.879480Z)\" (zh: Sampling 绑定 20261020T051144.879480Z). The re-point rebound Sampling's proof_binding to 20261030T234558.400678Z, with no note.",
+     "consequence": "The re-point itself made a statement of the record false. The record names a binding it no longer has, and the bytes at 20261020 are not the current Sampling.lean.",
+     "fix": "Drop the parenthetical or name HE2's receipt, in en and zh, with a wording-only history note. Or exclude this record from the silent re-point and fold the change into HE2's notes.",
+     "evidence": "git -C W diff HEAD -- …/laws-at-coarser-steps.json (proof_bindings receipt 20261020T051144.879480Z → 20261030T234558.400678Z); script over the 38 records comparing old binding ids with prose: only this record names its old binding as current"
+    },
+    {
+     "id": "F5",
+     "severity": "should-fix",
+     "where": "W/experiments/…/lean/becoming/Becoming.lean bullets `Becoming.GrammarLaws` (3084–3140) and `Becoming.GrammarMap` (3022–3034, 3050–3051); README.md:34 and :28; README.zh.md:34 and :28",
+     "what": "None describes what HE2 adds.\n- GrammarLaws bullet and rows: no counting («计»), no count kept on uncrossed or doubly closed regions, no count law of a class, no «续之对则类类等数», no census of a step, no «所闭之逆» or borrowed-step closure laws, no core-of-a-class laws.\n- The bullet's \"closure is proved from it in `Becoming.Frame` and `Becoming.GrammarScope`\" omits Response and SelectionPool, now proved from it.\n- The GrammarMap bullet and rows do not say that the successor's reach laws now live there.\n- Only the GrammarRegularity bullet and the rename cells changed.\n- The study template's Output → input lists \"the root module's docs and the README rows\" as outputs.\n- No part (he2_texts.py, he2_core_li.py texts, item kits) edits these lines.",
+     "consequence": "The package's two catalogues of what GrammarLaws and GrammarMap hold are out of date at landing. A reader looking for the census or the count law of a class in the README or the root module will not find it, and the study section overstates what was updated.",
+     "fix": "Add one clause each to the GrammarLaws bullet/rows: closure under the converse and through borrowed steps (Response, SelectionPool proved as them); the count on a region and the count law of a class, what a pairing under continuation adds, and the census of a step; the core of a class going alike with a fixed successor and being the coarsest such class. Add to the GrammarMap bullet/rows: the successor's reach laws (`Map.step_reached_le`, `Map.step_reaches`, `Map.step_reaches_of_le`), read by MapRegions, WideningOnTheMap, HeldPossible and Sampling. Becoming.lean already changes in HE2, so this costs no extra rebuild.",
+     "evidence": "lean.diff: Becoming.lean hunk only at 4101 (GrammarRegularity); README hunks only GrammarRegularity, Grammar(zh), GrammarCases, GrammarPath; sed of Becoming.lean 3022–3140, README.md:28,32,34; grep of he2-held-edits/kit/*.py for README/Becoming.lean (none)"
+    },
+    {
+     "id": "F6",
+     "severity": "should-fix",
+     "where": "W/experiments/…/lean/becoming/check_becoming.py SCOPE: 'GrammarLaws:' (190–213), 'GrammarMap:' (288–294), 'Grammar:' (313–323)",
+     "what": "The scope string, written into every receipt's \"scope\" (HE2's receipt included), still describes GrammarLaws without any of the 42 additions and GrammarMap without the reach laws. Earlier GrammarLaws additions were added here (WRP2's «历», f28abafc6). check_becoming.py is unchanged in W.",
+     "consequence": "HE2's receipt describes the checked scope as it was before HE2. The machine record of what the core run covered omits the census, the count laws, the closure laws and the core-of-class laws.",
+     "fix": "Add HE2's clauses to the GrammarLaws and GrammarMap strings, and to Grammar's the composing hypothesis of the marked-step law. Do it before the rehearsal on main, since it changes checker_sha256 and the receipt's scope.",
+     "evidence": "sed -n 186,330p check_becoming.py; git -C W diff HEAD --stat -- check_becoming.py (empty); receipt 20261030T234558.400678Z 'scope' starts 'GrammarLaws: the five master laws…' unchanged; git log -S'passing through a word' -- check_becoming.py → f28abafc6"
+    },
+    {
+     "id": "F7",
+     "severity": "should-fix",
+     "where": "main: …/development/he2-held-edits/DESIGN.md:52 (W copy line 50) → ../rv21-one-sense/kit/he2_combined_2to7.log",
+     "what": "The design links a log that is untracked in main and absent from W. The dry run's links check failed on this one live link.",
+     "consequence": "`make research-links` fails at landing unless the log is committed in the same commit. A fresh landing worktree does not have untracked files.",
+     "fix": "Commit rv21-one-sense/kit/he2_combined_2to7.log (items 6–7's, the lander's own path) with the landing, or drop the link.",
+     "evidence": "he2-pre2/final.log 'links 2'; he2-pre2/links.log (broken 1, DESIGN.md line 50, missing-path); git ls-files --error-unmatch on the log in main → not tracked; ls W/…/rv21-one-sense/kit/ (no log)"
+    },
+    {
+     "id": "F8",
+     "severity": "minor",
+     "where": "W/…/Becoming/GrammarMap.lean:359–360",
+     "what": "The new section doc says the reach laws are \"stated once here, below every module that reads a line along it (`MapRegions`, `WideningOnTheMap`'s `Steps.reached_le`, `HeldPossible`)\". With item 1, Sampling's arises_within now reads the line too, through `Map.step_reaches_of_le` and `Map.step_reached_le`.",
+     "consequence": "The list of readers is incomplete as soon as HE2 lands. It was written before item 1's Sampling part.",
+     "fix": "Add Sampling (`arises_within`) to the parenthetical.",
+     "evidence": "GrammarMap.lean:359–360; Sampling.lean:168–177 (Map.step_reaches_of_le, Map.step_reached_le)"
+    },
+    {
+     "id": "F9",
+     "severity": "minor",
+     "where": "W/…/Becoming/PatternPassing.lean:304–308 (module doc, 'Derived from grammar laws')",
+     "what": "The doc glosses the law as \"(`«两端分则中有标»`: a line whose ends a class tells apart, every step of which keeps the class or carries a mark, has a marked step on it)\". This is the pre-item-1 statement. PatternPassing's bytes already change in HE2 (the two calls), but the gloss was left.",
+     "consequence": "The doc describes the grammar law at its old hypothesis. It is still true of the carrier class, but it is inexact as a statement of the law.",
+     "fix": "\"a line whose ends a relation that composes tells apart (here the carrier class) …\".",
+     "evidence": "sed -n 300,312p PatternPassing.lean; lean.diff PatternPassing hunks touch only lines 489 and 535"
+    },
+    {
+     "id": "F10",
+     "severity": "minor",
+     "where": "W/theories/becoming/results/records/a-regularity-kept-and-changed.json aliases[1] and does_not_show[2].zh; what-a-line-holds-and-a-regularity-takes-in.json title.zh and aliases",
+     "what": "Three places keep 理 after item 7's rewording:\n- aliases[1] keeps the old zh title '理之守与离', while title.zh is now 规律之守与离.\n- does_not_show[2].zh '实有之样式之理在何类' writes 理 where the English has \"regularity\". NOTE §8's own rule writes 规律 there, and the HE2 note lists the reworded fields without it.\n- Item 7 changed README.zh's GrammarPath cell to '与一规律所纳者', but that record's title.zh (and alias) is still '线所必含，与理之所纳'.",
+     "consequence": "Small inconsistencies with item 7's one-sense wording. The README cell and the record title for the same module now disagree.",
+     "fix": "Update aliases[1] and does_not_show[2].zh in a-regularity's HE2 note. Either retitle the GrammarPath record's zh with a wording note, or leave README.zh's cell as it was.",
+     "evidence": "python scan of records for zh 理 where en says 'regularity'; he2_core_li.py lines 93–95, 227; NOTE.md §8 'Wording'"
+    },
+    {
+     "id": "F11",
+     "severity": "minor",
+     "where": "Records citing re-proved model lemmas: comparison-where-the-rest-responds, mutual-dependence-and-its-pace (WithinClosure.converse); reading-anothers-couplings-is-pooling (WithinClosure.of_reads, WithinClosureOf.to_reads); laws-at-coarser-steps (arises_within, ceases_within); keeping-widening-is-generation-losing-nothing (Steps.reached_le); master-laws-on-the-grammar law 18 and references",
+     "what": "Each lemma is now proved as a grammar law, and the citing records were re-pointed silently. EC6 noted the same kind of change in every citing record (\"is now proved as a case of … instead of by its own induction; its statement and this record's laws are unchanged\"). The master-laws HE2 note says Response's and SelectionPool's lemmas \"are now proved as\" the new closure laws. But its law 18 and its references (no Response.lean or SelectionPool.lean) do not carry those derivations, unlike OU3c–OU3f and HE, whose derivations are cited and counted in the validation scope.",
+     "consequence": "No record text is wrong. The new connections live only in the history note and MV's generated view, and the master-laws record's \"derivations … all cited\" covers earlier items but not HE2's.",
+     "fix": "Either add a sentence to master-laws law 18 with the three closure derivations and references to Response.lean and SelectionPool.lean, and count them in the validation scope, or say in the note that they are left to MV's view. Optionally add EC6-style notes to the citing records.",
+     "evidence": "git grep 'own induction' over records (EC6 notes); master-laws references list (no Response/SelectionPool); law 18 declarations"
+    },
+    {
+     "id": "F12",
+     "severity": "minor",
+     "where": "W gathered tree: …/ou3f-activity-laws/he2-item1/KIT.md:22,68, kit/apply_he2_item1.py:10,74,99,120, kit/he2-item1.diff:69, checks/*",
+     "what": "W holds item 1's kit at cf6bc2c71 (apply script sha 4f3a9430…), not ou3f-laws' tip 884753120 (b327274e…) that the DESIGN names and whose Sampling part W's Lean follows. The W copy names `Map.step_reach_of_le`, which exists nowhere in the tree. Items 2–4's kit in W is 4ca8098e2, not he2-item2's tip 01ca4779f (count_append dropped, 37 declarations); that part is the known pending item.",
+     "consequence": "In W, item 1's `--check` (DESIGN step 2: every kit's check rerun after all apply) would report GrammarMap lacking `Map.step_reach_of_le`. The study files that would land from this tree describe a name the Lean does not have.",
+     "fix": "Gather at the tips the DESIGN lists (ou3f-laws 884753120, and he2-item2 at whatever tip settles count_append) before the rehearsal, then rerun every kit's --check.",
+     "evidence": "shasum of W's apply_he2_item1.py vs git show cf6bc2c71/884753120; git -C W grep step_reach_of_le; Sampling.lean:171 uses Map.step_reaches_of_le"
+    },
+    {
+     "id": "F13",
+     "severity": "minor",
+     "where": "W/theories/becoming/results/records/continuation-relative-to-a-class.json validation_scope.en",
+     "what": "\"Becoming.Grammar, 68 theorems in 116 declarations\". Both main's receipt (20261030T232750) and HE2's give 70 theorems in 118 declarations. This predates HE2, but HE2 writes a note in this record.",
+     "consequence": "The count is inexact at every current receipt.",
+     "fix": "Correct it to 70 in 118 at HE2's receipt while the record is open for its HE2 note, naming that receipt.",
+     "evidence": "python read of both verification.json files (Becoming.Grammar 70/118); record validation_scope text"
+    }
+   ],
+   "checked_sound": [
+    "The 38 re-pointed records are exactly the 38 records changed in W (comm of git diff --name-only against repoint3.log).",
+    "For the 32 records without an HE2 note, the diffs change only reference sha256 values, receipt references and proof_bindings. No law, statement, scope, declaration list or alias changed (git diff -U0 filtered).",
+    "The only 理 names left in those records are the kept flame names («两火以薪定理», «两火同火不足以定理»), as items 6–7 intend.",
+    "No record except generation-and-degeneration-at-two-grains names MapRegions as home of the reach laws. That record now cites Map.step_reached_le, step_reaches and step_reaches_of_le from GrammarMap's reference: law 6's declarations, reference 0 at 61 declarations, MapRegions reference at 42.",
+    "generation-and-degeneration's validation scope counts match HE2's receipt: GrammarMap 42/61, MapRegions 36/42.",
+    "No live text (chapters, records, review packet, README, glossary) quotes GrammarMap's old \"How they stand to the regions below … is not stated\" sentence.",
+    "No record or chapter says Response's WithinClosure.converse, SelectionPool's of_reads/to_reads, Sampling's arises_within/ceases_within, WideningOnTheMap's Steps.reached_le or HeldPossible's generation_iff_begins are proved by their own induction or recursion.",
+    "The laws citing those lemmas stay exact: comparison-where-the-rest-responds law 1, mutual-dependence law 1, reading-anothers-couplings law 2 ('stated first for any relations'), laws-at-coarser-steps law 7 and hypotheses[2], keeping-widening dependencies[1].",
+    "Old 理 names (守理则不穷, 守理之线不亡, 亡前理变, 有亡之线两端理异, 足以定理, 合有常则足以定理, 从缘生非文法之理) appear in no live chapter, glossary, README, record prose or review dossier. They remain only in history notes, dated study sections, the frozen twenty-first review and generated content-by-sha indexes.",
+    "continuation-relative-to-a-class laws[9] en and zh match the new hypothesis of «两端分则中有标» (split, then trans), and its HE2 note names item 1's widening.",
+    "master-laws validation scope counts (176 theorems in 204 declarations, receipt 20261030T234558.400678Z) match the receipt, and the GrammarLaws reference lists 204 declarations.",
+    "Unchanged modules' counts named in re-pointed records still match HE2's receipt: PatternPassing 33/46, GrammarRegularity 25/29, WideningOnTheMap 43/52, HeldPossible 118, GrammarCandidates 66/90.",
+    "The other validation scopes naming an older receipt name the receipt of first checking, not the current binding. Only laws-at-coarser-steps asserts a current binding (F4).",
+    "The current he2_texts.py regex matches 08's counts sentence (line 162). he2_study.txt now fills its counts from placeholders, so the 37/38 count_append question no longer hard-codes a number there.",
+    "The dossier checker passes in W (0 problems), and the dossiers' backticked names are all current."
+   ]
+  },
+  {
+   "lens": "kit",
+   "checked_sound": [
+    "he2_board.py head guard: run on a private copy of main's board (now 485c6f87c, MA4c landed), `head` passes and puts the clause first. Its check for 'at the head of the queue (' or 'landing now' anywhere in the 60,500-character Queue line finds only real head claims: today each phrase occurs once, in a head clause, and no landed entry keeps either phrase.",
+    "he2_board.py land, also simulated on a private copy: it drops the head clause, puts the landed clause first, restamps 'the latest core receipt is …' (the regex matches main's sentence), removes HE2's 5-cell row from the board and inserts it after fm-cond1, the last landed row before '## Lapsed claims' in the history file. Its research/ links are rebased to ../../research/, and the board's trailing newline is kept.",
+    "Board idempotence: a second `land` fails at without_head's assertion before it writes anything, and a second `head` fails at 'already claimed'.",
+    "he2_texts.py --check on a private copy (W's receipt, 08, the study, signatures.log, N=471): every placeholder fills. 360 modules, GrammarLaws 176 theorems in 204 declarations, 747→785, 7 renamed (6+1), 42 added (38+4), 3 moved, 3+2 changed by the renames only. All match signatures.log and the receipt (GrammarMap 42/61, MapRegions 36/42).",
+    "he2_texts.py's claim that it 'changes no section a record cites' holds. The 08 counts line sits in §3. The five records pinning 08-METHOD.md (contraction-where-duplication-is-reachable, one-move-covering, self-reference-does-not-certify-itself, type-formation-gives-no-dynamics, what-a-summary-keeps) are located by 08's links to their pages, and the counts line links none of them, so registry.scoped_drift finds no drift. The study is only appended to, and lines only added do not drift.",
+    "The 08 counts regex in he2_texts.py still matches main's sentence after UE25 (receipt 20261030T232750.486801Z, 361 modules).",
+    "Order of steps 5 to 9 in DESIGN.md: THEOREM-CONNECTIVITY.py reads the records (line 62), so records before the register is right. The log formats in conn-check-pre.log match both register parsers, and «核为类» is listed there as stale, which is what APART_DROP needs. MV's master_laws.py hashes only the measure and its tools, not records or chapters, so running it after the re-point is safe. No record pins master-laws.json, THEOREM-CONNECTIVITY*.json or the APART register.",
+    "On main's current APART register: the anchor '  }\\n },\\n \"instances\": {' occurs once, each re-keyed or dropped key occurs once, and each such entry ends with a comma, so both register parts apply.",
+    "Main since c05f4eab8: no record or live file outside the kits' covered set writes an old name (git grep on main with the --scan pattern, minus the SKIP and GENERATED paths). No record other than generation-and-degeneration-at-two-grains cites Map.step_reach*. Becoming.lean and both READMEs still hold exactly one «守理则不穷» and one «亡前理变» each, as LEAN_TOKENS expects. None of the six HE2 records changed on main.",
+    "The item branches hold study files only: git diff against each merge base touches only he2-item1/, he2-items-2-to-4/ and he2-item5/. ou3f-laws (884753120) and he2-item5 (621fe1534) are at the commits DESIGN pins.",
+    "One HE2 note per record: the dry-run records.log and W's records show exactly one new note on each of the six, with clauses in item order (CRC: item 1, then items 6 and 7; ML: items 2–4, then item 6, with one 'No other law changes.'). Each kit's own date is replaced by he2_records' single DAY.",
+    "he2_records.py checks the receipt against the sources: each of the 13 modules' source_sha256 must equal its current bytes with an empty axiom report, GL_NEW must be a subset of the receipt's GrammarLaws names, and the three moved names must be in GrammarMap and absent from MapRegions.",
+    "The checker builds the root module 'Becoming' (it is in the receipt's compile_order), so DESIGN step 2's claim that a duplicate name fails the run holds for spine modules.",
+    "The receipt's step counts (ran 55, reused 1385) match DESIGN's second pre-rehearsal. The validation scopes of master-laws-on-the-grammar and generation-and-degeneration-at-two-grains fit the caps (600/260 and under)."
+   ],
+   "findings": [
+    {
+     "id": "F1",
+     "severity": "blocker",
+     "where": "he2-held-edits/DESIGN.md line 52 (links ../rv21-one-sense/kit/he2_combined_2to7.log); scratchpad/he2-pre2/final.log and links.log",
+     "what": "DESIGN links a log that is untracked on main and missing from W. The links check failed in the dry run (final.log: 'links 2'; links.log: 1 broken, missing-path, file DESIGN.md, target ../rv21-one-sense/kit/he2_combined_2to7.log). No step in the plan commits the log.",
+     "consequence": "The landing worktree is cut from main's tree and will not hold the untracked log, so `make research-links` fails at step 10 and the landing cannot pass its checks as planned.",
+     "fix": "Commit rv21-one-sense/kit/he2_combined_2to7.log with the kit (and say so in the Gather step), or point the link at a tracked file; then rerun links.",
+     "evidence": "cat he2-pre2/final.log ('links 2'); tail links.log (broken: DESIGN.md line 50 in W's older copy, same target); `git -C /Users/ren/theories cat-file -e main:…/he2_combined_2to7.log` fails while the file exists untracked (git status '??'); not gitignored (check-ignore rc 1)."
+    },
+    {
+     "id": "F2",
+     "severity": "should-fix",
+     "where": "DESIGN.md Order step 1 (Gather); main checkout status",
+     "what": "The Gather step merges only the three item branches. It does not bring in what the lander's own kit needs: (a) the whole he2-held-edits/ folder (DESIGN.md and kit/), untracked on main; (b) the uncommitted edits to rv21-one-sense/kit/he2_core_li.py on main (`HELD`, `APART_DROP` for «核为类», the ML assertion), which he2_records.py needs; (c) he2-held-edits/review/REVIEW-HE2.md, which he2_records.py adds to the master-laws record, but which exists only as a placeholder in W ('placeholder for the dry run') and not at all on main.",
+     "consequence": "In a worktree cut from main, he2_records.py fails on `k67.HELD` (AttributeError) and `add_ref(REVIEW)` asserts. Items 6–7's register part would not drop «核为类», so the connectivity check stays stale. If the review is written after step 5, the master-laws record pins a different hash.",
+     "fix": "Make Gather commit the lander's kit folder, the HELD/APART_DROP version of he2_core_li.py, the combined log and the final REVIEW-HE2.md (with this review's findings) before step 2. Commit with `-- <paths>`.",
+     "evidence": "git status on main: '?? …/he2-held-edits/', ' M …/rv21-one-sense/kit/he2_core_li.py'; `git diff HEAD -- he2_core_li.py` shows HELD, APART_DROP and the ML assert added; he2_records.py line 33 (REVIEW), lines 168–170 (add_ref) and line 240 (k67.HELD); `ls W/…/he2-held-edits/review/` shows REVIEW-HE2.md with 28 bytes of placeholder text."
+    },
+    {
+     "id": "F3",
+     "severity": "should-fix",
+     "where": "DESIGN.md Order step 11 (Board), and the order as a whole",
+     "what": "The plan claims the head only at step 11, after the landing's checker run (3), the records written with study section N (5), the register (6) and the re-point (8). Rule 5 makes the head the lock for the checker run and for main staying still. The plan also never says: merge main once it holds the head clause into the landing worktree (he2_board.py `land` asserts the clause is at the head of the worktree's board); re-read the Queue line right before `git merge --ff-only`; commit only owned paths; commit the receipt directory the checker writes in place.",
+     "consequence": "Read as written, another landing can take study section N or change main during steps 3–10. The records then carry the wrong N, the merge re-renders, and `land` fails if the worktree predates the claim.",
+     "fix": "Put 'claim the head (commit-tree, only after OU's owner agrees; fast-forward fails if main moved), then merge main into the landing worktree' before step 1's landing pass. Keep the landed clause, the commit with `-- <paths>`, the re-read of the Queue line and the `--ff-only` as the last steps.",
+     "evidence": "DESIGN.md lines 18–45 (step 11 last); board rule 5 (main's _process/BECOMING-WORKBOARD.md line 19); he2_board.py without_head (line 29: assert line.startswith(PREFIX + HEAD))."
+    },
+    {
+     "id": "F4",
+     "severity": "should-fix",
+     "where": "DESIGN.md table row 2–4 ('he2-item2 at 4ca8098e2', '38 declarations'), step 4 ('42 laws added', 'Map.step_reached_le moved'), 'Checks before the head' (42 / 38 theorems); W's item kits",
+     "what": "The branch he2-item2 is now at 01ca4779f ('GrammarLaws.count_append dropped … 37 declarations'; he2_u4.py asserts len(NEW) == 37), so DESIGN's pinned commit and counts are stale. W was gathered from the older kits: its he2_u4.py is byte-identical to 4ca8098e2, and its apply_he2_item1.py to cf6bc2c71, the version before the revision, whose Sampling text names `Map.step_reach_of_le`, while W's Sampling.lean uses `Map.step_reaches_of_le` from 884753120. The receipt, signatures.log (42 added) and conn-check.log (count_append) describe a tree that will not land. Step 4 says one law moved where the audit expects three (ITEM5_MOVED).",
+     "consequence": "Readers and the lander check against wrong numbers. GrammarLaws becomes 175 theorems in 203 declarations and 41 added, not 176/204/42. The dry-run evidence is not evidence for the gathered tips.",
+     "fix": "Repin he2-item2 at 01ca4779f and update 38→37, 42→41 (37 theorems, 4 definitions) and 'the three reach laws moved' in DESIGN. Rerun the rehearsal and audit from the tips. Note in DESIGN that W predates both revisions.",
+     "evidence": "`git log 4ca8098e2..he2-item2` gives 01ca4779f; `git show he2-item2:…/he2_u4.py | grep '== 37'`; `cmp` of W's kit files against `git show cf6bc2c71:` and `git show 4ca8098e2:` (both identical); `grep step_reach` in W's apply_he2_item1.py vs W's Sampling.lean."
+    },
+    {
+     "id": "F5",
+     "severity": "should-fix",
+     "where": "DESIGN.md step 7 ('kit/he2_texts.py RECEIPT N REPOINTED') and step 4",
+     "what": "he2_texts.py now takes a fourth argument, SIGNATURES_LOG (line 16), which must end with the audit's OK line and name the same receipt. DESIGN still gives three arguments, and step 4 never says to save the audit's output. The audit takes its baseline from `git show HEAD:…/becoming-verification.json` (s3b.receipt_at_head), so it must run before the landing commit, or it compares HE2's receipt with itself.",
+     "consequence": "Following DESIGN, step 7 fails with an IndexError, or a lander reruns the audit after committing and gets 'UNEXPECTED' with gone and added empty.",
+     "fix": "Step 4: `python3 -B kit/he2_signatures.py RECEIPT > $LOG`, before any commit that carries the new becoming-verification.json. Step 7: `he2_texts.py RECEIPT N REPOINTED $LOG`.",
+     "evidence": "he2_texts.py lines 5–7, 16 and 52–55; signatures_ou3b.py receipt_at_head (git show HEAD:…); DESIGN.md line 41."
+    },
+    {
+     "id": "F6",
+     "severity": "should-fix",
+     "where": "kit/he2_records.py (N used at lines 184, 204–215, 228–241; never checked)",
+     "what": "The records kit writes 'study section N' into one note in each of six records (and passes N to k24 and k67) without checking N against BECOMING-RENEWAL-READING.md. Only he2_texts.py asserts N = last section + 1 (lines 75–76), and it runs at step 7, after the records are written. Main has already moved from 470 to 471 sections since the dry run.",
+     "consequence": "A wrong N lands in six history notes, and the error shows only at step 7 after the records are written. They must then be restored and rerun by hand.",
+     "fix": "Copy he2_texts' two assertions (no '## N. ' heading yet; the largest section is N−1) into he2_records.py before line 224, or require `he2_texts.py … --check` with a placeholder REPOINTED before step 5.",
+     "evidence": "grep for N in he2_records.py shows no assertion; `git show main:…/BECOMING-RENEWAL-READING.md | grep '^## 47'` gives 470 and 471 (UE25)."
+    },
+    {
+     "id": "F7",
+     "severity": "should-fix",
+     "where": "kit/he2_records.py ml_scope, lines 148–166",
+     "what": "ml_scope replaces the whole validation_scope of master-laws-on-the-grammar. It checks the old English only by its first 108 characters (startswith ML_VS_EN_START) and replaces the Chinese without any check. The docstring's 'Every anchor is found by its text and asserted before anything is written' is therefore not true here.",
+     "consequence": "If RF-M.3, RR2 or any landing before HE2 adds to this scope after its opening words, or edits the Chinese, the change is silently lost. Nothing reports it.",
+     "fix": "Assert that both old texts equal the expected strings in full (as item5 does with exact substrings, count == 1), or replace only the receipt, counts and reviews clauses by exact substrings.",
+     "evidence": "he2_records.py lines 155 (en prefix only) and 163–166 (zh assigned with no assertion)."
+    },
+    {
+     "id": "F8",
+     "severity": "should-fix",
+     "where": "kit/he2_study.txt lines 8–9 ('{REPOINTED} records pinning the changed sources re-pointed, nothing they say changed')",
+     "what": "REPOINTED is the number of records in the re-point log, 38 in the dry run, and that count includes all six records HE2 changes (master-laws-on-the-grammar, continuation-relative-to-a-class, generation-and-degeneration-at-two-grains, a-regularity-kept-and-changed, candidate-theorems-of-the-corpus, reach-past-ones-own-end).",
+     "consequence": "The study would say 'nothing they say changed' of 38 records, six of which HE2 changed. That is a wrong claim in the study section.",
+     "fix": "Say '{REPOINTED} records re-pointed, the six above among them; nothing the other {REPOINTED−6} say changed'. Compute the second number in he2_texts.py from the log, minus the records the records kit wrote.",
+     "evidence": "python over he2-pre2/repoint3.log: records 38; all six ids in by_record."
+    },
+    {
+     "id": "F9",
+     "severity": "should-fix",
+     "where": "kit/he2_study.txt Delta (6)–(7) and 'Output → input' (lines 25–33, 50–52); DESIGN.md step 7",
+     "what": "The study does not state everything items 6–7's texts part does. It adds '[AI reading, D1]' to the gloss of 生生 in 07 §2, in 07 §8 (T8) and in PHILOSOPHY.md P-26 (RP2b's independent read, NOTE §8). That is a labelling change, not a rename or the core law, and no Delta clause mentions it. 'Output → input' lists '01 §4 and §7, 07's gloss of 生生, the glossary and two review pages' but leaves out 01 §5 (two renames), chapter 06 §四 («从缘生非文法之律») and 07 §4's GS1 citation. DESIGN step 7 also leaves out 06. Items 6–7 are the only items whose owner is not named.",
+     "consequence": "The study section does not say exactly what landed. The AI-reading labels, a change to how live text presents a reading, are recorded nowhere in HE2's account.",
+     "fix": "Add a clause to (7): 'with RP2b's read, the gloss of 生生 in 07 §2, T8 and P-26 is labelled [AI reading, D1]'. List 01 §4, §5 and §7, 06 §四 and 07 §2, §4 and §8 in Output → input. Name the owner of items 6–7. Add 06 to DESIGN step 7.",
+     "evidence": "he2_core_li.py TEXTS (lines 175–218); a difflib section scan of W gives 01: §4, §5, §7; 06: 四; 07: §2, §4, §8; PHILOSOPHY: Part 6."
+    },
+    {
+     "id": "F10",
+     "severity": "should-fix",
+     "where": "kit/he2_board.py land (cells[1] and cells[3] untouched); DESIGN.md step 11",
+     "what": "HE2's board row reads owner 'proposed, not claimed (posted by OU's owner …); the lander is whichever owner of an edit is ready first' and workspace '—'. `land` replaces only the state cell and moves the row, and no step claims the row for the lander (rules 1 and 4).",
+     "consequence": "The landed row in the history file would still say 'proposed, not claimed' with no workspace. The board would also never have shown who holds HE2 during the landing.",
+     "fix": "Claim the row (owner: the lander's session; workspace: the landing worktree and the kit path) in the same commit as the head clause, or have `land` take the owner and workspace cells too.",
+     "evidence": "Simulated land on a copy of main's board: the moved row keeps cell 1 'proposed, not claimed…' and cell 3 '—'; main board line 53."
+    },
+    {
+     "id": "F11",
+     "severity": "minor",
+     "where": "kit/he2_records.py lines 224–261",
+     "what": "In apply mode the kits' records parts write first (lines 236–237); the regex parse of their notes (clause(), lines 239–241) and this kit's edits on the state they leave come after. The rerun guard looks only for 'board item HE2' notes in three records. After a partial run, k67.records() finds every edit applied and leaves HELD empty, so line 245 `clauses[CRC]` raises KeyError and the run can be neither completed nor detected. Separately, in --check mode line 254 sets writes[ML] = r, which at that point is the generation-and-degeneration record (r was reassigned at line 247). The ML note is then appended to that object, so --check never builds the master-laws record's final state.",
+     "consequence": "Low risk while --check runs first, but a failure after line 237 leaves the records changed with no notes, and a rerun cannot recover. Recovery means `git checkout -- theories/becoming/results/records/` by hand.",
+     "fix": "Parse the notes with clause() and build every output in memory before calling the kits with apply=True, or snapshot the records and restore them on any exception. In --check, set `r = read(ML)` (or keep the copy from line 232) before line 254.",
+     "evidence": "he2_records.py lines 236–254; he2_core_li.py lines 442–451 (changed is False once applied, so no HELD entry)."
+    },
+    {
+     "id": "F12",
+     "severity": "minor",
+     "where": "kit/he2_records.py item5 (GDG only); kit/he2_study.txt line 6; DESIGN.md steps 2 and 8",
+     "what": "Main moving is handled unevenly. k67.records rebinds any record that cites an old name and the lander's kit notes it, but the study's Result(s) names exactly six records. A record citing Map.step_reach* under its MapRegions reference is moved only for generation-and-degeneration-at-two-grains; any other would surface only as `declaration not found` from research.py at steps 8 and 10. DESIGN never runs `he2_core_li.py --scan` after merging main (none is needed on main today).",
+     "consequence": "If RF-M.3 or RR2 adds such a record or text before HE2, the study miscounts the records, or the strict check fails late, after the re-point.",
+     "fix": "Run `he2_core_li.py --scan` and a scan of all records for the three moved names after the merge in step 1. Generate the study's record list from the records kit's output, or assert it is the six.",
+     "evidence": "he2_records.py lines 123–126 and 247–250; registry.py lines 799–801 (declares check); git grep on main: only generation-and-degeneration-at-two-grains cites Map.step_reach*."
+    },
+    {
+     "id": "F13",
+     "severity": "minor",
+     "where": "kit/he2_records.py line 175, he2_board.py line 20, he2_core_li.py line 492 (reviewed_at_utc)",
+     "what": "Each script computes its own UTC date at run time: the notes take it when he2_records.py is imported, the board when he2_board.py runs, and k67 stamps reviewed_at_utc separately. Nothing ties them to one date. The lander is in WIB (UTC+7), and UE25's notes use the local date ('31 October 2026' with reviewed_at_utc 2026-10-30T23:29Z). The board's '(date)' after the latest receipt is that receipt's date (GW's 20261030T15… gives 30 October), but `land` writes the day it runs. The records kit does not stamp generation-and-degeneration-at-two-grains' reviewed_at_utc, though its scope and references change, while k67 stamps the other five.",
+     "consequence": "A landing that crosses 07:00 WIB (00:00 UTC) between steps 5 and 11 dates its notes and its board line on different days, and both can differ from the local date the rest of the repository uses.",
+     "fix": "Pass one DATE (and its Chinese form) to he2_records.py and he2_board.py, or derive it once. Date the board's receipt sentence from the receipt id. Stamp reviewed_at_utc on generation-and-degeneration-at-two-grains.",
+     "evidence": "`date` gives 07:16 WIB = 00:16 UTC; main record a-code-held-as-counts note '31 October 2026' with reviewed_at_utc 2026-10-30T23:29:37; W: generation-and-degeneration-at-two-grains reviewed_at_utc unchanged (2026-10-30T17:41:46)."
+    },
+    {
+     "id": "F14",
+     "severity": "minor",
+     "where": "kit/he2_records.py history clauses for master-laws-on-the-grammar; kit/he2_study.txt lines 36–47",
+     "what": "The master-laws record's HE2 note gives items 2–4's and 6's clauses, but none for the lander's own changes to that record: a new validation_scope (receipt, counts, 'HE2's renames and one weakened law', an HE2 review) and three new references (design, review, receipt). The study template also states as fact things the kit never reads: 'A rehearsal on main followed, and the landing run reused its steps' and 'The connectivity check is clean', which was false in the dry run (count_append). And '747 theorem statements before, 785 after' does not say these counts cover only the thirteen changed modules.",
+     "consequence": "The rule 'every change to what a record says needs a history note' is only partly met (earlier landings also left scope updates out of their notes). The study can state things that did not happen.",
+     "fix": "Add a lander clause to the master-laws note ('HE2: the validation scope gives HE2's receipt and GrammarLaws' counts; HE2's design, review and receipt referenced'). Fill the rehearsal and connectivity sentences from their logs, or drop them. Write 'in the thirteen changed modules' after the 747/785 counts.",
+     "evidence": "W master-laws-on-the-grammar history[-1] (no scope clause); he2-pre2/conn-check.log last line ['Becoming.GrammarLaws.count_append']; he2_signatures.py lines 64–70 (counts come only from the CHANGED modules' logs)."
+    },
+    {
+     "id": "F15",
+     "severity": "minor",
+     "where": "kit/he2_board.py lines 67–68",
+     "what": "`land` rebases only links starting with research/ or ../theories/ or ../sources/. Any other relative link in STATE_TEXT or the row ('../experiments/…' for the receipt, 'RESULT-WORKFLOW.md', 'history/…') is copied unchanged into _process/history/workboard/. The history folder is not link-checked.",
+     "consequence": "The kit links that DESIGN step 11 says go with the row may break silently in the history file.",
+     "fix": "Rebase every relative link that does not start with '#' or 'http' by prefixing '../../' (relative to _process/), or assert that no other relative links are present.",
+     "evidence": "he2_board.py lines 67–68; the history file on main already uses ../../../experiments in other rows."
+    }
+   ]
+  }
+ ],
+ "verdicts": [
+  {
+   "id": "F1",
+   "lens": "records",
+   "verdict": "confirmed",
+   "severity": "blocker",
+   "reason": "Merged with repoint:F1. In W, master-laws-on-the-grammar.json does_not_show[4] (line 491, rendered .md line 65) still reads 'That a pairing under continuation adds anything to equal count…'. The same record's law 3 now states «续之对则类类等数» ('a pairing under continuation relative to such a class keeps the count in every class'), and that law's Lean docstring is headed 'What a pairing under continuation adds to equal count'. GrammarLaws.lean:175-178 was narrowed to 'beyond what is now stated', but the record was not, and the reviewed he2_records.py (he2-land 2a085bcbf) never touches does_not_show. So the record contradicts itself. Note: since 07:30 the main checkout's uncommitted he2_records.py has ML_DNS, which takes this. That copy is unreviewed, so the finding stands for the committed kit.",
+   "fix": "Narrow does_not_show[4] in en and zh to the Lean's wording: 'beyond the count on every region it does not cross and, under a class decided by a test, in every class; or the n-step law…'. Keep it within 240/110. Assert the old text in full before replacing it, and name the change in the record's one HE2 note. Commit the kit revision that does this to he2-land before the rehearsal."
+  },
+  {
+   "id": "F1",
+   "lens": "lean",
+   "verdict": "partly",
+   "severity": "should-fix",
+   "reason": "Merged with repoint:F12 and kit:F4. Confirmed: W's item-1 KIT.md and apply_he2_item1.py are byte-identical to cf6bc2c71, so the script's ITEM5 gate names Map.step_reach_of_le. W's Sampling.lean uses Map.step_reaches_of_le, so W's own --check fails ('0 copies … 0 of its replacement'). W's he2_u4.py and KIT.md equal 4ca8098e2, and GrammarLaws.lean in W holds count_append. he2-item2 is at 01ca4779f (count_append dropped, `== 37`), and he2-land merged it (9060437dd parents b148d8f98 and 01ca4779f) and 884753120. DESIGN's row 2 still pins 4ca8098e2 with '38 declarations', step 4 says '42 laws', and he2_signatures.py:7 says '38'. Not a blocker: no wrong Lean or record lands from this. The landing gathers by merging the branches (he2-land already holds the tips), and every count the records and study write is computed from the receipt and k24.NEW. The DESIGN's pre-rehearsal paragraph (747→785, 42, 38 theorems) is a true account of the run it describes. Changing those numbers to 37/41/784, as the fix proposes, would falsify that account.",
+   "fix": "In DESIGN, repin row 2 to he2-item2 at 01ca4779f (37 declarations). Make step 4's expectation '41 declarations added to GrammarLaws (37 theorems, 4 definitions)'. Keep the pre-rehearsal paragraph's numbers and add one sentence: after it, items 2–4 dropped count_append (01ca4779f) and the item-1 study files moved to 884753120, so the dry-run tree W predates both. Fix he2_signatures.py's docstring ('he2_u4.NEW' with no number). Regather the review and rehearsal tree from he2-land and rerun every kit's --check there."
+  },
+  {
+   "id": "F2",
+   "lens": "lean",
+   "verdict": "partly",
+   "severity": "should-fix",
+   "reason": "Confirmed with Lean 4.29.1 in my own scratch folder: `∃ (β : Type)…` and `∃ (β : Type 1)…` both print `(∃ β R x, R x x) ∨ True`, and `∃ n : Nat` and `∃ n : Int` print the same. The checker's signature driver is a bare `import M` with `#check @name` lines and no pp options (check_becoming.py ~4064). GrammarCandidates' log prints «从缘生非文法之律» as `(∃ β R x, ∀ (w : β), ¬R w x) ∧ ∃ β R x, R x x`. The reviewed audit (he2-land) relies only on these prints, so DESIGN's 'every statement … as the items say' rests on weaker evidence than it states. The first fix is wrong for HE2. Changing the checker's drivers alters every signature step's key, and HEAD's baseline logs were printed with default options, so old and new would no longer compare. It also changes the shared checker's behaviour for every later landing.",
+   "fix": "Add a source-level statement comparison to he2_signatures.py: comments blanked, each theorem up to its top-level `:=` or first equation, renames applied. Keep the printed comparison beside it. Leave check_becoming.py's drivers alone. Since 07:28 the main checkout's uncommitted he2_signatures.py adds exactly this. Commit it to he2-land and rerun it."
+  },
+  {
+   "id": "F3",
+   "lens": "lean",
+   "verdict": "partly",
+   "severity": "minor",
+   "reason": "Each gap is real in the reviewed audit (he2-land 2a085bcbf). (a) Only the 13 CHANGED modules are read, and Becoming.lean does change in W (docstring renames only). (b) signatures_ou3b.DEF_RE covers def, abbrev, structure, inductive and class only, so Sampling's `instance active_decided` (line 259) and `variable` lines are not compared. (c) For «两端分则中有标» the audit requires only membership in changed_real. (d) where_new is used only for `moved`. (e) Definitions are read from the tree, with no source_sha256 check, although he2_records.py asserts the hashes later. None bit in W, and each fails closed or is caught downstream, so minor rather than should-fix. The main checkout's uncommitted revision (07:28) adds checks for (a), (b), (d) and (e). (c) is still checked only by name there.",
+   "fix": "Commit the revised audit to he2-land. For (c), also compare «两端分则中有标»'s new source statement with item 1's GRAMMAR_NEW signature, read from apply_he2_item1.py."
+  },
+  {
+   "id": "F4",
+   "lens": "lean",
+   "verdict": "confirmed",
+   "severity": "should-fix",
+   "reason": "GrammarMap.lean:204-207 in W: 'How they stand to the regions below (`«生成»`, `«守»`, `«退化»`) is stated in leaves that import this module'. 'They' includes «有终», and no theorem in Becoming/*.lean states «有终» with «退化» or «尽». MapInstances:267 says outright that degenerating is not shown. KeepingWidening (home of «全生成则生成», line 231) is imported by WideningOnTheMap and Becoming.lean, so it is not a leaf. The cited laws for «全生成» and «全守» exist and say what the sentence claims.",
+   "fix": "Write: 'How «全生成» and «全守» stand to «生成» and «守» is stated in modules that import this one: … (as now); how «有终» stands to «退化» is not stated.' Use 'modules', not 'leaves'. This changes GrammarMap, which already changes in HE2."
+  },
+  {
+   "id": "F5",
+   "lens": "lean",
+   "verdict": "confirmed",
+   "severity": "should-fix",
+   "reason": "Merged with records:R7, repoint:F2, repoint:F3 and repoint:F9. In W, 01-ROOT.md:82, inside home section r-continuation-relative-to-a-class (anchor 58, next anchor 86), still states the law 'For a class `K` … the proof uses only the transitivity of `K`'. The record's laws[9] is widened to 'a relation that composes (a class is one)'. LOGIC.md L-04 (lines 126-128) quotes `(hK : «类» K)` before `split`, which is no longer the source signature, under its claim that 'every block was compared again with the current sources'. Item 1's KIT.md line 85 says 'No chapter states the law's hypothesis (searched)', which is false at both cherry-picked versions. PatternPassing.lean:304-308 glosses the law with 'a class'. That is true of its use (the carrier class) but inexact as a statement of the law. The chapter text is not false (a class is a case), but home section and record now disagree.",
+   "fix": "In 01 §3 line 82, state the law for a relation `K` that composes (a class is one), 'with `K` failing from `x` to `y`'. Do this in the texts step before the re-point. Re-copy L-04's block from Grammar.lean, adjust its Meaning, and tell RP's owner on the board. Correct item 1's KIT sentence. Optionally, in PatternPassing's gloss: 'a line whose ends a relation that composes tells apart (here the carrier class)'."
+  },
+  {
+   "id": "F6",
+   "lens": "lean",
+   "verdict": "confirmed",
+   "severity": "minor",
+   "reason": "In he2-land's he2_signatures.py, the docstring (lines 4-5) says every expectation is read from the item's kit. ITEM1_CHANGED and ITEM5_ADDED/ITEM5_MOVED are hard-coded (lines 38-43). DESIGN lines 28-29 say '42 laws added to GrammarLaws, and item 5's added to GrammarMap' (item 5 adds nothing, and 4 of the 42 are definitions) and '`Map.step_reached_le` moved' (three move). The audit fails closed on a kit revision. The kit:F4 point about step 4's single moved law is the same issue. The uncommitted docstring revision now says items 1 and 5 are fixed in the audit, but DESIGN lines 28-29 are unchanged.",
+   "fix": "DESIGN step 4: '… declarations added to GrammarLaws from items 2–4 and 6; item 5's three reach laws moved to GrammarMap, nothing added; only «两端分则中有标» changed'. Commit the revised docstring."
+  },
+  {
+   "id": "F7",
+   "lens": "lean",
+   "verdict": "partly",
+   "severity": "minor",
+   "reason": "HeldPossible.lean:401 still cites `Steps.reached_of_buqiong` for 'reaches every later moment', and the proof (404-414) uses Map.step_reaches_of_le and Map.step_reached_le. The citation is not false, since that law does state the fact. The defect is redundancy: one fact pointed to two laws, one of which the proof no longer uses.",
+   "fix": "Drop '(`Steps.reached_of_buqiong`)' and keep the new clause's citations."
+  },
+  {
+   "id": "F8",
+   "lens": "lean",
+   "verdict": "confirmed",
+   "severity": "minor",
+   "reason": "Merged with repoint:F8. GrammarMap.lean:359-360 lists the reach laws' readers as MapRegions, WideningOnTheMap's Steps.reached_le and HeldPossible. In W, Sampling.lean:171-177 (arises_within, after item 1) reads Map.step_reaches_of_le and Map.step_reached_le.",
+   "fix": "Add Sampling's `arises_within` to the parenthetical."
+  },
+  {
+   "id": "F9",
+   "lens": "lean",
+   "verdict": "confirmed",
+   "severity": "minor",
+   "reason": "GrammarLaws.lean:1020-1025: the docstring of «续之对则类类等数» omits `dec : ∀ x y, E x y ↔ e x y = true`. Without it, 'the count in every class' does not say which count (`«计» (e z)`) is meant. The sibling law's docstring says 'Under a class decided by a test'.",
+   "fix": "Write 'Where `E` is a class decided by the test `e`, continuation relative to it lies within it, so a pairing under continuation keeps the count by `e` in every class.'"
+  },
+  {
+   "id": "F10",
+   "lens": "lean",
+   "verdict": "partly",
+   "severity": "minor",
+   "reason": "Also covers records:R8(a). Confirmed: «对则不越域守数» (line 945) binds the uncrossed hypothesis `∀ x y, R x y → p x = p y` as `closed`. Items 2–4's KIT (line 37) renamed the law precisely because «闭» means closed one way. «二所闭在借步之所闭»'s docstring (lines 304-306) and the master-laws law 0 text say 'o reaches a under R′', but the hypothesis is `«所闭» R' o a`, which allows o = a (GrammarLaws reads «所闭» as 'itself or reached'). So the text states a stronger hypothesis than the Lean takes. The law name's '借步' is narrower than the statement (any R′ ⊇ R). That is a naming judgement for OU's owner, who settled these names, not a wrong meaning.",
+   "fix": "Rename the binder `uncrossed` (a proof-local name, so no statement changes). In the docstring and law 0, write 'a lies within o's closure under R′' / 'a 在 o 于其下之闭包内'. Leave the law name to OU's owner, optionally noting in the docstring that R′ need not be built from borrowed steps."
+  },
+  {
+   "id": "R2",
+   "lens": "records",
+   "verdict": "confirmed",
+   "severity": "should-fix",
+   "reason": "Also covers kit:F14's first part and the note clause of repoint:F1. In W's master-laws validation_scope (written by he2-land's ml_scope, lines 157-166), 'one each of OU3c to OU3e, HE and HE2' is wrong: the record references two HE2 reviews (rv21-one-sense/review/REVIEW-HE2-KIT.md, an AI review of items 6–7's kit, and he2-held-edits/review/REVIEW-HE2.md). 'One weakened law' reads as a law made weaker, but item 1 weakens a hypothesis and so widens the law (the zh '一律设宽' is right). The record's HE2 note gives items 2–4's and 6's clauses but no clause for the lander's own scope rewrite and three added references. RESULT-WORKFLOW line 49 makes a change to scope or declaration lists take a history note, and one note per round may carry it. The main checkout's uncommitted kit (ML_LAND, 'two of HE2', 'one law widened') takes all three.",
+   "fix": "Use 'one each of OU3c to OU3e and HE, two of HE2' and 'one law widened' in en, with matching zh, within 600/260. Add a lander clause to the ML note naming the scope and the added design, review and receipt references. Commit to he2-land."
+  },
+  {
+   "id": "R3",
+   "lens": "records",
+   "verdict": "partly",
+   "severity": "minor",
+   "reason": "hypotheses[0] ('None beyond the grammar and the models' representation … counting entering only through finite lists…') is not contradicted. Counting still enters only through finite lists, and law 3 states the Bool test as a modelling choice and the decidability ('under a class decided by a test'). The field does catalogue the global forms' local assumptions (fixed successor, merging nothing, …), though, and it lists neither the new `dec` and `Distinct` hypotheses nor the Bool reading. It is incomplete, not wrong. The uncommitted kit adds ML_HYP for this.",
+   "fix": "Optional: add to hypotheses[0], en and zh, that counted regions, the class counted by and the continuation decided are read as Bool tests (a modelling choice), and that the census takes lists without repeats. Name it in the HE2 note."
+  },
+  {
+   "id": "R4",
+   "lens": "records",
+   "verdict": "confirmed",
+   "severity": "minor",
+   "reason": "Merged with repoint:F13. continuation-relative-to-a-class validation_scope says 'Becoming.Grammar, 68 theorems in 116 declarations' (zh '116 个声明中 68 条定理'). HE2's receipt gives Becoming.Grammar 70 theorems in 118 declarations, and the record cites all 118. The count was already stale before HE2 (OU6), so it is minor: HE2 does not introduce it, but it opens the record and rebinds Grammar. The uncommitted kit corrects it (crc_scope, CRC_LAND).",
+   "fix": "Set the counts from the receipt (70 in 118, zh '118 个声明中 70 条定理') and name the correction in the record's HE2 note."
+  },
+  {
+   "id": "R5",
+   "lens": "records",
+   "verdict": "confirmed",
+   "severity": "should-fix",
+   "reason": "he2_records.py item5() rewrites the first sentence of generation-and-degeneration-at-two-grains' scope to 'Becoming.GrammarMap, 42 theorems in 61 declarations at receipt 20261030T234558.400678Z, and Becoming.MapInstances, 28 theorems'. HE2's receipt gives MapInstances 27 theorems in 27 declarations, the record cites 27, and its MapInstances binding (20261029T162632) also has 27. HE2 rewrites this exact sentence and ties it to its receipt, so the wrong count should not survive. The uncommitted kit reads it from the receipt.",
+   "fix": "Fill MapInstances' count from the receipt (27) with an exact-anchor assert. Mention it in item 5's clause ('MapInstances' count corrected to 27')."
+  },
+  {
+   "id": "R6",
+   "lens": "records",
+   "verdict": "confirmed",
+   "severity": "should-fix",
+   "reason": "Merged with repoint:F4. laws-at-coarser-steps validation_scope names '(Sampling to 20261020T051144.879480Z)' (zh 'Sampling 绑定 20261020T051144.879480Z') as the current binding. W's re-point rebinds Sampling to 20261030T234558.400678Z (item 1 changes Sampling), so the re-point makes the record's text false. Caveat on the uncommitted kit's lcs_scope: it refreshes reviewed_at_utc, which RESULT-WORKFLOW line 49 says not to do when only a validation scope is re-pointed to a newer receipt.",
+   "fix": "Name HE2's receipt in the parenthetical, en and zh, or drop the parenthetical. Give it a clause in the record's HE2 note, and do not refresh reviewed_at_utc for this record."
+  },
+  {
+   "id": "R8",
+   "lens": "records",
+   "verdict": "partly",
+   "severity": "minor",
+   "reason": "(a) is the same as lean:F10 and is folded there. (b) Confirmed: law 3's census sentence never names the pairing relation. The Lean pairs under `fun x y => «续» R E x y ∨ x = y`, and the Lean docstring says 'each pair a continuation or the same unit'. (c) Confirmed: law 2 files census_pairs and pair_of_class_counts among list lemmas ('filters, searches and counts'). census_pairs is the local form of the census, under a test-decided relation with no split or merge among the listed units, and pair_of_class_counts is one direction of the class count law. Law lengths: law 3 is 1298/349 and law 0 is 784/258, over the soft caps, but many laws in this record already exceed them (law 18 is 2108), so that part is only a warning.",
+   "fix": "In law 3, add 'each pair a continuation or the same unit'. Move census_pairs and pair_of_class_counts into law 3's declarations, or name them in law 2's text. Splitting law 3 is optional and would mean rerunning MV."
+  },
+  {
+   "id": "R9",
+   "lens": "records",
+   "verdict": "partly",
+   "severity": "minor",
+   "reason": "W's CRC HE2 note ends items 6–7's clause with '; no statement's content changes.' (zh '所述之义皆不变'), and history() (he2-land lines 201-215) strips only 'No other law changes'. The tail sits inside 'Items 6 and 7: …', so the scoping is mostly clear, but it can be read as covering the whole note, which widened laws.9. The uncommitted kit rephrases it via NO_CONTENT.",
+   "fix": "In merged notes, rewrite the tail as '; these renames and rewordings change no statement's content' (and the zh to match)."
+  },
+  {
+   "id": "F1",
+   "lens": "kit",
+   "verdict": "refuted",
+   "severity": "minor",
+   "reason": "Merged with records:R11 and repoint:F7. The landing branch he2-land (2a085bcbf, 07:09) tracks rv21-one-sense/kit/he2_combined_2to7.log, together with the lander's kit folder and he2_core_li.py with HELD (`git ls-tree he2-land`). DESIGN's link therefore resolves on the landing tree. The links failure in he2-pre2/links.log comes from W, a detached main c05f4eab8 tree that lacks the file. The claim that research-links fails at landing does not hold. Residual: DESIGN never names he2-land as the landing branch, nor says its kit commit carries the log.",
+   "fix": "Optional: in DESIGN step 1, name he2-land as the landing branch and say its kit commit carries the kit, items 6–7's HELD change and the combined log."
+  },
+  {
+   "id": "F2",
+   "lens": "kit",
+   "verdict": "partly",
+   "severity": "minor",
+   "reason": "(a) and (b) are refuted. he2-land's 2a085bcbf commits he2-held-edits/ (DESIGN and kit) and he2_core_li.py with HELD and APART_DROP, and main's working copy equals that commit (cmp). A landing worktree on he2-land does not hit AttributeError on k67.HELD. (c) stands. review/REVIEW-HE2.md exists neither on main nor on he2-land (W has a 28-byte placeholder), and he2_records.py's add_ref asserts it exists and pins its hash at step 5. Any later edit of the review drifts the master-laws reference. The step 8 re-point would carry that drift, but only if it runs after the edit.",
+   "fix": "Write and commit the final REVIEW-HE2.md (this review, with how each finding was taken) to he2-land before the records step, and do not edit it after step 5."
+  },
+  {
+   "id": "F3",
+   "lens": "kit",
+   "verdict": "confirmed",
+   "severity": "should-fix",
+   "reason": "DESIGN's Order puts the landing's checker run at step 3 and the records with study section N at step 5, but claims the head only at step 11. Board rule 5 (main board line 19) makes the head the lock for one checker run at a time and for main staying still. he2_board.py `land` asserts the HE2 head clause is at the head of the worktree's board (without_head, line 29), so main must be merged into the landing worktree after the claim. The DESIGN does not say so. HE's design also claims the head after the rehearsal and review, but before the landing run. If HE2 runs before claiming, another landing can take N or move main mid-landing.",
+   "fix": "Order: the pre-rehearsal and review, then the rehearsal on main, then claim the head (commit-tree, after OU's owner agrees), then merge main into the landing worktree, then steps 2–10, then the landed clause, the commit with `-- <paths>` (receipt directory included), a re-read of the Queue line, and `--ff-only`."
+  },
+  {
+   "id": "F5",
+   "lens": "kit",
+   "verdict": "confirmed",
+   "severity": "should-fix",
+   "reason": "he2-land's he2_texts.py (line 16) takes RECEIPT N REPOINTED SIGNATURES_LOG. DESIGN step 7 (line 41) gives three arguments, so following it raises IndexError. Step 4 never says to save the audit's output. s3b.receipt_at_head reads HEAD's becoming-verification.json, so the audit must run before any commit carrying the new receipt, or it compares HE2 with itself and reports UNEXPECTED. The uncommitted texts kit now takes five arguments (REPOINT_LOG, SIGNATURES_LOG, CONNECTIVITY_LOG), and DESIGN still gives three.",
+   "fix": "Step 4: `python3 -B kit/he2_signatures.py RECEIPT > $SIGLOG`, before any commit that carries the new becoming-verification.json. Step 7: give the texts kit's exact current usage and move it after the register and re-point steps, whose logs it reads."
+  },
+  {
+   "id": "F6",
+   "lens": "kit",
+   "verdict": "confirmed",
+   "severity": "should-fix",
+   "reason": "In he2-land's he2_records.py, N is written into the notes (clause() asserts only that the notes' N agree with each other) and is never checked against BECOMING-RENEWAL-READING.md. Only he2_texts.py asserts N = last + 1 (lines 75-76), at step 7, after six records are written. Main is already at §471 (UE25), not the dry run's 470. The uncommitted kit adds the assertion (lines 316-318).",
+   "fix": "Assert in he2_records.py, before anything is written, that no '## N. ' heading exists and that the largest section is N−1. Commit to he2-land."
+  },
+  {
+   "id": "F7",
+   "lens": "kit",
+   "verdict": "confirmed",
+   "severity": "should-fix",
+   "reason": "he2-land's ml_scope (lines 151-166) checks the old English scope only with startswith(ML_VS_EN_START) and replaces the Chinese with no check at all. A landing before HE2 that adds to or edits the master-laws scope (a hub record) would be overwritten silently. That contradicts the docstring's 'Every anchor is found by its text and asserted'. The uncommitted kit asserts both old texts in full (ML_VS_OLD).",
+   "fix": "Assert the full old en and zh before replacing, and fail with 're-read the scope'. Commit to he2-land."
+  },
+  {
+   "id": "F8",
+   "lens": "kit",
+   "verdict": "confirmed",
+   "severity": "should-fix",
+   "reason": "he2-pre2/repoint3.log has 38 records in by_record. All six records HE2 changes are among them, and laws-at-coarser-steps is too. he2-land's he2_study.txt (lines 8-9) then says '{REPOINTED} records … re-pointed, nothing they say changed', a false claim about six or seven of them in the study's Result(s). The uncommitted template says 'these seven among them, and nothing the other {REPOINTED_OTHER} say changed' and computes the second figure.",
+   "fix": "Fill REPOINTED_OTHER as the re-pointed records minus those carrying an HE2 note, and assert the HE2 records are a subset. Commit to he2-land."
+  },
+  {
+   "id": "F9",
+   "lens": "kit",
+   "verdict": "partly",
+   "severity": "minor",
+   "reason": "Confirmed: he2-land's Output → input omits 01 §5 (renames at lines 126 and 128), 06 §四 («从缘生非文法之律», line 158) and 07 §4.5 (the GS1 citation «守核则不穷», line 341). The template's (6)–(7) clauses do not mention the [AI reading, D1] labels at 07:74, T8 (07:656) and PHILOSOPHY P-26. Refuted: 'recorded nowhere in HE2's account'. NOTE §8 (line 174), which (6)–(7) cite, records the labels from RP2b's read. DESIGN step 7 also omits 06. The uncommitted template takes the list, the labels and the owner.",
+   "fix": "Commit the revised template. DESIGN step 7: '01, 06, 07, the glossary, the review pages'."
+  },
+  {
+   "id": "F10",
+   "lens": "kit",
+   "verdict": "confirmed",
+   "severity": "should-fix",
+   "reason": "Main board line 53, HE2 row: cell 1 reads 'proposed, not claimed (posted by OU's owner …)' and cell 3 (workspace) is '—'. he2_board.py `land` replaces only cells[2] and moves the row, so the history file would record HE2 as never claimed. Rules 1 and 4 require a claim with owner and workspace before new Lean, and edits only to one's own row. The row is OU's owner's, so taking it needs that owner's word, which the DESIGN already seeks before the head.",
+   "fix": "With OU's owner's agreement, set the row's owner to the lander's session and its workspace to he2-land and the kit path, in the head-claim commit. Or have `land` take the owner and workspace cells too."
+  },
+  {
+   "id": "F11",
+   "lens": "kit",
+   "verdict": "confirmed",
+   "severity": "minor",
+   "reason": "Merged with records:R10. In he2-land's he2_records.py the kits' parts write at lines 236-237, before clause() parses their notes (239-241). A failure there leaves records edited with no notes. The rerun guard (224) looks only for HE2 notes, so a rerun calls k67.records on applied records, HELD stays empty (he2_core_li.py: `changed` is False), and `clauses[CRC]` raises KeyError at 245. In --check mode, line 254 sets writes[ML] = r while r is still the GDG record (reassigned at 247), so ML's note is appended to the GDG object. The printout is right and nothing is written, so it is harmless today. The uncommitted kit takes both: a snapshot and restore, and writes[ML] = ml_copy in check mode.",
+   "fix": "Snapshot every record and restore it on any exception, or parse everything in memory before the kits write. In check mode use the ML copy. Commit to he2-land."
+  },
+  {
+   "id": "F12",
+   "lens": "kit",
+   "verdict": "partly",
+   "severity": "minor",
+   "reason": "Confirmed for he2-land: nothing asserts that only generation-and-degeneration-at-two-grains cites the three moved laws, and the study lists records by hand. On main today only that record cites Map.step_reach* (per the reviewer's grep), and a new citer would fail research.py check's declaration-presence test at step 8 or 10. It fails late and closed, not silently. The uncommitted kit asserts `citing == [GDG]` and the EXPECTED set of records written.",
+   "fix": "Commit those assertions. After merging main into the landing worktree, run he2_core_li.py --scan."
+  },
+  {
+   "id": "F13",
+   "lens": "kit",
+   "verdict": "partly",
+   "severity": "minor",
+   "reason": "Confirmed: he2-land's he2_records.py and he2_board.py each take a UTC date when they run, and k67 stamps reviewed_at_utc separately. Recent notes use the local date (a-code-held-as-counts: '31 October 2026' with reviewed_at_utc 2026-10-30T23:29Z), so a landing crossing 07:00 WIB can date its notes and board differently. Refuted part: stamping reviewed_at_utc on generation-and-degeneration-at-two-grains. Its change is a reference declaration move and scope counts, and RESULT-WORKFLOW line 49 refreshes reviewed_at_utc only for content changes, not scope re-points. The uncommitted records kit now uses date.today() and stamps GDG and LCS, which goes against line 49. he2_board.py still uses UTC.",
+   "fix": "Pass one DATE to the records and board kits, and date the board's receipt sentence from the receipt id. Do not refresh reviewed_at_utc where only scope or reference lists change."
+  },
+  {
+   "id": "F14",
+   "lens": "kit",
+   "verdict": "partly",
+   "severity": "minor",
+   "reason": "The missing lander clause in the ML note is folded into records:R2. Confirmed: he2-land's template asserts 'A rehearsal on main followed, and the landing run reused its steps' and 'The connectivity check is clean' without reading any log, and the dry run's conn-check.log ended with count_append. '{T_BEFORE} theorem statements before, {T_AFTER} after' does not say it counts only the thirteen changed modules. If the plan is followed, the first two would be true, so they are unchecked rather than false. The uncommitted texts kit asserts the connectivity log and fills the step counts from the run.",
+   "fix": "Commit the revision. Keep 'In the thirteen changed modules' before the audit's counts."
+  },
+  {
+   "id": "F15",
+   "lens": "kit",
+   "verdict": "partly",
+   "severity": "minor",
+   "reason": "he2_board.py lines 67-68 rebase only research/, ../theories/ and ../sources/ links. HE2's current row has research/ links only, so nothing breaks today. A ../experiments/… link in STATE_TEXT (for example the receipt) would be copied unrebased into _process/history/workboard/. The history file already holds unrebased ../experiments and ../theories links, so those links are not enforced there.",
+   "fix": "Rebase every relative link not starting with '#' or 'http', or assert that STATE_TEXT carries only the three handled prefixes."
+  },
+  {
+   "id": "F5",
+   "lens": "repoint",
+   "verdict": "confirmed",
+   "severity": "should-fix",
+   "reason": "In W, Becoming.lean's GrammarLaws bullet (3084-3140) and README.md row 34 / README.zh.md mention none of HE2's additions: counting, the uncrossed and doubly-closed count, the class count law, «续之对则类类等数», the census, «所闭之逆», the borrowed-step closures, the core-of-class laws, and Response/SelectionPool proved from GrammarLaws. The GrammarMap bullet (3022-) and row 28 do not mention the reach laws. W's diff touches only the GrammarRegularity bullet and rename cells. HE's kit edited the root module and both READMEs, so this is the precedent, and the study template lists 'the root module's docs and the README rows' as outputs. Becoming.lean already changes in HE2, so this adds no rebuild.",
+   "fix": "Add one clause each to the GrammarLaws and GrammarMap bullets and rows, en and zh, as the finding proposes, applied before the checker run."
+  },
+  {
+   "id": "F6",
+   "lens": "repoint",
+   "verdict": "confirmed",
+   "severity": "should-fix",
+   "reason": "check_becoming.py is unchanged in W. Its SCOPE 'GrammarLaws:' string (190-213) and 'GrammarMap:' string (288-) lack HE2's additions, so HE2's receipt 'scope' describes the pre-HE2 package. WRP2 (f28abafc6) and HE (its kit edited 'the checker') kept SCOPE current. One correction to the fix: step_key (check_becoming.py:3569) hashes the toolchain, the Lean binary, the step label, its bytes and its imports' keys, not the checker. Editing SCOPE therefore reuses every cached Lean step. It only changes checker_sha256 and the receipt's scope, so it must land before the landing run.",
+   "fix": "Add HE2's clauses to the GrammarLaws and GrammarMap SCOPE strings, and the composing hypothesis to Grammar's, before the landing run."
+  },
+  {
+   "id": "F10",
+   "lens": "repoint",
+   "verdict": "partly",
+   "severity": "minor",
+   "reason": "Confirmed: a-regularity-kept-and-changed does_not_show[2].zh '实有之样式之理在何类' writes 理 where the en says 'regularity', against NOTE §8's wording rule, and the HE2 note's field list omits it. what-a-line-holds-and-a-regularity-takes-in keeps title.zh '线所必含，与理之所纳' while README.zh's GrammarPath cell now says '与一规律所纳者'. Refuted for aliases[1] '理之守与离': aliases are search keys (registry --search), and keeping the old zh title lets research-find locate the record by its former name.",
+   "fix": "Reword does_not_show[2].zh to 规律 and list it in the HE2 note. Either retitle the GrammarPath record's zh with a wording note, or restore README.zh's cell."
+  },
+  {
+   "id": "F11",
+   "lens": "repoint",
+   "verdict": "partly",
+   "severity": "minor",
+   "reason": "Confirmed: the master-laws record's law 18 (models' laws 'proved from these') and its references do not cite Response's WithinClosure.converse or SelectionPool's WithinClosure.of_reads and WithinClosureOf.to_reads. The proof references list no Response.lean or SelectionPool.lean, although HE2's note says they are now proved as the new closure laws. OU3c–OU3f and HE cited theirs. The scope's 'all cited' names only OU3c, OU3e, OU3f and HE, so it is not false. Refuted part: notes in the citing records are not needed, because RESULT-WORKFLOW (line 67) gives a re-point that changes nothing a record says no history note.",
+   "fix": "Add the three derivations to law 18's declarations with Response.lean and SelectionPool.lean references, and count them in the validation scope. Or say in the HE2 note that they are left to MV's view."
+  }
+ ]
+}
