@@ -9,6 +9,8 @@ module paragraph, its README rows and its place in the checker's core list):
                                                           the leaf's roots with their reasons; others printed
   python3 -B <dir>/integrate_u4.py check                  after master_laws.py: the data reads this record, nothing is
                                                           unverified or unplaced, and its counts are the home section's
+  python3 -B <dir>/integrate_u4.py study N RECEIPT        the study's section N (the next free one), from the receipt
+                                                          and the record's counts
 
 Before `record`, rerun boundary_table.py on the landing's core run (the rule's labels and the counts come from
 boundary-table.json, computed before HE2), and keep `check` as the gate.
@@ -20,6 +22,7 @@ import importlib.util
 import json
 import re
 import sys
+import textwrap
 from pathlib import Path
 
 ROOT = Path.cwd()
@@ -101,6 +104,83 @@ def record(receipt, study):
         regions[key] = dict(sorted(regions[key].items()))
     REGIONS.write_text(json.dumps(regions, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     print('record', mr.REC, 'counts', c)
+
+
+STUDY = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md'
+DEVLINK = 'development/u4-one-root-to-its-edge/'
+
+
+def study(n, receipt):
+    """The study's section N (the next free one), from the landing's receipt and the record's counts."""
+    text = STUDY.read_text(encoding='utf-8')
+    free = max(int(x) for x in re.findall(r'^## (\d+)\. ', text, re.M)) + 1
+    title = '## {}. One root to its edge: where each central declaration stands (U4)'
+    if title.format(n) in text:
+        print('study §', n, 'already in place')
+        return
+    assert int(n) == free, ('the next free section is', free)
+    r = json.loads((ROOT / receipt).read_text(encoding='utf-8'))
+    m = {x['module']: x for x in r['modules']}['Becoming.RootForms']
+    assert r['status'] == 'passed' and not any(m['axiom_dependencies'].values())
+    stamp = Path(receipt).parent.name
+    c = mr.counts()
+    on = c['derived'] + c['under a stated hypothesis']
+    dist = sum(v for k, v in c.items() if k not in ('derived', 'under a stated hypothesis', 'premise', 'counting',
+                                                     'unplaced'))
+    total = on + c['counting'] + dist
+    placing = textwrap.fill(
+        f"The record places the {total} distinct central declarations: on the edge {on} ({c['derived']} derived, each a "
+        f"case of grammar laws, through bridges checked as equivalences where a row has them; "
+        f"{c['under a stated hypothesis']} under a stated hypothesis); below the grammar {c['counting']} (counting); at a "
+        f"named distance {dist} ({c['connected']} connected, {c['balance in its statement']} with balance in their "
+        f"statement, {c['amounts']} amounts, {c['at a represented model']} at a represented model, {c['own carrier']} on "
+        f"their own carrier, {c['at its model']} at their model, {c['free significance']} with significance free); none "
+        f"unplaced. The ethics' two premises are listed apart: the condition for scope, not entailed by statements "
+        f"reading only the dynamics (ReadsOnlyDynamics.not_entails), and C for order, with no such theorem.",
+        width=118, initial_indent='  - ', subsequent_indent='    ')
+    section = f"""{title.format(n)}
+
+Board item U4, one root to its edge: each central declaration placed against the edge of one root, by [the design]({DEVLINK}DESIGN-BOUNDARY.md), declared on MV's boundary field (§472) and checked by it. Levers 1 and 2 landed earlier as documents ([lever 2's audit]({DEVLINK}LEVER-2-AUDIT.md), [the connected rows]({DEVLINK}CONNECTED-ROWS-READING.md)); HE2 (§474) took lever 1's counting laws and U4's laws of a closure into GrammarLaws, so that two rows read as connected are now derived. Two reviews read the design ([first]({DEVLINK}REVIEW-U4-BOUNDARY.md), [second]({DEVLINK}REVIEW-U4-BOUNDARY-SECOND.md)); an independent reader reviewed the record against its review file, which names every declaration the record introduces (22 findings, every one taken: [the review]({DEVLINK}REVIEW-U4-RECORD.md)).
+
+```text
+Result(s): one-root-to-its-edge (new, home 08 §7).
+Delta:
+  - Root forms (Becoming.RootForms): a row stated on the grammar under named hypotheses, each a definition naming
+    no model and no amount; beside each hypothesis H of a form, a witness over one point where the form with H
+    dropped fails (needs_H) and the form applied there, so that H fails with the conclusion (H_needed); a recovery
+    at the row's own type and a certificate by rfl.
+  - outside_leaves_no_offspring: where giving lies within giving from a region (GivesFrom) and listed descent within
+    giving (ListedWithin), a listing wholly outside the region (Outside) has no listed offspring.
+    GroupEnding.Flow.all_end is this form at one step, each hypothesis met by definitions alone (all_end_at_model,
+    all_end_certified): the row stands on the root under the three.
+  - descent_forms_no_dependence: where what comes to stand is given to (GivenTo), dependence after a step is
+    inherited along descent (Inherits) and nothing descended from depends before it (UndependedFrom), nothing
+    coming to stand depends after it. Flow.no_new_dependence is this form at its one relatum
+    (no_new_dependence_at_model, no_new_dependence_certified), but meets "given to" only through
+    Flow.descends_of_comes, amount reasoning, so the form is its relational part and the row keeps its distance.
+{placing}
+Supplied premises / correspondence: none added beyond each form's hypotheses. The record's correspondence of a row
+       to its laws or its form, and every reading, is the review's; MV's check bounds it (D1 to D6 for derived
+       rows, the nine Lean tests for row 17) and does not show it. Modelling choices: lists for offspring, as the
+       row lists them; regions and relations as Prop-valued predicates on any carrier.
+Evidence: core receipt `{stamp}`; Becoming.RootForms ({m['theorems']} theorems in {len(m['declarations'])} declarations),
+       a core leaf importing Grammar, Transmission and GroupEnding; every axiom report empty. master_laws.py on
+       that run: the boundary report reads the record, nothing unverified or unplaced, the Lean check ran.
+Standing: near-definitional; each form is a few lines of logic, none of it claimed new as mathematics. What it
+       adds is the placing: every central declaration has one standing and its reason, checked where a check
+       exists.
+Boundary:
+  - That a row under a stated hypothesis uses the grammar's laws: neither form reaches one.
+  - That the countermodels show more than that no hypothesis is redundant: they are over one point.
+  - That either premise of the ethics is warranted; each warrant stays open.
+  - That a distance is a gap or a failure: the measure records dependence, not meaning.
+Output -> input: the record's next step (a root form for the census rows; a theorem that no statement reading
+       only the dynamics entails C; the root reading of significance for the three rows keeping it free; HE2's
+       laws read as cases at more connected rows).
+```
+"""
+    STUDY.write_text(text.rstrip('\n') + '\n\n' + section, encoding='utf-8')
+    print('study §', n, 'written')
 
 
 def reason(name):
@@ -186,5 +266,7 @@ if __name__ == '__main__':
         register(sys.argv[2])
     elif sys.argv[1] == 'check':
         check()
+    elif sys.argv[1] == 'study':
+        study(sys.argv[2], sys.argv[3])
     else:
         sys.exit(__doc__)
