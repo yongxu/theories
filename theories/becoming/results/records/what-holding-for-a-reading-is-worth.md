@@ -85,7 +85,7 @@ Canonical source: [HeldForReading.lean](../../../../experiments/integrated-corre
 <a id="next--下一步"></a>
 ## Next
 
-The reading formation's learning beyond filtering by what it is shown, and a holding formation planning among informing, revaluing and holding (after RF-M.3's carrier); noisy readings and continuous beliefs in the periphery; a frozen test of whether holding follows the model's two excesses; review by a person.
+The reading formation's learning beyond filtering by what it is shown, and a holding formation planning among informing, revaluing and holding (after RF-M.3's carrier); noisy readings and continuous beliefs in the periphery; a frozen test of whether holding follows the threshold, a rule's shortfall plus the amount forgone against each excess (the plan's TR8); review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -136,6 +136,7 @@ Aliases: `what holding an act for a reading is worth`, `为读而持其行之值
 - 30 October 2026: added (RF round 2), what holding an act for a reading is worth: the worth of a reading in counts with its gap identity, holding for a reading that stops or releases, any rule of stopping and its shortfall, the threshold of what holding forgoes, a reading that tells only a cell, the conditional join with the shown reach, and a witness on the reading loop whose choice is the worth law's; the design reviewed by a cross-model reader before the Lean, the Lean by the same reader and through three lenses and then re-checked, the texts cold-read, what was taken, deferred or handed over listed in the review evidence; study section 466.
 - 31 October 2026, board item RF, RF-M.3 (study section 473): related to a-reading-informed-and-revalued, where the reading formation's listing and valuation are state; the next step keeps its learning beyond filtering by what it is shown and the holding formation's planning; no statement or declaration changed.
 - 31 October 2026: its balances, after_byReading, shortfall_byReading, held_eq_go_iff, held_eq_off_iff, the thresholds, the comparisons with an amount forgone and across_le_iff proved from RevisionPlans (rule 9, RR2's landing), term_go and term_off gone, every other statement and name unchanged; going on, switching off and holding for a rule stated as plans, with held_above_moves_iff and held_above_held_iff.
+- 31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR8 in experiments/formations-that-read, which can refute at most the bridge that a system chooses as the counts rank, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
 
 </details>
 

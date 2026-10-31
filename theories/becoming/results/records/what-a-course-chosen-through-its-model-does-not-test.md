@@ -99,6 +99,7 @@ Aliases: `a model its course never refutes`, `其历程永不驳之模型`, `sel
 
 - 30 October 2026: added (RF round 2), what a course chosen through its model does not test: two worlds and one formation, a formation keeping candidate laws, keeping a task as not telling worlds apart; after a cross-model review of the Lean with a re-check, every finding taken; study section 456.
 - 30 October 2026, board item RF, RF-M.2 (study section 466): related to what-holding-for-a-reading-is-worth, where the value of a reading in counts is stated; the next step keeps the value of a noisy reading in the periphery; no statement or declaration changed.
+- 31 October 2026, board item RF, the tests' designs (study section 476): PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
 
 </details>
 

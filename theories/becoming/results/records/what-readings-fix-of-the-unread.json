@@ -121,8 +121,8 @@
     "zh": "纯核，公理报告皆空：Unread 唯引 Learning。其用 lumped_determines 与 Training.unselected_beyond_data，读 Learning.determines_lumped_iff 为确形（引而未用于证）；诸例于真值之对上。"
   },
   "next_delta": {
-    "en": "A frozen test of the chain on a trained model with cues varied apart from content; review by a person.",
-    "zh": "于已训之模型上分讯与内容而变之链之冻结检验；人之审查。"
+    "en": "A frozen measurement of the chain's correspondence on trained models (the plan's TR2): cues varied apart from content and the schedule apart from the cue, with identical-input arms; it can refute a stated lumping or an implementation, never the law; review by a person.",
+    "zh": "于已训之模型上链之对应之冻结量测（计划之 TR2）：分讯于内容而变，分读之时于讯而变，设同入之臂；唯能驳所述之归并或其实现，不驳此律；人之审查。"
   },
   "correspondence": {
     "en": "Indistinguishability: two laws agreeing on every reading are selected alike by every selection through them. AI reading: read as evaluation and deployment, it says two laws reading through one lumping can agree on every reading and differ unread only where the lumping tells the occasion from every read one. Read with deceptive alignment (Hubinger and others 2019), such a law acting alike on every reading acts otherwise unread only there; differing rates, as in alignment faking (Greenblatt and others 2024), are not so bounded. Intention, anticipation and incentive are not represented; a law drawing afresh can act otherwise unread without telling read from unread (Hubinger and others' §4.5). A state telling read from unread while the act does not differ reads as detection not acted on, and a coupling taking in the cue while the state keeps only the content as detectable and not detected; measurements of the first are the chain's failed converse. Read with a supervised reporter, the identification limit of eliciting latent knowledge (Christiano, Cotra and Xu 2021). The probabilistic form of the chain is the data-processing inequality. These are readings, not containments.",
@@ -207,7 +207,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
       "role": "integration",
-      "sha256": "5bcbf2d057886cd5ae7d1302d19df3eedf2ddcee2fc1930d3e12ea94bd26ee8d"
+      "sha256": "4ddb2884750a9dc567d9327adb262910fbbae19d8d3b6b55d311339f5e6d2616"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
@@ -247,6 +247,10 @@
     {
       "en": "30 October 2026, board item RF, RF7 (study section 463): related to when-complying-when-read-is-best; the next step drops disclosure or concealment in two stages, whose two-stage comparison with the continuation value is now stated there, disclosure and concealment readings of it; the second item of what it does not show points to it; the correspondence says two laws reading through one lumping can agree on every reading and differ unread only where the lumping tells the occasion from every read one, reads with deceptive alignment that such a law acting alike on every reading acts otherwise unread only there, says differing rates, as in alignment faking, are not so bounded, no longer calls telling the occasion apart a necessary condition of what deceptive alignment and alignment faking describe, and adds that a law drawing afresh can act otherwise unread without telling read from unread (Hubinger and others' §4.5); no statement or declaration changed.",
       "zh": "2026年10月30日，工作板条目 RF，RF7（研究第 463 节）：与 when-complying-when-read-is-best 相关联；下一步删去两阶段中之示或隐（其带接续之值之两阶段比较已于彼陈述，示与隐为其读）；所不示之第二项指向之；对应言经同一归并而读之二律可于每一读处皆合而于未读处相异，唯在此归并分此时于每一读处者；与欺骗对齐并读，此类律于每一读处同行者唯于彼处于未读处行异；言率之差，如对齐伪装，不受此界；不复称分此时为欺骗对齐与对齐伪装所述者之必要条件，并补言每处重抽其行之律不分读与未读亦可于未读处行异（Hubinger 等 §4.5）；无一陈述或声明改变。"
+    },
+    {
+      "en": "31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR2 in experiments/formations-that-read, which can refute at most a stated lumping or an implementation, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.",
+      "zh": "2026年10月31日，工作板条目 RF，诸检验之设计（研究第 476 节）：下一步所名之检验即 experiments/formations-that-read 之 TR2，至多能驳所述之归并或其实现，不驳此律；无一陈述或声明改变。计划 PLAN.md 重新指向：自本记录所审哈希以来，计划只于检验之读者见其误述 Lean 之处（§3、§4、§8、§11、§12）及 §10 诸检验而变；重新指向前已对本记录读之，其所言无一改变。"
     }
   ]
 }

@@ -183,8 +183,8 @@
     "zh": "纯核，公理报告皆空：ShownOrder 唯引 Grammar。例之表为逐一论元之嵌套匹配；搜之例于其二单上以 rfl 计算。"
   },
   "next_delta": {
-    "en": "A realizable class: a training installing either order of a search; a finite mechanism of prediction, selection, revision and intervention on which inner alignment and assistance are stated (RF round 2); a frozen test of the reach on choosers; review by a person.",
-    "zh": "可实现之类：训练装入一搜之任一序；预测、选择、修订与干预之有限机制，内对齐与协助于其上陈述（RF 第二轮）；择者之及之冻结检验；人之审查。"
+    "en": "A realizable class: a training installing either order of a search; a finite mechanism of prediction, selection, revision and intervention on which inner alignment and assistance are stated (RF round 2); a frozen test of the correspondence, that a chooser picks by strict dominance under one strict order (the plan's TR1); review by a person.",
+    "zh": "可实现之类：训练装入一搜之任一序；预测、选择、修订与干预之有限机制，内对齐与协助于其上陈述（RF 第二轮）；择者之对应之冻结检验，即择者依一严序以严胜而择（计划之 TR1）；人之审查。"
   },
   "correspondence": {
     "en": "Rationalizing strict choices by a strict partial order, through the least transitive relation holding what they show, is close to Richter's theorem (1966) without completeness: a strict partial order, not a complete preference, so no extension principle (Szpilrajn 1930) is needed; it is not Afriat's theorem (1967), which concerns expenditure data and utility. AI reading: read with training, where the training restricts the orders no further, comparisons beyond the shown reach stay open, goal misgeneralization located exactly as a possibility, not shown (Langosco and others 2022; Shah and others 2022), and inner alignment (Hubinger and others 2019) for searches by an order; the kernel on a law's own courses is what training installs. Read with a helper, what strict choices alone fix of an order: maximal choices force none, the order form of the degenerate reward (Ng and Russell 2000); that behaviour fixes a planner and a reward together only under assumptions on the planner (Armstrong and Mindermann 2018) lies outside: the law assumes strict dominance at the occasions shown and does not represent how choices are computed. These are readings, not containments.",
@@ -307,7 +307,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
       "role": "integration",
-      "sha256": "5bcbf2d057886cd5ae7d1302d19df3eedf2ddcee2fc1930d3e12ea94bd26ee8d"
+      "sha256": "4ddb2884750a9dc567d9327adb262910fbbae19d8d3b6b55d311339f5e6d2616"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
@@ -347,6 +347,10 @@
     {
       "en": "30 October 2026, board item RF, RF-M.2 (study section 466): related to what-holding-for-a-reading-is-worth; no statement, next step or declaration changed.",
       "zh": "2026年10月30日，工作板条目 RF，RF-M.2（研究第 466 节）：与 what-holding-for-a-reading-is-worth 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR1 in experiments/formations-that-read, which can refute at most the correspondence that a chooser picks by strict dominance under one strict order, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.",
+      "zh": "2026年10月31日，工作板条目 RF，诸检验之设计（研究第 476 节）：下一步所名之检验即 experiments/formations-that-read 之 TR1，至多能驳择者依一严序以严胜而择之对应，不驳此律；无一陈述或声明改变。计划 PLAN.md 重新指向：自本记录所审哈希以来，计划只于检验之读者见其误述 Lean 之处（§3、§4、§8、§11、§12）及 §10 诸检验而变；重新指向前已对本记录读之，其所言无一改变。"
     }
   ]
 }

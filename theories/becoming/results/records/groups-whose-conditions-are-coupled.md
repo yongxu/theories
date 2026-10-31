@@ -20,6 +20,8 @@
    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. A member depending on any condition of such a family leaves no descendant after the family's excess; groups whose members depend on one such family end together, each leaving no offspring and nothing selected among them, for any amount. (`Becoming.GroupEnding.Flow.family_childless`, `Becoming.GroupEnding.Flow.excess_childless`, `Becoming.GroupEnding.Flow.coupled_end_together`)
    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts; the measure counts central declaration `Becoming.GroupEnding.Flow.family_childless` as following from balance, which the grammar represents; the measure counts central declaration `Becoming.GroupEnding.Flow.coupled_end_together` as following from balance, which the grammar represents.
+   - *Standing of `Becoming.GroupEnding.Flow.family_childless`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
+   - *Standing of `Becoming.GroupEnding.Flow.coupled_end_together`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
 6. So ending selects among groups only between families: where the groups with less of an amount depend on a family that ran into excess, they leave nothing. (`Becoming.GroupEnding.Flow.ended_of_family`)
    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 

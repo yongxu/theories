@@ -1,0 +1,180 @@
+{
+ "about": "A second check, after the first (landing-sections-check.json, at 416b0af81): every claim the two study drafts gained or changed since, and any older claim those changes made false, against mv-land at 24a18240e (the author's commits 394ce2449..bea061858, f52d9d34e..b614da00d and d963d39c7), by one checker per draft; each draft's findings then given to a skeptic told to refute them. A finding the skeptic confirms (real) was taken; a refuted one was left, with the skeptic's reason.",
+ "run": "wf_b12342e9-a86",
+ "agents": 4,
+ "totals": {
+  "findings": 13,
+  "confirmed_and_taken": 7,
+  "refuted": 6
+ },
+ "sections": [
+  {
+   "draft": "mv",
+   "claims_checked": 38,
+   "findings": [
+    {
+     "claim": "BOUNDARY-FIELD §8 (line 553, rewritten in bea061858): \"on 142 names: 70 generated (...), and 72 not (written by hand under a name Lean uses, under a declaration of another kind or of none, each pattern under a kind it must not attach to, `_unsafe_rec`, `_arg_pusher`, `congr_eq_N` and the functional induction and cases included, a part no generated declaration has, and near misses of each pattern)\"",
+     "problem": "The claim is overstated. It does not hold for every pattern, and it does not match the draft. The draft's (5) makes the narrower claim, which is true: \"72 not: _unsafe_rec, _arg_pusher and each new pattern under a kind it must not attach to\". In the list, 15 of the 35 alternatives of boundary.AUX have no name at all among the 72, under a wrong kind or any other. This is the gap R4-3 found for `_unsafe_rec` and `_arg_pusher`, judged by alternative. \"Near misses of each pattern\" is overstated in the same way: for example, splitter, _sunfold, _default, eq_def and casesOn have none.",
+     "evidence": "I split each boundary.AUX regex at its top-level `|` and listed the NOT_GENERATED names whose last component fullmatches each alternative (python3 -B one-off over tools/research/tests/test_boundary.py). None for: splitter, _aux_\\d+, _default, injEq, sizeOf_spec, _flat_ctor, _sizeOf_inst, binductionOn, recOn, noConfusionType, ctorIdx, toCtorIdx, ofNat_ctorIdx, ctorElim, ctorElimType. Every new pattern does have one: half._sizeOf_2_eq, half.brecOn_1, half.below_1, half.rec_1 and Onward.mk.rec_1, op.eq_unfold, comm.congr_eq_1 and Tone.congr_eq_1, Tone.induct, Tone.induct_unfolding, Tone.mutual_induct, comm.mutual_induct_unfolding, comm.fun_cases and comm.fun_cases_unfolding. Near misses in the list are only _aux_x, _proof_, _sizeOf_, _sizeOf_x, _sizeOf_2_eqx, below_1a, below_one, congr_eq_, elim_of, eq_x, induct_, injective, match_*, noConfusion2, ofNat, proof_, proof_1a and recursion. The §9 RC3-RULES-2 row (line 657) makes the same \"each pattern\" claim for the 100 names.",
+     "fix": "§8 line 553: \"... and 72 not (written by hand under a name Lean uses, under a declaration of another kind or of none, `_unsafe_rec`, `_arg_pusher` and each pattern the fourth re-check added under a kind it must not attach to, `congr_eq_N` and the functional induction and cases included, a part no generated declaration has, and near misses of several patterns)\". This matches the draft. Alternatively, add wrong-kind names for the 15 older alternatives (for example `comm.splitter`, `Tone._default`, `next.injEq`, `half.ctorIdx`) and keep \"each pattern\".",
+     "severity": "overstated",
+     "verdict": {
+      "real": true,
+      "reason": "Reproduced. I split each boundary.AUX regex at its top-level '|' and checked which of the 72 NOT_GENERATED names (tools/research/tests/test_boundary.py:1280-1291, read with ast) have a last component that fullmatches each alternative. 15 alternatives match no negative at all: splitter, _aux_\\d+, _default, injEq, sizeOf_spec, _flat_ctor, _sizeOf_inst, binductionOn, recOn, noConfusionType, ctorIdx, toCtorIdx, ofNat_ctorIdx, ctorElim, ctorElimType. R4-3 already read 'each pattern' this way: it counted `_arg_pusher` as lacking a negative 'apart from its group' (BOUNDARY-FIELD.md:671; reports/boundary-fix-recheck4.json R4-3). Under that reading, §8's 'each pattern under a kind it must not attach to' (line 553, kept when bea061858 rewrote the parenthesis) is still overstated. 'Near misses of each pattern' fails even read per AUX entry, since `_unsafe_rec` has no near miss. The proposed wording holds. Every pattern the fourth re-check added does have a negative under a kind it must not attach to: half._sizeOf_2_eq, half.brecOn_1, half.below_1, half.rec_1, op.eq_unfold, comm/Tone.congr_eq_1, Tone.induct, Tone.induct_unfolding, Tone.mutual_induct, comm.mutual_induct_unfolding, comm.fun_cases and comm.fun_cases_unfolding. It also matches the draft's narrower (5) and the R4-3 row in §9."
+     },
+     "taken": true
+    },
+    {
+     "claim": "BOUNDARY-FIELD §3.2, \"On U4's forms\" (line 261), which the draft now cites as \"§3.2 (test 9 and U4's forms)\": \"On 31 October the controls were rerun four times, with the same output each time: after ... (the code review's LEAN-1), after ... (its re-check), after ... (the second re-check), and after attachment read an opaque, a lifted proof under an inductive type, `_arg_pusher` and macro scopes (the third).\"",
+     "problem": "The paragraph is stale. The draft's Evidence says the controls were \"rerun after each re-check's fixes: output byte-identical\", and §9's fourth-re-check paragraph says they \"were rerun after the fixes below\". So there was a fifth rerun, after the fourth re-check's fixes. §3.2 still counts four and ends at the third, so BOUNDARY-FIELD and the draft disagree.",
+     "evidence": "git show 26977f25a:BOUNDARY-FIELD.md changed \"three times\" to \"four times\" (line 260). f3de580e6, the fourth's fixes, left the line unchanged, but its message says \"U4's controls byte-identical\". BOUNDARY-FIELD.md:665: \"The cases of controls-run.log on U4's build (31 ...) were rerun after the fixes below, with byte-identical output.\" Draft line 52: \"rerun after each re-check's fixes\".",
+     "fix": "Line 261: \"On 31 October the controls were rerun five times, with the same output each time: after ... (the third), and after a nested type's auxiliaries, the functional induction Lean realizes and the name before the macro scopes were read (the fourth).\"",
+     "severity": "wrong",
+     "verdict": {
+      "real": true,
+      "reason": "Reproduced. In BOUNDARY-FIELD §3.2 line 261, 26977f25a changed 'rerun three times' to 'rerun four times ... (the third)'. The same text stands at f3de580e6, 394ce2449, bea061858 and 24a18240e (git show <c>:BOUNDARY-FIELD.md | grep). The fourth re-check's fixes (f3de580e6, also 31 October) say 'U4's controls byte-identical'. The fourth re-check's §9 paragraph (line 665) says the controls 'were rerun after the fixes below, with byte-identical output'. The draft's Evidence, rewritten in bea061858, says 'rerun after each re-check's fixes', and the draft now cites '§3.2 (test 9 and U4's forms)'. So §3.2 undercounts by one, contradicts the cited draft, and leaves out the fourth rerun. The fix (five times, adding the fourth) is correct."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Draft (5): \"sixteen mutations of the new parts, each caught (boundary/check/mutations_recheck4.py, its output beside it)\". BOUNDARY-FIELD §8 line 557: \"sixteen more for the fourth's (... `_unsafe_rec`, `_arg_pusher` and `rec_N` widened, ...)\".",
+     "problem": "The kept driver's mutations do not all match these descriptions. (1) The Lean mutation 'rec_N on def' does not widen rec_N to a definition. It deletes `numbered \"rec_\"` from the inductive branch of attaches, which is a narrowing that partly repeats 'no nested ind names'. So no Lean mutation widens rec_N, and the log line \"rec_N on def: CAUGHT\" names a mutation that was not run. (2) Three mutations widen a whole group of old and new parts together, so older negatives catch them. 'induct any kind' turns the def-only branch's `k == \"def\"` into `k != \"\"`. 'py induct on thm' adds thm, ind and opaque to the whole definition group. 'py rec_N on def' adds def to the whole inductive group. None of the three shows that the new negatives catch anything.",
+     "evidence": "mutations_recheck4.py:19: 'rec_N on def': ('numbered \"rec_\" ||\\n', 'false ||\\n'). The anchor is the inductive branch at boundary_check.lean:209. mutations_recheck4.py:15: the 'induct any kind' anchor ends `...\"fun_cases_unfolding\"].contains s then k == \"def\"`, the branch that also holds eq_N, congr_eq_N, _aux_N, eq_def, splitter, _sunfold, _default and _arg_pusher. mutations_recheck4.py:34 uses py_aux('induct', ...) and :37 uses py_aux('rec(_', ('def',)), and py_aux widens every AUX entry whose regex contains the string, which is the whole group. mutations-recheck4.log:4: 'induct any kind' is caught by test_lifted_proofs_equation_lemmas_and_hygienic_names, whose entries 24 and 26 turn on Edge.op.eq_1, an older part.",
+     "fix": "Rename the Lean mutation to 'no rec_N', or make it a real widening, for example by adding `numbered \"rec_\" ||` to the def-only branch. Rerun the driver and replace the log. In the draft: \"sixteen mutations of the new parts or of the groups that hold them, each caught\". In §8: \"`_unsafe_rec` and `_arg_pusher` widened, `rec_N` widened with its group in boundary.py\".",
+     "severity": "overstated",
+     "verdict": {
+      "real": true,
+      "reason": "Reproduced. In mutations_recheck4.py:19, the Lean mutation 'rec_N on def' replaces 'numbered \"rec_\" ||\\n' with 'false ||\\n'. That anchor occurs only on the inductive branch (boundary_check.lean:209, the same at f3de580e6 and bea061858). So the mutation drops rec_N from inductive types; it is a narrowing, not a widening onto definitions. The kept log line 7 'rec_N on def: CAUGHT' therefore names a mutation that was not run, and no Lean mutation widens rec_N. 'induct any kind' (line 15-16) changes the 'then k == \"def\"' of the whole def-only branch (lines 204-206: eq_N, congr_eq_N, _aux_N, eq_def, splitter, ...). It is caught by test_lifted_proofs_equation_lemmas_and_hygienic_names, whose entries 24 and 26 turn on Edge.op.eq_1, an older part (test_boundary.py:1421). py_aux widens every AUX entry whose pattern contains the string. 'py induct on thm' therefore widens the whole definition group, and 'py rec_N on def' the whole inductive group, which older negatives such as next.casesOn and Tone.eq_def catch. The evidence the draft cites for 'sixteen mutations of the new parts' misdescribes one mutation, and three others do not isolate the new parts. The proposed relabel/rerun and rewording are correct."
+     },
+     "taken": true
+    },
+    {
+     "claim": "Draft (4), the third re-check's tests: \"sixteen mutations of the two copies, each caught (boundary/check/mutations_recheck3.py, its output beside it)\"",
+     "problem": "A required fact is missing. The cited output does not come from the third re-check's fixes (26977f25a). It comes from the driver rerun at the landing check on the current rule and tests: after the fourth's fixes and with 142 names. Two of its anchors were moved to the line f3de580e6 rewrote. The draft lets the reader take the log as the record of the third's fixes. BOUNDARY-FIELD §8 says \"run on the tests as they stand\", and the driver's docstring says so too.",
+     "evidence": "mutations_recheck3.py docstring: \"Two anchors ('no _arg_pusher', 'eq_N on opaque') are those of the line the fourth re-check rewrote ..., the same mutations on the current text.\" git show 26977f25a:tools/research/boundary_check.lean has the def-only line `[\"eq_def\", \"splitter\", \"_sunfold\", \"_default\", \"_arg_pusher\"].contains s then k == \"def\"`, which the current anchors do not match. The log was added in bea061858, the same commit that took the names from 135 to 142. BOUNDARY-FIELD.md:557: \"run on the tests as they stand\".",
+     "fix": "\"sixteen mutations of the two copies, each caught (boundary/check/mutations_recheck3.py, rerun on the current rule and tests, two of its anchors on the line the fourth re-check rewrote; its output beside it)\"",
+     "severity": "missing",
+     "verdict": {
+      "real": false,
+      "reason": "The draft's wording is defensible. The claim in (4), 'sixteen mutations of the two copies, each caught', was true at the third's fixes: the message of 26977f25a says 'sixteen mutations each caught'. It is also true on the current rule and tests, per the kept log (16 CAUGHT lines). The draft never says the kept output dates from 26977f25a. The cited file states its own provenance: the docstring of mutations_recheck3.py (lines 3-4) says two anchors are on the line the fourth re-check rewrote, 'the same mutations on the current text'. BOUNDARY-FIELD §8 (line 557), which the draft cites as the design, says 'run on the tests as they stand'. So no required fact is missing; the suggested parenthesis would only repeat what the cited files already say."
+     },
+     "taken": false
+    },
+    {
+     "claim": "Draft (5), lines 41-42: \"six names under a theorem or an inductive type among those not: congr_eq_1, mutual_induct and its unfolding, induct_unfolding, fun_cases_unfolding\"",
+     "problem": "The sentence says six but names five. congr_eq_1 is added twice, under comm and under Tone. \"Its unfolding\" is also inexact: mutual_induct is under Tone and mutual_induct_unfolding is under comm.",
+     "evidence": "git diff 394ce2449 bea061858 -- tools/research/tests/test_boundary.py adds to NOT_GENERATED: 'comm.congr_eq_1', 'Tone.congr_eq_1', 'Tone.mutual_induct', 'comm.mutual_induct_unfolding', 'Tone.induct_unfolding', 'comm.fun_cases_unfolding'. Model.comm is a theorem (test_boundary.py:1054) and Tone is an inductive type.",
+     "fix": "\"... and six names under a theorem (comm) or an inductive type (Tone) among those not: congr_eq_1 under each, Tone.mutual_induct, comm.mutual_induct_unfolding, Tone.induct_unfolding and comm.fun_cases_unfolding\"",
+     "severity": "nit",
+     "verdict": {
+      "real": false,
+      "reason": "The count is right. git diff 394ce2449 bea061858 -- test_boundary.py adds exactly six NOT_GENERATED names: comm.congr_eq_1, Tone.congr_eq_1, Tone.mutual_induct, comm.mutual_induct_unfolding, Tone.induct_unfolding and comm.fun_cases_unfolding. comm is a theorem (test_boundary.py:1054) and Tone an inductive (1042), as the sentence says. The list after the colon names last components, as the section does throughout. congr_eq_1 stands for its two names, one under a theorem and one under an inductive type. 'mutual_induct and its unfolding' names the component mutual_induct_unfolding. This is a compressed list that contains no false statement, so it is defensible as written."
+     },
+     "taken": false
+    },
+    {
+     "claim": "Draft Delta (2), added in scope: \"and an _arg_pusher under Init's PSigma.casesOn or PSum.casesOn among a package module's private names\"",
+     "problem": "BOUNDARY-FIELD never names PSum.casesOn. §3.0's \"Kinds the dump lacks\" names only PSigma.casesOn, so the design and the draft disagree on which theorems outside lists. The draft and the test are right.",
+     "evidence": "grep PSum BOUNDARY-FIELD.md finds nothing. BOUNDARY-FIELD.md:139: \"and an `_arg_pusher` under Init's `PSigma.casesOn`\". test_boundary.py:1451-1452 asserts outside(self.C) == {Nat.fold.eq_def, _private.Becoming.Edge.0.PSigma.casesOn._arg_pusher, _private.Becoming.Edge.0.PSum.casesOn._arg_pusher}, and the test passes (61 tests, OK, skipped=1).",
+     "fix": "BOUNDARY-FIELD §3.0 line 139: \"and an `_arg_pusher` under Init's `PSigma.casesOn` or `PSum.casesOn`, among a package module's private names\"",
+     "severity": "nit",
+     "verdict": {
+      "real": false,
+      "reason": "The finding itself says the draft and the test are right. The draft is correct: test_boundary.py:1451-1452 asserts that outside contains both PSigma.casesOn._arg_pusher and PSum.casesOn._arg_pusher. BOUNDARY-FIELD §3.0 line 139 names PSigma.casesOn alone, but as an instance ('Lean realizes ... and an _arg_pusher under Init's PSigma.casesOn'), which is true. The mechanism is stated in general: boundary.py:315-331 lists any theorem with an AUX last component whose owner the dump lacks, and line 132 says 'under the casesOn or the matcher it pushes arguments into'. Line 139 lies outside the scope's diffs (git diff 394ce2449 bea061858 and f52d9d34e b614da00d do not touch it), and the changes did not make it false. Completing the design's example would be optional polish, not a defect in the landing claims."
+     },
+     "taken": false
+    },
+    {
+     "claim": "Draft Evidence, lines 48-50: \"master_laws.py rerun on the branch's base receipt (20261030T232750.486801Z) and, in the landing rehearsals merged with main, on RF-M.3's ..., HE2's ... and RR2's (20261031T085229.010243Z) changes only the hashed inputs (boundary.py and boundary_check.lean)\"",
+     "problem": "The merges made the wording stale. The figures are right. The branch's merge base with main is now 5e88553cc, whose receipt is RR2's, so \"the branch's base receipt\" now names the wrong thing. RR2's result also no longer rests only on a rehearsal: since f52d9d34e the branch itself carries master-laws.json at RR2's receipt, which is the direct evidence.",
+     "evidence": "git merge-base main mv-land gives 5e88553cc. The branch's becoming-verification.json utc is 20261031T085229.010243Z. git diff main mv-land -- theories/becoming/results/data/master-laws.json changes only the boundary.py and boundary_check.lean hashes (9f70cc2b..., d1867fd5...), and these equal shasum -a 256 of the current files. 1aa84fd59's receipt is 20261030T232750.486801Z.",
+     "fix": "\"master_laws.py rerun on the receipt of the branch's original base 1aa84fd59 (20261030T232750.486801Z), in the landing rehearsals merged with main on RF-M.3's (20261031T013649.265381Z) and HE2's (20261031T054654.692180Z), and on the branch merged with main (f52d9d34e) on RR2's (20261031T085229.010243Z), changes only the hashed inputs (boundary.py and boundary_check.lean); git diff main shows only those two hashes\"",
+     "severity": "nit",
+     "verdict": {
+      "real": true,
+      "reason": "Reproduced, as a nit. At bea061858 the branch's merge base with main was 1aa84fd59, whose master-laws.json is at receipt 20261030T232750.486801Z, so 'the branch's base receipt' was then right. After the merge f52d9d34e, the merge base became 1721c70ef. At 24a18240e it is 5e88553cc (git merge-base main 24a18240e), and both carry RR2's receipt 20261031T085229.010243Z. The branch's own master-laws.json is at RR2's receipt too. b614da00d edited this very sentence after the merge, adding RR2, but kept 'the branch's base receipt (20261030T232750.486801Z)', which the merge made false. The figures are right. git diff 5e88553cc 24a18240e -- master-laws.json changes only the hashes of boundary.py and boundary_check.lean, 9f70cc2b... and d1867fd5..., and these equal shasum -a 256 of the current files. The messages of f52d9d34e and b614da00d place RR2's master_laws run on the merged branch itself. The proposed wording (the original base 1aa84fd59; RR2's on the branch merged with main) is correct. Naming the main commit compared, 5e88553cc, would be better than a bare 'git diff main', since main moves."
+     },
+     "taken": true
+    }
+   ]
+  },
+  {
+   "draft": "readme",
+   "claims_checked": 52,
+   "findings": [
+    {
+     "claim": "(4) \"after the date line, one AI-side line says \\\"The notes below are written apart from the first-person text above and follow the current account\\\"\" (also OPENING.md:59 as shown, OPENING's leading comment \"the line before the notes and the notes are AI-written and follow the current account\", and the proposal's new bullet)",
+     "problem": "The line tells readers, on a front page, that every note follows the current account. The kit itself records two notes that do not, and leaves them unchanged: [^axiom] and [^own]. The draft never says these two are left behind, not in (4) and not in Boundary. So the line overstates, and a fact the section needs is missing.",
+     "evidence": "design.json audit.summary: \"Several AI-written notes are also older ... [^axiom] does not mention §4.6's path, P2 or P4, or that the ethics does not wait on a universal warrant. It still says the attempt with no axiom 'has not yet begun' ... [^own] grounds what living beings act on in the continuation condition instead of P1\". Of the four, only [^ethics] and [^good-evil] were changed. drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:105-107 still lists [^axiom] and [^own] under \"To change with this proposal or the notes' next pass\". In the current OPENING.md, [^axiom] contains \"has not yet begun\" and no \"4.6\", \"P1\", \"P2\" or \"P4\" (python find returns -1). [^own] opens \"Under the continuation condition, each standpoint's own living continuation has significance for it\". The same wording has spread to the later landing-kit/ra-row-clause.txt (\"a line before its notes saying they are written apart from it and follow the current account\").",
+     "fix": "Option A: bring [^axiom] and [^own] to the current account in this landing. They are AI-side and need no proposal; re-read and re-point the three records the source links nowhere. Option B: reword the line and the comment to say \"The notes below are written apart from the first-person text above and are revised as the account changes.\" Then update the quote in (4), the proposal bullet and the test's substring if needed. Under either option, add to Boundary: \"- [^axiom] and [^own] are not yet at the current account (§4.6's path, P2 and P4; P1 as the ground of self-significance); they change with the proposal or the notes' next pass.\"",
+     "severity": "overstated",
+     "verdict": {
+      "real": true,
+      "reason": "Reproduced. OPENING.md:59 (and README.md:77) now says the notes below 'follow the current account', and the leading comment (OPENING.md:1) says the same. But the kit's own audit (ra-first-screen/design.json audit.summary) records [^axiom] and [^own] as older, and OPENING-V13-PROPOSAL.md:105-107 still lists both under 'To change with this proposal or the notes' next pass'. A python read of the live [^axiom] finds 'has not yet begun' at offset 2877 and no '4.6', 'P1', 'P2', 'P4' or 'universal'. [^own] still opens 'A reading. Under the continuation condition, each standpoint's own living continuation has significance for it' and ends '...the attempt without axiom, not yet begun'. Only [^ethics], [^good-evil] and [^transitions] changed. The draft's Boundary (lines 121-127) says nothing about the two notes left behind. So a reader of the front page gets a factual claim the kit itself contradicts. In the proposal (line 99) the same words read as a rule, because the lagging notes are listed right after; the front page has no such list. The fix is correct: reword the line (and the comment and its quote in (4)) or bring the two notes up to date, and in either case add the Boundary item. The test's substring 'written apart from the first-person text' still passes under option B."
+     },
+     "taken": true
+    },
+    {
+     "claim": "(9) \"What the label tells on OPENING, that the notes' voice is not the first-person body's, the line before the notes now says once, naming no one\"",
+     "problem": "The label \"(the AI's reading)\" said more than the line now says. It named who made the reading, which set it apart from the first-person body and also from the prior art cited just before it in the same note (Maynard Smith and Szathmáry; Aktipis et al.). The line says only that the notes are not the first-person text. So it carries part of what the label told, not all of it.",
+     "evidence": "OPENING.md:101 [^transitions]: \"...on cancer as cheating within multicellular cooperation, Athena Aktipis and colleagues, ... (2015). Cancer is read as a confined rise (a reading): ...\". On main the same sentence read \"Cancer is read (the AI's reading) as a confined rise\". The record confined-rise-within-a-whole keeps \"Readings (the AI's): ConfinedRise as cancer\".",
+     "fix": "\"Part of what the label told on OPENING, that the reading is not the first-person body's, the line before the notes now says once for every note, naming no one; who made the reading stays in the record confined-rise-within-a-whole.\"",
+     "severity": "nit",
+     "verdict": {
+      "real": false,
+      "reason": "The wording can be defended as written. The appositive 'that the notes' voice is not the first-person body's' says which part of the label's job the line takes over, and the line does say that (OPENING.md:59). Two lines earlier the draft also says 'the label stays in the record confined-rise-within-a-whole', so who made the reading is not claimed to be lost or carried by the line. On the front page, Aktipis's reading is set apart from the theory's by the citation itself ('on cancer as cheating ...') and by the Lean names (`Flow.ConfinedRise`, `Becoming.Founding`), not only by the removed label. The draft overstates nothing that needs fixing."
+     },
+     "taken": false
+    },
+    {
+     "claim": "(9) \"Tests check that the screen names no one\"",
+     "problem": "The draft defines the first screen as \"everything before the opening's heading\": title, navigation line, status line and the block. The test runs its no-names regex only on navigation.first_screen's output, which is the README-FIRST-SCREEN.md block with its fields filled. The title, navigation and status lines are not tested. They name no one now.",
+     "evidence": "tools/research/tests/test_featured_results.py:322-330: `screen = navigation.first_screen(records, navigation.readme_opening())` ... `self.assertNotRegex(screen, r'\\b(AI|Ren|Claude)\\b')`. The regex over README.md before '## Truth exists' finds no match today (python check: []).",
+     "fix": "Either write \"Tests check that the screen's block names no one (the title, navigation and status above it, which name no one, are not tested)\", or extend the test to README's rendered text before '## Truth exists'.",
+     "severity": "nit",
+     "verdict": {
+      "real": true,
+      "reason": "Reproduced, a nit. The draft's own wording makes 'the screen' mean title to heading: line 7 'The first screen is everything before the opening's heading', line 25 '{{time:screen}} (the whole screen, title to heading)', and (2)'s '172 words on the screen'. I recomputed with navigation.prose_counts: README.md before '## Truth exists' gives 172 words; the block file gives 138. The no-names test (test_featured_results.py:325-331) calls navigation.first_screen(records, navigation.readme_opening()) with above='' (navigation.py:253), so it only checks the filled block. The status line above the block is authored text from _process/research-config.json:17 (readme_status), which no test checks for names. Today nothing before the heading names anyone (my regex found []), but 'Tests check that the screen names no one' overstates what is tested. Either fix in the finding is correct."
+     },
+     "taken": true
+    },
+    {
+     "claim": "(9) \"... the line before the notes now says once, naming no one (the coordinator's condition for the departure)\"",
+     "problem": "Nothing in the repository records this condition except the author's own text: the commit message of b614da00d and the rebinds reason (\"After the coordinator's condition for [^transitions]'s label\"). The board, tighten.json and review.json do not have it. A reader of the study cannot check it.",
+     "evidence": "`git grep -n -i \"condition for the departure\\|coordinator's condition\" -- _process drafts` matches only the draft (line 74) and rebinds.jsonl:299. The other match, design.json:7, is the coordinator's condition (2) on the screen, not this one.",
+     "fix": "Record where the condition was given, e.g. \"(the coordinator's condition for the departure, 31 October, by message)\", or add it to tighten.json or the board's RA row, and cite that.",
+     "severity": "unsupported",
+     "verdict": {
+      "real": false,
+      "reason": "Not a real gap. The condition is recorded in the repository in the commit that implements it (b614da00d's subject, 'the condition for [^transitions]'s plain label') and in the rebinds reason (rebinds.jsonl:299, 'After the coordinator's condition for [^transitions]'s label'). Nothing contradicts it. The repository records the coordinator's word in study and board text, with no separate record of the message: the board says 'on the coordinator's word' (BECOMING-WORKBOARD.md:42, :62), and the other coordinator requests in this draft are recorded the same way (tighten.json about, also AI-written). The study section is itself where this provenance is meant to be recorded, so 'unsupported' does not hold. Adding a date would be optional polish, not a fix."
+     },
+     "taken": false
+    },
+    {
+     "claim": "rebinds.jsonl line with base 54203ad1c: \"the three binding the whole file (confined-rise-within-a-whole, what-position-reads, what-the-dynamics-leave-open) were read again and re-pointed\"",
+     "problem": "The draft's (7) now says the three \"bind every rewritten line\", which is what registry.scoped_drift does. The rebinds reason still says \"the whole file\". Lines only added are not listed for any record, so the new line before the notes did not by itself make the three drift. The leading comment's rewrite did.",
+     "evidence": "tools/research/registry.py:107: changed_lines \"lines only added are not listed\" (only 'replace' and 'delete' opcodes). :137-139: \"lines only added change nothing reviewed. A record the source neither links nor cites by anchor has no located part, so any rewritten line counts\".",
+     "fix": "In the rebinds reason, replace \"the three binding the whole file\" with \"the three the source links nowhere, which bind every rewritten line\".",
+     "severity": "nit",
+     "verdict": {
+      "real": false,
+      "reason": "The wording can be defended. registry.scoped_drift (registry.py:133-158) treats a record the source neither links nor cites by anchor as having no located part, so a rewrite anywhere in the file bears on it. 'Binding the whole file' says that, as opposed to the five that are bound only at their lines and before the first heading. That lines only added count for no record (registry.py:107, 120) applies to every record, so it does not make 'the whole file' wrong. The rebinds reason also never says the added line caused the drift; it says the three were read again and re-pointed after both changes. That they were read again is true and harmless whether or not they had drifted."
+     },
+     "taken": false
+    },
+    {
+     "claim": "OPENING-V13-PROPOSAL.md:3 \"OPENING.md is in Ren's voice and changes only through a proposal to him.\" (the file (5) describes; older text that this change made false)",
+     "problem": "After b614da00d, OPENING's own leading comment limits the rule to the first-person text and says the line before the notes and the notes are AI-written. The proposal's new bullet and its \"On the AI side\" list say those parts change without a proposal. Line 3 now contradicts both.",
+     "evidence": "OPENING.md:1: \"Change its first-person text only with Ren; the line before the notes and the notes are AI-written and follow the current account.\" OPENING-V13-PROPOSAL.md:99: \"The notes are AI-written and follow the current theory, so these change without a proposal\". :104 is the new bullet for the line.",
+     "fix": "\"OPENING.md's first-person text is in Ren's voice and changes only through a proposal to him; its notes and the line before them are AI-written and change on the AI side.\"",
+     "severity": "nit",
+     "verdict": {
+      "real": true,
+      "reason": "Reproduced, a nit. OPENING-V13-PROPOSAL.md:3 says '[OPENING.md] is in Ren's voice and changes only through a proposal to him' (written in 54203ad1c, per git log -S). After b614da00d, OPENING.md:1 says 'Change its first-person text only with Ren; the line before the notes and the notes are AI-written and follow the current account'. The proposal's own new bullet (line 104) says 'the leading comment says that the first-person text changes only with Ren', and line 99 says the notes 'change without a proposal'. AGENTS.md:48 likewise limits the rule to the body and calls OPENING's footnotes AI-written. This landing itself changes OPENING.md (the comment, the new line and three notes) without a proposal, so line 3 is now inconsistent with its own file and with the change. The suggested replacement is correct and matches AGENTS."
+     },
+     "taken": true
+    }
+   ]
+  }
+ ]
+}
