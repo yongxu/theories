@@ -3,7 +3,7 @@
   items 2 to 4 (he2_u4.py) and items 6 and 7 (he2_core_li.py): each kit's records part, run here without its notes;
     their clauses are folded below.
   item 1 (ou3f-activity-laws/he2-item1/KIT.md): continuation-relative-to-a-class, the law citing «两端分则中有标»
-    (laws.9), en and zh, widened as its owner gave it: a relation that composes, a class being one.
+    (laws.9), en and zh, widened as its owner gave it and the record's owner worded it: a transitive relation, a class being one.
   item 5 (ou3b-master-laws-on-the-grammar/he2-item5/KIT.md): generation-and-degeneration-at-two-grains cites
     Map.step_reached_le, Map.step_reaches and Map.step_reaches_of_le from GrammarMap, where item 5 moves them, and
     no longer from MapRegions, and the validation scope gives both modules' counts at HE2's receipt; the two
@@ -106,8 +106,8 @@ assert set(MOVED) <= names('GrammarMap') and not set(MOVED) & names('MapRegions'
 # Item 1's widening (its KIT, "One claim widened").
 I1_LAW = 'Becoming.«两端分则中有标»'
 I1_EN = ('and where every step keeps a class or carries a mark, a line whose ends the class tells apart has a marked step',
-         'and where every step keeps a relation that composes (a class is one) or carries a mark, a line whose ends '
-         'the relation tells apart has a marked step')
+         'and where every step keeps a transitive relation (a class is one) or carries a mark, a line whose ends the '
+         'relation tells apart has a marked step')
 I1_ZH = ('凡每一步或保一类或带一标者，其两端为此类所分之线，必有带标之一步',
          '凡每一步或保一传递之关系（类即其一）或带一标者，其两端为此关系所分之线，必有带标之一步')
 
@@ -257,9 +257,9 @@ def clause(note):
 
 
 I1_CLAUSE = ('item 1', '第 1 项',
-             '«两端分则中有标» asks only that the relation it keeps compose (its hypotheses split, then trans, in place '
-             'of a class), so laws.{law}.en and laws.{law}.zh now read a relation that composes, a class being one; its '
-             'declarations are unchanged.',
+             '«两端分则中有标» asks only that the relation it keeps be transitive (its hypotheses split, then trans, in '
+             'place of a class), so laws.{law}.en and laws.{law}.zh now read a transitive relation, a class being one; '
+             'its declarations are unchanged.',
              '«两端分则中有标» 只求所保之关系传递（其设先分后传，以代类），故 laws.{law}.en 与 laws.{law}.zh 今言保一传递之关系，类即其一；所引声明不变。')
 LCS_CLAUSE = ('item 1', '第 1 项',
               "Sampling's arises_within and ceases_within, which the coarse-step laws use, are now read from the grammar "
