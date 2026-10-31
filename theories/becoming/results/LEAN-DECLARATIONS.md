@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 349 | 17,045 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 350 | 17,075 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 14 | 772 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -833,6 +833,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RiskPriority.lean](lean-declarations/ethics.md#module-40a0f60d9f91) | Normative grounding and generative direction |
 | [Roles.lean](lean-declarations/becoming-core.md#module-33c3f51ffbf2) | Becoming pure core |
 | [RootBridge.lean](lean-declarations/shared.md#module-6ab582d74d00) | Organizational formation through revisable evaluation |
+| [RootForms.lean](lean-declarations/becoming-core.md#module-e386d841be45) | Becoming pure core |
 | [RootGrounding.lean](lean-declarations/concern.md#module-c86f0b363b70) | Concern and shared activity |
 | [RootRealization.lean](lean-declarations/core.md#module-62ba3600c9f2) | Generative core and relational structure |
 | [RouteDiagnostics.lean](lean-declarations/shared.md#module-6d5ab3eb998c) | Organizational formation through revisable evaluation |
