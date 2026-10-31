@@ -6,13 +6,13 @@
   "unclean": [],
   "audits": {
     "Becoming.RoomNet": {
-      "theorems": 93,
-      "declarations": 119,
+      "theorems": 94,
+      "declarations": 120,
       "with_axioms": {}
     },
     "Becoming.RoomRuns": {
-      "theorems": 22,
-      "declarations": 25,
+      "theorems": 24,
+      "declarations": 27,
       "with_axioms": {}
     }
   }

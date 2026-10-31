@@ -5,7 +5,7 @@ import Becoming.HeldPossible
 /-!
 # The rooms' window courses as runs, and their possible with warmth held
 
-Scratch module for board item OU5, part B, joining `Becoming.RoomNet` to the spine. With the window
+Scratch module for board item OU7, part B, joining `Becoming.RoomNet` to the spine. With the window
 open, the rooms' rule is `RegimeMargin`'s step, a draw of one and then the heater's giving of what
 is left (`next_open`), so the window's branch from the set level is the regime's run from it
 (`window_line`), and its laws apply as they stand: the unheated room is cold from the step of its
@@ -16,8 +16,11 @@ thermostat's course alternates `3, 4` (`Overshooting.alternates`), `RegimeMargin
 shifted by two (`Overshooting.alternation_shifted`): it returns, so nothing read off it keeps
 widening (`Run.not_keepsWidening_of_returns`), and it changes at every step, so every moment is
 全生成 at the level of the run (`Run.generation_of_held_changes`), a reading on the run's moments
-apart from the net's 全生成 in `Becoming.RoomNet`. Read as a process whose act
-opens the window, a room's coarse line is its possible with warmth held (`line_iff_held`); a heated
+apart from the net's 全生成 in `Becoming.RoomNet`. Where the level stops changing, as on the
+matched thermostat's course and the unheated room's, no moment is 全生成
+(`Matched.no_generation_at_moments`, `Unheated.no_generation_at_moments`, by
+`Steps.generation_iff_begins`). Read as a process whose act opens the window, a room's coarse line
+is its possible with warmth held (`line_iff_held`); a heated
 room's possible from a warm occurrence is all possible with warmth held (`heated_possible_held`), and
 the unheated room's cold occurrence is possible but not with warmth held (`Unheated.cold_not_held`).
 
@@ -97,8 +100,7 @@ theorem Overshooting.alternates : ∀ n,
     | .inr ⟨_, h⟩ => .inl ⟨h, congrArg (RegimeMargin.step (heater 3 2) 1) h⟩
 
 /-- **Nothing read off the overshooting thermostat's window course keeps widening**: it returns to
-`3` at
-arbitrarily late steps (`Run.not_keepsWidening_of_returns`). -/
+`3` at arbitrarily late steps (`Run.not_keepsWidening_of_returns`). -/
 theorem Overshooting.not_widening {X : Type} (F : Nat → X → Prop) :
     ¬ Reaching.KeepsWidening (fun n => F ((windowRun 3 2).state n)) :=
   Run.not_keepsWidening_of_returns (windowRun 3 2) F (N := 0) fun d =>
@@ -117,10 +119,32 @@ theorem Overshooting.generation_at_moments (N : Nat) :
       | .inr ⟨h, h'⟩ => absurd (h.symm.trans (same.trans h')) (by decide))
     N
 
+/-- **No moment of the matched thermostat's window course is 全生成 at the level**: the level never
+changes, so after no moment does a line under it begin (`Steps.generation_iff_begins`). Where the
+held part does not change, `Run.generation_of_held_changes`'s conclusion fails. -/
+theorem Matched.no_generation_at_moments {m : Nat} (hm : 1 ≤ m) (N : Nat) :
+    ¬ «全生成» Steps.next «一» (fun n k => (windowRun m 1).state n = (windowRun m 1).state k) N :=
+  have held : ∀ n, (windowRun m 1).state n = m := fun n =>
+    (windowAt_level m 1 n).symm.trans (Matched.window_held hm n)
+  fun generates => match Steps.generation_iff_begins.mp generates N (Nat.le_refl N) with
+    | ⟨n, _, begins⟩ => begins (Steps.hasPred_iff.mpr ((held n).trans (held (n + 1)).symm))
+
+/-- **No moment of the unheated room's window course is 全生成 at the level**: from the step of its
+margin on the level stays at `0` (`Unheated.window_cold`), so after that no line under it begins. -/
+theorem Unheated.no_generation_at_moments (m N : Nat) :
+    ¬ «全生成» Steps.next «一» (fun n k => (windowRun m 0).state n = (windowRun m 0).state k) N :=
+  have cold : ∀ k, (windowRun m 0).state (m + k) = 0 := fun k =>
+    (windowAt_level m 0 (m + k)).symm.trans (Unheated.window_cold m k)
+  fun generates => match Steps.generation_iff_begins.mp generates (m + N) (Nat.le_add_left N m) with
+    | ⟨_, later, begins⟩ => match Nat.le.dest (Nat.le_trans (Nat.le_add_right m N) later) with
+      | ⟨k, e⟩ => begins (Steps.hasPred_iff.mpr
+          (Eq.subst (motive := fun v => (windowRun m 0).state v = (windowRun m 0).state (v + 1)) e
+            ((cold k).trans (cold (k + 1)).symm)))
+
 /-- **`RegimeMargin.holds` does not apply to the overshooting thermostat, yet its conclusion
-holds**: no band
-holding the set level has giving meet the draw throughout (the heater gives nothing at `3`) and keep
-within its top (from `3` the level goes to `4`); still the course never leaves `[3, 4]`. -/
+holds**: no band holding the set level has giving meet the draw throughout (the heater gives
+nothing at `3`) and keep within its top (from `3` the level goes to `4`); still the course never
+leaves `[3, 4]`. -/
 theorem Overshooting.holds_one_way :
     (∀ y hi, 1 + y ≤ 3 → 3 ≤ hi →
       ¬ (RegimeMargin.Meets (heater 3 2) 1 y hi ∧ RegimeMargin.Keeps (heater 3 2) 1 hi)) ∧
@@ -133,7 +157,7 @@ theorem Overshooting.holds_one_way :
      | .inl ⟨h, _⟩ => ⟨Nat.le_of_eq h.symm, Eq.subst (motive := fun v => v ≤ 4) h.symm (by decide)⟩
      | .inr ⟨h, _⟩ => ⟨Eq.subst (motive := fun v => 3 ≤ v) h.symm (by decide), Nat.le_of_eq h⟩⟩
 
-/-- Above two the overshooting heater is `RegimeMargin.Alternation`'s giving shifted by two. -/
+/-- From two on, the overshooting heater is `RegimeMargin.Alternation`'s giving shifted by two. -/
 theorem Overshooting.heater_shifted : ∀ z, heater 3 2 (z + 2) = RegimeMargin.Alternation.giving z
   | 0 => rfl
   | z + 1 =>
@@ -156,8 +180,10 @@ theorem Overshooting.in_phase : ∀ n,
         congrArg (RegimeMargin.step RegimeMargin.Alternation.giving 1) h'⟩
 
 /-- **The overshooting thermostat's window course is `RegimeMargin.Alternation`'s run shifted by
-two**, so `Overshooting.alternates` and `Overshooting.holds_one_way` are that witness's
-(`RegimeMargin.Alternation.alternates`: overcompensating giving cycles for ever). -/
+two**, so `Overshooting.alternates`, and the band `[3, 4]` in `Overshooting.holds_one_way`, are
+that witness's cycle shifted by two (`RegimeMargin.Alternation.alternates`: overcompensating
+giving cycles for ever). That `RegimeMargin.holds`'s condition fails is not read off the shift; it
+is proved from the heater in `Overshooting.holds_one_way`. -/
 theorem Overshooting.alternation_shifted (n : Nat) :
     (windowRun 3 2).state n =
       (Law.run (RegimeMargin.step RegimeMargin.Alternation.giving 1) 1).state n + 2 :=

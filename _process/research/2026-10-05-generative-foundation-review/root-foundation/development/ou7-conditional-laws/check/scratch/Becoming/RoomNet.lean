@@ -6,7 +6,7 @@ import Becoming.MapRegions
 /-!
 # Rooms on the net of the possible: testing (验) by a window
 
-Scratch module for board item OU5, part B (`ou5-conditional-laws/check/DESIGN.md`). One rule makes
+Scratch module for board item OU7, part B (`ou7-conditional-laws/check/DESIGN.md`). One rule makes
 the nets of a family of rooms. A room has a level, in whole units of heat. Its surroundings are at
 its set level `m` while its window is shut and at `0` once it opens; each step the level moves one
 unit toward the surroundings' level, and a heater, reading the level left, gives `c` where that is
@@ -24,11 +24,11 @@ heater (`joint`): rules compared, not occurrences of one unfolding.
   degenerates while renewing (`«平衡守而有终»`, `«开窗则平衡新而尽»`); at every positive margin the
   matched thermostat is 全守 (`«给如所取则全守»`), and so is every room while no window opens
   (`shut_rests`).
-* **Testing**, at every margin. Without the window every room at its set level is one core class
-  at the level class (`«不开窗则同核»`); with it the first stage of the level tells the unheated
-  room from every heated one (`«开窗则一层可分»`), and warm or not first tells them apart at the
-  stage of the margin (`«开窗以温层如其余乃分»`); warm or not does not tell two heated rooms apart
-  (`«二恒温以温不可分»`).
+* **Testing.** Without the window, at every margin, every room at its set level is one core class
+  at the level class (`«不开窗则同核»`). With it, at every positive margin, the first stage of the
+  level tells the unheated room from every heated one (`«开窗则一层可分»`), and warm or not first
+  tells them apart at the stage of the margin (`«开窗以温层如其余乃分»`); warm or not does not tell
+  two heated rooms apart (`«二恒温以温不可分»`).
 * **A conditional law.** Warmth is a constant class under the net exactly where the heater gives
   (`«温有常当且仅当有给»`), and from a margin of two draws on no line of warmth from the set level
   ends exactly there (`«温不穷当且仅当有给»`, by `«有常则往不穷»`); at a margin of one none ends,
@@ -561,7 +561,8 @@ theorem «恒温生守相杂» :
 theorem shut_rest_step (m c : Nat) : shut m c (start m) (start m) := ⟨rfl, rfl, (next_rest m c).symm⟩
 
 /-- **While no window opens, every room at its set level rests in the strong form (全守)**, whatever
-its heater: rest and the matched heater's regulation lie in one region. -/
+its heater: a law of the shut net. With `«给如所取则全守»`, the matched thermostat's 全守 on the
+full net, rest and that heater's regulation lie in one region of the map. -/
 theorem shut_rests (m c : Nat) : «全守» (shut m c) alike sameLevel (start m) :=
   have closed : «闭» («续» (shut m c) alike) (fun y => y = start m) :=
     fun _ _ hx s => by subst hx; exact shut_start s.1
@@ -609,13 +610,14 @@ theorem «温有常当且仅当有给» (m c : Nat) (hm : 1 ≤ m) : «有常» 
       ⟨⟨true, next m c 0 u'.level⟩, opens m c u',
        (heated_warm hm hc r).trans (heated_warm hm hc (opens m c u')).symm⟩
 
-/-- **Within one room warmth lies in its own core exactly where the heater gives**: the constancy
-law read as a law of the core (`«类有常当且仅当含于核»`). -/
+/-- **Within one room with a positive set level, warmth lies in its own core exactly where the
+heater gives**: the constancy law read as a law of the core (`«类有常当且仅当含于核»`). -/
 theorem alike_in_core_iff (m c : Nat) (hm : 1 ≤ m) :
     «则» alike («核» (net m c) alike) ↔ 1 ≤ c :=
   («类有常当且仅当含于核» (net m c) alike_class).symm.trans («温有常当且仅当有给» m c hm)
 
-/-- An unheated room's open occurrences above `1` reach the last warm one along warmth's line. -/
+/-- An unheated room's open occurrences at `1` and above reach the last warm one, at `1`, along
+warmth's line. -/
 theorem cools_to (m : Nat) : ∀ j, «所及» (net m 0) alike ⟨true, j + 1⟩ ⟨true, 1⟩
   | 0 => .inl rfl
   | j + 1 => «所及之传递» (.inr (.one ⟨cools m true (j + 1), rfl⟩)) (cools_to m j)
@@ -640,6 +642,14 @@ theorem «温不穷当且仅当有给» (m c : Nat) (hm : 2 ≤ m) : «不穷» 
   · intro hc
     exact «有常则往不穷» ((«温有常当且仅当有给» m c (Nat.le_trans (by decide) hm)).mpr hc)
       ⟨start m, rest_step m c, rfl⟩
+
+/-- **In a heated room no line of warmth from the set level ends, and none reaches an end**, at every
+positive margin: Y of `«有常则往不穷»` where its Z holds, and so the Z of `«有终则粗不有常»` fails. -/
+theorem heated_unended {m c : Nat} (hm : 1 ≤ m) (hc : 1 ≤ c) :
+    «不穷» (net m c) alike (start m) ∧ ¬ «有终» (net m c) alike (start m) :=
+  have unended : «不穷» (net m c) alike (start m) :=
+    «有常则往不穷» ((«温有常当且仅当有给» m c hm).mpr hc) ⟨start m, rest_step m c, rfl⟩
+  ⟨unended, fun ⟨y, hy, ends⟩ => ends (unended y hy)⟩
 
 /-- **At a margin of one draw no line of warmth from the set level ends, heater or not**: the
 window's draw takes an unheated room out of warmth in a single step, so no warm occurrence is the
