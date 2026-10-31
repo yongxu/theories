@@ -108,3 +108,168 @@ All 21 findings were checked against their sources and taken. The table says wha
 Taken besides, found while judging: the overview's §10 had lost three open items of the live page (the necessity of the whole, particular laws, the corpus), which "what is not claimed" keeps; they return as one bullet, "Further open questions", in both editions.
 
 Offsets, so that no page passes its budget (none of them a never-cut item; each is still stated at its home): overview, the Fine and Wilf sentence (03), the confined rise and cancer sentence (04), position not protecting (05), the continuous-course example (08), the clearer and dweller witness (07), the corpus's list of texts (06), the strict-order clause of what choices show (03), the published prediction clause of the reading loop (03), the attraction clause (02), the instance-theorem example (01), the opening of §4, the group-selection clause (04), the pointer to the one page in the time line, the loop law's exponential bound (05, now "under hypotheses the chapter states"); one page, the keeping-pace clause, "(an illustration)", the four marks' sentence, the prelude clause (kept in the overview), the classical texts' first clause, a redundant clause on knowing.
+
+# The independent read of the Chinese editions, and how each finding was taken
+
+A second read, by an AI reviewer (Opus) working read-only, 31 October 2026, of the two Chinese drafts at pass 3, against their English drafts (taken as the reference after the first read), the live Chinese pages, the chapters and the glossary. Its report is below verbatim, then the judgement of each finding.
+
+## The report
+
+**Review of the two Chinese drafts against the English reference**
+
+1. **[meaning]** THE-THEORY-OF-BECOMING.zh, line 152, row T3.
+   - Chinese: 「优化耗竭其耦合之外者，在这样做留出余地之处」
+   - English: "Optimization drains what lies beyond its couplings, where that gives room"
+   - Problem: 「这样做」 makes the room come from the draining. In the English, room is the condition under which optimization drains (see §5 and ONE-PAGE line 19). The same wording is on the live page, so the error is inherited.
+   - Proposed: 「在有余地之处，优化耗竭其耦合之外者」
+
+2. **[never-cut]** The frozen-rule caveat, in ONE-PAGE.zh line 28 and THE-THEORY-OF-BECOMING.zh line 144.
+   - Chinese: 「冻结的规则固定的是裁决如何评分，而不是它测的就是论题所说之物」
+   - English: "A frozen rule fixes how a verdict is scored, not that it measures what the thesis names"
+   - Problem: the Chinese can be read as saying the rule does *not* measure what the thesis names. The English says only that this is not guaranteed.
+   - Proposed: 「冻结的规则只定下裁决如何评分，并不保证它测的正是论题所说之物」
+
+3. **[meaning]** The fishery sentence, in ONE-PAGE.zh line 26 and THE-THEORY-OF-BECOMING.zh line 124.
+   - Chinese: 「在渔船不受影响之处给进程排序，则需要 C」 (line 124 has 「而在渔船不受影响之处对进程排序，需要 C」)
+   - English: "ranking courses where the boats are not at stake needs C"
+   - Problem: the boats can be affected while their continuation is not at stake, so 「渔船不受影响」 narrows the case. The live page says 「渔船自身的延续不受影响」.
+   - Proposed: 「在渔船自身的延续不受影响之处给进程排序，则需要 C」
+
+4. **[term]** THE-THEORY-OF-BECOMING.zh, line 166.
+   - Chinese: 「意义的中心之律不由根推出」
+   - English: "significance's central laws are not derived from it"
+   - Problem: 中心 is the term for "center", so this reads as "the center's laws". Line 95 of the same draft renders "central law" as 「核心之律」. The live page shares the clash.
+   - Proposed: 「意义的核心之律不由根推出」
+
+5. **[term]** THE-THEORY-OF-BECOMING.zh, line 150, row T1.
+   - Chinese: 「持续证明联合取用」
+   - English: "Persistence certifies the joint draw"
+   - Problem: 证明 is the standing word for "proved", but T1 is a thesis. Elsewhere this draft renders "certify" as 担保 (lines 71 and 172).
+   - Proposed: 「持续担保联合取用」
+
+6. **[term]** "Renewal" in THE-THEORY-OF-BECOMING.zh, lines 33 and 45.
+   - Chinese: line 33 has 「一个样式经由更新而比它的部分活得更久（§1）」; line 45 has 「一个样式经由复生……而比它的部分存续更久」
+   - English: "a pattern outlasts its parts by renewal" in both places.
+   - Problem: two terms for one sense. The glossary gives 复生 for the 01 §6 sense ("a line started by another") and 更新 for 02's renewal of what a formation draws on. ONE-PAGE.zh line 9 also uses 更新.
+   - Proposed for line 33: 「一个样式经由复生而比它的部分活得更久（§1）；一个更新可以被取用……」. Otherwise keep 更新 throughout and drop 复生 at line 45; either way, use one term.
+
+7. **[term]** "The one" in THE-THEORY-OF-BECOMING.zh line 53, against lines 115 and 166 and ONE-PAGE.zh line 35.
+   - Chinese: line 53 has 「在“一”之下不失的生成」; the other lines have 「在该关系的全类之下」
+   - English: "under the one that loses nothing" and "under the one of that relation"
+   - Problem: two renderings of one concept in the same draft.
+   - Proposed for line 53: 「持续扩大就是在全类之下不失的生成」. Alternatively, write 「“一”之类」 everywhere, as chapter 06 does.
+
+8. **[meaning]** 「是否」 turns an asserted claim into a question, in two places.
+   - ONE-PAGE.zh line 19: 「训练出的系统是否如此耗竭，是论题 T3，属猜想」 renders "That trained systems drain so is thesis T3, conjectured". A thesis asserts its claim.
+     - Proposed: 「训练出的系统如此耗竭，是论题 T3，属猜想」
+   - THE-THEORY-OF-BECOMING.zh line 128: 「而实际的展开是否如此联结，是一个对应，未得到表明」 renders "that the actual unfolding is so joined is a correspondence, not shown".
+     - Proposed: 「而实际的展开如此联结，是一个未得到表明的对应」
+
+9. **[meaning]** "One" meaning "a single", in THE-THEORY-OF-BECOMING.zh lines 73 and 77.
+   - Line 73: 「理，即对结构与变化的建模，是一个概念」 renders "理 … is one notion". The point is that structure and change form one notion.
+     - Proposed: 「是同一个概念」
+   - Line 77: 「……的形成是一条律」 renders "… is one law".
+     - Proposed: 「是单一的一条律」
+
+10. **[meaning]** ONE-PAGE.zh line 11.
+    - Chinese: 「是论证出的主张，不是证明」
+    - English: "is argued, not proved"
+    - Problem: 「不是证明」 says "is not a proof"; the English states a standing.
+    - Proposed: 「是论证所得，而未经证明」
+
+11. **[meaning]** THE-THEORY-OF-BECOMING.zh, line 105.
+    - Problem 1: the English sentence "The chapter is in Chinese." is dropped. ONE-PAGE.zh line 30 likewise drops "in Chinese". For a Chinese reader that may be acceptable, but it is a cut.
+      - Proposed: keep it, as 「本章以中文写成」
+    - Problem 2: 「有些论证反对续本身」 adds 本身 to "some of which argue against continuation".
+      - Proposed: 「有些论证反对续」
+
+12. **[meaning]** THE-THEORY-OF-BECOMING.zh, line 33.
+    - Chinese: 「一个更新可以被耗尽」
+    - English: "a renewal can be drawn down"
+    - Problem: 耗尽 (exhausted) is stronger than "drawn down". The live page has the same wording.
+    - Proposed: 「一个更新可以被取用而耗减」
+
+13. **[term]** THE-THEORY-OF-BECOMING.zh, line 11.
+    - Chinese: 「这里没有一句比它的出处更强」
+    - English: "nothing here is stronger than its home"
+    - Problem: 出处 means "source". "Home" is rendered 所属一节 everywhere else.
+    - Proposed: 「这里没有一句比它的所属一节更强」
+
+14. **[term]** THE-THEORY-OF-BECOMING.zh, line 128.
+    - Chinese: 「一条相续经由其成员所影响的一个缘到达另一个家族」
+    - English: "a line reaches another family"
+    - Problem: the glossary's term for "family" is 同族, which this draft uses nine times; 家族 appears only here. It is inherited from the live page.
+    - Proposed: 「……到达另一个同族」
+
+15. **[zh]** 此外, which normally means "besides".
+    - ONE-PAGE.zh line 9: 「而终结一个更新的东西，可以位于此外」
+      - Proposed: 「……可以位于这之外」
+    - THE-THEORY-OF-BECOMING.zh line 101: 「此外不再更远」
+      - Proposed: 「仅此为止，不再更远」
+
+16. **[zh]** THE-THEORY-OF-BECOMING.zh, line 152, row T3.
+    - Chinese: 「CG1 的 C2 与 CG2 的两项预测之保持未通过」
+    - Problem: hard to parse on one reading.
+    - Proposed: 「CG1 的 C2 与 CG2 所预测的两项保持未通过」
+
+17. **[zh]** THE-THEORY-OF-BECOMING.zh, line 73.
+    - Chinese: 「两个状态恰在位于值之类的核的同一类之处有相同的进程」
+    - Problem: the 的 chain is unclear.
+    - Proposed: 「两个状态恰在同属值之类之核的一类之处，有相同的进程」
+
+18. **[zh]** ONE-PAGE.zh, line 17.
+    - Chinese: 「"选择者恰经由这些耦合而选择"」
+    - Problem: half-width straight quotes; the overview uses full-width quotes.
+    - Proposed: 「“选择者恰经由这些耦合而选择”」
+
+19. **[zh]** THE-THEORY-OF-BECOMING.zh, lines 73 and 89: a full stop, then the link parenthesis, then another full stop.
+    - Line 73: 「补不上。（[理]…）。」
+      - Proposed: 「补不上（[理]…，[辨识]…）。」
+    - Line 89: 「……证明）。（[后代的界]…）。」
+      - Proposed: merge the links into the first parenthesis.
+
+20. **[zh]** ONE-PAGE.zh, line 7.
+    - Chinese: 「读法 ［AI 读法］」
+    - Problem: there is a space before ［, while the overview's table writes 「读法［AI 读法］」.
+    - Proposed: remove the space.
+
+21. **[zh]** ONE-PAGE.zh line 36 and THE-THEORY-OF-BECOMING.zh line 167.
+    - Chinese: 「对其所不及者，不变之步」
+    - English: "the step of invariance, for what that does not reach" (the overview has "the step, for what that does not reach")
+    - Problem: the clause reads as if it lacked a verb.
+    - Proposed: 「不变之步（就其所不及者而言）」
+
+22. **[zh]** THE-THEORY-OF-BECOMING.zh, line 132.
+    - Chinese: 「通向为一切的对齐的一条路径」
+    - English: "a route to alignment for all"
+    - Problem: 为一切 is ambiguous, and the 的 is doubled.
+    - Proposed: 「通向惠及一切之对齐的一条路径」
+
+**Never-cut items: all present.**
+- **AI labels:** every ［AI 读法］ label is full-width, and the counts match the English: 3 in each one-page draft, 18 in each overview, including D1 on both pages and D65 in the overview.
+- **The two premises:** both are present with their roles (延续条件 for 范围, C for 次序), neither is asserted, and nowhere is the ethics said to derive (推出) from the condition.
+- **Other items:** standings, what an empty axiom report shows and does not, the test failures (T1 passed in three and failed in four, T5/VD1, CG1/CG2, LA2), what is not claimed, and the open items (P2, P4, P3, the step, C) are all there.
+- **Rows and bullets:** every table row and bullet is on both sides (standings 11/11, theses 8/8, open items 10/10, one-page bullets 5+2+4).
+
+**Rule check:** no person's or AI's name, and Ren's words are not used as warrant.
+
+**Overall:** both editions follow their English closely. What needs fixing before landing:
+- **Meaning:** finding 1, the reversed hypothesis in T3, is the most serious. Findings 2 and 3 should also be fixed: the frozen-rule caveat can be misread, and the fishery case is narrowed.
+- **Terms:** findings 4 to 7 should also be fixed. Each is one concept with two renderings, or one rendering with two concepts.
+
+The rest are minor wording and punctuation. Several of these findings (1, 4, 5, 12, 14) carry over from the live Chinese pages, so the same fixes apply there.
+
+## Judgement
+
+Every finding was checked against the English draft, the glossary or the live Chinese pages. 21 were taken in full; one (11) was taken in part.
+
+- **Taken as proposed:** 1 (T3's hypothesis, which was reversed), 2 (the frozen-rule caveat), 3 (渔船自身的延续), 4 (核心之律), 5 (担保), 8, 9, 10, 12, 13, 14 (同族), 16, 17, 18, 20, 21, 22.
+- **6, taken by the glossary:** in the line of the argument, a pattern outlasting its parts is 01 §6's renewal, 复生, so both Chinese editions now say 经由复生. 更新 stays for 02's renewal of what is drawn on.
+- **7, taken by the glossary and the live pages:** the one is 全类, as the live Chinese pages and chapters write it.
+- **15, taken:** 此外 replaced in both places, the overview's as 而不再更远.
+- **19, taken in all four drafts:** the full stop before a link parenthesis is fixed in the English overview too, at §3 (理) and §4 (offspring bounds).
+- **11, taken in part:** 本身 dropped. "The chapter is in Chinese" is not added: it tells an English reader why they may not read 06, and says nothing to a reader of the Chinese edition.
+
+Several of these (1, 4, 5, 12, 14) carry over from the live Chinese overview, so they are wrong at the head now as well. That page belongs to OU's pass and changes when these drafts land.
+
+Measured after: one page zh 1,847 characters (972 budget-words), overview zh 10,389 characters (5,366); the English unchanged in length (1,095 and 5,983 words). ［AI 读法］ labels: 3 and 17 lines, the same as the English.

@@ -27,3 +27,9 @@ Pass 2, overview (English): 5,983 → 6,158 (findings) → 6,043 → 5,986 → 5
     49 words   1842 chars       970 budget-words  7.5–9.7 min  ONE-PAGE.zh.md.staged
   5983 words     31 chars      5998 budget-words  46.1–60.0 min  THE-THEORY-OF-BECOMING.md.staged
    172 words  10380 chars      5362 budget-words  41.2–53.6 min  THE-THEORY-OF-BECOMING.zh.md.staged
+
+## Drafts, pass 4 (the zh read's 22 findings taken; two full stops before link parentheses in the English overview)
+  1095 words      9 chars      1100 budget-words  8.5–11.0 min  ONE-PAGE.md.staged
+    49 words   1847 chars       972 budget-words  7.5–9.7 min  ONE-PAGE.zh.md.staged
+  5983 words     31 chars      5998 budget-words  46.1–60.0 min  THE-THEORY-OF-BECOMING.md.staged
+   172 words  10389 chars      5366 budget-words  41.3–53.7 min  THE-THEORY-OF-BECOMING.zh.md.staged
