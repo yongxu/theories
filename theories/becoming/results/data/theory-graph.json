@@ -800,6 +800,18 @@
    "page": "theories/becoming/results/records/alignment-direction-under-widening.md"
   },
   {
+   "id": "record:amounts-by-unit-matchings",
+   "type": "result",
+   "record": "amounts-by-unit-matchings",
+   "title": "Amounts, the root's second sort: balance represented by selected unit matchings, not derived",
+   "title_zh": "数量为根之第二类：平衡由所选之单位配对表示，非推出",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "root",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/amounts-by-unit-matchings.md"
+  },
+  {
    "id": "record:any-number-of-drawers-in-turn",
    "type": "result",
    "record": "any-number-of-drawers-in-turn",
@@ -10002,6 +10014,17 @@
    "region": "significance",
    "base": "old-base",
    "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.UnitMatchings",
+   "type": "module",
+   "name": "Becoming.UnitMatchings",
+   "level": "L1",
+   "theorems": 16,
+   "region": "root",
+   "base": "old-base",
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -27802,6 +27825,12 @@
    "anchor": "r-the-world-represented-both-ways"
   },
   {
+   "id": "section:theories/becoming/chapters/01-ROOT.md#r-amounts-by-unit-matchings",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/01-ROOT.md",
+   "anchor": "r-amounts-by-unit-matchings"
+  },
+  {
    "id": "section:theories/becoming/chapters/01-ROOT.md#r-the-source-texts-test-systems",
    "type": "section",
    "chapter": "theories/becoming/chapters/01-ROOT.md",
@@ -34416,6 +34445,26 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.UnitMatchings",
+   "to": "module:Becoming.Flow",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnitMatchings",
+   "to": "module:Becoming.GrammarLaws",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnitMatchings",
+   "to": "module:Becoming.SelectionReach",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.UnitMatchings",
+   "to": "module:Becoming.Undecided",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Units",
    "to": "module:Becoming.Resolution",
    "type": "imports"
@@ -35943,6 +35992,26 @@
   {
    "from": "record:alignment-direction-under-widening",
    "to": "record:what-pooled-coupling-reaches",
+   "type": "related"
+  },
+  {
+   "from": "record:amounts-by-unit-matchings",
+   "to": "module:Becoming.UnitMatchings",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:amounts-by-unit-matchings",
+   "to": "record:a-rise-past-the-inflow-is-drawn-from-beyond",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:amounts-by-unit-matchings",
+   "to": "record:master-laws-on-the-grammar",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:amounts-by-unit-matchings",
+   "to": "record:the-world-represented-both-ways",
    "type": "related"
   },
   {
@@ -57753,6 +57822,11 @@
   {
    "from": "section:theories/becoming/chapters/01-ROOT.md#r-a-regularity-kept-and-changed",
    "to": "record:a-regularity-kept-and-changed",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/01-ROOT.md#r-amounts-by-unit-matchings",
+   "to": "record:amounts-by-unit-matchings",
    "type": "states"
   },
   {

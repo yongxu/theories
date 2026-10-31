@@ -12,9 +12,9 @@
 
 **Its ethics** rests on [two unasserted premises](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), their warrant open: the continuation condition (for anything, its continuation has significance) fixes scope, whose losses count; C (widening what can form is better) alone gives order. [Thesis T8](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) argues this ethics as life's way, claiming no verdict binding every possible mind.
 
-**Start with** [the one page](theories/becoming/ONE-PAGE.md) (17–22 minutes), [the overview](theories/becoming/THE-THEORY-OF-BECOMING.md) (105–137 minutes) or [the opening](#truth-exists), a first-person conviction (19–25 minutes), with [notes](#notes).
+**Start with** [the one page](theories/becoming/ONE-PAGE.md) (9–11 minutes), [the overview](theories/becoming/THE-THEORY-OF-BECOMING.md) (47–61 minutes) or [the opening](#truth-exists), a first-person conviction (19–25 minutes), with [notes](#notes).
 
-**Recorded Lean receipts** credit 478 of [509 registered results](RESULTS.md), showing each Lean statement follows from its premises, not that they hold. [Empirical theses](theories/becoming/chapters/08-METHOD.md#theses) face tests frozen before scoring: some passed, some failed. No human review yet.
+**Recorded Lean receipts** credit 479 of [510 registered results](RESULTS.md), showing each Lean statement follows from its premises, not that they hold. [Empirical theses](theories/becoming/chapters/08-METHOD.md#theses) face tests frozen before scoring: some passed, some failed. No human review yet.
 
 ---
 

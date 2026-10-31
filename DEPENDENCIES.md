@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-509 registered results: 478 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1172 curated edges join 435 results to the results they draw on.
+510 registered results: 479 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1174 curated edges join 436 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -45,6 +45,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [additive-part-of-offspring-variance][] ← <a id="additive-part-of-offspring-variance--what-bounds-offspring-numbers"></a>[what-bounds-offspring-numbers][] · <a id="additive-part-of-offspring-variance--selection-term-over-generations"></a>[selection-term-over-generations][]
 - [alignment-approaches-under-the-selection-laws][] ← <a id="alignment-approaches-under-the-selection-laws--what-pooled-coupling-reaches"></a>[what-pooled-coupling-reaches][] *(application)* · <a id="alignment-approaches-under-the-selection-laws--reading-anothers-couplings-is-pooling"></a>[reading-anothers-couplings-is-pooling][] *(application)*
 - [alignment-direction-under-widening][] ← <a id="alignment-direction-under-widening--practical-judgment-under-living-significance"></a>[practical-judgment-under-living-significance][] *(application)* · <a id="alignment-direction-under-widening--comparison-by-widening"></a>[comparison-by-widening][]
+- [amounts-by-unit-matchings][] ← <a id="amounts-by-unit-matchings--master-laws-on-the-grammar"></a>[master-laws-on-the-grammar][] · <a id="amounts-by-unit-matchings--a-rise-past-the-inflow-is-drawn-from-beyond"></a>[a-rise-past-the-inflow-is-drawn-from-beyond][]
 - [any-number-of-drawers-in-turn][] ← <a id="any-number-of-drawers-in-turn--drawers-in-turn-draw-everything"></a>[drawers-in-turn-draw-everything][]
 - [arising-needs-change][] ← <a id="arising-needs-change--support-from-the-supported"></a>[support-from-the-supported][]
 - [attraction-is-not-returning][] ← <a id="attraction-is-not-returning--recurrence-without-premise"></a>[recurrence-without-premise][]
@@ -481,6 +482,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [additive-part-of-offspring-variance]: theories/becoming/results/records/additive-part-of-offspring-variance.md
 [alignment-approaches-under-the-selection-laws]: theories/becoming/results/records/alignment-approaches-under-the-selection-laws.md
 [alignment-direction-under-widening]: theories/becoming/results/records/alignment-direction-under-widening.md
+[amounts-by-unit-matchings]: theories/becoming/results/records/amounts-by-unit-matchings.md
 [any-number-of-drawers-in-turn]: theories/becoming/results/records/any-number-of-drawers-in-turn.md
 [arising-needs-change]: theories/becoming/results/records/arising-needs-change.md
 [assured-route-criterion]: theories/becoming/results/records/assured-route-criterion.md

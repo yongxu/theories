@@ -1,0 +1,275 @@
+# The independent read, and how each finding was taken
+
+One read, by an AI reviewer (Opus) working read-only, 31 October 2026, of pass 1 of the four drafts (measured in [MEASURE-RUNS.txt](MEASURE-RUNS.txt)), against AGENTS.md, the live pages, the chapters' home sections and the glossary. Its report is below verbatim, then the judgement of each finding. Every finding was checked against the source it names before it was taken.
+
+## The report
+
+Two errors are new in this cut: the overview now defines "abides" so that it reads as begins-and-ends, and it now presents a consequence of constancy as its definition. Two more come from the live pages and should be fixed while cutting: T7 is said to have "no frozen test" when LA2 is one, and self-concern's ranking of the fishery collapse is called "with no premise". Several never-cut items are weakened or missing. All relative links and anchors resolve against `theories/becoming/`. No person's or AI's name appears in any draft.
+
+Paths below are relative to `theories/becoming/`. "Kit" means the folder `/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/front-pages-for-a-person/`.
+
+1. **[error]** Overview §1 (EN). "An occurrence *begins* where it continues nothing, *ends* where nothing continues it, *abides* where both hold, …". The cut removed the live sentence that "both" referred to, so it now reads as "both begins and ends". That is a flash, not abiding (`chapters/01-ROOT.md#four-marks`: "abides (住) where something precedes and something follows it"). The zh draft's "二者都不成立之处，它*住*" says the right thing but no longer matches the English. Fix: EN "*abides* where it both continues something and is continued"; zh, restore the live "在它既续某物又被续之处，它*住*".
+
+2. **[error]** Overview §1 (EN and zh). "…and a class under which no continuation ends (a *constant* class) is exactly one lying inside its own core." / "一个没有续在其下终止的类（*有常*之类）恰是…". Constancy is defined as `E˘;R ⊆ R;E˘`. "No continuation ends" is its consequence (`«有常则续不尽»`), not its definition, and the converse is not shown (`chapters/01-ROOT.md#constancy-and-core`). The live page had this right. Fix: "A class is *constant* where whatever one member conditions, a member alike to it conditions something alike; under it no continuation ends, and a class is constant exactly where it lies inside its own core."
+
+3. **[error][never-cut]** Overview §9 T7 row: "the lock proved in the model; actual metrics conjectured; no frozen test". Also §10: "…and any frozen test of T7", and both zh equivalents ("没有冻结检验", "对 T7 的任何冻结检验"). LA2 was frozen on 25 October and run. Every frozen verdict passed and the conjecture failed for that judge (`chapters/02-MAP.md#t7`, *Frozen test*; `chapters/08-METHOD.md#theses`, T7 evidence). This is inherited from the live page and drops a failure.
+   - Row fix: "…; LA2, frozen, in one trained system: every frozen verdict passed, the bridge failed; no field test of reform events".
+   - §10 fix: "a field test of T7's reform events".
+
+4. **[error]** One page (EN and zh), fished stock: "the boats' own continuation already ranks a collapse that ends them below keeping the stock, with no premise" / "不需任何前提". The home law ranks so only for orders increasing in the standpoint's own continuation. The home calls that monotonicity "C's premise … placed more narrowly, not warranted" (`chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks`). The overview correctly says "with no C". Inherited from the live page. Fix: "with no C" / "无需 C".
+
+5. **[never-cut]** Overview §2 (EN and zh): "Keeping widening, read on a course's moments, is generation that loses nothing". The home holds only under two deciding premises, with generation taken under the one (`chapters/07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing`, `Steps.keepsWidening_iff_generation_losing_nothing`). The live page kept "under premises of deciding … under the one". Fix: "Read on a course's moments, under premises of deciding, keeping widening is generation under the one that loses nothing"; zh, restore "在判定的前提下 … 在'一'之下".
+
+6. **[never-cut]** Condition on the root, in both pages and both languages.
+   - One page: "held de se, the condition is the root's, nothing lying outside every center's line".
+   - Overview §7: "…and on the root, where nothing lies outside every center's line (`«续无外»`)".
+   - Overview §10 "The root and the ethics as one account".
+   - What is missing: the class is "the one of that relation", and "Along a net with no cycle it holds only with one center, which nothing conditions" (`«续无外则同一中心»`, `chapters/07-SIGNIFICANCE.md#r-the-continuation-condition-on-the-root`). The live pages stated the acyclic limit twice. Without it, the partial unification reads stronger than its home.
+   - Fix: add "under the one of that relation; along a net with no cycle it holds only with one center" (about 15 words) in each place.
+
+7. **[never-cut]** Overview §9, test failures blurred.
+   - T3 row: "for trained systems conjectured, partly supported". 08 records failures: CG1's C2, CG2's two predicted keeps, LA1's locked side in two of four settings, and the second forbidden case failing as first worded (`chapters/08-METHOD.md#theses`; `chapters/05-COLLECTIVES.md#t3`). Fix: append "; CG1's C2 and CG2's two predicted keeps failed".
+   - T5 row: "tests on role-played judgments mixed". Fix: "VD1 failed every frozen rule; VD2: X1s and X2 passed, X1 and X3 failed".
+   - zh likewise.
+
+8. **[error]** Overview T1 row: "three tests passed, four failed". MQ1 and MQ2 each appear on both sides in 08, so there are five distinct tests, not seven (`chapters/02-MAP.md#t1`). This row sits under "Check at landing", but the wording itself is wrong. Fix: "passed in three settings and failed in four (MQ1 and MQ2 on both sides)".
+
+9. **[error]** Overview T6 row ("seen half with Mathlib") and §3 ("Observed by level, with Mathlib, its variance and lag-one autocorrelation rise as the margin to a fold shrinks"). The home is one variable linearized about a rest (and the logistic model), with nonlinear runs not treated (`chapters/03-KNOWING.md#r-slowing-down-before-an-own-end`; 08 T6: "in the linearized and logistic models"). Fix: add "in a one-variable model linearized about a rest", and in the row, "in the linearized and logistic models".
+
+10. **[error]** Dropped deciding hypotheses in the overview, against its own "nothing here is stronger than its home".
+    - §5: "Readers reading readers carry no more than the first readers took in". This holds only where every later member acts alike whatever its own coupling (`chapters/05-COLLECTIVES.md#r-readers-reading-readers`). Fix: "Where later members read only earlier acts, readers reading readers carry…".
+    - §7, living significance: "…it is equivalent to a seed…". The hypothesis "with some living claim and some standpoint" is dropped (`chapters/07-SIGNIFICANCE.md#r-metaethical-core-characterization`).
+    - §7, alignment: "an act whose difference stays beyond the actor's coupling closure is selected alike…". Add "(under hypotheses the chapter states)" (`chapters/07-SIGNIFICANCE.md#r-the-gap-for-ones-own-act`).
+    - §2: "Rest needs a least loss … (proved on the World model…)". The least-loss law is "any type" over any amounts (`chapters/02-MAP.md#r-least-loss-rest`).
+
+11. **[error][link]** Overview §2: "a choice matters only at a *juncture* … ([junctures](chapters/02-MAP.md#r-every-loss-passes-a-juncture))". That law is `chapters/02-MAP.md#r-reaching-before-and-after-a-juncture` (`Branching.keeps_before_juncture`). The linked one passes a juncture only "up to double negation". Fix: link the right anchor.
+
+12. **[error]** One page: "With significance a free parameter, no statement about the represented dynamics entails the condition, by construction". The home is narrower: a statement *reading only the dynamics and holding of some dynamics*, and only "where there is a standpoint and a formation" (`chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open`). An unsatisfiable statement entails anything. Fix: "no satisfiable statement reading only the represented dynamics entails the condition, by construction". zh likewise.
+
+13. **[never-cut]** One page (EN and zh): "None of the central results is new mathematics; …". The standing is dropped: it is an AI review of prior work, and the search was not exhaustive (`chapters/08-METHOD.md#known-results`). The live one page and the overview keep it. Fix: "An AI review of prior work, not exhaustive, finds none of the central results new mathematics; …" (+8 words).
+
+14. **[clarity]** One page uses "the step of invariance" (not-done bullet 3) and "held de se" (bullet 2) without ever explaining either. Fixes:
+    - In the *Scope* bullet: "Its content beyond what acting already presupposes, the *step of invariance*, counts losses that return to no one."
+    - In bullet 2: "held de se (each center of itself)".
+
+15. **[clarity][rule]** One page defines *generate* in 02's sense and later glosses 生生 as "its continuing generation" with no note. The glossary says that gloss means 生发, not this sense, and that 生生 is not 02's generation (`/Users/ren/theories/GLOSSARY.md`, rows "generation" and "生生"). Fix: "…its continuing generation (生发, not the map's generation) [AI reading]".
+
+16. **[never-cut]** P3 (a correspondence not shown for actual selves) is named open in T8's home (`chapters/07-SIGNIFICANCE.md#theses`) but missing from the one page's still-to-argue list and from overview §10. Fix: add "with P3, a correspondence not shown" (+6 words).
+
+17. **[never-cut]** One page: "some passed and some failed" is the only report of the theses' failures. It is weaker than "as they fell". If budget allows: "T1 passed in three settings and failed in four; T5's first test failed every frozen rule".
+
+18. **[zh]**
+    - zh one page uses "[AI 读法]" (ASCII brackets, three times). The live zh pages and the zh overview use "［AI 读法］". Use full-width.
+    - zh one page renders T8 as "道是生生"; the zh overview T8 row has "方向是…的生生". Use one; "道" matches "the way".
+    - zh heading "**C 移走了什么。**" means "what C removes". The English is "What C relocates". Fix: "**C 的前提移到了哪里。**".
+
+19. **[link]** Overview counts copied without a check comment: "three with countermodels" (§6), "The five master laws are restated on it" (§10; the nearby refresh comment names only the derived and reach figures), "Eight premises" (§1). Add "<!-- Check at landing -->" or link RESULTS.md.
+
+20. **[error]** Overview §2: "Arising without end needs renewal, and under balance and dissipation renewal from beyond…". The home says it needs natural-number amounts and fails with real amounts (`chapters/02-MAP.md#r-continuing-self-fed-from-beyond`). That is a modelling dependence AGENTS.md asks to be stated where a law depends on it. Add "(in whole numbers; with real amounts it fails)".
+
+21. **[clarity]** Overview standings table: it has no "argued" or "conjectured", though §9 and the philosophical thesis use both. "A part's *margin* reads its draw with the rest's exchange held" is opaque on a first reading. Suggest "a part's margin is how far its draw can go before a dependent, the rest held fixed, loses support".
+
+**Budget.** The English one page is at exactly 1,100 and the overview at 5,998 (`measure.py`). Additions above total about 35 words on the one page and about 90 on the overview. Suggested offsets:
+- One page: shorten the "Change and return" bullet to its recurrence clause (about 15 words) and drop "(an illustration)" plus the clause after "such as the seabirds'" (about 15 words).
+- Overview: §8's continuous-course example (24 words), §4's confined-rise and cancer sentence (25), §5's "Position does not protect…" (17), and the Fine and Wilf sentence in §3 (20).
+
+The zh pages have room (954 and 5,336 budget-words) but must follow the English.
+
+**Overall.** The drafts are faithful in structure and keep most never-cut items in both languages. Both ethical premises are named with their roles, neither is asserted, and nothing says the ethics derives from the condition. The frozen-rule caveat, the empty-axiom-report caveat and the AI provenance of the readings are all present, and no name appears. They are not yet safe to land. The cut introduced two definitional errors in overview §1 (findings 1 and 2). It dropped deciding hypotheses that the live pages kept: the premises of keeping widening, the acyclic one-center limit on the root reading, and a few scope clauses (findings 5, 6, 9, 10, 20). And it carries over from the live pages a wrong T7 standing and a "with no premise" claim the home does not support (findings 3 and 4). With findings 1–13 fixed, offset by the cuts above, the pages would meet their budgets and their homes.
+
+## Judgement
+
+All 21 findings were checked against their sources and taken. The table says what the source showed and what changed; "both" means the English draft and its Chinese edition.
+
+| # | Checked against | Taken as |
+|---|---|---|
+| 1 | 01 #four-marks: abides "where something precedes and something follows it" | overview §1, both: "abides where it both continues something and is continued" (zh restored to the live wording) |
+| 2 | 01 #constancy-and-core: constancy is `E˘;R ⊆ R;E˘`; no continuation ending is its consequence | overview §1, both: constancy defined pointwise, its consequence stated, then "constant exactly where it lies inside its own core"; the core reading labelled D65 as at its home |
+| 3 | 02 #t7 *Frozen test*: LA2 frozen 25 October, every frozen verdict passed, the conjecture failed for that judge; *Evidence*: a coding of reform events still needed | T7 row, both: LA2 and its outcome; §10, both: "a field test of T7's reform events" |
+| 4 | 07 #r-what-self-concern-alone-ranks: the ranking holds for orders increasing in the standpoint's own continuation, C's premise placed more narrowly | one page, both: "with no C" |
+| 5 | 07 #r-keeping-widening-is-generation-losing-nothing: under two premises, generation under (the one, the same possible) | overview §2, both: "under premises of deciding … generation under the one that loses nothing" |
+| 6 | 07 #r-the-continuation-condition-on-the-root: "under the one of that relation"; "along a net with no cycle it holds only with one center" | both pages, both editions, in §7 and §10 of the overview and the one page's second not-done bullet |
+| 7 | 08 #theses, T3 and T5 evidence | T3 row: CG1's C2 and CG2's two predicted keeps failed; T5 row: VD1 and VD2 as they fell; both |
+| 8 | 08 #theses, T1: passes MQ2, MQ1, CG1; failures MQ1, MQ2 C1, MQ3, MQ6 | T1 row, both: "passed in three settings and failed in four (MQ1 and MQ2 on both sides)" |
+| 9 | 03 #r-slowing-down-before-an-own-end: one variable linearized about a rest; 08 T6: linearized and logistic models | overview §3 and T6 row, both |
+| 10 | 05 #r-readers-reading-readers (members acting alike whatever their own coupling); 07 #r-metaethical-core-characterization (some living claim and some standpoint); 07 #r-the-gap-for-ones-own-act; 02 #r-least-loss-rest ("any type") | each hypothesis restored in the overview, both; the second home linked; least loss "proved for any type", the rest theorem the World's |
+| 11 | 02 #r-every-loss-passes-a-juncture is "up to double negation"; `keeps_before_juncture` is at #r-reaching-before-and-after-a-juncture | overview §2, both: link corrected |
+| 12 | 07 #r-what-the-dynamics-leave-open: statements reading only the dynamics, holding of some dynamics | one page, both: "no satisfiable statement reading only the represented dynamics" |
+| 13 | 08 #known-results: the verdicts come from an AI review, the search not exhaustive | one page, both |
+| 14 | one page used "step of invariance" and "de se" unexplained | scope bullet now names the step; "held de se (each center of itself)"; both |
+| 15 | GLOSSARY rows "generation" and "生生" | both pages, both editions: "(生发, not the map's generation) [AI reading, D1]" |
+| 16 | 07 #future-path, "P3 is a correspondence … not shown for actual selves"; T8's home | one page's still-to-argue bullet, overview T8 row and §10 warrant item; both |
+| 17 | 08 #theses | one page, both: T1's three and four, T5's first test failing every frozen rule |
+| 18 | live zh pages use full-width ［AI 读法］; zh T8 row; "What C relocates" | zh one page brackets made full-width; zh T8 row now "道是生生"; zh heading "C 的前提移到了哪里" |
+| 19 | counts copied in §1 (eight premises), §6 (countermodels), §10 (five master laws) | each marked "Check at landing" in an HTML comment; §6's "three" made "some" with the mark |
+| 20 | 02 #r-continuing-self-fed-from-beyond: "It needs natural-number amounts … with real amounts … it fails" | overview §2, both |
+| 21 | the standings table lacked "conjectured" and "argued"; the margin's wording | the thesis row now says what each means; the margin glossed as how far a draw can go before a dependent loses support; both |
+
+Taken besides, found while judging: the overview's §10 had lost three open items of the live page (the necessity of the whole, particular laws, the corpus), which "what is not claimed" keeps; they return as one bullet, "Further open questions", in both editions.
+
+Offsets, so that no page passes its budget (none of them a never-cut item; each is still stated at its home): overview, the Fine and Wilf sentence (03), the confined rise and cancer sentence (04), position not protecting (05), the continuous-course example (08), the clearer and dweller witness (07), the corpus's list of texts (06), the strict-order clause of what choices show (03), the published prediction clause of the reading loop (03), the attraction clause (02), the instance-theorem example (01), the opening of §4, the group-selection clause (04), the pointer to the one page in the time line, the loop law's exponential bound (05, now "under hypotheses the chapter states"); one page, the keeping-pace clause, "(an illustration)", the four marks' sentence, the prelude clause (kept in the overview), the classical texts' first clause, a redundant clause on knowing.
+
+# The independent read of the Chinese editions, and how each finding was taken
+
+A second read, by an AI reviewer (Opus) working read-only, 31 October 2026, of the two Chinese drafts at pass 3, against their English drafts (taken as the reference after the first read), the live Chinese pages, the chapters and the glossary. Its report is below verbatim, then the judgement of each finding.
+
+## The report
+
+**Review of the two Chinese drafts against the English reference**
+
+1. **[meaning]** THE-THEORY-OF-BECOMING.zh, line 152, row T3.
+   - Chinese: 「优化耗竭其耦合之外者，在这样做留出余地之处」
+   - English: "Optimization drains what lies beyond its couplings, where that gives room"
+   - Problem: 「这样做」 makes the room come from the draining. In the English, room is the condition under which optimization drains (see §5 and ONE-PAGE line 19). The same wording is on the live page, so the error is inherited.
+   - Proposed: 「在有余地之处，优化耗竭其耦合之外者」
+
+2. **[never-cut]** The frozen-rule caveat, in ONE-PAGE.zh line 28 and THE-THEORY-OF-BECOMING.zh line 144.
+   - Chinese: 「冻结的规则固定的是裁决如何评分，而不是它测的就是论题所说之物」
+   - English: "A frozen rule fixes how a verdict is scored, not that it measures what the thesis names"
+   - Problem: the Chinese can be read as saying the rule does *not* measure what the thesis names. The English says only that this is not guaranteed.
+   - Proposed: 「冻结的规则只定下裁决如何评分，并不保证它测的正是论题所说之物」
+
+3. **[meaning]** The fishery sentence, in ONE-PAGE.zh line 26 and THE-THEORY-OF-BECOMING.zh line 124.
+   - Chinese: 「在渔船不受影响之处给进程排序，则需要 C」 (line 124 has 「而在渔船不受影响之处对进程排序，需要 C」)
+   - English: "ranking courses where the boats are not at stake needs C"
+   - Problem: the boats can be affected while their continuation is not at stake, so 「渔船不受影响」 narrows the case. The live page says 「渔船自身的延续不受影响」.
+   - Proposed: 「在渔船自身的延续不受影响之处给进程排序，则需要 C」
+
+4. **[term]** THE-THEORY-OF-BECOMING.zh, line 166.
+   - Chinese: 「意义的中心之律不由根推出」
+   - English: "significance's central laws are not derived from it"
+   - Problem: 中心 is the term for "center", so this reads as "the center's laws". Line 95 of the same draft renders "central law" as 「核心之律」. The live page shares the clash.
+   - Proposed: 「意义的核心之律不由根推出」
+
+5. **[term]** THE-THEORY-OF-BECOMING.zh, line 150, row T1.
+   - Chinese: 「持续证明联合取用」
+   - English: "Persistence certifies the joint draw"
+   - Problem: 证明 is the standing word for "proved", but T1 is a thesis. Elsewhere this draft renders "certify" as 担保 (lines 71 and 172).
+   - Proposed: 「持续担保联合取用」
+
+6. **[term]** "Renewal" in THE-THEORY-OF-BECOMING.zh, lines 33 and 45.
+   - Chinese: line 33 has 「一个样式经由更新而比它的部分活得更久（§1）」; line 45 has 「一个样式经由复生……而比它的部分存续更久」
+   - English: "a pattern outlasts its parts by renewal" in both places.
+   - Problem: two terms for one sense. The glossary gives 复生 for the 01 §6 sense ("a line started by another") and 更新 for 02's renewal of what a formation draws on. ONE-PAGE.zh line 9 also uses 更新.
+   - Proposed for line 33: 「一个样式经由复生而比它的部分活得更久（§1）；一个更新可以被取用……」. Otherwise keep 更新 throughout and drop 复生 at line 45; either way, use one term.
+
+7. **[term]** "The one" in THE-THEORY-OF-BECOMING.zh line 53, against lines 115 and 166 and ONE-PAGE.zh line 35.
+   - Chinese: line 53 has 「在“一”之下不失的生成」; the other lines have 「在该关系的全类之下」
+   - English: "under the one that loses nothing" and "under the one of that relation"
+   - Problem: two renderings of one concept in the same draft.
+   - Proposed for line 53: 「持续扩大就是在全类之下不失的生成」. Alternatively, write 「“一”之类」 everywhere, as chapter 06 does.
+
+8. **[meaning]** 「是否」 turns an asserted claim into a question, in two places.
+   - ONE-PAGE.zh line 19: 「训练出的系统是否如此耗竭，是论题 T3，属猜想」 renders "That trained systems drain so is thesis T3, conjectured". A thesis asserts its claim.
+     - Proposed: 「训练出的系统如此耗竭，是论题 T3，属猜想」
+   - THE-THEORY-OF-BECOMING.zh line 128: 「而实际的展开是否如此联结，是一个对应，未得到表明」 renders "that the actual unfolding is so joined is a correspondence, not shown".
+     - Proposed: 「而实际的展开如此联结，是一个未得到表明的对应」
+
+9. **[meaning]** "One" meaning "a single", in THE-THEORY-OF-BECOMING.zh lines 73 and 77.
+   - Line 73: 「理，即对结构与变化的建模，是一个概念」 renders "理 … is one notion". The point is that structure and change form one notion.
+     - Proposed: 「是同一个概念」
+   - Line 77: 「……的形成是一条律」 renders "… is one law".
+     - Proposed: 「是单一的一条律」
+
+10. **[meaning]** ONE-PAGE.zh line 11.
+    - Chinese: 「是论证出的主张，不是证明」
+    - English: "is argued, not proved"
+    - Problem: 「不是证明」 says "is not a proof"; the English states a standing.
+    - Proposed: 「是论证所得，而未经证明」
+
+11. **[meaning]** THE-THEORY-OF-BECOMING.zh, line 105.
+    - Problem 1: the English sentence "The chapter is in Chinese." is dropped. ONE-PAGE.zh line 30 likewise drops "in Chinese". For a Chinese reader that may be acceptable, but it is a cut.
+      - Proposed: keep it, as 「本章以中文写成」
+    - Problem 2: 「有些论证反对续本身」 adds 本身 to "some of which argue against continuation".
+      - Proposed: 「有些论证反对续」
+
+12. **[meaning]** THE-THEORY-OF-BECOMING.zh, line 33.
+    - Chinese: 「一个更新可以被耗尽」
+    - English: "a renewal can be drawn down"
+    - Problem: 耗尽 (exhausted) is stronger than "drawn down". The live page has the same wording.
+    - Proposed: 「一个更新可以被取用而耗减」
+
+13. **[term]** THE-THEORY-OF-BECOMING.zh, line 11.
+    - Chinese: 「这里没有一句比它的出处更强」
+    - English: "nothing here is stronger than its home"
+    - Problem: 出处 means "source". "Home" is rendered 所属一节 everywhere else.
+    - Proposed: 「这里没有一句比它的所属一节更强」
+
+14. **[term]** THE-THEORY-OF-BECOMING.zh, line 128.
+    - Chinese: 「一条相续经由其成员所影响的一个缘到达另一个家族」
+    - English: "a line reaches another family"
+    - Problem: the glossary's term for "family" is 同族, which this draft uses nine times; 家族 appears only here. It is inherited from the live page.
+    - Proposed: 「……到达另一个同族」
+
+15. **[zh]** 此外, which normally means "besides".
+    - ONE-PAGE.zh line 9: 「而终结一个更新的东西，可以位于此外」
+      - Proposed: 「……可以位于这之外」
+    - THE-THEORY-OF-BECOMING.zh line 101: 「此外不再更远」
+      - Proposed: 「仅此为止，不再更远」
+
+16. **[zh]** THE-THEORY-OF-BECOMING.zh, line 152, row T3.
+    - Chinese: 「CG1 的 C2 与 CG2 的两项预测之保持未通过」
+    - Problem: hard to parse on one reading.
+    - Proposed: 「CG1 的 C2 与 CG2 所预测的两项保持未通过」
+
+17. **[zh]** THE-THEORY-OF-BECOMING.zh, line 73.
+    - Chinese: 「两个状态恰在位于值之类的核的同一类之处有相同的进程」
+    - Problem: the 的 chain is unclear.
+    - Proposed: 「两个状态恰在同属值之类之核的一类之处，有相同的进程」
+
+18. **[zh]** ONE-PAGE.zh, line 17.
+    - Chinese: 「"选择者恰经由这些耦合而选择"」
+    - Problem: half-width straight quotes; the overview uses full-width quotes.
+    - Proposed: 「“选择者恰经由这些耦合而选择”」
+
+19. **[zh]** THE-THEORY-OF-BECOMING.zh, lines 73 and 89: a full stop, then the link parenthesis, then another full stop.
+    - Line 73: 「补不上。（[理]…）。」
+      - Proposed: 「补不上（[理]…，[辨识]…）。」
+    - Line 89: 「……证明）。（[后代的界]…）。」
+      - Proposed: merge the links into the first parenthesis.
+
+20. **[zh]** ONE-PAGE.zh, line 7.
+    - Chinese: 「读法 ［AI 读法］」
+    - Problem: there is a space before ［, while the overview's table writes 「读法［AI 读法］」.
+    - Proposed: remove the space.
+
+21. **[zh]** ONE-PAGE.zh line 36 and THE-THEORY-OF-BECOMING.zh line 167.
+    - Chinese: 「对其所不及者，不变之步」
+    - English: "the step of invariance, for what that does not reach" (the overview has "the step, for what that does not reach")
+    - Problem: the clause reads as if it lacked a verb.
+    - Proposed: 「不变之步（就其所不及者而言）」
+
+22. **[zh]** THE-THEORY-OF-BECOMING.zh, line 132.
+    - Chinese: 「通向为一切的对齐的一条路径」
+    - English: "a route to alignment for all"
+    - Problem: 为一切 is ambiguous, and the 的 is doubled.
+    - Proposed: 「通向惠及一切之对齐的一条路径」
+
+**Never-cut items: all present.**
+- **AI labels:** every ［AI 读法］ label is full-width, and the counts match the English: 3 in each one-page draft, 18 in each overview, including D1 on both pages and D65 in the overview.
+- **The two premises:** both are present with their roles (延续条件 for 范围, C for 次序), neither is asserted, and nowhere is the ethics said to derive (推出) from the condition.
+- **Other items:** standings, what an empty axiom report shows and does not, the test failures (T1 passed in three and failed in four, T5/VD1, CG1/CG2, LA2), what is not claimed, and the open items (P2, P4, P3, the step, C) are all there.
+- **Rows and bullets:** every table row and bullet is on both sides (standings 11/11, theses 8/8, open items 10/10, one-page bullets 5+2+4).
+
+**Rule check:** no person's or AI's name, and Ren's words are not used as warrant.
+
+**Overall:** both editions follow their English closely. What needs fixing before landing:
+- **Meaning:** finding 1, the reversed hypothesis in T3, is the most serious. Findings 2 and 3 should also be fixed: the frozen-rule caveat can be misread, and the fishery case is narrowed.
+- **Terms:** findings 4 to 7 should also be fixed. Each is one concept with two renderings, or one rendering with two concepts.
+
+The rest are minor wording and punctuation. Several of these findings (1, 4, 5, 12, 14) carry over from the live Chinese pages, so the same fixes apply there.
+
+## Judgement
+
+Every finding was checked against the English draft, the glossary or the live Chinese pages. 21 were taken in full; one (11) was taken in part.
+
+- **Taken as proposed:** 1 (T3's hypothesis, which was reversed), 2 (the frozen-rule caveat), 3 (渔船自身的延续), 4 (核心之律), 5 (担保), 8, 9, 10, 12, 13, 14 (同族), 16, 17, 18, 20, 21, 22.
+- **6, taken by the glossary:** in the line of the argument, a pattern outlasting its parts is 01 §6's renewal, 复生, so both Chinese editions now say 经由复生. 更新 stays for 02's renewal of what is drawn on.
+- **7, taken by the glossary and the live pages:** the one is 全类, as the live Chinese pages and chapters write it.
+- **15, taken:** 此外 replaced in both places, the overview's as 而不再更远.
+- **19, taken in all four drafts:** the full stop before a link parenthesis is fixed in the English overview too, at §3 (理) and §4 (offspring bounds).
+- **11, taken in part:** 本身 dropped. "The chapter is in Chinese" is not added: it tells an English reader why they may not read 06, and says nothing to a reader of the Chinese edition.
+
+Several of these (1, 4, 5, 12, 14) carry over from the live Chinese overview, so they are wrong at the head now as well. That page belongs to OU's pass and changes when these drafts land.
+
+Measured after: one page zh 1,847 characters (972 budget-words), overview zh 10,389 characters (5,366); the English unchanged in length (1,095 and 5,983 words). ［AI 读法］ labels: 3 and 17 lines, the same as the English.

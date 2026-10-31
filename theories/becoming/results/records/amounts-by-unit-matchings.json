@@ -1,0 +1,236 @@
+{
+  "schema_version": 2,
+  "id": "amounts-by-unit-matchings",
+  "title": {
+    "en": "Amounts, the root's second sort: balance represented by selected unit matchings, not derived",
+    "zh": "数量为根之第二类：平衡由所选之单位配对表示，非推出"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-31T15:26:23+00:00",
+  "statement": {
+    "en": "A flow balances exactly where every frame of every step has a selected one-to-one matching of its units, each unit after the step continuing exactly one before it. At a formation's exchange, crossing and residual counts hold for every pairing. Balance is so represented, not derived.",
+    "zh": "流恰于每步之每框皆有所选之单位一一配对处平衡，步后每单位恰续步前之一。于形成之交换，越界与余数之律于每一配对皆成。平衡如此得表示，非自展开推出。"
+  },
+  "laws": [
+    {
+      "en": "A selected matching of a frame, a bijection of its in-positions with its out-positions given as data, forces equal counts by pigeonhole with no decidability, each out-position having exactly one in-position sent to it. A flow over a web has one at every step and condition exactly where it balances, the converse by position with no choice; by it a standing unit goes on standing or is taken.",
+      "zh": "框之所选配对，以其入位与出位之双射为所予之资料，依鸽笼而迫等数，无需可判定；每出位皆有一入位送至，且唯一。网上之流恰于其平衡处于每步每条件皆有此配对，逆向依位而配，无需选择；依之，站立之单位或续立或被取，二者孰是在于配对。",
+      "declarations": [
+        "Becoming.UnitMatchings.FrameMatch",
+        "Becoming.UnitMatchings.FrameMatch.le",
+        "Becoming.UnitMatchings.FrameMatch.eq",
+        "Becoming.UnitMatchings.FrameMatch.predecessor_unique",
+        "Becoming.UnitMatchings.FrameMatchings",
+        "Becoming.UnitMatchings.frameMatchings_iff_balances",
+        "Becoming.UnitMatchings.FrameMatchings.next"
+      ]
+    },
+    {
+      "en": "Where a one-to-one pairing's first block on one side outnumbers the other side's first block, a member of the other side's rest is related to one of that block. In a balanced flow, where a family without repetition rises past a containing family's inflow, every pairing of some present formation's exchange relates a unit given the risen family to another input; with beyond source-minimal, to one taken from the rest.",
+      "zh": "于一一配对，一侧首段长于他侧首段者，他侧其余之某员与此段之某员相关。于平衡之流，无重复所列之族涨过含之之族之入流者，参与之一形成使其交换之每一配对，皆以其予涨族之一单位关乎另一入者；外来之入取最少者，则关乎取自含族其余者之一。",
+      "declarations": [
+        "Becoming.UnitMatchings.crossing_edge",
+        "Becoming.UnitMatchings.rise_crossing_weak",
+        "Becoming.UnitMatchings.rise_crossing_strong"
+      ]
+    },
+    {
+      "en": "At a formation, with beyond's units numbering the source-minimal count, every pairing of what it takes from a family and beyond's units with what it gives the family and the units ending there has exactly as many endings as it takes beyond what it gives; with leaving outputs kept, leaving and endings together number that.",
+      "zh": "于一形成，外来单位之数取最少者，其取自族者与外来单位，配以其予族者与终于此之单位，每一配对之终数恰为所取多于所予者；留出之出亦计，则出与终合计为此数。",
+      "declarations": [
+        "Becoming.UnitMatchings.endings_count",
+        "Becoming.UnitMatchings.leaving_and_endings_count"
+      ]
+    },
+    {
+      "en": "On a family a present formation dissipates on, the source-minimal count is zero, and where it takes, the residual count is positive; a present formation taking from a family exactly what it gives it, and something, does not dissipate on it.",
+      "zh": "于在场之形成耗散于其上之族，最少外来之数为零，其有所取则余数为正；在场之形成取于族者恰等其予之者且有所取，则不耗散于其上。",
+      "declarations": [
+        "Becoming.UnitMatchings.source_minimal_zero_of_dissipates",
+        "Becoming.UnitMatchings.residual_pos_of_dissipates",
+        "Becoming.UnitMatchings.lossless_not_dissipative"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Natural-number amounts in one unit commensurable across conditions; discrete steps; positions as numbers below a count; a family as a list of conditions, a repeated condition repeating its labels; formations counted with their multiplicity among those present.",
+      "zh": "自然数之数量，一单位于诸条件间可通约；离散之步；位为小于其数之数；族为条件之列，重出之条件重其标；形成以其在场之重数计。"
+    },
+    {
+      "en": "The beyond, leaving and ending lists are any lists of exchange occurrences; a pairing under a relation uses its steps one to one and does not make the relation functional.",
+      "zh": "外来、留出与终之列为任何交换出现之列；依关系之配对一一用其步，不使该关系为函数。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That balance is derived from the unfolding: every number-stated consumer of the matchings would be a round trip, and none is rerouted through them.",
+      "zh": "平衡自展开推出：配对之每一以数陈述之用者皆为往返，无一经之改道。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That residual units are actual boundary traffic: once a formation's actual exchange outside the family is kept, their identification with actual losses fails.",
+      "zh": "余之单位为实际之边界往来：形成于族外之实际交换一经保留，其与实际损失之等同即不成。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the frame matchings and the exchange pairings are one structure: no labelled exchange pairing is shown to exist for a World's formations or attached to the frames, nor a frame matching bridged to the grammar's pairing.",
+      "zh": "框之配对与交换之配对为一结构：未示世界之形成有带标之交换配对存在或接于框，框之配对亦未桥接于带标列上文法之配对。",
+      "kind": "scope"
+    },
+    {
+      "en": "Line laws across steps: unique origin over many steps, the stretch law for selected matchings, residence. Which unit goes where is the matching's; lines are not World data.",
+      "zh": "跨步之线律：多步之唯一来源、所选配对之程律、驻留。何单位往何处在于配对；线非世界之资料。",
+      "kind": "scope"
+    },
+    {
+      "en": "That unit continuation projects onto the World's conservation, or that renaming, re-pairing and forgetting exhaust the matchings over one World: these are the design's conclusions, not theorems here.",
+      "zh": "单位之续投于世界之守恒，或改名、重配与忘却穷尽一世界上之配对：此为设计之结论，非此处之定理。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty: UnitMatchings imports GrammarLaws, Flow, SelectionReach and Undecided, a leaf nothing imports. Modelling choices as in its hypotheses. The census form of balance and the stretch law are the package's own (Flow.balances_iff_units, «对之程», «程守数当且仅当可对») and are cited, not restated. The leaf, 16 theorems in 24 declarations, compiles with the whole package in the core run whose receipt the record binds.",
+    "zh": "纯核，公理报告皆空：UnitMatchings 引 GrammarLaws、Flow、SelectionReach 与 Undecided，为无引之者之叶。建模之选见其假设。平衡之普查形与程律为本包自有（Flow.balances_iff_units、«对之程»、«程守数当且仅当可对»），引之而不重述。此叶 24 声明中定理 16，与全包同编译于记录所系收据之核心运行。"
+  },
+  "next_delta": {
+    "en": "A labelled exchange pairing for a World's formations attached to the frames; a bridge from a frame matching to the grammar's pairing; review by a person.",
+    "zh": "世界之形成之带标交换配对接于框；自框之配对至文法之配对之桥；人之审查。"
+  },
+  "correspondence": {
+    "en": "That a bijection of finite sets forces equal size is the pigeonhole principle, here constructive through the grammar's revisiting law. Reading conservation as matched units is standard in accounting for conserved quantities; here the matching is selected, not given by the dynamics, and the residual units are bookkeeping. Graded in U1's DESIGN.md.",
+    "zh": "有限集之双射迫等大，为鸽笼原理，此处经文法之重访律而构造。以配对之单位读守恒，为守恒量之计算所常用；此处配对为所选，非动力所予，余之单位为簿记。分级见 U1 之 DESIGN.md。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnitMatchings.lean",
+  "aliases": [
+    "balance by selected unit matchings",
+    "所选单位配对之平衡",
+    "the interface of amounts",
+    "数量之接口",
+    "Becoming.UnitMatchings.frameMatchings_iff_balances",
+    "Becoming.UnitMatchings.FrameMatch.eq",
+    "Becoming.UnitMatchings.crossing_edge",
+    "Becoming.UnitMatchings.rise_crossing_strong",
+    "Becoming.UnitMatchings.endings_count"
+  ],
+  "dependencies": [
+    {
+      "id": "master-laws-on-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«对», «对之逆», «对之取», «对之长», «聚之长», GrammarLaws.revisits_within, mem_middle, split_append and total_congr; the rest is arithmetic (excess_balance, excess_pos, Flow.excess_zero_of_le).",
+        "zh": "«对»、«对之逆»、«对之取»、«对之长»、«聚之长»、GrammarLaws.revisits_within、mem_middle、split_append 与 total_congr；余为算术（excess_balance、excess_pos、Flow.excess_zero_of_le）。"
+      }
+    },
+    {
+      "id": "a-rise-past-the-inflow-is-drawn-from-beyond",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Flow.Balances.rise_draws_beyond_inflow gives the formation of both crossing laws.",
+        "zh": "Flow.Balances.rise_draws_beyond_inflow 予二越界之律以其形成。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "the-world-represented-both-ways",
+      "detail": {
+        "en": "The World is represented in the grammar both ways and its amounts are not; this record states what amounts have instead: an interface by selected unit matchings.",
+        "zh": "世界于文法中两向得表示，其数量则否；此记录陈数量所代有者：以所选单位配对为接口。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnitMatchings.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.UnitMatchings.FrameMatch",
+        "Becoming.UnitMatchings.FrameMatch.le",
+        "Becoming.UnitMatchings.FrameMatch.symm",
+        "Becoming.UnitMatchings.FrameMatch.eq",
+        "Becoming.UnitMatchings.FrameMatch.id",
+        "Becoming.UnitMatchings.FrameMatch.predecessor_unique",
+        "Becoming.UnitMatchings.FrameMatchings",
+        "Becoming.UnitMatchings.FrameMatchings.balances",
+        "Becoming.UnitMatchings.FrameMatchings.canonical",
+        "Becoming.UnitMatchings.frameMatchings_iff_balances",
+        "Becoming.UnitMatchings.FrameMatchings.next",
+        "Becoming.UnitMatchings.crossing_edge",
+        "Becoming.UnitMatchings.Exchange",
+        "Becoming.UnitMatchings.takenUnits",
+        "Becoming.UnitMatchings.givenUnits",
+        "Becoming.UnitMatchings.length_takenUnits",
+        "Becoming.UnitMatchings.length_givenUnits",
+        "Becoming.UnitMatchings.rise_crossing_weak",
+        "Becoming.UnitMatchings.rise_crossing_strong",
+        "Becoming.UnitMatchings.endings_count",
+        "Becoming.UnitMatchings.leaving_and_endings_count",
+        "Becoming.UnitMatchings.source_minimal_zero_of_dissipates",
+        "Becoming.UnitMatchings.residual_pos_of_dissipates",
+        "Becoming.UnitMatchings.lossless_not_dissipative"
+      ],
+      "sha256": "4a322d5c6fd8783502763bc8d35cb223b0531dff940def93d90a9413b08a8a85"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T152525.956467Z/verification.json",
+      "role": "receipt",
+      "sha256": "c2d688933c092e9420e1fe172520ec6bc03cfe2d937b85a654e8271813d1f737",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/u1b/REVIEW-U1B.md",
+      "role": "review",
+      "sha256": "64895bcca49b40f3a4942cb5db0137b01b4c242cd9108ae400275a620054787b",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1.md",
+      "role": "review",
+      "sha256": "7cb7f8de07a2f1a4f2eaf2329bee977d4b776b1199730435f1816a6eb13deb79",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1-2.md",
+      "role": "review",
+      "sha256": "211b85d8165efb06586c1157a22a06bc7e30fa3f75a7ec38b579b164d4824277",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/DESIGN.md",
+      "role": "integration",
+      "sha256": "b3a4ce234ffa7b826ac31d336a19896e4dc313265bcebaaab12ef006516e6e24",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/01-ROOT.md",
+      "role": "statement",
+      "sha256": "0e8bde3dfdb276983e5d1e517cd33a118e29559c999004f6352798ca0826edc4",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnitMatchings.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T152525.956467Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.UnitMatchings",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "31 October 2026, board item U1b (study section 481): added. U1's limited interface for amounts, the root's second sort, reviewed in U1's design and until then in scratch only, ported into one core leaf, Becoming.UnitMatchings, with structural names, what the package already states cited and not restated, U1's failures its boundary; a cross-model review of the leaf and its recheck, every finding taken.",
+      "zh": "2026年10月31日，工作板条目 U1b（研究第 481 节）：增。U1 为数量（根之第二类）所立之有限接口，经 U1 之设计审阅，前此唯在草稿，移入一核心之叶 Becoming.UnitMatchings，名以结构，本包已陈者引之而不重述，U1 之不成为其界；此叶经跨模型之审及其复读，所见皆取。"
+    }
+  ]
+}

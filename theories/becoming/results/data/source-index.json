@@ -265,6 +265,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Undecided.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unfolding.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnitMatchings.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Units.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unrolling.lean",
@@ -674,6 +675,8 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rs1-reading-schedule",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sc1-source-check/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sw-significance-without-a-value-layer/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/DESIGN.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/u1b/REVIEW-U1B.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/REVIEW-U2.md",
@@ -1916,6 +1919,15 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/u1b/REVIEW-U1B.md": {
+      "title": "U1b: the independent review of Becoming.UnitMatchings",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/u1b/Becoming/UnitMatchings.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Undecided.lean"
+      ]
+    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md": {
       "title": "U3: the review of the Lean and the records kit",
       "local_links": [
@@ -2784,6 +2796,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Undecided.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unfolding.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnitMatchings.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Units.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unrolling.lean",
@@ -3001,6 +3014,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Transmission.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unfolding.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnitMatchings.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Units.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weighted.lean",
@@ -5179,6 +5193,7 @@
       "title": "The root: continuation relative to a class",
       "local_links": [
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/bd-boundaries/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue14-the-present/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue15-reorderings-as-growth/NOTE.md",
@@ -5434,7 +5449,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tail.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T125855.282103Z/README.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T125855.282103Z/verification.json",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T152525.956467Z/verification.json",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedContraction.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/GeneratedPaths.lean",
