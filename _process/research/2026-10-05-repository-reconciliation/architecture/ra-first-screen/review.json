@@ -1,0 +1,629 @@
+{
+ "about": "README's first screen, review (board item RA): three lenses, the navigation code, the screen and lead, and the OPENING v13 proposal, each finding then given to an adversarial verifier who reproduced or refuted it. 36 findings, 29 confirmed and taken on mv-land (3fbfdc45b), 7 refuted and left. Opus agents, AI-written, run 2026-10-31.",
+ "commit": "247558c7c",
+ "against": "c3a2f0fc4",
+ "lenses": [
+  {
+   "lens": "SCREEN",
+   "review": {
+    "findings": [
+     {
+      "id": "FS1",
+      "severity": "minor",
+      "where": "_process/navigation/README-FIRST-SCREEN.md:10 (rendered README.md:17); tools/research/navigation.py:250-255",
+      "claim": "\"475 of 506 registered results have a recorded Lean receipt\" counts a status, not receipts. The denominator also includes superseded records and open targets, so the 31 left over are not \"results without a receipt\".",
+      "evidence": "`{{count:recorded-checked}}` is `sum(r['status'] == arg ...)` and `{{count:registered}}` is `len(records)`. On the records: 475 recorded-checked, 20 reviewed-scoped, 7 superseded, 4 open (506 in all). Eight records outside the 475 carry passing Lean receipts in proof_bindings (checked against each receipt's success pointer): alignment-direction-under-widening (5), finite-aggregation-within-restorable-basic-losses (4), organizational-formation-from-generative-comparison (4), practical-judgment-under-living-significance (6), wisdom-root-without-axiom (12), wisdom-root (open, 33), and two superseded records, a-law-through-coupling-along-one-run and a-law-through-changing-coupling-along-one-run (9 each). RESULTS.md's own line (\"506 registered results: 475 ..., 20 ..., 4 open targets\") sums to 499 and leaves the 7 superseded unmentioned.",
+      "fix": "Say what the number counts. For example: \"475 of 506 registered results are credited by a recorded Lean receipt (status `recorded-checked`)\". Or count current results only, leaving out superseded records and open targets."
+     },
+     {
+      "id": "FS2",
+      "severity": "minor",
+      "where": "_process/navigation/README-FIRST-SCREEN.md:10 (README.md:17)",
+      "claim": "\"a recorded Lean receipt, which shows that a proof follows from its premises, not that they hold\" is misworded. It also leaves out the other thing a receipt does not show, which the opening's body names: whether the words say what the Lean says.",
+      "evidence": "A proof does not follow from premises; a statement does, and the receipt records that its proof checked. Each record's English statement is tied to the Lean only through its `correspondence` field, which an AI reviewed (validation scopes read e.g. \"not independently reviewed by a person\"). The body (README.md:40) asks readers to \"judge in the open whether the premises hold and whether the words say what the Lean says\". 72 of the 475 validation scopes report periphery modules with Lean's standard axioms, and 25 bind no core module at all. Per the board's RV21c row, FallibleInquiry's periphery receipt pins 38 dependency hashes, 19 since changed; timely-response-necessity and finite-fallible-inquiry-necessity cite it.",
+      "fix": "For example: \"which shows that each statement, as written in Lean, follows from its stated premises: not that the premises hold, nor that the words say exactly what the Lean says.\""
+     },
+     {
+      "id": "FS3",
+      "severity": "minor",
+      "where": "_process/navigation/README-FIRST-SCREEN.md:10 (README.md:17)",
+      "claim": "\"The empirical theses face frozen tests: some passed, some failed\" leaves out what 08 §9 records as untested, or as only not rejected.",
+      "evidence": "From the 08-METHOD.md §9 table:\n- T1: \"no field test of a need measured in advance\".\n- T2: \"untested outside fisheries\".\n- T4: \"transfer untested\".\n- T5: \"role-play judgments, human valuers untested\".\n- T6: the three frozen seabird tests \"did not reject it\", EW2 \"at low power, estimates in the refuting direction\"; \"none establishes conditional independence\".\n- T3: nearness to the optimum is not varied by any test (the LA4 board row).\nOn the screen's sentence, a newcomer would file T6 as passed and assume every thesis has been tested.",
+      "fix": "For example: \"face frozen tests: some passed, some failed, and parts are untested\"."
+     },
+     {
+      "id": "FS4",
+      "severity": "minor",
+      "where": "_process/navigation/README-FIRST-SCREEN.md:6 (README.md:13)",
+      "claim": "\"C (widening what can form is better) alone gives order\", after \"Its ethics rests on two premises\", reads as C being the only and complete source of order. Chapter 7 says C leaves mixed comparisons unranked and that choices need further commitments.",
+      "evidence": "In 07 §4, the table's row for C reads \"What it does not do: rank mixed comparisons\".\n07 §4.4: a strictly concave graded transform decides \"what C leaves mixed\" (`Weighting.prior_transfer`).\n07 §5: \"C ranks courses; choices take more, following from neither the condition nor C: a reading of `living` ..., the lifting L and the commitments J1–J4\". J1 ranks \"where C alone leaves them unranked\" (`Ranking.basic_first_ranks`).\nThe body itself says of a mixed part \"What neither yet does is weigh a part that does both\". The wording follows GLOSSARY (\"it alone orders\") and AGENTS, where \"alone\" means \"of the two premises\". The screen gives no such scope.",
+      "fix": "Scope \"alone\" and name the gap. For example: \"C (...) gives order, and of the two only it does; it leaves mixed cases unranked\"."
+     },
+     {
+      "id": "FS5",
+      "severity": "minor",
+      "where": "_process/navigation/README-FIRST-SCREEN.md:6 (README.md:13)",
+      "claim": "\"It is stated as life's way\" gives no standing. T8 is a thesis whose standing is \"argued\", with P2, P4, the step and a reason for C open. Amendment 1 of WHAT-REMAINS item 6 makes each claim's standing never-cut. The sentence also allows reading \"for life\" as narrowing whose losses count.",
+      "evidence": "07 §8, T8: \"*Standing:* argued. Open: P2 and P4 ..., the step of invariance, for what that path does not reach; and a reason for C.\" Also: \"*For life* says whose way it is, not whose losses count: every continuation's still does.\" WHAT-REMAINS.md:388-391, amendment 1: \"Two items are added to it: each claim's standing (proved, premise, reading or conjecture)\".",
+      "fix": "For example: \"Thesis T8 argues it as life's way (whose way, not whose losses count): no verdict binding every possible mind is claimed, and the premises' warrant is open.\""
+     },
+     {
+      "id": "FS6",
+      "severity": "minor",
+      "where": "_process/navigation/README-LEAD.md:2 (README.md:129)",
+      "claim": "The lead kept the sentence \"Its laws are checked in Lean on a pure core whose source declarations have empty axiom reports\", which is now its main claim. Not all the laws are on the pure core: some are proved in the periphery with axioms reported.",
+      "evidence": "08 §3: \"A law the pure core cannot yet prove is proved in the periphery, with its axioms reported.\" Of the 475 recorded-checked records, 25 bind only modules outside Becoming/, e.g. balance-from-the-first-law in physics/EntropyProduction.lean (the opening's second-law reading), and 72 report standard axioms in their validation scope. The opening's [^proof] note says \"Periphery modules outside the core may use Lean's classical axioms.\" The sentence predates this branch; the shortening kept it unqualified.",
+      "fix": "For example: \"Its laws are checked in Lean, most on a pure core whose source declarations have empty axiom reports, the rest in the periphery with their axioms reported: ...\"."
+     },
+     {
+      "id": "FS7",
+      "severity": "minor",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:7",
+      "claim": "\"lines 1 to 58 are byte-identical to OPENING-V12.md\" is false: this branch changed line 1.",
+      "evidence": "`diff <(sed -n 1,58p theories/becoming/OPENING.md) <(sed -n 1,58p drafts/2026-10-10-opening/history/OPENING-V12.md)` differs only at line 1. Commit 54203ad1c changed the leading comment from \"places it at the top of README.md\" to \"places it in README.md after the first screen\".",
+      "fix": "\"lines 2 to 58\", or \"the body (lines 3 to 58) is byte-identical\"."
+     },
+     {
+      "id": "FS8",
+      "severity": "style",
+      "where": "_process/navigation/README-FIRST-SCREEN.md:10 (README.md:17)",
+      "claim": "\"frozen tests\" is unexplained jargon for a newcomer on the first screen.",
+      "evidence": "Neither the screen nor the lead says what \"frozen\" means. 08 §9 uses it for rules fixed before the data (\"frozen before any call\" in 07 §8).",
+      "fix": "For example: \"tests whose scoring was fixed before the data (frozen)\"."
+     },
+     {
+      "id": "FS9",
+      "severity": "style",
+      "where": "commit 54203ad1c message; README-FIRST-SCREEN.md:1 comment (\"the study section of its landing records the excess\")",
+      "claim": "The commit gives the screen as 199 words, 49 over budget. The render's own rule counts 198 words, 48 over.",
+      "evidence": "navigation.first_screen and prose_counts, run read-only on both mv-land and mv-render, give (198, 0) words for title, navigation, status and block, which reads as \"2 minutes\". The block alone is 162 words.",
+      "fix": "Record 198 / 48 over when the study section records the excess, or render the figure rather than copy it (amendment 3)."
+     }
+    ],
+    "checked": [
+     "Reading times by navigation.reading_time (copied into a scratch script, and also run read-only through navigation.first_screen): screen 198 words, 1.52–1.98 → '2 minutes'; ONE-PAGE 2154 words + 6 CJK → 17–22; overview 13460 + 52 → 104–135; opening body 2442 + 39 → 19–25; notes 10095 + 3 → 78–101. All match the rendered README:15. AJ4's measure_layers.py (branch aj4-human) uses the same visible-prose rule and the same screen boundary (to the first '## ').",
+     "The links resolve. 07-SIGNIFICANCE.md has <a id=\"scope-and-order\"> at line 210 and 08-METHOD.md has <a id=\"theses\"> at line 519. RESULTS.md, ONE-PAGE.md and THE-THEORY-OF-BECOMING.md exist. In the rendered README, #truth-exists and #notes reach the headings at lines 21 and 77 first. The duplicate <a id> in the historical-anchors <details> block (lines 342, 462) predates this branch and comes later in the page.",
+     "'neither asserted' matches 07 §4 ('Neither is asserted') and 07 §3. 'no verdict binding every possible mind is claimed' is T8's wording verbatim. 'the premises' warrant is open' matches AGENTS (the condition's warrant open, a reason for C open apart) and T8's open list. Scope / order by role matches AGENTS, GLOSSARY and the 07 §4 table.",
+     "Condition 2: the body's 'basis of all ethics, for all beings, in all universes' and 'the line between good and evil' are the only places that conflict with the screen's 'life's way'. Proposal A1 and A2 cover them, A3 covers 'I take it to be the truth', and [^ethics] and [^good-evil] now open in the current terms. The body says of the step 'states as a condition and does not assert', so it is consistent with 'neither asserted'. The proposal's paragraph numbering (3, 4, 6, 7, 8, 9, 10, 17) was checked against the body.",
+     "Condition 1: the block keeps to the four points. 'What it is' reuses the body's first phrase and the ethics point restates paragraph 8 by role, both within the permitted points. Nothing else repeats the body.",
+     "The lead's shortening drops nothing README no longer says anywhere. The theory's description and the two premises are now on the screen. 'a conviction in the first person' is on the screen, and the opening's key line gives the standing per note. 'knowing ... evaluation' survives at README.md:192 ('organization, living, knowing, learning, evaluation and wisdom differentiate within it'), and evolution in the goals section. README on main has no 'What is established' section (readme_featured_results is empty), so after the lead's cut the screen is the only place outside the opening that names the two premises, which is what the lead's comment intends.",
+     "'Every review so far is by AI' matches 08 §11 ('No human review is claimed'), ONE-PAGE ('No human has yet reviewed it'), the review ledger (no human entry), the twenty-first review (cross-model AI, and C-AI-ALIGNMENT.md:133 'nothing has been reviewed by a human'), the 25 October cold read ('An independent AI reader') and the HC note ('this is not a review of the text'). One loose use: SCIENTIFIC-INQUIRY-CONDITIONS.md:326 says 'Ren reviewed the substantially advanced repository' (the author's reading, not a recorded review). It does not contradict the block in 08's sense.",
+     "Every recorded-checked record is kind 'theorem' and has at least one proof binding with a receipt, so the 475 are all Lean-backed.",
+     "first_screen fills every field: no '{{' is left in the render, and unknown fields, statuses and missing or outside files raise errors, as the tests cover. The diff c3a2f0fc4..247558c7c on the board (the UE26 row 'removed') comes from main's commits after the merge base 1aa84fd59, not from this branch.",
+     "Neither worktree was written to. Scratch scripts are in /private/tmp/claude-501/-Users-ren-theories/4cd2c9b9-8aca-4fd1-99bb-ff1a3f9d1698/scratchpad/rv-readme/."
+    ]
+   },
+   "verify": {
+    "verdicts": [
+     {
+      "id": "FS1",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "Reproduced from the files. navigation.py:250-255 fills `{{count:registered}}` with len(records) and `{{count:recorded-checked}}` with the number of records that have that status. The records give 475 recorded-checked, 20 reviewed-scoped, 7 superseded and 4 open, 506 in all. Eight records outside the 475 carry receipts whose success pointers all pass: 5 reviewed-scoped records, the open wisdom-root (33 bindings) and two superseded records (9 bindings each). Read literally, \"475 of 506 ... have a recorded Lean receipt\" undercounts the receipts. The 31 left over are not all results without a receipt, and 11 of them are superseded or open, not current results. The figure is the status count, so nothing is miscomputed. The sentence just says the wrong thing about it.",
+      "fix": "\"475 of 506 registered results are credited by a recorded Lean receipt\", or count current records only (leave out superseded and open)."
+     },
+     {
+      "id": "FS2",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "README-FIRST-SCREEN.md:10 reads \"which shows that a proof follows from its premises\". A proof does not follow from premises. The receipt records that a proof checked, so it is the Lean statement that follows from the hypotheses. Each English statement is tied to its Lean only through the record's correspondence, which an AI reviewed. Some receipts also certify against an older core: per the board's RV21c row, FallibleInquiry's periphery receipt pins 38 dependency hashes, 19 since changed. So what the screen says a receipt shows is too much, for the registered English result. The body (README.md:41) already names the correspondence gap (\"whether the words say what the Lean says\"), so the screen only needs to stop overclaiming. It does not have to repeat the body.",
+      "fix": "\"which shows that its Lean statement follows from its premises, not that they hold\" (optionally adding \"nor that the words match the Lean\")."
+     },
+     {
+      "id": "FS3",
+      "confirmed": false,
+      "severity": "style",
+      "reason": "The sentence is true. Each empirical thesis T1-T7 in 08 §9 has at least one frozen test (MQ, CG1, IN1, VD1/VD2, EW2-4, LA2). Some passed and some failed. T6's frozen tests not rejecting it is the pass condition of a refutation test, so filing T6 as passed is not a misreading. The wording matches the one page's own summary (ONE-PAGE.md:23, \"some passed and some failed\"). What is untested (field tests, transfer, human valuers) is the theses' scope and sits one link down at 08 #theses. No never-cut item requires it on the screen. It is an omission of detail, not a false or misleading statement.",
+      "fix": "None needed. If space allows, \"some passed, some failed, parts untested\"."
+     },
+     {
+      "id": "FS4",
+      "confirmed": false,
+      "severity": "style",
+      "reason": "\"C ... alone gives order\" is the current account's own wording: 07 'What this chapter does not show' (\"the condition fixes scope and orders nothing; C alone ranks\"), GLOSSARY.md:61 (\"it alone orders\") and AGENTS (\"What ranks lies in calling widening better (C) alone\"). On the screen the clause directly follows \"two premises\" and the condition's role, so \"alone\" is scoped to the two premises, as in the account. \"Gives order\" does not claim a complete order. Condition (2) is about agreeing with the current account, and the screen does. The reviewer concedes the wording follows the account.",
+      "fix": "None."
+     },
+     {
+      "id": "FS5",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "\"It is stated as life's way\" summarises T8 (07 §8: \"For life, the way is 生生\"), whose standing is \"argued\", but the screen does not give that standing. WHAT-REMAINS amendment 1 adds \"each claim's standing (proved, premise, reading or conjecture)\" to the never-cut list. To a newcomer \"stated as\" could mean stipulated or established. The second part of the finding does not hold: \"for life\" being read as narrowing whose losses count. The same paragraph has just said the condition fixes scope \"for anything\" and \"whose losses count\", so that misreading is not supported.",
+      "fix": "\"T8 argues it as life's way: no verdict binding every possible mind is claimed, and the premises' warrant is open.\""
+     },
+     {
+      "id": "FS6",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "README-LEAD.md:2 reads \"Its laws are checked in Lean on a pure core whose source declarations have empty axiom reports\". 08 §3 says \"A law the pure core cannot yet prove is proved in the periphery, with its axioms reported.\" Of the 475 recorded-checked records, 25 bind only modules outside Becoming/. These include balance-from-the-first-law and least-loss-from-entropy-production, in physics/EntropyProduction.lean, the opening's second-law reading. 72 validation scopes name standard axioms. The sentence predates the branch, but after the shortening it is the lead's main claim, and as written it overclaims.",
+      "fix": "\"Its laws are checked in Lean, most on a pure core whose source declarations have empty axiom reports, the rest in the periphery with their axioms reported: ...\"."
+     },
+     {
+      "id": "FS7",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "Reproduced. OPENING.md lines 1-58 against history/OPENING-V12.md differ only at line 1. Commit 54203ad1c changed the leading comment from \"places it at the top of README.md\" to \"places it in README.md after the first screen\". At base c3a2f0fc4 the two were identical. So the proposal's \"lines 1 to 58 are byte-identical\" is false at the branch tip. The point it supports, an unchanged body, still holds: the body is lines 2-58, from the heading on.",
+      "fix": "\"lines 2 to 58 are byte-identical\" (or \"the body, from its heading on, is byte-identical\")."
+     },
+     {
+      "id": "FS8",
+      "confirmed": true,
+      "severity": "style",
+      "reason": "\"frozen tests\" is not explained on the screen, and GLOSSARY has no entry for it. The one page glosses it in the same sentence (\"Their tests are frozen, the predictions fixed before they are scored\"), so the screen is less clear to a newcomer than the layer below it.",
+      "fix": "\"face tests frozen before scoring\" or \"face frozen tests (predictions fixed before scoring)\"."
+     },
+     {
+      "id": "FS9",
+      "confirmed": true,
+      "severity": "style",
+      "reason": "I recomputed with navigation.prose_counts' regex, which is also AJ4's measure_layers.py count, over the rendered README from the title to before \"## Truth exists\". It gives 198 words: lines 1, 5, 7, 9, 11, 13, 15 and 17 have 4+14+18+5+30+52+32+43 words. That is 48 over 150, not the commit message's 199 and 49. The block alone is 162. The screen's link change in 247558c7c does not affect the count, since link targets are stripped. Only the commit message carries the wrong figure, and the study section the comment promises is not yet written.",
+      "fix": "Record 198 words, 48 over, in the landing's study section. Better, take the figure from the measure rather than copying it (amendment 3)."
+     }
+    ],
+    "missed": []
+   }
+  },
+  {
+   "lens": "PROPOSAL",
+   "review": {
+    "findings": [
+     {
+      "id": "OP-B1",
+      "severity": "major",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:53 (Why at :55)",
+      "claim": "B's proposed wording, \"the least loss holds wherever each exchange that takes cannot be undone\", claims more than the account allows. The sentence speaks of \"ours, read as available work\" (OPENING.md:11), where amounts are real. Irreversibility gives a least loss only with whole units. The Why itself says that premise \"stays in the note\", so the body loses it. Also, in plain words \"cannot be undone\" describes a logically irreversible step such as an erasure, which is exactly the case DF1b ruled out.",
+      "evidence": "Record least-loss-from-entropy-production, statement: \"Irreversible taking with whole units, or a floor of destroyed exergy at least the unit, gives it\". EntropyProduction.lean:42 \"Strict irreversibility with whole units gives dissipation\"; `Irreversible` asks only `0 < σ t f`, with no floor. 02-MAP.md:211 says that in any amounts a balanced, dissipated-on family falls strictly \"with no least loss (`World.InAmounts.change_lowers`)\", and 02-MAP.md:217 \"In denser amounts falling at every step need not end\". 02-MAP.md:220: \"a logically irreversible step can be carried out thermodynamically reversibly\". OPENING.md:61 [^conditions]: \"Several of these laws rely on whole-number amounts\".",
+      "fix": "Use the floor route, which survives refinement: \"…and the least loss holds wherever each exchange that takes destroys at least some fixed amount of available work.\" Or keep irreversibility with both of its qualifiers in the body: \"…is thermodynamically irreversible, its amounts counted in whole units.\""
+     },
+     {
+      "id": "OP-E1",
+      "severity": "major",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:89",
+      "claim": "E's insertion breaks the compound relative clause \"whatever lies beyond and shares what it rewards\". After the edit, \", and shares what it rewards, to the least any outcome leaves\" reads as a second act of the selection (\"it … shares what it rewards\"), which is wrong. The Why also misses that \"shares what it rewards\" already names the shared-units case, the one that gives room. So the body does not lack the qualifier that E adds.",
+      "evidence": "OPENING.md:23: \"it draws down whatever lies beyond and shares what it rewards, to the least any outcome leaves\". 05-COLLECTIVES.md:157: \"*shared units* (outcomes closed under moving a unit from beyond into the family) give room (`Optimum.Shared.room`)\". 05-COLLECTIVES.md:209 (T3): \"the drain lying where what lies beyond shares units with what is rewarded\". BECOMING-SIGNIFICANCE-REVIEW.md:723: \"The drain at an optimum lies exactly where the part shares units with what lies beyond\".",
+      "fix": "Drop E and reclassify (D1 and D2 only under 'notes already correct', so 'three' at :16 becomes 'two'). If a change is still wanted, keep the clause whole: \"…whatever lies beyond and shares units with what it rewards, to the least any outcome leaves…\"."
+     },
+     {
+      "id": "OP-C2",
+      "severity": "major",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:69 (and the [^sages] bullet at :107)",
+      "claim": "\"The one step the law has not yet taken for us in full\" says the law has already taken the step in part. §4.6 takes none of the step. It reaches part of the condition's scope without the step, and only under P2 and P4, which are open. The sentence is about the sages' reciprocity, which [^sages] reads as the step's standpoint form, and §4.6 lists that form among what its path does not reach.",
+      "evidence": "07-SIGNIFICANCE.md:418: \"It needs no step of invariance\". 07:420: \"*What the path does not reach.* Each center counting from another's standpoint beyond its part as a condition. … These remain the step's.\" 07:656 (T8): \"Open: P2 and P4, the crux of §4.6's path\". OPENING.md:71 [^sages]: \"The formal shape it matches is the step's standpoint form: what has significance from one standpoint has it from every other\".",
+      "fix": "Drop C2 and leave paragraph 7 as it is, and remove '(C2)' from the [^sages] bullet. If [^sages] is to mention §4.6, say that the path reaches, under P1–P4, those downstream of one's acts, not the standpoint form that the sayings match."
+     },
+     {
+      "id": "OP-V12",
+      "severity": "minor",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:7",
+      "claim": "\"lines 1 to 58 are byte-identical to OPENING-V12.md\" is false at the tip. Line 1, the leading comment, was changed in 54203ad1c, the same commit that added this proposal. Only lines 2 to 58 match.",
+      "evidence": "cmp of OPENING.md and history/OPENING-V12.md, lines 1–58, differs at line 1, char 130: \"places it in README.md after the first screen\" against \"places it at the top of README.md\". Lines 2–58 are identical, and at base c3a2f0fc4 lines 1–58 were identical.",
+      "fix": "Write \"lines 2 to 58 (everything after the leading comment) are byte-identical\", or \"the body (lines 3 to 57) is byte-identical\"."
+     },
+     {
+      "id": "OP-A1a",
+      "severity": "minor",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:31; theories/becoming/OPENING.md:73",
+      "claim": "The Why says the body's gloss of C is \"a little stronger than 07 §4.4 ('calling it better is C'), but `[^ethics]` states that\". [^ethics] does not mark that gap. It draws the gloss as its own conclusion. So the note carries the same stronger reading, and the AI-side list does not include it.",
+      "evidence": "[^ethics]: \"…(`Weighting.widens_iff_every_positive` …), so C is what anyone who counts everything at stake as worth something already holds.\" 07-SIGNIFICANCE.md:312: \"the order shared by standpoints whose orders increase in admission is exactly widening, and calling it better is C\".",
+      "fix": "Change the note (AI-side, no proposal needed) to: \"so widening is what everyone who counts everything at stake as worth something ranks higher; calling that better is C\". Add it to the 'On the AI side' list, or correct the Why."
+     },
+     {
+      "id": "OP-A1b",
+      "severity": "minor",
+      "where": "theories/becoming/OPENING.md:73 (label) and :21; proposal :27-31",
+      "claim": "[^ethics]'s new label, \"Open, and offered for life\", is attached to a sentence that, until A1 is applied, offers the law \"for all beings, in all universes\". So the label restates its sentence in words the sentence contradicts, instead of giving its standing. After A1, the note's \"That all ethics rests on this ground is not proved\" would answer a claim ('all ethics') the body no longer makes, and the proposal lists no follow-up for it.",
+      "evidence": "OPENING.md:21: \"is offered as the basis of all ethics, for all beings, in all universes.[^ethics]\". OPENING.md:73: \"**Open, and offered for life: …** … That all ethics rests on this ground is not proved\". OPENING.md:5: \"Each note says how far its sentence is proved\".",
+      "fix": "Until A1 is applied, label the standing: \"Open; the current account offers it for life, and no verdict binding every possible mind is claimed\". Add to the AI-side list that, with A1, 'all ethics' in [^ethics] becomes 'ethics for life'."
+     },
+     {
+      "id": "OP-A2a",
+      "severity": "minor",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:41",
+      "claim": "\"The line itself (widening, narrowing, mixed) is proved with no premise\" is wrong on two counts. The four-way split is classical logic over two inclusions, not a Lean theorem. The exact line, the margin, is proved under balance.",
+      "evidence": "Record four-cases-of-a-part, hypotheses: \"The flow with the part balances…\" and \"the split into four cases is classical logic over the two inclusions, not a Lean theorem\". OPENING.md:77 [^good-evil]: \"With balance only at the conditions each formation requires, before it, the levels with a part widen those without it exactly when … (`Flow.widens_iff_within_margin_at`)\".",
+      "fix": "\"The line itself is proved: with no axiom a part widens, narrows, keeps the same or is mixed, and under balance the line falls exactly at the margin.\""
+     },
+     {
+      "id": "OP-A2b",
+      "severity": "minor",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:41",
+      "claim": "A2's Why rests \"the preference … is life's, not absolute\" on Ren's words alone, which uses them as warrant (AGENTS: provenance, never warrant). The words quoted, \"it is just for us as life\", are also the wording the recorded reading amends.",
+      "evidence": "sources/15-codex-theory-conversations/2026-10-30-no-absolute-good-the-way-for-life.md:7 (Ren, verbatim, so the quote is exact). Line 28: \"**Amendment 1: not \\\"just\\\".** \\\"For us as life\\\" is not one preference among others.\" T8 (07:656) is the account's own statement and is not cited for this point.",
+      "fix": "Give the reason from the account: \"T8 states the direction for life; no verdict binding every possible mind is claimed (07 §8)\". Keep Ren's words as provenance after it, citing the amendment or quoting without 'just'."
+     },
+     {
+      "id": "OP-A3",
+      "severity": "minor",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:43",
+      "claim": "\"No change if A1 is taken, since 'it' then carries 'for life'\" does not hold. The antecedent of 'it' in \"I take it to be the truth\" is the subject, the law with its step and C. A1 puts 'for life' on 'ethics', inside the predicate. With A1 alone, the sentence still calls the law and both premises \"the truth\" without scope, though paragraph 6 says the work \"does not assert\" the step.",
+      "evidence": "OPENING.md:21: \"This law, with that one step …, and, to order them, …, is offered as the basis of … [^ethics] I take it to be the truth, the dharma, the Dao.\" OPENING.md:17: \"which the work states as a condition and does not assert\".",
+      "fix": "Offer A3's alternative whether or not A1 is taken (\"…the Dao: the way for life\"), or drop the 'no change' clause."
+     },
+     {
+      "id": "OP-D1",
+      "severity": "minor",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:81 (Why at :83)",
+      "claim": "\"None of this, save the reading of our physics, needs an axiom of logic\" says the physics reading needs an axiom. The account shows only that its proof uses the standard axioms, through Mathlib's reals. The Why also cites A-UNIFICATION caveat (i) as flagging this sentence, but the caveat's point is different (least empirical content), and D1 does not address it.",
+      "evidence": "OPENING.md:61 [^conditions]: \"its declarations depend on Lean's standard axioms `propext`, `Classical.choice` and `Quot.sound`, the core's on none\". AGENTS: a law the core cannot yet prove 'is proved in the periphery with its axioms reported'. A-UNIFICATION.md:173: \"the strongest no-axiom claims are exactly the ones with the least empirical content, and the body text does not say that\".",
+      "fix": "\"None of this needs an axiom of logic … save the reading of our physics, which is proved with them …\", or \"is proved without an axiom of logic, save the reading of our physics\". Describe caveat (i) by its actual point, or drop the citation."
+     },
+     {
+      "id": "OP-F1",
+      "severity": "minor",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:95",
+      "claim": "Dropping \"and counted amounts\" from paragraph 1 widens the scope sentence beyond what holds. That sentence's \"nothing that unfolds can break them\" covers the whole set, including paragraph 3's conditional laws, several of which rely on whole-number amounts. After the edit the body nowhere states that commitment as a scope, which also runs against D1's aim of saying where the real assumptions lie.",
+      "evidence": "OPENING.md:61 [^conditions]: \"Several of these laws rely on whole-number amounts\" and \"with real-valued levels a bounded part can be new at every step\". OPENING.md:63 [^proof]: \"the representation brings commitments of its own: discrete steps, whole-number amounts\". 02-MAP.md:217: \"In denser amounts falling at every step need not end\".",
+      "fix": "Drop this F item, or write \"Wherever becoming can be told in steps, its amounts counted where a law reads them, …\"."
+     },
+     {
+      "id": "OP-F2",
+      "severity": "minor",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:94",
+      "claim": "The proposed key line still leaves out standings the note labels use, and \"The notes use all seven\" is true only loosely. 'A thesis' and 'a premise stated and not asserted' appear in note bodies, not in labels, while the labels also use 'a conviction', 'argued' and 'empirical', which the list omits.",
+      "evidence": "OPENING.md:92 [^turn]: \"**A conviction, with proved limits.**\". [^alignment]: \"the direction is argued under conditions\". [^transitions]: \"the history is empirical\". [^meta]: \"A theory with formal results…\". No label contains 'thesis'.",
+      "fix": "List what the labels actually use, e.g. \"proved, proved under conditions, argued, empirical, a reading, a judgment, a conviction, or open\", or mark the list as examples (\"for example\")."
+     },
+     {
+      "id": "OP-C3",
+      "severity": "minor",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:71; theories/becoming/OPENING.md:25",
+      "claim": "C3 names \"that the continuation of others matters too\", as a whole, \"the one step\", while C1 says part of it is reached without the step through §4.6. It also sharpens a tension the audit misses: paragraph 10 presents that clause as part of \"the truth\" the dominant model abstracts away, though paragraph 6 says the work states the step as a condition and \"does not assert\" it.",
+      "evidence": "OPENING.md:25: \"It is the truth with much of it abstracted away. … It drops the rest: what that continuation depends on, and that the continuation of others matters too.\" OPENING.md:17: \"which the work states as a condition and does not assert\". Proposal :67: the path reaches \"part of the condition's scope, without the step\".",
+      "fix": "Drop C3, and list paragraph 10 among the points for Ren, e.g. \"…and what the one step would add, that the continuation of others matters too\". Or have [^own] or [^cancer] say that the step there is a stated condition, not a proved part of the truth."
+     },
+     {
+      "id": "OP-SRC",
+      "severity": "minor",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:9-11",
+      "claim": "Three provenance details in 'What is older' are off. The approval of the restated goal links to Ren's message, which approves no goal; the approval is a separate record. §4.6's path was PW's (24 October), and PF (25 October) stated its steps generally and argued the crux. DF1b landed on 27 October, not 26 October.",
+      "evidence": "sources/15-codex-theory-conversations/2026-10-30-goal-the-ethics-for-life-approved.md:9: \"> Yes, approve it\". BECOMING-RENEWAL-READING.md:17862 (§402 PF): \"PW's path to the future (07 §4.6) rested on steps 3 and 4 shown only in witnesses\". Commit 61db89224 (24 Oct): \"07 §4.6 (PW's path, revised)\". _process/BECOMING-WORKBOARD.md:54: \"DF1b landed 27 October 2026\".",
+      "fix": "Link the approval record for 'restated with Ren's approval'. Write \"(PW, 24 October; its crux argued in PF, 25 October)\" and \"(27 October, …)\"."
+     },
+     {
+      "id": "OP-SCR",
+      "severity": "minor",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:5 vs :14 and :19",
+      "claim": "The proposal contradicts itself. It says one condition on the first screen is that \"it never contradicts the body\", then says the body's paragraph 8 would be read against the current account and that A1 and A2 are 'the edits it needs alongside'. Until A1 and A2 are applied, the screen's \"stated as life's way: no verdict binding every possible mind is claimed\" sits beside a body that offers the law \"for all beings, in all universes\".",
+      "evidence": "Proposal :5: \"One condition on it is that it never contradicts the body.\" Proposal :19: \"so A1 and A2 are the edits it needs alongside\". mv-render/README.md:15 against OPENING.md:21.",
+      "fix": "Restate the condition as it works: \"it says nothing the opening's notes do not support; where the body's wording is older, it states the current terms, and A1 and A2 bring the body to them\"."
+     },
+     {
+      "id": "OP-NAME",
+      "severity": "minor",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:31",
+      "claim": "\"Its naming of the two premises by role (the step for scope, C for order) is current\" is not quite right. The current account names the continuation condition for scope. The glossary's 'step of invariance' is only the condition's content beyond the self's presupposition. The body's paragraph 6 uses 'one step' for the whole condition.",
+      "evidence": "07-SIGNIFICANCE.md §4 table: \"the continuation condition | **scope**\". WHAT-REMAINS amendment 1: \"the two premises with their roles (the condition for scope, C for order)\". GLOSSARY.md:62: \"the step of invariance | the condition's content beyond the self's presupposition\". OPENING.md:17: \"That takes one step, which the work states as a condition … : for anything, not just oneself, its continuation into the future has significance\".",
+      "fix": "Say in the Why that the body's 'one step' is the condition stated in paragraph 6, a wider sense than the glossary's step, and that this is left as Ren's. Or offer \"with the condition that step states, to say whose losses count\" as an option."
+     },
+     {
+      "id": "OP-IND",
+      "severity": "style",
+      "where": "drafts/2026-10-10-opening/OPENING-V13-PROPOSAL.md:3",
+      "claim": "\"Each edit below is independent of the others\" is contradicted within the proposal. A3 is conditional on A1, C2 exists 'to match C1', and the dateline option depends on whether the proposal is applied.",
+      "evidence": "Proposal :43: \"No change if A1 is taken … Otherwise\". Proposal :69: \"to match C1\". Proposal :96: \"or version 13 with this proposal's source if it is applied\".",
+      "fix": "\"Each edit can be taken or declined on its own, except A3 (see A1) and C2 (see C1).\""
+     }
+    ],
+    "checked": [
+     "Every 'Now:' quote in the proposal (16 strings, including the key line and the dateline) appears verbatim in theories/becoming/OPENING.md.",
+     "Paragraph numbers are right by the proposal's own rule (counted after the heading, leaving out the key line and the dateline): A1-A3 and the F evil-clause are paragraph 8 (L21), B is 3 (L11), C1 is 6 (L17), C2 is 7 (L19), C3 is 10 (L25), D1-D2 are 4 (L13), E is 9 (L23), the F paragraph-1 item is L7, and 'We need to do good, not evil' is paragraph 17 (L39).",
+     "Lines 2-58 of OPENING.md are byte-identical to history/OPENING-V12.md, so the body is unchanged; at base c3a2f0fc4, lines 1-58 were identical.",
+     "T8's quoted fragments are verbatim at 07-SIGNIFICANCE.md:656 ('For life, the way is 生生', 'It is the way of those whose own line runs through life, of whatever substrate', 'No verdict binding every possible mind is claimed'), and 'calling it better is C' is verbatim at 07:312.",
+     "Ren's quote 'there is no absolute universal good vs evil - it is just for us as life' is verbatim at sources/15-codex-theory-conversations/2026-10-30-no-absolute-good-the-way-for-life.md:7.",
+     "dissipative_of_floor, dissipative_of_irreversible, gainless_of_secondLaw and secondLaw_not_dissipative exist in lean/physics/EntropyProduction.lean. `Irreversible` means each taking exchange destroys some exergy (0 < σ). The module's header and the least-loss record carry DF1b's Landauer correction.",
+     "C1's Why matches 07 §4.6's conclusion and T8: under P1-P4 concern reaches everything downstream of one's acts, part of the condition's scope, with no step of invariance, and what the path does not reach remains the step's. C1's wording is grammatical and keeps the old question (route (b), per OPENING-NOTES) as 'how far'.",
+     "D2: [^proof] says 'that is a modelling correspondence, not a theorem'; the phrase is absent in V8 and present from V9, so 'since version 9' is right. The place/transition net module is in the core (Becoming/PlaceTransitionNets.lean), so physics is the only periphery exception in paragraphs 1-4.",
+     "T3's title in 05-COLLECTIVES.md:209 is 'Optimization drains what lies beyond its couplings, where that gives room', and [^alignment] states 'exactly where lowering it leaves room'.",
+     "The A-UNIFICATION review exists, and its caveat (i) quotes the body's 'None of this needs an axiom'.",
+     "The dateline fix (version 12, source 2026-10-22-aim-frontier-not-past-understanding.md) agrees with drafts/2026-10-10-opening/README.md, and the relative link resolves from both OPENING.md and the proposal.",
+     "LW's T8 stance form landed 30 October (64184668b); the RA date of 23 October matches AGENTS.",
+     "The AI-side descriptions are true as stated: [^axiom] does not mention §4.6, P2, P4 or that the ethics does not wait on a universal warrant; [^own] grounds self-significance in the condition (`Valuation.premises_of_unrestricted`), not in P1; [^sages] reads reciprocity as the step's standpoint form.",
+     "A word diff of c3a2f0fc4..247558c7c on OPENING.md shows only three changes: the leading comment, [^ethics]'s label with one sentence (the no-binding-verdict clause moved into the label; T8 and the open warrant added), and [^good-evil]'s label (', for life'). Everything else in both notes is kept.",
+     "The anchors #theses (07:642), #r-universal-practical-warrant (07:694) and #condition (07:122) exist, and the rendered README in mv-render resolves the new link to theories/becoming/chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant.",
+     "WHAT-REMAINS item 6, amendment 4, does put the opening's notes in the cuts that go now, as the AI-side list says."
+    ]
+   },
+   "verify": {
+    "verdicts": [
+     {
+      "id": "OP-B1",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "The Lean and the record back the point. `Irreversible` asks only 0 < σ, and the record's Does not show says: \"That strict irreversibility gives a least loss at a refining unit: a strict loss without a floor can fall below every unit\". So \"cannot be undone\" gives a least loss only with whole units. The sentence is about \"ours, read as available work\", and the Why at :55 itself says the whole-unit premise \"stays in the note\". The plain words \"cannot be undone\" can also be read as logical irreversibility, the erasure case DF1b ruled out (02-MAP.md:220). It is minor, not major: paragraph 1 (OPENING.md:7) scopes the whole set to \"counted amounts\", and the representation's amounts are natural numbers (EntropyProduction's Flow), so under the body's stated scope the sentence holds.",
+      "fix": "Use the route that survives refinement: \"…and the least loss holds wherever each exchange that takes destroys at least some least amount of available work.\" Or keep both qualifiers: \"…wherever each exchange that takes is irreversible, its amounts counted in whole units.\""
+     },
+     {
+      "id": "OP-E1",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "OPENING.md:23 reads \"it draws down whatever lies beyond and shares what it rewards, to the least any outcome leaves\". Here \"shares what it rewards\" belongs to the relative clause; read as a verb of \"it\", it makes no sense. That clause is the shared-units case, which gives room (05-COLLECTIVES.md:157 `Optimum.Shared.room`; BECOMING-SIGNIFICANCE-REVIEW.md:723 \"The drain at an optimum lies exactly where the part shares units with what lies beyond\"). E puts a comma-delimited \"where that gives room\" between the two parts of that clause, so \"and shares what it rewards\" most naturally reads as a second act of the selection. The body already narrows the drain to a case that gives room, so the qualifier E adds is largely there already, and E's classification is off. It is minor, not major: shared units give room only with further premises (equality decided, the beyond apart), so the qualifier is not wholly redundant, and the result is ambiguous rather than flatly false.",
+      "fix": "Drop E, and at :16 list only D1 and D2 under 'notes already correct' (\"two\"). If a change is still wanted, keep the clause whole: \"…whatever lies beyond and shares units with what it rewards, to the least any outcome leaves…\"."
+     },
+     {
+      "id": "OP-C2",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "C2's \"has not yet taken for us in full\" presents a partial taking as fact. The §4.6 path reaches part of the scope only under P1–P4, and T8 (07:656) lists P2 and P4 as open, \"the crux of §4.6's path\". The proposal's own C1 Why (:67) says the path works \"without the step\". Paragraph 7's sayings match, by [^sages] (OPENING.md:71), the step's standpoint form, and 07:420 lists exactly that among what the path does not reach: \"Each center counting from another's standpoint beyond its part as a condition … These remain the step's.\" C1 is a question and is fine. C2 is an assertion. It is minor, not major: in the body's own sense the step's content is partly reached under P1–P4, so the wording is a stretch, not plainly false.",
+      "fix": "Drop C2, leave paragraph 7 as it is, and remove '(C2)' from the [^sages] bullet at :107. If [^sages] is to mention §4.6, it should say that the path reaches, under P1–P4, what lies downstream of one's acts, not the standpoint form the sayings match."
+     },
+     {
+      "id": "OP-V12",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "I checked with cmp. At the tip, OPENING.md and history/OPENING-V12.md differ at line 1, char 130: \"places it in README.md after the first screen\" against \"places it at the top of README.md\". This was changed in 54203ad1c, the commit that added the proposal. Lines 2 to 58 are identical, and at base c3a2f0fc4 lines 1 to 58 were identical.",
+      "fix": "Write \"lines 2 to 58 (everything after the leading comment) are byte-identical\"."
+     },
+     {
+      "id": "OP-A1a",
+      "confirmed": false,
+      "severity": "minor",
+      "reason": "The note's gloss matches the current account. 07:312 says \"Monotonicity at the standpoint is C's premise relocated: weaker, still a premise\". T8 (07:656) itself words the order as \"ranked by what every valuer who counts everything shares (order: C)\". [^ethics] (OPENING.md:73) marks the gap the reviewer says is missing: \"that every valuer counts everything at stake is C's premise relocated, and its warrant stays open\". At most, the proposal's \"a little stronger\" is over-cautious. Neither the note nor the Why is shown wrong.",
+      "fix": "None needed."
+     },
+     {
+      "id": "OP-A1b",
+      "confirmed": false,
+      "severity": "style",
+      "reason": "Notes correct the body's older wording by design: [^good-evil] does the same, and the proposal's section D relies on it. The label does give the standing (\"Open\") the key line asks for. After A1, \"That all ethics rests on this ground is not proved: T8 states the direction as life's\" stays true. No false or contradictory statement is shown.",
+      "fix": "None needed."
+     },
+     {
+      "id": "OP-A2a",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "The record four-cases-of-a-part, Conditions: \"the split into four cases is classical logic over the two inclusions, not a Lean theorem\". 07 §1 says the same: \"that every comparison falls under one is classical\". What holds with no premise is the definitions and their mutual exclusion. The exact line the body speaks of, the margin, needs balance (`Flow.widens_iff_within_margin_at`, [^good-evil] \"With balance only at the conditions each formation requires\"). So \"The line itself (widening, narrowing, mixed) is proved with no premise\" is imprecise. The Why's point, that the line is not a preference, survives.",
+      "fix": "\"The line itself is proved: with no premise the cases exclude one another, that every part falls under one is classical, and under balance the line falls exactly at the margin.\""
+     },
+     {
+      "id": "OP-A2b",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "The quote is verbatim (source :7). But the Why at :41 gives Ren's words as the only support for \"The preference … is life's, not absolute\". AGENTS forbids presenting his words as the warrant for a claim. The account's own statement, T8 (07:656, \"For life, the way is 生生 … No verdict binding every possible mind is claimed\"), is available and goes uncited here. The same source's Amendment 1 (:28) qualifies the quoted \"just\".",
+      "fix": "Give the reason from the account first: \"T8 states the direction for life, and no verdict binding every possible mind is claimed (07 §8)\". Keep Ren's words after it as provenance."
+     },
+     {
+      "id": "OP-A3",
+      "confirmed": false,
+      "severity": "style",
+      "reason": "This is a judgment about how the pronoun carries the scope just stated, not a demonstrable error. Calling the law with its premises \"the truth\" is marked as Ren's own conviction (\"I take it\"), and paragraph 6's \"does not assert\" is about the work. The two are not contradictory, and the point does not depend on A1.",
+      "fix": "None needed."
+     },
+     {
+      "id": "OP-D1",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "\"None of this, save the reading of our physics, needs an axiom of logic\" implies that the physics reading needs one. The record shows only that its proof uses the standard axioms: \"each depending only on propext, Classical.choice and Quot.sound through Mathlib's reals and measures\". AGENTS treats this as 'proved in the periphery with its axioms reported', not as a need. The cited caveat (A-UNIFICATION.md:173) does flag this sentence, but its point is \"the strongest no-axiom claims are exactly the ones with the least empirical content\", which D1 does not address.",
+      "fix": "\"None of this is proved with an axiom of logic, save the reading of our physics, …\". Describe caveat (i) by its actual point, or drop the citation."
+     },
+     {
+      "id": "OP-F1",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "Paragraph 1's \"nothing that unfolds can break them\" covers the whole set, paragraph 3's conditional laws included. [^conditions] (OPENING.md:61) says \"Several of these laws rely on whole-number amounts\" and \"with real-valued levels a bounded part can be new at every step\", and 02-MAP.md:217 says \"In denser amounts falling at every step need not end\". Paragraph 3 brings in amounts, not counted ones. So dropping \"and counted amounts\" removes the body's only statement of the commitment and widens the scope sentence. Taken with B, nothing in the body would carry the whole-unit premise.",
+      "fix": "Drop this F item."
+     },
+     {
+      "id": "OP-F2",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "I listed the labels. They use \"argued\" ([^alignment]), \"A conviction\" ([^turn]) and \"empirical\" ([^transitions]), and the proposed key line omits all three. No label says \"a thesis\". \"A premise stated and not asserted\" appears only in a note body ([^axiom]). So \"The notes use all seven\" is true only of note texts, and the new key line is still incomplete as a key.",
+      "fix": "List what the labels use, e.g. \"proved, proved under conditions, argued, empirical, a reading, a judgment, a conviction, or open\", or mark the list as examples."
+     },
+     {
+      "id": "OP-C3",
+      "confirmed": false,
+      "severity": "minor",
+      "reason": "Paragraph 6 defines the one step as \"for anything, not just oneself, its continuation into the future has significance\". That is the same thing as \"that the continuation of others matters too\", so C3 only names it, consistently with the body. Calling it part of \"the truth\" is Ren's first-person stance (paragraph 8: \"I take it to be the truth\"), not the work asserting the step. The tension the reviewer reads with C1 comes from a sense of \"step\" the proposal does not use in C3.",
+      "fix": "None needed."
+     },
+     {
+      "id": "OP-SRC",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "DF1b landed on 27 October: commit c1dd7cba3 is dated 2026-10-27, and the board says \"DF1b landed 27 October 2026\". The proposal's \"26 October\" is wrong. The §4.6 path was PW's of 24 October (commit 61db89224, \"07 §4.6 (PW's path, revised)\"), and PF (§402, 25 October) finished its steps, so \"(PF, 24 and 25 October)\" misattributes the work. The [Ren] link after \"restated with Ren's approval\" points to his message, not to the approval record 2026-10-30-goal-the-ethics-for-life-approved.md (\"> Yes, approve it\").",
+      "fix": "Write \"(PW, 24 October; its steps stated generally and its crux argued in PF, 25 October)\" and \"(27 October, …)\". Link the approval record for \"restated with Ren's approval\"."
+     },
+     {
+      "id": "OP-SCR",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "At :5 the proposal says \"it never contradicts the body\", and at :19 \"so A1 and A2 are the edits it needs alongside\". The rendered screen (mv-render/README.md:15, \"It is stated as life's way: no verdict binding every possible mind is claimed\") sits above a body that offers the law \"for all beings, in all universes\" (OPENING.md:21). Until A1 is applied, only [^ethics] reconciles them. As stated, the condition does not hold.",
+      "fix": "Restate the condition as it works: \"it says nothing the opening's notes do not support; where the body's wording is older, it states the current terms, and A1 and A2 would bring the body to them\"."
+     },
+     {
+      "id": "OP-NAME",
+      "confirmed": false,
+      "severity": "style",
+      "reason": "Paragraph 6 says that, given each one's presupposition and covering, \"the step is exactly this, and all of it: what matters from one standpoint matters from every other\". That is the glossary's step of invariance, \"the condition's content beyond the self's presupposition\" (GLOSSARY.md:62). 07 §4's table gives that content the scope role: it \"extends scope to losses that return to no one\". So \"the step for scope\" is consistent with the current account.",
+      "fix": "None needed."
+     },
+     {
+      "id": "OP-IND",
+      "confirmed": true,
+      "severity": "style",
+      "reason": "At :3 the proposal says \"Each edit below is independent of the others\". But A3 depends on A1 (:43, \"No change if A1 is taken\"), C2 is \"to match C1\" (:69), and the dateline option depends on whether the proposal is applied (:96).",
+      "fix": "\"Each edit can be taken or declined on its own, except A3 (see A1) and C2 (see C1).\""
+     }
+    ],
+    "missed": [
+     "theories/becoming/OPENING.md:77 [^good-evil] (the note this branch relabelled) still says \"With no axiom, a part compared with its absence widens what can form, narrows it, keeps it the same, or is mixed\". The record four-cases-of-a-part (Conditions: \"the split into four cases is classical logic over the two inclusions, not a Lean theorem\") and 07 §1 (\"that every comparison falls under one is classical\") say that only the mutual exclusion holds with no axiom; that every part falls under one case is classical. Minor. Fix: \"With no axiom the four cases exclude one another, and classically a part falls under one: it widens…\"."
+    ]
+   }
+  },
+  {
+   "lens": "CODE",
+   "review": {
+    "findings": [
+     {
+      "id": "CODE-1",
+      "severity": "minor",
+      "where": "tools/research/navigation.py:263-266 (time:PATH fields) with tools/research/research.py:252-254 and :308",
+      "claim": "The README now depends on the prose of ONE-PAGE.md and THE-THEORY-OF-BECOMING.md. A small edit to either one, by any session, makes `make research-check` fail hard on README.md. That contradicts the check's stated design: pages that follow chapters are reported, not failed.",
+      "evidence": "The check's docstring (research.py:252-254) says \"A stale directory index or catalogue is reported, not failed, so parallel sessions are not blocked by pages that follow chapters and studies\". README.md is a navigation output, though, so a difference is a hard error (research.py:308, 'generated view differs; reconcile and run make research-render: README.md'). I timed the mv-render copies with navigation.reading_time. Removing the last 8 words of ONE-PAGE.md changes '17–22 minutes' to '17–21 minutes'. Removing 32 words of the overview changes '104–135 minutes' to '103–135 minutes'. WHAT-REMAINS amendment 4 (ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md:395) schedules exactly this kind of cut to the one page and the overview.",
+      "fix": "Pick one and say it in the code. (a) Accept the coupling and state it in RESULT-WORKFLOW and in the screen file's leading comment: an edit to a timed file needs a README re-render. (b) Treat a README that differs only in its first-screen times like a stale index: report it, and fail it only under --strict-fresh."
+     },
+     {
+      "id": "CODE-2",
+      "severity": "minor",
+      "where": "tools/research/research.py:37-44 (input_snapshot)",
+      "claim": "The render's guard against inputs changing mid-render does not cover the new inputs: the readme_first_screen file and the files its {{time:...}} fields read. A concurrent edit to ONE-PAGE.md, the overview or README-FIRST-SCREEN.md during a render goes undetected and can write a stale README.",
+      "evidence": "input_snapshot adds only `config['readme_opening']` (lines 41-42), plus records, goals, config, history, master laws, law families and standard boundaries. readme_first_screen and the timed paths are not in it. readme_lead and readme_repository were already missing; this change adds three more unguarded inputs.",
+      "fix": "Add the readme_first_screen file to input_snapshot, and every path named in its {{time:PATH}} fields (readme_lead and readme_repository too)."
+     },
+     {
+      "id": "CODE-3",
+      "severity": "minor",
+      "where": "tools/research/navigation.py:257 and :269-270",
+      "claim": "{{time:screen}} is not computed over the screen as rendered. The text it times still holds the literal placeholder, which counts as 2 words ('time', 'screen'), but a filled range like '1–2 minutes' counts as 3. Near a rounding threshold, the stated time differs from the time of the page as it ends up.",
+      "evidence": "The second pass computes `reading_time(above + '\\n\\n' + screen)`, where `screen` still contains '{{time:screen}}'. Probe: a placeholder count of 194 gives '1–2 minutes', but the filled page then has 195 words, which times '2 minutes'. Filling '2 minutes' would bring it back to 194, so no stable value exists there. The same happens at 324/325 words. On the real screen, deleting ' so far' gives a 195-word rendered page that states '1–2 minutes' while reading_time of that page is '2 minutes'. The current screen counts 198, four words above the first trap. No test covers this.",
+      "fix": "Iterate the fill until the text stops changing (stop after two passes and take the longer time if it oscillates), or count the field as a fixed number of words. Add a test at 194/195 words."
+     },
+     {
+      "id": "CODE-4",
+      "severity": "minor",
+      "where": "commit 54203ad1c message ('199 words: 49 over the screen's 150'); _process/navigation/README-FIRST-SCREEN.md:1 ('the study section of its landing records the excess')",
+      "claim": "The screen's word count given in the commit (and expected by this review) is 199. AJ4's kit and navigation.prose_counts both give 198, so the screen is 48 over budget, not 49.",
+      "evidence": "In scratch, the kit's count(), copied verbatim from aj4-human, and navigation.prose_counts on mv-render/README.md up to the first '^## ' both return (198, 0). first_screen on mv-land's records and opening also gives 198. The leading comment says the landing's study section will record the excess, so 199/49 must not be copied there.",
+      "fix": "Record 198 words, 48 over, in the study section and the board line, or recompute at landing with the kit."
+     },
+     {
+      "id": "CODE-5",
+      "severity": "minor",
+      "where": "tools/research/navigation.py:238-241 (docstring '{{time:PATH}} is the reading time of a file of the repository') and :263-266",
+      "claim": "A {{time:PATH}} field may name a page the same render writes (README.md itself, RESULTS.md, GOALS.md, record pages, indexes). It then reads the copy left by the previous render, so after any render that changes that page, a check finds README.md stale. One render is not a fixed point, and nothing refuses or documents this.",
+      "evidence": "fill() calls `p.read_text()` on disk during render_views, before write_views writes the new outputs. research.py already needs a second pass for the Lean catalogue for the same reason (research.py: 'a second pass over it makes one render a fixed point'). first_screen has no such pass and no check that PATH is not a generated output.",
+      "fix": "Refuse a time:PATH that is a generated view (one of PAGES or carrying the 'Generated by' marker), or restrict PATH to non-generated documents in the docstring and the error."
+     },
+     {
+      "id": "CODE-6",
+      "severity": "minor",
+      "where": "tools/research/navigation.py:232 (FIRST_SCREEN_FIELD)",
+      "claim": "A malformed field is not an error. It is left verbatim in README, and neither validate_goals nor render/check flags it. Only the claim that an unknown field is refused holds, and only for the exact lowercase 'kind:arg' shape.",
+      "evidence": "FIRST_SCREEN_FIELD.findall('{{Time:screen}} {{ time:screen }} {{time}} {{time:screen}}') returns only [('time','screen')], so the other three pass through untouched. Only research-test's test_the_repository_first_screen_fills (assertNotIn('{{', screen)) would catch it, and only for the repository's own file.",
+      "fix": "After filling, raise if '{{' remains in the screen (or match r'\\{\\{[^}]*\\}\\}' and refuse what does not parse), inside first_screen so validate_goals reports it."
+     },
+     {
+      "id": "CODE-7",
+      "severity": "minor",
+      "where": "tools/research/navigation.py:52-54 (adapt_links' new branch)",
+      "claim": "The new same-page branch has no unit test. It also drops the angle brackets of a bracketed target, which the old path kept, so a bracketed self-link whose fragment holds a space renders as a broken link.",
+      "evidence": "No test in tools/research/tests mentions adapt_links, '#truth-exists' or the branch; the README tests check order and filled fields, not the links. adapt_links('[x](<../../README.md#a b>)', '_process/navigation/README-FIRST-SCREEN.md', 'README.md') returns '[x](#a b)', while the BRIEF destination keeps '[x](<../README.md#a b>)'. Running the old and new adapt_links on all four readme_* inputs, for README.md and _process/BRIEF.md, in both worktrees, only the first screen's two links change, so no other page is affected now.",
+      "fix": "Return '<#' + fragment + '>' when `angle` (or the fragment holds a space). Add a test: a link into the destination with a fragment becomes '#frag'; one with a query, one without a fragment, and one in the other destination stay relative."
+     },
+     {
+      "id": "CODE-8",
+      "severity": "style",
+      "where": "tools/research/navigation.py:228",
+      "claim": "Whole minutes use Python's round(), which rounds halves to even. Exact halves therefore round down or up depending on parity, unlike the kit's decimal display.",
+      "evidence": "reading_time('w ' * 250) gives '2 minutes', although the slow rate gives 2.5. reading_time('w ' * 350) gives '3–4 minutes' (3.5 rounded up). The kit (measure_layers.minutes) prints '1.9–2.5' and '2.7–3.5'.",
+      "fix": "Round half up (int(x + 0.5)), or state the rounding in the docstring."
+     },
+     {
+      "id": "CODE-9",
+      "severity": "style",
+      "where": "tools/research/navigation.py:318 (validate_goals)",
+      "claim": "When readme_opening fails, validate_goals reports the same error twice: once from the readme_opening check and again from first_screen's call to readme_opening(). While the opening fails, first_screen's own errors are hidden.",
+      "evidence": "`readme_opening, lambda: first_screen(records, readme_opening())`: both lambdas raise the same ValueError('readme_opening refers to a missing file: ...'). The existing test uses any(), so the duplicate is not caught.",
+      "fix": "Compute the opening once in validate_goals (try/except), and call first_screen with it, or with '' when it failed."
+     },
+     {
+      "id": "CODE-10",
+      "severity": "style",
+      "where": "_process/navigation/README-FIRST-SCREEN.md:1 (leading comment) with tools/research/navigation.py:263-265",
+      "claim": "The editors' comment says 'Links are relative to this file.' but does not say that {{time:PATH}} paths are repository-relative. An editor who writes the field the way the neighbouring link is written gets 'times a missing file' for a file that exists.",
+      "evidence": "The same line pairs '[The one page](../../theories/becoming/ONE-PAGE.md)' with '{{time:theories/becoming/ONE-PAGE.md}}'. '{{time:../../theories/becoming/ONE-PAGE.md}}' resolves outside the root and raises 'readme_first_screen times a missing file'.",
+      "fix": "Add to the comment: field paths are relative to the repository root. Optionally, say so in the error message too."
+     }
+    ],
+    "checked": [
+     "visible_prose and prose_counts match AJ4's kit (aj4-human measure_layers.py visible() and count()) character for character: the same five stripping regexes (code fences, comments, link targets, anchors and sup markers, Quote/Source prefixes), the same word regex and the same CJK range. The kit gives decimal minutes, navigation whole minutes.",
+     "Run side by side in scratch, the two counters agree on every input: mv-render README first screen (198, 0), ONE-PAGE.md (2154, 6), the overview (13460, 52), and the opening from '## Truth exists' to '### Notes' (2442, 39). The rendered times '17–22', '104–135' and '19–25' minutes and '2 minutes' follow from these counts.",
+     "Error cases: {{size:x}} (unknown field), {{count:accepted}} (unknown status), a missing file, a path outside the root, and {{time:notes}} or {{time:opening}} when the opening lacks that part each raise ValueError. validate_goals catches ValueError (UnicodeDecodeError is a subclass), so render and check stop before render_views with a clean error.",
+     "validate_goals calls first_screen with the same config, root, records and readme_opening() output as render_views. Only `above` differs, and that affects only the {{time:screen}} value, which cannot raise.",
+     "The render order is title, marker, navigation, status line, the screen, '---', the opening, '---', the lead, then 'What is established'. The screen is skipped when readme_first_screen is unset, and still placed when there is no opening.",
+     "{{time:screen}} times `above` (from registry.finish of title, marker, navigation and status) together with the file. That is the same span the kit takes, from the file start to the first '^## ', apart from the placeholder issue (CODE-3). The render is deterministic, so it does not flip between renders.",
+     "{{count:registered}} (506) and {{count:recorded-checked}} (475) agree with RESULTS.md's count sentence, which comes from the same counts().",
+     "adapt_links, old against new, on readme_first_screen, readme_opening, readme_lead and readme_repository for both README.md and _process/BRIEF.md, in mv-land and mv-render: only the two first-screen links ('#truth-exists' and '#notes') change. preserve() and the history reading editions are unaffected: their destination is the reading-edition path, never the original's target, and preserve runs only through preserve_view. A link with a query, a fragment-less self-link, and a link to the other destination stay relative. '#notes' and '#truth-exists' resolve to the README's only '### Notes' and '## Truth exists' headings.",
+     "A screen file without a leading comment works (the comment strip is optional). The new marker text names readme_first_screen.",
+     "FirstScreenTests and OpeningTests (10 tests) pass when run with python3 -B, and git status stayed clean.",
+     "The given base c3a2f0fc4 is not an ancestor of 247558c7c (merge base 1aa84fd59). The UE26 board row that the requested diff shows as removed was added on main later; the branch did not remove it. Main changed nothing in tools/ or the config since the merge base.",
+     "mv-land's committed README.md is not re-rendered; it still has the old marker and no screen, so it is regenerated at landing, as the rendered copy mv-render shows."
+    ]
+   },
+   "verify": {
+    "verdicts": [
+     {
+      "id": "CODE-1",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "Confirmed. README.md is a navigation output, so research.py:305-308 fails hard when it differs. The {{time:PATH}} fields (navigation.py:263-266) now make README depend on the prose of ONE-PAGE.md and the overview. Neither file is generated, and no record cites ONE-PAGE.md, so before this change an edit to it needed no render. Your numbers check out: ONE-PAGE has 2154 words and 6 characters (16.59 to 21.57 minutes), so cutting 8 words turns 22 into 21. The overview has 13460 words and 52 characters (fast rate 103.74), so cutting 32 words turns 104 into 103. One overstatement: the check's docstring exempts only directory indexes and catalogues, and README is neither, so this does not literally contradict a stated design. It is an undocumented new coupling. README_MARKER (navigation.py:28) and the screen file's leading comment both list only the readme_* files as README's inputs.",
+      "fix": "Document the coupling. Add to README_MARKER and to README-FIRST-SCREEN.md's leading comment that README also depends on the files its {{time:PATH}} fields name, so an edit to them needs make research-render. Add one sentence saying the same to RESULT-WORKFLOW. Option (b) from the finding, reporting time-only differences as stale, can come later if it is wanted."
+     },
+     {
+      "id": "CODE-2",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "Confirmed. research.py:37-55: input_snapshot adds readme_opening (lines 41-42) but not readme_first_screen or the files its time fields read. unchanged_inputs(before) at research.py:293 and :318 therefore cannot detect a concurrent edit to README-FIRST-SCREEN.md, ONE-PAGE.md or the overview. readme_lead and readme_repository were already left out. readme_first_screen is the direct sibling of readme_opening, which the guard does include. The impact is narrow: a README that is stale by one edit, which the next check reports.",
+      "fix": "In input_snapshot, add ROOT / config['readme_first_screen'] when it is a string, the same way readme_opening is handled. Adding readme_lead and readme_repository would also be reasonable. The timed paths can be added by parsing the file's {{time:PATH}} fields."
+     },
+     {
+      "id": "CODE-3",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "The mechanism is confirmed. The second pass (navigation.py:257, :270) times the text while '{{time:screen}}' is still in it, and that placeholder counts as 2 words ('time', 'screen'). '1–2 minutes' counts as 3. I ran first_screen on synthetic screens. At a placeholder count of 194 it states '1–2 minutes', but the filled page has 195 words and reading_time gives '2 minutes'. The same happens at 325, where it states '2–3 minutes' and the page times '3 minutes'. Filling the other value brings the count back to 194, so no fixed point exists there. Your concrete example on the real screen is wrong. The placeholder screen counts 198 (kit and prose_counts agree), and deleting ' so far' gives 196 words, which states '2 minutes' consistently. The trap is 4 words below the current screen, not 2. No test covers the threshold.",
+      "fix": "Time the screen with the field's own text taken out, by substituting '' for {{time:screen}} before counting, and say in the docstring that the time excludes itself. Or fill, recount and refill once, and keep the longer time when the two disagree. Add a test at 194/195 words."
+     },
+     {
+      "id": "CODE-4",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "Confirmed. I ran the kit's visible()/count(), copied verbatim from aj4-human's measure_layers.py, and navigation.prose_counts on mv-render/README.md up to the first '^## '. Both give (198, 0). With the placeholder in place of '2 minutes' the count is also 198. The screen file's text has the same word count at 54203ad1c and at 247558c7c; only link targets changed. So the commit message's '199 words: 49 over the screen's 150' is off by one: it should be 198 and 48. No file on the branch carries the figure yet. The leading comment says a later study section will record it.",
+      "fix": "Write 198 words, 48 over, in the study section and the board line at landing. Better, compute the figure there with prose_counts or the kit instead of copying it. If the branch has not landed yet, the commit message can be reworded."
+     },
+     {
+      "id": "CODE-5",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "Confirmed by the code path. fill() reads p.read_text() from disk (navigation.py:266) during render_views, before write_views writes the new outputs. A {{time:PATH}} naming a page the same render writes (README.md, RESULTS.md, GOALS.md, a record page or an index) therefore times the previous render's copy. When that page's time crosses a rounding step, the next check reports README.md as differing. Nothing refuses such a path, and the docstring allows 'a file of the repository'. No current field names a generated page (ONE-PAGE.md and the overview carry no 'Generated by' marker), so this is a trap for a later edit, not a current wrong output.",
+      "fix": "In fill(), refuse a PATH whose text contains '<!-- Generated by ' or that is in PAGES, with an error such as 'readme_first_screen times a generated page: PATH'. State the restriction in the docstring."
+     },
+     {
+      "id": "CODE-6",
+      "confirmed": true,
+      "severity": "style",
+      "reason": "Confirmed. FIRST_SCREEN_FIELD.findall('{{Time:screen}} {{ time:screen }} {{time}} {{time:screen}}') returns only [('time','screen')], so the other three would reach README verbatim, and validate_goals would not report them. Downgraded from minor: research-test's test_the_repository_first_screen_fills asserts assertNotIn('{{', screen) on the repository's own file, and the landing practice runs the tests. A typo is caught there before landing, though not by research-check.",
+      "fix": "At the end of first_screen, raise ValueError('readme_first_screen has a malformed field: ...') when '{{' remains in the filled screen, so that validate_goals reports it."
+     },
+     {
+      "id": "CODE-7",
+      "confirmed": true,
+      "severity": "minor",
+      "reason": "Confirmed. No test in tools/research/tests mentions adapt_links, '#truth-exists' or '#notes'. The new branch (navigation.py:52-54) produces the two in-page links of the real README, and nothing in research-test asserts them. research.py's check_links (line 182, 'if part.scheme or not part.path: continue') skips path-less '#frag' targets, so only research-links (moves.check_links, which checks same-page anchors in generated files) verifies them after the write. My probe matches yours: '[x](<../../README.md#a b>)' becomes '[x](#a b)' for README and '[x](<../README.md#a b>)' for BRIEF. A query, an empty fragment, a fragment-less self-link and a directory link all keep the old behaviour. The dropped angle brackets only matter for a fragment containing a space, and GitHub anchors never contain one. I found no other caller affected: preserve() targets the reading edition itself, and validate_history only compares hashes.",
+      "fix": "In the branch, return ('<#' + parsed.fragment + '>') if angle else '#' + parsed.fragment. Add a unit test: a link into the destination with a fragment becomes '#frag', while links with a query, without a fragment, or placed in BRIEF stay relative."
+     },
+     {
+      "id": "CODE-8",
+      "confirmed": true,
+      "severity": "style",
+      "reason": "Confirmed. reading_time uses Python's round(), which rounds halves to even. 250 words (slow rate 2.5) give '2 minutes', and 350 words (3.5) give '3–4 minutes'. The kit does not round to whole minutes at all; it prints one decimal. So there is no rule to break, only uneven treatment of exact halves.",
+      "fix": "Use int(x + 0.5) for both rates, or say 'rounded half to even' in the docstring."
+     },
+     {
+      "id": "CODE-9",
+      "confirmed": true,
+      "severity": "style",
+      "reason": "Confirmed by running it. With readme_opening set to 'missing-opening.md', validate_goals returns 'readme_opening refers to a missing file: missing-opening.md' twice: once from the readme_opening check and once from the first_screen lambda's call to readme_opening(). While the opening fails, first_screen's own errors are hidden.",
+      "fix": "In validate_goals, compute the opening once: try opening = readme_opening(), and on ValueError append the error and set opening = ''. Then check first_screen(records, opening) as its own item."
+     },
+     {
+      "id": "CODE-10",
+      "confirmed": true,
+      "severity": "style",
+      "reason": "Confirmed. README-FIRST-SCREEN.md:1 says 'Links are relative to this file.' and never says that field paths are relative to the repository root. On line 8, the link '../../theories/becoming/ONE-PAGE.md' sits beside '{{time:theories/becoming/ONE-PAGE.md}}'. '{{time:../../theories/becoming/ONE-PAGE.md}}' resolves outside the root and raises 'times a missing file' for a file that exists.",
+      "fix": "Add to the leading comment: 'paths in {{time:PATH}} are relative to the repository root.' Optionally add 'repository-relative' to the missing-file error."
+     }
+    ],
+    "missed": []
+   }
+  }
+ ]
+}

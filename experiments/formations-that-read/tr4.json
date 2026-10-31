@@ -1,0 +1,3755 @@
+{
+ "test": "TR4",
+ "law": "RF6.1",
+ "record": "a-revision-that-opens-a-correction",
+ "module": "Becoming.OpenedCorrection",
+ "seed": 20261031,
+ "bounds": {
+  "revising_stock_max": 8,
+  "trace_length_max": 5,
+  "k_lines": 3,
+  "k_line_stock_max": 4
+ },
+ "revising": {
+  "determined": true,
+  "rebuild_enabled_iff": true,
+  "correction_enabled_iff": true,
+  "opened_keeps": true,
+  "opened_choice": true,
+  "closed_loses": true,
+  "old_cannot_select_rebuild": true,
+  "rebuild_then_close": true,
+  "opens_without_correction": true,
+  "opens_with_correction": true,
+  "closes_choice": true,
+  "chosen_step": true,
+  "controlled_revision": true,
+  "controlled_run": [
+   {
+    "step": 0,
+    "state": [
+     0,
+     false,
+     false
+    ],
+    "act": ".replenish",
+    "correctable": false
+   },
+   {
+    "step": 1,
+    "state": [
+     1,
+     false,
+     false
+    ],
+    "act": ".rebuild true",
+    "correctable": false
+   },
+   {
+    "step": 2,
+    "state": [
+     0,
+     true,
+     false
+    ],
+    "act": ".replenish",
+    "correctable": false
+   },
+   {
+    "step": 3,
+    "state": [
+     1,
+     true,
+     false
+    ],
+    "act": ".correct",
+    "correctable": true
+   },
+   {
+    "step": 4,
+    "state": [
+     0,
+     true,
+     true
+    ],
+    "act": ".replenish",
+    "correctable": false
+   },
+   {
+    "step": 5,
+    "state": [
+     1,
+     true,
+     true
+    ],
+    "act": ".correct",
+    "correctable": true
+   },
+   {
+    "step": 6,
+    "state": [
+     0,
+     true,
+     true
+    ],
+    "act": ".replenish",
+    "correctable": false
+   },
+   {
+    "step": 7,
+    "state": [
+     1,
+     true,
+     true
+    ],
+    "act": ".correct",
+    "correctable": true
+   }
+  ],
+  "step_iff": true,
+  "feasible_iff": true,
+  "feasible_iff_cases": 27300,
+  "covered_not_enacted": true,
+  "linked_not_enacted": true,
+  "rebuild_opens_keeps": true
+ },
+ "linked": {
+  "brute_equals_fiber": true,
+  "unlinked_uncorrectable": true,
+  "linked_correctable": true,
+  "starved_uncorrectable": true,
+  "opens": true,
+  "rebuilt_starved": true,
+  "opens_after_replenishing": true,
+  "opens_by_support": true,
+  "widened_unlinked": true,
+  "widened_every_configuration": true,
+  "classification_inference": true,
+  "table": [
+   {
+    "state": [
+     0,
+     false,
+     false
+    ],
+    "correctable": false,
+    "executable": [
+     ".replenish"
+    ]
+   },
+   {
+    "state": [
+     0,
+     false,
+     true
+    ],
+    "correctable": false,
+    "executable": [
+     ".replenish"
+    ]
+   },
+   {
+    "state": [
+     0,
+     true,
+     false
+    ],
+    "correctable": false,
+    "executable": [
+     ".replenish"
+    ]
+   },
+   {
+    "state": [
+     0,
+     true,
+     true
+    ],
+    "correctable": false,
+    "executable": [
+     ".replenish"
+    ]
+   },
+   {
+    "state": [
+     1,
+     false,
+     false
+    ],
+    "correctable": false,
+    "executable": [
+     ".replenish",
+     ".rebuild false",
+     ".rebuild true"
+    ]
+   },
+   {
+    "state": [
+     1,
+     false,
+     true
+    ],
+    "correctable": false,
+    "executable": [
+     ".replenish",
+     ".rebuild false",
+     ".rebuild true"
+    ]
+   },
+   {
+    "state": [
+     1,
+     true,
+     false
+    ],
+    "correctable": true,
+    "executable": [
+     ".replenish",
+     ".rebuild false",
+     ".rebuild true",
+     ".correct"
+    ]
+   },
+   {
+    "state": [
+     1,
+     true,
+     true
+    ],
+    "correctable": true,
+    "executable": [
+     ".replenish",
+     ".rebuild false",
+     ".rebuild true",
+     ".correct"
+    ]
+   },
+   {
+    "state": [
+     2,
+     false,
+     false
+    ],
+    "correctable": false,
+    "executable": [
+     ".replenish",
+     ".rebuild false",
+     ".rebuild true"
+    ]
+   },
+   {
+    "state": [
+     2,
+     false,
+     true
+    ],
+    "correctable": false,
+    "executable": [
+     ".replenish",
+     ".rebuild false",
+     ".rebuild true"
+    ]
+   },
+   {
+    "state": [
+     2,
+     true,
+     false
+    ],
+    "correctable": true,
+    "executable": [
+     ".replenish",
+     ".rebuild false",
+     ".rebuild true",
+     ".correct"
+    ]
+   },
+   {
+    "state": [
+     2,
+     true,
+     true
+    ],
+    "correctable": true,
+    "executable": [
+     ".replenish",
+     ".rebuild false",
+     ".rebuild true",
+     ".correct"
+    ]
+   },
+   {
+    "state": [
+     3,
+     false,
+     false
+    ],
+    "correctable": false,
+    "executable": [
+     ".replenish",
+     ".rebuild false",
+     ".rebuild true"
+    ]
+   },
+   {
+    "state": [
+     3,
+     false,
+     true
+    ],
+    "correctable": false,
+    "executable": [
+     ".replenish",
+     ".rebuild false",
+     ".rebuild true"
+    ]
+   },
+   {
+    "state": [
+     3,
+     true,
+     false
+    ],
+    "correctable": true,
+    "executable": [
+     ".replenish",
+     ".rebuild false",
+     ".rebuild true",
+     ".correct"
+    ]
+   },
+   {
+    "state": [
+     3,
+     true,
+     true
+    ],
+    "correctable": true,
+    "executable": [
+     ".replenish",
+     ".rebuild false",
+     ".rebuild true",
+     ".correct"
+    ]
+   }
+  ]
+ },
+ "revising_openings": {
+  "rows": [
+   {
+    "from": [
+     0,
+     false,
+     false
+    ],
+    "shortest_opening_steps": 3,
+    "witness_trace": [
+     ".replenish",
+     ".replenish",
+     ".rebuild true"
+    ],
+    "witness_end": [
+     1,
+     true,
+     false
+    ],
+    "witness_source": "both needed",
+    "ends_within_L": 4
+   },
+   {
+    "from": [
+     0,
+     false,
+     true
+    ],
+    "shortest_opening_steps": 3,
+    "witness_trace": [
+     ".replenish",
+     ".replenish",
+     ".rebuild true"
+    ],
+    "witness_end": [
+     1,
+     true,
+     true
+    ],
+    "witness_source": "both needed",
+    "ends_within_L": 3
+   },
+   {
+    "from": [
+     0,
+     true,
+     false
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     ".replenish"
+    ],
+    "witness_end": [
+     1,
+     true,
+     false
+    ],
+    "witness_source": "executability alone",
+    "ends_within_L": 8
+   },
+   {
+    "from": [
+     0,
+     true,
+     true
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     ".replenish"
+    ],
+    "witness_end": [
+     1,
+     true,
+     true
+    ],
+    "witness_source": "executability alone",
+    "ends_within_L": 5
+   },
+   {
+    "from": [
+     1,
+     false,
+     false
+    ],
+    "shortest_opening_steps": 2,
+    "witness_trace": [
+     ".replenish",
+     ".rebuild true"
+    ],
+    "witness_end": [
+     1,
+     true,
+     false
+    ],
+    "witness_source": "both needed",
+    "ends_within_L": 6
+   },
+   {
+    "from": [
+     1,
+     false,
+     true
+    ],
+    "shortest_opening_steps": 2,
+    "witness_trace": [
+     ".replenish",
+     ".rebuild true"
+    ],
+    "witness_end": [
+     1,
+     true,
+     true
+    ],
+    "witness_source": "both needed",
+    "ends_within_L": 4
+   },
+   {
+    "from": [
+     2,
+     false,
+     false
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     ".rebuild true"
+    ],
+    "witness_end": [
+     1,
+     true,
+     false
+    ],
+    "witness_source": "both needed",
+    "ends_within_L": 8
+   },
+   {
+    "from": [
+     2,
+     false,
+     true
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     ".rebuild true"
+    ],
+    "witness_end": [
+     1,
+     true,
+     true
+    ],
+    "witness_source": "both needed",
+    "ends_within_L": 5
+   },
+   {
+    "from": [
+     3,
+     false,
+     false
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     ".rebuild true"
+    ],
+    "witness_end": [
+     2,
+     true,
+     false
+    ],
+    "witness_source": "both needed",
+    "ends_within_L": 10
+   },
+   {
+    "from": [
+     3,
+     false,
+     true
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     ".rebuild true"
+    ],
+    "witness_end": [
+     2,
+     true,
+     true
+    ],
+    "witness_source": "both needed",
+    "ends_within_L": 6
+   },
+   {
+    "from": [
+     4,
+     false,
+     false
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     ".rebuild true"
+    ],
+    "witness_end": [
+     3,
+     true,
+     false
+    ],
+    "witness_source": "both needed",
+    "ends_within_L": 12
+   },
+   {
+    "from": [
+     4,
+     false,
+     true
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     ".rebuild true"
+    ],
+    "witness_end": [
+     3,
+     true,
+     true
+    ],
+    "witness_source": "both needed",
+    "ends_within_L": 7
+   }
+  ],
+  "source_counts_over_all_ends_within_L": {
+   "both needed": 65,
+   "executability alone": 13
+  },
+  "orders_from_one_unit": {
+   "False": {
+    "rebuild_then_replenish_reaches": true,
+    "replenish_then_rebuild_reaches": true,
+    "intermediate_after_rebuild": [
+     0,
+     true,
+     false
+    ],
+    "intermediate_after_replenish": [
+     2,
+     false,
+     false
+    ],
+    "both_intermediates_uncorrectable": true
+   },
+   "True": {
+    "rebuild_then_replenish_reaches": true,
+    "replenish_then_rebuild_reaches": true,
+    "intermediate_after_rebuild": [
+     0,
+     true,
+     true
+    ],
+    "intermediate_after_replenish": [
+     2,
+     false,
+     true
+    ],
+    "both_intermediates_uncorrectable": true
+   }
+  }
+ },
+ "revising_monotonicity": {
+  "pairs": 576,
+  "maps": 4,
+  "finer_keeps": {
+   "premises_met": 100,
+   "violations": 0
+  },
+  "coarser_opens_nothing": {
+   "premises_met": 496,
+   "violations": 0,
+   "violations_without_the_trace": 0
+  },
+  "reach_bound": "traces within stock <= 5; the second count asks no trace, as the proof (finer_keeps with the roles exchanged) needs none"
+ },
+ "controllers": {
+  "Revising.choose (controlled_revision)": {
+   "course": [
+    {
+     "step": 0,
+     "state": [
+      0,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 1,
+     "state": [
+      1,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".rebuild true",
+     "enabled": true
+    },
+    {
+     "step": 2,
+     "state": [
+      0,
+      true,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 3,
+     "state": [
+      1,
+      true,
+      false
+     ],
+     "correctable": true,
+     "act": ".correct",
+     "enabled": true
+    },
+    {
+     "step": 4,
+     "state": [
+      0,
+      true,
+      true
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 5,
+     "state": [
+      1,
+      true,
+      true
+     ],
+     "correctable": true,
+     "act": ".correct",
+     "enabled": true
+    },
+    {
+     "step": 6,
+     "state": [
+      0,
+      true,
+      true
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 7,
+     "state": [
+      1,
+      true,
+      true
+     ],
+     "correctable": true,
+     "act": ".correct",
+     "enabled": true
+    }
+   ],
+   "first_correctable_step": 3,
+   "first_correction_step": 3
+  },
+  "replenish first": {
+   "course": [
+    {
+     "step": 0,
+     "state": [
+      0,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 1,
+     "state": [
+      1,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 2,
+     "state": [
+      2,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".rebuild true",
+     "enabled": true
+    },
+    {
+     "step": 3,
+     "state": [
+      1,
+      true,
+      false
+     ],
+     "correctable": true,
+     "act": ".correct",
+     "enabled": true
+    },
+    {
+     "step": 4,
+     "state": [
+      0,
+      true,
+      true
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 5,
+     "state": [
+      1,
+      true,
+      true
+     ],
+     "correctable": true,
+     "act": ".correct",
+     "enabled": true
+    },
+    {
+     "step": 6,
+     "state": [
+      0,
+      true,
+      true
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 7,
+     "state": [
+      1,
+      true,
+      true
+     ],
+     "correctable": true,
+     "act": ".correct",
+     "enabled": true
+    }
+   ],
+   "first_correctable_step": 3,
+   "first_correction_step": 3
+  },
+  "never rebuild (by count only)": {
+   "course": [
+    {
+     "step": 0,
+     "state": [
+      0,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 1,
+     "state": [
+      1,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 2,
+     "state": [
+      2,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 3,
+     "state": [
+      3,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 4,
+     "state": [
+      4,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 5,
+     "state": [
+      5,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 6,
+     "state": [
+      6,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 7,
+     "state": [
+      7,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    }
+   ],
+   "first_correctable_step": null,
+   "first_correction_step": null
+  },
+  "refuser (correctable, never corrects)": {
+   "course": [
+    {
+     "step": 0,
+     "state": [
+      0,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 1,
+     "state": [
+      1,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".rebuild true",
+     "enabled": true
+    },
+    {
+     "step": 2,
+     "state": [
+      0,
+      true,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 3,
+     "state": [
+      1,
+      true,
+      false
+     ],
+     "correctable": true,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 4,
+     "state": [
+      2,
+      true,
+      false
+     ],
+     "correctable": true,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 5,
+     "state": [
+      3,
+      true,
+      false
+     ],
+     "correctable": true,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 6,
+     "state": [
+      4,
+      true,
+      false
+     ],
+     "correctable": true,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 7,
+     "state": [
+      5,
+      true,
+      false
+     ],
+     "correctable": true,
+     "act": ".replenish",
+     "enabled": true
+    }
+   ],
+   "first_correctable_step": 3,
+   "first_correction_step": null
+  },
+  "summary reviser (rebuild false)": {
+   "course": [
+    {
+     "step": 0,
+     "state": [
+      2,
+      true,
+      false
+     ],
+     "correctable": true,
+     "act": ".rebuild false",
+     "enabled": true
+    },
+    {
+     "step": 1,
+     "state": [
+      1,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 2,
+     "state": [
+      2,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 3,
+     "state": [
+      3,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 4,
+     "state": [
+      4,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 5,
+     "state": [
+      5,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 6,
+     "state": [
+      6,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    },
+    {
+     "step": 7,
+     "state": [
+      7,
+      false,
+      false
+     ],
+     "correctable": false,
+     "act": ".replenish",
+     "enabled": true
+    }
+   ],
+   "first_correctable_step": 0,
+   "first_correction_step": null
+  }
+ },
+ "plan_controls": [
+  {
+   "control": "a finer reading with no stock",
+   "configuration": [
+    0,
+    true,
+    false
+   ],
+   "correctable": false,
+   "reached_from": [
+    1,
+    false,
+    false
+   ],
+   "by": ".rebuild true (rebuilt_starved)",
+   "opened_by": ".replenish, one step (opens_by_support)",
+   "source": "executability alone"
+  },
+  {
+   "control": "a finer reading with no stock",
+   "configuration": [
+    0,
+    true,
+    true
+   ],
+   "correctable": false,
+   "reached_from": [
+    1,
+    false,
+    true
+   ],
+   "by": ".rebuild true (rebuilt_starved)",
+   "opened_by": ".replenish, one step (opens_by_support)",
+   "source": "executability alone"
+  },
+  {
+   "control": "stock with no link",
+   "configuration": [
+    0,
+    false,
+    false
+   ],
+   "correctable": false,
+   "shortest_opening_steps": 3,
+   "computed_shortest": 3
+  },
+  {
+   "control": "stock with no link",
+   "configuration": [
+    1,
+    false,
+    false
+   ],
+   "correctable": false,
+   "shortest_opening_steps": 2,
+   "computed_shortest": 2
+  },
+  {
+   "control": "stock with no link",
+   "configuration": [
+    2,
+    false,
+    false
+   ],
+   "correctable": false,
+   "shortest_opening_steps": 1,
+   "computed_shortest": 1
+  },
+  {
+   "control": "stock with no link",
+   "configuration": [
+    3,
+    false,
+    false
+   ],
+   "correctable": false,
+   "shortest_opening_steps": 1,
+   "computed_shortest": 1
+  },
+  {
+   "control": "a correction available but refused",
+   "configuration": [
+    1,
+    true,
+    false
+   ],
+   "correctable": true,
+   "role": "scoring control: correctability is computed from the table, never from corrections taken; it carries no verdict"
+  },
+  {
+   "control": "a correction available but refused",
+   "configuration": [
+    2,
+    true,
+    false
+   ],
+   "correctable": true,
+   "role": "scoring control: correctability is computed from the table, never from corrections taken; it carries no verdict"
+  },
+  {
+   "control": "widened acceptability (added)",
+   "every_configuration_correctable": true,
+   "role": "an opening counts only with acceptability frozen before and apart from every act"
+  },
+  {
+   "control": "a coarser revision, a summary measure (added)",
+   "pairs": [
+    {
+     "from": [
+      1,
+      true,
+      false
+     ],
+     "to": [
+      0,
+      false,
+      false
+     ],
+     "coarser_with_const_false": true,
+     "no_executability_gained": true,
+     "opens": false,
+     "closes": true
+    },
+    {
+     "from": [
+      2,
+      true,
+      false
+     ],
+     "to": [
+      1,
+      false,
+      false
+     ],
+     "coarser_with_const_false": true,
+     "no_executability_gained": true,
+     "opens": false,
+     "closes": true
+    },
+    {
+     "from": [
+      3,
+      true,
+      false
+     ],
+     "to": [
+      2,
+      false,
+      false
+     ],
+     "coarser_with_const_false": true,
+     "no_executability_gained": true,
+     "opens": false,
+     "closes": true
+    }
+   ]
+  }
+ ],
+ "rival_scorings": {
+  "drawn_situations": {
+   "needed_rate": "1/10",
+   "rows": [
+    {
+     "configuration": [
+      0,
+      false,
+      false
+     ],
+     "correctable": false,
+     "best_expected_success_on_drawn_situations_at_f_1_10": "9/10",
+     "as_float": 0.9
+    },
+    {
+     "configuration": [
+      1,
+      false,
+      false
+     ],
+     "correctable": false,
+     "best_expected_success_on_drawn_situations_at_f_1_10": "9/10",
+     "as_float": 0.9
+    },
+    {
+     "configuration": [
+      2,
+      false,
+      false
+     ],
+     "correctable": false,
+     "best_expected_success_on_drawn_situations_at_f_1_10": "9/10",
+     "as_float": 0.9
+    },
+    {
+     "configuration": [
+      0,
+      true,
+      false
+     ],
+     "correctable": false,
+     "best_expected_success_on_drawn_situations_at_f_1_10": "9/10",
+     "as_float": 0.9
+    },
+    {
+     "configuration": [
+      1,
+      true,
+      false
+     ],
+     "correctable": true,
+     "best_expected_success_on_drawn_situations_at_f_1_10": "1",
+     "as_float": 1.0
+    }
+   ],
+   "reading": "at the link off the best drawn success is 9/10 though no configuration there is correctable: success on drawn situations is not uniform correctability"
+  },
+  "corrections_taken": {
+   "refuser_first_correction": null,
+   "reading": "counting corrections taken reads the refuser, correctable from step 3, as never opened"
+  },
+  "unfrozen_acceptability": {
+   "every_configuration_correctable_when_widened": true,
+   "openings_countable": 0
+  },
+  "openings_read_as_revisions": {
+   "opens_by_support_reading_changed": false,
+   "reading": "the opening from (0, true, v) changes no reading"
+  }
+ },
+ "kline_decoupled": {
+  "coupled": false,
+  "correctable_by_rule_and_stock": {
+   "line": [
+    false,
+    true,
+    true,
+    true,
+    true
+   ],
+   "count": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "none": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ]
+  },
+  "openings": [
+   {
+    "from": [
+     0,
+     "line"
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     "rep"
+    ],
+    "witness_end": [
+     1,
+     "line"
+    ],
+    "witness_source": "executability alone",
+    "sources_over_ends": {
+     "executability alone": 4
+    }
+   },
+   {
+    "from": [
+     0,
+     "count"
+    ],
+    "shortest_opening_steps": 3,
+    "witness_trace": [
+     "rep",
+     "rep",
+     "rb_line"
+    ],
+    "witness_end": [
+     1,
+     "line"
+    ],
+    "witness_source": "both needed",
+    "sources_over_ends": {
+     "both needed": 3
+    }
+   },
+   {
+    "from": [
+     0,
+     "none"
+    ],
+    "shortest_opening_steps": 3,
+    "witness_trace": [
+     "rep",
+     "rep",
+     "rb_line"
+    ],
+    "witness_end": [
+     1,
+     "line"
+    ],
+    "witness_source": "both needed",
+    "sources_over_ends": {
+     "both needed": 3
+    }
+   },
+   {
+    "from": [
+     1,
+     "count"
+    ],
+    "shortest_opening_steps": 2,
+    "witness_trace": [
+     "rep",
+     "rb_line"
+    ],
+    "witness_end": [
+     1,
+     "line"
+    ],
+    "witness_source": "the reading alone",
+    "sources_over_ends": {
+     "the reading alone": 4
+    }
+   },
+   {
+    "from": [
+     1,
+     "none"
+    ],
+    "shortest_opening_steps": 2,
+    "witness_trace": [
+     "rep",
+     "rb_line"
+    ],
+    "witness_end": [
+     1,
+     "line"
+    ],
+    "witness_source": "the reading alone",
+    "sources_over_ends": {
+     "the reading alone": 4
+    }
+   },
+   {
+    "from": [
+     2,
+     "count"
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     "rb_line"
+    ],
+    "witness_end": [
+     1,
+     "line"
+    ],
+    "witness_source": "the reading alone",
+    "sources_over_ends": {
+     "the reading alone": 4
+    }
+   },
+   {
+    "from": [
+     2,
+     "none"
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     "rb_line"
+    ],
+    "witness_end": [
+     1,
+     "line"
+    ],
+    "witness_source": "the reading alone",
+    "sources_over_ends": {
+     "the reading alone": 4
+    }
+   },
+   {
+    "from": [
+     3,
+     "count"
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     "rb_line"
+    ],
+    "witness_end": [
+     2,
+     "line"
+    ],
+    "witness_source": "the reading alone",
+    "sources_over_ends": {
+     "the reading alone": 4
+    }
+   },
+   {
+    "from": [
+     3,
+     "none"
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     "rb_line"
+    ],
+    "witness_end": [
+     2,
+     "line"
+    ],
+    "witness_source": "the reading alone",
+    "sources_over_ends": {
+     "the reading alone": 4
+    }
+   },
+   {
+    "from": [
+     4,
+     "count"
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     "rb_line"
+    ],
+    "witness_end": [
+     3,
+     "line"
+    ],
+    "witness_source": "the reading alone",
+    "sources_over_ends": {
+     "the reading alone": 4
+    }
+   },
+   {
+    "from": [
+     4,
+     "none"
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     "rb_line"
+    ],
+    "witness_end": [
+     3,
+     "line"
+    ],
+    "witness_source": "the reading alone",
+    "sources_over_ends": {
+     "the reading alone": 4
+    }
+   }
+  ],
+  "source_counts_over_all_ends_within_L": {
+   "executability alone": 4,
+   "both needed": 6,
+   "the reading alone": 32
+  },
+  "per_fiber_bound": [
+   {
+    "configuration": [
+     1,
+     "line"
+    ],
+    "reading_value": "0",
+    "fiber": [
+     0
+    ],
+    "size": 1,
+    "max_served_by_one_act": 1,
+    "common_act": true
+   },
+   {
+    "configuration": [
+     1,
+     "line"
+    ],
+    "reading_value": "1",
+    "fiber": [
+     1
+    ],
+    "size": 1,
+    "max_served_by_one_act": 1,
+    "common_act": true
+   },
+   {
+    "configuration": [
+     1,
+     "line"
+    ],
+    "reading_value": "2",
+    "fiber": [
+     2
+    ],
+    "size": 1,
+    "max_served_by_one_act": 1,
+    "common_act": true
+   },
+   {
+    "configuration": [
+     1,
+     "line"
+    ],
+    "reading_value": "3",
+    "fiber": [
+     3
+    ],
+    "size": 1,
+    "max_served_by_one_act": 1,
+    "common_act": true
+   },
+   {
+    "configuration": [
+     1,
+     "count"
+    ],
+    "reading_value": "+",
+    "fiber": [
+     1,
+     2,
+     3
+    ],
+    "size": 3,
+    "max_served_by_one_act": 1,
+    "common_act": false
+   },
+   {
+    "configuration": [
+     1,
+     "count"
+    ],
+    "reading_value": "0",
+    "fiber": [
+     0
+    ],
+    "size": 1,
+    "max_served_by_one_act": 1,
+    "common_act": true
+   },
+   {
+    "configuration": [
+     1,
+     "none"
+    ],
+    "reading_value": "0",
+    "fiber": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "size": 4,
+    "max_served_by_one_act": 1,
+    "common_act": false
+   },
+   {
+    "configuration": [
+     0,
+     "line"
+    ],
+    "reading_value": "0",
+    "fiber": [
+     0
+    ],
+    "size": 1,
+    "max_served_by_one_act": 1,
+    "common_act": true
+   },
+   {
+    "configuration": [
+     0,
+     "line"
+    ],
+    "reading_value": "1",
+    "fiber": [
+     1
+    ],
+    "size": 1,
+    "max_served_by_one_act": 0,
+    "common_act": false
+   },
+   {
+    "configuration": [
+     0,
+     "line"
+    ],
+    "reading_value": "2",
+    "fiber": [
+     2
+    ],
+    "size": 1,
+    "max_served_by_one_act": 0,
+    "common_act": false
+   },
+   {
+    "configuration": [
+     0,
+     "line"
+    ],
+    "reading_value": "3",
+    "fiber": [
+     3
+    ],
+    "size": 1,
+    "max_served_by_one_act": 0,
+    "common_act": false
+   }
+  ]
+ },
+ "kline_coupled": {
+  "coupled": true,
+  "correctable_by_rule_and_stock": {
+   "line": [
+    false,
+    true,
+    true,
+    true,
+    true
+   ],
+   "count": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "none": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ]
+  },
+  "openings": [
+   {
+    "from": [
+     0,
+     "line"
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     "rep"
+    ],
+    "witness_end": [
+     1,
+     "line"
+    ],
+    "witness_source": "executability alone",
+    "sources_over_ends": {
+     "executability alone": 4
+    }
+   },
+   {
+    "from": [
+     0,
+     "count"
+    ],
+    "shortest_opening_steps": 3,
+    "witness_trace": [
+     "rep",
+     "rep",
+     "rb_line"
+    ],
+    "witness_end": [
+     1,
+     "line"
+    ],
+    "witness_source": "both needed",
+    "sources_over_ends": {
+     "both needed": 3
+    }
+   },
+   {
+    "from": [
+     0,
+     "none"
+    ],
+    "shortest_opening_steps": 3,
+    "witness_trace": [
+     "rep",
+     "rep",
+     "rb_line"
+    ],
+    "witness_end": [
+     1,
+     "line"
+    ],
+    "witness_source": "both needed",
+    "sources_over_ends": {
+     "both needed": 3
+    }
+   },
+   {
+    "from": [
+     1,
+     "count"
+    ],
+    "shortest_opening_steps": 2,
+    "witness_trace": [
+     "rep",
+     "rb_line"
+    ],
+    "witness_end": [
+     1,
+     "line"
+    ],
+    "witness_source": "both needed",
+    "sources_over_ends": {
+     "both needed": 4
+    }
+   },
+   {
+    "from": [
+     1,
+     "none"
+    ],
+    "shortest_opening_steps": 2,
+    "witness_trace": [
+     "rep",
+     "rb_line"
+    ],
+    "witness_end": [
+     1,
+     "line"
+    ],
+    "witness_source": "both needed",
+    "sources_over_ends": {
+     "both needed": 4
+    }
+   },
+   {
+    "from": [
+     2,
+     "count"
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     "rb_line"
+    ],
+    "witness_end": [
+     1,
+     "line"
+    ],
+    "witness_source": "both needed",
+    "sources_over_ends": {
+     "both needed": 4
+    }
+   },
+   {
+    "from": [
+     2,
+     "none"
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     "rb_line"
+    ],
+    "witness_end": [
+     1,
+     "line"
+    ],
+    "witness_source": "both needed",
+    "sources_over_ends": {
+     "both needed": 4
+    }
+   },
+   {
+    "from": [
+     3,
+     "count"
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     "rb_line"
+    ],
+    "witness_end": [
+     2,
+     "line"
+    ],
+    "witness_source": "both needed",
+    "sources_over_ends": {
+     "both needed": 4
+    }
+   },
+   {
+    "from": [
+     3,
+     "none"
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     "rb_line"
+    ],
+    "witness_end": [
+     2,
+     "line"
+    ],
+    "witness_source": "both needed",
+    "sources_over_ends": {
+     "both needed": 4
+    }
+   },
+   {
+    "from": [
+     4,
+     "count"
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     "rb_line"
+    ],
+    "witness_end": [
+     3,
+     "line"
+    ],
+    "witness_source": "both needed",
+    "sources_over_ends": {
+     "both needed": 4
+    }
+   },
+   {
+    "from": [
+     4,
+     "none"
+    ],
+    "shortest_opening_steps": 1,
+    "witness_trace": [
+     "rb_line"
+    ],
+    "witness_end": [
+     3,
+     "line"
+    ],
+    "witness_source": "both needed",
+    "sources_over_ends": {
+     "both needed": 4
+    }
+   }
+  ],
+  "source_counts_over_all_ends_within_L": {
+   "executability alone": 4,
+   "both needed": 38
+  },
+  "per_fiber_bound": [
+   {
+    "configuration": [
+     1,
+     "line"
+    ],
+    "reading_value": "0",
+    "fiber": [
+     0
+    ],
+    "size": 1,
+    "max_served_by_one_act": 1,
+    "common_act": true
+   },
+   {
+    "configuration": [
+     1,
+     "line"
+    ],
+    "reading_value": "1",
+    "fiber": [
+     1
+    ],
+    "size": 1,
+    "max_served_by_one_act": 1,
+    "common_act": true
+   },
+   {
+    "configuration": [
+     1,
+     "line"
+    ],
+    "reading_value": "2",
+    "fiber": [
+     2
+    ],
+    "size": 1,
+    "max_served_by_one_act": 1,
+    "common_act": true
+   },
+   {
+    "configuration": [
+     1,
+     "line"
+    ],
+    "reading_value": "3",
+    "fiber": [
+     3
+    ],
+    "size": 1,
+    "max_served_by_one_act": 1,
+    "common_act": true
+   },
+   {
+    "configuration": [
+     1,
+     "count"
+    ],
+    "reading_value": "+",
+    "fiber": [
+     1,
+     2,
+     3
+    ],
+    "size": 3,
+    "max_served_by_one_act": 0,
+    "common_act": false
+   },
+   {
+    "configuration": [
+     1,
+     "count"
+    ],
+    "reading_value": "0",
+    "fiber": [
+     0
+    ],
+    "size": 1,
+    "max_served_by_one_act": 1,
+    "common_act": true
+   },
+   {
+    "configuration": [
+     1,
+     "none"
+    ],
+    "reading_value": "0",
+    "fiber": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "size": 4,
+    "max_served_by_one_act": 1,
+    "common_act": false
+   },
+   {
+    "configuration": [
+     0,
+     "line"
+    ],
+    "reading_value": "0",
+    "fiber": [
+     0
+    ],
+    "size": 1,
+    "max_served_by_one_act": 1,
+    "common_act": true
+   },
+   {
+    "configuration": [
+     0,
+     "line"
+    ],
+    "reading_value": "1",
+    "fiber": [
+     1
+    ],
+    "size": 1,
+    "max_served_by_one_act": 0,
+    "common_act": false
+   },
+   {
+    "configuration": [
+     0,
+     "line"
+    ],
+    "reading_value": "2",
+    "fiber": [
+     2
+    ],
+    "size": 1,
+    "max_served_by_one_act": 0,
+    "common_act": false
+   },
+   {
+    "configuration": [
+     0,
+     "line"
+    ],
+    "reading_value": "3",
+    "fiber": [
+     3
+    ],
+    "size": 1,
+    "max_served_by_one_act": 0,
+    "common_act": false
+   }
+  ]
+ },
+ "kline_monotonicity": {
+  "configurations": 9,
+  "maps": 3125,
+  "finer_keeps": {
+   "premises_met": 20,
+   "violations": 0
+  },
+  "coarser_opens_nothing": {
+   "premises_met": 6230,
+   "violations": 0,
+   "violations_without_the_trace": 0
+  }
+ },
+ "mixture_bound": {
+  "cases": 9343,
+  "least_slack": "0",
+  "status": "inference (a mixture of deterministic policies, each serving at most m(F)); not stated in the Lean; a candidate core lemma"
+ },
+ "scripted_desks_identity": {
+  "acts by a fitting policy where one exists": {
+   "conflicting_fiber_presentations": 13,
+   "all_served (forbidden)": 0,
+   "mean_served": 0.6923
+  },
+  "constant: correct line 1": {
+   "conflicting_fiber_presentations": 13,
+   "all_served (forbidden)": 0,
+   "mean_served": 0.6154
+  },
+  "reads the value: line named, else replenish": {
+   "conflicting_fiber_presentations": 13,
+   "all_served (forbidden)": 0,
+   "mean_served": 0.3846
+  },
+  "count reader: any report, correct line 1": {
+   "conflicting_fiber_presentations": 13,
+   "all_served (forbidden)": 0,
+   "mean_served": 0.6923
+  },
+  "random policy (100 drawn)": {
+   "conflicting_fiber_presentations": 1300,
+   "all_served (forbidden)": 0,
+   "mean_served": 0.3046
+  }
+ },
+ "parser_fixtures": [
+  {
+   "record": "Reports received: 1.",
+   "expected_lines": [],
+   "lines_named": [],
+   "ok": true
+  },
+  {
+   "record": "Two reports received today.",
+   "expected_lines": [],
+   "lines_named": [],
+   "ok": true
+  },
+  {
+   "record": "1 report received (count only, as the register's rule says).",
+   "expected_lines": [],
+   "lines_named": [],
+   "ok": true
+  },
+  {
+   "record": "Reports received: 2, both about line 2.",
+   "expected_lines": [
+    2
+   ],
+   "lines_named": [
+    2
+   ],
+   "ok": true
+  },
+  {
+   "record": "One report, from the second line.",
+   "expected_lines": [
+    2
+   ],
+   "lines_named": [
+    2
+   ],
+   "ok": true
+  },
+  {
+   "record": "Report from Chen received.",
+   "expected_lines": [
+    1
+   ],
+   "lines_named": [
+    1
+   ],
+   "ok": true
+  },
+  {
+   "record": "3 reports; L3 affected.",
+   "expected_lines": [
+    3
+   ],
+   "lines_named": [
+    3
+   ],
+   "ok": true
+  },
+  {
+   "record": "Count: 1. Line one.",
+   "expected_lines": [
+    1
+   ],
+   "lines_named": [
+    1
+   ],
+   "ok": true
+  },
+  {
+   "record": "A fault was reported; the register does not record where.",
+   "expected_lines": [],
+   "lines_named": [],
+   "ok": true
+  },
+  {
+   "record": "Reports: 1 (urgent).",
+   "expected_lines": [],
+   "lines_named": [],
+   "ok": true
+  },
+  {
+   "record": "Both reports received.",
+   "expected_lines": [],
+   "lines_named": [],
+   "ok": true
+  },
+  {
+   "record": "Reports: 2 (Bo and Ana).",
+   "expected_lines": [
+    1
+   ],
+   "lines_named": [
+    1
+   ],
+   "ok": true
+  },
+  {
+   "record": "Pipeline 3 reported nothing unusual; 1 report.",
+   "expected_lines": [],
+   "lines_named": [],
+   "ok": true
+  },
+  {
+   "record": "Reports received: 1. Do not identify line 1, line 2, or line 3.",
+   "expected_lines": [
+    1,
+    2,
+    3
+   ],
+   "lines_named": [
+    1,
+    2,
+    3
+   ],
+   "ok": true
+  },
+  {
+   "record": "Report from Dita received.",
+   "expected_lines": [
+    2
+   ],
+   "lines_named": [
+    2
+   ],
+   "ok": true
+  },
+  {
+   "record": "Reports received: 2 (north).",
+   "expected_lines": [],
+   "lines_named": [],
+   "ok": true
+  }
+ ],
+ "exact_test_example": {
+  "units": [
+   [
+    "c1",
+    "c2",
+    "c3"
+   ],
+   [
+    "c1",
+    "c1",
+    "c1"
+   ],
+   [
+    "c2",
+    "rep",
+    "c3"
+   ],
+   [
+    "c3",
+    "c2",
+    "c1"
+   ]
+  ],
+  "matches": 6,
+  "p": "7/54",
+  "p_float": 0.12962962962962962
+ },
+ "permuted_map_example": {
+  "units": "40 x ['c2', 'c3', 'c1']",
+  "m2_p": "1",
+  "m3_p": 2.735111227791251e-16,
+  "m3_map": [
+   "c2",
+   "c3",
+   "c1"
+  ]
+ },
+ "shifted_record_example": {
+  "units": "40 x records naming lines 2, 3, 1",
+  "m1_p": 1.0,
+  "m4_p": 2.735111227791251e-16,
+  "m4_map": [
+   2,
+   3,
+   1
+  ]
+ },
+ "power_check": {
+  "alpha": "1/20",
+  "models": 6,
+  "measures": 4,
+  "holm": "Holm over the 24 p-values (m1, m2, m3 and m4 for six models): the family-wise rate of contradicting C1 where it holds is at most alpha",
+  "first_step": "alpha/24 = 0.00208: a model's contradiction when no other p-value is rejected",
+  "last_steps": "alpha/4 = 0.01250: a model's least p-value against its first threshold when every other model's four are rejected",
+  "bound_per_model_first_step": 0.0083,
+  "bound_per_model_last_steps": 0.05,
+  "reps": 600,
+  "sizes": [
+   10,
+   20,
+   40
+  ],
+  "extra_sizes": {
+   "60": [
+    "implicit leak h=0.2, read by crew",
+    "implicit leak h=0.3, read by crew",
+    "hybrid: implicit leak h=0.3, read half the time",
+    "faithful crew, each line 0.3, replenish 0.1",
+    "opaque token mapped to another line by the crew h=0.3"
+   ]
+  },
+  "rows": [
+   {
+    "agent": "faithful crew, each line 0.3, replenish 0.1",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.027,
+     "P_m3_crew_act_depends_on_line_first_step": 0.002,
+     "P_m3_alpha": 0.033,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.002,
+     "P_C1_contradicted_last_steps": 0.013,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.904,
+     "units_all_served_per_unit": 0.0285
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.033,
+     "P_m3_crew_act_depends_on_line_first_step": 0.002,
+     "P_m3_alpha": 0.023,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.002,
+     "P_C1_contradicted_last_steps": 0.013,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.906,
+     "units_all_served_per_unit": 0.0254
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.002,
+     "P_m2_alpha": 0.048,
+     "P_m3_crew_act_depends_on_line_first_step": 0.002,
+     "P_m3_alpha": 0.032,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.003,
+     "P_C1_contradicted_last_steps": 0.015,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.897,
+     "units_all_served_per_unit": 0.0265
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.01,
+     "P_m2_alpha": 0.035,
+     "P_m3_crew_act_depends_on_line_first_step": 0.003,
+     "P_m3_alpha": 0.048,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.013,
+     "P_C1_contradicted_last_steps": 0.015,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.897,
+     "units_all_served_per_unit": 0.0268
+    }
+   },
+   {
+    "agent": "faithful crew, uniform over the four acts",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.03,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.03,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.0,
+     "P_C1_contradicted_last_steps": 0.008,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.745,
+     "units_all_served_per_unit": 0.0167
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.003,
+     "P_m2_alpha": 0.048,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.03,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.003,
+     "P_C1_contradicted_last_steps": 0.015,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.763,
+     "units_all_served_per_unit": 0.0156
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.003,
+     "P_m2_alpha": 0.035,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.038,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.003,
+     "P_C1_contradicted_last_steps": 0.018,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.757,
+     "units_all_served_per_unit": 0.0165
+    }
+   },
+   {
+    "agent": "faithful, skewed crew",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.002,
+     "P_m2_alpha": 0.048,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.03,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.002,
+     "P_C1_contradicted_last_steps": 0.01,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.968,
+     "units_all_served_per_unit": 0.0175
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.002,
+     "P_m2_alpha": 0.037,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.048,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.002,
+     "P_C1_contradicted_last_steps": 0.027,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.946,
+     "units_all_served_per_unit": 0.0153
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.033,
+     "P_m3_crew_act_depends_on_line_first_step": 0.002,
+     "P_m3_alpha": 0.035,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.002,
+     "P_C1_contradicted_last_steps": 0.01,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.948,
+     "units_all_served_per_unit": 0.015
+    }
+   },
+   {
+    "agent": "control: constant mention (every record names lines 1, 2 and 3)",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.003,
+     "P_m2_alpha": 0.032,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.022,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.003,
+     "P_C1_contradicted_last_steps": 0.015,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.892,
+     "units_all_served_per_unit": 0.023
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.003,
+     "P_m2_alpha": 0.045,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.023,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.003,
+     "P_C1_contradicted_last_steps": 0.013,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.895,
+     "units_all_served_per_unit": 0.0267
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.002,
+     "P_m2_alpha": 0.043,
+     "P_m3_crew_act_depends_on_line_first_step": 0.003,
+     "P_m3_alpha": 0.04,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.005,
+     "P_C1_contradicted_last_steps": 0.023,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.902,
+     "units_all_served_per_unit": 0.0255
+    }
+   },
+   {
+    "agent": "control: constant hallucination (every record names line 2, the crew reads it)",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.002,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.0,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.0,
+     "P_C1_contradicted_last_steps": 0.0,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.996,
+     "units_all_served_per_unit": 0.0003
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.008,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.002,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.0,
+     "P_C1_contradicted_last_steps": 0.0,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.994,
+     "units_all_served_per_unit": 0.0002
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.013,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.002,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.0,
+     "P_C1_contradicted_last_steps": 0.0,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.996,
+     "units_all_served_per_unit": 0.0003
+    }
+   },
+   {
+    "agent": "control: hallucination apart from the fault (3 in 10 records name a random line, the crew reads it)",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.022,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.028,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.027,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.012,
+     "P_C1_contradicted_first_step": 0.0,
+     "P_C1_contradicted_last_steps": 0.018,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.929,
+     "units_all_served_per_unit": 0.0312
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.035,
+     "P_m2_crew_matches_first_step": 0.002,
+     "P_m2_alpha": 0.043,
+     "P_m3_crew_act_depends_on_line_first_step": 0.002,
+     "P_m3_alpha": 0.033,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.018,
+     "P_C1_contradicted_first_step": 0.003,
+     "P_C1_contradicted_last_steps": 0.028,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.935,
+     "units_all_served_per_unit": 0.031
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.002,
+     "P_m1_alpha": 0.02,
+     "P_m2_crew_matches_first_step": 0.002,
+     "P_m2_alpha": 0.047,
+     "P_m3_crew_act_depends_on_line_first_step": 0.005,
+     "P_m3_alpha": 0.038,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.018,
+     "P_C1_contradicted_first_step": 0.008,
+     "P_C1_contradicted_last_steps": 0.03,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.932,
+     "units_all_served_per_unit": 0.0288
+    }
+   },
+   {
+    "agent": "fixed by position (always line 1)",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.0,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.0,
+     "P_C1_contradicted_last_steps": 0.0,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 1.0,
+     "units_all_served_per_unit": 0.0
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.0,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.0,
+     "P_C1_contradicted_last_steps": 0.0,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 1.0,
+     "units_all_served_per_unit": 0.0
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.0,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.0,
+     "P_C1_contradicted_last_steps": 0.0,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 1.0,
+     "units_all_served_per_unit": 0.0
+    }
+   },
+   {
+    "agent": "fixed by a cue (line = number of reports)",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.0,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.0,
+     "P_C1_contradicted_last_steps": 0.0,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 1.0,
+     "units_all_served_per_unit": 0.0
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.0,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.0,
+     "P_C1_contradicted_last_steps": 0.0,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 1.0,
+     "units_all_served_per_unit": 0.0
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.0,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.0,
+     "P_C1_contradicted_last_steps": 0.0,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 1.0,
+     "units_all_served_per_unit": 0.0
+    }
+   },
+   {
+    "agent": "fixed by history (the previous call's line; calls not fresh)",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.023,
+     "P_m3_alpha": 0.158,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.023,
+     "P_C1_contradicted_last_steps": 0.063,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.338,
+     "units_all_served_per_unit": 0.0
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.048,
+     "P_m3_alpha": 0.33,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.048,
+     "P_C1_contradicted_last_steps": 0.153,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.329,
+     "units_all_served_per_unit": 0.0
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.137,
+     "P_m3_alpha": 0.567,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.137,
+     "P_C1_contradicted_last_steps": 0.365,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.337,
+     "units_all_served_per_unit": 0.0
+    }
+   },
+   {
+    "agent": "explicit leak h=0.1",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.067,
+     "P_m1_alpha": 0.52,
+     "P_m2_crew_matches_first_step": 0.01,
+     "P_m2_alpha": 0.152,
+     "P_m3_crew_act_depends_on_line_first_step": 0.002,
+     "P_m3_alpha": 0.038,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.057,
+     "P_C1_contradicted_first_step": 0.075,
+     "P_C1_contradicted_last_steps": 0.305,
+     "P_some_record_has_line_content": 0.943,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 1.093,
+     "units_all_served_per_unit": 0.0492
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.588,
+     "P_m1_alpha": 0.938,
+     "P_m2_crew_matches_first_step": 0.027,
+     "P_m2_alpha": 0.25,
+     "P_m3_crew_act_depends_on_line_first_step": 0.005,
+     "P_m3_alpha": 0.078,
+     "P_m4_records_depend_on_line_first_step": 0.042,
+     "P_m4_alpha": 0.458,
+     "P_C1_contradicted_first_step": 0.59,
+     "P_C1_contradicted_last_steps": 0.862,
+     "P_some_record_has_line_content": 0.997,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 1.108,
+     "units_all_served_per_unit": 0.0516
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.985,
+     "P_m1_alpha": 1.0,
+     "P_m2_crew_matches_first_step": 0.09,
+     "P_m2_alpha": 0.47,
+     "P_m3_crew_act_depends_on_line_first_step": 0.018,
+     "P_m3_alpha": 0.128,
+     "P_m4_records_depend_on_line_first_step": 0.482,
+     "P_m4_alpha": 0.927,
+     "P_C1_contradicted_first_step": 0.985,
+     "P_C1_contradicted_last_steps": 1.0,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.002,
+     "mean_matches_per_unit": 1.114,
+     "units_all_served_per_unit": 0.051
+    }
+   },
+   {
+    "agent": "explicit leak h=0.3",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.897,
+     "P_m1_alpha": 0.995,
+     "P_m2_crew_matches_first_step": 0.198,
+     "P_m2_alpha": 0.673,
+     "P_m3_crew_act_depends_on_line_first_step": 0.013,
+     "P_m3_alpha": 0.233,
+     "P_m4_records_depend_on_line_first_step": 0.107,
+     "P_m4_alpha": 0.773,
+     "P_C1_contradicted_first_step": 0.898,
+     "P_C1_contradicted_last_steps": 0.977,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.002,
+     "mean_matches_per_unit": 1.501,
+     "units_all_served_per_unit": 0.1275
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 1.0,
+     "P_m1_alpha": 1.0,
+     "P_m2_crew_matches_first_step": 0.54,
+     "P_m2_alpha": 0.92,
+     "P_m3_crew_act_depends_on_line_first_step": 0.115,
+     "P_m3_alpha": 0.528,
+     "P_m4_records_depend_on_line_first_step": 0.892,
+     "P_m4_alpha": 0.997,
+     "P_C1_contradicted_first_step": 1.0,
+     "P_C1_contradicted_last_steps": 1.0,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.042,
+     "mean_matches_per_unit": 1.498,
+     "units_all_served_per_unit": 0.1227
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 1.0,
+     "P_m1_alpha": 1.0,
+     "P_m2_crew_matches_first_step": 0.922,
+     "P_m2_alpha": 0.998,
+     "P_m3_crew_act_depends_on_line_first_step": 0.482,
+     "P_m3_alpha": 0.85,
+     "P_m4_records_depend_on_line_first_step": 1.0,
+     "P_m4_alpha": 1.0,
+     "P_C1_contradicted_first_step": 1.0,
+     "P_C1_contradicted_last_steps": 1.0,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.268,
+     "mean_matches_per_unit": 1.499,
+     "units_all_served_per_unit": 0.1242
+    }
+   },
+   {
+    "agent": "all-or-nothing per unit h=0.2",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.107,
+     "P_m1_alpha": 0.638,
+     "P_m2_crew_matches_first_step": 0.07,
+     "P_m2_alpha": 0.395,
+     "P_m3_crew_act_depends_on_line_first_step": 0.012,
+     "P_m3_alpha": 0.123,
+     "P_m4_records_depend_on_line_first_step": 0.005,
+     "P_m4_alpha": 0.172,
+     "P_C1_contradicted_first_step": 0.135,
+     "P_C1_contradicted_last_steps": 0.363,
+     "P_some_record_has_line_content": 0.9,
+     "P_bound_test_mean_matches_above_1": 0.002,
+     "mean_matches_per_unit": 1.31,
+     "units_all_served_per_unit": 0.1997
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.597,
+     "P_m1_alpha": 0.917,
+     "P_m2_crew_matches_first_step": 0.213,
+     "P_m2_alpha": 0.595,
+     "P_m3_crew_act_depends_on_line_first_step": 0.045,
+     "P_m3_alpha": 0.227,
+     "P_m4_records_depend_on_line_first_step": 0.102,
+     "P_m4_alpha": 0.56,
+     "P_C1_contradicted_first_step": 0.608,
+     "P_C1_contradicted_last_steps": 0.822,
+     "P_some_record_has_line_content": 0.985,
+     "P_bound_test_mean_matches_above_1": 0.012,
+     "mean_matches_per_unit": 1.306,
+     "units_all_served_per_unit": 0.2009
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.98,
+     "P_m1_alpha": 1.0,
+     "P_m2_crew_matches_first_step": 0.43,
+     "P_m2_alpha": 0.808,
+     "P_m3_crew_act_depends_on_line_first_step": 0.107,
+     "P_m3_alpha": 0.417,
+     "P_m4_records_depend_on_line_first_step": 0.608,
+     "P_m4_alpha": 0.938,
+     "P_C1_contradicted_first_step": 0.98,
+     "P_C1_contradicted_last_steps": 0.993,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.033,
+     "mean_matches_per_unit": 1.286,
+     "units_all_served_per_unit": 0.1995
+    }
+   },
+   {
+    "agent": "threshold clerk (leaks at 3 reports)",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.442,
+     "P_m1_alpha": 0.908,
+     "P_m2_crew_matches_first_step": 0.225,
+     "P_m2_alpha": 0.642,
+     "P_m3_crew_act_depends_on_line_first_step": 0.037,
+     "P_m3_alpha": 0.267,
+     "P_m4_records_depend_on_line_first_step": 0.032,
+     "P_m4_alpha": 0.45,
+     "P_C1_contradicted_first_step": 0.465,
+     "P_C1_contradicted_last_steps": 0.735,
+     "P_some_record_has_line_content": 0.992,
+     "P_bound_test_mean_matches_above_1": 0.048,
+     "mean_matches_per_unit": 1.557,
+     "units_all_served_per_unit": 0.3183
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.95,
+     "P_m1_alpha": 0.997,
+     "P_m2_crew_matches_first_step": 0.61,
+     "P_m2_alpha": 0.888,
+     "P_m3_crew_act_depends_on_line_first_step": 0.17,
+     "P_m3_alpha": 0.537,
+     "P_m4_records_depend_on_line_first_step": 0.48,
+     "P_m4_alpha": 0.898,
+     "P_C1_contradicted_first_step": 0.952,
+     "P_C1_contradicted_last_steps": 0.982,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.147,
+     "mean_matches_per_unit": 1.578,
+     "units_all_served_per_unit": 0.3196
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 1.0,
+     "P_m1_alpha": 1.0,
+     "P_m2_crew_matches_first_step": 0.902,
+     "P_m2_alpha": 0.982,
+     "P_m3_crew_act_depends_on_line_first_step": 0.532,
+     "P_m3_alpha": 0.835,
+     "P_m4_records_depend_on_line_first_step": 0.94,
+     "P_m4_alpha": 1.0,
+     "P_C1_contradicted_first_step": 1.0,
+     "P_C1_contradicted_last_steps": 1.0,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.448,
+     "mean_matches_per_unit": 1.561,
+     "units_all_served_per_unit": 0.315
+    }
+   },
+   {
+    "agent": "implicit leak h=0.1, read by crew",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.012,
+     "P_m2_alpha": 0.125,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.037,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.012,
+     "P_C1_contradicted_last_steps": 0.045,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 1.088,
+     "units_all_served_per_unit": 0.048
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.025,
+     "P_m2_alpha": 0.243,
+     "P_m3_crew_act_depends_on_line_first_step": 0.002,
+     "P_m3_alpha": 0.063,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.025,
+     "P_C1_contradicted_last_steps": 0.105,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 1.09,
+     "units_all_served_per_unit": 0.0506
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.083,
+     "P_m2_alpha": 0.438,
+     "P_m3_crew_act_depends_on_line_first_step": 0.01,
+     "P_m3_alpha": 0.113,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.085,
+     "P_C1_contradicted_last_steps": 0.24,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.002,
+     "mean_matches_per_unit": 1.106,
+     "units_all_served_per_unit": 0.0489
+    }
+   },
+   {
+    "agent": "implicit leak h=0.2, read by crew",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.057,
+     "P_m2_alpha": 0.4,
+     "P_m3_crew_act_depends_on_line_first_step": 0.005,
+     "P_m3_alpha": 0.118,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.058,
+     "P_C1_contradicted_last_steps": 0.202,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 1.321,
+     "units_all_served_per_unit": 0.0825
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.177,
+     "P_m2_alpha": 0.628,
+     "P_m3_crew_act_depends_on_line_first_step": 0.025,
+     "P_m3_alpha": 0.247,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.182,
+     "P_C1_contradicted_last_steps": 0.413,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.003,
+     "mean_matches_per_unit": 1.308,
+     "units_all_served_per_unit": 0.0853
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.52,
+     "P_m2_alpha": 0.885,
+     "P_m3_crew_act_depends_on_line_first_step": 0.148,
+     "P_m3_alpha": 0.525,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.522,
+     "P_C1_contradicted_last_steps": 0.735,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.017,
+     "mean_matches_per_unit": 1.303,
+     "units_all_served_per_unit": 0.0845
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.775,
+     "P_m2_alpha": 0.983,
+     "P_m3_crew_act_depends_on_line_first_step": 0.275,
+     "P_m3_alpha": 0.688,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.775,
+     "P_C1_contradicted_last_steps": 0.92,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.07,
+     "mean_matches_per_unit": 1.305,
+     "units_all_served_per_unit": 0.0836
+    }
+   },
+   {
+    "agent": "implicit leak h=0.3, read by crew",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.147,
+     "P_m2_alpha": 0.632,
+     "P_m3_crew_act_depends_on_line_first_step": 0.017,
+     "P_m3_alpha": 0.19,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.147,
+     "P_C1_contradicted_last_steps": 0.392,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.005,
+     "mean_matches_per_unit": 1.488,
+     "units_all_served_per_unit": 0.123
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.57,
+     "P_m2_alpha": 0.912,
+     "P_m3_crew_act_depends_on_line_first_step": 0.123,
+     "P_m3_alpha": 0.515,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.572,
+     "P_C1_contradicted_last_steps": 0.785,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.045,
+     "mean_matches_per_unit": 1.503,
+     "units_all_served_per_unit": 0.1268
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.93,
+     "P_m2_alpha": 0.993,
+     "P_m3_crew_act_depends_on_line_first_step": 0.518,
+     "P_m3_alpha": 0.86,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.93,
+     "P_C1_contradicted_last_steps": 0.987,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.278,
+     "mean_matches_per_unit": 1.508,
+     "units_all_served_per_unit": 0.1275
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.99,
+     "P_m2_alpha": 1.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.782,
+     "P_m3_alpha": 0.97,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.993,
+     "P_C1_contradicted_last_steps": 1.0,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.615,
+     "mean_matches_per_unit": 1.505,
+     "units_all_served_per_unit": 0.1249
+    }
+   },
+   {
+    "agent": "hybrid: implicit leak h=0.3, read half the time",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.017,
+     "P_m2_alpha": 0.265,
+     "P_m3_crew_act_depends_on_line_first_step": 0.007,
+     "P_m3_alpha": 0.05,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.02,
+     "P_C1_contradicted_last_steps": 0.1,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 1.202,
+     "units_all_served_per_unit": 0.0623
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.093,
+     "P_m2_alpha": 0.458,
+     "P_m3_crew_act_depends_on_line_first_step": 0.017,
+     "P_m3_alpha": 0.147,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.097,
+     "P_C1_contradicted_last_steps": 0.258,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.002,
+     "mean_matches_per_unit": 1.216,
+     "units_all_served_per_unit": 0.0678
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.303,
+     "P_m2_alpha": 0.76,
+     "P_m3_crew_act_depends_on_line_first_step": 0.047,
+     "P_m3_alpha": 0.305,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.305,
+     "P_C1_contradicted_last_steps": 0.538,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 1.223,
+     "units_all_served_per_unit": 0.0666
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.532,
+     "P_m2_alpha": 0.882,
+     "P_m3_crew_act_depends_on_line_first_step": 0.128,
+     "P_m3_alpha": 0.497,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.535,
+     "P_C1_contradicted_last_steps": 0.72,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.01,
+     "mean_matches_per_unit": 1.22,
+     "units_all_served_per_unit": 0.0668
+    }
+   },
+   {
+    "agent": "implicit leak h=0.5, read by crew",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.722,
+     "P_m2_alpha": 0.972,
+     "P_m3_crew_act_depends_on_line_first_step": 0.207,
+     "P_m3_alpha": 0.688,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.722,
+     "P_C1_contradicted_last_steps": 0.887,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.2,
+     "mean_matches_per_unit": 1.92,
+     "units_all_served_per_unit": 0.265
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.983,
+     "P_m2_alpha": 1.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.695,
+     "P_m3_alpha": 0.952,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.983,
+     "P_C1_contradicted_last_steps": 0.995,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.657,
+     "mean_matches_per_unit": 1.893,
+     "units_all_served_per_unit": 0.2491
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 1.0,
+     "P_m2_alpha": 1.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.987,
+     "P_m3_alpha": 1.0,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 1.0,
+     "P_C1_contradicted_last_steps": 1.0,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.99,
+     "mean_matches_per_unit": 1.899,
+     "units_all_served_per_unit": 0.2496
+    }
+   },
+   {
+    "agent": "opaque token mapped to another line by the crew h=0.3",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.02,
+     "P_m3_alpha": 0.208,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.02,
+     "P_C1_contradicted_last_steps": 0.07,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.647,
+     "units_all_served_per_unit": 0.011
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.148,
+     "P_m3_alpha": 0.532,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.148,
+     "P_C1_contradicted_last_steps": 0.323,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.639,
+     "units_all_served_per_unit": 0.0086
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.485,
+     "P_m3_alpha": 0.847,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.485,
+     "P_C1_contradicted_last_steps": 0.698,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.643,
+     "units_all_served_per_unit": 0.0095
+    },
+    "U=60": {
+     "reps": 400,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.775,
+     "P_m3_alpha": 0.963,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 0.775,
+     "P_C1_contradicted_last_steps": 0.9,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.646,
+     "units_all_served_per_unit": 0.01
+    }
+   },
+   {
+    "agent": "opaque token mapped to another line by the crew h=1",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 1.0,
+     "P_m3_alpha": 1.0,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 1.0,
+     "P_C1_contradicted_last_steps": 1.0,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.046,
+     "units_all_served_per_unit": 0.0
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 1.0,
+     "P_m3_alpha": 1.0,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 1.0,
+     "P_C1_contradicted_last_steps": 1.0,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.041,
+     "units_all_served_per_unit": 0.0
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 1.0,
+     "P_m3_alpha": 1.0,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.0,
+     "P_C1_contradicted_first_step": 1.0,
+     "P_C1_contradicted_last_steps": 1.0,
+     "P_some_record_has_line_content": 0.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.044,
+     "units_all_served_per_unit": 0.0
+    }
+   },
+   {
+    "agent": "explicit leak of another line h=0.3, read by the crew",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.03,
+     "P_m3_alpha": 0.233,
+     "P_m4_records_depend_on_line_first_step": 0.152,
+     "P_m4_alpha": 0.745,
+     "P_C1_contradicted_first_step": 0.158,
+     "P_C1_contradicted_last_steps": 0.515,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.632,
+     "units_all_served_per_unit": 0.0075
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.13,
+     "P_m3_alpha": 0.482,
+     "P_m4_records_depend_on_line_first_step": 0.892,
+     "P_m4_alpha": 0.995,
+     "P_C1_contradicted_first_step": 0.892,
+     "P_C1_contradicted_last_steps": 0.973,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.636,
+     "units_all_served_per_unit": 0.0097
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.0,
+     "P_m3_crew_act_depends_on_line_first_step": 0.467,
+     "P_m3_alpha": 0.85,
+     "P_m4_records_depend_on_line_first_step": 1.0,
+     "P_m4_alpha": 1.0,
+     "P_C1_contradicted_first_step": 1.0,
+     "P_C1_contradicted_last_steps": 1.0,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.64,
+     "units_all_served_per_unit": 0.0095
+    }
+   },
+   {
+    "agent": "explicit leak of another line h=0.3, not read by the crew",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.04,
+     "P_m3_crew_act_depends_on_line_first_step": 0.002,
+     "P_m3_alpha": 0.013,
+     "P_m4_records_depend_on_line_first_step": 0.143,
+     "P_m4_alpha": 0.752,
+     "P_C1_contradicted_first_step": 0.145,
+     "P_C1_contradicted_last_steps": 0.507,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.898,
+     "units_all_served_per_unit": 0.0242
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.027,
+     "P_m3_crew_act_depends_on_line_first_step": 0.002,
+     "P_m3_alpha": 0.035,
+     "P_m4_records_depend_on_line_first_step": 0.908,
+     "P_m4_alpha": 0.992,
+     "P_C1_contradicted_first_step": 0.908,
+     "P_C1_contradicted_last_steps": 0.973,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.904,
+     "units_all_served_per_unit": 0.0291
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.022,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.033,
+     "P_m4_records_depend_on_line_first_step": 1.0,
+     "P_m4_alpha": 1.0,
+     "P_C1_contradicted_first_step": 1.0,
+     "P_C1_contradicted_last_steps": 1.0,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.889,
+     "units_all_served_per_unit": 0.0261
+    }
+   },
+   {
+    "agent": "explicit leak of another line h=0.1, not read by the crew",
+    "U=10": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.027,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.028,
+     "P_m4_records_depend_on_line_first_step": 0.0,
+     "P_m4_alpha": 0.045,
+     "P_C1_contradicted_first_step": 0.0,
+     "P_C1_contradicted_last_steps": 0.02,
+     "P_some_record_has_line_content": 0.953,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.886,
+     "units_all_served_per_unit": 0.0248
+    },
+    "U=20": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.0,
+     "P_m2_alpha": 0.053,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.043,
+     "P_m4_records_depend_on_line_first_step": 0.035,
+     "P_m4_alpha": 0.425,
+     "P_C1_contradicted_first_step": 0.035,
+     "P_C1_contradicted_last_steps": 0.228,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.907,
+     "units_all_served_per_unit": 0.0286
+    },
+    "U=40": {
+     "reps": 600,
+     "P_m1_records_name_the_faulty_line_first_step": 0.0,
+     "P_m1_alpha": 0.0,
+     "P_m2_crew_matches_first_step": 0.002,
+     "P_m2_alpha": 0.042,
+     "P_m3_crew_act_depends_on_line_first_step": 0.0,
+     "P_m3_alpha": 0.032,
+     "P_m4_records_depend_on_line_first_step": 0.498,
+     "P_m4_alpha": 0.913,
+     "P_C1_contradicted_first_step": 0.498,
+     "P_C1_contradicted_last_steps": 0.788,
+     "P_some_record_has_line_content": 1.0,
+     "P_bound_test_mean_matches_above_1": 0.0,
+     "mean_matches_per_unit": 0.898,
+     "units_all_served_per_unit": 0.0263
+    }
+   }
+  ],
+  "tests": {
+   "m1": "the frozen parser's lines named in each record; exact within-unit permutation test, one-sided, of the records naming the faulty line",
+   "m2": "exact within-unit permutation test of the crew's matches (3! relabellings per unit, convolved over units), one-sided",
+   "m3": "any dependence of the crew's act on the line: a map from line to act fixed on the odd units (the act most in excess at each line), its matches tested on the even units by the same exact test; a constant map gives p = 1",
+   "m4": "any dependence of what the records name on the line: a map from line to a named line fixed on the odd units (the line named most in excess at each line), its matches tested on the even units by the same exact test; a constant map gives p = 1",
+   "bound": "Hoeffding's on the mean matches per unit above 1 (reported only)"
+  }
+ },
+ "harness_check": {
+  "rule": "Holm over G's 12 p-values (m2 and m3 for six models) at 0.05; any rejection stops the whole run, the harness being shared by every model",
+  "alpha_over_12": 0.00417,
+  "cases": [
+   {
+    "case": "faithful crews (two models each of the three)",
+    "units": 20,
+    "reps": 600,
+    "P_run_stopped_holm_12_at_0.05": 0.022,
+    "P_model_has_a_p_value_at_alpha_over_12": 0.0036,
+    "P_run_stopped_unadjusted_each_at_0.05": 0.337
+   },
+   {
+    "case": "harness leak read by every crew, 1 call in 10",
+    "units": 20,
+    "reps": 600,
+    "P_run_stopped_holm_12_at_0.05": 0.25,
+    "P_model_has_a_p_value_at_alpha_over_12": 0.0494,
+    "P_run_stopped_unadjusted_each_at_0.05": 0.852
+   },
+   {
+    "case": "harness leak read by every crew, 3 calls in 10",
+    "units": 20,
+    "reps": 600,
+    "P_run_stopped_holm_12_at_0.05": 0.995,
+    "P_model_has_a_p_value_at_alpha_over_12": 0.6336,
+    "P_run_stopped_unadjusted_each_at_0.05": 1.0
+   }
+  ]
+ },
+ "null_size": {
+  "U": 30,
+  "replications": 2000,
+  "rejection_rate_by_crew_act_distribution": {
+   "[0.3, 0.3, 0.3, 0.1]": 0.042,
+   "[0.6, 0.25, 0.1, 0.05]": 0.0445,
+   "[0.9, 0.05, 0.05, 0.0]": 0.032
+  }
+ },
+ "competence_check": {
+  "calls": 60,
+  "pass_at_least": 48,
+  "P_pass_by_competence": {
+   "19/20": 0.9999931504239513,
+   "9/10": 0.9943189949524102,
+   "4/5": 0.5764403014458755,
+   "7/10": 0.056770682002336974
+  }
+ },
+ "usage": {
+  "arms": {
+   "L (rule by line, record given; competence and positive control)": {
+    "units": 20,
+    "calls_per_unit": 4
+   },
+   "G (rule by count, record given, nuisance randomized; harness check)": {
+    "units": 20,
+    "calls_per_unit": 3
+   },
+   "P (rule by count, record given naming the reporting member; planted-leak control)": {
+    "units": 20,
+    "calls_per_unit": 3
+   },
+   "C (rule by count, the clerk keeps the record; the test arm)": {
+    "units": 40,
+    "calls_per_unit": 6
+   }
+  },
+  "calls_per_model": 440,
+  "models": 6,
+  "calls_total": 2640,
+  "tokens_per_call_estimate": {
+   "in": 380,
+   "out": 70
+  },
+  "tokens_total_estimate": 1188000,
+  "smoke_run_calls": 72,
+  "retries": "a call that fails is tried up to three times and the failure is recorded"
+ },
+ "failures": [],
+ "all_checks_passed": true,
+ "seconds": 49.9
+}
