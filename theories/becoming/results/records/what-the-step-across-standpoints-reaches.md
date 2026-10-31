@@ -12,6 +12,7 @@
 
 1. Let each standpoint's presupposition about its own center's continuation hold (sub-true along the empty relation) and significance be standpoint-invariant. Then from every standpoint the continuation of every center has significance, and the significance of exactly the centers' continuation meets both premises: what they force is exactly that the centers count. (`Becoming.atCenters`, `Becoming.atCenters_least`, `Becoming.atCenters_presupposed`, `Becoming.atCenters_standpointInvariant`, `Becoming.forced_iff_center`)
    - *Master laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.forced_iff_center` as following from a master law (by reaching the grammar).
+   - *Standing of `Becoming.forced_iff_center`, by the rule:* connected (it reaches `Becoming.«所闭之自反»` and `Becoming.«所闭之闭»` among its reasons; not declared a case of one).
 2. With some standpoint, the significance of the centers' continuation is the continuation condition exactly when every formation is some standpoint's center. (`Becoming.unrestricted_atCenters_iff`)
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 3. Along a relation, what every significance making a standpoint's presupposition sub-true at a formation's closure gives significance to is exactly what lies within that closure: a standpoint's own presupposition, with nothing else, reaches its closure and no further. (`Becoming.forced_iff_within`)

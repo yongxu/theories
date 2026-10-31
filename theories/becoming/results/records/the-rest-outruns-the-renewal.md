@@ -14,6 +14,7 @@
    - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
 2. Where renewal depends on what it renews at need m, n such steps from a level below n + m leave the level below m from then on and end every formation depending on the condition at such a need, whatever a member outside the part takes. (`Becoming.Flow.outrun_below`, `Becoming.Flow.outrun_ends`)
    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts; the measure counts central declaration `Becoming.Flow.outrun_below` as following from balance, which the grammar represents.
+   - *Standing of `Becoming.Flow.outrun_below`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
 3. With need one, in two flows in which the rest outruns from a level at most n, every score reading the condition only from step T + n on scores the two alike, however a member's act differs between them: its restraint is invisible to such a reading. (`Becoming.Flow.outrun_reading_alike`)
    - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
