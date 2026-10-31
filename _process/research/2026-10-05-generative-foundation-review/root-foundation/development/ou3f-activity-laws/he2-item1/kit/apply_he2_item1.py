@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """HE2's item 1, applied to a checkout of the Becoming package: «两端分则中有标» (Grammar) asks only that `K`
-compose, its hypotheses now `split` then `trans` (so that `split`'s type fixes `K` for a caller passing a
+be transitive, its hypotheses now `split` then `trans` (so that `split`'s type fixes `K` for a caller passing a
 projection such as a class's `trans`); PatternPassing's two uses pass their class's `trans`, and its module
 docstring glosses the law with a transitive relation; and Sampling's `arises_within` and `ceases_within` are read
 from the law, their statements unchanged. With --texts, the prose that states the law is brought to it: 01 §3, the
@@ -124,8 +124,8 @@ ROOT_OLD = (
     'either keeps `K` or carries a mark `P`, a line whose ends `K` tells apart has a step carrying the mark, placed '
     'on the line between them (`«两端分则中有标»`); the proof uses only the transitivity of `K`.\n')
 ROOT_NEW = (
-    '**Theorem** (root). *A change between the ends has a place.* For a relation `K` that composes (a class is '
-    'one), where every step of continuation either keeps `K` or carries a mark `P`, a line whose ends `K` tells apart '
+    '**Theorem** (root). *A change between the ends has a place.* For a transitive relation `K` (a class is one), '
+    'where every step of continuation either keeps `K` or carries a mark `P`, a line whose ends `K` tells apart '
     '(`K` fails from its start to its end) has a step carrying the mark, placed on the line between them '
     '(`«两端分则中有标»`).\n')
 # LOGIC.md's L-04 copies the law's statement up to the proof: its first two lines are the Grammar edit's.
