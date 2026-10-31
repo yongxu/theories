@@ -110,8 +110,8 @@
     "zh": "纯核，公理报告皆空：Cascade 引 Learning 唯为 Training.Through；诸行以成员之数递归而建。"
   },
   "next_delta": {
-    "en": "The probabilistic form, a cascade once public evidence outweighs every private signal; a test of where sequential choosers meet the premise, a named probabilistic model's timing judged apart (the plan's TR3); review by a person.",
-    "zh": "概率之形，公示之据重于每一私讯时之级联；依次之择者于何处合此前提之检验，具名之概率模型之时机另判（计划之 TR3）；人之审查。"
+    "en": "The probabilistic form, a cascade once public evidence outweighs every private signal; a test of where sequential choosers meet the premise, a named probabilistic model's timing judged apart (the plan's TR3, its verdict resting on the premise at the histories reached, a lemma to state first); review by a person.",
+    "zh": "概率之形，公示之据重于每一私讯时之级联；依次之择者于何处合此前提之检验，具名之概率模型之时机另判（计划之 TR3，其判定依所至之历之前提，此引理先述）；人之审查。"
   },
   "correspondence": {
     "en": "The deterministic form of an information cascade (Bikhchandani, Hirshleifer and Welch 1992; Banerjee 1992), where the act has stopped reading the member's own signal; WitnessRefinementRuns.copied_witnesses_same is a neighbour, where copied witnesses add nothing under its further hypotheses. AI reading: copying as the dependence failure of Condorcet's jury theorem; echo chambers, or evaluators trained on one another's verdicts, under the cascade premise. These are readings, not containments.",
@@ -184,7 +184,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
       "role": "integration",
-      "sha256": "5bcbf2d057886cd5ae7d1302d19df3eedf2ddcee2fc1930d3e12ea94bd26ee8d"
+      "sha256": "4ddb2884750a9dc567d9327adb262910fbbae19d8d3b6b55d311339f5e6d2616"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
@@ -222,8 +222,8 @@
       "zh": "2026年10月29日：新增（RF 第一轮），读者读读者：自级联起池之行所载不逾其前诸员之耦合；载其耦合之员；相仿；经计划之审、Lean 之审与文之冷读；研究第 446 节。"
     },
     {
-      "en": "31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR3 in experiments/formations-that-read, which can refute at most the bridge that sequential choosers meet the premise at the histories reached, never the law; no statement or declaration changed.",
-      "zh": "2026年10月31日，工作板条目 RF，诸检验之设计（研究第 476 节）：下一步所名之检验即 experiments/formations-that-read 之 TR3，至多能驳依次之择者于所至之历合此前提之桥，不驳此律；无一陈述或声明改变。"
+      "en": "31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR3 in experiments/formations-that-read, which can refute at most the bridge that sequential choosers meet the premise at the histories reached, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.",
+      "zh": "2026年10月31日，工作板条目 RF，诸检验之设计（研究第 476 节）：下一步所名之检验即 experiments/formations-that-read 之 TR3，至多能驳依次之择者于所至之历合此前提之桥，不驳此律；无一陈述或声明改变。计划 PLAN.md 重新指向：自本记录所审哈希以来，计划只于检验之读者见其误述 Lean 之处（§3、§4、§8、§11、§12）及 §10 诸检验而变；重新指向前已对本记录读之，其所言无一改变。"
     }
   ]
 }
