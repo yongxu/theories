@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """RF round 2, third part, RF-M.3: the board, edited in a copy (board_rfm2.py's pattern). `head BOARD TEXT` puts RF's
 head-of-queue clause, "RF at the head of the queue (TEXT); ", at the front of the queue note; `land BOARD RECEIPT N
-QUEUE` brings the RF row's statements cell to RF-M.3's landing (its sentence and the next step, the rule-9 decision as
-made in RR's landing, the review sentence) and its state cell (RF-M.3 landed with its study section and receipt, and the
-next step), drops RF's head-of-queue clause, puts QUEUE at the head of the queue note, drops RF-M.3 from the
-coordinator's order where it is listed and names the receipt as the latest. BOARD is the path of the board file to edit
-(in the landing worktree, or a copy of main's for a commit made without a working tree).
+QUEUE` brings the RF row's statements cell to RF-M.3's landing (its sentence and the next step, the rule-9 decision
+as made in RR's landing, the review sentence) and its state cell (RF-M.3 landed with its study section and receipt,
+and the next step), drops RF's head-of-queue clause, puts QUEUE at the head of the queue note (followed by a space
+where it ends in a full stop, a semicolon otherwise), drops RF-M.3 from the coordinator's order where it is listed
+and names the receipt as the latest. BOARD is the path of the board file to edit (in the landing worktree, or a copy
+of main's for a commit made without a working tree).
 usage: python3 -B board_rfm3.py head BOARD TEXT | land BOARD RECEIPT N QUEUE"""
 import datetime
 import re
@@ -63,7 +64,10 @@ elif mode == 'land':
     board[rows[0]] = ' | '.join(cells)
     assert len(HEAD.findall(board[queue[0]])) == 1, 'head-of-queue clause'
     board[queue[0]] = HEAD.sub('', board[queue[0]], count=1)
-    board[queue[0]] = board[queue[0]].replace('- **Queue:** ', '- **Queue:** ' + queue_text + '; ', 1)
+    # a clause ending in its own sentence ("… ask the coordinator for a slot.") is followed by a space, as the
+    # landings since UE25's are; one ending without a full stop, by a semicolon
+    sep = ' ' if queue_text.endswith('.') else '; '
+    board[queue[0]] = board[queue[0]].replace('- **Queue:** ', '- **Queue:** ' + queue_text + sep, 1)
     order = re.search(r"Then, in the coordinator's order: ([^;]*);", board[queue[0]])
     if order:  # split at the commas outside parentheses: an item may read "RF-M.3 (whole, ready)"
         listed, items, depth, start = order.group(1), [], 0, 0
