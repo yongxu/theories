@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """OU7's record, part A, `conditional-laws-of-the-corpus`: the corpus's units classed 丙一, family by family, each law
-with a net where its condition fails (Becoming.GrammarConditionals, with the two general laws the Grammar and
-GrammarReadings patches put below it), home 06 §四 at its end.
+with a net where its condition fails (Becoming.GrammarConditionals), home 06 §四 at its end. The two general laws two of
+its families rest on, which the Grammar and GrammarReadings patches add, are stated in the records of the laws they
+generalize (integrate_ou7.py's record step), not here.
 
 From the checkout root:
   python3 -B <dir>/make_record_ou7.py --draft OUT        the record without receipt or binding (status open), for review
@@ -11,11 +12,11 @@ From the checkout root:
                                                          section of the landing
 
 The prose fields are record-text.json's, verbatim (AI-written, for OU's owner to keep, shorten or rewrite); this script
-adds the fixed fields, the counterexamples' paths, the references (every declaration of the leaf in source order, and
-the declarations the laws cite from Grammar and GrammarReadings) and the history note. Before the patches are applied
-(on the kit's branch), the three declarations they add are read from the patches; after, from the package. It asserts
-each law's declarations exist, each schema-2 length limit, and, given a receipt, that the receipt passed, binds the
-three sources' bytes, elaborated every declaration the record names and reports every axiom list empty.
+adds the fixed fields, the counterexamples' paths, the references (every declaration of the leaf in source order) and
+the history note. Before the patches are applied (on the kit's branch), the three declarations they add are read from
+the patches; after, from the package. It asserts that each law names only the leaf's declarations, each schema-2 length
+limit, and, given a receipt, that the receipt passed, binds the leaf's and the two patched sources' bytes, elaborated
+every declaration the record names and reports every axiom list empty.
 """
 import hashlib
 import json
@@ -83,14 +84,11 @@ for m in BELOW:
     PATCHED |= new
     assert applied == APPLIED, (m, 'the patch applied' if applied else 'the patch not applied',
                                 'but the leaf is' if APPLIED else 'but the leaf is not')
-CITED = {m: [] for m in BELOW}
+# Each law names the leaf's declarations only: the laws of Grammar and GrammarReadings it rests on are stated in their
+# own records and named in the prose.
 for law in TEXT['laws']:
-    for decl in law['declarations']:
-        homes = [m for m in BELOW if decl in BELOW_NAMES[m]]
-        assert decl in LEAF or homes, ('a law names a declaration in none of the three sources', decl)
-        for m in homes:
-            if decl not in LEAF and decl not in CITED[m]:
-                CITED[m].append(decl)
+    outside = [d for d in law['declarations'] if d not in LEAF]
+    assert not outside, ('a law names a declaration outside the leaf', outside)
 for c in TEXT['counterexamples_draft']:
     assert 'Becoming.' + c['declaration'] in LEAF, c['declaration']
 
@@ -131,7 +129,7 @@ def receipt_modules(receipt):
     assert data['status'] == 'passed', receipt
     mods = {x['module']: x for x in data['modules']}
     out = {}
-    for module, path, names in [(MODULE, SOURCE, LEAF)] + [(m, BELOW[m], CITED[m]) for m in BELOW]:
+    for module, path, names in [(MODULE, SOURCE, LEAF)] + [(m, BELOW[m], sorted(PATCHED & BELOW_NAMES[m])) for m in BELOW]:
         assert data['source_sha256'][module] == digest(path), ('the receipt does not bind the source as it is', path)
         m = mods[module]
         declared = {d['name'] for d in m['declarations']}
@@ -145,8 +143,6 @@ def receipt_modules(receipt):
 
 def record(receipt=None, study=None, reviewed=None):
     refs = [{'path': SOURCE, 'role': 'proof', 'declarations': LEAF, 'sha256': digest(SOURCE) if APPLIED else '0' * 64}]
-    for m in BELOW:
-        refs.append({'path': BELOW[m], 'role': 'proof', 'declarations': CITED[m], 'sha256': digest(BELOW[m])})
     if receipt:
         assert APPLIED, 'a receipt is given but the leaf is not in the package'
         receipt_modules(receipt)
@@ -193,17 +189,20 @@ def record(receipt=None, study=None, reviewed=None):
         'references': refs,
         'proof_bindings': ([{'source': path, 'receipt': receipt, 'sha256_pointer': f'/source_sha256/{module}',
                              'success_pointer': '/status', 'success_value': 'passed'}
-                            for module, path in [(MODULE, SOURCE)] + list(BELOW.items())] if receipt else []),
+                            for module, path in [(MODULE, SOURCE)]] if receipt else []),
         'history': [{
             'en': f'{day.day} {day:%B %Y}, board item OU7 (study section {study or "…"}): added. The 219 units classed '
                   '丙一 read as laws of every carrier, relation and class, 128 of them in 22 families, each law with a '
                   'net where its condition fails; the new laws and the witnesses in one core leaf, '
-                  'Becoming.GrammarConditionals; two general laws put below it, in Grammar and GrammarReadings, with '
-                  'the old laws as their cases; one independent AI review of the design, every finding taken.',
+                  'Becoming.GrammarConditionals; the two general laws two families rest on, in Grammar and '
+                  'GrammarReadings, stated in the records of the laws they generalize (continuation-relative-to-a-class, '
+                  'law 5; classical-definitions-in-the-grammar, law 4); one independent AI review of the design, every '
+                  'finding taken.',
             'zh': f'{day.year}年{day.month}月{day.day}日，工作板条目 OU7（研究第 {study or "…"} 节）：增。归为丙一之 219 条'
                   '读作对一切载体、关系与类之律，其中 128 条入 22 族，每律有其条件不成立之网；新律与见证在一核心之叶 '
-                  'Becoming.GrammarConditionals；两条一般之律放在其下，在 Grammar 与 GrammarReadings，旧律为其一例；'
-                  '设计经一次独立之 AI 审查，所见皆取。'}],
+                  'Becoming.GrammarConditionals；二族所依之两条一般之律在 Grammar 与 GrammarReadings，陈于其所推广之律'
+                  '之记录（continuation-relative-to-a-class 律 5；classical-definitions-in-the-grammar 律 4）；设计经一次'
+                  '独立之 AI 审查，所见皆取。'}],
     }
     limits(r)
     unused = {'about', 'home', 'validation_scope_draft', 'dependencies_draft', 'related_draft', 'counterexamples_draft'}

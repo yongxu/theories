@@ -7,11 +7,12 @@
 #                                      patches checked against the merged tree as one series, in the order apply takes
 #                                      them; no leaf yet in the package; every anchor of the joins and the two home
 #                                      sections found once (integrate_ou7.py anchors, nothing written)
-#   LOG=DIR zsh land_ou7.sh apply      the Grammar, GrammarReadings, OU plan and GrammarTesting patches, then
-#                                      patches/owner/ in name order; the three leaves and their joins; the audit
+#   LOG=DIR zsh land_ou7.sh apply      the Grammar, GrammarReadings, MapRegions, OU plan and GrammarTesting patches,
+#                                      then patches/owner/ in name order; the three leaves and their joins; the audit
 #   LOG=DIR zsh land_ou7.sh run        the checker in place (OUT=DIR writes the run outside the repository instead)
-#   LOG=DIR zsh land_ou7.sh post [N]   08 §3's sentence, 06's and 03's home sections, 06's lines, regions and the two
-#                                      records; MV's data and OU7's check; the apart register; the study's section N
+#   LOG=DIR zsh land_ou7.sh post [N]   08 §3's sentence, 06's and 03's home sections, 06's lines, regions; the two
+#                                      general laws in 01 §4, 06 §三 and their two records; one record's words; OU7's
+#                                      two records; MV's data and OU7's check; the apart register; the study's section N
 #                                      (the next free one, read after main is merged; a given N must match); the
 #                                      re-point of the records whose sources the patches changed; render, checks,
 #                                      links, lint, tests
@@ -80,9 +81,10 @@ EOF
   python3 -B $M --write > $LOG/conn-write.log 2>&1 || fail "connectivity write"
   python3 -B $M --check > $LOG/conn.log 2>&1 || fail "connectivity check"
   step study; python3 -B $K/integrate_ou7.py study $N $V > $LOG/study.log 2>&1 || fail study; cat $LOG/study.log
-  # The records pinning a source the patches changed (Grammar, GrammarReadings, GrammarTesting, the OU plan, and
-  # whatever the owner's patches change): read with each source before this stage, then re-pointed as bookkeeping, the
-  # Lean files' proof bindings rebound to this receipt. Owner patches add their own reason to repoint_reason.txt.
+  # The records pinning a source the patches changed (Grammar, GrammarReadings, GrammarTesting, MapRegions, the OU
+  # plan, and whatever the owner's patches change): read with each source before this stage, then re-pointed as
+  # bookkeeping, the Lean files' proof bindings rebound to this receipt. What the record stage changed in three of
+  # them has its history notes already. Owner patches add their own reason to repoint_reason.txt.
   step repoint; python3 -B tools/research/research.py check > $LOG/rc.log 2>&1
   python3 - $LOG/rc.log $LOG/drift.json <<'EOF' || fail drift
 import sys, json

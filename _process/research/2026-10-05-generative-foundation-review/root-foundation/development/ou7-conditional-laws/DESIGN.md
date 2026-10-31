@@ -530,6 +530,15 @@ OU's owner decided on the reviewed design:
 
   The notes saying what imports MapRegions, GrammarTesting, GrammarReadings and HeldPossible change with the leaves' imports. A dry run of both parts ([dry_run.py](kit/dry_run.py)), in Python only, passed on main at 753460b81.
 
+**1 November.** The choices left open are now decided in the kit, each with its reason ([kit README](kit/README.md#decided-on-1-november)):
+- each general law is stated where the law it generalizes is, and OU7's record binds only its leaf;
+- part B goes in the instance ring;
+- MapRegions is no longer called a leaf: a fourth patch changes its doc, comments only, and the record stage corrects one record's words;
+- GrammarReadings' note and scope sentence state the general law;
+- the toy's line in 03 §3 points to its derivation.
+
+The grammar's owner's three items that wait for BD2 are held in [kit/patches/HELD.md](kit/patches/HELD.md), BD2's two equivalences among them. A dry run of the whole kit passed on main at 815c6425f.
+
 ## Open
 
 Each item below is an AI reading. Each stays open, with this label, here and in the home section's open lines.
@@ -600,8 +609,8 @@ Each is listed in [groups.tsv](data/groups.tsv). The kit's earlier output is in 
 - [data/units.tsv](data/units.tsv): the 219 丙一 rows, with their classification fields.
 - [data/groups.tsv](data/groups.tsv): each unit's family, disposition and labelled reading.
 - [kit/assign.py](kit/assign.py): writes groups.tsv from units.tsv, states the dispositions and rules, and checks that every unit is placed once.
-- [kit/patches/](kit/patches/README.md): the patches for Grammar and GrammarReadings and the OU plan's edit, what each changes, and how to check them.
-- [kit/](kit/README.md): the landing kit. It holds the core leaf ([kit/Becoming/GrammarConditionals.lean](kit/Becoming/GrammarConditionals.lean)), the patches, 06's home section, the record's text and maker, and the integrate and land scripts. It says what has been checked and what waits.
+- [kit/patches/](kit/patches/README.md): the patches for Grammar, GrammarReadings and MapRegions and the OU plan's edit, what each changes, and how to check them; the grammar's owner's patches and the items held until BD2 lands.
+- [kit/](kit/README.md): the landing kit, both parts. It holds the core leaf ([kit/Becoming/GrammarConditionals.lean](kit/Becoming/GrammarConditionals.lean)), the patches, 06's home section, the records' makers, and the integrate and land scripts. It says what has been checked, what was decided and what waits.
 - [tree/Becoming/GrammarConditionalsChecks.lean](tree/Becoming/GrammarConditionalsChecks.lean): the checks, which stay in scratch.
 - [tree/BUILD.json](tree/BUILD.json): the build of the patched modules with both scratch modules.
 - [review/](review/): the independent review's report and its scratch Lean.

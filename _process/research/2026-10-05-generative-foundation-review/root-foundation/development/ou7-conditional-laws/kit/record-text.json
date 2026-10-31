@@ -1,5 +1,5 @@
 {
- "about": "OU7's record, part A: the prose fields (AI-written, 31 October 2026, for OU's owner to keep, shorten or rewrite). make_record_ou7.py adds the fixed fields (schema_version, kind, status, family, reviewed_at_utc, canonical_source, references with declarations, proof bindings to the landing's core receipt, history) and the counts read from the receipt.",
+ "about": "OU7's record, part A: the prose fields (AI-written, 31 October 2026, revised 1 November so that the two general laws are stated in the records of the laws they generalize, not here). make_record_ou7.py adds the fixed fields (schema_version, kind, status, family, reviewed_at_utc, canonical_source, references with declarations, proof bindings to the landing's core receipt, history) and the counts read from the receipt.",
  "id": "conditional-laws-of-the-corpus",
  "title": {
   "en": "The corpus's conditional laws in the grammar, each with a net where its condition fails",
@@ -34,18 +34,15 @@
    ]
   },
   {
-   "en": "前際 and 後際 mirror each other under the converse: what a class's core puts with an occurrence whose line never ends has a line that never ends, as an ending is kept along the core; a beginning is kept along the core of the converse net, which holds the two-way core. The forward core does not keep a beginning, and the converse core is wider.",
-   "zh": "前际与后际于逆下相映：类之核所合于线不穷之事者，其线亦不穷，如亡沿核不变；生沿逆缘之核不变，此核含双向之核。前向之核不保生，逆缘之核更宽。",
+   "en": "前際 and 後際 mirror each other under the converse. What a class's core puts with an occurrence whose line never ends has a line that never ends, so an endless line and one that ends lie apart under the core, as ending is kept along the core and beginning along the core of the converse net. The forward core does not keep a beginning, the converse core relates pairs the core does not, and a line without beginning can end.",
+   "zh": "前际与后际于逆下相映：类之核所合于线不穷之事者，其线亦不穷，故不穷之线与有终之线于核下相分；如亡沿核不变，生沿逆缘之核不变。前向之核不保生，逆缘之核合核所不合者，无始之线可有终。",
    "declarations": [
     "Becoming.«类内有常则线相随»",
     "Becoming.«核同则同不穷»",
-    "Becoming.«亡于核下不变»",
-    "Becoming.«生于逆核下不变»",
-    "Becoming.«位核含于逆核»",
-    "Becoming.«无始而有终之例»",
     "Becoming.«不穷与亡不同核之例»",
     "Becoming.«生于核下可变之例»",
-    "Becoming.«逆核不含于核之例»"
+    "Becoming.«逆核不含于核之例»",
+    "Becoming.«无始而有终之例»"
    ]
   },
   {
@@ -59,14 +56,11 @@
    ]
   },
   {
-   "en": "Under a class constant under 缘 and its converse, whatever has a predecessor passes through (通), altered or not; what abides is its case. The condition is sufficient, not necessary: under a class that is not constant an occurrence can end, alter and pass through. With no predecessor, or constancy one way only, it does not pass through.",
-   "zh": "类于缘与其逆两向有常时，有前者通，不论异否；住者是其一例。此条件充分而非必要：不有常之类下，一事可亡、异而通。无前，或只一向有常，则不通。",
+   "en": "Passing through: where a class is constant under 缘 and its converse, whatever has a predecessor passes through, altered or not, as the grammar's reading of 通 has it. The condition is sufficient, not necessary: under a class that is not constant an occurrence can end, alter and pass through. With no predecessor it does not pass through, though the class be constant both ways.",
+   "zh": "通：类于缘与其逆两向有常时，有前者通，不论异否，如文法对通之读。此条件充分而非必要：不有常之类下，一事可亡、异而通。无前则不通，虽类两向有常。",
    "declarations": [
-    "Becoming.«两向有常有前则通»",
-    "Becoming.«两向有常则通»",
     "Becoming.«不有常而通之例»",
-    "Becoming.«两向有常而无前不通之例»",
-    "Becoming.«有常而不通»"
+    "Becoming.«两向有常而无前不通之例»"
    ]
   },
   {
@@ -183,8 +177,8 @@
   }
  ],
  "validation_scope_draft": {
-  "en": "Pure core, every axiom report empty: GrammarConditionals imports GrammarCandidates and GrammarLaws, a leaf nothing imports; the two general laws it cites are in Grammar and GrammarReadings, whose old laws keep their statements as cases. Written by an AI from the corpus's classification; one independent AI review, every finding taken; no human audit of the readings.",
-  "zh": "纯核，公理报告皆空：GrammarConditionals 引 GrammarCandidates 与 GrammarLaws，无模块引之；所引两条一般之律在 Grammar 与 GrammarReadings，旧律以其一例保其陈述。由 AI 据语料之归类写成；经一次独立之 AI 审查，所见皆取；读法无人审。"
+  "en": "Pure core, every axiom report empty: GrammarConditionals imports GrammarCandidates and GrammarLaws, a leaf nothing imports. The two general laws two families rest on are stated in the records of the laws they generalize, continuation relative to a class and the classical definitions. Written by an AI from the corpus's classification; one independent AI review, every finding taken; no human audit of the readings.",
+  "zh": "纯核，公理报告皆空：GrammarConditionals 引 GrammarCandidates 与 GrammarLaws，无模块引之。二族所依之两条一般之律，陈于其所推广之律之记录：相对于类的续与古文之定义。由 AI 据语料之归类写成；经一次独立之 AI 审查，所见皆取；读法无人审。"
  },
  "next_delta": {
   "en": "Review of the readings by a person (classicists, Buddhist scholars, logicians); the three open readings (G22's 衡不正, JS-326's 相應, JS-318's 無明); which 變 G01's text means; the 181 candidates of the three added texts.",
@@ -205,14 +199,14 @@
   {
    "id": "classical-definitions-in-the-grammar",
    "relation": "formal-reuse",
-   "detail_en": "«通», «有常则往不穷», «非一非异», «有常而不通» and «昼夜往来不穷»; the general law «两向有常有前则通» joins GrammarReadings, with «两向有常则通» as its case.",
-   "detail_zh": "«通»、«有常则往不穷»、«非一非异»、«有常而不通»、«昼夜往来不穷»；一般之律 «两向有常有前则通» 入 GrammarReadings，«两向有常则通» 是其一例。"
+   "detail_en": "«通», «有常则往不穷», «非一非异», «有常而不通» and «昼夜往来不穷»; its law 4, generalized at this landing: under a class constant both ways what has a predecessor passes through («两向有常有前则通»), what abides being its case («两向有常则通»). The family of 通 rests on it.",
+   "detail_zh": "«通»、«有常则往不穷»、«非一非异»、«有常而不通»、«昼夜往来不穷»；其律 4 于此次落地推广：类两向有常时，有前者通（«两向有常有前则通»），住者为其一例（«两向有常则通»）。通之族依之。"
   },
   {
    "id": "continuation-relative-to-a-class",
    "relation": "formal-reuse",
-   "detail_en": "The four marks, constancy, the core and the two-way core, «息» and «无环»; the general law «生于逆核下不变» and «位核含于逆核» join Grammar, with «生于位核下不变» as its case.",
-   "detail_zh": "四相、有常、核与双向之核、«息»、«无环»；一般之律 «生于逆核下不变» 与 «位核含于逆核» 入 Grammar，«生于位核下不变» 是其一例。"
+   "detail_en": "The four marks, constancy, the core and the two-way core, «息» and «无环»; its law 5, generalized at this landing: beginning is kept along the core of the converse net («生于逆核下不变»), which holds the two-way core («位核含于逆核»), «生于位核下不变» its case. The family of 前際 and 後際 rests on it.",
+   "detail_zh": "四相、有常、核与双向之核、«息»、«无环»；其律 5 于此次落地推广：生沿逆缘之核不变（«生于逆核下不变»），此核含双向之核（«位核含于逆核»），«生于位核下不变» 为其一例。前际后际之族依之。"
   },
   {
    "id": "master-laws-on-the-grammar",

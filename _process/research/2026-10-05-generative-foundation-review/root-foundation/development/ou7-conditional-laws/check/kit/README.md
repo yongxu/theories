@@ -27,7 +27,7 @@ The landing scripts are part A's kit's (`kit/` beside `check/`). `make_record_ou
 ## The leaves' places
 
 Each of the two modules has four places, which the land script's prepare stage checks survive the merge once each (as U1b's do):
-1. **The list** in `check_becoming.py`. As `UnitMatchings` does, the list is `CORE`; insert `"Becoming.RoomNet", "Becoming.RoomRuns"` after `"Becoming.RegimeMargin"` (compile order comes from the imports). The ring's `INSTANCES` would fit too: they read general laws on one named carrier (`Rooms.Occurrence`), as `Hexagrams` and `PlaceTransitionNets` do. Both meet the ring's conditions: no core module imports them, and neither imports an application. Which list they go in is OU's owner's decision.
+1. **The list** in `check_becoming.py` is the ring's `INSTANCES`, decided in the landing kit on 1 November ([its reason](../../kit/README.md#decided-on-1-november)). The two modules read general laws on one named carrier (`Rooms.Occurrence`), as `Hexagrams` and `PlaceTransitionNets` do. They meet the ring's conditions: no core module imports them, and neither imports an application. `"Becoming.RoomNet", "Becoming.RoomRuns"` go at the end of `INSTANCES` (compile order comes from the imports), and the ring's comment and README row name the rooms.
 2. **The import** in `Becoming.lean`: `import Becoming.RoomNet` and `import Becoming.RoomRuns` after `import Becoming.RegimeMargin`.
 3. **The README row**: `package-readme-rows.txt`, after `Becoming.RegimeMargin`'s row.
 4. **The kit's copy** equal to the package's.

@@ -2,17 +2,20 @@
 """A dry run of OU7's landing in a throwaway git tree, with no Lean. The tree holds main's files that the kit reads or
 writes, and the study folder as this checkout has it. The run takes the land script's prepare stage and its apply
 stage twice. It then takes the post stage's own steps against a synthetic receipt and connectivity log:
-  - record, twice;
+  - record, twice (the two general laws in the two records of the laws they generalize, and the one record whose words
+    the joins make false, included);
+  - the re-point of those three records, as the post stage makes it from the drift;
   - register, after a refused log, then once more;
   - study, twice.
-Last, both records go through the registry's own validation and the lint. Nothing in the repository is written.
+Last, OU7's two records and those three go through the registry's own validation and the lint. Nothing in the
+repository is written.
 
   python3 -B <kit>/dry_run.py OUT [MAIN]     OUT: a new folder outside the repository; MAIN: the commit, by default
                                              refs/heads/main
 
 The synthetic receipt is MAIN's latest receipt with the patched sources' hashes, the patches' three laws and the
-three leaves added as they would be checked (every axiom report empty). It stands in for the core run, which only
-the rehearsal and the landing make. The steps that need the run itself (master laws, the re-point, render and the
+three leaves added as they would be checked (every axiom report empty; part A's leaf in the core, part B's two in the
+instance ring). It stands in for the core run, which only the rehearsal and the landing make. The steps that need the run itself (master laws, the re-point, render and the
 checks) are left to them.
 """
 import hashlib
@@ -37,6 +40,8 @@ RF = '_process/research/2026-10-05-generative-foundation-review/root-foundation/
 STUDY = HERE.parent.relative_to(REPO).as_posix() + '/'
 KIT = STUDY + 'kit/'
 STAMP = '20261101T000000.000000Z'
+GENERALIZED = ('continuation-relative-to-a-class', 'classical-definitions-in-the-grammar')
+WORDS = ('generation-and-degeneration-at-two-grains',)     # pins MapRegions; the record stage corrects its words
 RECEIPT = PKG + f'becoming-checks/{STAMP}/verification.json'
 
 
@@ -57,11 +62,16 @@ def show(title, p, lines=40):
 latest = json.loads(run('git', 'show', f'{MAIN}:{PKG}becoming-verification.json', cwd=REPO).stdout)['utc']
 paths = [PKG + n for n in ('Becoming.lean', 'check_becoming.py', 'README.md', 'README.zh.md', 'becoming-verification.json',
                            'Becoming/Grammar.lean', 'Becoming/GrammarReadings.lean', 'Becoming/GrammarTesting.lean',
-                           'Becoming/GrammarLaws.lean', f'becoming-checks/{latest}/verification.json')]
+                           'Becoming/GrammarLaws.lean', 'Becoming/MapRegions.lean',
+                           f'becoming-checks/{latest}/verification.json')]
 paths += ['_process/research-config.json', RF + 'development/one-unfolding-root/PLAN.md',
           RF + 'THEOREM-CONNECTIVITY-APART.json', RF + 'BECOMING-RENEWAL-READING.md', 'theories/becoming/chapters',
           'theories/becoming/results/records', 'theories/becoming/results/data', 'theories/becoming/results/completion',
-          'tools/research']
+          'tools/research', '_process/architecture/rebinds.jsonl']
+# Every file the records the kit changes reference, so that they validate in the tree as in the checkout.
+for rid in GENERALIZED + WORDS:
+    rec = json.loads(run('git', 'show', f'{MAIN}:theories/becoming/results/records/{rid}.json', cwd=REPO).stdout)
+    paths += [x['path'] for x in rec['references'] if x['path'] not in paths]
 TREE.mkdir(parents=True)
 LOG.mkdir()
 archive = subprocess.run(['git', 'archive', MAIN, '--', *paths], cwd=REPO, capture_output=True, check=True).stdout
@@ -102,22 +112,25 @@ def synthetic_receipt():
     r = json.loads((TREE / PKG / f'becoming-checks/{latest}/verification.json').read_text(encoding='utf-8'))
     r['utc'], r['status'], r['retained_run'] = STAMP, 'passed', f'becoming-checks/{STAMP}'
     by = {m['module']: m for m in r['modules']}
-    for module in ('Becoming.Grammar', 'Becoming.GrammarReadings', 'Becoming.GrammarTesting', 'Becoming.GrammarLaws'):
+    for module in ('Becoming.Grammar', 'Becoming.GrammarReadings', 'Becoming.GrammarTesting', 'Becoming.GrammarLaws',
+                   'Becoming.MapRegions'):
         r['source_sha256'][module] = hashlib.sha256((TREE / PKG / f'Becoming/{module[9:]}.lean').read_bytes()).hexdigest()
-    for module in mr.BELOW:
-        for name in sorted(mr.BELOW_NAMES[module] - {d['name'] for d in by[module]['declarations']}):
+    for module in mr.BELOW:     # exactly the declarations the patches add, as the audit checks
+        for name in sorted((mr.PATCHED & mr.BELOW_NAMES[module]) - {d['name'] for d in by[module]['declarations']}):
             by[module]['declarations'].append({'kind': 'theorem', 'name': name})
             by[module]['axiom_dependencies'][name] = []
             by[module]['theorems'] += 1
-    leaves = [(mr.MODULE, mr.SOURCE, mr.LEAF, mr.THEOREMS)] + \
-             [(m, p, mb.LEAVES[m], mb.THEOREMS[m]) for m, p in mb.MODULES.items()]
-    for module, path, names, theorems in leaves:
+    leaves = [(mr.MODULE, mr.SOURCE, mr.LEAF, mr.THEOREMS, 'core', 'core_modules')] + \
+             [(m, p, mb.LEAVES[m], mb.THEOREMS[m], 'instance', 'instance_modules') for m, p in mb.MODULES.items()]
+    for module, path, names, theorems, layer, listed in leaves:
         assert module not in by, module
         r['source_sha256'][module] = hashlib.sha256((TREE / path).read_bytes()).hexdigest()
-        r['modules'].append({'module': module, 'spine': True, 'layer': 'core', 'theorems': theorems,
+        r['source_paths'][module] = 'becoming/' + path[len(PKG):]
+        r['modules'].append({'module': module, 'spine': True, 'layer': layer, 'theorems': theorems,
                              'declarations': [{'kind': 'declaration', 'name': n} for n in names],
                              'axiom_dependencies': {n: [] for n in names}, 'kernel_checked': True})
-        r['core_closure'].append(module)
+        for key in ('spine_modules', listed, 'core_closure', 'compile_order'):
+            r[key].append(module)
     (TREE / RECEIPT).parent.mkdir(parents=True)
     (TREE / RECEIPT).write_text(json.dumps(r, ensure_ascii=False, indent=1), encoding='utf-8')
     top = json.loads((TREE / PKG / 'becoming-verification.json').read_text(encoding='utf-8'))
@@ -138,6 +151,14 @@ show('record', run(*integrate, 'record', RECEIPT, N), 30)
 second = run(*integrate, 'record', RECEIPT, N)
 assert 'applied' not in second.stdout.replace('already in place', ''), second.stdout
 show('record, a second time', second, 6)
+
+# The post stage re-points the records whose pinned sources the patches changed, from the drift; here, the two
+# generalized records and the one whose words changed, bound to the synthetic receipt as the landing binds them to
+# the run's.
+lean = [mr.BELOW[m] for m in ('Becoming.Grammar', 'Becoming.GrammarReadings')] + [PKG + 'Becoming/MapRegions.lean']
+show('re-point of the three records the record stage changed', run(
+    'python3', '-B', 'tools/research/repoint.py', '--reason', 'OU7 dry run', '--ids', *GENERALIZED, *WORDS,
+    '--paths', *lean, RF + 'development/one-unfolding-root/PLAN.md', '--receipt', RECEIPT, '--lean', *lean, '--apply'), 8)
 
 APART = RF + 'THEOREM-CONNECTIVITY-APART.json'
 part_b = json.loads((TREE / STUDY / 'check/kit/apart-reasons.json').read_text(encoding='utf-8'))
@@ -182,8 +203,9 @@ validate = ('import sys, json; from pathlib import Path; sys.path.insert(0, ".")
             '[print("FINDING", f[:300]) for f in mine];'
             'rs = [r for r in loaded if r["id"] in ids];'
             '[print("lint", r["id"], f["severity"], f["field"], f["rule"], str(f["detail"])[:120]) for r in rs for f in style.lint(r)];'
-            'print(len(mine), "findings on the two records;", len(findings) - len(mine), "elsewhere (this tree holds only "'
-            '"the files the kit touches)")')
-show('the records through the registry and the lint', run('python3', '-B', '-c', validate, mr.RID, mb.RID), 20)
+            'print(len(mine), "findings on the", len(ids), "records;", len(findings) - len(mine), "elsewhere (this tree holds "'
+            '"only the files the kit touches)")')
+show('the records through the registry and the lint', run('python3', '-B', '-c', validate, mr.RID, mb.RID,
+                                                          *GENERALIZED, *WORDS), 30)
 show('what the dry run changed in the tree', run('git', 'status', '--short'), 40)
 print('dry run done:', TREE)

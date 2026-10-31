@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """OU7's record, part B, `rooms-tested-by-a-window`: 验's model examples, one rule of rooms (an unheated room and two
 thermostats) tested by a window on the net of the possible (Becoming.RoomNet on the grammar, Becoming.RoomRuns joining
-RegimeMargin's runs), home 03 §3 after testing-within-the-net.
+it to RegimeMargin's runs and HeldPossible, both in the instance ring: they read the core's laws on one named carrier),
+home 03 §3 after testing-within-the-net.
 
 From the checkout root:
   python3 -B <dir>/make_record_ou7b.py --draft OUT        the record without receipt or binding (status open), for review
@@ -173,13 +174,13 @@ def record(receipt=None, study=None, reviewed=None):
         'history': [{
             'en': f'{day.day} {day:%B %Y}, board item OU7 (study section {study or "…"}): added. 验\'s model examples '
                   'on the net of the possible: one rule of rooms, an unheated room and two thermostats, tested by a '
-                  'window, in two core leaves, Becoming.RoomNet on the grammar and Becoming.RoomRuns joining '
-                  'RegimeMargin\'s runs; the toy «恒温与平衡» derived at a margin of one; one independent AI review '
-                  'of the design and both modules and its re-check, every point taken.',
+                  'window, in two modules of the instance ring, Becoming.RoomNet on the grammar and Becoming.RoomRuns '
+                  'joining it to RegimeMargin\'s runs and HeldPossible; the toy «恒温与平衡» derived at a margin of one; '
+                  'one independent AI review of the design and both modules and its re-check, every point taken.',
             'zh': f'{day.year}年{day.month}月{day.day}日，工作板条目 OU7（研究第 {study or "…"} 节）：增。可能之网上验之'
-                  '模型之例：一则之诸室，无给之室与二恒温器，以窗验之，在二核心之叶，Becoming.RoomNet 在文法上，'
-                  'Becoming.RoomRuns 接 RegimeMargin 之进程；«恒温与平衡» 之例于余量一推出；设计与二模块经一次独立之 '
-                  'AI 审查及其复核，所见皆取。'}],
+                  '模型之例：一则之诸室，无给之室与二恒温器，以窗验之，在实例之环之二模块，Becoming.RoomNet 在文法上，'
+                  'Becoming.RoomRuns 接之于 RegimeMargin 之进程与 HeldPossible；«恒温与平衡» 之例于余量一推出；'
+                  '设计与二模块经一次独立之 AI 审查及其复核，所见皆取。'}],
     }
     mr.limits(r)
     assert set(TEXT) - set(r) == {'about', 'home', 'modules'}, set(TEXT) - set(r)

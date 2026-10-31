@@ -1,20 +1,23 @@
 #!/usr/bin/env python3
 """OU7's landing, parts A and B in one kit. Part A: the corpus's conditional laws (Becoming.GrammarConditionals, a core
-leaf) with the two general laws put below it in Grammar and GrammarReadings, the OU plan's line, 06's home section and
-record. Part B: 验's model examples (Becoming.RoomNet and Becoming.RoomRuns, two core leaves, their pieces in
-check/kit/ beside this folder), one clause in GrammarTesting's header, 03 §3's home section and record.
+leaf), 06's home section and record; the two general laws two of its families rest on, put in Grammar and
+GrammarReadings by patch and stated where the laws they generalize are (01 §4 and law 5 of
+continuation-relative-to-a-class; 06 §三 and law 4 of classical-definitions-in-the-grammar); the OU plan's line. Part B:
+验's model examples (Becoming.RoomNet and Becoming.RoomRuns, two modules of the instance ring, their pieces in check/kit/
+beside this folder), a clause in GrammarTesting's header and MapRegions' module doc, 03 §3's home section and record.
 
   python3 -B <dir>/integrate_ou7.py anchors                every edit of apply and of the two home sections tried on
                                                            the texts as they stand, nothing written: each anchor is
                                                            found once or its edit is already in place (prepare)
-  python3 -B <dir>/integrate_ou7.py apply                  the Grammar, GrammarReadings, PLAN and GrammarTesting
-                                                           patches, then every patch in patches/owner/ in name order
-                                                           (the grammar's owner's held items); the three leaves copied
-                                                           into the package; their joins: the root module's imports and
-                                                           notes (part A's after GrammarLaws', part B's after
-                                                           RegimeMargin's), the notes and rows saying what imports a
-                                                           module the leaves import, the checker's lists and scope
-                                                           sentences, the README rows EN and ZH
+  python3 -B <dir>/integrate_ou7.py apply                  the Grammar, GrammarReadings, MapRegions, PLAN and
+                                                           GrammarTesting patches, then every patch in patches/owner/
+                                                           in name order (the grammar's owner's held items); the three
+                                                           leaves copied into the package; their joins: the root
+                                                           module's imports and notes (part A's after GrammarLaws',
+                                                           part B's after RegimeMargin's), the notes and rows saying
+                                                           what imports a module the leaves import, the checker's lists
+                                                           and scope sentences (GrammarReadings' naming the general
+                                                           law), the README rows EN and ZH
   python3 -B <dir>/integrate_ou7.py audit                  every Lean source the patches changed, against HEAD with
                                                            comments blanked: Grammar and GrammarReadings gain exactly
                                                            their three laws, none removed, every other statement kept,
@@ -24,7 +27,11 @@ check/kit/ beside this folder), one clause in GrammarTesting's header, 03 §3's 
                                                            06's home section (home-06-section.txt, at the end of §四)
                                                            and its four lines; 03 §3's (part B's home-03-section-3.txt,
                                                            after testing-within-the-net); regions.json's five entries;
-                                                           then the two records, bound to the receipt
+                                                           the two general laws where the laws they generalize are
+                                                           (01 §4, 06 §三, and the two records': law, declarations,
+                                                           counts from the receipt, history note); the words the
+                                                           joins make false in one record (MapRegions no longer a
+                                                           leaf); then OU7's two records, bound to the receipt
   python3 -B <dir>/integrate_ou7.py register LOG           the apart register, from THEOREM-CONNECTIVITY.py --check's
                                                            log: the leaves' roots with their reasons (part A's from
                                                            reasons() below, part B's from its apart-reasons.json, whose
@@ -78,7 +85,7 @@ MASTER = 'theories/becoming/results/data/master-laws.json'
 COVERAGE = ROOT / 'theories/becoming/results/completion/COVERAGE.json'
 APART = ROOT / (RF + 'THEOREM-CONNECTIVITY-APART.json')
 STUDY = ROOT / (RF + 'BECOMING-RENEWAL-READING.md')
-PATCHES = [HERE / 'patches' / n for n in ('Grammar.patch', 'GrammarReadings.patch', 'PLAN.patch')] + \
+PATCHES = [HERE / 'patches' / n for n in ('Grammar.patch', 'GrammarReadings.patch', 'MapRegions.patch', 'PLAN.patch')] + \
           [PART_B / 'GrammarTesting.patch']
 OWNER = sorted((HERE / 'patches/owner').glob('*.patch')) if (HERE / 'patches/owner').is_dir() else []
 DEVLINK = 'development/ou7-conditional-laws/'
@@ -130,8 +137,10 @@ ROW_ZH = ('| L1 | [`Becoming.GrammarConditionals`](Becoming/GrammarConditionals.
           '所依无则依者无（`«所依无则依者无»`）；见证 27 |\n')
 
 # Part B's joins, beside RegimeMargin's (check/kit/README.md): its bullets and EN rows are part B's; its ZH rows and
-# scope sentences are written here, from those and its record's Chinese.
-B_LIST = 'CORE'   # OU's owner's decision: 'CORE', as UnitMatchings, or 'INSTANCES', the ring, as PlaceTransitionNets
+# scope sentences are written here, from those and its record's Chinese. Its two modules join the instance ring: they
+# read general laws of the core (testing's stages, the map's regions, constancy, the regime's runs) on one named
+# carrier, the rooms, which is the ring's definition in the checker (R35b); nothing in the core imports them.
+B_LIST = 'INSTANCES'
 B_LISTS = {'CORE': ('"Becoming.RegimeMargin", ', '"Becoming.RegimeMargin", "Becoming.RoomNet", "Becoming.RoomRuns", '),
            'INSTANCES': ('"Becoming.PlaceTransitionNets"]',
                          '"Becoming.PlaceTransitionNets", "Becoming.RoomNet", "Becoming.RoomRuns"]')}
@@ -141,44 +150,70 @@ ROWS_B_EN = (PART_B / 'package-readme-rows.txt').read_text(encoding='utf-8')
 ROWS_B_ZH = (
     '| L1 | [`Becoming.RoomNet`](Becoming/RoomNet.lean) | 以窗验室，验之模型之例（无伦理谓词；水平以整单位计，开窗作为'
     '可选之枝入网）：一则生成无给之室与二恒温器之网，诸室作为规则并列相较；不开窗时，诸室于其设定水平同属一核类'
-    '（`Rooms.«不开窗则同核»`）；窗入网后，水平之第一层分无给之室与每一有给之室（`Rooms.«开窗则一层可分»`），以温与否，'
+    '（`Rooms.«不开窗则同核»`）；窗入网而余量为正时，水平之第一层分无给之室与每一有给之室（`Rooms.«开窗则一层可分»`），以温与否，'
     '至层数等于余量之层始分之（`Rooms.«开窗以温层如其余乃分»`），二有给之室仍同属一类（`Rooms.«有给之室以温不可分»`）；'
     '余量为三时，给过所取之恒温器为相杂之域之模型之例（`Rooms.«给过所取则生守相杂»`），无给之室守而有终'
     '（`Rooms.«平衡守而有终»`），开窗之后新而尽（`Rooms.«开窗则平衡新而尽»`）；于每一正余量，给如所取之恒温器全守'
-    '（`Rooms.«给如所取则全守»`）；温有常恰在有给之处（`Rooms.«温有常当且仅当有给»`），余量二以上，温之线不穷亦恰在'
-    '彼处（`Rooms.«温不穷当且仅当有给»`），须此余量（`Rooms.unended_at_one`），跨诸室其逆不成立（`Rooms.joint_converse`）；'
+    '（`Rooms.«给如所取则全守»`）；于每一正余量，温有常恰在有给之处（`Rooms.«温有常当且仅当有给»`），余量二以上，温之线'
+    '不穷亦恰在彼处（`Rooms.«温不穷当且仅当有给»`），须此余量（`Rooms.unended_at_one`），跨诸室 `«有常则往不穷»` 之逆不成立'
+    '（`Rooms.joint_converse`）；'
     '`«恒温与平衡»` 之枝与判语于余量一推出（`Rooms.toy_branches`、`Rooms.toy_verdict`）；交换之前读水平，余量为三时窗移'
     '二恒温器之水平（`Rooms.before_window_moves`）。`Becoming.RoomRuns` 导入之（工作板条目 OU7） |\n'
     '| L1 | [`Becoming.RoomRuns`](Becoming/RoomRuns.lean) | 诸室开窗之进程作为运行（无伦理谓词）：开窗时，此则即 '
     '`RegimeMargin.step`，热源之所给为其所给（`Rooms.next_open`、`Rooms.window_line`），故无给之室自其余量之步起皆冷'
-    '（`Rooms.Unheated.window_cold`，由 `RegimeMargin.stays_ended`），给如所取之恒温器守其设定水平'
+    '（`Rooms.Unheated.window_cold`，由 `RegimeMargin.stays_ended`），于正余量给如所取之恒温器守其设定水平'
     '（`Rooms.Matched.window_held`，由 `RegimeMargin.holds`），余量为三时给过所取者之进程于 `3, 4` 间交替，即 '
     '`RegimeMargin.Alternation` 之进程移二（`Rooms.Overshooting.alternation_shifted`），虽 `holds` 之条件于它不成立'
     '（`Rooms.Overshooting.holds_one_way`）；此诸进程无一持续扩大（`Rooms.Unheated.not_widening`、'
-    '`Rooms.Matched.not_widening`、`Rooms.Overshooting.not_widening`）；就其时刻读之，给过所取者之进程全生成，其余二者'
-    '无一时刻如是（`Rooms.Overshooting.generation_at_moments`、`Rooms.Matched.no_generation_at_moments`、'
+    '`Rooms.Matched.not_widening`、`Rooms.Overshooting.not_widening`）；就其时刻读之，给过所取者之进程全生成，无给之室之进程无一时刻如是，'
+    '于正余量给如所取者之进程亦然（`Rooms.Overshooting.generation_at_moments`、`Rooms.Matched.no_generation_at_moments`、'
     '`Rooms.Unheated.no_generation_at_moments`）；粗线即持温之可能（`Rooms.line_iff_held`、'
     '`Rooms.heated_possible_held`、`Rooms.Unheated.cold_not_held`）。叶（工作板条目 OU7） |\n')
 SCOPE_B = (
     '    "RoomNet: one rule makes the nets of an unheated room and two thermostats: a level in whole units moves "\n'
     '    "one unit a step toward its surroundings, at the set level m while the window is shut and at 0 once it "\n'
-    '    "opens, and a heater reading the level after that exchange gives c below m; the window\'s opening is in "\n'
-    '    "the net as an alternative, and the rooms are compared as rules side by side. While no window opens "\n'
-    '    "every room at its set level is one core class at the level, at every margin; with the window in the "\n'
-    '    "net, at every positive margin, the level\'s first stage tells the unheated room from every heated one, "\n'
-    '    "under warm or not at a margin of n + 1 draws stage n holds and stage n + 1 tells them apart, and two "\n'
-    '    "heated rooms stay one core class; the branches the toy of testing stipulates are the rule\'s at a "\n'
-    '    "margin of one, and its verdict follows. At a margin of three the overshooting thermostat is a model "\n'
-    '    "case of the mixed region, and the unheated room keeps and reaches an end and, once open, degenerates "\n'
-    '    "while renewing; at every positive margin the matched thermostat is 全守, as every room is while no "\n'
-    '    "window opens, and warmth is constant exactly where the heater gives and, from a margin of two, "\n'
-    '    "unended exactly there; across rooms the converse fails. "\n'
+    '    "opens, and a heater reading the level after that exchange gives c wherever it is below m; the window\'s "\n'
+    '    "opening is in the net as an alternative, and the rooms are compared as rules side by side. While no "\n'
+    '    "window opens every room at its set level is one core class at the level, at every margin; with the "\n'
+    '    "window in the net, at every positive margin, the level\'s first stage tells the unheated room from every "\n'
+    '    "heated one; under warm or not, at a margin of n + 1 draws, stage n holds and stage n + 1 tells them "\n'
+    '    "apart, and two heated rooms stay one core class; the branches the toy of testing stipulates are the "\n'
+    '    "rule\'s at a margin of one, and its verdict follows. At a margin of three the overshooting thermostat is "\n'
+    '    "a model case of the mixed region, and the unheated room keeps and reaches an end and, once open, "\n'
+    '    "degenerates while renewing; at every positive margin the matched thermostat is 全守, as every room is "\n'
+    '    "while no window opens, and warmth is constant exactly where the heater gives and, from a margin of two, "\n'
+    '    "unended exactly there; across rooms the converse of «有常则往不穷» fails. "\n'
     '    "RoomRuns: with the window open the rooms\' rule is RegimeMargin\'s step with the heater\'s giving, so "\n'
-    '    "the unheated room is cold from its margin\'s step on, the matched thermostat holds its set level, and "\n'
-    '    "at a margin of three the overshooting course is Alternation\'s run shifted by two though holds\'s "\n'
-    '    "condition fails for it; no window course keeps widening; read on its moments the overshooting course "\n'
-    '    "is 全生成 and no moment of the other two is; a coarse line is the possible with warmth held. "\n')
+    '    "the unheated room is cold from its margin\'s step on, at a positive margin the matched thermostat holds "\n'
+    '    "its set level, and at a margin of three the overshooting course is Alternation\'s run shifted by two "\n'
+    '    "though holds\'s condition fails for it; none of these three courses keeps widening; read on its moments "\n'
+    '    "the overshooting course is 全生成 and no moment of the unheated course, or of the matched one at a positive "\n'
+    '    "margin, is; a coarse line is the possible with warmth held. "\n')
 SCOPE_B_BEFORE = '    "Regulation: with balance, the joint exchange is within the gap to m on both sides exactly "\n'
+# GrammarReadings' scope sentence states the general law of passing through, as its note in the root module does.
+SCOPE_READINGS = ('    "line with a past never ends going, what abides passes through (通), going and coming, where a class is "\n'
+                  '    "constant both ways, and constancy one way is not enough; continuation is neither identity nor mere "\n'
+                  '    "difference; the conditioning occurrence "\n',
+                  '    "line with a past never ends going and, where a class is constant both ways, passes through (通), "\n'
+                  '    "going and coming, what abides being a case, and constancy one way is not enough; continuation is "\n'
+                  '    "neither identity nor mere difference; the conditioning occurrence "\n')
+# The ring's own descriptions name its carriers: the checker's comment on INSTANCES and the README's summary row.
+RING_COMMENT = ('# on one named carrier (the Changes, place/transition nets); applications are leaves nothing in the\n'
+                '# core imports. Both are held to the core\'s conditions (prelude only, empty axiom reports) and sit\n'
+                '# outside it by direction: no core module but the root `Becoming` imports a ring module, and no\n'
+                '# instance imports an application (`ring_direction`).\n',
+                '# on one named carrier (the Changes, place/transition nets, rooms tested by a window); applications\n'
+                '# are leaves nothing in the core imports. Both are held to the core\'s conditions (prelude only, empty\n'
+                '# axiom reports) and sit outside it by direction: no core module but the root `Becoming` imports a\n'
+                '# ring module, and no instance imports an application (`ring_direction`).\n')
+RING_ROWS = {'README.md': ('the Changes (`Becoming.Hexagrams`, `HexagramPlaces`, `HexagramCommuting`, `HexagramLaws`, '
+                           '`HexagramSites`, `HexagramSequences`) and `Becoming.PlaceTransitionNets`. Applications',
+                           'the Changes (`Becoming.Hexagrams`, `HexagramPlaces`, `HexagramCommuting`, `HexagramLaws`, '
+                           '`HexagramSites`, `HexagramSequences`), `Becoming.PlaceTransitionNets` and the rooms tested by '
+                           'a window (`Becoming.RoomNet`, `RoomRuns`). Applications'),
+             'README.zh.md': ('`HexagramSites`、`HexagramSequences`）与 `Becoming.PlaceTransitionNets`。应用',
+                              '`HexagramSites`、`HexagramSequences`）、`Becoming.PlaceTransitionNets` 与以窗所验之室'
+                              '（`Becoming.RoomNet`、`RoomRuns`）。应用')}
 
 # What imports a module, where its note in the root module or its README row says so: the modules the leaves import
 # (GrammarConditionals imports GrammarCandidates and GrammarLaws; RoomNet GrammarTesting, GrammarLaws, GrammarReadings
@@ -188,8 +223,18 @@ NOTES = [('GrammarCandidates', ' A leaf.', ' Imported by `Becoming.GrammarCondit
           'Imported by\n  `Becoming.GrammarCandidates` and `Becoming.RoomNet`.'),
          ('GrammarTesting', 'Imported by `Becoming.GrammarCases`.',
           'Imported by\n  `Becoming.GrammarCases` and `Becoming.RoomNet`.'),
-         ('MapRegions', 'kept in a leaf, since', 'kept apart, since'),
+         ('MapRegions', 'kept in a leaf, since\n  most of the package depends on it. A carrying renewal begins no line of '
+                        'the pattern (`«传则粗不生»`), and a beginning of a\n  part is, as far as can be refuted, a '
+                        'beginning of the pattern or the end of a carrying renewal\n',
+          'kept in a module\n  of their own, since most of the package depends on it. A carrying renewal begins no line '
+          'of the\n  pattern (`«传则粗不生»`), and a beginning of a part is, as far as can be refuted, a beginning of\n'
+          '  the pattern or the end of a carrying renewal\n'),
          ('MapRegions', 'A leaf (board item GW).', 'Imported by `Becoming.RoomNet` (board items GW, OU7).'),
+         # GrammarReadings now states the general law of passing through, the old one its case.
+         ('GrammarReadings', 'what abides passes through\n  where a class is constant both ways (`«两向有常则通»`), and '
+                             'constancy one way is not enough\n  (`«有常而不通»`); in a net',
+          'what has a predecessor passes\n  through where a class is constant both ways (`«两向有常有前则通»`, what '
+          'abides being its\n  case), and constancy one way is not enough (`«有常而不通»`); in a net'),
          ('HeldPossible', 'Imported\n  by `Becoming.Tasks`, `Becoming.CausalGrowth` and `Becoming.WideningOnTheMap` '
                           '(board items UE11,\n  GW).',
           'Imported\n  by `Becoming.Tasks`, `Becoming.CausalGrowth`, `Becoming.WideningOnTheMap` and `Becoming.RoomRuns`'
@@ -289,9 +334,12 @@ def join():
     c = once(c, '"Becoming.GrammarLaws", ', '"Becoming.GrammarLaws", "Becoming.GrammarConditionals", ',
              'checker, core list (A)')
     c = once(c, *B_LISTS[B_LIST], f'checker, {B_LIST} list (B)')
+    if B_LIST == 'INSTANCES':
+        c = once(c, *RING_COMMENT, 'checker, the ring\'s comment (B)')
     assert c.count('"Becoming.RoomNet"') == c.count('"Becoming.RoomRuns"') == 1, 'part B\'s leaves in more than one list'
     c = once(c, SCOPE_BEFORE, SCOPE + SCOPE_BEFORE, 'checker, scope sentence (A)')
     c = once(c, SCOPE_B_BEFORE, SCOPE_B + SCOPE_B_BEFORE, 'checker, scope sentences (B)')
+    c = once(c, *SCOPE_READINGS, 'checker, GrammarReadings\' scope sentence (the general law)')
     readmes = {}
     for path, row_a, rows_b in [(README_EN, ROW_EN, ROWS_B_EN), (README_ZH, ROW_ZH, ROWS_B_ZH)]:
         r = path.read_text(encoding='utf-8')
@@ -300,6 +348,8 @@ def join():
         for name, module, old, new in ROW_NOTES:
             if name == path.name:
                 r = row_once(r, module, old, new, f'{path.name}, {module}\'s row')
+        if B_LIST == 'INSTANCES':
+            r = once(r, *RING_ROWS[path.name], f'{path.name}, the ring\'s row (B)')
         readmes[path] = r
     if WRITE:
         ROOTMOD.write_text(t, encoding='utf-8')
@@ -319,6 +369,7 @@ def anchors():
     WRITE = False
     join()
     home()
+    home_root()
     home_b()
     assert len(SENTENCE.findall(METHOD.read_text(encoding='utf-8'))) == 1, '08 §3: the receipt sentence is not there once'
     print('08 §3: the receipt sentence found once')
@@ -467,6 +518,59 @@ LINES = [
      '（[§三](#tong-and-xi)）。',
      '- **穷 → 变 → 通。** 文本所言是哪一种變 [AI reading]：读作一次之异，三者是合取，无序可求；读作「一闔一闢」，通之一步'
      f'依定义（{LINK}，[§三](#tong-and-xi)）。'),
+    # The home of classical-definitions-in-the-grammar's law 4, generalized (GENERAL below): its table row and reading.
+    ('§三, 通 in the table',
+     '类（等价之类）于缘与其逆两向皆有常时，住者通（`«两向有常则通»`）',
+     '类（等价之类）于缘与其逆两向皆有常时，有前者通（`«两向有常有前则通»`），住者是其一例（`«两向有常则通»`）'),
+    ('§三, 通 in the reading',
+     '类于两向皆有常时，住者通（`«两向有常则通»`）',
+     '类于两向皆有常时，有前者通（`«两向有常有前则通»`；住者是其一例，`«两向有常则通»`）'),
+]
+
+# The two general laws are stated where the laws they generalize are, as a change to a result's statement goes to its
+# record and its home section: 01 §4 with law 5 of continuation-relative-to-a-class, and 06 §三 (LINES above) with law 4
+# of classical-definitions-in-the-grammar. OU7's record names them in its prose and depends on both records.
+ROOT_CHAPTER = ROOT / 'theories/becoming/chapters/01-ROOT.md'
+ROOT_LINES = [(
+    '§4, beginning kept along the converse net\'s core',
+    'The two-way core is the greatest symmetric relation inside `E` constant both ways (`«位根»`) and lies inside the '
+    'core (`«位核含于核»`). For a class, ending is not told apart by the core (`«亡于核下不变»`) and beginning not by the '
+    'two-way core (`«生于位核下不变»`), so what shares a position under the two-way core shares beginning and ending '
+    '(`«位同则生亡同»`), and abiding too (`«位同则住同»`).',
+    'The two-way core is the greatest symmetric relation inside `E` constant both ways (`«位根»`); it lies inside the '
+    'core (`«位核含于核»`) and inside the core of the converse net (`«位核含于逆核»`). For a class, ending is not told '
+    'apart by the core (`«亡于核下不变»`) and, the mirror, beginning not by the core of the converse net '
+    '(`«生于逆核下不变»`), so neither by the two-way core (`«生于位核下不变»`): what shares a position under the two-way '
+    'core shares beginning and ending (`«位同则生亡同»`), and abiding too (`«位同则住同»`). The forward core can tell '
+    'beginnings apart, and the core of the converse net relates pairs that neither the core nor the two-way core '
+    'relates ([06](06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus)).')]
+GENERAL = [
+    {'rid': 'continuation-relative-to-a-class', 'module': 'Becoming.Grammar', 'law': 5,
+     'en': ('Read both ways, constant under 缘 and under its converse, the core carries beginning, abiding and ending: '
+            'for a class, what the two-way core relates shares beginning, abiding and ending',
+            'For a class, ending is kept along the core and, its mirror, beginning along the core of the converse net; '
+            'the two-way core, constant both ways, lies inside both, so what it relates shares beginning, abiding and '
+            'ending'),
+     'zh': ('双向读之（对缘及其逆皆有常），对一个类，双向之核所关联者生同、住同、亡同',
+            '对一个类，亡沿核不变，与之相映，生沿逆缘之核不变；双向之核（两向皆有常）在二者之内，故其所关联者'
+            '生同、住同、亡同'),
+     'after': [('Becoming.«位核含于核»', 'Becoming.«位核含于逆核»'), ('Becoming.«亡于核下不变»', 'Becoming.«生于逆核下不变»')],
+     'family': ('of 前際 and 後際', '前际后际'),
+     'what': ('beginning is kept along the core of the converse net («生于逆核下不变»), which holds the two-way core '
+              '(«位核含于逆核»), the mirror of ending kept along the core; «生于位核下不变» is proved as its case, its '
+              'statement unchanged',
+              '生沿逆缘之核不变（«生于逆核下不变»），此核含双向之核（«位核含于逆核»），与亡沿核不变相映；«生于位核下不变» '
+              '证为其一例，陈述不变')},
+    {'rid': 'classical-definitions-in-the-grammar', 'module': 'Becoming.GrammarReadings', 'law': 4,
+     'en': ('an occurrence that abides passes through where the class is constant both ways;',
+            'where the class is constant both ways, an occurrence with a predecessor passes through, what abides being '
+            'a case;'),
+     'zh': ('类于缘与其逆两向皆有常时，住者通；', '类于缘与其逆两向皆有常时，有前者通，住者是其一例；'),
+     'after': [('Becoming.«有常则往不穷»', 'Becoming.«两向有常有前则通»')],
+     'family': ('of 通', '通'),
+     'what': ('where a class is constant both ways, what has a predecessor passes through («两向有常有前则通»); '
+              '«两向有常则通», for what abides, is proved as its case, its statement unchanged',
+              '类两向有常时，有前者通（«两向有常有前则通»）；«两向有常则通»（住者）证为其一例，陈述不变')},
 ]
 
 
@@ -487,13 +591,124 @@ def home():
         HOME.write_text(text, encoding='utf-8')
 
 
+def home_root():
+    """01 §4: the home of law 5 of continuation-relative-to-a-class, generalized."""
+    text = ROOT_CHAPTER.read_text(encoding='utf-8')
+    for where, old, new in ROOT_LINES:
+        text = once(text, old, new, '01, ' + where)
+    if WRITE:
+        ROOT_CHAPTER.write_text(text, encoding='utf-8')
+
+
+def insert_after(names, pairs, where):
+    """`names` with each new name after its anchor, or as it is where every new name is already there."""
+    out = list(names)
+    for anchor, name in pairs:
+        if name in out:
+            continue
+        assert out.count(anchor) == 1, (where, 'anchor not there once', anchor)
+        out.insert(out.index(anchor) + 1, name)
+    return out
+
+
+def general_records(receipt, study):
+    """The two records whose laws the patches generalize: the law's statement, its declarations and the source's
+    reference, the validation scope's counts (read from the receipt, each the old count plus the declarations added),
+    reviewed_at_utc and a history note. Each step is skipped where it is already in place."""
+    from datetime import datetime, timezone
+    data = json.loads((ROOT / receipt).read_text(encoding='utf-8'))
+    mods = {m['module']: m for m in data['modules']}
+    stamp = Path(receipt).parent.name
+    day = datetime.now(timezone.utc).replace(microsecond=0)
+    for g in GENERAL:
+        path = ROOT / f"theories/becoming/results/records/{g['rid']}.json"
+        r = json.loads(path.read_text(encoding='utf-8'))
+        law = r['laws'][g['law'] - 1]
+        for lang in ('en', 'zh'):
+            old, new = g[lang]
+            if new not in law[lang]:
+                assert law[lang].count(old) == 1, (g['rid'], lang, 'the law moved')
+                law[lang] = law[lang].replace(old, new)
+        added = [name for _, name in g['after']]
+        law['declarations'] = insert_after(law['declarations'], g['after'], g['rid'] + ' law')
+        source = mr.BELOW[g['module']]
+        ref = next(x for x in r['references'] if x['path'] == source)
+        ref['declarations'] = insert_after(ref['declarations'], g['after'], g['rid'] + ' reference')
+        m = mods[g['module']]
+        theorems, declarations = m['theorems'], len(m['declarations'])
+        assert set(added) <= {d['name'] for d in m['declarations']}, (g['module'], 'the receipt lacks', added)
+        short = g['module']
+        for lang, pattern, form in [('en', re.escape(short) + r', (\d+) theorems in (\d+) declarations',
+                                     f'{short}, {theorems} theorems in {declarations} declarations'),
+                                    ('zh', re.escape(short) + r'，(\d+) 个声明中 (\d+) 条定理',
+                                     f'{short}，{declarations} 个声明中 {theorems} 条定理')]:
+            found = re.findall(pattern, r['validation_scope'][lang])
+            assert len(found) == 1, (g['rid'], lang, 'the counts are not there once')
+            a, b = map(int, found[0])
+            t_old, d_old = (a, b) if lang == 'en' else (b, a)
+            if (t_old, d_old) != (theorems, declarations):
+                assert (t_old + len(added), d_old + len(added)) == (theorems, declarations), \
+                    (g['rid'], lang, 'the old counts plus the added declarations are not the receipt\'s',
+                     (t_old, d_old), (theorems, declarations))
+                r['validation_scope'][lang] = re.sub(pattern, form, r['validation_scope'][lang])
+        if not any('board item OU7' in h.get('en', '') for h in r['history']):
+            k = len(added)
+            r['history'].append({
+                'en': f"{day.day} {day:%B %Y}, board item OU7 (study section {study}): law {g['law']} generalized, as the "
+                      f"corpus's family {g['family'][0]} needed (conditional-laws-of-the-corpus): {g['what'][0]}. The "
+                      f"law and the {source.rsplit('/', 1)[-1]} reference gain {k} declaration{'s' if k > 1 else ''}; the "
+                      f"validation scope's counts are receipt {stamp}'s. Nothing else the record states changed.",
+                'zh': f"{day.year}年{day.month}月{day.day}日，工作板条目 OU7（研究第 {study} 节）：律 {g['law']} 推广，为语料之"
+                      f"{g['family'][1]}之族所需（conditional-laws-of-the-corpus）：{g['what'][1]}。律与 "
+                      f"{source.rsplit('/', 1)[-1]} 之引用增 {k} 声明；验证范围之数目为收据 {stamp} 者。记录所述余无改变。"})
+            r['reviewed_at_utc'] = day.isoformat()
+        path.write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        print(f"{g['rid']}: law {g['law']} generalized, {', '.join(added)} declared; counts {theorems} theorems in "
+              f"{declarations} declarations; history note in place")
+
+
+# A record whose words the joins make false: once RoomNet imports MapRegions, MapRegions is no longer a leaf.
+RECORD_WORDS = {'generation-and-degeneration-at-two-grains': (
+    [('validation_scope', 'en', 'a core leaf importing GrammarMap only', 'a core module importing GrammarMap only'),
+     ('validation_scope', 'zh', 'MapRegions（GW1、GW2，核心叶）', 'MapRegions（GW1、GW2，核心模块）')],
+    ('Becoming.RoomNet imports Becoming.MapRegions, so the validation scope calls MapRegions a core module, not a '
+     'leaf, as its module doc now does',
+     'Becoming.RoomNet 导入 Becoming.MapRegions，故验证范围称 MapRegions 为核心模块而非叶，与其模块说明今之所言同'))}
+
+
+def record_words(study):
+    """The words of RECORD_WORDS, each with a history note; each step skipped where it is already in place."""
+    from datetime import datetime, timezone
+    day = datetime.now(timezone.utc).replace(microsecond=0)
+    for rid, (edits, (why_en, why_zh)) in RECORD_WORDS.items():
+        path = ROOT / f'theories/becoming/results/records/{rid}.json'
+        r = json.loads(path.read_text(encoding='utf-8'))
+        for field, lang, old, new in edits:
+            if new not in r[field][lang]:
+                assert r[field][lang].count(old) == 1, (rid, field, lang, 'the words moved')
+                r[field][lang] = r[field][lang].replace(old, new)
+        if not any('board item OU7' in h.get('en', '') for h in r['history']):
+            r['history'].append({
+                'en': f"{day.day} {day:%B %Y}, board item OU7 (study section {study}): {why_en}. Nothing else the "
+                      "record states changed.",
+                'zh': f"{day.year}年{day.month}月{day.day}日，工作板条目 OU7（研究第 {study} 节）：{why_zh}。记录所述余无改变。"})
+            r['reviewed_at_utc'] = day.isoformat()
+        path.write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        print(f'{rid}: {len(edits)} words corrected; history note in place')
+
+
 SECTION_B = (PART_B / 'home-03-section-3.txt').read_text(encoding='utf-8')
 BEFORE_B = '<a id="r-testing-within-couplings"></a>\n'
+# testing-within-the-net's toy stipulates its branches; RoomNet derives them at a margin of one (Rooms.toy_branches).
+TOY_B = ('Lean: `«恒温与平衡»`, on a net of possibilities; [record](../results/records/testing-within-the-net.md).',
+         'Lean: `«恒温与平衡»`, on a net of possibilities whose branches are stipulated; at a margin of one draw they are '
+         'the steps of one rule of rooms ([below](#r-rooms-tested-by-a-window)); '
+         '[record](../results/records/testing-within-the-net.md).')
 
 
 def home_b():
     """Part B's home section in 03 §3, after testing-within-the-net's open note on the converse and before
-    testing-within-couplings."""
+    testing-within-couplings; and the toy's line in testing-within-the-net's home section pointing to it."""
     text = HOME_B.read_text(encoding='utf-8')
     if mb.ANCHOR in text:
         assert SECTION_B in text, 'a different home section for part B is in 03: remove it and rerun'
@@ -507,6 +722,7 @@ def home_b():
                                                                  'is no longer the converse\'s open note', last[:80])
         text = text[:i] + SECTION_B.rstrip('\n') + '\n\n' + text[i:]
         print(f'03 §3: the home section after testing-within-the-net\'s open note{"" if WRITE else " (applies)"}')
+    text = once(text, TOY_B[0], TOY_B[1], '03 §3, the toy\'s pointer to its branches derived')
     if WRITE:
         HOME_B.write_text(text, encoding='utf-8')
 
@@ -542,8 +758,11 @@ def regions():
 def record(receipt, study):
     receipt_sentence(receipt)
     home()
+    home_root()
     home_b()
     regions()
+    general_records(receipt, study)
+    record_words(study)
     for maker in (mr, mb):
         r = maker.record(receipt, study)
         (ROOT / maker.REC).write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
@@ -783,12 +1002,13 @@ def study(n, receipt):
         "other statement unchanged.", width=118, subsequent_indent=' ' * 7, break_on_hyphens=False))
     section = f"""{title.format(n)}
 
-Board item OU7 (claimed as OU5), the OU plan's §八 step 5 and the release gate's item 4, in two parts. Part A writes each conditional law of the corpus (丙一) in the grammar as "Y 当且仅当 Z" or "Z 则 Y", with a net where Z fails and Y fails with it ([the design]({DEVLINK}DESIGN.md)); it reads the 219 units, and one independent AI review of its design found 24 problems, every one taken ([the review]({DEVLINK}review/FINDINGS.md)). Part B gives 验's model examples: one rule of rooms, an unheated room and two thermostats, tested by a window on the net of the possible ([the design]({DEVLINK}check/DESIGN.md)); one independent AI review found 18 problems, and its re-check took every point ([the review and re-check]({DEVLINK}check/review/FINDINGS.md)). OU's owner decided what lands and confirmed every name.
+Board item OU7 (claimed as OU5), the OU plan's §八 step 5 and the release gate's item 4, in two parts. Part A writes each conditional law of the corpus (丙一) in the grammar as "Y 当且仅当 Z" or "Z 则 Y", with a net where Z fails and Y fails with it ([the design]({DEVLINK}DESIGN.md)); it reads the 219 units, and one independent AI review of its design found 24 problems, every one taken ([the review]({DEVLINK}review/FINDINGS.md)). Part B gives 验's model examples: one rule of rooms, an unheated room and two thermostats, tested by a window on the net of the possible ([the design]({DEVLINK}check/DESIGN.md)); one independent AI review found 18 problems, and its re-check took every point ([the review and re-check]({DEVLINK}check/review/FINDINGS.md)). OU's owner decided what lands and confirmed every name; the kit's last revision settled where the two general laws are stated (GrammarReadings' note and scope sentence with them), part B's place in the instance ring, MapRegions' wording (its doc, its notes and one record's validation scope) and the toy's pointer to its derivation.
 
 ```text
-Result(s): conditional-laws-of-the-corpus (new, home 06 §四 at its end). Reused: candidate-theorems-of-the-corpus,
-       classical-definitions-in-the-grammar, continuation-relative-to-a-class, master-laws-on-the-grammar,
-       generation-and-degeneration-at-two-grains, testing-within-the-net.
+Result(s): conditional-laws-of-the-corpus (new, home 06 §四 at its end); continuation-relative-to-a-class (law 5,
+       home 01 §4) and classical-definitions-in-the-grammar (law 4, home 06 §三), each generalized. Reused:
+       candidate-theorems-of-the-corpus, master-laws-on-the-grammar, generation-and-degeneration-at-two-grains,
+       testing-within-the-net.
 Delta:
   - The 219 units classed 丙一 (162 of the first batch, 25 of 中论 chapters 10, 17, 19 and 24, 32 of 成唯识论):
     128 in 22 families (103 state a law that holds, 6 one false as read with its countermodel, 19 a premise);
@@ -796,9 +1016,12 @@ Delta:
   - New laws: 相推 gives 全生成 (G02, sufficient); bounded room on the line itself (G03: a line that does not come
     back is shorter than any list holding it, so not endless); the core keeps never ending (G15, «核同则同不穷»);
     dependence, one-way, with its two definitional laws (G09).
-  - Below the leaf, by patch: «生于逆核下不变» and «位核含于逆核» in Grammar, «生于位核下不变» its case;
-    «两向有常有前则通» in GrammarReadings, «两向有常则通» its case; every old statement kept. 前際 and 後際 mirror
-    each other under the converse; constancy is sufficient for 通, not necessary.
+  - Two general laws, by patch, each stated where the law it generalizes is: beginning kept along the core of the
+    converse net («生于逆核下不变», with «位核含于逆核»; «生于位核下不变» its case), in Grammar, law 5 of
+    continuation-relative-to-a-class and 01 §4; what has a predecessor passes through under two-way constancy
+    («两向有常有前则通»; «两向有常则通» its case), in GrammarReadings, law 4 of the classical definitions and 06 §三.
+    Every old statement kept. 前際 and 後際 mirror each other under the converse; constancy is sufficient for 通,
+    not necessary.
   - 穷 → 变 → 通 is a conjunction where 變 is one alteration, not an order; G01's conjunction is text in 06, and
     06's open item is restated as which 變 the text means.
   - 27 witnesses, so that every family's net where Z fails is in the core; the 17 compositions the home section
@@ -814,8 +1037,9 @@ Boundary:
   - An order 穷 → 变 → 通; production and sufficiency (not expressible); constancy as necessary.
   - The three open readings (G22's 衡不正, JS-326's 相應, JS-318's 無明), each with its AI label in 06's open items.
   - The 181 乙 candidates of the three added texts.
-Output → input: 06 §四's home section, its thesis, §三's 通 and two open items; the OU plan's line on beginning;
-       the record's next step (review by a person; the open readings).
+Output → input: 06 §四's home section, its thesis, §三's 通 (its table row and reading) and two open items; 01 §4's
+       paragraph on the two-way core; the OU plan's line on beginning; the record's next step (review by a person;
+       the open readings).
 ```
 
 {part_b_block(stamp, mb.receipt_modules(receipt))}

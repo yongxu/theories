@@ -218,8 +218,8 @@
     "zh": "以世界之流为诸室之实例，室与环境之热为守恒之条件，使调节之律形式地适用；次及迟读之热源、阵风、各余量下之域与冷之出现、«恒温与平衡» 前半于其自身之关系，与 Hennessy–Milner 之向。"
   },
   "validation_scope": {
-    "en": "Checked by the core checker from the prelude: Becoming.RoomNet and Becoming.RoomRuns, every declaration with an empty axiom report (counts and receipt filled at landing). One independent AI review read the design and both modules, and the same reader re-checked the revision; heated_unended, the two theorems on moments where the level stops changing, and the renames and module docs written after it were not reviewed again. The variants of the modelling choices are checked by hand.",
-    "zh": "由核心检查器从前奏检查：Becoming.RoomNet 与 Becoming.RoomRuns，每一声明之公理报告皆空（数目与收据于落地时填入）。一次独立之 AI 审查读设计与二模块，同一读者复核其修订；heated_unended、水平不再变处之二时刻定理及其后之改名与模块文档未再审。建模之选之变体以手检。"
+    "en": "Checked by the core checker from the prelude, in the instance ring: Becoming.RoomNet and Becoming.RoomRuns, every declaration with an empty axiom report (counts and receipt filled at landing). One independent AI review read the design and both modules, and the same reader re-checked the revision; heated_unended, the two theorems on moments where the level stops changing, and the renames and module docs written after it were not reviewed again. The variants of the modelling choices are checked by hand.",
+    "zh": "由核心检查器从前奏检查，在实例之环：Becoming.RoomNet 与 Becoming.RoomRuns，每一声明之公理报告皆空（数目与收据于落地时填入）。一次独立之 AI 审查读设计与二模块，同一读者复核其修订；heated_unended、水平不再变处之二时刻定理及其后之改名与模块文档未再审。建模之选之变体以手检。"
   },
   "dependencies": [
     {
