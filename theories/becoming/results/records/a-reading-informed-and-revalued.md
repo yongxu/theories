@@ -174,6 +174,7 @@ Aliases: `a reading informed and revalued`, `受告与改值之读`, `informing 
 
 - 31 October 2026: added (RF round 2), a reading informed and revalued: the answer of a formation reading by its own model and valuation through a map; any rule's shortfall split into the least shortfall and a residual, with exact criteria; informing and the criterion over every refinement, with its sufficient conditions and counterexamples; amounts forgone, read as withholding against informing; revaluing; and one blanketed law carrying the reading formation's listing and valuation, with witnesses of four cases, two orders and two routes; the design reviewed by a cross-model reader before the Lean (its first draft kept beside the review), the Lean by the same reader and through three lenses, the texts cold-read, what was taken listed in the review evidence; study section 473.
 - 31 October 2026: forgone_lt_iff, and with it forgone_through_lt_iff, revalued_forgone_lt_iff and presented_forgone_lt_iff, proved from the order of plans (rule 9, RR2's landing); no statement or name changed.
+- 31 October 2026, board item RF, the tests' designs (study section 476): PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
 
 </details>
 

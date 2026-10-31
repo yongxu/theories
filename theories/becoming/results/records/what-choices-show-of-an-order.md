@@ -61,7 +61,7 @@ Canonical source: [ShownOrder.lean](../../../../experiments/integrated-correctio
 <a id="next--下一步"></a>
 ## Next
 
-A realizable class: a training installing either order of a search; a finite mechanism of prediction, selection, revision and intervention on which inner alignment and assistance are stated (RF round 2); a frozen test of the reach on choosers; review by a person.
+A realizable class: a training installing either order of a search; a finite mechanism of prediction, selection, revision and intervention on which inner alignment and assistance are stated (RF round 2); a frozen test of the correspondence, that a chooser picks by strict dominance under one strict order (the plan's TR1); review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -103,6 +103,7 @@ Aliases: `what choices show`, `所择所示`, `the shown reach`, `所示之及`,
 
 - 29 October 2026: added (RF round 1), what choices show of the order they come from: the shown reach, its exactness under no cycle, a narrower class, the freedom beyond it, maximal choices, and the witness of one search with two orders; after a review of the plan, a review of the Lean and a cold read of the texts; study section 446.
 - 30 October 2026, board item RF, RF-M.2 (study section 466): related to what-holding-for-a-reading-is-worth; no statement, next step or declaration changed.
+- 31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR1 in experiments/formations-that-read, which can refute at most the correspondence that a chooser picks by strict dominance under one strict order, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
 
 </details>
 

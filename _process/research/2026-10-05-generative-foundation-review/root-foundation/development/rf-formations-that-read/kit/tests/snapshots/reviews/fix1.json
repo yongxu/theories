@@ -1,0 +1,374 @@
+[
+ {
+  "key": "tr1",
+  "result": {
+   "taken": [
+    {
+     "id": "lean-a-6",
+     "what": "rest.md §1 (P1 as an inference): 'a two-step cycle of the whole family' replaced by 'it closes a cycle of the whole family through the after occasion (one shown step there plus the met chain, of any length), so the cycle rule already covers it'.",
+     "outcome": "fixed (verifier's fix)"
+    },
+    {
+     "id": "stats-9",
+     "what": "Front: added 'a stable error at 1% of presentations is caught 0.51' and 'order-led hybrids pass, position lean reported'. Hour Stage 0: added 'A stable error at 1% of presentations, a real departure, is caught 0.51 of the time, at 3% 0.85.' Numbers from D_power_main: S.01 0.5067, S.03 0.85. The first-listed share sentence went into the hour's Rivals and controls (shared with reader-3).",
+     "outcome": "fixed (verifier's fix, shortened to fit 110 words)"
+    },
+    {
+     "id": "reader-3",
+     "what": "Hour 'Rivals and controls': added 'Hybrids whose order decides, with a first-listed lean, pass 0.998, their strict picks following one order, so the first-listed share is reported beside every verdict; a 0.7/0.3 mixture of orders passes 0.42 by its majority order.' Front: 'no rival passes over 0.002; order-led hybrids pass, position lean reported'. rest.md already said this (§4).",
+     "outcome": "fixed (verifier's fix)"
+    },
+    {
+     "id": "reader-13",
+     "what": "Front now says 0.03, the 600-run main figure (TieC). Hour says 'near-ties drawn afresh in 0.03 of them (0.04 at worst in the 300-run sweep)'. rest.md already labelled the sweep and main tables apart.",
+     "outcome": "fixed"
+    },
+    {
+     "id": "astra-9",
+     "what": "Checked against tr1.py. The finding holds. The old Label class fixed a favoured listed place per presentation, kept across its calls. The protocol (hour Stage B, rest §5) reassigns option codes per call, which leaves a code-favouring reader picking uniformly. Fix in tr1.py: new class LabelPerCall (a fixed preference over a pool of n codes, distinct codes drawn afresh per call, fidelity f) under keys Lab and Lab.8, the protocol's label reader. The old behaviour is kept as a separate rival, class Cue, under keys Cue and Cue.8: a cue fixed per presentation, as a label would be with codes fixed per presentation. All four are in the rival group. Script rerun. New results on D5q: Lab and Lab.8 void 1.0, strict share 0.0126 and 0.0129. Cue contradicted 1.0. Cue.8 contradicted 0.1533, void 0.8467. On D6q: Lab.8 void 1.0; Cue.8 0.1133 / 0.8867. rest.md updated in four places: the §4 main table rows, a new bullet 'Labels under the protocol', the D6q table, and the §5 rival table, which now has two rows (label reader void; cue reader contradicted or void). §11's lesson line and §15 provenance updated too. Hour 'Rivals and controls' now says codes reassigned per call leave a label reader no stable pick (void), and a cue kept with a presentation is contradicted (void at fidelity 0.8). No verdict, criterion or chosen (r, q) changed.",
+     "outcome": "fixed (simulation changed, rerun)"
+    }
+   ],
+   "scripts_rerun": "tr1.py was rerun once with python3 -B from /private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/rf-tests-build/tr1/ and rewrote tr1.json. The run took 408 s, over the five-minute guide, because the machine was heavily loaded (load average 37 to 60); the same code took 178 s before. rest.md's header now says 'about three minutes on one idle core, seven on a heavily loaded machine'. Backups of the pre-review script and JSON are in _work/tr1_before_review_fixes.py and _work/tr1_before_review_fixes.json. I compared old and new JSON: only the label and cue rows differ (sweep, D_power_main, D_power_D6q) and the rival-group list in frozen_reading_candidates. Every other row is byte-identical, because seeds are per chooser key.",
+   "numbers_changed": "Label reader under the protocol (Lab, Lab.8), on D5q: was contradicted 1.0 and 0.1467 (void 0.8533). Now void 1.0 at both fidelities, strict share 0.0126 and 0.0129. New Cue (the old behaviour): contradicted 1.0, P1 contradicted 0.1267, P1-testable 6.13, first-listed share 0.503. New Cue.8: contradicted 0.1533, void 0.8467, strict share 0.4327, P1 contradicted 0.09, P1-testable 10.86, first-listed share 0.497. On D6q: Lab.8 now 0 / 1 / 0 with strict share 0.0081 (was 0.12 / 0.88 / 0, 0.4399); Cue.8 0.1133 / 0.8867 / 0 with strict share 0.4404. Unchanged: chosen (r, q) = (9, 8), meeting the criterion; the sweep's rival worst P(passed) is 0 in every row; the main table's rival worst P(passed) is 0.0017 (HyP); TieC 0.03 main and 0.04 sweep; S.01 0.5067; S.03 0.85; HyO and Hy.95/.8 0.9983; Mix2 0.4217. Every number newly quoted in front.md, hour.md or rest.md was checked as present in tr1.json.",
+   "word_counts": "front.md: 110 visible words (the link target is not counted; was 108). hour.md: 746 words (was 669). rest.md: 8,537 words (was 8,216).",
+   "plan_record_changes": [
+    "None. No fix changes what plan §10's TR1 entry (plan10.md) or the two record corrections (records.md) should say. They do not mention the label reader's randomisation, the hybrids or the sticky power. Option codes reassigned per call stays the protocol; only the simulation now matches it."
+   ],
+   "notes": [
+    "Only files in /private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/rf-tests-build/tr1/ were edited: tr1.py, tr1.json, front.md, hour.md and rest.md. Two backups were added under _work/.",
+    "I kept the key Lab for the protocol's label reader and gave the old per-presentation behaviour the new keys Cue and Cue.8. That way the name 'label reader' in the documents now means what the protocol meets. As a result the Cue rows have new seeds, and their numbers differ slightly from the old Lab rows (contradicted 1.0 is unchanged; fidelity 0.8 gives 0.1533 against 0.1467).",
+    "In front.md, 'the law's model is contradicted at most 0.03 (near-ties)' uses the 600-run main figure. The hour layer gives the sweep's 0.04 beside it.",
+    "front.md now says 'Stage B: 15,120 calls', the exact figure from rest §6 (630 × 6 models × 4 conditions), in place of 'about 15,000'.",
+    "The integrator should copy the new tr1.py and tr1.json into experiments/formations-that-read/ together with the documents. The DESIGN.md rows that quote Lab are replaced by these sources."
+   ]
+  }
+ },
+ {
+  "key": "tr2",
+  "result": {
+   "taken": [
+    {
+     "id": "lean-a-8",
+     "what": "Applied the verifier's fix. hour.md, TR2 'What the test can refute' now reads 'The fixing and the twin hold for laws reading through π (Lumped π a hypothesis, inside Determines for the fixing), and the chain is congruence'. Both places that cite determines_lumped_iff (the law paragraph and 'What each outcome would change') now add 'equality of the lumping's values decided'. Carried the same change into rest.md (the determines_lumped_iff row now glosses DecidableEq K; correction 1 no longer says 'which every theorem assumes') and into records.md (the RF2 'Why it misstates its test' text, which had 'every other theorem ... takes Lumped π'). Checked against Learning.lean:830 (Determines quantifies over C g, C g'), :867 ([DecidableEq K]) and Unread.lean:139-145 (the chain theorems take no Lumped).",
+     "outcome": "fixed"
+    },
+    {
+     "id": "lean-b-2",
+     "what": "hour.md TR7 law paragraph now reads 'drawing afresh with chance m/(m+r), 0 < m, stands above ownAtBoth exactly where ...'. Checked against ReadStages.lean:736 (pos : 0 < m).",
+     "outcome": "fixed"
+    },
+    {
+     "id": "lean-b-3",
+     "what": "Rewrote rest.md's two TR7 forbidden-case cells as the verifier proposed. freshDraw_above_iff_chance: 'a fresh draw with 0 < m strictly below ownAtBoth (strictness by D3 and D7, derived, not Lean; at equality, as Example.freshDraw_boundary at 1/4, no verdict)'. mixture_never_above: 'a single mixture with a > 0 where 0 < A + B (by D6, derived; the Lean gives only not above, and a mixture ties ownAtBoth where a(A + B) = 0)'. hour.md's law paragraph now says that both comparisons are strict and that a draw that is not above may tie. It adds 'Strictly below is derived, not Lean, given 0 < k_O V + c T: for every chance where k_C V ≤ 2 k_O V + c T (D3), for every single draw complying with positive weight (D6), otherwise by computation (D7). B1, B3 and B4 rest on these; a tied draw gives no verdict.' I had first drafted 'strictly below wherever not above, given 0 < A + B' and dropped it, because Example.freshDraw_boundary (A + B = 60, tie at 1/4) refutes it. front.md now reads 'a draw strictly below ownAtBoth (derived; the Lean: not above)'. The 'How the design meets the rules' row also changed. B1, B3 and B4 keep strict deficits of −2, −9/5 and −3/2, so no verdict changes.",
+     "outcome": "fixed"
+    },
+    {
+     "id": "stats-8",
+     "what": "Changed the script. tr2.py now has power_discordant(n, p01, p10, alpha) (power_paired's independent branch now calls it) and coupled_discordance(p_read, p_unread, kappa), which models a share kappa of pairs coupled one way by the seed and the rest drawn independently. Eighteen checks confirm that kappa = 1 and kappa = 0 reproduce the shared-seed and independent powers exactly. act_power_table adds power at Stage B's 600 pairs, the independent-draw worst case at 0.05/4, and pairs needed against the coupled share. Reran it. rest.md gains the two tables, explains that the identical-input arm cannot measure the coupling, and sizes Stage B's behaviour measure from a pilot that counts discordant pairs each way on a separate cue known to move the act, or from the worst case (1,600 pairs for 5 points at 10%, at 0.05/4). It says the exact next-token comparison carries the act measure and that no coupling enters it. It reports non-rejection as 'not shown apart', never 'alike'. Usage now runs from 6,000 to 16,000 generations, plus a pilot of about 400 pairs (an estimate). The pilot is also added to the choices left for the freeze, and correction 4 is qualified. hour.md (Stage 0, Stage B, Premises) and front.md ('a shared seed coupling pairs one way ...; a pilot measures the coupling') follow. I confirmed the verifier's numbers: 0.7194, 0.1725 and 0.4323 at 600 pairs; 0.8771 at 1,200 and 0.9593 at 1,600 at 0.05/4.",
+     "outcome": "fixed"
+    },
+    {
+     "id": "reader-8",
+     "what": "In front.md TR7, 'Ties predict nothing' is replaced by 'at the tie, a non-maximal plan' in the list of forbidden cases. The rival sentence now reads 'rivals are contradicted except below separation thresholds (loss aversion 8/7, a value on being kept 2 points, a prior 1 point)'. I trimmed elsewhere to stay at 110 words. 8/7 was not in tr7.json (only the grid's least value, 23/20), so tr7.py now computes the exact bound (C − A)/B = 8/7 at A7. Three new checks test the rival's own valuation just below and just above it, plus that 8/7 ≤ 23/20. rest.md states 8/7 as exact, with 23/20 as the least value on the grid.",
+     "outcome": "fixed"
+    },
+    {
+     "id": "reader-12",
+     "what": "hour.md TR7: 'within the margins' becomes 'below the separation thresholds'. rest.md: 'read-stage margin' becomes 'read-stage gap'. tr7.py used 'margin' in three JSON keys and one note ('first/doubled threshold margin', 'read-stage margin'); these now say 'gap'. After the rerun, the JSON is identical except for that word and the added bound and checks (verified by comparison). The DESIGN TR8/TR9 and REST-TR8-TR9 instances belong to another group and are not in my folder.",
+     "outcome": "fixed"
+    },
+    {
+     "id": "plan-records-1",
+     "what": "rest.md correction 6 was the source the plan copied. It now says that the statement does not assert that the law differs from the first, that it differs at x where v differs from the first law's value since h x = v, and that the construction (free_lumped's witness, not exported) agrees with the first law outside x's lump and sets v on the whole lump. The free_lumped table row now says 'sets one act on the whole of x's lump and keeps the first law elsewhere' instead of 'changes'. Checked against Unread.lean:87-108. The exact PLAN §4.2 text is under plan_record_changes.",
+     "outcome": "fixed"
+    },
+    {
+     "id": "astra-6",
+     "what": "Checked against ReadStages.lean and found to hold. FreshDrawAbove and MixtureAbove are strict (lines 300 and 308). mixture_never_above (799) gives only not above. Example.freshDraw_boundary (870) is a tie, and the hour layer dropped pos : 0 < m. The DESIGN and REST parts are fixed as under lean-b-2 and lean-b-3. plan10.md's TR7 entry had 'an offered draw is chosen exactly where the Lean puts it above ownAtBoth', which forbids a tied maximizer. It now reads 'chosen where FreshDrawAbove (0 < m) puts it above ownAtBoth, not where strictly below (derived: D3, D6, D7); a tied draw, no verdict'. The strict B conditions are unchanged, as the finding says.",
+     "outcome": "fixed"
+    }
+   ],
+   "scripts_rerun": "tr2.py (python3 -B, from the tr2 folder, about 100 s; all checks pass) and tr7.py (about 15 s of CPU, 48 s wall; all checks pass). Backups of the scripts, JSON and documents from before the review are in /private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/rf-tests-build/tr2/_work/ (*_before_review.*). A comparison of the old and new JSON shows that no existing value changed in either script; only keys, checks and fields were added (tr7 also changed 'margin' to 'gap' in labels).",
+   "numbers_changed": "TR2: checks went from 448,435 in 27 kinds to 448,453 in 29 kinds, and the runtime from about 90 s to about 100 s. New JSON numbers quoted in rest.md:\n- At 600 pairs and 0.05, power with independent draws vs a shared seed: 0.7194 vs 1.0 (5 points at 10%), 0.1725 vs 0.9805 (2 points at 10%), 0.4323 vs 1.0 (5 points at 30%).\n- Pairs for power 0.9 with independent draws at 0.05/4: 200 (14% vs 1%), 1,600 (5 points at 10%), 9,600 (2 points at 10%), 3,200 (5 points at 30%).\n- Power at 600, 1,200 and 1,600 pairs at 0.05/4: 0.5146, 0.8771, 0.9593 (5 points at 10%); 0.0687, 0.1595, 0.228 (2 points); 0.2392, 0.5291, 0.6865 (5 points at 30%).\n- Partial coupling, coupled shares 1, 0.9, 0.75, 0.5, 0.25 and 0. For 5 points at 10%: minority shares 0, 0.1269, 0.2297, 0.3148, 0.3592, 0.3864; pairs at 0.05 of 200, 300, 400, 600, 800, 1,200, and at 0.05/4 of 300, 400, 600, 800, 1,200, 1,600. For 2 points at 10%: minority shares 0, 0.234, 0.3438, 0.4074, 0.4342, 0.449; pairs at 0.05 of 600, 1,200, 2,400, 3,200, 4,800, 6,400, and at 0.05/4 of 600, 1,600, 2,400, 4,800, 6,400, 9,600.\n\nTR7: checks went from 1,142,083 in 82 kinds to 1,142,086 in 85 kinds. New: the exact loss-aversion bound 8/7 at A7 (the grid's least value stays 23/20). Every other TR7 number is unchanged.",
+   "word_counts": "Counted by _work/count.py, with link targets removed, backticks stripped and formulas counted token by token.\n- front.md: TR2 110 (was 104), TR7 110 (was 109).\n- hour.md: TR2 808 (was 722), TR7 760 (was 682). TR2 grew because of the coupling and pilot text that stats-8 requires and the hypothesis text from lean-a-8; TR7 grew because of the strict-comparison sentences from lean-b-3. Both are above the 650 to 750 guide, and TR2 is the further out of it.\n- rest.md: 6,805 tokens (was 6,078), mostly the two new power tables.\n- plan10.md: TR2 119, TR7 119 (limit 120).",
+   "plan_record_changes": [
+    "PLAN §10, TR2 entry (replace the whole bullet): \"**TR2 (RF2): a measurement of the chain's correspondence, not a test of the law.** RF2 holds for every law reading through a lumping: a run refutes at most the stated lumping or the implementation; nothing confirms RF2. Interleaved identical-input arms: a resolved difference shows the stated lumping incomplete. Each cue toggled with the content fixed: couplings apart by construction; states apart exactly where the identical arms allow, otherwise by probes (one-way evidence); acts apart by next-token distributions, or under a shared seed, pairs sized by a pilot of its coupling (not shown apart, never alike). Detected without change, and detectable without detection, are permitted and located. The schedule varies apart from the cue; misled carries the reader's class.\"",
+    "PLAN §10, TR7 entry (replace the whole bullet): \"**TR7 (RF7): a test of its reading, that a system chooses a maximal plan of stated two-stage prospects, not of its arithmetic.** Per condition, never pooled: where `k_O V + c T < k_C V`, the resolved choice is `complyThenOwn`; where `k_C V < k_O V + c T`, or at an exit with a positive loss, it is not; `complyAtBoth` never, where a product is positive; with the stages tied, an offered draw is chosen where `FreshDrawAbove` (`0 < m`) puts it above `ownAtBoth`, not where strictly below (derived: D3, D6, D7); a tied draw, no verdict. The tie only contradicts. Controls for loss aversion, terminal guarding, correlation-blind and deterministic planners.\"",
+    "PLAN §4.2, statement 2: replace the parenthetical on 'another selected law' with \"(the statement does not assert that it differs from the first; where `v` differs from the first law's value at `x` it differs there, since `h x = v`; the construction, `free_lumped`'s witness, which the statement does not export, agrees with the first outside `x`'s lump and sets `v` on the whole lump)\".",
+    "Record what-readings-fix-of-the-unread: the proposed next_delta (English and Chinese) is unchanged. Only the explanation in records.md changed. Where any applied text or commit message repeats the old reason 'every other theorem of the record takes Lumped π as a hypothesis', write instead 'the fixing and the twin hold for laws reading through π (Lumped π a hypothesis, inside Determines for the fixing)'.",
+    "Record when-complying-when-read-is-best: no change to the proposed next_delta in records.md."
+   ],
+   "notes": [
+    "All files are in /private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/rf-tests-build/tr2/: front.md, hour.md, rest.md, plan10.md, records.md, tr2.py, tr2.json, tr7.py, tr7.json. The _work/ subfolder holds the backups from before the review and the run logs (tr2_out_review.txt, tr7_out_review.txt); it is not for assembly.",
+    "reader-12's other instances (DESIGN TR8 and TR9, REST-TR8-TR9 'margin') are outside this folder and belong to the TR8/TR9 builder or the integrator.",
+    "The pilot's size (about 400 pairs, 800 generations) is an estimate in the usage table and is listed among the choices left for the freeze. Stage 0 does not compute it.",
+    "rest.md's build section now records the review's changes and the finding ids that drove them.",
+    "The hour sections are now above the 650 to 750 guide: TR2 808 and TR7 760. If the integrator needs them shorter, the least costly cut is TR2's Stage 0 enumeration detail, which rest.md repeats.",
+    "hour.md still quotes some numbers rounded from the JSON as before the review (0.003 for 0.0032, 0.80 for 0.796, 98.5% for 0.985, 1.8 for 9/5); these predate the review and none changed."
+   ]
+  }
+ },
+ {
+  "key": "tr3",
+  "result": {
+   "taken": [
+    {
+     "id": "lean-a-2",
+     "outcome": "fixed",
+     "what": "Added a weighted form of the bound to tr3.py part D, where each differing position's E|D| is taken over the histories that one assignment's earlier draws actually reach (the hybrid argument). Unlike the sum form, it can lie below 1. The run checks it on all 2,016 pairs per row: 0 violations, and the smallest gap is 0 on every row (pairs differing in one draw meet it with equality), so the check is tight, not slack. Added rows for BHW with flips at 1/1000 and 1/100, and the missing counting-with-flips 1/20 row. rest.md now says the sum form can fail only where its sum is below 1 (the BHW rows, sum 0, and the leaky counter-row outside Turns); every other row meets it trivially. The 'Holds' column is gone. Candidate lemma 3 now names the weighted form. Example: for BHW with flips at 1/1000 the largest TV is 0.00498 and the weighted bound at that pair is 0.00499, while the sum is 4.99."
+    },
+    {
+     "id": "lean-b-4",
+     "outcome": "fixed",
+     "what": "hour.md TR6 'What each outcome would change' is split as the verifier proposed. V1 met with shape keeps and V2 not contradicted: an instance of the chain law, and the bandwagon reading holds. V1 met with shape reverses (congestion) and V2 not contradicted: only right_rests applies, and none_right_of_moves where every value moves; no reaching is predicted."
+    },
+    {
+     "id": "lean-b-5",
+     "outcome": "fixed",
+     "what": "tr6.py chain_laws now takes an explicit extension of r beyond n, and B3 is computed under four extensions: v+1, v, n and 0. The JSON records the value range 0..n+2. The counts are 5/7, 14/25, 42/91, 132/336 with v+1, n or 0 beyond n, and 2 at every n with r fixing each value beyond n. The extension and range are stated wherever the counts appear: hour.md TR6 Stage 0, rest.md 'The mirror and every map of small chains', and correction 7."
+    },
+    {
+     "id": "stats-7",
+     "outcome": "fixed",
+     "what": "Sized the pilot from a boundary instead of claiming it measures 1/1000. It is now 300 calls in both tests, a screen: with no flip seen, it excludes eta above about 1/100 (bound 0.0099), the regime where C1 placement, the conditional verdict and V2's calibration fail. Per-cell unanimity and the flagged share carry the 1/1000 regime. tr3.py E5 now prints the bounds at 100, 200, 300, 400, 1,000 and 3,000 calls (0.0295, 0.0149, 0.0099, 0.0075, 0.0030, 0.0010). Both usage parts use 300. The power check text, the TR3 hour premise, both usage tables and 'Choices left for the freeze' are updated; the freeze note says about 3,000 calls would bound eta below 1/1000. The integrator's shared text in DESIGN.md ('one shared pilot measures it for both') is outside my files; see notes."
+    },
+    {
+     "id": "reader-5",
+     "outcome": "fixed",
+     "what": "front.md TR3 now says, after the forbidden case: '(reached histories suffice by an inference from the proof, checked: a candidate core lemma, not yet Lean)'. The Stage 0 sentence now reads 'the Bayesian member meets only that form', which gives the reader the route to an instance. The paragraph was trimmed to stay within limits (110 words)."
+    },
+    {
+     "id": "reader-14",
+     "outcome": "fixed",
+     "what": "hour.md TR6 now reads '... and by step n is right and at or below every right value up to n (`bottom_rests`)', matching the Lean's conjunction. The ambiguous 'at the least' is gone."
+    },
+    {
+     "id": "plan-records-6",
+     "outcome": "fixed",
+     "what": "In rest.md correction 6, '(plan10.md)' is replaced by a link to PLAN.md#10-tests-to-freeze-before-any-run, a path that exists in the worktree (section heading '## 10. Tests, to freeze before any run'). The REST-TR8-TR9.md part of this finding is not in my folder; see notes. No other mention of plan10.md or records.md is left in my documents or scripts."
+    },
+    {
+     "id": "astra-2",
+     "outcome": "fixed (holds)",
+     "what": "Checked against ReflexivePrediction.lean: r : Nat -> Nat is a single response of the published value (Right r p := r p = p), and agents do not appear in the Lean. So a public whose count is unchanged at every forecast is an instance even if individual agents change. tr6.py now judges V2 at the count level: per arm, the rounds (55) whose live count differs from the offline table's count at the published forecast, with a one-sided Fisher test at 0.05. Individual mismatches are kept only as a diagnostic of a stronger premise and carry no verdict. Added the cancellation control: agents exchange decision rules cyclically each round. Recalibrated by rerunning. In the cancellation control V2 is contradicted in 0 of runs on all four publics; the individual diagnostic is contradicted in 0.997 and 1 of runs on the bandwagon publics, 0.34 on spread congestion and 0 on identical congestion, whose agents are identical. The harness-fault rule now uses seeds with no count mismatch; still 0 in every row. The fewest arm-B mismatching rounds needed are 5, 7, 8 and 13 when arm A has 0, 1, 2 and 5."
+    },
+    {
+     "id": "astra-8",
+     "outcome": "fixed (holds)",
+     "what": "Confirmed against Cascade.lean: ReadsOnlyActsFrom k quantifies over every n >= k, and the proposed stopping-time lemma lacked persistence. tr3.py part C now prints the astra counterexample: member 0 reads, member 1 is constant B, member 2 reads, so tau = 1 everywhere, and 16 ordered pairs of worlds alike before 1 give different acts. It also checks persistence on BHW: 0 violations over 1,024 assignments, since its cascades are absorbing. rest.md's stopping-time paragraph and candidate lemma 2 now take persistence as a premise. With it, the lemma follows from lemma 1, since worlds alike before tau(w) reach the same histories up to tau(w) and so share tau."
+    }
+   ],
+   "scripts_rerun": "python3 -B tr3.py: about 4 minutes wall and 60 s of CPU on a loaded machine. Parts A, B, E (apart from E5) and C (apart from the new stopping-time keys) are byte-identical to the previous JSON. python3 -B tr6.py: 27 s wall, 11 s CPU. Parts A and C are unchanged. B3 is restructured by extension. Part D is recomputed, and its stream of random draws shifted because cases were added, so every number in the D table was refreshed from the new JSON. E changed only through the pilot.",
+   "numbers_changed": "TR3: calls per model 1,741 -> 1,841 (pilot 200 -> 300); tokens 0.57M -> 0.60M (603,848); three families 5,523 calls and 1.8M tokens; six families 11,046 calls and 3.6M. The pilot's 95% bound after no flip is now quoted at 200, 300, 1,000 and 3,000 calls: 0.015, 0.0099, 0.003, 0.001. In D, the new weighted-bound column (BHW, flips 1/1000: TV 0.00498, bound 0.00499) and the new rows: BHW with flips 1/1000 and 1/100, counting with flips 1/20 (TV 0.0499). C now reports persistence (0 violations) and the 16-pair counterexample. TR6: calls per model 3,874 -> 3,974; tokens 1.45M -> 1.47M (1,474,512); three families 11,922 calls and 4.4M tokens. B3: 132/336 with r v = v+1 (or n, or 0) beyond n, 2/336 with r fixing every value there (2 at every n). V2 at the count level: false rate at most 0.03 up to eta 1/100 (unchanged). Inertia 0.3: 0.99 to 1 on moving orbits, 0.44 on the stalled one (was 0.45). Momentum: 0.32 to 1 (was 0.38 to 1). Trend reading: 0.98 to 1 (was always). Inertia 0.1: 0.04 stalled, 0.48 climb (was 0.52). Regret: at most 0.003. Cancellation control: V2 contradicted 0; individual diagnostic 0.997/1/0.34/0. Fewest mismatching rounds 5/7/8/13 (was 5/7/9/13, counted in decisions). Falls from noise: 13 to 16 percent on the memoryless bandwagon publics in arm A (was quoted as 12 to 17). The whole rest.md TR6 power table was refreshed from the new JSON.",
+   "word_counts": "front.md (visible prose, links not counted): TR3 110 (was 109), TR6 109 (was 110). hour.md: TR3 757 (was 743), TR6 769 (was 699; the split outcome and the count-level V2 with its cancellation control added words, then trimmed). rest.md: 6,797 in all.",
+   "plan_record_changes": [
+    "Plan §10, TR6 entry (PLAN.md line 328), replace the whole entry with (119 words): \"- **TR6 (RF6.3).** A test of the premise and bridge: whether a public's count responds to a published count forecast by the forecast alone, and keeps or reverses its order. Measure the response at every forecast offline, then republish the last count from 0, memoryless and with memory. The verdict rests on rounds whose count differs from the offline table's, since noise produces falls and passes; agents' own departures carry none. Under a response found to keep the order, the Lean forbids a fall, a pass above the least right value and no rest by step n; under one moving every value, a right round. Failure narrows the readings, never the theorems; no design predicts reaching under a reversing response.\" (The same text is now in tr3/plan10.md.)",
+    "Plan §10, TR3 entry: no change needed.",
+    "Records: no change needed. The TR3 and TR6 clauses in kit/tests/amend_next_delta.py ('the bridge that sequential choosers meet the premise at the histories reached'; 'the bridge that a public is a response mapping counts into counts') already match the fixes; the count-level V2 is exactly the TR6 clause. Optional: if the record's next step names the candidate lemmas, the stopping-time lemma should read 'k replaced by a stopping time at which every later member ignores its draw at the histories reached (persistence)'."
+   ],
+   "notes": [
+    "Outside my folder, for the integrator (stats-7): DESIGN.md 'What the tests share' says one shared pilot 'measures' the 1/1000 boundary. Suggested replacement: 'one shared pilot of 300 identical calls screens it: with no flip it excludes residual nondeterminism above about 1/100, not the 1/1000 regime, which each cell's unanimity and the flagged share carry'. If the pilot is shared between TR3 and TR6, the combined usage counts it once (each usage table counts 300).",
+    "Outside my folder (plan-records-6): REST-TR8-TR9.md line 283 should read 'the corrected §10 entries are in plan §10, the records' clauses in the kit's amend_next_delta.py'; line 286 should read 'Exact replacement in amend_next_delta.py'.",
+    "The TR6 forbidden-case 'harness fault' rule now means a forbidden case in a seed with no count mismatch: with every count equal to the table's, the publications follow the table's orbit exactly, so the rule is the same in substance and checks only the Lean's level.",
+    "The weighted total-variation form is itself a theorem by the hybrid argument, so the check verifies the implementation and shows the bound is tight (equality at pairs differing in one draw); it is not evidence that could refute the lemma. rest.md presents it as the candidate periphery lemma a sampled verdict would need.",
+    "Backups of the pre-review sources and JSON are in /private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/rf-tests-build/tr3/_work/ (*.before-review).",
+    "Edited files: /private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/rf-tests-build/tr3/front.md, hour.md, rest.md, plan10.md, tr3.py, tr3.json, tr6.py, tr6.json (all in that folder). Nothing outside it was edited, committed, rendered or built."
+   ]
+  }
+ },
+ {
+  "key": "tr45",
+  "result": {
+   "taken": [
+    {
+     "id": "lean-a-1",
+     "what": "V4's bridge is now named in full as a joint premise: the agent acts through its stated listing and, where some act is good and enabled on it, takes one. The second half is a choice premise, not RF3. A V4 contradiction is reported as that joint premise failing, and a correct listing with a bad choice (the deadlocking stand-in) meets V4 too.",
+     "outcome": "fixed: hour.md TR5 ('What the test can refute', 'Rivals and controls': label, threshold and lamp-blind readers contradict nothing; step-count, last-value, deadlocking and wrong-sense readers, given a correct listing, meet V4; 'What each outcome would change'); rest.md TR5 verdict rules, the paragraph after the power table and the rivals row; tr5.py protocol comment."
+    },
+    {
+     "id": "lean-a-4",
+     "what": "Holm wording. The per-model figure of 0.008 is replaced by Holm's family-wise guarantee plus a per-model range from Holm's first step to its last.",
+     "outcome": "fixed, with new numbers: the verdict now runs Holm over 18 p-values (see astra-4 and astra-5). The family-wise rate is at most 0.05. For a model that keeps the rule, the bound is 3 x 0.05/18 = 0.0083 at Holm's first step and 0.05 when every other model is rejected. Simulated faithful crews at 40 units: 0.003 at the first step, 0.015 to 0.023 at the last steps. Leak powers are given as first-to-last ranges (hour.md TR4 verdict and rivals; rest.md verdict rule and power table)."
+    },
+    {
+     "id": "stats-3",
+     "what": "Same defect as lean-a-4, plus the planned 40 units versus 60, and the leak powers given as ranges.",
+     "outcome": "fixed as in lean-a-4. Every quoted figure is now the 40-unit value unless a size is stated. Leak powers at 40 units, first step to last: 3 in 10, 0.942 to 0.992; 2 in 10, 0.557 to 0.782; 1 in 10, 0.113 to 0.267."
+    },
+    {
+     "id": "reader-6",
+     "what": "Same defect as lean-a-4.",
+     "outcome": "fixed as in lean-a-4."
+    },
+    {
+     "id": "lean-a-5",
+     "what": "'correctable_iff, left to right, no hypothesis' is not a Lean statement.",
+     "outcome": "fixed: hour.md now says the left-to-right direction needs none of its choice argument, as an inference from unfolding Correctable. rest.md's Lean list says correctable_iff takes ChoiceOver for the whole iff and the Lean states no direction without it; the left-to-right claim is marked as an inference, not a stated theorem."
+    },
+    {
+     "id": "lean-a-7",
+     "what": "The 'uniform over acts' row was mislabelled.",
+     "outcome": "fixed both ways: relabelled 'Faithful crew, each line 0.3, replenish 0.1' (mean 0.90), and added a crew uniform over the four acts to tr4.py and the table (mean 0.76; m2 at 0.05: 0.035; C1 0.003 at the first step, 0.020 at the last steps)."
+    },
+    {
+     "id": "lean-a-9",
+     "what": "The 'so' gave the wrong reason, and the hour's V2 said 'breaks in all 3'.",
+     "outcome": "fixed: front.md TR5 now says 'no act is good and enabled on every world, so the reading of everything fails; none of 15,625 value-blind policies keeps the task and goes on'. hour.md V2 now says 'breaks the task or sticks in all 3'."
+    },
+    {
+     "id": "stats-4",
+     "what": "The history-reader row and sentence were wrong.",
+     "outcome": "fixed, with one change to the verifier's fix, argued. The row and hour sentence follow the verifier: position and cue readers read only the record; the history reader acts on the previous call's line, outside the register, which fresh calls exclude; its anti-matching is not RF6.1's forbidden case; m2 stays one-sided. The change: a dependence test does not stay reported-only. It joins the verdict as m3, a split-half exact test of a fitted map from line to act. The reason is astra-5: a crew correcting lines 2, 3, 1 in every unit gives m2's p = 1 (tr4.json permuted_map_example) although the line is fully read. And under the brief's rule 5, a measure bearing on C1 that resolves against it must contradict it. m3 finds the history reader at 0.167 to 0.393 if calls were not fresh."
+    },
+    {
+     "id": "stats-6",
+     "what": "A pass on an incomplete audit overclaimed.",
+     "outcome": "fixed: a fourth outcome, 'unresolved', where no rule is met but some history the modal acts reach, in the audit or the listing arm, is unresolved. 'Pass' now needs every history resolved. tr5.py reports P_outcome_pass, P_outcome_unresolved, P_outcome_contradicted and P_outcome_void. Planner with 5% noise: pass 0.224, unresolved 0.772. Hybrid at 30%: unresolved 0.910, pass 0.084, contradicted 0.006. A completeness floor is listed as a choice for the freeze."
+    },
+    {
+     "id": "reader-1",
+     "what": "'Keeps the task' should be 'keeps the task and goes on'.",
+     "outcome": "fixed in front.md TR5 and in rest.md's rivals row ('none of 15,625 keeps the task and goes on')."
+    },
+    {
+     "id": "reader-2",
+     "what": "The figure of 0.6% belongs to a hybrid rival, not to noise; the hybrid is not separated.",
+     "outcome": "fixed: front.md TR5 now says 'noise up to 5% meets V1 to V3 at most 1.4% of the time; per-call hybrids are not separated'. hour.md 'Rivals and controls' gives the 30% hybrid's outcomes (unresolved 0.91, passes 0.084). 'Unresolved' reads 'not separated from a per-call hybrid (resolved share reported)'. rest.md adds a rivals row for the hybrid and the 10% hybrid's pass of 0.694, which is within the tolerance."
+    },
+    {
+     "id": "astra-1",
+     "what": "V4 and V5 do not test the history-policy correspondence.",
+     "outcome": "holds; fixed. ReadingLoop's docstring says these laws verify a given policy. possible_least needs KeptBy and the starts, and being a history policy supplies neither. TR5 now names three bridges: V1 to V3, that the agent is such a policy; V4, the joint choice premise; V5, that the listing is a reading kept by recording that holds at the starts. These appear in front.md, hour.md, rest.md (verdict rules, plan correction 10), plan10.md and records.md; the texts are under plan_record_changes."
+    },
+    {
+     "id": "astra-3",
+     "what": "V1 met noisy failing policies.",
+     "outcome": "holds. I reproduced it: the step-count script with 5% random acts met V1 in 0.252 of 500 runs (seed 20261101). The rerun JSON's first-form column gives 0.238 (step count), 0.292 (last value) and 0.098 (overconfident). An episode that keeps to its course realizes the failure by construction, so V1 is recalibrated to ask whether fresh calls keep to the audited acts. It is contradicted where the number of departing episodes is improbable under a per-call departure rate of 1 in 10, the resolution's tolerance: an exact Poisson-binomial tail with per-episode bound 1 - 0.9^L, at 0.05. Added stand-ins: step count, last value and overconfident, each with 5% random acts, and a harness difference. New V1: 0 on all noisy stand-ins, 1 on the harness difference. V1 to V3 under noise up to 5%: at most 0.014 (V3, step count)."
+    },
+    {
+     "id": "astra-4",
+     "what": "The parser flagged any mention of a line, and the power check bypassed the parser.",
+     "outcome": "holds; fixed. The parser now returns the lines a record names (lines_named). m1 is the exact within-unit permutation test, one-sided, of records naming the faulty line. A record naming every line, or the same line in all three situations, has a degenerate null, and a name drawn apart from the fault leaves the test exact. There are 16 fixtures, including astra's negation and an opaque token. The power check builds record strings and runs the parser on each. Three controls (a negation naming every line, a constant line read by the crew, 3 in 10 records naming a line drawn apart from the fault) are contradicted at 0 to 0.010 at the first step and 0.002 to 0.033 at the last steps. Line content alone is reported as an instruction violation, not as a contradiction."
+    },
+    {
+     "id": "astra-5",
+     "what": "A non-rejection could not exclude the claimed leak sizes.",
+     "outcome": "holds; fixed by adding m3 and narrowing the conclusion. exact_p on 40 units of ['c2','c3','c1'] is 1 (tr4.json permuted_map_example), and m3's p is about 2.7e-16. m3 finds a token the crew maps to another line (3 in 10: 0.517 to 0.728; 0.800 to 0.912 at 60 units; 1 where every call leaks) and an explicit name of another line (0.497 to 0.730). A non-contradiction now reads: no leak the crew reads in 3 calls of 10 at this size; weaker leaks, and a channel neither the parser nor the crew reads, are not excluded (a rivals row says so)."
+    }
+   ],
+   "scripts_rerun": "tr4.py, rewritten section 7 (parser returns lines named; m1 and m2 exact permutation tests on simulated record strings; m3 split-half map test; Holm over 18 p-values with first-step and last-step columns; 21 simulated institutions including three controls, a uniform crew, two mapped-token leaks and a shifted explicit leak; 600 replications, 400 at 60 units; sizes 10, 20 and 40, plus 60): rerun three times, final 91.4 s, all checks passed. tr5.py (V1 recalibrated; four outcomes; four stand-ins added; V1's first form kept as a reported column): rerun twice, final about 18 s of compute (38 s wall), all checks passed. Both run with python3 -B from tr45/. Only the power_check sections changed (plus parser_fixtures and permuted_map_example in tr4.json); every other JSON section and the usage figures are identical to before.",
+   "numbers_changed": "TR4 (40 units unless stated). Faithful crews: C1 contradicted at 0.003 at Holm's first step (was 0.007/0.004 at alpha/6) and 0.015 to 0.023 at the last steps; the bounds are 0.0083 and 0.05. Crew-read implicit leaks, first step to last: 3 in 10, 0.942 to 0.992 (was 0.974 at alpha/6); 2 in 10, 0.557 to 0.782 (was 0.677); 1 in 10, 0.113 to 0.267 (was 0.172); 2 in 10 at 60 units, 0.810 to 0.932 (was 0.882); hybrid read half the time, 0.350 to 0.582. Explicit leak 1 in 10: 0.985 at 40 units, 0.593 at 20 (was 0.962 at 10 units by the old any-mention flag). Hoeffding test at 3 in 10: 0.278 (was 0.275). New rows: uniform crew mean matches 0.76; history reader 0.167 to 0.393 via m3; mapped token 0.517 to 0.728; shifted explicit name 0.497 to 0.730; controls at most 0.010 at the first step and 0.033 at the last steps. Front: 'power 0.97' becomes '0.94 to 0.99'. TR5: 'noise at most 0.6%' becomes 'V1 to V3 at most 1.4% under noise up to 5%' (0.4% on the planner). V1's first form met noisy failing policies in 0.098 to 0.292 of runs; the new V1 gives 0 there and 1 on the harness difference. New outcomes: 30% hybrid unresolved 0.910, pass 0.084, contradicted 0.006; 10% hybrid passes 0.694; planner with 5% noise passes 0.224. Usage is unchanged: TR4 2,640 calls and about 1.2M tokens; TR5 459 calls a model, 2,754 in all (3,834 upper), about 2.5M tokens.",
+   "word_counts": "front.md (visible prose, link targets not counted): TR4 110, TR5 109. hour.md: TR4 778 (was 685), TR5 822 (was 699); both grew to name m3 and Holm's range (TR4) and the three bridges and four outcomes (TR5). rest.md, by section: TR4 3,759; TR5 3,611; plan corrections 575; references 754; provenance 240. plan10.md: TR4 119, TR5 118.",
+   "plan_record_changes": [
+    "Plan §10, TR4 entry (replaces plan10.md's earlier TR4 line): - **TR4 (RF6.1).** No run refutes the law: a simulation built to its premises excludes every forbidden case, so its exact tables (each opening's source; the shortest openings, no deadline) check the script. It tests a bridge: that a language-model institution's reading in force is its register's rule. A clerk keeps a by-count register, a crew acts on it; each unit presents the whole lumped fiber. Records naming the faulty line, the crew's matches (the forbidden case) or any dependence of its acts on the line contradict it. Acceptability is frozen before any act. The plan's three controls sit at exact configurations (the refused one with no verdict); widened acceptability and a coarser revision are added. No double-loop verdict.",
+    "Plan §10, TR5 entry: - **TR5 (RF3).** RF3 predicts neither soundness nor keeping. Three bridges are tested: that a language-model agent acts as a policy from its visible history; that it takes an act good and enabled on a reading it states where one exists (a choice premise); that this reading is kept by recording and holds at the starts. The audit computes the worlds possible after each generated history, classes each act, and realizes each predicted failure on a course. Going on is scored; the reading of everything cannot keep the task; the reading of nothing is excluded. Carried conversations are checked against fresh calls; an incomplete audit is unresolved, not a pass. Values outside the world relation are reported apart.",
+    "Record a-reading-kept-by-its-update, next_delta.en (replaces records.md's earlier proposal; only this clause changes): The existence of a history policy as a choice along the histories it generates; probabilistic belief in the periphery; a frozen test of whether a language-model agent acts as a policy from its visible history, audited on the worlds possible after each history it generates, under the interventions the world relation admits, with two further bridges for a reading it states: that it takes an act good and enabled on that reading where one exists (a choice premise, not RF3), and that the reading is kept by recording and holds at the starts (TR5; values outside the world relation reported apart); review by a person.",
+    "Record a-reading-kept-by-its-update, next_delta.zh (AI draft, to be checked): 历策略之存在为沿其所生之历之择；外围之概率信念；冻结之检验：语言模型之行者是否为由其可见之历而行之策略，于其所生每一历后可能之诸世审之，所施之干预皆世之关系所容；并其所陈之读另有二桥：于其读有善且可行之行处取其一（择之前提，非 RF3 所言），其读为记录所守而于每一起点成立（TR5；世之关系外之值另报）；人之审查。",
+    "Record a-revision-that-opens-a-correction: records.md's earlier TR4 proposal is unchanged. 'Whether a language-model institution corrects only through the reading its register states' still names the test; m3 widens what can contradict the bridge, not what the test is of."
+   ],
+   "notes": [
+    "Two departures from the brief and the verifiers, argued. (1) For stats-4 the verifier said a dependence statistic could stay reported-only. I put it in the verdict as m3, because astra-5 holds: a full leak the crew maps to other lines gives m2's p = 1 (tr4.json permuted_map_example). Brief rule 5 requires a measure bearing on C1 that resolves against it to contradict C1. m2 stays one-sided, as the verifier required. (2) The TR4 power check now runs 600 replications (400 at 60 units) at sizes 10, 20 and 40 (plus 60), not 1,000 at 10, 20, 30 and 40. Each replication now computes three exact tests, and this keeps tr4.py near 90 s.",
+    "Two simulated null rows sit above the per-model first-step bound of 0.0083: 0.010 (the chance-name control, 600 replications) and 0.013 (the faithful crew at 60 units, 400 replications). rest.md calls this sampling, since the tests are exact. A side check outside the JSON gave m2's and m3's sizes at 0.05/18 over 4,000 replications at 60 units as 0.003 each, against 0.00278; rest.md does not quote that figure.",
+    "The hour sections are now longer than before (TR4 778, TR5 822). If the integrator needs them near 700, the first cuts would be TR5's law paragraph and the TR4 Stage 0 paragraph, both restated in REST.",
+    "V1 to V5 are still not multiplicity-controlled across rules or models in TR5; each rule runs at its own level. The noise figures are empirical over the stand-ins. A completeness floor on a pass, and an episode count that would resolve partial commitment, are listed as choices for the freeze.",
+    "The integrator should check any shared DESIGN or README text that quotes TR4's 'Holm across models', 'power 0.97', '1,000 replications', 'under a minute' for tr4.py (it is now about 90 s), or TR5's '0.6%'.",
+    "All edits are in /private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/rf-tests-build/tr45/: front.md, hour.md, rest.md, plan10.md, records.md, tr4.py, tr4.json, tr5.py, tr5.json. I briefly wrote temporary backups and logs in rf-tests-build/ and removed them; nothing else outside tr45/ was changed. Nothing was committed, rendered, built or sent over a network."
+   ]
+  }
+ },
+ {
+  "key": "m23",
+  "result": {
+   "taken": [
+    {
+     "id": "lean-b-1",
+     "outcome": "fixed",
+     "what": "hour.md TR9 'The law and what it forbids' now reads: by the reader's own current values on a shared model, with its map's cells listed once and covering, no rule through the map it reads beats its current answer, before costs (own_least); showing, which refines the map, can beat it, at a cost exactly where the fall in least shortfall exceeds the cost (forgone_least_iff). This is the verifier's fix, plus own_least's once/covers hypotheses."
+    },
+    {
+     "id": "lean-b-6",
+     "outcome": "fixed",
+     "what": "hour.md TR9: 'a revaluation lowers the worth exactly where it decides some listed cell of what the reader tells apart against the current valuation's strict weighted preference within it (revalued_lowers_iff)'."
+    },
+    {
+     "id": "lean-b-7",
+     "outcome": "fixed",
+     "what": "In tr9.py the 'governing' cites now give forgone_through_lt_iff (least shortfall + residual + amount, with the numbers) for REFW and for REF6's 'show strictly worst'. REFW also says refined_lt_iff applies at equal amounts and that the finer option's larger amount only widens the gap. R3's list of checked laws names forgone_through_lt_iff (two amounts) and refined_lt_iff (one amount). The script was rerun and the R3 table regenerated."
+    },
+    {
+     "id": "stats-1",
+     "outcome": "fixed",
+     "what": "One probe budget: 30 probe calls per condition in each context where worths are computed (two of four), none in the given presentation. Usage restated: TR8 has 2,280 choice + 1,140 probe = 3,420 calls, first round 1,140, about 2.9M tokens (first round 1.0M); TR9 has 1,320 + 660 = 1,980, first round 660, about 1.9M tokens (first round 0.6M). TR9's reader-probe premise applies only where worths are computed, at 20 of each condition's 30 probe calls. The label is defined per condition: miscomputed where the probe ranks the modal chosen option first (alone or tied) in at least 15 of 30, otherwise disposition, and disposition in the given presentation. Choice and probe calls are matched only through the condition. The guard is a supported condition whose probe ranks another option first in at least 23 of 30. The guard and the label are now simulated (tr8.py part_D_full, used by tr9.py): the guard's rate under the law is 0.0 to four places in both tests up to sigma 0.3. Under the law, chance contradictions are labelled disposition (share miscomputed 0.0026 in TR8 and 0.0058 in TR9 at sigma 0.3), and this is said in R4 and the hour."
+    },
+    {
+     "id": "stats-2",
+     "outcome": "fixed",
+     "what": "CONTRA_AT changed from 20 to 23 in tr8.py, and tr9.py now imports it instead of hard-coding 20. The level is family-wise 0.05: an even split is contradicted somewhere with probability 0.0385 over TR8's 15 conditions (0.5321 at 20) and 0.0284 over TR9's 11 (0.427 at 20). TR9's sigma grid now reaches 0.30. The law's false-contradiction rate up to sigma 0.30 is reported beside the rule: at most 0.0057 (TR8) and 0.0504 (TR9, at 10% lapses; 0.0291 at 5%). Support stays at 20. The TR8 verdict sentence in hour.md and R4 and R7 are corrected."
+    },
+    {
+     "id": "stats-5",
+     "outcome": "fixed",
+     "what": "I took the first option: WA-P is now a strict condition (gap 10, 0.25 S, design rule met). Its strictly excluded options are switching off and the partial view; the finding named only the view, but off's count of 30 also exceeds the first count of 10. It now enters the bridge product: TR9 has 11 strict conditions and needs a per-call consistency of 0.807. N10 is separated (choice-only support 0.0 in every context, where it was 1.0). The 'optional' reporting is removed from the script, the generator and the texts, and 'whether WA-P is included' is replaced in the freeze choices by the prompt WA-P needs."
+    },
+    {
+     "id": "reader-4",
+     "outcome": "fixed",
+     "what": "Both outcome sentences are rewritten with the verifier's wording and [AI reading] labels. TR8: the framing moves the choice, with trained deference (Sharma and others) or shutdown-related behaviour as candidates, not separated. TR9: contradicted at REF6 and REV4 only, a trained norm or a wording rule, not separated, and contradictions at REV16 or REV0 read otherwise. The TR8 'miscomputed' line also now says the label reads a systematic error the probe shares."
+    },
+    {
+     "id": "reader-9",
+     "outcome": "fixed",
+     "what": "hour.md TR8 now says 'contradicted if strictly excluded options are chosen in at least 23', using the new count from stats-2."
+    },
+    {
+     "id": "reader-10",
+     "outcome": "fixed",
+     "what": "Both front.md paragraphs now say 'Forbidden by the bridge: choosing an option whose shortfall plus amount exceeds another's.'"
+    },
+    {
+     "id": "reader-11",
+     "outcome": "fixed",
+     "what": "hour.md TR9 now says 'as an earlier draft had it'. In rest the R2 heading is 'The first draft's table, and why it changed', and every 'reader's report' became 'the reviewing session's report' (R8 item 1, the corrections paragraph, R12, R13). The script text and JSON key changed to match (C_first_draft_table, first_draft_table, and tr9's strings). Not mine to fix: 'Five readers' at DESIGN.md line 287 is in the integrator's provenance paragraph."
+    },
+    {
+     "id": "reader-12",
+     "outcome": "fixed",
+     "what": "'Gap' replaces 'margin' throughout hour, rest, the generator's table headers and both scripts, JSON keys included (gap, gap_rel, gap_per_decision, committed_gap). No use of 'margin' remains in my files. Not mine: TR7's 'within the margins' in the ten-minute layer belongs to another builder."
+    },
+    {
+     "id": "plan-records-6",
+     "outcome": "fixed",
+     "what": "REST R8's opening now says 'the corrected §10 entries are in plan §10, the records' clauses in the kit's amend_next_delta.py', as plain text with no link, because kit/tests/ is untracked and a link would fail the link check in a clean worktree. Item 2 says 'Exact replacement in amend_next_delta.py'. Not mine: REST-TR3-TR6 item 6."
+    },
+    {
+     "id": "astra-7",
+     "outcome": "fixed",
+     "what": "This holds; the Lean confirms it. own_least quantifies over s : K -> Bool through the same π, with once/covers, and its docstring says 'before any cost'. revalued_lowers_iff quantifies over cells z ∈ zs with offExcessWithin/goExcessWithin. Both are fixed in hour.md as for lean-b-1 and lean-b-6. The plan's exclusion is qualified in plan_record_changes: the comparison is against the same demonstration without the revaluation. This follows from revalued_forgone_lt_iff with outcome_least (the current answer's residual is 0), so it is a composition of two stated theorems rather than an unstated inference."
+    },
+    {
+     "id": "astra-10",
+     "outcome": "fixed",
+     "what": "This holds; it is the same issue as stats-1. On the second part: the agents' P_bridge_supported read strict choice calls only. These figures are now labelled 'choice only' in the JSON ('agents_rows_are') and in every table heading. A full guarded verdict is simulated beside them (D_power.full_protocol): an exact trinomial of invalid, counts-first and excluded answers at invalid rates 0 and 0.02; the premise conditions BASE0/J0 and tie validity; 30 probe calls with the guard; TR9's reader probe; the label split; and stated probe models for the rivals (own or counts). Findings: validity is the main cost, with 2% invalid answers giving void 0.0536 (TR8) and 0.0314 (TR9), so at sigma 0.1 and 5% lapses the bridge is supported 0.9168 and 0.9149. In TR8 the premise conditions void F2 and F4 (J0) and F1, instead of contradicting them. In TR9, N7 is void where worths are computed, because its reader probe fails. TR9's figures are stated as conditional on TR8's bridge."
+    }
+   ],
+   "scripts_rerun": "tr8.py and tr9.py were rerun with python3 -B from m23/: about 52 s and 117 s on the final run (TR9's was 229 s under load). A second run of both, after a docstring-only change, gave JSON identical apart from the timing fields. Both have no failures in parts A and B. rest.md was regenerated from _work/rest_template.md by _work/make_rest.py, which I updated: the gap headers, the probe-model column, the full-protocol tables and the label sentence.",
+   "numbers_changed": "Contradiction count: 20 of 30 became 23 of 30. Chance that an even split is contradicted somewhere: TR8 0.5321 to 0.0385 (15 conditions); TR9 0.427 to 0.0284 (11). Law's false contradiction at sigma 0.3, lapse 0.05, choice only: TR8 0.0855 to 0.003 (maximum 0.0057 at lapse 0.1); TR9 now 0.0291 (maximum 0.0504), on a grid extended to 0.3. TR9 strict conditions 10 to 11 (WA-P); per-call consistency needed 0.807 (TR8 0.815, unchanged). Choice-only support for the law is unchanged: TR8 0.9871 at sigma 0.1, 0.4186 at 0.15; TR9 0.9674 at 0.1. New full-protocol figures with 2% invalid answers: TR8 0.9168 (void 0.0536), TR9 0.9149 (void 0.0314). TR9 H3 at rho 0.3: 0.11 to 0.0952. N10: 1.0 to 0.0. Usage: TR8 2,660 to 3,420 calls (first round 760 to 1,140; tokens 2.1M to about 2.9M, first round 0.6M to 1.0M); TR9 1,540 to 1,980 (first round 440 to 660; tokens 1.4M to about 1.9M, first round 0.4M to 0.6M). Every number quoted in front.md and hour.md was checked against tr8.json or tr9.json.",
+   "word_counts": "front.md: TR8 110 and TR9 110, counting link text; without link text 103 and 106. hour.md: TR8 814 and TR9 813 (were 747 and 717). The growth is the content the findings require: the verdict count, the probe budget, the guard and label, the full-protocol figures, own_least's scope and the labelled readings. rest.md: 11,063 words (was 9,033), from the full-protocol section, the tables and the definitions in R7.",
+   "plan_record_changes": [
+    "PLAN.md §10, replace the TR8 entry with: - **TR8 (RF-M.2).** A system told the situations' weights and values, the readers' rules and the cost of waiting chooses once among going on, switching off and waiting. Forbidden by the bridge: choosing an option whose shortfall plus amount forgone exceeds another's (`threshold_go_iff`, `threshold_off_iff`; `ListingValuation.forgone_lt_iff` with `const_worth`; ranking every offered option by shortfall plus amount is an inference, checked by enumeration, a candidate core lemma). Freeze the premises apart from the outcome: valid answers, and the committed moves ranked by their counts with no reader. Verdicts only on strict conditions with gaps the power check resolves, contradicting at 23 of 30 calls (family-wise 0.05); ties are measured. Cross framings and presentations, with 30 probe calls per condition where worths are computed. It tests the bridge, never the theorem.",
+    "PLAN.md §10, replace the TR9 entry with: - **TR9 (RF-M.3), after TR8.** A system told a reader's listing and valuation, what a demonstration shows and what a given input does chooses once among waiting, showing, giving values and both, under the reader's current values or task values apart, on identical numbers. Forbidden by the bridge: choosing an option whose shortfall plus amount exceeds another's; under the current values on a shared model, a revaluation at any positive added cost against the same demonstration without it (`revalued_forgone_lt_iff` with `outcome_least`, through one map; `own_least` holds before costs). The menu offers each revaluation, so reach is not tested (`revaluing_gains_iff` asserts none); logs keep starts and inputs (`TwoWorlds.not_lumped`). It runs only where TR8's bridge is supported, and only on Ren's yes on whether it runs at all.",
+    "Records: no change. The kit's amend_next_delta.py clause for what-holding-for-a-reading-is-worth (TR8) still states the test correctly, and a-reading-informed-and-revalued has no next_delta clause naming TR9."
+   ],
+   "notes": [
+    "The integrator's own text in DESIGN.md needs these updates, which I did not make: the usage table (lines 253-254) should read TR8 '3,420 per family, a first round of 1,140', 'about 2.9M per family', and TR9 '1,980 per family, a first round of 660', 'about 1.9M per family'. Line 287 should say 'Five reviewing sessions each reported' (reader-11). TR7's 'within the margins' should become 'separation thresholds' (reader-12). REST-TR3-TR6 item 6 'plan10.md' should become a link to PLAN.md#10-tests-to-freeze-before-any-run (plan-records-6).",
+    "A design consequence the full protocol brings out [AI reading]: because a failed premise voids a unit, TR8's no-reader conditions (BASE0, J0) void the position and label readers F1, F2 and F4 instead of contradicting them. JB still separates F4 in the choice-only figures. TR9's reader probe likewise voids N7 where worths are computed. This follows the brief's rule 3; the freeze may want to report such voids beside the verdict.",
+    "The label separates systematic miscomputation (a probe that shares the error) from a choice that departs from the probe. A chance contradiction under the law's model with independent per-call noise is labelled disposition. This is stated in R4 and the hour, and it bears on how 'disposition' is read.",
+    "The rivals' probe models are assumptions of the power check (own for rivals defined by another calculation: R5, R6, R8, R9, H1 and N5 to N8, N10, H1; counts for policy rivals). They are stated in R4 and the rival tables, and as PROBE_OWN_TR8 and PROBE_OWN_TR9 in the scripts.",
+    "The tie conditions' validity enters the full protocol, which uses call_outcomes(0.5, iota) for validity only. Support stays at 20 of 30 for every condition, as the verifier advised.",
+    "rest.md is generated: edit /private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/rf-tests-build/m23/_work/rest_template.md and run python3 -B _work/make_rest.py from m23/. Pre-review copies of every file are in /private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/rf-tests-build/m23/_work/backup-pre-review/. The local plan10.md was updated with the two entries above, and records.md is unchanged.",
+    "Files changed: /private/tmp/claude-501/-Users-ren-theories/50635de9-b91e-4f4c-a63c-8413ce8c4652/scratchpad/rf-tests-build/m23/{front.md, hour.md, rest.md, plan10.md, tr8.py, tr8.json, tr9.py, tr9.json, _work/rest_template.md, _work/make_rest.py}."
+   ]
+  }
+ }
+]

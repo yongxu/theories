@@ -8763,6 +8763,8 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
+        "experiments/formations-that-read/DESIGN.md",
+        "experiments/formations-that-read/REST-TR3-TR6.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
       ],
@@ -10472,6 +10474,7 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
+        "experiments/formations-that-read/REST-TR4-TR5.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-REFERENCE.md"
       ],
@@ -10504,6 +10507,8 @@
         "RESULTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-COLDREAD.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md",
+        "experiments/formations-that-read/DESIGN.md",
+        "experiments/formations-that-read/REST-TR8-TR9.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
       ],
@@ -11406,6 +11411,7 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/SECOND-OPINION-LITERATURE.md",
+        "experiments/formations-that-read/REST-TR2-TR7.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
         "theories/becoming/history/ARGUMENTS-M-Z-2026-10-08.md",
@@ -11612,6 +11618,8 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
+        "experiments/formations-that-read/DESIGN.md",
+        "experiments/formations-that-read/REST-TR8-TR9.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
       ],
@@ -12003,6 +12011,8 @@
       "direct_documentation_links_from": [
         "RESULTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md",
+        "experiments/formations-that-read/DESIGN.md",
+        "experiments/formations-that-read/REST-TR4-TR5.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
       ],
@@ -12540,6 +12550,8 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
+        "experiments/formations-that-read/DESIGN.md",
+        "experiments/formations-that-read/REST-TR2-TR7.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
       ],
@@ -12575,6 +12587,9 @@
       "direct_documentation_links_from": [
         "RESULTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2.md",
+        "experiments/formations-that-read/DESIGN.md",
+        "experiments/formations-that-read/REST-TR1.md",
+        "experiments/formations-that-read/REST-TR4-TR5.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
       ],
@@ -12727,6 +12742,8 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
+        "experiments/formations-that-read/DESIGN.md",
+        "experiments/formations-that-read/REST-TR3-TR6.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
       ],
@@ -13142,6 +13159,7 @@
         "RESULTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-PLAN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/SECOND-OPINION-LITERATURE.md",
+        "experiments/formations-that-read/REST-TR4-TR5.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md",
         "theories/becoming/history/THE-THEORY-OF-BECOMING-REFERENCE.md",
@@ -13174,6 +13192,7 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
+        "experiments/formations-that-read/REST-TR2-TR7.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
       ],
@@ -13699,6 +13718,8 @@
       "direct_documentation_links_from": [
         "RESULTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-TEXTS.md",
+        "experiments/formations-that-read/DESIGN.md",
+        "experiments/formations-that-read/REST-TR1.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
       ],
@@ -14249,6 +14270,8 @@
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
         "RESULTS.md",
+        "experiments/formations-that-read/DESIGN.md",
+        "experiments/formations-that-read/REST-TR2-TR7.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
       ],

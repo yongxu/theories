@@ -59,7 +59,7 @@ Canonical source: [ReadingLoop.lean](../../../../experiments/integrated-correcti
 <a id="next--下一步"></a>
 ## Next
 
-The existence of a history policy as a choice along the histories it generates; probabilistic belief in the periphery; a frozen test intervening on a formation's observations (the plan's TR5); review by a person.
+The existence of a history policy as a choice along the histories it generates; probabilistic belief in the periphery; a frozen test of whether a language-model agent acts as a policy from its visible history, audited on the worlds possible after each history, and of two bridges for a reading it states (the plan's TR5); review by a person.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -94,6 +94,7 @@ Aliases: `a kept reading`, `所守之读`, `the worlds possible after a history`
 ### History
 
 - 30 October 2026: added (RF round 2), a reading kept by its update, with going on, and the reading its own history carries; after a cross-model review of the Lean with a re-check, every finding taken; study section 456.
+- 31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR5 in experiments/formations-that-read, which can refute at most the correspondence that an agent acts as a policy from its visible history, and two bridges for a reading it states, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.
 
 </details>
 
