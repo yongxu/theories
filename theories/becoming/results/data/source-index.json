@@ -2131,13 +2131,13 @@
       ]
     },
     "experiments/formations-that-read/DESIGN.md": {
-      "title": "Formations that read: the designs of RF's tests (TR1 to TR9)",
+      "title": "Formations that read: the designs of RF's tests (TR1 to TR9) and RR's TR-RR1 and TR-RR2",
       "local_links": [
         "_process/BECOMING-WORKBOARD.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/kit/tests/amend_next_delta.py",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rr-revision-routes/NOTE.md",
         "experiments/README.md",
+        "experiments/formations-that-read/REST-TR-RR.md",
         "experiments/formations-that-read/REST-TR1.md",
         "experiments/formations-that-read/REST-TR2-TR7.md",
         "experiments/formations-that-read/REST-TR3-TR6.md",
@@ -2162,6 +2162,8 @@
         "experiments/formations-that-read/tr8.py",
         "experiments/formations-that-read/tr9.json",
         "experiments/formations-that-read/tr9.py",
+        "experiments/formations-that-read/tr_rr.json",
+        "experiments/formations-that-read/tr_rr.py",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean",
@@ -2169,11 +2171,28 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionPlans.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ShownOrder.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean",
         "experiments/valuer-agreement/README.md",
         "theories/becoming/chapters/03-KNOWING.md",
-        "theories/becoming/chapters/05-COLLECTIVES.md"
+        "theories/becoming/chapters/05-COLLECTIVES.md",
+        "theories/becoming/chapters/07-SIGNIFICANCE.md"
+      ]
+    },
+    "experiments/formations-that-read/REST-TR-RR.md": {
+      "title": "TR-RR1 and TR-RR2: the full design",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rr-revision-routes/NOTE.md",
+        "experiments/README.md",
+        "experiments/formations-that-read/DESIGN.md",
+        "experiments/formations-that-read/REST-TR2-TR7.md",
+        "experiments/formations-that-read/REST-TR8-TR9.md",
+        "experiments/formations-that-read/tr8.py",
+        "experiments/formations-that-read/tr9.py",
+        "experiments/formations-that-read/tr_rr.json",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionPlans.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean"
       ]
     },
     "experiments/formations-that-read/REST-TR1.md": {
