@@ -134,7 +134,7 @@ Ren, 31 October 2026, on whether the dossier's latest additions should be checke
 - **The items** and compact **terms** follow; the box became item **A-20** (complying when read, holding an act for a stop, letting a revision through), with its claims as RF and RR wrote them and their records' limits, so that a reviewer can give it a verdict.
 - **A-10, A-10b, A-10c, A-18 and A-19** were cut to their statement, meaning, standing, weaknesses and questions. Credits keep each record's own sentence on what is new; the names it credits are listed, not quoted. A-10c keeps one Lean block. Each landing's history left the items for this section.
 - **Provenance** moved to the end of the dossier, with the full list below, verbatim.
-- **Reading times**, by [the kit's measure](kit/measure_layers.py) at 100 to 130 words a minute, after the fourth pass and its re-check were taken and RF-M.3's passage and RR2's sentence placed: the front with the title, 1,100 words, 8.5 to 11 minutes; the tests, 358 words, 2.8 to 3.6; the one-hour path with both, 5,357 words, 41.2 to 53.6; A-20, for deception or corrigibility, 1,812 words, 13.9 to 18.1 more, stated on the front as eighteen; the whole dossier, 14,046 words and 50 lines of Lean, 108.0 to 140.5 minutes.
+- **Reading times**, by [the kit's measure](kit/measure_layers.py) at 100 to 130 words a minute, after the fourth pass and its re-check were taken and RF-M.3's passage and RR2's sentence placed: the front with the title, 1,100 words, 8.5 to 11 minutes; the tests, 358 words, 2.8 to 3.6; the one-hour path with both, 5,357 words, 41.2 to 53.6; A-20, for deception or corrigibility, 1,836 words, 14.1 to 18.4 more, stated on the front as eighteen; the whole dossier, 14,076 words and 50 lines of Lean, 108.3 to 140.8 minutes.
 
 **Landing notes dropped from the items' standings:**
 - A-10: "Theorem (counts), landed 25 October 2026 after an independent AI review narrowed three claims: p does not change the direction *at a step* only; `byBack_reads_iff` is an equivalence, not a derivation of `ReadsShare`; only the numbers of steps matter, and the verdict depends on a."
@@ -173,6 +173,25 @@ RF-M.3's dossier text was placed by role when AJ4 merged its landing (`4b33fce37
 > - A-12's clause, "the principal's learning beyond filtering by what it is shown is not represented", is the record's own item, said of the reading formation.
 > Nothing to fix from my side.
 
+<a id="rr2s-placement-checked-by-its-owner"></a>
+### RR2's placement, checked by its owner
+
+RR2's sentence was placed by role when AJ4 merged its landing (`415ae7556`; [provenance](#provenance-of-the-dossiers-additions), RR2's line); the bullet was then revised to say that a plan's excess is its distance from the pointwise best only where the plan splits the weights. RR2's owner checked both against the Lean, the record and 07 §7 on 31 October 2026; its reports, verbatim:
+
+> RR2 owner on AJ4's placement (415ae7556, ALIGNMENT.md A-20): nothing misstated.
+> - Lean names: the three names exist on main with the meanings the bullet gives. `RevisionPlans.above_iff` takes two plans each splitting the weights. `HeldForReading.excess_held` makes holding for a rule a plan whose excess is the rule's shortfall. `RevisionPlans.above_iff_routes` puts RR's order at one candidate of value V and gain-loss 0.
+> - Splitting the weights is the deciding hypothesis, and the bullet states it.
+> - The 07 §7 quote matches main verbatim, and the [AI reading, RR2] label is right.
+> - The limit is right: Maximal is not choice, and the reviser's rule is supplied, so neither the plan taken nor an actual reviser's shortfall is shown.
+> - Question 2's wording and the Standing line ("near-definitional, with witnesses", none claimed new as mathematics) fit the record.
+> Record it as checked.
+
+> RR2 owner on the revised A-20 item 1: both claims hold, and nothing is misstated.
+> - "Such a plan" holds by `RevisionPlans.splits_held`: holding for any rule, forgoing any amount, splits the weights, with no hypothesis.
+> - "Splitting its weight where read as probabilities" holds by `RevisionPlans.splits_ofRoutes (valid : s.Valid)`: the revision and every route split the candidate's weight T, as k and T − k, exactly under RR's Valid. The order is the same without Valid (`above_iff_routes` takes no hypothesis), so placing the qualifier on the splitting alone is right.
+> - The fifth reader's point is right too: the excess is the distance from the pointwise best only for a plan that splits the weights. That is `gainOf_reading` at amount 0, with `balance` and `above_iff` both taking Splits for each plan.
+> Record it as checked.
+
 <a id="provenance-of-the-dossiers-additions"></a>
 ## Provenance of the dossier's additions
 
@@ -189,6 +208,6 @@ The dossier's list as it stood at `549d7c7ee`, before the edition of 31 October 
 - Reframed on 30 October 2026 (board item AJ4), for the first condition as restated on 29 October: Part 2's opening, A-10b's and A-10c's lines on control left unselected and a lock left in time, the note on the first condition in A-10c's standing, and A-10c's third question. No independent reader has read them.
 - Added on 30 October 2026 (board item RR, corrigibility on the map): in the box above, the corrigibility bullet's "in part", its first sentence, the lead of RF's sentence naming the part it reaches, and the clause on trained systems, after a cross-model review of the Lean and the texts, every finding taken ([RR's review](../rr-revision-routes/REVIEW.md)).
 - Reworded on 30 October 2026, after AJ4's reframing above (board item MA4c, by the records' owner): chapter 2's reading of A-10c's result and its record's scope item, for the restated first condition; A-10c's standing follows that reading, quoting it, and drops the note on the earlier wording. No independent reader has read them.
-- Added on 31 October 2026 (board item RR2, the routes of keeping and holding for a reading on one order): in the box above, the corrigibility bullet's sentence joining the two, after a cross-model review of the Lean and the study, every finding taken ([RR's review](../rr-revision-routes/REVIEW.md#rr2-the-independent-review-of-the-join-and-its-re-check)). AJ4 placed it by role in the edition when it merged RR2's landing, its words kept: the sentence in A-20's meaning, followed by 07 §7's statement of the order with the hypothesis that decides it (plans splitting the weights), and what joins the two; the label (near-definitional, with witnesses; none claimed new as mathematics) and chapter 7's reading in A-20's standing; the record's limit in A-20's weaknesses; and the routes of keeping in A-20's second question. No independent reader has read the placement.
+- Added on 31 October 2026 (board item RR2, the routes of keeping and holding for a reading on one order): in the box above, the corrigibility bullet's sentence joining the two, after a cross-model review of the Lean and the study, every finding taken ([RR's review](../rr-revision-routes/REVIEW.md#rr2-the-independent-review-of-the-join-and-its-re-check)). AJ4 placed it by role in the edition when it merged RR2's landing, its words kept: the sentence in A-20's meaning, followed by 07 §7's statement of the order with the hypothesis that decides it, plans splitting the weights, for which alone a plan's excess is its distance from the pointwise best (a point fm-rf3's fifth reader made of the same result in the failure-mode map), and what joins the two; the label (near-definitional, with witnesses; none claimed new as mathematics) and chapter 7's reading in A-20's standing; the record's limit in A-20's weaknesses; and the routes of keeping in A-20's second question. RR2's owner checked the placement, and its revision for the splitting, against the Lean, the record and 07 §7 and found nothing misstated ([its reports](#rr2s-placement-checked-by-its-owner)); no independent reader has read it.
 - Under **Known weaknesses**, a bullet quoting a chapter, a record or a study reports a recorded weakness. One marked [this dossier, AI] is this dossier's own assessment, recorded nowhere else, for the reviewer to confirm or reject.
 - Works cited outside quotations before RF's additions were checked against a publication record ([the kit](README.md)); the ones RF's sentences add were checked as RF's entry above says. Works named inside a quotation are the quoted text's citations.

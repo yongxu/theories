@@ -65,7 +65,7 @@ Until the layers are within budget, the template states their measured times.
 
 | | On main | New edition |
 |---|---|---|
-| Whole | 13,868 words, 106.7 to 138.7 minutes | 14,046 words, 108.0 to 140.5 ("about two hours"); longer than on main, where RR2's result is one sentence, since here it is stated with its hypothesis, label, reading and limit |
+| Whole | 13,868 words, 106.7 to 138.7 minutes | 14,076 words, 108.3 to 140.8 ("about two hours"); longer than on main, where RR2's result is one sentence, since here it is stated with its hypothesis, label, reading and limit |
 | Before the first item | 3,481 words, 26.8 to 34.8 minutes | The dossier in ten minutes, 1,100 words with the title (8.5 to 11 minutes), then the tests, 358 words (2.8 to 3.6) |
 | An hour's path | none | Those ten minutes, the tests and seven items, 5,357 words, 41.2 to 53.6 minutes |
 | A separate "one page" | 5,503 words, called ten minutes | Retired to the kit's history |
