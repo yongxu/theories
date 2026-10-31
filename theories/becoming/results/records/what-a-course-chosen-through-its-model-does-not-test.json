@@ -302,7 +302,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
       "role": "integration",
-      "sha256": "5bcbf2d057886cd5ae7d1302d19df3eedf2ddcee2fc1930d3e12ea94bd26ee8d"
+      "sha256": "4ddb2884750a9dc567d9327adb262910fbbae19d8d3b6b55d311339f5e6d2616"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md",
@@ -332,6 +332,10 @@
     {
       "en": "30 October 2026, board item RF, RF-M.2 (study section 466): related to what-holding-for-a-reading-is-worth, where the value of a reading in counts is stated; the next step keeps the value of a noisy reading in the periphery; no statement or declaration changed.",
       "zh": "2026年10月30日，工作板条目 RF，RF-M.2（研究第 466 节）：与 what-holding-for-a-reading-is-worth 相关联，读之值之计于彼陈述；下一步留有噪之读之值于外围；无一陈述或声明改变。"
+    },
+    {
+      "en": "31 October 2026, board item RF, the tests' designs (study section 476): PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.",
+      "zh": "2026年10月31日，工作板条目 RF，诸检验之设计（研究第 476 节）：计划 PLAN.md 重新指向：自本记录所审哈希以来，计划只于检验之读者见其误述 Lean 之处（§3、§4、§8、§11、§12）及 §10 诸检验而变；重新指向前已对本记录读之，其所言无一改变。"
     }
   ]
 }

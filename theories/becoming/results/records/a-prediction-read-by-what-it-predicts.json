@@ -139,8 +139,8 @@
     "zh": "纯核，公理报告皆空：ReflexivePrediction 引 Keeping 与 Recurrence（Law.orbit）；链之律以每轮判自然数之相等证之，不用排中。"
   },
   "next_delta": {
-    "en": "Probabilistic forecasts and calibration under performativity in the periphery; a formation's self-prediction within the reading loop; a frozen test of a published forecast's response; review by a person.",
-    "zh": "外围之概率预测与表演性下之校准；读环内形成之自预言；公预测之应之冻结检验；人之审查。"
+    "en": "Probabilistic forecasts and calibration under performativity in the periphery; a formation's self-prediction within the reading loop; a frozen test of whether a public responds to a published forecast by the forecast alone (the plan's TR6); review by a person.",
+    "zh": "外围之概率预测与表演性下之校准；读环内形成之自预言；公众是否唯依所公之预测而应之冻结检验（计划之 TR6）；人之审查。"
   },
   "correspondence": {
     "en": "Self-fulfilling and self-defeating prophecy (Merton 1948): a public prediction is one more input to what it predicts. In the bounded scalar setup a continuous response mapping a closed interval into itself has a correct public prediction (Grunberg and Modigliani 1954; Simon 1954), an existence, not its reaching by repeated publication; here a response keeping a finite chain and its order reaches the least right one from the bottom by step n (Tarski 1955 for the fixed point). Related to performative stability (Perdomo, Zrnic, Mendler-Dünner and Hardt 2020), defined by risk minimization on the distribution a deployed model induces: where retraining returns the outcome exactly, it is this orbit; no general correspondence is proved. AI reading: the bandwagon and the underdog as responses keeping and reversing the order; several right predictions, where publication starts deciding, read as self-fulfilling runs (Diamond and Dybvig 1983), the witness a threshold response, not a model of coordination; a formation whose act negates its self-prediction has none right, the one-step self-reading gap (Diagonal.gap_unsaid). These are readings, not containments.",
@@ -240,7 +240,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
       "role": "integration",
-      "sha256": "5bcbf2d057886cd5ae7d1302d19df3eedf2ddcee2fc1930d3e12ea94bd26ee8d"
+      "sha256": "4ddb2884750a9dc567d9327adb262910fbbae19d8d3b6b55d311339f5e6d2616"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-ROUND2.md",
@@ -266,6 +266,10 @@
     {
       "en": "30 October 2026: added (RF round 2), a prediction read by what it predicts: right where the response leaves it, none where it moves every value, the least right one reached on a chain; after a cross-model review of the Lean with a re-check, every finding taken; study section 456.",
       "zh": "2026年10月30日：新增（RF 第二轮），为其所预言者所读之预言：应不移处为是，应移每一值处无是者，链上达最小之是者；经 Lean 之跨模型审查与复查，凡所见皆取；研究第 456 节。"
+    },
+    {
+      "en": "31 October 2026, board item RF, the tests' designs (study section 476): the next step names its test as designed, TR6 in experiments/formations-that-read, which can refute at most the bridge that a public's count is a response of the published forecast alone, and the readings of its order under the two framings, never the law; no statement or declaration changed. PLAN.md re-pointed: since this record's reviewed hash the plan changed only where the tests' readers found it misstating the Lean (§3, §4, §8, §11, §12) and in §10, the tests; read against this record before re-pointing, nothing it says changed.",
+      "zh": "2026年10月31日，工作板条目 RF，诸检验之设计（研究第 476 节）：下一步所名之检验即 experiments/formations-that-read 之 TR6，至多能驳公众之数唯依所公之预测而应之桥，及两框下其序之读，不驳此律；无一陈述或声明改变。计划 PLAN.md 重新指向：自本记录所审哈希以来，计划只于检验之读者见其误述 Lean 之处（§3、§4、§8、§11、§12）及 §10 诸检验而变；重新指向前已对本记录读之，其所言无一改变。"
     }
   ]
 }

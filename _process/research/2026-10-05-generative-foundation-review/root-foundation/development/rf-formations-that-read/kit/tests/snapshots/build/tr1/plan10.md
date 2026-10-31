@@ -1,0 +1,4 @@
+- **TR1 (RF1).** A chooser on stated contents: every pair in both orders, every triple and quadruple in all rotations, each presentation its own occasion, nine fresh calls each, a pick strict where eight agree, "no preference" not strict.
+  - It tests only that the chooser picks by strict dominance under one strict order; no outcome refutes RF1.
+  - Forbidden (`accorded_iff_noCycle`): a cycle of any length among the strict picks of the whole family, so no later pick is reached, in the met reach, by an alternative open with it. Void below half strict.
+  - Nothing is predicted beyond the shown reach. RF-M gets no test: TR1 carries its exact table and an optional informing variant, its one verdict RF1's.

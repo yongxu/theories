@@ -9,8 +9,8 @@
   "theories/becoming/results/completion/COVERAGE.json": "0dc05776e9e19df1f4846623890bc421a44b6b422e87f3bf8ce738596afa8a49",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "c8e349f57adecd7bd8d25bd0fde850c9f813919cdbf0e4a3734005c43340043a",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
-  "tools/research/boundary.py": "e6cccd46c3ebc706fea5976cb2b4375f2c80d0f0158450e6c951708f7dc9726d",
-  "tools/research/boundary_check.lean": "b4d3a1133ea6990c642db099072b4a45592ae29f70792f85005e4032d37cfcdd",
+  "tools/research/boundary.py": "9f70cc2b6fe743972cedee811f4db39673f9ab51fe80dd43ab8d535a086a38d4",
+  "tools/research/boundary_check.lean": "d1867fd5abc360be2ba03d09fa95d583b8546600a0fa53362c1fe595c581a52a",
   "tools/research/master_laws.py": "95e8ec09142c59b3d45d19e6ac8ca8e63104e80c5d9e222d10cc67c2d4058997"
  },
  "names": {
