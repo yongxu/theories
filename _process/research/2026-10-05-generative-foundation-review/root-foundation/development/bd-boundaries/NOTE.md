@@ -78,3 +78,53 @@ The first five kinds mostly speak of what lies within a boundary. The last, with
 
 - **Open:** a graded boundary (01, Open); how a formation forms or represents its boundary (the represented-boundary record); whether some relation privileges the self's boundary (07 §4.2); a World formation as the inside of a blanketed law (03 §1; UE26). A lemma stating that a cut is a closed region where membership is decided would belong to whichever item first needs it.
 - **What would change it:** a representation in which significance or dependence spreads by something other than a relation's steps, such as weights decaying along a path (D61's own condition of revision). There a boundary could be graded and not a closed region. A law of the dynamics fixing which relation a self is drawn along would also change it: point 3 would then name that relation's closure as the self's boundary.
+
+## 6. Not going out, on the root (board item BD2)
+
+31 October 2026. Ren asked to close the formal gap §5 left and to keep advancing the unification ([source](../../../../../../sources/15-codex-theory-conversations/2026-10-31-close-the-formal-gap.md)). **The gap:** the World's cut (`Flow.Cut`, 04 §1) was defined apart from the grammar's closed region (`«闭»`), and §2's sentence on a line crossing a region rested on a hand argument from 01 §3's mark law. **Scope:** two core modules, one changed proof, one new record, one law added to an existing record, and texts. No definition of an earlier module changes.
+
+### 6.1 What is added
+
+- **`Becoming.GrammarCrossing`** (core, imports only `Becoming.GrammarLaws`): one definition and eleven theorems, all with empty axiom reports. `«不出» R P := ∀ x y, P x → ¬ P y → ¬ R x y`: nothing in `P` goes out of it along `R`.
+  - `«闭则不出»`, `«所闭不出»`: a closed region is not gone out of, an occurrence's closure among them. The second is the closure law's `«所闭之界»` by definition. `GrammarLaws` cannot import this module, so `«所闭之界»` keeps its own proof.
+  - `«不出当且仅当不外者闭»`: not going out is exactly the closedness of `¬ ¬ P`, with no decision. `«不外者内则不出当且仅当闭»`: where `¬ ¬ P y → P y`, not going out is being closed.
+  - `«不出皆闭当且仅当排中»`: that this holds for every carrier, relation and region is exactly excluded middle. Witness: `Bool`, the relation `false → true`, the region `b = false ∨ S`.
+  - `«逆之不出当且仅当外者不出»`: nothing comes in along `R` (not going out along `«逆» R`) exactly where nothing goes out of `¬ P`, with no decision. `«对称则不出当且仅当逆不出»`: along a symmetric relation the two coincide. `«闭而有入»`: a closed region that something outside bears the relation into.
+  - `«内至外之线则出»`: a line under any class from inside to outside means `¬ «不出» R P`, with no decision. `«内至外之线有出步»`: with every step of continuation keeping to `P` (`P u → P v`) or going out of it (`P u ∧ ¬ P v`), the line has a step going out, placed on the line. `«定则内至外之线有出步»`: where membership is decided, every step is of one kind or the other.
+- **`Becoming.ConveyanceBoundaries`** (core, imports `Becoming.Boundaries` and `Becoming.GrammarCrossing`): six theorems.
+  - `Flow.cut_iff_notGoingOut` (`Iff.rfl`). `Flow.cut_of_closedUnder`, and `Flow.closedUnder_of_cut` for settled membership: §5's "lemma stating that a cut is a closed region where membership is decided", needing only that it is settled.
+  - `Flow.region_no_boundary`, `Flow.closures_not_within_region`: 04 §1's law read on 07 §4.1's boundaries.
+  - `Clearing.resource_no_boundary`: the clearing's witness read the same way.
+- **`«所经必同»`** (`Becoming.GrammarPath`) is proved from `«定则内至外之线有出步»`: the step going out lands in the set, and its end is alike to the start by `«线内同类»`. This is rule 9 (an existing statement derived from a grammar law, its direct induction dropped). Its statement is unchanged. `GrammarPath` has one dependent (`GrammarCases`), so the rebuild is small.
+
+### 6.2 Choices
+
+- **On the grammar, not on the World.** `«不出»` is defined for every carrier and relation. The World's cut is its case at a valuation's relation by definition, so no definition of `Becoming.Standpoints` changes and its eighteen dependents do not rebuild.
+- **Keeping, not lying on the same side.** §2's sentence used the mark law with the class of lying on the same side, marking a step that joins the two sides. Such a step may enter the region rather than leave it. With keeping to the region (`P a → P b`, transitive, not symmetric) as what the ends fail, the step found goes out: from a member to something outside. The reading now cites that.
+- **Settled, not decided.** The coincidence of not going out and being closed needs only `¬ ¬ P → P`, weaker than decided membership. The calibration shows that without it nothing more holds.
+- **Coming in.** The reading's clause on a relation that is not symmetric is now a law with a witness (`«闭而有入»`). The symmetric case (`«对称则不出当且仅当逆不出»`) is conveyance's: its relation is symmetric, so the crossing of 04 §1 goes both ways.
+
+### 6.3 What the calibration says about the unfolding
+
+By `«不出当且仅当不外者闭»`, where nothing goes out of a region, what a member bears the relation to is not outside it. It is shown inside only where membership there is settled. So a boundary drawn where membership is undecided, such as 02 §1's points between going on and ending, leaves open where what a member bears the relation to lies. That needing this for every region is exactly excluded middle is what makes the calibration a result, as the method requires, rather than a lemma of the logic alone (AI reading).
+
+### 6.4 Exactness audit
+
+Each sentence of the texts against the Lean:
+
+| Text | Claim | Lean |
+|---|---|---|
+| 01 §9.9 theorem | the eleven laws as listed | `GrammarCrossing`; `Flow.cut_iff_notGoingOut` |
+| 01 §9.9 reading, ¶1 | a relation crossing a region is the region's not being `«不出»` | `«不出»` (definition) |
+| 01 §9.9 reading, ¶2 | a closed region can be come into along a relation that is not symmetric | `«闭而有入»` |
+| 01 §9.9 reading, ¶3 | a continuing family's region is no cut and no boundary of any event's self along conveyance | `Flow.region_not_a_cut`, `Flow.region_no_boundary` |
+| 01 §9.9 reading, ¶3 | a line's step going out, placed on the line | `«内至外之线有出步»` |
+| 04 §1 | the family's region no boundary; closures not within it; the clearing | `Flow.region_no_boundary`, `Flow.closures_not_within_region`, `Clearing.resource_no_boundary` |
+| 07 (line record) | `«所经必同»`'s member is where the step going out lands | `«所经必同»`'s proof |
+| glossary | the cut is the grammar's not going out | `Flow.cut_iff_notGoingOut` |
+
+### 6.5 Open
+
+- A graded boundary: nested regions along one relation, the steps by which one line goes out of each, and their order along it (the new record's next step).
+- Which relation a self's boundary is drawn along (07 §4.2), and a World formation as the inside of a blanketed law (UE26, UE27).
+- `«所闭之界»` could be stated as `«所闭不出»` in `GrammarLaws` itself only by moving `«不出»` below it. That edit has 338 dependents and belongs to the grammar's owner, if it is ever wanted.
