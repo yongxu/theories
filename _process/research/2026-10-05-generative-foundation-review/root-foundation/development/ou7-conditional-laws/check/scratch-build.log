@@ -1,23 +1,18 @@
 {
-  "tree": "/Users/ren/theories/.claude/worktrees/ou5-check/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou5-conditional-laws/check/scratch",
+  "tree": "/Users/ren/theories/.claude/worktrees/ou5-check/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/check/scratch",
   "modules": 94,
-  "ran": [
-    "Becoming.RoomNet",
-    "Becoming.RoomRuns",
-    "BecomingRoomNetAxiomAudit",
-    "BecomingRoomRunsAxiomAudit"
-  ],
-  "reused": 92,
+  "ran": [],
+  "reused": 96,
   "unclean": [],
   "audits": {
     "Becoming.RoomNet": {
-      "theorems": 67,
-      "declarations": 91,
+      "theorems": 93,
+      "declarations": 119,
       "with_axioms": {}
     },
     "Becoming.RoomRuns": {
-      "theorems": 20,
-      "declarations": 23,
+      "theorems": 22,
+      "declarations": 25,
       "with_axioms": {}
     }
   }
