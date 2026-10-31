@@ -141,6 +141,11 @@ REASONS = {
 }
 
 
+# Grammar laws whose register entry said nothing on the base used them, and which the leaf uses (crossing_edge reads
+# its pairing backward through «对之逆»).
+NOW_USED = {'Becoming.«对之逆»'}
+
+
 def register(log_path):
     t = APART.read_text(encoding='utf-8')
     log = Path(log_path).read_text(encoding='utf-8')
@@ -166,6 +171,24 @@ def register(log_path):
         t = t.replace(anchor, '  },\n' + block.rstrip(',\n') + '\n },\n "instances": {')
         json.loads(t)
         APART.write_text(t, encoding='utf-8')
+    # A grammar law the leaf now uses is no longer an apart root: its register entry, whose reason said nothing on
+    # the base used it, goes. Only the laws named in NOW_USED may go this way; any other stops for its owner's reading.
+    m = re.search(r"register entries no longer apart roots: (\[[^\]]*\])", log)
+    gone = [] if not m else [s.strip().strip("'\"") for s in m.group(1).strip('[]').split(',') if s.strip()]
+    unexpected = [g for g in gone if g not in NOW_USED]
+    assert not unexpected, ('register entries no longer apart roots that this leaf does not explain', unexpected)
+    t = APART.read_text(encoding='utf-8')
+    d = json.loads(t)
+    dropped = [g for g in gone if g in d['roots']]
+    for g in dropped:
+        start = t.index('  ' + json.dumps(g, ensure_ascii=False) + ': {\n')
+        end = t.index('\n  },\n', start) + len('\n  },\n')
+        t = t[:start] + t[end:]
+    if dropped:
+        after = json.loads(t)
+        assert all(g not in after['roots'] for g in dropped) and len(after['roots']) == len(d['roots']) - len(dropped)
+        APART.write_text(t, encoding='utf-8')
+    print('dropped', len(dropped), 'register entries the leaf now uses:', ', '.join(dropped) or 'none')
     print('registered', block.count('"module"'), 'roots of the leaf;', 'expected', sorted(REASONS))
     if others:
         print("roots not the leaf's, for their owners:", ', '.join(others))
