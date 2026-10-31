@@ -121,7 +121,7 @@ At least two families, one other than the theory's own, versions pinned, the the
 
 ## 8. Choices left for the freeze
 
-- **One rule, frozen once.** `tr_rr.py` takes TR8's rule and protocol from `tr8.py`, so TR-RR's verdict rule is TR8's by construction. The freeze names both files' hashes or freezes them in one commit; otherwise a change to `tr8.py` at TR8's freeze would change TR-RR's rule unseen.
+- **One rule, frozen once.** `tr_rr.py` takes TR8's rule and protocol from `tr8.py`, so TR-RR's verdict rule is TR8's by construction. The freeze names both files' hashes or freezes them in one commit; otherwise a change to `tr8.py` at TR8's freeze would change TR-RR's rule unseen. If `tr8.py` changes before the freeze, `tr_rr.py` is rerun and `tr_rr.json` regenerated with TR8's own outputs.
 - **The margin.** Stage 0 is for 2 points. A margin of 1 point tightens every first tie and needs less noise for the law to pass; it needs a new base, which `tr_rr.py`'s constants hold in one place.
 - **The oversight framing's words,** and whether that framing is an arm or a variant.
 - **The probe's form:** each plan's number, or its two parts.
@@ -150,7 +150,7 @@ AI-written by RR's owner, a Claude Code session, on 31 October 2026. A first dra
 
 That replacement still split the table into two tests, one moving what plans leave unkept and one what they lose. A second pass, also before any review, made them one: the two parts are one number's, so one bridge with six conditions, each named by the part it moves, says what the two said, and a contradicted condition names the part misread.
 
-RF's owner reviewed the placement in the harness before the replacement, and agreed to TR8's harness and rule after it, with three notes, each taken: `tr_rr.json` states TR-RR's own protocol assumptions, the freeze names `tr8.py` with `tr_rr.py`, and the premise is stated (section 7). The independent read comes before the freeze.
+RF's owner reviewed the placement in the harness before the replacement, and agreed to TR8's harness and rule after it, with three notes, each taken: `tr_rr.json` states TR-RR's own protocol assumptions, the freeze names `tr8.py` with `tr_rr.py`, and the premise is stated (section 7). After the one-test pass RF's owner checked the table, its margins and the first ties by hand and found them right. RF's reviews ([REVIEW.md](REVIEW.md)) did not read TR-RR. Its independent read is still to come, before the freeze, and is recorded here.
 
 ## 12. References
 
