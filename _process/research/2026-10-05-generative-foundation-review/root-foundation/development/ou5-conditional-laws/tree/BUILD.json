@@ -1,16 +1,23 @@
 {
   "tree": "development/ou5-conditional-laws/tree (built from the session scratchpad copy)",
-  "modules": 7,
+  "modules": 9,
   "ran": [
     "Becoming.GrammarConditionals",
-    "BecomingGrammarConditionalsAxiomAudit"
+    "Becoming.GrammarConditionalsChecks",
+    "BecomingGrammarConditionalsAxiomAudit",
+    "BecomingGrammarConditionalsChecksAxiomAudit"
   ],
-  "reused": 6,
+  "reused": 7,
   "unclean": [],
   "audits": {
     "Becoming.GrammarConditionals": {
-      "theorems": 37,
-      "declarations": 38,
+      "theorems": 30,
+      "declarations": 31,
+      "with_axioms": {}
+    },
+    "Becoming.GrammarConditionalsChecks": {
+      "theorems": 31,
+      "declarations": 31,
       "with_axioms": {}
     }
   }
