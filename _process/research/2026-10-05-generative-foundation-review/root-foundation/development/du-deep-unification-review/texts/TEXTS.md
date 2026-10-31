@@ -86,3 +86,16 @@ SJ's design is on branch `sj-claim` at `134f92a08`. It maps the edge by input an
   - 01 §8.6: one new home section, `standings-not-read-off-the-root`, after `amounts-by-unit-matchings`.
   - 04: Bases and Open.
   - DU does not edit 08 §5 or 01 §7.
+
+## (e) The front pages: the condition is a statement on the root, not a law (OU's owner; from ND's cold read, 1 November 2026)
+
+ONE-PAGE line 35, the overview's lines 115 and 164, and the same three lines of both Chinese editions say that the condition held de se "is a law of the root". It is not. A law of the root holds for every net, class and centers. Held de se, `«续无外»` is a statement on the root, true or false once those are given, and DU's leaf proves it is both (`«续无外随网»`: the endless line of descent meets it, two family lines with no condition between them fail it). 07 §4.5 already says it rightly ("on the root it is `«续无外»`"), so only the front pages change. Each replacement keeps the sentence's link and its second half.
+
+- **ONE-PAGE.md, line 35:** "held de se (each center of itself), the condition is a law of the root: nothing lies outside every center's line under the one of that relation (`«续无外»`), and along a net" becomes "held de se (each center of itself), the condition is a statement on the root, true or false once the net, its class and the centers are given: nothing lies outside every center's line under the one of that relation (`«续无外»`). Some nets meet it and some fail it, and along a net".
+- **THE-THEORY-OF-BECOMING.md, line 115:** "it holds exactly where every center's closure along that relation is the whole, and so is a law of the root: nothing lies outside every center's line under the one of that relation (`«续无外»`)." becomes "it holds exactly where every center's closure along that relation is the whole, and so is a statement on the root: nothing lies outside every center's line under the one of that relation (`«续无外»`). It is true or false once the net, its class and the centers are given, and some nets meet it while others fail it ([premises met and failed](chapters/08-METHOD.md#r-premises-met-and-failed))."
+- **THE-THEORY-OF-BECOMING.md, line 164:** "Held de se along a relation, the condition is a law of the root:" becomes "Held de se along a relation, the condition is a statement on the root, met by some nets and failed by others:".
+- **ONE-PAGE.zh.md, line 35:** "延续条件就是根的一条律：" becomes "延续条件就是根上的一个陈述，在网、其类与诸中心给定后或真或假：", and "（`«续无外»`）；沿一个无环的网" becomes "（`«续无外»`）。有的网满足它，有的不满足；沿一个无环的网".
+- **THE-THEORY-OF-BECOMING.zh.md, line 115:** the clause "就是根的一条律" (or its wording there, read at the landing) becomes "就是根上的一个陈述", followed by "它在网、其类与诸中心给定后或真或假，有的网满足它，有的不满足（[满足与不满足的前提](chapters/08-METHOD.md#r-premises-met-and-failed)）。"
+- **THE-THEORY-OF-BECOMING.zh.md, line 164:** "该条件就是根的一条律：" becomes "该条件是根上的一个陈述，有的网满足它，有的不满足：".
+
+The link to `r-premises-met-and-failed` exists once R1's home section lands in 08 §7. The front pages are being cut by OU's owner, so line numbers and wording are re-read at the landing, and the replacements are applied only to the sentence as it then stands. The edits are the front-page owner's to apply.
