@@ -285,11 +285,11 @@ Each line is labelled with its standing.
 
 - How a formation's weights on its law's going on losing change as it is selected, joined to LA4's drain.
 
-## 11. The tests, designed in RF's harness (TR-RR, 31 October 2026)
+## 11. The test, designed in RF's harness (TR-RR, 31 October 2026)
 
-§8's designs are replaced by [TR-RR1 and TR-RR2](../../../../../../experiments/formations-that-read/DESIGN.md#rrs-tests-in-the-same-harness) ([full design](../../../../../../experiments/formations-that-read/REST-TR-RR.md)), on TR8's harness and rule. §8 stays as the first statement, and its agentic form is kept there as a variant. The tests read §10's join: each plan at a revision stands by its loss with the value it leaves unkept (`RevisionPlans.routes_above_iff`), so a system told a revision, its restoration and each route's loss and keeping is tested against TR8's forbidden case. There is one base table with six conditions. TR-RR1 moves what plans leave unkept (restoration; a value of nothing), and TR-RR2 moves what they lose (closing one route, then the other). §8's predictions are now per condition:
-- resistance falls with restoration: R1 to R2;
-- closing one route moves the incentive to the other route and not to the revision: C1 to C2;
-- closing both hands the choice to the revision: C3.
+§8's designs are replaced by [TR-RR](../../../../../../experiments/formations-that-read/DESIGN.md#rrs-test-in-the-same-harness) ([full design](../../../../../../experiments/formations-that-read/REST-TR-RR.md)), one test on TR8's harness and rule. §8 stays as the first statement, and its agentic form is kept there as a variant. The test reads §10's join: each plan at a revision stands by its loss with the value it leaves unkept (`RevisionPlans.routes_above_iff`), read as chances its expected loss, so a system told a revision, its restoration and each route's loss and keeping is tested against TR8's forbidden case. One table has the base and five conditions, each moving one part of that number: restoration (R5, R9), the value (V0), the routes' losses (C1, C2). §8's predictions are now per condition:
+- resistance falls with restoration: R5 to R9;
+- closing one route moves the incentive to the other route and not to the revision: the base to C1;
+- closing both hands the choice to the revision: C2.
 
 Stage 0 is done; nothing is frozen or run, and every run waits on Ren's yes.

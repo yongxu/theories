@@ -2131,7 +2131,7 @@
       ]
     },
     "experiments/formations-that-read/DESIGN.md": {
-      "title": "Formations that read: the designs of RF's tests (TR1 to TR9) and RR's TR-RR1 and TR-RR2",
+      "title": "Formations that read: the designs of RF's tests (TR1 to TR9) and RR's TR-RR",
       "local_links": [
         "_process/BECOMING-WORKBOARD.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/PLAN.md",
@@ -2181,7 +2181,7 @@
       ]
     },
     "experiments/formations-that-read/REST-TR-RR.md": {
-      "title": "TR-RR1 and TR-RR2: the full design",
+      "title": "TR-RR: the full design",
       "local_links": [
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rr-revision-routes/NOTE.md",
         "experiments/README.md",
