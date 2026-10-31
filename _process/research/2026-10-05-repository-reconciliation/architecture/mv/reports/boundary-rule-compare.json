@@ -1,0 +1,34 @@
+{
+ "old": "26977f25a",
+ "core_receipt": "20261031T013649.265381Z",
+ "constants": 52346,
+ "aux": {
+  "same": true,
+  "count": 26351
+ },
+ "root": {
+  "same": true,
+  "count": 2258
+ },
+ "laws": {
+  "same": true,
+  "count": 406
+ },
+ "forwarders": {
+  "same": true,
+  "count": 14
+ },
+ "walks": {
+  "same": true,
+  "count": 20120
+ },
+ "outside": [],
+ "hygienic": [],
+ "kinds": [
+  "ctor",
+  "def",
+  "ind",
+  "rec",
+  "thm"
+ ]
+}
