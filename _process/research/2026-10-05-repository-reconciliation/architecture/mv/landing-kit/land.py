@@ -22,7 +22,7 @@ assert order.startswith("Then, in the coordinator's order: ") and order.endswith
 
 # the head clause, as claim_head.py wrote it
 tree = ast.parse((HERE / 'claim_head.py').read_text(encoding='utf-8'))
-CLAUSE = next(ast.literal_eval(n.value) for n in tree.body if isinstance(n, ast.Assign) and n.targets[0].id == 'CLAUSE')
+CLAUSE = next(ast.literal_eval(n.value) for n in tree.body if isinstance(n, ast.Assign) and getattr(n.targets[0], 'id', None) == 'CLAUSE')
 
 st = STUDY.read_text(encoding='utf-8')
 N = max(int(m) for m in re.findall(r'^## (\d+)\. ', st, re.M)) + 1
