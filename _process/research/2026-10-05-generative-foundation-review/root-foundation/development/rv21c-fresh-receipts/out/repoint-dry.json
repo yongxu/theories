@@ -1,0 +1,910 @@
+{
+ "fallible-inquiry-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261031T130828.999853Z/verification.json",
+  "records": [
+   "finite-fallible-inquiry-necessity",
+   "timely-response-necessity",
+   "wisdom-root"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 3,
+   "apply": false,
+   "by_record": {
+    "finite-fallible-inquiry-necessity": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261031T130828.999853Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean"
+     ]
+    },
+    "timely-response-necessity": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261031T130828.999853Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean"
+     ]
+    },
+    "wisdom-root": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261031T130828.999853Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean"
+     ]
+    }
+   }
+  }
+ },
+ "correction-inquiry-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261031T131415.384434Z/verification.json",
+  "records": [
+   "becoming-spine-instances"
+  ],
+  "pointer_pinned_by": [],
+  "how": "with every Lean step run",
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "becoming-spine-instances": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261031T131415.384434Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionBoundary.lean",
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionInquiry.lean",
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationChange.lean"
+     ]
+    }
+   }
+  }
+ },
+ "machine-instances-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json",
+  "records": [
+   "acquired-binding-compositional-use",
+   "enacted-scene-binding",
+   "encounter-selection-and-revision",
+   "formed-goal-revision-continuation",
+   "joint-correlation-reduced-dynamics",
+   "joint-practice-forms-continuation",
+   "retrospective-source-binding",
+   "transition-grouping-word-partition"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 8,
+   "apply": false,
+   "by_record": {
+    "acquired-binding-compositional-use": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean"
+     ]
+    },
+    "enacted-scene-binding": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean"
+     ]
+    },
+    "encounter-selection-and-revision": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean"
+     ]
+    },
+    "formed-goal-revision-continuation": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean"
+     ]
+    },
+    "joint-correlation-reduced-dynamics": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean"
+     ]
+    },
+    "joint-practice-forms-continuation": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean"
+     ]
+    },
+    "retrospective-source-binding": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean"
+     ]
+    },
+    "transition-grouping-word-partition": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean"
+     ]
+    }
+   }
+  }
+ },
+ "learning-correspondence-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-checks/20261031T131847.549129Z/verification.json",
+  "records": [
+   "generalization-through-lumping",
+   "wisdom-root-without-axiom"
+  ],
+  "pointer_pinned_by": [
+   "generalization-through-lumping",
+   "wisdom-root-without-axiom"
+  ],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 2,
+   "apply": false,
+   "by_record": {
+    "generalization-through-lumping": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-checks/20261031T131847.549129Z/verification.json",
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean"
+     ]
+    },
+    "wisdom-root-without-axiom": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-checks/20261031T131847.549129Z/verification.json",
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean"
+     ]
+    }
+   }
+  }
+ },
+ "copying-instances-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z/verification.json",
+  "records": [
+   "formed-copying-correction",
+   "formed-copying-registration",
+   "inherited-structural-copying",
+   "recurrent-chain-assembly"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 4,
+   "apply": false,
+   "by_record": {
+    "formed-copying-correction": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean"
+     ]
+    },
+    "formed-copying-registration": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean"
+     ]
+    },
+    "inherited-structural-copying": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean"
+     ]
+    },
+    "recurrent-chain-assembly": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean"
+     ]
+    }
+   }
+  }
+ },
+ "retrodiction-instances-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/retrodiction-instances-checks/20261031T132046.721958Z/verification.json",
+  "records": [
+   "historical-source-binding"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "historical-source-binding": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/retrodiction-instances-checks/20261031T132046.721958Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RetrodictionInstances.lean"
+     ]
+    }
+   }
+  }
+ },
+ "market-instances-verification": {
+  "run": "experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json",
+  "records": [
+   "market-finite-support-obstruction",
+   "market-partial-correction-boundary",
+   "market-protected-continuation",
+   "market-supported-finite-transition"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 4,
+   "apply": false,
+   "by_record": {
+    "market-finite-support-obstruction": {
+     "paths": [
+      "experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/market-generativity/formal/MarketInstances.lean"
+     ]
+    },
+    "market-partial-correction-boundary": {
+     "paths": [
+      "experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/market-generativity/formal/MarketInstances.lean"
+     ]
+    },
+    "market-protected-continuation": {
+     "paths": [
+      "experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/market-generativity/formal/MarketInstances.lean"
+     ]
+    },
+    "market-supported-finite-transition": {
+     "paths": [
+      "experiments/market-generativity/formal/market-instances-checks/20261031T132103.724349Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/market-generativity/formal/MarketInstances.lean"
+     ]
+    }
+   }
+  }
+ },
+ "protocol-instances-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261031T132145.271099Z/verification.json",
+  "records": [
+   "mediated-evidence-transport",
+   "recoverable-mediated-change",
+   "reserved-shutdown-during-recovery"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 3,
+   "apply": false,
+   "by_record": {
+    "mediated-evidence-transport": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261031T132145.271099Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtocolInstances.lean"
+     ]
+    },
+    "recoverable-mediated-change": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261031T132145.271099Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtocolInstances.lean"
+     ]
+    },
+    "reserved-shutdown-during-recovery": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261031T132145.271099Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtocolInstances.lean"
+     ]
+    }
+   }
+  }
+ },
+ "versioned-task-instances-verification": {
+  "run": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261031T132223.713396Z/verification.json",
+  "records": [
+   "acquired-revision-of-pending-task",
+   "pending-task-context-applicability",
+   "versioned-request-completion"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 3,
+   "apply": false,
+   "by_record": {
+    "acquired-revision-of-pending-task": {
+     "paths": [
+      "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261031T132223.713396Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean"
+     ]
+    },
+    "pending-task-context-applicability": {
+     "paths": [
+      "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261031T132223.713396Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean"
+     ]
+    },
+    "versioned-request-completion": {
+     "paths": [
+      "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261031T132223.713396Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean"
+     ]
+    }
+   }
+  }
+ },
+ "shared-stock-instances-verification": {
+  "run": "experiments/market-generativity/meta-attractor/shared-stock-instances-checks/20261031T132907.790736Z/verification.json",
+  "records": [
+   "draws-on-a-shared-stock"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "draws-on-a-shared-stock": {
+     "paths": [
+      "experiments/market-generativity/meta-attractor/shared-stock-instances-checks/20261031T132907.790736Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/market-generativity/meta-attractor/SharedStockInstances.lean"
+     ]
+    }
+   }
+  }
+ },
+ "continuation-correspondence-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261031T132923.838546Z/verification.json",
+  "records": [
+   "finite-continuation-plans",
+   "joint-plan-composition"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 2,
+   "apply": false,
+   "by_record": {
+    "finite-continuation-plans": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261031T132923.838546Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationCorrespondence.lean"
+     ]
+    },
+    "joint-plan-composition": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261031T132923.838546Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationCorrespondence.lean"
+     ]
+    }
+   }
+  }
+ },
+ "transmission-correspondence-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/transmission-correspondence-checks/20261031T133044.516133Z/verification.json",
+  "records": [
+   "learned-procedure-transmission"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "learned-procedure-transmission": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/transmission-correspondence-checks/20261031T133044.516133Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/TransmissionCorrespondence.lean"
+     ]
+    }
+   }
+  }
+ },
+ "preparation-correspondence-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261031T133608.754102Z/verification.json",
+  "records": [
+   "growth-constrained-fragmentation",
+   "material-preparation-output"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 2,
+   "apply": false,
+   "by_record": {
+    "growth-constrained-fragmentation": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261031T133608.754102Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/PreparationCorrespondence.lean"
+     ]
+    },
+    "material-preparation-output": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261031T133608.754102Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/PreparationCorrespondence.lean"
+     ]
+    }
+   }
+  }
+ },
+ "judging-correspondence-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261031T133748.088094Z/verification.json",
+  "records": [
+   "risk-certificate-outcome-distinction"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "risk-certificate-outcome-distinction": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261031T133748.088094Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/JudgingCorrespondence.lean"
+     ]
+    }
+   }
+  }
+ },
+ "renewing-correspondence-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-checks/20261031T133811.050699Z/verification.json",
+  "records": [
+   "renewing-consuming-formation"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "renewing-consuming-formation": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-checks/20261031T133811.050699Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingCorrespondence.lean"
+     ]
+    }
+   }
+  }
+ },
+ "substitution-correspondence-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261031T133836.069337Z/verification.json",
+  "records": [
+   "binding-preserving-substitution"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "binding-preserving-substitution": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261031T133836.069337Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/SubstitutionCorrespondence.lean"
+     ]
+    }
+   }
+  }
+ },
+ "organization-correspondence-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/organization-correspondence-checks/20261031T133859.385075Z/verification.json",
+  "records": [
+   "organizational-formation-from-generative-comparison"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "organizational-formation-from-generative-comparison": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/organization-correspondence-checks/20261031T133859.385075Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OrganizationCorrespondence.lean"
+     ]
+    }
+   }
+  }
+ },
+ "living-organization-correspondence-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/living-organization-correspondence-checks/20261031T133915.555151Z/verification.json",
+  "records": [
+   "every-origin-passes-the-gate"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "every-origin-passes-the-gate": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/living-organization-correspondence-checks/20261031T133915.555151Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/LivingOrganizationCorrespondence.lean"
+     ]
+    }
+   }
+  }
+ },
+ "prefix-safety-correspondence-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261031T133925.659050Z/verification.json",
+  "records": [
+   "what-a-finite-history-refutes"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "what-a-finite-history-refutes": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261031T133925.659050Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/PrefixSafety.lean",
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/PrefixSafetyCorrespondence.lean"
+     ]
+    }
+   }
+  }
+ },
+ "finite-branching-correspondence-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-checks/20261031T133936.018674Z/verification.json",
+  "records": [
+   "lifting-where-branching-is-finite"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "lifting-where-branching-is-finite": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-checks/20261031T133936.018674Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/FiniteBranching.lean",
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/FiniteBranchingCorrespondence.lean"
+     ]
+    }
+   }
+  }
+ },
+ "selection-relabel-correspondence-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-checks/20261031T133952.181485Z/verification.json",
+  "records": [
+   "selection-through-a-model-of-the-options"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "selection-through-a-model-of-the-options": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-checks/20261031T133952.181485Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/PluralRecords.lean",
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/SelectionRelabelCorrespondence.lean",
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/TieBreaking.lean"
+     ]
+    }
+   }
+  }
+ },
+ "ideals-correspondence-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261031T134003.600817Z/verification.json",
+  "records": [
+   "a-history-read-off-its-finite-stretches"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "a-history-read-off-its-finite-stretches": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261031T134003.600817Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/CompletionRole.lean",
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/HistoryIdeals.lean",
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/IdealWarrant.lean",
+      "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/IdealsCorrespondence.lean"
+     ]
+    }
+   }
+  }
+ },
+ "entropy-production-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261031T134022.206464Z/verification.json",
+  "records": [
+   "balance-from-the-first-law",
+   "least-loss-from-entropy-production"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 2,
+   "apply": false,
+   "by_record": {
+    "balance-from-the-first-law": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261031T134022.206464Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean"
+     ]
+    },
+    "least-loss-from-entropy-production": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261031T134022.206464Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean"
+     ]
+    }
+   }
+  }
+ },
+ "cells-under-noise-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/cells-under-noise-checks/20261031T134056.109386Z/verification.json",
+  "records": [
+   "identical-cells-under-noise"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "identical-cells-under-noise": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/cells-under-noise-checks/20261031T134056.109386Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean"
+     ]
+    }
+   }
+  }
+ },
+ "expected-free-energy-reals-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261031T134130.030892Z/verification.json",
+  "records": [
+   "expected-free-energy-and-its-terms"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "expected-free-energy-and-its-terms": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261031T134130.030892Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean"
+     ]
+    }
+   }
+  }
+ },
+ "free-energy-reals-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261031T134204.303683Z/verification.json",
+  "records": [
+   "expected-free-energy-and-its-terms",
+   "free-energy-bounds-surprisal"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 2,
+   "apply": false,
+   "by_record": {
+    "expected-free-energy-and-its-terms": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261031T134204.303683Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean"
+     ]
+    },
+    "free-energy-bounds-surprisal": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261031T134204.303683Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean"
+     ]
+    }
+   }
+  }
+ },
+ "regime-reals-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/regime/regime-reals-checks/20261031T134231.224593Z/verification.json",
+  "records": [
+   "regime-in-any-amounts"
+  ],
+  "pointer_pinned_by": [],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "regime-in-any-amounts": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/regime/regime-reals-checks/20261031T134231.224593Z/verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean"
+     ]
+    }
+   }
+  }
+ },
+ "representation-verification": {
+  "run": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-checks/20261031T134302.467521Z/verification.json",
+  "records": [
+   "laws-with-noise",
+   "what-discrete-steps-and-whole-amounts-represent"
+  ],
+  "pointer_pinned_by": [
+   "laws-with-noise",
+   "what-discrete-steps-and-whole-amounts-represent"
+  ],
+  "how": "on this slot's step cache, reusing only steps that earlier runs of this slot ran and kept",
+  "repoint": {
+   "records": 2,
+   "apply": false,
+   "by_record": {
+    "laws-with-noise": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-checks/20261031T134302.467521Z/verification.json",
+      "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean"
+     ]
+    },
+    "what-discrete-steps-and-whole-amounts-represent": {
+     "paths": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-checks/20261031T134302.467521Z/verification.json",
+      "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-verification.json"
+     ],
+     "rebound": [
+      "experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean"
+     ]
+    }
+   }
+  }
+ },
+ "older:experiments/shared-renewal-capability/regulation/retention/formation/formal/verification.json": {
+  "records": [],
+  "logged": {
+   "date": "2026-10-31T13:57:53Z",
+   "base": "efd354e08",
+   "reason": "RV21c: the older-layout receipt experiments/shared-renewal-capability/regulation/retention/formation/formal/verification.json renewed in place by its own checker on main (sha256 9f5f1469aa6ced6c1bdd249963f703cdadcff98cc6af2d61ac2717d1418d199c -> 20bc0692f37a36373711711ce193203da44dc64e70ba46fec50d18ad66211c6c, checked 2026-10-31T08:10:01.147187+00:00 -> 2026-10-31T13:43:45.919179+00:00); no record binds it; no statement changed",
+   "records": [],
+   "paths": [
+    "experiments/shared-renewal-capability/regulation/retention/formation/formal/verification.json"
+   ],
+   "receipt": "experiments/shared-renewal-capability/regulation/retention/formation/formal/verification.json",
+   "rebound": []
+  }
+ },
+ "older:experiments/shared-renewal-capability/regulation/retention/formation/evolution/verification.json": {
+  "records": [
+   "a-selected-template-need-not-raise-structure"
+  ],
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "a-selected-template-need-not-raise-structure": {
+     "paths": [
+      "experiments/shared-renewal-capability/regulation/retention/formation/evolution/verification.json"
+     ],
+     "rebound": []
+    }
+   }
+  }
+ },
+ "older:experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/verification.json": {
+  "records": [
+   "same-carrier-need-not-fix-the-response"
+  ],
+  "repoint": {
+   "records": 1,
+   "apply": false,
+   "by_record": {
+    "same-carrier-need-not-fix-the-response": {
+     "paths": [
+      "experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/verification.json"
+     ],
+     "rebound": []
+    }
+   }
+  }
+ }
+}

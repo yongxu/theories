@@ -1,0 +1,13 @@
+import TransmissionCorrespondence
+#check @Becoming.TransmissionCorrespondence.countOf_replicate
+#check @Becoming.TransmissionCorrespondence.use_kitWord
+#check @Becoming.TransmissionCorrespondence.lineage_released_iff
+#check @Becoming.TransmissionCorrespondence.reconstruction_builds_longest_lineage
+#check @Becoming.TransmissionCorrespondence.material_balanced
+#check @Becoming.TransmissionCorrespondence.support_balanced
+#check @Becoming.TransmissionCorrespondence.course_conserves
+#check @Becoming.TransmissionCorrespondence.total_replicate
+#check @Becoming.TransmissionCorrespondence.faithful_procedure
+#check @Becoming.TransmissionCorrespondence.family_unchanged
+#check @Becoming.TransmissionCorrespondence.faithful_selects
+#check @Becoming.TransmissionCorrespondence.history_selects

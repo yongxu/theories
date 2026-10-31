@@ -1,0 +1,11 @@
+import FiniteBranchingCorrespondence
+#print axioms Becoming.FiniteBranchingCorrespondence.process
+#print axioms Becoming.FiniteBranchingCorrespondence.reach_iff_continues
+#print axioms Becoming.FiniteBranchingCorrespondence.unbounded_iff
+#print axioms Becoming.FiniteBranchingCorrespondence.finitelyBranching
+#print axioms Becoming.FiniteBranchingCorrespondence.either_classical
+#print axioms Becoming.FiniteBranchingCorrespondence.finite_unbounded_by_core
+#print axioms Becoming.FiniteBranchingCorrespondence.unbounded_child_by_core
+#print axioms Becoming.FiniteBranchingCorrespondence.infinite_from_unbounded_by_core
+#print axioms Becoming.FiniteBranchingCorrespondence.finite_initial_lifting_by_core
+#print axioms Becoming.FiniteBranchingCorrespondence.labelled_lifting_by_core

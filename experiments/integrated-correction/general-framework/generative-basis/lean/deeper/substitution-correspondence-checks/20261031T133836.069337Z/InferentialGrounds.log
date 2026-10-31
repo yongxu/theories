@@ -1,0 +1,10 @@
+'Generative.InferentialGrounds.extract' does not depend on any axioms
+'Generative.InferentialGrounds.first_after_pair' does not depend on any axioms
+'Generative.InferentialGrounds.second_after_pair' does not depend on any axioms
+'Generative.InferentialGrounds.application_after_abstraction' does not depend on any axioms
+'Generative.InferentialGrounds.atomic_conservativity' does not depend on any axioms
+'Generative.InferentialGrounds.no_ground_no_closed_atom' does not depend on any axioms
+'Generative.InferentialGrounds.adequate_sources_give_atomic_claim' does not depend on any axioms
+'Generative.InferentialGrounds.unsupported_unpacking_impossible' does not depend on any axioms
+'Generative.InferentialGrounds.duplicate' does not depend on any axioms
+'Generative.InferentialGrounds.duplication_is_ground_reuse' does not depend on any axioms

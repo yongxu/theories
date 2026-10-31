@@ -1,0 +1,20 @@
+'Becoming.FiniteBranchingCorrespondence.process' does not depend on any axioms
+'Becoming.FiniteBranchingCorrespondence.reach_iff_continues' does not depend on any axioms
+'Becoming.FiniteBranchingCorrespondence.unbounded_iff' does not depend on any axioms
+'Becoming.FiniteBranchingCorrespondence.finitelyBranching' does not depend on any axioms
+'Becoming.FiniteBranchingCorrespondence.either_classical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.FiniteBranchingCorrespondence.finite_unbounded_by_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.FiniteBranchingCorrespondence.unbounded_child_by_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.FiniteBranchingCorrespondence.infinite_from_unbounded_by_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.FiniteBranchingCorrespondence.finite_initial_lifting_by_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.FiniteBranchingCorrespondence.labelled_lifting_by_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

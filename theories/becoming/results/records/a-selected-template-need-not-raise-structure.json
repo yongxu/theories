@@ -72,8 +72,8 @@
       "zh": "转移格 AH 与 HA 扩展事件律；它们不是原生复制中的突变，原生复制保持模板之类。无实例定理把此表接到计数形式的 Price 方程。"
     },
     {
-      "en": "Periphery, a module before the spine on Lean's core library and Std: propext in 13 of its 19 declarations, the other 6 none, as the receipt reports.",
-      "zh": "外围，脊柱之前的模块，基于 Lean 核心库与 Std：其 19 项声明中 13 项用 propext，其余 6 项不用公理，如回执所报。"
+      "en": "Periphery, a module before the spine on Lean's core library and Std: propext in 9 of its 19 declarations, the other 10 none, as the receipt reports.",
+      "zh": "外围，脊柱之前的模块，基于 Lean 核心库与 Std：其 19 项声明中 9 项用 propext，其余 10 项不用公理，如回执所报。"
     }
   ],
   "does_not_show": [
@@ -105,8 +105,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the module's checker with Lean 4.29.1 (receipt evolution/verification.json, passed 7 October 2026, fresh temporary build; it binds the current bytes): ConsequenceTransmission, 19 declarations audited, 13 with propext only and 6 with empty reports, 19 cited here; the developmental extension's receipt re-checks the same bytes. An internal counter-review read the source and the receipt hashes, without recompiling; not reviewed by a person.",
-    "zh": "以模块检查器与 Lean 4.29.1 检查（回执 evolution/verification.json，2026年10月7日通过，新鲜临时构建；绑定当前字节）：ConsequenceTransmission 审计 19 项声明，13 项只用 propext，6 项报告为空，此处引 19 项；发育扩展的回执复查同一字节。内部反审读了源码与回执哈希，未重新编译；未经人审。"
+    "en": "Checked by the module's checker with Lean 4.29.1 (receipt evolution/verification.json, passed 31 October 2026, fresh temporary build; it binds the current bytes): ConsequenceTransmission, 19 declarations audited, 9 with propext only and 10 with empty reports, 19 cited here; the developmental extension's receipt re-checks the same bytes. An internal counter-review read the source and the receipt hashes, without recompiling; not reviewed by a person.",
+    "zh": "以模块检查器与 Lean 4.29.1 检查（回执 evolution/verification.json，2026年10月31日通过，新鲜临时构建；绑定当前字节）：ConsequenceTransmission 审计 19 项声明，9 项只用 propext，10 项报告为空，此处引 19 项；发育扩展的回执复查同一字节。内部反审读了源码与回执哈希，未重新编译；未经人审。"
   },
   "next_delta": {
     "en": "An instance theorem joining the transfer table to Price's equation in counting form, with AH and HA as what transmission lowered and raised, and event weights derived from the native law instead of supplied.",
@@ -170,13 +170,13 @@
     {
       "path": "experiments/shared-renewal-capability/regulation/retention/formation/evolution/verification.json",
       "role": "receipt",
-      "sha256": "1798cc32373a8b032996d36194f6c29e616ea17ffd7e58938be860796f013f5c",
+      "sha256": "45287dbb7af165fa278b14fee811b882f5479d78adfa745ca01a0a5553cff3cf",
       "declarations": []
     },
     {
       "path": "theories/becoming/chapters/04-LIFE.md",
       "role": "statement",
-      "sha256": "1368f69ece22fe59a1557d20b3af7734b25a82214e9cda03845acd34b57f0db3",
+      "sha256": "65b13c957b05f6b51f1072d9ee889b1a39919b143972ca04bafa437e8087a593",
       "declarations": []
     },
     {
@@ -205,6 +205,10 @@
     {
       "en": "27 October 2026: added (DF2), a selected template need not raise the successors' structure: the share criterion on successor columns, its agreement with template rows under faithful or balanced transfer, native copying faithful, and the reversal and opposite-access witnesses; from DEFECTS-FOUND (triage row 145); study section 426.",
       "zh": "2026年10月27日：新增（DF2），被选的模板未必提高后继的结构：后继之列上的份额判据、忠实或平衡转移下与模板之行一致、原生复制忠实，以及反转与相反通达的见证；出自 DEFECTS-FOUND（分诊第 145 行）；研究第 426 节。"
+    },
+    {
+      "en": "31 October 2026, RV21c (study section 480): axiom reports from the renewed receipt; fewer, the same declarations, none gained, from FormedSelection's set_option line of 8 October.",
+      "zh": "2026年10月31日，RV21c（研究第 480 节）：公理报告取自更新的回执；更少，声明相同，无一增加，出自 FormedSelection 10月8日的 set_option 一行。"
     }
   ]
 }

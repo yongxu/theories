@@ -1,0 +1,52 @@
+'CompletionWarrant.HistoryIdeals.word_ext' depends on axioms: [Quot.sound]
+'CompletionWarrant.HistoryIdeals.tracePrefix_prefix' does not depend on any axioms
+'CompletionWarrant.HistoryIdeals.tracePrefix_trace' does not depend on any axioms
+'CompletionWarrant.HistoryIdeals.prefixTrace_lower' does not depend on any axioms
+'CompletionWarrant.HistoryIdeals.prefixTrace_eq' depends on axioms: [Quot.sound]
+'CompletionWarrant.HistoryIdeals.compatible_prefix' does not depend on any axioms
+'CompletionWarrant.HistoryIdeals.ideal_comparable_by_length' depends on axioms: [Quot.sound]
+'CompletionWarrant.HistoryIdeals.bounded_has_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.HistoryIdeals.bounded_is_principal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.HistoryIdeals.unboundedWord_mem' depends on axioms: [Classical.choice, Quot.sound]
+'CompletionWarrant.HistoryIdeals.unboundedWord_long' depends on axioms: [Classical.choice, Quot.sound]
+'CompletionWarrant.HistoryIdeals.mem_unionTrace' depends on axioms: [Classical.choice, Quot.sound]
+'CompletionWarrant.HistoryIdeals.unionTrace_prefix_mem' depends on axioms: [Classical.choice, Quot.sound]
+'CompletionWarrant.HistoryIdeals.unbounded_is_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.HistoryIdeals.ideal_classification' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.HistoryIdeals.principal_order_iff' depends on axioms: [Quot.sound]
+'CompletionWarrant.HistoryIdeals.finite_infinite_order_iff' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.infinite_not_below_finite' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.infinite_order_iff' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.history_order_iff' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.historyIdeal_injective' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.historyIdeal_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.HistoryIdeals.history_admitted_iff' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.admitted_history_classification' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CompletionWarrant.HistoryIdeals.lower_history_classification' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CompletionWarrant.HistoryIdeals.admitted_history_unique' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.all_finite_content' depends on axioms: [Quot.sound]
+'CompletionWarrant.HistoryIdeals.all_finite_hull_full' depends on axioms: [Quot.sound]
+'CompletionWarrant.HistoryIdeals.infinite_not_finiteOnly' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.finiteOnly_not_refutable' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.finiteOnly_hull_full' depends on axioms: [Quot.sound]
+'CompletionWarrant.HistoryIdeals.finiteOnly_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.HistoryIdeals.finiteOnly_not_scottClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.HistoryIdeals.propertyClass_trace_iff' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.propertyClass_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompletionWarrant.HistoryIdeals.propertyClass_hull_full' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.propertyClass_not_refutable' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.propertyClass_not_scottClosed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CompletionWarrant.HistoryIdeals.recurrence_ideal_not_refutable' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.recurrence_ideal_hull_full' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.represented_ideal_not_refutable' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.represented_ideal_hull_full' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.bounded_language_boundary_empty' depends on axioms: [propext, Quot.sound]
+'CompletionWarrant.HistoryIdeals.prefixLanguage_lower' depends on axioms: [Quot.sound]
+'CompletionWarrant.HistoryIdeals.boundary_prefixLanguage_iff' does not depend on any axioms
+'CompletionWarrant.HistoryIdeals.closed_language_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]

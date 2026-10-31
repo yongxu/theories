@@ -1,0 +1,11 @@
+import RenewingCorrespondence
+#check @Becoming.RenewingCorrespondence.remaining_falls
+#check @Becoming.RenewingCorrespondence.forms_while_held
+#check @Becoming.RenewingCorrespondence.moves_length
+#check @Becoming.RenewingCorrespondence.moves_succ
+#check @Becoming.RenewingCorrespondence.total_append
+#check @Becoming.RenewingCorrespondence.total_moves
+#check @Becoming.RenewingCorrespondence.path_trace
+#check @Becoming.RenewingCorrespondence.beyond_current_bounded_by_core
+#check @Becoming.RenewingCorrespondence.beyond_current_ceases_by_core
+#check @Becoming.RenewingCorrespondence.shared_formation_ends_by_core

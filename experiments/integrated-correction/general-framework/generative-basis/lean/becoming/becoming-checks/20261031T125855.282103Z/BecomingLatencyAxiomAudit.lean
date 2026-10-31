@@ -1,0 +1,21 @@
+import Becoming.Latency
+#print axioms Becoming.TimedResponse.Linked
+#print axioms Becoming.TimedResponse.Linked.one_le
+#print axioms Becoming.TimedResponse.Spread.linked
+#print axioms Becoming.TimedResponse.reachedBy_linked
+#print axioms Becoming.TimedResponse.not_reached_of_far
+#print axioms Becoming.TimedResponse.answer_alike_far
+#print axioms Becoming.TimedResponse.Relay.Node
+#print axioms Becoming.TimedResponse.Relay.Spot
+#print axioms Becoming.TimedResponse.Relay.reads
+#print axioms Becoming.TimedResponse.Relay.giveAt
+#print axioms Becoming.TimedResponse.Relay.flow
+#print axioms Becoming.TimedResponse.Relay.web
+#print axioms Becoming.TimedResponse.Relay.sourceAt
+#print axioms Becoming.TimedResponse.Relay.late
+#print axioms Becoming.TimedResponse.Relay.source_not_second
+#print axioms Becoming.TimedResponse.Relay.reader_far
+#print axioms Becoming.TimedResponse.Relay.not_reached_at_two
+#print axioms Becoming.TimedResponse.Relay.reached_at_three
+#print axioms Becoming.TimedResponse.Relay.readAt
+#print axioms Becoming.TimedResponse.Relay.answers_two_and_three

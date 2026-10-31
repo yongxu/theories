@@ -1,0 +1,5 @@
+import SharedStockInstances
+#check @SharedStockInstances.selectedTotal_eq_mass
+#check @SharedStockInstances.total_eq_mass
+#check @SharedStockInstances.every_selection_within_iff_total_within
+#check @SharedStockInstances.each_within_alone_not_together

@@ -280,6 +280,12 @@
       "role": "receipt",
       "sha256": "04603eb9a2886e68a09da9ad1e3015350cd41e5b40d2ea35f2fecfcc1b2f5b3e",
       "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261031T132223.713396Z/verification.json",
+      "role": "receipt",
+      "sha256": "0ff2356fbb5a97de4a3d89e30c76960ae23f3e9694a92e376cf30c9dfa585b45",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -299,7 +305,7 @@
     },
     {
       "source": "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean",
-      "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json",
+      "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261031T132223.713396Z/verification.json",
       "sha256_pointer": "/source_sha256/VersionedTaskInstances",
       "success_pointer": "/status",
       "success_value": "passed"

@@ -1,0 +1,5 @@
+import JudgingCorrespondence
+#check @Becoming.JudgingCorrespondence.mem_realizations
+#check @Becoming.JudgingCorrespondence.judges_iff
+#check @Becoming.JudgingCorrespondence.endpoint_judge_iff
+#check @Becoming.JudgingCorrespondence.no_endpoint_only_prior_certificate_by_core

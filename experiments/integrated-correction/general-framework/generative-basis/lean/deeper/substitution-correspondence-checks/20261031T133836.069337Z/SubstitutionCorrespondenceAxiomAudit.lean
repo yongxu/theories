@@ -1,0 +1,11 @@
+import SubstitutionCorrespondence
+#print axioms Becoming.SubstitutionCorrespondence.Place
+#print axioms Becoming.SubstitutionCorrespondence.Consumer
+#print axioms Becoming.SubstitutionCorrespondence.part
+#print axioms Becoming.SubstitutionCorrespondence.read
+#print axioms Becoming.SubstitutionCorrespondence.use
+#print axioms Becoming.SubstitutionCorrespondence.through
+#print axioms Becoming.SubstitutionCorrespondence.direct
+#print axioms Becoming.SubstitutionCorrespondence.supplied
+#print axioms Becoming.SubstitutionCorrespondence.supplies
+#print axioms Becoming.SubstitutionCorrespondence.all_terms_agree_iff_positions_by_core

@@ -1,0 +1,4 @@
+import Becoming.ContactCourses
+#print axioms Becoming.ContactCourses.blind_answers_steps_iff
+#print axioms Becoming.ContactCourses.finite_blind_answers_steps
+#print axioms Becoming.ContactCourses.run_stays_iff

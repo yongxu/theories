@@ -1,0 +1,305 @@
+@Becoming.Bisimulation.of_iff : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {B B' : S → S' → Prop},
+  Becoming.Bisimulation F G B → (∀ (s : S) (s' : S'), B s s' ↔ B' s s') → Becoming.Bisimulation F G B'
+@Becoming.Aligned.functional : ∀ {F : Type u_1} {K : Type u_2} {K' : Type u_3} {π : F → K} {ρ : F → K'},
+  (∀ (x y : F), π x = π y → ρ x = ρ y) →
+    ∀ {k : K} {k₁ k₂ : K'}, Becoming.Aligned π ρ k k₁ → Becoming.Aligned π ρ k k₂ → k₁ = k₂
+@Becoming.aligned_one_to_one : ∀ {F : Type u_1} {K : Type u_2} {K' : Type u_3} {π : F → K} {ρ : F → K'},
+  (∀ (x y : F), π x = π y ↔ ρ x = ρ y) →
+    (∀ (k : K),
+        Becoming.Used π k → ∃ k', Becoming.Aligned π ρ k k' ∧ ∀ (k'' : K'), Becoming.Aligned π ρ k k'' → k'' = k') ∧
+      ∀ (k' : K'), Becoming.Used ρ k' → ∃ k, Becoming.Aligned π ρ k k' ∧ ∀ (k₀ : K), Becoming.Aligned π ρ k₀ k' → k₀ = k
+@Becoming.openMap_iff : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} {f : S → S'},
+  Becoming.OpenMap F G f ↔
+    (∀ (s : S) (c : C), F.realized s c ↔ G.realized (f s) c) ∧
+      (∀ (s : S) (a : A) (t : S), F.P.step s a t → G.P.step (f s) a (f t)) ∧
+        ∀ (s : S) (a : A) (t' : S'), G.P.step (f s) a t' → ∃ t, F.P.step s a t ∧ f t = t'
+@Becoming.OpenMap.alike : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} {f : S → S'}, Becoming.OpenMap F G f → ∀ (s : S), Becoming.Alike F G s (f s)
+@Becoming.OpenMap.alike_iff : ∀ {S : Type u_1} {S' : Type u_4} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {G : Becoming.Frame S' A C} {f : S → S'},
+  Becoming.OpenMap F G f → ∀ {s s' : S}, Becoming.Alike F F s s' ↔ Becoming.Alike G G (f s) (f s')
+@Becoming.OpenMap.comp : ∀ {S : Type u_1} {S' : Type u_4} {S'' : Type u_5} {A : Type u_2} {C : Type u_3}
+  {F : Becoming.Frame S A C} {G : Becoming.Frame S' A C} {H : Becoming.Frame S'' A C} {f : S → S'} {g : S' → S''},
+  Becoming.OpenMap F G f → Becoming.OpenMap G H g → Becoming.OpenMap F H fun s => g (f s)
+@Becoming.Joining.bisimulation_iff_compatible : ∀ {F : Type u_1} {J : Becoming.Joining F} {B : F → F → Prop},
+  Becoming.Bisimulation J.frame J.frame B ↔ J.Compatible B
+@Becoming.Joining.substitute : ∀ {F : Type u_1} {J : Becoming.Joining F} {B : F → F → Prop},
+  Becoming.Bisimulation J.frame J.frame B →
+    ∀ {a a' b b' z : F}, B a a' → B b b' → J a b z → ∃ w z', J a' b' z' ∧ B z w ∧ B w z'
+@Becoming.Joining.alike_substitute : ∀ {F : Type u_1} {J : Becoming.Joining F} {a a' b b' z : F},
+  Becoming.Alike J.frame J.frame a a' →
+    Becoming.Alike J.frame J.frame b b' → J a b z → ∃ z', J a' b' z' ∧ Becoming.Alike J.frame J.frame z z'
+@Becoming.Joining.image_of : ∀ {F : Type u_1} {K : Type u_2} (J : Becoming.Joining F) (π : F → K) {x y z : F},
+  J x y z → J.image π (π x) (π y) (π z)
+@Becoming.Joining.lifts_iff : ∀ {F : Type u_1} {K : Type u_2} {J : Becoming.Joining F} {π : F → K},
+  J.Lifts π ↔ Becoming.Bisimulation J.frame J.frame fun x y => π x = π y
+@Becoming.Joining.image_iff : ∀ {F : Type u_1} {K : Type u_2} {J : Becoming.Joining F} {π : F → K},
+  J.Lifts π → ∀ (x y : F) (c : K), J.image π (π x) (π y) c ↔ ∃ z, J x y z ∧ π z = c
+@Becoming.Joining.lifts_of_identifiesAlike : ∀ {F : Type u_1} {K : Type u_2} {J : Becoming.Joining F} {π : F → K},
+  Becoming.IdentifiesAlike J.frame π → J.Lifts π
+@Becoming.Joining.lifts_iff_sameBranchingTests : ∀ {F : Type u_1} {K : Type u_2} {J : Becoming.Joining F} {π : F → K},
+  (∀ (x y : F), π x = π y ↔ Becoming.SameBranchingTests J.frame J.frame x y) →
+    (J.Lifts π ↔ Becoming.Bisimulation J.frame J.frame (Becoming.SameBranchingTests J.frame J.frame))
+@Becoming.Joining.aligned_image_iff : ∀ {F : Type u_1} {K : Type u_2} {K' : Type u_3} {J : Becoming.Joining F}
+  {π : F → K} {ρ : F → K'},
+  (∀ (x y : F), π x = π y ↔ ρ x = ρ y) →
+    ∀ {a b c : K} {a' b' c' : K'},
+      Becoming.Aligned π ρ a a' →
+        Becoming.Aligned π ρ b b' → Becoming.Aligned π ρ c c' → (J.image π a b c ↔ J.image ρ a' b' c')
+@Becoming.Joining.common_structure : ∀ {F : Type u_1} {K : Type u_2} {K' : Type u_3} {J : Becoming.Joining F}
+  {π : F → K} {ρ : F → K'},
+  (Becoming.Bisimulation J.frame J.frame fun x y => π x = π y) →
+    (∀ (x y : F), π x = π y ↔ ρ x = ρ y) →
+      (∀ (x y : F) (c : K), J.image π (π x) (π y) c ↔ ∃ z, J x y z ∧ π z = c) ∧
+        (∀ (x y : F) (c : K'), J.image ρ (ρ x) (ρ y) c ↔ ∃ z, J x y z ∧ ρ z = c) ∧
+          (∀ (k : K),
+              Becoming.Used π k →
+                ∃ k', Becoming.Aligned π ρ k k' ∧ ∀ (k'' : K'), Becoming.Aligned π ρ k k'' → k'' = k') ∧
+            (∀ (k' : K'),
+                Becoming.Used ρ k' → ∃ k, Becoming.Aligned π ρ k k' ∧ ∀ (k₀ : K), Becoming.Aligned π ρ k₀ k' → k₀ = k) ∧
+              ∀ (a b c : K) (a' b' c' : K'),
+                Becoming.Aligned π ρ a a' →
+                  Becoming.Aligned π ρ b b' → Becoming.Aligned π ρ c c' → (J.image π a b c ↔ J.image ρ a' b' c')
+@Becoming.Joining.common_structure_of_identifiesAlike : ∀ {F : Type u_1} {K : Type u_2} {K' : Type u_3}
+  {J : Becoming.Joining F} {π : F → K} {ρ : F → K'},
+  Becoming.IdentifiesAlike J.frame π →
+    Becoming.IdentifiesAlike J.frame ρ →
+      (∀ (x y : F) (c : K), J.image π (π x) (π y) c ↔ ∃ z, J x y z ∧ π z = c) ∧
+        (∀ (x y : F) (c : K'), J.image ρ (ρ x) (ρ y) c ↔ ∃ z, J x y z ∧ ρ z = c) ∧
+          (∀ (k : K),
+              Becoming.Used π k →
+                ∃ k', Becoming.Aligned π ρ k k' ∧ ∀ (k'' : K'), Becoming.Aligned π ρ k k'' → k'' = k') ∧
+            (∀ (k' : K'),
+                Becoming.Used ρ k' → ∃ k, Becoming.Aligned π ρ k k' ∧ ∀ (k₀ : K), Becoming.Aligned π ρ k₀ k' → k₀ = k) ∧
+              ∀ (a b c : K) (a' b' c' : K'),
+                Becoming.Aligned π ρ a a' →
+                  Becoming.Aligned π ρ b b' → Becoming.Aligned π ρ c c' → (J.image π a b c ↔ J.image ρ a' b' c')
+@Becoming.Joining.FiniteOutcomes.outcomes : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.FiniteOutcomes → ∀ (x : F) (m : Becoming.Joining.Move F), ∃ l, ∀ (z : F), J.frame.P.step x m z ↔ z ∈ l
+@Becoming.Joining.FiniteOutcomes.alike_iff_sameBranchingTests : ∀ {F : Type u_1},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {J : Becoming.Joining F},
+      J.FiniteOutcomes →
+        ∀ {x y : F}, Becoming.Alike J.frame J.frame x y ↔ Becoming.SameBranchingTests J.frame J.frame x y
+@Becoming.Joining.FiniteOutcomes.identifiesAlike : ∀ {F : Type u_1} {K : Type u_2},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {J : Becoming.Joining F},
+      J.FiniteOutcomes →
+        ∀ {π : F → K},
+          (∀ (x y : F), π x = π y ↔ Becoming.SameBranchingTests J.frame J.frame x y) →
+            Becoming.IdentifiesAlike J.frame π
+@Becoming.Joining.FiniteOutcomes.common_structure : ∀ {F : Type u_1} {K : Type u_2} {K' : Type u_3},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {J : Becoming.Joining F},
+      J.FiniteOutcomes →
+        ∀ {π : F → K} {ρ : F → K'},
+          (∀ (x y : F), π x = π y ↔ Becoming.SameBranchingTests J.frame J.frame x y) →
+            (∀ (x y : F), ρ x = ρ y ↔ Becoming.SameBranchingTests J.frame J.frame x y) →
+              (∀ (x y : F) (c : K), J.image π (π x) (π y) c ↔ ∃ z, J x y z ∧ π z = c) ∧
+                (∀ (x y : F) (c : K'), J.image ρ (ρ x) (ρ y) c ↔ ∃ z, J x y z ∧ ρ z = c) ∧
+                  (∀ (k : K),
+                      Becoming.Used π k →
+                        ∃ k', Becoming.Aligned π ρ k k' ∧ ∀ (k'' : K'), Becoming.Aligned π ρ k k'' → k'' = k') ∧
+                    (∀ (k' : K'),
+                        Becoming.Used ρ k' →
+                          ∃ k, Becoming.Aligned π ρ k k' ∧ ∀ (k₀ : K), Becoming.Aligned π ρ k₀ k' → k₀ = k) ∧
+                      ∀ (a b c : K) (a' b' c' : K'),
+                        Becoming.Aligned π ρ a a' →
+                          Becoming.Aligned π ρ b b' → Becoming.Aligned π ρ c c' → (J.image π a b c ↔ J.image ρ a' b' c')
+@Becoming.Joining.Functional.determined : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.Functional → Becoming.Determined J.frame.P
+@Becoming.Joining.Lifts.functional : ∀ {F : Type u_1} {K : Type u_2} {J : Becoming.Joining F} {π : F → K},
+  J.Lifts π → J.Functional → (J.image π).Functional
+@Becoming.Joining.common_operation : ∀ {F : Type u_1} {K : Type u_2} {K' : Type u_3} {J : Becoming.Joining F}
+  {π : F → K} {ρ : F → K'},
+  J.Functional →
+    (∀ (x y : F), π x = π y ↔ Becoming.SameTests J.frame J.frame x y) →
+      (∀ (x y : F), ρ x = ρ y ↔ Becoming.SameTests J.frame J.frame x y) →
+        (J.image π).Functional ∧
+          (J.image ρ).Functional ∧
+            (∀ (k : K),
+                Becoming.Used π k →
+                  ∃ k', Becoming.Aligned π ρ k k' ∧ ∀ (k'' : K'), Becoming.Aligned π ρ k k'' → k'' = k') ∧
+              (∀ (k' : K'),
+                  Becoming.Used ρ k' →
+                    ∃ k, Becoming.Aligned π ρ k k' ∧ ∀ (k₀ : K), Becoming.Aligned π ρ k₀ k' → k₀ = k) ∧
+                ∀ (a b c : K) (a' b' c' : K'),
+                  Becoming.Aligned π ρ a a' →
+                    Becoming.Aligned π ρ b b' → Becoming.Aligned π ρ c c' → (J.image π a b c ↔ J.image ρ a' b' c')
+@Becoming.Joining.holds_image_iff : ∀ {F : Type u_1} {K : Type u_2} {J : Becoming.Joining F} {π : F → K},
+  J.Lifts π →
+    ∀ (φ : Becoming.BranchingTest (Becoming.Joining.Move F) Empty) (x : F),
+      Becoming.BranchingTest.Holds (J.image π).frame (π x) (Becoming.Joining.mapPartners π φ) ↔
+        Becoming.BranchingTest.Holds J.frame x φ
+@Becoming.Joining.tree_lifts : ∀ {F : Type u_1} {K : Type u_2} {J : Becoming.Joining F} {π : F → K},
+  J.Lifts π →
+    ∀ (t : Becoming.Joining.Tree F) (c : K),
+      Becoming.Joining.Tree.Realizes (J.image π) (Becoming.Joining.Tree.map π t) c ↔
+        ∃ z, Becoming.Joining.Tree.Realizes J t z ∧ π z = c
+@Becoming.Joining.Occurrence.ext_at : ∀ {F : Type u_1} {J : Becoming.Joining F} {d e : J.Occurrence},
+  (∀ (i : Becoming.Joining.Role), d.at i = e.at i) → d = e
+@Becoming.Joining.fragment_not_alike_occurrence : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F}
+  {K : Becoming.Joining G} (x : F) (f : K.Occurrence), ¬Becoming.Alike J.roleFrame K.roleFrame (Sum.inl x) (Sum.inr f)
+@Becoming.Joining.slots_alike : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F} {K : Becoming.Joining G}
+  {e : J.Occurrence} {f : K.Occurrence},
+  Becoming.Alike J.roleFrame K.roleFrame (Sum.inr e) (Sum.inr f) →
+    ∀ (i : Becoming.Joining.Role), Becoming.Alike J.roleFrame K.roleFrame (Sum.inl (e.at i)) (Sum.inl (f.at i))
+@Becoming.Joining.match_incident : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F} {K : Becoming.Joining G}
+  {x : F} {y : G},
+  Becoming.Alike J.roleFrame K.roleFrame (Sum.inl x) (Sum.inl y) →
+    ∀ (e : J.Occurrence) (r : Becoming.Joining.Role),
+      e.at r = x →
+        ∃ f,
+          f.at r = y ∧
+            ∀ (i : Becoming.Joining.Role), Becoming.Alike J.roleFrame K.roleFrame (Sum.inl (e.at i)) (Sum.inl (f.at i))
+@Becoming.Joining.Occurrence.map_at : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F} {K : Becoming.Joining G}
+  {p : F → G} (keeps : J.Keeps K p) (d : J.Occurrence) (i : Becoming.Joining.Role),
+  (Becoming.Joining.Occurrence.map keeps d).at i = p (d.at i)
+@Becoming.Joining.openMap_iff : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F} {K : Becoming.Joining G}
+  {p : F → G}, J.OpenMap K p ↔ ∃ keeps, Becoming.OpenMap J.roleFrame K.roleFrame (Becoming.Joining.placeMap keeps)
+@Becoming.Joining.OpenMap.alike : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F} {K : Becoming.Joining G}
+  {p : F → G}, J.OpenMap K p → ∀ (x : F), Becoming.Alike J.roleFrame K.roleFrame (Sum.inl x) (Sum.inl (p x))
+@Becoming.Joining.OpenMap.sameBranchingTests : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F}
+  {K : Becoming.Joining G} {p : F → G},
+  J.OpenMap K p → ∀ (x : F), Becoming.SameBranchingTests J.roleFrame K.roleFrame (Sum.inl x) (Sum.inl (p x))
+@Becoming.Joining.openMap_id : ∀ {F : Type u_1} (J : Becoming.Joining F), J.OpenMap J fun x => x
+@Becoming.Joining.pairOccurrence_at : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F} {K : Becoming.Joining G}
+  (e : J.Occurrence) (f : K.Occurrence)
+  (slots : ∀ (i : Becoming.Joining.Role), Becoming.Alike J.roleFrame K.roleFrame (Sum.inl (e.at i)) (Sum.inl (f.at i)))
+  (i : Becoming.Joining.Role), (Becoming.Joining.pairOccurrence e f slots).at i = ⟨(e.at i, f.at i), ⋯⟩
+@Becoming.Joining.span_first_open : ∀ {F : Type u_1} {G : Type u_2} (J : Becoming.Joining F) (K : Becoming.Joining G),
+  (J.span K).OpenMap J fun q => q.val.fst
+@Becoming.Joining.span_second_open : ∀ {F : Type u_1} {G : Type u_2} (J : Becoming.Joining F) (K : Becoming.Joining G),
+  (J.span K).OpenMap K fun q => q.val.snd
+@Becoming.Joining.covers : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F} {K : Becoming.Joining G} {x : F}
+  {y : G},
+  Becoming.Alike J.roleFrame K.roleFrame (Sum.inl x) (Sum.inl y) →
+    J.ConnectedFrom x → ∀ (a : F), ∃ b, Becoming.Alike J.roleFrame K.roleFrame (Sum.inl a) (Sum.inl b)
+@Becoming.Joining.common_refinement : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F} {K : Becoming.Joining G}
+  {x : F} {y : G},
+  Becoming.Alike J.roleFrame K.roleFrame (Sum.inl x) (Sum.inl y) →
+    J.ConnectedFrom x →
+      K.ConnectedFrom y →
+        ((J.span K).OpenMap J fun q => q.val.fst) ∧
+          ((J.span K).OpenMap K fun q => q.val.snd) ∧ (∀ (a : F), ∃ q, q.val.fst = a) ∧ ∀ (b : G), ∃ q, q.val.snd = b
+@Becoming.Joining.universal_factor : ∀ {F : Type u_1} {G : Type u_2} {H : Type u_3} {L : Becoming.Joining H}
+  {J : Becoming.Joining F} {K : Becoming.Joining G} {p : H → F} {q : H → G} (hp : L.OpenMap J p) (hq : L.OpenMap K q),
+  (∀ (z : H), (Becoming.Joining.factor hp hq z).val.fst = p z ∧ (Becoming.Joining.factor hp hq z).val.snd = q z) ∧
+    L.Keeps (J.span K) (Becoming.Joining.factor hp hq) ∧
+      ∀ (g : H → J.Matched K),
+        (∀ (z : H), (g z).val.fst = p z ∧ (g z).val.snd = q z) → ∀ (z : H), g z = Becoming.Joining.factor hp hq z
+@Becoming.Joining.RoleTotal.openMap : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.RoleTotal → J.OpenMap Becoming.Joining.coarse fun x => ()
+@Becoming.Joining.RoleTotal.alike : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F} {K : Becoming.Joining G},
+  J.RoleTotal → K.RoleTotal → ∀ (x : F) (y : G), Becoming.Alike J.roleFrame K.roleFrame (Sum.inl x) (Sum.inl y)
+@Becoming.Joining.not_pairLifting_coarse : ∀ {F : Type u_1} {J : Becoming.Joining F} {x : F},
+  ¬J.SelfJoinable x → ¬J.PairLifting Becoming.Joining.coarse fun x => ()
+@Becoming.Joining.RoleTotal.open_not_pairLifting : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.RoleTotal →
+    ∀ {x : F},
+      ¬J.SelfJoinable x →
+        (J.OpenMap Becoming.Joining.coarse fun x => ()) ∧
+          (∀ (y : F),
+              Becoming.SameBranchingTests J.roleFrame Becoming.Joining.coarse.roleFrame (Sum.inl y) (Sum.inl ())) ∧
+            ¬J.PairLifting Becoming.Joining.coarse fun x => ()
+@Becoming.Joining.RoleTotal.collapse : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.RoleTotal →
+    ∀ {x : F},
+      ¬J.SelfJoinable x →
+        (∀ (y z : F),
+            (fun x => ()) y = (fun x => ()) z ↔ Becoming.Alike J.roleFrame J.roleFrame (Sum.inl y) (Sum.inl z)) ∧
+          Becoming.Joining.coarse.SelfJoinable () ∧ ¬J.SelfJoinable x
+@Becoming.Joining.exists_of_mem_map : ∀ {α : Type u_1} {β : Type u_2} {g : α → β} {b : β} {l : List α},
+  b ∈ List.map g l → ∃ a, a ∈ l ∧ g a = b
+@Becoming.Joining.LocallyFinite.outcomes : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.LocallyFinite →
+    ∀ (s : F ⊕ J.Occurrence) (m : Becoming.Joining.RoleMove),
+      ∃ l, ∀ (t : F ⊕ J.Occurrence), J.roleFrame.P.step s m t ↔ t ∈ l
+@Becoming.Joining.LocallyFinite.alike_iff : ∀ {F : Type u_1} {G : Type u_2},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {J : Becoming.Joining F} {K : Becoming.Joining G},
+      J.LocallyFinite →
+        K.LocallyFinite →
+          ∀ {s : F ⊕ J.Occurrence} {t : G ⊕ K.Occurrence},
+            Becoming.Alike J.roleFrame K.roleFrame s t ↔ Becoming.SameBranchingTests J.roleFrame K.roleFrame s t
+@Becoming.Joining.common_refinement_of_em : ∀ {F : Type u_1} {G : Type u_2},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {J : Becoming.Joining F} {K : Becoming.Joining G},
+      J.LocallyFinite →
+        K.LocallyFinite →
+          ∀ {x : F} {y : G},
+            Becoming.SameBranchingTests J.roleFrame K.roleFrame (Sum.inl x) (Sum.inl y) →
+              J.ConnectedFrom x →
+                K.ConnectedFrom y →
+                  ((J.span K).OpenMap J fun q => q.val.fst) ∧
+                    ((J.span K).OpenMap K fun q => q.val.snd) ∧
+                      (∀ (a : F), ∃ q, q.val.fst = a) ∧ ∀ (b : G), ∃ q, q.val.snd = b
+@Becoming.Joining.retained_extends : ∀ {F : Type u_1} {J : Becoming.Joining F} {xs ys : List F}
+  {cmds : List (Nat × Nat)},
+  Generative.Trace J.retainedFrame.P xs cmds ys → ∃ added, ys = xs ++ added ∧ added.length = cmds.length
+@Becoming.Joining.retained_history_matches : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F}
+  {K : Becoming.Joining G} {xs : List F} {ys : List G},
+  Becoming.Alike J.retainedFrame K.retainedFrame xs ys →
+    xs.length = ys.length →
+      ∀ {cmds : List (Nat × Nat)} {finish : List F},
+        Generative.Trace J.retainedFrame.P xs cmds finish →
+          ∃ finish',
+            Generative.Trace K.retainedFrame.P ys cmds finish' ∧
+              Becoming.Alike J.retainedFrame K.retainedFrame finish finish' ∧
+                finish.length = finish'.length ∧ ∃ added, finish' = ys ++ added
+@Becoming.Joining.retained_self_iff : ∀ {F : Type u_1} {J : Becoming.Joining F} {x : F},
+  Becoming.BranchingTest.Holds J.retainedFrame [x] (Becoming.BranchingTest.can (0, 0) Becoming.BranchingTest.top) ↔
+    J.SelfJoinable x
+@Becoming.Joining.retained_apart : ∀ {F : Type u_1} {G : Type u_2} {J : Becoming.Joining F} {K : Becoming.Joining G}
+  {x : F} {y : G},
+  J.SelfJoinable x → ¬K.SelfJoinable y → ¬Becoming.SameBranchingTests J.retainedFrame K.retainedFrame [x] [y]
+@Becoming.Joining.retained_codes_apart : ∀ {F : Type u_1} {K : Type u_2} {J : Becoming.Joining F} {π : List F → K},
+  (∀ (xs ys : List F), π xs = π ys → Becoming.SameBranchingTests J.retainedFrame J.retainedFrame xs ys) →
+    ∀ {x y : F}, J.SelfJoinable x → ¬J.SelfJoinable y → π [x] ≠ π [y]
+@Becoming.Joining.FiniteOutcomes.retained_outcomes : ∀ {F : Type u_1} {J : Becoming.Joining F},
+  J.FiniteOutcomes → ∀ (xs : List F) (ij : Nat × Nat), ∃ l, ∀ (ys : List F), J.retainedFrame.P.step xs ij ys ↔ ys ∈ l
+@Becoming.Joining.FiniteOutcomes.retained_alike_iff : ∀ {F : Type u_1} {G : Type u_2},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {J : Becoming.Joining F} {K : Becoming.Joining G},
+      J.FiniteOutcomes →
+        K.FiniteOutcomes →
+          ∀ {xs : List F} {ys : List G},
+            Becoming.Alike J.retainedFrame K.retainedFrame xs ys ↔
+              Becoming.SameBranchingTests J.retainedFrame K.retainedFrame xs ys
+@Becoming.Joining.retained_history_matches_of_em : ∀ {F : Type u_1} {G : Type u_2},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {J : Becoming.Joining F} {K : Becoming.Joining G},
+      J.FiniteOutcomes →
+        K.FiniteOutcomes →
+          ∀ {xs : List F} {ys : List G},
+            Becoming.SameBranchingTests J.retainedFrame K.retainedFrame xs ys →
+              xs.length = ys.length →
+                ∀ {cmds : List (Nat × Nat)} {finish : List F},
+                  Generative.Trace J.retainedFrame.P xs cmds finish →
+                    ∃ finish',
+                      Generative.Trace K.retainedFrame.P ys cmds finish' ∧
+                        Becoming.SameBranchingTests J.retainedFrame K.retainedFrame finish finish' ∧
+                          finish.length = finish'.length ∧ ∃ added, finish' = ys ++ added
+Becoming.Joining.Once.roleTotal : Becoming.Joining.Once.joining.RoleTotal
+Becoming.Joining.Once.start_self : Becoming.Joining.Once.joining.SelfJoinable Becoming.Joining.Once.Piece.start
+Becoming.Joining.Once.passage_alone : ¬Becoming.Joining.Once.joining.SelfJoinable Becoming.Joining.Once.Piece.passage
+Becoming.Joining.Once.roles_alike : Becoming.Alike Becoming.Joining.Once.joining.roleFrame
+  Becoming.Joining.Once.joining.roleFrame (Sum.inl Becoming.Joining.Once.Piece.passage)
+  (Sum.inl Becoming.Joining.Once.Piece.start)
+Becoming.Joining.Once.open_not_pairLifting : (Becoming.Joining.Once.joining.OpenMap Becoming.Joining.coarse fun x =>
+    ()) ∧
+  (∀ (y : Becoming.Joining.Once.Piece),
+      Becoming.SameBranchingTests Becoming.Joining.Once.joining.roleFrame Becoming.Joining.coarse.roleFrame (Sum.inl y)
+        (Sum.inl ())) ∧
+    ¬Becoming.Joining.Once.joining.PairLifting Becoming.Joining.coarse fun x => ()
+Becoming.Joining.Once.retained_apart : ¬Becoming.SameBranchingTests Becoming.Joining.Once.joining.retainedFrame
+      Becoming.Joining.Once.joining.retainedFrame [Becoming.Joining.Once.Piece.start]
+      [Becoming.Joining.Once.Piece.passage] ∧
+  ∀ {K : Type u_1} (π : List Becoming.Joining.Once.Piece → K),
+    (∀ (xs ys : List Becoming.Joining.Once.Piece),
+        π xs = π ys →
+          Becoming.SameBranchingTests Becoming.Joining.Once.joining.retainedFrame
+            Becoming.Joining.Once.joining.retainedFrame xs ys) →
+      π [Becoming.Joining.Once.Piece.start] ≠ π [Becoming.Joining.Once.Piece.passage]

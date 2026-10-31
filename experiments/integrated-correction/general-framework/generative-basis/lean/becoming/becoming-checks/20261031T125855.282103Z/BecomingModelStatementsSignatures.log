@@ -1,0 +1,531 @@
+@Becoming.ModelStatements.supported_iff : ∀ {X : Type} (V : Becoming.Web X X) (t : Nat) (x : X),
+  V.Supported t x ↔
+    Becoming.«则»
+      (Becoming.«而» (Becoming.Web.partialIdentity fun x_1 => x_1 = (t, x)) (Becoming.ModelStatements.requiring V))
+      (Becoming.ModelStatements.needMet V)
+@Becoming.ModelStatements.dependent_iff : ∀ {X : Type} (V : Becoming.Web X X),
+  V.Dependent ↔
+    Becoming.«则»
+      (Becoming.«而» (Becoming.Web.partialIdentity (Becoming.ModelStatements.activeAt V))
+        (Becoming.ModelStatements.requiring V))
+      (Becoming.ModelStatements.needMet V)
+@Becoming.ModelStatements.kept_iff : ∀ {X : Type} (V : Becoming.Web X X) (t : Nat) (g c : X),
+  V.Kept t g c ↔ Becoming.ModelStatements.keptAcross V (t, c) (t, g)
+@Becoming.ModelStatements.renewingAt_iff : ∀ {X : Type} (V : Becoming.Web X X) (t : Nat) (f : X),
+  Becoming.Web.RenewingAt t f ↔
+    Becoming.ModelStatements.activeAt V (t, f) ∧
+      Becoming.«则»
+        (Becoming.«而» (Becoming.Web.partialIdentity (Becoming.ModelStatements.participating V (t, f)))
+          (Becoming.«逆» (Becoming.ModelStatements.requiring V)))
+        (Becoming.ModelStatements.keptAcross V)
+@Becoming.ModelStatements.renewingOver_iff : ∀ {X : Type} (V : Becoming.Web X X) (region : X → Prop) (t : Nat) (f : X),
+  V.RenewingOver region t f ↔
+    Becoming.ModelStatements.activeAt V (t, f) ∧
+      Becoming.«则»
+        (Becoming.«而»
+          (Becoming.Web.partialIdentity fun y => Becoming.ModelStatements.participating V (t, f) y ∧ region y.snd)
+          (Becoming.«逆» (Becoming.ModelStatements.requiring V)))
+        (Becoming.ModelStatements.keptAcross V)
+@Becoming.ModelStatements.renewingIn_iff : ∀ {X : Type} (V : Becoming.Web X X) (f : X),
+  V.RenewingIn f ↔
+    Becoming.«则»
+      (Becoming.«而»
+        (Becoming.Web.partialIdentity fun y =>
+          Becoming.«能»
+            (Becoming.«逆»
+              (Becoming.«而»
+                (Becoming.«而» (Becoming.Web.partialIdentity fun a => a.snd = f)
+                  (Becoming.ModelStatements.participating V))
+                Becoming.ModelStatements.sameName))
+            y)
+        (Becoming.«逆» (Becoming.ModelStatements.requiring V)))
+      (Becoming.ModelStatements.keptAcross V)
+@Becoming.ModelStatements.underminingAt_iff : ∀ {X : Type} (V : Becoming.Web X X) (t : Nat) (f : X),
+  Becoming.Web.UnderminingAt t f ↔
+    Becoming.«能»
+      (Becoming.«而» (Becoming.ModelStatements.drawing V)
+        (Becoming.«合» (Becoming.«逆» (Becoming.ModelStatements.requiring V)) (Becoming.ModelStatements.undermined V)))
+      (t, f)
+@Becoming.ModelStatements.living_iff : ∀ {X : Type} (V : Becoming.Web X X) (t : Nat) (x : X),
+  V.active t x ∧ ¬Becoming.Web.UnderminingAt t x ↔
+    Becoming.ModelStatements.activeAt V (t, x) ∧
+      ¬Becoming.«能»
+          (Becoming.«而» (Becoming.ModelStatements.drawing V)
+            (Becoming.«合» (Becoming.«逆» (Becoming.ModelStatements.requiring V))
+              (Becoming.ModelStatements.undermined V)))
+          (t, x)
+@Becoming.ModelStatements.inheritsAt_iff : ∀ {X : Type} (V : Becoming.Web X X) (t : Nat) (x g c : X),
+  V.InheritsAt t x g c ↔
+    Becoming.«则»
+      (Becoming.«而»
+        (Becoming.«而» (Becoming.«逆» (Becoming.ModelStatements.atPair (t + 1, x) (t, g)))
+          (Becoming.«而» (Becoming.ModelStatements.requiring V) (Becoming.Web.partialIdentity fun w => w.snd = c)))
+        (Becoming.«逆» Becoming.Steps.along))
+      (Becoming.ModelStatements.requiring V)
+@Becoming.ModelStatements.needsWithinAt_iff : ∀ {X : Type} (V : Becoming.Web X X) (t : Nat) (x g c : X) (δ : Nat),
+  V.NeedsWithinAt t x g c δ ↔
+    Becoming.«则»
+      (Becoming.«合» (Becoming.ModelStatements.atPair (t + 1, x) (t, g)) fun u v =>
+        Becoming.ModelStatements.requiringOf V c u ∧ Becoming.ModelStatements.requiringOf V c v)
+      (Becoming.ModelStatements.needWithin V δ c)
+@Becoming.ModelStatements.transmits_at_one_kind : ∀ {X : Type} (V : Becoming.Web X X) (t : Nat) (x g c : X) (δ : Nat),
+  V.requires (t + 1) x c → V.requires t g c ∧ V.need (t + 1) x c ≤ V.need t g c + δ ↔
+    Becoming.«则»
+        (Becoming.«而»
+          (Becoming.«而» (Becoming.«逆» (Becoming.ModelStatements.atPair (t + 1, x) (t, g)))
+            (Becoming.«而» (Becoming.ModelStatements.requiring V) (Becoming.Web.partialIdentity fun w => w.snd = c)))
+          (Becoming.«逆» Becoming.Steps.along))
+        (Becoming.ModelStatements.requiring V) ∧
+      Becoming.«则»
+        (Becoming.«合» (Becoming.ModelStatements.atPair (t + 1, x) (t, g)) fun u v =>
+          Becoming.ModelStatements.requiringOf V c u ∧ Becoming.ModelStatements.requiringOf V c v)
+        (Becoming.ModelStatements.needWithin V δ c)
+@Becoming.ModelStatements.roles_renewingAt : ∀ {F C : Type} (W : Becoming.Web F C) (t : Nat) (f : F),
+  Becoming.Web.RenewingAt t (Sum.inl f) ↔ Becoming.Web.RenewingAt t f
+@Becoming.ModelStatements.roles_renewingOver : ∀ {F C : Type} (W : Becoming.Web F C) (region : C → Prop) (t : Nat)
+  (f : F), W.roles.RenewingOver (Becoming.ModelStatements.onConditions region) t (Sum.inl f) ↔ W.RenewingOver region t f
+@Becoming.ModelStatements.roles_supported_reading : ∀ {F C : Type} (W : Becoming.Web F C) (t : Nat) (f : F),
+  W.Supported t f ↔
+    Becoming.«则»
+      (Becoming.«而» (Becoming.Web.partialIdentity fun x => x = (t, Sum.inl f))
+        (Becoming.ModelStatements.requiring W.roles))
+      (Becoming.ModelStatements.needMet W.roles)
+@Becoming.ModelStatements.roles_dependent_reading : ∀ {F C : Type} (W : Becoming.Web F C),
+  W.Dependent ↔
+    Becoming.«则»
+      (Becoming.«而» (Becoming.Web.partialIdentity (Becoming.ModelStatements.activeAt W.roles))
+        (Becoming.ModelStatements.requiring W.roles))
+      (Becoming.ModelStatements.needMet W.roles)
+@Becoming.ModelStatements.roles_alive_reading : ∀ {F C : Type} (W : Becoming.Web F C) (t : Nat) (f : F),
+  W.active t f ∧ ¬Becoming.Web.UnderminingAt t f ↔
+    Becoming.ModelStatements.activeAt W.roles (t, Sum.inl f) ∧
+      ¬Becoming.«能»
+          (Becoming.«而» (Becoming.ModelStatements.drawing W.roles)
+            (Becoming.«合» (Becoming.«逆» (Becoming.ModelStatements.requiring W.roles))
+              (Becoming.ModelStatements.undermined W.roles)))
+          (t, Sum.inl f)
+@Becoming.ModelStatements.renewingAt_reading : ∀ {F C : Type} (W : Becoming.Web F C) (t : Nat) (f : F),
+  Becoming.Web.RenewingAt t f ↔
+    Becoming.ModelStatements.activeAt W.roles (t, Sum.inl f) ∧
+      Becoming.«则»
+        (Becoming.«而» (Becoming.Web.partialIdentity (Becoming.ModelStatements.participating W.roles (t, Sum.inl f)))
+          (Becoming.«逆» (Becoming.ModelStatements.requiring W.roles)))
+        (Becoming.ModelStatements.keptAcross W.roles)
+@Becoming.ModelStatements.renewingOver_reading : ∀ {F C : Type} (W : Becoming.Web F C) (region : C → Prop) (t : Nat)
+  (f : F),
+  W.RenewingOver region t f ↔
+    Becoming.ModelStatements.activeAt W.roles (t, Sum.inl f) ∧
+      Becoming.«则»
+        (Becoming.«而»
+          (Becoming.Web.partialIdentity fun y =>
+            Becoming.ModelStatements.participating W.roles (t, Sum.inl f) y ∧
+              Becoming.ModelStatements.onConditions region y.snd)
+          (Becoming.«逆» (Becoming.ModelStatements.requiring W.roles)))
+        (Becoming.ModelStatements.keptAcross W.roles)
+@Becoming.ModelStatements.renewingAt_iff_over_all_reading : ∀ {F C : Type} (W : Becoming.Web F C) (t : Nat) (f : F),
+  Becoming.ModelStatements.activeAt W.roles (t, Sum.inl f) ∧
+      Becoming.«则»
+        (Becoming.«而» (Becoming.Web.partialIdentity (Becoming.ModelStatements.participating W.roles (t, Sum.inl f)))
+          (Becoming.«逆» (Becoming.ModelStatements.requiring W.roles)))
+        (Becoming.ModelStatements.keptAcross W.roles) ↔
+    Becoming.ModelStatements.activeAt W.roles (t, Sum.inl f) ∧
+      Becoming.«则»
+        (Becoming.«而»
+          (Becoming.Web.partialIdentity fun y =>
+            Becoming.ModelStatements.participating W.roles (t, Sum.inl f) y ∧
+              Becoming.ModelStatements.onConditions (fun x => True) y.snd)
+          (Becoming.«逆» (Becoming.ModelStatements.requiring W.roles)))
+        (Becoming.ModelStatements.keptAcross W.roles)
+@Becoming.ModelStatements.transmits_at_reading : ∀ {F C : Type} (W : Becoming.Web F C) (t : Nat) (x g : F) (c : C)
+  (δ : Nat),
+  W.requires (t + 1) x c → W.requires t g c ∧ W.need (t + 1) x c ≤ W.need t g c + δ ↔
+    Becoming.«则»
+        (Becoming.«而»
+          (Becoming.«而» (Becoming.«逆» (Becoming.ModelStatements.atPair (t + 1, Sum.inl x) (t, Sum.inl g)))
+            (Becoming.«而» (Becoming.ModelStatements.requiring W.roles)
+              (Becoming.Web.partialIdentity fun w => w.snd = Sum.inr c)))
+          (Becoming.«逆» Becoming.Steps.along))
+        (Becoming.ModelStatements.requiring W.roles) ∧
+      Becoming.«则»
+        (Becoming.«合» (Becoming.ModelStatements.atPair (t + 1, Sum.inl x) (t, Sum.inl g)) fun u v =>
+          Becoming.ModelStatements.requiringOf W.roles (Sum.inr c) u ∧
+            Becoming.ModelStatements.requiringOf W.roles (Sum.inr c) v)
+        (Becoming.ModelStatements.needWithin W.roles δ (Sum.inr c))
+@Becoming.ModelStatements.partialIdentity_le_iff : ∀ {α : Type} {P Q : α → Prop},
+  Becoming.«则» (Becoming.Web.partialIdentity P) (Becoming.Web.partialIdentity Q) ↔ ∀ (x : α), P x → Q x
+@Becoming.ModelStatements.significant_iff_reading : ∀ {Pos C : Type} (V : Becoming.Valuation Pos C),
+  V.Significant ↔
+    ∀ (p : Pos), Becoming.«则» (Becoming.Web.partialIdentity V.living) (Becoming.Web.partialIdentity (V.sig p))
+@Becoming.ModelStatements.selfSignificance_iff_reading : ∀ {Pos C : Type} (V : Becoming.Valuation Pos C) (p : Pos),
+  V.SelfSignificance p ↔
+    Becoming.«则» (Becoming.«合» (Becoming.Web.partialIdentity (V.own p)) (Becoming.Web.partialIdentity V.living))
+      (Becoming.Web.partialIdentity (V.sig p))
+@Becoming.ModelStatements.shares_iff_reading : ∀ {Pos C : Type} (V : Becoming.Valuation Pos C),
+  Becoming.Neutral V.shares ↔
+    ∀ (p q : Pos),
+      Becoming.«则» (Becoming.«合» (Becoming.Web.partialIdentity V.living) (Becoming.Web.partialIdentity (V.sig p)))
+        (Becoming.Web.partialIdentity (V.sig q))
+@Becoming.ModelStatements.held_iff_reading : ∀ {Pos C : Type} (V : Becoming.Valuation Pos C),
+  V.Held ↔ Becoming.«则» (Becoming.Web.partialIdentity V.living) (Becoming.Web.partialIdentity fun c => ∃ p, V.own p c)
+@Becoming.ModelStatements.significant_iff_held_reading : ∀ {Pos C : Type} (V : Becoming.Valuation Pos C),
+  Becoming.«则» (Becoming.Web.partialIdentity V.living) (Becoming.Web.partialIdentity fun c => ∃ p, V.own p c) →
+    ((∀ (p : Pos), Becoming.«则» (Becoming.Web.partialIdentity V.living) (Becoming.Web.partialIdentity (V.sig p))) ↔
+      (∀ (p : Pos),
+          Becoming.«则» (Becoming.«合» (Becoming.Web.partialIdentity (V.own p)) (Becoming.Web.partialIdentity V.living))
+            (Becoming.Web.partialIdentity (V.sig p))) ∧
+        ∀ (p q : Pos),
+          Becoming.«则» (Becoming.«合» (Becoming.Web.partialIdentity V.living) (Becoming.Web.partialIdentity (V.sig p)))
+            (Becoming.Web.partialIdentity (V.sig q)))
+@Becoming.ModelStatements.neutral_transmits_iff : ∀ {Pos C : Type} (V : Becoming.Valuation Pos C),
+  Becoming.Neutral V.transmits ↔ ∀ (p : Pos), Becoming.«闭» (Becoming.«合» V.related fun x d => V.living d) (V.sig p)
+@Becoming.ModelStatements.livesOn_iff : ∀ {X : Type} (V : Becoming.Web X X) (a b : Nat × X),
+  V.LivesOn (a.snd, a.fst) (b.snd, b.fst) ↔ Becoming.ModelStatements.livesOn V a b
+@Becoming.ModelStatements.interacts_iff : ∀ {X : Type} (V : Becoming.Web X X) (a b : Nat × X),
+  (∃ c, V.Interacts c (a.snd, a.fst) (b.snd, b.fst)) ↔ Becoming.ModelStatements.interacts V a b
+@Becoming.ModelStatements.sustenance_related_iff : ∀ {X : Type} (V : Becoming.Web X X) {Pos : Type}
+  (own sig : Pos → X × Nat → Prop) (a b : Nat × X),
+  (V.sustenance own sig).related (a.snd, a.fst) (b.snd, b.fst) ↔ Becoming.ModelStatements.sustenanceRel V a b
+@Becoming.ModelStatements.sustenance_neutral_iff : ∀ {X : Type} (V : Becoming.Web X X) {Pos : Type}
+  (own sig : Pos → X × Nat → Prop),
+  Becoming.Neutral (V.sustenance own sig).transmits ↔
+    ∀ (p : Pos),
+      Becoming.«闭»
+        (Becoming.«合» (Becoming.ModelStatements.sustenanceRel V) fun x b => Becoming.ModelStatements.livingOcc V b)
+        fun a => sig p (a.snd, a.fst)
+@Becoming.ModelStatements.living_on_reaches_reading : ∀ {X Pos : Type} {W : Becoming.Web X X}
+  {sig : Pos → X × Nat → Prop},
+  (∀ (p : Pos),
+      Becoming.«闭»
+        (Becoming.«合» (Becoming.ModelStatements.sustenanceRel W) fun x b => Becoming.ModelStatements.livingOcc W b)
+        fun a => sig p (a.snd, a.fst)) →
+    ∀ {p : Pos} {a b : Nat × X},
+      Becoming.ModelStatements.livesOn W a b →
+        sig p (a.snd, a.fst) → Becoming.ModelStatements.livingOcc W b → sig p (b.snd, b.fst)
+@Becoming.ModelStatements.descends_iff : ∀ {X : Type} (L : Becoming.Flow X X) (V : Becoming.Web X X) (x g : X)
+  (t s : Nat), L.Descends V x g ↔ Becoming.ModelStatements.descendsRel L V (t, g) (s, x)
+@Becoming.ModelStatements.descent_related_iff : ∀ {X : Type} (L : Becoming.Flow X X) (V : Becoming.Web X X) {Pos : Type}
+  (own sig : Pos → X × Nat → Prop) (a b : Nat × X),
+  (L.descent V own sig).related (a.snd, a.fst) (b.snd, b.fst) ↔ Becoming.ModelStatements.descentRel L V a b
+@Becoming.ModelStatements.descent_neutral_iff : ∀ {X : Type} (L : Becoming.Flow X X) (V : Becoming.Web X X) {Pos : Type}
+  (own sig : Pos → X × Nat → Prop),
+  Becoming.Neutral (L.descent V own sig).transmits ↔
+    ∀ (p : Pos),
+      Becoming.«闭»
+        (Becoming.«合» (Becoming.ModelStatements.descentRel L V) fun x b => Becoming.ModelStatements.livingOcc V b)
+        fun a => sig p (a.snd, a.fst)
+@Becoming.ModelStatements.descent_reaches_reading : ∀ {X Pos : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {sig : Pos → X × Nat → Prop},
+  (∀ (p : Pos),
+      Becoming.«闭»
+        (Becoming.«合» (Becoming.ModelStatements.descentRel L W) fun x b => Becoming.ModelStatements.livingOcc W b)
+        fun a => sig p (a.snd, a.fst)) →
+    ∀ {p : Pos} {a b : Nat × X},
+      Becoming.ModelStatements.descendsRel L W a b →
+        sig p (a.snd, a.fst) → Becoming.ModelStatements.livingOcc W b → sig p (b.snd, b.fst)
+@Becoming.ModelStatements.retains_iff : ∀ {F C Pos : Type} (W : Becoming.Web F C) (sig : Pos → Nat → F → Prop) (p : Pos)
+  (l l' : Nat → C → Nat),
+  W.Retains sig p l l' ↔
+    Becoming.«则» (Becoming.«合» (Becoming.ModelStatements.significantAt sig p) (W.admitted l')) (W.admitted l)
+@Becoming.ModelStatements.adds_iff : ∀ {F C Pos : Type} (W : Becoming.Web F C) (sig : Pos → Nat → F → Prop) (p : Pos)
+  (l l' : Nat → C → Nat),
+  W.Adds sig p l l' ↔
+    Becoming.«逾» (Becoming.«合» (Becoming.ModelStatements.significantAt sig p) (W.admitted l)) (W.admitted l')
+@Becoming.ModelStatements.significant_iff_livingClaim : ∀ {F C Pos : Type} (W : Becoming.Web F C)
+  (own sig : Pos → F × Nat → Prop),
+  (W.valuation own sig).Significant ↔
+    ∀ (q : Pos),
+      Becoming.«则» (Becoming.Web.partialIdentity (Becoming.ModelStatements.livingClaim W))
+        (Becoming.Web.partialIdentity (sig q))
+@Becoming.ModelStatements.significance_undetermined_reading : ∀ {F C Pos : Type} (W : Becoming.Web F C) (p : Pos)
+  {e : F × Nat},
+  Becoming.ModelStatements.livingClaim W e →
+    (∀ (l l' : Nat → C → Nat),
+        Becoming.«则» (Becoming.«合» (Becoming.ModelStatements.significantAt (fun x x_1 x_2 => False) p) (W.admitted l'))
+            (W.admitted l) ∧
+          ¬Becoming.«逾»
+              (Becoming.«合» (Becoming.ModelStatements.significantAt (fun x x_1 x_2 => False) p) (W.admitted l))
+              (W.admitted l')) ∧
+      Becoming.«则» (Becoming.Web.partialIdentity (Becoming.ModelStatements.livingClaim W))
+          (Becoming.Web.partialIdentity fun x => True) ∧
+        ¬Becoming.«则» (Becoming.Web.partialIdentity (Becoming.ModelStatements.livingClaim W))
+            (Becoming.Web.partialIdentity fun x => False)
+Becoming.ModelStatements.withinSteps_iff_le : ∀ (n k : Nat), Becoming.«所闭» Becoming.Steps.next n k ↔ n ≤ k
+Becoming.ModelStatements.before_iff_lt : ∀ (n k : Nat), Becoming.«及» Becoming.Steps.next n k ↔ n < k
+@Becoming.ModelStatements.tracks_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {V : Type u_3}
+  {g h : Nat → Becoming.Run P → V},
+  Becoming.Limit.Tracks g h ↔
+    ∀ (r : Becoming.Run P), ∃ n, ∀ (k : Nat), Becoming.«所闭» Becoming.Steps.next n k → g k r = h k r
+@Becoming.ModelStatements.identifies_iff_reading : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {V : Type u_3} {g : Nat → Becoming.Run P → V} {H : Becoming.Run P → V},
+  Becoming.Limit.Identifies g H ↔
+    ∀ (r : Becoming.Run P), ∃ n, ∀ (k : Nat), Becoming.«所闭» Becoming.Steps.next n k → g k r = H r
+@Becoming.ModelStatements.agreeUpTo_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (h : Nat)
+  (r r' : Becoming.Run P),
+  Becoming.Run.AgreeUpTo h r r' ↔
+    (∀ (n : Nat), Becoming.«所闭» Becoming.Steps.next n h → r.state n = r'.state n) ∧
+      ∀ (n : Nat), Becoming.«及» Becoming.Steps.next n h → r.act n = r'.act n
+@Becoming.ModelStatements.kernel_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {g : S → Prop}
+  {s : S}, Becoming.Viability.Kernel P g s ↔ ∀ (t : S), Becoming.«所闭» (Becoming.Steps P) s t → g t
+@Becoming.ModelStatements.kernel_and_reading : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {g₁ g₂ : S → Prop} {s : S},
+  (∀ (t : S), Becoming.«所闭» (Becoming.Steps P) s t → g₁ t ∧ g₂ t) ↔
+    (∀ (t : S), Becoming.«所闭» (Becoming.Steps P) s t → g₁ t) ∧ ∀ (t : S), Becoming.«所闭» (Becoming.Steps P) s t → g₂ t
+@Becoming.ModelStatements.withholdAll_iff_li : ∀ {S : Type u_1} {F : Type} (withhold : F → S → S) (fs : List F)
+  (s t : S),
+  Becoming.«历» (Becoming.ModelStatements.withholding withhold) fs s t ↔ t = Becoming.withholdAll withhold fs s
+@Becoming.ModelStatements.makesDifference_iff : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  (K : Becoming.Dependence S F C) {P : Generative.Process S A} {withhold : F → S → S} {f : F} {s : S} {a : A} {g : F}
+  {c : C},
+  K.MakesDifference P withhold f s a g c ↔
+    Becoming.ModelStatements.differenceAt K P (Becoming.ModelStatements.withholding withhold f) s a g c
+@Becoming.ModelStatements.makesDifferenceTogether_iff : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  (K : Becoming.Dependence S F C) {P : Generative.Process S A} {withhold : F → S → S} {fs : List F} {s : S} {a : A}
+  {g : F} {c : C},
+  K.MakesDifferenceTogether P withhold fs s a g c ↔
+    Becoming.ModelStatements.differenceAt K P (Becoming.«历» (Becoming.ModelStatements.withholding withhold) fs) s a g c
+@Becoming.ModelStatements.differenceOnlyTogether_iff_model : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  (K : Becoming.Dependence S F C) {P : Generative.Process S A} {withhold : F → S → S} {fs : List F} {s : S} {a : A}
+  {g : F} {c : C},
+  K.DifferenceOnlyTogether P withhold fs s a g c ↔
+    Becoming.ModelStatements.differenceAt K P (Becoming.«历» (Becoming.ModelStatements.withholding withhold) fs) s a g
+        c ∧
+      ∀ (f : F),
+        f ∈ fs → ¬Becoming.ModelStatements.differenceAt K P (Becoming.ModelStatements.withholding withhold f) s a g c
+@Becoming.ModelStatements.overdetermined_iff : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  (K : Becoming.Dependence S F C) {P : Generative.Process S A} {withhold : F → S → S} {s : S} {a : A} {g : F} {c : C},
+  K.Overdetermined P withhold s a g c ↔
+    Becoming.«能» (Becoming.«合» (Becoming.moveRel P a) (Becoming.ModelStatements.breaking K g c)) s ∧
+      ∀ (f : F),
+        Becoming.«能»
+          (Becoming.«而» (Becoming.ModelStatements.withholding withhold f)
+            (Becoming.«合» (Becoming.moveRel P a) (Becoming.ModelStatements.breaking K g c)))
+          s
+@Becoming.ModelStatements.only_together_reading : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  (K : Becoming.Dependence S F C) {P : Generative.Process S A} {withhold : F → S → S} {fs : List F} {s : S} {a : A}
+  {g : F} {c : C},
+  (Becoming.«能» (Becoming.«合» (Becoming.moveRel P a) (Becoming.ModelStatements.breaking K g c)) s ∧
+      ∀ (f : F),
+        Becoming.«能»
+          (Becoming.«而» (Becoming.ModelStatements.withholding withhold f)
+            (Becoming.«合» (Becoming.moveRel P a) (Becoming.ModelStatements.breaking K g c)))
+          s) →
+    Becoming.ModelStatements.differenceAt K P (Becoming.«历» (Becoming.ModelStatements.withholding withhold) fs) s a g
+        c →
+      Becoming.ModelStatements.differenceAt K P (Becoming.«历» (Becoming.ModelStatements.withholding withhold) fs) s a g
+          c ∧
+        ∀ (f : F),
+          f ∈ fs → ¬Becoming.ModelStatements.differenceAt K P (Becoming.ModelStatements.withholding withhold f) s a g c
+@Becoming.ModelStatements.differenceOnlyTogether_reading : ∀ {S : Type u_1} {A : Type u_2} {F C : Type}
+  (K : Becoming.Dependence S F C) {P : Generative.Process S A},
+  (∀ (b : A), Becoming.«定后» (Becoming.moveRel P b)) →
+    ∀ {withhold : F → S → S} {fs : List F} {s : S} {a : A} {g : F} {c : C},
+      (∀ (f : F),
+          f ∈ fs →
+            Becoming.«能» (Becoming.«而» (Becoming.ModelStatements.withholding withhold f) (Becoming.moveRel P a)) s) →
+        (∀ (f : F),
+            f ∈ fs →
+              ∀ (w : S),
+                Becoming.ModelStatements.withholding withhold f s w →
+                  Becoming.ModelStatements.requiresAt K g c w ∧ Becoming.ModelStatements.needMetAt K g c w) →
+          ((Becoming.ModelStatements.differenceAt K P (Becoming.«历» (Becoming.ModelStatements.withholding withhold) fs)
+                s a g c ∧
+              ∀ (f : F),
+                f ∈ fs →
+                  ¬Becoming.ModelStatements.differenceAt K P (Becoming.ModelStatements.withholding withhold f) s a g
+                      c) ↔
+            Becoming.ModelStatements.differenceAt K P (Becoming.«历» (Becoming.ModelStatements.withholding withhold) fs)
+                s a g c ∧
+              ∀ (f : F),
+                f ∈ fs →
+                  Becoming.«能»
+                    (Becoming.«而» (Becoming.ModelStatements.withholding withhold f)
+                      (Becoming.«合» (Becoming.moveRel P a) (Becoming.ModelStatements.breaking K g c)))
+                    s)
+@Becoming.ModelStatements.fixes_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  (t : Nat) (s : S) (a : A) (u : S),
+  r.Fixes t s a u ↔
+    ∀ (G : A → Becoming.«际» S),
+      (∀ (b : A), Becoming.«定后» (G b)) →
+        (∀ (n : Nat), Becoming.«及» Becoming.Steps.next n t → G (r.act n) (r.state n) (r.state (n + 1))) →
+          ∀ (u' : S), G a s u' → u' = u
+@Becoming.ModelStatements.takes_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  (t : Nat) (s : S) (b : A), r.Takes t s b ↔ ∃ n, Becoming.«及» Becoming.Steps.next n t ∧ r.state n = s ∧ r.act n = b
+@Becoming.ModelStatements.not_fixes_reading : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  (∀ (b : A), Becoming.«定后» (Becoming.moveRel P b)) →
+    ∀ (r : Becoming.Run P) {t : Nat} {s : S} {b : A},
+      (¬∃ n, Becoming.«及» Becoming.Steps.next n t ∧ r.state n = s ∧ r.act n = b) →
+        ∀ {x y : S},
+          x ≠ y →
+            ¬∃ u,
+                ∀ (G : A → Becoming.«际» S),
+                  (∀ (b : A), Becoming.«定后» (G b)) →
+                    (∀ (n : Nat), Becoming.«及» Becoming.Steps.next n t → G (r.act n) (r.state n) (r.state (n + 1))) →
+                      ∀ (u' : S), G b s u' → u' = u
+@Becoming.ModelStatements.origin_iff_li : ∀ {I : Type u_1} {M : Type u_2} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] (m : M) (es : List (Becoming.SharedCodes.Hearing I M)) (i j : I),
+  Becoming.SharedCodes.origin m es i = j ↔ Becoming.«历» (Becoming.ModelStatements.copies m) es j i
+@Becoming.ModelStatements.reached_iff : ∀ {I : Type u_1} {M : Type u_2} [inst : DecidableEq I] [inst_1 : DecidableEq M]
+  {F : Type u_3} (adopt : (M → F) → (M → F) → M → Bool) (es : List (Becoming.SharedCodes.Hearing I M))
+  (X Y : I → M → F),
+  Becoming.«历» (Becoming.moveRel (Becoming.SharedCodes.process adopt)) es X Y ↔
+    Y = Becoming.SharedCodes.runBy adopt es X
+@Becoming.ModelStatements.runs_agree_iff_reached : ∀ {I : Type u_1} {M : Type u_2} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {F : Type u_3} (acts : Nat → Becoming.SharedCodes.Hearing I M) (k : Nat) (m : M),
+  (∀ (r : Becoming.Run (Becoming.SharedCodes.process Becoming.SharedCodes.always)),
+      (∀ (t : Nat), r.act t = acts t) → ∀ (i j : I), r.state k i m = r.state k j m) ↔
+    ∀ (X Y : I → M → F),
+      Becoming.«历» (Becoming.moveRel (Becoming.SharedCodes.process Becoming.SharedCodes.always))
+          (Becoming.SharedCodes.hearings acts 0 k) X Y →
+        Becoming.«则» Becoming.«一» (Becoming.sameValue fun i => Y i m)
+@Becoming.ModelStatements.run_agrees_every_start_reading : ∀ {I : Type u_1} {M : Type u_2} [inst : DecidableEq I]
+  [inst_1 : DecidableEq M] {F : Type u_3} {a b : F},
+  a ≠ b →
+    ∀ (acts : Nat → Becoming.SharedCodes.Hearing I M) (k : Nat) (m : M),
+      (∀ (X Y : I → M → F),
+          Becoming.«历» (Becoming.moveRel (Becoming.SharedCodes.process Becoming.SharedCodes.always))
+              (Becoming.SharedCodes.hearings acts 0 k) X Y →
+            Becoming.«则» Becoming.«一» (Becoming.sameValue fun i => Y i m)) ↔
+        Becoming.«则» Becoming.«一»
+          (Becoming.«而»
+            (Becoming.«逆» (Becoming.«历» (Becoming.ModelStatements.copies m) (Becoming.SharedCodes.hearings acts 0 k)))
+            (Becoming.«历» (Becoming.ModelStatements.copies m) (Becoming.SharedCodes.hearings acts 0 k)))
+Becoming.ModelStatements.renewing_iff_along : ∀ (r : Becoming.Run Becoming.Renewable.process),
+  (Becoming.Renewable.conditions.dependence.along r).RenewingIn Becoming.Renewable.Formation.focal ↔
+    Becoming.ModelStatements.renewingAlong r
+Becoming.ModelStatements.finite_reading_not_exact : ∀ (h : Nat)
+  (reading : Becoming.Run Becoming.Renewable.process → Prop),
+  Becoming.«闭»
+      (fun r r' =>
+        (∀ (n : Nat), Becoming.«所闭» Becoming.Steps.next n h → r.state n = r'.state n) ∧
+          ∀ (n : Nat), Becoming.«及» Becoming.Steps.next n h → r.act n = r'.act n)
+      reading →
+    ¬∀ (r : Becoming.Run Becoming.Renewable.process), reading r ↔ Becoming.ModelStatements.renewingAlong r
+Becoming.ModelStatements.finite_reading_iff : ∀ (h : Nat),
+  (∀ (reading : Becoming.Run Becoming.Renewable.process → Prop),
+      Becoming.«闭»
+          (fun r r' =>
+            (∀ (n : Nat), Becoming.«所闭» Becoming.Steps.next n h → r.state n = r'.state n) ∧
+              ∀ (n : Nat), Becoming.«及» Becoming.Steps.next n h → r.act n = r'.act n)
+          reading →
+        ¬∀ (r : Becoming.Run Becoming.Renewable.process), reading r ↔ Becoming.ModelStatements.renewingAlong r) ↔
+    ¬Becoming.«闭»
+        (fun r r' =>
+          (∀ (n : Nat), Becoming.«所闭» Becoming.Steps.next n h → r.state n = r'.state n) ∧
+            ∀ (n : Nat), Becoming.«及» Becoming.Steps.next n h → r.act n = r'.act n)
+        Becoming.ModelStatements.renewingAlong
+Becoming.ModelStatements.renewing_not_closed : ∀ (h : Nat),
+  ¬Becoming.«闭»
+      (fun r r' =>
+        (∀ (n : Nat), Becoming.«所闭» Becoming.Steps.next n h → r.state n = r'.state n) ∧
+          ∀ (n : Nat), Becoming.«及» Becoming.Steps.next n h → r.act n = r'.act n)
+      Becoming.ModelStatements.renewingAlong
+@Becoming.ModelStatements.through_iff_inclusion : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool},
+  law.Through W obs part ↔
+    ∀ (h : F),
+      part h = false →
+        ∀ (t : Nat),
+          Becoming.«则» (Becoming.ModelStatements.couplingAlike W obs h t)
+            (Becoming.ModelStatements.exchangingAlike law t h)
+@Becoming.ModelStatements.response_not_fixed_reading : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {l l' : Nat → C → Nat} {t : Nat}
+  (decided :
+    (h : F) → (t : Nat) → (m : Nat → C → Nat) → Decidable (Becoming.ModelStatements.couplingAlike W obs h t l m))
+  {g : F} (c : C),
+  ¬Becoming.ModelStatements.couplingAlike W obs g t l l' →
+    (∃ law,
+        (∀ (h : F) (s : Nat),
+            Becoming.«则» (Becoming.ModelStatements.couplingAlike W obs h s)
+              (Becoming.ModelStatements.exchangingAlike law s h)) ∧
+          ¬Becoming.sameValue (fun m => law.take t g m c) l l') ∧
+      ∃ law,
+        (∀ (h : F) (s : Nat),
+            Becoming.«则» (Becoming.ModelStatements.couplingAlike W obs h s)
+              (Becoming.ModelStatements.exchangingAlike law s h)) ∧
+          ∀ (s : Nat) (h : F), Becoming.«谓» (Becoming.ModelStatements.exchangingAlike law s h) Becoming.«一»
+@Becoming.ModelStatements.interiorBy_iff : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop} {x : X},
+  Becoming.Ideals.InteriorBy ι K x ↔
+    Becoming.«能»
+      (Becoming.«合» (Becoming.ModelStatements.member ι) fun x v =>
+        Becoming.«承» (Becoming.ModelStatements.member ι) (Becoming.ModelStatements.onPoints K) v)
+      (Sum.inl x)
+@Becoming.ModelStatements.verifiableBy_reading : ∀ {α : Type u_1} {P : Becoming.Ideals.Preorder α} {X : Type u_2}
+  {ι : X → Becoming.Ideals.Ideal P} {K : X → Prop},
+  Becoming.Ideals.VerifiableBy ι K ↔
+    ∀ (x : X),
+      K x →
+        Becoming.«能»
+          (Becoming.«合» (Becoming.ModelStatements.member ι) fun x v =>
+            Becoming.«承» (Becoming.ModelStatements.member ι) (Becoming.ModelStatements.onPoints K) v)
+          (Sum.inl x)
+@Becoming.ModelStatements.through_of_closed : ∀ {I : Type u_1} {V : Type u_2} {D : I → Prop} {select : (I → V) → Prop},
+  Becoming.«闭» (Becoming.Learning.Training.AgreeOn D) select →
+    Becoming.Learning.Training.Through (Becoming.Learning.Training.AgreeOn D) select
+@Becoming.ModelStatements.free_iff : ∀ {I : Type u_1} {V : Type u_2} {C : (I → V) → Prop} {D : I → Prop} {x : I},
+  Becoming.Learning.Free C D x ↔
+    Becoming.«则» (Becoming.«合» (fun g x => C g) fun x g' => C g')
+      (Becoming.«而» (Becoming.«合» (Becoming.«逆» (Becoming.Learning.Training.AgreeOn D)) fun x h => C h)
+        (Becoming.sameValue fun f => f x))
+@Becoming.ModelStatements.unselected_beyond_data_reading : ∀ {I : Type u_1} {V : Type u_2} {C : (I → V) → Prop}
+  {D : I → Prop} {x : I} {select : (I → V) → Prop},
+  Becoming.«闭» (Becoming.ModelStatements.agreeingOn D) select →
+    Becoming.«则» (Becoming.«合» (fun g x => C g) fun x g' => C g')
+        (Becoming.«而» (Becoming.«合» (Becoming.«逆» (Becoming.ModelStatements.agreeingOn D)) fun x h => C h)
+          (Becoming.sameValue fun f => f x)) →
+      ∀ {g g' : I → V},
+        C g →
+          C g' →
+            select g →
+              Becoming.«而»
+                (Becoming.«合» (Becoming.«逆» (Becoming.ModelStatements.agreeingOn D)) fun x h => C h ∧ select h)
+                (Becoming.sameValue fun f => f x) g g'
+@Becoming.ModelStatements.rising_iff : ∀ {C : Type} {ds : List C} {better : (C → Nat) → (C → Nat) → Prop},
+  Becoming.Optimum.Rising ds better ↔ Becoming.«则» (Becoming.ModelStatements.exceedsOn ds) better
+@Becoming.ModelStatements.room_iff : ∀ {C : Type} {ds rest : List C} {eligible : (C → Nat) → Prop},
+  Becoming.Optimum.Room ds rest eligible ↔
+    ∀ (o : C → Nat),
+      Becoming.«能»
+          (Becoming.«而»
+            (Becoming.«而» (Becoming.Web.partialIdentity eligible) (Becoming.ModelStatements.lowerBeyond rest))
+            (Becoming.Web.partialIdentity eligible))
+          o →
+        Becoming.«能» (Becoming.«合» (Becoming.«逆» (Becoming.ModelStatements.exceedsOn ds)) fun x o'' => eligible o'') o
+@Becoming.ModelStatements.frontier_iff : ∀ {C : Type} {eligible : (C → Nat) → Prop}
+  {better : (C → Nat) → (C → Nat) → Prop} {a : C → Nat},
+  Becoming.Requirement.Frontier eligible better a ↔
+    eligible a ∧ ¬Becoming.«能» (Becoming.«合» (Becoming.«逆» better) fun x b => eligible b) a
+@Becoming.ModelStatements.metOn_iff : ∀ {F C : Type} (W : Becoming.Web F C) {dep : C → F} {rest : List C} {t : Nat},
+  W.MetOn dep rest t ↔
+    ∀ (c : C),
+      c ∈ rest →
+        Becoming.«合» (Becoming.ModelStatements.requiring W.roles) (Becoming.ModelStatements.needMet W.roles)
+          (t, Sum.inl (dep c)) (t, Sum.inr c)
+@Becoming.ModelStatements.broken_iff : ∀ {F C : Type} (W : Becoming.Web F C) {t : Nat} {g : F} {c : C},
+  W.Broken t g c ↔
+    Becoming.«合» (Becoming.ModelStatements.requiring W.roles) (Becoming.ModelStatements.needMet W.roles) (t, Sum.inl g)
+        (t, Sum.inr c) ∧
+      Becoming.ModelStatements.belowAfter W.roles (t, Sum.inl g) (t + 1, Sum.inr c)
+@Becoming.ModelStatements.optimum_broken_reading : ∀ {F C : Type} {W : Becoming.Web F C} {ds rest : List C}
+  {eligible : (C → Nat) → Prop} {better : (C → Nat) → (C → Nat) → Prop} {dep : C → F} {t : Nat},
+  Becoming.«则» (Becoming.ModelStatements.exceedsOn ds) better →
+    (∀ (o : C → Nat),
+        Becoming.«能»
+            (Becoming.«而»
+              (Becoming.«而» (Becoming.Web.partialIdentity eligible) (Becoming.ModelStatements.lowerBeyond rest))
+              (Becoming.Web.partialIdentity eligible))
+            o →
+          Becoming.«能» (Becoming.«合» (Becoming.«逆» (Becoming.ModelStatements.exceedsOn ds)) fun x o'' => eligible o'')
+            o) →
+      eligible (W.level (t + 1)) ∧
+          ¬Becoming.«能» (Becoming.«合» (Becoming.«逆» better) fun x b => eligible b) (W.level (t + 1)) →
+        (∀ (c : C),
+            c ∈ rest →
+              Becoming.«合» (Becoming.ModelStatements.requiring W.roles) (Becoming.ModelStatements.needMet W.roles)
+                (t, Sum.inl (dep c)) (t, Sum.inr c)) →
+          ∀ {c : C},
+            c ∈ rest →
+              (Becoming.«合» (Becoming.ModelStatements.requiring W.roles) (Becoming.ModelStatements.needMet W.roles)
+                    (t, Sum.inl (dep c)) (t, Sum.inr c) ∧
+                  Becoming.ModelStatements.belowAfter W.roles (t, Sum.inl (dep c)) (t + 1, Sum.inr c) ↔
+                ∃ o, eligible o ∧ o c < W.roles.need t (Sum.inl (dep c)) (Sum.inr c))

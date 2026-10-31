@@ -452,7 +452,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-verification.json",
       "role": "receipt",
-      "sha256": "42a685c1b335c9a234cc092d33828591d9d07016ec7be067fa942e0b72cda060",
+      "sha256": "f28d3801fa485058ddf47a66026a6d4c1999dea43c7a050607c4fdcd5de5116b",
       "declarations": []
     },
     {
@@ -635,6 +635,12 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json",
       "role": "receipt",
       "sha256": "e16b5ece7b28c05f2b3349d3f8d51ff4aef68bdedbe6e3b16942c0b9e28acda1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-checks/20261031T131847.549129Z/verification.json",
+      "role": "receipt",
+      "sha256": "f28d3801fa485058ddf47a66026a6d4c1999dea43c7a050607c4fdcd5de5116b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -647,7 +653,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-checks/20261031T131847.549129Z/verification.json",
       "sha256_pointer": "/source_sha256/LearningCorrespondence",
       "success_pointer": "/status",
       "success_value": "passed"

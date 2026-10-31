@@ -37,7 +37,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the module's checker with Lean 4.29.1 (receipt development/verification.json, passed 7 October 2026, fresh build of five modules, 107 audits; it binds the current bytes): DevelopedResponse, 17 declarations audited, 15 with propext only and the two energy laws with Quot.sound too, 9 cited here. An internal counter-review accepted the construction; not reviewed by a person.
+Checked by the module's checker with Lean 4.29.1 (receipt development/verification.json, passed 31 October 2026, fresh build of five modules, 107 audits; it binds the current bytes): DevelopedResponse, 17 declarations audited, 14 with propext only, 1 with an empty report and the two energy laws with Quot.sound too, 9 cited here. An internal counter-review accepted the construction; not reviewed by a person.
 
 Canonical source: [DevelopedResponse.lean](../../../../experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/DevelopedResponse.lean)
 
@@ -77,6 +77,7 @@ Aliases: `The same carrier need not fix the same response`, `同样的承载者�
 ### History
 
 - 27 October 2026: added (DF2), the same carrier need not fix the same response: two histories differing only in the timing of sampling give carriers alike, children with different gates and opposite outcomes of one assay, the continuation to a grandchild and its assisted rescue, and the energy balance; from DEFECTS-FOUND (triage rows 151 and 113); study section 426.
+- 31 October 2026, RV21c (study section 480): axiom reports from the renewed receipt; fewer, the same declarations, none gained, from FormedSelection's set_option line of 8 October.
 
 </details>
 

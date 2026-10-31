@@ -1,0 +1,1132 @@
+{
+ "fallible-inquiry-verification": {
+  "finite-fallible-inquiry-necessity": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T110231.056199Z/verification.json",
+    "sha256": "66492a0e15e19fe0e2e02614a9097af23a201ab3a39b497777440a9faeddb3d6"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T113924.930862Z/verification.json",
+    "sha256": "c9bdc73b20cd5ffb3b08f0b354dd5107205cb3ed2de8399ee91a7671cb9892e0"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T125313.109762Z/verification.json",
+    "sha256": "27cf7417826cc785919b437d7e2708bd32672cd7ff84d57bf3cf477c0b8ce55e"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T205526.452771Z/verification.json",
+    "sha256": "26ec20ad76d9c1acd39de927f3400875132b4f3a9a3dbcd1c1c10ffee251afd8"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261016T120403.241963Z/verification.json",
+    "sha256": "ee0a3be1c346e06588497429893a9d932418e13bc910a10121f942e6770481e5"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261018T063731.167536Z/verification.json",
+    "sha256": "211c5aab48e7f1eb987c8180fe2dc979e1b8ffac24ba8777e06b081ecfbd39d7"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261019T000109.055377Z/verification.json",
+    "sha256": "1e507f72ebb35344b2d1d4e72cee99ad82d3ae46826a4dee5ef2fc023ffabc5d"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
+    "sha256": "ff450f699fb07509588b2dd412a1e15ba46daa9d807e57864eee833c61243b75"
+   }
+  ],
+  "timely-response-necessity": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T125313.109762Z/verification.json",
+    "sha256": "27cf7417826cc785919b437d7e2708bd32672cd7ff84d57bf3cf477c0b8ce55e"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T205526.452771Z/verification.json",
+    "sha256": "26ec20ad76d9c1acd39de927f3400875132b4f3a9a3dbcd1c1c10ffee251afd8"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261018T063731.167536Z/verification.json",
+    "sha256": "211c5aab48e7f1eb987c8180fe2dc979e1b8ffac24ba8777e06b081ecfbd39d7"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261019T000109.055377Z/verification.json",
+    "sha256": "1e507f72ebb35344b2d1d4e72cee99ad82d3ae46826a4dee5ef2fc023ffabc5d"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
+    "sha256": "ff450f699fb07509588b2dd412a1e15ba46daa9d807e57864eee833c61243b75"
+   }
+  ],
+  "wisdom-root": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T125313.109762Z/verification.json",
+    "sha256": "27cf7417826cc785919b437d7e2708bd32672cd7ff84d57bf3cf477c0b8ce55e"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T205526.452771Z/verification.json",
+    "sha256": "26ec20ad76d9c1acd39de927f3400875132b4f3a9a3dbcd1c1c10ffee251afd8"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261018T063731.167536Z/verification.json",
+    "sha256": "211c5aab48e7f1eb987c8180fe2dc979e1b8ffac24ba8777e06b081ecfbd39d7"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261019T000109.055377Z/verification.json",
+    "sha256": "1e507f72ebb35344b2d1d4e72cee99ad82d3ae46826a4dee5ef2fc023ffabc5d"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261020T161546.707477Z/verification.json",
+    "sha256": "ff450f699fb07509588b2dd412a1e15ba46daa9d807e57864eee833c61243b75"
+   }
+  ]
+ },
+ "correction-inquiry-verification": {
+  "becoming-spine-instances": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionInquiry.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261020T161757.201244Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionBoundary.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261020T161757.201244Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationChange.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261020T161757.201244Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T095049.338744Z/verification.json",
+    "sha256": "80ec34ce2cb0d9d8a4eecc15a665bad394ec6548982e396ec5105e1a3d99ad02"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261020T161757.201244Z/verification.json",
+    "sha256": "65d71fe7e4ebae4f60eb099472875b8d9eb19ed5173d1da729982602d00ded3c"
+   }
+  ],
+  "comparison-content-under-regrouping": [
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T105346.131772Z/verification.json",
+    "sha256": "605074edc0c63c2f64625f16368c90c9604adc88e86e0b5a8d23319638bdc5db"
+   }
+  ],
+  "consequence-revised-reference-plan": [
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T121014.405728Z/verification.json",
+    "sha256": "b1386f69684a813f43efaead305a4d7feda0cb4daa1f999a8171dfe2fa06ac6a"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T122528.526650Z/verification.json",
+    "sha256": "24190db2755ba951caf2dc8f8cd5973dc081d4dc1cce265b0960cdebac2473ed"
+   }
+  ],
+  "recurring-reference-revision": [
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T130233.156038Z/verification.json",
+    "sha256": "58e9bc38a1568c55f2a6c8ce3151ae60f8b0f645f85655cc942df1b51460f7c7"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T131750.258973Z/verification.json",
+    "sha256": "de8e51c0eca26e33b10ba3f53586588ecc90de2e5e59747de6da7c000cc4afe9"
+   }
+  ],
+  "selection-under-registration-revision": [
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T113252.623598Z/verification.json",
+    "sha256": "5c5862acdc051a22378d489fbb2b385ad1795108a903074687d19085872fe731"
+   }
+  ]
+ },
+ "machine-instances-verification": {
+  "acquired-binding-compositional-use": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json",
+    "sha256": "9529958e4e9e29d9acd9ebff1dbe6cc734739f80577a0c75b623f85840ea2e79"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json",
+    "sha256": "6d30faffd5899d5180f3a2e230035c0f87ce266d959330b61aebed22411a173b"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
+    "sha256": "72cf0f96994a75c732cea93c92c4dbdf96cc4ba943d538de31ab2bcfd79cc9fb"
+   }
+  ],
+  "enacted-scene-binding": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json",
+    "sha256": "9529958e4e9e29d9acd9ebff1dbe6cc734739f80577a0c75b623f85840ea2e79"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json",
+    "sha256": "6d30faffd5899d5180f3a2e230035c0f87ce266d959330b61aebed22411a173b"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
+    "sha256": "72cf0f96994a75c732cea93c92c4dbdf96cc4ba943d538de31ab2bcfd79cc9fb"
+   }
+  ],
+  "encounter-selection-and-revision": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json",
+    "sha256": "9529958e4e9e29d9acd9ebff1dbe6cc734739f80577a0c75b623f85840ea2e79"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json",
+    "sha256": "6d30faffd5899d5180f3a2e230035c0f87ce266d959330b61aebed22411a173b"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
+    "sha256": "72cf0f96994a75c732cea93c92c4dbdf96cc4ba943d538de31ab2bcfd79cc9fb"
+   }
+  ],
+  "formed-goal-revision-continuation": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json",
+    "sha256": "9529958e4e9e29d9acd9ebff1dbe6cc734739f80577a0c75b623f85840ea2e79"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json",
+    "sha256": "6d30faffd5899d5180f3a2e230035c0f87ce266d959330b61aebed22411a173b"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
+    "sha256": "72cf0f96994a75c732cea93c92c4dbdf96cc4ba943d538de31ab2bcfd79cc9fb"
+   }
+  ],
+  "joint-correlation-reduced-dynamics": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json",
+    "sha256": "9529958e4e9e29d9acd9ebff1dbe6cc734739f80577a0c75b623f85840ea2e79"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json",
+    "sha256": "6d30faffd5899d5180f3a2e230035c0f87ce266d959330b61aebed22411a173b"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
+    "sha256": "72cf0f96994a75c732cea93c92c4dbdf96cc4ba943d538de31ab2bcfd79cc9fb"
+   }
+  ],
+  "joint-practice-forms-continuation": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json",
+    "sha256": "9529958e4e9e29d9acd9ebff1dbe6cc734739f80577a0c75b623f85840ea2e79"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json",
+    "sha256": "6d30faffd5899d5180f3a2e230035c0f87ce266d959330b61aebed22411a173b"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
+    "sha256": "72cf0f96994a75c732cea93c92c4dbdf96cc4ba943d538de31ab2bcfd79cc9fb"
+   }
+  ],
+  "retrospective-source-binding": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json",
+    "sha256": "9529958e4e9e29d9acd9ebff1dbe6cc734739f80577a0c75b623f85840ea2e79"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json",
+    "sha256": "6d30faffd5899d5180f3a2e230035c0f87ce266d959330b61aebed22411a173b"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
+    "sha256": "72cf0f96994a75c732cea93c92c4dbdf96cc4ba943d538de31ab2bcfd79cc9fb"
+   }
+  ],
+  "transition-grouping-word-partition": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json",
+    "sha256": "9529958e4e9e29d9acd9ebff1dbe6cc734739f80577a0c75b623f85840ea2e79"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json",
+    "sha256": "6d30faffd5899d5180f3a2e230035c0f87ce266d959330b61aebed22411a173b"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
+    "sha256": "72cf0f96994a75c732cea93c92c4dbdf96cc4ba943d538de31ab2bcfd79cc9fb"
+   }
+  ]
+ },
+ "learning-correspondence-verification": {
+  "generalization-through-lumping": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-verification.json",
+    "sha256": "42a685c1b335c9a234cc092d33828591d9d07016ec7be067fa942e0b72cda060"
+   }
+  ],
+  "wisdom-root-without-axiom": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-verification.json",
+    "sha256": "42a685c1b335c9a234cc092d33828591d9d07016ec7be067fa942e0b72cda060"
+   }
+  ]
+ },
+ "copying-instances-verification": {
+  "formed-copying-correction": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261020T161910.956874Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261014T092443.150338Z/verification.json",
+    "sha256": "6fe0e3ab38330703d0f751cff0e2dde91877f7f1bca06dc0c5065c1b21c6be17"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261020T161910.956874Z/verification.json",
+    "sha256": "9c6f7c83b495c048d23bd9802436d395f6120919a2a6277e17b16a0c950cd997"
+   }
+  ],
+  "formed-copying-registration": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261020T161910.956874Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261014T092443.150338Z/verification.json",
+    "sha256": "6fe0e3ab38330703d0f751cff0e2dde91877f7f1bca06dc0c5065c1b21c6be17"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261020T161910.956874Z/verification.json",
+    "sha256": "9c6f7c83b495c048d23bd9802436d395f6120919a2a6277e17b16a0c950cd997"
+   }
+  ],
+  "inherited-structural-copying": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261020T161910.956874Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261014T092443.150338Z/verification.json",
+    "sha256": "6fe0e3ab38330703d0f751cff0e2dde91877f7f1bca06dc0c5065c1b21c6be17"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261020T161910.956874Z/verification.json",
+    "sha256": "9c6f7c83b495c048d23bd9802436d395f6120919a2a6277e17b16a0c950cd997"
+   }
+  ],
+  "recurrent-chain-assembly": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261020T161910.956874Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261014T092443.150338Z/verification.json",
+    "sha256": "6fe0e3ab38330703d0f751cff0e2dde91877f7f1bca06dc0c5065c1b21c6be17"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261020T161910.956874Z/verification.json",
+    "sha256": "9c6f7c83b495c048d23bd9802436d395f6120919a2a6277e17b16a0c950cd997"
+   }
+  ]
+ },
+ "retrodiction-instances-verification": {
+  "historical-source-binding": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RetrodictionInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/retrodiction-instances-checks/20261020T161914.501944Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/retrodiction-instances-checks/20261014T045409.164228Z/verification.json",
+    "sha256": "a3eb20d4005696835aee35fcba1c7bb8496f15d8e065ba65c8bb74783c42ee4a"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/retrodiction-instances-checks/20261020T161914.501944Z/verification.json",
+    "sha256": "4b89c730c7168ff864626508ab8e838def2fc78c2666d3b07a5eec3f01c25980"
+   }
+  ]
+ },
+ "market-instances-verification": {
+  "market-finite-support-obstruction": [
+   {
+    "kind": "binding",
+    "source": "experiments/market-generativity/formal/MarketInstances.lean",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261020T161917.735916Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261014T141058.867757Z/verification.json",
+    "sha256": "86c5bd405e45fbf123e8eab5663a08275bea633dae27f137c359de524ca81a32"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261020T161917.735916Z/verification.json",
+    "sha256": "30a00db7380ac78007cb1a025d44e47a5ea219588e3e2c9616d8a15eabda7a72"
+   }
+  ],
+  "market-partial-correction-boundary": [
+   {
+    "kind": "binding",
+    "source": "experiments/market-generativity/formal/MarketInstances.lean",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261020T161917.735916Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261014T141058.867757Z/verification.json",
+    "sha256": "86c5bd405e45fbf123e8eab5663a08275bea633dae27f137c359de524ca81a32"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261020T161917.735916Z/verification.json",
+    "sha256": "30a00db7380ac78007cb1a025d44e47a5ea219588e3e2c9616d8a15eabda7a72"
+   }
+  ],
+  "market-protected-continuation": [
+   {
+    "kind": "binding",
+    "source": "experiments/market-generativity/formal/MarketInstances.lean",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261020T161917.735916Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261014T141058.867757Z/verification.json",
+    "sha256": "86c5bd405e45fbf123e8eab5663a08275bea633dae27f137c359de524ca81a32"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261020T161917.735916Z/verification.json",
+    "sha256": "30a00db7380ac78007cb1a025d44e47a5ea219588e3e2c9616d8a15eabda7a72"
+   }
+  ],
+  "market-supported-finite-transition": [
+   {
+    "kind": "binding",
+    "source": "experiments/market-generativity/formal/MarketInstances.lean",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261020T161917.735916Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261014T141058.867757Z/verification.json",
+    "sha256": "86c5bd405e45fbf123e8eab5663a08275bea633dae27f137c359de524ca81a32"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261020T161917.735916Z/verification.json",
+    "sha256": "30a00db7380ac78007cb1a025d44e47a5ea219588e3e2c9616d8a15eabda7a72"
+   }
+  ]
+ },
+ "protocol-instances-verification": {
+  "mediated-evidence-transport": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtocolInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261020T161923.157515Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261014T141016.373278Z/verification.json",
+    "sha256": "cdc048ab9005b9651da4a7a53c188a22e69b71a8663a3ce15bca639c0bfd2c7a"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261020T161923.157515Z/verification.json",
+    "sha256": "6cd7899c19eca6682bff8e1b5648a4d449f8df927e27b83596fe6d3ed0f71297"
+   }
+  ],
+  "recoverable-mediated-change": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtocolInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261020T161923.157515Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261014T141016.373278Z/verification.json",
+    "sha256": "cdc048ab9005b9651da4a7a53c188a22e69b71a8663a3ce15bca639c0bfd2c7a"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261020T161923.157515Z/verification.json",
+    "sha256": "6cd7899c19eca6682bff8e1b5648a4d449f8df927e27b83596fe6d3ed0f71297"
+   }
+  ],
+  "reserved-shutdown-during-recovery": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtocolInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261020T161923.157515Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261014T141016.373278Z/verification.json",
+    "sha256": "cdc048ab9005b9651da4a7a53c188a22e69b71a8663a3ce15bca639c0bfd2c7a"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261020T161923.157515Z/verification.json",
+    "sha256": "6cd7899c19eca6682bff8e1b5648a4d449f8df927e27b83596fe6d3ed0f71297"
+   }
+  ]
+ },
+ "versioned-task-instances-verification": {
+  "acquired-revision-of-pending-task": [
+   {
+    "kind": "binding",
+    "source": "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean",
+    "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261014T092502.891314Z/verification.json",
+    "sha256": "a96ddf7c21bc027d5eed8b1bd3c7ba6c21731d3b2f9297a5f42f6b649af3ed55"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json",
+    "sha256": "04603eb9a2886e68a09da9ad1e3015350cd41e5b40d2ea35f2fecfcc1b2f5b3e"
+   }
+  ],
+  "pending-task-context-applicability": [
+   {
+    "kind": "binding",
+    "source": "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean",
+    "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261014T092502.891314Z/verification.json",
+    "sha256": "a96ddf7c21bc027d5eed8b1bd3c7ba6c21731d3b2f9297a5f42f6b649af3ed55"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json",
+    "sha256": "04603eb9a2886e68a09da9ad1e3015350cd41e5b40d2ea35f2fecfcc1b2f5b3e"
+   }
+  ],
+  "versioned-request-completion": [
+   {
+    "kind": "binding",
+    "source": "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean",
+    "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261014T092502.891314Z/verification.json",
+    "sha256": "a96ddf7c21bc027d5eed8b1bd3c7ba6c21731d3b2f9297a5f42f6b649af3ed55"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json",
+    "sha256": "04603eb9a2886e68a09da9ad1e3015350cd41e5b40d2ea35f2fecfcc1b2f5b3e"
+   }
+  ]
+ },
+ "shared-stock-instances-verification": {
+  "draws-on-a-shared-stock": [
+   {
+    "kind": "binding",
+    "source": "experiments/market-generativity/meta-attractor/SharedStockInstances.lean",
+    "receipt": "experiments/market-generativity/meta-attractor/shared-stock-instances-checks/20261020T161930.665727Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/meta-attractor/shared-stock-instances-checks/20261015T151857.892080Z/verification.json",
+    "sha256": "374eeb9102eda60722d4fd72f5683e5b583af740f44f3f55f5c3744819170036"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/meta-attractor/shared-stock-instances-checks/20261020T161930.665727Z/verification.json",
+    "sha256": "e457f4ae2a3f763a378e0070b25fc175a9daeb628370f6ac1ee9fd62c5018341"
+   }
+  ]
+ },
+ "continuation-correspondence-verification": {
+  "finite-continuation-plans": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261020T161935.181496Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261015T151901.978501Z/verification.json",
+    "sha256": "e974b521d60b0f4799acda98f10aef4d768509878d4add899992752842ca823f"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261020T161935.181496Z/verification.json",
+    "sha256": "d19ce2254ea3f94c2de0b7c41a67290c7ef3e53c5a907c0ed5b58a8838309d09"
+   }
+  ],
+  "joint-plan-composition": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261020T161935.181496Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261015T151901.978501Z/verification.json",
+    "sha256": "e974b521d60b0f4799acda98f10aef4d768509878d4add899992752842ca823f"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261020T161935.181496Z/verification.json",
+    "sha256": "d19ce2254ea3f94c2de0b7c41a67290c7ef3e53c5a907c0ed5b58a8838309d09"
+   }
+  ]
+ },
+ "transmission-correspondence-verification": {
+  "learned-procedure-transmission": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/TransmissionCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/transmission-correspondence-checks/20261020T161938.520043Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/transmission-correspondence-checks/20261015T151904.501987Z/verification.json",
+    "sha256": "43fb60f0b2a25b331a68fadc68cbcb6074bd282724cab160c624c2c401d57bd4"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/transmission-correspondence-checks/20261020T161938.520043Z/verification.json",
+    "sha256": "09869bf6ce994fad0aa049f0593a5fdb46838622c03d42e87c9956771bc38880"
+   }
+  ]
+ },
+ "preparation-correspondence-verification": {
+  "growth-constrained-fragmentation": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/PreparationCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261020T161943.503298Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261019T052332.277017Z/verification.json",
+    "sha256": "47998617eaed359ca3d520848a0900f516e9367f50c95fe28620262f914d4de6"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261015T161348.626052Z/verification.json",
+    "sha256": "d27cc6120230332870127bb8981c8ee0787a4dab09f7e1c65eb5d885fcb414a9"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261020T161943.503298Z/verification.json",
+    "sha256": "b32662eb63a0a59c5d91a366f84c1224d18694879c09a6d8281e2e67046648f8"
+   }
+  ],
+  "material-preparation-output": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/PreparationCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261020T161943.503298Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261019T052332.277017Z/verification.json",
+    "sha256": "47998617eaed359ca3d520848a0900f516e9367f50c95fe28620262f914d4de6"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261015T161348.626052Z/verification.json",
+    "sha256": "d27cc6120230332870127bb8981c8ee0787a4dab09f7e1c65eb5d885fcb414a9"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261020T161943.503298Z/verification.json",
+    "sha256": "b32662eb63a0a59c5d91a366f84c1224d18694879c09a6d8281e2e67046648f8"
+   }
+  ]
+ },
+ "judging-correspondence-verification": {
+  "risk-certificate-outcome-distinction": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/JudgingCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261020T161948.968917Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261015T161403.083389Z/verification.json",
+    "sha256": "dfd630d90a43cf9e25395c27781523aa83a948d97d5b2cbdae723345b1a17bb5"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261020T161948.968917Z/verification.json",
+    "sha256": "607378deb93c36bfe7f52eed034ce23126a4984f0b62400c20a6a54955a17d3d"
+   }
+  ]
+ },
+ "renewing-correspondence-verification": {
+  "renewing-consuming-formation": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-checks/20261020T161953.940017Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-checks/20261015T161417.899487Z/verification.json",
+    "sha256": "0004399ce47516439980a6bf3411afc41c1ce83d4336aec9b2d639bf039992da"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-checks/20261020T161953.940017Z/verification.json",
+    "sha256": "cab9783e0df05ddf34dd743d1d1ecf8bf76362dd9ba1fad318f8fd2ed1dd96d2"
+   }
+  ]
+ },
+ "substitution-correspondence-verification": {
+  "binding-preserving-substitution": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/SubstitutionCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261020T161957.579185Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261015T161423.129149Z/verification.json",
+    "sha256": "919e50cdc15afec795449e9b5988000965eca495876c70ad68f0a300f4ce5a89"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261020T161957.579185Z/verification.json",
+    "sha256": "fabfd5675a46888acdc7db88e8230bd9e807e8654feaf90de383861b55a73d15"
+   }
+  ]
+ },
+ "organization-correspondence-verification": {
+  "organizational-formation-from-generative-comparison": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OrganizationCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/organization-correspondence-checks/20261025T185035.252368Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/organization-correspondence-checks/20261015T163336.437151Z/verification.json",
+    "sha256": "a96823f08f28b03ac360192a437d46135eb73d97b77174638eb2ee68642dc73c"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/organization-correspondence-checks/20261020T162002.464258Z/verification.json",
+    "sha256": "5e6dbd4290d0786ed901876fb9ad800863bee90029d6b143d0029ca361f41bf9"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/organization-correspondence-checks/20261025T185035.252368Z/verification.json",
+    "sha256": "5f034cfb1e484013d73e2642b50a20d24e5fc9b55fad09693b810b44fc8c6dcf"
+   }
+  ]
+ },
+ "living-organization-correspondence-verification": {
+  "every-origin-passes-the-gate": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/LivingOrganizationCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/living-organization-correspondence-checks/20261020T162006.335470Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/living-organization-correspondence-checks/20261015T182331.625376Z/verification.json",
+    "sha256": "540276fdb79ce88a87907d48029b6f01a307d5a70f5de4c468893b8033bc6774"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/living-organization-correspondence-checks/20261020T162006.335470Z/verification.json",
+    "sha256": "32340a994e90b562cd8a0db25c8fe5a0eab401228bc795e6f37d7400019707a6"
+   }
+  ]
+ },
+ "prefix-safety-correspondence-verification": {
+  "what-a-finite-history-refutes": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/PrefixSafetyCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261020T162009.405485Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/PrefixSafety.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261020T162009.405485Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261015T184605.889457Z/verification.json",
+    "sha256": "e45c59e4981ea5c25e90a9f7039c5c775585a28699b68a91672d25b4ffc9652d"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261020T162009.405485Z/verification.json",
+    "sha256": "bce5334db249a166ecb5f7a6a7db11236cc918e55343474c4a12e0eed5c3316d"
+   }
+  ]
+ },
+ "finite-branching-correspondence-verification": {
+  "lifting-where-branching-is-finite": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/FiniteBranchingCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-checks/20261020T162012.952848Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/FiniteBranching.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-checks/20261020T162012.952848Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-checks/20261015T190529.548268Z/verification.json",
+    "sha256": "2cc4a093a656d5ab9c9151ed7ca49e06a9bc7b7e9ff2ed2610b7d3c0fa6a775f"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-checks/20261020T162012.952848Z/verification.json",
+    "sha256": "b7e61f470b3a3a636f4571a90db3ee3adafe226617c588cc49f72f9554d04bc3"
+   }
+  ]
+ },
+ "selection-relabel-correspondence-verification": {
+  "selection-through-a-model-of-the-options": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/SelectionRelabelCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-checks/20261020T162018.010437Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/PluralRecords.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-checks/20261020T162018.010437Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/TieBreaking.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-checks/20261020T162018.010437Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-checks/20261015T203012.189070Z/verification.json",
+    "sha256": "190473337bb68618ce7b6aac9e0ae79f050dc5797865579087be74d963c645e5"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-checks/20261020T162018.010437Z/verification.json",
+    "sha256": "e86ab0dff92e76d044883a481238eb84fd692f53495af5a676a5bd08868888c5"
+   }
+  ]
+ },
+ "ideals-correspondence-verification": {
+  "a-history-read-off-its-finite-stretches": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/IdealsCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261020T162022.465111Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/IdealWarrant.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261020T162022.465111Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/CompletionRole.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261020T162022.465111Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/HistoryIdeals.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261020T162022.465111Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261019T020352.033083Z/verification.json",
+    "sha256": "7dd2e7d320bddc7349779d29e2371b29722529cdcd137ea92cb54e82a136b275"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261020T162022.465111Z/verification.json",
+    "sha256": "f550ac97ec46aedfed49ae7c20216053dd1e22615dd6fdacccc015b896f94105"
+   }
+  ]
+ },
+ "entropy-production-verification": {
+  "balance-from-the-first-law": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261027T042508.827829Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261022T103802.432439Z/verification.json",
+    "sha256": "fd780afc4bf1144cc3ebc96855836de1d12bd3920771d6ef6c5a6d980bff5d83"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261027T042508.827829Z/verification.json",
+    "sha256": "ac2bb52f04839913b4d30c12a8a63091c2ee26a9993a5f650a20bb9d327a07bb"
+   }
+  ],
+  "least-loss-from-entropy-production": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261027T042508.827829Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261019T082858.129214Z/verification.json",
+    "sha256": "4172ca4f21f6dc399f0838f8d6a92b593578a69a57ea893060d3fc57eeb8db26"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261020T162027.465211Z/verification.json",
+    "sha256": "28beaf54de0970f4527bbee254b64bbb683899dd9727fabfe0036934d43a5863"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261022T103802.432439Z/verification.json",
+    "sha256": "fd780afc4bf1144cc3ebc96855836de1d12bd3920771d6ef6c5a6d980bff5d83"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261027T042508.827829Z/verification.json",
+    "sha256": "ac2bb52f04839913b4d30c12a8a63091c2ee26a9993a5f650a20bb9d327a07bb"
+   }
+  ]
+ },
+ "cells-under-noise-verification": {
+  "identical-cells-under-noise": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/cells-under-noise-checks/20261030T160959.698859Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/cells-under-noise-checks/20261030T160959.698859Z/verification.json",
+    "sha256": "5103a4c3fb6553d3ebe37055cf3ce11a79782c7f58191190ed048eb13ac71cd9"
+   }
+  ]
+ },
+ "expected-free-energy-reals-verification": {
+  "expected-free-energy-and-its-terms": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T101649.229011Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261029T164946.410686Z/verification.json",
+    "sha256": "e5b31122f9fe93e34b3d92ba572fa1a7c78bfab8075bf2b21969b24d66076ab7"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/expected-free-energy-reals-checks/20261030T101649.229011Z/verification.json",
+    "sha256": "faf5fa83ee108a7766cc9e6245e09723e71bc2948adf01b06b1a2607261b9880"
+   }
+  ]
+ },
+ "free-energy-reals-verification": {
+  "expected-free-energy-and-its-terms": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261029T155901.350188Z/verification.json",
+    "sha256": "8dcfa9b39752ec857d28027a8483e7502fb4fa0e1c79b8454e7006ce122cb897"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
+    "sha256": "72f22c953104b33c0277caf5eaa1ca3f28ebd1720c3d77eb042868a3e96981d8"
+   }
+  ],
+  "free-energy-bounds-surprisal": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/free-energy-reals-checks/20261030T043328.214810Z/verification.json",
+    "sha256": "72f22c953104b33c0277caf5eaa1ca3f28ebd1720c3d77eb042868a3e96981d8"
+   }
+  ]
+ },
+ "regime-reals-verification": {
+  "regime-in-any-amounts": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/regime/regime-reals-checks/20261021T102713.696033Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/regime/regime-reals-checks/20261021T102713.696033Z/verification.json",
+    "sha256": "3feb7a1dbb4b402b021f4ecf286a920304c4ca3df456f737edfa727b4ef23fa2"
+   }
+  ]
+ },
+ "representation-verification": {
+  "laws-with-noise": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-verification.json",
+    "sha256": "dc0dfb8237a022fb036736f5c32a930b36dd5612e37a4694d0ee78ea1906d711"
+   }
+  ],
+  "what-discrete-steps-and-whole-amounts-represent": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/Representation.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-verification.json",
+    "sha256": "dc0dfb8237a022fb036736f5c32a930b36dd5612e37a4694d0ee78ea1906d711"
+   }
+  ]
+ }
+}

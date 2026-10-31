@@ -1,0 +1,22 @@
+'Becoming.TransmissionCorrespondence.kitWord' does not depend on any axioms
+'Becoming.TransmissionCorrespondence.pool' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.TransmissionCorrespondence.attach' does not depend on any axioms
+'Becoming.TransmissionCorrespondence.countOf_replicate' does not depend on any axioms
+'Becoming.TransmissionCorrespondence.use_kitWord' does not depend on any axioms
+'Becoming.TransmissionCorrespondence.lineage_released_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.TransmissionCorrespondence.reconstruction_builds_longest_lineage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.TransmissionCorrespondence.Move' does not depend on any axioms
+'Becoming.TransmissionCorrespondence.process' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.TransmissionCorrespondence.material_balanced' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.TransmissionCorrespondence.support_balanced' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.TransmissionCorrespondence.course_conserves' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.TransmissionCorrespondence.procedure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.TransmissionCorrespondence.successors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.TransmissionCorrespondence.total_replicate' does not depend on any axioms
+'Becoming.TransmissionCorrespondence.faithful_procedure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.TransmissionCorrespondence.family_unchanged' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.TransmissionCorrespondence.faithful_selects' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.TransmissionCorrespondence.historyOut' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.TransmissionCorrespondence.history_selects' depends on axioms: [propext, Classical.choice, Quot.sound]

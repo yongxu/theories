@@ -1,0 +1,32 @@
+'Becoming.VersionedTaskInstances.tickOut' does not depend on any axioms
+'Becoming.VersionedTaskInstances.drain_eq' depends on axioms: [propext]
+'Becoming.VersionedTaskInstances.remaining' does not depend on any axioms
+'Becoming.VersionedTaskInstances.Pending' does not depend on any axioms
+'Becoming.VersionedTaskInstances.Delivered' does not depend on any axioms
+'Becoming.VersionedTaskInstances.hop' does not depend on any axioms
+'Becoming.VersionedTaskInstances.withQueue' does not depend on any axioms
+'Becoming.VersionedTaskInstances.head_advances' depends on axioms: [propext]
+'Becoming.VersionedTaskInstances.valid_pending' depends on axioms: [propext]
+'Becoming.VersionedTaskInstances.head_completes' depends on axioms: [propext]
+'Becoming.VersionedTaskInstances.valid_head_instance' depends on axioms: [propext]
+'Becoming.VersionedTaskInstances.head_pending_before' depends on axioms: [propext]
+'Becoming.VersionedTaskInstances.retarget_pending' depends on axioms: [propext]
+'Becoming.VersionedTaskInstances.revised_head_instance' depends on axioms: [propext]
+'Becoming.VersionedTaskInstances.review_course_covered_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.VersionedTaskInstances.enact_isSome_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.VersionedTaskInstances.review_completes_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.VersionedTaskInstances.continuation_of_completed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.VersionedTaskInstances.continuation_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.VersionedTaskInstances.continuation_isSome_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Becoming.VersionedTaskInstances.harmful_continuation_instance' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Becoming.VersionedTaskInstances.relevant_risk_eq' depends on axioms: [propext]
+'Becoming.VersionedTaskInstances.enact_losses' depends on axioms: [propext, Quot.sound]
+'Becoming.VersionedTaskInstances.review_losses' depends on axioms: [propext, Quot.sound]
+'Becoming.VersionedTaskInstances.review_adds_loss_iff' depends on axioms: [propext, Quot.sound]
+'Becoming.VersionedTaskInstances.covered_review_instance' depends on axioms: [propext, Quot.sound]
+'Becoming.VersionedTaskInstances.reviews' depends on axioms: [propext]
+'Becoming.VersionedTaskInstances.clears' depends on axioms: [propext]
+'Becoming.VersionedTaskInstances.losses_kept' depends on axioms: [propext, Quot.sound]
+'Becoming.VersionedTaskInstances.losses_kept_along' depends on axioms: [propext, Quot.sound]

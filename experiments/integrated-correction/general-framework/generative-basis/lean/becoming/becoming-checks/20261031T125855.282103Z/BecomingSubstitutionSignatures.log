@@ -1,0 +1,67 @@
+@Becoming.ceasing_step : ∀ {p : Nat → Prop} [DecidablePred p] {T t : Nat},
+  T ≤ t → p T → ¬p t → ∃ s, T ≤ s ∧ s < t ∧ p s ∧ ¬p (s + 1)
+@Becoming.Web.consumingIn_kept_iff : ∀ {F C : Type} {W : Becoming.Web F C} {f : F} {T₀ : Nat},
+  (∀ (V : Becoming.Web F C), W.DependenceChanged V f T₀ → V.ConsumingIn f) ↔ W.ConsumingThrough f T₀
+@Becoming.Web.consuming_survives_iff : ∀ {F C : Type} {W : Becoming.Web F C} {f : F},
+  (∀ (V : Becoming.Web F C), W.DependenceChanged V f 0 → V.ConsumingIn f) ↔
+    ∃ t c, W.draws t f c ∧ ∃ g T, ¬g = f ∧ W.requires T g c ∧ ∀ (t' : Nat), T < t' → W.level t' c < W.need T g c
+@Becoming.Web.ConsumingThrough.consumingIn : ∀ {F C : Type} {W : Becoming.Web F C} {f : F} {T₀ : Nat},
+  W.ConsumingThrough f T₀ → W.ConsumingIn f
+Becoming.Substitution.web_dependent : ∀ (L : RelationalRenewal.Law), (Becoming.Substitution.web L).Dependent
+Becoming.Substitution.persists_consuming : ∀ (L : RelationalRenewal.Law),
+  0 < L.needG →
+    0 < L.needF →
+      L.needF ≤ L.needG →
+        L.needF ≤ L.start →
+          (∀ (t : Nat), L.renew + L.contrib t < L.draw t) →
+            (Becoming.Substitution.web L).Dependent ∧
+              (∀ (t : Nat), (Becoming.Substitution.web L).active t RelationalRenewal.Law.Part.focal) ∧
+                (∃ s,
+                    (Becoming.Substitution.web L).Dissolves s RelationalRenewal.Law.Part.focal
+                        Becoming.Substitution.Source.shared ∧
+                      (Becoming.Substitution.web L).Forms s RelationalRenewal.Law.Part.focal
+                        Becoming.Substitution.Source.alternative) ∧
+                  (Becoming.Substitution.web L).ConsumingIn RelationalRenewal.Law.Part.focal ∧
+                    ∃ T,
+                      ∀ (t : Nat), T ≤ t → ¬(Becoming.Substitution.web L).active t RelationalRenewal.Law.Part.sustaining
+Becoming.Substitution.consuming_through_sustaining : ∀ (L : RelationalRenewal.Law),
+  0 < L.needG →
+    L.needF ≤ L.needG →
+      L.needF ≤ L.start →
+        (∀ (t : Nat), L.renew + L.contrib t < L.draw t) →
+          (Becoming.Substitution.web L).ConsumingThrough RelationalRenewal.Law.Part.focal 0 ∧
+            ∀ (V : Becoming.Web RelationalRenewal.Law.Part Becoming.Substitution.Source),
+              (Becoming.Substitution.web L).DependenceChanged V RelationalRenewal.Law.Part.focal 0 →
+                V.ConsumingIn RelationalRenewal.Law.Part.focal
+Becoming.Substitution.extracting_persists_consuming : (Becoming.Substitution.web
+      Becoming.Substitution.extracting).Dependent ∧
+  (∀ (t : Nat),
+      (Becoming.Substitution.web Becoming.Substitution.extracting).active t RelationalRenewal.Law.Part.focal) ∧
+    (∃ s,
+        (Becoming.Substitution.web Becoming.Substitution.extracting).Dissolves s RelationalRenewal.Law.Part.focal
+            Becoming.Substitution.Source.shared ∧
+          (Becoming.Substitution.web Becoming.Substitution.extracting).Forms s RelationalRenewal.Law.Part.focal
+            Becoming.Substitution.Source.alternative) ∧
+      (Becoming.Substitution.web Becoming.Substitution.extracting).ConsumingIn RelationalRenewal.Law.Part.focal ∧
+        ∃ T,
+          ∀ (t : Nat),
+            T ≤ t →
+              ¬(Becoming.Substitution.web Becoming.Substitution.extracting).active t
+                  RelationalRenewal.Law.Part.sustaining
+Becoming.Substitution.extracting_low : ∀ (n : Nat), Becoming.Substitution.extracting.level (n + 3) = 0
+Becoming.Substitution.stepwise_includes_substitution : (Becoming.Substitution.web
+        Becoming.Substitution.extracting).ConsumingIn
+    RelationalRenewal.Law.Part.focal ∧
+  (∀ (t : Nat),
+      t ≠ 2 →
+        (Becoming.Substitution.web Becoming.Substitution.extracting).active t RelationalRenewal.Law.Part.focal ∧
+          ¬Becoming.Web.UnderminingAt t RelationalRenewal.Law.Part.focal) ∧
+    Becoming.Web.UnderminingAt 2 RelationalRenewal.Law.Part.focal
+Becoming.Substitution.slow_withheld_two_steps : (Becoming.Substitution.web Becoming.Substitution.slow).ConsumingIn
+    RelationalRenewal.Law.Part.focal ∧
+  Becoming.Web.UnderminingAt 2 RelationalRenewal.Law.Part.focal ∧
+    Becoming.Web.UnderminingAt 3 RelationalRenewal.Law.Part.focal
+Becoming.Substitution.Lone.own_witness_lost : Becoming.Substitution.Lone.web.ConsumingIn () ∧
+  ¬Becoming.Substitution.Lone.web.ConsumingThrough () 0 ∧
+    Becoming.Substitution.Lone.web.DependenceChanged Becoming.Substitution.Lone.substituted () 0 ∧
+      ¬Becoming.Substitution.Lone.substituted.ConsumingIn ()
