@@ -117,7 +117,8 @@ def land(date, order):
               f"of 6 October missed it, brought to 51a975fdd's three renames, {NAMES}, each a pure rename in that "
               "commit's diff, so every statement of the file keeps its meaning, and nothing else renamed; "
               "`formal/check.py` passes, 68 declarations audited with a clean dependency audit and no `sorryAx`, "
-              "every axiom report the same as on 5 October or smaller; its receipt renewed in place, and the README's "
+              "every axiom report the same as on 5 October or smaller, the smaller ones from the propext removals of "
+              "6 and 8 October with no statement changed; its receipt renewed in place, and the README's "
               "count of the conditional module's audits brought to the 24 it now records; FA's row in the history "
               f"file; render, strict check, links and tests pass). {order} ")
     lines[q] = lines[q].replace("- **Queue:** ", "- **Queue:** " + landed, 1)

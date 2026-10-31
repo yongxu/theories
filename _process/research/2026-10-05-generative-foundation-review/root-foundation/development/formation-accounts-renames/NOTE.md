@@ -27,8 +27,13 @@ words and the file name stay, because a rename sweep needs its own reason.
 - `formal/check.py` passes: 68 declarations audited, every dependency audit clean, no `sorryAx`. Its receipt and logs
   are renewed in place, and the earlier bytes stay in git history.
 - [`axioms_compare.py`](axioms_compare.py) compares each declaration's axiom report with the 5 October receipt's,
-  after the rename's map. None is dropped and none gains an axiom. 34 report fewer axioms, from the propext removals
-  of 6 to 8 October, and ResourceContinuation has three constructive lemmas added by `f11eb55d6`.
+  after the rename's map. None is dropped and none gains an axiom. 34 report fewer axioms, and none of them is a
+  change in what is proved: no statement changed, only the logic the proofs use. 16 are in ResourceContinuation,
+  whose proofs `f11eb55d6` (6 October) rewrote without `propext` and `Quot.sound`, adding three constructive lemmas.
+  The other 18 are in FormedSelection (7) and the modules importing it, FormationRoot (6), FormationSupport (4) and
+  FormationAccounts (1). They come from the `set_option backward.match.sparseCases false` line added to
+  FormedSelection on 8 October (`74cba5b13`), and in FormationSupport and FormationAccounts also from that 6 October
+  rewrite.
 - The README's count of the conditional module's audits goes from 21 to 24, the number the renewed receipt records.
 - No record binds or references formal's receipt or `FormationAccounts.lean`. Evolution's and development's receipts
   record FormedSelection and FormationRoot, not this file. Two history copies of formal's receipt
