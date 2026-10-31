@@ -258,9 +258,9 @@ def clause(note):
 
 I1_CLAUSE = ('item 1', '第 1 项',
              '«两端分则中有标» asks only that the relation it keeps be transitive (its hypotheses split, then trans, in '
-             'place of a class), so laws.{law}.en and laws.{law}.zh now read a transitive relation, a class being one; '
+             'place of a class), so law {law1}, in English and Chinese, now reads a transitive relation, a class being one; '
              'its declarations are unchanged.',
-             '«两端分则中有标» 只求所保之关系传递（其设先分后传，以代类），故 laws.{law}.en 与 laws.{law}.zh 今言保一传递之关系，类即其一；所引声明不变。')
+             '«两端分则中有标» 只求所保之关系传递（其设先分后传，以代类），故第 {law1} 律之英文与中文今言保一传递之关系，类即其一；所引声明不变。')
 LCS_CLAUSE = ('item 1', '第 1 项',
               "Sampling's arises_within and ceases_within, which the coarse-step laws use, are now read from the grammar "
               "law «两端分则中有标» along the successor, their statements unchanged; the validation scope names Sampling's "
@@ -345,7 +345,7 @@ try:
     r = read(CRC)
     law = item1(r)
     crc_scope(r)
-    clauses[CRC] += [tuple(s.format(law=law) for s in I1_CLAUSE), CRC_LAND]
+    clauses[CRC] += [tuple(s.format(law1=law + 1) for s in I1_CLAUSE), CRC_LAND]  # laws numbered from 1, as pages render them
     writes[CRC] = r
     r = read(GDG)
     item5(r)

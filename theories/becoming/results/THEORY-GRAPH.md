@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3130 nodes, 5918 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3130 nodes, 5920 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -349,7 +349,7 @@ Results (105):
 - [Which selections survive and remain executable when the lumping changes](records/selection-under-registration-revision.md) (recorded-checked)
 - [文 in the grammar of continuation](records/wen-in-the-grammar.md) (recorded-checked)
 
-Modules (83, 8 stated on the grammar): `Blanket`, `ClassifiedBeliefProcesses`, `CodeAcquisition`, `ConditionalWeights`, `ContactCourses`, `Contacts`, `Context`, `ContextArrivalTraces`, `ContingentPlans`, `ContinuingRuns`, `Counterfactual`, `CounterfactualRuns`, `CrossSituational`, `Dephasing`, `Description`, `Diagonal`, `Distinguishing`, `Experiment`, `FaultEnvelopes`, `Feedback`, `FreeEnergyCounting`, `GrammarTesting`, `HeldForReading`, `Horizon`, `Identification`, `IdentificationRuns`, `Inquiry`, `Labels`, `Latency`, `LawAlongRun`, `Learnable`, `LearnableRuns`, `LearnedGrouping`, `Learning`, `LearningRuns`, `LimitVerification`, `ListingValuation`, `LumpedSeeking`, `Mechanism`, `MoveOutcomeProcesses`, `Narrowing`, `NarrowingRuns`, `Observation`, `OpenedCorrection`, `PartialReadout`, `Parting`, `PooledEnvelopes`, `Postponement`, `ProjectedLaws`, `Quantum`, `ReadStages`, `ReadingLoop`, `ReadingSchedule`, `Readout`, `Reconfiguration`, `ReferencePlan`, `ReferencePlanTraces`, `ReflexivePrediction`, `Rejoining`, `Response`, `ResponseLearning`, `Retrodiction`, `Revision`, `RouteFormation`, `Sampling`, `Segmentation`, `Selection`, `Sensitivity`, `SensitivityWebs`, `ShownOrder`, `SummaryFutures`, `Testing`, `TimedResponse`, `TreeSearch`, `TypicalRuns`, `Typicality`, `Unread`, `Unrolling`, `Verification`, `Weighted`, `WeightedTraces`, `WitnessRefinement`, `WitnessRefinementRuns`
+Modules (83, 10 stated on the grammar): `Blanket`, `ClassifiedBeliefProcesses`, `CodeAcquisition`, `ConditionalWeights`, `ContactCourses`, `Contacts`, `Context`, `ContextArrivalTraces`, `ContingentPlans`, `ContinuingRuns`, `Counterfactual`, `CounterfactualRuns`, `CrossSituational`, `Dephasing`, `Description`, `Diagonal`, `Distinguishing`, `Experiment`, `FaultEnvelopes`, `Feedback`, `FreeEnergyCounting`, `GrammarTesting`, `HeldForReading`, `Horizon`, `Identification`, `IdentificationRuns`, `Inquiry`, `Labels`, `Latency`, `LawAlongRun`, `Learnable`, `LearnableRuns`, `LearnedGrouping`, `Learning`, `LearningRuns`, `LimitVerification`, `ListingValuation`, `LumpedSeeking`, `Mechanism`, `MoveOutcomeProcesses`, `Narrowing`, `NarrowingRuns`, `Observation`, `OpenedCorrection`, `PartialReadout`, `Parting`, `PooledEnvelopes`, `Postponement`, `ProjectedLaws`, `Quantum`, `ReadStages`, `ReadingLoop`, `ReadingSchedule`, `Readout`, `Reconfiguration`, `ReferencePlan`, `ReferencePlanTraces`, `ReflexivePrediction`, `Rejoining`, `Response`, `ResponseLearning`, `Retrodiction`, `Revision`, `RouteFormation`, `Sampling`, `Segmentation`, `Selection`, `Sensitivity`, `SensitivityWebs`, `ShownOrder`, `SummaryFutures`, `Testing`, `TimedResponse`, `TreeSearch`, `TypicalRuns`, `Typicality`, `Unread`, `Unrolling`, `Verification`, `Weighted`, `WeightedTraces`, `WitnessRefinement`, `WitnessRefinementRuns`
 
 
 ## Life and evolution
@@ -473,7 +473,7 @@ Results (66):
 - [What position reads](records/what-position-reads.md) (recorded-checked)
 - [What taking all that is given excludes](records/what-taking-all-excludes.md) (recorded-checked)
 
-Modules (21, 1 stated on the grammar): `Cascade`, `Centers`, `CountedCodes`, `Exclusion`, `FreeEnergyGuarantees`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `OptimumSeason`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `WeightedCommuting`, `Withholding`
+Modules (21, 2 stated on the grammar): `Cascade`, `Centers`, `CountedCodes`, `Exclusion`, `FreeEnergyGuarantees`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `OptimumSeason`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `WeightedCommuting`, `Withholding`
 
 
 ## The classical texts
@@ -633,4 +633,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-305 of 358 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+302 of 358 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

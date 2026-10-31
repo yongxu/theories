@@ -29,6 +29,7 @@ their consumers' stay arithmetic, since each needs only the count.
 | `«闭»` | a region closed under a relation: whatever a member bears it to is a member |
 | `«所闭»` | lying within a closure: every region closed under the relation that holds `x` holds `y` |
 | `«对»` | a perfect pairing of the places of two finite lists under a relation, each pair related |
+| `«计»` | how many units of a list a test holds of: a region read as a test (`α → Bool`), a modelling choice; a region given as a proposition enters by `decide` |
 | `«聚»` | lists gathered along a list of indices, joined |
 | `«定后»`, `«定前»` | the successor is fixed (`R˘;R ⊆ 静`); the predecessor is fixed, nothing merged (`R;R˘ ⊆ 静`) |
 | `«定后于»` | the successor is fixed at what `x` reaches (`«定后»` within `«所闭» R x`) |
@@ -46,9 +47,14 @@ their consumers' stay arithmetic, since each needs only the count.
 
 * **Closure.** `«所闭» R x y` is exactly `x = y ∨ «及» R x y` (`«所闭当且仅当同一或及»`): the least
   closed region holding `x` is `x` itself with what `x` reaches. It is reflexive, transitive, holds
-  every step, grows with the relation, is symmetric for a symmetric relation, is itself closed,
-  nothing within it bears the relation beyond it, and a region is `x`'s closure exactly where it
-  holds `x`, is closed and lies within the closure (`«所闭之证»`). A region of the steps of time that
+  every step, grows with the relation, is symmetric for a symmetric relation, read under the converse
+  is the closure read backward (`«所闭之逆»`), is itself closed, nothing within it bears the relation
+  beyond it, and a region is `x`'s closure exactly where it holds `x`, is closed and lies within the
+  closure (`«所闭之证»`). A closure through borrowed steps, every step of `R'` a step of `R` or a step
+  of `R` from `a` taken at `o`, lies within `o`'s or `a`'s closure under `R`
+  (`«借步之所闭在二所闭»`), and the two lie within `o`'s closure under `R'` where `R'` holds `R` and
+  `a` lies within `o`'s closure under it (`«二所闭在借步之所闭»`); Response's `WithinClosure.converse` and
+  SelectionPool's `WithinClosure.of_reads` and `WithinClosureOf.to_reads` are proved as these. A region of the steps of time that
   every step keeps holds from where it holds on, the closure at the successor along a line
   (`kept_onward`); the models' activity laws that keep a region along the steps by their own
   induction are its cases.
@@ -66,7 +72,21 @@ their consumers' stay arithmetic, since each needs only the count.
   everything taken along it (`«对之程»`), and the count law over a stretch is exactly such a
   pairing of units (`«程守数当且仅当可对»`). This is an exact cardinality representation of
   natural-number balance, near-definitional under the one: the pairing is supplied, not derived from
-  the unfolding, and it establishes no trajectory of units.
+  the unfolding, and it establishes no trajectory of units. Counting a region's units (`«计»`, the
+  region read as a test), a pairing keeps the count on every region the relation does not cross
+  (`«对则不越域守数»`), so on every region closed under the relation and under its converse
+  (`«对则双闭域守数»`); closed one way is not enough (`«对而单闭域不守数之例»`). Under a class decided
+  by a test, a pairing is exactly equal count in every class (`«类之对当且仅当类类等数»`), and the
+  class does work: equal count pairs under the one and not under sameness (`«一对而静不对之例»`). So
+  a pairing under continuation relative to such a class keeps the count in every class
+  (`«续之对则类类等数»`). The census of a step (its own section, after the runs, whose fixed
+  successor and predecessor it reads): units listed once before and after a step, under a
+  continuation fixing successors and predecessors, pair those before with those arising to those
+  after with those ceasing, each pair a continuation or the same unit
+  (`«定后定前则前并生对后并亡»`), and where every predecessor of a unit after stands before and every
+  successor of a unit before stands after, arising and ceasing are exactly beginning (`«生»`) and
+  ending (`«亡»`) (`«前者在前则所列生者生»`, `«后者在后则所列亡者亡»`).
+  The listing and the test are supplied, as the pairing is.
 * **Finite runs: return and being drawn.** For every relation, `x` is drawn exactly where it
   reaches something that does not reach back (`«入当且仅当有不返»`). With the successor fixed at
   what `x` reaches, `x`, reaching itself, is not drawn (`«定后于则返者不入»`, from
@@ -136,7 +156,11 @@ their consumers' stay arithmetic, since each needs only the count.
   each occurrence `E` leads to from one that has a successor (`«同行可续则有常»`), a hypothesis
   constancy itself gives (`«有常则可续»`); so with the successor fixed there, constancy is exactly
   going alike plus that availability (`«局定后则有常当且仅当同行可续»`). The global forms
-  (`«有常定后则同行»`, `«同行遍后则有常»`) are corollaries. The image of a relation along a map has
+  (`«有常定后则同行»`, `«同行遍后则有常»`) are corollaries. With a fixed successor the core of a class is a
+  class inside it that the step goes alike across (`«定后则类之核同行»`); where every occurrence has a
+  successor, every class inside a relation going alike lies in its core (`«遍后则其内同行之类含于核»`), so with
+  both the core of a class is the coarsest such class (`«定后遍后则核为其内最粗同行之类»`); off a fixed successor it
+  need not go alike (`«后不定则核可不同行»`). The image of a relation along a map has
   a fixed successor exactly where sameness under the map goes alike (`«像定后当且仅当同行»`): a part
   read alone carries a law, possibly partial, exactly where the rest makes no difference to where it
   goes. Going alike keeps lines of every length alike (`«同行之迭»`). A map preserves a relation
@@ -150,7 +174,9 @@ their consumers' stay arithmetic, since each needs only the count.
 
 What is not shown: that any model's relation is functional, total or listed (the models supply
 these); the n-step lines law for lines of different lengths; that a pairing under continuation
-(`«对» («续» R E)`) adds anything to equal count, which is not stated; any converse of the law of
+(`«对» («续» R E)`) adds anything to equal count beyond what is now stated: the count on every region
+it does not cross (`«对则不越域守数»`) and, where `E` is a class decided by a test, the count in every
+class (`«续之对则类类等数»`); any converse of the law of
 rest, from rest along a line to the ending of the courses: none is established, and one would have
 to say which step relations it compares and on what logic. Every statement is pointwise; no equality of
 relations is used, and every declaration has an empty axiom report.
@@ -196,6 +222,15 @@ theorem «所闭之单调» {R S : «际» α} (h : «则» R S) : «则» («�
 theorem «所闭之对称» {R : «际» α} (h : «则» R («逆» R)) : «则» («所闭» R) («逆» («所闭» R)) :=
   fun x _ within => within (fun z => «所闭» R z x)
     (fun a b back related => «所闭之传递» («缘在所闭» (h a b related)) back) («所闭之自反» R x)
+
+/-- **The closure under the converse is the converse of the closure.** `y` lies within `x`'s closure
+under the converse of `R` exactly where `x` lies within `y`'s closure under `R`. -/
+theorem «所闭之逆» {R : «际» α} {x y : α} : «所闭» («逆» R) x y ↔ «所闭» R y x :=
+  ⟨fun within => within (fun z => «所闭» R z x)
+      (fun _ _ back related => «所闭之传递» («缘在所闭» (R := R) related) back) («所闭之自反» R x),
+   fun within => within (fun z => «所闭» («逆» R) z y)
+      (fun _ _ back related => «所闭之传递» («缘在所闭» (R := «逆» R) related) back)
+      («所闭之自反» («逆» R) y)⟩
 
 /-- Nothing within a closure bears the relation to what lies beyond it. -/
 theorem «所闭之界» {R : «际» α} {x y z : α} (within : «所闭» R x y) (beyond : ¬ «所闭» R x z) :
@@ -253,12 +288,37 @@ theorem «及当且仅当一步而所闭» {R : «际» α} {x z : α} : «及»
     | .inl e => by cases e; exact .one h
     | .inr rest => .more h rest⟩
 
+/-- **A closure through borrowed steps lies within two closures.** Where every step of `R'` is a step
+of `R`, or a step of `R` from `a` taken at `o`, what lies within `o`'s closure under `R'` lies within
+`o`'s or `a`'s closure under `R`. -/
+theorem «借步之所闭在二所闭» {R R' : «际» α} {o a g : α}
+    (split : ∀ x y, R' x y → R x y ∨ (x = o ∧ R a y)) (within : «所闭» R' o g) :
+    «所闭» R o g ∨ «所闭» R a g :=
+  within (fun z => «所闭» R o z ∨ «所闭» R a z)
+    (fun x y inside related => match split x y related with
+      | .inl step => match inside with
+        | .inl w => .inl («所闭之传递» w («缘在所闭» step))
+        | .inr w => .inr («所闭之传递» w («缘在所闭» step))
+      | .inr ⟨_, step⟩ => .inr («缘在所闭» step))
+    (.inl («所闭之自反» R o))
+
+/-- **Two closures lie within the closure through borrowed steps.** Where `R` lies within `R'` and
+`a` lies within `o`'s closure under `R'`, what lies within `o`'s or `a`'s closure under `R` lies
+within `o`'s under `R'`. It is the converse of `«借步之所闭在二所闭»` and holds for any `R'` containing
+`R`, borrowed steps being the case it is for. -/
+theorem «二所闭在借步之所闭» {R R' : «际» α} {o a g : α} (larger : «则» R R')
+    (reaches : «所闭» R' o a) (within : «所闭» R o g ∨ «所闭» R a g) : «所闭» R' o g :=
+  match within with
+  | .inl w => «所闭之单调» larger o g w
+  | .inr w => «所闭之传递» reaches («所闭之单调» larger a g w)
+
 end Closure
 
 /-! ## Lists (helpers, stated without `simp` so that no axiom enters)
 
 Lemmas on numbers and lists, not statements of the grammar: pigeonhole (`revisits_within`), the
-list surgery that pairings need, and the words that `«迭»` reads as cases of `«历»` (copies joined,
+list surgery that pairings need, the filters and searches the census of a step needs (`keep`,
+`any_split`, `distinct_removed`), and the words that `«迭»` reads as cases of `«历»` (copies joined,
 `replicate_add_append`; a word read backward, `reverse_cons_append`, proved here by induction because
 the core's `List.reverse_cons` reports `propext`). `le_dest`, `ListTests.length_append`,
 `ListTests.append_assoc` and `Naturals.add_congr` are the prelude's (`Becoming.Prelude`), used here,
@@ -412,6 +472,136 @@ theorem reverse_replicate (c : α) : ∀ n, (List.replicate n c).reverse = List.
   | 0 => rfl
   | n + 1 => (reverse_cons_append c (List.replicate n c)).trans
       ((congrArg (· ++ [c]) (reverse_replicate c n)).trans (replicate_succ_append c n).symm)
+
+/-- The units a test keeps, in order. -/
+def keep (p : α → Bool) : List α → List α
+  | [] => []
+  | x :: l => cond (p x) (x :: keep p l) (keep p l)
+
+theorem keep_append (p : α → Bool) : ∀ a b : List α,
+    keep p (a ++ b) = keep p a ++ keep p b
+  | [], _ => rfl
+  | x :: a, b => by
+    show cond (p x) (x :: keep p (a ++ b)) (keep p (a ++ b)) =
+      cond (p x) (x :: keep p a) (keep p a) ++ keep p b
+    rw [keep_append p a b]
+    cases p x <;> rfl
+
+theorem keep_congr {p q : α → Bool} : ∀ l : List α, (∀ x, x ∈ l → p x = q x) →
+    keep p l = keep q l
+  | [], _ => rfl
+  | x :: l, same => by
+    show cond (p x) (x :: keep p l) (keep p l) =
+      cond (q x) (x :: keep q l) (keep q l)
+    rw [same x (.head l), keep_congr l (fun y m => same y (.tail x m))]
+
+theorem keep_all {p : α → Bool} : ∀ l : List α, (∀ x, x ∈ l → p x = true) →
+    keep p l = l
+  | [], _ => rfl
+  | x :: l, all => by
+    show cond (p x) (x :: keep p l) (keep p l) = x :: l
+    rw [all x (.head l), keep_all l (fun y m => all y (.tail x m))]
+    rfl
+
+theorem mem_keep {p : α → Bool} {x : α} : ∀ {l : List α},
+    x ∈ keep p l ↔ x ∈ l ∧ p x = true
+  | [] => ⟨fun h => (nomatch h), fun h => (nomatch h.1)⟩
+  | y :: l => by
+    show x ∈ cond (p y) (y :: keep p l) (keep p l) ↔ _
+    cases hy : p y with
+    | true =>
+      show x ∈ y :: keep p l ↔ _
+      constructor
+      · intro m
+        cases m with
+        | head => exact ⟨.head _, hy⟩
+        | tail _ m' => exact ⟨.tail _ (mem_keep.mp m').1, (mem_keep.mp m').2⟩
+      · intro ⟨m, px⟩
+        cases m with
+        | head => exact .head _
+        | tail _ m' => exact .tail _ (mem_keep.mpr ⟨m', px⟩)
+    | false =>
+      show x ∈ keep p l ↔ _
+      constructor
+      · intro m
+        exact ⟨.tail _ (mem_keep.mp m).1, (mem_keep.mp m).2⟩
+      · intro ⟨m, px⟩
+        cases m with
+        | head => exact nomatch hy.symm.trans px
+        | tail _ m' => exact mem_keep.mpr ⟨m', px⟩
+
+theorem any_false_mem {p : α → Bool} : ∀ {l : List α} {x : α}, l.any p = false →
+    x ∈ l → p x = false
+  | h :: t, _, hn, .head _ => by
+    cases hp : p h with
+    | false => rfl
+    | true => exact Bool.noConfusion ((congrArg (· || t.any p) hp).symm.trans hn)
+  | h :: t, _, hn, .tail _ m => by
+    cases hp : p h with
+    | false => exact any_false_mem (l := t) ((congrArg (· || t.any p) hp).symm.trans hn) m
+    | true => exact Bool.noConfusion ((congrArg (· || t.any p) hp).symm.trans hn)
+
+theorem any_split {p : α → Bool} : ∀ {l : List α}, l.any p = true →
+    ∃ a₁ y a₂, l = a₁ ++ y :: a₂ ∧ p y = true
+  | [], hn => Bool.noConfusion hn
+  | h :: t, hs => by
+    cases hp : p h with
+    | true => exact ⟨[], h, t, rfl, hp⟩
+    | false =>
+      match any_split (l := t) ((congrArg (· || t.any p) hp).symm.trans hs) with
+      | ⟨a₁, y, a₂, e, hy⟩ => exact ⟨h :: a₁, y, a₂, e ▸ rfl, hy⟩
+
+theorem any_remove {p : α → Bool} {f : α} (off : p f = false) (a₂ : List α) :
+    ∀ a₁ : List α, (a₁ ++ f :: a₂).any p = (a₁ ++ a₂).any p
+  | [] => by
+    show (p f || a₂.any p) = a₂.any p
+    rw [off]; rfl
+  | h :: a₁ => congrArg (p h || ·) (any_remove off a₂ a₁)
+
+theorem any_true_of_mem {p : α → Bool} : ∀ {l : List α} {x : α}, x ∈ l → p x = true →
+    l.any p = true
+  | h :: t, _, .head _, px => by
+    show (p h || t.any p) = true
+    rw [px]; rfl
+  | h :: t, _, .tail _ m, px => by
+    show (p h || t.any p) = true
+    rw [any_true_of_mem m px]
+    cases p h <;> rfl
+
+theorem any_false_of {p : α → Bool} : ∀ l : List α, (∀ x, x ∈ l → p x = false) →
+    l.any p = false
+  | [], _ => rfl
+  | h :: t, all => by
+    show (p h || t.any p) = false
+    rw [all h (.head t), any_false_of t (fun x m => all x (.tail h m))]
+    rfl
+
+theorem mem_middle (y : α) (a₂ : List α) : ∀ a₁ : List α, y ∈ a₁ ++ y :: a₂
+  | [] => .head a₂
+  | h :: a₁ => .tail h (mem_middle y a₂ a₁)
+
+theorem mem_of_removed {x y : α} {a₂ : List α} : ∀ {a₁ : List α}, x ∈ a₁ ++ a₂ →
+    x ∈ a₁ ++ y :: a₂
+  | [], m => .tail y m
+  | h :: a₁, m => by
+    cases m with
+    | head => exact .head _
+    | tail _ m => exact .tail h (mem_of_removed m)
+
+theorem distinct_removed {y : α} {a₂ : List α} : ∀ {a₁ : List α},
+    Distinct (a₁ ++ y :: a₂) → Distinct (a₁ ++ a₂) ∧ ¬ y ∈ a₁ ++ a₂
+  | [], d => ⟨d.2, d.1⟩
+  | h :: a₁, d =>
+    have rest := distinct_removed (a₁ := a₁) d.2
+    ⟨⟨fun m => d.1 (mem_of_removed m), rest.1⟩, fun m => by
+      cases m with
+      | head => exact d.1 (mem_middle _ a₂ a₁)
+      | tail _ m => exact rest.2 m⟩
+
+theorem not_eq_true_iff {b : Bool} : (!b) = true ↔ b = false := by
+  cases b
+  · exact ⟨fun _ => rfl, fun _ => rfl⟩
+  · exact ⟨fun h => (nomatch h), fun h => (nomatch h)⟩
 
 end GrammarLaws
 
@@ -678,6 +868,165 @@ theorem «程守数当且仅当可对» {q x y : Nat → Nat} {S n : Nat} :
         | ⟨before, after⟩ => before.trans (e.symm.trans after.symm))⟩,
    fun ⟨level, lost, gained, hl, hx, hy, h⟩ => match lengths level lost gained hl hx hy with
     | ⟨before, after⟩ => after.symm.trans ((«对之长» h).symm.trans before)⟩
+
+/-! ### Counting (计): the count on a region, and the count law of a class
+
+A region is read here as a test, `α → Bool`, so that a count is a function of the list. That is a
+modelling choice: a region given as a proposition enters by `decide` where it is decidable. `«计»` is
+the structural twin of Lean's `List.countP` (`GrammarLaws.count_eq_countP`); Init's own lemmas on
+`List.countP` (`countP_cons`, `countP_append`) report `propext`, so the grammar keeps its own. -/
+
+/-- How many units of a list a test holds of (计). A region enters as a test (`α → Bool`), a
+modelling choice; a region given as a proposition enters by `decide`. -/
+def «计» (p : α → Bool) : List α → Nat
+  | [] => 0
+  | x :: a => cond (p x) 1 0 + «计» p a
+
+theorem GrammarLaws.count_insert (p : α → Bool) (y : α) : ∀ b₁ b₂ : List α,
+    «计» p (b₁ ++ y :: b₂) = cond (p y) 1 0 + «计» p (b₁ ++ b₂)
+  | [], _ => rfl
+  | z :: b₁, b₂ => by
+    show cond (p z) 1 0 + «计» p (b₁ ++ y :: b₂) = cond (p y) 1 0 + (cond (p z) 1 0 + «计» p (b₁ ++ b₂))
+    rw [GrammarLaws.count_insert p y b₁ b₂, Nat.add_left_comm]
+
+/-- Where a test holds of some unit, the list splits at one it holds of. -/
+theorem GrammarLaws.split_of_count_pos {p : α → Bool} : ∀ {b : List α}, 0 < «计» p b →
+    ∃ b₁ y b₂, b = b₁ ++ y :: b₂ ∧ p y = true
+  | [], pos => absurd pos (Nat.lt_irrefl 0)
+  | y :: b, pos => by
+    cases hy : p y with
+    | true => exact ⟨[], y, b, rfl, hy⟩
+    | false =>
+      have rest : 0 < «计» p b := by
+        have e : «计» p (y :: b) = «计» p b := by
+          show cond (p y) 1 0 + «计» p b = «计» p b
+          rw [hy]; exact Nat.zero_add _
+        exact e ▸ pos
+      match GrammarLaws.split_of_count_pos rest with
+      | ⟨b₁, z, b₂, e, hz⟩ => exact ⟨y :: b₁, z, b₂, e ▸ rfl, hz⟩
+
+theorem GrammarLaws.count_go (p : α → Bool) : ∀ (l : List α) (acc : Nat),
+    List.countP.go p l acc = acc + «计» p l
+  | [], _ => rfl
+  | x :: l, acc => by
+    show (bif p x then List.countP.go p l (acc + 1) else List.countP.go p l acc) =
+      acc + (cond (p x) 1 0 + «计» p l)
+    cases p x with
+    | true =>
+      show List.countP.go p l (acc + 1) = acc + (1 + «计» p l)
+      rw [GrammarLaws.count_go p l (acc + 1), Nat.add_assoc]
+    | false =>
+      show List.countP.go p l acc = acc + (0 + «计» p l)
+      rw [GrammarLaws.count_go p l acc, Nat.zero_add]
+
+/-- **`«计»` is Lean's `List.countP`.** A structural twin, proved equal with no axiom. -/
+theorem GrammarLaws.count_eq_countP (p : α → Bool) (l : List α) : «计» p l = l.countP p := by
+  show «计» p l = List.countP.go p l 0
+  rw [GrammarLaws.count_go p l 0, Nat.zero_add]
+
+/-- A region read as a test, closed under a relation and its converse, is one the relation never
+crosses: related units lie both in it or both outside it. -/
+theorem GrammarLaws.uncrossed_of_closed {R : «际» α} {p : α → Bool}
+    (forward : «闭» R (fun x => p x = true)) (backward : «闭» («逆» R) (fun x => p x = true)) :
+    ∀ x y, R x y → p x = p y := fun x y r => by
+  cases hx : p x <;> cases hy : p y
+  · rfl
+  · exact Bool.noConfusion (hx.symm.trans (backward y x hy r))
+  · exact Bool.noConfusion (hy.symm.trans (forward x y hx r))
+  · rfl
+
+/-- **A pairing keeps the count on every region the relation does not cross.** Each pair lies both
+in the region or both outside it. -/
+theorem «对则不越域守数» {R : «际» α} {p : α → Bool} (uncrossed : ∀ x y, R x y → p x = p y)
+    {a b : List α} (h : «对» R a b) : «计» p a = «计» p b := by
+  induction h with
+  | nil => rfl
+  | @cons x y a b₁ b₂ r _ ih =>
+    show cond (p x) 1 0 + «计» p a = «计» p (b₁ ++ y :: b₂)
+    rw [GrammarLaws.count_insert, uncrossed x y r, ih]
+
+/-- **A pairing keeps the count on every region closed both ways**: closed under the relation and
+under its converse. Closed one way is not enough (`«对而单闭域不守数之例»`). -/
+theorem «对则双闭域守数» {R : «际» α} {p : α → Bool}
+    (forward : «闭» R (fun x => p x = true)) (backward : «闭» («逆» R) (fun x => p x = true))
+    {a b : List α} (h : «对» R a b) : «计» p a = «计» p b :=
+  «对则不越域守数» (GrammarLaws.uncrossed_of_closed forward backward) h
+
+/-- **A region closed one way, and the count not kept**, the scope of `«对则双闭域守数»`. Under one
+step from `0` to `1`, the region holding `1` alone is closed (nothing it holds bears the step
+beyond it), and the pairing of `[0]` with `[1]` counts none of it before and one after. -/
+theorem «对而单闭域不守数之例» :
+    «闭» (fun x y : Nat => x = 0 ∧ y = 1) (fun x => Nat.beq 1 x = true) ∧
+    «对» (fun x y : Nat => x = 0 ∧ y = 1) [0] [1] ∧
+    «计» (Nat.beq 1) [0] ≠ «计» (Nat.beq 1) [1] :=
+  ⟨fun _ _ _ step => (congrArg (Nat.beq 1) step.2).trans rfl, .cons (b₁ := []) ⟨rfl, rfl⟩ .nil, fun h => Nat.noConfusion h⟩
+
+section CountOfClass
+
+variable {E : «际» α} {e : α → α → Bool}
+
+/-- Related units are counted alike by every class's test. -/
+theorem GrammarLaws.class_test_congr (cls : «类» E) (dec : ∀ x y, E x y ↔ e x y = true) {x y : α}
+    (r : E x y) (z : α) : e z x = e z y := by
+  cases hx : e z x <;> cases hy : e z y
+  · rfl
+  · exact Bool.noConfusion (hx.symm.trans ((dec z x).mp (cls.trans ((dec z y).mpr hy) (cls.symm r))))
+  · exact Bool.noConfusion (hy.symm.trans ((dec z y).mp (cls.trans ((dec z x).mpr hx) r)))
+  · rfl
+
+/-- Equal count in every class gives a pairing under the class. -/
+theorem GrammarLaws.pair_of_class_counts (cls : «类» E) (dec : ∀ x y, E x y ↔ e x y = true) :
+    ∀ (a b : List α), (∀ z, «计» (e z) a = «计» (e z) b) → «对» E a b
+  | [], [], _ => .nil
+  | [], y :: b, counts => by
+    have hy : «计» (e y) (y :: b) = 1 + «计» (e y) b :=
+      congrArg (fun v => cond v 1 0 + «计» (e y) b) ((dec y y).mp (cls.refl y))
+    have zero : «计» (e y) (y :: b) = 0 := (counts y).symm
+    exact Nat.noConfusion ((zero.symm.trans hy).trans (Nat.add_comm 1 _))
+  | x :: a, b, counts => by
+    have pos : 0 < «计» (e x) b := by
+      have hx : «计» (e x) (x :: a) = 1 + «计» (e x) a :=
+        congrArg (fun v => cond v 1 0 + «计» (e x) a) ((dec x x).mp (cls.refl x))
+      have more : «计» (e x) b = «计» (e x) a + 1 :=
+        (counts x).symm.trans (hx.trans (Nat.add_comm 1 _))
+      rw [more]
+      exact Nat.succ_pos _
+    match GrammarLaws.split_of_count_pos pos with
+    | ⟨b₁, y, b₂, e₁, hy⟩ =>
+      cases e₁
+      have r : E x y := (dec x y).mpr hy
+      refine .cons r (GrammarLaws.pair_of_class_counts cls dec a (b₁ ++ b₂) fun z => ?_)
+      have h : cond (e z x) 1 0 + «计» (e z) a = cond (e z y) 1 0 + «计» (e z) (b₁ ++ b₂) :=
+        (counts z).trans (GrammarLaws.count_insert (e z) y b₁ b₂)
+      rw [GrammarLaws.class_test_congr cls dec r z] at h
+      exact Naturals.add_left_cancel h
+
+/-- **The count law of a class.** Under a class decided by a test, two lists are paired one to one
+exactly where every class holds as many units of the one as of the other. The class does work:
+two lists of one unit each, at different places, are paired under the whole relation `«一»` (one
+class) and not under sameness `«静»` (a class for each place), `«一对而静不对之例»`. -/
+theorem «类之对当且仅当类类等数» (cls : «类» E) (dec : ∀ x y, E x y ↔ e x y = true)
+    {a b : List α} : «对» E a b ↔ ∀ z, «计» (e z) a = «计» (e z) b :=
+  ⟨fun h z => «对则不越域守数» (p := e z) (fun _ _ r => GrammarLaws.class_test_congr cls dec r z) h,
+   GrammarLaws.pair_of_class_counts cls dec a b⟩
+
+end CountOfClass
+
+/-- **What a pairing under continuation adds to equal count.** Where `E` is a class decided by the
+test `e`, continuation relative to it lies within it, so a pairing under continuation keeps the
+count by `e` in every class. -/
+theorem «续之对则类类等数» {R E : «际» α} {e : α → α → Bool} (cls : «类» E)
+    (dec : ∀ x y, E x y ↔ e x y = true) {a b : List α} (h : «对» («续» R E) a b) (z : α) :
+    «计» (e z) a = «计» (e z) b :=
+  («类之对当且仅当类类等数» cls dec).mp («对之单调» (fun _ _ (both : R _ _ ∧ E _ _) => both.2) h) z
+
+/-- **Equal count, and no pairing under sameness**, the scope of `«类之对当且仅当类类等数»`: which
+class does work. A unit at one place before and at another after is paired under the one, since
+the counts are equal, and not under sameness, since the first place holds one unit before and
+none after. -/
+theorem «一对而静不对之例» : «对» «一» [0] [1] ∧ ¬ «对» («静» : «际» Nat) [0] [1] :=
+  ⟨«等长则一对» [0] [1] rfl, fun h =>
+    Nat.noConfusion («对则不越域守数» (p := Nat.beq 0) (fun x y (same : x = y) => congrArg (Nat.beq 0) same) h)⟩
 
 end Balance
 
@@ -1291,6 +1640,169 @@ theorem «入而屡之例» : ∃ (Q F : «际» Nat) (g : Nat → Nat),
 
 end Runs
 
+/-! ## The census of a step (生, 亡): arising and ceasing paired
+
+Units listed once before and after a step, under a continuation decided by a test: those before
+that no unit after continues cease, and those after that continue no unit before arise. Where the
+continuation fixes successors and predecessors, the census pairs them one to one; where every
+predecessor of a unit after stands before and every successor of a unit before stands after,
+arising and ceasing are the grammar's beginning (`«生»`) and ending (`«亡»`).
+The listing and the test are supplied, as the pairing is in `section Balance`. -/
+
+section Census
+
+variable {α : Type u}
+
+/-- The units before a step that no unit after continues, under a continuation decided by `k`: they
+cease across the step. -/
+def GrammarLaws.ceasing (k : α → α → Bool) (before after : List α) : List α :=
+  GrammarLaws.keep (fun g => !(after.any (k g))) before
+
+/-- The units after a step that continue no unit before, under a continuation decided by `k`: they
+arise across the step. -/
+def GrammarLaws.arising (k : α → α → Bool) (before after : List α) : List α :=
+  GrammarLaws.keep (fun f => !(before.any (fun g => k g f))) after
+
+/-- The census as a pairing, under a continuation decided by a test. Where units listed once at the
+two ends of a step continue one to one (no unit continues as two, no two continue as one), the units
+before with those arising are paired one to one with the units after with those ceasing, each pair
+a continuation or the same unit. -/
+theorem GrammarLaws.census_pairs (k : α → α → Bool) : ∀ (before after : List α),
+    Distinct before → Distinct after →
+    (∀ g f f', g ∈ before → f ∈ after → f' ∈ after → k g f = true → k g f' = true → f = f') →
+    (∀ g g' f, g ∈ before → g' ∈ before → f ∈ after → k g f = true → k g' f = true → g = g') →
+    «对» (fun x y => k x y = true ∨ x = y) (before ++ GrammarLaws.arising k before after)
+      (after ++ GrammarLaws.ceasing k before after)
+  | [], after, _, _, _, _ => by
+    show «对» _ (GrammarLaws.keep (fun f => !(([] : List α).any (fun g => k g f))) after) (after ++ [])
+    rw [ListTests.append_nil,
+      GrammarLaws.keep_all (p := fun f => !(([] : List α).any fun g => k g f)) after (fun _ _ => rfl)]
+    exact «对之自反» (R := fun x y => k x y = true ∨ x = y) (fun _ => Or.inr rfl) after
+  | g :: before, after, ⟨gNot, dB⟩, dA, noSplit, noMerge => by
+    cases hg : after.any (k g) with
+    | false =>
+      have cz : GrammarLaws.ceasing k (g :: before) after = g :: GrammarLaws.ceasing k before after := by
+        show cond (!(after.any (k g))) (g :: GrammarLaws.ceasing k before after)
+          (GrammarLaws.ceasing k before after) = _
+        rw [hg]; rfl
+      have az : GrammarLaws.arising k (g :: before) after = GrammarLaws.arising k before after :=
+        GrammarLaws.keep_congr after fun f m => by
+          show (!(k g f || before.any (fun g => k g f))) = !(before.any (fun g => k g f))
+          rw [GrammarLaws.any_false_mem hg m]; rfl
+      show «对» _ (g :: (before ++ GrammarLaws.arising k (g :: before) after))
+        (after ++ GrammarLaws.ceasing k (g :: before) after)
+      rw [az, cz]
+      exact .cons (b₁ := after) (Or.inr rfl) (GrammarLaws.census_pairs k before after dB dA
+        (fun g f f' mg => noSplit g f f' (.tail _ mg))
+        (fun g g' f mg mg' => noMerge g g' f (.tail _ mg) (.tail _ mg')))
+    | true =>
+      match GrammarLaws.any_split hg with
+      | ⟨a₁, f, a₂, e, kf⟩ =>
+        cases e
+        have dA' := GrammarLaws.distinct_removed dA
+        have cz : GrammarLaws.ceasing k (g :: before) (a₁ ++ f :: a₂) =
+            GrammarLaws.ceasing k before (a₁ ++ a₂) := by
+          show cond (!((a₁ ++ f :: a₂).any (k g))) _ (GrammarLaws.ceasing k before (a₁ ++ f :: a₂)) = _
+          rw [hg]
+          exact GrammarLaws.keep_congr before fun g' m => by
+            have off : k g' f = false := by
+              cases h : k g' f with
+              | false => rfl
+              | true =>
+                cases noMerge g g' f (.head _) (.tail _ m) (GrammarLaws.mem_middle f a₂ a₁) kf h
+                exact absurd m gNot
+            rw [GrammarLaws.any_remove off]
+        have az : GrammarLaws.arising k (g :: before) (a₁ ++ f :: a₂) =
+            GrammarLaws.arising k before (a₁ ++ a₂) := by
+          show GrammarLaws.keep _ (a₁ ++ f :: a₂) = GrammarLaws.keep _ (a₁ ++ a₂)
+          rw [GrammarLaws.keep_append, GrammarLaws.keep_append]
+          show _ ++ cond (!(k g f || before.any (fun g => k g f))) _ _ = _
+          rw [kf]
+          show GrammarLaws.keep _ a₁ ++ GrammarLaws.keep _ a₂ = _
+          rw [← GrammarLaws.keep_append, ← GrammarLaws.keep_append]
+          exact GrammarLaws.keep_congr (a₁ ++ a₂) fun x m => by
+            have off : k g x = false := by
+              cases h : k g x with
+              | false => rfl
+              | true =>
+                cases noSplit g x f (.head _) (GrammarLaws.mem_of_removed m)
+                  (GrammarLaws.mem_middle f a₂ a₁) h kf
+                exact absurd m dA'.2
+            show (!(k g x || before.any (fun g => k g x))) = !(before.any (fun g => k g x))
+            rw [off]; rfl
+        show «对» _ (g :: (before ++ GrammarLaws.arising k (g :: before) (a₁ ++ f :: a₂)))
+          ((a₁ ++ f :: a₂) ++ GrammarLaws.ceasing k (g :: before) (a₁ ++ f :: a₂))
+        rw [az, cz, ListTests.append_assoc]
+        have IH := GrammarLaws.census_pairs k before (a₁ ++ a₂) dB dA'.1
+          (fun g x x' mg mx mx' => noSplit g x x' (.tail _ mg) (GrammarLaws.mem_of_removed mx)
+            (GrammarLaws.mem_of_removed mx'))
+          (fun g g' x mg mg' mx => noMerge g g' x (.tail _ mg) (.tail _ mg')
+            (GrammarLaws.mem_of_removed mx))
+        rw [ListTests.append_assoc] at IH
+        exact .cons (b₁ := a₁) (b₂ := a₂ ++ GrammarLaws.ceasing k before (a₁ ++ a₂)) (Or.inl kf) IH
+
+variable {R E : «际» α} {k : α → α → Bool}
+
+/-- **The census on continuation.** Units listed once before and after a step, under a continuation
+(`«续» R E`, decided by `k`) that fixes successors and predecessors: the units before with those
+arising are paired one to one with the units after with those ceasing, each pair a continuation or
+the same unit. -/
+theorem «定后定前则前并生对后并亡» (dec : ∀ x y, «续» R E x y ↔ k x y = true)
+    (before after : List α) (dB : Distinct before) (dA : Distinct after)
+    (fixedAfter : «定后» («续» R E)) (fixedBefore : «定前» («续» R E)) :
+    «对» (fun x y => «续» R E x y ∨ x = y) (before ++ GrammarLaws.arising k before after)
+      (after ++ GrammarLaws.ceasing k before after) :=
+  «对之单调» (fun x y r => match r with
+      | .inl c => .inl ((dec x y).mpr c)
+      | .inr e => .inr e)
+    (GrammarLaws.census_pairs k before after dB dA
+      (fun g f f' _ _ _ r r' => «定后之逐点».mp fixedAfter g f f' ((dec g f).mpr r) ((dec g f').mpr r'))
+      (fun g g' f _ _ _ r r' => «定前之逐点».mp fixedBefore g g' f ((dec g f).mpr r) ((dec g' f).mpr r')))
+
+/-- **Arising is beginning, where the predecessors stand before.** Where every predecessor of a unit
+after the step stands before it, the units the census lists as arising are exactly the units after
+that begin (`«生»`). -/
+theorem «前者在前则所列生者生» (dec : ∀ x y, «续» R E x y ↔ k x y = true) {before after : List α}
+    (predecessorsBefore : ∀ x f, f ∈ after → «续» R E x f → x ∈ before) {f : α} :
+    f ∈ GrammarLaws.arising k before after ↔ f ∈ after ∧ «生» R E f := by
+  constructor
+  · intro m
+    have h := GrammarLaws.mem_keep.mp m
+    refine ⟨h.1, fun ⟨x, c⟩ => ?_⟩
+    have off := GrammarLaws.not_eq_true_iff.mp h.2
+    have on : before.any (fun g => k g f) = true :=
+      GrammarLaws.any_true_of_mem (p := fun g => k g f) (predecessorsBefore x f h.1 c) ((dec x f).mp c)
+    exact nomatch off.symm.trans on
+  · intro ⟨mf, begins⟩
+    refine GrammarLaws.mem_keep.mpr ⟨mf, GrammarLaws.not_eq_true_iff.mpr
+      (GrammarLaws.any_false_of (p := fun g => k g f) before fun g _ => ?_)⟩
+    cases h : k g f with
+    | false => exact h
+    | true => exact absurd ⟨g, (dec g f).mpr h⟩ begins
+
+/-- **Ceasing is ending, where the successors stand after.** Where every successor of a unit before
+the step stands after it, the units the census lists as ceasing are exactly the units before that
+end (`«亡»`). -/
+theorem «后者在后则所列亡者亡» (dec : ∀ x y, «续» R E x y ↔ k x y = true) {before after : List α}
+    (successorsAfter : ∀ g y, g ∈ before → «续» R E g y → y ∈ after) {g : α} :
+    g ∈ GrammarLaws.ceasing k before after ↔ g ∈ before ∧ «亡» R E g := by
+  constructor
+  · intro m
+    have h := GrammarLaws.mem_keep.mp m
+    refine ⟨h.1, fun ⟨y, c⟩ => ?_⟩
+    have off := GrammarLaws.not_eq_true_iff.mp h.2
+    have on : after.any (k g) = true :=
+      GrammarLaws.any_true_of_mem (p := k g) (successorsAfter g y h.1 c) ((dec g y).mp c)
+    exact nomatch off.symm.trans on
+  · intro ⟨mg, ends⟩
+    refine GrammarLaws.mem_keep.mpr ⟨mg, GrammarLaws.not_eq_true_iff.mpr
+      (GrammarLaws.any_false_of (p := k g) after fun f _ => ?_)⟩
+    cases h : k g f with
+    | false => rfl
+    | true => exact absurd ⟨f, (dec g f).mpr h⟩ ends
+
+end Census
+
 /-! ## Lumping (同行) -/
 
 section Lumping
@@ -1358,6 +1870,44 @@ lies inside its own core. -/
 theorem «类同行遍后则含于核» {R E : «际» α} (hE : «类» E) (alike : «同行» R E) (total : ∀ x, ∃ y, R x y) :
     «则» E («核» R E) :=
   («类有常当且仅当含于核» R hE).mp («同行遍后则有常» alike total)
+
+/-- **With a fixed successor, the core of a class goes alike.** Where the step's successor is fixed, the
+core of a class `E` is a class inside `E` that the step goes alike across. -/
+theorem «定后则类之核同行» {R E : «际» α} (hE : «类» E) (fixed : «定后» R) :
+    «类» («核» R E) ∧ «则» («核» R E) E ∧ «同行» R («核» R E) :=
+  ⟨«核为类» R hE, («根» R E).1, «有常定后则同行» («根» R E).2.1 fixed⟩
+
+/-- **Where every occurrence has a successor, a class inside `E` going alike lies in the core of `E`.**
+Neither a fixed successor nor `E` a class is needed. -/
+theorem «遍后则其内同行之类含于核» {R E : «际» α} (total : ∀ x, ∃ y, R x y) :
+    ∀ S, «类» S → «则» S E → «同行» R S → «则» S («核» R E) :=
+  fun S hS hSE alike => («根» R E).2.2.2 S hSE (fun _ _ h => hS.symm h) («同行遍后则有常» alike total)
+
+/-- **With a fixed successor that every occurrence has, the core of a class is the coarsest class inside it
+that the step goes alike across.** -/
+theorem «定后遍后则核为其内最粗同行之类» {R E : «际» α} (hE : «类» E) (fixed : «定后» R)
+    (total : ∀ x, ∃ y, R x y) :
+    («类» («核» R E) ∧ «则» («核» R E) E ∧ «同行» R («核» R E)) ∧
+      ∀ S, «类» S → «则» S E → «同行» R S → «则» S («核» R E) :=
+  ⟨«定后则类之核同行» hE fixed, «遍后则其内同行之类含于核» total⟩
+
+/-- **Off a fixed successor the core of a class need not go alike (witness).** Where `0` steps to `1` and to
+`2` and `E` is the identity, `E` is a class, the successor is not fixed, the core relates `0` to itself and
+not `1` to `2`, and the step does not go alike across it. -/
+theorem «后不定则核可不同行» : ∃ (R E : «际» Nat),
+    R 0 1 ∧ R 0 2 ∧ (∀ x y, E x y ↔ x = y) ∧
+      «类» E ∧ ¬ «定后» R ∧ «核» R E 0 0 ∧ ¬ «核» R E 1 2 ∧ ¬ «同行» R («核» R E) := by
+  refine ⟨fun x y => x = 0 ∧ (y = 1 ∨ y = 2), «静», ?_⟩
+  have hid : «核» (fun x y : Nat => x = 0 ∧ (y = 1 ∨ y = 2)) «静» 0 0 :=
+    ⟨«静», fun _ _ h => h, fun _ _ h => h.symm, «静有常» _, rfl⟩
+  have apart : ¬ «核» (fun x y : Nat => x = 0 ∧ (y = 1 ∨ y = 2)) «静» 1 2 := fun ⟨_, hS, _, _, h12⟩ => by
+    have same : (1 : Nat) = 2 := hS 1 2 h12
+    exact absurd same (by decide)
+  refine ⟨⟨rfl, Or.inl rfl⟩, ⟨rfl, Or.inr rfl⟩, fun _ _ => Iff.rfl, ⟨fun _ => rfl, Eq.symm, Eq.trans⟩,
+    fun fixed => ?_, hid, apart, fun h => ?_⟩
+  · have same : (1 : Nat) = 2 := fixed 1 2 ⟨0, ⟨rfl, Or.inl rfl⟩, ⟨rfl, Or.inr rfl⟩⟩
+    exact absurd same (by decide)
+  · exact apart (h 1 2 ⟨0, ⟨0, ⟨rfl, Or.inl rfl⟩, hid⟩, ⟨rfl, Or.inr rfl⟩⟩)
 
 /-- **Where every letter's relation goes alike under `E`, passing through the word keeps `E`-alike
 occurrences alike (同行之历).** -/

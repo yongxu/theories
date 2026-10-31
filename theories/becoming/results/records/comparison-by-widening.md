@@ -129,6 +129,7 @@ Ren asked on 11 October 2026: “can we reduce is "for anything, its continuatio
 | review | [REVIEW-U3-LEAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md) | — |
 | integration | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/DESIGN.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json) | — |
 
 Aliases: `Becoming.Web.paths_extension_iff_widens`, `Becoming.Web.paths_comparison_widens`, `Becoming.Web.paths_one_object`
 

@@ -284,31 +284,6 @@ theorem Once.keepsAfter : «后守» once «一» «静» .first :=
 theorem step_func {z w w' : Nat} (h : step z w) (h' : step z w') : w = w' :=
   h.trans h'.symm
 
-/-- What a line along the steps reaches is later. -/
-theorem step_reached_le {L : «际» Nat} : ∀ {x y : Nat}, «所及» step L x y → x ≤ y := by
-  intro x y h
-  match h with
-  | .inl e => exact Nat.le_of_eq e
-  | .inr l =>
-    have later : ∀ {a b : Nat}, «相续» step L a b → a + 1 ≤ b := by
-      intro a b l
-      induction l with
-      | one c => exact Nat.le_of_eq c.1.symm
-      | more c _ ih => exact c.1 ▸ Nat.le_of_succ_le ih
-    exact Nat.le_of_succ_le (later l)
-
-/-- Under the one, the steps from the first reach every step. -/
-theorem step_reaches : ∀ n, «所及» step «一» 0 n
-  | 0 => .inl rfl
-  | n + 1 => «所及之传递» (step_reaches n) (.inr (.one ⟨rfl, trivial⟩))
-
-/-- Under the one, the steps reach every later step. -/
-theorem step_reaches_of_le : ∀ {z n : Nat}, z ≤ n → «所及» step «一» z n := by
-  intro z n le
-  induction le with
-  | refl => exact .inl rfl
-  | step _ ih => exact «所及之传递» ih (.inr (.one ⟨rfl, trivial⟩))
-
 /-- A family of steps that holds at the first and goes on under the one holds at every step. -/
 theorem step_family {S : Nat → Prop} (s₀ : S 0)
     (closed : ∀ z, S z → ∃ w, S w ∧ «续» step «一» z w) : ∀ m, S m := fun m =>

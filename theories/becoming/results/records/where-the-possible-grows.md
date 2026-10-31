@@ -151,6 +151,7 @@ The held law restates open-ended novelty's innovation, novelty that changes the 
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/NOTE.md) | — |
 | integration | [REVIEW-GW-LEAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/REVIEW-GW-LEAN.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json) | — |
 
 Aliases: `Where the possible grows`, `可能者于何处增长`, `the held possible`, `the possible relative to what is held`, `a tower of rules with no top`, `Becoming.Reaching.PossibleHeld`, `Becoming.RuleTower.possible_iff_held`
 

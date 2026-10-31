@@ -123,12 +123,12 @@ def «住» (R E : «际» α) (x : α) : Prop := «有前» R E x ∧ «有后�
 theorem «四相无自立» {R : «际» α} (irr : ∀ z, ¬ R z z) {x y z : α} (hxy : R x y) (hyz : R y z) :
     «住» R «一» y ∧ «生» R «静» y ∧ «亡» R «静» y
 
-theorem «两端分则中有标» {R E K P : «际» α} (hK : «类» K)
-    (split : ∀ x y, «续» R E x y → K x y ∨ P x y) {x y : α} (line : «相续» R E x y) :
+theorem «两端分则中有标» {R E K P : «际» α} (split : ∀ x y, «续» R E x y → K x y ∨ P x y)
+    (trans : ∀ {a b c}, K a b → K b c → K a c) {x y : α} (line : «相续» R E x y) :
     ¬ K x y → ∃ u v, «续» R E u v ∧ P u v ∧ (x = u ∨ «相续» R E x u) ∧ (v = y ∨ «相续» R E v y)
 ```
 
-File: `Becoming/Grammar.lean`. **Meaning.** Under a class, an occurrence begins where it has no predecessor under continuation, ends where it has no successor, and abides where it has both a predecessor and a successor. With `R` irreflexive, a middle occurrence abides under the full class and both begins and ends under identity. Ending under a coarser class implies ending under a finer one (`«亡于粗则亡于细»`); a beginning under a finer class continued under a coarser one is an alteration (`«生于细而续于粗则异»`); if every step either keeps `K` or carries `P`, a line whose ends `K` separates has a step carrying `P`. **Standing and use.** Root theorems ([01 §3](../chapters/01-ROOT.md#four-marks)). **Reading and class.** Not a corpus unit; the readings of the four marks (四相) are the Buddhist dossier's.
+File: `Becoming/Grammar.lean`. **Meaning.** Under a class, an occurrence begins where it has no predecessor under continuation, ends where it has no successor, and abides where it has both a predecessor and a successor. With `R` irreflexive, a middle occurrence abides under the full class and both begins and ends under identity. Ending under a coarser class implies ending under a finer one (`«亡于粗则亡于细»`); a beginning under a finer class continued under a coarser one is an alteration (`«生于细而续于粗则异»`); for a transitive relation `K` (a class is one), if every step either keeps `K` or carries `P`, a line whose ends `K` separates (`¬ K x y`) has a step carrying `P`. **Standing and use.** Root theorems ([01 §3](../chapters/01-ROOT.md#four-marks)). **Reading and class.** Not a corpus unit; the readings of the four marks (四相) are the Buddhist dossier's.
 
 **Known weaknesses.**
 - The marks are one-step notions: a flash both begins and ends, so they are no partition even where decided (01 §3 says so).

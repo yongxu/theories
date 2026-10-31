@@ -209,8 +209,8 @@
     "decidability"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (check_becoming.py): the current bytes of the core modules Becoming.Sampling, Becoming.Locality, Becoming.Prelude, Becoming.Population, Becoming.Premises, Becoming.Change and Becoming.InAmounts are bound to core receipts under becoming-checks/ (Sampling to 20261020T051144.879480Z); every cited declaration has an empty axiom report, and the receipts record that the core compiles from Lean's prelude alone. Author counterreview (integration note, section 80); no independent review.",
-    "zh": "Lean 4.29.1 合并检查器（check_becoming.py）实查：核心模块 Becoming.Sampling、Locality、Prelude、Population、Premises、Change 与 InAmounts 的当前字节绑定 becoming-checks/ 下的核心回执（Sampling 绑定 20261020T051144.879480Z）；所引声明的公理报告均为空，回执记录核心只用 Lean 前导即可编译。作者反审（整合文档第 80 节）；无独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (check_becoming.py): the current bytes of the core modules Becoming.Sampling, Becoming.Locality, Becoming.Prelude, Becoming.Population, Becoming.Premises, Becoming.Change and Becoming.InAmounts are bound to core receipts under becoming-checks/ (Sampling to 20261031T054654.692180Z); every cited declaration has an empty axiom report, and the receipts record that the core compiles from Lean's prelude alone. Author counterreview (integration note, section 80); no independent review.",
+    "zh": "Lean 4.29.1 合并检查器（check_becoming.py）实查：核心模块 Becoming.Sampling、Locality、Prelude、Population、Premises、Change 与 InAmounts 的当前字节绑定 becoming-checks/ 下的核心回执（Sampling 绑定 20261031T054654.692180Z）；所引声明的公理报告均为空，回执记录核心只用 Lean 前导即可编译。作者反审（整合文档第 80 节）；无独立审查。"
   },
   "next_delta": {
     "en": "Show whether balance composes over a coarse step without each relatum listed once at the fine steps inside; test a reading that coarsens the step and refines the unit at once; and read real-valued time beyond the tower of discrete readings.",
@@ -338,7 +338,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
       "role": "proof",
-      "sha256": "9d27490407360695af1bbbf9008b20ed9c42eeae3c749a38d9a53cb4480c7744",
+      "sha256": "9248416b934c9d913594cc064153a6cccfb2261c22e1424f1a483d99f89f5dfc",
       "declarations": [
         "Becoming.Strict",
         "Becoming.Strict.le_self",
@@ -596,12 +596,18 @@
       "role": "receipt",
       "sha256": "279a65322c97aa66fd10c042003597aaab1bbed545b4ec2f13ebfb803cd2041f",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "role": "receipt",
+      "sha256": "a5cb4731b0f3b56beb3a500867a344c56542b5091315b81fcd6184adbd46c4ad",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Sampling",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -738,6 +744,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the statement kept, with the strictly increasing times named and its last clause restated as the conditions that only active relata give and take, which need not compose (the earlier \"only active giving and taking are step-relative\" could be read as no other condition being so, while bounded transmission is too); the claim split into 15 laws, each read against its declarations in Sampling.lean, with the decided equality of relata that reading a flow at coarser steps takes written into each flow law; the limitations to four does-not-show items, the two counterexamples (unchanged) and a third hypothesis; the standard boundaries no-ethical-premise, discrete-steps and decidability cited; Web.Held and Web.DrawingHeld were already referenced; no premise, status, reference, proof binding or source hash changed. Every earlier sentence is mapped in [laws-at-coarser-steps.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/laws-at-coarser-steps.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, the counterexamples, the correspondence, each read against the Lean it cites. A cold read of the applied record was taken in the correspondence.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述保留，写出严格递增的时刻，末一分句改述为“只有活跃者给予、取用”这两条条件不必合成（原来的“只有活跃者给予与取用依步而定”可被读作别无他者依步而定，而有界传递也依步而定）；主张拆为 15 条规律，各条对照 Sampling.lean 中的声明核读，在粗步上读出流所需的关系项相等可判定写入每条关于流的规律；限制改为四条“未表明”、两条反例（不变）与第三条前提；引用通用边界 no-ethical-premise、discrete-steps 与 decidability；Web.Held 与 Web.DrawingHeld 原已在引用中；前提、状态、引用、证明绑定与来源哈希均未改变。每句旧文本的去向见 [laws-at-coarser-steps.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/laws-at-coarser-steps.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、反例、对应，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及对应。"
+    },
+    {
+      "en": "31 October 2026, board item HE2, item 1 (study section 474): Sampling's arises_within and ceases_within, which the coarse-step laws use, are now read from the grammar law «两端分则中有标» along the successor, their statements unchanged; the validation scope names Sampling's binding at HE2's receipt.",
+      "zh": "2026年10月31日，工作板条目 HE2 之第 1 项（研究第 474 节）：Sampling 之 arises_within 与 ceases_within（粗步之律所用）今沿后继由文法之律 «两端分则中有标» 读出，陈述不变；验证范围言 Sampling 绑定于 HE2 之回执。"
     }
   ],
   "text_versions": [

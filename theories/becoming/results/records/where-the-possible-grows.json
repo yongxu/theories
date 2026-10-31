@@ -644,7 +644,7 @@
         "Becoming.adaptive_keeps_rule_iff",
         "Becoming.«及在渐粗列之相续»"
       ],
-      "sha256": "f57ebdbef4b57062d23671a94d0f4873217e55655862939c60d2f45bd74f1aa0"
+      "sha256": "9efd2732d6aed37c9251b23d5928bd46e52742cd6e52bf1c04ec8b606b8d1f40"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
@@ -689,12 +689,12 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
       "role": "proof",
-      "sha256": "597036b7017d77d548b949ca29aeb036379904c8b7d8fd7be8329e4df400c940"
+      "sha256": "a2df020b16dca8a0019e730354e1195cff4bf5e7aa7554ba33a878c3de8c43ba"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
       "role": "proof",
-      "sha256": "7ae07b1d9b7bc91f417cd2afa6f547b9b9671cac83321c00185222df11752163"
+      "sha256": "c0d3b94cd4f95b5602cd69be45b65f655010cfa4c279a259ba148e52b72a5f2d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
@@ -740,12 +740,18 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/REVIEW-GW-LEAN.md",
       "role": "integration",
       "sha256": "91070d45e51af98fc97078fe686041517edb48cfda3752a71a41f68788306075"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "role": "receipt",
+      "sha256": "a5cb4731b0f3b56beb3a500867a344c56542b5091315b81fcd6184adbd46c4ad",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T145758.555114Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.HeldPossible",
       "success_pointer": "/status",
       "success_value": "passed"

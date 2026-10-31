@@ -197,18 +197,18 @@ theorem «过亡而续» {R L O : «际» α} {c m z : α} (toEnd : «所及» R
    fun line => ends («相续之始有后» line)⟩
 
 /-- **The core continues something exactly where some line under it goes on without end.** A step
-under the core is followed by a line under it that never ends (`«守理则不穷»`), and a line that never
+under the core is followed by a line under it that never ends (`«守核则不穷»`), and a line that never
 ends has a first step. -/
 theorem «核有续当且仅当有不穷» {R E : «际» α} :
     (∃ x y, «续» R («核» R E) x y) ↔ ∃ y, «不穷» R («核» R E) y :=
-  ⟨fun ⟨_, y, kept⟩ => ⟨y, «守理则不穷» kept⟩,
+  ⟨fun ⟨_, y, kept⟩ => ⟨y, «守核则不穷» kept⟩,
    fun ⟨y, never⟩ => match never y (.inl rfl) with
      | ⟨z, c⟩ => ⟨y, z, c⟩⟩
 
 /-- **Where no line under the core goes on without end, the core continues nothing.** -/
 theorem «无不穷则核无续» {R E : «际» α} (ends : ∀ y, ¬ «不穷» R («核» R E) y) {x y : α} :
     ¬ «续» R («核» R E) x y :=
-  fun kept => ends y («守理则不穷» kept)
+  fun kept => ends y («守核则不穷» kept)
 
 /-- **Along a net without cycles the condition holds only with one center** (续无外则同一中心): two
 centers each reached from the other would lie on a cycle. -/
@@ -330,7 +330,7 @@ theorem core_through_birth (n : Nat) :
 /-- **The regularity of descent goes on for good from every birth**: the line under the core never
 ends from the next member's birth. -/
 theorem descent_unending (n : Nat) : «不穷» step («核» step «一») (n + 1, false) :=
-  «守理则不穷» (core_through_birth n).1
+  «守核则不穷» (core_through_birth n).1
 
 /-- The line of descent from the first member reaches each member, young and old. -/
 theorem descent_reaches_both : ∀ n, «所及» step «一» (0, false) (n, false) ∧ «所及» step «一» (0, false) (n, true)

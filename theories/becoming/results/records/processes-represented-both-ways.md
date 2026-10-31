@@ -127,6 +127,7 @@ A process is a labelled transition system, and its moves' relations are its labe
 | integration | [signatures.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/process-representation/signatures.json) | — |
 | statement | [01-ROOT.md](../../chapters/01-ROOT.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json) | — |
 
 Aliases: `The processes' representation theorem`, `过程之表示定理`, `the model with the move inside`, `着在其内之模型`, `Becoming.renaming_of_withMove`, `Becoming.forall_steps_iff`, `Becoming.trace_iff_li`, `Becoming.yan_line_iff_dependentChoice`
 

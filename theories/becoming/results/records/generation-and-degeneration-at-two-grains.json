@@ -265,8 +265,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarMap, 39 theorems in 58 declarations, and Becoming.MapInstances, 28 theorems, each with an empty axiom report. The instances were written by an Opus coder; no independent review. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers. Becoming.MapRegions (GW1, GW2), a core leaf importing GrammarMap only, 39 theorems in 45 declarations at receipt 20261030T152859.871907Z, every axiom report empty; independent read-only review REVIEW-GW126-LEAN.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarMap，58 个声明中 39 条定理，及 Becoming.MapInstances，公理报告皆空。实例由一位 Opus 编者写成；无独立审查。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。MapRegions（GW1、GW2，核心叶）于回执 20261030T152859.871907Z：45 项声明（39 项定理），公理报告皆空；审查 REVIEW-GW126-LEAN。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarMap, 42 theorems in 61 declarations at receipt 20261031T054654.692180Z, and Becoming.MapInstances, 27 theorems, each with an empty axiom report. The instances were written by an Opus coder; no independent review. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers. Becoming.MapRegions (GW1, GW2), a core leaf importing GrammarMap only, 36 theorems in 42 declarations at the same receipt, every axiom report empty; independent read-only review REVIEW-GW126-LEAN.",
+    "zh": "核心检查器以 Lean 4.29.1 从前奏检查（回执 20261031T054654.692180Z）：Becoming.GrammarMap，61 个声明中 42 条定理，及 Becoming.MapInstances，公理报告皆空。实例由一位 Opus 编者写成；无独立审查。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。MapRegions（GW1、GW2，核心叶）于同一回执：42 项声明（36 项定理），公理报告皆空；审查 REVIEW-GW126-LEAN。"
   },
   "next_delta": {
     "en": "State the old map's regimes (renewal, consumption, capture, the five questions of 势) as regions of this map on the old base's readings, and the meta-attractor's reading of selection at the coarse grain.",
@@ -384,7 +384,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
       "role": "proof",
-      "sha256": "1fb25d2f7ce4d6e3471a11619413e02e4963f9965966132f20207273d8e02636",
+      "sha256": "0e1c6605d855aa42e5ea057d784725c1474218dbeb9b8df212eab3d26c2b7f80",
       "declarations": [
         "Becoming.Map.Branch",
         "Becoming.Map.Endless.generates",
@@ -401,6 +401,9 @@
         "Becoming.Map.short_end",
         "Becoming.Map.step",
         "Becoming.Map.step_irrefl",
+        "Becoming.Map.step_reached_le",
+        "Becoming.Map.step_reaches",
+        "Becoming.Map.step_reaches_of_le",
         "Becoming.Map.still",
         "Becoming.Map.«生守相杂»",
         "Becoming.«不穷则延»",
@@ -545,9 +548,6 @@
         "Becoming.Map.once",
         "Becoming.Map.step_family",
         "Becoming.Map.step_func",
-        "Becoming.Map.step_reached_le",
-        "Becoming.Map.step_reaches",
-        "Becoming.Map.step_reaches_of_le",
         "Becoming.Map.«后守之定则LPO»",
         "Becoming.Map.«生成之定则WLPO»",
         "Becoming.Map.«生成后守之定则LPO»",
@@ -563,7 +563,7 @@
         "Becoming.«生则或粗生或传»",
         "Becoming.«粗有前则生为传»"
       ],
-      "sha256": "b28bfeeb64a8a6e854fdda931d284e14fb6e78c408d6968e7e4bea3498863b54"
+      "sha256": "98116bcda6f47dd39a49b7a31bb4dc18c48665baf5a34cf0b7634597aa00c81b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T152859.871907Z/verification.json",
@@ -579,12 +579,17 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/REVIEW-GW126-LEAN.md",
       "role": "integration",
       "sha256": "2a416c2898f9647bd0b6b9d73eabf784149557524d85b042921aa394582ccd8f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "role": "receipt",
+      "sha256": "a5cb4731b0f3b56beb3a500867a344c56542b5091315b81fcd6184adbd46c4ad"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarMap.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T043938.655037Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarMap",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -598,7 +603,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MapRegions.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T152859.871907Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.MapRegions",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -632,6 +637,10 @@
     {
       "en": "30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the grammar's «生生» marked in the Chinese of law 12, as 06 §三 marks it; nothing the record states changed.",
       "zh": "2026年10月30日：仅措辞，依第二十一次审查第 13 项（生生一义）：律 12 之中文中文法之 «生生» 加标，如第六章 §三；记录所述无改变。"
+    },
+    {
+      "en": "31 October 2026, board item HE2, item 5 (study section 474): the successor's three reach laws (Map.step_reached_le, Map.step_reaches, Map.step_reaches_of_le) moved from MapRegions into GrammarMap whole, names and statements unchanged, so this record cites them from GrammarMap, and the validation scope gives both modules' counts at HE2's receipt; no law's text changes.",
+      "zh": "2026年10月31日，工作板条目 HE2 之第 5 项（研究第 474 节）：后继之三及达律（Map.step_reached_le、Map.step_reaches、Map.step_reaches_of_le）连名与陈述整移自 MapRegions 入 GrammarMap，本记录遂自 GrammarMap 引之，验证范围言二模块于 HE2 回执之数；诸律之文不变。"
     }
   ]
 }

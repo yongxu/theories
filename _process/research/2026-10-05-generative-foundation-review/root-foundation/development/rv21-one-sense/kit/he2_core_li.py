@@ -235,8 +235,8 @@ TEXTS = [
      "（足以定理：在二类之合下同者", "（足以定核：在二类之合下同者"),
     ("the outside check: where its laws went", HERE + 'review/CoreAndLi.lean',
      "Not a package declaration: proposed to the grammar's owner for `Becoming.GrammarLaws`.\n",
-     names("Not a package declaration: proposed to the grammar's owner for `Becoming.GrammarLaws`, where HE2's items 6\n"
-           "and 7 state it as «@FIX@», «@IN@», «@CO@» and «@WIT@».\n")),
+     names("Not a package declaration: proposed to the grammar's owner for `Becoming.GrammarLaws`, where HE2's item 6\n"
+           "states it as «@FIX@», «@IN@», «@CO@» and «@WIT@».\n")),
 ]
 
 # The records: declarations renamed wherever a record lists them; the Chinese and English that wrote 理 for a line's
@@ -369,6 +369,15 @@ def stamp_day():
     return f"{d.day} {d:%B %Y}", f"{d.year}年{d.month}月{d.day}日"
 
 
+def label(field):
+    """A field as a reader of the rendered record finds it: laws and does-not-show items numbered from 1."""
+    if field[0] == 'laws':
+        return f'law {field[1] + 1} ({field[2]})'
+    if field[0] == 'does_not_show':
+        return f'does-not-show item {field[1] + 1} ({field[2]})'
+    return f'{field[0]} ({field[1]})'
+
+
 def note(study, renamed, worded, rid=None):
     """The history note of one record: the renames it holds, with their reasons, and its rewordings."""
     day_en, day_zh = stamp_day()
@@ -471,7 +480,7 @@ def records(apply, study=None, notes=True):
             assert o[k].count(old) == 1 or (old not in o[k] and o[k].count(new) == 1), (rid, field, old)
             if old in o[k]:
                 o[k] = o[k].replace(old, new)
-                worded.append('.'.join(map(str, field)))
+                worded.append(label(field))
             LOG.append((rid, '.'.join(map(str, field)), old, new))
         applied = not renamed and not worded and (rid in WORDING_REASON or any(full(n) in raw or '«' + n + '»' in raw
                                                                             for n in RENAMES.values()))
