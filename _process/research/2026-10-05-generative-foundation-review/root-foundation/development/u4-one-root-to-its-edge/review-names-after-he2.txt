@@ -1,0 +1,46 @@
+- derived: `Flow.beyond_gives_nothing`, `«所闭之界»`, `eq_zero_of_not_pos`
+- derived: `Flow.withinSystem_of_withinInfluence`, `«所闭之单调»`, `Flow.shares_of_affectedBy`, `WithinClosure.mono`
+- derived: `Law.drawn_iff_not_returns`, `«定后有后则入当且仅当不返»`, `Branching.law_reach_iff`, `Branching.law_trace_iff`, `Law.absorbing_iff_closed`, `Law.drawn_iff_drawnIn`, `Law.reaches_iff_orbit`, `Law.returns_iff`, `Law.returns_iff_reaches`, `Branching.law_trace_of`, `Branching.units_length`, `Law.next_fixed`, `Law.next_total`, `Law.orbit_add`, `Law.orbit_shift`, `Law.reaches_of_orbit`
+- derived: `Law.lossless_iff_returns`, `«有限遍后定后则定前当且仅当皆返»`, `Branching.law_reach_iff`, `Branching.law_trace_iff`, `Law.lossless_iff`, `Law.lossless_iff_fixedBefore`, `Law.reaches_iff_orbit`, `Law.returns_iff`, `Law.returns_iff_reaches`, `Branching.law_trace_of`, `Branching.units_length`, `Law.next_fixed`, `Law.next_total`, `Law.orbit_add`, `Law.orbit_shift`, `Law.reaches_of_orbit`
+- derived: `Learning.goAlike_iff_lumped`, `«像定后当且仅当同行»`, `Learning.lumped_iff_fixed_image`, `goAlikeUnder_iff_alike`
+- derived: `Tolerance.answers_restores_iff`, `«承之迭»`, `Tolerance.worst_start`, `Withholding.answers_closed`, `Withholding.chain_iff_steps`, `Tolerance.KeepsInclusion.course`, `Tolerance.KeepsInclusionInto.course`, `Tolerance.answers_keeps`, `Withholding.Chain.last`, `Withholding.Chain.last_of_eq`, `Withholding.Chain.zero_eq`
+- derived: `Withholding.withholding_spreads`, `«存承之迭»`, `Withholding.chain_iff_steps`, `Withholding.waitsAll_closed`, `Withholding.within_iff_withinSteps`, `Withholding.Chain.last`, `Withholding.Chain.last_of_eq`, `Withholding.Chain.zero_eq`
+- derived: `WithinMoves.after_course`, `«迭内之接»`, `trace_iff_steps`, `withinMoves_iff_withinSteps`, `trace_steps`
+- derived: `Flow.mutuallyDependent_iff_reach`, `«所闭之逆»`
+- derived: `Flow.withinCoupling_reads_iff`, `«借步之所闭在二所闭»`, `«二所闭在借步之所闭»`, `Flow.withinCoupling_reads`, `WithinClosure.of_reads`, `Flow.CoupledFrom.of_reads`
+- under a stated hypothesis: `GroupEnding.Flow.all_end`, `RootForms.outside_leaves_no_offspring`, `RootForms.all_end_at_model`, `RootForms.all_end_certified`, `RootForms.GivesFrom`, `RootForms.outside_leaves_no_offspring.needs_gate`, `RootForms.outside_leaves_no_offspring.gate_needed`, `RootForms.ListedWithin`, `RootForms.outside_leaves_no_offspring.needs_descent`, `RootForms.outside_leaves_no_offspring.descent_needed`, `RootForms.Outside`, `RootForms.outside_leaves_no_offspring.needs_outside`, `RootForms.outside_leaves_no_offspring.outside_needed`
+- balance in its statement: `Flow.no_new_dependence`, `RootForms.descent_forms_no_dependence`
+- counting: `CensusWebs.keep_pace`
+- counting: `Drift.falls_back`
+- counting: `Listed.coming_of_ceasing`
+- counting: `RelativePosition.rise_needs_fall`
+- counting: `SelectionLevels.levels_sized`
+- counting: `SelectionTerm.covariation`
+- amounts: `Flow.new_beyond_every`
+- amounts: `Flow.selected_le`
+- amounts: `Flow.selection_within`
+- amounts: `Flow.transmitted_supported`
+- amounts: `SelectionTerm.Flow.support_moved_rises`
+- amounts: `SelectionTerm.Flow.support_not_lower`
+- amounts: `GroupEnding.Flow.rises_iff_inactive`
+- amounts: `SelectionLevels.rises_exact_iff_levels`
+- amounts: `Reproduction.Flow.number_within_take`
+- amounts: `RegimeMargin.ends_iff_below`
+- amounts: `RegimeMargin.Adjusted.ends_iff_below`
+- amounts: `Web.Next.frontier_ends_drawn_first`
+- amounts: `Web.frontier_breaks_below`
+- amounts: `Web.frontier_broken`
+- amounts: `Web.frontier_exhausts`
+- amounts: `Web.frontier_keeps_stepwise`
+- amounts: `Web.frontier_rebuilds`
+- amounts: `responses_le_missBound`
+- at its model: `Direction.extension_iff_widens`
+- at its model: `PartForms.goAlike`
+- at its model: `carried_iff_rising`
+- free significance: `Web.paths_one_object`
+- free significance: `Web.widens_iff_retains_adds`
+- free significance: `unrestricted_iff_livingSignificance`
+- premise, scope: `Unrestricted`, `ReadsOnlyDynamics.not_entails`
+- premise, order: `Comparison`
+counts: {'derived': 10, 'under a stated hypothesis': 1, 'counting': 6, 'connected': 22, 'witnessed at its model': 0, 'balance in its statement': 32, 'amounts': 18, 'at a represented model': 16, 'own carrier': 7, 'at its model': 3, 'free significance': 3, 'unplaced': 0} 
+HE2 laws on this checkout: True
