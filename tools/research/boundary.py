@@ -54,11 +54,17 @@ PREMISE_KEYS = ('role', 'name', 'premise', 'not_entailed', 'absent', 'basis', 'r
 PREMISE_ROLES = ('scope', 'order')
 FULL = re.compile(r'(?:Becoming|Generative)\.\S+')  # a full Lean name: a module root of the package, then the rest
 
-# Lean's generated auxiliaries, by any name component after the first (§3.0; normative): an auxiliary's own
-# auxiliaries, such as `match_1.eq_1` or `_proof_1.splitter`, are generated too.
-AUX = re.compile(r'^(match_\d+(_\d+)*|_proof_\d+|proof_\d+|eq_\d+|eq_def|sizeOf_spec|_sizeOf_\d+|_sizeOf_inst|injEq|inj|'
-                 r'brecOn|below|binductionOn|casesOn|recOn|rec|noConfusion|noConfusionType|ctorIdx|toCtorIdx|ofNat_ctorIdx|'
-                 r'ctorElim|ctorElimType|splitter|_unsafe_rec|_sunfold|_flat_ctor|_aux_\d+|_default|elim)$')
+# Lean's generated auxiliaries (§3.0; normative), each by the kinds of declaration (the dump's `k`) Lean generates it
+# for. A name is generated when its last component is one of these under a declaration of such a kind, or when it is a
+# constructor of a generated inductive (`below.cons`) or a part of a generated `brecOn` (`go`, `eq`). So an
+# auxiliary's own auxiliaries, such as `match_1.eq_1`, are generated, and a declaration written by hand under a name
+# Lean also uses, such as `next.inj` on a definition `next` or `comm.elim` on a theorem, is not.
+AUX = ((re.compile(r'(_proof|proof|match)_\d+(_\d+)*'), ('def', 'opaque', 'thm')),
+       (re.compile(r'eq_\d+|eq_def|splitter|_unsafe_rec|_sunfold|_aux_\d+|_default'), ('def', 'opaque')),
+       (re.compile(r'inj|injEq|sizeOf_spec|elim|_flat_ctor'), ('ctor',)),
+       (re.compile(r'noConfusion'), ('ctor', 'ind')),
+       (re.compile(r'_sizeOf_\d+|_sizeOf_inst|brecOn|below|binductionOn|casesOn|recOn|rec|noConfusionType|ctorIdx|'
+                   r'toCtorIdx|ofNat_ctorIdx|ctorElim|ctorElimType'), ('ind',)))
 FLOW = ('Becoming.Flow.Balances', 'Becoming.Flow.BalancesOn', 'Becoming.Flow.BalancesBetween')  # rule 1's anchors
 WRITTEN_OUT = {'Becoming.Dependence.level', 'Becoming.Flow.taken', 'Becoming.Flow.given'}  # balance written out
 REPRESENTED = {'occurrence', 'process'}
@@ -277,6 +283,7 @@ def carriers(records):
 class Terms:
     def __init__(self, C, balance_anchors):
         self.C = C
+        self._aux = {}
         self.D = {n: [b for b in list(x['t']) + list(x['v']) if b in C] for n, x in C.items()}
         self.anchors = {a for a in balance_anchors if a in C and '«' not in a}
         located = {n for n, x in C.items() if x['m'] == 'Becoming.Prelude' or x['m'].startswith('Becoming.Grammar')}
@@ -299,8 +306,26 @@ class Terms:
                 self._forwarder(n)
         self.forwarders = {n: g for n, g in self._fw.items() if g and n not in self.laws}
 
+    def kind_of(self, n):
+        """A constant's kind; a private name the dump lacks is read by its user name (Lean makes an equation lemma or
+        a matcher of another module's declaration private to the module that needs it)."""
+        if n not in self.C:
+            c = components(n)
+            if c[0] == '_private' and '0' in c[1:]:
+                n = '.'.join(c[c.index('0', 1) + 1:])
+        return self.C[n]['k'] if n in self.C else None
+
     def aux(self, n):
-        return any(AUX.match(c) for c in components(n)[1:])
+        """A generated auxiliary (AUX): its last component attaches to the kind of the declaration before it, or it
+        is a constructor of a generated inductive or a part of a generated `brecOn`."""
+        if n not in self._aux:
+            c = components(n)
+            prefix = '.'.join(c[:-1])
+            self._aux[n] = len(c) > 1 and (
+                any(p.fullmatch(c[-1]) and self.kind_of(prefix) in kinds for p, kinds in AUX) or
+                self.aux(prefix) and (self.kind_of(n) == 'ctor' and self.kind_of(prefix) == 'ind' or
+                                      c[-2] == 'brecOn' and c[-1] in ('go', 'eq')))
+        return self._aux[n]
 
     def closure(self, names):
         """Everything the constants reach through types and values, all the way down."""

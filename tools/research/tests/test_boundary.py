@@ -233,9 +233,15 @@ CONSTANTS = {
     'Becoming.Flow.own': const(F, 'thm', [F]), 'Becoming.Flow.two': const(F, 'thm', [F]),
     'Becoming.Leaf.form': const('Becoming.Leaf', 'thm', ['Becoming.«际»']), 'Becoming.Leaf.part': const('Becoming.Leaf', 'thm', [F]),
     'Becoming.«守数当且仅当可对»': const(G, 'thm', ['Becoming.«际»']),  # the grammar's balance form: a law, not an anchor
-    'Becoming.«所闭».brecOn.eq': const(G, 'thm', ['Becoming.«际»']),  # generated, by an inner component
-    'Becoming.Flow.via_aux': const(F, 'thm', [F], ['Becoming.Flow.via_aux.brecOn.go', 'Becoming.Flow.via_aux.brecOn.eq']),
-    'Becoming.Flow.via_aux.brecOn.go': const(F, 'def', [], [LAW]), 'Becoming.Flow.via_aux.brecOn.eq': const(F, 'thm', [], ['Becoming.Flow.fact']),
+    'Becoming.«族»': const(G, 'ind'), 'Becoming.«族».brecOn': const(G, 'def', ['Becoming.«族»']),
+    'Becoming.«族».brecOn.eq': const(G, 'thm', ['Becoming.«际»']),  # generated, under a generated brecOn
+    'Becoming.Flow.Tree': const(F, 'ind'),
+    'Becoming.Flow.via_aux': const(F, 'thm', [F], ['Becoming.Flow.Tree.brecOn.go', 'Becoming.Flow.Tree.brecOn.eq']),
+    'Becoming.Flow.Tree.brecOn.go': const(F, 'def', [], [LAW]), 'Becoming.Flow.Tree.brecOn.eq': const(F, 'thm', [], ['Becoming.Flow.fact']),
+    'Becoming.Flow.row.inj': const(F, 'thm', [F], ['Becoming.Flow.fact']),  # written by hand: inj is generated for constructors
+    'Becoming.Flow.via_named': const(F, 'thm', [F], [LAW, 'Becoming.Flow.row.inj']),
+    'Becoming.Flow.Chain': const(F, 'ind'), 'Becoming.Flow.Chain.below': const(F, 'ind'),
+    'Becoming.Flow.Chain.below.refl': const(F, 'ctor'), 'Becoming.Flow.X': const(F, 'def'), 'Becoming.Flow.X.match_1': const(F, 'def'),
     'Becoming.«容»': const(G, 'def', ['Becoming.«际»'], [LAW]),  # a «» name, where reaching stops
     'Becoming.Flow.through_term': const(F, 'thm', ['Becoming.«容»']),
     'Becoming.Flow.not_forwarder': const(F, 'thm', ['Becoming.«所闭»'], [LAW, 'Becoming.Flow.fact'], f=LAW, fk='pure'),
@@ -260,7 +266,7 @@ class TheTerms(unittest.TestCase):
     def test_grammar_laws(self):
         self.assertEqual(self.T.laws, {LAW, LAW2, 'Becoming.Law.constant_iff_core', 'Becoming.«守数当且仅当可对»'})
         for n in ('Becoming.kept_onward', 'Becoming.helper', 'Becoming.«两火»', 'Becoming.«非真则假»', 'Becoming.«所闭之界»._proof_1',
-                  'Becoming.TwoCourses.core_iff', 'Becoming.MapRegions.«图»', 'Becoming.«所闭».brecOn.eq'):
+                  'Becoming.TwoCourses.core_iff', 'Becoming.MapRegions.«图»', 'Becoming.«族».brecOn.eq'):
             self.assertNotIn(n, self.T.laws, n)
 
     def test_root_constants_by_content(self):
@@ -269,11 +275,17 @@ class TheTerms(unittest.TestCase):
         self.assertNotIn('Becoming.TwoCourses.core_iff', self.T.root)  # a root statement proved off the root
         self.assertEqual(self.T.anchors, {'Becoming.Flow.Balances', 'Becoming.Flow.BalancesOn', 'Becoming.balance_over_stretch_on'})
 
-    def test_auxiliaries_by_any_component(self):
+    def test_auxiliaries_by_attachment(self):
+        # a generated name under a declaration of the kind Lean generates it for, its constructors and its brecOn's
+        # parts, and a private copy read by its user name; not one written by hand under a name Lean also uses
         self.assertEqual(boundary.components('Becoming.«a.b».c'), ['Becoming', '«a.b»', 'c'])
-        for n in ('Becoming.«所闭之界»._proof_1', 'Becoming.«同族».below.refl', 'Becoming.X.brecOn.go', 'Becoming.X.match_1.eq_1'):
+        for n in ('Becoming.«所闭之界»._proof_1', 'Becoming.«所闭之界»._proof_1_1', 'Becoming.Flow.Chain.below.refl',
+                  'Becoming.Flow.Tree.brecOn.go', 'Becoming.Flow.X.match_1.eq_1',
+                  '_private.Becoming.Flow.0.Becoming.Flow.X.match_1.eq_1'):
             self.assertTrue(self.T.aux(n), n)
-        for n in ('Becoming.Flow.row', 'Becoming.«a.rec».b', 'Becoming.Flow.recording'):
+        for n in ('Becoming.Flow.row', 'Becoming.«a.rec».b', 'Becoming.Flow.recording', 'Becoming.Flow.row.inj',
+                  'Becoming.Flow.X.casesOn', 'Becoming.Flow.Tree.eq_def', 'Becoming.Flow.row.brecOn.go', 'Becoming.Flow.Chain.below.other',
+                  'Becoming.Flow.X.match_1.eq_1.mine', '_private.Becoming.Flow.0.Becoming.Flow.row.inj'):
             self.assertFalse(self.T.aux(n), n)
 
     def test_forwarders(self):
@@ -288,6 +300,7 @@ class TheTerms(unittest.TestCase):
         self.assertEqual(self.T.reach('Becoming.Flow.via_helper'), {LAW})  # through a root helper without a «» name
         self.assertEqual(self.T.reach('Becoming.Flow.through_term'), set())  # stopping at a «» name
         self.assertEqual(self.T.walk('Becoming.Flow.via_aux'), {LAW, 'Becoming.Flow.fact'})  # through the auxiliaries
+        self.assertEqual(self.T.walk('Becoming.Flow.via_named'), {LAW, 'Becoming.Flow.row.inj'})  # not through one written by hand
 
     def test_where_balance_enters(self):
         self.assertEqual(self.T.balance('Becoming.Flow.balanced')['anchor_in_statement'], ['Becoming.Flow.Balances'])
@@ -317,6 +330,8 @@ class TheDerivedChecks(unittest.TestCase):
         self.assertIn('D1: Becoming.kept_onward is not a grammar law', self.check('Becoming.Flow.via_helper', law=['Becoming.kept_onward'])[0])
         failed = self.check('Becoming.Flow.steps', law=[LAW])[0]
         self.assertEqual(failed, ['D2: the proofs name theorems that are neither grammar laws, root theorems nor declared lemmas: Becoming.Flow.fact'])
+        failed = self.check('Becoming.Flow.via_named', law=[LAW])[0]  # a theorem written by hand under a generated name
+        self.assertEqual(failed, ['D2: the proofs name theorems that are neither grammar laws, root theorems nor declared lemmas: Becoming.Flow.row.inj'])
         failed = self.check('Becoming.Flow.row', central=['Becoming.Flow.support'], law=[LAW], bridges=['Becoming.Flow.bridge_iff'],
                             support=['Becoming.Flow.support'])[0]
         self.assertEqual(failed, ['D2: the lemma Becoming.Flow.support is a central declaration'])
@@ -473,7 +488,8 @@ class TheReport(unittest.TestCase):
             out, info = lean_passing(query, modules)
             return {**out, 'admitted': {k: 'yes' for k in out['admitted']}, 'equivalence': {k: 1 for k in out['equivalence']}}, info
         rep = self.report(*entries, lean=saying)
-        self.assertTrue(any(f.startswith('D1: the Lean check does not admit') for x in rep['unverified'] for f in x['failed']), rep['unverified'])
+        self.assertEqual({x['declaration']: x['failed'] for x in rep['unverified']}['Becoming.Flow.row'],
+                         [f'D1: the Lean check does not admit {LAW}', 'D6: the bridge Becoming.Flow.bridge_iff is not an equivalence'])
         seen.clear()
         self.report(*entries, standing('Becoming.Flow.steps', 'derived', law=[LAW2]), lean=recording)
         self.assertEqual(seen[0][0]['names'], [LAW])  # the failing entry's law is not sent
@@ -955,6 +971,23 @@ def Model.relF : «际» Nat := fun a b => b = a + Model.three.val
 theorem Model.relF_total : ¬ ∃ x, ∀ y, ¬ Model.relF x y := fun ⟨x, h⟩ => h (x + Model.three.val) rfl
 def Model.relR : «际» Nat := fun a b => a = b
 theorem Model.pair_row : ¬ ∃ x, ¬ ((∃ y, Model.rel x y) ∧ Model.relR x x) := fun ⟨x, h⟩ => h ⟨⟨Model.next x, rfl⟩, rfl⟩
+theorem Model.next.inj {a b : Nat} (e : Model.next a = Model.next b) : a = b := by unfold Model.next at e; omega
+def Model.relI : «际» Nat := fun a b => Model.next a = Model.next b → a = b
+theorem Model.relI_total : ¬ ∃ x, ∀ y, ¬ Model.relI x y := fun ⟨x, h⟩ => h x (fun _ => rfl)
+theorem Model.comm (a b : Nat) : a + b = b + a := Nat.add_comm a b
+theorem Model.comm.elim (a b : Nat) : a + b = b + a := by omega
+theorem Model.elim.comm (a b : Nat) : a + b = b + a := by omega
+def Model.relS : «际» Nat := fun a b => a + b = b + a
+theorem Model.relS_total : ¬ ∃ x, ∀ y, ¬ Model.relS x y := fun ⟨x, h⟩ => h x (Nat.add_comm x x)
+def Model.stepE : {f : Nat → Nat // ∀ x, Model.relS x (f x)} := ⟨Model.next, fun x => Model.comm.elim x (Model.next x)⟩
+def Model.step_aux : {f : Nat → Nat // ∀ x, Model.rel x (f x)} := ⟨Model.next, fun x => id (Model.next_rel x)⟩
+def Model.relL : «际» Nat := fun _ b => b < 3
+theorem Model.relL_total : ¬ ∃ x, ∀ y, ¬ Model.relL x y := fun ⟨_, h⟩ => h 2 (Nat.lt_succ_self 2)
+def Model.relU : «际» Nat := fun a b => b = if a < 2 then 0 else Model.half (a / 2) + 1
+theorem Model.relU_total : ¬ ∃ x, ∀ y, ¬ Model.relU x y := fun ⟨_, h⟩ => h _ rfl
+inductive Model.Reach : Nat → Nat → Prop
+  | refl (n : Nat) : Model.Reach n n
+  | step {a b : Nat} : Model.Reach a b → Model.Reach a (b + 1)
 end Becoming
 ''',
     'Becoming/Leaf.lean': '''import Becoming.Model
@@ -1007,6 +1040,19 @@ theorem pair_form.refl_needed : ¬ Refl noneRel := fun refl => @pair_form Unit a
 theorem pair_at_model : ¬ ∃ x, ¬ ((∃ y, Model.rel x y) ∧ Model.relR x x) :=
   pair_form (fun x => ⟨Model.next x, rfl⟩) (fun _ _ => rfl)
 theorem pair_certified : @Model.pair_row = @pair_at_model := rfl
+theorem relI_through_inj : ¬ ∃ x, ∀ y, ¬ Model.relI x y := total_form (fun x => ⟨x, Model.next.inj⟩)
+theorem relI_certified : @Model.relI_total = @relI_through_inj := rfl
+theorem relS_through_elim : ¬ ∃ x, ∀ y, ¬ Model.relS x y := total_form (fun x => ⟨Model.stepE.1 x, Model.stepE.2 x⟩)
+theorem relS_certified : @Model.relS_total = @relS_through_elim := rfl
+theorem rel_total_through_aux : ¬ ∃ x, ∀ y, ¬ Model.rel x y := total_form (fun x => ⟨Model.step_aux.1 x, Model.step_aux.2 x⟩)
+theorem rel_total_through_aux_certified : @Model.rel_total = @rel_total_through_aux := rfl
+theorem rel_total_through_have : ¬ ∃ x, ∀ y, ¬ Model.rel x y :=
+  total_form (fun x => have h := Model.next_rel x; ⟨Model.next x, h⟩)
+theorem rel_total_through_have_certified : @Model.rel_total = @rel_total_through_have := rfl
+theorem relL_through_proof : ¬ ∃ x, ∀ y, ¬ Model.relL x y := total_form (fun _ => ⟨2, Model.three._proof_1⟩)
+theorem relL_certified : @Model.relL_total = @relL_through_proof := rfl
+theorem relU_through_eq_def : ¬ ∃ x, ∀ y, ¬ Model.relU x y := total_form (fun x => ⟨Model.half x, Model.half.eq_def x⟩)
+theorem relU_certified : @Model.relU_total = @relU_through_eq_def := rfl
 end Becoming.Leaf
 ''',
     'Becoming/GrammarCourse.lean': '''import Becoming.Model
@@ -1015,27 +1061,33 @@ theorem GrammarCourse.built_on_model : ∀ x, ∃ y, Model.rel x y := Model.rel_
 end Becoming
 ''',
 }
-GENERATED = ['Becoming.Model.half._proof_1', 'Becoming.Model.f.match_1', 'Becoming.Model.f.match_1_3', 'Becoming.Model.f.proof_2',
-             'Becoming.Model.f.eq_1', 'Becoming.Model.f.eq_def', 'Becoming.Model.T.mk.sizeOf_spec', 'Becoming.Model.T._sizeOf_1',
-             'Becoming.Model.T._sizeOf_inst', 'Becoming.Model.T.mk.injEq', 'Becoming.Model.T.mk.inj', 'Becoming.Model.T.brecOn',
-             'Becoming.Model.T.below', 'Becoming.«同族».below.refl', 'Becoming.Model.T.brecOn.eq', 'Becoming.Model.T.binductionOn',
-             'Becoming.Model.T.casesOn', 'Becoming.Model.T.recOn', 'Becoming.Model.T.rec', 'Becoming.Model.T.elim',
-             'Becoming.Model.T.noConfusion', 'Becoming.Model.T.noConfusionType', 'Becoming.Model.T.ctorIdx',
-             'Becoming.Model.T.toCtorIdx', 'Becoming.Model.Tone.ofNat_ctorIdx', 'Becoming.Model.T.ctorElim',
-             'Becoming.Model.T.ctorElimType', 'Becoming.Model.f.match_1.splitter', 'Becoming.Model.f._unsafe_rec',
-             'Becoming.Model.f._sunfold', 'Becoming.Model.T._flat_ctor', 'Becoming.Model.f._aux_3', 'Becoming.Model.T.x._default',
-             # not generated: the first component alone, and near misses of each pattern
-             'match_1', 'Becoming.f.match_', 'Becoming.f.match_1_', 'Becoming.f.match_1__2', 'Becoming.f.match_a', 'Becoming.f.proof_',
-             'Becoming.f._proof_', 'Becoming.f.proof_1a', 'Becoming.f.eq_x', 'Becoming.f.ofNat', 'Becoming.f.recursion',
-             'Becoming.f.elim_of', 'Becoming.f.injective', 'Becoming.f.below_one', 'Becoming.«match_1»x']
-NOT_GENERATED = GENERATED[GENERATED.index('match_1'):]
+M = 'Becoming.Model.'
+GENERATED = [M + n for n in (  # each under a declaration of the kind Lean generates it for, in the stubs
+    'half._proof_1', 'half._unsafe_rec', 'half._sunfold', 'half.eq_def', 'half.eq_1', 'comm.elim._proof_1_1', 'three._proof_1',
+    'instDecidableEqTone._proof_2', 'rel_total.match_1_1', 'rel_total.match_1_1.eq_1', 'rel_total.match_1_1.splitter',
+    'next.proof_2', 'next._aux_3', 'Onward.f._default', 'Onward._sizeOf_1', 'Onward._sizeOf_inst', 'Onward.casesOn',
+    'Onward.ctorIdx', 'Onward.noConfusion', 'Onward.noConfusionType', 'Onward.rec', 'Onward.recOn', 'Onward.mk._flat_ctor',
+    'Onward.mk.inj', 'Onward.mk.injEq', 'Onward.mk.noConfusion', 'Onward.mk.sizeOf_spec', 'Tone.ctorElim', 'Tone.ctorElimType',
+    'Tone.toCtorIdx', 'Tone.ofNat_ctorIdx', 'Tone.high.elim', 'Tone.brecOn', 'Tone.binductionOn', 'Reach.below',
+    'Reach.below.refl', 'Reach.brecOn.go', 'Reach.brecOn.eq')] + [
+    '_private.Becoming.Leaf.0.Becoming.Model.rel_total.match_1_1.eq_1',  # read by its user name
+    # not generated: written by hand under a name Lean also uses, under a declaration of another kind, under none,
+    # a part no generated declaration has, and near misses of each pattern
+    *(M + n for n in ('next.inj', 'comm.elim', 'elim.comm', 'next.casesOn', 'Tone.eq_def', 'Tone.low.rec', 'next_rel._sunfold',
+                      'Reach.below.other', 'rel_total.match_1_1.eq_1.mine', 'next.match_1.eq_1', 'next.match_', 'next.match_1_',
+                      'next.match_1__2', 'next.match_a', 'next.proof_', 'next._proof_', 'next.proof_1a', 'next.eq_x', 'next.ofNat',
+                      'next.recursion', 'next.elim_of', 'next.injective', 'next.below_one')),
+    'match_1', '_private.Becoming.Leaf.0.Becoming.Model.next.inj']
+NOT_GENERATED = GENERATED[GENERATED.index(M + 'next.inj'):]
 SPINE = registry.ROOT / 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
 
 
 class TheLeanCheck(unittest.TestCase):
     """boundary_check.lean on stub modules: a form passing every test; recoveries through a model fact, a fact held in
-    a definition, one a model's data carries and one through a tactic's proof, which fail; recoveries through the proofs
-    Lean generates (an rfl in a model's data, a termination proof, a derived DecidableEq, a decide), which pass; a form
+    a definition, one a model's data carries, one through a tactic's proof, one through a theorem written by hand under a
+    name Lean also uses (directly or carried by data), one inside the proof Lean lifts out of data, one through a have,
+    and another declaration's lifted proof named itself, which fail; recoveries through the proofs Lean generates (an
+    rfl in a model's data, a termination proof, a derived DecidableEq, a decide, an equation lemma), which pass; a form
     with two hypotheses whose definitions hold proofs only in types; a hypothesis with an amount behind a prelude
     definition; an absent certificate; the name test (by module and by content); the equivalence test (an Iff, an Eq of
     propositions, an Eq at a type of values); and the check's copy of §3.0's pattern. Skipped without the installed
@@ -1075,7 +1127,13 @@ class TheLeanCheck(unittest.TestCase):
                         entry('total_form', 'Total', 'relH_at_model', 'relH_certified', 'Becoming.Model.relH_total'),
                         entry('total_form', 'Total', 'relT_at_model', 'relT_certified', 'Becoming.Model.relT_total'),
                         entry('total_form', 'Total', 'relF_at_model', 'relF_certified', 'Becoming.Model.relF_total'),
-                        pair],
+                        pair,
+                        entry('total_form', 'Total', 'relI_through_inj', 'relI_certified', 'Becoming.Model.relI_total'),
+                        entry('total_form', 'Total', 'relS_through_elim', 'relS_certified', 'Becoming.Model.relS_total'),
+                        entry('total_form', 'Total', 'rel_total_through_aux', 'rel_total_through_aux_certified'),
+                        entry('total_form', 'Total', 'rel_total_through_have', 'rel_total_through_have_certified'),
+                        entry('total_form', 'Total', 'relL_through_proof', 'relL_certified', 'Becoming.Model.relL_total'),
+                        entry('total_form', 'Total', 'relU_through_eq_def', 'relU_certified', 'Becoming.Model.relU_total')],
             'names': ['Becoming.«际之自»', 'Becoming.Model.rel_total', 'Becoming.Small', 'Becoming.Absent',
                       'Becoming.GrammarCourse.built_on_model'],
             'equivalences': ['Becoming.Model.and_swap', 'Becoming.Model.size_zero', 'Becoming.Model.rel_total',
@@ -1099,14 +1157,22 @@ class TheLeanCheck(unittest.TestCase):
                          ['the discharge condition fails: the recovery uses [Becoming.Leaf.onward_held]'])
         self.assertEqual(self.out['entries'][5]['failures'],  # and so is one a model's data carries
                          ['the discharge condition fails: the recovery uses [Becoming.Model.next_rel]'])
-        self.assertEqual(self.out['entries'][6]['failures'],  # through the auxiliary Lean makes of a tactic proof
+        self.assertEqual(self.out['entries'][6]['failures'],  # through a tactic's proof, inline in the data
                          ['the discharge condition fails: the recovery uses [Becoming.Model.next_rel]'])
+        for i, used in ((12, 'Becoming.Model.next.inj'),  # a theorem written by hand as next.inj, on a definition
+                        (13, 'Becoming.Model.comm.elim'),  # one written as comm.elim, on a theorem, carried by data
+                        (14, 'Becoming.Model.next_rel'),  # inside the proof Lean lifts out of data, _proof_1
+                        (15, 'Becoming.Model.next_rel'),  # through a have
+                        (16, 'Becoming.Model.three._proof_1')):  # another declaration's lifted proof, named itself
+            self.assertEqual((self.out['entries'][i]['passed'], self.out['entries'][i]['failures']),
+                             (False, [f'the discharge condition fails: the recovery uses [{used}]']), i)
 
     def test_generated_proofs_are_walked_through(self):
         # rfl in a model's data, a termination proof, a derived DecidableEq and a decide: Lean makes each a package
         # theorem `_proof_N` (or `ofNat_ctorIdx`), walked through, so none is a proof the recovery uses
-        for i, row, projected in zip(range(7, 11), ('rel_total', 'relH_total', 'relT_total', 'relF_total'),
-                                     (['Becoming.Model.Onward.ok'], [], [], [])):
+        # and an equation lemma named itself is walked through too
+        for i, row, projected in zip((7, 8, 9, 10, 17), ('rel_total', 'relH_total', 'relT_total', 'relF_total', 'relU_total'),
+                                     (['Becoming.Model.Onward.ok'], [], [], [], [])):
             x = self.out['entries'][i]
             self.assertEqual((x['row'], x['passed'], x['failures']), ('Becoming.Model.' + row, True, []))
             self.assertEqual(x['recovery_uses'], ['Becoming.Leaf.total_form', *projected])
@@ -1120,8 +1186,9 @@ class TheLeanCheck(unittest.TestCase):
         self.assertEqual(x['recovery_uses'], ['Becoming.Leaf.pair_form'])
 
     def test_the_pattern_of_generated_auxiliaries(self):
-        # this file's copy of AUX is boundary.py's, on any component after the first
-        self.assertEqual(self.out['generated'], {n: boundary.Terms.aux(None, n) for n in GENERATED})
+        # this file's copy of AUX is boundary.py's, on the kinds the check reads
+        terms = boundary.Terms({n: const('Becoming.Model', k) for n, k in self.out['kinds'].items() if k}, [])
+        self.assertEqual(self.out['generated'], {n: terms.aux(n) for n in GENERATED})
         self.assertEqual({n for n, g in self.out['generated'].items() if not g}, set(NOT_GENERATED))
 
     def test_the_name_and_equivalence_tests(self):

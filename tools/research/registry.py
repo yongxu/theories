@@ -812,8 +812,8 @@ def boundary_matching(records, data):
     """(matched, not matched) between the boundary field the data read and the one a record carries now: the central
     declarations whose entry, or its absence, is the one the data read; and the declarations whose entry differs, with
     premises_of_the_ethics where the premises differ. Where the record around the field changed since the data read it,
-    'the field' comes first and every declaration the field names, in either version, differs. Where the data read
-    another record, none matches."""
+    'the field' comes first, every declaration the field names, in either version, differs, and premises_of_the_ethics
+    closes the list, since Q1's verdicts may differ too. Where the data read another record, none matches."""
     from tools.research import boundary
     b = data.get('boundary') if isinstance(data, dict) else None
     carrying = boundary.carriers(records)
