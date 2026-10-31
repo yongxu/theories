@@ -17,15 +17,17 @@ beside this folder), a clause in GrammarTesting's header and MapRegions' module 
                                                            part B's after RegimeMargin's), the notes and rows saying
                                                            what imports a module the leaves import, the checker's lists
                                                            and scope sentences (GrammarReadings' naming the general
-                                                           law), the README rows EN and ZH
+                                                           law), the README rows EN and ZH, the Lean catalogue's
+                                                           description of the ring
   python3 -B <dir>/integrate_ou7.py audit                  every Lean source the patches changed, against HEAD with
                                                            comments blanked: Grammar and GrammarReadings gain exactly
                                                            their three laws, none removed, every other statement kept,
                                                            the two old laws proved as cases; every other changed source
                                                            keeps its code; the leaves' imports; the plan line
-  python3 -B <dir>/integrate_ou7.py record RECEIPT STUDY   08 §3's receipt sentence, every count read from the receipt;
+  python3 -B <dir>/integrate_ou7.py record RECEIPT STUDY   08 §3's receipt sentence, every count read from the receipt,
+                                                           and its sentence naming the ring's members;
                                                            06's home section (home-06-section.txt, at the end of §四)
-                                                           and its four lines; 03 §3's (part B's home-03-section-3.txt,
+                                                           and its seven lines; 03 §3's (part B's home-03-section-3.txt,
                                                            after testing-within-the-net); regions.json's five entries;
                                                            the two general laws where the laws they generalize are
                                                            (01 §4, 06 §三, and the two records': law, declarations,
@@ -206,6 +208,11 @@ RING_COMMENT = ('# on one named carrier (the Changes, place/transition nets); ap
                 '# are leaves nothing in the core imports. Both are held to the core\'s conditions (prelude only, empty\n'
                 '# axiom reports) and sit outside it by direction: no core module but the root `Becoming` imports a\n'
                 '# ring module, and no instance imports an application (`ring_direction`).\n')
+# The Lean catalogue's description of the ring, rendered into the index pages (LEAN-INDEX and becoming-ring).
+CATALOGUE = ROOT / 'tools/research/lean_catalogue.py'
+RING_CATALOGUE = ('instances read general laws on one carrier (the Changes, place/transition nets), applications are leaves',
+                  'instances read general laws on one carrier (the Changes, place/transition nets, rooms tested by a window), '
+                  'applications are leaves')
 RING_ROWS = {'README.md': ('the Changes (`Becoming.Hexagrams`, `HexagramPlaces`, `HexagramCommuting`, `HexagramLaws`, '
                            '`HexagramSites`, `HexagramSequences`) and `Becoming.PlaceTransitionNets`. Applications',
                            'the Changes (`Becoming.Hexagrams`, `HexagramPlaces`, `HexagramCommuting`, `HexagramLaws`, '
@@ -351,11 +358,15 @@ def join():
         if B_LIST == 'INSTANCES':
             r = once(r, *RING_ROWS[path.name], f'{path.name}, the ring\'s row (B)')
         readmes[path] = r
+    k = CATALOGUE.read_text(encoding='utf-8')
+    if B_LIST == 'INSTANCES':
+        k = once(k, *RING_CATALOGUE, 'Lean catalogue, the ring\'s description (B)')
     if WRITE:
         ROOTMOD.write_text(t, encoding='utf-8')
         CHECKER.write_text(c, encoding='utf-8')
         for path, r in readmes.items():
             path.write_text(r, encoding='utf-8')
+        CATALOGUE.write_text(k, encoding='utf-8')
 
 
 def apply():
@@ -371,6 +382,7 @@ def anchors():
     home()
     home_root()
     home_b()
+    ring_sentence()
     assert len(SENTENCE.findall(METHOD.read_text(encoding='utf-8'))) == 1, '08 §3: the receipt sentence is not there once'
     print('08 §3: the receipt sentence found once')
     print('anchors: every edit applies exactly once or is already in place; nothing written')
@@ -490,6 +502,29 @@ def receipt_sentence(receipt):
     assert k == 1, k
     METHOD.write_text(text, encoding='utf-8')
     print('08 §3:', counts[:160], '…')
+
+
+# 08 §3 names the ring's members. The rooms join the instances, and the applications are counted from the checker's
+# list: main says six, though APPLICATIONS has held seven since RF6.1 added OpenedCorrection (30 October).
+RING_SENTENCE = re.compile(r'The instance and application ring \(the Changes and place/transition nets; \w+ leaf applications\)')
+NUMBERS = ('no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve')
+
+
+def ring_sentence():
+    """08 §3's sentence naming the ring's members: the rooms among the instances, the applications counted."""
+    listed = re.search(r'^APPLICATIONS = \[(.*)\]$', CHECKER.read_text(encoding='utf-8'), re.M).group(1)
+    n = len(re.findall(r'"Becoming\.[^"]+"', listed))
+    new = ('The instance and application ring (the Changes, place/transition nets and rooms tested by a window; '
+           f'{NUMBERS[n]} leaf applications)')
+    text = METHOD.read_text(encoding='utf-8')
+    if new in text:
+        print('08 §3: the sentence naming the ring is already in place')
+        return
+    assert len(RING_SENTENCE.findall(text)) == 1, '08 §3: the sentence naming the ring is not there once'
+    text = RING_SENTENCE.sub(lambda m: new, text)
+    if WRITE:
+        METHOD.write_text(text, encoding='utf-8')
+    print(f'08 §3: the ring named, {new[new.index(";") + 2:-1]}{"" if WRITE else " (applies)"}')
 
 
 SECTION = (HERE / 'home-06-section.txt').read_text(encoding='utf-8')
@@ -757,6 +792,7 @@ def regions():
 
 def record(receipt, study):
     receipt_sentence(receipt)
+    ring_sentence()
     home()
     home_root()
     home_b()

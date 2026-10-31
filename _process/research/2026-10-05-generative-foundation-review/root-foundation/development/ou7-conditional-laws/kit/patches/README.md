@@ -8,7 +8,7 @@ Two more patches go with them:
 
 The grammar's owner's patches are in [owner/](owner/), and the items held until BD2 lands are in [HELD.md](HELD.md).
 
-**Base.** The patches are unified diffs. Grammar's and GrammarReadings' were made against main at 248122055, where `Becoming/Grammar.lean` is blob `cd2010958b77c371f7cff7e7f9ab02e04be233ed` and `Becoming/GrammarReadings.lean` is blob `0db54ab469b3e952e62c609b4213af7d5a808aae`. MapRegions' was made against blob `1980d3903`, the file as HE2 left it (467f075ec). None of the files the patches change has changed since HE2, and all of them are the same on main at 815c6425f. From the repository root, `git apply --check` passes for the series.
+**Base.** The patches are unified diffs. Grammar's and GrammarReadings' were made against main at 248122055, where `Becoming/Grammar.lean` is blob `cd2010958b77c371f7cff7e7f9ab02e04be233ed` and `Becoming/GrammarReadings.lean` is blob `0db54ab469b3e952e62c609b4213af7d5a808aae`. MapRegions' was made against blob `1980d3903`, the file as HE2 left it (467f075ec). None of the files the patches change has changed since HE2, and all of them are the same on main at 89243dd5a. From the repository root, `git apply --check` passes for the series.
 
 ## Grammar.patch
 
@@ -88,5 +88,5 @@ The kit changes each text that states one of the old laws, so that it states the
 - **The OU plan** ([one-unfolding-root/PLAN.md](../../../one-unfolding-root/PLAN.md), under 双向之核) says 「生只在双向之核下不变（`«生于位核下不变»`）。」 Once the Grammar patch lands, that is no longer exact. 生 is kept along the core of the converse net. That core holds the two-way core, and it also joins pairs the forward core does not (`«逆核不含于核之例»`). OU's owner accepted this replacement on 31 October. It goes into the same landing as the Grammar patch, as [PLAN.patch](PLAN.patch):
   > 生在逆缘之核下不变（`«生于逆核下不变»`）；双向之核在其中（`«位核含于逆核»`），故生亦在双向之核下不变（`«生于位核下不变»`）；前向之核下生可变（`«生于核下可变之例»`）。
 
-  The plan's next line, `«位同则生亡同»`, stays. From the repository root, `git apply --check` passes for PLAN.patch on main at 815c6425f, in the series.
+  The plan's next line, `«位同则生亡同»`, stays. From the repository root, `git apply --check` passes for PLAN.patch on main at 89243dd5a, in the series.
 - **The connectivity maps** (`THEOREM-CONNECTIVITY.json` and `THEOREM-CONNECTIVITY-APART.json`, in root-foundation) list both old laws. They are tool output and change only when their tool runs.

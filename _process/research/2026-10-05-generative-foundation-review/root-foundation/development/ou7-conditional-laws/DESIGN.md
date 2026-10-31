@@ -537,7 +537,7 @@ OU's owner decided on the reviewed design:
 - GrammarReadings' note and scope sentence state the general law;
 - the toy's line in 03 §3 points to its derivation.
 
-The grammar's owner's three items that wait for BD2 are held in [kit/patches/HELD.md](kit/patches/HELD.md), BD2's two equivalences among them. A dry run of the whole kit passed on main at 815c6425f.
+The grammar's owner's three items that wait for BD2 are held in [kit/patches/HELD.md](kit/patches/HELD.md), BD2's two equivalences among them. A dry run of the whole kit passed on main at 89243dd5a.
 
 ## Open
 
