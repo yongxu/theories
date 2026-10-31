@@ -425,6 +425,14 @@ HE2 landed in one near-full rebuild (`467f075ec`, study §474), with every axiom
 
 **What it changes on the release gate.** Nothing is counted anew here: the measure stays at 44, 16, 7 and 51. Item 3 of the gate still waits for U4's boundary record (U4's leaf and record, to be rehearsed on HE2's head), and for U1's seven interface laws in the package.
 
+## U1b landed: the release gate's item 3 (31 October 2026)
+
+U1b landed (study §481, core receipt `20261031T152525.956467Z`, every axiom report empty). U1's limited interface for amounts, the root's second sort, is now in the package as one core leaf, `Becoming.UnitMatchings`, which nothing imports. It holds 16 theorems in 24 declarations: frame matchings both ways, the crossing laws at a rise, the residual counts, and dissipation. The record [amounts-by-unit-matchings](../../../../../../theories/becoming/results/records/amounts-by-unit-matchings.md) has its home in 01 §8.6, after the World's representation. U1's failures are its boundary. Balance is not derived, and the residual units are accounting.
+
+- **The release gate's item 3 is met.** U4's boundary record placed all 118 distinct central declarations, none unplaced, so each of the 51 has its standing and reason written. With U1's interface now in the package and not only in scratch, the item's last part is met too. No row changes category, since no central declaration belongs to the leaf. The measure stays at 44, 16, 7 and 51.
+- **What reached GitHub.** A working version went out to GitHub at `d00f1724d` on 31 October 2026. The gate still stands for the final version. Later landings, U1b included, reach GitHub only when someone pushes again.
+- **The gate after U1b.** Items 1, 2 and 3 are met. Item 5 is met: RV21c's fresh core receipt `20261031T125855.282103Z` (`4ea66f49e`, study §480) ran every Lean step on an empty step cache. Item 6 is met for now: the front pages landed (`928b3a4e3`), the one page at ten minutes and the overview at an hour, each with its Chinese edition. Their lines on conditional laws are marked for a refresh once item 4 lands. Still open: item 4, plan §八 step 5 (OU7, formerly OU5: parts A and B in kit and reviewed, its near-full rebuild last in the core round). Item 7, the freeze, comes last.
+
 ## What this note does not do
 
 It edits no row but its own, changes no module, and decides no definition another owner holds (rule 3). The board's open-claims table holds the items once they are claimed.

@@ -4432,11 +4432,6 @@
    "category": "general-structure",
    "reason": "a law of pairings under every relation (balance on the grammar, OU3b); the base reads balance in numbers, represented on the grammar at one step and over a family in Flow, and its consumers stay arithmetic, so nothing on the base uses this one"
   },
-  "Becoming.«对之逆»": {
-   "module": "Becoming.GrammarLaws",
-   "category": "general-structure",
-   "reason": "a law of pairings under every relation (balance on the grammar, OU3b); the base reads balance in numbers, represented on the grammar at one step and over a family in Flow, and its consumers stay arithmetic, so nothing on the base uses this one"
-  },
   "Becoming.«局定后则有常当且仅当同行可续»": {
    "module": "Becoming.GrammarLaws",
    "category": "general-structure",
@@ -6311,6 +6306,11 @@
    "module": "Becoming.RootForms",
    "category": "model-witness",
    "reason": "RootForms.outside_leaves_no_offspring.outside_needed: a fact about one constructed model over one point: the hypothesis (outside) fails there, by RootForms.outside_leaves_no_offspring (U4's fit, cited by the boundary record)"
+  },
+  "Becoming.UnitMatchings.FrameMatch.predecessor_unique": {
+   "module": "Becoming.UnitMatchings",
+   "category": "support",
+   "reason": "UnitMatchings.FrameMatch.predecessor_unique: a one-line unpacking of FrameMatch's own fields (bwd_fwd): an out-position has one in-position the selected matching sends to it, «定前» at a frame; the record amounts-by-unit-matchings cites it in its first law"
   }
  },
  "instances": {

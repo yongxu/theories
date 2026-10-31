@@ -77,7 +77,7 @@ This is board item RP2b: the release gate's item 6 as amended on 31 October ([WH
   - the items, the references, and the response form, now anchored;
   - `## How this dossier was made`: the old paragraph, whole, in bullets, with this change recorded.
 
-  The 27 items are unchanged, except that P-26 now carries the AI label on the gloss of 生生 (D1). 07 §8 also omits that label; its owner was told. After RV21b scoped 07's D65 reading (it locates the boundary that power-seeking results leave open and does not answer that question in its own terms), P-25 gives the reading as locating that boundary and quotes the chapter's scope.
+  The 27 items are unchanged, except that P-26 now carries the AI label on the gloss of 生生 (D1). 07 omitted that label then; HE2 (landed 31 October 2026) has since added it in §2 and in §8's T8. After RV21b scoped 07's D65 reading (it locates the boundary that power-seeking results leave open and does not answer that question in its own terms), P-25 gives the reading as locating that boundary and quotes the chapter's scope.
 - **Measures.** These use the counting in AJ4's `kit/measure_layers.py`, ending the part at the alignment dossier's pattern `^(## The items|###? P-01)`.
   - The part: 1,114 words, 8.6 to 11.2 minutes, and it states its time. That is 15 words over the budget of 1,100. The excess is items that may not be cut, restored by the review (amendment 1).
   - The one-hour path (the part with P-04, P-05, P-07, P-10, P-11 and P-20): 4,386 words and 177 characters, 34.4 to 44.7 minutes.
