@@ -3,9 +3,10 @@
 that are BD3's, each with a category and a reason; stop on any other root, which belongs to its owner, and on any
 stale entry, which BD3's change (a leaf, no existing module changed) does not explain and is read first.
 
-* closes_iff_closed reads Continuity's closed family as the grammar's «闭» along the listed adjacency, for every Bool
-  relation and list on any type; the base reads balance on regions through balancesOn_iff_notGoingOut, which goes
-  through «不出», so nothing on the base uses this law (general structure).
+* closes_iff_closed is used on the base through closes_iff_notGoingOut, so it is expected connected; its reason is
+  kept in case the measure places it apart.
+* closes_iff_notComingIn reads the same family as a region not come into, the adjacency being symmetric; nothing on
+  the base uses it (general structure).
 * balancing_iff_notGoingOut is the one-step form for any levels; the base's case on webs, balancesOn_iff_notGoingOut,
   goes through balancesOn_iff_conserved, so nothing on the base uses it (general structure).
 
@@ -38,6 +39,9 @@ REASONS = {
     'Becoming.Continuity.closes_iff_notGoingOut': ('general-structure',
                                                    'a family the relation closes is exactly a region not gone out of '
                                                    'along that adjacency: ' + GENERAL),
+    'Becoming.Continuity.closes_iff_notComingIn': ('general-structure',
+                                                   'a family the relation closes is exactly a region not come into '
+                                                   'along that adjacency, by «对称则不出当且仅当逆不出»: ' + GENERAL),
     'Becoming.Continuity.adjacentListed_symm': ('support', 'adjacency among the listed relata is symmetric: a one-line '
                                                            'unpacking of the module\'s own definitions and adj_symm (BD3)'),
     'Becoming.Continuity.balancesOn_iff_notGoingOut': ('general-structure',

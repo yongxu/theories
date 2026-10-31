@@ -75,8 +75,8 @@ text = RECORD.read_text(encoding='utf-8')
 assert text.count('PENDING') == 3, text.count('PENDING')
 d = json.loads(text.replace('PENDING', RECEIPT))
 n_decl, n_thm = len(leaf['declarations']), leaf['theorems']
-for lang, old, new in (('en', '6 declarations (5 theorems)', f'{n_decl} declarations ({n_thm} theorems)'),
-                       ('zh', '6 个声明中 5 条定理', f'{n_decl} 个声明中 {n_thm} 条定理')):
+for lang, old, new in (('en', '7 declarations (6 theorems)', f'{n_decl} declarations ({n_thm} theorems)'),
+                       ('zh', '7 个声明中 6 条定理', f'{n_decl} 个声明中 {n_thm} 条定理')):
     assert d['validation_scope'][lang].count(old) == 1, (lang, d['validation_scope'][lang])
     d['validation_scope'][lang] = d['validation_scope'][lang].replace(old, new)
 named = [x for x in d['references'] if x['path'] == LEAF]

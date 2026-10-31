@@ -10,21 +10,26 @@ module reads that on the grammar's `«不出»` (`Becoming.GrammarCrossing`).
 
 * **Adjacency among the listed relata is a relation of the grammar** (`Continuity.adjacentListed`):
   both listed, and adjacent under the relation. It is symmetric (`Continuity.adjacentListed_symm`).
-* **A family the relation closes is a region not gone out of along it**
-  (`Continuity.closes_iff_notGoingOut`), and a region closed under it
-  (`Continuity.closes_iff_closed`). Membership is a test, so both are exact. Along a symmetric
-  relation nothing goes out exactly where nothing comes in (`«对称则不出当且仅当逆不出»`), so such a
-  region is neither gone out of nor come into.
-* **Balance along a relation is conservation on every region not gone out of.** Over relata listed
-  without repetition, equality decided, transfers along the relation that balance a step exist
-  exactly where the total is conserved on every region nothing goes out of along adjacency among the
-  listed relata (`Continuity.balancing_iff_notGoingOut`, `Continuity.balancing_iff` read on `«不出»`),
-  and on a web at every step likewise (`Continuity.balancesOn_iff_notGoingOut`).
+* **A family the relation closes is a region closed under that adjacency, and one not gone out of
+  along it** (`Continuity.closes_iff_closed`, `Continuity.closes_iff_notGoingOut`). A region closed
+  under a symmetric adjacency is closed under its converse too, and one closed both ways the
+  adjacency crosses neither way (`GrammarLaws.uncrossed_of_closed`), which is what
+  `Continuity.Closes` says; membership is a test, so stable, and there not going out is being
+  closed (`«不外者内则不出当且仅当闭»`). Along a symmetric relation nothing goes out exactly where
+  nothing comes in (`«对称则不出当且仅当逆不出»`), so the family is also a region not come into
+  (`Continuity.closes_iff_notComingIn`).
+* **Balance on the regions not gone out of.** Over relata listed without repetition, with equality
+  decided, transfers along the relation that balance a step exist exactly where the total is
+  conserved on every region nothing goes out of along adjacency among the listed relata
+  (`Continuity.balancing_iff_notGoingOut`, `Continuity.balancing_iff` read on `«不出»`), and on a
+  web at every step likewise (`Continuity.balancesOn_iff_notGoingOut`).
 
-So balance along a relation is kept region by region, on the regions the relation does not cross.
-What is not shown: that conservation on each closure under the symmetric adjacency (the `«所闭»` form)
-is enough, each region not gone out of being a union of such closures among finitely many relata.
-Every declaration has an empty axiom report.
+So balance along a relation is kept region by region, on the regions the relation crosses neither
+way among the listed relata. What is not shown: balance from conservation on each closure under
+that adjacency (`«所闭»`), the components of network flows. A region not gone out of holds its
+members' closures (`«闭含所闭»`, `«所闭之自反»`), so it is their union; missing are each closure
+decided as a test among the finitely many listed relata, and a region's total summed over the
+closures it holds. Every declaration has an empty axiom report.
 -/
 
 namespace Becoming
@@ -43,31 +48,41 @@ theorem adjacentListed_symm (rel : R → R → Bool) (us : List R) :
     «则» (adjacentListed rel us) («逆» (adjacentListed rel us)) :=
   fun a b listed => ⟨listed.2.1, listed.1, (adj_symm rel a b).symm.trans listed.2.2⟩
 
-/-- **A family the relation closes is a region not gone out of along adjacency among the listed
-relata.** Membership is a test, so the equivalence is exact. -/
-theorem closes_iff_notGoingOut {rel : R → R → Bool} {us : List R} {p : R → Bool} :
-    Closes rel us p ↔ «不出» (adjacentListed rel us) (fun x => p x = true) :=
-  ⟨fun closes x y inside outside listed =>
-    outside ((closes x y listed.1 listed.2.1 listed.2.2).symm.trans inside),
-   fun none a b ma mb near => by
-    cases ha : p a <;> cases hb : p b
-    · rfl
-    · exact (none b a hb (fun inside => Bool.noConfusion (ha.symm.trans inside))
-        (adjacentListed_symm rel us a b ⟨ma, mb, near⟩)).elim
-    · exact (none a b ha (fun inside => Bool.noConfusion (hb.symm.trans inside))
-        ⟨ma, mb, near⟩).elim
-    · rfl⟩
-
-/-- **A family the relation closes is a region closed under adjacency among the listed relata.** -/
+/-- **A family the relation closes is a region closed under adjacency among the listed relata.**
+The adjacency is symmetric, so a region closed under it is closed under its converse, and one
+closed both ways the adjacency crosses neither way (`GrammarLaws.uncrossed_of_closed`). -/
 theorem closes_iff_closed {rel : R → R → Bool} {us : List R} {p : R → Bool} :
     Closes rel us p ↔ «闭» (adjacentListed rel us) (fun x => p x = true) :=
   ⟨fun closes x y inside listed => (closes x y listed.1 listed.2.1 listed.2.2).symm.trans inside,
-   fun closed => closes_iff_notGoingOut.mpr («闭则不出» closed)⟩
+   fun closed a b ma mb near =>
+    GrammarLaws.uncrossed_of_closed closed
+      (fun x y inside back => closed x y inside (adjacentListed_symm rel us y x back))
+      a b ⟨ma, mb, near⟩⟩
 
-/-- **Balance along a relation is conservation on every region not gone out of.** Over relata
-listed without repetition, transfers along the relation that balance a step exist exactly where the
-total is conserved on every region, read as a test, that nothing goes out of along adjacency among
-the listed relata. -/
+/-- **A family the relation closes is a region not gone out of along adjacency among the listed
+relata.** The adjacency being symmetric and membership a test, so stable, the equivalence is exact:
+`Continuity.closes_iff_closed`, and not going out is being closed where membership is stable
+(`«不外者内则不出当且仅当闭»`). -/
+theorem closes_iff_notGoingOut {rel : R → R → Bool} {us : List R} {p : R → Bool} :
+    Closes rel us p ↔ «不出» (adjacentListed rel us) (fun x => p x = true) :=
+  closes_iff_closed.trans
+    («不外者内则不出当且仅当闭» (R := adjacentListed rel us) (P := fun x => p x = true)
+      fun y notOutside =>
+        match holds : p y with
+        | true => holds
+        | false => (notOutside fun inside => Bool.noConfusion (holds.symm.trans inside)).elim).symm
+
+/-- **A family the relation closes is a region not come into along adjacency among the listed
+relata.** The adjacency is symmetric, so nothing goes out of a region along it exactly where
+nothing comes into it (`«对称则不出当且仅当逆不出»`). -/
+theorem closes_iff_notComingIn {rel : R → R → Bool} {us : List R} {p : R → Bool} :
+    Closes rel us p ↔ «不出» («逆» (adjacentListed rel us)) (fun x => p x = true) :=
+  closes_iff_notGoingOut.trans («对称则不出当且仅当逆不出» (adjacentListed_symm rel us))
+
+/-- **Balancing transfers exist exactly where every region not gone out of conserves the total.**
+Over relata listed without repetition, with equality decided, transfers along the relation that
+balance a step exist exactly where the total is conserved on every region, read as a test, that
+nothing goes out of along adjacency among the listed relata. -/
 theorem balancing_iff_notGoingOut [DecidableEq R] {rel : R → R → Bool} {us : List R}
     {prev next : R → Nat} (distinct : Distinct us) :
     (∃ move, Balancing rel us prev next move) ↔
@@ -77,11 +92,12 @@ theorem balancing_iff_notGoingOut [DecidableEq R] {rel : R → R → Bool} {us :
     ⟨fun conserved p none => conserved p (closes_iff_notGoingOut.mpr none),
      fun conserved p closes => conserved p (closes_iff_notGoingOut.mp closes)⟩
 
-/-- **On a web, balance along a relation is conservation on every region not gone out of, at every
-step.** Over relata listed without repetition, with the relation free to change from step to step:
-where the levels are conserved at every step on every region nothing goes out of along that step's
-adjacency among the listed relata, the routed transfers balance them; and every flow of transfers
-along the relation balancing them conserves them so. -/
+/-- **On a web, balancing transfers exist exactly where every region not gone out of conserves the
+levels, at every step.** Over relata listed without repetition, with equality decided and the
+relation free to change from step to step: transfers between adjacent listed relata at each step,
+read as a flow, balancing the levels on the listed relata at every step exist exactly where at
+every step the levels are conserved on every region, read as a test, that nothing goes out of along
+that step's adjacency among the listed relata. -/
 theorem balancesOn_iff_notGoingOut [DecidableEq R] {us : List R} {rel : Nat → R → R → Bool}
     {W : Web R R} (distinct : Distinct us) :
     (∃ move : Nat → R → R → Nat,
