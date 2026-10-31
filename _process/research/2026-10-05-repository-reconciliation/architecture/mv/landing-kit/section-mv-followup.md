@@ -1,0 +1,66 @@
+## NNN. The attachment rule read by kind, and the kinds the dump lacks (MV's follow-up, two re-checks)
+
+Board item MV's boundary field, on RA's line: the follow-up to §472. The third re-check of the rule by attachment (328fa883a against 652ee90ac) had two lenses, the two copies of the rule held together and what the Lean check's copy lets through or refuses, each followed by an adversarial verifier that reproduced every finding on Lean 4.29.1 ([reports/boundary-fix-recheck3.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-fix-recheck3.json)). The coordinator let it land after the field, as MV's. A fourth re-check of the follow-up (26977f25a against 1aa84fd59), one lens followed by one adversarial verifier, found the eight taken and four more, all confirmed, none a regression and none on the current dump; they are taken in the same follow-up ([reports/boundary-fix-recheck4.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-fix-recheck4.json)). The design is [BOUNDARY-FIELD](../../2026-10-05-repository-reconciliation/architecture/mv/BOUNDARY-FIELD.md) §3.0, §3.2 test 9, §8 and §9.
+
+```text
+Result(s): no new result; corrections to the rule that tells Lean's generated auxiliaries from theorems written by
+       hand, in both its copies, and to its tests.
+Delta: (1) by kind (RECHECK3-LEAN-1 to 4):
+       - an opaque is its own kind, as the dump writes it;
+       - the equation lemmas' names, splitter, _sunfold, _default, _aux_N and _arg_pusher attach to a definition only;
+       - _unsafe_rec, match_N and the lifted proofs attach to an opaque too;
+       - the lifted proofs attach to an inductive type (a structure's, a class's or a constructor's default);
+       - _arg_pusher is added (the equation lemmas of a definition by well-founded recursion of two arguments or of
+         mutual ones);
+       - go and eq attach only under a brecOn that is a definition;
+       - a hygienic name is read without its macro scopes, and the name before it with them.
+       (2) the kinds the dump lacks (RC3-RULES-1): Lean realizes an equation lemma of an Init definition in the
+       package module that unfolds it (Nat.fold.eq_def). The generator lists such theorems (outside), sends them to the
+       Lean check, which now runs before D1-D5, and D1-D5 read its kinds (Terms.supplied); the measure's facts stay the
+       dump's, and without the check D2 fails closed.
+       (3) the text (RC3-RULES-3, RECHECK3-LEAN-5): §3.0 and §3.2 state test 9's exception and which kinds each copy
+       reads, and the defaults the rule leaves out.
+       (4) the tests (RC3-RULES-2): a stub module of the verifiers' cases; the two copies held together on
+       THEOREM-CONNECTIVITY-DUMP.lean's constants of the stubs; D2 through Nat.fold.eq_def; sixteen mutations of the
+       two copies, each caught.
+       (5) the fourth re-check (R4-1 to R4-4):
+       - the name before a hygienic definition's equation lemma (halve.«_@».M._hyg.3.eq_1) is read as the dump prints
+         a name with macro scopes, unescaped, in Terms.aux and outside;
+       - a nested inductive type's _sizeOf_N_eq, brecOn_N (with go and eq under it), below_N and rec_N attach to an
+         inductive type; eq_unfold, congr_eq_N and the functional induction and cases Lean realizes on use (induct,
+         induct_unfolding, mutual_induct, mutual_induct_unfolding, fun_cases, fun_cases_unfolding) to a definition,
+         in both copies, each as Lean 4.29.1 makes it on a probe;
+       - a derived entry whose D2 refuses a theorem outside lists says that the Lean check, which gives its kind, did
+         not run; §3.6 states the input and the order as the code has them;
+       - tests: a nested type with a recovery through its equation lemma (must pass), a macro's definition by
+         well-founded recursion with D2 through its lemma, functional induction realized, the dump's names after the
+         macro scopes sent to the check; 135 names (69 generated, 66 not, _unsafe_rec and _arg_pusher under kinds
+         they must not attach to); sixteen mutations of the new parts, each caught; 61 tests.
+Premises: none added.
+Evidence:
+       - on the current dump none of the shapes occurs (no opaque, no hygienic name, no _arg_pusher, no Init
+         auxiliary realized in a package module, no lifted proof under an inductive type), so no figure, walk or reach
+         changes; master_laws.py rerun on core receipt 20261031T013649.265381Z (RF-M.3's) changes only the hashed inputs
+         (boundary.py and boundary_check.lean);
+       - U4's 31 controls rerun on U4's build: output byte-identical;
+       - the end-to-end report on GW's run: every row the same, only the check's hash differs;
+       - the verifiers' reproductions now pass (relC, relW, relO, relA, relE, relB) or fail (op.eq_1, Rp.brecOn.go,
+         Cfg.elim) as §3.2 says;
+       - the fourth re-check reproduced each of its findings on Lean 4.29.1; after the fixes, the dumps of core receipts
+         20261030T232750.486801Z and 20261031T013649.265381Z and of U4's build give the same auxiliaries, walks,
+         forwarders, laws and root constants under the rule before and after them, and outside is empty (on RF-M.3's,
+         52,346 constants: 26,351 auxiliaries, 2,258 root constants, 406 grammar laws, 14 forwarders, 20,120 walks; [reports/boundary-rule-compare.json](../../2026-10-05-repository-reconciliation/architecture/mv/reports/boundary-rule-compare.json),
+         by boundary/check/compare_rule.py); U4's controls and the end-to-end report again as above; U4's RootForms
+         leaf (u4-edge) has none of the new shapes;
+       - research check --strict-fresh, links and the suite (304 tests) pass in a clean worktree.
+Boundary:
+       - a theorem written by hand under the exact name Lean gives an auxiliary of a declaration of that kind, where
+         Lean made none, is still walked through (§3.0's stated limit); the review reads a model's source for it;
+       - outside lists theorems whose immediate owner, or brecOn's owner, the dump lacks; a hygienic name is left out,
+         since the Lean check cannot read one listed;
+       - Lean's proof cache can put another declaration's lifted proof in a recovery; test 9 collects it all the same;
+       - a recovery a macro makes cannot name its definition's equation lemma, and a tactic brings Init's congrArg,
+         which test 9 counts; the Lean side of a name after the macro scopes is tested through the check's generated
+         query, not test 9.
+Output -> input: U4's boundary record (Becoming.RootForms) is checked by this rule.
+```
