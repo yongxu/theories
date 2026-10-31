@@ -11,11 +11,11 @@
 ## Laws
 
 1. On an exactly listed nonempty eligible range with an irreflexive, transitive comparison, weakly decided, and the relation decided, where every eligible continuation lacking the relation has a strictly better eligible one, the undefeated choices are not empty and each includes the relation. (`Becoming.Requirement.required_of_bettered`, `Becoming.Requirement.frontier_exists`, `Becoming.Requirement.frontier_iff_undominated`, `Becoming.undominated_has`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. With no decidedness, under the same improvement witnesses, an undominated member does not lack the relation, a double negation; asked of every relation, possession without the double negation is exactly excluded middle. (`Becoming.Undominated`, `Becoming.Undominated.not_not_has`, `Becoming.undominated_has_iff_em`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. In the periphery classical excluded middle supplies both decisions, so on any exactly listed nonempty range, the comparison irreflexive and transitive and each eligible one lacking the relation bettered, the required organization holds with no decision hypothesis, and in the constructed history coordination is required; these two report Lean's three standard axioms, choice among them, the frontier's reading none. (`Becoming.OrganizationCorrespondence.frontier_iff_undominated`, `Becoming.OrganizationCorrespondence.formation_required_by_core`, `Becoming.OrganizationCorrespondence.coordination_is_required_by_core`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

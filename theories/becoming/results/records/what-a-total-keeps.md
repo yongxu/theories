@@ -11,11 +11,11 @@
 ## Laws
 
 1. For the routing (a, b) ↦ (a + cb, b) the next total is the total plus cb, so any single value within ε of the next total at both (2, 0) and (0, 2), states of equal total, has c ≤ ε; where |b| ≤ B the next total lies within |c|B of the total; and the total together with b follows an exact law. (`RelationsAcrossScales.total`, `RelationsAcrossScales.routing`, `RelationsAcrossScales.routing_total`, `RelationsAcrossScales.routing_defect_lower_bound`, `RelationsAcrossScales.routing_error_bound`, `RelationsAcrossScales.enriched_routing_exact`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. The transfer (a, b) ↦ (a + b, 0) keeps the total exactly, yet (1, 1) has both coordinates at least 1 and its successor does not; no predicate of the total characterizes both coordinates being at least 1, while the minimum of the coordinates being at least 1 does. (`RelationsAcrossScales.transfer`, `RelationsAcrossScales.basicProtected`, `RelationsAcrossScales.total_exact_through_transfer`, `RelationsAcrossScales.exact_total_can_hide_loss`, `RelationsAcrossScales.no_total_only_protection`, `RelationsAcrossScales.minimum_preserves_protection`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. With a calibrated estimate, |actual − estimate| ≤ error, an estimate plus error below a threshold puts the actual value below it; for every positive error, an estimate at the threshold fits actual values on either side of it. (`RelationsAcrossScales.violation_certificate`, `RelationsAcrossScales.threshold_ambiguity`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

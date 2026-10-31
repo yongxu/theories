@@ -11,13 +11,13 @@
 ## Laws
 
 1. Given a net R, a class E and each standpoint's center, the condition along the net is that every occurrence is reached on every center's line under E, and in families that every occurrence lies in every center's family under E; what a line reaches lies in its family, so the first gives the second. (`Becoming.«所及则同族»`, `Becoming.«族无外»`, `Becoming.«相续则同族»`, `Becoming.«续无外»`, `Becoming.«续无外则族无外»`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 2. Under a coarser class every family holds the finer class's family, and the condition along the net or in families at a class gives it at every coarser class. (`Becoming.«同族之粗化»`, `Becoming.«族无外之粗化»`, `Becoming.«续无外之粗化»`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 3. Lying within a closure along a relation is being reached on a line under the one of that relation; so the condition held de se along a relation is exactly the root's condition at the one of that relation taken as the net, and on the own-closure reading of claims living significance follows, with self-significance, both neutralities and, where something lives, a seed. (`Becoming.ownClosure_unrestricted_iff_noOutside`, `Becoming.premises_of_noOutside`, `Becoming.withinClosure_iff_reached`, `Becoming.withinClosure_of_line`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 4. Along a net with no cycle the condition holds only with one center: two centers each reached from the other would lie on a cycle, and nothing conditions that center. (`Becoming.«续无外则中心无缘»`, `Becoming.«续无外则同一中心»`)
-   - *Master laws, by Lean dependency:* no master law's anchor; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

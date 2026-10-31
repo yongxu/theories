@@ -11,21 +11,21 @@
 ## Laws
 
 1. For every alphabet with decidable equality, a product's defects against a template count the sites of their common length where they differ; a reference is faithful at a site where, both it and the template having a token there, they agree. (`Becoming.Copying.defects`, `Becoming.Copying.FaithfulAt`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. For every alphabet with decidable equality, inspecting a site (drawing ci, then exchanging its token for the reference's at ce where the pool holds it) never increases the defects against a template, for every product, pool and support, exactly when the reference is faithful at that site. (`Becoming.Copying.inspect`, `Becoming.Copying.inspect_le_iff`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. A scan of sites at which the reference is faithful never increases the defects. Read as a process whose moves are the sites inspected, every inspection of a site keeps the defects from rising exactly when the reference is faithful there, and no course of inspections at faithful sites raises them. (`Becoming.Copying.scan_le`, `Becoming.Courses.inspection`, `Becoming.Courses.inspection_le_iff`, `Becoming.Courses.inspection_course_le`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. At a site holding a token other than the one the reference reads, inspection leaves the reference's token there exactly when the support covers the draws of inspection and exchange and the pool holds that token. A product of the template's length has no defect exactly when it is the template, and an exchange keeps every token's count across product and pool. (`Becoming.Copying.inspect_matches_iff`, `Becoming.Copying.defects_zero_iff`, `Becoming.Copying.exchange_keeps_counts`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. The correction machine is the instance with unit draws: its exchange, inspection and scan are the core's with its reference. For every correction state and site, inspection never increases the defects against the template for any copy in progress exactly when the reference is faithful at the site; a scan of faithful sites never increases them, the earlier theorem for a reference faithful everywhere an instance. (`Becoming.CopyingInstances.exchange_view`, `Becoming.CopyingInstances.inspect_view`, `Becoming.CopyingInstances.scan_view`, `Becoming.CopyingInstances.inspect_le_iff_instance`, `Becoming.CopyingInstances.scan_le_from_law`, `Becoming.CopyingInstances.scan_faithful_instance`, `CopyingCorrection.inspection_scan_does_not_increase_defects`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 6. In the machine, at a site holding a token other than the reference's, inspection leaves the reference's token exactly when two units of support are free and the pool holds the token; a product of the template's length has no defect exactly when it is the template; an exchange permutes the tokens across product and pool, and every admitted history keeps its totals of connectors, material and support. (`Becoming.CopyingInstances.matches_reference_from_law`, `CopyingCorrection.inspection_matches_reference_iff`, `Becoming.CopyingInstances.product_is_template_iff`, `CopyingCorrection.exchange_material`, `CopyingCorrection.history_accounts`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 7. In witnesses from a product copied with one slipped contact: with 15 units of support at entry, losing that contact and routing the defective site to its template site, inspection edits the product into the template, released and copied faithfully as a daughter; with 13 the repair uses up the support, the wrong token staying and the product, releasable before, unreleased; with 14 it is corrected but not releasable. (`CopyingCorrection.formed_route_edits_actual_product`, `CopyingCorrection.corrected_daughter_enters_inheritance`, `CopyingCorrection.checking_can_exhaust_editing_support`, `CopyingCorrection.corrected_product_can_remain_unreleased`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 8. A shared wrong source can conceal or cause error, in witnesses: a route from the defective site to a template site holding the same wrong token leaves the error in place, and the same route from a correct product damages it, its reference being unfaithful at the inspected site. (`CopyingCorrection.shared_wrong_source_hides_error`, `CopyingCorrection.wrong_reference_damages_correct_product`, `Becoming.CopyingInstances.wrong_reference_unfaithful`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

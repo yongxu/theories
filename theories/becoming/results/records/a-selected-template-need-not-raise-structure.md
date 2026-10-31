@@ -11,13 +11,13 @@
 ## Laws
 
 1. With AA, AH, HA, HH the weights of an event forming an A or H successor from an A or H template, and a, h the counts, the weighted mean of A's share after the next event exceeds a/(a + h) exactly where a(AH + HH) < h(AA + HA), equals it or falls exactly where the sides are equal or reversed: a balance with no subtraction; read by templates or by successors the total event weight is the same. (`ConsequenceTransmission.numerator_balance`, `ConsequenceTransmission.strict_increase_iff`, `ConsequenceTransmission.neutral_iff`, `ConsequenceTransmission.strict_decrease_iff`, `ConsequenceTransmission.denominator_positive`, `ConsequenceTransmission.transmission_preserves_total_event_weight`, `ConsequenceTransmission.transmitted_structure_increase_iff`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. Faithful transmission (AH = HA = 0), or equal transfer both ways (AH = HA), makes the successor weights the template weights, so the share rises under one reading exactly where it rises under the other; copy weights proportional to the counts leave the share unchanged. (`ConsequenceTransmission.faithful_transmission_matches_template`, `ConsequenceTransmission.balanced_transfer_matches_template`, `ConsequenceTransmission.faithful_increase_iff_template_increase`, `ConsequenceTransmission.shared_access_is_neutral`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. The native copying law is faithful: a positive copy weight of a kind needs an enabled copy reaction of that kind, and every native copy adds one of its template's kind and leaves the other count; in both reached states an enabled damage event keeps both counts, so the no-change weight has a native event. (`ConsequenceTransmission.Native.positive_a_weight_has_native_event`, `ConsequenceTransmission.Native.positive_h_weight_has_native_event`, `ConsequenceTransmission.Native.native_copy_transmits_its_response_structure`, `ConsequenceTransmission.Native.reached_neutral_event_is_native`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. Witnesses: with a = h = 1 and transfers (1, 5, 2, 2), all positive, A has the larger template opportunity, 6 to 4, while its mean share falls from 1/2 to 13/30; in two checked histories of the native law, each reaching one A and one H, A's copy weight exceeds H's in one and falls below it in the other. (`ConsequenceTransmission.positive_template_advantage_can_reverse_in_transmission`, `ConsequenceTransmission.Native.actual_capture_changes_copy_access`, `ConsequenceTransmission.Native.actual_transfer_with_both_structures_present`, `ConsequenceTransmission.Native.same_composition_opposite_access`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

@@ -2,16 +2,16 @@
   "schema_version": 2,
   "id": "master-laws-on-the-grammar",
   "title": {
-    "en": "The master laws on the grammar",
-    "zh": "文法上的主律"
+    "en": "The shared laws on the grammar",
+    "zh": "文法上的共律"
   },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
   "reviewed_at_utc": "2026-10-31T05:47:56+00:00",
   "statement": {
-    "en": "The five master laws hold on the grammar for every carrier and relation: closure, finite runs (return, being drawn, rest), lumping and order, with the models' laws proved from them. Balance is represented both ways as pairings of unit lists, near-definitional, and not derived.",
-    "zh": "五条主律对每一载体与关系在文法上成立：闭包、有限运行（返、入、止）、归并与序，模型之律由之证出。平衡以单位列表之配对两向表示，近乎定义，不推出。"
+    "en": "The five shared laws hold on the grammar for every carrier and relation: closure, finite runs (return, being drawn, rest), lumping and order, with the models' laws proved from them. Balance is represented both ways as pairings of unit lists, near-definitional, and not derived.",
+    "zh": "五条共律对每一载体与关系在文法上成立：闭包、有限运行（返、入、止）、归并与序，模型之律由之证出。平衡以单位列表之配对两向表示，近乎定义，不推出。"
   },
   "laws": [
     {
@@ -572,6 +572,10 @@
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
   "aliases": [
+    "The shared laws on the grammar",
+    "文法上的共律",
+    "shared laws on the grammar",
+    "the five shared laws on the grammar",
     "The master laws on the grammar",
     "文法上的主律",
     "master laws on the grammar",
@@ -1735,6 +1739,10 @@
     {
       "en": "31 October 2026, board item HE2 (study section 474). Items 2 to 4: the closure law gains «所闭之逆» and the two laws of a closure through borrowed steps («借步之所闭在二所闭», «二所闭在借步之所闭»), which Response's WithinClosure.converse and SelectionPool's WithinClosure.of_reads and WithinClosureOf.to_reads are now proved as; balance at one step gains counting on a region («计»), the count kept where the relation does not cross, the count law of a class, what a pairing under continuation adds to equal count and the census of a step, with two witnesses (U4's lever 1, checked outside the package before); the list lemmas gain the helpers these use; the models' laws proved from these gain the three model lemmas, with Response.lean and SelectionPool.lean as proof sources. Item 6: the lumping law gains four laws on a class's core and going alike in GrammarLaws («定后则类之核同行», «遍后则其内同行之类含于核», «定后遍后则核为其内最粗同行之类», and the witness «后不定则核可不同行»), the composition 01 §4 states under \"The core and 理\", checked outside the package before; and a correction: the clause \"a class going alike lies in its core\" was false without the successor everywhere that «类同行遍后则含于核» takes, and now carries it. The landing: the validation scope gives HE2's receipt and GrammarLaws' counts, every declaration cited; the does-not-show item on a pairing under continuation is narrowed to what is not stated, as GrammarLaws' module doc is; a hypothesis names what counting reads as a test to Bool and the census's lists without repeats; the balance law's last sentence no longer says the pairing is supplied, since the census constructs its own; the home section, 01 §7, now states the closure and balance laws items 2 to 4 add; HE2's design, review and receipt are referenced. No other law changes.",
       "zh": "2026年10月31日，工作板条目 HE2（研究第 474 节）。第 2 至 4 项：闭包之律增入 «所闭之逆» 及借步之闭包二律（«借步之所闭在二所闭»、«二所闭在借步之所闭»），Response 之 WithinClosure.converse 与 SelectionPool 之 WithinClosure.of_reads、WithinClosureOf.to_reads 今即由之证出；一步之平衡增入计一域之数（«计»）、关系所不越之域守数、类之数律、续下配对于等数之所增与一步之清点，并二见证（U4 之第一杠杆，此前在包外核验）；列表引理增入其所用之辅助；由此证出之诸模型之律增入此三模型引理，以 Response.lean 与 SelectionPool.lean 为证明来源。第 6 项：归并之律增入 GrammarLaws 中言类之核与同行之四律（«定后则类之核同行»、«遍后则其内同行之类含于核»、«定后遍后则核为其内最粗同行之类»，及见证 «后不定则核可不同行»），即第一章 §4「核与理」所述之组合，此前在包外核验；并更正：「同行之类含于其核」一句无「类同行遍后则含于核」所设之遍后则不真，今带之。落地：验证范围言 HE2 之回执与 GrammarLaws 之数，声明皆引；续下配对之「未示」一项收窄至未述者，如 GrammarLaws 之模块说明；增一前提，言计数所读之取真假值之测与一步之清点所列无重；平衡之律末句不再言配对为所给，因清点自造其配对；其所在之节第一章 §7 今述第 2 至 4 项所增之闭包与平衡之律；HE2 之设计、审查与回执已引。其余之律不变。"
+    },
+    {
+      "en": "1 November 2026, board item ND: renamed from \"the master laws on the grammar\" (文法上的主律), a name stating rank where 08 §7 measures only proof dependence, to \"the shared laws on the grammar\" (文法上的共律); the old names kept as aliases and the id kept as a key; no law, hypothesis or binding changed.",
+      "zh": "2026年11月1日，工作板条目 ND：由“文法上的主律”更名为“文法上的共律”；旧名言等级，而 08 §7 所量唯证明之依赖。旧名留为别名，编号留为键；律、假设与绑定皆未改。"
     }
   ]
 }

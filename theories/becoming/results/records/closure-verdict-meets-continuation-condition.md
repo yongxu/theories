@@ -11,13 +11,13 @@
 ## Laws
 
 1. Significance bounded by the whole, each standpoint's region being the whole, is the continuation condition, Unrestricted. (`Becoming.Unrestricted`, `Becoming.bounded`, `Becoming.bounded_whole`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Given regions, a standpoint p and level paths l and l', suppose every formation l' admits at a step lies in p's region or is admitted by l at that step. Then significance bounded by the regions retains from p what has significance along l' exactly when l includes l'; under the continuation condition this is exactly when l retains from p what has significance along l', so the two verdicts agree. (`Becoming.Web.Admits`, `Becoming.Web.Retains`, `Becoming.Web.Includes`, `Becoming.Web.retains_bounded_iff_includes`, `Becoming.Web.retains_bounded_iff_retains`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Where a formation p's feeding closure is the whole, the covering condition always holds, so under the continuation condition the verdict bounded by the feeding closure is the continuation condition's on every comparison; in Overshoot, where each feeds the other's condition at the first step so that either closure is the whole, this holds from either standpoint. (`Becoming.Flow.WithinFeeding`, `Becoming.Flow.within_closure_iff_retains`, `Becoming.Overshoot.closure_whole`, `Becoming.Overshoot.within_closure_iff_retains`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 4. In Clearing the two part. With l the levels with the clearer's part withheld, bounded by the feeding closure, from the clearer's standpoint the levels with its part retain what has significance along l; under the continuation condition they do not, from any standpoint; and from the dweller's standpoint, within the dweller's own closure, l adds what the levels with the part lack. (`Becoming.Flow.WithheldLevels`, `Becoming.Clearing.clearerPart`, `Becoming.Web.Adds`, `Becoming.Clearing.within_closure_yet_loses`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions

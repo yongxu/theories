@@ -11,15 +11,15 @@
 ## Laws
 
 1. One value carries to another from a premise role to a conclusion role where the first meeting the input criterion gives the second the output criterion; every value carries to itself exactly where the input criterion implies the output one, near-definitional. Two carryings compose through a bridge, at the middle value, from the first output criterion to the second input criterion. (`Generative.ReflectiveIdentity.Carries`, `Generative.ReflectiveIdentity.ReflexiveFor`, `Generative.ReflectiveIdentity.reflexive_exact`, `Generative.ReflectiveIdentity.same_criterion`, `Generative.ReflectiveIdentity.compose_with_bridge`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 2. On three grades, strict to tolerant carries to itself and tolerant to strict does not; the strict-to-tolerant carrying, reflexive, does not compose: established carries to unsettled and unsettled to absent, but established not to absent. (`Generative.ReflectiveIdentity.strict_to_tolerant_reflexive`, `Generative.ReflectiveIdentity.tolerant_to_strict_not_reflexive`, `Generative.ReflectiveIdentity.reflexive_assessment_can_fail_composition`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 3. Curry: admitting C ↔ (C → Q) as a hypothesis yields Q, for any propositions C and Q; so no proposition C has C ↔ (C → False). (`Generative.ReflectiveIdentity.curry_fixed_point`, `Generative.ReflectiveIdentity.no_false_curry_fixed_point`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 4. In the typed term fragment with no source constants (use of the context, pairs, projections, abstraction and application), every term sends related context grounds to related values, for every family of relations. So no closed source-free term has an atomic type, and with one carrier at every atomic index every closed source-free term of type atom(i) → atom(i) evaluates to the identity and keeps every criterion. (`Generative.RecognitionalBinding.SourceFree`, `Generative.RecognitionalBinding.source_free_related`, `Generative.RecognitionalBinding.no_closed_source_free_atom`, `Generative.RecognitionalBinding.closed_identity_forced`, `Generative.RecognitionalBinding.closed_identity_preserves`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 5. Witnesses: a source-free term with a further ground in its context returns that ground in place of its argument, and a closed term introducing a source returns a new ground, so the arrow type alone does not ensure carry-over. (`Generative.RecognitionalBinding.ambient_ground_can_replace`, `Generative.RecognitionalBinding.introduced_ground_can_replace`)
-   - *Master laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
+   - *Shared laws, by Lean dependency:* not measured: none of its declarations is in the spine run the measure reads.
 
 <a id="conditions--条件"></a>
 ## Conditions

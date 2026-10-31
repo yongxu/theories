@@ -11,9 +11,9 @@
 ## Laws
 
 1. A property at S + K that fails at S cannot be refuted to come about within the K steps; in such a flow, for every T and N, it cannot be refuted that from N on a formation gains support from a supported giver that itself gained support after T. (`Becoming.Flow.comes_within_not_not`, `Becoming.Flow.support_passes_on`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. The uniform form: with balance at the conditions the gainer requires, those giving to them supported, requirements not loosening and no support lasting K + 1 steps, a gain across the step from S + K is, up to double negation, given on a rising required condition by a supported formation taking part that gained support within the K steps before; under the World premises at every step. The law above follows from it. (`Becoming.Flow.gain_given_by_recent_gainer_at`, `Becoming.Flow.gain_given_by_recent_gainer`)
-   - *Master laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
 <a id="conditions--条件"></a>
 ## Conditions

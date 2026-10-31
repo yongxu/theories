@@ -11,29 +11,29 @@
 ## Laws
 
 1. A group's closure under a relation, the least region closed under it that holds every member, is the union of the members' closures, and one formation's closure where the group holds only it. A pool's coupling closure is this closure under being affected through what is coupled into; nothing beyond it exchanges with a condition coupled into a formation within it. (`Becoming.WithinClosureOf`, `Becoming.WithinClosureOf.of_member`, `Becoming.closedUnder_withinClosureOf`, `Becoming.withinClosureOf_iff`, `Becoming.withinClosureOf_single`, `Becoming.Flow.WithinPoolCoupling`, `Becoming.Flow.beyond_pool_coupling`)
-   - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 2. With the rest of the exchange fixed and balance on what the closure couples into, where every member of a part lies beyond a pool's coupling closure, each formation within it couples the levels with and without the part alike at every step, and every selection through the pooled coupling of any group within it selects them alike; Flow.unselected_beyond_coupling_all, the law of one formation's closure, is proved as the case of the pool of that formation. (`Becoming.Flow.uncoupled_beyond_pool`, `Becoming.Flow.unselected_beyond_pool`, `Becoming.Flow.unselected_beyond_coupling_all`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.unselected_beyond_pool` as following from a master law (by reaching the grammar).
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.unselected_beyond_pool` as following from a shared law (by reaching the grammar).
    - *Standing of `Becoming.Flow.unselected_beyond_pool`, by the rule:* balance in its statement (`Becoming.Flow.BalancesOn` in its statement).
 3. Some selection through a pool's pooled coupling holds at one history and fails at another exactly when the members do not all couple them alike; where a member couples them apart, its class is such a selection; where a list holds exactly the members and each member's coupling of the two is decided, a pool separates exactly what some member separates. (`Becoming.Web.pooledClass_selects`, `Becoming.Web.separates_all_iff`, `Becoming.Web.member_separates_all`, `Becoming.Web.separates_all_iff_member`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. A formation whose admission at a step differs between two histories separates them through every pool holding it, from that step on. (`Becoming.Web.admission_separates_all`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 5. The selections through a pool's pooled coupling are a member's exactly when whatever that member couples alike every member couples alike; where a member couples two histories alike and the members do not all, some pooled selection goes through no coupling of that member's. (`Becoming.Web.pooled_iff_member`, `Becoming.Web.pool_adds`)
-   - *Master laws, by Lean dependency:* no master law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. The gap for a pool's act: where the rest follows one law of exchange reading through coupling, in two balanced flows with the same formations present and a common start, and the part acts alike within each member's coupling closure drawn through both flows, each formation within the pool's closure couples the flows alike at every step, and every pooled selection of a group within the closure selects them alike. (`Becoming.Flow.ActsAlikeOnPoolCoupled`, `Becoming.Flow.ActsAlikeOnPoolCoupled.within`, `Becoming.Flow.act_alike_pool`, `Becoming.Flow.act_unselected_pool`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 7. Under the same conditions a consequence of the act is, at no step, a selection through the pooled coupling of a group within the closure; with both acts laws of what has stood, the two generated courses are selected alike. The part may be the pool itself, acting jointly. (`Becoming.Flow.consequence_unselected_pool`, `Becoming.act_courses_unselected_pool`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 8. Under the same conditions, a formation that couples the two flows apart up to a step lies beyond the pool's coupling closure. A formation whose admission the act changes at a step is one: its admission there is a selection through the pooled coupling of every group holding it, from that step on, and of no group within the closure at any step. (`Becoming.Flow.apart_beyond_pool`, `Becoming.Flow.act_selected_by_pool`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.act_selected_by_pool` as following from a master law (by reaching the grammar).
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.act_selected_by_pool` as following from a shared law (by reaching the grammar).
    - *Standing of `Becoming.Flow.act_selected_by_pool`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
 9. With a list holding exactly a pool's members and each member's coupling of the two flows decided, a pool separating them has a member that couples them apart, lying beyond the acting pool's coupling closure. (`Becoming.Flow.separating_member_beyond`)
-   - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+   - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 10. In Clearing the source and the dweller follow one law reading no level in both worlds, and the clearer's act differs only beyond its coupling closure. So the pool of the clearer and its source selects the two worlds alike at every step, the dweller lies beyond the clearer's closure, and every pool holding the dweller separates them by its admission at the third step, as no pool within it does. (`Becoming.Clearing.restLaw`, `Becoming.Clearing.restLaw_through`, `Becoming.Clearing.rest_follows`, `Becoming.Clearing.rest_follows_spared`, `Becoming.Clearing.start_alike`, `Becoming.Clearing.clearerSide_closed_either`, `Becoming.Clearing.acts_alike`, `Becoming.Clearing.source_within`, `Becoming.Clearing.pool_closes_gap`)
-    - *Master laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 11. The clearer's own part lies within its coupling closure, and the clearer couples the levels with and without it alike at every step, while every pool holding the dweller couples them apart through the dweller's admission at the third step: lying within a pool's closure does not make a difference separated. (`Becoming.Clearing.withheld_alike_for_clearer`, `Becoming.Clearing.within_closure_unseparated`)
-    - *Master laws, by Lean dependency:* closure; its declarations reach the grammar.
+    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
