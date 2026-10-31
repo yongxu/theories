@@ -30,9 +30,20 @@ index 4f9abfdfd..1fa530fb8 100644
        | ⟨u, v, cuv, p, .inl same, after⟩ =>
          exact ⟨u, v, cuv, p, .inr (Eq.subst (motive := fun w => «相续» R E _ w) same (.one c)), after⟩
 diff --git a/Becoming/PatternPassing.lean b/Becoming/PatternPassing.lean
-index a91e0ed61..4803f092c 100644
+index a91e0ed61..f11de29a7 100644
 --- a/Becoming/PatternPassing.lean
 +++ b/Becoming/PatternPassing.lean
+@@ -305,7 +305,7 @@ formation). Nothing else is supplied.
+   passing) and `Web.ByPassing.ends_within` (if passing stops, it ends within one span) are proved
+   from a relational law of the grammar, for every carrier and relation (`«两端分则中有标»`: a
+-  line whose ends a class tells apart, every step of which keeps the class or carries a mark, has
+-  a marked step on it), applied to the carrier class along the pattern's line, with activity alike
+-  along it (`«线内同类»`). `Web.ByPassing.begins_passed` is proved from `«生于细而续于粗则异»` (a
++  line whose ends a transitive relation `K` tells apart, every step of which keeps `K` or carries a
++  mark, has a marked step on it), applied to the carrier class along the pattern's line, with
++  activity alike along it (`«线内同类»`). `Web.ByPassing.begins_passed` is proved from `«生于细而续于粗则异»` (a
+   beginning under a finer class, continued under a coarser one, is an alteration). An occurrence
+   with no continuation under the pattern's class ends under the carrier class, by
 @@ -487,5 +487,5 @@ theorem ByPassing.passes_within (by_passing : V.ByPassing passes) {d T : Nat}
            | .inl same => .inl ⟨alike, same⟩
            | .inr given => .inr given

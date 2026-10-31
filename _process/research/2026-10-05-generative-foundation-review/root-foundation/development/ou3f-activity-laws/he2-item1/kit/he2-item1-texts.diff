@@ -1,0 +1,29 @@
+diff --git a/theories/becoming/chapters/01-ROOT.md b/theories/becoming/chapters/01-ROOT.md
+index 055522c4f..60e881397 100644
+--- a/theories/becoming/chapters/01-ROOT.md
++++ b/theories/becoming/chapters/01-ROOT.md
+@@ -80,5 +80,5 @@ An occurrence in a line either continues something or not, and is either continu
+ **Theorem** (root). *Coarsening.* What ends under a coarser class ends under the finer, and what abides under the finer abides under the coarser (`«亡于粗则亡于细»`, `«住于细则住于粗»`); what begins under the coarser begins under the finer (`«生于粗则生于细»`), and a beginning under the finer continued under the coarser is an alteration (`«生于细而续于粗则异»`). The converse fails (a witness): an occurrence can end under the finer class and not end under the coarser (`«亡于细者不必亡于粗»`). This is the shape of a fire passed on: the wood ends, the fire goes on.
+ 
+-**Theorem** (root). *A change between the ends has a place.* For a class `K`, where every step of continuation either keeps `K` or carries a mark `P`, a line whose ends `K` tells apart has a step carrying the mark, placed on the line between them (`«两端分则中有标»`); the proof uses only the transitivity of `K`.
++**Theorem** (root). *A change between the ends has a place.* For a relation `K` that composes (a class is one), where every step of continuation either keeps `K` or carries a mark `P`, a line whose ends `K` tells apart (`K` fails from its start to its end) has a step carrying the mark, placed on the line between them (`«两端分则中有标»`).
+ 
+ **Calibration** (root). That every occurrence, in every model, either begins or has a predecessor is exactly excluded middle (`«四相之定当且仅当排中»`): whether an occurrence has a predecessor under a class, and so begins, is decided only where going on is. The marks are not a partition even where this is decided: a flash begins and ends, and alteration relates two occurrences under two classes. On the steps, what holds and ceases at no later step holds on wherever each later step's position is decided (`persists_of_positions`).
+diff --git a/theories/becoming/review/LOGIC.md b/theories/becoming/review/LOGIC.md
+index b04506de4..14a144869 100644
+--- a/theories/becoming/review/LOGIC.md
++++ b/theories/becoming/review/LOGIC.md
+@@ -124,10 +124,10 @@ theorem «四相无自立» {R : «际» α} (irr : ∀ z, ¬ R z z) {x y z : α
+     «住» R «一» y ∧ «生» R «静» y ∧ «亡» R «静» y
+ 
+-theorem «两端分则中有标» {R E K P : «际» α} (hK : «类» K)
+-    (split : ∀ x y, «续» R E x y → K x y ∨ P x y) {x y : α} (line : «相续» R E x y) :
++theorem «两端分则中有标» {R E K P : «际» α} (split : ∀ x y, «续» R E x y → K x y ∨ P x y)
++    (trans : ∀ {a b c}, K a b → K b c → K a c) {x y : α} (line : «相续» R E x y) :
+     ¬ K x y → ∃ u v, «续» R E u v ∧ P u v ∧ (x = u ∨ «相续» R E x u) ∧ (v = y ∨ «相续» R E v y)
+ ```
+ 
+-File: `Becoming/Grammar.lean`. **Meaning.** Under a class, an occurrence begins where it has no predecessor under continuation, ends where it has no successor, and abides where it has both a predecessor and a successor. With `R` irreflexive, a middle occurrence abides under the full class and both begins and ends under identity. Ending under a coarser class implies ending under a finer one (`«亡于粗则亡于细»`); a beginning under a finer class continued under a coarser one is an alteration (`«生于细而续于粗则异»`); if every step either keeps `K` or carries `P`, a line whose ends `K` separates has a step carrying `P`. **Standing and use.** Root theorems ([01 §3](../chapters/01-ROOT.md#four-marks)). **Reading and class.** Not a corpus unit; the readings of the four marks (四相) are the Buddhist dossier's.
++File: `Becoming/Grammar.lean`. **Meaning.** Under a class, an occurrence begins where it has no predecessor under continuation, ends where it has no successor, and abides where it has both a predecessor and a successor. With `R` irreflexive, a middle occurrence abides under the full class and both begins and ends under identity. Ending under a coarser class implies ending under a finer one (`«亡于粗则亡于细»`); a beginning under a finer class continued under a coarser one is an alteration (`«生于细而续于粗则异»`); for a transitive relation `K` (a class is one), if every step either keeps `K` or carries `P`, a line whose ends `K` separates (`¬ K x y`) has a step carrying `P`. **Standing and use.** Root theorems ([01 §3](../chapters/01-ROOT.md#four-marks)). **Reading and class.** Not a corpus unit; the readings of the four marks (四相) are the Buddhist dossier's.
+ 
+ **Known weaknesses.**
