@@ -5,6 +5,6 @@
 
 **Its ethics** rests on [two premises](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), neither asserted: the continuation condition (for anything, its continuation has significance) fixes scope, whose losses count; C (widening what can form is better) alone gives order. It is stated as life's way: no verdict binding every possible mind is claimed, and the premises' warrant is open.
 
-**Where to start.** [The one page](../../theories/becoming/ONE-PAGE.md), {{time:theories/becoming/ONE-PAGE.md}}; [the overview](../../theories/becoming/THE-THEORY-OF-BECOMING.md), {{time:theories/becoming/THE-THEORY-OF-BECOMING.md}}; [the opening](#truth-exists) below, a conviction in the first person, {{time:opening}}, and [its notes](#notes), {{time:notes}}.
+**Where to start.** [The one page](../../theories/becoming/ONE-PAGE.md), {{time:theories/becoming/ONE-PAGE.md}}; [the overview](../../theories/becoming/THE-THEORY-OF-BECOMING.md), {{time:theories/becoming/THE-THEORY-OF-BECOMING.md}}; [the opening](../../README.md#truth-exists) below, a conviction in the first person, {{time:opening}}, and [its notes](../../README.md#notes), {{time:notes}}.
 
 **What is tested.** {{count:recorded-checked}} of [{{count:registered}} registered results](../../RESULTS.md) have a recorded Lean receipt, which shows that a proof follows from its premises, not that they hold. [The empirical theses](../../theories/becoming/chapters/08-METHOD.md#theses) face frozen tests: some passed, some failed. Every review so far is by AI.

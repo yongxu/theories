@@ -49,6 +49,9 @@ def adapt_links(body, original, destination):
         if parsed.scheme or target.startswith('/') or not parsed.path:
             return '<' + target + '>' if angle else target
         resolved = ((ROOT / original).parent / unquote(parsed.path)).resolve()
+        # A link into the page it is placed in (README's first screen to the opening below) stays on the page.
+        if resolved == (ROOT / destination).resolve() and parsed.fragment and not parsed.query:
+            return '#' + parsed.fragment
         relative = os.path.relpath(resolved, (ROOT / destination).parent)
         suffix = ('?' + parsed.query if parsed.query else '') + ('#' + parsed.fragment if parsed.fragment else '')
         return '<' + relative + suffix + '>' if angle or ' ' in relative else relative + suffix

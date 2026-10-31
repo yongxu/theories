@@ -93,7 +93,7 @@ Paragraph 9. Now "…and where the selection is optimized to the full, it draws 
 - Paragraph 8: "evil is a part that enlarges itself so" → "evil is a part's enlarging itself so". The reading is of an act, not of a kind of part. `[^good-evil]` already reads it so.
 - The key line: "*Each note says how far its sentence is proved: proved, proved under conditions, a reading, or a judgment.*" → "*…: proved, proved under conditions, a premise stated and not asserted, a thesis, a reading, a judgment, or open.*" The notes use all seven.
 - Paragraph 1: "Wherever becoming can be told in steps and counted amounts, …" → "Wherever becoming can be told in steps, …". Activity and dependence read no amount (`[^law]`), and paragraph 3 brings amounts in itself.
-- The dateline: "version 11, 22 October 2026 ([the choice](…2026-10-22-opening-v11.md))" → "version 12, 22 October 2026 ([the choice](…2026-10-22-aim-frontier-not-past-understanding.md))", or version 13 with this proposal's source if it is applied.
+- The dateline: "version 11, 22 October 2026 ([the choice](../../sources/15-codex-theory-conversations/2026-10-22-opening-v11.md))" → "version 12, 22 October 2026 ([the choice](../../sources/15-codex-theory-conversations/2026-10-22-aim-frontier-not-past-understanding.md))", or version 13 with this proposal's source if it is applied.
 
 ## On the AI side, alongside
 
