@@ -36,12 +36,24 @@ GrammarMap imports only `Becoming.Grammar`, and every module using the copies im
 
 GrammarMap's docstring at "Some branch and every branch" ends: "How they stand to the regions below (`«生成»`, `«守»`, `«退化»`) is not stated: `«全守»` allows a carrying renewal before its point, which `«守»` forbids."
 
-The leaves that import GrammarMap now state it, so the sentence becomes:
+Modules that import GrammarMap now state it for two of the three strong forms, so the sentence becomes:
 
-> How they stand to the regions below (`«生成»`, `«守»`, `«退化»`) is stated in leaves that import this module: strong generation gives generation (`«全生成则生成»`, `Becoming.KeepingWidening`), and strong keeping gives keeping from some point on (`«全守则后守»`, `Becoming.MapRegions`) but not strict keeping, since `«全守»` allows a carrying renewal before its point, which `«守»` forbids (`Map.Once.keeping`, `Map.Once.not_keeps`).
+> How `«全生成»` and `«全守»` stand to `«生成»` and `«守»` is stated in modules that import this one: strong generation gives generation (`«全生成则生成»`, `Becoming.KeepingWidening`), and strong keeping gives keeping from some point on (`«全守则后守»`, `Becoming.MapRegions`) but not strict keeping, since `«全守»` allows a carrying renewal before its point, which `«守»` forbids (`Map.Once.keeping`, `Map.Once.not_keeps`); how `«有终»` stands to `«退化»` is not stated.
 
-It is a docstring only, and changes no declaration.
+It is a docstring only, and changes no declaration. (Corrected after HE2's review, 31 October 2026: the first wording said "they", which takes in `«有终»`, whose relation to `«退化»` no theorem states, and called KeepingWidening a leaf, which it is not.)
+
+## 3. The catalogues
+
+The package's catalogues say where the reach laws are stated. The receipt pins `Becoming.lean` and `check_becoming.py`, so these edits go in before the landing run, in the same `--apply lean`; the SCOPE string changes no compiled step.
+- `Becoming.lean`, GrammarMap's bullet: "Along the successor (`Map.step`) a line reaches exactly the later numbers (`Map.step_reached_le`, `Map.step_reaches_of_le`), stated here below every module that reads such a line." **And a repair:** GW's landing inserted MapRegions' bullet inside GrammarMap's, after "ending on every", so GrammarMap's last line ("branch of renewing into (`«生生即延»`, `«息即尽»`). Imported by …") stood under MapRegions'. The script moves MapRegions' bullet, unchanged, to after GrammarMap's end.
+- `README.md` and `README.zh.md`, GrammarMap's row: "along the successor a line reaches exactly the later numbers" / "沿后继之线所及恰为其后之数", with the two names.
+- `check_becoming.py`, SCOPE's GrammarMap string: "along the successor a line reaches exactly the later numbers".
+
+## The review's other findings, taken
+
+- HeldPossible's docstring of `Steps.generation_iff_begins` cited `Steps.reached_of_buqiong`, which the proof no longer uses. It now cites `Map.step_reaches_of_le` and `Map.step_reached_le`, in the sentence that cited it.
+- The note above the moved laws names `Sampling`'s `arises_within` among their readers, after HE2's item 1.
 
 ## Composition with HE2's other items
 
-Every edit is found by name or text. None touches Grammar.lean (items 1 and 7), GrammarLaws' sites (items 2, 3, 4 and 6), Response or SelectionPool. GrammarMap is edited by no other item. Grammar.lean, which items 1 and 7 edit, lies below GrammarMap, so HE2's rebuild recompiles GrammarMap and everything above it anyway; item 5 adds no rebuild of its own.
+Every edit is found by name or text. None touches Grammar.lean (items 1 and 7), GrammarLaws' sites (items 2, 3, 4 and 6), Response or SelectionPool. GrammarMap is edited by no other item. The catalogue edits are found by text in GrammarMap's entries only, which no other item edits. Grammar.lean, which items 1 and 7 edit, lies below GrammarMap, so HE2's rebuild recompiles GrammarMap and everything above it anyway; item 5 adds no rebuild of its own.
