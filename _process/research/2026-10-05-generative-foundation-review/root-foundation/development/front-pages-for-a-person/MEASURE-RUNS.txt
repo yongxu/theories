@@ -21,3 +21,9 @@ Overview passes (English): 6,499 → 6,248 → 6,142 → 6,057 → 6,023 → 5,9
    172 words  10369 chars      5356 budget-words  41.2–53.6 min  THE-THEORY-OF-BECOMING.zh.md.staged
 
 Pass 2, overview (English): 5,983 → 6,158 (findings) → 6,043 → 5,986 → 5,980 words. One page: 1,098 → 1,159 (findings) → 1,116 → 1,103 → 1,095.
+
+## Drafts, pass 3 (OU's owner's wording of the de se clause, in both pages and editions; a stray full stop in overview §7)
+  1095 words      9 chars      1100 budget-words  8.5–11.0 min  ONE-PAGE.md.staged
+    49 words   1842 chars       970 budget-words  7.5–9.7 min  ONE-PAGE.zh.md.staged
+  5983 words     31 chars      5998 budget-words  46.1–60.0 min  THE-THEORY-OF-BECOMING.md.staged
+   172 words  10380 chars      5362 budget-words  41.2–53.6 min  THE-THEORY-OF-BECOMING.zh.md.staged

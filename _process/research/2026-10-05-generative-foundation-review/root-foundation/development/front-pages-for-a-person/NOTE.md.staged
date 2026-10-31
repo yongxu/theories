@@ -4,10 +4,10 @@ Drafts for OU's owner to land in their pass after U4's boundary record and §八
 
 | Draft | Replaces | Words | Characters | Budget-words | Minutes | Budget |
 |---|---|---|---|---|---|---|
-| [ONE-PAGE.md.staged](ONE-PAGE.md.staged) | `theories/becoming/ONE-PAGE.md` (2,154 words) | 1,095 | 6 | 1,098 | 8.4–11.0 | ten minutes, 1,100 |
-| [ONE-PAGE.zh.md.staged](ONE-PAGE.zh.md.staged) | `ONE-PAGE.zh.md` (3,579 characters) | 49 | 1,839 | 968 | 7.4–9.7 | 1,100 |
-| [THE-THEORY-OF-BECOMING.md.staged](THE-THEORY-OF-BECOMING.md.staged) | the overview (13,635 words) | 5,980 | 31 | 5,996 | 46.1–60.0 | an hour, 6,000 |
-| [THE-THEORY-OF-BECOMING.zh.md.staged](THE-THEORY-OF-BECOMING.zh.md.staged) | its Chinese edition (21,968 characters) | 172 | 10,369 | 5,356 | 41.2–53.6 | 6,000 |
+| [ONE-PAGE.md.staged](ONE-PAGE.md.staged) | `theories/becoming/ONE-PAGE.md` (2,154 words) | 1,095 | 9 | 1,100 | 8.5–11.0 | ten minutes, 1,100 |
+| [ONE-PAGE.zh.md.staged](ONE-PAGE.zh.md.staged) | `ONE-PAGE.zh.md` (3,579 characters) | 49 | 1,842 | 970 | 7.5–9.7 | 1,100 |
+| [THE-THEORY-OF-BECOMING.md.staged](THE-THEORY-OF-BECOMING.md.staged) | the overview (13,635 words) | 5,983 | 31 | 5,998 | 46.1–60.0 | an hour, 6,000 |
+| [THE-THEORY-OF-BECOMING.zh.md.staged](THE-THEORY-OF-BECOMING.zh.md.staged) | its Chinese edition (21,968 characters) | 172 | 10,380 | 5,362 | 41.2–53.6 | 6,000 |
 
 Measured with [measure.py](measure.py) (AJ4's counting, visible prose only); every pass is in [MEASURE-RUNS.txt](MEASURE-RUNS.txt). The independent read and how each finding was taken are in [READ.md.staged](READ.md.staged).
 
