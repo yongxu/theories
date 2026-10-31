@@ -48,7 +48,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Core: Becoming.Copying (becoming-checks/20261022T054058.112616Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: RecurrentAssembly by its folder's check (recurrent-assembly-verification/, Lean 4.29.1: 31 new theorems, 47 new audits, 373 in the import closure) and CopyingInstances by its instance checker (copying-instances-checks/20261020T161910.956874Z, Lean 4.29.1), at most propext, Quot.sound and Classical.choice, some none. Inference and biological correspondence are kept apart.
+Core: Becoming.Copying (becoming-checks/20261022T054058.112616Z), consolidated Lean 4.29.1 checker, empty axiom reports. Periphery: RecurrentAssembly by its folder's check (recurrent-assembly-verification/, Lean 4.29.1: 31 new theorems, 47 new audits, 373 in the import closure) and CopyingInstances by its instance checker (copying-instances-checks/20261031T131950.855717Z, Lean 4.29.1), at most propext, Quot.sound and Classical.choice, some none. Inference and biological correspondence are kept apart.
 
 Canonical source: [RecurrentAssembly.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/RecurrentAssembly.lean)
 
@@ -99,6 +99,7 @@ Structure consists of actual token transfers, formed edges, filtered old edges a
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261020T161910.956874Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261031T131950.855717Z/verification.json) | — |
 
 Aliases: `RecurrentAssembly.prepared_repeated_generation`, `Becoming.Copying.doubling_iff`, `Becoming.CopyingInstances.grow_iff`, `Becoming.CopyingInstances.rounds_mature_iff`, `Becoming.CopyingInstances.grow_strand_iff`, `Becoming.CopyingInstances.mature_strand_iff`
 

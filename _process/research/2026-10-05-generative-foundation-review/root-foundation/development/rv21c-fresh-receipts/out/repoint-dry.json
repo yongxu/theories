@@ -862,8 +862,8 @@
  "older:experiments/shared-renewal-capability/regulation/retention/formation/formal/verification.json": {
   "records": [],
   "logged": {
-   "date": "2026-10-31T13:45:21Z",
-   "base": "7396ceddb",
+   "date": "2026-10-31T13:57:53Z",
+   "base": "efd354e08",
    "reason": "RV21c: the older-layout receipt experiments/shared-renewal-capability/regulation/retention/formation/formal/verification.json renewed in place by its own checker on main (sha256 9f5f1469aa6ced6c1bdd249963f703cdadcff98cc6af2d61ac2717d1418d199c -> 20bc0692f37a36373711711ce193203da44dc64e70ba46fec50d18ad66211c6c, checked 2026-10-31T08:10:01.147187+00:00 -> 2026-10-31T13:43:45.919179+00:00); no record binds it; no statement changed",
    "records": [],
    "paths": [

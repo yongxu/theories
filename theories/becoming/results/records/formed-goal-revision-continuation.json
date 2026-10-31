@@ -119,8 +119,8 @@
     "no-definition-by-verdict"
   ],
   "validation_scope": {
-    "en": "Machine-checked in the periphery: MachineInstances with Lean 4.29.1 by its instance checker (machine-instances-checks/20261020T161859.257200Z), reporting at most propext, Classical.choice and Quot.sound for the cited declarations, propext alone for the comparison and completion laws; GoalFormationRevision with Lean 4.30.0-rc2, its import closure rebuilt on a pinned Mathlib cache (common-task-revision-verification.json), reporting propext for the cited declarations. Earlier claims and the composition stay distinct.",
-    "zh": "外围 MachineInstances 以 Lean 4.29.1 经检查器（machine-instances-checks/20261020T161859.257200Z），至多报 propext、Classical.choice、Quot.sound，比较与完成律仅 propext；GoalFormationRevision 以 Lean 4.30.0-rc2 在固定 Mathlib 上重建（common-task-revision-verification.json），报 propext。旧成果与组合分开。"
+    "en": "Machine-checked in the periphery: MachineInstances with Lean 4.29.1 by its instance checker (machine-instances-checks/20261031T131812.213702Z), reporting at most propext, Classical.choice and Quot.sound for the cited declarations, propext alone for the comparison and completion laws; GoalFormationRevision with Lean 4.30.0-rc2, its import closure rebuilt on a pinned Mathlib cache (common-task-revision-verification.json), reporting propext for the cited declarations. Earlier claims and the composition stay distinct.",
+    "zh": "外围 MachineInstances 以 Lean 4.29.1 经检查器（machine-instances-checks/20261031T131812.213702Z），至多报 propext、Classical.choice、Quot.sound，比较与完成律仅 propext；GoalFormationRevision 以 Lean 4.30.0-rc2 在固定 Mathlib 上重建（common-task-revision-verification.json），报 propext。旧成果与组合分开。"
   },
   "next_delta": {
     "en": "State when the revised goal keeps applying as the conditions change after reform, and form the two practices and their feedback law within the history instead of supplying them.",
@@ -221,6 +221,12 @@
       "role": "receipt",
       "sha256": "72cf0f96994a75c732cea93c92c4dbdf96cc4ba943d538de31ab2bcfd79cc9fb",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json",
+      "role": "receipt",
+      "sha256": "0385dec6dc81079251d0492e014c2f5b455319a2b85045df5ee8fe400be2f63b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -233,7 +239,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json",
       "sha256_pointer": "/source_sha256/MachineInstances",
       "success_pointer": "/status",
       "success_value": "passed"

@@ -78,6 +78,7 @@ The goal record's question whether every becoming can be represented with discre
 | receipt | [representation-verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/representation/representation-checks/20261031T134302.467521Z/verification.json) | — |
 
 Aliases: `what discrete steps and whole amounts represent`, `离散步与整数量表示什么`, `Becoming.Representation.held_polynomial_iff`, `Becoming.Representation.separated_exceeds`
 
