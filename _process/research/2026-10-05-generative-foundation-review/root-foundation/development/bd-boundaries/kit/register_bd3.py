@@ -33,9 +33,11 @@ REASONS = {
     'Becoming.Continuity.balancing_iff_notGoingOut': ('general-structure',
                                                       'relata listed without repetition and equality decided, transfers '
                                                       'balancing a step exist exactly where the total is conserved on '
-                                                      'every region not gone out of along that adjacency, for any '
-                                                      'levels; its case on webs goes through balancesOn_iff_conserved: '
-                                                      + GENERAL),
+                                                      'every region not gone out of along adjacency among the listed '
+                                                      'relata, for any levels and every Bool relation on any type; the '
+                                                      "base's case on webs, balancesOn_iff_notGoingOut, goes through "
+                                                      'balancesOn_iff_conserved, so nothing on the base uses this law '
+                                                      '(BD3)'),
     'Becoming.Continuity.closes_iff_notGoingOut': ('general-structure',
                                                    'a family the relation closes is exactly a region not gone out of '
                                                    'along that adjacency: ' + GENERAL),
