@@ -1,0 +1,54 @@
+## {N}. Not going out of a region, on the root (BD2)
+
+Board item BD2, the formal gap BD's reading of boundaries left ([note §6](development/bd-boundaries/NOTE.md#6-not-going-out-on-the-root-board-item-bd2)). The World's cut, a region no formed relation leaves, was defined apart from the grammar's closed region, and the reading's account of a line crossing a region rested on a hand argument. Both are now in the core: the grammar's not going out (`«不出»`), its laws against the closed region and on a line, the World's cut as its case by definition, and 04 §1's law of crossing read on 07 §4.1's boundaries. An independent AI reader reviewed the kit and re-checked it ([the review](development/bd-boundaries/REVIEW.md)).
+
+```text
+Result(s): not-going-out-of-a-region (new, home 01 §9.9); conveyance-crosses-the-boundary (a sixth law: the crossing
+       read on a self's boundaries along conveyance); what-a-line-holds-and-a-regularity-takes-in («所经必同» proved
+       from the step going out, its statement unchanged).
+Delta:
+  - Not going out (Becoming.GrammarCrossing): «不出» R P, no member of P bearing R to something outside P. A closed
+    region is not gone out of, an occurrence's closure among them («闭则不出», «所闭不出», the closure law's «所闭之界»
+    by definition); not going out is exactly the closedness of what is not outside, with no decision
+    («不出当且仅当不外者闭»); where whatever is not outside lies inside, it is being closed («不外者内则不出当且仅当闭»).
+  - The calibration: that every region nothing goes out of is closed, for every carrier in the lowest universe,
+    relation and region, is exactly excluded middle («不出皆闭当且仅当排中»; witness on Bool).
+  - Going out and coming in: nothing comes in along R (not going out along «逆» R) exactly where nothing goes out of
+    what lies outside, with no decision («逆之不出当且仅当外者不出»); along a symmetric relation the two coincide
+    («对称则不出当且仅当逆不出»); a closed region come into along a relation that is not («闭而有入»).
+  - On a line: a line under any class from inside to outside means the region is gone out of, with no decision
+    («内至外之线则出»); where each step keeps to the region or goes out of it, the line has a step going out, placed
+    on it: the mark law with keeping to the region, transitive and not symmetric, as what the ends fail
+    («内至外之线有出步»), every step of one kind or the other where membership is decided («定则内至外之线有出步»).
+  - The World (Becoming.ConveyanceBoundaries): Flow.Cut is «不出» at a valuation's relation (cut_iff_notGoingOut,
+    Iff.rfl); a closed region is a cut, a cut with settled membership closed (cut_of_closedUnder,
+    closedUnder_of_cut). Under region_not_a_cut's premises a continuing family's region is no boundary of any
+    event's self along conveyance, and not every member's event has its closure along conveyance within the family
+    (region_no_boundary, closures_not_within_region); the clearing's resource region likewise, along conveyance
+    and along living on (Clearing.resource_no_boundary).
+  - GrammarPath: «所经必同» from «定则内至外之线有出步» and «线内同类», its direct induction gone (rule 9).
+Supplied premises / correspondence: none beyond each theorem's own hypotheses (settled or decided membership, the
+       split of steps, symmetry, and region_not_a_cut's balance, dissipation, no repetition, decided equality,
+       enclosure and recurring taking). Modelling choices: Prop-valued regions; lines as finite chains of
+       continuation under a class.
+Evidence: core receipt `{RECEIPT}`; Becoming.GrammarCrossing (GRAMMARCROSSING), a core module importing only
+       Becoming.GrammarLaws, imported by Becoming.GrammarPath (GRAMMARPATH) and Becoming.ConveyanceBoundaries
+       (CONVEYANCEBOUNDARIES), which imports Becoming.Boundaries; every axiom report empty.
+Standing: near-definitional on the grammar; the calibration is the familiar gap between a set with no leaving edge and
+       a closed set, constructively the closedness of the double negation. Read [AI reading]: a boundary drawn
+       where membership is undecided leaves open where what a member bears the relation to lies, and a membrane is
+       a place of crossing both ways along a symmetric relation such as conveyance.
+Boundary:
+  - A graded boundary (nested regions along one relation and the order of a line's steps out of them); which
+    relation a self's boundary is drawn along (07 §4.2); a World formation as the inside of a blanketed law.
+  - «所闭之界» keeps its own proof in GrammarLaws, which cannot import the new module.
+Output → input: 01 §9.9 (the theorem paragraph before BD's reading, the reading citing it); 04 §1 (the crossing on a
+       self's boundaries); 07 (the line record's home sentence); the glossary's boundary row; regions.json; the root
+       module's bullets, the checker's core list and scope, both package READMEs (and the Chinese Boundaries row and
+       the checker's Boundaries scope brought to the continuation condition); the board's BD2 row.
+```
+
+**Self-review.**
+1. `GrammarCrossing` imports only `GrammarLaws`, so `GrammarPath` can import it; what imports `GrammarPath` (`GrammarCases`) only rebuilds. `ConveyanceBoundaries` is a leaf; no definition of an earlier module changes, so `Standpoints` and `Boundaries` do not rebuild.
+2. The laws use no classical principle: decisions enter only as hypotheses («不外者内则不出当且仅当闭», «定则内至外之线有出步», closedUnder_of_cut), and the calibration states exactly what the missing one is.
+3. Not done: the items in Boundary.
