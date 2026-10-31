@@ -138,6 +138,7 @@ import Becoming.EdgeClosure
 import Becoming.SeedReach
 import Becoming.ScopedReach
 import Becoming.Boundaries
+import Becoming.ConveyanceBoundaries
 import Becoming.Weightings
 import Becoming.Relevance
 import Becoming.Testing
@@ -358,6 +359,7 @@ import Becoming.GrammarRegularity
 import Becoming.ProcessRepresentation
 import Becoming.GrammarScope
 import Becoming.GrammarCases
+import Becoming.GrammarCrossing
 import Becoming.GrammarPath
 import Becoming.SignificanceStatements
 
@@ -2734,6 +2736,18 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   N_std. Sub-true along affecting, the presupposition compares every part within the reach
   closure as the continuation condition does, with no invariance. Covering, sub-truth and invariance are
   hypotheses. The readings are the AI's, adopted on Ren's delegation of 15 October 2026.
+* `Becoming.ConveyanceBoundaries` (L2): the World's cut on the root, and 04 §1's law of crossing on
+  07 §4.1's boundaries (board item BD2). `Flow.Cut` is the grammar's `«不出»` at a valuation's
+  relation, by definition (`Flow.cut_iff_notGoingOut`), so a region closed under the relation is a
+  cut and a cut is closed where membership is stable (`Flow.cut_of_closedUnder`,
+  `Flow.closedUnder_of_cut`); conveyance's relation is symmetric, so along it nothing goes out of a
+  region exactly where nothing comes in (`Flow.conveyance_symm`, `Flow.cut_iff_notComingIn`). Under
+  the premises of `Flow.region_not_a_cut` a continuing family's
+  region is no boundary of any event's self along conveyance (`Flow.region_no_boundary`), and not
+  every member's event has its closure along conveyance within the family
+  (`Flow.closures_not_within_region`); in the clearing the resource's region is no boundary along
+  conveyance nor along living on (`Clearing.resource_no_boundary`). A leaf, the World's case of the
+  crossing laws; the cut keeps its definition in `Becoming.Standpoints`.
 * `Becoming.Weightings` (L2): what every standpoint's weighting ranks, and what the step across
   standpoints reaches. Over a finite listing, one course widens another exactly when every weighting
   positive on every item ranks it higher; a mixed comparison is decided both ways by positive
@@ -4266,10 +4280,26 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   with the condition (`ThirdThing`, `ThirdAffects`, `ThirdFed`, board item GS5). A belief whose rate of spread
   grows with its number, the rate read in its
   regularity (`Belief`).
+* `Becoming.GrammarCrossing` (L1): not going out of a region (`«不出»`), for every carrier, relation
+  and region (board item BD2). A closed region is not gone out of (`«闭则不出»`), an occurrence's closure
+  among them (`«所闭不出»`, the closure law `«所闭之界»` read through `«不出»`); not going out of a
+  region is exactly the closedness of what is not outside it, with no decision
+  (`«不出当且仅当不外者闭»`); the two coincide where membership is stable (`«不外者内则不出当且仅当闭»`),
+  and that they coincide for every relation and region is exactly excluded middle, a lemma of that
+  law (`«不出皆闭当且仅当排中»`). Nothing comes into a region along a relation exactly where nothing
+  goes out of what lies outside it (`«逆之不出当且仅当外者不出»`); along a symmetric relation nothing
+  goes out exactly where nothing comes in (`«对称则不出当且仅当逆不出»`), and some relation that is not
+  symmetric has a closed region come into (`«闭而有入之例»`). A line under any class from a member to
+  something outside means the region is not one nothing goes out of (`«内至外之线则非不出»`); where
+  every step keeps to the region or goes from a member to something outside, the line has a step going
+  out, placed on the line: `«两端分则中有标»` with keeping to the region as what the ends fail
+  (`«内至外之线有出步»`), every step being of one kind or the other where membership is decided
+  (`«定则内至外之线有出步»`). `«所经必同»` (`Becoming.GrammarPath`) is proved from the last.
 * `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
   (board item PF), for every carrier, relation and class. Where a region is left under a class only
   into a set, a line under the class from inside to outside holds a member of that set alike to its
-  start (`«所经必同»`, `«所经不同则不及»`). Under a constant class, everything downstream of anything
+  start (`«所经必同»`, proved from a step going out of the region, `Becoming.GrammarCrossing`;
+  `«所经不同则不及»`). Under a constant class, everything downstream of anything
   alike to a member whose effects the class holds (`«所缘同于»`) is alike to it and on a line under the
   class (`«常闭则后皆续»`), and, given constancy, holding the effects is equivalent to that
   (`«常类之闭当且仅当后皆同类»`); the same holds up to the net's end (`«至终有常»`,

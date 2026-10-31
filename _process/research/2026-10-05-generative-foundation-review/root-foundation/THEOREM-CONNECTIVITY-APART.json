@@ -4367,11 +4367,6 @@
    "category": "support",
    "reason": "mixed over a listing is the grammar's «杂» of the coreflexive relations admitted, both ways: the representation of order over a listing (OU3b)"
   },
-  "Becoming.closedUnder_iff_closed": {
-   "module": "Becoming.Frame",
-   "category": "support",
-   "reason": "Frame's closed region is the grammar's «闭», by definition (Iff.rfl): the representation of closure, documenting it (OU3b)"
-  },
   "Becoming.split_at_head": {
    "module": "Becoming.Recurrence",
    "category": "support",
@@ -6436,6 +6431,36 @@
    "module": "Becoming.BlanketWeights",
    "category": "general-structure",
    "reason": "BlanketWeights.restrict_independent_case: a law of any natural weights of internal, blanket and external states, or of any rates on the internal moves (the blanket at a steady state); the base supplies no reading of the three parts or of a chain yet (UE26)"
+  },
+  "Becoming.Flow.closedUnder_of_cut": {
+   "module": "Becoming.ConveyanceBoundaries",
+   "category": "general-structure",
+   "reason": "a cut of any valuation is closed under its relation where membership is stable, the World's case of «不外者内则不出当且仅当闭»; nothing on the base uses it yet (BD2)"
+  },
+  "Becoming.«不出皆闭当且仅当排中»": {
+   "module": "Becoming.GrammarCrossing",
+   "category": "calibration",
+   "reason": "the exact logical principle a stated law of the grammar needs (excluded middle): that every region nothing goes out of is closed, membership being any proposition; a lemma of the item that needs it, «不外者内则不出当且仅当闭» (BD2)"
+  },
+  "Becoming.«内至外之线则非不出»": {
+   "module": "Becoming.GrammarCrossing",
+   "category": "general-structure",
+   "reason": "a region a line leaves is not one nothing goes out of, with no decision: a law of every relation and region on any carrier; the base states its cut as «不出» (Flow.cut_iff_notGoingOut), and nothing on it uses this law yet (BD2)"
+  },
+  "Becoming.«所闭不出»": {
+   "module": "Becoming.GrammarCrossing",
+   "category": "general-structure",
+   "reason": "an occurrence's closure is not gone out of, the closure law «所闭之界» read through «不出» and proved as it: a law of every relation and region on any carrier; the base states its cut as «不出» (Flow.cut_iff_notGoingOut), and nothing on it uses this law yet (BD2)"
+  },
+  "Becoming.«逆之不出当且仅当外者不出»": {
+   "module": "Becoming.GrammarCrossing",
+   "category": "general-structure",
+   "reason": "nothing comes into a region exactly where nothing goes out of what lies outside it: a law of every relation and region on any carrier; the base states its cut as «不出» (Flow.cut_iff_notGoingOut), and nothing on it uses this law yet (BD2)"
+  },
+  "Becoming.«闭而有入之例»": {
+   "module": "Becoming.GrammarCrossing",
+   "category": "model-witness",
+   "reason": "a closed region come into along a relation that is not symmetric, on two occurrences: a witness of Becoming.GrammarCrossing (BD2)"
   }
  },
  "instances": {

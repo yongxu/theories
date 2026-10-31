@@ -1336,6 +1336,11 @@
    "base": "general",
    "note": "Reordering normal forms"
   },
+  "not-going-out-of-a-region": {
+   "region": "root",
+   "base": "grammar",
+   "note": "GrammarCrossing: 不出 = closedness of what is not outside; LEM lemma; going out and coming in; the step out on a line"
+  },
   "observation-is-a-route": {
    "region": "knowing",
    "base": "old-base",
@@ -2813,6 +2818,11 @@
    "base": "old-base",
    "note": "FL2 balance along relation iff conservation on closed families"
   },
+  "Becoming.ConveyanceBoundaries": {
+   "region": "life",
+   "base": "old-base",
+   "note": "Cut = 不出; a continuing family's region no boundary along conveyance (BD2)"
+  },
   "Becoming.CopyCourses": {
    "region": "life",
    "base": "frame",
@@ -3127,6 +3137,11 @@
    "region": "classical",
    "base": "grammar",
    "note": "文 in grammar of continuation (WL3)"
+  },
+  "Becoming.GrammarCrossing": {
+   "region": "root",
+   "base": "grammar",
+   "note": "not going out of a region (不出), coming in, the step out on a line (BD2)"
   },
   "Becoming.GrammarLaws": {
    "region": "root",

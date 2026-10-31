@@ -71,6 +71,7 @@ Read with a class drawn by what a member intends, the agential self of the path:
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T160649.851818Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T133815.484194Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json) | — |
 
 Aliases: `What leaves a class follows its line`, `出类者随其线`, `Becoming.«出类随线»`, `Becoming.«出类随行»`
 

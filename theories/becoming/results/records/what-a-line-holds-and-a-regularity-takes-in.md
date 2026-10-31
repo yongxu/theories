@@ -61,6 +61,7 @@ A witness or law on whether a class holding a member's intended effects, and not
 ### Dependencies
 
 - **formal-reuse**: [continuation-relative-to-a-class](continuation-relative-to-a-class.md). «续», «相续», «及», «类», «有常», «有常之逐点», «亡», «线内同类», «一»; «所及» from the map.
+- **formal-reuse**: [not-going-out-of-a-region](not-going-out-of-a-region.md). «所经必同» is proved from «定则内至外之线有出步»: a step going out of the region, given by it, lands in the set.
 - related, not a proved adapter: [reach-through-a-shared-condition](reach-through-a-shared-condition.md). Its affecting_member_outside and fed_outside are proved from law 1 (GS6).
 - related, not a proved adapter: [the-class-of-being-joined](the-class-of-being-joined.md). ThirdFed there is a one-step instance of constancy; the second law adds what holding a member's effects carries on.
 - related, not a proved adapter: [reach-past-ones-own-end](reach-past-ones-own-end.md). A line past a member's end; here the class that carries it, in a finite net too.
@@ -82,6 +83,7 @@ A witness or law on whether a class holding a member's intended effects, and not
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T160649.851818Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T133815.484194Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json) | — |
 
 Aliases: `What a line must hold, and what a regularity takes in`, `线所必含，与理之所纳`, `Becoming.«常闭则后皆续»`, `Becoming.«所经必同»`, `Becoming.«至终有常»`
 
@@ -93,7 +95,8 @@ Aliases: `What a line must hold, and what a regularity takes in`, `线所必含�
 - 26 October 2026, board item DF1b (study section 422): Law 1 is not called the first law, the spine's name for Flow.Gainless (English only; the Chinese has 首律).
 - 30 October 2026: the fourth law scoped to these laws, as OC5's review found; content unchanged.
 - 31 October 2026, board item HE2, items 6 and 7 (study section 474): wording only in title (zh): 理 written for a regularity, there a constant class, becomes 规律, as the package README's cell now writes; the old title stays among the aliases; no statement's content changes.
+- 31 October 2026, board item BD2: «所经必同»'s direct proof by induction on the line replaced by a derivation from a step going out of a region on a line («定则内至外之线有出步», Becoming.GrammarCrossing), that step's end being the member of the set; the dependency added. No statement, premise, law or declaration changed.
 
 </details>
 
-Documentary review UTC: `2026-10-31T05:47:56+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-31T12:15:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
