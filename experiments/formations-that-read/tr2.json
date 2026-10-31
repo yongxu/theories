@@ -34,9 +34,11 @@
    "coverage by enumeration, content only, S3": 1,
    "partial coupling at share 1 is the shared seed's power": 9,
    "partial coupling at share 0 is independent draws' power": 9,
+   "the worst coupling's power is the least over the couplings": 32,
+   "the worst coupling's power is at most independent draws'": 32,
    "pipeline recovers the expected pattern in at least 95% of worlds": 9
   },
-  "checks run": 448453
+  "checks run": 448517
  },
  "enumeration": {
   "n1 V1": {
@@ -180,12 +182,25 @@
     ]
    }
   },
-  "Stage B's 600 pairs and the worst case (independent draws) at 0.05/4": {
+  "Stage B's 600 pairs: independent draws and the worst coupling, at 0.05/4": {
    "14% against 1% (the order of 'almost never')": {
     "power at 600 pairs, independent draws, two-sided 0.05": 1.0,
     "power at 600 pairs, shared seed (monotone coupling), two-sided 0.05": 1.0,
+    "power at 600 pairs, worst coupling, two-sided 0.05": 1.0,
+    "discordance per pair, independent draws and worst coupling": [
+     0.1472,
+     0.15
+    ],
     "pairs for power 0.9, independent draws, two-sided 0.05/4": 200,
-    "power at 600, 1200, 1600 pairs, independent draws, two-sided 0.05/4": [
+    "pairs for power 0.9, worst coupling, two-sided 0.05/4": 200,
+    "power at 600, 1200, 1600, 3200 pairs, independent draws, two-sided 0.05/4": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "power at 600, 1200, 1600, 3200 pairs, worst coupling, two-sided 0.05/4": [
+     1.0,
      1.0,
      1.0,
      1.0
@@ -194,35 +209,74 @@
    "5 points at a 10% base": {
     "power at 600 pairs, independent draws, two-sided 0.05": 0.7194,
     "power at 600 pairs, shared seed (monotone coupling), two-sided 0.05": 1.0,
+    "power at 600 pairs, worst coupling, two-sided 0.05": 0.6627,
+    "discordance per pair, independent draws and worst coupling": [
+     0.22,
+     0.25
+    ],
     "pairs for power 0.9, independent draws, two-sided 0.05/4": 1600,
-    "power at 600, 1200, 1600 pairs, independent draws, two-sided 0.05/4": [
+    "pairs for power 0.9, worst coupling, two-sided 0.05/4": 1600,
+    "power at 600, 1200, 1600, 3200 pairs, independent draws, two-sided 0.05/4": [
      0.5146,
      0.8771,
-     0.9593
+     0.9593,
+     0.9998
+    ],
+    "power at 600, 1200, 1600, 3200 pairs, worst coupling, two-sided 0.05/4": [
+     0.453,
+     0.8231,
+     0.9296,
+     0.9992
     ]
    },
    "2 points at a 10% base": {
     "power at 600 pairs, independent draws, two-sided 0.05": 0.1725,
     "power at 600 pairs, shared seed (monotone coupling), two-sided 0.05": 0.9805,
+    "power at 600 pairs, worst coupling, two-sided 0.05": 0.1593,
+    "discordance per pair, independent draws and worst coupling": [
+     0.196,
+     0.22
+    ],
     "pairs for power 0.9, independent draws, two-sided 0.05/4": 9600,
-    "power at 600, 1200, 1600 pairs, independent draws, two-sided 0.05/4": [
+    "pairs for power 0.9, worst coupling, two-sided 0.05/4": 9600,
+    "power at 600, 1200, 1600, 3200 pairs, independent draws, two-sided 0.05/4": [
      0.0687,
      0.1595,
-     0.228
+     0.228,
+     0.5085
+    ],
+    "power at 600, 1200, 1600, 3200 pairs, worst coupling, two-sided 0.05/4": [
+     0.0614,
+     0.1402,
+     0.1991,
+     0.4522
     ]
    },
    "5 points at a 30% base": {
     "power at 600 pairs, independent draws, two-sided 0.05": 0.4323,
     "power at 600 pairs, shared seed (monotone coupling), two-sided 0.05": 1.0,
+    "power at 600 pairs, worst coupling, two-sided 0.05": 0.3122,
+    "discordance per pair, independent draws and worst coupling": [
+     0.44,
+     0.65
+    ],
     "pairs for power 0.9, independent draws, two-sided 0.05/4": 3200,
-    "power at 600, 1200, 1600 pairs, independent draws, two-sided 0.05/4": [
+    "pairs for power 0.9, worst coupling, two-sided 0.05/4": 4800,
+    "power at 600, 1200, 1600, 3200 pairs, independent draws, two-sided 0.05/4": [
      0.2392,
      0.5291,
-     0.6865
+     0.6865,
+     0.9598
+    ],
+    "power at 600, 1200, 1600, 3200 pairs, worst coupling, two-sided 0.05/4": [
+     0.1515,
+     0.3506,
+     0.4814,
+     0.8393
     ]
    }
   },
-  "partial coupling under a shared seed (a share of pairs coupled monotonically, the rest independent)": {
+  "partial coupling under a shared seed (a share of pairs coupled monotonically, or at a negative share antitonically, the rest independent)": {
    "5 points at a 10% base": {
     "coupled share 1.0": {
      "discordance per pair, majority way and minority way": [
@@ -262,7 +316,7 @@
     },
     "coupled share 0.25": {
      "discordance per pair, majority way and minority way": [
-      0.1137,
+      0.1138,
       0.0638
      ],
      "minority share of discordant pairs": 0.3592,
@@ -275,6 +329,24 @@
       0.085
      ],
      "minority share of discordant pairs": 0.3864,
+     "pairs for power 0.9, two-sided 0.05": 1200,
+     "pairs for power 0.9, two-sided 0.05/4": 1600
+    },
+    "coupled share -0.5": {
+     "discordance per pair, majority way and minority way": [
+      0.1425,
+      0.0925
+     ],
+     "minority share of discordant pairs": 0.3936,
+     "pairs for power 0.9, two-sided 0.05": 1200,
+     "pairs for power 0.9, two-sided 0.05/4": 1600
+    },
+    "coupled share -1.0": {
+     "discordance per pair, majority way and minority way": [
+      0.15,
+      0.1
+     ],
+     "minority share of discordant pairs": 0.4,
      "pairs for power 0.9, two-sided 0.05": 1200,
      "pairs for power 0.9, two-sided 0.05/4": 1600
     }
@@ -331,6 +403,24 @@
       0.088
      ],
      "minority share of discordant pairs": 0.449,
+     "pairs for power 0.9, two-sided 0.05": 6400,
+     "pairs for power 0.9, two-sided 0.05/4": 9600
+    },
+    "coupled share -0.5": {
+     "discordance per pair, majority way and minority way": [
+      0.114,
+      0.094
+     ],
+     "minority share of discordant pairs": 0.4519,
+     "pairs for power 0.9, two-sided 0.05": 6400,
+     "pairs for power 0.9, two-sided 0.05/4": 9600
+    },
+    "coupled share -1.0": {
+     "discordance per pair, majority way and minority way": [
+      0.12,
+      0.1
+     ],
+     "minority share of discordant pairs": 0.4545,
      "pairs for power 0.9, two-sided 0.05": 6400,
      "pairs for power 0.9, two-sided 0.05/4": 9600
     }

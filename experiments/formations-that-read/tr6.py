@@ -268,8 +268,9 @@ def part_b():
     out["B3_without_within"] = {"values": "0..n+2", "by_n": b3,
                                 "note": ("the counts depend on r off the chain, which a table over 0..n "
                                          "does not fix; some extension (v + 1, n or 0) breaks bottom_rests "
-                                         "in most such tables, and even r fixing every value off the "
-                                         "chain breaks it in 2")}
+                                         "in every table whose orbit leaves the chain (5 of 7, 14 of 25, "
+                                         "42 of 91, 132 of 336 for n = 1 to 4), and r fixing every value "
+                                         "off the chain breaks it in 2")}
     # B4: maps with no right value: every self-map of 0..n, n <= 6 (counted by enumeration to 5,
     # by the formula n^(n+1) at 6, checked against enumeration below 6)
     b4 = {}

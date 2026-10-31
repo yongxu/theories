@@ -16,10 +16,14 @@ Parts
   B  The mirror checked by exhaustive enumeration against every identity and criterion the design
      uses (3 candidates, weights 0-2, gains and losses 0-2, every rule, amounts 0-5, every cell map;
      listings with repetition sampled; three acts for Good's part), with mutation checks showing
-     the checks can fail. ListingValuation.forgone_lt_iff and const_worth, which TR8's verdict rule
-     uses for menus with more than one reader, are checked here too. The general forms the design
-     uses that the Lean does not state are checked as inferences and listed as candidate core
-     lemmas.
+     the checks can fail. The order of plans (Becoming.RevisionPlans: gainOf, excess, balance,
+     above_iff, not_above_iff, with HeldForReading's gainOf_*, excess_*, held_above_moves_iff and
+     held_above_held_iff), on which every option of a menu is a plan and which ranks any two by
+     amount + shortfall, is mirrored and checked on every table, as are
+     ListingValuation.forgone_lt_iff and const_worth. Compositions of the stated theorems (the
+     three-way form) are checked and named; the one general form the Lean does not state (a reader
+     whose errors are chances, told as situation-and-draw pairs) is checked as an inference and
+     listed as a candidate core lemma.
   C  The design's conditions: exact worths, counts (shortfall + amount), the option the counts rank
      first, gaps in total units and per decision, and the design rules every verdict condition
      meets (no tie, no situation with U = 0, gap >= 6 total units and >= 0.10 of the scale).
@@ -322,9 +326,10 @@ def check_table(m, gain, loss, fails, counter, mut):
     # shortfall_byReading
     if shortfall(m, gain, loss, lambda c: gain[c] < loss[c]) != 0:
         fails.append(("shortfall_byReading",))
-    # inference: committed go - committed off = goExcess - offExcess, as integers
+    # RevisionPlans.balance at going on and switching off (after_byReading's two equalities):
+    # committed go - committed off = goExcess - offExcess, as integers
     if cgo - coff != gE - oE:
-        fails.append(("inference_committed_difference",))
+        fails.append(("balance_goOn_off",))
     counter["tables"] += 1
     sfs = {}
     for rt in RULES3:
@@ -348,13 +353,14 @@ def check_table(m, gain, loss, fails, counter, mut):
                 fails.append(("threshold_go_iff", rt, k))
             if (coff + k <= aft) != (sf + k <= gE) or (coff + k < aft) != (sf + k < gE):
                 fails.append(("threshold_off_iff", rt, k))
-            # inference (three-way): waiting strictly best iff sf + k < min; strictly below the
-            # better committed move iff sf + k > min; tie iff equal.
+            # the three-way form, a composition of the two thresholds: waiting strictly best iff
+            # sf + k < min (both strict parts); strictly below the better committed move iff
+            # sf + k > min (either non-strict part failing); tie iff equal.
             best = (cgo + k < aft) and (coff + k < aft)
             below = aft < max(cgo, coff) + k
             mn = min(gE, oE)
             if best != (sf + k < mn) or below != (sf + k > mn):
-                fails.append(("inference_three_way", rt, k))
+                fails.append(("three_way_composition", rt, k))
             # mutation: a threshold read with <= in place of < (a tie counted as a strict gain)
             if mut is not None and ((cgo + k < aft) != (sf + k <= oE)):
                 mut["threshold_le_for_lt"] += 1
@@ -385,9 +391,11 @@ def check_table(m, gain, loss, fails, counter, mut):
     # const_worth: a constant rule is worth the committed move it gives (ListingValuation)
     if sfs[(False,) * 3][0] != cgo or sfs[(True,) * 3][0] != coff:
         fails.append(("const_worth",))
-    # inference: the constant rules' shortfalls are the excesses
+    # the constant rules' shortfalls are the excesses: excess_held at a constant rule, which is the
+    # plan goOn or off (excess_goOn, excess_off)
     if sfs[(False,) * 3][1] != oE or sfs[(True,) * 3][1] != gE:
-        fails.append(("inference_constant_shortfalls",))
+        fails.append(("excess_goOn_off_at_constant_rules",))
+    check_plans(m, gain, loss, cgo, coff, gE, oE, sfs, fails, counter)
     # cells: shortfall_through, least_through, least_zero_iff, finer_least_le, through_threshold_iff
     for pt in PARTS3:
         pi = (lambda pt: (lambda c: pt[c]))(pt)
@@ -424,6 +432,77 @@ def check_table(m, gain, loss, fails, counter, mut):
             if exists != (least + k <= oE and least + k <= gE):
                 fails.append(("through_threshold_iff", pt, k))
         counter["cell_maps"] += 1
+
+
+# The order of plans (Becoming.RevisionPlans, which HeldForReading imports): a plan keeps the law at
+# some weight and switches it off at some weight at each candidate, with a loss of its own.
+PLAN_AMOUNTS = (0, 1, 4)
+
+
+def plan_goOn(m, a):
+    return (m.weight, lambda c: 0, a)
+
+
+def plan_off(m, a):
+    return (lambda c: 0, m.weight, a)
+
+
+def plan_held(m, r, a):
+    return (lambda c: 0 if r(c) else m.weight(c), lambda c: m.weight(c) if r(c) else 0, a)
+
+
+def plan_gainOf(m, gain, loss, p):
+    kept, stopped, _ = p
+    return total(m.listed, lambda c: kept(c) * gain[c] + stopped(c) * loss[c])
+
+
+def plan_excess(m, gain, loss, p):
+    kept, stopped, _ = p
+    return total(m.listed, lambda c: kept(c) * pos(loss[c] - gain[c]) + stopped(c) * pos(gain[c] - loss[c]))
+
+
+def check_plans(m, gain, loss, cgo, coff, gE, oE, sfs, fails, counter):
+    """RevisionPlans on one table: going on, switching off and holding for every rule are plans
+    (gainOf_goOn, gainOf_off, gainOf_held; excess_goOn, excess_off, excess_held), every two of them
+    balance (balance), and the order of plans (RevisionRoutes.GainLoss.Above: p above q where
+    gain q + loss p < gain p + loss q) ranks any two by loss + excess (above_iff, not_above_iff),
+    as their worths with the amounts do (held_above_moves_iff, held_above_held_iff)."""
+    plans = []
+    for a in (0, 2):
+        plans.append(("go", None, a, plan_goOn(m, a), cgo, oE))
+        plans.append(("off", None, a, plan_off(m, a), coff, gE))
+    for rt in RULES3:
+        r = (lambda rt: (lambda c: rt[c]))(rt)
+        aft, sf = sfs[rt]
+        for k in PLAN_AMOUNTS:
+            plans.append(("held", rt, k, plan_held(m, r, k), aft, sf))
+    rows = []
+    for kind, rt, a, p, worth, ex in plans:
+        g, e = plan_gainOf(m, gain, loss, p), plan_excess(m, gain, loss, p)
+        if g != worth:
+            fails.append(("gainOf_" + kind, rt, a))
+        if e != ex:
+            fails.append(("excess_" + kind, rt, a))
+        rows.append((kind, rt, a, g, e))
+    bal = rows[0][3] + rows[0][4]
+    for kind, rt, a, g, e in rows:
+        if g + e != bal:
+            fails.append(("balance", kind, rt, a))
+    for (kp, rp, ap, gp, ep), (kq, rq, aq, gq, eq) in itertools.product(rows, repeat=2):
+        above_qp = gp + aq < gq + ap            # Above q p
+        if above_qp != (aq + eq < ap + ep):
+            fails.append(("above_iff", kq, rq, aq, kp, rp, ap))
+        if (not above_qp) != (ap + ep <= aq + eq):
+            fails.append(("not_above_iff", kq, rq, aq, kp, rp, ap))
+        # held_above_held_iff: held r k above held r' k' iff after r' + k < after r + k'
+        if kq == "held" and kp == "held" and above_qp != (sfs[rp][0] + aq < sfs[rq][0] + ap):
+            fails.append(("held_above_held_iff", rq, aq, rp, ap))
+        # held_above_moves_iff: held r k above a move at no loss iff the move's value + k < after r
+        if kq == "held" and kp in ("go", "off") and ap == 0:
+            mv = cgo if kp == "go" else coff
+            if above_qp != (mv + aq < sfs[rq][0]):
+                fails.append(("held_above_moves_iff", kp, rq, aq))
+        counter["plan_pairs"] += 1
 
 
 def check_good(fails, counter):
@@ -482,7 +561,7 @@ def check_expansion(fails, counter, rng):
 
 def part_B():
     fails = []
-    counter = {"tables": 0, "threshold_cases": 0, "rule_pairs": 0, "cell_maps": 0,
+    counter = {"tables": 0, "threshold_cases": 0, "rule_pairs": 0, "plan_pairs": 0, "cell_maps": 0,
                "good_tables": 0, "expansions": 0, "repeated_listings": 0}
     mut = {"threshold_le_for_lt": 0, "shortfall_branches_swapped": 0}
     for w in itertools.product(range(3), repeat=3):
@@ -515,22 +594,38 @@ def part_B():
     return {"counts": counter, "failures": fails[:50], "n_failures": len(fails),
             "mutations_detected": mut,
             "tie_rule_of_byReading_changes_worth_in_tables": tie_diff,
+            "the_menu_in_the_lean": [
+                "Every offered option is a plan of RevisionPlans.order: going on goOn 0, switching off "
+                "off 0, holding for a rule r at an amount k held r k. Its gain is the option's worth "
+                "(gainOf_goOn, gainOf_off, gainOf_held) and its excess the option's shortfall "
+                "(excess_goOn = offExcess, excess_off = goExcess, excess_held = shortfall r), so "
+                "RevisionPlans.above_iff ranks any two options by amount + shortfall. That order is the "
+                "worths' order: held_above_held_iff for holding against holding (with excess_held, "
+                "ListingValuation.forgone_lt_iff, proved through above_iff), held_above_moves_iff for "
+                "holding against a move, and for a move against a move or a move above holding the "
+                "definition of Above with gainOf_goOn and gainOf_off. Checked here on every enumerated "
+                "table (plan_pairs).",
+                "committed_sub_eq (committed go + offExcess = committed off + goExcess) is "
+                "RevisionPlans.balance at goOn and off (after_byReading's two equalities; "
+                "after_add_shortfall_go and after_add_shortfall_off at a rule): an instance, not a "
+                "candidate lemma.",
+                "const_shortfall (the rule releasing everywhere falls short by offExcess, the rule "
+                "stopping everywhere by goExcess) is excess_held at a constant rule, the plans goOn and "
+                "off (excess_goOn, excess_off): an instance, not a candidate lemma.",
+            ],
+            "stated_compositions": [
+                "held_best_iff (a composition, checked): holding for r forgoing k stands strictly above "
+                "both committed moves iff shortfall r + k < min(goExcess, offExcess); the conjunction of "
+                "threshold_go_iff's and threshold_off_iff's strict parts.",
+                "held_below_better_iff (a composition, checked): holding for r forgoing k stands "
+                "strictly below the better committed move iff min(goExcess, offExcess) < shortfall r + "
+                "k; either non-strict part of threshold_go_iff and threshold_off_iff failing.",
+            ],
             "candidate_core_lemmas": [
-                "held_best_iff (inference, checked): holding for r forgoing k stands strictly above "
-                "both committed moves iff shortfall r + k < min(goExcess, offExcess); the conjunction "
-                "of threshold_go_iff's and threshold_off_iff's strict parts",
-                "held_below_better_iff (inference, checked): holding for r forgoing k stands strictly "
-                "below the better committed move iff min(goExcess, offExcess) < shortfall r + k; from "
-                "the strict parts and after_add_shortfall_go/off",
-                "committed_sub_eq (inference, checked): committed go + offExcess = committed off + "
-                "goExcess (after_byReading's two equalities), so the better committed move is the one "
-                "whose own constant rule has the smaller shortfall",
-                "const_shortfall (inference, checked): the rule releasing everywhere falls short by "
-                "offExcess and the rule stopping everywhere by goExcess, so forgone_lt_iff with "
-                "const_worth ranks a menu of committed moves and held rules by shortfall + amount",
                 "expanded_shortfall (inference, checked on 3,000 sampled tables): a reader stopping "
                 "with probability s_c/D at candidate c, told as (candidate, draw) pairs, falls short "
-                "by D times its expected weighted loss; both excesses scale by D",
+                "by D times its expected weighted loss; both excesses scale by D. No verdict rests on "
+                "it: it says how a reader whose errors are chances could be told, which TR8 does not test.",
             ]}
 
 
@@ -838,7 +933,15 @@ def make_agents():
         A.append({"name": f"H3 calls alike: with prob {rho} a condition's calls all take one option "
                           f"drawn once, else counts sigma=0.1", "family": "hybrid", "alike": rho})
     set_probe_models(A, PROBE_OWN_TR8)
+    # the guard's own check: choices follow the counts-first option (through a cue aligned with it),
+    # while the probe computes other counts (cost-blind, R5's): the guard's target
+    A.append({"name": G1_NAME,
+              "family": "guard", "det": lambda c, x: counts_pick(c), "lapse": lapse, "probe": "cue",
+              "probe_det": lambda c, x: counts_pick(c, lambda cd, o: o["shortfall"])})
     return A
+
+
+G1_NAME = "G1 guard check: chooses the counts-first option by a cue, its probe cost-blind"
 
 
 # What a rival's probe reports (an assumption of the power check, not a measurement): a rival defined
@@ -851,7 +954,7 @@ PROBE_OWN_TR8 = ("R5", "R6", "R8", "R9", "H1")
 
 def set_probe_models(A, own):
     for a in A:
-        if a["family"] != "law":
+        if a["family"] not in ("law", "guard"):
             a["probe"] = "own" if a["name"].split(" ")[0] in own else "counts"
 
 
@@ -917,7 +1020,7 @@ def full_protocol(strict, premise, tie_iotas, compute):
         base *= t[1]
     for io in tie_iotas:
         base *= call_outcomes(0.5, io)[0]
-    allv = allvnc = allsup = allsup_ng = 1.0
+    allv = allvnc = allsup = allsup_ng = allvnc_ng = 1.0
     for x in strict:
         pv, ps, pc = x["triple"]
         rp = binom_tail(PROBE_CALLS, x["r"], READER_PROBE_AT) if (compute and x.get("r") is not None) else 1.0
@@ -927,10 +1030,15 @@ def full_protocol(strict, premise, tie_iotas, compute):
         allvnc *= pv - pc
         allsup *= ps
         allsup_ng *= ps * (1 - g)
+        allvnc_ng *= (pv - pc) - ps * g
     sup, con_c, con_g, void = base * allsup_ng, base * (allv - allvnc), base * (allsup - allsup_ng), 1 - base * allv
+    # a guard hit beside a bridge neither supported nor contradicted otherwise (some condition
+    # unresolved, none contradicted): reported, no verdict; part of "unresolved"
+    hit_unres = base * ((allvnc - allvnc_ng) - (allsup - allsup_ng))
     return {"supported": round(sup, 4), "contradicted_by_a_condition": round(con_c, 4),
             "contradicted_by_the_guard": round(con_g, 4), "void": round(void, 4),
-            "unresolved": round(max(0.0, 1 - sup - con_c - con_g - void), 4)}
+            "unresolved": round(max(0.0, 1 - sup - con_c - con_g - void), 4),
+            "unresolved_with_a_guard_hit_reported": round(max(0.0, hit_unres), 4)}
 
 
 def compositions(n, k):
@@ -942,15 +1050,37 @@ def compositions(n, k):
             yield (i,) + rest
 
 
+def probe_ranks_any_first(probe, modal, n=PROBE_CALLS, at=LABEL_AT):
+    """Exact: P(the probe ranks some option of `modal` first in at least `at` of its n calls), each
+    probe call ranking one option first with the per-call P in `probe` (one multinomial over the
+    options). By inclusion and exclusion; three options cannot each reach `at` when 3 * at > n."""
+    modal = list(modal)
+    p_one = sum(binom_tail(n, probe[l], at) for l in modal)
+    if len(modal) == 1:
+        return p_one
+    assert 3 * at > n
+    both = 0.0
+    for a, b in itertools.combinations(modal, 2):
+        pa, pb = probe[a], probe[b]
+        for i in range(at, n + 1):
+            for j in range(at, n - i + 1):
+                rest = n - i - j
+                pr = math.comb(n, i) * math.comb(n - i, j) * pa ** i * pb ** j
+                both += pr * (1 - pa - pb) ** rest if rest else pr
+    return min(1.0, max(0.0, p_one - both))
+
+
 def label_split(choice, probe, first, n=N_CALLS):
     """Exact over the n choice calls (all valid): P(contradicted), and P(contradicted and labelled
     miscomputed), the label reading the probe's n calls: miscomputed where the probe ranks a modal
-    chosen option first in at least LABEL_AT of them. choice and probe: per-call P by label."""
+    chosen option first in at least LABEL_AT of them; where several chosen options are modal (tie
+    for the most choices), where it ranks any of them first so (the union, exact). choice and probe:
+    per-call P by label."""
     labels = list(choice)
     ps = [choice[l] for l in labels]
     ex = [l not in first for l in labels]
     fact = [math.factorial(i) for i in range(n + 1)]
-    bt = {l: binom_tail(PROBE_CALLS, probe[l], LABEL_AT) for l in labels}
+    union = {}
     pcon = pmis = 0.0
     for comp in compositions(n, len(labels)):
         if sum(c for c, e in zip(comp, ex) if e) < CONTRA_AT:
@@ -965,8 +1095,11 @@ def label_split(choice, probe, first, n=N_CALLS):
         if pr == 0.0:
             continue
         mx = max(comp)
+        modal = tuple(l for l, c in zip(labels, comp) if c == mx)
+        if modal not in union:
+            union[modal] = probe_ranks_any_first(probe, modal)
         pcon += pr
-        pmis += pr * max(bt[l] for l, c in zip(labels, comp) if c == mx)
+        pmis += pr * union[modal]
     return pcon, pmis
 
 
@@ -1016,6 +1149,9 @@ def part_D_full(conds, agents, raw_p1, ctxs, probs_fn, first_of=lambda c: c["cou
                             q = 1 - p1
                         elif ag.get("probe") == "own":
                             q = 1 - p1
+                        elif ag.get("probe") == "cue":
+                            pq = probs_fn(c, {"det": ag["probe_det"], "lapse": ag["lapse"]}, ctx)
+                            q = 1 - p_first(pq, c)
                         else:
                             q = 1 - p_first(probe_counts[c["id"]], c)
                     if c["role"] == "premise":
@@ -1059,9 +1195,10 @@ def part_D_full(conds, agents, raw_p1, ctxs, probs_fn, first_of=lambda c: c["cou
             if ag.get("probe") == "own":
                 # its own counts rank its pick first (tied picks ranked first together), but in lapses
                 pp = (1 - ag["lapse"]) + ag["lapse"] * len(pick) / n
+                mis.append(binom_tail(PROBE_CALLS, min(1.0, pp), LABEL_AT))
             else:
-                pp = max(probe_counts[c["id"]][l] for l in excluded)
-            mis.append(binom_tail(PROBE_CALLS, min(1.0, pp), LABEL_AT))
+                # its excluded picks are the modal options, tied where several: the union, exact
+                mis.append(probe_ranks_any_first(probe_counts[c["id"]], excluded))
         if mis:
             labels_rivals.append({"agent": ag["name"], "probe_model": ag.get("probe"),
                                   "P_miscomputed_where_contradicted_min": round(min(mis), 4),
@@ -1073,10 +1210,13 @@ def part_D_full(conds, agents, raw_p1, ctxs, probs_fn, first_of=lambda c: c["cou
                 f"or (TR9) the reader probe right in fewer than {READER_PROBE_AT} of {PROBE_CALLS}. "
                 f"Probe calls ({PROBE_CALLS} per condition) only where worths are computed: under the "
                 "law's model the probe ranks first as an independent call of the same noisy counts; a "
-                "rival's probe as its probe model. The guard reports a supported bridge contradicted "
-                f"where a supported condition's probe ranks another option first in at least {GUARD_AT} "
-                f"of {PROBE_CALLS}. The label (miscomputed where the probe ranks a modal chosen option "
-                f"first in at least {LABEL_AT} of {PROBE_CALLS}) is split exactly over the choice calls "
+                "rival's probe as its probe model (G1's probe computes R5's cost-blind counts). The guard "
+                "reports a bridge otherwise supported contradicted where a supported condition's probe "
+                f"ranks another option first in at least {GUARD_AT} of {PROBE_CALLS}; such a hit beside "
+                "an unresolved bridge is reported with no verdict (unresolved_with_a_guard_hit_reported, "
+                "within unresolved). The label (miscomputed where the probe ranks a modal chosen option "
+                f"first in at least {LABEL_AT} of {PROBE_CALLS}; where several are modal, any of them, the "
+                "union exact) is split exactly over the choice calls "
                 "for the law; for a rival, approximately, its pick taken as the modal option."),
             "rows": rows, "labels_law": labels_law, "labels_rivals": labels_rivals}
 
@@ -1119,7 +1259,7 @@ def part_D(conds):
     # the smallest per-call consistency at which all strict conditions pass with 0.8
     pstar = next(p / 1000 for p in range(500, 1001)
                  if binom_tail(N_CALLS, p / 1000, SUPPORT_AT) ** len(strict) >= 0.8)
-    rivals_passing = [r for r in rows if r["family"] != "law" and r["P_bridge_supported"] > 0.05]
+    rivals_passing = [r for r in rows if r["family"] not in ("law", "guard") and r["P_bridge_supported"] > 0.05]
     rng_full = random.Random(SEED + "-D-full")
     full = part_D_full(conds, agents, raw_p1, CONTEXTS, lambda c, ag, ctx: tr8_probs(c, ag, ctx, rng_full))
     return {"rule": {"calls_per_condition": N_CALLS, "supported_if_counts_first_at_least": SUPPORT_AT,
@@ -1214,10 +1354,12 @@ def part_F(conds, D):
         differs.setdefault(r["agent"].split(" ")[0], r["conditions_where_its_rule_differs"])
     return {
         "settled": [
-            "The threshold's three-way form (inference) agrees with threshold_go_iff and "
-            "threshold_off_iff on every enumerated case; verdicts use the pairwise form through "
-            "forgone_lt_iff with const_worth: the counts rank every offered option by shortfall + "
-            "amount, a committed move being a constant rule.",
+            "Every offered option is a plan of RevisionPlans.order (goOn 0, off 0, held r k), and "
+            "RevisionPlans.above_iff with excess_goOn, excess_off and excess_held ranks any two by "
+            "amount + shortfall; gainOf_goOn, gainOf_off and gainOf_held, with held_above_moves_iff "
+            "and held_above_held_iff, make that order the worths' order. So the verdicts rest on "
+            "stated core theorems; the three-way form (strictly best, strictly below the better "
+            "move) is their composition, checked on every enumerated case.",
             f"Ties: {len([c for c in conds if c['role'] == 'tie_measured'])} conditions are exact ties "
             "(F0, G0) and carry no verdict; every strict condition has one counts-first option, "
             "gap >= 6 total units and >= 0.10 of the scale; no situation has U = 0.",
@@ -1260,6 +1402,18 @@ def part_F(conds, D):
             f"invalid answers (void {_full(D, 'counts sigma=0.1 lapse=0.05', 'compute', 0.02)['void']}); "
             "the guard contradicts the law's model with probability at most "
             f"{max(r['contradicted_by_the_guard'] for r in D['full_protocol']['rows'] if r['family'] == 'law')}.",
+            "The guard's check: G1 chooses the counts-first option (by a cue aligned with it) while "
+            "its probe computes R5's cost-blind counts, which rank another option first at "
+            + ", ".join(differs["R5"]) + ". Where worths are computed the bridge is contradicted by "
+            "the guard with probability "
+            f"{_full(D, G1_NAME, 'compute', 0.0)['contradicted_by_the_guard']} (supported "
+            f"{_full(D, G1_NAME, 'compute', 0.0)['supported']}); where they are given, with no probe, "
+            f"it is supported with probability {_full(D, G1_NAME, 'given', 0.0)['supported']}: there "
+            "the choice cannot be told from one following the counts. A guard hit beside an "
+            "unresolved bridge is reported with no verdict; under the law's model that happens with "
+            "probability at most "
+            f"{max(r['unresolved_with_a_guard_hit_reported'] for r in D['full_protocol']['rows'] if r['family'] == 'law')} "
+            "up to sigma = 0.30.",
             "The label: a rival whose probe computes its own counts is labelled miscomputed, one that "
             "computes the told counts and chooses otherwise disposition, as the rows of "
             "full_protocol.labels_rivals show; a chance contradiction of the law's model with "

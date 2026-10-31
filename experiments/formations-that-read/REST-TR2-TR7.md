@@ -20,7 +20,7 @@ A reader misled has no Lean; the record's `does_not_show` places it "outside the
 
 ## Stage 0: the checks
 
-[`tr2.py`](tr2.py) writes [`tr2.json`](tr2.json) in about 100 seconds on one core. 448,453 checks in 29 kinds, all passed:
+[`tr2.py`](tr2.py) writes [`tr2.json`](tr2.json) in about 100 seconds on one core. 448,517 checks in 31 kinds, all passed:
 
 | Check | Count | Scope |
 |---|---|---|
@@ -40,6 +40,7 @@ A reader misled has no Lean; the record's `does_not_show` places it "outside the
 | coverage, exact against enumeration | 4 | |
 | the measurement recovers the planted pattern | 9 | see below |
 | partial coupling at shares 0 and 1 equals the independent and shared-seed powers | 9 + 9 | three differences, 100, 400 and 1,600 pairs |
+| the worst coupling is the least powerful: least over 21 joint-success values from the Fréchet lower bound to the monotone coupling, and at most independent draws' power | 32 + 32 | the four differences, 200, 600, 1,600 and 3,200 pairs, 0.05 and 0.05/4 |
 
 Determination counts, `n` occasions and `V` act values (cases are (lumping, read set, target)):
 
@@ -75,18 +76,20 @@ Determination counts, `n` occasions and `V` act values (cases are (lumping, read
 | 2 points at a 10% base | 6,400 | 600 | 0.046 / 0.122 / 0.418 |
 | 5 points at a 30% base | 2,400 | 200 | 0.091 / 0.299 / 0.847 |
 
-Identical-input arms with independent draws at 10% show a resolved difference at 400 pairs with probability 0.038 (at most 0.05 by construction); under a shared seed they cannot differ, so they cannot measure the seed's coupling. The shared-seed column assumes a monotone coupling: a binary act's discordant pairs all run one way, so the exact test rejects from six discordant pairs. This models the shared seed at the level of the act, an idealization of token-level sampling with shared random numbers; with any two-way discordance, power falls toward the independent column.
+Identical-input arms with independent draws at 10% show a resolved difference at 400 pairs with probability 0.038 (at most 0.05 by construction); under a shared seed they cannot differ, so they cannot measure the seed's coupling. The shared-seed column assumes a monotone coupling: a binary act's discordant pairs all run one way, so the exact test rejects from six discordant pairs. This models the shared seed at the level of the act, an idealization of token-level sampling with shared random numbers; with two-way discordance, power falls toward the independent column, and below it where the seed couples the draws against each other: a shared seed fixes no sign of the coupling, so independence is one scenario, not the worst case (below).
 
-**Stage B's 600 pairs and the worst case** (independent draws; two-sided 0.05, and 0.05/4 for a Bonferroni split over the four factors):
+**Stage B's 600 pairs: independent draws and the worst coupling** (two-sided 0.05, and 0.05/4 for a Bonferroni split over the four factors). The worst coupling is the most discordant one the two rates allow: joint success at the Fréchet lower bound `max(0, p + p' − 1)`, here 0, so every success in one arm meets a failure in the other. Under it the same difference comes with more discordant pairs, nearer even each way, than under independence:
 
-| Difference | Power at 600, 0.05 (independent; shared seed) | Pairs for power 0.9 at 0.05/4 | Power at 600 / 1,200 / 1,600 pairs at 0.05/4 |
-|---|---|---|---|
-| 14% against 1% | 1.0; 1.0 | 200 | 1.0 / 1.0 / 1.0 |
-| 5 points at a 10% base | 0.7194; 1.0 | 1,600 | 0.5146 / 0.8771 / 0.9593 |
-| 2 points at a 10% base | 0.1725; 0.9805 | 9,600 | 0.0687 / 0.1595 / 0.228 |
-| 5 points at a 30% base | 0.4323; 1.0 | 3,200 | 0.2392 / 0.5291 / 0.6865 |
+| Difference | Discordance per pair (independent; worst) | Power at 600, 0.05 (independent; shared seed; worst) | Pairs for power 0.9 at 0.05/4 (independent; worst) | Power at 600 / 1,200 / 1,600 / 3,200 pairs at 0.05/4, independent | the same, worst coupling |
+|---|---|---|---|---|---|
+| 14% against 1% | 0.1472; 0.15 | 1.0; 1.0; 1.0 | 200; 200 | 1.0 / 1.0 / 1.0 / 1.0 | 1.0 / 1.0 / 1.0 / 1.0 |
+| 5 points at a 10% base | 0.22; 0.25 | 0.7194; 1.0; 0.6627 | 1,600; 1,600 | 0.5146 / 0.8771 / 0.9593 / 0.9998 | 0.453 / 0.8231 / 0.9296 / 0.9992 |
+| 2 points at a 10% base | 0.196; 0.22 | 0.1725; 0.9805; 0.1593 | 9,600; 9,600 | 0.0687 / 0.1595 / 0.228 / 0.5085 | 0.0614 / 0.1402 / 0.1991 / 0.4522 |
+| 5 points at a 30% base | 0.44; 0.65 | 0.4323; 1.0; 0.3122 | 3,200; 4,800 | 0.2392 / 0.5291 / 0.6865 / 0.9598 | 0.1515 / 0.3506 / 0.4814 / 0.8393 |
 
-**Partial coupling** (a share of pairs coupled monotonically by the seed, the rest drawn independently; the pilot measures the discordance each way, here as the minority share of discordant pairs; pairs for power 0.9 at 0.05 and at 0.05/4, each the least size on the script's grid):
+At a 10% base the worst coupling costs power but no size on the script's grid; at a 30% base, where the rates allow more discordance, it moves the size from 3,200 to 4,800 pairs.
+
+**Partial coupling** (a share of pairs coupled monotonically by the seed, or, at a negative share, coupled by the worst coupling, the rest drawn independently; the pilot measures the discordance each way, here as the minority share of discordant pairs; pairs for power 0.9 at 0.05 and at 0.05/4, each the least size on the script's grid):
 
 | Coupled share | 5 points at 10%: minority share; pairs | 2 points at 10%: minority share; pairs |
 |---|---|---|
@@ -96,8 +99,10 @@ Identical-input arms with independent draws at 10% show a resolved difference at
 | 0.5 | 0.3148; 600, 800 | 0.4074; 3,200, 4,800 |
 | 0.25 | 0.3592; 800, 1,200 | 0.4342; 4,800, 6,400 |
 | 0 (independent) | 0.3864; 1,200, 1,600 | 0.449; 6,400, 9,600 |
+| −0.5 | 0.3936; 1,200, 1,600 | 0.4519; 6,400, 9,600 |
+| −1 (the worst coupling) | 0.4; 1,200, 1,600 | 0.4545; 6,400, 9,600 |
 
-So Stage B's behaviour measure is sized from a pilot, not from the shared-seed column: on a separate cue known to move the act, the pilot counts discordant pairs each way under the shared seed, and the pairs per factor are read from the measured discordance (by `power_discordant` in `tr2.py`), or set at the independent-draw worst case. Non-rejection at the power so fixed is reported as "not shown apart", never as "alike".
+So Stage B's behaviour measure is sized from a pilot, not from the shared-seed column: on a separate cue known to move the act, the pilot counts discordant pairs each way under the shared seed, and the pairs per factor are read from the measured discordance each way (by `power_discordant` in `tr2.py`), which covers a coupling of either sign. Without a pilot, the pairs are set at the worst coupling the rates allow; with the seeds not shared, the independent column holds exactly. Non-rejection at the power so fixed is reported as "not shown apart", never as "alike".
 
 **States apart by probe** (share of 200 worlds; contents in all, half held out):
 
@@ -128,11 +133,11 @@ Checked by enumerating every schedule for two contents, three copies and ρ = 1/
 
 **Stage A** (later, on Ren's yes; local CPU). Small networks trained, by a standard-library script, only on the read occasions of each schedule, every state readable: the chain measured link by link, and whether training installs a twin, which RF2 does not predict (realizability). Reported, no verdict.
 
-**Stage B** (on Ren's yes). Two families of open-weight models, base and tuned checkpoints where available, exact files and sizes named at the freeze (as an estimate, a model of seven or eight billion parameters is about 14 to 16 GB in 16-bit weights). Deterministic passes: batch size one, fixed kernels, a shared seed. Four cue factors, each toggled alone with the request fixed, and identical-input arms; 400 requests, half held out for probes; arms interleaved in time and batch. Measures per factor and layer: exact equality of the residual stream; probes with shuffled-label controls; total variation between next-token distributions at the first answer token; behaviour under a shared seed, its pairs per factor fixed by the pilot (above; 1,600 at the worst case for 5 points at a 10% base); verbal recognition on separate calls. The exact next-token comparison carries the act measure wherever states are exact, and no coupling enters it; the behaviour measure is the one a coupling can weaken, and acts it does not show apart are reported as not shown apart, never alike. The analysis, not the model, applies the schedules S1 to S3, and reports for each the coverage by the measured lumping (an unread occasion whose state equals a read one's exactly) and the misled share of a stated reader.
+**Stage B** (on Ren's yes). Two families of open-weight models, base and tuned checkpoints where available, exact files and sizes named at the freeze (as an estimate, a model of seven or eight billion parameters is about 14 to 16 GB in 16-bit weights). Deterministic passes: batch size one, fixed kernels, a shared seed. Four cue factors, each toggled alone with the request fixed, and identical-input arms; 400 requests, half held out for probes; arms interleaved in time and batch. Measures per factor and layer: exact equality of the residual stream; probes with shuffled-label controls; total variation between next-token distributions at the first answer token; behaviour under a shared seed, its pairs per factor fixed by the pilot (above; 1,600 for 5 points at a 10% base under the worst coupling, as under independence); verbal recognition on separate calls. The exact next-token comparison carries the act measure wherever states are exact, and no coupling enters it; the behaviour measure is the one a coupling can weaken, and acts it does not show apart are reported as not shown apart, never alike. The analysis, not the model, applies the schedules S1 to S3, and reports for each the coverage by the measured lumping (an unread occasion whose state equals a read one's exactly) and the misled share of a stated reader.
 
 | | Passes or calls | Tokens | Downloads |
 |---|---|---|---|
-| Stage B, open weights | about 4,000 forward passes for states; a pilot of about 400 pairs (800 generations) on one cue known to move the act; for behaviour, between 6,000 generations (600 pairs, four factors and the identical arm) and 16,000 at the worst case (1,600 pairs), per model and checkpoint; time measured by a smoke run | none through an API | two model families, named with file and size at the freeze |
+| Stage B, open weights | about 4,000 forward passes for states; a pilot of about 400 pairs (800 generations) on one cue known to move the act; for behaviour, between 6,000 generations (600 pairs, four factors and the identical arm) and 16,000 at the worst coupling for 5 points at a 10% base (1,600 pairs), per model and checkpoint; time measured by a smoke run | none through an API | two model families, named with file and size at the freeze |
 | optional, acts only through an API (OpenRouter as VD1, a spend guard) | 1,000 calls per model for differences of the order of 14% against 1% (100 pairs, four factors and the identical arm); 12,000 for 5 points at 10% | about 1M per model at the smaller size (an estimate of 1,000 tokens a call) | none |
 
 Through an API, states are out of reach and recognition is only verbal, an act on another occasion; the API variant is an implementation check and a measure of acts, no more.
@@ -345,3 +350,5 @@ Repository work drawn on: the lessons in [Freezing a test on a trained system](.
 An earlier run of this build wrote `tr7.py` and `tr7.json` and stopped before the documents. Kept: its mirror of `ReadStages` and every check of section 1, rerun and passing. Fixed: the tied conditions (a percentage answer the power check showed unresolvable, replaced by binary offers in the Lean's own comparisons); the tie (it entered the reading's support like any condition; it now has its own rule and only contradicts, as ties must be excluded from verdicts or given their own rule); the rival summary (it reported only the probability of contradiction; it now reports the probability of a false pass beside it, which is what a rival's passing means); the planned size (100 calls, from the power check). Added: A7, B2 to B4 as controls for named rivals, the derived claims D6 and D7, the separation thresholds, `tr2.py` and these documents.
 
 After the independent review (findings lean-a-8, lean-b-2, lean-b-3, stats-8, reader-8, reader-12, plan-records-1 and a cross-model reader's item 6): `tr2.py` gained the power at Stage B's 600 pairs, the worst case at 0.05/4 and a model of partial coupling (18 checks added), so Stage B's behaviour measure is sized by a pilot; `tr7.py` gained the exact loss-aversion bound 8/7 (3 checks) and says "gap" where it said "margin", the glossary's word for a level above a need; no other number of either script changed. The TR7 forbidden cases now forbid only strict deficits, which rest on derived claims, and restore `0 < m`; correction 6 no longer reads the construction into the statement.
+
+After the second review round (findings lean2-6, taken2-2 and the cross-model reader's item 12): `tr2.py` models the worst coupling a shared seed allows, the most discordant one the rates permit, beside independent draws, which were wrongly called the worst case; the partial-coupling table gains negative shares (64 checks added, 448,517 in all). At a 10% base no size changes; for 5 points at a 30% base the pairs for power 0.9 at 0.05/4 rise from 3,200 to 4,800 under the worst coupling (power 0.8393 at 3,200, against 0.9598 independent). No other number of `tr2.py` changed, and `tr7.py` was not rerun. The ten-minute TR7 forbidden cases carry their hypotheses: `complyThenOwn` where `k_C V < k_O V + c T` (an exit with a positive loss falls under it; one with no loss is a tie, `Example.exit_tie`) and `complyAtBoth` where a product is positive.

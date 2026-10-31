@@ -8,7 +8,7 @@ RF proved nine laws of formations that read, each a theorem in the pure core: wh
 |---|---|
 | [DESIGN.md](DESIGN.md) | The tests in ten minutes, the tests in an hour, and an index to the rest: usage, what the tests share, what changed in RF's plan and records, candidate core lemmas, provenance |
 | [REST-TR1.md](REST-TR1.md), [REST-TR2-TR7.md](REST-TR2-TR7.md), [REST-TR3-TR6.md](REST-TR3-TR6.md), [REST-TR4-TR5.md](REST-TR4-TR5.md), [REST-TR8-TR9.md](REST-TR8-TR9.md) | Each test's full design: exact tables, power check, rivals, protocol, usage, choices left for the freeze, the plan's corrections and references |
-| [REVIEW.md](REVIEW.md) | The two independent reviews of the designs (five verified lenses and a cross-model reader), every finding and how it was taken |
+| [REVIEW.md](REVIEW.md) | The two independent reviews of the designs in two rounds (five verified lenses and a cross-model reader), every finding and how it was taken |
 | `trN.py`, `trN.json` (N = 1 to 9) | Stage 0 for each test: a mirror of the Lean's definitions checked against its evaluated witnesses and by enumeration, the simulated systems and rivals, and the power check; standard library only, deterministic |
 
 To reproduce (Python 3.11, standard library only). Each script writes its JSON next to itself and takes from under a minute to about three minutes on one core; `tr9.py` imports `tr8.py`, so run them from this folder:

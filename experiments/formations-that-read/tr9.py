@@ -752,14 +752,20 @@ def part_B():
                      "valuation (ties add to neither excess), so the tie rule matters for which option is "
                      "taken, not for any count; a residual without truncation breaks the split wherever a "
                      "cell's preference is not the rule's, so the truncation is load-bearing."),
+            "the_menu_in_the_lean": [
+                "menu_rank is not a candidate lemma: every option (going on, switching off, waiting, "
+                "showing, giving values, both) holds for the reader's resulting rule at its amount, a "
+                "plan of RevisionPlans.order under the stated objective's gain and loss (the committed "
+                "moves goOn 0 and off 0), and RevisionPlans.above_iff with excess_goOn, excess_off and "
+                "excess_held ranks any two by amount + shortfall; ListingValuation.forgone_lt_iff, "
+                "proved through above_iff and HeldForReading.held_above_held_iff, is its form for two "
+                "rules, and const_worth makes a committed move a constant rule. TR8's script checks the "
+                "order of plans on every enumerated table.",
+            ],
             "candidate_core_lemmas": [
-                "menu_rank (inference, from forgone_lt_iff and const_worth): among options each holding "
-                "for a rule at an amount, with committed moves as constant rules, an option stands "
-                "strictly above another exactly where its shortfall + amount is smaller; TR9's verdicts "
-                "rest on it as TR8's do.",
                 "answer_least_of_scaled composed with informed_le (inference, the reviewing session's report): a "
                 "positive common scale suffices for informing never to lower the worth; not stated as "
-                "one theorem.",
+                "one theorem. No verdict rests on it.",
             ]}
 
 
@@ -861,7 +867,7 @@ def design_tables():
                        "give+show over wait/off": "forgone_lt_iff",
                        "show strictly worst": "forgone_through_lt_iff (least shortfall + residual + amount: "
                        "show 0 + 150 + 4 against give 50 + 0 + 3, wait and off 50 + 0 + 0, go 100; "
-                       "Informing.informing_lowers scaled)"},
+                       "the pattern of Informing.informing_lowers, the same signs, not a scaling)"},
                       "REF"),
         tr9_condition("CVW", "strict", "objective: the reader's values; no option gives values", m, own, rd,
                       (A, B), "own", four, {"show over wait": "forgone_least_iff"}, "CV"),
@@ -1006,7 +1012,14 @@ def make_agents(conds_by_id, alt_counts):
         A.append({"name": f"H3 calls alike: with prob {rho} a condition's calls all take one option drawn once, "
                           "else counts sigma=0.1", "family": "hybrid", "alike": rho})
     set_probe_models(A, PROBE_OWN_TR9)
+    # the guard's own check, as TR8's: choices follow the counts-first options (a cue aligned with
+    # them), the probe computes cost-blind counts (N8's)
+    A.append({"name": G1_NAME_TR9, "family": "guard", "det": lambda c, x: counts_first(c), "lapse": lapse,
+              "probe": "cue", "probe_det": lambda c, x: argmin(c["options"], lambda o: o["shortfall"])})
     return A
+
+
+G1_NAME_TR9 = "G1 guard check: chooses the counts-first options by a cue, its probe cost-blind"
 
 
 # As TR8's: rivals defined by another calculation probe their own counts ("own"); rivals defined by a
@@ -1166,7 +1179,7 @@ def part_E(conds, D):
         differs.setdefault(r["agent"].split(" ")[0], r["conditions_where_its_rule_differs"])
     passing = sorted({(r["agent"].split(" ")[0] + (f" rho={r['agent'].split('prob ')[1].split(' ')[0]}" if "alike" in r["agent"] else ""),
                        r["context"]["framing"], r["context"]["presentation"]) for r in D["agents"]
-                      if r["family"] != "law" and r["P_bridge_supported"] > 0.05})
+                      if r["family"] not in ("law", "guard") and r["P_bridge_supported"] > 0.05})
     cv6 = next(c for c in conds if c["id"] == "CV6")
     ref6 = next(c for c in conds if c["id"] == "REF6")
     return {
@@ -1215,6 +1228,15 @@ def part_E(conds, D):
             "invalid answers; the guard contradicts the law's model with probability at most "
             f"{max(r['contradicted_by_the_guard'] for r in D['full_protocol']['rows'] if r['family'] == 'law')}; "
             "N7 is void where worths are computed (its reader probe fails), not contradicted.",
+            "The guard's check, as TR8's: G1 chooses the counts-first options while its probe computes "
+            "N8's cost-blind counts, which rank another option first at " + ", ".join(differs["N8"])
+            + ". Where worths are computed the bridge is contradicted by the guard with probability "
+            f"{_full9(D, G1_NAME_TR9, 'compute', 0.0)['contradicted_by_the_guard']}; where they are "
+            f"given, supported with probability {_full9(D, G1_NAME_TR9, 'given', 0.0)['supported']}. "
+            "Under the law's model a guard hit beside an unresolved bridge, reported with no verdict, "
+            "has probability at most "
+            f"{max(r['unresolved_with_a_guard_hit_reported'] for r in D['full_protocol']['rows'] if r['family'] == 'law')} "
+            "up to sigma = 0.30.",
         ],
         "choices_for_the_freeze": [
             "Whether TR9 runs at all, and under which framings: its counts-first option under a reference "

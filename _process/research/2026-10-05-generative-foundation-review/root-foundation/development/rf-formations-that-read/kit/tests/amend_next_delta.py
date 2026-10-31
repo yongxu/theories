@@ -33,7 +33,7 @@ CHANGES = {
     'a-reading-kept-by-its-update': ('TR5', 'the correspondence that an agent acts as a policy from its visible history, and two bridges for a reading it states', '行者为由其可见之历而行之策略之对应，及其所陈之读之二桥',
         [('a frozen test intervening on a formation\'s observations (the plan\'s TR5)', 'a frozen test of whether a language-model agent acts as a policy from its visible history, audited on the worlds possible after each history, and of two bridges for a reading it states (the plan\'s TR5)')],
         [('干预形成之观察之冻结检验（计划之 TR5）', '冻结之检验：语言模型之行者是否为由其可见之历而行之策略，于每一历后可能之诸世审之，及其所陈之读之二桥（计划之 TR5）')]),
-    'a-prediction-read-by-what-it-predicts': ('TR6', 'the bridge that a public is a response mapping counts into counts', '公众为以数映数之应之桥',
+    'a-prediction-read-by-what-it-predicts': ('TR6', 'the bridge that a public\'s count is a response of the published forecast alone, and the readings of its order under the two framings', '公众之数唯依所公之预测而应之桥，及两框下其序之读',
         [('a frozen test of a published forecast\'s response', 'a frozen test of whether a public responds to a published forecast by the forecast alone (the plan\'s TR6)')],
         [('公预测之应之冻结检验', '公众是否唯依所公之预测而应之冻结检验（计划之 TR6）')]),
     'when-complying-when-read-is-best': ('TR7', 'the reading that a system chooses a maximal plan of stated prospects', '系统于所述之望择一极大之策之读',

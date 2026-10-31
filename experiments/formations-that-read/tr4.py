@@ -36,8 +36,12 @@ the three situations, a fault on line 1, 2 or 3, with the number of reports and 
 each a fresh call, so six calls. m1 is the exact within-unit permutation test of the records
 naming the faulty line (the frozen parser run on every simulated record string); m2 is the same
 test of the crew's matches; m3 tests any dependence of the crew's act on the line (a map fixed on
-half the units, tested on the other half). C1, the reading in force is the register's rule, is
-contradicted where any of the three rejects, Holm over the 18 p-values of six models.
+half the units, tested on the other half); m4 tests any dependence of what the records name on the
+line in the same way (a map from line to a named line, so a clerk naming another line is found
+whether or not the crew reads it). C1, the reading in force is the register's rule, is
+contradicted where any of the four rejects, Holm over the 24 p-values of six models. Arm G's
+harness check (m2 and m3 on the crew's acts at records the harness writes) is simulated apart:
+Holm over its 12 p-values at 0.05, a rejection stopping the whole run.
 
 Bounds: Revising stock 0..N_STOCK, traces up to L_TRACE steps; the Lean holds for every n and
 every trace length, so the bounded checks are checks of the mirror, not of the law.
@@ -954,6 +958,29 @@ def fitted_map(units):
     return tuple(f)
 
 
+def fitted_named_map(nameds):
+    """m4's map from line to a named line, fixed on the units that fit it: at each line the line
+    named most in excess of its within-unit null expectation (a unit's count of records naming it,
+    over three), ties in the order 1, 2, 3."""
+    f = []
+    for i in range(3):
+        excess = {j: sum((j in u[i]) - sum(1 for r in u if j in r) / 3 for u in nameds)
+                  for j in (1, 2, 3)}
+        f.append(max((1, 2, 3), key=lambda j: (round(excess[j], 9), -j)))
+    return tuple(f)
+
+
+def m4_p(nameds):
+    """m4, any dependence of what the records name on the line: the map is fixed on the first,
+    third, fifth ... units, and its matches (the record at a fault on line i names f(i)) are tested
+    on the others by the exact within-unit permutation test, one-sided.  A constant map gives
+    p = 1; so does a record naming every line, or none."""
+    fit, test = nameds[0::2], nameds[1::2]
+    f = fitted_named_map(fit)
+    p, _t = perm_p(test, lambda i, named, f=f: f[i] in named, ("m4", f))
+    return p, f
+
+
 def m3_p(units):
     """m3, any dependence of the crew's act on the line: the map is fixed on the first, third,
     fifth ... units, and its matches are tested on the others by the exact within-unit
@@ -1121,11 +1148,15 @@ AGENTS = [
     {"name": "opaque token mapped to another line by the crew h=0.3", "kind": "leak-permuted", "h": 0.3},
     {"name": "opaque token mapped to another line by the crew h=1", "kind": "leak-permuted", "h": 1.0},
     {"name": "explicit leak of another line h=0.3, read by the crew", "kind": "leak-shifted", "h": 0.3},
+    {"name": "explicit leak of another line h=0.3, not read by the crew", "kind": "leak-shifted",
+     "h": 0.3, "d": 0.0},
+    {"name": "explicit leak of another line h=0.1, not read by the crew", "kind": "leak-shifted",
+     "h": 0.1, "d": 0.0},
 ]
 
 N_MODELS = 6
-N_MEASURES = 3
-FIRST = ALPHA_F / (N_MODELS * N_MEASURES)      # Holm's first step over the 18 p-values
+N_MEASURES = 4
+FIRST = ALPHA_F / (N_MODELS * N_MEASURES)      # Holm's first step over the 24 p-values
 LAST = ALPHA_F / N_MEASURES                    # a model's first threshold when all others are rejected
 
 
@@ -1143,7 +1174,8 @@ def power_check():
         for U in todo:
             reps = REPS if U <= 40 else 400
             c = {k: 0 for k in ("m1_first", "m1_alpha", "m2_first", "m2_alpha", "m3_first",
-                                "m3_alpha", "first", "last", "any_line_content", "bound")}
+                                "m3_alpha", "m4_first", "m4_alpha", "first", "last",
+                                "any_line_content", "bound")}
             mean_matches = 0.0
             allserved = 0
             for _ in range(reps):
@@ -1160,8 +1192,9 @@ def power_check():
                 p1, _t1 = perm_p(nameds, match_named, "m1")
                 p2, tobs = perm_p(units, match_line, "m2")
                 p3, _f = m3_p(units)
-                ps = (p1, p2, p3)
-                for name, p in zip(("m1", "m2", "m3"), ps):
+                p4, _g = m4_p(nameds)
+                ps = (p1, p2, p3, p4)
+                for name, p in zip(("m1", "m2", "m3", "m4"), ps):
                     c[name + "_first"] += p <= FIRST
                     c[name + "_alpha"] += p <= ALPHA_F
                 c["first"] += min(ps) <= FIRST
@@ -1177,6 +1210,8 @@ def power_check():
                              "P_m2_alpha": round(c["m2_alpha"] / reps, 3),
                              "P_m3_crew_act_depends_on_line_first_step": round(c["m3_first"] / reps, 3),
                              "P_m3_alpha": round(c["m3_alpha"] / reps, 3),
+                             "P_m4_records_depend_on_line_first_step": round(c["m4_first"] / reps, 3),
+                             "P_m4_alpha": round(c["m4_alpha"] / reps, 3),
                              "P_C1_contradicted_first_step": round(c["first"] / reps, 3),
                              "P_C1_contradicted_last_steps": round(c["last"] / reps, 3),
                              "P_some_record_has_line_content": round(c["any_line_content"] / reps, 3),
@@ -1185,12 +1220,12 @@ def power_check():
                              "units_all_served_per_unit": round(allserved / (reps * U), 4)}
         rows.append(row)
     return {"alpha": str(ALPHA), "models": N_MODELS, "measures": N_MEASURES,
-            "holm": "Holm over the 18 p-values (m1, m2 and m3 for six models): the family-wise "
+            "holm": "Holm over the 24 p-values (m1, m2, m3 and m4 for six models): the family-wise "
                     "rate of contradicting C1 where it holds is at most alpha",
-            "first_step": f"alpha/18 = {FIRST:.5f}: a model's contradiction when no other p-value "
+            "first_step": f"alpha/24 = {FIRST:.5f}: a model's contradiction when no other p-value "
                           "is rejected",
-            "last_steps": f"alpha/3 = {LAST:.5f}: a model's least p-value against its first "
-                          "threshold when every other model's three are rejected",
+            "last_steps": f"alpha/4 = {LAST:.5f}: a model's least p-value against its first "
+                          "threshold when every other model's four are rejected",
             "bound_per_model_first_step": round(N_MEASURES * FIRST, 4),
             "bound_per_model_last_steps": ALPHA_F,
             "reps": REPS, "sizes": sizes, "extra_sizes": {str(k): v for k, v in extra.items()},
@@ -1203,7 +1238,56 @@ def power_check():
                             "fixed on the odd units (the act most in excess at each line), its "
                             "matches tested on the even units by the same exact test; a constant "
                             "map gives p = 1",
+                      "m4": "any dependence of what the records name on the line: a map from line "
+                            "to a named line fixed on the odd units (the line named most in excess "
+                            "at each line), its matches tested on the even units by the same exact "
+                            "test; a constant map gives p = 1",
                       "bound": "Hoeffding's on the mean matches per unit above 1 (reported only)"}}
+
+
+G_FAITHFUL = [[0.3, 0.3, 0.3, 0.1], [0.3, 0.3, 0.3, 0.1], [0.25, 0.25, 0.25, 0.25],
+              [0.25, 0.25, 0.25, 0.25], [0.6, 0.25, 0.1, 0.05], [0.6, 0.25, 0.1, 0.05]]
+
+
+def harness_check(U=20, reps=REPS):
+    """Arm G, simulated: the harness writes each record (wording drawn apart from the line), the
+    crew acts; m2 and m3 on the crew's acts for each of six models, Holm over the 12 p-values at
+    0.05, and any rejection stops the whole run (the harness is shared by every model).  Rates of
+    a false stop under faithful crews (two models each of the three faithful crews), and of a stop
+    where the harness carries the line in a channel every model's crew reads."""
+    rng = random.Random(SEED + 5)
+    g_first = ALPHA_F / (N_MODELS * 2)
+    cases = [("faithful crews (two models each of the three)",
+              [{"kind": "faithful", "q": q} for q in G_FAITHFUL]),
+             ("harness leak read by every crew, 1 call in 10",
+              [{"kind": "leak-implicit", "h": 0.1, "d": 0.95}] * N_MODELS),
+             ("harness leak read by every crew, 3 calls in 10",
+              [{"kind": "leak-implicit", "h": 0.3, "d": 0.95}] * N_MODELS)]
+    out = []
+    for label, agents in cases:
+        stop_holm = stop_unadjusted = 0
+        per_model_holm = 0
+        for _ in range(reps):
+            ps_all = []
+            for agent in agents:
+                units = []
+                for _u in range(U):
+                    acts, _named = simulate_unit(rng, agent, rng.choice([1, 2, 3]),
+                                                 rng.choice(WORDINGS))
+                    units.append(acts)
+                p2, _t = perm_p(units, match_line, "m2")
+                p3, _f = m3_p(units)
+                ps_all += [p2, p3]
+                per_model_holm += min(p2, p3) <= g_first
+            stop_holm += min(ps_all) <= g_first        # Holm rejects some p-value iff the least meets alpha/12
+            stop_unadjusted += min(ps_all) <= ALPHA_F
+        out.append({"case": label, "units": U, "reps": reps,
+                    "P_run_stopped_holm_12_at_0.05": round(stop_holm / reps, 3),
+                    "P_model_has_a_p_value_at_alpha_over_12": round(per_model_holm / (reps * N_MODELS), 4),
+                    "P_run_stopped_unadjusted_each_at_0.05": round(stop_unadjusted / reps, 3)})
+    return {"rule": "Holm over G's 12 p-values (m2 and m3 for six models) at 0.05; any rejection "
+                    "stops the whole run, the harness being shared by every model",
+            "alpha_over_12": round(g_first, 5), "cases": out}
 
 
 def binom_tail(n, p, k):
@@ -1300,7 +1384,16 @@ def main():
     pm3, pm_map = m3_p(pm_units)
     OUT["permuted_map_example"] = {"units": "40 x ['c2', 'c3', 'c1']", "m2_p": str(pm2),
                                    "m3_p": pm3, "m3_map": list(pm_map)}
+    # the record side: a clerk naming line 2, 3, 1 at faults on lines 1, 2, 3 in every unit makes
+    # the record depend on the line, yet m1 (records naming the faulty line) cannot see it; m4 can
+    sh_named = [(frozenset({2}), frozenset({3}), frozenset({1}))] * 40
+    sh1, _t = perm_p(sh_named, match_named, "m1")
+    sh4, sh_map = m4_p(sh_named)
+    OUT["shifted_record_example"] = {"units": "40 x records naming lines 2, 3, 1", "m1_p": sh1,
+                                     "m4_p": sh4, "m4_map": list(sh_map)}
+    check("shifted_record_example", sh1 == 1.0 and sh4 < 1e-10)
     OUT["power_check"] = power_check()
+    OUT["harness_check"] = harness_check()
     OUT["null_size"] = null_size_exact()
     OUT["competence_check"] = competence_check()
     OUT["usage"] = usage(40, 20)

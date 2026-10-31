@@ -833,7 +833,9 @@ def part_d(p=Fr(3, 5), N=8):
         # histories the earlier draws actually reach): for assignments a, b and hybrids
         # H_j = b[:j] + a[j:], TV(L(a), L(b)) <= sum over j with a_j != b_j of
         # E_{h ~ law of the history at position k + j under the draws b[:j]} |D(k + j, h)|.
-        # Unlike the sum of eps_n it can lie below 1, so the check can fail.
+        # Unlike the sum of eps_n it can lie below 1. For every member in Turns (its act depends only
+        # on the history and its own draw) it holds by the hybrid argument and data processing, so a
+        # violation could come only from a simulator fault: the check verifies the simulator.
         hist_law = {}
         for b in assignments:
             for j in range(N - k):
@@ -902,13 +904,17 @@ def part_d(p=Fr(3, 5), N=8):
                                   "lemma, since the core has no probability)."),
             "rows": rows, "all_hold_within_turns": all(r["holds"] for r in rows[:-1]),
             "note_on_the_sum_form": ("total variation is at most 1, so the sum-of-eps check can fail only "
-                                     "in rows whose sum is below 1: here only the BHW rows (sum 0); every "
-                                     "other row meets it trivially"),
+                                     "in rows whose sum is below 1: here only the two BHW rows without "
+                                     "flips (sum 0); every other row meets it trivially"),
             "weighted_statement": ("For assignments a, b of the later draws, TV <= sum over the positions "
                                    "j where they differ of E|D(k + j, h)|, h drawn from the law of the "
                                    "history at k + j under the draws of one assignment before j (the hybrid "
                                    "argument; the smaller of the two orders is used). Not in the Lean; "
-                                   "it can lie below 1, so the check can fail."),
+                                   "it can lie below 1. For every member in Turns it holds by the hybrid "
+                                   "argument and data processing, so its check verifies the simulator, "
+                                   "not the members. It is attained at pairs differing in one draw and "
+                                   "is loose at the pairs of largest total variation where members read "
+                                   "(the hybrids and the logit rows)."),
             "weighted_all_hold_within_turns": all(r["weighted_form"]["violations"] == 0 for r in rows[:-1])}
 
 

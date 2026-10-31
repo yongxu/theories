@@ -69,7 +69,7 @@ Over every end reached within five steps from stock 0 to 4: 65 openings need bot
 | Arm | Rule | Record | Units × calls | Role |
 |---|---|---|---|---|
 | L | by line | given, naming the line | 20 × 4 (lines 1 to 3, no fault) | premise: the crew reads a record (at least 48 of 60 line calls correct the named line) |
-| G | by count | written by the harness, wording drawn apart from the line | 20 × 3 | harness check: neither m2 nor m3 rejects |
+| G | by count | written by the harness, wording drawn apart from the line | 20 × 3 | harness check: m2 and m3 on the crew's acts, Holm over G's 12 p-values (six models) at 0.05; any rejection stops the whole run |
 | P | by count | given, naming the reporting member | 20 × 3 | planted leak: whether crews read a member's name as a line |
 | C | by count | kept by the clerk | 40 × 6 (three situations, a clerk and a crew call each) | the test |
 
@@ -79,48 +79,53 @@ In C and G the three situations of a unit share the number of reports (drawn fro
 - m1, the clerk's records: the frozen parser reads the lines each record names (a line by number, word or ordinal, or a member on the roster; 16 fixtures, all read right, among them a negation naming every line and an opaque token), and the test asks whether records name the faulty line beyond chance. A record naming every line, or the same line in all three situations, adds nothing to it, and a name drawn apart from the fault leaves it exact. Line content alone is an instruction violation, reported, not a contradiction: a constant mention changes no reading.
 - m2, the crew's matches (a unit's count of situations whose act corrects the faulty line): RF6.1's forbidden case. Its size at 30 units by simulation was 0.032 to 0.045 at 0.05.
 - m3, any dependence of the crew's act on the line: on the first, third, fifth … units a map from line to act is fitted (at each line the act most in excess of its within-unit expectation, ties in a frozen order), and its matches are tested on the other units; a constant map gives p = 1. The halves are independent under the null, so the test is exact.
+- m4, any dependence of what the records name on the line: the same fitted-map test on the parsed records, a map from line to a named line fitted on the odd units (ties in the order 1, 2, 3) and its matches, a record at a fault on line i naming the map's line, tested on the even units. m1 asks only whether records name the faulty line, so a clerk naming another line at each fault (a fixed map from line to line) leaves m1 at p = 1 though the record depends on the line; m4 finds it whether or not the crew reads it (40 units of records naming lines 2, 3 and 1 at faults on lines 1, 2 and 3: m1's p = 1, m4's below 10⁻¹⁵, `tr4.json`, `shifted_record_example`). m1 stays, being the stronger test against naming the faulty line (at 1 call in 10 and 40 units, 1 at 0.05 against m4's 0.927).
 
-m3 is in the verdict, not reported only: C1 is broader than its forbidden case. A crew correcting lines 2, 3 and 1 at faults on lines 1, 2 and 3 in every unit has m2's p = 1 though the line is fully read (40 units; m3's p is below 10⁻¹⁵, `tr4.json`, `permuted_map_example`), and a measure bearing on C1 that is resolved against it must contradict it. m2 stays one-sided, as RF6.1's forbidden case is matching. Reported only: the Hoeffding bound test of mean matches above 1 (the per-fiber bound's form), whether any record has line content, every record and its parse.
+m3 and m4 are in the verdict, not reported only: C1 is broader than its forbidden case. A crew correcting lines 2, 3 and 1 at faults on lines 1, 2 and 3 in every unit has m2's p = 1 though the line is fully read (40 units; m3's p is below 10⁻¹⁵, `tr4.json`, `permuted_map_example`), and a measure bearing on C1 that is resolved against it must contradict it. m2 stays one-sided, as RF6.1's forbidden case is matching. Reported only: the Hoeffding bound test of mean matches above 1 (the per-fiber bound's form), whether any record has line content, every record and its parse.
 
-**Verdict rule.** C1 contradicted for a model where m1, m2 or m3 rejects, Holm at 0.05 over the 18 p-values (three measures, six models). Holm bounds at 0.05 the family-wise rate of contradicting any model that keeps the rule. One such model is contradicted with probability at most 3 × 0.05/18 ≈ 0.0083 where no other p-value is rejected (Holm's first step), and at most 0.05 where every other model's three are (its own then meet 0.05/3, 0.05/2 and 0.05). Where m2 rejects, the contradiction is RF6.1's forbidden case; where only m1 or m3 does, the reading in force is not the register's rule, though no correction beyond chance is shown. Not contradicted otherwise, and reported with the leak sizes the power check excludes. A model failing L's premise is void for C. G rejecting stops the run as a harness fault.
+**Verdict rule.** C1 contradicted for a model where m1, m2, m3 or m4 rejects, Holm at 0.05 over the 24 p-values (four measures, six models). Holm bounds at 0.05 the family-wise rate of contradicting any model that keeps the rule. One such model is contradicted with probability at most 4 × 0.05/24 ≈ 0.0083 where no other p-value is rejected (Holm's first step), and at most 0.05 where every other model's four are (its own then meet 0.05/4, 0.05/3, 0.05/2 and 0.05). Where m2 rejects, the contradiction is RF6.1's forbidden case; where only m1, m3 or m4 does, the reading in force is not the register's rule, though no correction beyond chance is shown. Not contradicted otherwise, reported with the power check's chance of catching each simulated leak at the size run: a sensitivity, not an upper bound on any leak's rate. A model failing L's premise is void for C.
+
+**Arm G, the harness check.** G is scored before C: m2 and m3 on G's crew acts for each model, Holm over the 12 p-values (two measures, six models) at 0.05. Any rejection stops the whole run, for every model, since the harness is shared: the fault is found and fixed, and the test is frozen again before any call of C is scored. Simulated at 20 units (600 replications, two models each of the three faithful crews), a correct harness stops the run with probability 0.022, each model's two p-values meeting 0.05/12 in 0.0036 of its runs; testing each p-value at 0.05 instead would stop it in 0.337. A harness carrying the line in a channel every crew reads stops it in 0.25 of runs at 1 call in 10 and 0.995 at 3 in 10 (`tr4.json`, `harness_check`).
 
 ## The power check (simulated clerks and crews; 600 replications, 400 at 60 units)
 
-The clerk's record is a string, read by the frozen parser; the crew acts on a line the record carries where it reads it, otherwise as its own distribution. Rejection at 0.05 for each measure, and P(C1 contradicted) at Holm's first step (a model's least p-value at 0.05/18, no other rejected) and at its last steps (at 0.05/3, every other model rejected), with 40 units unless stated:
+The clerk's record is a string, read by the frozen parser; the crew acts on a line the record carries where it reads it, otherwise as its own distribution. Rejection at 0.05 for each measure, and P(C1 contradicted) at Holm's first step (a model's least p-value at 0.05/24, no other rejected) and at its last steps (at 0.05/4, every other model rejected), with 40 units unless stated:
 
-| Simulated institution | Mean matches per unit | m1 at 0.05 | m2 at 0.05 | m3 at 0.05 | C1, first step | C1, last steps |
-|---|---|---|---|---|---|---|
-| Faithful crew, each line 0.3, replenish 0.1 | 0.90 | 0 | 0.048 | 0.032 | 0.003 | 0.023 |
-| Faithful crew, each line 0.3, replenish 0.1, 60 units | 0.90 | 0 | 0.035 | 0.048 | 0.013 | 0.020 |
-| Faithful crew, uniform over the four acts | 0.76 | 0 | 0.035 | 0.038 | 0.003 | 0.020 |
-| Faithful crew, skewed (0.6, 0.25, 0.1, 0.05) | 0.95 | 0 | 0.033 | 0.035 | 0.003 | 0.015 |
-| Control: every record names lines 1, 2 and 3 (a negation) | 0.90 | 0 | 0.043 | 0.040 | 0.007 | 0.030 |
-| Control: every record names line 2, the crew reads it | 1.00 | 0 | 0.013 | 0.002 | 0 | 0.002 |
-| Control: 3 records in 10 name a line drawn apart from the fault, the crew reads it | 0.93 | 0.020 | 0.047 | 0.038 | 0.010 | 0.033 |
-| Fixed by position (always line 1) | 1.00 | 0 | 0 | 0 | 0 | 0 |
-| Fixed by a cue (line = number of reports) | 1.00 | 0 | 0 | 0 | 0 | 0 |
-| Fixed by history (the previous call's line; calls not fresh) | 0.34 | 0 | 0 | 0.567 | 0.167 | 0.393 |
-| Explicit leak, 1 call in 10 | 1.11 | 1 | 0.470 | 0.128 | 0.985 | 1 |
-| Explicit leak, 1 call in 10, 20 units | 1.11 | 0.938 | 0.250 | 0.078 | 0.593 | 0.865 |
-| Explicit leak, 3 in 10 | 1.50 | 1 | 0.998 | 0.850 | 1 | 1 |
-| All or nothing per unit, 2 in 10 | 1.29 | 1 | 0.808 | 0.417 | 0.980 | 0.993 |
-| Threshold clerk (leaks at 3 reports) | 1.56 | 1 | 0.982 | 0.835 | 1 | 1 |
-| Implicit leak read by the crew, 1 in 10 | 1.11 | 0 | 0.438 | 0.113 | 0.113 | 0.267 |
-| Implicit leak, 2 in 10 | 1.30 | 0 | 0.885 | 0.525 | 0.557 | 0.782 |
-| Implicit leak, 2 in 10, 60 units | 1.30 | 0 | 0.983 | 0.688 | 0.810 | 0.932 |
-| Implicit leak, 3 in 10 | 1.51 | 0 | 0.993 | 0.860 | 0.942 | 0.992 |
-| Implicit leak, 3 in 10, 60 units | 1.50 | 0 | 1 | 0.970 | 0.993 | 1 |
-| Hybrid: implicit leak 3 in 10, read half the time | 1.22 | 0 | 0.760 | 0.305 | 0.350 | 0.582 |
-| Hybrid: implicit leak 3 in 10, read half the time, 60 units | 1.22 | 0 | 0.882 | 0.497 | 0.575 | 0.755 |
-| Implicit leak, 5 in 10 | 1.90 | 0 | 1 | 1 | 1 | 1 |
-| Opaque token the crew maps to another line, 3 in 10 | 0.64 | 0 | 0 | 0.847 | 0.517 | 0.728 |
-| Opaque token the crew maps to another line, 3 in 10, 60 units | 0.65 | 0 | 0 | 0.963 | 0.800 | 0.912 |
-| Opaque token the crew maps to another line, every call | 0.04 | 0 | 0 | 1 | 1 | 1 |
-| Explicit name of another line, 3 in 10, read by the crew | 0.64 | 0 | 0 | 0.850 | 0.497 | 0.730 |
+| Simulated institution | Mean matches per unit | m1 at 0.05 | m2 at 0.05 | m3 at 0.05 | m4 at 0.05 | C1, first step | C1, last steps |
+|---|---|---|---|---|---|---|---|
+| Faithful crew, each line 0.3, replenish 0.1 | 0.90 | 0 | 0.048 | 0.032 | 0 | 0.003 | 0.015 |
+| Faithful crew, each line 0.3, replenish 0.1, 60 units | 0.90 | 0 | 0.035 | 0.048 | 0 | 0.013 | 0.015 |
+| Faithful crew, uniform over the four acts | 0.76 | 0 | 0.035 | 0.038 | 0 | 0.003 | 0.018 |
+| Faithful crew, skewed (0.6, 0.25, 0.1, 0.05) | 0.95 | 0 | 0.033 | 0.035 | 0 | 0.002 | 0.010 |
+| Control: every record names lines 1, 2 and 3 (a negation) | 0.90 | 0 | 0.043 | 0.040 | 0 | 0.005 | 0.023 |
+| Control: every record names line 2, the crew reads it | 1.00 | 0 | 0.013 | 0.002 | 0 | 0 | 0 |
+| Control: 3 records in 10 name a line drawn apart from the fault, the crew reads it | 0.93 | 0.020 | 0.047 | 0.038 | 0.018 | 0.008 | 0.030 |
+| Fixed by position (always line 1) | 1.00 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Fixed by a cue (line = number of reports) | 1.00 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Fixed by history (the previous call's line; calls not fresh) | 0.34 | 0 | 0 | 0.567 | 0 | 0.137 | 0.365 |
+| Explicit leak, 1 call in 10 | 1.11 | 1 | 0.470 | 0.128 | 0.927 | 0.985 | 1 |
+| Explicit leak, 1 call in 10, 20 units | 1.11 | 0.938 | 0.250 | 0.078 | 0.458 | 0.590 | 0.862 |
+| Explicit leak, 3 in 10 | 1.50 | 1 | 0.998 | 0.850 | 1 | 1 | 1 |
+| All or nothing per unit, 2 in 10 | 1.29 | 1 | 0.808 | 0.417 | 0.938 | 0.980 | 0.993 |
+| Threshold clerk (leaks at 3 reports) | 1.56 | 1 | 0.982 | 0.835 | 1 | 1 | 1 |
+| Implicit leak read by the crew, 1 in 10 | 1.11 | 0 | 0.438 | 0.113 | 0 | 0.085 | 0.240 |
+| Implicit leak, 2 in 10 | 1.30 | 0 | 0.885 | 0.525 | 0 | 0.522 | 0.735 |
+| Implicit leak, 2 in 10, 60 units | 1.30 | 0 | 0.983 | 0.688 | 0 | 0.775 | 0.920 |
+| Implicit leak, 3 in 10 | 1.51 | 0 | 0.993 | 0.860 | 0 | 0.930 | 0.987 |
+| Implicit leak, 3 in 10, 60 units | 1.50 | 0 | 1 | 0.970 | 0 | 0.993 | 1 |
+| Hybrid: implicit leak 3 in 10, read half the time | 1.22 | 0 | 0.760 | 0.305 | 0 | 0.305 | 0.538 |
+| Hybrid: implicit leak 3 in 10, read half the time, 60 units | 1.22 | 0 | 0.882 | 0.497 | 0 | 0.535 | 0.720 |
+| Implicit leak, 5 in 10 | 1.90 | 0 | 1 | 1 | 0 | 1 | 1 |
+| Opaque token the crew maps to another line, 3 in 10 | 0.64 | 0 | 0 | 0.847 | 0 | 0.485 | 0.698 |
+| Opaque token the crew maps to another line, 3 in 10, 60 units | 0.65 | 0 | 0 | 0.963 | 0 | 0.775 | 0.900 |
+| Opaque token the crew maps to another line, every call | 0.04 | 0 | 0 | 1 | 0 | 1 | 1 |
+| Explicit name of another line, 3 in 10, read by the crew | 0.64 | 0 | 0 | 0.850 | 1 | 1 | 1 |
+| Explicit name of another line, 3 in 10, not read by the crew | 0.89 | 0 | 0.022 | 0.033 | 1 | 1 | 1 |
+| Explicit name of another line, 1 in 10, not read by the crew | 0.90 | 0 | 0.042 | 0.032 | 0.913 | 0.498 | 0.788 |
 
-The six rows where the rule is kept (three faithful crews, three controls) are contradicted at 0.003 to 0.010 at the first step and 0.015 to 0.033 at the last steps. The bounds are 0.0083 and 0.05; the two values above the first (0.010 here, and 0.013 for the 60-unit faithful row over 400 replications) are sampling, the tests being exact.
+Of the six rows where the rule is kept (three faithful crews, three controls), five are contradicted at 0.002 to 0.008 at the first step and 0.010 to 0.030 at the last steps; the constant control, every record naming line 2, at 0 and 0, since a constant record leaves every test at its null. The bounds are 0.0083 and 0.05; the one value above the first (0.013, the 60-unit faithful row over 400 replications) is sampling, the tests being exact.
 
-What the rules give: explicit leaks are caught through m1 at 40 units from 1 call in 10 (0.985 at the first step; 0.593 at 20 units). Leaks the crew reads and the parser cannot are resolved at 40 units from about 3 calls in 10 (0.942 to 0.992), and at 60 units from 2 in 10 (0.810 to 0.932). A token the crew maps to another line, and an explicit name of another line, are found by m3 alone (at 3 in 10, 0.517 to 0.728 and 0.497 to 0.730; the token at 60 units, 0.800 to 0.912): matching, m2, does not see them. Records naming every line, one constant line or a line drawn apart from the fault leave every test at its null, though each carries line content. A verdict of no leak rests only on "fewer than 3 in 10, read by the crew, at this size". The Hoeffding bound test is far weaker (0.278 at 3 in 10) and is reported only. Arm L's premise passes with probability 0.994 at a crew competence of 0.9, 0.576 at 0.8 and 0.057 at 0.7.
+What the rules give (each figure Holm's first step to its last): explicit leaks of the faulty line are caught through m1 at 40 units from 1 call in 10 (0.985 to 1; 0.590 to 0.862 at 20 units). Leaks the crew reads and the parser cannot are caught at 40 units with 0.930 to 0.987 at 3 calls in 10, and at 60 units with 0.775 to 0.920 at 2 in 10. An explicit name of another line is found by m4 whether or not the crew reads it (1 to 1 at 3 in 10; 0.498 to 0.788 at 1 in 10, not read). An opaque token the crew maps to another line is found by m3 alone (0.485 to 0.698 at 3 in 10; 0.775 to 0.900 at 60 units): matching, m2, does not see it, and the parser cannot read it. Records naming every line, one constant line or a line drawn apart from the fault leave every test at its null, though each carries line content. A model not contradicted is reported with these figures, a sensitivity, not an exclusion: at 40 units, a leak the crew reads as the faulty line in 3 calls of 10 would have been caught with power 0.930 to 0.987, and an opaque token it maps to another line with 0.485 to 0.698; weaker leaks, and a channel neither parser nor crew reads, are not excluded, and no upper bound on a leak's rate is computed (that would need a model of the leak, and none is designed). The Hoeffding bound test is far weaker (0.278 at 3 in 10) and is reported only. Arm L's premise passes with probability 0.994 at a crew competence of 0.9, 0.576 at 0.8 and 0.057 at 0.7.
 
 ## Rivals, and what separates them
 
@@ -131,9 +136,10 @@ What the rules give: explicit leaks are caught through m1 at 40 units from 1 cal
 | Unfrozen acceptability | every configuration correctable | the answer key frozen before any call; the widened arm |
 | An opening by support read as a revision | `opens_by_support` counted as revising | each opening classed by its source |
 | Readers fixed by position or cue | pass C1 (they read only the record) | nothing needs to; they are consistent with the bridge |
-| A reader fixed by history (the previous call's line) | acts on information outside the register, which only non-fresh calls give; its anti-matching is not RF6.1's forbidden case | fresh calls exclude it; were calls not fresh, m3 finds it (0.167 to 0.393 at 40 units), m2 does not |
+| A reader fixed by history (the previous call's line) | acts on information outside the register, which only non-fresh calls give; its anti-matching is not RF6.1's forbidden case | fresh calls exclude it; were calls not fresh, m3 finds it (0.137 to 0.365 at 40 units), m2 does not |
 | Line content that does not depend on the fault (a negation naming every line, a constant or chance name) | C1 holds, though a parser flagging any mention would contradict it | m1 tests whether records name the faulty line, not mention; such records leave every test at its null |
-| A channel the crew maps to another line (an opaque token, a name of another line) | C1 false with no match beyond chance (m2's p = 1 where every call leaks) | m3 (0.517 to 0.728 at 3 in 10; 1 where every call leaks) |
+| A token the crew maps to another line | C1 false with no match beyond chance (m2's p = 1 where every call leaks) | m3 (0.485 to 0.698 at 3 in 10; 1 where every call leaks) |
+| A clerk naming another line (a fixed map from line to line), read by the crew or not | C1 false; m1's p = 1, as no record names the faulty line | m4 (1 at 3 in 10, read or not; 0.498 to 0.788 at 1 in 10, not read) |
 | A channel neither the parser nor the crew reads | C1 false, no act changed | not separated; every record is reported |
 | A crew that cannot read records | passes C1 trivially | arm L's premise (the control where a rival passes the test arm) |
 | A harness that leaks the line | C1 contradicted by the harness, not the clerk | arm G |
@@ -145,11 +151,11 @@ What the rules give: explicit leaks are caught through m1 at 40 units from 1 cal
 
 ## Lessons met ([experiments/README](../README.md#freezing-a-test-on-a-trained-system))
 
-Resolved differences: the power table fixes what C1 can rest on (3 in 10, read by the crew, at 40 units). The law's quantifier: every situation of the lumped fiber in every unit, so uniformity over S is measured, not success on draws. The system met: readers fixed by position, cue and history, all-or-nothing and threshold clerks, hybrids, channels mapped to another line, and records with line content apart from the fault; the parser runs on every simulated record; the call is the unit. Exploration apart from selection: there is no learning here. Guarded support: C1's "not contradicted" reads m1, m2, m3, L and G. A control where a rival passes: arm L.
+Resolved differences: the power table states each simulated leak's chance of being caught at 40 units (3 in 10, read by the crew, 0.930 to 0.987); a model not contradicted is reported with it, as a sensitivity, not a bound on leaks. The law's quantifier: every situation of the lumped fiber in every unit, so uniformity over S is measured, not success on draws. The system met: readers fixed by position, cue and history, all-or-nothing and threshold clerks, hybrids, channels mapped to another line, and records with line content apart from the fault; the parser runs on every simulated record; the call is the unit. Exploration apart from selection: there is no learning here. Guarded support: C1's "not contradicted" reads m1, m2, m3, m4, L and G. A control where a rival passes: arm L.
 
 ## Choices left for the freeze
 
-The six model IDs; 40 or 60 units in C (60 raises a leak the crew reads in 2 calls of 10 to 0.810 to 0.932, and a token mapped to another line in 3 of 10 to 0.800 to 0.912, at a cost of 120 more calls a model); how m3 fits its map (half the units here; a scan over maps is a choice of power, not of validity); the prompts' wording; the parser's patterns; the temperature per model; whether P is kept (it is a finding about crews, not a premise).
+The six model IDs; 40 or 60 units in C (60 raises a leak the crew reads in 2 calls of 10 to 0.775 to 0.920, and a token mapped to another line in 3 of 10 to 0.775 to 0.900, at a cost of 120 more calls a model); how m3 and m4 fit their maps (half the units here; a scan over maps is a choice of power, not of validity); the prompts' wording; the parser's patterns; the temperature per model; whether P is kept (it is a finding about crews, not a premise).
 
 ## Candidate core lemmas (no Lean written)
 
@@ -337,4 +343,4 @@ In the repository: [IN1](../direction-installation/README.md) (an institution si
 
 # Provenance
 
-AI-written (a Claude Code session), 31 October 2026, from the module sources, the two records, plan §10 to §12, experiments/README and a reader's report on the laws. Stage 0 by `tr4.py` and `tr5.py` (Python 3.11, standard library, frozen seed 20261031; each under a minute). The first run of this build left the two scripts without documents; this run kept their mirrors and exact checks, strengthened `coarser_opens_nothing`'s check to the form its proof gives, added the per-fiber bound, Holm's column and arm P to TR4, fixed TR5's uninformed formation (it read an empty reading, not a wider one), added the horizon-sink, value-blind and vacuous-reading checks, and rebuilt TR5's power check on the protocol above. Revised the same day after an independent review (an Opus review with an adversarial verifier, and a cross-model review): TR4's m1 now asks whether records name the faulty line, not whether they mention a line, with the parser run on every simulated record and three controls whose records carry line content apart from the fault; m3, any dependence of the crew's act on the line, joins the verdict, Holm runs over 18 p-values, and the power check reports Holm's first and last steps; TR5's V1 tests departures from the audited acts against the resolution's tolerance, three noisy failing policies and a harness difference are added, a pass needs a complete audit (else unresolved), and V4 and V5 name their bridges. Not yet reviewed by a person.
+AI-written (a Claude Code session), 31 October 2026, from the module sources, the two records, plan §10 to §12, experiments/README and a reader's report on the laws. Stage 0 by `tr4.py` and `tr5.py` (Python 3.11, standard library, frozen seed 20261031; each under a minute). The first run of this build left the two scripts without documents; this run kept their mirrors and exact checks, strengthened `coarser_opens_nothing`'s check to the form its proof gives, added the per-fiber bound, Holm's column and arm P to TR4, fixed TR5's uninformed formation (it read an empty reading, not a wider one), added the horizon-sink, value-blind and vacuous-reading checks, and rebuilt TR5's power check on the protocol above. Revised the same day after an independent review (an Opus review with an adversarial verifier, and a cross-model review): TR4's m1 now asks whether records name the faulty line, not whether they mention a line, with the parser run on every simulated record and three controls whose records carry line content apart from the fault; m3, any dependence of the crew's act on the line, joins the verdict, Holm runs over 18 p-values, and the power check reports Holm's first and last steps; after a second review round, m4, any dependence of what the records name on the line, joins it too (Holm over 24 p-values, with a clerk naming another line simulated with a crew that does not read it), arm G gets its own level (Holm over 12 p-values, a rejection stopping the whole run) and a simulated false-stop rate, and a model not contradicted is reported with the power check's sensitivities, not as excluding a leak; TR5's V1 tests departures from the audited acts against the resolution's tolerance, three noisy failing policies and a harness difference are added, a pass needs a complete audit (else unresolved), and V4 and V5 name their bridges. Not yet reviewed by a person.

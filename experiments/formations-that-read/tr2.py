@@ -336,12 +336,25 @@ def power_paired(n, p_read, p_unread, alpha, crn):
 
 
 def coupled_discordance(p_read, p_unread, kappa):
-    """Discordance chances (majority way, minority way) when a share kappa of pairs is coupled
-    monotonically by the shared seed (discordant one way only, with chance |p_read - p_unread|) and the
-    rest are drawn independently. kappa = 1 is the shared-seed idealization, kappa = 0 independent draws.
+    """Discordance chances (majority way, minority way) when a share |kappa| of pairs is coupled by the
+    shared seed and the rest are drawn independently. kappa > 0: coupled monotonically (discordant one way
+    only, with chance |p_read - p_unread|); kappa < 0: coupled antitonically, the most discordant coupling
+    the rates allow (joint success max(0, p_read + p_unread - 1), the Frechet lower bound), so a shared seed
+    can also raise discordance above independence (review round 2, item 12). kappa = 1 is the shared-seed
+    idealization, kappa = 0 independent draws, kappa = -1 the worst coupling.
     A pilot measures the two chances directly, as the counts of discordant pairs each way."""
     hi, lo = max(p_read, p_unread), min(p_read, p_unread)
-    return kappa * (hi - lo) + (1 - kappa) * hi * (1 - lo), (1 - kappa) * lo * (1 - hi)
+    ind_maj, ind_min = hi * (1 - lo), lo * (1 - hi)
+    if kappa >= 0:
+        return kappa * (hi - lo) + (1 - kappa) * ind_maj, (1 - kappa) * ind_min
+    both = max(0.0, hi + lo - 1)
+    w = -kappa
+    return w * (hi - both) + (1 - w) * ind_maj, w * (lo - both) + (1 - w) * ind_min
+
+
+def worst_discordance(p_read, p_unread):
+    """The most discordant coupling of two binary draws with these rates (kappa = -1 above)."""
+    return coupled_discordance(p_read, p_unread, -1.0)
 
 
 def power_discordant(n, p01, p10, alpha):
@@ -382,22 +395,30 @@ def act_power_table():
                 "pairs for power 0.9 (two-sided 0.05)": smallest_n(lambda n: power_paired(n, pr, pu, ALPHA_ACTS, crn)),
                 "power at 100, 400, 1600 pairs": [round(power_paired(n, pr, pu, ALPHA_ACTS, crn), 4) for n in (100, 400, 1600)]}
         out[label] = row
-    # Stage B's planned 600 pairs, and the worst case at the split over four factors (review stats-8).
+    # Stage B's planned 600 pairs, independent draws and the worst coupling, at the split over four
+    # factors (review stats-8; round 2, item 12: independence is a scenario, not the worst case).
     split = ALPHA_ACTS / 4
     worst = {}
     for label, pr, pu in effects:
+        wmaj, wmin = worst_discordance(pr, pu)
         worst[label] = {
             "power at 600 pairs, independent draws, two-sided 0.05": round(power_paired(600, pr, pu, ALPHA_ACTS, False), 4),
             "power at 600 pairs, shared seed (monotone coupling), two-sided 0.05": round(power_paired(600, pr, pu, ALPHA_ACTS, True), 4),
+            "power at 600 pairs, worst coupling, two-sided 0.05": round(power_discordant(600, wmaj, wmin, ALPHA_ACTS), 4),
+            "discordance per pair, independent draws and worst coupling": [
+                round(sum(coupled_discordance(pr, pu, 0.0)), 4), round(wmaj + wmin, 4)],
             "pairs for power 0.9, independent draws, two-sided 0.05/4": smallest_n(lambda n: power_paired(n, pr, pu, split, False)),
-            "power at 600, 1200, 1600 pairs, independent draws, two-sided 0.05/4": [
-                round(power_paired(n, pr, pu, split, False), 4) for n in (600, 1200, 1600)]}
-    out["Stage B's 600 pairs and the worst case (independent draws) at 0.05/4"] = worst
+            "pairs for power 0.9, worst coupling, two-sided 0.05/4": smallest_n(lambda n: power_discordant(n, wmaj, wmin, split)),
+            "power at 600, 1200, 1600, 3200 pairs, independent draws, two-sided 0.05/4": [
+                round(power_paired(n, pr, pu, split, False), 4) for n in (600, 1200, 1600, 3200)],
+            "power at 600, 1200, 1600, 3200 pairs, worst coupling, two-sided 0.05/4": [
+                round(power_discordant(n, wmaj, wmin, split), 4) for n in (600, 1200, 1600, 3200)]}
+    out["Stage B's 600 pairs: independent draws and the worst coupling, at 0.05/4"] = worst
     # Partial coupling: what the pilot measures (the minority share of discordant pairs) and the pairs it implies.
     coupling = {}
     for label, pr, pu in effects[1:3]:
         rows = {}
-        for kappa in (1.0, 0.9, 0.75, 0.5, 0.25, 0.0):
+        for kappa in (1.0, 0.9, 0.75, 0.5, 0.25, 0.0, -0.5, -1.0):
             pmaj, pmin = coupled_discordance(pr, pu, kappa)
             rows["coupled share %s" % kappa] = {
                 "discordance per pair, majority way and minority way": [round(pmaj, 4), round(pmin, 4)],
@@ -405,7 +426,7 @@ def act_power_table():
                 "pairs for power 0.9, two-sided 0.05": smallest_n(lambda n: power_discordant(n, pmaj, pmin, ALPHA_ACTS)),
                 "pairs for power 0.9, two-sided 0.05/4": smallest_n(lambda n: power_discordant(n, pmaj, pmin, split))}
         coupling[label] = rows
-    out["partial coupling under a shared seed (a share of pairs coupled monotonically, the rest independent)"] = coupling
+    out["partial coupling under a shared seed (a share of pairs coupled monotonically, or at a negative share antitonically, the rest independent)"] = coupling
     # A/A: the exact test's false-alarm rate is at most alpha by construction; computed here.
     out["A/A (no difference), independent draws at 10%: rate of a resolved difference at 400 pairs"] = round(
         power_paired(400, 0.10, 0.10, ALPHA_ACTS, False), 4)
@@ -753,6 +774,20 @@ def main():
                 abs(power_discordant(n, *coupled_discordance(pr, pu, 1.0), ALPHA_ACTS) - power_paired(n, pr, pu, ALPHA_ACTS, True)) < 1e-9)
             chk("partial coupling at share 0 is independent draws' power",
                 abs(power_discordant(n, *coupled_discordance(pr, pu, 0.0), ALPHA_ACTS) - power_paired(n, pr, pu, ALPHA_ACTS, False)) < 1e-9)
+    # The worst coupling is the least powerful: over joint success t from the Frechet lower bound to the
+    # monotone coupling (the rates fixed, 21 points), power at each size is least at the lower bound. (It is
+    # not monotone in t everywhere: near the monotone end at small sizes the exact test's discreteness bites.)
+    for pr, pu in ((0.01, 0.14), (0.10, 0.15), (0.10, 0.12), (0.30, 0.35)):
+        lo_t, hi_t = max(0.0, pr + pu - 1), min(pr, pu)
+        ts = [lo_t + (hi_t - lo_t) * i / 20 for i in range(21)]
+        for n in (200, 600, 1600, 3200):
+            for alpha in (ALPHA_ACTS, ALPHA_ACTS / 4):
+                pw = [power_discordant(n, pu - t, pr - t, alpha) for t in ts]
+                chk("the worst coupling's power is the least over the couplings",
+                    pw[0] <= min(pw) + 1e-12, (pr, pu, n, alpha))
+                chk("the worst coupling's power is at most independent draws'",
+                    power_discordant(n, *worst_discordance(pr, pu), alpha) <= power_paired(n, pr, pu, alpha, False) + 1e-12,
+                    (pr, pu, n, alpha))
     pipe = pipeline_table()
     probes = probe_power()
     drift = drift_check()
