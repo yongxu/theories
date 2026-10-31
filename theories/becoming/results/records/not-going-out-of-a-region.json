@@ -42,8 +42,8 @@
       ]
     },
     {
-      "en": "Where every step of continuation keeps to the region, its end a member wherever its start is, or goes from a member to something outside, such a line has a step going out, reached from the start and reaching the end: the mark law, with keeping to the region as what the ends fail. Where membership is decided every step is of one kind or the other.",
-      "zh": "每步续或守于域（始为员则终亦为员）或自员出至域外，则此线上有一出步，自始可及，可及其终：即两端分则中有标之律，以守于域为两端所不合者。属与否已判定处，每步皆为二者之一。",
+      "en": "Where every step of continuation keeps to the region, its end a member wherever its start is, or goes from a member to something outside, a line from a member to something outside has a step going out, reached from the start and reaching the end: the mark law, with keeping to the region as what the ends fail. Where membership is decided every step is of one kind or the other.",
+      "zh": "每步续或守于域（始为员则终亦为员）或自员出至域外，则自员至域外之线上有一出步，自始可及，可及其终：即两端分则中有标之律，以守于域为两端所不合者。属与否已判定处，每步皆为二者之一。",
       "declarations": [
         "Becoming.«内至外之线有出步»",
         "Becoming.«定则内至外之线有出步»"
@@ -62,16 +62,12 @@
     {
       "en": "«不外者内则不出当且仅当闭» takes as a hypothesis that membership is stable, whatever is not outside the region lying in it; «内至外之线有出步» that every step of continuation keeps to the region, its end a member wherever its start is, or goes from a member to something outside; «定则内至外之线有出步» that membership is decided; «对称则不出当且仅当逆不出» that the relation is symmetric.",
       "zh": "«不外者内则不出当且仅当闭» 以凡不外者皆内为假设；«内至外之线有出步» 以每步续或守于域（始为员则终亦为员）或自员出至域外为假设；«定则内至外之线有出步» 以属与否已判定为假设；«对称则不出当且仅当逆不出» 以关系对称为假设。"
-    },
-    {
-      "en": "«不出皆闭当且仅当排中» quantifies over every carrier in the lowest universe; it is a lemma of the logic, not a calibration, the need coming from membership being any proposition; its witness has two occurrences.",
-      "zh": "«不出皆闭当且仅当排中» 对最低宇宙层级之每一载体量化；其所需出自属可为任一命题，故是逻辑之引理，不是校准；其见证只有二发生。"
     }
   ],
   "does_not_show": [
     {
-      "en": "That a region nothing goes out of is closed: where membership is not stable, what a member bears the relation to is only not outside.",
-      "zh": "不出之域闭：非凡不外者皆内时，员所及者只是不外于域。",
+      "en": "That a region nothing goes out of is closed: where membership is not stable, what a member bears the relation to is only not outside. Its holding for every carrier in Type, relation and region is excluded middle, a lemma of «不外者内则不出当且仅当闭».",
+      "zh": "不出之域闭：非凡不外者皆内时，员所及者只是不外于域；于 Type 之每一载体、关系与域皆闭恰为排中，是 «不外者内则不出当且仅当闭» 之引理。",
       "kind": "non-implication",
       "witness": "Becoming.«不出皆闭当且仅当排中»"
     },
@@ -103,8 +99,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean",
       "detail": {
-        "en": "A closed region come into («闭而有入之例»): the same relation, the region of the second occurrence; it is closed, and the first, outside it, bears the relation to the second.",
-        "zh": "可入之闭域（«闭而有入之例»）：同一关系，后一发生之域；此域闭，而在外之前者以此关系及于后者。"
+        "en": "A closed region come into («闭而有入之例»): the same relation, the region of the second occurrence; it is closed, the first, outside it, bears the relation to the second, and the second does not bear it to the first, so the relation is not symmetric.",
+        "zh": "可入之闭域（«闭而有入之例»）：同一关系，后一发生之域；此域闭，在外之前者以此关系及于后者，而后者不及于前者，故此关系不对称。"
       }
     }
   ],
@@ -123,8 +119,8 @@
     "zh": "在文法上陈述有等级之边界：沿一关系之相套诸域，一线出每一域之步，及其在线上之次第。"
   },
   "correspondence": {
-    "en": "In graph terms a region nothing goes out of has no edge leaving it, and a closed region holds every successor of its members. Classically the two are one; constructively the first is the closedness of the region's double negation, they coincide on stable regions, and that they coincide on all is excluded middle. A line from inside to outside crossing a leaving edge is a discrete intermediate value property, the mark law read on a region. Where membership is undecided, not going out leaves open where what a member bears the relation to lies: the logic's gap between a proposition and its double negation, not a fact of relations (the AI's reading).",
-    "zh": "以图论言，不出之域无出边，闭之域含其员之每一后继。经典逻辑中二者为一；构造地，前者即域之双重否定之闭，二者于稳定之域上合一，于一切域上合一恰为排中。自内至外之线越一出边，是离散之介值性质，即两端分则中有标之律读于一域。属与否未定处，不出未定员所及者在何处：此是命题与其双重否定之间的逻辑缺口，非关系之事实（AI 的读法）。"
+    "en": "In graph terms a region nothing goes out of has no edge leaving it, and a closed region holds every successor of its members. Classically the two are one; constructively the first is the closedness of the region's double negation, they coincide on stable regions, and that they coincide on all is excluded middle. A line from inside to outside crossing a leaving edge is a discrete intermediate value property, the mark law read on a region. Where membership is not stable, not going out leaves open where what a member bears the relation to lies: the logic's gap between a proposition and its double negation, not a fact of relations (the AI's reading).",
+    "zh": "以图论言，不出之域无出边，闭之域含其员之每一后继。经典逻辑中二者为一；构造地，前者即域之双重否定之闭，二者于稳定之域上合一，于一切域上合一恰为排中。自内至外之线越一出边，是离散之介值性质，即两端分则中有标之律读于一域。非凡不外者皆内处，不出未定员所及者在何处：此是命题与其双重否定之间的逻辑缺口，非关系之事实（AI 的读法）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCrossing.lean",
   "aliases": [

@@ -236,7 +236,7 @@ SCOPE = (
     "GrammarCrossing: for every carrier, relation and region, nothing in a region goes out of it along the "
     "relation exactly where what is not outside it is closed under the relation; a closed region is not gone out "
     "of, an occurrence's closure among them; the two coincide where membership is stable, and that they coincide "
-    "for every relation and region is exactly excluded middle, a lemma of the logic; nothing comes into a region "
+    "for every relation and region is exactly excluded middle, a lemma of that law; nothing comes into a region "
     "along a relation exactly where nothing goes out of what lies outside it, along a symmetric relation nothing "
     "goes out exactly where nothing comes in, and some relation that is not symmetric has a closed region come "
     "into; a line under any class from a member of a region to something outside it means the region is not one "

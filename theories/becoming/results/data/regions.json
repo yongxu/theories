@@ -1334,7 +1334,7 @@
   "not-going-out-of-a-region": {
    "region": "root",
    "base": "grammar",
-   "note": "GrammarCrossing: 不出 = closedness of what is not outside; LEM calibration; going out and coming in; the step out on a line; Cut = 不出"
+   "note": "GrammarCrossing: 不出 = closedness of what is not outside; LEM lemma; going out and coming in; the step out on a line"
   },
   "observation-is-a-route": {
    "region": "knowing",

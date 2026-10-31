@@ -20,7 +20,7 @@ one definition and changes no definition of an earlier module.
   members bear the relation only to what is not outside. No decision is used. Where membership is
   stable, whatever is not outside the region lying in it, the two coincide
   (`«不外者内则不出当且仅当闭»`). That they coincide for every relation and region is exactly excluded
-  middle (`«不出皆闭当且仅当排中»`), a lemma of the logic, not a calibration: the need comes from
+  middle (`«不出皆闭当且仅当排中»`), a lemma of that law, not a calibration: the need comes from
   membership being any proposition, not from the relation.
 * **Going out and coming in.** Nothing comes into a region along a relation, nothing outside bearing it
   to a member, where the region is not gone out of along the converse (`«逆»`), and that is exactly
@@ -85,7 +85,8 @@ theorem «不外者内则不出当且仅当闭» {R : «际» α} {P : α → Pr
 
 /-- **That not going out is always being closed is exactly excluded middle.** That every region nothing
 goes out of, along every relation on every carrier in `Type`, is closed is exactly excluded middle. It
-is a lemma of the logic, not a calibration: the need comes from membership being any proposition. -/
+is a lemma of `«不外者内则不出当且仅当闭»`, the law that needs it, not a calibration: the need comes
+from membership being any proposition. -/
 theorem «不出皆闭当且仅当排中» :
     (∀ (α : Type) (R : «际» α) (P : α → Prop), «不出» R P → «闭» R P) ↔ ∀ Q : Prop, Q ∨ ¬ Q := by
   constructor
@@ -125,14 +126,16 @@ theorem «对称则不出当且仅当逆不出» {R : «际» α} {P : α → Pr
   ⟨fun none x y inside outside related => none x y inside outside (symm y x related),
    fun none x y inside outside related => none x y inside outside (symm x y related)⟩
 
-/-- **A closed region come into: a witness.** A region closed under a relation can have something
-outside bearing the relation to a member: on two occurrences, the relation from the first to the
-second, and the region of the second. Such a relation is not symmetric (`«闭则不出»`,
-`«对称则不出当且仅当逆不出»`). -/
+/-- **A closed region come into: a witness.** Some relation that is not symmetric has a region closed
+under it with something outside bearing it to a member: on two occurrences, the relation from the
+first to the second, and the region of the second. Along a symmetric relation no closed region is
+come into (`«闭则不出»`, `«对称则不出当且仅当逆不出»`). -/
 theorem «闭而有入之例» :
-    ∃ (R : «际» Bool) (P : Bool → Prop), «闭» R P ∧ ∃ x y, ¬ P x ∧ P y ∧ R x y :=
+    ∃ (R : «际» Bool) (P : Bool → Prop),
+      «闭» R P ∧ (∃ x y, ¬ P x ∧ P y ∧ R x y) ∧ ¬ «则» R («逆» R) :=
   ⟨fun x y => x = false ∧ y = true, fun b => b = true, fun _ _ _ related => related.2,
-   false, true, Bool.false_ne_true, rfl, ⟨rfl, rfl⟩⟩
+   ⟨false, true, Bool.false_ne_true, rfl, ⟨rfl, rfl⟩⟩,
+   fun symm => Bool.false_ne_true (show true = false ∧ false = true from symm false true ⟨rfl, rfl⟩).2⟩
 
 end ComingIn
 

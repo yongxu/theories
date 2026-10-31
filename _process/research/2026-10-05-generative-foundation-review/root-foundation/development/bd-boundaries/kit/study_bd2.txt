@@ -14,12 +14,13 @@ Delta:
     decision («不出当且仅当不外者闭»); where membership is stable, whatever is not outside lying inside, it is being
     closed («不外者内则不出当且仅当闭»).
   - That every region nothing goes out of is closed, for every carrier in the lowest universe, relation and region,
-    is exactly excluded middle («不出皆闭当且仅当排中»; witness on Bool): a lemma of the logic, not a calibration,
-    the need coming from membership being any proposition (08's rule, as for World.law_iff_em).
+    is exactly excluded middle («不出皆闭当且仅当排中»; witness on Bool): a lemma of «不外者内则不出当且仅当闭», the law
+    that needs it, not a calibration, the need coming from membership being any proposition (08's rule, as for
+    World.law_iff_em).
   - Going out and coming in: nothing comes in along R (not going out along «逆» R) exactly where nothing goes out of
     what lies outside, with no decision («逆之不出当且仅当外者不出»); along a symmetric relation the two coincide
     («对称则不出当且仅当逆不出»); some relation that is not symmetric has a closed region come into («闭而有入之例»,
-    a witness in the positive form).
+    a witness in the positive form, its relation shown not symmetric).
   - On a line: a line under any class from inside to outside means the region is not one nothing goes out of, with
     no decision, naming no step («内至外之线则非不出»); where each step keeps to the region (its end a member
     wherever its start is) or goes from a member to something outside, the line has a step going out, placed on
@@ -28,7 +29,7 @@ Delta:
   - The World (Becoming.ConveyanceBoundaries, a leaf, the World's case of the crossing laws): Flow.Cut is «不出» at a
     valuation's relation (cut_iff_notGoingOut, Iff.rfl); a closed region is a cut, a cut with stable membership
     closed (cut_of_closedUnder, closedUnder_of_cut); conveyance's relation is symmetric, so along it not going out
-    is not coming in (conveyance_symm, cut_iff_not_come_into). Under region_not_a_cut's premises a continuing
+    is not coming in (conveyance_symm, cut_iff_notComingIn). Under region_not_a_cut's premises a continuing
     family's region is no boundary of any event's self along conveyance, and not every member's event has its
     closure along conveyance within the family (region_no_boundary, closures_not_within_region); the clearing's
     resource region likewise, along conveyance and along living on (Clearing.resource_no_boundary).
@@ -47,8 +48,9 @@ Boundary:
   - A graded boundary (nested regions along one relation and the order of a line's steps out of them); which
     relation a self's boundary is drawn along (07 §4.2); a World formation as the inside of a blanketed law.
   - «所闭之界» and «所闭不出» are one law, stated twice (unfolded in GrammarLaws, here through «不出»); the grammar's
-    owner holds «不出»'s move into GrammarLaws for the next near-full rebuild, when the restatement goes and
-    Flow.Cut can be defined as «不出» with no new import, cut_iff_notGoingOut going too.
+    owner holds «不出»'s move into GrammarLaws for its near-full rebuild after RV21c, when the restatement goes
+    and, as it agreed, it defines Flow.Cut in Standpoints as «不出» with no new import, cut_iff_notGoingOut
+    going too; no master-law figure moves (conveyance's second law already reaches the grammar).
   - A stronger line law, asking only that every step from a member land decidedly inside or outside, holds by
     induction from the start; the mark law as stated asks the split of every step.
 Output → input: 01 §9.9 (the theorem paragraph before BD's reading, the reading citing it); 04 §1 (the cut as not
@@ -60,6 +62,6 @@ Output → input: 01 §9.9 (the theorem paragraph before BD's reading, the readi
 
 **Self-review.**
 1. `GrammarCrossing` imports only `GrammarLaws`, so `GrammarPath` can import it; what imports `GrammarPath` (`GrammarCases`) only rebuilds. `ConveyanceBoundaries` is a leaf; no definition of an earlier module changes, so `Standpoints` and `Boundaries` do not rebuild.
-2. The laws use no classical principle: decisions enter only as hypotheses («不外者内则不出当且仅当闭», «定则内至外之线有出步», closedUnder_of_cut), and «不出皆闭当且仅当排中» states exactly what the missing one is.
+2. The laws use no classical principle: stability («不外者内则不出当且仅当闭», closedUnder_of_cut) and decision («定则内至外之线有出步») enter only as hypotheses, and «不出皆闭当且仅当排中» states exactly what dropping stability for every relation and region needs.
 3. Two names changed before landing: «内至外之线则出» became «内至外之线则非不出», the law refuting not going out and naming no step (the review's finding 1), and «闭而有入» became «闭而有入之例», the grammar's naming of witnesses.
 4. Not done: the items in Boundary.

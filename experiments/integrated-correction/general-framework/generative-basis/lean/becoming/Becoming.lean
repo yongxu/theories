@@ -2688,7 +2688,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   relation, by definition (`Flow.cut_iff_notGoingOut`), so a region closed under the relation is a
   cut and a cut is closed where membership is stable (`Flow.cut_of_closedUnder`,
   `Flow.closedUnder_of_cut`); conveyance's relation is symmetric, so along it nothing goes out of a
-  region exactly where nothing comes in (`Flow.conveyance_symm`, `Flow.cut_iff_not_come_into`). Under
+  region exactly where nothing comes in (`Flow.conveyance_symm`, `Flow.cut_iff_notComingIn`). Under
   the premises of `Flow.region_not_a_cut` a continuing family's
   region is no boundary of any event's self along conveyance (`Flow.region_no_boundary`), and not
   every member's event has its closure along conveyance within the family
@@ -4232,8 +4232,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   among them (`«所闭不出»`, the closure law `«所闭之界»` read through `«不出»`); not going out of a
   region is exactly the closedness of what is not outside it, with no decision
   (`«不出当且仅当不外者闭»`); the two coincide where membership is stable (`«不外者内则不出当且仅当闭»`),
-  and that they coincide for every relation and region is exactly excluded middle, a lemma of the
-  logic (`«不出皆闭当且仅当排中»`). Nothing comes into a region along a relation exactly where nothing
+  and that they coincide for every relation and region is exactly excluded middle, a lemma of that
+  law (`«不出皆闭当且仅当排中»`). Nothing comes into a region along a relation exactly where nothing
   goes out of what lies outside it (`«逆之不出当且仅当外者不出»`); along a symmetric relation nothing
   goes out exactly where nothing comes in (`«对称则不出当且仅当逆不出»`), and some relation that is not
   symmetric has a closed region come into (`«闭而有入之例»`). A line under any class from a member to

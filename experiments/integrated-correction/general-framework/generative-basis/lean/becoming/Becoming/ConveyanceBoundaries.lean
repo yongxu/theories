@@ -10,12 +10,12 @@ it and closed under the relation. This module reads the first on the root and jo
 no definition and changes none: the cut keeps its definition in `Becoming.Standpoints`, one with
 `«不出»` by `Iff.rfl`, and this module, the World's case of the crossing laws, is a leaf.
 
-* **The World's cut is not going out.** A cut is the grammar's `«不出»` at the valuation's relation, by
+* **The World's cut is not going out.** A cut is the grammar's `«不出»` at a valuation's relation, by
   definition (`Flow.cut_iff_notGoingOut`). So a region closed under the relation is a cut
   (`Flow.cut_of_closedUnder`), and a cut is closed where membership is stable
   (`Flow.closedUnder_of_cut`), by `«闭则不出»` and `«不外者内则不出当且仅当闭»` (`Becoming.GrammarCrossing`).
   Conveyance's relation is symmetric (`Flow.conveyance_symm`), so along it nothing goes out of a region
-  exactly where nothing comes in (`Flow.cut_iff_not_come_into`, by `«对称则不出当且仅当逆不出»`).
+  exactly where nothing comes in (`Flow.cut_iff_notComingIn`, by `«对称则不出当且仅当逆不出»`).
 * **A continuing family's region is no boundary along conveyance.** Under balance and dissipation,
   read with one kind of relatum, with no repetition, decided equality and enclosure around the family
   from some step on, where something takes from the family at arbitrarily late steps, conveyance
@@ -69,7 +69,7 @@ theorem conveyance_symm :
       related.1 related.2.symm⟩
 
 /-- **Along conveyance nothing goes out of a region exactly where nothing comes in.** -/
-theorem cut_iff_not_come_into {region : X × Nat → Prop} :
+theorem cut_iff_notComingIn {region : X × Nat → Prop} :
     Cut (L.conveyance W own sig) region ↔ «不出» («逆» (L.conveyance W own sig).related) region :=
   «对称则不出当且仅当逆不出» conveyance_symm
 

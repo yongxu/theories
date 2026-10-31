@@ -45,4 +45,23 @@ After the changes, a scratch build of `GrammarCrossing` (11 theorems in 12 decla
 
 ## The re-check
 
-Pending.
+The same reader re-read the fixes (`35c0c24e6..78974a268`), read only, checking each claim against the files and not against this file. It found eleven of the twelve findings fully taken; the twelfth, the review claimed before it happened, is a landing condition, met once the re-check's own points are taken. It found the new Lean correct (`Flow.conveyance_symm`, the conveyance lemma on coming in, `«所闭不出»` as `«所闭之界»` applied, `«闭而有入之例»` in the positive form), the caps met with the receipt in place, no section number or status talk in public fields, the Chinese matching the English, and the board diff touching only BD2's row.
+
+It judged the three choices put to it. Stating the split as the Lean takes it (finding 2) is acceptable, and note §6.5 describes the stronger law correctly. `Flow.Cut` keeping its definition is a sufficient reason under rule 9, as a deferral: no law is proved twice, and once `«不出»` is in `GrammarLaws` the change needs no import. The register's category is correct in its own sense, but the texts' words differed from it.
+
+Its ten points, and what was done:
+
+1. **Should-fix: the record's correspondence said "undecided" where it means "not stable".** Where membership is stable but undecided, `«不外者内则不出当且仅当闭»` puts what a member bears the relation to inside. Taken: "where membership is not stable" (非凡不外者皆内处).
+2. **The witness did not state that its relation is not symmetric**, though the texts say "some relation that is not symmetric has a closed region come into". Taken: `«闭而有入之例»` states `¬ «则» R («逆» R)` as a third conjunct; its docstring and the record's counterexample say so.
+3. **"For every region" where it means "for every relation and region"** (01 §9.9, the landed clause, the commit message): along the empty relation every region is closed, with no excluded middle. Taken.
+4. **The regions note was stale.** Taken.
+5. **A missing dependency.** The sixth and seventh laws of conveyance-crosses-the-boundary use `closedUnder_iff_closed` and `«缘在所闭»`, which belong to master-laws-on-the-grammar. Taken: that record is a formal-reuse dependency naming both, and the not-going-out dependency no longer names `closedUnder_iff_closed`.
+6. **"The valuation's relation" where the law holds for every valuation** (04 §1, the seventh law). Taken: "a valuation's relation" (一赋值), also in the module header and the dependency's detail.
+7. **The conveyance record's Chinese validation scope at 259 of 260 characters once the receipt is in.** Taken: 254.
+8. **The record's fourth hypothesis was no premise.** Taken: folded into the first does_not_show item, whose witness the lemma is.
+9. **The study draft listed the stable cases as decisions.** Taken: stability and decision are named apart.
+10. **Nits.** Taken: `Flow.cut_iff_not_come_into` became `Flow.cut_iff_notComingIn`, pairing with `Flow.cut_iff_notGoingOut`; 01's two parentheticals are one; the record's fourth law no longer points back with "such a line".
+
+On choice (b) it asked for two additions, both made on the board row and in note §6.5. The grammar's owner, which holds that rebuild, agreed to define `Flow.Cut` in `Standpoints` as `«不出»` then and to drop `Flow.cut_iff_notGoingOut`, on the one row it opens after RV21c. The deferral moves no master-law figure: that view reads a law's declarations together, conveyance-crosses-the-boundary's second law already reaches the grammar through `Flow.region_not_a_cut`'s proof, and no cut declaration is central in the completion's coverage. On choice (c), every text now calls the excluded-middle law a lemma of `«不外者内则不出当且仅当闭»`, the law that needs it, as 08 calls `World.law_iff_em` a lemma of its law; the register keeps its category.
+
+After these changes a scratch build of `GrammarCrossing` (11 theorems in 12 declarations), `GrammarPath`, `ConveyanceBoundaries` (8 theorems), `GrammarCases` and the root module passes with no warning and every axiom report empty.
