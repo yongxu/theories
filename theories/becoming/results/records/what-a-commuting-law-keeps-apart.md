@@ -86,7 +86,7 @@ The earlier 义理·拓扑 (§四, §九) argues that a fixed-point-free symmetr
 - related, not a proved adapter: [hexagram-world-laws](hexagram-world-laws.md). The nuclear law 互 is an instance: nuclear_run_act is Law.Commutes.iterate with nuclear_act, and run_complement_apart is Law.Commutes.apart with nuclear_complement and complement_moves.
 - related, not a proved adapter: [identical-cells-under-a-descent-treating-them-alike](identical-cells-under-a-descent-treating-them-alike.md). Identical cells under a descent that treats them alike: with an exchangeable field the commuting law gives the exchanged run and the paired minima of a free-energy descent; never parting needs only a descent reading no cell's number.
 
-**Used by:** [a-code-formed-between-formations](a-code-formed-between-formations.md) · [hexagram-arrangements-and-laws](hexagram-arrangements-and-laws.md) · [hexagram-world-laws](hexagram-world-laws.md) · [identical-cells-under-a-descent-treating-them-alike](identical-cells-under-a-descent-treating-them-alike.md)
+**Used by:** [a-code-formed-between-formations](a-code-formed-between-formations.md) · [a-commuting-learner-drives-no-unread-choice](a-commuting-learner-drives-no-unread-choice.md) · [hexagram-arrangements-and-laws](hexagram-arrangements-and-laws.md) · [hexagram-world-laws](hexagram-world-laws.md) · [identical-cells-under-a-descent-treating-them-alike](identical-cells-under-a-descent-treating-them-alike.md)
 
 <a id="sources--来源"></a>
 ### Sources

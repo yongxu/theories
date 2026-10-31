@@ -87,7 +87,7 @@ In counts the bound is Cauchy's arithmetic-geometric mean inequality (Cauchy 182
 - **formal-reuse**: [conditioning-by-restriction](conditioning-by-restriction.md). evidence, mass_eq_total, posterior_single, Share.Same, share, restrict, pairWeight and openSteps: the record's weight as a total, and the share given the record.
 - related, not a proved adapter: [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md). Variational free energy bounds surprisal: its bound over the reals, for count beliefs with a positive total on the support, over hypotheses listed once, this one through the logarithm, proved there (gap_counts).
 
-**Used by:** [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md)
+**Used by:** [a-code-held-as-counts](a-code-held-as-counts.md) · [free-energy-bounds-surprisal](free-energy-bounds-surprisal.md)
 
 <a id="sources--来源"></a>
 ### Sources

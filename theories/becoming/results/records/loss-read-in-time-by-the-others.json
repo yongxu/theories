@@ -181,8 +181,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the joint selection's two conditions are independent: control left unselected with a lock left in time is not shown, since with two kinds leaving the lock below the critical mass means a rule favouring the shapers.",
-      "zh": "共同选择之二条件相互独立：控制未被选而锁定及时得离者未示，因二类之下离开临界量以下之锁定即偏向塑规者之规则。",
+      "en": "That leaving control unselected and leaving a lock in time are independent: control left unselected with a lock left in time is not shown, since with two kinds leaving the lock below the critical mass means a rule favouring the shapers.",
+      "zh": "控制未被选与锁定及时得离二者相互独立：控制未被选而锁定及时得离者未示，因二类之下离开临界量以下之锁定即偏向塑规者之规则。",
       "kind": "non-implication"
     },
     {
@@ -416,12 +416,12 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "54cf3d4aa987efed5f62a9586633fb4c678781ab27e740d98485e3d92016fd9d"
+      "sha256": "dc17310007845a736c5de9550ad17b495dd30b837ddc7d607ae819e4552dc325"
     },
     {
       "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "455a7e4eea1eda7c3463956877a76050be45170ba7d2c959c78632d96a867f60"
+      "sha256": "1156e32ff0d635d919ff1390a3a5918093ae79b6e68e458da53ec4502d6453ce"
     },
     {
       "path": "theories/meta-attractor/README.md",
@@ -450,6 +450,10 @@
     {
       "en": "27 October 2026, later: the scope item on the joint selection's two conditions reads condition 2 first for any lock that forms, under which the case not shown is control left unselected with a lock left in time, since with two kinds leaving the lock below the critical mass means a rule favouring the shapers; the reading for the shapers' capture alone follows as its own item, worded as before. The claim is unchanged.",
       "zh": "2026年10月27日，其后：关于共同选择二条件之范围条目，先以任一形成之锁定读条件二，其下所未示者为控制未被选而锁定及时得离，因二类之下离开临界量以下之锁定即偏向塑规者之规则；唯以塑规者之捕获之读法另为一条，措辞如前。主张不变。"
+    },
+    {
+      "en": "30 October 2026 (MA4c): the scope item on leaving control unselected and leaving a lock in time no longer calls them the joint selection's two conditions, the first having been restated on 29 October as control of the rule not captured (AJ5); the home section's reading says that selected control is not thereby capture. The case not shown, its reason and every law unchanged; 02-MAP.md re-pointed after reading its changes since 27 October: besides the reading's sentence above, none touches this result's home section or its reading. The rewording is the records' owner's and no reader has reviewed it, so the review time stays MA4b's.",
+      "zh": "2026年10月30日（MA4c）：言控制未被选与锁定及时得离之范围项，不复称之为共同选择之二条件，因其第一条件已于10月29日重述为规则之控制未被俘获（AJ5）；本节之读法言被选之控制不即为俘获。未示之情形、其理由与诸律皆不改；读过10月27日以来之改动后重指 02-MAP.md：除上述读法之句外，无一触及本结果之本节或其读法。此改写出自记录之主，未经读者复核，故审阅时间仍为 MA4b 之时。"
     }
   ]
 }

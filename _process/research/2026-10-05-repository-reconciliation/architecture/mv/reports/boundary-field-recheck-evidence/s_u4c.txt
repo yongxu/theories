@@ -1,0 +1,34 @@
+== Becoming.U4Boundary.descent_forms_no_dependence
+  S0 name test : pass
+  S0 reaches grammar term : False
+  S1 : True
+  S2 GivenTo name test : pass
+  S2 GivenTo names a term directly : False
+  S2 Inherits name test : pass
+  S2 Inherits names a term directly : False
+  S2 UndependedFrom name test : pass
+  S2 UndependedFrom names a term directly : False
+  S3 needs_given : {'statement names H': False, 'statement name test': 'pass', 'proof names F': False, 'others': [], 'others ok': False}
+  S3 needs_inherits : {'statement names H': False, 'statement name test': 'pass', 'proof names F': False, 'others': [], 'others ok': False}
+  S3 needs_undepended : {'statement names H': False, 'statement name test': 'pass', 'proof names F': False, 'others': [], 'others ok': False}
+  S4 theorems F names : {}
+  S5 R reaches F : True
+  S5 R reaches row : False
+  S5 cert eq : (['Becoming.Flow.no_new_dependence', 'Becoming.U4Boundary.no_new_dependence_at_model'], [True, True])
+== Becoming.U4Boundary.outside_leaves_no_offspring
+  S0 name test : pass
+  S0 reaches grammar term : True
+  S1 : True
+  S2 GivesFrom name test : pass
+  S2 GivesFrom names a term directly : True
+  S2 ListedWithin name test : pass
+  S2 ListedWithin names a term directly : True
+  S2 Outside name test : pass
+  S2 Outside names a term directly : False
+  S3 needs_gate : {'statement names H': False, 'statement name test': 'pass', 'proof names F': False, 'others': ['Becoming.U4Boundary.succ_ne_zero'], 'others ok': True}
+  S3 needs_descent : {'statement names H': False, 'statement name test': 'pass', 'proof names F': False, 'others': ['Becoming.U4Boundary.succ_ne_zero'], 'others ok': True}
+  S3 needs_outside : {'statement names H': False, 'statement name test': 'pass', 'proof names F': False, 'others': ['Becoming.U4Boundary.succ_ne_zero'], 'others ok': True}
+  S4 theorems F names : {'Becoming.U4Boundary.length_zero_of_none': 'OFF ROOT', 'Becoming.ListTests.mem_flatMap_iff': 'root'}
+  S5 R reaches F : True
+  S5 R reaches row : False
+  S5 cert eq : (['Becoming.GroupEnding.Flow.all_end', 'Becoming.U4Boundary.all_end_at_model'], [True, True])

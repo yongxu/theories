@@ -2,7 +2,7 @@
 
 # The theory graph
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3118 nodes, 5877 edges.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts and the chapter sections that state results, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3127 nodes, 5900 edges.
 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
@@ -10,7 +10,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 | The map: generation, keeping, degeneration, orders | 5 | 91 | 75 | 0 |
 | Knowing and testing | 0 | 104 | 82 | 0 |
 | Life and evolution | 0 | 42 | 17 | 0 |
-| Collectives and selection | 0 | 63 | 18 | 0 |
+| Collectives and selection | 0 | 66 | 21 | 0 |
 | The classical texts | 5 | 15 | 9 | 1724 |
 | Significance and alignment | 0 | 79 | 59 | 0 |
 | Method and the formal core | 0 | 19 | 23 | 0 |
@@ -403,9 +403,11 @@ Modules (17, 1 stated on the grammar): `ContinuingRevision`, `CopyCourses`, `Cop
 
 ## Collectives and selection
 
-Results (63):
+Results (66):
 
 - [A code formed between formations](records/a-code-formed-between-formations.md) (recorded-checked)
+- [A code held as counts, learned from what is heard](records/a-code-held-as-counts.md) (recorded-checked)
+- [A commuting learner drives no choice whose values nothing it reads tells apart](records/a-commuting-learner-drives-no-unread-choice.md) (recorded-checked)
 - [A coupling a step keeps a dependence at every horizon](records/a-step-coupling-keeps-at-every-horizon.md) (recorded-checked)
 - [A pool read by its majority](records/a-pool-read-by-its-majority.md) (recorded-checked)
 - [A pool that recruits through itself](records/a-pool-that-recruits-through-itself.md) (recorded-checked)
@@ -433,6 +435,7 @@ Results (63):
 - [Joint plans from a supported start](records/joint-plans-from-a-supported-start.md) (recorded-checked)
 - [Joint practice forms further participation and continuation](records/joint-practice-forms-continuation.md) (recorded-checked)
 - [Keeping a dependence forgoes the renewal at its need](records/keeping-forgoes-the-renewal-at-the-need.md) (recorded-checked)
+- [LA4's test season meets the optimum laws](records/the-test-season-meets-the-optimum-laws.md) (recorded-checked)
 - [Least parts and equal shares](records/least-parts-and-equal-shares.md) (recorded-checked)
 - [Mutual dependence, and the exponential pace that loops of couplings give](records/mutual-dependence-and-its-pace.md) (recorded-checked)
 - [Others drawing first end the base](records/others-drawing-first-end-the-base.md) (recorded-checked)
@@ -469,7 +472,7 @@ Results (63):
 - [What position reads](records/what-position-reads.md) (recorded-checked)
 - [What taking all that is given excludes](records/what-taking-all-excludes.md) (recorded-checked)
 
-Modules (18, 1 stated on the grammar): `Cascade`, `Centers`, `Exclusion`, `FreeEnergyGuarantees`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `Withholding`
+Modules (21, 1 stated on the grammar): `Cascade`, `Centers`, `CountedCodes`, `Exclusion`, `FreeEnergyGuarantees`, `Joint`, `JointDraw`, `JointPlans`, `ListFootprints`, `Optimum`, `OptimumSeason`, `PoolCourse`, `PoolResponse`, `RelativePosition`, `RuleHandoff`, `SelectionPool`, `SetPointOptimum`, `SharedCodes`, `Tolerance`, `WeightedCommuting`, `Withholding`
 
 
 ## The classical texts
@@ -545,7 +548,6 @@ Results (79):
 - [Self-concern through dependence](records/self-concern-through-dependence.md) (recorded-checked)
 - [Significance retained within the margin](records/significance-retained-within-margin.md) (recorded-checked)
 - [Significance through a common condition](records/significance-through-a-common-condition.md) (recorded-checked)
-- [Stronger universal practical warrant target](records/universal-practical-warrant.md) (open)
 - [Support from the supported](records/support-from-the-supported.md) (recorded-checked)
 - [Tasks and what performs them](records/tasks-and-what-performs-them.md) (recorded-checked)
 - [The class of being joined](records/the-class-of-being-joined.md) (recorded-checked)
@@ -575,6 +577,7 @@ Results (79):
 - [When no route of keeping a law stands above a revision of it](records/when-no-route-stands-above-a-revision.md) (recorded-checked)
 - [Where the possible grows](records/where-the-possible-grows.md) (recorded-checked)
 - [Where the verdict within the closure meets the continuation condition](records/closure-verdict-meets-continuation-condition.md) (recorded-checked)
+- [Whether a universal practical warrant exists](records/universal-practical-warrant.md) (open)
 - [Widening along a reading, and over a grown world](records/widening-along-a-reading.md) (recorded-checked)
 - [Widening as what every weighting ranks](records/widening-as-what-every-weighting-ranks.md) (recorded-checked)
 - [Widening on late tails, and what carries a widening](records/eventual-widening.md) (recorded-checked)
@@ -629,4 +632,4 @@ Modules (1, 1 stated on the grammar): `GrammarPath`
 
 ## Not yet on the root
 
-301 of 354 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+304 of 357 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

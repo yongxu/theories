@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 344 | 16,715 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 347 | 16,830 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 14 | 772 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -23,7 +23,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 | [Concern and shared activity](lean-declarations/concern.md) | 15 | 246 |
 | [Organizational formation through revisable evaluation](lean-declarations/shared.md) | 66 | 1,480 |
 | [Generative core and relational structure](lean-declarations/core.md) | 143 | 2,186 |
-| [Other formal studies](lean-declarations/other.md) | 29 | 873 |
+| [Other formal studies](lean-declarations/other.md) | 30 | 873 |
 
 <a id="按名称查找--find-by-name"></a>
 ## Find by name
@@ -206,6 +206,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Correspondence.lean](lean-declarations/becoming-core.md#module-66b60f528dff) | Becoming pure core |
 | [CorrespondenceSamples.lean](lean-declarations/ethics.md#module-059498ea4742) | Normative grounding and generative direction |
 | [Countdown.lean](lean-declarations/becoming-core.md#module-4141bb394334) | Becoming pure core |
+| [CountedCodes.lean](lean-declarations/becoming-core.md#module-f5a6f86dfea1) | Becoming pure core |
 | [Counterfactual.lean](lean-declarations/becoming-core.md#module-9524444e9395) | Becoming pure core |
 | [CounterfactualRuns.lean](lean-declarations/becoming-core.md#module-e19181a02e96) | Becoming pure core |
 | [Counting.lean](lean-declarations/becoming-core.md#module-ba004a622923) | Becoming pure core |
@@ -608,6 +609,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [OperationRoles.lean](lean-declarations/core.md#module-9f4103888949) | Generative core and relational structure |
 | [OperativeCoherence.lean](lean-declarations/core.md#module-9712b4ea2312) | Generative core and relational structure |
 | [Optimum.lean](lean-declarations/becoming-core.md#module-86be84561604) | Becoming pure core |
+| [OptimumSeason.lean](lean-declarations/becoming-core.md#module-0116411bbe45) | Becoming pure core |
 | [OrderNormal.lean](lean-declarations/becoming-core.md#module-7412c6ab20ba) | Becoming pure core |
 | [OrganizationCorrespondence.lean](lean-declarations/ethics.md#module-c045ec9ae1ef) | Normative grounding and generative direction |
 | [OrganizationalRuleInheritance.lean](lean-declarations/ethics.md#module-d6cdb351c744) | Normative grounding and generative direction |
@@ -967,6 +969,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [VersionedTaskInstances.lean](lean-declarations/other.md#module-f82d00be1c12) | Other formal studies |
 | [Viability.lean](lean-declarations/becoming-core.md#module-9e2d826ba824) | Becoming pure core |
 | [Weighted.lean](lean-declarations/becoming-core.md#module-d37846dd645c) | Becoming pure core |
+| [WeightedCommuting.lean](lean-declarations/becoming-core.md#module-f0e802abd0ee) | Becoming pure core |
 | [WeightedTraces.lean](lean-declarations/becoming-core.md#module-1855e5878d07) | Becoming pure core |
 | [Weightings.lean](lean-declarations/becoming-core.md#module-f069f36cfea6) | Becoming pure core |
 | [WholeAmounts.lean](lean-declarations/becoming-core.md#module-a68f505bcda8) | Becoming pure core |
@@ -987,3 +990,4 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Witnesses.lean](lean-declarations/becoming-core.md#module-a2a40d448b25) | Becoming pure core |
 | [World.lean](lean-declarations/becoming-core.md#module-7d8b73829c63) | Becoming pure core |
 | [WorldRepresentation.lean](lean-declarations/becoming-core.md#module-9ee3e643d082) | Becoming pure core |
+| [boundary_check.lean](lean-declarations/other.md#module-9c753b6e9d67) | Other formal studies |
