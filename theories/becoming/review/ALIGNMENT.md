@@ -24,6 +24,7 @@
 
 **What we ask, and how long.** Of each item: is it correctly described, credited where it restates known work, put at its right strength, and argued soundly? Questions for the whole close the [response form](#response-form). With an hour, read [the tests](#the-tests-as-they-fell) (three minutes), then [A-02](#a-02), [A-07](#a-07), [A-10](#a-10), [A-12](#a-12), [A-14](#a-14), [A-18](#a-18) and [A-19](#a-19); for deception or corrigibility, [A-20](#a-20) adds fifteen minutes. The whole dossier takes about two hours.
 
+<a id="the-tests-as-they-fell"></a>
 ## The tests, as they fell
 
 Each test froze its predictions before it ran ([A-18](#a-18), [A-19](#a-19)). All are small: tabular and linear learners, exact best responses, and language models choosing in context (Claude Haiku in LA1 to LA3, two GPT models in IN1). None trained a language model.
@@ -42,6 +43,7 @@ Each test froze its predictions before it ran ([A-18](#a-18), [A-19](#a-19)). Al
 
 Each item gives its statement (in Lean for the central ones), its **Meaning** in words, its **Standing and use**, its **Known weaknesses** and **Questions**. No Lean is needed to review.
 
+<a id="terms"></a>
 ## Terms
 
 Lean paths are relative to `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/`; Lean blocks give statements exactly, proofs cut at `:=`.
